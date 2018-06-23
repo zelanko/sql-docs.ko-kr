@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466589"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702234"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_튜닝\_권장 사항 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "34466589"
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다.
 
-| **열 이름** | **데이터 형식** | **설명** |
+| **열 이름** | **Data type** | **설명** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | 권장 구성의 고유 이름입니다. |
 | **type** | **nvarchar(4000)** | 예를 들어 권장 생성 되는 자동 튜닝 옵션의 이름 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | 이 권장 사항을 제공 된 이유는 이유입니다. |
 | **valid\_since** | **datetime2** | 처음으로이 권장 사항을 생성 되었습니다. |
 | **last\_refresh** | **datetime2** | 이 권장 구성은 생성 된 마지막 시간입니다. |
-| **상태** | **nvarchar(4000)** | 권장 구성의 상태를 설명 하는 JSON 문서입니다. 다음 필드를 사용할 수 있습니다.<br />-   `currentValue` -권장 구성의 현재 상태입니다.<br />-   `reason` – 현재 상태에 권장 된 이유를 설명 하는 상수입니다.|
+| **state** | **nvarchar(4000)** | 권장 구성의 상태를 설명 하는 JSON 문서입니다. 다음 필드를 사용할 수 있습니다.<br />-   `currentValue` -권장 구성의 현재 상태입니다.<br />-   `reason` – 현재 상태에 권장 된 이유를 설명 하는 상수입니다.|
 | **is\_executable\_action** | **bit** | 1 = 권장 사항을 통해 데이터베이스에 대해 실행할 수 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 스크립트입니다.<br />0 = 데이터베이스에 대해 권장 구성을 실행할 수 없습니다 (예: 정보 또는 되돌린에 권장 사항) |
 | **is\_revertable\_action** | **bit** | 1 = 권장을 자동으로 모니터링 하 고 데이터베이스 엔진에 의해 설정 되었으며 수 있습니다.<br />0 = 권장을 자동으로 모니터링 하 고 되돌릴 수 없습니다. 대부분 &quot;실행&quot; 동작이 &quot;revertable&quot;합니다. |
 | **execute\_action\_start\_time** | **datetime2** | 권장 구성 적용 되는 날짜입니다. |
@@ -61,7 +61,7 @@ ms.locfileid: "34466589"
 | **score** | **int** | 예상 값/영향에 대 한이 0-100을 위한이 권장 크기 조정 (클수록 좋습니다) |
 | **details** | **nvarchar(max)** | 권장 구성에 대 한 자세한 정보가 포함 된 JSON 문서입니다. 다음 필드를 사용할 수 있습니다.<br /><br />`planForceDetails`<br />-    `queryId` -쿼리\_이전 상태로 되돌아간된 쿼리의 id입니다.<br />-    `regressedPlanId` -이전 상태로 되돌아간된 계획의 plan_id 합니다.<br />-   `regressedPlanExecutionCount` -수가 회귀 분석 하기 전에 이전 상태로 되돌아간된 계획을 사용 하 여 쿼리 실행 될 때 검색 됩니다.<br />-    `regressedPlanAbortedCount` -이전 상태로 되돌아간된 계획의 실행 하는 동안 검색 된 오류의 수입니다.<br />-    `regressedPlanCpuTimeAverage` -회귀는 감지 하기 전에 이전 상태로 되돌아간 쿼리에서 사용 평균 CPU 시간입니다.<br />-    `regressedPlanCpuTimeStddev` -회귀 분석 하기 전에 이전 상태로 되돌아간된 쿼리에 사용 된 CPU 시간 표준 편차를 검색 했습니다.<br />-    `recommendedPlanId` -강제로 해야 하는 계획의 plan_id 합니다.<br />-   `recommendedPlanExecutionCount`-회귀는 감지 하기 전에 강제 해야 하는 계획에 쿼리 실행 오류 수입니다.<br />-    `recommendedPlanAbortedCount` -계획을 강제로 실행 하는 동안 검색 된 오류의 수입니다.<br />-    `recommendedPlanCpuTimeAverage` -평균 CPU 시간 (회귀는 감지 하기 전에 계산 됨)을 강제로 계획으로 실행 되는 쿼리에 사용 합니다.<br />-    `recommendedPlanCpuTimeStddev` 회귀 분석 하기 전에 이전 상태로 되돌아간된 쿼리에 사용 된 CPU 시간의 표준 편차를 검색 했습니다.<br /><br />`implementationDetails`<br />-  `method` -해결 회귀를 사용 해야 하는 메서드. 값은 항상 `TSql`합니다.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 권장 되는 계획을 강제로 실행 하는 스크립트입니다. |
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  반환 된 정보 `sys.dm_db_tuning_recommendations` 데이터베이스 엔진 잠재적 쿼리 성능 저하를 식별 하 고 유지 되지 않습니다 때 업데이트 됩니다. 권장 사항 까지만 유지 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작 합니다. 서버 재활용 후 유지 하려는 경우 데이터베이스 관리자가 정기적으로 튜닝 권장 구성의 백업 복사본을 만들어야 합니다. 
 
  `currentValue` 필드에 `state` 열 다음 값을 가질 수 있습니다.
@@ -92,9 +92,9 @@ JSON 문서에 `state` 열 현재 상태에 권장 된 이유를 설명 하는 �
  세부 정보 열에서 통계 런타임 계획 통계 (예를 들어 현재 CPU 시간)을 표시 하지 않습니다. 권장 사항 세부 정보 회귀 검색의 시간에 수행 되 고 이유를 설명 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 성능 저하를 식별 합니다. 사용 하 여 `regressedPlanId` 및 `recommendedPlanId` 쿼리에 [쿼리 저장소 카탈로그 뷰](../../relational-databases/performance/how-query-store-collects-data.md) 정확한 런타임 계획 통계를 찾습니다.
 
 ## <a name="using-tuning-recommendations-information"></a>튜닝 권장 구성 정보를 사용 하 여  
- 이 문제를 해결 하는 T-SQL 스크립트를 가져오지 다음 쿼리를 사용할 수 있습니다.  
+다음 쿼리를 사용 하 여 가져오려는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문제를 해결 하는 스크립트:  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 
@@ -108,12 +108,12 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
   
  권장 구성 보기에서 쿼리 값을 사용할 수 있는 JSON 함수에 대 한 자세한 내용은 참조 [JSON 지원](../../relational-databases/json/index.md) 에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]합니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

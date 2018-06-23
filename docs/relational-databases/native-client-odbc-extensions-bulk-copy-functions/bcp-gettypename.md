@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947508"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703494"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +54,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>반환 값  
  BCP 유형에 해당하는 SQL 유형 이름이 포함된 문자열입니다. 잘못된 BCP 유형을 지정하면 빈 문자열이 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  BCP 유형 토큰은 sqlncli.h 헤더 파일과 sqlncli11.lib 라이브러리에서 정의됩니다.  
   
  다음 표에서는 가능한 BCP 유형, max 유형인지 여부 및 예상 출력을 지정합니다.  
@@ -87,13 +85,13 @@ RETCODE bcp_gettypename (
 |**SQLDATETIMN**|모두|**datetime-null**|  
 |**SQLMONEYN**|모두|**money-null**|  
 |**SQLFLTN**|모두|**float-null**|  
-|**SQLAOPSUM**|모두|**합계**|  
+|**SQLAOPSUM**|모두|**Sum**|  
 |**SQLAOPAVG**|모두|**Avg**|  
 |**SQLAOPCNT**|모두|**개수**|  
 |**SQLAOPMIN**|모두|**Min**|  
 |**SQLAOPMAX**|모두|**Max**|  
 |**SQLDATETIM4**|모두|**smalldatetime**|  
-|**SQLMONEY4**|모두|**smallmoney**|  
+|**SQLMONEY4**|모두|**Smallmoney**|  
 |**SQLFLT4**|모두|**실제**|  
 |**SQLUNIQUEID**|모두|**uniqueidentifier**|  
 |**SQLNCHAR**|아니요|**Nchar**|  
@@ -117,9 +115,9 @@ RETCODE bcp_gettypename (
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
  에 있는 테이블의 "sqlncli.h의 유형" 열에 날짜/시간 형식에 대 한 토큰 매개 변수 값을 설명 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

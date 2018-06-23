@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 193226bd9ef0b21771479e245c69cd4ea2402a08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4ca109f20ec60baba09920639a80970abb248c7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957378"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700114"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "32957378"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 응용 프로그램에서는 다음 세 가지 함수 중 하나를 사용하여 연결할 수 있습니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect**에서 반환된 서버 목록에는 VNN이 포함되지 않습니다. 서버가 독립 실행형 서버인지, 아니면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 주 또는 보조 서버인지는 표시되지 않고 서버 목록만 표시됩니다. 서버에 연결한 후 오류가 발생하면 서버에 연결은 되었지만 **ApplicationIntent** 설정이 서버 구성과 호환되지 않기 때문일 수 있습니다.<br /><br /> **SQLBrowseConnect**는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 서버를 인식하지 못하므로 **SQLBrowseConnect**는 **MultiSubnetFailover** 연결 문자열 키워드를 무시합니다.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 는 DSN(데이터 원본 이름) 또는 연결 속성을 통해 **ApplicationIntent** 와 **MultiSubnetFailover** 를 모두 지원합니다.|  
@@ -140,8 +139,8 @@ ms.locfileid: "32957378"
   
  암시적 연결을 설정하면 암시적 연결이 부모 연결의 응용 프로그램 의도 설정을 사용합니다. 마찬가지로 동일한 데이터 원본에서 만들어진 여러 개의 세션은 데이터 원본의 응용 프로그램 의도 설정을 상속합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [SQL Server Native Client 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

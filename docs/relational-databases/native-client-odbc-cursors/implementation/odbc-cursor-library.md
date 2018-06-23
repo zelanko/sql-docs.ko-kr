@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4febdebab0e8b360889ba9b26f1904cbc61cf8f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d46228b6f4562d72706c9dc6b53f91e3922c5a1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945698"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702774"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 커서 라이브러리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "32945698"
   
  커서 라이브러리를 사용하면 응용 프로그램이 스크롤 및 업데이트 가능한 커서는 물론 한 연결에서 활성 문을 여러 개 사용할 수 있습니다. 이 기능을 지원하려면 커서 라이브러리를 로드해야 합니다. 사용 하 여 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 커서 라이브러리를 사용 해야 하는 방법을 지정 하 고 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 커서 유형, 동시성 및 행 집합 크기를 지정 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [커서 구현 방법](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

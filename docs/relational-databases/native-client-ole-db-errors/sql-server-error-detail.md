@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dbaa5d805b8b1102e07b0e63bf269129077e539
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4b70a652ace8f7ccaf89ed23434ebed15410102
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945148"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701994"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32945148"
   
  두 가지 방법으로 액세스 권한을 얻을 수 **ISQLServerErrorInfo** 인터페이스입니다.  
   
- 소비자를 호출할 수 있습니다 **ierrorrecords:: Getcustomererrorobject** 얻으려고는 **ISQLServerErrorInfo** 다음 코드 예제에 나와 있는 것 처럼 포인터입니다. (가져올 필요가 없습니다 **ISQLErrorInfo.**) 둘 다 **ISQLErrorInfo** 및 **ISQLServerErrorInfo** 와 사용자 지정 OLE DB 오류 개체는 **ISQLServerErrorInfo** 프로시저 이름 및 줄 번호와 같은 세부 정보를 포함 하 여 서버 오류 정보를 얻기 위해 사용 하는 인터페이스입니다.  
+ 소비자를 호출할 수 있습니다 **ierrorrecords:: Getcustomererrorobject** 얻으려고는 **ISQLServerErrorInfo** 다음 코드 예제에 나와 있는 것 처럼 포인터입니다. (가져올 필요가 없습니다 **ISQLErrorInfo.**) 둘 다 **ISQLErrorInfo** 및 **ISQLServerErrorInfo** 와 사용자 지정 OLE DB 오류 개체는 **ISQLServerErrorInfo** 정보를 얻기 위해 사용 하는 인터페이스 프로시저 이름 및 줄 번호와 같은 세부 정보를 포함 하 여 서버 오류입니다.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -47,7 +45,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- 가져오는 다른 방법은 **ISQLServerErrorInfo** 포인터를 호출 하는 **QueryInterface** 메서드를 이미 얻은 **ISQLErrorInfo** 포인터입니다. 되므로 **ISQLServerErrorInfo** 에서 사용할 수 있는 정보의 상위 집합이 포함 되어 **ISQLErrorInfo**, 바로 이동할 수는 의미가 **ISQLServerErrorInfo** 통해 **GetCustomerErrorObject**합니다.  
+ 가져오는 다른 방법은 **ISQLServerErrorInfo** 포인터를 호출 하는 **QueryInterface** 메서드를 이미 얻은 **ISQLErrorInfo** 포인터입니다. 되므로 **ISQLServerErrorInfo** 에서 사용할 수 있는 정보의 상위 집합이 포함 되어 **ISQLErrorInfo**로 이동 하는 의미가 **ISQLServerErrorInfo**통해 **GetCustomerErrorObject**합니다.  
   
  **ISQLServerErrorInfo** 인터페이스 멤버 함수를 노출 [isqlservererrorinfo:: Geterrorinfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)합니다. 이 함수는 SSERRORINFO 구조에 대한 포인터와 문자열 버퍼에 대한 포인터를 반환합니다. 소비자를 사용 하 여 할당 취소 해야 하는 메모리를 참조 하는 두 포인터는 **imalloc:: Free** 메서드.  
   
@@ -63,8 +61,8 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*bClass*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지의 심각도입니다.|  
 |*wLineNumber*|해당되는 경우 오류가 발생한 저장 프로시저의 줄 번호입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [오류](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [Raiserror& #40; Transact SQL & #41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

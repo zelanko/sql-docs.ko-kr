@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - bindings [ODBC]
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39a6c79dee9d84ee85efd3b9d8b97b1ae82d081e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97f9da240e37c9bcd24d884c99c037a20751cdeb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943498"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694744"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 데이터 형식 변환(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,13 +58,13 @@ ms.locfileid: "32943498"
 -   SQL에서 C로 변환할 때 초 또는 소수 자릿수 초의 잘림이 발생하는 경우 SQLSTATE 01S07 및 "일부가 잘렸습니다" 메시지가 포함된 진단 레코드가 생성됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [C에서 SQL으로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)  
+ [C에서 SQL로의 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)  
  C 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식으로 변환할 때 고려해야 할 문제를 표시합니다.  
   
  [SQL에서 C로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식을 C 형식으로 변환할 때 고려해야 할 문제를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>관련 항목  
+ [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

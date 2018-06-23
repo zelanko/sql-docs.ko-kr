@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - data types [ODBC], about data types
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e8a08f91688a4a6c26fd138de51ee50b7b2a3974
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 411cb07567b08f4ec28fab7098b6b0016c779b13
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947058"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697914"
 ---
 # <a name="data-type-usage"></a>데이터 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +53,7 @@ ms.locfileid: "32947058"
 |UDT(사용자 정의 형식)|UDT 열은 SQL_SS_UDT로 매핑됩니다. UDT의 ToString() 또는 ToXMLString() 메서드를 사용하거나 CAST/CONVERT 함수를 통해 SQL 문에서 명시적으로 UDT 열이 다른 형식에 매핑되어 있으면 결과 집합의 열 형식은 해당 열이 변환된 실제 형식을 반영합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 이진 형식으로 UDT 열에만 바인딩할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SQL_SS_UDT 및 SQL_C_BINARY 데이터 형식 간의 변환만 지원합니다.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 XML을 유니코드 텍스트로 변환합니다. XML 유형은 SQL_SS_XML로 매핑됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [결과 처리 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1acf7aebf99d79ab0d619f93eee1530dc8f31562
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21332634d99b44ba974f5f70fa77d0fafb1ab68e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945428"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697184"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>행 집합 인출 및 업데이트(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32945428"
   
 6.  필요에 따라 커서 이름을 지정 하는 위치 지정된 UPDATE 또는 DELETE 문의 실행 (에서 사용할 수 있는 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) 동일한 연결에서 다른 문 핸들을 사용 하 고 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [커서 방법 도움말 항목 & #40; ODBC & #41;를 사용 하 여](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>관련 항목  
+ [커서 방법 도움말 항목을 사용 하 여 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

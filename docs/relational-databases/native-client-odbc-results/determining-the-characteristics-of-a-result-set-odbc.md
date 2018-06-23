@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd97baf4642a4679da5c326d5f5a8150448fce28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64296aa767a8f9c9d74ee925dd26e2ce67ecaeb2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944498"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701894"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>결과 집합의 특징 확인(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +55,7 @@ ms.locfileid: "32944498"
   
  응용 프로그램에서 특정 메타데이터 집합을 두 번 이상 사용하는 경우 이러한 메타데이터 집합을 처음으로 가져올 때 전용 변수에 해당 정보가 캐시되는 이점을 얻을 수 있습니다. 이는 나중에 드라이버를 강제로 서버에 왕복하게 하는 ODBC 카탈로그 함수가 동일한 정보에 대해 호출되지 않도록 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [결과 처리 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

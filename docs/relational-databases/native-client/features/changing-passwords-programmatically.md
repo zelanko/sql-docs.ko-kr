@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bd7d14e180a44f974e4d6ba89421caa8cbba3535
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 477b3253a744564845e70ec10185b845293366d7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954708"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697444"
 ---
 # <a name="changing-passwords-programmatically"></a>프로그래밍 방식으로 암호 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -124,7 +123,7 @@ ms.locfileid: "32954708"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는이 기능에 대 한 네 경우에서 SQL_ERROR를 반환: 암호 만료, 암호 정책 충돌, 계정 잠금 및 Windows 인증을 사용 하는 동안 이전 암호 속성이 설정 된 경우. 사용자에 게 해당 오류 메시지를 반환 하는 드라이버 때 [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 가 호출 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -2,9 +2,10 @@
 title: SQL Server 테이블에 열 추가 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버를 사용 하 여 SQL Server 테이블에 열 추가
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 116991307bfe1c9601354f0aa01e6face270f83c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 3e68b78a72657648320f4948646e4685cfbad388
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306862"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690296"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server 테이블에 열 추가
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 노출 된 **ITableDefinition::AddColumn** 함수입니다. 이렇게 하면 소비자가 열을 추가할 수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블입니다.  
   

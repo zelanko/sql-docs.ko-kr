@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -20,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f9cf56b4ee1a7e3108607912ecba9a05d0815e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25b56f30a43fb643d3c7ed789ee2ef10b36e3609
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953008"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698324"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client의 스파스 열 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "32953008"
   
  그러나 경우 **queryout** 사용 내보내기와 하면 스파스 열 이름으로 집합의 멤버인 스파스 열을 참조에 대 한 구조가 비슷한 테이블에 직접 가져올을 수행할 수 없습니다. BCP 사용 메타 데이터와 일치 하기 때문에 이것이 **선택 \***  가져오기에 대 한 작업 되어 일치 시킬 수 없는 **column_set** 이 메타 데이터와 멤버 열입니다. 가져오려는 **column_set** 멤버 열 원하는 참조 하는 테이블에 대 한 뷰를 정의 해야 하는 개별적으로 **column_set** 열을 보기를 사용 하 여 가져오기 작업을 수행 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

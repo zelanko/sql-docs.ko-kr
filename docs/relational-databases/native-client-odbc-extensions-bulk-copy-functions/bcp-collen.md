@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3e5fc28fe03efe74e74fbe6fc33cb3cb3b4f787
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5561e62386bbfdf370c16281b095db8c498613cc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945568"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701954"
 ---
 # <a name="bcpcollen"></a>bcp_collen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,14 +58,14 @@ RETCODE bcp_collen (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **bcp_collen** 함수를 사용 하면 데이터를 복사할 때 특정 열에 대 한 프로그램 변수의 데이터 길이 변경할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)합니다.  
   
  데이터 길이 결정 하는 처음에 때 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 호출 됩니다. 데이터 길이에 대 한 호출 간에 변경 되 면 **bcp_sendrow** 없습니다 길이 접두사 또는 종결자를 사용 하 고, 호출할 수 있습니다 **bcp_collen** 길이 다시 설정 합니다. 다음 호출 **bcp_sendrow** 설정에 대 한 호출에서 길이 사용 하 여 **bcp_collen**합니다.  
   
  호출 해야 **bcp_collen** 데이터 길이를 수정 하려는 테이블의 각 열에 대해 한 번씩입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

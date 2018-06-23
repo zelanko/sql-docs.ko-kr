@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31efad83f947d774b6602fe4da85046ad6b9e198
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e374c65ce0ef97251ffeb5e3511b85868ebcdb74
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948008"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703454"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +63,7 @@ RETCODE bcp_control (
   
  호출 하는 경우에 시퀀스 오류가 발생 합니다 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` 호출한 후 `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` 및 bcp_writefmt 합니다.  
   
- 자세한 내용은 [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md)를 참조하십시오.  
+ 자세한 내용은 참조 [메타 데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)합니다.  
   
  BCPFILECP  
  *iValue* 데이터 파일에 대 한 코드 페이지 번호를 포함 합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.  
@@ -139,7 +137,7 @@ RETCODE bcp_control (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 대량 복사를 취소하기 전에 허용되는 오류 수, 데이터 파일에서 복사할 첫 번째 행과 마지막 행의 번호 및 일괄 처리 크기를 비롯하여 대량 복사 작업에 대한 여러 가지 제어 매개 변수를 설정합니다.  
   
  또한 이 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SELECT의 결과 집합을 대량 복사할 때 SELECT 문을 지정하는 데 사용됩니다. 설정 *eOption* 을 설정 하 고 BCPHINTS *iValue* SELECT 문이 포함 된 있는 SQLTCHAR 문자열에 대 한 포인터입니다.  
@@ -210,7 +208,7 @@ printf_s("%ld rows processed by bulk copy.", nRowsProcessed);
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

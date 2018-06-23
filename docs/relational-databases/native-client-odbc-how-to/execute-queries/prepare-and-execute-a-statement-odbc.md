@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfd8780e6d4fe804a6a124870c06e43bec752463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d78ab8bbd48035795f8860cb02a20e83780289
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946498"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701424"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +37,9 @@ ms.locfileid: "32946498"
   
 3.  필요에 따라 준비된 문의 각 매개 변수에 대해 다음 작업을 수행합니다.  
   
-    -   [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 을 호출하여 매개 변수 정보를 얻습니다.  
+    -   호출 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 매개 변수 정보를 가져올 수 있습니다.  
   
-    -   [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)를 사용하여 각 매개 변수를 프로그램 변수에 바인딩합니다. 실행 시 데이터 매개 변수를 설정합니다.  
+    -   각 매개 변수를 사용 하 여 프로그램 변수에 바인딩합니다 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)합니다. 실행 시 데이터 매개 변수를 설정합니다.  
   
 4.  준비된 문을 실행할 때마다 다음 작업을 수행합니다.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "32946498"
   
     -   [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 를 호출하여 준비된 문을 실행합니다.  
   
-    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+    -   실행 시 데이터 입력 매개 변수를 사용하는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)합니다.  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 준비하려면  
   
@@ -119,7 +117,7 @@ ms.locfileid: "32946498"
   
     -   실행 시 데이터 입력된 매개 변수를 사용 하면 SQLExecute SQL_NEED_DATA를 반환 합니다. SQLParamData 및 SQLPutData를 사용 하 여 데이터를 청크로 보냅니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [실행 중인 쿼리 방법 도움말 항목 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>관련 항목  
+ [방법 도움말 항목 쿼리를 실행할 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

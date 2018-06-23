@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 33504794f4f79db4e5f59aea6746753351be3d60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30a665ee8db2b7de1e0469b7af8d17ec92c2cde8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943700"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698164"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,17 +36,17 @@ ms.locfileid: "32943700"
  마찬가지로 행 수준 특성 (예: SQL_CA_SS_COMPUTE_ID) 보고서의 결과 집합의 모든 열에 대해 보고 하는 설명자 필드 SQLColAttribute를 사용 하 여 검색 하는 특성입니다.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField 및 테이블 반환 매개 변수  
- SQLGetDescField는 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 확장된 특성에 대 한 값을 가져오는 데 사용할 수 있습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 사용 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+ SQLGetDescField는 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 확장된 특성에 대 한 값을 가져오는 데 사용할 수 있습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLGetDescField 지원  
  새로운 날짜/시간 형식으로 사용할 수 있는 설명자 필드에 대 한 정보를 참조 하십시오. [매개 변수 및 결과 메타 데이터](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)합니다.  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
  부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField 반환할 수 **SQL_C_SS_TIME2** (에 대 한 **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** (에 대 한  **datetimeoffset**) 대신 **SQL_C_BINARY**응용 프로그램에서 ODBC 3.8을 사용 하는 경우.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetDescField 지원  
- **SQLGetDescField** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
+ **SQLGetDescField** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>스파스 열에 대한 SQLGetDescField 지원  
  SQLGetDescField 새로운 IRD 필드인 SQL_CA_SS_IS_COLUMN_SET 열 인지 확인 하려면 쿼리를 사용할 수는 **column_set** 열입니다.  
@@ -159,7 +158,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLGetDescField 함수](http://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

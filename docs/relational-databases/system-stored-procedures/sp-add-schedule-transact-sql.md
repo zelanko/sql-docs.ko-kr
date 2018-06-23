@@ -22,12 +22,12 @@ caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95723f90b248d214638a4bfcd38b1fc40bcfb121
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3f1ce62c23519f44e9673e425662bd0e24dc80da
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240573"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262237"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +60,15 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="arguments"></a>인수  
  [ **@schedule_name =** ] **'***schedule_name***'**  
- 일정의 이름입니다. *schedule_name*은 **sysname**, 기본값은 없습니다.  
+ 일정의 이름입니다. *schedule_name* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@enabled =** ] *사용 하도록 설정*  
- 일정의 현재 상태를 나타냅니다. *활성화*은 **tinyint**, 기본값은 **1** (사용). 경우 **0**, 일정을 사용할 수 없습니다. 일정을 사용할 수 없는 경우 이 일정에 따라 어떠한 작업도 실행되지 않습니다.  
+ 일정의 현재 상태를 나타냅니다. *활성화* 은 **tinyint**, 기본값은 **1** (사용). 경우 **0**, 일정을 사용할 수 없습니다. 일정을 사용할 수 없는 경우 이 일정에 따라 어떠한 작업도 실행되지 않습니다.  
   
  [ **@freq_type =** ] *freq_type*  
- 작업이 실행될 시기를 나타내는 값입니다. *freq_type*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
+ 작업이 실행될 시기를 나타내는 값입니다. *freq_type* 은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|일별|  
@@ -92,9 +92,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**128**|*freq_interval* 는 사용 되지 않습니다.|  
   
  [ **@freq_subday_type =** ] *freq_subday_type*  
- 단위를 지정 *freq_subday_interval*합니다. *freq_subday_type*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
+ 단위를 지정 *freq_subday_interval*합니다. *freq_subday_type* 은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다.  
   
-|Value|설명(단위)|  
+|값|설명(단위)|  
 |-----------|--------------------------|  
 |**0x1**|지정된 시간|  
 |**0x2**|초|  
@@ -102,12 +102,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|시간|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- 수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval*은 **int**, 기본값은 **0**합니다. 참고: 간격은 10 초 보다 길어야 합니다. *freq_subday_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_subday_type* 같으면 **1**합니다.  
+ 수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval* 은 **int**, 기본값은 **0**합니다. 참고: 간격은 10 초 보다 길어야 합니다. *freq_subday_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_subday_type* 같으면 **1**합니다.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
- 작업의 발생 *freq_interval* 각 월에 경우 *freq_interval* 이 32 (매월 상대적). *freq_relative_interval*은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다. *freq_relative_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_type* 32 같지 않습니다.  
+ 작업의 발생 *freq_interval* 각 월에 경우 *freq_interval* 이 32 (매월 상대적). *freq_relative_interval* 은 **int**, 기본값은 **0**, 다음이 값 중 하나일 수 있습니다. *freq_relative_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_type* 32 같지 않습니다.  
   
-|Value|설명(단위)|  
+|값|설명(단위)|  
 |-----------|--------------------------|  
 |**1**|첫째|  
 |**2**|둘째|  
@@ -116,23 +116,23 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|마지막|  
   
  [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- 예약된 작업 실행 간에 발생하는 주 또는 월의 수입니다. *freq_recurrence_factor* 경우에 사용 *freq_type* 은 **8**, **16**, 또는 **32**합니다. *freq_recurrence_factor*은 **int**, 기본값은 **0**합니다.  
+ 예약된 작업 실행 간에 발생하는 주 또는 월의 수입니다. *freq_recurrence_factor* 경우에 사용 *freq_type* 은 **8**, **16**, 또는 **32**합니다. *freq_recurrence_factor* 은 **int**, 기본값은 **0**합니다.  
   
  [ **@active_start_date =** ] *active_start_date*  
- 작업 실행이 시작되는 날짜입니다. *active_start_date*은 **int**, 기본값은 NULL 이며 오늘 날짜를 나타내는입니다. 날짜 형식은 YYYYMMDD입니다. 경우 *active_start_date* NULL이 아니면 날짜 보다 크거나 19900101 이어야 합니다.  
+ 작업 실행이 시작되는 날짜입니다. *active_start_date* 은 **int**, 기본값은 NULL 이며 오늘 날짜를 나타내는입니다. 날짜 형식은 YYYYMMDD입니다. 경우 *active_start_date* NULL이 아니면 날짜 보다 크거나 19900101 이어야 합니다.  
   
  일정을 만든 다음 시작 날짜를 검토하여 날짜가 제대로 되어 있는지 확인하십시오. 자세한 내용은 "시작 날짜 예약" 섹션을 참조 [만들기 및 작업에 일정 연결](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)합니다.  
   
  주별 또는 월별 일정의 경우 에이전트는 active_start_date가 과거 날짜인 경우 이를 무시하고 대신 현재 날짜를 사용합니다. sp_add_schedule을 사용하여 SQL 에이전트 일정을 만드는 경우 작업 실행이 시작되는 날짜인 active_start_date 매개 변수를 지정할 수 있습니다. 일정 유형이 주별이거나 월별이고 active_start_date 매개 변수가 과거 날짜로 설정되는 경우 active_start_date 매개 변수는 무시되고 현재 날짜가 active_start_date로 사용됩니다.  
   
  [ **@active_end_date =** ] *active_end_date*  
- 작업 실행이 중지되는 날짜입니다. *active_end_date*은 **int**, 기본값은 **99991231**를 나타내는 12 월 31 일에서 9999입니다. 날짜 형식은 YYYYMMDD입니다.  
+ 작업 실행이 중지되는 날짜입니다. *active_end_date* 은 **int**, 기본값은 **99991231**를 나타내는 12 월 31 일에서 9999입니다. 날짜 형식은 YYYYMMDD입니다.  
   
  [ **@active_start_time =** ] *active_start_time*  
- 시간 사이의 임의의 날짜에서 *active_start_date* 및 *active_end_date* 작업의 실행을 시작 합니다. *active_start_time*은 **int**, 기본값은 **000000**, 오전 12시: 00 나타냅니다 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
+ 시간 사이의 임의의 날짜에서 *active_start_date* 및 *active_end_date* 작업의 실행을 시작 합니다. *active_start_time* 은 **int**, 기본값은 **000000**, 오전 12시: 00 나타냅니다 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
  [ **@active_end_time =** ] *active_end_time*  
- 시간 사이의 임의의 날짜에서 *active_start_date* 및 *active_end_date* 하는 작업의 실행을 종료 합니다. *active_end_time*은 **int**, 기본값은 **235959**, 오후 11시 59분: 59를 나타냄 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
+ 시간 사이의 임의의 날짜에서 *active_start_date* 및 *active_end_date* 하는 작업의 실행을 종료 합니다. *active_end_time* 은 **int**, 기본값은 **235959**, 오후 11시 59분: 59를 나타냄 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
  [ **@owner_login_name**= ] **'***owner_login_name***'**  
  일정을 소유하는 서버 보안 주체의 이름입니다. *owner_login_name* 은 **sysname**, 기본값은 NULL, 만든이가 일정을 소유 나타냅니다.  
@@ -152,10 +152,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="result-sets"></a>결과 집합  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -211,7 +211,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [만들기 및 작업에 일정 연결](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [작업 예약](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [일정 만들기](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   

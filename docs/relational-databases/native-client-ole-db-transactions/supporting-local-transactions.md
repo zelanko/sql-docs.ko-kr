@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 59755ef9ebb3813ea78c354234dc5df3be8ea1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d05f258ab240c6a9f4d3ecd34aa41755d6ba81c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953858"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695114"
 ---
 # <a name="supporting-local-transactions"></a>로컬 트랜잭션 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32953858"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 지원 **itransactionlocal:: Starttransaction** 다음과 같이 매개 변수입니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같은 지원:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 참고: 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT를 사용할 수는 *isoLevel* 인수는 데이터베이스에 대 한 버전 관리가 활성화 여부입니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 하면 XACT_E_ISOLATIONLEVEL 오류가 ISOLATIONLEVEL_SNAPSHOT로 지정 된 경우 발생 됩니다는 *isoLevel* 의 버전에 연결 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.|  
 |*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 0이 아닌 모든 값에 대 한 오류를 반환 합니다.|  
@@ -59,7 +58,7 @@ ms.locfileid: "32953858"
   
  로컬 트랜잭션의 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 구현 **itransaction:: Commit** 다음과 같이 매개 변수입니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 인 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션에 대 한 자동 커밋 모드로 되돌아갑니다.|  
 |*grfTC*[in]|비동기 및 1 단계 반환에서 지원 되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xacttc_sync 외의 다른 모든 값에 대 한 Native Client OLE DB 공급자는 XACT_E_NOTSUPPORTED를 반환 합니다.|  
@@ -134,7 +133,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [트랜잭션](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [스냅숏 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   

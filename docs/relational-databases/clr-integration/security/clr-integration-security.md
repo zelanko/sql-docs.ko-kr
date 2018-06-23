@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -20,12 +18,12 @@ caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7df2bb8e3620b374fa534326b9195b7b2887f91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a8fbad7022a68f74d2c25c21bc9867c9953083
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923888"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700034"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +55,13 @@ ms.locfileid: "32923888"
  [가장 및 CLR 통합 보안](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  관리 코드에서 가장을 사용하여 외부 리소스에 액세스하는 방법을 설명합니다.  
   
- [신뢰할 수 있는 호출자를 부분적으로 허용](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [부분적으로 신뢰할 수 있는 호출자 허용](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  관리되는 메서드에서 다른 어셈블리에 포함된 클래스의 메서드를 호출할 때 발생하는 문제를 설명합니다.  
   
  [응용 프로그램 도메인 및 CLR 통합 보안](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  응용 프로그램 도메인에 어셈블리를 로드하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

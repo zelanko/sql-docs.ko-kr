@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a97f77780d9c376a121373ea5890949eb48091c4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948048"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696834"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>SQL에서 C 데이터 형식 변환을 날짜/시간
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "32948048"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1.|1|1.|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1.|1|1.|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_TYPE_DATE|확인|12|13|12|13,23|14|16|16|  
 |SQL_SS_TIME2|12|8|15|확인|10,23|17|16|16|  
 |SQL_TYPE_TIMESTAMP|18|7,8|확인|7|23|19|16|16|  
@@ -48,7 +47,7 @@ ms.locfileid: "32948048"
 |기호|의미|  
 |------------|-------------|  
 |확인|변환 문제가 발생하지 않습니다.|  
-|1.|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
+|1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
 |2|선행 공백과 후행 공백이 무시됩니다.|  
 |3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하는 경우 SQLSTATE 22018 및 "Datetime 필드 오버플로" 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
 |4|값이 유효한 날짜, 타임스탬프 또는 타임스탬프 오프셋 값이 아니면 SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  
@@ -73,7 +72,7 @@ ms.locfileid: "32948048"
   
  이 항목의 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수에 대 한 서버 유형을에 지정 된 경우 SQLBindParameter 서버의 실제 형식과 일치 하지 않습니다, 서버에 의해 암시적 변환이 수행 됩니다 및 클라이언트에 반환 형식이 SQLBindParameter 통해 지정 된 형식과 일치 합니다. 따라서 서버의 변환 규칙이 앞의 표에서 설명된 내용과 다를 경우 예기치 못한 변환 결과가 나타날 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 날짜를 사용하지 않고 1900-1-1을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>관련 항목  
+ [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   
