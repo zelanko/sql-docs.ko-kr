@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c334671fb9afaa4596688658e6beadbf8c9e6cc8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563861"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297439"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,6 +35,36 @@ SQL Server 2017
 ## <a name="setup-and-configuration-issues"></a>설치 및 구성 문제
 
 참조에 대 한 프로세스와 관련 된 초기 설치 및 구성과 관련 된 일반적인 질문 설명은 [업그레이드 및 설치 FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)합니다. 업그레이드,-나란히 설치 및 새 Python 또는 R 구성 요소를 설치 하는 방법에 대 한 정보를 포함 합니다.
+
+### <a name="r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>R 스크립트 런타임 오류 (SQL Server 2017 CU5 CU7 재발)
+
+SQL Server 2017 년에 대 한 누적 업데이트 5-7, 즉에서 회귀는 **rlauncher.config** 임시 디렉터리의 파일 경로 공백이 있는 파일입니다. 이 회귀는 CU8에서 해결 되었습니다.
+
+R 스크립트를 실행할 때 나타납니다 오류는 다음과 같은 메시지가 포함 되어 있습니다.
+
+> *'R' 스크립트의 런타임과 통신할 수 없습니다. 'R' 런타임의 요구 사항을 확인 하십시오.*
+>
+> 외부 스크립트의 STDERR 메시지: 
+>
+> *심각한 오류: 'R_TempDir' 만들 수 없습니다.*
+
+**해결 방법**
+
+사용 가능 해지면 CU8를 적용 합니다. 다시 만들 수 또는 **rlauncher.config** 를 실행 하 여 **registerrext** 관리자 권한 명령 프롬프트에서 제거/설치 합니다. 
+
+```text
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /install /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+```
+
+다음 예제에서는 "MSSQL14 기본 인스턴스가 사용 하 여 명령. 에 설치 된 MSSQLSERVER "를" C:\Program Files\Microsoft SQL Server\":
+
+```text
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /uninstall /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /install /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+```
 
 ### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>도메인 컨트롤러에 SQL Server 컴퓨터 학습 기능을 설치할 수 없습니다.
 
@@ -167,7 +197,7 @@ Enterprise Edition에서 리소스 풀을 사용하여 외부 스크립트 프�
 
 **적용 대상:** SQL Server 2016 R 서비스, Enterprise Edition
 
-## <a name="r-issues"></a>R 관련 문제
+## <a name="r-script-execution-issues"></a>R 스크립트 실행 관련 문제
 
 이 섹션에는 RevoScaleR를 포함 하 여 Microsoft에서 게시 하는 도구 및 R 라이브러리에 관련 된 몇 가지 문제 뿐 아니라 SQL Server에서 R을 실행 하는 관련 된 알려진된 문제가 포함 되어 있습니다.
 
@@ -371,7 +401,7 @@ R --max-ppsize=500000
 
 순서가 지정된 요소는 `rxDTree`를 제외하고 모든 RevoScaleR 분석 함수의 요소와 동일하게 처리됩니다.
 
-## <a name="python-code-execution-or-python-package-issues"></a>Python 코드 실행 또는 Python 패키지 문제
+## <a name="python-script-execution-issues"></a>Python 스크립트 실행 문제
 
 이 섹션에서는으로 SQL Server, Microsoft에서 게시 Python 패키지에 관련 된 문제에 대해 Python을 실행 하는 관련 된 알려진된 문제가 포함 하 여 [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 
