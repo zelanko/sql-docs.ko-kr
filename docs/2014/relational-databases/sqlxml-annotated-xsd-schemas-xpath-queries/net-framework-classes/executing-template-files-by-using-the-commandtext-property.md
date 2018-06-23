@@ -1,0 +1,139 @@
+---
+title: CommandText 속성을 사용 하 여 템플릿 파일 실행 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- Managed Classes [SQLXML], executing template files
+- SQLXML Managed Classes, executing template files
+- templates [SQLXML], SQLXML Managed Classes
+- executing template files [SQLXML]
+- CommandText property
+ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
+caps.latest.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a935c42d72f0dc26bc329cb0f4c8649097a317f7
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36172391"
+---
+# <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
+  이 예제는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정 하는 방법을 보여 줍니다. SQL 또는 XPath 쿼리를 CommandText 값으로 지정 하는 대신 파일 이름을 값으로 지정할 수 있습니다. 다음 예제에서에서는 CommandType 속성이 SqlXmlCommandType.TemplateFile로 지정 됩니다.  
+  
+ 예제 응용 프로그램에서 이 템플릿을 실행합니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:query>  
+    SELECT TOP 2 ContactID, FirstName, LastName   
+    FROM   Person.Contact  
+    FOR XML AUTO  
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 이 응용 프로그램은 C# 예제 응용 프로그램입니다. 따라서 응용 프로그램을 테스트하려면 템플릿(TemplateFile.xml)을 저장한 다음 응용 프로그램을 실행해야 합니다.  
+  
+> [!NOTE]  
+>  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
+  
+```  
+using System;  
+using Microsoft.Data.SqlXml;  
+using System.IO;  
+class Test  
+{  
+      static string ConnString = "Provider=SQLOLEDB;Server=(local);database=AdventureWorks;Integrated Security=SSPI";  
+  
+      public static int testParams()  
+      {  
+         //Stream strm;  
+         SqlXmlCommand cmd = new SqlXmlCommand(ConnString);  
+         cmd.CommandType = SqlXmlCommandType.TemplateFile;  
+         cmd.CommandText = "TemplateFile.xml";  
+         using (Stream strm = cmd.ExecuteStream()){  
+            using (StreamReader sr = new StreamReader(strm)){  
+                Console.WriteLine(sr.ReadToEnd());  
+            }  
+         }  
+  
+         return 0;        
+      }  
+      public static int Main(String[] args)  
+      {  
+         testParams();     
+         return 0;  
+      }  
+   }  
+```  
+  
+### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+  
+1.  컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있는지 확인합니다.  
+  
+2.  이 예에서 제공하는 XML 템플릿(TemplateFile.xml)을 폴더에 저장합니다.  
+  
+3.  이 예에서 제공하는 C# 코드(DocSample.cs)를 스키마가 저장된 폴더와 같은 폴더에 저장합니다. (다른 폴더에 파일을 저장하는 경우 코드를 편집하여 매핑 스키마에 대해 적합한 디렉터리 경로를 지정해야 합니다.)  
+  
+4.  코드를 컴파일합니다. 다음을 사용하여 명령 프롬프트에서 코드를 컴파일합니다.  
+  
+    ```  
+    csc /reference:Microsoft.Data.SqlXML.dll DocSample.cs  
+    ```  
+  
+     이렇게 하면 실행 파일(DocSample.exe)이 만들어집니다.  
+  
+5.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
+  
+ 서식 파일에는 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호로 시작 해야 합니다 (@); 예를 들어 p.Name= "@ContactID", 여기서 p는 SqlXmlParameter 개체입니다.  
+  
+ 다음은 하나의 매개 변수를 사용하는 업데이트된 템플릿입니다.  
+  
+```  
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
+  <sql:header>  
+     <sql:param name='ContactID'>1</sql:param>    
+  </sql:header>  
+  <sql:query>  
+    SELECT ContactID, FirstName, LastName  
+    FROM   Person.Contact  
+    WHERE  ContactID=@ContactID  
+    FOR XML AUTO  
+  </sql:query>  
+</ROOT>  
+```  
+  
+ 다음은 템플릿을 실행하기 위해 매개 변수가 전달되는 업데이트된 코드입니다.  
+  
+```  
+public static int testParams()  
+{  
+  
+   Stream strm;  
+   SqlXmlParameter p;  
+  
+   SqlXmlCommand cmd = new SqlXmlCommand(ConnString);  
+   cmd.CommandType = SqlXmlCommandType.TemplateFile;  
+   cmd.CommandText = "TemplateFile.xml";  
+   p = cmd.CreateParameter();  
+   p.Name="@ContactID";  
+   p.Value = "1";  
+   strm = cmd.ExecuteStream();  
+   StreamReader sw = new StreamReader(strm);  
+   Console.WriteLine(sw.ReadToEnd());  
+   return 0;        
+}  
+```  
+  
+  
