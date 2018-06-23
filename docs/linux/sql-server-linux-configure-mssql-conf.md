@@ -4,7 +4,7 @@ description: 이 문서에서는 Linux에서 SQL Server 2017 설정을 구성 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324054"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329488"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
 
@@ -98,7 +98,10 @@ ms.locfileid: "34324054"
 
 ## <a id="customerfeedback"></a> 고객 의견을 구성 합니다.
 
-**telemetry.customerfeedback** 설정은 SQL Server 또는 Microsoft에 피드백을 보냅니다 있는지 여부를 변경 합니다. 기본적으로이 값 설정 **true**합니다. 값을 변경 하려면 다음 명령을 실행 합니다.
+**telemetry.customerfeedback** 설정은 SQL Server 또는 Microsoft에 피드백을 보냅니다 있는지 여부를 변경 합니다. 기본적으로이 값 설정 **true** 모든 버전에 대 한 합니다. 값을 변경 하려면 다음 명령을 실행 합니다.
+
+> [!IMPORTANT]
+> 해제할 수 있습니다 없습니다 고객 의견을 무료로 버전의 SQL Server, Express 및 개발자.
 
 1. 루트 및 mssql conf 스크립트를 실행 하는 중는 **설정** 명령을 **telemetry.customerfeedback**합니다. 다음 예에서는 지정 하 여 고객 의견 해제 **false**합니다.
 
@@ -112,7 +115,7 @@ ms.locfileid: "34324054"
    sudo systemctl restart mssql-server
    ```
 
-자세한 내용은 참조 [Linux에서 SQL Server에 대 한 고객 의견](sql-server-linux-customer-feedback.md)합니다.
+자세한 내용은 참조 [Linux에서 SQL Server에 대 한 고객 의견](sql-server-linux-customer-feedback.md) 및 [SQL Server 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkID=868444)합니다.
 
 ## <a id="datadir"></a> 기본 데이터 또는 로그 디렉터리 위치를 변경 합니다.
 
