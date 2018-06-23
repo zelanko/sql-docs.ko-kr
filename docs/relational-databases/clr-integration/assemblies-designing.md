@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -18,12 +16,12 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33519a8494be8f6a062227b81999f58c4f053071
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8607c326734f998ee536d884a57463765f7b67b2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923588"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695344"
 ---
 # <a name="assemblies---designing"></a>어셈블리-디자인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,8 +120,8 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [어셈블리 & #40; 데이터베이스 엔진 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>관련 항목  
+ [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

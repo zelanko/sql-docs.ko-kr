@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947018"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701464"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32947018"
   
 5.  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
   
-6.  데이터 (및 길이 표시기), 포함 된 저장소 개체를 만들고 다음 호출 **irowsetchange:: Setdata** (또는 **irowsetchange:: Insertrow**)는 데이터를 설정 하려면 해당 BLOB 열을 바인딩하는 접근자를 사용 합니다.  
+6.  데이터 (및 길이 표시기), 포함 된 저장소 개체를 만들고 다음 호출 **irowsetchange:: Setdata** (또는 **irowsetchange:: Insertrow**)을 설정 하려면 해당 BLOB 열을 바인딩하는 접근자 사용 데이터입니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 BLOB 데이터를 설정하는 방법을 보여 줍니다. 이 예에서는 데이터를 만들어 예제 레코드를 추가하고 행 집합에서 해당 레코드를 인출한 다음 BLOB 필드의 값을 설정합니다.  
@@ -726,7 +724,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Blob 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   

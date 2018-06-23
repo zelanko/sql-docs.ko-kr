@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e8ab05b56a1f6f96211d3505fde583e7448d4492
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13bc065e3b6c8373f5e0eeac70977195587cd721
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943918"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703720"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,14 +62,14 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **bcp_colptr** 함수를 사용 하면 SQL server로 데이터를 복사할 때 특정 열에 대 한 원본 데이터의 주소를 변경할 수 있습니다 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)합니다.  
   
  사용자 데이터에 대 한 포인터를 호출 하 여 초기에 설정 됩니다 **bcp_bind**합니다. 호출 간에 프로그램 변수 데이터 주소가 변경 되 면 **bcp_sendrow**를 호출할 수 있습니다 **bcp_colptr** 데이터에 포인터를 다시 설정 합니다. 다음 호출 **bcp_sendrow** 호출 하 여 주소가 지정 된 데이터를 보내는 **bcp_colptr**합니다.  
   
  별도 있어야 **bcp_colptr** 데이터 주소를 테이블의 모든 열에 대 한 호출을 수정 하려고 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

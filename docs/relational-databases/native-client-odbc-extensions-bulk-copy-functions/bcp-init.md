@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 174c487c16f9e76fec6493dac0c77db15394df8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4411473684e4882e9b3f83f72443567045343646
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948238"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703754"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +70,7 @@ RETCODE bcp_init (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  호출 **bcp_init** 다른 대량 복사 함수를 호출 하기 전에. **bcp_init** 워크스테이션 간의 데이터 대량 복사에 필요한 초기화를 수행 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  **bcp_init** 대량 복사 함수에 사용할 수 있는 ODBC 연결 핸들 기능을 제공 해야 합니다. 핸들을 사용 하려면 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 에 SQL_COPT_SS_BCP 할당 되었지만 연결 되지 않음 연결 핸들에 SQL_BCP_ON을 설정 합니다. 연결된 핸들에 특성을 할당하려고 하면 오류가 발생합니다.  
@@ -226,7 +224,7 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

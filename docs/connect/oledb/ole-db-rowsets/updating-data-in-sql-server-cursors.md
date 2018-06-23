@@ -2,9 +2,10 @@
 title: SQL Server 커서의 데이터 업데이트 | Microsoft Docs
 description: SQL Server 커서의 데이터 업데이트
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 321700be33a81b511f30af7e7b263bd188e54264
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8cece02b19e2334246dbddc096cafbeeae705684
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307712"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689506"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   페치 및를 통해 데이터를 업데이트 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서의 경우는 OLE DB Driver for SQL Server 소비자 응용 프로그램은 동일한 고려 사항 및 기타 클라이언트 응용 프로그램에 적용 되는 제약 조건으로 바인딩됩니다.  
   

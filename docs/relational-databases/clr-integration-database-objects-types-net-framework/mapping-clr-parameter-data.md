@@ -3,11 +3,9 @@ title: CLR 매개 변수 데이터 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,12 +29,12 @@ caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e4350f5bc8f639ccb529bc28927ca93261ce09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b1965107b1215a1a03817c7fc048ddc50ab8346
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923508"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696574"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,8 +114,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 데이터 형식 (SQL Server)**|**SQL Server 데이터 형식**|  
-|**10 진수**|smallmoney|  
-|**SqlMoney**|smallmoney|  
+|**10 진수**|SMALLMONEY|  
+|**SqlMoney**|SMALLMONEY|  
 |**10 진수**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
@@ -128,7 +126,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |추가 **SqlGeography**, **SqlGeometry**, 및 **SqlHierarchyId** 매핑 테이블에는 형식입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [.NET Framework의 SQL Server 데이터 형식](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -24,12 +22,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 09e9a65b9a6be2e1dc9de9153054f9b024818d0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54fbeba549f5a8733c7459fb822a7a67164cc60d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919088"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703374"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>연결에 대한 가장 및 자격 증명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +79,7 @@ catch
   
  또한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID 값을 받은 경우 기본적으로 해당 인스턴스를 다른 컴퓨터에 전파할 수 없습니다. Windows 보안 인프라에서 기본적으로 이 작업이 제한됩니다. 하지만 신뢰할 수 있는 여러 컴퓨터에 Windows ID를 전파할 수 있는 "위임"이라는 메커니즘이 있습니다. TechNet 문서에 위임에 대 한 자세히 알아볼 수 있습니다 "[Kerberos 프로토콜 전환 및 제한 위임](http://go.microsoft.com/fwlink/?LinkId=50419)"입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SqlContext 개체](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

@@ -4,38 +4,36 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4979bd919a8083c200464a444f4223d4bad103f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74a37a2aa5be3d437cfdbe286c6176ac2d8f6007
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947268"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696184"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  두 개의 ODBC 함수 호출( [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md))을 사용하여 ODBC 메시지를 검색할 수 있습니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 **SQLGetDiagField**를 사용하여 검색해야 합니다.  
+  두 개의 ODBC 함수 호출이 개의 데 사용할 수 있습니다: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)합니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 **SQLGetDiagField**를 사용하여 검색해야 합니다.  
   
  [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)는 개별 드라이버가 아니라 ODBC 드라이버 관리자에 의해 처리됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. 성공적으로 연결되기 전에는 드라이버별 진단 필드에 대해 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 를 호출할 수 없습니다. 여기에는 ODBC 연결 명령이 포함되며, 이러한 명령에서 SQL_SUCCESS_WITH_INFO를 반환하는 경우에도 마찬가지입니다. 다음에 ODBC 함수를 호출할 때까지 드라이버별 진단 필드를 사용할 수 없습니다.  
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  이 예제에서는 표준 ODBC 정보용 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 을 호출하는 간단한 오류 처리기를 보여 줍니다. 그런 다음 유효한 연결이 있는지 테스트하고, 유효한 연결이 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버별 진단 필드에 대해 **SQLGetDiagField**를 호출합니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
@@ -244,7 +242,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

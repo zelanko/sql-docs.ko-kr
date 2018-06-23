@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018000"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700904"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34018000"
 |MOLAP 저장소를 사용하는 다차원 모델|신속한 데이터 로드를 위한 디스크 IO및 캐시된 데이터에 충분한 RAM을 수용하는 부하 분산된 구성을 선택합니다.|  
 |ROLAP 저장소를 사용하는 다차원 모델|디스크 IO를 최대화하고 네트워크 대기 시간을 최소화합니다.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>WSFC를 통한 고가용성 및 중복성  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>고가용성 및 중복성 WSFC 통한  
  Analysis Services를 기존 WSFC(Windows Server 장애 조치(failover) 클러스터)에 설치하여 가장 짧은 시간 내에 서비스를 복원하는 고가용성을 달성할 수 있습니다.  
   
  장애 조치(failover) 클러스터는 데이터베이스에 대한 모든 액세스 권한(읽기 및 쓰기 저장)을 제공하지만 한 번에 하나의 노드만 지원합니다. 첫 번째 노드가 중단된 경우 보조 데이터베이스가 클러스터의 추가 노드에서 대체 서버로 실행됩니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "34018000"
  
  장애 조치(failover) 클러스터에서 Analysis Services를 배포하는 방법에 대한 자세한 지침 및 배경 정보는 [SQL Server Analysis Services 클러스터링 방법](https://msdn.microsoft.com/library/dn736073.aspx)을 참조하세요. 이 지침은 SQL Server 2012용으로 작성되었지만 최신 버전의 Analysis Services에도 계속 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Analysis Services 테이블 형식 데이터베이스에 대 한 NUMA 선호도 강제 적용](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델 사용](https://msdn.microsoft.com/library/dn751533.aspx)  

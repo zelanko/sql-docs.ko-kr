@@ -2,9 +2,10 @@
 title: SQL Server 테이블 만들기 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버를 사용 하 여 SQL Server 테이블 만들기
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d9c2e60b177a38e684eb92c1b406e091b575d675
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306782"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689596"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server 테이블 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 노출 된 **itabledefinition:: Createtable** 함수, 사용자가를 만들 수 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블입니다. 소비자가 사용 하 여 **CreateTable** SQL Server 용 OLE DB 드라이버에서 생성 한 고유 이름을 가진 소비자가 명명 한 영구 테이블을 영구 또는 임시 테이블을 만들려고 합니다.  
   
@@ -62,7 +65,7 @@ ms.locfileid: "35306782"
 |DBPROP_COL_DESCRIPTION|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: DBPROP_COL_DESCRIPTION 열 속성은 구현 되지 OLE DB Driver for SQL Server.<br /><br /> *dwStatus* 소비자는 속성 값을 쓰려고 시도할 때 DBPROP 구조의 멤버가 DBPROPSTATUS_NOTSUPPORTED를 반환 합니다.<br /><br /> 속성 설정으로 간주 되지 않으며 오류가 OLE DB Driver에 대 한 SQL Server에 대 한 합니다. 다른 매개 변수 값이 모두 올바르기만 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블이 생성됩니다.|  
 |DBPROP_COL_FIXEDLENGTH|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 OLE DB Driver for SQL Server는 DBPROP_COL_FIXEDLENGTH 소비자를 사용 하 여 열의 데이터 형식을 정의 하는 경우 데이터 형식 매핑을 확인 하는 *wType* 는 DBCOLUMNDESC의 멤버입니다. 자세한 내용은 참조 [ITableDefinition의 데이터 형식 매핑](../../oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md)합니다.|  
 |DBPROP_COL_NULLABLE|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: 테이블을 만들 때의 OLE DB Driver for SQL Server 나타냅니다 속성이 설정 된 경우 열의 null 값을 허용 해야 여부. 해당 속성이 설정되어 있지 않으면 열의 NULL 값 허용 여부가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ANSI_NULLS 기본 데이터베이스 옵션을 통해 확인됩니다.<br /><br /> OLE DB Driver for SQL Server는 ISO 규격 공급자입니다. 연결된 세션에서는 ISO 동작을 따르므로 소비자가 DBPROP_COL_NULLABLE을 설정하지 않은 경우 열은 null 값을 허용합니다.|  
-|DBPROP_COL_PRIMARYKEY|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 때 VARIANT_TRUE 이면는 OLE DB Driver for SQL Server는 PRIMARY KEY 제약 조건이 있는 열을 만듭니다.<br /><br /> 열 속성으로 정의된 경우 단일 열만 이 제약 조건을 확인할 수 있습니다. OLE DB Driver for SQL Server가 만들려고 할 때 단일 열에서 오류를 반환 하는 보다 더 많은 대 한 속성이 variant_true로 설정 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블입니다.<br /><br /> 참고: 소비자를 사용할 수 **iindexdefinition:: Createindex** 두 개 이상의 열에 PRIMARY KEY 제약 조건을 만들려고 합니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server가 DB_S_ERRORSOCCURRED를 반환 및 *dwOption* DBPROP_COL_UNIQUE이 dbpropoptions_required가 아니면 합니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE DB_E_ERRORSOCCURRED가 반환 및 *dwOption* DBPROP_COL_UNIQUE이 dbpropoptions_required 이면 합니다. 열이 정의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity 속성과 고 DBPROP_COL_PRIMARYKEY *dwStatus* 멤버가 DBPROPSTATUS_CONFLICTING으로 설정 됩니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_NULLABLE이 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server 오류를 반환 합니다.<br /><br /> OLE DB Driver for SQL Server에서 오류를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 소비자가 잘못 된 열에 PRIMARY KEY 제약 조건을 만들 하려고 할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다. PRIMARY KEY 제약 조건을 사용 하 여 만든 열에 정의할 수 없습니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 **비트**, **텍스트**, **ntext**, 및 **이미지**합니다.|  
+|DBPROP_COL_PRIMARYKEY|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 때 VARIANT_TRUE 이면는 OLE DB Driver for SQL Server는 PRIMARY KEY 제약 조건이 있는 열을 만듭니다.<br /><br /> 열 속성으로 정의된 경우 단일 열만 이 제약 조건을 확인할 수 있습니다. OLE DB Driver for SQL Server가 만들려고 할 때 단일 열에서 오류를 반환 하는 보다 더 많은 대 한 속성이 variant_true로 설정 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블입니다.<br /><br /> 참고: 소비자를 사용할 수 **iindexdefinition:: Createindex** 두 개 이상의 열에 PRIMARY KEY 제약 조건을 만들려고 합니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server가 DB_S_ERRORSOCCURRED를 반환 및 *dwOption* DBPROP_COL_UNIQUE이 dbpropoptions_required가 아니면 합니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE DB_E_ERRORSOCCURRED가 반환 및 *dwOption* DBPROP_COL_UNIQUE이 dbpropoptions_required 이면 합니다. 열이 정의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity 속성과 고 DBPROP_COL_PRIMARYKEY *dwStatus* 멤버가 DBPROPSTATUS_CONFLICTING으로 설정 됩니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_NULLABLE이 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server 오류를 반환 합니다.<br /><br /> OLE DB Driver for SQL Server에서 오류를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 소비자가 잘못 된 열에 PRIMARY KEY 제약 조건을 만들 하려고 할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다. PRIMARY KEY 제약 조건을 사용 하 여 만든 열에 정의할 수 없습니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 **비트**, **텍스트**, **ntext**, 및 **이미지**.|  
 |DBPROP_COL_UNIQUE|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 적용 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열에 UNIQUE 제약 조건입니다.<br /><br /> 열 속성으로 정의된 경우 이 제약 조건은 단일 열에만 적용됩니다. 소비자 צ ְ ײ **iindexdefinition:: Createindex** 조합 된 값의 두 개 이상의 열에 UNIQUE 제약 조건을 적용 합니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server가 DB_S_ERRORSOCCURRED를 반환 하 고 *dwOption* 이 dbpropoptions_required가 아니면 합니다.<br /><br /> DBPROP_COL_PRIMARYKEY 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE DB_E_ERRORSOCCURRED가 반환 하 고 *dwOption* 이 dbpropoptions_required 이면 합니다. 열이 정의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity 속성과 고 DBPROP_COL_PRIMARYKEY *dwStatus* 멤버가 DBPROPSTATUS_CONFLICTING으로 설정 됩니다.<br /><br /> DBPROP_COL_NULLABLE 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server가 DB_S_ERRORSOCCURRED를 반환 하 고 *dwOption* 이 dbpropoptions_required가 아니면 합니다.<br /><br /> DBPROP_COL_NULLABLE 및 DBPROP_COL_UNIQUE가 모두 VARIANT_TRUE DB_E_ERRORSOCCURRED가 반환 하 고 *dwOption* 이 dbpropoptions_required 이면 합니다. 열이 정의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity 속성과 고 DBPROP_COL_NULLABLE *dwStatus* 멤버가 DBPROPSTATUS_CONFLICTING으로 설정 됩니다.<br /><br /> OLE DB Driver for SQL Server에서 오류를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 소비자가 잘못 된 열에 UNIQUE 제약 조건을 만들 하려고 할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다. UNIQUE 제약 조건을 사용 하 여 만든 열에 정의할 수 없습니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **비트** 데이터 형식입니다.|  
   
  소비자가 호출 하는 경우 **itabledefinition:: Createtable**는 OLE DB Driver for SQL Server 테이블 속성을 다음과 같이 해석 합니다.  

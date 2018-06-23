@@ -2,9 +2,10 @@
 title: IBCPSession (OLE DB) | Microsoft Docs
 description: IBCPSession 인터페이스 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: baa9e65a03ff398aa7efda70c8f78fddcec77118
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9a252ab45aa8f20bac2c8b73606ebdc07b8a332e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305302"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689486"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IBCPSession** 인터페이스에 대 한 지원을 노출 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 파일 기반 대량 복사 작업입니다. **IBCPSession** 인터페이스 세션과 동일한 수준에서 SQL Server 용 OLE DB 드라이버에 노출 됩니다. OLE DB 드라이버에서 SQL Server에 대 한 데이터 원본 개체는 세션 개체에 대 한 팩터리 및 대량 복사 작업은 연결 속성 SSPROP_ENABLEBULKCOPY에에서 지정 합니다. 또한 SSPROP_ENABLEFASTLOAD 속성을 true로 설정해야 합니다.  
   

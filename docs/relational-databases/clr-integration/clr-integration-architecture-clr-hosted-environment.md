@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,12 +30,12 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922478"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697514"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처-CLR 호스팅된 환경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,8 +130,8 @@ ms.locfileid: "32922478"
 |권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
 |프로그래밍 모델 제한 사항|예|예|제한 없음|  
-|안정성 요구 사항|예|사용자 계정 컨트롤|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|아니오|예|  
+|안정성 요구 사항|예|예|아니요|  
+|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   
@@ -150,8 +148,8 @@ ms.locfileid: "32922478"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주석을 지정 하 여.NET Framework Api 호출을 허용 하지 않습니다는 **: SharedState**, **동기화** 및 **ExternalProcessMgmt** 호스트 보호 특성입니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 참조 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)   
- [통합 된 CLR의 성능](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
+ [통합된 CLR의 성능](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   
