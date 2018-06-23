@@ -1,0 +1,76 @@
+---
+title: Reporting Services를 사용한 스크립팅 및 PowerShell | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- scripts [Reporting Services]
+- Reporting Services, scripting
+- scripting [Reporting Services]
+ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
+caps.latest.revision: 12
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: 0d76693f37506cd78a7d198520344cb55f9d142f
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36092321"
+---
+# <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 다양 한 개발 및 관리 시나리오는 rs.exe 명령줄 유틸리티, SharePoint 모드 보고서 서버용 PowerShell cmdlet을 포함 하 여이 활용 하 여 스크립트를 통해 지원는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 은 네이티브에 대 한 PowerShell에서 개체 모델 및 SharePoint 모드입니다.  
+  
+-   관리자는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 에서 스크립트를 작성하여 보고서 서버 설치를 배포 및 관리하는 방법을 자동화하며 보고서 서버 데이터베이스를 생성, 구성 및 업데이트하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하고 실행할 수 있습니다. 또한 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 기록 및 재생 스크립트 기능을 사용하여 일상적인 유지 관리 태스크를 자동화할 수 있습니다.  
+  
+-   개발자는 스크립트를 포함하는 사용자 지정 응용 프로그램을 만들 수 있습니다. 보고서 서버 웹 서비스를 호출하는 스크립트를 실행할 수 있습니다. 관리 코드로 작성할 수 있는 거의 모든 작업을 스크립트로도 작성할 수 있습니다.  
+  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 지원 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 보고서 서버에서 실행 되는 스크립트 호스트인 RS.exe 유틸리티에서 처리할 수 있는 스크립트 언어로.NET 스크립트입니다.  
+  
+## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Reporting Services SharePoint 모드 PowerShell cmdlet 및 샘플  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
+  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드에 포함 되어 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 관리에 대 한 cmdlet입니다.  
+  
+-   [PowerShell cmdlets for Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 에서는 다음 예를 제공합니다.  
+  
+    -   서비스 응용 프로그램 및 프록시 만들기  
+  
+    -   배달 확장 검토 및 업데이트  
+  
+    -   보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정(예: 데이터베이스 시간 제한)  
+  
+    -   데이터 확장 나열  
+  
+## <a name="reporting-services-object-model-and-powershell-samples"></a>Reporting Services 개체 모델 및 Powershell 샘플  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
+  
+ 대부분 SharePoint 및 기본 모드에 유효하며 핵심 개체 모델을 호출하는 PowerShell(예: 마이그레이션 작업, 구독 작업)과 관련 샘플은 SQL15에서 작동합니다.  
+  
+-   [Use PowerShell to Change, Reporting Services 구독 소유자를 나열 및 구독 실행](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)합니다.  
+  
+-   [PowerShell을 사용하여 기본 모드 보고서 서버로 Azure VM 만들기](http://msdn.microsoft.com/library/azure/dn449661.aspx)  
+  
+-   [Reporting Services WMI 공급자 액세스](access-the-reporting-services-wmi-provider.md)에서 "PowerShell을 사용하여 WMI 클래스 액세스" 섹션을 참조하세요.  
+  
+-   [PowerShell을 사용하여 SSRS를 관리하는 방법](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell).scriptin  
+  
+## <a name="rsexe-scripting-samples"></a>RS.exe 스크립팅 샘플  
+  
+-   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)입니다.  
+  
+-   추가 스크립트, 응용 프로그램 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
+  
+## <a name="see-also"></a>관련 항목  
+ [RS.exe 유틸리티 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
+ [배포 및 관리 태스크 스크립팅](script-deployment-and-administrative-tasks.md)   
+ [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립트](script-with-the-rs-exe-utility-and-the-web-service.md)  
+  
+  
