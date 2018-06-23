@@ -1,0 +1,58 @@
+---
+title: 식 참조(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
+caps.latest.revision: 6
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: afee43abcadea62f4b1a925a3546693f28919e2f
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36090383"
+---
+# <a name="expression-reference-report-builder-and-ssrs"></a>식 참조(보고서 작성기 및 SSRS)
+  보고서 식은 기본 제공 함수 및 기본 제공 컬렉션에 대한 다양한 참조를 지원합니다. 식에 올바른 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 구문이 있어야만 보고서를 게시하거나 처리할 수 있습니다.  
+  
+ 복잡한 식이나 사용자 지정 코드 또는 사용자 지정 어셈블리를 사용하는 식을 개발하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 디자이너를 사용하는 것이 좋습니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+ 이 섹션의 항목에서는 보고서에 간단한 식을 작성하는 방법에 대해 설명합니다.  
+  
+## <a name="in-this-section"></a>섹션 내용  
+ [식의 데이터 형식 &#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
+  
+ [식의 상수 &#40;보고서 작성기 및 SSRS&#41;](constants-in-expressions-report-builder-and-ssrs.md)  
+  
+ [식의 연산자 &#40;보고서 작성기 및 SSRS&#41;](operators-in-expressions-report-builder-and-ssrs.md)  
+  
+ [식에 기본 제공 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
+  
+ [기본 제공 Globals 및 Users 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+  
+ [매개 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+  
+ [데이터 집합 필드 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md)  
+  
+ [DataSources 및 DataSets 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
+  
+ [보고서 및 그룹 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+  
+ [ReportItems 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
+  
+## <a name="see-also"></a>관련 항목  
+ [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
+  
+  
