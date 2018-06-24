@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7074fcf6c6616c878b0cd4021aabb4359c2a40dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bf9b7e907bbc00febe4ef86b17bf266408b131e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947448"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702814"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "32947448"
   
  자세한 내용은 참조 [준비 된 문의 테이블 반환 매개 변수 메타 데이터](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)합니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 사용 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>스파스 열에 대한 SQLSetStmtAttr 지원  
  SQLSetStmtAttr은 SQL_SOPT_SS_NAME_SCOPE를 설정할 데 사용할 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 SQL_SOPT_SS_NAME_SCOPE 섹션을 참조 하십시오. 스파스 열에 대 한 자세한 내용은 참조 [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)합니다.  
@@ -153,7 +152,7 @@ ms.locfileid: "32947448"
   
  SQLTables, SQLColumns, 또는 SQLPrimaryKeys SQL_SOPT_SS_NAME_SCOPE의 아닌 다른 값이 호출 다음 카탈로그 함수가 다른 SQL_SS_NAME_SCOPE_TABLE 면 SQL_ERROR가 반환 됩니다. SQLSTATE HY010 및 "함수 시퀀스 오류입니다(SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되지 않았습니다)" 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLGetStmtAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

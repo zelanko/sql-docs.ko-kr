@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d51c8cb13a4a8bd2e9cc14e8208c6d9e0e0084f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cba782e4bea322fdba6c06fc81ae2aa87e94a1a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946008"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699604"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>바인딩 매개 변수-문 매개 변수를 사용 하 여
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +65,7 @@ ms.locfileid: "32946008"
   
  경우 **SQL_DESC_NAME** 설정 된 저장된 프로시저 매개 변수의 경우 쿼리의 모든 저장된 프로시저 매개 변수가 설정 해야 **SQL_DESC_NAME**합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에 매개 변수에 **SQL_DESC_NAME** 설정, 리터럴 형식을 사용 해야 *' 이름*=*값*', 여기서 *이름* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 참조 [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [문 매개 변수 사용](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

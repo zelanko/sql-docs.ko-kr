@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parameters [SQL Server Native Client], OLE DB
 - commands [OLE DB]
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cafa0f1eacd1b574454fbeaee6edead796c86398
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1525f0f2bad9769e7d917a24bc82d1785d954268
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947198"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701454"
 ---
 # <a name="command-parameters"></a>명령 매개 변수
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +65,7 @@ ms.locfileid: "32947198"
 > [!NOTE]  
 >  에 대 한 지원을 공개 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 및 사용자 정의 형식 (UDT)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 구현 하는 새 [ISSCommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [도구](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

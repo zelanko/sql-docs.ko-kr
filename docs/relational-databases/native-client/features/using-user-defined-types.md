@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 902180da98af11feeccc65295d0f4c1dbdd28727
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9274c4cb2b6f4381a0d4fe89ec518a9f73dcd768
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332534"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695944"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -54,13 +53,13 @@ ms.locfileid: "34332534"
 |데이터 형식|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|지원<sup>6</sup>|오류<sup>1</sup>|지원<sup>6</sup>|오류<sup>5</sup>|  
-|DBTYPE_BYTES|지원<sup>6</sup>|N/A<sup>2</sup>|지원<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|지원<sup>3,6</sup>|N/A<sup>2</sup>|지원<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|지원<sup>3,6</sup>|N/A<sup>2</sup>|지원<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|지원<sup>3,6</sup>|N/A<sup>2</sup>|지원<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|지원되지 않음|N/A<sup>2</sup>|지원되지 않음|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|지원<sup>6</sup>|N/A<sup>2</sup>|지원<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|지원<sup>3,6</sup>|N/A<sup>2</sup>|해당 사항 없음|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|지원<sup>6</sup>|해당 없음<sup>2</sup>|지원<sup>6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_WSTR|지원<sup>3,6</sup>|해당 없음<sup>2</sup>|지원<sup>4,6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_BSTR|지원<sup>3,6</sup>|해당 없음<sup>2</sup>|지원<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_STR|지원<sup>3,6</sup>|해당 없음<sup>2</sup>|지원<sup>4,6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|지원되지 않음|해당 없음<sup>2</sup>|지원되지 않음|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|지원<sup>6</sup>|해당 없음<sup>2</sup>|지원<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|지원<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
   
  <sup>1</sup>서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 (DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
@@ -86,12 +85,12 @@ ms.locfileid: "34332534"
  OLE DB 핵심 서비스에서 제공 하는 데이터 변환 (**IDataConvert**) DBTYPE_UDT에 적용 되지 않습니다. 다른 바인딩은 지원되지 않습니다.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client는 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 스키마 행 집합  
  PROCEDURE_PARAMETERS 스키마 행 집합에 다음이 추가되었습니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
@@ -101,7 +100,7 @@ ms.locfileid: "34332534"
 #### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 등록된 된 Udt를 설명 하는 새 공급자 특정 스키마 행 집합을 노출 합니다. ASSEMBLY 서버가 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -113,7 +112,7 @@ ms.locfileid: "34332534"
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 지정 된 서버의 어셈블리 종속성을 설명 하는 새 공급자별 스키마 행 집합을 노출 합니다. ASSEMBLY_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLY_DEPENDENCIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -123,7 +122,7 @@ ms.locfileid: "34332534"
 #### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 새로운 스키마 행 집합, 경우에 대해 설명 하는 SQL_USER_TYPES를 노출 합니다. 지정 된 서버의 등록된 된 Udt가 추가 됩니다. UDT_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되어야 하지만 행 집합에는 없을 수 있습니다. SQL_USER_TYPES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -133,7 +132,7 @@ ms.locfileid: "34332534"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 스키마 행 집합  
  COLUMNS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -141,12 +140,12 @@ ms.locfileid: "34332534"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|전체 형식 이름(AQN)은 적용 가능한 경우 네임스페이스에 따른 접두사가 추가된 형식 이름을 포함합니다.|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 속성 집합의 추가 내용 및 변경 내용  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client에는 많은 핵심 OLE DB 속성 집합 변경 이나 새 값을 추가 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 많은 핵심 OLE DB 속성 집합 변경 이나 새 값을 추가 합니다.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값을 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|이름|유형|Description|  
+|속성|형식|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -157,7 +156,7 @@ ms.locfileid: "34332534"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 생성을 지원 하기 위해는 **ITableDefinition** 인터페이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 다음과 같은 3 개의 새 열을 추가 합니다.  
   
-|이름|Description|형식|Description|  
+|속성|Description|형식|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -177,10 +176,10 @@ ms.locfileid: "34332534"
  UDT 정의가 다른 데이터베이스에 속하는 경우 SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME을 모두 지정해야 합니다.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 인터페이스의 추가 내용 및 변경 내용  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client는 새 값을 추가 하거나 많은 핵심 OLE DB 인터페이스를 변경 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 새 값을 추가 하거나 많은 핵심 OLE DB 인터페이스를 변경 합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
- OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 추가 포함 하 여 변경 사항을 구현 하는 **ISSCommandWithParameters** 인터페이스입니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스에서 상속 **ICommandWithParameters**합니다. 상속 되며, 세 가지 방법 외에도 **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, 및 **SetParameterInfo**; **ISSCommandWithParameters** 제공는 **GetParameterProperties** 및 **SetParameterProperties** 특정 데이터 형식을 처리 하는 데 사용 되는 메서드.  
+ OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 추가 포함 하 여 변경 사항을 구현 하는 **ISSCommandWithParameters** 인터페이스입니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스에서 상속 **ICommandWithParameters**합니다. 상속 되며, 세 가지 방법 외에도 **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, 및 **SetParameterInfo**; **ISSCommandWithParameters** 제공는 **GetParameterProperties** 및 **SetParameterProperties** 서버 특정 처리에 사용 되는 메서드 데이터 형식입니다.  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** 인터페이스도에서 활용 하는 새로운 SSPARAMPROPS 구조입니다.  
@@ -213,8 +212,8 @@ ms.locfileid: "34332534"
   
  C에서 SQL 데이터 형식으로 변환할 때 SQL_C_WCHAR, SQL_C_BINARY 및 SQL_C_CHAR을 모두 SQL_SS_UDT로 변환할 수 있습니다. 하지만 SQL_C_WCHAR 및 SQL_C_CHAR SQL 데이터 형식에서 변환할 경우에는 이진 데이터가 16진수 문자열로 변환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

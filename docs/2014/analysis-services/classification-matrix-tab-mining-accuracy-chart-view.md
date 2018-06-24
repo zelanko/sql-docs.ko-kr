@@ -1,0 +1,46 @@
+---
+title: 분류 행렬 탭 (마이닝 정확도 차트 뷰) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
+ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
+caps.latest.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36081230"
+---
+# <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>분류 행렬 탭(마이닝 정확도 차트 뷰)
+  **분류 행렬** 탭에서는 **열 매핑** 탭의 모델 표에서 선택한 각 모델에 대한 분류 행렬을 표시합니다. 분류 행렬은 **열 매핑** 탭에서 선택한 예측 가능한 열이 연속 열이 아닌 경우에만 사용할 수 있습니다. 에 대 한 자세한 설명은 **분류 행렬** 탭, 참조 [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)합니다.  
+  
+## <a name="options"></a>변수  
+ **복사**  
+ 각 분류 행렬의 내용을 클립보드로 복사합니다.  
+  
+ **에 대 한 계산 \<모델 >에서 \< 예측 가능한 열 >**  
+ 마이닝 구조의 각 마이닝 모델에 대한 분류 행렬을 표시합니다. 행렬에는 다음 열이 있습니다.  
+  
+|값|Description|  
+|-----------|-----------------|  
+|**예측**|예측 가능한 열의 각 상태에 대한 행을 포함합니다.|  
+|**\<상태 > (실제)**|예측 가능한 열의 각 상태에 대한 열입니다. 행과 열의 상태가 일치하는 경우 셀은 해당 상태가 데이터베이스에 나타나는 실제 횟수를 가리킵니다. 일치하지 않는 경우 셀은 예측의 오류를 나타냅니다.|  
+  
+## <a name="see-also"></a>관련 항목  
+ [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
+  
+  
