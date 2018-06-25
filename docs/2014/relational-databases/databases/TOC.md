@@ -25,8 +25,7 @@
 ## [데이터베이스 복사 마법사 사용](use-the-copy-database-wizard.md)
 ## [백업 및 복원으로 데이터베이스 복사](copy-databases-with-backup-and-restore.md)
 ## [데이터베이스 게시(SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)
-## 
-  [Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)
+## [Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)
 # [데이터베이스 분리 및 연결](database-detach-and-attach-sql-server.md)
 ## [분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)
 ## [분리 및 연결을 사용하여 데이터베이스 업그레이드(Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)
