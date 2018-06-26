@@ -21,7 +21,7 @@ ms.author: jhubbard
 manager: jhubbard
 ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36184109"
@@ -33,7 +33,7 @@ ms.locfileid: "36184109"
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기  
   
-1.  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)](또는 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)])을 시작합니다.  
+1.  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (또는 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)])을 시작합니다.  
   
 2.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   

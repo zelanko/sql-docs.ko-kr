@@ -21,7 +21,7 @@ ms.author: jhubbard
 manager: jhubbard
 ms.openlocfilehash: 1cab41d5ec522964887237decdf426da3cf833d0
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36080353"
@@ -30,7 +30,7 @@ ms.locfileid: "36080353"
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자를 사용하는 최선의 구현 방법과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 위한 권장 프로세스에 대한 요약 정보를 제공합니다.  
   
 ## <a name="upgrade-process"></a>업그레이드 프로세스  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 실행하는 서버를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 수 없습니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 해당 위치에서 업그레이드할 수 있는 반면 일부 구성 요소는 마이그레이션해야 하며 또 다른 일부 구성 요소는 새 구성 요소로 대체됩니다. 예를 들어 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])가 DTS(데이터 변환 서비스)를 대체하며 DTS는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 더 이상 지원되지 않습니다. 업그레이드를 계획할 때는 현재 DTS 패키지를 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지로 업데이트하기 위한 계획을 세워야 할 수 있습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 실행하는 서버를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 수 없습니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 해당 위치에서 업그레이드할 수 있는 반면 일부 구성 요소는 마이그레이션해야 하며 또 다른 일부 구성 요소는 새 구성 요소로 대체됩니다. 예를 들어 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])가 DTS(데이터 변환 서비스)를 대체하며 DTS는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 더 이상 지원되지 않습니다. 업그레이드를 계획할 때는 현재 DTS 패키지를 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지로 업데이트하기 위한 계획을 세워야 할 수 있습니다.  
   
  업그레이드 관리자를 사용하면 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치, 구성 요소 및 관련 파일을 평가하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드 또는 마이그레이션하는 동안이나 이후에 발생할 수 있는 알려진 문제를 확인할 수 있습니다. 이러한 알려진 문제 중 몇 가지는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드를 차단합니다. 업그레이드 관리자 보고서에서 이러한 문제는 업그레이드 블로커로 식별됩니다. 설치 프로그램을 실행하기 전에 업그레이드 블로커를 해결하지 않으면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치가 종료되고 업그레이드 관리자를 실행하여 업그레이드를 차단하는 특정 문제를 확인하도록 권장합니다.  
   
