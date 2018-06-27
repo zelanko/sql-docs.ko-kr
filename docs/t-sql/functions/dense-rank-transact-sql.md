@@ -26,18 +26,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f63145f4a828507660b4401c3c52e79f9e49153
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239283"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  결과 집합 파티션 내 행의 순위를 순위 간격 없이 반환합니다. 행의 순위는 바로 앞 행의 순위에 1을 더한 것입니다.  
+이 함수는 순위 값에 격차가 없이 결과 집합 파티션 내에서 각 행의 순위를 반환합니다. 특정 행의 순위는 바로 앞 해당 특정 행의 순위 값에 1을 더한 수입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,25 +48,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>인수  
  \<partition_by_clause>  
- [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 DENSE_RANK 함수가 적용되는 파티션으로 나눕니다. PARTITION BY 구문은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+먼저 [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 파티션으로 나눈 다음, `DENSE_RANK`함수를 각 파티션에 적용합니다. `PARTITION BY` 구문은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
  \<order_by_clause>  
- DENSE_RANK 함수가 파티션 내의 행에 적용되는 순서를 결정합니다.  
+파티션의 행에 `DENSE_RANK` 함수가 적용되는 순서를 결정합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- 같은 파티션에서 한 순위에 두 개 이상의 행이 연결된 경우 연결된 각 행에는 같은 순위가 지정됩니다. 예를 들어 성과가 가장 좋은 두 명의 판매 직원이 같은 SalesYTD 값을 갖는 경우 둘 다 1로 순위가 지정됩니다. 다음으로 높은 SalesYTD 값을 갖는 판매 직원이 순위 2로 지정됩니다. 이는 해당 행 앞에 오는 개별 행의 수보다 하나 더 큰 값입니다. 따라서 DENSE_RANK 함수가 반환하는 수는 간격 없이 항상 연속적인 순위를 갖게 됩니다.  
+두 개 이상의 행이 동일한 파티션에서 동일한 순위 값을 갖는 경우 각 해당 행은 동일한 순위를 받게 됩니다. 예를 들어 성과가 가장 좋은 두 명의 판매 직원이 같은 SalesYTD 값을 갖는 경우 둘 다 1의 순위 값을 갖게 됩니다. 다음으로 높은 SalesYTD 값을 갖는 판매 직원이 2의 순위 값을 갖습니다. 이는 바로 앞 행의 순위를 1만큼 초과한 수입니다. 따라서 `DENSE_RANK` 함수가 반환하는 수는 격차 없이 항상 연속적인 순위 값을 갖습니다.  
   
- 전체 쿼리에 사용되는 정렬 순서는 결과에 나타나는 행의 순서를 결정합니다. 이는 순위 1로 지정된 행이 반드시 파티션에서 첫 번째 행일 필요는 없음을 의미합니다.  
+전체 쿼리에 사용되는 정렬 순서는 결과 집합의 행의 순서를 결정합니다. 이는 순위 1로 지정된 행이 반드시 파티션에서 첫 번째 행일 필요는 없음을 의미합니다.  
   
- DENSE_RANK는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.  
+`DENSE_RANK`는 비결정적입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>1. 파티션 내의 행 순위 지정  
- 다음 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. 결과 집합은 `LocationID`를 기준으로 분할되고 `Quantity`를 기준으로 논리적으로 정렬됩니다. 제품 494와 495는 수량이 동일합니다. 두 제품은 서로 연결되어 있으므로 동일하게 순위 1이 부여됩니다.  
+이 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. `DENSE_RANK`는 `LocationID`로 결과 집합을 분할하고 `Quantity`로 논리적으로 결과 집합의 순서를 정합니다. 제품 494와 495는 수량이 동일합니다. 모두가 동일한 수량 값을 갖기 때문에 모두가 1의 순위 값을 갖습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>2. 결과 집합의 모든 행 순위 지정  
- 다음 예제에서는 연봉이 상위 10위권에 들어가는 직원을 반환합니다. PARTITION BY 절을 지정하지 않았으므로 결과 집합의 모든 행에 DENSE_RANK 함수가 적용되었습니다.  
+이 예제에서는 연봉이 상위 10위권에 들어가는 직원을 반환합니다. `SELECT` 문이 `PARTITION BY` 절을 지정하지 않았기 때문에 `DENSE_RANK` 함수가 모든 결과 집합 행에 적용됐습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +131,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>3. 동일한 쿼리에 사용된 4가지 순위 함수  
- 다음은 동일한 쿼리에 사용된 4가지 순위 함수를 보여 줍니다. 함수별 예에 대한 자세한 내용은 각 순위 함수를 참조하십시오.  
+이 예에서는 4가지 순위 함수를 보여줌
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+같은 쿼리에서 사용됩니다. 함수별 예에 대한 자세한 내용은 각 순위 함수를 참조하십시오.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D: 파티션 내의 행 순위 지정  
- 다음 예는 총 판매액에 따라 각 영업 지역에서 영업 담당자의 순위를 매깁니다. 행 집합은 `SalesTerritoryGroup`별로 분할되며 `SalesAmountQuota`를 기준으로 정렬됩니다.  
+이 예는 총 판매액에 따라 각 영업 지역에서 영업 담당자의 순위를 매깁니다. `DENSE_RANK`는 `SalesTerritoryGroup`으로 행 집합을 분할하고 `SalesAmountQuota`로 결과 집합을 정렬합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +191,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

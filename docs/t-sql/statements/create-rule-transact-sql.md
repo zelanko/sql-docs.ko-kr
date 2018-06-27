@@ -34,11 +34,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e22d324c4b5bc0c0f315ccf553e0b4bcd2991eea
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619490"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE을 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 함께 하나의 일괄 처리에서 사용할 수 없습니다. 규칙은 규칙이 작성되는 시점에 이미 데이터베이스에 있는 데이터에는 적용되지 않으며 시스템 데이터 형식에 바인딩할 수 없습니다.  
   
- 규칙은 현재 데이터베이스에서만 만들 수 있습니다. 규칙을 만든 다음, **sp_bindrule**을 실행하여 열 또는 별칭 데이터 형식에 규칙을 바인딩합니다. 규칙은 반드시 열 데이터 형식과 호환되어야 합니다. 예를 들어 "@value LIKE A%"는 숫자 열에 대한 규칙으로 사용할 수 없습니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
+ 규칙은 현재 데이터베이스에서만 만들 수 있습니다. 규칙을 만든 다음, **sp_bindrule**을 실행하여 열 또는 별칭 데이터 형식에 규칙을 바인딩합니다. 규칙은 반드시 열 데이터 형식과 호환되어야 합니다. 예를 들어 "\@value LIKE A%"는 숫자 열에 대한 규칙으로 사용할 수 없습니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
  문자 및 날짜 상수는 작은따옴표(')로 묶고 이진 상수는 앞에 0x를 붙여야 합니다. 바인딩된 열과 해당 규칙이 호환되지 않는 경우에는 규칙을 바인딩할 때가 아니라 값을 삽입할 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 오류 메시지를 반환합니다.  
   

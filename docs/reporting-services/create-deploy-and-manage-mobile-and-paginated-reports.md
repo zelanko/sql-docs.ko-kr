@@ -2,7 +2,7 @@
 title: SSRS(SQL Server Reporting Services)란? | Microsoft Docs
 description: 온-프레미스에서 모바일 및 페이지가 매겨진 Reporting Services 보고서에 대한 도구 및 서비스에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -22,12 +22,12 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c594502d7a63ce437e680a4b9b6accd095a102d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cfeadac5c872c75075cc40e1f2dc07e7a592aa6d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550334"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404915"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
 
@@ -100,7 +100,7 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드의 Reporting Services
 
-SharePoint 통합 모드의 Repoorting Services에 보고서를 게시합니다. 보고서 처리를 예약하고, 필요할 때 보고서에 액세스하며, 게시된 보고서를 구독하고, 보고서를 Microsoft Excel과 같은 다른 응용 프로그램으로 내보낼 수 있습니다. 또한 SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들고 보고서 데이터가 변경되면 전자 메일 메시지를 수신할 수 있습니다.  
+SharePoint 통합 모드의 Reporting Services에 보고서를 게시합니다. 보고서 처리를 예약하고, 필요할 때 보고서에 액세스하며, 게시된 보고서를 구독하고, 보고서를 Microsoft Excel과 같은 다른 응용 프로그램으로 내보낼 수 있습니다. 또한 SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들고 보고서 데이터가 변경되면 전자 메일 메시지를 수신할 수 있습니다.  
 
 [SharePoint 통합 모드의 Reporting Services 보고서 서버](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)에 대해 자세히 알아보세요.
 

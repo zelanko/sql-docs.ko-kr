@@ -1,26 +1,25 @@
 ---
 title: Azure에서 SSIS 패키지 배포 및 실행 | Microsoft Docs
+description: SSIS(SQL Server Integration Services) 프로젝트를 Azure SQL Database에서 SSIS 카탈로그에 배포하고 패키지를 실행하는 방법을 알아봅니다
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585635"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335837"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 배포 및 실행
-이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>자습서: Azure에 SSIS(SQL Server Integration Services) 패키지 배포 및 실행
+이 자습서에서는 SSIS(SQL Server Integration Services) 프로젝트를 Azure SQL Database의 SSIS 카탈로그에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

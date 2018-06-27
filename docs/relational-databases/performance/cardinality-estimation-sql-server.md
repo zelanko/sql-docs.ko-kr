@@ -19,11 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 197e68e1aaaacbcb99410698551bc94352ad6df0
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d3cbbe30e7ed4ec6f273a68b6e7af67b9a768c80
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812037"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -273,6 +274,7 @@ WHERE s.ticket = r.ticket AND
 ## <a name="see-also"></a>참고 항목  
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](http://msdn.microsoft.com/library/dn673537.aspx)  
- [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md) [힌트 쿼리 힌트 사용](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
+ [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)     
+ [힌트 쿼리 힌트 사용](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)   

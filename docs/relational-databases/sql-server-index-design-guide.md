@@ -28,11 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812167"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -642,37 +643,33 @@ columnstore 인덱스에 대해 살펴볼 때 데이터 저장소에 대한 형�
 
 - **columnstore** 는 열과 행이 있는 테이블로 논리적으로 구성되고 열 데이터 형식으로 물리적으로 저장되는 데이터입니다.
   
-columnstore 인덱스는 물리적으로 대부분의 데이터를 columnstore 형식으로 저장합니다. columnstore 형식에서는 데이터가 열로 압축되고 압축 해제됩니다. 쿼리에서 요청되지 않은 다른 값은 각 행에 압축을 풀지 않아도 됩니다. 이렇게 하면 큰 테이블의 전체 열을 빠르게 검색할 수 있습니다. 
+  columnstore 인덱스는 물리적으로 대부분의 데이터를 columnstore 형식으로 저장합니다. columnstore 형식에서는 데이터가 열로 압축되고 압축 해제됩니다. 쿼리에서 요청되지 않은 다른 값은 각 행에 압축을 풀지 않아도 됩니다. 이렇게 하면 큰 테이블의 전체 열을 빠르게 검색할 수 있습니다. 
 
 - **rowstore** 는 열과 행이 있는 테이블로 논리적으로 구성되고 행 데이터 형식으로 물리적으로 저장되는 데이터입니다. 이는 힙 또는 클러스터형 B-트리 인덱스와 같은 관계형 테이블 데이터를 저장하는 기존 방법이었습니다.
 
-또한 columnstore 인덱스는 물리적으로 일부 행을 deltastore라는 rowstore 형식으로 저장합니다. 델타 행 그룹이라고도 하는 deltastore는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. 각 델타 행 그룹은 클러스터형 B-트리 인덱스로 구현됩니다. 
+  또한 columnstore 인덱스는 물리적으로 일부 행을 deltastore라는 rowstore 형식으로 저장합니다. 델타 행 그룹이라고도 하는 deltastore는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. 각 델타 행 그룹은 클러스터형 B-트리 인덱스로 구현됩니다. 
 
 - **deltastore**는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. deltastore는 rowstore 형식으로 행을 저장합니다. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>행 그룹 및 열 세그먼트에서 작업이 수행됨
 
-columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니다. 이러한 각 단위를 행 그룹이라고 합니다. 성능을 최적화하려면 행 그룹의 행 수가 압축률을 높일 만큼 크고, 메모리 내 작업을 활용할 만큼 작아야 합니다.
-
-* **행 그룹**은 columnstore 인덱스가 관리 및 압축 작업을 수행하는 행 그룹입니다. 
+columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니다. 이러한 각 단위를 **행 그룹**이라고 합니다. 성능을 최적화하려면 행 그룹의 행 수가 압축률을 높일 만큼 크고, 메모리 내 작업을 활용할 만큼 작아야 합니다.
 
 예를 들어 columnstore 인덱스는 행 그룹에서 다음 작업을 수행합니다.
 
 * 행 그룹을 columnstore로 압축합니다. 압축은 행 그룹 내의 각 열 세그먼트에서 수행됩니다.
-* ALTER INDEX REORGANIZE 작업 중에 행 그룹을 병합합니다.
-* ALTER INDEX REBUILD 작업 중에 새 행 그룹을 만듭니다.
+* `ALTER INDEX ... REORGANIZE` 작업 동안 행그룹을 병합합니다.
+* `ALTER INDEX ... REBUILD` 작업 동안 새 행그룹을 만듭니다.
 * DMV(동적 관리 뷰)에서 행 그룹 상태 및 조각화를 보고합니다.
 
-deltastore는 델타 행 그룹이라는 하나 이상의 행 그룹으로 구성됩니다. 각 델타 행 그룹은 개수가 너무 적어서 columnstore로 압축할 수 없는 경우 행을 저장하는 클러스터형 B-트리 인덱스입니다.  
+deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 구성됩니다. 델타 행 그룹 각각은 행 그룹에 1,048,576개의 행이 포함되거나 인덱스가 다시 빌드될 때까지 작은 대량 로드 및 삽입을 저장하는 클러스터형 B-트리 인덱스입니다.  델타 행 그룹에 1,048,576개의 행이 포함된 경우 닫힘으로 표시되고 tuple-mover라는 프로세스가 columnstore로 압축할 때까지 기다립니다. 
 
-* **델타 행 그룹**은 행 그룹에 1,048,576개의 행이 포함되거나 인덱스가 다시 작성될 때까지 작은 대량 로드 및 삽입을 저장하는 클러스터형 B-트리 인덱스입니다.  델타 행 그룹에 1,048,576개의 행이 포함된 경우 닫힘으로 표시되고 tuple-mover라는 프로세스가 columnstore로 압축할 때까지 기다립니다. 
+행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 **열 세그먼트**라고 합니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.
 
-행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 열 세그먼트라고 합니다. columnstore 인덱스는 행 그룹을 압축할 때 각 열 세그먼트를 개별적으로 압축합니다. 전체 열의 압축을 풀려면 columnstore 인덱스가 각 행 그룹에서 하나의 열 세그먼트 압축만 풀면 됩니다.
-
-* **열 세그먼트**는 행 그룹에 포함된 열 값의 일부입니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.| 
-  
- ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
+columnstore 인덱스는 행 그룹을 압축할 때 각 열 세그먼트를 개별적으로 압축합니다. 전체 열의 압축을 풀려면 columnstore 인덱스가 각 행 그룹에서 하나의 열 세그먼트 압축만 풀면 됩니다.   
+
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>작은 로드 및 삽입은 deltastore로 이동함
 columnstore 인덱스는 한 번에 102,400개 이상의 행을 columnstore 인덱스로 압축하여 columnstore 압축 및 성능을 향상합니다. 행을 대량으로 압축하기 위해 columnstore 인덱스는 작은 로드 및 삽입을 deltastore에 누적합니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다. 
 

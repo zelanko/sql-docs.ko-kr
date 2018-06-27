@@ -29,16 +29,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051d120a972f681879a72f3a7f2e59fb2ae63adf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc8eb015031121e267622fa3ddadf882a642d17e
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249906"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  TRY...CATCH 구문의 CATCH 블록이 실행되는 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다.  
+이 함수는 해당 오류가 TRY...CATCH 구문의 CATCH 블록이 실행되게 하는 경우 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,26 +50,26 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="return-value"></a>반환 값  
- CATCH 블록에서 호출된 경우 오류가 발생한 저장 프로시저 이름을 반환합니다.  
+오류가 발생한 저장 프로시저 CATCH 블록에서 호출된 경우 `ERROR_PROCEDURE`는 해당 저장 프로시저 이름을 반환합니다.  
   
- 오류가 저장 프로시저나 트리거 내에서 발생하지 않은 경우 NULL을 반환합니다.  
+`ERROR_PROCEDURE`는 오류가 저장 프로시저나 트리거 내에서 발생하지 않은 경우 NULL을 반환합니다.  
   
- CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
+`ERROR_PROCEDURE`는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- CATCH 블록 범위 내의 아무 위치에서나 ERROR_PROCEDURE를 호출할 수 있습니다.  
+`ERROR_PROCEDURE`는 CATCH 블록 범위 내의 어떤 위치에서나 호출을 지원합니다.  
   
- ERROR_PROCEDURE는 호출 횟수나 CATCH 블록 범위 내에서 호출된 위치에 관계없이 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다. 이 함수는 오류가 발생한 함수 바로 다음에 오는 문이나 CATCH 블록의 첫 번째 문에서 오류 번호를 반환하는 @@ERROR과 같은 함수와는 대조됩니다.  
+`ERROR_PROCEDURE`는 `CATCH` 블록 범위 내에서 실행 위치나 실행 횟수에 관계 없이 오류가 발생하는 저장 프로시저 또는 트리거의 이름을 반환합니다. 이것은 오류가 발생한 명령문 바로 다음 명령문에 오류 번호만 반환하는 @@ERROR 같은 함수와 대조적입니다.  
   
- 중첩된 CATCH 블록에서 ERROR_PROCEDURE는 참조되는 CATCH 블록의 범위에 해당하는 저장 프로시저나 트리거의 이름을 반환합니다. 예를 들어 TRY…CATCH 구문의 CATCH 블록에 중첩된 TRY…CATCH를 사용할 수 있습니다. 중첩된 CATCH 블록 내에서 ERROR_PROCEDURE는 중첩된 CATCH 블록을 호출했으나 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다. ERROR_PROCEDURE가 외부 CATCH 블록에서 실행되는 경우 해당 CATCH 블록을 호출했으나 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다.  
+중첩된 `CATCH` 블록에서 `ERROR_PROCEDURE`는 해당 `CATCH` 블록을 참조한 `CATCH` 블록의 범위에 관련된 오류를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 `CATCH` 블록에는 내부 `TRY...CATCH` 구문이 있을 수 있습니다. 해당 내부 `CATCH` 블록 내에서 `ERROR_PROCEDURE`는 내부 `CATCH` 블록을 호출한 오류의 번호를 반환합니다. `ERROR_PROCEDURE`가 외부 `CATCH` 블록에서 실행되는 경우 해당 외부 `CATCH` 블록을 호출한 오류의 번호를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_PROCEDURE 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
+이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -91,10 +92,21 @@ BEGIN CATCH
     SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorProcedure
+--------------------
+usp_ExampleProc
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_PROCEDURE 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. 오류가 발생한 저장 프로시저 이름과 함께 해당 오류에 관한 정보가 반환됩니다.  
+이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. 오류가 발생한 저장 프로시저의 이름과 함께 저장 프로시저는 오류에 대한 정보를 반환합니다.  
   
 ```  
   
@@ -124,66 +136,17 @@ BEGIN CATCH
         ERROR_LINE() AS ErrorLine;  
         END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorprocedure-in-a-catch-block"></a>3. CATCH 블록에서 ERROR_PROCEDURE 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
-  
-```  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that   
--- generates a divide-by-zero error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT 1/0;  
-GO  
-  
-BEGIN TRY  
-    -- Execute the stored procedure inside the TRY block.  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>4. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_PROCEDURE 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. 오류가 발생한 저장 프로시저 이름과 함께 해당 오류에 관한 정보가 반환됩니다.  
-  
-```  
-  
--- Verify that the stored procedure does not already exist.  
-IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
-    DROP PROCEDURE usp_ExampleProc;  
-GO  
-  
--- Create a stored procedure that   
--- generates a divide-by-zero error.  
-CREATE PROCEDURE usp_ExampleProc  
-AS  
-    SELECT 1/0;  
-GO  
-  
-BEGIN TRY  
-    -- Execute the stored procedure inside the TRY block.  
-    EXECUTE usp_ExampleProc;  
-END TRY  
-BEGIN CATCH  
-    SELECT   
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-        END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage                       ErrorLine
+----------- ------------- ----------- ---------------- ---------------------------------- -----------
+8134        16            1           usp_ExampleProc  Divide by zero error encountered.  6
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>참고 항목  

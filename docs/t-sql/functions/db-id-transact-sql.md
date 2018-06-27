@@ -28,16 +28,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb7e49f0ebd4746ccad1a9647ac2f35d61efcdc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239313"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-데이터베이스 ID를 반환합니다.
+이 함수는 지정된 데이터베이스의 데이터베이스 ID 번호를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,21 +50,21 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>인수  
 '*database_name*'  
-해당 데이터베이스 ID를 반환하는 데 사용하는 데이터베이스 이름입니다. *database_name*은 **sysname**입니다. *database_name*을 생략하면 현재 데이터베이스 ID가 반환됩니다.
+데이터베이스 ID 번호 `DB_ID`가 반환하는 데이터베이스의 이름입니다. `DB_ID`에 대한 호출이 *database_name*을 생략하는 경우 `DB_ID`는 현재 데이터베이스의 ID를 반환합니다.
   
 ## <a name="return-types"></a>반환 형식
 **int**
   
 ## <a name="permissions"></a>사용 권한  
-**DB_ID**의 호출자가 데이터베이스의 소유자가 아니고 데이터베이스가 **master** 또는 **tempdb**가 아닐 경우 해당 행을 보려면 최소한 서버 수준의 ALTER ANY DATABASE 또는 VIEW ANY DATABASE 권한이 있거나 **master** 데이터베이스에서 CREATE DATABASE 권한이 있어야 합니다. 호출자가 연결된 데이터베이스는 항상 **sys.databases**에서 볼 수 있습니다.
+`DB_ID`의 호출자가 특정 비**마스터** 또는 비**tempdb** 데이터베이스를 소유하지 않는 경우 최소한 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 사용 권한이 해당 `DB_ID` 행을 확인하는 데 필요합니다. **마스터** 데이터베이스의 경우 `DB_ID`는 최소한 `CREATE DATABASE` 사용 권한이 필요합니다. 호출자가 연결하는 데이터베이스는 항상 **sys.databases**에 나타납니다.
   
 > [!IMPORTANT]  
->  기본적으로 public 역할에는 모든 로그인이 데이터베이스 정보를 보도록 허용하는 VIEW ANY DATABASE 권한이 있습니다. 특정 로그인이 데이터베이스를 검색하지 못하게 하려면 public에서 VIEW ANY DATABASE 권한을 REVOKE하거나 개별 로그인에 대해 VIEW ANY DATABASE 권한을 DENY합니다.  
+>  기본적으로 public 역할에는 모든 로그인이 데이터베이스 정보를 보도록 허용하는 `VIEW ANY DATABASE` 권한이 있습니다. 로그인이 데이터베이스를 검색하지 않게 하려면 public에서 `VIEW ANY DATABASE` 권한을 `REVOKE`하거나 로그인에 대한 `DENY` 권한을 `VIEW ANY DATABASE`합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>1. 현재 데이터베이스의 데이터베이스 ID 반환  
-다음 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.
+이 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql
 SELECT DB_ID() AS [Database ID];  
@@ -71,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>2. 지정한 데이터베이스의 데이터베이스 ID 반환  
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다.
+이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -79,7 +80,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>3. DB_ID를 사용하여 시스템 함수 매개 변수 값 지정  
-다음 예에서는 `DB_ID`를 사용하여 시스템 함수 `sys.dm_db_index_operational_stats`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다. 함수는 데이터베이스 ID를 첫 번째 매개 변수로 사용합니다.
+이 예에서는 `DB_ID`를 사용하여 시스템 함수 `sys.dm_db_index_operational_stats`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다. 함수는 데이터베이스 ID를 첫 번째 매개 변수로 사용합니다.
   
 ```sql
 DECLARE @db_id int;  
@@ -104,14 +105,14 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>4. 현재 데이터베이스의 ID 반환  
-다음 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.
+이 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
 ### <a name="e-return-the-id-of-a-named-database"></a>5. 명명된 데이터베이스의 ID를 반환합니다.  
-다음 예에서는 AdventureWorksDW2012 데이터베이스의 데이터베이스 ID를 반환합니다.
+이 예에서는 AdventureWorksDW2012 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

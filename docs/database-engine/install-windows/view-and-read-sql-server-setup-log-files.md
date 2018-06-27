@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771459"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612258"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 설치 프로그램은 기본적으로 %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log 내 타임스탬프가 있는 로그 폴더에 로그 파일을 만듭니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log 내에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
+SQL Server 설치 프로그램은 기본적으로 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 내의 일자 및 시간 스탬프가 포함된 폴더에서 로그 파일을 만듭니다. 여기서 *nnn*은 설치되는 SQL 버전에 해당하는 숫자입니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log 내에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
+
+   | 파일           | 경로 |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI 로그 파일** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **무인 설치용** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ SQL Server 설치 프로그램은 기본적으로 %programfiles%\Microsoft SQL S
 3.  사용자 요청 동작: 사용자가 기능을 선택하고 사용자 지정하도록 허용
   
 
-이 워크플로에서는 단일 요약 로그를 생성하는데, RTM 설치용 단일 상세 로그 또는 미디어를 통합 설치하는 경우 상세 로그 두 개를 생성합니다.
+이 워크플로는 단일 요약 로그 및 기본 SQL Server 설치용 단일 정보 로그 또는 서비스 팩 같은 업데이트를 기본 설치와 함께 설치할 경우 두 개의 세부 정보 로그 중 하나를 생성합니다. 
   
-데이터 저장소 파일에는 설치 프로세스에서 추적하는 모든 구성 개체 상태의 스냅숏이 포함되어 있으며 이는 구성 오류 문제를 해결하는 데 유용합니다. 각 실행 단계에서 XML 덤프 파일이 생성되어 타임스탬프가 있는 로그 폴더 아래 데이터 저장소 로그 하위 폴더에 저장됩니다. 
+또한 설치 프로세스에서 추적하는 모든 구성 개체 상태의 스냅숏이 포함되며 구성 오류 문제를 해결하는 데 유용한 데이터 저장소 파일이 있습니다. 각 실행 단계에서 XML 덤프 파일이 생성되어 타임스탬프가 있는 로그 폴더 아래 데이터 저장소 로그 하위 폴더에 저장됩니다. 
 
 다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 로그 파일에 대해 설명합니다.  
   
@@ -130,6 +142,8 @@ SQL Server 설치 프로그램은 기본적으로 %programfiles%\Microsoft SQL S
   
 ### <a name="location"></a>위치  
 SystemConfigurationCheck_Report.htm은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 2017 설치](../../database-engine/install-windows/install-sql-server.md)

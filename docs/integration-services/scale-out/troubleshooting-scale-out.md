@@ -1,26 +1,25 @@
 ---
 title: SSIS(SQL Server Integration Services) Scale Out 문제 해결 | Microsoft Docs
-ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
-ms.custom: ''
+description: 이 문서에서는 SSIS Scale Out을 사용하여 일반적인 문제를 해결하는 방법 설명
+ms.custom: performance
 ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 6d1fa967fa5e755a8072a6837df44c327b39087c
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409795"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
 

@@ -24,11 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db924e662687ab79d207fe3e1e33ccc75aecd059
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d99bf84a2b27f9d7042b28a7c8c1c99fd54f99bd
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619470"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML 데이터 내 관계형 데이터 바인딩
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **xml**, CLR 사용자 정의 형식, datetime, smalldatetime, **text**, **ntext**, **sql_variant** 및 **image** 형식의 열 또는 변수에 있는 데이터를 참조하는 데는 이러한 함수를 사용할 수 없습니다.  
   
- 또한 이 바인딩은 읽기 전용으로만 사용됩니다. 즉, 이러한 함수를 사용하는 열에는 데이터를 기록할 수 없습니다. 예를 들어 sql:variable(“@x”)=“*some expression”* 은 허용되지 않습니다.  
+ 또한 이 바인딩은 읽기 전용으로만 사용됩니다. 즉, 이러한 함수를 사용하는 열에는 데이터를 기록할 수 없습니다. 예를 들어 sql:variable("\@x")="*some expression"* 은 허용되지 않습니다.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>예: sql:variable()을 사용한 도메인 간 쿼리  
  이 예에서는 응용 프로그램에서 **sql:variable()** 을 사용하여 쿼리를 매개 변수화하는 방법을 보여 줍니다. ISBN은 SQL 변수 @isbn을 사용하여 전달됩니다. 상수를 **sql:variable()** 로 바꿈으로써 0-7356-1588-2인 ISBN뿐만 아니라 다른 모든 ISBN을 검색하는 데 쿼리를 사용할 수 있습니다.  

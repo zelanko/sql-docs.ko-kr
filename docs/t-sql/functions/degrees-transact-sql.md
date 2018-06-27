@@ -24,16 +24,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da5dd2d0e7e3135097fd7993e9ebf75c64c15739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cc037faa43eefed7af80e0e5a9fb51a917471b6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239160"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  라디안으로 지정된 각도를 도 단위로 반환합니다.  
+이 함수는 라디안으로 지정된 각도에 대해 해당 각도를 도 단위로 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +46,13 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- *numeric_expression*과 같은 유형을 반환합니다.  
+데이터 형식이 *numeric_expression* 데이터 형식과 일치하는 값을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 PI/2 라디안을 도 단위로 반환합니다.  
+이 예에서는 PI/2 라디안 각도를 도 단위로 반환합니다.  
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
@@ -70,5 +71,3 @@ The number of degrees in PI/2 radians is 90
 ## <a name="see-also"></a>참고 항목  
  [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
-  
-

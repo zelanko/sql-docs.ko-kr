@@ -88,12 +88,12 @@ caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a2fee1a2a0c4f52138cdbeb1580926b21eae89c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771509"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999879"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -196,7 +196,7 @@ ms.locfileid: "34771509"
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **설치**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 설치 컨트롤|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Anaconda Python 패키지가 포함된 무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 설치 컨트롤|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Anaconda Python 패키지가 포함된 무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 설치 컨트롤|/IACCEPTROPENLICENSETERMS <br /><br /> **Microsoft R Open 패키지가 포함된 무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ENU<br /><br /> **선택 사항**|설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 이 매개 변수를 사용하여 지역화된 운영 체제에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 영어 버전을 설치할 수 있습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/UpdateEnabled<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에는 검색된 업데이트가 포함됩니다.|  

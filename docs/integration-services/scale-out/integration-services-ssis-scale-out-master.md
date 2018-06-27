@@ -1,26 +1,25 @@
 ---
 title: SSIS(SQL Server Integration Services) Scale Out 마스터 | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: 이 문서에서는 SSIS Scale Out의 Scale Out 마스터 구성 요소 설명
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2f0e604ff66388d351cbb4cf7092c0b6fe5edfea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d404552fe71cf79cda57a7d204a5c2263f8e2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405555"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services(SSIS) 규모 확장 마스터
 Scale Out 마스터는 SSISDB 카탈로그 및 Scale Out 마스터 서비스를 통해 Scale Out 시스템을 관리합니다. 
@@ -50,7 +49,7 @@ Scale Out 마스터 서비스는 Scale Out 작업자와의 통신을 담당하�
 Scale Out 마스터 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` 파일을 사용하여 구성합니다. 구성 파일을 업데이트한 후에는 서비스를 다시 시작해야 합니다.
 
 
-Configuration  |Description  |기본값  
+Configuration  |설명  |기본값  
 ---------|---------|---------
 PortNumber|규모 확장 작업자와 통신하는 데 사용되는 네트워크 포트 번호입니다.|8391         
 SSLCertThumbprint|규모 확장 작업자와의 통신을 보호하는 데 사용되는 SSL 인증서의 지문입니다.|규모 확장 마스터 설치 중에 지정된 SSL 인증서의 지문         

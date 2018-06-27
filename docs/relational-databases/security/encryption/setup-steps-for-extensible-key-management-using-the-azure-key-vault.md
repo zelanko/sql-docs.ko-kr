@@ -1,14 +1,11 @@
 ---
-title: Azure Key Vault를 사용한 확장 가능 키 관리 설정 단계 | Microsoft 문서
+title: Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계 | Microsoft 문서
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 06/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,26 +14,27 @@ helpviewer_keywords:
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1d49310aa2c1d178dfb47f05a72ccac73cd0882f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702984"
 ---
-# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계
+# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  다음 단계는 Azure 주요 자격 증명 모음용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치 및 구성을 안내합니다.  
+  다음 단계는 Azure Key Vault용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]커넥터 설치 및 구성을 안내합니다.  
   
 ## <a name="before-you-start"></a>시작하기 전에  
  SQL Server에서 Azure 주요 자격 증명 모음을 사용하려면 몇 가지 필수 조건이 있습니다.  
   
 -   Azure 구독이 있어야 합니다.  
   
--   최신 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (1.0.1 이상)을 설치하세요.  
+-   최신 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)(5.2.0 이상)을 설치하세요.  
 
 -   Azure Active Directory 만들기  
 
@@ -53,7 +51,7 @@ SQL Server 버전  |재배포 가능 설치 링크
 ## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>1부: Azure Active Directory 서비스 사용자 설정  
  Azure 주요 자격 증명 모음에 SQL Server 액세스 권한을 부여하려면 AAD(Azure Active Directory)의 서비스 사용자 계정이 필요합니다.  
   
-1.  [Azure 클래식 포털](https://manage.windowsazure.com)로 이동하고 로그인합니다.  
+1.  [Azure Portal](https://ms.portal.azure.com/)로 이동하고 로그인합니다.  
   
 2.  Azure Active Directory에 응용 프로그램을 등록합니다. 응용 프로그램 등록에 대한 자세한 단계별 지침은 **Azure 주요 자격 증명 모음 블로그 게시물** 의 [응용 프로그램의 ID 가져오기](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)섹션을 참조하세요.  
   
@@ -71,7 +69,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 1.  **PowerShell 열기 및 로그인**  
   
-     [최신 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (1.0.1 이상)을 설치하고 시작합니다. 다음 명령을 사용하여 Azure 계정에 로그인합니다.  
+     [최신 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)(5.2.0 이상)을 설치하고 시작합니다. 다음 명령을 사용하여 Azure 계정에 로그인합니다.  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -171,21 +169,24 @@ SQL Server 버전  |재배포 가능 설치 링크
 5.  **주요 자격 증명 모음에서 비대칭 키 생성**  
   
      Azure Key Vault에서 키를 생성하는 방법은 두 가지입니다. 1) 기존 키 가져오기 또는 2) 새 키 만들기  
-
+                  
+      > [!NOTE]
+        >  SQL Server는 2048비트 RSA 키만 지원합니다.
+        
     ### <a name="best-practice"></a>최선의 구현 방법:
     
     빠른 키 복구를 보장하고 Azure 외부의 데이터에 액세스하려면 다음 모범 사례를 권장합니다.
  
-    1. 로컬 HSM 장치에 암호화 키를 로컬로 만듭니다. (이 키는 Azure Key Vault에 저장할 수 있도록 비대칭, RSA 2048 키여야 합니다.)
+    1. 로컬 HSM 장치에 암호화 키를 로컬로 만듭니다. (이 키는 SQL Server가 지원할 수 있도록 비대칭, RSA 2048 키여야 합니다.)
     2. Azure Key Vault에 암호화 키를 가져옵니다. 작업을 수행하는 방법은 다음 단계를 참조하세요.
     3. Azure Key Vault에 키를 처음 사용하는 경우 먼저 Azure Key Vault 키 백업을 수행합니다. [백업-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) 명령에 대해 알아 봅니다.
-    4. 키에 대한 어떤 변경이 발생할 때마다 (예: ACLs 추가, 태그 추가, 키 특성 추가) 또 다른 Azure Key Vault 키 백업을 수행해야 합니다.
+    4. 키에 대한 어떤 변경이 발생할 때마다(예: ACL 추가, 태그 추가, 키 특성 추가) 다른 Azure Key Vault 키 백업을 수행해야 합니다.
 
         > [!NOTE]  
         >  키 백업 작업은 장소에 상관없이 저장할 수 있는 파일을 반환하는 Azure Key Vault 키 작업입니다.
 
     ### <a name="types-of-keys"></a>키의 유형:
-    Azure 주요 자격 증명 모음에서 생성할 수 있는 키는 두 가지 유형입니다. 둘 다 비대칭 2048비트 RSA 키입니다.  
+    SQL Server와 작동할 Azure Key Vault에서 생성할 수 있는 키는 두 가지 유형입니다. 둘 다 비대칭 2048비트 RSA 키입니다.  
   
     -   **소프트웨어 보호:** 소프트웨어에서 처리되고 안전하게 암호화됩니다. 소프트웨어 보호된 키에 대한 작업은 Azure 가상 컴퓨터에서 발생합니다. 프로덕션 배포에 사용되지 않는 키의 경우 추천됩니다.  
   
@@ -213,12 +214,11 @@ SQL Server 버전  |재배포 가능 설치 링크
     ```  
  
     > [!IMPORTANT]  
-    > 비대칭 키를 가져오면 관리자가 키 에스크로 시스템에 키를 위탁할 수 있으므로 비대칭 키를 가져오는 것은 프로덕션 시나리오에 매우 좋습니다. 개인 키는 자격 증명 모음을 벗어날 수 없으므로 비대칭 키를 자격 증명 모음에서 만든 경우에는 키를 위탁할 수 없습니다. 중요한 데이터를 보호하는 데 사용되는 키는 위탁해야 합니다. 비대칭 키가 손실되는 경우 데이터를 영구적으로 복구할 수 없습니다.  
+    > 비대칭 키를 가져오면 관리자가 키 에스크로 시스템에 키를 위탁할 수 있으므로 비대칭 키를 가져오는 것은 프로덕션 시나리오에 매우 좋습니다. 개인 키는 자격 증명 모음을 벗어날 수 없으므로 비대칭 키를 자격 증명 모음에서 만든 경우에는 키를 위탁할 수 없습니다. 중요한 데이터를 보호하는 데 사용되는 키는 위탁해야 합니다. 비대칭 키가 손실되는 경우 데이터가 영구적으로 손실됩니다.  
 
     ### <a name="create-a-new-key"></a>새 키 만들기
-
-    ##### <a name="example"></a>예:  
-    원하는 경우 Azure Key Vault에 직접 새 암호화 키를 만들고 소프트웨어 보호 또는 HSM 보호를 설정할 수 있습니다. 이 예제에서는 `Add-AzureKeyVaultKey cmdlet`을 사용하여 소프트웨어 보호된 키를 만들어 봅시다.  
+    #### <a name="example"></a>예:  
+    또는 Azure Key Vault에 직접 새 암호화 키를 만들고 소프트웨어 보호 또는 HSM 보호를 설정할 수 있습니다.  이 예제에서는 `Add-AzureKeyVaultKey cmdlet`을 사용하여 소프트웨어 보호된 키를 만들어 봅시다.  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -237,8 +237,7 @@ SQL Server 버전  |재배포 가능 설치 링크
     Id         : https://contosodevkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
-
-    > [!IMPORTANT]  
+ > [!IMPORTANT]  
     >  주요 자격 증명 모음은 동일한 이름이 지정된 키의 여러 버전을 지원하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에서 사용할 키는 버전이 지정되거나 여기저기 사용해서는 안 됩니다. 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화에 사용된 키를 다른 곳에 사용하려는 경우, 자격 증명 모음에서 다른 이름으로 새 키를 만들어 DEK를 암호화하는 데 사용해야 합니다.  
    
   
@@ -264,7 +263,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
   
 ## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>4부: 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- 이 섹션의 각 작업에 필요한 최소 권한 수준에 대한 정보를 보려면 [B. 질문과 대답](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) 을 참조하세요.  
+ 이 섹션의 각 작업에 필요한 최소 권한 수준에 대한 정보를 보려면 [B. 질문과 대답](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)을 참조하세요.  
   
 1.  **sqlcmd.exe 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 실행**  
   
@@ -316,7 +315,7 @@ SQL Server 버전  |재배포 가능 설치 링크
      다음과 같이 아래 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 수정합니다.  
   
     -   Azure Key Vault를 가리키도록 `IDENTITY` 인수(`ContosoDevKeyVault`)를 편집합니다.
-        - **공용 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
+        - **전역 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
         - **사설 Azure 클라우드** (예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
     -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
   
@@ -362,6 +361,4 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 ## <a name="see-also"></a>참고 항목  
  [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
-  
+[SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

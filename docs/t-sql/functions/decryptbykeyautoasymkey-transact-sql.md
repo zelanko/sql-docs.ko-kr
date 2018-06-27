@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779549"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238963"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  *akey_password*  
 비대칭 키를 보호하는 암호입니다. *akey_password*는 데이터베이스 마스터 키가 비대칭 개인 키를 보호하는 경우 NULL 값을 가질 수 있습니다. *akey_password*는 **nvarchar** 데이터 형식을 갖습니다.  
   
- '*ciphertext*'  
-키로 암호화된 데이터입니다. *ciphertext*는 **varbinary** 데이터 형식을 갖습니다.  
+ *ciphertext* 키로 암호화된 데이터입니다. *ciphertext*는 **varbinary** 데이터 형식을 갖습니다.  
   
  @ciphertext  
 대칭 키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
@@ -71,18 +70,27 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  @authenticator  
 인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
   
+@add_authenticator  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *@add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+
+*authenticator*  
+인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.
+
+@authenticator  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
 ## <a name="remarks"></a>Remarks  
-`DECRYPTBYKEYAUTOASYMKEY`는 OPEN SYMMETRIC KEY와 DecryptByKey의 기능을 결합합니다. 단일 작업으로 대칭 키를 해독한 다음, 이 키를 사용하여 암호 텍스트를 해독합니다.  
+`DECRYPTBYKEYAUTOASYMKEY`는 `OPEN SYMMETRIC KEY`와 `DECRYPTBYKEY` 모두의 기능을 결합합니다. 단일 작업에서 먼저 대칭 키를 해독한 다음, 해당 키를 사용하여 암호화된 텍스트를 해독합니다.  
   
 ## <a name="permissions"></a>사용 권한  
 대칭 키에 대한 `VIEW DEFINITION` 권한 및 비대칭 키에 대한 `CONTROL` 권한이 필요합니다.  
   
-## <a name="examples"></a>예  
-이 예에서는 암호 해독 코드를 단순화하는 `DECRYPTBYKEYAUTOASYMKEY`의 사용을 보여줍니다. 이 코드는 아직 데이터베이스 마스터 키가 없는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 실행해야 합니다.  
-  
+## <a name="examples"></a>예
+이 예에서는 `DECRYPTBYKEYAUTOASYMKEY`가 암호 해독 코드를 단순화하는 방법을 보여줍니다. 이 코드는 아직 데이터베이스 마스터 키가 없는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 실행해야 합니다.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

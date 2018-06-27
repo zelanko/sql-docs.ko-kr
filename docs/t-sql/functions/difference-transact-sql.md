@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 804b07e53f5aeecf6b3d0789effb2b227013b32e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239164"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  두 문자 식에서 SOUNDEX 값의 차이를 나타내는 정수 값을 반환합니다.  
+이 함수는 두 문자 식의 [SOUNDEX()](./soundex-transact-sql.md) 값의 차이를 측정하는 정수 값을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +46,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>인수  
- *character_expression*  
- 문자 데이터의 영숫자 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
+*character_expression*  
+문자 데이터의 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
-  
+**int**  
+ 
 ## <a name="remarks"></a>Remarks  
- 반환된 정수는 SOUNDEX 값에서 동일한 문자 수입니다. 반환값의 범위는 0~4입니다. 0은 유사점이 적거나 없음을 나타내며 4는 유사점이 많거나 동일한 값임을 나타냅니다.  
+`DIFFERENCE`는 서로 다른 두 `SOUNDEX` 값을 비교하고 정수 값을 반환합니다. 이 값은 0에서 4의 척도로 `SOUNDEX` 값이 일치하는 정도를 측정합니다. 0의 값은 SOUNDEX 값 간에 유사성이 없거나 약하다는 것을 나타내며, 4는 강력한 유사성이 있거나 동일하게 일치하는 SOUNDEX 값을 나타냅니다.  
   
- DIFFERENCE 및 SOUNDEX는 데이터 정렬을 인식합니다.  
+`DIFFERENCE` 및 `SOUNDEX`에는 데이터 정렬 구분이 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예의 첫 번째 부분에서 매우 유사한 두 개의 문자열에 대한 `SOUNDEX` 값이 비교됩니다. Latin1_General 데이터 정렬에 대해 `DIFFERENCE`는 `4` 값을 반환합니다. 다음 예의 두 번째 부분에서 매우 다른 두 개의 문자열에 대한 `SOUNDEX` 값이 비교되고 Latin1_General 데이터 정렬에 대해 `DIFFERENCE`는 `0` 값을 반환합니다.  
+이 예의 첫 번째 부분에서 매우 유사한 두 개의 문자열에 대한 `SOUNDEX` 값을 비교합니다. Latin1_General 데이터 정렬에 대해 `DIFFERENCE`는 `4` 값을 반환합니다. 예의 두 번째 부분에서 매우 다른 두 개의 문자열에 대한 `SOUNDEX` 값을 비교하고, Latin1_General 데이터 정렬에 대해 `DIFFERENCE`는 `0` 값을 반환합니다.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

@@ -1,27 +1,26 @@
 ---
-title: SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트 | Microsoft Docs
-ms.date: 05/22/2018
+title: Azure에서 SSIS 패키지 배포 및 실행 | Microsoft Docs
+description: SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Microsoft Azure 클라우드로 이동할 수 있는 방법을 알아봅니다.
+ms.date: 06/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f62987a7edc2d04f88c3cfe98f04f0bd6043b44a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0fa7a72e86f596cd0e5d18a0c0dbeb1015233f20
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585575"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403295"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
-이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
--   SQL Database 관리되는 인스턴스(미리 보기) 또는 Azure SQL Database의 SSISDB(SSIS 카탈로그 데이터베이스)에서 SSIS 프로젝트와 패키지를 저장 및 관리합니다.
+이제 SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
+-   SQL Database 관리되는 인스턴스(미리 보기) 또는 Azure SQL Database의 SSISDB(SSIS 카탈로그)에서 SSIS 프로젝트와 패키지를 저장 및 관리합니다.
 -   Azure Data Factory의 구성 요소인 Azure SSIS Integration Runtime의 인스턴스에서 패키지를 실행합니다.
 -   일반적인 작업에는 SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용합니다.
 
@@ -54,21 +53,21 @@ SSIS 패키지를 Azure에 배포하려면 다음 버전의 SSDT(SQL Server Data
 -   Visual Studio 2017의 경우 버전 15.3 이상
 -   Visual Studio 2015용, 버전 17.2 이상
 
-Azure SSIS Integration Runtime의 필수 구성 요소에 대한 정보는 [Azure에 SQL Server Integration Services 패키지 배포 - 필수 구성 요소](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites)를 참조하세요.
+Azure SSIS Integration Runtime의 필수 구성 요소에 대한 정보는 [Azure에서 SSIS 패키지 배포 및 실행 - 필수 구성 요소](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites)를 참조하세요.
 
 > [!NOTE]
 > 공개 미리 보기 기간 동안 Azure-SSIS Integration Runtime이 일부 지역에서만 지원됩니다. 지원되는 지역에 대한 정보는 [지역별 사용 가능한 제품 - Microsoft Azure](https://azure.microsoft.com/regions/services/)를 참조하세요.
 
 ## <a name="provision-ssis-on-azure"></a>Azure에서 SSIS 프로비전
 
-Azure에서 SSIS 패키지를 배포하고 실행하려면 먼저 SSISDB(SSIS 카탈로그 데이터베이스)와 Azure-SSIS Integration Runtime을 프로비전해야 합니다. [Azure에 SQL Server Integration Services 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 아티클의 프로비전 단계를 수행합니다.
+**프로비전**. Azure에서 SSIS 패키지를 배포하고 실행하려면 먼저 SSISDB(SSIS 카탈로그)와 Azure-SSIS Integration Runtime을 프로비전해야 합니다. [Azure에서 SSIS 패키지 배포 및 실행](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 아티클의 프로비전 단계를 수행합니다.
 
-Azure-SSIS IR을 프로비전할 때 다음 옵션에 대한 값을 지정하여 강화하거나 규모 확장할 수 있습니다.
+**강화 및 규모 확장**. Azure-SSIS IR을 프로비전할 때 다음 옵션에 대한 값을 지정하여 강화하거나 규모 확장할 수 있습니다.
 -   노드 크기(코어 수 포함) 및 클러스터의 노드 수
 -   SSISDB(SSIS 카탈로그 데이터베이스)를 호스팅하는 Azure SQL Database의 기존 인스턴스 및 데이터베이스의 서비스 계층
 -   노드당 최대 병렬 실행 수
 
-성능에 대한 자세한 내용은 [고성능을 위한 Azure-SSIS Integration Runtime 구성](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance)을 참조하세요.
+**성능 향상**. 자세한 내용은 [고성능을 위한 Azure-SSIS Integration Runtime 구성](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance)을 참조하세요.
 
 ## <a name="design-packages"></a>패키지 디자인
 
@@ -76,15 +75,15 @@ SSDT가 설치된 Visual Studio 또는 SSDT에서 온-프레미스 **패키지�
 
 ### <a name="connect-to-data-sources"></a>데이터 원본에 연결
 
-**Windows 인증**을 사용하여 클라우드에서 온-프레미스 데이터 원본에 연결하는 방법에 대한 자세한 내용은 [Windows 인증을 사용하여 온-프레미스 데이터 원본 및 Azure 파일 공유에 연결](ssis-azure-connect-with-windows-auth.md)을 참조하세요.
+Windows 인증을 사용하여 클라우드에서 **온-프레미스 데이터 원본**에 연결하는 방법에 대한 자세한 내용은 [Windows 인증을 사용하여 데이터 및 파일 공유에 연결](ssis-azure-connect-with-windows-auth.md)을 참조하세요.
 
-파일에 연결 및 파일 공유 방법에 대한 정보는 [SSIS로 온-프레미스 및 Azure에서 파일 공유의 파일 저장 및 검색](ssis-azure-files-file-shares.md)을 참조하세요.
+파일 및 파일 공유에 연결하는 방법에 대한 정보는 [Azure에 배포된 SSIS 패키지를 사용하여 파일 열기 및 저장](ssis-azure-files-file-shares.md)을 참조합니다.
 
 ### <a name="available-ssis-components"></a>지원되는 SSIS 구성 요소
 
 SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 다양한 **Azure** 데이터 원본 및 **Excel 및 Access** 파일에 대한 연결을 제공합니다.
 
-추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)를 참조하세요.
+추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 참조하세요.
 
 ISV인 경우 사용이 허가된 구성 요소의 설치를 업데이트하여 Azure에서 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime에 대한 유료 또는 사용이 허가된 사용자 지정 구성 요소 개발](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components)을 참조하세요.
 
@@ -96,11 +95,11 @@ Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다
 
 ## <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 
-시작하려면 [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)을 참조하세요.
+시작하려면 [Azure에서 SSIS 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)을 참조합니다.
 
 ### <a name="connect-to-ssisdb"></a>SSISDB에 연결
 
-SSISDB를 호스팅하는 **SQL Database의 이름**은 SSDT 및 SSMS에서 패키지를 배포하고 실행할 때 사용할 네 부분으로 된 다음과 같은 형식(`<sql_database_name>.database.windows.net`)인 이름의 첫 부분입니다. Azure의 SSIS 카탈로그 데이터베이스에 연결하는 방법에 대한 정보는 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
+SSISDB를 호스팅하는 **SQL Database의 이름**은 SSDT 및 SSMS에서 패키지를 배포하고 실행할 때 사용할 네 부분으로 된 다음과 같은 형식(`<sql_database_name>.database.windows.net`)인 이름의 첫 부분입니다. Azure에서 SSIS 카탈로그 데이터베이스에 연결하는 방법에 대한 정보는 [Azure에서 SSISDB(SSIS 카탈로그)에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
 
 ### <a name="deploy-projects-and-packages"></a>프로젝트 및 패키지 배포
 
@@ -112,7 +111,7 @@ Azure에서 프로젝트를 배포하려면 다음과 같은 몇 가지 친숙�
 -   명령줄 도구
 -   PowerShell 또는 C# 및 SSIS 관리 개체 모델
 
-SSMS 및 Integration Services Deployment Wizard를 사용하는 배포 예제는 [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)을 참조합니다.
+SSMS 및 Integration Services Deployment Wizard를 사용하는 배포 예제는 [Azure에서 SSIS 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)을 참조합니다.
 
 ### <a name="run-packages"></a>패키지 실행
 
@@ -132,9 +131,9 @@ SSMS에서 실행 중인 패키지를 모니터링하려면 SSMS에서 다음 �
 Azure-SSIS Integration Runtime을 모니터링하려면 [Azure-SSIS Integration Runtime 모니터링](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
 
 ## <a name="schedule-packages"></a>패키지 예약
-Azure SQL Database에 저장된 패키지의 실행을 예약하기 위해 다양한 도구를 사용할 수 있습니다. 자세한 내용은 [Azure에서 SSIS 패키지 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
+Azure SQL Database에 저장된 패키지의 실행을 예약하기 위해 다양한 도구를 사용할 수 있습니다. 자세한 내용은 [Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 Azure에서 SSIS 워크로드를 시작하려면 다음 문서를 참조하세요.
 -   [Azure에 SQL Server Integration Services 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
--   [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Azure에서 SSIS 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)

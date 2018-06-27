@@ -1,27 +1,25 @@
 ---
 title: SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성을 위한 SSIS(SQL Server Integration Services) Scale Out 지원 | Microsoft Docs
-ms.description: This article describes how to configure SSIS Scale Out for high availability with SQL Server failover cluster instance
-ms.custom: ''
+description: 이 문서에서는 SQL Server 장애 조치(failover) 클러스터 인스턴스를 사용하여 고가용성을 위한 SSIS Scale Out을 구성하는 방법을 설명합니다
+ms.custom: performance
 ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 57dcddf0b4568546c299f298976ef300d5bd6301
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470245"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407225"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성을 위한 Scale Out 지원
 

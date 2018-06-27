@@ -24,46 +24,76 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 212ce15f0d28b16b81a9c07d785c129b039cdc6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61fef12748ce57eee1008fee29c864246774831b
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239152"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  비대칭 키를 사용하여 데이터를 암호화합니다.  
+이 함수는 비대칭 키를 사용하여 데이터를 암호화합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
 ## <a name="arguments"></a>인수  
- *Asym_Key_ID*  
- 데이터베이스에 있는 비대칭 키의 ID입니다. **int**  
+*asym_key_ID*  
+데이터베이스에 있는 비대칭 키의 ID입니다. *asym_key_ID*는 **int** 데이터 형식을 갖습니다.  
   
- *cleartext*  
- 비대칭 키로 암호화될 데이터 문자열입니다.  
+*cleartext*  
+`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 데이터 문자열입니다. *cleartext*에는 다음이 있을 수 있습니다
+ 
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
   
- **@plaintext**  
- 비대칭 키로 암호화될 데이터가 들어 있는 **navarchar**, **char**, **varchar**, **이진**, **varbinary** 또는 **nchar** 형식의 변수입니다.  
+로 구분하거나 여러
+  
++ **varchar**
+ 
+데이터 형식입니다.  
+  
+**@plaintext**  
+`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 값을 보유하는 변수입니다. **@plaintext**에는 다음이 있을 수 있습니다
+  
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
+  
+로 구분하거나 여러
+  
++ **varchar**
+ 
+데이터 형식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 최대 크기가 8,000바이트인 **varbinary**입니다.  
+최대 크기가 8,000바이트인 **varbinary**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 비대칭 키로 암호화 및 암호 해독을 수행하면 대칭 키로 암호화 및 암호 해독을 수행하는 것보다 비용이 훨씬 많이 듭니다. 테이블의 사용자 데이터와 같은 큰 데이터 집합을 암호화하는 경우 비대칭 키를 사용하지 않는 것이 좋습니다. 대신 강력한 대칭 키를 사용하여 데이터를 암호화하고 비대칭 키를 사용하여 대칭 키를 암호화해야 합니다.  
+비대칭 키를 사용하는 암호화 및 암호 해독 작업은 상당한 리소스를 소비하므로 대칭 키 암호화 및 해독 작업과 비교하여 매우 비싼 편입니다. 개발자는 큰 데이터 집합(예: 데이터베이스 테이블에 저장된 사용자 데이터 집합)에서 비대칭 키 암호화 및 암호 해독 작업을 피하는 것이 좋습니다. 대신 개발자는 먼저 강력한 대칭 키로 해당 데이터를 암호화한 다음, 비대칭 키로 해당 대칭 키를 암호화는 것이 좋습니다.  
   
- 알고리즘에 따라 입력이 특정 바이트 수를 초과할 경우 **EncryptByAsymKey**는 **NULL**을 반환합니다. 한도: 512비트 RSA 키는 최대 53바이트를 암호화할 수 있고, 1024비트 키는 최대 117 바이트를 암호화할 수 있고, 2048비트 키는 최대 245 바이트를 암호화할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증서와 비대칭 키는 모두 RSA 키에 대한 래퍼입니다.  
+알고리즘에 따라 입력이 특정 바이트 수를 초과할 경우 `ENCRYPTBYASYMKEY`는 **NULL**을 반환합니다. 특정 제한은 다음과 같습니다.
+
++ 512비트 RSA 키는 최대 53바이트를 암호화할 수 있습니다.
++ 1024비트 RSA 키는 최대 117바이트를 암호화할 수 있습니다.
++ 2048비트 RSA 키는 최대 245바이트를 암호화할 수 있습니다.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증서와 비대칭 키는 모두 RSA 키에 대한 래퍼로 사용됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `@cleartext`에 저장된 텍스트를 비대칭 키 `JanainaAsymKey02`로 암호화합니다. 암호화된 데이터는 `ProtectedData04` 테이블에 삽입됩니다.  
+이 예에서는 `@cleartext`에 저장된 텍스트를 비대칭 키 `JanainaAsymKey02`로 암호화합니다. 이 명령문은 암호화된 데이터를 `ProtectedData04` 테이블에 삽입합니다.  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

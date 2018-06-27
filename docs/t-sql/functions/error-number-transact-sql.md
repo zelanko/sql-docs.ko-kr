@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45ad8be1da81b29b446ed18dd0c4688013a18875
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ae22c38ef34ad8db35c625de80d47f08a0e6073
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250016"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  TRY...CATCH 구문의 CATCH 블록을 실행시킨 오류의 오류 번호를 반환합니다.  
-  
+이 함수는 TRY...CATCH 구문의 CATCH 블록을 실행시키는 오류의 오류 번호를 반환합니다.  
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
@@ -50,21 +51,21 @@ ERROR_NUMBER ( )
  **int**  
   
 ## <a name="return-value"></a>반환 값  
- CATCH 블록에서 호출되면 CATCH 블록을 실행시킨 오류 메시지의 오류 번호를 반환합니다.  
-  
- CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
+CATCH 블록에서 호출되면 `ERROR_NUMBER`는 CATCH 블록을 실행시킨 오류의 오류 번호를 반환합니다.  
+
+`ERROR_NUMBER`는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 함수는 CATCH 블록 내의 어떤 위치에서도 호출할 수 있습니다.  
+`ERROR_NUMBER`는 CATCH 블록 범위 내의 어떤 위치에서나 호출을 지원합니다.  
   
- ERROR_NUMBER는 실행 횟수나 CATCH 블록 범위 내의 실행 위치에 관계없이 오류 번호를 반환합니다. 이 함수는 오류를 발생시킨 문 바로 다음 문이나 CATCH 블록의 첫 번째 문에서만 오류 번호만 반환하는 @@ERROR와는 대조적입니다.  
-  
- 중첩된 CATCH 블록 중에서 ERROR_NUMBER는 참조하는 CATCH 블록 범위에 한정된 오류 번호를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 CATCH 블록에는 중첩된 TRY...CATCH 구문이 있을 수 있습니다. 중첩된 CATCH 블록 내에서 ERROR_NUMBER는 중첩된 CATCH 블록을 호출한 오류의 번호를 반환합니다. 외부 CATCH 블록에서 ERROR_NUMBER가 실행되는 경우에는 해당 CATCH 블록을 호출한 오류에서 번호를 반환합니다.  
+`ERROR_NUMBER`는 `CATCH` 블록의 범위 내에서 실행되는 경우 실행 횟수 또는 실행 위치에 관계 없이 관련 오류 번호를 반환합니다. 이것은 오류가 발생한 명령문 바로 다음 명령문에 오류 번호만 반환하는 @@ERROR 같은 함수와 대조적입니다.  
+
+중첩된 `CATCH` 블록에서 `ERROR_NUMBER`는 해당 `CATCH` 블록을 참조한 `CATCH` 블록의 범위에 관련된 오류를 반환합니다. 예를 들어 외부 TRY...CATCH 구문의 `CATCH` 블록에는 내부 `TRY...CATCH` 구문이 있을 수 있습니다. 해당 내부 `CATCH` 블록 내에서 `ERROR_NUMBER`는 내부 `CATCH` 블록을 호출한 오류의 번호를 반환합니다. `ERROR_NUMBER`가 외부 `CATCH` 블록에서 실행되는 경우 해당 외부 `CATCH` 블록을 호출한 오류의 번호를 반환합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-errornumber-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_NUMBER 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 번호가 반환됩니다.  
+이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `CATCH` 블록은 오류 번호를 반환합니다.  
   
 ```  
 BEGIN TRY  
@@ -75,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber
+-----------
+8134
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_NUMBER 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 번호와 함께 해당 오류와 관련된 정보가 반환됩니다.  
-  
+이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 번호와 함께 `CATCH` 블록은 해당 오류에 대한 정보를 반환합니다.  
+
 ```  
   
 BEGIN TRY  
@@ -96,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>3. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_NUMBER 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 번호와 함께 해당 오류와 관련된 정보가 반환됩니다.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
+----------- ------------- ----------- ---------------  ---------- ----------------------------------
+8134        16            1           NULL             4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>참고 항목  

@@ -22,12 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550484"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452183"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,8 @@ ms.locfileid: "34550484"
 
 !["시작" 단추 및 스냅숏 에이전트가 실행되지 못했음을 표시하는 상태 메시지의 변경](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-여기서 오류가 표시되면 [스냅숏 에이전트 오류 해결](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)을 참조하세요. 
+여기에 오류가 표시되면 [스냅숏 에이전트 오류 해결](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)을 참조하세요.
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>PAL에 배포 에이전트 로그인 추가  
@@ -239,7 +240,7 @@ ms.locfileid: "34550484"
 
 참조 항목: 
 - [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [트랜잭션 복제 동기화 오류 해결](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [트랜잭션 복제 에이전트를 사용하여 오류 찾기](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>다음 단계
@@ -249,5 +250,3 @@ ms.locfileid: "34550484"
 
 > [!div class="nextstepaction"]
 > [자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

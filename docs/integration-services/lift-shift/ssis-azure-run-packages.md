@@ -1,28 +1,26 @@
 ---
 title: Azure에서 SSIS 패키지 실행 | Microsoft Docs
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: Azure SQL Database에 배포된 SSIS 패키지를 실행하는 데 사용할 수 있는 방법의 개요를 제공합니다.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586092"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330157"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 실행
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행
 
-이 문서에 설명된 옵션 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 배포된 SSIS 패키지를 실행할 수 있습니다. 패키지를 직접 실행하거나 Azure Data Factory 파이프라인의 일부로 패키지를 실행할 수 있습니다. Azure의 SSIS에 대한 개요는 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+이 문서에 설명된 메서드 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그에 배포된 SSIS 패키지를 실행할 수 있습니다. 패키지를 직접 실행하거나 Azure Data Factory 파이프라인의 일부로 패키지를 실행할 수 있습니다. Azure에서 SSIS에 대한 개요는 [Azure에서 SSIS 패키지 배포 및 실행](ssis-azure-lift-shift-ssis-packages-overview.md)을 참조합니다.
 
 - 패키지 직접 실행
 
@@ -81,4 +79,4 @@ Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 �
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure에 배포된 SSIS 패키지를 예약하기 위한 옵션을 알아봅니다. 자세한 내용은 [Azure에서 SSIS 패키지 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
+Azure에 배포된 SSIS 패키지를 예약하기 위한 옵션을 알아봅니다. 자세한 내용은 [Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages.md)을 참조하세요.

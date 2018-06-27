@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619560"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgError"></a> 오류 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 **DTS_E_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|Description|  
+|16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|대상에서 저장 프로시저 "%1"을(를) 덮어쓰고 있습니다.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|"%2" 열의 데이터 형식 "%1"이(가) %3에 대해 지원되지 않습니다. 이 열은 DT_NTEXT로 변환됩니다.|  
@@ -1047,7 +1046,7 @@ ms.lasthandoff: 05/03/2018
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|이 버퍼는 분리되었습니다. 처리 중인 버퍼를 그대로 둔 상태에서 버퍼 관리자가 종료되었으며 해당 버퍼에 대한 정리가 수행되지 않습니다. 메모리 손실이나 기타 문제가 존재할 수 있습니다.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|"%1"(이)라는 입력 열을 찾지 못했습니다(오류 코드 0x%2!8.8X!). 지정한 입력 열을 입력 열 컬렉션에서 찾을 수 없습니다.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|계보 ID가 %1!d!인 입력 열을 찾지 못했습니다(오류 코드 0x%2!8.8X!). 해당 입력 열을 입력 열 컬렉션에서 찾을 수 없습니다.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|인식할 수 없는 토큰 "%1"이(가) 식에 포함되어 있습니다. "%1"이(가) 변수인 경우 "@%1"(으)로 표현해야 합니다. 지정한 토큰이 잘못되었습니다. 토큰을 변수 이름으로 사용하려면 @ 기호가 접두사로 와야 합니다.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|인식할 수 없는 토큰 "%1"이(가) 식에 포함되어 있습니다. "%1"이(가) 변수인 경우 "\@%1"(으)로 표현해야 합니다. 지정한 토큰이 잘못되었습니다. 토큰을 변수 이름으로 사용하려면 @ 기호가 접두사로 와야 합니다.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|인식할 수 없는 토큰 "#%1!d!"이(가) 식에 포함되어 있습니다.|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|변수 "%1"을(를) Variables 컬렉션에서 찾을 수 없습니다. 이 변수가 범위를 벗어났을 수 있습니다.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|식 "%1"을(를) 구문 분석하지 못했습니다. 이 식은 잘못된 토큰, 불완전한 토큰 또는 잘못된 요소가 있거나 형식이 잘못되었거나 괄호 같은 필수 요소의 일부가 없을 수 있습니다.|  
@@ -2025,7 +2024,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgWarning"></a> 경고 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 경고 메시지의 심볼 이름은 **DTS_W_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|Description|  
+|16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|평가 기간이 %1!lu!일 남았습니다. 기간이 만료되면 패키지를 실행할 수 없습니다.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|경고가 발생했습니다. 이 경고는 다른 경고에 대한 세부 사항을 설명하며, 이 경고 이전에 더 구체적인 경고가 있습니다.|  
@@ -2081,8 +2080,8 @@ ms.lasthandoff: 05/03/2018
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|태스크 "%1"을(를) 실행하지 못했습니다.|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|파일/프로세스 "%1"이(가) 경로에 없습니다.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|제목이 비어 있습니다.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|"받는 사람" 줄의 주소 형식이 잘못되었습니다. "@" 기호가 없거나 잘못되었습니다.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|"보낸 사람" 줄의 주소 형식이 잘못되었습니다. "@" 기호가 없거나 잘못되었습니다.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|"받는 사람" 줄의 주소 형식이 잘못되었습니다. "\@" 기호가 없거나 잘못되었습니다.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|"보낸 사람" 줄의 주소 형식이 잘못되었습니다. "\@" 기호가 없거나 잘못되었습니다.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|두 XML 문서가 다릅니다.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD 유효성 검사에서는 XML 문서의 DOCTYPE 줄에 정의된 DTD 파일이 사용됩니다. 속성 "%1"에 할당된 문서는 사용되지 않습니다.|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|"%1"의 유효성을 검사하지 못했습니다.|  
@@ -2171,7 +2170,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgInfo"></a> 정보 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 정보 메시지의 심볼 이름은 **DTS_I_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|Description|  
+|16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|이 컨테이너에 대한 분산 트랜잭션을 시작하고 있습니다.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|이 컨테이너에 의해 시작된 분산 트랜잭션을 커밋하고 있습니다.|  
@@ -2270,7 +2269,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgGeneral"></a> 일반 및 이벤트 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 **DTS_MSG_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|Description|  
+|16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템에서 지정한 파일을 찾을 수 없습니다.|  
@@ -2309,7 +2308,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgSuccess"></a> Success Messages  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 **DTS_S_** 로 시작합니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|Description|  
+|16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|값이 NULL입니다.|  
 |0x40005|262149|DTS_S_TRUNCATED|문자열 값이 잘렸습니다. 너무 길어서 열에 맞지 않는 문자열을 버퍼에서 받았으며 문자열이 버퍼에 의해 잘렸습니다.|  
@@ -2318,7 +2317,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="msgPipeline"></a> 데이터 흐름 구성 요소 오류 메시지  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 **DTSBC_E_** 로 시작합니다. 여기서 "BC"는 대부분의 Microsoft 데이터 흐름 구성 요소가 파생되는 네이티브 기본 클래스를 나타냅니다.  
   
-|16진수 코드|10진수 코드|심볼 이름|Description|  
+|16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|출력 및 오류 출력의 총 수인 %1!lu!이(가) 잘못되었습니다. 정확하게 %2!lu!개가 있어야 합니다.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|인덱스 %1!lu!(으)로 출력을 검색할 수 없습니다.|  

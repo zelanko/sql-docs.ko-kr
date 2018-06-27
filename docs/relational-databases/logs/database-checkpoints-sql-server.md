@@ -31,12 +31,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd0160149410a5de96158f1137972fcafdbeba8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4136ea1d123ce96a9a10de1dab8cfe6377bd4231
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947798"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695754"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "32947798"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 자동, 간접, 수동 및 내부와 같은 여러 가지 유형의 검사점이 지원됩니다. 다음 표에는 **검사점**의 유형이 요약되어 있습니다.
   
-|속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
+|속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|설명|  
 |----------|----------------------------------|-----------------|  
 |자동|EXEC sp_configure **'** 복구 간격 **','***초***'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
 |간접|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)을(를) 참조하세요.|  
-|수동|CHECKPOINT [ *checkpoint_duration* ]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)을(를) 참조하세요.|  
+|수동|CHECKPOINT[*checkpoint_duration*]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)을(를) 참조하세요.|  
 |내부|없음|디스크 이미지가 현재 로그 상태와 일치하도록 하는 백업 및 데이터베이스 스냅숏 생성 등의 다양한 서버 작업에 의해 실행됩니다.|  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ ms.locfileid: "32947798"
 |>0|이 오류에는 이 작업을 적용할 수 없습니다.|대상 복구 간격이 TARGET_RECOVERY_TIME 설정에 의해 초 단위로 결정되는 간접 검사점|  
   
 ##  <a name="AutomaticChkpt"></a> 자동 검사점  
-자동 검사점은 로그 레코드의 수가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 **복구 간격** 서버 구성 옵션에 지정된 시간 동안 처리할 수 있을 것으로 예상하는 수에 도달할 때마다 발생합니다. 
+자동 검사점은 로그 레코드의 수가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 **복구 간격** 서버 구성 옵션에 지정된 시간 동안 처리할 수 있을 것으로 예상하는 수에 도달할 때마다 발생합니다. 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.
  
 사용자 정의 대상 복구 시간이 없는 모든 데이터베이스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 자동 검사점을 생성합니다. 빈도는 특정 서버 인스턴스에서 시스템을 다시 시작하는 동안 데이터베이스를 복구하는 데 사용해야 하는 최대 시간을 지정하는 **복구 간격** 고급 서버 구성 옵션에 따라 달라집니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 복구 간격 내에 처리할 수 있는 최대 로그 레코드 수를 예상합니다. 자동 검사점을 사용하는 데이터베이스가 이 최대 로그 레코드 수에 도달하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 데이터베이스에 대해 검사점을 실행합니다. 
  
@@ -97,11 +97,12 @@ ms.locfileid: "32947798"
 **recovery interval** 설정을 늘리려는 경우에는 값을 조금씩 늘려가며 그에 따라 복구 성능에 미치는 영향을 확인하는 것이 좋습니다. **recovery interval** 설정이 늘어나면 데이터베이스 복구를 완료하는 데 몇 배 더 긴 시간이 걸릴 수 있으므로 이 방법은 중요합니다. 예를 들어 **복구 간격** 을 10분으로 변경하면 **복구 간격** 이 1분으로 설정되었을 때보다 복구를 완료하는 데 약 10배 더 많은 시간이 걸립니다.  
   
 ##  <a name="IndirectChkpt"></a> 간접 검사점  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 도입된 간접 검사점은 자동 검사점 대신 사용할 수 있는 구성 가능한 데이터베이스 수준 검사점을 제공합니다. 시스템이 충돌할 경우 간접 검사점을 사용하면 자동 검사점을 사용할 때보다 복구 시간이 빠르고 보다 예측 가능합니다. 간접 검사점은 다음과 같은 이점을 제공합니다.  
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 도입된 간접 검사점은 자동 검사점 대신 사용할 수 있는 구성 가능한 데이터베이스 수준 검사점을 제공합니다. **대상 복구 시간** 데이터베이스 구성 옵션을 지정하여 구성할 수 있습니다. 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.
+시스템이 충돌할 경우 간접 검사점을 사용하면 자동 검사점을 사용할 때보다 복구 시간이 빠르고 보다 예측 가능합니다. 간접 검사점은 다음과 같은 이점을 제공합니다.  
   
 -   간접 검사점이 구성된 데이터베이스의 온라인 트랜잭션 작업으로 인해 성능이 저하될 수 있습니다. 간접 검사점은 데이터베이스 복구가 대상 복구 시간 내에 완료되도록 더티 페이지 수가 특정 임계값보다 적어야 합니다. 
 
-복구 간격 구성 옵션은 더티 페이지 수를 사용하는 간접 검사점과 달리 트랜잭션 수를 사용하여 복구 시간을 결정합니다. 많은 수의 DML 작업을 수신하는 데이터베이스에서 간접 검사점을 사용하도록 설정하는 경우 복구 수행에 필요한 시간이 데이터베이스의 대상 복구 시간 설정 내로 유지되도록 백그라운드 기록기가 더티 버퍼를 디스크로 적극적으로 플러시하기 시작할 수 있습니다. 이로 인해 특정 시스템에서 추가 I/O 작업이 발생할 수 있으므로 디스크 하위 시스템이 I/O 임계값 위에서 또는 근처에서 작동하는 경우 성능 병목 현상에 영향을 줄 수 있습니다.  
+  **복구 간격** 구성 옵션은 더티 페이지 수를 사용하는 **간접 검사점**과 달리 트랜잭션 수를 사용하여 복구 시간을 결정합니다. 많은 수의 DML 작업을 수신하는 데이터베이스에서 간접 검사점을 사용하도록 설정하는 경우 복구 수행에 필요한 시간이 데이터베이스의 대상 복구 시간 설정 내로 유지되도록 백그라운드 기록기가 더티 버퍼를 디스크로 적극적으로 플러시하기 시작할 수 있습니다. 이로 인해 특정 시스템에서 추가 I/O 작업이 발생할 수 있으므로 디스크 하위 시스템이 I/O 임계값 위에서 또는 근처에서 작동하는 경우 성능 병목 현상에 영향을 줄 수 있습니다.  
   
 -   간접 검사점을 사용하면 REDO 동안의 임의 I/O 비용을 줄여 데이터베이스 복구 시간을 안정적으로 제어할 수 있습니다. 이를 통해 서버 인스턴스를 특정 데이터베이스의 복구 시간 상한 내로 유지할 수 있습니다. 장기 실행 트랜잭션으로 인해 UNDO 시간이 과도하게 길어지는 경우에는 예외입니다.  
   

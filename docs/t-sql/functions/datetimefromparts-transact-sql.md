@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239053"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-지정된 날짜 및 시간에 대한 **datetime** 값을 반환합니다.
+이 함수는 지정된 날짜 및 시간 인수에 대한 **datetime** 값을 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,7 +45,7 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## <a name="arguments"></a>인수  
 *year*  
-연도를 지정하는 정수 식입니다.
+년을 지정하는 정수 식입니다.
   
 *month*  
 월을 지정하는 정수 식입니다.
@@ -68,9 +69,9 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEFROMPARTS**는 완전히 초기화된 **datetime** 값을 반환합니다. 인수가 유효하지 않으면 오류가 발생합니다. 필수 인수가 Null일 경우에는 Null이 반환됩니다.
+`DATETIMEFROMPARTS`는 완전히 초기화된 **datetime** 값을 반환합니다. `DATETIMEFROMPARTS`는 적어도 하나 이상의 필수 인수에 잘못된 값이 있는 경우 오류를 발생시킵니다. `DATETIMEFROMPARTS`는 적어도 하나 이상의 필수 인수에 null 값이 있는 경우 null을 반환합니다.
   
-이 함수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이상 서버에 대해서는 원격으로 실행할 수 있지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격으로 실행할 수 없습니다.
+이 함수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 이상에 대한 원격 처리를 지원합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전이 설치되어 있는 서버에 대해서는 원격 처리를 지원하지 않습니다.
   
 ## <a name="examples"></a>예  
   

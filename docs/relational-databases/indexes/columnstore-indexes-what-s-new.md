@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812157"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 버전 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 최신 릴리스에 사용할 수 있는 columnstore 기능에 대한 요약입니다.  
 
  > [!NOTE]
- > [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 columnstore 인덱스는 SQL Database Premium 계층 및 Standard 계층(S3 이상) 및 모든 vCore 계층에서 제공됩니다. SQL Server(2016 SP1 이상)의 경우 columnstore 인덱스는 모든 버전에서 제공됩니다. SQL Server(2016 이하)의 경우 columnstore 인덱스는 엔터프라이즈 버전에서만 제공됩니다.
+ > [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 columnstore 인덱스는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium 계층 및 Standard 계층(S3 이상) 및 모든 vCore 계층에서 제공됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상의 경우 columnstore 인덱스는 모든 버전에서 제공됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)](SP1 이전) 및 이하 버전의 경우 columnstore 인덱스는 엔터프라이즈 버전에서만 제공됩니다.
  
 ## <a name="feature-summary-for-product-releases"></a>제품 릴리스에 대한 기능 요약  
  이 테이블은 Columnstore 인덱스 및 이를 사용할 수 있는 제품에 대한 주요 기능을 요약합니다.  
 
 |Columnstore 인덱스 기능|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|다중 스레드 쿼리에 대한 일괄 처리 실행|예|예|예|예|예|예| 
-|단일 스레드 쿼리에 대한 일괄 처리 실행|||예|예|예|예|  
+|다중 스레드 쿼리에 대한 일괄 처리 모드 실행|예|예|예|예|예|예| 
+|단일 스레드 쿼리에 대한 일괄 처리 모드 실행|||예|예|예|예|  
 |보관 압축 옵션||예|예|예|예|예|  
 |스냅숏 격리 및 커밋된 읽기 스냅숏 격리|||예|예|예|예| 
 |테이블을 만들 때 columnstore 인덱스 지정|||예|예|예|예|  

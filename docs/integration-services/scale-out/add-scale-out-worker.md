@@ -1,26 +1,25 @@
 ---
 title: Scale Out 관리자를 사용하여 SSIS Scale Out 작업자 추가
-ms.description: This article describes how to add an SSIS Scale Out Worker to an existing Scale Out environment by using Scale Out Manager.
-ms.custom: ''
+description: 이 문서에서는 Scale Out 관리자를 사용하여 SSIS Scale Out 작업자를 기존 Scale Out 환경에 추가하는 방법을 설명합니다.
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2de6918bf7cb795ba1871b4ac56068c719e721d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4f9f055cefe4e3212066ea06868e88e399eaf36
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335907"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Scale Out 관리자를 사용하여 Scale Out 작업자 추가
 

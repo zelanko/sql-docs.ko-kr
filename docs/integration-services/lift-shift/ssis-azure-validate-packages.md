@@ -1,25 +1,26 @@
 ---
 title: Azure에 배포된 SSIS 패키지 유효성 검사 | Microsoft Docs
+description: SSIS 패키지 배포 마법사가 예상대로 패키지가 Azure에서 실행되는 것을 방해할 수 있는 알려진 문제의 패키지를 확인하는 방법에 대해 알아봅니다.
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e19b7fe45acfdea692d1334719e9dc8721124df
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328627"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS 패키지 유효성 검사
-Azure 서버의 SSIS 카탈로그 데이터베이스(SSISDB)에 SQL Server Integration Services(SSIS) 프로젝트를 배포하면 패키지 배포 마법사는 **검토** 페이지 이후에 추가 유효성 검사 단계를 추가합니다. 이 유효성 검사 단계에서는 Azure SSIS Integration Runtime에서 패키지가 예상대로 실행되지 않을 수 있는 알려진 문제점을 프로젝트의 패키지에서 확인합니다. 그런 다음 마법사는 **유효성 검사** 페이지에서 적용 가능한 경고를 표시합니다.
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 패키지 유효성 검사
+
+Azure 서버의 SSIS 카탈로그(SSISDB)에 SQL Server Integration Services(SSIS) 프로젝트를 배포하면 패키지 배포 마법사는 **검토** 페이지 이후에 추가 유효성 검사 단계를 추가합니다. 이 유효성 검사 단계에서는 Azure SSIS Integration Runtime에서 패키지가 예상대로 실행되지 않을 수 있는 알려진 문제점을 프로젝트의 패키지에서 확인합니다. 그런 다음 마법사는 **유효성 검사** 페이지에서 적용 가능한 경고를 표시합니다.
 
 > [!IMPORTANT]
 > 이 문서에서 설명하는 유효성 검사는 SQL Server 데이터 도구(SSDT) 버전 17.4 이상을 사용하여 프로젝트를 배포할 때 발생합니다. SSDT의 최신 버전을 얻으려면 [SQL Server Data Tools(SSDT) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
@@ -29,7 +30,7 @@ Azure 서버의 SSIS 카탈로그 데이터베이스(SSISDB)에 SQL Server Integ
 ## <a name="validate-connection-managers"></a>연결 관리자 유효성 검사
 
 마법사는 특정 연결 관리자가 다음 문제를 검사하여 연결이 실패할 수 있음을 나타냅니다.
-- **Windows 인증**. 연결 문자열에 Windows 인증이 사용되면 유효성 검사에서 경고를 표시합니다. Windows 인증을 위해서는 추가 구성 단계가 필요합니다. 자세한 내용은 [Windows 인증으로 온-프레미스 데이터 원본에 연결](ssis-azure-connect-with-windows-auth.md)을 참조하세요.
+- **Windows 인증**. 연결 문자열에 Windows 인증이 사용되면 유효성 검사에서 경고를 표시합니다. Windows 인증을 위해서는 추가 구성 단계가 필요합니다. 자세한 정보는 [Windows 인증으로 데이터 및 파일 공유에 연결](ssis-azure-connect-with-windows-auth.md)을 참조합니다.
 - **파일 경로**. 연결 문자열에 `C:\\...`과 같이 하드 코딩된 로컬 파일 경로가 있으면 유효성 검사에서 경고를 표시합니다. 절대 경로를 포함하는 패키지가 실패할 수 있습니다.
 - **UNC 경로**. 연결 문자열에 UNC 경로가 포함되어 있으면 연결 문자열에 UNC 경로가 포함되어 있으면 유효성 검사에서 경고를 표시합니다. 일반적으로 UNC 경로에 액세스하려면 Windows 인증이 필요하기 때문에 UNC 경로가 포함된 패키지가 실패할 수 있습니다.
 - **호스트 이름**. 서버 속성에 IP 주소 대신 호스트 이름이 포함되어 있으면 유효성 검사에서 경고를 표시합니다. 호스트 이름을 포함하는 패키지는 일반적으로 Azure 가상 네트워크가 DNS 이름 확인을 지원하기 위해 올바른 DNS 구성이 필요하기 때문에 실패할 수 있습니다.
@@ -80,4 +81,4 @@ Azure 서버의 SSIS 카탈로그 데이터베이스(SSISDB)에 SQL Server Integ
 Orc 형식은 HDFS 대상 및 Azure Data Lake Store 대상에서 지원되지 않습니다.
 
 ## <a name="next-steps"></a>다음 단계
-Azure에서 패키지 실행을 예약하는 방법에 대해 알아보려면 [Azure에서 SSIS 패키지 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
+Azure에서 패키지 실행을 예약하는 방법에 대해 알아보려면 [Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages.md)을 참조하세요.

@@ -1,26 +1,25 @@
 ---
 title: SSIS(SQL Server Integration Services) Scale Out 작업자 | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: 이 문서에서는 SSIS Scale Out의 Scale Out 마스터 구성 요소 설명
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5b19aee11489551b3f06fb58cb0242b495929213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408125"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
 
@@ -29,10 +28,10 @@ Scale Out 작업자는 Scale Out 작업자 서비스를 실행하여 Scale Out �
 ## <a name="configure-the-scale-out-worker-service"></a>Scale Out 작업자 서비스 구성
 Scale Out 작업자 서비스는 ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 파일을 사용하여 구성합니다. 구성 파일을 업데이트한 후에는 서비스를 다시 시작해야 합니다.
 
-Configuration  |Description  |기본값  
+Configuration  |설명  |기본값  
 ---------|---------|---------
 DisplayName|규모 확장 작업자의 표시 이름입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|컴퓨터 이름         
-Description|규모 확장 작업자에 대한 설명입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|비어 있음         
+설명|규모 확장 작업자에 대한 설명입니다. **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017에서는 사용되지 않습니다.**|비어 있음         
 MasterEndpoint|규모 확장 마스터에 연결하는 끝점입니다.|규모 확장 작업자 설치 중에 설정된 끝점         
 MasterHttpsCertThumbprint|규모 확장 마스터를 인증하는 데 사용되는 클라이언트 SSL 인증서의 지문입니다.|규모 확장 작업자 설치 중에 지정된 클라이언트 인증서의 지문          
 WorkerHttpsCertThumbprint|규모 확장 작업자를 인증하는 데 사용되는 규모 확장 마스터에 대한 인증서의 지문입니다.|규모 확장 작업자 설치 중에 자동으로 생성되고 설치되는 인증서의 지문          

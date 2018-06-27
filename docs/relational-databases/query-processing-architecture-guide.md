@@ -1,7 +1,7 @@
 ---
 title: 쿼리 처리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842906"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 저장소 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 
+## <a name="execution-modes"></a>실행 모드
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 두 가지 고유한 처리 모드를 사용하여 SQL 문을 처리할 수 있습니다.
+- 행 모드 실행
+- 일괄 처리 모드 실행
+
+### <a name="row-mode-execution"></a>행 모드 실행
+*행 모드 실행*은 데이터가 행 형식으로 저장되어 있는 경우 기존 RDMBS 테이블에서 사용된 쿼리 처리 메서드입니다. 쿼리가 실행되고 행 저장 테이블의 데이터에 액세스하는 경우 실행 트리 연산자 및 자식 연산자는 테이블 스키마에서 지정된 모든 열에 걸쳐 필요한 각 행을 읽습니다. 읽은 각 행에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 SELECT 문, 조인 조건자 또는 필터 조건자에 의해 참조된 것처럼 결과 집합에 필요한 열을 검색합니다.
+
+> [!NOTE]
+> 행 모드 실행은 OLTP 시나리오에 매우 효율적이지만 많은 양의 데이터(예를 들어 데이터 웨어하우징 시나리오에서)를 검사할 때는 효율성이 떨어질 수 있습니다.
+
+### <a name="batch-mode-execution"></a>일괄 처리 모드 실행  
+*일괄 처리 모드 실행*은 여러 행을 함께 처리하는 쿼리 처리 방법입니다(따라서 용어 일괄처리). 일괄 처리 내에서 각 열은 메모리의 별도 영역에 벡터로 저장되므로 일괄 처리 모드는 벡터 기반 처리입니다. 또한 일괄 처리 모드 처리는 다중 코어 CPU에 최적화된 알고리즘 및 최신 하드웨어에 있는 증가된 메모리 처리량을 사용합니다.      
+
+배치 모드 실행은 columnstore 저장소 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 실행에서 사용하는 [교환 연산자](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)를 제거합니다. 그 결과로 병렬 처리가 더 나아졌고 성능이 더 빨라졌습니다.    
+
+쿼리가 일괄 처리 모드에서 실행되고 columnstore 인덱스의 데이터에 액세스할 경우 실행 트리 연산자 및 자식 연산자는 열 세그먼트에서 함께 여러 행을 읽습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 SELECT 문, 조인 조건자 또는 필터 조건자에 의해 참조된 것처럼 결과에 필요한 열만 읽습니다.    
+columnstore 인덱스에 대한 자세한 내용은 [Columnstore 인덱스 아키텍처](../relational-databases/sql-server-index-design-guide.md#columnstore_index)를 참조하세요.  
+
+> [!NOTE]
+> 일괄 처리 모드 실행은 많은 양의 데이터를 읽고 집계할 경우 매우 효율적인 데이터 웨어하우징 시나리오입니다.
+
 ## <a name="sql-statement-processing"></a>SQL 문 처리
+단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 SQL 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
 
-단일 SQL 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 SQL 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
-
-#### <a name="logical-operator-precedence"></a>논리 연산자 선행 규칙
+### <a name="logical-operator-precedence"></a>논리 연산자 선행 규칙
 
 문에 논리 연산자가 두 개 이상 사용되면 `NOT`이 가장 먼저 평가되고 다음으로 `AND`, `OR`의 순서로 평가됩니다. 산술 및 비트 연산자는 논리 연산자보다 먼저 처리됩니다. 자세한 내용은 [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)를 참조하세요.
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>SELECT 문 최적화
+### <a name="optimizing-select-statements"></a>SELECT 문 최적화
 
 `SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
@@ -104,7 +128,7 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 프로그래머나 데이터베이스 관리자의 입력을 요청하지 않고 데이터베이스 서버가 데이터베이스의 조건 변화에 맞춰 동적으로 조정될 수 있게 하므로 중요합니다. 이를 통해 프로그래머는 쿼리의 최종 결과를 설명하는 데 주안점을 둘 수 있습니다. 프로그래머는 문이 실행될 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 데이터베이스의 상태에 맞게 효율적인 실행 계획을 세운다는 것을 신뢰할 수 있습니다.
 
-#### <a name="processing-a-select-statement"></a>SELECT 문 처리
+### <a name="processing-a-select-statement"></a>SELECT 문 처리
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 단일 SELECT 문을 처리하는 데 사용하는 기본 단계는 다음과 같습니다. 
 
@@ -114,7 +138,7 @@ GO
 4. 관계형 엔진이 실행 계획을 실행하기 시작합니다. 기본 테이블의 데이터를 필요로 하는 단계가 처리될 때 관계형 엔진은 저장소 엔진이 관계형 엔진에서 요청된 행 집합의 데이터를 무시하도록 요청합니다.
 5. 관계형 엔진은 저장소 엔진에서 반환된 데이터를 결과 집합에 대해 정의된 서식으로 처리하고 클라이언트에 결과 집합을 반환합니다.
 
-#### <a name="processing-other-statements"></a>다른 문 처리
+### <a name="processing-other-statements"></a>다른 문 처리
 
 `SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE`같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 SELECT 문을 포함할 수 있습니다.
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 실행 계획 기능을 통해 관계형 엔진이 두 `SELECT` 문에 대해 동일한 실행 계획을 세우는 것을 알 수 있습니다.
 
-#### <a name="using-hints-with-views"></a>뷰에 힌트 사용
+### <a name="using-hints-with-views"></a>뷰에 힌트 사용
 
 쿼리의 뷰에 힌트를 넣으면 뷰가 확장되어 기본 테이블에 액세스할 때 발견되는 다른 힌트와 서로 충돌할 수 있습니다. 이러한 경우 쿼리에서 오류를 반환합니다. 예를 들어 다음과 같이 뷰 정의에 테이블 힌트가 포함되어 있습니다.
 

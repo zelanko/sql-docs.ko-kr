@@ -1,25 +1,26 @@
 ---
-title: Windows 인증으로 데이터 원본 및 파일 공유에 연결 | Microsoft Docs
+title: Windows 인증으로 데이터 및 파일 공유에 연결 | Microsoft Docs
+description: Windows 인증을 사용하여 데이터 원본과 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 알아봅니다.
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332687"
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>SSIS에서 Windows 인증으로 온-프레미스 데이터 원본 및 Azure 파일 공유에 연결
-이 문서에서는 Windows 인증을 사용하여 온-프레미스 데이터 원본과 Azure 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 설명합니다. Windows 인증을 사용하여 온-프레미스 및 Azure 가상 머신과 Azure Files의 Azure SSIS Integration Runtime과 동일한 가상 네트워크에 있는 데이터 원본에 연결할 수 있습니다.
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>Azure의 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결
+
+이 문서에서는 Windows 인증을 사용하여 데이터 원본과 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 설명합니다. Windows 인증을 사용하여 Azure 가상 머신에서 온-프레미스 및 Azure Files의 Azure SSIS Integration Runtime과 동일한 가상 네트워크에 있는 데이터 원본에 연결할 수 있습니다.
 
 > [!WARNING]
 > 이 문서에 설명된 대로 `catalog`.`set_execution_credential`을 실행하여 Windows 인증에 유효한 도메인 자격 증명을 제공하지 않으면 Windows 인증에 종속된 패키지가 데이터 원본에 연결할 수 없으며 런타임에 실패합니다.
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/15/2018
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 인증에 대한 도메인 자격 증명 제공
 패키지에서 Windows 인증을 사용하여 온-프레미스 데이터 원본에 연결할 수 있는 도메인 자격 증명을 제공하려면 다음을 수행합니다.
 
-1.  SSMS(SQL Server Management Studio) 또는 다른 도구를 사용하여 SSISDB(SSIS Catalog database)를 호스트하는 SQL Database에 연결합니다. 자세한 내용은 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
+1.  SSMS(SQL Server Management Studio) 또는 다른 도구를 사용하여 SSISDB(SSIS Catalog database)를 호스트하는 SQL Database에 연결합니다. 자세한 내용은 [Azure에서 SSIS 카탈로그(SSISDB)에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
 
 2.  SSISDB를 현재 데이터베이스로 사용하여 쿼리 창을 엽니다.
 
@@ -91,7 +92,7 @@ Azure에서 실행 중인 패키지에서 온-프레미스 SQL Server에 연결�
 
 1.  SQL Server 구성 관리자에서 TCP/IP 프로토콜을 설정합니다.
 2.  Windows 방화벽을 통한 액세스를 허용합니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)을 참조하세요.
-3.  Windows 인증을 사용하여 연결하려면 Azure-SSIS Integration Runtime이 온-프레미스 SQL Server가 포함되어 있는 가상 네트워크(VNet)에 속해 있어야 합니다.  자세한 내용은 [Azure SSIS 통합 런타임을 가상 네트워크에 조인](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)을 참조하세요. 그런 다음 이 아티클에 설명된 대로 `catalog.set_execution_credential`을 사용하여 자격 증명을 제공합니다.
+3.  Windows 인증을 사용하여 연결하려면 Azure-SSIS Integration Runtime이 온-프레미스 SQL Server가 포함되어 있는 가상 네트워크에 속해 있어야 합니다.  자세한 내용은 [Azure SSIS 통합 런타임을 가상 네트워크에 조인](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)을 참조하세요. 그런 다음 이 아티클에 설명된 대로 `catalog.set_execution_credential`을 사용하여 자격 증명을 제공합니다.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>온-프레미스 파일 공유에 연결
 온-프레미스 파일 공유에 연결할 수 있는지 확인하려면 다음을 수행합니다.
@@ -138,4 +139,4 @@ Azure 파일 공유의 파일 공유에 연결하려면 다음을 수행합니�
 ## <a name="next-steps"></a>다음 단계
 - 패키지를 배포합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포](../ssis-quickstart-deploy-ssms.md)를 참조하세요.
 - 패키지를 실행합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 패키지 실행](../ssis-quickstart-run-ssms.md)을 참조하세요.
-- 패키지를 예약합니다. 자세한 내용은 [Azure에서 SSIS 패키지 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
+- 패키지를 예약합니다. 자세한 내용은 [Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages.md)을 참조하세요.

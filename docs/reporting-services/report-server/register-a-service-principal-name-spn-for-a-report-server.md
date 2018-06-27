@@ -15,17 +15,18 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2c81e169faf3a9f1e85fc6fa85648ae1faa97e62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3f64622d7b0a2a8a2679624e0662f33804650c3d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238863"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>보고서 서버의 SPN(서비스 사용자 이름) 등록
   상호 인증에 Kerberos 프로토콜을 사용하는 네트워크에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 배포하는 경우 도메인 사용자 계정으로 실행되도록 보고서 서버 서비스 SPN(서비스 사용자 이름)을 구성하려면 보고서 서버 서비스에 대한 SPN을 만들어야 합니다.  
   
 ## <a name="about-spns"></a>SPN 정보  
- SPN은 Kerberos 인증을 사용하는 네트워크에서 고유한 서비스 식별자로 서비스 클래스, 호스트 이름, 포트로 구성됩니다. Kerberos 인증을 사용하는 네트워크에서 서버에 대한 SPN은 기본 제공 컴퓨터 계정(예: NetworkService 또는 LocalSystem) 또는 사용자 계정에서 등록되어야 합니다. 기본 제공 계정에 대해서는 SPN이 자동으로 등록됩니다. 그러나 도메인 사용자 계정에서 서비스를 실행할 경우 사용할 계정에 대한 SPN을 수동으로 등록해야 합니다.  
+ SPN은 Kerberos 인증을 사용하는 네트워크에서 고유한 서비스 식별자로 서비스 클래스, 호스트 이름 및 때로는 포트로 구성됩니다. HTTP SPN은 포트가 필요 없습니다. Kerberos 인증을 사용하는 네트워크에서 서버에 대한 SPN은 기본 제공 컴퓨터 계정(예: NetworkService 또는 LocalSystem) 또는 사용자 계정에서 등록되어야 합니다. 기본 제공 계정에 대해서는 SPN이 자동으로 등록됩니다. 그러나 도메인 사용자 계정에서 서비스를 실행할 경우 사용할 계정에 대한 SPN을 수동으로 등록해야 합니다.  
   
  SPN을 만들려면 **SetSPN** 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/03/2018
  SetSPN 유틸리티를 사용하여 보고서 서버의 SPN을 만드는 명령 구문은 다음과 같습니다.  
   
 ```  
-Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>  
+Setspn -s http/<computername>.<domainname> <domain-user-account>  
 ```  
   
  **SetSPN** 은 Windows Server에서 사용할 수 있습니다. **-s** 인수는 중복이 없는지 확인한 후 SPN을 추가합니다. **참고: -s** 는 Windows Server(Windows Server 2008부터)에서 사용할 수 있습니다.  
   
  **HTTP** 는 서비스 클래스입니다. 보고서 서버 웹 서비스는 HTTP.SYS에서 실행됩니다. HTTP용 SPN을 만들면 HTTP.SYS에서 실행되는 같은 컴퓨터에 있는 모든 웹 응용 프로그램(IIS에서 호스팅되는 응용 프로그램 포함)에 도메인 사용자 계정을 기반으로 하는 티켓이 부여됩니다. 이러한 서비스가 다른 계정에서 실행되면 인증 요청이 실패합니다. 이 문제를 방지하려면 같은 계정에서 실행되도록 모든 HTTP 응용 프로그램을 구성하거나 응용 프로그램마다 호스트 헤더를 만든 다음 호스트 헤더별로 SPN을 만드십시오. 호스트 헤더를 구성할 때는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성과 관계없이 DNS를 변경해야 합니다.  
   
- \<*computername*>, \<*domainname*> 및 \<*port*>에 지정하는 값은 보고서 서버를 호스트하는 컴퓨터의 고유 네트워크 주소를 식별합니다. 이는 로컬 호스트 이름이거나 FQDN(정규화된 도메인 이름)일 수 있습니다. 도메인이 하나뿐이고 포트 80을 사용하는 경우 명령줄에서 \<*domainname*> 및 \<*port*>를 생략할 수 있습니다. \<*domain-user-account*>는 보고서 서버 서비스를 실행하는 데 사용되며 SPN을 등록해야 하는 사용자 계정입니다.  
+ \<*computername*> 및 \<*domainname*>에 대해 지정하는 값은 보고서 서버를 호스트하는 컴퓨터의 고유 네트워크 주소를 식별합니다. 이는 로컬 호스트 이름이거나 FQDN(정규화된 도메인 이름)일 수 있습니다. 도메인이 하나뿐인 경우 명령줄에서 \<*domainname*>을 생략할 수 있습니다. \<*domain-user-account*>는 보고서 서버 서비스를 실행하는 데 사용되며 SPN을 등록해야 하는 사용자 계정입니다.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>도메인 사용자 계정에 대한 SPN 등록  
   
@@ -61,16 +62,16 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 4.  다음 명령을 복사하되 자리 표시자 값은 사용자의 네트워크에 유효한 실제 값으로 대체합니다.  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     예를 들어 `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+     예: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  명령을 실행합니다.  
   
 6.  **RsReportServer.config** 파일을 열고 `<AuthenticationTypes>` 섹션을 찾습니다.  
   
-7.  `<RSWindowsNegotiate/>` 를 이 섹션의 첫 번째 항목으로 추가하여 NTLM을 활성화합니다.  
+7.  `<RSWindowsNegotiate/>`를 이 섹션의 첫 번째 항목으로 추가하여 Kerberos를 활성화합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서비스 계정 구성&#40;SSRS 구성 관리자&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   

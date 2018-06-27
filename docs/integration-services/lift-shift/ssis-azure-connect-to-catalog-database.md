@@ -1,32 +1,32 @@
 ---
-title: Azure에서 SSIS 카탈로그 데이터베이스(SSISDB)에 연결 | Microsoft Docs
+title: Azure에서 SSIS 카탈로그(SSISDB)에 연결 | Microsoft Docs
+description: Azure SQL Database 서버에서 호스트된 SSIS 카탈로그(SSISDB)에 연결하는 데 필요한 연결 정보를 찾습니다.
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405675"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Azure에서 SSIS 카탈로그 데이터베이스(SSISDB)에 연결
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure에서 SSIS 카탈로그(SSISDB)에 연결
 
-Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베이스에 연결하는 데 필요한 연결 정보를 가져옵니다. 연결하려면 다음 항목이 필요합니다.
+Azure SQL Database 서버에서 호스트된 SSIS 카탈로그(SSISDB)에 연결하는 데 필요한 연결 정보를 찾습니다. 연결하려면 다음 항목이 필요합니다.
 - 정규화된 서버 이름
 - 데이터베이스 이름
 - 로그인 정보 
 
 > [!IMPORTANT]
-> 이번에는 Azure Data Factory 버전 2에서 Azure-SSIS Integration Runtime을 만드는 작업과 독립적으로 Azure SQL Database에서 SSISDB 카탈로그 데이터베이스를 만들 수 없습니다. Azure에서 SSIS 패키지를 실행하는 Azure-SSIS IR입니다. 자세한 내용은 [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)를 참조하세요. 
+> 이번에는 Azure Data Factory 버전 2에서 Azure-SSIS Integration Runtime을 만드는 작업과 독립적으로 Azure SQL Database에서 SSISDB 카탈로그 데이터베이스를 만들 수 없습니다. Azure-SSIS IR은 Azure에서 SSIS 패키지를 실행하는 런타임 환경입니다. 프로세스의 연습은 [Azure에서 SSIS 패키지 배포 및 실행](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)을 참조합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 시작하기 전에 SSMS(SQL Server Management Studio) 버전 17.2 이상이 설치되어 있는지 확인합니다. SSISDB 카탈로그 데이터베이스가 SQL Database 관리되는 인스턴스(미리 보기)에서 호스트될 경우 SSMS 버전이 17.6 이상인지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
@@ -71,4 +71,4 @@ Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베
 ## <a name="next-steps"></a>다음 단계
 - 패키지를 배포합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포](../ssis-quickstart-deploy-ssms.md)를 참조하세요.
 - 패키지를 실행합니다. 자세한 내용은 [SSMS(SQL Server Management Studio)를 사용하여 SSIS 패키지 실행](../ssis-quickstart-run-ssms.md)을 참조하세요.
-- 패키지를 예약합니다. 자세한 내용은 [Azure에서 SSIS 패키지 실행 예약](ssis-azure-schedule-packages.md)을 참조하세요.
+- 패키지를 예약합니다. 자세한 내용은 [Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages.md) 참조

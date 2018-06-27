@@ -1,26 +1,26 @@
 ---
 title: Azure에서 SSIS 패키지 예약 | Microsoft Docs
+description: Azure SQL Database에 배포된 SSIS 패키지의 실행을 예약하는 데 사용할 수 있는 방법의 개요를 제공합니다.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585845"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411585"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 실행 예약
-이 문서에 설명된 옵션 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 배포된 SSIS 패키지의 실행을 예약할 수 있습니다. 패키지를 직접 예약하거나 Azure Data Factory 파이프라인의 일부로 패키지를 간접적으로 예약할 수 있습니다. Azure의 SSIS에 대한 개요는 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행 예약
+
+이 문서에 설명된 메서드 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그에 배포된 SSIS 패키지의 실행을 예약할 수 있습니다. 패키지를 직접 예약하거나 Azure Data Factory 파이프라인의 일부로 패키지를 간접적으로 예약할 수 있습니다. Azure의 SSIS에 대한 개요는 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
 - 패키지 직접 예약
 
@@ -35,7 +35,7 @@ ms.locfileid: "34585845"
 
 ## <a name="ssms"></a> SSMS를 사용하여 패키지 예약
 
-SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인 SSISDB에 배포된 패키지를 마우스 오른쪽 단추로 클릭하고, **일정**을 선택하여 **새 일정** 대화 상자를 열 수 있습니다. 자세한 내용은 [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md)(SSMS를 지원하는 Azure에서 SSIS 패키지 실행 예약)를 참조하세요.
+SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인 SSISDB에 배포된 패키지를 마우스 오른쪽 단추로 클릭하고, **일정**을 선택하여 **새 일정** 대화 상자를 열 수 있습니다. 자세한 내용은 [SSMS를 사용하여 Azure에서 SSIS 패키지 예약](ssis-azure-schedule-packages-ssms.md)을 참조합니다.
 
 이 기능을 사용하려면 SQL Server Management Studio 버전 17.7 이상이 필요합니다. SSMS의 최신 버전을 다운로드하려면 [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)(SSMS(SQL Server Management Studio) 다운로드)를 참조하세요.
 

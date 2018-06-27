@@ -14,21 +14,23 @@ helpviewer_keywords:
 - minimum query memory
 - queries [SQL Server], memory
 - min memory per query option
+- min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b81b6ada1e8be2c88d7956ff5f56ba904ea417a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e68c2617af6a2828e1183733ee53fdd142747f66
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811917"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **min memory per query** 옵션은 쿼리 실행을 위해 할당할 최소 메모리 용량(KB)을 지정합니다. 예를 들어 **min memory per query** 를 2,048KB로 설정하면 쿼리는 최소한 그 만큼의 총 메모리를 얻을 수 있습니다. 기본값은 1,024KB입니다. 최소값은 512KB이고 최대값은 2,147,483,647KB(2GB)입니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **min memory per query** 옵션은 쿼리 실행을 위해 할당할 최소 메모리 용량(KB)을 지정합니다. 최소 메모리 부여라고도 합니다. 예를 들어 **min memory per query** 를 2,048KB로 설정하면 쿼리는 최소한 그 만큼의 총 메모리를 얻을 수 있습니다. 기본값은 1,024KB입니다. 최소값은 512KB이고 최대값은 2,147,483,647KB(2GB)입니다.  
   
  **항목 내용**  
   
@@ -60,8 +62,10 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서는 쿼리에 할당할 최적의 메모리 양을 결정하려고 합니다. min memory per query 옵션을 사용하면 관리자가 단일 쿼리에서 수신할 최소 메모리 양을 지정할 수 있습니다. 일반적으로 많은 양의 데이터에 대해 해시 및 정렬 작업을 수행하는 경우에는 쿼리가 이보다 더 많은 메모리를 수신합니다. min memory per query 값을 늘리면 크기가 작거나 중간인 일부 쿼리의 성능은 개선되지만 메모리 리소스에 대한 경합은 증가합니다. min memory per query 옵션은 정렬 작업에 할당된 메모리를 포함합니다.  
 
--    요청된 최소 메모리를 확보하거나 query wait 서버 구성 옵션에 지정된 값이 초과될 때까지 쿼리가 대기해야 하기 때문에 사용량이 많은 시스템 등에서 min memory per query 서버 구성 옵션을 너무 높게 설정해서는 안 됩니다. 쿼리 실행에 필요한 것으로 지정된 최소 값보다 더 많은 메모리를 사용할 수 있는 경우에는 쿼리에서 메모리를 효과적으로 사용할 수 있다면 추가 메모리를 사용할 수 있습니다. 
-  
+-    요청된 최소 메모리를 확보하거나 query wait 서버 구성 옵션에 지정된 값이 초과될 때까지 쿼리가 대기<sup>1</sup>해야 하기 때문에 사용량이 많은 시스템 등에서 min memory per query 서버 구성 옵션을 너무 높게 설정해서는 안 됩니다. 쿼리 실행에 필요한 것으로 지정된 최소 값보다 더 많은 메모리를 사용할 수 있는 경우에는 쿼리에서 메모리를 효과적으로 사용할 수 있다면 추가 메모리를 사용할 수 있습니다.     
+
+<sup>1</sup> 이 시나리오에서 대기 형식은 일반적으로 RESOURCE_SEMAPHORE입니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요.
+
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -107,6 +111,8 @@ GO
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)     
+ [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
   
   

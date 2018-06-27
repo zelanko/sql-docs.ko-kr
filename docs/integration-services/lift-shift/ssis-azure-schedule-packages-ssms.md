@@ -5,25 +5,24 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 89874258c7c8dd12e08ea9a37c6375257ef52c61
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335827"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 SSIS 패키지 실행 예약
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 배포된 SSIS 패키지 실행 예약
 
-SQL Server Management Studio(SSMS)는 Azure SQL Database에 배포할 SSIS 패키지에 대한 예약 기능을 제공합니다. 온-프레미스 SQL Server 및 SQL Database 관리되는 인스턴스(미리 보기)에는 고급 SSIS 작업 스케줄러인 SQL Server 에이전트 및 관리되는 인스턴스 에이전트가 각각 있습니다. 반면 SQL Database에는 기본 제공 고급 SSIS 작업 스케줄러가 없습니다. 이 아티클에 설명된 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다.
+Azure SQL Database에 배포된 SSIS 패키지를 예약하려면 SQL Server Management Studio(SSMS)를 사용할 수 있습니다. 온-프레미스 SQL Server 및 SQL Database 관리되는 인스턴스(미리 보기)에는 고급 SSIS 작업 스케줄러인 SQL Server 에이전트 및 관리되는 인스턴스 에이전트가 각각 있습니다. 반면 SQL Database에는 기본 제공 고급 SSIS 작업 스케줄러가 없습니다. 이 아티클에 설명된 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다.
 
-SQL Database를 사용하여 SSIS 카탈로그 데이터베이스인 `SSISDB`를 호스팅하는 경우 이 SSMS 기능을 사용하여 SSIS 패키지를 예약하는 데 필요한 데이터 팩터리 파이프라인, 활동 및 트리거를 생성할 수 있습니다. 그런 다음, 데이터 팩터리에서 이러한 개체를 편집하고 확장할 수 있습니다.
+SQL Database를 사용하여 SSIS 카탈로그인 `SSISDB`를 호스팅하는 경우 이 SSMS 기능을 사용하여 SSIS 패키지를 예약하는 데 필요한 Data Factory 파이프라인, 활동 및 트리거를 생성할 수 있습니다. 나중에 Data Factory에서 이러한 개체를 선택적으로 편집하고 확장할 수 있습니다.
 
 SSMS를 사용하여 패키지를 예약하면 SSIS에서 선택된 패키지의 이름 및 타임스탬프를 기준으로 이름이 지정된 세 개의 새로운 데이터 팩터리 개체를 자동으로 만듭니다. 예를 들어 SSIS 패키지 이름이 **MyPackage**일 경우 SSMS는 다음과 유사한 새로운 데이터 팩터리 개체를 만듭니다.
 
