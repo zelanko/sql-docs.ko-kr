@@ -58,6 +58,7 @@
 ## [현재 트랜잭션 액세스](../clr-integration-data-access-transactions/accessing-the-current-transaction.md)
 ## [System.Transactions 사용](../clr-integration-data-access-transactions/using-system-transactions.md)
 ## [트랜잭션 수명](../clr-integration-data-access-transactions/transaction-lifetimes.md)
+# [CLR 데이터베이스 개체에서 XML 직렬화](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)
 # [CLR 통합 보안](security/clr-integration-security.md)
 ## [CLR 통합 코드 액세스 보안](security/clr-integration-code-access-security.md)
 ## [CLR 통합 보안의 링크](../../database-engine/dev-guide/links-in-clr-integration-security.md)

@@ -6,6 +6,7 @@
 ## [데이터 기반 구독 만들기, 수정 및 삭제](create-modify-and-delete-data-driven-subscriptions.md)
 ## [구독자 데이터에 외부 데이터 원본 사용](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [기본 모드 보고서 서버 구독 만들기 및 관리](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [표준 구독 만들기, 수정 및 삭제](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [내 구독 사용](use-my-subscriptions-native-mode-report-server.md)
 ## [보고서 및 구독 처리 일시 중지](disable-or-pause-report-and-subscription-processing.md)
 ## [보고서 배포 제어](../control-report-distribution.md)

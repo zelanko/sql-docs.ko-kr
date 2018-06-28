@@ -37,6 +37,7 @@
 ### [옵션(쿼리 결과/SQL Server/표 형태로 결과 표시 페이지)](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [옵션(쿼리 결과/SQL Server/텍스트로 결과 표시 페이지)](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [옵션(쿼리 결과-SQL Server-다중 서버)](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [옵션(쿼리 실행/분석 서버/일반 페이지)](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [옵션(쿼리 결과/분석 서버/일반 페이지)](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [옵션(쿼리 결과 및 종속성 서비스 페이지)](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [편집기 열기(SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)
