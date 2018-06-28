@@ -76,7 +76,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 > 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](http://msdn.microsoft.com/library/ms189334.aspx) 및 [큰 데이터베이스의 메모리 관리](http://msdn.microsoft.com/library/ms191481.aspx)를 참조하세요.   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
-이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
+이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
 -  **단일 페이지 할당자(SPA)**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
 -  **다중 페이지 할당자(MPA)**: 8KB 이상을 요청하는 메모리 할당입니다.
 -  **CLR 할당자**: SQL CLR 힙 및 CLR 초기화 중에 생성되는 전역 할당을 포함합니다.
