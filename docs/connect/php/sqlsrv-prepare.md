@@ -87,7 +87,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 많은 양의 정보를 읽고 쓰기 위한 대체 전략에 대 한 참조 [SQL 문 일괄 처리](../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)합니다.  
   
-자세한 내용은 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
+자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 문을 준비하고 실행합니다. 문을 실행 하면 (참조 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), 필드를 업데이트 하는 *Sales.SalesOrderDetail* AdventureWorks 데이터베이스의 테이블입니다. 이 예에서는 가정 하는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치 됩니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
