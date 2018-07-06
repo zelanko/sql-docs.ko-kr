@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612108"
@@ -62,7 +62,7 @@ ms.locfileid: "35612108"
 
 -   경고와 오류가 약간 변경되었습니다. 이제는 서버에서 반환한 오류 및 경고는 SQL Server 용 OLE DB 드라이버에 전달 될 때 동일한 심각도 유지 합니다. 특정 경고 및 오류 트래핑을 사용하는 경우 응용 프로그램을 완전히 테스트해야 합니다.  
 
--   OLE DB Driver for SQL Server OLE DB 사양을 엄격 하 게 준수 하지 않는 일부 응용 프로그램 다르게 동작할 수 있습니다는 MDAC 보다 엄격한 오류 검사에 있습니다. SQLOLEDB 공급자 매개 변수 이름으로 시작 해야 하는 규칙을 적용 하지 않은 예를 들어, ' @' 매개 변수가 있지만 OLE DB Driver for SQL Server가 결과 대 한 합니다.  
+-   OLE DB Driver for SQL Server OLE DB 사양을 엄격 하 게 준수 하지 않는 일부 응용 프로그램 다르게 동작할 수 있습니다는 MDAC 보다 엄격한 오류 검사에 있습니다. SQLOLEDB 공급자 매개 변수 이름으로 시작 해야 하는 규칙을 적용 하지 않은 예를 들어, '\@' 매개 변수가 있지만 OLE DB Driver for SQL Server가 결과 대 한 합니다.  
 
 -   OLE DB Driver for SQL Server 실패 한 연결 관련 MDAC에서 다르게 동작합니다. 예를 들어 MDAC OLE DB Driver for SQL Server 호출 응용 프로그램에서 오류를 보고 하는 반면 연결 실패에 대 한 캐시 된 속성 값을 반환 합니다.  
 
@@ -106,7 +106,7 @@ ms.locfileid: "35612108"
 
 -   연결 문자열에서 모호성을 허용 하는 OLE DB Driver for SQL Server (예를 들어 일부 키워드를 두 번 이상 지정할 수 있습니다 및 위치나 우선 순위에 따라 해결 된 충돌 하는 키워드를 사용할 수 있습니다) 이전 버전과 호환성에 속하는 이유로 합니다. OLE DB Driver for SQL Server의 이후 릴리스에서 연결 문자열에서 모호성을 통합할 수 있습니다. OLE DB Driver for SQL Server를 사용 하 여 연결 문자열 모호성에 대 한 종속성을 제거 하려면 응용 프로그램을 수정 하는 경우에 것이 좋습니다.  
 
--   트랜잭션을 시작 하는 OLE DB 호출을 사용 하는 경우 차이가 있는 동작에 OLE DB Driver for SQL Server와 MDAC 사이 트랜잭션이 즉시 시작 OLE DB Driver for SQL Server 되지만 MDAC를 사용 하 여 첫 번째 데이터베이스 액세스 후 트랜잭션을 시작 합니다. 이 수에 영향을 줄 저장된 프로시저 및 일괄 처리의 동작 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @ 필요@TRANCOUNT 일괄 처리 또는 저장된 프로시저 실행을 일괄 처리 또는 저장된 프로시저를 시작할 때 끝낸 후 동일 해야 합니다.  
+-   트랜잭션을 시작 하는 OLE DB 호출을 사용 하는 경우 차이가 있는 동작에 OLE DB Driver for SQL Server와 MDAC 사이 트랜잭션이 즉시 시작 OLE DB Driver for SQL Server 되지만 MDAC를 사용 하 여 첫 번째 데이터베이스 액세스 후 트랜잭션을 시작 합니다. 이 수에 영향을 줄 저장된 프로시저 및 일괄 처리의 동작 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \@ 필요@TRANCOUNT 일괄 처리 또는 저장된 프로시저 실행을 일괄 처리 또는 저장된 프로시저를 시작할 때 끝낸 후 동일 해야 합니다.  
 
 -   OLE DB 드라이버와 SQL Server에 대 한 ITransactionLocal::BeginTransaction 인해 트랜잭션이 즉시 시작 됩니다. Mdac를 사용할 경우 응용 프로그램이 암시적 트랜잭션 모드의 트랜잭션이 필요한 문을 실행할 때까지 트랜잭션 시작이 지연 되었습니다. 자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)를 참조하세요.  
 

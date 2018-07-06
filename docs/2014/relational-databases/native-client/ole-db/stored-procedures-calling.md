@@ -25,7 +25,7 @@ ms.author: jhubbard
 manager: jhubbard
 ms.openlocfilehash: bd9a050bd3c424c832f765d02182136a5bcdef4f
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36088613"
@@ -38,7 +38,7 @@ ms.locfileid: "36088613"
 -   매개 변수 표식(?)을 사용하여 매개 변수를 지정하고, 프로그램 변수를 매개 변수 표식에 바인딩한 후 데이터 값을 프로그램 변수에 넣습니다.  
   
 > [!NOTE]  
->  OLE DB로 명명된 매개 변수를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 매개 변수 이름은 '@' 문자로 시작해야 합니다. 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MDAC보다 더 엄격하게 이 제한 사항을 적용합니다.  
+>  OLE DB로 명명된 매개 변수를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 매개 변수 이름은 '\@' 문자로 시작해야 합니다. 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MDAC보다 더 엄격하게 이 제한 사항을 적용합니다.  
   
  매개 변수를 지원 하기 위해는 **ICommandWithParameters** 인터페이스 명령 개체에서 노출 됩니다. 매개 변수를 사용 하려면 소비자는 먼저 매개 변수를 설명 공급자를 호출 하 여는 **icommandwithparameters:: Setparameterinfo** 메서드 (또는 필요에 따라 호출 하는 호출 문을 준비는  **GetParameterInfo** 메서드). 그런 다음 소비자는 버퍼의 구조를 지정하는 접근자를 만들고 매개 변수 값을 이 버퍼에 넣습니다. 버퍼에 대 한 포인터를 소비자는 접근자의 핸들 마지막으로, 전달 **Execute**합니다. 에 대 한 후속 호출에서 **Execute**, 소비자 버퍼 및 호출에 새 매개 변수 값을 배치 **Execute** 접근자 핸들과 버퍼 포인터입니다.  
   
