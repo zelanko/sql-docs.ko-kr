@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 425850106e421e3fb763e3285a44f2894f39ef91
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d0c722646c43b6b7016412540b00dbecdf667db8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694574"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409832"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>통합 Kerberos 인증(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "35694574"
 
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 OLE DB를 사용하여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다. 이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
   
- Spn 및 Kerberos 인증에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)합니다.  
+ Spn 및 Kerberos 인증에 대 한 자세한 내용은 참조 하세요. [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)합니다.  
   
 ## <a name="example"></a>예제  
  서버를 지정해야 합니다. .cpp 파일에서 "MyServer"를 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 인스턴스가 있는 컴퓨터 이름으로 변경합니다.  

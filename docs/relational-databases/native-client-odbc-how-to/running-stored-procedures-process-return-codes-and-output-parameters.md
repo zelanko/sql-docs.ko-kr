@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9f0c48c0c6a9a6f14e9223cda5da0d45479b9ef3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695524"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423992"
 ---
-# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>저장된 프로시저 실행-프로세스 반환 코드 및 출력 매개 변수
+# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>저장된 프로시저 실행-반환 코드 처리 및 출력 매개 변수
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버를 사용하면 저장 프로시저를 원격 저장 프로시저로 실행할 수 있습니다. 저장 프로시저를 원격 저장 프로시저로 실행하면 드라이버와 서버에서 프로시저의 실행 성능을 최적화할 수 있습니다.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드 및 출력 매개 변수는 서버의 마지막 패킷으로 전달 되므로 및 때까지 응용 프로그램을 사용할 수 없는 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA를 반환 합니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults 하 SQL_NO_DATA가 반환 될 때까지 다음 결과로 이동 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 서버의 마지막 패킷으로 전송 되 고 때까지 응용 프로그램을 사용할 수 없는 반환 코드 및 출력 매개 변수를 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA를 반환 합니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults SQL_NO_DATA가 반환 될 때까지를 다음 결과로 이동 합니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "35695524"
   
 1.  ODBC CALL 이스케이프 시퀀스를 사용하는 SQL 문을 생성합니다. 이 문에서는 각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 매개 변수 표식을 사용해야 합니다.  
   
-2.  호출 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 각 입력에 대 한 입/출력 및 출력 매개 변수 및 프로시저에 대 한 반환 값 (있는 경우).  
+2.  호출 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 각 입력에 대 한 입/출력 및 출력 매개 변수 및 프로시저 반환 값 (있는 경우).  
   
 3.  **SQLExecDirect**를 사용하여 문을 실행합니다.  
   
@@ -198,6 +198,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
-[저장된 프로시저를 호출 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[저장된 프로시저를 호출 합니다. &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

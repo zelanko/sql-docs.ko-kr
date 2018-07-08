@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ac517bac269064fbb1f52e8651227278a0d231a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 60a4113f849a150ed0e639559fb93ae5d22fb1f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697474"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407722"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 서버에 연결 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  
+  사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 서버에 연결 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -38,7 +38,7 @@ ms.locfileid: "35697474"
   
 -   [OLE DB 데이터 원본 열거 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [데이터 대량 복사 IRowsetFastLoad를 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [IRowsetFastLoad를 통한 복사본 데이터를 대량으로 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
 -   [FAST_FORWARD 커서 가져오기](../../relational-databases/native-client-ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
@@ -50,17 +50,17 @@ ms.locfileid: "35697474"
   
 -   [SQL Server 인증 사용자 암호 변경 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [사용 하 여 날짜 및 시간 기능 향상 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [향상 된 날짜 및 시간 기능 사용 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream 및 OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
--   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL SERVER로 BLOB 데이터를 보낼 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL SERVER에 BLOB 데이터를 보낼 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
 -   [큰 CLR Udt를 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [표시 열 및 스파스 열의 카탈로그 메타 데이터 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [통합 Kerberos 인증 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [통합 Kerberos 인증을 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
 -   [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

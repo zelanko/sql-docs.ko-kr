@@ -1,12 +1,12 @@
 ---
-title: 메모리 (ODBC)의 모든 값이 있는 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs
+title: 메모리 (ODBC)의 모든 값을 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56b23a290944994fba861f02e78cddbb3488cbab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 038a507b3a5fc67c80903fce3691755ad4aac1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703284"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411052"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 다음 열 값의 하지만 ParameterNumber에 대 한 열 서 수, 저장된 프로시저의 매개 변수 했는데이 사람이 될 SQLBindParameter 같은 방식으로 사용 하 여 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
+3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 그런 다음 있었던 상태로 대 한 열 서 수 하지만 저장된 프로시저의 매개 변수 처럼 동일한 방식으로 SQLBindParameter를 사용 하 여 열 값의 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ccb9d40572b24322264ffc826e79d18faade8d8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d39998e41fd26bb2928290f62dd08fc54a0f567a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695904"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407865"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ HRESULT GetStatus(
  공급자 관련 오류가 발생했습니다.  
   
 ## <a name="remarks"></a>Remarks  
- **issasynchstatus:: Getstatus** 과 동일 하 게 동작 하는 메서드는 **idbasynchstatus:: Getstatus** 메서드 점을 제외 하 고 원본 개체는 데이터의 초기화 하는 경우 중단 되 면 E_UNEXPECTED 대신 반환 됩니다 DB_E_CANCELED 보다 (있지만 [issasynchstatus:: Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED를 반환 합니다). 이는 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
+ 합니다 **issasynchstatus:: Getstatus** 메서드가 동일 하 게 동작 합니다 **idbasynchstatus:: Getstatus** 메서드는 원본 개체의 데이터를 초기화 하는 경우 중단 되 면 E_UNEXPECTED 대신 반환 됩니다 DB_E_CANCELED 보다 (하지만 [issasynchstatus:: Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED를 반환 합니다). 이는 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
   
  행 집합이 비동기적으로 초기화되거나 채워진 경우 이 메서드를 지원해야 합니다.  
   

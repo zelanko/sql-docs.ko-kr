@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235c76fb2b8cad1682fab97f36cb1867d7c82c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165274"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>NullKeyNotAllowed 요소(ASSL)
-  결정 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 처리 엔진이 처리 도중 발생 한 null 키 오류를 처리 합니다.  
+  결정 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 처리 엔진이 처리 도중 발생 한 null 키 오류를 처리 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36079845"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- Null 값이 허용되지 않는 키 열에 Null 값이 발견되면 Null 키 오류가 발생하고 처리하는 동안 해당 레코드를 삭제합니다. 경우에이 오류가 발생 하는 반면는 [NullProcessing](nullprocessing-element-assl.md) 에 대 한 요소는 `DataItem` 의 상위 항목은 `ErrorConfiguration` 로 설정 된 부모 *오류*합니다.  
+ Null 값이 허용되지 않는 키 열에 Null 값이 발견되면 Null 키 오류가 발생하고 처리하는 동안 해당 레코드를 삭제합니다. 경우에이 오류가 발생 하는 반면를 [NullProcessing](nullprocessing-element-assl.md) 요소를 `DataItem` 의 상위 항목을 `ErrorConfiguration` 부모 요소가로 설정 되어 *오류*합니다.  
   
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  
   

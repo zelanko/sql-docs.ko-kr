@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182903"
 ---
 # <a name="collations-and-code-pages"></a>데이터 정렬 및 코드 페이지
   
@@ -87,7 +87,7 @@ GO
   
 -   고유하게 컴파일된 저장 프로시저 내의 모든 식과 정렬 작업은 BIN2 데이터 정렬을 사용해야 합니다. 즉, 모든 비교 및 정렬 작업이 문자(이진 표현)의 유니코드 코드 포인트를 기반으로 합니다. 예를 들어 모든 정렬이 대/소문자를 구분합니다('Z'가 'a' 앞에 옴). 필요한 경우 대/소문자를 구분하지 않는 정렬 및 비교를 위해 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용합니다.  
   
--   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 해당 n (var) char (*n*) 값을 n (var) char 형식으로 변환 될 수 없습니다 (*i*) 하는 경우, *i* < *n*경우는 데이터 정렬에 _SC 속성이 있습니다. 예를 들어 다음은 지원되지 않습니다.  
+-   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 해당 n (var) char (*n*) 값 n (var) char 형식으로 변환할 수 없습니다 (*합니까*) 이면 *합니까* < *n*경우는 데이터 정렬에 _SC 속성이 있습니다. 예를 들어 다음은 지원되지 않습니다.  
   
     ```tsql  
     -- column definition using an _SC collation  

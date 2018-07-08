@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d78aceec83230cc8772186d5360b80b2ff656053
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 04ff6702a46aeb5a28923dc39a5e6e5cfa7df294
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695744"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426012"
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ RETCODE bcp_sendrow (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- **bcp_sendrow** 함수 프로그램 변수에서 행을 작성 하 고에 보냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 합니다 **bcp_sendrow** 함수는 프로그램 변수에서 행을 작성 하 고로 보냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- 호출 하기 전에 **bcp_sendrow**, 호출을 수행 해야 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 행 데이터를 포함 하는 프로그램 변수를 지정할 수 있습니다.  
+ 호출 하기 전에 **bcp_sendrow**를 호출 해야 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 행 데이터를 포함 하는 프로그램 변수를 지정 합니다.  
   
- 경우 **bcp_bind** 예를 들어 긴 가변 길이 데이터 형식 지정 이라고는 *eDataType* SQLTEXT 및 NULL이 아닌 매개 변수 *pData* 매개 변수, **bcp_sendrow** 와 같이 다른 데이터 형식에 대 한 전체 데이터 값을 보냅니다. 그러나 If, **bcp_bind** 에 NULL *pData* 매개 변수를 **bcp_sendrow** 지정 된 데이터가 있는 모든 열을 보낸 후에 즉시 응용 프로그램에 컨트롤 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 응용 프로그램이 호출할 수 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 반복적으로 하는 긴 가변 길이 데이터를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 한 번에 청크 합니다. 자세한 내용은 참조 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다.  
+ 하는 경우 **bcp_bind** 예를 들어, 긴 가변 길이 데이터 형식 지정 이라고는 *eDataType* SQLTEXT 및 NULL이 아닌 매개 변수 *pData* 매개 변수를 **bcp_sendrow** 다른 데이터 형식에 대해서와 마찬가지로 전체 데이터 값을 보냅니다. 그러나 If, **bcp_bind** NULL이 포함 되어 *pData* 매개 변수 **bcp_sendrow** 지정 된 데이터를 사용 하 여 모든 열을 보낸 후에 즉시 응용 프로그램에 제어를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 응용 프로그램을 호출할 수 있습니다 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 반복적으로 하는 긴 가변 길이 데이터를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 한 번에 청크 합니다. 자세한 내용은 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다.  
   
- 때 **bcp_sendrow** 행을 대량 복사 프로그램 변수에서 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블, 행이 커밋됩니다 사용자를 호출 하는 경우에 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 또는 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . 사용자를 호출 하도록 선택할 수 **bcp_batch** 되 면 모든 *n* 행 하거나 데이터가 연이어 사이의 소강 상태가 있는 때입니다. 경우 **bcp_batch** 은 호출 되지 행이 커밋됩니다 때 **bcp_done** 호출 됩니다.  
+ 때 **bcp_sendrow** 행을 대량 복사할 프로그램 변수에서 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 행이 커밋됩니다 사용자를 호출 하는 경우에 [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 하거나 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . 사용자 호출 하도록 선택할 수 있습니다 **bcp_batch** 되 면 모든 *n* 행 들어오는 데이터의 기간 사이의 소강 상태가 있는 경우 또는 합니다. 하는 경우 **bcp_batch** 가 호출 되지 행 시 커밋됩니다 **bcp_done** 라고 합니다.  
   
- 대량 복사부터의 변경 내용은 주요에 대 한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 참조 [대량 복사 작업 수행 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)합니다.  
+ 대량 복사부터의 변경 내용은 주요에 대 한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 참조 하세요 [대량 복사 작업 수행 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

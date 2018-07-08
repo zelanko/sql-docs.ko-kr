@@ -1,12 +1,12 @@
 ---
-title: 저장된 프로시저를 실행 | Microsoft Docs
+title: 저장된 프로시저를 실행 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54132acdb66095e45b5bdaf23b5f4b1c2716b538
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 179068eed7b131a237176e94974f39daa8685b33
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699344"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415652"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "35699344"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장된 프로시저를 호출 하는 방법의 예제를 보려면 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)합니다.  
+     저장된 프로시저를 호출 하는 방법의 예제를 참조 하세요 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -74,6 +74,6 @@ ms.locfileid: "35699344"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [저장된 프로시저 방법 도움말 항목 실행 &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [저장된 프로시저 방법 도움말 항목을 실행 &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: 데이터 마이그레이션 길잡이 (SQL Server)의 개요 | Microsoft Docs
+title: Data Migration Assistant (SQL Server)의 개요 | Microsoft Docs
+description: 다른 SQL Server 또는 Azure 데이터베이스에 SQL Server 데이터베이스를 마이그레이션하기 위해 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
 ms.date: 03/15/2018
 ms.prod: sql
@@ -17,52 +18,52 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707971"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781524"
 ---
-# <a name="overview-of-data-migration-assistant"></a>데이터 마이그레이션 길잡이 개요
+# <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 
-데이터 마이그레이션 길잡이 (DMA)를 사용 하면 새 버전 SQL Server 및 Azure SQL 데이터베이스에서에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드할 수 있습니다. DMA 성능 및 안정성 개선 대상 환경에 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
+데이터 마이그레이션 길잡이 (DMA)를 사용 하면 새 버전의 SQL Server 또는 Azure SQL Database에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드 하도록 도와줍니다. DMA는 성능 및 안정성 향상 대상 환경에 대 한 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
 
 > [!NOTE] 
-> 에 대 한 (측면에서 데이터베이스의 크기 및 번호가) 큰 마이그레이션 것이 좋습니다 사용 하는 [Azure 데이터베이스 마이그레이션 서비스](https://docs.microsoft.com/azure/dms/dms-overview), 규모에 데이터베이스를 마이그레이션할 수 있는 합니다.
+> 대규모 마이그레이션의 (측면에서 번호 및 데이터베이스의 크기)를 사용 하는 권장 합니다 [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview)는 대규모 데이터베이스를 마이그레이션할 수 있습니다.
   
 ## <a name="capabilities"></a>Capabilities
 
-- Azure SQL 데이터베이스를 마이그레이션하는 온-프레미스 SQL Server 인스턴스를 평가 합니다. 평가 워크플로 사용 하면 Azure SQL 데이터베이스 마이그레이션에 영향을 줄 수 및이 문제를 해결 하는 방법에 대 한 자세한 지침을 제공 하는 다음 문제를 검색할 수 있습니다.
+- Azure SQL database로 마이그레이션하는 온-프레미스 SQL Server 인스턴스를 평가 합니다. 평가 워크플로 사용 하면 Azure SQL database 마이그레이션에 영향을 줄 수 및 해결 하는 방법에 대 한 자세한 지침을 제공 하는 다음 문제를 검색할 수 있습니다.
 
-  - 마이그레이션 차단 문제: 호환성 문제는 블록 마이그레이션 온-프레미스 SQL Server 데이터베이스 s Azure SQL 데이터베이스를 검색 합니다. DMA 그러한 문제를 해결 하기 위한 권장 사항을 제공 합니다.
+  - 마이그레이션 차단 문제: 호환성 문제는 블록 마이그레이션할 온-프레미스 SQL Server 데이터베이스를 Azure SQL 데이터베이스를 검색 합니다. DMA는 해당 문제를 해결 하기 위한 권장 사항을 제공 합니다.
 
-  - 지원 되지 않는 기능 또는 부분적으로 지원: 현재 사용 중인 원본 SQL Server 인스턴스에서 부분적으로 지원 되거나 지원 되지 않는 기능을 검색 합니다. DMA는 포괄적인 집합 권장 사항, Azure 및 완화 단계에서 사용할 수 있는 방법이 마이그레이션 프로젝트에 통합할 수 있도록 제공 합니다.
+  - 부분적으로 지원 되거나 지원 되지 않는 기능: 현재 원본 SQL Server 인스턴스에 사용 되는 부분적으로 지원 되거나 지원 되지 않는 기능을 검색 합니다. DMA는 마이그레이션 프로젝트에 통합할 수 있도록 포괄적인 Azure 및 완화 단계에서 사용 가능한 대체 방법 권장 사항 집합을 제공 합니다.
 
-- 온-프레미스 SQL Server로의 업그레이드에 영향을 줄 수 있는 문제를 검색 합니다. 이러한 호환성 문제 설명 및 다음 범주로 구성 됩니다.
+- 온-프레미스 SQL server 업그레이드에 영향을 줄 수 있는 문제를 검색 합니다. 이러한 호환성 문제를 설명 하 고 다음 범주로 구성 됩니다.
 
   - 주요 변경 내용
   - 동작 변경 내용
   - 사용 되지 않는 기능
 
-- 업그레이드 후 데이터베이스 활용할 수 있는 대상 SQL Server 플랫폼의 새로운 기능을 검색 합니다. 이러한 기능은 권장 사항으로 설명 및 다음 범주로 구성 됩니다.
+- 데이터베이스는 업그레이드 후에 활용할 수 있는 대상 SQL Server 플랫폼의 새로운 기능을 검색 합니다. 이러한 기능 권장 사항으로 설명 하 고 다음 범주로 구성 됩니다.
 
   - 성능
   - 보안
   - 저장소
 
-- 온-프레미스 SQL Server 인스턴스를 온-프레미스 또는 온-프레미스 네트워크에서 액세스할 수 있는 Azure 가상 컴퓨터 (VM)에서 호스트 되는 최신 SQL Server 인스턴스로 마이그레이션하십시오. Azure VM의 VPN 또는 기타 기술을 사용 하 여 액세스할 수 있습니다. 마이그레이션 워크플로 사용 하면 다음과 같은 구성 요소를 마이그레이션할 수 있습니다.
+- 온-프레미스에서 또는 온-프레미스 네트워크에서 액세스할 수 있는 Azure 가상 컴퓨터 (VM)에서 호스팅되는 최신 SQL Server 인스턴스를 온-프레미스 SQL Server 인스턴스를 마이그레이션하십시오. VPN 또는 기타 기술을 사용 하 여 Azure VM은 액세스할 수 있습니다. 마이그레이션 워크플로 사용 하면 다음 구성 요소를 마이그레이션할 수 있습니다.
 
   - 데이터베이스의 스키마
   - 데이터 및 사용자
   - 서버 역할
   - SQL Server 및 Windows 로그인
 
-- 성공적인 마이그레이션 후 응용 프로그램에 연결할 수는 대상 SQL server 데이터베이스 원활 하 게 합니다.
+- 성공적인 마이그레이션 후 응용 프로그램 수 대상 SQL server 데이터베이스에 원활 하 게 연결 합니다.
 
-## <a name="supported-source-and-target-versions"></a>지원 되는 소스 및 대상 버전
+## <a name="supported-source-and-target-versions"></a>지원 되는 원본 및 대상 버전
 
-DMA 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하며 대부분의 SQL Server 버전 업그레이드에 사용 해야 합니다. 지원 되는 소스 및 대상 버전에 따라합니다.
+DMA는 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하 고 대부분의 SQL Server 버전에 대 한 업그레이드에 사용 해야 합니다. 지원 되는 원본 및 대상 버전에 따라 합니다.
 
 **원본**
 - SQL Server 2005
@@ -71,31 +72,31 @@ DMA 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하�
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
-- Windows에서 SQL Server 2017
+- Windows의 SQL Server 2017
 
 **대상**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Windows 및 Linux에서 SQL Server 2017
+- Windows 및 Linux의 SQL Server 2017
 - Azure SQL 데이터베이스
 
 > [!NOTE] 
-> DMA 현재 없으므로 Azure SQL 데이터베이스 관리 되는 인스턴스를 대상으로 합니다.
+> DMA 현재 지원 하지 않습니다 Azure SQL Database Managed Instance를 대상으로 합니다.
 
 ## <a name="installation"></a>설치
 
-DMA를 설치 하려면 최신 버전의 도구를 다운로드는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53595), 다음 실행 하 고는 **DataMigrationAssistant.msi** 파일입니다.
+DMA를 설치 하려면 최신 버전의 도구를 다운로드 합니다 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53595), 실행 합니다 **DataMigrationAssistant.msi** 파일.
 
 ## <a name="see-also"></a>참고자료
 
 [SQL Server 마이그레이션 평가](../dma/dma-assesssqlonprem.md)
 
-[데이터 마이그레이션 길잡이: 구성 설정](../dma/dma-configurationsettings.md)
+[Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)
 
-[데이터 마이그레이션 길잡이 사용 하 여 마이그레이션 온-프레미스 SQL Server](../dma/dma-migrateonpremsql.md)
+[Data Migration Assistant를 사용 하 여 마이그레이션할 온-프레미스 SQL Server](../dma/dma-migrateonpremsql.md)
 
-[데이터 마이그레이션 길잡이:에 대 한 유용한 정보](../dma/dma-bestpractices.md)
+[Data Migration Assistant: 모범 사례](../dma/dma-bestpractices.md)
 
 
 

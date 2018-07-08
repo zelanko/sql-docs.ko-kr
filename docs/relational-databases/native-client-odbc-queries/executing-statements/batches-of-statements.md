@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dba096f42bf5b13f500afcbbe830fb900cd9eb3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 54714f81cd4145174b82e255fde683d2cc9ef4d9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701174"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414922"
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  일괄 처리를 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 전달 된 단일 문자열에 세미콜론 (;)으로 구분 된 두 개 이상의 문을 포함 하 여 문을 **SQLExecDirect** 또는 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 예를 들어:  
+  일괄 처리 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 세미콜론 (;)에 전달 된 단일 문자열에 두 개 이상의 문을 포함 **SQLExecDirect** 하거나 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)합니다. 예를 들어:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -40,11 +40,11 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- 일괄 처리를 사용하면 대개 네트워크 트래픽이 줄어들므로 문을 개별적으로 전송하는 것보다 효율적일 수 있습니다. 사용 하 여 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 를 다음 결과 집합 현재 결과 집합 후에 위치를 지정 합니다.  
+ 일괄 처리를 사용하면 대개 네트워크 트래픽이 줄어들므로 문을 개별적으로 전송하는 것보다 효율적일 수 있습니다. 사용 하 여 [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 를 다음 결과 집합의 현재 결과 집합을 사용 하 여 완료 되 면에서 위치를 지정 합니다.  
   
  ODBC 커서 특성을 행 집합 크기가 1인 정방향 전용의 읽기 전용 커서(기본값)로 설정하면 항상 일괄 처리를 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 서버 커서를 사용할 때 일괄 처리를 실행하면 서버 커서가 암시적으로 기본 결과 집합으로 변환됩니다. **SQLExecDirect** 또는 **SQLExecute** SQL_SUCCESS_WITH_INFO, 및에 대 한 호출 반환 **SQLGetDiagRec** 반환:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 서버 커서를 사용할 때 일괄 처리를 실행하면 서버 커서가 암시적으로 기본 결과 집합으로 변환됩니다. **SQLExecDirect** 또는 **SQLExecute** SQL_SUCCESS_WITH_INFO를 호출과 반환 **SQLGetDiagRec** 반환 합니다.  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
@@ -52,6 +52,6 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [문을 실행 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [문 실행 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

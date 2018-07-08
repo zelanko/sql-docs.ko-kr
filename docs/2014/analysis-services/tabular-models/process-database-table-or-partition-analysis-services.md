@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 처리, 테이블 또는 파티션 | Microsoft Docs
+title: 데이터베이스, 테이블 또는 파티션 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d0300249983334f0510fe94807f1dcfcb62865f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e6bb8c09154c7136d53dbf948c0baa199077f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229713"
 ---
 # <a name="process-database-table-or-partition"></a>데이터베이스, 테이블 또는 파티션 처리
-  이 항목의 태스크를 사용 하 여 테이블 형식 모델 데이터베이스, 테이블 또는 파티션을 수동으로 처리 하는 방법에 설명 된 **프로세스 \<개체 >** 대화 상자에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+  이 항목의 태스크를 사용 하 여 테이블 형식 모델 데이터베이스, 테이블 또는 파티션을 수동으로 처리 하는 방법에 설명 합니다 **프로세스 \<개체 >** 대화 상자 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
  테이블 형식 모델 처리에 대한 자세한 내용은 [데이터 처리&#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md)를 참조하세요.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36080501"
 4.  **처리** 확인란 열에서 선택된 모드로 처리할 파티션을 선택한 후 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 파티션 &#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)   
- [테이블 형식 모델 파티션 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [테이블 형식 모델 파티션 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

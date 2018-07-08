@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701464"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421972"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  
+  사용 하 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  
   
  소비자는 이 데이터가 포함된 저장소 개체를 만들고 이 저장소 개체에 대한 포인터를 공급자에게 전달합니다. 그러면 공급자는 소비자 저장소 개체에서 데이터를 읽고 이를 BLOB 열에 씁니다.  
   
- 자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 소비자는 다음 호출에서 **irowsetchange:: Setdata** 또는 **irowsetchange:: Insertrow** BLOB 열을 바인딩하는 접근자를 사용 하 여 메서드. 그러면 소비자의 저장소 개체에 저장소 인터페이스에 대한 포인터가 전달됩니다.  
+ 자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 호출 된 **irowsetchange:: Setdata** 또는 **irowsetchange:: Insertrow** 해당 BLOB 열을 바인딩하는 접근자를 사용 하 여 메서드. 그러면 소비자의 저장소 개체에 저장소 인터페이스에 대한 포인터가 전달됩니다.  
   
  이 항목에서는 다음 함수와 함께 사용할 수 있는 기능에 대해 설명합니다.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "35701464"
 ## <a name="how-to-set-large-data"></a>대규모 데이터를 설정하는 방법  
  자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다. BLOB 데이터를 설정하려면 다음과 같이 하십시오.  
   
-1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. 설정의 *dwFlag* 을 설정 하 고 STGM_READ DBOBJECT 구조의 요소는 *iid* 를 IID_ISequentialStream (표시할 인터페이스) 요소입니다.  
+1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. 설정 합니다 *dwFlag* 요소를 STGM_READ DBOBJECT 구조를 *iid* 를 iid_isequentialstream으로 설정 (표시할 인터페이스) 요소입니다.  
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   
-3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. 설정의 *wType* dbtype_iunknown으로 DBBINDING 구조에는 요소 및 *pObject* 요소 만든 DBOBJECT 구조를 가리키도록 합니다.  
+3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. 설정 합니다 *wType* 요소를 DBTYPE_IUNKNOWN으로 DBBINDING 구조의 및 *pObject* 요소 만든 DBOBJECT 구조를 가리키도록 합니다.  
   
 4.  구조의 DBBINDINGS 배열에 있는 바인딩 정보를 사용하여 접근자를 만듭니다.  
   
 5.  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
   
-6.  데이터 (및 길이 표시기), 포함 된 저장소 개체를 만들고 다음 호출 **irowsetchange:: Setdata** (또는 **irowsetchange:: Insertrow**)을 설정 하려면 해당 BLOB 열을 바인딩하는 접근자 사용 데이터입니다.  
+6.  및가 포함 된 데이터 (길이 표시기), 저장소 개체를 만들고 호출 **irowsetchange:: Setdata** (또는 **irowsetchange:: Insertrow**) 설정에 해당 BLOB 열을 바인딩하는 접근자를 사용 하 여 데이터입니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 BLOB 데이터를 설정하는 방법을 보여 줍니다. 이 예에서는 데이터를 만들어 예제 레코드를 추가하고 행 집합에서 해당 레코드를 인출한 다음 BLOB 필드의 값을 설정합니다.  

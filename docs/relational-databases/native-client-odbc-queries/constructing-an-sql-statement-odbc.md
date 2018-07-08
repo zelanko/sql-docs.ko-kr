@@ -1,12 +1,12 @@
 ---
-title: SQL 문 (ODBC) 생성 | Microsoft Docs
+title: SQL 문 생성 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae5e68251e9e1d0aa08576c87a7d79a49cbaf1a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f564842584763aa7dc516ef1fe8ba9bb45e707b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698084"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412692"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL 문 생성(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35698084"
   
      사용자가 SELECT, WHERE 및 ORDER BY와 같은 일반적인 절을 사용하여 문을 알맞게 조정할 수 있도록 런타임에 생성한 SQL 문. 여기에는 사용자가 입력한 임시 쿼리도 포함됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버에서 직접 지 원하는 ODBC 및 ISO 구문에 대 한 SQL 문을 구문 분석 하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]로 변환 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 다른 모든 SQL 구문은 변경되지 않고 [!INCLUDE[ssDE](../../includes/ssde-md.md)]으로 전달되며, 그곳에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 해당 구문이 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인지 확인합니다. 이 방법은 다음 두 가지 이점을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버에서 직접 지 원하는 ODBC 및 ISO 구문에 대해서만 SQL 문을 구문 분석 하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)], 드라이버를 변환 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 다른 모든 SQL 구문은 변경되지 않고 [!INCLUDE[ssDE](../../includes/ssde-md.md)]으로 전달되며, 그곳에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 해당 구문이 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인지 확인합니다. 이 방법은 다음 두 가지 이점을 제공합니다.  
   
 -   오버헤드 감소  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35698084"
   
 -   유연성  
   
-     프로그래머가 응용 프로그램의 이식성이 알맞게 조정할 수 있습니다. 여러 데이터베이스에 대한 이식성을 향상하려면 주로 ODBC 및 ISO 구문을 사용합니다. 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향상된 기능을 사용하려면 적절한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 전체 지원 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC 기반 응용 프로그램의 모든 기능을 이용할 수 있도록 구문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     프로그래머가 응용 프로그램의 이식성이 알맞게 조정할 수 있습니다. 여러 데이터베이스에 대한 이식성을 향상하려면 주로 ODBC 및 ISO 구문을 사용합니다. 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향상된 기능을 사용하려면 적절한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC 기반 응용 프로그램의 모든 기능을 활용할 수 있도록 구문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  SELECT 문의 열 목록에는 현재 태스크를 수행하는 데 필요한 열만 포함되어 있어야 합니다. 그래야만 네트워크를 통해 보내는 데이터의 양이 줄 뿐 아니라 데이터베이스 변경이 응용 프로그램에 미치는 영향도 줄어듭니다. 응용 프로그램에서 테이블의 열을 참조하지 않는 경우 해당 열이 변경되어도 응용 프로그램에는 영향을 주지 않습니다.  
   

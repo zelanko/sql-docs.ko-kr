@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.f1
 helpviewer_keywords:
 - Usage-Based Optimization Wizard
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b703234bb779042bdd341140e603938b16ebb412
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e01a630552f70586b3444394e143dc6978153d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229703"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>사용 빈도 기반 최적화 마법사 F1 도움말
   사용 빈도 기반 최적화 마법사는 출력 면에서 집계 디자인 마법사와 유사하며 파티션에 대한 집계를 디자인하는 데 사용됩니다. 그러나 사용 빈도 기반 최적화 마법사는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 쿼리 로그에 기록된 쿼리의 특정 사용 패턴을 기반으로 집계를 디자인합니다. 집계를 사용하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산된 합계를 검색할 수 있으므로 성능이 향상됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36078632"
   
 -   파티션, 측정값 그룹 또는 큐브를 저장하고 선택적으로 처리하여 정의된 집계 생성  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 저장소 크기에 따라 제한 될 수 있습니다 또는 예상 성능 향상 있는 집계 디자인의 배달을 위해 파티션 구조의 통계 분석에 따라 집계를 디자인 하려면 집계 디자인 마법사를 제공 합니다. 집계 디자인 마법사를 사용하여 파티션의 전반적인 성능을 향상시킬 수도 있지만 집계 디자인이 비즈니스 사용자의 특정 요구에 부합하지 않을 수 있습니다. 사용 빈도 기반 최적화 마법사에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 쿼리 로그에 특정 쿼리 생성에 필요한 정보가 충분히 포함된 경우 이러한 특정 요구에 부합하는 집계 디자인을 제공할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 저장소 크기에 따라 제한 될 수 있습니다 또는 예상 성능 향상 하는 집계 디자인의 배달을 위해 파티션 구조의 통계 분석을 기반으로 집계를 디자인 하려면 집계 디자인 마법사를 제공 합니다. 집계 디자인 마법사를 사용하여 파티션의 전반적인 성능을 향상시킬 수도 있지만 집계 디자인이 비즈니스 사용자의 특정 요구에 부합하지 않을 수 있습니다. 사용 빈도 기반 최적화 마법사에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 쿼리 로그에 특정 쿼리 생성에 필요한 정보가 충분히 포함된 경우 이러한 특정 요구에 부합하는 집계 디자인을 제공할 수 있습니다.  
   
  일반적으로 두 마법사를 함께 사용하여 배포 시는 물론 지속적으로 성능을 향상시킬 수 있습니다. 파티션 또는 파티션이 포함된 큐브 또는 측정값 그룹을 처음에 배포한 경우에는 집계 디자인 마법사를 먼저 사용하여 전반적인 성능을 향상시켜야 합니다. 일정 기간이 지나 쿼리 로그에 파티션에 대한 비즈니스 사용자의 쿼리를 기록한 다음에는 사용 빈도 기반 최적화 마법사를 사용하여 집계 디자인이 비즈니스 사용자의 성능 및 쿼리 요구 사항을 보다 잘 처리할 수 있도록 할 수 있습니다.  
   

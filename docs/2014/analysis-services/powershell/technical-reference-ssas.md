@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, technical reference
 - multidimensional data [Analysis Services], technical reference
 - technical reference [Analysis Services - multidimensional data]
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c471a7757a52e54219df9081e5a81c03a8d4e29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 169e6559b8f1f9e38633a02574f767450bf8afc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183380"
 ---
 # <a name="technical-reference-ssas"></a>기술 참조(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하고 관리하는 데 대한 도구, 언어 및 PowerShell 참조 설명서를 찾습니다.  

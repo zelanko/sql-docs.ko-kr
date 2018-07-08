@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13bc065e3b6c8373f5e0eeac70977195587cd721
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0b6a70c03e4ede2d3aa092855991bb4517f34170
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703720"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407072"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,11 +50,11 @@ RETCODE bcp_colptr (
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *pData*  
- 복사할 데이터에 대한 포인터입니다. 바인딩된 데이터 형식이 큰 값 형식 (예: SQLTEXT 또는 SQLIMAGE) *pData* NULL 일 수 있습니다. NULL *pData* 청크를 사용 하 여 긴 데이터 값을 SQL Server로 전송 되지 않음을 나타내는 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다.  
+ 복사할 데이터에 대한 포인터입니다. 바인딩된 데이터 형식을 큰 값 형식 (예: SQLTEXT 또는 SQLIMAGE) 이면 *pData* NULL 일 수 있습니다. NULL *pData* 긴 데이터 값 전송할 SQL Server를 사용 하 여 청크 단위로 나타냅니다 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)합니다.  
   
- 경우 *pData* NULL과 열으로 설정 된 큰 값 유형이 아닙니다 바인딩된 필드에 해당 하 **bcp_colptr** 실패 합니다.  
+ 하는 경우 *pData* NULL이 고 열으로 바인딩된 필드에 해당 하는 큰 값 형식인을 하지 **bcp_colptr** 실패 합니다.  
   
- 큰 값 형식에 대 한 자세한 내용은 참조 하십시오. [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**합니다.**  
+ 큰 값 형식에 대 한 자세한 내용은 참조 하세요. [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)**합니다.**  
   
  *idxServerCol*  
  데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서 수 위치를 보고 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)합니다.  
@@ -63,9 +63,9 @@ RETCODE bcp_colptr (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- **bcp_colptr** 함수를 사용 하면 SQL server로 데이터를 복사할 때 특정 열에 대 한 원본 데이터의 주소를 변경할 수 있습니다 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)합니다.  
+ 합니다 **bcp_colptr** 함수를 사용 하면 SQL server로 데이터를 복사할 때 특정 열의 원본 데이터의 주소를 변경할 수 있습니다 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)합니다.  
   
- 사용자 데이터에 대 한 포인터를 호출 하 여 초기에 설정 됩니다 **bcp_bind**합니다. 호출 간에 프로그램 변수 데이터 주소가 변경 되 면 **bcp_sendrow**를 호출할 수 있습니다 **bcp_colptr** 데이터에 포인터를 다시 설정 합니다. 다음 호출 **bcp_sendrow** 호출 하 여 주소가 지정 된 데이터를 보내는 **bcp_colptr**합니다.  
+ 사용자 데이터에 대 한 포인터를 호출 하 여 처음에 설정할지 **bcp_bind**합니다. 프로그램 변수 데이터 주소가 변경 된 경우 호출 사이 **bcp_sendrow**를 호출할 수 있습니다 **bcp_colptr** 데이터에 대 한 포인터를 다시 설정 하려면. 다음에 호출할 **bcp_sendrow** 호출에 의해 주소가 지정 된 데이터를 보내는 **bcp_colptr**합니다.  
   
  별도 있어야 **bcp_colptr** 데이터 주소를 테이블의 모든 열에 대 한 호출을 수정 하려고 합니다.  
   
