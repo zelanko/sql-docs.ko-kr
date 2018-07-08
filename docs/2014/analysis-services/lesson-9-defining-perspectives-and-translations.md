@@ -1,5 +1,5 @@
 ---
-title: '9 단원: Defining Perspectives and Translations | Microsoft Docs'
+title: '단원 9: Defining Perspectives and Translations | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 8cfd54ff0c3b5e7c105ccc35b58cd18707b4a485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5b9b8889bca7713453e1ce1734ce0a7ea5d3615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159614"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>9단원: 큐브 뷰 및 번역 정의
   이 단원에서는 큐브 뷰 및 번역을 정의하는 방법을 배웁니다. 큐브 뷰를 정의하여 큐브의 복잡성을 줄이고 사용자들이 선택한 언어로 큐브 메타데이터를 볼 수 있도록 하는 번역을 정의할 수 있습니다.  

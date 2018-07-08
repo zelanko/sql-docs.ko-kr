@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154534"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 응용 프로그램 배포
   마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 응용 프로그램)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36079793"
 ####  <a name="Permissions"></a> Permissions  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 배포할 수 있습니다. 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정인 **sa** 도 DAC를 배포할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 배포하려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 배포하려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="UsingDeployDACWizard"></a> 사용 하는 데이터 계층 응용 프로그램 배포 마법사  
+##  <a name="UsingDeployDACWizard"></a> 사용 하 여 데이터 계층 응용 프로그램 배포 마법사  
  **마법사를 사용 하 여 DAC를 배포 하려면**  
   
 1.  **개체 탐색기**에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "36079793"
   
  **DAC 내용의 유효성을 검사하고 있습니다** - 유효성 검사의 현재 상태를 보고하는 진행률 표시줄입니다.  
   
- **\< 이전** -의 초기 상태로 돌아갑니다는 **패키지 선택** 페이지.  
+ **\< 이전** -의 초기 상태를 반환 합니다 **패키지 선택** 페이지입니다.  
   
  **다음 >** - **패키지 선택** 페이지의 최종 버전으로 진행합니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36079793"
   
  **정책 위반을 무시합니다.** - 정책 조건이 한 개 이상 위반되더라도 배포를 진행하려면 이 확인란을 사용합니다. 실패한 모든 조건이 DAC 작동에 영향을 주지 않는 것이 확실한 경우에만 이 옵션을 선택합니다.  
   
- **\< 이전** -에 반환 된 **패키지 선택** 페이지.  
+ **\< 이전** -반환 된 **패키지 선택** 페이지입니다.  
   
  **다음 >** - **구성 업데이트** 페이지로 진행합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36079793"
   
  **로그 파일 경로 및 이름:** - 로그 파일의 전체 경로와 파일 이름을 지정합니다. 입력란은 기본 경로와 파일 이름으로 채워집니다. 입력란의 문자열을 편집하여 기본값을 변경하거나 **찾아보기** 단추를 사용하여 로그 파일이 있는 폴더를 탐색할 수 있습니다.  
   
- **\< 이전** -에 반환 된 **DAC 패키지 선택** 페이지.  
+ **\< 이전** -반환 된 **DAC 패키지 선택** 페이지입니다.  
   
  **다음 >** - **요약** 페이지로 진행합니다.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36079793"
   
  **DAC를 배포하는 데 사용되는 설정은 다음과 같습니다.** - 표시된 정보를 검토하여 수행할 동작이 올바른지 확인합니다. 창에는 선택한 DAC 패키지와 배포하도록 선택한 DAC 인스턴스 이름이 표시됩니다. 창에는 DAC와 연결된 데이터베이스를 만들 때 사용되는 설정도 표시됩니다.  
   
- **\< 이전** -돌아갑니다는 **구성 업데이트** 페이지를 선택 항목을 변경 합니다.  
+ **\< 이전** -반환 하는 **구성 업데이트** 선택 항목을 변경 하는 페이지입니다.  
   
  **다음 >** - DAC를 배포하고 **DAC 배포** 페이지에 결과를 표시합니다.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "36079793"
   
 4.  `add_DacActionStarted` 및 `add_DacActionFinished`를 사용하여 DAC 배포 이벤트에 등록합니다.  
   
-5.  설정의 `DatabaseDeploymentProperties`합니다.  
+5.  설정 된 `DatabaseDeploymentProperties`합니다.  
   
 6.  `DacStore.Install` 메서드를 사용하여 DAC를 배포합니다.  
   

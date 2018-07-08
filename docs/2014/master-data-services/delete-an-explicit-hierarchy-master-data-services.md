@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, deleting
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08770818215b1055f2f5a015a696979bcea74f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2080fedb589f5155dd6885949b5980c04b7c288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155124"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>명시적 계층 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 명시적 계층이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36078825"
   
 5.  **선택한 엔터티 편집**을 클릭합니다.  
   
-6.  에 **엔터티 편집** 페이지는 **명시적 계층** 창에서 삭제 하려는 명시적 계층을 클릭 합니다.  
+6.  에 **엔터티 편집** 페이지의 **명시적 계층** 창 삭제 하려는 명시적 계층을 클릭 합니다.  
   
 7.  클릭 **선택한 계층 삭제**합니다.  
   

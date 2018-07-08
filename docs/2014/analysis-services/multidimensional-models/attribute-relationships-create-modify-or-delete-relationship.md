@@ -1,5 +1,5 @@
 ---
-title: 만들기, 수정 또는 Delete an Attribute | Microsoft Docs
+title: 만들기, 수정 또는 특성 관계를 삭제 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1153f8e204e8e07beabb4a6d2107d3735ee11e3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38765f63c39c86f239defe290b46960116604899
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149334"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>특성 관계 만들기, 수정 또는 삭제
   **에서 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 차원 특성 간의 특성 관계를 만들거나 수정 또는 삭제할 수 있습니다.  

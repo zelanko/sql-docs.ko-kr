@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Expression element
 ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b56f4d09e59644b63d11c4becbb999f0536479d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d7ba9bbfeddef0d4d7466141cabb914f4289034
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155325"
 ---
 # <a name="expression-element-assl"></a>Expression 요소(ASSL)
   부모 요소의 내용을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36080076"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한는 `CellPermission` 요소는 `Expression` 요소에서 나타내는 권한에 해당 하는 셀을 식별 하는 MDX 논리 식을 포함는 [액세스](access-element-assl.md) 의 요소는 `CellPermission` 요소입니다. `Expression` 요소의 `CellPermission` 요소 값이 빈 경우 `CellPermission` 요소는 무시됩니다.  
+ 에 대 한는 `CellPermission` 요소를 `Expression` 요소에서 나타내는 권한에 해당 하는 셀을 식별 하는 MDX 논리 식을 포함 합니다 [액세스](access-element-assl.md) 요소의 `CellPermission` 요소. `Expression` 요소의 `CellPermission` 요소 값이 빈 경우 `CellPermission` 요소는 무시됩니다.  
   
  `StandardAction` 요소의 경우 `Expression` 요소는 동작 내용을 나타내는 MDX 식을 포함합니다. `Expression` 요소의 `StandardAction` 요소 값이 빈 경우 `StandardAction` 요소는 무시됩니다.  
   

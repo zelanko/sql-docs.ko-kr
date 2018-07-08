@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150524"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 SSL 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  

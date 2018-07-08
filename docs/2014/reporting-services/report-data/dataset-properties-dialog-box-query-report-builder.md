@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10024"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e3186ee16746b956b9a615102eeac848d68d56bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 547a93b4d82a2d799d9d13835d1ce910ba1114c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160104"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>데이터 집합 속성 대화 상자, 쿼리(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **쿼리** 를 선택하여 보고서 서버에서 공유 데이터 집합을 선택하거나 포함된 데이터 집합을 만들 수 있습니다. 포함된 데이터 집합의 경우 데이터 원본을 선택하고 쿼리를 작성해야 합니다.  

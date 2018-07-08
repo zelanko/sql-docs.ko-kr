@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 267bbd228565337594039162d7f01ec90a38d303
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156724"
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -68,11 +68,11 @@ ms.locfileid: "36080669"
  이러한 속성은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 설정할 수 있습니다.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>디자이너에서 스크립트 태스크 구성  
- 다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 `ScriptTaskLogEntry` 이벤트에 대해 설명합니다. `ScriptTaskLogEntry` 이벤트가 로깅 대상으로 선택 되어는 **세부 정보** 탭은 **SSIS 로그 구성** 대화 상자. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
+ 다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 `ScriptTaskLogEntry` 이벤트에 대해 설명합니다. `ScriptTaskLogEntry` 이벤트가 로그온 하기 위해 선택 된 합니다 **세부 정보** 탭의 **SSIS 로그 구성** 대화 상자. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 각 호출에 대 한 로그 항목을 기록 하는 작업은 `Log` 의 메서드는 `Dts` 개체입니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
+|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 작업을 호출할 때마다 로그 항목을 기록 합니다 `Log` 메서드는 `Dts` 개체입니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   

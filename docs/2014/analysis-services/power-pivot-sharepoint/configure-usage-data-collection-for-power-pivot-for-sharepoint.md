@@ -1,5 +1,5 @@
 ---
-title: 에 대 한 사용 현황 데이터 수집 구성 (SharePoint 용 PowerPivot | Microsoft Docs
+title: 사용 현황 데이터 수집 구성 (PowerPivot for SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149764"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>사용 현황 데이터 수집 구성(SharePoint용 PowerPivot)
   사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
- PowerPivot 관리 대시보드의 사용 데이터에 대 한 자세한 내용은 참조 하십시오. [PowerPivot 관리 대시보드 및 사용 현황 데이터](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+ PowerPivot 관리 대시보드의 사용 데이터에 대 한 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
   
  **항목 내용**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36080730"
   
  [쿼리 통계가 사용 데이터 컬렉션 시스템에 보고되는 빈도 지정](#ttr)  
   
- [구성 설정에 액세스 하려면 PowerPivot 서비스 응용 프로그램 페이지 열기](#openconfig)  
+ [구성 설정에 액세스 하려면 PowerPivot 서비스 응용 프로그램 페이지를 열려면](#openconfig)  
   
  [PowerPivot 사용 현황 데이터 수집에 대 한 기본 구성](#defaultconfig)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36080730"
     |**PowerPivot 연결**|PowerPivot 연결 이벤트는 사용자를 위해 설정된 PowerPivot 서버 연결을 모니터링하는 데 사용됩니다.|  
     |**PowerPivot 데이터 로드 사용**|PowerPivot 데이터 로드 사용은 PowerPivot 데이터를 서버 메모리로 로드하는 요청을 모니터링하는 데 사용됩니다. 콘텐츠 데이터베이스나 캐시에서 로드되는 PowerPivot 데이터 파일에 대해 로드 이벤트가 생성됩니다.|  
     |**PowerPivot 데이터 언로드 사용**|PowerPivot 데이터 언로드 사용은 장기간 사용하지 않는 PowerPivot 데이터 원본을 언로드하기 위한 요청을 모니터링하는 데 사용됩니다. PowerPivot 데이터 원본을 디스크에 캐시하면 언로드 이벤트로 보고됩니다.|  
-    |**PowerPivot 쿼리 사용**|PowerPivot 쿼리 사용은 로드 된 데이터에 대 한 쿼리 처리 시간을 모니터링 하는 데 사용 되는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스.|  
+    |**PowerPivot 쿼리 사용**|PowerPivot 쿼리 사용은에 로드 된 데이터에 대 한 쿼리 처리 시간을 모니터링 하는 데 사용 되는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스.|  
   
     > [!NOTE]  
     >  서버 상태 및 데이터 새로 고침 작업에서도 사용 데이터를 생성하지만 이러한 프로세스와 연관된 이벤트가 없습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "36080730"
   
 6.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
-7.  선택적으로 모든 메시지를 기록할 것인지 또는 오류만 기록할 것인지를 지정할 수 있습니다. 이벤트 메시지를 제한 하는 방법에 대 한 자세한 내용은 참조 하십시오. [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)합니다.  
+7.  선택적으로 모든 메시지를 기록할 것인지 또는 오류만 기록할 것인지를 지정할 수 있습니다. 이벤트 메시지를 제한 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;SharePoint 용 PowerPivot&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)합니다.  
   
 ##  <a name="configdb"></a> 로그 파일 위치 설정  
  PowerPivot 사용 현황 데이터는 처음에 로컬 서버의 사용 현황 로그 파일에 저장된 다음 정기적으로 PowerPivot 서비스 응용 프로그램 데이터베이스로 이동됩니다. 로그 파일 위치는 중앙 관리에 설정됩니다. 기본 위치는  
@@ -108,7 +108,7 @@ ms.locfileid: "36080730"
   
 6.  **지금 실행**을 클릭합니다.  
   
-7.  보고서에서 새로 고침 데이터를 봅니다. 자세한 내용은 참조 [PowerPivot 관리 대시보드 및 사용 현황 데이터](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+7.  보고서에서 새로 고침 데이터를 봅니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
   
 ##  <a name="confighist"></a> 사용 데이터 기록 저장 기간 제한  
  사용 데이터 기록은 이벤트(연결, 로드, 언로드 및 요청 시 쿼리 처리) 및 데이터 새로 고침(예약된 데이터 처리)에 대해 저장됩니다. SharePoint 사용 데이터 컬렉션 시스템을 통해 사용 데이터가 수집되지만 보고 데이터는 장기적 저장을 위해 PowerPivot 응용 프로그램 데이터베이스 및 보고 데이터베이스로 이동됩니다. 사용 데이터 기록 설정은 사용 데이터가 PowerPivot 응용 프로그램 데이터베이스에 보존되는 기간을 제어합니다. 같은 PowerPivot 서비스 응용 프로그램 데이터베이스에 저장된 모든 형식의 사용 데이터에 같은 한계가 동일하게 적용됩니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "36080730"
   
 3.  **확인**을 클릭합니다.  
   
- 사용 현황 데이터 수집 되 고 저장 되는 방법에 대 한 자세한 내용은 참조 [PowerPivot 사용 현황 데이터 수집](power-pivot-usage-data-collection.md)합니다.  
+ 사용 현황 데이터 수집 및 저장 하는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot 사용 현황 데이터 수집](power-pivot-usage-data-collection.md)합니다.  
   
 ##  <a name="qrh"></a> 보고에 대한 빠른, 보통 및 느린 쿼리 응답 범주 정의  
  쿼리 처리 성능은 완료하는 데 걸리는 시간을 기준으로 요청-응답 주기를 정의하는 미리 정의된 범주에 대해 측정됩니다. 미리 정의된 범주에는 간단한, 빠른, 예상, 장기 실행 및 초과가 포함됩니다. PowerPivot 서버에 대한 모든 요청은 완료 시간을 기준으로 한 범주 중 하나에 해당됩니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "36080730"
   
 3.  **확인**을 클릭합니다.  
   
-##  <a name="openconfig"></a> 구성 설정에 액세스 하려면 PowerPivot 서비스 응용 프로그램 페이지 열기  
+##  <a name="openconfig"></a> 구성 설정에 액세스 하려면 PowerPivot 서비스 응용 프로그램 페이지를 열려면  
  서비스 응용 프로그램 설정을 수정하려면 팜 또는 서비스 관리자여야 합니다. 팜에서 여러 PowerPivot 서비스 응용 프로그램을 정의한 경우 각 응용 프로그램을 개별적으로 수정해야 합니다.  
   
 1.  SharePoint 중앙 관리의 **응용 프로그램 관리**에서 **서비스 응용 프로그램 관리**를 클릭합니다.  

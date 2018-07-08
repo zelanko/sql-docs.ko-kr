@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165004"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
   데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
@@ -106,9 +106,9 @@ ms.locfileid: "36079818"
   
 -   **변수** 창에서 다음 두 개의 패키지 변수를 추가하고 구성합니다.  
   
-    -   이름을 입력 `ProfileConnectionName`, 변수 중 하나에 대 한이 변수를의 유형을 설정 하 고 **문자열**합니다.  
+    -   이름을 입력 `ProfileConnectionName`, 변수 중 하나에 대 한이 변수의 유형을 설정 하 고 **문자열**합니다.  
   
-    -   이름을 입력 `AddressLine2NullRatio`, 다른 변수 및 설정에 대 한이 변수를 유형의 **Double**합니다.  
+    -   이름을 입력 `AddressLine2NullRatio`에 대 한 다른 변수를이 변수의 유형을 **Double**합니다.  
   
 ### <a name="configure-the-data-profiling-task"></a>데이터 프로파일링 태스크 구성  
  데이터 프로파일링 태스크는 다음과 같이 구성해야 합니다.  
@@ -148,7 +148,7 @@ ms.locfileid: "36079818"
   
     1.  에 대 한 `ReadOnlyVariables`선택, `ProfileConnectionName`합니다.  
   
-    2.  에 대 한 **ReadWriteVariables**선택, `AddressLine2NullRatio`합니다.  
+    2.  에 대 한 **ReadWriteVariables**, 선택 `AddressLine2NullRatio`합니다.  
   
 5.  **스크립트 편집** 을 선택하여 스크립트 개발 환경을 엽니다.  
   
@@ -270,11 +270,11 @@ ms.locfileid: "36079818"
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>대체 코드 - 변수에서 프로필 출력 읽기  
  앞의 절차는 파일에서 데이터 프로파일링 태스크의 출력을 로드하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
   
--   호출 된 `LoadXml` 의 메서드는 `XmlDocument` 클래스 대신는 `Load` 메서드.  
+-   호출을 `LoadXml` 메서드를 `XmlDocument` 클래스 대신는 `Load` 메서드.  
   
--   스크립트 태스크 편집기에서 작업의 프로필 출력이 포함 된 패키지 변수의 이름을 추가 `ReadOnlyVariables` 목록입니다.  
+-   스크립트 태스크 편집기에서 추가 작업의 프로필 출력이 포함 된 패키지 변수의 이름을 `ReadOnlyVariables` 목록입니다.  
   
--   변수의 문자열 값을 전달는 `LoadXML` 메서드를 다음 코드 예제와 같이 합니다. 이 예에서는 프로필 출력이 포함된 패키지 변수의 이름으로 "ProfileOutput"을 사용합니다.  
+-   변수의 문자열 값을 전달 합니다 `LoadXML` 메서드를 다음 코드 예제에 표시 된 대로 합니다. 이 예에서는 프로필 출력이 포함된 패키지 변수의 이름으로 "ProfileOutput"을 사용합니다.  
   
     ```vb  
     Dim outputString As String  

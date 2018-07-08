@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159654"
 ---
 # <a name="data-mining-query-interfaces"></a>데이터 마이닝 쿼리 인터페이스
   데이터 마이닝 쿼리는 DMX(Data Mining Extensions) 언어를 기반으로 합니다. 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 예측 및 모델링 태스크에 DMX를 사용합니다. 또한 모델을 처리할 때 생성된 패턴과 통계를 검색할 수 있습니다.  
@@ -62,10 +62,10 @@ ms.locfileid: "36079170"
 ###  <a name="bkmk_Builder"></a> 예측 쿼리 작성기  
  예측 쿼리 작성기는 데이터 마이닝 디자이너의 **마이닝 모델 예측** 탭에 포함되어 있습니다. 이 탭은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 사용할 수 있습니다.  
   
- 쿼리 작성기를 사용할 때는 그래픽 도구를 사용하여 마이닝 모델을 선택하고, 새 사례 데이터를 추가하고, 예측 함수를 추가할 수 있습니다. 예측 쿼리 작성기에는 쿼리를 수동으로 수정 하는 데 사용할 수 있는 텍스트 편집기 및 단순 **결과** 창 쿼리의 결과 볼 수 있습니다.  
+ 쿼리 작성기를 사용할 때는 그래픽 도구를 사용하여 마이닝 모델을 선택하고, 새 사례 데이터를 추가하고, 예측 함수를 추가할 수 있습니다. 예측 쿼리 작성기는 쿼리를 수동으로 수정 하는 데 사용할 수 있는 텍스트 편집기 및 간단한 포함 **결과** 창 쿼리 결과 볼 수 있습니다.  
   
 ###  <a name="bkmk_QueryEditor"></a> 쿼리 편집기  
- 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 작성 하 고 DMX 쿼리를 실행 하는 데 사용할 수 있는 도구를 제공 합니다. SQL Server Analysis Services의 인스턴스에 연결한 다음 데이터베이스, 마이닝 구조 열 및 마이닝 모델을 선택할 수 있습니다. **메타데이터 탐색기** 에는 찾아볼 수 있는 예측 함수의 목록이 포함되어 있습니다.  
+ 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 빌드 및 DMX 쿼리를 실행 하는 데 사용할 수 있는 도구를 제공 합니다. SQL Server Analysis Services의 인스턴스에 연결한 다음 데이터베이스, 마이닝 구조 열 및 마이닝 모델을 선택할 수 있습니다. **메타데이터 탐색기** 에는 찾아볼 수 있는 예측 함수의 목록이 포함되어 있습니다.  
   
 ###  <a name="bkmk_Templates"></a> DMX 템플릿  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 DMX 쿼리를 작성하는 데 사용할 수 있는 대화형 DMX 쿼리 템플릿을 제공합니다. 템플릿 목록이 표시되지 않는 경우 도구 모음에서 **보기** 를 클릭하고 **템플릿 탐색기**를 선택합니다. DMX, MDX 및 XMLA에 대한 템플릿이 포함된 모든 Analysis Services 템플릿을 보려면 큐브 아이콘을 클릭합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "36079170"
  [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
  [데이터 마이닝 솔루션](data-mining-solutions.md)   
  [DMX Select 문 이해](/sql/dmx/understanding-the-dmx-select-statement)   
- [구조 및 DMX 예측 쿼리 사용](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [구조 및 사용법 DMX 예측 쿼리](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
  [예측 쿼리 작성기를 사용 하 여 예측 쿼리 만들기](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [SQL Server Management Studio에서 DMX 쿼리 만들기](create-a-dmx-query-in-sql-server-management-studio.md)  
   

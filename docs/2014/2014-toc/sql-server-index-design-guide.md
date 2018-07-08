@@ -5,26 +5,25 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155424"
 ---
 # SQL Server 인덱스 디자인 가이드
   데이터베이스 응용 프로그램 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 응용 프로그램 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 SQL Server 인덱스 디자인 가이드에서는 응용 프로그램 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
   
-**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 통해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 별도로 언급 하지 않는 한 합니다.  
+**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 를 통해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명이 없는 한 합니다.  
   
  이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](http://msdn.microsoft.com/library/ms175049.aspx)을 참조하십시오.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36079692"
 ### 인덱스 디자인 태스크  
  권장되는 인덱스 디자인 전략은 다음과 같은 태스크로 이루어집니다.  
   
-1.  데이터베이스의 특징을 이해합니다. 예를 들어 데이터베이스가 데이터 수정이 잦은 OLTP(온라인 트랜잭션 처리) 데이터베이스인지, DSS(의사 결정 지원 시스템)인지, 주로 읽기 전용 데이터를 포함하고 매우 많은 데이터 집합을 빠르게 처리해야 하는 OLAP(데이터 웨어하우징) 데이터베이스인지를 파악해야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 *xVelocity memory optimized columnstore* 인덱스는 일반 데이터 웨어하우징 데이터 집합에 특히 적합합니다. Columnstore 인덱스는 필터링, 집계, 그룹화, 스타 조인 쿼리 등 일반 데이터 웨어하우징 쿼리에 대한 성능을 개선하여 사용자의 데이터 웨어하우징 환경을 바꿀 수 있습니다. 자세한 내용은 참조 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)합니다.  
+1.  데이터베이스의 특징을 이해합니다. 예를 들어 데이터베이스가 데이터 수정이 잦은 OLTP(온라인 트랜잭션 처리) 데이터베이스인지, DSS(의사 결정 지원 시스템)인지, 주로 읽기 전용 데이터를 포함하고 매우 많은 데이터 집합을 빠르게 처리해야 하는 OLAP(데이터 웨어하우징) 데이터베이스인지를 파악해야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 *xVelocity memory optimized columnstore* 인덱스는 일반 데이터 웨어하우징 데이터 집합에 특히 적합합니다. Columnstore 인덱스는 필터링, 집계, 그룹화, 스타 조인 쿼리 등 일반 데이터 웨어하우징 쿼리에 대한 성능을 개선하여 사용자의 데이터 웨어하우징 환경을 바꿀 수 있습니다. 자세한 내용은 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)합니다.  
   
 2.  가장 자주 사용하는 쿼리의 특성을 이해합니다. 예를 들어 두 개 이상의 테이블을 조인하는 쿼리를 자주 사용한다는 것을 알면 가장 적절한 인덱스 유형을 결정하는 데 도움이 됩니다.  
   
@@ -184,13 +183,13 @@ ON Purchasing.PurchaseOrderDetail
   
  쿼리가 다시 실행된 후 다음 실행 계획은 SORT 연산자가 제거되어 새로 생성된 비클러스터형 인덱스가 사용됨을 보여 줍니다.  
   
- ![실행 계획 SORT 연산자는 사용 되지 보여 주는](media/insertsort2.gif "보여 주는 실행 계획 SORT 연산자가 사용 되지 않습니다")  
+ ![실행 계획 표시 정렬 연산자를 사용 하지](media/insertsort2.gif "보여 주는 실행 계획을 정렬 연산자를 사용 하지 않습니다")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 어느 방향으로든 동일하게 효율적으로 이동할 수 있습니다. ORDER BY 절에 있는 열의 정렬 방향이 반대가 되는 쿼리에도 `(RejectedQty DESC, ProductID ASC)` 로 정의된 인덱스를 사용할 수 있습니다. 예를 들어 ORDER BY 절 `ORDER BY RejectedQty ASC, ProductID DESC` 를 포함하는 쿼리에 인덱스를 사용할 수 있습니다.  
   
  정렬 순서는 키 열에 대해서만 지정할 수 있습니다. [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 카탈로그 뷰와 INDEXKEY_PROPERTY 함수는 인덱스 열이 오름차순으로 저장되는지 또는 내림차순으로 저장되는지 보고합니다.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 가이드에서](#Top)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ##  <a name="Clustered"></a> 클러스터형 인덱스 디자인 지침  
  클러스터형 인덱스는 그 키 값에 기반하여 테이블에 데이터 행을 정렬하고 저장합니다. 데이터 행은 자체적으로 하나의 순서로만 정렬될 수 있으므로 테이블당 클러스터형 인덱스가 하나만 있을 수 있습니다. 일부 예외를 제외하고는 각 테이블에서 클러스터형 인덱스가 정의된 열은 다음과 같은 특성을 가져야 합니다.  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      다양한 키는 여러 열 또는 크기가 큰 여러 열이 합쳐진 것입니다. 클러스터형 인덱스로 구한 키 값은 모든 비클러스터형 인덱스에 의해 조회 키로 사용됩니다. 비클러스터형 인덱스 항목에는 클러스터링 키와 함께 해당 비클러스터형 인덱스에 대해 정의된 키 열도 포함되기 때문에 동일한 테이블에 정의된 비클러스터형 인덱스가 훨씬 큽니다.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 가이드에서](#Top)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ##  <a name="Nonclustered"></a> 비클러스터형 인덱스 디자인 지침  
  비클러스터형 인덱스에는 테이블 데이터의 저장 위치를 가리키는 행 로케이터와 인덱스 키 값이 있습니다. 테이블 또는 인덱싱된 뷰에 비클러스터형 인덱스를 여러 개 만들 수 있습니다. 일반적으로 클러스터형 인덱스를 적용할 수 없고 자주 사용되는 쿼리의 성능을 개선하도록 비클러스터형 인덱스를 디자인해야 합니다.  
@@ -393,7 +392,7 @@ INCLUDE (FileName);
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   길이 늘립니다 `varchar`, `nvarchar`, 또는 `varbinary` 열입니다.  
+    -   길이 늘립니다 `varchar`하십시오 `nvarchar`, 또는 `varbinary` 열입니다.  
   
         > [!NOTE]  
         >  이러한 열 수정 제한도 인덱스 키 열에 적용됩니다.  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  데이터를 수정해야 할지, 디스크 공간을 추가할지 결정할 때 성능에 미치는 영향과 쿼리 성능 향상 중 어느 것이 더 중요한지를 결정해야 합니다.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 가이드에서](#Top)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ##  <a name="Unique"></a> 고유 인덱스 디자인 지침  
  고유 인덱스는 인덱스 키에 중복 값을 포함할 수 없으므로 테이블의 모든 행이 고유합니다. 고유 인덱스를 지정하는 것은 데이터 자체가 고유하다는 특성이 있을 때만 의미가 있습니다. 예를 들어 기본 키가 `NationalIDNumber` 인 경우 `HumanResources.Employee` 테이블의 `EmployeeID`열 값이 고유하도록 하려면 `NationalIDNumber` 열에 대해 UNIQUE 제약 조건을 만듭니다. 사용자가 이 열에서 두 명 이상의 직원에 대해 동일한 값을 입력하면 오류 메시지가 표시되고 중복된 값이 입력되지 않습니다.  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   고유 비클러스터형 인덱스에는 키가 아닌 포괄 열이 포함될 수 있습니다. 자세한 내용은 [포괄 열이 있는 인덱스](#Included_Columns)를 참조하십시오.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 가이드에서](#Top)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ##  <a name="Filtered"></a> 필터링된 인덱스 디자인 지침  
  필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 저장소 비용을 줄일 수 있습니다.  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  데이터 변환을 비교 연산자의 왼쪽에서 오른쪽으로 이동하면 변환 방법이 변경될 수 있습니다. 위의 예에서 CONVERT 연산자가 오른쪽에 추가될 때 정수 비교에서 `varbinary` 비교로 비교가 변경되었습니다.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 가이드에서](#Top)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ##  <a name="Additional_Reading"></a> 더 보기  
  [SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

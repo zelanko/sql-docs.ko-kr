@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reusing packages
 - templates [Integration Services]
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9bf2bfd8cadad08243be765977b68115bf2ae6f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfd90b00e413f5a25de9770bf41b094bbdb9d808
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158504"
 ---
 # <a name="save-a-package-as-a-package-template"></a>패키지 템플릿으로 패키지 저장
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새 Integration Services 패키지를 만들 때 사용자 지정 패키지를 템플릿으로 지정하고 사용하는 방법에 대해 설명합니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 새 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 때 빈 패키지를 만드는 패키지 템플릿을 사용합니다. 이러한 기본 템플릿은 바꿀 수 없지만 새 템플릿을 추가할 수는 있습니다.  

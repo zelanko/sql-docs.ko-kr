@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153284"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>모델 테스트 데이터에 필터 적용
   모델을 테스트하는 데 사용할 외부 데이터 원본을 지정할 경우 필요에 따라 입력 데이터를 제한하기 위한 필터를 적용할 수 있습니다. 예를 들어 특별히 특정 수입 범위 내의 고객에 대해 예측하기 위해 모델을 테스트하려고 할 수 있습니다.  
   
- 예를 들어 AdventureWorks 타겟된 메일링 시나리오에서 테스트 데이터를 포함 하는 테이블에 있는 ProspectiveBuyer에 다음과 같은 필터 식을 만들고 하거나 수입 범위 별로 테스트 사례를 제한할 수 있습니다.  
+ 예를 들어, AdventureWorks 타겟된 메일링 시나리오에서 테스트 데이터가 포함 된 테이블 형식인 ProspectiveBuyer에 다음과 같은 필터 식을 만드는 및 테스트 사례를 수입 범위 별로 제한할 수 있습니다.  
   
  `[YearlyIncome] = '50000'`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36080738"
   
 ## <a name="see-also"></a>관련 항목  
  [모델 테스트 데이터 선택 및 매핑](choose-and-map-model-testing-data.md)   
- [사용 하 여 중첩 테이블 데이터를 입력으로 정확도 차트에 대 한](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [정확도 차트에 대 한 입력으로 테이블 데이터를 중첩 사용](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [정확도 차트 유형 선택 및 차트 옵션 설정](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

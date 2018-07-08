@@ -18,24 +18,24 @@ helpviewer_keywords:
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecc1bfca1840b64566243c1ec675289db1a7686f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159604"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>데이터베이스 백업, 복원 및 동기화(XMLA)
   XML for Analysis에는 데이터베이스를 백업, 복원 및 동기화하는 세 개의 명령이 있습니다.  
   
--   [백업](../xmla/xml-elements-commands/backup-element-xmla.md) 명령은 백업는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용 하 여 데이터베이스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일 (.abf)로 섹션에 설명 된 대로 [데이터베이스 백업](#backing_up_databases)합니다.  
+-   합니다 [백업](../xmla/xml-elements-commands/backup-element-xmla.md) 명령은 백업를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 데이터베이스를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일 (.abf)로 섹션에 설명 된 대로 [데이터베이스 백업](#backing_up_databases)합니다.  
   
--   [복원](../xmla/xml-elements-commands/restore-element-xmla.md) 복원 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 섹션에 설명 된 대로.abf 파일에서 데이터베이스 [데이터베이스 복원](#restoring_databases)합니다.  
+-   합니다 [복원](../xmla/xml-elements-commands/restore-element-xmla.md) 명령를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 섹션에 설명 된 대로.abf 파일에서 데이터베이스 [Restoring](#restoring_databases)합니다.  
   
--   [동기화](../xmla/xml-elements-commands/synchronize-element-xmla.md) 명령 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 섹션에 설명 된 대로 데이터와 다른 데이터베이스의 메타 데이터 데이터베이스 [데이터베이스 동기화](#synchronizing_databases)합니다.  
+-   합니다 [동기화](../xmla/xml-elements-commands/synchronize-element-xmla.md) 명령 동기화 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 섹션에 설명 된 대로 데이터 및 다른 데이터베이스의 메타 데이터를 사용 하 여 데이터베이스 [동기화 데이터베이스](#synchronizing_databases)합니다.  
   
 ##  <a name="backing_up_databases"></a> 데이터베이스 백업  
  앞에서 설명한 대로 `Backup` 명령에서는 지정된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 백업 파일에 백업합니다. `Backup` 명령에는 백업할 데이터베이스, 사용할 백업 파일, 보안 정의 백업 방법 및 백업할 원격 파티션을 지정할 수 있는 다양한 속성이 있습니다.  
@@ -44,23 +44,23 @@ ms.locfileid: "36079864"
 >  Analysis Services 서비스 계정에는 각 파일에 대해 지정한 백업 위치에 쓸 수 있는 권한이 있어야 합니다. 또한 사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 관리자 역할이나 백업할 데이터베이스에 대한 모든 권한(관리자 권한)이 있는 데이터베이스 역할의 멤버를 가지고 있어야 합니다.  
   
 ### <a name="specifying-the-database-and-backup-file"></a>데이터베이스 및 백업 파일 지정  
- 설정 하면 데이터베이스를 백업할 수를 지정 하려면는 [개체](../xmla/xml-elements-properties/object-element-xmla.md) 의 속성은 `Backup` 명령입니다. `Object` 속성에는 데이터베이스에 대한 개체 식별자가 있어야 하며, 그렇지 않으면 오류가 발생합니다.  
+ 설정한 백업할 데이터베이스를 지정 하는 [개체](../xmla/xml-elements-properties/object-element-xmla.md) 의 속성은 `Backup` 명령입니다. `Object` 속성에는 데이터베이스에 대한 개체 식별자가 있어야 하며, 그렇지 않으면 오류가 발생합니다.  
   
- 설정 하면 생성 되 고 백업 프로세스에서 사용 되는 파일을 지정 하려면는 [파일](../xmla/xml-elements-properties/file-element-xmla.md) 의 속성은 `Backup` 명령입니다. `File` 속성은 만들 백업 파일에 대한 UNC 경로 및 파일 이름으로 설정되어야 합니다.  
+ 설정한 만들어지고 백업 프로세스에서 사용 하는 파일을 지정 하려면 합니다 [파일](../xmla/xml-elements-properties/file-element-xmla.md) 의 속성을 `Backup` 명령. `File` 속성은 만들 백업 파일에 대한 UNC 경로 및 파일 이름으로 설정되어야 합니다.  
   
  백업에 사용할 파일을 지정하는 것 외에도 지정된 백업 파일에 대해 다음과 같은 옵션을 설정할 수 있습니다.  
   
--   설정 하는 경우는 [AllowOverwrite](../xmla/xml-elements-properties/allowoverwrite-element-xmla.md) 속성을 true로는 `Backup` 명령은 지정 된 파일이 이미 있는 경우 백업 파일을 덮어씁니다. `AllowOverwrite` 속성을 false로 설정한 경우 지정된 백업 파일이 이미 있으면 오류가 발생합니다.  
+-   설정한 경우에 [AllowOverwrite](../xmla/xml-elements-properties/allowoverwrite-element-xmla.md) 속성을 true로는 `Backup` 명령은 지정 된 파일이 이미 있는 경우 백업 파일을 덮어씁니다. `AllowOverwrite` 속성을 false로 설정한 경우 지정된 백업 파일이 이미 있으면 오류가 발생합니다.  
   
--   설정 하는 경우는 [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md) 속성을 true로 백업 파일의 파일을 만든 후 압축 됩니다.  
+-   설정한 경우에 [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md) 속성을 true로 백업 파일의 파일을 만든 후 압축 됩니다.  
   
--   설정 하는 경우는 [암호](../xmla/xml-elements-properties/password-element-xmla.md) 속성을 비어 있지 않은 값을 백업 파일 지정된 된 암호를 사용 하 여 암호화 됩니다.  
+-   설정한 경우에 [암호](../xmla/xml-elements-properties/password-element-xmla.md) 속성 백업 파일을 모든 비어 있지 않은 값을 지정 된 암호를 사용 하 여 암호화 됩니다.  
   
     > [!IMPORTANT]  
     >  `ApplyCompression` 및 `Password` 속성을 지정하지 않으면 연결 문자열에 포함된 사용자 이름 및 암호가 백업 파일에 일반 텍스트로 저장됩니다. 일반 텍스트로 저장된 데이터는 검색될 수 있으므로 보안을 강화하려면 `ApplyCompression` 및 `Password` 설정을 사용하여 백업 파일을 압축하고 암호화합니다.  
   
 ### <a name="backing-up-security-settings"></a>보안 설정 백업  
- [보안](../xmla/xml-elements-properties/security-element-xmla.md) 속성 결정 여부는 `Backup` 명령에 정의 된 역할 및 권한과 같은 보안 정의를 백업는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다. 또한 `Security` 속성에서는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 백업 파일에 포함할지 여부도 결정합니다.  
+ [보안](../xmla/xml-elements-properties/security-element-xmla.md) 속성에 따라 결정 하는지 여부를 합니다 `Backup` 명령에 정의 된 역할 및 권한과 같은 보안 정의 백업는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스. 또한 `Security` 속성에서는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 백업 파일에 포함할지 여부도 결정합니다.  
   
  `Security` 속성의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36079864"
 |*IgnoreSecurity*|백업 파일에서 보안 정의가 제외됩니다.|  
   
 ### <a name="backing-up-remote-partitions"></a>원격 파티션 백업  
- 원격 파티션을 백업 하려면는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설정 데이터베이스는 [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md) 속성은 `Backup` true로 명령을 합니다. 이렇게 설정하면 `Backup` 명령에서 데이터베이스의 원격 파티션을 저장하는 데 사용되는 각 원격 데이터 원본에 대해 원격 백업 파일을 만듭니다.  
+ 원격 파티션을 백업할를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설정한 데이터베이스를 [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md) 의 속성을 `Backup` 로 명령을 합니다. 이렇게 설정하면 `Backup` 명령에서 데이터베이스의 원격 파티션을 저장하는 데 사용되는 각 원격 데이터 원본에 대해 원격 백업 파일을 만듭니다.  
   
- 백업할 각 원격 데이터 원본에 대 한 포함 하 여 해당 백업 파일을 지정할 수 있습니다는 [위치](../xmla/xml-elements-properties/location-element-xmla.md) 요소에는 [위치](../xmla/xml-elements-properties/locations-element-xmla.md) 의 속성은 `Backup` 명령입니다. `Location` 요소에는 해당 `File` 원격 백업 파일의 UNC 경로 및 파일 이름으로 설정 하는 속성 및 해당 [DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md) 데이터베이스에 정의 된 원격 데이터 원본의 식별자로 설정 하는 속성이 있습니다.  
+ 백업할 각 원격 데이터 원본에 대해 해당 백업 파일을 포함 하 여 지정할 수 있습니다는 [위치](../xmla/xml-elements-properties/location-element-xmla.md) 요소에는 [위치](../xmla/xml-elements-properties/locations-element-xmla.md) 속성을 `Backup` 명령. 합니다 `Location` 요소에는 해당 `File` 원격 백업 파일의 UNC 경로 및 파일 이름으로 설정 하는 속성 및 해당 [DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md) 데이터베이스에 정의 된 원격 데이터 원본의 식별자로 설정 하는 속성입니다.  
   
 ##  <a name="restoring_databases"></a> 데이터베이스 복원  
  `Restore` 명령은 백업 파일에서 지정된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원합니다. `Restore` 명령에는 복원할 데이터베이스, 사용할 백업 파일, 보안 정의 복원 방법, 저장할 원격 파티션 및 재배치 ROLAP(관계형 OLAP) 개체를 지정할 수 있는 다양한 속성이 있습니다.  
@@ -101,13 +101,13 @@ ms.locfileid: "36079864"
 |*IgnoreSecurity*|데이터베이스에서 보안 정의가 제외됩니다.|  
   
 ### <a name="restoring-remote-partitions"></a>원격 파티션 복원  
- `Backup` 요소를 `Location` 명령의 `Locations` 속성에 포함하여 이전 `Restore` 명령 도중 만들어진 각 원격 백업 파일에 대해 연결된 해당 원격 파티션을 복원할 수 있습니다. [DataSourceType](../xmla/xml-elements-properties/type-element-xmla.md) 각 속성이 `Location` 요소를 제외 하거나로 명시적으로 설정 해야 *원격*합니다.  
+ `Backup` 요소를 `Location` 명령의 `Locations` 속성에 포함하여 이전 `Restore` 명령 도중 만들어진 각 원격 백업 파일에 대해 연결된 해당 원격 파티션을 복원할 수 있습니다. 합니다 [DataSourceType](../xmla/xml-elements-properties/type-element-xmla.md) 각각에 대 한 속성 `Location` 요소를 제외 되거나 명시적으로 설정 해야 합니다 *원격*합니다.  
   
  지정된 각 `Location` 요소에 대해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 `DataSourceID` 속성에 지정된 원격 데이터 원본을 연결하여 `File` 속성에 지정된 원격 백업 파일에 정의된 파티션을 복원합니다. 각 `DataSourceID` 요소에서는 `File` 및 `Location` 속성 외에도 다음과 같은 속성을 사용하여 원격 파티션을 복원할 수 있습니다.  
   
 -   `DataSourceID`에 지정된 원격 데이터 원본에 대한 연결 문자열을 재정의하기 위해 `ConnectionString` 요소의 `Location` 속성을 다른 연결 문자열로 설정할 수 있습니다. 그런 다음 `Restore` 명령에서는 `ConnectionString` 속성에 포함된 연결 문자열을 사용합니다. `ConnectionString`이 지정되지 않은 경우 `Restore` 명령에서는 지정된 원격 데이터 원본에 대한 백업 파일에 저장된 연결 문자열을 사용합니다. `ConnectionString` 설정을 사용하여 원격 파티션을 다른 원격 인스턴스로 이동할 수 있습니다. 하지만 `ConnectionString` 설정을 사용하여 복원된 데이터베이스가 들어 있는 동일한 인스턴스에 원격 파티션을 복원할 수는 없습니다. 다시 말해서 `ConnectionString` 속성을 사용하여 로컬 파티션에 원격 파티션을 만들 수 없습니다.  
   
--   원격 데이터 원본의 원격 파티션을 저장 하는 데 사용 각 원래 폴더에 대해 지정할 수 있습니다는 [폴더](../xmla/xml-elements-properties/folder-element-xmla.md) 요소를 원래 폴더에 저장 된 모든 원격 파티션을 복원할 새 폴더를 나타냅니다. `Folder` 요소를 지정하지 않은 경우 `Restore` 명령에서는 원격 백업 파일에 포함된 원격 파티션에 대해 지정된 원래 폴더를 사용합니다.  
+-   원격 데이터 원본의 원격 파티션을 저장 하는 데 각 원래 폴더를 지정할 수 있습니다는 [폴더](../xmla/xml-elements-properties/folder-element-xmla.md) 요소 원래 폴더에 저장 된 모든 원격 파티션을 복원할 새 폴더를 나타냅니다. `Folder` 요소를 지정하지 않은 경우 `Restore` 명령에서는 원격 백업 파일에 포함된 원격 파티션에 대해 지정된 원래 폴더를 사용합니다.  
   
 ### <a name="relocating-rolap-objects"></a>ROLAP 개체 재배치  
  ROLAP 저장소를 사용하는 개체에 대한 집계 또는 데이터는 내부 관계형 데이터 원본에서 테이블로 저장되므로 이러한 정보는 `Restore` 명령으로 복원할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 복원할 수 있습니다. ROLAP 개체의 메타데이터를 복원하기 위해 `Restore` 명령에서는 관계형 데이터 원본의 테이블 구조를 다시 만듭니다.  
@@ -121,14 +121,14 @@ ms.locfileid: "36079864"
 >  `Synchronize` 명령은 서버 관리자와 데이터베이스 관리자만 실행할 수 있습니다. 원본 데이터베이스와 대상 데이터베이스의 데이터베이스 호환성 수준이 같아야 합니다.  
   
 ### <a name="specifying-the-source-database"></a>원본 데이터베이스 지정  
- [소스](../xmla/xml-elements-properties/source-element-xmla.md) 의 속성은 `Synchronize` 두 속성을 포함 하는 명령 `ConnectionString` 및 `Object`합니다. `ConnectionString` 속성에는 원본 데이터베이스가 포함된 인스턴스의 연결 문자열이 들어 있고, `Object` 속성에는 원본 데이터베이스의 개체 식별자가 들어 있습니다.  
+ [원본](../xmla/xml-elements-properties/source-element-xmla.md) 의 속성을 `Synchronize` 명령에는 두 개의 속성인 포함 됩니다. `ConnectionString` 및 `Object`합니다. `ConnectionString` 속성에는 원본 데이터베이스가 포함된 인스턴스의 연결 문자열이 들어 있고, `Object` 속성에는 원본 데이터베이스의 개체 식별자가 들어 있습니다.  
   
  대상 데이터베이스는 세션에서 `Synchronize` 명령이 실행되는 현재 데이터베이스입니다.  
   
  `ApplyCompression` 명령의 `Synchronize` 속성이 true이면 원본 데이터베이스에서 대상 데이터베이스로 전송되는 정보는 압축된 후 전송됩니다.  
   
 ### <a name="synchronizing-security-settings"></a>보안 설정 동기화  
- [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md) 속성 결정 여부는 `Synchronize` 명령은 역할 및 원본 데이터베이스에 정의 된 권한과 같은 보안 정의 동기화 합니다. 또한 `SynchronizeSecurity` 속성에서는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 `Sychronize` 명령에 포함할지 여부도 결정합니다.  
+ [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md) 속성에 따라 결정 하는지 여부를 `Synchronize` 명령은 역할 및 원본 데이터베이스에 정의 된 권한과 같은 보안 정의 동기화 합니다. 또한 `SynchronizeSecurity` 속성에서는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 `Sychronize` 명령에 포함할지 여부도 결정합니다.  
   
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
@@ -139,9 +139,9 @@ ms.locfileid: "36079864"
 |*IgnoreSecurity*|대상 데이터베이스에서 보안 정의가 제외됩니다.|  
   
 ### <a name="synchronizing-remote-partitions"></a>원격 파티션 동기화  
- `Location` 요소를 `Locations` 명령의 `Synchronize` 속성에 포함하여 원본 데이터베이스에 있는 각 원격 데이터 원본에 대해 연결된 각 원격 파티션을 동기화할 수 있습니다. 각 `Location` 요소는 `DataSourceType` 속성을 제외 하거나로 명시적으로 설정 해야 *원격*합니다.  
+ `Location` 요소를 `Locations` 명령의 `Synchronize` 속성에 포함하여 원본 데이터베이스에 있는 각 원격 데이터 원본에 대해 연결된 각 원격 파티션을 동기화할 수 있습니다. 각 `Location` 요소를 `DataSourceType` 속성을 제외 되거나 명시적으로 설정 해야 *원격*합니다.  
   
- 대상 데이터베이스의 원격 데이터 원본을 정의하고 연결하기 위해 `Synchronize` 명령에서는 `ConnectionString` 요소의 `Location` 속성에 정의된 연결 문자열을 사용합니다. 그런 다음 `Synchronize` 명령에서는 `DataSourceID` 요소의 `Location` 속성을 사용하여 동기화할 원격 파티션을 식별합니다. `Synchronize`명령은에 지정 된 원격 데이터 원본의 원격 파티션을 동기화는 `DataSourceID` 속성에 지정 된 원격 데이터 원본과 원본 데이터베이스에는 `DataSourceID` 대상 데이터베이스의 속성입니다.  
+ 대상 데이터베이스의 원격 데이터 원본을 정의하고 연결하기 위해 `Synchronize` 명령에서는 `ConnectionString` 요소의 `Location` 속성에 정의된 연결 문자열을 사용합니다. 그런 다음 `Synchronize` 명령에서는 `DataSourceID` 요소의 `Location` 속성을 사용하여 동기화할 원격 파티션을 식별합니다. `Synchronize`명령에 지정 된 원격 데이터 원본의 원격 파티션을 동기화 합니다 `DataSourceID` 속성에 지정 된 원격 데이터 소스를 사용 하 여 원본 데이터베이스에는 `DataSourceID` 대상 데이터베이스에서 속성.  
   
  원본 데이터베이스에 있는 원격 데이터 원본의 원격 파티션을 저장하는 데 사용된 원래 폴더에 대해 각각 `Folder` 요소의 `Location` 요소를 지정할 수도 있습니다. `Folder` 요소는 원격 데이터 원본의 원래 폴더에 저장된 모든 원격 파티션을 동기화할 대상 데이터베이스의 새 폴더를 나타냅니다. `Folder` 요소가 지정되지 않은 경우 Synchronize 명령에서는 원격 데이터베이스에 포함된 원격 파티션에 대해 지정된 원래 폴더를 사용합니다.  
   

@@ -21,18 +21,18 @@ helpviewer_keywords:
 - ROLAP
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce315f747a9b125052ead591f5c42cca3b811ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6462ebf90b7783260f7027d82b26be117ea0b5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153114"
 ---
 # <a name="dimension-storage"></a>차원 저장소
-  차원에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 저장소 모드를 지원 합니다.  
+  차원을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 저장소 모드를 지원 합니다.  
   
 -   ROLAP(관계형 OLAP)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36080306"
  ROLAP을 사용하는 차원의 데이터는 실제로 차원 정의에 사용되는 테이블에 저장됩니다. ROLAP 저장소 모드를 사용하면 대량의 데이터를 복제하지 않고도 대규모 차원을 지원할 수 있는 대신 쿼리 성능이 저하됩니다. 차원은 해당 차원을 정의하는 데 사용한 데이터 원본 뷰의 테이블을 직접 사용하기 때문에 ROLAP 저장소 모드에서 실시간 OLAP도 지원합니다.  
   
 > [!IMPORTANT]  
->  차원이 ROLAP 저장소 모드를 사용하며 MOLAP 저장소를 사용하는 큐브에 차원이 포함되어 있는 경우 해당 원본 테이블에 대한 스키마가 변경될 때마다 큐브를 바로 처리해야 합니다. 그렇지 않으면 큐브를 쿼리할 때 결과에 일관성이 없을 수 있습니다. **관련된 항목:**[SSIS와 Analysis Services 관리 태스크 자동화](../instances/automate-analysis-services-administrative-tasks-with-ssis.md)합니다.  
+>  차원이 ROLAP 저장소 모드를 사용하며 MOLAP 저장소를 사용하는 큐브에 차원이 포함되어 있는 경우 해당 원본 테이블에 대한 스키마가 변경될 때마다 큐브를 바로 처리해야 합니다. 그렇지 않으면 큐브를 쿼리할 때 결과에 일관성이 없을 수 있습니다. **관련된 항목:**[자동화 Analysis Services Administrative Tasks with SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [파티션 저장소 모드 및 처리](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  

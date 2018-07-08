@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6e052096fc8f87275a40c04ff76f52c802fbab0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0f8ab0198debcbb5ec9d09146737ca507357e654
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151554"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이상 버전에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 인스턴스의 HADR 클러스터 컨텍스트를 전환하는 방법에 대해 설명합니다. *HADR 클러스터 컨텍스트* 는 서버 인스턴스에서 호스트하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터를 결정합니다.  
@@ -96,7 +95,7 @@ ms.locfileid: "36078631"
   
 2.  다음과 같이 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) 문의 SET HADR CLUSTER CONTEXT 절을 사용합니다.  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'*`windows_cluster`*'** | 로컬}  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** {0} **'*`windows_cluster`*'** | 로컬}  
   
      각 항목이 나타내는 의미는 다음과 같습니다.  
   
@@ -165,7 +164,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
   
 ## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 (SQL Server)](always-on-availability-groups-sql-server.md) [Windows Server 장애 조치 클러스터링 &#40;WSFC&#41; SQL Server와 함께](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [AlwaysOn 가용성 그룹 (SQL Server)](always-on-availability-groups-sql-server.md) [Windows Server 장애 조치 클러스터링 &#40;WSFC&#41; SQL Server를 사용 하 여](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

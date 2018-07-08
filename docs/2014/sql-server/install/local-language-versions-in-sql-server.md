@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 822f4e97f8cfce9e5b5ab63fd091b89f2e545cc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bfa451cd670ffd126a1b658c7c96aafe12f1cb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159914"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows 운영 체제에서 지원하는 모든 언어를 지원합니다.  

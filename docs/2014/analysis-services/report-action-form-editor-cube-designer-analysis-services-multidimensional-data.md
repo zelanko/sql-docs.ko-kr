@@ -1,5 +1,5 @@
 ---
-title: 보고 동작 폼 편집기 (동작 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 보고서 동작 폼 편집기 (동작 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.reportaction.f1
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99948fc9fd66a109ae67b95e351bb0b42bf1d46d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b4320fde2f761e75f56e35032676a696a5e9669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163494"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>보고서 동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **작업** 탭에 있는 **보고 동작 폼 편집기** 창을 사용하여 **작업 구성 도우미** 창에서 선택한 보고 작업을 수정할 수 있습니다.  

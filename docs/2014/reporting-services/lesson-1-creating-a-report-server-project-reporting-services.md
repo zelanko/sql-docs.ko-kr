@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148724"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 보고서를 만들려면 먼저 보고서 정의 파일(.rdl) 및 보고서에 필요한 다른 리소스 파일을 저장할 보고서 서버 프로젝트를 만들어야 합니다. 그런 다음 실제 보고서 정의 파일을 만들고 보고서에 대한 데이터 원본, 데이터 집합 및 보고서 레이아웃을 정의합니다. 보고서를 실행하면 실제 데이터가 검색되어 레이아웃과 결합된 후 해당 보고서를 내보내고 인쇄하고 저장할 수 있는 화면에 렌더링됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36080828"
   
 ### <a name="to-create-a-report-server-project"></a>보고서 서버 프로젝트를 만들려면  
   
-1.  클릭 **시작**, 가리킨 **모든 프로그램**, 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], 클릭 하 고 **SQL Server Data Tools**합니다. 처음으로 열면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], 클릭 **비즈니스 인텔리전스 설정** 기본 환경 설정에 대 한 합니다.  
+1.  클릭 **시작**, 가리킨 **모든 프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]를 클릭 하 고 **SQL Server Data Tools**. 처음으로이 경우 연 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], 클릭 **비즈니스 인텔리전스 설정** 기본 환경 설정에 대 한 합니다.  
   
 2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36080828"
   
 ### <a name="to-create-a-new-report-definition-file"></a>새 보고서 정의 파일을 만들려면  
   
-1.  솔루션 탐색기에서 마우스 오른쪽 단추로 클릭 **보고서**, 가리킨 **추가**를 클릭 하 고 **새 항목**합니다.  
+1.  솔루션 탐색기에서 마우스 오른쪽 단추로 클릭 **보고서**를 가리키고 **추가**, 클릭 **새 항목**합니다.  
   
     > [!NOTE]  
     >  **솔루션 탐색기** 창이 표시되지 않으면 **보기** 메뉴에서 **솔루션 탐색기**를 클릭합니다.  

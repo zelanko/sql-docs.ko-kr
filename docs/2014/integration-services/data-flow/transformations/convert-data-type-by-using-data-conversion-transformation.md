@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -17,13 +17,13 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bddfd8409bcca80a468638398270c7479e02d62f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6988fb5a0bde5201a5b9839ae86658ae693848f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164944"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환
   데이터 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
 - processor affinity [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3581012106e10eeac623028f2785205838f5f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159044"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>선호도 입력-출력 마스크 서버 구성 옵션
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 및 Windows Server 2003에서는 멀티태스킹을 수행하기 위해 경우에 따라 여러 프로세서 사이에 프로세스 스레드를 이동하기도 합니다. 운영 체제 측면에서는 효율적이지만 각 프로세서 캐시에 데이터가 반복적으로 다시 로드되어 시스템 로드가 많은 경우 이로 인해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 저하될 수 있습니다. 프로세서를 특정 스레드에 할당하면 프로세서가 다시 로드되지 않으므로 이러한 조건에서도 성능을 향상시킬 수 있습니다. 스레드와 프로세서 간의 이러한 연결을 프로세서 선호도라고 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36078861"
   
 -   **affinity I/O mask** 옵션이 0이고 **affinity mask** 옵션이 1  
   
- **affinity I/O mask** 옵션은 고급 옵션입니다. 사용 하는 경우는 `sp_configure` 시스템 저장 프로시저 설정을 변경 하려면 변경할 수 있습니다, **선호도 I/O 마스크** 경우에만 **고급 옵션 표시** 1로 설정 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **affinity I/O mask** 옵션을 다시 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 합니다.  
+ **affinity I/O mask** 옵션은 고급 옵션입니다. 사용 중인 경우는 `sp_configure` 시스템 저장 프로시저 설정을 변경 하려면, 변경할 수 있습니다 **affinity I/O mask** 경우에만 **고급 옵션 표시** 1로 설정 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **affinity I/O mask** 옵션을 다시 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 합니다.  
   
 > [!CAUTION]  
 >  Windows 운영 체제에서 CPU 선호도를 구성하지 말고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 선호도 마스크를 구성하지 마십시오. 동일한 결과를 얻기 위해 이렇게 설정하는 경우도 있지만 구성이 일치하지 않는 경우 예상치 못한 결과가 나올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 선호도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `sp_configure` 옵션을 사용하면 가장 잘 구성됩니다.  

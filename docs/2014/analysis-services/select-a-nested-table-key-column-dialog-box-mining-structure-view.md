@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
 helpviewer_keywords:
 - Select a Nested Table Key Column dialog box
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d197434bbff97fa3fab1f1e2031c0b37b69d9ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae03a58af3dd2781ca670137a77baccae3951482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161114"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>중첩 테이블 키 열 선택 대화 상자(마이닝 구조 뷰)
   **중첩 테이블 키 열 선택** 대화 상자를 사용하여 새 중첩 테이블의 키 역할을 할 열을 지정할 수 있습니다. 대화 상자를 종료하면 지정된 키 열을 포함하는 새 테이블이 마이닝 구조에 추가됩니다. 구조를 마우스 오른쪽 단추로 클릭한 다음 **열 추가**를 선택하여 중첩 테이블에 열을 더 추가할 수 있습니다. 이 대화 상자는 OLAP 마이닝 모델로 작업을 수행하는지, 아니면 관계형 마이닝 모델로 작업을 수행하는지에 따라 옵션이 달라집니다.  

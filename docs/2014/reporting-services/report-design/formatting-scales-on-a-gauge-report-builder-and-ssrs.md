@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b269484be4445888a662b2da2745ecb7a4e1002
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43a6d53dd099589db67765ecd7ae6027d0b532bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159984"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>계기의 눈금 서식 지정(보고서 작성기 및 SSRS)
   계기 눈금은 계기에 표시되는 최대값과 최소값에 바인딩된 숫자 범위입니다. 일반적으로 계기 눈금에는 계기 포인터가 표시하는 값을 정확하게 판독할 수 있도록 계기 레이블과 눈금 표시가 포함됩니다. 계기 눈금은 일반적으로 하나 이상의 계기 포인터와 연결됩니다. 동일한 계기에 둘 이상의 눈금이 있을 수 있습니다.  

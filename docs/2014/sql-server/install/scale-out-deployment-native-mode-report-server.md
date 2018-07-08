@@ -1,5 +1,5 @@
 ---
-title: 확장 배포 (기본 모드 보고서 서버) | Microsoft Docs
+title: 스케일 아웃 배포 (기본 모드 보고서 서버) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151804"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>확장 배포(기본 모드 보고서 서버)
-  사용 하 여는 **확장 배포** 페이지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장 배포에 대 한 초기화 상태를 보거나 보고서 서버 확장 배포를 연결 하려면 구성 관리자. 
+  사용 된 **스케일 아웃 배포** 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 대 한 초기화 상태를 보거나 보고서 서버 스케일 아웃 배포에 조인 하는 Configuration Manager입니다. 
             *스케일 아웃 배포* 는 단일 보고서 서버 데이터베이스를 공유하는 두 개 이상의 보고서 서버 인스턴스를 말합니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "36078395"
   
  스케일 아웃 배포를 구성하려면 같은 보고서 서버 데이터베이스에 연결된 두 개 이상의 보고서 서버 인스턴스부터 시작합니다. 인스턴스를 모두 설치한 후 첫 번째 보고서 서버에 연결한 다음 확장 배포 페이지를 사용하여 각 추가 인스턴스를 조인합니다. 데이터베이스를 사용하도록 이미 초기화된 보고서 서버만 추가 노드를 초기화할 수 있습니다.  
   
- 이 페이지를 열려면 시작는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager와 선택 **확장 배포** 탐색 창에서. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+ 이 페이지를 열려면 시작 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 선택한 Configuration Manager **스케일 아웃 배포** 탐색 창에서. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **SQL Server 이름**  
- 이름을 지정는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 데이터베이스를 호스팅하는 인스턴스에 있습니다.  
+ 이름을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 데이터베이스를 호스팅하는 인스턴스.  
   
  **Database Name**  
  현재 보고서 서버 인스턴스에 연결된 데이터베이스 이름을 지정합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "36078395"
   
  예방 조치로 대칭 키를 제거하기 전에 백업 복사본을 만들어야 합니다. 목록에 있는 마지막 보고서 서버의 암호화 키를 제거하면 해당 데이터베이스에 대한 이후의 모든 보고서 서버 초기화에 대해 새 요구 사항이 발생합니다. 즉, 보고서 서버를 초기화한 다음 대칭 키의 백업 복사본을 복원해야 합니다. 현재 보고서 서버 데이터베이스에 있는 암호화된 데이터에 액세스하려면 대칭 키를 복원해야 합니다.  
   
- 암호화된 데이터가 더 이상 필요하지 않거나 키의 백업 복사본이 없는 경우 암호화된 데이터를 삭제해야 합니다. 자세한 내용은 참조 [암호화 키 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)합니다.  
+ 암호화된 데이터가 더 이상 필요하지 않거나 키의 백업 복사본이 없는 경우 암호화된 데이터를 삭제해야 합니다. 자세한 내용은 [암호화 키 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

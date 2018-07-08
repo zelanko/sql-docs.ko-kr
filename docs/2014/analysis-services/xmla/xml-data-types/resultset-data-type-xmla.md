@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Resultset data type
 ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8a571012c82c9e4d26d9f586cf67344f19258a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d4e95d3e2b85971271cff4b1365b44e5a30ba0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155074"
 ---
 # <a name="resultset-data-type-xmla"></a>Resultset 데이터 형식(XMLA)
   반환 된 데이터를 나타내는 추상 기본 데이터 형식을 정의 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36079850"
 |특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|InclusionThresholdSetting|  
-|파생 데이터 형식|[MDDataSet](mddataset-data-type-xmla.md), [olapxmla_EmptyResult](emptyresult-data-type-xmla.md), [행 집합](rowset-data-type-xmla.md)|  
+|파생 데이터 형식|[MDDataSet](mddataset-data-type-xmla.md)하십시오 [olapxmla_EmptyResult](emptyresult-data-type-xmla.md), [행 집합](rowset-data-type-xmla.md)|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   

@@ -1,5 +1,5 @@
 ---
-title: 패키지 (SSIS 패키지 업그레이드 마법사)를 업그레이드 | Microsoft Docs
+title: 업그레이드 패키지 (SSIS 패키지 업그레이드 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6485982823d1ee2deafa0c981d1fc16950699799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b06d9a0b4fd8b365e327d77f776bd75781e8128c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158594"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>패키지 업그레이드(SSIS 패키지 업그레이드 마법사)
   **패키지 업그레이드** 페이지를 사용하여 패키지 업그레이드의 진행률을 보고 업그레이드 프로세스를 중단할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사는 선택된 패키지를 하나씩 업그레이드합니다.  
   
- **업그레이드 된 패키지 저장소 또는 SQL Server 데이터베이스에 저장 된 패키지를 보려면**  
+ **업그레이드 된 SQL Server 데이터베이스 또는 패키지 저장소에 저장 된 패키지를 보려면**  
   
 -   [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]의 개체 탐색기에서 로컬 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]인스턴스에 연결한 다음 **저장된 패키지** 노드를 확장하여 업그레이드된 패키지를 확인합니다.  
   

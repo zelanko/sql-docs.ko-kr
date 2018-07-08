@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLA, properties
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0ea5de8bbd06f071c34d914a188dd1b63c1c98ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 708e386acae4a5370c4561c00c3942065c4ac7df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149884"
 ---
 # <a name="properties-xmla"></a>속성(XMLA)
   XMLA(XML for Analysis) 프로토콜은 XML 요소를 사용하여 XMLA 헤더, 메서드, 개체, 명령 및 데이터 형식에 대한 속성 정보 및 값을 나타냅니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36079346"
 |[요소 특성 &#40;XMLA&#41;](attribute-element-xmla.md)||  
 |[AttributeName 요소 &#40;XMLA&#41;](name-element-xmla.md)||  
 |[요소 특성 &#40;XMLA&#41;](attributes-element-xmla.md)||  
-|[요소 축은 &#40;XMLA&#41;](axes-element-xmla.md)||  
+|[요소를 축 &#40;XMLA&#41;](axes-element-xmla.md)||  
 |[AxesInfo 요소 &#40;XMLA&#41;](axesinfo-element-xmla.md)||  
 |[Axis 요소 &#40;XMLA&#41;](axis-element-xmla.md)||  
 |[AxisInfo 요소 &#40;XMLA&#41;](axisinfo-element-xmla.md)||  
@@ -57,7 +57,7 @@ ms.locfileid: "36079346"
 |[CellData 요소 &#40;XMLA&#41;](celldata-element-xmla.md)||  
 |[CellInfo 요소 &#40;XMLA&#41;](cellinfo-element-xmla.md)||  
 |[CellOrdinal 요소 &#40;XMLA&#41;](cellordinal-element-xmla.md)||  
-|[Command 요소 &#40;XMLA&#41;](command-element-xmla.md)||  
+|[요소를 명령 &#40;XMLA&#41;](command-element-xmla.md)||  
 |[ConnectionID 요소 &#40;XMLA&#41;](id-element-xmla.md)||  
 |[ConnectionString 요소 &#40;XMLA&#41;](connectionstring-element-xmla.md)||  
 |[CrossProduct 요소 &#40;XMLA&#41;](crossproduct-element-xmla.md)||  
@@ -79,7 +79,7 @@ ms.locfileid: "36079346"
 |[DbTableName 요소 &#40;XMLA&#41;](dbtablename-element-xmla.md)||  
 |[DeleteWithDescendants 요소 &#40;XMLA&#41;](deletewithdescendants-element-xmla.md)||  
 |[Description 요소 &#40;XMLA&#41;](description-element-xmla.md)||  
-|[요소를 차원 &#40;XMLA&#41;](dimension-element-xmla.md)||  
+|[차원 요소 &#40;XMLA&#41;](dimension-element-xmla.md)||  
 |[DisplayInfo 요소 &#40;XMLA&#41;](displayinfo-element-xmla.md)||  
 |[Error 요소 &#40;XMLA&#41;](error-element-xmla.md)||  
 |[ErrorCode 요소 &#40;XMLA&#41;](errorcode-element-xmla.md)||  
@@ -91,8 +91,8 @@ ms.locfileid: "36079346"
 |[HelpFile 요소 &#40;XMLA&#41;](helpfile-element-xmla.md)||  
 |[HierarchyInfo 요소 &#40;XMLA&#41;](hierarchyinfo-element-xmla.md)||  
 |[ID 요소 &#40;XMLA&#41;](id-element-xmla.md)||  
-|[요소 키 &#40;XMLA&#41;](keys-element-xmla.md)||  
-|[요소 키 &#40;XMLA&#41;](key-element-xmla.md)||  
+|[요소를 키 &#40;XMLA&#41;](keys-element-xmla.md)||  
+|[요소를 키 &#40;XMLA&#41;](key-element-xmla.md)||  
 |[언어 요소 &#40;XMLA&#41;](language-element-xmla.md)||  
 |[LastDataUpdate 요소 &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)||  
 |[LastSchemaUpdate 요소 &#40;XMLA&#41;](lastschemaupdate-element-xmla.md)||  
@@ -105,34 +105,34 @@ ms.locfileid: "36079346"
 |[Member 요소 &#40;XMLA&#41;](member-element-xmla.md)||  
 |[Members 요소 &#40;XMLA&#41;](members-element-xmla.md)||  
 |[메시지 요소 &#40;XMLA&#41;](message-element-xmla.md)||  
-|[요소를 메시지 &#40;XMLA&#41;](messages-element-xmla.md)||  
+|[메시지 요소 &#40;XMLA&#41;](messages-element-xmla.md)||  
 |[Mode 요소 &#40;XMLA&#41;](mode-element-xmla.md)||  
 |[MoveWithDescendants 요소 &#40;XMLA&#41;](movewithdescendants-element-xmla.md)||  
-|[Name 요소 &#40;XMLA&#41;](name-element-xmla.md)||  
-|[Name 요소 &#40;매개 변수&#41; &#40;XMLA&#41;](name-element-parameter-xmla.md)||  
+|[요소의 이름을 &#40;XMLA&#41;](name-element-xmla.md)||  
+|[요소의 이름을 &#40;매개 변수&#41; &#40;XMLA&#41;](name-element-parameter-xmla.md)||  
 |[새 요소 &#40;XMLA&#41;](new-element-xmla.md)||  
-|[개체 요소의 &#40;XMLA&#41;](object-element-xmla.md)||  
-|[개체 요소의 &#40;차원&#41; &#40;XMLA&#41;](object-element-dimension-xmla.md)||  
+|[개체 요소 &#40;XMLA&#41;](object-element-xmla.md)||  
+|[개체 요소 &#40;차원&#41; &#40;XMLA&#41;](object-element-dimension-xmla.md)||  
 |[ObjectDefinition 요소 &#40;XMLA&#41;](objectdefinition-element-xmla.md)||  
 |[OlapInfo 요소 &#40;XMLA&#41;](olapinfo-element-xmla.md)||  
 |[Optimization 요소 &#40;XMLA&#41;](optimization-element-xmla.md)||  
 |[Original 요소 &#40;XMLA&#41;](original-element-xmla.md)||  
-|[요소를 병렬 &#40;XMLA&#41;](parallel-element-xmla.md)||  
-|[매개 변수 요소 &#40;XMLA&#41;](parameter-element-xmla.md)||  
-|[Parameters 요소 &#40;XMLA&#41;](parameters-element-xmla.md)||  
+|[병렬 요소 &#40;XMLA&#41;](parallel-element-xmla.md)||  
+|[Parameter 요소 &#40;XMLA&#41;](parameter-element-xmla.md)||  
+|[매개 변수 요소 &#40;XMLA&#41;](parameters-element-xmla.md)||  
 |[ParentObject 요소 &#40;XMLA&#41;](parentobject-element-xmla.md)||  
 |[PartitionID 요소 &#40;XMLA&#41;](partitionid-element-xmla.md)||  
 |[Password 요소 &#40;XMLA&#41;](password-element-xmla.md)||  
-|[Properties 요소 &#40;XMLA&#41;](properties-element-xmla.md)||  
+|[속성 요소 &#40;XMLA&#41;](properties-element-xmla.md)||  
 |[PropertyList 요소 &#40;XMLA&#41;](propertylist-element-xmla.md)||  
 |[요소를 쿼리 &#40;XMLA&#41;](queries-element-xmla.md)||  
-|[쿼리 요소 &#40;XMLA&#41;](query-element-xmla.md)||  
+|[요소를 쿼리 &#40;XMLA&#41;](query-element-xmla.md)||  
 |[RequestType 요소 &#40;XMLA&#41;](requesttype-element-xmla.md)||  
 |[RestrictionList 요소 &#40;XMLA&#41;](restrictionlist-element-xmla.md)||  
 |[Restrictions 요소 &#40;XMLA&#41;](restrictions-element-xmla.md)||  
 |[요소를 결과 &#40;XMLA&#41;](results-element-xmla.md)||  
-|[요소를 반환 &#40;XMLA&#41;](return-element-xmla.md)||  
-|[루트 요소를 &#40;XMLA&#41;](root-element-xmla.md)||  
+|[요소를 반환 합니다. &#40;XMLA&#41;](return-element-xmla.md)||  
+|[루트 요소의 &#40;XMLA&#41;](root-element-xmla.md)||  
 |[row 요소 &#40;XMLA&#41;](row-element-xmla.md)||  
 |[보안 요소 &#40;XMLA&#41;](security-element-xmla.md)||  
 |[SessionID 요소 &#40;XMLA&#41;](sessionid-element-xmla.md)||  
@@ -147,13 +147,13 @@ ms.locfileid: "36079346"
 |[SynchronizeSecurity 요소 &#40;XMLA&#41;](synchronizesecurity-element-xmla.md)||  
 |[TableNotification 요소 &#40;XMLA&#41;](tablenotification-element-xmla.md)||  
 |[TableNotifications 요소 &#40;XMLA&#41;](tablenotifications-element-xmla.md)||  
-|[요소를 대상 &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)||  
+|[Target 요소 &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)||  
 |[시간 요소 &#40;XMLA&#41;](time-element-xmla.md)||  
 |[Translation 요소 &#40;XMLA&#41;](translation-element-xmla.md)||  
 |[Translations 요소 &#40;XMLA&#41;](translations-element-xmla.md)||  
 |[Tuple 요소 &#40;XMLA&#41;](tuple-element-xmla.md)||  
 |[Tuples 요소 &#40;XMLA&#41;](tuples-element-xmla.md)||  
-|[E Element &#40;XMLA&#41;](type-element-xmla.md)||  
+|[Type 요소 &#40;XMLA&#41;](type-element-xmla.md)||  
 |[UName 요소 &#40;XMLA&#41;](uname-element-xmla.md)||  
 |[UnaryOperator 요소 &#40;XMLA&#41;](unaryoperator-element-xmla.md)||  
 |[요소 값 &#40;XMLA&#41;](value-element-xmla.md)||  

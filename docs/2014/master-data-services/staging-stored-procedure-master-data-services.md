@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1ab4d483a41c64a97d320711c6f46bf6831ea078
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 99c28e2346494f737a6ee73b37cb458d7448e40b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160604"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>준비 저장 프로시저(Master Data Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 준비 프로세스를 시작할 때는 다음 세 가지 저장 프로시저 중 하나를 사용합니다.  
@@ -60,7 +60,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [유효성 검사 저장 프로시저 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
- [멤버 로드 또는 업데이트 Master Data Services의 준비 프로세스를 사용 하 여](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
- [준비 프로세스 동안 발생 하는 오류 보기 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
+ [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

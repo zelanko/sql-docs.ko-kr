@@ -1,5 +1,5 @@
 ---
-title: Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs
+title: With Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], tuples
 - member keys [MDX]
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59e01b56cee5d9e35b066514c2d24129b38b2fd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd4fa53eb870bc8422dcb80fe019083e773e638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153264"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>멤버, 튜플 및 집합 작업(MDX)
   MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
@@ -52,7 +52,7 @@ FROM [Adventure Works]
   
 ```  
   
- 사용할 수도 있습니다는 `FirstChild` 함수를 다음 예제와 같이 동일한 멤버를 반환 합니다.  
+ 사용할 수도 있습니다는 `FirstChild` 다음 예제와 같이 동일한 멤버를 반환 하는 함수입니다.  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -130,7 +130,7 @@ FROM [Adventure Works]
  문자열 함수는 MDX 식에 대해 실행되며 문자열을 반환합니다. 예를 들어 [UniqueName&#40;MDX&#41;](/sql/mdx/uniquename-mdx) 함수는 차원, 계층, 수준 또는 멤버의 고유 이름이 들어 있는 문자열 값을 반환합니다. 문자열 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [주요 개념 mdx에서 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [MDX 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   

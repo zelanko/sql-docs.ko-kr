@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151654"
 ---
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
   Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](connect-to-analysis-services.md)참조).  
@@ -36,7 +36,7 @@ ms.locfileid: "36080324"
 |[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Analysis Services 인스턴스에서 사용하는 TCP 포트를 통해 요청이 라우팅될 수 있도록 Windows 방화벽에서 인바운드 규칙을 만듭니다. 이 태스크는 필수입니다. 인바운드 방화벽 규칙이 정의될 때까지 원격 컴퓨터에서 Analysis Services에 액세스할 수 없습니다.|  
 |[서버 관리자 권한 부여 &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|설치 중에 하나 이상의 사용자 계정을 Analysis Services 인스턴스의 관리자 역할에 추가해야 했습니다. 관리 권한은 외부 관계형 데이터베이스에서 제공된 데이터의 처리와 같은 많은 일상적인 서버 작업에 필요합니다. 관리자 역할의 멤버 자격을 추가하거나 수정하려면 이 항목의 정보를 사용하세요.|  
 |[서비스 계정 구성 &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|설치 중에 Analysis Services 서비스 계정이 프로그램 실행 파일과 데이터베이스 파일에 대한 제어된 액세스를 허용하는 적절한 권한과 함께 프로비전되었습니다. 사후 설치 태스크로, 이제 추가 태스크를 수행할 때 서비스 계정의 사용을 허용할지 여부를 고려해야 합니다. 처리 및 쿼리 작업이 모두 서비스 계정에서 실행될 수 있습니다. 이러한 작업은 서비스 계정에 적절한 권한이 있는 경우에만 성공합니다.|  
-|[서버 그룹의 Analysis Services 인스턴스 등록](register-an-analysis-services-instance-in-a-server-group.md)|SSMS(SQL Server Management Studio)를 사용하면 SQL Server 인스턴스를 구성하기 위한 서버 그룹을 만들 수 있습니다. 여러 서버 인스턴스로 구성된 확장 가능한 배포는 서버 그룹에서 관리하기가 더 쉽습니다. Analysis Services 인스턴스를 SSMS에서 그룹으로 구성하려면 이 항목의 정보를 사용하세요.|  
+|[서버 그룹에 Analysis Services 인스턴스를 등록 합니다.](register-an-analysis-services-instance-in-a-server-group.md)|SSMS(SQL Server Management Studio)를 사용하면 SQL Server 인스턴스를 구성하기 위한 서버 그룹을 만들 수 있습니다. 여러 서버 인스턴스로 구성된 확장 가능한 배포는 서버 그룹에서 관리하기가 더 쉽습니다. Analysis Services 인스턴스를 SSMS에서 그룹으로 구성하려면 이 항목의 정보를 사용하세요.|  
 |[Analysis Services 인스턴스의 서버 모드 확인](determine-the-server-mode-of-an-analysis-services-instance.md)|설치 중에 서버에서 실행되는 모델의 유형(다차원 또는 테이블 형식)을 결정하는 서버 모드를 선택했습니다. 서버 모드를 잘 모르는 경우 이 항목의 정보를 사용하여 설치된 모드를 확인하세요.|  
 |[Analysis Services 인스턴스 이름 바꾸기](rename-an-analysis-services-instance.md)|설명이 포함된 이름은 서버 모드가 서로 다른 여러 인스턴스나 조직의 부서나 팀에서 주로 사용하는 인스턴스를 구별하는 데 도움이 될 수 있습니다. 인스턴스 이름을 설치의 효율적인 관리에 도움이 되는 이름으로 변경하려면 이 항목의 정보를 사용하여 방법을 알아보세요.|  
   

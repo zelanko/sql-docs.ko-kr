@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b82d956905d55afb597a0dc4e31d299eebdc4309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce1a74a47839174705f6910b0e0366b4098ae767
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160244"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36078589"
 4.  코드 조각이 들어 있는 폴더로 이동하고 .snippet 파일을 클릭한 다음 **열기** 단추를 클릭합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 한 `TRY-CATCH` 코드 감싸기 조각으로 가져옵니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ 다음 예에서는 `TRY-CATCH` 코드 감싸기 조각으로 가져옵니다 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
 1.  다음 코드를 메모장에 붙여 넣은 다음 TryCatch.snippet이라는 파일로 저장합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys XML schema collections [SQL Server]
 - schema collections [SQL Server], predefined
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e9b4ce24b760a736443102adff7b8ee3647a69cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1e75d8335ebf5313b1f0df67144aaef6216eb445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160154"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>기본 제공 XML 스키마 컬렉션 참조(sys)
   사용자가 만드는 모든 데이터베이스의 **sys** 관계형 스키마에는 미리 정의된 **sys** XML 스키마 컬렉션이 있습니다. 이 스키마 컬렉션에는 이러한 미리 정의된 스키마가 포함되며 사용자가 만든 다른 XML 스키마 컬렉션으로부터 이러한 스키마를 액세스할 수 있습니다. 이러한 미리 정의된 스키마에 사용되는 접두사는 XQuery에서 의미를 갖습니다. 예약된 접두사는 **xml** 뿐입니다.  

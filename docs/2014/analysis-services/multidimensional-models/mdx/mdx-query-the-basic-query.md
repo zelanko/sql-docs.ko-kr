@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
 - queries [MDX], about queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ff060a0f570626052cf8577be60850e689566fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4bf03ddd4bfbc75a24f68bd4c046ea3eb9d58dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155194"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>기본 MDX 쿼리(MDX)
   기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36080070"
   
 -   MDX SELECT 문의 쿼리 축을 결정하는 SELECT 절. SELECT 절의 쿼리 축 구성에 대한 자세한 내용은 [쿼리 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)을 참조하세요.  
   
--   쿼리될 큐브를 결정하는 FROM 절. FROM 절에 대 한 자세한 내용은 참조 [SELECT 문 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)합니다.  
+-   쿼리될 큐브를 결정하는 FROM 절. FROM 절에 대 한 자세한 내용은 참조 하세요. [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)합니다.  
   
 -   반환되는 데이터를 제한하기 위해 slicer 축에서 사용할 멤버나 튜플을 결정하는 선택적인 WHERE 절. WHERE 절의 slicer 축 구성에 대한 자세한 내용은 [Slicer 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
@@ -64,7 +64,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX SELECT 문은 WITH 키워드, 축 또는 slicer 축에 포함할 계산된 멤버를 만들기 위한 MDX 함수의 사용, 쿼리의 일부로 특정 셀 속성의 값을 반환하는 기능 등의 선택적 구문을 지원합니다. MDX SELECT 문에 대 한 자세한 내용은 참조 [SELECT 문 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)합니다.  
+ MDX SELECT 문은 WITH 키워드, 축 또는 slicer 축에 포함할 계산된 멤버를 만들기 위한 MDX 함수의 사용, 쿼리의 일부로 특정 셀 속성의 값을 반환하는 기능 등의 선택적 구문을 지원합니다. MDX SELECT 문에 대 한 자세한 내용은 참조 하세요. [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)합니다.  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>MDX SELECT 문의 구문과 SQL 구문 비교  
  MDX SELECT 문의 구문 형식은 SQL 구문과 비슷합니다. 하지만 다음과 같은 점에서 근본적인 차이가 있습니다.  
@@ -113,7 +113,7 @@ WHERE ( [Sales Territory].[Southwest] )
  자세한 예는 [쿼리 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 및 [Slicer 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [주요 개념 mdx에서 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

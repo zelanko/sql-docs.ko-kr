@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf56a62b3ef129d9d725aa54d05544f776d4f6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163754"
 ---
 # <a name="plan-for-map-report-support"></a>지도 보고서 지원 계획
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 공간 데이터 원본을 사용 하는 지도 보고서를 지원 합니다. 공간 데이터는 SQL Server 데이터베이스, ESRI 셰이프 파일 또는 Reporting Services나 보고서 작성기에 설치된 지도 갤러리에서 가져올 수 있습니다. 지도에 Bing 지도 타일 배경을 표시할 수도 있습니다. 보고서 작성자는 공간 데이터나 Bing 지도 타일을 런타임에 검색되는 동적 스타일 또는 보고서 정의에 포함된 정적 스타일로 지정하는 보고서를 만들 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36080374"
 ## <a name="support-for-bing-maps"></a>Bing Maps 지원  
  지도는 Bing 지도 타일을 표시하는 배경 계층을 포함할 수 있습니다. 지도 타일 계층을 포함하는 게시된 보고서를 보려면 보고서 서버가 Bing Maps 웹 서비스에서 타일을 검색하도록 구성되어 있어야 합니다. 자세한 내용은 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
- 보고서 작성자는 각 보고서에서 SSL(Secure Sockets Layer) 연결을 사용하여 타일 서버에서 타일을 검색할지 여부를 지정할 수 있습니다. 타일 계층에 대 한 속성 창에서이 작업을 수행 하는 부울 속성 UseSecureConnection 설정 해야를 `true`합니다.  
+ 보고서 작성자는 각 보고서에서 SSL(Secure Sockets Layer) 연결을 사용하여 타일 서버에서 타일을 검색할지 여부를 지정할 수 있습니다. 이렇게 하려면, 타일 계층에 대 한 속성 창에서 UseSecureConnection 부울 속성을 설정 해야 이러한를 `true`입니다.  
   
 > [!NOTE]  
 >  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
@@ -51,9 +51,9 @@ ms.locfileid: "36080374"
   
 -   지도 데이터가 포함되어 있어야 할 경우에는 보고서에 필요한 지도 데이터만 포함되도록 뷰포트 중심 및 확대/축소 수준을 조정합니다.  
   
- 자세한 내용은 [지도 &#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)합니다.  
+ 자세한 내용은 [Maps &#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 문제 해결: 보고서에 지도 &#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

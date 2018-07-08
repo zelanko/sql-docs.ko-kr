@@ -1,5 +1,5 @@
 ---
-title: 요소 (ASSL) 측정 | Microsoft Docs
+title: 요소 (ASSL)를 측정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159334"
 ---
 # <a name="measure-element-assl"></a>Measure 요소(ASSL)
   측정값을 정의합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "36079136"
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [주석을](../collections/annotations-element-assl.md)를 [BackColor](../properties/backcolor-element-assl.md)를 [DataType](../properties/datatype-element-assl.md)를 [설명](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md)를 [FontName](../properties/name-element-assl.md)를 [FontSize](../properties/fontsize-element-assl.md)를 [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md)를 [이름](../properties/name-element-assl.md)를 [원본](../properties/source-element-measure-assl.md), [번역](../collections/translations-element-assl.md), [표시](../properties/visible-element-assl.md)|  
 |나머지|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -102,7 +102,7 @@ ms.locfileid: "36079136"
   
 -   단일 폴더 이름을 포함합니다. 측정값이 동일한 이름의 폴더에 속하는 것으로 렌더링되어야 함을 나타냅니다.  
   
--   백슬래시로 구분 된 여러 폴더 이름을 포함 (\\), 포함된 된 폴더 계층을 나타냅니다.  
+-   백슬래시로 구분 된 여러 폴더 이름을 포함 (\\), 포함 된 폴더 계층 구조를 나타내는입니다.  
   
  `DisplayFolder` 속성도 계산 측정값 및 계층에 적용됩니다.  
   
