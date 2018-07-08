@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
 - deleting subscriptions
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 59925598a5a1038cee0d99d80476a894826ce575
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6fe35faf0b633e5fe7525371713dff189ac559b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150864"
 ---
 # <a name="delete-a-pull-subscription"></a>끌어오기 구독 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 끌어오기 구독을 삭제하는 방법에 대해 설명합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "36089287"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만들고 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 속성을 설정합니다. 1단계의 구독자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 구독이 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 구독이 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> 메서드를 호출합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36089287"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만들고 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 속성을 설정합니다. 1단계의 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 구독이 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 구독이 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> 메서드를 호출합니다.  
   

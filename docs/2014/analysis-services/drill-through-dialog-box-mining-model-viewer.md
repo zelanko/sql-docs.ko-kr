@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de01b0d081ecd26dc3472ebb697b72a42b128bab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331ab6da3e2e244f3a0413d80006ceeb907704f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151474"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>드릴스루 대화 상자(마이닝 모델 뷰어)
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭을 사용하여 마이닝 모델을 볼 때 모델에 드릴스루가 사용되도록 설정되어 있으면 사례 데이터에 대한 세부 정보로 드릴스루할 수 있습니다. 또한 기본 마이닝 구조에서도 드릴스루를 사용하도록 설정하면 마이닝 구조에서 마이닝 모델에 포함되지 않은 열도 볼 수 있습니다. 열 목록의 구조 열에는 접두사로 "Structure" 레이블이 붙습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "36090969"
 > [!NOTE]  
 >  기존 마이닝 구조에서는 드릴스루를 사용할 수 없습니다. 대신 마이닝 구조를 다시 만들고 생성 프로세스 동안 드릴스루를 사용하도록 설정해야 합니다.  
   
- 각 마이닝 모델 뷰어에서 드릴스루를 지 원하는 사례 데이터에 액세스 하는 방법에 대 한 내용은 **참조** [드릴스루 사례 데이터에 마이닝 모델에서](data-mining/drill-through-to-case-data-from-a-mining-model.md)합니다.  
+ 각 마이닝 모델 뷰어에서 드릴스루를 지 원하는 사례 데이터에 액세스 하는 방법에 대 한 자세한 **참조** [드릴스루 사례 데이터에 마이닝 모델에서](data-mining/drill-through-to-case-data-from-a-mining-model.md)합니다.  
   
 ## <a name="options"></a>변수  
  **사례 분류 위치**  

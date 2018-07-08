@@ -1,5 +1,5 @@
 ---
-title: ODBC의 트랜잭션은 | Microsoft Docs
+title: ODBC의 트랜잭션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aeea2e4d425e4d6a5c2a28a803b5ae344b7c8730
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb43eb3868027e9fca091f79ee8ee7f331262285
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950228"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421862"
 ---
-# <a name="performing-transactions-in-odbc"></a>ODBC의 트랜잭션 수행
+# <a name="performing-transactions-in-odbc"></a>ODBC에서 트랜잭션 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "32950228"
   
  BEGIN TRANSACTION, COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 같은 Transact-SQL 트랜잭션 문을 사용하면 드라이버에서 예기치 않은 동작이 발생할 수 있으므로 ODBC 응용 프로그램에서는 이러한 문을 사용하지 않는 것이 좋습니다. ODBC 응용 프로그램은 자동 커밋 모드로 실행하면서 다른 트랜잭션 관리 함수나 문을 실행하지 않거나, 수동 커밋 모드로 실행하면서 ODBC **SQLEndTran** 함수를 사용하여 트랜잭션을 커밋하거나 롤백해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [수행 하는 트랜잭션 & #40; ODBC & #41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+## <a name="see-also"></a>관련 항목  
+ [트랜잭션 수행 &#40;ODBC&#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

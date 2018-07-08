@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9673fbd613b927a16b4d5a66ee49ac74c158ca87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e2710dae03006cf5f2b762c09aab55bf6663261
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157784"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
   기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 응용 프로그램 서버로 실행됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36090812"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서, 모델, 폴더, 리소스 및 공유 데이터 원본의 관리를 의미합니다. 이러한 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  
   
 > [!NOTE]  
->  내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행 되는 환경을 관리 하는 방법에 대 한 자세한 내용은 참조 [관리 (Reporting Services)](reporting-services-report-server-native-mode.md)합니다.  
+>  내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행 되는 환경을 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [관리 (Reporting Services)](reporting-services-report-server-native-mode.md)합니다.  
   
  내용 관리에는 다음 태스크가 포함됩니다.  
   

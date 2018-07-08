@@ -1,12 +1,12 @@
 ---
-title: 스파스 열이 있는 테이블에 SQLColumns를 호출 합니다. | Microsoft Docs
+title: 스파스 열이 있는 테이블에 SQLColumns 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivit
+ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bf36d7e67e3e116800038f03c3a1d98cd46460e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 58a71205c92d6994943afa703d544d046450ba22
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694774"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414472"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>스파스 열이 있는 테이블에 대해 SQLColumns 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

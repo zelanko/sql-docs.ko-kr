@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b99ea0d73d9d24992af5fcac09d8df3f4d71fafd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a623381738e4d2f96222aaa193cf09ec619889
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259429"
 ---
 # <a name="select-creation-method-cube-wizard"></a>생성 방법 선택(큐브 마법사)
   **생성 방법 선택** 페이지를 사용하여 큐브를 만드는 방법을 지정할 수 있습니다.  

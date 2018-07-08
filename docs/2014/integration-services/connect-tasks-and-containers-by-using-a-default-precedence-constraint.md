@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - precedence constraints [Integration Services], connecting tasks
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf278d02e1c2eb523964ee07b039b46942c7e9de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be0139638720b80428b820e5cb2083c5fbb1a450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277119"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결
   선행 제약 조건은 두 실행 개체를 연결합니다. 실행 개체는 임의의 태스크, For 루프, Foreach 루프 또는 시퀀스 컨테이너일 수 있습니다. 이 절차에서는 선행 제약 조건에 대한 기본 동작을 설정하는 방법과 기본 선행 제약 조건을 사용하여 실행 개체를 연결하는 방법에 대해 설명합니다.  

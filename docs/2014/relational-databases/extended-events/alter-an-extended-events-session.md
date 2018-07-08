@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 97971c56e6f094d7cf905da0db4475f3703c1416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e4d26addcefffd97247d29c4b1477bea9981551e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158384"
 ---
 # <a name="alter-an-extended-events-session"></a>확장 이벤트 세션 변경
   확장 이벤트 세션을 만든 후 **SQL Server 확장 이벤트 마법사**를 사용하여 필요한 대로 변경할 수 있습니다.  

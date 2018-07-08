@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
 - sql12.ag.maintwiz.task.f1
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11706f4fb3761e20fea4c70feb431144efed0fc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154494"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36088641"
 ####  <a name="Permissions"></a> Permissions  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> 유지 관리 계획 마법사 사용  
+##  <a name="SSMSProcedure"></a> 유지 관리 계획 마법사를 사용 하 여  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사를 시작하려면  
   
@@ -371,7 +371,7 @@ ms.locfileid: "36088641"
      Windows Azure 저장소에 인증하는 데 사용되는 SQL 자격 증명을 선택합니다. 사용할 수 있는 기존 SQL 자격 증명이 없는 경우 **만들기** 단추를 클릭하여 새 SQL 자격 증명을 만듭니다.  
   
     > [!IMPORTANT]  
-    >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 저장소 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. 참조의 샘플 코드는 [자격 증명을 만들려면](../security/authentication-access/create-a-credential.md#Credential) TRANSACT-SQL을 사용 하 여 자격 증명을 만들려면 항목입니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
+    >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 저장소 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. 샘플 코드를 참조 합니다 [자격 증명을 만드는](../security/authentication-access/create-a-credential.md#Credential) TRANSACT-SQL을 사용 하 여 자격 증명을 만드는 항목입니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
      **Azure 저장소 컨테이너**  
      Windows Azure 저장소 컨테이너의 이름을 지정합니다.  

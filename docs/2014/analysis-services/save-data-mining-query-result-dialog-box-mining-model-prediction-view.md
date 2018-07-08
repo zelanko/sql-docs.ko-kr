@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
 helpviewer_keywords:
 - Save Data Mining Query Result dialog box
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 709c3364ac5b4d6bc159af4ec6db40663d21fcbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ab445225182566db8e4733904a3e66340549a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151624"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>데이터 마이닝 쿼리 결과 저장 대화 상자(마이닝 모델 예측 뷰)
   **데이터 마이닝 쿼리 결과 저장** 대화 상자를 사용하여 데이터 마이닝 쿼리 결과를 새 테이블에 저장할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36081680"
  **테이블 이름**  
  새 테이블의 이름을 입력합니다.  
   
- **기존 항목 덮어쓰기 존재**  
+ **있는 경우 덮어쓰기 존재**  
  기존 테이블을 같은 이름으로 덮어쓰려면 이 옵션을 선택합니다.  
   
  다음 중 하나에 해당할 경우 기존 테이블을 덮어써야 합니다.  

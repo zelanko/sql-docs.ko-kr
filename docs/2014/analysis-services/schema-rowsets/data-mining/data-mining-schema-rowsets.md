@@ -20,18 +20,18 @@ helpviewer_keywords:
 - data mining [Analysis Services], schema rowsets
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9302e8dbafd31f4efb3b053ea5247f2b860dc8bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a3b3e54f53eb93ea58a45c92e88503a186a441f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210053"
 ---
 # <a name="data-mining-schema-rowsets"></a>Data Mining Schema Rowsets
-  실행 중인 서버 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 데이터 마이닝 스키마 행 집합을 지원 합니다. 에 특정 XML/A 공급자가 특정 행 집합을 지원 하는지 여부를 확인 하려면 사용는 [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) 포함 된 행 집합의 [Discover](../../xmla/xml-elements-methods-discover.md) 메서드.  
+  실행 하는 서버의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 데이터 마이닝 스키마 행 집합을 지원 합니다. 특정 XML/A 공급자가 특정 행 집합을 지원 하는지 여부를 확인 하려면 사용 합니다 [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) 사용 하 여 행 집합의 [검색](../../xmla/xml-elements-methods-discover.md) 메서드.  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서는 데이터 마이닝 스키마 행 집합이 $SYSTEM 스키마에 Transact-SQL 언어로 된 테이블로 표시됩니다. 예를 들어 Analysis Services 인스턴스에 대한 다음 쿼리는 현재 인스턴스에서 사용할 수 있는 스키마 목록을 반환합니다.  
   
@@ -54,7 +54,7 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
 |[DMSCHEMA_MINING_STRUCTURE_COLUMNS 행 집합](dmschema-mining-structure-columns-rowset.md)|서버에 배포된 모든 마이닝 구조의 개별 열에 대해 설명합니다.|  
 |[DMSCHEMA_MINING_STRUCTURES 행 집합](dmschema-mining-structures-rowset.md)|마이닝 구조에 대한 정보를 열거합니다.|  
   
- 여기에 나열 된 모든 스키마 행 집합은 실행 중인 서버에서 지 원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+ 여기에 나열 된 모든 스키마 행 집합은 실행 중인 서버에서 지원 됩니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 스키마 행 집합](../../schema-rowsets/analysis-services-schema-rowsets.md)   

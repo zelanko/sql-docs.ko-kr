@@ -12,16 +12,16 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ea830e74-5271-48be-9099-7a7dc8425d9e
 caps.latest.revision: 3
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1207a07d9751731d0374f822b75cd84d1b4ec78b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eebc0b41b9c614710b2cee569a4a3517540b3254
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239483"
 ---
 # <a name="sql-server-management-objects"></a>SQL Server 관리 개체
 
-[SQL Server Management Objects 프로그래밍 가이드를 참조 하십시오.](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.
+[SQL Server 관리 개체 프로그래밍 가이드를 참조 하세요.](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.

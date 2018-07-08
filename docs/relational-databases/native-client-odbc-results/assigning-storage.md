@@ -1,12 +1,12 @@
 ---
-title: 저장소 할당 | Microsoft Docs
+title: 저장소를 할당 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1c9a317e57367b43a59219b830acfd8f0276e8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: da602e1613a6fafa86f1f6a701731c232aadfceb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695784"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417842"
 ---
 # <a name="assigning-storage"></a>저장소 할당
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35695784"
 
   응용 프로그램에서 SQL 문 실행 전이나 후에 결과의 저장소를 할당할 수 있습니다. 응용 프로그램에서 먼저 SQL 문을 준비하거나 실행하는 경우 결과의 저장소를 할당하기 전에 결과 집합을 조회할 수 있습니다. 예를 들어 결과 집합을 알 수 없는 경우 응용 프로그램에서는 결과의 저장소를 할당하기 전에 열의 수를 검색해야 합니다.  
   
- 데이터 열에 대 한 저장소를 연결 하려면 응용 프로그램이 호출 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)전달 합니다.  
+ 데이터의 열에 대 한 저장소에 연결 하려면 응용 프로그램 호출 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)전달 합니다.  
   
 -   데이터를 변환할 데이터 형식  
   
@@ -56,11 +56,11 @@ ms.locfileid: "35695784"
   
 -   열 단위 바인딩은 각 열이 고유한 변수 배열에 바인딩되면 완료됩니다.  
   
-     호출 하 여 지정 된 열 단위 바인딩은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 와 *특성* SQL_ATTR_ROW_BIND_TYPE로 설정 하 고 *ValuePtr* 을 sql_bind_by_column으로 설정 합니다. 모든 배열의 요소 수가 동일해야 합니다.  
+     호출 하 여 지정 된 열 단위 바인딩은 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 사용 하 여 *특성* SQL_ATTR_ROW_BIND_TYPE로 설정 하 고 *ValuePtr* SQL_BIND_BY_COLUMN으로 설정 합니다. 모든 배열의 요소 수가 동일해야 합니다.  
   
 -   행 단위 바인딩은 SQL 문의 모든 매개 변수가 매개 변수의 개별 변수를 포함하는 구조체 배열에 하나의 단위로 바인딩되면 완료됩니다.  
   
-     호출 하 여 지정 된 행 단위 바인딩은 **SQLSetStmtAttr** 와 *특성* SQL_ATTR_ROW_BIND_TYPE로 설정 하 고 *ValuePtr* 보관 하는 구조체의 크기로 설정 하는 결과 받을 변수 열을 설정 합니다.  
+     호출 하 여 지정 된 행 단위 바인딩은 **SQLSetStmtAttr** 사용 하 여 *특성* SQL_ATTR_ROW_BIND_TYPE로 설정 하 고 *ValuePtr* 보관 하는 구조체의 크기로 설정 합니다 결과 받을 변수 열을 설정 합니다.  
   
  또한 응용 프로그램에서는 SQL_ATTR_ROW_ARRAY_SIZE를 열 또는 행 배열의 요소 수로 설정하고 SQL_ATTR_ROW_STATUS_PTR 및 SQL_ATTR_ROWS_FETCHED_PTR을 설정합니다.  
   

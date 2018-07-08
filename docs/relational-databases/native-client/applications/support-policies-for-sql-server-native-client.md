@@ -2,12 +2,10 @@
 title: SQL Server Native Client에 대 한 지원 정책 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fcf6d00af82ce8a67fd3259d39118907713f97b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac3e18c78f1bf7c094d535ddb9ece9e0abbbe623
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950908"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409742"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client에 대한 지원 정책
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32950908"
   
  OLE DB Service Component를 사용하는 OLE DB 응용 프로그램은 연결 문자열에 `DataTypeCompatibility=80`을 지정하는 경우에만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용할 수 있습니다. 그러나 이후에 추가 된 기능은 없습니다 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이 경우에 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server Native Client 사용한 응용 프로그램 작성](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

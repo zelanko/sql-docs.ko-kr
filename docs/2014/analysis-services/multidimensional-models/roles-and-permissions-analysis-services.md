@@ -1,5 +1,5 @@
 ---
-title: 역할 및 사용 권한 (Analysis Services) | Microsoft Docs
+title: 역할 및 권한 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 253cd429c1a5fc5ac231173c88e6ee91b852625a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 506babae85a4b1a04efa7f12b8b40c2527e2e094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159404"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>역할 및 권한(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 작업, 개체 및 데이터에 대한 액세스 권한을 부여하는 역할 기준 권한 부여 모델을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 액세스하는 모든 사용자는 역할 컨텍스트 내에서 이를 수행해야 합니다.  
@@ -33,14 +33,14 @@ ms.locfileid: "36081682"
   
  역할을 만들고 별도 작업으로 멤버 자격을 지정하는 것이 일반적입니다. 대부분의 경우 모델 디자이너는 디자인 단계에서 역할을 추가합니다. 이렇게 하면 모든 역할 정의가 모델을 정의하는 프로젝트 파일에 반영됩니다. 일반적으로 데이터베이스는, 독립적인 작업으로 개발, 테스트, 실행할 수 있는 스크립트를 만드는 데이터베이스 관리자가 프로덕션 환경으로 전환하기 때문에 역할 멤버 자격은 나중에 전달됩니다.  
   
- 모든 권한 부여는 유효한 Windows 사용자 ID를 기반으로 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 Windows 인증만을 사용하여 사용자 ID를 인증합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 소유 인증 방법을 제공합니다. 참조 [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)합니다.  
+ 모든 권한 부여는 유효한 Windows 사용자 ID를 기반으로 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 Windows 인증만을 사용하여 사용자 ID를 인증합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 독점적인 인증 방법을 제공합니다. 참조 [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)합니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스의 모든 역할에서 각 Windows 사용자 및 그룹에 대해 권한은 부가적입니다. 한 역할은 사용자나 그룹에게 특정 태스크를 수행하거나 데이터를 볼 수 있는 사용 권한을 부여하지 않지만 다른 역할이 이 사용자나 그룹에게 이러한 사용 권한을 부여하는 경우 해당 사용자나 그룹은 작업을 수행하거나 데이터를 볼 수 있게 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [개체 및 작업에 대 한 액세스 권한을 부여 &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [개체 및 작업에 대 한 액세스 권한 부여 &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 -   [데이터베이스 권한 부여 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
@@ -48,19 +48,19 @@ ms.locfileid: "36081682"
   
 -   [처리 권한 부여 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
--   [정의 읽기 권한 부여 개체 메타 데이터에 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [정의 읽기 권한 부여 개체 메타 데이터에서 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [데이터 원본 개체에 대 한 권한을 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [데이터 원본 개체에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
 -   [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [차원에 대 한 사용 권한을 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
+-   [차원에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   
 -   [차원 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
   
 -   [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](../tabular-models/roles-ssas-tabular.md)  
+ [역할 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/roles-ssas-tabular.md)  
   
   

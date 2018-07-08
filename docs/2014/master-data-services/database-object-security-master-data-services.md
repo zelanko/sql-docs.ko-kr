@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 162d60e3a526c70a1624bfdd754076fb08566285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163504"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36088648"
 -   [시스템 설정 구성](#SysSettings)  
   
 ##  <a name="Staging"></a> 데이터 준비  
- 다음 표에서 각 보안 개체에는 이름의 일부로 "이름"이 있습니다. 이것은 엔터티를 만들 때 지정된 준비 테이블의 이름을 나타냅니다. 자세한 내용은 참조 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ 다음 표에서 각 보안 개체에는 이름의 일부로 "이름"이 있습니다. 이것은 엔터티를 만들 때 지정된 준비 테이블의 이름을 나타냅니다. 자세한 내용은 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |작업|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36088648"
 |새 관리자의 SID 확인|mdm.tblUser|SELECT|  
 |시스템 관리자 계정 변경|mdm.udpSecuritySetAdministrator|CREATE 문을 실행하기 전에|  
   
- 자세한 내용은 참조 [시스템 관리자 계정 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)합니다.  
+ 자세한 내용은 [시스템 관리자 계정 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)합니다.  
   
 ##  <a name="SysSettings"></a> 시스템 설정 구성  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 동작을 제어하기 위해 구성할 수 있는 시스템 설정이 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 이러한 설정을 조정할 수 있으며, UPDATE 권한이 있는 경우에는 mdm.tblSystemSetting 데이터베이스 테이블에서 이러한 설정을 직접 조정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)을 참조하세요.  

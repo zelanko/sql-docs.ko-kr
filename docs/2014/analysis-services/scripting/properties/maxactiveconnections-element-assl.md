@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MaxActiveConnections element
 ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df2dafc69a97d1beb954100413761c07878881d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71cc72a5b5b405a1548b08a331edbef10d0d3c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259349"
 ---
 # <a name="maxactiveconnections-element-assl"></a>MaxActiveConnections 요소(ASSL)
-  파생 된 요소에 의해 허용 되는 동시 연결의 최대 수를 포함 된 [DataSource](../data-type/datasource-data-type-assl.md) 데이터 형식입니다.  
+  파생 된 요소에서 허용 하는 동시 연결의 최대 수를 포함 합니다 [DataSource](../data-type/datasource-data-type-assl.md) 데이터 형식입니다.  
   
 ## <a name="syntax"></a>구문  
   

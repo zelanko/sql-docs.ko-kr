@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.queryparameters.mdx.f1
 ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
 caps.latest.revision: 3
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6bc4def68e52eea01a1b6f964773b526a8d0621a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e1233299298f6c585ff78730748b6bd27024915
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156924"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>쿼리 매개 변수 대화 상자(MDX)
   **및** 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 쿼리 매개 변수 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 집합, 차원 및 하위 큐브를 정의하는 데 사용되는 MDX 쿼리에 매개 변수를 추가합니다. **MDX 쿼리 작성기** 대화 상자에서 **매개 변수** 아이콘을 클릭하여 **쿼리 매개 변수** 대화 상자를 표시할 수 있습니다.  

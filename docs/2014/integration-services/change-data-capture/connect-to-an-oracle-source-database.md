@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aa337ffb0276c5dea37c49df71941ed130b501d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aadbab5ab6164ca68488cb8bc6dc6ed8e55aed3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164880"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle 원본 데이터베이스에 연결
   Oracle 원본 페이지를 사용하여 Oracle 원본 데이터베이스에 연결하는 데 필요한 정보를 제공할 수 있습니다. CDC 인스턴스는 연결된 Oracle 데이터베이스의 다시 실행 로그를 읽습니다.  

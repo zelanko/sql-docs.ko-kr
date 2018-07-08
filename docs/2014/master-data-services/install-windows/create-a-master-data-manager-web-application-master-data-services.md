@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68f682bb647c6c0da0a5d3154ce1db4ccae0551a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7d86986b25da0ab5e16cd06333f113c3d2ea06cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150654"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램은 마스터 데이터 작업을 하는 사용자 및 MDS를 구성하고 관리하는 관리자를 위한 인터페이스를 제공합니다.  

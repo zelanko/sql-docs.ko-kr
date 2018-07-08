@@ -7,7 +7,7 @@ ms.prod_service: database-engine
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,31 +18,31 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e6a0f57c9f04bfa6ee839a443d7b6601ac14801
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec1a926d09258a4c6ec02665ad0fd142e15a05fa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950458"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408012"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 참조 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)합니다. FILESTREAM에 대 한 ODB 지원을 설명 하는 샘플을 보려면 [송신 및 수신 데이터 증분 방식으로 FILESTREAM과 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)합니다. FILESTREAM에 대 한 ODB 지원을 설명 하는 샘플을 보려면 [송신 및 수신 데이터 증분 방식으로 FILESTREAM을 사용 하 여 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)합니다.  
   
- 보내고 받을 **varbinary (max)** 2GB 보다 큰 값을 응용 프로그램으로 SQLBindParameter를 사용 하 여 매개 변수를 바인딩해야 합니다 *ColumnSize* 로 설정 **SQL_SS_LENGTH_UNLIMITED**, 내용을 설정 하 고 *StrLen_or_IndPtr* 를 **SQL_DATA_AT_EXEC** SQLExecDirect 또는 SQLExecute 하기 전에.  
+ 보내고 받을 **varbinary (max)** 2GB 보다 큰 값을 응용 프로그램으로 SQLBindParameter를 사용 하 여 매개 변수를 바인딩해야 합니다 *ColumnSize* 로 **SQL_SS_LENGTH_UNLIMITED**의 내용을 설정 하 고 *StrLen_or_IndPtr* 하 **SQL_DATA_AT_EXEC** SQLExecDirect 또는 SQLExecute 하기 전에 합니다.  
   
- 로 모든 실행 시 데이터 매개 변수와 함께 데이터 함께 제공 SQLParamData 및 SQLPutData 합니다.  
+ 으로 실행 시 데이터 매개 변수를 사용 하 여 데이터를 제공 됩니다 SQLParamData 및 SQLPutData를 사용 하 여.  
   
- 열 SQLBindCol과 바인딩되지 않은 경우 FILESTREAM 열에 대 한 청크에서 데이터를 인출 하는 SQLGetData를 호출할 수 있습니다.  
+ SQLGetData 열 SQLBindCol과 바인딩되지 않은 경우 FILESTREAM 열에 대 한 청크에서 데이터를 가져오기 위해 호출할 수 있습니다.  
   
  SQLBindCol과 바인딩된 경우 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
- 바인딩된 열에서 SQLFetch를 호출 하면 버퍼가 전체 값을 보유할 수 있을 만큼 큰 경우 "데이터 잘림" 경고가 나타납니다. 이 경고를 무시 하 고 SQLParamData 및 SQLPutData 호출 에서도이 바인딩된 열의 데이터를 업데이트 합니다. SQLBindCol과 바인딩된 경우에 SQLSetPos를 사용 하 여 FILESTREAM 데이터를 업데이트할 수 있습니다.  
+ 바인딩된 열에 SQLFetch를 호출 하는 경우 버퍼 전체 값을 보유할 만큼 크지 않은 경우 "데이터가 잘렸습니다." 경고가 나타납니다. 이 경고를 무시 하 고 SQLParamData 및 SQLPutData 호출을 사용 하 여이 바인딩된 열의 데이터를 업데이트 합니다. SQLBindCol과 바인딩된 경우 SQLSetPos를 사용 하 여 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- FILESTREAM 열 똑같은 방식으로 동작 **varbinary (max)** 열 이지만 없이 크기를 제한 합니다. 이러한 열은 SQL_VARBINARY로 바인딩됩니다. 그러나 이미지 열에 사용되는 SQL_LONGVARBINARY에는 가지 제한 사항이 있습니다. 예를 들어 SQL_LONGVARBINARY는 출력 매개 변수로 사용할 수 없습니다. 다음 예에서는 FILESTREAM 열에 대한 직접 NTFS 액세스를 보여 줍니다. 이러한 예에서는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드가 데이터베이스에서 실행되었다고 가정합니다.  
+ FILESTREAM 열와 똑같이 동작 **varbinary (max)** 제한 하지만 크기는 열입니다. 이러한 열은 SQL_VARBINARY로 바인딩됩니다. 그러나 이미지 열에 사용되는 SQL_LONGVARBINARY에는 가지 제한 사항이 있습니다. 예를 들어 SQL_LONGVARBINARY는 출력 매개 변수로 사용할 수 없습니다. 다음 예에서는 FILESTREAM 열에 대한 직접 NTFS 액세스를 보여 줍니다. 이러한 예에서는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드가 데이터베이스에서 실행되었다고 가정합니다.  
   
 ```  
 CREATE TABLE fileStreamDocs(  
@@ -272,7 +272,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

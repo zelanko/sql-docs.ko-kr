@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10532 (Database Engine error)
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 690a5da7eb3ed2da417fc0b5baf53d6668e11f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: be808412900aed583450824dca873deea4697f40
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081584"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409481"
 ---
 # <a name="mssqlserver10532"></a>MSSQLSERVER_10532
     
@@ -34,7 +33,7 @@ ms.locfileid: "36081584"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_NO_ELIGIBLE_STMT|  
-|메시지 텍스트|계획 지침 ' %. \*l s으로 지정 된 일괄 처리 또는 모듈 `@plan_handle` 계획 지침에 해당 되는 문을 포함 하지 않습니다. `@plan_handle`에 다른 값을 지정하십시오.|  
+|메시지 텍스트|계획 지침 ' %. \*l s로 지정 된 일괄 처리 또는 모듈 `@plan_handle` 계획 지침에 대 한 적합 한 문을 포함 하지 않습니다. `@plan_handle`에 다른 값을 지정하십시오.|  
   
 ## <a name="explanation"></a>설명  
  `@plan_handle`로 지정된 일괄 처리 또는 모듈이 계획 지침에 적합한 문을 포함하지 않습니다.  

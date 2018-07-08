@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d9895e00405c4ebe6bc684c3c2b3acc4e2704478
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 307f14f06354195147f32cbcf338d4b04e852b9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156884"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 전환 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어**의 **상태 전환** 탭에는 선택한 클러스터의 특성-값 쌍 또는 상태 간의 전환이 자세히 표시됩니다.  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161664"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 대해 마이닝 모델 콘텐츠를 일반적인 설명은 참조 하십시오. [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
+  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 대해 마이닝 모델 콘텐츠를 일반적인 설명은 참조 하세요. [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
   
 ##  <a name="bkmk_Top"></a> 의사 결정 트리 모델의 구조 이해  
  의사 결정 트리 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드가 있습니다. 이 부모 노드 아래에는 선택한 예측 가능 특성을 나타내는 독립적인 트리가 있습니다. 예를 들어 고객이 제품을 구매할지 여부를 예측하도록 의사 결정 트리 모델을 설정하고 성별 및 수입에 대한 입력을 제공할 경우, 해당 모델은 성별 및 수입과 관련된 조건에 따라 나뉘는 여러 분기를 사용하여 구매 특성에 대한 단일 트리를 만듭니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36089442"
 > [!NOTE]  
 >  모델에 여러 개의 트리가 포함되어 있는 경우 **Microsoft 트리 뷰어**에서는 한 번에 하나의 트리만 볼 수 있습니다. 그러나 **일반 콘텐츠 트리 뷰어** 에서는 동일한 모델의 모든 트리가 동시에 표시됩니다.  
   
- ![의사 결정 트리에 대 한 모델 콘텐츠의 구조](../media/modelcontentstructure-dt.gif "한 의사 결정 트리에 대 한 모델 콘텐츠 구조")  
+ ![의사 결정 트리 모델 콘텐츠의 구조](../media/modelcontentstructure-dt.gif "한 의사 결정 트리에 대 한 모델 콘텐츠 구조")  
   
  예측 가능한 각 특성의 트리에는 선택한 입력 열이 예측 가능한 해당 특성의 결과에 미친 영향을 설명하는 정보가 들어 있습니다. 각 트리의 맨 처음에는 예측 가능한 특성이 포함된 노드(NODE_TYPE = 9)가 있고 그 다음에는 입력 특성을 나타내는 일련의 노드(NODE_TYPE = 10)가 있습니다. 특성은 사례 수준 열이나 중첩 테이블 열의 값에 해당합니다. 중첩 테이블 열의 값은 일반적으로 중첩 테이블의 `Key` 열에 있는 값입니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36089442"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 연속 특성을 버킷팅하기 위한 방법을 자동으로 선택합니다. 그러나 사용자가 마이닝 구조 열의 내용 유형을 `Discretized`로 설정한 다음 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성을 설정하여 입력의 연속 값이 불연속화되는 방식을 제어할 수도 있습니다.  
   
 ##  <a name="bkmk_ModelContent"></a> 의사 결정 트리 모델에 대한 모델 콘텐츠  
- 이 섹션에서는 의사 결정 트리 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다. 마이닝 모델 용어 고 스키마 행 집합의 범용 열에 대 한 정보를 참조 하십시오. [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다.  
+ 이 섹션에서는 의사 결정 트리 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다. 마이닝 모델 용어 고 스키마 행 집합의 범용 열에 대 한 정보를 참조 하세요 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다.  
   
  MODEL_CATALOG  
  모델이 저장되는 데이터베이스의 이름입니다.  
@@ -180,7 +180,7 @@ ms.locfileid: "36089442"
 |Age >= 30|Age >= 30 and Gender = Male|  
 ||Age >= 30 and Gender = Female|  
 |Age < 30|Age < 30 and Gender = Male|  
-||Age \< 30, 성별 = 여 성으로|  
+||Age \< 30 and Gender = 여 성으로|  
   
  예측에 의사 결정 트리 모델을 사용할 경우 모델에서는 사용자가 제공한 특성을 인수로 사용하고 특성의 경로를 따라 트리의 하위 수준으로 이동합니다. 일반적으로 모든 예측은 리프로 이동하고 내부 노드는 분류에만 사용됩니다.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36089442"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|특정 노드를 부모 노드를 기준으로 구별하는 특성을 표시합니다. 노드 캡션은 분할 조건을 기반으로 모집단의 하위 세그먼트를 정의합니다. 예를 들어 분할 [Age]에 경우 3 방향 분할 된, 세 명의 자식 노드 수에 대 한 노드 캡션은 "[Age] < 40", "40 < = [Age] \< 50", "[Age] > = 50" 입니다.|  
+|**NODE_CAPTION**|특정 노드를 부모 노드를 기준으로 구별하는 특성을 표시합니다. 노드 캡션은 분할 조건을 기반으로 모집단의 하위 세그먼트를 정의합니다. 예를 들어 분할이 [Age]에 대 한 3 방향 분할을 세 명의 자식 노드 수에 대 한 노드 캡션은 "[Age] < 40", "40 < = [Age] \< 50", "[Age] > = 50" 입니다.|  
 |**NODE_DESCRIPTION**|모델 부모 노드에서 시작하여 해당 노드를 다른 노드와 구별해 주는 특성의 전체 목록을 포함합니다. 예를 들어 Product name = Apple 및 Color = Red 특성이 있습니다.|  
   
 ###  <a name="NodeRule"></a> 노드 규칙 및 한계 규칙  
@@ -229,7 +229,7 @@ ms.locfileid: "36089442"
 |Age < 30|40|Age < 30 and Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 and Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 모든 모델에서 가능한 누락 값을 설명하기 위해 약간의 조정이 이루어집니다. 연속 특성의 경우 각 값 또는 값의 범위로 표현 되는 상태 (예를 들어 Age \<30 일의 보존 기간 = 30 및 Age > 30) 및 확률은 다음과 같이 계산 됩니다: 상태가 존재 (값 = 1), 다른 상태가 존재 (값 = 0), 상태는 `Missing`. 누락 값을 나타내기 위해 확률을 조정하는 방법에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
+ 모든 모델에서 가능한 누락 값을 설명하기 위해 약간의 조정이 이루어집니다. 연속 특성의 경우 각 값 또는 값의 범위로 표현 되는 상태 (예를 들어 Age \<30 일 기간 = 30 및 Age > 30) 확률은 다음과 같이 계산 됩니다: 상태가 됩니다 (값 = 1), 다른 상태가 존재 (값 = 0), 상태가 `Missing`. 누락 값을 나타내기 위해 확률을 조정하는 방법에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
  각 노드에 대한 확률은 다음과 같이 분포에서 거의 직접 계산됩니다.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "36089442"
   
 |분할 조건|노드의 결과|  
 |---------------------|--------------------|  
-|n이 있는 경우 \< 5|관계를 수식 1로 표현할 수 있습니다.|  
+|n 경우 \< 5|관계를 수식 1로 표현할 수 있습니다.|  
 |n이 5와 10 사이에 있는 경우|수식 없음|  
 |n > 10일 경우|관계를 수식 2로 표현할 수 있습니다.|  
   

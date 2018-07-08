@@ -1,5 +1,5 @@
 ---
-title: 테이블 별칭으로 ORDER BY 절의 열 별칭을 붙일 수 없습니다 | Microsoft Docs
+title: ORDER BY 절의 열 별칭에에서 테이블 별칭을 붙일 수 없습니다 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18c65604efb2d1b0ff93d09b8d03f7ee6cb213cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bb0c12c4112383599b3f6ec67c7a097563a5944c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210713"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 절의 열 별칭에 접두사로 테이블 별칭을 붙일 수 없습니다.
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 ORDER BY 절의 열 별칭에 접두사로 테이블 별칭을 붙일 수 없습니다.  
@@ -76,6 +76,6 @@ ORDER BY p.LastName
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

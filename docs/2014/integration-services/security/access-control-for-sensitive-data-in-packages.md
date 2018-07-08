@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
 - packages [Integration Services], security
@@ -21,13 +21,13 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8cf68cbe7e1599bc34d891dfd010ba2d81c7a965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277269"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터를 보호하기 위해 중요한 데이터만 보호하거나 패키지의 모든 데이터를 보호하는 패키지 수준을 설정할 수 있습니다. 또한 패키지 데이터를 암호 또는 사용자 키로 암호화하거나 데이터베이스를 사용하여 암호화할 수도 있습니다. 패키지 보호 수준은 반드시 정적이지 않으며 패키지의 수명 주기 동안 변경됩니다. 즉, 개발 과정에서 설정하는 보호 수준과 배포 과정에서 설정하는 보호 수준이 서로 다른 경우가 자주 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36081405"
 |보호 수준|Description|  
 |----------------------|-----------------|  
 |중요한 정보 저장 안 함(`DontSaveSensitive`)|패키지를 저장할 때 중요한 속성의 값을 패키지에서 제외합니다. 이 보호 수준은 암호화는 사용하지 않지만 중요한 것으로 표시된 속성이 패키지로 저장되는 것을 방지하여 다른 사용자가 중요한 데이터를 사용하지 못하도록 합니다. 다른 사용자가 패키지를 여는 경우 중요한 정보는 빈칸으로 대체되므로 해당 사용자가 중요한 정보를 지정해야 합니다.<br /><br /> **dtutil** 유틸리티(dtutil.exe)에서 사용할 경우 이 보호 수준은 값 0에 해당합니다.|  
-|암호로 모두 (`EncryptAllWithPassword`)|암호를 사용하여 전체 패키지를 암호화합니다. 패키지를 만들거나 내보낼 때 사용자가 입력한 암호를 사용하여 패키지를 암호화합니다. 사용자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 열거나 **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지를 실행할 때 패키지 암호를 입력해야 합니다. 암호를 입력하지 않으면 패키지를 실행할 수 없습니다.<br /><br /> **dtutil** 유틸리티에서 사용할 경우 이 보호 수준은 값 3에 해당합니다.|  
+|암호로 모두 암호화 (`EncryptAllWithPassword`)|암호를 사용하여 전체 패키지를 암호화합니다. 패키지를 만들거나 내보낼 때 사용자가 입력한 암호를 사용하여 패키지를 암호화합니다. 사용자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 열거나 **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지를 실행할 때 패키지 암호를 입력해야 합니다. 암호를 입력하지 않으면 패키지를 실행할 수 없습니다.<br /><br /> **dtutil** 유틸리티에서 사용할 경우 이 보호 수준은 값 3에 해당합니다.|  
 |사용자 키로 모두 암호화 (`EncryptAllWithUserKey`)|현재 사용자 프로필을 기반으로 하는 키를 사용하여 전체 패키지를 암호화합니다. 패키지를 만들거나 내보낸 사용자만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 열거나 **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지를 실행할 수 있습니다.<br /><br /> **dtutil** 유틸리티에서 사용할 경우 이 보호 수준은 값 4에 해당합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 사용자 키를 사용하는 보호 수준에 DPAPI 표준을 사용합니다. DPAPI에 대한 자세한 내용은 [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)에 있는 MSDN Library를 참조하세요.|  
 |암호로 중요한 정보 암호화(`EncryptSensitiveWithPassword`)|암호를 사용하여 패키지에서 중요한 속성의 값만 암호화합니다. 이 암호화에는 DPAPI가 사용됩니다. 중요한 데이터는 패키지의 일부로 저장되지만 패키지를 만들거나 내보낼 때 사용자가 입력한 암호를 사용하여 암호화됩니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 열려면 패키지 암호를 입력해야 합니다. 임호를 입력하지 않으면 패키지의 중요한 정보가 제외되며 현재 사용자가 중요한 정보에 새 값을 입력해야 합니다. 암호를 입력하지 않으면 패키지를 실행할 수 없습니다. 암호 및 명령줄 실행에 대한 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하십시오.<br /><br /> **dtutil** 유틸리티에서 사용할 경우 이 보호 수준은 값 2에 해당합니다.|  
 |사용자 키로 중요 정보 암호화(`EncryptSensitiveWithUserKey`)|현재 사용자 프로필을 기반으로 하는 키를 사용하여 패키지에서 중요한 속성의 값만 암호화합니다. 동일한 프로필을 사용하는 동일한 사용자만 패키지를 로드할 수 있습니다. 다른 사용자가 패키지를 여는 경우 중요한 정보는 빈칸으로 대체되므로 현재 사용자가 중요한 데이터에 새 값을 지정해야 합니다. 사용자가 패키지를 실행하려고 시도하는 경우 패키지 실행이 실패합니다. 이 암호화에는 DPAPI가 사용됩니다.<br /><br /> **dtutil** 유틸리티에서 사용할 경우 이 보호 수준은 값 1에 해당합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 사용자 키를 사용하는 보호 수준에 DPAPI 표준을 사용합니다. DPAPI에 대한 자세한 내용은 [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408)에 있는 MSDN Library를 참조하세요.|  
@@ -68,7 +68,7 @@ ms.locfileid: "36081405"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>보호 수준 설정 및 SSISDB 카탈로그  
  SSISDB 카탈로그에서는 `ServerStorage` 보호 수준입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 경우 카탈로그에서 패키지 데이터와 중요한 값을 자동으로 암호화합니다. 카탈로그에서는 검색하는 데이터의 암호도 자동으로 해제합니다.  
   
- 프로젝트 (.ispac 파일)을 내보내면는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 파일 시스템에 사용 되는 서버 시스템을 보호 수준을 자동으로 변경 `EncryptSensitiveWithUserKey`합니다. 사용 하 여 프로젝트를 가져오는 경우는 **Integration Services 프로젝트 가져오기 마법사** 에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], **ProtectionLevel** 속성에는 **속성** 창 값이 표시 `EncryptSensitiveWithUserKey`합니다.  
+ 프로젝트 (.ispac 파일)을 내보내면 합니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 파일 시스템에 서버 시스템 보호 수준이 자동으로 변경 `EncryptSensitiveWithUserKey`합니다. 사용 하 여 프로젝트를 가져오는 경우는 **Integration Services 프로젝트 가져오기 마법사** 에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **ProtectionLevel** 속성에는 **속성** 창 값이 표시 `EncryptSensitiveWithUserKey`합니다.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>패키지 수명 주기 기반의 보호 수준 설정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 보호 수준은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지 개발을 시작할 때 처음 설정할 수 있습니다. 나중에 패키지를 배포하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 패키지를 가져오거나 또는 내보낼 때 그리고 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템으로 복사할 때 패키지 보호 수준을 업데이트할 수 있습니다. 예를 들어 사용자 키 보호 수준 옵션 중 하나를 사용하여 사용자 컴퓨터에 패키지를 만들고 저장한 경우 해당 패키지를 다른 사용자에게 전달하기 전에 보호 수준을 변경해야 합니다. 그렇지 않으면 패키지를 열 수 없습니다.  

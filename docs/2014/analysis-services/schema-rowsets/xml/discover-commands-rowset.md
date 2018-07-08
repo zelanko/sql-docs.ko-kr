@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14c4eb9ac8fe63422ee29f5880a8a5f1eb6329bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157324"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 행 집합
   서버에 열려 있는 연결의 현재 실행 중이거나 마지막으로 실행된 명령에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36090957"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_COMMANDS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_COMMANDS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

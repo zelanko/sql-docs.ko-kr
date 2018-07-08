@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c11ecb4c3a46aa008600eee89ffb528fd66dcc68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259159"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>옵션(텍스트 편집기 - XML - 기타 페이지)
   **옵션** 대화 상자를 사용하여 XML 편집기의 자동 완성 및 스키마 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더를 확장한 다음 **XML** 과 **기타** 를 차례로 클릭하면 볼 수 있습니다.  
@@ -44,11 +44,11 @@ ms.locfileid: "36082739"
  스키마와 DTD(문서 유형 정의)를 HTTP 위치에서 자동으로 다운로드합니다. 자동 프록시 서버 검색을 사용하는 경우 이 기능은 System.Net을 사용합니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
 ## <a name="outlining"></a>개요  
- **파일을 열 때 개요 모드로**  
+ **파일을 열면 개요 모드를 시작 합니다.**  
  파일을 열 때 개요 기능을 설정합니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
 ## <a name="caching"></a>캐싱  
  **스키마**  
- 스키마 캐시의 위치를 지정합니다. 찾아보기 단추(...)를 클릭하면 현재 스키마 캐시 위치가 새 창에서 열립니다. 기본 위치는  *\<Management Studio 설치 디렉터리 >* \Xml\Schemas입니다.  
+ 스키마 캐시의 위치를 지정합니다. 찾아보기 단추(...)를 클릭하면 현재 스키마 캐시 위치가 새 창에서 열립니다. 기본 위치가  *\<Management Studio 설치 디렉터리 >* \Xml\Schemas입니다.  
   
   

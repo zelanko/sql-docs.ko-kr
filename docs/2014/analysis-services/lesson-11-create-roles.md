@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278509"
 ---
 # <a name="lesson-12-create-roles"></a>12단원: 역할 만들기
   이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 Windows 사용자로만 액세스를 제한함으로써 모델 데이터베이스 개체 및 데이터에 보안을 제공합니다. 각 역할은 없음, 읽기, 읽기 및 처리, 처리 또는 관리자라는 단일 사용 권한으로 정의됩니다. 모델을 제작하는 중에 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다. 모델을 배포한 후 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](tabular-models/roles-ssas-tabular.md)을 참조하세요.  
@@ -52,7 +52,7 @@ ms.locfileid: "36080542"
   
      없음 권한을 가진 새 역할이 목록에 추가됩니다.  
   
-3.  새 역할을 선택한 다음 클릭은 **이름** 열을 역할 이름 바꾸기 `Internet Sales Manager`합니다.  
+3.  새 역할을 선택한 다음 클릭 합니다 **이름** 열에서 역할 이름 바꾸기 `Internet Sales Manager`합니다.  
   
 4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 다음 **읽기** 권한을 선택합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36080542"
   
      없음 권한을 가진 새 역할이 목록에 추가됩니다.  
   
-3.  새 역할을 선택한 다음 클릭은 **이름** 열을 역할 이름 바꾸기 `Internet Sales US`합니다.  
+3.  새 역할을 선택한 다음 클릭 합니다 **이름** 열에서 역할 이름 바꾸기 `Internet Sales US`합니다.  
   
 4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 다음 **읽기** 권한을 선택합니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36080542"
   
 1.  **역할 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
-2.  새 역할을 선택한 다음 클릭은 **이름** 열을 역할 이름 바꾸기 `Internet Sales Administrator`합니다.  
+2.  새 역할을 선택한 다음 클릭 합니다 **이름** 열에서 역할 이름 바꾸기 `Internet Sales Administrator`합니다.  
   
 3.  **사용 권한** 열에서 드롭다운 목록을 클릭한 다음 **관리자** 권한을 선택합니다.  
   

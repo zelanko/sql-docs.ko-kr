@@ -1,12 +1,12 @@
 ---
-title: 로그 장기 실행 쿼리 (ODBC) | Microsoft Docs
+title: 장기 실행 쿼리 (ODBC) 로그 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dab917b4adbbb186b916f68f74481b4a3ccbf8b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701024"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431812"
 ---
-# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>프로 파일링 ODBC 드라이버 성능 데이터-장기 실행 쿼리 로그
+# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>프로 파일링 ODBC 드라이버 성능 데이터-장기 실행 쿼리 기록
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,33 +35,33 @@ ms.locfileid: "35701024"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>ODBC 관리자를 사용하여 장기 실행 쿼리를 기록하려면  
   
-1.  **제어판**를 두 번 클릭 **관리 도구** 두 번 클릭 하 고 **데이터 원본 (ODBC)** 합니다. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
+1.  **Control Panel**를 두 번 클릭 **관리 도구** 두 번 클릭 **데이터 원본 (ODBC)** 합니다. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
   
-2.  클릭는 **사용자 DSN**, **시스템 DSN**, 또는 **파일 DSN** 탭 합니다.  
+2.  클릭 합니다 **사용자 DSN**를 **시스템 DSN**, 또는 **파일 DSN** 탭 합니다.  
   
 3.  장기 실행 쿼리를 기록할 데이터 원본을 클릭합니다.  
   
 4.  클릭 **구성**합니다.  
   
-5.  Microsoft SQL Server DSN 구성 마법사를 사용 하 여 페이지를 이동 **장기 실행 쿼리 로그 파일에 저장**합니다.  
+5.  Microsoft SQL Server DSN 구성 마법사에서를 사용 하 여 페이지를 탐색할 **장기 실행 쿼리 로그 파일에 저장**합니다.  
   
-6.  선택 **장기 실행 쿼리 로그 파일에 저장**합니다. 상자에서 장기 실행 쿼리를 기록할 파일 이름을 입력합니다. 필요에 따라 **찾아보기** 쿼리 로그에 대 한 파일 시스템에서 찾아보려면 합니다.  
+6.  선택 **장기 실행 쿼리 로그 파일에 저장**합니다. 상자에서 장기 실행 쿼리를 기록할 파일 이름을 입력합니다. 필요에 따라 클릭 **찾아보기** 쿼리 로그에 대 한 파일 시스템에서 찾아보려면 합니다.  
   
-7.  밀리초 단위로 쿼리 시간 제한 간격을으로 설정 된 **장기 쿼리 시간 (밀리초)** 상자 합니다.  
+7.  밀리초, 쿼리 제한 시간 간격을 설정 합니다 **장기 쿼리 시간 (밀리초)** 상자입니다.  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>장기 실행 쿼리 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 및 장기 실행 쿼리 로그 파일의 전체 경로 파일 이름을 사용 합니다. 예를 들어:  
+1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG 및 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 합니다. 예를 들어:  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_INTERVAL 및 제한 시간 간격 (밀리초)로 설정 합니다.  
+2.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_INTERVAL와 제한 시간 간격 (밀리초)로 설정 합니다.  
   
-3.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 장기 실행 쿼리 기록을 시작 하려면 SQL_COPT_SS_PERF_QUERY 및 SQL_PERF_START를 사용 합니다.  
+3.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 장기 실행 쿼리 기록을 시작 하려면 SQL_COPT_SS_PERF_QUERY 및 SQL_PERF_START를 사용 하 여 합니다.  
   
-4.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 장기 실행 쿼리 기록을 중지 하려면 SQL_COPT_SS_PERF_QUERY 및 SQL_PERF_STOP을 사용 합니다.  
+4.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 장기 실행 쿼리 기록을 중지 하려면 SQL_COPT_SS_PERF_QUERY 및 SQL_PERF_STOP을 사용 하 여 합니다.  
   
 ## <a name="example"></a>예제  
  AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 응용 프로그램으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  

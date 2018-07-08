@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a7ffd71c2d54d22156bb5af1d4bfbe14640349f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 839d6ca721129dc94c51b998ecbf2fec02ee6fcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277729"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 이벤트 클래스
   **Exchange Spill** 이벤트 클래스는 병렬 쿼리 계획의 통신 버퍼가 **tempdb** 데이터베이스에 임시적으로 기록되었음을 나타냅니다. 이는 매우 드물게 발생하며 쿼리 계획에 다중 범위 검색이 있는 경우에만 발생합니다.  
   
- 일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 와 같은 식을 사용 하 여 다중 범위를 가져올 수는 또는 (T.a > 10 AND T.a \< 20) 또는 (T.a > 100 AND T.a \< 120). 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
+ 일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 또는 여러 범위와 같은 식을 사용 하 여 얻을 수 있습니다 (T.a > 10 AND T.a \< 20) 또는 (T.a > 100 AND T.a \< 120). 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
   
  이러한 쿼리의 쿼리 계획에 여러 **Parallelism** 연산자가 있는 경우 **Parallelism** 연산자가 사용하는 메모리 통신 버퍼는 꽉 차게 되고 쿼리 실행 진행이 중지되는 상황이 발생할 수 있습니다. 이런 경우에는 **Parallelism** 연산자 중 하나가 자신의 출력 버퍼를 **tempdb** 에 기록하여(이 연산을 *exchange spill*이라고 함) 일부 입력 버퍼에서 행을 사용할 수 있습니다. 결국 소비자가 이러한 행을 사용할 준비가 되면 기록된 행이 소비자에게 반환됩니다.  
   

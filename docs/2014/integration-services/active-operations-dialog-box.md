@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: adf25cd2194e1a02877c38a15d81d8697427ad76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151124"
 ---
 # <a name="active-operations-dialog-box"></a>활성 작업 대화 상자
   **활성 작업** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 작업(예: 배포, 유효성 검사 및 패키지 실행)의 상태를 볼 수 있습니다. 이 데이터는 SSISDB 카탈로그에 저장됩니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "36080465"
   
  **수행 작업**  
   
-1.  [활성 작업 대화 상자 열기](#open_dialog)  
+1.  [활성 작업 대화 상자를 열려면](#open_dialog)  
   
 2.  [옵션 구성](#options)  
   
 ##  <a name="open_dialog"></a> 활성 작업 대화 상자 열기  
   
-1.  열기 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  
+1.  오픈 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  
   
 2.  Microsoft SQL Server 데이터베이스 엔진 연결  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36080465"
   
 ### <a name="options"></a>변수  
  **형식**  
- 작업 유형을 지정합니다. 다음에 대 한 가능한 값은는 **형식** TRANSACT-SQL의 operations_type 열에 해당 값과 필드 `catalog.operations` 보기.  
+ 작업 유형을 지정합니다. 다음의 가능한 값은는 **형식** 필드 및 해당 TRANSACT-SQL operations_type 열에 값 `catalog.operations` 보기.  
   
 |||  
 |-|-|  

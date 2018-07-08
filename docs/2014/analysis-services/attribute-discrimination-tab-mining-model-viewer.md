@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43ce0c215ac82eff64b688d6004dfd9c7af66266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e661e6a993639d3eac86bd5fb45f607ba8d346f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161524"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>특성 판별 탭(마이닝 모델 뷰어)
   **특성 판별** 탭을 사용하여 입력 특성의 상태를 비교하고 결과 특성과의 관련성을 확인할 수 있습니다. 선택한 두 예측 가능한 특성 간의 가장 큰 차이를 나타내는 특성 값이 먼저 나열됩니다.  
@@ -54,8 +54,8 @@ ms.locfileid: "36090571"
 |-----------|-----------------|  
 |**특성**|마이닝 모델의 입력 특성입니다.|  
 |**값**|**특성**에 나열된 특성의 상태입니다.|  
-|**유사성 \<값 1 >**|막대는 현재 특성과 값이 **값 1**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
-|**유사성 \<값 2 >**|막대는 현재 특성과 값이 **값 2**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
+|**유사성 \<1 값 >**|막대는 현재 특성과 값이 **값 1**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
+|**유사성 \<2 값 >**|막대는 현재 특성과 값이 **값 2**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

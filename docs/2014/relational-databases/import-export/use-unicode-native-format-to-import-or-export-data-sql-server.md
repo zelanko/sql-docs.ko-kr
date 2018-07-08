@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310234920939cfea19d6d17370bc3c427ff3fbcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 631e857146b99ad9ae05b94b7a64adc0b27fff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150854"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)
   유니코드 네이티브 형식은 한 곳의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 다른 설치로 정보를 복사해야 하는 경우 유용합니다. 비문자 형식의 데이터에 네이티브 형식을 사용하면 문자 형식과 다른 데이터 형식 간의 불필요한 변환을 막고 시간을 절약할 수 있습니다. 모든 문자 형식의 데이터에 유니코드 문자 형식을 사용하면 다른 코드 페이지를 사용하는 서버 간에 데이터를 대량 로드할 때 확장 문자의 손실을 방지할 수 있습니다. 유니코드 네이티브 형식의 데이터 파일은 어떤 대량 가져오기 방법으로도 읽을 수 있습니다.  
   
- 확장 또는 DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴트 사이에 대량의 데이터를 전송하는 경우 유니코드 네이티브 형식을 사용하는 것이 좋습니다. 비문자 데이터의 경우 유니코드 네이티브 형식은 네이티브(데이터베이스) 데이터 형식을 사용합니다. 문자 데이터에 대 한 같은 `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`, 및 `ntext`, 유니코드 네이티브 형식은 유니코드 문자 데이터 형식을 사용 합니다.  
+ 확장 또는 DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴트 사이에 대량의 데이터를 전송하는 경우 유니코드 네이티브 형식을 사용하는 것이 좋습니다. 비문자 데이터의 경우 유니코드 네이티브 형식은 네이티브(데이터베이스) 데이터 형식을 사용합니다. 문자 데이터용와 같은 `char`, `nchar`, `varchar`, `nvarchar`, `text`를 `varchar(max)`, `nvarchar(max)`, 및 `ntext`, 유니코드 네이티브 형식은 유니코드 문자 데이터 형식을 사용 합니다.  
   
- 유니코드 네이티브 형식의 데이터 파일에 SQLVARIANT로 저장된 `sql_variant` 데이터는 `char` 및 `varchar` 값이 `nchar` 및 `nvarchar`로 변환되어 영향을 받은 열에 두 배의 저장 공간이 필요하다는 점을 제외하고 네이티브 형식의 데이터 파일과 같은 방법으로 작동합니다. 원본 메타 데이터는 유지 되 고 값이 원래도 다시 변환 됩니다 `char` 및 `varchar` 테이블 열으로 대량 가져오기를 데이터 형식입니다.  
+ 유니코드 네이티브 형식의 데이터 파일에 SQLVARIANT로 저장된 `sql_variant` 데이터는 `char` 및 `varchar` 값이 `nchar` 및 `nvarchar`로 변환되어 영향을 받은 열에 두 배의 저장 공간이 필요하다는 점을 제외하고 네이티브 형식의 데이터 파일과 같은 방법으로 작동합니다. 원래 메타 데이터는 유지 되 고 값은 원래의 다시 변환할 `char` 고 `varchar` 테이블 열으로 대량 가져오기를 수행 하면 데이터 형식입니다.  
   
 ## <a name="command-options-for-unicode-native-format"></a>유니코드 네이티브 형식의 명령 옵션  
  **bcp**, BULK INSERT 또는 INSERT ... SELECT \* FROM OPENROWSET(BULK...)를 사용하여 테이블로 유니코드 원시 형식 데이터를 가져올 수 있습니다. **bcp** 명령 또는 BULK INSERT 문의 경우 명령줄에서 데이터 형식을 지정할 수 있습니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "36080864"
   
 |Command|옵션|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|로 인해는 **bcp** 유틸리티가 네이티브 (데이터베이스) 데이터를 사용 하는 유니코드 네이티브 형식을 사용 하도록 모든 비문자 데이터 및 모든 문자에 대 한 유니코드 문자 데이터 형식에 대 한 형식 (`char`, `nchar`, `varchar`, `nvarchar`, `text`, 및 `ntext`) 데이터입니다.|  
+|**bcp**|**-N**|발생 합니다 **bcp** 유틸리티가 네이티브 (데이터베이스) 데이터를 사용 하는 유니코드 네이티브 형식으로 사용 하도록 모든 비문자 데이터 및 모든 문자에 대 한 유니코드 문자 데이터 형식에 대 한 형식 (`char`, `nchar`, `varchar`, `nvarchar`하십시오 `text`, 및 `ntext`) 데이터.|  
 |BULK INSERT|DATAFILETYPE **='** widenative **'**|데이터를 대량으로 가져올 때 유니코드 네이티브 형식을 사용합니다.|  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  

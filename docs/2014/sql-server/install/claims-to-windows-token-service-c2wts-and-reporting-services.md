@@ -1,5 +1,5 @@
 ---
-title: Windows 토큰 서비스 (C2WTS) 및 Reporting Services에 대 한 클레임 | Microsoft Docs
+title: Windows 토큰 서비스 (C2WTS) 및 Reporting Services에 대 한 클레임을 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
 - SharePoint mode
@@ -18,22 +18,22 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 479be89681f7c34558c5a7e89d54023feb110d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278189"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
-  SharePoint 클레임 (c2WTS) Windows 토큰 서비스에 입력 해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 팜 외부에 있는 데이터 원본에 대 한 windows 인증을 사용 하려는 경우 SharePoint 모드. 특히 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스할 경우라도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint C2WTS가 필요합니다.  
+  Windows 토큰 서비스 (c2WTS) SharePoint 클레임 사용 하 여 반드시 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 팜 외부에 있는 데이터 원본에 대 한 windows 인증을 사용 하려는 경우. 특히 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스할 경우라도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint C2WTS가 필요합니다.  
   
  데이터 원본이 공유 서비스와 동일한 컴퓨터에 있더라도 C2WTS가 필요합니다. 하지만 이 경우에는 제한된 위임이 필요하지 않습니다.  
   
  c2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한됨)과 "모든 인증 프로토콜 사용" 구성 옵션에서만 작동합니다. 앞에서 설명한 것처럼 데이터 원본이 공유 서비스와 동일한 컴퓨터에 있으면 제한된 위임이 필요하지 않습니다.  
   
- 사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 참조 [Kerberos 인증 개요 Microsoft SharePoint 2010 제품용 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)합니다.  
+ 사용자 환경에서 Kerberos 제한된 위임을 사용하는 경우 SharePoint Server 서비스와 외부 데이터 원본이 동일한 Windows 도메인에 있어야 합니다. c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용하는 서비스는 c2WTS에서 Kerberos 프로토콜 전환을 사용하여 클레임을 Windows 자격 증명으로 변환할 수 있도록 Kerberos **제한된** 위임을 사용해야 합니다. 이러한 요구 사항은 모든 SharePoint 공유 서비스에 적용됩니다. 자세한 내용은 [Kerberos 인증 개요 Microsoft SharePoint 2010 제품용 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)합니다.  
   
  이 항목에 절차가 요약되어 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36081760"
   
 2.  c2WTS 'AllowedCallers' 구성  
   
-     c2WTS가 ' id가 명시적으로 필요한 구성 파일에 나열 된 **c2wtshost.exe.config**. c2WTS 않은 허용 하지 않습니다 모든 인증 된 사용자의 요청을 시스템에서 작업을 수행 하도록 구성 됩니다. 이 경우 'caller'는 WSS_WPG Windows 그룹입니다. c2wtshost.exe.confi 파일은 다음 위치에 저장됩니다.  
+     c2WTS '호출자' id가 명시적으로 필요한 구성 파일에 나열 **c2wtshost.exe.config**. c2WTS 요청 수락 하지 않습니다 모든 인증 된 사용자의 시스템에서 이렇게 하려면 구성 되지 않으면. 이 경우 'caller'는 WSS_WPG Windows 그룹입니다. c2wtshost.exe.confi 파일은 다음 위치에 저장됩니다.  
   
      **Files\windows identity Foundation\v3.5\c2wtshost.exe.config**  
   
@@ -104,6 +104,6 @@ ms.locfileid: "36081760"
   
 ## <a name="see-also"></a>관련 항목  
  [개요 (Windows 토큰 서비스 (c2WTS) 클레임http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [(Microsoft SharePoint 2010 제품에 대 한 Kerberos 인증 개요http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [Microsoft SharePoint 2010 제품 (에 대 한 Kerberos 인증 개요http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

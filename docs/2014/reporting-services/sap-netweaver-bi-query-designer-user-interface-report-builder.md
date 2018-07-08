@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10014"
 helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 50339b7d95a2b997319a58ea56b8710dd7cb4851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a003655287bbed676620a85264fe6276b1d9a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230213"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 SAP NetWeaver  Business Intelligence 데이터 원본을 위한 MDX(Multidimensional Expression) 쿼리를 작성할 수 있는 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 데이터 원본에 정의된 InfoCube, MultiProvider 또는 웹 사용이 가능한 쿼리에서 멤버를 끌어서 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36081272"
 |![계산된 멤버 추가](../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다.|  
 |![빈 셀 표시 설정/해제](../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
-|![삭제](../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제할](../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](../analysis-services/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**변수** 대화 상자를 표시합니다. 쿼리 큐브만 변수를 지원하기 때문에 이 단추는 선택한 큐브가 쿼리 큐브인 경우에만 사용할 수 있습니다. 기본값을 변수에 할당할 경우 해당 보고서 매개 변수가 만들어집니다.|  
 |![쿼리 실행](../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
 |![쿼리 취소](../analysis-services/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|  
@@ -94,13 +94,13 @@ ms.locfileid: "36081272"
   
 -   **텍스트로 편집**  
   
--   **계산 멤버 추가** (![계산된 멤버 추가](../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
+-   **Add Calculated Member** (![추가 계산된 멤버](../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
   
 -   **빈 셀 표시**(![빈 셀 표시 설정/해제](../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   
 -   **자동 실행**(![쿼리 자동 실행](../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))  
   
--   **삭제** (![삭제](../analysis-services/media/rsqdicon-delete.gif "삭제"))  
+-   **삭제할** (![삭제할](../analysis-services/media/rsqdicon-delete.gif "삭제"))  
   
 ## <a name="see-also"></a>관련 항목  
  [쿼리 디자이너&#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

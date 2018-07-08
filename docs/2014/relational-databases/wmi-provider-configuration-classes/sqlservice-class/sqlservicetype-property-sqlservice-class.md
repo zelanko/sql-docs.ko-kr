@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlServiceType property
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8bf4428ee107c2bb4fce031a992ea7473261e64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0aca7106f62cc10dd1ec1288256f2e1b8351d8dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157904"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 속성(SqlService 클래스)
   관리되는 서비스의 유형을 가져옵니다.  

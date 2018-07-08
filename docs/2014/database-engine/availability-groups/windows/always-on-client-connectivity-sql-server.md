@@ -5,25 +5,24 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 40025093ad9293b436893c41a9e3fa44f731ab01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bbf124c02a6fd80485b110f27e6bb2cbded6077e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158944"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On 클라이언트 연결(SQL Server)
   이 항목에서는 클라이언트 구성 및 설정에 대한 사전 요구 사항, 제한 사항 및 권장 사항을 비롯하여 AlwaysOn 가용성 그룹에 클라이언트를 연결할 때 고려해야 할 사항에 대해 설명합니다.  
@@ -42,12 +41,12 @@ ms.locfileid: "36091137"
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니요|  
 |연결 패치가 포함 된.NET Framework 4.0이 있는 ADO.NET**<sup>*</sup>**|예|예|예|예|예|  
-|연결 패치가 포함 된.NET Framework 3.5 s p 1이 있는 ADO.NET **<sup>**</sup>**|예|예|예|예|예|  
+|연결 패치가 포함 된.NET Framework 3.5 SP1이 있는 ADO.NET **<sup>**</sup>**|예|예|예|예|예|  
 |SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
   
  **<sup>*</sup>**  .NET Framework 4.0이 있는 ADO.NET 용 연결 패치 다운로드: [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211)합니다.  
   
- **<sup>**</sup>* *.NET Framework 3.5 s p 1이 있는 ADO.NET 용 연결 패치 다운로드: [ http://support.microsoft.com/kb/2654347 ](http://support.microsoft.com/kb/2654347)합니다.  
+ **<sup>**</sup>* *.NET Framework 3.5 SP1이 있는 ADO.NET 용 연결 패치 다운로드: [ http://support.microsoft.com/kb/2654347 ](http://support.microsoft.com/kb/2654347)합니다.  
   
 > [!IMPORTANT]  
 >  가용성 그룹 수신기에 연결하려면 클라이언트에서 TCP 연결 문자열을 사용해야 합니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "36091137"
  [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)   
+ [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)   
  [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)   
  [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행하는 컴퓨터에서 IPSec 연결을 다시 연결할 때 시간이 오래 지연 발생](http://support.microsoft.com/kb/980915)   
  [클러스터 서비스가 Windows Server 2008 R2에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림(영문)](http://support.microsoft.com/kb/2578113)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0c80441798259750c9c24bc8062d7f8637cc37
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158994"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
@@ -49,11 +49,11 @@ ms.locfileid: "36324657"
     > [!IMPORTANT]  
     >  이 Excel 연결 관리자 관리자를 사용하는 태스크 및 데이터 흐름 구성 요소를 구성할 때 유효성 검사 오류가 발생하지 않도록 하려면 **Excel 연결 관리자 편집기**에서 기존 Excel 통합 문서를 선택합니다. 다음 단계에서 설명하는 대로 `ConnectionString` 속성에 대한 식을 구성하고 나면 연결 관리자는 런타임에 이 통합 문서를 사용하지 않습니다. 패키지를 만들고 구성한 다음에는 속성 창에서 `ConnectionString` 속성 값을 지울 수 있습니다. 그러나 이 값을 지우면 Foreach 루프가 실행될 때까지는 Excel 연결 관리자의 연결 문자열 속성이 유효하지 않게 됩니다. 따라서 연결 관리자가 사용된 태스크나 패키지에서 `DelayValidation` 속성을 `True`로 설정하여 유효성 검사 오류를 방지해야 합니다.  
     >   
-    >  기본값도 사용 해야 `False` 에 대 한는 `RetainSameConnection` Excel 연결 관리자의 속성입니다. 이 값을 `True`로 변경하면 루프의 각 반복에서 계속해서 첫 번째 Excel 통합 문서를 엽니다.  
+    >  기본값도 사용 해야 합니다 `False` 에 대 한는 `RetainSameConnection` Excel 연결 관리자의 속성입니다. 이 값을 `True`로 변경하면 루프의 각 반복에서 계속해서 첫 번째 Excel 통합 문서를 엽니다.  
   
 8.  새 Excel 연결 관리자를 선택하고 속성 창에서 **Expressions** 속성을 클릭한 다음 줄임표를 클릭합니다.  
   
-9. 에 **속성 식 편집기**을 선택는 `ConnectionString` 속성을 다음 줄임표를 클릭 합니다.  
+9. 에 **속성 식 편집기**를 선택는 `ConnectionString` 속성 줄임표를 클릭 하 고 합니다.  
   
 10. 식 작성기에서 다음 식을 입력합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36324657"
 9. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 통합 문서의 각 Excel 테이블에 같은 작업을 수행합니다. 스크립트 태스크를 사용하여 열거된 테이블 이름을 검사하거나 각 테이블을 작업할 경우에는 스크립트 태스크의 ReadOnlyVariables 속성에 문자열 변수를 추가해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Excel에서 데이터 가져오기 또는 SQL Server Integration Services (SSIS)와 Excel로 데이터 내보내기](../load-data-to-from-excel-with-ssis.md) [Foreach 루프 컨테이너 구성](foreach-loop-container.md)   
+ [Excel에서 데이터 가져오기 또는 SQL Server Integration Services (SSIS) 사용 하 여 Excel로 데이터 내보내기](../load-data-to-from-excel-with-ssis.md) [Foreach 루프 컨테이너 구성](foreach-loop-container.md)   
  [속성 식 추가 또는 변경](../expressions/add-or-change-a-property-expression.md)   
  [Excel 연결 관리자](../connection-manager/excel-connection-manager.md)   
  [Excel 원본](../data-flow/excel-source.md)   

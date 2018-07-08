@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Exception element
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 824743a3e8aeb7d735d6844dd1b025de06e09e9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 33af06aa3243b0860bca6d9ae8ff15595ae1ad4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156814"
 ---
 # <a name="exception-element-xmla"></a>Exception 요소(XMLA)
   예외가 반환 되었음을 나타냅니다는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36090252"
  `Discover` 메서드 호출 또는 `Execute` 메서드 호출의 단일 XMLA 명령을 실행하는 중에 메서드나 명령이 완료되지 못하게 하는 오류가 발생하면 해당 명령 또는 메서드에 대한 `root` 요소에 `Exception` 요소와 `Messages` 요소가 포함됩니다. `Exception` 요소는 메서드 또는 명령이 실행되지 못하게 하는 오류가 발생했음을 나타내며 `Messages` 요소는 오류 목록 또는 해당 오류와 관련된 경고 메시지를 포함합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 메시지 &#40;XMLA&#41;](messages-element-xmla.md)   
+ [메시지 요소 &#40;XMLA&#41;](messages-element-xmla.md)   
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

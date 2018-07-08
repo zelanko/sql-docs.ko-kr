@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.files.f1 in the code
 - sql12.swb.restoredb.files.f1
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ce839d0d66f065c3e7dcf662d216efdcbc19800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 789bc3c3e8ffbc55e63f6aa0d897e3edb98ab7db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158374"
 ---
 # <a name="restore-database-files-page"></a>데이터베이스 복원(파일 페이지)
   **데이터베이스 복원** 대화 상자의 **파일** 페이지를 사용하여 데이터베이스 내에서 복원하려고 선택한 특정 파일을 관리할 수 있습니다.  

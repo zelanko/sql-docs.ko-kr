@@ -1,28 +1,26 @@
 ---
-title: (ODBC) 문을 사용 하 여 | Microsoft Docs
+title: 문 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 50a4f012b556bb6f54a0b9e672c2f9ff16a44fd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5eab640fd0f3a60e3edc1b8708f7c1bb20b25dba
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078587"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409042"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
     

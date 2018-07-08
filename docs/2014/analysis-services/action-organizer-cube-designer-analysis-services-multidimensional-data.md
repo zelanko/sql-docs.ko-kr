@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.organizerpane.f1
 ms.assetid: 147b4622-e9fa-4537-9dbb-9e595c0f55bc
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d97be0a5c0fe8272a448638273fc550724c803e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a39e5579671cf870778f1cee679c49cd3e1617fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151524"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>동작 구성 도우미(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **동작** 탭의 **동작 구성 도우미** 창을 사용하여 지정한 큐브에 포함된 동작에 액세스할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36089193"
 ## <a name="context-menu"></a>상황에 맞는 메뉴  
  **동작 구성 도우미** 창에서 동작을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴에서 다음 옵션을 사용할 수 있습니다.  
   
- **새 동작**  
+ **새 작업**  
  **동작 폼 편집기** 창을 표시하고 새 동작을 만들려면 클릭합니다.  
   
  **새 드릴스루 동작**  

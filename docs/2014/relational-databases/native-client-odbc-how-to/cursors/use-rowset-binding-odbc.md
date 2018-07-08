@@ -1,28 +1,26 @@
 ---
-title: 행 집합 바인딩 (ODBC)를 사용 하 여 | Microsoft Docs
+title: 행 집합 바인딩 (ODBC) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bfbf7807e9c754e8358264239acf5d172f7d3591
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 71a00f38d1424a05d5549e3b3a4c4fa816f26844
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079029"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412332"
 ---
 # <a name="use-rowset-binding-odbc"></a>행 집합 바인딩 사용(ODBC)
     
@@ -34,7 +32,7 @@ ms.locfileid: "36079029"
   
     -   필요에 따라 데이터 길이를 저장할 R개 이상의 열 버퍼 배열을 할당합니다.  
   
-    -   호출 [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) 을 열의 데이터 값과 데이터 길이 배열을 행 집합의 열에 바인딩합니다.  
+    -   호출 [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) 에 열의 데이터 값 및 데이터 길이 배열을 행 집합의 열에 바인딩합니다.  
   
 2.  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 다음 특성을 설정합니다.  
   
@@ -48,7 +46,7 @@ ms.locfileid: "36079029"
   
 3.  해당 문을 실행합니다.  
   
-4.  호출할 때마다 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R 개의 행을 검색 하 고 바인딩된 열에 데이터를 전송 합니다.  
+4.  호출할 때마다 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 하거나 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R 개의 행을 검색 하 고 바인딩된 열에 데이터를 전송 합니다.  
   
 ### <a name="to-use-row-wise-binding"></a>행 단위 바인딩을 사용하려면  
   
@@ -68,11 +66,11 @@ ms.locfileid: "36079029"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR을 행 상태 표시를 보유하는 SQLUSSMALLINT 변수의 배열[R]을 가리키도록 설정합니다.  
   
-3.  결과 집합의 각 열에 대해 호출 [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) 데이터 값과 열 데이터 길이 포인터가 1 단계에서에서 할당 한 구조 배열의 첫 번째 요소에 있는 해당 변수를 가리키도록 합니다.  
+3.  결과 집합의 각 열에 대 한 호출 [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) 데이터 값 및 열 데이터 길이 포인터가 1 단계에서에서 할당 한 구조 배열의 첫 번째 요소에 있는 해당 변수를 가리키도록 합니다.  
   
 4.  해당 문을 실행합니다.  
   
-5.  호출할 때마다 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R 개의 행을 검색 하 고 바인딩된 열에 데이터를 전송 합니다.  
+5.  호출할 때마다 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 하거나 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) R 개의 행을 검색 하 고 바인딩된 열에 데이터를 전송 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [커서 방법 도움말 항목을 사용 하 여 &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   

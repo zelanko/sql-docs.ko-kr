@@ -23,15 +23,15 @@ helpviewer_keywords:
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 631247c0d9c12e3ed4caeb6f29c0408d2a5e9815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: afce018e4e177d9ac7283b488b3222cbc3dae1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230233"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
   보고서 서버 웹 서비스는 HTTP를 통한 SOAP(Simple Object Access Protocol)을 사용하며 클라이언트 프로그램과 보고서 서버 간의 통신 인터페이스 역할을 합니다. 웹 서비스는 보고서 실행용과 보고서 관리용으로 끝점을 두 개 제공하며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 전체 기능에 액세스하는 데 사용할 수 있는 메서드 및 복합 형식 개체 집합으로 구성됩니다. 서비스를 호출하려면 Reporting Services WSDL(웹 서비스 기술 언어)을 참조해야 합니다.  

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698504"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418822"
 ---
 # <a name="using-statement-parameters"></a>문 매개 변수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "35698504"
   
 -   쿼리 조건을 생성하여 사용자 상호 작용을 향상시킵니다.  
   
--   관리 **텍스트**, **ntext**, 및 **이미지** 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식입니다.  
+-   관리할 **텍스트**를 **ntext**, 및 **이미지** 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식입니다.  
   
- 예를 들어 한 **부분** 테이블에 명명 된 열이 **PartID**, **설명**, 및 **가격**합니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
+ 예를 들어를 **파트** 테이블에 열 이름이 **PartID**를 **설명**, 및 **가격**합니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

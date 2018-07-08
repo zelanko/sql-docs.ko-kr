@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assembly element [ASSL]
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02bc362fd633a7c3cf9fcd4936d2a0580753c01b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38c14744eaebba8e618c7c200341c447393ce773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151444"
 ---
 # <a name="assembly-element-assl"></a>Assembly 요소(ASSL)
-  나타냅니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리 또는 연결 된 COM 동적 연결 라이브러리 (DLL)는 [서버](server-element-assl.md) 요소 또는 [데이터베이스](database-element-assl.md) 요소입니다.  
+  나타냅니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 어셈블리나와 연결 된 COM 동적 연결 라이브러리 (DLL)는 [Server](server-element-assl.md) 요소 또는 [데이터베이스](database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36081207"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Assembly>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 요소 &#40;ASSL&#41;](server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](server-element-assl.md)   
  [Database 요소 &#40;ASSL&#41;](database-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   

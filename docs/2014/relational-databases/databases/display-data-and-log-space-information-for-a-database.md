@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], space
 - status information [SQL Server], space
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - data space [SQL Server]
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 402c584681d84b68361800999252e00baa918703
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 04777f6f03ed5e97249eaf50b04f44e8e9aac763
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149064"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보 표시
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 대한 데이터와 로그 공간 정보를 표시하는 방법에 대해 설명합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36081821"
   
      [보안](#Security)  
   
--   **데이터 및 로그 공간 정보는 데이터베이스에 대 한 표시를 사용 하 여:**  
+-   **데이터 및 로그 공간 정보를 데이터베이스에 대 한 표시를 사용 하 여:**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   

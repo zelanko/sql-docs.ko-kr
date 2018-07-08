@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c072df6e055cbf0bc0fc0dc503b6dfd55a4c8a29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230223"
 ---
 # <a name="security-properties-page-items-report-manager"></a>보안 속성 페이지, 항목(보고서 관리자)
   보안 속성 페이지를 사용하여 폴더, 보고서, 모델, 리소스 및 공유 데이터 원본에 대한 액세스를 지정하는 보안 설정을 보거나 수정할 수 있습니다. 이 페이지는 보안 권한이 있는 항목에 대해 사용할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36081762"
  삭제할 그룹 또는 사용자 이름 옆의 확인란을 선택하고 **삭제**를 클릭합니다. 역할 할당이 하나뿐이거나 보고서 서버의 보안 기준을 정의하는 기본 제공 역할 할당(예: "Built-in\Administrators")인 경우에는 역할 할당을 삭제할 수 없습니다. 역할 할당을 삭제해도 그룹 또는 사용자 계정이나 역할 정의는 삭제되지 않습니다.  
   
  **새 역할 할당**  
- 현재 항목의 추가 역할 할당을 만드는 데 사용되는 새 역할 할당 페이지를 열려면 클릭합니다. 자세한 내용은 참조 [새 역할 할당: 역할 할당 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)합니다.  
+ 현재 항목의 추가 역할 할당을 만드는 데 사용되는 새 역할 할당 페이지를 열려면 클릭합니다. 자세한 내용은 [새 역할 할당: 역할 할당 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)합니다.  
   
  **부모 보안으로 되돌리기**  
  보안 설정을 직속 부모 폴더의 보안 설정으로 되돌리려면 클릭합니다. 보고서 서버 폴더 계층 구조 전체에서 상속이 손상되지 않은 경우에는 최상위 폴더(홈)의 보안 설정이 사용됩니다.  

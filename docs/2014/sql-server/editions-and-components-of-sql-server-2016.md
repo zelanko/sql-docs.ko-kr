@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -34,21 +34,21 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 111
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450c54feb6d8e360ca812524778762751318aab7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150114"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 버전 및 구성 요소
   설치 요구 사항은 사용자의 응용 프로그램 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
   
 ## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>주 버전 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 주 버전에 대해 설명합니다. 자세한 내용은 참조 [SQL Server 2014 버전에서 지 원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 주 버전에 대해 설명합니다. 자세한 내용은 참조 하세요. [SQL Server 2014 버전에서 지 원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|정의|  
 |---------------------------------------|----------------|  
@@ -64,7 +64,8 @@ ms.locfileid: "36090108"
 |Web(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
   
 ## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>확장형 버전 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전은 특정 고객 시나리오에 맞게 엔지니어링되었으며 무료로 또는 최소한의 비용으로 제공됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전은 특정 고객 시나리오에 맞게 엔지니어링되었으며 무료로 또는 최소한의 비용으로 제공됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전에 대해 설명합니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Description|  
 |---------------------------------------|-----------------|  
@@ -80,7 +81,7 @@ ms.locfileid: "36090108"
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>클라이언트/서버 응용 프로그램으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 직접 연결되는 클라이언트/서버 응용 프로그램 실행 컴퓨터에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]클라이언트 구성 요소만 설치하면 됩니다. 데이터베이스 서버의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 관리하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 응용 프로그램을 개발하려는 경우에는 클라이언트 구성 요소를 설치하는 것도 좋은 방법입니다.  
   
- 클라이언트 도구 옵션은 이전 버전과의 호환성 구성 요소, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 연결 구성 요소, 관리 도구, 소프트웨어 개발 키트 및 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]온라인 설명서 구성 요소와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 설치합니다. 자세한 내용은 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
+ 클라이언트 도구 옵션은 이전 버전과의 호환성 구성 요소, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 연결 구성 요소, 관리 도구, 소프트웨어 개발 키트 및 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]온라인 설명서 구성 요소와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 설치합니다. 자세한 내용은 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소 결정  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]설치에 포함할 구성 요소를 선택할 수 있습니다. 트리에 있는 기능은 모두 기본적으로 선택되지 않습니다.  
@@ -89,7 +90,7 @@ ms.locfileid: "36090108"
   
 |서버 구성 요소|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 포함 된 [!INCLUDE[ssDE](../includes/ssde-md.md)], 저장, 처리 및 보안 데이터, 복제, 전체 텍스트 검색, 관리 하기 위한 도구 관계형 및 XML 데이터를 위한 핵심 서비스 및 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 서버.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 포함 된 [!INCLUDE[ssDE](../includes/ssde-md.md)], 저장, 처리 및 데이터, 복제, 전체 텍스트 검색, 관계형 관리용 도구 및 XML 데이터를 보호 하기 위한 핵심 서비스 및 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 서버.|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 OLAP(온라인 분석 처리) 및 데이터 마이닝 응용 프로그램을 생성하고 관리하기 위한 도구가 포함되어 있습니다.|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 테이블 형식, 행렬, 그래픽 및 자유 형식 보고서를 생성, 관리 및 배포하기 위한 서버/클라이언트 구성 요소가 포함되어 있습니다. 또한[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 응용 프로그램을 개발하는 데 사용할 수 있는 확장 가능 플랫폼입니다.|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 이동, 복사 및 변환을 위한 그래픽 도구 및 프로그래밍 가능 개체 집합입니다. 또한 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 에 대한 DQS( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]) 구성 요소도 포함됩니다.|  
@@ -111,6 +112,6 @@ ms.locfileid: "36090108"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 설치 계획](install/planning-a-sql-server-installation.md)   
- [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+ [설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
   

@@ -1,31 +1,29 @@
 ---
-title: (OLE DB) ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용 하 여 FILESTREAM 열에 데이터 보내기 | Microsoft Docs
+title: (OLE DB) ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용 하 여 FILESTREAM 열에 데이터 전송 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f927bed16f46e685970ec92d2ed43067355d29ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 95d1f78a78574064a2657d1de98b22ab526b81d7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081572"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407692"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
   이 예제에서는 ICommandText 매개 변수에 바인딩된 ISequentialStream 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 보냅니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)합니다.  
   
 ## <a name="example"></a>예제  
  컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../../blob/enable-and-configure-filestream.md)).  

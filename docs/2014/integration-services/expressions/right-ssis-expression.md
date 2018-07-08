@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad391884f6ae57b6d87a042ede7be12ef1bfb093
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01d2c974e8d010b1e14d26db8654eff9d71bd1ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160734"
 ---
 # <a name="right-ssis-expression"></a>RIGHT(SSIS 식)
   지정한 문자 식의 오른쪽에서부터 지정한 개수의 문자를 반환합니다.  

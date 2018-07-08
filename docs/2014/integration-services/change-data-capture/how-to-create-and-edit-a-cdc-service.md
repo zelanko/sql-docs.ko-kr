@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 04d25e8628ccb0de237615c0e422c5fc2f7af957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f2943ae3a627c8bb132ebff6fce85399159d962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259059"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service를 만들고 편집하는 방법
   이 프로시저에서는 CDC Service 구성 콘솔에서 새 Oracle CDC Service를 만들고 편집하는 방법을 설명합니다.  

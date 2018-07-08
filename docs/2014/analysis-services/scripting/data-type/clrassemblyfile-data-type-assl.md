@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b542c4193d80fa80cc9aed6663f41e102266000b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebfcf0080184294cbbda05e671776972be18f9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277870"
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>ClrAssemblyFile 데이터 형식(ASSL)
   구성 하는 파일 중 하나를 나타내는 기본 데이터 형식을 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md) 요소).  
@@ -58,21 +58,21 @@ ms.locfileid: "36081941"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[데이터](../objects/data-element-assl.md), [이름](../properties/name-element-assl.md), [유형](../properties/type-element-clrassemblyfile-assl.md)|  
-|파생 요소|[파일](../objects/file-element-assl.md) ([파일](../collections/files-element-assl.md) 컬렉션 [ClrAssembly](assembly-data-type-assl.md))|  
+|자식 요소|[데이터](../objects/data-element-assl.md)하십시오 [이름](../properties/name-element-assl.md), [형식](../properties/type-element-clrassemblyfile-assl.md)|  
+|파생 요소|[파일](../objects/file-element-assl.md) ([파일](../collections/files-element-assl.md) 모음인 [ClrAssembly](assembly-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Database 요소 &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Assemblies 요소 &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Assembly 요소 &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [DataBlock 데이터 형식 &#40;ASSL&#41;](datablock-data-type-assl.md)   
  [요소를 차단 &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
- [요소를 차단 &#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [블록 요소 &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [ComAssembly 데이터 형식 &#40;ASSL&#41;](comassembly-data-type-assl.md)   
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

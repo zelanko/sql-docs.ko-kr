@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19fa15ac8d92d701bb6558e48d5052f671c2eae0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0f544a1a3f94c567d374418b077136f92f57a32d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696494"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429602"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 구현 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35696494"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 참조에는 ODBC 함수 호출이 모두 문서화되어 있지는 않습니다. 드라이버 관련 매개 변수를 가지는 함수나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용될 때의 동작에 대해서만 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51의 포괄적인 참조를 위해에서 Microsoft Data Access Components SDK를 다운로드는 [데이터 액세스 및 저장소 개발자 센터](http://go.microsoft.com/fwlink?linkid=4173)를 보거나는 [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51에 대 한 포괄적인 참조에 대 한 Microsoft Data Access Components SDK를 다운로드 합니다 [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), 보거나 합니다 [ODBC 프로그래머 참조](http://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

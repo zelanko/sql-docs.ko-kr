@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 41368 (Database Engine error)
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96d33fc176330efe93077c02c6abfed3c137e33c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8619e3cfb8766caab9d9afbe5ed166761eeeb04f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081105"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409722"
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
     
@@ -42,7 +41,7 @@ ms.locfileid: "36081105"
  BEGIN TRANSACTION으로 시작된 명시적 트랜잭션에서 메모리 최적화 테이블에 액세스할 때 IMPLICIT_TRANSACTIONS가 ON으로 설정되어 있으면 READ COMMITTED 격리 수준이 지원되지 않습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 명시적 또는 암시적 READ COMMITTED 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 SNAPSHOT을 사용하여 테이블에 액세스합니다. 테이블 힌트 WITH (SNAPSHOT)을 사용 하 여 수행할 수 있습니다 (자세한 내용은 참조 [트랜잭션 격리 수준에 메모리 최적화 된 테이블에 대 한 지침이](../in-memory-oltp/memory-optimized-tables.md)) 또는 데이터베이스를 설정 하 여 MEMORY_OPTIMIZED_ELEVATE_TO_ 옵션 ON으로 스냅숏 (자세한 내용은 참조 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
+ 명시적 또는 암시적 READ COMMITTED 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 SNAPSHOT을 사용하여 테이블에 액세스합니다. 테이블 힌트 WITH (SNAPSHOT)을 사용 하 여 수행할 수 있습니다 (자세한 내용은 [메모리 최적화 테이블이 있는 트랜잭션 격리 수준에 대 한 지침](../in-memory-oltp/memory-optimized-tables.md)) 또는 데이터베이스를 설정 하 여 MEMORY_OPTIMIZED_ELEVATE_TO_ 옵션 ON으로 스냅숏 (자세한 내용은 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

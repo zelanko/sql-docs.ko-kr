@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c71b31282ac1ed242c6b8f35adeff24cbc9ddf9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fc9a711c16c0c7e9b5ed3a66f93013b5f2031bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157984"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
   시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 응용 프로그램에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36088567"
  각각의 **NEXT VALUE FOR** 함수 호출에 대해 시퀀스 개체의 값을 증가시키거나 감소시키는(음수인 경우) 데 사용되는 값입니다. 증가값이 음수이면 시퀀스 개체가 내림차순이고, 그렇지 않으면 오름차순입니다. 증가값은 0일 수 없습니다.  
   
  **최소값**  
- 시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. 이 대해서는 0에서 `tinyint` 데이터 형식 및 다른 모든 데이터 형식에 대해서는 음수입니다.  
+ 시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. 이 대해서는 0을 `tinyint` 데이터 형식 및 다른 모든 데이터 형식에 대해서는 음수입니다.  
   
  **최대값**  
  시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최대값은 해당 시퀀스 개체의 데이터 형식에 대한 최대값입니다.  

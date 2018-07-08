@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 580b0331e59aef1b4c33d75084490e0a8be65147
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7d5b7e62e3bfc42870fb5c6a6c853dd43a04778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183520"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR에 우선 순위가 있는 조건 조합(Visual Database Tools)
   조건을 OR로 연결하고 AND로 연결된 조건보다 높은 우선 순위를 부여하려면 각 OR 조건에 대하여 AND 조건을 반복해야 합니다.  
@@ -75,7 +75,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  [SQL 창](sql-pane-visual-database-tools.md)에서 위에 표시된 형식으로 검색 조건을 입력한 다음 다이어그램 창이나 조건 창에서 쿼리를 변경하면 쿼리 및 뷰 디자이너는 두 OR 조건 모두에 명시적으로 배포된 AND 조건과 형식이 일치하는 SQL 문을 다시 만듭니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [조건 창의 검색 조건 결합을 위한 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [조건 창의 검색 조건 결합 규칙 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

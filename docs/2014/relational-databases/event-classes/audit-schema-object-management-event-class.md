@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Management event class
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6e425b38453ced35f91f4ba43cf303d6a89bc749
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7814c85f2df953f3de5c6760345f41b7be84caf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149684"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management 이벤트 클래스
   **Audit Schema Object Management** 이벤트 클래스는 서버 개체를 생성, 변경 또는 삭제할 때 발생합니다.  

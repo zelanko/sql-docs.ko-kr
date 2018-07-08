@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a5e31addc3346cd34ad4b569d6b827f0ed58e142
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c66fda03eb0cf15dcb249c35881c6f24085ca641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183970"
 ---
 # <a name="views"></a>뷰
   뷰는 쿼리에 의해 내용이 정의되는 가상 테이블입니다. 테이블과 같이 뷰는 데이터의 명명된 열과 행 집합으로 구성됩니다. 인덱싱하지 않을 경우 뷰는 데이터베이스에 저장된 데이터 값 집합으로 존재하지 않습니다. 데이터 행과 열은 뷰를 정의하는 쿼리에서 참조하는 테이블에 있으며 뷰가 참조될 때 동적으로 생성됩니다.  

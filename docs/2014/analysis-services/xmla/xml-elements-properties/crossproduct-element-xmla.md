@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278245"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 요소(XMLA)
-  에 대 한 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 포함 한 [축](axis-element-xmla.md) 요소를 사용 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 [Execute](../xml-elements-methods-execute.md) 메서드.  
+  에 대 한 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 포함는 [축](axis-element-xmla.md) 요소를 사용 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 합니다 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,10 +72,10 @@ ms.locfileid: "36081209"
 |크기|필요한 `Integer` 특성입니다. `CrossProduct` 요소에서 나타내는 교차곱에 포함된 튜플 수를 표시합니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 클라이언트 응용 프로그램 설정 하는 경우는 `AxisFormat` 속성을 *ClusterFormat*, 각 축의 멤버가 각 클러스터는 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 나타내는 클러스터로 나누어집니다. 각 클러스터는 `CrossProduct` 요소로 표현됩니다. 모든 `CrossProduct`요소에는 축의 각 계층에 대한 `Members`요소가 포함됩니다. `CrossProduct` 요소는 단일 계층의 멤버를 포함할 수 있습니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 `AxisFormat` 속성을 *ClusterFormat*, 각 축의 멤버가 클러스터로 나누어집니다 각 클러스터는 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 나타냅니다. 각 클러스터는 `CrossProduct` 요소로 표현됩니다. 모든 `CrossProduct`요소에는 축의 각 계층에 대한 `Members`요소가 포함됩니다. `CrossProduct` 요소는 단일 계층의 멤버를 포함할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 구조는 `CrossProduct` 요소는 클라이언트를 지정 하는 경우 *ClusterFormat* 에 대 한는 `AxisFormat` 축에 대 한 다음과 같은 멤버를 제공 하는 XMLA 속성:  
+ 다음 예제에서는의 구조를 보여 줍니다.는 `CrossProduct` 클라이언트를 지정 하는 경우 요소 *ClusterFormat* 에 대 한는 `AxisFormat` XMLA 속성에는 축의 멤버가 다음과 같은:  
   
 ||||||  
 |-|-|-|-|-|  

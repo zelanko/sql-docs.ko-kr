@@ -1,12 +1,12 @@
 ---
-title: 큰 CLR Udt (OLE DB)를 사용 하 여 | Microsoft Docs
+title: 큰 CLR Udt 사용 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4b8610c4765c5835bd2b1c2e9fb03709da61caa
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6bb21bca524d0e1cd676cd9b31474e7d2c553bd6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698544"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429562"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>큰 CLR UDT 사용(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 예제에서는 결과 집합에서 큰 사용자 정의 형식의 행을 인출하는 방법을 보여 줍니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)합니다. 이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
+  이 예제에서는 결과 집합에서 큰 사용자 정의 형식의 행을 인출하는 방법을 보여 줍니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)합니다. 이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 유형으로 지정됩니다. 기본적으로 이 예제에서는 master 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 응용 프로그램입니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "35698544"
   
  두 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 어셈블리를 master 데이터베이스에 추가합니다.  
   
- ole32.lib oleaut32.lib를 사용하여 컴파일하고 세 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ ole32.lib oleaut32.lib를 사용하여 컴파일하고 세 번째(C++) 코드 목록을 실행합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  네 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 master 데이터베이스의 어셈블리를 삭제합니다.  
   

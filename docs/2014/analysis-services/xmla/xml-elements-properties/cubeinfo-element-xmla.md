@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CubeInfo element
 ms.assetid: a504bac5-4bf2-4f78-a288-e74a34eaa97e
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fdf957ea7531cde52f8f3ac8dea60a99f83a75d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bcac19d70af83ec8e83ebf8bac06507ba9e28b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229593"
 ---
 # <a name="cubeinfo-element-xmla"></a>CubeInfo 요소(XMLA)
-  부모에 포함 된 큐브 메타 데이터를 포함 [OlapInfo](olapinfo-element-xmla.md) 요소입니다.  
+  부모에 의해 포함 된 큐브 메타 데이터를 포함 [OlapInfo](olapinfo-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36089624"
  `CubeInfo` 요소는 다차원 데이터 집합에서 참조하는 각 큐브당 하나의 `Cube` 요소를 포함합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 단일 반환 `Cube` 이 컬렉션의 요소 때문에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 여러 큐브는 MDX (Multidimensional Expressions) 언어의 FROM 절에서 참조 하는 문을 지원 하지 않습니다.  
+>  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 단일 반환 `Cube` 이 컬렉션의 요소 때문에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] MDX (Multidimensional Expressions) 언어의 FROM 절에서 여러 큐브를 참조 하는 문을 지원 하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  

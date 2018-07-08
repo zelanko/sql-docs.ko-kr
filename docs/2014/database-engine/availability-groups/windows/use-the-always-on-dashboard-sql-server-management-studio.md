@@ -1,14 +1,13 @@
 ---
-title: AlwaysOn 대시보드 (SQL Server Management Studio)를 사용 하 여 | Microsoft Docs
+title: AlwaysOn 대시보드 (SQL Server Management Studio) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 60d75f53c84d652b0d719ba73980cfbff6d08424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163524"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn 대시보드 사용(SQL Server Management Studio)
   데이터베이스 관리자는 AlwaysOn 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹과 해당 가용성 복제본 및 데이터베이스의 상태 개요를 확인할 수 있습니다. AlwaysOn 대시보드의 일반적인 용도는 다음과 같습니다.  
@@ -97,7 +96,7 @@ ms.locfileid: "36089705"
 -   **수동**. 자동 장애 조치 모드인 복제본이 없음을 나타냅니다.  
   
  **문제**  
- 지정된 문제에 대한 문제 해결 설명서를 열려면 **문제** 링크를 클릭합니다. 모든 AlwaysOn 정책 문제 목록은 참조 [운영 문제 AlwaysOn 가용성 그룹 (SQL Server)에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
+ 지정된 문제에 대한 문제 해결 설명서를 열려면 **문제** 링크를 클릭합니다. 모든 AlwaysOn 정책 문제 목록을 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
   
 > [!TIP]  
 >  열 머리글을 클릭하여 가용성 그룹, 주 인스턴스, 장애 조치(failover) 모드 또는 문제의 이름을 기준으로 가용성 그룹 정보를 정렬할 수 있습니다.  
@@ -152,7 +151,7 @@ ms.locfileid: "36089705"
 -   **NULL**. 알 수 없는 상태입니다. 이 값은 로컬 서버 인스턴스가 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없는 경우(즉, 로컬 노드가 WSFC 쿼럼의 일부가 아닌 경우)에 발생합니다.  
   
  **문제**  
- 문제 이름을 나열합니다. 이 값은 기본적으로 표시됩니다. 모든 AlwaysOn 정책 문제 목록은 참조 [운영 문제 AlwaysOn 가용성 그룹 (SQL Server)에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
+ 문제 이름을 나열합니다. 이 값은 기본적으로 표시됩니다. 모든 AlwaysOn 정책 문제 목록을 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
   
  **가용성 모드**  
  각 가용성 복제본에 대해 별도로 설정한 복제본 속성을 나타냅니다. 이 값은 기본적으로 숨겨집니다. 가능한 값은 아래와 같습니다.  
@@ -281,7 +280,7 @@ ms.locfileid: "36089705"
   
 -   **심각**. 심각한 문제를 표시하려면 클릭합니다.  
   
- 모든 AlwaysOn 정책 문제 목록은 참조 [운영 문제 AlwaysOn 가용성 그룹 (SQL Server)에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
+ 모든 AlwaysOn 정책 문제 목록을 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
   
  **일시 중지됨**  
  데이터베이스가 **일시 중지됨** 상태인지 아니면 **재개됨**상태인지 나타냅니다. 이 값은 기본적으로 숨겨집니다.  

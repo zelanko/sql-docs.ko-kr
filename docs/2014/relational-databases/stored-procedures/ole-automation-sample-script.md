@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
-caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147df3898c87abb02b2fedcb14caad3db07fc55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 66cdc46e024655dbb7c4409368fbb91763f5f945
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078776"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413792"
 ---
 # <a name="ole-automation-sample-script"></a>OLE 자동화 예제 스크립트
   이 항목에는 OLE 자동화 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 로컬 인스턴스에서 SQL-DMO SQLServer 개체를 만들고 사용하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]문 일괄 처리의 예가 포함되어 있습니다. 코드의 일부는 OLE 자동화 시스템 저장 프로시저에 대한 참조 항목에서 예로 사용됩니다.  

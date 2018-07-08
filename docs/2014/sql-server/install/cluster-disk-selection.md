@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster disk selection
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ce08658fe769a356e4cd24e29ed094692892e48f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9635c793b32715e6da68f433e368c8ae1fc28b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157534"
 ---
 # <a name="cluster-disk-selection"></a>클러스터 디스크 선택
   **설치 마법사의** 클러스터 디스크 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 위한 공유 클러스터 디스크 리소스를 선택할 수 있습니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터가 저장됩니다.  
   
- 공유 클러스터 디스크에 대 한 요구 사항은 아닙니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 클러스터 설치 합니다. SMB 파일 서버에 대 한 지원 되는 저장소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 장애 조치 클러스터를 설치 하 고 사용 하 여 지정할 수는 **데이터베이스 엔진-데이터 디렉터리** 설치를 완료 하기 전에 페이지입니다.  
+ 공유 클러스터 디스크에 대 한 요구 사항은 아닙니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 클러스터 설치 합니다. SMB 파일 서버에 대 한 지원 되는 저장소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 장애 조치 클러스터 설치 및 사용 하 여 지정할 수 있습니다 합니다 **데이터베이스 엔진-데이터 디렉터리** 설치를 완료 하기 전에 페이지.  
   
 > [!WARNING]  
 >  Analysis Services를 설치하도록 선택한 경우 공유 클러스터 디스크를 지정해야 합니다.  

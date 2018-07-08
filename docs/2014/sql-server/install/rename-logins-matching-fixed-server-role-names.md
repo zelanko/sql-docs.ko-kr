@@ -1,5 +1,5 @@
 ---
-title: 고정된 서버 역할 이름과 일치 하는 로그인 이름 바꾸기 | Microsoft Docs
+title: 고정된 서버 역할 이름과 일치 하는 로그인 이름을 바꾸십시오. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined login names [SQL Server]
 - fixed server roles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - logins [SQL Server], names
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54223b28e681115df1b4ecf11f4fb96d13c68fd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0064e08000454f485846b45fb0cc3d37c0afd031
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155614"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>고정 서버 역할 이름과 일치하는 로그인 이름을 바꿉니다.
   업그레이드 관리자가 고정 서버 역할 이름과 일치하는 하나 이상의 사용자 정의 로그인 이름을 검색했습니다. 고정 서버 역할 이름은 예약되어 있습니다. 업그레이드하기 전에 로그인 이름을 바꾸십시오  
@@ -64,10 +64,10 @@ ms.locfileid: "36090106"
   
 2.  로그인을 삭제합니다.  
   
-3.  사용 하 여는 **sp_addlogin** 시스템 프로시저를 새 로그인을 만듭니다. 1 단계에서 반환 된 SID를 지정 된 **@sid** 각 해당 로그인에 대 한 매개 변수입니다.  
+3.  사용 된 **sp_addlogin** 시스템 프로시저를 새 로그인을 만듭니다. 1 단계에서 반환 된 SID를 지정 합니다 **@sid** 각 해당 로그인에 대 한 매개 변수입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

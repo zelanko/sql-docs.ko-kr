@@ -18,15 +18,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 191fa7acc00ba4117dbe8eed6a506fbf39905cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 531880091bfd540fb42a84d63099d2e5006b2e36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210873"
 ---
 # <a name="implementing-a-rendering-extension"></a>렌더링 확장 프로그램 구현
   렌더링 확장 프로그램은 보고서 데이터 및 레이아웃 정보를 장치별 형식으로 변환하는 보고서 서버의 구성 요소 또는 모듈입니다. SQL Server Reporting Services에는 HTML, Excel, Word, CSV 또는 텍스트, XML, 이미지 및 PDF의 6가지 렌더링 확장 프로그램이 포함되어 있습니다. 추가 렌더링 확장 프로그램을 만들어 다른 형식으로 보고서를 생성할 수 있습니다.  

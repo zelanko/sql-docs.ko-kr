@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 530608169372a06a50bdf613668f5650a5caecc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277599"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 요소(CSDLBI)
-  `EntityType` 요소는 데이터 모델에서 고객 또는 주문과 같은 높은 수준의 엔터티 구조를 나타내는 복합 유형입니다. `bi:EntityType` 요소 확장의 정의 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 에 사용 되는 [엔터티 데이터 프레임 워크](http://msdn.microsoft.com/library/bb399567.aspx)합니다.  
+  `EntityType` 요소는 데이터 모델에서 고객 또는 주문과 같은 높은 수준의 엔터티 구조를 나타내는 복합 유형입니다. `bi:EntityType` 요소 확장의 정의 [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) 에 사용 합니다 [엔터티 데이터 프레임 워크](http://msdn.microsoft.com/library/bb399567.aspx)합니다.  
   
  데이터 모델에 포함된 엔터티별로 EntityType 요소를 지정해야 합니다. EntityType의 하위 요소는 테이블의 열 및 측정값을 설명합니다. 테이블 간의 관계는 `EntityContainer`에 포함됩니다.  
   

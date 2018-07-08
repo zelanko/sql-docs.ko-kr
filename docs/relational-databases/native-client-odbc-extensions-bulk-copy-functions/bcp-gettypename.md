@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703494"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426225"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,7 +96,7 @@ RETCODE bcp_gettypename (
 |**SQLUNIQUEID**|모두|**uniqueidentifier**|  
 |**SQLNCHAR**|아니요|**Nchar**|  
 |**SQLNVARCHAR**|아니요|**Nvarchar**|  
-|**SQLNTEXT**|모두|**ntext**|  
+|**SQLNTEXT**|모두|**Ntext**|  
 |**SQLVARIANT**|모두|**sql_variant**|  
 |**SQLINT8**|모두|**Bigint**|  
 |**SQLCHARACTER**|예|**varchar(max)**|  
@@ -110,12 +110,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|예|**nvarchar(max)**|  
 |**SQLNVARCHAR**|예|**nvarchar(max)**|  
 |**SQLXML**|예|**Xml**|  
-|**SQLUDT**|모두|**udt**|  
+|**SQLUDT**|모두|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
- 에 있는 테이블의 "sqlncli.h의 유형" 열에 날짜/시간 형식에 대 한 토큰 매개 변수 값을 설명 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  
+ 날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

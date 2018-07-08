@@ -1,5 +1,5 @@
 ---
-title: 항목을 Integration Services 프로젝트 추가 | Microsoft Docs
+title: 항목 통합을 Services 프로젝트 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], items
 - Integration Services projects, items
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SSIS projects, items
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: af2948d84746c2870b69a3c4c5b23430e9721965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c86c0a27f0e4654d95dfd83ba264a1a0c060215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160864"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>Integration Services 프로젝트에 항목 추가
   이 절차에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 신규 및 기존 항목을 추가하는 방법에 대해 설명합니다.  

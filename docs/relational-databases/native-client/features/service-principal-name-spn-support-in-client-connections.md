@@ -1,12 +1,11 @@
 ---
-title: 클라이언트 연결의 서비스 사용자 이름 (SPN) 지원 | Microsoft Docs
+title: 클라이언트 연결의 서비스 주체 이름 (SPN) 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,27 +14,26 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7348fc6746f3b2763aea780e7bed087ff583808e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 65208af559037dd7e73cbaac49daa825460d1f60
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697314"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411472"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], 모든 프로토콜에서 상호 인증을 사용 하도록 서비스 사용자 이름 (Spn)에 대 한 지원이 확장 되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Spn 대해서만 지원 되었습니다 Kerberos TCP를 통한 때 기본에 대 한 SPN의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Active Directory에 등록 된 인스턴스가 있습니다.  
+  부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], 모든 프로토콜에서 상호 인증을 사용 하도록 설정 하려면 서비스 사용자 이름 (Spn)에 대 한 지원이 확장 되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], TCP를 통한 Kerberos Spn 된 에서만 지원 때 기본값에 대 한 SPN는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Active Directory를 사용 하 여 인스턴스를 등록 합니다.  
   
- Spn을 사용 하는 인증 프로토콜에 의해 결정 되는 계정을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행 합니다. 인스턴스 계정이 알려진 경우 Kerberos 인증을 사용하여 클라이언트와 서버에 의한 상호 인증을 제공할 수 있습니다. 인스턴스 계정이 알려지지 않은 경우 서버에 의한 클라이언트 인증만 제공하는 NTLM 인증이 사용됩니다. 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 인스턴스 이름과 네트워크 연결 속성에서 SPN을 파생 시켜 인증 조회를 수행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 시작 시 Spn 등록을 시도 하거나 수동으로 등록할 수 있습니다. SPN을 등록하려고 시도하는 계정에 액세스 권한이 충분하지 않은 경우 등록은 실패하게 됩니다.  
+ Spn는 계정을 확인 하기 위해 인증 프로토콜에서 사용 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 실행 인스턴스. 인스턴스 계정이 알려진 경우 Kerberos 인증을 사용하여 클라이언트와 서버에 의한 상호 인증을 제공할 수 있습니다. 인스턴스 계정이 알려지지 않은 경우 서버에 의한 클라이언트 인증만 제공하는 NTLM 인증이 사용됩니다. 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 인스턴스 이름과 네트워크 연결 속성에서 SPN을 파생 시켜 인증 조회를 수행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 시작 시 Spn 등록을 시도 하거나 수동으로 등록할 수 있습니다. SPN을 등록하려고 시도하는 계정에 액세스 권한이 충분하지 않은 경우 등록은 실패하게 됩니다.  
   
- 도메인 및 컴퓨터 계정은 Active Directory에 자동으로 등록됩니다. 이러한 계정을 SPN으로 사용할 수 있고 관리자가 직접 자신의 SPN을 정의할 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 인증의 좀 더 관리 및 신뢰할 수 있는 클라이언트가 사용할 SPN을 직접 지정 하도록 허용 하 여 만듭니다.  
+ 도메인 및 컴퓨터 계정은 Active Directory에 자동으로 등록됩니다. 이러한 계정을 SPN으로 사용할 수 있고 관리자가 직접 자신의 SPN을 정의할 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트가 사용할 SPN을 직접 지정 하도록 허용 하 여 좀 더 관리 및 신뢰할 수 있는 인증을 보호할 수 있습니다.  
   
 > [!NOTE]  
 >  클라이언트 응용 프로그램에서 지정한 SPN은 Windows 통합 보안으로 연결이 설정되는 경우에만 사용됩니다.  
@@ -45,7 +43,7 @@ ms.locfileid: "35697314"
   
  Kerberos에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
--   [Windows 용 Kerberos 기술 보충 자료](http://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=101449)  
   
 -   [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -55,7 +53,7 @@ ms.locfileid: "35697314"
 |시나리오|Description|  
 |--------------|-----------------|  
 |레거시 응용 프로그램이 SPN을 지정하지 않습니다.|이 호환성 시나리오는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용으로 개발된 응용 프로그램의 동작에 변화가 없을 것임을 보장합니다.  지정된 SPN이 없으면 해당 응용 프로그램은 생성된 SPN에 의존하며, 어떤 인증 방법이 사용되는지 알 수 없습니다.|  
-|클라이언트 응용 프로그램의 현재 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로 또는 사용자 정의 문자열로 연결 문자열에 SPN을 지정 합니다.|공급자, 초기화 또는 연결 문자열에서 **ServerSPN** 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> -에서 사용할 계정을 지정 하십시오.는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 연결에 대 한 합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br /><br /> --서비스 계정에 대 한를 조회 하는 SPN을 지정 하는 중는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 에 대 한 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를이 용도로 사용할 수 있는 두 개의 기본 Spn이 생성 됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br /><br /> -에 대 한 서비스 계정을 조회에 사용할 SPN을 지정 합니다.는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> **FailoverPartnerSPN** 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  
+|클라이언트 응용 프로그램의 현재 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 도메인 사용자 또는 컴퓨터 계정으로, 인스턴스별 SPN으로, 또는 사용자 정의 문자열로 연결 문자열에 SPN을 지정 합니다.|공급자, 초기화 또는 연결 문자열에서 **ServerSPN** 키워드를 사용하여 다음을 수행할 수 있습니다.<br /><br /> -에서 사용할 계정을 지정 하십시오.는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결 합니다. 이를 통해 Kerberos 인증에 대한 액세스가 간소화됩니다. Kerberos KDC(키 배포 센터)가 있고 올바른 계정이 지정된 경우 NTLM보다 Kerberos 인증이 사용될 가능성이 더 높습니다. KDC는 일반적으로 도메인 컨트롤러와 동일한 컴퓨터에 위치합니다.<br /><br /> -에 대 한 서비스 계정을 조회 하기 위해 SPN을 지정 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 에 대 한 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를이 용도로 사용할 수 있는 두 개의 기본 Spn이 생성 됩니다. 그러나 키가 Active Directory에 있다는 보장은 없으므로 이 경우 Kerberos 인증이 보장되지는 않습니다.<br /><br /> --에 대 한 서비스 계정을 조회에 사용할 SPN을 지정 하는 중의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 이는 서비스 계정에 매핑되는 사용자 정의 문자열일 수 있습니다. 이 경우 키는 KDC에 수동으로 등록해야 하며 사용자 정의 SPN에 대한 규칙을 충족해야 합니다.<br /><br /> **FailoverPartnerSPN** 키워드를 사용하여 장애 조치(Failover) 파트너 서버에 대한 SPN을 지정할 수 있습니다. 계정 및 Active Directory 키 값의 범위는 주 서버에 지정할 수 있는 값과 동일합니다.|  
 |ODBC 응용 프로그램이 주 서버 또는 장애 조치 파트너 서버에 대한 연결 특성으로 SPN을 지정합니다.|**SQL_COPT_SS_SERVER_SPN** 연결 문자열을 사용하여 주 서버 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> **SQL_COPT_SS_FAILOVER_PARTNER_SPN** 연결 문자열을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
 |OLE DB 응용 프로그램이 주 서버 또는 장애 조치 파트너 서버에 대한 데이터 원본 초기화 속성으로 SPN을 지정합니다.|**SSPROP_INIT_SERVER_SPN** 속성 집합의 **DBPROPSET_SQLSERVERDBINIT** 연결 속성을 사용하여 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 의 **DBPROPSET_SQLSERVERDBINIT** 연결 속성을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
 |사용자가 ODBC DSN(데이터 원본 이름)에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|DSN 설정 대화 상자를 통해 SPN을 ODBC DSN에 지정할 수 있습니다.|  
@@ -77,7 +75,7 @@ ms.locfileid: "35697314"
  새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.   
   
 ## <a name="linked-servers-and-delegation"></a>연결된 서버 및 위임  
- 연결 된 서버를 만들면는 **@provstr** 의 매개 변수 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 서버 및 장애 조치 파트너 Spn 지정 데 사용할 수 있습니다. 이렇게 하는 경우의 장점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
+ 연결 된 서버를 만들면 합니다 **@provstr** 의 매개 변수 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 서버 및 장애 조치 파트너 Spn 지정할 수 있습니다. 이렇게 하는 경우의 장점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
   
  연결된 서버를 사용한 위임에는 Kerberos 인증이 필요합니다.  
   
@@ -86,9 +84,9 @@ ms.locfileid: "35697314"
   
 -   보안: 지정된 SPN이 보호되는 정보를 노출하나요?  
   
--   안정성: 기본 Spn 사용을 사용 하려면 서비스는 계정에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행 되는 KDC에 Active Directory를 업데이트할 수 있는 권한이 있어야 합니다.  
+-   안정성: 기본 Spn 사용을 사용 하려면 서비스 계정에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행 되는 KDC의 Active Directory를 업데이트할 수 있는 권한이 있어야 합니다.  
   
--   편의성 및 위치 투명성: 다른 데이터베이스를 이동 하는 경우 영향을 받습니까 응용 프로그램의 Spn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스? 데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 응용 프로그램은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
+-   편의성 및 위치 투명성: 다른 데이터베이스를 이동 하는 경우 영향을 받을 수는 어떻게 응용 프로그램의 Spn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스? 데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 응용 프로그램은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
   
 ## <a name="specifying-the-spn"></a>SPN 지정  
  대화 상자 또는 코드에서 SPN을 지정할 수 있습니다. 이 섹션에서는 SPN을 지정하는 방법에 대해 설명합니다.  
@@ -101,7 +99,7 @@ ms.locfileid: "35697314"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *fqdn* 은 정규화된 도메인 이름입니다.|  
 |MSSQLSvc/*fqdn*:*port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다.<br /><br /> *port* 는 TCP 포트 번호입니다.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *InstanceName* 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름입니다.|  
+|MSSQLSvc/*fqdn*:*InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다.<br /><br /> *InstanceName* 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 이름입니다.|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Windows에서 자동으로 등록되는 기본 제공 컴퓨터 계정에 매핑되는 SPN입니다.|  
 |*Username*@*Domain*|도메인 계정 직접 지정입니다.<br /><br /> *Username* 은 Windows 사용자 계정 이름입니다.<br /><br /> *Domain* 은 Windows 도메인 이름 또는 정규화된 도메인 이름입니다.|  
 |*MachineName*$@*Domain*|컴퓨터 계정 직접 지정입니다.<br /><br /> 연결 중인 서버가 LOCAL SYSTEM 또는 NETWORK SERVICE 계정으로 실행되는 경우 **ServerSPN** 을 *MachineName*$@*Domain* 형식으로 사용하여 Kerberos 인증을 받을 수 있습니다.|  

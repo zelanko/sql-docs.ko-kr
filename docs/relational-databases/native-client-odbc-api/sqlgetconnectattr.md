@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a84862d200db9014a494593f0facd052a3160ccc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698984"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412862"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은 **SQLGetConnectAttr**에서 사용할 수 있으며, 이 함수를 사용하여 현재 설정을 보고합니다. 이러한 특성 되지 않을 때까지 연결 된 또는 사용 하는 특성을 설정한 후에 대해 보고 하는 값 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은 **SQLGetConnectAttr**에서 사용할 수 있으며, 이 함수를 사용하여 현재 설정을 보고합니다. 이러한 특성 아닐 때까지 연결 된 또는 사용 하 여 특성을 설정한 후에 대해 보고 하는 값 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)합니다.  
   
- 이 항목에서는 읽기 전용 특성을 나열합니다. 다른 작업에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 연결 특성 참조 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)합니다.  
+ 이 항목에서는 읽기 전용 특성을 나열합니다. 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 연결 특성을 참조 하세요 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)합니다.  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  SQL_COPT_SS_CONNECTION_DEAD 특성은 서버에 대한 연결 상태를 보고합니다. 드라이버는 현재 연결 상태에 대해 네트워크를 쿼리합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "35698984"
   
 -   설정할 경우 데이터 액세스 추적 로그의 진단 정보  
   
- 자세한 내용은 참조 [확장 이벤트 로그의 진단 정보에 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
+ 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -80,13 +80,13 @@ ms.locfileid: "35698984"
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>SPN(서비스 사용자 이름)에 대한 SQLGetConnectAttr 지원  
- SQLGetConnectAttr 새 연결 특성인 SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED 및 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD의 값을 쿼리할 데 사용할 수 있습니다. (SQLGetConnectOption 데도 사용할 수 있습니다 이러한 값을 쿼리할.)  
+ 새 연결 특성 SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED 및 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD의 값을 쿼리할 SQLGetConnectAttr은 사용할 수 있습니다. (SQLGetConnectOption 데도 사용할 수 있습니다 이러한 값을 쿼리 합니다.)  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD는 Windows 인증을 사용하는 열린 연결에만 사용할 수 있습니다.  
   
  SQL_COPT_SS_SERVER_SPN 또는 SQL_COPT_SS_FAILOVER_PARTNER가 설정되지 않은 경우 기본값(빈 문자열)이 반환됩니다.  
   
- Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
+ Spn에 대 한 자세한 내용은 참조 하세요. [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLGetConnectAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59347)   
@@ -94,6 +94,6 @@ ms.locfileid: "35698984"
  [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;Transact SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

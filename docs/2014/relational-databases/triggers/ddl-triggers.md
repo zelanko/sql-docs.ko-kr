@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08f3119fd18322720812ada91e37d5c4f95282f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b65cc412f2e9cb1ea2058a52ae8336c7827b9ca3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078798"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412742"
 ---
 # <a name="ddl-triggers"></a>DDL 트리거
   DDL 트리거는 다양한 DDL(데이터 정의 언어) 이벤트에 대한 응답으로 실행됩니다. 이러한 이벤트는 주로 CREATE, ALTER, DROP, GRANT, DENY, REVOKE 또는 UPDATE STATISTICS 키워드로 시작하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 해당합니다. DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 DDL 트리거가 발생할 수도 있습니다.  
@@ -46,7 +44,7 @@ ms.locfileid: "36078798"
   
  DDL 트리거를 시작하는 DDL 문이 실행된 후에만 DDL 트리거가 시작됩니다. DDL 트리거는 INSTEAD OF 트리거로 사용될 수 없습니다. DDL 트리거는 로컬 또는 전역 임시 테이블과 저장 프로시저에 영향을 주는 이벤트에 대한 응답으로 실행되지 않습니다.  
   
- DDL 트리거는 특수를 만들지 않음 `inserted` 및 `deleted` 테이블입니다.  
+ DDL 트리거는 특수 한 만들지 `inserted` 고 `deleted` 테이블입니다.  
   
  DDL 트리거를 실행하는 이벤트에 대한 정보 및 트리거로 변경되는 내용은 EVENTDATA 함수를 사용하여 확인할 수 있습니다.  
   

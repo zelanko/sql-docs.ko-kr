@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -19,13 +19,13 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f938400661c97c842149f958f9660fef20085a8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 567efb17fb672be6a82fd0f47b52d8919ea81095
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259409"
 ---
 # <a name="save-packages"></a>패키지 저장
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만든 패키지를 파일 시스템에 XML 파일(.dtsx 파일)로 저장합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 msdb 데이터베이스나 패키지 저장소에 패키지 XML 파일의 복사본을 저장할 수도 있습니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리하는 파일 시스템 위치에 있는 폴더를 나타냅니다.  

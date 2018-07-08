@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler로 Analysis Services 모니터링 소개 | Microsoft Docs
+title: SQL Server Profiler 사용 하 여 Analysis Services 모니터링 소개 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17aafb1d81085cd01159b5ac85a588d733dc0fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1097e4558e336dd10bbd5750f9e1331a8a1016d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161504"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server 프로파일러를 사용한 Analysis Services 모니터링 소개
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 의해 생성된 이벤트를 모니터링할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
@@ -64,6 +64,6 @@ ms.locfileid: "36088962"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 추적 이벤트](../trace-events/analysis-services-trace-events.md)   
- [재생에 대 한 프로파일러 추적 만들기 &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [Profiler 추적 재생을 위해 만들기 &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

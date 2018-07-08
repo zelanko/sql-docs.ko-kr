@@ -24,20 +24,20 @@ helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 098a123c28e4a449ad6425d1a74ff8355d074e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165324"
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet 데이터 형식(XMLA)
-  반환 된 다차원 데이터를 나타내는 파생된 데이터 형식을 정의 [Execute](../xml-elements-methods-execute.md) 메서드.  
+  반환 된 다차원 데이터를 나타내는 파생된 데이터 형식을 정의 합니다 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
- **Namespace** :-microsoft-com:xml-분석: mddataset  
+ **Namespace** urn: 스키마-microsoft-com:xml-분석: mddataset  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,13 +64,13 @@ ms.locfileid: "36080697"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[축](../xml-elements-properties/axes-element-xmla.md), [CellData](../xml-elements-properties/celldata-element-xmla.md), [OlapInfo](../xml-elements-properties/olapinfo-element-xmla.md)|  
+|자식 요소|[축](../xml-elements-properties/axes-element-xmla.md)하십시오 [CellData](../xml-elements-properties/celldata-element-xmla.md), [OlapInfo](../xml-elements-properties/olapinfo-element-xmla.md)|  
 |파생 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `MDDataSet` 데이터 형식은 OLAP 데이터를 XML로 표시하는 데 필요한 OLAP 기반 행 집합 또는 데이터 집합을 제공합니다. 이 행 집합의 콘텐츠 값에 따라 달라질 수 있습니다는 `Content` 및 `Format` 속성에는 [속성](../xml-elements-properties/properties-element-xmla.md) 의 컬렉션은 `Execute` 메서드. 에 대 한 자세한 내용은 `Content` 및 `Format` 속성 참조 [XMLA 속성 지원 &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다.  
+ `MDDataSet` 데이터 형식은 OLAP 데이터를 XML로 표시하는 데 필요한 OLAP 기반 행 집합 또는 데이터 집합을 제공합니다. 이 행 집합의 콘텐츠는 값에 따라 달라질 수 있습니다는 `Content` 및 `Format` 에서 제공 하는 속성을 [속성](../xml-elements-properties/properties-element-xmla.md) 의 컬렉션을 `Execute` 메서드. 에 대 한 자세한 내용은 합니다 `Content` 하 고 `Format` 속성을 참조 하세요 [지원 되는 XMLA 속성 &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
- OLAP용 OLE DB 데이터 집합 구조에 대한 기본 내용은 XML for Analysis 1.1 사양의 "OLE DB에 MDDataSet 데이터 형식 매핑"을 참조하십시오. 전체 XML 스키마 정의 언어 (XSD) 예제에 대 한는 `MDDataSet` 데이터 형식 "부록 d:: mddataset Example" XML for Analysis 1.1 사양의를 참조 하십시오.  
+ OLAP용 OLE DB 데이터 집합 구조에 대한 기본 내용은 XML for Analysis 1.1 사양의 "OLE DB에 MDDataSet 데이터 형식 매핑"을 참조하십시오. 전체 XML 스키마 정의 언어 (XSD) 예제는 `MDDataSet` XML for Analysis 1.1 사양의 "부록 d: MDDataSet Example" 참조 데이터 형식입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [XML 데이터 형식 &#40;XMLA&#41;](xml-data-types-xmla.md)  

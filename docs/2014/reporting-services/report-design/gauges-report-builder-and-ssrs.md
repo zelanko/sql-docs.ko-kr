@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150284"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   계기 데이터 영역은 데이터 집합에 있는 하나의 값을 표시하는 1차원 데이터 영역입니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 계기 패널을 사용하여 필터링, 그룹화, 정렬 등 공통 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -244,7 +244,7 @@ ms.locfileid: "36089248"
     > [!NOTE]  
     >  계기에 포인터가 없거나 보고서에 여러 개의 데이터 집합이 포함되어 있고 계기 패널이 데이터 집합과 연결되지 않은 경우에는 이 방법을 사용할 수 없습니다.  
   
--   계기 포인터를 마우스 오른쪽 단추로 클릭하고 **포인터 속성**을 선택합니다. 에 대 한 `Value`, 드롭 다운 목록에서 필드를 선택 하거나 클릭 하 여 필드 식을 정의 **식** (*fx*) 단추입니다.  
+-   계기 포인터를 마우스 오른쪽 단추로 클릭하고 **포인터 속성**을 선택합니다. 에 대 한 `Value`드롭 다운 목록에서 필드를 선택 하거나 클릭 하 여 필드 식을 정의 합니다 **식을** (*fx*) 단추입니다.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>필드를 단일 값으로 집계  
  계기에 필드를 추가 하는 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본적으로 필드에 대 한 집계를 계산 합니다. 숫자 데이터 형식은 SUM 함수를 사용하여 집계합니다. 숫자가 아닌 데이터 형식은 데이터 집합 또는 그룹 내의 특정 값이나 필드의 인스턴스 수를 세는 COUNT 함수로 집계합니다. 값 필드의 데이터 형식이 문자열이면 필드에 숫자가 있더라도 계기에서 숫자 값을 표시할 수 없습니다. 대신 계기에서는 COUNT 함수를 사용하여 문자열 필드를 집계합니다. 이러한 현상을 방지하려면 필드에 서식 지정된 숫자가 포함된 문자열이 아니라 숫자 데이터 형식이 지정되어야 합니다. Visual Basic 식을 사용하여 CDbl 또는 CInt 상수로 문자열 값을 숫자 데이터 형식으로 변환할 수 있습니다. 예를 들어 다음 식은 MyField라는 문자열 필드를 숫자 값으로 변환합니다.  

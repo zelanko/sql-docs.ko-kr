@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], startup options
 - SQL Server, startup options
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server services, setting startup options
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d786c0d5a89c5b3fa68774526e6b6a44ddb09344
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a0eb6d3cc33a737f6d9930da4fc9d4726e362b74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155044"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>서버 시작 옵션 구성(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)을 참조하세요.  
@@ -56,22 +56,22 @@ ms.locfileid: "36081403"
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 응용 프로그램으로 표시되지 않습니다.  
     >   
     >  -   **Windows 10**:  
-    >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에는 **시작 페이지**, 아래에 sqlservermanager12.msc (에 대 한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 12를 더 작은 수로 바꿉니다. SQLServerManager12.msc를 클릭 하면 Configuration Manager 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄에 고정 하려면 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **파일 위치 열기**합니다. Windows 파일 탐색기에서 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **시작 화면에 고정** 또는 **작업 표시줄에 고정**합니다.  
+    >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에는 **시작 페이지**, sqlservermanager12.msc (에 대 한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 12를 더 적은 수로 바꿉니다. SQLServerManager12.msc를 클릭 하면 Configuration Manager 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄을 고정 하려면 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **파일 위치 열기**합니다. Windows 파일 탐색기에서 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **시작 화면에 고정** 하거나 **작업 표시줄에 고정**합니다.  
     > -   **Windows 8**:  
-    >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에는 **검색** 참의 **앱**, 형식 **SQLServerManager\<버전 >.msc** 등`SQLServerManager12.msc`, 누릅니다 **Enter**합니다.  
+    >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에서의 **검색** 참의 **앱**, 형식 **SQLServerManager\<버전 >.msc** 등`SQLServerManager12.msc`를 누릅니다 **Enter**합니다.  
   
 2.  오른쪽 창에서 **SQL Server(***<instance_name>***)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 3.  **시작 매개 변수** 탭의 **시작 매개 변수 지정** 상자에 매개 변수를 입력하고 **추가**를 클릭합니다.  
   
-     예를 들어 단일 사용자 모드에서 시작 하려면 입력 `-m` 에 **시작 매개 변수 지정** 상자 한 다음 클릭 **추가**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 다시 시작할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 중지합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 먼저 연결되므로 두 번째 사용자로 연결하지 못합니다.  
+     예를 들어 단일 사용자 모드로 시작 하려면 입력 `-m` 에 **시작 매개 변수를 지정** 상자 하 고 클릭 **추가**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 다시 시작할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 중지합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 먼저 연결되므로 두 번째 사용자로 연결하지 못합니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 다시 시작합니다.  
   
     > [!WARNING]  
-    >  단일 사용자 모드를 사용 하 여 시작 매개 변수 상자에 작업을 완료 한 후에 선택 하는 `-m` 에서 매개 변수는 **기존 매개 변수** 상자를 선택한 다음 클릭 **제거**합니다. 그런 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 시작하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 일반 다중 사용자 모드로 복원합니다.  
+    >  단일 사용자 모드를 사용 하 여 시작 매개 변수 상자에 작업을 완료 한 후 선택 합니다 `-m` 의 매개 변수를 **기존 매개 변수** 상자를 선택한 다음 클릭 **제거**합니다. 그런 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 시작하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 일반 다중 사용자 모드로 복원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [단일 사용자 모드로 SQL Server 시작](start-sql-server-in-single-user-mode.md)   

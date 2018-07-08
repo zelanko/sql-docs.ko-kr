@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
@@ -16,27 +16,27 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b66fe56d1309f3ebe0e16177ff1372ea0fa1692f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea74ad195b97541147c3d1b19dc01c5033b962c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182831"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  XML 문서의 유효성을 검사 하 고 사용 하 여 풍부한 오류 출력을 가져올는 `ValidationDetails` XML 태스크의 속성입니다.  
+  XML 문서의 유효성을 검사 하 고 풍부한 오류 출력을 사용 하 여 얻을 `ValidationDetails` XML 태스크의 속성입니다.  
   
  다음 스크린샷에는 다양한 오류 출력을 제공하는 XML 유효성 검사에 필요한 설정이 포함된 **XML 태스크 편집기** 가 나와 있습니다.  
   
  ![XML 태스크 편집기에서 XML 태스크 속성](../media/xmltaskproperties.jpg "XML 태스크 편집기에서 XML 태스크 속성")  
   
- 전에 `ValidationDetails` 속성을 사용할 수 있는 XML 유효성 검사 XML 태스크에 의해 true 또는 false 결과만 오류 또는 해당 위치에 대 한 정보 없이 반환 합니다. 설정할 때 이제 `ValidationDetails` true 이면 출력 파일 줄 번호 및 위치를 포함 하 여 모든 오류에 대 한 자세한 정보를 포함 합니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다.  
+ 전에 `ValidationDetails` XML 태스크에 의해 XML 유효성 검사는 true 또는 false 결과만 반환 오류 또는 해당 위치에 대 한 정보가 없는, 속성은 사용할 수 있습니다. 설정한 경우에 이제 `ValidationDetails` true 이면 출력 파일 줄 번호 및 위치를 포함 하 여 모든 오류에 대 한 자세한 정보를 포함 합니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다.  
   
  대형 XML 문서 및 많은 수의 오류에 사용할 수 있도록 XML 유효성 검사 기능을 쉽게 확장할 수 있습니다. 출력 파일 자체가 XML 형식이므로 출력을 쿼리하고 분석할 수 있습니다. 예를 들어 출력에 오류가 많이 포함되어 있으면 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하여 오류를 그룹화할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 도입 된 `ValidationDetails` 속성 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 2입니다. 속성이 제공 됩니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 SQL Server 2016에서 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 도입 합니다 `ValidationDetails` 속성에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 2입니다. 또한 속성은에서 사용할 수 있는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 SQL Server 2016 합니다.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>유효한 XML의 샘플 출력  
  아래에는 유효한 XML 파일의 유효성 결과가 포함된 샘플 출력 파일이 나와 있습니다.  

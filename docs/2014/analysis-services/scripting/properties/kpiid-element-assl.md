@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KpiID element
 ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03bbebbf255b5f42934d4fe1e28c78cc1bb54caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1f363564a74e9f64ed126ceda98ca387561c852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151274"
 ---
 # <a name="kpiid-element-assl"></a>KpiID 요소(ASSL)
-  연결 하는 식별자 (ID)를 포함 한 [Kpi](../objects/kpi-element-assl.md) 인 요소는 [관점](../objects/perspective-element-assl.md) 요소입니다.  
+  연결 하는 식별자 (ID)를 포함 한 [Kpi](../objects/kpi-element-assl.md) 요소를 [관점](../objects/perspective-element-assl.md) 요소.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36090948"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `KpiID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveKpi>합니다.  
+ 부모에 해당 하는 요소가 `KpiID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveKpi>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성(ASSL)](properties-assl.md)  

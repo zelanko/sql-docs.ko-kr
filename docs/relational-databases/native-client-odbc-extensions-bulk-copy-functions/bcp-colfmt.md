@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fcd18d87599e214b27473d716b27f9c19df487c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9d8f1adbd4dee8194d0e91d9efd3a99a52b79988
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701854"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419662"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용 될 경우 **bcp_colfmt** 대량 복사에서 데이터 원본으로 사용 되는 기존 데이터 파일의 형식을 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt**에 지정된 열 형식을 사용하여 만들어집니다.  
+  사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용 될 때 **bcp_colfmt** 대량 복사에서 데이터 원본으로 사용할 기존 데이터 파일의 형식을 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt**에 지정된 열 형식을 사용하여 만들어집니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,13 +60,13 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  사용자 파일에 있는 이 열의 데이터 형식입니다. 데이터베이스 테이블에 있는 해당 열의 데이터 형식(*idxServerColumn*)과 다르면 가능한 경우 대량 복사에서 데이터를 변환합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원 도입는 *eUserDataType* 매개 변수입니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 합니다 *eUserDataType* 매개 변수입니다.  
   
- *eUserDataType* 매개 변수 열거 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 ODBC C 데이터 형식 열거자가 아닌, 데이터 형식 토큰 sqlncli.h에 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
+ *eUserDataType* 의해 열거 된 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 토큰 sqlncli.h에는 ODBC C 데이터 형식 열거자가 아닌 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 SQLCHARACTER 형식을 사용하여 ODBC 유형 SQL_C_CHAR라는 문자열을 지정할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 기본 데이터 표현을 지정하려면 이 매개 변수를 0으로 설정합니다.  
   
- 대량 복사에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일로 때 *eUserDataType* 이 SQLDECIMAL 또는 SQLNUMERIC:  
+ 대량 복사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일로 때 *eUserDataType* 이 SQLDECIMAL 또는 sqlnumeric 인:  
   
 -   원본 열이 **decimal** 또는 **numeric**이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
   
@@ -90,7 +90,7 @@ RETCODE bcp_colfmt (
   
  *cbUserData* 를 SQL_VARLEN_DATA로 설정하면 시스템에서 각 열의 데이터 길이를 확인함을 나타냅니다. 일부 열의 경우 이 설정은 길이 또는 null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.  
   
- 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 *cbUserData* SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. *cbUserData* 가 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. 경우 *cbUserData* 가 SQL_VARLEN_DATA 이면 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식 및 길이 표시기 나 종결자 시퀀스 모두 지정 되 면 시스템 오류 메시지를 반환 합니다.  
+ 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 *cbUserData* SQL_VARLEN_DATA, SQL_NULL_DATA, 0 또는 양수 값일 수 있습니다. *cbUserData* 가 SQL_VARLEN_DATA이면 시스템에서 길이 표시기(있는 경우)나 종결자 시퀀스를 사용하여 데이터 길이를 확인합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. 하는 경우 *cbUserData* 가 SQL_VARLEN_DATA 이면 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이 며 길이 표시기 나 종결자 시퀀스 모두를 지정 하면 시스템 오류 메시지를 반환 합니다.  
   
  *cbUserData* 가 0이거나 양수 값이면 시스템은 *cbUserData* 를 최대 데이터 길이로 사용합니다. 그러나 *cbUserData*가 양수이고 길이 표시자 또는 종결자 시퀀스도 제공되는 경우 시스템은 복사할 데이터가 적은 방법을 사용하여 데이터 길이를 확인합니다.  
   
@@ -131,9 +131,9 @@ RETCODE bcp_colfmt (
   
 -   선택 사항인 종결 바이트 시퀀스의 길이  
   
- **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열 사용자 데이터 파일의 세 열에 대 한 기본 설정을 변경 하려면 먼저 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, 한 다음 호출 **bcp_colfmt** 다섯 번 사용자 지정 형식을 설정 하는 것 중 3 개를 호출 합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
+ **bcp_colfmt** 에 대한 각 호출에서는 사용자 파일의 한 열에 대한 서식을 지정합니다. 예를 들어 다섯 개의 열 사용자 데이터 파일의 세 열에 대해 기본 설정을 변경 하려면 먼저 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** 를 호출 하 고 **bcp_colfmt** 다섯 번 세 가지 호출에서 사용자 지정 형식을 설정 합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 0으로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, SQL_VARLEN_DATA 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
- *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 참조 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)합니다.  
+ *cbIndicator*의 경우 이제 큰 값 형식을 나타내는 값 8이 유효합니다. 해당 열이 새로운 최대 유형인 필드에 접두사가 지정되어 있으면 필드 값을 8로만 설정할 수 있습니다. 자세한 내용은 참조 하세요 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)합니다.  
   
  **bcp_colfmt** 를 호출하기 전에 **bcp_columns**함수를 호출해야 합니다.  
   
@@ -143,12 +143,12 @@ RETCODE bcp_colfmt (
   
  사용자 파일의 모든 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 복사할 필요가 없습니다. 열을 건너뛰려면 *idxServerCol* 매개 변수를 0으로 설정하여 해당 열의 데이터 형식을 지정합니다. 열을 건너뛰려면 열 형식을 지정해야 합니다.  
   
- [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 함수 형식 지정에 사용할 수 있습니다.  
+ 합니다 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 형식 사양을 유지 하는 함수를 사용할 수 있습니다.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_colfmt 지원  
- 와 사용 되는 형식에 대 한 내용은 *eUserDataType* 날짜/시간 형식에 대 한 매개 변수 참조 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.  
+ 사용 유형에 대 한 정보에 대 한 합니다 *eUserDataType* 날짜/시간 형식에 대 한 매개 변수 참조 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

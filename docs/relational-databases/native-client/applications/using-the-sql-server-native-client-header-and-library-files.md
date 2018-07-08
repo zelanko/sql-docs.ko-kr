@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client 헤더 및 라이브러리 파일을 사용 하 여 | Microsoft Docs
+title: SQL Server Native Client 헤더 및 라이브러리 파일 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,23 +21,22 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7fcb33012d766c2585e11468e23a3591a4b2650
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42a657a4524a09ea8d6643d6b37e193c5c6b227f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952438"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416872"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>SQL Server Native Client 헤더 및 라이브러리 파일 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 설치됩니다. 응용 프로그램을 개발할 때는 개발에 필요한 모든 파일을 사용자의 개발 환경으로 복사하고 설치해야 합니다. 설치 하 고 재배포 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client를 [SQL Server Native Client 설치](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 설치됩니다. 응용 프로그램을 개발할 때는 개발에 필요한 모든 파일을 사용자의 개발 환경으로 복사하고 설치해야 합니다. 설치 하 고 재배포 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [SQL Server Native Client 설치](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일은 다음 위치에 설치됩니다.  
   
@@ -56,7 +53,7 @@ ms.locfileid: "32952438"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 사용하는 OLE DB 응용 프로그램은 sqlncli.h만 참조하면 됩니다. MDAC(SQLOLEDB)와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 모두 사용하는 응용 프로그램은 sqloledb.h 및 sqlncli.h를 모두 참조할 수 있지만 sqloledb.h를 먼저 참조해야 합니다.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>SQL Server Native Client 헤더 파일 사용  
- 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용 해야 Native Client 헤더 파일에는 **포함** C/c + + 프로그래밍 코드 내에 문의 합니다. 다음 섹션에서는 OLE DB 및 ODBC 응용 프로그램에서 이를 수행하는 방법을 설명합니다.  
+ 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용 해야 Native Client 헤더 파일을 **포함** C/c + + 프로그래밍 코드 내에 있는 문의. 다음 섹션에서는 OLE DB 및 ODBC 응용 프로그램에서 이를 수행하는 방법을 설명합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일은 Visual Studio C++ 2002 이상을 사용해야 컴파일할 수 있습니다.  
@@ -70,7 +67,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  응용 프로그램에서 OLE DB 및 ODBC API를 모두 사용하는 경우에는 위의 코드에서 첫 번째 행을 생략해야 합니다. 또한 응용 프로그램에 있는 경우에 **포함** sqloledb.h에 대 한 문을 **포함** sqlncli.h에 대 한 문이 그 뒤에 야 합니다.  
+>  응용 프로그램에서 OLE DB 및 ODBC API를 모두 사용하는 경우에는 위의 코드에서 첫 번째 행을 생략해야 합니다. 또한 응용 프로그램에는 **포함** sqloledb.h에 대 한 문을 합니다 **포함** sqlncli.h에 대 한 문 뒤에 야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 통해 데이터 원본에 대한 연결을 만들 때 공급자 이름 문자열에는 "SQLNCLI11"을 사용합니다.  
   
@@ -107,9 +104,9 @@ include "sqlncli.h";
   
  예를 들어, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 \Program Files\Microsoft SQL Server\110\SDK의 연결된 라이브러리 파일(sqlncli11.lib) 및 헤더 파일(sqlncli.h)을 사용하여 응용 프로그램을 컴파일하는 경우 연결 문자열에 "DRIVER={SQL Server Native Client 11.0}"을 지정해야 합니다(예로 ODBC 사용).  
   
- 자세한 내용은 참조 공연 [대량 복사 작업 수행](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)합니다.  
+ 자세한 내용은 참조 수행 [대량 복사 작업 수행](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL Server Native Client 사용한 응용 프로그램 작성](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

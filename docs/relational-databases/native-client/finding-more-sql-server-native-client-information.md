@@ -3,28 +3,26 @@ title: SQL Server Native Client 추가 정보 찾기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 639ca13ec6cedf95c08ed8be75e25c5a40dcd31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06b8b102293ed8bea4af80650a4eaef67da0441b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949628"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416702"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +30,7 @@ ms.locfileid: "32949628"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   
- [데이터 액세스 및 저장소 개발자 센터](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
  이 사이트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
  [데이터 액세스 블로그](http://go.microsoft.com/fwlink/?LinkId=48617)  
@@ -44,7 +42,7 @@ ms.locfileid: "32949628"
  Window DAC SDK에는 ADO(ActiveX Data Object), OLE DB 및 ODBC(Open Database Connectivity)에 대한 설명서가 포함되어 있습니다.  
   
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

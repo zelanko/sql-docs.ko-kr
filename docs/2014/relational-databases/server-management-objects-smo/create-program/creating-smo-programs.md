@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2115b0e807e8308b802a2d0f104c71304ad40154
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a92ff5f60136d910632ead2aefbcc5023a387a3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158034"
 ---
 # <a name="creating-smo-programs"></a>SMO 프로그램 만들기
   SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체의 일반적인 프로그래밍에는 메서드 실행, 속성 설정 및 컬렉션 조작과 같이 모든 개체가 공유하는 공통적인 영역이 포함됩니다.  

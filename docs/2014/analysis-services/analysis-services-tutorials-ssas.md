@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 4b933161864612d4bf150789ada911169a5f03d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 204166a6e87f2b8ebdca6b5d2e565b413400da00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183470"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 자습서(SSAS)
   이 섹션에는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services에 대한 자습서가 포함되어 있습니다.   
@@ -40,7 +40,7 @@ ms.locfileid: "36088739"
  대부분의 SQL Server 2008 R2 자습서는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 서버에서 작동합니다.  데이터 마이닝을 처음 접하는 경우 이 링크를 클릭하여 SQL Server 2008 R2 데이터 마이닝 자습서를 참조해 보십시오. 이 자습서도 Analysis Services [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 인스턴스에서 작동합니다.   
   
 ## <a name="see-also"></a>관련 항목  
- [TechNet WIKI: SQL Server 2012 예제](http://go.microsoft.com/fwlink/?linkID=220734)   
+ [TechNet WIKI: SQL Server 2012 샘플](http://go.microsoft.com/fwlink/?linkID=220734)   
  [Picnic 데이터 집합 (예제 데이터)](http://go.microsoft.com/fwlink/?linkID=219108)  
   
   

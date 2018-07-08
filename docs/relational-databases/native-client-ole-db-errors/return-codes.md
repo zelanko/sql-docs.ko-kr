@@ -1,12 +1,12 @@
 ---
-title: 반환 코드 | Microsoft Docs
+title: 코드를 반환 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b979fafd84bc4024e0d4481c7068ffff751fdf87
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c49687aa278b41b48e2bd8fc2e46b8963b98b82
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698484"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415482"
 ---
 # <a name="return-codes"></a>반환 코드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "35698484"
 
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 응용 프로그램 개발자가 의도한 것이 아닐 수 있습니다.  
   
- OLE DB 반환 코드에 대 한 자세한 내용은 참조 [반환 코드 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)합니다.  
+ OLE DB 반환 코드에 대 한 자세한 내용은 참조 하세요. [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)합니다.  
   
- 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수가 S_OK를 성공 함수를 반환 합니다.  
+ 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수가 S_OK를 성공 하는 함수를 반환 합니다.  
   
- 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수가 S_OK를 반환 하지 않습니다, 전반적인 성공 또는 실패는 함수의 OLE/COM hresult-unpacking FAILED 및 IS_ERROR 매크로 확인할 수 있습니다.  
+ 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수가 S_OK를 반환 하지 않는, OLE/COM hresult-unpacking FAILED 및 IS_ERROR 매크로 전반적인 성공 또는 실패 함수를 확인할 수 있습니다.  
   
- FAILED 또는 is_error가 TRUE를 반환 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 멤버 함수 실행이 실패 했음을 확인할 합니다. FAILED 또는 is_error가 FALSE이 고 HRESULT 반환 하는 경우 s_ok이 고, 같지 않음는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 어떤 의미에서 함수 성공 것을 보장 합니다. 소비자는이 "성공 시 정보와 함께"에서 반환 하는 세부 정보를 검색할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 오류 인터페이스입니다. 또한 (의 FAILED 매크로가 TRUE를 반환한)에 함수 명확 하 게 실패 하는 경우 확장된 오류 정보는에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 오류 인터페이스입니다.  
+ FAILED 또는 IS_ERROR TRUE를 반환 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 멤버 함수 실행이 실패 했음을 보장 합니다. FAILED 또는 IS_ERROR FALSE이 고 HRESULT 반환 하는 경우 같지 S_OK는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 어떤 의미에서에서 함수가 성공이 보장 합니다. 소비자는이 "성공 시 정보를 사용 하 여"에서 반환 하는 세부 정보를 검색할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 오류 인터페이스입니다. 또한 (FAILED 매크로 TRUE)에 함수를 명확 하 게 실패 하는 경우, 확장 된 오류 정보를 확인할는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 오류 인터페이스입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 정보로 DB_S_ERRORSOCCURRED "성공" HRESULT 반환 되는 일반적으로 발생 합니다. 일반적으로 DB_S_ERRORSOCCURRED를 반환하는 멤버 함수는 소비자에게 상태 값을 전달하는 하나 이상의 매개 변수를 정의합니다. status-value 매개 변수에 반환되는 정보 외에 다른 오류 정보가 제공되지 않을 수 있으므로 소비자는 제공되는 경우에 상태 값을 검색하도록 응용 프로그램 논리를 구현해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 일반적으로 정보를 사용 하 여 DB_S_ERRORSOCCURRED "성공" HRESULT 반환을 발생합니다. 일반적으로 DB_S_ERRORSOCCURRED를 반환하는 멤버 함수는 소비자에게 상태 값을 전달하는 하나 이상의 매개 변수를 정의합니다. status-value 매개 변수에 반환되는 정보 외에 다른 오류 정보가 제공되지 않을 수 있으므로 소비자는 제공되는 경우에 상태 값을 검색하도록 응용 프로그램 논리를 구현해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수는 성공 코드 S_FALSE를 반환 하지 않습니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수에는 항상 성공을 표시 하기 위해 S_OK를 반환 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수는 성공 코드 S_FALSE를 반환 하지 않습니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수는 항상 성공을 표시 하기 위해 s_ok이 고, 반환 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [오류](../../relational-databases/native-client-ole-db-errors/errors.md)  

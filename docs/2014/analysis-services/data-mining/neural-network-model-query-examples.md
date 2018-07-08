@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea75ce7875a828dc380f81b334d5b7376d2b38c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151814"
 ---
 # <a name="neural-network-model-query-examples"></a>신경망 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  
@@ -72,7 +72,7 @@ WHERE NODE_TYPE = 24
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
- 신경망 모델의 컨텍스트에서 의미 스키마 행 집합의 열 정의 참조 하십시오. [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)합니다.  
+ 신경망 모델의 컨텍스트에서 의미 스키마 행 집합의 열 정의 참조 하세요 [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)합니다.  
   
 ###  <a name="bkmk_Query2"></a> 예제 쿼리 2: 스키마 행 집합에서 모델 메타데이터 검색  
  데이터 마이닝 스키마 행 집합을 쿼리하여 DMX 내용 쿼리에 반환되는 것과 동일한 정보를 찾을 수 있는데, 스키마 행 집합은 몇 개의 열을 추가로 제공합니다. 다음 예제 쿼리에서는 모델이 생성되고 수정되고 마지막으로 처리된 날짜를 반환합니다. 또한 이 쿼리에서는 모델 콘텐츠에서 쉽게 사용할 수 없는 예측 가능한 열과 모델을 작성하는 데 사용된 매개 변수에 대한 세부 정보도 반환합니다. 이 정보는 모델을 문서화하는 데 유용할 수 있습니다.  
@@ -177,7 +177,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  따라서 이러한 결과를 보면 ID 70000000200000000으로 표시된 노드에는 6개의 다른 계수(VALUETYPE = 7)가 전달되었음을 알 수 있습니다. 계수 값은 ATTRIBUTE_VALUE 열에 있습니다. ATTRIBUTE_NAME 열의 노드 ID를 사용하면 해당 계수가 어떤 입력 특성에 대한 계수인지 확인할 수 있습니다. 예를 들어 노드 ID 6000000000000000a는 입력 특성 및 값 `Day of Week = 'Tue.'` 를 참조합니다. 이 노드 ID를 사용하여 쿼리를 만들거나, [Microsoft 일반 콘텐츠 트리 뷰어](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용하여 이 노드를 찾아볼 수 있습니다.  
   
- 마찬가지로 출력 계층(NODE_TYPE = 23)에 있는 노드의 NODE_DISTRIBUTION 테이블을 쿼리하면 각 출력 값의 계수를 확인할 수 있습니다. 그러나 출력 계층에서 포인터는 다시 숨겨진 계층의 노드를 참조합니다. 자세한 내용은 참조 [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)합니다.  
+ 마찬가지로 출력 계층(NODE_TYPE = 23)에 있는 노드의 NODE_DISTRIBUTION 테이블을 쿼리하면 각 출력 값의 계수를 확인할 수 있습니다. 그러나 출력 계층에서 포인터는 다시 숨겨진 계층의 노드를 참조합니다. 자세한 내용은 [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)합니다.  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>신경망 모델을 사용하여 예측 만들기  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 분류와 회귀를 모두 지원합니다. 이러한 모델에서 예측 함수를 사용하여 새 데이터를 제공하고 단일 또는 일괄 처리 예측을 만들 수 있습니다.  
@@ -185,7 +185,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> 예측 쿼리 5: 단일 예측 쿼리 만들기  
  신경망 모델에 대한 예측 쿼리를 작성하는 가장 쉬운 방법은 **와** 의 데이터 마이닝 디자이너에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에 제공되는 예측 쿼리 작성기를 사용하는 것입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 뷰어에서 모델을 찾아서 관심 있는 특성을 필터링하고 추세를 확인한 다음 **마이닝 모델 예측** 탭으로 전환하여 쿼리를 만들고 해당 추세에 대한 새 값을 예측할 수 있습니다.  
   
- 예를 들어 콜 센터 모델을 찾아서 주문량과 다른 특성 간의 상관 관계를 확인할 수 있습니다. 이 위해 열고 모델 뷰어에서 **입력**선택,  **\<모든 >** 합니다.  그런 다음 **출력**에서 **Number of Orders**를 선택합니다. **값 1**에서 가장 많은 주문 횟수를 나타내는 범위를 선택하고 **값 2**에서 가장 적은 주문 횟수를 나타내는 범위를 선택합니다. 그러면 해당 모델에서 주문량과 상관 관계가 있는 모든 특성을 한눈에 볼 수 있습니다.  
+ 예를 들어 콜 센터 모델을 찾아서 주문량과 다른 특성 간의 상관 관계를 확인할 수 있습니다. 이 위해 열고 모델 뷰어에서 **입력**를 선택  **\<모든 >** 합니다.  그런 다음 **출력**에서 **Number of Orders**를 선택합니다. **값 1**에서 가장 많은 주문 횟수를 나타내는 범위를 선택하고 **값 2**에서 가장 적은 주문 횟수를 나타내는 범위를 선택합니다. 그러면 해당 모델에서 주문량과 상관 관계가 있는 모든 특성을 한눈에 볼 수 있습니다.  
   
  뷰어에서 결과를 보면 특정 요일에 주문량이 적고 운영자의 수를 늘릴수록 판매량이 많아지는 상관 관계가 있다는 것을 알 수 있습니다. 그런 다음 모델에 대한 예측 쿼리를 사용하여 "가상 분석" 가설을 테스트하고 주문량이 적은 요일의 수준 2 운영자 수를 늘리면 주문이 늘어날지 예측할 수 있습니다. 이렇게 하려면 다음과 같은 쿼리를 만듭니다.  
   

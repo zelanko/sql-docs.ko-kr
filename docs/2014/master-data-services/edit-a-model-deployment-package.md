@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef6d05975ae639f467f793f61a3e367da44efd8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 690897612e73c1f1a9d9cfc8f4a2ed7d8ee84bd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229273"
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
   이 항목에서는 MDS에서 전체 모델 대신 모델의 선택한 부분을 배포하는 방법에 대해 설명합니다. 이렇게 하려면 모델 패키지 편집기를 사용하여 MDS 모델 패키지를 편집하면 됩니다.  

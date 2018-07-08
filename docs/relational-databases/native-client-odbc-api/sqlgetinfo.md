@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,28 +18,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09a31616669daab1ee54012164bf59d06e563692
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 10f47bc9d185835931afa8a80a7759f33cd79b55
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696474"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432772"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  테이블에서 반환 된 값을 보여 줍니다. **SQLGetInfo**합니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
+  테이블에서 반환 된 값을 보여 줍니다 **SQLGetInfo**합니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
   
- **SQLGetInfo** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서와 다른 **SQLGetInfo** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32 합니다. DLL) 때 **SQLGetInfo** SQL_KEYWORDS 및 버퍼 길이 0으로 호출 합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  하지만 출력 키워드 문자열 보다 작으면 0이 아닌 버퍼 길이 사용 하 여 호출 하는 경우 **SQLGetInfo** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQL_SUCCESS_WITH_INFO 및 SQLState 01004 반환 합니다.  
+ **SQLGetInfo** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 다릅니다 **SQLGetInfo** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32 합니다. DLL) 때 **SQLGetInfo** SQL_KEYWORDS 및 0 버퍼 길이 사용 하 여 호출 됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  하지만 출력 키워드 문자열 보다 작으면 0이 아닌 버퍼 길이 사용 하 여 호출 하는 경우 **SQLGetInfo** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQL_SUCCESS_WITH_INFO 및 SQLState 01004 반환 합니다.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결 수가 제한됩니다. 이 0을 반환 하는 드라이버 **SQLGetInfo** 요청 합니다.|  
-|SQL_ACTIVE_ENVIRONMENTS|환경 수는 드라이버에서 제한되지 않습니다. 이 0을 반환 하는 드라이버 **SQLGetInfo** 요청 합니다.|  
-|SQL_ACTIVE_STATEMENTS|이 대 한 1을 반환 하는 드라이버 **SQLGetInfo** 요청 합니다. 응용 프로그램에 사용할 수 있는 문 핸들 수는 드라이버에서 제한되지 않지만 문 핸들이 기본 실행될 때는 다른 핸들의 실행이 차단됩니다.|  
+|SQL_ACTIVE_CONNECTIONS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결 수가 제한됩니다. 이 0을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다.|  
+|SQL_ACTIVE_ENVIRONMENTS|환경 수는 드라이버에서 제한되지 않습니다. 이 0을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다.|  
+|SQL_ACTIVE_STATEMENTS|이 대 한 1을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다. 응용 프로그램에 사용할 수 있는 문 핸들 수는 드라이버에서 제한되지 않지만 문 핸들이 기본 실행될 때는 다른 핸들의 실행이 차단됩니다.|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -56,11 +56,11 @@ ms.locfileid: "35696474"
 |SQL_COLLATION_SEQ|연결 및 서버에 현재 할당된 데이터 정렬 순서입니다.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|ODBC SQL_BIGINT 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 데이터 형식을 ODBC 형식 sql_decimal로 지원 합니다. 아래의 SQL_CONVERT_DECIMAL을 참조하십시오.|  
+|SQL_CONVERT_BIGINT|ODBC SQL_BIGINT 데이터 형식의 변환이 지원되지 않습니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지 원하는 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 데이터 형식과 ODBC 형식 SQL_DECIMAL 합니다. 아래의 SQL_CONVERT_DECIMAL을 참조하십시오.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|ODBC SQL_TYPE_DATE 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식을 ODBC 형식 SQL_TYPE_TIMESTAMP 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
+|SQL_CONVERT_DATE|ODBC SQL_TYPE_DATE 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지 원하는 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식과 ODBC 형식 SQL_TYPE_TIMESTAMP 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_DOUBLE|ODBC SQL_DOUBLE 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC SQL_DOUBLE 데이터 형식을 SQL_FLOAT로 지원 합니다. 아래의 SQL_CONVERT_FLOAT를 참조하십시오.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -73,7 +73,7 @@ ms.locfileid: "35696474"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|ODBC SQL_TYPE_TIME 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식을 ODBC 형식 SQL_TYPE_TIMESTAMP 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
+|SQL_CONVERT_TIME|ODBC SQL_TYPE_TIME 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지 원하는 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식과 ODBC 형식 SQL_TYPE_TIMESTAMP 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -124,7 +124,7 @@ ms.locfileid: "35696474"
 |SQL_IDENTIFIER_QUOTE_CHAR|"(큰따옴표)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|드라이버에서 지원하지 않는 요청입니다.|  
-|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 특성입니다. 연결에서 사용하는 네트워크 라이브러리의 이름입니다.<br /><br /> 기본적으로 DBNETLIB가 반환 됩니다.  이 경우 DBNETLIB는 네트워크 라이브러리 나타내며 dbnetlib.dll 관련이 없는.|  
+|SQL_INFO_SS_NETLIB_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 특성입니다. 연결에서 사용하는 네트워크 라이브러리의 이름입니다.<br /><br /> 기본적으로 DBNETLIB가 반환 됩니다.  이 경우 DBNETLIB는 네트워크 라이브러리를 참조 및 dbnetlib.dll 관련이 없는 합니다.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

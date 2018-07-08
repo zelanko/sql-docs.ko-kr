@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240923"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>3단계: OLE DB 연결 관리자 추가 및 구성
   데이터 원본에 연결하기 위해 플랫 파일 연결 관리자를 추가한 후에는 OLE DB 연결 관리자를 추가하여 대상에 연결합니다. OLE DB 연결 관리자를 사용하면 패키지가 OLE DB 호환 데이터 원본에서 데이터를 추출하거나 데이터를 로드할 수 있습니다. OLE DB 연결 관리자를 사용하여 서버, 인증 방법 및 연결의 기본 데이터베이스를 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36082302"
   
 4.  **서버에 로그온** 그룹에서 **Windows 인증 사용** 을 선택했는지 확인합니다.  
   
-5.  에 **데이터베이스에 연결** 그룹에 **데이터베이스 이름 선택 또는 입력** 상자에 입력 하거나 선택 `AdventureWorksDW2012`합니다.  
+5.  에 **데이터베이스에 연결** 그룹에 **데이터베이스 이름 선택 또는 입력** 상자를 입력 하거나 선택 `AdventureWorksDW2012`합니다.  
   
 6.  **연결 테스트** 를 클릭하여 지정한 연결 설정이 올바른지 확인합니다.  
   

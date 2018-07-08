@@ -1,5 +1,5 @@
 ---
-title: 차단 요소 (ASSL) | Microsoft Docs
+title: 요소 (ASSL) 차단 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161324"
 ---
 # <a name="blocks-element-assl"></a>Blocks 요소(ASSL)
   이진 내용을 나타내는 이진 데이터 블록의 컬렉션을 포함 한 [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) 요소입니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36089646"
 |자식 요소|[블록](../objects/block-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Blocks` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
+ 부모에 해당 하는 요소가 `Blocks` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Assembly 요소 &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
@@ -75,7 +75,7 @@ ms.locfileid: "36089646"
  [데이터 요소 &#40;ASSL&#41;](../objects/data-element-assl.md)   
  [DataBlock 데이터 형식 &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
  [Blocks 요소](blocks-element-assl.md)   
- [요소를 차단 &#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [블록 요소 &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [컬렉션 &#40;ASSL&#41;](collections-assl.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.policy.description.f1
 - sql12.swb.dmf.condition.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0a75a5c857dc6538c9727d62521580516042c84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0459e7677d297483aca0540b5e92b881b646e0ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258689"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지
   이 대화 상자를 사용하여 정책 기반 관리 조건에 설명을 추가할 수 있습니다.  

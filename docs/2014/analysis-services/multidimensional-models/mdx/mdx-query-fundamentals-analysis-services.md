@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [MDX]
 - Multidimensional Expressions [Analysis Services], statements
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - queries [MDX]
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 344e988128c7207cc6b0d9cd7b7038a29cb3f8f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd81b9489e7b73f9897cd557999df3021e8f9e8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163420"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 쿼리 기본 사항(Analysis Services)
   MDX를 사용하면 큐브와 같은 다차원 개체를 쿼리하여 큐브의 데이터를 포함하는 다차원 셀 집합을 반환할 수 있습니다. 이 항목 및 하위 항목에서는 MDX 쿼리에 대한 개요를 제공합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36090553"
 |[기본 MDX 쿼리 &#40;MDX&#41;](mdx-query-the-basic-query.md)|MDX SELECT 문의 기본 구문에 대한 정보를 제공합니다.|  
 |[쿼리 및 Slicer 축으로 쿼리 제한 &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|쿼리 및 slicer 축의 의미 및 지정 방법을 설명합니다.|  
 |[쿼리에 큐브 컨텍스트 설정 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)|MDX SELECT 문에서 FROM 절을 사용하는 목적을 설명합니다.|  
-|[명명 된 집합 MDX에서 빌딩 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)|MDX에서 명명된 집합을 사용하는 목적과 MDX 쿼리에서 명명된 집합을 만들고 사용하는 데 필요한 기술을 설명합니다.|  
+|[구성 집합을 MDX 명명 된 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)|MDX에서 명명된 집합을 사용하는 목적과 MDX 쿼리에서 명명된 집합을 만들고 사용하는 데 필요한 기술을 설명합니다.|  
 |[MDX에서 계산된 멤버 작성 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)|MDX의 계산 멤버에 대해 설명하고 MDX 식에서 계산 멤버를 만들고 사용하는 데 필요한 기술을 설명합니다.|  
 |[MDX로 셀 계산 작성 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)|계산 셀을 만들고 사용하는 과정을 설명합니다.|  
 |[속성 값 만들기 및 사용 &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)|차원, 수준, 멤버 및 셀 속성을 만들고 사용하는 과정을 설명합니다.|  

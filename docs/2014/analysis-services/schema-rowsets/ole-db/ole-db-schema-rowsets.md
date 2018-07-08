@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161194"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 스키마 행 집합
-  다음 OLE DB 스키마 행 집합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자가 지원합니다. 사용 하 여는 `DISCOVER_ENUMERATORS` 포함 된 행 집합의 [Discover](../../xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하는 메서드.  
+  다음 OLE DB 스키마 행 집합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자가 지원합니다. 사용 하 여는 `DISCOVER_ENUMERATORS` 포함 된 행 집합을 [검색](../../xmla/xml-elements-methods-discover.md) 특정 데이터 원본 공급자는 행 집합을 지원 하는지 여부를 확인 하는 메서드.  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 웹 사이트에 있는 MSDN  Library의 OLE DB Programmer's Reference 부분에서 "Schema Rowsets" 항목을 검색하여 이러한 행 집합에 대한 자세한 정보를 찾을 수도 있습니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36088283"
 |`DBSCHEMA_TABLE_CONSTRAINTS`|카탈로그에 정의되어 있고 지정된 사용자가 소유하고 있는 테이블 제약 조건을 식별합니다.|  
 |`DBSCHEMA_TABLE_PRIVILEGES`|지정된 사용자가 사용할 수 있거나 부여한 카탈로그에 정의된 테이블에 대한 권한을 식별합니다.|  
 |`DBSCHEMA_TABLE_STATISTICS`|공급자의 테이블에 대한 통계의 사용 가능한 집합을 설명합니다.<br /><br /> 이 행 집합은 `STATISTICS` 행 집합과 관련이 없습니다.|  
-|[DBSCHEMA_TABLES 행 집합](dbschema-tables-rowset.md) <sup>1</sup>|내의 테이블로 표시 된 차원과 측정값 그룹을 식별 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
+|[DBSCHEMA_TABLES 행 집합](dbschema-tables-rowset.md) <sup>1</sup>|측정값 그룹 및 차원을 내의 테이블로 표시 된 식별 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
 |`DBSCHEMA_TABLES_INFO` <sup>1</sup>|카탈로그에 정의되어 있고 지정된 사용자가 액세스할 수 있는 테이블(뷰 포함)을 식별합니다.|  
 |`DBSCHEMA_TRANSLATIONS`|카탈로그에 정의되어 있고 지정된 사용자가 액세스할 수 있는 문자 변환을 식별합니다.|  
 |`DBSCHEMA_TRUSTEE`|데이터 원본에 대한 트러스티를 열거합니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "36088283"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|카탈로그에 정의되어 있고 지정된 사용자가 소유하고 있는 표시된 테이블이 의존하는 테이블을 식별합니다.|  
 |`DBSCHEMA_VIEWS`|카탈로그에 정의되어 있고 지정된 사용자가 액세스할 수 있는 뷰를 식별합니다.|  
   
- <sup>1</sup> 용 MSOLAP 데이터 원본 공급자에서 지 원하는 스키마 행 집합을 나타내는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA 공급자입니다.  
+ <sup>1</sup> 용 MSOLAP 데이터 원본 공급자에서 지 원하는 스키마 행 집합을 나타냅니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA 공급자입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [DISCOVER_ENUMERATORS 행 집합](../xml/discover-enumerators-rowset.md)   

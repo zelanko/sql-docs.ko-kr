@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entitization rules [XML in SQL Server]
 - serialization
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: abcb88bc34ee727e63d75516063262635f3f4e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: aa8862574285fe8e8a95119501d64565b35a6aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183960"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
   xml 데이터 형식을 명시적이나 암시적으로 SQL 문자열 또는 이진 유형으로 캐스팅할 때 xml 데이터 형식의 콘텐츠는 이 항목에 설명된 규칙에 따라 직렬화됩니다.  

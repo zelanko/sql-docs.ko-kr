@@ -3,34 +3,32 @@ title: MSSQLSERVER_50000 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - 50000 [SQL Server Native Client setup error]
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4aac814d8dbe5cfe4bfb0e07b17330267417d447
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2244b3a1b72263489a67b6ce4c6d23d44deb6bca
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950068"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428412"
 ---
 # <a name="sql-server-native-client-error-mssqlserver50000"></a>SQL Server Native Client 오류 MSSQLSERVER_50000
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |||  
 |-|-|  

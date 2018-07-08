@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationUsage element
 ms.assetid: af0c2e7f-b659-4fbf-9b1a-66128db669a2
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0cc9d13ed663b92224584ab57f6f467e3a472d8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a073ca27168bec785d9098d9e6b3ad4974b7018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259469"
 ---
 # <a name="aggregationusage-element-assl"></a>AggregationUsage 요소(ASSL)
-  컨트롤 어떻게에서 집계 디자이너로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 집계를 디자인 합니다.  
+  제어 하는 방법에서 집계 디자이너로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 집계를 디자인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36080951"
 |-----------|-----------------|  
 |*전체*|큐브의 모든 집계에 이 특성이 포함되어야 합니다.|  
 |*없음*|큐브의 집계에 이 특성이 포함되지 않아야 합니다.|  
-|*제한 없음*|집계 디자이너에 제한 사항이 지정되지 않습니다.|  
+|*무제한*|집계 디자이너에 제한 사항이 지정되지 않습니다.|  
 |*기본값*|집계 디자이너에서 특성 유형(키의 경우*Full* , 기타의 경우 *Unrestricted* )을 기반으로 기본 규칙을 적용합니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `AggregationUsage`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.AggregationUsage>입니다.  

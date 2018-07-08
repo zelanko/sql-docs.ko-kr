@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identifiers [XML schema collections]
 - XML schema collections [SQL Server], limitations
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2dbe95deb602de17ccc43b55bcda438a61db8973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9840028891ce520dbaa873d517228eb4147d5ad2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278879"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
-  XML 스키마 정의 언어 (XSD) 유효성 검사에 사용 하는 SQL 열에 대 한 몇 가지 제한이 `xml` 데이터 형식입니다. 다음 표에서는 이러한 제한 사항과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다. 이 섹션의 다음 항목에서는 특정 제한 사항 및 이에 따른 작업 수행 지침에 대한 추가 정보를 제공합니다.  
+  XML 스키마 정의 언어 (XSD) 유효성 검사를 사용 하는 SQL 열에 대 한 몇 가지 제한 사항이 `xml` 데이터 형식입니다. 다음 표에서는 이러한 제한 사항과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다. 이 섹션의 다음 항목에서는 특정 제한 사항 및 이에 따른 작업 수행 지침에 대한 추가 정보를 제공합니다.  
   
 |항목|제한 사항|  
 |----------|----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36088120"
 |기존 대체 그룹에 멤버 추가|XML 스키마 컬렉션에서는 기존 대체 그룹에 멤버를 추가할 수 없습니다. XML 스키마의 대체 그룹은 머리글 요소와 이 요소의 모든 멤버 요소를 같은 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 문에서 정의해야 한다는 점에서 제한적입니다.|  
 |정규 형식 및 패턴 제한 사항|값의 정식 표현은 해당 형식의 패턴 제한 사항을 위반할 수 없습니다. 자세한 내용은 [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)을 참조하세요.|  
 |열거 패싯|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 패턴 패싯 형식이나 이러한 패싯을 위반하는 열거형의 XML 스키마를 지원하지 않습니다.|  
-|패싯 길이|**길이**, **minLength**, 및 **maxLength** 패싯으로 저장 됩니다는 `long` 유형입니다. 이 형식은 32비트 형식입니다. 따라서 이러한 값에 허용 되는 값의 범위는 2<sup>^</sup>31입니다.|  
+|패싯 길이|합니다 **길이**, **minLength**, 및 **maxLength** 패싯으로 저장 됩니다는 `long` 형식입니다. 이 형식은 32비트 형식입니다. 따라서 이러한 값에 대 한 허용 되는 값의 범위는 2<sup>^</sup>31입니다.|  
 |ID 특성|각 XML 스키마 구성 요소마다 ID 특성이 하나씩 있을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **ID** 유형의 **\<xsd:attribute>** 선언에 대한 고유성을 적용하지만 이러한 값을 저장하지는 않습니다. 고유성을 적용할 범위는 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 문입니다.|  
 |ID 형식|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 유형이 **xs:ID**, **xs:IDREF**또는 **xs:IDREFS**인 요소를 사용할 수 없습니다. 스키마는 이 유형의 요소나 이 유형의 제한 또는 확장에 의해 파생된 요소를 선언하지 않을 수 있습니다.|  
 |로컬 네임스페이스|**\<xsd:any>** 요소에 로컬 네임스페이스가 명시적으로 지정되어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 빈 문자열("")을 네임스페이스 특성 값으로 사용하는 스키마를 거부합니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 "##local"을 명시적으로 사용하여 비정규화된 요소 또는 특성을 와일드카드 문자의 인스턴스로 표시해야 합니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "36088120"
 |메모리 부족 상태|대형 XML 스키마 컬렉션을 사용할 경우 메모리가 부족해질 수 있습니다. 이 문제에 대한 해결 방법은 [대형 XML 스키마 컬렉션 및 메모리 부족 상태](large-xml-schema-collections-and-out-of-memory-conditions.md)를 참조하세요.|  
 |반복 값|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 block 또는 final 특성에 "restriction restriction" 및 "extension extension" 같은 반복되는 값이 있는 스키마를 거부합니다.|  
 |스키마 구성 요소 식별자|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 스키마 구성 요소 식별자의 최대 길이를 1000자(유니코드)로 제한합니다. 또한 식별자 내에 서로게이트 문자 쌍을 사용할 수 없습니다.|  
-|표준 시간대 정보|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 표준 시간대 정보에 대해 완전히 지원 되 고 `xs:date`, `xs:time`, 및 `xs:dateTime` XML 스키마 유효성 검사에 대 한 값입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전과의 호환성 모드를 사용하면 표준 시간대 정보는 항상 Coordinated Universal Time(그리니치 표준시)로 표준화됩니다. `dateTime` 형식 요소의 경우 서버는 오프셋 값("-05:00")을 사용하고 해당 GMT 시간을 반환하여 제공되는 시간을 GMT로 변환합니다.|  
+|표준 시간대 정보|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 표준 시간대 정보에 대 한 완벽 하 게 지원 됩니다 `xs:date`를 `xs:time`, 및 `xs:dateTime` XML 스키마 유효성 검사에 대 한 값입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전과의 호환성 모드를 사용하면 표준 시간대 정보는 항상 Coordinated Universal Time(그리니치 표준시)로 표준화됩니다. `dateTime` 형식 요소의 경우 서버는 오프셋 값("-05:00")을 사용하고 해당 GMT 시간을 반환하여 제공되는 시간을 GMT로 변환합니다.|  
 |공용 구조체 유형|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 공용 구조체 유형의 제한 사항을 지원하지 않습니다.|  
 |가변 정밀도 10진수|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 가변 정밀도 10진수를 지원하지 않습니다. **xs:decimal** 형식은 임의 자릿수의 10진수를 나타냅니다. 최소로 준수하는 XML 프로세서는 최소값이 `totalDigits=18`인 10진수를 지원해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 `totalDigits=38,` 을 지원하지만 소수 자릿수를 10으로 제한합니다. 서버에서는 모든 **xs:decimal** 의 인스턴스화된 값을 내부적으로 SQL 유형 숫자(38, 10)를 사용하여 나타냅니다.|  
   

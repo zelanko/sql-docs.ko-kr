@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49ea78e9824e0d1ee05f4f6a29e05f0482f0953c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e7e74821d3981c5015e0d17d5019a40c4cc5b7a1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701054"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416042"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>상호 Kerberos 인증 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "35701054"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
- 자세한 내용은 참조 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)합니다.  
+ 자세한 내용은 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)합니다.  
   
 ## <a name="example"></a>예제  
  이 예제를 64비트 운영 체제에서 32비트 응용 프로그램으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  

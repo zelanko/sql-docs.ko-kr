@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CaptionIsMdx element
 ms.assetid: 7569a75e-b3e0-4332-97d3-585abc546ada
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 624998a5bc65b1cfa9e0f61f93ef5e860210d697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e99bc43634d27526ed6d18012b904818f43cf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165194"
 ---
 # <a name="captionismdx-element-assl"></a>CaptionIsMdx 요소(ASSL)
-  정의 여부에 대 한 캡션은 [동작](../objects/action-element-assl.md) 요소는 MDX (Multidimensional Expressions) 식입니다.  
+  정의 하는지 여부를 캡션입니다 합니다 [작업](../objects/action-element-assl.md) 요소는 MDX (Multidimensional Expressions) 식입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36081202"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `CaptionIsMdx` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
+ 부모에 해당 하는 요소가 `CaptionIsMdx` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

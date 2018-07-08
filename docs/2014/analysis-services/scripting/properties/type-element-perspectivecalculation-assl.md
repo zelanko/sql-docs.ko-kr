@@ -1,5 +1,5 @@
 ---
-title: 요소 (PerspectiveCalculation) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (PerspectiveCalculation) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229573"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Type 요소(PerspectiveCalculation)(ASSL)
-  유형을 나타냅니다는 [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) 요소입니다.  
+  형식을 나타내는 합니다 [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36089155"
   
  AMO(Analysis Management Objects) 개체 모델에서 `Type`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>입니다.  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveCalculation>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveCalculation>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

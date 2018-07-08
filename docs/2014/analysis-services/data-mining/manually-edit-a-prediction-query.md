@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying prediction queries
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd7b2457b291aa7002c6de7ed00dda2be78b865b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9813aba9914a58d6a64266be2708d7e3d72ad543
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210443"
 ---
 # <a name="manually-edit-a-prediction-query"></a>예측 쿼리 수동 편집
   예측 쿼리 작성기를 사용하여 쿼리를 디자인한 후에는 데이터 마이닝 디자이너의 **마이닝 모델 예측** 의 탭에서 쿼리 텍스트 보기로 전환하여 해당 쿼리를 수정할 수 있습니다. 쿼리 작성기가 만든 쿼리를 표시할 텍스트 편집기가 화면 맨 아래에 나타납니다.  

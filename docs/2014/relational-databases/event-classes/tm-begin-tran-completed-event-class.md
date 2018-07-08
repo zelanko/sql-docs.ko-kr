@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Begin Tran Completed event class'
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71f5085903a367374908d4073374655d8a03e069
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7039e0b3d829daebd2af39c6cf279c7e4c4645e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182350"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed 이벤트 클래스
   TM: Begin Tran Completed 이벤트 클래스는 BEGIN TRANSACTION 요청이 완료되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다.  

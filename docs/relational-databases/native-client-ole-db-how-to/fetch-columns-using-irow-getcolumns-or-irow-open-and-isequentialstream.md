@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1032df508a533235ed14dfcc074e56b2c76dab3e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 90d289f2df035416b208b1d5b14b0bb27fed54d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700974"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423402"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  큰 데이터 바인딩될 수 또는 사용 하 여 검색 된 **ISequentialStream** 인터페이스입니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
+  큰 데이터 바인딩될 수 또는 사용 하 여 검색 합니다 **ISequentialStream** 인터페이스입니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -39,15 +39,15 @@ ms.locfileid: "35700974"
   
 1.  데이터 원본에 대한 연결을 설정합니다.  
   
-2.  명령을 실행 (이 예제에서는 **여** 를 IID_IRow로 호출).  
+2.  명령을 실행 합니다 (이 예제의 **icommandexecute:: Execute** 를 IID_IRow로 호출).  
   
-3.  사용 하 여 열 데이터 인출 **IRow::Open()** 또는 **irow:: Getcolumns**합니다.  
+3.  사용 하 여 열의 데이터 페치 **IRow::Open()** 하거나 **IRow::GetColumns()** 합니다.  
   
-    -   **IRow::Open()** 하는 데 사용할 수는 **ISequentialStream** 행에 있습니다. 열에 이진 데이터 스트림을 포함 되어 있음을 나타내려면 DBGUID_STREAM을 지정 (**IStream** 또는 **ISequentialStream** 열에서 데이터를 읽을 다음 사용할 수 있습니다).  
+    -   **IRow::Open()** 열에 사용할 수는 **ISequentialStream** 행입니다. 열에 이진 데이터 스트림을 포함 되도록 나타내려면 DBGUID_STREAM을 지정 (**IStream** 하거나 **ISequentialStream** 다음 열에서 데이터를 읽을 수)입니다.  
   
-    -   경우 **irow:: Getcolumns** 사용 되는 **pData** DBCOLUMNACCESS 구조의 요소는 스트림 개체를 가리키도록 설정 합니다.  
+    -   하는 경우 **IRow::GetColumns()** 를 사용 합니다 **pData** DBCOLUMNACCESS 구조의 요소는 스트림 개체를 가리키도록 설정 됩니다.  
   
-4.  사용 하 여 **ISequentialStream::Read()** 반복 해 서 지정 된 바이트 수를 소비자 버퍼로 읽어오기 합니다.  
+4.  사용 하 여 **ISequentialStream::Read()** 반복 하 여 소비자 버퍼에 지정 된 바이트 수를 읽습니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 IRow를 사용하여 단일 행을 인출하는 방법을 보여 줍니다. 이 예에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예에서는 IRow::GetColumns()와 IRow::Open()을 사용하는 방법을 보여 줍니다. 이 예에서는 ISequentialStream::Read를 사용하여 열 데이터를 읽습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "35700974"
   
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   
- Ole32.lib oleaut32.lib를 컴파일하고 두 번째 (c + +) 코드 목록을 실행 합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ Ole32.lib oleaut32.lib를 사용 하 여 컴파일하고 두 번째 (c + +) 코드 목록을 실행 합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   

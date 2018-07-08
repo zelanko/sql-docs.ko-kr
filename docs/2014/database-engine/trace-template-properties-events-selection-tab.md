@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 097772336c66b6b1832a6e0bb16791fc107ec81a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1f2be8da8092248ccb49a7db54b9d41367cea2c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211493"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>추적 템플릿 속성(이벤트 선택 탭)
   **추적 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적 템플릿에 포함할 이벤트 클래스와 데이터 열을 표시, 편집 또는 지정할 수 있습니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "36082155"
  추적의 열 순서를 변경하고 결과를 하나 이상의 열로 그룹화합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 파일에 대 한 이벤트 및 데이터 열 지정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [추적 파일에 대 한 이벤트 및 데이터 열을 지정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [추적에 표시 된 열 구성 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [추적에서 이벤트를 필터링 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [추적에서 이벤트 필터링 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [필터 정보 보기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [필터 수정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

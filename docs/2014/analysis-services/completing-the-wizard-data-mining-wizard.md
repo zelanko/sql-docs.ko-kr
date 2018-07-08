@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278429"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>마법사 완료(데이터 마이닝 마법사)
   **마법사 완료** 페이지를 사용하여 마법사 완료 시에 만들어지는 마이닝 구조를 검토할 수 있습니다. 마이닝 구조의 이름을 설정할 수도 있습니다.  

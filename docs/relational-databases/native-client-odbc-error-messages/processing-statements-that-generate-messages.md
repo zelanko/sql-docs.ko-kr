@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,12 +28,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ff2141bb8b84fa27d9aefe00f3a48281d5c017e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4d005ff1f8edd180ced55a02c96d5ec9e256242f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703744"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432442"
 ---
 # <a name="processing-statements-that-generate-messages"></a>메시지를 생성하는 문 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- ON 이면 SET STATISTICS TIME 또는 SET SHOWPLAN 경우 **SQLExecute** 및 **SQLExecDirect** 가 SQL_SUCCESS_WITH_INFO를 반환 하 고 해당 시점에 응용 프로그램 SHOWPLAN 또는 STATISTICS 타임 출력을 검색할 수 있습니다 호출 하 여 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다. 각 SHOWPLAN 데이터 행은 다음과 같은 형식으로 반환됩니다.  
+ SET STATISTICS TIME 또는 SET SHOWPLAN이 ON으로 되 면 **SQLExecute** 하 고 **SQLExecDirect** SQL_SUCCESS_WITH_INFO를 반환 하 고 응용 프로그램 SHOWPLAN 또는 STATISTICS TIME 출력을 검색할 수는 시점에서 호출 하 여 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다. 각 SHOWPLAN 데이터 행은 다음과 같은 형식으로 반환됩니다.  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -66,7 +66,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
    SQL Server Parse and Compile Time: cpu time = 0 ms."  
 ```  
   
- SET STATISTICS IO의 출력은 결과 집합의 끝에 도달할 때까지 표시되지 않습니다. STATISTICS IO 출력을 호출 하 여 응용 프로그램을 가져올 **SQLGetDiagRec** 당시 **SQLFetch** 또는 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) SQL_NO_DATA를 반환 합니다. STATISTICS IO 출력은 다음과 같은 형식으로 반환됩니다.  
+ SET STATISTICS IO의 출력은 결과 집합의 끝에 도달할 때까지 표시되지 않습니다. STATISTICS IO 출력을 호출 하 여 응용 프로그램을 가져오려면 **SQLGetDiagRec** 시 **SQLFetch** 하거나 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) SQL_NO_DATA를 반환 합니다. STATISTICS IO 출력은 다음과 같은 형식으로 반환됩니다.  
   
 ```  
 szSqlState="01000", *pfNativeError= 3615,  
@@ -76,7 +76,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-dbcc-statements"></a>DBCC 문 사용  
- DBCC 문은 데이터를 결과 집합이 아닌 메시지로 반환합니다. **SQLExecDirect** 또는 **SQLExecute** SQL_SUCCESS_WITH_INFO를 및 응용 프로그램 출력을 호출 하 여 검색 반환 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다.  
+ DBCC 문은 데이터를 결과 집합이 아닌 메시지로 반환합니다. **SQLExecDirect** 나 **SQLExecute** SQL_SUCCESS_WITH_INFO를 및 응용 프로그램 출력을 호출 하 여 검색 반환 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다.  
   
  예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
   
@@ -84,7 +84,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 SQLExecDirect(hstmt, "DBCC CHECKTABLE(Authors)", SQL_NTS);  
 ```  
   
- 에 대 한 호출이 **SQLGetDiagRec** 반환:  
+ 에 대 한 호출 **SQLGetDiagRec** 반환 합니다.  
   
 ```  
 szSqlState = "01000", *pfNativeError = 2536,  
@@ -103,13 +103,13 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>PRINT 및 RAISERROR 문 사용  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 및 RAISERROR 문의 호출 하 여 데이터를 반환할 수도 **SQLGetDiagRec**합니다. 인쇄 문은 SQL_SUCCESS_WITH_INFO를 및 후속 호출을 반환 하는 SQL 문 실행 **SQLGetDiagRec** 반환는 *SQLState* 01000 합니다. 심각도가 10 이하인 RAISERROR는 PRINT와 동일하게 동작합니다. 실행이 SQL_ERROR를 및 후속 호출을 반환 하는 심각도 11 이상인 RAISERROR가 발생 하면 **SQLGetDiagRec** 반환 *SQLState* 42000 합니다. 예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 및 RAISERROR 문의 호출 하 여 데이터를 반환할 수도 **SQLGetDiagRec**합니다. PRINT 문은 SQL 문 실행에 대 한 후속 호출 및 SQL_SUCCESS_WITH_INFO를 반환 하려면 발생할 **SQLGetDiagRec** 반환을 *SQLState* 01000 합니다. 심각도가 10 이하인 RAISERROR는 PRINT와 동일하게 동작합니다. 심각도 11 이상인 RAISERROR에 대 한 후속 호출 및 SQL_ERROR를 반환 하려면 execute 발생 **SQLGetDiagRec** 반환 *SQLState* 42000 합니다. 예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
 ```  
   
- 호출 **SQLGetDiagRec** 반환:  
+ 호출 **SQLGetDiagRec** 반환 합니다.  
   
 ```  
 szSQLState = "01000", *pfNative Error = 0,  
@@ -124,7 +124,7 @@ SQLExecDirect (hstmt, "RAISERROR ('Sample error 1.', 10, -1)",
    SQL_NTS)  
 ```  
   
- 호출 **SQLGetDiagRec** 반환:  
+ 호출 **SQLGetDiagRec** 반환 합니다.  
   
 ```  
 szSQLState = "01000", *pfNative Error = 50000,  
@@ -138,7 +138,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
 SQLExecDirect (hstmt, "RAISERROR ('Sample error 2.', 11, -1)", SQL_NTS)  
 ```  
   
- 호출 **SQLGetDiagRec** 반환:  
+ 호출 **SQLGetDiagRec** 반환 합니다.  
   
 ```  
 szSQLState = "42000", *pfNative Error = 50000,  
@@ -146,11 +146,11 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
    Sample error 2."  
 ```  
   
- 호출의 타이밍 **SQLGetDiagRec** PRINT 또는 RAISERROR 문의 출력 결과 집합에 포함 되 면이 중요 합니다. 에 대 한 호출 **SQLGetDiagRec** 검색할 PRINT 또는 RAISERROR 출력 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 수신 하는 문 바로 뒤 수행 합니다. 위의 예에서와 같이 단일 SQL 문만 실행하는 경우에는 간단합니다. 이러한 경우에 대 한 호출 **SQLExecDirect** 또는 **SQLExecute** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하 고 **SQLGetDiagRec** 호출할 수 있습니다. 하지만 SQL 문 일괄 처리의 출력을 처리하는 루프를 코딩할 때나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 실행할 때는 이보다 복잡합니다.  
+ 호출의 타이밍 **SQLGetDiagRec** PRINT 또는 RAISERROR 문의 출력 결과 집합에 포함 되 면이 중요 합니다. 에 대 한 호출 **SQLGetDiagRec** PRINT 또는 RAISERROR 검색할 출력 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 수신 하는 문 바로 다음 수행 해야 합니다. 위의 예에서와 같이 단일 SQL 문만 실행하는 경우에는 간단합니다. 이러한 경우에 대 한 호출 **SQLExecDirect** 또는 **SQLExecute** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하 고 **SQLGetDiagRec** 호출할 수 있습니다. 하지만 SQL 문 일괄 처리의 출력을 처리하는 루프를 코딩할 때나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 실행할 때는 이보다 복잡합니다.  
   
- 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일괄 처리 또는 저장 프로시저에서 실행된 각 SELECT 문마다 결과 집합을 하나씩 반환합니다. 일괄 처리 또는 프로시저에 PRINT 또는 RAISERROR 문이 포함된 경우 SELECT 문 결과 집합에 이러한 문의 출력이 인터리브됩니다. 일괄 처리 또는 프로시저에서 첫 번째 문이 PRINT 또는 RAISERROR 인 경우는 **SQLExecute** 또는 **SQLExecDirect** 를 호출해야하는SQL_SUCCESS_WITH_INFO또는SQL_ERROR와응용프로그램반환**SQLGetDiagRec** PRINT 또는 RAISERROR 정보를 검색 하기 위해 sql_no_data가 반환 될 때까지 합니다.  
+ 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일괄 처리 또는 저장 프로시저에서 실행된 각 SELECT 문마다 결과 집합을 하나씩 반환합니다. 일괄 처리 또는 프로시저에 PRINT 또는 RAISERROR 문이 포함된 경우 SELECT 문 결과 집합에 이러한 문의 출력이 인터리브됩니다. 일괄 처리 또는 프로시저의 첫 번째 문이 PRINT 또는 RAISERROR 인 경우는 **SQLExecute** 하거나 **SQLExecDirect** SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 및 응용 프로그램 를호출해야반환**SQLGetDiagRec** PRINT 또는 RAISERROR 정보를 검색 하려면 sql_no_data가 반환 될 때까지 합니다.  
   
- PRINT 또는 RAISERROR 문 (예: SELECT 문), SQL 문 다음에 오는 경우 PRINT 또는 RAISERROR 정보 때 반환 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)결과에 위치 오류를 포함 하는 설정입니다. **SQLMoreResults** 메시지의 심각도 따라 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 메시지를 호출 하 여 검색 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다.  
+ PRINT 또는 RAISERROR 문 (예: SELECT 문), SQL 문 다음에 오는 경우 PRINT 또는 RAISERROR 정보는 반환 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)결과 오류를 포함 하는 집합입니다. **SQLMoreResults** 메시지의 심각도 따라 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 메시지를 호출 하 여 검색 됩니다 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [오류 및 메시지 처리](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

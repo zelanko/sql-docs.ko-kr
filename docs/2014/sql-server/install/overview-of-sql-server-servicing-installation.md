@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3484136b913cf691a836a3065913f18de4f96ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7906a576bab6ad6dd35da0f863a20ad02e56d342
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230163"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 서비스 설치 개요
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 업데이트를 통해 설치된 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용할 수 있습니다. 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소의 버전 수준이 업데이트 버전 수준보다 최신 상태이면 설치 프로그램을 통한 업데이트 작업에서 해당 구성 요소가 제외됩니다. 업데이트 서비스 적용에 대 한 자세한 내용은 참조 하십시오 [SQL Server 2014 서비스 업데이트 설치](../../database-engine/install-windows/install-sql-server-servicing-updates.md)합니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 업데이트를 통해 설치된 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용할 수 있습니다. 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소의 버전 수준이 업데이트 버전 수준보다 최신 상태이면 설치 프로그램을 통한 업데이트 작업에서 해당 구성 요소가 제외됩니다. 업데이트 서비스를 적용 하는 방법은 참조 하십시오 [SQL Server 2014 서비스 업데이트 설치](../../database-engine/install-windows/install-sql-server-servicing-updates.md)합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치할 때는 다음 사항을 고려해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에 속하는 모든 기능을 동시에 업데이트해야 합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업데이트할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 일부로 설치되어 있으면 함께 업데이트해야 합니다. 관리 도구와 같은 공유 기능은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 가장 최근의 업데이트 항상 업데이트 해야 합니다. 기능 트리에서 구성 요소나 인스턴스를 선택하지 않으면 해당 구성 요소나 인스턴스는 업데이트되지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에 속하는 모든 기능을 동시에 업데이트해야 합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업데이트할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 일부로 설치되어 있으면 함께 업데이트해야 합니다. 관리 도구 같은 공유 기능은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 항상 최신 업데이트로 업데이트 해야 합니다. 기능 트리에서 구성 요소나 인스턴스를 선택하지 않으면 해당 구성 요소나 인스턴스는 업데이트되지 않습니다.  
   
--   기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 로그 파일은 % Program Files %로\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\합니다.  
+-   기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 로그 파일은 % Program Files %에 저장 됩니다\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 이제 원본 미디어를 사용하여 업데이트를 통합할 수 있습니다. 즉, 원본 미디어와 업데이트를 동시에 실행할 수 있습니다. 자세한 내용은 참조 [SQL Server 설치의 새로운](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 이제 원본 미디어를 사용하여 업데이트를 통합할 수 있습니다. 즉, 원본 미디어와 업데이트를 동시에 실행할 수 있습니다. 자세한 내용은 [What's New in SQL Server 설치](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)합니다.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 업데이트를 적용하기 전에 데이터를 백업하는 것이 좋습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36082619"
 ### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치 준비  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치하기 전에 다음을 수행해야 합니다.  
   
--   **백업 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터베이스** -설치 하기 전에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트, 백업에서 `master`, `msdb`, 및 `model` 데이터베이스. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치하면 이러한 데이터베이스가 변경되어 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 호환되지 않습니다. 업데이트를 적용하지 않은 채 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 다시 설치하고 이전 데이터베이스를 계속 사용하려면 이러한 데이터베이스를 백업해야 합니다.  
+-   **백업에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터베이스** -설치 하기 전에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 백업 합니다 `master`, `msdb`, 및 `model` 데이터베이스. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치하면 이러한 데이터베이스가 변경되어 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 호환되지 않습니다. 업데이트를 적용하지 않은 채 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 다시 설치하고 이전 데이터베이스를 계속 사용하려면 이러한 데이터베이스를 백업해야 합니다.  
   
      또한 사용자 데이터베이스도 백업하는 것이 좋습니다.  
   
@@ -62,16 +62,16 @@ ms.locfileid: "36082619"
   
 -   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 구성 파일 및 리포지토리 백업** — [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 업데이트하기 전에 다음을 백업해야 합니다.  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스. 기본적으로 C:\Program Files에 설치 된 이러한\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12.<instanceid>\olap\config\.\< InstanceID > \olap\data.\\합니다. WOW 설치의 경우 기본 경로 C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12.<instanceid>\olap\config\.\< InstanceID > \olap\data.\\합니다.  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스. 기본적으로 C:\Program Files에 설치 된 이러한\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\합니다. WOW 설치의 경우 기본 경로 C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Data\\합니다.  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] msmdsrv.ini 구성 파일에서 구성 설정입니다. 기본적으로 C:\Program Files에 위치는이\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12.<instanceid>\olap\config\.\< InstanceID > \OLAP\Config\ 디렉터리입니다.  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] msmdsrv.ini 구성 파일에서 구성 설정입니다. 기본적으로이에 위치한 파일은 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12.\< InstanceID > \OLAP\Config\ 디렉터리입니다.  
   
     -   (선택 사항) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 리포지토리가 포함된 데이터베이스. 이 단계는 DSO(의사 결정 지원 개체) 라이브러리를 사용하도록 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 구성한 경우에만 필요합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 구성 파일 및 리포지토리를 백업하지 못하면 업데이트된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 이전 버전으로 되돌릴 수 없습니다.  
   
--   **시스템 데이터베이스 여유 공간이 충분 한지 확인** -에 대 한 autogrow 옵션을 선택 하지 않으면는 `master` 및 `msdb` 시스템 데이터베이스를 이러한 데이터베이스 각각에 최소한 500KB 이상의 여유 공간이 있어야 합니다. 데이터베이스에 공간이 충분한지 확인하려면 `sp_spaceused` 및 `master` 데이터베이스에서 `msdb` 시스템 저장 프로시저를 실행합니다. 각 데이터베이스의 할당되지 않은 공간이 500KB보다 적은 경우에는 데이터베이스의 크기를 늘려야 합니다.  
+-   **시스템 데이터베이스에 사용 가능한 공간이 충분 한지 확인 하십시오** -자동 증가 옵션에 대 한 선택 하지 않으면 합니다 `master` 및 `msdb` 시스템 데이터베이스에 이러한 데이터베이스 각각에 최소한 500KB 이상의 여유 공간이 있어야 합니다. 데이터베이스에 공간이 충분한지 확인하려면 `sp_spaceused` 및 `master` 데이터베이스에서 `msdb` 시스템 저장 프로시저를 실행합니다. 각 데이터베이스의 할당되지 않은 공간이 500KB보다 적은 경우에는 데이터베이스의 크기를 늘려야 합니다.  
   
 -   **서비스 및 응용 프로그램 중지** - 시스템이 다시 시작되지 않도록 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 설치하기 전에 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 연결된 모든 응용 프로그램 및 서비스를 중지합니다. 여기에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]등이 있습니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36082619"
  이 섹션에서는 설치 과정에 대해 설명합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치 있는 컴퓨터에 대 한 관리 권한이 있는 계정으로 설치 되어야 합니다. 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치를 컴퓨터에 대 한 관리 권한이 있는 계정으로 설치 되어야 합니다. 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
   
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 시작  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치하려면 자동 압축 풀기 패키지 파일을 실행합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "36082619"
   
 -   LLL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어의 문자 약어를 나타내며, 예를 들어 영어의 LLL은 ENU입니다.  
   
- 장애 조치(failover) 클러스터에 속하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용하려면 장애 조치 클러스터 설치에 대한 섹션을 참조하십시오. 무인 모드로 업데이트 설치를 실행 하는 방법에 대 한 자세한 내용은 참조 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
+ 장애 조치(failover) 클러스터에 속하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용하려면 장애 조치 클러스터 설치에 대한 섹션을 참조하십시오. 무인 모드로 업데이트 설치를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
 ####  <a name="Slipstream"></a> 제품 업데이트 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치  
  제품 업데이트는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치의 기능입니다. 최신 제품 업데이트를 주 제품 설치와 통합하여 주 제품과 해당 업데이트가 동시에 설치되게 할 수 있습니다. 제품 업데이트는 적용 가능한 업데이트에 대해서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, WSUS(Windows Server Update Services), 로컬 폴더 또는 네트워크 공유를 검색할 수 있습니다.  설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다. 제품 업데이트 기능은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1에서 제공한 통합 설치 기능을 확장한 것입니다.  

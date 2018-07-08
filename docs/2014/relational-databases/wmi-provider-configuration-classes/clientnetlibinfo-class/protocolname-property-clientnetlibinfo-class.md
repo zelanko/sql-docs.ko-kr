@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9108cb6318bec2e939a8a1518ac302062286874f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f1d206d00df773cbce4b2d5a49430e0d4eb98bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148944"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리와 연결된 프로토콜의 이름을 가져옵니다.  

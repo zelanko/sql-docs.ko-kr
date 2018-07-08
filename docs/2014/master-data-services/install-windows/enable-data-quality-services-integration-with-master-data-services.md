@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7248c23349ae8ab5c307a4b33c02bd2301c0b572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 276b17d6e62f9ba45a02d1e3e325a457ff6ee77c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164829"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>MDS(Master Data Services)와 Data Quality Services의 통합 설정
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 일치 기능은 DQS(Data Quality Services)에서 제공됩니다. 이 기능은 먼저 설정해야 사용할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36090451"
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 품질 일치 MDS에 추가 기능 Excel 용](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [데이터 품질 일치 MDS 추가 기능에서 Excel에 대 한](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Microsoft Excel용 Master Data Services 추가 기능](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [MDS(Master Data Services) 설치](install-master-data-services.md)  
   

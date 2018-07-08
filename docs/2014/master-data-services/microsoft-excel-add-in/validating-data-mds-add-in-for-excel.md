@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17a963b4ef2342e7c97069ce2ed7f5bd9eec6cd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2da7f9179f86b148d1f195121372ff9def985db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158854"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>데이터 유효성 검사(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 게시할 때 두 가지 종류의 유효성 검사가 수행됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36091088"
  두 가지 경우 모두 유효한 데이터가 MDS 저장소에 게시됩니다. 유효하지 않은 데이터는 강조 표시되고 오류에 대한 자세한 정보가 상태 열에 표시될 수 있습니다.  
   
 ## <a name="when-validation-occurs"></a>유효성 검사가 수행되는 경우  
- 에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 유효성 검사 새로 추가 되거나 변경 데이터를 게시할 때나 비즈니스 규칙을 수동으로 적용할 때 발생 합니다.  
+ 에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 새롭거나 변경 된 데이터를 게시할 때나 비즈니스 규칙을 수동으로 적용할 때 유효성 검사가 수행 됩니다.  
   
  비즈니스 규칙이 실패할 경우 데이터가 MDS 저장소에 게시됩니다. 입력 유효성 검사가 실패할 경우에는 데이터가 저장소에 게시되지 않습니다.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36091088"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [데이터를 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

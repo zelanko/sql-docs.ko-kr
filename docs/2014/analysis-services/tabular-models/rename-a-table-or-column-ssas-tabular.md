@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5edfa6b7fc59ed1a417abe22a34ae22e317538d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e58496d1a1fc4bc712ba2d5157f004def162c94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211523"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>테이블 또는 열 이름 바꾸기(SSAS 테이블 형식)
   가져오기 프로세스 동안 **테이블 가져오기 마법사** 의 **테이블 및 뷰 선택** 페이지에서 **이름**을 입력하여 테이블 이름을 변경할 수 있습니다. **테이블 가져오기 마법사** 의 **SQL 쿼리 지정**페이지에서 쿼리를 지정하여 데이터를 가져오는 경우 테이블 및 열 이름을 변경할 수도 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36081187"
   
 -   제어 문자  
   
--   다음 문자 (Analysis Services 개체 이름에 유효 하지 않은):., ': / \\*|? & % $! + = (){}<>  
+-   (잘못 된 Analysis Services 개체 이름에) 다음 문자:., '. / \\*|? & % $! + = (){}<>  
   
 -   MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 함수 이름과 연산자를 비롯한 Analysis Services의 예약된 키워드  
   
@@ -60,8 +60,8 @@ ms.locfileid: "36081187"
  또한 이름이 바뀐 테이블을 사용하거나 이름이 바뀐 테이블의 열을 사용하는 모든 계산도 업데이트되어야 하고 해당 계산에서 파생된 데이터는 새로 고쳐지고 다시 계산되어야 합니다. 영향을 받는 테이블과 계산의 수에 따라서는 이러한 작업을 완료하는 데 시간이 걸릴 수 있습니다. 따라서 가져오기 프로세스를 진행하는 동안 또는 복잡한 관계와 계산을 만들기 전에 테이블 이름을 바꾸는 것이 가장 좋습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
- [PowerPivot에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Analysis Services에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
+ [PowerPivot에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)   
+ [Analysis Services에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

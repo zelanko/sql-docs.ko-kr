@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f8a8c5c4fd72f3eccd598e8fb0780dc604be7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a28a6acdba46037ed0a453f9adc3c2e1e6e81ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211583"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 연결 관리자 편집기
   **SMO 연결 관리자 편집기** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 전송하는 여러 태스크에 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결을 구성할 수 있습니다.  

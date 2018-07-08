@@ -1,5 +1,5 @@
 ---
-title: 고유 하 게 컴파일된 저장된 프로시저에서 구문을 지원 | Microsoft Docs
+title: 구문을 고유 하 게 컴파일된 저장된 프로시저에서 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240855"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 지원되는 구문
-  이 항목에서는 고유 하 게 컴파일된 저장된 프로시저에 대 한 지원 되는 기능 목록은 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  이 항목에서는 고유 하 게 컴파일된 저장된 프로시저에 대 한 지원 되는 기능의 목록이 포함 되어 있습니다 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
   
 -   [고유 하 게 컴파일된 저장된 프로시저의 프로그래밍 기능](#pncsp)  
   
@@ -38,9 +38,9 @@ ms.locfileid: "36078598"
   
 -   [정렬의 제한 사항](#los)  
   
- 컴파일된 저장된 프로시저를 고유 하 게에서 지 원하는 데이터 형식에 대 한 정보를 참조 [지원 되는 데이터 유형](supported-data-types-for-in-memory-oltp.md)합니다.  
+ 컴파일된 저장된 프로시저를 고유 하 게 지원 되는 데이터 형식에 대 한 정보를 참조 하세요 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)합니다.  
   
- 지원 되지 않는 구문에 대 한 자세한 내용은 및 고유 하 게 컴파일된 저장된 프로시저에서 지원 되지 않는 기능 중 일부를 해결 하는 방법에 대 한 정보에 대 한 참조 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
+ 지원 되지 않는 구문에 대 한 자세한 내용과 고유 하 게 컴파일된 저장된 프로시저에서 지원 되지 않는 기능 중 일부를 해결 하는 방법에 대 한 자세한 참조 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
   
 ##  <a name="pncsp"></a> 고유 하 게 컴파일된 저장된 프로시저의 프로그래밍 기능  
  다음 항목이 지원됩니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "36078598"
 ##  <a name="so"></a> 지원되는 연산자  
  지원되는 연산자는 다음과 같습니다.  
   
--   [비교 연산자 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (예를 들어, >, \<, > =, 및 < =) 조건문에서 지원 됩니다 (IF, 동안).  
+-   [비교 연산자 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (예를 들어, >, \<, > =, 및 < =) 조건에서 지원 됩니다 (경우 동안).  
   
 -   단항 연산자(+, -).  
   
@@ -112,13 +112,13 @@ ms.locfileid: "36078598"
   
 -   SELECT 쿼리에서만 지원되는 CROSS JOIN 및 INNER JOIN  
   
--   SELECT 목록의 식이 지원 됩니다 및 [여기서 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) 절 지원 되는 연산자를 사용 하는 경우. 현재 지원되는 연산자의 목록은 [Supported Operators](#so) 를 참조하세요.  
+-   SELECT 목록의 식이 지원 됩니다 하 고 [여기서 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) 절 지원 되는 연산자를 사용 하는 경우. 현재 지원되는 연산자의 목록은 [Supported Operators](#so) 를 참조하세요.  
   
 -   필터 조건자 IS [NOT] NULL  
   
 -   \<메모리 액세스에 최적화 된 테이블 >  
   
--   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) AVG, COUNT, COUNT_BIG, MIN, MAX 및 SUM 집계 함수와 함께 지원 됩니다. MIN 및 MAX는 nvarchar, char, varchar, varchar, varbinary 및 binary 형식에 대해 지원되지 않습니다. [ORDER BY 절 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) 를 사용할 수 [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) ORDER BY 목록의 식이 GROUP BY 목록에 정확 하 게 나타납니다. 예를 들어, GROUP BY a + b ORDER BY a + b는 지원되지만 GROUP BY a, b ORDER BY a + b는 지원되지 않습니다.  
+-   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) AVG, COUNT, COUNT_BIG, MIN, MAX 및 SUM 집계 함수를 함께 지원 됩니다. MIN 및 MAX는 nvarchar, char, varchar, varchar, varbinary 및 binary 형식에 대해 지원되지 않습니다. [ORDER BY 절 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) 지원 됩니다 [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) 경우에 ORDER BY 목록의 식 GROUP BY 목록에 정확 하 게 나타납니다. 예를 들어, GROUP BY a + b ORDER BY a + b는 지원되지만 GROUP BY a, b ORDER BY a + b는 지원되지 않습니다.  
   
 -   HAVING(WHERE 절과 동일한 식 제한 사항이 적용됨)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36078598"
   
 -   SELECT, UPDATE 및 DELETE  
   
--   TOP <sup>1</sup>  
+-   상위 <sup>1</sup>  
   
 -   SELECT 목록의 변수 할당.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36078598"
   
 -   `WITH TIES` 절에서는 `PERCENT` 또는 `TOP`가 지원되지 않습니다.  
   
--   `TOP` 와 결합 `ORDER BY` 에서 상수를 사용할 경우 8, 192 개 이상의 지원 하지 않습니다는 `TOP` 절. 쿼리에 조인 또는 집계 함수가 포함되어 있으면 이 제한이 더 낮아질 수 있습니다. 예를 들어, 조인이 하나 있고 테이블이 두 개 있으면 4,096개의 행으로 제한되고, 조인이 두 개 있고 테이블이 세 개 있으면 2,730개의 행으로 제한됩니다.  
+-   `TOP` 결합할 `ORDER BY` 에서 상수를 사용할 경우 8,192 개 이상은 지원 하지 않습니다는 `TOP` 절. 쿼리에 조인 또는 집계 함수가 포함되어 있으면 이 제한이 더 낮아질 수 있습니다. 예를 들어, 조인이 하나 있고 테이블이 두 개 있으면 4,096개의 행으로 제한되고, 조인이 두 개 있고 테이블이 세 개 있으면 2,730개의 행으로 제한됩니다.  
   
      변수에 행 수를 저장하여 8,192개 이상의 결과를 가져올 수 있습니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36078598"
   
  하지만 `TOP` 절에 상수를 사용하면 변수를 사용할 때보다 나은 성능을 가져옵니다.  
   
- 이러한 제한은 해석 된 적용 되지 않습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 메모리 액세스에 최적화 된 테이블에 액세스 합니다.  
+ 이러한 제한 사항은 해석 된 적용 되지 않습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 메모리 최적화 테이블에 대 한 액세스.  
   
 ##  <a name="auditing"></a> 감사  
  프로시저 수준 감사는 고유하게 컴파일된 저장 프로시저에서 지원됩니다. 문 수준 감사는 지원되지 않습니다.  
@@ -171,7 +171,7 @@ ms.locfileid: "36078598"
   
 -   OPTIMIZE FOR  
   
- 자세한 내용은 참조 [힌트 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)합니다.  
+ 자세한 내용은 [힌트 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)합니다.  
   
 ##  <a name="los"></a> 정렬의 제한 사항  
  [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 및 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)이 없을 경우, [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  

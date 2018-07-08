@@ -3,10 +3,9 @@ title: 스냅숏 격리 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - concurrency [SQL Server Native Client]
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97280da27703892a916827bdcd6f31a327fbc360
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9f84292d2d64645ad9001bc8e1e7a4e720a5b42d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698514"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410192"
 ---
 # <a name="working-with-snapshot-isolation"></a>스냅숏 격리 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "35698514"
  스냅숏 격리 하에 시작된 트랜잭션은 트랜잭션이 시작된 시간을 기준으로 데이터베이스 스냅숏을 읽습니다. 그 결과, 스냅숏 트랜잭션 컨텍스트 내에서 열린 키 집합 동적 및 정적 서버 커서가 직렬화 가능 트랜잭션 내에서 열린 정적 커서처럼 동작합니다. 하지만 스냅숏 격리 수준 하에서 커서를 열면 잠금이 수행되지 않아 서버의 차단을 줄일 수 있습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 도입 된 스냅숏 격리를 활용 하는 향상 된 기능에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다. 이러한 향상된 기능에는 DATASOURCEINFO 및 DBPROPSET_SESSION 속성 집합의 변경 내용이 포함됩니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 도입 된 스냅숏 격리를 활용 하는 향상 된 기능에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]입니다. 이러한 향상된 기능에는 DATASOURCEINFO 및 DBPROPSET_SESSION 속성 집합의 변경 내용이 포함됩니다.  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  DBPROPSET_DATASOURCEINFO 속성 집합은 DBPROP_SUPPORTEDTXNISOLEVELS 속성에 사용되는 DBPROPVAL_TI_SNAPSHOT 값을 추가하여 스냅숏 격리가 지원됨을 나타내도록 변경되었습니다. 이 새로운 값은 데이터베이스에 버전 관리가 설정되어 있는지 여부에 관계없이 스냅숏 격리가 지원됨을 나타냅니다. 다음은 DBPROP_SUPPORTEDTXNISOLEVELS 값의 목록입니다.  
@@ -63,18 +61,18 @@ ms.locfileid: "35698514"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]를 사용할 때 DBPROPVAL_TI_SNAPSHOT을 설정하면 오류 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 발생합니다.  
   
- 스냅숏 격리 트랜잭션에서 지원 되는 방법에 대 한 정보를 참조 하십시오. [로컬 트랜잭션 지원](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md)합니다.  
+ 스냅숏 격리 트랜잭션에서 지원 되는 방법에 대 한 자세한 내용은 [로컬 트랜잭션을 지원](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md)합니다.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 지원 스냅숏 격리에 대 한 하지만 향상 된 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 함수입니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 지원 스냅숏 격리 하지만 향상 된 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 함수입니다.  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
- **SQLSetConnectAttr** 함수는 이제 SQL_COPT_SS_TXN_ISOLATION 특성의 사용을 지원 합니다. SQL_COPT_SS_TXN_ISOLATION을 SQL_TXN_SS_SNAPSHOT으로 설정하면 스냅숏 격리 수준에서 트랜잭션이 실행됩니다.  
+ 합니다 **SQLSetConnectAttr** 함수는 이제 SQL_COPT_SS_TXN_ISOLATION 특성 사용을 지원 합니다. SQL_COPT_SS_TXN_ISOLATION을 SQL_TXN_SS_SNAPSHOT으로 설정하면 스냅숏 격리 수준에서 트랜잭션이 실행됩니다.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 이제 함수에서 SQL_TXN_ISOLATION_OPTION 정보 유형에 추가 된 SQL_TXN_SS_SNAPSHOT 값을 지원 합니다.  
+ 합니다 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 함수에는 이제에서 SQL_TXN_ISOLATION_OPTION 정보 유형에 추가 된 SQL_TXN_SS_SNAPSHOT 값을 지원 합니다.  
   
- 스냅숏 격리 트랜잭션에서 지원 되는 방법에 대 한 정보를 참조 하십시오. [커서 트랜잭션 격리 수준을](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)합니다.  
+ 스냅숏 격리 트랜잭션에서 지원 되는 방법에 대 한 자세한 내용은 [커서 트랜잭션 격리 수준](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   

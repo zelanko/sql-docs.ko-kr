@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210013"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>PerspectiveMeasure 데이터 형식(ASSL)
   측정값에 대 한 정보를 나타내는 기본 데이터 형식을 정의 [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) 요소입니다.  
@@ -57,13 +57,13 @@ ms.locfileid: "36080718"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [MeasureID](../properties/id-element-assl.md)|  
-|파생 요소|[측정값](../objects/measure-element-assl.md) ([측정값](../collections/measures-element-assl.md) 컬렉션 [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [MeasureID](../properties/id-element-assl.md)|  
+|파생 요소|[측정값](../objects/measure-element-assl.md) ([측정값](../collections/measures-element-assl.md) 모음인 [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.PerspectiveMeasure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

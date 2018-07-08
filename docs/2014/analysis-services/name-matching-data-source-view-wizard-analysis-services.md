@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d01f55b450326efdea81d48135088d57fc3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155384"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>이름 일치(데이터 원본 뷰 마법사)(Analysis Services)
   **이름 일치** 페이지를 사용하여 스키마의 데이터 원본 뷰에 대해 선택한 테이블과 해당 스키마의 다른 테이블 간의 관계를 감지하는 데 사용할 조건을 선택할 수 있습니다. 테이블 간에 물리적 외래 키 관계가 없으면 이 기준이 관련 테이블을 식별하고 데이터 원본 뷰에 추가하는 데 도움이 됩니다. 이름 일치로 식별된 논리적 관계도 데이터 원본 뷰에 추가됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36090555"
 >  여러 테이블이 있지만 테이블 간에 외래 키 관계가 없는 데이터 원본을 선택하는 경우에만 이 페이지가 표시됩니다.  
   
 ## <a name="options"></a>변수  
- **열을 비교 하 여 논리적 관계 만들기**  
+ **일치 하는 열에서 논리적 관계 만들기**  
  이름 일치 조건을 사용하여 스키마의 데이터 원본 뷰에 대해 선택한 테이블과 해당 스키마의 다른 테이블 간의 논리적 종속성 및 관계를 감지하려면 선택합니다. 이 확인란 선택을 취소하면 데이터 원본의 테이블 간에 논리적 관계를 식별하는 데 이름 일치 조건을 사용하지 않습니다.  
   
  **외래 키 일치**  

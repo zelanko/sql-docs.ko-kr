@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file extensions [SQL Server]
 - associating file extensions [SQL Server]
 - Query Editor [SQL Server Management Studio], associating file extensions
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827be7d36a1b042d306400a12f4547b3df671075
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 546835fb2aaadb9ea5d65e3cf77e87df8f24b487
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164294"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>파일 확장명을 코드 편집기에 연결
   파일 확장명을 특정 코드 편집기에 연결하면 Windows 탐색기에서 파일을 두 번 클릭하여 해당 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 파일을 열 수 있습니다. .sql 및 .mdx와 같이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 많이 사용되는 확장명은 설치 중에 연결됩니다. 새 파일 확장명은 파일 시스템에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 연결해야 합니다. 이 기능을 사용하여 다른 편집기로 만든 파일을 열거나 .sql 파일의 백업인 .bak 파일과 같이 이름이 바뀐 파일을 열 수 있습니다.  

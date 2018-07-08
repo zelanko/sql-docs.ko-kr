@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0571217617017eaf370f70a490274f9c89613d46
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 798aa78d507e83c313120802fba926f201f74d6d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698596"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431632"
 ---
 # <a name="diagnostic-records-and-fields"></a>진단 레코드 및 필드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "35698596"
   
  두 가지 유형의 진단 레코드(헤더 및 상태)가 있습니다. 헤더 레코드는 레코드 0이고, 상태 레코드가 있을 경우 레코드 1 이상이 됩니다. 진단 레코드에는 헤더 레코드 및 상태 레코드에 대한 여러 필드가 포함됩니다. ODBC 구성 요소에서 해당 진단 레코드 필드를 정의할 수도 있습니다.  
   
- 헤더 레코드의 필드에는 반환 코드, 행 수, 상태 레코드 수, 실행된 문 유형 등 함수 실행에 대한 일반 정보가 포함됩니다. ODBC 함수에서 SQL_INVALID_HANDLE을 반환하지 않을 경우 헤더 레코드는 항상 생성됩니다. 헤더 레코드의 필드의 전체 목록은 참조 하십시오. [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)합니다.  
+ 헤더 레코드의 필드에는 반환 코드, 행 수, 상태 레코드 수, 실행된 문 유형 등 함수 실행에 대한 일반 정보가 포함됩니다. ODBC 함수에서 SQL_INVALID_HANDLE을 반환하지 않을 경우 헤더 레코드는 항상 생성됩니다. 헤더 레코드의 필드의 전체 목록은 참조 하세요 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)합니다.  
   
- 상태 레코드의 필드에는 SQLSTATE, 원시 오류 번호, 진단 메시지, 열 번호 및 행 번호를 비롯하여 ODBC 드라이버 관리자, 드라이버 또는 데이터 원본에서 반환된 특정 오류 또는 경고에 대한 정보가 포함됩니다. 상태 레코드는 함수에서 SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA 또는 SQL_STILL_EXECUTING을 반환하는 경우에만 생성됩니다. 상태 레코드의 필드의 전체 목록은 참조 하십시오. **SQLGetDiagField**합니다.  
+ 상태 레코드의 필드에는 SQLSTATE, 원시 오류 번호, 진단 메시지, 열 번호 및 행 번호를 비롯하여 ODBC 드라이버 관리자, 드라이버 또는 데이터 원본에서 반환된 특정 오류 또는 경고에 대한 정보가 포함됩니다. 상태 레코드는 함수에서 SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA 또는 SQL_STILL_EXECUTING을 반환하는 경우에만 생성됩니다. 상태 레코드의 필드의 전체 목록은 참조 하세요 **SQLGetDiagField**합니다.  
   
- **SQLGetDiagRec** 해당 ODBC SQLSTATE, 원시 오류 번호 및 진단 메시지 필드와 함께 단일 진단 레코드를 검색 합니다. 이 기능은 ODBC 2와 비슷합니다. *x * * * SQLError** 함수입니다. ODBC 3의 가장 간단한 오류 처리 함수입니다. *x* 반복 해 서 호출 **SQLGetDiagRec** 부터는 *RecNumber* 매개 변수를 증가 및 1로 설정 *RecNumber* 될 때까지 1 씩 **SQLGetDiagRec** SQL_NO_DATA를 반환 합니다. 이것은 ODBC 2입니다. *x* 응용 프로그램 호출 **SQLError** SQL_NO_DATA_FOUND가 반환 될 때까지 합니다.  
+ **SQLGetDiagRec** ODBC SQLSTATE, 원시 오류 번호 및 진단 메시지 필드와 함께 단일 진단 레코드를 검색 합니다. 이 기능은 ODBC 2와 비슷합니다. *x * * * SQLError** 함수입니다. ODBC 3에는 가장 간단한 오류 처리 함수입니다. *x* 반복적으로 호출 하는 것 **SQLGetDiagRec** 사용 하 여 시작 합니다 *RecNumber* 1 및 증가 매개 변수 설정 *RecNumber* 될 때까지 1 씩 **SQLGetDiagRec** SQL_NO_DATA를 반환 합니다. 이 해당 하는 ODBC 2. *x* 응용 프로그램 호출 **SQLError** SQL_NO_DATA_FOUND가 반환 될 때까지 합니다.  
   
  ODBC 3입니다. *x* ODBC 2 보다 훨씬 더 많은 진단 정보를 지원 합니다. *x*합니다. 이 정보를 사용 하 여 검색 된 진단 레코드의 추가 필드에 저장 됩니다 **SQLGetDiagField**합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 검색할 수 있는 드라이버별 진단 필드에 **SQLGetDiagField**합니다. 이러한 드라이버별 필드의 레이블은 sqlncli.h에서 정의됩니다. 해당 레이블을 사용하여 각 진단 레코드와 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태, 심각도 수준, 서버 이름, 프로시저 이름 및 줄 번호를 검색합니다. 또한 sqlncli.h에는 드라이버는 응용 프로그램을 호출 하는 경우 TRANSACT-SQL 문을 식별 하는 데 사용 하는 코드 정의가 **SQLGetDiagField** 와 *DiagIdentifier* SQL_DIAG_DYNAMIC_로 설정 FUNCTION_CODE 합니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 진단 필드를 사용 하 여 검색할 수 있습니다 **SQLGetDiagField**합니다. 이러한 드라이버별 필드의 레이블은 sqlncli.h에서 정의됩니다. 해당 레이블을 사용하여 각 진단 레코드와 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태, 심각도 수준, 서버 이름, 프로시저 이름 및 줄 번호를 검색합니다. Sqlncli.h에서 드라이버를 사용 하 여 응용 프로그램을 호출 하는 경우 TRANSACT-SQL 문을 식별 하는 코드의 정의 포함 하는 또한 **SQLGetDiagField** 사용 하 여 *DiagIdentifier* SQL_DIAG_DYNAMIC_로 설정 FUNCTION_CODE 합니다.  
   
- **SQLGetDiagField** 기본 드라이버에서 캐시 한 오류 정보를 사용 하 여 ODBC 드라이버 관리자에서 처리 됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. **SQLGetDiagField** 성공적으로 연결 완료 되기 전에 드라이버별 진단 필드를 가져오려는 호출 되 면 SQL_ERROR를 반환 합니다. ODBC 연결 함수에서 SQL_SUCCESS_WITH_INFO를 반환할 경우 해당 연결 함수의 드라이버별 진단 필드를 아직 사용할 수 없습니다. 호출을 시작할 수 **SQLGetDiagField** 다른 ODBC를 변경한 후에 드라이버별 진단 필드에 대 한 연결 함수 뒤에 함수 호출 합니다.  
+ **SQLGetDiagField** 기본 드라이버에서 캐시 한 오류 정보를 사용 하 여 ODBC 드라이버 관리자에서 처리 됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. **SQLGetDiagField** 연결에 성공 하면 완료 되기 전에 드라이버별 진단 필드를 호출 하면 SQL_ERROR를 반환 합니다. ODBC 연결 함수에서 SQL_SUCCESS_WITH_INFO를 반환할 경우 해당 연결 함수의 드라이버별 진단 필드를 아직 사용할 수 없습니다. 호출을 시작할 수 있습니다 **SQLGetDiagField** 다른 ODBC를 변경한 후에 드라이버별 진단 필드에 대 한 연결 함수 뒤에 함수 호출 합니다.  
   
- 대부분의 오류 보고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 진단할 수 있는 효과적으로 반환 하는 정보를 사용 하 여 **SQLGetDiagRec**합니다. 하지만 일부 경우에서는 오류를 진단할 때 드라이버별 진단 필드에서 반환된 정보가 중요합니다. ODBC 오류 처리기를 사용 하 여 응용 프로그램에 대 한 코드를 작성할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 것이 좋습니다를 사용 하도록 **SQLGetDiagField** 검색할 최소한 SQL_DIAG_SS_MSGSTATE는 및 SQL_DIAG_SS_SEVERITY 드라이버 관련 필드입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 여러 위치에서 특정 오류가 발생할 수 있는 경우 SQL_DIAG_SS_MSGSTATE를 통해 Microsoft 지원 엔지니어가 오류 발생 위치를 구체적으로 확인할 수 있으므로 문제 진단에 도움이 됩니다.  
+ 보고 된 대부분의 오류를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 효과적으로 진단할 수만 반환한 정보를 사용 하 여 **SQLGetDiagRec**합니다. 하지만 일부 경우에서는 오류를 진단할 때 드라이버별 진단 필드에서 반환된 정보가 중요합니다. 사용 하 여 응용 프로그램에 대 한 ODBC 오류 처리기를 코딩 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 것도 사용 하는 것이 좋습니다 **SQLGetDiagField** 는 SQL_DIAG_SS_MSGSTATE 적어도 검색할 및 SQL_DIAG_SS_SEVERITY 드라이버별 필드입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 여러 위치에서 특정 오류가 발생할 수 있는 경우 SQL_DIAG_SS_MSGSTATE를 통해 Microsoft 지원 엔지니어가 오류 발생 위치를 구체적으로 확인할 수 있으므로 문제 진단에 도움이 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [오류 및 메시지 처리](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

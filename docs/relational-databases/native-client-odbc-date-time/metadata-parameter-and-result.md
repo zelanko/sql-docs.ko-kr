@@ -1,12 +1,12 @@
 ---
-title: 매개 변수 및 결과 메타 데이터 | Microsoft Docs
+title: Parameter and Result Metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb3dfe34259e73bddf1fae44fe831ea4cefdadec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: de1c9e3a1f0969cfe3e17f08c3e5242f73e27909
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695924"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423422"
 ---
 # <a name="metadata---parameter-and-result"></a>메타 데이터-매개 변수 및 결과
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "35695924"
   
  값 범위가 연속되지 않을 수도 있습니다. 예를 들어 8,10..16에서는 9가 누락되어 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
- **datetime2** 의 typename로 반환 **smalldatetime** 및 **datetime** 드라이버를 사용 하므로이 공용 형식으로 모든 전송을 위한 **SQL_TYPE_TIMESTAMP** 값을 서버입니다.  
+ **datetime2** 의 typename로 반환 됩니다 **smalldatetime** 하 고 **datetime** 드라이버를 사용 하므로이 공통 형식으로 모든 전송에 대 한 **SQL_TYPE_TIMESTAMP** 서버에는 값입니다.  
   
  SQL_CA_SS_VARIANT_SQL_TYPE은 새 설명자 필드입니다. 이 필드와 연결 된 값 유형을 지정 하는 응용 프로그램을 사용 하도록 설정 하려면 IRD 및 IPD에 추가 된 **sqlvariant** (SQL_SSVARIANT) 열 및 매개 변수  
   
- SQL_CA_SS_SERVER_TYPE은 새로운 IPD 전용 필드로, 응용 프로그램에서 SQL_TYPE_TYPETIMESTAMP나 C 형식의 SQL_C_TYPE_TIMESTAMP를 갖는 SQL_SS_VARIANT로 바인딩된 매개 변수 값을 서버로 전송하는 방법을 제어하는 데 사용할 수 있습니다. SQL_DESC_CONCISE_TYPE이 SQL_TYPE_TIMESTAMP (또는 sql_ss_variant 및 C 형식이 SQL_C_TYPE_TIMESTAMP) SQL_CA_SS_SERVER_TYPE 값 tabular data stream 매개 변수 값의 (TDS) 형식을 결정 SQLExecute 또는 SQLExecDirect를 호출 하는 경우 다음과 같습니다.  
+ SQL_CA_SS_SERVER_TYPE은 새로운 IPD 전용 필드로, 응용 프로그램에서 SQL_TYPE_TYPETIMESTAMP나 C 형식의 SQL_C_TYPE_TIMESTAMP를 갖는 SQL_SS_VARIANT로 바인딩된 매개 변수 값을 서버로 전송하는 방법을 제어하는 데 사용할 수 있습니다. SQL_DESC_CONCISE_TYPE이 SQL_TYPE_TIMESTAMP (또는 sql_ss_variant 및 C 형식은 SQL_C_TYPE_TIMESTAMP) sql_ca_ss_server_type 값 tabular data stream (TDS) 형식의 매개 변수 값을 결정 SQLExecute 또는 SQLExecDirect 호출 되 면 을 다음과 같이 합니다.  
   
 |SQL_CA_SS_SERVER_TYPE 값|SQL_DESC_PRECISION에 대한 유효한 값|SQL_DESC_LENGTH에 대한 유효한 값|TDS 유형|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -69,11 +69,11 @@ ms.locfileid: "35695924"
   
 -   준비 또는 실행 시간에 SQLExecute, SQLExecDirect, SQLSetPos 또는 SQLBulkOperations를 호출하는 경우  
   
--   SQLPrepare를 호출 하 여 지연 되지 않은 준비 하는 응용 프로그램 강제로 지연 하는 경우 사용 안 함를 준비 하거나 SQLNumResultCols를 호출 하 여 SQLDescribeCol, 또는 SQLDescribeParam 준비 되지 않은 문에 대해 실행 합니다.  
+-   응용 프로그램 강제로 사용 하 여 SQLPrepare를 호출 하 여 준비 지연 되지 않은 지연 된 경우 사용 안 함, 준비 또는 SQLNumResultCols를 호출 하 여 SQLDescribeCol, 또는 준비 되지 않은 문에 대 한 SQLDescribeParam 실행 합니다.  
   
  SQL_CA_SS_SERVER_TYPE SQLSetDescField 호출 하 여 설정 되 면 해당 값은 SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME 또는 SQL_SS_TYPE_DATETIME 이어야 합니다. 그렇지 않으면 SQL_ERROR가 반환되고 SQLState HY092 및 "잘못된 특성/옵션 식별자입니다"라는 메시지가 포함된 진단 레코드가 기록됩니다.  
   
- SQL_CA_SS_SERVER_TYPE 특성에서 지 원하는 기능에 종속 된 응용 프로그램에서 사용할 수 **datetime** 및 **smalldatetime**, 아닌 **datetime2**합니다. 예를 들어 **datetime2** 사용 해야는 **dateadd** 및 **datediif** 반면 함수 **datetime** 및  **smalldatetime** 도 산술 연산자를 허용 합니다. 이 속성은 대부분의 응용 프로그램에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
+ SQL_CA_SS_SERVER_TYPE 특성에서 지 원하는 기능에 종속 된 응용 프로그램에서 사용할 수 **날짜/시간** 하 고 **smalldatetime**, 있지만 **datetime2**합니다. 예를 들어 **datetime2** 를 사용 해야 합니다 **dateadd** 및 **datediif** 반면 함수 **datetime** 및  **smalldatetime** 도 산술 연산자를 허용 합니다. 이 속성은 대부분의 응용 프로그램에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD 필드에서 반환되는 정보  
  다음은 IRD 필드에서 반환되는 정보입니다.  

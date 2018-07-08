@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 82c45b91f4ac4f39a41467f46b0b031580f1b42a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a9753b3dea7dc0883963022c43ab440b7c7a01ea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694934"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420102"
 ---
 # <a name="errors"></a>오류
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "35694934"
 
   OLE/COM 개체는 개체 멤버 함수의 HRESULT 반환 코드를 통해 오류를 보고합니다. OLE/COM HRESULT는 비트 압축 구조입니다. OLE는 구조 멤버를 역참조하는 매크로를 제공합니다.  
   
- OLE/COM 지정는 **IErrorInfo** 인터페이스입니다. 인터페이스와 같은 메서드를 노출 **GetDescription**합니다. 이 인터페이스를 사용하여 클라이언트는 OLE/COM 서버에서 오류 정보를 추출합니다. OLE DB 확장 **IErrorInfo** 단일 멤버 함수를 실행에서 여러 오류 정보 패킷의 반환을 지원 하도록 합니다.  
+ OLE/COM 지정 된 **IErrorInfo** 인터페이스입니다. 인터페이스와 같은 메서드를 노출 **GetDescription**합니다. 이 인터페이스를 사용하여 클라이언트는 OLE/COM 서버에서 오류 정보를 추출합니다. OLE DB 확장 **IErrorInfo** 단일 멤버 함수 실행에서 여러 오류 정보 패킷 반환할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여러 오류를 반환합니다. 응용 프로그램 호출 하 여 한 번에 하나씩 서버 오류를 검색할 수 [imultipleresults:: Getresult](http://go.microsoft.com/fwlink/?LinkId=129630) ISQLErrorInfo IErrorRecords와 결합 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여러 오류를 반환합니다. 응용 프로그램 호출 하 여 한 번에 하나씩 서버 오류에 검색할 수 있습니다 [imultipleresults:: Getresult](http://go.microsoft.com/fwlink/?LinkId=129630) ISQLErrorInfo IErrorRecords와 결합 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 레코드로 향상 된 표시 **IErrorInfo**, 사용자 지정 **ISQLErrorInfo**, 및 공급자 관련 [ISQLServerErrorInfo ](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) error 개체 인터페이스입니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 레코드로 향상 된 노출 **IErrorInfo**, 사용자 지정 **ISQLErrorInfo**, 및 공급자 관련 [ISQLServerErrorInfo ](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 오류 개체 인터페이스입니다.  
   
- 오류 추적에 대 한 정보를 참조 하십시오. [데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805)합니다. 에 추가 된 오류 추적 향상 된 기능에 대 한 내용은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 참조 [확장 이벤트 로그의 진단 정보에 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
+ 오류 추적에 대 한 정보를 참조 하세요 [데이터 액세스 추적](http://go.microsoft.com/fwlink/?LinkId=125805)합니다. 에 추가 하는 오류 추적 향상 기능에 대 한 자세한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 참조 하세요 [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

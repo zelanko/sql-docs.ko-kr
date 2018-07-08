@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec957ad4bc1ea32c885b51a940a793f84dbc6b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956628"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414422"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "32956628"
 
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 SQL Server Native Client의 ODBC 변경 내용에 대해 설명합니다.  
   
- 큰 CLR Udt에 대 한 ODBC 지원을 보여 주는 샘플을 보려면 [큰 Udt에 대 한 지원](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)합니다.  
+ 큰 CLR Udt에 대 한 ODBC 지원을 보여 주는 샘플을 참조 하세요 [큰 Udt에 대 한 지원](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)합니다.  
   
- SQL Server Native Client의 큰 CLR Udt 지원에 대 한 자세한 내용은 참조 [Large CLR User-Defined 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)합니다.  
+ SQL Server Native Client의 큰 CLR Udt 지원에 대 한 자세한 내용은 참조 하세요. [Large CLR User-Defined 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)합니다.  
   
 ## <a name="data-format"></a>데이터 형식  
  SQL Server Native Client는 SQL_SS_LENGTH_UNLIMITED를 사용하여 LOB(Large Object) 형식에 대해 8,000바이트 이상인 열의 크기를 나타냅니다. SQL Server 2008부터 크기가 8,000바이트보다 큰 CLR UDT에도 같은 값이 사용됩니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "32956628"
   
  다음 표에서는 매개 변수 및 결과 집합의 데이터 형식 매핑을 보여 줍니다.  
   
-|SQL Server 데이터 형식|SQL 데이터 형식|Value|  
+|SQL Server 데이터 형식|SQL 데이터 형식|값|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151(sqlncli.h)|  
   
- 다음 표에서는 해당되는 구조 및 ODBC C 형식을 보여 줍니다. 기본적으로 CLR UDT는는 **varbinary** 된 추가 메타 데이터가 형식입니다.  
+ 다음 표에서는 해당되는 구조 및 ODBC C 형식을 보여 줍니다. 기본적으로 CLR UDT를 **varbinary** 추가 메타 데이터를 사용 하 여 형식입니다.  
   
 |SQL 데이터 형식|메모리 레이아웃|C 데이터 형식|값(sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
@@ -76,7 +76,7 @@ ms.locfileid: "32956628"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT의 이름입니다.|UDT의 이름입니다.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME 항상 설정 되어 있어야를 통해 **SQLSetDescField**합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
+ UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME 항상 설정 해야 통해 **SQLSetDescField**합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
   
  UDT가 테이블과 다른 스키마가 있는 동일한 데이터베이스에 정의되어 있으면 SQL_CA_SS_UDT_SCHEMA_NAME을 설정해야 합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "32956628"
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름입니다.|UDT가 포함된 스키마의 이름입니다.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- 마지막 세 개의 열은 드라이버 관련 열입니다. 모든 ODBC 정의 열 끝나고 SQLColumns 또는 SQLProcedureColumns의 결과 집합의 모든 기존 드라이버 관련 열 시작 되기 전에 추가 됩니다.  
+ 마지막 세 개의 열은 드라이버 관련 열입니다. SQLColumns SQLProcedureColumns의 결과 집합의 모든 기존 드라이버별 열 앞 있지만 모든 ODBC 정의 열 이후 추가 됩니다.  
   
  개별 Udt 또는 일반 유형 "udt"에 대 한 SQLGetTypeInfo에서 아무 행도 반환 합니다.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "32956628"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH 및 DECIMAL_DIGTS UDT 열에 대해 반환되는 값은 이 항목의 앞부분에 있는 "SQLColumns 및 SQLProcedureColumns가 반환하는 열 메타데이터(카탈로그 메타데이터)" 섹션에 설명되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [큰 CLR 사용자 정의 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

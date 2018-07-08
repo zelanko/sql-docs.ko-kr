@@ -1,29 +1,29 @@
 ---
-title: SQL Server 2014 docs 이동 하는 | Microsoft Docs
-description: SQL Server 2014에 대 한 Microsoft 설명서는 MSDN 문서에는 여기에서 년 7 월 2018 전에 이동 합니다.
-author: MightyPen
+title: SQL Server 2014 설명서가 이동 | Microsoft Docs
+description: SQL Server 2014에 대 한 Microsoft 설명서 문서에서 여기에는 MSDN에서 2018 년 7 월 전에 이동 합니다.
+author: mightypen
 manager: craigg
-ms.prod-service: sql-database
+ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.workload: On Demand
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
-ms.openlocfilehash: c0d3cc7ef6236bb3f41b5e03123be0e0146d452d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 490ff7a8fb55e0ad9c0fd5b3606a9747e8f7b70f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159594"
 ---
-# SQL Server 2014에 대 한 설명서를 문서로 이동
+# Docs로 이동 하는 SQL Server 2014에 대 한 설명서
 
-이 문서에서는 Microsoft의 SQL Server 2014 설명서 문서를 이동 하는 예정 된 설명입니다. 이 문서를 런타임에 년 4 월 2018에서 쓰고 있으므로 이동 년 7 월 2018 하기 전에 발생 합니다.
+이 문서는 Microsoft SQL Server 2014 설명서의 예정 된 이동을 설명합니다. 이 문서는 2018 년 4 월 말에 작성 되 고 및 이동 2018 년 7 월 전에 발생 합니다.
 
 ## MSDN의 SQL Server 2014 설명서에 대 한 링크
 
-다음 링크는 Microsoft에 저장 되는 SQL Server 2014 설명서 해당 *MSDN* 웹 사이트입니다. 년 7 월 2018 하기 전에 Microsoft에 들어왔다 이러한 설명서 문서를 새로운 *Docs* 웹 사이트:
+다음 링크에서 Microsoft에 저장 되는 SQL Server 2014 설명서는 해당 *MSDN* 웹 사이트입니다. 2018 년 7 월 전에 Microsoft 즉시 이러한 설명서 새 *Docs* 웹 사이트:
 
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
@@ -31,25 +31,25 @@ ms.locfileid: "36080105"
 - *SQL Server 2014용 온라인 설명서*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
-MSDN은에 대 한 initialism *Microsoft Developer Network*합니다.
+MSDN은에 대 한는 initialism *Microsoft Developer Network*합니다.
 
 
 ## 리디렉터
 
-사용 되지 않는 MSDN HTTP 주소 계속 이동 후 적어도 몇 년 동안 작동 합니다. 리디렉터는 MSDN 요청을 가로챌 및 문서에 새 해당 주소와 함께를 전달 합니다. 그러나 이동 후 다음 항목이 true가 됩니다.
+사용 되지 않는 MSDN HTTP 주소를 계속 이동 후 적어도 몇 년 동안 작동 합니다. 리디렉터는 MSDN 요청을 가로채서 문서에서 새 해당 주소를 사용 하 여 전달 됩니다. 그러나 이동 후 다음 항목이 true가 됩니다.
 
-- 문서 직접 이동 하는 새 HTTP 주소를 사용 하 여 됩니다.
-- Bing 및 Google 크롤러에 되기는 delist 및 이전 MSDN 주소를 무시 합니다.
+- Docs로 직접 이동 하는 새 HTTP 주소를 사용 하려면 향상 됩니다.
+- Bing 및 Google 크롤러 시작 delist 및 이전 MSDN 주소를 무시 합니다.
 
 
 ## 이동 후
 
-로 이동한 후 *Docs*, 루트 SQL Server 2014 설명서 문서 주소가 됩니다.
+로 이동한 후 *Docs*, SQL Server 2014 루트 설명서 아티클 주소가 됩니다.
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
 ## 관련 링크
 
-- [SQL Server 2016 및 이후 버전에 대 한 루트 설명서 문서](https://docs.microsoft.com/sql/?view=sql-server-2016)
+- [SQL Server 2016 및 이후 버전에 대 한 루트 설명서 아티클](https://docs.microsoft.com/sql/?view=sql-server-2016)
 
