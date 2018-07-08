@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:StmtStarting event class
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93657150f866bc0f5a34e8ccae06da5869096b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95382cec4c94c9cd75a3164bac1566d8a88c2322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149094"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 이벤트 클래스
   SP:StmtStarting 이벤트 클래스는 저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 시작되었음을 나타냅니다.  

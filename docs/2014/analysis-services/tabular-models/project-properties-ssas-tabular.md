@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
 - sql12.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d1e60f7a649b15fbcfd91300b05465d314a6fba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8d8371d2dedf54b82475c2cc6ed5adcfd9b1891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278019"
 ---
 # <a name="project-properties-ssas-tabular"></a>프로젝트 속성(SSAS 테이블 형식)
   이 항목에서는 모델 프로젝트 속성에 대해 설명합니다. 각 테이블 형식 모델 프로젝트에는 배포 옵션 및 배포 서버 속성이 제공되어 프로젝트 및 모델의 배포 방식을 지정할 수 있습니다. 예를 들어 모델이 배포될 서버와 배포될 모델 데이터베이스 이름을 지정할 수 있습니다. 이러한 설정은 모델 작업 영역 데이터베이스에 영향을 주는 모델 속성과 다릅니다. 여기에서 설명하는 프로젝트 속성은 모달 속성 대화 상자에 있습니다. 이 대화 상자는 다른 유형의 속성을 표시하는 데 사용되는 속성 창과 다릅니다. 모달 프로젝트 속성을 표시하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36080292"
 |--------------|---------------------|-----------------|  
 |**Server**|**localhost**|Analysis Services 인스턴스를 지정합니다. 기본적으로 모델은 로컬 컴퓨터에 있는 기본 Analysis Services 인스턴스로 배포됩니다. 이 설정을 변경하여 로컬 컴퓨터의 명명된 인스턴스 또는 Analysis Services 개체를 만들 권한이 있는 원격 컴퓨터의 인스턴스를 지정할 수 있습니다. 일반적으로 관리자 권한을 사용합니다.<br /><br /> 이 속성의 기본 설정은 도구\옵션 대화 상자에서 Analysis Server 설정의 배포 페이지에 있는 기본 배포 서버 속성을 사용하여 변경할 수 있습니다. 자세한 내용은 [기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)을 참조하세요.|  
 |**버전**|**개발자**|모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다.|  
-|**데이터베이스 백업**|**Model**|배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 데이터 연결 또는 .rsds 데이터 연결 파일에서 지정됩니다. 이름은 모델을 사용하여 수행할 분석 유형을 나타내는 것이 좋습니다(예: AdventureWorksSalesModel).<br /><br /> **\*\* 중요 한 \* \***  를 방지 하기 위해 배포 된 모델에 대 한 중복 된 이름을 변경 해야는 **데이터베이스** 모델의 목적에 맞게 속성 이름 설정 합니다. 사용자가 데이터 원본으로 사용할 모델에 연결할 때 이 이름이 표시됩니다.|  
+|**데이터베이스 백업**|**Model**|배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 데이터 연결 또는 .rsds 데이터 연결 파일에서 지정됩니다. 이름은 모델을 사용하여 수행할 분석 유형을 나타내는 것이 좋습니다(예: AdventureWorksSalesModel).<br /><br /> **\*\* 중요 \* \***  배포 된 모델의 이름이 중복을 방지 하려면 변경 해야 합니다 **데이터베이스** 모델의 목적에 맞게 속성 이름 설정 합니다. 사용자가 데이터 원본으로 사용할 모델에 연결할 때 이 이름이 표시됩니다.|  
 |**큐브 이름**|**Model**|보고 클라이언트 데이터 연결에 표시된 것과 같이 데이터베이스 큐브의 이름을 지정합니다.|  
 |**버전(Version)**|**11.0**|프로젝트를 배포할 Analysis Services 인스턴스의 버전입니다.|  
   
@@ -65,8 +65,8 @@ ms.locfileid: "36080292"
 2.  **속성** 창에서 속성을 클릭한 다음 값을 입력하거나 아래쪽 화살표를 클릭하여 설정 옵션을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [기본 데이터 모델링 및 배포 속성 구성 &#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
- [모델 속성 &#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)   
- [테이블 형식 모델 솔루션 배포 &#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [기본 데이터 모델링 및 배포 속성 구성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
+ [모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)   
+ [테이블 형식 모델 솔루션 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

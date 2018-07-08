@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,26 +16,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1252eaabf879ca1c0685ac6ec4334ce15a98fe27
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c939772d5e8e9e8a5ef9aa7bcf2a817acefe5b96
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698604"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413071"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 비슷합니다는 [메모리에서](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저, 테이블 반환 매개 변수에 대 한 하지만 실행 시 데이터를 사용 합니다.  
+  비슷합니다는 [메모리에 모든](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저, 테이블 반환 매개 변수에 대해 하지만 실행 시 데이터를 사용 합니다.  
   
  테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
- 이 예제에서는 SQLExecute 또는 SQLExecDirect를 호출할 때 드라이버 SQL_NEED_DATA를 반환 합니다. 그런 다음 응용 프로그램 드라이버 sql_need_data가 아닌 값을 반환할 때까지 SQLParamData 반복적으로 호출 합니다. 드라이버가 반환 *ParameterValuePtr* 되는 매개 변수 데이터를 요청은 응용 프로그램 알리는 합니다. 응용 프로그램에 대 한 호출 SQLPutData SQLParamData 다음 호출 전 매개 변수 데이터를 제공 합니다. 테이블 반환 매개 변수에 대 한 SQLPutData에 대 한 호출 (이 예에서는 항상 1)의 드라이버에 대 한 준비 않은 행의 수를 나타냅니다. 테이블 반환의 모든 행이 드라이버로 전달 되 면 SQLPutData 0 개의 행을 사용할 수 있는지를 나타내기 위해 호출 됩니다.  
+ 이 예제에서는 SQLExecute 또는 SQLExecDirect를 호출 하면 드라이버 SQL_NEED_DATA를 반환 합니다. 그러면 응용 프로그램이 드라이버 sql_need_data가 아닌 값을 반환할 때까지 SQLParamData 반복적으로 호출 합니다. 드라이버가 *ParameterValuePtr* 매개 변수 데이터를 요청 하는 응용 프로그램에 알림을 보내야 합니다. 응용 프로그램에 대 한 호출 SQLPutData SQLParamData 다음 호출 전 매개 변수 데이터를 제공 합니다. 테이블 반환 매개 변수에 대 한 SQLPutData 호출 (이 예제에서는 항상 1)의 드라이버를 준비 하는 행의 수를 나타냅니다. 드라이버에 테이블 반환의 모든 행을 거친 SQLPutData 0 rows를 사용할 수 있는지를 나타내기 위해 호출 됩니다.  
   
- 테이블 반환 행 내에서 실행 시 데이터 값을 사용할 수 있습니다. SQLParamData 반환한 값은 어떤 값 드라이버 필요한 응용 프로그램을 알립니다. 일반 매개 변수 값과 마찬가지로 SQLPutData 한 번 이상 문자 또는 이진 테이블 반환에 대 한 열 값을 호출할 수 있습니다. 이렇게 하면 응용 프로그램이 큰 값을 나눠서 전달할 수 있습니다.  
+ 테이블 반환 행 내에서 실행 시 데이터 값을 사용할 수 있습니다. SQLParamData 반환한 값은 드라이버에서 요구 하는 값 응용 프로그램을 알립니다. 일반 매개 변수 값을 마찬가지로 SQLPutData 열 값을 한 번 이상 문자 또는 이진 테이블 반환에 대해 호출할 수 있습니다. 이렇게 하면 응용 프로그램이 큰 값을 나눠서 전달할 수 있습니다.  
   
- 테이블 값에 대 한 SQLPutData를 호출할 때 *DataPtr* (이 예에서는 항상 1)에서 사용할 수 있는 행의 수에 사용 됩니다. *StrLen_or_IndPtr* 항상 0 이어야 합니다. 테이블 반환의 모든 행이 전달 되 면 SQLPutData로 호출 됩니다는 *DataPtr* 값이 0입니다.  
+ 테이블 값에 대 한 SQLPutData를 호출할 때 *DataPtr* (이 예제에서는 항상 1)의 사용 가능한 행 수에 사용 됩니다. *StrLen_or_IndPtr* 항상 0 이어야 합니다. 사용 하 여 SQLPutData 테이블 반환의 모든 행을 거친 경우 라고 한 *DataPtr* 값이 0입니다.  
   
 ## <a name="prerequisite"></a>사전 요구 사항  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
@@ -74,7 +74,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  매개 변수를 바인딩합니다. *ColumnSize* 1 이면 해당 적어도 하나 이상의 행이 한 번에 전달 됨 의미 합니다.  
+2.  매개 변수를 바인딩합니다. *ColumnSize* 1 번 전달 되는 최대 하나의 행을 의미 합니다.  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -129,14 +129,14 @@ from @Items
     strcpy_s((char *) CustCode ,sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
     ```  
   
-5.  프로시저를 호출합니다. 테이블 반환 매개 변수가 실행 시 데이터 매개 변수 이므로 SQLExecDirect SQL_NEED_DATA를 반환 합니다.  
+5.  프로시저를 호출합니다. 테이블 반환 매개 변수는 실행 시 데이터 매개 변수 이므로 SQLExecDirect SQL_NEED_DATA를 반환 합니다.  
   
     ```  
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  실행 시 데이터 매개 변수 데이터를 제공합니다. SQLParamData 반환 하는 경우는 *ParameterValuePtr* 테이블 반환 매개 변수에 대 한 응용 프로그램 열을 준비 해야 다음 행 또는 테이블 반환의 행에 대 한 합니다. 그런 다음 응용 프로그램 호출와 SQLPutData *DataPtr* (이 예에서는 1)에서 사용할 수 있는 행 수로 설정 하 고 *StrLen_or_IndPtr* 0으로 설정 합니다.  
+6.  실행 시 데이터 매개 변수 데이터를 제공합니다. SQLParamData 반환 하는 경우는 *ParameterValuePtr* 테이블 반환 매개 변수의 경우 응용 프로그램을 준비 해야 합니다 열 다음 행 또는 테이블의 행에 대 한 합니다. 응용 프로그램에서 사용 하 여 SQLPutData를 호출 하는 다음 *DataPtr* (이 예제에서는 1)의 사용 가능한 행 수로 설정 하 고 *StrLen_or_IndPtr* 0으로 설정 합니다.  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -191,7 +191,7 @@ from @Items
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>Description  
- 이 샘플에서는 행 스트리밍을 ODBC tvp를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다 SQLPutData 호출당 한 행을 사용할 수 있는 보여 줍니다.  
+ 이 샘플에서는 행 스트리밍을 ODBC TVP를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다를 사용 하 여 SQLPutData 호출당 하나의 행을 사용할 수 있는 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
   
@@ -379,7 +379,7 @@ EXIT:
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>Description  
- 이 샘플에서는 행 스트리밍을 ODBC tvp를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다 SQLPutData 호출당 여러 행을 사용할 수 있는 보여 줍니다.  
+ 이 샘플에서는 행 스트리밍을 ODBC TVP를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다를 사용 하 여 SQLPutData 호출당 여러 행을 사용할 수 있는 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
   

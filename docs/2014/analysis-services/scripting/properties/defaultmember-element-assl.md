@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b8b2ecd1d5cd46ea50cceebe2a0105d9b7311f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229683"
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember 요소(ASSL)
   부모 요소의 기본 멤버를 식별하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
@@ -58,13 +58,13 @@ ms.locfileid: "36091602"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AttributePermission](../objects/attributepermission-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ManyToManyMeasureGroupDimension](../data-type/dimension-data-type-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
+|부모 요소|[AttributePermission](../objects/attributepermission-element-assl.md)하십시오 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)하십시오 [ManyToManyMeasureGroupDimension](../data-type/dimension-data-type-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `DefaultMember` 요소는 부모 요소의 기본 멤버를 정의합니다. 경우 `DefaultMember` 지정 되지 않았거나 빈 문자열로 설정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 기본 멤버로 사용할 멤버를 선택 합니다.  
+ `DefaultMember` 요소는 부모 요소의 기본 멤버를 정의합니다. 하는 경우 `DefaultMember` 지정 되지 않았거나 빈 문자열로 설정 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 기본 멤버로 사용할 멤버를 선택 합니다.  
   
- `ManyToManyMeasureGroupDimension` 요소의 경우 `DefaultMember` 요소는 `CubeDimensionID`의 `ManyToManyMeasureGroupDimension` 요소에서 식별되는 차원 멤버를 지정하는 MDX 식을 포함합니다. MDX 식을 비슷합니다는 [StrToMember](/sql/mdx/strtomember-mdx) MDX 또는 사용자 정의 함수를 포함할 수 없습니다 한다는 점에서 MDX 제한 된 키워드와 함께 작동 합니다.  
+ `ManyToManyMeasureGroupDimension` 요소의 경우 `DefaultMember` 요소는 `CubeDimensionID`의 `ManyToManyMeasureGroupDimension` 요소에서 식별되는 차원 멤버를 지정하는 MDX 식을 포함합니다. MDX 식은 비슷합니다는 [StrToMember](/sql/mdx/strtomember-mdx) MDX 함수와 CONSTRAINED 키워드를 사용 하 여에 MDX 또는 사용자 정의 함수를 포함할 수 없습니다.  
   
  기본 멤버에 대한 자세한 내용은 [기본 멤버 정의](../../multidimensional-models/attribute-properties-define-a-default-member.md)를 참조하세요.  
   

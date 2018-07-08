@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182960"
 ---
 # <a name="source-element-xmla"></a>Source 요소(XMLA)
-  동안 병합할 원본 파티션을 나타냅니다는 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다.  
+  하는 동안 병합할 원본 파티션을 나타냅니다는 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,13 +64,13 @@ ms.locfileid: "36088269"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[원본](sources-element-xmla.md)|  
-|자식 요소|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
+|자식 요소|[CubeID](id-element-xmla.md)하십시오 [DatabaseID](databaseid-element-xmla.md)합니다 [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `Source` 요소는 부모 `Target` 요소의 `MergePartitions` 요소에서 지정한 대상 파티션으로 병합할 단일 파티션에 대한 개체 참조입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 `Internet Sales` 측정값 그룹의 4개 파티션을 모두 `Internet_Sales_2004` 대상 파티션으로 결합합니다. 예제 참조 하는 **Adventure Works** 의 큐브는 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
+ 다음 예에서는 `Internet Sales` 측정값 그룹의 4개 파티션을 모두 `Internet_Sales_2004` 대상 파티션으로 결합합니다. 예제 참조 하는 **Adventure Works** 큐브의 합니다 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -87,7 +87,7 @@ ms.locfileid: "36088269"
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 대상 &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
+ [Target 요소 &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

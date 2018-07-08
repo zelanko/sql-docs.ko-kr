@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full differential backups [SQL Server]
 - database backups [SQL Server], full differential backups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59dc50f9d3e72e7591d512ab98c5731e2cc6d5c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 595470b98b16cf955d2456891dac2284a94508c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160934"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 차등 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "36091523"
 5.  **백업 유형** 목록 상자에서 **차등**을 선택합니다.  
   
     > [!IMPORTANT]  
-    >  때 **차등** 가 확인 하는 **복사 전용 백업** 확인란의 선택을 취소 합니다.  
+    >  때 **차등** 은 확인을 선택 합니다 **복사 전용 백업** 확인란의 선택을 취소 합니다.  
   
 6.  **백업 구성 요소**의 경우 **데이터베이스**를 클릭합니다.  
   

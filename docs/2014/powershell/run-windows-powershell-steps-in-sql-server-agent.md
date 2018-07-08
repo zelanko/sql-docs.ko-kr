@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 58837a63969baff47ff79bcebb78b6dd24deb31e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ff2df6e300c3c422215f459cf258225632bd87eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182757"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행
   SQL Server 에이전트를 사용하여 일정에 따라 SQL Server PowerShell 스크립트를 실행할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36091517"
   
 1.  PowerShell 작업 단계를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 하위 시스템에서 `sqlps` 유틸리티를 실행하도록 합니다. 이 유틸리티는 PowerShell 2.0을 시작하고 `sqlps` 모듈을 가져옵니다.  
   
-2.  명령 프롬프트 작업 단계를 사용 하 여 PowerShell.exe를 실행 하 고 가져오는 스크립트를 지정 된 `sqlps` 모듈입니다.  
+2.  PowerShell.exe를 실행 하려면 명령 프롬프트 작업 단계를 사용 하 고 가져오는 스크립트를 지정 된 `sqlps` 모듈입니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
   

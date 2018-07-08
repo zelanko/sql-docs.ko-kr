@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da8c4e45c0472844b5351ad6ad02e39bba1d5e50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077b79d820a30902b2c705a1e2ec55bda31c8d6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210723"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 로그 파일 및 소스
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 및 보고서 서버 환경은 서버 작업 및 상태에 대한 정보를 기록하는 데 여러 가지 로그 대상을 지원합니다. 로깅에는 실행 로깅 및 추적 로깅의 두 가지 기본 범주가 있습니다. 실행 로깅에는 보고서 실행 통계, 감사, 성능 진단 및 최적화에 대한 정보가 포함됩니다. 추적 로깅은 오류 메시지 및 일반 진단에 대한 정보입니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36082624"
 |Windows 성능 로그|Windows 성능 로그에는 보고서 서버 성능 데이터가 들어 있습니다. 성능 로그를 만든 다음 수집할 데이터를 결정하는 카운터를 선택할 수 있습니다. 자세한 내용은 [Monitoring Report Server Performance](monitoring-report-server-performance.md)을 참조하세요.|  
 |설치 로그 파일|설치 중에도 로그 파일이 만들어집니다. 설치에 실패하거나 성공했지만 경고 또는 기타 메시지가 있을 경우 문제 해결을 위해 로그 파일을 검사할 수 있습니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.|  
 |IIS 로그|Microsoft IIS(인터넷 정보 서비스)에 의해 생성되는 로그 파일입니다. 자세한 내용은 [IIS(인터넷 정보 서비스)에서 로깅을 사용하도록 설정하는 방법](http://support.microsoft.com/kb/313437)을 참조하십시오.|  
-|비디오|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 로그 파일은 Microsoft 파워 쿼리의 사용을 보여 주는 짧은 비디오에서 볼 수 있습니다.<br /><br /> ![파워 쿼리 및 SSRS 로그에 대 한 비디오 보기](../media/generic-video-thumbnail.png "파워 쿼리 및 SSRS 로그에 대 한 비디오 보기")|  
+|비디오|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 로그 파일은 Microsoft 파워 쿼리의 사용을 보여 주는 짧은 비디오에서 볼 수 있습니다.<br /><br /> ![파워 쿼리 및 SSRS 로그에 대 한 비디오를 볼](../media/generic-video-thumbnail.png "파워 쿼리 및 SSRS 로그에 대 한 비디오 보기")|  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](reporting-services-report-server-native-mode.md)   

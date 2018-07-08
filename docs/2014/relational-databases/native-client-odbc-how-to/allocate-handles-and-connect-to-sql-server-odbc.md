@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: adf51bdb9181030079d8b3f94628a1280299c856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ccb7b63b1098e9e6d5dba6ee0a299d2d30ce6f09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080860"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407564"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
     
@@ -34,21 +32,21 @@ ms.locfileid: "36080860"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버별 헤더 파일인 Odbcss.h를 포함합니다.  
   
-3.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 와 `HandleType` 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
+3.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 `HandleType` 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
   
-4.  호출 [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) 와 `Attribute` 를 sql_attr_odbc_version으로 설정 하 고 `ValuePtr` SQL_OV_ODBC3 나타내는로 설정 된 응용 프로그램이 ODBC 3.x 형식 함수 호출을 사용 합니다.  
+4.  호출 [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) 사용 하 여 `Attribute` SQL_ATTR_ODBC_VERSION으로 설정 하 고 `ValuePtr` 응용 프로그램은 odbc 3.x 형식 함수를 사용 하 여 SQL_OV_ODBC3으로 설정 합니다.  
   
-5.  필요에 따라 호출 [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) 에 환경 옵션입니다.  
+5.  필요에 따라 호출 [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) 환경 옵션을 가져오려고 합니다.  
   
-6.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 와 `HandleType` 의 sql_handle_dbc 라는 연결 핸들을 할당 합니다.  
+6.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 `HandleType` 의 SQL_HANDLE_DBC 연결 핸들을 할당 합니다.  
   
-7.  을 호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 연결 옵션을 설정 하거나 호출 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) 연결 옵션을 얻으려고 합니다.  
+7.  필요에 따라 호출할 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 연결 옵션을 설정 하거나 호출 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) 연결 옵션을 가져오려고 합니다.  
   
 8.  기존 데이터 원본에 연결 하는 데 SQLConnect 호출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
      또는  
   
-     호출 [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) 에 연결할 연결 문자열을 사용 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     호출 [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) 연결 문자열에 연결 하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
      최소 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자열은 다음 두 가지 형태 중 하나입니다.  
   
@@ -57,19 +55,19 @@ ms.locfileid: "36080860"
     DRIVER={SQL Server Native Client 10.0};SERVER=server;Trusted_connection=yes;  
     ```  
   
-     연결 문자열이 완료되지 않은 경우 `SQLDriverConnect`에서 필요한 정보를 확인할 수 있습니다. 이 대 한 지정 된 값에 의해 제어 되는 *DriverCompletion* 매개 변수입니다.  
+     연결 문자열이 완료되지 않은 경우 `SQLDriverConnect`에서 필요한 정보를 확인할 수 있습니다. 지정 된 값으로 제어 합니다 *DriverCompletion* 매개 변수입니다.  
   
      \- 또는-  
   
-     호출 [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) 반복적으로 연결 문자열을 작성 하 고 연결할에 여러 번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     호출 [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) 연결 문자열을 작성 하 고 연결할는 반복적인 방식으로 여러 번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-9. 필요에 따라 호출 [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) 드라이버 특성 및 동작을 얻으려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다.  
+9. 필요에 따라 호출할 [SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md) 드라이버 특성과 동작을 가져오려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다.  
   
 10. 문을 할당하고 사용합니다.  
   
-11. 연결을 끊으려면 SQLDisconnect 호출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 핸들를 새 연결에 사용할 수 있도록 합니다.  
+11. 호출에서 연결을 끊으려면 SQLDisconnect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 핸들를 새 연결에 사용할 수 있도록 합니다.  
   
-12. 호출 [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) 와 `HandleType` 의 sql_handle_dbc 라는 연결 핸들을 해제 합니다.  
+12. 호출 [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) 사용 하 여를 `HandleType` SQL_HANDLE_DBC 하 여 연결 핸들입니다.  
   
 13. SQL_HANDLE_ENV라는 `SQLFreeHandle`으로 `HandleType`을 호출하여 환경 핸들을 해제합니다.  
   

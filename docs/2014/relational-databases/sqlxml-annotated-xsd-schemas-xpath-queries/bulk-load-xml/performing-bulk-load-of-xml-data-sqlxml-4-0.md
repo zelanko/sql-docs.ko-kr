@@ -20,15 +20,15 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4c4c6980c32028858b70d9fd59d80448a692206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7669d5342ecfff26a81808b9a1969e1b367e60e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230639"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>XML 데이터 대량 로드 수행(SQLXML 4.0)
   XML 대량 로드는 반구조화된 XML 데이터를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 로드할 수 있게 해주는 독립 실행형 COM 개체입니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36080162"
  [XML 대량 로드 예 &#40;SQLXML 4.0&#41;](xml-bulk-load-examples-sqlxml-4-0.md)  
  XML 대량 로드를 사용하는 예제 코드를 제공합니다.  
   
- [데이터 형식 및 XML 대량 로드 동작 &#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [데이터 형식과 XML 대량 로드 동작 &#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  XSD 및 XDR의 여러 유형에서의 XML 대량 로드 동작에 대해 설명합니다.  
   
  [지침 및 제한 사항 xml 대량 로드 &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  

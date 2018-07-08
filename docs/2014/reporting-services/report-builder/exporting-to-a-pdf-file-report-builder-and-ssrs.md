@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183840"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF 파일로 내보내기(보고서 작성기 및 SSRS)
   PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.  
   
- PDF 렌더링 확장 프로그램에서는 ANSI 문자를 지원하며 한국어, 일본어, 중국어 번체, 중국어 간체, 키릴 자모, 히브리어 및 아랍어를 특정 제한과 함께 유니코드 문자로 변환할 수 있습니다. 제한 사항에 대 한 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)합니다.  
+ PDF 렌더링 확장 프로그램에서는 ANSI 문자를 지원하며 한국어, 일본어, 중국어 번체, 중국어 간체, 키릴 자모, 히브리어 및 아랍어를 특정 제한과 함께 유니코드 문자로 변환할 수 있습니다. 제한 사항에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)합니다.  
   
  PDF 렌더러는 물리적 페이지 렌더러이므로 페이지 매김 동작이 HTML 및 Excel 같은 다른 렌더러와는 차이가 있습니다. 이 항목에서는 PDF 렌더러 관련 정보를 제공하고 규칙의 예외를 설명합니다.  
   

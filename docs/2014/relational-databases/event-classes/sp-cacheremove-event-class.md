@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db6b0933af52271698622b86b848de16ecbd7cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7c5e1a05ce2007c4c99a1336c997e69bbdf047dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158424"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 이벤트 클래스
   SP:CacheRemove 이벤트 클래스는 저장 프로시저가 계획 캐시에서 제거되었음을 나타냅니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36088156"
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|예|  
 |EventClass|`int`|이벤트 유형 = 36|27|아니요|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
-|EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = Compplan 제거 합니다. 캐시에서 컴파일된 쿼리 계획이 제거되었습니다.<br /><br /> 2 = Proc 캐시 플러시 합니다. 프로시저 캐시에서 모든 항목이 제거되었습니다.|21|예|  
+|EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 1=compplan 제거 합니다. 캐시에서 컴파일된 쿼리 계획이 제거되었습니다.<br /><br /> 2 = 프로시저 캐시 플러시 합니다. 프로시저 캐시에서 모든 항목이 제거되었습니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  

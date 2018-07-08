@@ -1,5 +1,5 @@
 ---
-title: 테이블 유형 지정 (데이터 마이닝 마법사) | Microsoft Docs
+title: 테이블 형식 (데이터 마이닝 마법사)를 지정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74fdca1f619b063e32e37b29f1ce721666d752d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c753554dcab61c10bacaf4c118d1781ba3d157b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159074"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>테이블 유형 지정(데이터 마이닝 마법사)
   **테이블 유형 지정** 페이지를 사용하여 마이닝 구조 정의에 사용할 테이블을 식별할 수 있습니다. 선택하지 않은 테이블은 마이닝 구조 정의에 사용되지 않습니다.  

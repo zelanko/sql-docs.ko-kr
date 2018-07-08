@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163514"
 ---
 # <a name="content-types-data-mining"></a>내용 유형(데이터 마이닝)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열에 대한 실제 데이터 형식과 모델에 사용된 열에 대한 논리적 내용 유형을 모두 정의할 수 있습니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "36088297"
   
  불연속 특성 열의 값은 숫자라 하더라도 순서를 의미하지 않습니다. 또한 불연속 열에 사용된 값이 숫자라 하더라도 소수 값은 계산될 수 없습니다. 불연속 숫자 데이터의 좋은 예로 전화 번호의 지역 번호가 있습니다.  
   
- `Discrete` 내용 유형은 모든 데이터 마이닝 데이터 형식에서 지원 됩니다.  
+ `Discrete` 내용 유형은 모든 데이터 마이닝 데이터 형식으로 지원 됩니다.  
   
 ## <a name="continuous"></a>연속  
  *Continuous* 는 열에 중간 값을 허용하는 소수 자릿수의 숫자 데이터를 나타내는 값이 포함되어 있음을 의미합니다. 한정된 개수의 데이터를 나타내는 불연속 열과는 달리 연속 열은 조정 가능한 측정을 나타내며 데이터가 무한 개의 소수 값을 포함합니다. 연속 특성 열의 예로는 Temperatures 열이 있습니다.  
   
  열에 연속 숫자 데이터가 있고 데이터 배포 방법을 알고 있는 경우 값의 예상 분포를 지정하여 분석의 정확도를 향상시킬 수 있습니다. 마이닝 구조의 수준에서 열 배포를 지정합니다. 따라서 이 설정은 구조를 기반으로 하는 모든 모델에 적용됩니다. 자세한 내용은 [열 배포&#40;데이터 마이닝&#41;](column-distributions-data-mining.md)를 참조하세요.  
   
- `Continuous` 내용 유형은 데이터 형식에서 지원: `Date`, `Double`, 및 `Long`합니다.  
+ 합니다 `Continuous` 내용 유형은 데이터 형식에서: `Date`, `Double`, 및 `Long`합니다.  
   
 ## <a name="discretized"></a>불연속화됨  
  *분할* 은 제한된 개수의 가능한 값이 있도록 연속 데이터 집합의 값을 버킷에 넣는 프로세스입니다. 숫자 데이터만 분할할 수 있습니다.  
@@ -72,21 +72,21 @@ ms.locfileid: "36088297"
  `Discretized` 내용 유형은 `Date`, `Double`, `Long` 및 `Text` 데이터 형식에서 지원합니다.  
   
 ## <a name="key"></a>Key  
- *Key* 내용 유형은 열이 행을 고유하게 식별함을 의미합니다. 사례 테이블에서 키 열은 일반적으로 숫자 또는 텍스트 식별자입니다. 콘텐츠 형식으로 설정 해야 `key` 에 열을 추적 레코드에 대해서만 분석에 사용할을 지정 합니다.  
+ *Key* 내용 유형은 열이 행을 고유하게 식별함을 의미합니다. 사례 테이블에서 키 열은 일반적으로 숫자 또는 텍스트 식별자입니다. 내용 유형을 설정한 `key` 에 열을 추적 레코드에 대해서만 분석에 사용할을 지정 합니다.  
   
- 중첩 테이블에도 키가 있지만 중첩 테이블 키의 사용법은 약간 다릅니다. 콘텐츠 형식으로 설정 해야 `key` 열이 분석 하려는 특성 일 경우 중첩된 테이블에 있습니다. 중첩 테이블 키의 값은 각 사례에 대해 고유해야 하지만 사례 집합 전체에서는 중복될 수 있습니다.  
+ 중첩 테이블에도 키가 있지만 중첩 테이블 키의 사용법은 약간 다릅니다. 내용 유형을 설정한 `key` 중첩된 테이블 열이 분석 하려는 특성에에서 있습니다. 중첩 테이블 키의 값은 각 사례에 대해 고유해야 하지만 사례 집합 전체에서는 중복될 수 있습니다.  
   
  예를 들어 고객이 구매한 제품을 분석하는 경우 사례 테이블의 **CustomerID** 열에 대해 내용 유형을 Key로 설정한 다음 중첩 테이블의 **PurchasedProducts** 열에 대해 내용 유형을 다시 Key로 설정할 수 있습니다.  
   
 > [!NOTE]  
 >  중첩 테이블은 Analysis Services 데이터 원본 뷰로 정의된 외부 데이터 원본의 데이터를 사용하는 경우에만 사용할 수 있습니다.  
   
- 이 내용 유형은 데이터 형식에서 지원 됩니다: `Date`, `Double`, `Long`, 및 `Text`합니다.  
+ 이 내용 유형은 데이터 형식에서 지원 됩니다. `Date`, `Double`, `Long`, 및 `Text`합니다.  
   
 ## <a name="key-sequence"></a>키 시퀀스  
  *Key Sequence* 내용 유형은 시퀀스 클러스터링 모델에서만 사용할 수 있습니다. 내용 유형을 `key sequence`로 설정할 경우 이는 이벤트 시퀀스를 표시하는 값이 열에 포함되어 있음을 나타냅니다. 이러한 값은 정렬되지만 간격은 달라도 됩니다.  
   
- 이 내용 유형은 데이터 형식에서 지원 됩니다: `Double`, `Long`, `Text`, 및 `Date`합니다.  
+ 이 내용 유형은 데이터 형식에서 지원 됩니다. `Double`, `Long`, `Text`, 및 `Date`합니다.  
   
 ## <a name="key-time"></a>Key Time  
  *Key Time* 내용 유형은 시계열 모델에서만 사용할 수 있습니다. 내용 유형을 `key time`으로 설정할 경우 이는 값이 정렬되고 시간 단위를 가리킴을 나타냅니다.  
@@ -116,10 +116,10 @@ ms.locfileid: "36088297"
  모든 모델에서 일반적으로 사용되는 위의 내용 유형 외에도 일부 데이터 형식에 대해 분류된 열을 사용하여 내용 유형을 정의할 수 있습니다. 분류된 열에 대한 자세한 내용은 [분류된 열&#40;데이터 마이닝&#41;](classified-columns-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [콘텐츠 형식을 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [콘텐츠 형식 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [데이터 형식 &#40;데이터 마이닝&#41;](data-types-data-mining.md)   
  [데이터 형식 &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
- [마이닝 구조 속성 변경](change-the-properties-of-a-mining-structure.md)   
+ [마이닝 구조의 속성 변경](change-the-properties-of-a-mining-structure.md)   
  [마이닝 구조 열](mining-structure-columns.md)  
   
   

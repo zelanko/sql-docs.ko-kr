@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8614201ccb9c4fa496602a1ea8f6ea5e984b4d39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230682"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>범례 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
-  **범례** 대화 상자를 사용하여 차트의 범례 모양과 레이아웃을 정의할 수 있습니다. 자세한 내용은 참조 [차트의 범례 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)합니다.  
+  **범례** 대화 상자를 사용하여 차트의 범례 모양과 레이아웃을 정의할 수 있습니다. 자세한 내용은 [차트의 범례 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)합니다.  
   
 ## <a name="options"></a>변수  
  **이름**  

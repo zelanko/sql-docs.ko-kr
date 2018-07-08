@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165014"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
   패키지는 트랜잭션을 사용하여 태스크가 원자 단위로 수행되는 데이터베이스 동작을 바인딩하며 이를 통해 데이터 무결성을 유지 관리합니다. 각 작업을 캡슐화하는 For Loop, Foreach Loop, Sequence 컨테이너 및 태스크 호스트 등의 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너는 트랜잭션을 사용하도록 구성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 트랜잭션 구성을 위해 **NotSupported**, **Supported**및 **Required**의 세 가지 옵션을 제공합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36082714"
  컨테이너에서 TransactionOption 속성을 설정하여 트랜잭션을 구성할 수 있습니다. 이 속성은 **의** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]창을 사용하여 설정하거나 프로그래밍 방식으로 설정할 수 있습니다.  
   
 > [!NOTE]  
->  `TransactionOption` 속성은 컨테이너에서 요청하는 `IsolationLevel` 속성 값의 적용 여부에 영향을 줍니다. 자세한 내용은 참조에 대 한 설명을 `IsolationLevel` 항목에서 속성 [패키지 속성 설정](set-package-properties.md)합니다.  
+>  `TransactionOption` 속성은 컨테이너에서 요청하는 `IsolationLevel` 속성 값의 적용 여부에 영향을 줍니다. 자세한 내용은 참조에 대 한 설명을 합니다 `IsolationLevel` 항목에서 속성 [패키지 속성 설정](set-package-properties.md).  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>트랜잭션을 사용하도록 패키지를 구성하려면  
   

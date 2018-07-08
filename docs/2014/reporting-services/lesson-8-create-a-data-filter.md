@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278839"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
   부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  
@@ -39,17 +39,17 @@ ms.locfileid: "36089247"
   
 1.  자식 보고서를 엽니다.  
   
-2.  테이블 릭 스의 열 머리글 선택 하 고 열 머리글 위에 표시 된 회색 셀을 마우스 오른쪽 단추로 클릭 하 고 클릭 **테이블 릭 스 속성**합니다.  
+2.  테이블 릭 스에서 열 머리글을 선택, 열 머리글 위에 표시 된 회색 셀을 마우스 오른쪽 단추로 클릭 하 고, 클릭 **테이블 릭 스 속성**합니다.  
   
-3.  클릭는 **필터** 페이지를 선택한 다음 클릭 **추가**합니다.  
+3.  클릭 합니다 **필터** 페이지를 선택한 다음 클릭 **추가**합니다.  
   
-4.  에 **식** 필드를 클릭 하 여 `ProductID` 드롭 다운 목록에서 합니다. 이는 필터를 적용할 열입니다.  
+4.  에 **식을** 제출 클릭 `ProductID` 드롭 다운 목록에서. 이는 필터를 적용할 열입니다.  
   
-5.  등호 클릭 (**=**) 연산자에는 **연산자** 드롭 다운 목록입니다.  
+5.  등호를 클릭 합니다. (**=**) 연산자를 **연산자** 드롭 다운 목록.  
   
-6.  옆의 식 단추를 클릭는 **값** 필드 **매개 변수** 에 **범주** 영역에서 마우스 두 번 클릭 `productid` 에  **값** 영역입니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
+6.  옆의 식 단추를 클릭 합니다 **값** 필드를 클릭 **매개 변수** 에 **범주** 영역에서 마우스 두 번 클릭 `productid` 에  **값** 영역입니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
   
-7.  클릭 **확인** 및 **확인** 에서 다시는 **테이블 릭 스 속성** 대화 상자.  
+7.  클릭 **확인** 하 고 **확인** 다시 합니다 **테이블 릭 스 속성** 대화 상자.  
   
 8.  .rdlc 파일을 저장합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36089247"
   
 2.  정수 형식의 `productid` 매개 변수를 허용하고 `datatable` 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  데이터 집합의 인스턴스를 만들고 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
+    1.  데이터 집합의 인스턴스를 만듭니다 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
   
     2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "36089247"
   
 2.  ReportViewer 컨트롤을 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성입니다.**  
   
-3.  에 **속성** 페이지는 **이벤트** 아이콘입니다.  
+3.  에 **속성** 페이지를 클릭 합니다 **이벤트** 아이콘입니다.  
   
-4.  두 번 클릭 하 고 **드릴스루** 이벤트입니다.  
+4.  두 번 클릭 합니다 **드릴스루** 이벤트입니다.  
   
      그러면 코드에 아래 블록과 비슷한 이벤트 처리기 섹션이 추가됩니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36089247"
   
     1.  *DrillthroughEventArgs* 매개 변수에서 자식 보고서 개체 참조를 인출합니다.  
   
-    2.  함수를 호출 `GetPurchaseOrderDetail`  
+    2.  함수를 호출 합니다. `GetPurchaseOrderDetail`  
   
     3.  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36089247"
   
 2.  정수 형식의 `productid` 매개 변수를 허용하고 `datatable` 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  데이터 집합의 인스턴스를 만들고 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
+    1.  데이터 집합의 인스턴스를 만듭니다 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
   
     2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
@@ -222,9 +222,9 @@ ms.locfileid: "36089247"
   
 2.  ReportViewer 컨트롤을 마우스 오른쪽 단추로 누른 **속성**합니다.  
   
-3.  에 **속성** 창에서 클릭 된 **이벤트** 아이콘입니다.  
+3.  에 **속성** 창 클릭 합니다 **이벤트** 아이콘입니다.  
   
-4.  두 번 클릭 하 고 **드릴스루** 이벤트입니다.  
+4.  두 번 클릭 합니다 **드릴스루** 이벤트입니다.  
   
      그러면 코드에 다음과 비슷한 이벤트 처리기 섹션이 추가됩니다.  
   

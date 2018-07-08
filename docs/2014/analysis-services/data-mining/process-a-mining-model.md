@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델을 처리 | Microsoft Docs
+title: 마이닝 모델 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a7d57376025425946998410e5966ffa382cef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 649aa722e67e8cfaf9986c003a965c5aaf564684
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163474"
 ---
 # <a name="process-a-mining-model"></a>마이닝 모델 처리
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 있는 데이터 마이닝 디자이너의 마이닝 모델 탭에서는 마이닝 구조와 연관된 특정 마이닝 모델을 처리하거나 구조와 연관된 모든 모델을 처리할 수 있습니다.  
@@ -42,13 +42,13 @@ ms.locfileid: "36082594"
   
      마이닝 구조를 변경한 경우 모델을 처리하기 전에 구조를 다시 배포할지 묻는 메시지가 표시됩니다. **예**를 클릭합니다.  
   
-3.  에 **마이닝 모델 처리- \<모델 >** 대화 상자를 클릭 **실행**합니다.  
+3.  에 **마이닝 모델 처리- \<모델 >** 대화 상자, 클릭 **실행**합니다.  
   
      **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
   
 4.  모델이 성공적으로 처리되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   
-5.  클릭 **닫기** 에 **마이닝 모델 처리- \<모델 >** 대화 상자.  
+5.  클릭 **닫습니다** 에 **마이닝 모델 처리- \<모델 >** 대화 상자.  
   
  마이닝 구조 및 선택한 마이닝 모델만 처리되었습니다.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36082594"
   
 2.  마이닝 구조를 변경한 경우 모델을 처리하기 전에 구조를 다시 배포할지 묻는 메시지가 표시됩니다. **예**를 클릭합니다.  
   
-3.  에 **마이닝 구조 처리- \<구조 >** 대화 상자를 클릭 **실행**합니다.  
+3.  에 **마이닝 구조 처리- \<구조 >** 대화 상자, 클릭 **실행**합니다.  
   
 4.  **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
   
 5.  모델이 성공적으로 처리되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   
-6.  클릭 **닫기** 에 **처리 \<모델 >** 대화 상자.  
+6.  클릭 **닫습니다** 에 **처리 \<모델 >** 대화 상자.  
   
  마이닝 구조 및 모든 연관된 마이닝 모델이 처리되었습니다.  
   

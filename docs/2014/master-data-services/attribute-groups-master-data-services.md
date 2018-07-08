@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c158f4ac41d4d30cf1d53adc2ad07d10d55900fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c9fc5570be58590622d2638d23a8cfa0c9288205
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277369"
 ---
 # <a name="attribute-groups-master-data-services"></a>특성 그룹(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹은 엔터티의 특성을 구성하는 데 유용합니다. 엔터티에 있는 특성이 여러 개인 경우 특성 그룹을 사용하면 엔터티가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 표시되는 방식이 향상됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36089092"
  특성 그룹은 **의** 시스템 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에서 관리됩니다.  
   
 ## <a name="show-or-hide-attribute-groups"></a>특성 그룹 표시 또는 숨기기  
- 특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다. 그룹을 표시 하는 방법에 대 한 자세한 내용은 참조 [사용자에 게는 특성 그룹 표시 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)합니다.  
+ 특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다. 게 표시할지 그룹에 대 한 자세한 내용은 참조 하세요. [사용자에 게는 특성 그룹 표시 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)합니다.  
   
  그룹 내의 특정 특성을 숨기려면 해당 특성에 **거부** 권한을 할당하면 됩니다. 자세한 내용은 [리프 권한&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md) 또는 [통합 사용 권한&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)을 참조하세요.  
   

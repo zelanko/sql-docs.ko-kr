@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.designer.newplanguide.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 29d7fb37e59b0440051f7115745d5dabc084567a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d43e9e75b58123b1009c247d1435c71e94698fae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079016"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429882"
 ---
 # <a name="create-a-new-plan-guide"></a>새 계획 지침 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 계획 지침을 만들 수 있습니다. 계획 지침은 쿼리 힌트나 정해진 쿼리 계획을 쿼리에 연결하여 쿼리 최적화에 영향을 미칩니다. 계획 지침에서 최적화하려는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 쿼리 최적화 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 비교하여 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "36079016"
   
      [보안](#Security)  
   
--   **사용 하 여 계획 지침을 만들려면:**  
+-   **사용 하 여 계획 지침을 만들려면**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36079016"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. 매개 변수 값을 제공 하는 경우 `sp_create_plan_guide`, 이름은 명시적으로 지정 해야 하는 모든 매개 변수 또는 전혀 나타나지 않습니다. 예를 들어 `@name =`을 지정한 경우 `@stmt =`, `@type =` 등도 지정해야 합니다. 마찬가지로, 경우 `@name =` 을 생략만 매개 변수 값을 제공 하 고 나머지 매개 변수 이름도 생략 해야, 해당 값만 제공 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
+-   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. 매개 변수 값을 제공 하는 경우 `sp_create_plan_guide`, 이름을 명시적으로 지정 해야 하는 모든 매개 변수 또는 전혀 나타나지 않습니다. 예를 들어 `@name =`을 지정한 경우 `@stmt =`, `@type =` 등도 지정해야 합니다. 마찬가지로, 경우 `@name =` 을 생략 하 고 유일한 매개 변수 값을 제공한 경우 나머지 매개 변수 이름도 생략 해야, 하 고 해당 값만 제공 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
 -   같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
   

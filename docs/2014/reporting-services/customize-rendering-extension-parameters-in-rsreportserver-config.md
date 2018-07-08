@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150244"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
   RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 보고서의 기본 보고서 렌더링 동작을 재정의할 수 있습니다. 다음과 같은 목적으로 렌더링 확장 프로그램 매개 변수를 수정할 수 있습니다.  
@@ -51,9 +51,9 @@ ms.locfileid: "36088798"
  이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
 ## <a name="changing-the-display-name"></a>표시 이름 변경  
- 렌더링 확장 프로그램의 표시 이름은 보고서 도구 모음의 내보내기 목록에 나타납니다. 기본 표시 이름의 예로는 웹 보관 파일, TIFF 파일 및 Acrobat(PDF) 파일이 있습니다. 지정 하 여 기본 표시 이름을 사용자 지정 값으로 바꿀 수 있습니다는 `OverrideNames` 구성 파일의 요소입니다. 또한 단일 렌더링 확장 프로그램의 인스턴스를 두 개 정의하는 경우 `OverrideNames` 요소를 사용하여 내보내기 목록의 각 인스턴스를 구별할 수 있습니다.  
+ 렌더링 확장 프로그램의 표시 이름은 보고서 도구 모음의 내보내기 목록에 나타납니다. 기본 표시 이름의 예로는 웹 보관 파일, TIFF 파일 및 Acrobat(PDF) 파일이 있습니다. 지정 하 여 사용자 지정 값을 사용 하 여 기본 표시 이름을 바꿀 수 있습니다는 `OverrideNames` 구성 파일에는 요소입니다. 또한 단일 렌더링 확장 프로그램의 인스턴스를 두 개 정의하는 경우 `OverrideNames` 요소를 사용하여 내보내기 목록의 각 인스턴스를 구별할 수 있습니다.  
   
- 표시 이름은 지역화 되므로 설정 해야는 `Language` 기본 표시 이름을 사용자 지정 값으로 교체 하는 경우 특성입니다. 그렇지 않으면 사용자가 지정한 이름이 모두 무시됩니다. 설정하는 언어 값은 보고서 서버 컴퓨터에 유효한 값이어야 합니다. 예를 들어 보고서 서버가 프랑스어 운영 체제에서 실행되고 있으면 "fr-FR"을 특성 값으로 지정해야 합니다.  
+ 표시 이름은 지역화 되므로 설정 해야 합니다는 `Language` 특성 사용자 지정 값을 사용 하 여 기본 표시 이름을 대체 하는 경우. 그렇지 않으면 사용자가 지정한 이름이 모두 무시됩니다. 설정하는 언어 값은 보고서 서버 컴퓨터에 유효한 값이어야 합니다. 예를 들어 보고서 서버가 프랑스어 운영 체제에서 실행되고 있으면 "fr-FR"을 특성 값으로 지정해야 합니다.  
   
  다음 예에서는 영어 버전 보고서 서버에 사용자 지정 이름을 제공하는 방법을 보여 줍니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36088798"
 ```  
   
 ## <a name="changing-device-information-settings"></a>장치 정보 설정 변경  
- 보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 장치 정보 설정을 수정하려면 `DeviceInfo` XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 장치 정보 설정을 지원합니다. 장치 정보 설정의 전체 목록을 보려면 참조 [장치 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)합니다.  
+ 보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 장치 정보 설정을 수정하려면 `DeviceInfo` XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 장치 정보 설정을 지원합니다. 장치 정보 설정의 전체 목록을 보려면를 참조 하세요 [장치 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)합니다.  
   
  다음 예에서는 이미지 렌더링 확장 프로그램의 기본 설정을 수정하는 XML 구조와 구문을 보여 줍니다.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "36088798"
   
 -   확장 프로그램에 고유 이름을 지정합니다.  
   
-     각 인스턴스에 고유한 값에 대 한 있어야는 `Name` 특성입니다. 다음 예에서는 "IMAGE (EMF Landscape)" 및 "IMAGE (EMF Portrait)"라는 이름을 사용하여 두 인스턴스를 구별합니다.  
+     각 인스턴스에 대해 고유한 값을 있어야 합니다.는 `Name` 특성입니다. 다음 예에서는 "IMAGE (EMF Landscape)" 및 "IMAGE (EMF Portrait)"라는 이름을 사용하여 두 인스턴스를 구별합니다.  
   
      이미 배포된 렌더링 확장 프로그램의 이름을 변경하는 경우에는 주의하십시오. 프로그래밍 방식으로 렌더링 확장 프로그램을 지정하는 개발자는 이 확장 프로그램 이름을 사용하여 특정 렌더링 작업에 사용할 인스턴스를 식별합니다. 보고서 서버에서 사용자 지정 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 응용 프로그램을 실행하고 있는 경우 개발자는 사용자가 기존 확장 프로그램 이름을 수정하거나 새 확장 프로그램 이름을 추가할 경우 이를 알고 있어야 합니다.  
   
 -   사용자가 각 출력 형식의 차이를 이해할 수 있도록 고유한 표시 이름을 지정합니다.  
   
-     같은 확장 프로그램의 여러 버전을 구성 하는 경우 이름을 지정할 수 있습니다 각 버전에 고유한 값을 제공 하 여 `OverrideNames`합니다. 그렇지 않으면 확장 프로그램의 모든 버전이 보고서 도구 모음의 내보내기 옵션 목록에 같은 이름으로 나타납니다.  
+     같은 확장 프로그램의 여러 버전을 구성 하는 경우 이름을 지정할 수 있습니다 각 버전을 고유한 값을 제공 하 여 `OverrideNames`입니다. 그렇지 않으면 확장 프로그램의 모든 버전이 보고서 도구 모음의 내보내기 옵션 목록에 같은 이름으로 나타납니다.  
   
  다음 예에서는 TIFF 출력을 생성하는 기본 이미지 렌더링 확장 프로그램을 사용하여 보고서를 세로 모드에서 EMF를 출력하고 동시에 두 번째 인스턴스에서는 가로 모드에서 EMF로 출력하는 방법을 보여 줍니다. 각 확장 프로그램 이름은 고유합니다. 이 예를 테스트하려면 표시/숨기기 옵션, 행렬 또는 드릴스루 링크와 같은 대화형 기능이 포함되지 않은 보고서를 선택하십시오. 대화형 기능은 이미지 렌더링 확장 프로그램에서 작동하지 않습니다.  
   

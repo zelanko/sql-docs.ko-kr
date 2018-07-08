@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1fae76d5f4c4dc1e3fbd64ca456af60719de4aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259169"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 요소(XMLA)
-  부모에 의해 정의 된 개체를 만들 부모 개체의 식별자가 포함 된 [만들기](../xml-elements-commands/create-element-xmla.md) 요소입니다.  
+  부모에 의해 정의 된 개체를 만들 부모 개체의 식별자를 포함 [만들기](../xml-elements-commands/create-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36089154"
  식별자가 나타나는 순서는 중요하지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `Market Basket` 에 포함 되는 마이닝 구조는 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
+ 다음 예제에서는 합니다 `Market Basket` 마이닝 구조를 포함 합니다 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

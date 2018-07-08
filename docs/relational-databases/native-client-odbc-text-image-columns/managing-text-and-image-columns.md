@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,20 +24,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0768825a8c73b5da5325c15b1f04231ffe544e12
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: f17ef47c7d6653f6389ace37d2a4f3f39f006b76
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697704"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432562"
 ---
 # <a name="managing-text-and-image-columns"></a>text 및 image 열 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **텍스트**, **ntext**, 및 **이미지** (긴 데이터 라고도 함) 데이터는 문자 또는 이진 문자열 데이터 형식에 맞게 너무 커서 데이터 값을 보유할 수 있는 **char**, **varchar**, **이진**, 또는 **varbinary** 열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **텍스트** 데이터 형식은 ODBC SQL_LONGVARCHAR 데이터 형식입니다. **ntext** SQL_WLONGVARCHAR에 및 **이미지** sql_longvarbinary에 각각 매핑됩니다. 긴 문서나 큰 비트맵과 같은 일부 데이터 항목은 너무 커서 메모리에 저장하지 못할 수 있습니다. Long 데이터를 검색할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 순차적 부분에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 응용 프로그램을 호출할 수 있도록 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)합니다. 순차적 부분에 대 한 long 데이터를 보내려고 하면 응용 프로그램이 호출할 수 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)합니다. 실행 단계에서 데이터가 전송되는 매개 변수를 실행 시 데이터 매개 변수라고 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **텍스트**하십시오 **ntext**, 및 **이미지** (긴 데이터 라고도 함) 데이터는 문자 또는 이진 문자열 데이터 형식에 맞게 너무 큰 데이터 값을 보유할 수 있는 **char**하십시오 **varchar**, **이진**, 또는 **varbinary** 열입니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **텍스트** 데이터 형식은 ODBC SQL_LONGVARCHAR 데이터 형식으로 매핑됩니다 **ntext** sql_wlongvarchar 및 **이미지** sql_longvarbinary에 각각 매핑됩니다. 긴 문서나 큰 비트맵과 같은 일부 데이터 항목은 너무 커서 메모리에 저장하지 못할 수 있습니다. 긴 데이터를 검색할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 순차적 부분에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용 하면 호출 응용 프로그램 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)합니다. 순차적 부분에 긴 데이터를 보내는 응용 프로그램이 호출할 수 있습니다 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)합니다. 실행 단계에서 데이터가 전송되는 매개 변수를 실행 시 데이터 매개 변수라고 합니다.  
   
- 응용 프로그램이 실제로 쓰기 또는 모든 종류의 데이터 (긴 데이터)와 함께 검색할 **SQLPutData** 또는 **SQLGetData**유일한 하지만, **문자** 및  **이진** 데이터를 전송 하거나 부분에서 검색할 수 있습니다. 그러나 데이터를 단일 버퍼로 수 있을 정도로 작고 경우 없기 일반적으로 사용할 이유가 없습니다 **SQLPutData** 또는 **SQLGetData**합니다. 단일 버퍼를 매개 변수 또는 열에 바인딩하는 것이 훨씬 쉽습니다.  
+ 응용 프로그램이 실제로 쓰기 또는 모든 종류의 데이터 (시간 동안만 데이터)를 사용 하 여 검색 **SQLPutData** 또는 **SQLGetData**이지만 유일한 **문자** 고  **이진** 데이터를 전송 하거나 부분에서 검색할 수 있습니다. 그러나 데이터를 단일 버퍼로 수 있을 정도로 작고 경우 일반적으로 사용 하는 이유 **SQLPutData** 하거나 **SQLGetData**합니다. 단일 버퍼를 매개 변수 또는 열에 바인딩하는 것이 훨씬 쉽습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

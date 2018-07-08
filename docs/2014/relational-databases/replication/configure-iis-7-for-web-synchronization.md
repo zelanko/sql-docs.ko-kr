@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158284"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
   이 항목의 절차에서는 병합 복제를 위한 웹 동기화에서 사용할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS(인터넷 정보 서비스) 버전 7 이상을 수동으로 구성하는 프로세스를 안내합니다. 
@@ -58,7 +58,7 @@ ms.locfileid: "36088147"
   
 4.  replisapi.dll을 등록합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 `cmd`, 클릭 하 고 **확인**합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 합니다 `cmd`를 클릭 하 고 **확인**합니다.  
   
     2.  1단계에서 만든 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "36088147"
   
     3.  **동작** 창에서 **모듈 매핑 추가**를 클릭합니다.  
   
-    4.  에 대 한 **요청** 경로 입력 `replisapi.dll`합니다.  
+    4.  에 대 한 **요청할** 경로 입력 `replisapi.dll`합니다.  
   
     5.  **모듈** 드롭다운 목록에서 **IsapiModule**을 선택합니다.  
   
     6.  **실행 파일**에서 **\<드라이브>:\Inetpub\SQLReplication\replisapi.dll**을 입력합니다.  
   
-    7.  에 대 한 **이름**, 입력 `Replisapi`합니다.  
+    7.  에 대 한 **이름을**, 입력 `Replisapi`합니다.  
   
     8.  **요청 제한** 단추를 클릭하고 **액세스** 탭을 클릭한 다음 **실행**을 클릭합니다.  
   

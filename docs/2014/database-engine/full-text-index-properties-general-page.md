@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149934"
 ---
 # <a name="full-text-index-properties-general-page"></a>전체 텍스트 인덱스 속성(일반 페이지)
   **전체 텍스트 인덱스의 수정 가능한 속성 보기 또는 변경 하려면**  
@@ -69,7 +68,7 @@ ms.locfileid: "36088271"
  전체 텍스트 인덱스가 속하는 파일 그룹입니다.  
   
  **전체 텍스트 인덱스 중지 목록**  
- 전체 텍스트 인덱스에 현재 연결되어 있는 중지 목록입니다. 중지 목록은 목록이 [중지 단어](../relational-databases/search/full-text-search.md)합니다. 전체 텍스트 인덱스에 연결된 중지 목록이 있으면 해당 인덱스에 대한 전체 텍스트 쿼리에 중지 목록이 적용됩니다. 선택 하 여 인덱스에서 중지 목록에서를 제거할 수 있습니다  **\<OFF >** 목록에서 하거나 다른 중지 목록을;를 선택할 수 있습니다  **\<시스템 >** 시스템 중지 목록을 나타냅니다.  
+ 전체 텍스트 인덱스에 현재 연결되어 있는 중지 목록입니다. 중지 목록은 [중지 단어](../relational-databases/search/full-text-search.md)합니다. 전체 텍스트 인덱스에 연결된 중지 목록이 있으면 해당 인덱스에 대한 전체 텍스트 쿼리에 중지 목록이 적용됩니다. 선택 하 여 중지 목록을 인덱스에서 제거할 수 있습니다  **\<OFF >** 목록에서 다른 중지 목록을;을 선택할 수 있습니다  **\<시스템 >** 시스템 중지 목록을 나타냅니다.  
   
  **중지 목록을 만들려면**  
   
@@ -78,7 +77,7 @@ ms.locfileid: "36088271"
  **검색 속성 목록**  
  현재 전체 텍스트 인덱스와 연결된 검색 속성 목록입니다. 검색 속성 목록은 연결된 전체 텍스트 인덱스가 채워질 때 해당 인덱스에 포함되는 문서 속성 집합을 지정합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
- **\<Off >** 인덱스와 연결 된 검색 속성 목록이 없음을 현재 임을 나타냅니다. 선택 하 여 현재 검색 속성 목록을 인덱스에서 제거할 수 있습니다  **\<오프 >** 목록에서 하거나 목록에서 다른 검색 속성 목록을 선택할 수 있습니다. 현재 데이터베이스의 검색 속성 목록만 여기에 나열됩니다.  
+ **\<해제 >** 인덱스에 연결 된 검색 속성 목록이 없음을 현재 임을 나타냅니다. 선택 하 여 현재 검색 속성 목록을 인덱스에서 제거할 수 있습니다  **\<해제 >** 목록에서 하거나 목록에서 다른 검색 속성 목록을 선택할 수 있습니다. 현재 데이터베이스의 검색 속성 목록만 여기에 나열됩니다.  
   
 > [!NOTE]  
 >  지정한 검색 속성 목록을 같은 데이터베이스에 있는 둘 이상의 전체 텍스트 인덱스와 연결할 수 있습니다.  
@@ -90,7 +89,7 @@ ms.locfileid: "36088271"
  **테이블 전체 텍스트 항목 수**  
  전체 텍스트 인덱싱 작업이 성공적으로 완료된 행의 수를 나타냅니다.  
   
- 이 속성에 해당 하는 `TableFulltextItemCount` OBJECTPROPERTYEX에서 반환 된 속성 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수입니다.  
+ 이 속성에 해당 합니다 `TableFulltextItemCount` 속성에서 반환 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수입니다.  
   
  **테이블 전체 텍스트 문서 처리**  
  전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수를 표시합니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다. 삭제된 행은 계산되지 않습니다.  
@@ -137,13 +136,13 @@ ms.locfileid: "36088271"
 |**수동**|기본 데이터가 변경될 때 전체 텍스트 인덱스가 자동으로 업데이트되지 않습니다. 그러나 기본 데이터의 변경 내용은 그대로 유지되므로 SQL Server 에이전트를 사용하여 일정에 따라 또는 수동으로 그러한 변경 내용을 전체 텍스트 인덱스로 전파할 수 있습니다.|  
 |**자동**|기본 테이블의 데이터가 변경되면 전체 텍스트 인덱스가 자동으로 업데이트됩니다.|  
   
- **인덱스를 다시 채워야 합니다.**  
+ **인덱스 다시 채우기**  
  대화 상자를 닫을 때 전체 텍스트 인덱스 채우기를 시작하려면 클릭합니다. 다음 채우기 유형 중 하나를 선택합니다.  
   
 |||  
 |-|-|  
 |**전체**|테이블에 대해 전체 채우기를 수행하는 동안 모든 행에 대해 인덱스 항목이 작성됩니다.|  
-|**증분**|증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 열이 기본 테이블에 포함 되어 있어야 증분 채우기를 수행는 `timestamp` 데이터 형식입니다.|  
+|**증분**|증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 기본 테이블의 열이 포함 되어 있어야 증분 채우기를 수행 합니다 `timestamp` 데이터 형식입니다.|  
 |**Update**|기본 테이블의 데이터가 수정될 때마다 전체 텍스트 인덱스가 업데이트됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  

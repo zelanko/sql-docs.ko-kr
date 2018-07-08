@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b4861234af092f5acd9dc500e52737a446d5dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183950"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>보고서에 코드 추가(SSRS)
   모든 식에서 고유한 사용자 지정 코드를 호출할 수 있습니다. 다음과 같은 두 가지 방법으로 코드를 제공할 수 있습니다.  
   
 -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성된 코드를 보고서에 직접 포함합니다. 코드가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 또는 <xref:System.Math> 가 아닌 <xref:System.Convert>를 참조하는 경우 보고서에 해당 참조를 추가해야 합니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요. 코드에서 만들 수 있는 기타 참조에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 제공합니다. 사용자 지정 어셈블리를 제공하는 경우 보고서를 작성하는 컴퓨터와 보고서를 보는 보고서 서버 모두에 해당 어셈블리를 설치해야 합니다. 자세한 내용은 참조 [Custom Assemblies with Reports 사용 하 여](../custom-assemblies/using-custom-assemblies-with-reports.md)합니다.  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 제공합니다. 사용자 지정 어셈블리를 제공하는 경우 보고서를 작성하는 컴퓨터와 보고서를 보는 보고서 서버 모두에 해당 어셈블리를 설치해야 합니다. 자세한 내용은 [Custom Assemblies with Reports 사용 하 여](../custom-assemblies/using-custom-assemblies-with-reports.md)입니다.  
   
 ### <a name="to-add-embedded-code-to-a-report"></a>보고서에 포함 코드를 추가하려면  
   

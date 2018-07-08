@@ -1,5 +1,5 @@
 ---
-title: 보고서 뷰어의 로컬 모드와 (SharePoint 모드의 Reporting Services) 보고서 뷰어에서 연결 모드 | Microsoft Docs
+title: 보고서 뷰어의 로컬 모드와 연결 모드 보고서를 보고서 뷰어 (SharePoint 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b971bd46283911b81449565e5ad9410912ed456a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157804"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>보고서 뷰어의 로컬 모드와 연결 모드 보고서 비교(SharePoint 모드의 Reporting Services)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서는 *로컬 모드* 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 사용하는 *연결된 모드*로 구성할 수 있습니다. 데이터 확장 프로그램에서 로컬 모드 보고를 지원하는 경우 이제 보고서 뷰어를 사용하여 SharePoint에서 직접 보고서를 렌더링할 수 있습니다. 이 방법을 *로컬 모드*라고 합니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 팜에에 연결 해야 하는 데 필요 했던는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버 모드로 구성 된 SharePoint 보고서 뷰어 컨트롤로 보고서를 렌더링 합니다. 이 방법을 *원격 모드* 또는 *연결된 모드*라고 합니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서는 *로컬 모드* 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 사용하는 *연결된 모드*로 구성할 수 있습니다. 데이터 확장 프로그램에서 로컬 모드 보고를 지원하는 경우 이제 보고서 뷰어를 사용하여 SharePoint에서 직접 보고서를 렌더링할 수 있습니다. 이 방법을 *로컬 모드*라고 합니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], SharePoint 팜에 연결할 수 있어야 했습니다는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버 모드로 구성 된 SharePoint 보고서 뷰어 컨트롤로 보고서를 렌더링 합니다. 이 방법을 *원격 모드* 또는 *연결된 모드*라고 합니다.  
   
- *로컬 모드* 는 없는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버. 설치 해야는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 아니지만 SharePoint 제품 용 추가 기능에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 필요 합니다. 로컬 모드에서는 사용자가 보고서를 볼 수 있지만 구독, 데이터 경고 등과 같은 서버 쪽 기능에 액세스할 수 없습니다.  
+ *로컬 모드* 방법이 없는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버. 설치 해야 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 이지만 SharePoint 제품 용 추가 기능에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 필요 합니다. 로컬 모드에서는 사용자가 보고서를 볼 수 있지만 구독, 데이터 경고 등과 같은 서버 쪽 기능에 액세스할 수 없습니다.  
   
 ||  
 |-|  
@@ -39,15 +39,15 @@ ms.locfileid: "36091906"
 -   [SharePoint 2010에서 로컬 모드 보고 구성](#bkmk_local_mode_sharepoint2010)  
   
 ##  <a name="bkmk_local_vs_connected"></a> 로컬 모드 및 연결된 모드, 지원되는 확장 프로그램  
- **로컬 모드:** 로컬 모드를 지원하는 데이터 확장 프로그램이 있는 경우 보고서 뷰어가 SharePoint의 보고서를 바로 렌더링합니다. *로컬 모드* 는 없는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버. 설치 해야는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 아니지만 SharePoint 제품 용 추가 기능에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 필요 합니다. 로컬 모드에서는 사용자가 보고서를 볼 수 있지만 구독, 데이터 경고 등과 같은 서버 쪽 기능에 액세스할 수 **없습니다.**  
+ **로컬 모드:** 로컬 모드를 지원하는 데이터 확장 프로그램이 있는 경우 보고서 뷰어가 SharePoint의 보고서를 바로 렌더링합니다. *로컬 모드* 방법이 없는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버. 설치 해야 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 이지만 SharePoint 제품 용 추가 기능에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 필요 합니다. 로컬 모드에서는 사용자가 보고서를 볼 수 있지만 구독, 데이터 경고 등과 같은 서버 쪽 기능에 액세스할 수 **없습니다.**  
   
- **연결 된 모드**라고도 *원격 모드* 필요는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 팜에 연결 된 보고서 뷰어 컨트롤로 보고서를 렌더링 하는 SharePoint 모드의 보고서 서버.  
+ **연결 된 모드**라고도 *원격 모드* 필요를 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에서는 보고서 뷰어 컨트롤로 보고서를 렌더링 하려면 SharePoint 팜에 연결 된 보고서 서버...  
   
  아래에는 로컬 모드 보고를 지원하는 데이터 처리 확장 프로그램이 나열되어 있습니다.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 2010 보고서 확장 프로그램입니다. Access Services에 대한 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)를 참조하세요.  
   
--   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램. SharePoint 목록 데이터 확장 프로그램에 대 한 자세한 내용은 참조 하십시오. [Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+-   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램. SharePoint 목록 데이터 확장 프로그램에 대 한 자세한 내용은 참조 하세요. [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
  로컬 모드를 지원하는 사용자 지정 데이터 처리 확장 프로그램을 개발할 수도 있습니다. 자세한 내용은 [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하세요.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36091906"
  자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) 및 [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx)를 참조하세요.  
   
 ## <a name="connected-mode"></a>연결된 모드  
- ADS 확장 프로그램을 사용 하 여 대 한 최신 정보에 대 한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 연결 된 모드 참조 [SharePoint 사이트에서 서비스 보고서 액세스의에서 오류를 표시 데이터 확장 프로그램 'a d S'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)합니다.  
+ 사용 하 여 ADS 확장 프로그램을 사용 하 여 최신 정보에 대 한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 연결 된 모드 참조 [SharePoint 사이트에서 서비스 보고서 액세스 오류가 표시 데이터에서 확장 프로그램 'a D s](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

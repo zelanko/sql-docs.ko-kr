@@ -1,5 +1,5 @@
 ---
-title: 특성을 요소 (XMLA) | Microsoft Docs
+title: Attribute 요소 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bad3c0949f4c6c241a81bf4a8b90834aadfdfdf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f064935032298e037938734fa5d3d1ac9fcbae84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161084"
 ---
 # <a name="attributes-element-xmla"></a>Attributes 요소(XMLA)
   부모 [Insert](attribute-element-xmla.md) 또는 [Update](../xml-elements-commands/insert-element-xmla.md) 명령이나 부모 [Where](../xml-elements-commands/update-element-xmla.md) 요소에서 사용되는 [Attribute](where-element-xmla.md) 요소 컬렉션을 포함합니다.  

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8651 (Database Engine error)
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 14ab756575298042c19a7d53ace5c41055392836
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 27884929430abbfd63d365ca0a76f2184314b30f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079752"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431222"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
     
@@ -77,9 +76,9 @@ ms.locfileid: "36079752"
  문제가 지속되면 추가적인 조사를 수행하고 작업을 줄여야 할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [DBCC FREESYSTEMCACHE &#40;Transact SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
- [DBCC FREESESSIONCACHE &#40;Transact SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
- [DBCC FREEPROCCACHE &#40;Transact SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
+ [DBCC freesystemcache는 다음 &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
+ [DBCC FREESESSIONCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
+ [DBCC FREEPROCCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SQL Server, Buffer Manager 개체](../performance-monitor/sql-server-buffer-manager-object.md)   
  [SQL Server, Memory Manager 개체](../performance-monitor/sql-server-memory-manager-object.md)  

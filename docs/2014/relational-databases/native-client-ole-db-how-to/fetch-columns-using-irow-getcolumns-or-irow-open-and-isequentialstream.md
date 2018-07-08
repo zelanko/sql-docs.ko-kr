@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67c7206bb030f1e0e2390013657f97eeb8278aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c4fef8e98871fe65e8f885e878d124468321ba9a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081813"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420752"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
   대형 데이터는 `ISequentialStream` 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
@@ -42,9 +40,9 @@ ms.locfileid: "36081813"
   
     -   `IRow::Open()`은 행에 대해 `ISequentialStream`을 여는 데 사용할 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음 `IStream` 또는 `ISequentialStream`을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
-    -   경우 `IRow::GetColumns()` 사용 되는 **pData** DBCOLUMNACCESS 구조의 요소는 스트림 개체를 가리키도록 설정 합니다.  
+    -   하는 경우 `IRow::GetColumns()` 를 사용 합니다 **pData** DBCOLUMNACCESS 구조의 요소는 스트림 개체를 가리키도록 설정 됩니다.  
   
-4.  사용 하 여 **ISequentialStream::Read()** 반복 해 서 지정 된 바이트 수를 소비자 버퍼로 읽어오기 합니다.  
+4.  사용 하 여 **ISequentialStream::Read()** 반복 하 여 소비자 버퍼에 지정 된 바이트 수를 읽습니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 IRow를 사용하여 단일 행을 인출하는 방법을 보여 줍니다. 이 예에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예에서는 IRow::GetColumns()와 IRow::Open()을 사용하는 방법을 보여 줍니다. 이 예에서는 ISequentialStream::Read를 사용하여 열 데이터를 읽습니다.  
@@ -53,7 +51,7 @@ ms.locfileid: "36081813"
   
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 만듭니다.  
   
- Ole32.lib oleaut32.lib를 컴파일하고 두 번째 (c + +) 코드 목록을 실행 합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을에서 변경 "L"(local)를\\\name ", 여기서 name은 명명 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
+ Ole32.lib oleaut32.lib를 사용 하 여 컴파일하고 두 번째 (c + +) 코드 목록을 실행 합니다. 이 응용 프로그램은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명 된 인스턴스에 연결할 연결 문자열을 변경 L"(local)에서" L"(local)를\\\name", 여기서 name은 명명된 된 인스턴스. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
  세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 테이블을 삭제합니다.  
   

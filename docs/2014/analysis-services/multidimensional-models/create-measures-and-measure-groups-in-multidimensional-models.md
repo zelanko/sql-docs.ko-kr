@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 767f85b5fb777dbb7c64301b79041cda3654f000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153494"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>다차원 모델의 측정값 및 측정값 그룹 만들기
   *측정값* 은 합계, 개수, 최소값, 최대값, 평균 또는 사용자가 만드는 사용자 지정 MDX 식과 같은 숫자 데이터 값의 집계입니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.  
@@ -72,7 +72,8 @@ ms.locfileid: "36088481"
   
 -   측정값 열은 측정값 그룹에 포함된 측정값을 정의합니다.  
   
- 큐브 마법사를 실행하면 외래 키가 필터링되어 제외됩니다. 선택할 수 있는 나머지 열 목록에 측정값 열과 외래 키로 식별되지 않은 특성 열이 표시됩니다. **FactSalesQuote** 예에서 마법사는 **SalesAmountQuota** 외에도 **CalendarYear** 및 **CalendarQuarter**를 제공합니다. **SalesAmountQuota** 측정값 열에서만 다차원 모델에 대한 작업 가능한 측정값이 발생합니다. 다른 날짜 기반 열은 각 할당액을 정규화하기 위해 존재합니다. 다른 **CalendarYear** 및 **CalendarQuarter**열은 큐브 마법사의 측정값 목록에서 제외하거나 나중에 디자이너의 측정값 그룹에서 제거해야 합니다.  
+ 큐브 마법사를 실행하면 외래 키가 필터링되어 제외됩니다. 선택할 수 있는 나머지 열 목록에 측정값 열과 외래 키로 식별되지 않은 특성 열이 표시됩니다. 
+  **FactSalesQuote** 예에서 마법사는 **SalesAmountQuota** 외에도 **CalendarYear** 및 **CalendarQuarter**를 제공합니다. **SalesAmountQuota** 측정값 열에서만 다차원 모델에 대한 작업 가능한 측정값이 발생합니다. 다른 날짜 기반 열은 각 할당액을 정규화하기 위해 존재합니다. 다른 **CalendarYear** 및 **CalendarQuarter**열은 큐브 마법사의 측정값 목록에서 제외하거나 나중에 디자이너의 측정값 그룹에서 제거해야 합니다.  
   
  이 설명에서 알아야 할 사항은 마법사가 제공하는 모든 열이 측정값으로 유용한 것은 아니라는 점입니다. 데이터와 측정값으로 사용할 열을 결정할 때 이러한 데이터가 어떻게 사용되는지에 대한 이해 내용을 바탕으로 하세요. 데이터 원본 뷰에서 테이블을 마우스 오른쪽 단추로 클릭하여 데이터를 탐색할 수 있으며, 이렇게 하면 측정값으로 사용할 열을 식별하는 데 도움이 될 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 데이터 탐색&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)을 참조하세요.  
   

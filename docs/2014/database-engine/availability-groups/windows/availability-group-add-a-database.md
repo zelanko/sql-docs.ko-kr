@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: bc2983b39dab96a1c2fe05f16b3e43bf6a0ae950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a7a3462cb59bd895433d5ea6b66f0b14099446ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161054"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>가용성 그룹에 데이터베이스 추가(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 데이터베이스를 추가하는 방법에 대해 설명합니다.  
@@ -103,7 +102,7 @@ ms.locfileid: "36082757"
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  사용 하 여 `Add-SqlAvailabilityDatabase` cmdlet.  
+2.  사용 된 `Add-SqlAvailabilityDatabase` cmdlet.  
   
      예를 들어 다음 명령은 보조 데이터베이스 `MyDd` 을(를) `MyAG` 가용성 그룹에 추가합니다. 이 가용성 그룹의 주 복제본은 `PrimaryServer\InstanceName`에 의해 호스트됩니다.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36082757"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 3.  가용성 그룹에 데이터베이스를 추가한 후에는 보조 복제본을 호스팅하는 각 서버 인스턴스에서 해당 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [AlwaysOn 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "36082757"
 ###  <a name="PSExample"></a> 예제(PowerShell)  
  다음 예는 가용성 그룹의 주 복제본을 호스팅하는 서버 인스턴스에 있는 데이터베이스에서 보조 데이터베이스를 준비하고, 이 데이터베이스를 가용성 그룹에 주 데이터베이스로 추가한 다음, 보조 데이터베이스를 가용성 그룹에 조인하는 전체 과정을 보여 줍니다. 가장 먼저, 이 예에서는 데이터베이스와 해당 트랜잭션 로그를 백업합니다. 그런 다음 보조 복제본을 호스팅하는 서버 인스턴스로 데이터베이스 및 로그 백업을 복원합니다.  
   
- 예제에서는 호출 `Add-SqlAvailabilityDatabase` 두 번: 가용성 그룹에 데이터베이스를 추가 하려면 주 복제본에서 먼저 및 보조 복제본이 가용성 그룹에 해당 복제본에서 보조 데이터베이스를 조인 합니다. 보조 복제본이 두 개 이상인 경우 각 보조 복제본에서 보조 데이터베이스를 복원 및 조인합니다.  
+ 예제에서는 `Add-SqlAvailabilityDatabase` 두 번: 가용성 그룹에 데이터베이스를 추가 하려면 주 복제본에 대해 가장 먼저 한 다음 해당 가용성 그룹 복제본에서 보조 데이터베이스를 조인 하려면 보조 복제본에서. 보조 복제본이 두 개 이상인 경우 각 보조 복제본에서 보조 데이터베이스를 복원 및 조인합니다.  
   
 ```  
 $DatabaseBackupFile = "\\share\backups\MyDatabase.bak"  

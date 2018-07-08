@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1651289fc00fecceb5a1e5a6bdc2bfd992be166e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 040069e373761d6d3ad78ea26bea5f8e538c33ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229363"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
   플랫 파일 원본은 텍스트 파일에서 데이터를 읽습니다. 텍스트 파일은 구분 기호로 분리됨, 고정 폭 또는 혼합 형식 중 하나일 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36088257"
   
  플랫 파일 원본 출력의 출력 열에는 FastParse 속성이 포함됩니다. FastParse는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용할지 또는 로캘을 구분하는 표준 구문 분석 루틴을 사용할지를 나타냅니다. 자세한 내용은 [Fast Parse](../fast-parse.md) 및 [Standard Parse](../standard-parse.md)를 참조하세요.  
   
- 또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat 설정은 `false`합니다. 이진 형식을 사용 하려는 경우 설정 UseBinaryFormat `true` 출력 열에는 데이터 형식 및 `DT_BYTES`합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 `DT_BYTES` 데이터를 다른 데이터 형식에 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. 데이터 형식에 대 한 자세한 내용은 캐스팅할 수에 대 한 `DT_BYTES` 을 참조 하십시오 [캐스트 &#40;SSIS 식&#41;](../expressions/cast-ssis-expression.md)합니다.  
+ 또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat은 설정 `false`합니다. 이진 형식을 사용 하려는 경우로 UseBinaryFormat `true` 출력 열에는 데이터 형식 `DT_BYTES`합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 `DT_BYTES` 데이터를 다른 데이터 형식에 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. 데이터 형식에 대 한 자세한 내용은 캐스팅할 수에 대 한 `DT_BYTES` 참조 하세요 [Cast &#40;식&#41;](../expressions/cast-ssis-expression.md)합니다.  
   
  이 원본은 플랫 파일 연결 관리자를 사용하여 텍스트 파일에 액세스합니다. 플랫 파일 연결 관리자의 속성을 설정하여 파일과 해당 파일의 각 열에 대한 정보를 제공하고 플랫 파일에서 텍스트 파일의 데이터를 처리하는 방법을 지정할 수 있습니다. 예를 들어 파일의 열과 행을 구분하는 문자와 각 열의 데이터 형식 및 길이를 지정할 수 있습니다. 자세한 내용은 [Flat File Connection Manager](../connection-manager/file-connection-manager.md)을 참조하세요.  
   

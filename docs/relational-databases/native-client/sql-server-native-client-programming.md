@@ -3,11 +3,10 @@ title: SQL Server Native Client 프로그래밍 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLNCLI
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7574f58ead9dc10afaf2cf6a9dc65c48a8c24f4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ec5afb149a2996deb33d3813ea627b73e2c95273
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706881"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429192"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 프로그래밍
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +36,11 @@ ms.locfileid: "34706881"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기술로, OLE DB 및 ODBC 모두에서 사용되는 독립 실행형 데이터 액세스 API(응용 프로그래밍 인터페이스)입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 SQL OLE DB 공급자와 SQL ODBC 드라이버가 하나의 네이티브 DLL(동적 연결 라이브러리)로 결합되어 있습니다. 또한 Windows Data Access Components(Windows DAC, 이전의 Microsoft Data Access Components 또는 MDAC)에서 제공하는 것보다 뛰어난 새로운 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 MARS(Multiple Active Result Sets), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리, XML 데이터 형식 지원 등 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기능을 활용해야 하는 새 응용 프로그램을 작성하거나 기존 응용 프로그램을 개선할 수 있습니다.  
   
 > [!NOTE]  
->  목록 간의 차이점에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows DAC 응용 프로그램을 업데이트 하기 전에 고려해 야 할 문제에 대 한 정보와 함께 네이티브 클라이언트 및 Windows DAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client를 [SQL Server로 응용 프로그램 업데이트 Native Client mdac에서](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)합니다.  
+>  차이점 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Windows DAC와 문제에 대 한 정보는 Windows DAC 응용 프로그램을 업데이트 하기 전에 고려해 야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client를 [SQL Server에 응용 프로그램 업데이트 Native Client에서 MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 항상 Windows DAC와 함께 공급된 ODBC 드라이버 관리자와 연동하여 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 Windows DAC와 함께 공급된 OLE DB 핵심 서비스와 연동하여 사용할 수 있지만 반드시 그래야 하는 것은 아니며 개별 응용 프로그램 요구 사항(예를 들어 연결 풀링이 필요한지 여부)에 따라 핵심 서비스를 사용할지 여부를 선택할 수 있습니다.  
   
- 데이터 개체 ADO (ActiveX) 응용 프로그램에서 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하지만 Native Client OLE DB 공급자와 함께에서 ADO를 사용 하도록 것이 좋습니다는 **DataTypeCompatibility** 연결 문자열 키워드 (또는 해당 해당  **데이터 원본** 속성). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 경우 ADO 응용 프로그램에서 연결 문자열 키워드 또는 OLE DB 속성 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 제공되는 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능을 이용할 수 있습니다. ADO와 이러한 기능 사용에 대 한 자세한 내용은 참조 [SQL Server Native Client를 사용 하 여 ADO를 사용 하 여](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)합니다.  
+ 데이터 개체 (ADO (ActiveX) 응용 프로그램이 사용할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 하지만 것이 좋습니다와 함께에서 ADO를 사용 하는 **DataTypeCompatibility** 연결 문자열 키워드 (또는 해당 해당  **DataSource** 속성). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 경우 ADO 응용 프로그램에서 연결 문자열 키워드 또는 OLE DB 속성 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 제공되는 새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능을 이용할 수 있습니다. ADO 사용 하 여 이러한 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 [SQL Server Native Client를 사용 하 여 ADO를 사용 하 여](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 OLE DB 또는 ODBC를 사용하여 SQL Server의 네이티브 데이터에 액세스하는 간단한 방법을 제공하도록 디자인되었습니다. 또한 OLE DB 및 ODBC 기술을 한 라이브러리에 결합하고 현재 Microsoft Windows 플랫폼의 일부인 Windows DAC 구성 요소를 변경하지 않고 데이터에 액세스할 수 있는 혁신적이고 발전된 새 기능을 제공합니다.  
   

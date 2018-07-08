@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,24 +17,24 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229013"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   전체 텍스트 검색을 정의하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 쿼리는 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용합니다. 이러한 조건자와 함수는 다양한 형태의 쿼리 용어를 지원하는 많은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 지원합니다. 전체 텍스트 쿼리를 작성하려면 이러한 조건자와 함수를 사용하는 시기와 방법을 알아야 합니다.  
   
-##  <a name="OV_ft_predicates"></a> 간략하게 전체 텍스트 조건자 (CONTAINS 및 FREETEXT)  
+##  <a name="OV_ft_predicates"></a> 개요 전체 텍스트 조건자 (CONTAINS 및 FREETEXT)  
  CONTAINS 및 FREETEXT 조건자는 TRUE 또는 FALSE 값을 반환합니다. 이러한 조건자는 지정된 행이 전체 텍스트 쿼리와 일치하는지 여부를 확인하는 선택 조건을 지정하는 데에만 사용할 수 있습니다. 일치하는 행은 결과 집합에 반환됩니다. CONTAINS 및 FREETEXT는 SELECT 문의 WHERE 또는 HAVING 절에 지정됩니다. CONTAINS 및 FREETEXT는 LIKE와 BETWEEN 등의 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자와 결합할 수 있습니다.  
   
 > [!NOTE]  
->  구문 및 이러한 조건자의 인수에 대 한 정보를 참조 하십시오. [CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql) 및 [FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)합니다.  
+>  구문 및 이러한 조건자의 인수에 대 한 정보를 참조 하세요 [포함 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql) 하 고 [FREETEXT &#40;Transact SQL&#41;](/sql/t-sql/queries/freetext-transact-sql).  
   
  CONTAINS 또는 FREETEXT를 사용하면 검색할 테이블의 단일 열, 열 목록 또는 모든 열을 지정할 수 있으며, 경우에 따라 단어 분리, 형태소 분석, 동의어 사전 조회 및 의미 없는 단어 제거를 위해 지정된 전체 텍스트 쿼리에서 사용할 리소스의 언어를 지정할 수도 있습니다.  
   
@@ -89,7 +88,7 @@ GO
  CONTAINSTABLE 및 FREETEXTTABLE 함수는 일반 테이블 이름처럼 SELECT 문의 FROM 절에서 참조될 수 있습니다. 이러한 함수는 전체 텍스트 쿼리와 일치하는 행이 0개, 1개 또는 그 이상 있는 테이블을 반환합니다. 반환된 테이블에는 함수의 전체 텍스트 검색 조건에 지정된 선택 조건과 일치하는 기본 테이블의 행만 포함됩니다.  
   
 > [!NOTE]  
->  구문 및 이러한 함수는 인수에 대 한 정보를 참조 하십시오. [CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql) 및 [FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)합니다.  
+>  구문 및 이러한 함수의 인수에 대 한 정보를 참조 하세요 [CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql) 하 고 [FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql).  
   
  이러한 함수 중 하나를 사용하는 쿼리는 다음과 같이 각 행에 대해 적절한 순위 값(RANK) 및 전체 텍스트 키(KEY)를 반환합니다.  
   
@@ -134,7 +133,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>2. FREETEXTTABLE 사용  
- 다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 쿼리를 지정 하려면 알고 있어야 하는 **ProductDescriptionID** 에 대 한 고유 키 열이 고 `ProductDescription` 테이블입니다.  
+ 다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 쿼리를 지정 하려면 임을 알아야 **ProductDescriptionID** 에 대 한 고유 키 열을 `ProductDescription` 테이블입니다.  
   
 ```  
 USE AdventureWorks2012  
@@ -169,7 +168,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> 부울 연산자 AND, OR를 사용 하 여 CONTAINS 및 CONTAINSTABLE에서 NOT 등  
+##  <a name="Using_Boolean_Operators"></a> 부울 연산자 AND, OR, 사용 및 CONTAINS 및 CONTAINSTABLE에 없는 –  
  CONTAINS 조건자와 CONTAINSTABLE 함수는 동일한 검색 조건을 사용하며, 둘 다 논리적 연산을 수행하는 부울 연산자 AND, OR, AND NOT을 사용하여 여러 검색 단어를 결합할 수 있습니다. 예를 들어 AND를 사용하여 "latte"와 "New York-style bagel"이 둘 다 포함된 행을 찾거나 AND NOT을 사용하여 "bagel"은 포함되지만 "cream cheese"는 포함되지 않은 행을 찾을 수 있습니다.  
   
 > [!NOTE]  
@@ -218,7 +217,7 @@ GO
  `varbinary(max)`, `varbinary` 또는 `xml` 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.  
   
 > [!IMPORTANT]  
->  전체 텍스트 검색은 이미지 열에서도 작동합니다. 그러나는 `image` 데이터 형식은 나중 버전의에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하십시오. 사용 하 여 `varbinary(max)` 데이터 형식을 대신 합니다.  
+>  전체 텍스트 검색은 이미지 열에서도 작동합니다. 그러나 합니다 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하십시오. 사용 된 `varbinary(max)` 데이터 형식 대신 합니다.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) 또는 varbinary 데이터  
  단일 `varbinary(max)` 또는 `varbinary` 열에 많은 문서 유형을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 필터가 설치되어 있고 운영 체제에서 사용할 수 있는 문서 유형을 지원합니다. 각 문서의 문서 유형은 문서의 파일 확장명으로 식별됩니다. 예를 들어 .doc 파일 확장명의 경우 전체 텍스트 검색은 Microsoft Word 문서를 지원하는 필터를 사용합니다. 사용 가능한 문서 유형의 목록을 보려면 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 카탈로그 뷰를 쿼리하세요.  
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml 데이터  
- `xml` 만 XML 문서와 조각을, 데이터 형식 열에 저장 하 고는 문서에는 XML 필터만 사용 됩니다. 따라서 유형 열은 필요하지 않습니다. `xml` 열, 전체 텍스트 인덱스는 XML 요소의 내용은 인덱싱하지만 XML 태그입니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
+ `xml` 데이터 형식 열에만 XML 문서 및 조각을 저장 하 고 문서는 XML 필터만 사용 됩니다. 따라서 유형 열은 필요하지 않습니다. `xml` 열, 전체 텍스트 인덱스는 XML 요소의 내용을 인덱싱하지만 XML 태그입니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
   
- 쿼리에 대 한 자세한 내용은 `xml` 열 참조 [XML 열에 전체 텍스트 검색 사용](../xml/use-full-text-search-with-xml-columns.md)합니다.  
+ 에 대 한 쿼리 하는 방법에 대 한 자세한 내용은 `xml` 열을 참조 하세요 [XML 열을 사용 하 여 전체 텍스트 검색을 사용 하 여](../xml/use-full-text-search-with-xml-columns.md)합니다.  
   
  
   
@@ -258,7 +257,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 
   
 ###  <a name="Simple_Term"></a> 특정 단어 또는 구 (단순 단어) 검색  
- [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 검색 하려는 경우 등에서 `ProductReview` 테이블에 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] CONTAINS 조건자를 다음과 같이 사용할 수는 "learning curve" 라는 구가 포함 된 제품 설명을 모두 찾으려면를 데이터베이스:  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 예를 들어, 검색 하려는 경우는 `ProductReview` 테이블에 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] CONTAINS 조건자를 다음과 같이 사용할 수 있습니다 "learning curve" 라는 구가 포함 된 제품 설명을 모두 찾으려면 데이터베이스:  
   
 ```  
 USE AdventureWorks2012  
@@ -274,7 +273,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> 접두사 (접두사 단어) 검색  
+###  <a name="Prefix_Term"></a> 접두사 (접두사 단어) 검색을 수행합니다.  
  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 을 사용하여 지정된 접두사가 포함된 단어나 구를 검색할 수 있습니다. 열에서 지정된 접두사로 시작하는 텍스트가 포함된 모든 항목이 반환됩니다. 예를 들어 `top`, `top``ple`및 `top``ping`에서와 같이 `top`- 접두사가 포함된 모든 행을 검색하려면 다음 쿼리를 사용합니다.  
   
 ```  
@@ -313,7 +312,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a> 단어 또는 구를 사용 하 여 가중치 검색 (가중치 단어)  
+###  <a name="Weighted_Term"></a> 검색 단어 또는 구를 사용 하 여 가중치 (가중치 단어)  
  [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 을 사용하여 단어나 구를 검색하고 가중치를 지정할 수 있습니다. 가중치는 0.0에서 1.0 사이의 숫자로 측정되며 단어와 구 집합에서 각 단어와 구의 중요도를 나타냅니다. 가중치 0.0이 가장 낮고 1.0이 가장 높습니다.  
   
  다음 예에서는 가중치를 사용하여 문자열 "Bay"로 시작하는 텍스트에 "Street" 또는 "View"가 있는 모든 고객 주소를 검색하는 쿼리를 보여 줍니다. 지정한 단어가 많이 포함된 행일수록 높은 가중치가 지정됩니다.  

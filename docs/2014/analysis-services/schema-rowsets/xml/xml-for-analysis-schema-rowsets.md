@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391f3ab14aef3680b9590e73c5bc94cc2e13b3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159274"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 서버 상태, 작업 및 개체에 대한 메타데이터를 반환하는 스키마 행 집합을 포함합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "36091614"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에서 XMLA를 사용 하 여 개발](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; Services 분석을 모니터링 하려면](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; 모니터는 분석 서비스](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [분석 데이터 원본에서 메타데이터 검색](../../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
