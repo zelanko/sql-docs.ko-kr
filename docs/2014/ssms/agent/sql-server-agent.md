@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230473"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  
@@ -117,11 +117,11 @@ ms.locfileid: "36090803"
   
  개인으로 구성된 그룹의 별칭으로 운영자를 정의할 수 있습니다. 이런 방법으로 해당 별칭에 속하는 모든 멤버는 동시에 알림을 받습니다. 자세한 내용은 [운영자](operators.md)를 참조하세요.  
   
-##  <a name="Security"></a> SQL Server 에이전트 관리에 대 한 보안  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 사용 하는 **SQLAgentUserRole**, **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 **msdb** 데이터베이스에 대 한 액세스를 제어 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성원 인 사용자에 대 한 에이전트의는 `sysadmin` 고정된 서버 역할입니다. 이러한 고정 데이터베이스 역할 외에도 데이터베이스 관리자는 하위 시스템과 프록시를 사용하여 각 작업 단계가 태스크 수행에 필요한 최소 권한으로 실행되도록 합니다.  
+##  <a name="Security"></a> SQL Server 에이전트 관리 보안  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용 하는 **SQLAgentUserRole**를 **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 **msdb** 액세스를 제어 하는 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 멤버가 아닌 사용자에 대 한 에이전트의는 `sysadmin` 고정된 서버 역할입니다. 이러한 고정 데이터베이스 역할 외에도 데이터베이스 관리자는 하위 시스템과 프록시를 사용하여 각 작업 단계가 태스크 수행에 필요한 최소 권한으로 실행되도록 합니다.  
   
 ### <a name="roles"></a>역할  
- 멤버는 **SQLAgentUserRole**, **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할 **msdb**, 및 멤버는 `sysadmin` 에 액세스할 수 있는 고정된 서버 역할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다. 이러한 역할 중 하나에 속하지 않는 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 역할에 대한 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
+ 멤버는 **SQLAgentUserRole**를 **SQLAgentReaderRole**, 및 **SQLAgentOperatorRole** 고정 데이터베이스 역할 **msdb**, 및 멤버는 `sysadmin` 고정된 서버 역할에 액세스할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다. 이러한 역할 중 하나에 속하지 않는 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 역할에 대한 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ### <a name="subsystems"></a>하위 시스템  
  하위 시스템은 작업 단계에서 사용할 수 있는 기능을 나타내는 미리 정의된 개체입니다. 각 프록시는 하나 이상의 하위 시스템에 액세스할 수 있습니다. 하위 시스템은 프록시에 사용할 수 있는 기능에 대한 액세스를 구분하므로 보안을 제공합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 제외한 각 작업 단계는 프록시 컨텍스트에서 실행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계는 EXECUTE AS 명령을 사용하여 보안 컨텍스트를 설정합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "36090803"
   
 |하위 시스템 이름|Description|  
 |--------------------|-----------------|  
-|Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br /> **\*\* 중요 한 \* \***  The ActiveX 스크립팅 하위 시스템에서 제거 될 예정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
+|Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br /> **\*\* 중요 \* \***  ActiveX 스크립팅 하위 시스템에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
 |운영 체제(**CmdExec**)|실행 프로그램을 실행합니다.|  
 |PowerShell|PowerShell 스크립팅 작업 단계를 실행합니다.|  
 |복제 배포자|복제 배포 에이전트를 활성화하는 작업 단계를 실행합니다.|  

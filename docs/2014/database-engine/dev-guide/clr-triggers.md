@@ -27,21 +27,21 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160994"
 ---
 # <a name="clr-triggers"></a>CLR 트리거
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 통합으로 인해 모든 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어를 사용하여 CLR 트리거를 만들 수 있습니다. 이 섹션에서는 CLR 통합을 사용하여 구현된 트리거와 관련된 정보를 제공합니다. 트리거에 대 한 자세한 내용은 참조 하십시오. [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 통합으로 인해 모든 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어를 사용하여 CLR 트리거를 만들 수 있습니다. 이 섹션에서는 CLR 통합을 사용하여 구현된 트리거와 관련된 정보를 제공합니다. 에 대 한 전체 설명은 트리거를 참조 하세요 [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)합니다.  
   
 ## <a name="what-are-triggers"></a>트리거란?  
- 트리거는 언어 이벤트가 실행될 때 자동으로 실행되는 특별한 유형의 저장 프로시저입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 두 가지 일반 유형의 트리거인 포함: 데이터 조작 언어 (DML) 및 데이터 정의 언어 (DDL) 트리거. DML 트리거는 `INSERT`, `UPDATE` 또는 `DELETE` 문이 지정된 테이블 또는 뷰의 데이터를 수정할 때 사용할 수 있습니다. DDL 트리거는 주로 `CREATE`, `ALTER` 및 `DROP`으로 시작하는 문인 다양한 DDL 문에 대한 응답으로 저장 프로시저를 실행합니다. 데이터베이스 작업 감사 및 조정 등의 관리 태스크에 DDL 트리거를 사용할 수 있습니다.  
+ 트리거는 언어 이벤트가 실행될 때 자동으로 실행되는 특별한 유형의 저장 프로시저입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 두 가지 일반 유형의 트리거인: DML (데이터 조작 언어) 및 데이터 정의 언어 (DDL) 트리거. DML 트리거는 `INSERT`, `UPDATE` 또는 `DELETE` 문이 지정된 테이블 또는 뷰의 데이터를 수정할 때 사용할 수 있습니다. DDL 트리거는 주로 `CREATE`, `ALTER` 및 `DROP`으로 시작하는 문인 다양한 DDL 문에 대한 응답으로 저장 프로시저를 실행합니다. 데이터베이스 작업 감사 및 조정 등의 관리 태스크에 DDL 트리거를 사용할 수 있습니다.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>CLR 트리거의 고유한 기능  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]로 작성된 트리거에는 `UPDATE(column)` 및 `COLUMNS_UPDATED()` 함수를 사용하여 업데이트된 발생 뷰 또는 테이블의 열을 확인하는 기능이 있습니다.  
@@ -54,14 +54,14 @@ ms.locfileid: "36092513"
   
 -   DDL 문 실행의 영향을 받는 데이터베이스 개체에 대한 정보 액세스  
   
- 이러한 기능은 쿼리 언어에서 기본적으로 또는 `SqlTriggerContext` 클래스에 의해 제공됩니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 내용은 및 [!INCLUDE[tsql](../../includes/tsql-md.md)], 참조 [CLR 통합 개요](../../relational-databases/clr-integration/clr-integration-overview.md)합니다.  
+ 이러한 기능은 쿼리 언어에서 기본적으로 또는 `SqlTriggerContext` 클래스에 의해 제공됩니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../../relational-databases/clr-integration/clr-integration-overview.md)합니다.  
   
 ## <a name="using-the-sqltriggercontext-class"></a>SqlTriggerContext 클래스 사용  
  `SqlTriggerContext` 클래스는 공개적으로 생성할 수 없으며, CLR 트리거 본문 내에서 `SqlContext.TriggerContext` 속성에 액세스해야만 얻을 수 있습니다. `SqlTriggerContext` 클래스는 `SqlContext` 속성을 호출하여 활성 `SqlContext.TriggerContext`에서 얻을 수 있습니다.  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- `SqlTriggerContext` 클래스는 트리거에 대한 컨텍스트 정보를 제공합니다. 이 컨텍스트 정보에는 트리거를 발생시킨 동작 유형, UPDATE 작업에서 수정된 열, DDL 트리거의 경우 트리거 작업을 설명하는 `EventData` 구조가 포함됩니다. 자세한 내용은 참조 [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)합니다.  
+ `SqlTriggerContext` 클래스는 트리거에 대한 컨텍스트 정보를 제공합니다. 이 컨텍스트 정보에는 트리거를 발생시킨 동작 유형, UPDATE 작업에서 수정된 열, DDL 트리거의 경우 트리거 작업을 설명하는 `EventData` 구조가 포함됩니다. 자세한 내용은 [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)합니다.  
   
 ### <a name="determining-the-trigger-action"></a>트리거 동작 확인  
  `SqlTriggerContext`를 얻은 후 트리거를 발생시킨 동작 유형을 확인하는 데 사용할 수 있습니다. 이 정보는 `TriggerAction` 클래스의 `SqlTriggerContext` 속성을 통해 사용할 수 있습니다.  
@@ -77,9 +77,9 @@ ms.locfileid: "36092513"
 -   DDL 트리거의 경우 가능한 TriggerAction 값의 목록이 훨씬 더 깁니다. 자세한 내용은 .NET Framework SDK의 "TriggerAction 열거형"을 참조하십시오.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Inserted 및 Deleted 테이블 사용  
- DML 트리거 문은 두 개의 특수 테이블이 사용 됩니다:는 **삽입** 테이블 및 **삭제** 테이블입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 하지만 테이블의 데이터를 직접 변경할 수는 없습니다.  
+ DML 트리거 문은 두 개의 특수 테이블이 사용 됩니다: 합니다 **삽입** 테이블 및 **삭제** 테이블입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 하지만 테이블의 데이터를 직접 변경할 수는 없습니다.  
   
- CLR 트리거에 액세스할 수는 **삽입** 및 **삭제** CLR in-process 공급자를 통해 테이블입니다. 이 작업을 수행하려면 SqlContext 개체에서 `SqlCommand` 개체를 얻습니다. 예를 들어:  
+ CLR 트리거 액세스할 수 합니다 **삽입** 하 고 **삭제** CLR in-process 공급자를 통해 테이블입니다. 이 작업을 수행하려면 SqlContext 개체에서 `SqlCommand` 개체를 얻습니다. 예를 들어:  
   
  C#  
   
@@ -485,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 트리거를 만드는 문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 어셈블리가 있다고 가정 하 고는 다음과 같습니다. **SQLCLRTest** 현재에 이미 등록 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
+ 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 트리거를 만드는 문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 어셈블리가 있다고 가정 하 고는 다음과 같습니다 **SQLCLRTest** 현재에 이미 등록 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -665,7 +665,7 @@ DROP TABLE Table1;
  [DML 트리거](../../relational-databases/triggers/dml-triggers.md)   
  [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [공용 언어 런타임 사용 하 여 데이터베이스 개체 작성 &#40;CLR&#41; 통합](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [공용 언어 런타임 사용 하 여 데이터베이스 개체를 작성 &#40;CLR&#41; 통합](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

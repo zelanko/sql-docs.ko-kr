@@ -1,5 +1,5 @@
 ---
-title: 분류 열 (데이터 마이닝) | Microsoft Docs
+title: 개의 분류 된 열 (데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - STDEV column
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00a3e1e85beebba351340a9cacad5100e96dff6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210343"
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
   분류된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 생성하게 됩니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36091393"
  이 열의 값은 관련 값의 가중치 또는 사례 복제 요소입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [콘텐츠 형식을 &#40;데이터 마이닝&#41;](content-types-data-mining.md)   
+ [콘텐츠 형식 &#40;데이터 마이닝&#41;](content-types-data-mining.md)   
  [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
  [데이터 형식 &#40;데이터 마이닝&#41;](data-types-data-mining.md)  
   

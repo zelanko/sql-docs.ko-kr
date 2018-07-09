@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 830df1dd0f44b237e1571700f81919abeca826ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184280"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
-  쿼리 저장소 기능을 통해 DBA는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 이 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 검토할 수 있도록 이 기록을 유지합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소를 사용 하 여 구성할 수 있습니다는 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 옵션입니다.  
+  쿼리 저장소 기능을 통해 DBA는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 이 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 검토할 수 있도록 이 기록을 유지합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소를 사용 하 여 구성할 수 있습니다 합니다 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 옵션입니다.  
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([이해 하기](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**적용 대상**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([되도록](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
 >  현재 미리 보기 기능입니다. 쿼리 저장소를 사용하려면 쿼리 저장소 구현에는 사용권 계약(예: 기업계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기가입 계약)의 미리 보기 약관과 해당 [Microsoft Azure 미리 보기 추가 사용 약관](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)이 적용됨을 확인하고 이에 동의해야 합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36092203"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Management Studio에서 쿼리 저장소 페이지 사용  
   
-1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. (필요 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016 버전의 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
+1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. (필요 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016 버전이 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
   
 2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36092203"
   
 #### <a name="by-using-transact-sql-statements"></a>Transact-SQL 문 사용  
   
-1.  사용 하 여는 `ALTER DATABASE` 문을 쿼리 저장소를 사용 하도록 합니다. 예를 들어:  
+1.  사용 하 여는 `ALTER DATABASE` 문 쿼리 저장소를 사용 하도록 설정 합니다. 예를 들어:  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -74,7 +74,7 @@ ms.locfileid: "36092203"
   
 -   특정 데이터베이스에 대한 리소스(CPU, I/O 및 메모리) 사용 패턴을 분석합니다.  
   
- 쿼리 저장소에는 실행 계획 정보를 유지하는 **계획 저장소** 와 실행 통계 정보를 유지하기 위한 **런타임 통계 저장소** 라는 두 가지 저장소가 포함되어 있습니다. 에 의해 제한 되는 쿼리 저장소에서 저장 될 수 있는 고유한 계획의 수는 `max_plans_per_query` 구성 옵션입니다. 성능 향상을 위해 두 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
+ 쿼리 저장소에는 실행 계획 정보를 유지하는 **계획 저장소** 와 실행 통계 정보를 유지하기 위한 **런타임 통계 저장소** 라는 두 가지 저장소가 포함되어 있습니다. 쿼리 저장소에 의해 제한 됩니다에 대 한 저장 될 수 있는 고유한 계획의 수를 `max_plans_per_query` 구성 옵션입니다. 성능 향상을 위해 두 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
   
  다음 쿼리는 쿼리 저장소의 쿼리 및 계획에 대한 정보를 반환합니다.  
   
@@ -94,7 +94,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 선택 하면 **재발 된 쿼리**, 열립니다는 **재발 된 쿼리** 창을 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]합니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 선택할 수 있습니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.  
+ 선택 **재발 된 쿼리**, 열립니다 합니다 **재발 된 쿼리** 창에서 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]합니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 선택할 수 있습니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -118,7 +118,7 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 INTERVAL_LENGTH_MINUTES를 통해 구성됩니다.  
   
- 쿼리는 `sys.database_query_store_options` 보기 쿼리 저장소의 현재 옵션을 결정 합니다.  
+ 쿼리는 `sys.database_query_store_options` 뷰를 쿼리 저장소의 현재 옵션을 확인 합니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.  
   
@@ -279,7 +279,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  더 이상 중요하지 않은 데이터를 지우는 다른 논리를 사용하여 프로시저를 직접 정의할 수 있습니다.  
   
- 사용 하 여 위의 예에서는 `sp_query_store_remove_query` 확장 저장된 프로시저를 불필요 한 데이터를 제거 합니다. 다른 두 프로시저를 사용할 수도 있습니다.  
+ 사용 하 여 위의 예제는 `sp_query_store_remove_query` 불필요 한 데이터를 제거 하기 위한 저장된 프로시저를 확장 합니다. 다른 두 프로시저를 사용할 수도 있습니다.  
   
 -   `sp_query_store_reset_exec_stats` – 지정된 된 계획에 대 한 런타임 통계를 지웁니다.  
   
@@ -321,7 +321,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **지난 1 시간 내 가장 긴 평균 실행 시간을 가진 쿼리의 수입니다.**  
+ **지난 1 시간 내에서 가장 긴 평균 실행 시간을 사용 하 여 쿼리의 수입니다.**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -338,7 +338,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **해당 평균 행 수 및 실행 수와 지난 24 시간 동안에서 쿼리는 가장 큰 평균 물리적 io 수를 읽습니다.**  
+ **해당 평균 행 수 및 실행 수를 사용 하 여 지난 24 시간 동안에서 가장 큰 평균 물리적 io는 쿼리의 수를 읽습니다.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -357,7 +357,7 @@ WHERE rsi.start_time >= DATEADD(hour, -24, GETUTCDATE())
 ORDER BY rs.avg_physical_io_reads DESC;  
 ```  
   
- **여러 계획으로 쿼리 합니다.** 이러한 쿼리는 계획 선택 변경으로 인한 재발을 일으킬 수 있으므로 특히 흥미롭습니다. 다음 쿼리는 이러한 쿼리와 함께 모든 계획을 식별합니다.  
+ **여러 계획을 사용 하 여 쿼리 합니다.** 이러한 쿼리는 계획 선택 변경으로 인한 재발을 일으킬 수 있으므로 특히 흥미롭습니다. 다음 쿼리는 이러한 쿼리와 함께 모든 계획을 식별합니다.  
   
 ```  
 WITH Query_MultPlans  
@@ -386,7 +386,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **최근 성능이 저하 쿼리 (다른 시점과 비교).** 다음 쿼리 예제는 지난 48 시간에 계획 선택 변경으로 인해 실행 시간이 두 배가 된 모든 쿼리를 반환합니다. 쿼리에서는 모든 런타임 통계 간격을 나란히 비교합니다.  
+ **최근에 성능이 저하 쿼리 (다른 시점과 비교).** 다음 쿼리 예제는 지난 48 시간에 계획 선택 변경으로 인해 실행 시간이 두 배가 된 모든 쿼리를 반환합니다. 쿼리에서는 모든 런타임 통계 간격을 나란히 비교합니다.  
   
 ```  
 SELECT   
@@ -425,7 +425,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  계획 선택 변경과 관련된 성능 저하뿐 아니라 성능 저하를 모두 확인하려면 이전 쿼리에서 `AND p1.plan_id <> p2.plan_id` 조건을 제거하면 됩니다.  
   
- **최근 (최근 및 기록 실행 비교)는 성능이 저하 하는 쿼리.** 다음 쿼리는 실행 기간을 기준으로 쿼리 실행을 비교합니다. 이 특정 예제의 쿼리는 최근 기간(1시간) 및 기록 기간(어제)의 실행을 비교하고 additional_duration_workload를 초래한 쿼리를 식별합니다. 이 메트릭은 최근 평균 실행 기간과 기록 평균 실행 간의 차이에 최근 실행 수를 곱한 값으로 계산됩니다. 이 값은 실제로 기록에 비해 최근 실행으로 초래된 추가 기간을 나타냅니다.  
+ **최근에 성능이 저하 쿼리 (최근 및 기록 실행 비교).** 다음 쿼리는 실행 기간을 기준으로 쿼리 실행을 비교합니다. 이 특정 예제의 쿼리는 최근 기간(1시간) 및 기록 기간(어제)의 실행을 비교하고 additional_duration_workload를 초래한 쿼리를 식별합니다. 이 메트릭은 최근 평균 실행 기간과 기록 평균 실행 간의 차이에 최근 실행 수를 곱한 값으로 계산됩니다. 이 값은 실제로 기록에 비해 최근 실행으로 초래된 추가 기간을 나타냅니다.  
   
 ```  
 --- "Recent" workload - last 1 hour  
@@ -503,7 +503,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> 쿼리 성능 안정성 유지 관리  
- 실행 하는 쿼리에 대 한 여러 번 표시 될 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다른 계획에 다른 리소스 사용률 및 기간이 사용 합니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 쉽게 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.  
+ 실행 되는 쿼리에 대 한 여러 번 표시 될 수도 있습니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 인해 다른 리소스 사용률 및 기간이 다른 계획을 사용 합니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 쉽게 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.  
   
  또한 자동으로 매개 변수화되거나 수동으로 매개 변수화되는 매개 변수를 사용하여 일관성이 없는 쿼리 성능도 식별할 수 있습니다. 여러 계획 중에 대부분의 매개 변수 값에 대해 빠르고 최적화된 계획을 식별하고 해당 계획을 강제 적용할 수 있습니다. 이를 통해 다양한 사용자 시나리오에 대해 예측 가능한 성능을 유지할 수 있습니다.  
   
@@ -515,7 +515,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  사용 하는 경우 `sp_query_store_force_plan` 쿼리 저장소에서 해당 쿼리에 대 한 계획으로 기록 된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 Q1을 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.  
   
- **쿼리에 대한 계획 강제 적용 제거** 다시 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램 최적의 쿼리 계획을 계산을 사용 하 여 `sp_query_store_unforce_plan` 쿼리에 대해 선택한 계획을 강제 하 합니다.  
+ **쿼리에 대한 계획 강제 적용 제거** 다시 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 최적의 쿼리 계획을 계산을 사용 하 여 `sp_query_store_unforce_plan` 쿼리에 대해 선택한 계획을 강제 적용 해제를 합니다.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

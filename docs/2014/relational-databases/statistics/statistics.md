@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: da931b48b7571cd7d109980ef6deb0a7e4bb5246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080171"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428342"
 ---
 # <a name="statistics"></a>통계
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
@@ -191,7 +189,7 @@ GO
   
 -   CREATE STATISTICS 문을 사용하여 누락된 통계를 작성합니다.  
   
- 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대 한 통계가 없거나 유효 하지 않을 경우는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 만들고에서 임시 통계를 유지 관리 `tempdb`합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
+ 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대 한 통계가 없거나 유효 하지 않을 경우 합니다 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 만들고에서 임시 통계를 유지 관리 `tempdb`합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
   

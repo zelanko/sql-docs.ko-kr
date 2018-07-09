@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fa65e6742004206c5116437c4e3bba7dbd316798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d60f4db93721d20b85b613459a034eaa896dc87a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165254"
 ---
 # <a name="create-a-domain"></a>도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인을 만드는 방법에 대해 설명합니다. 도메인의 값은 필드의 데이터를 의미 체계에 따라 표현한 것입니다. 도메인에 대한 자세한 내용은 [도메인 관리](../../2014/data-quality-services/managing-a-domain.md)를 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "36092059"
   
 3.  **기술 자료 검색** 을 작업으로 선택한 다음 **만들기** 를 클릭하여 새 기술 자료를 만들거나 **열기** 를 클릭하여 기존 기술 자료를 엽니다.  
   
-4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 참조 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)합니다.  
+4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)합니다.  
   
 5.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 해당 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36092059"
 1.  **도메인 만들기** 대화 상자에서 기술 자료에 고유한 이름과 설명(최대 256자)을 입력합니다.  
   
     > [!NOTE]  
-    >  도메인 속성에 대 한 자세한 내용은 참조 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)합니다.  
+    >  도메인 속성에 대 한 자세한 내용은 참조 하세요. [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)합니다.  
   
 2.  **데이터 형식** 목록에서 도메인 값의 데이터 형식을 선택합니다. 데이터 형식은 **문자열** (기본값), **날짜**, **정수**또는 **10진수**가 될 수 있습니다.  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93dfd53940270fb444dd797bfd4d085ab459d200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156844"
 ---
 # <a name="fontflags-element-assl"></a>FontFlags 요소(ASSL)
-  글꼴 관련 표시 특성을 설명는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 또는 [측정값](../objects/measure-element-assl.md) 부모 요소입니다.  
+  글꼴 관련 표시 특징을 설명 합니다 [CalculationProperty](../objects/calculationproperty-element-assl.md) 하거나 [측정값](../objects/measure-element-assl.md) 부모 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36092974"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `FontFlags` 속성에 적용 하는 MDX (Multidimensional Expressions) 식을 포함 `CalculationProperty` 않은 요소는 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀* .  
+ 합니다 `FontFlags` 속성이 MDX (Multidimensional Expressions) 식을 포함 하 고 적용할 `CalculationProperty` 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀* .  
   
- 부모에 해당 하는 요소 `FontFlags` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty> 및 <xref:Microsoft.AnalysisServices.Measure>합니다.  
+ 부모에 해당 하는 요소가 `FontFlags` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CalculationProperty> 및 <xref:Microsoft.AnalysisServices.Measure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

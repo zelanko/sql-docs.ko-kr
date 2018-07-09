@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228893"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
-  식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 하 여는 **식** 필드 값에 따라 서로 다른 그림을 표시 하는 대화 상자 이름 값을 연결을 조회는 별도 데이터 집합에서 값을 조회 하는 식을 작성할 수 있습니다.  
+  식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 합니다 **식** 식을 연결 하는 이름 값 확인을 별도 데이터 집합에서 값을 쓸 대화 상자 등 고 필드 값에 따라 서로 다른 그림에 표시 합니다.  
   
  보고서에는 가로줄무늬가 있으며 흰색 행과 다른 색 행이 번갈아 표시됩니다. 보고서에는 흰색이 아닌 행의 색을 선택하기 위한 매개 변수가 포함됩니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "36090898"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a> 학습 내용  
+##  <a name="BackToTop"></a> 학습할 내용  
  이 자습서에서는 다음 작업 방법을 배웁니다.  
   
 1.  [테이블 또는 행렬 마법사에서 테이블 보고서 및 데이터 집합 만들기](#Setup)  
@@ -43,11 +43,11 @@ ms.locfileid: "36090898"
   
 5.  [CountryRegion 이름 조회](#Lookup)  
   
-6.  [마지막 구입 이후 일 수](#Count)  
+6.  [마지막 구입 이후 일 수 계산](#Count)  
   
 7.  [표시기를 사용 하 여 판매량 비교 표시](#Indicator)  
   
-8.  ["녹색 막대" 보고서는 보고서를 확인 합니다.](#GreenBar)  
+8.  [보고서를 "녹색 막대" 보고서를 확인 합니다.](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>기타 선택적 단계  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36090898"
   
 #### <a name="to-create-a-new-table-report"></a>새 테이블 보고서를 만들려면  
   
-1.  클릭 **시작**, 가리킨 **프로그램**, 클릭 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**, 클릭 하 고 **보고서 작성기**합니다.  
+1.  클릭 **시작**, 가리킨 **프로그램**, 클릭 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**를 클릭 하 고 **보고서 작성기**합니다.  
   
      **시작** 대화 상자가 나타납니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36090898"
     >  **시작** 대화 상자가 나타나지 않으면 **보고서 작성기** 단추에서 **새로 만들기**를 클릭합니다.  
   
     > [!NOTE]  
-    >  보고서 작성기의 ClickOnce 버전을 사용 하 여 원하는 경우 보고서 관리자를 열고 클릭 **보고서 작성기**, 또는 Reporting services 콘텐츠 형식 보고서에 사용 되 고 클릭와 같은 SharePoint 사이트로 이동  **보고서 작성기 보고서** 에 **새 문서** 메뉴에는 **문서** 공유 문서 라이브러리의 탭 합니다.  
+    >  보고서 작성기의 ClickOnce 버전을 사용 하 여 원하는 경우 보고서 관리자를 열고 클릭 **보고서 작성기**, 또는 Reporting services 콘텐츠 형식을 사용 하 고 클릭 하는 보고서와 같은 SharePoint 사이트로 이동  **보고서 작성기 보고서** 에 **새 문서** 메뉴를 **문서** 공유 문서 라이브러리의 탭 합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36090898"
     > [!NOTE]  
     >  FirstName 및 LastName 필드는 포함되지 않으며, 이후 단계에서 두 필드를 추가합니다.  
   
-13. 에 **값** 목록에서 마우스 오른쪽 단추로 클릭 `CountryRegionID` 클릭는 **Sum** 옵션입니다.  
+13. 에 **값** 목록에서 마우스 오른쪽 단추로 클릭 `CountryRegionID` 클릭 합니다 **합계** 옵션입니다.  
   
      Sum은 더 이상 CountryRegionID에 적용되지 않습니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36090898"
   
 16. **레이아웃 선택** 페이지에서 **다음**을 클릭합니다.  
   
-17. 에 **스타일 선택** 페이지에서 클릭 **슬레이트**, 클릭 하 고 **마침**합니다.  
+17. 에 **스타일을 선택 합니다** 페이지에서 **슬레이트**를 클릭 하 고 **마침**합니다.  
   
 ##  <a name="UpdateNames"></a> 2. 데이터 원본 및 데이터 집합의 기본 이름 업데이트  
   
@@ -701,7 +701,7 @@ ms.locfileid: "36090898"
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
-2.  클릭 **데스크톱`, `내 문서**, 또는 **내 컴퓨터**, 한 다음 보고서를 저장 하려는 폴더를 찾습니다.  
+2.  클릭 **바탕 화면`, `My Documents**, 또는 **컴퓨터로**, 다음 보고서를 저장 하려는 폴더로 이동 하 고 합니다.  
   
 3.  **이름**에서 기본 이름을 **Sales Comparison Summary**로 바꿉니다.  
   

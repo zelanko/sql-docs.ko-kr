@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
@@ -17,13 +17,13 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 9bffc090c98e1adc507ba55fc856fb166ebd2187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183980"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 응용 프로그램의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 응용 프로그램에 대한 URL 끝점 구문을 정의합니다. 보고서 서버에서 응용 프로그램을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36078569"
 >  이 항목에서는 보고서 작성기 또는 보고서 서버에 저장된 특정 보고서에 대한 URL 액세스에 대해서는 설명하지 않습니다. 이러한 항목의 URL 액세스에 대한 자세한 내용은 [온라인 설명서의](../access-report-server-items-using-url-access.md) URL 액세스를 사용하여 보고서 서버 항목 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 참조하세요.  
   
 ##  <a name="URLreservation"></a> URL 예약 및 등록  
- URL 예약은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 액세스할 때 사용할 수 있는 URL을 정의합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 웹 서비스와 보고서 관리자 HTTP에 대 한 하나 이상의 Url을 예약 합니다. SYS, 다음 서비스를 시작할 때 등록 합니다. 보고서 작성기와 보고서에 대한 URL은 보고서 서버 웹 서비스 URL 예약을 기준으로 합니다. URL에 매개 변수를 추가하면 웹 서비스를 통해 보고서 작성기나 보고서를 열 수 있습니다. 예약 및 등록은 HTTP.SYS에서 제공합니다. 자세한 내용은 MSDN의 [네임스페이스 예약, 등록 및 라우팅(Namespace Reservations, Registration, and Routing)](http://go.microsoft.com/fwlink/?LinkId=92653) 을 참조하세요.  
+ URL 예약은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 액세스할 때 사용할 수 있는 URL을 정의합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 프로그램이 보고서 서버 웹 서비스와 보고서 관리자 HTTP에 대 한 하나 이상의 Url을 예약 합니다. SYS, 다음 서비스를 시작할 때 등록 합니다. 보고서 작성기와 보고서에 대한 URL은 보고서 서버 웹 서비스 URL 예약을 기준으로 합니다. URL에 매개 변수를 추가하면 웹 서비스를 통해 보고서 작성기나 보고서를 열 수 있습니다. 예약 및 등록은 HTTP.SYS에서 제공합니다. 자세한 내용은 MSDN의 [네임스페이스 예약, 등록 및 라우팅(Namespace Reservations, Registration, and Routing)](http://go.microsoft.com/fwlink/?LinkId=92653) 을 참조하세요.  
   
  *URL 예약* 은 웹 응용 프로그램에 대한 URL 끝점이 HTTP.SYS에 생성되고 저장되는 프로세스입니다. HTTP.SYS는 컴퓨터에 정의된 모든 URL 예약의 공용 리포지토리로서 고유한 URL 예약을 보장하는 일반 규칙 집합을 정의합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36078569"
 |HTTP.SYS에서의 URL 예약|URL|설명|  
 |---------------------------------|---------|-----------------|  
 |http://+:80/reportserver|http://\<컴퓨터 이름 > / reportserver<br /><br /> http://\<ip 주소 > / reportserver<br /><br /> http://localhost/reportserver|이 URL 예약은 포트 80에 와일드카드(+)를 지정하며, 포트 80에서 보고서 서버 컴퓨터로 확인되는 호스트를 지정하는 들어오는 모든 요청을 보고서 서버 큐에 추가합니다. 이 URL 예약을 사용하면 원하는 수의 URL을 사용하여 보고서 서버에 액세스할 수 있습니다.<br /><br /> 이 URL은 대부분의 운영 체제에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 기본 URL 예약입니다.|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|이 URL 예약은 IP 주소를 지정하며 와일드카드 URL 예약보다 훨씬 제한적입니다. IP 주소를 포함하는 URL만 보고서 서버에 연결하는 데 사용할 수 있습니다. 이 URL 예약, http://에는 보고서 서버에 요청\<컴퓨터 이름 > / reportserver 또는 http://localhost/reportserver 실패 합니다.|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|이 URL 예약은 IP 주소를 지정하며 와일드카드 URL 예약보다 훨씬 제한적입니다. IP 주소를 포함하는 URL만 보고서 서버에 연결하는 데 사용할 수 있습니다. 이 URL 예약을 http:// 보고서 서버에 요청\<컴퓨터 이름 > / reportserver 또는 http://localhost/reportserver 하지 못합니다.|  
   
 ##  <a name="DefaultURLs"></a> 기본 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치할 경우 설치 프로그램이 보고서 서버 웹 서비스와 보고서 관리자에 대한 URL을 예약합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 URL 예약을 정의하는 경우 이러한 기본값을 그대로 사용할 수도 있습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 명명된 인스턴스로 설치할 경우 기본 URL에 인스턴스 이름이 포함됩니다.  
@@ -91,8 +91,8 @@ ms.locfileid: "36078569"
 |-------------------|-----------------|-----------------|----------------------------------------|  
 |기본 인스턴스|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver|http://\<서버 이름 >: 80/reportserver|  
 |기본 인스턴스|보고서 관리자|http://\<서버 이름 > / reportserver|http://\<서버 이름 >: 80/reportserver|  
-|명명된 인스턴스|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver_\<인스턴스 이름 >|http://\<서버 이름 >: 80/reportserver_\<인스턴스 이름 >|  
-|명명된 인스턴스|보고서 관리자|http://\<서버 이름 > / 경우\<인스턴스 이름 >|http://\<서버 이름 >: 80/경우\<인스턴스 이름 >|  
+|명명된 인스턴스|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver_\<n a m e >|http://\<서버 이름 >: 80/reportserver_\<n a m e >|  
+|명명된 인스턴스|보고서 관리자|http://\<서버 이름 > / 이때 다음과\<n a m e >|http://\<서버 이름 >: 80 t _\<n a m e >|  
 |SQL Server Express|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver_SQLExpress|http://\<서버 이름 >: 80/reportserver_SQLExpress|  
 |SQL Server Express|보고서 관리자|http://\<서버 이름 > / reports_SQLExpress|http://\<서버 이름 >: 80/reports_SQLExpress|  
   
@@ -101,16 +101,16 @@ ms.locfileid: "36078569"
   
  서비스 계정에는 기본값이 없습니다. 그러나 설치 중 서비스 계정을 지정해야 하며 서버를 파일만 모드에서 설치한 경우라도 서비스 계정은 RSReportServer.config의 `URLReservation`에 지정되어 있습니다. 서비스 계정으로 유효한 값은 도메인 사용자 계정, `LocalSystem` 또는 `NetworkService`입니다.  
   
- 익명 액세스 사용할 수 없습니다. 기본 보안은 `RSWindowsNegotiate`합니다. 인트라넷 액세스의 경우 보고서 서버 URL에 네트워크 컴퓨터 이름이 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 인터넷 연결용으로 구성하려는 경우 다른 설정을 사용해야 합니다. 인증에 대한 자세한 내용은 [온라인 설명서의](../security/authentication-with-the-report-server.md) 보고서 서버 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+ 기본 보안 이므로 익명 액세스가 비활성화 되어 `RSWindowsNegotiate`입니다. 인트라넷 액세스의 경우 보고서 서버 URL에 네트워크 컴퓨터 이름이 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 인터넷 연결용으로 구성하려는 경우 다른 설정을 사용해야 합니다. 인증에 대한 자세한 내용은 [온라인 설명서의](../security/authentication-with-the-report-server.md) 보고서 서버 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ##  <a name="URLlocalAdmin"></a> 로컬 관리 URL  
  URL 예약에 대해 강력한 또는 약한 와일드카드를 지정한 경우 http://localhost/reportserver 또는 http://localhost/reports를 사용할 수 있습니다.  
   
  http://localhost URL은 http://127.0.0.1로 해석됩니다. URL 예약을 컴퓨터 이름이나 단일 IP 주소로 해석한 경우 로컬 컴퓨터에 127.0.0.1에 대한 예약을 추가로 만들어야 localhost를 사용할 수 있습니다. 마찬가지로 컴퓨터에서 localhost 또는 127.0.0.1을 사용할 수 없는 경우 해당 URL을 사용할 수 없습니다.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 실수로 상승 된 권한으로 프로그램 실행의 위험을 최소화 하기 위해 새로운 보안 기능이 포함 되어 있습니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 실수로 상승 된 권한으로 프로그램 실행의 위험을 최소화 하기 위해 새 보안 기능을 포함 합니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="URLSharePoint"></a> SharePoint 통합된 모드에서 보고서 서버에 대 한 Url  
+##  <a name="URLSharePoint"></a> SharePoint 통합 모드로 보고서 서버에 대 한 Url  
  보다 큰 규모의 SharePoint 제품 또는 기술 배포 내에서 실행되도록 독립 실행형 보고서 서버를 구성하는 경우 URL 및 가상 디렉터리 생성은 다음과 같이 영향을 받습니다.  
   
 -   보고서 및 기타 항목에 대한 URL 주소는 SharePoint 웹 응용 프로그램 URL을 통해 지정됩니다. 특정 보고서에 대한 URL 액세스의 경우 사이트 경로, 문서 라이브러리, 항목 이름 및 파일 이름 확장명(예: 보고서의 경우 .rdl)을 포함하는 정규화된 URL을 항상 사용하십시오. 보고서의 공유 데이터 원본 및 모델을 참조하는 경우와 보고서 서버로의 게시 작업에 대한 대상 서버 및 폴더를 지정하는 경우 정규화된 URL을 지정해야 합니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "36078569"
   
 -   SharePoint 제품 및 기술에 대한 URL 예약이 정의되어 있더라도 서버에 게시할 때 예약을 무시할 수 있습니다. SharePoint 웹 응용 프로그램의 경우 URL 예약은 내부 작업입니다.  
   
--   단일 서버 배포의 통합된 보고서 서버 및 SharePoint 기술 인스턴스와 동일한 컴퓨터에 설치 되어 있는 경우 사용할 수 없습니다 http://localhost/reportserver합니다. 경우 http://localhost 은 SharePoint 웹 응용 프로그램에 액세스 하는 데 사용을 사용 해야 기본이 아닌 웹 사이트 또는 고유한 포트 할당을 보고서 서버에 액세스할 수 있습니다. 또한 보고서 서버가 SharePoint 팜과 통합되는 경우 원격 컴퓨터에 설치된 배포의 노드에 대해서는 보고서 서버에 대한 localhost 액세스가 확인되지 않습니다.  
+-   단일 서버 배포의 통합된 보고서 서버 및 SharePoint 기술 인스턴스를 동일한 컴퓨터에 설치 되어 있는 경우 사용할 수 없습니다 http://localhost/reportserver합니다. 경우 http://localhost 는 SharePoint 웹 응용 프로그램에 액세스 하는 데에 사용 해야 기본이 아닌 웹 사이트 또는 고유한 포트 할당을 보고서 서버에 액세스할 수 있습니다. 또한 보고서 서버가 SharePoint 팜과 통합되는 경우 원격 컴퓨터에 설치된 배포의 노드에 대해서는 보고서 서버에 대한 localhost 액세스가 확인되지 않습니다.  
   
 -   SharePoint 통합 모드에서 실행되는 보고서 서버에 대해서는 보고서 관리자에 대한 URL 예약 및 끝점을 구성할 수 없습니다. 이를 구성하는 경우에는 보고서 서버를 SharePoint 통합 모드로 배포한 후 이 URL 및 가상 디렉터리가 더 이상 작동하지 않습니다. 이 모드에서는 보고서 관리자가 지원되지 않습니다.  
   

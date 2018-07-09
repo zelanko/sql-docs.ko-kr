@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
 - custom rollup formulas [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2983c826b96f681971a6c1fc5be56084a8213453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f50cbfab0b4d5554d33e0a8526d14a22909381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183440"
 ---
 # <a name="define-custom-member-formulas"></a>사용자 지정 멤버 수식 정의
   사용자 지정 멤버 수식이라고 하는 MDX(Multidimensional Expressions) 식을 정의하여 지정된 특성의 멤버에 값을 제공할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36091386"
   
  특성에서 `CustomRollupColumn` 속성은 특성의 멤버에 대한 사용자 지정 멤버 수식을 포함하는 열을 지정합니다. 열의 행이 비어 있으면 멤버의 셀 값이 정상적으로 반환됩니다. 열의 수식이 유효하지 않으면 멤버를 사용하는 셀 값이 검색될 때마다 런타임 오류가 발생합니다.  
   
- 특성을 포함하는 차원 테이블이나 직접 관련된 테이블에 사용자 지정 멤버 수식을 저장할 문자열 열이 있어야만 특성에 대한 사용자 지정 멤버 수식을 지정할 수 있습니다. 설정 하거나 수이 되는 경우는 `CustomRollupColumn` 속성 특성을 수동으로 하거나 비즈니스 인텔리전스 마법사의 사용자 지정 멤버 수식 설정 향상 기능을 사용 하 여 특성에 대 한 사용자 지정 멤버 수식을 사용할 수 있도록 합니다. 이 향상 기능을 사용하는 방법에 대한 자세한 내용은 [차원에 특성의 사용자 지정 멤버 수식 설정](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)을 참조하세요.  
+ 특성을 포함하는 차원 테이블이나 직접 관련된 테이블에 사용자 지정 멤버 수식을 저장할 문자열 열이 있어야만 특성에 대한 사용자 지정 멤버 수식을 지정할 수 있습니다. 하거나 설정할 수 있습니다이 경우는 `CustomRollupColumn` 속성 특성을 수동으로 하거나 비즈니스 인텔리전스 마법사의 사용자 지정 멤버 수식 설정 향상 기능을 사용 하 여 특성에 대 한 사용자 지정 멤버 수식을 사용 합니다. 이 향상 기능을 사용하는 방법에 대한 자세한 내용은 [차원에 특성의 사용자 지정 멤버 수식 설정](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)을 참조하세요.  
   
 ## <a name="evaluating-custom-member-formulas"></a>사용자 지정 멤버 수식 평가  
  사용자 지정 멤버 수식은 계산 멤버와 다릅니다. 사용자 지정 멤버 수식은 차원 테이블에 있는 멤버에 적용되며 멤버의 값만 제공합니다. 이와 달리 계산 멤버는 차원 테이블에 저장되지 않으며 계산 멤버 식은 차원이나 계층에 포함된 추가 멤버에 대해 데이터와 메타데이터를 모두 정의합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36091386"
 Time.[Quarter 3] * 1.5  
 ```  
   
- 사용자 지정 멤버 수식은 차원 테이블의 열에 저장됩니다. 설정 하 여 사용자 지정 롤업 수식을 사용할 수는 `CustomRollupColumn` 특성에는 속성입니다.  
+ 사용자 지정 멤버 수식은 차원 테이블의 열에 저장됩니다. 설정 하 여 사용자 지정 롤업 수식을 사용할 수는 `CustomRollupColumn` 특성의 속성입니다.  
   
  특성의 모든 멤버에 단일 MDX 식을 적용하려면 MDX 식을 리터럴 문자열로 반환하는 차원 테이블에 명명된 계산을 만듭니다. 그런 다음 구성할 특성에 `CustomRollupColumn` 속성 설정을 사용하여 명명된 계산을 지정합니다. 명명된 계산은 SQL 식으로 정의된 행 값을 반환하는 데이터 원본 뷰 테이블의 열입니다. 명명된 계산을 만드는 방법에 대한 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조하세요.  
   

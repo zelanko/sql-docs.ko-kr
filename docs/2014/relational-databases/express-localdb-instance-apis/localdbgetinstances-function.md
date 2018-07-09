@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 054a5da018b0702da0851c0bc29eda6297876724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 94dba6bd5c8900d1010b4d9e7f78402c3c9b2e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258699"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 함수
   지정된 버전의 모든 SQL Server Express LocalDB 인스턴스를 반환합니다.  

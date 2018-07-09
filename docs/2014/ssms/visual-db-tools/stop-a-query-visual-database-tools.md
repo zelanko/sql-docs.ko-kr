@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ending queries [SQL Server]
 - stopping queries
 - queries [SQL Server], stopping
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450a19f5dabbd813ae4555f07956127633a76521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e443a2bf75c4d6b7e3a8106641322f71d52e20e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240053"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>쿼리 중지(Visual Database Tools)
   쿼리에 시간이 너무 오래 걸리거나 예상한 결과를 반환하지 않은 경우 아직 완료되지 않았으면 쿼리를 중지할 수 있습니다.  

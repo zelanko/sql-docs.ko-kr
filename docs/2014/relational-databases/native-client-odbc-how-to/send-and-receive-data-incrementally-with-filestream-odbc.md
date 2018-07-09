@@ -1,31 +1,29 @@
 ---
-title: FILESTREAM (ODBC)를 사용 하 여 증분 방식으로 데이터를 주고받을 | Microsoft Docs
+title: FILESTREAM (ODBC)를 사용 하 여 증분 방식으로 데이터 보내기 및 받기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dd8da5f08825d9914e0018ffaa72b8f61eae95f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2dbe4128fb05732af795ff689c56c78a5066e862
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082261"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412262"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM을 사용하여 데이터를 증분식으로 주고받기(ODBC)
   이 예제에서는 FILESTREAM 기능을 사용하여 SQLPutData 및 SQLGetData로 데이터를 증분식으로 주고받는 방법을 보여 줍니다.  
   
- FILESTREAM 기능에 대 한 자세한 내용은 참조 [FILESTREAM 지원 &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)합니다.  
+ FILESTREAM 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원 &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  
  컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../blob/enable-and-configure-filestream.md)).  

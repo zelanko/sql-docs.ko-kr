@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 06da8df2a164ee903b59dc2a154bca926c1b82f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30b6a54f90437baad822ba285bf0fc56a6a891d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157084"
 ---
 # <a name="sourceattributeid-element-assl"></a>SourceAttributeID 요소(ASSL)
-  원본 특성의 식별자 (ID)가 포함 된 [수준](../objects/level-element-assl.md) 요소의 기반이 되 합니다.  
+  원본 특성의 식별자 (ID)를 포함 합니다 [수준](../objects/level-element-assl.md) 요소의 기반이 되 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36091152"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `SourceAttributeID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Level>합니다.  
+ 부모에 해당 요소가 `SourceAttributeID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Level>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

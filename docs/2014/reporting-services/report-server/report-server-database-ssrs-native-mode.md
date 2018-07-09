@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
 - report servers [Reporting Services], databases
@@ -20,13 +20,13 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d7dd8dd25195465aaff15bcf58ca5c4898f58274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13781ef7b1854026acf1a237deb56f4fbaf6fa98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157654"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스(SSRS 기본 모드)
   보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 저장소와는 별도로 영구 데이터 저장소를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36091883"
   
  데이터베이스는 로컬 또는 원격 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 실행될 수 있습니다. 시스템 리소스가 충분하거나 소프트웨어 라이선스를 절약하려는 경우 로컬 인스턴스를 선택하면 유용하지만 원격 컴퓨터에서 데이터베이스를 실행하면 성능이 개선될 수 있습니다.  
   
- 이전 설치 또는 다른 보고서 서버 인스턴스가 있는 다른 인스턴스에서 기존 보고서 서버 데이터베이스를 이식하거나 다시 사용할 수 있습니다. 보고서 서버 데이터베이스의 스키마는 보고서 서버 인스턴스와 호환되어야 합니다. 데이터베이스가 이전 형식일 경우 현재 형식으로 업그레이드할지 묻는 메시지가 표시됩니다. 최신 버전을 이전 버전으로 다운그레이드할 수는 없습니다. 최신 보고서 서버 데이터베이스가 있는 경우 이 데이터베이스를 이전 버전의 보고서 서버 인스턴스와 함께 사용할 수 없습니다. 최신 형식으로 보고서 서버 데이터베이스는 업그레이드 하는 방법에 대 한 자세한 내용은 참조 [보고서 서버 데이터베이스를 업그레이드](../install-windows/upgrade-a-report-server-database.md)합니다.  
+ 이전 설치 또는 다른 보고서 서버 인스턴스가 있는 다른 인스턴스에서 기존 보고서 서버 데이터베이스를 이식하거나 다시 사용할 수 있습니다. 보고서 서버 데이터베이스의 스키마는 보고서 서버 인스턴스와 호환되어야 합니다. 데이터베이스가 이전 형식일 경우 현재 형식으로 업그레이드할지 묻는 메시지가 표시됩니다. 최신 버전을 이전 버전으로 다운그레이드할 수는 없습니다. 최신 보고서 서버 데이터베이스가 있는 경우 이 데이터베이스를 이전 버전의 보고서 서버 인스턴스와 함께 사용할 수 없습니다. 최신 형식으로 보고서 서버 데이터베이스를 업그레이드 하는 방법에 대 한 자세한 내용은 참조 하십시오 [보고서 서버 데이터베이스를 업그레이드](../install-windows/upgrade-a-report-server-database.md)합니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스의 테이블 구조는 서버 작업을 위해 최적화된 것이므로 수정하거나 조정하지 마십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 현재 릴리스의 테이블 구조를 다음 릴리스에서 변경할 수 있습니다. 데이터베이스를 수정하거나 확장하면 나중에 프로그램을 업그레이드하거나 서비스 팩을 적용하기 어려울 수 있습니다. 또한 사용자 변경에 따라 보고서 서버 작업이 올바르게 수행되지 않을 수 있습니다. 예를 들면 ReportServer 데이터베이스에서 READ_COMMITTED_SNAPSHOT을 설정하면 대화형 정렬 기능이 중단됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36091883"
 ## <a name="report-server-database"></a>보고서 서버 데이터베이스  
  보고서 서버 데이터베이스는 다음 내용을 저장하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
   
--   보고서 서버에서 관리 되는 항목 (... 보고서 및 링크 된 보고서, 공유 데이터 원본, 보고서 모델 / 폴더, 리소스) 및 모든 속성 및 해당 항목과 관련된 된 다음과 같습니다.  
+-   보고서 서버에서 관리 되는 항목 (... 보고서와 연결 된 보고서, 공유 데이터 원본, 보고서 모델, 폴더, 리소스) 및 모든 속성 및 해당 항목과 연관 된 보안 설정 합니다.  
   
 -   구독 및 일정 정의  
   

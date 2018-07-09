@@ -1,5 +1,5 @@
 ---
-title: FORE_COLOR 및 BACK_COLOR 내용 (MDX) | Microsoft Docs
+title: FORE_COLOR 및 BACK_COLOR Contents (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FORE_COLOR contents
 - backgrounds [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BACK_COLOR contents
 ms.assetid: ff8f40cb-2ac4-4fc2-9761-7f1b14c17c8c
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e7e22839611c1a9060b66850371d0ac2b551337c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a4909413bb7847d4254020ed2b4135049baaea4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278257"
 ---
 # <a name="forecolor-and-backcolor-contents-mdx"></a>FORE_COLOR 및 BACK_COLOR 내용(MDX)
   `FORE_COLOR` 및 `BACK_COLOR` 셀 속성은 셀의 텍스트 및 배경의 색 정보를 Microsoft Windows 운영 체제의 빨간색-녹색-파란색(RGB) 형식으로 저장합니다.  

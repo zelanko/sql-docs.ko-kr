@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 - replication agent profiles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: deb2e3e2ea03429e2d37288e85592d54e1512af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152464"
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 복제 에이전트 프로필로 작업하는 방법에 대해 설명합니다. 각 복제 에이전트의 동작은 에이전트 프로필을 통해 설정할 수 있는 매개 변수 집합으로 제어할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 일부 에이전트에는 미리 정의된 프로필이 추가되어 있습니다. 이러한 프로필은 에이전트에 대해 한 번에 하나만 활성화됩니다.  
@@ -219,11 +219,11 @@ ms.locfileid: "36091750"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     이렇게 하면 지정된 에이전트 유형에 대해 모든 이벤트가 반환됩니다. 값을 확인 `profile_name` 사용할 프로필을 한 결과 집합에 있습니다.  
+     이렇게 하면 지정된 에이전트 유형에 대해 모든 이벤트가 반환됩니다. 값을 확인 `profile_name` 결과를 사용 하 여 프로필에 대 한 집합에 있습니다.  
   
-2.  에이전트 작업에서 에이전트를 시작 하는 경우의 값을 지정 하는 에이전트를 시작 하는 작업 단계 편집 `profile_name` 뒤에 1 단계에서 얻은 **-ProfileName** 명령줄 매개 변수입니다. 자세한 내용은 [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)을 참조하세요.  
+2.  에이전트가 에이전트 작업에서 시작 되는 경우의 값을 지정 하는 에이전트를 시작 하는 작업 단계를 편집 `profile_name` 뒤에 1 단계에서 얻은 합니다 **-ProfileName** 명령줄 매개 변수입니다. 자세한 내용은 [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)을 참조하세요.  
   
-3.  명령 프롬프트에서 에이전트를 시작할 때의 값을 지정 합니다. `profile_name` 뒤에 1 단계에서 얻은 **-ProfileName** 명령줄 매개 변수입니다.  
+3.  명령 프롬프트에서 에이전트를 시작 하는 경우의 값을 지정 `profile_name` 뒤에 1 단계에서 얻은 합니다 **-ProfileName** 명령줄 매개 변수입니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 **custom_merge**라는 병합 에이전트의 사용자 지정 프로필을 만들고, **-UploadReadChangesPerBatch** 매개 변수의 값을 변경하고, 새 **-ExchangeType** 매개 변수를 추가하고, 만들어진 프로필에 대한 정보를 반환합니다.  
@@ -248,7 +248,7 @@ ms.locfileid: "36091750"
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> (옵션) - 프로필에 대한 설명입니다.  
   
-    -   (선택 사항) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -이 속성을 설정 `true` 경우이 대 한 모든 새 에이전트 작업 <xref:Microsoft.SqlServer.Replication.AgentType> 기본적으로이 프로필을 사용 합니다.  
+    -   (선택 사항) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -이 속성을 설정할 `true` 하는 경우이 대 한 모든 새 에이전트 작업 <xref:Microsoft.SqlServer.Replication.AgentType> 기본적으로이 프로필이 사용 됩니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 메서드를 호출하여 서버에 프로필을 만듭니다.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "36091750"
   
 2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 에 프로필 이름을 설정하고 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 반환 하는 경우 `false`, 지정한 이름이 잘못 되었습니다. 또는 프로필의 서버에 존재 하지 않습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 반환 하는 경우 `false`에 지정한 이름이 잘못 되었습니다. 또는 프로필을 서버에 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 속성이 고객 프로필을 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>로 설정되어 있는지 확인합니다. <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 의 값이 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>인 프로필은 제거하면 안 됩니다.  
   

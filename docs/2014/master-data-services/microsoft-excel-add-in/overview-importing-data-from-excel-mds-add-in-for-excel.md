@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155064"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>데이터 게시(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 다른 사용자와 공유하려는 경우 데이터를 MDS 리포지토리에 게시합니다. 데이터가 게시되는 즉시 추가 기능의 다른 사용자가 다운로드할 수 있습니다.  
@@ -55,13 +55,13 @@ ms.locfileid: "36092888"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|활성 워크시트에서 다시 MDS 저장소로 데이터를 게시합니다.|[Excel에서 MDS로 데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|활성 워크시트에서 다시 MDS 저장소로 데이터를 게시합니다.|[Excel에서 MDS로 데이터를 게시 &#40;MDS 추가 기능에 Excel 용&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |MDS 저장소에서 행을 삭제하고 동시에 워크시트에서도 행을 삭제합니다.|[행을 삭제 &#40;MDS 추가 기능에 Excel 용&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
 -   [데이터 새로 고침&#40;Excel용 MDS 추가 기능&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services 추가 기능을 for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230813"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server와 함께 제공되는 OLE DB 공급자를 통해 IBM DB2/AS 400, DB2/MVS 및 DB2/Universal Database에 대한 밀어넣기 구독을 지원합니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "36088365"
   
 1.  배포자에 최신 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2를 설치합니다.  
   
-    -   사용 중인 경우 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]의 [SQL Server 2008 다운로드](http://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지는 **관련 다운로드** 섹션에서 Microsoft SQL Server 2008 기능 팩의 최신 버전에 대 한 링크를 클릭 합니다. **Microsoft SQL Server 2008 기능 팩** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
+    -   사용 중인 경우 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]에 [SQL Server 2008 다운로드](http://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지를 **관련 다운로드** 섹션에서 최신 버전의 Microsoft SQL Server 2008 기능 팩에 대 한 링크를 클릭 합니다. **Microsoft SQL Server 2008 기능 팩** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
   
     -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard를 사용하는 경우 해당 공급자가 포함된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] HIS(Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]) 서버의 최신 버전을 설치합니다.  
   
-     다음 단계에서 사용 되는 데이터 액세스 도구 설치 좋습니다 공급자를 설치 하는 것 외에도 (다운로드에 기본적으로 설치 된 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). 데이터 액세스 도구 설치 및 사용 방법은 공급자 설명서나 HIS 설명서를 참조하십시오.  
+     공급자를 설치 하는 것 외에도 다음 단계에서 사용 되는 데이터 액세스 도구를 설치 하는 권장 (다운로드 시 기본적으로 설치 됩니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). 데이터 액세스 도구 설치 및 사용 방법은 공급자 설명서나 HIS 설명서를 참조하십시오.  
   
 2.  구독자에 대한 연결 문자열을 만듭니다. 연결 문자열은 일반적인 텍스트 편집기로 만들 수 있지만 데이터 액세스 도구를 사용하는 것이 좋습니다. 데이터 액세스 도구에서 문자열을 만들려면 다음 작업을 수행하십시오.  
   
@@ -121,42 +121,42 @@ ms.locfileid: "36088365"
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR (0) FOR BIT DATA<sup>1</sup>|  
+|`image`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR (0)<sup>1</sup>|  
+|`ntext`|VARCHAR(0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|해당 사항 없음|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR (0)<sup>1</sup>|  
+|`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR (38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR (0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
-|`xml`|VARCHAR (0)<sup>1</sup>|  
+|`varbinary(max)`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
+|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`xml`|VARCHAR(0)<sup>1</sup>|  
   
- <sup>1</sup> varchar (0)로의 매핑에 대 한 자세한 내용은 다음 섹션을 참조 합니다.  
+ <sup>1</sup> VARCHAR(0)로의 매핑에 대 한 자세한 내용은 다음 섹션을 참조 하세요.  
   
 ### <a name="data-type-mapping-considerations"></a>데이터 형식 매핑 고려 사항  
  DB2 구독자로 복제 시 데이터 형식 매핑과 관련된 다음 사항을 고려해야 합니다.  
   
--   매핑할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` 및 `varbinary` DB2 CHAR, VARCHAR, CHAR FOR BIT DATA 및 VARCHAR FOR BIT DATA, 하 각각 복제의 길이 설정 하는 동일하게DB2데이터형식[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유형입니다.  
+-   매핑할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`하십시오 `varchar`, `binary` 및 `varbinary` 를 DB2의 CHAR, VARCHAR, CHAR FOR BIT DATA 및 VARCHAR FOR BIT DATA에 각각 복제의 길이 설정 합니다 와동일하도록DB2데이터형식[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식입니다.  
   
      이렇게 하면 DB2의 페이지 크기를 최대 행 크기를 수용할 수 있을 정도로 늘릴 수 있는 한 생성된 테이블을 구독자에서 성공적으로 만들 수 있습니다. DB2 데이터베이스에 액세스하는 데 사용되는 로그인은 테이블을 DB2로 복제할 수 있는 충분한 크기의 테이블 공간에 액세스할 수 있어야 합니다.  
   
--   DB2는 최대 32KB의 VARCHAR 열을 지원할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 일부 큰 개체 열을 DB2 VARCHAR 열로 적절하게 매핑할 수 있습니다. 그러나 복제에서 사용하는 DB2용 OLE DB 공급자에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 DB2의 큰 개체로 매핑할 수 없습니다. 이러한 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, 및 `nvarchar(max)` 열은 생성 된 생성된 스크립트에서 varchar (0)에 매핑됩니다. 길이 값 0은 스크립트를 구독자에 적용하기 전에 적절한 값으로 바꾸어야 합니다. 데이터 형식의 길이를 변경하지 않으면 DB2 구독자에서 테이블을 만들려고 할 때 DB2에서 오류 604가 발생합니다. 오류 604는 데이터 형식의 전체 자릿수나 길이 특성이 유효하지 않음을 나타냅니다.  
+-   DB2는 최대 32KB의 VARCHAR 열을 지원할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 일부 큰 개체 열을 DB2 VARCHAR 열로 적절하게 매핑할 수 있습니다. 그러나 복제에서 사용하는 DB2용 OLE DB 공급자에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 DB2의 큰 개체로 매핑할 수 없습니다. 이러한 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`합니다 `ntext`, 및 `nvarchar(max)` 열은 생성된 된 생성 스크립트에서 VARCHAR(0)에 매핑됩니다. 길이 값 0은 스크립트를 구독자에 적용하기 전에 적절한 값으로 바꾸어야 합니다. 데이터 형식의 길이를 변경하지 않으면 DB2 구독자에서 테이블을 만들려고 할 때 DB2에서 오류 604가 발생합니다. 오류 604는 데이터 형식의 전체 자릿수나 길이 특성이 유효하지 않음을 나타냅니다.  
   
      복제하는 원본 테이블에 대한 지식을 바탕으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 가변 길이의 DB2 항목에 매핑하는 것이 적절한지 결정하고 사용자 지정 생성 스크립트에 적절한 최대 길이를 지정합니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "36088365"
   
      큰 개체 열에 대한 적절한 매핑이 없으면 열이 복제되지 않도록 아티클에 대해 열 필터링을 사용해 보십시오. 자세한 내용은 [게시된 데이터 필터링](../publish/filter-published-data.md)을 참조하세요.  
   
--   복제할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` 및 `nvarchar` d b 2의 CHAR 및 VARCHAR에 복제 사용 하 여 동일한 길이 지정자에 대 한 DB2 형식에 대 한는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유형입니다. 그러나 데이터 형식의 길이가 생성된 DB2 테이블에 비해 너무 작을 수도 있습니다.  
+-   복제 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` 하 고 `nvarchar` 으로 DB2 형식에 대 한 복제 사용은 같은 길이 지정 자가를 DB2의 CHAR 및 VARCHAR는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식입니다. 그러나 데이터 형식의 길이가 생성된 DB2 테이블에 비해 너무 작을 수도 있습니다.  
   
-     일부 DB2 환경에서는 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` 데이터 항목은 단일 바이트 문자에 제한 되지 않습니다; CHAR 또는 VARCHAR 항목의 길이이를 고려해 야 합니다. 또한 필요한 경우 *시프트 인* 및 *시프트 아웃* 문자를 사용해 볼 수 있습니다. 이 있는 테이블을 복제 하는 경우 `nchar` 및 `nvarchar` 열을 사용자 지정 생성 스크립트에 데이터 형식에 대 한 보다 큰 최대 길이 지정 해야 할 수 있습니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
+     일부 DB2 환경에서는 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` 데이터 항목은 싱글바이트 문자 제한 CHAR 또는 VARCHAR 항목의 길이이를 고려해 야 합니다. 또한 필요한 경우 *시프트 인* 및 *시프트 아웃* 문자를 사용해 볼 수 있습니다. 사용 하 여 테이블을 복제 하는 경우 `nchar` 및 `nvarchar` 열 사용자 지정 생성 스크립트에서 데이터 형식에 대 한 보다 큰 최대 길이 지정 해야 할 수 있습니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

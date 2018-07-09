@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - modifying operators
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aa1fbe6495aa7fc4ee81d6a8f93775f311b9e87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6ec4ffcad8d88a14ee9fdaeed9fd286195a16a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149814"
 ---
 # <a name="edit-an-operator"></a>운영자 편집
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 알림 메시지 수신을 위한 운영자의 응답 가능 여부와 전자 메일, 호출기 및 Net Send 주소를 편집하는 방법에 대해 설명합니다.  
@@ -72,9 +72,9 @@ ms.locfileid: "36091663"
   
      *operator_name***속성** 대화 상자에 포함된 사용 가능한 옵션에 대한 자세한 내용은 다음을 참조하세요.  
   
-    -   [New 연산자 및 operator 속성 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [운영자 속성 및 새로운 연산자 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [운영자 속성: New 연산자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [연산자 속성: 새 운영자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [운영자 속성&#40;기록 페이지&#41;](operator-properties-history-page.md)  
   
@@ -107,6 +107,6 @@ ms.locfileid: "36091663"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)합니다.  
+ 자세한 내용은 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)합니다.  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2f254100d2f77d1e51faa5b295af91fe86524fe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8199de0df5b7910c547867fa62e5670670510988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183310"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 제공되는 데이터 품질 솔루션을 통해 데이터 관리자 또는 IT 전문가는 데이터의 품질을 유지 관리하고 데이터가 비즈니스 용도에 적합한지 보장할 수 있습니다. DQS는 컴퓨터 기반 방식과 대화형 방식 모두를 사용하여 데이터 원본의 무결성과 품질을 관리할 수 있게 해주는 지식 기반 솔루션입니다. DQS를 사용하면 데이터에 대한 지식을 검색, 구축 및 관리할 수 있습니다. 그런 후 이러한 지식을 사용하여 데이터 정리, 일치 및 프로파일링을 수행할 수 있습니다. 또한 DQS 데이터 품질 프로젝트에서 참조 데이터 공급자의 클라우드 기반 서비스를 활용할 수도 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36090740"
   
 -   **참조 데이터 서비스:** 참조 데이터 공급자의 서비스를 사용하여 데이터의 품질을 확인합니다. Windows Azure Marketplace DataMarket에서 참조 데이터 서비스를 사용하여 데이터를 쉽게 정리, 유효성 검사, 일치 및 강화할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
   
--   **프로파일링:** 데이터 원본의 분석을 통해 기술 자료 검색, 도메인 관리, 일치 및 데이터 정리 프로세스의 모든 단계에서 데이터의 품질에 대한 이해력을 제공합니다. 프로파일링은 DQS 데이터 품질 솔루션의 강력한 도구입니다. 프로파일링이 지식 관리, 일치 또는 데이터 정리만큼 중요한 데이터 품질 솔루션을 만들 수 있습니다. 자세한 내용은 참조 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)합니다.  
+-   **프로파일링:** 데이터 원본의 분석을 통해 기술 자료 검색, 도메인 관리, 일치 및 데이터 정리 프로세스의 모든 단계에서 데이터의 품질에 대한 이해력을 제공합니다. 프로파일링은 DQS 데이터 품질 솔루션의 강력한 도구입니다. 프로파일링이 지식 관리, 일치 또는 데이터 정리만큼 중요한 데이터 품질 솔루션을 만들 수 있습니다. 자세한 내용은 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)합니다.  
   
 -   **모니터링:** 데이터 품질 활동의 상태를 추적 및 결정합니다. 모니터링을 사용하면 데이터 품질 솔루션이 원래 의도한 기능을 수행하는지 확인할 수 있습니다. 자세한 내용은 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)을 참조하세요.  
   

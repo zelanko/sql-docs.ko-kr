@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e414fe4737caa5c1e9e862555ecd9be3286b592a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a611237e283ad10a6dfd8433d08ef2b3708dd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258909"
 ---
 # <a name="developer39s-guide-database-engine"></a>개발자&#39;가이드 (데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 응용 프로그램 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공합니다.  

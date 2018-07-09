@@ -22,18 +22,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 645882666ba82f965fddff9e1c886e97ff092a90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155355"
 ---
 # <a name="file-element-assl"></a>File 요소(ASSL)
-  구성 하는 파일 중 하나를 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) 요소입니다.  
+  구성 하는 파일 중 하나를 정의 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36082551"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Files` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
+ 부모에 해당 하는 요소가 `Files` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 요소 &#40;ASSL&#41;](server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](server-element-assl.md)   
  [Database 요소 &#40;ASSL&#41;](database-element-assl.md)   
  [Assemblies 요소 &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Assembly 요소 &#40;ASSL&#41;](assembly-element-assl.md)   
@@ -71,7 +71,7 @@ ms.locfileid: "36082551"
  [데이터 요소 &#40;ASSL&#41;](data-element-assl.md)   
  [DataBlock 데이터 형식 &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
  [요소를 차단 &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
- [요소를 차단 &#40;ASSL&#41;](block-element-assl.md)   
+ [블록 요소 &#40;ASSL&#41;](block-element-assl.md)   
  [ComAssembly 데이터 형식 &#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   

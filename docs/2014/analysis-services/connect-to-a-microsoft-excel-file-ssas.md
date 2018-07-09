@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connexcelfile.f1
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48de9fd006c3918a23227a097743a95e138b577e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 022bdfa3e94aa2bd94c8f1806391b877a9c500bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155484"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Microsoft Excel 파일에 연결(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 로컬 컴퓨터에 저장되어 있는 Microsoft Excel 파일에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

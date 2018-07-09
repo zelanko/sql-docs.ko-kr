@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 337209ac91faecab319f66bcb9b61252e3444f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 526e25bcfebad13868d41a23bcee50caea23bda6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953648"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422812"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "32953648"
   
 -   로깅을 지정하는 데이터 원본에 연결합니다.  
   
--   호출 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 프로 파일링을 해당 제어 드라이버별 특성을 설정할 수 있습니다.  
+-   호출 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 프로 파일링 해당 컨트롤에 드라이버별 특성을 설정할 수 있습니다.  
   
  응용 프로그램 프로세스는 각자 고유의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 복사본을 받으며, 프로파일링은 드라이버 복사본과 응용 프로그램 프로세스의 조합에 대해 전역으로 적용됩니다. 응용 프로그램의 어떤 항목이 프로파일링을 활성화하면 프로파일링은 해당 응용 프로그램의 드라이버에서 활성 상태인 모든 연결에 대한 정보를 기록합니다. 명확하게 프로파일링을 요청하지 않은 연결도 포함됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "32953648"
   
  응용 프로그램이 로그 파일에 프로파일링을 시작한 상태에서 두 번째 응용 프로그램이 동일한 로그 파일에 프로파일링을 시작하려고 시도하면 두 번째 응용 프로그램은 어떠한 프로파일링 데이터도 기록할 수 없습니다. 첫 번째 응용 프로그램이 드라이버를 언로드한 후 두 번째 응용 프로그램이 프로파일링을 시작하면 두 번째 응용 프로그램이 첫 번째 응용 프로그램의 로그 파일을 덮어씁니다.  
   
- 응용 프로그램을 호출 하는 경우 드라이버가 SQL_ERROR를 반환 응용 프로그램에 프로 파일링을 사용 하는 데이터 원본에 연결 된 경우 **SQLSetConnectOption** 로깅을 시작 합니다. 에 대 한 호출 **SQLGetDiagRec** 다음 다음을 반환 합니다.  
+ 응용 프로그램을 호출 하면 드라이버가 SQL_ERROR를 반환 응용 프로그램에 프로 파일링을 사용 하는 데이터 원본에 연결 된 경우 **SQLSetConnectOption** 로깅을 시작 합니다. 에 대 한 호출 **SQLGetDiagRec** 다음 다음을 반환 합니다.  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -90,7 +90,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
-|트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 응용 프로그램이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
+|의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 응용 프로그램이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
 |SQLPrepares|수가 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) SQL_PERF_START 이후 호출 합니다.|  
 |ExecDirects|수가 **SQLExecDirect** SQL_PERF_START 이후 호출 합니다.|  
 |SQLExecutes|수가 **SQLExecute** SQL_PERF_START 이후 호출 합니다.|  
@@ -126,8 +126,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [프로 파일링 ODBC 드라이버 성능 방법 도움말 항목 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [ODBC 드라이버 성능 방법 도움말 항목을 프로 파일링 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

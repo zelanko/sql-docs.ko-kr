@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163884"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>지도 자오선 속성 대화 상자, 레이블
-  사용 하 여 **MapMeridian 속성** 지도 뷰포트의 세로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 자오선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  
+  사용 된 **MapMeridian 속성** 지도 뷰포트의 세로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 자오선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  
   
 -   **평면**. Y 좌표입니다.  
   

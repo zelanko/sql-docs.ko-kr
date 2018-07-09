@@ -1,13 +1,11 @@
 ---
-title: 비동기 모드와 SQLCancel | Microsoft Docs
+title: 비동기 모드 및 SQLCancel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 027cb897dae84986369148c0dbdacb5f96f4ec71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4465e572aaa0068e5a5c9f84c1a6525438e75c17
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080398"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431572"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>비동기 모드와 SQLCancel
   일부 ODBC 함수는 동기적 또는 비동기적으로 작동할 수 있습니다. 응용 프로그램에서는 문 핸들이나 연결 핸들에 대해 비동기 작업을 설정할 수 있습니다. 연결 핸들에 대해 비동기 작업 옵션을 설정하면 연결 핸들의 모든 문 핸들에도 적용됩니다. 응용 프로그램에서는 다음 문을 사용하여 비동기 작업을 설정하거나 해제합니다.  
@@ -50,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  명령 실행이 완료되었는지 테스트할 때 응용 프로그램은 드라이버에 대해 동일한 매개 변수를 사용하여 동일한 함수를 호출합니다. 드라이버는 서버로부터 아직 응답을 받지 않은 경우 다시 SQL_STILL_EXECUTING을 반환합니다. 응용 프로그램은 SQL_STILL_EXECUTING 이외의 코드가 반환될 때까지 명령을 주기적으로 테스트해야 합니다. 응용 프로그램은 다른 반환 코드(SQL_ERROR 포함)가 수신되면 명령이 완료된 것으로 판단할 수 있습니다.  
   
- 명령이 오랫동안 보류되는 경우도 있습니다. 응용 프로그램을 회신을 기다리지 않고 명령을 취소 하는 경우 가능한 것 호출 하 여 **SQLCancel** 동일한 문을 사용 하 여 처리 중인 명령으로 처리 합니다. 이 유일한 경우 **SQLCancel** 사용 해야 합니다. 사용 **SQLCancel** 결과 통해 일부 처리 있을 때 설정 하 고 결과 집합의 나머지 부분을 취소 하려고 합니다. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) 또는 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 취소는 보류 중인 결과 집합의 나머지 부분을 사용해 **SQLCancel**합니다.  
+ 명령이 오랫동안 보류되는 경우도 있습니다. 응용 프로그램을 회신을 기다리지 않고 명령을 취소 하는 경우 수행할 수 있는 호출 하 여 **SQLCancel** 동일한 문을 사용 하 여 처리 중인 명령으로 처리 합니다. 이 오직 **SQLCancel** 사용 해야 합니다. 일부 프로그래머가 사용 하 여 **SQLCancel** 결과 통해 일부 처리 않은 경우 설정 하 고 결과 집합의 나머지 부분을 취소 하려고 합니다. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) 나 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 취소를 보류 중인 결과 집합의 나머지 부분에 사용할지 **SQLCancel**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client ODBC 드라이버 응용 프로그램 만들기](creating-a-driver-application.md)  

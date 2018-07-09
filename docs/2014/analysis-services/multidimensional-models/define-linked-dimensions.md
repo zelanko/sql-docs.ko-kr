@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155364"
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
   연결된 차원은 동일한 버전 및 호환성 수준의 다른 Analysis Services 데이터베이스에서 만들어지고 저장된 차원을 기반으로 합니다. 연결된 차원을 통해 하나의 데이터베이스에 차원을 만들고 저장하고 유지 관리할 수 있으며 이와 동시에 여러 데이터베이스의 사용자가 이 차원을 사용하도록 할 수 있습니다. 연결된 차원은 사용자에게 다른 차원과 동일하게 나타납니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36092519"
 >  새로 고침을 사용할 수 없기 때문에 대부분의 Analysis Services 개발자는 차원을 연결하는 대신 복사합니다. 동일한 솔루션 내에서 프로젝트 간에 차원을 복사할 수 있습니다. 자세한 내용은 [SSAS에서 연결된 차원의 새로 고침](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)을 참조하십시오.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 차원을 제공하는 원본 데이터베이스와 차원을 사용하는 현재 데이터베이스는 버전 및 호환성 수준이 같아야 합니다. 자세한 내용은 참조 [다차원 데이터베이스의 호환성 수준을 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)합니다.  
+ 차원을 제공하는 원본 데이터베이스와 차원을 사용하는 현재 데이터베이스는 버전 및 호환성 수준이 같아야 합니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준을 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)합니다.  
   
  원본 데이터베이스가 배포되고 온라인 상태여야 합니다. 연결된 개체를 게시하거나 사용하는 서버가 작업을 허용하도록 구성되어야 합니다(아래 참조).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36092519"
   
 2.  연결 관리자에서 공급자가 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**으로 설정되어 있는지 확인합니다.  
   
-3.  서버 이름을 입력 하십시오 (사용 하 여 *servername*\\*instancename* 명명 된 인스턴스의 경우)<sup>1</sup> 또는 형식 **localhost** 를 동일한 컴퓨터에서 실행 되는 Analysis Services 서버에 연결 합니다.  
+3.  서버의 이름을 입력 (사용 하 여 *servername*\\*instancename* 명명 된 인스턴스에 대 한)<sup>1</sup> 종류나 **localhost** 를 동일한 컴퓨터에서 실행 되는 Analysis Services 서버에 연결 합니다.  
   
 4.  연결을 위해 Windows 인증을 사용합니다.  
   

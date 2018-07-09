@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d454cdcc6a87335670f483ccc06a7547e89dc7c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44225f211ac013edd82de08c9ca82f22cb349f96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209873"
 ---
 # <a name="lock-element-xmla"></a>Lock 요소(XMLA)
-  지정된 된 개체를 잠급니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+  지정된 된 개체를 잠급니다를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,10 +63,10 @@ ms.locfileid: "36092485"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[ID](../xml-elements-properties/id-element-xmla.md), [모드](../xml-elements-properties/mode-element-xmla.md), [개체](../xml-elements-properties/object-element-xmla.md)|  
+|자식 요소|[ID](../xml-elements-properties/id-element-xmla.md)하십시오 [모드](../xml-elements-properties/mode-element-xmla.md), [개체](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Lock` 명령은 현재 활성 트랜잭션 컨텍스트 내에서 공유되거나 배타적으로 사용되는 개체를 잠급니다. 데이터베이스 관리자 또는 서버 관리자만 명시적으로 `Lock` 명령을 실행할 수 있습니다. 개체가 잠겨 있으면 잠금을 해제할 때까지 트랜잭션을 커밋할 수 없습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 공유 잠금과 배타적 잠금이라는 두 가지 잠금 유형을 지원합니다. 지 원하는 잠금 유형에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 참조 [Mode 요소 &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md)합니다.  
+ `Lock` 명령은 현재 활성 트랜잭션 컨텍스트 내에서 공유되거나 배타적으로 사용되는 개체를 잠급니다. 데이터베이스 관리자 또는 서버 관리자만 명시적으로 `Lock` 명령을 실행할 수 있습니다. 개체가 잠겨 있으면 잠금을 해제할 때까지 트랜잭션을 커밋할 수 없습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 공유 잠금과 배타적 잠금이라는 두 가지 잠금 유형을 지원합니다. 지 원하는 잠금 유형에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 참조 하세요 [Mode 요소 &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md)합니다.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 데이터베이스 잠금만 허용합니다. `Object` 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 개체 참조를 포함해야 합니다. `Object` 요소를 지정하지 않거나 `Object` 요소가 데이터베이스 이외의 개체를 참조하면 오류가 발생합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36092485"
  모든 잠금은 현재 트랜잭션의 컨텍스트에 유지됩니다. 현재 트랜잭션이 커밋 또는 롤백되면 해당 트랜잭션 내에 정의된 모든 잠금이 자동으로 해제됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Unlock 요소 &#40;XMLA&#41;](lock-element-xmla.md)   
+ [요소 잠금 해제 &#40;XMLA&#41;](lock-element-xmla.md)   
  [명령 &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

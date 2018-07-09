@@ -20,18 +20,18 @@ helpviewer_keywords:
 - IncrementalProcessingNotifications element
 ms.assetid: 46f3c9d0-46cc-4833-8f15-7831207f57ce
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c19cc7a3a0b4ade2dab73b3ef5d28bc33c2ac57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14d49b5e7a4d86aec5a2ac555cb67094b30b2fef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230003"
 ---
 # <a name="incrementalprocessingnotifications-element-assl"></a>IncrementalProcessingNotifications 요소(ASSL)
-  컬렉션을 포함 [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) 정보를 제공 하는 요소는 [ProactiveCaching](../objects/proactivecaching-element-assl.md) 의 진행 상태를 확인 하기 위해 실행할 쿼리에 대 한 요소 증분 처리 합니다.  
+  컬렉션을 포함 [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) 정보를 제공 하는 요소는 [ProactiveCaching](../objects/proactivecaching-element-assl.md) 의 진행률을 확인 하기 위해 실행할 쿼리에 대 한 요소 증분 처리 합니다.  
   
 ## <a name="syntax"></a>구문  
   

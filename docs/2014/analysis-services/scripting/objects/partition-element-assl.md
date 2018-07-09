@@ -1,5 +1,5 @@
 ---
-title: Partition 요소 (ASSL) | Microsoft Docs
+title: 요소 (ASSL) 파티션 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partition element
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 371c6fbb2d77993a0d6113101c0f074b88009ede
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c298ec80f1bb1f17d97e36f2ce93b6efbf924508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209973"
 ---
 # <a name="partition-element-assl"></a>Partition 요소(ASSL)
-  파티션을 정의 [MeasureGroup](group-element-assl.md) 요소 또는의-라인 파티션 바인딩을 [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) 요소입니다.  
+  정의 된 [MeasureGroup](group-element-assl.md) 요소나는 아웃 아웃오브 라인 파티션 바인딩을 [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36090950"
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Description](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Name](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Source](../properties/source-element-binding-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Type](../properties/type-element-partition-assl.md)|  
+|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md)합니다 [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md)를 [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [주석](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)합니다 [CurrentStorageMode](../properties/storagemode-element-assl.md), [설명을](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md)를 [ID](../properties/id-element-assl.md)합니다 [LastProcessed](../properties/lastprocessed-element-assl.md)를 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [이름](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md)하십시오 [ProcessingPriority](../properties/processingpriority-element-assl.md), [ RemoteDatasourceID](../properties/datasourceid-element-assl.md), [조각을](../properties/slice-element-assl.md), [소스](../properties/source-element-binding-assl.md)를 [상태](../properties/state-element-assl.md)를 [StorageLocation](../properties/storagelocation-element-assl.md), [ StorageMode](../properties/storagemode-element-assl.md), [형식](../properties/type-element-partition-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -115,7 +115,7 @@ ms.locfileid: "36090950"
   
     -   [RemoteDatasourceID](../properties/datasourceid-element-assl.md)  
   
-    -   [분할 영역](../properties/slice-element-assl.md)  
+    -   [조각](../properties/slice-element-assl.md)  
   
     -   [ProactiveCaching](proactivecaching-element-assl.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36090950"
   
      위의 요소를 사용할 경우 오류가 발생할 수 있습니다.  
   
--   [소스](../properties/source-element-binding-assl.md) 요소만 수락 **쿼리** 바인딩.  
+-   합니다 [소스](../properties/source-element-binding-assl.md) 요소는만 수락 **쿼리** 바인딩.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Partition>합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240373"
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
   개별 보고서 및 리소스에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 보고서 실행, 리소스 보기, 속성 수정, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자는 보고서나 리소스에 대한 액세스를 허용하는 역할 할당이 만들어져 있어야 합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36090382"
  보고서에 포함한 링크로 인해 실수로 악성 스크립트가 실행되는 위험을 완화하려면 신뢰할 수 있는 출처의 데이터에만 하이퍼링크를 바인딩하십시오. 쿼리 결과의 데이터 및 하이퍼링크에 데이터를 바인딩하는 식으로 악용될 수 있는 링크를 만들지 않았는지 확인하십시오. 예를 들어 여러 데이터 집합 필드의 데이터를 연결하는 식을 기반으로 하이퍼링크를 만들지 않도록 합니다. 필요한 경우 보고서에서 "원본 보기"를 사용하여 의심스러운 스크립트와 URL이 있는지 확인합니다.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>매개 변수가 있는 보고서의 SQL 삽입 공격 위험 완화  
- 형식의 매개 변수가 포함 된 보고서에서는 `String`(유효한 값 목록이 라고도 함)는 사용 가능한 값 목록을 사용 해야 하 고 보고서를 실행 하는 모든 사용자에는 보고서에서 데이터를 확인 하는 데 필요한 사용 권한만 있는지 확인 합니다. 형식의 매개 변수를 정의 하는 경우 `String`, 사용자가 모든 값을 사용할 수 있는 입력란으로 표시 됩니다. 사용 가능한 값 목록은 입력할 수 있는 값을 제한합니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되어 있고 사용 가능한 값 목록을 사용하지 않는 경우에는 보고서 사용자가 입력란에 SQL 구문을 입력할 수 있으므로 보고서와 서버가 SQL 인젝션 공격을 받을 가능성이 있습니다. 사용자에게 새 SQL 문 실행을 위한 충분한 권한이 있으면 서버에 원하지 않은 결과가 발생할 수 있습니다.  
+ 형식의 매개 변수가 포함 된 보고서에서는 `String`(유효한 값 목록이 라고도 함)는 사용 가능한 값 목록을 사용 해야 하 고 보고서를 실행 하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 합니다. 형식의 매개 변수를 정의 하는 경우 `String`, 사용자가 모든 값을 사용할 수 있는 텍스트 상자가 표시 됩니다. 사용 가능한 값 목록은 입력할 수 있는 값을 제한합니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되어 있고 사용 가능한 값 목록을 사용하지 않는 경우에는 보고서 사용자가 입력란에 SQL 구문을 입력할 수 있으므로 보고서와 서버가 SQL 인젝션 공격을 받을 가능성이 있습니다. 사용자에게 새 SQL 문 실행을 위한 충분한 권한이 있으면 서버에 원하지 않은 결과가 발생할 수 있습니다.  
   
  보고서 매개 변수가 쿼리 매개 변수에 연결되어 있지 않고 매개 변수 값이 보고서에 포함된 경우에는 보고서 사용자가 식 구문 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel 또는 HTML로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  
   

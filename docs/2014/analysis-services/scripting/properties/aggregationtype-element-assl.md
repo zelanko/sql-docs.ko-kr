@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2241c85d9cc83e4cf48affacef10021eec7bc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183220"
 ---
 # <a name="aggregationtype-element-assl"></a>AggregationType 요소(ASSL)
-  저장 되는 집계 유형을 정의 [파티션](../objects/partition-element-assl.md) 요소입니다.  
+  저장 되는 집계 유형을 정의 합니다 [파티션](../objects/partition-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36091377"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36091377"
 |-----------|-----------------|  
 |*IndexedView*|집계가 인덱싱된 뷰에 저장됩니다.|  
 |*테이블*|집계가 테이블에 저장됩니다.|  
-|*사용자 정의*|집계가 사용자 정의됩니다.|  
+|*UserDefined*|집계가 사용자 정의됩니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `AggregationType`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.AggregationInstance>입니다.  
   

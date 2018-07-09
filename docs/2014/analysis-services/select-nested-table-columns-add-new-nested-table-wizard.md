@@ -1,5 +1,5 @@
 ---
-title: 중첩된 테이블 열 선택 (새 중첩된 테이블 마법사 추가) | Microsoft Docs
+title: (새 중첩된 테이블 추가 마법사)는 중첩된 테이블 열 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34c7311d6f297e59d96dbe73888aeacbf1b284e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcf3c3b0b628cfb7aac93b24a1fc4c874ceb57e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278300"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>중첩 테이블 열 선택(새 중첩 테이블 추가 마법사)
   **중첩 테이블 열 선택** 페이지를 사용하여 중첩 테이블에 포함시킬 특성 및 측정값을 선택하고 마이닝 모델에서 해당 특성 및 측정값을 사용하는 방식을 정의할 수 있습니다.  

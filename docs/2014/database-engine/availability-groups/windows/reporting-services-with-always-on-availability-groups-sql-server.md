@@ -1,39 +1,38 @@
 ---
-title: AlwaysOn 가용성 그룹 (SQL Server)에 포함 된 reporting Services | Microsoft Docs
+title: Reporting Services AlwaysOn 가용성 그룹 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ec7c724049ad6ab85b72f2dee44ebcad0bf5ed07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fb5a36175e735393e079cdf7b611a11d3d50a834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153124"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Reporting Services(SQL Server)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용할 경우의 중요한 이점 중 하나는 읽기 가능한 보조 복제본을 보고 데이터 원본으로 사용하는 것과 동시에 보조 복제본이 주 데이터베이스에 대한 장애 조치(Failover) 기능을 제공할 수 있다는 점입니다.  
   
- 에 대 한 일반적인 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], 참조 [SQL Server 2012에 대 한 AlwaysOn FAQ (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)합니다.  
+ 에 대 한 일반 정보 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [SQL Server 2012에 대 한 AlwaysOn FAQ (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)합니다.  
   
    
   
-##  <a name="bkmk_requirements"></a> Reporting Services 및 AlwaysOn 가용성 그룹 사용을 위한 요구 사항  
+##  <a name="bkmk_requirements"></a> Reporting Services 및 AlwaysOn 가용성 그룹 사용에 대 한 요구 사항  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
@@ -176,7 +175,7 @@ ms.locfileid: "36093388"
   
 ## <a name="see-also"></a>관련 항목  
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
-  [AlwaysOn 가용성 그룹 (SQL Server)](always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 시작 &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)   
+  [AlwaysOn 가용성 그룹 (SQL Server)](always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹을 시작 하기 &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)   
  [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

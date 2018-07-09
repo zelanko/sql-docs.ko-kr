@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeDimensionBinding data type
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44e652f281b6c5164b4ccc44fe85ed2b0a0b5a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e511f26166e7f8457b2423df2bd3030e695edde1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157344"
 ---
 # <a name="cubedimensionbinding-data-type-assl"></a>CubeDimensionBinding 데이터 형식(ASSL)
-  바인딩을 나타내는 파생된 데이터 형식을 정의 [차원](../objects/dimension-element-assl.md), [측정값](../objects/measure-element-assl.md), 또는 [MiningModel](../objects/miningmodel-element-assl.md) 큐브 차원에 대 한 요소입니다.  
+  바인딩을 나타내는 파생된 데이터 형식을 정의 [차원](../objects/dimension-element-assl.md)를 [측정값](../objects/measure-element-assl.md), 또는 [MiningModel](../objects/miningmodel-element-assl.md) 큐브 차원에 대 한 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,17 +60,17 @@ ms.locfileid: "36092973"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[CubeDimensionID](../properties/id-element-assl.md), [CubeID](../properties/cubeid-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md), [필터](../properties/filter-element-trace-assl.md)|  
+|자식 요소|[CubeDimensionID](../properties/id-element-assl.md)하십시오 [CubeID](../properties/cubeid-element-assl.md)를 [DataSourceID](../properties/datasourceid-element-assl.md), [필터](../properties/filter-element-trace-assl.md)|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `Binding` 유형의 Analysis Services Scripting Language (ASSL) 개체 테이블을 포함 하 여는 `Binding` 유형과의 상속 계층 구조 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md)합니다.  
+ 에 대 한 추가 정보에 대 한는 `Binding` 형식, Analysis Services Scripting Language (ASSL) 개체 테이블을 비롯 한는 `Binding` 형식과 상속 계층 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md)합니다.  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.CubeDimensionBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -1,14 +1,11 @@
 ---
-title: sys.sp_rda_reconcile_indexes (Transact SQL) | Microsoft Docs
+title: sys.sp_rda_reconcile_indexes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f020a11a0fa41d7cbd939279058e9292c5d488c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff2352fde5124f1f0db140914799f2a6d75f88d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997850"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431922"
 ---
 # <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  원격 테이블의 인덱스를 조정 하는 스키마 작업을 큐에 넣습니다. 이 작업이 성공적으로 완료 되 면 원격 테이블의 로컬 스트레치 사용 테이블에 존재 하는 동일한 인덱스 설정 됩니다.  
+  원격 테이블의 인덱스를 조정 하는 스키마 작업 큐에 넣습니다. 이 태스크를 성공적으로 완료 되 면 원격 테이블에 로컬 스트레치 사용 테이블에 존재 하는 동일한 인덱스입니다.  
   
- 다른 작업을 호출 하는 경우 인덱스를 조정 하려면 대기 **sp_rda_reconcile_indexes**,이 저장된 프로시저는 중복 작업을 큐 대기 하지 않습니다.  
+ 다른 작업을 호출 하는 경우 인덱스를 조정 하려면 지연 없는 경우 **sp_rda_reconcile_indexes**,이 저장된 프로시저는 중복 작업 큐 대기 하지 않습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +50,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 >0(실패)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

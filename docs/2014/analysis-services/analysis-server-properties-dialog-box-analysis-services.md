@@ -1,5 +1,5 @@
 ---
-title: 분석 서버 속성 대화 상자 (Analysis Services) | Microsoft Docs
+title: Analysis Server 속성 대화 상자 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260036"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>분석 서버 속성 대화 상자(Analysis Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **Analysis Server 속성** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 일반, 언어/데이터 정렬 및 보안 설정을 지정할 수 있습니다. **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택하여 **Analysis Server 속성** 대화 상자를 표시할 수 있습니다. **Analysis Server 속성** 대화 상자에는 다음 속성이 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "36088733"
   
 -   **대/소문자 구분** 은 관련된 언어 또는 알파벳에 대해 제공된 사전 규칙을 기준으로 데이터를 정렬 및 비교하고 대문자와 소문자를 구분하는 데 사용됩니다.  
   
-     이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 대문자와 소문자가 동일한 것으로 간주합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 여부 소문자의 정렬 문자와 관련 된 대문자 시기를 정의 하지 않습니다 **대/소문자 구분** 선택 하지 않으면 합니다.  
+     이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 대문자와 소문자가 동일한 것으로 간주합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 여부를 소문자의 정렬 순서 문자와 관련 된 대문자 시기를 정의 하지 않습니다 **대/소문자 구분** 선택 하지 않으면.  
   
 -   **악센트 구분** 은 관련된 언어 또는 알파벳에 대해 제공된 사전 규칙을 기준으로 데이터를 정렬 및 비교하고 악센트가 있는 문자와 악센트가 없는 문자를 구분하는 데 사용됩니다. 예를 들어 'a'와 'á'는 같지 않습니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36088733"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스의 서버 모드 확인](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Analysis Services에서 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)   
+ [Analysis Services의 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services에서 지 원하는 인증 방법](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [역할 및 사용 권한 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [언어 및 데이터 정렬 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  

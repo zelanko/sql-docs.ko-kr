@@ -1,5 +1,5 @@
 ---
-title: 테이블 및 열 (SQLXML 4.0)에 XSD 요소와 특성의 기본 매핑이 | Microsoft Docs
+title: 기본 매핑의 XSD 요소 및 특성 테이블 및 열 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,24 +28,24 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbed4eee82d0bd7d57b7e4073d1f78f9150f9e6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 515cd325572904339bcb58d5fb5758cae70b0b75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240613"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 기본 매핑(SQLXML 4.0)
   기본적으로 주석이 추가된 XSD 스키마에서 복합 유형의 요소는 지정된 데이터베이스에 있는 같은 이름의 테이블(뷰)에 매핑되고 단순 유형의 요소 또는 특성은 테이블에 있는 같은 이름의 열에 매핑됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-default-mapping"></a>1. 기본 매핑 지정  
- 이 예에서는 XSD 스키마에 주석이 지정되지 않습니다. **\<Person.Contact >** 요소는 복합 유형 및, 따라서 기본적으로 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑합니다. 모든 특성 (ContactID, FirstName, LastName)은  **\<Person.Contact >** 요소는 단순 유형이 고 기본적으로 Person.Contact 테이블에서 같은 이름의 열에 매핑됩니다.  
+ 이 예에서는 XSD 스키마에 주석이 지정되지 않습니다. 합니다  **\<Person.Contact >** 요소는 복합 유형 및, 따라서 기본적으로 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑합니다. 모든 특성 (ContactID, FirstName, LastName)은  **\<Person.Contact >** 요소는 단순 유형 및 기본적으로 Person.Contact 테이블에 있는 같은 이름의 열에 매핑합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,7 +82,7 @@ ms.locfileid: "36088340"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 결과 집합의 일부입니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36088340"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>2. XML 요소를 데이터베이스 열에 매핑  
- 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. **\<Person.Contact >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. 요소  **\<FirstName >** 및  **\<LastName >** 및 **EmployeeID** 특성은 단순 유형이 고, 따라서에 매핑됩니다는 같은 이름의 열입니다. 이 예와 이전 예의 유일한 차이점은 요소가 FirstName 및 LastName 필드 매핑에 사용된다는 것입니다.  
+ 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. 합니다  **\<Person.Contact >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. 요소  **\<FirstName >** 하 고  **\<LastName >** 하며 **EmployeeID** 특성은 단순 유형이 고, 따라서에 매핑됩니다 합니다 같은 이름의 열입니다. 이 예와 이전 예의 유일한 차이점은 요소가 FirstName 및 LastName 필드 매핑에 사용된다는 것입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -135,7 +135,7 @@ ms.locfileid: "36088340"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 결과 집합의 일부입니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36088340"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>3. XML 요소를 XML 데이터 형식 열에 매핑  
- 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. **\<Production.ProductModel >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. **ProductModelID** 특성은 단순 유형의 이며, 따라서 동일한 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은는  **\<지침 >** 요소를 사용 하는 열에 매핑된다는 `xml` 데이터 형식을 사용 하 여는 `xsd:anyType` 유형입니다.  
+ 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. 합니다  **\<Production.ProductModel >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. 합니다 **ProductModelID** 특성 간단한 형식이 며, 따라서 동일한 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은는  **\<지침 >** 요소를 사용 하는 열에 매핑하는 것은 `xml` 데이터 형식을 사용 하 여를 `xsd:anyType` 형식.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -190,7 +190,7 @@ ms.locfileid: "36088340"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 결과 집합의 일부입니다.  
   

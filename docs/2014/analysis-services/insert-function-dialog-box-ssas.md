@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf09d97be59c09e4ca727762c9be04d54fcd3cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159674"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>함수 삽입 대화 상자(SSAS)
   **함수 삽입** 대화 상자를 사용하면 수식을 작성할 때 사용할 수 있는 함수가 포함된 목록에서 함수를 선택할 수 있습니다. 모델 디자이너에서 이 대화 상자에 액세스하려면 각 테이블 위에 있는 수식 입력줄에서 함수(**fx**) 단추를 클릭합니다. 수식에 사용할 함수를 선택하는 방법은 DAX 소개 및 수식 작성을 참조하십시오.  
@@ -54,6 +54,6 @@ ms.locfileid: "36082586"
  **함수 삽입** 대화 상자는 수식을 작성하는 경우에만 사용할 수 있습니다. 계산된 열 또는 피벗 테이블이나 피벗 차트에서 계산을 만들 수 있습니다. 피벗 테이블에 사용하기 위해 명시적으로 작성한 수식을 *측정값*이라고도 합니다. 자세한 내용은 [계산 열 만들기&#40;SSAS 테이블 형식&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) 및 [측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](tabular-models/measures-ssas-tabular.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [계산 &#40;SSAS 테이블 형식&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [계산 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

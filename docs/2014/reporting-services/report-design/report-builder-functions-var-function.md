@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b57fb0ad1dead47020094fc637344c8cbaf708be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8b6b8f9c722b69213a0e7e4d9816c3b779ce41de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183870"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 지정된 범위에서 계산되는 Null이 아닌 모든 숫자 값의 분산을 반환합니다.  
@@ -36,7 +36,7 @@ Var(expression, scope, recursive)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`Integer` 또는 `Float`) 집계를 수행할 식입니다.  
+ (`Integer` 또는 `Float`) 집계를 수행 하는 식입니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 집합, 그룹 또는 데이터 영역의 이름인 상수입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
@@ -48,7 +48,7 @@ Var(expression, scope, recursive)
  반환 된 `Decimal` 10 진수 식에 대 한 및 `Double` 그 외 다른 식에 대 한 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다. 같은 변환 함수를 사용 하 여 동일한 데이터 형식으로 여러 숫자 데이터 형식이 있는 데이터를 변환할 `CInt`, `CDbl` 또는 `CDec`합니다. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
+ 식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다. 같은 변환 함수를 사용 하 여 동일한 데이터 형식으로 여러 숫자 데이터 형식이 포함 된 데이터를 변환할 `CInt`하십시오 `CDbl` 또는 `CDec`합니다. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
   
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   
@@ -58,7 +58,7 @@ Var(expression, scope, recursive)
   
 -   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
   
--   *식* 포함 되지 않아야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -74,7 +74,7 @@ Var(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

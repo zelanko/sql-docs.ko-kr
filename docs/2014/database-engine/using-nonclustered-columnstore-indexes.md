@@ -5,41 +5,39 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
-caps.latest.revision: 7
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: fd711b644c551da7a658eff7ede74007d69a2286
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157024"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>비클러스터형 columnstore 인덱스 사용
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 비클러스터형 columnstore 인덱스를 사용하기 위한 주요 태스크를 설명합니다.  
   
- Columnstore 인덱스의 개요를 참조 하십시오. [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)합니다.  
+ Columnstore 인덱스의 개요를 보려면 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)합니다.  
   
- 클러스터형된 columnstore 인덱스에 대 한 정보를 참조 하십시오. [클러스터형 Columnstore 인덱스를 사용 하 여](../relational-databases/indexes/indexes.md)합니다.  
+ 클러스터형된 columnstore 인덱스에 대 한 자세한 내용은 [클러스터형 Columnstore 인덱스를 사용 하 여](../relational-databases/indexes/indexes.md)입니다.  
   
 ## <a name="contents"></a>내용  
   
 -   [비클러스터형 Columnstore 인덱스 만들기](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)  
   
--   [비클러스터형 Columnstore 인덱스의 데이터 변경](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
+-   [비클러스터형 Columnstore 인덱스에 데이터를 변경 합니다.](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
 ##  <a name="load"></a> 비클러스터형 Columnstore 인덱스 만들기  
- 비클러스터형 columnstore 인덱스로 데이터를 로드 하려면 첫 번째 힙으로 저장 된 또는 클러스터 된 기존의 rowstore 테이블로 데이터 로드 인덱스로 한 다음 사용 하 여 [CREATE COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) 만들려는 columnstore 인덱스입니다.  
+ 비클러스터형 columnstore 인덱스로 데이터를 로드 하려면 첫 번째 힙으로 저장 또는 클러스터 된 기존의 rowstore 테이블로 데이터 로드 및 사용 하 여 [CREATE COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) 만들려는 columnstore 인덱스입니다.  
   
  ![Columnstore 인덱스로 데이터 로드](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "columnstore 인덱스로 데이터 로드")  
   
-##  <a name="change"></a> 비클러스터형 Columnstore 인덱스의 데이터 변경  
+##  <a name="change"></a> 비클러스터형 Columnstore 인덱스에 데이터를 변경 합니다.  
  테이블에 비클러스터형 columnstore 인덱스를 만든 후에는 해당 테이블에서 데이터를 직접 수정할 수 없습니다. INSERT, UPDATE, DELETE 또는 MERGE를 사용한 쿼리는 실패하며 오류 메시지를 반환합니다. 테이블에서 데이터를 추가하거나 수정하려면 다음 중 하나를 수행합니다.  
   
 -   Columnstore 인덱스를 사용 하지 않도록 설정 합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예를 들어:  

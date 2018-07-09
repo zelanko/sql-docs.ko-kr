@@ -1,1 +1,1 @@
-\<Xmlns:xlink 토큰 = "http://www.w3.org/1999/xlink" > SQL Server Management Studio</Token>
+\<Token xmlns: xlink = "http://www.w3.org/1999/xlink" > SQL Server Management Studio</Token>
