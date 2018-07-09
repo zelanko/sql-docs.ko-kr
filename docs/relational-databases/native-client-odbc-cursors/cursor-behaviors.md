@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 353fde7548431b354c6e101545b67a924e553b66
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fe80b8d324ff47721a0fb41a60292a867df33cab
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700514"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424532"
 ---
 # <a name="cursor-behaviors"></a>커서 동작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "35700514"
 |SQL_NONSCROLLABLE 및 SQL_INSENSITIVE|기본 결과 집합(정방향 전용, 읽기 전용)|  
 |SQL_NONSCROLLABLE 및 SQL_UNSPECIFIED|기본 결과 집합(정방향 전용, 읽기 전용)|  
   
- 버전 기반 낙관적 동시성 필요는 **타임 스탬프** 기본 테이블의 열입니다. 가 없는 테이블에 버전 기반 낙관적 동시성 제어를 요청 하는 경우는 **타임 스탬프** 열, 서버 사용 하 여 값 기반 낙관적 동시성 합니다.  
+ 버전 기반 낙관적 동시성 요구를 **타임 스탬프** 기본 테이블의 열입니다. 버전 기반 낙관적 동시성 제어 되지 않은 테이블에서 요청 된 경우는 **타임 스탬프** 열에는 서버에서는 값 기반 낙관적 동시성입니다.  
   
 ## <a name="scrollability"></a>스크롤 가능 여부  
- SQL_ATTR_CURSOR_SCROLLABLE이 SQL_SCROLLABLE로 설정 하는 경우 커서에 대 한 다른 모든 값을 지원는 *FetchOrientation* 의 매개 변수 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)합니다. SQL_ATTR_CURSOR_SCROLLABLE이 SQL_NONSCROLLABLE로 설정 하는 경우 커서 지원는 *FetchOrientation* SQL_FETCH_NEXT의 값입니다.  
+ SQL_ATTR_CURSOR_SCROLLABLE이 SQL_SCROLLABLE로 설정 하는 경우 커서에 대 한 다른 모든 값을 지원 합니다 *FetchOrientation* 의 매개 변수 [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)합니다. SQL_ATTR_CURSOR_SCROLLABLE이 SQL_NONSCROLLABLE로 설정 하는 경우 커서 지원를 *FetchOrientation* SQL_FETCH_NEXT 값입니다.  
   
 ## <a name="sensitivity"></a>민감도  
  SQL_ATTR_CURSOR_SENSITIVITY가 SQL_SENSITIVE로 설정되면 커서는 현재 사용자가 수행하거나 다른 사용자가 커밋한 데이터 수정 내용을 반영합니다. SQL_ATTR_CURSOR_SENSITIVITY가 SQL_INSENSITIVE로 설정되면 커서는 데이터 수정 내용을 반영하지 않습니다.  

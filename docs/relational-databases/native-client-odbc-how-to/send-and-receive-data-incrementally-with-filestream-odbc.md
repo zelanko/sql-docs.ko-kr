@@ -1,12 +1,12 @@
 ---
-title: FILESTREAM (ODBC)를 사용 하 여 증분 방식으로 데이터를 주고받을 | Microsoft Docs
+title: FILESTREAM (ODBC)를 사용 하 여 증분 방식으로 데이터 보내기 및 받기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3267c075263601ab2ed5e799a341595cf390367
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 76a02beccc609c62267594e7f3512e8f0e395157
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694546"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428502"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM을 사용하여 데이터를 증분식으로 주고받기(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "35694546"
 
   이 예제에서는 FILESTREAM 기능을 사용하여 SQLPutData 및 SQLGetData로 데이터를 증분식으로 주고받는 방법을 보여 줍니다.  
   
- FILESTREAM 기능에 대 한 자세한 내용은 참조 [FILESTREAM 지원 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)합니다.  
+ FILESTREAM 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  
  컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  

@@ -1,5 +1,5 @@
 ---
-title: 요소 (바인딩) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (바인딩) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b07c1d781bfdade9228b6c5991b2eb56585cbe85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bcf3e96c38dd4c2941d2d6256a62559ab3491eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148174"
 ---
 # <a name="type-element-binding-assl"></a>Type 요소(바인딩)(ASSL)
   특성 바인딩의 유형을 포함합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36082349"
 |*CustomRollup*|사용자 지정 롤업 수식|  
 |*CustomRollupProperties*|사용자 지정 롤업 속성|  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributeBinding> 및 <xref:Microsoft.AnalysisServices.CubeAttributeBinding>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.AttributeBinding> 및 <xref:Microsoft.AnalysisServices.CubeAttributeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Binding 데이터 형식 &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

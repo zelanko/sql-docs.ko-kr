@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb93b3cdaf3eda1b8be15679b0736e626a802cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153024"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>RelationshipEndTranslation 요소(ASSL)
   [RelationshipEnd](relationshipend-data-type-assl.md) 요소에 대한 지역화된 번역을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -57,6 +57,6 @@ ms.locfileid: "36082168"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Translation>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

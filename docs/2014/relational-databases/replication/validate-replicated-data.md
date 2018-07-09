@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
 - administering replication, validating data
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 678d5865b379ac1151f4cf85f63b77720ef4005a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211223"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
   트랜잭션 및 병합 복제를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 게시에 대한 특정 구독 또는 모든 구독에 대해 유효성 검사를 수행할 수 있습니다. 다음 유효성 검사 유형 중 하나를 지정합니다. 배포 에이전트 또는 병합 에이전트가 다음에 실행될 때 해당 유형에 따라 데이터의 유효성을 검사합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36081796"
   
  유효성 검사 실패를 처리하려면 다음 사항을 살펴보십시오.  
   
--   **복제: 구독자가 데이터 유효성 검사에 실패했습니다** 라는 복제 경고를 구성하여 검사 실패에 대한 알림을 받도록 합니다. 자세한 내용은 참조 하십시오. [미리 정의 된 복제 경고 구성 &#40;SQL Server Management studio& #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) 합니다.  
+-   **복제: 구독자가 데이터 유효성 검사에 실패했습니다** 라는 복제 경고를 구성하여 검사 실패에 대한 알림을 받도록 합니다. 자세한 내용은 참조 하세요. [미리 정의 된 복제 경고 구성 &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) 합니다.  
   
 -   유효성 검사 실패가 응용 프로그램에 문제가 됩니까? 유효성 검사 실패가 문제가 되는 경우 수동으로 데이터를 업데이트하여 동기화하거나 구독을 다시 초기화합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36081796"
   
 -   게시된 테이블에는 이진 체크섬을 사용할 수 있습니다. 체크섬은 열 필터가 있는 테이블 또는 열을 삭제 또는 추가하는 ALTER TABLE 문으로 인해 열 오프셋이 다른 논리적 테이블 구조의 유효성을 검사할 수 없습니다.  
   
--   복제 유효성 검사에서는 `checksum` 및 **binary_checksum** 함수입니다. 해당 동작에 대한 자세한 내용은 [CHECKSUM&#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) 및 [BINARY_CHECKSUM&#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)을 참조하세요.  
+-   복제 유효성 검사에서는 합니다 `checksum` 하 고 **binary_checksum** 함수입니다. 해당 동작에 대한 자세한 내용은 [CHECKSUM&#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) 및 [BINARY_CHECKSUM&#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql)을 참조하세요.  
   
 -   구독자에서의 데이터 형식과 게시자에서의 데이터 형식이 다른 경우 이진 체크섬 또는 체크섬 유효성 검사가 올바르지 않을 수 있습니다. 이 문제는 다음 중 하나를 수행할 경우 발생할 수 있습니다.  
   

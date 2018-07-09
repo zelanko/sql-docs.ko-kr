@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 362f85921bdc41ebf14b84419116f073856de348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f07c4d548022ae12ab44e9c2772c13a0ffff574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210023"
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS 행 집합
   추적에 사용할 수 있는 열을 설명하는 XML 문서를 반환합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36082170"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_TRACE_COLUMNS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_TRACE_COLUMNS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

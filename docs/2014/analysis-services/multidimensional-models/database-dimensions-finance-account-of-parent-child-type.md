@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259599"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>부모-자식 유형 차원의 재무 계정 만들기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 계정 유형 차원은 재무 보고용 계정 차트를 나타내는 특성이 있는 차원입니다.  
   
  계정 차원을 사용하여 여러 계정에 대한 시간별 집계 동작을 선택적으로 관리할 수 있습니다. 또한 계정 차원을 통해 표준 메커니즘을 사용하여 재무 데이터를 처리하는 비즈니스 인텔리전스 솔루션에서 일반적으로 발생하는 비표준 집계 문제를 대부분 해결할 수 있습니다. 표준 메커니즘이 없는 경우 이러한 비표준 집계 문제를 해결하려면 사용자 지정 롤업 수식, 계산 멤버 또는 MDX(Multidimensional Expressions) 스크립트가 필요합니다.  
   
- 차원을 계정 차원으로 식별 하려면 설정는 `Type` 차원의 속성 `Accounts`합니다.  
+ 차원을 계정 차원으로 식별 하려면 설정 합니다 `Type` 차원의 속성 `Accounts`합니다.  
   
 ## <a name="dimension-structure"></a>차원 구조  
  계정 차원에는 다음과 같은 두 개의 필수 특성이 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36078657"
   
 -   계정 특성 - 계정 차원에서 계정이 계층적으로 정렬되는 방식을 설명하는 부모 특성입니다.  
   
-     계정 특성으로 특성을 식별 하려면 설정는 `Type` 특성의 속성 `Account` 및 `Usage` 속성을 `Parent`합니다.  
+     계정 특성으로 특성을 식별 하려면 설정 합니다 `Type` 특성의 속성 `Account` 하며 `Usage` 속성을 `Parent`.  
   
  계정 차원에는 다음과 같은 선택적 특성이 있을 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36078657"
   
 -   계정 이름 특성 - 보고용으로 사용되는 특성입니다. 특성의 `Type` 속성을 `AccountName`으로 설정하여 계정 이름 특성을 식별합니다.  
   
--   계정 번호 특성 - 보고용으로 사용되는 특성입니다. 설정 하 여 계정 번호 특성을 식별 된 `Type` 특성의 속성 `AccountNumber`합니다.  
+-   계정 번호 특성 - 보고용으로 사용되는 특성입니다. 설정 하 여 계정 번호 특성을 식별 합니다 `Type` 특성의 속성 `AccountNumber`합니다.  
   
  특성 유형에 대한 자세한 내용은 [특성 유형 구성](attribute-properties-configure-attribute-types.md)을 참조하세요.  
   

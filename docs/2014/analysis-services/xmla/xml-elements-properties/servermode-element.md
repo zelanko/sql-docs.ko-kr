@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 8448e5ac3111f4c1683ae3dd62dcaef992f3f0e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4b329f9882b9eff2adf1a79041ea83c51a627f15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239453"
 ---
 # <a name="servermode-element"></a>ServerMode 요소
   `ServerMode` Server 요소는 서버가 작동하고 있는 모드를 지정합니다.  

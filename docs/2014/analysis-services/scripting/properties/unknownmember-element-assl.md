@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMember element
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85bc7a517642ccc5b4386f65e7b4a9c89d757ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdfbaa296a7c83c96a7a41d759d582833d2ed8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151174"
 ---
 # <a name="unknownmember-element-assl"></a>UnknownMember 요소(ASSL)
   알 수 없는 멤버의 표시 여부를 나타냅니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36082147"
 |값|Description|  
 |-----------|-----------------|  
 |*표시*|알 수 없는 멤버가 있고 표시됩니다.|  
-|*숨김*|알 수 없는 멤버가 있지만 표시되지 않습니다.|  
+|*숨겨진*|알 수 없는 멤버가 있지만 표시되지 않습니다.|  
 |*없음*|알 수 없는 멤버가 사용되지 않습니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `UnknownMember`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.UnknownMemberBehavior>입니다.  

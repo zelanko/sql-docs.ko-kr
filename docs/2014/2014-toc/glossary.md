@@ -1,5 +1,5 @@
 ---
-title: 용어 설명 | Microsoft Docs
+title: 용어집 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164334"
 ---
 # 용어 설명
   
@@ -109,7 +109,7 @@ ms.locfileid: "36081886"
 |블록(block)|BEGIN과 END로 묶인 Transact-SQL 문입니다.|  
 |블록 커서(block cursor)|행 집합 크기가 1보다 큰 커서입니다.|  
 |차단 트랜잭션(blocking transaction)|다른 트랜잭션이 실패하도록 만드는 트랜잭션입니다.|  
-|부울 식(Boolean expression)|부울 값(true 또는 false)을 생성하는 식입니다. 이러한 식에는 비교 포함 될 수 있습니다 (또는 값을 같음, 부울이 아닌 값에 대 한 테스트는 \< [보다 작음] 또는 > [보다 큼] 관계) 및 논리 조합 (AND, OR 및 XOR과 같은 부울 연산자 사용)는 부울 식입니다.|  
+|부울 식(Boolean expression)|부울 값(true 또는 false)을 생성하는 식입니다. 이러한 식에는 비교 포함 될 수 있습니다 (같음, 부울이 아닌 값에 대 한 값을 테스트 합니다 \< [보다 작음] 또는 > [보다 큼] 관계) 및 부울 식의 논리 조합 (AND, OR 및 XOR과 같은 부울 연산자 사용).|  
 |부울 연산자(Boolean operator)|부울 값을 사용하도록 디자인된 연산자입니다. 프로그래밍에서 가장 자주 사용되는 네 가지 부울 연산자는 AND(논리곱), OR(논리합), XOR(배타적 OR) 및 NOT(논리 부정)입니다.|  
 |바인딩된 스트림(bound stream)|이벤트를 생성하는 데 필요한 모든 정보가 포함된 이벤트 스트림입니다. 정보는 이미 인스턴스화된 데이터 원본일 수도 있고 StreamInsight 서버에서 데이터 원본을 시작하는 데 충분할 수도 있습니다.|  
 |경계 상자(bounding box)|경로, 모양 또는 개체 그룹 주위의 가장 작은 직사각형 영역입니다.|  
@@ -294,7 +294,7 @@ ms.locfileid: "36081886"
 |동시성 충돌(concurrency conflict)|나중에 동기화되는 서로 다른 두 복제본에서 같은 항목 또는 변경 단위가 변경될 경우 발생하는 충돌입니다.|  
 |동시성 모델(concurrency model)|응용 프로그램에서 동일한 캐시된 데이터를 사용하는 동시 작업을 고려하도록 디자인할 수 있는 방법입니다. Windows Server AppFabric은 낙관적 및 비관적 동시성 모델을 지원합니다.|  
 |동시 작업(concurrent operation)|두 개 이상의 프로세스(프로그램)가 마이크로프로세서의 시간에 액세스하여 거의 동시에 수행되는 컴퓨터 작업입니다. 마이크로프로세서는 사람이 인지할 수 있는 것보다 매우 작은 단위의 시간에 작업을 처리할 수 있기 때문에 프로세스가 동시에 수행되는 것처럼 보이지만, 실제로는 동시에 처리되는 것이 아닙니다.|  
-|조건식(conditional expression)|부울 값(true 또는 false)을 생성하는 식입니다. 이러한 식에는 비교 포함 될 수 있습니다 (또는 값을 같음, 부울이 아닌 값에 대 한 테스트는 \< [보다 작음] 또는 > [보다 큼] 관계) 및 논리 조합 (AND, OR 및 XOR과 같은 부울 연산자 사용)는 부울 식입니다.|  
+|조건식(conditional expression)|부울 값(true 또는 false)을 생성하는 식입니다. 이러한 식에는 비교 포함 될 수 있습니다 (같음, 부울이 아닌 값에 대 한 값을 테스트 합니다 \< [보다 작음] 또는 > [보다 큼] 관계) 및 부울 식의 논리 조합 (AND, OR 및 XOR과 같은 부울 연산자 사용).|  
 |조건부 분할(conditional split)|전체 데이터베이스 백업, 가장 최근에 수행된 차등 데이터베이스 백업(있는 경우) 및 전체 데이터베이스 백업 이후에 수행된 로그 백업(있는 경우)의 복원을 나타냅니다.|  
 |구성 파일(config file)|하드웨어 또는 소프트웨어에 대한 컴퓨터에서 읽을 수 있는 작업 사양이 포함된 파일 또는 다른 파일이나 특정 사용자에 대한 정보(예: 사용자의 로그온 ID)가 포함된 파일입니다.|  
 |구성|단일 마이크로컴퓨터를 참조할 때 메모리, 디스크 드라이브, 키보드, 비디오 및 일반적으로 중요도가 낮은 추가 하드웨어(예: 마우스, 모뎀 또는 프린터)를 포함한 시스템의 모든 내부 및 외부 구성 요소를 총체적으로 의미합니다. 소프트웨어(운영 체제와 여러 가지 장치 드라이버), IBM PC 및 호환 PC의 AUTOEXEC.BAT 및 CONFIG.SYS 파일과 같은 구성 파일을 통해 설정된 사용자 선택 항목 그리고 일부 경우의 하드웨어(스위치 및 점퍼)는 올바른 작동을 위해 해당 "구성"을 설정할 필요가 있습니다. 추가 메모리나 디스크 용량을 늘리는 것과 같이 시스템 구성은 변경할 수 있지만, 시스템의 기본 구조(아키텍처)는 동일하게 유지됩니다.|  
@@ -1338,7 +1338,7 @@ ms.locfileid: "36081886"
 |리포지토리 SQL 스키마(Repository SQL schema)|리포지토리 엔진에서 모든 리포지토리 개체, 관계 및 컬렉션을 관리하기 위해 사용하는 표준 테이블 집합입니다.|  
 |리포지토리 유형 정보 모델(Repository Type Information Model)|Metadata Services에 대한 리포지토리 유형 정의를 나타내는 핵심 개체 모델입니다.|  
 |재게시자(republisher)|게시자에서 받은 데이터를 게시하는 구독자입니다.|  
-|예약 문자(reserved character)|프로그램에 특별한 의미를 지니기 때문에 일상적인 방식으로는 파일, 문서 및 기타 사용자 생성 도구(예: 매크로)의 이름을 지정할 때 사용할 수 없는 키보드 문자입니다. 문자 일반적으로 별표 (*)를 포함 하는 특수 목적에 대해 예약 된 슬래시 (/), 백슬래시 (\\), 물음표 (?)와 세로 막대 (&#124;).|  
+|예약 문자(reserved character)|프로그램에 특별한 의미를 지니기 때문에 일상적인 방식으로는 파일, 문서 및 기타 사용자 생성 도구(예: 매크로)의 이름을 지정할 때 사용할 수 없는 키보드 문자입니다. 문자 일반적으로 별표 (*)를 포함 하는 특수 사용에 대해 예약 된 슬래시 (/), 백슬래시 (\\), 물음표 (?)와 세로 막대 (&#124;).|  
 |확인 전략(resolution strategy)|여러 버전이 있고 호출 프로그램에 버전 정보가 지정되지 않은 경우 리포지토리 엔진이 개체를 선택할 때 순차적으로 평가하는 조건 집합을 말합니다.|  
 |resource|데이터베이스 연결 또는 명령문에 대한 참조를 저장하는 특별한 변수입니다.|  
 |resource|보고서 서버 데이터베이스에서 보고서, 폴더 또는 공유 데이터 원본 항목이 아닌 모든 항목입니다.|  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - extended events [SQL Server], targets
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbd3b218390cc1a49f7256a7f2cb79228ff8c3c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba3ea863b35142c65b2e5f38789f888d603b6977
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160984"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장된 이벤트 대상은 이벤트 소비자가 있습니다. 대상은 파일에 기록하거나 이벤트 데이터를 메모리 버퍼에 저장하거나 이벤트 데이터를 집계할 수 있습니다. 대상은 동기적 또는 비동기적으로 데이터를 처리할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장된 이벤트 대상은 이벤트 소비자가 됩니다. 대상은 파일에 기록하거나 이벤트 데이터를 메모리 버퍼에 저장하거나 이벤트 데이터를 집계할 수 있습니다. 대상은 동기적 또는 비동기적으로 데이터를 처리할 수 있습니다.  
   
  확장 이벤트는 대상이 세션당 단 한 번만 이벤트를 수신하도록 설계되어 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36082312"
   
      잠금 획득 및 잠금 해제와 같이 많은 종류의 이벤트는 쌍으로 발생합니다. 쌍을 이루는 집합에서 지정된 쌍 이벤트가 발생하지 않는 경우를 확인하는 데 사용합니다. 이 대상은 비동기 대상입니다.  
   
--   [ETW (Windows) 용 이벤트 추적](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Windows (ETW) 용 이벤트 추적](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트와 Windows 운영 체제 또는 응용 프로그램 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다. 이 대상은 동기 대상입니다.  
   

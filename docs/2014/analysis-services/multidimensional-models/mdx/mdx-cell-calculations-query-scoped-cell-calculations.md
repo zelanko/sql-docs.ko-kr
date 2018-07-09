@@ -1,5 +1,5 @@
 ---
-title: 쿼리 범위 셀 계산 만들기 (MDX) | Microsoft Docs
+title: 쿼리 범위 셀 계산 (MDX) 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34a26daaf3e1fc55eef72e9382cfe5586a00fb7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5431862cd1a446a045d910841adc4d78d62d42be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159394"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>쿼리 범위 셀 계산 만들기(MDX)
   MDX에서 `WITH` 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. `WITH` 키워드는 다음 구문을 가집니다.  
@@ -37,8 +37,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |빈 집합|빈 집합으로 확인되는 MDX 집합 식입니다. 이 경우 계산 셀의 범위는 전체 큐브입니다.|  
 |단일 멤버 집합|단일 멤버로 확인되는 MDX 집합 식입니다.|  
-|수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이런 집합 식의 예로 *Level_Expression*합니다.`Members` MDX 함수. 사용 하 여 계산된 멤버를 포함 하려면는 *Level_Expression*합니다.`AllMembers` MDX 함수. 자세한 내용은 [AllMembers&#40;MDX&#41;](/sql/mdx/allmembers-mdx)를 참조하세요.|  
-|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이런 집합 식의 예로 `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) MDX 함수입니다. 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
+|수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이런 집합 식의 예로 *Level_Expression*합니다.`Members` MDX 함수. 계산된 멤버를 포함 하려면 사용 합니다 *Level_Expression*합니다.`AllMembers` MDX 함수. 자세한 내용은 [AllMembers&#40;MDX&#41;](/sql/mdx/allmembers-mdx)를 참조하세요.|  
+|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이런 집합 식의 예로 `Descendants`(*Member_Expression*를 *Level_Expresion*를 *Desc_Flag*) MDX 함수입니다. 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
   
  `String_Expression` 인수가 차원을 설명하지 않으면 MDX는 계산 하위 큐브를 만들 목적으로 모든 멤버가 포함되는 것으로 가정합니다. 따라서 `String_Expression` 인수가 NULL이면 계산 셀 정의는 전체 큐브에 적용됩니다.  
   

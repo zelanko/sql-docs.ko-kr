@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c143f942a030bb8cc51529d026ea93d73a30d8a2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8e8264b5206268dd6112083fd57eb847e28e6ea2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701554"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417482"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>핸들 할당 및 SQL Server에 연결(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,21 +36,21 @@ ms.locfileid: "35701554"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버별 헤더 파일인 Odbcss.h를 포함합니다.  
   
-3.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 와 **HandleType** 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
+3.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_ENV ODBC를 초기화 하 고 환경 핸들을 할당 합니다.  
   
-4.  호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 와 **특성** 를 sql_attr_odbc_version으로 설정 하 고 **ValuePtr** 응용 프로그램은 ODBC 3.x 형식 함수를 사용 하 여 SQL_OV_ODBC3로 설정 합니다. 호출합니다.  
+4.  호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 사용 하 여 **특성** SQL_ATTR_ODBC_VERSION으로 설정 하 고 **ValuePtr** 응용 프로그램은 ODBC 3.x 형식 함수를 사용 하 여 나타내려면 SQL_OV_ODBC3으로 설정 호출합니다.  
   
-5.  필요에 따라 호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) 에 환경 옵션입니다.  
+5.  필요에 따라 호출 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) 다른 환경을 설정 옵션 또는 호출 [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) 환경 옵션을 가져오려고 합니다.  
   
-6.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 와 **HandleType** 의 sql_handle_dbc 라는 연결 핸들을 할당 합니다.  
+6.  호출 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) 사용 하 여를 **HandleType** 의 SQL_HANDLE_DBC 연결 핸들을 할당 합니다.  
   
-7.  을 호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 연결 옵션을 설정 하거나 호출 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 연결 옵션을 얻으려고 합니다.  
+7.  필요에 따라 호출할 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 연결 옵션을 설정 하거나 호출 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 연결 옵션을 가져오려고 합니다.  
   
 8.  기존 데이터 원본에 연결 하는 데 SQLConnect 호출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
      또는  
   
-     호출 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 에 연결할 연결 문자열을 사용 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     호출 [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) 연결 문자열에 연결 하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
      최소 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 문자열은 다음 두 가지 형태 중 하나입니다.  
   
@@ -59,27 +59,27 @@ ms.locfileid: "35701554"
     DRIVER={SQL Server Native Client 10.0};SERVER=server;Trusted_connection=yes;  
     ```  
   
-     연결 문자열이 완료 되지 않은 경우 **SQLDriverConnect** 에서 필요한 정보를 표시할 수 있습니다. 이 대 한 지정 된 값에 의해 제어 되는 *DriverCompletion* 매개 변수입니다.  
+     연결 문자열, 불완전 한 경우 **SQLDriverConnect** 필요한 정보를 확인할 수 있습니다. 지정 된 값으로 제어 합니다 *DriverCompletion* 매개 변수입니다.  
   
      \- 또는-  
   
-     호출 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) 반복적으로 연결 문자열을 작성 하 고 연결할에 여러 번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     호출 [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) 연결 문자열을 작성 하 고 연결할는 반복적인 방식으로 여러 번 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-9. 필요에 따라 호출 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 드라이버 특성 및 동작을 얻으려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다.  
+9. 필요에 따라 호출할 [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 드라이버 특성과 동작을 가져오려면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다.  
   
 10. 문을 할당하고 사용합니다.  
   
-11. 연결을 끊으려면 SQLDisconnect 호출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 핸들를 새 연결에 사용할 수 있도록 합니다.  
+11. 호출에서 연결을 끊으려면 SQLDisconnect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 핸들를 새 연결에 사용할 수 있도록 합니다.  
   
-12. 호출 [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 와 **HandleType** 의 sql_handle_dbc 라는 연결 핸들을 해제 합니다.  
+12. 호출 [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 사용 하 여를 **HandleType** SQL_HANDLE_DBC 하 여 연결 핸들입니다.  
   
-13. 호출 **SQLFreeHandle** 와 **HandleType** SQL_HANDLE_ENV 환경 핸들입니다.  
+13. 호출 **SQLFreeHandle** 사용 하 여를 **HandleType** SQL_HANDLE_ENV 환경 핸들입니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
- 에 대 한 호출을 보여 주는이 예제 **SQLDriverConnect** 의 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 있습니다. 불완전 한 연결 문자열을 전달 하 여 **SQLDriverConnect**, ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 발생 합니다.  
+ 이 예제에 대 한 호출을 보여 줍니다 **SQLDriverConnect** 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 ODBC 데이터 원본을 요구 하지 않고 있습니다. 불완전 한 연결 문자열을 전달 하 여 **SQLDriverConnect**, ODBC 드라이버가 누락 된 정보를 입력 하 라는 메시지를 발생 합니다.  
   
 ```  
 #define MAXBUFLEN   255  

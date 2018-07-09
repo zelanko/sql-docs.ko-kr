@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.databaseproperties.f1
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99e14ae619776a0d14f2c78cff20a74dbc72c0a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c138f61c17f79ed264dda4c28be766a7b41c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157374"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>데이터베이스 속성 대화 상자(SSAS - 다차원)
   **의** 데이터베이스 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 데이터베이스 속성을 설정할 수 있습니다. 개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하면 **데이터베이스 속성**대화 상자가 표시됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36081960"
 |**저장소 위치**|데이터베이스의 위치를 지정합니다. 데이터베이스가 기본 데이터 디렉터리에 있으면 이 값은 비어 있게 됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [다차원 모델 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [다차원 Model 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183490"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 입력 파일 참조(데이터베이스 엔진 튜닝 관리자)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 XML 입력 파일을 사용하여 데이터베이스를 튜닝할 수 있습니다. 이 XML 파일은 튜닝 세션에 사용할 데이터베이스, 테이블, 작업 파일 또는 테이블 및 튜닝 옵션을 지정합니다. 또한 이 파일을 사용하면 "가정(what-if)" 분석을 수행하기 위한 사용자 지정 구성을 지정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36081968"
   
 -   [DTAInput 요소 &#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [서버 요소 &#40;DTA&#41;](server-element-dta.md)  
+-   [Server 요소 &#40;DTA&#41;](server-element-dta.md)  
   
 -   [Workload 요소 &#40;DTA&#41;](workload-element-dta.md)  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36081968"
   
 -   [서버에 대 한 요소 이름을 &#40;DTA&#41;](name-element-for-server-dta.md)  
   
--   [서버에 대 한 요소를 데이터베이스 &#40;DTA&#41;](database-element-for-server-dta.md)  
+-   [Server의 database 요소 &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Workload 요소  
   
 -   [파일 요소 &#40;DTA&#41;](file-element-dta.md)  
   
--   [작업 부하의 database 요소 &#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [워크 로드의 database 요소 &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
 -   [EventString 요소 &#40;DTA&#41;](eventstring-element-dta.md)  
   
@@ -98,15 +98,15 @@ ms.locfileid: "36081968"
   
 -   [Recommendation 요소 &#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [Create 요소 &#40;DTA&#41;](create-element-dta.md)  
+-   [요소를 만들 &#40;DTA&#41;](create-element-dta.md)  
   
 -   [요소 인덱스 &#40;DTA&#41;](index-element-dta.md)  
   
--   [Name 요소 인덱스에 대 한 &#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [요소의 인덱스에 대 한 이름을 &#40;DTA&#41;](name-element-for-index-dta.md)  
   
 -   [Index의 column 요소 &#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [Name 요소 열에 대 한 &#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [요소의 열에 대 한 이름을 &#40;DTA&#41;](name-element-for-column-dta.md)  
   
 -   [Index의 Filegroup 요소 &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
@@ -114,11 +114,11 @@ ms.locfileid: "36081968"
   
 -   [데이터베이스에 대 한 요소 이름을 &#40;DTA&#41;](name-element-for-database-dta.md)  
   
--   [Database의 schema 요소 &#40;DTA&#41;](schema-element-for-database-dta.md)  
+-   [데이터베이스에 대 한 스키마 요소 &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
 -   [스키마에 대 한 요소 이름을 &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [스키마에 대 한 요소를 표에서 &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [테이블 요소 스키마에 대 한 &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
 -   [테이블에 대 한 요소 이름을 &#40;DTA&#41;](name-element-for-table-dta.md)  
   

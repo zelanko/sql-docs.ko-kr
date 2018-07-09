@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158974"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 이러한 파일의 정보는 패키지 실행 문제를 해결하는 데 도움이 됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36082512"
   
      실행 중인 패키지를 일시 중지하고 덤프 파일을 만들도록 하려면 이 저장 프로시저를 호출합니다.  
   
- 패키지 배포 모델을 사용하여 패키지를 배포하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md) 및 [dtutil Utility](../dtutil-utility.md)를 참조하세요. 패키지 배포 모델에 대 한 자세한 내용은 참조 [프로젝트 배포 및 패키지](../packages/deploy-integration-services-ssis-projects-and-packages.md) 및 [패키지 배포 &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)합니다.  
+ 패키지 배포 모델을 사용하여 패키지를 배포하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md) 및 [dtutil Utility](../dtutil-utility.md)를 참조하세요. 패키지 배포 모델에 대 한 자세한 내용은 참조 하세요. [Deployment의 Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md) 하 고 [패키지 배포 &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>디버그 덤프 파일 형식  
  디버그 덤프 옵션을 지정하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 다음과 같은 디버그 덤프 파일을 만듭니다.  

@@ -1,5 +1,5 @@
 ---
-title: 대량 복사 작업 (ODBC) 수행 | Microsoft Docs
+title: 대량 복사 작업 수행 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c05849172b018d3fce054727d217fe6a43527f8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9e3d19fec2ce59272f4361f419223e7c0f80afcc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707151"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421492"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "34707151"
      실행 단계에 있어야 합니다. sqlncli11.dll은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 배포됩니다.  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations** 함수는 관계를 갖지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 함수입니다. 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 대량 복사 함수를 사용하여 대량 복사 작업을 수행해야 합니다.  
+>  ODBC **SQLBulkOperations** 함수에 관계가 없음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 함수입니다. 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 대량 복사 함수를 사용하여 대량 복사 작업을 수행해야 합니다.  
   
 ## <a name="minimally-logging-bulk-copies"></a>최소로 기록된 대량 복사  
  전체 복구 모델을 사용하면 대량 로드로 수행되는 모든 행 삽입 작업이 트랜잭션 로그에 기록됩니다. 많은 양의 데이터를 로드하는 경우 트랜잭션 로그가 빠르게 채워질 수 있습니다. 특정 조건에서 최소 로깅을 사용할 수 있습니다. 최소 로깅은 대량 로드 작업으로 인해 로그 공간이 채워질 가능성을 줄이며 전체 로깅보다 효율적입니다.  
   
- 최소 로깅을 사용 하는 방법은 참조 하십시오. [대량 가져오기의 최소 로깅을 위한 선행 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)합니다.  
+ 최소 로깅 사용에 대 한 내용은 참조 하세요 [대량 가져오기의 최소 로깅을 위한 선행 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)합니다.  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 bcp.exe를 사용하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 오류가 발생하지 않았던 상황에서 오류가 표시될 수도 있습니다. 이는 이후 버전에서 bcp.exe가 더 이상 암시적 데이터 형식 변환을 수행하지 않기 때문입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 대상 테이블에 money 데이터 형식이 있을 경우 bcp.exe에서 숫자 데이터를 money 데이터 형식으로 변환했습니다. 하지만 이 경우 bcp.exe에서 단순히 추가 필드를 자르기만 했습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 파일과 대상 테이블의 데이터 형식이 일치하지 않을 경우 대상 테이블에 맞게 잘라야 하는 데이터가 있으면 bcp.exe에서 오류를 발생시킵니다. 이 오류를 해결하려면 대상 데이터 형식과 일치하도록 데이터를 수정합니다. 필요에 따라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 릴리스의 bcp.exe를 사용합니다.  

@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db-provider
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 18dddb9c3244a50a81d64b25fa200ca16e634284
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3c8b6a1653fa089b5ef78211c4dd1ab4896dbcf6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699954"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425902"
 ---
 # <a name="processing-results"></a>결과 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "35699954"
 
   명령을 실행하거나 공급자에서 직접 행 집합 개체를 생성하여 행 집합 개체가 만들어진 경우 소비자가 행 집합의 데이터를 검색하여 액세스해야 합니다.  
   
- 행 집합은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다. 개념상, 행 집합은 각 행이 열 데이터를 갖는 행의 집합입니다. 행 집합 개체와 같은 인터페이스를 노출 **IRowset** (순차적으로 행 집합에서 행을 인출 하기 위한 메서드 포함) **IAccessor** (의 설명 하는 열 바인딩 그룹의 정의 허용는 방식으로 테이블 형식 데이터가 소비자 프로그램 변수)에 바인딩되어 **IColumnsInfo** (행 집합의 열에 대 한 정보 제공) 및 **IRowsetInfo** (행 집합에 대 한 정보 제공).  
+ 행 집합은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다. 개념상, 행 집합은 각 행이 열 데이터를 갖는 행의 집합입니다. 행 집합 개체와 같은 인터페이스를 노출 **IRowset** (순차적으로 행 집합에서 행을 인출 하기 위한 메서드 포함) **IAccessor** (설명 하는 열 바인딩 그룹의 정의 허용 합니다 방식으로 테이블 형식 데이터가 소비자 프로그램 변수에)에 바인딩되어 **IColumnsInfo** (행 집합의 열에 대 한 정보 제공) 및 **IRowsetInfo** (행 집합에 대 한 정보 제공).  
   
- 소비자는 호출할 수는 **irowset:: Getdata** 버퍼에 행 집합에서 데이터의 행을 검색 하는 메서드. 하기 전에 **GetData** 은 호출, 소비자는 DBBINDING 구조 집합을 사용 하 여 버퍼를 설명 합니다. 각 바인딩은 행 집합이 소비자 버퍼에 저장되는 방법을 설명하며 다음을 포함합니다.  
+ 소비자를 호출할 수는 **irowset:: Getdata** 버퍼에 행 집합에서 데이터 행을 검색 하는 방법입니다. 앞 **GetData** 는 호출 소비자 DBBINDING 구조 집합을 사용 하 여 버퍼를 설명 합니다. 각 바인딩은 행 집합이 소비자 버퍼에 저장되는 방법을 설명하며 다음을 포함합니다.  
   
 -   바인딩이 적용되는 열(또는 매개 변수)의 서수  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239263"
 ---
 # <a name="transfer-database-task"></a>데이터베이스 전송 태스크
   데이터베이스 전송 태스크는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 전송합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 복사하여 전송하는 다른 태스크와 달리 데이터베이스 전송 태스크는 데이터베이스를 복사 또는 이동할 수 있습니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36079085"
 ## <a name="execution-value"></a>실행 값  
  다른 전송 태스크와 달리 데이터베이스 전송 태스크는 한 개의 데이터베이스만 전송할 수 있으므로 태스크의 `ExecutionValue` 속성에 정의된 실행 값은 1을 반환합니다.  
   
- 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 패키지에서 다른 개체에 사용할 수 있는 오류 메시지 전송에 대 한 정보를 데이터베이스 전송 태스크의 속성을 지정할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+ 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 오류 메시지 전송에 대 한 정보를 데이터베이스 전송 태스크의 속성 수 다른 개체에 사용할 수 있는 패키지에서 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  데이터베이스 전송 태스크는 다음 사용자 지정 로그 항목을 포함합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36079085"
   
 -   SourceDB    이 로그 항목은 전송된 데이터베이스의 이름을 나열합니다.  
   
- 또한에 대 한 로그 항목은 `OnInformation` 대상 데이터베이스를 덮어쓰는 때 이벤트가 기록 됩니다.  
+ 또한 로그 항목은 `OnInformation` 대상 데이터베이스를 덮어쓰는 경우 이벤트가 기록 됩니다.  
   
 ## <a name="security-and-permissions"></a>보안 및 사용 권한  
  오프라인 모드를 사용해 데이터베이스를 전송하려면 패키지를 실행하는 사용자가 sysadmin 서버 역할의 멤버여야 합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "36079085"
   
 -   [데이터베이스 전송 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [데이터베이스 전송 태스크 편집기 &#40;데이터베이스 페이지&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [데이터베이스 전송 태스크 편집기 &#40;페이지를 데이터베이스&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 처리 옵션을 지정 하 | Microsoft Docs
+title: 처리 옵션 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, processing options
 - input files [Analysis Services]
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Analysis Services Deployment Wizard, processing options
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7035045d1d55e9158431dd4245b9d5112b2df0a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5f20e9061aae762eda6b773c7bdb345273fd1b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149104"
 ---
 # <a name="specifying-processing-options"></a>처리 옵션 지정
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 처리 옵션을 읽습니다는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 지정 된 처리 옵션을 사용 하 여는 **배포** 페이지  *\<프로젝트 이름 >* **속성 페이지** 대화 상자를 만들는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다.  
+  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 처리 옵션을 읽습니다 합니다 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 지정 된 처리 옵션을 사용 하는 **배포** 페이지  *\<프로젝트 이름 >* **속성 페이지** 만들려면 대화 상자를 \< *프로젝트 이름*>.deploymentoptions 파일입니다.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>배포를 위한 처리 옵션 검토  
- 에 저장 된 구성 설정은 \< *프로젝트 이름을*>.deploymentoptions 파일은 다음과 같습니다.  
+ 에 저장 된 구성 설정은 합니다 \< *프로젝트 이름*>.deploymentoptions 파일은 다음과 같습니다.  
   
 -   **처리 방법** 이 설정은 배포 후 배포된 개체가 처리되는지 여부와 수행할 처리 유형을 제어합니다. 3가지 처리 옵션은 다음과 같습니다.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "36082175"
   
 -   **트랜잭션 배포** 이 설정은 메타데이터 배포가 변경되고 처리 명령이 단일 트랜잭션 또는 개별 트랜잭션에 발생하는지 여부를 제어합니다.  
   
-    -   이 옵션을 경우 `True` (기본값) 이면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모든 메타 데이터 변경 내용과 단일 트랜잭션 내의 모든 처리 명령을 배포 합니다.  
+    -   이 옵션이 `True` (기본값) 이면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모든 메타 데이터 변경 내용과 단일 트랜잭션 내의 모든 처리 명령을 배포 합니다.  
   
-    -   이 옵션을 경우 `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 단일 트랜잭션에서 메타 데이터 변경 내용을 배포 하 고 해당 트랜잭션의 각 처리 명령을 배포 합니다.  
+    -   이 옵션이 `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 단일 트랜잭션의 메타 데이터 변경 내용을 배포 하 고 해당 트랜잭션의 각 처리 명령을 배포 합니다.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>배포를 위한 처리 옵션 수정  
- 그러나 배포 해야 할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 처리 옵션을 사용 하 여 프로젝트의 \< *프로젝트 이름*>.deploymentoptions 파일입니다. 예를 들어 모든 개체를 완전히 처리하거나 기본 처리 옵션을 사용하여 처리할 수 있으며, 또는 처리가 발생하지 않도록 할 수도 있습니다. 큐브 또는 차원이 쓰기 설정된 경우 새 쓰기 저장(writeback) 테이블이나 기존 테이블을 사용하도록 지정할 수 있습니다.  
+ 배포 해야 하는 반면 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 처리 옵션을 사용 하 여 프로젝트를 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. 예를 들어 모든 개체를 완전히 처리하거나 기본 처리 옵션을 사용하여 처리할 수 있으며, 또는 처리가 발생하지 않도록 할 수도 있습니다. 큐브 또는 차원이 쓰기 설정된 경우 새 쓰기 저장(writeback) 테이블이나 기존 테이블을 사용하도록 지정할 수 있습니다.  
   
  배포 중에 사용된 처리 옵션을 수정하려는 경우 프로젝트를 편집하고 다시 작성하거나 다음 절차에 설명된 대로 다음 방법 중 하나를 사용하여 입력 파일에서 처리 옵션을 변경할 수 있습니다.  
   

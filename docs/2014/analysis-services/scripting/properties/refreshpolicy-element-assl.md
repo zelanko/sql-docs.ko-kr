@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277619"
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy 요소(ASSL)
-  빈도 결정 차원 또는 측정값 그룹의 동적 부분 (에 지정 된 대로 [지 속성](persistence-element-assl.md) 요소)의 변경 사항을 검사 합니다.  
+  빈도 결정 차원 또는 측정값 그룹의 동적 부분 (지정 된 대로 합니다 [지 속성](persistence-element-assl.md) 요소) 변경 내용을 확인 하는 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36078639"
 |값|Description|  
 |-----------|-----------------|  
 |*ByQuery*|모든 쿼리에서 원본 데이터가 변경되었는지 검사합니다.|  
-|*ByInterval*|원본 데이터에서 지정 된 간격에 변경 내용에 대 한 검사만 [RefreshInterval](refreshinterval-element-assl.md)합니다.|  
+|*ByInterval*|원본 데이터는 으로만 변경 사항을 검사 하 여 지정 된 간격 [RefreshInterval](refreshinterval-element-assl.md)합니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `RefreshPolicy`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.RefreshPolicy>입니다.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a737671ca1bab075df174ce0e6e67152c78e775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: da438bf2b53b6bbc9897b3719087fd54a152f641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230785"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36079007"
 ###  <a name="Permissions"></a> Permissions  
  리소스 관리자 속성을 보려면 VIEW SERVER STATER 권한이 필요합니다. 리소스 관리자 구성 작업을 하려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="ViewRGProp"></a> 리소스 관리자 속성 페이지 보기  
+##  <a name="ViewRGProp"></a> Resource Governor 속성 페이지 보기  
  **Resource Governor 속성 페이지를 사용하여 Resource Governor 속성을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "36079007"
  **최대 메모리(%)**  
  이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. 범위는 0에서 100까지입니다. 기본 설정은 100입니다.  
   
- 자세한 내용은 참조 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)합니다.  
+ 자세한 내용은 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)합니다.  
   
  **리소스 풀의 작업 그룹**  
  제공된 표를 사용하여 작업 그룹 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 그룹 및 기본 그룹에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 그룹을 선택합니다. 새 작업 그룹을 만들려면 접두사로 별표(**\***)가 붙은 행을 클릭합니다.  
