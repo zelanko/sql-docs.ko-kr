@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03ab22f08f4364bf3cd4852f960d861c9dcdad7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9ccdf90bedcafb36676c8e727f2ee98b818e2f1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092409"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414182"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>대량 복사 서식 파일 만들기(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 데이터 파일과 서식 파일을 모두 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
@@ -47,13 +45,13 @@ ms.locfileid: "36092409"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: 파일에는 테이블 또는 뷰에서 DB_OUT입니다.  
+    -   복사 방향을: 테이블 또는 뷰에서 파일로 DB_OUT입니다.  
   
-5.  호출 [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 열 수를 설정 합니다.  
+5.  호출 [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 열 개수를 설정 합니다.  
   
-6.  호출 [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 데이터 파일에 그 특성을 정의 하는 각 열에 대 한 합니다.  
+6.  호출 [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 각 열의 데이터 파일의 해당 특성을 정의 합니다.  
   
-7.  호출 [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 데이터 파일을 대량 복사 작업으로 만들어야를 설명 하는 서식 파일을 만들려고 합니다.  
+7.  호출 [bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) 대량 복사 작업에서 만들려는 데이터 파일을 설명 하는 서식 파일을 만들려고 합니다.  
   
 8.  호출 [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행 합니다.  
   

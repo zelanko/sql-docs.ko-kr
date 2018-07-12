@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165454"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 행 집합
   클라이언트 응용 프로그램에서 데이터 마이닝 모델의 내용을 찾아볼 수 있습니다. 클라이언트 응용 프로그램에서는 이 항목의 마지막에 설명된 특수 트리 작업 제한을 사용하여 마이닝 모델의 내용을 탐색할 수 있습니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DMSCHEMA_MINING_MODEL_CONTENT` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DMSCHEMA_MINING_MODEL_CONTENT` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

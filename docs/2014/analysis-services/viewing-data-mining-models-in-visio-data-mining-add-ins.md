@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259359"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio에서 데이터 마이닝 모델 보기(데이터 마이닝 추가 기능)
   데이터 마이닝용 Visio 셰이프를 사용하여 서버에 연결하고 기존 데이터 마이닝 모델을 나타내는 다이어그램을 만들 수 있습니다. 그런 다음 Visio 컨트롤을 사용하여 다이어그램을 사용자 지정할 수 있지만, 데이터로 드릴다운하고, 일부 기본 통계를 노출하고, 기본 모델을 사용할 수도 있습니다.  
   
 ## <a name="building-a-model-diagram"></a>모델 다이어그램 작성  
- 데이터 마이닝용 Visio 셰이프를 포함 하는 파일을 여는 경우는 **셰이프** 창에 다음과 같은 셰이프가 표시 합니다.  
+ 데이터 마이닝용 Visio 셰이프를 포함 하는 파일을 열면 합니다 **셰이프** 창에는 다음 셰이프가 표시 됩니다.  
   
  Visio를 열 때 데이터 마이닝 셰이프가 표시되지 않으면 설치 폴더에서 템플릿 파일을 엽니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36172259"
 |Visio 셰이프|지원되는 모델|  
 |-----------------|----------------------|  
 |의사 결정 트리|의사 결정 트리 또는 선형 회귀 알고리즘을 기반으로 하는 모델에 이 셰이프를 사용합니다.|  
-|종속성 네트워크|이 셰이프를 사용 하 여 다음 알고리즘을 기반으로 모델에 대 한: Naive Bayes, 의사 결정 트리 또는 연결 규칙입니다.|  
+|종속성 네트워크|이 셰이프를 사용 하 여 다음과 같은 알고리즘 중 하나에 따라 모델에 대 한: Naive Bayes, 의사 결정 트리 또는 연결 규칙입니다.|  
 |클러스터|클러스터링 알고리즘을 기반으로 하는 모델에 이 셰이프를 사용합니다.|  
   
  마이닝 모델의 데이터 형식에 따라 마법사에서 제공하는 옵션이 다를 수 있습니다. 예를 들어, 연속 숫자를 포함하는 열은 범주 변수를 포함하는 열과 다르게 시각화됩니다.  

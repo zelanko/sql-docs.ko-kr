@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Actions element
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 109a6ea97218a75d64a0b9e84371e8e3667134ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 583f265b0fb45b22cd0f6b3d20b577276d70ae92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183230"
 ---
 # <a name="actions-element-assl"></a>Actions 요소(ASSL)
   에 대 한 작업의 컬렉션을 포함 한 [큐브](../objects/cube-element-assl.md) 또는 [관점](../objects/perspective-element-assl.md) 요소입니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36180966"
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
-|[큐브](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
+|[큐브](../data-type/action-data-type-assl.md)하십시오 [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
 |[큐브 뷰](../data-type/perspectiveaction-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

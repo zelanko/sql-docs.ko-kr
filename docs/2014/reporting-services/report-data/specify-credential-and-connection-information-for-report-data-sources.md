@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210743"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -45,7 +45,7 @@ ms.locfileid: "36180790"
 > [!NOTE]  
 >  자격 증명은 보고서 서버에 액세스하는 사용자를 인증하는 데도 사용됩니다. 보고서 서버에 대해 사용자를 인증하는 방법은 다른 항목에서 제공합니다.  
   
- 외부 데이터 원본에 대한 연결은 사용자가 보고서를 만들 때 정의됩니다. 이것은 보고서가 게시된 후 별도로 관리할 수 있습니다. 사용자가 동적 목록에서 데이터 원본을 선택할 수 있도록 하는 정적 연결 문자열 또는 식을 지정할 수 있습니다. 데이터 원본 유형 및 연결 문자열을 지정 하는 방법에 대 한 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+ 외부 데이터 원본에 대한 연결은 사용자가 보고서를 만들 때 정의됩니다. 이것은 보고서가 게시된 후 별도로 관리할 수 있습니다. 사용자가 동적 목록에서 데이터 원본을 선택할 수 있도록 하는 정적 연결 문자열 또는 식을 지정할 수 있습니다. 데이터 원본 유형 및 연결 문자열을 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
   
 ## <a name="using-remote-data-sources"></a>원격 데이터 원본 사용  
  보고서가 원격 데이터베이스 서버에서 데이터를 검색하는 경우 다음 사항을 확인합니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "36180790"
 |InclusionThresholdSetting|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> 에 대 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
   
 ## <a name="setting-credentials-programmatically"></a>프로그래밍 방식으로 자격 증명 설정  
- 코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 참조 [데이터 원본 및 연결 방법](../report-server-web-service/methods/data-sources-and-connection-methods.md)합니다.  
+ 코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 [데이터 원본 및 연결 메서드](../report-server-web-service/methods/data-sources-and-connection-methods.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
@@ -149,6 +149,6 @@ ms.locfileid: "36180790"
  [보고서 데이터 원본 관리](../../integration-services/connection-manager/data-sources.md)   
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [보고서에 대 한 데이터 원본 속성 구성 &#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서의 데이터 원본 속성 구성 &#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

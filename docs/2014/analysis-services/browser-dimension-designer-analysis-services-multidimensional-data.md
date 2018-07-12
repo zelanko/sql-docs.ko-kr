@@ -1,5 +1,5 @@
 ---
-title: 브라우저 (차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 브라우저 (Dimension Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsedim.view.f1
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c02eb2fed367137313f70e880e94127419310c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae554d475d3ee4afc87d194562b4715ba70b94eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157274"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>브라우저(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **브라우저** 탭을 사용하여 차원에 대한 차원 데이터 및 메타데이터를 검색할 수 있습니다. 현재 선택한 차원에 대해 차원 쓰기 저장(writeback)이 설정되어 있는 경우 이 뷰를 사용하여 해당 차원에 대한 멤버 데이터를 변경할 수 있습니다.  

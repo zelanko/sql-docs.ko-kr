@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fbfff4e4389406496cf5df467ad044b6fa847727
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183210"
 ---
 # <a name="databasename-element-xmla"></a>DatabaseName 요소(XMLA)
-  식별 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 부모 복원할 데이터베이스 [복원](../xml-elements-commands/restore-element-xmla.md) 명령입니다.  
+  식별 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 부모 복원 될 데이터베이스 [복원](../xml-elements-commands/restore-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   

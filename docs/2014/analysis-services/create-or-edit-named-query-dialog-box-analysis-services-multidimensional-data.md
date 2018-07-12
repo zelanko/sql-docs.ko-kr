@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149624"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>명명된 쿼리 만들기 또는 편집 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **명명된 쿼리 만들기/편집** 대화 상자를 사용하여 **데이터 원본 뷰 디자이너**에서 명명된 쿼리를 생성 또는 편집할 수 있습니다. 명명된 쿼리를 다른 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 기반으로 사용할 수 있는 테이블로 처리할 수 있습니다. 다음을 수행하여 **명명된 쿼리 만들기/편집** 대화 상자를 표시할 수 있습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "36180768"
  **도구 모음** 창에서 **실행** 을 클릭하면 쿼리 결과를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [데이터 원본 뷰에서 명명 된 쿼리 정의 &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

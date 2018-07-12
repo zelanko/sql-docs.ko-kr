@@ -1,5 +1,5 @@
 ---
-title: 서버 이벤트 개념에 대 한 WMI 공급자 | Microsoft Docs
+title: 용 WMI 공급자 서버 이벤트 개념 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ac66540e137a0b199280dfe86aeb204ff68b31c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68ec2984b3b80b1ef0aa4065d6aa067aa8cea784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211173"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>서버 이벤트용 WMI 공급자 개념
   서버 이벤트용 WMI 공급자를 통해 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 모니터링할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36180791"
  [예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  WMI 공급자를 사용하여 SQL Server 에이전트 경고를 만드는 데 사용할 추적 이벤트 정보를 반환하는 예를 제공합니다.  
   
- [샘플:.NET Framework WMI 이벤트 공급자 사용](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [샘플:.NET Framework에서 WMI 이벤트 공급자 사용](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  C# 응용 프로그램에서 WMI 공급자를 사용하여 이벤트 데이터를 반환하는 예를 제공합니다.  
   
  [서버 이벤트용 WMI 공급자 클래스 및 속성](wmi-provider-for-server-events-classes-and-properties.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154334"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36180827"
 |주 데이터|tempdev|tempdb.mdf|디스크가 꽉 찰 때까지 10%씩 자동 증가|  
 |Log|templog|templog.ldf|최대 2TB까지 10%씩 자동 증가|  
   
- 크기 **tempdb** 시스템의 성능에 영향을 줄 수 있습니다. 예를 들어 경우는 **tempdb** 크기가 너무 작으면, 시스템 처리 될 수를 시작할 때마다 작업 요구 사항을 지원 하도록 데이터베이스를 위해 너무 점유 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 크기를 늘려이 오버 헤드를 방지할 수 **tempdb**합니다.  
+ 크기인 **tempdb** 시스템의 성능에 영향을 줄 수 있습니다. 예를 들어 경우는 **tempdb** 크기가 너무 작으면, 시스템 처리 수 너무 차지 하 고 자동 증가 시키기 위해 시작 될 때마다 작업 요구 사항을 지원 하도록 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 크기를 늘려이 오버 헤드를 방지할 수 있습니다 **tempdb**합니다.  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb의 성능 향상  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 방법으로 **tempdb** 의 성능이 향상됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36180827"
   
 -   **tempdb** 에 대한 로깅 오버헤드가 감소하여 **tempdb** 로그 파일의 디스크 I/O 대역폭 사용이 줄어듭니다.  
   
--   알고리즘의 혼합된 페이지를 할당 하기 위한 **tempdb** 향상 됩니다.  
+-   에 혼합된 페이지 할당에 대 한 알고리즘 **tempdb** 향상 됩니다.  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>tempdb 데이터 및 로그 파일 이동  
  **tempdb** 데이터 및 로그 파일을 이동하려면 [시스템 데이터베이스 이동](system-databases.md)을 참조하세요.  

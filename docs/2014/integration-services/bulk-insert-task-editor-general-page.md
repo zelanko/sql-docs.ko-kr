@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.general.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70cc6a4745e2965dcf28ea97bcc52ccfdc66133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8debd4ea8acc8e27dde18970110b6792ee7a9109
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158844"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>대량 삽입 태스크 편집기(일반 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 대량 삽입 태스크를 명명 및 설명할 수 있습니다.  

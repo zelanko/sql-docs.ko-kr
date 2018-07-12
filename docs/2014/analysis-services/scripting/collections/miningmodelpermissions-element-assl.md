@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningModelPermissions element
 ms.assetid: 6cbcf029-9627-4839-9fc5-15e58e1ba0c3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 701a5e139f3a5f2f98799be7dfc5f6dec1db3ced
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eefb1f5c951f765efab04c182117fb736a7b350a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153174"
 ---
 # <a name="miningmodelpermissions-element-assl"></a>MiningModelPermissions 요소(ASSL)
-  에 대 한 권한 컬렉션을 포함 한 [MiningModel](../objects/miningmodel-element-assl.md) 요소입니다.  
+  에 대 한 사용 권한의 컬렉션을 포함 한 [MiningModel](../objects/miningmodel-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36181902"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningModel](../objects/miningmodel-element-assl.md)|  
-|자식 요소|[MiningModelPermission](../objects/miningmodelpermission-element-assl.md) 형식의 [사용 권한](../data-type/permission-data-type-assl.md)|  
+|자식 요소|[MiningModelPermission](../objects/miningmodelpermission-element-assl.md) 형식의 [권한](../data-type/permission-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.MiningModelPermissionCollection>합니다.  

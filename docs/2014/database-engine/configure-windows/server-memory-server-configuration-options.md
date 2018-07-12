@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160964"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
   **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36180572"
  **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 SQL Server Memory Manager가 관리하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 메모리 양(MB)을 다시 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>고정 메모리 양을 구성하는 절차  
- **고정된 된 양의 메모리 설정:**  
+ **고정 된 양의 메모리를 설정 합니다.**  
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36180572"
 3.  **네트워크 응용 프로그램을 위해 데이터 처리량 최대화** 가 선택된 경우에는 다른 옵션을 선택하고 **확인**을 클릭한 다음 나머지 대화 상자를 닫습니다.  
   
 ## <a name="lock-pages-in-memory"></a>메모리의 페이지 잠금  
- 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. SQL Server **메모리의 페이지 잠금** 옵션은 32 비트 및 64 비트 인스턴스를 ON으로 설정 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 및 경우에 더 높은 sqlservr.exe 실행 권한이 있는 계정에 부여한 Windows에서 "잠금 페이지 LPIM ("메모리) 사용자 권한이 있습니다. 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
+ 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. SQL Server **Lock Pages in Memory** 옵션은 32 비트 및 64 비트 인스턴스를 ON으로 설정 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 및 더 높은 경우 sqlservr.exe 실행 권한이 있는 계정 권한이 Windows에서 "잠금 페이지 "LPIM (메모리) 사용자 권한이 있습니다. 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
   
  **에 대해** 메모리의 페이지 잠금 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션을 사용하지 않도록 설정하려면 SQL Server 시작 계정에 대해 "메모리의 페이지 잠금" 사용자 권한을 제거합니다.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>메모리의 페이지 잠금을 사용하지 않도록 설정하려면  
- **Lock pages in memory 옵션을 사용 하지 않으려면:**  
+ **Lock pages in memory 옵션을 사용 하지 않도록 설정 합니다.**  
   
-1.  **시작** 메뉴에서 **실행**을 클릭합니다. 에 **열려** 상자에서 입력 `gpedit.msc`합니다.  
+1.  **시작** 메뉴에서 **실행**을 클릭합니다. 에 **엽니다** 상자에 입력 `gpedit.msc`합니다.  
   
      **그룹 정책** 대화 상자가 열립니다.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "36180572"
   
 ||32비트|64비트|  
 |-|-------------|-------------|  
-|기본 메모리|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 2GB<br /><br /> 3GB **3gb** 부팅 매개 변수 *<br /><br /> W o w 64에서 4GB\*\*|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 8TB(x64 아키텍처 사용)|  
+|기본 메모리|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 2GB<br /><br /> 사용 하면 3GB **3gb** 부팅 매개 변수 *<br /><br /> Wow64에서는 4GB\*\*|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 8TB(x64 아키텍처 사용)|  
   
  ***/3gb** 는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 [MSDN 라이브러리](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
- * * WOW64 (Windows on Windows 64)는에 32 비트 모드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 됩니다. 자세한 내용은 [MSDN 라이브러리](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
+ * * WOW64 (Windows on Windows 64)는 32 비트에서 모드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 합니다. 자세한 내용은 [MSDN 라이브러리](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   

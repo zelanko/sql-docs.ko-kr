@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091721"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421892"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 다음과 같은 추가 진단 필드 지정 `SQLGetDiagField`합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 다음과 같은 추가 진단 필드를 지정 `SQLGetDiagField`합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
   
 |진단 레코드 필드|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|오류를 생성하는 저장 프로시저의 줄 번호를 보고합니다. SQL_DIAG_SS_LINE 값은 SQL_DIAG_SS_PROCNAME에서 값을 반환하는 경우에만 의미가 있습니다. 값은 부호 없는 16비트 정수로 반환됩니다.|  
-|SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대 한 정보를 참조 하십시오. [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)합니다. 값은 부호 있는 32비트 정수로 반환됩니다.|  
-|SQL_DIAG_SS_PROCNAME|필요한 경우 오류를 생성하는 저장 프로시저의 이름입니다. 값은 문자열로 반환됩니다. 문자열 길이(문자 수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다. 호출 하 여 확인할 수 있는 [SQLGetInfo](sqlgetinfo.md) sql_max_procedure_name_len의 값을 요청 합니다.|  
+|SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대 한 정보를 참조 하세요 [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)합니다. 값은 부호 있는 32비트 정수로 반환됩니다.|  
+|SQL_DIAG_SS_PROCNAME|필요한 경우 오류를 생성하는 저장 프로시저의 이름입니다. 값은 문자열로 반환됩니다. 문자열 길이(문자 수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다. 호출 하 여 확인할 수 있습니다 [SQLGetInfo](sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN의 값을 요청 합니다.|  
 |SQL_DIAG_SS_SEVERITY|관련된 오류 메시지의 심각도 수준입니다. 값은 부호 있는 32비트 정수로 반환됩니다.|  
 |SQL_DIAG_SS_SRVNAME|오류가 발생한 서버의 이름입니다. 값은 문자열로 반환됩니다. 문자열 길이(문자 수)는 sqlncli.h의 SQL_MAX_SQLSERVERNAME 매크로에 의해 정의됩니다.|  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36091721"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 문|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 또는 DUMP DATABASE 문|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 문|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 또는 DUMP TRANSACTION 문. 경우에 반환 CHECKPOINT 문에 대해서는 **trunc. 로그온에서 chkpt.** 데이터베이스 옵션이 설정되어 있으면 CHECKPOINT 문에 대해서도 반환됩니다.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 또는 DUMP TRANSACTION 문. 있으면 CHECKPOINT 문에 대해서도 반환 합니다 **trunc. log 있습니다.** 데이터베이스 옵션이 설정되어 있으면 CHECKPOINT 문에 대해서도 반환됩니다.|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 흐름 제어 문|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 문|  
 |SQL_DIAG_DFC_SS_KILL|KILL 문|  
@@ -100,9 +98,9 @@ ms.locfileid: "36091721"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 문|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 및 테이블 반환 매개 변수  
- 두 개의 진단 필드를 사용할 수 SQLGetDiagField: SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER 합니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
+ SQLGetDiagField를 사용 하 여 두 개의 진단 필드를 검색할 수 있습니다: SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER 합니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLGetDiagField 함수](http://go.microsoft.com/fwlink/?LinkId=59352)   

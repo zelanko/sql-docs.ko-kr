@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158514"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포
   
@@ -89,7 +89,7 @@ ms.locfileid: "36182276"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원본 인스턴스에서 배포할 데이터베이스에 대한 백업 운영자 권한의 자격 증명.  
   
- Windows Azure 가상 컴퓨터에서 SQL Server를 실행 하는 방법에 대 한 자세한 내용은 참조 [Windows Azure 가상 컴퓨터의 SQL Server로 마이그레이션할 준비 하기](http://msdn.microsoft.com/library/dn133142.aspx)합니다.  
+ Windows Azure virtual machines에서 SQL Server를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows Azure Virtual Machines에서 SQL Server로 마이그레이션할 준비 하기](http://msdn.microsoft.com/library/dn133142.aspx)합니다.  
   
  Windows Server 운영 체제를 실행 중인 컴퓨터에서 다음 구성 설정을 사용하여 이 마법사를 실행해야 합니다.  
   

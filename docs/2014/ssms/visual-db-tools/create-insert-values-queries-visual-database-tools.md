@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting values
 - queries [SQL Server], types
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdca52b519f60fddbd1f42a9e44e08f85a5879b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9501d3d35f35195112c328af22daf4948d115966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157614"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>값 삽입 쿼리 만들기(Visual Database Tools)
   값 삽입 쿼리를 사용하여 현재 테이블에 새 행을 만들 수 있습니다. 값 삽입 쿼리를 만들려면 다음 항목을 지정합니다.  
@@ -72,7 +72,7 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
   
 ## <a name="see-also"></a>관련 항목  
  [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

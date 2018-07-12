@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163445"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 추적 이벤트
   인스턴스에서 생성되는 추적 이벤트를 캡처한 다음 분석하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 작업을 따라갈 수 있습니다.  추적 이벤트는 관련된 추적 이벤트를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  각 추적 이벤트에는 이벤트와 관련된 데이터 집합이 포함되어 있습니다. 모든 데이터 조각이 모든 이벤트와 관련이 있는 것은 아닙니다.  
   
- 추적 이벤트를 시작할 수 있으며 사용 하 여 캡처할 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, 참조 [사용 하 여 SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md),으로 XMLA 명령에서 시작할 수 있습니다 또는 **SQL Server 확장 이벤트** 참조 나중에 분석 및 [사용 하 여 SQL Server 확장 이벤트 &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)합니다.  
+ 추적 이벤트를 시작할 수 있습니다 및 사용 하 여 캡처할 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** 를 참조 하십시오 [사용 하 여 SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)로 XMLA 명령에서 시작할 수 있습니다 또는 **SQL Server 확장 이벤트** 나중에 분석할 내용과 [사용 하 여 SQL Server 확장 이벤트 &#40;Xevent&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)합니다.  
     
  다음 표에서는 각 이벤트 범주 및 해당 범주의 이벤트에 대해 설명합니다.  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36181171"
 |43|Session Initialize|세션을 초기화합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
-[SQL Server Profiler를 사용 하 여 분석 서비스를 모니터링 하려면](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[SQL Server Profiler를 사용 하 여 분석 서비스를 모니터링 합니다.](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

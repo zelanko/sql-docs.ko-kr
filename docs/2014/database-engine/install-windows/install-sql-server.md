@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf415bef00710562247bcfd9fa310e2c0728497f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f03f01be41395cea94acdc40acd582a6fb78772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157014"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 설치
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express를 다운로드 합니다. ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **고 마 워 [Scott Hanselman](http://www.hanselman.com/) 한 곳에 설치 관리자 패키지 연결을 모두 수집 하기 위한!**
+## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express 다운로드 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **준 [Scott hanselman이](http://www.hanselman.com/) 한곳에서 설치 관리자 패키지 링크를 모두 수집 하기 위한!**
   
- 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다. 다양 한 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치할 수 있는 구성 요소 및 설치 프로세스 참조 [SQL Server 2014에 대 한 설치](installation-for-sql-server.md)합니다.  
-> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 비트 및 64 비트 버전에서 사용할 수 있습니다. 64비트 및 32비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 설치 마법사나 명령 프롬프트를 통해 설치됩니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 참조 [버전 및 SQL Server 2014의 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다. 다양 한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치할 수 있는 구성 요소 및 설치 프로세스를 참조 하세요 [SQL Server 2014 설치](installation-for-sql-server.md)합니다.  
+> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 비트 및 64 비트 버전에서 사용할 수 있습니다. 64비트 및 32비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 설치 마법사나 명령 프롬프트를 통해 설치됩니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 참조 하세요 [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 하 고 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](http://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36181682"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[SQL Server 데이터베이스 엔진에 대 한](../sql-server-database-engine-overview.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 설치 및 구성하는 방법에 대해 설명합니다.|  
+|[SQL Server 데이터베이스 엔진 정보](../sql-server-database-engine-overview.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 설치 및 구성하는 방법에 대해 설명합니다.|  
 |[SQL Server 복제 설치](install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 설치 및 구성하는 방법에 대해 설명합니다.|  
 |[Distributed Replay 설치](../../tools/distributed-replay/install-distributed-replay-overview.md)|Distributed Replay 기능 설치와 관련된 항목들을 나열합니다.|  
 |[SQL Server 관리 도구 설치](../../sql-server/install/install-sql-server-management-tools.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구를 설치 및 구성하는 방법에 대해 설명합니다.|  

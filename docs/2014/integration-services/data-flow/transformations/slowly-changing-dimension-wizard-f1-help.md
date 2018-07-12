@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f00ebc72e1091ebeed72e55d1d771c1c9bfb610
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6c05f7bbdfa47ab1d7e60fee879a90754a19a39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158792"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>느린 변경 차원 마법사 F1 도움말
   **느린 변경 차원 마법사** 를 사용하여 다양한 유형의 느린 변경 차원으로 데이터를 로드하도록 구성할 수 있습니다. 이 섹션에서는 **느린 변경 차원 마법사**페이지에 대한 F1 도움말을 제공합니다. 다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  

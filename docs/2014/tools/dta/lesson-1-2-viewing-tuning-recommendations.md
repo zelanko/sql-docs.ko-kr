@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157714"
 ---
 # <a name="viewing-tuning-recommendations"></a>튜닝 권장 구성 보기
   이 태스크에서는 [작업 튜닝](lesson-1-1-tuning-a-workload.md)에서 만든 튜닝 세션을 사용합니다. MyScript.sql [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 스크립트를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스를 튜닝하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장 구성** 탭에 해당 결과가 표시됩니다. 다음 태스크에서는 **튜닝 관리자 GUI(그래픽 사용자 인터페이스)의** 권장 구성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 탭을 소개하고 튜닝 세션 결과에 대해 제공된 정보를 탐색하는 과정을 안내합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36182153"
   
 4.  **인덱스 권장 구성** 창의 표를 마우스 오른쪽 단추로 클릭합니다. 바로 가기 메뉴에서 권장 구성을 선택하거나 권장 구성의 선택을 취소할 수 있습니다. 표 텍스트의 글꼴을 변경할 수도 있습니다.  
   
-5.  **동작** 메뉴에서 **권장 구성 저장** 을 클릭하여 모든 권장 구성을 하나의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에 저장합니다. 스크립트 이름을 `MySessionRecommendations.sql`합니다.  
+5.  **동작** 메뉴에서 **권장 구성 저장** 을 클릭하여 모든 권장 구성을 하나의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에 저장합니다. 스크립트 이름을 `MySessionRecommendations.sql`입니다.  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기에서 MySessionRecommendations.sql 스크립트를 열어 봅니다. 쿼리 편집기에서 스크립트를 실행하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 권장 구성을 적용할 수 있지만 이렇게 하지 마십시오. 쿼리 편집기에서 스크립트를 실행하지 않고 닫습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36182153"
   
 7.  **동작** 메뉴에서 **권장 구성 평가**를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 MySession의 원래 권장 구성의 하위 집합을 평가할 수 있는 새 튜닝 세션이 만들어집니다.  
   
-8.  형식 `EvaluateMySession` 새 **세션 이름**를 클릭 하 고는 **분석 시작** 도구 모음 단추입니다. 이 새 튜닝 세션에 대해 2단계와 3단계를 반복하여 해당 권장 구성을 볼 수 있습니다.  
+8.  형식 `EvaluateMySession` 새 **세션 이름**를 클릭 합니다 **분석 시작** 도구 모음에서. 이 새 튜닝 세션에 대해 2단계와 3단계를 반복하여 해당 권장 구성을 볼 수 있습니다.  
   
 ## <a name="summary"></a>요약  
  MySession 튜닝 세션에 대한 **권장 구성** 탭의 내용을 보고 새 EvaluateMySession 튜닝 세션에서 해당 권장 구성의 하위 집합을 평가했습니다.  
