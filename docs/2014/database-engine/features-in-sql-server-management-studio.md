@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: e75504b9-7968-4e3b-8411-fd79fe09021e
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7c77778c7371599a0b15124bd66c02d9140a664
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 117bf64e7b554dc68cb10f8491d05fba8c4b5e67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155034"
 ---
 # <a name="features-in-sql-server-management-studio"></a>SQL Server Management Studio의 기능
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 다음과 같은 일반적인 기능이 포함되어 있습니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbc4270e-6045-45b2-b429-2aec841ef758
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c308d29b93465c8266d1c75ce89e7e198b63dfb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e458ccc2cfa5996f61c6a7a46b1d7e0abf63e45e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155674"
 ---
 # <a name="update-progress"></a>업데이트 진행률
   설치 진행률 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 해당 구성 요소에 업데이트가 적용될 때 설치 프로그램을 모니터링할 수 있습니다.  

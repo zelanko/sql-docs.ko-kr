@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
@@ -17,13 +17,13 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f241a4df7cdf90fa1fb05f99ba932877bdce7d05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149944"
 ---
 # <a name="predefined-roles"></a>미리 정의된 역할
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36173272"
 |보고서 기록 관리|보고서 기록을 만들고, 확인하고, 삭제하며 보고서 기록 속성을 확인하고 스냅숏 기록 제한 및 캐싱 동작 방법을 결정하는 설정을 확인하고 수정합니다.|  
 |보고서 관리|보고서를 추가 및 삭제하고, 보고서 매개 변수를 수정하고, 보고서 속성을 확인 및 수정하고, 보고서에 내용을 제공하는 데이터 원본을 확인 및 수정하고, 보고서 정의를 확인 및 수정하고, 보고서 수준의 보안 정책을 설정합니다.|  
 |리소스 관리|리소스를 만들고, 수정하고, 삭제하며 리소스 속성을 확인하고 수정합니다.|  
-|항목의 보안 정책 설정|보고서, 링크된 보고서, 폴더, 리소스 및 데이터 원본에 대한 보안 정책을 정의합니다. 자세한 내용은 참조 [보안 개체 항목](securable-items.md)합니다.|  
+|항목의 보안 정책 설정|보고서, 링크된 보고서, 폴더, 리소스 및 데이터 원본에 대한 보안 정책을 정의합니다. 자세한 내용은 [보안 개체 항목](securable-items.md)합니다.|  
 |데이터 원본 보기|폴더 계층에 있는 공유 데이터 원본 항목을 봅니다.|  
 |보고서 보기|보고서를 실행하고 보고서 속성을 봅니다.|  
 |모델 보기|폴더 계층의 모델을 보고, 모델을 보고서의 데이터 원본으로 사용하고, 모델에 대해 쿼리를 실행하여 데이터를 검색합니다.|  
@@ -192,7 +192,7 @@ ms.locfileid: "36173272"
 |태스크|Description|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서 정의를 보고서 서버에 게시하지 않고 실행을 시작합니다.|  
-|작업 관리|실행 중인 작업을 확인 및 취소합니다. 자세한 내용은 참조 [실행 중인 프로세스 관리](../subscriptions/manage-a-running-process.md)합니다.|  
+|작업 관리|실행 중인 작업을 확인 및 취소합니다. 자세한 내용은 [실행 중인 프로세스 관리](../subscriptions/manage-a-running-process.md)합니다.|  
 |보고서 서버 속성 관리|보고서 서버 및 보고서 서버에서 관리하는 항목에 적용되는 속성을 확인하고 수정합니다.<br /><br /> 이 태스크는 보고서 관리자의 이름 변경, 내 보고서 설정 및 보고서 기록 기본값 설정을 지원합니다.|  
 |역할 관리|역할 정의를 만들고, 확인하고, 수정하고, 삭제합니다.<br /><br /> **시스템 관리자** 역할의 멤버는 사이트 설정 페이지를 사용하여 역할을 관리할 수 있습니다.|  
 |공유 일정 관리|보고서를 실행하거나 새로 고치는 데 사용되는 공유 일정을 만들고, 확인하고, 수정하고, 삭제합니다.|  

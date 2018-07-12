@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e3731ae505a755bd68410ee3228a1bd13579bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a17c8f404d99d4b701eafb536aaa595a4039bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151214"
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 행 집합
   하나 이상의 성능 카운터의 값을 반환합니다. 초당 디스크 읽기 수 및 CPU 사용량(%) 등의 시간별 사용량에 대한 정보를 반환하는 카운터는 지원하지 않습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36093622"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_PERFORMANCE_COUNTERS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_PERFORMANCE_COUNTERS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

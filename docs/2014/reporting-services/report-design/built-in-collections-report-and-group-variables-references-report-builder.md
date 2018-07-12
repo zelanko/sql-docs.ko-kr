@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148494"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  
@@ -51,12 +51,12 @@ ms.locfileid: "36173059"
   
 -   **읽기/쓰기로 사용** 값을 한 번 설정하고 보고서 세션 내에서 값을 직렬화합니다. 변수에 대해 읽기/쓰기 옵션을 사용하는 것이 보고서 정의의 코드 블록에서 정적 변수를 사용하는 것보다 효율적입니다.  
   
-     선택을 취소 하면는 **읽기 전용** 변수도 설정 되어 변수를 쓰기 가능한 속성에 대 한 옵션 `true`합니다. 식에서 값을 업데이트하려면 SetValue 메서드(예: `=Variables!MyVariable.SetValue("123")`)를 사용합니다.  
+     선택을 취소 하면 합니다 **읽기 전용** 변수를로 변수의 Writable 속성이 옵션 `true`합니다. 식에서 값을 업데이트하려면 SetValue 메서드(예: `=Variables!MyVariable.SetValue("123")`)를 사용합니다.  
   
     > [!NOTE]  
     >  보고서 프로세서가 변수를 초기화하는 시기 또는 변수를 업데이트하는 식을 계산하는 시기는 제어할 수 없습니다. 변수 초기화 실행 순서는 정의되어 있지 않습니다.  
   
- 세션에 대 한 자세한 내용은 참조 [보고서 작성기에서 보고서를 미리 보려고 시도한](../report-builder/previewing-reports-in-report-builder.md)합니다.  
+ 세션에 대 한 자세한 내용은 참조 하십시오 [보고서 작성기에서 보고서 미리 보기](../report-builder/previewing-reports-in-report-builder.md)합니다.  
   
 ## <a name="group-variables"></a>그룹 변수  
  그룹 변수를 사용하여 복잡한 식을 그룹 범위에서 한 번에 계산할 수 있습니다. 그룹 변수는 그룹 및 해당 자식 그룹의 범위 내에서만 유효합니다.  

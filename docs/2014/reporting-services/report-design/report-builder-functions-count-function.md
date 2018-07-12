@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152174"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.  
@@ -36,10 +36,10 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`Variant` 또는 `Binary`) 예를 들어 집계를 수행할 식 `=Fields!FieldName.Value`합니다.  
+ (`Variant` 나 `Binary`) 식의 예를 들어 집계를 수행할 `=Fields!FieldName.Value`합니다.  
   
  *범위*  
- (`String`) 항목을 집계 함수를 적용할 보고서가 포함 된 데이터 집합, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
+ (`String`) 집계 함수를 적용할 항목을 보고서가 포함 된 데이터 집합, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
  *재귀*  
  (**열거 형식**) 선택 사항입니다. `Simple` (기본값) 또는 `RdlRecursive`합니다. 집계를 재귀적으로 수행할지 여부를 지정합니다.  
@@ -56,7 +56,7 @@ Count(expression, scope, recursive)
   
 -   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
   
--   *식* 포함 되지 않아야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -80,7 +80,7 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

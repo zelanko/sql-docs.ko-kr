@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149504"
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualificaton 요소(ASSL)
-  측정값에 대 한 접두사 적용 여부를 결정은 [MeasureGroup](../objects/group-element-assl.md)합니다.  
+  측정값에 대 한 접두사 적용 여부를 결정 합니다 [MeasureGroup](../objects/group-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36173197"
 |*PrefixMeasureGroup*|이 측정값 그룹에 있는 각 측정값의 고유한 이름 및 캡션에 측정값 그룹 및 공백 하나가 접두사로 적용됩니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `MeasureQualification` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
+ 부모에 해당 하는 요소가 `MeasureQualification` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [MeasureGroup 요소 &#40;ASSL&#41;](../objects/group-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   

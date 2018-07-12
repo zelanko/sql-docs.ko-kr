@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
 - Sql12.ssms.XeWizard.SetSessionProperties.f1
@@ -32,15 +32,15 @@ helpviewer_keywords:
 - Sql11.ssms.XeWizard.SelectEvents.f1
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69a63b1b360a1ba1c0e9a106dbb78f215f9eca71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc5a2f60cfeff0289bb0a16476fb2506c3beda6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155234"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>마법사를 사용하여 확장 이벤트 세션을 만들기(개체 탐색기)
   서버의 이벤트를 손쉽게 선택하고 캡처할 수 있도록 확장 이벤트에는 확장 이벤트 세션을 만드는 단계를 안내해 주는 새 세션 마법사가 포함되어 있습니다. 새 세션 마법사에는 대부분의 확장 이벤트 기능이 표시됩니다. [새 세션 대화 상자](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) 에서는 데이터를 캡처, 표시 및 분석하는 확장 이벤트 세션을 정의할 수 있습니다. 새 세션 대화 상자에는 모든 확장 이벤트 기능이 표시됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36172959"
   
 -   [요약](#BKMK_Summary)  
   
--   [이벤트 세션 만들기](#BKMK_CreateEventSession)  
+-   [Create Event Session](#BKMK_CreateEventSession)  
   
 ##  <a name="BKMK_Welcome"></a> 소개  
  **소개** 페이지에서 다음을 수행합니다.  
@@ -166,7 +166,7 @@ ms.locfileid: "36172959"
   
 3.  **마침** 을 클릭하여 이벤트 세션을 만듭니다.  
   
-##  <a name="BKMK_CreateEventSession"></a> 이벤트 세션 만들기  
+##  <a name="BKMK_CreateEventSession"></a> Create Event Session  
  **이벤트 세션 만들기** 페이지에서 이벤트 세션을 성공적으로 만든 후 다음을 수행합니다.  
   
 1.  마법사를 닫은 후 세션을 시작하려면 **세션을 만든 후 즉시 이벤트 세션 시작** 을 클릭합니다. 세션을 만든 후 즉시 이벤트 세션을 시작해야 라이브 데이터를 볼 수 있습니다.  

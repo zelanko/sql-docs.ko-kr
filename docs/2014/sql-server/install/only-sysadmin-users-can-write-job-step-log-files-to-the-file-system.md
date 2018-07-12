@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job step log files [SQL Server Agent]
 - log files [SQL Server Agent]
 - writing job step log files
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0b7638bbbf33cdd820467cd21edc40a6f5c42ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6b31dace7b76d068187b495d6e63517967a6c0f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151954"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>sysadmin 사용자만 작업 단계 로그 파일을 파일 시스템에 기록할 수 있습니다.
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 선택적으로 각 작업 단계에 대한 로그를 기록합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36093438"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 멤버에 의해 소유 하는 작업에 대 한 파일 시스템에 로그를 쓸 수는 **sysadmin** 고정된 서버 역할입니다. 작업 소유자의 구성원이 아닙니다. 하는 경우는 **sysadmin** 역할과 프록시 계정을 설정 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 자격 증명을 사용 하 여 파일 시스템에 로그에 쓸 수 있습니다.  
+ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 멤버가 자신이 소유한 작업에 대 한 파일 시스템에 로그를 기록할 수 있습니다 합니다 **sysadmin** 고정된 서버 역할입니다. 작업 소유자의 멤버인 경우 합니다 **sysadmin** 역할 및 경우에 프록시 계정이 사용 되는지, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 자격 증명을 사용 하 여 파일 시스템에 로그를 기록할 수 있습니다.  
   
  업그레이드 후 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자는 자신이 소유한 작업에 대한 로그를 더 이상 파일 시스템에 기록할 수 없습니다. 대신 이러한 사용자는 **msdb** 데이터베이스의 테이블에 로그를 기록하는 옵션을 선택할 수 있습니다. **sysadmin** 역할의 멤버는 계속 파일 시스템에 로그를 기록할 수 있습니다.  
   

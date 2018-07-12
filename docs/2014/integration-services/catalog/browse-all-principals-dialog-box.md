@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9ffc801a102ecde6cf7070bd404121d62dcec11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e82e472cc78175af5707bcb83cc9777da77c3a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152804"
 ---
 # <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
   **모든 보안 주체 찾아보기** 대화 상자를 사용하여 데이터베이스 보안 주체를 선택한 후 선택한 프로젝트 또는 선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경할 수 있습니다.  
