@@ -1,5 +1,5 @@
 ---
-title: 다각형, 선 및 점 표시 규칙 및 분석 데이터 (보고서 작성기 및 SSRS) 하 여 다 | Microsoft Docs
+title: 다를 다각형, 선 및 점 표시 규칙 및 분석 데이터 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
 - sql12.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
@@ -21,15 +21,15 @@ f1_keywords:
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ffe78fc097b8c51f490642d5dc857f0257c806b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149774"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경(보고서 작성기 및 SSRS)
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "36183379"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|범위의 시작과 범위의 끝에 대한 실제 숫자 값을 표시합니다.|10 - 790|  
   
 ## <a name="see-also"></a>관련 항목  
- [지도 범례 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

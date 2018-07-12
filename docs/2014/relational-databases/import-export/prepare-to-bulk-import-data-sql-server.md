@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], about bulk importing
 - BULK INSERT statement, guidelines
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a18c35836ba8a7aede90151c7141645ba9a9ad9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f2c1b53a3a8cb93eaca7b67351adaf23244f92f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156164"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>대량 데이터 가져오기 준비(SQL Server)
   **bcp** 명령, BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하여 데이터 파일의 데이터만 대량으로 가져올 수 있습니다.  

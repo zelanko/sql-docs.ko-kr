@@ -5,29 +5,27 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e80bfac0244ebad40725e5eb3583d0377fd70ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9fd97c625957a184c11387d5a1833508c67a60e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180498"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419032"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 OLE DB 변경 내용에 대해 설명합니다.  
   
- 큰 CLR Udt에 대 한 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client를 [Large CLR User-Defined 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)합니다. 샘플을 보려면 [사용 큰 CLR Udt &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)합니다.  
+ 큰 CLR Udt 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [Large CLR User-Defined 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)합니다. 샘플을 보려면 [큰 CLR Udt를 사용 하 여 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)합니다.  
   
 ## <a name="data-format"></a>데이터 형식  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 ~0을 사용하여 LOB(Large Object) 형식에 대해 무제한 크기인 값의 길이를 나타냅니다. ~0은 8,000바이트보다 큰 CLR UDT 크기도 나타냅니다.  
@@ -41,13 +39,13 @@ ms.locfileid: "36180498"
  UDT 값은 바이트 배열로 나타납니다. 16진수 문자열로의 변환 및 그 반대의 변환이 지원됩니다. 리터럴 값은 접두사 "0x"를 사용하여 16진수 문자열로 나타납니다. 16진수 문자열은 밑수가 16인 이진 데이터의 텍스트 표현입니다. 예를 들어 서버 형식 `varbinary(10)`를 DBTYPE_STR로 변환하는 경우 모든 문자 쌍이 단일 바이트를 나타내는 20자의 16진수 표현이 생성됩니다.  
   
 ## <a name="parameter-properties"></a>매개 변수 속성  
- DBPROPSET_SQLSERVERPARAMETER 속성 집합은 OLE DB를 통해 UDT를 지원합니다. 자세한 내용은 참조 [사용자 형식](../features/using-user-defined-types.md)합니다.  
+ DBPROPSET_SQLSERVERPARAMETER 속성 집합은 OLE DB를 통해 UDT를 지원합니다. 자세한 내용은 [사용자 형식](../features/using-user-defined-types.md)합니다.  
   
 ## <a name="column-properties"></a>열 속성  
- DBPROPSET_SQLSERVERCOLUMN 속성 집합은 OLE DB를 통해 테이블 만들기를 지원합니다. 자세한 내용은 참조 [사용자 형식](../features/using-user-defined-types.md)합니다.  
+ DBPROPSET_SQLSERVERCOLUMN 속성 집합은 OLE DB를 통해 테이블 만들기를 지원합니다. 자세한 내용은 [사용자 형식](../features/using-user-defined-types.md)합니다.  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable의 데이터 형식 매핑  
- 다음 정보를 사용 하는 `DBCOLUMNDESC` itabledefinition:: Createtable UDT 열이 필요한 경우 사용 되는 구조:  
+ 다음 정보는 `DBCOLUMNDESC` itabledefinition:: Createtable UDT 열이 필요한 경우 사용 되는 구조:  
   
 |OLE DB 데이터 형식 (*wType*)|*pwszTypeName*|SQL Server 데이터 형식|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
@@ -70,7 +68,7 @@ ms.locfileid: "36180498"
 |DBTYPE_UDT<br /><br /> (8,000바이트를 초과하는 길이)|DBTYPE_UDT|~0|무시됨|무시됨|무시됨|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
- 응용 프로그램 사용 **ISSCommandWithParameters** 을 가져오고 매개 변수 속성 섹션에 정의 된 매개 변수 속성을 설정 합니다.  
+ 응용 프로그램 사용 **ISSCommandWithParameters** 가져오기 및 매개 변수 속성 섹션에 정의 된 매개 변수 속성을 설정 합니다.  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
  반환되는 열은 다음과 같습니다.  
@@ -135,12 +133,12 @@ ms.locfileid: "36180498"
   
 |기호|의미|  
 |------------|-------------|  
-|1|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
+|1|서버 이외의 유형이 DBTYPE_UDT로 지정 하는 경우 **icommandwithparameters:: Setparameterinfo** 고 접근자 유형이 DBTYPE_UDT에 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
 |2|데이터가 16진수 문자열에서 이진 데이터로 변환됩니다.|  
 |3|데이터가 이진 데이터에서 16진수 문자열로 변환됩니다.|  
-|4|유효성 검사 사용 시 발생할 수 **CreateAccessor** 또는 **GetNextRows**합니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  
+|4|유효성 검사에 사용 하는 경우 발생할 수 있습니다 **CreateAccessor** 하거나 **GetNextRows**합니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  
 |5|BY_REF가 사용될 수 있습니다.|  
-|6|UDT 매개 변수를 DBBINDING의 DBTYPE_IUNKNOWN으로 바인딩할 수 있습니다. DBTYPE_IUNKNOWN으로 응용 프로그램 ISequentialStream 인터페이스를 사용 하 여 스트림으로 데이터를 처리 하려는 것을 나타냅니다. 소비자가 지정 하는 경우 *wType* DBTYPE_IUNKNOWN 유형으로 바인딩 및 해당 열 또는 출력 저장된 프로시저의 매개 변수는 UDT, SQL Server Native Client는 ISequentialStream을 반환 합니다. SQL Server Native Client에 대 한 쿼리 하는 입력된 매개 변수에 대해는 ISequentialStream 인터페이스에 대 한 합니다.<br /><br /> 큰 UDT의 경우 DBTYPE_IUNKNOWN 바인딩을 사용하는 동안 UDT 데이터의 길이를 바인딩하지 않도록 선택할 수 있습니다. 하지만 작은 UDT의 경우에는 길이를 바인딩해야 합니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 매개 변수를 큰 UDT로 지정할 수 있습니다.<br /><br /> -   *ulParamParamSize* 은 ~ 0입니다.<br />-DBPARAMBINDINFO 구조체에 DBPARAMFLAGS_ISLONG이 설정 됩니다.<br /><br /> 행 데이터의 경우 DBTYPE_IUNKNOWN 바인딩만 큰 UDT에 사용할 수 있습니다. 열 행 집합에서 icolumnsinfo:: Getcolumninfo 메서드를 사용 하 여 큰 UDT 유형이 있는지 확인 하거나 IColumnsInfo 인터페이스 개체의 명령 수 있습니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 열은 큰 UDT 열입니다.<br /><br /> -에 DBCOLUMNFLAGS_ISLONG 플래그가 설정 되어 *dwFlags* DBCOLUMNINFO 구조의 멤버<br />-   *ulColumnSize* DBCOLUMNINFO의 구성원은 ~ 0입니다.|  
+|6|UDT 매개 변수를 DBBINDING의 DBTYPE_IUNKNOWN으로 바인딩할 수 있습니다. DBTYPE_IUNKNOWN으로 응용 프로그램이 ISequentialStream 인터페이스를 사용 하 여 스트림으로 데이터를 처리 하는 것을 나타냅니다. 소비자를 지정 하는 경우 *wType* 을 DBTYPE_IUNKNOWN 유형으로 바인딩 및 해당 열 또는 출력 매개 변수가 저장된 프로시저의 UDT 이면 SQL Server Native Client는 ISequentialStream을 반환 합니다. SQL Server Native Client에 대 한 쿼리는 입력 매개 변수는 ISequentialStream 인터페이스에 대 한 합니다.<br /><br /> 큰 UDT의 경우 DBTYPE_IUNKNOWN 바인딩을 사용하는 동안 UDT 데이터의 길이를 바인딩하지 않도록 선택할 수 있습니다. 하지만 작은 UDT의 경우에는 길이를 바인딩해야 합니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 매개 변수를 큰 UDT로 지정할 수 있습니다.<br /><br /> -   *ulParamParamSize* 는 ~ 0입니다.<br />-DBPARAMBINDINFO 구조체에 DBPARAMFLAGS_ISLONG이 설정 됩니다.<br /><br /> 행 데이터의 경우 DBTYPE_IUNKNOWN 바인딩만 큰 UDT에 사용할 수 있습니다. 열 행 집합에서 icolumnsinfo:: Getcolumninfo 메서드를 사용 하 여 큰 UDT 유형이 있는지 확인 하거나 개체의 IColumnsInfo 인터페이스 수 있습니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 열은 큰 UDT 열입니다.<br /><br /> -에 DBCOLUMNFLAGS_ISLONG 플래그가 설정 되어 *dwFlags* DBCOLUMNINFO 구조의 멤버<br />-   *ulColumnSize* DBCOLUMNINFO의 멤버는 ~ 0입니다.|  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 DBTYPE_NULL을 나타내는 DBSTATUS_S_ISNULL 또는 DBTYPE_EMPTY를 나타내는 DBSTATUS_S_DEFAULT로 상태를 설정해야 합니다. DBTYPE_BYREF는 DBTYPE_NULL 또는 DBTYPE_EMPTY에 사용할 수 없습니다.  
   

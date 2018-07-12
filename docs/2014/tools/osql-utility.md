@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240003"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
   **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -116,7 +116,7 @@ C:\>osql
  열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 머리글을 출력하지 않으려면 -1을 사용합니다. -1을 사용하는 경우는 **-h -1**이 아니라 **-h-1**과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
   
  **-s** *col_separator*  
- 열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 운영 체제에 특수 한 의미가 있는 문자를 사용 하려면 (예를 들어 |; & \< >), 해당 문자를 큰따옴표 (")로 묶습니다.  
+ 열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 운영 체제에 대 한 특별 한 의미가 있는 문자를 사용 하려면 (예를 들어 |; & \< >), 큰따옴표 (")로 묶으십시오.  
   
  **-w** *column_width*  
  출력에 사용할 화면의 너비를 설정할 수 있습니다. 기본값은 80자입니다. 출력 줄이 최대 화면 너비에 도달하면 여러 줄로 나뉘어집니다.  
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
   
- 시작할 때 사용자 이름의 지정 하지 않으면 **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 환경 변수를 확인 하 고 사용 하 여, 예를 들어 **osqluser = (*`user`*)** 또는 **osqlserver = (*`server`*)** 합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
+ 시작할 때 사용자 이름의 지정 하지 않으면 **osql**하십시오 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 환경 변수를 확인 하 고, 예를 들어 사용 **osqluser = (*`user`*)** 나 **osqlserver = (*`server`*)** 합니다. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
   
  **-U** 또는 **-P** 옵션을 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드를 사용하여 연결을 시도합니다. 인증은 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **을 실행하는 사용자의**Windows 계정에 기반합니다.  
   
@@ -298,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  일괄 처리를 실행한 다음 종료하며 값을 반환하지 않습니다.  
   
--   종료 **(*`query`*)**  
+-   끝내기 **(*`query`*)**  
   
 > [!NOTE]  
 >  쿼리를 포함한 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  
@@ -329,7 +329,7 @@ RAISERROR(50001, 10, 127)
      반환 값을 선택할 때 변환 오류가 발생했습니다.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>money 및 smallmoney 데이터 형식 표시  
- **osql** 표시는 `money` 및 `smallmoney` 있지만 데이터 소수 자릿수가 두 자리인 형식 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 내부적으로 네 개의 소수 자릿수로 값을 저장 합니다. 예를 들어, 다음과 같습니다.  
+ **osql** 표시 합니다 `money` 하 고 `smallmoney` 있지만 두 소수 자릿수를 사용 하 여 데이터 형식 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 내부적으로 네 개의 소수 자릿수로 값을 저장 합니다. 예를 들어, 다음과 같습니다.  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

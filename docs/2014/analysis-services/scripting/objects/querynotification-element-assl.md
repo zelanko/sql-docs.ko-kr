@@ -20,15 +20,15 @@ helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c9bc13772d549d6ade640af4c3f57ac52efbbec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153304"
 ---
 # <a name="querynotification-element-assl"></a>QueryNotification 요소(ASSL)
   데이터 원본이 수정되었는지 여부를 확인하기 위해 실행할 쿼리에 대한 [ProactiveCaching](proactivecaching-element-assl.md) 요소의 정보를 포함합니다.  

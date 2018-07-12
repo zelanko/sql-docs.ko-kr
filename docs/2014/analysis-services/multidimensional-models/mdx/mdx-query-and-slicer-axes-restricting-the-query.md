@@ -1,5 +1,5 @@
 ---
-title: 쿼리 및 Slicer 축 (MDX)으로 쿼리 제한 | Microsoft Docs
+title: 쿼리 및 Slicer 축 (MDX)를 사용 하 여 쿼리를 제한 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], axes
 - queries [MDX], axes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], axes
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e727b432afec1f42a6a111442c2263d6c48784de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b5b06d8449c778e9f50751120c42133189d6f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157594"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>쿼리 및 Slicer 축으로 쿼리 제한(MDX)
   MDX(Multidimensional Expressions) SELECT 쿼리를 구성할 때 응용 프로그램에서는 일반적으로 큐브를 검토하고 계층 집합을 다음과 같이 두 개의 하위 집합으로 나눕니다.  

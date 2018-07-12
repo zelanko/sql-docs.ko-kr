@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57dd66ac41586aa1732d7a3a5aeb915450b7c9f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c9a70f95f552ee5a614f8f44e1f8436c0aa35e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151744"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>설정 변경 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 설정 변경 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 **처리** 대화 상자에 나열된 개체의 처리를 제어하는 설정을 변경할 수 있습니다. **처리** 대화 상자에서 **설정 변경** 을 클릭하여 **설정 변경** 대화 상자를 표시할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36183726"
  **최대 병렬 태스크**  
  처리 작업에서 병렬로 실행할 최대 태스크 수를 선택하거나 **서버에서 지정** 을 선택하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 최적 병렬 작업 수를 선택할 수 있도록 합니다.  
   
- **순차적**  
+ **순차**  
  개체를 순서대로 처리하려면 클릭합니다.  
   
  **트랜잭션 모드**  
@@ -142,7 +142,7 @@ ms.locfileid: "36183726"
  **처리** 대화 상자에서 선택한 개체에 종속된 개체를 처리하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [처리 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

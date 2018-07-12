@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259719"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
   데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36180771"
  기존 솔루션 내에 데이터 마이닝 개체를 만든 경우 해당 데이터 마이닝 개체는 기본적으로 솔루션 파일과 동일한 이름으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 배포됩니다. **보고서 속성** 대화 상자를 사용하여 이 이름 및 대상 서버를 변경할 수 있습니다. 자세한 내용은 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
   
 > [!WARNING]  
->  프로젝트를 성공적으로 작성하고 배포하려면 OLAP/데이터 마이닝 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 액세스 권한이 있어야 합니다. 개발 또는 인스턴스에 데이터 마이닝 솔루션을 배포할 수 없습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 지 원하는 테이블 형식 모델 또는 PowerPivot 통합 문서에서 직접 또는 메모리 내 데이터 저장소를 사용 하는 테이블 형식 모델에서 데이터를 사용할 수 있습니다. 사용 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 마이닝을 지원할 수 있는지 확인하려면 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+>  프로젝트를 성공적으로 작성하고 배포하려면 OLAP/데이터 마이닝 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 액세스 권한이 있어야 합니다. 개발 또는 인스턴스에서 데이터 마이닝 솔루션을 배포할 수 없습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 지 나 메모리 내 데이터 저장소를 사용 하는 테이블 형식 모델 또는 PowerPivot 통합 문서에서 직접 데이터를 사용할 수 있습니다. 사용 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 마이닝을 지원할 수 있는지 확인하려면 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
  만든 각 데이터 마이닝 프로젝트 내에서 다음 단계를 수행합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36180771"
   
  예를 들어 단일 데이터 마이닝 프로젝트에서 각각 여러 데이터 원본 뷰를 지원하는 여러 데이터 원본에 대한 참조를 포함할 수 있습니다. 또한 각 데이터 원본 뷰는 각각 여러 마이닝 모델과 관련된 여러 개의 마이닝 구조를 지원할 수 있습니다.  
   
- 그 밖에도 프로젝트는 플러그 인 알고리즘, 사용자 지정 어셈블리 또는 사용자 지정 저장 프로시저를 포함할 수 있지만 여기에서는 이러한 개체에 대해 설명하지 않습니다. 자세한 내용은 참조 [개발자 가이드 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)합니다.  
+ 그 밖에도 프로젝트는 플러그 인 알고리즘, 사용자 지정 어셈블리 또는 사용자 지정 저장 프로시저를 포함할 수 있지만 여기에서는 이러한 개체에 대해 설명하지 않습니다. 자세한 내용은 [개발자 가이드 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)합니다.  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -206,11 +206,11 @@ ms.locfileid: "36180771"
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|  
 |리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](processing-data-mining-objects.md)|  
-|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 모델 데이터베이스 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 Model 데이터베이스 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 디자이너](data-mining-designer.md)   
  [다차원 모델을 만들 SQL Server Data Tools를 사용 하 여 &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [작업 영역 데이터베이스 &#40;SSAS 테이블 형식&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [작업 영역 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

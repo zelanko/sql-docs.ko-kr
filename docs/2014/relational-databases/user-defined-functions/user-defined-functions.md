@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172603"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427472"
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
   프로그래밍 언어의 함수처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 함수는 매개 변수를 받아들이고 복잡한 계산과 같은 동작을 수행하며 해당 작업의 결과를 값으로 반환합니다. 반환 값은 단일 스칼라 값이나 결과 집합일 수 있습니다.  
@@ -65,10 +63,10 @@ ms.locfileid: "36172603"
   
 ##  <a name="FunctionTypes"></a> 함수 유형  
  스칼라 함수  
- 사용자 정의 스칼라 함수는 RETURNS 절에 정의된 유형의 단일 데이터 값을 반환합니다. 인라인 스칼라 함수에는 함수 본문이 없으며 스칼라 값이 단일 문의 결과입니다. 다중 문 스칼라 함수의 함수 본문은 BEGIN...END 블록으로 정의되며 여기에는 단일 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함됩니다. 반환 형식을 제외한 모든 데이터 형식일 수 `text`, `ntext`, `image`, `cursor`, 및 `timestamp`합니다.  
+ 사용자 정의 스칼라 함수는 RETURNS 절에 정의된 유형의 단일 데이터 값을 반환합니다. 인라인 스칼라 함수에는 함수 본문이 없으며 스칼라 값이 단일 문의 결과입니다. 다중 문 스칼라 함수의 함수 본문은 BEGIN...END 블록으로 정의되며 여기에는 단일 값을 반환하는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함됩니다. 반환 형식을 제외한 모든 데이터 형식일 수 있습니다 `text`, `ntext`, `image`합니다 `cursor`, 및 `timestamp`합니다.  
   
  테이블 반환 함수  
- 사용자 정의 테이블 반환 함수는 반환 된 `table` 데이터 형식입니다. 인라인 테이블 반환 함수에는 함수 본문이 없으며 테이블이 단일 SELECT 문의 결과 집합입니다.  
+ 사용자 정의 테이블 반환 함수에서 반환 된 `table` 데이터 형식입니다. 인라인 테이블 반환 함수에는 함수 본문이 없으며 테이블이 단일 SELECT 문의 결과 집합입니다.  
   
  시스템 함수  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 작업을 수행하는 데 사용되는 다양한 시스템 함수를 제공합니다. 기본 제공 함수는 수정할 수 없습니다. 자세한 내용은 [기본 제공 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [시스템 저장 함수&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) 및 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)를 참조하세요.  

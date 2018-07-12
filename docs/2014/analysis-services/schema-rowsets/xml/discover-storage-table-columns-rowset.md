@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b3fed7add23dda2242000dbad63bb6cc2def0fb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153154"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 행 집합
   SharePoint 또는 테이블 형식 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 수준 정보를 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36182444"
  **다음에 적용:** 테이블 형식 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_STORAGE_TABLE_COLUMNS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_STORAGE_TABLE_COLUMNS` 행 집합에는 다음 열을 포함 합니다.  
   
 |**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -40,8 +40,8 @@ ms.locfileid: "36182444"
 |`TABLE_ID`|`DBTYPE_WSTR`||테이블 ID입니다.|  
 |`COLUMN_ID`|`DBTYPE_ WSTR`||열의 ID입니다. 열 ID는 xVelocity 메모리 내 분석 엔진(VertiPaq) 내부용이며 정보 제공을 위해서만 사용됩니다.|  
 |`COLUMN_TYPE`|`DBTYPE_WSTR`||열의 유형입니다. 열 유형은 xVelocity 메모리 내 분석 엔진(VertiPaq) 내부용이며 정보 제공을 위해서만 사용됩니다.<br /><br /> -BASIC_DATA<br />-HIERARCHY_DATAID_TO_POSITION<br />-HIERARCHY_POSITION_TO_DATAID<br />-관계|  
-|`COLUMN_ENCODING`|`DBTYPE_UI8`||열 데이터에 사용된 인코딩 유형을 나타내는 정수입니다.<br /><br /> -   **0**와 함께 사용 `COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, 관계<br />-   **1**와 함께 사용 `COLUMN_TYPE`: BASIC_DATA<br />-   **2**와 함께 사용 `COLUMN_TYPE`: BASIC_DATA|  
-|`DATATYPE`|`DBTYPE_WSTR`||열의 데이터 형식입니다. 가능한 값은 다음과 같습니다.<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-N/A|  
+|`COLUMN_ENCODING`|`DBTYPE_UI8`||열 데이터에 사용된 인코딩 유형을 나타내는 정수입니다.<br /><br /> -   **0**, `COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, 관계<br />-   **1**, `COLUMN_TYPE`: BASIC_DATA<br />-   **2**, `COLUMN_TYPE`: BASIC_DATA|  
+|`DATATYPE`|`DBTYPE_WSTR`||열의 데이터 형식입니다. 가능한 값은 다음과 같습니다.<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-해당 없음|  
 |`ISKEY`|`DBTYPE_BOOL`||열이 기본 또는 외래 키로 사용되면 `True`이고, 그렇지 않으면 `false`입니다.|  
 |`ISUNIQUE`|`DBTYPE_BOOL`||열의 값이 고유하면 `True`이고, 그렇지 않으면 `false`입니다.|  
 |`ISNULLABLE`|`DBTYPE_BOOL`||열에 null 값이 허용되면 `True`이고, 그렇지 않으면 `false`입니다.|  

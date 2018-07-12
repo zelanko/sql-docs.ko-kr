@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a882abd409468bdd9a52a8affcdca13b3bc93bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182254"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410482"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** 는 응용 프로그램에서 여러 결과 행 집합을 검색하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  

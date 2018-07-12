@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171912"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427602"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
   DDL 트리거를 발생하는 이벤트에 대한 정보는 EVENTDATA 함수를 사용하여 캡처합니다. 이 함수는 `xml` 값을 반환합니다. XML 스키마에는 다음에 대한 정보가 포함됩니다.  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 트리거의 `EVENTDATA()` 문은 허용되지 않는 `CREATE TABLE` 문의 텍스트를 캡처합니다. 이에 대해 xquery를 사용 하 여 수행 된 `xml` EVENTDATA 고 검색 하 여 생성 되는 데이터는 \<CommandText > 요소입니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
+ DDL 트리거의 `EVENTDATA()` 문은 허용되지 않는 `CREATE TABLE` 문의 텍스트를 캡처합니다. 에 대해 XQuery 문을 사용 하 여 이렇게 합니다 `xml` EVENTDATA 및 검색에서 생성 되는 데이터는 \<CommandText > 요소. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
   
 > [!CAUTION]  
 >  EVENTDATA는 CREATE_SCHEMA 이벤트의 데이터와 해당 CREATE SCHEMA 정의(있는 경우)의 <schema_element>를 캡처합니다. 또한 EVENTDATA는 <schema_element> 정의를 별개의 이벤트로 인식합니다. 따라서 CREATE SCHEMA 정의의 <schema_element>가 나타내는 이벤트와 CREATE_SCHEMA 이벤트 둘 다에서 생성된 DDL 트리거는 `TSQLCommand` 데이터 등의 동일한 이벤트 데이터를 두 번 반환할 수 있습니다. 예를 들어 CREATE_SCHEMA 및 CREATE_TABLE 이벤트 둘 다에서 생성된 DDL 트리거가 있으며 다음 일괄 처리가 실행된다고 가정해 보십시오.  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   이벤트를 구성한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문  
   
- 에 대해 XQuery를 사용 하 여 마지막 두 항목도 캡처합니다 다시는 `xml` EVENTDATA로 생성 되는 데이터입니다.  
+ 에 대해 XQuery를 사용 하 여 마지막 두 항목도 캡처합니다 다시는 `xml` 그런 다음 EVENTDATA로 생성 되는 데이터입니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. `query()` 메서드는 출력의 XML 및 앰퍼샌드로 이스케이프 된 캐리지 리턴 및 줄 바꿈 (CRLF) 인스턴스를 반환 하는 동안는 `value()` 메서드 출력에서 보이지 않는 CRLF 인스턴스 렌더링 합니다.  
+>  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. 합니다 `query()` 출력에 XML 및 앰퍼샌드로 이스케이프 된 캐리지 리턴 및 줄 바꿈 (CRLF) 인스턴스를 반환 하는 메서드 동안는 `value()` 메서드 출력에서 보이지 않는 CRLF 인스턴스 렌더링 합니다.  
   
  이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabseTriggerLog** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabseTriggerLog** 는 기본적으로 해제되어 있습니다.  
   

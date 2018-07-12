@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f2b3739bf23e2e7405d95e856df7e776e498709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182860"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>다른 SQL Server 2014 버전으로 업그레이드(설치 프로그램)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 프로그램은 다양한 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 간에 버전 업그레이드를 지원합니다. 지원되는 버전 업그레이드 경로에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 인스턴스 버전 업그레이드를 시작하기 전에 다음 항목을 검토하십시오.  
@@ -53,7 +53,7 @@ ms.locfileid: "36182414"
   
 4.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다.  
   
-5.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전으로 업그레이드할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지를 나타내는 라디오 단추를 선택합니다. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)합니다.  
+5.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전으로 업그레이드할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지를 나타내는 라디오 단추를 선택합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 하 고 [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)합니다.  
   
 6.  사용 조건 페이지에서 사용권 계약을 읽은 다음 동의함 확인란을 선택합니다. 계속하려면 **다음**을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   

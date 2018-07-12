@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211503"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
   **데이터 계층 응용 프로그램 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 응용 프로그램) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **DAC를 추출 하려면 사용 하 여:**[데이터 계층 응용 프로그램 추출 마법사](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
+-   **DAC를 추출 하는를 사용 하 여:**[데이터 계층 응용 프로그램 추출 마법사](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스에 등록 된 DAC를 참조 하지 않는 `msdb` (**마스터** 에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](register-a-database-as-a-dac.md)을 참조하세요.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스에 등록 된 DAC는 참조 하지 않습니다 `msdb` (**마스터** 에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](register-a-database-as-a-dac.md)을 참조하세요.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 데이터베이스에서 DAC를 추출할 수 있습니다. DAC 또는 포함된 사용자가 지원하지 않는 개체가 데이터베이스에 있는 경우 DAC를 추출할 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
@@ -90,9 +90,9 @@ ms.locfileid: "36183303"
   
  **이름** - 이 이름은 DAC를 식별합니다. DAC 이름은 DAC 패키지 파일의 이름과 다를 수 있으며 응용 프로그램 특징을 기술해야 합니다. 예를 들어 데이터베이스가 재무 응용 프로그램에 사용되는 경우 DAC Finance라는 이름을 지정할 수 있습니다.  
   
- **버전(xx.xx.xx.xx 사용, x는 숫자)** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우에 버전에 저장 됩니다는 `msdb` 데이터베이스에 있으며 나중에 아래에서 볼 수 있습니다는 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ **버전(xx.xx.xx.xx 사용, x는 숫자)** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우에 버전에 저장 됩니다는 `msdb` 데이터베이스 및에서 나중에 볼 수 있습니다 합니다 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
- **설명:** - 선택 사항입니다. DAC에 대해 설명합니다. DAC를 배포 하는 경우 설명에 저장 됩니다는 `msdb` 데이터베이스에 있으며 나중에 아래에서 볼 수 있습니다는 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
+ **설명:** - 선택 사항입니다. DAC에 대해 설명합니다. DAC를 배포에 대 한 설명에 저장 됩니다는 `msdb` 데이터베이스 및에서 나중에 볼 수 있습니다 합니다 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
   
  **DAC 패키지 파일에 저장(파일 이름에 .dacpac 확장명 포함):** - DAC를 확장명이 .dacpac인 DAC 패키지 파일에 저장합니다. 파일의 이름과 위치를 지정하려면 **찾아보기** 단추를 클릭합니다.  
   

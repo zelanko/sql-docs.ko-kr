@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTS XSINIL directive
 - adding namespaces
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 54f22bc6db95f588683434cb67b9b2a9661aa99a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fb2205588f3ba0747c3efd09806f6278b428a119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155844"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
   [WITH XMLNAMESPACES(Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) 는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  

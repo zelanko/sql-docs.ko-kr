@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211533"
 ---
 # <a name="udt-utilities"></a>UDT 유틸리티
   UDT 유틸리티 예제에는 여러 유틸리티 함수가 포함되어 있습니다. 여기에는 어셈블리 메타데이터를 Transact-SQL에 표시하는 함수, 어셈블리의 형식을 테이블로 반환하는 예제 스트리밍 테이블 반환 함수, 사용자 정의 데이터 형식의 필드, 메서드 및 속성을 반환하는 함수 등이 있습니다. 이 예제에서는 Transact-SQL의 스트리밍 테이블 반환 함수, .NET Framework 리플렉션 API, .NET Framework의 테이블 반환 함수 호출 등의 기술을 보여 줍니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36182422"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스는 Codeplex에서 사용할 수 있는 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   합니다 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스는 Codeplex에서 사용할 수 있는 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   

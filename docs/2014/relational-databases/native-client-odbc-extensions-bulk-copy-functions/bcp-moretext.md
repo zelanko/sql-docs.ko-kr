@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22b9c6345b3dcdbb2a1b6bc5db735dcb2d635f5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 30ddae53cc452796de0617bb5718d04156dcda41
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172633"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430182"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
   긴 가변 길이 데이터 형식 값의 일부를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보냅니다.  
@@ -55,7 +53,7 @@ pData
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *cbData*  
- 참조 데이터에서 SQL Server로 복사 되는 데이터의 바이트 수는 *pData*합니다. SQL_NULL_DATA 값은 NULL을 나타냅니다.  
+ 참조 하는 데이터에서 SQL Server로 복사 되는 데이터의 바이트 수가 *pData*합니다. SQL_NULL_DATA 값은 NULL을 나타냅니다.  
   
  *pData*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 지원되는 긴 가변 길이 데이터 청크에 대한 포인터입니다.  
@@ -64,19 +62,19 @@ pData
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- 와 함께에서이 함수를 사용할 수 있습니다 [bcp_bind](bcp-bind.md) 및 [bcp_sendrow](bcp-sendrow.md) long, 다양 한 더 작은 청크로 SQL Server에 가변 길이 데이터 값을 복사 합니다. **bcp_moretext** 다음 SQL Server 데이터 형식의 열을 사용할 수 있습니다: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, 사용자 정의 형식 (UDT) 및 XML입니다. **bcp_moretext** 데이터 변환을 지원 하지 않으며, 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
+ 이 함수를 함께에서 사용할 수 있습니다 [bcp_bind](bcp-bind.md) 하 고 [bcp_sendrow](bcp-sendrow.md) 값을 복사 긴 가변 길이 데이터를 보다 작은 많은 청크로 SQL server입니다. **bcp_moretext** 다음 SQL Server 데이터 형식의 열에 사용할 수 있습니다: `text`를 `ntext`, `image`를 `varchar(max)`를 `nvarchar(max)`, `varbinary(max)`, 사용자 정의 형식 (UDT) 및 XML입니다. **bcp_moretext** 데이터 변환을 지원 하지 않습니다, 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
   
- 경우 **bcp_bind** 으로 null이 아닌 호출 *pData* 에서 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext**, `bcp_sendrow` 전체 데이터 값에 관계 없이 전송 길이입니다. 그러나 If, **bcp_bind** 에 NULL *pData* 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext** 는 에서성공적인반환후에즉시데이터를복사하는데사용할수`bcp_sendrow` 나타내는 데이터가 있는 바인딩된 모든 열이 처리 되었습니다.  
+ 하는 경우 **bcp_bind** 가 null이 아닌 호출 *pData* 에서 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext**, `bcp_sendrow` 전체 데이터 값에 관계 없이 전송 길이입니다. 그러나 If, **bcp_bind** NULL이 포함 되어 *pData* 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext** 에서성공적인반환후에즉시데이터를복사할수`bcp_sendrow` 나타내는 데이터가 있는 바인딩된 모든 열이 처리 되었습니다.  
   
- 사용 하는 경우 **bcp_moretext** 한 지원 되는 데이터 형식 열을 행에 보내려면도 사용 해야 행의 다른 모든 지원 되는 데이터 형식 열을 보내려고 합니다. 열을 건너뛸 수 없습니다. 지원되는 데이터 형식은 SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT 및 SQLXML입니다. 열이 각각 varchar(max), nvarchar(max) 또는 varbinary(max)인 경우 SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY 및 SQLVARBINARY도 이 범주에 해당합니다.  
+ 사용 하는 경우 **bcp_moretext** 행에서 지원 되는 데이터 형식 열이 하나을 보낼 사용 해야 합니다도 행의 다른 모든 지원 되는 데이터 형식 열을 보내도록 합니다. 열을 건너뛸 수 없습니다. 지원되는 데이터 형식은 SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT 및 SQLXML입니다. 열이 각각 varchar(max), nvarchar(max) 또는 varbinary(max)인 경우 SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY 및 SQLVARBINARY도 이 범주에 해당합니다.  
   
- 호출 **bcp_bind** 또는 [bcp_collen](bcp-collen.md) SQL Server 열에 복사할 모든 데이터 부분의 총 길이 가져오거나 설정 합니다. SQL Server에 대 한 호출에 지정 된 것 보다 많은 바이트를 보내기 위해 **bcp_bind** 또는 `bcp_collen` 오류가 발생 합니다. 이 오류가 발생, 예를 들어 사용 되는 응용 프로그램에서 `bcp_collen` SQL Server에 대 한 사용 가능한 데이터의 길이 설정 하려면 `text` 를 4500으로 열 다음 호출 **bcp_moretext** 5 번 각 호출 동안 데이터 버퍼 길이가 1000 바이트 했습니다.  
+ 호출 **bcp_bind** 하거나 [bcp_collen](bcp-collen.md) SQL Server 열에 복사할 모든 데이터 부분의 총 길이 설정 합니다. SQL Server에 대 한 호출에 지정 된 것 보다 많은 바이트를 전송 하려고 **bcp_bind** 또는 `bcp_collen` 오류를 생성 합니다. 이 오류 발생, 예를 들어 하는 응용 프로그램에서 `bcp_collen` 는 SQL Server에 대 한 사용 가능한 데이터의 길이 설정 하려면 `text` 열을 4500으로 호출한 **bcp_moretext** 5 번 호출할 때마다 함을 나타내는 동안 데이터 버퍼 길이가 1000 바이트 했습니다.  
   
- 복사한 행 둘 이상의 long, 가변 길이 열이 있는 경우 **bcp_moretext** 가장 낮은 데이터에는 서 수 열을 다음으로 번호가 지정 하는 첫 번째 보냅니다 가장 낮은 열순으로 번호가 열 및 기타 등등. 필요한 데이터의 총 길이를 올바르게 설정하는 것이 중요합니다. 길이 설정 외에는 대량 복사에서 열의 모든 데이터가 수신되었음을 나타낼 방법이 없습니다.  
+ 복사한 행에는 둘 이상의 긴 가변 길이 열을 포함 하는 경우 **bcp_moretext** 가장 낮은 데이터에 다음 열 서 수로 번호 첫 번째 보냅니다 가장 낮은 서 수로 번호가 매겨진된 열 및 등입니다. 필요한 데이터의 총 길이를 올바르게 설정하는 것이 중요합니다. 길이 설정 외에는 대량 복사에서 열의 모든 데이터가 수신되었음을 나타낼 방법이 없습니다.  
   
- 때 `var(max)` 값 보내집니다 bcp_sendrow 및 bcp_moretext를 사용 하 여 서버에 필요 없는 열 길이 설정 하는 bcp_collen를 호출 하 합니다. 대신, 이러한 형식에 대 한 값은 길이가 0 인 bcp_sendrow를 호출 하 여 종료 됩니다.  
+ 때 `var(max)` 값 보내집니다 bcp_sendrow 및 bcp_moretext를 사용 하 여 서버에 필요 없는 열 길이 설정 하는 bcp_collen를 호출 합니다. 대신 이러한 형식에 대 한 값이 길이가 0 인 bcp_sendrow를 호출 하 여 종료 됩니다.  
   
- 응용 프로그램이 정상적으로 호출 `bcp_sendrow` 및 **bcp_moretext** 보낼 데이터의 행 수가 루프 내에서. 다음은 두 개를 포함 하는 테이블에 대 한이 작업을 수행 하는 방법의 개요 `text` 열:  
+ 응용 프로그램이 정상적으로 호출 `bcp_sendrow` 하 고 **bcp_moretext** 데이터 행의 수를 보내도록 루프 내에서. 두 개를 포함 하는 테이블에 대 한이 작업을 수행 하는 방법의 개요는 다음과 같습니다 `text` 열:  
   
 ```  
 while (there are still rows to send)  
@@ -96,7 +94,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>예제  
- 사용 하는 방법을 보여 주는이 예제 **bcp_moretext** 와 **bcp_bind** 및 `bcp_sendrow`:  
+ 이 예제에 사용 하는 방법을 보여 줍니다 **bcp_moretext** 사용 하 여 **bcp_bind** 고 `bcp_sendrow`:  
   
 ```  
 // Variables like henv not specified.  

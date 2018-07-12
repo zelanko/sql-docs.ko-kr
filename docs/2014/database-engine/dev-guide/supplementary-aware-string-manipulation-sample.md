@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee5e76ee7d2d8d388da0d54182a80e24e71ca112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ef48666d6e7c73d530895e315cbc3a42b57599eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277099"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>보조 문자 인식 문자열 조작 예제
   이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제는 보조 문자 인식 문자열 처리 단계를 보여 줍니다. 이 예제에서는 기본 제공 함수와 동일한 문자열 조작 함수를 제공할 뿐만 아니라 추가 보조 문자 인식 기능을 통해 유니코드 및 보조 문자의 문자열을 모두 처리할 수 있는 다섯 가지 Transact-SQL 문자열 함수의 구현 예를 보여 줍니다. 다섯 가지 함수는 lens(), `lefts(), rights(), subs()` 및 `replace_s()` 입니다. 이는 기본 제공 함수 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 및 `REPLACE()` 문자열 함수에 해당됩니다.  

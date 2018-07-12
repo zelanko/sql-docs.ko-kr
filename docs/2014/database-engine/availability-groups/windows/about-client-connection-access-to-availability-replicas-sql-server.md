@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228513"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
   AlwaysOn 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "36182659"
  사용자 연결이 허용되지 않습니다. 보조 데이터베이스를 읽기 액세스에 사용할 수 없습니다. 이 항목은 보조 역할의 기본 동작입니다.  
   
  읽기 전용 연결만  
- 보조 데이터베이스에 있는 항목에 대 한 연결에만 사용할 수는 `Application Intent` 연결 속성이로 설정 되어 `ReadOnly` (*읽기 전용 연결*).  
+ 보조 데이터베이스는 연결에 대해서만 사용할 수는 `Application Intent` 연결 속성이로 설정 된 `ReadOnly` (*읽기 전용 연결만*).  
   
  이 연결 속성에 대한 자세한 내용은 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36182659"
  주 데이터베이스에 읽기/쓰기 및 읽기 전용 연결이 모두 허용됩니다. 이 항목은 주 역할의 기본 동작입니다.  
   
  읽기/쓰기 연결만 허용  
- 경우는 `Application Intent` 연결 속성이로 설정 되어 **ReadWrite** 설정, 연결을 허용 하지 않거나 합니다. 연결은 `Application Intent` 로 설정 된 연결 문자열 키워드 `ReadOnly` 허용 되지 않습니다. 읽기/쓰기 연결을 허용하면 고객이 읽기 전용 작업 로드를 주 복제본에 실수로 연결하지 않도록 할 수 있습니다.  
+ 경우는 `Application Intent` 연결 속성이로 설정 된 **ReadWrite** 설정, 연결을 허용 하지 않거나 합니다. 에 대 한 연결 된 `Application Intent` 연결 문자열 키워드를로 `ReadOnly` 허용 되지 않습니다. 읽기/쓰기 연결을 허용하면 고객이 읽기 전용 작업 로드를 주 복제본에 실수로 연결하지 않도록 할 수 있습니다.  
   
  이 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "36182659"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
   

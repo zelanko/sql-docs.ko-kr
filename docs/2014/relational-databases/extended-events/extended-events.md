@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c95d2988eb0e1415355fdd86f37f9a580a5c81ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9fe49812e889cf360bce9d853b9bc9160da0c4ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151114"
 ---
 # <a name="extended-events"></a>확장 이벤트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  
@@ -107,6 +107,6 @@ ms.locfileid: "36182596"
  [데이터 계층 응용 프로그램 배포](../data-tier-applications/deploy-a-data-tier-application.md)   
  [데이터 계층 응용 프로그램 모니터링](../data-tier-applications/monitor-data-tier-applications.md)   
  [확장 이벤트 동적 관리 뷰](../views/views.md)   
- [확장 이벤트 카탈로그 뷰 &#40;Transact SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [확장 이벤트 카탈로그 뷰 &#40;TRANSACT-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

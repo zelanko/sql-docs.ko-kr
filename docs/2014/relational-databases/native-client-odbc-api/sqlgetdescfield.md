@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,40 +14,40 @@ helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23de7c344effa1093f75705f6dd0f2b27f852208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0527b8260f954764ed894b1b5db60278ff483d31
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172406"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427532"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 (IRD) 구현 행 설명자만 드라이버별 설명자 필드를 노출 합니다. IRD 내 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명자 필드는 드라이버별 열 특성을 통해 참조 됩니다. 사용 가능한 드라이버별 설명자 필드의 전체 목록에 대 한 정보를 참조 하십시오. [SQLColAttribute](sqlcolattribute.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 설명자 필드 (IRD) 구현 행 설명자만를 노출 합니다. IRD 내 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명자 필드는 드라이버별 열 특성을 통해 참조 됩니다. 사용 가능한 드라이버별 설명자 필드의 전체 목록에 대 한 정보를 참조 하세요 [SQLColAttribute](sqlcolattribute.md)합니다.  
   
  열 식별자 문자열이 포함된 설명자 필드는 대체로 길이가 0인 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 설명자 필드 값은 모두 읽기 전용입니다.  
   
- 마찬가지로 행 수준 특성 (예: SQL_CA_SS_COMPUTE_ID) 보고서의 결과 집합의 모든 열에 대해 보고 하는 설명자 필드 SQLColAttribute를 사용 하 여 검색 하는 특성입니다.  
+ 특성이 같은 보고서 행 수준 특성 (예: SQL_CA_SS_COMPUTE_ID) 결과 집합의 모든 열에 대해 보고 되는 설명자 필드 SQLColAttribute를 사용 하 여 검색 합니다.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField 및 테이블 반환 매개 변수  
- SQLGetDescField는 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 확장된 특성에 대 한 값을 가져오는 데 사용할 수 있습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+ SQLGetDescField는 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 확장된 특성에 대 한 값을 가져오는 데 사용할 수 있습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLGetDescField 지원  
- 새로운 날짜/시간 형식으로 사용할 수 있는 설명자 필드에 대 한 정보를 참조 하십시오. [매개 변수 및 결과 메타 데이터](../native-client-odbc-date-time/metadata-parameter-and-result.md)합니다.  
+ 새 날짜/시간 형식에 사용할 수 있는 설명자 필드에 대 한 정보를 참조 하세요 [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md)합니다.  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
- 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField 반환할 수 `SQL_C_SS_TIME2` (에 대 한 `time` 형식) 또는 `SQL_C_SS_TIMESTAMPOFFSET` (에 대 한 `datetimeoffset`) 대신 `SQL_C_BINARY`응용 프로그램에서 ODBC 3.8을 사용 하는 경우.  
+ 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField 반환할 수 있습니다 `SQL_C_SS_TIME2` (에 대 한 `time` 형식) 또는 `SQL_C_SS_TIMESTAMPOFFSET` (에 대 한 `datetimeoffset`) 대신 `SQL_C_BINARY`응용 프로그램에서 ODBC 3.8을 사용 하는 경우.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetDescField 지원  
- `SQLGetDescField`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
+ `SQLGetDescField`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>스파스 열에 대한 SQLGetDescField 지원  
  SQLGetDescField 새로운 IRD 필드인 SQL_CA_SS_IS_COLUMN_SET 열 인지 확인 하려면 쿼리를 사용할 수는 `column_set` 열입니다.  
   
- 자세한 내용은 참조 [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)합니다.  
+ 자세한 내용은 [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  
   

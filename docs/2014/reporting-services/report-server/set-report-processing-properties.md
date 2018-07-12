@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -20,13 +20,13 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 375b691b1e0e1202bfa16f6b4919ff454fe65da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153594"
 ---
 # <a name="set-report-processing-properties"></a>보고서 처리 속성 설정
   보고서 실행 속성은 보고서의 처리 방식을 제어합니다. 실행 속성은 각 보고서별로 설정해야 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36181970"
  이러한 조건이 발생할 경우 보고서 서버는 구독이 실행되도록 예약된 다음 번에 구독을 해제합니다. 구독을 다시 활성화하려면 구독을 열어서 저장합니다. 구독을 열면 보고서 서버에서 구독 매개 변수 값을 스냅숏에 대해 지정한 값으로 업데이트합니다. 구독에 대한 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [처리 옵션을 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [처리 옵션 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 실행 속성 구성 &#40;보고서 관리자&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [방법: 보고서 기록에 스냅숏 추가](add-a-snapshot-to-report-history-report-manager.md)   

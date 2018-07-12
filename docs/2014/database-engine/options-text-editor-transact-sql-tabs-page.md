@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
@@ -17,13 +17,13 @@ ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c070024769f59516f57d89a4c76b97ceb9b775f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152644"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>옵션 (텍스트 편집기 Transact SQL-탭 페이지)
   이 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 프로그래밍하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 탭 이동 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더와 **Transact-SQL** 하위 폴더를 차례로 확장한 다음 **탭**을 클릭합니다.  

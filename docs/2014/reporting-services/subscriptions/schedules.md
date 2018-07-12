@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
 - schedules [Reporting Services], about schedules
@@ -20,20 +20,20 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800dce34cebf45e3962b5226929267afe1fc727f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278419"
 ---
 # <a name="schedules"></a>일정
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 컨트롤 처리와 보고서의 배포 공유 일정 및 보고서별 일정을 세울를 제공 합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 처리를 제어 및 보고서를 배포 공유 일정과 보고서별 일정 수 있도록 제공 합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.  
   
  항목 내용  
   
--   [예약으로 수행할 수 있습니다](#bkmk_whatyoucando)  
+-   [일정을 사용 하 여 수행할 수 있는 작업](#bkmk_whatyoucando)  
   
 -   [공유 일정과 보고서별 일정 비교](#bkmk_compare)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36180788"
   
 -   [자격 증명을 저장 및 처리 계정](#bkmk_credentials)  
   
--   [어떻게 일정 예약 및 배달 프로세스 작동](#bkmk_how_scheduling_works)  
+-   [어떻게 예약 및 배달 프로세스 작동](#bkmk_how_scheduling_works)  
   
 -   [서버 종속성](#bkmk_serverdependencies)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36180788"
   
  일정을 만들면 보고서는 보고서 서버 데이터베이스 또는 서비스 응용 프로그램 데이터베이스(SharePoint 모드의 경우)에 일정 정보를 저장합니다. 또한 보고서 서버는 해당 일정을 트리거하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만듭니다. 일정 처리는 일정을 포함하는 보고서 서버의 현지 시간을 기준으로 합니다. 시간 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 표준을 따릅니다.  
   
- 일정 만들기 및 관리 하는 방법에 대 한 세부 정보를 참조 하십시오. [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)합니다.  
+ 일정 만들기 및 관리 하는 방법에 대 한 세부 정보를 참조 하세요 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)합니다.  
   
 > [!NOTE]  
 >  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
@@ -104,7 +104,7 @@ ms.locfileid: "36180788"
 |사용자 정의 구독에서 보고서별 일정 만들기, 수정 또는 삭제|개별 구독 관리|브라우저, 보고서 작성기, 내 보고서, 내용 관리자|방문자, 멤버|  
 |예약된 다른 모든 작업의 보고서별 일정 만들기, 수정 또는 삭제|보고서 기록 관리, 모든 구독 관리, 보고서 관리|내용 관리자|소유자|  
   
- 기본 모드의 보안에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 참조 [미리 정의 된 역할](../security/role-definitions-predefined-roles.md), [기본 모드 보고서 서버에 대 한 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 사용 권한](../security/tasks-and-permissions.md). SharePoint 모드의 경우 [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
+ 기본 모드의 보안에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 참조 하세요 [미리 정의 된 역할](../security/role-definitions-predefined-roles.md)를 [기본 모드 보고서 서버에 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md) 및 [Tasks and Permissions](../security/tasks-and-permissions.md). SharePoint 모드의 경우 [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 일정 예약 및 배달 프로세스 작동 방식  
  일정 예약 및 배달 프로세서는 다음 기능을 제공합니다.  
@@ -129,10 +129,10 @@ ms.locfileid: "36180788"
   
      이벤트가 처리되기 전에 일정 예약 및 배달 프로세서는 인증 단계를 수행하여 보고서를 볼 수 있는 권한이 구독 소유자에게 있는지 확인합니다.  
   
- Reporting Services는 모든 예약된 작업에 대해 이벤트 큐를 관리합니다. 또한 새 이벤트를 확인하기 위해 정기적으로 큐를 폴링합니다. 기본적으로 큐는 10초 간격으로 검색됩니다. 수정 하 여 간격을 변경할 수는 `PollingInterval`, `IsNotificationService`, 및 `IsEventService` RSReportServer.config 파일의 구성 설정입니다. SharePoint 모드에서도 이러한 설정에 대해 Rsreporserver.config를 사용하며 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 값이 적용됩니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
+ Reporting Services는 모든 예약된 작업에 대해 이벤트 큐를 관리합니다. 또한 새 이벤트를 확인하기 위해 정기적으로 큐를 폴링합니다. 기본적으로 큐는 10초 간격으로 검색됩니다. 수정 하 여 간격을 변경할 수 있습니다 합니다 `PollingInterval`, `IsNotificationService`, 및 `IsEventService` RSReportServer.config 파일의 구성 설정입니다. SharePoint 모드에서도 이러한 설정에 대해 Rsreporserver.config를 사용하며 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 값이 적용됩니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
 ##  <a name="bkmk_serverdependencies"></a> 서버 종속성  
- 일정 예약 및 배달 프로세서를 사용하려면 보고서 서버 서비스와 SQL Server 에이전트를 시작해야 합니다. 일정 예약 및 배달 처리 기능을 통해 설정 해야는 `ScheduleEventsAndReportDeliveryEnabled` 의 속성은 **Reporting Services에 대 한 노출 영역 구성** 정책 기반 관리에서 패싯에 합니다. 예약된 작업이 수행되려면 SQL Server 에이전트와 보고서 서버 서비스가 모두 실행 중이어야 합니다.  
+ 일정 예약 및 배달 프로세서를 사용하려면 보고서 서버 서비스와 SQL Server 에이전트를 시작해야 합니다. 일정 예약 및 배달 처리 기능을 통해 사용할 수 있어야 합니다는 `ScheduleEventsAndReportDeliveryEnabled` 의 속성을 **Reporting Services에 대 한 노출 영역 구성** 정책 기반 관리에서 패싯 합니다. 예약된 작업이 수행되려면 SQL Server 에이전트와 보고서 서버 서비스가 모두 실행 중이어야 합니다.  
   
 > [!NOTE]  
 >  **Reporting Services에 대한 노출 영역 구성** 패싯을 사용하여 일시적 또는 영구적으로 예약된 작업을 중지할 수 있습니다. 사용자 지정 배달 확장 프로그램을 만들어 배포할 수는 있지만 일정 예약 및 배달 프로세서만 단독으로 확장할 수는 없습니다. 따라서 이벤트 및 알림이 관리되는 방식을 변경할 수 없습니다. 기능 해제에 대한 자세한 내용은 **의 예약된 이벤트 및 배달** [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md)섹션을 참조하세요.  
@@ -147,11 +147,11 @@ ms.locfileid: "36180788"
  보고서 서버 서비스가 중지되더라도 SQL Server 에이전트는 보고서 처리 요청을 큐에 계속 추가합니다. SQL Server 에이전트의 상태 정보는 작업이 성공적으로 수행되었음을 나타냅니다. 그러나 보고서 서버 서비스가 중지되었으므로 실제로 보고서 처리는 발생하지 않습니다. 요청은 보고서 서버 서비스를 다시 시작할 때까지 큐에 계속 누적됩니다. 보고서 서버 서비스를 다시 시작하면 큐에 있는 모든 보고서 처리 요청이 순서대로 처리됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기, 수정 및 보고서 기록의 스냅숏 삭제](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [만들기, 수정 및 보고서 기록에서 스냅숏 삭제](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [구독 및 배달 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](data-driven-subscriptions.md)   
  [보고서 캐시&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [공유 데이터 집합 캐시 &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

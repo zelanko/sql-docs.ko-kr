@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3c2ae5affa24087bbb0511bc29559bba88f86cdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 254e444658ca179319f2af93a414620e7dfa9ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148744"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>실패한 패키지를 다시 시작하는 검사점 구성
   검사점에 적용되는 속성을 설정하여 전체 패키지를 다시 실행하는 대신 장애 지점에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다시 시작하도록 구성합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36182396"
         > [!IMPORTANT]  
         >  검사점 파일을 사용할 수 없으면 오류가 발생합니다.  
   
-    -   선택 `IfExists` 를 검사점 파일을 사용할 수 있는 경우에 패키지를 다시 시작 합니다.  
+    -   선택 `IfExists` 검사점 파일을 사용할 수 있는 경우에 패키지를 다시 시작 합니다.  
   
 8.  패키지가 다시 시작될 수 있는 태스크 및 컨테이너를 구성합니다.  
   

@@ -5,27 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b925bc53c1427e1964b8d2487727994d39f24354
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180500"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423032"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
-  두 개의 ODBC 함수 호출이 개의 데 사용할 수 있습니다: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)합니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 `SQLGetDiagField`를 사용하여 검색해야 합니다.  
+  ODBC 메시지를 검색 하려면 두 개의 ODBC 함수 호출 수: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 하 고 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)합니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 `SQLGetDiagField`를 사용하여 검색해야 합니다.  
   
  [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 는 개별 드라이버가 아니라 ODBC 드라이버 관리자에 의해 처리됩니다. ODBC 드라이버 관리자는 성공적으로 연결될 때까지 드라이버별 진단 필드를 캐시하지 않습니다. 성공적으로 연결되기 전에는 드라이버별 진단 필드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출할 수 없습니다. 여기에는 ODBC 연결 명령이 포함되며, 이러한 명령에서 SQL_SUCCESS_WITH_INFO를 반환하는 경우에도 마찬가지입니다. 다음에 ODBC 함수를 호출할 때까지 드라이버별 진단 필드를 사용할 수 없습니다.  
   

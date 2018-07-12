@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4fb5fa5f0ac040c5642d4a14279407c7b3b7bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4fcb1a4246968e0f42b99ec5c0c596b8d7d36b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278289"
 ---
 # <a name="images-report-builder-and-ssrs"></a>이미지(보고서 작성기 및 SSRS)
   이미지는 보고서에 포함되어 있거나, 데이터베이스에 저장되어 있거나, 보고서 서버에 저장되어 있거나, 웹의 기타 위치에 저장되어 있는 이미지에 대한 참조를 포함하는 보고서 항목입니다. 이미지는 데이터 행이 반복되는 그림이 될 수 있습니다 특정 보고서 항목의 배경으로 이미지를 사용할 수도 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36181020"
 ##  <a name="EmbedImages"></a> 포함 이미지  
  모든 이미지 데이터가 보고서 정의 안에 저장되도록 보고서에 이미지를 포함할 수 있습니다. 이미지를 포함하면 이미지가 MIME로 인코딩되어 보고서 정의에 텍스트로 저장됩니다. 포함 이미지를 사용하면 보고서에서 항상 이미지를 사용할 수 있지만 보고서 정의의 크기도 늘어납니다.  
   
- 이미지를 포함 하는 방법에 대 한 자세한 내용은 참조 [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)합니다.  
+ 이미지를 포함 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)합니다.  
   
 
   
@@ -59,7 +59,7 @@ ms.locfileid: "36181020"
   
  보고서 작성기 또는 보고서 디자이너에서 보고서를 실행하면 미리 보기 기능은 사용자의 자격 증명을 사용하여 이미지를 표시합니다. 보고서 서버에서 보고서를 실행할 경우 이미지에 액세스하는 데 필요한 서버 자격 증명이 없으면 보고서의 이미지가 표시되지 않을 수 있습니다. 이 경우 시스템 관리자에게 문의하십시오.  
   
- 보고서에 외부 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 [외부 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)합니다.  
+ 보고서에 외부 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [외부 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)합니다.  
   
  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36181020"
 > [!NOTE]  
 >  HTML 렌더링 확장 프로그램과 같은 일부 렌더링 확장 프로그램은 본문, 페이지 머리글 및 페이지 바닥글에 보고서 본문의 배경 이미지를 렌더링합니다. 페이지 머리글 및 바닥글에 각각 배경 이미지를 정의할 수 있지만 이미지를 정의하지 않으면 보고서에서 본문의 배경 이미지를 사용합니다. 이미지 렌더링 확장 프로그램과 같은 기타 렌더링 확장 프로그램은 페이지 머리글 및 바닥글에 본문의 배경 이미지를 렌더링하지 않습니다.  
   
- 배경 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 [배경 이미지를 추가할 &#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)합니다.  
+ 배경 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [배경 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)합니다.  
   
  
   

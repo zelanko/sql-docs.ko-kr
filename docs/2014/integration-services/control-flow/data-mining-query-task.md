@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2cda01c434fda1a17be4b26352629dc2bc0abb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a075f3ed6dde5bccb648318c11bf8a456c5a1123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277149"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36181874"
   
  이 태스크는 동일한 마이닝 구조를 사용하는 여러 개의 마이닝 모델을 쿼리할 수 있습니다. 마이닝 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 데이터 마이닝 알고리즘 중 하나를 사용하여 작성합니다. 데이터 마이닝 쿼리 태스크가 참조하는 마이닝 구조에 다른 알고리즘을 사용하여 작성된 여러 개의 마이닝 모델이 포함될 수도 있습니다. 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) 및 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
   
- 데이터 마이닝 쿼리 태스크가 실행하는 예측 쿼리는 단일 행이나 데이터 집합을 결과로 반환합니다. 단일 행을 반환하는 쿼리를 단일 쿼리라고 합니다. 예를 들어 여름 기간 동안 판매될 요트 수를 예측하는 쿼리는 한 개의 숫자를 반환합니다. 단일 행을 반환 하는 예측 쿼리에 대 한 자세한 내용은 참조 하십시오. [데이터 마이닝 쿼리 인터페이스](../../analysis-services/data-mining/data-mining-query-tools.md)합니다.  
+ 데이터 마이닝 쿼리 태스크가 실행하는 예측 쿼리는 단일 행이나 데이터 집합을 결과로 반환합니다. 단일 행을 반환하는 쿼리를 단일 쿼리라고 합니다. 예를 들어 여름 기간 동안 판매될 요트 수를 예측하는 쿼리는 한 개의 숫자를 반환합니다. 단일 행을 반환 하는 예측 쿼리에 대 한 자세한 내용은 참조 하세요. [데이터 마이닝 쿼리 인터페이스](../../analysis-services/data-mining/data-mining-query-tools.md)합니다.  
   
  쿼리 결과는 테이블에 저장됩니다. 지정한 이름의 테이블이 이미 있으면 데이터 마이닝 쿼리 태스크는 동일한 이름에 번호를 추가하여 새 테이블을 만들거나 테이블 내용을 덮어쓸 수 있습니다.  
   

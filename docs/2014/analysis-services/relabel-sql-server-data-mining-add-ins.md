@@ -1,5 +1,5 @@
 ---
-title: 레이블 재지정 (SQL Server 데이터 마이닝 추가 기능) | Microsoft Docs
+title: (SQL Server 데이터 마이닝 추가 기능) 레이블 재지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157174"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>레이블 재지정(SQL Server 데이터 마이닝 추가 기능)
   ![레이블 재지정 도구에 대 한 office 13 아이콘](media/dm13-relabel.gif "레이블 재지정 도구에 대 한 Office 13 아이콘")  

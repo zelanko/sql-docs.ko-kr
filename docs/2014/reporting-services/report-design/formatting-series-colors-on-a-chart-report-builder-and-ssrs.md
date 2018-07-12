@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10245"
 - "10252"
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f3760096e00a6c418af3a0d8203f822b65c00508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 22be979236bd7c42ba231cea42d98c7a47c15ab8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278519"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
   Reporting Services는 차트에 여러 개의 기본 제공 색상표를 제공하며, 사용자가 사용자 지정 색상표를 정의할 수도 있습니다. 기본적으로 차트는 기본 제공 사용 **BrightPastel** 색상표를 각 계열을 채웁니다. 이 색은 범례에도 나타납니다. 차트에 여러 개의 계열이 추가될 때는 색상표에서 색을 정의한 순서대로 차트가 계열에 색을 할당합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36181284"
 ## <a name="using-a-color-fill-on-each-series"></a>각 계열에 색 채우기 사용  
  차트에 있는 각 계열에 대한 색을 지정하여 자신만의 색을 차트에 정의할 수도 있습니다. 이렇게 하려면 **계열 속성** 대화 상자를 열고 **채우기** 의 **색**속성을 설정합니다. 이 방법은 모든 정의된 색상표를 재정의합니다. 일반적으로 보고서 처리 전까지는 데이터 집합에 있는 계열 수를 알지 못할 수도 있기 때문에 사용자 지정 색상표를 사용하여 자신만의 색을 정의하는 것이 좋습니다.  
   
- 이 방법은 식을 기준으로 계열의 색을 조건부로 설정할 때 가장 적합합니다.  자세한 내용은 참조 [차트의 데이터 요소에 서식 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)합니다.  
+ 이 방법은 식을 기준으로 계열의 색을 조건부로 설정할 때 가장 적합합니다.  자세한 내용은 [차트의 데이터 요소에 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  

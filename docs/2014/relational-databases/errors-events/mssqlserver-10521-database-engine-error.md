@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10521 (Database Engine error)
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 209496ac8159eb32c36fcded35992cac1e45d6f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 18d823ff21a38c3eeee8df725c9a38172080d40e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172420"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421082"
 ---
 # <a name="mssqlserver10521"></a>MSSQLSERVER_10521
     
@@ -34,7 +33,7 @@ ms.locfileid: "36172420"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_PARAM_NEEDED|  
-|메시지 텍스트|계획 지침 ' %. \*l s 때문에 `@type` 지정 된 매개 변수 ' % l s '과 ' % l s '은 NULL입니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
+|메시지 텍스트|계획 지침 ' %. \*l s 때문에 `@type` 지정 된 매개 변수 ' % l s '와 ' % l s '은 NULL입니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
   
 ## <a name="explanation"></a>설명  
  `@type`에 지정된 유형이 지정된 매개 변수에 대해 NULL 값을 허용하지 않지만 NULL 값이 제공되었습니다.  

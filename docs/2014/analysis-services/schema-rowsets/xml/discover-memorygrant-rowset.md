@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3066a924b572324fcf70dbec7aa726b9ba05f846
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cae85df7e3c76afd9243771032f21f8f91861f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229993"
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 행 집합
   서버에서 현재 실행 중인 작업에 의해 사용되는 내부 메모리 할당량 부여 목록을 반환합니다. 서버에서 작업이 실행되고 있는지 여부를 확인하려면 `Select * from $System.Discover_Jobs`를 사용합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36182896"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_MEMORYGRANT` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_MEMORYGRANT` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

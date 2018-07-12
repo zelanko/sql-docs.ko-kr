@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6c6194c1b4ac931428c3573bcca1811d1faf32d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a786d6abb774a461739268d2a0484007f8453bda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210403"
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
   나중에 다시 사용할 수 있도록 쿼리를 저장합니다. 쿼리를 실행해도 변경 내용은 저장되지 않습니다.  
@@ -42,8 +42,8 @@ ms.locfileid: "36181481"
  [쿼리를 만들 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [쿼리 변경 내용 취소 &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [쿼리의 종류 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [쿼리의 형식은 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

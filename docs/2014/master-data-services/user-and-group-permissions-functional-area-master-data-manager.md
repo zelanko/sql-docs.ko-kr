@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d3a18632f54367d1cac4983939735a5c73dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156356"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
   사용자 및 그룹 권한 기능 영역에서 관리자는 기능 영역, 특성(모델 탭에서) 및 멤버(계층 멤버 탭에서)에 사용 권한을 부여할 수 있습니다. 개별 특성 값에 대한 사용자의 사용 권한을 확인하려면 겹치는 사용 권한을 확인합니다.  
   
- [관리자가 &#40;Master Data Services&#41;](administrators-master-data-services.md)  
+ [관리자 &#40;Master Data Services&#41;](administrators-master-data-services.md)  
   
  [모델 관리자 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36182830"
   
  [멤버 권한 즉시 적용 &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
- [사용 권한이 결정 되는 방식 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
  [마스터 데이터 관리자 보안 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   

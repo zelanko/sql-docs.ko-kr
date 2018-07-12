@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e2190d04d8a03a2f6c46ca8fbd193555cee221f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3115950e8218809f23fb123bc92e6ad56d7ad2a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157604"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 소유권을 다른 사용자에게 다시 할당하는 방법에 대해 설명합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "36183166"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력는 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) 시스템 저장 프로시저입니다. 다음 예에서는 `danw` 의 모든 작업을 `françoisa`에 다시 할당합니다.  
+3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) 시스템 저장 프로시저입니다. 다음 예에서는 `danw` 의 모든 작업을 `françoisa`에 다시 할당합니다.  
   
     ```  
     USE msdb ;  
@@ -87,10 +87,10 @@ ms.locfileid: "36183166"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMOProc2"></a> SQL Server 관리 개체를 사용 하 여  
  **작업의 소유권을 다른 사람에게 주려면**  
   
-1.  호출 된 `Job` Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
+1.  호출 된 `Job` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [작업 구현](implement-jobs.md)   

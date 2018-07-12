@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155414"
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
   
- 마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어는 `NOT NULL` 모델링 플래그는 마이닝 구조 열으로 사용 됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
+ 마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어를 `NOT NULL` 마이닝 구조 열의 모델링 플래그 사용 됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  타사 플러그 인의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 미리 정의한 모델링 플래그 외에 다른 모델링 플래그를 사용할 수 있습니다.  
@@ -50,9 +50,9 @@ ms.locfileid: "36182687"
  **MODEL_EXISTENCE_ONLY**  
  열이 `Missing` 및 `Existing` 상태로 처리됨을 나타냅니다. 값이 `NULL`, Missing으로 간주 됩니다. MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
   
- 실제로 MODEL_EXISTENCE_ONLY 플래그를 설정 하려면 `True` 두 되도록 값을 나타내는 변경: `Missing` 및 `Existing`합니다. 모든 누락 되지 않은 상태는 단일으로 결합 됩니다 `Existing` 값입니다.  
+ 실제로 MODEL_EXISTENCE_ONLY 플래그 설정 `True` 는 두 가지 상태는 값의 표현을 변경: `Missing` 고 `Existing`입니다. 모든 누락 이외의 상태는 단일 결합 `Existing` 값입니다.  
   
- 이 모델링 플래그는 일반적으로 `NULL` 상태가 암시적인 의미를 갖는 특성을 나타내는 데 사용됩니다. 따라서 `NOT NULL` 상태의 명시적 값은 열이 값을 갖는다는 사실만큼이나 중요하지 않습니다. 예를 들어, [DateContractSigned] 열 수 있습니다 `NULL` 경우는 계약 및 `NOT NULL` 계약 서명 된 경우. 따라서 모델의 목적이 계약에 서명할 것인지 여부를 예측 하는 것을 MODEL_EXISTENCE_ONLY 플래그를 사용 하 여 정확한 날짜 값은 무시 수 있습니다는 `NOT NULL` 사례 및 계약 인 사례만 구별할 `Missing` 또는 `Existing`.  
+ 이 모델링 플래그는 일반적으로 `NULL` 상태가 암시적인 의미를 갖는 특성을 나타내는 데 사용됩니다. 따라서 `NOT NULL` 상태의 명시적 값은 열이 값을 갖는다는 사실만큼이나 중요하지 않습니다. 예를 들어 [DateContractSigned] 열 수 있습니다 `NULL` 의 경우 계약 및 `NOT NULL` 서명 된 계약의 경우. 따라서 모델의 목적이 계약에 서명할 것인지 여부를 예측 하는 것을 MODEL_EXISTENCE_ONLY 플래그를 사용 하 여 정확한 날짜 값은 무시 수 있습니다 합니다 `NOT NULL` 사례 및 계약 인 경우에만 구분 `Missing` 또는`Existing`.  
   
 > [!NOTE]  
 >  Missing은 알고리즘에서 사용하는 특수한 상태로 열의 텍스트 값인 "Missing"과는 다릅니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  

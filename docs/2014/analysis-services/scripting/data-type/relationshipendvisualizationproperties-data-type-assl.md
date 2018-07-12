@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11f9a10f-d36c-4faf-b595-3fe969d1935e
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13bde90af2ecbb8aba03bea4d140139c8437a747
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58348251e9ea00c4f6eebc5fcec067683e49a3a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161274"
 ---
 # <a name="relationshipendvisualizationproperties-data-type-assl"></a>RelationshipEndVisualizationProperties 데이터 형식(ASSL)
   관계의 관계 End를 나타내는 기본 데이터 형식을 정의합니다.  

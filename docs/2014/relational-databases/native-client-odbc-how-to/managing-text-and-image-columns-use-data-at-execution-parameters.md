@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55216e04305194bf16be23b33122b5433a84c43f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 338d43146b1f782695025bb14470af58539b4bea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182020"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409582"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>실행 시 데이터 매개 변수 사용(ODBC)
     
@@ -30,7 +28,7 @@ ms.locfileid: "36182020"
   
 1.  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)를 호출하여 프로그램 버퍼를 문 매개 변수에 바인딩하는 경우:  
   
-    -   마지막 매개 변수에 대해 SQL_LEN_DATA_AT_EXEC를 사용 하 여 (*길이*) 여기서 *길이* 의 총 길이 `text`, `ntext`, 또는 `image` 매개 변수 데이터의에서 바이트입니다.  
+    -   마지막 매개 변수에 대해 SQL_LEN_DATA_AT_EXEC를 사용 하 여 (*길이*) 위치 *길이* 의 총 길이 `text`, `ntext`, 또는 `image` 매개 변수 데이터 (바이트)에서.  
   
     -   프로그램에서 정의된 매개 변수 식별자의 `rgbValue`(8번째 매개 변수)를 사용합니다.  
   
@@ -227,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [관리 text 및 image 열 방법 도움말 항목 &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+ [Text 및 image 열 방법 도움말 항목을 관리 &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

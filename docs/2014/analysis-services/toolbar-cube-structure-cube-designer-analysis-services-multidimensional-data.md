@@ -1,5 +1,5 @@
 ---
-title: 도구 모음 (큐브 구조 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 도구 모음 (Cube Structure Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 22857975aee349abdb1a258f9aa013ffe2adf1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209903"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에 있는 **도구 모음** 창을 사용하여 처리 또는 새 측정값 그룹 생성과 같은 일반 동작을 수행할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36181423"
 |**처리**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.|  
 |**새 측정값**|**새 측정값** 대화 상자를 표시하고 현재 **측정값** 창에서 선택한 측정값 그룹에 새 측정값을 추가하려면 클릭합니다.|  
 |**새 측정값 그룹**|**새 측정값 그룹** 대화 상자를 표시하고 **측정값** 창에 새 측정값 그룹을 추가하려면 클릭합니다.|  
-|**측정값 표시**|다음 옵션 간에 전환하거나 하나를 선택하여 **측정값** 창의 뷰를 변경하려면 클릭합니다.<br /><br /> **트리**: 측정값 그룹과 측정값을 트리 뷰에 표시 합니다.<br /><br /> **그리드**: 측정값 그룹과 측정값을 표에 표시 합니다.|  
+|**측정값 표시**|다음 옵션 간에 전환하거나 하나를 선택하여 **측정값** 창의 뷰를 변경하려면 클릭합니다.<br /><br /> **트리**: 측정값 그룹과 측정값을 트리 뷰에 표시 합니다.<br /><br /> **표**: 측정값 그룹과 측정값을 표에 표시 합니다.|  
 |**큐브 차원 추가**|**큐브 차원 추가** 대화 상자를 표시하고 큐브의 기존 또는 새 데이터베이스 차원에 참조를 추가하려면 클릭합니다.|  
 |**새 연결 된 개체**|**연결된 개체 마법사** 를 표시하여 다른 큐브의 측정값 그룹 및 차원을 연결하고 선택한 큐브로 동작, KPI 및 계산을 가져오려면 클릭합니다.|  
 |**Delete**|**개체 삭제** 대화 상자를 표시하고 **측정값** 또는 **차원** 창에서 선택한 개체를 삭제하려면 클릭합니다.|  
@@ -42,6 +42,6 @@ ms.locfileid: "36181423"
 |**테이블 숨기기**|**데이터 원본 뷰** 창에서 선택한 테이블을 숨기려면 클릭합니다.<br /><br /> 참고: **데이터 원본 뷰** 창에서 테이블을 선택하지 않으면 이 옵션을 사용할 수 없습니다.|  
 |**테이블 찾기**|**테이블 찾기** 대화 상자를 표시하고 **데이터 원본 뷰** 창에서 테이블을 찾으려면 클릭합니다.|  
 |**확대/축소**|**데이터 원본 뷰** 창의 확대/축소 배율 옵션 간에 전환하거나 사용 가능한 확대/축소 배율 옵션을 선택하려면 클릭합니다.|  
-|**표시**|다음 옵션 간에 전환하거나 하나를 선택하여 **데이터 원본 뷰** 창의 뷰를 변경하려면 클릭합니다.<br /><br /> **트리 보기**: 테이블, 명명 된 쿼리, 열, 명명 된 계산 및 관계를 트리 뷰에 표시 합니다.<br /><br /> **다이어그램 보기**: 테이블, 명명 된 쿼리, 열, 명명 된 계산 및 관계를 데이터베이스 다이어그램에 표시 합니다.|  
+|**표시**|다음 옵션 간에 전환하거나 하나를 선택하여 **데이터 원본 뷰** 창의 뷰를 변경하려면 클릭합니다.<br /><br /> **트리 보기**: 테이블, 명명 된 쿼리, 열, 명명 된 계산 및 관계를 트리 뷰에 표시 합니다.<br /><br /> **다이어그램 뷰**: 테이블, 명명 된 쿼리, 열, 명명 된 계산 및 관계를 데이터베이스 다이어그램에 표시 합니다.|  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RegularMeasureGroupDimension data type
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b035f52890dc31783c4093d834ee949e8c3806ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20ac4c8ddf1d9acba769b0e6931d15b1c8a94647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163484"
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>RegularMeasureGroupDimension 데이터 형식(ASSL)
   차원과 측정값 그룹 간의 일반 관계를 나타내는 파생 데이터 형식을 정의합니다.  
@@ -65,6 +65,6 @@ ms.locfileid: "36181898"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

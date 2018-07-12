@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152134"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   이 단원에서는 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "36183760"
   
 -   [1 단계-설명 정의](#bkmk_definesubscription)  
   
--   [2 단계-구독자 데이터 원본에 대 한 연결 정의](#bkmk_defineconnectiontosubscriber)  
+-   [2 단계-구독자 데이터 원본에 연결을 정의 합니다.](#bkmk_defineconnectiontosubscriber)  
   
 -   [3 단계-구독자 데이터를 검색 하는 쿼리 정의](#bkmk_definequery)  
   
 -   [4 단계-배달 옵션 설정](#bkmk_set_deliveryoptions)  
   
--   [5 단계-보고서 출력을 변경 하는 매개 변수 값 구성](#bkmk_configure_parameter)  
+-   [5 단계-보고서 출력 매개 변수 값을 구성 합니다.](#bkmk_configure_parameter)  
   
 -   [6 단계-구독을 예약 하려면](#bkmk_schedule_subscription)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36183760"
   
 3.  **이 구독에 대해서만 지정하세요**를 선택하고 **다음**을 클릭합니다.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> 2 단계-구독자 데이터 원본에 대 한 연결 정의  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> 2 단계-구독자 데이터 원본에 연결을 정의 합니다.  
   
 1.  데이터 원본 유형으로 **Microsoft SQL Server** 를 선택합니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36183760"
   
 8.  **다음.**  
   
-##  <a name="bkmk_configure_parameter"></a> 5 단계-보고서 출력을 변경 하는 매개 변수 값 구성  
+##  <a name="bkmk_configure_parameter"></a> 5 단계-보고서 출력 매개 변수 값을 구성 합니다.  
   
 1.  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. **다음.**  
   
@@ -139,13 +139,13 @@ ms.locfileid: "36183760"
   
  ![보고서 관리자의 구독 결과](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "보고서 관리자의 구독 결과")  
   
- 이 단계는 "데이터 기반 구독 정의" 자습서의 마지막 단계입니다. 다른 방법에 대 한 자세한 내용을 보려면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서, 참조 [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)합니다.  
+ 이 단계는 "데이터 기반 구독 정의" 자습서의 마지막 단계입니다. 다른에 대해 자세히 알아보려면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서를 참조 하세요 [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [구독 및 배달 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](subscriptions/data-driven-subscriptions.md)   
- [만들기, 수정 및 데이터 기반 구독 삭제](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
+ [만들기, 수정 및 데이터 기반 구독을 삭제 합니다.](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [구독자 데이터에 외부 데이터 원본 사용 &#40;데이터 기반 구독&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: 대량 복사 변경 사항으로 향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC) | Microsoft Docs
+title: 향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC)에 대 한 대량 복사 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6eb71199e529d806053b1bbfb363a74c91f1cc6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1e33cc7b320f3445d0da6e7f5927fe985a668b77
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093091"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430652"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상 된 날짜 및 시간 형식 (OLE DB 및 ODBC)에 대 한 대량 복사 변경 사항
   이 항목에서는 대량 복사 기능을 지원하기 위한 날짜/시간 개선 사항에 대해 설명합니다. 이 항목의 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 OLE DB 및 ODBC 둘 모두에 적용됩니다.  
@@ -31,7 +29,7 @@ ms.locfileid: "36093091"
 ## <a name="format-files"></a>서식 파일  
  서식 파일을 대화형으로 빌드할 경우 다음 표에서는 날짜/시간 형식을 지정하는 데 사용되는 입력 및 해당되는 호스트 파일 데이터 형식 이름을 보여 줍니다.  
   
-|파일 저장 유형|호스트 파일 데이터 형식|메시지에: "< e l d _ > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
+|파일 저장 유형|호스트 파일 데이터 형식|메시지: "< field_name > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|d|  
@@ -66,9 +64,9 @@ ms.locfileid: "36093091"
 ```  
   
 ## <a name="character-data-files"></a>문자 데이터 파일  
- 문자 데이터 파일의 날짜 및 시간 값의 "데이터 형식:: 문자열 및 리터럴" 섹션에 설명 된 대로 표시 됩니다 [ODBC 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md) odbc의 경우 또는의 [데이터 형식 지원 OLE DB 날짜 및 시간 기능 향상에 대 한](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) OLE DB에 대 한 합니다.  
+ 문자 데이터 파일의 날짜 및 시간 값의 "데이터 형식:: 문자열 및 리터럴" 섹션에 설명 된 대로 표시 됩니다 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md) odbc의 경우 또는 [데이터 형식 지원 OLE DB 날짜 및 시간 기능 향상에 대 한](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) OLE DB에 대 한 합니다.  
   
- 네이티브 데이터 파일에서 네 가지 새로운 유형의 날짜 및 시간 값 7 배율이 해당 TDS 표현으로 표시 됩니다 (이 항목은에서 지 원하는 최대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp 데이터 파일에는 이러한 열의 소수 자릿수가 저장 되지 않고). 기존 저장소에 변경 내용이 없는지 `datetime` 및 `smalldatetime` 유형 또는 테이블 형식의 데이터 스트림 (TDS) 표현입니다.  
+ 네이티브 데이터 자릿수가 네 가지 새로운 형식의 날짜 및 시간 값은 7의 확장을 사용 하 여 해당 TDS 표현으로 표시 됩니다 (지 원하는 최대값 이기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp 데이터 파일에는 이러한 열의 소수 저장 되지 않고). 기존 저장소에 변경 사항이 없는 `datetime` 고 `smalldatetime` 형식 또는 테이블 형식 데이터 스트림 (TDS) 표현입니다.  
   
  OLE DB의 경우 파일 저장 유형에 따른 저장 크기는 다음과 같습니다.  
   
@@ -93,7 +91,7 @@ ms.locfileid: "36093091"
 |datetimeoffset(do)|11|TDS|  
   
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h의 BCP 형식  
- 다음 형식은 ODBC에 대한 BCP API 확장에 사용할 수 있도록 sqlncli.h에 정의됩니다. 이러한 형식은 함께 전달 되므로 *eUserDataType* ibcpsession:: Bcpcolfmt OLE db에서의 매개 변수입니다.  
+ 다음 형식은 ODBC에 대한 BCP API 확장에 사용할 수 있도록 sqlncli.h에 정의됩니다. 이러한 형식을 사용 하 여 전달 되는 *eUserDataType* ibcpsession:: Bcpcolfmt OLE DB에서의 매개 변수입니다.  
   
 |파일 저장 유형|호스트 파일 데이터 형식|Ibcpsession:: Bcpcolfmt 사용 하기 위해 sqlncli.h에에서 입력 합니다.|값|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
@@ -107,7 +105,7 @@ ms.locfileid: "36093091"
 ## <a name="bcp-data-type-conversions"></a>BCP 데이터 형식 변환  
  다음 표에서는 변환 정보를 보여 줍니다.  
   
- **OLE DB 참고 사항** IBCPSession에 의해 다음 변환이 수행 됩니다. IRowsetFastLoad에 정의 된 OLE DB 변환을 사용 하 여 [변환은 클라이언트에서 서버로 수행](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
+ **OLE DB 참고 사항** IBCPSession 하 여 다음과 같은 변환이 수행 됩니다. IRowsetFastLoad에 정의 된 대로 OLE DB 변환을 사용 하 여 [변환은 클라이언트에서 서버로 수행](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
   
 |To --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  

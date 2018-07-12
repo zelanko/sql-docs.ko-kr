@@ -1,5 +1,5 @@
 ---
-title: '4 단원: Bike Buyer 마이닝 모델을 탐색 | Microsoft Docs'
+title: '4 단원: Bike Buyer 마이닝 모델을 찾아보기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a4144b7613b1af93f17a50381ec7b3b68507824c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5866ebce4673033bf9be78b81bb65ad705dd331a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278179"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>4단원: Bike Buyer 마이닝 모델 찾아보기
-  이 단원에서는 사용 하 여는 [SELECT (DMX)](/sql/dmx/select-dmx) 에서 만든 의사 결정 트리 및 클러스터링 마이닝의 콘텐츠를 탐색 하는 문을 모델링 [2 단원:예측마이닝구조에마이닝모델추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  이 단원에서는 사용할지는 [SELECT (DMX)](/sql/dmx/select-dmx) 문을에서는 의사 결정 트리 및 클러스터링 마이닝 모델에서 만든 [2 단원: 예측마이닝구조에마이닝모델추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- 마이닝 모델에 포함된 열은 마이닝 구조에서 정의한 열이 아니라 알고리즘에서 찾은 경향 및 패턴을 설명하는 특정 열 집합입니다. 이러한 마이닝 모델 열에 설명 된 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) 스키마 행 집합입니다. 예를 들어 내용 스키마 행 집합의 MODEL_NAME 열에는 마이닝 모델의 이름이 포함되어 있습니다. 클러스터링 마이닝 모델의 경우 NODE_CAPTION 열에는 각 클러스터의 이름이 포함되어 있으며 NODE_DESCRIPTION 열에는 각 클러스터의 특징에 대한 설명이 포함되어 있습니다. SELECT FROM를 사용 하 여 이러한 열을 찾아볼 수 \<모델 >. DMX에서 콘텐츠 문입니다. 이 문을 사용하여 마이닝 모델 생성에 사용된 데이터도 탐색할 수 있습니다. 이 문을 사용하려면 마이닝 구조에 드릴스루를 설정해야 합니다. 문에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
+ 마이닝 모델에 포함된 열은 마이닝 구조에서 정의한 열이 아니라 알고리즘에서 찾은 경향 및 패턴을 설명하는 특정 열 집합입니다. 이러한 마이닝 모델 열에 설명 되어는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) 스키마 행 집합입니다. 예를 들어 내용 스키마 행 집합의 MODEL_NAME 열에는 마이닝 모델의 이름이 포함되어 있습니다. 클러스터링 마이닝 모델의 경우 NODE_CAPTION 열에는 각 클러스터의 이름이 포함되어 있으며 NODE_DESCRIPTION 열에는 각 클러스터의 특징에 대한 설명이 포함되어 있습니다. SELECT를 사용 하 여 이러한 열을 찾아보면 \<모델 >. DMX에서 콘텐츠 문입니다. 이 문을 사용하여 마이닝 모델 생성에 사용된 데이터도 탐색할 수 있습니다. 이 문을 사용하려면 마이닝 구조에 드릴스루를 설정해야 합니다. 문에 대 한 자세한 내용은 참조 하세요. [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
   
  또한 SELECT DISTINCT 문을 사용하여 불연속 열의 모든 상태를 반환할 수 있습니다. 예를 들어 Gender 열에서 이 작업을 수행하면 쿼리는 `male` 및 `female`을 반환합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36312581"
 -   특정 불연속 열에 가능한 다양한 상태 탐색  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>마이닝 모델의 내용 반환  
- 이 단원에서는 사용 하 여는 [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) 클러스터링 모델의 내용을 반환 하는 문입니다.  
+ 이 단원에서 사용 하 여 합니다 [선택에서 &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) 문을 클러스터링 모델의 내용을 반환 합니다.  
   
  다음은 SELECT FROM의 일반적인 예 \<모델 >. 콘텐츠 문:  
   
@@ -53,7 +53,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- 마이닝 모델 이름 옆에 있는 .CONTENT 절은 해당 마이닝 모델에서 내용을 반환함을 지정합니다. 마이닝 모델에 포함 된 열에 대 한 자세한 내용은 참조 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
+ 마이닝 모델 이름 옆에 있는 .CONTENT 절은 해당 마이닝 모델에서 내용을 반환함을 지정합니다. 마이닝 모델에 포함 된 열에 대 한 자세한 내용은 참조 하세요. [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
   
  필요에 따라 코드의 마지막 줄을 사용하여 문에서 반환한 결과를 필터링할 수 있습니다.  
   
@@ -67,15 +67,15 @@ WHERE <where clause>
 WHERE NODE_SUPPORT > 100  
 ```  
   
- WHERE 문 사용 하는 방법에 대 한 자세한 내용은 참조 [선택 &#40;DMX&#41;](/sql/dmx/select-dmx)합니다.  
+ WHERE 문 사용에 대 한 자세한 내용은 참조 하세요. [선택 &#40;DMX&#41;](/sql/dmx/select-dmx)합니다.  
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>클러스터링 마이닝 모델의 내용을 반환하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
-2.  SELECT FROM의 일반적인 예를 복사 \<모델 >. 빈 쿼리에 콘텐츠 문입니다.  
+2.  SELECT의 일반적인 예를 복사 \<모델 >. 빈 쿼리에 콘텐츠 문입니다.  
   
 3.  다음 내용을  
   
@@ -89,7 +89,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     바꿀 수도 있습니다 * 내에 포함 된 열 목록과 함께 여 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
+     바꿀 수도 있습니다 * 목록이 포함 된 열 중 하나는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
   
 4.  다음 내용을  
   
@@ -111,16 +111,16 @@ WHERE NODE_SUPPORT > 100
   
 5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `SELECT_CONTENT.dmx`합니다.  
+6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `SELECT_CONTENT.dmx`입니다.  
   
 7.  도구 모음에서 **실행** 단추를 클릭합니다.  
   
      쿼리에서 마이닝 모델의 내용이 반환됩니다.  
   
 ## <a name="use-drillthrough"></a>드릴스루 사용  
- 다음 단계는 드릴스루 문을 사용하여 의사 결정 트리 마이닝 모델의 학습에 사용된 사례의 샘플링을 반환하는 것입니다. 이 단원에서는 사용 하 여는 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) 의사 결정 트리 모델의 내용을 반환 하는 문입니다.  
+ 다음 단계는 드릴스루 문을 사용하여 의사 결정 트리 마이닝 모델의 학습에 사용된 사례의 샘플링을 반환하는 것입니다. 이 단원에서 사용 하 여 합니다 [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) 문을 의사 결정 트리 모델의 내용을 반환 합니다.  
   
- 다음은 SELECT FROM의 일반적인 예 \<모델 >. 경우 문:  
+ 다음은 SELECT FROM의 일반적인 예 \<모델 >. CASES 문은:  
   
 ```  
 SELECT <select list>   
@@ -142,15 +142,15 @@ SELECT <select list> FROM [<mining model>].CASES
 WHERE IsInNode('<node id>')  
 ```  
   
- IsInNode가 있는 WHERE 문 사용에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
+ IsInNode가 있는 WHERE 문 사용에 대 한 자세한 내용은 참조 하세요. [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>마이닝 모델의 학습에 사용된 사례를 반환하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
-2.  SELECT FROM의 일반적인 예를 복사 \<모델 >. 빈 쿼리에 경우 문입니다.  
+2.  SELECT의 일반적인 예를 복사 \<모델 >. 빈 쿼리에 사례 문입니다.  
   
 3.  다음 내용을  
   
@@ -187,7 +187,7 @@ WHERE IsInNode('<node id>')
   
 5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `SELECT_DRILLTHROUGH.dmx`합니다.  
+6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `SELECT_DRILLTHROUGH.dmx`입니다.  
   
 7.  도구 모음에서 **실행** 단추를 클릭합니다.  
   
@@ -213,7 +213,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>불연속 열의 상태를 반환하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -252,7 +252,7 @@ SELECT DISTINCT [<column>]
   
 5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `SELECT_DISCRETE.dmx`합니다.  
+6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `SELECT_DISCRETE.dmx`입니다.  
   
 7.  도구 모음에서 **실행** 단추를 클릭합니다.  
   

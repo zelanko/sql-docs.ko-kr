@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnaryOperatorColumn element
 ms.assetid: 10889e51-69e5-4f50-9749-ecbc66c247d3
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d52b742916c6e5876d76fbeb1ba112672ea5b225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e4bd33bc95b1322e5a3125e6222dc9cdfb1b05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161164"
 ---
 # <a name="unaryoperatorcolumn-element-assl"></a>UnaryOperatorColumn 요소(ASSL)
   단항 연산자를 제공하는 열의 세부 정보를 정의합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36181648"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 입력을 참조 하십시오. [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 자세한 내용은 합니다 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- 부모에 해당 하는 요소 `UnaryOperatorColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `UnaryOperatorColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개체 &#40;ASSL&#41;](objects-assl.md)  

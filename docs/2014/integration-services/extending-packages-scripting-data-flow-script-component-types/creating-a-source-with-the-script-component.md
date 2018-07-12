@@ -20,18 +20,18 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47cfd1ceab750a105fb38ca4827b50f9ba727aca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c837c1cefbc05118bc3880122438e0be9f7b0cbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150844"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 원본 구성 요소를 사용하여 데이터 원본의 데이터를 로드하고 다운스트림 변환 및 대상에 전달할 수 있습니다. 일반적으로 데이터 원본에 연결하는 데는 기존 연결 관리자를 사용합니다.  
   
- 스크립트 구성 요소 개요를 참조 [Extending the Data Flow with the Script] (... / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md 합니다.  
+ 스크립트 구성 요소의 개요를 참조 [스크립트 구성 요소를 사용 하 여 데이터 흐름 확장] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md 합니다.  
   
  스크립트 구성 요소 및 해당 구성 요소가 생성하는 인프라 코드를 사용하면 사용자 지정 데이터 흐름 구성 요소를 개발하는 과정이 훨씬 간단해집니다. 하지만 스크립트 구성 요소의 작동 방식을 이해하려면 사용자 지정 데이터 흐름 구성 요소를 개발하는 데 필요한 단계를 파악하는 것이 좋습니다. [사용자 지정 데이터 흐름 구성 요소 개발](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 섹션과 이 섹션의 [사용자 지정 원본 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) 항목을 참조하세요.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36183072"
  **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
- 스크립트에서 사용 하려는 값을 가진 모든 기존 변수가 없으면에 추가할 수 있습니다는 `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드에 **스크립트** 의 페이지는 **스크립트변환편집기**.  
+ 스크립트에서 사용 하려는 값을 갖는 모든 기존 변수 인 경우에 추가할 수 있습니다 합니다 `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드에 **스크립트** 페이지를 **스크립트변환편집기**.  
   
- 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. 줄임표를 클릭 하 여 여러 변수를 입력할 수도 있습니다 (**...** ) 단추 옆에 `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드에 변수를 선택 하 고 **변수 선택** 대화 상자.  
+ 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. 줄임표를 클릭 하 여 여러 변수를 입력할 수도 있습니다 (**...** ) 단추 옆에 `ReadOnlyVariables` 하 고 `ReadWriteVariables` 속성 필드 및 선택한 변수를 **변수 선택** 대화 상자.  
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36183072"
   
  `ScriptMain` 클래스에는 `CreateNewOutputRows` 메서드에 대한 스텁이 포함되어 있습니다. `CreateNewOutputRows`는 원본 구성 요소에서 가장 중요한 메서드입니다.  
   
- 여는 경우는 **프로젝트 탐색기** VSTA에서 창, 스크립트 구성 요소 읽기 전용 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
+ 열면 합니다 **프로젝트 탐색기** vsta에서 창에서 읽기 전용으로 스크립트 구성 요소 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
   
  런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `PrimeOutput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `PrimeOutput` 메서드는 다음 메서드를 호출합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36183072"
  다음 예에서는 `ScriptMain` 클래스에서 원본 구성 요소를 만드는 데 필요한 사용자 지정 코드를 보여 줍니다.  
   
 > [!NOTE]  
->  이러한 예에서 사용 된 **Person.Address** 테이블에 `AdventureWorks` 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **intAddressID** 및 **nvarchar (30) 도시**데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
+>  이 예제에서는 사용를 **Person.Address** 테이블에 `AdventureWorks` 예제 데이터베이스 및 해당 되는 경우 첫 번째 및 네 번째 열을 전달 합니다 **intAddressID** 및 **nvarchar (30) City**데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
 ### <a name="adonet-source-example"></a>ADO.NET 원본 예  
  이 예에서는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터를 데이터 흐름으로 로드하는 원본 구성 요소를 보여 줍니다.  
@@ -260,7 +260,7 @@ ms.locfileid: "36183072"
   
  이 예제 코드를 실행하려면 다음과 같이 패키지와 구성 요소를 구성해야 합니다.  
   
-1.  사용 하 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내보내려면 가져오기 및 내보내기 마법사는 **Person.Address** 에서 테이블의 `AdventureWorks` 샘플 데이터베이스를 쉼표로 구분 된 플랫 파일. 이 예제에서는 파일 이름으로 ExportedAddresses.txt를 사용합니다.  
+1.  사용 하 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내보내려면 가져오기 및 내보내기 마법사를 **Person.Address** 에서 테이블을 `AdventureWorks` 쉼표로 구분 된 플랫 파일로 샘플 데이터베이스. 이 예제에서는 파일 이름으로 ExportedAddresses.txt를 사용합니다.  
   
 2.  내보낸 데이터 파일에 연결하는 플랫 파일 연결 관리자를 만듭니다.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "36183072"
     }  
     ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

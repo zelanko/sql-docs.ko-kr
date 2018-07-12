@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211693"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>ScalarMiningStructureColumn 데이터 형식(ASSL)
-  나타내는 파생된 데이터 형식을 정의 [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) 요소와 연결 된 중첩된 테이블과 달리 스칼라 값을 포함 하는 [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) 요소 중첩된 테이블이 들어 있는입니다.  
+  나타내는 파생된 데이터 형식을 정의 [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) 와 연결 된 중첩된 테이블과 달리 스칼라 값을 포함 하는 요소는 [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) 요소 중첩된 테이블이 들어 있는입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,13 +67,13 @@ ms.locfileid: "36182343"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[ClassifiedColumnID](../properties/id-element-assl.md), [콘텐츠](../properties/content-element-assl.md), [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md), [DiscretizationMethod](../properties/discretizationmethod-element-assl.md), [배포](../properties/distribution-element-assl.md), [IsKey](../properties/iskey-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [ModelingFlags](../collections/modelingflags-element-assl.md), [l u m n](../objects/column-element-assl.md), [소스](../properties/source-element-binding-assl.md), [ 번역](../collections/translations-element-assl.md)|  
-|파생 요소|[열](../objects/column-element-assl.md) ([열](../collections/columns-element-assl.md) 컬렉션 [MiningStructure](../objects/miningstructure-element-assl.md))|  
+|자식 요소|[ClassifiedColumnID](../properties/id-element-assl.md), [콘텐츠](../properties/content-element-assl.md)를 [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md)를 [DiscretizationMethod](../properties/discretizationmethod-element-assl.md)를 [배포](../properties/distribution-element-assl.md), [IsKey](../properties/iskey-element-assl.md)를 [KeyColumns](../collections/columns-element-assl.md)를 [ModelingFlags](../collections/modelingflags-element-assl.md)를 [NameColumn](../objects/column-element-assl.md)를 [원본](../properties/source-element-binding-assl.md), [ 번역](../collections/translations-element-assl.md)|  
+|파생 요소|[열](../objects/column-element-assl.md) ([열](../collections/columns-element-assl.md) 모음인 [MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

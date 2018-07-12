@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc1978c2ae733b07071c7c95d3fd232c207d2853
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da4817ba23f7e4be50eb11aa97a3163e48536425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154954"
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>PerspectiveMeasureGroup 데이터 형식(ASSL)
   측정값 그룹에 대 한 정보를 나타내는 기본 데이터 형식을 정의 [관점](../objects/perspective-element-assl.md) 요소입니다.  
@@ -58,8 +58,8 @@ ms.locfileid: "36183711"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [MeasureGroupID](../properties/id-element-assl.md), [측정값](../collections/measures-element-assl.md)|  
-|파생 요소|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) 컬렉션 [관점](../objects/perspective-element-assl.md))|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md)하십시오 [MeasureGroupID](../properties/id-element-assl.md), [측정값](../collections/measures-element-assl.md)|  
+|파생 요소|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md) 모음인 [관점](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  큐브 큐의 측정값 그룹은 기본 큐브의 측정값 그룹과 동일한 구조를 가집니다.  
@@ -67,6 +67,6 @@ ms.locfileid: "36183711"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

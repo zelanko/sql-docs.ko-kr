@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b24b5425fb89794e7af3129039219d699769427
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 31083fe39332d15afa357045103a39114f1b4f6d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180499"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412772"
 ---
 # <a name="data-types-ole-db"></a>데이터 형식(OLE DB)
-  실행 하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용 하 여 결과 처리 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 알고 있어야 Native Client OLE DB 공급자는 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 지도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 OLE DB 데이터 형식에 바인딩할 때 매개 변수 또는 사용 하는 경우 및 행 집합의 열은 **ITableDefinition** 에 테이블을 만들려면 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  실행 하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용 하 여 결과 처리 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 알고 있어야 합니다 하는 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 맵 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 바인딩하는 경우 OLE DB 데이터 형식으로 데이터 형식 매개 변수 또는 열 행 집합을 사용 하는 경우는 **ITableDefinition** 인터페이스에는 테이블을 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

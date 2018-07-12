@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
 - network protocols [SQL Server], managing
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99f80c2839f5ee68aaf361c4b2b6355aedff73b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 511eb0109e82d7b3a11692893ee61d38fe966d04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154074"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 구성 관리자
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe)를 사용 하 여 SQLServerManager10.msc 파일은 Windows System32 폴더에서 열고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) 열려면 Windows System32 폴더의 SQLServerManager10.msc 파일을 사용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager입니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 및 SQL Server Management Studio는 WMI(Window Management Instrumentation)를 사용하여 일부 서버 설정을 확인 및 변경합니다. WMI는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구에 의해 요청된 레지스트리 작업을 관리하는 API 호출과 상호 작용하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자 스냅인 구성 요소의 선택된 SQL 서비스에 대한 향상된 제어 및 조작을 제공하기 위한 통합된 방법을 제공합니다. WMI와 관련된 사용 권한을 구성하는 방법에 대한 자세한 내용은 [WMI를 구성하여 SQL Server 도구에 서버 상태 표시](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)를 참조하세요.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "36182775"
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 응용 프로그램으로 표시되지 않습니다.  
 >   
 >  -   **Windows 10**:  
->          열려는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager에는 **시작 페이지**, 아래에 sqlservermanager12.msc (에 대 한 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 12를 더 작은 수로 바꿉니다. SQLServerManager12.msc를 클릭 하면 Configuration Manager 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄에 고정 하려면 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **파일 위치 열기**합니다. Windows 파일 탐색기에서 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **시작 화면에 고정** 또는 **작업 표시줄에 고정**합니다.  
+>          열려는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager에는 **시작 페이지**, sqlservermanager12.msc (에 대 한 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 12를 더 적은 수로 바꿉니다. SQLServerManager12.msc를 클릭 하면 Configuration Manager 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄을 고정 하려면 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **파일 위치 열기**합니다. Windows 파일 탐색기에서 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **시작 화면에 고정** 하거나 **작업 표시줄에 고정**합니다.  
 > -   **Windows 8**:  
->          열려는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager에는 **검색** 참의 **앱**, 형식 **SQLServerManager\<버전 >.msc** 등`SQLServerManager12.msc`, 누릅니다 **Enter**합니다.  
+>          열려는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager에서의 **검색** 참의 **앱**, 형식 **SQLServerManager\<버전 >.msc** 등`SQLServerManager12.msc`를 누릅니다 **Enter**합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 다른 컴퓨터에서 서비스를 시작, 중지, 일시 중지, 재개 또는 구성하려면 [다른 컴퓨터에 연결&#40;SQL Server 구성 관리자&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)을 참조하세요.  
   

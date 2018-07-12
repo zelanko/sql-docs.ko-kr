@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importing.f1
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72faf98eb62b72c18243bb190951f630bbe85218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41bc4470ec16fdeecbca2e978d77e6c7dc7ef09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259579"
 ---
 # <a name="importing-ssas"></a>가져오기(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 가져오기 작업의 진행률을 볼 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

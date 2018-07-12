@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
 - removing hierarchies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57e1f74d612add88c6a2c47497f0d6a55c64c665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157124"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>사용자 정의 계층 추가 또는 삭제
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너에 있는 **차원 구조** 탭의 차원에서 사용자 정의 계층을 추가하거나 제거할 수 있습니다.  
   
- 사용자 정의 계층을 추가하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 계층이 인스턴스화되고 해당 차원이 처리되어야만 사용자가 계층을 사용할 수 있습니다. 자세한 내용은 참조 [다차원 모델 데이터베이스 &#40;SSAS&#41; ](multidimensional-model-databases-ssas.md) 및 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 사용자 정의 계층을 추가하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 계층이 인스턴스화되고 해당 차원이 처리되어야만 사용자가 계층을 사용할 수 있습니다. 자세한 내용은 [다차원 Model 데이터베이스 &#40;SSAS&#41; ](multidimensional-model-databases-ssas.md) 하 고 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>차원에 사용자 정의 계층을 추가하려면  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36182461"
   
 5.  필요에 따라 사용자 정의 계층이나 해당 수준의 속성을 수정합니다.  
   
-     예를 들어 일반적으로 사용자 정의 계층의 이름을 지정하고 해당 수준의 이름을 하나 이상 바꾸며 All 수준의 사용자 지정 이름을 정의할 수 있습니다. 자세한 내용은 참조 [사용자 계층 속성](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), 및 [수준 속성 &#91;Paved 통해&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)합니다.  
+     예를 들어 일반적으로 사용자 정의 계층의 이름을 지정하고 해당 수준의 이름을 하나 이상 바꾸며 All 수준의 사용자 지정 이름을 정의할 수 있습니다. 자세한 내용은 [사용자 계층 속성](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), 및 [수준 속성 &#91;를 통해 Paved&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
   
     > [!NOTE]  
     >  기본적으로 사용자 정의 계층은 단순히 사용자가 정보를 보기 위해 드릴다운할 수 있는 경로입니다. 그러나 수준 간에 관계가 있으면 수준 간의 특성 관계를 구성하여 쿼리 성능을 높일 수 있습니다. 자세한 내용은 [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) 및 [특성 관계 정의](attribute-relationships-define.md)를 참조하세요.  

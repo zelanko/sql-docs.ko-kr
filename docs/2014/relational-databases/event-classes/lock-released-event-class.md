@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Released event class
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e4bfd066a1655a66c1424181015245986352f46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e783fa34c08fbc7f72cf8a9601519b518bcb0410
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156464"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 이벤트 클래스
   Lock:Released 이벤트 클래스는 페이지와 같은 리소스에 대한 잠금이 해제되었음을 나타냅니다.  
