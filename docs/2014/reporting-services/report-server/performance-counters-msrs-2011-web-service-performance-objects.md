@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -20,13 +20,13 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2606c760b03225a5cbb9d82db0aecd18ef4753ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150124"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대한 성능 카운터(기본 모드)
   이 항목에서는 `MSRS 2014 Web Service` 및 `MSRS 2014 Windows Service` 성능 개체에 대한 성능 카운터에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36184207"
   
  성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서 [런타임 프로파일링](http://msdn.microsoft.com/library/w4bz2147.aspx)(http://msdn.microsoft.com/library/w4bz2147.aspx)을 참조하세요.  
   
- SharePoint 모드 성능 카운터와 관련 된 정보를 참조 하세요. [MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 성능 카운터 &#40;SharePoint 모드&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ SharePoint 모드 성능 카운터와 관련 된 정보를 참조 하세요 [MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 성능 카운터 &#40;SharePoint 모드&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **항목 내용**  
   
@@ -49,9 +49,9 @@ ms.locfileid: "36184207"
 -   [PowerShell Cmdlet을 사용하여 목록 반환](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> MSRS 2014 웹 서비스 성능 카운터  
- `MSRS 2014 Web Service` 성능 개체는 보고서 서버 성능을 모니터링합니다. 이 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이 카운터를 설정 하는 경우의 모든 인스턴스에 카운터를 적용할 수 있습니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 하거나 특정 인스턴스를 선택할 수 있습니다. 이러한 카운터를 다시 설정 될 때마다 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 보고서 서버 웹 서비스를 중지 합니다.  
+ `MSRS 2014 Web Service` 성능 개체는 보고서 서버 성능을 모니터링합니다. 이 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이 카운터를 설정 하는 경우 모든 인스턴스의 카운터를 적용할 수 있습니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 하거나 특정 인스턴스를 선택할 수 있습니다. 이러한 카운터를 다시 설정 될 때마다 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 보고서 서버 웹 서비스를 중지 합니다.  
   
- 다음 표에서와 함께 제공 되는 카운터를 나열는 `MSRS 2014 Web Service` 성능 개체입니다.  
+ 다음 표에서 포함 된 카운터를 나열 합니다 `MSRS 2014 Web Service` 성능 개체입니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  
@@ -79,9 +79,9 @@ ms.locfileid: "36184207"
 |`Total Requests`|서비스 시작 이후 보고서 서버에 대한 총 요청 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows 서비스 성능 카운터  
- `MSRS 2014 Windows Service` 성능 개체는 보고서 서버 Windows 서비스를 모니터링 합니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅숏 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정 하는 경우의 모든 인스턴스에 카운터를 적용할 수 있습니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 하거나 특정 인스턴스를 선택할 수 있습니다.  
+ `MSRS 2014 Windows Service` 성능 개체는 보고서 서버 Windows 서비스를 모니터링 합니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅숏 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정 하는 경우 모든 인스턴스의 카운터를 적용할 수 있습니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 하거나 특정 인스턴스를 선택할 수 있습니다.  
   
- 다음 표에서에 포함 된 카운터를 나열는 `MSRS 2014 Windows Service` 성능 개체입니다.  
+ 다음 테이블에 포함 된 카운터를 나열 합니다 `MSRS 2014 Windows Service` 성능 개체입니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36184207"
 |`Cache Misses/Sec`|캐시에서 보고서를 반환하지 못한 초당 요청 수입니다. 캐싱(디스크 또는 메모리)에 사용된 리소스가 충분한지 여부를 확인할 때 이 카운터를 사용합니다.|  
 |`Cache Misses/Sec (Semantic Models)`|캐시에서 모델을 반환하지 못한 초당 요청 수입니다. 캐싱(디스크 또는 메모리)에 사용된 리소스가 충분한지 여부를 확인할 때 이 카운터를 사용합니다.|  
 |`Delivers/Sec`|배달 확장 프로그램에서 초당 보고서를 배달한 수입니다.|  
-|`Events/Sec`|초당 처리된 이벤트 수입니다. 모니터링 되는 이벤트에는 포함 `SnapshotUpdated` 및 `TimedSubscription`합니다.|  
+|`Events/Sec`|초당 처리된 이벤트 수입니다. 모니터링 된 이벤트에 포함 `SnapshotUpdated` 고 `TimedSubscription`입니다.|  
 |`First Session Requests/Sec`|초당 만들어진 새 보고서 실행 세션 수입니다.|  
 |`Memory Cache Hits/Sec`|메모리 내 캐시에서 보고서가 검색된 초당 횟수입니다. *메모리 내 캐시* 는 캐시 중 CPU 메모리에 보고서를 저장하는 부분입니다. 메모리 내 캐시가 사용되면 보고서 서버는 캐시된 내용에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 쿼리하지 않습니다.|  
 |`Memory Cache Misses/Sec`|메모리 내 캐시에서 보고서를 검색하지 못한 초당 횟수입니다.|  
@@ -132,7 +132,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 성능 모니터링](monitoring-report-server-performance.md)   
- [MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 성능 카운터 &#40;SharePoint 모드&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [성능 카운터 MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 &#40;SharePoint 모드&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](performance-counters-reportserver-service-performance-objects.md)  
   
   

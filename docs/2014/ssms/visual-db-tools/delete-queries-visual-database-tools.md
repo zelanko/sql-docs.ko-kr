@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dropping queues
 - deleting queries
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4d9cd28dc8205ea10546d3f50add14da5c3da0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9690ed54b747460fe5ee706d50085c53c85c1a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240049"
 ---
 # <a name="delete-queries-visual-database-tools"></a>쿼리 삭제(Visual Database Tools)
   쿼리를 프로젝트에서 제거하고 파일 시스템에서 영구 삭제하는 방식으로 쿼리를 삭제할 수 있습니다. 다음 절차를 사용하여 삭제한 쿼리는 휴지통에 보관되지 않으므로 복원할 수 없습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36184392"
 ## <a name="see-also"></a>관련 항목  
  [쿼리 결과 지우기 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 변경 내용 취소 &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

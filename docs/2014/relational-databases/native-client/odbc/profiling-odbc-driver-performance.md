@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71db4f4331a71927b54131d1ddd8d984e507091d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dc80bf8e33d07abb487700989ce124442d17446d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183014"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409982"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 두 가지 유형의 성능 데이터를 프로파일링할 수 있습니다.  
@@ -46,7 +44,7 @@ ms.locfileid: "36183014"
   
 -   로깅을 지정하는 데이터 원본에 연결합니다.  
   
--   호출 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) 프로 파일링을 해당 제어 드라이버별 특성을 설정할 수 있습니다.  
+-   호출 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) 프로 파일링 해당 컨트롤에 드라이버별 특성을 설정할 수 있습니다.  
   
  응용 프로그램 프로세스는 각자 고유의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 복사본을 받으며, 프로파일링은 드라이버 복사본과 응용 프로그램 프로세스의 조합에 대해 전역으로 적용됩니다. 응용 프로그램의 어떤 항목이 프로파일링을 활성화하면 프로파일링은 해당 응용 프로그램의 드라이버에서 활성 상태인 모든 연결에 대한 정보를 기록합니다. 명확하게 프로파일링을 요청하지 않은 연결도 포함됩니다.  
   
@@ -54,7 +52,7 @@ ms.locfileid: "36183014"
   
  응용 프로그램이 로그 파일에 프로파일링을 시작한 상태에서 두 번째 응용 프로그램이 동일한 로그 파일에 프로파일링을 시작하려고 시도하면 두 번째 응용 프로그램은 어떠한 프로파일링 데이터도 기록할 수 없습니다. 첫 번째 응용 프로그램이 드라이버를 언로드한 후 두 번째 응용 프로그램이 프로파일링을 시작하면 두 번째 응용 프로그램이 첫 번째 응용 프로그램의 로그 파일을 덮어씁니다.  
   
- 응용 프로그램을 호출 하는 경우 드라이버가 SQL_ERROR를 반환 응용 프로그램에 프로 파일링을 사용 하는 데이터 원본에 연결 된 경우 **SQLSetConnectOption** 로깅을 시작 합니다. 에 대 한 호출 **SQLGetDiagRec** 다음 다음을 반환 합니다.  
+ 응용 프로그램을 호출 하면 드라이버가 SQL_ERROR를 반환 응용 프로그램에 프로 파일링을 사용 하는 데이터 원본에 연결 된 경우 **SQLSetConnectOption** 로깅을 시작 합니다. 에 대 한 호출 **SQLGetDiagRec** 다음 다음을 반환 합니다.  
   
 ```  
 SQLState: 01000, pfNative = 0  

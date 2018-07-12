@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProactiveCaching element
 ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: daf0a3020932646bac1aae797c7ddbe247de5f78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e66238759e38f9f8b42ebf0604b739d74f851832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211723"
 ---
 # <a name="proactivecaching-element-assl"></a>ProactiveCaching 요소(ASSL)
   부모 요소에 대한 자동 관리 캐싱 설정을 정의합니다.  
@@ -67,8 +67,8 @@ ms.locfileid: "36184346"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](cube-element-assl.md), [차원](dimension-element-assl.md), [MeasureGroup](group-element-assl.md), [파티션](partition-element-assl.md)|  
-|자식 요소|[AggregationStorage](../properties/aggregationstorage-element-assl.md), [활성화](../properties/enabled-element-assl.md), [ForceRebuildInterval](../properties/forcerebuildinterval-element-assl.md), [대기 시간](../properties/latency-element-assl.md), [OnlineMode](../properties/onlinemode-element-assl.md), [ SilenceInterval](../properties/silenceinterval-element-assl.md), [SilenceOverrideInterval](../properties/silenceoverrideinterval-element-assl.md), [소스](../properties/source-element-binding-assl.md)|  
+|부모 요소|[큐브](cube-element-assl.md)하십시오 [차원](dimension-element-assl.md), [MeasureGroup](group-element-assl.md), [파티션](partition-element-assl.md)|  
+|자식 요소|[AggregationStorage](../properties/aggregationstorage-element-assl.md), [활성화](../properties/enabled-element-assl.md), [ForceRebuildInterval](../properties/forcerebuildinterval-element-assl.md)를 [대기 시간](../properties/latency-element-assl.md)를 [OnlineMode](../properties/onlinemode-element-assl.md), [ SilenceInterval](../properties/silenceinterval-element-assl.md)하십시오 [SilenceOverrideInterval](../properties/silenceoverrideinterval-element-assl.md), [원본](../properties/source-element-binding-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  

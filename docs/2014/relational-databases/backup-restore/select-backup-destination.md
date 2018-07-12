@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 304e1f865c023d8edada929cb6b803d8331b4161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ca8c14c4daae046786bfcd78e04c0bd1b08139d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160564"
 ---
 # <a name="select-backup-destination"></a>백업 대상 선택
   **백업 대상 선택** 대화 상자를 사용하여 장치를 백업 대상으로 선택할 수 있습니다. 디스크 또는 논리적 백업 장치를 백업 대상으로 사용할 수 있습니다.  

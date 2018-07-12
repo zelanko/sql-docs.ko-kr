@@ -1,5 +1,5 @@
 ---
-title: 확장 저장된 프로시저를 새로운 저장된 프로시저로 xp_sqlagent_proxy_account의 사용을 바꾸기 | Microsoft Docs
+title: 확장 저장된 프로시저를 새로운 저장된 프로시저로 xp_sqlagent_proxy_account의 사용을 대체 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xp_sqlagent_proxy_account
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a35af2b28d8eb35d8db74f113ff8852ace1e82cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4cd609cca3f8197986799a7c9630d35eeaa57d41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159814"
 ---
 # <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>xp_sqlagent_proxy_account 확장 저장 프로시저를 새로운 저장 프로시저로 대체합니다.
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 여러 프록시를 지원합니다. 새로운 저장 프로시저 집합을 사용하여 이러한 프록시를 정의할 수 있습니다. 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 저장 프로시저에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 다음 항목을 참조하십시오.  

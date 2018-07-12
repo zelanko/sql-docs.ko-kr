@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 063d8a0c044739bbc6e7a1994176962fcf769093
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa36c348b23a8f9a64766e46231a6532baf5cb08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239163"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 연결 관리자 편집기
   **FTP 연결 관리자 편집기** 대화 상자를 사용하여 FTP 서버 연결 속성을 지정할 수 있습니다.  

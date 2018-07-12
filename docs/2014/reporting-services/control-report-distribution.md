@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160184"
 ---
 # <a name="control-report-distribution"></a>보고서 배포 제어
   전자 메일 및 파일 공유 배포와 관련된 보안 위험을 줄이도록 보고서 서버를 구성할 수 있습니다.  
   
 ## <a name="securing-reports"></a>보고서 보안  
- 보고서 배포 제어의 첫 단계는 무단 액세스로부터 보고서를 보호하는 것입니다. 구독에서 사용하려면 보고서는 개별 배달에 따라 변경되지 않는 저장된 자격 증명 집합을 사용해야 합니다. 보고서 서버의 보고서에 액세스할 수 있는 모든 사용자는 보고서를 실행하고 배포할 수 있습니다. 이를 방지하려면 보고서가 필요한 사용자만 보고서에 액세스할 수 있도록 제한해야 합니다. 자세한 내용은 참조 [보안 보고서 및 리소스](security/secure-reports-and-resources.md) 및 [폴더 보안](security/secure-folders.md)합니다.  
+ 보고서 배포 제어의 첫 단계는 무단 액세스로부터 보고서를 보호하는 것입니다. 구독에서 사용하려면 보고서는 개별 배달에 따라 변경되지 않는 저장된 자격 증명 집합을 사용해야 합니다. 보고서 서버의 보고서에 액세스할 수 있는 모든 사용자는 보고서를 실행하고 배포할 수 있습니다. 이를 방지하려면 보고서가 필요한 사용자만 보고서에 액세스할 수 있도록 제한해야 합니다. 자세한 내용은 [보고서 및 리소스 보안](security/secure-reports-and-resources.md) 하 고 [폴더 보안](security/secure-folders.md)합니다.  
   
  데이터베이스 보안을 사용하여 액세스 권한을 부여하는 주요 기밀 보고서는 구독을 통해 배포할 수 없습니다.  
   

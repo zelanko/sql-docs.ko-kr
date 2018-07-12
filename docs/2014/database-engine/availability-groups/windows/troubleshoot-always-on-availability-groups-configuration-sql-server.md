@@ -5,25 +5,24 @@ ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 caps.latest.revision: 38
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1847da6db0f0bc7e3ad8e480d5682dcfbc178a9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209863"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>AlwaysOn 가용성 그룹 구성 문제 해결(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 끝점이 없거나, 끝점에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "36183916"
   
 |섹션|Description|  
 |-------------|-----------------|  
-|[AlwaysOn 가용성 그룹을 사용할 수 없음](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 인스턴스를 사용할 수 없는 경우 해당 인스턴스는 가용성 그룹 만들기를 지원하지 않고 가용성 복제본을 호스팅할 수 없습니다.|  
+|[AlwaysOn 가용성 그룹을 사용할 수 없습니다.](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 인스턴스를 사용할 수 없는 경우 해당 인스턴스는 가용성 그룹 만들기를 지원하지 않고 가용성 복제본을 호스팅할 수 없습니다.|  
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|  
 |[끝점](#Endpoints)|서버 인스턴스의 데이터베이스 미러링 끝점 관련 문제를 진단하는 방법에 대해 설명합니다.|  
 |[시스템 이름](#SystemName)|끝점 URL에서 서버 인스턴스의 시스템 이름을 지정하는 대안이 요약되어 있습니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "36183916"
 |[관련 작업](#RelatedTasks)|가용성 그룹 구성 문제를 해결하는 방법에 대해 설명하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 온라인 설명서에 있는 태스크 지향 항목 목록을 포함합니다.|  
 |[관련 내용](#RelatedContent)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서에 포함되어 있지 않은 관련 리소스 목록을 포함합니다.|  
   
-##  <a name="IsHadrEnabled"></a> AlwaysOn 가용성 그룹을 사용할 수 없음  
+##  <a name="IsHadrEnabled"></a> AlwaysOn 가용성 그룹을 사용할 수 없습니다.  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능을 사용하도록 설정해야 합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
 ##  <a name="Accounts"></a> 계정  
@@ -56,7 +55,7 @@ ms.locfileid: "36183916"
   
     1.  파트너가 동일한 도메인 사용자 계정으로 실행되는 경우 올바른 사용자 로그인이 자동으로 두 **master** 데이터베이스에 모두 포함됩니다. 데이터베이스에 대한 간단한 보안 구성으로 권장됩니다.  
   
-    2.  두 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 원격 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들고 이 로그인에 해당 서버 인스턴스의 데이터베이스 미러링 끝점에 연결할 수 있는 CONNECT 권한을 부여해야 합니다. 자세한 내용은 참조[로그인 계정 설정 데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대 한 &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)합니다.  
+    2.  두 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 원격 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들고 이 로그인에 해당 서버 인스턴스의 데이터베이스 미러링 끝점에 연결할 수 있는 CONNECT 권한을 부여해야 합니다. 자세한 내용은[로그인 계정 설정 데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대 한 &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)합니다.  
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 끝점 인증을 위한 인증서를 사용해야 합니다. 서비스 계정에서 동일한 도메인의 도메인 계정을 사용 중인 경우 모든 복제본 위치의 각 서비스 계정에 연결 권한을 부여하거나, 인증서를 사용할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "36183916"
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|READ_ONLY_ROUTING_LIST에 읽기 가능한 보조 복제본을 호스팅하는 서버 인스턴스만 포함되어 있는지 확인합니다.|**읽기 가능한 보조 복제본을 확인하려면:** sys.availability_replicas(**secondary_role_allow_connections_desc** 열)<br /><br /> **읽기 전용 라우팅 목록을 보려면:** sys.availability_read_only_routing_lists<br /><br /> **읽기 전용 라우팅 목록을 변경하려면:** ALTER AVAILABILITY GROUP|[sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|Windows 방화벽이 READ_ONLY_ROUTING_URL 포트를 차단하고 있는지 확인합니다.|—|[데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 다음을 확인합니다.<br /><br /> SQL Server 원격 연결이 사용되고 있는지 여부<br /><br /> TCP/IP가 사용되고 있는지 여부<br /><br /> IP 주소가 올바르게 구성되어 있는지 여부|—|[서버 속성 보기 또는 변경&#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|확인 된 READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: * * * 포트*) 올바른 정규화 된 도메인 이름 (FQDN) 및 포트 번호를 포함 합니다.|—|[AlwaysOn에 대 한 read_only_routing_url 계산](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|되도록 READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: * * * 포트*) 올바른 정규화 된 도메인 이름 (FQDN) 및 포트 번호를 포함 합니다.|—|[AlwaysOn에 대 한 read_only_routing_url 계산](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|클라이언트 시스템|클라이언트 드라이버가 읽기 전용 라우팅을 지원하는지 확인합니다.|—|[AlwaysOn 클라이언트 연결 (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  

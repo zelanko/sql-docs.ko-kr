@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154984"
 ---
 # <a name="clr-transactions-sample"></a>CLR 트랜잭션 예제
   이 예제에서는 `System.Transactions` 네임스페이스에 있는 관리되는 API를 사용하여 트랜잭션을 제어하는 방법을 보여 줍니다. 특히 `System.Transactions.TransactionScope` 클래스는 요청을 처리할 재고가 충분하지 않는 경우 재고 수치를 조정하지 않고, 재고가 충분한 경우 한 위치에서 다른 위치로 재고를 원자 단위로 이동하도록 트랜잭션 경계를 설정하는 데 사용됩니다. 분산 트랜잭션에서의 자동 등록은 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 저장된 감사 데이터베이스에 재고 변경 내용을 기록하여 표시됩니다.  

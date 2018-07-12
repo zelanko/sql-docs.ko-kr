@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160524"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 분리된 데이터베이스를 다른 위치로 이동하고 동일한 서버 인스턴스나 다른 서버 인스턴스에 다시 연결하는 방법에 대해 설명합니다. 하지만 데이터베이스를 이동할 때는 분리 및 연결 작업 대신 계획된 ALTER DATABASE 재배치 프로시저를 사용하는 것이 좋습니다. 자세한 내용은 [Move User Databases](move-user-databases.md)을 참조하세요.  
@@ -53,7 +53,7 @@ ms.locfileid: "36184506"
 3.  복사된 파일을 연결합니다. 자세한 내용은 [Attach a Database](attach-a-database.md)을(를) 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 복사본을 만듭니다는 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 문은 서버 인스턴스에 연결 된 쿼리 편집기 창에서 실행 됩니다.  
+ 다음 예제에서는의 복사본을 만듭니다는 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 문은 하려는 서버 인스턴스에 연결 된 쿼리 편집기 창에 연결 되어 있는 대로 실행 됩니다.  
   
 1.  분리 된 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 문:  
   

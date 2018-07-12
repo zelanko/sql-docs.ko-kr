@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b72bc48b6e9a4a7b7e52215ed9ef9b7b5ca2c2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4bb8b841b4835d74eb37ff531f21b4942cc32738
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278479"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>계기의 최소값 또는 최대값 설정(보고서 작성기 및 SSRS)
   여러 그룹이 정의되는 차트와 달리 계기에는 하나의 값만 표시됩니다. 보고서 작성기 및 보고서 디자이너에서 사용자가 계기에 표시하려고 하는 한 값의 컨텍스트 또는 상대적 중요도를 확인하므로 사용자가 눈금의 최소값 및 최대값을 정의해야 합니다. 예를 들어 데이터 값이 0과 10 사이의 순위인 경우에는 대개 최소값과 최대값을 각각 0과 10으로 설정합니다. 간격 수는 최소값과 최대값으로 지정된 값을 기반으로 자동으로 계산됩니다. 기본적으로 최소값과 최대값은 0과 100으로 설정되지만 이러한 값은 임의의 값이므로 사용자가 변경해야 합니다. 응용 프로그램에서는 값을 백분율로 계산하지 않습니다.  

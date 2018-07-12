@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStartMode method
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1ae9cc21726ec7322e9e4477501e68ab17147c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7213e488b13b5b756e8632a55314c0fbbb5a8268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278809"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 메서드(SqlService 클래스)
   서비스 인스턴스의 시작 모드를 수정합니다.  

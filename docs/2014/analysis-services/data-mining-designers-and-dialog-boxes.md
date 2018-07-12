@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services dialog boxes
 - Analysis Services designers
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 696378518b824f7ffcca6d0bfc85f47b353b2dc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 559712565fa32de560b5b9e793682253f4d80aa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159684"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>데이터 마이닝 디자이너 및 대화 상자
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 만들기, 보기, 테스트 및 데이터 마이닝 모델에서 예측을 만드는 데 사용할 수 있는 디자인 도구를 제공 합니다.  

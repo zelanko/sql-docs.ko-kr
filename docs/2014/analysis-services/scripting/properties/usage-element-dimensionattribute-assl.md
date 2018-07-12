@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e7787edb562580eaaddc3cdaf1094958eec9742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183247"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Usage 요소(DimensionAttribute)(ASSL)
   특성의 사용 방식을 설명합니다.  

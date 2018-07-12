@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155744"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
   단계별 보고서에는 아래 예에서와 같이 동일한 열의 부모 그룹 아래에 들여쓴 정보 행 또는 자식 그룹이 표시됩니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36184642"
   
     2.  속성 창의 **맞춤**에서 **안쪽 여백**의 속성을 확장합니다.  
   
-    3.  에 대 한 **왼쪽**, 같은 새 안쪽 여백 값을 입력 `.5in`합니다. 안쪽 여백은 지정된 값만큼 셀의 텍스트를 들여씁니다. 기본 안쪽 여백은 2포인트입니다. 안쪽 여백 속성의 올바른 값은 0 또는 양수를 입력하고 그 뒤에 크기 단위 지정자를 입력한 값입니다.  
+    3.  에 대 한 **왼쪽**와 같은 새 안쪽 여백 값을 입력 `.5in`합니다. 안쪽 여백은 지정된 값만큼 셀의 텍스트를 들여씁니다. 기본 안쪽 여백은 2포인트입니다. 안쪽 여백 속성의 올바른 값은 0 또는 양수를 입력하고 그 뒤에 크기 단위 지정자를 입력한 값입니다.  
   
          사용할 수 있는 크기 단위 지정자는 다음과 같습니다.  
   

@@ -3,25 +3,23 @@ title: FILESTREAM 사용 및 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb7929585ca40c0a419d0e655c2c4cc3f298ddf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093097"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413152"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
   FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -95,7 +93,7 @@ ms.locfileid: "36093097"
 ###  <a name="database"></a> 물리적 데이터베이스 디자인  
  FILESTREAM 데이터베이스를 디자인할 때 다음 같은 지침을 고려하십시오.  
   
--   에 해당 FILESTREAM 열이 수반 되어야 합니다 `uniqueidentifier`ROWGUID 열입니다. 이러한 종류의 테이블에는 고유한 인덱스도 함께 나타나야 합니다. 일반적으로 이러한 인덱스는 클러스터형 인덱스가 아닙니다. 데이터베이스 비즈니스 논리에 클러스터형 인덱스가 필요한 경우, 인덱스에 저장된 값이 임의의 값이 아니어야 합니다. 임의의 값인 경우에는 테이블에서 행이 추가되거나 제거될 때마다 인덱스가 다시 정렬됩니다.  
+-   FILESTREAM 열을 해당 수반 되어야 합니다 `uniqueidentifier`ROWGUID 열입니다. 이러한 종류의 테이블에는 고유한 인덱스도 함께 나타나야 합니다. 일반적으로 이러한 인덱스는 클러스터형 인덱스가 아닙니다. 데이터베이스 비즈니스 논리에 클러스터형 인덱스가 필요한 경우, 인덱스에 저장된 값이 임의의 값이 아니어야 합니다. 임의의 값인 경우에는 테이블에서 행이 추가되거나 제거될 때마다 인덱스가 다시 정렬됩니다.  
   
 -   성능상의 이유로 FILESTREAM 파일 그룹 및 컨테이너는 운영 체제, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그, tempdb 또는 페이징 파일 이외의 볼륨에 있어야 합니다.  
   

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - OLE DB data source properties [SQL Server Native Client]
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 980e7ea889cc8c95828b4c704748aa6dc2552359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8ac3906946e7f732d9f7ddb92989ceaf79c5225c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182251"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410024"
 ---
 # <a name="data-source-information-properties"></a>데이터 원본 정보 속성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCEINFO에 다음과 같은 데이터 원본 정보 속성을 정의합니다.  
@@ -41,7 +39,7 @@ ms.locfileid: "36182251"
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|유형: VT_BSTR R/w: 읽기/쓰기<br /><br /> 설명: FOR XML 쿼리 결과가 올바른 형식의 문서를 수 있습니다. 이 속성을 지정한 경우, 결과 ' 선택... XML에 대 한 ' 쿼리는 올바른 형식의 XML 문서를 반환 하도록이 속성에서 제공한 루트 태그에 래핑됩니다. 쿼리가 브라우저에서 실행되는 경우에는 결과를 로드할 때 브라우저에서 파서 오류가 표시될 수 있습니다. 오류를 방지하기 위해 SQL ISAPI는 ROOT 키워드를 지원합니다. 이 키워드는 SSPROP_STREAM_XMLROOT 속성에 매핑됩니다.|  
+|SSPROP_STREAM_XMLROOT|유형: VT_BSTR R/w: 읽기/쓰기<br /><br /> 설명: FOR XML 쿼리 결과가 올바른 형식의 문서를 수 있습니다. 이 속성을 지정 하는 경우, 결과 ' 선택... XML에 대 한 ' 쿼리는 올바른 형식의 XML 문서가 반환 하도록이 속성에 제공한 루트 태그에 래핑됩니다. 쿼리가 브라우저에서 실행되는 경우에는 결과를 로드할 때 브라우저에서 파서 오류가 표시될 수 있습니다. 오류를 방지하기 위해 SQL ISAPI는 ROOT 키워드를 지원합니다. 이 키워드는 SSPROP_STREAM_XMLROOT 속성에 매핑됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  

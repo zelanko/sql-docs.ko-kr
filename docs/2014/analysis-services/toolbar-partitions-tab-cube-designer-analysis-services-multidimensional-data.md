@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa8396682b1c28f19af3a9d8b382aa8a6a4a8c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0703723f99cf859bafe3c849df536fff41c805cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152844"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(파티션 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **파티션** 탭에서 일반 동작을 수행할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36185053"
 |**이름 바꾸기**|선택한 파티션의 이름을 바꾸려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 임의의 파티션 셀을 선택한 경우에만 사용할 수 있습니다.|  
 |**Delete**|**개체 삭제** 대화 상자를 표시하고 선택한 동작을 삭제하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 파티션의 전체 행을 선택한 경우에만 사용할 수 있습니다.<br /><br /> 참고: 이 옵션은 쓰기 저장 파티션을 선택하면 사용할 수 없습니다.|  
 |**집계 디자인**|**집계 디자인 마법사** 를 표시하고 선택한 파티션에 대한 집계 디자인을 만들려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 임의의 파티션 셀을 선택한 경우에만 사용할 수 있습니다.<br /><br /> 참고: 이 옵션은 쓰기 저장 파티션을 선택하면 사용할 수 없습니다.|  
-|**사용 빈도 기반 최적화**|**사용 빈도 기반 최적화 마법사** 를 표시하고 선택한 파티션의 기존 사용 패턴을 기반으로 집계 디자인을 만들려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 임의의 파티션 셀을 선택한 경우에만 사용할 수 있습니다.<br /><br /> 또한 쓰기 저장 파티션을 선택 하는 경우이 옵션을 사용할 note 합니다.|  
+|**사용 빈도 기반 최적화**|**사용 빈도 기반 최적화 마법사** 를 표시하고 선택한 파티션의 기존 사용 패턴을 기반으로 집계 디자인을 만들려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 임의의 파티션 셀을 선택한 경우에만 사용할 수 있습니다.<br /><br /> 쓰기 저장 파티션을 선택 하는 경우이 옵션을 사용할 note도 합니다.|  
 |**저장소 설정**|**저장소 설정** 대화 상자를 표시하고 선택한 파티션에 대한 저장소 모드, 자동 관리 캐싱 및 알림 설정을 지정하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 **측정값 그룹** 창에서 한 측정값 그룹의 **파티션** 표에 있는 임의의 파티션 셀을 선택한 경우에만 사용할 수 있습니다.|  
   
   

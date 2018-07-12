@@ -5,28 +5,26 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bce02bc96e47ac824d1e95c86abaa6fcf47fef21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e545872853953c426504ed22c0972975a9d5c3db
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182568"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418632"
 ---
 # <a name="sparse-columns-support-ole-db"></a>스파스 열 지원(OLE DB)
   이 항목에서는 스파스 열에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 지원에 대해 설명합니다. 스파스 열에 대한 자세한 내용은 [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md)을 참조하십시오. 샘플을 보려면 [표시 열 및 스파스 열의 카탈로그 메타 데이터 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)합니다.  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB 문 메타데이터  
- [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터 새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET을 사용할 수 있습니다. 이 값은 `column_set` 값인 열에 대해 설정해야 합니다. DBCOLUMNFLAGS 플래그를 통해 검색할 수 있습니다는 *dwFlags* icolumnsrowset:: Getcolumnsrowset에서 반환 된 행 집합의 DBCOLUMN_FLAGS 열과 icolumnsinfo:: Getcolumnsinfo의 매개 변수입니다.  
+ [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터 새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET을 사용할 수 있습니다. 이 값은 `column_set` 값인 열에 대해 설정해야 합니다. DBCOLUMNFLAGS 플래그를 통해 검색할 수 있습니다 합니다 *dwFlags* icolumnsrowset:: Getcolumnsrowset에서 반환 된 행 집합의 DBCOLUMN_FLAGS 열과 icolumnsinfo:: Getcolumnsinfo의 매개 변수입니다.  
   
 ## <a name="ole-db-catalog-metadata"></a>OLE DB 카탈로그 메타데이터  
  DBSCHEMA_COLUMNS에는 다음과 같은 두 개의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 열이 새로 추가되었습니다.  
@@ -54,12 +52,12 @@ ms.locfileid: "36182568"
   
 |유형 또는 멤버 함수|Description|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::GetColumnsInfo|새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET이에 대해 설정 된 `column_set` 열 *dwFlags*합니다.<br /><br /> DBCOLUMNFLAGS_WRITE가 `column_set` 열에 대해 설정됩니다.|  
+|IColumnsInfo::GetColumnsInfo|새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET이에 대해 설정 되어 `column_set` 열에서 *dwFlags*합니다.<br /><br /> DBCOLUMNFLAGS_WRITE가 `column_set` 열에 대해 설정됩니다.|  
 |IColumsRowset::GetColumnsRowset|새 DBCOLUMNFLAGS 플래그 값인 DBCOLUMNFLAGS_SS_ISCOLUMNSET이 DBCOLUMN_FLAGS의 `column_set` 열에 대해 설정됩니다.<br /><br /> DBCOLUMN_COMPUTEMODE가 `column_set` 열에 대해 DBCOMPUTEMODE_DYNAMIC으로 설정됩니다.|  
-|IDBSchemaRowset::GetSchemaRowset|Dbschema_columns는 두 개의 새 열: SS_IS_COLUMN_SET과 ss_is_sparse를 반환 합니다.<br /><br /> DBSCHEMA_COLUMNS는 `column_set`의 멤버가 아닌 열만 반환합니다.<br /><br /> 추가 된 두 개의 새로운 스키마 행 집합: DBSCHEMA_COLUMNS_EXTENDED는의 스파스 여부에 관계 없이 모든 열을 반환 `column_set` 멤버 자격입니다. DBSCHEMA_SPARSE_COLUMN_SET은 `column_set`의 멤버인 열만 반환합니다. 이러한 새 행 집합은 DBSCHEMA_COLUMNS와 동일한 열과 제한 사항을 갖습니다.|  
-|IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 사용 가능한 스키마 행 집합 목록에 새 행 집합, DBSCHEMA_COLUMNS_EXTENDED 및 DBSCHEMA_SPARSE_COLUMN_SET에 대 한 Guid를 포함합니다.|  
-|ICommand::Execute|경우 **선택 \* 에서** *테이블* 은 스파스의 멤버가 아닌 모든 열의 반환을 사용 하는 `column_set`, 있는 모든 null이 아닌 열의 값이 포함 된 XML 열 멤버의 스파스 `column_set`있을 경우.|  
-|IOpenRowset::OpenRowset|Iopenrowset:: Openrowset와 icommand:: Execute, 같은 열이 있는 행 집합 반환을 **선택 \***  동일한 테이블에 대 한 쿼리 합니다.|  
+|IDBSchemaRowset::GetSchemaRowset|Dbschema_columns는 두 개의 새 열: SS_IS_COLUMN_SET과 ss_is_sparse를 반환 합니다.<br /><br /> DBSCHEMA_COLUMNS는 `column_set`의 멤버가 아닌 열만 반환합니다.<br /><br /> 두 개의 새로운 스키마 행 집합을 추가한: DBSCHEMA_COLUMNS_EXTENDED의 스파스 여부에 관계 없이 모든 열을 반환 합니다 `column_set` 멤버 자격. DBSCHEMA_SPARSE_COLUMN_SET은 `column_set`의 멤버인 열만 반환합니다. 이러한 새 행 집합은 DBSCHEMA_COLUMNS와 동일한 열과 제한 사항을 갖습니다.|  
+|IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 사용 가능한 스키마 행 집합의 목록에 새 행 집합, DBSCHEMA_COLUMNS_EXTENDED 및 DBSCHEMA_SPARSE_COLUMN_SET에 대 한 Guid를 포함합니다.|  
+|ICommand::Execute|하는 경우 **선택 \* 에서** *테이블* 은 스파스의 멤버가 아닌 모든 열 반환 사용 `column_set`과 열의 모든 null이 아닌 값을 포함 하는 XML 열 스파스 멤버인 `column_set`있을 경우.|  
+|IOpenRowset::OpenRowset|Iopenrowset:: Openrowset icommand:: Execute와 동일한 열을 사용 하 여 행 집합을 사용 하 여 반환 된 **선택 \***  동일한 테이블에 대 한 쿼리.|  
 |ITableDefinition|스파스 열이나 `column_set` 열의 경우 이 인터페이스에 변경 사항이 없습니다. 스키마를 수정해야 하는 응용 프로그램에서는 적절한 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 직접 실행해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

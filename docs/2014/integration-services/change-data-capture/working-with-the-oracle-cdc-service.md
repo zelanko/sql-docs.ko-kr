@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239403"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "36182302"
 |ref_count|이 항목은 동일한 Oracle CDC Service가 설치된 컴퓨터의 수를 계산합니다. 이 항목은 동일한 이름의 Oracle 서비스가 추가될 때마다 하나씩 증가하며 이러한 서비스가 제거될 때마다 하나씩 감소합니다. 카운터가 0이 되면 이 행이 삭제됩니다.|  
 |active_service_node|CDC Service를 현재 처리하는 Windows 노드의 이름입니다. 서비스가 올바르게 중지되면 이 열은 더 이상 활성 서비스가 없음을 나타내는 null로 설정됩니다.|  
 |active_service_heartbeat|이 항목은 현재 CDC Service를 추적하여 아직 활성인지를 확인합니다.<br /><br /> 이 항목은 활성 CDC Service에 대한 현재 데이터베이스 UTC 타임스탬프를 사용하여 정기적인 간격으로 업데이트됩니다. 기본 간격은 30초이지만 간격을 구성할 수 있습니다.<br /><br /> 보류 중인 CDC Service에서 구성된 간격이 경과한 후 하트비트가 업데이트되지 않았음을 발견하면 보류 중인 서비스는 활성 CDC Service 역할을 넘겨 받으려고 시도합니다.|  
-|옵션|이 항목은 추적 또는 튜닝과 같은 보조 옵션을 지정합니다. 이 항목은 **이름[=값][; ]** 형태로 기록됩니다. 옵션 문자열은 ODBC 연결 문자열과 동일한 의미 체계를 사용합니다. 옵션이 부울인 경우(예/아니오 값 사용) 값에는 이름만 포함될 수 있습니다.<br /><br /> 추적에는 다음과 같은 가능한 값은 같습니다.<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<클래스 이름 > [, 클래스 이름 >]<br /><br /> 기본 값은 **false**입니다.<br /><br /> <br /><br /> **service_heartbeat_interval** 은 서비스에서 active_service_heartbeat 열을 업데이트하는 시간 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **service_config_polling_interval** 은 CDC Service에서 구성 변경을 확인하는 폴링 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **sql_command_timeout** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 명령 제한 시간입니다. 기본값은 **1**입니다. 최대값은 **3600**입니다.|  
+|옵션|이 항목은 추적 또는 튜닝과 같은 보조 옵션을 지정합니다. 이 항목은 **이름[=값][; ]** 형태로 기록됩니다. 옵션 문자열은 ODBC 연결 문자열과 동일한 의미 체계를 사용합니다. 옵션이 부울인 경우(예/아니오 값 사용) 값에는 이름만 포함될 수 있습니다.<br /><br /> 추적에는 다음의 가능한 값:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<클래스 이름 > [, 클래스 이름 >]<br /><br /> 기본 값은 **false**입니다.<br /><br /> <br /><br /> **service_heartbeat_interval** 은 서비스에서 active_service_heartbeat 열을 업데이트하는 시간 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **service_config_polling_interval** 은 CDC Service에서 구성 변경을 확인하는 폴링 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **sql_command_timeout** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 명령 제한 시간입니다. 기본값은 **1**입니다. 최대값은 **3600**입니다.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 데이터베이스 저장 프로시저  

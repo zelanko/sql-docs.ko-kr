@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149524"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery의 기본 연결 방법 설정 또는 변경
-  DirectQuery 모드에서 사용할 모델을 만들 때는 먼저 디자인 환경에서 DirectQuery 사용을 지원하도록 구성해야 합니다. 이 작업을 수행 하려면 참조 [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)합니다.  
+  DirectQuery 모드에서 사용할 모델을 만들 때는 먼저 디자인 환경에서 DirectQuery 사용을 지원하도록 구성해야 합니다. 이렇게 하려면 참조 [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)합니다.  
   
  모델을 배포할 준비가 되면 사용자가 DirectQuery 모드 중 하나를 사용하여 모델에 액세스할 수 있도록 다음과 같이 몇 가지 추가 속성을 설정해야 합니다.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "36184578"
   
 ## <a name="see-also"></a>관련 항목  
  [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+ [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a78acb38762075dba4bd3a6350c68f729f4716
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 898f0d6fe8dacfb2ec2a8148297d7bd5c0eeb949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239933"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>수익 차트(Analysis Services - 데이터 마이닝)
   수익 차트는 마이닝 모델 사용과 관련된 예상 수익성을 표시합니다. 예를 들어 비즈니스 시나리오에서 회사가 어떤 고객에게 연락해야 하는지 예측하는 모델을 가정하겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "36182926"
   
  여기서 볼 수 있듯이, 수익 차트가 동일한 불연속 특성을 예측하는 경우 수익 차트를 사용하여 여러 모델을 비교할 수 있습니다.  
   
- ![수익 차트 비교 세 가지 모델](../media/dm14-profitchartupdated.gif "는 수익 차트 세 가지 모델 비교")  
+ ![수익 차트는 세 가지 모델 비교](../media/dm14-profitchartupdated.gif "수익 차트는 세 가지 모델 비교")  
   
  차트의 회색 수직선을 보십시오. 선을 클릭하고 끌면 도구 설명에 해당 지점에 포함된 타겟 모집단의 비율이 표시됩니다.  
   

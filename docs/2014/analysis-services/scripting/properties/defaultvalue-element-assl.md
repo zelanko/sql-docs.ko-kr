@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultValue element
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a319f22dc353f860ca3b0fa3a8e4b0cf60f421ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4137e73097630d62358ea874a38afda6d90eb87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277849"
 ---
 # <a name="defaultvalue-element-assl"></a>DefaultValue 요소(ASSL)
-  연결된 된 읽기 전용 기본 값이 포함 된 [ServerProperty](../objects/serverproperty-element-assl.md) 요소입니다.  
+  연결 된 읽기 전용 기본 값을 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36182442"
 ## <a name="remarks"></a>Remarks  
  이 요소는 최신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대한 `ServerProperty`의 읽기 전용 설치 기본값을 포함합니다. 기본값은 인스턴스에 의해 제공되며 일반적으로 변경할 수 없습니다.  
   
- 부모에 해당 하는 요소 `DefaultValue` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
+ 부모에 해당 하는 요소가 `DefaultValue` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ServerProperties 요소 &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [서버 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

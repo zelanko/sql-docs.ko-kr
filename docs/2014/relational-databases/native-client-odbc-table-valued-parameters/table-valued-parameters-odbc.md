@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,26 +13,26 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183425"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421792"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
   ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 응용 프로그램에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  
   
- 서버에서 테이블 반환 매개 변수에 대 한 정보를 참조 하십시오. [테이블 반환 매개 변수 &#40;데이터베이스 엔진&#41;](../tables/use-table-valued-parameters-database-engine.md)합니다.  
+ 서버에서 테이블 반환 매개 변수에 관한 정보를 참조 하세요 [테이블 반환 매개 변수 &#40;데이터베이스 엔진&#41;](../tables/use-table-valued-parameters-database-engine.md)합니다.  
   
  ODBC에서 다음 두 가지 방법으로 테이블 반환 매개 변수를 서버로 보낼 수 있습니다.  
   
--   모든 테이블 반환 매개 변수 데이터 SQLExecDirect 또는 SQLExecute 호출 시 메모리에 가능 합니다. 테이블 반환에 행이 여러 개 있으면 이 데이터가 배열로 저장됩니다.  
+-   모든 테이블 반환 매개 변수 데이터가 메모리에 SQLExecDirect 또는 SQLExecute 라고 시 수 있습니다. 테이블 반환에 행이 여러 개 있으면 이 데이터가 배열로 저장됩니다.  
   
--   SQLExecDirect 또는 SQLExecute 호출 응용 프로그램에서 테이블 반환 매개 변수에 대 한 실행 시 데이터를 지정할 수 있습니다. 이 경우 테이블 반환의 데이터 행을 일괄 처리로 제공하거나, 한 번에 하나씩 제공해 메모리 사용량을 줄일 수 있습니다.  
+-   SQLExecDirect 또는 SQLExecute 호출 될 때 응용 프로그램에서 테이블 반환 매개 변수에 대해 실행 시 데이터를 지정할 수 있습니다. 이 경우 테이블 반환의 데이터 행을 일괄 처리로 제공하거나, 한 번에 하나씩 제공해 메모리 사용량을 줄일 수 있습니다.  
   
  첫 번째 옵션을 사용하면 저장 프로시저가 비즈니스 논리를 더 많이 캡슐화할 수 있습니다. 예를 들어 주문 항목이 테이블 반환 매개 변수로 전달된 경우 단일 저장 프로시저가 전체 주문 입력 트랜잭션을 캡슐화할 수 있습니다. 이 옵션은 서버로의 왕복이 한 번만 필요하기 때문에 매우 효율적입니다. 또는 다른 프로시저를 사용하여 주문 헤더와 주문 항목을 각각 별도로 처리할 수도 있습니다. 이 경우 코드가 더 많이 필요하고 클라이언트와 서버 간의 계약이 복잡해집니다.  
   
@@ -68,7 +66,7 @@ ms.locfileid: "36183425"
  응용 프로그램에서 준비된 프로시저 호출의 메타데이터를 가져오는 방법을 설명합니다.  
   
  [추가 테이블 반환 매개 변수 메타데이터](additional-table-valued-parameter-metadata.md)  
- 테이블 반환 매개 변수에 대 한 메타 데이터를 검색할 SQLProcedureColumns, SQLTables, SQLColumns를 사용 하는 방법을 설명 합니다.  
+ SQLProcedureColumns, SQLTables, 및 SQLColumns를 사용 하 여 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하는 방법에 설명 합니다.  
   
  [테이블 반환 매개 변수 데이터 변환과 기타 오류 및 경고](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  테이블 반환 매개 변수 열 값에서 발생한 오류를 처리하는 방법을 설명합니다.  

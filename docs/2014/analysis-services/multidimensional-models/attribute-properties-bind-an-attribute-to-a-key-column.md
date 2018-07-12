@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1ed7c1a1dc463cebcbd34bda479b8416a1df15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a5e168322fd08c7d33bc500a3791194270be4e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239893"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>키 열에 특성 바인딩
   이 절차에서는 차원에서 특성의 `Name` 속성 설정을 변경하는 방법에 대해 설명합니다.  
@@ -39,6 +39,6 @@ ms.locfileid: "36183932"
 4.  새 이름을 입력합니다.  
   
     > [!NOTE]  
-    >  설정할 수도 있습니다는 `Name` 에서 선택한 특성의 속성은 **속성** 의 창 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
+    >  설정할 수도 있습니다는 `Name` 에서 선택한 특성의 속성을 **속성** 기간 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.finish.f1
 ms.assetid: 63df4ff9-0f38-42e6-9113-ec20cfe83380
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11e35e93ce333b2133c1642743855b5caa3cba7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e743946f773bea29d5487ca453f5fd49d3b34fd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153354"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>마법사 완료(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **마법사 완료** 페이지를 사용하여 선택한 항목을 확인하고 새 프로젝트 및 데이터 원본 뷰를 만들 수 있습니다.  

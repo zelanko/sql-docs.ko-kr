@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163544"
 ---
 # <a name="distribution-element-assl"></a>Distribution 요소(ASSL)
-  어떻게 스칼라 값을 설명 하는 공급자별 값이 포함 된 열에서이 배포 되는 [MiningStructure](../objects/miningstructure-element-assl.md) 요소입니다.  
+  어떻게 스칼라 값을 설명 하는 공급자별 값을 포함 열에서이 배포 되는 [MiningStructure](../objects/miningstructure-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36183709"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 사용할 수 있는 값은 `Distribution` 요소와 같은 *보통* 또는 *Uniform,* 각 마이닝 알고리즘 공급자에 따라 다릅니다. 유효한 `Distribution` 값에 대한 자세한 내용은 마이닝 알고리즘 공급자 설명서를 참조하십시오.  
+ 에 대 한 사용 가능한 값은 `Distribution` 요소와 같은 *보통* 또는 *균일* 각 마이닝 알고리즘 공급자에 따라 다릅니다. 유효한 `Distribution` 값에 대한 자세한 내용은 마이닝 알고리즘 공급자 설명서를 참조하십시오.  
   
- 부모에 해당 하는 요소 `Distribution` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
+ 부모에 해당 요소가 `Distribution` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

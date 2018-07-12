@@ -5,25 +5,24 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64c63acf34e6f3d464fcd402d738c644002ddce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164264"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 쿼리는 동의어 사전을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *동의어 사전* 은 특정 언어에 대한 동의어 집합을 정의하는데, 시스템 관리자는 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 동의어 사전 검색은 모든 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 쿼리와 FORMSOF THESAURUS 절을 지정하는 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 쿼리에 대해 수행됩니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "36183767"
      교체 집합에는 대체 집합으로 바꿀 텍스트 패턴이 포함되어 있습니다. 예를 보려면 이 항목의 뒷부분에 나오는 "교체 집합의 XML 구조" 섹션을 참조하십시오.  
   
   
-##  <a name="initial_thesaurus_files"></a> 동의어 사전 파일의 초기 내용  
+##  <a name="initial_thesaurus_files"></a> 동의어 사전 파일의 초기 콘텐츠  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지원되는 각 언어당 하나의 XML 동의어 사전 파일을 제공합니다. 이러한 파일은 기본적으로 비어 있습니다. 파일에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동의어 사전에 공통적인 최상위 XML 구조와 주석 처리된 예제 동의어 사전만 포함되어 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 출시되는 동의어 사전 파일에는 모두 다음 XML 코드가 포함됩니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "36183767"
 ##  <a name="location"></a> 동의어 사전 파일의 위치  
  동의어 사전 파일의 기본 위치는 다음과 같습니다.  
   
- *< SQL_Server_data_files_path >* \mssql12.<instancename>\mssql\ 합니다. MSSQLSERVER\MSSQL\FTDATA\  
+ *< SQL_Server_data_files_path >* \MSSQL12 합니다. MSSQLSERVER\MSSQL\FTDATA\  
   
  이 기본 위치에는 다음 파일이 포함되어 있습니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "36183767"
   
      동의어 사전 파일의 기본 파일 이름은 다음 형식을 사용합니다.  
   
-     'ts' + \<세 문자 언어 약어 > + '.xml'  
+     'ts' + \<3 자 언어 약어 > + '.xml'  
   
      지정된 언어에 대한 동의어 사전 파일의 이름은 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev> 값에 지정됩니다.  
   
@@ -101,17 +100,17 @@ ms.locfileid: "36183767"
   
  레지스트리 키를 변경하여 동의어 사전 파일의 위치와 이름을 바꿀 수 있습니다. 각 언어에 대해 동의어 사전 파일의 위치는 레지스트리의 다음 값에 지정됩니다.  
   
- HKLM/소프트웨어/Microsoft/Microsoft SQL Server /\<인스턴스 이름>/MSSearch/언어/\<언어 약어 > / TsaurusFile  
+ HKLM/SOFTWARE/Microsoft/Microsoft SQL Server /\<인스턴스 이름>/MSSearch/언어/\<언어 약어 > / TsaurusFile  
   
  전역 동의어 사전 파일은 LCID 0의 중립 언어에 해당합니다. 이 값은 관리자만 변경할 수 있습니다.  
   
   
-##  <a name="how_queries_use_tf"></a> 쿼리에서 사용 하 여 동의어 사전 파일 하는 방법  
+##  <a name="how_queries_use_tf"></a> 쿼리에 사용 하 여 동의어 사전 파일을 하는 방법  
  동의어 사전 쿼리는 언어별 동의어 사전과 전역 동의어 사전을 모두 사용합니다. 이 쿼리는 먼저 언어별 파일을 조회한 다음 이미 로드되지 않은 경우 처리를 위해 해당 파일을 로드합니다. 이 쿼리는 동의어 사전 파일의 확장 집합 규칙과 교체 집합 규칙으로 지정된 언어별 동의어를 포함하도록 확장됩니다. 그런 다음 전역 동의어 사전에 대해 이러한 단계가 반복됩니다. 그러나 용어가 이미 언어별 동의어 사전 파일에서 일치 항목의 일부인 경우 해당 용어는 전역 동의어 사전에서 일치 항목으로 적합하지 않습니다.  
   
   
 ##  <a name="structure"></a> 동의어 사전 파일의 구조 이해  
- 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석( `<!--` … `-->`)을 정의합니다. 동의어 사전에 정의 된 한 \<동의어 사전 > 다음과 같이 분음 부호 설정, 확장 집합과 교체 집합을 정의 하는 자식 요소의 예제가 포함 된 요소:  
+ 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석( `<!--` … `-->`)을 정의합니다. 동의어 사전에 정의 된 \<동의어 사전 > 다음과 같이 분음 부호 설정, 확장 집합과 교체 집합을 정의 하는 자식 요소의 예제가 포함 된 요소:  
   
 -   분음 부호 설정의 XML 구조  
   
@@ -127,7 +126,7 @@ ms.locfileid: "36183767"
   
 -   확장 집합의 XML 구조  
   
-     각 확장 집합 내에 포함 되어는 \<확장 > 요소입니다. 이 요소 내에서 하나 이상의 대체 단어를 지정 된 \<하위 > 요소입니다. 확장 집합에 서로의 동의어인 대체 그룹을 지정할 수 있습니다.  
+     각 확장 집합 내에 포함 되는 \<확장 > 요소입니다. 이 요소 내에서 하나 이상의 대체 단어를 지정 된 \<하위 > 요소입니다. 확장 집합에 서로의 동의어인 대체 그룹을 지정할 수 있습니다.  
   
      예를 들어 "writer", "author" 및 "journalist" 대체 단어를 동의어로 처리하도록 확장 섹션을 편집할 수 있습니다. 하나의 대체 집합에 일치하는 항목이 있는 전체 텍스트 검색 쿼리는 확장 집합에 지정된 다른 모든 대체 단어를 포함하도록 확장됩니다. 따라서 위 예에서 "author"라는 단어에 대해 FORMS OF THESAURUS 또는 FREETEXT 쿼리를 실행하면 전체 텍스트 검색에 "writer" 및 "journalist"라는 단어를 포함하는 검색 결과가 반환됩니다.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "36183767"
   
 -   교체 집합의 XML 구조  
   
-     각 교체 집합 내에 포함 되어는 \<대체 > 요소입니다. 이 요소 내에서 하나 이상의 패턴을 지정할 수 있습니다는 \<pat > 요소 및 0 개 이상의 대체 단어 \<하위 > 요소, 동의어 당 하나씩 1입니다. 대체 집합으로 바꿀 패턴을 지정할 수 있습니다. 패턴 및 대체 집합에는 단어 또는 일련의 단어를 포함할 수 있습니다. 패턴에 지정된 대체 단어가 없는 경우 사용자 쿼리에서 해당 패턴이 제거됩니다.  
+     각 교체 집합 내에 포함 되는 \<대체 > 요소입니다. 이 요소 내에서 하나 이상의 패턴을 지정할 수 있습니다는 \<pat > 요소 및 0 개 이상의 대체 단어 \<하위 > 요소에서 동의어 당 하나씩 1 개. 대체 집합으로 바꿀 패턴을 지정할 수 있습니다. 패턴 및 대체 집합에는 단어 또는 일련의 단어를 포함할 수 있습니다. 패턴에 지정된 대체 단어가 없는 경우 사용자 쿼리에서 해당 패턴이 제거됩니다.  
   
      예를 들어 'Win8' 패턴을 'Windows Server 2012' 또는 'Windows 8.0' 대체 단어로 바꾸는 쿼리를 원하는 경우 'Win8'에 대해 전체 텍스트 쿼리를 실행하면 전체 텍스트 검색에 'Server 2012' 또는 'Windows 8.0'd\을 포함하는 검색 결과만 반환됩니다. 'Win8'을 포함하는 결과는 반환되지 않습니다. 이는 'Win8' 패턴이 'Windows Server 2012' 및 'Windows 8.0' 패턴으로 '바뀌었기' 때문입니다.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "36183767"
   
   
 ##  <a name="editing"></a> 동의어 사전 파일 편집  
- 지정된 언어에 대한 동의어 사전은 해당 동의어 사전 파일(XML 파일)을 편집하여 구성할 수 있습니다. 설치 하는 동안 빈 동의어 사전 파일에 정보만 포함 하는 \<xml > 컨테이너와 주석 처리 된 샘플 \<동의어 사전 > 요소를 설치 합니다. 순서 대로 전체 텍스트 검색 쿼리, 제대로 작동 하려면 동의어를 해당 검색에 대 한 만들어야 실제 \<동의어 사전 > 동의어 집합을 정의 하는 요소입니다. 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다.  
+ 지정된 언어에 대한 동의어 사전은 해당 동의어 사전 파일(XML 파일)을 편집하여 구성할 수 있습니다. 빈만 포함 하는 동의어 사전 파일이 설치 하는 동안 합니다 \<xml > 컨테이너와 주석 처리 된 샘플 \<동의어 사전 > 요소는 설치 합니다. 순서 대로 해당 검색 올바르게 작동 하려면 동의어에 대 한 전체 텍스트 검색 쿼리가 만들어야 실제 \<동의어 사전 > 동의어 집합을 정의 하는 요소입니다. 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다.  
   
  **동의어 사전 파일에 대 한 제한**  
   
@@ -206,13 +205,13 @@ ms.locfileid: "36183767"
   
 -   문자 수가 512개보다 많은 구는 동의어 사전 파일에 사용할 수 없습니다.  
   
--   동의어 사전에는 사이 중복 된 항목이 없어야 합니다.는 \<하위 > 확장 집합의 항목 및 \<pat > 교체 집합의 요소입니다.  
+-   동의어 사전에는 사이 있는 중복 된 항목이 없어야 합니다.는 \<sub > 확장 집합의 항목 및 \<pat > 교체 집합의 요소입니다.  
   
  **동의어 사전 파일에 대 한 권장 사항**  
   
  동의어 사전 파일의 항목에는 특수 문자를 사용하지 않는 것이 좋습니다. 특수 문자와 관련하여 단어 분리기의 동작에 미묘한 부분이 있기 때문입니다. 동의어 사전 항목에 특수 문자가 포함된 경우 해당 항목과 함께 사용된 단어 분리기는 전체 텍스트 쿼리의 동작에 미묘한 영향을 미칠 수 있습니다.  
   
- 좋습니다 \<하위 > 중지 단어는 전체 텍스트 인덱스에서 생략 되므로 항목 없음 중지 단어를 포함 합니다. 쿼리를 포함 하도록 확장 됩니다는 \<하위 > 동의어 사전 파일에서 항목을 쓰고는 \<하위 > 중지 단어를 포함 하는 항목, 쿼리 크기가 불필요 하 게 커지게 됩니다.  
+ 좋습니다 \<하위 > 중지 단어는 전체 텍스트 인덱스에서 생략 되므로 항목 없음 중지 단어를 포함 합니다. 쿼리를 포함 하도록 확장 됩니다는 \<하위 > 동의어 사전 파일에서 항목 및 경우에는 \<하위 > 중지 단어를 포함 하는 항목, 쿼리 크기가 불필요 하 게 증가 합니다.  
   
 #### <a name="to-edit-a-thesaurus-file"></a>동의어 사전 파일을 편집하려면  
   

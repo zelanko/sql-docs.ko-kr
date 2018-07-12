@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277819"
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID 요소(ASSL)
-  집계 정의 식별 하는 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 요소를 집계 인스턴스를 만드는 데 사용 합니다.  
+  집계 정의 식별 합니다 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 집계 인스턴스를 만드는 데 사용 되는 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36184131"
 ## <a name="remarks"></a>Remarks  
  이 요소를 누락하거나 빈 문자열로 설정하면 `AggregationInstance`가 사용자 정의 집계를 나타냅니다.  
   
- 부모에 해당 하는 요소 `AggregationID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AggregationInstance>합니다.  
+ 부모에 해당 하는 요소가 `AggregationID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AggregationInstance>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7bc28798bbdfe79d05923252e1add422217d763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 120e86946f920a616b9df7c443441fb4ce6d5efc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156654"
 ---
 # <a name="file-system-task-editor-general-page"></a>파일 시스템 태스크 편집기(일반 페이지)
   **파일 시스템 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 수행하는 파일 시스템 작업을 구성할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36184532"
  SourceConnection 및 DestinationConnection 속성을 설정하여 원본 및 대상 연결 관리자를 지정해야 합니다. 태스크에서 원본 또는 대상으로 사용하는 파일을 가리키는 파일 연결 관리자의 이름을 입력하거나 파일 경로가 변수에 저장되어 있는 경우 변수 이름을 입력할 수 있습니다. 변수를 사용하여 파일 경로를 저장하려면 먼저 원본 연결을 위한 IsSourcePathVariable 옵션 및 대상 연결을 위한 IsDestinationPatheVariable 옵션을 **True**로 설정해야 합니다. 그런 다음 기존 시스템 또는 사용자 정의 변수를 사용하도록 선택하거나 새로운 변수를 만들 수 있습니다. **변수 추가** 대화 상자에서 변수의 범위를 구성하고 지정할 수 있습니다. 변수의 범위는 파일 시스템 태스크 또는 부모 컨테이너여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)을 참조하세요.  
   
 > [!NOTE]  
->  에 대해 선택한 변수를 재정의 하려면는 `SourceConnection` 및 `DestinationConnection` 속성, 입력에 대 한 식을 **소스** 및 **대상** 속성입니다. **파일 시스템 태스크 편집기** 의 **식**페이지에 식을 입력합니다. 예를 들어 태스크에서 대상으로 사용하는 파일 경로를 설정하기 위해 특정 조건에서 변수 A를 사용하고 다른 조건에서는 변수 B를 사용할 수 있습니다.  
+>  에 대해 선택한 변수를 재정의 하려면 합니다 `SourceConnection` 및 `DestinationConnection` 속성에 대 한 식을 입력 합니다 **원본** 및 **대상** 속성입니다. **파일 시스템 태스크 편집기** 의 **식**페이지에 식을 입력합니다. 예를 들어 태스크에서 대상으로 사용하는 파일 경로를 설정하기 위해 특정 조건에서 변수 A를 사용하고 다른 조건에서는 변수 B를 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  파일 시스템 태스크는 단일 파일 또는 디렉터리에서 작동합니다. 따라서 이 태스크는 와일드카드 문자를 사용하여 여러 파일 또는 디렉터리에서 동일한 작업을 수행하도록 지원하지 않습니다. 파일 시스템 태스크가 여러 파일이나 디렉터리에서 작업을 반복하게 하려면 파일 시스템 태스크를 Foreach 루프 컨테이너에 넣으십시오. 자세한 내용은 [File System Task](control-flow/file-system-task.md)을(를) 참조하세요.  
@@ -73,8 +73,8 @@ ms.locfileid: "36184532"
 |**디렉터리 내용 삭제**|디렉터리의 내용을 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
 |**파일 삭제**|파일을 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
 |**디렉터리 이동**|디렉터리를 이동합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
-|**파일 이동**|파일을 이동합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일을 이동할 때 넣지 마십시오 파일 이름을 대상으로 제공한 디렉터리 경로에 있습니다.|  
-|**파일 이름 바꾸기**|파일 이름을 바꿉니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일의 이름을 바꾸면 새 파일 이름에에서 포함할 대상에 대해 제공한 디렉터리 경로입니다.|  
+|**파일 이동**|파일을 이동합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일을 이동할 때 없는 파일 이름을 대상으로 제공한 디렉터리 경로에 있습니다.|  
+|**파일 이름 바꾸기**|파일 이름을 바꿉니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일의 이름을 바꾸면 새 파일 이름을 포함 대상에 대해 제공한 디렉터리 경로에 있습니다.|  
 |**특성 설정**|파일 또는 디렉터리의 특성을 설정합니다. 이 값을 선택하면 원본 및 작업에 대한 동적 옵션이 표시됩니다.|  
   
  `IsSourcePathVariable`  
