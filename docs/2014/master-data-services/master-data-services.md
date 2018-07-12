@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab4e08f960fa7ef72daad9ff5c751cdc17bbec2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce167bf5e95e67282aa37b002c32ccaa816c3be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156484"
 ---
 # <a name="master-data-services"></a>Master  Data  Services
   MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )는 마스터 데이터 관리용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. MDM(마스터 데이터 관리)은 조직에서 유지 가능한 마스터 목록을 컴파일할 목적으로 비트랜잭션 데이터 목록을 검색 및 정의하기 위해 수행하는 작업을 의미합니다. MDM 프로젝트에는 일반적으로 MDM 기술 구현과 함께 내부 비즈니스 프로세스의 평가 및 재구성 과정이 포함됩니다. 성공적인 MDM 솔루션의 결과로 분석 가능한 신뢰할 수 있는 중앙 집중식 데이터를 얻게 되므로 비즈니스 의사 결정의 효율성을 높일 수 있습니다.  
@@ -28,19 +28,19 @@ ms.locfileid: "36172211"
   
  기타 Master Data Services 기능에는 계층, 세부적인 보안, 트랜잭션, 데이터 버전 관리, 비즈니스 규칙 등이 포함됩니다.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 다음 구성 요소와 도구가 포함 되어 있습니다.  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 다음 구성 요소와 도구가 포함 됩니다.  
   
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]를 만들고 구성 하는 데 사용 하는 도구 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 웹 응용 프로그램입니다.  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]를 사용 하 여 관리 작업 (예: 모델 또는 비즈니스 규칙 만들기)를 수행할 및 사용자 액세스 데이터를 업데이트 하는 웹 응용 프로그램입니다.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 관리 작업 (예: 모델 또는 비즈니스 규칙 만들기)을 사용 하 여 데이터를 업데이트 하기 위해 액세스 하 고 웹 응용 프로그램입니다.  
   
 -   MDSModelDeploy.exe - 다른 환경에 배포할 모델 개체와 데이터 패키지를 만드는 데 사용하는 도구입니다.  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 확장 하거나 사용자 지정 솔루션을 개발 하는 개발자가 사용할 수 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]합니다.  
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 확장 하거나 사용자 지정 솔루션을 개발 하는 개발자가 사용할 수 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]입니다.  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] - 데이터를 관리하고 새 엔터티 및 특성을 만드는 데 사용할 수 있습니다.  
   
- MDS 리소스의 요약을 참조 하십시오.는 [SQL Server Master Data Services 포털](http://go.microsoft.com/fwlink/?LinkID=214272)합니다.  
+ MDS 리소스의 요약을 참조 하세요. 합니다 [SQL Server Master Data Services 포털](http://go.microsoft.com/fwlink/?LinkID=214272)합니다.  
   
 |||  
 |-|-|  

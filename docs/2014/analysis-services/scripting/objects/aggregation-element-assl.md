@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aggregation element
 ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59f33b45653f614702b1472e57fe4464cf172b73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51e28a8435b2891cf623ea851824809606d83620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157194"
 ---
 # <a name="aggregation-element-assl"></a>Aggregation 요소(ASSL)
-  에 대 한 단일 집계를 정의 [파티션](partition-element-assl.md) 요소입니다.  
+  에 대 한 단일 집계를 정의 된 [파티션](partition-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36172040"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[집계](../collections/aggregations-element-assl.md)|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [설명](../properties/description-element-assl.md), [차원](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [이름](../properties/name-element-assl.md)|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [설명을](../properties/description-element-assl.md)를 [차원](../collections/dimensions-element-assl.md)를 [ID](../properties/id-element-assl.md), [이름](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Aggregation>합니다.  

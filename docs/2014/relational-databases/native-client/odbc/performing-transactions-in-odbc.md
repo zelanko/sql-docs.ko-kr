@@ -1,13 +1,11 @@
 ---
-title: ODBC의 트랜잭션은 | Microsoft Docs
+title: ODBC의 트랜잭션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - ODBC, transactions
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b146a3f4a3331ddcfc7606825a0300b986f1a116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cc91460599df7fff2bed9c7a7a20991b8bae3b57
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082047"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425672"
 ---
 # <a name="transactions-in-odbc"></a>ODBC의 트랜잭션
   ODBC의 트랜잭션은 연결 수준에서 관리됩니다. 응용 프로그램에서는 트랜잭션이 완료되면 해당 연결에서 모든 문 핸들을 통해 완료한 모든 작업을 커밋하거나 롤백합니다. 응용 프로그램에서는 트랜잭션을 커밋하거나 롤백할 때 COMMIT 또는 ROLLBACK 문을 전송하는 대신 [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) 을 호출해야 합니다.  

@@ -5,25 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [SQL Server], triggers
 - status information [SQL Server], DDL triggers
 - DDL triggers, metadata
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
-caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ca1babc45b048802e76bc6aca6290ec4de08eeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1f7af76abbae4408a177961636a3decd94b61ea6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091691"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408123"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL 트리거에 대한 정보 가져오기
   이 섹션에 나열된 카탈로그 뷰를 사용하여 DDL 트리거에 대한 정보를 가져올 수 있습니다.  

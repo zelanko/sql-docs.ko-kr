@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150424"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱싱된 뷰를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "36171921"
 ###  <a name="Restrictions"></a> 인덱싱된 뷰에 필요한 SET 옵션  
  쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 CONCAT_NULL_YIELDS_NULL이 ON으로 설정된 후 식 **'** abc **'** + NULL의 결과로 NULL 값이 반환됩니다. 그러나 CONCAT_NULL_YIEDS_NULL을 OFF로 설정한 후 같은 식의 결과는 **'** abc **'** 가 됩니다.  
   
- 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 표의 SET 옵션에 나와 있는 값으로 설정 해야 합니다는 **RequiredValue** 열은 다음 상황이 발생할 때마다:  
+ 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 표의 SET 옵션에 나와 있는 값으로 설정 해야 합니다 **RequiredValue** 다음 조건이 발생할 때마다 열:  
   
 -   뷰와 뷰의 후속 인덱스가 생성됩니다.  
   
@@ -120,7 +119,7 @@ ms.locfileid: "36171921"
     |COUNT|ROWSET 함수(OPENDATASOURCE, OPENQUERY, OPENROWSET 및 OPENXML)|OUTER 조인(LEFT, RIGHT 또는 FULL)|  
     |파생 테이블(FROM 절에서 SELECT 문을 지정하여 정의)|자체 조인|SELECT \* 또는 SELECT *table_name*을 사용하여 열 지정*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP 또는 AVG|CTE(공통 테이블 식)|  
-    |`float`\*`text`, `ntext`, `image`, `XML`, 또는 `filestream` 열|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 OVER 절|  
+    |`float`\*를 `text`, `ntext`를 `image`합니다 `XML`, 또는 `filestream` 열|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 OVER 절|  
     |전체 텍스트 조건자(CONTAIN, FREETEXT)|Null 허용 식을 참조하는 SUM 함수|ORDER BY|  
     |CLR 사용자 정의 집계 함수|맨 위로 이동|CUBE, ROLLUP 또는 GROUPING SETS 연산자|  
     |MIN, MAX|UNION, EXCEPT 또는 INTERSECT 연산자|TABLESAMPLE|  
@@ -128,14 +127,14 @@ ms.locfileid: "36171921"
     |스파스 열 집합|인라인 또는 다중 문 테이블 반환 함수|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*인덱싱된 뷰에 포함 될 수 있습니다 `float` 열; 그러나 클러스터형된 인덱스 키에 이러한 열을 포함할 수 없습니다.  
+     \*인덱싱된 뷰 포함 될 수 있습니다 `float` 열 있지만 이러한 열은 클러스터형된 인덱스 키에 포함 될 수 없습니다.  
   
 -   GROUP BY가 있는 경우 VIEW 정의는 COUNT_BIG(*)을 포함해야 하며 HAVING은 포함할 수 없습니다. 이러한 GROUP BY 제약 조건은 인덱싱된 뷰 정의에만 적용됩니다. 쿼리는 이러한 GROUP BY 제약 조건을 충족하지 않는 경우에도 실행 계획에 인덱싱된 뷰를 사용할 수 있습니다.  
   
 -   뷰 정의에 GROUP BY 절이 들어 있으면 고유 클러스터형 인덱스의 키는 GROUP BY 절에 지정된 열만 참조할 수 있습니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 인덱싱된 뷰의 `datetime` 및 `smalldatetime` 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요. 문자열을 암시적으로 변환 작업과 관련 된 식은 `datetime` 또는 `smalldatetime` 비 결정적인 것으로 간주 됩니다. 이는 서버 세션의 LANGUAGE 및 DATEFORMAT 설정에 따라 결과가 달라지기 때문입니다. 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`listopad`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 마찬가지로 `DATEADD(mm,3,'2000-12-01')`식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DATEFORMAT 설정을 기준으로 `'2000-12-01'` 문자열을 해석합니다.  
+ 인덱싱된 뷰의 `datetime` 및 `smalldatetime` 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요. 암시적으로 변환할 문자열을 포함 하는 식 `datetime` 또는 `smalldatetime` 비 결정적인 것으로 간주 됩니다. 이는 서버 세션의 LANGUAGE 및 DATEFORMAT 설정에 따라 결과가 달라지기 때문입니다. 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`listopad`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 마찬가지로 `DATEADD(mm,3,'2000-12-01')`식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DATEFORMAT 설정을 기준으로 `'2000-12-01'` 문자열을 해석합니다.  
   
  데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업도 비결정적인 것으로 간주됩니다.  
   

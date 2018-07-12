@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211773"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(AlwaysOn 가용성 그룹 마법사)
   AlwaysOn **초기 데이터 동기화 선택** 페이지를 사용하여 새 보조 데이터베이스의 초기 데이터 동기화에 대한 기본 설정을 표시합니다. 이 페이지는 세 가지 마법사( [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]및 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)])에서 공유합니다.  
@@ -95,14 +94,14 @@ ms.locfileid: "36093603"
   
      [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   하나 이상의 로그 전달 주 데이터베이스를 가용성 그룹에 추가하는 경우 로그 전달에서 하나 이상의 해당 보조 데이터베이스를 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 마이그레이션할 수 있습니다. 자세한 내용은 참조 [필수 구성 요소 마이그레이션하기 위한 로그 전달에서 AlwaysOn 가용성 그룹으로 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)합니다.  
+-   하나 이상의 로그 전달 주 데이터베이스를 가용성 그룹에 추가하는 경우 로그 전달에서 하나 이상의 해당 보조 데이터베이스를 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 마이그레이션할 수 있습니다. 자세한 내용은 [필수 구성 요소 마이그레이션에 대 한 로그 전달에서 AlwaysOn 가용성 그룹에 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)합니다.  
   
     > [!NOTE]  
     >  가용성 그룹에 대해 모든 보조 데이터베이스를 만든 후에는 보조 복제본에서 백업을 수행할 경우 가용성 그룹의 자동화된 백업 기본 설정을 다시 구성해야 합니다.  
   
      **자세한 내용은 다음을 참조하세요.**  
   
-     [AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션하기 위한 필수 조건 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+     [AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션에 대 한 필수 구성 요소 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
      [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   

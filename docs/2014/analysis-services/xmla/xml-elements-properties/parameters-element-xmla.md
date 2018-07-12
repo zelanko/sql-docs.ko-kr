@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Parameters element
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63d50c1b57691a9b4cdb76adb9edaa202388d15e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 87836c6ca9f33c100b3ba10ba91379370e787773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158864"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 요소(XMLA)
   [Execute](parameter-element-xmla.md) 메서드에서 사용하는 [Parameter](../xml-elements-methods-execute.md) 요소의 컬렉션을 포함합니다.  

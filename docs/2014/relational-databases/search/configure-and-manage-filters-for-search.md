@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], filters
 - filters [full-text search]
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccafb0bccab01286534a0c5499fe474da1262d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b19f9141df65be952551dbb899b6cb30544e9a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278929"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>검색 필터 구성 및 관리
-  문서를 인덱싱하려면는 `varbinary`, `varbinary(max)`, `image`, 또는 `xml` 데이터 형식 열 추가 처리가 필요 합니다. 이러한 처리를 수행하려면 필터를 사용해야 합니다. 필터는 문서에서 서식이 제거된 텍스트 정보를 추출합니다. 그런 다음 필터는 테이블 열과 연결된 언어의 단어 분리기 구성 요소에 텍스트를 보냅니다.  
+  문서를 인덱싱하려면를 `varbinary`, `varbinary(max)`를 `image`, 또는 `xml` 데이터 형식 열에는 추가 처리가 필요 합니다. 이러한 처리를 수행하려면 필터를 사용해야 합니다. 필터는 문서에서 서식이 제거된 텍스트 정보를 추출합니다. 그런 다음 필터는 테이블 열과 연결된 언어의 단어 분리기 구성 요소에 텍스트를 보냅니다.  
   
  지정된 필터는 지정된 문서 유형(.doc, .pdf, .xls, .xml 등)에만 해당됩니다. 이러한 필터는 IFilter 인터페이스를 구현합니다. 이러한 문서 유형에 대한 자세한 내용을 보려면 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 카탈로그 뷰를 쿼리하세요.  
   
- 이진 문서는 단일 `varbinary(max)` 또는 `image` 열에 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 각 문서에 대해 파일 확장명을 기준으로 사용할 필터를 정확히 선택합니다. 파일 확장명이 표시 되기 때문에 파일 저장 된 경우에 `varbinary(max)` 또는 `image` 열에서 파일 확장명 (.doc,.xls,.pdf 등)는 테이블, 즉 유형 열에서에서 별도 열에 저장 해야 합니다. 이 형식 열은 모든 문자 기반 데이터 형식이 될 수 있고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 문서를 나타내는 .doc와 같은 문서 파일 확장명을 포함합니다. 에 **문서** 테이블에 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **문서** 형식의 열이 `varbinary(max)`, 및 형식 열 **FileExtension**, 형식이 `nvarchar(8)`합니다.  
+ 이진 문서는 단일 `varbinary(max)` 또는 `image` 열에 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 각 문서에 대해 파일 확장명을 기준으로 사용할 필터를 정확히 선택합니다. 파일 확장명이 표시 되지 않으므로 경우 파일에 저장 됩니다는 `varbinary(max)` 또는 `image` 열, 파일 확장명 (.doc,.xls,.pdf 등)는 별도 테이블의 열에, 즉 유형 열에 저장 되어야 합니다. 이 형식 열은 모든 문자 기반 데이터 형식이 될 수 있고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 문서를 나타내는 .doc와 같은 문서 파일 확장명을 포함합니다. 에 **문서** 테이블에 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]의 **문서** 형식의 열이 `varbinary(max)`, 및 유형 열 **FileExtension**, 형식입니다 `nvarchar(8)`.  
   
 > [!NOTE]  
 >  필터 구현에 따라 필터에서 부모 개체에 포함된 개체를 처리할 수도 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 다른 개체에 대한 링크를 따라가도록 필터를 구성하지 않습니다.  

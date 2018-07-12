@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc290b7be9c9b97d06432d677b2337cc855389a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239283"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "36091121"
   
 1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways**로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
   
-2.  WriteOption 속성을 다시 설정 **Append** ValidateExternalMetadata 속성을 설정 하 고 `False`합니다.  
+2.  WriteOption 속성을 재설정 **Append** ValidateExternalMetadata 속성을 설정 하 고 `False`입니다.  
   
  **Append** 옵션 대신에 **TruncateAppend** 옵션을 사용할 경우 이전 반복에서 추가된 행이 잘리고 새 행이 추가됩니다. **TruncateAppend** 옵션을 사용할 경우에도 데이터가 파일 형식과 일치해야 합니다.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1f94d8b56a17c5a9fbf9ea61468a75ed9419b94a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a91ef7af12ec523c9c97ffb09690134069a4d6d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240363"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>내 보고서 사용(보고서 작성기 및 SSRS)
   기본 모드로 구성된 보고서 서버에서 내 보고서 폴더는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 이와는 달리 내 보고서 폴더는 사용자 관리 작업 영역입니다. 보고서와 폴더를 추가하거나 제거할 수 있으며 사용자 개인 설정을 사용하여 링크된 보고서를 저장할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36091455"
   
  내 보고서 기능은 선택적이며 보고서 서버 관리자가 설정을 해제할 수 있습니다. 이 기능을 설정하면 홈 폴더에 내 보고서 폴더가 나타나며 보고서 관리자나 웹 브라우저를 사용하여 이 폴더에 액세스할 수 있습니다. 자세한 내용은 [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)를 참조하세요.  
   
- SharePoint 통합 모드로 구성된 보고서 서버에는 내 보고서 폴더에 해당하는 폴더가 없습니다. 자세한 내용은 참조 [찾기, 보기 및 보고서 관리 &#40;보고서 작성기 및 SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)합니다.  
+ SharePoint 통합 모드로 구성된 보고서 서버에는 내 보고서 폴더에 해당하는 폴더가 없습니다. 자세한 내용은 [찾기, 보기 및 보고서 관리 &#40;보고서 작성기 및 SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

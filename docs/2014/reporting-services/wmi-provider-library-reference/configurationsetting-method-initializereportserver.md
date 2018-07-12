@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5c3ace1e9e4cb25fde4d836bc15ad9f30eee3e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210683"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 보고서 서비스 인스턴스를 초기화합니다.  
@@ -64,7 +64,7 @@ public void InitializeReportServer(string InstallationID,
   
  *InitializeReportServer* 메서드는 암호화 키를 해독할 수 있도록 이미 보안 정보에 대한 액세스 권한이 있는 보고서 서버에 대해 호출되어야 합니다. 그런 다음 암호화된 결과 암호화 키가 보고서 서버 데이터베이스에 저장됩니다.  
   
- 하는 경우 보고서 서버 [IsInitialized](configurationsetting-property-isinitialized.md) 속성이 `true` 암호화 키를 암호화 하지 않고 메서드가 성공을 반환 InitializeReportServer 메서드를 호출 합니다.  
+ 하는 경우 보고서 서버의 [IsInitialized](configurationsetting-property-isinitialized.md) 속성이 `true` 메서드 암호화 키를 암호화 하지 않고 성공 InitializeReportServer 메서드는 호출 된 경우 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

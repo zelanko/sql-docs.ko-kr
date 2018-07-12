@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.ConnectionProperties.F1
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5eee3a4fd0e915a875bcbac1d0215e435c10e04a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29871222a68b9babfb2abd5b2d477316c1d6ac34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157244"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>연결 속성 대화 상자(SSAS - 테이블 형식)
   이 페이지를 사용하여 SQL Server Management Studio에서 테이블 형식 모델 데이터베이스에 사용되는 데이터 원본의 연결 속성을 보거나 수정할 수 있습니다.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152474"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>특성 그룹 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 **의** 탐색기 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에 탭을 더 이상 표시하지 않아도 되는 경우 특성 그룹을 삭제할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36171979"
   
 4.  **엔터티** 목록에서 엔터티를 선택합니다.  
   
-5.  더하기 기호를 클릭 확장 **리프 그룹**, **통합 그룹**, 또는 **컬렉션 그룹**삭제할 그룹 유형에 따라 합니다.  
+5.  확장 하려면 더하기 기호를 클릭 **리프 그룹**를 **통합 그룹**, 또는 **컬렉션 그룹**삭제 하려는 그룹의 형식에 따라 합니다.  
   
 6.  삭제할 특성 그룹을 클릭합니다.  
   

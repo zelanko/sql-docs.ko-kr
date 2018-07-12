@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259389"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
   이 섹션에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 쿼리 디자인에 영향을 주는 테이블 형식 모델링의 CSDL 확장에 있는 특성에 대해 설명합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36091158"
 |`DisplayFolder`|텍스트 모드|이 필드가 표시되는 폴더의 이름(전체 경로)입니다. 생략하면 필드가 모델 루트에 표시됩니다.|  
 |`ContextualNameRule`|Enum|속성 이름을 해당 이름이 사용되는 컨텍스트를 기반으로 수정할지 여부와 수정 방법을 나타내는 값입니다. 가능한 값은 `None`, `Role`, `Merge`입니다.|  
 |`Alignment`|Enum|테이블 형식 프레젠테이션에서 필드 값을 정렬하는 방법을 나타내는 값입니다. 가능한 값은 `Default`, `Center`, `Left`, `Right`입니다. 생략하면 기본값이 필드의 데이터 형식에 따라 맞춤을 결정합니다.|  
-|`FormatString`|텍스트 모드|기본적으로 필드 값의 서식을 지정하는 방법을 나타내는 .NET 형식입니다. 생략하면 다음 형식이 사용됩니다.<br /><br /> -날짜/시간 필드: 국가별 짧은 날짜 또는 "d"<br />-집계 함수 부동 소수점 필드 및 기본 정수 필드: 국가별 숫자 또는 "n"<br />-집계 함수가 없는 기본 정수: 국가별 10 진수 또는 "d"<br /><br /> 다른 모든 유형의 필드에는 형식 문자열이 적용되지 않습니다.|  
+|`FormatString`|텍스트 모드|기본적으로 필드 값의 서식을 지정하는 방법을 나타내는 .NET 형식입니다. 생략하면 다음 형식이 사용됩니다.<br /><br /> -날짜/시간 필드: 국가별 짧은 날짜 또는 "d"<br />-집계 함수 부동 소수점 필드 및 기본값을 사용 하 여 정수 필드: 국가별 숫자 또는 "n"<br />-집계 함수가 기본값은 없습니다 정수: 국가별 10 진수 또는 "d"<br /><br /> 다른 모든 유형의 필드에는 형식 문자열이 적용되지 않습니다.|  
 |`Units`|텍스트 모드|단위를 표현하기 위해 필드 값에 적용되는 기호입니다. 생략하면 단위는 알 수 없는 것으로 간주됩니다.|  
 |`Width`|정수|테이블 형식 프레젠테이션에서 필드 값을 표시하기 위해 예약해야 하는 기본 설정 너비(문자 수)입니다. 생략하면 기본 너비는 필드의 데이터 형식을 기반으로 합니다.|  
 |`SortDirection`|Enum|필드 값이 일반적으로 정렬되는 방법을 나타내는 값입니다. 가능한 값은 `Default`, `Ascending`, `Descending`입니다. 생략하면 정렬 방향을 할당하는 기본값은 필드의 데이터 형식을 기반으로 합니다.|  

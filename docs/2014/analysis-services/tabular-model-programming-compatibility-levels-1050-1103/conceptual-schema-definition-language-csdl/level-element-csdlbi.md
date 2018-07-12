@@ -1,5 +1,5 @@
 ---
-title: 수준 요소 (CSDLBI) | Microsoft Docs
+title: Level 요소 (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b63309bec7a37ef7953eb1a358ed317b366c4bee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211483"
 ---
 # <a name="level-element-csdlbi"></a>Level 요소(CSDLBI)
   Level 요소는 계층 구조에서 단일 수준을 정의하는 복합 유형입니다.  
@@ -88,6 +88,6 @@ ms.locfileid: "36093177"
 ## <a name="see-also"></a>관련 항목  
  [테이블 형식 개체 모델 이해](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [DAX의 부모-자식 계층에 대 한 함수 이해](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
- [구성에서 &#40;모든&#41; 특성 계층의 수준](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [구성 된 &#40;모든&#41; 특성 계층의 수준](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

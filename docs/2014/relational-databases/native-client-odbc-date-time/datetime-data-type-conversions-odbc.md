@@ -1,13 +1,11 @@
 ---
-title: 날짜/시간 데이터 형식 변환 (ODBC) | Microsoft Docs
+title: datetime 데이터 형식 변환 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bindings and conversions
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 922328981884624c0bfdc9650ba4ece2766912db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eb600fd98f6741084d725140bd6f9b326e4cf250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081809"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431692"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 데이터 형식 변환(ODBC)
   다음 변환은 OLE DB에서 이미 정의되었거나 OLE DB의 지속적인 확장에 포함됩니다. 각 공급자가 제공하는 변환은 공급자가 제공하는 커뮤니티에 의해 결정되며, 그 결과 공급자 간에 일치하지 않는 경우가 많습니다. 대괄호 안에 있는 값은 선택적 요소입니다.  
@@ -35,7 +33,7 @@ ms.locfileid: "36081809"
   
 -   날짜 문자열의 형식은 'yyyy-mm-dd'입니다.  
   
- 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은의 "데이터 형식:: 문자열 및 리터럴" 섹션을 참조 하십시오. [ODBC 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
+ 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은의 "데이터 형식:: 문자열 및 리터럴" 섹션을 참조 하세요 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
   
  일반적인 변환 규칙은 다음과 같습니다.  
   

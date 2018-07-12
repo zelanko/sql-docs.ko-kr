@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da0188ce5457717292019362fde12ba91ac850a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0306c668a71d918e8f41130f237ac99a00f43f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081569"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428142"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>계획 지침에 쿼리 힌트 연결
   계획 지침에 모든 올바른 쿼리 힌트 조합을 사용할 수 있습니다. 계획 지침이 쿼리와 일치하면 컴파일 및 최적화하기 전에 계획 지침의 힌트 절에 지정된 OPTION 절이 쿼리에 추가됩니다. 계획 지침에 일치하는 쿼리에 이미 OPTION 절이 있으면 계획 지침에 지정된 쿼리 힌트가 쿼리에서 이를 대체합니다. 그러나 이미 OPTION 절이 있는 쿼리에 계획 지침을 일치시키려면 해당 쿼리 텍스트를 지정할 때 sp_create_plan_guide 문이 쿼리의 OPTION 절을 포함해야 합니다. 계획 지침에 지정한 힌트로 이미 쿼리에 있는 힌트를 대체하는 대신 계획 지침에 지정한 힌트를 이미 쿼리에 있는 힌트에 추가하려면 원래 힌트와 추가 힌트를 모두 계획 지침의 OPTION 절에 지정해야 합니다.  

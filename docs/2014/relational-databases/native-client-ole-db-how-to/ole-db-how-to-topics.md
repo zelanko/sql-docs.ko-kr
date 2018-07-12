@@ -5,27 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e783c7774d2f38ef3751a6bf164951136e8f5dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2fe08c6f0a0d95a3f4ed1568614d090b5ed3e05d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088639"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411742"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
-  사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 서버에 연결 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  
+  사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 서버에 연결 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -35,7 +33,7 @@ ms.locfileid: "36088639"
   
 -   [OLE DB 데이터 원본 열거 &#40;OLE DB&#41;](enumerate-ole-db-data-sources-ole-db.md)  
   
--   [데이터 대량 복사 IRowsetFastLoad를 사용 하 여 &#40;OLE DB&#41;](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
+-   [IRowsetFastLoad를 통한 복사본 데이터를 대량으로 &#40;OLE DB&#41;](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
 -   [FAST_FORWARD 커서 가져오기](obtain-a-fast-forward-cursor.md)  
   
@@ -47,17 +45,17 @@ ms.locfileid: "36088639"
   
 -   [SQL Server 인증 사용자 암호 변경 &#40;OLE DB&#41;](change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [사용 하 여 날짜 및 시간 기능 향상 &#40;OLE DB&#41;](use-enhanced-date-and-time-features-ole-db.md)  
+-   [향상 된 날짜 및 시간 기능 사용 &#40;OLE DB&#41;](use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream 및 OLE DB](filestream/filestream-and-ole-db.md)  
   
--   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL SERVER로 BLOB 데이터를 보낼 &#40;OLE DB&#41;](send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL SERVER에 BLOB 데이터를 보낼 &#40;OLE DB&#41;](send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
 -   [큰 CLR Udt를 사용 하 여 &#40;OLE DB&#41;](use-large-clr-udts-ole-db.md)  
   
 -   [표시 열 및 스파스 열의 카탈로그 메타 데이터 &#40;OLE DB&#41;](display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [통합 Kerberos 인증 &#40;OLE DB&#41;](integrated-kerberos-authentication-ole-db.md)  
+-   [통합 Kerberos 인증을 &#40;OLE DB&#41;](integrated-kerberos-authentication-ole-db.md)  
   
 -   [테이블 반환 매개 변수를 사용 하 여 &#40;OLE DB&#41;](../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   

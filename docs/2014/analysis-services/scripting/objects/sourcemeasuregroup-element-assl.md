@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceMeasureGroup element
 ms.assetid: aaa7cc0b-162a-4c31-ab03-a90f81eeca00
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9eab12a6f29d73d242c8987f7719092e9974e164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6d6d1dfef880153223d4be13ccb89d4ce3b1cf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156834"
 ---
 # <a name="sourcemeasuregroup-element-assl"></a>SourceMeasureGroup 요소(ASSL)
   마이닝 구조 열의 데이터 원본으로 사용되는 측정값 그룹을 나타냅니다.  
@@ -62,11 +62,11 @@ ms.locfileid: "36093620"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `Binding` 유형의 Analysis Services Scripting Language (ASSL) 개체 테이블을 포함 하 여는 `Binding` 유형과의 상속 계층 구조 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
+ 에 대 한 자세한 내용은 합니다 `Binding` 형식, Analysis Services Scripting Language (ASSL) 개체 테이블을 비롯 한는 `Binding` 형식과 상속 계층 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
- 부모에 해당 하는 요소 `SourceMeasureGroup` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningStructureColumn> 및 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>합니다.  
+ 부모에 해당 하는 요소가 `SourceMeasureGroup` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.MiningStructureColumn> 및 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개체 &#40;ASSL&#41;](objects-assl.md)  

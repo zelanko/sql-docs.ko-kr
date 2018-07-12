@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - max full-text crawl range option
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a5a1903dfab71b78923a7747cf7a947d83e023e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e564a81b9466750e882d4ebe19604deb92f87e34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156824"
 ---
 # <a name="max-full-text-crawl-range-server-configuration-option"></a>max full-text crawl range 서버 구성 옵션
   **max full-text crawl range** 옵션을 사용하여 CPU 사용률을 최적화함으로써 전체 탐색 중에 탐색 성능을 개선할 수 있습니다. 이 옵션을 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 인덱스 탐색 중에 사용해야 하는 파티션의 수를 지정할 수 있습니다. 예를 들어 CPU가 여러 개 있고 사용률이 최적 상태가 아닌 경우 이 옵션의 최대값을 늘릴 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 옵션 외에도 테이블의 행 수 및 CPU 수와 같은 여러 요소를 감안하여 실제 사용되는 파티션 수를 지정합니다.  

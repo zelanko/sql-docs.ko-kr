@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277879"
 ---
 # <a name="attributepermission-element-assl"></a>AttributePermission 요소(ASSL)
-  사용 권한을 해당 멤버의 정의 [역할](role-element-assl.md) 내 개별 차원의 특성에 있는 요소는 [큐브](cube-element-assl.md) 요소입니다.  
+  사용 권한을 해당 멤버의 정의 [역할](role-element-assl.md) 요소의 개별 차원 특성에는 [큐브](cube-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36091612"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AttributePermissions](../collections/attributepermissions-element-assl.md)|  
-|자식 요소|[AllowedSet](../properties/allowedset-element-assl.md), [주석](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](member-element-assl.md), [DeniedSet](../properties/deniedset-element-assl.md), [설명 ](../properties/description-element-assl.md), [VisualTotals](../properties/visualtotals-element-assl.md)|  
+|자식 요소|[AllowedSet](../properties/allowedset-element-assl.md), [주석을](../collections/annotations-element-assl.md)를 [AttributeID](../properties/id-element-assl.md)를 [DefaultMember](member-element-assl.md)를 [DeniedSet](../properties/deniedset-element-assl.md), [설명 ](../properties/description-element-assl.md), [VisualTotals](../properties/visualtotals-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AttributePermission>합니다.  

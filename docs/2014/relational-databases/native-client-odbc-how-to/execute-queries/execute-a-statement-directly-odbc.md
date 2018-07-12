@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81426fde012be101c793b84bbc61c353b7ecd7a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5dd4c28a6d1c025352db117d1aa163d3464989eb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089050"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421532"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>직접 문 실행(ODBC)
     
@@ -32,7 +30,7 @@ ms.locfileid: "36089050"
   
 2.  [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다.  
   
-3.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)합니다.  
+3.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 하 고 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)합니다.  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 여러 번 실행하려면  
   
@@ -60,7 +58,7 @@ ms.locfileid: "36089050"
   
 3.  [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-4.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)합니다.  
+4.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 하 고 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)합니다.  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>행 단위 매개 변수 바인딩을 사용하여 문을 여러 번 실행하려면  
   
@@ -86,7 +84,7 @@ ms.locfileid: "36089050"
   
 5.  [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-6.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)합니다.  
+6.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 사용 하 여 데이터를 청크로 보냅니다 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 하 고 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)합니다.  
   
  **참고** 열 단위 및 행 단위 바인딩은 일반적으로 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=59360) 보다는 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=58400) 및 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58399)와 함께 사용됩니다.  
   

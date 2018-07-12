@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ClientSettingsGeneralFlag class
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6eba5fe9d3fb18073e2a7177f786c6bbc02e2ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 691e8f836298c678db8dfbeb7e470aa453dce25d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230643"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 클래스
-  [ClientSettingsGeneralFlag 클래스](clientsettingsgeneralflag-class.md) 인스턴스의 일반 플래그 설정을 나타냅니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
+  합니다 [ClientSettingsGeneralFlag 클래스](clientsettingsgeneralflag-class.md) 인스턴스의 일반 플래그 설정을 나타냅니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
   
- [ClientSettingsGeneralFlag 클래스](clientsettingsgeneralflag-class.md) 는 다음을 수행 하는 데 사용할 수 있습니다.  
+ 합니다 [ClientSettingsGeneralFlag 클래스](clientsettingsgeneralflag-class.md) 다음 작업에 사용할 수 있습니다.  
   
 -   플래그 이름을 봅니다.  
   

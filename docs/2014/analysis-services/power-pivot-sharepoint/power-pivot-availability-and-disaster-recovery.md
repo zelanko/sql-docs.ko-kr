@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 고가용성 및 재해 복구 (SQL Server 2014) | Microsoft Docs
+title: PowerPivot 가용성 및 재해 복구 (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159294"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot Availability and Disaster Recovery (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 가용성 및 재해 복구 계획은 주로 SharePoint 팜 디자인, 다른 구성 요소에 허용되는 작동 중단 시간 및 SharePoint 가용성에 구현하는 도구 및 최선의 방법에 따라 달라집니다. 이 항목에서는 기술을 요약하고 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 대한 가용성 및 재해 복구를 계획할 때 고려할 예제 토폴로지 다이어그램을 포함합니다.  
@@ -45,13 +45,13 @@ ms.locfileid: "36092981"
   
  ![2013에서 powerpivot 가용성](../media/ssas-powerpivot-services-2013.png "2013에서 powerpivot 가용성")  
   
--   **(1)** 웹 프런트 엔드 서버입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 추가 기능을 사용하여 각 서버에 데이터 공급자를 설치합니다. 자세한 내용은 참조 [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
+-   **(1)** 웹 프런트 엔드 서버입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 추가 기능을 사용하여 각 서버에 데이터 공급자를 설치합니다. 자세한 내용은 [를 설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
   
 -   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스는 **각** 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 **간에** 실행할 수 있습니다. 따라서 단일 응용 프로그램 서버가 오프라인이 되는 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램을 여전히 사용할 수 있습니다.  
   
 -   **(3)** Excel 계산 서비스는 응용 프로그램 서버를 각각 하나씩 실행하고 서비스 응용 프로그램을 응용 프로그램 서버 간에 실행할 수 있도록 합니다. 따라서 단일 응용 프로그램 서버가 오프라인이 되는 경우 Excel 계산 서비스를 여전히 사용할 수 있습니다.  
   
--   **(4)**  및 **(6)** 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기능 Windows 서비스를 포함 하 여 SharePoint 모드는 SharePoint 팜 외부의 서버에서 실행 **SQL Server Analysis Services (POWERPIVOT)** 합니다. 이러한 각각의 인스턴스는 Excel Services **(3)** 에 등록되어 있습니다. Excel Services는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버 요청의 부하 분산을 관리합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 아키텍처를 사용하면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 여러 서버를 가질 수 있으므로 필요한 만큼 더 많은 인스턴스를 쉽게 추가할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)를 참조하세요.  
+-   **(4)**  하 고 **(6)** 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기능 SharePoint 모드 서버 SharePoint 팜 외부에서 실행 되 고 Windows 서비스를 여기 **SQL Server Analysis Services (POWERPIVOT)** 합니다. 이러한 각각의 인스턴스는 Excel Services **(3)** 에 등록되어 있습니다. Excel Services는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버 요청의 부하 분산을 관리합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 아키텍처를 사용하면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 여러 서버를 가질 수 있으므로 필요한 만큼 더 많은 인스턴스를 쉽게 추가할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)를 참조하세요.  
   
 -   **(5)** 콘텐츠, 구성 및 응용 프로그램 데이터베이스에 사용되는 SQL Server 데이터베이스입니다. 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스가 포함됩니다. DR 계획에는 데이터베이스 계층이 포함되어야 합니다. 이 디자인에서 데이터베이스는 **(4)** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스 중 하나와 동일한 서버에서 실행됩니다. **(4)** 및 **(5)** 는 다른 서버에 있을 수도 있습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36092981"
   
 -   **(1)** 웹 프런트 엔드 서버입니다. 각 서버에서 데이터 공급자를 설치합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하세요.  
   
--   **(2)**  두 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 및 **(4)** Windows 서비스 **SQL Server Analysis Services (POWERPIVOT)** SharePoint 응용 프로그램 서버에 설치 됩니다.  
+-   **(2)**  두 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 및 **(4)** Windows Service **SQL Server Analysis Services (POWERPIVOT)** SharePoint 응용 프로그램 서버에 설치 됩니다.  
   
      [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 **각** 응용 프로그램 서버에서 실행되고 서비스 응용 프로그램을 응용 프로그램 서버 **간에** 실행할 수 있습니다. 단일 응용 프로그램 서버가 오프라인이 되는 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램을 여전히 사용할 수 있습니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36092981"
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 사용하여 코드 대기 시나리오를 계획하는 방법에 대한 자세한 내용은 [PowerPivot 재해 복구](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)를 참조하세요.  
   
 ## <a name="verification"></a>확인  
- 지침과 스크립트를 확인할 수 있습니다는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포 이전 및 재해 복구 주기 이후 참조 [검사 목록: SharePoint 용 PowerPivot 확인 하려면 PowerShell을 사용 하 여](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)합니다.  
+ 지침 및 확인할 수 있도록 하는 스크립트를 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포 이전 및 재해 복구 주기 전후로 참조 하세요 [검사 목록: SharePoint 용 PowerPivot 확인 하려면 PowerShell을 사용 하 여](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)입니다.  
   
 ##  <a name="bkmk_more_resources"></a> 추가 정보 링크  
   
@@ -111,6 +111,6 @@ ms.locfileid: "36092981"
   
 -   [SharePoint 2013에서 서비스 인스턴스 관리](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
--   [데이터베이스 SQL Server 스크립트 백업](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
+-   [데이터베이스 백업 SQL Server 스크립트](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
   
   

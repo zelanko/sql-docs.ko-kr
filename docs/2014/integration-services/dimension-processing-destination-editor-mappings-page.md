@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f8286c541da858a64097a3536b65bdf9f7c9373
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 208a63412351e0f3e9ab6b7a5b5d79c6ef51aca3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154624"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>차원 처리 대상 편집기(매핑 페이지)
   **차원 처리 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 차원 열에 매핑할 수 있습니다.  

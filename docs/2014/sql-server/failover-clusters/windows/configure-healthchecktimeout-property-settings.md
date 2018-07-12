@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260079"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
-  HealthCheckTimeout 설정은 SQL Server 리소스 DLL에서 반환 된 정보에 대 한 대기 해야 하는 밀리초 단위로 시간을 지정 하는 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 보고 하기 전에 저장 프로시저는 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI)를 응답 없음으로 합니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
+  HealthCheckTimeout 설정은 SQL Server 리소스 DLL에서 반환 된 정보에 대 한 대기 해야 하는 밀리초 단위로 시간 길이 지정 하는 합니다 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 보고 하기 전에 저장 프로시저를 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI)으로 응답 하지 않습니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Limits), [보안](#Security)  
   
@@ -46,10 +45,10 @@ ms.locfileid: "36091659"
   
 2.  클러스터 Cmdlet을 사용할 수 있도록 `FailoverClusters` 모듈을 가져옵니다.  
   
-3.  사용 하 여는 `Get-ClusterResource` 찾으려고 cmdlet는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 사용 하 여 `Set-ClusterParameter` 설정 하는 cmdlet는 **HealthCheckTimeout** 장애 조치 클러스터 인스턴스에 대 한 속성입니다.  
+3.  사용 하 여는 `Get-ClusterResource` cmdlet을 찾을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 사용 하 여 `Set-ClusterParameter` cmdlet을 설정 하는 **HealthCheckTimeout** 장애 조치 클러스터 인스턴스에 대 한 속성.  
   
 > [!TIP]  
->  새 PowerShell 창을 열 때마다 가져와야 할는 `FailoverClusters` 모듈입니다.  
+>  새 PowerShell 창을 열 때마다를 가져와야 할는 `FailoverClusters` 모듈입니다.  
   
 ### <a name="example-powershell"></a>예제(PowerShell)  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 "`SQL Server (INST1)`"의 HealthCheckTimeout 설정을 60000밀리초로 번경합니다.  

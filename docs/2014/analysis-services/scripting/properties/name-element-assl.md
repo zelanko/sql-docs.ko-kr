@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb2185d9d2a87a2abc3ebb96ad8186fe288e6190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7dde1de33d7ff2219bf2f73696c8a83236b46eb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211593"
 ---
 # <a name="name-element-assl"></a>Name 요소(ASSL)
   부모 요소의 이름을 포함합니다.  
@@ -52,17 +52,17 @@ ms.locfileid: "36093616"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(최대 100자)|  
 |기본값|상황에 따라 다름|  
-|카디널리티|1-1: 한 번만 나타나는 필수 요소|  
+|카디널리티|1-1: 한 번만 나타나는 필수 요소입니다|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Annotation](../objects/annotation-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Group](../objects/group-element-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|부모 요소|[동작](../objects/action-element-assl.md), [집계](../objects/aggregation-element-assl.md)를 [AggregationDesign](../objects/aggregationdesign-element-assl.md)를 [AlgorithmParameter](../objects/algorithmparameter-element-assl.md)를 [주석](../objects/annotation-element-assl.md), [ 어셈블리](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [큐브](../objects/cube-element-assl.md)를 [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)합니다 [데이터베이스](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md)합니다 [차원](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [그룹](../objects/group-element-assl.md)를 [계층](../objects/hierarchy-element-assl.md)를 [Kpi](../objects/kpi-element-assl.md)를 [수준](../objects/level-element-assl.md)를 [MdxScript](../objects/mdxscript-element-assl.md), [ 측정값](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md)를 [MemberProperty](../objects/attributerelationship-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md)를 [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)합니다 [파티션](../objects/partition-element-assl.md)를 [권한](../data-type/permission-data-type-assl.md), [ 큐브 뷰](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md)를 [ReportParameter](../objects/reportparameter-element-assl.md)합니다 [ 역할](../objects/role-element-assl.md)하십시오 [Server](../objects/server-element-assl.md)를 [ServerProperty](../objects/serverproperty-element-assl.md), [추적](../objects/trace-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 개체를 정의 하는 데 사용 되는 모든 요소 (인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 계층, 특성 및 등)에 `Name` 요소가 속성으로. `Name` 요소 값에는 다음과 같은 제한 사항이 있습니다.  
+ 개체를 정의 하는 데 사용 되는 모든 요소 (인스턴스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 계층, 특성 및 등)에 `Name` 요소가 속성으로. `Name` 요소 값에는 다음과 같은 제한 사항이 있습니다.  
   
 -   값은 선행 공백이나 후행 공백을 포함할 수 없습니다. `Name` 요소 값에 선행 공백이나 후행 공백이 포함될 경우 이러한 공백은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 의해 암시적으로 제거됩니다.  
   

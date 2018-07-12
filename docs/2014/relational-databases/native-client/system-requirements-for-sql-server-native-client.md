@@ -5,9 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87ec4582047abd6742756e1764d95c9f7d751061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cbabe38f62a9bd581bd9e41ab508336332bc3983
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088838"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417952"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MARS와 같은 데이터 액세스 기능을 사용하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
@@ -34,13 +32,13 @@ ms.locfileid: "36088838"
   
 -   서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 Windows Installer 3.0이 필요합니다. Windows Installer 3.0은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에는 기본적으로 설치되어 있으며, 그 외의 다른 플랫폼에는 이를 명시적으로 설치해야 합니다. 자세한 내용은 참조 [Windows Installer 3.0 재배포 가능 패키지](http://go.microsoft.com/fwlink/?LinkId=46459)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 Windows Installer 3.0이 필요합니다. Windows Installer 3.0은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에는 기본적으로 설치되어 있으며, 그 외의 다른 플랫폼에는 이를 명시적으로 설치해야 합니다. 자세한 내용은 [Windows Installer 3.0 재배포 가능 패키지](http://go.microsoft.com/fwlink/?LinkId=46459)합니다.  
   
 > [!NOTE]  
 >  이 소프트웨어를 설치하기 전에 관리자 권한으로 로그온했는지 확인하십시오.  
   
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- 지 원하는 운영 체제 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client를 [SQL Server Native Client에 대 한 지원 정책을](applications/support-policies-for-sql-server-native-client.md)합니다.  
+ 지 원하는 운영 체제의 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 참조 하세요 [SQL Server Native Client에 대 한 지원 정책을](applications/support-policies-for-sql-server-native-client.md)합니다.  
   
 ## <a name="sql-server-requirements"></a>SQL Server 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 설치되어 있어야 합니다.  
@@ -67,7 +65,7 @@ ms.locfileid: "36088838"
   
  ODBC에는 `DataTypeCompatibility` 컨트롤이 없습니다.  
   
- IDBInfo::GetKeywords는 항상 영향을 받지 않는 연결에서 서버 버전에 해당 하는 키워드 목록을 반환 `DataTypeCompatibility`합니다.  
+ IDBInfo::GetKeywords는 항상 해당 서버 버전에 연결 하 고 영향을 받지는 키워드 목록을 반환 `DataTypeCompatibility`합니다.  
   
 |데이터 형식|SQL Server Native Client <br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 응용 프로그램에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  

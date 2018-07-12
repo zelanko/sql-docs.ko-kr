@@ -1,13 +1,11 @@
 ---
-title: (ODBC)을 설정 하는 결과의 특징을 확인 | Microsoft Docs
+title: 집합 결과의 특징 확인 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ddc884930f52a4b1067a516301d9821346705383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fcf7c7fb126149de1e8e0355ac698eef1c95d36f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081812"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431582"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>결과 집합의 특징 확인(ODBC)
   메타데이터는 다른 데이터를 설명하는 데이터입니다. 예를 들어 결과 집합 메타데이터는 결과 집합에 있는 열 수, 이러한 열의 데이터 형식, 이름, 전체 자릿수, Null 허용 여부 등과 같은 결과 집합의 특징을 설명합니다.  
   
- ODBC는 카탈로그 API 함수를 통해 응용 프로그램에 메타데이터를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 해당 호출으로 여러 ODBC API 카탈로그 함수 구현 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 프로시저입니다.  
+ ODBC는 카탈로그 API 함수를 통해 응용 프로그램에 메타데이터를 제공합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 많은 ODBC API 카탈로그 함수를 해당 호출으로 구현 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 프로시저입니다.  
   
  응용 프로그램에서는 대부분의 결과 집합 작업에 대해 메타데이터를 요구합니다. 예를 들어 응용 프로그램에서는 열의 데이터 형식을 사용하여 해당 열에 바인딩할 변수의 종류를 확인하고 문자 열의 바이트 길이를 사용하여 열 데이터를 표시하는 데 필요한 공간을 확인합니다. 응용 프로그램에서 열의 메타데이터를 확인하는 방법은 응용 프로그램 종류에 따라 다릅니다.  
   
@@ -43,11 +41,11 @@ ms.locfileid: "36081812"
   
  결과 집합의 특징을 확인하기 위해 응용 프로그램에서는 다음과 같이 할 수 있습니다.  
   
--   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) 를 반환 하 여 요청 열 개수를 확인 합니다.  
+-   [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) 요청 열 개수를 반환 했는지 확인 합니다.  
   
--   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) 또는 [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) 를 결과 집합의 열에 설명 합니다.  
+-   [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) 나 [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) 를 결과 집합의 열을 설명 합니다.  
   
- 잘 디자인된 응용 프로그램은 결과 집합을 알 수 없고 결과 집합이 이러한 함수에서 반환하는 정보를 사용하여 해당 결과 집합의 열을 바인딩한다는 가정 하에 작성됩니다. 응용 프로그램에서는 문이 준비되거나 실행된 후 언제든지 이러한 함수를 호출할 수 있습니다. 그러나 최적의 성능을 위해서는 응용 프로그램 호출 해야 **SQLColAttribute**, **SQLDescribeCol**, 및 **SQLNumResultCols** 문을 실행 한 후 합니다.  
+ 잘 디자인된 응용 프로그램은 결과 집합을 알 수 없고 결과 집합이 이러한 함수에서 반환하는 정보를 사용하여 해당 결과 집합의 열을 바인딩한다는 가정 하에 작성됩니다. 응용 프로그램에서는 문이 준비되거나 실행된 후 언제든지 이러한 함수를 호출할 수 있습니다. 그러나 최적의 성능을 위해 응용 프로그램 호출 해야 **SQLColAttribute**를 **SQLDescribeCol**, 및 **SQLNumResultCols** 문이 실행 된 후입니다.  
   
  메타데이터는 동시에 여러 번 호출할 수 있습니다. ODBC 카탈로그 API 구현을 기반으로 하는 시스템 카탈로그 프로시저는 ODBC 드라이버가 정적 서버 커서를 사용하는 동안 호출할 수 있습니다. 이렇게 하면 응용 프로그램에서 ODBC 카탈로그 함수에 대한 여러 호출을 동시에 처리할 수 있습니다.  
   

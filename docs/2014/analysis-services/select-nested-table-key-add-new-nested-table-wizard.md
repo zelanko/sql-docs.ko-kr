@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.addnestedtable.selectnestedtablekey.f1
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd1b9a0f16c3440b9764d8ed8cdd74533e6ed02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c1ac4955f638c8653bfbf48452908e607b3bea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155284"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>중첩 테이블 키 선택(새 중첩 테이블 추가 마법사)
   **중첩 테이블 키 선택** 페이지를 사용하여 중첩 테이블의 키로 사용할 특성을 선택할 수 있습니다.  
