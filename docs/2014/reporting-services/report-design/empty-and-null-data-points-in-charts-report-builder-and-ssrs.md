@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a57374d5a33afe95539b00b3cb3eeb4801915064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ce41539fc2dfadf7e2499a0828ad44752948666e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157734"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
   빈 값이나 null 값이 있는 필드를 차트에 표시하면 차트가 제대로 표시되지 않을 수 있습니다. 차트에서 빈 값이 처리되는 방법은 지정된 차트 종류에 따라 다릅니다.  
   
--   차트 종류가 선형 차트 종류(가로 막대형, 세로 막대형, 분산형, 꺾은선형, 영역형, 범위형)인 경우 빈 값은 차트에 빈 공간 또는 "간격"으로 표시됩니다. 빈 요소를 표시하려는 경우에는 빈 요소 자리 표시자를 추가해야 합니다. 자세한 내용은 참조 [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)합니다.  
+-   차트 종류가 선형 차트 종류(가로 막대형, 세로 막대형, 분산형, 꺾은선형, 영역형, 범위형)인 경우 빈 값은 차트에 빈 공간 또는 "간격"으로 표시됩니다. 빈 요소를 표시하려는 경우에는 빈 요소 자리 표시자를 추가해야 합니다. 자세한 내용은 [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)합니다.  
   
 -   차트 종류가 연속적 선형 차트 종류(영역형, 가로 막대형, 세로 막대형, 꺾은선형, 분산형)인 경우 계열의 연속성을 유지하기 위해 차트에 빈 데이터 요소가 추가됩니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36172817"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="removing-empty-or-null-values"></a>빈 값 또는 Null 값 제거  
- 중요한 데이터가 가려지지 않도록 하려면 데이터 집합에서 빈 값을 제거하는 것이 좋습니다. Null을 필터링하려면 쿼리에 NOT IS NULL 절을 사용합니다. 또는 0이 아닌 값만 표시하도록 지정하는 필터링 식을 추가할 수 있습니다. 자세한 내용은 참조 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
+ 중요한 데이터가 가려지지 않도록 하려면 데이터 집합에서 빈 값을 제거하는 것이 좋습니다. Null을 필터링하려면 쿼리에 NOT IS NULL 절을 사용합니다. 또는 0이 아닌 값만 표시하도록 지정하는 필터링 식을 추가할 수 있습니다. 자세한 내용은 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
   
 ## <a name="fields-with-no-values-in-a-chart"></a>차트에서 값이 없는 필드  
  반환된 데이터 집합에서 필드에 값이 포함되어 있지 않은 경우 차트는 데이터 요소가 없는 빈 차트를 표시하지만 계열 이름(일반적으로 필드 이름)은 범례 항목으로 추가됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36172817"
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [보고서에 차트를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [보고서에 차트 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
  [차트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

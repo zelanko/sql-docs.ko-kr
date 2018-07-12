@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5489110d2b3eb1648abe1b4d02266cc8c4bfe84d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfe1e43e23904fa571aaacb34f0cf62f204945fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258949"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 자습서
   이 단원에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]자습서가 포함되어 있습니다.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagIndex property
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dd3a540bac68014f2ad0121f1803a2f7e69af87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0172b1a2caf3d39ef5a17512a2a2334ada4ed353
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160084"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 속성(ClientSettingsGeneralFlag 클래스)
   플래그의 인덱스 값을 가져옵니다.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hosting Web browsers
 - Web browsers [SQL Server Management Studio]
 - integrated Web browsers [SQL Server Management Studio]
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93ba35ed6a5079b5f2ec35afb678ccb966167b9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ee5e7b5aaa50b62ef6855e91a29c72e347367d04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183563"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio 웹 브라우저
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 버전을 호스팅합니다. 이 웹 브라우저를 사용하면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 있으면서 URL을 탐색하고 MSDN Library 도움말 항목을 볼 수 있습니다. **보기** 메뉴에서 **웹 브라우저** 를 가리킨 다음 **브라우저 표시**를 클릭하여 웹 브라우저에 액세스할 수 있습니다.  

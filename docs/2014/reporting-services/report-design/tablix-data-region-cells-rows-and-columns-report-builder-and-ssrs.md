@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163829"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
-  테이블릭스 데이터 영역의 행 및 열 데이터가 보고서에 표시되는 방법을 제어하려면 세부 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 참조 [테이블 &#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md), [행렬 &#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), 또는 [나열 &#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  
+  테이블릭스 데이터 영역의 행 및 열 데이터가 보고서에 표시되는 방법을 제어하려면 세부 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블 &#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md), [행렬 &#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), 또는 [목록 &#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  
   
  테이블릭스 데이터 영역에는 정보 행 및 정보 열 기반의 정보 데이터와 그룹 행 및 그룹 열 기반의 그룹화된 데이터가 표시됩니다. 행 그룹과 열 그룹을 테이블릭스 데이터 영역에 추가하면 데이터가 표시되는 행 및 열이 자동으로 추가됩니다. 행 및 열을 수동으로 추가 및 제거하여 테이블릭스 데이터 영역을 사용자 지정하고 보고서에 데이터가 표시되는 방법을 제어할 수 있습니다.  
   

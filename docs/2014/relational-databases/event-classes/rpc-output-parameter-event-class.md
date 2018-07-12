@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - RPC Output Parameter event class
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20e518b7a9b7bf9770e5983b5d8e4b79bc049508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 425d99b10c80d29196abd94e19c37750a78994b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211373"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 이벤트 클래스
   RPC Output Parameter 이벤트 클래스는 RPC(원격 프로시저 호출) 실행 후 RPC의 출력 매개 변수 값을 추적합니다.  

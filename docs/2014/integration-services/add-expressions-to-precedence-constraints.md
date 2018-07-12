@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161044"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>선행 제약 조건에 식 추가
   선행 제약 조건에서는 식을 사용하여 선행 실행 개체 및 제약 조건이 지정된 실행 개체 간의 제약 조건을 정의할 수 있습니다. 실행 개체는 태스크 또는 컨테이너일 수 있습니다. 식은 단독으로 사용되거나 선행 실행 개체의 실행 결과와 함께 사용될 수 있습니다. 실행 개체의 실행 결과는 성공 또는 실패입니다. 선행 제약 조건의 실행 결과를 구성할 경우 `Success`, `Failure` 또는 `Completion`으로 실행 결과를 지정할 수 있습니다. `Success`로 설정하려면 선행 실행 개체가 성공해야 하며, `Failure`는 선행 실행 개체가 실패해야 하며, `Completion`은 선행 태스크의 성공 또는 실패 여부에 관계없이 제약 조건이 지정된 실행 개체가 실행되어야 함을 나타냅니다.  자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "36172238"
   
  ![두 태스크 간 선행 제약 조건](media/mw-dts-03.gif "두 태스크 간 선행 제약 조건")  
   
- 실행 개체는 또한 여러 식이 포함된 여러 선행 제약 조건을 사용하여 연결될 수 있습니다. 예를 들어 다음 그림에서 태스크 B와 C는 실행 결과와 식을 사용하는 선행 제약 조건에 의해 태스크 A에 연결됩니다. 로 설정 된 제약 조건 값을 모두 `Success.` 하나의 선행 제약 조건에 식이 포함 `@X >== @Z`, 다른 선행 제약 조건 식을 포함 하 고 `@X < @Z`합니다. 변수 `X`와 변수 `Z`의 값에 따라 태스크 C 또는 태스크 B가 실행됩니다.  
+ 실행 개체는 또한 여러 식이 포함된 여러 선행 제약 조건을 사용하여 연결될 수 있습니다. 예를 들어 다음 그림에서 태스크 B와 C는 실행 결과와 식을 사용하는 선행 제약 조건에 의해 태스크 A에 연결됩니다. 제약 조건 값을 둘 다로 `Success.` 하나의 선행 제약 조건 식을 포함 `@X >== @Z`, 다른 선행 제약 조건 식을 포함 하 고 `@X < @Z`입니다. 변수 `X`와 변수 `Z`의 값에 따라 태스크 C 또는 태스크 B가 실행됩니다.  
   
  ![선행 제약 조건의 식](media/mw-dts-04.gif "선행 제약 조건의 식")  
   

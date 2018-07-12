@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258219"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
   스파스 열을 사용하는 테이블에서는 테이블의 모든 스파스 열을 반환하는 열 집합을 지정할 수 있습니다. 열 집합은 구조화된 출력으로 테이블의 모든 스파스 열을 결합하는 형식화되지 않은 XML 표현입니다. 열 집합은 열 집합이 테이블에 물리적으로 저장되지 않는다는 점에서 계산 열과 유사하며, 직접 업데이트할 수 있다는 점에서 계산 열과 다릅니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "36093055"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>열 집합에서 데이터 삽입 또는 수정  
  개별 열 이름을 사용하거나 열 집합의 XML 형식을 통해 열 집합의 이름을 참조하고 열 집합의 값을 지정하여 스파스 열의 데이터 조작 작업을 수행할 수 있습니다. 스파스 열은 XML 열에서 어떤 순서로도 표시될 수 있습니다.  
   
- 스파스 열 값을 삽입 하거나 XML 열 집합을 사용 하 여 업데이트를 하는 경우 기본 스파스 열에 삽입 된 값에서 암시적으로 변환 되는 `xml` 데이터 형식입니다. 숫자 열의 경우 XML 숫자 열에 있는 빈 값이 빈 문자열로 변환됩니다. 이로 인해 다음 예에서처럼 0이 숫자 열에 삽입됩니다.  
+ 스파스 열 값을 삽입 하거나 XML 열 집합을 사용 하 여 업데이트를 하는 경우 기본 스파스 열에 삽입 되는 값에서 암시적으로 변환 됩니다는 `xml` 데이터 형식입니다. 숫자 열의 경우 XML 숫자 열에 있는 빈 값이 빈 문자열로 변환됩니다. 이로 인해 다음 예에서처럼 0이 숫자 열에 삽입됩니다.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -111,7 +111,7 @@ GO
  이 예에서는 열 `i`에 값이 지정되지 않았지만 값 `0` 이 삽입되었습니다.  
   
 ## <a name="using-the-sqlvariant-data-type"></a>sql_variant 데이터 형식 사용  
- `sql_variant` 날짜 형식은와 같은 여러 다른 데이터 형식을 저장할 수 `int`, `char`, 및 `date`합니다. 열 집합은 `sql_variant` 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
+ 합니다 `sql_variant` 날짜 형식은와 같은 여러 다른 데이터 형식을 저장할 수 있습니다 `int`를 `char`, 및 `date`합니다. 열 집합은 `sql_variant` 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
   
 |데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|전체 자릿수|소수 자릿수|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

@@ -1,31 +1,29 @@
 ---
-title: 커서 옵션 (ODBC) 설정 | Microsoft Docs
+title: 커서 옵션 설정 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4694337517f51c08273a988e105ae49fa9bb15a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a37b09f88f9156f6363ed99a9fea56b2f9a5932b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090420"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419772"
 ---
 # <a name="set-cursor-options-odbc"></a>커서 옵션 설정(ODBC)
-  커서 옵션을 설정 하려면 호출 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 설정 하려면 또는 [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) 커서 동작을 제어 하는 문 옵션을 얻으려고 합니다.  
+  커서 옵션을 설정 하려면 호출 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 설정 또는 [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) 커서 동작을 제어 하는 문 옵션을 가져오려고 합니다.  
   
 |*Attribute*|지정 내용|  
 |-----------------|---------------|  
@@ -35,7 +33,7 @@ ms.locfileid: "36090420"
 |SQL_ATTR_CURSOR_SENSITIVITY|다른 연결에서 만든 커서 행에 대한 업데이트를 표시하거나 표시하지 않는 커서|  
 |SQL_ATTR_CURSOR_SCROLLABLE|앞뒤로 스크롤할 수 있는 커서|  
   
- 이러한 특성의 기본값(정방향 전용, 읽기 전용, 행 집합 크기 1)을 설정하면 서버 커서가 사용되지 않습니다. 서버 커서를 사용하려면 이러한 특성 중 하나 이상을 기본값이 아닌 값으로 설정해야 하며 실행 중인 문이 단일 SELECT 문이거나 단일 SELECT 문을 포함하는 저장 프로시저여야 합니다. SELECT 문을 서버 커서에서 지원 하지 않는 서버 커서를 사용 하는 경우 사용할 수 없습니다: COMPUTE, COMPUTE BY, FOR BROWSE 및 INTO 합니다.  
+ 이러한 특성의 기본값(정방향 전용, 읽기 전용, 행 집합 크기 1)을 설정하면 서버 커서가 사용되지 않습니다. 서버 커서를 사용하려면 이러한 특성 중 하나 이상을 기본값이 아닌 값으로 설정해야 하며 실행 중인 문이 단일 SELECT 문이거나 단일 SELECT 문을 포함하는 저장 프로시저여야 합니다. SELECT 문의 절 서버 커서에서 지원 되지 않습니다 서버 커서를 사용 하는 경우 사용할 수 없습니다: COMPUTE, COMPUTE BY, FOR BROWSE 및 INTO입니다.  
   
  SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   

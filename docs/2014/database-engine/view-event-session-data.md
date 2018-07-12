@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 503c9d39631ff2ec0e1ebafa437180dd7dc39739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6602ceccaf574827dfc49e4a90cd84c9422522b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239463"
 ---
 # <a name="view-event-session-data"></a>이벤트 세션 데이터 보기
   이 항목에서는 디스플레이 사용자 인터페이스를 사용하여 확장 이벤트 데이터를 확인하고 분석하는 방법에 대해 설명합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36093583"
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
-    -   여러 개를 볼 수 있습니다. XEL 파일을 선택 하 여 **확장 이벤트 파일 병합** 파일에서 열기 메뉴-> 합니다.  
+    -   둘 이상의 볼 수 있습니다. XEL 파일을 선택 하 여 **확장 이벤트 파일 병합** 파일에서 열기 메뉴-> 합니다.  
   
 ### <a name="watching-live-data"></a>라이브 데이터 감시  
  라이브 데이터를 캡처하면서 감시할 수 있습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "36093583"
  **세부 정보** 창에는 필드 및 동작을 비롯하여 선택된 이벤트에 대한 모든 열이 표시됩니다. **세부 정보** 창에서 행을 마우스 오른쪽 단추로 클릭하고 **테이블에 열 표시**를 선택하여 대상 데이터 테이블에 열을 추가할 수 있습니다.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>병합된 열 만들기, 수정 또는 삭제  
- 병합된 열을 사용하면 단일 열에 표시할 필드 집합을 결합할 수 있습니다. 병합된 열에는 필드 목록에 추가된 순서를 바탕으로 NULL이 아닌 첫 번째 필드의 데이터가 표시됩니다. 이것은에 나타나는 비슷합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러, 특정 열이 이벤트에 따라 다른 데이터를 표시할 수 있습니다 (이 가장 일반적인 예는 TextData 필드 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러). 예를 들어 sql_statement_completed 및 sql_batch_completed 이벤트의 문과 batch_text 필드를 각각 myStatement라는 필드로 병합할 수 있습니다. 테이블에 myStatement 열을 표시하면 연결된 이벤트에 적절한 데이터가 표시됩니다.  
+ 병합된 열을 사용하면 단일 열에 표시할 필드 집합을 결합할 수 있습니다. 병합된 열에는 필드 목록에 추가된 순서를 바탕으로 NULL이 아닌 첫 번째 필드의 데이터가 표시됩니다. 볼 수 있는 것과 비슷합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler에는 특정 열 이벤트에 따라 다른 데이터를 표시 될 수 있습니다 (이 가장 일반적인 예는 TextData 필드 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). 예를 들어 sql_statement_completed 및 sql_batch_completed 이벤트의 문과 batch_text 필드를 각각 myStatement라는 필드로 병합할 수 있습니다. 테이블에 myStatement 열을 표시하면 연결된 이벤트에 적절한 데이터가 표시됩니다.  
   
  다음과 같이 병합된 열을 만들거나, 수정하거나, 삭제할 수 있습니다.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36093583"
  그룹화된 열이 있는 경우 열을 정렬하면 그룹 내의 데이터만 정렬됩니다.  
   
 ### <a name="group-results"></a>결과 그룹화  
- 그룹화 된 결과의 기능에 해당 하는 `GROUP BY` 절 [!INCLUDE[tsql](../includes/tsql-md.md)]합니다. 대상 데이터 테이블에는 데이터가 그룹화되어 표시되므로 사용자가 데이터를 확장하고 축소할 수 있습니다.  
+ 그룹화 된 결과의 기능과 동일 합니다 `GROUP BY` 절 [!INCLUDE[tsql](../includes/tsql-md.md)]합니다. 대상 데이터 테이블에는 데이터가 그룹화되어 표시되므로 사용자가 데이터를 확장하고 축소할 수 있습니다.  
   
  데이터를 집계하려면 먼저 그룹화해야 합니다. 예를 들어 query_hash 값을 기준으로 그룹화하고, 기간을 기준으로 내림차순으로 정렬하고, 각 그룹의 평균 기간을 구한 다음 집계를 기준으로 내림차순으로 정렬할 수 있습니다.  이렇게 하면 고유 문 목록을 가장 긴 평균 기간부터 가장 짧은 평균 기간 순으로 보여 주는 목록이 생산됩니다. 최상위 그룹을 확장하면 해당 쿼리의 개별 실행이 가장 긴 것부터 가장 짧은 것 순으로 정렬되어 표시됩니다.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "36093583"
   
  추적 결과를 복사하려면 셀 또는 행을 선택하고 마우스 오른쪽 단추를 클릭한 다음 **복사** 를 선택하고 **셀**, **행**또는 **자세히**를 선택합니다. 확장 이벤트는 최대 1,000개의 행 복사를 지원합니다.  
   
- 추적 결과 내보낼 수는 있습니다. XEL 파일, 테이블, 또는. CSV 파일을 선택 하 여 **내보내기** 에서 **확장 이벤트** 메뉴 옵션에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]합니다.  
+ 추적 결과 내보낼 수는 있습니다. XEL 파일, 테이블, 또는 합니다. CSV 파일을 선택 하 여 **내보내려면** 에서 합니다 **확장 이벤트** 메뉴 옵션에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]합니다.  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>교착 상태 그래프 및 쿼리 계획 보기  
  세부 정보 창에서 **xml_deadlock_report** 에 대한 교착 상태 그래프를 보면 교착 상태 문제를 손쉽게 해결할 수 있습니다. 다음 이벤트에 대한 쿼리 계획 그래프도 볼 수 있습니다.  

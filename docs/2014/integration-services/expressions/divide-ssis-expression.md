@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
 - divide operator (/)
@@ -16,13 +16,13 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9a752a36cbe77c437dd7dbfd87bb8825237552d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3dc1c33e2d3239311c14a6e0657a85775dc4e6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182680"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.  

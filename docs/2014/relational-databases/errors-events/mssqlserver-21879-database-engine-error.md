@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 067373cb329185e42b6fee2b506570fccfcd4f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cf6402984022284ca75505a924a3a0f270fc5e6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089585"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413822"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
     
@@ -58,8 +57,8 @@ ms.locfileid: "36089585"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증을 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 **Kerberos 인증 및 SQL Server**를 참조하세요.  
   
--   사용 하 여 `sp_changedistpublisher` MSdistpublishers에서 원래 게시자와 연결 된 보안 모드를 변경 하려면으로 로그인 및 연결에 사용할 암호를 지정 합니다.  
+-   사용 하 여 `sp_changedistpublisher` msdistpublishers에서 원래 게시자와 연결 된 보안 모드를 변경 하려면 뿐만 아니라 로그인 및 연결에 사용할 암호를 지정 합니다.  
   
--   명령줄 매개 변수를 지정 *BypassPublisherValidation* 유효성 검사를 무시 하도록 병합 에이전트 명령줄에서 때 `sp_get_redirected_publisher` 배포자에서 호출 됩니다.  
+-   명령줄 매개 변수 지정 *BypassPublisherValidation* 유효성 검사를 무시 하도록 병합 에이전트 명령줄에서 때 `sp_get_redirected_publisher` 배포자에서 호출 됩니다.  
   
   

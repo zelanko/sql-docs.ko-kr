@@ -5,33 +5,32 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158024"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열 데이터 형식 중 하나일 수: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, 또는 `varbinary(max)` 및 FILESTREAM 합니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열 데이터 형식 중 하나일 수 있습니다: `char`, `varchar`, `nchar`, `nvarchar`를 `text`를 `ntext`, `image`를 `xml`, 또는 `varbinary(max)` 및 FILESTREAM 합니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
   
  전체 텍스트 쿼리는 영어와 일본어 같은 특정 언어의 규칙을 기준으로 단어와 구에 적용되어 전체 텍스트 인덱스의 텍스트 데이터에 대해 언어 검색을 수행합니다. 전체 텍스트 쿼리에는 간단한 단어와 구 또는 여러 형식의 단어나 구가 포함될 수 있습니다. 전체 텍스트 쿼리는 일치 항목( *적중*이라고도 함)이 하나 이상 있는 문서를 모두 반환합니다. 대상 문서가 전체 텍스트 쿼리에 지정된 모든 용어를 포함하며 일치하는 용어 사이의 거리와 같이 다른 모든 검색 조건과 일치할 때 일치 항목이 발생합니다.  
   
 > [!NOTE]  
->  전체 텍스트 검색은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 선택적 구성 요소입니다. 자세한 내용은 참조 [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)합니다.  
+>  전체 텍스트 검색은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 선택적 구성 요소입니다. 자세한 내용은 [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)합니다.  
   
-##  <a name="benefits"></a> 전체 텍스트 검색을 사용한 어떻게 해야 합니까?  
+##  <a name="benefits"></a> 전체 텍스트 검색을 사용 하 여 어떻게 해야 합니까?  
  전체 텍스트 검색은 웹 사이트에서 항목을 검색하는 e-비즈니스, 법률 데이터 리포지토리에서 판례 기록을 검색하는 법률 회사 또는 저장된 이력서 중에서 작업 설명과 일치하는 이력서를 검색하는 인사 부서와 같은 다양한 비즈니스 시나리오에 적용할 수 있습니다. 전체 텍스트 검색의 기본적인 관리 및 개발 태스크는 비즈니스 시나리오에 관계없이 동일합니다. 그러나 특정 비즈니스 시나리오에서는 비즈니스 목표를 충족시키기 위해 전체 텍스트 인덱스 및 쿼리를 조정할 수 있습니다. 예를 들어 e-비즈니스의 경우 결과 순위 지정, 회수 정확성(전체 텍스트 쿼리에서 실제로 반환하는 기존 일치 항목 수) 또는 여러 언어 지원보다 성능 최대화가 더 중요할 수 있고 법률 회사의 경우 일치하는 모든 항목 반환(정보의*전체 회수* )이 가장 중요한 고려 사항일 수 있습니다.  
   
  [항목 내용](#top)  
@@ -78,12 +77,12 @@ ms.locfileid: "36093283"
   
  [항목 내용](#top)  
   
-###  <a name="like"></a> LIKE와 전체 텍스트 검색 비교  
+###  <a name="like"></a> 비교 LIKE와 전체 텍스트 검색  
  전체 텍스트 검색과 달리 [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자는 문자 패턴에 대해서만 적용됩니다. 또한 LIKE 조건자는 서식 있는 이진 데이터를 쿼리하는 데 사용할 수도 없습니다. 특히 구조화되지 않은 많은 텍스트 데이터에 대한 LIKE 쿼리는 동일한 데이터에 대한 전체 텍스트 쿼리보다 훨씬 느립니다. 수백만 개의 텍스트 데이터 행에 대해 LIKE 쿼리를 실행하면 결과가 반환되기까지 몇 분이 걸릴 수 있지만 같은 데이터에 대해 전체 텍스트 쿼리를 실행하면 반환되는 행 수에 따라 몇 초 내에 완료됩니다.  
   
  [항목 내용](#top)  
   
-##  <a name="architecture"></a> 구성 요소 및 전체 텍스트 검색의 아키텍처  
+##  <a name="architecture"></a> 구성 요소 및 전체 텍스트 검색 아키텍처  
  전체 텍스트 검색 아키텍처는 다음과 같은 프로세스로 구성됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스(sqlservr.exe).  
@@ -138,7 +137,7 @@ ms.locfileid: "36093283"
 ###  <a name="indexing"></a> 전체 텍스트 인덱싱 프로세스  
  탐색이라고도 하는 전체 텍스트 채우기가 시작되면 전체 텍스트 엔진은 대용량 데이터 일괄 처리를 메모리에 밀어 넣고 필터 데몬 호스트에 알립니다. 호스트가 데이터를 필터링하고 데이터의 단어를 분리하며 변환된 데이터를 반전된 단어 목록으로 변환합니다. 그런 다음 전체 텍스트 검색은 변환된 데이터를 단어 목록에서 끌어오고 데이터를 처리하여 중지 단어를 제거하며 하나의 일괄 처리에 대한 단어 목록을 하나 이상의 반전된 인덱스를 통해 유지합니다.  
   
- 에 저장 된 데이터를 인덱싱하는 경우는 `varbinary(max)` 또는 `image` 열, 구현 하는 필터는 **IFilter** 인터페이스, 해당 데이터에 대 한 지정 된 파일 형식에 따라 추출한 텍스트 (예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). 필터 구성 요소에 필요한 일부 경우에는 `varbinary(max)`, 또는 `image` 데이터를 메모리에 밀어 넣는 대신 filterdata 폴더에 기록해 야 합니다.  
+ 에 저장 된 데이터를 인덱싱할 때를 `varbinary(max)` 또는 `image` 열에서 필터를 구현 하는 합니다 **IFilter** 인터페이스를 해당 데이터에 대해 지정 된 파일 형식에 따라 추출 텍스트 (예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). 필터 구성 요소에 필요한 일부 경우에는 `varbinary(max)`, 또는 `image` 데이터를 메모리에 밀어 넣는 대신 filterdata 폴더에 기록해 야 합니다.  
   
  수집된 텍스트 데이터는 처리 중에 단어 분리기를 통과하여 텍스트가 개별 토큰 또는 키워드로 분리됩니다. 토큰화에 사용되는 언어는 열 수준에서 지정되거나 필터 구성 요소로 `varbinary(max)`, `image` 또는 `xml` 데이터 내에서 식별할 수 있습니다.  
   

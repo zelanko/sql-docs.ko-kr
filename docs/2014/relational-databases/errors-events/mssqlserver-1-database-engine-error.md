@@ -5,25 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "-1"
 helpviewer_keywords:
 - -1 (Database Engine error)
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8e439e4e20ab193685720b477f93573b41879fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9342a460837fd6c638ea49b702cf1159b59c3aea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089321"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429532"
 ---
 # <a name="mssqlserver-1"></a>MSSQLSERVER_-1
     
@@ -61,7 +60,7 @@ ms.locfileid: "36089321"
 -   서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 시작되었는지 확인합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [데이터베이스 엔진 액세스에 대 한 Windows 방화벽을 구성 합니다.](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [클라이언트 프로토콜 구성](../../database-engine/configure-windows/configure-client-protocols.md)   
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [클라이언트 네트워크 구성](../../database-engine/configure-windows/client-network-configuration.md)   

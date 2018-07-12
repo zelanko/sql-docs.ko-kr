@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259529"
 ---
 # <a name="databasepermission-element-assl"></a>DatabasePermission 요소(ASSL)
-  기본 사용 권한을 정의 [데이터베이스](database-element-assl.md) 요소는 특정 [역할](role-element-assl.md) 요소입니다.  
+  기본 사용 권한을 정의 [데이터베이스](database-element-assl.md) 특정 요소 [역할](role-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,12 +67,12 @@ ms.locfileid: "36094055"
   
  이 요소는 DeploymentMode 값 2(테이블 형식 모델)에서 다음과 같은 조건을 충족해야 합니다.  
   
--   *관리* 특성 기본값 설정은 `False`, 사용자에 게 관리 권한이 경우를 제외 하 고 있습니다. 관리 권한을 가진 사용자의 경우 특성 값이 `True`로 설정됩니다.  
+-   *관리* 특성 기본 값 설정할지 `False`, 사용자의 관리자 권한을 가진 경우를 제외 하 고 있습니다. 관리 권한을 가진 사용자의 경우 특성 값이 `True`로 설정됩니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DatabasePermission>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Role 요소 &#40;ASSL&#41;](role-element-assl.md)   
+ [역할 요소 &#40;ASSL&#41;](role-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   
   

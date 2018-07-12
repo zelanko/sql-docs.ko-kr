@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 95e0cf59-6581-4a0a-8e77-17664debf7af
 caps.latest.revision: 4
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 07cd207b152a2edf0d8577cab77bc3006b44d3c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6565d2b5412869ef9906091d1ab2a7f3fdfd47fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211413"
 ---
 # <a name="productlabel-element"></a>ProductLabel 요소
   제품 수준을 결정합니다.  

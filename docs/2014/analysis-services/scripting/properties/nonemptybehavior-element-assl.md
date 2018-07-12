@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183300"
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 요소(ASSL)
-  부모와 연결 된 비어 있지 않은 동작을 결정 하는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소입니다.  
+  부모와 연결 된 비어 있지 않은 동작을 결정 합니다 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36172035"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `NonEmptyBehavior` 속성에 적용 됩니다. `CalculationProperty` 사용 하 여 요소는 [CalculationType](calculationtype-element-assl.md) 로 설정 *멤버*합니다.  
+ 합니다 `NonEmptyBehavior` 속성에 적용 됩니다 `CalculationProperty` 요소를 [CalculationType](calculationtype-element-assl.md) 로 설정 *멤버*합니다.  
   
- 부모에 해당 하는 요소 `NonEmptyBehavior` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
+ 부모에 해당 하는 요소가 `NonEmptyBehavior` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

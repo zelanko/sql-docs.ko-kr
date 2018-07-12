@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server replication]
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1c0a7579c8d895c398b1a7d75df56f3ffa2d1d04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eaed6b7988f9a0ea6f63fc8858c564adfb753bbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278739"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 복제에서 사용되지 않는 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 복제 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 사용되지 않는 기능을 새 응용 프로그램에서 사용하면 안 됩니다.  

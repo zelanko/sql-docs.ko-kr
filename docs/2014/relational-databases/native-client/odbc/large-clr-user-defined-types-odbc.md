@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089545"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422362"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 SQL Server Native Client의 ODBC 변경 내용에 대해 설명합니다.  
   
- 큰 CLR Udt에 대 한 ODBC 지원을 보여 주는 샘플을 보려면 [큰 Udt에 대 한 지원](../../native-client-odbc-how-to/support-for-large-udts.md)합니다.  
+ 큰 CLR Udt에 대 한 ODBC 지원을 보여 주는 샘플을 참조 하세요 [큰 Udt에 대 한 지원](../../native-client-odbc-how-to/support-for-large-udts.md)합니다.  
   
- SQL Server Native Client의 큰 CLR Udt 지원에 대 한 자세한 내용은 참조 [Large CLR User-Defined 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)합니다.  
+ SQL Server Native Client의 큰 CLR Udt 지원에 대 한 자세한 내용은 참조 하세요. [Large CLR User-Defined 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)합니다.  
   
 ## <a name="data-format"></a>데이터 형식  
  SQL Server Native Client는 SQL_SS_LENGTH_UNLIMITED를 사용하여 LOB(Large Object) 형식에 대해 8,000바이트 이상인 열의 크기를 나타냅니다. SQL Server 2008부터 크기가 8,000바이트보다 큰 CLR UDT에도 같은 값이 사용됩니다.  
@@ -72,7 +70,7 @@ ms.locfileid: "36089545"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT의 이름입니다.|UDT의 이름입니다.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME 항상 설정 되어 있어야를 통해 **SQLSetDescField**합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
+ UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME 항상 설정 해야 통해 **SQLSetDescField**합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
   
  UDT가 테이블과 다른 스키마가 있는 동일한 데이터베이스에 정의되어 있으면 SQL_CA_SS_UDT_SCHEMA_NAME을 설정해야 합니다.  
   
@@ -125,7 +123,7 @@ ms.locfileid: "36089545"
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름입니다.|UDT가 포함된 스키마의 이름입니다.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- 마지막 세 개의 열은 드라이버 관련 열입니다. 모든 ODBC 정의 열 끝나고 SQLColumns 또는 SQLProcedureColumns의 결과 집합의 모든 기존 드라이버 관련 열 시작 되기 전에 추가 됩니다.  
+ 마지막 세 개의 열은 드라이버 관련 열입니다. SQLColumns SQLProcedureColumns의 결과 집합의 모든 기존 드라이버별 열 앞 있지만 모든 ODBC 정의 열 이후 추가 됩니다.  
   
  개별 Udt 또는 일반 유형 "udt"에 대 한 SQLGetTypeInfo에서 아무 행도 반환 합니다.  
   

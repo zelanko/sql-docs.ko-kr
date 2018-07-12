@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8997c652883a70572fa83351be51b3381a6fdb7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17f062bf17436a1f177c29deef8654402ffd7d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159354"
 ---
 # <a name="filter-element-trace-assl"></a>Filter 요소(추적)(ASSL)
-  설명 하는 XML 문서 부분을 포함 된 [추적](../objects/trace-element-assl.md) 필터입니다.  
+  설명 하는 XML 문서 부분을 포함 합니다 [추적](../objects/trace-element-assl.md) 필터입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36172041"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Filter` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  
+ 부모에 해당 하는 요소가 `Filter` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)   
- [요소를 추적 &#40;ASSL&#41;](../collections/traces-element-assl.md)  
+ [요소를 추적 합니다. &#40;ASSL&#41;](../collections/traces-element-assl.md)  
   
   

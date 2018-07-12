@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.connectionstray.f1
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 572b51b4d55fc25d5c02a34a52e2643080d0ba00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd4548a65895141d5a1748453536a5872f3a0bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158734"
 ---
 # <a name="connection-managers-area"></a>연결 관리자 영역
   패키지는 연결 관리자를 사용하여 파일, 관계형 데이터베이스 및 서버와 같은 데이터 원본에 연결합니다.  

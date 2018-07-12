@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258429"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>2단원: 병합 게시에 대한 구독 만들기
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 그런 다음 구독 데이터베이스에 대한 사용 권한을 설정하고 새 구독에 대한 필터링된 데이터 스냅숏을 수동으로 생성합니다. 이 단원을 수행하려면 이전 단원인 [1단원: 병합 복제를 사용하여 데이터 게시](lesson-1-publishing-data-using-merge-replication.md)를 완료해야 합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36092384"
   
 5.  병합 에이전트 위치 페이지에서 **각 에이전트를 해당 구독자에서 실행**을 클릭한 후 **다음**을 클릭합니다.  
   
-6.  구독자 페이지에서 선택한 구독자 서버의 인스턴스 이름을 선택 **구독 데이터베이스**선택,  **\<새 데이터베이스 >** 목록에서 합니다.  
+6.  구독자 페이지에서 구독자 서버의 인스턴스 이름을 선택 **구독 데이터베이스**를 선택  **\<새 데이터베이스 >** 목록에서.  
   
 7.  **새 데이터베이스** 대화 상자에서 **데이터베이스 이름** 상자에 **SalesOrdersReplica** 를 입력하고 **확인**을 클릭한 후 **다음**을 클릭합니다.  
   

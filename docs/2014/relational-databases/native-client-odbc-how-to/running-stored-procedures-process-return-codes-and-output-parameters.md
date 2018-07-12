@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090207"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422532"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>반환 코드 및 출력 매개 변수 처리(ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드 및 출력 매개 변수는 서버의 마지막 패킷으로 전달 되므로 및 때까지 응용 프로그램을 사용할 수 없는 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA를 반환 합니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults 하 SQL_NO_DATA가 반환 될 때까지 다음 결과로 이동 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 서버의 마지막 패킷으로 전송 되 고 때까지 응용 프로그램을 사용할 수 없는 반환 코드 및 출력 매개 변수를 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA를 반환 합니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults SQL_NO_DATA가 반환 될 때까지를 다음 결과로 이동 합니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -35,7 +33,7 @@ ms.locfileid: "36090207"
   
 1.  ODBC CALL 이스케이프 시퀀스를 사용하는 SQL 문을 생성합니다. 이 문에서는 각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 매개 변수 표식을 사용해야 합니다.  
   
-2.  호출 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 각 입력에 대 한 입/출력 및 출력 매개 변수 및 프로시저에 대 한 반환 값 (있는 경우).  
+2.  호출 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 각 입력에 대 한 입/출력 및 출력 매개 변수 및 프로시저 반환 값 (있는 경우).  
   
 3.  `SQLExecDirect`를 사용하여 문을 실행합니다.  
   
@@ -194,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [저장된 프로시저 방법 도움말 항목 실행 &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [저장된 프로시저 방법 도움말 항목을 실행 &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

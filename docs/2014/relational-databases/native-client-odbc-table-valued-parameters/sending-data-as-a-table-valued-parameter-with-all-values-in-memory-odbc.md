@@ -1,28 +1,26 @@
 ---
-title: 메모리 (ODBC)의 모든 값이 있는 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs
+title: 메모리 (ODBC)의 모든 값을 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d60ed42fd1c568c9efe9fc693ce408929525608
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089927"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422242"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
   이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40;ODBC&#41;](table-valued-parameters-odbc.md)합니다.  
@@ -91,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 다음 열 값의 하지만 ParameterNumber에 대 한 열 서 수, 저장된 프로시저의 매개 변수 했는데이 사람이 될 SQLBindParameter 같은 방식으로 사용 하 여 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
+3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 그런 다음 있었던 상태로 대 한 열 서 수 하지만 저장된 프로시저의 매개 변수 처럼 동일한 방식으로 SQLBindParameter를 사용 하 여 열 값의 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

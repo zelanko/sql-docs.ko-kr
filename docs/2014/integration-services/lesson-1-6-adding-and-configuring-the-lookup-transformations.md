@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 caps.latest.revision: 38
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a670980605130532d5a93c17dd6827343dd68d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 405f70f2063ea9930c31b1c8a8cf60085c31889f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240964"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>6단계: 조회 변환 추가 및 구성
   원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 집합의 열로 조인하여 조회를 수행합니다. 참조 데이터 집합은 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 집합의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "36093355"
   
 9. Lookup Currency Key 변환을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-10. 속성 창에서 확인 하는 `LocaleID` 속성이 **영어 (미국)** 및 **DefaultCodePage** 속성이로 설정 되어 **1252**합니다.  
+10. 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)** 및 **DefaultCodePage** 속성이로 설정 되어 **1252**합니다.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Lookup DateKey 변환을 추가하고 구성하려면  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36093355"
   
 11. Lookup Date Key 변환을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-12. 속성 창에서 확인 하는 `LocaleID` 속성이 **영어 (미국)** 및 **DefaultCodePage** 속성이로 설정 되어 **1252**합니다.  
+12. 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)** 및 **DefaultCodePage** 속성이로 설정 되어 **1252**합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [7단계: OLE DB 대상 추가 및 구성](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

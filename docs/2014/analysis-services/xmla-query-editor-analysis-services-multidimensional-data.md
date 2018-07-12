@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Editor [XMLA]
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b11ee4322f25377f3307c0767e839b6e69e09bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 221ea55990b98a9723928f52cd5432f13760cc91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211433"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA 쿼리 편집기(Analysis Services - 다차원 데이터)
   XMLA 쿼리 편집기를 사용하여 XMLA 언어로 작성된 문과 스크립트를 디자인하고 실행할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36093837"
   
 |용어|정의|  
 |----------|----------------|  
-|**쿼리 편집기 창**|XMLA 쿼리 편집기에서 실행할 XMLA 문과 스크립트를 입력합니다.<br /><br /> 쿼리 편집기의 상황에 맞는 메뉴에서는 다음 옵션을 제공합니다.<br /><br /> **잘라내기**: 현재 선택 영역을 클립보드에 복사 하 고 쿼리 편집기 창에서 선택한 항목을 제거 합니다.<br />**복사**: 현재 선택 영역을 클립보드에 복사합니다.<br />**붙여넣기**: 현재 선택 영역을 클립보드의 내용을 붙여 넣습니다.<br />**연결**: **인스턴스에 대한 연결을 설정할 수 있는** 서버에 연결 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 대화 상자를 엽니다.<br />**연결 끊기**: 현재 쿼리 편집기의 연결을 끊습니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br />**모든 쿼리 연결 끊기**: 모든 열린 쿼리 편집기의 연결을 끊습니다.<br />**연결 변경**: 열립니다는 **서버에 연결** 대화 상자를 다른 연결을 설정 하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br />**개체 탐색기에서 서버 열기**: 열립니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 현재 쿼리 편집기가 연결 된 인스턴스 **개체 탐색기**합니다.<br />**실행**: 선택한 코드를 실행 하거나 없는 코드를 선택 하는 경우 현재 쿼리 편집기에 있는 코드 전체를 실행 합니다.<br />**속성 창**: 표시는 **속성** 창을 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 현재 쿼리 창에 대 한 합니다.<br />**쿼리 옵션**: 표시 된 **쿼리 옵션** 대화 상자.|  
+|**쿼리 편집기 창**|XMLA 쿼리 편집기에서 실행할 XMLA 문과 스크립트를 입력합니다.<br /><br /> 쿼리 편집기의 상황에 맞는 메뉴에서는 다음 옵션을 제공합니다.<br /><br /> **잘라내기**: 현재 선택 영역을 클립보드에 복사 하 고 쿼리 편집기 창에서 선택 영역을 제거 합니다.<br />**복사**: 현재 선택 영역을 클립보드에 복사합니다.<br />**붙여넣기**: 현재 선택 영역을 클립보드의 내용을 붙여 넣습니다.<br />**연결**: **인스턴스에 대한 연결을 설정할 수 있는** 서버에 연결 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 대화 상자를 엽니다.<br />**연결 끊기**: 현재 쿼리 편집기의 연결을 끊습니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br />**모든 쿼리 연결 끊기**: 모든 열려 있는 쿼리 편집기의 연결을 끊습니다.<br />**연결 변경**: 엽니다는 **서버에 연결** 대화 상자에서 다른 연결을 설정 하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br />**개체 탐색기에서 서버 열기**: 엽니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 현재 쿼리 편집기가 연결 하는 인스턴스 **개체 탐색기**합니다.<br />**실행**: 선택한 코드를 실행 하거나, 없는 코드를 선택 하는 경우 현재 쿼리 편집기에서 코드 전체를 실행 합니다.<br />**속성 창**: 표시 된 **속성** 창에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 현재 쿼리 창에 대 한 합니다.<br />**쿼리 옵션**: 표시 된 **쿼리 옵션** 대화 상자.|  
 |**결과 창**|XMLA 문 또는 스크립트 결과를 텍스트로 표시합니다.|  
 |**메시지 창**|XMLA 문 또는 스크립트가 어떻게 실행되었는지에 대한 정보를 표시합니다. 예를 들어 이 창은 실행 중 발견된 모든 오류 또는 실행 후 검색된 셀 수를 표시합니다.|  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc489a8cb996d57c833a5b91b395c5885073e222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eab8cc56de346540491664a60c644ef868b02a25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165264"
 ---
 # <a name="cube-element-assl"></a>Cube 요소(ASSL)
-  일반, 가상 또는 연결 된 큐브를 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](database-element-assl.md) 요소입니다.  
+  일반, 가상 또는 연결 된 큐브를 정의 합니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36093866"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[큐브](../collections/cubes-element-assl.md)|  
-|자식 요소|[Actions](../collections/actions-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CubePermissions](../collections/cubepermissions-element-assl.md), [DefaultMeasure](measure-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MdxScripts](../collections/mdxscripts-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md), [Name](../properties/name-element-assl.md), [Perspectives](../collections/perspectives-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [ScriptCacheProcessingMode](../properties/scriptcacheprocessingmode-element-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|자식 요소|[작업](../collections/actions-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md)를 [주석](../collections/annotations-element-assl.md)를 [데이터 정렬을](../properties/collation-element-assl.md)를 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [ CubePermissions](../collections/cubepermissions-element-assl.md), [DefaultMeasure](measure-element-assl.md), [설명](../properties/description-element-assl.md), [차원](../collections/dimensions-element-assl.md)하십시오 [ErrorConfiguration](errorconfiguration-element-assl.md) 를 [EstimatedRows](../properties/estimatedrows-element-assl.md)를 [ID](../properties/id-element-assl.md)를 [Kpi](../collections/kpis-element-assl.md)를 [언어](../properties/language-element-assl.md)를 [LastProcessed](../properties/lastprocessed-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MdxScripts](../collections/mdxscripts-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md)를 [이름](../properties/name-element-assl.md), [큐브 뷰](../collections/perspectives-element-assl.md)합니다 [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md)하십시오 [ProcessingPriority](../properties/processingpriority-element-assl.md)를 [ScriptCacheProcessingMode](../properties/scriptcacheprocessingmode-element-assl.md), [상태 ](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md)하십시오 [번역](../collections/translations-element-assl.md), [표시](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Cube>합니다.  

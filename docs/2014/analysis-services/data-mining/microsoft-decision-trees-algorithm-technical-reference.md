@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183410"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지원하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
@@ -179,7 +179,7 @@ ms.locfileid: "36092580"
   
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|열 수 있는 것으로 간주 상태: `Missing` 및 `Existing`합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열 수 있는 방법을 두 가지 가능한 상태를 가진 것으로 처리 합니다. `Missing` 및 `Existing`합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
 |NOT NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ### <a name="regressors-in-decision-tree-models"></a>의사 결정 트리 모델의 회귀 변수  
@@ -187,7 +187,7 @@ ms.locfileid: "36092580"
   
  연속 숫자 데이터 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않았더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 자동으로 열을 잠재적 회귀 변수로 사용하고 데이터 집합을 의미 있는 패턴이 있는 영역으로 분할합니다.  
   
- 그러나 FORCE_REGRESSOR 매개 변수를 사용하면 알고리즘이 항상 특정 회귀 변수를 사용하도록 할 수 있습니다. 이 매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘에서만 사용할 수 있습니다. 알고리즘 형식의 회귀 수식을 찾으려고 시도할 모델링 플래그를 설정 하는 경우는 * C1 + b\*C2 + … 트리의 노드에 패턴을 맞추기 위해 합니다. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
+ 그러나 FORCE_REGRESSOR 매개 변수를 사용하면 알고리즘이 항상 특정 회귀 변수를 사용하도록 할 수 있습니다. 이 매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘에서만 사용할 수 있습니다. 모델링 플래그를 설정 하면 알고리즘 형식의 회귀 수식을 찾으려고 시도 * C1 + b\*C2 +... 트리의 노드에 패턴을 맞추기 위해. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
   
  예를 들어 **Income** 을 특성으로 사용하여 고객의 구매 행동을 예측하며 열에 REGRESSOR 모델링 플래그를 설정하는 경우 알고리즘은 먼저 표준 회귀 수식을 사용하여 **Income** 값을 맞추려고 시도합니다. 편차가 너무 클 경우 회귀 수식이 중단되고 다른 특성에 따라 트리가 분할됩니다. 분할 후 의사 결정 트리 알고리즘은 먼저 각 분기에서 Income에 대한 회귀 변수를 맞추려고 시도합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164894"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>백업 및 복원으로 데이터베이스 복사
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 사용하여 만든 사용자 데이터베이스 백업을 복원하여 새 데이터베이스를 만들 수 있습니다. 그러나 이전 **버전을 사용하여 만든**master **,** model **및** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 통해 복원할 수 없습니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 백업을 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복원할 수도 없습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36093773"
   
 1.  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 인스턴스에 있을 수 있는 원본 데이터베이스를 백업합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인 컴퓨터가 *원본 컴퓨터*입니다.  
   
-2.  데이터베이스 복사 하려는 컴퓨터에서 (의 *대상 컴퓨터*)의 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 데이터베이스를 복원 하려고 하는입니다. 필요한 경우 대상 서버 인스턴스에 원본 데이터베이스의 백업에 사용된 것과 같은 백업 장치를 만듭니다.  
+2.  데이터베이스 복사 하려는 컴퓨터의 (합니다 *대상 컴퓨터*)의 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스를 복원 하려고 하는 합니다. 필요한 경우 대상 서버 인스턴스에 원본 데이터베이스의 백업에 사용된 것과 같은 백업 장치를 만듭니다.  
   
 3.  대상 컴퓨터에서 원본 데이터베이스의 백업을 복원합니다. 데이터베이스를 복원하면 자동으로 모든 데이터베이스 파일이 생성됩니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36093773"
   
     -   기존 파일을 덮어쓸 수 없는 경우 복원 오류가 발생합니다.  
   
- 오류 및 복원 작업 전에 의도 하지 않은 결과 방지 하기 위해 사용할 수 있습니다는 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) 복원 하려는 백업에서 데이터베이스 및 로그 파일을 확인 하기 위해 기록 테이블입니다.  
+ 오류 및 복원 작업 전에 의도 하지 않은 결과 방지 하려면 사용 합니다 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) 복원 하려는 백업에서 데이터베이스 및 로그 파일을 확인 하려면 기록 테이블입니다.  
   
 ## <a name="moving-the-database-files"></a>데이터베이스 파일 이동  
  위에서 설명한 이유 때문에 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 예를 들어:  
@@ -102,13 +102,13 @@ ms.locfileid: "36093773"
   
 -   [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **파일 및 파일 그룹을 새 위치로 복원 하려면**  
+ **새 위치로 파일 및 파일 그룹을 복원 하려면**  
   
 -   [새 위치로 파일 복원&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **기존 파일에서 파일 및 파일 그룹을 복원 하려면**  
+ **기존 파일에서 파일과 파일 그룹 복원**  
   
 -   [기존 파일에서 파일 및 파일 그룹 복원&#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36093773"
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **중단된 된 복원 작업을 다시 시작 하려면**  
+ **중단된 된 복원 작업을 다시 시작**  
   
 -   [중단된 복원 작업 다시 시작&#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36093773"
   
 -   [sp_changedbowner&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **SQL Server 관리 개체 (SMO)를 사용 하 여 데이터베이스를 복사 하려면**  
+ **SQL Server Management Objects (SMO)를 사용 하 여 데이터베이스 복사**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

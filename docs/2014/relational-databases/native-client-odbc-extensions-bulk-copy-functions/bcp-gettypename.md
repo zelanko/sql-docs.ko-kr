@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afea684549765bac4c24679cc65d74bb4dfa47df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091504"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411732"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   지정한 BCP 유형 토큰의 SQL 유형 이름을 반환합니다.  
@@ -99,7 +97,7 @@ fIsMaxType
 |`SQLUNIQUEID`|모두|**uniqueidentifier**|  
 |`SQLNCHAR`|아니요|**Nchar**|  
 |`SQLNVARCHAR`|아니요|**Nvarchar**|  
-|`SQLNTEXT`|모두|**ntext**|  
+|`SQLNTEXT`|모두|**Ntext**|  
 |`SQLVARIANT`|모두|**sql_variant**|  
 |`SQLINT8`|모두|**Bigint**|  
 |`SQLCHARACTER`|예|**varchar(max)**|  
@@ -113,12 +111,12 @@ fIsMaxType
 |`SQLNCHAR`|예|**nvarchar(max)**|  
 |`SQLNVARCHAR`|예|**nvarchar(max)**|  
 |`SQLXML`|예|**Xml**|  
-|`SQLUDT`|모두|**udt**|  
+|`SQLUDT`|모두|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
- 에 있는 테이블의 "sqlncli.h의 유형" 열에 날짜/시간 형식에 대 한 토큰 매개 변수 값을 설명 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  
+ 날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.namenotfound.f1
 helpviewer_keywords:
 - Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 301b8c74d225c72a4c9869b7b410f9617458a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5311f3c6c21452fef492895d0c93e0c8f4d4d0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260049"
 ---
 # <a name="name-not-found-dialog-box"></a>찾을 수 없는 이름 대화 상자
   대화 상자에 있는 개체 이름 중 하나 이상을 찾을 수 없습니다. 계속하려면 옵션을 선택합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36093221"
  **개체 이름 입력**  
  찾을 수 없는 개체 이름이 들어 있습니다. 개체 이름을 수정하거나 새 개체 이름을 입력합니다.  
   
- **제거***\<개체 이름 >***선택 영역에서**   
+ **제거할***\<개체 이름 >***선택 영역에서**   
  **이름을 찾을 수 없음** 대화 상자를 닫고 **개체 선택** 대화 상자에서 항목을 제거하려면 선택합니다.  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157544"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 서로 다른 버전별 계산 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "36172329"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스에서 사용되는 최대 계산 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 계산 용량(AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|엔터프라이즈 버전: 코어 기반 라이선스<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
+|Enterprise Edition: 코어 기반 라이선스<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |개발자|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |Evaluation|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |Business Intelligence|소켓 4개 또는 코어 16개 미만으로 제한됨|운영 체제가 지원하는 최대 크기|  
@@ -96,7 +96,7 @@ ms.locfileid: "36172329"
 |Express with Tools|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |Express with Advanced Services|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
   
- <sup>1</sup> 서버 + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음) 포함 된 엔터프라이즈 버전은 최대 20 개의 코어로 제한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
+ <sup>1</sup> Server + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음)를 사용 하 여 Enterprise Edition은 최대 20 개의 코어로 제한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
   
  게스트 응용 프로그램에서는 프로세서 아키텍처가 보이지 않으므로 가상화된 환경에서 계산 용량 제한은 코어가 아닌 논리적 프로세서 수를 기준으로 합니다.  예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 장착된 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있지만 하이퍼 스레딩을 사용하지 않는 논리적 프로세서는 16개 밖에 없습니다. 이러한 논리적 프로세서는 호스트 서버에서 실제 프로세서의 실행 스레드로 매핑된 해당 논리적 프로세서에서의 가상 컴퓨터 계산 부하를 가진 서버의 가상 컴퓨터로 매핑될 수 있습니다.  
   

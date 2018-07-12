@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 스키마를 새로 고칠 | Microsoft Docs
+title: Data Source View (Analysis Services) 스키마 새로 고침 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239773"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 스키마 새로 고침(Analysis Services)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 데이터 원본 뷰(DSV)를 정의한 후 기본 데이터 원본의 스키마가 변경될 수 있습니다. 이러한 변경 내용은 배포 프로젝트에서 자동으로 감지되거나 업데이트되지 않습니다. 또한 프로젝트를 서버에 배포했을 경우 Analysis Services에서 더 이상 외부 데이터 원본에 연결할 수 없다는 처리 오류가 발생하게 됩니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36092518"
   
  새로 고침 작업을 수행하는 동안 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 기본 관계형 데이터 원본을 모두 쿼리하여 DSV에 포함된 테이블/뷰에 변경 내용이 있었는지 여부를 확인합니다. 모든 기본 데이터 원본에 연결할 수 있으며 변경 내용이 있는 경우 **데이터 원본 뷰 새로 고침** 대화 상자에 해당 내용이 표시됩니다.  
   
- ![데이터 원본 뷰 대화 상자를 새로 고침](../media/ssas-olapdsv-refresh.gif "데이터 원본 뷰 새로 고침 대화 상자")  
+ ![데이터 원본 뷰 대화 상자를 새로 고칩니다](../media/ssas-olapdsv-refresh.gif "데이터 원본 뷰 새로 고침 대화 상자")  
   
  이 대화 상자에는 DSV에서 삭제 또는 추가될 테이블, 열, 제약 조건 및 관계를 나열되며 성공적으로 준비할 수 없는 명명된 쿼리 또는 계산도 나열합니다. 영향을 받는 개체는 트리 뷰로 나열되며 테이블에 열 및 관계가 중첩되고 변경 유형(삭제 또는 추가)이 각 개체에 대해 표시됩니다. 영향을 받는 개체 유형은 표준 데이터 원본 뷰 개체 아이콘으로 표시됩니다.  
   
