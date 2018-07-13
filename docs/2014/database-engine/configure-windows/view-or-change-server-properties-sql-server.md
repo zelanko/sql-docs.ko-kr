@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing server properties
 - server properties [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 61db0b7975ba948e139eb8e78ef14baab11bd9a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 15463850f20ac660c6ef23f5df6c5c6ed14c267a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182920"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36186375"
 ####  <a name="Permissions"></a> Permissions  
  자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.  
   
- 에 대 한 실행 `sp_configure` 매개 변수 없이 또는 첫 번째 매개 변수은 기본적으로 모든 사용자에 게 부여 됩니다. 실행할 `sp_configure` 구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하려면 두 매개 변수를 가진 사용자 수에 게 ALTER SETTINGS 서버 수준 사용 권한. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+ 실행할 수 있는 권한은 `sp_configure` 매개 변수 없이 또는 첫 번째 매개 변수를 사용 하 여 모든 사용자에 게 기본적으로 부여 됩니다. 실행할 `sp_configure` 구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하려면 두 매개 변수를 사용 하 여 사용자 얻어야 ALTER SETTINGS 서버 수준 권한이 있습니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 783e0909ceaab1d3a9636a60bd0ce27d7682dc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229393"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36186571"
   
  용어 추출 변환은 추출되는 각 용어에 대한 순위를 생성합니다. 순위는 TFIDF 값이나 입력에서 기본 용어가 나타나는 횟수를 의미하는 기본 빈도일 수 있습니다. 어느 경우에도 순위는 0 이상의 실수로 표현됩니다. 예를 들어 TFIDF 순위 값이 0.5이거나 빈도 값이 1.0 또는 2.0일 수 있습니다.  
   
- 용어 추출 변환의 출력에는 두 개의 열만 포함됩니다. 한 열에는 추출된 용어가 포함되고 다른 열에는 순위가 포함됩니다. 열의 기본 이름은 **용어** 및 `Score`합니다. 입력의 텍스트 열에는 여러 용어가 포함될 수 있기 때문에 용어 추출 변환의 출력에는 일반적으로 입력보다 많은 개수의 행이 포함됩니다.  
+ 용어 추출 변환의 출력에는 두 개의 열만 포함됩니다. 한 열에는 추출된 용어가 포함되고 다른 열에는 순위가 포함됩니다. 열의 기본 이름은 **용어** 고 `Score`입니다. 입력의 텍스트 열에는 여러 용어가 포함될 수 있기 때문에 용어 추출 변환의 출력에는 일반적으로 입력보다 많은 개수의 행이 포함됩니다.  
   
  추출된 용어를 테이블에 기록하는 경우에는 용어 조회, 유사 항목 조회 및 조회 변환과 같은 다른 조회 변환에서 해당 용어를 사용할 수 있습니다.  
   

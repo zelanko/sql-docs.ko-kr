@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,31 +15,31 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f6a83ec8d81a3c9e07c36c3973735c3a62746bd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ec099f18afd80bd07f059d3e87b18598b36b1117
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185173"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420728"
 ---
 # <a name="isolation-levels-ole-db"></a>격리 수준(OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. 트랜잭션 격리 수준을 제어 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 사용:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. 트랜잭션 격리 수준을 제어 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는:  
   
--   DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS에 대 한는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 기본 자동 커밋 모드입니다.  
+-   DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 기본 자동 커밋 모드입니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수준에 대해 Native Client OLE DB 공급자 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수준의 Native Client OLE DB 공급자 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
   
--   *isoLevel* 의 매개 변수는 **itransactionlocal:: Starttransaction** 로컬 수동 커밋 트랜잭션에 대 한 메서드.  
+-   합니다 *isoLevel* 의 매개 변수를 **itransactionlocal:: Starttransaction** 로컬 수동 커밋 트랜잭션에 대 한 메서드.  
   
--   *isoLevel* 의 매개 변수는 **itransactiondispenser:: Begintransaction** 방법을 MS DTC 통합 분산 트랜잭션을 합니다.  
+-   합니다 *isoLevel* 의 매개 변수를 **itransactiondispenser:: Begintransaction** 메서드 MS DTC 통합에 대 한 분산 트랜잭션.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 커밋되지 않은 읽기 격리 수준에서 읽기 전용으로 액세스할 수 있습니다. 이외의 다른 모든 수준은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 잠금을 적용하므로 동시성을 제한합니다. 클라이언트에 더 높은 동시성 수준이 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 동시 액세스에 대해 더 높은 수준의 제한을 적용합니다. 가장 높은 수준의 데이터에 대 한 동시 액세스를 유지 관리 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 특정 동시성 수준에 대 한 해당 요청을 지능적으로 제어 해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하면 커밋되지 않은 읽기 격리 수준에서 읽기 전용으로 액세스할 수 있습니다. 이외의 다른 모든 수준은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 잠금을 적용하므로 동시성을 제한합니다. 클라이언트에 더 높은 동시성 수준이 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 동시 액세스에 대해 더 높은 수준의 제한을 적용합니다. 가장 높은 수준의 데이터에 대 한 동시 액세스를 유지 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 특정 동시성 수준에 대 한 해당 요청을 지능적으로 제어 해야 합니다.  
   
 > [!NOTE]  
->  스냅숏 격리 수준은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입되었습니다. 자세한 내용은 참조 [스냅숏 격리 작업](../native-client/features/working-with-snapshot-isolation.md)합니다.  
+>  스냅숏 격리 수준은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입되었습니다. 자세한 내용은 [스냅숏 격리 작업](../native-client/features/working-with-snapshot-isolation.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [의](transactions.md)  

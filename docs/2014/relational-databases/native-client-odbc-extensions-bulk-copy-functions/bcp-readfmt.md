@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d700f752a3194821065dc21ddd6ab96fa6a8f26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dbf545e694ac6d5368a4abf23aba6ca0a6d32119
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183779"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428732"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   지정한 형식 파일에서 데이터 파일 형식 정의를 읽어 옵니다.  
@@ -58,13 +56,13 @@ szFormatFile
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- 후 `bcp_readfmt` 형식 값을 읽고, 적절 한 호출 [bcp_columns](bcp-columns.md) 및 [bcp_colfmt](bcp-colfmt.md)합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
+ 이후에 `bcp_readfmt` 형식 값을 읽고을 적절 하 게 호출 [bcp_columns](bcp-columns.md) 하 고 [bcp_colfmt](bcp-colfmt.md)합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
   
- 서식 파일을 유지 하려면 호출 [bcp_writefmt](bcp-writefmt.md)합니다. 에 대 한 호출이 `bcp_readfmt` 저장 된 서식을 참조할 수 있습니다. 자세한 내용은 참조 [bcp_init](bcp-init.md)합니다.  
+ 서식 파일을 저장 하려면 호출 [bcp_writefmt](bcp-writefmt.md)합니다. 에 대 한 호출 `bcp_readfmt` 저장 된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](bcp-init.md)합니다.  
   
- 대량 복사 유틸리티 또는 (**bcp**) 사용자 정의 데이터 형식에서 참조 될 수 있는 파일에 저장할 수 `bcp_readfmt`합니다. 에 대 한 자세한 내용은 **bcp** 의 구조와 유틸리티 **bcp** 데이터 서식 파일 참조 [대량 데이터 가져오기 및 내보내기의 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)합니다.  
+ 또는 대량 복사 유틸리티 (**bcp**)에서 참조할 수 있는 파일에서 사용자 정의 데이터 형식을 저장할 수 `bcp_readfmt`입니다. 에 대 한 자세한 내용은 합니다 **bcp** 유틸리티 및 구조의 **bcp** 데이터 형식으로 파일을 참조 하세요 [대량 데이터 가져오기 및 내보내기의 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- `BCPDELAYREADFMT` 의 값은 *eOption* 의 매개 변수 [bcp_control](bcp-control.md) bcp_readfmt의 동작을 수정 합니다.  
+ `BCPDELAYREADFMT` 의 값을 *eOption* 의 매개 변수 [bcp_control](bcp-control.md) bcp_readfmt의 동작을 수정 합니다.  
   
 > [!NOTE]  
 >  형식 파일은 **bcp** 유틸리티 4.2 이상 버전에서 생성된 파일이어야 합니다.  

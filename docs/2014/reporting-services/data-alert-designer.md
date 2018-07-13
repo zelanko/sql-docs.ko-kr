@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -20,13 +20,13 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d9da14f27b15da351263653d33616621cb4f7b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155704"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
   데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집할 수 있습니다. 경고 정의는 관심 있는 보고서 데이터, 데이터 경고 인스턴스를 만들고 데이터 경고 메시지를 보내기 위해 보고서 데이터가 충족해야 하는 규칙, 경고 메시지를 받는 사람 등을 비롯한 메타데이터의 컬렉션입니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "36186791"
 ### <a name="alert-name"></a>경고 이름  
  기본적으로 경고 정의의 이름은 보고서와 동일합니다. 경고 이름은 보다 의미 있는 이름으로 변경할 수 있습니다. 이렇게 하면 업데이트 또는 삭제 등을 수행할 경고를 식별하여 경고를 보다 쉽게 관리할 수 있습니다.  
   
- 경고는 한 보고서에 대해 여러 개 만들 수 있습니다. 경고 정의는 같은 이름을 여러 번 사용할 수도 있지만 경고 이름을 고유하게 지정하는 것이 좋습니다. 이렇게 하면 경고 정의를 보다 쉽게 서로 구분하고 관리할 수 있습니다. 자신이 만든 모든 경고의 목록은 데이터 경고 관리자에서 볼 수 있습니다. 자세한 내용은 참조 [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
+ 경고는 한 보고서에 대해 여러 개 만들 수 있습니다. 경고 정의는 같은 이름을 여러 번 사용할 수도 있지만 경고 이름을 고유하게 지정하는 것이 좋습니다. 이렇게 하면 경고 정의를 보다 쉽게 서로 구분하고 관리할 수 있습니다. 자신이 만든 모든 경고의 목록은 데이터 경고 관리자에서 볼 수 있습니다. 자세한 내용은 [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 하 고 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
   
 ### <a name="rules-and-clauses"></a>규칙 및 절  
  데이터 변경 범위 및 경고 규칙에 따라 경고를 발생시키는 데이터 변경 사항이 정의됩니다. 데이터 변경 범위는 다음과 같습니다.  

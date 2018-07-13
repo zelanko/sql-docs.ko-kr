@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,26 +13,26 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dc22d6d2f9fe06f4b056a4c75326dd1989d9a14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 060a951bd7fa594e2d16c05f8698d8245174fd2c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183777"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415692"
 ---
 # <a name="sessions"></a>세션
   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션의 인스턴스를 단일 연결을 나타내는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션 데이터 원본에 대 한 트랜잭션 공간으로 구분 해야 합니다. 특정 세션 개체에서 만들어진 모든 명령 개체는 해당 세션 개체의 로컬 또는 분산 트랜잭션에 참여합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션 데이터 원본에 대 한 트랜잭션 공간으로 구분 해야 합니다. 특정 세션 개체에서 만들어진 모든 명령 개체는 해당 세션 개체의 로컬 또는 분산 트랜잭션에 참여합니다.  
   
  초기화된 데이터 원본에서 만든 첫 번째 세션 개체는 초기화 시 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 받습니다. 세션 개체의 인터페이스에 있는 모든 참조가 해제되면 데이터 원본에서 만든 다른 세션 개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 사용할 수 있습니다.  
   
  데이터 원본에서 만든 추가 세션 개체는 데이터 원본에 지정된 대로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 고유한 연결을 설정합니다. 응용 프로그램이 해당 세션 중에 만들어진 개체 참조를 모두 해제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 삭제됩니다.  
   
- 다음 예제에서는 사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 연결 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스:  
+ 다음 예제에서는 사용 하는 방법에 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 연결 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스:  
   
 ```  
 int main()  
@@ -183,12 +181,12 @@ EXIT:
 }  
 ```  
   
- 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션 개체의 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지속적으로 만들고 세션 개체를 해제 하는 응용 프로그램에 대 한 상당한 오버 헤드가 생성할 수 있습니다. 관리 오버 헤드를 최소화할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션 개체를 효율적으로 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램을 유지할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 인터페이스를 하나 이상에 대 한 참조를 유지 관리 하 여 활성 세션 개체의 연결 합니다.  
+ 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션 개체의 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지속적으로 만들고 세션 개체를 해제 하는 응용 프로그램에 대 한 상당한 오버 헤드를 생성할 수 있습니다. 관리 오버 헤드를 최소화할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션 개체를 효율적으로 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램을 유지할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 인터페이스가 하나 이상에 대 한 참조를 유지 하 여 활성 세션 개체를 연결 합니다.  
   
- 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 풀 유지 관리 코드로 전달 유효한 세션 개체를 필요한 대로 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 응용 프로그램 메서드를 합니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
+ 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 세션 개체가 필요한 경우 풀 유지 관리 코드로 전달 유효한 **IDBCreateCommand** 세션이 필요한 응용 프로그램 메서드에 대 한 인터페이스 포인터입니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
   
 > [!NOTE]  
->  앞의 예제에는 **IDBCreateCommand** 때문에 인터페이스를 사용는 **ICommand** 구현는 **GetDBSession** 메서드, 명령에서 유일한 메서드 또는 개체가 작성 된 세션을 확인할 수 있도록 하는 행 집합 범위. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
+>  앞의 예제에는 **IDBCreateCommand** 때문에 인터페이스를 사용 합니다 **ICommand** 인터페이스 구현을 **GetDBSession** 메서드를 명령에 메서드가 하나만 표시 또는 개체가 생성 된 세션을 확인할 수 있도록 하는 행 집합 범위입니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  

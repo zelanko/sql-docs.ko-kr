@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0afc75d01e181c4b91e19e38a446d925299b7651
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aea5b9aaed8d44162fb9f63474751de47a81e2bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154594"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 이벤트 클래스 참조
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에서 이벤트가 발생할 경우 해당 이벤트를 기록할 수 있습니다. 기록된 이벤트는 추적 정의에 있는 이벤트 클래스의 인스턴스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 **추적 파일 속성** 대화 상자의 **이벤트 선택** 탭에서 이벤트 클래스와 해당 이벤트 범주를 사용할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36186816"
 |[CLR 이벤트 범주](clr-event-category.md) 에는 .NET CLR(공용 언어 런타임) 개체가 실행되면서 생성되는 이벤트 클래스가 포함됩니다.|[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|  
 |[Database Event Category](database-event-category.md) 에는 데이터 또는 로그 파일이 자동으로 늘어나고 줄어들 때 생성되는 이벤트 클래스가 포함됩니다.|[Data File Auto Grow 이벤트 클래스](data-file-auto-grow-event-class.md)<br /><br /> [Data File Auto Shrink 이벤트 클래스](data-file-auto-shrink-event-class.md)<br /><br /> [Database Mirroring State Change 이벤트 클래스](database-mirroring-state-change-event-class.md)<br /><br /> [Log File Auto Grow 이벤트 클래스](log-file-auto-grow-event-class.md)<br /><br /> [Log File Auto Shrink 이벤트 클래스](log-file-auto-shrink-event-class.md)|  
 |[Deprecation Event Category](deprecation-event-category.md) 에는 사용 중단과 관련된 이벤트가 포함됩니다.|[Deprecation Announcement 이벤트 클래스](deprecation-announcement-event-class.md)<br /><br /> [Deprecation Final Support 이벤트 클래스](deprecation-final-support-event-class.md)|  
-|[Errors and Warnings 이벤트 범주 &#40;데이터베이스 엔진&#41; ](errors-and-warnings-event-category-database-engine.md) 되는 이벤트 클래스가 포함 됩니다 때 생성 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|[Attention 이벤트 클래스](attention-event-class.md)<br /><br /> [Background Job Error 이벤트 클래스](background-job-error-event-class.md)<br /><br /> [Blocked Process Report 이벤트 클래스](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded 이벤트 클래스](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog 이벤트 클래스](errorlog-event-class.md)<br /><br /> [EventLog 이벤트 클래스](eventlog-event-class.md)<br /><br /> [Exception 이벤트 클래스](exception-event-class.md)<br /><br /> [Exchange Spill 이벤트 클래스](exchange-spill-event-class.md)<br /><br /> [Execution Warnings 이벤트 클래스](execution-warnings-event-class.md)<br /><br /> [Hash Warning 이벤트 클래스](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics 이벤트 클래스](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate 이벤트 클래스](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings 이벤트 클래스](sort-warnings-event-class.md)<br /><br /> [User Error Message 이벤트 클래스](user-error-message-event-class.md)|  
+|[Errors and Warnings 이벤트 범주 &#40;데이터베이스 엔진&#41; ](errors-and-warnings-event-category-database-engine.md) 되는 이벤트 클래스가 포함 되어 있습니다 때 생성 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Attention 이벤트 클래스](attention-event-class.md)<br /><br /> [Background Job Error 이벤트 클래스](background-job-error-event-class.md)<br /><br /> [Blocked Process Report 이벤트 클래스](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded 이벤트 클래스](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog 이벤트 클래스](errorlog-event-class.md)<br /><br /> [EventLog 이벤트 클래스](eventlog-event-class.md)<br /><br /> [Exception 이벤트 클래스](exception-event-class.md)<br /><br /> [Exchange Spill 이벤트 클래스](exchange-spill-event-class.md)<br /><br /> [Execution Warnings 이벤트 클래스](execution-warnings-event-class.md)<br /><br /> [Hash Warning 이벤트 클래스](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics 이벤트 클래스](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate 이벤트 클래스](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings 이벤트 클래스](sort-warnings-event-class.md)<br /><br /> [User Error Message 이벤트 클래스](user-error-message-event-class.md)|  
 |[Full Text 이벤트 범주](full-text-event-category.md) 에는 전체 텍스트 검색이 시작, 중단 또는 중지될 때 생성되는 이벤트 클래스가 포함됩니다.|[FT:Crawl Aborted 이벤트 클래스](ft-crawl-aborted-event-class.md)<br /><br /> [FT:Crawl Started 이벤트 클래스](ft-crawl-started-event-class.md)<br /><br /> [FT:Crawl Stopped 이벤트 클래스](ft-crawl-stopped-event-class.md)|  
 |[Locks Event Category](locks-event-category.md) 에는 잠금을 획득, 취소 또는 해제하거나 잠금에 대해 수행된 다른 동작이 있을 때 생성되는 이벤트 클래스가 포함됩니다.|[Deadlock Graph 이벤트 클래스](deadlock-graph-event-class.md)<br /><br /> [Lock:Acquired 이벤트 클래스](lock-acquired-event-class.md)<br /><br /> [Lock:Cancel 이벤트 클래스](lock-cancel-event-class.md)<br /><br /> [Lock:Deadlock Chain 이벤트 클래스](lock-deadlock-chain-event-class.md)<br /><br /> [Lock:Deadlock 이벤트 클래스](lock-deadlock-event-class.md)<br /><br /> [Lock:Escalation 이벤트 클래스](lock-escalation-event-class.md)<br /><br /> [Lock:Released 이벤트 클래스](lock-released-event-class.md)<br /><br /> [Lock:Timeout&#40;timeout &#62; 0&#41; 이벤트 클래스](lock-timeout-timeout-0-event-class.md)<br /><br /> [Lock:Timeout 이벤트 클래스](lock-timeout-event-class.md)|  
 |[Objects Event Category](objects-event-category.md) 에는 데이터베이스 개체를 만들거나 열거나 닫거나 삭제할 때 생성되는 이벤트 클래스가 포함됩니다.|[Auto Stats 이벤트 클래스](auto-stats-event-class.md)<br /><br /> [Object:Altered 이벤트 클래스](object-altered-event-class.md)<br /><br /> [Object:Created 이벤트 클래스](object-created-event-class.md)<br /><br /> [Object:Deleted 이벤트 클래스](object-deleted-event-class.md)|  

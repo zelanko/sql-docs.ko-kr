@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyColumns element
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 537667650495082dce004a6fffb6699e3533e38d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88df5fa8590bf3f049632abb8137e62e959a67fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151614"
 ---
 # <a name="keycolumns-element-assl"></a>KeyColumns 요소(ASSL)
-  컬렉션을 포함 [KeyColumn](../objects/column-element-assl.md) 부모 개체에 대 한 요소 정의 합니다.  
+  컬렉션을 포함 [KeyColumn](../objects/column-element-assl.md) 부모 개체에 대 한 요소를 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36186406"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/dimension-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [ ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|부모 요소|[AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/dimension-data-type-assl.md)를 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)하십시오 [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [ ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |자식 요소|[KeyColumn](../objects/column-element-assl.md) 형식의 [DataItem](../data-type/dataitem-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

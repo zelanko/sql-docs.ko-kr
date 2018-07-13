@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], disabling
 - enabling plan guides
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c549965eff22de2092329a71a3631f42db82c7dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e785bf00e5eb67530b9c51e96b70aeab55488510
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184906"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415702"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>계획 지침 사용 또는 사용 안 함
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 계획 지침을 사용하거나 사용하지 않도록 설정할 수 있습니다. 데이터베이스에 있는 단일 계획 지침 또는 모든 계획 지침을 사용하거나 사용하지 않도록 설정할 수 있습니다.  

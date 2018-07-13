@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
 - data mining [Analysis Services], tutorials
@@ -17,13 +17,13 @@ ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 94f73737c1d67a69c4b740371c578b2f41d97a13
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5db75cbdabd62b569c782bd48755ce817819a475
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155504"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>2단원: 예측 시나리오 구축(중급 데이터 마이닝 자습서)
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]의 판매 분석가가 제품의 내년 판매액을 예측해 달라는 요청을 받았습니다. 특히 지역 및 제품 라인별 예측을 비교해야 합니다. 또한 시간에 따라 여러 제품의 판매 방식이 달라지는지 확인해야 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36312351"
   
 -   2부에서는 모든 지역을 기반으로 일반 시계열 모델을 만드는 과정을 안내합니다. 이 일반 모델을 *교차 예측*에 사용할 수 있습니다.  
   
- 이 단원에서는 아래 나열 되어 있는 작업을 완료 하려면 사용 합니다는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터 원본에서 만든 [1 단원: 중간 데이터 마이닝 솔루션 만들기 &#40;중급 데이터 마이닝 자습서&#41; ](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ 아래 나열 된이 단원의 태스크를 완료 하려면 사용 합니다 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터 원본에서 만든 [1 단원: 중간 데이터 마이닝 솔루션 만들기 &#40;중급 데이터 마이닝 자습서&#41; ](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
 >  에 지정 된 날짜는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 이 릴리스에 대 한 샘플 데이터베이스 업데이트 되었습니다. 이전 버전의 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 사용하는 경우 다음 단계에 따라 모델을 작성할 수 있지만 나타나는 결과가 달라질 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36312351"
   
 -   [예측 구조 수정 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
--   [사용자 지정 및 예측 모델은 처리 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
+-   [사용자 지정 및 예측 모델을 처리 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 -   [예측 모델 탐색 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   

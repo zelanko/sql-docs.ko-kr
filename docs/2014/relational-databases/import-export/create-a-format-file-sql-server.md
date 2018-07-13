@@ -5,23 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93eeb1100efd7de80401ad3e6f348386aea73581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ff71ca336deb9f5c868fd60a5d52054ed2f28d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160374"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 대량 가져오기를 수행하거나 테이블에서 데이터를 대량 내보내기를 수행할 때는 서식 파일을 사용하여 다른 데이터 형식과 맞추기 위한 편집 작업이 거의 필요 없는 데이터 파일을 작성하거나 다른 소프트웨어 프로그램에서 데이터 파일을 읽는 작업을 유연하게 수행할 수 있습니다.  

@@ -5,9 +5,7 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 099618fccdf11dba2acb56303e2fec2d7a496ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184258"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420712"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 보낼 나머지 행을 커밋합니다.  
@@ -39,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 다른 작업이 호출 될 수는 [IBCPSession](ibcpsession-ole-db.md) 호출한 후 인터페이스는 **BCPDone** 메서드. 호출 하는 것만 가능은 [ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md) 새 대량 복사 작업을 시작 하려면 메서드. 이 호출 비슷합니다는 [irowsetfastload:: Commit](irowsetfastload-commit-ole-db.md) 메서드.  
+ 에 없는 다른 작업을 호출할 수는 [IBCPSession](ibcpsession-ole-db.md) 호출한 후 인터페이스를 **BCPDone** 메서드. 호출 하는 것만 가능 합니다 [ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md) 새 대량 복사 작업을 시작 하는 방법입니다. 이 호출과 유사 합니다 [irowsetfastload:: Commit](irowsetfastload-commit-ole-db.md) 메서드.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  
@@ -67,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP를 사용하여 이 데이터를 테이블에 다시 추가할 수 있습니다. 예를 들어 다음 명령을 사용할 수 있습니다.  
   
- **bcp 마스터... outfile.dat 파일-n-T-S에서 fltest** *서버*  
+ **bcp 마스터... outfile.dat-n-T-S에서 fltest** *서버*  
   
  이 예제를 컴파일할 때 sqlncli11.lib를 지정해야 합니다.  
   

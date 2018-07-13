@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85bb42550829c875324c10de358312cdf3d05295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6896cc412a01aaa6ce73c80250b15709f78771ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183012"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425682"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>서식 파일 없이 대량 복사(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 서식 파일 없이 기본 모드 데이터 파일을 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
@@ -49,7 +47,7 @@ ms.locfileid: "36183012"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: DB_IN 파일에서 뷰 또는 테이블은 테이블 또는 뷰에서 파일로 DB_OUT을 합니다.  
+    -   복사 방향을: DB_IN 파일에서 뷰 또는 테이블, 테이블 또는 뷰에서 파일로 DB_OUT입니다.  
   
 5.  호출 [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 대량 복사 작업을 실행 합니다.  
   

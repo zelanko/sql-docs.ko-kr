@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155794"
 ---
 # <a name="select-the-data-source"></a>데이터 원본 선택
   보고서 마법사의 데이터 원본 선택 페이지를 사용하여 보고서의 데이터 원본을 정의할 수 있습니다.  
@@ -40,13 +40,13 @@ ms.locfileid: "36185545"
  사용하고 있는 데이터 원본 유형을 선택합니다. 예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 사용하고 있는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 선택합니다.  
   
  **연결 문자열**  
- 데이터 원본에 대한 연결 문자열을 입력합니다. 연결 문자열에 대 한 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+ 데이터 원본에 대한 연결 문자열을 입력합니다. 연결 문자열에 대 한 자세한 내용은 참조 하세요. [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
   
  **편집** 을 클릭하면 **연결 속성** 대화 상자에서 데이터 원본 서버를 지정할 수 있습니다. 로컬 데이터 원본이나 원격 데이터 원본을 지정할 수 있습니다.  
   
  **자격 증명** 을 클릭하면 데이터베이스 자격 증명을 제공할 수 있습니다. 지정하는 자격 증명은 최소한 보고서 디자인을 위해 데이터 원본에 연결하기에 충분해야 합니다. 보고서 서버에 보고서를 배포할 때에는 데이터베이스 자격 증명이 보고서의 모든 사용자를 수용해야 합니다. 예를 들어 모든 보고서 사용자가 자격 증명을 사용하여 데이터 원본에 연결하도록 하려면 **Windows 인증 사용(통합 보안)** 을 선택합니다. 지정하는 자격 증명은 데이터 원본에 대해 유효해야 하므로 Windows 인증을 선택할 경우 보고서를 실행할 모든 사용자 계정으로 데이터 원본에 연결할 수 있는지 확인합니다. 데이터베이스 자격 증명은 보고서와 별도로 관리할 수 있습니다. 자세한 내용은 [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)를 참조하세요.  
   
- **공유 데이터 원본**  
+ **공유 데이터 원본으로 설정**  
  데이터 원본을 보고서 대신 공유 데이터 원본으로 프로젝트에 저장하려면 이 옵션을 선택합니다. 이렇게 저장된 공유 데이터 원본은 프로젝트에 있는 다른 보고서의 데이터 원본으로 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

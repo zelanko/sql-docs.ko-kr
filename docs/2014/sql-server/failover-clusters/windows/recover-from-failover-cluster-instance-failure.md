@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], recovery from failure
 - failover clustering [SQL Server], recovery from failure
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 41c6bb87ad53000ebd7e24e38beb641b4dc54c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bee306c82a7e5baf734263cfd2b1ecd8ea216742
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260045"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>장애 조치(failover) 클러스터 인스턴스 오류 복구
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 장애 조치(failover)가 발생한 후에 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 클러스터 오류를 복구하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  

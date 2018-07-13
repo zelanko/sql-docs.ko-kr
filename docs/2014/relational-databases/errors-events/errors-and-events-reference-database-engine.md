@@ -5,28 +5,27 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13de14dc26eff84d7a25a827ca4928056644836f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dfdd9b62c4ccdf782de88b24082306d8850e188a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410662"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>오류 및 이벤트 참조(데이터베이스 엔진)
-  [이벤트 및 오류 메시지 센터](http://go.microsoft.com/fwlink/?LinkId=47660) technet은 기본 소스에 대 한 오류 메시지에 있는 정보의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지뿐만 아니라 다른 Microsoft 제품에 대한 정보를 검색할 수 있는 향상된 고객 환경을 제공합니다. 즉, 고객은 전체 텍스트 검색을 수행하고 제품, 버전, 출처, 숫자 또는 기호 식별자에 따라 결과를 필터링할 수 있습니다. 또한 여러 언어를 지원하는 새로운 인터페이스가 제공됩니다. 이 센터는 자주 발생하는 오류에 대한 새로운 문제 해결 정보 등으로 계속 업데이트될 예정입니다.  
+  합니다 [이벤트 및 오류 메시지 센터](http://go.microsoft.com/fwlink/?LinkId=47660) TechNet에 있는 오류 메시지에 대 한 정보의 기본 소스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지뿐만 아니라 다른 Microsoft 제품에 대한 정보를 검색할 수 있는 향상된 고객 환경을 제공합니다. 즉, 고객은 전체 텍스트 검색을 수행하고 제품, 버전, 출처, 숫자 또는 기호 식별자에 따라 결과를 필터링할 수 있습니다. 또한 여러 언어를 지원하는 새로운 인터페이스가 제공됩니다. 이 센터는 자주 발생하는 오류에 대한 새로운 문제 해결 정보 등으로 계속 업데이트될 예정입니다.  
   
  Events and Errors Message Center의 이후 향상 기능에서는 문제 해결 정보를 다운로드할 수 있는 형식으로 제공하여 인터넷에 연결되지 않은 컴퓨터에서도 사용할 수 있도록 할 예정입니다.  
   

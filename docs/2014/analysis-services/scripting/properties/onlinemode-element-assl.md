@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3efda242b0563f4b6b853d3bf87b831da1ea8e00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154854"
 ---
 # <a name="onlinemode-element-assl"></a>OnlineMode 요소(ASSL)
   캐시를 다시 작성하기 시작할 때 바로 데이터베이스를 다시 온라인 상태로 만들지, 아니면 캐시를 다시 작성한 후에만 데이터베이스를 다시 온라인 상태로 만들지를 지정합니다.  

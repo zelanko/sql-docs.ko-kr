@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8deb0f0e05e9a19d7b2183f3df9d612701685f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c9febe27c3b3067463ea8ad4154d1b3a8699423f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183930"
 ---
 # <a name="define-query-parameters-dialog-box"></a>쿼리 매개 변수 정의 대화 상자
   디자인 타임에 샘플 데이터를 보기 위해 쿼리 디자이너에서 쿼리를 실행할 때 **쿼리 매개 변수 정의** 대화 상자를 사용하여 매개 변수 값을 지정할 수 있습니다. 쿼리 매개 변수는 데이터 원본의 데이터를 필터링하고 보고서에서 처리하는 데이터 양을 제한하는 데 도움이 됩니다. 이러한 값은 보고서 정의에 저장되지 않습니다.  

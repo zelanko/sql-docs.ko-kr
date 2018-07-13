@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94112254829868dbdf10972390359b7156dc1e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a9160e39403d314a5b01e012e6c238400a2854d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164930"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>특성 그룹 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹의 이름을 변경할 수 있습니다.  
@@ -43,13 +43,13 @@ ms.locfileid: "36186112"
   
 4.  **엔터티** 목록에서 엔터티를 선택합니다.  
   
-5.  더하기 기호를 클릭 확장 **리프 그룹**, **통합 그룹**, 또는 **컬렉션 그룹**업데이트 하려는 그룹의 형식에 따라 합니다.  
+5.  확장 하려면 더하기 기호를 클릭 **리프 그룹**를 **통합 그룹**, 또는 **컬렉션 그룹**업데이트 하려는 그룹의 형식에 따라 합니다.  
   
 6.  이름을 변경할 특성 그룹의 이름을 클릭합니다.  
   
 7.  **선택한 항목 편집**을 클릭합니다.  
   
-8.  에 **리프 그룹 이름** 상자 **통합 그룹 이름** 상자 또는 **컬렉션 그룹 이름** 특성 그룹의 업데이트 된 이름을 입력 합니다.  
+8.  에 **리프 그룹 이름** 상자에서 **통합 그룹 이름** 상자 또는 **컬렉션 그룹 이름** 상자에 특성 그룹의 업데이트 된 이름을 입력 합니다.  
   
 9. **그룹 저장**을 클릭합니다.  
   

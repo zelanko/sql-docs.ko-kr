@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], properties
 - diagrams [SQL Server], properties
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8993564454a9a625550e61d14c03dbf11f338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cfc50a240f38aaa923467f54ed3b2ca6b7a59e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278340"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>다이어그램 속성 표시(Visual Database Tools)
   속성 창에서 데이터베이스 다이어그램의 속성을 표시할 수 있습니다.  

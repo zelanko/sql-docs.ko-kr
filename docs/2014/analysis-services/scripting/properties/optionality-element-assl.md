@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159364"
 ---
 # <a name="optionality-element-assl"></a>Optionality 요소(ASSL)
   에 대 한 멤버의 옵션을 나타냅니다는 [AttributeRelationship](../objects/attributerelationship-element-assl.md) 요소입니다.  

@@ -1,5 +1,5 @@
 ---
-title: 만들기, 수정 및 삭제 (Reporting Services 기본 모드에서) 표준 구독 | Microsoft Docs
+title: 만들기, 수정 및 삭제 표준 구독 (기본 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230393"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 표준 구독은 항상 구독의 기반이 되는 보고서를 통해 정의됩니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "36184445"
 > [!NOTE]  
 >  부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독의 소유권을 프로그래밍 방식으로 전송할 수 있습니다. 구독 소유권을 전송하는 데 사용할 수 있는 사용자 인터페이스는 없습니다. 자세한 내용은 참조 하세요. <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
- 에 따라 **RSReportServer.config** 구성 파일 설정을 사용자 구독에 더 많은 사용자를 추가 할 수 있습니다 (예를 들어 자신의 전자 메일 주소를 추가 하는 관리자 또는 구성 파일은 각각의 복사본을 받을 수 있도록 부하 직원의 보고서)입니다. 이러한 기능의 지원 여부는 개별 구독을 정의할 때 받는 사람: 필드가 표시되는지 여부에 따라 달라집니다. 자세한 내용은 참조 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
+ 에 따라 **RSReportServer.config** 구성 파일 설정에 사용자가 구독에 더 많은 사용자를 추가 하는 일을 할 수 있습니다 (예를 들어, 관리자는 자신의 전자 메일 주소를 추가 하거나 각자의 복사본을 받을 수 있도록 자신의 직접 보고서를 보고서)입니다. 이러한 기능의 지원 여부는 개별 구독을 정의할 때 받는 사람: 필드가 표시되는지 여부에 따라 달라집니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
- 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 참조 [만들기, 수정 및 데이터 기반 구독을 삭제](data-driven-subscriptions.md)합니다.  
+ 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [만들기, 수정 및 데이터 기반 구독을 삭제](data-driven-subscriptions.md)합니다.  
   
  항목 내용  
   
@@ -53,15 +53,15 @@ ms.locfileid: "36184445"
   
 -   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리자를 사용하여 기본 모드 보고서 서버에서 구독을 만드는 방법에 대해 설명합니다. 구독을 정의한 후에는 보고서 관리자의 내 구독 페이지 또는 특정 보고서의 **구독** 탭을 통해 구독에 액세스할 수 있습니다.  
   
--   [만들기 및 SharePoint 모드 보고서 서버에 대 한 구독 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint 사이트에서 응용 프로그램 페이지를 사용 하 여 SharePoint 통합된 모드에서 실행 되는 보고서 서버에 대 한 보고서를 구독 하는 방법을 설명 합니다.  
+-   [만들기 및 SharePoint 모드 보고서 서버에 대 한 구독 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint 사이트에서 응용 프로그램 페이지를 사용 하 여 SharePoint 통합된 모드에서 실행 되는 보고서 서버의 보고서를 구독 하는 방법에 설명 합니다.  
   
  이 항목에서는 전자 메일 구독 및 파일 공유 배달 구독을 만드는 방법을 제공합니다.  
   
 -   전자 메일 배달을 사용하려면 구독을 만들기 전에 SMTP 서버 또는 게이트웨이 연결에 대해 보고서 서버를 구성해야 합니다.  
   
--   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 참조 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
+-   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
- 보고서를 구독하려면 먼저 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않도록 보고서 데이터 원본을 구성해야 합니다. 자세한 내용은 참조 [Reporting Services 데이터 원본에 자격 증명 저장소](../report-data/store-credentials-in-a-reporting-services-data-source.md)합니다. 그렇지 않으면 **새 구독** 단추를 사용할 수 없습니다.  
+ 보고서를 구독하려면 먼저 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않도록 보고서 데이터 원본을 구성해야 합니다. 자세한 내용은 [Reporting Services 데이터 원본에 자격 증명 저장](../report-data/store-credentials-in-a-reporting-services-data-source.md)합니다. 그렇지 않으면 **새 구독** 단추를 사용할 수 없습니다.  
   
  이 항목에서는 데이터 기반 구독을 만드는 방법에 대해 설명하지 않습니다. 데이터 기반 구독을 만드는 방법에 대한 자세한 내용은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하거나 보고서 관리자의 데이터 기반 구독 만들기 페이지에 대한 온라인 도움말을 참조하세요.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36184445"
   
 6.  **파일을 만들 때 파일 확장명 추가**를 선택합니다. 이 옵션은 파일 이름에 3자로 된 파일 확장명을 추가합니다. 파일 확장명은 선택하는 보고서 출력 형식에 따라 결정됩니다.  
   
-7.  에 **경로** 텍스트 상자에 보고서를 배달할 기존 폴더를 범용 명명 규칙 (UNC) 경로 입력 합니다 (예를 들어 \\ \\< 서버 이름\>\\< myreports\>). 경로의 시작 부분에는 백슬래시 문자를 두 번 넣고 뒷부분에는 백슬래시를 지정하지 마세요.  
+7.  에 **경로** 텍스트 상자는 보고서를 배달 하려는 기존 폴더에 범용 명명 규칙 (UNC) 경로 입력 합니다 (예를 들어 \\ \\< servername\>\\< myreports\>). 경로의 시작 부분에는 백슬래시 문자를 두 번 넣고 뒷부분에는 백슬래시를 지정하지 마세요.  
   
 8.  렌더링 형식에서 파일 배달에 대한 보고서 출력 형식을 선택합니다. 보고서를 열 때 사용할 데스크톱 응용 프로그램에 맞는 형식을 선택합니다. 보고서를 단일 스트림으로 렌더링하지 않거나 정적 파일(예: HTML 4.0)에서 지원될 수 없는 대화형 작업을 발생시키는 형식은 사용하지 마세요.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36184445"
   
 2.  **구독** 탭을 클릭한 후 **새 구독**을 클릭합니다.  
   
-3.  **제공한**선택, **전자 메일**합니다. 이 배달 유형을 사용할 수 없는 경우 보고서 서버가 전자 메일 구독에 대해 구성되지 않은 것입니다.  
+3.  **전달한**를 선택 **전자 메일**합니다. 이 배달 유형을 사용할 수 없는 경우 보고서 서버가 전자 메일 구독에 대해 구성되지 않은 것입니다.  
   
-4.  에 **To** 텍스트 상자의 받는 사람 이름은: 필드는 도메인 사용자 계정을 사용 하 여 자동으로 지정 합니다. 보고서 서버 구성 설정에 따라 결정 여부는 **를** 필드는 자동으로 해당 사용자 계정으로 지정 합니다. 구성 설정 전자 메일 주소를 변경 하는 방법에 대 한 자세한 내용은 참조 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
+4.  에 **To** 의 받는 사람 이름, 텍스트 상자: 필드에 도메인 사용자 계정을 사용 하 여 자동으로 지정 됩니다. 보고서 서버 구성 설정 확인 여부를 합니다 **에** 필드에 사용자 계정으로 자동으로 지정 됩니다. 구성 설정 전자 메일 주소를 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
     > [!NOTE]  
     >  사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "36184445"
   
     -   보고서의 복사본을 포함시키거나 첨부하려면 **보고서 포함**을 선택합니다. 보고서 형식은 선택하는 렌더링 형식에 따라 결정됩니다. 보고서 크기가 전자 메일 시스템에 정의된 크기를 넘을 경우에는 이 옵션을 선택하지 마세요.  
   
-    -   보고서에 대 한 URL 링크를 전자 메일 메시지의 본문에 포함 하려면 선택 **링크 포함**합니다.  
+    -   보고서 URL 링크를 전자 메일 메시지의 본문에 포함 하려면 선택 **링크 포함**합니다.  
   
     > [!NOTE]  
     >  이러한 옵션을 선택하지 않으면 제목 줄의 알림 텍스트만 전송됩니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "36184445"
   
     2.  구독을 삭제하려면 구독 옆의 확인란을 선택한 다음 **삭제**를 클릭합니다.  
   
- 이 항목에서는 보고서 서버에서 현재 처리 중인 구독을 취소하는 방법은 설명하지 않습니다. 구독 취소 하는 방법에 대 한 자세한 내용은 참조 [실행 중인 프로세스 관리](manage-a-running-process.md)  
+ 이 항목에서는 보고서 서버에서 현재 처리 중인 구독을 취소하는 방법은 설명하지 않습니다. 구독을 취소 하는 방법에 대 한 자세한 내용은 참조 하세요. [실행 중인 프로세스 관리](manage-a-running-process.md)  
   
  구독을 종료하려는 경우 해당 구독을 쉽게 찾을 수 없으면 받고 있는 보고서를 확인하여 이름으로 검색합니다. 보고서에 액세스되면 구독에서 자신의 이름을 제거할 수 있습니다. 구독을 찾을 수 없는 경우 해당 구독이 데이터 기반 구독일 수 있습니다. 자세한 내용은 보고서 서버 관리자에게 문의하세요.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
 - failover clustering [SQL Server], creating clusters
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 caps.latest.revision: 75
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f82e637d60de64d90492bc289268c090ee473bcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 672699fe7c941098b0b689a49a30e12c6cc71ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155804"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하거나 업그레이드하려면 장애 조치 클러스터의 각 노드에서 설치 프로그램을 실행해야 합니다. 기존의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 추가할 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 다른 노드를 관리하려고 액티브 노드에서 설치 프로그램을 실행하지 않도록 주의해야 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36186268"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고급/엔터프라이즈 장애 조치(Failover) 클러스터 설치는 다음 단계로 구성됩니다.  
   
--   새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 소유자가 될 수 있는 각 노드에서 [준비](#prepare)섹션에 나와 있는 설명에 따라 장애 조치(Failover) 클러스터 설치 준비 단계를 실행합니다. 한 노드에서 장애 조치(Failover) 클러스터 준비를 실행하고 나면 지정된 모든 설정의 목록을 포함하는 Configuration.ini 파일이 설치 프로그램을 통해 만들어집니다. 설치를 준비해야 할 다른 노드에서 같은 단계를 반복하는 대신 첫 노드에서 자동으로 생성된 Configuration.ini 파일을 설치 명령줄에 입력 매개 변수로 사용할 수 있습니다. 자세한 내용은 참조 [설치할 SQL Server 2014를 사용 하 여 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다. 이 단계는 노드를 클러스터링할 수 있도록 준비하지만 이 시점에서는 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 없습니다.  
+-   새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 소유자가 될 수 있는 각 노드에서 [준비](#prepare)섹션에 나와 있는 설명에 따라 장애 조치(Failover) 클러스터 설치 준비 단계를 실행합니다. 한 노드에서 장애 조치(Failover) 클러스터 준비를 실행하고 나면 지정된 모든 설정의 목록을 포함하는 Configuration.ini 파일이 설치 프로그램을 통해 만들어집니다. 설치를 준비해야 할 다른 노드에서 같은 단계를 반복하는 대신 첫 노드에서 자동으로 생성된 Configuration.ini 파일을 설치 명령줄에 입력 매개 변수로 사용할 수 있습니다. 자세한 내용은 [SQL Server 2014 사용 하 여 설치 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다. 이 단계는 노드를 클러스터링할 수 있도록 준비하지만 이 시점에서는 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 없습니다.  
   
 -   노드를 클러스터링할 수 있도록 준비했으면 준비된 노드 중 하나에서 설치 프로그램을 실행합니다. 이 단계에서는 장애 조치(Failover) 클러스터 인스턴스를 구성하고 마칩니다. 이 단계를 마치고 나면 작동 가능한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 준비되고 해당 인스턴스에 대해 앞서 준비했던 모든 노드에서 새로 작성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 소유할 수 있습니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36186268"
   
 6.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
-7.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../../editions-and-components-of-sql-server-2016.md)합니다.  
+7.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../editions-and-components-of-sql-server-2016.md)합니다.  
   
 8.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
@@ -186,9 +186,9 @@ ms.locfileid: "36186268"
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
-         장치가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 참조 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
+         장치가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 참조 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
      목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36186268"
 30. 방금 만든 단일 노드 장애 조치(Failover)에 노드를 추가하려면 추가할 각 노드에서 설치를 실행하고 AddNode 작업 단계를 따릅니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  노드를 여러 개 추가하는 경우 구성 파일을 사용하여 설치를 배포할 수 있습니다. 자세한 내용은 참조 [설치할 SQL Server 2014를 사용 하 여 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다.  
+    >  노드를 여러 개 추가하는 경우 구성 파일을 사용하여 설치를 배포할 수 있습니다. 자세한 내용은 [SQL Server 2014 사용 하 여 설치 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다.  
     >   
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 모든 노드에서 설치하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전이 동일해야 합니다. 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 새 노드를 추가할 때는 기존의 장애 조치(Failover) 클러스터 버전에 일치하는 버전을 지정해야 합니다.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "36186268"
   
      계속하려면 **다음**을 클릭합니다.  
   
-8.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../../editions-and-components-of-sql-server-2016.md)합니다.  
+8.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../editions-and-components-of-sql-server-2016.md)합니다.  
   
     > [!NOTE]  
     >  동일한 장애 조치(Failover) 클러스터를 위해 준비하고 있는 모든 노드에서 동일한 제품 키를 지정해야 합니다.  
@@ -328,7 +328,7 @@ ms.locfileid: "36186268"
   
 23. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
-24. 지금까지 설명한 단계를 반복하여 장애 조치(Failover) 클러스터의 다른 노드를 준비합니다. 자동 생성된 구성 파일을 사용하여 다른 노드를 준비할 수도 있습니다. 자세한 내용은 참조 [설치할 SQL Server 2014를 사용 하 여 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다.  
+24. 지금까지 설명한 단계를 반복하여 장애 조치(Failover) 클러스터의 다른 노드를 준비합니다. 자동 생성된 구성 파일을 사용하여 다른 노드를 준비할 수도 있습니다. 자세한 내용은 [SQL Server 2014 사용 하 여 설치 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다.  
   
 ## <a name="complete"></a>완료  
   
@@ -376,9 +376,9 @@ ms.locfileid: "36186268"
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
-         장치가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 참조 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
+         장치가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 참조 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../install/database-engine-configuration-account-provisioning.md)합니다.  
   
      목록 편집을 마쳤으면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
   

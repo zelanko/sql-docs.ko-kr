@@ -1,5 +1,5 @@
 ---
-title: Parallel 요소 (XMLA) | Microsoft Docs
+title: 요소 (XMLA) 병렬 | Microsoft Docs
 ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b139996598786827c1eef20cbe099473e725a416
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161024"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
   부모 [Batch](../xml-elements-commands/batch-element-xmla.md) 명령에 의해 병렬로 실행될 명령을 식별합니다.  

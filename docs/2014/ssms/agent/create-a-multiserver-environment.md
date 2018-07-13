@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
 - master servers [SQL Server], about master servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: accad064c75c799af6e871e517975352949f9526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183600"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
   다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "36185549"
 ## <a name="considerations-for-multiserver-environments"></a>다중 서버 환경 고려 사항  
  지원되는 MSX/TSX 구성은 다음 표를 참조하십시오.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; S P 3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|예|예|아니오|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 &LT; S P 3**|예|예|아니오|아니요|아니요|아니요|아니요|  
+|**MSX = 8.0 &LT; SP3**|예|예|아니오|아니요|아니요|아니요|아니요|  
 |**MSX = 8.0 SP3 이상**|아니요|아니요|예|예|예|예|예|  
 |**MSX = 9.0**|아니요|아니요|아니요|예|예|예|예|  
 |**MSX = 10.0**|아니요|아니요|아니요|아니요|예|예|예|  

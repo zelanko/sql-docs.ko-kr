@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75601cb33f04eaacfdb3970f858dd8a359abd4bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4272975a16da0cf0d9db534df34d00e329dc5430
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153184"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 특징 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 특징** 탭에서는 시퀀스 클러스터를 정의하는 특징의 세부 목록을 제공합니다. 이러한 특징에는 간단한 특성-값 쌍뿐만 아니라 상태 간 전환도 포함될 수 있습니다.  
@@ -50,8 +50,8 @@ ms.locfileid: "36185490"
   
 |값|Description|  
 |-----------|-----------------|  
-|**변수**|이 열은 특징이 값인지 아니면 전환인지를 나타냅니다.<br /><br /> 특징이 값인 경우는 **변수** 열에 특성 이름이 포함 됩니다.<br /><br /> 특징이 상태 전환을 나타내는 경우는 **변수** 열에 "transitions 라는" 텍스트가 포함 됩니다.|  
-|**값**|이 열의 값은 특징이 간단한 특성-값 쌍인지, 아니면 항목이나 이벤트의 일반 시퀀스를 나타내는 상태 전환인지에 따라 달라집니다.<br /><br /> 특징이 값인 경우는 **값** 열 상태를 포함 합니다.<br /><br /> 특징이 상태 전환을 나타내는 경우는 **값** 열에 상태 전환에 대 한 설명을 포함 합니다.|  
+|**변수**|이 열은 특징이 값인지 아니면 전환인지를 나타냅니다.<br /><br /> 특징이 값인 경우 합니다 **변수** 열 특성 이름을 포함 합니다.<br /><br /> 특징이 상태 전환을 나타내는 경우는 **변수** 열에 "transitions 라는" 텍스트가 포함 됩니다.|  
+|**값**|이 열의 값은 특징이 간단한 특성-값 쌍인지, 아니면 항목이나 이벤트의 일반 시퀀스를 나타내는 상태 전환인지에 따라 달라집니다.<br /><br /> 특징이 값인 경우 합니다 **값** 열 상태를 포함 합니다.<br /><br /> 특징이 상태 전환을 나타내는 경우는 **값** 열 상태 전환에 대 한 설명을 포함 합니다.|  
 |**확률**|이 열에는 이 특징(간단한 특성-값 쌍 또는 상태의 조합)이 현재 클러스터의 멤버일 상대적인 확률을 나타내는 막대가 표시됩니다.<br /><br /> 마우스를 막대 위로 이동하여 특징의 빈도 값을 표시할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  

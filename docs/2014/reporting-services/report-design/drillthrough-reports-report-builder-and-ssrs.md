@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ececfced738b8ea71b8cbedef4c7495607522309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6cea127909617ef7230dfd59e995f878274291a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230623"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>드릴스루 보고서(보고서 작성기 및 SSRS)
   드릴스루 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 예를 들어 아래 그림의 판매 요약 보고서에는 판매 주문과 판매 총액이 나열되는데, 요약 목록에서 주문 번호를 클릭하면 해당 주문에 대한 세부 정보가 들어 있는 다른 보고서가 열립니다.  

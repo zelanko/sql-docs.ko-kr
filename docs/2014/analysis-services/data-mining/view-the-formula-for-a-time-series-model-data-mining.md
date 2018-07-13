@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11427eb72ea27bd93e8cb360afcf1221ab19b05a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163454"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어 inData 마이닝 디자이너에는 시계열 모델에 사용 되는 회귀 수식에 대 한 세부 정보를 볼 수 있는 가장 쉬운 방법은 제공 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어 inData 마이닝 디자이너는 가장 쉬운 방법은 시계열 모델에 사용 되는 회귀 수식의 세부 정보를 보려면를 제공 합니다.  
   
- 모델 콘텐츠를 쿼리하여 시계열 모델의 회귀 수식을 추출할 수 있습니다. 그러나 전체 ARTXP 또는 ARIMA 수식을 보려면 권장를 사용 하는 **마이닝 범례** 의 [Microsoft 시계열 뷰어](browse-a-model-using-the-microsoft-time-series-viewer.md)를 읽을 수 있는 형식으로 모든 상수를 제공 하 합니다.  
+ 모델 콘텐츠를 쿼리하여 시계열 모델의 회귀 수식을 추출할 수 있습니다. 그러나 전체 ARTXP 또는 ARIMA 수식을 보려면 좋습니다를 사용 하는 합니다 **마이닝 범례** 의 합니다 [Microsoft 시계열 뷰어](browse-a-model-using-the-microsoft-time-series-viewer.md), 모든 상수를 읽을 수 있는 형식으로 제공 하는 합니다.  
   
  혼합 모델을 만들 경우 ARIMA 및 ARTXP 분석이 개별 트리에 만들어지고 모델을 나타내는 루트 노드에서 조인됩니다. ARIMA 트리와 ARTXP 트리는 구조가 아주 다릅니다. 예를 들어 ARTXP 트리는 실제로 의사 결정 트리와 같은 트리 구조인 반면에 ARIMA 트리는 이동 평균의 계열을 나타냅니다. 따라서 이러한 두 표현은 편의상 한 모델로 제공되지만 두 개의 독립적인 모델로 처리해야 합니다. 수식도 완전히 다르며 조합하거나 비교할 수 없습니다.  
   
- 사용 하 여 시계열 모델을 볼 수도 있습니다는 [Microsoft 일반 콘텐츠 트리 뷰어](../microsoft-generic-content-tree-viewer-data-mining.md)합니다. 시계열 모델의 콘텐츠에 대 한 자세한 내용은 참조 [시계열 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)합니다.  
+ 사용 하 여 시계열 모델을 볼 수는 [Microsoft 일반 콘텐츠 트리 뷰어](../microsoft-generic-content-tree-viewer-data-mining.md)합니다. 시계열 모델의 콘텐츠에 대 한 자세한 내용은 참조 [시계열 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)합니다.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>시계열 모델의 ARTXP 회귀 수식을 보려면  
   

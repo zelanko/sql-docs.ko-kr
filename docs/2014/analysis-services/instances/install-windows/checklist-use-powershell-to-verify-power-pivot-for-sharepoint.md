@@ -1,5 +1,5 @@
 ---
-title: '검사 목록: PowerShell을 사용 하 여 SharePoint 용 PowerPivot을 확인 하려면 | Microsoft Docs'
+title: '검사 목록: PowerShell를 사용 하 여 SharePoint 용 PowerPivot을 확인 하려면 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 21
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a7d62eaa7acda26384b3bf8eb7dbb49af3ab5096
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1c7a70d4cfa7b47d4155abd46982a88c11ebdbca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149784"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인
   서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 응용 프로그램 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
@@ -63,7 +63,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![sharepoint 일반 응용 프로그램 집합에는 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 일반 응용 프로그램 집합의 powerpivot")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 중앙 관리에서 대부분의 구성 요소를 선택적으로 확인할 수 있습니다. 중앙 관리에서 대시보드를 열려면 **일반 응용 프로그램 설정**, **PowerPivot** 의 **관리 대시보드**를 차례로 클릭합니다. 대시보드에서 자세한 정보를 참조 하십시오. [PowerPivot 관리 대시보드 및 사용 현황 데이터](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)합니다.|  
+|![sharepoint 일반 응용 프로그램 집합의 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 일반 응용 프로그램 집합의 powerpivot")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 중앙 관리에서 대부분의 구성 요소를 선택적으로 확인할 수 있습니다. 중앙 관리에서 대시보드를 열려면 **일반 응용 프로그램 설정**, **PowerPivot** 의 **관리 대시보드**를 차례로 클릭합니다. 대시보드에 대 한 자세한 내용은 참조 하세요. [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)합니다.|  
   
 ##  <a name="bkmk_symptoms"></a> 증상 및 권장되는 작업  
  다음 표는 증상 또는 문제 및 문제를 해결하는 데 도움이 되는 이 항목의 제안되는 섹션 목록입니다.  
@@ -183,9 +183,9 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![참고](../../../reporting-services/media/rs-fyinote.png "참고")응용 프로그램 풀은 중앙 관리 페이지도 확인할 수 있습니다 **서비스 응용 프로그램 관리**합니다. 서비스 응용 프로그램의 이름을 클릭한 다음 리본에서 **속성** 을 클릭합니다.  
+ ![참고](../../../reporting-services/media/rs-fyinote.png "참고")응용 프로그램 풀의 중앙 관리 페이지 에서도 확인할 수 있습니다 **서비스 응용 프로그램 관리**합니다. 서비스 응용 프로그램의 이름을 클릭한 다음 리본에서 **속성** 을 클릭합니다.  
   
- **PowerPivot 및 Excel Service 응용 프로그램 프록시**  
+ **PowerPivot 및 Excel 서비스 응용 프로그램 프록시**  
   
  상태가 **온라인**인지 확인합니다.  
   
@@ -264,7 +264,7 @@ Online PowerPivot Setup Extension Timer Job                                     
 ```  
   
 ##  <a name="bkmk_health_rules"></a> 상태 규칙  
- SharePoint 2013 배포에는 규칙이 훨씬 적습니다. 각 SharePoint 환경에 대 한 규칙의 전체 목록 및 규칙을 사용 하는 방법에 대 한 설명을 참조 [PowerPivot 상태 규칙-구성](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)합니다.  
+ SharePoint 2013 배포에는 규칙이 훨씬 적습니다. 각 SharePoint 환경에 대 한 규칙의 전체 목록 및 규칙을 사용 하는 방법에 대 한 참조 [PowerPivot 상태 규칙-구성](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)합니다.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -287,7 +287,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 및 ULS 로그  
  **Windows 이벤트 로그**  
   
- 다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대 한 자세한 내용은 참조 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)합니다.  
+ 다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대 한 내용은 참조 하세요 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;SharePoint 용 PowerPivot&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)합니다.  
   
  **서비스 이름:** MSOLAP$POWERPIVOT  
   
@@ -403,7 +403,7 @@ PowerPivot Query Usage       Online    True AnalysisServicesRequests            
 PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads                         14  
 ```  
   
- 자세한 내용은 참조 [PowerPivot 사용 현황 데이터 수집](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md)합니다.  
+ 자세한 내용은 [PowerPivot 사용 현황 데이터 수집](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md)합니다.  
   
 ##  <a name="bkmk_solutions"></a> 솔루션  
  다른 구성 요소가 온라인인 경우 솔루션을 확인하는 단계를 건너뛸 수 있습니다. 그러나 상태 규칙이 없는 경우 표시되는 두 해결 방법을 확인하고 PowerPivot 솔루션이 **온라인** 이고 **배포됨**인지 확인하십시오.  
@@ -436,7 +436,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> 수동 확인 단계  
  이 섹션에서는 PowerShell cmdlet으로 완료할 수 없는 확인 단계에 대해 설명합니다.  
   
- **예약된 데이터 새로 고침:** 통합 문서에 대한 새로 고침 일정을 **가능한 한 빨리 새로 고침**으로 구성합니다.  자세한 내용은의 "데이터 새로 고침 확인" 섹션을 참조 하십시오. [일정 데이터 새로 고침 및 데이터 소스는 수행 하지 Windows 인증을 지원 &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)합니다.  
+ **예약된 데이터 새로 고침:** 통합 문서에 대한 새로 고침 일정을 **가능한 한 빨리 새로 고침**으로 구성합니다.  자세한 내용은의 "데이터 새로 고침 확인" 섹션을 참조 하세요 [데이터 새로 고침 예약 및 데이터 소스는 수행 되지 않습니다 Windows 인증을 지 원하는 &#40;SharePoint 용 PowerPivot&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)합니다.  
   
 ##  <a name="bkmk_more_resources"></a> 추가 리소스  
  [Windows PowerShell의 웹 서버(IIS) 관리 Cmdlet](http://technet.microsoft.com/library/ee790599.aspx).  

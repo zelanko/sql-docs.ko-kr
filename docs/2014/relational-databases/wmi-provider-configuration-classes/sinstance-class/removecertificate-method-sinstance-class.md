@@ -20,15 +20,15 @@ helpviewer_keywords:
 - RemoveCertificate method
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a2854c7ecf62565a8cb9099382a72f9ab00bde8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 56fcc69e20517602e906057f411d97fbaa7191e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258499"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>RemoveCertificate 메서드(SInstance 클래스)
   현재 보안 인증서를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 제거합니다.  

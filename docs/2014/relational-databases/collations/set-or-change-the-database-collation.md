@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 769adcde56f3e77cee0a2458b1d32b9e763792f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1284c5ea161942ab96d974549147f24cd72ae8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158554"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36186093"
   
     -   저장 프로시저 및 사용자 정의 함수에 대한 모든 기존 `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 매개 변수와 스칼라 반환 값이 새 데이터 정렬로 변경됩니다.  
   
-    -   `char`, `varchar`, `text`, `nchar`, `nvarchar`, 또는 `ntext` 시스템 데이터 형식 및 이러한 시스템 데이터 형식을 기반으로 하는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬으로 변경 됩니다.  
+    -   합니다 `char`, `varchar`를 `text`, `nchar`를 `nvarchar`, 또는 `ntext` 시스템 데이터 형식 및 이러한 시스템 데이터 형식을 기반으로 하는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬으로 변경 됩니다.  
   
 -   사용자 데이터베이스에서 새로 만든 새 개체의 데이터 정렬은 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 COLLATE 절을 사용하여 변경할 수 있습니다. 이 문은 기존 사용자 정의 테이블에 있는 열의 데이터 정렬은 변경하지 않습니다. 이러한 열은 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)문의 COLLATE 절을 사용하여 변경할 수 있습니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
 - Script component [Integration Services], converting scripts
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
 caps.latest.revision: 44
-author: douglaslM
+author: mashamsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 99acbad66d2a614431bc1f08ad88bd12f2a3e6b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87c4c76ef7a09b8c03d0c95f83b647b73ccb3325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157524"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA로 스크립트 마이그레이션
-  업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 모든 스크립트 태스크 또는 스크립트 구성 요소를로 마이그레이션합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA Tools for Applications (). VSTA는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용하는 스크립팅 환경입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 위한 스크립팅 환경인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에 대 한 응용 프로그램 VSA ().  
+  업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 모든 스크립트 태스크 또는 스크립트 구성 요소를로 마이그레이션합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용하는 스크립팅 환경입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 위한 스크립팅 환경인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 응용 프로그램 (VSA).  
   
- 스크립트 태스크나 스크립트 구성 요소의 스크립트에서 인터페이스를 참조하는 경우에는 패키지를 업그레이드하기 전에 해당 참조를 수정해야 합니다. 그렇지 않으면 사용하는 업그레이드 방법에 따라 패키지 업그레이드가 실패하거나 스크립트의 유효성 검사가 실패하게 됩니다. 이러한 참조를 수정 하려면 IDTS에 대 한 참조를 대체*xxx*대 한 참조를 해당 하는 IDTS 90 인터페이스*xxx*100 인터페이스입니다.  
+ 스크립트 태스크나 스크립트 구성 요소의 스크립트에서 인터페이스를 참조하는 경우에는 패키지를 업그레이드하기 전에 해당 참조를 수정해야 합니다. 그렇지 않으면 사용하는 업그레이드 방법에 따라 패키지 업그레이드가 실패하거나 스크립트의 유효성 검사가 실패하게 됩니다. 이러한 참조를 수정 하려면 IDTS에 대 한 참조를 바꿀*xxx*해당 하는 IDTS에 대 한 참조를 사용 하 여 90 인터페이스*xxx*100 인터페이스입니다.  
   
- 스크립트를 마이그레이션하고 패키지를 업그레이드 하는 방법에 대 한 자세한 내용은 참조 [Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages.md)합니다.  
+ 스크립트를 마이그레이션하고 패키지를 업그레이드 하는 방법에 대 한 자세한 내용은 참조 하세요. [Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages.md)합니다.  
   
 ## <a name="understanding-migration-failures"></a>마이그레이션 오류 이해  
  스크립트를 마이그레이션할 때 다음과 같은 이유로 마이그레이션이 실패할 수 있습니다.  

@@ -5,27 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2941f9d95c8513762e8f77f8a84fcd34f682eafe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185605"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410081"
 ---
 # <a name="conversions-from-c-to-sql"></a>C에서 SQL로의 변환
-  이 항목에서는 C 형식을 변환할 때 고려해 야 할 문제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식.  
+  이 항목에서는 C 형식에서 변환 하는 경우 고려해 야 할 문제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식입니다.  
   
  다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 클라이언트가 매개 변수에 대해 소수 자릿수 초의 전체 자릿수를 서버에 정의된 것과 다르게 지정하는 경우 클라이언트 변환이 성공하더라도 서버는 `SQLExecute` 또는 `SQLExecuteDirect`가 호출될 때 오류를 반환합니다. 특히 ODBC는 모든 소수 자릿수 초 잘림을 오류로 처리하는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 반올림 동작을 수행합니다. 예를 들어 `datetime2(6)`를 `datetime2(2)`로 변환하는 경우 반올림이 수행됩니다. datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
   
@@ -64,7 +62,7 @@ ms.locfileid: "36185605"
 |10|데이터 손실을 유발하는 잘림이 발생하면 SQLSTATE 22008 및 "잘못된 날짜 시간 형식입니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다. 이 오류는 값이 서버에서 사용된 UTC 범위로 표현할 수 있는 범위 밖에 있는 경우에도 발생합니다.|  
 |11|데이터의 바이트 길이가 SQL 형식에 필요한 구조의 크기와 같지 않은 경우 SQLSTATE 22003 및 "숫자 값이 범위를 벗어났습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.|  
 |12|바이트 길이가 4 또는 8인 데이터는 원시 TDS smalldatetime 또는 datetime 형식으로 서버에 전송되고, 바이트 길이가 SQL_TIMESTAMP_STRUCT의 크기와 정확히 일치하는 데이터는 TDS 형식의 datetime2로 변환됩니다.|  
-|13|데이터 손실을 유발하는 잘림이 발생하면 SQLSTATE 22001 및 "문자열 데이터의 오른쪽이 잘렸습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.<br /><br /> 대상 열의 크기에 따라 다음 소수 자릿수 초의 자릿수 (소수) 수가 결정 됩니다.<br /><br /> **형식:** SQL_C_TYPE_TIMESTAMP<br /><br /> 암시된 소수 자릿수<br /><br /> 0<br /><br /> 19<br /><br /> 암시된 소수 자릿수<br /><br /> 1..9<br /><br /> 21..29<br /><br /> 그러나 SQL_C_TYPE_TIMESTAMP의 경우에는 소수 자릿수 초를 데이터 손실 없이 3자리로 나타낼 수 있고 열 크기가 23 이상인 경우 소수 자릿수 초의 자릿수는 정확히 3자리로 생성됩니다. 이 동작은 이전 ODBC 드라이버를 사용하여 개발된 응용 프로그램과의 호환성을 보장합니다.<br /><br /> 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 ODBC에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 크기가 0인 열은 ODBC에서 변수 길이 문자 형식의 크기에 제한이 없음을 의미합니다(SQL_C_TYPE_TIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리). 고정 길이 문자 형식의 열 크기를 0으로 지정하면 오류가 발생합니다.|  
+|13|데이터 손실을 유발하는 잘림이 발생하면 SQLSTATE 22001 및 "문자열 데이터의 오른쪽이 잘렸습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.<br /><br /> 소수 자릿수 초 자릿수 (소수)는 대상 열의 크기는 다음에 따라 결정 됩니다.<br /><br /> **형식:** SQL_C_TYPE_TIMESTAMP<br /><br /> 암시된 소수 자릿수<br /><br /> 0<br /><br /> 19<br /><br /> 암시된 소수 자릿수<br /><br /> 1..9<br /><br /> 21..29<br /><br /> 그러나 SQL_C_TYPE_TIMESTAMP의 경우에는 소수 자릿수 초를 데이터 손실 없이 3자리로 나타낼 수 있고 열 크기가 23 이상인 경우 소수 자릿수 초의 자릿수는 정확히 3자리로 생성됩니다. 이 동작은 이전 ODBC 드라이버를 사용하여 개발된 응용 프로그램과의 호환성을 보장합니다.<br /><br /> 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 ODBC에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 크기가 0인 열은 ODBC에서 변수 길이 문자 형식의 크기에 제한이 없음을 의미합니다(SQL_C_TYPE_TIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리). 고정 길이 문자 형식의 열 크기를 0으로 지정하면 오류가 발생합니다.|  
 |해당 사항 없음|기존 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이전 동작이 유지됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  

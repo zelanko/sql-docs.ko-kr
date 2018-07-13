@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3cea6371ae049d33e41445c659dc66b5af5377d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 367ace8512fccfa5a9d5922aac12e6d16ffafda1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259079"
 ---
 # <a name="data-sources"></a>솔루션 탐색기
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 사용할 수 있는 데이터 원본인 디자인 타임 개체를 포함합니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -53,20 +53,20 @@ helpviewer_keywords:
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 182
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b2b624caf289f0f6962d5dbdd9e72b1bf95cc7c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239889"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다.  
   
-##  <a name="Top"></a> 내용  
+##  <a name="Top"></a> 콘텐츠  
  이 항목은 다음 섹션으로 이루어져 있습니다.  
   
 -   [SQL Server가 설치 된 서비스](#Service_Details)  
@@ -77,7 +77,7 @@ ms.locfileid: "36185092"
   
         -   [계정 속성 변경](#Changing_Accounts)  
   
-    -   [Windows 7 및 Windows Server 2008 r 2에 사용할 수 있는 새 계정 유형](#New_Accounts)  
+    -   [Windows 7 및 Windows Server 2008 R2를 사용 하 여 사용할 수 있는 새 계정 유형](#New_Accounts)  
   
     -   [자동 시작](#Auto_Start)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36185092"
   
     -   [Windows 사용 권한 및 권한](#Windows)  
   
-    -   [SQL Server 서비스별 Sid 또는 로컬 Windows 그룹에 부여 된 파일 시스템 권한](#Reviewing_ACLs)  
+    -   [SQL Server 서비스별 Sid 또는 로컬 Windows 그룹에 부여 하는 파일 시스템 권한](#Reviewing_ACLs)  
   
     -   [다른 Windows 사용자 계정 또는 그룹에 부여 된 파일 시스템 권한](#File_System_Other)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36185092"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|[로컬 서비스](#Local_Service)|[로컬 서비스](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[로컬 시스템](#Local_System)|[로컬 시스템](#Local_System)|  
   
- <sup>*</sup> 때 외부 리소스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 필요한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 계정 MSA (관리 서비스), 필요한 최소 권한으로 구성 된를 사용 하는 것이 좋습니다.  
+ <sup>*</sup> 때 외부 리소스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 필요한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 관리 서비스 계정 (MSA)에 필요한 최소 권한으로 구성를 사용 하는 것이 좋습니다.  
   
  **SQL Server 장애 조치(Failover) 클러스터 인스턴스**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36185092"
 > -   SharePoint 팜에 배포한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우 항상 SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] 응용 프로그램 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 대한 서버 계정을 변경합니다. 관련 설정 및 사용 권한은 중앙 관리를 사용할 때 새로운 계정 정보를 사용할 수 있도록 업데이트됩니다.  
 > -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션을 변경하려면 Reporting Services 구성 도구를 사용합니다.  
   
-###  <a name="New_Accounts"></a> Windows 7 및 Windows Server 2008 r 2에 사용할 수 있는 새 계정 유형  
+###  <a name="New_Accounts"></a> Windows 7 및 Windows Server 2008 R2를 사용 하 여 사용할 수 있는 새 계정 유형  
  Windows 7 and Windows Server 2008 R2에는 MSA(관리 서비스 계정)라는 서비스 계정과 가상 계정 등, 두 가지 새로운 서비스 종류가 있습니다. 관리 서비스 계정과 가상 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 중요한 응용 프로그램에 고유 계정에 대한 격리성을 제공하도록 설계되었습니다. 따라서 관리자는 이러한 계정에 대한 SPN(서비스 사용자 이름)과 자격 증명을 수동으로 관리할 필요가 없습니다. 결국 서비스 계정 사용자, 암호 및 SPN을 보다 쉽게 장기적으로 관리할 수 있습니다.  
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
@@ -278,9 +278,9 @@ ms.locfileid: "36185092"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
   
- <sup>1</sup>자세한 내용 및 무인된 설치를 위한 예제 구문에 대 한 참조 [명령 프롬프트에서 SQL Server 2014 설치](../install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
+ <sup>1</sup>자세한 내용 및 무인된 설치를 위한 예제 구문 참조 [명령 프롬프트에서 SQL Server 2014 설치](../install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
- <sup>2</sup>는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 에이전트 서비스가 사용 불가능 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
+ <sup>2</sup>는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 인스턴스에서 사용 되지 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
   
 ###  <a name="Firewall"></a> 방화벽 포트  
  대부분의 경우 처음 설치할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 동일한 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 도구를 사용하여 연결할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 Windows 방화벽의 포트를 열지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 TCP 포트에서 수신 대기하도록 구성하고 Windows 방화벽에서 적합한 연결 포트를 열지 않으면 다른 컴퓨터에서 연결할 수 없습니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
@@ -330,7 +330,7 @@ ms.locfileid: "36185092"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명 된 인스턴스: **NT 서비스\\$ * * * InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명 된 인스턴스: **NT SERVICE\\$* InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 응용 프로그램 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
 |**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser***$ComputerName*. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  
@@ -338,7 +338,7 @@ ms.locfileid: "36185092"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**서비스로 로그온** (SeServiceLogonRight)|  
   
- <sup>1</sup>는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 에이전트 서비스가 사용 불가능 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]합니다.  
+ <sup>1</sup>는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 에이전트 서비스가 해제 되어 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]입니다.  
   
 ###  <a name="Reviewing_ACLs"></a> SQL Server의 서비스별 SID 또는 로컬 Windows 그룹에 부여된 파일 시스템 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 리소스에 대한 액세스 권한이 있어야 합니다. 액세스 제어 목록은 서비스별 SID 또는 로컬 Windows 그룹에 대해 설정됩니다.  
@@ -423,7 +423,7 @@ ms.locfileid: "36185092"
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|  
   
- <sup>1</sup>는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 에이전트 서비스가 사용 불가능 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
+ <sup>1</sup>는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 인스턴스에서 사용 되지 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
   
  데이터베이스 파일이 사용자 정의 위치에 저장된 경우 해당 위치에 대한 서비스별 SID 액세스 권한을 부여해야 합니다. 서비스별 SID에 파일 시스템 권한 부여에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성](configure-file-system-permissions-for-database-engine-access.md)을 참조하세요.  
   
@@ -483,7 +483,7 @@ ms.locfileid: "36185092"
 ###  <a name="Registry"></a> 레지스트리 권한  
  인스턴스 인식형 구성 요소인 경우 레지스트리 하이브는 **HKLM\Software\Microsoft\Microsoft SQL Server\\***<Instance_ID>* 아래에 생성됩니다. 예를 들면 다음과 같습니다.  
   
--   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL12 합니다. MyInstance**  
+-   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL12입니다. MyInstance**  
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSASSQL12 합니다. MyInstance**  
   
@@ -661,7 +661,7 @@ ms.locfileid: "36185092"
   
 -   SQL 기록기  
   
- <sup>1</sup>SharePoint 통합된 모드에서 analysis Services 'PowerPivot' 명명 된 인스턴스를 단일으로 실행 합니다. 인스턴스 이름은 고정되어 있습니다. 다른 이름을 지정할 수 없습니다. 각 물리적 서버에서 'PowerPivot'으로 실행되는 Analysis Services 인스턴스는 하나만 설치할 수 있습니다.  
+ <sup>1</sup>SharePoint 통합된 모드의 analysis Services 'powerpivot' 명명 된 단일 인스턴스를 실행 됩니다. 인스턴스 이름은 고정되어 있습니다. 다른 이름을 지정할 수 없습니다. 각 물리적 서버에서 'PowerPivot'으로 실행되는 Analysis Services 인스턴스는 하나만 설치할 수 있습니다.  
   
 ###  <a name="Localized_service_names"></a> 지역화된 버전의 서비스 이름  
  다음 표에서는 각 언어 버전의 Windows에서 표시되는 서비스 이름을 보여 줍니다.  

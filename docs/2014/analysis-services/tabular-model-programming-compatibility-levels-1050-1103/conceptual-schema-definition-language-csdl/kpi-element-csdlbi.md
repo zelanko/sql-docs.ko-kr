@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f6c4ee26beb74acd6817615d34847883c3b3565
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155084"
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 요소(CSDLBI)
   KPI 요소는 KPI(핵심 성과 지표)로 사용할 수 있는 계산을 정의합니다. 비즈니스 인텔리전스 데이터 모델에서 KPI는 측정값을 기반으로 하며, KPI 정의처럼 측정값과 관련된 모든 메타데이터뿐 아니라 KPI 값을 표시하는 데 필요한 기본 그래픽 등의 정보를 포함합니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d88fa949954272942c8eca4c9f62ac470dd717cc
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: d093981287236aafa91b6ec4aa4ffeb2e75a05c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156774"
 ---
 # <a name="excel-destination"></a>Excel 대상
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  

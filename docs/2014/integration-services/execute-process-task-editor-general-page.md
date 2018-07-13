@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.general.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9828b51c33b30601075860b10e254c75dbe6f9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdafe1f838bdfb8fa94efba93432ea25ca50ee26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259119"
 ---
 # <a name="execute-process-task-editor-general-page"></a>프로세스 실행 태스크 편집기(일반 페이지)
   **프로세스 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 프로세스 실행 태스크를 명명 및 설명할 수 있습니다.  

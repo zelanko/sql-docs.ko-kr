@@ -1,5 +1,5 @@
 ---
-title: 추적 (SQL Server Profiler)에 대 한 이벤트를 필터링 | Microsoft Docs
+title: 추적 (SQL Server Profiler)에서 이벤트를 필터링 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38b7ff14caf902d431955a793db6e5cdcd28a799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ca01b3f8c7b42ecdd29b87823cdfb73cd8018a26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153544"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>추적에서의 이벤트 필터링(SQL Server Profiler)
   필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터를 설정하면 추적하는 동안 발생하는 오버헤드가 최소화됩니다.  

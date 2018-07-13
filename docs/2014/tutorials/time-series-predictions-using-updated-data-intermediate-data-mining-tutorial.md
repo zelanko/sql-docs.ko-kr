@@ -8,74 +8,74 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 3478a52657e26fa8e376e88bc83a5c4d9813cdc8
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8739f9be1ad015471017d17947ece1586663959b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278321"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>업데이트된 데이터를 사용한 시계열 예측(중급 데이터 마이닝 자습서)
     
 ## <a name="creating-predictions-using-the-extended-sales-data"></a>확장 판매 데이터를 사용하여 예측 만들기  
  이 단원에서는 모델에 새 판매 데이터를 추가하는 예측 쿼리를 만듭니다. 새 데이터로 모델을 확장하여 최신 데이터 요소를 포함하는 최신 예측을 얻을 수 있습니다.  
   
- 새 데이터를 사용 하는 시계열 예측 만들기 쉽습니다: EXTEND_MODEL_CASES 매개 변수를 추가 하면 됩니다에 [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) 작동 하 고, 새 데이터의 원본을 지정, 지정할 수 예측을 확인 하려고 합니다.  
+ 새 데이터를 사용 하는 시계열 예측 만들기는 쉽습니다: EXTEND_MODEL_CASES 매개 변수를 간단히 추가에 [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) 함수를 새 데이터의 원본을 지정 하 고 지정 개수 가져오려는 예측 합니다.  
   
 > [!WARNING]  
 >  매개 변수 EXTEND_MODEL_CASES는 선택 사항입니다. 기본적으로 모델은 새 데이터를 입력으로 조인하여 시계열 예측 쿼리를 만드는 시간에 따라 확장됩니다.  
   
 #### <a name="to-build-the-prediction-query-and-add-new-data"></a>예측 쿼리를 작성하고 새 데이터를 추가하려면  
   
-1.  모델이 아직 열려 있지 않은 경우에서 Forecasting 구조를 두 번 클릭 하 고 데이터 마이닝 디자이너에서 클릭 된 **마이닝 모델 예측** 탭 합니다.  
+1.  모델이 아직 열려 있지 않으면 Forecasting 구조를 두 번 클릭 하 고 데이터 마이닝 디자이너에서을 클릭 합니다 **마이닝 모델 예측** 탭 합니다.  
   
-2.  에 **마이닝 모델** 창, 모델이 예측을 이미 선택 되어 있어야 합니다. 선택 하지 않으면 클릭 **모델 선택**, 다음 모델을 선택 하 고 예측 합니다.  
+2.  에 **마이닝 모델** 창, 이미 선택 되어 Forecasting 모델입니다. 선택 하지 않으면 클릭 **모델 선택**를 선택한 다음 모델을 예측 합니다.  
   
-3.  에 **입력 테이블 선택** 창에서 클릭 **사례 테이블 선택**합니다.  
+3.  에 **입력 테이블 선택** 창 클릭 **사례 테이블 선택**합니다.  
   
 4.  에 **테이블 선택** 대화 상자에서 데이터 원본을 선택 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]합니다.  
   
-     데이터 원본 뷰 목록에서 NewSalesData 선택한 다음 클릭 **확인**합니다.  
+     데이터 원본 뷰 목록에서 NewSalesData를 선택 하 고 클릭 **확인**합니다.  
   
-5.  디자인 영역의 화면을 마우스 오른쪽 단추로 클릭 하 고 선택 **연결 수정**합니다.  
+5.  디자인 영역의 화면을 마우스 오른쪽 단추로 누르고 **연결 수정**합니다.  
   
-6.  사용 하는 **매핑 수정** 대화 상자에서 모델의 열을 외부 데이터의 열에는 다음과 같이 매핑됩니다.  
+6.  사용 하 여 합니다 **매핑 수정** 대화 상자에서 다음과 같이 외부 데이터의 열을 모델의 열을 매핑합니다.  
   
-    -   입력된 데이터에 NewDate 열에 마이닝 모델의 ReportingDate 열을 매핑하십시오.  
+    -   NewDate 열 입력된 데이터에 마이닝 모델의 ReportingDate 열을 매핑하십시오.  
   
-    -   입력된 데이터에 NewAmount 열에 마이닝 모델의 Amount 열을 매핑하십시오.  
+    -   마이닝 모델에서 Amount 열을 NewAmount 열을 입력된 데이터에 매핑됩니다.  
   
-    -   입력된 데이터에 NewQty 열에 마이닝 모델의 수량 열을 매핑하십시오.  
+    -   NewQty 열 입력된 데이터에 마이닝 모델의 수량 열을 매핑하십시오.  
   
-    -   입력된 데이터의 계열 열을 마이닝 모델의 ModelRegion 열을 매핑하십시오.  
+    -   입력된 데이터의 시계열 열에 마이닝 모델에서 ModelRegion 열을 매핑하십시오.  
   
 7.  이제 예측 쿼리를 작성합니다.  
   
      우선, 예측이 적용되는 계열을 출력하기 위해 예측 쿼리에 열을 추가합니다.  
   
-    1.  표에서 첫 번째 빈 행을 아래에서 클릭 **소스**, 한 다음 Forecasting를 선택 합니다.  
+    1.  표의 첫 번째 빈 행을 아래에서 클릭 **원본**를 선택한 다음 예측 합니다.  
   
     2.  에 **필드** 선택 Model Region 열 및 **별칭**, 형식 `Model Region`합니다.  
   
 8.  다음으로 예측 함수를 추가하고 편집합니다.  
   
-    1.  빈 행을 클릭 하 고 **소스**을 선택 **예측 함수**합니다.  
+    1.  빈 행을 클릭 하 고 **소스**를 선택 **예측 함수**합니다.  
   
-    2.  에 대 한 **필드**선택, **PredictTimeSeries**합니다.  
+    2.  에 대 한 **필드**를 선택 **PredictTimeSeries**합니다.  
   
     3.  에 대 한 **별칭**, 형식 **Predicted Values**합니다.  
   
     4.  수량 필드를 끌어에서 **마이닝 모델** 창에는 **조건/인수** 열입니다.  
   
-    5.  에 **조건/인수** 열, 필드 이름 뒤에 오는 다음 텍스트를 입력: **EXTEND_MODEL_CASES 5 일**  
+    5.  에 **조건/인수** 열에서 필드 이름 뒤에 오는 다음 텍스트를 입력: **5, EXTEND_MODEL_CASES**  
   
-         전체 텍스트는 **조건/인수** 입력란 다음과 같아야 합니다. `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
+         전체 텍스트를 **조건/인수** 입력란 다음과 같아야 합니다. `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
 9. 클릭 **결과** 결과 검토 합니다.  
   

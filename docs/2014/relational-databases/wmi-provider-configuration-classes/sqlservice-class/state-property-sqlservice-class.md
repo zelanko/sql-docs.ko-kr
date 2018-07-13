@@ -20,15 +20,15 @@ helpviewer_keywords:
 - State property
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e9c0666457d0d0417af43bd761a1dc42eaff0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 90acc038d5db2f00c4f37d4177b77f2141bff346
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240503"
 ---
 # <a name="state-property-sqlservice-class"></a>State 속성(SqlService 클래스)
   서비스의 현재 상태를 가져오거나 설정합니다.  

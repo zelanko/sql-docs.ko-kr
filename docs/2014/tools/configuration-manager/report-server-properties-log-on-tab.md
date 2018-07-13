@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e359bd1ab752813f816702787cd9f75b41f05cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 45fdd95854ee676bea03ff3c322089901f240026
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161614"
 ---
 # <a name="report-server-properties-log-on-tab"></a>보고서 서버 속성(로그온 탭)
   **보고서 서버 속성** 대화 상자의 **로그온** 탭을 사용하여 보고서 서버 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  

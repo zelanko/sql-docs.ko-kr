@@ -5,25 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99ca6432eb5d29e9ce7a0c01e80ed2bae4ddf3da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: edbf18a7ab523e88a2a7d2a8a0b2c723a1cae327
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183243"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427592"
 ---
 # <a name="use-date-and-time-types"></a>날짜 및 시간 형식 사용
-  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  
  DateTime이라는 ODBC 데이터 원본이 필요합니다. DateTime의 기본 데이터베이스는 tempdb입니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  

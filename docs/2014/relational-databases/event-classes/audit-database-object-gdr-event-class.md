@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Object GDR event class
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f3cb9e6b21ffe127b646e994ddd919b4d96b57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 66375b0f9c4d42628ee1c41be121f7c99949e71f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158494"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR 이벤트 클래스
   **Audit Database Object GDR** 이벤트 클래스는 어셈블리와 스키마 같은 데이터베이스 개체에 대해 GRANT, REVOKE 또는 DENY가 실행되었을 때 발생합니다.  

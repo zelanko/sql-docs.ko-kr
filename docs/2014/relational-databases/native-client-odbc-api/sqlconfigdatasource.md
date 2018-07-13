@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SQLConfigDataSource function
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3608900d780614131c6d811ea3923fe89b1007f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7aacc73c006813ab2a9890d5743a82b53e26eedd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184038"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412882"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다양 한 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-원본 구성 특성 문자열 데이터에 대 한 특정 키워드/값 쌍입니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 지 원하는 다양 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-원본 구성 특성 문자열 데이터에 대 한 특정 키워드/값 쌍입니다.  
   
- 사용할 수 있는 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 참조 [Connection String Keywords with SQL Server Native Client를 사용 하 여](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)합니다.  
+ 사용할 수 있는 키워드 목록은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 참조 하세요 [SQL Server Native Client를 사용 하 여 연결 문자열 키워드를 사용 하 여](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLConfigDataSource 함수](http://go.microsoft.com/fwlink/?LinkId=59337)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 13da2630ac888da2ef3f18a233282d6b3d868883
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1628e7495660a765f8a0b2c54868cbee2878252d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150874"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>사용자의 전자 메일 주소 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 알림이 전송되는 전자 메일 주소와 알림 전자 메일의 기본 형식을 변경할 수 있습니다.  

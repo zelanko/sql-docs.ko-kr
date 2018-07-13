@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54606ed4dda94c569e1a4aef2438e42cd104eebd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da12f40cba7da5a7c56d702c20d7ad2e7759b796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150254"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>지도 뷰포트 속성 대화 상자, 최적화
   **지도 뷰포트 속성** 대화 상자의 **최적화** 를 선택하여 보고서에서 지도를 보기 위한 해상도를 제어할 수 있습니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "36185778"
   
 ## <a name="see-also"></a>관련 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 보고서에 지도 &#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

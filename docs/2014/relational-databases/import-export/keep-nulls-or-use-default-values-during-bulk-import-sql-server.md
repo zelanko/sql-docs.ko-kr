@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258779"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
   기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|스위치|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|인수|  
   
- <sup>1</sup> 대량 삽입에 대 한 기본값을 사용할 수 없는 경우는 테이블 열 정의 해야 null 값을 허용 하도록 합니다.  
+ <sup>1</sup> 대량 삽입에 대 한 기본값을 사용할 수 없는 경우 테이블 열 정의 해야 합니다 null 값을 허용 하도록 합니다.  
   
 > [!NOTE]  
 >  이러한 한정자는 대량 가져오기 명령을 통해 테이블에서 DEFAULT 정의 확인을 비활성화합니다. 그러나 동시 INSERT 문의 경우 DEFAULT 정의가 있어야 합니다.  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 삽입할 "`NULL`instead of`Default value of Col2`"를 사용 해야는 `-k` 스위치 또는 KEEPNULL 옵션을 다음에 표시 된 대로 **bcp** 및 BULK INSERT 예입니다.  
+ 삽입할 "`NULL`instead of`Default value of Col2`"를 사용 해야 합니다 `-k` 스위치 또는 KEEPNULL 옵션을 다음에 설명 된 대로 **bcp** 및 BULK INSERT 예입니다.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>bcp 사용 및 Null 값 유지  
  다음 예에서는 **bcp** 명령에서 Null 값을 유지하는 방법을 설명합니다. **bcp** 명령에는 다음 스위치가 포함됩니다.  

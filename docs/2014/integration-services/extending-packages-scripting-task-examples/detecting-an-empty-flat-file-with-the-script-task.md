@@ -19,13 +19,13 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0990339e7ab1d26fda726a28edad884fa8a0d07c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1c7e64e2d1c79d42cb576e74ed8d4b35e7bd85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160844"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>스크립트 태스크를 사용하여 빈 플랫 파일 검색
   플랫 파일 원본에서는 플랫 파일의 처리를 시도하기 전에 플랫 파일에 데이터 행이 들어 있는지 여부를 확인하지 않습니다. 그러나 데이터 행이 들어 있지 않은 파일을 건너뛰면 특히 수많은 플랫 파일을 반복하는 패키지 등에서 패키지 효율성을 높일 수 있습니다. 스크립트 태스크는 패키지에서 데이터 흐름의 처리를 시작하기 전에 빈 플랫 파일을 찾을 수 있습니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "36185886"
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
 ## <a name="description"></a>Description  
- 다음 예에서는 `System.IO` 네임스페이스의 메서드로 플랫 파일 연결 관리자에서 지정한 플랫 파일을 테스트하여 해당 파일이 비어 있는지 여부나 열 머리글 또는 빈 줄과 같이 필요한 비데이터 행만 들어 있는지 여부를 확인합니다. 이 스크립트에서는 먼저 파일 크기를 확인합니다. 크기가 0바이트이면 해당 파일은 비어 있는 것입니다. 파일 크기가 0보다 크면 스크립트에서는 줄이 더 이상 없거나 줄 수가 비데이터 행의 예상 개수를 초과할 때까지 파일의 줄을 읽습니다. 파일의 줄 수가 비데이터 행의 예상 개수보다 작거나 같으면 해당 파일은 비어 있는 것으로 간주됩니다. 결과는 패키지의 제어 흐름에서 분기하는 데 사용할 수 있는 값을 갖는 사용자 변수에 부울 값으로 반환됩니다. `FireInformation` 메서드에 결과 표시 합니다는 **출력** 의 창 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA Tools for Applications ().  
+ 다음 예에서는 `System.IO` 네임스페이스의 메서드로 플랫 파일 연결 관리자에서 지정한 플랫 파일을 테스트하여 해당 파일이 비어 있는지 여부나 열 머리글 또는 빈 줄과 같이 필요한 비데이터 행만 들어 있는지 여부를 확인합니다. 이 스크립트에서는 먼저 파일 크기를 확인합니다. 크기가 0바이트이면 해당 파일은 비어 있는 것입니다. 파일 크기가 0보다 크면 스크립트에서는 줄이 더 이상 없거나 줄 수가 비데이터 행의 예상 개수를 초과할 때까지 파일의 줄을 읽습니다. 파일의 줄 수가 비데이터 행의 예상 개수보다 작거나 같으면 해당 파일은 비어 있는 것으로 간주됩니다. 결과는 패키지의 제어 흐름에서 분기하는 데 사용할 수 있는 값을 갖는 사용자 변수에 부울 값으로 반환됩니다. `FireInformation` 메서드는 또한 결과를 표시 합니다 **출력** 기간을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  만들기 및 구성 이라는 플랫 파일 연결 관리자 `EmptyFlatFileTest`합니다.  
+1.  만들기 및 구성 이라는 플랫 파일 연결 관리자를 `EmptyFlatFileTest`입니다.  
   
 2.  `FFNonDataRows`라는 정수 변수를 만들고 해당 값을 플랫 파일에 필요한 비데이터 행의 개수로 설정합니다.  
   
@@ -144,7 +144,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 태스크 예제](../extending-packages-scripting-task-examples/script-task-examples.md)  
