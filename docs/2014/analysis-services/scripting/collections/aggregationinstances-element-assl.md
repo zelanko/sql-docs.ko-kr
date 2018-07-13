@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstances element
 ms.assetid: e8321aa8-361b-4d8a-bd89-a596eeb814b1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2559602f932379272e948bd6e24e8ec6a6a7b246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4580f50935a9819bba3a10531376389033c3ae04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237593"
 ---
 # <a name="aggregationinstances-element-assl"></a>AggregationInstances 요소(ASSL)
   에 정의 된 집계 인스턴스의 컬렉션을 포함 한 [파티션](../objects/partition-element-assl.md) 요소입니다.  

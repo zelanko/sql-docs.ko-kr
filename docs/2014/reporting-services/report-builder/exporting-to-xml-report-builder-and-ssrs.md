@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bfa8b10cd2d67154946395334f8bde2b9bbd680a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223273"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)
   XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램으로 전송할 수 있습니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "36079480"
 |입력란 값|지정되는 데이터 형식|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (또는 `Decimal` 모든 정수 또는 바이트 데이터 형식)|**xsd:decimal**|  
-|`Float` (또는 `Decimal` 모든 정수 또는 바이트 데이터 형식)|**xsd:float**|  
-|`Double` (또는 `Decimal` 모든 정수 또는 바이트 데이터 형식)|**xsd:double**|  
+|`Decimal` (또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:decimal**|  
+|`Float` (또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:float**|  
+|`Double` (또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
@@ -84,7 +84,7 @@ ms.locfileid: "36079480"
   
  XML 네임스페이스 정의와 스키마 참조 특성도 보고서 요소에 포함됩니다. 변수는 굵은 글꼴로 표시됩니다.  
   
- \<**보고서** xmlns = "**SchemaName**" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc %3aSchema = true"Name ="ReportName">  
+ \<**보고서** xmlns = "**SchemaName**" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc %3aSchema = true"이름"ReportName"= >  
   
  변수의 값은 다음과 같습니다.  
   

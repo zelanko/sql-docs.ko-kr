@@ -1,5 +1,5 @@
 ---
-title: 실패 한 입된/출력 요청을 감지 | Microsoft Docs
+title: 실패 한 입된/출력 요청 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0968de089fb1f1a0f667479813cc539d89d234ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a65a894ae850d45a5887e08f51e50539ce818226
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177640"
 ---
 # <a name="detect-failed-input-output-request"></a>실패 한 입된/출력 요청 검색
   이 규칙은 시스템 이벤트 로그에서 EventId 50을 검사합니다. 이 오류는 실패한 I/O 요청으로 인해 발생합니다.  

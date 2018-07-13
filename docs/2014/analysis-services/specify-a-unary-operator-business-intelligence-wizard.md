@@ -1,5 +1,5 @@
 ---
-title: (비즈니스 인텔리전스 마법사) 단항 연산자 지정 | Microsoft Docs
+title: 단항 연산자 (비즈니스 인텔리전스 마법사)를 지정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.customrollups.f1
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4edbf414a962f5ed057c68fe824d09200f4ea3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc5c8210dee9960dbb40320d1923d8e8681b4988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237323"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>단항 연산자 지정(비즈니스 인텔리전스 마법사)
   **단항 연산자 지정** 페이지를 사용하여 단항 연산자(일반 집계의 경우) 또는 가중치 요인을 나타내는 값(가중 집계의 경우)이 포함된 열의 부모-자식 관계를 식별할 수 있습니다. 일반 집계 및 가중 집계에 대한 자세한 내용은 [집계 및 집계 디자인](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)을 참조하세요.  

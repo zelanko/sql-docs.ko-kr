@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimensionPermission data type
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d215ed3dde22c3d0e16df4cc4d937c9ee3cb0a34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17bd5df3cd2dad116384d28e1f427d14a86b6b72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180830"
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>CubeDimensionPermission 데이터 형식(ASSL)
   큐브의 특정 차원에서 단일 역할에 대한 사용 권한을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -61,13 +61,13 @@ ms.locfileid: "36078637"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [AttributePermissions](../collections/attributepermissions-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [설명](../properties/description-element-assl.md), [읽기](../properties/read-element-assl.md), [ 쓰기](../properties/write-element-assl.md)|  
-|파생 요소|[DimensionPermission](../objects/dimensionpermission-element-assl.md) ([DimensionPermissions](../collections/dimensionpermissions-element-assl.md) 컬렉션 [차원](../objects/dimension-element-assl.md) 또는 [CubePermission](../objects/cubepermission-element-assl.md))|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [AttributePermissions](../collections/attributepermissions-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)를 [설명을](../properties/description-element-assl.md)를 [읽기](../properties/read-element-assl.md), [ 쓰기](../properties/write-element-assl.md)|  
+|파생 요소|[DimensionPermission](../objects/dimensionpermission-element-assl.md) ([DimensionPermissions](../collections/dimensionpermissions-element-assl.md) 모음인 [차원](../objects/dimension-element-assl.md) 하거나 [CubePermission](../objects/cubepermission-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.CubeDimensionPermission>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

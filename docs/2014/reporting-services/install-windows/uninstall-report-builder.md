@@ -1,5 +1,5 @@
 ---
-title: 독립 실행형 버전의 보고서 작성기 (보고서 작성기) 제거 | Microsoft Docs
+title: 제거 된 독립 실행형 버전의 보고서 작성기 (보고서 작성기) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5482ca3ec570b4155712dbeaf3768a55372eccad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fec5ecbe30bb55262a274b5764d6650044a54a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216853"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 제거(보고서 작성기)
   제어판 또는 명령줄에서 독립 실행형 버전의 보고서 작성기를 제거할 수 있습니다. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전 보고서 작성기는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]를 제거해야만 제거할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36079469"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  에 **열려** 텍스트 상자, 형식 `cmd.`  
+2.  에 **열고** 텍스트 상자 `cmd.`  
   
 3.  명령 프롬프트 창에서 ReportBuilder3_x86.msi가 있는 폴더로 이동합니다.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "36079469"
   
 ## <a name="see-also"></a>관련 항목  
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
- [보고서 작성기의 독립 실행형 버전 &#40;보고서 작성기&#41;](install-report-builder.md)  
+ [보고서 작성기의 독립 실행형 버전을 설치 &#40;보고서 작성기&#41;](install-report-builder.md)  
   
   

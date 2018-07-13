@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 38ec212177dc13d823ceb3f1927cceba645d14f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5069864e30f02d02fe7d3bf02324c013f6a69219
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252055"
 ---
 # <a name="example-specifying-the-hide-directive"></a>예제: HIDE 지시어 지정
   이 예에서는 **HIDE** 지시어 사용 방법을 보여 줍니다. 이 지시어는 쿼리에 의해 반환된 범용 테이블의 행을 정렬하기 위한 특성은 쿼리가 반환하게 하고 최종 결과 XML 문서에는 그 특성이 포함되지 않게 하려는 경우에 유용합니다.  

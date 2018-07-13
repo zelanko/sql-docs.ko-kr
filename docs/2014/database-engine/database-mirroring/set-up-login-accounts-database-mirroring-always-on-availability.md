@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
@@ -16,13 +15,13 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2e3a776568822b38e3eba56839ecffad26893b55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba315e277513bb0f488982dcfb84bded5cc48a73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245263"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대한 로그인 계정 설정(SQL Server)
   두 서버 인스턴스가 서로의 [데이터베이스 미러링 끝점](the-database-mirroring-endpoint-sql-server.md) 포인트에 연결할 수 있으려면 각 인스턴스의 로그인 계정에 다른 인스턴스에 대한 액세스가 필요합니다. 또한 각 로그인 계정에는 다른 인스턴스의 데이터베이스 미러링 끝점에 대한 CONNECT 권한도 있어야 합니다.  

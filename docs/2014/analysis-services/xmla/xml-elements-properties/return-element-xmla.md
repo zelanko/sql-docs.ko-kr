@@ -24,18 +24,18 @@ helpviewer_keywords:
 - return element
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1a4468ce3d4b14ff9cd9db7c9373083aad75d3eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4808372fbf80b2b3a79bc11e3f2423511eb717be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192411"
 ---
 # <a name="return-element-xmla"></a>return 요소(XMLA)
-  반환 된 정보를 포함 한 [DiscoverResponse](../xml-elements-objects-discoverresponse.md) 요소에 대 한 응답에는 [Discover](../xml-elements-methods-discover.md) 메서드 호출 또는 [ExecuteResponse](../xml-elements-objects-executeresponse.md) 요소는 에대한응답에서[Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
+  반환한 정보를 포함 한 [DiscoverResponse](../xml-elements-objects-discoverresponse.md) 요소에 대 한 응답에서을 [검색](../xml-elements-methods-discover.md) 메서드 호출 또는 [ExecuteResponse](../xml-elements-objects-executeresponse.md) 요소에 대 한 응답에 [Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36078636"
 |------------------|-------------|  
 |부모 요소|[DiscoverResponse](../xml-elements-objects-discoverresponse.md), [ExecuteResponse](../xml-elements-objects-executeresponse.md)|  
 |상위:[DiscoverResponse](../xml-elements-objects-discoverresponse.md)|자식: <br />                        [root](root-element-xmla.md)|  
-|상위 항목: <br />                        [ExecuteResponse](../xml-elements-objects-executeresponse.md)|자식: [루트](root-element-xmla.md) 또는 [결과](results-element-xmla.md)|  
+|상위 항목: <br />                        [ExecuteResponse](../xml-elements-objects-executeresponse.md)|: 자식 [루트](root-element-xmla.md) 또는 [결과](results-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `return` 요소는 `Discover` 및 `Execute` 메서드가 반환하는 데이터를 포함합니다. 일반적으로 `return` 요소는 성공적인 `root` 또는 `Discover` 메서드 호출에 의해 반환되는 데이터, 또는 실패한 메서드 호출에 의해 반환되는 XMLA(XML for Analysis) 예외를 포함하는 하나의 `Execute` 요소를 포함합니다. `Execute` 메서드가 여러 작업을 수행하는 `Batch` 명령을 포함한 경우 `return` 요소는 `results` 요소를 포함하며, 이 요소는 `root` 명령에 의해 실행되는 성공 또는 실패한 각 명령에 대해 하나의 `Batch` 요소를 포함합니다.   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249173"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>관계 삭제(SSAS 테이블 형식)
-  다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계를 사용 하는 방법에 대 한 정보를 참조 하십시오. [관계 &#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)합니다.  
+  다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계가 사용 되는 방법에 대 한 자세한 내용은 [관계 &#40;&AMP;#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)합니다.  
   
 ## <a name="considerations-for-deleting-relationships"></a>관계 삭제 시 고려 사항  
  관계를 삭제할지 여부를 결정할 때 다음 사항에 유의하십시오.  
@@ -56,7 +56,7 @@ ms.locfileid: "36079366"
 4.  **관계 관리** 대화 상자에서 **닫기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [관계 &#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)   
- [두 테이블 간의 관계를 만들 &#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [관계 &#40;&AMP;#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)   
+ [두 테이블 간에 관계 만들기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

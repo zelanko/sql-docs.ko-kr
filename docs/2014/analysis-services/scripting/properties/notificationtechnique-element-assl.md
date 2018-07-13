@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1216ed87ac9fd24265dbcb33d13ba831997b73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213913"
 ---
 # <a name="notificationtechnique-element-assl"></a>NotificationTechnique 요소(ASSL)
-  지정 여부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 외부 클라이언트 응용 프로그램의 알림을 처리 합니다.  
+  지정 여부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 외부 클라이언트 응용 프로그램이 알림을 처리할지 또는 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36078893"
 |*클라이언트*|외부 클라이언트 응용 프로그램이 알림을 처리합니다.|  
 |*Server*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 알림을 처리합니다.|  
   
- 부모에 해당 하는 요소 `NotificationTechnique` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>합니다.  
+ 부모에 해당 하는 요소가 `NotificationTechnique` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>합니다.  
   
  AMO(Analysis Management Objects) 개체 모델에서 `NotificationTechnique`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.NotificationTechnique>입니다.  
   

@@ -1,44 +1,44 @@
 ---
-title: sys.dm_pdw_dms_cores (Transact SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_cores (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: b3f09b15-0863-4418-9347-a4f5fd2ab7c7
 caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 34e02cc4dbc1f521d802219fd3d48fb77636a4a4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 2c0d681ef3b1d5a7843a955f9e5e0e4a3f69c4e9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465609"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36763698"
 ---
 # <a name="sysdmpdwdmscores-transact-sql"></a>sys.dm_pdw_dms_cores (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  어플라이언스의 계산 노드에서 실행 되는 모든 DMS 서비스에 대 한 정보를 보유 합니다. 노드당 하나의 행이 현재는 서비스 인스턴스의 당 한 개의 행을 나열 합니다.  
+  어플라이언스의 계산 노드에서 실행 중인 모든 DMS 서비스에 대 한 정보를 보유 합니다. 노드당 하나의 행이 현재 서비스 인스턴스마다 하나의 행을 나열 합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|이 DMS 코어와 연결 된 고유 숫자 id입니다.<br /><br /> 이 보기에 대 한 키입니다.|이 DMS 코어에서 실행 되는 노드의 pdw_node_id로 설정 합니다.|  
-|pdw_node_id|**int**|이 DMS 서비스 실행 되는 노드의 ID입니다.|참조에 대 한 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
+|dms_core_id|**int**|이 DMS 코어를 사용 하 여 연결 된 고유 숫자 id입니다.<br /><br /> 이 보기에 대 한 키입니다.|이 DMS core에서 실행 되는 노드의 pdw_node_id로 설정 합니다.|  
+|pdw_node_id|**int**|DMS 서비스가 실행 되는 노드의 ID입니다.|에 대 한 node_id를 참조 하세요 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
 |상태|**nvarchar(32)**|DMS 서비스의 현재 상태입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 내용은에 최대 시스템 뷰의 값 섹션을 참조는 [최소값 및 최 댓 값 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) 항목입니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 최대 시스템 뷰의 값 섹션을 참조 합니다 [최소값 및 최대값 (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) 항목입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

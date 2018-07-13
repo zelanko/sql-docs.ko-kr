@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
 - F1 Help [SQL Server Database Engine]
@@ -16,13 +16,13 @@ ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d32d1f445ac94826334f128980f774422daf880b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce976d0d770cbbd0c1bc56883440c93992db005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197753"
 ---
 # <a name="feature-reference-database-engine"></a>기능 참조(데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에는 데이터베이스 개체와 데이터를 생성, 관리 및 표시할 수 있는 여러 가지 도구와 응용 프로그램이 있습니다. 또한 기능, 서비스 및 네트워크 프로토콜을 활성화 및 비활성화하고 서버와 데이터베이스 성능을 모니터링하고 문제 해결하는 데 사용할 수 있는 도구가 있습니다. 이 섹션에서는 이러한 도구와 응용 프로그램의 대화 상자를 설명하는 항목을 제공합니다.  

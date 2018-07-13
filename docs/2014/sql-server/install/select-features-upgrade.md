@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - features to upgrade
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0d9a43035a293e28f6e368a48436624f3a199c0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f308bd39c805a2d53f86d887481295d12ce11aca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175122"
 ---
 # <a name="select-features-upgrade"></a>기능 선택(업그레이드)
   **설치 마법사의** 기능 선택 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 페이지를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 기능을 확인할 수 있습니다.  

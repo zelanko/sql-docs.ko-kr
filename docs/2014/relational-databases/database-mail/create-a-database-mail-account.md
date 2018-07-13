@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
 - accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1aa921f9704636b05f71ae7040d25eb3a01b895
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 91934cd120a48f05ba73dbddf2433af4d1a6cd18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172914"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 계정을 만들 수 있습니다.  

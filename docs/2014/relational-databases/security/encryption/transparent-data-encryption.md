@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236603"
 ---
 # <a name="transparent-data-encryption-tde"></a>투명한 데이터 암호화
   *투명한 데이터 암호화* (TDE)는 사용하지 않는 데이터 암호화라고 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 데이터 파일을 암호화합니다. 보안 시스템 디자인, 중요한 자산 암호화 및 데이터베이스 서버에 대한 방화벽 구축과 같은 데이터베이스의 보안을 설정하기 위해 여러 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)를 도난 당한 경우 악의적인 사용자가 데이터베이스를 복원하거나 연결하여 데이터를 찾아볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
@@ -234,9 +233,9 @@ GO
  TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. TDE가 사용하도록 설정된 경우에는 메모리 내 OLTP 로그 레코드가 암호화됩니다. TDE가 설정된 경우에는 MEMORY_OPTIMIZED_DATA 파일 그룹의 데이터가 암호화되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Tde로 보호 되는 다른 SQL Server로 데이터베이스 이동](move-a-tde-protected-database-to-another-sql-server.md)   
+ [다른 SQL Server로는 TDE 보호 데이터베이스 이동](move-a-tde-protected-database-to-another-sql-server.md)   
  [EKM을 사용 하 여 TDE를 사용 하도록 설정](enable-tde-on-sql-server-using-ekm.md)   
- [Azure SQL 데이터베이스를 사용한 투명 한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [Azure SQL Database 사용한 투명 한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server 암호화](sql-server-encryption.md)   
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

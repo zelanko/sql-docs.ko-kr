@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 611219cbefc037bc0719b1f48b46178d6eef8af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 451b29e05d7bcb3dfca26a1f6c5287bf47e20f90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186630"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
-  정보를 찾을-디자이너, 개발자, 분석가 또는 관리자를 만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 합니다. 그런 다음 이러한 패키지를 응용 프로그램 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
+  누구 든 지 정보를 찾을-디자이너, 개발자, 분석가 또는 관리자-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 응용 프로그램 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Integration Services &#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)  

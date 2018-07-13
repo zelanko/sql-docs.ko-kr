@@ -1,5 +1,5 @@
 ---
-title: 계산 대화 상자 (Analysis Services)를 명명 된 만들기 편집 | Microsoft Docs
+title: 만들기 편집 이라는 계산 대화 상자 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsveditor.createnamedcalculation.f1
 helpviewer_keywords:
 - Named Calculation dialog box
 ms.assetid: 66fb30ae-f5c5-4bfc-80ca-8c8a3a9bb30d
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 007fce8fae62df381629b4daa1b6ef0c00d781bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42223e0a45e3e26c79e0d4d1cbcbfc0e81e92c4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232413"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Create-Edit Named Calculation Dialog Box (Analysis Services)
   **의** 명명된 계산 만들기/편집 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰에서 테이블에 대한 명명된 계산을 정의하거나 수정할 수 있습니다. 다음과 같은 방법으로 **명명된 계산 만들기/편집** 대화 상자를 표시할 수 있습니다.  
@@ -51,7 +51,7 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
  위의 식은 하위 SELECT 문을 사용하여 다른 테이블에 대한 참조를 포함할 수 있습니다. If the expression would require parentheses in a SELECT statement, the expression entered must be enclosed between parentheses.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [데이터 원본 뷰 디자이너 &#40;Analysis Services-다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

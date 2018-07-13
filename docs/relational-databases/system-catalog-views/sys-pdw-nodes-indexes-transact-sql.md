@@ -1,40 +1,38 @@
 ---
-title: sys.pdw_nodes_indexes (Transact SQL) | Microsoft Docs
+title: sys.pdw_nodes_indexes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 04591e83fdfd8222a84480f983b21a6d77d51da2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db4fcae2e341731ff3e56b8b5a11101d7db5da5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181229"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875021"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  에 대 한 인덱스를 반환 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다.  
+  에 대 한 인덱스를 반환 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|이 인덱스가 속한 개체의 id입니다.||  
-|name|**sysname**|인덱스의 이름입니다. 이름은 해당 개체 내 에서만 고유 합니다. NULL = 힙||  
+|NAME|**sysname**|인덱스의 이름입니다. 이름은 해당 개체 내 에서만 고유 합니다. NULL = 힙||  
 |index_id|**int**|인덱스의 id입니다. index_id는 해당 개체 내 에서만 고유 합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스||  
 |유형|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 5 = 클러스터형 xVelocity 메모리 최적화 columnstore 인덱스|  
 |type_desc|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 클러스터형된 COLUMNSTORE||  
@@ -51,12 +49,12 @@ ms.locfileid: "33181229"
 |allow_page_locks|**bit**|1 = 인덱스에서 페이지 잠금을 허용합니다.|항상 1입니다.|  
 |has_filter|**bit**|0 = 인덱스에 필터가 없습니다.|항상 0입니다.|  
 |filter_definition|**nvarchar(max)**|필터링된 인덱스에 포함된 행 하위 집합에 대한 식입니다.|항상 NULL입니다.|  
-|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
+|pdw_node_id|**int**|고유 식별자를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

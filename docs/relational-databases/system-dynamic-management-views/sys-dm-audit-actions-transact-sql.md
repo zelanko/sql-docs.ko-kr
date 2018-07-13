@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (Transact SQL) | Microsoft Docs
+title: sys.dm_audit_actions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,21 +22,21 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a180e8b337ea984e320d41f77284ee9833b624
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 864072a00f2db088b03ce280bf0ad137627b6a7c
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465929"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957636"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사 참조 [SQL Server Audit &#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|감사 동작의 ID입니다. 에 관련 된 **action_id** 각 감사 레코드에 기록 하는 값입니다. Null을 허용합니다. 감사 그룹의 경우 NULL입니다.|  
+|**action_id**|**varchar(4)**|감사 동작의 ID입니다. 관련 된 **action_id** 각 감사 레코드에 기록 하는 값입니다. Null을 허용합니다. 감사 그룹의 경우 NULL입니다.|  
 |**action_in_log**|**bit**|동작을 감사 로그에 기록할 수 있는지 여부를 나타냅니다. 값은 다음과 같습니다.<br /><br /> 1 = 예<br /><br /> 0 = 아니요|  
 |**name**|**sysname**|감사 동작 또는 동작 그룹의 이름입니다. Null을 허용하지 않습니다.|  
 |**class_desc**|**nvarchar(120)**|감사 동작이 적용되는 개체 클래스의 이름입니다. 서버, 데이터베이스 또는 스키마 범위 개체 중 하나일 수 있지만 스키마 개체를 포함하지 않습니다. Null을 허용하지 않습니다.|  
@@ -45,12 +45,12 @@ ms.locfileid: "34465929"
 |**configuration_level**|**nvarchar(10)**|이 행에 지정된 동작 또는 동작 그룹을 그룹 또는 동작 수준에서 구성할 수 있음을 나타냅니다. 동작을 구성할 수 없는 경우 NULL입니다.|  
 |**containing_group_name**|**nvarchar(120)**|지정된 동작이 포함된 감사 그룹의 이름입니다. 이름의 값이 그룹인 경우 NULL입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  보안 주체에 있어야 **선택** 권한. 기본적으로 이 권한은 Public에 부여됩니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

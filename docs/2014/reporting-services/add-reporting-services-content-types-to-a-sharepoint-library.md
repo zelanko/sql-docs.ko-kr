@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177550"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 데이터 원본 (.rsds) 파일, 보고서 모델 (.smdl) 및 보고서 작성기 보고서 정의 (.rdl) 파일을 관리 하는 데 사용 되는 미리 정의 된 SharePoint 콘텐츠 형식을 제공 합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.  
@@ -28,12 +28,12 @@ ms.locfileid: "36078566"
   
  라이브러리에 콘텐츠 형식을 추가하려면 사이트 관리자이거나 모든 권한 수준의 사용 권한이 있어야 합니다.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 및 콘텐츠 형식 관리를 자동으로 설정 됩니다 다음 중 하나를 생성 하는 기존 사이트 모음의 모든 문서 라이브러리에서 **비즈니스 인텔리전스 센터** 사이트 서식 파일입니다.  
+ 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 형식 및 콘텐츠 형식 관리를 자동으로 사용한 다음에서 생성 된 기존 사이트 모음의 모든 문서 라이브러리에서 콘텐츠 **비즈니스 인텔리전스 센터** 사이트 템플릿.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합 후에 생성된 사이트에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식이 설정되어 있지 않습니다.  
   
 > [!TIP]  
->  있는 경우 **하지** 먼저 콘텐츠 형식 관리를 설정한 다음 사용 콘텐츠 형식을 라이브러리에 대 한 이전에 구성 된는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식입니다. 단일 문서 라이브러리에서 콘텐츠 형식 관리 설정에 대한 절차를 참조하세요.  
+>  있는 경우 **하지** 콘텐츠 형식을 라이브러리에 대해 먼저 콘텐츠 형식 관리를 사용 설정한 이전에 구성한는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식입니다. 단일 문서 라이브러리에서 콘텐츠 형식 관리 설정에 대한 절차를 참조하세요.  
   
  **짧은 비디오:** [(SSRS)Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w)(http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
@@ -110,9 +110,9 @@ ms.locfileid: "36078566"
 8.  콘텐츠 형식 추가를 완료하면 **확인**을 클릭합니다.  
   
 9. > [!NOTE]  
-    >  경우는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 그룹 **SQL Server Reporting Services 콘텐츠 형식** 에 나타나지 않으면는 **콘텐츠 형식 추가** 경우 페이지에서 다음 조건 중 하나:  
+    >  경우는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 그룹 **SQL Server Reporting Services 콘텐츠 형식** 에 표시 되지 않으면 합니다 **콘텐츠 형식 추가** 페이지에서 다음 조건 중 하나:  
   
-    -   SharePoint 제품의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 설치되지 않았습니다. 자세한 내용은 참조 [설치 SharePoint 용 Reporting Services 추가 기능을 제거 하거나 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다. 이 항목에는 문제를 해결하기 위한 추가 기능 설치 및 추가 기능 설치 파일의 단계별 실행에 대한 정보가 포함됩니다.  
+    -   SharePoint 제품의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 설치되지 않았습니다. 자세한 내용은 [설치 또는 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다. 이 항목에는 문제를 해결하기 위한 추가 기능 설치 및 추가 기능 설치 파일의 단계별 실행에 대한 정보가 포함됩니다.  
   
     -   추가 기능은 설치되지만 사이트 모음 기능 **보고서 서버 통합 기능** 은 활성화되지 않습니다. **사이트 설정**에서 사이트 모음 기능을 확인합니다.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36078566"
 4.  **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 사이트와 보고서 서버 항목에 대 한 목록 사용 권한 참조](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [보고서 작성기 시작 &#40;보고서 작성기&#41;](report-builder/start-report-builder.md)  
+ [SharePoint Site and List Permission Reference for Report Server Items](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [보고서 작성기를 시작 &#40;보고서 작성기&#41;](report-builder/start-report-builder.md)  
   
   

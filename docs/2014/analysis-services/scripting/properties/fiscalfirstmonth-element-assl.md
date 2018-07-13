@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FiscalFirstMonth element
 ms.assetid: 30766baa-ebec-4425-93de-7defe4d6e571
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c7a1b39a6950791a0e38fa1e43b69ce11214c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 494182ff509e5d4b98cc51fe78561e9cfd63c56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195963"
 ---
 # <a name="fiscalfirstmonth-element-assl"></a>FiscalFirstMonth 요소(ASSL)
   에 대 한 회계 기간의 첫 번째 월을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36078892"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `FiscalFirstMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
+ 부모에 해당 하는 요소가 `FiscalFirstMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

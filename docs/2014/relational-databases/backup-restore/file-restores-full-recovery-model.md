@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server]
 - full recovery model [SQL Server], performing restores
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b11b04e866903db3da86344f9247dad3c0cc310
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2542aa44ca71f063c43ecb732ede49c74ebd674c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191873"
 ---
 # <a name="file-restores-full-recovery-model"></a>파일 복원(전체 복구 모델)
   이 항목에서는 전체 또는 대량 로드 복구 모델에서 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우와 관련된 내용을 다룹니다.  

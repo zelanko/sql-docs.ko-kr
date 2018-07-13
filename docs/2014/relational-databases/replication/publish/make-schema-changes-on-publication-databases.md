@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172734"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
   복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36078585"
   
 -   스키마 변경에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 설정한 제한 사항이 적용됩니다. 예를 들어 ALTER TABLE을 사용하여 기본 키 열을 변경할 수 없습니다.  
   
--   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 경우 문이 `ALTER TABLE ADD datetime2 column` 에 사용 되 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], 데이터 형식이로 변환 되지 않습니다 `nvarchar` 에 대 한 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자입니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
+-   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 경우 문이 `ALTER TABLE ADD datetime2 column` 에 사용 됩니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]로 데이터 형식 변환 되지 않습니다 `nvarchar` 에 대 한 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자입니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
   
 -   게시에서 스키마 변경을 전파할 수 있도록 설정하면 게시의 아티클에 대해 관련 스키마 옵션이 어떻게 설정되었는지에 상관없이 스키마 변경이 전파됩니다. 예를 들어 테이블 아티클에 대해 FOREIGN KEY 제약 조건을 복제하지 않도록 선택하고 게시자의 테이블에 외래 키를 추가하는 ALTER TABLE 명령을 실행하면 구독자의 테이블에 외래 키가 추가됩니다. 이를 방지하려면 ALTER TABLE 명령을 실행하기 전에 스키마 변경 전파를 해제합니다.  
   

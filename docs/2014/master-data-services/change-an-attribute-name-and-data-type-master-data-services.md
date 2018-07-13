@@ -1,5 +1,5 @@
 ---
-title: 특성 이름 (Master Data Services) 변경 | Microsoft Docs
+title: 변경 특성 이름 (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: edc6410e28410581716e8b800affc9ba39423c3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 62318949f70b65a63bb4c823903d46c740c51e48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191983"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>특성 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성의 이름을 변경할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36079308"
   
 5.  **선택한 엔터티 편집**을 클릭합니다.  
   
-6.  에 **엔터티 편집** 페이지에서 변경 하려는 이름 가진 특성을 클릭 합니다.  
+6.  에 **엔터티 편집** 페이지에서 변경 하려는 이름 사용 하 여 특성을 클릭 합니다.  
   
 7.  클릭 **선택한 특성 편집**합니다.  
   

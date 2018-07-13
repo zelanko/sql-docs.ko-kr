@@ -17,15 +17,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46d4c53b423741cf024d71ad0c023bd3058ef170
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 614ec62fec8cbd77c86c6d8e038d897d7769de7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175151"
 ---
 # <a name="subscription-and-delivery-methods"></a>구독 및 배달 메서드
   다음 메서드를 사용하여 카탈로그 항목의 구독 및 배달을 만들고 관리할 수 있습니다.  

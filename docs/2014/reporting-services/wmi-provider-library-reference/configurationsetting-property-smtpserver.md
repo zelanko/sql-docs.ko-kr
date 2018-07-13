@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SMTPServer
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SMTPServer property
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 749e940f9d947512c80031fc0c01351fa26066d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18a199fd258b5a04b9fed3bf0167b4460d99c368
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185700"
 ---
 # <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>SMTPServer 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 구성 파일에서 SMTP 서버 속성을 가져옵니다. 읽기 전용입니다.  

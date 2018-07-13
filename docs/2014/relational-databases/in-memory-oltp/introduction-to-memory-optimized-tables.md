@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: bee3e33f3695b89ff4ca84b0ab6e6b657fc3e810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209083"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
   메모리 액세스에 최적화된 테이블은 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)을 사용하여 만드는 테이블입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36079034"
   
  메모리 내 OLTP는 개발, 배포, 관리 효율성 및 지원 가능성과 같은 모든 영역에서 원활한 환경을 제공하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 통합되었습니다. 데이터베이스는 메모리 내 개체뿐만 아니라 디스크 기반 개체를 포함할 수 있습니다.  
   
- 메모리 최적화 테이블의 행에는 버전이 있습니다. 즉, 테이블의 각 행에 여러 버전이 있을 수 있습니다. 모든 행 버전은 동일한 테이블 데이터 구조에서 유지 관리됩니다. 행 버전 관리는 동일한 행에 대한 동시 읽기 및 쓰기를 가능하게 합니다. 동시 읽기 및 쓰기 같은 행에 대 한 자세한 내용은 참조 하십시오. [메모리 최적화 된 테이블의 트랜잭션은](memory-optimized-tables.md)합니다.  
+ 메모리 최적화 테이블의 행에는 버전이 있습니다. 즉, 테이블의 각 행에 여러 버전이 있을 수 있습니다. 모든 행 버전은 동일한 테이블 데이터 구조에서 유지 관리됩니다. 행 버전 관리는 동일한 행에 대한 동시 읽기 및 쓰기를 가능하게 합니다. 동시 읽기 및 쓰기 같은 행에 대 한 자세한 내용은 참조 하세요. [Transactions in Memory-Optimized Tables](memory-optimized-tables.md)합니다.  
   
  다음 그림에서는 다중 버전 관리를 보여 줍니다. 이 그림에서는 세 개의 행이 있고 각 행에 서로 다른 버전이 있는 테이블을 보여 줍니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36079034"
 |[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|예|예|아니요|  
 |[고유하게 컴파일된 저장 프로시저](http://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE 문으로는 고유하게 컴파일된 저장 프로시저에서 저장 프로시저를 실행할 수 없습니다.|예|아니요 <sup>1</sup>|  
   
- <sup>1</sup> 컨텍스트 연결에서 메모리 액세스에 최적화 된 테이블 또는 고유 하 게 컴파일된 저장된 프로시저를 액세스할 수 없습니다 (에서 연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 모듈을 실행 하는 경우). 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다. 자세한 내용은 참조 [일반 vs. 컨텍스트 연결](../clr-integration/data-access/context-connections-vs-regular-connections.md)합니다.  
+ <sup>1</sup> 컨텍스트 연결에서 메모리 액세스에 최적화 된 테이블 또는 고유 하 게 컴파일된 저장된 프로시저를 액세스할 수 없습니다 (연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 모듈을 실행 하는 경우). 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다. 자세한 내용은 참조 하세요. [일반 vs. 컨텍스트 연결](../clr-integration/data-access/context-connections-vs-regular-connections.md)합니다.  
   
 ## <a name="performance-and-scalability"></a>성능 및 확장성  
  다음과 같은 요인이 메모리 내 OLTP에서 얻을 수 있는 성능 향상에 영향을 미칩니다.  

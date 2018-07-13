@@ -1,5 +1,5 @@
 ---
-title: 다차원 데이터 원본 (SSAS 테이블 형식)에서 가져오기 | Microsoft Docs
+title: 가져오기-다차원 데이터 원본 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f0793ea-a4c7-42e9-b722-2164a454ebca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ad945994bda3f9198d3e686a3ce52ea02f496fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75e62c1a920739729f83c61d031756ec96a2ffb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245700"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>다차원 데이터 원본에서 가져오기(SSAS 테이블 형식)
   Analysis Services 큐브 데이터베이스를 테이블 형식 모델의 데이터 원본으로 사용할 수 있습니다. Analysis Services 큐브에서 데이터를 가져오려면 MDX 쿼리를 정의하여 가져올 데이터를 선택해야 합니다  
@@ -37,7 +37,7 @@ ms.locfileid: "36078932"
 3.  테이블 가져오기 마법사의 단계별 지침을 따릅니다. **MDX 쿼리 지정** 페이지에서 MDX 쿼리를 지정할 수 있습니다. MDX 쿼리 디자이너를 사용하려면 MDX 쿼리 지정 페이지에서 **디자인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
+ [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

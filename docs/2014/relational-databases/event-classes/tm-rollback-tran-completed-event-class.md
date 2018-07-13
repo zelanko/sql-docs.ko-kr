@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Rollback Tran Completed event class'
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a473ac968aef159153c93c7103b7a88e8284d4bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dad04cf855a6916a522007a0e3f3959c00888f1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186666"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed 이벤트 클래스
   TM: Rollback Tran Completed 이벤트 클래스는 ROLLBACK TRANSACTION 요청이 완료되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다. EventSubClass 열은 현재 트랜잭션이 롤백된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services], backing up
 - databases [Reporting Services], restoring
@@ -22,13 +22,13 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f1aeefdec4f85e106c503174f9143757f41cae36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a9dab1a33be25bc730409c356f44f7cb191749d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206723"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 백업 및 복원 작업
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용되는 모든 데이터 파일에 대해 간략히 설명하고 이러한 파일을 백업하는 시기와 방법을 설명합니다. 보고서 서버 데이터베이스 파일에 대한 백업 및 복원 계획을 세우는 것이 복구 전략에서 가장 중요한 부분입니다. 그러나 복구 전략이 복잡할수록 보고서 암호화 키, 사용자 지정 어셈블리 또는 확장 프로그램, 구성 파일, 보고서 및 모델 원본 파일 등의 백업이 포함됩니다.  
@@ -59,10 +59,10 @@ ms.locfileid: "36080371"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스 백업 및 복구에 대한 자세한 내용은 [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버가 SharePoint 모드에 있는 경우에는 SharePoint 구성 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 경고 데이터베이스 등 추가 데이터베이스를 고려해야 합니다. SharePoint 모드에서는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 3개의 데이터베이스( **Reportserver**, **reportservertempdb**및 **dataalerting** 데이터베이스)가 만들어집니다. 자세한 내용은 참조 하십시오. [백업 및 복원 Reporting Services SharePoint 서비스 응용 프로그램](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버가 SharePoint 모드에 있는 경우에는 SharePoint 구성 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 경고 데이터베이스 등 추가 데이터베이스를 고려해야 합니다. SharePoint 모드에서는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 3개의 데이터베이스( **Reportserver**, **reportservertempdb**및 **dataalerting** 데이터베이스)가 만들어집니다. 자세한 내용은 참조 하세요. [백업 및 복원 Reporting Services SharePoint 서비스 응용 프로그램](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>암호화 키 백업  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 처음으로 구성하는 경우에는 암호화 키를 백업해야 합니다. 서비스 계정의 ID를 변경하거나 컴퓨터 이름을 바꾸는 경우에도 항상 키를 백업해야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요. SharePoint 모드 보고서 서버에 대 한의 "키 관리" 섹션을 참조 [는 Reporting Services SharePoint 서비스 응용 프로그램 관리](../manage-a-reporting-services-sharepoint-service-application.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 처음으로 구성하는 경우에는 암호화 키를 백업해야 합니다. 서비스 계정의 ID를 변경하거나 컴퓨터 이름을 바꾸는 경우에도 항상 키를 백업해야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요. SharePoint 모드 보고서 서버의 경우의 "키 관리" 섹션을 참조 하세요 [Reporting Services SharePoint 서비스 응용 프로그램을 관리](../manage-a-reporting-services-sharepoint-service-application.md)합니다.  
   
 ## <a name="backing-up-the-configuration-files"></a>구성 파일 백업  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 구성 파일을 사용하여 응용 프로그램 설정을 저장합니다. 서버를 처음 구성할 때와 사용자 지정 확장 프로그램을 배포한 후에 파일을 백업해야 합니다. 백업할 파일에는 다음이 포함됩니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "36080371"
  사용 중인 사용자 지정 확장 프로그램 및 사용자 지정 어셈블리의 백업 복사본이 있는지 확인합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [보고서 서버 데이터베이스를 &#40;SSRS 기본 모드&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services 구성 파일](../report-server/reporting-services-configuration-files.md)   
  [rskeymgmt 유틸리티 &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

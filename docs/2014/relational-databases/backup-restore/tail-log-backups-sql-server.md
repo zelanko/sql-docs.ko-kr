@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], tail of log
 - transaction log backups [SQL Server], tail-log backups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad9a530a1bcc67db785af3c23f2fd80496155f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 92e636b8fb7cc5001833f8d3b99cd761dddcf228
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207203"
 ---
 # <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 백업 및 복원과 관련된 내용을 다룹니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "36078824"
 ##  <a name="TailLogScenarios"></a> 비상 로그 백업이 필요한 시나리오  
  다음과 같은 경우에는 비상 로그 백업을 수행하는 것이 좋습니다.  
   
--   데이터베이스가 온라인이며 데이터베이스에서 복원 작업을 수행하려는 경우 먼저 비상 로그를 백업합니다. 온라인 데이터베이스에 대한 오류를 방지하려면 다음을 사용해야 합니다. WITH NORECOVERY 옵션의는 [백업](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.  
+-   데이터베이스가 온라인이며 데이터베이스에서 복원 작업을 수행하려는 경우 먼저 비상 로그를 백업합니다. 온라인 데이터베이스에 대한 오류를 방지하려면 다음을 사용해야 합니다. WITH NORECOVERY 옵션입니다 합니다 [BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
 -   데이터베이스가 오프라인이고 시작되지 않아서 데이터베이스를 복원해야 할 경우 먼저 비상 로그를 백업합니다. 이 시점에서는 트랜잭션이 발생할 수 없으므로 WITH NORECOVERY 옵션의 사용은 선택 사항입니다.  
   
@@ -53,8 +52,8 @@ ms.locfileid: "36078824"
   
 |BACKUP LOG 옵션|주석|  
 |-----------------------|--------------|  
-|NORECOVERY|데이터베이스에서 복원 작업을 계속하려는 경우 NORECOVERY를 사용합니다. NORECOVERY는 데이터베이스를 복원 중인 상태로 만듭니다. 이렇게 하면 비상 로그 백업 후 데이터베이스가 변경되지 않습니다.  NO_TRUNCATE 옵션 또는 COPY_ONLY 옵션을 함께 지정하지 않으면 로그가 잘립니다.<br /><br /> **\*\* 중요 한 \* \***  데이터베이스가 손상 된 경우가 아니면 NO_TRUNCATE는 사용 하지 않는 것이 좋습니다.|  
-|CONTINUE_AFTER_ERROR|손상된 데이터베이스의 비상 로그를 백업하는 경우에만 CONTINUE_AFTER_ERROR를 사용합니다.<br /><br /> 참고: 손상된 된 데이터베이스에서 비상 로그 백업 사용 하는 경우 일반적으로 로그 백업에서 캡처되는 메타 데이터 일부를 수 있습니다 사용할 수 없게 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업](#IncompleteMetadata)을 참조하세요.|  
+|NORECOVERY|데이터베이스에서 복원 작업을 계속하려는 경우 NORECOVERY를 사용합니다. NORECOVERY는 데이터베이스를 복원 중인 상태로 만듭니다. 이렇게 하면 비상 로그 백업 후 데이터베이스가 변경되지 않습니다.  NO_TRUNCATE 옵션 또는 COPY_ONLY 옵션을 함께 지정하지 않으면 로그가 잘립니다.<br /><br /> **\*\* 중요 \* \***  데이터베이스 손상 된 경우가 아니면 NO_TRUNCATE는 사용 하지 않는 것이 좋습니다.|  
+|CONTINUE_AFTER_ERROR|손상된 데이터베이스의 비상 로그를 백업하는 경우에만 CONTINUE_AFTER_ERROR를 사용합니다.<br /><br /> 참고: 손상된 된 데이터베이스에서 비상 로그 백업 사용 하는 경우 일반적으로 로그 백업에서 캡처되는 메타 데이터의 일부 않을 사용할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업](#IncompleteMetadata)을 참조하세요.|  
   
 ##  <a name="IncompleteMetadata"></a> 완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업  
  비상 로그 백업은 데이터베이스가 오프라인이거나 손상되었거나 데이터 파일이 없는 경우에도 비상 로그를 캡처합니다. 이로 인해 복원 정보 명령과 **msdb**의 메타데이터가 완전하지 않을 수 있습니다. 그러나 메타데이터가 완전하지 않은 경우에도 캡처된 로그는 완전한 상태이며 사용 가능합니다.  

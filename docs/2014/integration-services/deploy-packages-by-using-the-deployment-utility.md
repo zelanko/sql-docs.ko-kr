@@ -1,5 +1,5 @@
 ---
-title: 패키지 배포 유틸리티를 사용 하 여 배포 | Microsoft Docs
+title: 배포 유틸리티를 사용 하 여 패키지 배포 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], installing
 - installing packages
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 caps.latest.revision: 56
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8674256ca22d0327987d0219141b254260173c8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fe699eade5daa76a8d6f2a77e63a2c5019b815
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203933"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>배포 유틸리티를 사용한 패키지 배포
   다른 컴퓨터에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 패키지를 설치하기 위해 배포 유틸리티를 빌드한 다음에는 먼저 대상 컴퓨터에 배포 폴더를 복사해야 합니다.  
@@ -69,6 +69,6 @@ ms.locfileid: "36078618"
 8.  설치 후에 패키지의 유효성 검사를 수행하도록 선택한 경우 배포된 패키지의 유효성 검사 결과를 확인합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [배포 패키지 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222223"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>다차원 모델 솔루션 배포
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개발을 완료했으면 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36078917"
 |인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 액세스를 사용자에게 제공하기를 원합니까?|[인터넷 정보 서비스에서 Analysis Services에 대 한 HTTP 액세스 구성 &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 지속적인 쿼리 액세스를 제공하기를 원합니까?|[Analysis Services 배포에 대한 요구 사항 및 고려 사항](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |연결된 개체 또는 원격 파티션을 사용하여 분산 환경에 개체를 배포하기를 원합니까?|[로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md), [원격 파티션 만들기 및 관리&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) 및 [연결된 측정값 그룹](linked-measure-groups.md).|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터를 어떻게 보호합니까?|[개체 및 작업에 대 한 액세스 권한을 부여 &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터를 어떻게 보호합니까?|[개체 및 작업에 대 한 액세스 권한 부여 &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> 관련 작업  
  [Analysis Services 배포에 대한 요구 사항 및 고려 사항](requirements-and-considerations-for-analysis-services-deployment.md)  

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 653395b2733fc6af8df7b19a746bb04edc3d7f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197775"
 ---
 # <a name="database-representationtabular"></a>데이터베이스 표현(테이블 형식)
   테이블 형식 모드에서 데이터베이스는 테이블 형식 모델의 모든 개체에 대한 컨테이너입니다.  
@@ -91,6 +91,6 @@ catch (Exception createDBxc)
   
 ```  
   
- AMO 사용 하 여 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 실용적인 이해 Tabular AMO 2012 예제의 소스 코드를 참조 하십시오. 특히 다음 소스 파일에 체크 인: Database.cs 합니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
+ AMO를 사용 하 여 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 실용적인 이해, Tabular AMO 2012 예제의 원본 코드를 참조 하세요. 특히 다음 원본 파일을 체크: Database.cs 합니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
   
   

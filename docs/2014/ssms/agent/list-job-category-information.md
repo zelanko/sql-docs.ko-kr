@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 231143d7b7fb90f8da6a614d047b98f9da22dbb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 33cf862e752618b35c56d2e5c58f534ca03a347d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280819"
 ---
 # <a name="list-job-category-information"></a>작업 범주 정보 나열
   작업 범주 정보를 나열 하는 방법을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체.  
@@ -49,13 +49,13 @@ ms.locfileid: "36078756"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)합니다.  
+ 자세한 내용은 [sp_help_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)합니다.  
   
   
-##  <a name="SMO"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업 범주 정보를 나열하려면**  
   
- 사용 하 여 `JobCategory` Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스... 자세한 내용은 참조 [SQL Server Management Objects &#40;SMO&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.  
+ 사용 된 `JobCategory` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스... 자세한 내용은 [SQL Server Management Objects &#40;SMO&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.  
   
   
   

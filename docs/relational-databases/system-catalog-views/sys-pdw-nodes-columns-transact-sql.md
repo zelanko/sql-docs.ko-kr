@@ -1,44 +1,42 @@
 ---
-title: sys.pdw_nodes_columns (Transact SQL) | Microsoft Docs
+title: sys.pdw_nodes_columns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aab0463f2fcc2a6ae24e716fd502c91eb8f9f867
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 20bb25d3699a6fab734da0974bc0726da7e5cb96
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181067"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875041"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  사용자 정의 테이블 및 사용자 정의 뷰에 대 한 열을 표시 합니다.  
+  사용자 정의 테이블 및 사용자 정의 뷰에 대 한 열을 보여 줍니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|이 열이 속한 개체의 ID입니다.||  
-|name|**sysname**|열의 이름입니다. 개체에서 고유 합니다.||  
-|column_id|**int**|열의 ID입니다. 개체에서 고유 합니다.||  
+|NAME|**sysname**|열의 이름입니다. 개체에 고유 합니다.||  
+|column_id|**int**|열의 ID입니다. 개체에 고유 합니다.||  
 |system_type_id|**tinyint**|열의 시스템 유형 ID입니다.||  
 |user_type_id|**int**|열의 유형에 대한 사용자 정의 ID입니다.||  
-|max_length|**smallint**|열의 최대 길이(바이트)입니다.|지원 되지 않는 열 유형에 대 한 (유효 하지 않은)-1을 포함합니다.|  
+|max_length|**smallint**|열의 최대 길이(바이트)입니다.|지원 되지 않는 열 형식에 대 한 (올바르지 않음)-1을 포함합니다.|  
 |전체 자릿수|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 0입니다.||  
 |소수 자릿수|**tinyint**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 0입니다.||  
 |collation_name|**sysname**|문자 기반일 경우에는 열의 데이터 정렬 이름이고, 그렇지 않으면 NULL입니다.||  
@@ -49,7 +47,7 @@ ms.locfileid: "33181067"
 |is_computed|**bit**|1 = 열이 계산 열입니다.|항상 0입니다.|  
 |is_filestream|**bit**|1 = 열이 FILESTREAM 열입니다.|항상 0입니다.|  
 |is_replicated|**bit**|1 = 복제된 열입니다.|항상 0입니다.|  
-|is_non_sql_subscribed|**bit**|1 = 열에 비 SQL 구독자입니다.|항상 0입니다.|  
+|is_non_sql_subscribed|**bit**|1 = 열에 SQL이 아닌 구독자에 있습니다.|항상 0입니다.|  
 |is_merge_published|**bit**|1 = 병합 게시 열입니다.|항상 0입니다.|  
 |is_dts_replicated|**bit**|1 = 열이 SSIS를 사용 하 여 복제 합니다.|항상 0입니다.|  
 |is_xml_document|**bit**|1 = 내용이 완전한 XML 문서입니다.|항상 0입니다.|  
@@ -58,13 +56,13 @@ ms.locfileid: "33181067"
 |rule_object_id|**int**|열에 바인딩된 독립 실행형 규칙의 ID입니다. <br />0 = 독립 실행형 규칙이 없습니다.|항상 0입니다.|  
 |is_sparse|**bit**|1 = 열이 스파스 열입니다.|항상 0입니다.|  
 |is_column_set|**bit**|1 = 열이 열 집합입니다.|항상 0입니다.|  
-|pdw_node_id|**int**|고유 식별자는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
+|pdw_node_id|**int**|고유 식별자를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+## <a name="see-also"></a>관련 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

@@ -1,25 +1,24 @@
 ---
-title: SQL Server 공유 관리 개체 (SMO)-사용 약관 | Microsoft Docs
+title: SQL Server 공유 관리 개체 (SMO)-사용 조건 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: MT
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235100"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798288"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 공유 관리 개체 (SMO) 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "34235100"
 
 **1. 설치 및 사용 권한.**
 
-&nbsp;&nbsp;설치 및 설계, 개발 및 프로그램을 테스트 하려면 장치에 대 원하는 개수 만큼 소프트웨어의 복사본을 사용할 수 있습니다.
+&nbsp;&nbsp;설치 하 고 장치에서 소프트웨어의 사본을 원하는 수 만큼을 사용 하 여 설계, 개발 및 테스트 프로그램을 수 있습니다.
 
 **2.    추가 라이선스 요구 사항 및/또는 사용 권한.**
 
@@ -55,7 +54,7 @@ ms.locfileid: "34235100"
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   배포 요구 사항. 귀하가 배포하는 모든 배포 가능한 코드에 대해 다음을 준수해야 합니다.**
 * 프로그램에서 중요한 주 기능을 배포 가능한 코드에 추가합니다.
-* 파일 확장명이.dll의 모든 배포 가능한 코드에 대 한; 형태로 프로그램과 함께 링커를 통해 해당 배포 가능한 코드를 실행 결과만 배포
+* 배포 가능 코드의.dll 파일 이름 확장명이 모든 경우, 프로그램과 함께 링커를 통해 이러한 배포 가능 코드를 실행 하는 결과만 배포
 * 배포자와 외부 최종 사용자가 최소한 본 계약 수준으로 배포 가능한 코드를 보호하는 사용 조건에 동의하게 합니다. 
 * 프로그램에 올바른 저작권 통지를 표시합니다.
 * 프로그램의 배포나 사용과 관련하여 변호사 비용을 포함한 모든 청구에 대해 Microsoft를 면책하고 해를 입히지 않으며 방어해야 합니다.

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181530"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 데이터 기반 구독을 제공하므로 동적 구독자 데이터를 기반으로 보고서 배포를 사용자 지정할 수 있습니다. 데이터 기반 구독은 다음과 같은 종류의 시나리오에 사용됩니다.  
@@ -49,17 +49,17 @@ ms.locfileid: "36079470"
 ## <a name="requirements"></a>요구 사항  
  데이터 기반 구독은 대개 보고서 서버 관리자가 만들고 유지 관리합니다. 데이터 기반 구독을 만들려면 쿼리 작성에 대한 전문 지식, 구독자 데이터가 포함된 데이터 원본에 대한 지식, 보고서 서버에서 승격된 권한이 필요합니다.  
   
- 이 자습서는 자습서에서 만든 보고서를 사용 하 여 [기본 테이블 보고서를 만들 &#40;SSRS 자습서&#41; ](create-a-basic-table-report-ssrs-tutorial.md) 와 데이터를 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ 이 자습서는 자습서에서 만든 보고서를 사용 하 여 [기본 테이블 보고서 만들기 &#40;SSRS 자습서&#41; ](create-a-basic-table-report-ssrs-tutorial.md) 및 데이터에서 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  이 자습서를 사용하려면 시스템에 다음 항목이 설치되어야 합니다.  
   
--   데이터 기반 구독을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
+-   데이터 기반 구독을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
   
 -   기본 모드로 보고서 서버가 실행되고 있어야 합니다. 이 자습서에 설명된 사용자 인터페이스는 기본 모드 보고서 서버를 기반으로 합니다. 구독은 SharePoint 모드 보고서 서버에서 지원되지만 사용자 인터페이스는 이 자습서에 설명된 것과 다릅니다.  
   
 -   SQL Server 에이전트 서비스가 실행되고 있어야 합니다.  
   
--   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 예제 보고서 `Sales Orders` 자습서를 사용 하 여 만드는 [기본 테이블 보고서를 만들 &#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)합니다.  
+-   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 예제 보고서를 가정 `Sales Orders` 자습서를 사용 하 여 만든 [기본 테이블 보고서 만들기 &#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)합니다.  
   
 -   예제 보고서에 데이터를 제공하는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 예제 데이터베이스가 필요합니다.  
   

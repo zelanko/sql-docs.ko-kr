@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66e69e9bbdefb40773a56b5dff974c5a7406aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e0870761f4281b6897fb9cc9395d9f7720c865f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176080"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>용어 조회 변환 편집기(참조 테이블 탭)
   **용어 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 참조(조회) 테이블에 대한 연결을 지정할 수 있습니다.  

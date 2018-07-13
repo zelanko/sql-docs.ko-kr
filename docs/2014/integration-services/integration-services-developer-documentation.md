@@ -22,13 +22,13 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7649030fb22c9e0786d481f34a29974dcddbe863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7989f708adf6025fddb223e6052dca8810035230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206053"
 ---
 # <a name="developer39s-guide-integration-services"></a>개발자&#39;가이드 (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 완전히 다시 작성된 개체 모델이 포함되어 있으며 이러한 개체 모델은 패키지 확장 및 프로그래밍을 보다 쉽고 유연하고 강력하게 해 주는 다양한 기능을 갖도록 향상되었습니다. 개발자는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지의 거의 모든 측면을 확장하고 프로그래밍할 수 있습니다.  

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction log backups [SQL Server], SQL Server Management Studio
 - backups [SQL Server], creating
 - backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fe51e60f78743b19660bbd9c3433d26455629db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d4fa8ba90a87dc6444d9181e2b724201a130880e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178140"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>트랜잭션 로그 백업(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "36080221"
   
      [보안](#Security)  
   
--   **트랜잭션 로그를 백업 하려면 사용 하 여:**  
+-   **백업, 트랜잭션 로그를 사용 하 여:**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   

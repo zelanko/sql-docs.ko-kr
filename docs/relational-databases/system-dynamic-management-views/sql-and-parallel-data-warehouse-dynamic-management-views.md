@@ -5,9 +5,9 @@ ms.date: 03/15/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8df833bdcc049bd9c8197dd8caea6410aa94d45c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: e610fb5bf6b64432b28a20d6e57e4b729a3c044e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467510"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915024"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL 및 병렬 데이터 웨어하우스 동적 관리 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 동적 관리 뷰 (Dmv).  
+  이 항목에서는 나열 된 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 동적 관리 뷰 (Dmv).  
   
- 모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dmv로 시작 **sys.dm_pdw**합니다.  
+ 모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 하 고 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dmv 시작 **sys.dm_pdw**합니다.  
   
 ## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 동적 관리 뷰  
- 다음 동적 관리 뷰는 둘 다에 적용 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+ 다음 동적 관리 뷰를 둘 다에 적용 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 고 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.dm_pdw_dms_cores &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "34467510"
   
  [sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
- [sys.dm_pdw_sql_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md)  
+ [sys.dm_pdw_sql_requests에 연결할 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-sql-requests-transact-sql.md)  
   
  [sys.dm_pdw_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-sys-info-transact-sql.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34467510"
  [sys.dm_pdw_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   
 ## <a name="includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 동적 관리 뷰  
- 에 적용 된 다음 동적 관리 뷰 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:  
+ 다음 동적 관리 뷰를 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:  
   
  [sys.dm_pdw_component_health_active_alerts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34467510"
   
  [sys.dm_pdw_query_stats_xe_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

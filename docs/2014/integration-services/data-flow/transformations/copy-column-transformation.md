@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copycolumntrans.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 108876d1ae379eb348109af75fda4ac0b4d5b457
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bd1ef03d1a45151e6f81d46b15e4e7fbc19f9a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261469"
 ---
 # <a name="copy-column-transformation"></a>열 복사 변환
   열 복사 변환은 입력 열을 복사하고 새 열을 변환 출력에 추가하여 새 열을 만듭니다. 데이터 흐름의 뒷부분에서 열 복사본에 다른 변환을 적용할 수 있습니다. 예를 들어 열 복사 변환을 사용하여 열 복사본을 만든 다음 문자표 변환을 사용하여 복사한 데이터를 대문자로 변환하거나 집계 변환을 사용하여 새 열에 집계를 적용할 수 있습니다.  

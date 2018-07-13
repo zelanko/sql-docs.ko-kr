@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - clustering [Data Mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 72
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f0c797ed300d90416e92f3dd85f575db3a08aa8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243753"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
-  A *데이터 마이닝 알고리즘* 데이터 로부터 데이터 마이닝 모델을 만드는 추론 및 계산의 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 정의합니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
+  A *데이터 마이닝 알고리즘* 는 데이터에서 데이터 마이닝 모델을 만드는 추론 및 계산 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 정의합니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
   
  알고리즘이 데이터로부터 만드는 마이닝 모델은 다음과 같은 다양한 형태가 될 수 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36078948"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 솔루션에서 사용 하기 위해 여러 알고리즘을 제공합니다. 이러한 알고리즘은 데이터 마이닝에 가장 많이 사용되는 몇 가지 방법을 구현한 것입니다. 제공된 API를 사용하거나 SQL Server Integration Services의 데이터 마이닝 구성 요소를 사용하여 모든 Microsoft 데이터 마이닝 알고리즘을 사용자 지정하고 프로그래밍할 수 있습니다.  
   
- Data Mining 사양에 대 한 OLE DB와 함께 준수 하는 타사 알고리즘을 사용 하거나 서비스로 등록 하 고 SQL Server 데이터 마이닝 프레임 워크 내에서 사용할 수 있는 사용자 지정 알고리즘을 개발할 수 있습니다.  
+ OLE db for Data Mining 사양을 준수 하는 타사 알고리즘을 사용 하거나 서비스로 등록 하 고 SQL Server 데이터 마이닝 프레임 워크 내에서 사용할 수 있는 사용자 지정 알고리즘을 개발할 수도 있습니다.  
   
 ## <a name="choosing-the-right-algorithm"></a>알고리즘 선택  
  특정 분석 태스크에 적합한 알고리즘을 선택하는 것은 결코 쉽지 않습니다. 동일한 비즈니스 태스크를 수행하기 위해 여러 알고리즘을 사용할 수 있지만 이렇게 하면 각 알고리즘에서 다른 결과를 생성하며 일부 알고리즘에서는 두 개 이상의 결과 유형을 생성할 수 있습니다. 예를 들어 의사 결정 트리가 최종 마이닝 모델에 영향을 미치지 않는 열을 식별할 수 있기 때문에 예측하거나 데이터 집합의 열 수를 줄이는 데 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용할 수 있습니다.  
@@ -57,13 +57,13 @@ ms.locfileid: "36078948"
   
 -   데이터 집합의 다른 특성을 기반으로 하나 이상의 불연속 변수를 예측하는**분류 알고리즘** .  
   
--   **회귀 알고리즘** 수익 또는 데이터 집합의 다른 특성에 따라 손실과 같은 하나 이상의 연속 변수를 예측 합니다.  
+-   **회귀 알고리즘** 수익 또는 손실과, 데이터 집합의 다른 특성을 기반으로 같은 하나 이상의 연속 변수를 예측 합니다.  
   
 -   데이터를 속성이 유사한 항목의 그룹 또는 클러스터로 나누는**세그먼트화 알고리즘** .  
   
 -   데이터 집합에 있는 여러 특성 사이의 상관 관계를 찾는**연결 알고리즘** . 이러한 종류의 알고리즘은 시장 바구니 분석에 사용할 수 있는 연결 규칙을 만드는 데 가장 일반적으로 적용됩니다.  
   
--   **시퀀스 분석 알고리즘** 웹 경로 흐름과 같이 데이터에서 자주 시퀀스 또는 에피소드를 요약 합니다.  
+-   **시퀀스 분석 알고리즘** 웹 경로 흐름과 같이 데이터에서 빈번한 시퀀스 또는 에피소드를 요약 합니다.  
   
  솔루션에서 알고리즘을 하나로 제한해야 할 이유는 없습니다. 경험이 많은 분석가는 경우에 따라 하나의 알고리즘을 사용하여 가장 효율적인 입력(즉, 변수)을 결정하고, 다른 알고리즘을 적용하여 해당 데이터를 기반으로 특정 결과를 예측하기도 합니다. SQL Server 데이터 마이닝을 사용하여 단일의 마이닝 구조에서 여러 모델을 작성할 수 있으므로, 단일 데이터 마이닝 솔루션에서 클러스터링 알고리즘, 의사 결정 트리 모델 및 naïve Bayes 모델을 사용하여 데이터를 다양하게 표시할 수 있습니다. 또한 단일 솔루션 내에서 여러 알고리즘을 사용하여 별도 태스크를 수행할 수도 있습니다. 예를 들어 회귀를 사용하여 재무 예측을 가져오고, 신경망 알고리즘을 사용하여 판매에 영향을 주는 요소를 분석할 수 있습니다.  
   

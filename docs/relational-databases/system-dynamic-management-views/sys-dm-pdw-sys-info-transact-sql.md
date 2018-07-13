@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_sys_info (Transact SQL) | Microsoft Docs
+title: sys.dm_pdw_sys_info (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,23 +7,22 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 686976b4-2d5d-4d64-bf12-56eba1dc59b1
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eddd759f3dfa1447a441350583a6ce66e2ac14ab
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 4333413236f790bf2838d768585ea75537784e6d
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465689"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926444"
 ---
 # <a name="sysdmpdwsysinfo-transact-sql"></a>sys.dm_pdw_sys_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,16 +31,16 @@ ms.locfileid: "34465689"
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|total_sessions|**int**|시스템에서 현재 세션 수입니다.|0 ~ max_active_sessions (아래 참조)입니다.|  
+|total_sessions|**int**|시스템에서 현재 세션의 수입니다.|0 ~ max_active_sessions (아래 참조)입니다.|  
 |idle_sessions|**int**|현재 유휴 세션 수입니다.||  
 |active_requests|**int**|현재 실행 중인 활성 요청 수입니다.||  
 |queued_requests|**int**|현재 대기 중인 요청의 수입니다.||  
 |active_loads|**int**|시스템에서 현재 실행 중인 부하의 수입니다.||  
-|queued_loads|**int**|실행을 기다리는 대기 로드 수입니다.||  
+|queued_loads|**int**|실행 될 때까지 기다리는 대기 로드 수입니다.||  
 |active_backups|**int**|현재 실행 중인 백업의 수입니다.||  
-|active_restores|**int**|현재 실행 중인 백업 복원의 수입니다.||  
+|active_restores|**int**|현재 실행 중인 백업 복원 수입니다.||  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 429963c3a8b9e727913ecd1e2564c89fa8bbe38b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c88878e5bd680ec6ca6fcbb310b25e5ec216977e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212293"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
   보고서 관리자를 사용하여 보고서 서버에 게시된 보고서를 볼 수 있습니다. 기본적으로 모든 보고서는 HTML로 열립니다. 보고서가 열린 후 다른 응용 프로그램 형식으로 내보내어 볼 수 있습니다. 보고서에 대화형 기능이 포함되어 있거나 보고서가 대화형 데이터를 포함한 보고서 작성기 보고서인 경우 해당 링크를 클릭하여 추가 보고서 또는 데이터를 볼 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36078974"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 및 기타 항목 검색 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

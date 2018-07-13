@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], reactivating
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - removing alerts
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15bf7a49e966ff691c135001a1588d6d3465937b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 512a3ccff8c709091eb17ac66097735639b3212b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177100"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고를 비활성화하거나 다시 활성화하는 방법에 대해 설명합니다.  
@@ -88,6 +88,6 @@ ms.locfileid: "36078964"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)합니다.  
+ 자세한 내용은 [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)합니다.  
   
   

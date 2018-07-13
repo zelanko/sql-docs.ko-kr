@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NumberOfProps property
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8cc8a35e9eab4068f9fc4b09c70725df3e3a36f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 24e99ca2b2695d2be3b05a24844f02c52c2735fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216783"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 속성(ClientNetworkProtocol 클래스)
-  가져옵니다는 다양 한 클라이언트의 속성에 지정 된 프로토콜 네트워크는 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md)합니다.  
+  클라이언트의 속성 수에 지정 된 프로토콜에 네트워크 가져옵니다 합니다 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   

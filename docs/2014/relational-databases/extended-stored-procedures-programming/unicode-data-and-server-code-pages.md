@@ -1,5 +1,5 @@
 ---
-title: 유니코드 데이터와 서버 코드 페이지가 | Microsoft Docs
+title: 유니코드 데이터 및 서버 코드 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199253"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>유니코드 데이터 및 서버 코드 페이지
     
@@ -33,20 +33,20 @@ ms.locfileid: "36079028"
   
  확장 저장 프로시저 API는 유니코드 데이터에 사용되지만 유니코드 메타데이터에는 사용되지 않습니다. #define 유니코드 지시문은 확장 저장 프로시저 API에 적용되지 않습니다.  
   
- 확장 저장 프로시저 응용 프로그램에 의해 반환되거나 확장 저장 프로시저 API에 제공되는 모든 메타데이터는 서버의 멀티바이트 코드 페이지에 있는 것으로 가정됩니다. 확장 저장 프로시저 API 서버 응용 프로그램의 기본 코드 페이지는 호출 하 여 가져올 수 있는 응용 프로그램을 실행 한 컴퓨터의 ANSI 코드 페이지 **srv_pfield** SRV_로 설정 하는 필드 매개 변수 사용 SPROC_CODEPAGE 합니다.  
+ 확장 저장 프로시저 응용 프로그램에 의해 반환되거나 확장 저장 프로시저 API에 제공되는 모든 메타데이터는 서버의 멀티바이트 코드 페이지에 있는 것으로 가정됩니다. 확장 저장 프로시저 API 서버 응용 프로그램의 기본 코드 페이지는 호출 하 여 가져올 수 있는 응용 프로그램이 실행 되는 컴퓨터의 ANSI 코드 페이지로 **srv_pfield** SRV_로 필드 매개 변수를 사용 하 여 SPROC_CODEPAGE 합니다.  
   
  확장 저장 프로시저 API 응용 프로그램에서 유니코드를 사용하는 경우 이 데이터를 확장 저장 프로시저 API로 전달하기 전에 유니코드 메타데이터 열 이름, 오류 메시지 등을 멀티바이트 데이터로 변환해야 합니다.  
   
 ## <a name="example"></a>예제  
  다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음을 참고하십시오.  
   
--   열 데이터에 유니코드 데이터를 전달 된 **srv_describe** 열이 SRVNVARCHAR 인 것으로 설명 합니다.  
+-   열 데이터는 유니코드 데이터로 전달 됩니다 **srv_describe** 열이 srvnvarchar 설명 되어 있으므로.  
   
--   열 이름 메타 데이터에 전달 되 **srv_describe** 멀티 바이트 데이터로 합니다.  
+-   열 이름 메타 데이터는 전달할 **srv_describe** 멀티 바이트 데이터로 합니다.  
   
-     확장 저장 프로시저 호출 **srv_pfield** 의 멀티 바이트 코드 페이지를 확인 하려면 SRV_SPROC_CODEPAGE로 설정 된 필드 매개 변수와 함께 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     확장 저장 프로시저 호출 **srv_pfield** 필드 매개 변수를 SRV_SPROC_CODEPAGE로 설정의 멀티 바이트 코드 페이지를 가져오려고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
--   오류 메시지에 전달 되 **srv_sendmsg** 멀티 바이트 데이터로 합니다.  
+-   오류 메시지를 전달할 **srv_sendmsg** 멀티 바이트 데이터로 합니다.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324653"
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
   SAP BW 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 원본 구성 요소입니다. 따라서 SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하고 이 데이터를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 사용할 수 있도록 합니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "36078838"
   
     -   **E - 추출만** 옵션의 경우 요청 ID를 제공합니다.  
   
--   문자열 변환의 규칙을 지정합니다. (예를 들어 SAP Netweaver BW 시스템이 유니코드 인지 여부를 따라 모든 문자열을 변환 하거나 모든 문자열을 변환 `varchar` 또는 `nvarchar`).  
+-   문자열 변환의 규칙을 지정합니다. (예를 들어 SAP Netweaver BW 시스템이 유니코드 인지 여부,에 따라 모든 문자열을 변환 하거나 모든 문자열을 변환할 `varchar` 또는 `nvarchar`).  
   
 -   선택한 옵션을 사용하여 추출할 데이터를 미리 봅니다.  
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175786"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
   FILESTREAM 데이터는 파일 시스템에 있으므로 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 기능과 함께 FILESTREAM을 사용할 경우 몇 가지 고려 사항, 지침 및 제한 사항에 대해 설명합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "36081394"
  열 가져오기 변환을 사용하여 파일 시스템에서 FILESTREAM 열로 파일을 로드할 수 있습니다. 열 내보내기 변환을 사용하여 FILESTREAM 열에서 파일 시스템의 다른 위치로 파일을 추출할 수도 있습니다.  
   
 ##  <a name="distqueries"></a> 분산 쿼리 및 연결된 서버  
- 처리 하 여 분산된 쿼리 및 연결 된 서버를 통해 FILESTREAM 데이터를 작업할 수 있습니다 `varbinary(max)` 데이터입니다. 네 부분으로 된 이름을 사용하는 분산 쿼리에는 FILESTREAM **PathName()** 함수를 사용할 수 없습니다. 해당 이름이 로컬 서버를 참조하는 경우에도 마찬가지입니다. 그러나 **OPENQUERY()** 를 사용하는 통과 쿼리의 내부 쿼리에는 **PathName()** 을 사용할 수 있습니다.  
+ 으로 취급 하 여 분산된 쿼리 및 연결 된 서버를 통해 FILESTREAM 데이터를 작업할 수 있습니다 `varbinary(max)` 데이터입니다. 네 부분으로 된 이름을 사용하는 분산 쿼리에는 FILESTREAM **PathName()** 함수를 사용할 수 없습니다. 해당 이름이 로컬 서버를 참조하는 경우에도 마찬가지입니다. 그러나 **OPENQUERY()** 를 사용하는 통과 쿼리의 내부 쿼리에는 **PathName()** 을 사용할 수 있습니다.  
   
 ##  <a name="encryption"></a> 암호화  
  투명한 데이터 암호화를 사용하는 경우에도 FILESTREAM 데이터는 암호화되지 않습니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "36081394"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- 게시자에서 FILESTREAM 특성을 사용할 수 있는 `varbinary(max)` 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 또는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 `varbinary(max)` 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 복제 하는 경우가 아니면 FILESTREAM 특성을 복제 하는 좋습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] 지정 된 스키마 옵션에 관계 없이 구독자가 지원 되지 않습니다.  
+ 게시자에서 FILESTREAM 특성을 사용할 수 있는 `varbinary(max)` 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 또는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 `varbinary(max)` 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 데이터를 복제 하는 경우가 아니면 FILESTREAM 특성을 복제 하는 좋습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] 지정 되는 스키마 옵션에 관계 없이 구독자 지원 되지 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](http://go.microsoft.com/fwlink/?LinkId=103810)을 참조하십시오.  
@@ -82,18 +81,18 @@ ms.locfileid: "36081394"
   
 -   max text repl size 옵션은 복제를 위해 게시된 열에 삽입할 수 있는 데이터의 최대 크기를 지정합니다. 이 옵션을 사용하여 복제되는 FILESTREAM 데이터의 크기를 제어할 수 있습니다.  
   
--   FILESTREAM 특성을 복제 하도록 스키마 옵션을 지정 했는데 그 내용을 필터링 할는 `uniqueidentifier` FILESTREAM에 필요한 열 이거나 복제 하지 않도록 지정 된 열에 대 한 UNIQUE 제약 조건의 복제 FILESTREAM을 복제 하지 않습니다 특성입니다. 열은 `varbinary(max)` 열로만 복제됩니다.  
+-   FILESTREAM 특성을 복제 하도록 스키마 옵션을 지정 했지만 필터링 할 경우는 `uniqueidentifier` 열의 UNIQUE 제약 조건을 복제할 필요가 FILESTREAM에 필요한 열 또는 사용자 지정을 복제 FILESTREAM을 복제 하지 않습니다 특성입니다. 열은 `varbinary(max)` 열로만 복제됩니다.  
   
 ### <a name="considerations-for-merge-replication"></a>병합 복제에 대한 고려 사항  
  병합 복제를 위해 게시된 테이블에서 FILESTREAM 열을 사용할 경우 다음 사항을 고려하십시오.  
   
--   병합 복제 및 FILESTREAM 데이터 형식의 열이 필요 `uniqueidentifier` 를 테이블의 각 행을 식별 합니다. 병합 복제 시 테이블에 이러한 열이 없으면 자동으로 열이 추가됩니다. 병합 복제를 수행하려면 열에는 ROWGUIDCOL 속성 집합과 NEWID() 또는 NEWSEQUENTIALID()의 기본값이 있어야 합니다. 또한 FILESTREAM의 경우에는 열에 대해 UNIQUE 제약 조건이 정의되어야 합니다. 결과적으로 다음과 같은 작업이 필요합니다.  
+-   병합 복제 및 FILESTREAM 데이터 형식의 열이 필요 `uniqueidentifier` 테이블의 각 행을 식별 합니다. 병합 복제 시 테이블에 이러한 열이 없으면 자동으로 열이 추가됩니다. 병합 복제를 수행하려면 열에는 ROWGUIDCOL 속성 집합과 NEWID() 또는 NEWSEQUENTIALID()의 기본값이 있어야 합니다. 또한 FILESTREAM의 경우에는 열에 대해 UNIQUE 제약 조건이 정의되어야 합니다. 결과적으로 다음과 같은 작업이 필요합니다.  
   
     -   병합 복제를 위해 이미 게시된 테이블에 FILESTREAM 열을 추가할 경우 `uniqueidentifier` 열에 UNIQUE 제약 조건이 있는지 확인합니다. UNIQUE 제약 조건이 없을 경우 게시 데이터베이스의 테이블에 명명된 제약 조건을 추가합니다. 기본적으로 병합 복제에서는 이러한 스키마 변경을 게시하고 각 구독 데이터베이스에 적용합니다.  
   
          설명한 대로 UNIQUE 제약 조건을 수동으로 추가하고 병합 복제를 제거하려면 먼저 UNIQUE 제약 조건부터 제거해야 합니다. 그렇지 않으면 복제 제거가 실패합니다.  
   
-    -   NEWSEQUENTIALID()가 NEWID()보다 성능이 더 좋으므로 병합 복제에서는 기본적으로 NEWSEQUENTIALID()를 사용합니다. 추가 하는 경우는 `uniqueidentifier` 가 게시 될 병합 복제의 경우 기본적으로 NEWSEQUENTIALID () 지정 하는 테이블에는 열입니다.  
+    -   NEWSEQUENTIALID()가 NEWID()보다 성능이 더 좋으므로 병합 복제에서는 기본적으로 NEWSEQUENTIALID()를 사용합니다. 추가 하는 경우는 `uniqueidentifier` 가 게시 될 병합 복제의 경우 기본적으로 newsequentialid ()를 지정 하는 테이블에는 열입니다.  
   
 -   병합 복제에는 큰 개체 유형을 위한 최적화가 포함됩니다. 이 최적화 작업은 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)의 @stream_blob_columns 매개 변수를 통해 제어됩니다. FILESTREAM 특성을 복제하도록 스키마 옵션을 설정하면 @stream_blob_columns 매개 변수 값이 `true`로 설정됩니다. 이러한 최적화 작업은 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 사용하여 덮어쓸 수 있습니다. 다음 저장 프로시저를 통해 @stream_blob_columns를 `false`로 설정할 수 있습니다. 병합 복제를 위해 이미 게시된 테이블에 FILESTREAM 열을 추가하는 경우 sp_changemergearticle을 사용하여 옵션을 `true`로 설정하는 것이 좋습니다.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "36081394"
  데이터베이스 미러링은 FILESTREAM을 지원하지 않습니다. 주 서버에서 FILESTREAM 파일 그룹을 만들 수 없습니다. FILESTREAM 파일 그룹이 포함된 데이터베이스에 대해 데이터베이스 미러링을 구성할 수 없습니다.  
   
 ##  <a name="FullText"></a> 전체 텍스트 인덱싱  
- [전체 텍스트 인덱싱](../indexes/indexes.md) 는 것과 동일한 방식으로 FILESTREAM 열과 함께 작동 한 `varbinary(max)` 열입니다. FILESTREAM 테이블에는 각 FILESTREAM BLOB에 대한 파일 이름 확장명을 포함하는 열이 있어야 합니다. 자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../search/query-with-full-text-search.md), [검색 필터 구성 및 관리](../search/configure-and-manage-filters-for-search.md), [sys.fulltext_document_types&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)를 참조하세요.  
+ [전체 텍스트 인덱싱](../indexes/indexes.md) 와 동일한 방식으로 FILESTREAM 열을 사용 하 여 작동는 `varbinary(max)` 열입니다. FILESTREAM 테이블에는 각 FILESTREAM BLOB에 대한 파일 이름 확장명을 포함하는 열이 있어야 합니다. 자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../search/query-with-full-text-search.md), [검색 필터 구성 및 관리](../search/configure-and-manage-filters-for-search.md), [sys.fulltext_document_types&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)를 참조하세요.  
   
  전체 텍스트 엔진은 FILESTREAM BLOB의 내용을 인덱싱합니다. 이미지와 같은 인덱싱 파일은 유용하지 않을 수도 있습니다. FILESTREAM BLOB이 업데이트되면 인덱스가 다시 작성됩니다.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200383"
 ---
 # <a name="defining-a-referenced-relationship"></a>참조 관계 정의
   이 자습서의 이전 단원에서는 정의한 각 큐브 차원은 기본 키와 외래 키의 관계를 통해 측정값 그룹의 팩트 테이블에 직접 연결된 테이블을 기반으로 하였습니다. 이 항목의 태스크에서는 **Geography** 차원을 **참조 차원** 이라고 하는 *Reseller*차원을 통해 대리점 판매에 대한 팩트 테이블에 연결하는 방법을 설명합니다. 이를 통해 사용자는 지리별로 대리점 판매 차원을 구분할 수 있습니다. 자세한 내용은 [참조 관계 및 참조 관계 속성 정의](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)를 참조하세요.  
@@ -34,7 +34,7 @@ ms.locfileid: "36079385"
   
      **Reseller Sales-Sales Amount** 측정값은 **Regions** 계층의 **Country-Region** 특성 멤버별로 차원이 제대로 구분되지 않습니다. **Reseller Sales-Sales Amount** 에 대한 값이 각 **Country-Region** 특성 멤버에 대해 반복됩니다.  
   
-     ![Reseller Sales-sales Amount 측정값 차원이](../../2014/tutorials/media/l5-referencedrelationship-1.gif "차원이 구분 된 Reseller Sales-sales Amount 측정값")  
+     ![Reseller Sales-sales Amount 측정값 차원이](../../2014/tutorials/media/l5-referencedrelationship-1.gif "차원이 Reseller Sales-sales Amount 측정값")  
   
 4.  **Adventure Works DW 2012** 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 엽니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36079385"
   
 9. **차원 용도** 탭의 **차원** 목록에서 **Geography**를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
   
-10. 이 큐브 차원의 이름을 변경 `Reseller Geography`합니다.  
+10. 이 큐브 차원의 이름을 변경할 `Reseller Geography`합니다.  
   
      이제 이 큐브 차원이 **Reseller Sales** 측정값 그룹에 연결되었으므로 사용자는 큐브에서 해당 차원의 용도를 명시적으로 정의하여 사용자 혼동을 방지할 수 있습니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36079385"
   
 2.  배포가 성공적으로 완료되면 **Tutorial 큐브에 대한 큐브 디자이너에서** 브라우저 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 탭을 클릭한 다음 **다시 연결** 단추를 클릭합니다.  
   
-3.  메타 데이터 창에서 확장 `Reseller Geography`를 마우스 오른쪽 단추로 클릭 **지리적**, 클릭 하 고 **행 영역에 추가**합니다.  
+3.  메타 데이터 창에서 확장 `Reseller Geography`를 마우스 오른쪽 단추로 클릭 **지역**를 클릭 하 고 **행 영역에 추가**합니다.  
   
      다음 그림에 표시된 것처럼 이제 **Reseller Sales-Sales Amount** 측정값은 **Geographies** 사용자 정의 계층의 **Country-Region** 특성별로 차원이 제대로 구분됩니다.  
   

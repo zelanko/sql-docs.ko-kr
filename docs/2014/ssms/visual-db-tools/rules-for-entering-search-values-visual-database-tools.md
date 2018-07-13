@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], searches
 - date searches
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e74e1d379eb7481ffc6671f9027c8c4088955d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 72cc05e901de4343dd79457900ef61bf9e85b709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255245"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>검색 값 입력 규칙(Visual Database Tools)
   이 항목에서는 다음과 같은 리터럴 형식 값을 검색 조건으로 입력할 때 적용되는 규칙을 설명합니다.  

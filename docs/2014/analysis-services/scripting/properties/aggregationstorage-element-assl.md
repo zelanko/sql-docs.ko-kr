@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationStorage element
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb4bfcab9de31851c054a5f24382a01af1d2d9b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f66a2161d7c5d5983366fd67cd695e7d90c4917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200083"
 ---
 # <a name="aggregationstorage-element-assl"></a>AggregationStorage 요소(ASSL)
   집계 저장 방법을 식별합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36079370"
 |*일반*|집계 데이터가 기본 방식으로 저장됩니다.|  
 |*MolapOnly*|집계 데이터가 MOLAP(다차원 OLAP) 저장소에만 저장됩니다.|  
   
- *MolapOnly* 옵션은에 대해서만 사용할 수는 [파티션](../objects/partition-element-assl.md) 요소입니다.  
+ 합니다 *MolapOnly* 옵션은만 사용할 수는 [파티션](../objects/partition-element-assl.md) 요소입니다.  
   
  AMO(Analysis Management Objects) 개체 모델에서 `AggregationStorage`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.ProactiveCachingAggregationStorage>입니다.  
   

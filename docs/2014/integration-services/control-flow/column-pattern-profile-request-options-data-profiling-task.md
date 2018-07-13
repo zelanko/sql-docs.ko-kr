@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 690fcb3380d5ceb3a996ca3f77c926bf16dee9a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178330"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 패턴 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 패턴 프로필은 문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별하는 데 도움이 되며 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안 받을 수 있습니다. 예를 들어 US Zip Code 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 보이면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.  
@@ -36,14 +36,14 @@ ms.locfileid: "36078630"
   
 -   **Delimiters** 기본적으로 Delimiters 목록에는 공백 문자, 가로 탭 문자(\t), 줄 바꿈 문자(\n) 및 캐리지 리턴 문자(\r)가 포함됩니다. 추가 구분 기호를 지정할 수 있지만 기본 구분 기호는 제거할 수 없습니다.  
   
--   **기호** 기본적으로 목록 **기호** 문자 포함: `,.;:-"'`~ = & / @? () <>]{}| #* ^ %`. For example, if the symbols are "`()-'","(425) 123-4567"값으로 토큰화 됩니다 ["(","425",")","123","-","4567",") "]입니다.  
+-   **기호** 기본적으로 목록 **기호** 와 같은 문자가 포함: `,.;:-"'`~ = & / @!? <>] (){}| #* ^ %`. For example, if the symbols are "`()-'","(425) 123-4567"값으로 토큰화 됩니다 ["(","425",")","123","-","4567",") "]입니다.  
   
  한 문자가 동시에 구분 기호이면서 기호일 수는 없습니다.  
   
  모든 구분 기호는 토큰화 프로세스의 일환으로 단일 공백으로 정규화됩니다. 반면 기호는 유지됩니다.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>태그 테이블 사용 이해  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 만든 특수 테이블에 태그 및 관련 용어를 저장하여 관련 토큰을 단일 태그를 사용하여 그룹화할 수도 있습니다. 태그 테이블에는 이름이 하나는 "Tag"이고 다른 하나는 "Term"인 두 개의 문자열 열이 있어야 합니다. 이러한 열 유형일 수 `char`, `nchar`, `varchar`, 또는 `nvarchar`, 아닌 `text` 또는 `ntext`합니다. 단일 테이블에서 여러 태그와 해당 용어를 결합할 수 있습니다. 열 패턴 프로필 요청은 하나의 태그 테이블만 사용할 수 있습니다. 별도의 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 태그 테이블에 연결할 수 있습니다. 따라서 태그 테이블은 다른 데이터베이스에 있거나 원본 데이터와 다른 서버에 있을 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 만든 특수 테이블에 태그 및 관련 용어를 저장하여 관련 토큰을 단일 태그를 사용하여 그룹화할 수도 있습니다. 태그 테이블에는 이름이 하나는 "Tag"이고 다른 하나는 "Term"인 두 개의 문자열 열이 있어야 합니다. 이러한 열 형식이 될 수 있습니다 `char`, `nchar`를 `varchar`, 또는 `nvarchar`, 있지만 `text` 또는 `ntext`합니다. 단일 테이블에서 여러 태그와 해당 용어를 결합할 수 있습니다. 열 패턴 프로필 요청은 하나의 태그 테이블만 사용할 수 있습니다. 별도의 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 태그 테이블에 연결할 수 있습니다. 따라서 태그 테이블은 다른 데이터베이스에 있거나 원본 데이터와 다른 서버에 있을 수 있습니다.  
   
  예를 들어 단일 태그 "Direction"을 사용하여 주소에 나타날 수 있는 값 "East", "West", "North" 및 "South"를 그룹화할 수 있습니다. 다음 테이블은 이러한 태그 테이블의 예입니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36078630"
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
   
  **Symbols**  
- 패턴의 일부로 유지할 기호를 나열합니다. 이러한 기호에는 날짜의 "/", 시간의 ":" 및 전자 메일 주소의 " @ "이 포함될 수 있습니다. 기본적으로 목록 **기호** 문자 포함: `,.;:-"'`~ = & / @? () <>{}| #* ^ %'입니다.  
+ 패턴의 일부로 유지할 기호를 나열합니다. 이러한 기호에는 날짜의 "/", 시간의 ":" 및 전자 메일 주소의 " @ "이 포함될 수 있습니다. 기본적으로 목록 **기호** 와 같은 문자가 포함: `,.;:-"'`~ = & / @!? () <>{}| #* ^ %'.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
   

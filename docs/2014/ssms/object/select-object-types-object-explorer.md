@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjecttypes.f1
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf69b3ce116c21b8422b22a511b09fcebe816294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c280e0035b1f9bc18a773be59e51454d4d8e3aa9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078755"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202343"
 ---
 # <a name="select-object-types-object-explorer"></a>개체 유형 선택(개체 탐색기)
   이 대화 상자를 사용하여 **개체 선택** 대화 상자에 나타나는 개체 유형을 지정할 수 있습니다.  

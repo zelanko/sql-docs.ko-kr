@@ -1,5 +1,5 @@
 ---
-title: (비즈니스 인텔리전스 마법사) 현지 통화 참조 정의 | Microsoft Docs
+title: 현지 통화 참조 (비즈니스 인텔리전스 마법사)를 정의 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10810e19ec00aa77a14cb5a21789dfee1f9ae09a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206283"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>현지 통화 참조 정의(비즈니스 인텔리전스 마법사)
   **현지 통화 참조 정의** 페이지를 사용하여 **변환 유형 선택** 페이지에서 지정한 다 대 다 또는 다 대 일 변환 유형을 다루는 통화 변환 기능에 대한 현지 통화를 정의할 수 있습니다. 현지 통화는 **측정값 선택** 페이지에서 선택한 측정값에 대한 트랜잭션이 저장되는 통화입니다.  
@@ -31,12 +31,12 @@ ms.locfileid: "36079393"
   
 ## <a name="options"></a>변수  
  **팩트 테이블의 식별자**  
- **측정값 선택** 페이지에서 선택한 측정값을 포함하는 팩트 테이블이 참조하는 통화 차원의 현지 통화에 대한 통화 식별자를 제공하는 특성을 지정하려면 선택합니다. (통화 차원 하나에 `Type` 속성이 *통화*.)  
+ **측정값 선택** 페이지에서 선택한 측정값을 포함하는 팩트 테이블이 참조하는 통화 차원의 현지 통화에 대한 통화 식별자를 제공하는 특성을 지정하려면 선택합니다. (통화 차원에 하나 `Type` 속성이 *통화*.)  
   
  트랜잭션 자체에서 해당 트랜잭션에 대한 현지 통화를 결정하는 경우 이 옵션을 사용합니다. 예를 들어 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 예제 데이터베이스[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]에서 Internet Sales 측정값 그룹은 Currency 차원에 대한 일반 차원 관계를 포함합니다. 이 측정값 그룹의 팩트 테이블에는 해당 차원의 차원 테이블에 있는 통화 식별자를 참조하는 외래 키 열이 있습니다.  
   
- **통화 차원 및 팩트 데이터에서 참조 하는 특성**  
- 해당 멤버가 현지 통화에 대한 통화 식별자를 나타내는 통화 차원 내에서 통화 특성을 선택합니다. (통화 특성은 해당 `Type` 속성이 *통화*.)  
+ **통화 차원 및 팩트 데이터에서 참조 되는 특성**  
+ 해당 멤버가 현지 통화에 대한 통화 식별자를 나타내는 통화 차원 내에서 통화 특성을 선택합니다. (통화 특성은 하나입니다 `Type` 속성이 *통화*.)  
   
 > [!NOTE]  
 >  이 옵션은 **팩트 테이블의 식별자** 옵션을 선택하지 않으면 사용할 수 없습니다.  

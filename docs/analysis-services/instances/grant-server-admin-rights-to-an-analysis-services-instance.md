@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018860"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760098"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Analysis Services 인스턴스에 서버 관리 권한 부여
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34018860"
  설치 후에는 역할 멤버 자격을 수정하여 서비스에 대한 모든 권한이 필요한 사용자를 더 추가할 수 있습니다. AMO(Analysis Management Objects)를 사용하여 서버 역할을 관리할 수도 있습니다. 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 상세 역할로 점차적으로 이동 하는 처리 및 서버, 데이터베이스 및 개체 수준에서 쿼리를 제공 합니다. 이러한 역할을 사용하는 방법에 대한 자세한 내용은 [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)을 참조하세요.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 및 서버, 데이터베이스 및 개체 수준에서 쿼리를 점점 더 세분화 된 역할의 진행을 제공 합니다. 이러한 역할을 사용하는 방법에 대한 자세한 내용은 [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)을 참조하세요.  
   
 ## <a name="modify-server-role-membership"></a>서버 역할 멤버 자격 수정  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34018860"
 5.  **선택할 개체 이름을 입력하세요.** 텍스트 상자에 컴퓨터의 이름을 입력하고 **이름 확인** 을 클릭하여 컴퓨터 계정을 현재 위치에서 찾을 수 있는지 확인합니다. 컴퓨터 계정을 찾을 수 없으면 컴퓨터 이름과 컴퓨터가 멤버로 속한 현재 도메인을 확인합니다.  
   
 ## <a name="nt-servicessastelemetry-account"></a>NT Service\SSASTelemetry 계정  
- 설치 중에 생성되는 권한이 낮은 컴퓨터 계정인**NT Service/SSASTelemetry** 는 CEIP(사용자 환경 개선 프로그램) 서비스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구현 실행 전용으로 사용됩니다. 이 서비스에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 관리 권한(다양한 검색 명령 실행용)이 필요합니다. 자세한 내용은 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 및 [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) 를 참조하세요.  
+ 설치 중에 생성되는 권한이 낮은 컴퓨터 계정인**NT Service/SSASTelemetry** 는 CEIP(사용자 환경 개선 프로그램) 서비스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구현 실행 전용으로 사용됩니다. 이 서비스에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 관리 권한(다양한 검색 명령 실행용)이 필요합니다. 자세한 내용은 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 및 [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) 를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [보안 역할&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   

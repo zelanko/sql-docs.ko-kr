@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9d56a2cf9a7744e028fdcc960fe63d97bab36a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 07aac915183194b32d87eed970cb8d8d838c34aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260929"
 ---
 # <a name="annotations-master-data-services"></a>주석(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 주석은 트랜잭션에 대한 세부 정보를 제공하기 위해 입력하는 설명입니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36078830"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|트랜잭션에 주석을 추가합니다.|[트랜잭션에 주석을 추가 &#40;Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
+|트랜잭션에 주석을 추가합니다.|[트랜잭션에 주석 추가 &#40;Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
