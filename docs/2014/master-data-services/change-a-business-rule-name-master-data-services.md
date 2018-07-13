@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b70b2ee10b092be94df67c13be09944824546b77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d10fa33ef28b7b8cf6b46bb15d35b5975f979cb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239143"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>비즈니스 규칙 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 할당된 이름이 비즈니스 요구에 맞지 않으면 비즈니스 규칙 이름을 변경할 수 있습니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "36078610"
   
 4.  **엔터티** 목록에서 엔터티를 선택합니다.  
   
-5.  **멤버 유형을** 목록에서 멤버 유형을 선택 합니다.  
+5.  **멤버 유형** 목록에서 멤버 유형을 선택 합니다.  
   
 6.  **특성** 목록에서 특성을 선택하거나 기본값인 **모두**를 그대로 사용합니다.  
   
-7.  표 형태의 비즈니스 규칙에 대 한 행에서 두 번 클릭은 **이름** 필드입니다.  
+7.  표 형태의 비즈니스 규칙에 대 한 행에서 두 번 클릭 합니다 **이름을** 필드입니다.  
   
 8.  비즈니스 규칙의 이름을 입력합니다.  
   

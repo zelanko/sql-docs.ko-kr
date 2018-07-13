@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 55004b30ac7f462b677875f6f8b872ccebf25be8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e06d0e989b357d939da4a024a6c904c6e1cf175c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212353"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 다양 한 용어를 사용 하 여 보고서 사용자에 게 표시 되는 초기 정의 게시 된 보고서 및 표시 된 보고서를 포함 하 여 다양 한 상태를 설명 합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 다양 한 용어를 사용 하 여 사용자에 게 표시 된 대로 초기 정의 게시 된 보고서 및 표시 된 보고서를 비롯 한 여러 상태의 보고서를 설명 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,13 +64,13 @@ ms.locfileid: "36079232"
   
 -   사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다.  
   
- 사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 보고서는 HTML 외에도 Excel, Word, XML, PDF, TIFF 및 CSV를 비롯한 다양한 출력 형식으로 렌더링할 수 있습니다. 게시된 보고서와 마찬가지로 렌더링된 보고서는 편집하거나 보고서 서버에 다시 저장할 수 없습니다. 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
+ 사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 보고서는 HTML 외에도 Excel, Word, XML, PDF, TIFF 및 CSV를 비롯한 다양한 출력 형식으로 렌더링할 수 있습니다. 게시된 보고서와 마찬가지로 렌더링된 보고서는 편집하거나 보고서 서버에 다시 저장할 수 없습니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [SQL Server 2014의에서 보고서 작성기](../report-builder/report-builder-in-sql-server-2016.md)   
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

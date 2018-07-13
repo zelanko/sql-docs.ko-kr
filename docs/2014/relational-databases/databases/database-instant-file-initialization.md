@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
 - instant file initializations [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0dc65b8fb0985be59fa22e7a5b4f650d5f779d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: da60e00ce0162a553d9ecf68368edd3dde193a08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180109"
 ---
 # <a name="database-instant-file-initialization"></a>데이터베이스 즉시 파일 초기화
   데이터 및 로그 파일이 초기화되어 이전에 삭제한 파일의 디스크에 남아 있는 기존 데이터를 덮어씁니다. 데이터 및 로그 파일은 사용자가 다음 작업 중 하나를 수행할 때 0으로 채워져 초기화됩니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36080200"
   
  계정에 `Perform volume maintenance tasks` 권한을 부여하려면  
   
-1.  백업 파일을 만들 수는 컴퓨터에서 열고는 `Local Security Policy` 응용 프로그램 (`secpol.msc`).  
+1.  컴퓨터의 백업 파일을 만들 열을 `Local Security Policy` 응용 프로그램 (`secpol.msc`).  
   
 2.  왼쪽 창에서 **로컬 정책**을 확장한 다음 **사용자 권한 할당**을 클릭합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36080200"
   
 4.  **사용자 또는 그룹 추가** 를 클릭하고 백업에 사용되는 사용자 계정을 추가합니다.  
   
-5.  클릭 **적용**, 모든 닫으면 `Local Security Policy` 대화 상자.  
+5.  클릭 **Apply**를 모두 닫고 `Local Security Policy` 대화 상자.  
   
 ### <a name="security-considerations"></a>보안 고려 사항  
  삭제된 디스크 내용은 새 데이터가 파일에 기록될 때만 덮어쓰기 때문에 권한 없는 사용자가 삭제된 내용에 액세스할 수 있습니다. 데이터베이스 파일이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결되어 있는 동안 파일의 DACL(임의 액세스 제어 목록)에 의해 이러한 정보 공개 위협이 줄어듭니다. 이 DACL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 로컬 관리자에게만 파일 액세스를 허용합니다. 그러나 파일이 분리되면 SE_MANAGE_VOLUME_NAME이 없는 사용자 또는 서비스가 액세스할 수 있습니다. 데이터베이스가 백업될 때에도 유사한 위협이 존재합니다. 백업 파일이 적절한 DACL로 보호되지 않는 경우 권한이 없는 사용자 또는 서비스가 삭제된 내용을 사용할 수 있게 됩니다.  

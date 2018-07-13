@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95117c20b67777f7202ee823c17ba8775843295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b84c4db0ce70bdf11459a2d4e5d6214760738e74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191723"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 함수
   컴퓨터에서 사용할 수 있는 모든 SQL Server Express LocalDB 버전을 반환합니다.  

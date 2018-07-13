@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - organizing database diagram objects [SQL Server]
 - database diagrams [SQL Server], arranging objects
 - arranging database diagram objects
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14d4f19e0cfab91e4d7cf36101d3480ec653cde1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1795bf5e2c101f5f37756a3ec7c96c0eee88a0b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249553"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 테이블 정렬(Visual Database Tools)
   데이터베이스 다이어그램에서 테이블을 빠르게 정렬하여 각 테이블과 관계를 명확하게 파악할 수 있습니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236773"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 저장소 구성
   저장소 용량 및 IOPS(초당 입력/출력 작업)를 구성해야 합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "36078803"
   
 -   메모리 액세스에 최적화된 테이블은 하나 이상의 컨테이너 간에 분산된 파일에서 유지됩니다. 각각의 컨테이너는 일반적으로 자체 스핀들에 매핑되고 증가된 저장소 용량 및 향상된 성능을 위해 모두 사용됩니다. 저장소 미디어의 순차 IOPS는 3배 증가된 트랜잭션 로그 처리량을 지원할 수 있어야 합니다.  
   
-     예를 들어 메모리 액세스에 최적화 된 테이블 트랜잭션 로그에서 500 m B/초의 작업을 생성 하는 경우 메모리 액세스에 최적화 된 테이블 용 저장소는 1.5 g B/초 지원 해야 합니다. 3 배를 지원 해야 할 경우 데이터 및 델타 파일 쌍 먼저 초기 데이터를 사용 하 여 작성 하 고 읽기/다시 써야 해야 하는 과정에서 트랜잭션 로그 처리량을 증가 발생 병합 작업의 일환으로 합니다.  
+     예를 들어, 트랜잭션 로그에서 활동의 초당 500MB를 생성 하는 메모리 최적화 테이블, 메모리 최적화 테이블의 저장소 1.5 g B/초를 지원 해야 합니다. 3 배 지원 요구 트랜잭션 로그 처리량에서 증가 써야 과정은 데이터 및 델타 파일 쌍을 초기 데이터에 먼저 쓴 다음 하 읽기/다시에서 병합 작업의 일환으로 합니다.  
   
      저장소 처리량을 측정하는 다른 요소는 메모리 최적화 테이블의 복구 시간입니다. 응용 프로그램에서 데이터베이스를 사용할 수 있으려면 먼저 내구성이 있는 테이블의 데이터를 메모리에서 읽어야 합니다. 일반적으로 메모리 최적화 테이블로 데이터 로드는 IOPS의 속도로 수행할 수 있습니다. 메모리 최적화 내구성 있는 테이블의 전체 저장소가 60GB이고 이 데이터를 1분 내에 로드할 수 있으려면 저장소의 IOPS를 1GB/초로 설정해야 합니다.  
   
--   짝수 개의 스핀들이 있는 경우 컨테이너 개수의 두 배를 만들어야 하고 각 쌍은 같은 스핀들에 매핑되어야 합니다. 이는 IOPS 및 저장소를 전파하는 데 필요합니다. 자세한 내용은 참조 [메모리 액세스에 최적화 된 파일 그룹이](the-memory-optimized-filegroup.md)합니다.  
+-   짝수 개의 스핀들이 있는 경우 컨테이너 개수의 두 배를 만들어야 하고 각 쌍은 같은 스핀들에 매핑되어야 합니다. 이는 IOPS 및 저장소를 전파하는 데 필요합니다. 자세한 내용은 [메모리 최적화 파일 그룹이](the-memory-optimized-filegroup.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  

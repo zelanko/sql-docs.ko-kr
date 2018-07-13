@@ -1,5 +1,5 @@
 ---
-title: 요소 (ClrAssemblyFile) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (ClrAssemblyFile) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218023"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Type 요소(ClrAssemblyFile)(ASSL)
-  에 속하는 파일 중 하나의 파일 유형을 지정는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 어셈블리입니다.  
+  파일 형식에 속하는 파일 중 하나의 지정을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 어셈블리입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36079126"
   
  AMO(Analysis Management Objects) 개체 모델에서 `Type`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>입니다.  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [파일 요소 &#40;ASSL&#41;](../objects/file-element-assl.md)   

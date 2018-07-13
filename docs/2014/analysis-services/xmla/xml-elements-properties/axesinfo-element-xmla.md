@@ -24,18 +24,18 @@ helpviewer_keywords:
 - AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c5f11dce65c7e3d2c7b87cfed2d29147a5eba70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 93ad2eb9d35384831cb952d140be267e75a7647d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178410"
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo 요소(XMLA)
-  컬렉션을 포함 [AxisInfo](axisinfo-element-xmla.md) 부모 포함 된 축 메타 데이터를 나타내는 요소 [OlapInfo](olapinfo-element-xmla.md) 요소입니다.  
+  컬렉션을 포함 [AxisInfo](axisinfo-element-xmla.md) 요소를 부모에 의해 포함 된 축 메타 데이터를 나타내는 [OlapInfo](olapinfo-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

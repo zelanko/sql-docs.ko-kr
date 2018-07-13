@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197743"
 ---
 # <a name="password-element-assl"></a>Password 요소(ASSL)
-  에 대 한 사용자 계정의 암호를 포함 된 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 요소입니다.  
+  에 대 한 사용자 계정의 암호를 포함 합니다 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36079355"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 값은 `Password` 의 값과 함께 요소는 [계정](account-element-impersonationinfo-assl.md) 요소를 경우 가장 용도로 사용 됩니다의 값은 [ImpersonationMode](impersonationmode-element-assl.md) 에서 파생 된 모든 요소의 `ImpersonationInfo` 데이터 유형이 설정 되어 *ImpersonateAccount*합니다.  
+ 값 합니다 `Password` 값 뿐만 아니라 요소를 [계정](account-element-impersonationinfo-assl.md) 요소인 경우 가장 용도로 사용 됩니다 값을 [ImpersonationMode](impersonationmode-element-assl.md) 에서 파생 된 모든 요소에 대 한 요소를 `ImpersonationInfo` 데이터 유형이 설정 되어 *ImpersonateAccount*합니다.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스의 서버 관리자 역할 멤버만 `Password` 요소에 빈 값을 제공할 수 있습니다.  
   

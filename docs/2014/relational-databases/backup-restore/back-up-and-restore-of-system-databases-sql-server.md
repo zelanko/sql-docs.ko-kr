@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197553"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>시스템 데이터베이스 백업 및 복원(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 인스턴스의 작업에 필수적인*시스템 데이터베이스*라는 시스템 수준 데이터베이스의 집합을 유지 관리합니다. 모든 중요한 업데이트 후에는 여러 시스템 데이터베이스를 백업해야 합니다. 항상 백업해야 하는 시스템 데이터베이스에는 **msdb**, **master**및 **model**이 있습니다. 데이터베이스가 서버 인스턴스에서 복제를 사용할 경우 **배포** 시스템 데이터베이스도 백업해야 하며 이러한 시스템 데이터베이스를 백업하면 하드 디스크 손실과 같은 시스템 오류 이벤트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템을 복원 및 복구할 수 있습니다.  
@@ -41,11 +40,11 @@ ms.locfileid: "36079536"
 |[tempdb](../databases/tempdb-database.md)|임시 또는 중간 결과 집합을 유지하기 위한 작업 영역입니다. 이 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때마다 다시 생성됩니다. 서버 인스턴스가 종료될 때 **tempdb** 에 있는 모든 데이터는 영구적으로 삭제됩니다.|아니요|간단|**tempdb** 시스템 데이터베이스는 백업할 수 없습니다.|  
 |[배포 구성](../replication/configure-distribution.md)|서버가 복제 배포자로 구성된 경우에만 존재하는 데이터베이스입니다. 이 데이터베이스는 모든 유형의 복제 및 트랜잭션(트랜잭션 복제의 경우)에 대한 메타데이터 및 기록 데이터를 저장합니다.|예|간단|**distribution** 데이터베이스의 백업 시기는 [복제된 데이터베이스 백업 및 복원](../replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.|  
   
- <sup>1</sup> 모델의 현재 복구 모델, 참조 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md) 또는 [sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> 모델의 현재 복구 모델에 알아보려면 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md) 하거나 [sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>시스템 데이터베이스 복원의 제한 사항  
   
--   시스템 데이터베이스는 서버 인스턴스가 현재 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 생성된 백업에서만 복원될 수 있습니다. 예를 들어에서 실행 되는 서버 인스턴스에서 시스템 데이터베이스를 복원 하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] s p 1입니다.  
+-   시스템 데이터베이스는 서버 인스턴스가 현재 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 생성된 백업에서만 복원될 수 있습니다. 예를 들어에서 실행 되는 서버 인스턴스에서 시스템 데이터베이스를 복원 하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
   
 -   데이터베이스를 복원하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 시작하려면 **master** 데이터베이스에 액세스할 수 있고 최소한 부분적으로 사용할 수 있어야 합니다. **master** 를 사용할 수 없게 된 경우 다음 방법 중 하나로 데이터베이스를 사용 가능한 상태로 되돌릴 수 있습니다.  
   

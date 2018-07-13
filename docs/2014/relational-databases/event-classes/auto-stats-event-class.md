@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c90a2afb20e7757e8797aaf5849c5fe4449b1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213023"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 이벤트 클래스
   **Auto Stats** 이벤트 클래스는 인덱스 및 열 통계가 자동으로 업데이트되었음을 나타냅니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36078829"
 |**오류**|**int**|지정된 이벤트의 오류 번호입니다. 종종 **sys.messages** 카탈로그 뷰에 저장된 오류 번호를 나타냅니다.|31|예|  
 |**EventClass**|**int**|이벤트 유형 = 58|27|아니요|  
 |**EventSequence**|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
-|**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1: 통계가 생성/업데이트, **TextData** 열 통계 및 생성 또는 업데이트 되었는지 여부를 나타냅니다.<br /><br /> 2: 비동기 통계 업데이트입니다. 작업이 지연되었습니다.<br /><br /> 3: 비동기 통계 업데이트입니다. 작업이 시작되었습니다.<br /><br /> 4: 비동기 통계 업데이트입니다. 작업이 완료되었습니다.|21|예|  
+|**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1: 통계가 생성/업데이트 동기적으로 **TextData** 열 통계 및 생성 또는 업데이트 되었는지 여부를 나타냅니다.<br /><br /> 2: 비동기 통계 업데이트입니다. 작업이 지연되었습니다.<br /><br /> 3: 비동기 통계 업데이트입니다. 작업이 시작되었습니다.<br /><br /> 4: 비동기 통계 업데이트입니다. 작업이 완료되었습니다.|21|예|  
 |**GroupID**|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |**IndexID**|**int**|이벤트에 의해 영향 받는 개체의 인덱스/통계 항목 ID입니다. 개체의 인덱스 ID를 확인하려면 **sys.indexes** 카탈로그 뷰의 **index_id** 열을 사용합니다.|24|예|  

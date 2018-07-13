@@ -23,18 +23,18 @@ helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b34b0becd78adca99e4052e142fc696c155f6e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190903"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 요소(XMLA)
-  결정 여부 부모 [백업](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령은 대상 파일이 나 데이터베이스를 덮어쓰려면 하려고 시도 합니다.  
+  확인 여부를 부모 [백업](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령은 대상 파일 또는 데이터베이스를 덮어쓸지 하려고 시도 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,13 +59,13 @@ ms.locfileid: "36079645"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[백업](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
+|부모 요소|[Backup](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
  `Backup` 명령의 경우 `AllowOverwrite` 요소는 명령으로 `File` 요소에 지정된 백업 파일을 덮어쓸 수 있는지 여부를 결정합니다.  
   
- 에 대 한 `Restore` 요소는 `AllowOverwrite` 요소 명령을 덮어쓸 수 있는지 여부를 결정은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 데이터베이스는 `DatabaseName` 요소입니다.  
+ 에 대 한 `Restore` 요소를 `AllowOverwrite` 요소 명령을 덮어쓸 수 있는지 여부를 결정 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 데이터베이스는 `DatabaseName` 요소.  
   
 ## <a name="see-also"></a>관련 항목  
  [DatabaseName 요소 &#40;XMLA&#41;](name-element-xmla.md)   

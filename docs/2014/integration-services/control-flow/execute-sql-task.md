@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231553"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36078845"
 -   태스크에 매개 변수 바인딩이 사용되는 경우 일괄 처리의 모든 쿼리에 동일한 수와 유형의 매개 변수를 사용해야 합니다.  
   
 ## <a name="running-parameterized-sql-commands"></a>매개 변수가 있는 SQL 명령 실행  
- SQL 문과 저장 프로시저는 일반적으로 입력 매개 변수, 출력 매개 변수 및 반환 코드를 사용합니다. SQL 실행 태스크는 경로 `Input`, `Output`, 및 `ReturnValue` 매개 변수 형식입니다. 사용 하면는 `Input` 입력 매개 변수의 형식 `Output` 출력 매개 변수에 대 한 및 `ReturnValue` 에 대 한 반환 코드를 반환 합니다.  
+ SQL 문과 저장 프로시저는 일반적으로 입력 매개 변수, 출력 매개 변수 및 반환 코드를 사용합니다. SQL 실행 태스크를 지원 합니다 `Input`, `Output`, 및 `ReturnValue` 매개 변수 형식입니다. 사용할를 `Input` 입력된 매개 변수의 형식을 `Output` 출력 매개 변수에 대 한 및 `ReturnValue` 에 대 한 코드를 반환 합니다.  
   
 > [!NOTE]  
 >  데이터 공급자가 지원하는 경우에만 SQL 실행 태스크에 매개 변수를 사용할 수 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "36078845"
 ## <a name="troubleshooting-the-execute-sql-task"></a>SQL 실행 태스크 문제 해결  
  SQL 실행 태스크가 외부 데이터 공급자에 대해 수행하는 호출을 기록할 수 있습니다. 이 로깅 기능을 사용하여 SQL 실행 태스크가 실행하는 SQL 명령의 문제를 해결할 수 있습니다. SQL 실행 태스크가 외부 데이터 공급자에 대해 수행하는 호출을 기록하려면 패키지 로깅을 사용하도록 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
- 경우에 따라 SQL 명령 또는 저장 프로시저는 여러 결과 집합을 반환합니다. 이러한 결과 집합의 결과 나타내는 행 집합 뿐만 아니라 포함 `SELECT` 쿼리, 하지만 대 한 오류 결과인 단일 값 `RAISERROR` 또는 `PRINT` 문. 이 태스크에서 첫 번째 결과 집합 후에 발생하는 결과 집합의 오류를 무시할지 여부는 사용되는 연결 관리자의 유형에 따라 달라집니다.  
+ 경우에 따라 SQL 명령 또는 저장 프로시저는 여러 결과 집합을 반환합니다. 이러한 결과 집합의 결과 나타내는 행 집합 뿐만 아니라 포함 `SELECT` 오류 결과인 단일 값도 쿼리 `RAISERROR` 또는 `PRINT` 문입니다. 이 태스크에서 첫 번째 결과 집합 후에 발생하는 결과 집합의 오류를 무시할지 여부는 사용되는 연결 관리자의 유형에 따라 달라집니다.  
   
 -   OLE DB 및 ADO 연결 관리자를 사용하는 경우 태스크에서 첫 번째 결과 집합 후에 발생하는 결과 집합을 무시합니다. 따라서 이러한 연결 관리자를 사용하는 경우에는 오류가 첫 번째 결과 집합의 일부가 아니면 태스크에서 SQL 명령 또는 저장 프로시저가 반환하는 오류를 무시합니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36078845"
   
 -   태스크에서 SQL 문의 준비 단계를 건너뛸지를 나타냅니다.  
   
--   ADO 연결 형식을 사용하는 경우 SQL 문이 저장 프로시저인지 여부를 나타내야 합니다. 다른 연결 유형에 대 한이 속성은 읽기 전용 이며 해당 값은 항상 `false`합니다.  
+-   ADO 연결 형식을 사용하는 경우 SQL 문이 저장 프로시저인지 여부를 나타내야 합니다. 다른 연결 유형에 대해이 속성은 읽기 전용 이며 해당 값은 항상 `false`합니다.  
   
  프로그래밍 방식을 통해 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 속성을 설정할 수 있습니다.  
   

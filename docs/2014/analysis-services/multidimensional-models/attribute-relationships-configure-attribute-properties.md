@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flexible relationships (Analysis Services)
 - attributes [Analysis Services], relationships
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rigid relationships (Analysis Services)
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69c3799eb831c63a919a76663f9ba689b68ec009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6ab5ee2e704b7783c88ea032ea71d110da6561e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187270"
 ---
 # <a name="configure-attribute-relationship-properties"></a>특성 관계 속성 구성
   다음 표에서는 특성 관계 속성을 나열하고 설명합니다.  

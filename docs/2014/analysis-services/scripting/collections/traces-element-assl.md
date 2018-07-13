@@ -1,5 +1,5 @@
 ---
-title: 추적 요소 (ASSL) | Microsoft Docs
+title: 요소 (ASSL) 추적 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Traces element
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc4088ac641b754e70e02508bbef2f629f49ba95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e761f8ac9bb193ed0c04b0a475f0841513505e5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215953"
 ---
 # <a name="traces-element-assl"></a>Traces 요소(ASSL)
   [Server](../objects/trace-element-assl.md) 요소와 연결된 [Trace](../objects/server-element-assl.md) 요소의 컬렉션을 포함합니다.  
