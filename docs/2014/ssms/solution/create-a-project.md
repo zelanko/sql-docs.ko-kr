@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.newproject
 - vs.addnewproject
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d1e3ae0c46b8ad7f56ebb71ee0a416670aa56fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ee87fea9b2586b8da9c54b2d074228b93a97e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191203"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
   기존 솔루션 내에 하나 이상의 프로젝트를 만들 수 있습니다.  
@@ -103,10 +103,10 @@ ms.locfileid: "36080557"
 ## <a name="see-also"></a>관련 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [솔루션에 기존 프로젝트 추가](add-an-existing-project-to-a-solution.md)   
- [프로젝트에 새 항목을 추가 합니다.](add-new-items-to-a-project.md)   
+ [프로젝트에 새 항목 추가](add-new-items-to-a-project.md)   
  [프로젝트에 기존 항목 추가](add-existing-items-to-a-project.md)   
  [프로젝트에 대 한 기본 위치 변경](change-the-default-location-for-projects.md)   
- [제거 하거나 항목 또는 프로젝트를 삭제 합니다.](remove-or-delete-an-item-or-project.md)   
+ [항목이 나 프로젝트 제거 또는 삭제](remove-or-delete-an-item-or-project.md)   
  [솔루션 삭제](delete-a-solution.md)  
   
   

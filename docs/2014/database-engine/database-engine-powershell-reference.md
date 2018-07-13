@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7316d93d197a64b7b9f7a7f6675e92c7cc5be613
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17424e5a629a4161760c35d5dcc24b80aaf9c2bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205843"
 ---
 # <a name="database-engine-powershell-reference"></a>데이터베이스 엔진 PowerShell 참조
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 일반적인 작업을 수행하는 데 사용할 수 있는 여러 가지 Windows PowerShell 2.0 cmdlet이 포함되어 있습니다. 또한 쿼리 식과 URN(Uniform Resource Name)을 SQL Server PowerShell 경로로 변경하거나 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 하나 이상의 개체를 지정하는 데 사용할 수 있습니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "36080681"
   
 |Description|Cmdlet|  
 |-----------------|------------|  
-|사용 하 여 실행할 수 있는 TRANSACT-SQL 및 XQuery 스크립트를 실행 하는 `sqlcmd` 유틸리티입니다.|[Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|사용 하 여 실행할 수 있는 스크립트와 같은 TRANSACT-SQL 및 XQuery 스크립트를 실행 합니다 `sqlcmd` 유틸리티입니다.|[Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |데이터베이스 엔진 개체가 정책 기반 관리 정책을 준수하는지 여부를 평가합니다.|[Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>다른 cmdlet에 대한 정보  
- `Encode-Sqlname` 및 `Decode-Sqlname` cmdlet PowerShell 경로에서 지원 되지 않는 문자를 포함 하는 SQL Server 식별자를 지정할 수 있습니다. 자세한 내용은 [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md)을(를) 참조하세요.  
+ 합니다 `Encode-Sqlname` 고 `Decode-Sqlname` cmdlet PowerShell 경로에서 지원 되지 않는 문자가 포함 된 SQL Server 식별자를 지정할 수 있습니다. 자세한 내용은 [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md)을(를) 참조하세요.  
   
  `Convert-UrnToPath` cmdlet을 사용하면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체의 URN을 SQL Server PowerShell 공급자의 경로로 변환할 수 있습니다. 자세한 내용은 [Convert URNs to SQL Server Provider Paths](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)을(를) 참조하세요.  
   

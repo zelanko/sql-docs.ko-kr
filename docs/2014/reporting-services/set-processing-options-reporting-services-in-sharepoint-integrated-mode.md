@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255655"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 처리 옵션을 설정하여 데이터 처리 시기를 결정할 수 있습니다. 현재 보고서에 대해 보고서 기록을 사용할지 여부를 결정하는 옵션과 보고서 처리의 제한 시간 값을 설정할 수도 있습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "36079912"
   
 ##  <a name="bkmk_set_database_timeout"></a> 데이터베이스 제한 시간 설정  
   
-1.  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 참조는 "Get 및 set 보고 서비스 응용 프로그램 데이터베이스의 속성" 섹션의 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)합니다.  
+1.  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 가져오기 및 보고 서비스 응용 프로그램 데이터베이스의 속성 설정 "을 참조 하십시오. 부분 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)   

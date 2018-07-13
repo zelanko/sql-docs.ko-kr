@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.quickprofile.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8d6997088baf41278a13d89082d1b3da202916c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d805c9378ee720557091c2734d06cccf2fec8ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167214"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
   **단일 테이블 빠른 프로필 형식** 을 사용하여 데이터 프로파일링 태스크를 구성하고 기본 설정으로 단일 테이블이나 뷰를 빠르게 프로파일링할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36079614"
 |값|Description|  
 |-----------|-----------------|  
 |**열 Null 비율 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 Null 비율 프로필을 계산합니다.<br /><br /> 이 프로필은 선택한 열에 있는 Null 값의 비율을 보고합니다. 이 프로필을 사용하면 예기치 않게 높은 열 내 Null 값의 비율과 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)을 참조하세요.|  
-|**열 통계 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 통계 프로필을 계산합니다.<br /><br /> 이 프로필 최소값, 최대값, 평균 및 표준 편차를 숫자 열 및 최소값, 최대값과 같은 통계를 보고 `datetime` 열입니다. 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 통계 프로필 요청&#40;데이터 프로파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)을 참조하세요.|  
+|**열 통계 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 통계 프로필을 계산합니다.<br /><br /> 이 프로필 최소값, 최대값, 평균 및 숫자 열에 최소 표준 편차, 최대값과 같은 통계를 보고 `datetime` 열입니다. 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 통계 프로필 요청&#40;데이터 프로파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)을 참조하세요.|  
 |**열 값 분포 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 값 분포 프로필을 계산합니다.<br /><br /> 이 프로필은 선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 이 프로필은 테이블에서 지정된 행 비율을 초과하는 값을 보고할 수 있습니다. 이 프로필을 사용하면 열에 포함된 잘못된 고유 값 수와 같은 데이터 문제를 식별할 수 있습니다. 이 프로필에 대한 자세한 내용은 [열 값 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)을 참조하세요.|  
 |**열 길이 분포 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 길이 분포 프로필을 계산합니다.<br /><br /> 이 프로필은 선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다. 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)을 참조하세요.|  
 |**열 패턴 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 패턴 프로필을 계산합니다.<br /><br /> 이 프로필은 문자열 열의 값을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별할 수 있습니다. 또한 이 프로필은 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안해 줍니다. 이 프로필의 설정에 대한 자세한 내용은 [열 패턴 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)을 참조하세요.|  

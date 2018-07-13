@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, configure alerts
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b40bdea995e10e799b1280a2e987a8c55f8fbd8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7a70f9384154f6868be202c35f8cac640f56e3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246249"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>정책 관리자에서 정책 실패를 알리도록 경고 구성
   정책 기반 관리 정책이 세 가지 자동 평가 모드 중 하나로 실행된 경우 정책 위반이 발생하면 이벤트 로그에 메시지가 기록됩니다. 이 메시지가 이벤트 로그에 기록되는 경우 알림을 받으려면 메시지를 검색하고 동작을 수행하도록 경고를 만듭니다. 경고는 다음 표에서와 같이 메시지를 검색해야 합니다.  

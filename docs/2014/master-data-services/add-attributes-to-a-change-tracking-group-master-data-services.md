@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235183"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>변경 내용 추적 그룹에 특성 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값의 변경 내용을 추적하려는 경우 변경 내용 추적 그룹에 특성을 추가합니다.  
@@ -54,11 +54,11 @@ ms.locfileid: "36080208"
   
 6.  **엔터티 편집** 페이지에서  
   
-    -   특성에 대 한 경우 리프 멤버는 **리프 특성** 창에서 특성을 선택 하 고 클릭 **리프 특성 편집**합니다.  
+    -   리프 멤버에 대 한 일 경우 합니다 **리프 특성** 창에 특성을 선택 하 고 클릭 **리프 특성 편집**합니다.  
   
-    -   특성에 대 한 경우 통합된 멤버는 **특성 통합** 창에서 특성을 선택 하 고 클릭 **통합 특성 편집**합니다.  
+    -   특성에 대 한 경우 통합된 멤버에는 **통합 특성** 창에 특성을 선택 하 고 클릭 **통합 특성 편집**합니다.  
   
-    -   특성이 있으면 컬렉션의 경우에 **컬렉션 특성** 창에서 특성을 선택 하 고 클릭 **컬렉션 특성 편집**합니다.  
+    -   특성의 경우 컬렉션의 경우에 **컬렉션 특성** 창에 특성을 선택 하 고 클릭 **컬렉션 특성 편집**합니다.  
   
 7.  **변경 내용 추적 설정** 확인란을 선택합니다.  
   

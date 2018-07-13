@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11c4eedca05eac85572bd30eddbc4d23b835fa33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5919fc4d600c8c4172edd4d067efbd37708dc87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273569"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 마이닝 모델 콘텐츠 뷰어는 마이닝 알고리즘을 통해 발견된 패턴에 대한 자세한 정보를 제공하며, 분석 프로세스 중에 생성된 다양한 통계에 대한 액세스도 제공합니다. 정보의 양과 유형은 사용된 알고리즘에 따라 다르지만 다음과 같은 범주가 있습니다.  

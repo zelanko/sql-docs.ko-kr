@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Calculation element
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7368af0fa063e3c3372e594d1108173a614243d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7900d511cb847a98d9b4f037a39864b0b89c93a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261339"
 ---
 # <a name="calculation-element-assl"></a>Calculation 요소(ASSL)
-  와 연결 된 계산을 [관점](perspective-element-assl.md) 요소입니다.  
+  계산와 연결 된 [관점](perspective-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

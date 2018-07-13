@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 500f1910c4f60ba52621720ddbb0d0442b84b2fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 46418f06a7cbbf0ab7055ab2ae8fcc9c1dd802ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255975"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 응용 프로그램에서 렌더링할 수 있습니다.  

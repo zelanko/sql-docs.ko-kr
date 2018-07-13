@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0718c0b85502a7277572a9e9ce42d8c94a244b1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169664"
 ---
 # <a name="processingpriority-element-assl"></a>ProcessingPriority 요소(ASSL)
   지연 집계, 인덱싱 또는 클러스터링과 같은 백그라운드 작업을 수행하는 동안 부모 개체의 처리 우선 순위를 결정합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36079659"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[차원](../data-type/dimension-data-type-assl.md), [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
+|부모 요소|[차원](../data-type/dimension-data-type-assl.md)하십시오 [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

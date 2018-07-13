@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2155e4a905da3aeade0f0789f05cc04cdd42f8d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325023"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합
   테이블 형식 또는 PowerPivot 모드에서 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 및 세그먼트 수준 정보를 제공합니다. 이 행 집합은 주로 문제 해결 및 분석을 위해 사용됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36080276"
  **다음에 적용:** 테이블 형식 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` 행 집합에는 다음 열을 포함 합니다.  
   
 |**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "36080276"
 |`COMPRESSION_TYPE`|`DBTYPE_WSTR`||열 세그먼트에 적용된 압축 유형입니다. 이 값은 내부 전용 및 고객 지원 전용으로 사용되는 값입니다. Microsoft는 이 열에 대한 유효한 값 또는 설명을 게시하지 않습니다.|  
 |`BITS_COUNT`|`DBTYPE_I8`||비트 수입니다.|  
 |`BOOKMARK_BITS_COUNT`|`DBTYPE_I8`||책갈피 비트 수입니다.|  
-|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||이 열 세그먼트에 대한 VertiPaq 압축 상태입니다. 값은 다음 중 하나입니다.<br /><br /> -SKIPPED – VertiPaq 압축을 건너뛰었습니다.<br />완료 – VertiPaq 압축이 성공적으로 완료 합니다.<br />-TIMEBOXED-VertiPaq 압축이 완료 했습니다.|  
+|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||이 열 세그먼트에 대한 VertiPaq 압축 상태입니다. 값은 다음 중 하나입니다.<br /><br /> -SKIPPED – VertiPaq 압축을 건너뛰었습니다.<br />완료 – VertiPaq 압축이 성공적으로 완료 합니다.<br />-TIMEBOXED-VertiPaq 압축 timeboxed 했습니다.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>ADOMD.NET을 사용하여 행 집합 반환  
  ADOMD.NET 및 스키마 행 집합을 사용하여 메타데이터를 검색할 때 GUID 또는 문자열을 사용하여 GetSchemaDataSet 메서드의 스키마 행 집합 개체를 참조할 수 있습니다. 자세한 내용은 [Working with Schema Rowsets in ADOMD.NET](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)을 참조하세요.  

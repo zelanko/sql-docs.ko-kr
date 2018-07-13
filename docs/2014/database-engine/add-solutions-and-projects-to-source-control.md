@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], source controls
 - solutions [SQL Server Management Studio], source controls
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57e6ec237aa980732b4a096f7198c0d272677959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171444"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>원본 제어에 솔루션 및 프로젝트 추가
   솔루션을 원본 제어에 추가할 경우 솔루션은 원본 제어 공급자가 작성 및 유지 관리하는 동적 버전 관리 보관의 일부가 됩니다. 누군가가 솔루션의 새 버전을 체크 인할 때마다 해당 버전은 보관의 일부가 되며 다른 소스 제어 사용자가 사용할 수 있게 됩니다.  

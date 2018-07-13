@@ -27,13 +27,13 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4531bc740b72fd0fc7c5376ad7931c4394330435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86fa4cf15230423809acb2afdeaa88ee12c1d60b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225913"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 오류 출력 사용
   구성 요소에 오류 출력이라는 특수한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 개체를 추가하면 실행 중 해당 구성 요소에서 처리할 수 없는 행을 리디렉션할 수 있습니다. 구성 요소에서 발생할 수 있는 문제는 일반적으로 오류 또는 잘림으로 분류되며 각 구성 요소와만 관련이 있습니다. 구성 요소에서 오류 출력을 제공할 경우 해당 구성 요소의 사용자는 결과 집합에서 오류 행을 필터링하거나, 문제가 발생할 때 해당 구성 요소를 실패로 처리하거나, 오류를 무시하고 계속하는 방법으로 유연하게 오류 조건을 처리할 수 있습니다.  
@@ -435,7 +435,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 오류 처리](../../data-flow/error-handling-in-data.md)   

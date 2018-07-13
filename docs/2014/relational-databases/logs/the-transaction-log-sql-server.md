@@ -5,25 +5,24 @@ ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8d7d3b5a6cbe5864d7628ef58c61189fec6c7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223339"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
   각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그가 채워지지 않도록 트랜잭션 로그를 정기적으로 잘라야 합니다. 그러나 일부 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "36080857"
   
  **항목 내용:**  
   
--   [이점: 트랜잭션 로그에서 지 원하는 작업](#Benefits)  
+-   [트랜잭션 로그를 지 원하는 이점: 작업](#Benefits)  
   
 -   [트랜잭션 로그 잘림](#Truncation)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36080857"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 이점: 트랜잭션 로그에서 지 원하는 작업  
+##  <a name="Benefits"></a> 트랜잭션 로그를 지 원하는 이점: 작업  
  트랜잭션 로그는 다음 작업을 지원합니다.  
   
 -   개별 트랜잭션 복구  
@@ -86,18 +85,18 @@ ms.locfileid: "36080857"
 |1|CHECKPOINT|마지막 로그 잘림이나 로그 헤더가 가상 로그 파일을 넘어서 이동되지 않았기 때문에 검사점이 발생하지 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
 |2|LOG_BACKUP|트랜잭션 로그를 자르려면 먼저 로그 백업이 필요합니다. 이는 전체 또는 대량 로그 복구 모델의 경우에만 해당됩니다.<br /><br /> 다음 로그 백업이 완료되면 일부 로그 공간이 다시 사용될 수 있습니다.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|데이터 백업이나 복원이 진행되고 있습니다(모든 복구 모델).<br /><br /> 데이터 백업으로 인해 로그 잘림이 발생하지 않을 경우 해당 백업 작업을 취소하면 즉시 문제를 해결할 수 있습니다.|  
-|4|ACTIVE_TRANSACTION|트랜잭션이 활성 상태입니다(모든 복구 모델).<br /><br /> 로그 백업 시작 시 장기 실행 트랜잭션이 있을 수 있습니다. 이 경우 공간을 확보하려면 다른 로그 백업이 필요할 수 있습니다. 장기 실행 트랜잭션을 트랜잭션 로그는 일반적으로 잘리는 각 자동 검사점에서 단순 복구 모델을 비롯 한 모든 복구 모델에서 로그 잘림이 방지는 참고 합니다.<br /><br /> 트랜잭션이 지연되었습니다. *지연된 트랜잭션* 은 사실상 일부 사용할 수 없는 리소스로 인해 롤백이 차단된 활성 트랜잭션입니다. 지연된 트랜잭션의 원인 및 이러한 트랜잭션을 지연된 상태에서 벗어나게 하는 방법에 대한 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md)을 참조하십시오. <br /><br />장기 실행 트랜잭션은 tempdb의 트랜잭션 로그를 채울 수도 있습니다. Tempdb는 정렬을 위한 작업 테이블, 해싱을 위한 작업 파일, 커서 작업 테이블 및 행 버전 관리 등 내부 개체에 대한 사용자 트랜잭션에 의해 암시적으로 사용됩니다. 사용자 트랜잭션 데이터 (선택 쿼리)를 읽고 데이터를 포함 하는 경우에 내부 개체를 만들어 사용자 트랜잭션을 사용 합니다. 그런 다음 tempdb 트랜잭션 로그를 채울 수 있습니다.|  
+|4|ACTIVE_TRANSACTION|트랜잭션이 활성 상태입니다(모든 복구 모델).<br /><br /> 로그 백업 시작 시 장기 실행 트랜잭션이 있을 수 있습니다. 이 경우 공간을 확보하려면 다른 로그 백업이 필요할 수 있습니다. 장기 실행 트랜잭션이 없는는 트랜잭션 로그는 각 자동 검사점에서 잘립니다 일반적으로 단순 복구 모델을 비롯 한 모든 복구 모델에서 로그 잘림이 방지 참고 합니다.<br /><br /> 트랜잭션이 지연되었습니다. *지연된 트랜잭션* 은 사실상 일부 사용할 수 없는 리소스로 인해 롤백이 차단된 활성 트랜잭션입니다. 지연된 트랜잭션의 원인 및 이러한 트랜잭션을 지연된 상태에서 벗어나게 하는 방법에 대한 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md)을 참조하십시오. <br /><br />장기 실행 트랜잭션은 tempdb의 트랜잭션 로그를 채울 수도 있습니다. Tempdb는 정렬을 위한 작업 테이블, 해싱을 위한 작업 파일, 커서 작업 테이블 및 행 버전 관리 등 내부 개체에 대한 사용자 트랜잭션에 의해 암시적으로 사용됩니다. 사용자 트랜잭션 읽기만 데이터 (선택 쿼리)를 포함 하는 경우에 내부 개체를 생성 하 고 사용자 트랜잭션 하에서 사용할 수 있습니다. 그런 다음 tempdb 트랜잭션 로그를 채울 수 있습니다.|  
 |5|DATABASE_MIRRORING|데이터베이스 미러링이 일시 중지되거나 성능 우선 모드에서는 미러 데이터베이스가 주 데이터베이스보다 훨씬 않습니다(전체 복구 모델에만 해당).<br /><br /> 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.|  
 |6|REPLICATION|트랜잭션 복제 중에 게시와 관련된 트랜잭션이 배포 데이터베이스로 배달되지 않습니다(전체 복구 모델에만 해당).<br /><br /> 트랜잭션 복제에 대한 자세한 내용은 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)를 참조하십시오.|  
 |7|DATABASE_SNAPSHOT_CREATION|데이터베이스 스냅숏이 생성되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |8|LOG_SCAN|로그 검색이 수행되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
-|9|AVAILABILITY_REPLICA|가용성 그룹의 보조 복제본에서 해당하는 보조 데이터베이스에 이 데이터베이스의 트랜잭션 로그 레코드를 적용하고 있습니다(전체 복구 모델).<br /><br /> 자세한 내용은 참조 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)합니다.|  
+|9|AVAILABILITY_REPLICA|가용성 그룹의 보조 복제본에서 해당하는 보조 데이터베이스에 이 데이터베이스의 트랜잭션 로그 레코드를 적용하고 있습니다(전체 복구 모델).<br /><br /> 자세한 내용은 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)합니다.|  
 |10|—|내부용으로만 사용할 수 있습니다.|  
 |11|—|내부용으로만 사용할 수 있습니다.|  
 |12|—|내부용으로만 사용할 수 있습니다.|  
 |13|OLDEST_PAGE|데이터베이스가 간접 검사점을 사용하도록 구성된 경우 데이터베이스의 가장 오래된 페이지가 검사점 LSN보다 오래되었을 수 있습니다. 이 경우 가장 오래된 페이지는 로그 잘림이 지연될 수 있습니다(모든 복구 모델).<br /><br /> 간접 검사점에 대한 자세한 내용은 [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
-|16|XTP_CHECKPOINT|자동 될 때까지 트랜잭션 로그가 잘릴 수 없습니다 데이터베이스에 메모리 액세스에 최적화 된 파일 그룹, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 검사점이 트리거될 (로그가 512mb 증가할 때마다 발생 함)입니다.<br /><br /> 참고: 512mb 미만의 트랜잭션 로그를 자르는 데 해당 데이터베이스에 대해 수동으로 검사점 명령을 실행 합니다.|  
+|16|XTP_CHECKPOINT|자동 될 때까지 트랜잭션 로그가 잘릴 수 없습니다 데이터베이스는 메모리 최적화 파일 그룹에 있는 경우 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 검사점이 트리거될 (발생 하는 모든 512MB 로그 증가에).<br /><br /> 참고: 512mb 미만의 트랜잭션 로그를 자를, 해당 데이터베이스에 대해 수동으로 검사점 명령을 실행 합니다.|  
   
 ##  <a name="MinimallyLogged"></a> 최소 로깅 가능한 작업  
  *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 복구 모델 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
@@ -122,7 +121,7 @@ ms.locfileid: "36080857"
   
 -   새 데이터를 삽입 또는 추가할 때 [UPDATE](/sql/t-sql/queries/update-transact-sql) 문의 .WRITE 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)을 참조하세요.  
   
--   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) 및 [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) 문을 삽입 또는 새 데이터를 추가할 때의 `text`, `ntext`, 및 `image` 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) 하 고 [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) 문을 삽입 또는 새 데이터를 추가할 때를 `text`, `ntext`, 및 `image` 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
     > [!NOTE]  
     >  WRITETEXT 및 UPDATETEXT 문은 더 이상 사용되지 않으므로 새 응용 프로그램에서 사용하지 마십시오.  
@@ -139,7 +138,7 @@ ms.locfileid: "36080857"
     -   DROP INDEX 새 힙 다시 작성(해당 사항이 있을 경우)  
   
         > [!NOTE]  
-        >  인덱스 페이지 할당 취소 하는 동안는 [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 작업은 항상 모두 기록 합니다.  
+        >  인덱스 페이지 할당 취소 하는 동안에 [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 작업은 항상 모두 기록 합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  `Managing the transaction log`  

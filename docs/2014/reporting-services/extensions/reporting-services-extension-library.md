@@ -17,15 +17,15 @@ helpviewer_keywords:
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f7ec58e860d75a24eea2162639ba458a067f73b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ea7edf14017fc8f382705397ce5bd5763b7c02bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246423"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 확장 프로그램 라이브러리
   Reporting Services 확장 프로그램 라이브러리는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 클래스, 인터페이스 및 값 형식의 집합입니다. 이 라이브러리는 시스템 기능에 액세스할 수 있도록 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 확장하는 데 사용할 수 있는 기초가 되도록 디자인되었습니다.  

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01367b6031ebce709fc80294d0a4ce131193c578
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fb61234696e419bc203822985f8966a81975e476
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172121"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 처리(SQLXML 4.0)
   XML 구문에서는 NULL을 부재로 해석합니다. 예를 들어 특성 또는 요소 값이 NULL이면 해당 특성이나 요소가 XML 문서에 없습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML에서는 `updg:nullvalue` 특성을 사용하여 요소 또는 특성 값에 NULL을 지정할 수 있습니다.  
   
- 예를 들어 다음 updategram 되도록는 **제목** 연락처에 대 한 값 **ContactID** 64가 NULL 인 한 다음 업데이트는 **제목** 값을 "Mr." 업데이트합니다.  
+ 예를 들어 다음 updategram은 되도록를 **제목** 사용 하 여 연락처에 대해 값 **ContactID** 64은 NULL 이며 다음 업데이트를 **제목** 값을 "Mr." 업데이트합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

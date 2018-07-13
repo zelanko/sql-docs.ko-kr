@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268669"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,11 +80,11 @@ ms.locfileid: "36079719"
   
 -   구독자에서의 업데이트는 구독이 만료되었거나 비활성화 상태에 있더라도 게시자로 전파됩니다. 이러한 구독은 삭제하거나 다시 초기화하십시오.  
   
--   경우 `TIMESTAMP` 또는 `IDENTITY` 열을 사용 하 고 자체 기본 데이터 형식으로 복제, 이러한 열의 값은 구독자에서 업데이트 되지 않아야 합니다.  
+-   하는 경우 `TIMESTAMP` 또는 `IDENTITY` 열을 사용 하는 자체 기본 데이터 형식으로 복제 되 고 이러한 열의 값을 구독자에서 업데이트 되지 않아야 합니다.  
   
--   구독자를 업데이트 하거나 삽입할 수 없습니다 `text`, `ntext` 또는 `image` 복제 변경 내용 추적 트리거 내의 삽입 또는 삭제 된 테이블에서 읽을 수 없기 때문에 값입니다. 구독자를 업데이트 하거나 삽입할 수 없습니다 마찬가지로, `text` 또는 `image` 사용 하 여 값 `WRITETEXT` 또는 `UPDATETEXT` 게시자가 데이터를 덮어쓰므로 합니다. 대신, 분할할 수 있습니다는 `text` 및 `image` 를 별도의 열 표 및 트랜잭션 내에서 두 개의 테이블을 수정 합니다.  
+-   구독자 업데이트 하거나 삽입할 수 없습니다 `text`하십시오 `ntext` 또는 `image` 복제 변경 내용 추적 트리거 내의 inserted 또는 deleted 테이블에서 읽을 수 없기 때문에 값입니다. 구독자 업데이트 하거나 삽입할 수 없습니다 마찬가지로 `text` 나 `image` 사용 하 여 값 `WRITETEXT` 또는 `UPDATETEXT` 게시자가 데이터를 덮어쓰므로 합니다. 대신 분할할 수 있는 합니다 `text` 및 `image` 열을 별도의 테이블 및 트랜잭션 내에서 두 테이블을 수정 합니다.  
   
-     구독자에서 큰 개체를 업데이트 하려면 데이터 형식을 사용 하 여 `varchar(max)`, `nvarchar(max)`, `varbinary(max)` 대신 `text`, `ntext`, 및 `image` 각각의 데이터 형식입니다.  
+     구독자에서 큰 개체를 업데이트 하려면 데이터 형식을 사용 하 여 `varchar(max)`, `nvarchar(max)`, `varbinary(max)` 대신 `text`를 `ntext`, 및 `image` 각각의 데이터 형식입니다.  
   
 -   중복을 생성하는 고유 키(기본 키 포함)에 대한 업데이트(예: `UPDATE <column> SET <column> =<column>+1` 형식의 업데이트)는 허용되지 않으며 고유성 위반 때문에 거부됩니다. 구독자에서의 업데이트 설정이 개별 복제에 의해 전파 되기 때문에 이것이 `UPDATE` 영향을 받는 각 행에 대 한 문입니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36079719"
   
 -   응용 프로그램이 구독자에 대한 트리거를 요구하는 경우에는 게시자와 구독자에서 `NOT FOR REPLICATION` 옵션을 사용하여 트리거를 정의해야 합니다. 이렇게 하면 원래 데이터가 변경될 때만 트리거가 발생되고 변경 내용이 복제될 때는 트리거가 발생되지 않습니다.  
   
-     복제 트리거에 의해 테이블이 업데이트될 때 사용자 정의 트리거가 발생되지 않도록 합니다. 프로시저를 호출 하 여 이렇게 `sp_check_for_sync_trigger` 사용자 정의 트리거 본문에서 합니다. 자세한 내용은 [sp_check_for_sync_trigger&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)를 참조하세요.  
+     복제 트리거에 의해 테이블이 업데이트될 때 사용자 정의 트리거가 발생되지 않도록 합니다. 이렇게 하려면 프로시저를 호출 하 여 `sp_check_for_sync_trigger` 사용자 정의 트리거 본문에서 합니다. 자세한 내용은 [sp_check_for_sync_trigger&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)를 참조하세요.  
   
 ### <a name="immediate-updating"></a>즉시 업데이트  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36079719"
   
 -   지연 업데이트를 사용할 경우에는 기본 키가 모든 쿼리에 대해 레코드 로케이터로 사용되기 때문에 기본 키 열에 대해 업데이트를 하지 않는 것이 좋습니다. 충돌 해결 정책이 구독자 내용을 적용하도록 설정된 경우 기본 키는 주의해서 업데이트해야 합니다. 게시자 및 구독자 모두에서 기본 키를 업데이트하면 그 결과로 다른 기본 키를 가진 두 개의 행이 생성됩니다.  
   
--   데이터 형식의 열에 대 한 `SQL_VARIANT`: 데이터를 삽입 하거나 구독자에서 업데이트를 하는 경우 다음과 같은 방식으로 큐 판독기 에이전트에 의해 때 매핑됩니다 구독자에서 큐에 복사 됩니다.  
+-   데이터 형식의 열에 대 한 `SQL_VARIANT`: 데이터를 삽입 하거나 구독자에서 업데이트를 하는 경우 매핑된 같은 방식으로 큐 판독기 에이전트에 의해 구독자에서 큐에 복사 될 때:  
   
-    -   `BIGINT``DECIMAL`, `NUMERIC`, `MONEY`, 및 `SMALLMONEY` 에 매핑된 `NUMERIC`합니다.  
+    -   `BIGINT`를 `DECIMAL`, `NUMERIC`를 `MONEY`, 및 `SMALLMONEY` 매핑됩니다 `NUMERIC`합니다.  
   
-    -   `BINARY` 및 `VARBINARY` 에 매핑된 `VARBINARY` 데이터입니다.  
+    -   `BINARY` 및 `VARBINARY` 매핑됩니다 `VARBINARY` 데이터입니다.  
   
 ### <a name="conflict-detection-and-resolution"></a>충돌 감지 및 해결  
   

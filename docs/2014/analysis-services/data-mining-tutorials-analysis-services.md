@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a7a5038ce93a9f0cb6a725a9fc3833a786c3880e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 497e3ce3b374a40c26238758cab7b03cb9835c77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165704"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 복잡 한 데이터 마이닝 솔루션을 만드는 쉽게 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 도구를 사용하여 관계형 또는 큐브 데이터를 사용하는 데이터 마이닝 모델을 디자인, 생성 및 관리할 수 있습니다. 데이터 마이닝 모델에 대한 클라이언트 액세스를 관리하고 여러 클라이언트에서 예측 쿼리를 생성할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쉽게 정교한 데이터 마이닝 솔루션을 만들 수 있도록 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 도구를 사용하여 관계형 또는 큐브 데이터를 사용하는 데이터 마이닝 모델을 디자인, 생성 및 관리할 수 있습니다. 데이터 마이닝 모델에 대한 클라이언트 액세스를 관리하고 여러 클라이언트에서 예측 쿼리를 생성할 수 있습니다.  
   
  다음 목록에 있는 단계별 자습서에서는 고급 분석을 수행하여 기존 비즈니스 인텔리전스 메서드의 범위를 벗어나는 비즈니스 문제를 해결할 수 있도록 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 최대한 활용하는 방법을 배울 수 있습니다.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36313271"
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 솔루션](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server 데이터 마이닝 리소스](http://go.microsoft.com/fwlink/?LinkId=97965)   
- [DMX와 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

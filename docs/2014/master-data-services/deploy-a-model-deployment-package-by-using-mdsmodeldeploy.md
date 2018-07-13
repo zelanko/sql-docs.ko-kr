@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e99859dcdfcc2061622e955399b6d7bdac8bcbf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e15f7e75f8967fb49b33b6b8a8eb6720b92131d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295023"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36080449"
   
 2.  명령 프롬프트를 열고 MDSModelDeploy.exe로 이동합니다.  
   
-    -   MDS를 기본 위치에 설치 하는 경우 도구에서 사용할 수는 *드라이브*: files\microsoft SQL Server\120\Master 데이터 Services\Configuration\MDSModelDeploy.exe  
+    -   MDS를 기본 위치에 설치 하는 경우이 도구는에서 사용할 수 있습니다 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
   
     -   MDS를 기본 위치에 설치하지 않은 경우 로컬 컴퓨터에서 MDSModelDeploy.exe를 검색하십시오.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36080449"
   
  **참고:**  
   
--   패키지의 구독 뷰에 구독 뷰 이름이 같은 기존 모델의 경우 뷰가으로 만들어질 *modelname.subscriptionviewname*합니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
+-   패키지의 구독 뷰에 구독 뷰 이름이 기존 모델의 경우 보기로 만들어집니다 *modelname.subscriptionviewname*합니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
   
 -   배포 프로세스는 다음과 같은 4단계로 진행됩니다.  
   

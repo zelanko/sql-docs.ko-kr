@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,20 +15,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324013"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 테이블에서 전체 텍스트 인덱스를 사용하려면 먼저 전체 텍스트 엔진을 사용하여 액세스하려는 테이블 열에 전체 텍스트 인덱싱 기능을 설정해야 합니다.  
   
-##  <a name="configure"></a> 전체 텍스트 검색에 대 한 데이터베이스 구성  
+##  <a name="configure"></a> 전체 텍스트 검색용 데이터베이스 구성  
  모든 시나리오에서 데이터베이스 관리자는 다음과 같은 기본 단계를 수행하여 전체 텍스트 검색용 데이터베이스에서 테이블 열을 구성해야 합니다.  
   
 1.  전체 텍스트 카탈로그를 만듭니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "36079214"
   
     1.  전체 텍스트 인덱스에 포함할 각 텍스트 열을 식별합니다.  
   
-    2.  지정된 된 열의 이진 데이터로 저장 된 문서를 포함 하는 경우 (`varbinary(max)`, 또는 `image` 데이터)를 테이블 열을 지정 해야 합니다 (의 *유형 열*) 인덱싱되는 열에 있는 각 문서의 유형을 식별 하 합니다.  
+    2.  지정된 된 열 이진 데이터로 저장 된 문서를 포함 하는 경우 (`varbinary(max)`, 또는 `image` 데이터), 테이블 열을 지정 해야 합니다 (합니다 *유형 열*) 인덱싱되는 열에 각 문서의 유형을 식별 하는 합니다.  
   
     3.  전체 텍스트 검색에서 열에 있는 문서에 사용할 언어를 지정합니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36079214"
   
 2.  테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만듭니다.  
   
-     전체 텍스트 인덱스는 전체 텍스트 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 테이블 또는 뷰에 대한 전체 텍스트 검색을 만들려면 해당 테이블이나 뷰에 Null이 아닌 고유한 단일 열이 있어야 합니다. 테이블의 각 행을 압축할 수 있는 고유 키에 매핑하려면 전체 텍스트 엔진에 이 고유 인덱스가 필요합니다. 전체 텍스트 인덱스에 포함 될 수 있습니다 `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, 및 `varbinary(max)` 열입니다. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](create-and-manage-full-text-indexes.md)를 참조하세요.  
+     전체 텍스트 인덱스는 전체 텍스트 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 테이블 또는 뷰에 대한 전체 텍스트 검색을 만들려면 해당 테이블이나 뷰에 Null이 아닌 고유한 단일 열이 있어야 합니다. 테이블의 각 행을 압축할 수 있는 고유 키에 매핑하려면 전체 텍스트 엔진에 이 고유 인덱스가 필요합니다. 전체 텍스트 인덱스를 포함할 수 있습니다 `char`, `varchar`, `nchar`, `nvarchar`, `text`를 `ntext`, `image`를 `xml`를 `varbinary`, 및 `varbinary(max)` 열. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](create-and-manage-full-text-indexes.md)를 참조하세요.  
   
  전체 텍스트 인덱스를 만드는 방법을 알아보기 전에 먼저 전체 텍스트 인덱스와 일반 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스의 차이점을 고려해야 합니다. 다음 표에서는 이러한 차이점을 나열합니다.  
   
@@ -105,14 +104,14 @@ ms.locfileid: "36079214"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>전체 텍스트 인덱스와 중지 목록 연결  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 중지 목록이 제공됩니다. *중지 목록* 이란 의미 없는 단어라고도 하는 중지 단어의 목록입니다. 중지 목록은 각 전체 텍스트 인덱스와 연결되며, 중지 목록의 단어는 전체 텍스트 인덱스의 전체 텍스트 쿼리에 적용됩니다. 기본적으로 시스템 중지 목록은 새로운 전체 텍스트 인덱스와 연결됩니다. 그러나 고유한 중지 목록을 직접 만들어 사용할 수도 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
   
- 예를 들어, 다음 [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 myStoplist3 시스템 중지 목록에서 복사 하 여 이라는 새로운 전체 텍스트 중지 목록을 만듭니다.  
+ 다음 예를 들어 [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 시스템 중지 목록에서 복사 하 여 myStoplist3 이라는 새로운 전체 텍스트 중지 목록을 만듭니다.  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 다음 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문에서 변경 먼저 스페인어 고 그 다음 프랑스어에 단어 'en'를 추가 myStoplist 라는 중지 목록:  
+ 다음 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문에서 먼저 스페인어에 다음 프랑스어에 단어 'en' 추가 myStoplist 라는 중지 목록을 변경 합니다.  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

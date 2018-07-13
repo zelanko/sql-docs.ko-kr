@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Prepare SQL event class
 ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3bb475c3733c582d5bb3b433727694952a4c664a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8825c2d925658e16b220aa0e33077b11445984ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172864"
 ---
 # <a name="prepare-sql-event-class"></a>Prepare SQL 이벤트 클래스
   Prepare SQL 이벤트 클래스는 SqlClient, ODBC, OLE DB 또는 DB-Library가 사용할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 준비했음을 나타냅니다.  

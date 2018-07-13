@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
 - jobs [SQL Server Agent], monitoring
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - current activity
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e7c076d8351098d554951c61ac9b32c7d1e534a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a2def2f3a586ef425357135e1fdb1c03e0838247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241953"
 ---
 # <a name="monitor-job-activity"></a>작업 활동 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 활동 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 모든 작업의 현재 활동을 모니터링할 수 있습니다.  
@@ -66,8 +66,8 @@ ms.locfileid: "36080361"
   
 ## <a name="see-also"></a>관련 항목  
  [작업 활동 보기](view-job-activity.md)   
- [dbo.sysjobactivity &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo.syssessions &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo.sysjobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.syssessions &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

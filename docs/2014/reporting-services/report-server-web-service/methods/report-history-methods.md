@@ -16,15 +16,15 @@ helpviewer_keywords:
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d531723fbc6677213b16a9c5515f42a454873b7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 767608e7eb4ee9bafdae4a7245bc73f2d938d0a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236143"
 ---
 # <a name="report-history-methods"></a>보고서 기록 메서드
   다음 메서드를 사용하여 항목 기록 스냅숏을 만들고 관리할 수 있습니다.  

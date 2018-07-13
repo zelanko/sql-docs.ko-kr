@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.schema.databasechangesdetected
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fbb34856b414a561126b977360eb8b8337c7ce4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 958f892df463533138b722e16a61eeccd0e06b19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244043"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>데이터베이스 변경 감지 대화 상자(Visual Database Tools)
   이 대화 상자는 데이터베이스 다이어그램이나 선택된 테이블을 저장하려 하지만 저장 동작이 적용되는 일부 데이터베이스 개체가 최신 상태가 아닌 경우에 나타납니다. 이 대화 상자에 표시되는 변경 내용을 적용하면 데이터베이스가 다이어그램과 일치하도록 업데이트되고 다른 사용자의 변경 내용을 덮어쓰게 됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36079438"
  **다른 이름으로 저장** 대화 상자가 나타납니다. 이 대화 상자를 사용하면 데이터베이스 변경 내용 목록이 포함된 텍스트 파일의 위치를 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [수정 된 데이터베이스와 데이터베이스 다이어그램 조정 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [수정 된 데이터베이스와 데이터베이스 다이어그램 일치 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [다중 사용자 환경&#40;Visual Database Tools&#41;](multiuser-environments-visual-database-tools.md)  
   
   

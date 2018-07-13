@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: 2e8662f4-fb2e-43af-b70a-9e0b5872c9b9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3627c62dd8277ff0c86d66f453afd66ad01005c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e56bc3b206069265fe21329edf688dfae9254e2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228133"
 ---
 # <a name="cube-element-xmla"></a>Cube 요소(XMLA)
-  부모 나타내는 차원을 포함 하는 큐브를 식별 [개체](object-element-dimension-xmla.md) 요소입니다.  
+  부모를 나타내는 차원을 포함 하는 큐브를 식별 [개체](object-element-dimension-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36080929"
   
 ## <a name="see-also"></a>관련 항목  
  [Database 요소 &#40;XMLA&#41;](database-element-xmla.md)   
- [요소를 차원 &#40;XMLA&#41;](dimension-element-xmla.md)   
+ [차원 요소 &#40;XMLA&#41;](dimension-element-xmla.md)   
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

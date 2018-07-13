@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], deleting devices
 - backup devices [SQL Server], deleting
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c718c62e44f087fbe3d4739a4790fce845c1a9a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 383d74a0858e303f4eda3bd56a7f0f04338b0857
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207233"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>백업 장치 삭제(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 백업 장치를 삭제하는 방법에 대해 설명합니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "36081363"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 를 사용하여 백업 장치를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. 실행 `sp_dropdevice` 삭제 하는 `mybackupdisk` 백업 장치입니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
+3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 를 사용하여 백업 장치를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. 실행할 `sp_dropdevice` 삭제 하는 `mybackupdisk` 백업 장치입니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
   
 ```tsql  
 --Define a backup device and physical name.   

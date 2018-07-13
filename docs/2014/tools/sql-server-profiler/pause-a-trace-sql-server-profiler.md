@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing traces
 - temporarily stopping traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e31b59bf2a71054f03982278b45e7b9e373f48e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a549cc7193adb9708719a0675397baa2ff5d4d3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178994"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>추적 일시 중지(SQL Server Profiler)
   추적을 일시 중지하면 다시 시작할 때까지는 이벤트 데이터가 더 이상 캡처되지 않습니다.  

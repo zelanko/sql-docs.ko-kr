@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - canceling operators
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], deleting with Management Studio
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e5510b5b536e79c7f75a7d8d03853e1cc9276d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 50dc29eaf366da36fb9489df40869b964149abad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212413"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 운영자를 제거하여 더 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 알림을 받지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -90,6 +90,6 @@ ms.locfileid: "36081248"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)합니다.  
+ 자세한 내용은 [sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)합니다.  
   
   

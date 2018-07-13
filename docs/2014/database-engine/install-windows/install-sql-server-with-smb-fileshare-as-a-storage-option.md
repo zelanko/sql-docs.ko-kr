@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200033"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션
-  시작 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 시스템 데이터베이스 (Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 메시지 블록 (SMB) 파일 서버를 저장소 옵션으로 사용자 데이터베이스를 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
+  시작 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 시스템 데이터베이스 (Master, 모델, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 저장소 옵션으로 파일 서버 메시지 블록 (SMB (서버)를 사용 하 여 사용자 데이터베이스를 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
   
 > [!NOTE]  
 >  Filestream이 현재 SMB 파일 공유에서 지원되지 않습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36080495"
   
 -   \\\ServerName\ShareName  
   
- Universal Naming Convention에 대 한 자세한 내용은 참조 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)합니다.  
+ Universal Naming Convention에 대 한 자세한 내용은 참조 하세요. [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)합니다.  
   
  루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36080495"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     다양 한 명령줄 매개 변수 옵션의 사용에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 참조 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
+     다양 한 명령줄 매개 변수 옵션의 사용에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 참조 하세요 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>운영 체제 고려 사항(SMB 프로토콜과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Windows 운영 체제마다 포함되어 있는 SMB 프로토콜 버전이 다르며 SMB 프로토콜 버전은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 투명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 관련하여 다른 SMB 프로토콜 버전의 이점을 찾을 수 있습니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "36080495"
     > [!NOTE]  
     >  SMB 공유 폴더에 대한 FULL CONTROL 공유 권한 및 NTFS 권한은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 및 관리자 서버 역할이 할당된 Windows 사용자에게만 부여되어야 합니다.  
   
-     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정이 서비스 계정으로 사용 하는 경우 형식의 컴퓨터 계정에 대 한 사용 권한을 부여할: * < i n _ >***\\***< 컴퓨터 이름 > ***$** 합니다.  
+     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용 하는 경우에 형식으로 컴퓨터 계정에 대 한 사용 권한을 부여 합니다. * < 도메인 _ 이름 >***\\***< 컴퓨터 이름 > ***$** 합니다.  
   
     > [!NOTE]  
     >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 SMB 파일 공유를 저장소 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
@@ -116,9 +116,9 @@ ms.locfileid: "36080495"
   
 -   네트워크로 연결된 저장소에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](http://go.microsoft.com/fwlink/?LinkId=237321)(http://go.microsoft.com/fwlink/?LinkId=237321)에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
   
--   NetApp 장치와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 다음을 발생할 수 있습니다.   
-    2015-06-04 13:14:19.97 spid9s Error: 17053, Severity: 16, 상태: 1입니다.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult(): 운영 체제 1 (잘못 된 함수입니다.) 오류가 발생 했습니다.  
+-   NetApp 장치와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 표시 될 수 있습니다.   
+    2015-06-04 경우 spid9s Error: 17053, Severity: 16, 상태: 1.  
+    2015-06-04 경우 spid9s DoDevIoCtlOut() GetOverlappedResult(): 운영 체제 1 (잘못 된 함수입니다.) 오류가 발생 했습니다.  
   
      NTFS의 경우 이 오류는 무시해도 됩니다.  하지만 ReFS의 경우에는 심각한 성능 저하를 발생할 수 있습니다.  
   

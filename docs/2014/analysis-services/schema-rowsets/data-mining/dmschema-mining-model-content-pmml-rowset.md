@@ -18,26 +18,26 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
 ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c90e4dd752726b59e68ad6fb03c9d29327006e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868c2ceef82bbd95032b6a418b888512bf665825
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252975"
 ---
 # <a name="dmschemaminingmodelcontentpmml-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합
   마이닝 모델의 XML 구조를 반환합니다. XML 문자열 형식은 PMML(Predictive Model Markup Language) 2.1 표준을 따릅니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DMSCHEMA_MINING_MODEL_CONTENT_PMML` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DMSCHEMA_MINING_MODEL_CONTENT_PMML` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||모델이 멤버인 데이터베이스 이름으로 채워지는 카탈로그 이름입니다.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||정규화되지 않은 스키마 이름입니다. 이 열에서 지원 하지 않는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 항상 포함 `NULL`합니다.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||정규화되지 않은 스키마 이름입니다. 이 열에서 지원 되지 않습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 항상 `NULL`합니다.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||모델 이름입니다. 이 열에는 `NULL`이 포함될 수 없습니다.|  
 |`MODEL_TYPE`|`DBTYPE_WSTR`||모델 유형입니다. 공급자별 문자열입니다. `NULL`일 수 있습니다.|  
 |`MODEL_GUID`|`DBTYPE_GUID`||모델을 식별하는 GUID입니다. GUID를 사용하여 테이블을 식별하지 않는 공급자는 `NULL`을 반환합니다.|  

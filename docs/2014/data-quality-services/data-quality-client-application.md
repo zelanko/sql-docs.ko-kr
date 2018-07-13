@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43a326d53179de549c1ac104b28d1ca9db3e2e25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d24b53a146a7e89a0f6cb8301d3fba34cfb50021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171454"
 ---
 # <a name="data-quality-client-application"></a>Data Quality 클라이언트 응용 프로그램
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 사용하면 독립형 도구를 사용하여 데이터 품질 작업을 수행할 수 있습니다. 이 응용 프로그램을 사용하면 기술 자료를 만들고, 데이터 품질 프로젝트를 생성 및 실행하고, 관리 태스크를 수행할 수 있습니다.  
   
- 데이터 자산 관리 및 높은 데이터 품질 표준 유지 관리 책임이 있는 데이터 관리자, 데이터 전문가 또는 IT 전문가는 세 가지 역할로 클라이언트 응용 프로그램을 사용할 수 있습니다. DQS KB 운영자 역할은 데이터 품질 프로젝트를 편집 및 실행할 수 있습니다. DQS KB 편집자 역할은 프로젝트 기능을 수행하고 기술 자료를 생성 및 편집할 수 있습니다. DQS 관리자는 프로젝트 및 기술 자료 기능을 수행하고 시스템을 관리할 수 있습니다. 자세한 내용은 참조 [DQS 보안](../../2014/data-quality-services/dqs-security.md)합니다.  
+ 데이터 자산 관리 및 높은 데이터 품질 표준 유지 관리 책임이 있는 데이터 관리자, 데이터 전문가 또는 IT 전문가는 세 가지 역할로 클라이언트 응용 프로그램을 사용할 수 있습니다. DQS KB 운영자 역할은 데이터 품질 프로젝트를 편집 및 실행할 수 있습니다. DQS KB 편집자 역할은 프로젝트 기능을 수행하고 기술 자료를 생성 및 편집할 수 있습니다. DQS 관리자는 프로젝트 및 기술 자료 기능을 수행하고 시스템을 관리할 수 있습니다. 자세한 내용은 [DQS 보안](../../2014/data-quality-services/dqs-security.md)합니다.  
   
 ## <a name="installing-the-data-quality-client-application"></a>데이터 품질 클라이언트 응용 프로그램 설치  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램은 SQL Server 설치 프로그램을 사용하여 설치됩니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]와 동일한 컴퓨터 또는 원격 컴퓨터에 클라이언트 응용 프로그램을 설치할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램 설치에 대한 자세한 내용은 [Data Quality Services 설치](install-windows/install-data-quality-services.md)를 참조하세요.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f1eb68e637a61dd54435706ac949a969fab98dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 252686d868a9baa95c5be2f3b8da6a2cfd1a64e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271009"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting 이벤트 클래스
   TM: Rollback Tran Starting 이벤트 클래스는 ROLLBACK TRANSACTION 요청이 시작 중임을 나타냅니다. 클라이언트는 트랜잭션 관리 인터페이스를 통해 요청을 보냅니다. EventSubClass 열은 현재 트랜잭션이 롤백된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  

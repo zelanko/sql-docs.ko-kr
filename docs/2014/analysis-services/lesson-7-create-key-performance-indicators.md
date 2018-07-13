@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fd135a37a4fe2721ca6aaa70d25e869b9a83733e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0895fe1e699dc7ae53cb278087d43643cbdbf84c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187250"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>8단원: 핵심 성과 지표 만들기
   이 단원에서는 KPI(핵심 성과 지표)를 만듭니다. KPI는 *기본* 측정값으로 정의된 값을 측정값이나 절대값으로 정의된 *대상* 값과 비교하여 값 성과를 측정하는 데 사용됩니다. 비즈니스 전문가는 보고 클라이언트 응용 프로그램에서 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 이해하기 쉬운 요약 정보를 얻거나 추세를 확인할 수 있습니다. 자세한 내용은 [KPI&#40;SSAS 테이블 형식&#41;](tabular-models/kpis-ssas-tabular.md)를 참조하세요.  
@@ -51,9 +51,9 @@ ms.locfileid: "36081691"
   
 5.  **핵심 성과 지표** 대화 상자의 **대상 값 정의**에서 **절대값** 옵션을 선택합니다.  
   
-6.  에 **절대값** 필드를 입력 `1.1`, 한 다음 ENTER 키를 누릅니다.  
+6.  에 **절대값** 필드에 입력 `1.1`, 한 다음 ENTER를 누릅니다.  
   
-7.  **상태 임계값 정의**왼쪽된 (아래쪽) 슬라이더 필드에 입력 `1`, 한 다음 오른쪽 (위쪽) 슬라이더 필드를 입력 `1.07`합니다.  
+7.  **상태 임계값 정의**왼쪽된 (아래쪽) 슬라이더 필드에 입력 `1`를 선택한 다음 오른쪽 (위쪽) 슬라이더 필드에 입력 `1.07`합니다.  
   
 8.  **아이콘 스타일 선택**에서 다이아몬드(빨간색), 삼각형(노란색), 원(녹색) 아이콘 유형을 선택합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36081691"
   
 4.  **핵심 성과 지표** 대화 상자의 **대상 값 정의**에서 **절대값** 옵션을 선택합니다.  
   
-5.  에 **절대값** 필드를 입력 `1.25`합니다.  
+5.  에 **절대값** 필드에 입력 `1.25`합니다.  
   
 6.  **상태 임계값 정의**에서 왼쪽(아래쪽) 슬라이더 필드에 **0.8**이 표시될 때까지 슬라이더를 이동한 다음 오른쪽(위쪽) 슬라이더 필드에 **1.03**이 표시될 때까지 슬라이더를 이동합니다.  
   

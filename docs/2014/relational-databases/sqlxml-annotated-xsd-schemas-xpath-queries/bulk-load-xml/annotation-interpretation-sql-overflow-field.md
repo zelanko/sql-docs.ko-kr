@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-(SQLXML 4.0) | Microsoft Docs
+title: sql:overflow-필드 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246253"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field(SQLXML 4.0)
   스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 `sql:overflow-field` 주석을 사용하여 스키마에 지정합니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36079715"
   
  XML 대량 로드에서는 오버플로 열에 데이터를 저장할 때 `sql:overflow-field`가 정의된 부모 요소의 여는 태그와 닫는 태그도 저장됩니다.  
   
- 예를 들어 다음 스키마에 설명 된  **\<고객 >** 및  **\<CustOrder >** 요소입니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어 다음 스키마에 설명 합니다  **\<고객 >** 하 고  **\<CustOrder >** 요소입니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -78,9 +78,9 @@ ms.locfileid: "36079715"
 </xsd:schema>  
 ```  
   
- 스키마에는  **\<고객 >** 요소는 Cust 테이블에 매핑됩니다 및  **\<순서 >** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에는  **\<고객 >** 요소는 Cust 테이블에 매핑합니다 및  **\<순서 >** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- 두는  **\<고객 >** 및  **\<순서 >** 요소는 오버플로 열을 식별 합니다. 요소와 특성 XML 대량 로드에서 소비 되지 않은 모든 자식을 저장 하는 따라서는  **\<고객 >** Cust 테이블의 오버플로 열에는 요소 및 모든 소비 되지 않은 자식 요소 및 특성은 의 **\<순서 >** CustOrder 테이블의 오버플로 열에는 요소입니다.  
+ 모두를  **\<고객 >** 하 고  **\<순서 >** 오버플로 열을 식별 하는 요소입니다. 요소 및 특성의 XML 대량 로드에서 사용 되지 않은 모든 자식을 저장 하는 따라서 합니다  **\<고객 >** Cust 테이블의 오버플로 열에는 요소 및 모든 사용 되지 않은 자식 요소 및 특성을  **\<순서 >** CustOrder 테이블의 오버플로 열에는 요소입니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

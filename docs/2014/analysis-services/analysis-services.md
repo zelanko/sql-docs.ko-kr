@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
 - SSAS
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2cfc01ba3942ff431ca9bef78ea7bb16a5d56d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185450"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 의사 결정 지원 및 BI(비즈니스 인텔리전스) 솔루션에서 사용되는 온라인 분석 데이터 엔진으로, Excel, Reporting Services 보고서, 타사 BI 도구와 같은 클라이언트 응용 프로그램 및 비즈니스 보고서에 대해 분석 데이터를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 일반적인 워크플로에는 OLAP 또는 표 형식 데이터 모델 작성, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스로 모델 배포, 데이터베이스를 처리하여 데이터와 함께 로드, 데이터 액세스 허용 권한 할당이 포함됩니다. 이 다목적 데이터 모델은 준비가 되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 데이터 원본으로 지원하는 클라이언트 응용 프로그램에서 액세스할 수 있습니다.  
   
- SQL Server Data Tools를 사용 하 여 모델을 만들려면 (참조 [도구 및 Analysis Services에서 사용 되는 응용 프로그램](tools-and-applications-used-in-analysis-services.md))는 테이블 형식 또는 다차원 및 데이터 마이닝 프로젝트 템플릿을 선택 합니다. 프로젝트 템플릿에는 모델에 필요한 모든 개체에 대한 폴더가 포함되어 있습니다. 마법사를 사용하여 데이터 원본, 데이터 원본 뷰, 차원, 큐브 및 역할과 같은 모든 기본 요소를 만들 수 있습니다.  
+ 모델을 만들려면 SQL Server Data Tools를 사용 하 여 (참조 [Analysis Services에 사용 되는 응용 프로그램과 도구](tools-and-applications-used-in-analysis-services.md)), 테이블 형식 또는 다차원 및 데이터 마이닝 프로젝트 템플릿을 선택 합니다. 프로젝트 템플릿에는 모델에 필요한 모든 개체에 대한 폴더가 포함되어 있습니다. 마법사를 사용하여 데이터 원본, 데이터 원본 뷰, 차원, 큐브 및 역할과 같은 모든 기본 요소를 만들 수 있습니다.  
   
  모델은 주로 SQL Server 또는 Oracle 관계형 데이터베이스 엔진에서 호스팅되는 데이터 웨어하우스와 같은 외부 데이터 시스템의 데이터로 채워집니다(테이블 형식 모델은 추가 데이터 원본 유형을 지원함). 모델은 큐브와 같은 쿼리 개체를 지정할 뿐만 아니라 여러 큐브 및 계산과 비즈니스 논리와 탐색 및 드릴스루 동작과 같은 상호 작용을 캡슐화하는 KPI에서 사용할 수 있는 차원도 지정합니다.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36082178"
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [Analysis Services 인스턴스 관리](instances/analysis-services-instance-management.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [테이블 형식 모델링 &#40;SSAS 테이블 형식&#41;](tabular-models/tabular-models-ssas.md)  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [테이블 형식 모델링 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tabular-models-ssas.md)  
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [다차원 모델링 &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [데이터 마이닝 &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [비교 &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [PowerPivot for SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   

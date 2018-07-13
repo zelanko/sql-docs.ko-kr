@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184d2d276abeb835b578d7c1f3ef26ea36ab60e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb6230863b9e898f50ab30c6fc4288998024e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180940"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>시간 테이블을 생성하여 시간 차원 만들기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 원본 데이터베이스에 사용 가능한 시간 테이블이 없을 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 시간 차원을 만들 수 있습니다. 이렇게 하려면 **생성 방법 선택** 페이지에서 다음 옵션 중 하나를 선택하세요.  
@@ -39,13 +39,13 @@ ms.locfileid: "36081686"
  시간 차원을 만들 때는 기간을 지정하고 차원의 시작 날짜와 종료 날짜도 지정합니다. 마법사는 지정된 기간을 사용하여 시간 특성을 생성합니다. 사용자가 차원을 처리할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 지정된 날짜와 기간을 지원하는 데 필요한 데이터를 생성하고 저장합니다. 마법사는 시간 차원에 대해 생성된 특성을 사용하여 차원에 적합한 계층을 권장합니다. 계층은 다양한 기간 간의 관계를 반영하고 다양한 달력을 고려합니다. 예를 들어 표준 달력 계층에서는 주가 월이 아닌 년으로 균일하게 나뉘기 때문에 주 수준이 연도 수준 아래에는 나타나지만 월 수준 아래에는 나타나지 않습니다. 반면에 제조 또는 보고 달력 계층에서는 주가 월로 균등하게 나뉘므로 주 수준이 월 수준 아래에 나타납니다.  
   
 ## <a name="define-time-periods"></a>기간 정의  
- 마법사의 **기간 정의** 페이지를 사용하여 차원에 포함할 날짜 범위를 지정합니다. 예를 들어 데이터에서 가장 빠른 연도의 1월 1일에 시작하고 이후의 트랜잭션을 허용하도록 현재 연도에서 1~2년 지나 종료되는 범위를 선택할 수도 있습니다. 범위 밖의 트랜잭션은 않습니다 표시 되었거나 표시에 따라 차원에서 알 수 없는 멤버는 `UnknownMemberVisible` 차원에 속성을 설정 합니다. 데이터에 사용되는 주의 첫 번째 요일을 변경할 수도 있습니다. 기본값은 일요일입니다.  
+ 마법사의 **기간 정의** 페이지를 사용하여 차원에 포함할 날짜 범위를 지정합니다. 예를 들어 데이터에서 가장 빠른 연도의 1월 1일에 시작하고 이후의 트랜잭션을 허용하도록 현재 연도에서 1~2년 지나 종료되는 범위를 선택할 수도 있습니다. 범위 밖의 트랜잭션은 수행 표시 되었거나 표시에 따라 차원에서 알 수 없는 멤버로 `UnknownMemberVisible` 차원에 속성을 설정 합니다. 데이터에 사용되는 주의 첫 번째 요일을 변경할 수도 있습니다. 기본값은 일요일입니다.  
   
  마법사가 년, 반기, 사분기, 삼분기, 월, 10일, 주, 날짜와 같이 데이터에 적용되는 계층을 만들 때 사용할 기간을 선택합니다. 최소한 "날짜" 기간은 항상 선택해야 합니다. 날짜 특성은 차원의 키 특성이므로 이 특성이 없으면 차원이 제대로 작동할 수 없습니다.  
   
  **시간 멤버 이름의 언어**옆에서 차원 멤버에 레이블을 지정하는 데 사용할 언어를 선택합니다.  
   
- 날짜 범위를 기반으로 하는 시간 차원을 만든 후 차원 디자이너를 사용하여 시간 특성을 추가하거나 제거할 수 있습니다. 날짜 특성은 차원의 키 특성이므로 차원에서 제거할 수 없습니다. 변경할 수 없도록에서 날짜 특성을 숨기려면는 `AttributeHierarchyVisible` 속성 값을 특성에 `False`합니다.  
+ 날짜 범위를 기반으로 하는 시간 차원을 만든 후 차원 디자이너를 사용하여 시간 특성을 추가하거나 제거할 수 있습니다. 날짜 특성은 차원의 키 특성이므로 차원에서 제거할 수 없습니다. 변경할 수 없도록에서 날짜 특성을 숨기려면 합니다 `AttributeHierarchyVisible` 특성을 속성 `False`합니다.  
   
 ## <a name="select-calendars"></a>달력 선택  
  1월 1일에 시작하고 12월 31일에 끝나는 표준(그레고리력) 12개월 달력은 시간 차원을 만들 때 항상 포함됩니다. 마법사의 **달력 선택** 페이지에서 차원 계층의 기반으로 사용할 추가 달력을 지정할 수 있습니다. 달력 종류에 대한 설명은 [날짜 유형 차원 만들기](database-dimensions-create-a-date-type-dimension.md)를 참조하세요.  

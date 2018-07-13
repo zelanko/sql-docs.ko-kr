@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a4c7665e301797481c2af9866e3c6f7d24374d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c050d048d6d0f6439eac7fb9f3fb42d85d1dc4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193933"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
   Oracle CDC Service는 Oracle 트랜잭션 로그를 검색하고 관련 Oracle 테이블의 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 캡처하는 Windows 서비스입니다. Oracle에서 캡처한 변경 내용이 저장되는 SQL 변경 테이블은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처 기능에서 사용하는 변경 테이블과 같은 유형입니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 변경 내용을 사용하는 것만큼 쉽게 이 변경 내용을 사용할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "36080912"
   
  Oracle용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service를 설치하면 서비스 구성 UI와 서비스 프로그램이 선택한 위치에 배치됩니다. Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 별도로 구성됩니다. Oracle CDC Service 구성에 대한 자세한 내용은 [Change Data Capture Service for Oracle by Attunity F1 도움말](change-data-capture-service-for-oracle-by-attunity-f1-help.md)을 참조하십시오.  
   
- Oracle CDC Service를 설치하려면 SQL Server 설치 미디어에서 **AttunityOracleCdcService.msi** 를 수동으로 실행합니다. X86 및 x64 설치 패키지에 살고 있는 **.\Tools\AttunityCDCOracle\\**  SQL Server 설치 미디어에 있습니다.  
+ Oracle CDC Service를 설치하려면 SQL Server 설치 미디어에서 **AttunityOracleCdcService.msi** 를 수동으로 실행합니다. X86 및 x64 설치 패키지에 위치한 **.\Tools\AttunityCDCOracle\\**  SQL Server 설치 미디어에 있습니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client가 설치되는 지원되는 Windows 컴퓨터에 Oracle CDC Service를 설치할 수 있으며 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되는 동일한 컴퓨터에 설치할 필요는 없습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36080912"
 -   Oracle 데이터베이스 10x, 모든 버전  
   
 ### <a name="target-sql-server-database"></a>대상 SQL Server 데이터베이스  
- 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="running-the-installation-program"></a>설치 프로그램 실행  
  Oracle CDC Service를 설치하려면 사용 중인 Windows 플랫폼(32/64비트)에 맞는 설치 마법사를 열고 화면에 나타나는 지침을 따릅니다.  

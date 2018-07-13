@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00d151f80439062ca67a1320d4453155079a332e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2635ba00fdbeaf0a55567539911b974a7d9265d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215535"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  

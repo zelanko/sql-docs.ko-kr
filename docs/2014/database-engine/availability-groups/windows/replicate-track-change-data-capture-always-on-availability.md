@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,22 +15,22 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204033"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
   
  
   
-##  <a name="Overview"></a> AlwaysOn 가용성 그룹의 복제 개요  
+##  <a name="Overview"></a> AlwaysOn 가용성 그룹에서 복제 개요  
   
 ###  <a name="PublisherRedirect"></a> 게시자 리디렉션  
  게시된 데이터베이스가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 인식하는 경우 에이전트에 게시 데이터베이스에 대한 액세스 권한을 제공하는 배포자가 redirected_publishers 항목으로 구성됩니다. 이러한 항목은 가용성 그룹 수신기 이름을 사용하여 게시자 및 게시 데이터베이스에 연결함으로써 원래 구성되어 있는 게시자/데이터베이스 쌍을 리디렉션합니다. 가용성 그룹 수신기 이름을 통해 설정된 연결은 장애 조치(Failover) 시 실패합니다. 장애 조치(Failover) 후 복제 에이전트가 다시 시작되면 연결이 새 주 데이터베이스에 자동으로 리디렉션됩니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "36081660"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 보조 복제본에 대한 장애 조치(Failover) 후에 복제 모니터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 게시 인스턴스 이름을 조정할 수 없으며 계속해서 원래 주 인스턴스 이름으로 복제 정보를 표시합니다. 장애 조치(Failover) 후 복제 모니터를 사용하여 추적 프로그램 토큰을 입력할 수 없지만 새 게시자가 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 입력한 추적 프로그램 토큰은 복제 모니터에 표시됩니다.  
   
-###  <a name="Changes"></a> AlwaysOn 가용성 그룹 지원을 위해 복제 에이전트에 대 한 일반 변경  
+###  <a name="Changes"></a> AlwaysOn 가용성 그룹을 지원 하도록 복제 에이전트에 대 한 일반 변경 사항  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하도록 세 가지 복제 에이전트가 수정되었습니다. 로그 판독기, 스냅숏 및 병합 에이전트는 배포 데이터베이스에서 리디렉션된 게시자를 쿼리하고 리디렉션된 게시자가 선언된 경우 반환된 가용성 그룹 수신기 이름을 사용하여 데이터베이스 게시자에 연결합니다.  
   
  기본적으로 원본 게시자가 리디렉션되었는지 확인하기 위해 에이전트가 배포자를 쿼리할 때는 리디렉션된 호스트를 에이전트에 반환하기 전에 현재 대상 또는 리디렉션의 적합성이 확인됩니다. 이 동작은 수행하는 것이 좋습니다. 하지만 에이전트 시작이 매우 자주 수행되는 경우 유효성 검사 저장 프로시저와 연결된 오버헤드의 비용이 너무 높은 것으로 간주될 수 있습니다. 로그 판독기, 스냅숏 및 병합 에이전트에는 새로운 명령줄 스위치인 *BypassPublisherValidation*이 추가되었습니다. 이 스위치를 사용하면 리디렉션된 게시자가 에이전트에 즉시 반환되고 유효성 검사 저장 프로시저의 실행이 무시됩니다.  
@@ -160,7 +159,7 @@ ms.locfileid: "36081660"
   
      가용성 그룹 수신기 이름 또는 명시적인 노드 이름을 사용하여 보조 복제본을 찾을 수 있습니다. 가용성 그룹 수신기 이름을 사용하는 경우 액세스가 모든 적합한 보조 복제본으로 전송됩니다.  
   
-     때 `sp_addlinkedserver` 보조 데이터베이스에 액세스 하려면 연결된 된 서버를 만드는 데 사용 되는 *@datasrc* 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 대 한 매개 변수는 사용 및 *@provstr* 매개 변수는 읽기 전용 의도 지정 하는 데 사용 됩니다.  
+     때 `sp_addlinkedserver` 보조 데이터베이스를 액세스 하기 위해 연결 된 서버를 만드는 데 사용 되는 *@datasrc* 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 대 한 매개 변수는 사용 하며 *@provstr* 매개 변수는 읽기 전용 의도 지정 하는 데 사용 됩니다.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -214,15 +213,15 @@ ms.locfileid: "36081660"
 |**병합**|예|아니요|예<sup>2</sup>|  
 |**스냅숏**|예|아니요|예<sup>2</sup>|  
   
- <sup>1</sup> 양방향 및 상호 트랜잭션 복제에 대 한 지원을 포함 하지 않습니다.  
+ <sup>1</sup> 양방향 및 상호 트랜잭션 복제에 대 한 지원이 포함 되지 않습니다.  
   
- <sup>2</sup> 복제 데이터베이스에 장애 조치는 수동 절차입니다. 자동 장애 조치(Failover)는 제공되지 않습니다.  
+ <sup>2</sup> 복제본 데이터베이스에 장애 조치 되는 수동 절차입니다. 자동 장애 조치(Failover)는 제공되지 않습니다.  
   
- <sup>3</sup> 배포자 데이터베이스에 사용 하도록 지원 되지 않습니다 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링.  
+ <sup>3</sup> 배포자 데이터베이스 사용에 대 한 지원 되지 않습니다 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링.  
   
 ### <a name="considerations"></a>고려 사항  
   
--   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 참조 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
+-   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
   
 -   보조 데이터베이스에 대한 구독자 장애 조치(Failover)는 지원되지만 상대적으로 복잡한 수동 절차입니다. 절차는 미러링된 구독자 데이터베이스를 장애 조치하는 데 사용되는 방법과 동일합니다. 가용성 그룹에 참여하려면 구독자가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상을 실행해야 합니다.  
   

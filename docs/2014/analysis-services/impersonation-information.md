@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90a9d2102df9bd1b6cdf2bf1e4c7b3386c0fa825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a0f2b5914c31c3cacce4bfb8887ebde73e0d932
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181020"
 ---
 # <a name="impersonation-information"></a>가장 정보
   **가장 정보** 페이지를 사용하여 Analysis Services에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **특정 Windows 사용자 이름 및 암호 사용**  
+ **특정 Windows 사용자 이름 및 암호를 사용 하 여**  
  지정된 Windows 사용자 계정의 보안 자격 증명을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 사용하려면 이 옵션을 선택합니다. 지정한 자격 증명은 처리, ROLAP 쿼리, 아웃오브 라인 바인딩, 로컬 큐브, 마이닝 모델, 원격 파티션, 연결된 개체 및 대상과 원본 간의 동기화에 사용됩니다. 그러나 DMX(Data Mining Extensions) OPENQUERY 문의 경우 이 옵션이 무시되고 현재 사용자의 자격 증명이 사용됩니다.  
   
  **사용자 이름**  

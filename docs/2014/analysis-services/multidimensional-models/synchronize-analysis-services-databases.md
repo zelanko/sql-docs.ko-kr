@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216203"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
@@ -47,11 +47,11 @@ ms.locfileid: "36081434"
 >  이전 버전의 Analysis Services용으로 작성된 다음 백서는 SQL Server 2012를 사용하여 구축된 확장 가능한 다차원 솔루션에도 적용됩니다. 자세한 내용은 [Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253136) 및 [읽기 전용 데이터베이스로 Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253137.)을 참조하세요.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 데이터베이스 동기화를 시작하는 대상 서버에서 Analysis Services 서버 관리자 역할의 멤버여야 합니다. 원본 서버에서 Windows 사용자 계정에 원본 데이터베이스에 대한 모든 권한이 있어야 합니다. 데이터베이스를 대화형으로 동기화하는 경우 동기화가 Windows 사용자 ID의 보안 컨텍스트에서 실행됩니다. 특정 개체에 대한 계정의 액세스가 거부되는 경우 해당 개체가 작업에서 제외됩니다. 서버 관리자 역할 및 데이터베이스 권한에 대 한 자세한 내용은 참조 하십시오. [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 및 [데이터베이스 사용 권한을 부여 &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md)합니다.  
+ 데이터베이스 동기화를 시작하는 대상 서버에서 Analysis Services 서버 관리자 역할의 멤버여야 합니다. 원본 서버에서 Windows 사용자 계정에 원본 데이터베이스에 대한 모든 권한이 있어야 합니다. 데이터베이스를 대화형으로 동기화하는 경우 동기화가 Windows 사용자 ID의 보안 컨텍스트에서 실행됩니다. 특정 개체에 대한 계정의 액세스가 거부되는 경우 해당 개체가 작업에서 제외됩니다. 서버 관리자 역할 및 데이터베이스 권한에 대 한 자세한 내용은 참조 하세요. [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 하 고 [데이터베이스 권한 부여 &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md)합니다.  
   
  TCP 포트 2383이 기본 인스턴스 간의 원격 연결을 허용하기 위해 두 서버에서 열려 있어야 합니다. Windows 방화벽에서 예외를 만드는 방법은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
   
- 원본 및 대상 서버는 동일한 버전 및 서비스 팩이 설치 해야 합니다. 모델 메타 데이터 동기화도 되어 있으므로 빌드 호환성을 보장 하려면 두 서버 모두에 대 한 번호 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 원본 및 대상 서버는 동일한 버전 및 서비스 팩 이어야 합니다. 모델 메타 데이터 동기화도 되어 있으므로 빌드 호환성을 위해 두 서버 모두에 대 한 번호 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  서버 배포 모드는 각 서버에서 동일해야 합니다. 동기화할 데이터베이스가 다차원인 경우 원본 서버와 대상 서버가 다차원 서버 모드에 대해 구성되어야 합니다. 배포 모드에 대한 자세한 내용은 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하십시오.  
   

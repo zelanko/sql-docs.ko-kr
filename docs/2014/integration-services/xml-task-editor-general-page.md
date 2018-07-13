@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 67d02b183ab38ec046bf3fc0004c8d8f9de7e1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae95fb2d0db4d052c241fb4b1968102b1bbe268c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237163"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 태스크 편집기(일반 페이지)
   **XML 태스크 편집기** 대화 상자의 **일반** 노드를 사용하여 작업 유형을 지정하고 작업을 구성할 수 있습니다.  
@@ -316,11 +316,11 @@ ms.locfileid: "36081153"
 |**IgnoreXMLDeclaration**|XML 선언을 비교할지 여부를 지정합니다.|  
 |**IgnoreDTD**|DTD(문서 유형 정의)를 무시할지 여부를 지정합니다.|  
 |**IgnoreWhiteSpaces**|문서 비교 시 공백 양의 차이를 무시할 것인지 여부를 지정합니다.|  
-|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 요소의 특성 이름을 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션 설정 하는 경우 `True`, 하지만 서로 다른 두 요소는 로컬 이름을 네임 스페이스는 같다고 간주 됩니다.|  
+|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 요소의 특성 이름을 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션 설정 하는 경우 `True`, 다른 두 요소는 동일한 로컬 이름을 네임 스페이스와 동일한 것으로 간주 됩니다.|  
 |**IgnoreProcessingInstructions**|처리 명령을 비교할지 여부를 지정합니다.|  
-|**IgnoreOrderOfChildElements**|자식 요소의 순서를 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션 설정 하는 경우 `True`만 형제 목록에서 위치만 다른 자식 요소는 동일한 것으로 간주 합니다.|  
+|**IgnoreOrderOfChildElements**|자식 요소의 순서를 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션 설정 하는 경우 `True`, 형제 목록에서 해당 위치 에서만에서 차이가 있는 자식 요소는 동일한 것으로 간주 합니다.|  
 |**IgnoreComments**|주석 노드를 비교할지 여부를 지정합니다.|  
-|**IgnorePrefixes**|요소와 특성 이름의 접두사를 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션을 설정 하는 경우 `True`, 두 요소는 로컬 이름은 같지만 다른 네임 스페이스 Uri 및 접두사가 동일한 것으로 간주 됩니다.|  
+|**IgnorePrefixes**|요소와 특성 이름의 접두사를 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션을 설정 하는 경우 `True`, 로컬 이름은 같지만 다른 네임 스페이스 Uri 및 접두사가 있는 두 개의 요소가 동일한 것으로 간주 됩니다.|  
   
  **FailOnDifference**  
  비교 작업이 실패할 경우 태스크가 실패할지 여부를 지정합니다.  

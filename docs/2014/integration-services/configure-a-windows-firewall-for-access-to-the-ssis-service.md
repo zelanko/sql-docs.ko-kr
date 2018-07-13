@@ -1,5 +1,5 @@
 ---
-title: SSIS 서비스 액세스에 대 한 Windows 방화벽 구성 | Microsoft Docs
+title: SSIS 서비스에 대 한 액세스를 위한 Windows 방화벽 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
 - Windows Firewall [Integration Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 302d3d9aac30d18ae8ae887cdd65cde7147a9f22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 67a1206afe217ce2f0e358c56ee4df2b16691b8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163004"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS 서비스 액세스에 대한 Windows 방화벽 구성
     
@@ -78,7 +78,7 @@ ms.locfileid: "36079636"
 5.  **포트 추가** 대화 상자의 **이름** 상자에 **RPC(TCP/135)** 나 다른 설명이 포함된 이름을 입력하고 **포트 번호** 상자에 **135** 를 입력한 다음 **TCP**를 선택합니다.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 항상 포트 135를 사용 합니다. 다른 포트를 지정할 수 없습니다.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 항상 포트 135를 사용합니다. 다른 포트를 지정할 수 없습니다.  
   
 6.  **포트 추가** 대화 상자에서는 선택적으로 **범위 변경** 을 클릭하여 기본 범위를 수정할 수 있습니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36079636"
     >  Windows 방화벽을 구성하려면 이 절차에서 제어판의 **Windows 방화벽** 항목을 사용합니다. **Windows 방화벽** 항목은 현재 네트워크 위치 프로필에 대한 방화벽만 구성합니다. 그러나 **netsh** 명령줄 도구 또는 고급 보안이 설정된 Windows 방화벽 MMC( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) 스냅인을 사용하여 Windows 방화벽을 구성할 수도 있습니다. 이러한 도구에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services 구성 서비스 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
+ [서비스 서비스를 통합 구성 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)  
   
   

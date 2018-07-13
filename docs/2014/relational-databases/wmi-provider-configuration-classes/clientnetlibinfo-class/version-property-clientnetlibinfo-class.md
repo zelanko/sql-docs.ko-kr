@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Version property
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6732a81080c4215cd0c8ccdec9b253e35c507d5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fdb59b38d4af1915b1fcad6debfd41bcae5dbeb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246263"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리 파일의 버전을 가져옵니다.  

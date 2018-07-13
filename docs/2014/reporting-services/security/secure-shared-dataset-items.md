@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69369e5f1701ea1807a42bfb426f8cd26073e2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323883"
 ---
 # <a name="secure-shared-dataset-items"></a>공유 데이터 집합 항목 보안 설정
   보고서 서버에서 공유 데이터 집합 항목을 여러 보고서에서 사용할 수 있습니다. 공유 데이터 집합에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 공유 데이터 집합 보기, 속성 수정, 캐싱 설정, 캐시 새로 고침 계획 만들기, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자에 대해서는 공유 데이터 집합에 대한 액세스를 허용하는 역할 할당을 만들어야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36080133"
 |보고서 사용|공유 데이터 집합의 정의를 봅니다.|내용 관리자<br /><br /> 보고서 작성기|  
 |항목의 보안 설정|공유 데이터 집합에 대한 액세스를 제어하는 역할 할당을 만들고 수정합니다. 이 태스크는 "보고서 보기" 또는 "보고서 관리" 태스크와 함께 사용해야 합니다. 그렇지 않으면 사용자가 항목을 선택할 수 없으므로 효과가 없습니다.|내용 관리자|  
   
- 자세한 내용은 참조 [항목 수준의 태스크](tasks-and-permissions-item-level-tasks.md) 및 [미리 정의 된 역할](role-definitions-predefined-roles.md)합니다.  
+ 자세한 내용은 [항목 수준의 태스크](tasks-and-permissions-item-level-tasks.md) 하 고 [미리 정의 된 역할](role-definitions-predefined-roles.md)입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [공유 데이터 집합 관리](../report-data/manage-shared-datasets.md)   

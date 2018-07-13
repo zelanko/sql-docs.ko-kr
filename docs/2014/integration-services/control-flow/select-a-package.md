@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectapackage.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 931a122e188f157a2fbcf32adbf9c6dc420d11f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a751ce55edfb2c43054648e56e6fc18e208dcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189070"
 ---
 # <a name="select-a-package"></a>패키지 선택
   **패키지 선택** 대화 상자를 사용하여 메시지 큐 태스크에서 수신할 메시지를 전송하는 패키지를 지정할 수 있습니다.  

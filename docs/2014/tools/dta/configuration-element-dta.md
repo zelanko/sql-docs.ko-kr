@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cca142282c59539d54d5e1d42d5d2269ac41635
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0383bc1c8bef5a84b77c8b63fb424995a2181ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241753"
 ---
 # <a name="configuration-element-dta"></a>Configuration 요소(DTA)
   작업 튜닝 시에 데이터베이스 엔진 튜닝 관리자가 분석할 기존 및 가상 물리적 디자인 구조로 구성된 사용자 지정 구성입니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36080561"
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**발생 빈도**|(선택 사항) 각각에 대해 한 번만 사용할 수 `DTAInput` 요소입니다.|  
+|**발생 빈도**|(선택 사항) 각각에 대 한 번만 사용할 수 있습니다 `DTAInput` 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

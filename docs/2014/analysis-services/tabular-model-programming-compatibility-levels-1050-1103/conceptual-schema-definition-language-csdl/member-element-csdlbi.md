@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
 caps.latest.revision: 5
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: acca47250cc38966cf1043ac25212aa0d4950093
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4508dcf3e0dd590aaa92041d3a2136589b98e07d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207943"
 ---
 # <a name="member-element-csdlbi"></a>Member 요소(CSDLBI)
   멤버 요소는 다른 요소에 대해 기준 역할을 하는 복합 유형입니다.  

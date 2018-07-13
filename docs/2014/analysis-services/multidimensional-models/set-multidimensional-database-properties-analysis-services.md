@@ -1,5 +1,5 @@
 ---
-title: 다차원 데이터베이스 속성 (Analysis Services) 설정 | Microsoft Docs
+title: 다차원 데이터베이스 속성 설정 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200233"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>다차원 데이터베이스 속성 설정(Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 디자이너에서는 다양한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 속성을 구성할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36080537"
   
 -   사용자에게 표시되는 데이터베이스에 대한 설명을 제공할 수 있습니다. 데이터베이스 이름을 볼 수도 있지만 변경할 수는 없습니다. 데이터베이스 이름을 변경하려면 프로젝트의 속성을 편집해야 합니다.  
   
--   데이터베이스 이름과 설명에 대한 번역을 하나 이상의 언어로 제공할 수 있습니다. 자세한 내용은 참조 [큐브 번역](../multidimensional-models-olap-logical-cube-objects/cube-translations.md), [차원 번역](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), 및 [번역 &#40;Analysis Services&#41;](../translations-analysis-services.md)합니다.  
+-   데이터베이스 이름과 설명에 대한 번역을 하나 이상의 언어로 제공할 수 있습니다. 자세한 내용은 [큐브 번역](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)를 [차원 번역](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), 및 [번역 &#40;Analysis Services&#41;](../translations-analysis-services.md).  
   
 -   기본 계정 유형 매핑을 보고 수정할 수 있습니다. 계정 유형 매핑은 하나 이상의 측정값에서 *ByAccount* 집계 함수를 사용할 때 사용됩니다. 각 계정 유형에 대해 별칭을 지정하고 계정 유형과 연결된 기본 집계 함수를 수정할 수 있습니다. 기본 집계 수정에 대한 자세한 내용은 [반가산적 동작 정의](define-semiadditive-behavior.md)를 참조하세요.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36080537"
 |MasterDataSource ID|원격 파티션에 사용됩니다. 자세한 내용은 [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 속성 대화 상자 &#40;SSAS-다차원 데이터&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [데이터베이스 속성 대화 상자 &#40;&AMP;#40;SSAS-다차원&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
  [Analysis Services 프로젝트 속성 구성 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

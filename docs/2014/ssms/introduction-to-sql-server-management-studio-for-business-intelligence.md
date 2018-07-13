@@ -1,5 +1,5 @@
 ---
-title: Business Intelligence에 대 한 SQL Server Management Studio 소개 | Microsoft Docs
+title: Business Intelligence 용 SQL Server Management Studio 소개 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 273fc16281fa4ad0f4f09076ddfad8924782fca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 98dab4db89917fd4ece162420baa29dfe6930a2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175187"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio 소개
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 액세스, 구성 및 관리하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용합니다. 3가지 비즈니스 인텔리전스 기술 모두 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 의존하지만 각 기술과 관련된 관리 태스크는 약간씩 다릅니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36082189"
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 및 XMLA(XML for Analysis)로 작성된 스크립트를 개발 및 저장할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 스크립트 프로젝트를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 스크립트 프로젝트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 관리 태스크를 수행하거나 데이터베이스 및 큐브와 같은 개체를 다시 만들 수 있습니다. 예를 들어 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 직접 새 개체를 만드는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 스크립트 프로젝트에서 XMLA 스크립트를 개발할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 스크립트 프로젝트는 솔루션의 일부로 저장되어 원본 코드 제어와 함께 통합될 수 있습니다.  
   
- 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], 참조 [SQL Server Management Studio에서 Analysis Services 스크립트 프로젝트](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 참조 하세요 [SQL Server Management Studio의 Analysis Services 스크립트 프로젝트](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)합니다.  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Integration Services 솔루션 관리  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리하고 실행 중인 패키지를 모니터링할 수 있습니다. 또한 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 를 사용하여 패키지를 폴더로 구성하고 패키지를 실행하고 패키지를 가져오거나 내보내고 DTS(데이터 변환 서비스) 패키지를 마이그레이션하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 업그레이드할 수 있습니다.  

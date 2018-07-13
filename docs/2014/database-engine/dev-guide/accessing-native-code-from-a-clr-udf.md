@@ -1,5 +1,5 @@
 ---
-title: CLR UDF에서 네이티브 코드 액세스 | Microsoft Docs
+title: CLR UDF에서 네이티브 코드에 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82c2444f0d90876058bb7f062dd441f632741d0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 91e1f906e3014f4d4f702bdb2013c121a162de73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237423"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>CLR UDF에서 네이티브 코드 액세스
   이 예에서는 데이터베이스의 어셈블리에 있는 사용자 정의 함수에서 네이티브(비관리) C++ 코드의 함수를 호출하는 방법을 보여 줍니다.  

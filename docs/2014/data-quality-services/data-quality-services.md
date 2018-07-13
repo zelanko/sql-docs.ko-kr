@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8a9ad0b05ced1a4ebc747d8f70eaf2b3bb4b5b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc8b0b1ed01ef85fc28bf73fe8fcfb0316f41bea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207643"
 ---
 # <a name="data-quality-services"></a>데이터베이스 엔진 서비스
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)](DQS)는 지식 기반 데이터 품질 제품입니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 데이터 수정, 강화, 표준화 및 중복 제거를 포함한 다양한 핵심 데이터 품질 태스크를 수행할 수 있습니다. DQS를 통해 참조 데이터 공급자가 제공하는 클라우드 기반 참조 데이터 서비스를 사용하여 데이터 정리를 수행할 수 있습니다. DQS는 또한 데이터 품질 태스크에 통합된 프로파일링을 제공하여 데이터의 무결성을 분석할 수 있게 해줍니다.  

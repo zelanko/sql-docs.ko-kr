@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218953"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>보고서 디자이너로 보고서 디자인(SSRS)
   보고서 디자이너를 사용하여 완전한 기능을 갖춘 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 보고 솔루션을 만들 수 있습니다. 보고서 디자이너에서 제공하는 그래픽 인터페이스를 통해 데이터 원본과 데이터 집합 및 쿼리, 보고서의 데이터 영역과 필드의 레이아웃 위치, 매개 변수와 같은 대화형 기능, 함께 작동하는 보고서 집합을 정의할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36080375"
   
  보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 집합을 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 집합을 열 수 없습니다. 해당 기능을 사용 하 여 [보고서 작성기 &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) 공유 데이터 집합 모드에서.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 집합을 관리할 수 있습니다. 자세한 내용은 참조 [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), 및 [공유 데이터 집합 관리](../report-data/manage-shared-datasets.md)합니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 집합을 관리할 수 있습니다. 자세한 내용은 [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)하십시오 [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), 및 [공유 데이터 집합 관리](../report-data/manage-shared-datasets.md)합니다.  
   
   
 ##  <a name="bkmk_Reports"></a> 보고서  
@@ -124,7 +124,7 @@ ms.locfileid: "36080375"
      에 지정 된 보고서, 보고서를 작성은 하지만 배포 하지 않는 프로젝트 구성을 사용 하는 경우는 `StartItem` 별도 미리 보기 창에서 열리며, 현재 구성의 속성입니다.  
   
     > [!NOTE]  
-    >  디버그 모드를 사용하려면 먼저 시작 항목을 설정해야 합니다. 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭 하 여, **속성**, 및 `StartItem`를 표시할 보고서의 이름을 선택 합니다.  
+    >  디버그 모드를 사용하려면 먼저 시작 항목을 설정해야 합니다. 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭, 클릭 **속성**, 및 `StartItem`, 표시할 보고서의 이름을 선택 합니다.  
   
      프로젝트의 시작 항목이 아닌 특정 보고서를 미리 보려면 보고서를 작성하지만 배포하지 않는 구성(예: DebugLocal 구성)을 선택하고 보고서를 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭합니다. 보고서를 배포하지 않는 구성을 선택해야 합니다. 그렇지 않으면 보고서는 로컬 컴퓨터의 미리 보기 창에 표시되지 않고 보고서 서버에 게시됩니다.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36080375"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 보고서 또는 기타 프로젝트 항목을 여러 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 배포할 수 있습니다. 프로젝트 구성을 사용하면 보고서 정의를 대상 보고서 서버 호환 스키마 버전으로 업그레이드하는 작업을 제어할 수 있습니다. 프로젝트 구성으로 제어되는 속성에는 대상 보고서 서버, 오류 수준, 빌드 프로세스에서 미리 보기 및 배포용으로 보고서 정의를 임시 저장하는 폴더 등이 포함됩니다. 자세한 내용은 [구성 및 배포 속성](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) 및 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)을 참조하세요.  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>다른 파일 형식으로 보고서 내보내기  
- 보고서를 다양한 형식으로 내보낼 수 있으며, 이러한 형식은 일부 보고서 레이아웃 및 대화형 기능의 작동에 영향을 줍니다. 다양 한 출력 형식에 대 한 디자인 고려 사항에 대 한 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
+ 보고서를 다양한 형식으로 내보낼 수 있으며, 이러한 형식은 일부 보고서 레이아웃 및 대화형 기능의 작동에 영향을 줍니다. 다양 한 출력 형식의 디자인 고려 사항에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> 보고서 유효성 검사 및 오류 수준  
@@ -186,7 +186,7 @@ ms.locfileid: "36080375"
 |3|알아차릴 수 없게 약간만 보고서 레이아웃을 변경하는 사소한 빌드 문제|  
 |4|경고를 게시하기 위해서만 사용됩니다.|  
   
- 미리 보거나 보고서 항목의 새로운 기능을 포함 하는 보고서를 배포 하려는 경우 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 지도 및 데이터 막대와 같은 이러한 보고서 항목이 보고서에서 제거 수입니다. 기본적으로 구성의 ErrorLevel 속성은 2로 설정되므로 지도가 제거될 경우 보고서 빌드가 실패합니다. 그러나 ErrorLevel 속성 값을 0 또는 1로 변경할 경우 지도는 삭제되고 경고가 표시되며 빌드 프로세스가 계속됩니다.  
+ 미리 보기 또는 보고서 항목의 새로운 기능을 포함 하는 보고서를 배포 하려고 시도 하면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 지도 및 데이터 막대와 같은 이러한 보고서 항목이 보고서에서 제거 수입니다. 기본적으로 구성의 ErrorLevel 속성은 2로 설정되므로 지도가 제거될 경우 보고서 빌드가 실패합니다. 그러나 ErrorLevel 속성 값을 0 또는 1로 변경할 경우 지도는 삭제되고 경고가 표시되며 빌드 프로세스가 계속됩니다.  
   
   
 ## <a name="see-also"></a>관련 항목  

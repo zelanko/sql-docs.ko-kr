@@ -16,18 +16,18 @@ helpviewer_keywords:
 - programming [SMO]
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d747c0562ba0bc41f7f29378f5a44516afb6a016
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 737acb943974dd8657998b73b61efb92e256b5cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189920"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SMO(SQL Server 관리 개체) 프로그래밍 가이드
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 관리의 모든 측면을 프로그래밍 하는 데 사용 되는 개체의 컬렉션은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 관리를 캡슐화하는 개체 컬렉션입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 관리의 모든 측면을 프로그래밍 용으로 설계 된 개체의 컬렉션인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 관리를 캡슐화하는 개체 컬렉션입니다.  
   
 |항목|Description|  
 |-----------|-----------------|  

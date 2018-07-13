@@ -1,5 +1,5 @@
 ---
-title: AMO 다른 클래스와 메서드 | Microsoft Docs
+title: AMO 기타 클래스 및 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180880"
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 기타 클래스 및 메서드
-  이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 하 고 관리 하거나 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
+  이 섹션에서는 OLAP 또는 데이터 마이닝과 관련 되지 않은 개체를 관리 하는 데 유용한 일반적인 클래스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이러한 클래스에서는 저장 프로시저, 추적, 예외, 백업 및 복원 등의 기능을 제공합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -42,20 +42,20 @@ ms.locfileid: "36081697"
   
 -   [추적 개체](#Traces)  
   
--   [CaptureLog 클래스 및 CaptureXML 특성](#CaptureLog)  
+-   [Capturelog 및 CaptureXML 특성](#CaptureLog)  
   
 -   [AMOException 예외 클래스](#AMO)  
   
  다음 그림에서는 이 항목에 설명된 클래스의 관계를 보여 줍니다.  
   
- ![AMO 다른 클래스](../../../analysis-services/dev-guide/media/amo-otherclasses.gif "AMO 다른 클래스")  
+ ![AMO 기타 클래스](../../../analysis-services/dev-guide/media/amo-otherclasses.gif "AMO 기타 클래스")  
   
 ##  <a name="Assembly"></a> 어셈블리 개체  
  <xref:Microsoft.AnalysisServices.Assembly> 개체를 서버의 어셈블리 컬렉션에 추가한 다음 Update 메서드를 사용하여 서버로 업데이트하면 <xref:Microsoft.AnalysisServices.Assembly> 개체가 만들어집니다.  
   
  <xref:Microsoft.AnalysisServices.Assembly> 제거를 제거하려면 <xref:Microsoft.AnalysisServices.Assembly> 개체의 Drop 메서드를 사용하여 삭제해야 합니다. <xref:Microsoft.AnalysisServices.Assembly> 개체를 데이터베이스의 어셈블리 컬렉션에서 제거해도 어셈블리가 삭제되지는 않습니다. 응용 프로그램이 다음에 실행될 때까지 해당 어셈블리가 응용 프로그램에 표시되지 않을 뿐입니다.  
   
- 메서드 및 사용할 수 있는 속성에 대 한 자세한 내용은 참조 <xref:Microsoft.AnalysisServices.Assembly> 에서 <xref:Microsoft.AnalysisServices> 합니다.  
+ 사용 가능한 메서드와 속성에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Assembly> 에서 <xref:Microsoft.AnalysisServices> 합니다.  
   
 > [!IMPORTANT]  
 >  COM 어셈블리는 보안 위험을 내포할 수 있습니다. 이러한 위험 및 기타 고려 사항으로 인해 COM 어셈블리는 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]에서 더 이상 사용되지 않습니다. COM 어셈블리는 후속 릴리스에서 지원되지 않을 수 있습니다.  
@@ -152,12 +152,12 @@ ms.locfileid: "36081697"
   
 6.  응용 프로그램 실행을 계속합니다.  
   
-##  <a name="CaptureLog"></a> CaptureLog 클래스 및 CaptureXML 특성  
- AMO에서 실행되는 모든 동작이 XMLA 메시지로 서버에 전송됩니다. AMO는 SOAP 헤더 없이 이러한 메시지를 모두 캡처할 수 있는 기능을 제공합니다. 자세한 내용은 참조 [AMO 클래스 소개](amo-classes-introduction.md)합니다. CaptureLog는 AMO에서 개체와 작업을 스크립팅하는 메커니즘이며, 개체와 작업은 XMLA로 스크립팅됩니다.  
+##  <a name="CaptureLog"></a> Capturelog 및 CaptureXML 특성  
+ AMO에서 실행되는 모든 동작이 XMLA 메시지로 서버에 전송됩니다. AMO는 SOAP 헤더 없이 이러한 메시지를 모두 캡처할 수 있는 기능을 제공합니다. 자세한 내용은 [AMO 클래스 소개](amo-classes-introduction.md)합니다. CaptureLog는 AMO에서 개체와 작업을 스크립팅하는 메커니즘이며, 개체와 작업은 XMLA로 스크립팅됩니다.  
   
  XML 캡처를 시작하려면 CaptureXML 서버 개체 속성을 `true`로 설정해야 합니다. 그러면 서버로 전송되는 모든 동작이 CaptureLog 클래스에 캡처되지만 서버로 전송되지는 않습니다. CaptureLog는 캡처 로그를 지우는 데 사용되는 Clear 메서드를 가지고 있으므로 클래스로 간주됩니다.  
   
- 로그를 읽기 위해 문자열 컬렉션을 가져와서 문자열을 반복합니다. 서버 개체 메서드 ConcatenateCaptureLog를 사용하여 모든 로그를 한 문자열로 연결할 수도 있습니다. ConcatenateCaptureLog에는 매개 변수 3개가 사용되며 그 중 2개는 필수입니다. 필요한 매개 변수는 *트랜잭션*, Boolean 형식 및 *병렬*, Boolean 형식입니다. 경우 *트랜잭션* 로 설정 된 `true`, 별도 트랜잭션으로 처리 되 고 각 명령 대신 단일 트랜잭션으로 XML 배치 파일이 만들 수 있는지 나타냅니다. 경우 *병렬* 로 설정 된 `true`, 기록 된 대로 배치 파일에서 모든 명령이 순차적으로 하는 대신 동시 실행에 대 한 기록 될 것을 나타냅니다.  
+ 로그를 읽기 위해 문자열 컬렉션을 가져와서 문자열을 반복합니다. 서버 개체 메서드 ConcatenateCaptureLog를 사용하여 모든 로그를 한 문자열로 연결할 수도 있습니다. ConcatenateCaptureLog에는 매개 변수 3개가 사용되며 그 중 2개는 필수입니다. 필수 매개 변수는 *트랜잭션*, 부울 형식의 및 *병렬*, 부울 유형입니다. 하는 경우 *트랜잭션* 로 설정 된 `true`, 별도 트랜잭션으로 처리 되 고 각 명령 대신 단일 트랜잭션으로 XML 일괄 처리 파일을 만들 수를 나타냅니다. 하는 경우 *병렬* 로 설정 된 `true`, 기록 된 대로 배치 파일에서 모든 명령이 순차적으로 하는 대신 동시 실행에 대 한 기록 수를 나타냅니다.  
   
 ##  <a name="AMO"></a> AMOException 예외 클래스  
  AMOException 예외 클래스를 사용하여 AMO에서 throw된 예외를 응용 프로그램에서 쉽게 catch할 수 있습니다.  

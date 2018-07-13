@@ -1,5 +1,5 @@
 ---
-title: 만들기 및 PowerPivot 갤러리에 사용자 지정 | Microsoft Docs
+title: 만들고 PowerPivot 갤러리를 사용자 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181012"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot 갤러리 만들기 및 사용자 지정
   PowerPivot 갤러리는 특수한 유형의 SharePoint 문서 라이브러리로서 PowerPivot 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 풍부한 미리 보기와 문서 관리 기능을 제공합니다.  
@@ -54,12 +54,12 @@ ms.locfileid: "36081687"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 제한된 사이트에 있을 수 없습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 포함하는 상위 사이트는 신뢰할 수 있는 사이트나 로컬 인트라넷 영역에 추가되어야 합니다.  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 응용 프로그램 솔루션은 응용 프로그램에 사용할 수 있도록 배포되어 있어야 하고 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능을 활성화해야 합니다. 자세한 내용은 참조 [SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md) 및[중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 응용 프로그램 솔루션은 응용 프로그램에 사용할 수 있도록 배포되어 있어야 하고 사이트 모음에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능을 활성화해야 합니다. 자세한 내용은 [SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md) 하 고[중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 하는 Reporting Services 보고서를 만들거나 보려면 통합 문서와 보고서가 모두 같은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 있어야 합니다. 이 보고서는 포함된 데이터가 들어 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 사용해야 합니다. 또는 통합 문서에 최대 하나의 외부 데이터 원본( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서)이 들어 있어야 합니다.  
   
 ##  <a name="overview"></a> 개요  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 SharePoint  서버에 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치한 경우 제공되는 라이브러리 템플릿입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에는 파일 내용의 정확한 미리 보기와 문서 출처 관련 정보가 함께 포함되어 있습니다. 문서 작성자와 마지막으로 수정한 날짜를 즉시 확인할 수 있습니다. 미리 보기 이미지를 만들기 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 읽을 수 있는 스냅숏 서비스를 사용 하는 갤러리 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 PowerPivot 데이터를 포함 하는 Reporting Services 보고서입니다. 스냅숏 서비스가 읽을 수 없는 파일을 게시하면 해당 파일에 대한 미리 보기 이미지가 제공되지 않습니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 SharePoint  서버에 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치한 경우 제공되는 라이브러리 템플릿입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에는 파일 내용의 정확한 미리 보기와 문서 출처 관련 정보가 함께 포함되어 있습니다. 문서 작성자와 마지막으로 수정한 날짜를 즉시 확인할 수 있습니다. 미리 보기 이미지를 만들기 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 읽을 수 있는 스냅숏 서비스를 사용 하는 갤러리 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] PowerPivot 데이터가 포함 된 Reporting Services 보고서 및 통합 문서. 스냅숏 서비스가 읽을 수 없는 파일을 게시하면 해당 파일에 대한 미리 보기 이미지가 제공되지 않습니다.  
   
  미리 보기 이미지는 Excel 서비스가 통합 문서를 렌더링하는 방식을 기반으로 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 표현은 브라우저에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모양과 동일해야 합니다. 하지만 미리 보기의 화면 영역은 제한되어 있습니다. 따라서 사용 가능한 공간에 맞도록 통합 문서 또는 보고서의 일부가 잘릴 수 있습니다. 이 경우 통합 문서 또는 보고서를 열어 전체 문서를 봐야 할 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36081687"
   
 3.  **만들기**를 클릭합니다.  
   
-4.  팜 또는 서비스 관리자에게 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스의 신뢰할 수 있는 위치로 추가하도록 요청합니다. 이 단계는 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침에 대해 통합 문서를 구성하는 경우 오류 발생을 방지하기 위해 필요합니다. 이 태스크에 대 한 자세한 내용은 참조 [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)합니다.  
+4.  팜 또는 서비스 관리자에게 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스의 신뢰할 수 있는 위치로 추가하도록 요청합니다. 이 단계는 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침에 대해 통합 문서를 구성하는 경우 오류 발생을 방지하기 위해 필요합니다. 이 태스크에 대 한 자세한 내용은 참조 하세요. [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리에 대한 링크가 현재 사이트의 탐색 빠른 실행 창에 표시됩니다.  
   

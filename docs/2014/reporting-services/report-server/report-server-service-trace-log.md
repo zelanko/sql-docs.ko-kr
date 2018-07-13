@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
@@ -18,19 +18,19 @@ ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5473021393acf02a3910b4eb8090486d838e0770
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270279"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대 한 세부 정보가 포함 된 ASCII 텍스트 파일, 서비스, 보고서 관리자 및 백그라운드 처리에는 보고서 서버 웹 수행 하는 작업이 포함 됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대 한 세부 정보가 포함 된 ASCII 텍스트 파일, 서비스, 보고서 관리자 및 백그라운드 처리에 보고서 서버 웹에서 수행 하는 포함 하 여 작업 합니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다.  
   
 > [!NOTE]  
->  이전 버전에서는 응용 프로그램마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. 다음 파일 사용 되지 않으며 더 이상 만들어지지 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전: ReportServerWebApp_*\<타임 스탬프 >*.log, ReportServer_*\<타임 스탬프 >*.log 및 ReportServerService_main_*\<타임 스탬프 >*. 로그입니다.  
+>  이전 버전에서는 응용 프로그램마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. 다음 파일이 사용 되지 않는 되어에서 더 이상 만들어지지 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전: ReportServerWebApp_*\<타임 스탬프 >*.log, ReportServer_*\<타임 스탬프 >*.log 및 ReportServerService_main_*\<타임 스탬프 >*. 로그 합니다.  
   
  **항목 내용**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36080582"
   
 -   [추적 구성 설정](#bkmk_trace_configuration_settings)  
   
--   [덤프 파일 위치를 지정 하려면 사용자 지정 구성 설정 추가](#bkmk_add_custom)  
+-   [덤프 파일 위치를 지정 하려면 사용자 지정 구성 설정을 추가](#bkmk_add_custom)  
   
 -   [로그 파일 필드](#bkmk_log_file_fields)  
   
@@ -51,14 +51,14 @@ ms.locfileid: "36080582"
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 로그 파일은 Microsoft 파워 쿼리의 사용을 보여 주는 짧은 비디오에서 볼 수 있습니다.  
   
- ![파워 쿼리 및 SSRS 로그에 대 한 비디오 보기](../media/generic-video-thumbnail.png "파워 쿼리 및 SSRS 로그에 대 한 비디오 보기")  
+ ![파워 쿼리 및 SSRS 로그에 대 한 비디오를 볼](../media/generic-video-thumbnail.png "파워 쿼리 및 SSRS 로그에 대 한 비디오 보기")  
   
 ##  <a name="bkmk_trace_configuration_settings"></a> 추적 구성 설정  
  추적 로그 동작은 구성 파일 **ReportingServicesrService.exe.config**에서 관리됩니다. 구성 파일은 다음 폴더 경로에 있습니다.  
   
  `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`을 참조하세요.  
   
- 다음 예에서는 `RStrace` 설정의 XML 구조를 보여 줍니다. 에 대 한 값 `DefaultTraceSwitch` 로그에 추가 하는 정보의 종류를 결정 합니다. 제외 하 고는 `Components` 특성에 대 한 값 `RStrace` 구성 파일 전반에서 모두 동일 합니다.  
+ 다음 예에서는 `RStrace` 설정의 XML 구조를 보여 줍니다. 에 대 한 값 `DefaultTraceSwitch` 로그에 추가 되는 정보의 종류를 결정 합니다. 제외 하 고는 `Components` 특성에 대 한 값 `RStrace` 구성 파일에서 동일 합니다.  
   
 ```  
 <system.diagnostics>  
@@ -89,7 +89,7 @@ ms.locfileid: "36080582"
 |`Prefix`|로그 인스턴스를 구분하는 생성 값을 지정합니다. 기본적으로 타임스탬프 값이 추적 로그 파일 이름에 추가됩니다. 이 값은 " tid, time"으로 설정됩니다. 이 설정은 수정하지 마세요.|  
 |**TraceListeners**|추적 로그 내용을 출력할 대상을 지정합니다. 대상이 여러 개일 경우 쉼표로 구분하여 지정할 수 있습니다. 유효한 값은<br /><br /> DebugWindow<br /><br /> File(기본값)<br /><br /> StdOut|  
 |**TraceFileMode**|추적 로그에 24시간 동안의 데이터를 포함할지 여부를 지정합니다. 일별로 각 구성 요소마다 고유한 추적 로그가 하나씩 있어야 합니다. 이 값은 "Unique(기본값)"로 설정됩니다. 이 값은 수정하지 마세요.|  
-|`Components`|추적 로그 정보가 생성되는 구성 요소와 추적 수준을 다음 형식으로 지정합니다.<br /><br /> \<구성 요소 범주 >:\<tracelevel ><br /><br /> 구성 요소 범주는 다음과 같이 설정할 수 있습니다.<br />특정 범주로 나눌 수 없는 프로세스의 경우 `All`을 통해 모든 프로세스에 대한 일반적인 보고서 서버 작업이 추적됩니다.<br />`RunningJobs` 진행 중인 보고서 나 구독 작업을 추적 하는 데 사용 됩니다.<br />사용자가 모델 기반 보고서에서 임시 데이터 탐색을 수행할 때 처리되는 의미 체계 쿼리의 경우 `SemanticQueryEngine`을 통해 추적됩니다.<br />모델 생성의 경우 `SemanticModelGenerator`를 통해 추적됩니다.<br />보고서 서버 HTTP 로그 파일의 경우 `http`를 통해 설정됩니다. 자세한 내용은 참조 [보고서 서버 HTTP 로그](report-server-http-log.md)합니다.<br /><br /> <br /><br /> 유효한 추적 수준 값은 다음과 같습니다.<br /><br /> 0= 추적 해제<br /><br /> 1= 예외 및 다시 시작<br /><br /> 2= 예외, 다시 시작, 경고<br /><br /> 3= 예외, 다시 시작, 경고, 상태 메시지(기본값)<br /><br /> 4= 세부 정보 표시 모드<br /><br /> 보고서 서버의 기본값은 "all:3"입니다.<br /><br /> 전체 또는 일부 구성 요소를 지정할 수 있습니다 (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). 특정 구성 요소에 대해 정보를 생성하지 않으려면 "SemanticModelGenerator:0"과 같이 해당 구성 요소에 대해 추적을 해제합니다. `all`에 대한 추적은 해제하지 마세요.<br /><br /> 구성 요소에 추적 수준을 추가하지 않으면 `DefaultTraceSwitch`에 대해 지정된 값이 사용됩니다. 예를 들어 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"를 지정하면 모든 구성 요소에서 기본 추적 수준을 사용합니다.<br /><br /> 각 의미 체계 쿼리에 대해 생성되는 Transact-SQL 문을 보려면 "SemanticQueryEngine:4"를 설정합니다. Transact-SQL 문은 추적 로그에 기록됩니다. 다음 예에서는 로그에 Transact-SQL 문을 추가하는 구성 설정을 보여 줍니다.<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
+|`Components`|추적 로그 정보가 생성되는 구성 요소와 추적 수준을 다음 형식으로 지정합니다.<br /><br /> \<구성 요소 범주 >:\<tracelevel ><br /><br /> 구성 요소 범주는 다음과 같이 설정할 수 있습니다.<br />특정 범주로 나눌 수 없는 프로세스의 경우 `All`을 통해 모든 프로세스에 대한 일반적인 보고서 서버 작업이 추적됩니다.<br />`RunningJobs` 진행 중인 보고서 나 구독 작업을 추적 하는 데 사용 됩니다.<br />사용자가 모델 기반 보고서에서 임시 데이터 탐색을 수행할 때 처리되는 의미 체계 쿼리의 경우 `SemanticQueryEngine`을 통해 추적됩니다.<br />모델 생성의 경우 `SemanticModelGenerator`를 통해 추적됩니다.<br />보고서 서버 HTTP 로그 파일의 경우 `http`를 통해 설정됩니다. 자세한 내용은 [보고서 서버 HTTP 로그](report-server-http-log.md)합니다.<br /><br /> <br /><br /> 유효한 추적 수준 값은 다음과 같습니다.<br /><br /> 0= 추적 해제<br /><br /> 1= 예외 및 다시 시작<br /><br /> 2= 예외, 다시 시작, 경고<br /><br /> 3= 예외, 다시 시작, 경고, 상태 메시지(기본값)<br /><br /> 4= 세부 정보 표시 모드<br /><br /> 보고서 서버의 기본값은 "all:3"입니다.<br /><br /> 전체 또는 일부 구성 요소를 지정할 수 있습니다 (`all`, `RunningJobs`를 `SemanticQueryEngine`, `SemanticModelGenerator`). 특정 구성 요소에 대해 정보를 생성하지 않으려면 "SemanticModelGenerator:0"과 같이 해당 구성 요소에 대해 추적을 해제합니다. `all`에 대한 추적은 해제하지 마세요.<br /><br /> 구성 요소에 추적 수준을 추가하지 않으면 `DefaultTraceSwitch`에 대해 지정된 값이 사용됩니다. 예를 들어 "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator"를 지정하면 모든 구성 요소에서 기본 추적 수준을 사용합니다.<br /><br /> 각 의미 체계 쿼리에 대해 생성되는 Transact-SQL 문을 보려면 "SemanticQueryEngine:4"를 설정합니다. Transact-SQL 문은 추적 로그에 기록됩니다. 다음 예에서는 로그에 Transact-SQL 문을 추가하는 구성 설정을 보여 줍니다.<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> 덤프 파일 위치 지정을 위한 사용자 지정 구성 설정 추가  
  Windows용 Dr. Watson 도구에서 덤프 파일 저장에 사용하는 위치를 설정하기 위해 사용자 지정 설정을 추가할 수 있습니다. 사용자 지정 설정은 `Directory`입니다. 다음 예에서는 `RStrace` 섹션에 이 구성 설정을 지정하는 방법을 보여 줍니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "36080582"
   
 -   HTTP 헤더, 스택 추적 및 디버그 추적 정보  
   
- 추적 로그 정보를 검토하여 보고서가 배달되었는지 여부, 보고서를 받은 사용자 및 배달 시도 횟수를 확인할 수 있습니다. 또한 추적 로그는 보고서 실행 작업 및 보고서 처리 중에 적용되는 환경 변수를 기록합니다. 오류와 예외도 추적 로그에 입력됩니다. 예를 들어 알게 될 수 있습니다 보고서 시간 초과 오류 (으로 표시 되는 `ThreadAbortExceptions` 항목).  
+ 추적 로그 정보를 검토하여 보고서가 배달되었는지 여부, 보고서를 받은 사용자 및 배달 시도 횟수를 확인할 수 있습니다. 또한 추적 로그는 보고서 실행 작업 및 보고서 처리 중에 적용되는 환경 변수를 기록합니다. 오류와 예외도 추적 로그에 입력됩니다. 예를 들어, 있습니다 보고서 시간 초과 오류 (으로 표시 되는 `ThreadAbortExceptions` 항목).  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)   

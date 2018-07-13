@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b36b06422cf2e88cfd68fd640f562204a40dde6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: badabfd899f3e4bad719f5c3c731cbc768cfe645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225643"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>버전 관리 기능 영역(마스터 데이터 관리자)
   버전 관리 기능 영역에서 관리자는 데이터 유효성을 검사하고, 트랜잭션을 검토하고 되돌리며, 버전 지정된 데이터 복사본을 만들고, 구독 시스템에 대해 데이터 버전에 플래그를 지정할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  

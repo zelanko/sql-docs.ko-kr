@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Scope GDR event class
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e1fa782ef8802041d6563ba6611f02403e61115f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1ba228ac5c586fa806f9347a7786d82ffaeffd8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231193"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 이벤트 클래스
   **Audit Database Scope GDR** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자가 데이터베이스 권한 부여 등의 데이터베이스 전용 동작을 위해 문 사용 권한에 대해 GRANT, REVOKE 또는 DENY를 실행할 때마다 발생합니다.  

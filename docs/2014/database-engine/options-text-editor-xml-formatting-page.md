@@ -1,5 +1,5 @@
 ---
-title: 옵션 (텍스트 편집기-XML 서식 페이지) | Microsoft Docs
+title: 옵션 (텍스트 편집기-XML-서식 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209593"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
   이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36080487"
 > [!NOTE]  
 >  특성이 여러 줄로 된 경우 편집기에서 상위 요소의 들여쓰기에 맞게 특성의 각 줄을 들여씁니다.  
   
- **별도 줄에 각 특성 정렬**  
+ **별도 줄에 특성 맞춤**  
  첫 번째 특성의 들여쓰기에 맞게 두 번째 및 이후의 특성을 세로로 정렬합니다. 다음 XML 텍스트는 특성 정렬 방법의 예입니다.  
   
 ```  
@@ -47,7 +47,7 @@ ms.locfileid: "36080487"
 ```  
   
 ## <a name="auto-reformat"></a>자동 서식 다시 설정  
- **클립보드에서 붙여 넣을 합니다.**  
+ **클립보드에서 붙여 넣을 때.**  
  클립보드에서 붙여 넣은 XML 텍스트 서식을 다시 설정합니다.  
   
  **끝 태그 완료 시**  

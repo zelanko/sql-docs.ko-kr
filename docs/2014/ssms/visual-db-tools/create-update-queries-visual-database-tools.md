@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], updating
 - queries [SQL Server], types
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updating tables
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 666c467a44692db34e5996435efd7eb61b8b62bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34948672400c119a4ebaee4b39308e186bfbb1f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179160"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>업데이트 쿼리 만들기(Visual Database Tools)
   업데이트 쿼리를 사용하면 한 번의 작업으로 여러 행의 내용을 변경할 수 있습니다. 예를 들어 `titles` 테이블에서 업데이트 쿼리를 사용하여 특정 출판사의 모든 책 가격에 10%를 추가할 수 있습니다.  
@@ -77,7 +77,7 @@ WHERE (pub_id = '0766')
   
 ## <a name="see-also"></a>관련 항목  
  [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

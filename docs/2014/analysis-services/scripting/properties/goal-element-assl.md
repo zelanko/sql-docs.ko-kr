@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b408e73bd8cb376afe0b8cf36157628be908780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81a85c6bec79add033825311bb790ba6e39349bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250913"
 ---
 # <a name="goal-element-assl"></a>Goal 요소(ASSL)
-  원하는 목표를 식별 한 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
+  원하는 목표를 식별 하는 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36079648"
 ## <a name="remarks"></a>Remarks  
  `Goal` 요소는 MDX(Multidimensional Expressions) 식을 포함합니다.  
   
- 부모에 해당 하는 요소 `Goal` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
+ 부모에 해당 하는 요소가 `Goal` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Status 요소 &#40;ASSL&#41;](status-element-assl.md)   
- [요소 추세 &#40;ASSL&#41;](trend-element-assl.md)   
+ [Trend 요소 &#40;ASSL&#41;](trend-element-assl.md)   
  [요소 값 &#40;ASSL&#41;](value-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   

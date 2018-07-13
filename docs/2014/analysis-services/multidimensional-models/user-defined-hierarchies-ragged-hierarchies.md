@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57da031b308d9480c2523ef5ee6487bbf469a740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f27105d3a19dc76a8cad643b057a27fff63d10f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267699"
 ---
 # <a name="ragged-hierarchies"></a>비정형 계층 구조
   비정형 계층은 균일하지 않은 수준 수가 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
@@ -43,11 +43,11 @@ ms.locfileid: "36079654"
 ##  <a name="bkmk_approach"></a> 비정형 계층에서 드릴다운 탐색을 수정하기 위한 방법  
  비정형 계층의 존재는 드릴다운 탐색이 예상되는 값을 반환하지 않거나 사용하기에 비효율적인 것으로 인식될 때 문제가 됩니다. 비정형 계층으로 인해 발생하는 탐색 문제를 해결하려면 다음 옵션을 사용해 보십시오.  
   
--   일반 계층을 사용하지만 각 수준에 대해 `HideMemberIf` 속성을 설정하여 누락된 수준을 사용자에게 시각화할지 여부를 지정합니다. 설정할 때 `HideMemberIf`를 설정 해야 `MDXCompatibility` 기본 탐색 동작을 재정의 하는 연결 문자열에 있습니다. 이러한 속성을 설정하는 지침이 이 항목에 설명되어 있습니다.  
+-   일반 계층을 사용하지만 각 수준에 대해 `HideMemberIf` 속성을 설정하여 누락된 수준을 사용자에게 시각화할지 여부를 지정합니다. 설정 하는 경우 `HideMemberIf`를 설정 해야 `MDXCompatibility` 기본 탐색 동작을 재정의 하려면 연결 문자열에 있습니다. 이러한 속성을 설정하는 지침이 이 항목에 설명되어 있습니다.  
   
--   수준 멤버를 명시적으로 관리하는 부모-자식 계층을 만듭니다. 이 기술의 일러스트레이션을 보려면 [SSAS의 비정형 계층(블로그 포스트)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)을 참조하세요. 자세한 내용은 온라인 설명서에서 참조 [부모-자식 계층](parent-child-dimension.md)합니다. 부모-자식 계층을 만드는 경우의 단점은 차원당 부모-자식 계층이 하나만 있을 수 있으며 중간 멤버에 대한 집계를 계산할 때 일반적으로 성능 저하가 발생하는 것입니다.  
+-   수준 멤버를 명시적으로 관리하는 부모-자식 계층을 만듭니다. 이 기술의 일러스트레이션을 보려면 [SSAS의 비정형 계층(블로그 포스트)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)을 참조하세요. 온라인 설명서에 대 한 자세한 내용은 참조 하세요. [부모-자식 계층](parent-child-dimension.md)합니다. 부모-자식 계층을 만드는 경우의 단점은 차원당 부모-자식 계층이 하나만 있을 수 있으며 중간 멤버에 대한 집계를 계산할 때 일반적으로 성능 저하가 발생하는 것입니다.  
   
- 차원에 둘 이상의 비정형된 계층이 포함 된, 경우에 설정 하는 첫 번째 방법을 사용 해야 `HideMemberIf`합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 이 기술에 대한 자세한 내용은 [Martin Mason의 SSAS 재무 큐브–1a 파트–비정형 계층(블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 을 참조하세요.  
+ 차원에 둘 이상의 비정형된 계층이 포함 된, 설정, 첫 번째 방법을 사용 해야 `HideMemberIf`합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 이 기술에 대한 자세한 내용은 [Martin Mason의 SSAS 재무 큐브–1a 파트–비정형 계층(블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 을 참조하세요.  
   
 ##  <a name="bkmk_Hide"></a> 일반 계층에서 멤버를 숨기도록 HideMemberIf 설정  
  비정형 차원 테이블의 경우 논리적으로 누락된 멤버를 여러 방법으로 표시할 수 있습니다. 테이블 셀에는 Null 또는 빈 문자열을 포함할 수 있습니다. 또는 자리 표시자 역할을 하기 위해 부모와 같은 값을 포함할 수도 있습니다. 자리 표시자의 표현은 클라이언트 응용 프로그램에 대한 `HideMemberIf` 연결 문자열 속성 및 `MDX Compatibility` 속성에 의해 결정되는 자식 멤버의 자리 표시자 상태에 의해 결정됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36079654"
     |**ParentName**|이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
   
 ##  <a name="bkmk_Mdx"></a> MDX Compatibility를 설정하여 자리 표시자가 클라이언트 응용 프로그램에서 표현되는 방법 결정  
- 설정한 후 `HideMemberIf` 계층 수준에서 설정 해야는 `MDX Compatibility` 클라이언트 응용 프로그램에서 보낸 연결 문자열의 속성입니다. `MDX Compatibility` 설정은 `HideMemberIf` 가 사용되는지 여부를 결정합니다.  
+ 설정한 후 `HideMemberIf` 계층 구조 수준에서 설정 해야 합니다 `MDX Compatibility` 클라이언트 응용 프로그램에서 전송 된 연결 문자열의 속성입니다. `MDX Compatibility` 설정은 `HideMemberIf` 가 사용되는지 여부를 결정합니다.  
   
 |MDX 호환성 설정|Description|사용법|  
 |-------------------------------|-----------------|-----------|  

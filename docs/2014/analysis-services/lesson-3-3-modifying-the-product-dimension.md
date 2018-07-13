@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6d0fca02684392aaba37565d4b06b7cc0f1e265f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171734"
 ---
 # <a name="modifying-the-product-dimension"></a>Product 차원 수정
   이 항목의 태스크에서는 명명된 계산을 사용하여 제품 라인에 대해 보다 설명적인 이름을 제공하고 Product 차원에 계층을 정의하고 계층에 대해 (All) 멤버 이름을 지정합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36080746"
   
 3.  화면 오른쪽에 있는 속성 창의 맨 아래에서 **NameColumn** 속성 필드를 클릭한 다음 찾아보기(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
   
-4.  선택 `ProductLineName` 맨 아래에 **원본 열** 목록으로 이동한 다음 클릭 **확인**합니다.  
+4.  선택 `ProductLineName` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   
      이제 NameColumn 필드에 **Product.ProductLineName (WChar)** 텍스트가 포함됩니다. **Product Line** 특성 계층의 멤버가 약식 제품 라인 이름이 아니라 전체 제품 라인 이름을 표시합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36080746"
   
      이제 NameColumn 필드에 **Product.EnglishProductName (WChar)** 텍스트가 포함됩니다.  
   
-8.  속성 창에서 위로 스크롤을 클릭는 **이름** 속성 필드를 한 다음 입력 `Product Name`합니다.  
+8.  속성 창에서 위로 스크롤하여을 클릭 합니다 **이름을** 속성 필드 및를 입력 한 후 `Product Name`합니다.  
   
 ## <a name="creating-a-hierarchy"></a>계층 만들기  
   
@@ -83,13 +83,13 @@ ms.locfileid: "36080746"
   
 1.  **특성** 창의 **Product Line** 특성을 **계층** 창으로 끌어옵니다.  
   
-2.  끌어서는 **모델 이름** 에서 특성의 **특성** 창에는  **\<새 수준 >** 셀에 **계층** 창, 아래에서 **제품 라인** 수준입니다.  
+2.  끌어서를 **모델 이름** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층** 창, 아래 합니다 **Product Line** 수준입니다.  
   
-3.  끌어서는 `Product Name` 에서 특성의 **특성** 창에는  **\<새 수준 >** 셀에 **계층** 창의 아래 **Model Name** 수준입니다. 이전 단원에서 Product Key를 Product Name으로 바꿨습니다.  
+3.  끌어서를 `Product Name` 에서 특성을 **특성** 창을  **\<새 수준 >** 셀에 **계층** 합니다 아래창 **모델 이름** 수준입니다. 이전 단원에서 Product Key를 Product Name으로 바꿨습니다.  
   
-4.  에 **계층** 의 창은 **차원 구조** 탭에서의 제목 표시줄을 마우스 오른쪽 단추로 클릭는 **계층** 계층 클릭 **이름 바꾸기** 를 입력 한 다음 `Product Model Lines`합니다.  
+4.  에 **계층** 창을 **차원 구조** 탭, 제목 표시줄을 마우스 오른쪽 단추로 클릭 합니다 **계층** 계층 클릭 **이름 바꾸기** 를 입력 하 고 `Product Model Lines`입니다.  
   
-     계층의 이름이 지금은 `Product Model Lines`합니다.  
+     계층 이름이 이제 `Product Model Lines`합니다.  
   
 5.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36080746"
   
     -   **Standard Cost**  
   
-4.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 속성 셀 `Financial`합니다.  
+4.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 셀 속성 `Financial`합니다.  
   
      이제 이러한 특성을 두 번째 표시 폴더로 그룹화했습니다.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "36080746"
   
     -   **상태**  
   
-6.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 속성 셀 `History`합니다.  
+6.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 셀 속성 `History`합니다.  
   
      이제 이러한 특성을 세 번째 표시 폴더로 그룹화했습니다.  
   
-7.  선택은 `Product Model Lines` 계층에는 **계층** 창, 한 다음는 **AllMemberName** 를 속성 창에서 속성 `All Products`합니다.  
+7.  선택는 `Product Model Lines` 계층에는 **계층** 창과 다음 변경을 **AllMemberName** 속성 창에서 속성 `All Products`합니다.  
   
-8.  열린 영역을 클릭는 **계층** 창과 후 변경의 **AttributeAllMemberName** 속성을 속성 창 맨 위에 있는 `All Products`합니다.  
+8.  열린 영역을 클릭 합니다 **계층** 창과 다음 변경 합니다 **AttributeAllMemberName** 속성 창의 맨 위에 있는 속성 `All Products`합니다.  
   
      열린 영역을 클릭하면 Product 차원 자체의 속성을 수정할 수 있습니다. **특성** 창의 특성 목록 맨 위에 있는 **Product** 를 클릭해도 됩니다.  
   
@@ -178,9 +178,9 @@ ms.locfileid: "36080746"
   
 2.  **배포가 완료되었습니다.** 메시지를 받은 후 **Product** 차원에 대한 **차원 디자이너** 의 **브라우저** 탭을 클릭한 다음 디자이너의 도구 모음에 있는 다시 연결 단추를 클릭합니다.  
   
-3.  확인 `Product Model Lines` 에서 선택한는 **계층** 목록으로 이동한 다음를 확장 `All Products`합니다.  
+3.  확인 `Product Model Lines` 에서 선택한는 **계층** 목록을 연 다음 확장 `All Products`합니다.  
   
-     이름에서 **모든** 멤버로 나타납니다 `All Products`합니다. 변경 했기 때문에 이것이 **AllMemberName** 계층에 대 한 속성 `All Products` 단원의 앞부분에서 합니다. 또한 **Product Line** 수준의 멤버는 이제 한 자로 된 약어가 아니라 알아보기 쉬운 이름을 갖게 되었습니다.  
+     이름을 합니다 **모든** 구성원으로 표시 됩니다. `All Products`합니다. 변경 때문에 이것이 합니다 **AllMemberName** 계층에 대 한 속성 `All Products` 단원의 앞부분에서. 또한 **Product Line** 수준의 멤버는 이제 한 자로 된 약어가 아니라 알아보기 쉬운 이름을 갖게 되었습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [Date 차원 수정](lesson-3-4-modifying-the-date-dimension.md)  
@@ -188,6 +188,6 @@ ms.locfileid: "36080746"
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [사용자 정의 계층 만들기](multidimensional-models/user-defined-hierarchies-create.md)   
- [구성에서 &#40;모든&#41; 특성 계층의 수준](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [구성 된 &#40;모든&#41; 특성 계층의 수준](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

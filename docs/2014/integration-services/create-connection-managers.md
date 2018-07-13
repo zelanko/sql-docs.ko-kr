@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 caps.latest.revision: 54
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ae1ccaa1e38d280c3d46fb4504f99df92254a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252545"
 ---
 # <a name="create-connection-managers"></a>연결 관리자 만들기
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 태스크를 여러 유형의 서버 및 데이터 원본에 연결하기 위한 다양한 연결 관리자가 포함됩니다. 연결 관리자는 여러 유형의 데이터 저장소에서 데이터를 추출하고 로드하는 데이터 흐름 구성 요소와 서버, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 또는 파일에 로그를 기록하는 로그 공급자에서 사용됩니다. 예를 들어 메일 보내기 태스크가 포함된 패키지에서는 SMTP 연결 관리자 유형을 사용하여 SMTP(Simple Mail Transfer Protocol) 서버에 연결합니다. SQL 실행 태스크가 포함된 패키지에서는 OLE DB 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 연결할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
@@ -56,7 +56,7 @@ ms.locfileid: "36081375"
   
  런타임 시 올바른 버전이 사용되므로 디자인 타임에 32비트 버전의 공급자를 지정했어도 문제가 되지 않습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지가 실행될 경우에도 64비트 버전의 공급자를 실행할 수 있습니다.  
   
- 두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이로 설정 된 경우 `true`, 찾아서 Run64BitRuntime 이면; 64 비트 공급자를 사용 하 여 런타임에 `false`, 런타임을 찾아 32 비트 공급자를 사용 합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)를 참조하세요.  
+ 두 버전의 공급자는 동일한 ID를 갖습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임에서 사용 가능한 64비트 버전의 공급자를 사용하도록 할지 여부를 지정하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 Run64BitRuntime 속성을 설정합니다. Run64BitRuntime 속성이로 설정 되어 있으면 `true`, 런타임에 찾아 Run64BitRuntime 경우 64 비트 공급자를 사용 하 여 `false`, 런타임에 찾아 32 비트 공급자를 사용 합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 설정할 수 있는 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [제어 흐름](control-flow/control-flow.md)   

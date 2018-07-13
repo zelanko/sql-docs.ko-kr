@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reducing attackable surface area
 - upgrading SQL Server, security
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f7f27fd6aed9714d2e7bd18bf1adb25fea370819
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 7032966cb0fb1975b65847ac1e6e0a6c5dc43b1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172194"
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새로 설치의 기본 구성에서는 많은 기능이 활성화되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 악의적인 사용자로부터 공격 대상이 될 수 있는 기능 수를 최소화하기 위해 주요 서비스와 기능만 필요에 따라 설치하고 시작합니다. 시스템 관리자는 설치 시 이러한 기본값을 변경할 수 있으며 필요에 따라 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기능을 활성화 또는 비활성화할 수 있습니다. 또한 다른 컴퓨터에서 연결하는 경우 일부 구성 요소는 프로토콜을 구성해야만 사용할 수 있습니다.  

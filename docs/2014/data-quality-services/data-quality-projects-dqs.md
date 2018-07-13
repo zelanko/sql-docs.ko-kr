@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 635632db245b37e068b7d9f16a1b352be1cc1d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192613"
 ---
 # <a name="data-quality-projects-dqs"></a>데이터 품질 프로젝트(DQS)
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 품질 프로젝트는 기술 자료를 사용하여 *데이터 정리* 및 *데이터 일치* 작업을 수행한 다음 결과 데이터를 SQL Server 데이터베이스 또는 .csv 파일로 내보내 원본 데이터의 품질을 향상시킬 수 있는 수단입니다. 데이터 품질 프로젝트를 정리 프로젝트 또는 일치 프로젝트로 만들어 각 작업을 수행할 수 있습니다. 데이터 정리 및 일치에 대한 정보는 같은 기술 자료에 기본 제공될 수 있으므로 같은 기술 자료를 사용하여 정리 및 일치 프로젝트를 실행할 수 있습니다.  

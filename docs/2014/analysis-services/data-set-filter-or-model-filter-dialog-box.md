@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85986f7f73a96ce0fc2286ad8f9377df1d53845c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187320"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>데이터 집합 필터 또는 모델 필터 대화 상자
   이 대화 상자를 사용하면 데이터 집합에 적용할 수 있는 필터를 작성할 수 있습니다.  데이터 집합은 테스트에 사용되는 외부 데이터 집합이나 마이닝 모델의 사례 데이터일 수 있습니다. 이 대화 상자의 이름은 필터가 외부 데이터 집합용인지, 아니면 마이닝 모델용인지에 따라 달라집니다.  

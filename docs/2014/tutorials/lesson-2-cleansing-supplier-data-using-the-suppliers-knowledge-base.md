@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b4c227ff846649e29b7efc0ad50e4b13416c48c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5708dfe72d3eaa745d1ffefd88147b3e72b7c46c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191223"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>2단원: 공급자 기술 자료를 사용하여 공급자 데이터 정리
   이 단원에서는 첫 번째 단원에서 만든 **Suppliers** 기술 자료를 사용해서 Excel 파일에서 공급자 데이터를 정리합니다. DQS의 데이터 정리에는 데이터가 기술 자료의 지식을 준수하는 정도를 분석하는 **컴퓨터 기반 프로세스** 및 컴퓨터 기반 프로세스 결과를 검토하고 수정할 수 있게 해주는 **대화형 프로세스** 가 포함됩니다. 데이터 정리 기능은 데이터 원본에 포함된 잘못된 데이터를 식별한 후 잘못된 데이터를 수정하거나 수정을 제안합니다. 또한 도메인 값, 동의어의 선행 값, 도메인 규칙, 용어 기반 관계 및 참조 데이터를 사용해서 고객 데이터를 표준화 및 강화합니다. 컴퓨터 기반 프로세스로 제안된 변경 사항은 대화형으로 승인 또는 거부할 수 있습니다. 자세한 내용은 [데이터 정리](http://msdn.microsoft.com/library/gg524800.aspx) 를 참조하십시오.  

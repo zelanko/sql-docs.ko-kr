@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 57aa51909a5fe1c3bb0488ce4bc05bcceab37d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272099"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
   **파일** 메뉴에서 **열기**를 클릭한 다음 **파일**을 클릭하여 하나 이상의 편집기로 문서를 열 수 있습니다. **파일 열기** 대화 상자에서 파일을 선택하고 **열기** 화살표를 클릭한 다음 **연결 프로그램**을 클릭합니다. **연결 프로그램** 대화 상자의 **열려는 프로그램을 선택하십시오.** 목록에서 원하는 프로그램을 클릭한 다음 **열기**를 클릭합니다.  

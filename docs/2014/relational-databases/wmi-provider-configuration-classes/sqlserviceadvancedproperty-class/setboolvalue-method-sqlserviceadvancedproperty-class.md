@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - Set Breakpoints dialog box
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 caps.latest.revision: 23
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: acef1e3e3cc297a54471ed124bfa5984b2980d9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 89517b3d1d8ac28db093cb32990f526b98cbf70e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260459"
 ---
 # <a name="set-breakpoints"></a>중단점 설정
   **중단점 설정** 대화 상자를 사용하여 중단점을 설정할 이벤트를 지정하고 중단점의 동작을 제어할 수 있습니다.  

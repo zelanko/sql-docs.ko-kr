@@ -1,5 +1,5 @@
 ---
-title: 조건 요소 (ASSL) | Microsoft Docs
+title: 요소 (ASSL) 조건 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Condition element
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2edc8a241e92987c4cde54c58576c60abb257c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b4b15f7b354b858ba1dfd91fff18963b288615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212333"
 ---
 # <a name="condition-element-assl"></a>Condition 요소(ASSL)
-  결정 하는 MDX (Multidimensional Expressions) 식을 포함 여부는 [동작](../objects/action-element-assl.md) 부모 요소는 대상에 적용 됩니다.  
+  결정 하는 MDX (Multidimensional Expressions) 식을 포함 하는지 여부를 [동작](../objects/action-element-assl.md) 부모 요소를 대상에 적용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36080262"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Condition` 요소는 Boolean 값을 평가하는 MDX 식을 포함합니다. 식에서 반환 하는 경우 `True`, 하면 `Action` 에 지정 된 대상에 적용 됩니다는 [대상](target-element-assl.md) 요소입니다. 그렇지 않으면 `Action`이 적용되지 않습니다.  
+ `Condition` 요소는 Boolean 값을 평가하는 MDX 식을 포함합니다. 식을 반환 하는 경우 `True`, 해당 `Action` 에 지정 된 대상에 적용 합니다 [대상](target-element-assl.md) 요소입니다. 그렇지 않으면 `Action`이 적용되지 않습니다.  
   
- 부모에 해당 하는 요소 `Condition` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
+ 부모에 해당 하는 요소가 `Condition` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

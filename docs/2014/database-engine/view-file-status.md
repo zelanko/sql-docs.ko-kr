@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file status information [SQL Server]
 - file history [SQL Server]
 - version control services [SQL Server], file status
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e22e0082e2a8d380c384b17a367d16b15612162
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 87400d7bed6f23c6990afd45b5c3fe7bf81a683f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189150"
 ---
 # <a name="view-file-status"></a>파일 상태 보기
   소스 제어는 모든 원본 제어 항목에 대한 자세한 상태 정보를 유지 관리합니다. 이 정보를 사용하여 파일의 현재 상태를 식별하고 해당 항목에 대한 상태 보고서를 만들 수 있습니다.  

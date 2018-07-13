@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - authentication [Reporting Services]
 - extensions [Reporting Services], custom security
@@ -16,19 +16,19 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 65524c714361a7a43531a778121231a8ff2013a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391326882d3eaa0170bee0aa075e9d9b6c15abcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266119"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>보고서 관리자에서 사용자 지정 인증 쿠키를 전달하도록 구성
   사용자 지정 인증 확장 프로그램을 사용하는 경우 보고서 관리자에서 사용자 지정 인증 쿠키를 전송하도록 구성해야 합니다. 그렇게 하지 않으면 보고서 관리자에서 HTTP 요청을 통해 보고서 서버 관련 쿠키만 전송합니다. 추가 쿠키를 전송하려면 RSReportServer.Config 파일을 수정해야 합니다.  
   
 ## <a name="modifying-the-rsreportserverconfig-file"></a>RSReportServer.Config 파일 수정  
- 추가 하 여 보고서 서버를 통해 추가 쿠키를 전송 하도록 보고서 관리자를 사용 하도록 설정할 수는 <`PassThroughCookies`> 요소는 RSReportServer.config 파일에 보고서 관리자 구성 설정입니다. 추가 쿠키 전송은 보고서 서버 인증 쿠키뿐만 아니라 타사 인증 시스템의 쿠키도 필요한 Single Sign-On 인증 솔루션에 유용합니다.  
+ 보고서 관리자를 추가 하 여 보고서 서버를 통해 추가 쿠키를 전송 하도록 설정할 수 있습니다.를 <`PassThroughCookies`> 요소는 RSReportServer.config 파일에 보고서 관리자 구성 설정입니다. 추가 쿠키 전송은 보고서 서버 인증 쿠키뿐만 아니라 타사 인증 시스템의 쿠키도 필요한 Single Sign-On 인증 솔루션에 유용합니다.  
   
  보고서 관리자 사용 시 HTTP 요청을 통해 추가 쿠키를 전송하려면 RSReportServer.config 파일에서 다음 요소를 설정합니다.  
   

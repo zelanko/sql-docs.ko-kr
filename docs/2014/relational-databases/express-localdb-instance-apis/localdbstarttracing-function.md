@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e54d3381fcec5da1d82ce512ead0474ae2c4c82c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7fa1c2519361ac4b4eb37bb0af6ef8c14b82035e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177660"
 ---
 # <a name="localdbstarttracing-function"></a>LocalDBStartTracing 함수
   현재 Windows 사용자가 소유한 모든 SQL Server Express LocalDB 인스턴스에 대해 API 호출 추적을 활성화합니다.  

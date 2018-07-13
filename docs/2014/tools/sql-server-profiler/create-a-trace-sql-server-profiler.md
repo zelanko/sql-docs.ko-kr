@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f8aa0ba1d8445a2da5e7ffeb8836848875e8db5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4cdec05ce4abc1a6bfd3585bdd4215ce15be7b39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241809"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36079183"
 7.  **실행** 을 클릭하여 추적을 시작합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러 실행에 필요한 권한](permissions-required-to-run-sql-server-profiler.md)   
+ [SQL Server Profiler를 실행 하는 데 필요한 사용 권한](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)   
  [추적과 Windows 성능 로그 데이터의 상관 관계 지정&#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  

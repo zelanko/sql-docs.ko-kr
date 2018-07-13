@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorLogFile element
 ms.assetid: 1455bb54-03f7-4f25-9d4d-ab75231dd958
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3387498c26e0bf690b2934ea9e1ee99107414c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 067e509f6be5657e1e748738bc6910fed977fd41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323053"
 ---
 # <a name="keyerrorlogfile-element-assl"></a>KeyErrorLogFile 요소(ASSL)
   처리 오류를 기록할 파일 이름을 포함합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36080252"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `KeyErrorLogFile` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ErrorConfiguration>합니다.  
+ 부모에 해당 하는 요소가 `KeyErrorLogFile` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ErrorConfiguration>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

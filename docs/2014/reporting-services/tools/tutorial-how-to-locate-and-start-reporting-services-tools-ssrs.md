@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
 - Reporting Services, tutorials
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 caps.latest.revision: 54
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 980a68939fa6b2970df820f6dd202865966ad9c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f76df07880af743623692ffcff924093e0ce9ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276949"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구를 찾고 시작하는 방법
-  이 자습서에서는 보고서 서버를 구성하고 보고서 서버 내용 및 작업을 관리하며 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 이 자습서를 통해 새 사용자는 각 도구를 찾고 여는 방법을 이해할 수 있습니다. 도구에 익숙한 경우 이동할 수 있습니다 수 있는 다른 자습서에 사용 하기 위한 중요 한 기술을 배울 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다. 다른 자습서에 대 한 자세한 내용은 참조 [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  
+  이 자습서에서는 보고서 서버를 구성하고 보고서 서버 내용 및 작업을 관리하며 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 이 자습서를 통해 새 사용자는 각 도구를 찾고 여는 방법을 이해할 수 있습니다. 도구에 익숙한 경우 이동할 수 있습니다 도움이 되는 다른 자습서를 사용 하 여에 대 한 중요 한 기술을 배우게 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다. 다른 자습서에 대 한 자세한 내용은 참조 하세요. [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  
   
  항목 내용  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36078978"
   
 -   [Management Studio](#bkmk_managements_studio)  
   
--   [SQL Server Data Tools에서 보고서 디자이너 및 보고서 마법사 사용](#bkmk_ssdt)  
+-   [보고서 디자이너 및 보고서 마법사를 사용 하 여 SQL Server Data Tools](#bkmk_ssdt)  
   
 -   [보고서 작성기](#bkmk_report_builder)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36078978"
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 구성 관리자를 시작하려면  
   
-1.  Windows 시작 화면에서 입력 `reporting` 및는 **앱** 검색 결과 클릭 **Reporting Services 구성 관리자**합니다.  
+1.  Windows 시작 화면에서 입력 `reporting` 고 합니다 **앱** 검색 결과 클릭 합니다 **Reporting Services 구성 관리자**합니다.  
   
      ![시작 시 reporting services 구성 관리자](../media/bi-ssrs-configmanager-win8-startscreen.gif "시작 시 reporting services 구성 관리자")  
   
@@ -91,21 +91,21 @@ ms.locfileid: "36078978"
  **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
 ##  <a name="bkmk_report_manager"></a> 보고서 관리자 (기본 모드)  
- 사용 하 여 [보고서 관리자 &#40;SSRS 기본 모드&#41; ](../report-manager-ssrs-native-mode.md) 사용 권한을 설정, 구독 및 일정을 관리 및 보고서를 사용 합니다. 보고서 관리자를 사용하여 보고서를 볼 수 있습니다.  
+ 사용 하 여 [보고서 관리자 &#40;SSRS 기본 모드&#41; ](../report-manager-ssrs-native-mode.md) 사용 권한 설정, 구독 및 일정 관리 및 보고서를 사용 합니다. 보고서 관리자를 사용하여 보고서를 볼 수 있습니다.  
   
- **설치:** 설치할 때 보고서 관리자가 설치 되어 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드: [Reporting Services 기본 모드 보고서 서버 설치](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **설치:** 보고서 관리자를 설치할 때 설치 됩니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드: [Reporting Services 기본 모드 보고서 서버 설치](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  보고서 관리자를 열려면 먼저 충분한 권한이 있어야 합니다. 처음에는 로컬 관리자 그룹의 멤버만 보고서 관리자 기능에 액세스할 수 있습니다. 보고서 관리자는 현재 사용자의 역할 할당에 따라 다양한 페이지와 옵션을 제공합니다. 사용 권한이 없는 사용자에게는 빈 페이지가 나타납니다. 보고서를 볼 권한이 있는 사용자에게는 클릭하여 보고서를 열 수 있는 링크가 나타납니다. 권한에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)를 참조하세요.  
   
 #### <a name="to-start-report-manager"></a>보고서 관리자를 시작하려면  
   
-1.  브라우저를 엽니다. 에 대 한 내용은 지원 되는 브라우저 및 브라우저 버전, [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)합니다.  
+1.  브라우저를 엽니다. 지원 되는 브라우저 및 브라우저 버전에 대 한 내용은 참조 하세요 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)합니다.  
   
-2.  웹 브라우저의 주소 표시줄에 보고서 관리자 URL을 입력합니다. 기본적으로이 URL은 **http://\<서버 이름 > / r**합니다. Reporting Services 구성 도구를 사용하여 서버 이름과 URL을 확인할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 사용되는 URL에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)를 참조하세요.  
+2.  웹 브라우저의 주소 표시줄에 보고서 관리자 URL을 입력합니다. 기본적으로이 URL은 **http://\<서버 이름 > / reports**합니다. Reporting Services 구성 도구를 사용하여 서버 이름과 URL을 확인할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 사용되는 URL에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)를 참조하세요.  
   
 3.  보고서 관리자가 브라우저 창에서 열립니다. 시작 페이지는 홈 폴더입니다. 사용 권한에 따라 추가 폴더, 보고서에 대한 하이퍼링크 및 시작 페이지 내의 리소스 파일을 볼 수 있습니다. 또한 도구 모음에서 추가적인 단추와 명령을 볼 수 있습니다.  
   
-4.  로컬 보고서 서버에서 보고서 관리자를 실행 하는 경우 참조 [로컬 관리를 위한 기본 모드 보고서 서버 구성 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
+4.  로컬 보고서 서버의 보고서 관리자를 실행 하는 경우 참조 [로컬 관리를 위한 기본 모드 보고서 서버 구성 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
   
  **다음 단계:** [보고서 관리자 구성 &#40;기본 모드&#41;](../report-server/configure-web-portal.md)합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36078978"
   
 #### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio를 시작하려면  
   
-1.  Windows 시작 화면 형식에서 `sql server` 및는 **앱** 검색 결과 클릭 **SQL Server Management Studio**합니다.  
+1.  Windows 시작 화면 형식에서 `sql server` 고 합니다 **앱** 검색 결과 클릭 합니다 **SQL Server Management Studio**합니다.  
   
      ![Windows 시작 화면의 Management Studio](../media/bi-ssms-win8-startscreen.gif "Windows 시작 화면의 Management Studio")  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36078978"
   
      **Or**  
   
-     클릭 **시작**, 가리킨 **모든 프로그램**, 가리킨 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], 클릭 하 고 **SQL Server Data Tools (SSDT)** 합니다.  
+     클릭 **시작**, 가리킨 **모든 프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]를 클릭 하 고 **SQL Server Data Tools (SSDT)**.  
   
 2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
@@ -153,12 +153,12 @@ ms.locfileid: "36078978"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 시작 페이지와 함께 열립니다. 솔루션 탐색기는 보고서 및 데이터 원본을 만드는 범주를 제공합니다. 이러한 범주를 사용하여 새 보고서 및 데이터 원본을 만들 수 있습니다. 보고서 정의를 만들면 탭 창이 표시됩니다. 탭 창은 데이터, 레이아웃 및 미리 보기입니다.  
   
- 첫 번째 보고서를 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요. 보고서 디자이너에서 사용할 수 있는 쿼리 디자이너에 대 한 자세한 참조 [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)합니다.  
+ 첫 번째 보고서를 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요. 보고서 디자이너에서 사용할 수 있는 쿼리 디자이너에 대 한 자세한 내용은 참조 하세요 [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)합니다.  
   
 ##  <a name="bkmk_report_builder"></a> 보고서 작성기  
- 사용 하 여 [보고서 작성기 &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) 에서 보고서를 만들는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office와 비슷한 제작 환경입니다. 또한 보고서를 보고서 디자이너에서 만들었는지 이전 버전의 보고서 작성기에서 만들었는지에 상관없이 모든 기존 보고서를 사용자 지정하고 업데이트할 수 있습니다. 로컬 컴퓨터에 보고서 작성기를 설치하기 위해 실행하는 ReportBuilder3.msi 파일의 위치에 대해 관리자에게 문의하세요.  
+ 사용 하 여 [보고서 작성기 &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) 에서 보고서를 만드는 데는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office와 비슷한 제작 환경입니다. 또한 보고서를 보고서 디자이너에서 만들었는지 이전 버전의 보고서 작성기에서 만들었는지에 상관없이 모든 기존 보고서를 사용자 지정하고 업데이트할 수 있습니다. 로컬 컴퓨터에 보고서 작성기를 설치하기 위해 실행하는 ReportBuilder3.msi 파일의 위치에 대해 관리자에게 문의하세요.  
   
- **설치:** 클릭-보고서 작성기의 버전으로 설치 되 면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드 또는 SharePoint 모드. 독립 실행형 버전의 보고서 작성기는 별도로 다운로드해야 합니다.  참조 [독립 실행형 버전의 보고서 작성기 설치 &#40;보고서 작성기&#41;](../install-windows/install-report-builder.md)  
+ **설치:** 클릭-보고서 작성기의 버전으로 설치 되 면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 네이티브 모드 또는 SharePoint 모드. 독립 실행형 버전의 보고서 작성기는 별도로 다운로드해야 합니다.  참조 [보고서 작성기의 독립 실행형 버전을 설치 &#40;보고서 작성기&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>보고서 관리자(기본 모드)에서 보고서 작성기 ClickOnce를 시작하려면  
   

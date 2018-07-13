@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 caps.latest.revision: 45
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fc7e1ab0e855bd9ddd208b295cf3a10d44dfce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e8ca9dc1a2213a4f95617dcd54951cfc4b9041
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220531"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Visual Basic 또는 Visual C#을 사용하여 보고서 서버 웹 서비스에 액세스(SSRS 자습서)
-  다음 자습서에서 만든 응용 프로그램에서 보고서 서버 웹 서비스에 액세스 하는 방법을 보여 줍니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]합니다.  
+  다음 자습서를 사용 하 여 만든 응용 프로그램에서 보고서 서버 웹 서비스에 액세스 하는 방법을 보여 줍니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서에서는 다음 작업을 완성합니다.  
   
--   사용 하 여 클라이언트 응용 프로그램을 만들기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] 콘솔 응용 프로그램 프로젝트 템플릿을 합니다.  
+-   사용 하 여 클라이언트 응용 프로그램을 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] 콘솔 응용 프로그램 프로젝트 템플릿.  
   
 -   보고서 서버 웹 서비스에 대한 웹 참조를 추가합니다.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36080103"
   
  [3단원: 웹 서비스에 액세스](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [4 단원: 응용 프로그램을 실행 하 &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [4 단원: 응용 프로그램을 실행 &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

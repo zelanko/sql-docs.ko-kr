@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: df4a48740b1bcb32d49355d91c966741103cf059
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4d1f9287227b3e37fd05b97d77c242173c68f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218723"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
   보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "36080386"
 -   자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>색 범위에 있는 NaN 값의 의미  
- `NaN` Not-a-number를 나타냅니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
+ `NaN` Not a Number의 약자입니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>보고서를 실행할 때 색 눈금이 표시되지 않음  
  지도 계층이 전체 계층이나 포함된 지도 요소에 대한 다각형, 선 또는 점의 색 규칙을 지정하는 경우 색 눈금은 사용자에게 정보를 표시합니다. 지도 요소가 색 규칙을 지정하지 않거나 색 규칙이 색 지도 대신 범례를 사용하여 지정되는 경우 색 지도가 렌더링된 보고서에 표시되지 않습니다.  

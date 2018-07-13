@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server]
 - simple recovery model [SQL Server]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e49707105972ce957c96f226079e8700ccedb4fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 69f9ef3ef7a700ad379a6f068a00cd22f1155578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213203"
 ---
 # <a name="file-restores-simple-recovery-model"></a>파일 복원(단순 복구 모델)
   이 항목에서는 하나 이상의 읽기 전용 보조 파일 그룹이 있는 단순 모델 데이터베이스와 관련된 내용을 다룹니다.  

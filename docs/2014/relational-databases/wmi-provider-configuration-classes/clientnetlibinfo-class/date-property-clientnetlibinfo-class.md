@@ -1,5 +1,5 @@
 ---
-title: Date 속성 (ClientNetLibInfo 클래스) | Microsoft Docs
+title: 날짜 속성 (ClientNetLibInfo 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Date property
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7d0d250751c4299bd1b03627fc91a220270e21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b6c6d2450e9774b87ff9bc9ad3e4f69d3d180706
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242473"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리 파일의 날짜를 가져옵니다.  

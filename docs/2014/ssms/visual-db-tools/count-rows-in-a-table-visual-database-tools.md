@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
 - row counts [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41a1b6010d0a1542811d9bbbec9a3e94ac4d943f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d55f9112a4015ead999ca88f7b3b55555fabf324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269959"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>테이블의 행 계산(Visual Database Tools)
   테이블의 행을 계산하여 다음을 확인할 수 있습니다.  

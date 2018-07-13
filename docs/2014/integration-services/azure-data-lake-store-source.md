@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSSRC.F1
 - SQL11.DTS.DESIGNER.AFPADLSSRC.F1
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 caps.latest.revision: 6
 author: yualan
-ms.author: yual
-manager: jhubbard
-ms.openlocfilehash: e7bd327dc2657123daf94390785bda11a17e2040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5a09d4d1f62fdb862baf1bd44c72b371ec74eb15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252665"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 원본
   **Azure Data Lake Store 원본** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 Text 및 Avro입니다.

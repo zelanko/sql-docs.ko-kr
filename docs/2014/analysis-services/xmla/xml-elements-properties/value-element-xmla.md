@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263255"
 ---
 # <a name="value-element-xmla"></a>Value 요소(XMLA)
-  원하는 값이 포함 된 [특성](attribute-element-xmla.md) 요소에 추가할 수는 [삽입](../xml-elements-commands/insert-element-xmla.md) 명령, 또는 [셀](cell-element-xmla.md) 을 업데이트 하는 요소는 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)명령입니다.  
+  원하는 값이 포함을 [특성](attribute-element-xmla.md) 요소에 추가할 수는 [삽입](../xml-elements-commands/insert-element-xmla.md) 명령, 또는 [셀](cell-element-xmla.md) 을 업데이트 하는 요소는 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36080046"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Attribute` 요소의 경우 `Value` 요소에는 `Insert` 명령이 커밋된 후 멤버가 포함해야 하는 원하는 값이 포함됩니다. 멤버 삽입 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
+ `Attribute` 요소의 경우 `Value` 요소에는 `Insert` 명령이 커밋된 후 멤버가 포함해야 하는 원하는 값이 포함됩니다. 멤버를 삽입 하는 방법에 대 한 자세한 내용은 참조 하세요. [삽입, 업데이트 및 삭제 하는 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
   
  `Cell` 요소의 경우 `Value` 요소에는 `UpdateCells` 명령이 커밋된 후 셀이 포함해야 하는 원하는 값이 포함됩니다. 해당 셀의 쓰기 저장(writeback) 테이블에 저장되는 실제 값은 셀의 원본 값과 원하는 값 간의 차이입니다.  
   

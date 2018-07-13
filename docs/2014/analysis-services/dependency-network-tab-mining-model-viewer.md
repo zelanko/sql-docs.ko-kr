@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3f8b993490c349cab5a6f25c722f83719b844af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01b3535c7a6c2547bdef9a4f74956ff647f1b864
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279989"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>종속성 네트워크 탭(마이닝 모델 뷰어)
   **종속성 네트워크** 탭에서는 마이닝 모델에 포함된 모든 특성에 대한 그래픽 뷰를 제공하고 특성의 관계를 보여 줍니다.  

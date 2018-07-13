@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0dcb73d3d053edfe29059970c0d5c8ba0d0268
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 611a93a27e5f668c9b367eb35d5df9eb454743b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275439"
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 요소(ASSL)
   마이닝 구조 또는 마이닝 모델의 열에 대한 모델링 플래그를 포함합니다.  

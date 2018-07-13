@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195943"
 ---
 # <a name="ordinal-element-assl"></a>Ordinal 요소(ASSL)
   키 및 번역과 같은 컬렉션에서 바인딩할 서수를 나타냅니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36080939"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `AttributeBinding` 및 `CubeAttributeBinding` 요소가 들어는 [형식](type-element-binding-assl.md) 속성으로 설정 되어 *키* 또는 *번역* 의 컬렉션에 바인딩되는 특성에 바인딩될 수 데이터의 열 원본 뷰를 사용 합니다. `Ordinal` 요소의 값은 해당 컬렉션에서 `AttributeBinding` 또는 `CubeAttributeBinding`이 참조하는 열을 결정합니다.  
+ `AttributeBinding` 및 `CubeAttributeBinding` 요소가 합니다 [형식](type-element-binding-assl.md) 속성이 설정 되어 *키* 또는 *번역* 의 컬렉션에 바인딩되는 특성에 바인딩될 수 열을 데이터 원본 뷰. `Ordinal` 요소의 값은 해당 컬렉션에서 `AttributeBinding` 또는 `CubeAttributeBinding`이 참조하는 열을 결정합니다.  
   
- 부모에 해당 하는 요소 `Ordinal` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributeBinding> 및 <xref:Microsoft.AnalysisServices.CubeAttributeBinding>합니다.  
+ 부모에 해당 하는 요소가 `Ordinal` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.AttributeBinding> 및 <xref:Microsoft.AnalysisServices.CubeAttributeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

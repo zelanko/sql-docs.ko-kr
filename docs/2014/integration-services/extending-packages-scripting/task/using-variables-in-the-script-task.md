@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193523"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
   스크립트 태스크에서는 변수를 통해 패키지의 다른 개체와 데이터를 교환할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)를 참조하세요.  
@@ -51,10 +51,10 @@ ms.locfileid: "36082118"
   
  변수는 Foreach 루프 컨테이너와 스크립트 태스크 간의 이 통신을 가능하게 해 줍니다. **Foreach 루프 편집기**의 **변수 매핑** 페이지에서는 열거된 단일 항목에서 반환된 각 데이터 항목에 변수를 할당합니다. 예를 들어 Foreach File 열거자는 인덱스 0 위치의 파일 이름만 반환하므로 변수 매핑이 하나만 필요한 반면, 각 행의 여러 데이터 열을 반환하는 열거자의 경우에는 스크립트 태스크에서 사용할 각 열에 서로 다른 변수를 매핑해야 합니다.  
   
- 열거 된 항목을 변수에 매핑하면 매핑된 변수를를 추가 해야 합니다는 `ReadOnlyVariables` 속성에는 **스크립트** 의 페이지는 **스크립트 태스크 편집기** 에서도 사용할 수 있도록 하 여 스크립트입니다. 폴더의 이미지 파일을 처리하는 Foreach 루프 컨테이너 내에서의 스크립트 태스크에 대한 예제는 [스크립트 태스크를 사용한 이미지 작업](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)을 참조하세요.  
+ 열거 된 항목을 변수에 매핑한 후 매핑된 변수를를 추가 해야 합니다는 `ReadOnlyVariables` 속성에는 **스크립트** 페이지를 **스크립트 태스크 편집기** 를 사용할 수 있게 하려면 프로그램 스크립트입니다. 폴더의 이미지 파일을 처리하는 Foreach 루프 컨테이너 내에서의 스크립트 태스크에 대한 예제는 [스크립트 태스크를 사용한 이미지 작업](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)을 참조하세요.  
   
 ## <a name="variables-example"></a>변수 예  
- 다음 예에서는 스크립트 태스크에서 변수에 액세스하고 이를 사용하여 패키지 워크플로의 경로를 확인하는 방법을 보여 줍니다. 이 예에서는 라는 정수 변수를 만든 `CustomerCount` 및 `MaxRecordCount` 를 추가 하 고는 `ReadOnlyVariables` 컬렉션에는 **스크립트 태스크 편집기**합니다. `CustomerCount` 변수에는 가져올 고객 레코드 수가 들어 있습니다. 이 값이 `MaxRecordCount` 값보다 크면 스크립트 태스크에서 실패가 보고됩니다. `MaxRecordCount` 임계값 초과로 인해 실패할 경우 워크플로의 오류 경로에서 필요한 정리 작업을 구현할 수 있습니다.  
+ 다음 예에서는 스크립트 태스크에서 변수에 액세스하고 이를 사용하여 패키지 워크플로의 경로를 확인하는 방법을 보여 줍니다. 샘플 라는 정수 변수 만들었다고 가정 `CustomerCount` 및 `MaxRecordCount` 추가 하는 `ReadOnlyVariables` 컬렉션에는 **스크립트 태스크 편집기**. `CustomerCount` 변수에는 가져올 고객 레코드 수가 들어 있습니다. 이 값이 `MaxRecordCount` 값보다 크면 스크립트 태스크에서 실패가 보고됩니다. `MaxRecordCount` 임계값 초과로 인해 실패할 경우 워크플로의 오류 경로에서 필요한 정리 작업을 구현할 수 있습니다.  
   
  이 예제를 컴파일하려면 Microsoft.SqlServer.ScriptTask 어셈블리에 대한 참조를 추가해야 합니다.  
   
@@ -119,7 +119,7 @@ public class ScriptMain
   
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)   

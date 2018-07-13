@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event start times [SQL Server]
 - filters [SQL Server], traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f52726d45b27dfc9a4a7f86f4a0261219e26c7e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f72628b01609d055971bcf6446f5afcb0879776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204543"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>이벤트 시작 시간을 기준으로 이벤트 필터링(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 시작 시간을 기준으로 추적 이벤트를 필터링하는 방법에 대해 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36081451"
   
 5.  **이벤트 선택**탭에서 **StartTime** 열 머리글을 클릭합니다. 열 머리글을 마우스 오른쪽 단추로 클릭한 다음 **열 필터 편집** 을 클릭하여 **필터 편집** 대화 상자를 시작할 수도 있습니다.  
   
-6.  확장 **보다 큰** 또는 **미만**, 다음을 입력 하 고는 `datetime` 비교 연산자 아래 나타나는 필드의 값입니다.  
+6.  확장 **보다 큰** 또는 **미만**, 하 고 enter를 `datetime` 비교 연산자 아래 나타나는 필드의 값입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)  
