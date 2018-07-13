@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c60917a0b4107b52d6573e87932eab9bab63799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179650"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>새 역할 할당: 역할 할당 편집 페이지(보고서 관리자)
   새 역할 할당 또는 역할 할당 편집 페이지를 사용하여 보고서 서버 항목 및 작업에 대한 권한을 부여할 수 있습니다. 보고서 서버에 액세스해야 하는 각 사용자에게는 액세스의 수준을 정의하는 역할 할당이 필요합니다. 루트 노드 또는 특정 보고서, 모델, 폴더, 리소스 또는 공유 데이터 원본에 대해 역할 할당을 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보안은 항목에 적용하는 역할 할당을 통해 적용됩니다. 역할 할당에 따라 역할 정의가 그룹이나 사용자에 대응되며 각 역할 정의는 그룹이나 사용자가 특정 항목과 관련하여 수행할 수 있는 태스크를 식별합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36080372"
   
 ## <a name="options"></a>변수  
  **그룹 또는 사용자 이름**  
- 역할 할당을 만들 그룹 또는 사용자 계정의 이름을 입력합니다. 그룹 또는 사용자 이름은 올바른 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 입력 하십시오.: \<도메인 >\\< 계정\>합니다.  
+ 역할 할당을 만들 그룹 또는 사용자 계정의 이름을 입력합니다. 그룹 또는 사용자 이름은 올바른 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 입력 합니다. \<도메인 >\\< 계정\>합니다.  
   
 > [!NOTE]  
 >  이 입력란은 새 역할 할당 페이지에서만 사용할 수 있습니다.  
@@ -67,6 +67,6 @@ ms.locfileid: "36080372"
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [역할 할당](security/role-assignments.md)   
- [보고서 서버에 대 한 Grant 사용자 액세스 &#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)  
+ [사용자 액세스 권한 부여는 보고서 서버에 &#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

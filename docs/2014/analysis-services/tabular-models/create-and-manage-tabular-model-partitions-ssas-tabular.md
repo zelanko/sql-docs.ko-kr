@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cd7eb0621d95d11c29db213cfcff654da3f1240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fbe478866d3e333893c4a01c78df53590e7fe0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228273"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>테이블 형식 모델 파티션 만들기 및 관리(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포된 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하거나 스크립트를 사용하여 해당 파티션을 관리할 수 있습니다. 이 항목에서 제공하는 태스크에서는 배포된 모델에 대해 파티션을 만들고 관리하는 방법을 설명합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36078874"
 -   **파티션** 대화 상자의 **파티션** 목록에서 삭제할 파티션을 선택한 다음 **삭제** 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 파티션 &#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
- [테이블 형식 모델 파티션 처리 &#40;SSAS 테이블 형식&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
+ [테이블 형식 모델 파티션 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

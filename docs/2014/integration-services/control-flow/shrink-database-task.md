@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.shrinkdatabasetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8da3472bf3772654def991ede932f92a20283808
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd2ccb24c7b626131b80bc250246f1ab492c0e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265279"
 ---
 # <a name="shrink-database-task"></a>데이터베이스 축소 태스크
   데이터베이스 축소 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터와 로그 파일의 크기를 줄입니다.  

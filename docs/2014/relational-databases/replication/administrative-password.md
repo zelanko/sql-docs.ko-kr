@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.administrativepassword.f1
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce072951db7d254fd9b8a8e923c6646915b30aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f9a2406425ee0bf3673f4f3e21e01b977fcf39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212803"
 ---
 # <a name="administrative-password"></a>관리 암호
   이 마법사의 **배포자** 페이지에서 이 게시자에 대한 원격 배포자를 선택한 경우 복제에서 **distributor_admin** 로그인을 사용하여 게시자와 배포자 간에 설정한 연결에 대한 암호를 입력해야 합니다. 입력하는 암호는 배포 구성 마법사의 **배포자 암호** 페이지 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 지정한 암호와 일치해야 합니다.  

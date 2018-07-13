@@ -1,5 +1,5 @@
 ---
-title: 'SSIS 자습서: 패키지를 배포 하 | Microsoft Docs'
+title: 'SSIS 자습서: 패키지 배포 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f01cb3f126267a5ebef2cf0d4862440732bb1766
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213433"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 자습서: 패키지 배포
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.  
@@ -50,11 +50,11 @@ ms.locfileid: "36080024"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 패키지 및 기타 필요한 파일을 프로젝트에 추가하는 단계를 진행합니다. 프로젝트가 완료된 후에 배포 번들을 만들고 번들을 대상 컴퓨터에 복사한 다음 패키지를 대상 컴퓨터에 설치합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 이 자습서는 기본적인 파일 시스템 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 기본를 더 잘 이해 하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 이 자습서에서 사용 하 여 붙여 넣을 개념에 유용할 수 있습니다 것 먼저 다음을 완료 하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서: [SQL Server 가져오기 및 내보내기 마법사](import-export-data/start-the-sql-server-import-and-export-wizard.md) 및 [ SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)합니다.  
+ 이 자습서는 기본적인 파일 시스템 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 기본를 파악 하는 데 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 이 자습서에서 사용 되는 개념을 볼 수 있습니다이 먼저 다음을 완료 하는 데 유용 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서: [SQL Server 가져오기 및 내보내기 마법사를 실행](import-export-data/start-the-sql-server-import-and-export-wizard.md) 하고[ SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)합니다.  
   
  **원본 컴퓨터.** 배포 번들을 만들려는 컴퓨터에는 다음 구성 요소가 설치되어 있어야 합니다.  
   
--   AdventureWorks 데이터베이스가 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 다운로드할 수 있습니다 [CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)합니다.  
+-   AdventureWorks 데이터베이스가 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 샘플 데이터베이스를 다운로드할 수 있습니다 [CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)합니다.  
   
 -   AdventureWorks에서 테이블을 생성 및 삭제할 수 있는 권한  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36080024"
  [3단원: 패키지 설치](../integration-services/lesson-3-install-ssis-package.md)  
  이 단원에서는 배포 번들을 대상 컴퓨터에 복사하고 패키지를 설치한 다음 패키지를 실행합니다.  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

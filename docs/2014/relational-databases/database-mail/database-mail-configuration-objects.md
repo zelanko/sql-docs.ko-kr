@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
 - sql12.swb.sqlimail.addaccounttoprofile.f1
@@ -33,15 +33,15 @@ helpviewer_keywords:
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b902597cc2c7920d0eab97f1f6064ba79221333c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b8e6b3e16590eee0eafc805fbc719cc436ca5352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217403"
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
   데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  

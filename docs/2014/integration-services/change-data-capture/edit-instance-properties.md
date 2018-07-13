@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3030df12bac790e21799ab7653e5db06c8ed539d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f10918be17e5e1e4559df0bf0681137fe8f4f8e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322723"
 ---
 # <a name="edit-instance-properties"></a>인스턴스 속성 편집
   속성 편집기를 사용하여 초기 구성을 만든 후 CDC 인스턴스를 변경할 수 있습니다. 속성 편집기에서 다음 작업을 수행할 수 있습니다.  

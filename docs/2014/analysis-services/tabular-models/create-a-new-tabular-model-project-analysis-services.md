@@ -1,5 +1,5 @@
 ---
-title: 모델 프로젝트 새로 (SSAS 테이블 형식)를 만들기 | Microsoft Docs
+title: 새로 모델 만들기 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d889e25351e3a944409e62a682072a8845a2c13f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 402d53f58e1d23667e181849dc5e23276bb663b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178460"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>테이블 형식 모델 프로젝트 새로 만들기(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새로운 빈 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다. 새 모델 프로젝트를 만든 후 데이터 원본에서 데이터를 가져와서 모델 프로젝트 제작을 시작할 수 있습니다.  
@@ -32,10 +32,10 @@ ms.locfileid: "36081414"
   
 3.  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
   
- 새 프로젝트를 만든 후 프로젝트 및 모델 속성을 설정하는 것이 중요합니다. 자세한 내용은 참조 [프로젝트 속성 &#40;SSAS 테이블 형식&#41; ](properties-ssas-tabular.md) 및 [모델 속성 &#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)합니다.  
+ 새 프로젝트를 만든 후 프로젝트 및 모델 속성을 설정하는 것이 중요합니다. 자세한 내용은 [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41; ](properties-ssas-tabular.md) 하 고 [모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>관련 항목  
- [프로젝트 속성 &#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
- [모델 속성 &#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)  
+ [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
+ [모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)  
   
   

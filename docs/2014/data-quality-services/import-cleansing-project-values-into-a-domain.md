@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd5353f86fd042c556d0c7287f176514e262903f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86290de5911ed16aa0c662ccdd0e93057bedc52b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273189"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36079123"
 10. **마침**을 클릭합니다.  
   
     > [!NOTE]  
-    >  작업의 값에 대 한 자세한 내용은 **도메인 값** 탭, 참조 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)합니다.  
+    >  값을 사용 하는 방법은 합니다 **도메인 값** 탭을 참조 하십시오 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인에 프로젝트 값을 가져온 후  
  정리 프로세스 도중 수집된 데이터 품질 기술 자료를 도메인으로 가져온 후 도메인 및 값에 대해 다른 도메인 관리 태스크를 수행할 수 있습니다. 자세한 내용은 [도메인 관리](../../2014/data-quality-services/managing-a-domain.md)를 참조하세요.  

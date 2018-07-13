@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243003"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
   제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 `System.Drawing` 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36078840"
   
 1.  `CurrentImageFile`이라는 문자열 변수를 만들고 해당 값을 기존 이미지 파일의 경로 및 파일 이름으로 설정합니다.  
   
-2.  에 **스크립트** 의 페이지는 **스크립트 태스크 편집기**, 추가 된 `CurrentImageFile` 변수를 `ReadOnlyVariables` 속성입니다.  
+2.  에 **스크립트** 페이지를 **스크립트 태스크 편집기**, 추가 합니다 `CurrentImageFile` 변수를 `ReadOnlyVariables` 속성.  
   
 3.  스크립트 프로젝트에서 `System.Drawing` 네임스페이스에 대한 참조를 설정합니다.  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  또한 `MaxThumbSize`라는 정수 변수를 만들고 100과 같이 값을 픽셀 단위로 할당합니다.  
   
-3.  에 **스크립트** 의 페이지는 **스크립트 태스크 편집기**, 두 변수를 추가 `ReadOnlyVariables` 속성입니다.  
+3.  에 **스크립트** 페이지를 **스크립트 태스크 편집기**, 두 변수를 추가 합니다 `ReadOnlyVariables` 속성입니다.  
   
 4.  스크립트 프로젝트에서 `System.Drawing` 네임스페이스에 대한 참조를 설정합니다.  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

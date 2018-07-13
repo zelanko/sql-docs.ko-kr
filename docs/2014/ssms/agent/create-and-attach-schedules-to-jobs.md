@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
 - scheduling jobs [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77f1f09ddb3d978d1308d4c7ec70bf5d8d177812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f85e651f67b6553f597fab920bde7cc05ca37167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192873"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 일정 예약이란 사용자 개입 없이 작업을 실행할 조건을 정의하는 것입니다. 작업에 대한 새로운 일정을 만들거나 기존 일정을 작업에 연결하여 작업이 자동으로 실행되도록 예약할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "36080355"
   
  CPU 유휴 시간 동안 작업이 실행되도록 정의하기 전에 정상적인 처리 동안 CPU의 로드를 결정하십시오. 이렇게 하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 성능 모니터를 사용하여 서버 트래픽을 모니터링하고 통계 자료를 수집합니다. 수집한 정보를 사용하여 CPU 유휴 시간 백분율과 지속 시간을 설정할 수 있습니다.  
   
- CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지되어야 하는 백분율로 정의하십시오. 그런 다음 시간을 설정하십시오. CPU 사용률이 지정한 시간에 대해 지정한 백분율 미만이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 CPU 유휴 시간 일정이 예정된 모든 작업을 시작합니다. 사용 하 여 대 한 자세한 내용은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] CPU 사용량을 모니터링 하는 성능 모니터 참조 또는 [CPU 사용량 모니터링](../../relational-databases/performance-monitor/monitor-cpu-usage.md)합니다.  
+ CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지되어야 하는 백분율로 정의하십시오. 그런 다음 시간을 설정하십시오. CPU 사용률이 지정한 시간에 대해 지정한 백분율 미만이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 CPU 유휴 시간 일정이 예정된 모든 작업을 시작합니다. 사용 하 여 대 한 자세한 내용은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 하거나 CPU 사용량을 모니터링 하려면 성능 모니터를 참조 하십시오 [CPU 사용량 모니터링](../../relational-databases/performance-monitor/monitor-cpu-usage.md)합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -96,6 +96,6 @@ ms.locfileid: "36080355"
   
 ## <a name="see-also"></a>관련 항목  
  [sp_help_jobschedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo.sysjobschedules &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [dbo.sysjobschedules &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

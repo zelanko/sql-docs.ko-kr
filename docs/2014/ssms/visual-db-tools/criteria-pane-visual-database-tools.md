@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
 - View Designer, Criteria pane
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b690cc4fd041673e0d46ecfc4afe123063305c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177110"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
   조건 창에서 스프레드시트 모양의 표 형태에 선택한 항목을 입력하여 표시할 데이터 열, 결과 정렬 방법, 선택할 행 등의 쿼리 옵션을 지정할 수 있습니다. 조건 창에서 지정할 수 있는 내용은 다음과 같습니다.  
@@ -74,9 +74,9 @@ ms.locfileid: "36081240"
 |새 값|UPDATE, INSERT INTO|관련 열에 넣을 값을 지정합니다. 리터럴 값 또는 식을 입력합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [다이어그램 창을 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [값을 검색 하는 입력에 대 한 규칙 &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [다이어그램 창 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [검색 값 입력 규칙 &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [결과 창 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [SQL 창&#40;Visual Database Tools&#41;](sql-pane-visual-database-tools.md)  

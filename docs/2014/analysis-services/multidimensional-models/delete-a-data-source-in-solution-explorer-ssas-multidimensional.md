@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.deleteobjects.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - removing data sources
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dbf7b309db50ec291ccc956c2dc75522786616e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7be5e8a95a340794e2754f272a223c31a27e8a58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169684"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>솔루션 탐색기에서 데이터 원본 삭제(SSAS 다차원)
   데이터 원본 개체를 삭제하여 Analysis Services 다차원 모델 프로젝트에서 해당 개체를 영구적으로 제거할 수 있습니다.  

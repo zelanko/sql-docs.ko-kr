@@ -18,27 +18,27 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185260"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 행 집합
   서버 또는 웹 서비스에서 사용할 수 있는 XMLA(XML for Analysis) 공급자 데이터 원본의 목록을 반환합니다. 게시된 데이터 원본은 응용 프로그램 웹 서버의 URL에서 반환됩니다. 이 목록의 데이터 원본 중 하나에 클라이언트를 연결할 수 있습니다.  
   
- 호출 하는 경우는 [Discover](../../xmla/xml-elements-methods-discover.md) 사용 하 여 메서드는 `DISCOVER_DATASOURCES` 열거 값은 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) 요소는 `Discover` 메서드가 반환 되는 `DISCOVER_DATASOURCES` 행 집합.  
+ 호출 하는 경우는 [검색](../../xmla/xml-elements-methods-discover.md) 메서드를 `DISCOVER_DATASOURCES` 열거 값을 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) 요소를 `Discover` 메서드가 반환 되는 `DISCOVER_DATASOURCES` 행 집합입니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- 설정 하 여 데이터 소스를 선택 하는 클라이언트는 `DataSourceInfo` 속성에는 [속성](../../xmla/xml-elements-properties/properties-element-xmla.md) 요소와 함께 전송 되는 [명령](../../xmla/xml-elements-properties/command-element-xmla.md) 요소는 [Execute](../../xmla/xml-elements-methods-execute.md) 메서드입니다. 클라이언트는 서버로 보낼 `DataSourceInfo` 속성의 내용을 구성하지 않아야 합니다. 대신 클라이언트는 `Discover` 메서드를 사용하여 공급자에서 지원되는 데이터 원본을 찾아야 합니다. 그런 다음 클라이언트는 `DataSourceInfo` 행 집합에서 가져온 `DISCOVER_DATASOURCES` 속성에 대해 같은 값을 다시 보냅니다.  
+ 클라이언트 설정 하 여 데이터 원본을 선택 합니다 `DataSourceInfo` 속성에는 [속성](../../xmla/xml-elements-properties/properties-element-xmla.md) 요소와 함께 전송 되는 [명령](../../xmla/xml-elements-properties/command-element-xmla.md) 요소를 [Execute](../../xmla/xml-elements-methods-execute.md) 메서드입니다. 클라이언트는 서버로 보낼 `DataSourceInfo` 속성의 내용을 구성하지 않아야 합니다. 대신 클라이언트는 `Discover` 메서드를 사용하여 공급자에서 지원되는 데이터 원본을 찾아야 합니다. 그런 다음 클라이언트는 `DataSourceInfo` 행 집합에서 가져온 `DISCOVER_DATASOURCES` 속성에 대해 같은 값을 다시 보냅니다.  
   
- `DISCOVER_DATASOURCES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_DATASOURCES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "36080529"
 |`URL`|`DBTYPE_WSTR`|예|해당 데이터 원본에 대해 XMLA(XML for Analysis) 메서드를 호출할 위치를 보여 주는 고유 경로입니다.<br /><br /> `NULL`을 반환할 수 있습니다.|  
 |`DataSourceInfo`|`DBTYPE_WSTR`||데이터 원본에 연결하는 데 필요한 추가 정보가 들어 있는 문자열입니다.<br /><br /> `NULL`을 반환할 수 있습니다.|  
 |`ProviderName`|`DBTYPE_WSTR`|예|데이터 원본의 공급자 이름입니다.<br /><br /> 예: `"MSOLAP"`<br /><br /> `NULL`을 반환할 수 있습니다.|  
-|`ProviderType`|`DBTYPE_WSTR`|예|공급자에서 지원되는 데이터 형식입니다. 이 배열에는 다음 형식 중 하나 이상이 포함될 수 있습니다.<br /><br /> `MDP`: 다차원 데이터 공급자입니다.<br /><br /> `TDP`: 표 형식 데이터 공급자입니다.<br /><br /> `DMP`: 데이터 마이닝 공급자 (구현 하는 OLE db for Data Mining 사양).|  
-|`AuthenticationMode`|`DBTYPE_WSTR`|예|데이터 원본에서 사용되는 보안 모드 형식의 사양입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> `Unauthenticated`: 없는 사용자 ID 또는 암호가 전송 되는 합니다.<br /><br /> `Authenticated`: 사용자 ID와 암호가 데이터 원본에 연결 하는 데 필요한 정보에 포함 되어야 합니다.<br /><br /> `Integrated`: 데이터 원본에서 제공 하는 통합 보안과 같은 권한 부여를 확인 하려면 기본 보안 사용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스 (IIS).|  
+|`ProviderType`|`DBTYPE_WSTR`|예|공급자에서 지원되는 데이터 형식입니다. 이 배열에는 다음 형식 중 하나 이상이 포함될 수 있습니다.<br /><br /> `MDP`: 다차원 데이터 공급자입니다.<br /><br /> `TDP`: 테이블 형식의 데이터 공급자입니다.<br /><br /> `DMP`: 데이터 마이닝 공급자 (구현 된 OLE db for Data Mining 사양).|  
+|`AuthenticationMode`|`DBTYPE_WSTR`|예|데이터 원본에서 사용되는 보안 모드 형식의 사양입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> `Unauthenticated`없습니다 사용자 ID 또는 암호를 전송 해야 합니다.<br /><br /> `Authenticated`: 사용자 ID와 암호가 데이터 원본에 연결 하는 데 필요한 정보에 포함 되어야 합니다.<br /><br /> `Integrated`: 데이터 원본에서 제공 하는 통합 보안과 같은 권한 부여를 확인 하려면 기본 보안을 사용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스 (IIS).|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManufacturingExtraMonthQuarter element
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d4bc2e36bb67e64aabb5bfdaee67ea945f4bb077
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e57e3e7dbaa07ce86eaa5c0b29749fdc6c974cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243633"
 ---
 # <a name="manufacturingextramonthquarter-element-assl"></a>ManufacturingExtraMonthQuarter 요소(ASSL)
   에 대 한 추가 월이 할당 된 제조 기간의 월을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36079134"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ManufacturingExtraMonthQuarter` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
+ 부모에 해당 하는 요소가 `ManufacturingExtraMonthQuarter` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

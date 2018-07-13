@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7d32195aa304c509001c5ce6f057ae0b6dfb09e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3e50f752e1a9c7f9f574b31779d543296a7fbaec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219813"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
   데이터베이스 미러링 세션을 설정하려면 각 서버 인스턴스에 대한 서버 네트워크 주소가 필요합니다. 서버 인스턴스의 서버 네트워크 주소는 시스템 주소와 인스턴스가 수신하는 포트 번호를 제공하여 인스턴스를 명확하게 식별해야 합니다.  

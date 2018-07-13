@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192993"
 ---
 # <a name="search-page-report-manager"></a>검색 페이지(보고서 관리자)
   검색 결과 페이지를 사용하여 보고서, 링크된 보고서, 보고서 모델, 공유 데이터 원본, 폴더 또는 리소스에 대해 지정한 검색 작업의 결과를 볼 수 있습니다. 검색 결과는 사전순으로 나열됩니다. 유형, 이름 또는 설명을 기준으로 정렬할 수 있습니다.  

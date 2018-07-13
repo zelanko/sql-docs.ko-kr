@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f673ebfb9034511dc6023cc34d9c3670237d35d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5859430b9a928b79697e53873ef549173963a90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268519"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 응용 프로그램, 보고서 관리자 또는 브라우저에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
@@ -37,23 +37,23 @@ ms.locfileid: "36079226"
 3.  내보낸 보고서 인쇄물에는 대부분 사용자가 컴퓨터 모니터에서 볼 때 보고서에 표시되는 항목이 모두 포함됩니다. 보고서 디자인 화면의 공백이 유지됩니다. 빈 페이지를 가로로 추가하거나 제거하려면 보고서 페이지 너비를 변경합니다.  
   
 > [!NOTE]  
->  브라우저의 인쇄 명령을 사용할 경우 HTML 보고서 인쇄물에는 첫 번째 페이지의 내용만 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 클라이언트 인쇄 기능을 사용하여 HTML 보고서를 인쇄하면 보다 나은 결과를 얻을 수 있습니다. 자세한 내용은 참조 [인쇄 컨트롤을 사용 하 여 브라우저에서 보고서를 인쇄 &#40;보고서 작성기 및 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)합니다.  
+>  브라우저의 인쇄 명령을 사용할 경우 HTML 보고서 인쇄물에는 첫 번째 페이지의 내용만 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 클라이언트 인쇄 기능을 사용하여 HTML 보고서를 인쇄하면 보다 나은 결과를 얻을 수 있습니다. 자세한 내용은 [인쇄 컨트롤을 사용 하 여 브라우저에서 보고서 인쇄 &#40;보고서 작성기 및 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [인쇄 컨트롤을 사용 하 여 브라우저에서 보고서를 인쇄 &#40;보고서 작성기 및 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [인쇄 컨트롤을 사용 하 여 브라우저에서 보고서 인쇄 &#40;보고서 작성기 및 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  클라이언트 쪽 인쇄 기능을 사용하여 웹 브라우저나 보고서 관리자에서 보고서를 인쇄하는 방법을 설명합니다.  
   
- [다른 응용 프로그램에서 보고서를 인쇄 &#40;보고서 작성기 및 SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [다른 응용 프로그램에서 보고서를 인쇄 합니다. &#40;보고서 작성기 및 SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  다른 응용 프로그램으로 내보낸 보고서를 인쇄하는 방법을 설명합니다.  
   
  [보고서 인쇄 &#40;보고서 작성기 및 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
  보고서를 인쇄하는 방법, 페이지 여백을 조절하는 방법, 하드 페이지 나누기 렌더러(PDF, 이미지 또는 인쇄)로 렌더링할 보고서의 용지 크기를 지정하는 방법에 대한 단계별 지침을 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [이미지 &#40;보고서 작성기 및 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

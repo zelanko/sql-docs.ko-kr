@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress events [Analysis Services]
 - Progress Reports event category
 - event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bcfa530f87d7a8caaee6814c2e2e2282e2783ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7e1925c6479c2530283700941e9382ee932a8e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205723"
 ---
 # <a name="progress-reports-event-category"></a>Progress Reports 이벤트 범주
   Progress Reports 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  

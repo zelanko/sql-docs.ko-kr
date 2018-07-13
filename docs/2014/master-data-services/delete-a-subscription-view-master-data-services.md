@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7cc723b2a3af365e03bfd87626fdc834302b9cc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4cb94faf5f2337097d313b22c7a11c47f618f4e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190543"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>구독 뷰 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 구독 뷰가 더 이상 필요하지 않으면 삭제할 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 구독 뷰를 삭제하면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 해당 뷰가 제거됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36080211"
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [구독 뷰를 만든 &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
+ [구독 뷰를 만들어 &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
  [데이터 내보내기 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

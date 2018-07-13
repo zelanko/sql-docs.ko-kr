@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199553"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
-  데이터베이스 복사 마법사를 사용하면 서버를 중단하는 일 없이 데이터베이스 및 그 개체를 쉽게 다른 서버로 이동하거나 복사할 수 있습니다. 데이터베이스를 이전 업그레이드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다.  
+  데이터베이스 복사 마법사를 사용하면 서버를 중단하는 일 없이 데이터베이스 및 그 개체를 쉽게 다른 서버로 이동하거나 복사할 수 있습니다. 이전 데이터베이스를 업그레이드할 수도 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]입니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다.  
   
 -   원본 서버 및 대상 서버 선택  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36080001"
   
      [복사, 이동 또는 데이터베이스 업그레이드](#Copy_Move)  
   
--   **후속 작업 업그레이드 후:**  
+-   **업그레이드 후를 수행 합니다.**  
   
      [SQL Server 데이터베이스를 업그레이드 한 후](#FollowUp)  
   
@@ -111,21 +111,21 @@ ms.locfileid: "36080001"
   
 ##  <a name="Copy_Move"></a> 복사, 이동 또는 데이터베이스 업그레이드  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 확장 **데이터베이스**데이터베이스를 마우스 오른쪽 단추로 가리킨 **작업**, 클릭 하 고 **데이터베이스 복사**합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서를 확장 하 고 **데이터베이스**데이터베이스를 마우스 오른쪽 단추로 클릭, 가리킨 **작업**를 클릭 하 고 **데이터베이스 복사**합니다.  
   
 2.  **원본 서버 선택** 페이지에서 이동 또는 복사하려는 데이터베이스가 있는 서버를 지정하고 로그인 정보를 입력할 수 있습니다. 인증 방법을 선택하고 로그인 정보를 입력한 후 **다음** 을 클릭하여 원본 서버에 연결합니다. 이 연결은 해당 세션 동안 열린 상태로 유지됩니다.  
   
      **원본 서버**  
-     이동 하거나 복사 하려는 데이터베이스가 있는 서버의 이름을 선택 하거나 찾아보기 (**...** )를 원하는 서버를 찾습니다. 서버는 최소한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이어야 합니다.  
+     이동 또는 복사 하려는 데이터베이스에 있는 서버의 이름을 선택 하거나 찾아보기 (**...** )를 원하는 서버를 찾습니다. 서버는 최소한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이어야 합니다.  
   
      **Windows 인증 사용**  
      사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정을 통해 연결하도록 합니다.  
   
      **SQL Server 인증 사용**  
-     사용자가 제공 하 여 연결 하도록 허용 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호.  
+     사용자를 제공 하 여 연결 하도록 허용 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호입니다.  
   
      **사용자 이름**  
-     연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 사용 하 여 연결 하도록 선택한 경우 사용할 수만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
+     연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 사용 하 여 연결 하도록 선택한 경우 사용할 수 있습니다만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
   
      **암호**  
      로그인 암호를 입력합니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "36080001"
 3.  **대상 서버 선택** 페이지에서 데이터베이스를 이동 또는 복사할 서버를 지정할 수 있습니다. 원본 서버와 대상 서버를 동일한 서버 인스턴스로 설정하면 데이터베이스 복사본이 생성됩니다. 이 경우 이 마법사에서 나중에 데이터베이스의 이름을 바꿔야 합니다. 원본 데이터베이스 이름은 대상 서버에 있는 이름과 충돌하지 않는 경우에만 복사되거나 이동된 데이터베이스에 사용할 수 있습니다. 이름 충돌이 있을 때는 먼저 대상 서버에서 수동으로 이 문제를 해결해야 원본 데이터베이스 이름을 대상 서버에서 사용할 수 있습니다.  
   
      **대상 서버**  
-     데이터베이스 또는 데이터베이스를 이동할 복사 또는 찾아보기 서버의 이름을 선택 (**...** )를 대상 서버를 찾습니다.  
+     데이터베이스를 이동 또는 복사 또는 서버 찾아보기의 이름을 선택 (**...** )를 대상 서버를 찾습니다.  
   
     > [!NOTE]  
     >  클러스터형 서버인 대상을 사용할 수 있습니다. 그러나 데이터베이스 복사 마법사를 사용하면 클러스터형 대상 서버에서 공유 드라이브만 선택할 수 있습니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "36080001"
      사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정을 통해 연결하도록 합니다.  
   
      **SQL Server 인증 사용**  
-     사용자가 제공 하 여 연결 하도록 허용 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호.  
+     사용자를 제공 하 여 연결 하도록 허용 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호입니다.  
   
      **사용자 이름**  
      연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 선택한 경우에 사용할 수만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
@@ -201,13 +201,13 @@ ms.locfileid: "36080001"
      이동 또는 복사 작업에 로그인을 포함합니다. 기본적으로 선택되어 있습니다.  
   
      **master 데이터베이스의 저장 프로시저**  
-     저장된 프로시저를 포함 된 **마스터** 데이터베이스를 이동 또는 복사 작업입니다.  
+     저장된 프로시저를 포함 합니다 **마스터** 데이터베이스를 이동 또는 복사 작업입니다.  
   
     > [!NOTE]  
     >  확장 저장 프로시저 및 이와 관련된 DLL은 자동으로 복사할 수 없습니다.  
   
      **SQL Server 에이전트 작업**  
-     작업에서 포함 된 **msdb** 데이터베이스를 이동 또는 복사 작업입니다.  
+     작업을 포함 합니다 **msdb** 데이터베이스를 이동 또는 복사 작업입니다.  
   
      **사용자 정의 오류 메시지**  
      이동 또는 복사 작업에 사용자 정의 오류 메시지를 포함합니다.  
@@ -237,15 +237,15 @@ ms.locfileid: "36080001"
      **원본 서버의 파일 공유**  
      원본 데이터베이스 파일의 위치를 파일 공유 경로로 지정합니다.  
   
-     예: "\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110 합니다. MSSQLSERVER\MSSQL\Data  
+     예를 들어: "\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110 합니다. MSSQLSERVER\MSSQL\Data  
   
-9. 데이터베이스 복사 마법사를 만듭니다는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 데이터베이스를 전송할 패키지는 **패키지 구성** 페이지에서 해당 하는 경우에 패키지를 사용자 지정 합니다.  
+9. 데이터베이스 복사 마법사를 만듭니다는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 데이터베이스를 전송 하려면 패키지를 **패키지 구성** 페이지에서 해당 하는 경우에 패키지를 사용자 지정 합니다.  
   
      **패키지 위치**  
-     위치를 표시 된 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 작성 됩니다.  
+     위치를 표시 합니다 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 기록 됩니다.  
   
      **패키지 이름**  
-     에 대 한 이름을 입력는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 합니다.  
+     에 대 한 이름을 입력 합니다 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 있습니다.  
   
      **로깅 옵션**  
      로깅 정보를 Windows 이벤트 로그에 저장할지 또는 텍스트 파일에 저장할지 여부를 선택합니다.  
@@ -253,21 +253,21 @@ ms.locfileid: "36080001"
      **오류 로그 파일 경로**  
      로그 파일의 위치에 대한 경로를 제공합니다. 이 옵션은 텍스트 파일 로깅 옵션을 선택한 경우에만 사용할 수 있습니다.  
   
-10. **패키지 예약** 페이지에서 이동 또는 복사 작업을 시작할 시기를 지정합니다. 지정 해야 하는 경우가 아닌 시스템 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정에 액세스 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 패키지 실행 하위 시스템입니다.  
+10. **패키지 예약** 페이지에서 이동 또는 복사 작업을 시작할 시기를 지정합니다. 지정 해야 하는 경우가 아닌 시스템 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정에 액세스할 수 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 패키지 실행 하위 시스템입니다.  
   
      **Run immediately**  
-     클릭 한 후 이동 또는 복사 작업을 시작 **다음**합니다.  
+     클릭 한 후 이동 또는 복사 작업을 시작할 **다음**합니다.  
   
      **일정**  
      나중에 이동 또는 복사 작업을 시작합니다. 현재 설정된 일정은 설명란에 표시됩니다. 일정을 변경하려면 **변경**을 클릭합니다.  
   
      **변경**  
-     열기는 **새 작업 일정** 대화 상자.  
+     엽니다는 **새 작업 일정** 대화 상자.  
   
      **Integration Services 프록시 계정**  
      사용 가능한 프록시 계정을 선택합니다. 전송을 예약하려면 **SQL Server Integration Services 패키지 실행** 하위 시스템에 대한 사용 권한으로 구성되어 사용자가 사용할 수 있는 프록시 계정이 하나 이상 있어야 합니다.  
   
-     에 대 한 프록시 계정을 만들려면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 확장 하 고, 개체 탐색기에서 실행 패키지 **SQL Server 에이전트**를 확장 하 고 **프록시**를 마우스 오른쪽 단추로 클릭 **SSIS 패키지 실행**, 클릭 하 고 **새 프록시**합니다.  
+     에 대 한 프록시 계정을 만들려면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 실행 개체 탐색기에서 패키지를 확장 하 고 **SQL Server 에이전트**를 확장 하 고 **프록시**를 마우스 오른쪽 단추로 클릭 **SSIS 패키지 실행**를 클릭 하 고 **새 프록시**합니다.  
   
      **sysadmin** 고정 서버 역할의 멤버는 필요한 권한이 있는 **SQL Server 에이전트 서비스 계정**을 선택할 수 있습니다.  
   

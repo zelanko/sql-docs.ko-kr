@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235593"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>주제 영역 데이터베이스 스키마 옵션(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **주제 영역 데이터베이스 스키마 옵션** 페이지를 사용하여 스키마 생성 방법을 제어하고 데이터 유지 방법을 정의할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36079354"
  **인덱스 만들기**  
  생성된 스키마의 외래 키 열에 인덱스를 만듭니다.  
   
- **참조 무결성을 적용**  
+ **참조 무결성 적용**  
  생성된 스키마 내에 참조 무결성을 적용합니다. 이 옵션을 선택하지 않으면 관계가 생성되지만 적용되지는 않습니다.  
   
  **다시 생성 시 데이터 유지**  

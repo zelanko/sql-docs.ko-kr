@@ -1,5 +1,5 @@
 ---
-title: Reporting Services to SharePoint Groups and Permissions의 역할 및 태스크와 비교 | Microsoft Docs
+title: Reporting Services SharePoint 그룹 및 사용 권한에서 역할 및 태스크와 비교 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -21,13 +21,13 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 181985b908c1ab5f2556d8fb58b7d54efa6bcb27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e24a3aaa994a5e186634221fc4b64f396a8a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204902"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드의 역할 및 태스크 기반 권한 부여 기능과 SharePoint 제품의 보안 기능을 비교해서 보여줍니다. 이 항목에서는 역할, 태스크, SharePoint 그룹, 사용 권한 수준 및 사용 권한의 용어와 특징을 비교합니다.  
@@ -70,8 +70,8 @@ ms.locfileid: "36080142"
 |**내용 관리자**<br /><br /> 보안 설정 권한을 포함하여 모든 항목 및 항목 수준 작업에 대한 모든 권한이 있습니다.|**소유자** 그룹을 사용하여 SharePoint 사이트의 보고서 서버 항목을 관리하는 모든 권한을 부여할 수 있습니다. **소유자** 그룹에는 그룹 멤버가 사이트 콘텐츠, 페이지 또는 기능을 변경할 수 있는 "모든 권한" 사용 권한이 있습니다. 모든 권한은 사이트 관리자에게만 부여해야 합니다.|  
 |**내 보고서**|해당하는 그룹이 없습니다. SharePoint 모드로 실행되는 보고서 서버에서는**내 보고서** 가 지원되지 않습니다. 동등한 기능을 사용하려면 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 의 내 사이트 기능을 사용할 수 있습니다.|  
 |**게시자**<br /><br /> 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 추가, 업데이트 및 삭제합니다.|**멤버** 그룹을 사용하여 SharePoint 사이트의 항목을 추가 및 편집하고 종속 항목에 대한 참조를 업데이트하는 권한을 부여할 수 있습니다. **멤버** 그룹에는 그룹 멤버가 페이지를 보고, 항목을 추가 및 업데이트하고, 승인을 받기 위해 변경 내용을 제출할 수 있는 참가 수준의 사용 권한이 있습니다.|  
-|**보고서 작성기**<br /><br /> 보고서를 보고, 개별 구독을 자체 관리하고, 보고서 작성기에서 보고서를 엽니다.|보고서 작성기 보고서 정의에 해당하는 미리 정의된 기본 사용 권한 수준이나 SharePoint 그룹이 없습니다. 기본적으로 **멤버** 그룹이나 **소유자** 그룹에 속하는 사용자에게는 보고서 작성기 사용 권한이 있습니다. 더 많은 사용자가 보고서 작성기를 사용할 수 있게 하려면 보고서 작성기 역할이 제공하는 것과 유사한 사용 권한 수준을 제공하는 사용자 지정 보안 설정을 만들어야 합니다. 자세한 내용은 참조 [SharePoint 사이트에서 보고서 서버 항목에 대 한 사용 권한 설정 &#40;SharePoint 통합 모드의 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)합니다.|  
-|-|**뷰어** 그룹을 사용하면 렌더링된 보고서를 볼 수 있는 권한을 부여할 수 있습니다. **뷰어** 그룹은 보고서 항목의 내용을 다운로드하거나 볼 수 없습니다.<br /><br /> **참고:** SQL Server 2012 부터는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], **뷰어** 그룹에 구독을 만들 수 있는 권한이 없습니다.|  
+|**보고서 작성기**<br /><br /> 보고서를 보고, 개별 구독을 자체 관리하고, 보고서 작성기에서 보고서를 엽니다.|보고서 작성기 보고서 정의에 해당하는 미리 정의된 기본 사용 권한 수준이나 SharePoint 그룹이 없습니다. 기본적으로 **멤버** 그룹이나 **소유자** 그룹에 속하는 사용자에게는 보고서 작성기 사용 권한이 있습니다. 더 많은 사용자가 보고서 작성기를 사용할 수 있게 하려면 보고서 작성기 역할이 제공하는 것과 유사한 사용 권한 수준을 제공하는 사용자 지정 보안 설정을 만들어야 합니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대 한 사용 권한 설정 &#40;Reporting Services SharePoint 통합 모드의&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)합니다.|  
+|-|**뷰어** 그룹을 사용하면 렌더링된 보고서를 볼 수 있는 권한을 부여할 수 있습니다. **뷰어** 그룹은 보고서 항목의 내용을 다운로드하거나 볼 수 없습니다.<br /><br /> **참고:** SQL Server 2012 부터는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]서 **뷰어** 그룹에 구독을 만들 수 있는 권한이 없습니다.|  
 |**시스템 사용자** 및 **시스템 관리자**|이러한 역할은 SharePoint 모드로 실행되는 보고서 서버에는 필요하지 않습니다. **시스템 사용자** 와 **시스템 관리자** 는 SharePoint 팜 또는 웹 응용 프로그램 수준의 사용 권한에 해당합니다. 보고서 서버는 해당 수준의 권한 부여에 필요한 기능을 제공하지 않습니다.|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> 기본 모드 태스크 및 SharePoint 권한 비교  
@@ -107,9 +107,9 @@ ms.locfileid: "36080142"
 |공유 일정 보기|시스템|항목을 엽니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 사이트에 보고서 서버 항목에 대 한 사용 권한을 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 부여](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [역할 정의](security/role-definitions.md)   
  [미리 정의된 역할](security/role-definitions-predefined-roles.md)  
   

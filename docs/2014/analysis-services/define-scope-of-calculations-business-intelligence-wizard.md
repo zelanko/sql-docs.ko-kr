@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5329be878ed1353acb4fbed5f4fc6a21367065c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a0d6af0d7f643ae312015479a31cae4b04f1d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198223"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>계산 범위 정의(비즈니스 인텔리전스 마법사)
   **계산 범위 정의** 페이지를 사용하여 새 시간 계산을 개별 측정값과 연결할 수 있습니다.  

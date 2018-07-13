@@ -1,5 +1,5 @@
 ---
-title: 보고 통화 지정 (비즈니스 인텔리전스 마법사) | Microsoft Docs
+title: 지정한 보고 통화 지정 (비즈니스 인텔리전스 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa25c4dcac782d67675888679efd1700097b4e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cda6eecd004b4e437552f3db07b7487c7529594
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243533"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>보고 통화 지정(비즈니스 인텔리전스 마법사)
   **보고 통화 지정** 페이지를 사용하여 **변환 유형 선택** 페이지에서 지정한 다 대 다 또는 일 대 다 변환 유형에 적용되는 통화 변환 기능에 대해 보고 통화를 정의할 수 있습니다. 보고 통화는 **측정값 선택** 페이지에서 선택한 측정값의 값이 변환되는 통화입니다. 통화 차원에서 선택한 멤버는 비즈니스 인텔리전스 마법사에서 생성된 통화 변환에 대한 보고 통화 차원을 정의합니다.  

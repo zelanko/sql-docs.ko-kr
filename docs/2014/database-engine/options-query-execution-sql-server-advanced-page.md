@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 679c6d8f5a6abf931eb28d0f2f8116ac9f551d91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187240"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>옵션 (쿼리 실행: SQL Server: 고급 페이지)
   SET 명령을 사용할 때 이용할 수 있는 몇 가지 옵션이 있습니다. 이 페이지를 사용하면 SQL Server 쿼리 편집기에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 실행에 대한 **set** 옵션을 지정할 수 있습니다. 설정한 옵션은 다른 코드 편집기에는 영향을 주지 않습니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴 또는 **쿼리 창의 바로 가기 메뉴에서** 쿼리 옵션 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 클릭하고 **실행**에서 **고급**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
@@ -68,7 +68,7 @@ GO
  **SET QUERY_GOVERNOR_COST_LIMIT**  
  **QUERY_GOVERNOR_COST_LIMIT** 옵션을 사용하여 쿼리를 실행할 수 있는 시간의 상한값을 지정할 수 있습니다. 쿼리 비용이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다. 기본 설정인 0은 쿼리 실행 시간에 제한이 없음을 나타냅니다.  
   
- **공급자 메시지 머리글 무시**  
+ **공급자 메시지 헤더 표시 안 함**  
  이 확인란을 선택하면 SQLClient 공급자와 같은 공급자의 상태 메시지가 표시되지 않습니다. 이 확인란은 기본적으로 선택되어 있습니다. 공급자 수준에서 오류가 발생할 수 있는 쿼리 문제를 해결할 때 공급자 메시지를 보려면 이 확인란의 선택을 취소합니다.  
   
  **쿼리 실행 후 연결 끊기**  

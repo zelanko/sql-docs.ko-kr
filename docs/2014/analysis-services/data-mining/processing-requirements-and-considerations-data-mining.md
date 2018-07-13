@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232393"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
   이 항목에서는 데이터 마이닝 개체를 처리할 때 유의해야 할 몇 가지 기술적 고려 사항에 대해 설명합니다. 처리의 정의와 처리가 데이터 마이닝에 적용되는 방식에 대한 일반적인 설명은 [데이터 마이닝 개체 처리](processing-data-mining-objects.md)를 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "36079161"
   
  모델을 처리할 때 모델은 데이터 원본에서 데이터를 다시 읽지 않고 대신 마이닝 구조에서 데이터의 요약을 가져옵니다. 캐시된 인덱스와 함께 만든 큐브를 사용하여 사례 데이터가 캐시되면 서버는 모델 학습을 위한 독립 스레드를 만듭니다.  
   
- 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병렬 모델 처리를 지 원하는 참조 하십시오 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+ 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 병렬 모델 처리를 지 원하는 참조 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ##  <a name="bkmk_ProcessStructures"></a> 마이닝 구조 처리  
  모든 종속 모델과 함께 또는 따로 마이닝 구조를 처리할 수 있습니다. 일부 모델이 처리하는 데 오랜 시간이 소요될 것으로 예상되어 해당 작업을 지연시키려는 경우 마이닝 구조를 모델과 따로 처리하는 것이 유용할 수 있습니다.  

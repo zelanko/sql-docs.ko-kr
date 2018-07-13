@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:100644
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6f77da9093a27456014f78ca6285a33d3c565bf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3eec42b02744209860c19d58a6965737823ef95e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226563"
 ---
 # <a name="verify-queries-visual-database-tools"></a>쿼리 확인(Visual Database Tools)
   문제를 방지하기 위해 작성된 쿼리를 검사하고 구문이 올바른지 확인할 수 있습니다. 이 옵션은 [SQL 창](visual-database-tools.md)에 문을 입력할 때 특히 유용합니다.  

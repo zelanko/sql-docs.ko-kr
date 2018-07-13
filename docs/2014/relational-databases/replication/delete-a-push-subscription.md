@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
 - push subscriptions [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], push
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6ba955bddebbcf950e8559f9b35bcdd64b8fa275
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c1f8f2dd21d385207164d520a108a2ef6621e53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212823"
 ---
 # <a name="delete-a-push-subscription"></a>밀어넣기 구독 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 삭제하는 방법에 대해 설명합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "36079987"
   
 4.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 1단계의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 으로 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 구독이 없습니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 구독이 없습니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> 메서드를 호출합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36079987"
   
 4.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 1단계의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 으로 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 구독이 없습니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 구독이 존재하는지 확인합니다. 이 속성의 값이 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 구독이 없습니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> 메서드를 호출합니다.  
   

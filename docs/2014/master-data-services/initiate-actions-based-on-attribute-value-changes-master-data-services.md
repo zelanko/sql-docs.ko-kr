@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d27195abb30fe68b0fe515da479849dbc2019021
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2f66a7e91bcb475fe72d6abbe9f6007c8b9d668b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275539"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>특성 값 변경 기반 동작 시작(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값 변경을 기반으로 동작을 시작하는 비즈니스 규칙을 만듭니다. 예를 들어, 특정 특성 값이 변경될 때 값을 변경하거나 알림을 보내거나 외부 워크플로를 시작할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36078611"
   
 10. **값 비교** 노드 아래에서 **이(가) 변경된 경우** 를 **IF** 창의 **조건** 레이블로 끌어 놓습니다.  
   
-11. 에 **특성** 창에서 특성을 클릭 하 고 끌어는 **조건 편집** 창의 **특성 선택** 레이블. 이 특성은 규칙에 아무 영향도 주지 않으므로 사용할 수 있는 모든 특성을 선택합니다.  
+11. 에 **특성** 창에 특성을 클릭 하 고 끌어 옵니다 합니다 **조건 편집** 창의 **특성 선택** 레이블. 이 특성은 규칙에 아무 영향도 주지 않으므로 사용할 수 있는 모든 특성을 선택합니다.  
   
 12. **조건 편집** 창의 **변경 내용 추적 그룹** 상자에서 필수 구성 요소의 일부로 할당한 변경 내용 추적 그룹의 번호를 입력합니다.  
   

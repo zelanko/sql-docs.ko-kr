@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f79ba89862334e19c3e50b347588de4e4183afaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 738bae73382d71a3cd0458a35002068c56817d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198603"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 ## <a name="options"></a>변수  
  **데이터베이스에 연결**  
- 목록에서 연결할 데이터베이스를 선택합니다. 선택 하는 경우  **\<기본 >**, 서버에 대 한 기본 데이터베이스에 연결 됩니다. 선택 하는 경우  **\<서버 찾아보기 >**, 데이터베이스를 연결 하는 데에 대 한 서버를 찾아볼 수 있습니다.  
+ 목록에서 연결할 데이터베이스를 선택합니다. 선택 하는 경우  **\<기본값 >**, 서버에 대 한 기본 데이터베이스에 연결 됩니다. 선택 하는 경우  **\<서버 찾아보기 >**, 연결할 데이터베이스의 서버를 찾아볼 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 통해 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]데이터베이스 엔진 인스턴스에 연결할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하며 **서버에 연결** 대화 상자의 **연결 속성** 탭에서 데이터베이스를 지정해야 합니다. **연결 암호화** 확인란을 선택해야 합니다.  
   

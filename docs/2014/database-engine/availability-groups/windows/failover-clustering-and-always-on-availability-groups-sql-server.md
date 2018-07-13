@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 842003d531b655e4e302941dba67591a94006a84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267149"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 도입된 고가용성 재해 복구 솔루션인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]을 사용하려면 WSFC(Windows Server 장애 조치(Failover) 클러스터링)가 필요합니다. 또한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하는 데 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링이 필요하지 않더라도 FCI(장애 조치(Failover) 클러스터링 인스턴스)를 사용하여 가용성 그룹의 가용성 복제본을 호스팅할 수 있습니다. 각 클러스터링 기술의 역할과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 환경을 디자인하는 데 고려해야 할 사항을 알고 있어야 합니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "36079122"
  **가용성 그룹에 대한 장애 조치(Failover) 정책 설정은 독립 실행형 인스턴스에서 호스팅되는지 FCI 인스턴스에서 호스팅되는지에 관계없이 모든 복제본에 적용됩니다.  
   
 > [!NOTE]  
->  에 대 한 자세한 내용은 **노드 수가** 내 장애 조치 클러스터링 및 **AlwaysOn 가용성 그룹** 의 다양 한 버전에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [에서 지 원하는 기능은 SQL Server 2012 버전](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+>  에 대 한 자세한 내용은 **노드 수가** 장애 조치 클러스터링 내의 및 **AlwaysOn 가용성 그룹** 다양 한 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [에서 지 원하는 기능을 SQL Server 2012의 에디션의](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI에서 가용성 복제본을 호스팅하는 경우의 고려 사항  
   
@@ -126,14 +125,14 @@ ms.locfileid: "36079122"
   
      [AlwaysOn 아키텍처 가이드: 장애 조치 클러스터 인스턴스 및 가용성 그룹을 사용 하 여 고가용성 및 재해 복구 솔루션 구축](http://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 활성화 및 비활성화 &#40;SQL Server&#41; ](enable-and-disable-always-on-availability-groups-sql-server.md) [ &#40;Transact SQL&#41;](monitor-availability-groups-transact-sql.md)  
+ [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 활성화 및 비활성화 &#40;SQL Server&#41; ](enable-and-disable-always-on-availability-groups-sql-server.md) [ &#40;TRANSACT-SQL&#41;](monitor-availability-groups-transact-sql.md)  
  [AlwaysOn 장애 조치 클러스터 인스턴스 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

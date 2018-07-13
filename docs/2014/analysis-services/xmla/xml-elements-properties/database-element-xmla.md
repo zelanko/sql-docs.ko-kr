@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Database element
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f1b643a12ab1dbf2dc151fe91a8663b138e581ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 22e385380b2757427b5fa3a33725f6c25e8dde36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249433"
 ---
 # <a name="database-element-xmla"></a>Database 요소(XMLA)
-  부모 나타내는 차원을 포함 하는 데이터베이스를 식별 [개체](object-element-dimension-xmla.md) 요소입니다.  
+  부모를 나타내는 차원을 포함 하는 데이터베이스를 식별 [개체](object-element-dimension-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36079129"
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;XMLA&#41;](cube-element-xmla.md)   
- [요소를 차원 &#40;XMLA&#41;](dimension-element-xmla.md)   
+ [차원 요소 &#40;XMLA&#41;](dimension-element-xmla.md)   
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8cae4ad7891c364bd5cc1d403be672503443dd78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ff4cc656d05a4c0c2d8cb0bb05a74680113dce4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274159"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate 메서드(SecurityCertificate 클래스)
   현재 보안 인증서를 가져옵니다.  
@@ -52,7 +52,7 @@ SHA , SQLInstance
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*S H A*|메서드가 완료된 후 현재 보안 인증서 SHA 지문을 지정하는 문자열 값(출력 매개 변수)입니다.|  
+|*SHA*|메서드가 완료된 후 현재 보안 인증서 SHA 지문을 지정하는 문자열 값(출력 매개 변수)입니다.|  
 |*SQLInstance*|인증서가 필요한 인스턴스를 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

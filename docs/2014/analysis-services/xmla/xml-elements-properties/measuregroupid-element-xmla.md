@@ -23,15 +23,15 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ee7a4c63f1ab71ad7f15e69a6288793378de5316
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0aebf67d4c61e6249ac38969b33db60f26237e31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200023"
 ---
 # <a name="measuregroupid-element-xmla"></a>MeasureGroupID 요소(XMLA)
   개체 참조를 포함하는 부모 요소 내 측정값 그룹을 식별합니다.  

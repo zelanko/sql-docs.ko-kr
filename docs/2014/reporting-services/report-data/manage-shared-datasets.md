@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcc71c63896289bc924a540ad14b1b9cb591dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af52516dccd163380cc6c36be9d0a862f3de94e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168304"
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 집합 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 집합을 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 집합을 제공할 수 있습니다. 데이터 집합 쿼리에는 데이터 집합 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 집합을 구성할 수 있습니다. 공유 데이터 집합 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -83,7 +83,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   **항목의 보안 설정** 공유 데이터 집합에 대한 보안 설정을 보고 수정합니다.  
   
- 태스크 및 사용 권한 제어 기본 모드 보고서 서버에서 데이터 원본 속성에 대 한 액세스에 대 한 자세한 내용은 참조 하십시오. [공유 데이터 집합 항목 보안](../security/secure-shared-dataset-items.md)합니다.  
+ 태스크 및 권한 제어는 기본 모드 보고서 서버에서 데이터 원본 속성에 대 한 액세스에 대 한 자세한 내용은 참조 하세요. [공유 데이터 집합 항목 보안 설정](../security/secure-shared-dataset-items.md)합니다.  
   
  SharePoint 라이브러리의 항목에 대한 속성을 보고 편집할 수 있는 권한은 사이트 관리자에 의해 결정됩니다. 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
   
@@ -92,7 +92,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |태스크|도구|링크|  
 |----------|----------|----------|  
-|공유 데이터 집합 추가 또는 공유 데이터 집합 정의 속성 변경|보고서 작성기에서 저장<br /><br /> 보고서 디자이너에서 배포<br /><br /> 보고서 관리자에서 .rsd 파일 업로드|msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [파일 업로드 페이지 &#40;보고서 관리자&#41;](../upload-file-page-report-manager.md)<br /><br /> 공유 데이터 집합을 공유 데이터 집합이 종속되어 있는 공유 데이터 원본보다 먼저 업로드하는 경우 공유 데이터 집합을 공유 데이터 원본에 수동으로 바인딩해야 합니다. 자세한 내용은 참조 [일반 속성 페이지, 공유 데이터 집합 &#40;보고서 관리자&#41;](../general-properties-page-shared-datasets-report-manager.md)합니다.|  
+|공유 데이터 집합 추가 또는 공유 데이터 집합 정의 속성 변경|보고서 작성기에서 저장<br /><br /> 보고서 디자이너에서 배포<br /><br /> 보고서 관리자에서 .rsd 파일 업로드|msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [파일 업로드 페이지 &#40;보고서 관리자&#41;](../upload-file-page-report-manager.md)<br /><br /> 공유 데이터 집합을 공유 데이터 집합이 종속되어 있는 공유 데이터 원본보다 먼저 업로드하는 경우 공유 데이터 집합을 공유 데이터 원본에 수동으로 바인딩해야 합니다. 자세한 내용은 [일반 속성 페이지, 공유 데이터 집합 &#40;보고서 관리자&#41;](../general-properties-page-shared-datasets-report-manager.md)합니다.|  
 |공유 데이터 집합 항목 속성 변경|보고서 관리자|[일반 속성 페이지, 공유 데이터 집합 &#40;보고서 관리자&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |보고서의 공유 데이터 집합 인스턴스에 대한 추가 공유 데이터 집합 속성 지정|보고서 작성기 보고서 디자이너|[데이터 집합 속성 대화 상자, 쿼리](../dataset-properties-dialog-box-query.md)|  
 |공유 데이터 집합의 다른 공유 데이터 원본에 바인딩|보고서 관리자|[데이터 원본 선택 페이지 &#40;보고서 관리자&#41;](../data-source-selection-page-report-manager.md)|  
@@ -124,7 +124,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 -   공유 데이터 집합은 매개 변수 값 지정에 구독과 동일한 규칙을 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

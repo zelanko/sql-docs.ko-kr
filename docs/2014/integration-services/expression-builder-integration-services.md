@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
 - expressions [Integration Services], Expression Builder
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 73cc39126382e0a15151a9b6cd7908081d87cdfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2410b6c9cb601b47f1a55f9601a2bb7afe0cc593
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193593"
 ---
 # <a name="expression-builder-integration-services"></a>식 작성기(Integration Services)
   **식 작성기** 대화 상자는 속성 식에 사용할 식을 작성하기 위한 그래픽 사용자 인터페이스를 제공합니다. **디자이너의 사용자 지정 태스크 대화 상자 및** 의 [!INCLUDE[ssIS](../includes/ssis-md.md)] 속성 **창에서** 식 작성기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자에 액세스할 수 있습니다.  
