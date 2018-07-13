@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Access event class
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 26842d56c0f42fcb25a81f49df93f71da10796be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 982c9736da979ee303c0ca4d564bdfb8ce0e22a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240773"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 이벤트 클래스
   **Audit Schema Object Access** 이벤트 클래스는 SELECT 등의 개체 사용 권한이 사용되는 경우에 발생합니다.  

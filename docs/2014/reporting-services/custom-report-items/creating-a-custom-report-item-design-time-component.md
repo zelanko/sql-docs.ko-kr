@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149274"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
   사용자 지정 보고서 항목 디자인 타임 구성 요소는 Visual Studio 보고서 디자이너 환경에서 사용할 수 있는 컨트롤입니다. 사용자 지정 보고서 항목 디자인 타임 구성 요소는 끌어서 놓기 작업이 가능하고 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 속성 브라우저와 통합되고 사용자 지정 속성 편집기를 제공하는 활성화된 디자인 화면을 제공합니다.  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>도구 영역(adornment) 사용  
- 사용자 지정 보고서 항목 클래스는 `Microsoft.ReportDesigner.Design.Adornment` 클래스도 구현할 수 있습니다. 도구 영역(adornment)을 사용하면 사용자 지정 보고서 항목 컨트롤의 주 사각형 디자인 화면 바깥에 일정 영역이 생깁니다. 이 영역은 마우스 클릭 및 끌어서 놓기 작업과 같은 사용자 인터페이스 이벤트를 처리할 수 있습니다. `Adornment` 에 정의 된 클래스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` 네임 스페이스는의 통과 구현은 <xref:System.Windows.Forms.Design.Behavior.Adorner> Windows Forms에 있는 클래스입니다. 에 대 한 전체 설명서는 `Adorner` 클래스를 참조 하십시오. [동작 서비스 개요](http://go.microsoft.com/fwlink/?LinkId=116673) MSDN 라이브러리에서. 구현 하는 샘플 코드는 `Microsoft.ReportDesigner.Design.Adornment` 클래스를 참조 하십시오. [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
+ 사용자 지정 보고서 항목 클래스는 `Microsoft.ReportDesigner.Design.Adornment` 클래스도 구현할 수 있습니다. 도구 영역(adornment)을 사용하면 사용자 지정 보고서 항목 컨트롤의 주 사각형 디자인 화면 바깥에 일정 영역이 생깁니다. 이 영역은 마우스 클릭 및 끌어서 놓기 작업과 같은 사용자 인터페이스 이벤트를 처리할 수 있습니다. `Adornment` 에 정의 된 클래스를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` 네임 스페이스의 통과 구현입니다는 <xref:System.Windows.Forms.Design.Behavior.Adorner> Windows Forms에 있는 클래스입니다. 에 대 한 전체 설명서는 `Adorner` 클래스를 참조 하십시오 [동작 서비스 개요](http://go.microsoft.com/fwlink/?LinkId=116673) MSDN 라이브러리에서. 구현 하는 샘플 코드를 `Microsoft.ReportDesigner.Design.Adornment` 클래스를 참조 하십시오 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 Windows Forms를 프로그래밍하고 사용하는 방법은 MSDN Library에서 다음 항목을 참조하십시오.  
   

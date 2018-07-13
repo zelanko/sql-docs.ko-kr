@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c359db9f39f659ac497adcf3bc6e343e1dd6796
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 41fcbf9534f8d9b1accc424dd873609a6a357ade
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187403"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422752"
 ---
 # <a name="using-statement-parameters"></a>문 매개 변수 사용
   매개 변수는 ODBC 응용 프로그램에서 다음을 수행할 수 있도록 하는 SQL 문의 변수입니다.  
@@ -37,9 +35,9 @@ ms.locfileid: "36187403"
   
 -   쿼리 조건을 생성하여 사용자 상호 작용을 향상시킵니다.  
   
--   관리 **텍스트**, **ntext**, 및 **이미지** 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식입니다.  
+-   관리할 **텍스트**를 **ntext**, 및 **이미지** 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식입니다.  
   
- 예를 들어 한 **부분** 테이블에 명명 된 열이 **PartID**, **설명**, 및 **가격**합니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
+ 예를 들어를 **파트** 테이블에 열 이름이 **PartID**를 **설명**, 및 **가격**합니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

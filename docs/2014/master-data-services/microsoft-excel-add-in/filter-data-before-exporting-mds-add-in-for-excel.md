@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 98cb43795b68a35aeb4b57dc3a70ab001ffbaf8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 56cec33d57fc78122bdae7fd6d64a774919b18f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182912"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>로드하기 전 데이터 필터링(Excel용 MDS 추가 기능)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 크기 또는 Excel에 로드 하는 데이터의 범위를 제한 하려는 경우 데이터를 필터링 합니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 크기 또는 Excel로 로드 되는 데이터의 범위를 제한 하려는 경우 데이터를 필터링 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -52,7 +52,7 @@ ms.locfileid: "36187641"
     > -   제약 된 목록 (도메인 기반 특성) 열에는 처음 1000 개의 값만 로드 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [Excel에서 MDS로 데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Excel에서 MDS로 데이터를 게시 &#40;MDS 추가 기능에 Excel 용&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 로드 &#40;MDS 추가 기능에 Excel 용&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   

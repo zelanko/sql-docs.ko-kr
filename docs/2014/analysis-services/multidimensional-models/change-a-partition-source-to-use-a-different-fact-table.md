@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fact tables [Analysis Services]
 - partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7355f5f7430a5e74cd06ffa73c1b6ed68e11a7c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403e34a69d5007ca09404ed6d720493b899b0419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159324"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>다른 팩트 테이블을 사용하도록 파티션 원본 변경
   큐브에 대한 파티션을 만들 때 다양한 팩트 테이블을 사용하도록 선택할 수 있습니다. 이러한 테이블은 단일 데이터 원본 뷰, 여러 개의 데이터 원본 뷰 또는 여러 개의 데이터 원본에서 가져온 테이블일 수 있습니다. 데이터 원본 뷰에는 둘 이상의 데이터 원본에서 가져온 여러 테이블이 포함될 수도 있습니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
@@ -16,16 +16,16 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1125792543e3a926ddb98e3d33e0f600328d232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153794"
 ---
 # <a name="use-my-subscriptions"></a>내 구독 사용
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 관리자에 포함 되어는 **내 구독** 구독을 한 곳에서 모든 구성 하는 페이지입니다. 내 구독을 사용하여 기존 구독을 보고, 수정하고, 삭제할 수 있습니다. 하지만 내 구독을 사용하여 구독을 만들 수는 없습니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 관리자 포함 된 **내 구독** 구독을 한 곳에서 모든 구성 페이지입니다. 내 구독을 사용하여 기존 구독을 보고, 수정하고, 삭제할 수 있습니다. 하지만 내 구독을 사용하여 구독을 만들 수는 없습니다.  
   
 ||  
 |-|  
@@ -35,7 +35,7 @@ ms.locfileid: "36187329"
   
  내 구독에는 사용자가 만든 구독만 표시됩니다. 다른 사용자의 구독에 구독자로 추가되더라도 다른 사용자 소유의 구독은 나열되지 않으며 데이터 기반 구독도 표시되지 않습니다.  
   
- 구독을 이름별로 검색할 수 없으며 트리거 정보, 상태 정보 등을 기준으로 구독을 검색할 수도 없습니다. 자세한 내용은 참조 [Create, Modify, and 표준 구독 삭제 &#40;Reporting Services 기본 모드에서&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)합니다.  
+ 구독을 이름별로 검색할 수 없으며 트리거 정보, 상태 정보 등을 기준으로 구독을 검색할 수도 없습니다. 자세한 내용은 [Create, Modify, and 표준 구독 삭제 &#40;기본 모드의 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)합니다.  
   
 ## <a name="how-to-use-my-subscriptions"></a>내 구독 사용 방법  
  내 구독은 보고서 관리자에서 사용할 수 있습니다. 내 구독에 액세스하려면 보고서 관리자 일반 도구 모음에서 **내 구독** 을 클릭합니다.  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa03a40457db856c3c53a3db1412d0c9b95e7864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2316c7ab9f0d06930ba5346f51e28d7670dca8f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161534"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 마법사(다차원 데이터)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 다음 표에서는 사용 가능한 마법사에 대해 설명합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 고 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]입니다. 다음 표에서는 사용 가능한 마법사에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36186862"
 |[사용 빈도 기반 최적화 마법사 F1 도움말](usage-based-optimization-wizard-f1-help.md)|사용 빈도 기반 최적화 마법사를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대한 쿼리 로그에 저장된 쿼리를 기반으로 집계 디자인에 대한 집계를 정의할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [사용자 인터페이스 참조 &#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   
   

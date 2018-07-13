@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154084"
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
   게시를 만들 때 게시할 테이블 및 다른 데이터베이스 개체를 선택할 수 있습니다. 복제를 사용하여 다음 데이터베이스 개체를 게시할 수 있습니다.  
@@ -174,7 +174,7 @@ ms.locfileid: "36187387"
     > [!NOTE]  
     >  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 **@processing_order** 의 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 의 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 참조하십시오. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **@processing_order** 의 **sp_changemergearticle**을 지정하고 **sp_changemergearticle** 의 **@processing_order** 의 **@processing_order**를 지정하며 **@article**을 참조하십시오. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
--   게시 이름은 % * [ ] | : " ?와 같은 문자를 포함할 수 없습니다. \ / \< > 합니다.  
+-   게시 이름은 % * [ ] | : " ?와 같은 문자를 포함할 수 없습니다. \ / \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>개체 게시의 제한 사항  
   
@@ -188,7 +188,7 @@ ms.locfileid: "36187387"
   
 -   [sp_bindefault&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql)로 생성된 바인딩된 기본값은 복제되지 않습니다. 바인딩된 기본값은 ALTER TABLE 또는 CREATE TABLE의 DEFAULT 키워드로 생성된 기본값으로 대체되었습니다.  
   
--   인덱싱된 뷰에 대한 `NOEXPAND` 힌트를 포함하는 함수는 배포 에이전트가 전달하는 순서 때문에 참조된 테이블 및 인덱싱된 뷰와 같은 게시로 게시할 수 없습니다. 이 문제를 해결하려면 첫 번째 게시에 테이블 및 인덱싱된 뷰 만들기를 배치하고 첫 번째 게시가 완료된 후 게시하는 두 번째 게시에 인덱싱된 뷰에 대한 `NOEXPAND` 힌트를 포함하는 함수를 추가합니다. 또는 이러한 함수에 대 한 스크립트를 만들고 스크립트를 사용 하 여 진행는 *@post_snapshot_script* 의 매개 변수 `sp_addpublication`합니다.  
+-   인덱싱된 뷰에 대한 `NOEXPAND` 힌트를 포함하는 함수는 배포 에이전트가 전달하는 순서 때문에 참조된 테이블 및 인덱싱된 뷰와 같은 게시로 게시할 수 없습니다. 이 문제를 해결하려면 첫 번째 게시에 테이블 및 인덱싱된 뷰 만들기를 배치하고 첫 번째 게시가 완료된 후 게시하는 두 번째 게시에 인덱싱된 뷰에 대한 `NOEXPAND` 힌트를 포함하는 함수를 추가합니다. 또는 이러한 함수에 대 한 스크립트를 만들고 사용 하 여 스크립트를 제공 합니다 *@post_snapshot_script* 의 매개 변수 `sp_addpublication`합니다.  
   
 ### <a name="schemas-and-object-ownership"></a>스키마 및 개체 소유권  
  복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  

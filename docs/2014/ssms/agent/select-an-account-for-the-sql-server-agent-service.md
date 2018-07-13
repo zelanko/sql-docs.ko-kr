@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, accounts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab05d53c3c9f989252ab248305f000033ff54ccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210483"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
   서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 다음 옵션 중 하나를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 계정을 선택하십시오.  
@@ -81,19 +81,19 @@ ms.locfileid: "36187114"
 |서비스 계정 유형|비클러스터형 서버|클러스터형 서버|도메인 컨트롤러(비클러스터형)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 도메인 계정(Windows Administrators 그룹의 멤버)|지원됨|지원됨|지원됨|  
-|Windows 도메인 계정(비관리자)|지원<sup>1</sup>|지원<sup>1</sup>|지원<sup>1</sup>|  
-|네트워크 서비스 계정(NT AUTHORITY\NetworkService)|지원<sup>1, 3, 4</sup>|지원되지 않음|지원되지 않음|  
-|로컬 사용자 계정(비관리자)|지원<sup>1</sup>|지원되지 않음|해당 사항 없음|  
-|로컬 시스템 계정(NT AUTHORITY\System)|지원<sup>2</sup>|지원되지 않음|지원<sup>2</sup>|  
+|Windows 도메인 계정(비관리자)|지원 되는<sup>1</sup>|지원 되는<sup>1</sup>|지원 되는<sup>1</sup>|  
+|네트워크 서비스 계정(NT AUTHORITY\NetworkService)|지원 되는<sup>1, 3, 4</sup>|지원되지 않음|지원되지 않음|  
+|로컬 사용자 계정(비관리자)|지원 되는<sup>1</sup>|지원되지 않음|해당 사항 없음|  
+|로컬 시스템 계정(NT AUTHORITY\System)|지원 되는<sup>2</sup>|지원되지 않음|지원 되는<sup>2</sup>|  
 |로컬 서비스 계정(NT AUTHORITY\LocalService)|지원되지 않음|지원되지 않음|지원되지 않음|  
   
- <sup>1</sup> 제한 1 아래를 참조 하십시오.  
+ <sup>1</sup> 아래의 제한 사항 1을 참조 하세요.  
   
- <sup>2</sup> 제한 아래 2를 참조 하십시오.  
+ <sup>2</sup> 아래의 제한 사항 2를 참조 하세요.  
   
- <sup>3</sup> 제한 아래 3을 참조 하십시오.  
+ <sup>3</sup> 제한은 아래 3을 참조 하세요.  
   
- <sup>4</sup> 아래의 제한 4를 참조 하십시오.  
+ <sup>4</sup> 아래의 제한 4를 참조 하세요.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
  대상 서버를 마스터 서버에 참여시키면 실패하고 "참여 작업이 실패했습니다."라는 오류 메시지가 표시될 수 있습니다.  

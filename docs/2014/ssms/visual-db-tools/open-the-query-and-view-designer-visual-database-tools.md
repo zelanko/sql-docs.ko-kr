@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening View Designer
 - View Designer, opening
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - opening Query Designer
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e822f9facf894ccebf4408316d2ed8166ff64d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 21c6185322364fe4d8f612b29f9ef081852dae2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259929"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너 열기(Visual Database Tools)
   쿼리 및 뷰 디자이너는 뷰의 정의를 열거나, 쿼리 또는 뷰의 결과를 표시하거나, 쿼리를 만들거나 열 때 나타납니다. 이 디자이너는 네 개의 개별 창으로 구성되어 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36186876"
 3.  해당 쿼리 문을 강조 표시하고 강조 표시된 영역을 마우스 오른쪽 단추로 클릭한 다음 **편집기에서 쿼리 디자인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
 - SQL12.SWB.create.ucp.welcome.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c53827c1734926c2a316762de629680f1632d420
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ef278557bd1c06802e1889bdd068dcac98b4bea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152444"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
   엔터프라이즈에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 있으며 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터 계층 응용 프로그램을 관리할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에는 UCP(유틸리티 제어 지점)가 하나씩 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 위한 새 UCP를 만들어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 각 인스턴스와 각 데이터 계층 응용 프로그램은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 속하며 단일 UCP로 관리됩니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36186542"
   
  이 릴리스에서 UCP는 다음 요구 사항을 충족해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 -   대/소문자를 구분하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 UCP를 호스팅하는 것이 좋습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36186542"
   
 -   FILESTREAM 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 모니터링에서 지원되지 않습니다.  
   
- 자세한 내용은 참조 [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 자세한 내용은 [SQL Server에 대 한 최대 용량 사양](../../sql-server/maximum-capacity-specifications-for-sql-server.md) 하 고 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>새 유틸리티 제어 지점을 설치하기 전에 이전 유틸리티 제어 지점 제거  
  이전에 UCP(유틸리티 제어 지점)로 구성된 적이 없는 UCP를 SQL Server 인스턴스에 설치하는 경우 설치하기 전에 SQL Server의 관리되는 인스턴스 및 해당 UCP를 모두 제거해야 합니다. 이 작업은 **sp_sysutility_ucp_remove** 저장 프로시저를 실행하여 수행할 수 있습니다.  
@@ -165,7 +165,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |유틸리티 제어 지점이 생성될 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 관리자 권한이 있어야 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한이 있는 계정으로 로그온합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 10.50 이상이어야 합니다.|UCP를 호스팅할 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.|UCP를 호스팅할 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.|UCP를 호스팅할 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에 등록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스여서는 안됩니다.|UCP를 호스팅할 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하거나, 현재 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 있는 UCP에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 등록을 해제합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 이미 다른 유틸리티 제어 지점을 호스팅하고 있으면 안 됩니다.|UCP를 호스팅할 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  
 |지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 TCP/IP를 사용하도록 설정해야 합니다.|지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 TCP/IP를 사용하도록 설정합니다.|  

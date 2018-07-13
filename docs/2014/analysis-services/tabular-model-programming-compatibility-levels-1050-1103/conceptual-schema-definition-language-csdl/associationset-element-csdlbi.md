@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d28f903b4e501f648329a65824292256bca7520b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d418e75aa451c14db6010f6cb3673cd8c3a74bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229563"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 요소(CSDLBI)
   `AssociationSet` 요소는 연결을 정의하는 복합 유형입니다. CSDLBI 데이터 모델에서 연결은 두 테이블 간의 관계입니다.  

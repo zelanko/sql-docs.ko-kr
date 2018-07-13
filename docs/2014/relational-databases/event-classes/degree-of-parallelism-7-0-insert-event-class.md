@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03f723987ebce872068a128bec80be6bb8cfe10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aa223f74da700517ed957e83f96114ea75703822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158254"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) 이벤트 클래스
   **Degree of Parallelism (7.0 Insert)** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SELECT, INSERT, UPDATE 또는 DELETE 문을 각각 실행할 때 발생합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36187211"
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
-|**BinaryData**|**image**|다음 값을 기반으로 프로세스 완료에 사용된 CPU의 수입니다.<br /><br /> 0x00000000: 실행 되는 직렬 계획을 나타냅니다.<br /><br /> 0x01000000 차례 대로 실행 되는 병렬 계획을 나타냅니다.<br /><br /> > = 0x02000000: 병렬로 실행 되는 병렬 계획을 나타냅니다.|2|아니요|  
+|**BinaryData**|**image**|다음 값을 기반으로 프로세스 완료에 사용된 CPU의 수입니다.<br /><br /> 0x00000000: 실행 되는 직렬 계획을 나타냅니다.<br /><br /> 0x01000000 순차적에서 실행 되는 병렬 계획을 나타냅니다.<br /><br /> > = 0x02000000,: 병렬로 실행 되는 병렬 계획을 나타냅니다.|2|아니요|  
 |**ClientProcessID**|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |**DatabaseID**|**int**|USE database 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 USE database 문을 실행하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  

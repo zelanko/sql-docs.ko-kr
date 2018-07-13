@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81fdccdf00ddda9ab92421703001cedb6b1dca1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44737c26f9940b34866406f7fe8fbfb50a112a93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151404"
 ---
 # <a name="ui-wizards-for-data-mining-analysis"></a>데이터 마이닝 분석을 위한 UI 마법사
 
-이 섹션에서는 데이터 마이닝 분석을 위해 사용자 인터페이스 (UI) 마법사에 대 한 설명서입니다.
+이 섹션에서는 데이터 마이닝 분석을 위한 사용자 인터페이스 (UI) 마법사에 대 한 설명서를 포함합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,23 +15,23 @@ helpviewer_keywords:
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e99fbda459ba57838ba60b8fcf3f126b50b1cb1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a44176c06f105fd4a560718ee5b757f5c71ff1cf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186298"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423552"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 지원으로 지속형된 데이터 원본 개체는 **IPersistFile** 인터페이스입니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 지속형된 데이터 원본 개체를 지원 합니다 **IPersistFile** 인터페이스입니다.  
   
 ## <a name="examples"></a>예  
  **A. 데이터 원본 초기화 지속:**  
   
- 이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름 및 데이터베이스 이름에서 수신 되는 *pLocation* 및 *pDatasource* 함수의 매개 변수입니다.  
+ 이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 데이터베이스 이름과 서버 이름에서 수신 되는 *pLocation* 하 고 *pDatasource* 함수의 매개 변수입니다.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -142,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 지속형된 데이터 원본 초기화 사용:**  
+ **B. 지속형된 데이터 원본 초기화를 사용 합니다.**  
   
  이 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공하는 추가 초기화 속성이 있는 지속형 데이터 원본 개체를 사용합니다.  
   
@@ -230,7 +228,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **ipersistfile:: Save** 메서드 호출 전후 **idbinitialize:: Initialize**합니다. 성공적인 반환 후에 메서드를 호출 **idbinitialize:: Initialize** 유효한 데이터 원본 지정이 지속 되도록 합니다.  
+ 합니다 **ipersistfile:: Save** 전이나 호출한 후에 메서드를 호출할 수 있습니다 **idbinitialize:: Initialize**합니다. 성공적인 반환 후에 메서드를 호출 **idbinitialize:: Initialize** 유효한 데이터 원본 지정이 지속 되도록 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  

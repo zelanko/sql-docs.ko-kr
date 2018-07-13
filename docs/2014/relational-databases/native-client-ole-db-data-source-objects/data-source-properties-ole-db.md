@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,29 +15,29 @@ helpviewer_keywords:
 - OLE DB data source properties [SQL Server Native Client]
 ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb3d83a984cb5a94e53d266502fdac3583529072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 29df5d4c99c19b606a1c5b66761e653f6ce924b1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185831"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416982"
 ---
 # <a name="data-source-properties-ole-db"></a>데이터 원본 속성(OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 데이터 원본 속성을 다음과 같이 구현 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 데이터 원본 속성을 다음과 같이 구현 합니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_CURRENTCATALOG|R/w: 읽기/쓰기 기본값: 없음<br /><br /> 설명: DBPROP_CURRENTCATALOG 값에 대 한 현재 데이터베이스를 보고 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션입니다. 사용 하 여 현재 데이터베이스를 설정 하는 것과 동일한 결과가 속성 값을 설정는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용 *데이터베이스* 문.<br /><br /> 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]호출 하는 경우, [sp_defaultdb](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql) 데이터베이스 이름을 지정 하 고 소문자로 혼합 사례 이름의 데이터베이스가 원래 만들어진 경우에 DBPROP_CURRENTCATALOG 이름을 반환 하는 소문자로 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 DBPROP_CURRENTCATALOG가 대/소문자가 섞인 이름을 반환했습니다.|  
-|DBPROP_MULTIPLECONNECTIONS|R/w: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 연결이 행 집합을 생성 하지 않으므로 또는 서버 커서를 하지 않은 행 집합을 생성 하는 명령을 실행 하는 경우 다른 명령을 실행 하는 새 연결이 설정 됩니다 경우 DBPROP_MULTIPLECONNECTIONS가 VARIANT_는 새 명령을 실행 하려면 TRUE입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_MULTIPLECONNECTION이 VARIANT_FALSE 또는 연결에는 트랜잭션이 활성화 된 경우 Native Client OLE DB 공급자는 다른 연결을 만들지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBPROP_MULTIPLECONNECTIONS가 VARIANT_FALSE 고 활성 트랜잭션이 있으면 E_FAIL을 반환 하는 경우 DB_E_OBJECTOPEN을 반환 합니다. 트랜잭션 및 잠금은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 연결별로 관리합니다. 두 번째 연결이 생성되면 분리된 연결에 대한 명령은 잠금을 공유하지 않습니다. 한 명령이 다른 명령을 차단하지 않도록 다른 명령이 요청한 행의 잠금은 유지됩니다. 여러 세션을 만들 때도 마찬가지입니다.<br /><br /> 각 세션이 별도의 연결을 가집니다.|  
+|DBPROP_CURRENTCATALOG|R/w: 읽기/쓰기 기본값: 없음<br /><br /> 설명: DBPROP_CURRENTCATALOG 값에 대 한 현재 데이터베이스를 보고 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션입니다. 사용 하 여 현재 데이터베이스를 설정 하는 것과 동일한 효과가 속성 값을 설정 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용 하 여 *데이터베이스* 문입니다.<br /><br /> 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]호출 하는 경우, [sp_defaultdb](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql) 데이터베이스 이름을 지정 하 고 소문자로 섞인 이름을 사용 하 여 데이터베이스가 원래 만들어진 경우에 DBPROP_CURRENTCATALOG 이름을 반환 하는 소문자에서입니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 DBPROP_CURRENTCATALOG가 대/소문자가 섞인 이름을 반환했습니다.|  
+|DBPROP_MULTIPLECONNECTIONS|R/w: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 연결이 행 집합을 생성 하지 않거나 서버 커서가 아닌 행 집합을 생성 명령을 실행 하 고 다른 명령을 실행 하는 경우 새 연결을 만들어집니다 DBPROP_MULTIPLECONNECTIONS VARIANT_ 이면 새 명령을 실행 하려면 TRUE입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_MULTIPLECONNECTION이 VARIANT_FALSE 또는 연결에는 트랜잭션이 활성화 된 경우 Native Client OLE DB 공급자는 다른 연결을 만들지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBPROP_MULTIPLECONNECTIONS가 VARIANT_FALSE 및 활성 트랜잭션이 있으면 E_FAIL을 반환 하는 경우 DB_E_OBJECTOPEN을 반환 합니다. 트랜잭션 및 잠금은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 연결별로 관리합니다. 두 번째 연결이 생성되면 분리된 연결에 대한 명령은 잠금을 공유하지 않습니다. 한 명령이 다른 명령을 차단하지 않도록 다른 명령이 요청한 행의 잠금은 유지됩니다. 여러 세션을 만들 때도 마찬가지입니다.<br /><br /> 각 세션이 별도의 연결을 가집니다.|  
   
  공급자별 속성 집합 dbpropset_sqlserverdatasource에 다음과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음 추가 데이터 원본 속성을 정의 합니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_ENABLEFASTLOAD|R/w: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 메모리에서 대량 복사를 사용 하도록 설정 SSPROP_ENABLEFASTLOAD 속성을 variant_true로 설정 해야 합니다. 이 속성을 데이터 원본에 대해 설정 새로 만들어진된 세션에 대 한 소비자 액세스 허용 하는 [IRowsetFastLoad](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 인터페이스입니다.<br /><br /> 속성이 variant_true로 설정 되어 있으면 **IRowsetFastLoad** 인터페이스를 통해 사용할 수는 **iopenrowset:: Openrowset** 요청 하 여는 **IID_IRowsetFastLoad** 인터페이스 또는 설정 **SSPROP_IRowsetFastLoad** 를 variant_true로 설정 합니다.|  
+|SSPROP_ENABLEFASTLOAD|R/w: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 메모리에서 대량 복사를 사용 하도록 설정 속성 SSPROP_ENABLEFASTLOAD를 variant_true로 설정 해야 합니다. 새로 만들어진된 세션 데이터 원본에 설정 합니다.이 속성을 사용 하 여 소비자에 대 한 액세스를 허용 합니다 [IRowsetFastLoad](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 인터페이스입니다.<br /><br /> 속성을 variant_true로 설정 되어 있으면 **IRowsetFastLoad** 인터페이스를 통해 제공 됩니다 **iopenrowset:: Openrowset** 요청 하 여는 **요청** 인터페이스 또는 설정 하 여 **SSPROP_IRowsetFastLoad** 를 variant_true로 설정 합니다.|  
 |SSPROP_ENABLEBULKCOPY|R/w: 읽기/쓰기 기본값: VARIANT_FALSE<br /><br /> 설명: 파일에서 대량 복사를 사용 하도록 설정 SSPROP_ENABLEBULKCOPY 속성을 variant_true로 설정 해야 합니다. 데이터 원본에서 이 속성을 설정하면 소비자가 세션과 동일한 수준에서 IBCPSession 인터페이스에 액세스할 수 있습니다.<br /><br /> SSPROP_IRowsetFastLoad도 VARIANT_TRUE로 설정해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

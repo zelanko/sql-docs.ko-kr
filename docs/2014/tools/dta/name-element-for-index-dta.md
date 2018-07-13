@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 86c843e5c69f1fc433d5d035e516c2d1deaa9d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 26e35777540e98b63c6b676778d8a04f26a62e97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278169"
 ---
 # <a name="name-element-for-index-dta"></a>Index의 Name 요소(DTA)
   사용자 지정 구성에서 인덱스의 이름을 지정합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36186210"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`길이 제한 합니다.|  
+|**데이터 형식 및 길이**|`string`길이 제한 없음된.|  
 |**기본값**|없음|  
 |**발생 빈도**|각각에 대 한 번만 지정 해야 `Index` 요소입니다.|  
   

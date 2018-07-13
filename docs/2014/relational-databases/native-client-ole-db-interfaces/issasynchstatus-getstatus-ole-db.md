@@ -5,9 +5,7 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: baf7204719e865b93b7037e76f7b493e841644c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185600"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413132"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus(OLE DB)
   비동기적으로 실행 중인 작업의 상태를 반환합니다.  
@@ -112,7 +110,7 @@ HRESULT GetStatus(
  공급자 관련 오류가 발생했습니다.  
   
 ## <a name="remarks"></a>Remarks  
- **issasynchstatus:: Getstatus** 과 동일 하 게 동작 하는 메서드는 **idbasynchstatus:: Getstatus** 메서드 점을 제외 하 고 원본 개체는 데이터의 초기화 하는 경우 중단 되 면 E_UNEXPECTED 대신 반환 됩니다 DB_E_CANCELED 보다 (있지만 [issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED를 반환 합니다). 이는 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
+ 합니다 **issasynchstatus:: Getstatus** 메서드가 동일 하 게 동작 합니다 **idbasynchstatus:: Getstatus** 메서드는 원본 개체의 데이터를 초기화 하는 경우 중단 되 면 E_UNEXPECTED 대신 반환 됩니다 DB_E_CANCELED 보다 (하지만 [issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED를 반환 합니다). 이는 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
   
  행 집합이 비동기적으로 초기화되거나 채워진 경우 이 메서드를 지원해야 합니다.  
   

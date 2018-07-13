@@ -8,22 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: b65c74b6-889b-4323-9240-90827a70ab0e
 caps.latest.revision: 33
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a92d624b12fdf9efd0c0479554ac7aa4946055ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63dbefcdf84ee0245ec6adffb46d4d3d859c1dbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183580"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>4 단원: 응용 프로그램을 실행 (VB-VC #)
+  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE에서 콘솔 응용 프로그램을 작성하고 실행하는 여러 가지 방법을 제공합니다.  
   
 -   디버깅으로 시작  

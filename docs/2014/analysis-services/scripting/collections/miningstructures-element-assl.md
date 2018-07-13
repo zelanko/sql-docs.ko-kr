@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructures element
 ms.assetid: d8144b85-c836-4dcf-96b4-36b9dfd4211d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cfae95ff6689f06f4aa61a2e31a16521fe94539b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06e0bf164d4e318b7451dc4a364b26b89fef7379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165284"
 ---
 # <a name="miningstructures-element-assl"></a>MiningStructures 요소(ASSL)
-  컬렉션을 포함 [MiningStructure](../objects/miningstructure-element-assl.md) 의 요소는 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
+  컬렉션을 포함 [MiningStructure](../objects/miningstructure-element-assl.md) 의 요소를 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

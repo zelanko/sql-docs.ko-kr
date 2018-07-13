@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157204"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 연결에 사용되는 데이터 공급자
   Analysis Services는 서버 및 데이터 액세스를 위해 세 가지 데이터 공급자를 제공합니다. Analysis Services에 연결하는 모든 응용 프로그램은 이러한 공급자 중 하나를 사용하여 서버 및 데이터 액세스를 수행합니다. 그중에서 ADOMD.NET 및 AMO(Analysis Services Management Objects) 공급자는 관리되는 데이터 공급자이며, Analysis Services OLE DB 공급자(MSOLAP DLL)는 네이티브 데이터 공급자입니다.  
   
- 여러 버전의 Analysis Services를 실행하는 조직에서는 Analysis Services 데이터에 연결하는 사용자 워크스테이션에 최신 버전의 데이터 공급자를 설치해야 할 수 있습니다. 최신 버전의 Analysis Services에 연결하려면 동일한 주요 릴리스의 데이터 공급자가 필요합니다. 예를 들어, 연결할 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], 각 워크스테이션에 2014 릴리스의 데이터 공급자에 있어야 합니다. Excel에서는 연결하는 데 필요한 데이터 공급자를 설치하지만 사용하고 있는 Analysis Services 인스턴스 비해 해당 공급자가 오래되었을 수 있습니다.  
+ 여러 버전의 Analysis Services를 실행하는 조직에서는 Analysis Services 데이터에 연결하는 사용자 워크스테이션에 최신 버전의 데이터 공급자를 설치해야 할 수 있습니다. 최신 버전의 Analysis Services에 연결하려면 동일한 주요 릴리스의 데이터 공급자가 필요합니다. 예를 들어 연결할 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], 각 워크스테이션에 2014 릴리스의 데이터 공급자가 있어야 합니다. Excel에서는 연결하는 데 필요한 데이터 공급자를 설치하지만 사용하고 있는 Analysis Services 인스턴스 비해 해당 공급자가 오래되었을 수 있습니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "36187514"
 ##  <a name="bkmk_ServVers"></a> 서버 버전을 확인하는 방법  
  Analysis Services 인스턴스의 버전을 알고 있으면 조직에서 워크스테이션에 최신 버전의 데이터 공급자를 설치해야 하는지 여부를 확인하는 데 도움이 됩니다.  
   
--   SQL Server Management Studio에서 Analysis Services 인스턴스에 연결합니다. 가리킨, 확인 하려는 인스턴스를 마우스 오른쪽 단추로 클릭 **보고서**를 클릭 하 고 **일반**합니다. 에디션 및 버전 빌드 정보가 보고서에 나타납니다.  
+-   SQL Server Management Studio에서 Analysis Services 인스턴스에 연결합니다. 확인, 가리킨 하려는 인스턴스를 마우스 오른쪽 단추로 클릭 **보고서**, 클릭 **일반**합니다. 에디션 및 버전 빌드 정보가 보고서에 나타납니다.  
   
- 주 빌드 번호의 초기 릴리스에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 12.0.2000.9입니다.  
+ 주 빌드 번호의 초기 릴리스의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 12.0.2000.9입니다.  
   
  버전 및 빌드 정보를 얻는 방법은 [SQL Server 및 해당 구성 요소의 버전 및 에디션을 확인하는 방법](http://support.microsoft.com/kb/321185)을 참조하십시오.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36187514"
   
  MSOLAP130.dll은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 기본 제공되는 Analysis Services OLE DB 공급자 버전입니다. 기타 이전 최신 버전에는 MSOLAP10.dll(SQL Server 2008 및 2008 R2의 경우) 및 MSOLAP90.dll(SQL Server 2005의 경우)이 포함됩니다.  
   
- OLE DB 공급자는 종종 연결 문자열에 지정됩니다. Analysis Services 연결 문자열은 다른 명명법을 사용 하 여 OLE DB 공급자를 가리키는: MSOLAP 합니다. \<버전 >.dll  
+ OLE DB 공급자는 종종 연결 문자열에 지정됩니다. Analysis Services 연결 문자열을 다른 명명법을 사용 하 여 OLE DB 공급자에 게 참조: MSOLAP. \<버전 >.dll  
   
  MSOLAP.5.dll은 Excel 2013과 함께 설치된 최신 Analysis Services OLE DB 공급자입니다. MSOLAP.4.dll 또는 MSOLAP.3.dll과 같은 이전 버전은 이전 버전의 Excel을 실행하는 워크스테이션에서 흔히 발견됩니다. PowerPivot 추가 기능과 같은 일부 Analysis Services 기능에는 특정 버전의 OLE DB 공급자가 필요합니다. 자세한 내용은 [연결 문자열 속성&#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)을 참조하세요.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36187514"
   
  AMO는 SQL Server 설치 프로그램으로 설치되며 SQL Server 클라이언트 응용 프로그램에서 Analysis Services에 연결하는 데 사용됩니다. 또한 AMO를 사용자 지정 코드에서 사용하는 경우 다운로드하고 수동으로 설치할 수 있습니다(이 항목의 [Analysis Services 데이터 공급자의 버전을 확인하는 방법](#bkmk_LibUpdate) 참조). 전역 어셈블리 캐시에서 `Microsoft.AnalysisServices`로 AMO를 찾을 수 있습니다.  
   
- AMO를 사용 하는 연결은 일반적으로 미미 이루어진 "데이터 원본 =\<서버 이름 >"입니다. 연결이 설정된 후에는 API를 사용하여 데이터베이스 컬렉션 및 주요 개체로 작업합니다. SSDT와 SSMS는 AMO를 사용하여 Analysis Services 인스턴스에 연결합니다.  
+ AMO를 사용 하 여 연결이 일반적으로 아주 적으며 "데이터 원본 =\<서버 이름 >"입니다. 연결이 설정된 후에는 API를 사용하여 데이터베이스 컬렉션 및 주요 개체로 작업합니다. SSDT와 SSMS는 AMO를 사용하여 Analysis Services 인스턴스에 연결합니다.  
   
  프로그래밍 방식 연결에 대한 자세한 내용은 [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)을 참조하십시오.  
   

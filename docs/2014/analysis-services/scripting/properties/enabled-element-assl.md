@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Enabled element
 ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 917116f506c89ad5f0f0b2c2bee18a234f253665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd8206bbf0dffe84a1012a0e47b4c261b15fb4ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211663"
 ---
 # <a name="enabled-element-assl"></a>Enabled 요소(ASSL)
   부모 요소를 사용할 수 있는지 여부를 나타냅니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36187056"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Enabled` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeHierarchy> 및 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
+ 부모에 해당 하는 요소가 `Enabled` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CubeHierarchy> 및 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

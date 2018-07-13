@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e4917b0e20c9046382e1ae7700388d758b08ab4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0915cda96047732894ec848c861e83319888d6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148674"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS)
   수식은 보고서 모델을 데이터 원본으로 사용하는 보고서의 값에 대해 수행되는 계산입니다. 수식에는 함수, 연산자, 상수 그리고 필드나 엔터티에 대한 참조가 포함될 수 있습니다. 수식을 사용하면 숫자 데이터 및 텍스트 데이터를 결합, 집계, 필터링 및 계산할 수 있습니다. 수식을 만들어 새 필드로 저장하거나 기존 필드의 수식을 수정할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36187559"
   
 -   6+12  
   
--   `SUM`(`IF`(**상품 플래그 완료**, "완료", "완료 되지 않은"))  
+-   `SUM`(`IF`(**상품 플래그 완료**"완료 됨", "완료 되지 않은"))  
   
  수식을 정의한 후 쿼리 디자이너에서 결과를 볼 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36187559"
  **텍스트 연결 연산자.** 앰퍼샌드(&)를 사용하여 하나 이상의 텍스트 문자열을 결합 또는 연결하여 단일 텍스트로 만들 수 있습니다.  
   
 ##  <a name="Constants"></a> 상수  
- 상수는 계산되지 않는 값이므로 변경되지 않습니다. 보고서 작성기는 다음과 같은 상수를 사용 하 여: `True`, `False`, 및 `Empty`합니다. 부울 필드를 평가할 때 이러한 상수를 사용합니다. 예를 들어 IsDiscontinued라는 필드가 있다고 가정합니다. 이 필드에 대해 유일하게 유효한 값은 True, False 또는 Empty(" ")입니다.  
+ 상수는 계산되지 않는 값이므로 변경되지 않습니다. 보고서 작성기에서는 다음과 같은 상수: `True`, `False`, 및 `Empty`합니다. 부울 필드를 평가할 때 이러한 상수를 사용합니다. 예를 들어 IsDiscontinued라는 필드가 있다고 가정합니다. 이 필드에 대해 유일하게 유효한 값은 True, False 또는 Empty(" ")입니다.  
   
 ##  <a name="Functions"></a> 함수  
  함수는 특정한 순서로 지정된 *인수*라고 하는 특정한 값을 사용하여 계산을 수행하는 미리 정의된 수식입니다. 인수는 리터럴 값 또는 필드이거나 둘을 결합한 것일 수 있습니다. 수식에 필드를 사용하는 경우 필드 이름은 필드의 각 인스턴스를 나타냅니다. 인수가 리터럴 값인 경우 특정 문자를 사용하여 그 인수가 리터럴 값임을 나타내야 할 수 있습니다.  

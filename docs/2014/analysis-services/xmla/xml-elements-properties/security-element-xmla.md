@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4811ae03eb6f30c4b9f4557e791339920161b4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155024"
 ---
 # <a name="security-element-xmla"></a>Security 요소(XMLA)
-  백업 하거나 하는 동안 역할 및 권한과 같은 보안 정의 복원 하는 방법을 지정는 [백업](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령입니다.  
+  백업 하는 동안 역할 및 권한과 같은 보안 정의 복원 하는 방법을 지정는 [Backup](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36187053"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[백업](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
+|부모 요소|[Backup](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

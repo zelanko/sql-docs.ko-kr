@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e0802d79913fe796fa636f79b6d728f3900885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5203f517335ab3d346b5b303d4225a87e5be64ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183370"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>열 내용 및 데이터 형식 지정(데이터 마이닝 마법사)
   **열 내용 및 데이터 형식 지정** 페이지를 사용하여 마법사의 이전 페이지에서 선택한 각 열의 사용법 및 데이터 형식을 지정할 수 있습니다. 열을 무시하려면 **뒤로** 를 클릭하여 **학습 데이터 지정**페이지로 돌아간 다음 모든 확인란의 선택을 취소합니다.  
@@ -76,6 +76,6 @@ ms.locfileid: "36187074"
  [데이터 마이닝 마법사 F1 도움말 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [관련된 열 제안 &#40;데이터 마이닝 마법사&#41;](suggest-related-columns-data-mining-wizard.md)   
  [테이블 유형 지정 &#40;데이터 마이닝 마법사&#41;](specify-table-types-data-mining-wizard.md)   
- [열의 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [열 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

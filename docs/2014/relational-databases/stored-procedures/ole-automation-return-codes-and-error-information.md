@@ -5,32 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 782655aa435ba69a38f4de1d854c1ff9837a6778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186266"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414022"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 반환 코드 및 오류 정보
-  OLE Automation 시스템 저장 프로시저는 기본 OLE Automation 작업에 의해 반환되는 HRESULT를 `int` 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800 16 진수 형태의 OLE 오류 코드 0x %*nnnnn*,으로 반환 된 경우는 `int` 값에는 저장된 프로시저 반환 코드 HRESULT의 형태가 214*nnnnnnn*합니다.  
+  OLE Automation 시스템 저장 프로시저는 기본 OLE Automation 작업에 의해 반환되는 HRESULT를 `int` 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800 16 진수 형태의 OLE 오류 코드*nnnnn*,으로 반환 된 경우를 `int` 값을 저장된 프로시저 반환 코드에서 HRESULT의 형태가 214*nnnnnnn*합니다.  
   
- 예를 들어 잘못 된 개체 이름 (SQLDMO 전달입니다. Xyzzy)을 sp_OACreate 하면 반환 하도록 프로시저는 `int` 16 진수로 0x800401f3 인 2147221005의 HRESULT입니다.  
+ 잘못 된 개체 이름 (SQLDMO 예를 들어, 전달입니다. Xyzzy)을 sp_OACreate 하면 반환 하는 절차는 `int` 16 진수로 0x800401f3 인 2147221005, HRESULT입니다.  
   
- `CONVERT(binary(4), @hresult)`를 사용하여 `int` HRESULT를 `binary` 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 예제 HexToChar 저장 프로시저를 사용 하 여 변환 하는 `int` HRESULT를는 `char` 읽을 수 있는 16 진수 문자열을 포함 하는 값입니다.  
+ `CONVERT(binary(4), @hresult)`를 사용하여 `int` HRESULT를 `binary` 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 예제 HexToChar 저장 프로시저를 사용 하 여 변환할 수는 `int` HRESULT를를 `char` 읽을 수 있는 16 진수 문자열을 포함 하는 값입니다.  
   
 ```  
 USE AdventureWorks2012;  

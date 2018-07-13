@@ -5,9 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f5a1af6d37a4bcda841a2e56e3ce9ed99808603
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fba30d71b06f0c25de8916f1dbfac7d5edd99d3d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187600"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418642"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   
- [데이터 액세스 및 저장소 개발자 센터](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
  이 사이트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
  [데이터 액세스 블로그](http://go.microsoft.com/fwlink/?LinkId=48617)  
@@ -39,7 +37,7 @@ ms.locfileid: "36187600"
   
  Window DAC SDK에는 ADO(ActiveX Data Object), OLE DB 및 ODBC(Open Database Connectivity)에 대한 설명서가 포함되어 있습니다.  
   
- 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 검색 하 여 있습니다는 [Microsoft 기술 자료](http://go.microsoft.com/fwlink?linkid=5757)합니다.  
+ 에 대 한 추가 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 검색 하 여 찾을 수 있습니다 합니다 [Microsoft 기술 자료](http://go.microsoft.com/fwlink?linkid=5757)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](sql-server-native-client-programming.md)  

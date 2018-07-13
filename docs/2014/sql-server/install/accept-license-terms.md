@@ -1,5 +1,5 @@
 ---
-title: 사용 조건에 동의 | Microsoft Docs
+title: 사용 조건 동의 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260099"
 ---
 # <a name="accept-license-terms"></a>사용 조건 동의
   **설치 마법사의** 사용 조건 동의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스의 사용 조건에 동의할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36186890"
   
  다른 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에 대한 정보는 설정된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 하루에 한 번씩 수집됩니다. 수집 시간은 서버 로드를 최소화하기 위해 기본적으로 자정으로 설정됩니다. 수집 시간을 변경하려는 경우 수집 시간을 제어하는 레지스트리 키를 수동으로 편집할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 다음과 같은 자체 레지스트리 키가 있습니다.  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\.\< INSTANCEID > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< INSTANCEID > \CPE\TimeofReporting  
   
  이 레지스트리 키 값에는 수집 실행 시간이 00:00(자정)부터 경과된 분 수로 포함되어 있습니다. 예를 들어 값 60은 오전1시에 수집이 실행되었음을 나타내고 값 1200은 오후 8시에 수집이 실행되었음을 나타냅니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36186890"
   
 -   복제  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 오류 보고서를 사용 하 여 개선 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 하며 모든 정보는 기밀로 처리 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 오류 보고서를 사용 하 여 향상을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 하며 모든 정보는 기밀로 처리 합니다.  
   
  오류 정보는 보안 연결(HTTPS)을 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보내며 액세스가 제한된 곳에 보관됩니다. 또는 사용자의 회사 오류 보고 서버 서버로 오류 보고서를 보낼 수 있습니다.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151674"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>분석 데이터 원본에서 메타데이터 검색
   메타데이터는 분석 데이터를 검색하고 사용하는 응용 프로그램에 중요합니다. 관계형 데이터 원본에서 데이터를 검색할 때는 데이터의 차원을 예측할 수 있습니다. 이는 중첩된 데이터 집합을 사용하는 경우라도 마찬가지입니다. 관계형 데이터베이스의 결과 집합은 일반적으로 2차원 구조이거나 스칼라 구조이기 때문입니다. 그러나 분석 데이터 원본에서 검색된 데이터는 중첩이 많은 계층 구조로 구성되어 차원이 다양할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36187094"
  **스키마 행 집합**  
  개체 모델보다 어렵지만 대신 완전한 메타데이터 검색 방법은 스키마 행 집합을 사용하는 것입니다. 스키마 행 집합은 데이터베이스에 있는 특정 형식의 모든 개체에 대한 설명을 캡슐화하는 OLE DB 행 집합입니다. 분석 데이터 원본의 스키마 정보에는 데이터 원본에서 사용할 수 있는 데이터베이스 또는 카탈로그, 데이터베이스의 큐브 및 마이닝 모델, 데이터 원본에 있는 큐브의 역할 등이 포함됩니다. 이 메타데이터는 `GUID`나 XMLA(XML for Analysis) 이름을 전달하여 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> 메서드를 사용하면 검색할 수 있습니다.  
   
- 자세한 내용은: [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md))  
+ 자세한 내용은: [Schema Rowsets in ADOMD.NET 사용 하 여 작업](retrieving-metadata-working-with-schema-rowsets.md))  
   
  이러한 두 메타데이터 검색 방법은 각각 다른 형식의 메타데이터에 액세스합니다. 다음 표에서는 각 방법에서 사용할 수 있는 메타데이터와 특정 메타데이터에 액세스하는 데 사용되는 방법을 설명합니다.  
   

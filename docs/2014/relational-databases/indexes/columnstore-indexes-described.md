@@ -1,14 +1,13 @@
 ---
-title: Columnstore 인덱스 소개 | Microsoft Docs
+title: Columnstore 인덱스 설명 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 9dd9d25eaaa21361a050e8a80c32be8907cb4b9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211323"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *메모리 내 columnstore 인덱스* 저장 하 고 열 기반 데이터 저장소 및 열 기반 쿼리 처리를 사용 하 여 데이터를 관리 합니다. columnstore 인덱스는 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업에 효과적입니다. columnstore 인덱스를 사용하면 기존의 행 기반 저장소 대비 최대 **10배의 쿼리 성능** 이익과 압축되지 않은 데이터 크기 대비 최대 **7배의 데이터 압축** 을 얻을 수 있습니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *메모리 내 columnstore 인덱스* 저장 하 고 열 기반 데이터 저장소 및 열 기반 쿼리 처리를 사용 하 여 데이터를 관리 합니다. columnstore 인덱스는 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업에 효과적입니다. columnstore 인덱스를 사용하면 기존의 행 기반 저장소 대비 최대 **10배의 쿼리 성능** 이익과 압축되지 않은 데이터 크기 대비 최대 **7배의 데이터 압축** 을 얻을 수 있습니다.  
   
 > [!NOTE]  
 >  클러스터형 columnstore 인덱스를 대형 데이터 웨어하우징 팩트 테이블을 저장하기 위한 표준으로 보고 대부분의 데이터 웨어하우징 시나리오에 사용될 것으로 예상합니다. 클러스터형 columnstore 인덱스는 업데이트 가능하므로 해당 작업에서 많은 삽입, 업데이트 및 삭제 작업을 수행할 수 있습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "36187616"
 -   [관련된 태스크 및 항목](#related)  
   
 ##  <a name="basics"></a> 기본 사항  
- *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터형 및 비클러스터형 columnstore 인덱스 모두 지원합니다. 둘 다 동일한 메모리 내 columnstore 기술을 사용하지만 용도와 지원 기능에 차이가 있습니다.  
+ *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모두 클러스터형 및 비클러스터형 columnstore 인덱스를 지원합니다. 둘 다 동일한 메모리 내 columnstore 기술을 사용하지만 용도와 지원 기능에 차이가 있습니다.  
   
 ###  <a name="benefits"></a> 이점  
  columnstore 인덱스는 대개 큰 데이터 집합을 분석하는 읽기 전용 쿼리에 적합합니다. 주로 데이터 웨어하우징 작업에 대한 쿼리가 여기에 해당합니다. columnstore 인덱스는 전체 테이블 검색을 사용하는 쿼리에는 뛰어난 성능을 제공하지만 특정 값을 찾아 데이터를 검색하는 쿼리에는 부적합합니다.  
@@ -106,7 +105,7 @@ ms.locfileid: "36187616"
  다음은 columnstore 인덱스와 관련된 주요 용어와 개념입니다.  
   
  columnstore 인덱스  
- *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터형 및 비클러스터형 columnstore 인덱스 모두 지원합니다. 둘 다 동일한 메모리 내 columnstore 기술을 사용하지만 용도와 지원 기능에 차이가 있습니다.  
+ *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모두 클러스터형 및 비클러스터형 columnstore 인덱스를 지원합니다. 둘 다 동일한 메모리 내 columnstore 기술을 사용하지만 용도와 지원 기능에 차이가 있습니다.  
   
  columnstore  
  *columnstore* 는 열과 행이 있는 테이블로 논리적으로 구성되고 열 데이터 형식으로 물리적으로 저장되는 데이터입니다.  
@@ -132,21 +131,21 @@ ms.locfileid: "36187616"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  비클러스터형 columnstore 인덱스  
- A *비클러스터형 columnstore 인덱스* 기존 클러스터형된 인덱스 또는 힙의 테이블에 만들어지는 읽기 전용 인덱스입니다. 여기에는 테이블의 모든 열을 포함한 열 하위 집합의 복사본이 들어 있습니다. 비클러스터형 columnstore 인덱스가 들어 있는 테이블은 읽기 전용입니다.  
+ A *비클러스터형 columnstore 인덱스* 기존 클러스터형된 인덱스 또는 힙 테이블에서 만든 읽기 전용 인덱스입니다. 여기에는 테이블의 모든 열을 포함한 열 하위 집합의 복사본이 들어 있습니다. 비클러스터형 columnstore 인덱스가 들어 있는 테이블은 읽기 전용입니다.  
   
  비클러스터형 columnstore 인덱스는 원래 테이블에 대해 읽기 전용 작업을 수행하면서 동시에 분석 쿼리를 실행하기 위해 columnstore 인덱스를 포함하는 방법을 제공합니다.  
   
  ![비클러스터형 columnstore 인덱스](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "비클러스터형 columnstore 인덱스")  
   
  클러스터형 columnstore 인덱스  
- A *클러스터형된 columnstore 인덱스* 전체 테이블에 대 한 물리적 저장소 및 테이블에 대 한 유일한 인덱스입니다. 클러스터형 인덱스는 업데이트할 수 있습니다. 인덱스에 대해 삽입, 삭제 및 업데이트 작업을 수행할 수 있으며, 인덱스로 데이터를 대량 로드할 수 있습니다.  
+ A *클러스터형된 columnstore 인덱스* 전체 테이블에 대 한 물리적 저장소 이며 테이블에 대 한 유일한 인덱스입니다. 클러스터형 인덱스는 업데이트할 수 있습니다. 인덱스에 대해 삽입, 삭제 및 업데이트 작업을 수행할 수 있으며, 인덱스로 데이터를 대량 로드할 수 있습니다.  
   
  ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  열 세그먼트의 조각화를 줄이고 성능을 향상시키기 위해 columnstore 인덱스는 삭제된 행에 대한 ID의 B-트리와 함께 deltastore라는 rowstore 테이블에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
   
  deltastore  
- 클러스터형된 columnstore 인덱스에만 사용 되는 *deltastore* 는 행의 수는 columnstore로 이동할 수 있을 만큼 큰 될 때까지 행을 저장 하는 rowstore 테이블입니다. deltastore는 다른 DML 작업과 로드 성능을 향상을 위해 클러스터형 columnstore 인덱스와 함께 사용됩니다.  
+ 클러스터형된 columnstore 인덱스에 사용 하는 *deltastore* 는 행 수가 충분히 columnstore로 이동 될 때까지 행을 저장 하는 rowstore 테이블입니다. deltastore는 다른 DML 작업과 로드 성능을 향상을 위해 클러스터형 columnstore 인덱스와 함께 사용됩니다.  
   
  대규모 대량 로드 중에 대부분의 행은 deltastore를 통과하지 않고 columnstore로 곧바로 이동합니다. 대량 로드 끝부분의 일부 행은 수가 너무 적어서 행 그룹의 최소 크기(102,400개 행)에 맞지 않을 수 있습니다. 이 경우 최종 행은 columnstore 대신 deltastore로 이동합니다. 행 수가 102,400개 미만인 소규모 대량 로드의 경우 모든 행이 deltastore로 곧바로 이동합니다.  
   
@@ -155,18 +154,18 @@ ms.locfileid: "36187616"
 ##  <a name="dataload"></a> 데이터 로드  
   
 ###  <a name="dataload_nci"></a> 비클러스터형 Columnstore 인덱스로 데이터 로드  
- 비클러스터형 columnstore 인덱스로 데이터를 로드 하려면 첫 번째 힙으로 저장 된 또는 클러스터 된 기존의 rowstore 테이블로 데이터 로드 인덱스로 한 다음이 포함 된 비클러스터형 columnstore 인덱스를 만들 [CREATE COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ 비클러스터형 columnstore 인덱스로 데이터를 로드 하려면 첫 번째 힙으로 저장 또는 클러스터 된 기존의 rowstore 테이블로 데이터 로드 및 사용 하 여 비클러스터형 columnstore 인덱스를 만든 [CREATE COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  ![Columnstore 인덱스로 데이터 로드](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "columnstore 인덱스로 데이터 로드")  
   
  비클러스터형 columnstore 인덱스가 있는 테이블은 인덱스가 삭제되거나 비활성화될 때까지 읽기 전용입니다. 테이블과 비클러스터형 columnstore 인덱스를 업데이트하려면 파티션을 내부 및 외부 전환합니다. 인덱스를 비활성화하고 테이블을 업데이트한 후 인덱스를 다시 작성할 수도 있습니다.  
   
- 자세한 내용은 참조 하십시오. [비클러스터형 Columnstore 인덱스를 사용 하 여](indexes.md)  
+ 자세한 내용은 참조 하세요. [비클러스터형 Columnstore 인덱스를 사용 하 여](indexes.md)  
   
 ###  <a name="dataload_cci"></a> 클러스터형 Columnstore 인덱스로 데이터 로드  
  ![클러스터형 columnstore 인덱스로 로드](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "클러스터형 columnstore 인덱스로 로드")  
   
- 다이어그램과 같이, 클러스터형된 columnstore 인덱스로 데이터 로드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ 다이어그램과 같이, 클러스터형된 columnstore 인덱스로 데이터를 로드 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 1.  최대 크기의 행 그룹을 columnstore에 직접 삽입합니다. 데이터가 로드되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]은 열려 있는 행 그룹에 데이터 행을 선착순으로 할당합니다.  
   
@@ -186,7 +185,7 @@ ms.locfileid: "36187616"
   
     2.  행 수가 행 그룹당 최대 행보다 적으면 행이 deltastore에 추가됩니다.  
   
- Deltastore 태스크와 프로세스에 대 한 자세한 내용은 참조 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
+ Deltastore 태스크와 프로세스에 대 한 자세한 내용은 참조 하세요. [클러스터형 Columnstore 인덱스를 사용 하 여](../../database-engine/using-clustered-columnstore-indexes.md)  
   
 ##  <a name="performance"></a> 성능 팁  
   
@@ -200,20 +199,20 @@ ms.locfileid: "36187616"
 ##  <a name="related"></a> 관련된 태스크 및 항목  
   
 ### <a name="nonclustered-columnstore-indexes"></a>비클러스터형 columnstore 인덱스  
- 일반 작업에 대 한 참조 [비클러스터형 Columnstore 인덱스를 사용 하 여](../../database-engine/using-nonclustered-columnstore-indexes.md)합니다.  
+ 일반적인 작업을 참조 하세요 [비클러스터형 Columnstore 인덱스를 사용 하 여](../../database-engine/using-nonclustered-columnstore-indexes.md)입니다.  
   
 -   [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) 에 REBUILD를 사용 합니다.  
+-   [ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) 에 REBUILD를 사용 합니다.  
   
 -   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>클러스터형 columnstore 인덱스  
- 일반 작업에 대 한 참조 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)합니다.  
+ 일반적인 작업을 참조 하세요 [클러스터형 Columnstore 인덱스를 사용 하 여](../../database-engine/using-clustered-columnstore-indexes.md)입니다.  
   
--   [클러스터형 COLUMNSTORE 인덱스를 만들 &#40;Transact SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 또는 REORGANIZE를 사용 합니다.  
+-   [ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 또는 REORGANIZE를 사용 하 여 합니다.  
   
 -   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   

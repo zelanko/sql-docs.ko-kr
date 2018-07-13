@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저 (Analysis Services)에 권한을 부여 | Microsoft Docs
+title: 저장된 프로시저 (Analysis Services)에 대 한 권한 부여 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c82a2df266f9e6dce2767ecceb3e2af9bd12fc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278759"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>저장 프로시저 관련 사용 권한 부여(Analysis Services)
-  저장 프로시저 또는 어셈블리에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 로 작성 된 외부 루틴이 며는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의 기능을 확장 하는.NET 프로그래밍 언어로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 개발자는 어셈블리를 사용하여 언어 간 통합, 예외 처리, 버전 관리 지원, 배포 지원 및 디버깅 지원을 이용할 수 있습니다.  
+  저장 프로시저 또는 어셈블리 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 로 작성 된 외부 루틴이 며를 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의 기능을 확장 하는.NET 프로그래밍 언어로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 개발자는 어셈블리를 사용하여 언어 간 통합, 예외 처리, 버전 관리 지원, 배포 지원 및 디버깅 지원을 이용할 수 있습니다.  
   
  어셈블리를 등록하려면 서버 관리자여야 합니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36186673"
   
  다음은 저장 프로시저 실행에 사용되는 권한 집합입니다.  
   
--   **안전** 안전 권한 집합을 저장된 프로시저에는 보호 된 리소스에 액세스할 수 없습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework입니다. 이 권한 집합에서는 계산만 허용됩니다. 정보가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 외부로 누출되지 않고 사용 권한을 승격할 수 없으며 데이터 훼손 공격의 위험이 최소화된다는 점에서 가장 안전한 권한 집합입니다.  
+-   **안전한** 안전 권한 집합을 저장된 프로시저의 보호 된 리소스에 액세스할 수 없습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework입니다. 이 권한 집합에서는 계산만 허용됩니다. 정보가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 외부로 누출되지 않고 사용 권한을 승격할 수 없으며 데이터 훼손 공격의 위험이 최소화된다는 점에서 가장 안전한 권한 집합입니다.  
   
 -   **외부 액세스** 외부 액세스 권한 집합을 사용하면 저장 프로시저에서 관리 코드를 사용하여 외부 리소스에 액세스할 수 있습니다. 저장 프로시저를 이 권한 집합으로 설정하면 서버 불안정을 일으키는 프로그래밍 오류가 발생하지 않습니다. 그러나 서버 외부로 정보가 누출되거나 권한 승격 및 데이터 훼손 공격의 가능성이 있습니다.  
   

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 87409bbf8d057e30b458f79b4746e7048e51f363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160074"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>방법: 보고서 서버에 데이터 처리 확장 프로그램 배포
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>방법: 데이터 처리 확장 프로그램을 보고서 서버에 배포
   보고서 서버는 렌더링된 보고서의 데이터 검색 및 처리를 위해 데이터 처리 확장 프로그램을 사용합니다. 데이터 처리 확장 프로그램 어셈블리를 보고서 서버에 전용 어셈블리로 배포해야 합니다. 또한 보고서 서버 구성 파일 RSReportServer.config에서 항목을 만들어야 합니다.  
   
 ## <a name="procedures"></a>절차  
@@ -39,7 +39,7 @@ ms.locfileid: "36186255"
   
 2.  어셈블리 파일이 복사된 후 RSReportServer.config 파일을 엽니다. RSReportServer.config 파일은 ReportServer 디렉터리에 있습니다. 구성 파일에서 데이터 처리 확장 프로그램 어셈블리 파일에 대한 항목을 만들어야 합니다. 구성 파일은 Visual Studio 또는 메모장과 같은 간단한 텍스트 편집기를 사용하여 열 수 있습니다.  
   
-3.  찾기의 `Data` RSReportServer.config 파일의 요소입니다. 새로 만든 데이터 처리 확장 프로그램에 대한 항목이 다음 위치에 만들어져 있습니다.  
+3.  찾을 `Data` RSReportServer.config 파일의 요소입니다. 새로 만든 데이터 처리 확장 프로그램에 대한 항목이 다음 위치에 만들어져 있습니다.  
   
     ```  
     <Extensions>  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c794413b64aa564433352fa30beb99bf927a258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d50f6bb85aa013ece08c2c7ce12c9b1c7f05a731
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155724"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
   사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정할 수 있으며 폴더의 검색 순서를 지정할 수 있습니다. 이 대화 상자를 표시하려면 파일에서 찾기, 파일에서 바꾸기, 찾기 및 바꾸기 창의 **찾는 위치** 드롭다운 목록 옆의 **찾아보기(...)** 단추를 선택합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 템플릿을 사용 하 여 동작 만들려면 | Microsoft Docs
+title: 템플릿을 사용 하 여 작업 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0b608f3ffeb7836481adb23fc316d3dce63bd3bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c1f322ee3d775605a0c9636c5da060044d35006
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259569"
 ---
 # <a name="use-a-template-to-create-an-action"></a>템플릿을 사용하여 동작 만들기
   큐브 디자이너의 **동작** 뷰에는 일반적인 동작을 만드는 데 사용할 수 있는 수많은 템플릿이 들어 있습니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다.  
   
 > [!NOTE]  
->  동작을 만든 후 큐브를 업데이트하거나 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 참조 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  
+>  동작을 만든 후 큐브를 업데이트하거나 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>템플릿을 사용하여 동작 만들려면  
   

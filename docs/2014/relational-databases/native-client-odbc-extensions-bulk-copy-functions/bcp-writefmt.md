@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185836"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427882"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   현재 대량 복사 데이터 파일의 서식에 대한 설명이 포함된 서식 파일을 만듭니다.  
@@ -58,14 +56,14 @@ szFormatFile
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- 서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. 에 대 한 호출이 [bcp_columns](bcp-columns.md) 및 [bcp_colfmt](bcp-colfmt.md) 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 이 정의에서 참조 하는 파일에 저장 *szFormatFile*합니다. 자세한 내용은 참조 [bcp_init](bcp-init.md)합니다.  
+ 서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. 에 대 한 호출 [bcp_columns](bcp-columns.md) 하 고 [bcp_colfmt](bcp-colfmt.md) 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 이 정의에서 참조 하는 파일에 저장 *szFormatFile*합니다. 자세한 내용은 [bcp_init](bcp-init.md)합니다.  
   
- 구조에 대 한 자세한 내용은 **bcp** 데이터 서식 파일 참조 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)합니다.  
+ 구조에 대 한 자세한 내용은 **bcp** 데이터 형식으로 파일을 참조 하십시오 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
- 사용 하 여 저장된 된 서식 파일을 로드 하려면 [bcp_readfmt](bcp-readfmt.md)합니다.  
+ 저장된 된 서식 파일을 로드 하려면 사용 [bcp_readfmt](bcp-readfmt.md)합니다.  
   
 > [!NOTE]  
->  생성 된 서식 파일 **bcp_writefmt** 의 버전 에서만 지원 되는 **bcp** 유틸리티와 함께 배포 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 이상.  
+>  생성 된 서식 파일 **bcp_writefmt** 의 버전 에서만 지원 됩니다 합니다 **bcp** 유틸리티와 함께 배포 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전.  
   
 ## <a name="example"></a>예제  
   

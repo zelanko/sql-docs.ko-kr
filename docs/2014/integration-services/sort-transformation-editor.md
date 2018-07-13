@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b4dc4369d766a0a656cd0af32331a00c11e961b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 818625c2d43080560fee3fc87879f96acad20c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240945"
 ---
 # <a name="sort-transformation-editor"></a>정렬 변환 편집기
   **정렬 변환 편집기** 대화 상자를 사용하여 정렬할 열을 선택하고, 정렬 순서를 설정하고, 중복을 제거할지 여부를 지정할 수 있습니다.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FoldingParameters element
 ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12cae8f4ad02f57f63fd168ff41503f233f53c4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac348aa326c53b1266edfff3396feadda6c80ea6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161144"
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 요소(ASSL)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에서 마이닝 모델의 교차 유효성 검사를 수행할 때 사용하는 매개 변수를 지정합니다.  
@@ -72,9 +72,9 @@ ms.locfileid: "36186655"
 ## <a name="remarks"></a>Remarks  
  이러한 속성은 내부에서 사용하기 위한 것이며 DDL 문에서 사용할 수 없습니다.  
   
- 교차 유효성 검사를 사용 하는 방법에 대 한 내용은 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], 참조 [교차 유효성 검사 보고서의 측정값](../../data-mining/measures-in-the-cross-validation-report.md)합니다.  
+ 교차 유효성 검사를 사용 하는 방법에 대 한 자세한 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]를 참조 하세요 [교차 유효성 검사 보고서의 측정값](../../data-mining/measures-in-the-cross-validation-report.md)합니다.  
   
- 사용 하 여 교차 유효성 검사를 수행 하는 방법에 대 한 내용은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 저장된 프로시저 참조 [Stored Procedures &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)합니다.  
+ 사용 하 여 교차 유효성 검사를 수행 하는 방법에 대 한 자세한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 저장 프로시저 [4788-9593-317b2826132d"&gt;data Mining Stored Procedures &#40;Analysis Services-Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

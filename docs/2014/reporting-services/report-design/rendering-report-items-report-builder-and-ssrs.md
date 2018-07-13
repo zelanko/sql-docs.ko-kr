@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240403"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
   보고서 항목의 숫자, 크기 및 위치는 렌더러에서 보고서 본문에 페이지를 매기는 방식에 영향을 줍니다. 아래에는 다양한 보고서 항목이 렌더링되는 방식에 대해 설명되어 있습니다.  
@@ -81,13 +81,13 @@ ms.locfileid: "36186704"
   
 -   반복되는 열 머리글 및 행 머리글  
   
-     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. 조건에 맞는 항목는 `RepeatWith` 속성은 대상 데이터 영역에 보다 가까이 있는 항목이 데이터 영역에서 멀리 떨어져 있는 항목 보다 우선 순위를 갖습니다.  
+     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. 항목 위치를 `RepeatWith` 대상 데이터 영역에 더 가까운 속성이 설정 되어 데이터 영역에서 멀리 떨어져 있는 항목 보다 우선 순위가 있습니다.  
   
--   입력란 또는 사각형 명시적 KeepTogether 속성이로 설정 된 등의 작은 보고서 항목 `true`합니다.  
+-   입력란 또는 사각형으로 설정 하는 명시적인 KeepTogether 속성이 등의 작은 보고서 항목 `true`합니다.  
   
--   하위 보고서 또는 명시적 KeepTogether 속성이로 설정 된 비 가장 안쪽의 테이블 릭 스 멤버 등의 큰 보고서 항목 `true`합니다.  
+-   하위 보고서 또는 명시적인 KeepTogether 속성이 설정 되지 않은 가장 안쪽의 테이블 릭 스 멤버 등의 큰 보고서 항목 `true`합니다.  
   
--   명시적 KeepTogether 속성이 있는 테이블 릭 스 데이터 영역으로 설정 `true`합니다.  
+-   명시적인 KeepTogether 속성이 테이블 릭 스 데이터 영역으로 `true`합니다.  
   
 ### <a name="subreports"></a>하위 보고서  
  하위 보고서는 별도의 보고서 .rdl 파일에 정의된 다른 보고서를 포함하는 사각형으로 렌더링됩니다. 하위 보고서 파일을 부모 보고서에서 액세스할 수 있도록 하려면 먼저 해당 파일을 보고서 서버에 게시해야 합니다.  

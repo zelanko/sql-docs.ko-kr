@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ef4b98997305cf1bd3232f51fd9d7ae0fb8a3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186811"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420592"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
   이 예제에서는 `bcp_bind` 및 `bcp_sendrow`를 사용하여 프로그램 변수에서 SQL Server로 데이터를 대량 복사하는 대량 복사 함수의 사용 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
   
  이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
- **보안 정보** 가능 하면 Windows 인증을 사용 합니다. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 사용 하 여 암호화 해야 자격 증명을 유지 해야 하는 경우 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)합니다.  
+ **보안 정보** 가능 하면 Windows 인증을 사용 합니다. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 사용 하 여 암호화 해야 자격 증명을 유지 해야 합니다 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)합니다.  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>프로그램 변수에서 직접 대량 복사 함수를 사용하려면  
   
@@ -48,17 +46,17 @@ ms.locfileid: "36186811"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름을 지정합니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: DB_IN 뷰 또는 테이블로 DB_OUT는 응용 프로그램은 테이블 또는 뷰에서 응용 프로그램에 있습니다.  
+    -   복사 방향을: DB_IN 뷰 또는 테이블로 복사 하려는 경우 DB_OUT 응용 프로그램에서 테이블 또는 뷰에서 응용 프로그램입니다.  
   
 5.  호출 [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 열을 프로그램 변수에 바인딩할 대량 복사에서 각 열에 대 한 합니다.  
   
-6.  프로그램 변수 데이터 및 호출 채우는 [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 데이터 행을 보내려고 합니다.  
+6.  데이터 및 호출을 사용 하 여 프로그램 변수를 채우고 [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 데이터 행을 보내도록 합니다.  
   
-7.  여러 행을 보낸 후 호출 [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 행 이미 전송 된 검사점 수입니다. 것이 좋습니다 호출할 [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 1000 행 마다 한 번 이상.  
+7.  여러 행을 보낸 후에 호출 [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 검사점 행 이미 전송 합니다. 호출 하는 것이 좋습니다 [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 행 1000 개 행당 한 번 이상.  
   
-8.  모든 행을 보낸 후 호출 [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 작업을 완료할 수 있습니다.  
+8.  모든 행을 보낸 후에 호출 [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 작업을 완료 합니다.  
   
- 변경할 수 있습니다 위치와 프로그램 변수의 길이 대량 복사 작업 중 호출 하 여 [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 및 [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)합니다. 사용 하 여 [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 여러 대량 복사 옵션을 설정 합니다. 사용 하 여 [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 보내려고 `text`, `ntext`, 및 `image` 서버에는 세그먼트의 데이터입니다.  
+ 변경할 수 있습니다 위치와 프로그램 변수 길이 대량 복사 작업을 하는 동안 호출한 [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 하 고 [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)합니다. 사용 하 여 [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 다양 한 대량 복사 옵션을 설정 합니다. 사용 하 여 [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 보낼 `text`합니다 `ntext`, 및 `image` 서버를 세그먼트의 데이터입니다.  
   
 ## <a name="example"></a>예제  
  이 예제는 IA64에서 지원되지 않습니다.  

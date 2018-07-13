@@ -5,10 +5,9 @@ ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 17828 (Database Engine error)
 - maxtokensize
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - login packet (bad)
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9ee8f5013f4776a189d73b034ae64d105b75bfbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 300ad8adc9c710ecc8b8632711a81d624b900852
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186761"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412452"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -55,11 +54,11 @@ ms.locfileid: "36186761"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **MaxTokenSize를 변경 하려면****서버 컴퓨터에서**   
+ **MaxTokenSize를 변경 하려면****서버 컴퓨터**   
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  형식 `regedit`, 클릭 하 고 **확인**합니다. **사용자 계정 컨트롤** 대화 상자가 열리면 **계속**을 클릭합니다.  
+2.  형식 `regedit`를 클릭 하 고 **확인**합니다. **사용자 계정 컨트롤** 대화 상자가 열리면 **계속**을 클릭합니다.  
   
 3.  **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**로 이동합니다.  
   
