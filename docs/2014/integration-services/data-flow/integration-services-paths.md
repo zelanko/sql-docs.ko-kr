@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248593"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - StartDate property
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dfef00569a24da2662d38db2ae57807d5d8acf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: d044ca33722ba9075f6adbb35b5a3e03d714917e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323913"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 속성(SecurityCertificate 클래스)
   보안 인증서의 유효 기간 시작 날짜를 가져옵니다.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- Securitycertificate [SecurityCertificate 클래스]-class.md) 보안 인증서를 나타내는 개체입니다.  
+ [SecurityCertificate 클래스] securitycertificate-class.md) 보안 인증서를 나타내는 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  보안 인증서의 유효 기간 시작 날짜를 지정하는 uint32 값입니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
 - logs [SQL Server], jobs
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 206f25645a0b00829f76d45c497938d29a9775cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 23b2eaeabb0bdcecdaafe2bfc736e5cc38ccadad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247879"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그를 설정하는 방법에 대해 설명합니다.  

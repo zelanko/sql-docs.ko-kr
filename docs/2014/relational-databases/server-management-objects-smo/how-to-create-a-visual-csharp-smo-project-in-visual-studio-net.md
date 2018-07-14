@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96b2f52b1d993c02536b70e39ba7d1868643a04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270669"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
   이 섹션에서는 간단한 SMO 콘솔 응용 프로그램을 빌드하는 방법을 설명합니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "36090826"
   
 3.  **프로젝트 형식** 대화 상자에서 **Visual C#** 를 선택한 후 **Windows**합니다. 에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 된 템플릿 창 **Windows 응용 프로그램**합니다.  
   
-4.  (선택 사항) 에 **이름** 필드를 새 응용 프로그램의 이름을 입력 합니다.  
+4.  (선택 사항) 에 **이름을** 필드에 새 응용 프로그램의 이름을 입력 합니다.  
   
-5.  Visual C# 응용 프로그램 형식을 선택합니다. 에 따라, 선택 하는 예제에 대 한 **콘솔 응용 프로그램**합니다.  
+5.  Visual C# 응용 프로그램 형식을 선택합니다. 에 따라 선택 하는 예제 **콘솔 응용 프로그램**합니다.  
   
 6.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-7.  클릭 **찾아보기**에서 SMO 어셈블리를 찾습니다는 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 폴더 및 다음 파일을 선택 합니다. SMO 응용 프로그램을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
+7.  클릭 **찾아보기**에서 SMO 어셈블리를 찾아서는 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 폴더를 선택한 후 다음 파일입니다. SMO 응용 프로그램을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36090826"
   
 9. **열기**를 클릭합니다.  
   
-10. 에 **보기** 메뉴를 클릭 **코드**. 또는 Program1.cs [Design] Windows를 선택 하 고 하 여 코드 창을 표시 하는 windows form을 두 번 클릭 합니다.  
+10. 에 **뷰** 메뉴에서 클릭 **코드**. 또는 Program1.cs [Design] Windows를 선택 하 고 코드 창을 표시 하려면 windows form을 두 번 클릭 합니다.  
   
 11. 이 코드에서 네임스페이스 문 앞에 다음 `using` 문을 입력하여 SMO 네임스페이스의 형식을 한정합니다.  
   

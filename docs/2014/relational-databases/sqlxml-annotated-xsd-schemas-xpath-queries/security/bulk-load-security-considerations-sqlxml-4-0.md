@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c64b20924f12a94b467f32659009bea9760d0e71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 428041edc6418e71f08b757b622b6e5ebb640dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280559"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>대량 로드 보안 고려 사항(SQLXML 4.0)
   다음은 XML 대량 로드를 사용하기 위한 보안 지침입니다.  

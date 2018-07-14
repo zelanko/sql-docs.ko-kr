@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingQuery element
 ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4ade6950de95029d3eea4105bd34f636fd3632a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01d9ccc0e5e5c376e0d5e7ee08aa42eb0e062b97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250893"
 ---
 # <a name="processingquery-element-assl"></a>ProcessingQuery 요소(ASSL)
   증분 처리 상태 알림을 위해 실행할 쿼리의 매개 변수가 있는 텍스트를 포함합니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "36090253"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 테이블에는 [DataSourceView](../objects/datasourceview-element-assl.md) 에서 참조 하는 `ProcessingQuery` 형제 요소로 식별 됩니다 [TableID](id-element-assl.md)합니다.  
+ 표의 합니다 [DataSourceView](../objects/datasourceview-element-assl.md) 에서 참조 되는 합니다 `ProcessingQuery` 형제 요소로 식별 됩니다 [TableID](id-element-assl.md)합니다.  
   
- 부모에 해당 하는 요소 `ProcessingQuery` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>합니다.  
+ 부모에 해당 하는 요소가 `ProcessingQuery` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

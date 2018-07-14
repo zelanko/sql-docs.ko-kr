@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
 - history tables [SQL Server]
@@ -34,15 +33,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 53
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ffd1686996c7fdc004c7418e3247232f3fb26ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cebe5c66a12602ef4b4e3f881a34db547aa7c4d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260919"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
   서버 인스턴스에서 이루어지는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 작업에 대한 전체 기록은 **msdb** 데이터베이스에 저장됩니다. 이 항목에서는 백업 및 복원 기록 테이블에 대해 설명하고 백업 기록에 액세스하는 데 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대해서도 설명합니다. 또한 이 항목에서는 데이터베이스와 트랜잭션 로그 파일을 나열하는 것이 유용한 경우에 대해 설명하고, 백업 헤더 정보와 미디어 헤더 정보를 사용하는 경우를 비교하여 설명합니다.  

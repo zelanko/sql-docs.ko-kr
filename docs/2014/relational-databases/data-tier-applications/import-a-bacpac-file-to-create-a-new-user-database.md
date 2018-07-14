@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importdac.progress.f1
 - sql12.swb. importdac.settings.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41897611efc3c44baa03b24763f76c6f6925e514
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 17545a7c79026b546ce31b3dcefbcf946c452ef1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266829"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
   DAC(데이터 계층 응용 프로그램) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 원본 데이터베이스를 데이터와 함께 복사할 수 있습니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "36088188"
   
  계속하려면 **다음**을 클릭합니다.  
   
- **SQL 데이터베이스의 경우:**  
+ **SQL database:**  
   
 -   **새 데이터베이스 이름** – 가져올 데이터베이스의 이름을 지정합니다.  
   

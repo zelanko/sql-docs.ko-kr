@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 서버 기능 | Microsoft Docs
+title: ADOMD.NET Server 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 622a7c51bfd6c2a8a9defba70a412967a48dee50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8463ec4804e1ba7ada8ea4e781a34495f5a0d94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269919"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET Server 기능
   모든 ADOMD.NET 서버 개체는 서버의 데이터 및 메타데이터에 대해 읽기 전용 액세스를 제공하므로 ADOMD.NET 서버 개체 모델을 사용하여 데이터 및 메타데이터를 검색할 수 있습니다. 그러나 이 서버 개체 모델은 스키마 행 집합을 지원하지 않습니다.  
   
- ADOMD.NET 서버 개체를 만들 수 있습니다 (UDF) 사용자 정의 함수 또는 저장된 프로시저에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 SQL과 같은 언어로 만들어진 쿼리 문을 통해 호출됩니다. 이러한 in-process 메서드는 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공하기도 합니다.  
+ ADOMD.NET 서버 개체를 사용 하 여 사용자 정의 함수 (UDF) 또는 저장된 프로시저를 만들 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 SQL과 같은 언어로 만들어진 쿼리 문을 통해 호출됩니다. 이러한 in-process 메서드는 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공하기도 합니다.  
   
 > [!NOTE]  
 >  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 개체는 DMX만을 지원합니다.  
   
 ## <a name="what-is-a-udf"></a>UDF 정의  
- A *UDF* 는 다음과 같은 특징이 있는 메서드입니다.  
+ A *UDF* 다음과 같은 특징이 있는 메서드입니다.  
   
 -   UDF는 쿼리 컨텍스트에서 호출할 수 있습니다.  
   
@@ -51,9 +51,9 @@ FROM SalesModel
 ```  
   
 ## <a name="what-is-a-stored-procedure"></a>저장 프로시저 정의  
- A *저장 프로시저* 는 다음과 같은 특징이 있는 메서드입니다.  
+ A *저장 프로시저* 다음과 같은 특징이 있는 메서드입니다.  
   
--   저장된 프로시저 호출에서 자체적으로 MDX [호출](/sql/mdx/mdx-data-manipulation-call) 문.  
+-   호출 저장된 프로시저에서 MDX를 사용 하 여 자체 [호출](/sql/mdx/mdx-data-manipulation-call) 문입니다.  
   
 -   저장 프로시저는 매개 변수 수에 제한이 없습니다.  
   

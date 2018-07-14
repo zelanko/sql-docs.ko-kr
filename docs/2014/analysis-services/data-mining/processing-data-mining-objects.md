@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52caf01ea2f82b2d566b41ba402fa31b81283638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f62e8f3b9abcde430557641beb92a1f7566f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257469"
 ---
 # <a name="processing-data-mining-objects"></a>데이터 마이닝 개체 처리
   데이터 마이닝 개체는 처리되기 전까지는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을*처리* 하는 작업을 *학습*이라고도 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36091177"
   
  다음 다이어그램에서는 마이닝 구조가 처리될 때와 마이닝 모델이 처리될 때의 데이터 흐름을 보여 줍니다.  
   
- ![데이터 처리: 원본 모델에 구조에](../media/dmcon-modelarch.gif "데이터의 처리: 모델에 구조에 대 한 소스")  
+ ![데이터 처리: 원본 구조에 모델](../media/dmcon-modelarch.gif "데이터 처리: 원본 구조에 모델")  
   
 ## <a name="viewing-the-results-of-processing"></a>처리 결과 보기  
  마이닝 구조가 처리된 후 해당 마이닝 구조에는 통계 분석에 사용할 데이터의 압축된 표현이 포함됩니다. 캐시가 지워지지 않은 경우 다음 방법으로 이 캐시의 데이터에 액세스할 수 있습니다.  

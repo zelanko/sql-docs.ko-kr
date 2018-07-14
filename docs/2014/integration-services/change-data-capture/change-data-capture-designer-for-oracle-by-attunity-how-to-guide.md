@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 60b016252c2a9c038fe376e4c2e46fdc3822ca18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ba6b31b21d1c438bdd27b6de36742211da46cd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248493"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle CDC Designer 방법 가이드
   이 섹션에서는 Attunity Oracle CDC Designer에서 태스크를 수행하는 방법에 대해 설명합니다.  

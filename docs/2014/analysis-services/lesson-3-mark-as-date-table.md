@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a283b56c215e51dbdb0df90b9c51c21e232df2f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265749"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>4단원: 날짜 테이블로 표시
-  에서는 이름이 DimDate 인 차원 테이블을 가져온 2 단원: 데이터를 추가 합니다. 3 단원에서에서 DimDate 테이블의 이름을 바꾼 다음: 간단히 Date로 이름을 바꿀 열입니다. 해당 모델에서 이제 이 테이블의 이름은 Date이며 날짜 및 시간 데이터를 포함한다는 점에서 *날짜 테이블*이라고 부를 수도 있습니다.  
+  DimDate 라는 차원 테이블을 가져온 2 단원: 데이터를 추가 합니다. 바꾼 DimDate 테이블의 3 단원: 열 이름 바꾸기 간단히 Date로 합니다. 해당 모델에서 이제 이 테이블의 이름은 Date이며 날짜 및 시간 데이터를 포함한다는 점에서 *날짜 테이블*이라고 부를 수도 있습니다.  
   
  잠시 후 측정값을 만들면서 해보겠지만, 계산에 시간 인텔리전스 함수를 사용할 때는 항상 *날짜 테이블* 및 이 테이블의 고유 식별자인 *날짜 열* 이 포함되는 날짜 테이블 속성을 지정해야 합니다. 그런 다음 다른 테이블과 Date 테이블 사이에 유효한 관계를 만들 수 있습니다. 이것은 DAX 시간 인텔리전스 함수를 사용하는 계산에 필요합니다.  
   

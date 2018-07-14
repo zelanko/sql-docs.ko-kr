@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], agents
 - Log Reader Agent, monitoring
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8d35882ff0ce70aa90600350582cf5b581345d42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3a5cb81dcbfec1fead6c538d88abdd7d864cfa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268549"
 ---
 # <a name="monitor-replication-agents"></a>복제 에이전트 모니터링
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 복제 작업에 대한 구조적 뷰를 제공할 뿐만 아니라 특정 에이전트에서 정보를 간단하게 찾을 수 있게 해줍니다. 다음 목록에는 각 에이전트, 에이전트를 찾을 수 있는 복제 모니터의 탭 및 이러한 탭에 액세스하는 방법을 설명하는 항목에 대한 링크가 포함되어 있습니다.  

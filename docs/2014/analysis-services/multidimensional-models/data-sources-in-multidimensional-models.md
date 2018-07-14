@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - Analysis Services objects, data sources
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fb84aceb83b3dfd0ac5e1e36d884b41df2850769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 962e4cf17f53db60f3f766e1bd4432b1bd07df69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267639"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>다차원 모델의 데이터 원본
   다차원 모델로 가져오거나 로드하는 모든 데이터는 외부 데이터 원본에서 생성됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "36088026"
 |-----------|-----------------|  
 |[지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)|다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.|  
 |[데이터 원본 만들기 &#40;SSAS 다차원&#41;](create-a-data-source-ssas-multidimensional.md)|다차원 모델에 데이터 원본 개체를 추가하는 방법에 설명합니다.|  
-|[솔루션 탐색기에서 데이터 원본을 삭제 &#40;SSAS 다차원&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|이 절차를 사용하여 다차원 모델에서 데이터 원본 개체를 삭제할 수 있습니다.|  
+|[솔루션 탐색기에서 데이터 원본 삭제 &#40;SSAS 다차원&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|이 절차를 사용하여 다차원 모델에서 데이터 원본 개체를 삭제할 수 있습니다.|  
 |[데이터 원본 속성 설정 &#40;SSAS 다차원&#41;](set-data-source-properties-ssas-multidimensional.md)|각 속성과 각 속성을 설정하는 방법에 대해 설명합니다.|  
-|[가장 옵션 설정 &#40;SSAS-다차원 데이터&#41;](set-impersonation-options-ssas-multidimensional.md)|가장 정보 대화 상자에서 옵션을 구성하는 방법을 설명합니다.|  
+|[가장 옵션 설정 &#40;&AMP;#40;SSAS-다차원&#41;](set-impersonation-options-ssas-multidimensional.md)|가장 정보 대화 상자에서 옵션을 구성하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 개체 &#40;Analysis Services-다차원 데이터&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   

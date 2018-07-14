@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 120c98d128698331a054a89be97ffa1513bb0191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263399"
 ---
 # <a name="pendingvalue-element-assl"></a>PendingValue 요소(ASSL)
-  값의 연결 된 보류 중인 읽기 전용 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 요소입니다.  
+  연결된 된 보류 중인 읽기 전용 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36090536"
 ## <a name="remarks"></a>Remarks  
  이 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 현재 인스턴스를 다음에 시작할 때 사용할 `ServerProperty` 값을 포함합니다. 일반적으로 이 값은 서버 속성에 대한 값이 저장된 위치(초기화 파일, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 레지스트리 또는 다른 저장 메커니즘)에서 검색됩니다.  
   
- 부모에 해당 하는 요소 `PendingValue` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
+ 부모에 해당 하는 요소가 `PendingValue` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ServerProperties 요소 &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [서버 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

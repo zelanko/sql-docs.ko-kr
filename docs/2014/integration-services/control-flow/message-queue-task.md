@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269669"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리되는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
@@ -51,11 +51,11 @@ ms.locfileid: "36088662"
 ## <a name="message-types"></a>메시지 유형  
  메시지 큐 태스크에서 제공하는 메시지 유형을 다음과 같은 방법으로 구성할 수 있습니다.  
   
--   `Data file` 메시지는 메시지는 파일에 포함 되도록 지정 합니다. 메시지를 받을 때 파일을 저장하고, 기존 파일을 덮어쓰고, 메시지를 받을 수 있는 태스크의 패키지를 지정하도록 태스크를 구성할 수 있습니다.  
+-   `Data file` 메시지는 메시지를 파일에 포함 되어 있는지를 지정 합니다. 메시지를 받을 때 파일을 저장하고, 기존 파일을 덮어쓰고, 메시지를 받을 수 있는 태스크의 패키지를 지정하도록 태스크를 구성할 수 있습니다.  
   
 -   `String` 메시지는 메시지를 문자열로 지정합니다. 메시지를 받을 때 받은 문자열을 사용자 정의 문자열과 비교하고 비교 결과에 따라 동작을 취하도록 태스크를 구성할 수 있습니다. 문자열 비교 시에는 전체 문자열 일치 및 대/소문자 구분 여부를 지정하거나 하위 문자열을 사용할 수 있습니다.  
   
--   `String message to variable` 소스 메시지를 대상 변수에 전송 하는 문자열로 지정 합니다. 전체 문자열 일치, 대/소문자 구분 또는 하위 문자열 비교를 사용하여 받은 문자열을 사용자 정의 문자열과 비교하도록 태스크를 구성할 수 있습니다. 이 메시지 유형은 태스크에서 메시지를 받는 경우에만 사용할 수 있습니다.  
+-   `String message to variable` 소스 메시지를 대상 변수에 전송 되는 문자열로 지정 합니다. 전체 문자열 일치, 대/소문자 구분 또는 하위 문자열 비교를 사용하여 받은 문자열을 사용자 정의 문자열과 비교하도록 태스크를 구성할 수 있습니다. 이 메시지 유형은 태스크에서 메시지를 받는 경우에만 사용할 수 있습니다.  
   
 -   `Variable` 메시지에 하나 이상의 변수가 포함 되도록 지정 합니다. 메시지에 포함된 변수 이름을 지정하도록 메시지를 구성할 수 있습니다. 메시지를 받을 때 메시지를 받아올 패키지와 메시지의 대상인 변수를 모두 지정하도록 태스크를 구성할 수 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36088662"
   
 -   메시지가 `Data file`에 저장된 경우 기존 파일을 덮어씁니다.  
   
--   사용 되는 경우 메시지 파일을 다른 파일 이름 저장는 `Data file message` 유형입니다.  
+-   메시지에서 사용 하는 경우 메시지 파일을 다른 파일 이름으로 저장 된 `Data file message` 형식입니다.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>메시지 큐 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
@@ -94,7 +94,7 @@ ms.locfileid: "36088662"
   
 -   [메시지 큐 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [메시지 큐 태스크 편집기 &#40;받기 페이지&#41;](../message-queue-task-editor-receive-page.md)  
+-   [메시지 큐 태스크 편집기 &#40;페이지를 수신 합니다.&#41;](../message-queue-task-editor-receive-page.md)  
   
 -   [메시지 큐 태스크 편집기 &#40;보내기 페이지&#41;](../message-queue-task-editor-send-page.md)  
   

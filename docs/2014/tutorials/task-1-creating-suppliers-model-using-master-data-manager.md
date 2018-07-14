@@ -10,37 +10,37 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1656767e7336942016b7130e24ecfa0101ab6c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f007133cf848248c8429a588059f72f4a96bd18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321363"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기
-  이 태스크에서는 명명 된 모델을 만듭니다 **Suppliers** 사용 하 여 MDS에 **마스터 데이터 관리자**합니다.  
+  이 태스크에서는 명명 된 모델을 만듭니다 **공급 업체** 사용 하 여 MDS **마스터 데이터 관리자**합니다.  
   
-1.  로 이동 [ http://localhost/mds ](http://localhost/mds) 를 시작 하려면 **마스터 데이터 관리자**합니다. 웹 응용 프로그램을 다른 이름으로 구성했거나 다른 웹 사이트에 구성한 경우 URL을 바꿉니다.  
+1.  이동할 [ http://localhost/mds ](http://localhost/mds) 시작 하려면 **마스터 데이터 관리자**합니다. 웹 응용 프로그램을 다른 이름으로 구성했거나 다른 웹 사이트에 구성한 경우 URL을 바꿉니다.  
   
      ![마스터 데이터 관리자-시스템 관리](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "마스터 데이터 관리자-시스템 관리")  
   
 2.  **관리 작업** 섹션에서 **시스템 관리** 를 클릭합니다.  
   
-3.  표시 되지 않으면는 **모델 추가** 페이지 마우스를 가져가고 위에 **관리** 메뉴 모음에서 **모델**, 클릭 하 고 **모델 추가 (+)** 도구 모음 모델을 만드는 단추입니다.  
+3.  표시 되지 않으면를 **모델 추가** 페이지를 통해 가져가고 **관리** 메뉴 모음에서 클릭 **모델**를 클릭 하 고 **모델 추가 (+)** 도구 모음 모델을 만드는 단추입니다.  
   
      ![관리-모델 메뉴](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-02.jpg "관리-모델 메뉴")  
   
      ![모델 도구 모음 단추 추가](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-03.jpg "모델 도구 모음 단추를 추가 합니다.")  
   
-4.  입력 **Suppliers** 에 대 한 **모델 이름**합니다.  
+4.  입력 **공급 업체** 에 대 한 **모델 이름**합니다.  
   
-5.  지우기 **모델과 이름이 같은 엔터티 만들기** 옵션입니다. 엔터티 만들면 나중에 사용 하 여는 **MDS 추가 기능 Excel 용**합니다.  
+5.  명확한 **모델과 이름이 같은 엔터티 만들기** 옵션입니다. 엔터티를 만들려는 나중에 사용 하는 **MDS 추가 기능에 Excel 용**합니다.  
   
      ![모델 추가 페이지](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-04.jpg "모델 추가 페이지")  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0087dd6c245b870d9cee24c4a94fddd1edea8e6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b163961c580622553e5c8e099a067da716c05f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267169"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스를 만드는 방법에 대해 설명합니다.  

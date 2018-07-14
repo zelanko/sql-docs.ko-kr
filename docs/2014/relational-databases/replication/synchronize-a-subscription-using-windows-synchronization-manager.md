@@ -1,5 +1,5 @@
 ---
-title: Windows 동기화 관리자 (Windows Synchronization Manager)을 사용 하 여 구독을 동기화 | Microsoft Docs
+title: Windows Synchronization Manager (Windows Synchronization Manager)을 사용 하 여 구독 동기화 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a51020379a56f56465bb7b252a65de5323e39ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 774399103f4ea92e0415c5a5222c7a74644c9d8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276269"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화(Windows 동기화 관리자)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 동기화 관리자와 같은 컴퓨터에서 실행 중인 경우에는 구독을 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시와 동기화하는 데만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 동기화 관리자를 사용할 수 있습니다. 동기화 관리자를 사용하면 오프라인 파일과 웹 페이지를 동기화할 수도 있습니다. 동기화 관리자를 사용하려면 다음을 수행하십시오.  
@@ -50,7 +50,7 @@ ms.locfileid: "36090837"
   
     -   **시작**을 클릭하고 **프로그램** 또는 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **동기화**를 클릭합니다.  
   
-    -   **시작**, **실행** 에 **실행** 대화 상자에서 `mobsync.exe` 에 **열려** 필드를 선택한 다음 클릭 **확인**합니다.  
+    -   **시작**, **실행** 에 **실행** 대화 상자에서 `mobsync.exe` 에 **열기** 필드 및 클릭 **확인**합니다.  
   
 2.  **동기화할 항목** 대화 상자에서 동기화할 구독을 선택합니다. 구독은 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 아래에 나열되어 있습니다.  
   

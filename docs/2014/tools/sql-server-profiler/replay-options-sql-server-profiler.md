@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffceaa31c30aec5a0d0911017a45fde592c427c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce23580af011e536ed33a5612952b7bc2177480c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251195"
 ---
 # <a name="replay-options-sql-server-profiler"></a>재생 옵션(SQL Server Profiler)
   캡처된 추적을 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생하기 전에 **재생 구성** 대화 상자에서 재생 옵션을 지정할 수 있습니다. 이 대화 상자를 열려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 추적 파일이나 테이블을 연 다음 **재생** 메뉴에서 **시작**을 클릭합니다. 추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)을 참조하십시오.  
@@ -84,6 +84,6 @@ ms.locfileid: "36091249"
 ## <a name="see-also"></a>관련 항목  
  [추적 재생](replay-traces.md)   
  [재생 요구 사항](replay-requirements.md)   
- [추적 재생에 대 한 고려 사항 &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
+ [추적 재생 시 고려 사항 &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

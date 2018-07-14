@@ -1,5 +1,5 @@
 ---
-title: 병합 아티클 (복제 TRANSACT-SQL 프로그래밍)에 대 한 삭제를 추적 하지 않도록 지정 | Microsoft Docs
+title: 삭제 (복제 TRANSACT-SQL 프로그래밍) 병합 아티클에 대 한 추적 되지 해야 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], conditional delete tracking
 ms.assetid: 0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ab89664d39f6dbe8a929b7bd1280f39e97e2414
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65a4ad119dc985c67eeea811f2102f387b7a5419
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248513"
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles-replication-transact-sql-programming"></a>병합 아티클에 대해 삭제가 추적되지 않도록 지정(복제 Transact-SQL 프로그래밍)
     
@@ -47,7 +47,7 @@ ms.locfileid: "36089274"
   
 1.  아티클에 대해 오류 보정이 설정되어 있는지 확인하려면 [sp_helpmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행하고 결과 집합에서 **delete_tracking**의 값을 확인합니다. 이 값이 **0**이면 삭제가 이미 무시되고 있는 것입니다.  
   
-2.  1단계의 값이 **1**이면 게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **delete_tracking** 에 대 한 **@property**, 값을 `false` 에 대 한 **@value**합니다.  
+2.  1단계의 값이 **1**이면 게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **delete_tracking** 에 대 한 **@property**에 값 `false` 에 대 한 **@value**합니다.  
   
     > [!NOTE]  
     >  아티클의 원본 테이블이 이미 다른 게시에 게시된 경우 **delete_tracking** 값은 두 아티클에 대해 동일해야 합니다.  

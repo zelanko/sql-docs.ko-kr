@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebcf3e48cdb2648556c5066c96258cda58e5c51c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2ca9f48a5f5cc545f89b226b869291ecef54907
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269399"
 ---
 # <a name="create-relationships"></a>관계 만들기
   **관계 만들기** 대화 상자를 사용하여 유사 항목 조회 변환 편집기, 조회 변환 편집기 및 용어 조회 변환 편집기에서 구성한 원본 열과 조회 테이블 열 간의 매핑을 편집할 수 있습니다.  

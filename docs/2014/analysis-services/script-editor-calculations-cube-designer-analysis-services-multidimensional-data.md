@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.freeform.f1
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 23c6c0deaca334533c42f5bc64d721c228634aa2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcb5e21c87abffa0d757b0a4eb667c34ae28a57b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247343"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>스크립트 편집기(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **스크립트 편집기** 창을 사용하여 폼 보기에서 스크립트 명령에 대한 식을 수정하거나 스크립트 보기에서 전체 큐브 스크립트를 수정할 수 있습니다.  

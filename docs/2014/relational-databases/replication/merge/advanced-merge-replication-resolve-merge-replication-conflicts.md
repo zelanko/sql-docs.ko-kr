@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], about conflict resolution
 - default conflict resolver
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 0d033c76-e8c9-4e35-ab95-4d335abb18c1
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 445314a89fabf4975c303a71ee1ae777b7f574ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6fff24c04e3fc434f6ebf41549cfe78682ca1805
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260509"
 ---
 # <a name="detect-and-resolve-merge-replication-conflicts"></a>병합 복제 충돌 감지 및 해결
   게시자와 구독자가 연결되고 동기화가 이루어지면 병합 에이전트는 충돌이 있는지 감지합니다. 충돌이 감지되면 병합 에이전트는 충돌 해결 프로그램을 사용해서 다른 사이트로 수락 및 전파할 데이터를 확인합니다.  

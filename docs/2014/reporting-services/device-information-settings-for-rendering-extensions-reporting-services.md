@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d48503af6d33fa8f26450c4af09591cf53202259
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 03f4712e6ce492ca542dd9560fedb871cfba1750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266169"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>렌더링 확장 프로그램에 대한 장치 정보 설정(Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 장치 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 각 렌더링 확장 프로그램에서 특정 설정 집합을 사용할 수 있습니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.addnestedtable.selectmeasuregroup.f1
 ms.assetid: 66194214-be3b-4df2-a676-216b986c8838
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c395a0404ad2b93b6d07790ae3680ed62bdf2b1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db17b98cf37ffa14ef819415b23afe05fc97da13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261429"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>측정값 그룹 차원 선택(새 중첩 테이블 추가 마법사)
   **측정값 그룹 차원 선택** 페이지를 사용하여 중첩 테이블로 사용할 차원을 측정값 그룹에서 선택할 수 있습니다.  

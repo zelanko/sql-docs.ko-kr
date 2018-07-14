@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fab64e66ea1a38131c4edf7e14f4ea7fb1a0fd62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b5899d62f5d9293a21c875a2ae9de5016a2efb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280989"
 ---
 # <a name="specify-a-merge-article-resolver"></a>병합 아티클 해결 프로그램 지정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "36089934"
   
 2.  원하는 해결 프로그램이 이미 등록되어 있는지 확인하려면 모든 데이터베이스의 게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행합니다. 그러면 사용자 지정 해결 프로그램에 대한 설명, 배포자에 등록된 각 COM 기반 해결 프로그램의 CLSID(클래스 식별자) 또는 배포자에 등록된 각 비즈니스 논리 처리기의 관리 어셈블리에 대한 정보가 표시됩니다.  
   
-3.  원하는 사용자 지정 해결 프로그램이 아직 등록되지 않은 경우 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. **@article_resolver**에 해결 프로그램 이름을 지정합니다. 비즈니스 논리 처리기의 경우 어셈블리 이름입니다. COM 기반 해결 프로그램에 대 한 DLL의 CLSID를 지정 합니다. **@resolver_clsid**, 비즈니스 논리 처리기에 대 한 값을 지정 하 고 `true` 에 대 한 **@is_dotnet_assembly**에 대 한 어셈블리의 이름 **@dotnet_assembly_name**, 재정의 하는 클래스의 정규화 된 이름 및 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한 **@dotnet_class_name**합니다.  
+3.  원하는 사용자 지정 해결 프로그램이 아직 등록되지 않은 경우 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. **@article_resolver**에 해결 프로그램 이름을 지정합니다. 비즈니스 논리 처리기의 경우 어셈블리 이름입니다. COM 기반 해결 프로그램 지정에 대 한 DLL의 CLSID **@resolver_clsid**, 비즈니스 논리 처리기의 경우에 대 한 값을 지정 하 고 `true` 에 대 한 **@is_dotnet_assembly**, 어셈블리의 이름 **@dotnet_assembly_name**, 및를 재정의 하는 클래스의 정규화 된 이름을 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한 **@dotnet_class_name**합니다.  
   
     > [!NOTE]  
     >  비즈니스 논리 처리기 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.subscribers.f1
 helpviewer_keywords:
 - Subscriber Properties dialog box
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad00d31b247dd606fcce39ea68ff60c5a0703216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46c53e1f86bcdc21ff2e75d82de6343463f5c6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262359"
 ---
 # <a name="subscriber-properties"></a>구독자 속성
   **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  

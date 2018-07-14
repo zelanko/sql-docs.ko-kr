@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93055c2220f4dfa7b32293ee88178defbf1d0f6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250975"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>쿼리 및 필터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너 **브라우저** 탭의 이 영역에는 찾아보기 또는 쿼리에서 사용할 데이터를 큐브에서 선택할 수 있는 쿼리 및 필터 영역이 포함되어 있습니다. 원하는 수의 큐브 개체를 추가한 다음 데이터 영역에서 결과를 보거나 Excel에서 분석을 사용하여 결과를 보고서로 내보내 최종 사용자에게 데이터가 어떻게 표시되는지 확인할 수 있습니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "36090554"
 |**같음**|**필터 식**에서 정의한 집합으로 결과가 제한됩니다.|  
 |**같지 않음**|**필터 식**에서 정의한 집합에서 제외된 멤버로 결과가 제한됩니다.|  
 |**입력**|**필터 식**에서 선택한 명명된 집합으로 결과가 제한됩니다.|  
-|**안 함**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
+|**In이 아님**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
 |**포함**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
-|**로 시작**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
+|**시작**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
 |**범위 (포함)**|**필터 식**에서 선택한 범위로 결과가 제한됩니다.|  
 |**범위 (제외)**|**필터 식**에서 선택한 범위에서 제외된 멤버로 결과가 제한됩니다.|  
 |**MDX**|**필터 식**에서 설정한 MDX(Multidimensional Expression) 식으로 결과가 제한됩니다.|  

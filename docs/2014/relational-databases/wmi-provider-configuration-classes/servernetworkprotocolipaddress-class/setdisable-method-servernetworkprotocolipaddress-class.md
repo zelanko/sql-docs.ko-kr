@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310660fed0cf74f7fef6367bfee4484a76446d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1ee702aad8ef492cb4484590724b04b8d818f4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246307"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 메서드(ServerNetworkProtocolIPAddress 클래스)
   IP 주소를 해제합니다.  
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- Servernetworkprotocolipaddress [ServerNetworkProtocolIPAdress 클래스]-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ [ServerNetworkProtocolIPAdress 클래스] servernetworkprotocolipaddress-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  uint32 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  

@@ -12,22 +12,22 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257309"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 개념
   CSDLBI(BI 포함 개념 스키마 정의 언어) 주석은 엔터티 데이터 프레임워크를 기반으로 하며, 별도의 데이터 집합을 프로그래밍 방식으로 액세스, 쿼리 또는 내보낼 수 있도록 하여 데이터를 나타내기 위한 추상화입니다. CSDLBI는 풍부한 데이터 기반 보고 및 응용 프로그램을 지원하기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 만든 데이터 모델을 나타내는 데 사용됩니다.  
   
  이 단원에서는 CSDLBI 표현이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 및 다차원)에 매핑되는 방법을 설명하고 각 모델 유형의 예를 보여 줍니다.  
   
- 이러한 개념을 설명하는 데 사용하는 예는 Codeplex에서 제공하는 AdventureWorks 예제 데이터베이스를 통해 얻을 수 있습니다. 샘플에 대 한 자세한 내용은 참조 [SQL Server에 대 한 Adventure Works 샘플](http://go.microsoft.com/fwlink/?linkID=220093)합니다.  
+ 이러한 개념을 설명하는 데 사용하는 예는 Codeplex에서 제공하는 AdventureWorks 예제 데이터베이스를 통해 얻을 수 있습니다. 샘플에 대 한 자세한 내용은 참조 하세요. [SQL Server에 대 한 Adventure Works 샘플](http://go.microsoft.com/fwlink/?linkID=220093)합니다.  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI의 테이블 형식 모델 구조  
  보고서 모델과 해당 데이터를 설명하는 CSDLBI 문서는 xsd 문으로 시작하여 모델에 대한 정의로 이어집니다.  
@@ -88,11 +88,11 @@ ms.locfileid: "36090530"
  생성되는 CSDLBI 문서 크기를 제한하기 위해 엔터티에 두 번 이상 나타나는 속성이 기존 속성에 대한 참조에 의해 지정되므로 `EntityType`에 대해 속성이 한 번만 나열되어야 합니다. 클라이언트 응용 프로그램은 `EntityType`과 일치하는 `OriginEntityType`을 찾아 속성의 값을 가져올 수 있습니다.  
   
 ### <a name="relationships"></a>관계  
- 로 정의 된 관계 엔터티 데이터 프레임 워크에서 *연결* 엔터티 간의 합니다.  
+ 엔터티 데이터 프레임 워크에서 관계로 정의 되며 *연결* 엔터티 간의 합니다.  
   
- 연결에는 항상 테이블의 필드나 열을 각각 가리키는 두 개의 끝이 있습니다. 따라서 관계의 끝점이 다를 경우 두 테이블 사이의 관계가 여러 가지일 수 있습니다. 역할 이름이 연결의 끝점에 지정되고, 데이터 모델의 컨텍스트에서 연결이 사용되는 방법을 나타냅니다. 역할 이름을 예로 들 수 있습니다 **ShipTo**Orders 테이블에서 고객 ID 관련 된 고객 ID에 적용 된 경우.  
+ 연결에는 항상 테이블의 필드나 열을 각각 가리키는 두 개의 끝이 있습니다. 따라서 관계의 끝점이 다를 경우 두 테이블 사이의 관계가 여러 가지일 수 있습니다. 역할 이름이 연결의 끝점에 지정되고, 데이터 모델의 컨텍스트에서 연결이 사용되는 방법을 나타냅니다. 역할 이름을 예로 들 수 있습니다 **ShipTo**고객 id는 Orders 테이블에 관련 된 고객 ID에 적용 된 경우.  
   
- 모델의 CSDLBI 표현 엔터티의 측면에서 서로 매핑되는 방법을 결정 하는 연결 특성도 포함 된 *복합성* 연결의 합니다. 복합성은 테이블 간 관계 끝점의 특성이나 열이 관계의 한 편에 있는지 아니면 여러 편에 있는지 나타냅니다. 일 대 일 관계에 대한 별도의 값은 없습니다. CSDLBI 주석은 복합성 0(엔터티가 어디에도 연결되지 않음)이나 0..1(일 대 일 관계 또는 일 대 다 관계)을 지원합니다.  
+ 모델의 CSDLBI 표현을 엔터티 측면의 서로 매핑되는 방식을 결정 하는 연결 특성도 포함 된 *복합성* 연결 합니다. 복합성은 테이블 간 관계 끝점의 특성이나 열이 관계의 한 편에 있는지 아니면 여러 편에 있는지 나타냅니다. 일 대 일 관계에 대한 별도의 값은 없습니다. CSDLBI 주석은 복합성 0(엔터티가 어디에도 연결되지 않음)이나 0..1(일 대 일 관계 또는 일 대 다 관계)을 지원합니다.  
   
  다음 예제에서는 DateAlternateKey 열에서 조인된 Date 테이블과 ProductInventory 테이블 간 관계에 대한 CSDLBI 출력을 나타냅니다. 기본적으로 `AssociationSet`의 이름은 관계에 포함된 열의 정규화된 이름입니다. 그러나 모델을 설계할 때 다른 이름 형식을 사용하도록 이 동작을 변경할 수 있습니다.  
   
@@ -128,29 +128,29 @@ ms.locfileid: "36090530"
 ## <a name="additions-to-support-multidimensional-models"></a>다차원 모델을 지원하기 위한 추가 기능  
  CSDLBI 주석 버전 1.0은 테이블 형식의 모델만 지원했습니다. 버전 1.1에서는 기존 BI 개발 도구를 사용하여 만든 다차원 모델(OLAP 큐브)에 대한 지원이 추가되었습니다. 따라서 다차원 모델에 대한 XML 요청을 실행하여 보고에 사용할 모델의 CSDLBI 정의를 받을 수 있습니다.  
   
- **큐브:** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 데이터베이스에는 모델이 하나만 포함 될 수 있습니다. 반면에 각 다차원 데이터베이스에는 여러 개의 큐브가 포함될 수 있으며 각 데이터베이스는 기본 큐브와 연결됩니다. 따라서 다차원 서버에 대해 XML 요청을 실행할 때는 큐브를 지정해야 하며, 그러지 않으면 기본 큐브에 대한 XML이 반환됩니다.  
+ **: 큐브의** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 데이터베이스에는 모델이 하나만 포함 될 수 있습니다. 반면에 각 다차원 데이터베이스에는 여러 개의 큐브가 포함될 수 있으며 각 데이터베이스는 기본 큐브와 연결됩니다. 따라서 다차원 서버에 대해 XML 요청을 실행할 때는 큐브를 지정해야 하며, 그러지 않으면 기본 큐브에 대한 XML이 반환됩니다.  
   
  그 점을 제외하면 큐브 표현은 테이블 형식의 모델 데이터베이스와 매우 비슷합니다. 큐브 이름과 큐브는 테이블 형식 데이터베이스와 데이터베이스 ID에 해당합니다.  
   
  **크기:** 차원 열과 속성이 있는 엔터티 (테이블)로 CSDLBI에 표시 됩니다. 큐브 뷰에 포함되지 않았더라도 모델에는 포함되어 있는 차원은 CSDL 출력에 `Hidden`으로 표시되어 나타납니다.  
   
- **큐브 뷰:** 클라이언트가 개별 큐브 뷰에 대 한 CSDL을 요청할 수 있습니다. 자세한 내용은 참조 [DISCOVER_CSDL_METADATA 행 집합](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)합니다.  
+ **큐브 뷰:** 클라이언트는 개별 큐브 뷰에 대 한 CSDL을 요청할 수 있습니다. 자세한 내용은 [DISCOVER_CSDL_METADATA 행 집합](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)합니다.  
   
- **계층:** 계층 지원 되며 수준 집합으로 csdlbi에서 표현 합니다.  
+ **계층:** 계층 지원 되며 수준 집합으로 CSDLBI에서 표시 합니다.  
   
- **멤버:** 지원의 기본 멤버 개가 추가 되 고 기본값이 CSDLBI 출력에 자동으로 추가 됩니다.  
+ **멤버:** 지원 기본 멤버를 추가한 있고 기본값은 CSDLBI 출력에 자동으로 추가 됩니다.  
   
- **계산된 멤버:** 다차원 모델의 자식에 대 한 계산된 멤버를 지원 **모든** 단일 실제 멤버가 있는 합니다.  
+ **계산된 멤버:** 다차원 모델의 자식에 대 한 계산된 멤버를 지원 **모든** 에서는 단일 실제 멤버가 있는 합니다.  
   
- **차원 특성:** 의 CSDLBI 출력으로 차원 특성은 지원 되 고 자동으로 집계할 수 없는 것으로 표시 합니다.  
+ **차원 특성:** 의 CSDLBI 출력을 차원 특성은 지원 하 고 자동으로 집계할 수 없는 표시 합니다.  
   
- **Kpi:** csdlbi 버전 1.1에서 Kpi 지원 되었지만 표현이 변경 되었습니다. 예전에는 KPI가 측정값의 속성이었습니다. 버전 1.1에서는 KPI 요소를 측정값에 추가할 수 있습니다.  
+ **Kpi:** CSDLBI 버전 1.1에서 Kpi 된 지원 되지만 표현이 변경 되었습니다. 예전에는 KPI가 측정값의 속성이었습니다. 버전 1.1에서는 KPI 요소를 측정값에 추가할 수 있습니다.  
   
- **새 속성:** 특성이 DirectQuery 모델을 지원 하기 위해 추가 되었습니다.  
+ **새 속성:** DirectQuery 모델을 지 원하는 특성이 추가 되었습니다.  
   
- **제한 사항:** 셀 보안이 지원 되지 않습니다.  
+ **제한 사항:** 셀 보안은 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Business Intelligence에 대 한 CSDL 주석 &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [비즈니스 인텔리전스에 대 한 CSDL 주석 &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

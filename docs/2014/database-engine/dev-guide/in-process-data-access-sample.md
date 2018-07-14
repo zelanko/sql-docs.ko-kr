@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6f90e5ba1dd6c90f5d941dfcb2ccaa42c8d9c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285799"
 ---
 # <a name="in-process-data-access-sample"></a>In-Process 데이터 액세스 예제
   `InProcessDataAccess` 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 몇 가지 간단한 함수가 포함되어 있습니다.  
@@ -360,7 +360,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) 저장된 프로시저와이 샘플에 정의 된 함수를 실행 하 여 예제를 테스트 합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`)이이 샘플에 정의 된 함수 및 저장된 프로시저를 실행 하 여 예제를 테스트 합니다.  
   
 ```  
 USE AdventureWorks;  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.exportdac.settings.f1
 - sql12.swb. exportdac.settings.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbf78870df7abcb72a2474f6e14fae6efec5f8f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 047a7c5c20a0c9335fe6da1fa0d07a0dceff03a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248801"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 응용 프로그램 내보내기
   DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 논리 백업을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  

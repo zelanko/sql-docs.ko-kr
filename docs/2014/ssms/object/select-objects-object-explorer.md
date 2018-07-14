@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ffeac246442f3ee291975902bcacd12104e77f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265679"
 ---
 # <a name="select-objects-object-explorer"></a>개체 선택(개체 탐색기)
   **개체 선택** 대화 상자를 사용하여 다른 대화 상자에 있는 목록에 개체를 추가할 수 있습니다. 대화 상자 제목과 대화 상자에서 사용할 수 있는 옵션은 대화 상자를 연 방법에 따라 다릅니다. 사용 가능한 옵션만 나타납니다. 예를 들어 새 개체의 소유자를 선택하는 경우에는 로그인만 사용할 수 있습니다.  

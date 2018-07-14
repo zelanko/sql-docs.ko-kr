@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e2c8ffa997c46b6d4587a971de436c25792694
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b4b9c2c80bbeadf716313756470d1f8d7994152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267409"
 ---
 # <a name="estimatedperformancegain-element-assl"></a>EstimatedPerformanceGain 요소(ASSL)
   파티션의 읽기 전용 예상 성능 향상률을 포함합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36091372"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `EstimatedPerformanceGain` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AggregationDesign>합니다.  
+ 부모에 해당 요소가 `EstimatedPerformanceGain` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AggregationDesign>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

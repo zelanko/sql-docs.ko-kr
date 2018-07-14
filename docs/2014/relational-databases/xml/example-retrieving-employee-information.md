@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 330a1cace96aeb58ed95c61904b626d85cd8f2e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 784da1a407cc70a015213f5ef14504297a229a5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255945"
 ---
 # <a name="example-retrieving-employee-information"></a>예제: 직원 정보 검색
   이 예에서는 각 직원에 대한 직원 ID와 직원 이름을 검색합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 employeeID는 Employee 테이블의 BusinessEntityID 열로부터 가져올 수 있습니다. 직원 이름은 Person 테이블로부터 가져올 수 있습니다. BusinessEntityID 열을 사용하면 테이블을 조인할 수 있습니다.  

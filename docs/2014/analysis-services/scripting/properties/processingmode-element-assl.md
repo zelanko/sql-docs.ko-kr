@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273789"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 요소(ASSL)
   인스턴스에서 인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36089636"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [차원](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md)하십시오 [차원](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

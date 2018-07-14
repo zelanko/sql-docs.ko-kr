@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -20,16 +20,16 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d5a3522e857f7cb053f181a46e17cb44288a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263159"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 자습서: 간단한 ETL 패키지 만들기
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 고성능 데이터 통합 솔루션을 추출, 변환 및 데이터 웨어하우징용 로드 하는 ETL 패키지를 포함 하 여 구축 하기 위한 플랫폼입니다. SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 전자 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 고성능 데이터 통합 솔루션을 추출, 변환 및 데이터 웨어하우징을 위한 ETL (로드) 패키지를 포함 하 여 빌드하기 위한 플랫폼입니다. SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 전자 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
   
  이 자습서에서는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 간단한 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만드는 방법을 배웁니다. 사용자가 만든 패키지는 플랫 파일로부터 데이터를 가져와서 데이터 형식을 바꾼 다음 바뀐 데이터를 팩트 테이블에 삽입합니다. 다음 단원에서는 패키지를 확장하여 루핑, 패키지 구성, 로깅 및 오류 흐름을 보여 줍니다.  
   

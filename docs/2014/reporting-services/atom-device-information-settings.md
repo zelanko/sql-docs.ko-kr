@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f2742b7507eecaadc26604f4217b1c6b2f1def1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c4d0f85da3c3762d32b8a59a34e073e9f14736a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321884"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 장치 정보 설정
   Atom 렌더링 확장 프로그램의 장치 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  

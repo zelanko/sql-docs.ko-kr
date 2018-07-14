@@ -1,5 +1,5 @@
 ---
-title: Hello World 예제 추가 정보 | Microsoft Docs
+title: Hello World 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269929"
 ---
 # <a name="hello-world-sample"></a>Hello World 예제
   Hello World 예제는 간단한 CLR(공용 언어 런타임) 통합 기반 저장 프로시저의 만들기, 배포 및 테스트와 관련된 기본 작업을 보여 줍니다. 이 예제는 저장 프로시저에 의해 동적으로 생성되고 호출자로 반환되는 레코드를 통해 데이터를 반환하는 방법도 보여 줍니다.  
   
- `HelloWorld` 저장된 프로시저는 "Hello world!" 문자열을 반환 결과는 하나의 행으로 구성 된 집합입니다. 이 예제에는 클래스에 대 한 몇 가지 사용 방법을 보여 줍니다. [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) 및 [ Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571)합니다.  
+ `HelloWorld` "Hello world!" 프로시저가 문자열을 반환 합니다. 결과 하나의 행으로 구성 된 집합입니다. 이 예제에는 클래스에 대 한 몇 가지 사용 방법을 보여 줍니다. [Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572)하십시오 [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573) 고 [ Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571)합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  

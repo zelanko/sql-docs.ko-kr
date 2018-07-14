@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - table creation [SQL Server], Make Table query
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39adb0d3729ac171c10d3faf4d3a5956cd1c0429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00c474619fe1eb16249ce0c0b034bf160fe1e857
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261889"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
   테이블 만들기 쿼리를 사용하여 행을 새 테이블에 복사할 수 있습니다. 이 방법은 작업에 사용할 데이터의 하위 집합을 만들거나 한 데이터베이스에서 다른 데이터베이스로 테이블 내용을 복사하는 데 유용합니다. 테이블 만들기 쿼리는 결과 삽입 쿼리와 비슷하지만 행을 복사해 넣을 새 테이블을 만든다는 점에서 차이가 있습니다.  
@@ -69,7 +69,7 @@ WHERE country = 'UK'
   
      다른 데이터베이스에 대상 테이블을 만들려면 대상 데이터베이스의 이름, 소유자(필요한 경우) 및 테이블의 이름을 포함하는 정규화된 테이블 이름을 지정합니다.  
   
-4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가&#40;Visual Database Tools&#41;](visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 전체 행을 복사 하려면 선택  **\* (모든 열)** 합니다.  
+4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가&#40;Visual Database Tools&#41;](visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 행 전체를 복사 하려면 선택  **\* (모든 열)** 합니다.  
   
      사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   
@@ -87,7 +87,7 @@ WHERE country = 'UK'
  테이블 만들기 쿼리를 실행해도 [결과 창](results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 형식&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
   
   

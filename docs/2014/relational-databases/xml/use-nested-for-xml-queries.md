@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8ce91a3ee069562a6a4d3f9d6aa3c02999e4dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249663"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
-  `xml` 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](type-directive-in-for-xml-queries.md) 클라이언트 뿐 아니라 서버에서 처리 해야 하는 FOR XML 쿼리에 의해 반환 된 XML을 사용 하도록 설정 합니다.  
+  합니다 `xml` 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](type-directive-in-for-xml-queries.md) 클라이언트와 서버에서 처리할 FOR XML 쿼리에 의해 반환 된 XML을 사용 하도록 설정 합니다.  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 유형 변수를 사용하여 처리  
  FOR XML 쿼리 결과를 `xml` 유형의 변수에 할당하거나 XQuery를 사용하여 결과를 쿼리하고 추가 처리를 위해 이 결과를 `xml` 유형의 변수에 할당할 수 있습니다.  
@@ -70,7 +70,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 결과의 길이가 `xml` 형식을 지정할 수 있습니다 중 하나는 `xml` 다음 쿼리에서와 같이 데이터 형식에이 XML에 대해 직접 메서드. 쿼리에서는 [query() 메서드(xml 데이터 형식)](/sql/t-sql/xml/query-method-xml-data-type)를 사용하여 <`row`> 요소의 첫 번째 <`myRoot`> 요소 자식을 검색합니다.  
+ 결과의 길이가 `xml` 형식을 지정할 수 있습니다 중 하나는 `xml` 다음 쿼리에서와에서 같이 데이터 형식에이 XML에 대해 직접 메서드. 쿼리에서는 [query() 메서드(xml 데이터 형식)](/sql/t-sql/xml/query-method-xml-data-type)를 사용하여 <`row`> 요소의 첫 번째 <`myRoot`> 요소 자식을 검색합니다.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -87,7 +87,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 중첩 된 작성할 수 있습니다 `FOR XML` 로 내부 쿼리 결과가 반환 됩니다 여기서 쿼리는 `xml` 유형으로 외부 쿼리로 합니다. 예를 들어:  
+ 중첩 된 작성할 수 있습니다 `FOR XML` 으로 내부 쿼리 결과가 반환 됩니다 여기서 쿼리는 `xml` 외부 쿼리할 형식입니다. 예를 들어:  
   
 ```  
 SELECT Col1,   

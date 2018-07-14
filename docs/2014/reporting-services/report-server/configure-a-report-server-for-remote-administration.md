@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -19,13 +19,13 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f7a3ee16a9085639e03abe268c4c72dc0f488de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e89d1452c1daa5c1aa53341fa09e0e6b71b0c078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325703"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>원격 관리를 위한 보고서 서버 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 보고서 서버 인스턴스를 로컬 또는 원격으로 구성할 수 있습니다. 원격 보고서 서버 인스턴스를 구성하려면 Reporting Services 구성 도구를 사용하거나, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하는 사용자 지정 코드를 작성할 수 있습니다. Reporting Services 구성 도구는 WMI 공급자에 대한 그래픽 인터페이스를 제공하므로 이 도구를 사용하면 코드를 작성하지 않고도 보고서 서버를 구성할 수 있습니다. 이 도구를 시작할 때 연결할 원격 서버를 지정할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36091004"
   
 1.  [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)합니다.  
   
-2.  [보고서 서버 액세스를 위한 방화벽 구성](configure-a-firewall-for-report-server-access.md)합니다.  
+2.  [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)합니다.  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>보고서 서버 데이터베이스에 대한 원격 연결을 구성하려면  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36091004"
   
 1.  원격 관리를 활성화할 컴퓨터에 로컬 관리자로 로그온합니다.  
   
-2.  보고서 서버는 Windows Vista에서 실행 중인를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 선택 **관리자 권한으로 실행**합니다. 다른 운영 체제의 경우 명령 프롬프트 창을 엽니다.  
+2.  보고서 서버는 Windows Vista에서 실행 중인를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 선택한 **관리자 권한으로 실행**합니다. 다른 운영 체제의 경우 명령 프롬프트 창을 엽니다.  
   
 3.  다음 명령을 실행합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36091004"
   
 1.  시작 메뉴에서 **관리 도구**를 가리키고 **구성 요소 서비스**를 클릭합니다.  
   
-     Windows Vista, 시작 메뉴에서 클릭 **모든 프로그램**, 클릭 **실행**, 다음을 입력 하 고 `mmc comexp.msc`합니다.  
+     Windows vista 시작 메뉴를 클릭 **모든 프로그램**, 클릭 **실행**를 입력 한 다음 `mmc comexp.msc`합니다.  
   
 2.  구성 요소 서비스 폴더를 엽니다.  
   

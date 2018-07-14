@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282429"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   기본 마이닝 구조의 데이터를 사용하여 마이닝 모델을 디자인하고 처리하고 나면 마이닝 모델이 완성되고 마이닝 모델에 *마이닝 모델 콘텐츠*가 포함됩니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
@@ -163,9 +163,9 @@ ms.locfileid: "36088732"
   
  특성 이름이 열이면 대부분의 간단한 사례에서는 ATTRIBUTE_VALUE에 해당 열의 불연속 값 중 하나가 포함됩니다.  
   
- ATTRIBUTE_VALUE 알고리즘 값을 처리 방식에 따라 특성에 대 한 값이 존재 하는지 여부를 알려 주는 플래그를 포함할 수도 있습니다 (`Existing`), 또는 값이 null 인지 여부 (`Missing`).  
+ ATTRIBUTE_VALUE 알고리즘이 값을 처리 하는 방법에 따라 특성의 값이 존재 하는지 여부를 알려 주는 플래그를 포함할 수도 있습니다 (`Existing`), 값이 null 인지 여부 또는 (`Missing`).  
   
- 예를 들어 모델을 특정 제품을 한 번 이상 구매한 고객을 찾을 수 있도록 설정 되어 있는 경우는 ATTRIBUTE_NAME 열에 있는 같은 관심 있는 항목을 정의 하는 특성-값 쌍 `Model = 'Water bottle'`, 및 ATTRIBUTE_VALUE 열 키워드만 포함 `Existing` 또는 `Missing`합니다.  
+ 예를 들어 모델을 특정 항목을 한 번 이상 구매한 고객을 찾을 수 있도록 설정 되어 경우 ATTRIBUTE_NAME 열 포함 될 수 있습니다와 같은 관심 있는 항목을 정의 하는 특성-값 쌍 `Model = 'Water bottle'`, 및 ATTRIBUTE_VALUE 열 키워드만 포함 `Existing` 또는 `Missing`합니다.  
   
  별칭  
  이 특성-값 쌍이 있거나 이 항목 집합 또는 규칙이 포함된 사례 수입니다.  
@@ -304,7 +304,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  또한 데이터 마이닝 스키마 행 집합을 사용하여 마이닝 모델 콘텐츠를 쿼리할 수도 있습니다. 스키마 행 집합은 클라이언트에서 마이닝 구조 및 모델에 대한 정보를 검색하고 쿼리하기 위해 사용하는 표준 구조입니다. 스키마 행 집합은 XMLA, Transact-SQL 또는 DMX 문을 사용하여 쿼리할 수 있습니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 열고 시스템 테이블을 쿼리하여 데이터 마이닝 스키마 행 집합의 정보에 액세스할 수도 있습니다. 자세한 내용은 참조 [데이터 마이닝 스키마 행 집합 쿼리 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-schema-rowsets-ssas.md)합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 열고 시스템 테이블을 쿼리하여 데이터 마이닝 스키마 행 집합의 정보에 액세스할 수도 있습니다. 자세한 내용은 [데이터 마이닝 스키마 행 집합 쿼리 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-schema-rowsets-ssas.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 일반 콘텐츠 트리 뷰어 &#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   

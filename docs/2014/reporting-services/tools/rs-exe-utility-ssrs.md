@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255465"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "36091217"
  보고서 서버에 연결하는 데 사용되는 사용자 계정을 지정합니다(옵션). `-u`와 `-p`를 생략하면 현재 Windows 사용자 계정이 사용됩니다.  
   
  `-p` *암호*  
- (경우에 필요 `-u` 지정)을 사용 하면 암호를 지정는 `-u` 인수입니다. 이 값은 대/소문자를 구분합니다.  
+ (필요한 경우 `-u` 지정) 사용 하려면 암호를 지정 합니다 `-u` 인수입니다. 이 값은 대/소문자를 구분합니다.  
   
  `-e`  
  스크립트가 실행되어야 하는 대상 SOAP 끝점을 지정합니다(옵션). 유효한 값은 다음과 같습니다.  
@@ -91,13 +91,13 @@ ms.locfileid: "36091217"
   
 -   Exec2005  
   
- 값이 지정되지 않은 경우 Mgmt2005가 끝점으로 사용됩니다. SOAP 끝점에 대 한 자세한 내용은 참조 [보고서 서버 웹 서비스 끝점](../report-server-web-service/methods/report-server-web-service-endpoints.md)합니다.  
+ 값이 지정되지 않은 경우 Mgmt2005가 끝점으로 사용됩니다. SOAP 끝점에 대 한 자세한 내용은 참조 하세요. [보고서 서버 웹 서비스 끝점](../report-server-web-service/methods/report-server-web-service-endpoints.md)합니다.  
   
  `-l` *time_out*  
  서버에 대한 연결 제한 시간이 초과하기 전까지의 시간(초)을 지정합니다(옵션). 기본값은 60초입니다. 시간 제한 값을 지정하지 않으면 이 기본값이 사용됩니다. 값을 `0`으로 지정하면 연결 시간 제한이 없습니다.  
   
  **-b**  
- 스크립트 파일의 명령이 일괄적으로 실행되도록 지정합니다(옵션). 실패하는 명령이 있으면 이 일괄 처리가 롤백됩니다. 일부 명령은 일괄 처리 방식이 아닌 일반적인 방식으로 실행됩니다. 스크립트 내에서 발생되며 처리되지 않는 예외만 롤백됩니다. 스크립트가 예외를 처리 하 고에서 정상적으로 반환 하는 경우 `Main`, 하면 일괄 처리가 커밋됩니다. 이 매개 변수를 생략하면 명령이 일괄 처리를 만들지 않고 실행됩니다. 자세한 내용은 참조 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)합니다.  
+ 스크립트 파일의 명령이 일괄적으로 실행되도록 지정합니다(옵션). 실패하는 명령이 있으면 이 일괄 처리가 롤백됩니다. 일부 명령은 일괄 처리 방식이 아닌 일반적인 방식으로 실행됩니다. 스크립트 내에서 발생되며 처리되지 않는 예외만 롤백됩니다. 스크립트가 예외를 처리 하 고에서 정상적으로 반환 하는 경우 `Main`, 일괄 처리가 커밋됩니다. 이 매개 변수를 생략하면 명령이 일괄 처리를 만들지 않고 실행됩니다. 자세한 내용은 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)합니다.  
   
  `-v` *globalvar*  
  스크립트에서 사용되는 전역 변수를 지정합니다(옵션). 스크립트에서 전역 변수가 사용되는 경우에는 이 인수를 지정해야 합니다. 지정하는 값은 .rss 파일에 정의되는 전역 변수에 대해 유효해야 합니다. 각 **–v** 인수에 대해 하나의 전역 변수를 지정해야 합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "36091217"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v는 =**"`1`" **-v b =**"`2`" 이라는 변수에 결과 `a` 값이 "`1`"와 변수 **b**값이 "`2`"입니다.  
+ 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v를 =**"`1`" **-v b =**"`2`" 라는 변수에 결과 `a` 값을 사용 하 여 "`1`" 변수와 **b**의 값을 사용 하 여 "`2`"입니다.  
   
  전역 변수는 스크립트의 모든 함수에서 사용할 수 있습니다. 백슬래시와 인용 부호(**\\"**)는 큰따옴표로 해석됩니다. 인용 부호는 문자열에 공백이 포함되어 있는 경우에만 필요합니다. 변수 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에 유효해야 하며 알파벳 문자 또는 밑줄로 시작하고 알파벳 문자, 숫자 또는 밑줄이 포함되어야 합니다. 예약어는 변수 이름으로 사용할 수 없습니다. 전역 변수 사용에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
@@ -128,7 +128,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  추가 예제는 [Reporting Services 스크립트 파일 실행](run-a-reporting-services-script-file.md)을 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
- 시스템 속성을 설정하고 보고서를 게시하는 등의 스크립트를 정의할 수 있습니다. 생성된 스크립트에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API의 모든 메서드가 포함될 수 있습니다. 메서드 및 속성을 사용할 수에 대 한 자세한 내용은 참조 [보고서 서버 웹 서비스](../report-server-web-service/report-server-web-service.md)합니다.  
+ 시스템 속성을 설정하고 보고서를 게시하는 등의 스크립트를 정의할 수 있습니다. 생성된 스크립트에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API의 모든 메서드가 포함될 수 있습니다. 메서드 및 속성을 제공 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 서버 웹 서비스](../report-server-web-service/report-server-web-service.md)합니다.  
   
  이 스크립트는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 코드로 작성하여 파일 이름 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장해야 합니다. **rs** 유틸리티를 사용하여 스크립트를 디버깅할 수 없습니다. 스크립트를 디버깅하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 코드를 실행하세요.  
   
@@ -138,7 +138,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 스크립트 파일 실행](run-a-reporting-services-script-file.md)   
  [배포 및 관리 태스크 스크립팅](script-deployment-and-administrative-tasks.md)   
- [Rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [Rs.exe 유틸리티 및 웹 서비스를 사용 하 여 스크립트](script-with-the-rs-exe-utility-and-the-web-service.md)   
  [보고서 서버 명령 프롬프트 유틸리티 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

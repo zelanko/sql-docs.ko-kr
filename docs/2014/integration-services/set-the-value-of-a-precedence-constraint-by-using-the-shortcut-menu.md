@@ -1,5 +1,5 @@
 ---
-title: 바로 가기 메뉴를 사용 하 여 선행 제약 조건의 값을 설정 | Microsoft Docs
+title: 바로 가기 메뉴를 사용 하 여 선행 제약 조건 값을 설정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc0775d701309c1a04753be37f36378b9b3e65ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d053263e5e3c2f534f171d0fc110ce0585a3dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262989"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>바로 가기 메뉴를 사용하여 선행 제약 조건 값 설정
   이 절차에서는 바로 가기 메뉴를 사용하여 선행 제약 조건에 대한 값을 설정하는 방법에 대해 설명합니다.  

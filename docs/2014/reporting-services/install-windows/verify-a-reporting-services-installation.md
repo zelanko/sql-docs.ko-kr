@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -21,13 +21,13 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 67898b04b17ad344f07dc457927cd4abee6695bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272536"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36088103"
   
 2.  **SQL Server Reporting Services 서비스** 가 설치되어 있고 **실행 중** 상태인지 확인합니다.  
   
-     목록에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 표시되지 않으면 해당 서비스가 설치되어 있는지 확인합니다. 자세한 내용은의 "설치 및 Reporting Services SharePoint 서비스 시작" 섹션을 참조 하십시오. [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)합니다.  
+     목록에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 표시되지 않으면 해당 서비스가 설치되어 있는지 확인합니다. 자세한 내용은의 "설치 및 Reporting Services SharePoint 서비스 시작" 섹션을 참조 하세요 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)합니다.  
   
 #### <a name="to-verify-the-service-application"></a>서비스 응용 프로그램을 확인하려면  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36088103"
   
 #### <a name="to-verify-reporting-server-content-types"></a>보고 서버 내용 유형을 확인하려면  
   
-1.  확인 하거나 추가 하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 콘텐츠 형식을 참조 하십시오 [라이브러리에 보고서 서버 콘텐츠 형식 추가 &#40;SharePoint 통합 모드의 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
+1.  확인 하거나 추가 하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 콘텐츠 형식을 참조 하십시오 [라이브러리에 보고서 서버 콘텐츠 형식 추가 &#40;Reporting Services SharePoint 통합 모드의&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
   
 #### <a name="to-verify-you-can-launch-report-builder"></a>보고서 작성기를 실행할 수 있는지 확인하려면  
   

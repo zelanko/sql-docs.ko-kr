@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
 - read-only databases
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 09f29b5bb3a4c5bf51aa802cd002443168fbaa4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1d88dd26f9e83978c7e2906543b31a108742e713
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266739"
 ---
 # <a name="resource-database"></a>Resource 데이터베이스
   Resource 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 시스템 개체가 모두 들어 있는 읽기 전용 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 개체(예: sys.objects)는 실제로는 Resource 데이터베이스에 저장되지만 논리적으로는 모든 데이터베이스의 sys 스키마에 나타납니다. Resource 데이터베이스에는 사용자 데이터 또는 사용자 메타데이터가 없습니다.  

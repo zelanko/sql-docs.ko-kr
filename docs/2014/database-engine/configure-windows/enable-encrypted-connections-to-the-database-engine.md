@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275449"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 대한 인증서를 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 암호화된 연결을 사용하도록 설정하는 방법에 대해 설명합니다. 서버 컴퓨터에 구축된 인증서가 있어야 하며 클라이언트 컴퓨터가 해당 인증서의 루트 인증 기관을 트러스트하도록 설정되어 있어야 합니다. 구축은 인증서를 Windows로 가져와서 설치하는 프로세스입니다.  
@@ -45,23 +45,23 @@ ms.locfileid: "36091136"
   
  **항목 내용**  
   
--   **암호화 된 연결 수 있도록 합니다.**  
+-   **암호화 된 연결을 설정 합니다.**  
   
-     [인증서를 구축 (설치) 서버에서](#Provision)  
+     [(설치) 서버의 인증서를 프로 비전](#Provision)  
   
      [서버 인증서 내보내기](#Export)  
   
      [암호화 된 연결을 허용 하도록 서버 구성](#ConfigureServerConnections)  
   
-     [암호화 된 연결을 요청 하도록 클라이언트 구성](#ConfigureClientConnections)  
+     [암호화 된 연결을 요청 하도록 클라이언트를 구성](#ConfigureClientConnections)  
   
-     [SQL Server Management Studio의 연결 암호화](#EncryptConnection)  
+     [SQL Server Management Studio에서 연결 암호화](#EncryptConnection)  
   
 ##  <a name="SSMSProcedure"></a>  
   
 ###  <a name="Provision"></a> 서버에 인증서를 구축(설치)하려면  
   
-1.  에 **시작** 메뉴를 클릭 **실행**, 및는 **열려** 상자에 입력 합니다 `MMC` 클릭 **확인**합니다.  
+1.  에 **시작** 메뉴에서 클릭 **실행**, 및를 **열기** 상자에 입력 `MMC` 클릭 **확인**합니다.  
   
 2.  MMC 콘솔의 **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36091136"
   
 1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 *\<서버 인스턴스>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-2.  에 **에 대 한 프로토콜 * * *\<인스턴스 이름 >* **속성** 대화 상자의 **인증서** 탭 아래로 드롭다운에서 원하는 인증서를 선택 합니다 에 대 한는 **인증서** 상자를 선택한 다음 클릭 **확인**합니다.  
+2.  에 **에 대 한 프로토콜 * * *\<인스턴스 이름 >* **속성** 대화 상자의 **인증서** 탭, 아래쪽 드롭다운에서 원하는 인증서를 선택 합니다. 에 대 한 합니다 **인증서** 상자를 선택한 다음 클릭 **확인**합니다.  
   
 3.  **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

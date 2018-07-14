@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262009"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>새 일정: 일정 편집 페이지 (보고서 관리자)
   새 일정/일정 편집 페이지를 사용하여 보고서에 대한 일정을 만들 수 있습니다. 일정은 캐시된 보고서를 새로 고치고 보고서 기록에 또는 독립 실행 항목으로 스냅숏을 만들기 위해 구독에서 사용됩니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
- 무인 모드로 실행될 수 있는 보고서에 대해서만 일정을 만들 수 있습니다. 보고서를 무인 모드로 실행하려면 보고서 서버 데이터베이스에 보고서 데이터 원본 자격 증명을 저장해야 합니다. 자세한 내용은 참조 [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)합니다.  
+ 무인 모드로 실행될 수 있는 보고서에 대해서만 일정을 만들 수 있습니다. 보고서를 무인 모드로 실행하려면 보고서 서버 데이터베이스에 보고서 데이터 원본 자격 증명을 저장해야 합니다. 자세한 내용은 [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)합니다.  
   
  일부 빈도 조합은 단일 일정으로 지원되지 않습니다. 예를 들어 매주 금요일 오후 12시와 4시에 보고서를 실행하려면 실행 날짜가 금요일, 시작 시간이 오후 12시와 4시로 지정된 두 개의 일별 일정을 만들어야 합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36089901"
   
 -   **시간** 은 시간 간격으로 실행되는 일정을 정의합니다. 일정을 실행할 날짜를 지정하려면 **시작 및 끝 날짜** 섹션을 사용합니다.  
   
--   **일** 은 선택하는 요일의 특정 시간 및 분에 실행되는 일정을 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다: 모든 \< *일*>, 주중 매일, 매 \< *번호*> 일 합니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
+-   **일** 은 선택하는 요일의 특정 시간 및 분에 실행되는 일정을 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다: 모든 \< *일*>, 주중 매일, 매 \< *번호*> 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
   
 -   **주** 는 주별 간격으로 특정 시간 및 분에 실행되는 일정을 정의합니다. 간격은 주 전체(예: 격주간)나 주 중의 요일로 지정할 수 있습니다.  
   

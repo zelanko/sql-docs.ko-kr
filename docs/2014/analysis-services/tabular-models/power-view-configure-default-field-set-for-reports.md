@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - ql12.asvs.bidtoolset.deffieldset.f1
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3349a5a427df9a4d65505b157d2e38f9ecc29758
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0eba29031af4265c1850ed6a3ecf0241b60ac808
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263269"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>파워 뷰 보고서의 기본 필드 집합 구성(SSAS 테이블 형식)
   기본 필드 집합은 보고서 필드 목록에서 테이블을 선택할 때 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서 캔버스에 자동으로 추가되는 미리 정의된 열 및 측정값 목록입니다. 테이블 형식 모델 작성자는 보고서에 모델을 사용하는 보고서 작성자를 위해 기본 필드 집합을 만들어 중복된 단계를 제거할 수 있습니다. 예를 들어, 고객 연락처 정보를 사용하는 대부분의 보고서 작성자가 항상 연락처 이름, 기본 전화 번호, 전자 메일 주소 및 회사 이름을 보려고 하는 것으로 파악되는 경우 해당 열을 미리 선택하여 작성자가 Customer Contact 테이블을 클릭할 때 보고서 캔버스에 이러한 정보가 항상 추가되도록 할 수 있습니다.  

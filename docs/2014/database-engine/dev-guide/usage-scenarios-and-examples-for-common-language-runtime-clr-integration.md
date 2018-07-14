@@ -1,5 +1,5 @@
 ---
-title: 사용 시나리오 및 공용 언어 런타임 (CLR) 통합에 대 한 예 | Microsoft Docs
+title: 공용 언어 런타임 (CLR) 통합에 대 한 예제 및 시나리오 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - managed code [SQL Server], samples
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ead4b8976a05e2f27ed4e3f5f44e5de57abfe806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e2f3ecd38a359da8fa7a3042821742493a82073f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326503"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 응용 프로그램, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
   
- 이러한 예제 및 추가 자료 구현 전체 Visual Studio 프로젝트에 대 한 방문 [Microsoft SQL Server 커뮤니티 프로젝트 및 CodePlex의 예제](http://go.microsoft.com/fwlink/?LinkID=193935)합니다.  
+ 이러한 샘플 및 추가 자료를 구현 합니다. 전체 Visual Studio 프로젝트에 대 한 방문 [Microsoft SQL Server 커뮤니티 프로젝트 및 codeplex 샘플](http://go.microsoft.com/fwlink/?LinkID=193935)합니다.  
   
 |속성|Description|  
 |----------|-----------------|  

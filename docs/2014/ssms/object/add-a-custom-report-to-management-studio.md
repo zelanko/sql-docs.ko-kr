@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 018d1dd25b8b7d593582d47038c90464ece09abd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c66643e7a6f442207c87f531d1e01f9cd07af816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261859"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio에 사용자 지정 보고서 추가
   이 항목에서는 .rdl 파일로 저장되는 간단한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만든 다음 이 rdl 파일을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 사용자 지정 보고서로 추가하는 방법에 대해 설명합니다. [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 다양한 고급 보고서를 만들 수 있습니다. 이 항목을 사용하여 보고서를 만들려면 컴퓨터에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 가 설치되어 있어야 합니다. [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 를 사용하여 사용자 지정 보고서를 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 설치할 필요는 없습니다.  
@@ -74,8 +74,8 @@ ms.locfileid: "36089891"
   
 ## <a name="see-also"></a>관련 항목  
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)   
- [개체 탐색기 노드 속성과 함께 사용자 지정 보고서를 사용 하 여](use-custom-reports-with-object-explorer-node-properties.md)   
- [사용자 지정 보고서 실행된 경고를 표시](unsuppress-run-custom-report-warnings.md)   
+ [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)   
+ [사용자 지정 보고서 실행된 경으십시오](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

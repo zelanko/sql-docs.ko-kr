@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - access controls [Reporting Services]
 - permissions [Reporting Services], about permissions
@@ -21,13 +21,13 @@ ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ce1209ca995b34e1c7ece83e7f5f1d9de7e78bfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d373ed35e148bc7994ab88221b71152f6b10e8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280529"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>역할 및 권한(Reporting Services)
   Reporting Services는 인증 하위 시스템 및 역할 기반 권한 부여 모델을 제공합니다. 인증 및 권한 부여 모델은 보고서 서버가 기본 모드에서 실행되는지, SharePoint 모드에서 실행되는지에 따라 달라집니다. 보고서 서버가 SharePoint 배포에 속하는 경우 SharePoint 권한에 따라 보고서 서버에 액세스할 수 있는 사용자가 결정됩니다.  

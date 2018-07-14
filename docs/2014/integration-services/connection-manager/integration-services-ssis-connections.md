@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
 - SSIS packages, connections
@@ -23,13 +23,13 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 caps.latest.revision: 90
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa0a870cd1a5e48849b81d392f3d34bdeb7d308e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a226221234b6668a50f6feef2e61e3b5a38f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273289"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36082729"
  이러한 연결을 만들려면 다음 섹션에서 설명한 대로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 연결 관리자를 사용합니다.  
   
 ## <a name="connection-managers"></a>연결 관리자  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 연결 관리자를 연결의 논리적 표현으로 사용합니다. 연결 관리자의 속성은 디자인 타임에 패키지가 실행될 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만드는 물리적 연결을 기술하기 위한 것입니다. 예를 들어 연결 관리자에 포함 되어는 `ConnectionString` 속성이 런타임 시; 디자인 타임에 설정 하는, 물리적 연결 만들어집니다 연결 문자열 속성의 값을 사용 하 여 합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 연결 관리자를 연결의 논리적 표현으로 사용합니다. 연결 관리자의 속성은 디자인 타임에 패키지가 실행될 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만드는 물리적 연결을 기술하기 위한 것입니다. 연결 관리자를 포함 하는 예를 들어를 `ConnectionString` 설정 하는 디자인 타임에 런타임에 속성을 물리적 연결이 생성 됩니다는 연결 문자열 속성의 값을 사용 합니다.  
   
  패키지에는 하나의 연결 문자열 유형에 대한 여러 항목이 사용될 수 있으며, 각 항목에 대해 속성을 설정할 수 있습니다. 런타임 시 연결 관리자 유형의 각 항목에는 다른 특성을 지닌 연결이 생성됩니다.  
   
@@ -100,9 +100,9 @@ ms.locfileid: "36082729"
   
 |형식|Description|항목|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle에 연결 \<버전 정보 > 서버입니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|ORACLE|Oracle에 연결할 \<버전 정보 > 서버.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
 |SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](http://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  
-|TERADATA|에 Teradata 연결 \<버전 정보 > 서버입니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|TERADATA|Teradata 연결 \<버전 정보 > 서버.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
   
 ### <a name="custom-connection-managers"></a>사용자 지정 연결 관리자  
  사용자 지정 연결 관리자를 작성할 수도 있습니다. 자세한 내용은 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)을 참조하세요.  

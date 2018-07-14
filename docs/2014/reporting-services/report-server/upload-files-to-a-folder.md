@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -21,13 +21,13 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 579d4d16e72b349ac4c2aa5d083d8dc1cfeb85a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9abf4ad5aef29b6064b53af80553b02ee01c2fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266149"
 ---
 # <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
   파일 시스템에서 파일을 업로드하여 보고서 서버 데이터베이스에 관리되는 항목으로 저장할 수 있습니다. 파일을 업로드할 때 발생하는 상황은 파일 형식에 따라 다릅니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36088779"
 |폴더의 내용 보기|리소스 보기, 보고서 보기|  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-관리자-ssrs-네이티브-mode.md)   
+ [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-manager-ssrs-네이티브-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [태스크 및 권한](../security/tasks-and-permissions.md)   
  [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md)  

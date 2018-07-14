@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3c357a61a238c10244dd9f1941cdaa9483ef9d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3e7b477c8f972f277db921c7adb6f9511efb065c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275209"
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 요소(CSDLBI)
   EntityContainer 요소는 단일 데이터 모델 내의 엔터티 컬렉션을 정의하는 EntityContainer라는 CSDL 유형을 기반으로 하는 복합 유형입니다. 비즈니스 인텔리전스 응용 프로그램에서 EntityContainer가 나타내는 데이터 모델은 관계로 연결된 열은 물론 계산, 측정값, KPI로 연결된 열이 있는 여러 테이블을 포함할 수 있습니다. 이 요소는 개념상 데이터베이스 또는 데이터 원본과 비슷합니다.  

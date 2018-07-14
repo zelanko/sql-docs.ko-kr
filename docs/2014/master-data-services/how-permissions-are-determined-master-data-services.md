@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324403"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>사용 권한이 결정되는 방식(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 구성하는 가장 손쉬운 방법은 사용자가 멤버로 속한 그룹에 모델 개체 사용 권한을 할당하는 것입니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36089950"
   
 -   엔터티와 동일한 수준에 있는 개체는 암시적으로 거부됩니다.  
   
--   상위 수준의 개체에는 탐색 액세스 권한이 제공됩니다. 탐색 액세스 하는 방법에 대 한 자세한 내용은 참조 [탐색 액세스 권한은 &#40;Master Data Services&#41;](navigational-access-master-data-services.md)합니다.  
+-   상위 수준의 개체에는 탐색 액세스 권한이 제공됩니다. 탐색 액세스 권한에 대 한 자세한 내용은 참조 하세요. [탐색 액세스 권한은 &#40;Master Data Services&#41;](navigational-access-master-data-services.md)합니다.  
   
- 이 예제에서는 **읽기 전용** 사용 권한이 엔터티에 할당 되어 및 권한은 모델 구조에서 하위 수준에 있는 해당 특성에 상속 됩니다. 모델은 이 엔터티 및 해당 특성에 대한 탐색 액세스 권한을 제공합니다. 모델의 다른 엔터티는 명시적 사용 권한이 할당되지 않았으며 어떠한 사용 권한도 상속하지 않으므로 암시적으로 거부됩니다.  
+ 이 예에서 **읽기 전용** 권한이 엔터티에 할당 되 고 해당 사용 권한은 모델 구조에서 하위 수준에 있는 해당 특성에 상속 됩니다. 모델은 이 엔터티 및 해당 특성에 대한 탐색 액세스 권한을 제공합니다. 모델의 다른 엔터티는 명시적 사용 권한이 할당되지 않았으며 어떠한 사용 권한도 상속하지 않으므로 암시적으로 거부됩니다.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36089950"
   
 -   사용 권한이 할당되지 않은 상위 수준의 노드는 암시적으로 거부됩니다.  
   
- 이 예제에서는 **읽기 전용** 계층의 한 노드에 사용 권한이 할당 되어 및 권한은 계층 구조의 하위 수준에 있는 노드에 상속 됩니다. 루트는 사용 권한이 할당되지 않았으므로 암시적으로 거부됩니다. 계층 구조의 다른 노드는 명시적 사용 권한이 할당되지 않았으며 어떠한 사용 권한도 상속하지 않으므로 암시적으로 거부됩니다.  
+ 이 예에서 **읽기 전용** 사용 권한 계층의 노드 하나에 할당 되 고 해당 사용 권한은 계층 구조의 하위 수준에서 노드 상속 됩니다. 루트는 사용 권한이 할당되지 않았으므로 암시적으로 거부됩니다. 계층 구조의 다른 노드는 명시적 사용 권한이 할당되지 않았으며 어떠한 사용 권한도 상속하지 않으므로 암시적으로 거부됩니다.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   

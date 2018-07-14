@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], formats
 - snapshot replication [SQL Server], formats
 ms.assetid: 7c95f545-731a-4743-9acb-0b325ef9b98b
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0f3d7042d4359b31764fdeefbe4f42a281ed1849
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b5ce1a19139ab8a399cd223e77d24cd135e225a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250023"
 ---
 # <a name="specify-snapshot-format-sql-server-management-studio"></a>스냅숏 형식 지정(SQL Server Management Studio)
   **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 스냅숏 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  

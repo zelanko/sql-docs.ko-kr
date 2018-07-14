@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SQLXML, Managed Classes
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b43ad8fb5fa88eb18fb0b5d5e41caecc04f99928
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f718c0f23beba22afa5f9246951a8cac3a957145
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264289"
 ---
 # <a name="sqlxml-managed-classes"></a>SQLXML 관리되는 클래스
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 관리되는 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 내에서 SQLXML 4.0의 기능을 공개합니다. SQLXML 관리되는 클래스를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 XML 데이터에 액세스하고, .NET Framework 환경으로 데이터를 가져오며, 데이터를 처리하고, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 업데이트를 DiffGram으로 다시 보내 적용하는 C# 응용 프로그램을 작성할 수 있습니다. SQLXML 관리되는 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스로 업데이트를 적용할 때는 매핑 스키마를 사용해야 합니다. 작업 예제를 참조 하십시오. [.NET 환경에서 SQLXML 기능 액세스](accessing-sqlxml-functionality-in-the-net-environment.md)합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 관리되는 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 내에서 SQLXML 4.0의 기능을 공개합니다. SQLXML 관리되는 클래스를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 XML 데이터에 액세스하고, .NET Framework 환경으로 데이터를 가져오며, 데이터를 처리하고, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 업데이트를 DiffGram으로 다시 보내 적용하는 C# 응용 프로그램을 작성할 수 있습니다. SQLXML 관리되는 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스로 업데이트를 적용할 때는 매핑 스키마를 사용해야 합니다. 작업 샘플을 보려면 [.NET 환경에서 SQLXML 기능 액세스](accessing-sqlxml-functionality-in-the-net-environment.md)합니다.  
   
  SQLXML 4.0에서 SQLXML 관리되는 클래스를 사용하려면 Microsoft Visual Studio를 설치해야 합니다.  
   

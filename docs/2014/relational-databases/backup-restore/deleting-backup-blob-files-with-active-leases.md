@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3c46becd5ae766627e96ad935900f063c4389bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256689"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
   Windows Azure Storage로 백업하거나 복원할 때 SQL Server는 blob에 대한 단독 액세스를 잠그기 위해 무한 임대를 획득합니다. 백업 또는 복원 프로세스가 성공적으로 완료되면 임대가 해제됩니다. 백업 또는 복원에 실패하면 백업 프로세스에서는 잘못된 모든 blob을 정리하려고 합니다. 하지만 오랫동안 지속된 네트워크 연결 오류로 인해 백업이 실패한 경우에는 백업 프로세스에서 blob에 액세스할 수 없으므로 blob이 분리됩니다. 즉, 임대가 해제될 때까지 blob을 쓰거나 삭제할 수 없습니다. 이 항목에서는 임대를 해제하고 blob을 삭제하는 방법에 대해 설명합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "36090876"
 3.  **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 ###  <a name="Code_Example"></a> PowerShell 스크립트 예:  
- **\*\* 중요 한 \* \***  PowerShell 2.0을 실행 하는 경우에 Microsoft WindowsAzure.Storage.dll 어셈블리를 로드 하는 문제가 있을 수 있습니다. 문제 해결을 위해 Powershell 3.0으로 업그레이드하는 것이 좋습니다. PowerShell 2.0에 대한 다음 해결 방법을 사용할 수도 있습니다.  
+ **\*\* 중요 \* \***  PowerShell 2.0을 실행 하는 경우에 Microsoft WindowsAzure.Storage.dll 어셈블리를 로드 하는 문제가 있을 수 있습니다. 문제 해결을 위해 Powershell 3.0으로 업그레이드하는 것이 좋습니다. PowerShell 2.0에 대한 다음 해결 방법을 사용할 수도 있습니다.  
   
 -   다음과 같이 powershell.exe.config 파일을 만들거나 수정하여 런타임에 .NET 2.0 및 .NET 4.0 어셈블리를 로드합니다.  
   

@@ -3,26 +3,24 @@ title: 저장 프로시저(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 617e72a83cc861ef66aa94df6b2bfe4e9c61ba24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d131ae229bc82243e0192ce7510392c1c8b355a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260429"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  

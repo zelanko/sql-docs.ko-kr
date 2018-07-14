@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote Distributors [SQL Server replication]
 - Publishers [SQL Server replication]
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d30eea9ddb042bfa13655079716e3cdab5ce5fd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5876c1550eba3d239ba262ff67a97e8300a5bca6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264679"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>배포자에서 원격 게시자 설정(SQL Server Management Studio)
   **게시자** 페이지에서 원격 배포자를 사용하려면 게시자를 설정합니다. 이 페이지는 배포 구성 마법사 및 **배포자 속성 - \<Distributor>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 방법 및 대화 상자에 액세스하는 방법은 [게시 및 배포 구성](configure-publishing-and-distribution.md) 및 [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  

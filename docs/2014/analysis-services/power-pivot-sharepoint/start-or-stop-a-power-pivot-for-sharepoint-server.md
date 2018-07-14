@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6039a0181cfce993e0c1970a5db68deb9d3c17c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247393"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint 서버 시작 또는 중지
   PowerPivot 시스템 서비스 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스는 SharePoint 팜에서 통합된 요청 및 데이터 처리를 지원 하기 위해 동일한 로컬 응용 프로그램 서버에서 함께 작동 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36090072"
   
  팜에서 모든 물리적 서비스를 동시에 시작하거나 중지할 수 없습니다. 각 서버를 선택한 다음 특정 서비스를 시작하거나 중지해야 합니다.  
   
- 특정 웹 응용 프로그램에 대해 PowerPivot 시스템 서비스를 시작, 일시 중지 또는 중지할 수 없지만 기본 연결 목록에서 서비스를 제거하여 사용하지 못하도록 할 수 있습니다. 자세한 내용은 참조 [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)합니다.  
+ 특정 웹 응용 프로그램에 대해 PowerPivot 시스템 서비스를 시작, 일시 중지 또는 중지할 수 없지만 기본 연결 목록에서 서비스를 제거하여 사용하지 못하도록 할 수 있습니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)합니다.  
   
 1.  중앙 관리의 **시스템 설정**에서 **서버의 서비스 관리**를 클릭합니다.  
   

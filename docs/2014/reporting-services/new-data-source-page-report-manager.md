@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c951f5dbf663d7a6f55b493aeac86cd32c0f72a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57c22c0f39b411510fb70c5a5068ce4930674555
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280389"
 ---
 # <a name="new-data-source-page-report-manager"></a>새 데이터 원본 페이지(보고서 관리자)
   새 데이터 원본 페이지를 사용하여 공유 데이터 원본 항목을 만들 수 있습니다. 공유 데이터 원본은 외부 데이터 원본과의 연결을 정의합니다. 공유 데이터 원본을 사용하면 해당 데이터 원본을 사용하는 보고서, 모델 및 데이터 기반 구독과는 별도로 데이터 원본 연결에 대한 설정을 만들고 관리할 수 있습니다.  
@@ -47,20 +47,20 @@ ms.locfileid: "36091675"
  공유 데이터 원본을 설정 또는 해제하도록 선택합니다. 공유 데이터 원본을 해제하여 항목을 참조하는 모든 보고서 및 모델이 처리되지 않도록 할 수 있습니다.  
   
  **데이터 원본 유형**  
- 데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 서버에 대 한 데이터 처리 확장 프로그램이 포함 되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC 및 OLE DB 합니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
+ 데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 서버에 대 한 데이터 처리 확장 프로그램이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC 및 OLE DB입니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
   
- 원격 및 비 SQL 데이터 원본 지원에 대 한 자세한 내용은 참조 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) 및 [보고에서 데이터 원본 지원 서비스 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
+ 원격 및 비 SQL 데이터 원본 지원에 대 한 자세한 내용은 참조 하세요. [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) 고 [Data Sources Supported by Reporting 서비스 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
   
  **연결 문자열**  
  보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 형식에 따라 사용하는 구문이 결정됩니다. 예를 들어 XML 데이터 처리 확장 프로그램에 대한 연결 문자열은 XML 문서에 대한 URL입니다. 대부분의 경우 일반적인 연결 문자열은 데이터베이스 서버와 데이터 파일을 지정합니다.  
   
- 다음 예제에서는 연결 문자열에 연결 하는 데 사용 된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스:  
+ 다음 예제에 연결할 때 사용할 연결 문자열을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
 ```  
   
- 자세한 예제 및 연결 문자열을 지정 하 여 다양 한 방법에 대 한 정보를 참조 하세요. [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+ 자세한 예제 및 연결 문자열을 지정 하는 다양 한 방법에 대 한 정보를 참조 하세요 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
   
  **사용 하 여 연결**  
  자격 증명을 가져오는 방법을 결정하는 옵션을 지정합니다.  
@@ -74,7 +74,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  사용자가 제공하는 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 데이터베이스 인증을 사용 하는 경우이 확인란을 선택 하지 마십시오 (예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증).  
   
  **(연결 방법) 보고서 서버에 안전 하 게 저장 된 자격 증명**  
- 암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정 또는 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택합니다. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 지정: \<도메인 >\\< 사용자 이름\>합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
+ 암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정 또는 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택합니다. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 지정 합니다. \<도메인 >\\< 사용자 이름\>합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
  자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 데이터베이스 인증을 사용 하는 경우이 확인란을 선택 하지 마십시오 (예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증).  
   
@@ -90,7 +90,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **자격 증명 필요 없음 (연결 방법)**  
  자격 증명 없이 데이터 원본에 액세스할 수 있도록 지정합니다. 데이터 원본에 사용자 로그온이 필요한 경우에는 이 옵션을 선택해도 적용되지 않습니다. 데이터 원본 연결에 사용자 자격 증명이 필요하지 않은 경우에만 이 옵션을 선택해야 합니다.  
   
- 이 옵션을 사용하려면 보고서 서버 배포를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 원본을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대 한 자세한 내용은 참조 [무인 실행 계정을 구성 &#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)합니다.  
+ 이 옵션을 사용하려면 보고서 서버 배포를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 원본을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대 한 자세한 내용은 참조 하십시오 [무인 실행 계정 구성 &#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)합니다.  
   
  **확인**  
  클릭하여 변경 내용을 저장합니다.  
@@ -99,8 +99,8 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [만들기, 수정 및 공유 데이터 원본을 삭제 &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [만들기, 수정 및 공유 데이터 원본 삭제 &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

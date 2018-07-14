@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - database engine configuration
 - database engine configuration, user instance
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00ce0b457fcb64c8568662ce4a64b8929c29e5ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fdba96d79e842f568ba3077c7da0254483b81d60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274349"
 ---
 # <a name="database-engine-configuration---user-instance"></a>데이터베이스 엔진 구성 - 사용자 인스턴스
   **사용자 인스턴스** 페이지를 사용하여 관리자 권한 없이 사용자에 대한 개별 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 생성하고 관리자 역할에 사용자를 추가할 수 있습니다.  

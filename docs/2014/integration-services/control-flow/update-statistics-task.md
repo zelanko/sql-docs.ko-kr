@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.updatestatisticstask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45e4cc5b9e27b08d226dd59114aa9cee48356f2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c81bd46453a8f34d5428808361ed2be31c3f5c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274989"
 ---
 # <a name="update-statistics-task"></a>통계 업데이트 태스크
   통계 업데이트 태스크는 지정된 테이블이나 인덱싱된 뷰에서 하나 이상의 통계 그룹(컬렉션)의 키 값 배포에 대한 정보를 업데이트합니다. 자세한 내용은 [Statistics](../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  

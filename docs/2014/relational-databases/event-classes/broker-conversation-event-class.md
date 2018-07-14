@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0e58a9d4e8711a24da97b73c47d48b281d8ae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18b73246733a64d7250cf42c3814ba3f492e6bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275289"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **Broker:Conversation** 이벤트를 생성하여 Service Broker 대화의 진행을 보고합니다.  

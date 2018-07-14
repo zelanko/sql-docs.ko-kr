@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245743"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>PowerPivot에서 가져오기(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 PowerPivot에서 가져오기 프로젝트 템플릿을 사용하여 PowerPivot 통합 문서에서 메타데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.  
@@ -44,14 +44,14 @@ ms.locfileid: "36091816"
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.  에 **새 프로젝트** 대화 상자의 **설치 된 템플릿**, 클릭 **Business Intelligence**, 클릭 하 고 **PowerPivot에서가져오기**.  
+2.  에 **새 프로젝트** 대화 상자의 **설치 된 템플릿**, 클릭 **Business Intelligence**를 클릭 하 고 **PowerPivot에서가져오기**.  
   
 3.  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
   
 4.  **열기** 대화 상자에서 가져올 모델 메타데이터 및 데이터가 포함된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 파일을 선택한 다음 **열기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [작업 영역 데이터베이스 &#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)   
- [데이터 복사 및 붙여넣기 &#40;SSAS 테이블 형식&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [작업 영역 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)   
+ [데이터 복사 및 붙여넣기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b481ab27af87a20f1a509cb10749c9f2ca1c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324973"
 ---
 # <a name="migrate-query-plans"></a>쿼리 계획 마이그레이션
   데이터베이스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하면 대부분의 경우 쿼리 성능이 향상됩니다. 그러나 성능 향상을 위해 세심하게 튜닝된 중요한 쿼리의 경우 업그레이드하기 전에 각 쿼리에 대한 계획 지침을 만들어 쿼리 계획을 보존할 수 있습니다. 업그레이드 후에 쿼리 최적화 프로그램에서 한 개 이상의 쿼리에 대해 효율성이 낮은 계획이 선택된 경우 계획 지침을 사용하여 쿼리 최적화 프로그램에서 업그레이드 전 계획이 사용되도록 지정할 수 있습니다.  
   
  업그레이드 전에 계획 지침을 만들려면 다음 단계를 수행하십시오.  
   
-1.  사용 하 여 중요 한 각 쿼리에 대 한 현재 계획 기록의 [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 저장 프로시저는 USE PLAN 쿼리 힌트에서 쿼리 계획을 지정 합니다.  
+1.  사용 하 여 각 중요 한 쿼리에 대 한 현재 계획을 기록 합니다 [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 저장 프로시저 및 쿼리 계획을 USE PLAN 쿼리 힌트에 지정 합니다.  
   
 2.  계획 지침이 쿼리에 적용되었는지 확인합니다.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36092247"
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Query_plan 열 쿼리는 [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) 동적 관리 함수입니다.  
+-   Query_plan 열 쿼리 합니다 [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) 동적 관리 함수입니다.  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), 및 [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 이벤트 클래스.  
+-   합니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md)합니다 [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), 및 [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 이벤트 클래스.  
   
  다음 예에서는 동적 관리 뷰를 쿼리하여 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 문에 대한 쿼리 계획을 수집합니다.  
   

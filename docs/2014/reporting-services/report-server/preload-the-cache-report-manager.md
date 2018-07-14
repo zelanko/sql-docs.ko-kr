@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
@@ -16,13 +16,13 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24be62a990b92b522d6bf4d0bb04873b743fa99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253915"
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93de00e5129d77379b1575772b20d9c74912660f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cc09f121948ed33c1cb72e510f408235c2db66c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246207"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
   Microsoft **의** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 개별 리소스 유형에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 정보를 제공합니다. 트랜잭션 동안 읽거나 수정한 행과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에는 잠금이 설정되어 다른 트랜잭션에서 동시에 리소스를 사용하는 것을 방지합니다. 예를 들어 트랜잭션에 의해 테이블에 있는 행에 배타적(X) 잠금이 설정되어 있다면 잠금을 풀기 전까지는 다른 트랜잭션으로 수정할 수 없습니다. 잠금을 최소화하면 동시성을 늘려 성능을 향상시킬 수 있습니다. **Locks** 개체의 여러 인스턴스는 리소스 유형의 잠금을 나타내는 각 인스턴스와 함께 동시 모니터링이 가능합니다.  

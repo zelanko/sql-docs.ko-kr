@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f2846424fdf7104c95cb4a56ac836b57583bf0cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250793"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 요소(CSDLBI)
   Hierarchy 요소는 서로 연결하여 계층을 구성할 수 있는 테이블의 필드에 대한 논리적 컨테이너입니다. Hierarchy 요소는 CSDL Member 요소에서 파생되는 요소로, 비즈니스 인텔리전스 데이터 모델에서 만든 계층을 지원하도록 범위가 확장되었습니다.  
@@ -88,6 +88,6 @@ ms.locfileid: "36090248"
 ## <a name="see-also"></a>관련 항목  
  [테이블 형식 개체 모델 이해](../representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [DAX의 부모-자식 계층에 대 한 함수 이해](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
- [구성에서 &#40;모든&#41; 특성 계층의 수준](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [구성 된 &#40;모든&#41; 특성 계층의 수준](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

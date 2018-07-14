@@ -1,5 +1,5 @@
 ---
-title: 필터 정보 (SQL Server Profiler) | Microsoft Docs
+title: 보기 필터 정보 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
 - filters [SQL Server], viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7936ad4df64746697b5c9d0ff8f2be1c7a5cbef1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d0c040ead976dc02e8309cb65dbd615acd11ae3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253835"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>필터 정보 보기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 클래스의 데이터 열에서 필터를 보는 방법에 대해 설명합니다.  

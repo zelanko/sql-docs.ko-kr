@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
 - FOREIGN KEY constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 30a0d2f23c814c9ff1c963c1a5d430cb6d711cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268819"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 기본 키와 외래 키가 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  

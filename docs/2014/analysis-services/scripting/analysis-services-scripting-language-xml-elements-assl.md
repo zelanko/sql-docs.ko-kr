@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ASSL, elements
 ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ceb9c779556bfe05384ca8993a74ea28b8dae2df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ab700589ac454605aa2128b7057e3aa07c6de9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323083"
 ---
 # <a name="analysis-services-scripting-language-xml-elements-assl"></a>Analysis Services Scripting Language XML 요소(ASSL)
   ASSL(Analysis Services Scripting Language) 스키마는 XML 요소만 포함하지만 개발자 관점에서 이러한 요소는 다음 개념에 해당합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36090535"
 -   다른 개체의 자식 요소 및 속성을 정의하는 데 사용되는 데이터 형식(예: `Binding` 및 `Permission`)  
   
     > [!NOTE]  
-    >  이 섹션에서는 데이터 형식 요소를 다루지 않습니다. 자세한 내용은 참조, [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)합니다.  
+    >  이 섹션에서는 데이터 형식 요소를 다루지 않습니다. 자세한 내용은 [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249513"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>결과 창에서 데이터 작업(Visual Database Tools)
   쿼리나 뷰를 실행하면 결과 창에 그 결과가 표시됩니다. 이러한 결과를 사용하여 작업할 수 있습니다. 예를 들어 행을 추가 및 삭제하고 데이터를 입력 또는 변경하며 수많은 결과 집합 사이를 쉽게 이동할 수 있습니다.  
@@ -119,9 +119,9 @@ ms.locfileid: "36090370"
 ### <a name="what-can-not-be-represented-fully"></a>완전히 표현할 수 없는 항목  
  데이터베이스에서 결과 창으로 반환되는 내용은 현재 사용 중인 데이터 원본의 공급자를 통해 주로 제어됩니다. 모든 데이터베이스 관리 시스템의 데이터를 결과 창에서 항상 변환할 수 있는 것은 아닙니다. 이와 같은 예외적인 경우는 다음과 같습니다.  
   
--   결과 창에서 작업하는 대부분의 사용자에게는 일반적으로 이진 데이터 형식이 유용하지 않으며 이러한 데이터를 다운로드하는 데도 아주 많은 시간이 필요할 수 있습니다. 표시 되는 하므로  *\<이진 데이터 >* 또는 *Null*합니다.  
+-   결과 창에서 작업하는 대부분의 사용자에게는 일반적으로 이진 데이터 형식이 유용하지 않으며 이러한 데이터를 다운로드하는 데도 아주 많은 시간이 필요할 수 있습니다. 로 표시 됩니다 있도록  *\<이진 데이터 >* 하거나 *Null*합니다.  
   
--   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터를 더욱 세부적으로는 데이터 형식의 경우 데이터 초과 부분이 잘리거나로 표시 될 수  *\<데이터를 읽을 수 없습니다 >* 합니다.  
+-   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터를 더 높은 정밀도 사용 하 여 데이터 형식의 경우 데이터 초과 부분이 잘리거나으로 표시 될 수 있습니다  *\<데이터를 읽을 수 없습니다 >* 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [쿼리 관련 기본 작업 수행 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

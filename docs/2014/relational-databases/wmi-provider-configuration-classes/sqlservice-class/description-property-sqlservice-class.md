@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Description property
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f806cc7233d14013b307496084d4bfbeb8e4121
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 37bce92c0bb12c6e2b2efccd1d0822ad5bf4369c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280749"
 ---
 # <a name="description-property-sqlservice-class"></a>Description 속성(SqlService 클래스)
   참조된 서비스에 대한 설명을 가져옵니다.  

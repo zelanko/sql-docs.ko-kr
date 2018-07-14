@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
 - hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 956c12641ab5159232bc053f7bc48d6136ffddbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 57e7dac5316ae64bbe4ae931707f56abbcc78799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260889"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>재귀 계층 구조(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 재귀 계층 구조는 재귀 관계를 포함하는 파생 계층입니다. 재귀 관계는 엔터티에 엔터티 자체를 기반으로 하는 도메인 기반 특성이 있는 경우에 존재합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36089087"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|파생 계층을 만듭니다.|[파생된 계층 만들기 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
+|파생 계층을 만듭니다.|[파생된 계층을 만들려면 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
 |기존 파생 계층의 이름을 변경합니다.|[파생된 계층 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |기존 파생 계층을 삭제합니다.|[파생된 계층 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event classes [Analysis Services], notification events
 - Notification Events event category
 - notification events [Analysis Services]
 ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af2129758875613dd2c0ef1529e558b181135c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef05fef22ba173e80b2044087f2a4ce2e61625da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255275"
 ---
 # <a name="notification-events-event-category"></a>Notification Events 이벤트 범주
   Notification Events 이벤트 범주에는 다음 표에서 설명하는 이벤트 클래스가 있습니다.  

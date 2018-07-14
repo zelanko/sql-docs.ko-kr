@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c3c75a22ee1a367f752cd310a19aebdb241c90eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255785"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>지도 뷰포트 속성 대화 상자, 중심 및 확대/축소
   **지도 뷰포트 속성** 대화 상자의 **중심 및 확대/축소** 를 선택하여 지도의 중심 보기와 확대/축소 비율을 설정할 수 있습니다. 지도 데이터 원본과 보고서에 포함할 지도의 경계를 지정한 후 보기 중심과 확대/축소 비율을 지정하여 지도 표시를 세부적으로 제어할 수 있습니다. 옵션은 중심 및 확대/축소 값을 지정하는 데 사용하는 방법에 따라 달라집니다. 옵션의 값을 설정하는 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36090393"
   
  예를 들어 일치 필드의 이름이 [City]이고 일치 값이 "Seattle"인 지도 요소를 기준으로 보기를 가운데에 맞춥니다.  
   
- **모든 데이터 바인딩 지도 요소를 표시 하도록 지도 가운데 맞춤**  
+ **모든 데이터 바인딩된 지도 요소를 표시 하도록 지도 가운데 맞춤**  
  계층의 모든 지도 요소를 기준으로 보기를 가운데에 맞추려면 이 옵션을 선택합니다. 이 옵션을 지정하려면 공간 데이터가 분석 데이터와 관계를 맺고 있어야 합니다.  
   
  예를 들어 도시를 표시하는 다각형 거품형 계층을 기준으로 보기를 가운데에 맞춥니다. 거품 크기는 인구와 관련되어 있습니다. 뷰포트의 중심을 계산할 때 일치하는 인구 값이 있는 도시만 포함됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36090393"
  **확대/축소 수준 (%)**  
  확대/축소 비율입니다. 기본값 100%는 확대하지 않음을 나타냅니다.  
   
- **이 계층의 중심 보기**  
+ **이 계층 보기 가운데 맞춤**  
  계층의 이름을 지정합니다.  
   
  **이 조건에 맞는 지도 요소로 보기 가운데**  

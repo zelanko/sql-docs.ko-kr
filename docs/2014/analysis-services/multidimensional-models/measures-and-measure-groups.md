@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
 - measures [Analysis Services], about measures
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74904af589aee642d0c83524f3a6dd71b3390371
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255635"
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
   큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36091167"
   
  모든 큐브는 하나 이상의 측정값을 포함해야 하지만 대부분의 큐브는 많은 수의 측정값을 포함하며 경우에 따라 그 수가 수백 개에 이르기도 합니다. 구조적으로 하나의 측정값은 흔히 팩트 테이블 하나의 원본 열 하나에 매핑되며, 해당 열은 측정값을 로드하는 데 사용되는 값을 제공합니다. 또는 MDX를 사용하여 측정값을 정의할 수도 있습니다.  
   
- 측정값은 컨텍스트를 구분하며, 쿼리에 포함되는 모든 차원 멤버에 의해 결정되는 컨텍스트에서 숫자 데이터에 대해 작동합니다. 예를 들어 계산 하는 측정값 **Reseller Sales** 하 여 백업할 수는 `Sum` 연산자 되며 쿼리에 포함 된 각 차원 멤버에 대 한 판매 금액을 더 합니다. 쿼리가 개별 제품을 지정하든 범주로 롤업하든 시간 또는 지리로 분할되든 관계없이 측정값은 쿼리에 포함된 차원에 대해 유효한 연산을 생성해야 합니다.  
+ 측정값은 컨텍스트를 구분하며, 쿼리에 포함되는 모든 차원 멤버에 의해 결정되는 컨텍스트에서 숫자 데이터에 대해 작동합니다. 측정값을 계산 하는 예를 들어 **Reseller Sales** 지 수는 `Sum` 연산자 및 해당 쿼리에 포함 된 각 차원 멤버의 판매액을 추가 합니다. 쿼리가 개별 제품을 지정하든 범주로 롤업하든 시간 또는 지리로 분할되든 관계없이 측정값은 쿼리에 포함된 차원에 대해 유효한 연산을 생성해야 합니다.  
   
  이 예제에서 **Reseller Sales** 는 **Sales Territory** 계층을 따라 다양한 수준으로 집계됩니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36091167"
   
  측정값이 쿼리에 사용된 차원과 관련이 없는 경우 어떻게 될까요? 일반적으로 Analysis Services는 기본 측정값을 보여 주며, 값은 모든 멤버에 대해 동일합니다. 이 예제에서 고객이 온라인 카탈로그를 사용하여 발생한 직접 판매를 측정하는 **Internet Sales**는 판매 조직과 관계가 없습니다.  
   
- ![값을 측정 하는 반복을 보여 주는 피벗 테이블](../media/ssas-unrelatedmeasure.PNG "값을 측정 하는 반복을 보여 주는 피벗 테이블")  
+ ![반복을 보여 주는 피벗 테이블 값을 측정](../media/ssas-unrelatedmeasure.PNG "값을 측정 하는 반복을 보여 주는 피벗 테이블")  
   
  클라이언트 응용 프로그램에서 이러한 동작이 발생할 확률을 최소화하기 위해 동일한 데이터베이스 내에 여러 큐브 또는 큐브 뷰를 만들어 각 큐브 또는 큐브 뷰가 관련 개체만 포함하도록 할 수 있습니다. 확인해야 할 관계는 측정값 그룹(팩트 테이블에 매핑됨)과 차원 간의 관계입니다.  
   

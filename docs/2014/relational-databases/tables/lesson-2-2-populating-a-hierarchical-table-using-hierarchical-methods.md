@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c513aa5fb2c1f42b0eb2fa6c82deaac96c49d3ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321893"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>계층 메서드를 사용하여 계층적 테이블 채우기
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36092138"
   
 ### <a name="to-insert-a-subordinate-employee"></a>부하 직원을 삽입하려면  
   
-1.  **Sariya** 는 **David**에게 보고합니다. 삽입할 **Sariya의** 노드를 만들어야 합니다 적절 한 **OrgNode** 데이터 형식의 값 `hierarchyid`합니다. 다음 코드에서는 `hierarchyid` 데이터 형식의 변수를 만들고 이를 테이블의 루트 OrgNode 값으로 채웁니다. 그런 다음 해당 변수를 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 메서드와 함께 사용하여 하위 노드인 행을 삽입합니다. `GetDescendant` 는 두 개의 인수를 사용합니다. 인수 값에 대해 다음 옵션을 검토합니다.  
+1.  **Sariya** 는 **David**에게 보고합니다. 삽입할 **Sariya** 노드를 만들어야 합니다를 적절 한 **OrgNode** 데이터 형식의 값 `hierarchyid`합니다. 다음 코드에서는 `hierarchyid` 데이터 형식의 변수를 만들고 이를 테이블의 루트 OrgNode 값으로 채웁니다. 그런 다음 해당 변수를 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 메서드와 함께 사용하여 하위 노드인 행을 삽입합니다. `GetDescendant` 는 두 개의 인수를 사용합니다. 인수 값에 대해 다음 옵션을 검토합니다.  
   
     -   부모가 NULL인 경우 `GetDescendant` 는 NULL을 반환합니다.  
   

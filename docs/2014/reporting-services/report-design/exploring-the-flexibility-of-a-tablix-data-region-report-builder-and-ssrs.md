@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5870596b88527413706c24985a3c0fb584721b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d4dbdcedec7cf61b3de912bab3e3658c0267f134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323893"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역의 유연성 살펴보기(보고서 작성기 및 SSRS)
   리본의 삽입 탭에서 테이블, 행렬 또는 목록 데이터 영역을 추가할 때는 테이블릭스 데이터 영역에 대한 초기 템플릿으로 시작하게 되지만 이 템플릿만 사용할 수 있는 것은 아닙니다. 그룹, 행 및 열 같은 테이블릭스 데이터 영역 기능을 추가하거나 제거하여 데이터 표시 방식을 계속 개발할 수 있습니다.  
   
- 행 또는 열 그룹을 삭제하면 그룹 값을 표시하는 데 사용되는 행과 열을 삭제할 수 있습니다. 행과 열을 수동으로 추가하거나 제거할 수도 있습니다. 세부 데이터와 그룹 데이터를 표시할 행과 열 용도 이해 하려면 참조 [테이블 릭 스 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)합니다.  
+ 행 또는 열 그룹을 삭제하면 그룹 값을 표시하는 데 사용되는 행과 열을 삭제할 수 있습니다. 행과 열을 수동으로 추가하거나 제거할 수도 있습니다. 세부 정보 및 그룹 데이터를 표시할 행과 열을 사용 하는 방법을 알아보려면 [테이블 릭 스 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)합니다.  
   
  테이블릭스 데이터 영역의 구조를 변경한 후에는 속성을 설정하여 보고서에서 데이터 영역이 렌더링되는 방식을 제어할 수 있습니다. 예를 들어 모든 페이지의 맨 위에 열 머리글이 반복되게 하거나 그룹에 그룹 머리글을 항상 표시할 수 있습니다. 자세한 내용은 [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)를 참조하세요.  
   

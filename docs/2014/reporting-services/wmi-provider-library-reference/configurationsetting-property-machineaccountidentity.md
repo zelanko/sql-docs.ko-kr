@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d329b84850f93fd10a0d94b1a4910649a0742eca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 635ec2ab9d147a9d9ec3e951b2739e916a2bfdce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257919"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity 속성(WMI)
   보고서 서버가 설치되어 있는 컴퓨터의 컴퓨터 계정 ID를 가져옵니다.  
@@ -37,7 +37,7 @@ public string MachineAccountIdentity;
 ```  
   
 ## <a name="property-values"></a>속성 값  
- A `String` 보고서 서버에 설치 되어 있는 컴퓨터의 컴퓨터 계정 id를 포함 하는 값입니다.  
+ `String` 보고서 서버에 설치 된 컴퓨터의 컴퓨터 계정 id를 포함 하는 값입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

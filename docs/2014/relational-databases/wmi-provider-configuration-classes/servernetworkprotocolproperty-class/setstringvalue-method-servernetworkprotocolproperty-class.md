@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2e0114109e60bfa5fd7953dae2e66a54ef5c9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4bcb4cc8b3c5aee29dca2eee17b34992c93ff2d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264259"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 메서드(ServerNetworkProtocolProperty 클래스)
   참조된 속성의 문자열 값을 설정합니다.  
@@ -46,7 +46,7 @@ StrValue
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerNetworkProtocolProperty 클래스](servernetworkprotocolproperty-class.md) 인스턴스의 네트워크 프로토콜의 특성을 나타내는 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ A [ServerNetworkProtocolProperty 클래스](servernetworkprotocolproperty-class.md) 인스턴스의 네트워크 프로토콜의 특성을 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 #### <a name="parameters"></a>매개 변수  
   

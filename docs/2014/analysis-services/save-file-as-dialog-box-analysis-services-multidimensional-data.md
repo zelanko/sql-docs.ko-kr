@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcd986ca7b24c2b6ca2f86036a94d7b8093347a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80e9eea367b1203d75fe5c55034ea1fedc317a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271739"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>다른 이름으로 파일 저장 대화 상자(Analysis Services - 다차원 데이터)
   **다른 이름으로 파일 저장** 대화 상자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대해 정의된 로그 및 데이터 폴더에서 사용 가능한 파일 목록을 표시합니다. 나열된 파일 중 하나를 선택하거나 필요한 경우 다른 폴더 및 파일을 지정할 수 있습니다. 다음을 수행하여 **다른 이름으로 파일 저장** 대화 상자를 표시할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36091163"
  **폴더 선택**에서 선택한 파일을 수정하거나 **폴더 선택**에 나열되지 않은 파일을 선택하려면 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [백업 데이터베이스 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272019"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
   MDX(Multidimensional Expressions)를 사용하여 다차원 데이터를 쿼리하거나 큐브 내에 MDX 식을 만들기 전에 다차원의 개념과 용어를 이해하는 것이 도움이 됩니다.  
@@ -65,11 +65,11 @@ ms.locfileid: "36089180"
   
  이처럼 집계는 미리 사전 계산되고 저장됩니다. 이것이 바로 Analysis Services가 제공하는 빠른 쿼리 성능의 비결입니다.  
   
- ![설명선 all 멤버가 포함 된 피벗 테이블](../media/ssas-keyconcepts-pivot2-allmember.png "설명선 all 멤버가 포함 된 피벗 테이블")  
+ ![호출 하는 모든 멤버를 사용 하 여 피벗 테이블](../media/ssas-keyconcepts-pivot2-allmember.png "호출 하는 모든 멤버를 사용 하 여 피벗 테이블")  
   
  계층을 확장하면 결국 최저 수준으로 이동합니다. 이를 **리프 구성원**이라고 합니다. 리프 구성원은 계층에서 하위 항목이 없는 구성원입니다. 이 예에서는 Australia가 리프 구성원입니다.  
   
- ![리프 구성원이 호출 된 피벗 테이블](../media/ssas-keyconcepts-pivot3-leafparent.PNG "리프 구성원이 호출 된 피벗 테이블")  
+ ![리프 멤버 호출 되는 테이블을 사용 하 여 피벗 테이블](../media/ssas-keyconcepts-pivot3-leafparent.PNG "리프 멤버 호출 되는 테이블을 사용 하 여 피벗 테이블")  
   
  그 위의 것은 **상위 구성원**이라고 합니다. Pacific은 Australia의 상위입니다.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36089180"
   
 |||  
 |-|-|  
-|![균형된 계층 구조의 호출 된 피벗 테이블](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "균형된 계층 구조의 호출 된 피벗 테이블")|**균형 계층** 은 최상위 수준과 모든 리프 구성원 사이의 수준 수가 동일한 계층입니다.<br /><br /> **자연 계층** 은 기본 데이터에서 자연적으로 발생하는 계층입니다. 일반적인 예로는 Country-Region-State, Year-Month-Date 또는 Category-Subcategory-Model이 있으며 각 하위 수준은 상위로부터 예측할 수 있습니다.<br /><br /> 다차원 모델에서 계층 대부분은 균형 계층이며, 이 중 대부분이 자연 계층입니다.<br /><br /> 관련 된 다른 모델링 용어는 한 `user-defined hierarchy`, 종종 특성 계층과 대조적으로 사용 합니다. BI 개발자가 생성한 계층이라는 의미로, 특성을 정의할 때 Analysis Services에서 자동으로 생성되는 특성 계층과 반대되는 개념입니다.|  
+|![균형된 계층 구조의 호출 된 피벗 테이블](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "호출 균형된 계층 구조를 사용 하 여 피벗 테이블")|**균형 계층** 은 최상위 수준과 모든 리프 구성원 사이의 수준 수가 동일한 계층입니다.<br /><br /> **자연 계층** 은 기본 데이터에서 자연적으로 발생하는 계층입니다. 일반적인 예로는 Country-Region-State, Year-Month-Date 또는 Category-Subcategory-Model이 있으며 각 하위 수준은 상위로부터 예측할 수 있습니다.<br /><br /> 다차원 모델에서 계층 대부분은 균형 계층이며, 이 중 대부분이 자연 계층입니다.<br /><br /> 관련 된 다른 모델링 용어는 한 `user-defined hierarchy`이며 종종 특성 계층과 대조적으로 사용 합니다. BI 개발자가 생성한 계층이라는 의미로, 특성을 정의할 때 Analysis Services에서 자동으로 생성되는 특성 계층과 반대되는 개념입니다.|  
   
  **불균형 계층 구조**  
   
 |||  
 |-|-|  
-|![비정형된 계층이 호출 된 피벗 테이블](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "비정형된 계층이 호출 된 피벗 테이블")|**비정형 계층** 또는 **불균형 계층** 은 최상위 수준과 리프 구성원 사이의 수준 수가 다른 계층입니다. 이 또한 BI 개발자가 생성하지만 이 경우 데이터에 차이가 있습니다.<br /><br /> AdventureWorks 샘플 모델에서, 미국에는 이 예의 다른 국가에는 존재하지 않는 추가 수준(Regions)이 있기 때문에 Sales Territory는 비정형 계층을 보여 줍니다.<br /><br /> 클라이언트 응용 프로그램이 비정형 계층을 원활하게 처리하지 못하는 경우 비정형 계층은 BI 개발자에게 문제가 됩니다. Analysis Services 모델에서 여러 수준 데이터 간의 관계를 명확하게 정의하는 **상위-하위 계층** 을 만들어 한 수준이 다른 수준과 관련되는 방식의 모호성을 없앨 수 있습니다. 참조 [부모-자식 계층](parent-child-dimension.md) 대 한 자세한 내용은 합니다.|  
+|![비정형된 계층이 호출 된 피벗 테이블](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "비정형된 계층이 호출 된 피벗 테이블")|**비정형 계층** 또는 **불균형 계층** 은 최상위 수준과 리프 구성원 사이의 수준 수가 다른 계층입니다. 이 또한 BI 개발자가 생성하지만 이 경우 데이터에 차이가 있습니다.<br /><br /> AdventureWorks 샘플 모델에서, 미국에는 이 예의 다른 국가에는 존재하지 않는 추가 수준(Regions)이 있기 때문에 Sales Territory는 비정형 계층을 보여 줍니다.<br /><br /> 클라이언트 응용 프로그램이 비정형 계층을 원활하게 처리하지 못하는 경우 비정형 계층은 BI 개발자에게 문제가 됩니다. Analysis Services 모델에서 여러 수준 데이터 간의 관계를 명확하게 정의하는 **상위-하위 계층** 을 만들어 한 수준이 다른 수준과 관련되는 방식의 모호성을 없앨 수 있습니다. 참조 [부모-자식 계층](parent-child-dimension.md) 세부 정보에 대 한 합니다.|  
   
 ## <a name="key-attributes"></a>키 특성  
  모델은 키와 인덱스를 사용하여 연결을 만드는 관련 개체의 컬렉션입니다. Analysis Services 모델도 다르지 않습니다. 각 차원(관계형 모델의 테이블과 동일)에 대해 키 특성이 있습니다. **키 특성** 은 팩트 테이블(측정값 그룹)에 대한 외래 키 관계에서 사용됩니다. 차원에서 키가 아닌 모든 특성이 키 특성에 직접적으로 또는 간접적으로 연결됩니다.  

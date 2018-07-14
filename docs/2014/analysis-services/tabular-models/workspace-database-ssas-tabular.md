@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a52eb01f176eddd8e69dcdc14609c3776bd54a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 54a56f1339a3a81385afc9b41fa4b202fed22cd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271589"
 ---
 # <a name="workspace-database-ssas-tabular"></a>작업 영역 데이터베이스(SSAS 테이블 형식)
   모델을 제작하는 동안 사용되는 테이블 형식 모델 작업 영역 데이터베이스는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 테이블 형식 모델 프로젝트를 만들 때 만들어집니다. 작업 영역 데이터베이스는 일반적으로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]와 동일한 컴퓨터에서 테이블 형식 모드로 실행하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 메모리 내에 상주합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36090737"
 |--------------|---------------------|-----------------|  
 |**작업 영역 데이터베이스**|프로젝트 이름, 밑줄, 사용자 이름, 밑줄, GUID가 차례로 포함됩니다.|메모리 내 모델 프로젝트를 저장하고 편집하는 데 사용되는 작업 영역 데이터베이스의 이름입니다. 테이블 형식 모델 프로젝트가 만들어진 후 이 데이터베이스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 작업 영역 서버 **속성에서 지정한** 인스턴스에 나타납니다. 이 속성은 속성 창에서 설정할 수 없습니다.|  
 |**작업 영역 보존**|메모리에서 언로드|모델 프로젝트를 닫은 후 작업 영역 데이터베이스가 보존되는 방법을 지정합니다. 작업 영역 데이터베이스에는 모델 메타데이터와 가져온 데이터가 포함됩니다. 경우에 따라 작업 영역 데이터베이스가 매우 크고 많은 양의 메모리를 사용할 수 있습니다. 기본적으로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 모델 프로젝트를 닫을 때 작업 영역 데이터베이스는 메모리에서 언로드됩니다. 이 설정을 변경할 때는 모델 프로젝트에서 작업할 빈도뿐만 아니라 사용 가능한 메모리 리소스를 고려해야 합니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **메모리에 유지** - 모델 프로젝트를 닫은 후 메모리에 작업 영역 데이터베이스를 유지하도록 지정합니다. 이 옵션을 사용하면 메모리 소비량이 많아지지만 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 모델 프로젝트를 열 때 리소스가 더 적게 사용되며 작업 영역 데이터베이스가 더 빠르게 로드됩니다.<br /><br /> **메모리에서 언로드** - 모델 프로젝트를 닫은 후 디스크에는 작업 영역 데이터베이스를 유지하지만 메모리에는 유지하지 않도록 지정합니다. 이 옵션을 사용하면 메모리가 더 적게 소비되지만, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 모델 프로젝트를 열 때 작업 영역 데이터베이스를 다시 연결해야 하고 리소스가 추가로 소비되며 작업 영역 데이터베이스가 메모리에 유지되는 경우보다 느리게 모델 프로젝트가 로드됩니다. 메모리 내 리소스가 제한되어 있거나 원격 작업 영역 데이터베이스에서 작업하는 경우 이 옵션을 사용하세요.<br /><br /> **작업 영역 삭제** - 모델 프로젝트를 닫은 후 메모리에서 작업 영역 데이터베이스를 삭제하고 디스크에 작업 영역 데이터베이스를 유지하지 않도록 지정합니다. 이 옵션을 사용하면 메모리 및 저장소 공간 소비량이 줄어들지만 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 모델 프로젝트를 열 때 리소스가 추가로 소비되며 작업 영역 데이터베이스가 메모리나 디스크에 유지되는 경우보다 느리게 모델 프로젝트가 로드됩니다. 가끔씩만 모델 프로젝트에서 작업하는 경우 이 옵션을 사용하십시오.<br /><br /> <br /><br /> 도구\옵션 대화 상자의 **Analysis Server** 설정에서 **데이터 모델링** 페이지를 사용하여 이 속성의 기본 설정을 변경할 수 있습니다.|  
-|**Workspace Server**|localhost|이 속성은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 모델 프로젝트를 제작하는 동안 작업 영역 데이터베이스를 호스팅하는 데 사용할 기본 서버를 지정합니다. 로컬 컴퓨터에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 모든 사용 가능한 인스턴스가 목록 상자에 포함됩니다.<br /><br /> 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버(테이블 형식 모드에서 실행)를 지정하려면 서버 이름을 입력합니다. 로그온한 사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 관리자여야 합니다.<br /><br /> 것이 좋습니다 로컬 지정 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 작업 영역 서버로 합니다. 원격 서버에 있는 작업 영역 데이터베이스의 경우 PowerPivot에서 가져오기가 지원되지 않고 데이터를 로컬로 백업할 수 없으며 쿼리 중에 사용자 인터페이스에서 대기 시간이 발생할 수 있습니다.<br /><br /> 또한이 속성에 대 한 기본 설정에서 데이터 모델링 페이지에서 변경할 수 있습니다에 유의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 도구 \ 옵션 대화 상자에서 설정 합니다.|  
+|**Workspace Server**|localhost|이 속성은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 모델 프로젝트를 제작하는 동안 작업 영역 데이터베이스를 호스팅하는 데 사용할 기본 서버를 지정합니다. 로컬 컴퓨터에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 모든 사용 가능한 인스턴스가 목록 상자에 포함됩니다.<br /><br /> 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버(테이블 형식 모드에서 실행)를 지정하려면 서버 이름을 입력합니다. 로그온한 사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 관리자여야 합니다.<br /><br /> 것이 좋습니다 로컬 지정할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 작업 영역 서버로 합니다. 원격 서버에 있는 작업 영역 데이터베이스의 경우 PowerPivot에서 가져오기가 지원되지 않고 데이터를 로컬로 백업할 수 없으며 쿼리 중에 사용자 인터페이스에서 대기 시간이 발생할 수 있습니다.<br /><br /> 데이터 모델링 페이지에서이 속성에 대 한 기본 설정을 변경할 수 있습니다는 참고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 도구 \ 옵션 대화 상자에서 설정 합니다.|  
   
 ##  <a name="bkmk_use_ssms"></a> SSMS를 사용하여 작업 영역 데이터베이스 관리  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)](SSMS)를 사용하여 작업 영역 데이터베이스를 호스팅하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 연결할 수 있습니다. 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 수행해야 하는 작업 영역 데이터베이스 분리 또는 삭제 작업을 제외하면 작업 영역 데이터베이스의 관리는 필요하지 않습니다.  
@@ -81,10 +81,10 @@ ms.locfileid: "36090737"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[모델 속성 &#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)|모델의 작업 영역 데이터베이스 속성에 대한 설명 및 구성 단계를 제공합니다.|  
+|[모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)|모델의 작업 영역 데이터베이스 속성에 대한 설명 및 구성 단계를 제공합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [기본 데이터 모델링 및 배포 속성 구성 &#40;SSAS 테이블 형식&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [프로젝트 속성 &#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
+ [기본 데이터 모델링 및 배포 속성 구성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
   
   

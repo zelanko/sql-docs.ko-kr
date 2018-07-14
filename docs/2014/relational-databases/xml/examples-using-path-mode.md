@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274629"
 ---
 # <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- 다음 쿼리에서는 제품 모델 ID와 이름 외에 제품 모델의 제조 지침 위치를 검색합니다. Instructions 열은 때문에 `xml` 형식에는 `query()` 방식의 `xml` 위치를 검색할 데이터 형식을 지정 합니다.  
+ 다음 쿼리에서는 제품 모델 ID와 이름 외에 제품 모델의 제조 지침 위치를 검색합니다. Instructions 열 이므로 `xml` 형식에는 `query()` 메서드의 `xml` 위치를 검색할 데이터 형식을 지정 합니다.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -248,7 +248,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` 에는 `WITH XMLNAMESPACES`접두사도 정의됩니다. 결과적으로 `query()` 의 메서드는 `xml` 지정 된 유형에 쿼리 프롤로그에 접두사를 정의 하지 않습니다. 다음은 결과입니다.  
+ `MI` 에는 `WITH XMLNAMESPACES`접두사도 정의됩니다. 결과적으로 `query()` 메서드는 `xml` 지정 된 형식 쿼리 프롤로그에 접두사를 정의 하지 않습니다. 다음은 결과입니다.  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   

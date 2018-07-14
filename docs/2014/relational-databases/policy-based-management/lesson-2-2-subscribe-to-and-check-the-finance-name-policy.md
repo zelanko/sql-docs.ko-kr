@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6387825abc2b2eb3426bbbd19f05674615f9e7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a564533f26faea5330da3c45cd8e00cd7e2c12d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253955"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Finance Name 정책 구독 및 확인
   이 태스크에서는 Finance 데이터베이스에서 Finance 정책 범주를 구독하도록 구성한 다음 Finance Name 정책을 테스트합니다.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Finance 정책 범주를 구독하려면  
   
-1.  개체 탐색기에서 확장 **데이터베이스**를 마우스 오른쪽 단추로 클릭 `Finance`, 가리킨 **정책**, 클릭 하 고 **범주**합니다.  
+1.  개체 탐색기에서 확장 **데이터베이스**를 마우스 오른쪽 단추로 클릭 `Finance`, 가리킨 **정책**를 클릭 하 고 **범주**.  
   
-2.  선택 된 **구독** 에 대 한 확인란의 `Finance` 범주.  
+2.  선택 합니다 **구독** 에 대 한 확인란을 선택 합니다 `Finance` 범주입니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36091714"
 ## <a name="next"></a>다음  
  이 자습서를 마칩니다. 시작 부분으로 돌아가려면 [자습서: 정책 기반 관리를 사용하여 서버 관리](tutorial-administering-servers-by-using-policy-based-management.md)를 참조하세요.  
   
- 자습서 목록을 참조 하십시오. [SQL Server 2014에 대 한 자습서](../../tutorials/tutorials-for-sql-server-2014.md)합니다.  
+ 자습서 목록을 보려면 참조 [SQL Server 2014에 대 한 자습서](../../tutorials/tutorials-for-sql-server-2014.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Join transformation
 - datasets [Integration Services], joining
@@ -18,13 +18,13 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 27d88e5105ddbbdbc8e9f8b5826b658921db2a1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd70921524de8124b9fd65d5d02f60de3f26ab9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322643"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>병합 조인 변환을 사용하여 데이터 집합 확장
   병합 조인 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 병합 조인 변환에 입력을 제공하는 두 개의 데이터 흐름 구성 요소가 이미 들어 있어야 합니다.  

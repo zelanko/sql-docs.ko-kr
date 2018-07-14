@@ -1,5 +1,5 @@
 ---
-title: 메모리 액세스에 최적화 된 테이블에서 인덱스 사용 지침 | Microsoft Docs
+title: 메모리 최적화 테이블의 인덱스를 사용 하기 위한 지침 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hash indexes
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e047c19deb12d67b23a4627410b998e8c2465107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263389"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스 사용 지침
   인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 데이터에 효율적으로 액세스하는 데 사용됩니다. 올바른 인덱스를 지정하면 쿼리 성능을 크게 개선할 수 있습니다. 예를 들어, 다음 쿼리를 살펴보세요.  
@@ -34,7 +34,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  테이블에 있는 하나 이상의 열에 대해 특정한 값 또는 값의 범위를 갖는 레코드를 검색할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 이러한 열에 있는 인덱스를 사용하여 해당 레코드를 신속하게 찾을 수 있습니다. 디스크 기반 및 메모리 최적화 테이블 모두 인덱스를 이용할 수 있습니다. 그러나 메모리 최적화 테이블을 사용하는 경우에는 인덱스 구조 사이의 특정한 차이를 고려해야 합니다. 메모리 최적화 테이블의 인덱스를 메모리 최적화 인덱스라고 합니다. 주요 차이점은 다음과 같습니다.  
   
--   메모리 액세스에 최적화 된 인덱스를 사용 하 여 만들어야 합니다 [CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)합니다. 디스크 기반 인덱스는 `CREATE TABLE` 및 `CREATE INDEX`를 사용하여 만들 수 있습니다.  
+-   메모리 최적화 인덱스를 사용 하 여 만들어야 합니다 [CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)합니다. 디스크 기반 인덱스는 `CREATE TABLE` 및 `CREATE INDEX`를 사용하여 만들 수 있습니다.  
   
 -   메모리 액세스에 최적화된 인덱스는 메모리에만 존재합니다. 인덱스 구조는 디스크에 유지되지 않으며 인덱스 작업은 트랜잭션 로그에 기록되지 않습니다. CREATE TABLE 실행 중과 데이터베이스 시작 중에 메모리 최적화 테이블이 메모리에 만들어질 때 인덱스 구조가 만들어집니다.  
   
@@ -44,7 +44,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  메모리 최적화 인덱스의 종류는 다음 두 가지입니다.  
   
--   포인트 조회를 위해 만들어진 비클러스터형 해시 인덱스. 해시 인덱스에 대 한 자세한 내용은 참조 [해시 인덱스](hash-indexes.md)합니다.  
+-   포인트 조회를 위해 만들어진 비클러스터형 해시 인덱스. 해시 인덱스에 대 한 자세한 내용은 참조 하세요. [해시 인덱스](hash-indexes.md)합니다.  
   
 -   범위 검색 및 정렬된 검색을 위해 만들어진 비클러스터형 인덱스  
   
@@ -54,7 +54,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  각 인덱스는 메모리를 소모합니다. 해시 인덱스는 고정된 크기의 메모리를 소모하며, 버킷 수의 함수입니다. 비클러스터형 인덱스의 경우 메모리 사용은 행 개수, 인덱스 키 열의 크기, 작업에 따라 발생하는 일정량의 추가 오버헤드를 반영합니다. 메모리 최적화 인덱스용 메모리는 메모리 최적화 테이블에 행을 저장하는 데 사용되는 메모리와 별개로 추가됩니다.  
   
- 중복 키 값은 항상 동일한 해시 버킷을 공유합니다. 해시 인덱스에 여러 중복 키 값이 포함되어 있어 긴 해시 체인이 만들어지면 성능에 악영향을 줄 수 있습니다. 해시 충돌이 해시 인덱스에서 발생하면 이 시나리오의 성능이 한층 낮아집니다. 이런 이유로 고유한 인덱스 키 수가 행 수보다 100 배 이상 작은 경우 줄일 수 있습니다 해시 충돌의 위험이 훨씬 더 큰 계산 버킷 함으로써 (8 배 이상 고유 인덱스 키 수가 참조; [결정은 해시 인덱스에 대 한 올바른 버킷 수](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) 자세한 정보에 대 한) 또는 비클러스터형 인덱스를 사용 하 여 완전히 해시 충돌을 제거할 수 있습니다.  
+ 중복 키 값은 항상 동일한 해시 버킷을 공유합니다. 해시 인덱스에 여러 중복 키 값이 포함되어 있어 긴 해시 체인이 만들어지면 성능에 악영향을 줄 수 있습니다. 해시 충돌이 해시 인덱스에서 발생하면 이 시나리오의 성능이 한층 낮아집니다. 이런 이유로 고유한 인덱스 키 수가 행 수보다 100 배 이상 작은 경우 줄일 수 있습니다 해시 충돌의 위험 버킷 훨씬 더 큰 키를 만들어 (고유한 인덱스 키 수를 곱한 적어도 8; 참조 [확인 합니다 해시 인덱스에 대 한 올바른 버킷](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) 자세한) 또는 비클러스터형 인덱스를 사용 하 여 완전히 해시 충돌을 제거할 수 있습니다.  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에 사용할 인덱스 결정  
  메모리 최적화 각 테이블에는 하나 이상의 인덱스가 있어야 합니다. 각 PRIMARY KEY 제약 조건은 인덱스를 암시적으로 만듭니다. 따라서 테이블에 기본 키가 있는 경우 인덱스가 있는 것입니다. 기본 키는 내구성 있는 메모리 최적화 테이블에 대한 요구 사항입니다.  
@@ -75,13 +75,13 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |색인 검색은 모든 테이블 행을 검색합니다.|예|예|예|  
 |같음 조건자(=)의 인덱스 검색.|예<br /><br /> (전체 키 필요)|예 <sup>1</sup>|예|  
-|같지 않음 조건자에서 인덱스 검색 (>, <, \<=, > =, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|예|  
+|같지 않음 조건자의 인덱스 검색 (>, <, \<=, > =, BETWEEN).|아니요(인덱스 검색의 결과)|예 <sup>1</sup>|예|  
 |인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다.|아니요|예|예|  
 |인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다.|아니요|아니요|예|  
   
  이 표에서 테이블에서 "예"는 인덱스가 요청을 적절히 처리할 수 있음을 의미하며 "아니요"는 인덱스를 사용하여 요청을 충족할 수 없음을 의미합니다.  
   
- <sup>1</sup> 클러스터 되지 않은 메모리 액세스에 최적화 된 인덱스에 대 한 전체 키는 인덱스 검색을 수행 하지 않아도 됩니다. 하지만 인덱스 키의 열 순서가 지정된 경우 누락된 열 뒤에 열의 값이 나오면 검색이 발생합니다.  
+ <sup>1</sup> 메모리 최적화 비클러스터형 인덱스에 대 한 전체 키 필요가 없습니다 인덱스 검색을 수행 합니다. 하지만 인덱스 키의 열 순서가 지정된 경우 누락된 열 뒤에 열의 값이 나오면 검색이 발생합니다.  
   
 ## <a name="index-count"></a>인덱스 개수  
  메모리 최적화 테이블은 기본 키로 만들어진 인덱스를 포함하여 최대 8개의 인덱스를 가질 수 있습니다.  
@@ -94,7 +94,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      가비지 컬렉션은 테이블의 모든 인덱스를 사용하는 경우 가장 잘 작동합니다. 드물게 사용되는 인덱스는 오래된 행 버전의 경우 가비지 컬렉션 시스템이 최적의 성능을 발휘하지 못하게 할 수 있습니다.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>메모리 액세스에 최적화 된 인덱스 만들기: 코드 샘플  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>메모리 최적화 인덱스를 만드는: 코드 샘플  
  열 수준 해시 인덱스:  
   
 ```tsql  
@@ -177,7 +177,7 @@ go
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화 된 테이블에 있는 인덱스](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [메모리 최적화 테이블의 인덱스](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [해시 인덱스에 대 한 올바른 버킷 수 결정](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [해시 인덱스](hash-indexes.md)  
   

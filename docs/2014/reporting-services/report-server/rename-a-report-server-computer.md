@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: be5f32d7859d21409930428711c247b208b97e23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6deb9cf058343e5b2a84d90c5ead07776447c355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321733"
 ---
 # <a name="rename-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기
   컴퓨터 이름을 바꾸면 웹 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 같은 컴퓨터에 있는 경우 이에 해당하는 이름이 변경됩니다. 컴퓨터 이름을 변경한 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 액세스할 수 없는 경우도 있습니다. 컴퓨터 이름을 변경한 다음에는 이 항목의 단계를 사용하여 보고서 서버를 다시 구성합니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "36090378"
 ## <a name="renaming-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기  
  보고서 서버를 실행하는 컴퓨터의 이름을 바꾸는 경우 다음을 수행하십시오.  
   
-1.  열기 **RSReportServer.config** 텍스트 편집기에서 수정 된 `UrlRoot` 새 서버 이름을 반영 하도록 설정 합니다. `UrlRoot` 설정은 배달 확장 프로그램에서 보고서 서버에 저장된 항목 액세스에 사용하는 URL을 작성하는 데 사용됩니다. 업데이트 하는 보고서 서버 URL 주소를 변경 하려면는 `UrlRoot` 구독 계속 예상 대로 보고서를 제공할 수 있도록 설정 합니다.  
+1.  오픈 **RSReportServer.config** 텍스트 편집기에서 수정 하 고는 `UrlRoot` 새 서버 이름을 반영 하도록 설정 합니다. `UrlRoot` 설정은 배달 확장 프로그램에서 보고서 서버에 저장된 항목 액세스에 사용하는 URL을 작성하는 데 사용됩니다. 업데이트 해야 보고서 서버 URL 주소를 변경 합니다 `UrlRoot` 구독 계속 예상 대로 보고서를 제공할 수 있도록 설정 합니다.  
   
-2.  동일한 파일에서 설정 된 경우 수정 된 `ReportServerUrl` 새 서버 이름을 반영 하도록 설정 합니다. 이 설정이 모든 설치에 사용되는 것은 아닙니다. 이 설정이 비어 있는 경우 아무 작업도 수행하지 마십시오.  
+2.  동일한 파일에서이 속성을 설정 하는 경우 수정 된 `ReportServerUrl` 새 서버 이름을 반영 하도록 설정 합니다. 이 설정이 모든 설치에 사용되는 것은 아닙니다. 이 설정이 비어 있는 경우 아무 작업도 수행하지 마십시오.  
   
     > [!NOTE]  
     >  회사 네트워크에서 WINS(Windows Internet Naming Service)를 사용하는 경우 보고서 서버와 보고서 관리자가 일정 기간 동안 이전 이름으로 사용 가능하다고 표시될 수 있습니다. WINS에서는 서비스하는 각 컴퓨터에 IP 주소를 매핑합니다. WINS에서 이름이 바뀐 컴퓨터의 IP 주소를 새로 고친 다음에는 더 이상 이전 컴퓨터 이름을 사용하여 보고서 서버나 보고서 관리자에 액세스할 수 없습니다.  

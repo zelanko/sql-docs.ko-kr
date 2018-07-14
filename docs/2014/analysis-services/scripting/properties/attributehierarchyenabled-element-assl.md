@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3433ad50f1a8d769eec53090087683324f8a9383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab14a4adf69281ec919811270c3d2220a76682e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250873"
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>AttributeHierarchyEnabled 요소(ASSL)
   특성에 대한 특성 계층을 설정할지 여부를 결정합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36089402"
 ## <a name="remarks"></a>Remarks  
  `AttributeHierarchyEnabled` 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 특성에 대한 특성 계층을 생성할지 여부를 결정합니다. 특성 계층이 설정되지 않으면 사용자 정의 계층에서 해당 특성을 사용할 수 없으며 MDX(Multidimensional Expressions) 문에서 특성 계층을 참조할 수도 없습니다.  
   
- 부모에 해당 하는 요소 `AttributeHierarchyEnabled` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeAttribute> 및 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `AttributeHierarchyEnabled` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CubeAttribute> 및 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [AttributeHierarchyVisible 요소 &#40;ASSL&#41;](visible-element-assl.md)   

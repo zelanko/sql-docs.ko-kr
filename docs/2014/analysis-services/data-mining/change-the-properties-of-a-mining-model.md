@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28e417708981a7184caa62ae74fe681397411d78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279817"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>마이닝 모델의 속성 변경
-  일부 마이닝 모델 속성은 모델 전체에 적용되고 다른 모델 속성은 개별 열에 적용됩니다. 전체 모델에 적용 되는 속성의 예를 들어는 `Drillthrough` 사례 데이터를 쿼리에 사용할 수 있는지 여부를 지정, 속성 및 `Description` 속성입니다. 열에 적용되는 속성으로는 모델 내에서 열의 데이터가 사용되는 방식을 제어하는 `Usage` 및 `ModelingFlags`가 있습니다.  
+  일부 마이닝 모델 속성은 모델 전체에 적용되고 다른 모델 속성은 개별 열에 적용됩니다. 전체 모델에 적용 되는 속성의 예로 `Drillthrough` 사례 데이터를 쿼리에 사용할지 여부를 지정 하는 속성 및 `Description` 속성입니다. 열에 적용되는 속성으로는 모델 내에서 열의 데이터가 사용되는 방식을 제어하는 `Usage` 및 `ModelingFlags`가 있습니다.  
   
  다음 모델 속성의 경우 식을 만들거나 복잡한 모델 속성을 구성하는 데 사용할 수 있는 고급 편집기가 제공됩니다.  
   
--   `Filter` 속성: 열립니다는 [데이터 집합 필터 또는 모델 필터 대화 상자](../data-set-filter-or-model-filter-dialog-box.md)합니다.  
+-   `Filter` 속성: 엽니다는 [데이터 집합 필터 또는 모델 필터 대화 상자](../data-set-filter-or-model-filter-dialog-box.md)합니다.  
   
--   `AlgorithmParameters` 속성: 열립니다는 [알고리즘 매개 변수 대화 상자 &#40;마이닝 모델 뷰&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)합니다.  
+-   `AlgorithmParameters` 속성: 엽니다는 [알고리즘 매개 변수 대화 상자 &#40;마이닝 모델 뷰&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)합니다.  
   
  마이닝 모델의 속성을 설정하는 방법은 [마이닝 모델 열](mining-model-columns.md)을 참조하세요.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36090361"
 2.  화면 오른쪽에 있는 **속성** 창에서 변경할 속성에 해당하는 값을 강조 표시하고 새 값을 입력합니다.  
   
     > [!NOTE]  
-    >  열 사용법으로 설정 되어 있으면 `Ignore`, **속성** 열 창은 비어 있습니다.  
+    >  열 사용법으로 설정 되어 있으면 `Ignore`는 **속성** 열 창은 비어 있습니다.  
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   

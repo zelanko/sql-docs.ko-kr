@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247763"
 ---
 # <a name="keycolumn-element-assl"></a>KeyColumn 요소(ASSL)
   특성의 키 또는 키의 일부인 열의 정의를 포함합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36088699"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 입력을 참조 하십시오. [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 자세한 내용은 합니다 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  AMO(Analysis Management Object) 개체 모델에서 `KeyColumns` 컬렉션의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute> 및 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>입니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280479"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
-  시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 차트를 사용하면 대량의 집계된 정보를 한 눈에 보이도록 표시할 수 있습니다. 차트를 신속하고 효과적으로 디자인하려면 차트를 만들기 전에 신중하게 데이터를 준비하고 이해해야 합니다. 자세한 내용은 [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)를 참조하세요. 차트 사용을 즉시를 시작 하려면 가로 막대형, 열, 스파크 라인 및 원형 차트 자습서를 참조 [자습서 &#40;보고서 작성기&#41; ](../report-builder-tutorials.md) 또는 가로 막대형 및 원형 차트 자습서 [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  
+  시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 차트를 사용하면 대량의 집계된 정보를 한 눈에 보이도록 표시할 수 있습니다. 차트를 신속하고 효과적으로 디자인하려면 차트를 만들기 전에 신중하게 데이터를 준비하고 이해해야 합니다. 자세한 내용은 [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)를 참조하세요. 차트 사용을 즉시를 시작 하려면 막대, 열, 스파크 라인 및 원형 차트 자습서를 참조 하세요 [자습서 &#40;보고서 작성기&#41; ](../report-builder-tutorials.md) 또는 가로 막대형 및 원형 차트 자습서 [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  
   
  다음 그림에서는 차트에 사용되는 다양한 요소를 보여 줍니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36089477"
   
   
 ##  <a name="AggregateValues"></a> 차트에서 데이터 필드의 값 집계  
- 기본적으로 차트의 값 영역에 필드를 추가하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 필드에 대한 집계를 계산합니다. 필드를 특정 영역에 끌어다 놓지 않고 차트로 끌면 차트는 필드의 데이터 형식에 기반하여 이 필드가 범주(x) 축에 속하는지 값(y) 축에 속하는지 결정합니다. 값 영역에 끌어다 놓은 숫자 필드는 SUM 함수를 사용하여 집계됩니다. 값 필드의 데이터 형식이 값 영역에서 문자열인 경우 차트는 필드에 숫자가 있더라도 숫자 값을 표시할 수 없으므로 차트는 COUNT 함수를 표시합니다. 이러한 현상을 방지하려면 필드에 서식 지정된 숫자가 포함된 문자열이 아니라 숫자 데이터 형식이 지정되어야 합니다. Visual Basic 식을 사용 하 여 문자열 값을 사용 하 여 숫자 데이터 형식으로 변환 된 `CDbl` 또는 `CInt` 상수입니다. 예를 들어 다음의 복잡한 식은 문자열 형식으로 지정된 숫자 값이 포함된 `MyField` 라는 필드를 변환합니다.  
+ 기본적으로 차트의 값 영역에 필드를 추가하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 필드에 대한 집계를 계산합니다. 필드를 특정 영역에 끌어다 놓지 않고 차트로 끌면 차트는 필드의 데이터 형식에 기반하여 이 필드가 범주(x) 축에 속하는지 값(y) 축에 속하는지 결정합니다. 값 영역에 끌어다 놓은 숫자 필드는 SUM 함수를 사용하여 집계됩니다. 값 필드의 데이터 형식이 값 영역에서 문자열인 경우 차트는 필드에 숫자가 있더라도 숫자 값을 표시할 수 없으므로 차트는 COUNT 함수를 표시합니다. 이러한 현상을 방지하려면 필드에 서식 지정된 숫자가 포함된 문자열이 아니라 숫자 데이터 형식이 지정되어야 합니다. Visual Basic 식을 사용 하 여 문자열 값을 사용 하 여 숫자 데이터 형식으로 변환 하는 `CDbl` 또는 `CInt` 상수입니다. 예를 들어 다음의 복잡한 식은 문자열 형식으로 지정된 숫자 값이 포함된 `MyField` 라는 필드를 변환합니다.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36089477"
   
   
 ##  <a name="InThisSection"></a> 섹션 내용  
- [보고서에 차트를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [보고서에 차트 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  보고서에 차트를 추가할 때 첫 번째로 수행하는 단계에 대해 설명합니다.  
   
  [차트 종류 &#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
@@ -130,13 +130,13 @@ ms.locfileid: "36089477"
  [차트 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  서식을 사용하여 전반적인 차트 모양을 향상시키고 중요한 데이터 요소를 강조 표시합니다.  
   
- [빈 데이터 요소 및 Null 데이터 요소 차트의 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [빈 데이터 요소 및 Null 데이터 요소 차트에서 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
  비어 있거나 null인 값이 포함된 필드를 기반으로 하는 차트를 사용할 때의 고려 사항에 대해 설명합니다.  
   
  [차트에 데이터 범위가 여러 개 있는 계열 표시 &#40;보고서 작성기 및 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  둘 이상의 데이터 범위가 포함된 계열에 배율 구분선을 추가하는 방법을 설명합니다.  
   
- [차트에 여러 계열을 &#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [차트의 여러 계열 &#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  차트 종류 결합, 보조 축 사용, 여러 차트 종류 지정, 여러 차트 영역 사용 등 동일한 차트에 여러 계열을 표시하는 방법을 다양하게 소개합니다.  
   
  [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  

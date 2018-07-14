@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72e37065325a80f2f487101a1b8f936bb903dc04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2794712f3817b3cf4d63aac7451a817cf55338b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266929"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>원본 위치 선택(SSIS 패키지 업그레이드 마법사)
   **원본 위치 선택** 페이지를 사용하여 패키지를 업그레이드할 원본을 지정할 수 있습니다.  

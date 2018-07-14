@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250623"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 2014 설치(설치 프로그램)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. 설치할 수 있는 다양 한 구성 요소에 대 한 자세한 내용은 참조 하십시오. [SQL Server 2014에 대 한 설치](installation-for-sql-server.md)합니다.  설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 참조 [SQL Server 2014 설치](install-sql-server.md)합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 설치하는 절차를 단계별로 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소를 설치할 수 있는 단일 기능 트리를 제공하므로 구성 요소를 개별적으로 설치할 필요가 없습니다. 설치할 수 있는 다양 한 구성 요소에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 설치](installation-for-sql-server.md)합니다.  설치 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 개별적으로 참조 [SQL Server 2014 설치](install-sql-server.md)합니다.  
   
  다음 추가 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 다른 방법을 설명합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36088462"
   
 -   [새 SQL Server 장애 조치 클러스터 만들기 &#40;설치&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)합니다.  
   
--   [업그레이드를 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
+-   [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
@@ -52,7 +52,7 @@ ms.locfileid: "36088462"
   
 2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 설치를 만들려면 왼쪽 탐색 영역에서 **설치**를 클릭한 다음 **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치 또는 기존 설치에 기능 추가**를 클릭합니다.  
   
-3.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션을 선택합니다. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
+3.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션을 선택합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
   
      계속하려면 **다음**을 클릭합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36088462"
   
 9. 설치 역할 페이지에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 설치**를 선택하고 **다음** 을 클릭하여 기능 선택 페이지를 계속 진행합니다.  
   
-10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 **기능 설명** 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 **기능 설명** 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 하 고 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
      선택한 기능의 필수 구성 요소가 **선택한 기능의 필수 구성 요소** 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
@@ -114,14 +114,14 @@ ms.locfileid: "36088462"
   
     -   보안 모드 — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 Windows 인증 또는 혼합 모드 인증을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
-         장치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 참조 [데이터베이스 엔진 구성-계정 프로 비전](../../sql-server/install/database-engine-configuration-account-provisioning.md)합니다.  
+         장치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성-계정 프로 비전](../../sql-server/install/database-engine-configuration-account-provisioning.md)합니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 또한 드라이브의 루트 폴더나 마운트 지점에 데이터 디렉터리가 있게 SQL Server를 설치할 수 없습니다. 자세한 정보를 검토 하십시오 [탑재 된 볼륨에 대 한 SQL Server 지원 합니다.](http://support.microsoft.com/kb/819546/en-us)  
+    >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 또한 드라이브의 루트 폴더나 마운트 지점에 데이터 디렉터리가 있게 SQL Server를 설치할 수 없습니다. 자세한 내용은 살펴보시기 [탑재 된 볼륨에 대 한 SQL Server 지원 합니다.](http://support.microsoft.com/kb/819546/en-us)  
   
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../sql-server/install/database-engine-configuration-data-directories.md)를 참조하세요.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36088462"
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 – 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 또한 드라이브의 루트 폴더나 마운트 지점에 데이터 디렉터리가 있게 SQL Server를 설치할 수 없습니다. 자세한 정보를 검토 하십시오 [탑재 된 볼륨에 대 한 SQL Server 지원 합니다.](http://support.microsoft.com/kb/819546/en-us)  
+    >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. 또한 드라이브의 루트 폴더나 마운트 지점에 데이터 디렉터리가 있게 SQL Server를 설치할 수 없습니다. 자세한 내용은 살펴보시기 [탑재 된 볼륨에 대 한 SQL Server 지원 합니다.](http://support.microsoft.com/kb/819546/en-us)  
   
      자세한 내용은 [Analysis Services 구성 - 데이터 디렉터리](../../sql-server/install/analysis-services-configuration-data-directories.md)를 참조하세요.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36088462"
  [SQL Server 설치 유효성 검사](validate-a-sql-server-installation.md)   
  [SQL Server 2014 설치 삭제](repair-a-failed-sql-server-installation.md)   
  [SQL Server 설치 로그 파일 보기 및 읽기](view-and-read-sql-server-setup-log-files.md)   
- [업그레이드를 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)  
   
   

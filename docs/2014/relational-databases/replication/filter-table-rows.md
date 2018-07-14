@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dad1a88d32ee0356ad669c638abc552470af6383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c5fa2f1dab88852bb5d6039b0017370c9a46966
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302203"
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
   **테이블 행 필터** 페이지를 사용하여 다음 작업을 수행할 수 있습니다.  

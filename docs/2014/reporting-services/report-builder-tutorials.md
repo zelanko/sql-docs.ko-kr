@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266159"
 ---
 # <a name="tutorials-report-builder"></a>자습서(보고서 작성기)
   이 항목에 나오는 보고서 작성기 자습서를 사용하여 기본 보고서를 만드는 방법을 배울 수 있습니다.  
   
- [자습서를 위한 전제 조건 &#40;보고서 작성기&#41;](prerequisites-for-tutorials-report-builder.md)  
+ [자습서의 필수 조건 &#40;보고서 작성기&#41;](prerequisites-for-tutorials-report-builder.md)  
  이 자습서를 사용하려면 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 대한 읽기 전용 액세스 권한과 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버에 액세스할 수 있는 권한이 있어야 합니다.  
   
  이러한 선행 조건과 관련하여 도움을 얻으려면 보고서 서버 관리자에게 문의하십시오.  
   
- [데이터 연결에 다른 방법 &#40;보고서 작성기&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
+ [데이터에 연결 하는 다른 방법 &#40;보고서 작성기&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  이러한 대부분의 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본에 액세스할 수 있으면 이를 대신 사용할 수 있습니다. 이 항목에서는 공유 데이터 원본을 사용하는 단계를 제공합니다.  
   
  [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "36089483"
  [자습서: 보고서에 세로 막대형 차트 추가 &#40;보고서 작성기&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  이 자습서의 단계를 따라 이동 평균이 있는 세로 막대형 차트를 보고서에 추가하는 방법을 배울 수 있습니다.  
   
- [자습서: 보고서에 원형 차트 추가 &#40;보고서 작성기&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [자습서: 보고서에 원형 차트를 추가 &#40;보고서 작성기&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  이 자습서의 단계를 따라 보고서에 원형 차트를 추가하는 방법을 배울 수 있습니다.  
   
  [자습서: 보고서에 막대형 차트 추가&#40;보고서 작성기&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  

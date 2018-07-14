@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277079"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
   이 항목에는 SQL Server를 백업하고 Windows Azure Blob 서비스로 복원하는 최상의 방법 및 문제 해결 팁이 포함되어 있습니다.  
@@ -45,20 +44,20 @@ ms.locfileid: "36090460"
   
 ## <a name="handling-large-files"></a>큰 파일 처리  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob 저장소 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. [Windows Azure 저장소 SLA](http://go.microsoft.com/fwlink/?LinkId=271619) 고려 사항에 사용할 수 있는 blob에 대 한 최대 처리 시간을 있어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob 저장소 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. [Windows Azure 저장소 SLA](http://go.microsoft.com/fwlink/?LinkId=271619) 고려 수행할 수 있는 blob에 대 한 최대 처리 시간을 있어야 합니다.  
   
 -   특히 큰 파일을 백업할 때 **백업 관리** 섹션에서 권장하는 대로 `WITH COMPRESSION` 옵션을 사용해야 합니다.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>URL 백업 또는 복원 문제 해결  
  다음은 Windows Azure Blob 스토리지 서비스로 백업하고 복원할 때 발생하는 문제를 해결하는 몇 가지 빠른 방법입니다.  
   
- 지원 되지 않는 옵션이 나 제한 사항으로 인해 오류를 방지 하려면 제한 사항 목록을 검토 하 고 백업 및 복원 명령 지원 정보에는 [SQL Server 백업 및 Windows Azure Blob 저장소 서비스로 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 문서.  
+ 지원 되지 않는 옵션이 나 제한 사항으로 인 한 오류를 방지 하려면 제한 사항 목록을 검토 하 고 백업 및 복원 명령 지원 정보에는 [Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 문서.  
   
  **인증 오류:**  
   
 -   WITH CREDENTIAL은 Windows Azure Blob 저장소 서비스로 백업하거나 복원하는 데 필요한 새로운 옵션입니다. 자격 증명과 관련하여 다음과 같은 오류가 발생할 수 있습니다.  
   
-     에 지정 된 자격 증명은 `BACKUP` 또는 `RESTORE` 명령이 없습니다. 이 문제를 방지하려면 백업 문에 자격 증명이 없는 경우 자격 증명을 만드는 T-SQL 문을 포함합니다. 다음은 사용 가능한 예입니다.  
+     에 지정 된 자격 증명을 `BACKUP` 또는 `RESTORE` 명령이 없습니다. 이 문제를 방지하려면 백업 문에 자격 증명이 없는 경우 자격 증명을 만드는 T-SQL 문을 포함합니다. 다음은 사용 가능한 예입니다.  
   
     ```  
     IF NOT EXISTS  
@@ -98,7 +97,7 @@ ms.locfileid: "36090460"
 -   압축된 백업에서 복원할 때 다음과 같은 오류가 표시될 수 있습니다.  
   
     -   **SqlException 3284이(가) 발생했습니다. 심각도: 16 상태: 5**  
-        **장치에서 메시지 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 정렬 되지 않았습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하세요. '65536'이(가) 사용할 수 있는 값인 것 같습니다.**  
+        **장치에서 메시지 파일 마크가 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 정렬 되지 않았습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하세요. '65536'이(가) 사용할 수 있는 값인 것 같습니다.**  
   
          이 오류를 해결하려면 `BACKUP`을 지정하여 `BLOCKSIZE = 65536` 문을 다시 실행하십시오.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36090460"
   
  프록시 서버에는 분당 연결 수를 제한하는 설정이 있을 수 있습니다. URL에 대한 백업 프로세스는 다중 스레드 프로세스이므로 이 제한을 초과할 수 있습니다. 이러한 경우 프록시 서버는 연결을 해제합니다. 이 문제를 해결하려면 SQL Server에서 프록시를 사용하지 않도록 프록시 설정을 변경합니다.   다음은 오류 로그에 표시될 수 있는 오류 메시지 유형의 몇 가지 예입니다.  
   
--   에 쓰기 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 실패: URL 백업 수행 시 원격 끝점에서 예외를 수신 합니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
+-   작성 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 실패 했습니다: 원격 끝점에서 예외를 수신 하는 URL에 백업 합니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
 -   파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 오류가 발생했습니다. 원격 끝점에서 오류를 수집할 수 없습니다.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36090460"
   
      백업 데이터베이스가 비정상적으로 종료됩니다.  
   
--   : BackupIoRequest::ReportIoError 백업 장치에 쓰기 오류 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
+-   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
  추적 플래그 3051을 사용하여 자세한 로깅을 설정하는 경우 로그에 다음과 같은 메시지도 표시될 수 있습니다.  
   
@@ -155,7 +154,7 @@ ms.locfileid: "36090460"
   
     ```  
   
-2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어 SQL Server가 컴퓨터의 C 드라이브에 설치 되어 구성 파일을 배치 여기: *C:\Program Files\Microsoft SQL Server\MSSQL12.\< 인스턴스 이름 > \MSSQL\Binn*합니다.  
+2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어, SQL Server는 컴퓨터의 C 드라이브에 설치 하는 경우 여기에 구성 파일: *C:\Program Files\Microsoft SQL Server\MSSQL12.\< N a m e > \MSSQL\Binn*합니다.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결  
  SQL Server 관리되는 백업이 URL에 대한 백업을 기반으로 하므로 이전 섹션에서 설명한 문제 해결 팁이 SQL Server 관리되는 백업을 사용하는 데이터베이스나 인스턴스에 적용됩니다.  SQL Server Managed Backup to Windows Azure 문제 해결에 대 한 정보에 자세히 설명 되어 [문제 해결 SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)합니다.  

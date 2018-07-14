@@ -25,16 +25,16 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 58795723cbe892fe607bdc768dec4fca6b7ae7ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd26b3cdda5ae3e851c01824f62d91a763557afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246943"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 변환된 데이터의 최종 대상은 인쇄된 보고서인 경우가 종종 있습니다. `System.Drawing.Printing` 네임 스페이스에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 프린터 작업을 위한 클래스를 제공 합니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 변환된 데이터의 최종 대상은 인쇄된 보고서인 경우가 종종 있습니다. 합니다 `System.Drawing.Printing` 네임 스페이스에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 프린터 작업을 위한 클래스를 제공 합니다.  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
@@ -50,7 +50,7 @@ ms.locfileid: "36089348"
   
 3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 추가합니다.  
   
-4.  사용자 코드에서 사용 하 여 `Imports` 가져오려는 문을 **System.Collections** 및 `System.Drawing.Printing` 네임 스페이스입니다.  
+4.  코드에서 사용 하 여 `Imports` 문을 합니다 **System.Collections** 고 `System.Drawing.Printing` 네임 스페이스입니다.  
   
 ### <a name="code"></a>코드  
   
@@ -146,7 +146,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 태스크 예제](../extending-packages-scripting-task-examples/script-task-examples.md)  

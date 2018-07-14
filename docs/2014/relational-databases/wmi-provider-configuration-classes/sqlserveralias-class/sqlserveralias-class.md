@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01e66c9362a8e1c91bd43e4d6821e12f93d23152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68976bc9c8683554ac58a0744196ecfa5bc7e689
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274279"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 클래스
   [SqlServerAlias 클래스](sqlserveralias-class.md) 는 서버 연결 별칭을 나타냅니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36090184"
   
 -   클라이언트가 대체 명명된 파이프에서 수신하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 경우  
   
- **참고:** 는 [SqlServerAlias 클래스](sqlserveralias-class.md) 상속 된 `Put` 는 Provider 클래스에서 메서드. `Provider::Put` 메서드가 표시하는 결과를 반환하지는 않습니다. 자세한 내용은 WMI 설명서를 참조하십시오.  
+ **참고:** 는 [SqlServerAlias 클래스](sqlserveralias-class.md) 상속 된 `Put` Provider 클래스에서 메서드. `Provider::Put` 메서드가 표시하는 결과를 반환하지는 않습니다. 자세한 내용은 WMI 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  

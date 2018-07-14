@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fccbf1cfa02801de01993bff086fc768ccffe5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 404a8d0311a449b09b3ddf85ad0b2780ed06d383
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272749"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 구문 표기 규칙
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 표기 규칙에 사용 되는 기반으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual STUDIO.NET 참조 설명서입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 표기 규칙에 사용 되는 기반한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual STUDIO.NET 참조 자료입니다.  
   
 |규칙|사용 대상|  
 |----------------|--------------|  

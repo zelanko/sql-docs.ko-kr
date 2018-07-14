@@ -1,5 +1,5 @@
 ---
-title: 옵션 (텍스트 편집기-SQL Transact-일반 페이지) | Microsoft Docs
+title: 옵션 (텍스트 편집기-Transact-SQL-일반 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257209"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>옵션 (텍스트 편집기-SQL Transact-일반 페이지)
+# <a name="options-text-editor---transact-sql--general-page"></a>옵션 (텍스트 편집기-Transact-SQL-일반 페이지)
   **일반 옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 편집하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **Transact-SQL** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  
   
 ## <a name="setting-options-in-multiple-locations"></a>여러 위치에서 옵션 설정  
@@ -67,7 +67,7 @@ ms.locfileid: "36089120"
 > [!NOTE]  
 >  이러한 줄 번호는 코드에 추가되거나 인쇄되지 않으며 참조용으로만 사용됩니다.  
   
- **단일 클릭으로 URL 탐색**  
+ **한 번 클릭으로 URL 탐색**  
  이 확인란을 선택하면 편집기에서 URL 위로 커서를 가져갈 때 커서가 가리키는 손 모양으로 변경됩니다. URL을 클릭하면 웹 브라우저에 해당 페이지를 표시할 수 있습니다.  
   
  **탐색 모음**  

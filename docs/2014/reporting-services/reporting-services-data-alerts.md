@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c681fed24d521c978946c46caeb4a9bbe1124bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272339"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고는 사용자가 관심을 가지고 있거나 사용자에게 중요한 보고서 데이터에 대한 정보를 적절한 시간에 받아 볼 수 있게 해주는 데이터 기반의 경고 솔루션입니다. 데이터 경고를 사용하면 정보를 자동으로 받아 볼 수 있으므로 더 이상 정보를 직접 찾을 필요가 없습니다.  
@@ -116,14 +116,14 @@ ms.locfileid: "36089905"
 ##  <a name="InstallAlerting"></a> 데이터 경고 설치  
  데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 SharePoint 모드로 설치된 경우에만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치하면 데이터 경고 정보 및 경고 메타데이터를 저장하는 경고 데이터베이스와 경고 관리를 위한 두 개의 SharePoint 페이지가 자동으로 생성되고 SharePoint 사이트에 데이터 경고 디자이너가 추가됩니다. 수행할 특수 단계 또는 설치 중 경고에 대해 설정할 옵션이 없습니다.  
   
- 설치에 대 한 자세한 내용을 보려면 원하는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에서 포함 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스의 새로운 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 만들고 사용 하려면 먼저 구성 해야 하는 응용 프로그램 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능 참조 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) MSDN 라이브러리에서.  
+ 설치에 대해 자세히 알아보려면 하려는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에서 포함 하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스에서 새로 추가 된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 만들기 및 사용 하려면 먼저 구성 해야 하는 응용 프로그램 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 참조 하세요 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) MSDN 라이브러리에서.  
   
- 이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 참조 [SQL Server 에이전트 구성](../ssms/agent/configure-sql-server-agent.md) 및 [시작, 중지, 일시 중지, 재개, 데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스를 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)합니다.  
+ 이 항목 앞부분의 다이어그램에 나와 있는 것처럼 데이터 경고에는 SQL Server 에이전트 작업이 사용됩니다. 작업을 만들려면 SQL Server 에이전트가 실행되고 있어야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치할 때 SQL Server 에이전트가 자동으로 시작되도록 구성했을 수 있습니다. 그렇지 않은 경우 SQL Server 에이전트를 수동으로 시작할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 구성](../ssms/agent/configure-sql-server-agent.md) 하 고 [시작, 중지, 일시 중지, 재개, 데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스를 다시 시작](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)합니다.  
   
  SharePoint 중앙 관리의 **구독 및 경고 프로비전** 페이지를 사용하여 SQL Server 에이전트가 실행되고 있는지 알아보고, SQL Server 에이전트에 대한 사용 권한을 부여하기 위해 실행할 사용자 지정 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 만들고 다운로드할 수 있습니다. PowerShell을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성할 수도 있습니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
 ##  <a name="ConfigAlert"></a> 데이터 경고 구성  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 부터 데이터 경고를 비롯한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 설정이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치할 때마다 보고서 서버 구성 파일(rsreportserver.config)과 SharePoint 구성 데이터베이스 간에 배포됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]설치 및 구성 단계의 일환으로 서비스 응용 프로그램을 만들면 SharePoint 구성 데이터베이스가 자동으로 생성됩니다. 자세한 내용은 참조 [RSReportServer 구성 파일](report-server/rsreportserver-config-configuration-file.md) 및 [Reporting Services Configuration Files](report-server/reporting-services-configuration-files.md)합니다.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 부터 데이터 경고를 비롯한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 설정이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치할 때마다 보고서 서버 구성 파일(rsreportserver.config)과 SharePoint 구성 데이터베이스 간에 배포됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]설치 및 구성 단계의 일환으로 서비스 응용 프로그램을 만들면 SharePoint 구성 데이터베이스가 자동으로 생성됩니다. 자세한 내용은 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) 하 고 [Reporting Services Configuration Files](report-server/reporting-services-configuration-files.md).  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고에 대한 설정에는 경고 데이터 및 메타데이터를 정리하는 간격과 데이터 경고 메시지를 전자 메일로 보낼 때의 다시 시도 횟수가 포함됩니다. 구성 파일 및 구성 데이터베이스를 업데이트하여 데이터 경고 설정에 다른 값을 사용할 수 있습니다.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36089905"
   
 -   [보고서에서 데이터 피드 생성 &#40;보고서 작성기 및 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [SharePoint 사이트에 보고서 서버 항목에 대 한 사용 권한을 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고에서는 정보 근로자 및 경고 관리자의 두 가지 권한 수준이 지원됩니다. 다음 표에서는 관련된 SharePoint 사용 권한 및 사용자 태스크가 나열됩니다.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36089905"
 ### <a name="logs"></a>로그  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 데이터 경고 정의를 처리할 때 실행되는 보고서, 생성되는 데이터 경고 인스턴스 등에 대한 정보를 얻을 수 있는 많은 로그를 제공합니다. 경고 실행 로그, 보고서 서버 실행 로그, 보고서 서버 추적 로그라는 세 로그가 특히 유용합니다.  
   
- 다른 작업에 대 한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 로그, 참조 [Reporting Services 로그 파일 및 소스](report-server/reporting-services-log-files-and-sources.md)합니다.  
+ 다른 방법은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 로그를 참조 하세요 [Reporting Services 로그 파일 및 소스](report-server/reporting-services-log-files-and-sources.md)합니다.  
   
 #### <a name="alerting-execution-log"></a>경고 실행 로그  
  경고 런타임 서비스는 경고 데이터베이스의 ExecutionLogView 테이블에 항목을 작성합니다. 테이블을 쿼리하거나 다음 저장 프로시저를 실행하여 경고 데이터베이스에 저장된 데이터 경고에 대한 보다 다양한 진단 정보를 얻을 수 있습니다.  
@@ -249,7 +249,7 @@ ms.locfileid: "36089905"
  SQL 에이전트를 사용하여 일정에 따라 저장 프로시저를 실행할 수 있습니다. 자세한 내용은 [SQL Server Agent](../ssms/agent/sql-server-agent.md)을 참조하세요.  
   
 #### <a name="report-server-execution-log"></a>보고서 서버 실행 로그  
- 보고서는 데이터 경고 정의를 작성하는 데 사용된 데이터 피드를 생성하기 위해 실행됩니다. 보고서 서버 데이터베이스의 보고서 서버 실행 로그는 보고서가 실행될 때마다 정보를 캡처합니다. 자세한 정보가 필요한 경우 데이터베이스에서 ExecutionLog2 뷰를 쿼리할 수 있습니다. 자세한 내용은 참조 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](report-server/report-server-executionlog-and-the-executionlog3-view.md)합니다.  
+ 보고서는 데이터 경고 정의를 작성하는 데 사용된 데이터 피드를 생성하기 위해 실행됩니다. 보고서 서버 데이터베이스의 보고서 서버 실행 로그는 보고서가 실행될 때마다 정보를 캡처합니다. 자세한 정보가 필요한 경우 데이터베이스에서 ExecutionLog2 뷰를 쿼리할 수 있습니다. 자세한 내용은 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](report-server/report-server-executionlog-and-the-executionlog3-view.md)합니다.  
   
 #### <a name="report-server-trace-log"></a>보고서 서버 추적 로그  
  보고서 서버 추적 로그에는 보고서 서버 웹 서비스 및 백그라운드 처리가 수행하는 작업을 비롯하여 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다. 자세한 내용은 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)을 참조하세요.  
@@ -268,7 +268,7 @@ ms.locfileid: "36089905"
 |GenerateAlert|경고: 이벤트 처리됨 - GenerateAlert|  
 |DeliverAlert|경고: 이벤트 처리됨 - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 기타 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 성능 카운터를 제공합니다. 자세한 내용은 참조 [reportserver: Service 및 reportserversharepoint: Service 성능 개체에 대 한 성능 카운터](report-server/performance-counters-reportserver-service-performance-objects.md), [MSRS 2014 웹 서비스 및 MSRS 2014 Windows에 대 한 성능 카운터 서비스 성능 개체 &#40;기본 모드&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), 및 [MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 성능 카운터 &#40;SharePoint 모드&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 기타 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대한 성능 카운터를 제공합니다. 자세한 내용은 [reportserver: Service 및 reportserversharepoint: Service 성능 개체에 대 한 성능 카운터](report-server/performance-counters-reportserver-service-performance-objects.md), [MSRS 2014 웹 서비스 및 MSRS 2014 Windows에 대 한 성능 카운터 서비스 성능 개체 &#40;기본 모드&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md), 및 [성능 카운터 MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 &#40;SharePoint 모드&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)합니다.  
   
 ##  <a name="SupportForSSL"></a> SSL 지원  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버 또는 SharePoint 사이트에 대한 암호화된 연결을 설정할 수 있습니다.  
@@ -280,13 +280,13 @@ ms.locfileid: "36089905"
 ##  <a name="UserInterface"></a> 데이터 경고 사용자 인터페이스  
  데이터 경고에는 경고 관리를 위한 SharePoint 페이지와 데이터 경고 정의를 만들고 편집하기 위한 디자이너가 제공됩니다.  
   
--   **데이터 경고 디자이너** 에서는 데이터 경고 정의를 만들거나 편집합니다. 자세한 내용은 참조 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md), [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md) 및 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)합니다.  
+-   **데이터 경고 디자이너** 에서는 데이터 경고 정의를 만들거나 편집합니다. 자세한 내용은 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)를 [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md) 하 고 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)합니다.  
   
 -   **데이터 경고 관리자** 에서는 데이터 경고 목록을 보고, 경고를 삭제하고, 경고를 열어서 편집합니다. 데이터 경고 관리자는 두 가지 버전으로 제공됩니다. 하나는 자신이 만든 경고를 관리할 수 있는 사용자용 버전이고 다른 버전은 사이트 사용자에게 속하는 경고를 관리할 수 있는 관리자용 버전입니다.  
   
-     자신이 만든 데이터 경고를 관리 하는 방법에 대 한 자세한 내용은 참조 [SharePoint 사용자에 대 한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) 및 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
+     사용자가 만든 데이터 경고를 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [SharePoint 사용자 용 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) 하 고 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
   
-     사이트에 대 한 모든 데이터 경고를 관리 하는 방법에 대 한 자세한 내용은 참조 [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 SharePoint 사이트에서 모든 데이터 경고 관리](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)합니다.  
+     사이트의 모든 데이터 경고를 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 하 고 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)합니다.  
   
 -   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "36089905"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)   
- [경고 담당자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [데이터 경고 관리자 용 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [SharePoint 사용자용 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
   

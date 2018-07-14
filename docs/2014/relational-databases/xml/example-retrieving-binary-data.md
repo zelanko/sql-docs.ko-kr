@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e1449a80aeb3b758658556b080d896089796f66d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c4200917619f7b36f34d39754cc548a5a3cb3458
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280769"
 ---
 # <a name="example-retrieving-binary-data"></a>예제: 이진 데이터 검색
   다음 쿼리는 `varbinary(max)` 유형 열에 저장된 제품 사진을 반환합니다. 이진 데이터를 base64 인코딩 형식으로 반환하기 위해 쿼리에서 `BINARY BASE64` 옵션을 지정합니다.  

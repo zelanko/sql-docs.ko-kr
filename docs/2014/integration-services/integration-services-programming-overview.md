@@ -24,13 +24,13 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 246ee644377bf1e0da6e368e9bbb943d333dc992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271649"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 데이터 이동 및 변환을 패키지 제어 흐름 및 관리와 분리하는 아키텍처가 있습니다. 또한 이 아키텍처를 정의하며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 자동화하고 확장할 수 있는 두 가지 엔진이 있습니다. 런타임 엔진은 개발자가 실행 흐름을 제어하고 로깅, 이벤트 처리기 및 변수에 대한 옵션을 설정할 수 있게 해 주는 제어 흐름 및 패키지 관리 인프라를 구현합니다. 데이터 흐름 엔진은 데이터 추출, 변환 및 로드에만 사용되는 특수한 고성능 엔진입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 실제 프로그래밍 작업은 이러한 두 엔진에 대해 수행됩니다.  
@@ -47,12 +47,13 @@ ms.locfileid: "36090915"
 ## <a name="integration-services-data-flow-engine"></a>Integration Services 데이터 흐름 엔진  
  데이터 흐름 엔진은 다른 원본의 데이터를 이동하고 변환하는 데만 사용되는 특수한 고성능 태스크인 데이터 흐름 태스크를 관리합니다. 다른 태스크와 달리 데이터 흐름 태스크에는 원본, 변환 또는 대상으로 구성할 수 있는 데이터 흐름 구성 요소라는 추가 개체가 있습니다. 이러한 구성 요소는 태스크의 핵심 이동 부분으로서, 데이터의 이동 및 변환을 정의합니다. 개발자는 데이터 흐름 엔진을 프로그래밍하여 데이터 흐름 태스크의 구성 요소 만들기 및 구성을 자동화하고 사용자 지정 구성 요소를 만들 수 있습니다.  
   
- 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 데이터 흐름을 확장 합니다.] (extending / packages / scripting/data-flow-script-component/extending-the-데이터-flow-with-the-script-component.md, [사용자 지정 데이터 흐름 구성 요소 개발 ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), 및 [프로그래밍 방식으로 패키지 작성](building-packages-programmatically/building-packages-programmatically.md)합니다.  
+ 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 데이터 흐름 확장] (extending-packages-scripting/data-flow-스크립트-component/extending-the-데이터-flow-with-the-스크립트-component.md, [사용자 지정 데이터 흐름 구성 요소 개발 ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), 및 [패키지를 프로그래밍 방식으로 작성](building-packages-programmatically/building-packages-programmatically.md)합니다.  
   
 ## <a name="supported-languages"></a>지원되는 언어  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]를 완벽하게 지원합니다. 따라서 개발자는 선택한 .NET 호환 언어로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 수 있습니다. 런타임 엔진과 데이터 흐름 엔진은 모두 네이티브 코드로 작성되지만 두 엔진 모두 완전하게 관리되는 개체 모델을 통해 사용할 수 있습니다.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]나 다른 코드 또는 텍스트 편집기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지, 사용자 지정 태스크 및 구성 요소를 프로그래밍할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 코딩, 디버깅 및 테스트 등의 반복되는 주기를 간소화하고 신속하게 처리하기 위한 여러 가지 도구와 기능을 제공합니다. 또한 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하면 배포가 간편해집니다. 그러나 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 코드 프로젝트를 컴파일하고 빌드하는 데는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 필요하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 및 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 컴파일러와 관련 도구가 포함되어 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]나 다른 코드 또는 텍스트 편집기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지, 사용자 지정 태스크 및 구성 요소를 프로그래밍할 수 있습니다. 
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 코딩, 디버깅 및 테스트 등의 반복되는 주기를 간소화하고 신속하게 처리하기 위한 여러 가지 도구와 기능을 제공합니다. 또한 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하면 배포가 간편해집니다. 그러나 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 코드 프로젝트를 컴파일하고 빌드하는 데는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 필요하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 및 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 컴파일러와 관련 도구가 포함되어 있습니다.  
   
 > [!IMPORTANT]  
 >  기본적으로 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되지만 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK는 설치되지 않습니다. 컴퓨터에 SDK가 설치되지 않아 SDK 설명서가 온라인 설명서 컬렉션에 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK를 설치한 후 [SQL Server 제품 설명서 추가 또는 제거](../2014-toc/books-online-for-sql-server-2014.md)의 지침에 따라 온라인 설명서 컬렉션과 목차에 SDK 설명서를 추가할 수 있습니다.  
@@ -79,6 +80,6 @@ ms.locfileid: "36090915"
   
 ||  
 |-|  
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7c1ebb392ad7a60e28978ea1c29822274ce278d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9995d9df8ee2a4a11dc43a36e1853bbf60667c54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248043"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>보고서 서버 작업 취소(Management Studio)
   **보고서 서버 작업 취소** 대화 상자를 사용하여 진행 중인 보고서를 보거나 취소할 수 있습니다. 이 대화 상자에는 현재 보고서 서버에서 실행 중인 모든 작업이 표시됩니다. 현재 처리 중인 작업을 일시 중지하거나 다시 시작할 수는 없지만 완료하는 데 오랜 시간이 걸릴 경우 모든 작업 또는 개별 작업을 취소할 수 있습니다.  

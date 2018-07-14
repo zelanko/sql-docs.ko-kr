@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.vstahostingui.variablepickermodaldialog.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d78700b3e0d472ff488205dc38809e2727ede903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a679d04a8c6a39f9bf752eb3a062cb0e5fbd36bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322663"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
   스크립트 태스크 또는 스크립트 구성 요소를 구성하는 경우 **변수 선택** 대화 상자를 사용하여 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성에 대한 값을 하나 이상 선택할 수 있습니다.  

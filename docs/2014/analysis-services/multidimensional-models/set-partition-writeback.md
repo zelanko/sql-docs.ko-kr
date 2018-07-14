@@ -1,5 +1,5 @@
 ---
-title: 파티션 쓰기 설정 | Microsoft Docs
+title: 파티션 쓰기 저장 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
 - partitions [Analysis Services], writeback
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2e5bc7b9c4a09d2a5a3df82586cc9fb9f856b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c58dea5dd30f32b9b137903103448ade4678c87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250943"
 ---
 # <a name="set-partition-writeback"></a>파티션 쓰기 저장(writeback) 설정
   측정값을 쓰기 가능하게 설정하면 최종 사용자가 큐브 데이터를 검색하는 동안 변경할 수 있으며, 변경 내용은 큐브 데이터 또는 원본 데이터가 아닌 쓰기 저장 테이블이라는 별도의 테이블에 저장됩니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36088021"
   
 ## <a name="see-also"></a>관련 항목  
  [쓰기 가능 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Excel 2010의 셀 수준에서 OLAP 큐브 쓰기 저장을 사용 하도록 설정](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [사용 및 Analysis Services 쓰기 저장 된 데이터 항목 보안 설정](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Excel 2010의 셀 수준에서 OLAP 큐브에 쓰기 저장 활성화](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Analysis Services 쓰기 저장으로 데이터 엔트리 활성화 및 보안](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

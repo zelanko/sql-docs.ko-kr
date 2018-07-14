@@ -1,5 +1,5 @@
 ---
-title: SharePoint 2010 (PowerPivot 구성 도구)에 대 한 PowerPivot 구성 또는 복구 | Microsoft Docs
+title: (PowerPivot 구성 도구) SharePoint 2010 용 PowerPivot 구성 또는 복구 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aad2530c6f8506dd3da6224c9d91f5ae46f9f27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284269"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>SharePoint 2010용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
-  SharePoint 2010용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot 설치를 구성하거나 복구하려면 PowerPivot 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2010용 PowerPivot 구성 도구뿐만 아니라 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2010용 PowerPivot 구성 도구에 대해 설명합니다. SharePoint 2010에 대 한 자세한 내용은 참조 하십시오. [PowerPivot 구성 또는 복구 SharePoint 2013 용 &#40;PowerPivot 구성 도구&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)합니다.  
+  SharePoint 2010용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot 설치를 구성하거나 복구하려면 PowerPivot 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2010용 PowerPivot 구성 도구뿐만 아니라 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2010용 PowerPivot 구성 도구에 대해 설명합니다. SharePoint 2010에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 또는 복구 SharePoint 2013 용 &#40;PowerPivot 구성 도구&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)합니다.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36089739"
 ##  <a name="bkmk_before"></a> 시작하기 전 주의 사항  
  SharePoint 2010용 PowerPivot 구성 도구는 프로그램 파일, 레지스트리 설정 및 사용 가능한 포트를 검색합니다. 이 도구를 최대한 이용하려면 다음 정보를 검토하십시오.  
   
--   구성 도구를 실행 하는 일반 요구 사항 [PowerPivot 구성 도구](power-pivot-sharepoint/power-pivot-configuration-tools.md)합니다.  
+-   구성 도구를 실행 하는 위한 일반 요구 사항 [PowerPivot 구성 도구](power-pivot-sharepoint/power-pivot-configuration-tools.md)합니다.  
   
 -   SharePoint 2010용 PowerPivot에는 클래식 모드 인증에 대해 구성된 웹 응용 프로그램이 필요합니다. SharePoint 2010용 PowerPivot 구성 도구에서 응용 프로그램을 만드는 경우 해당 응용 프로그램은 클래식 모드에 대해 구성됩니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36089739"
  도구의 첫 페이지에서는 SharePoint 팜을 구성하는 데 사용할 입력 값의 요약을 제공합니다. 사용자가 제공하는 입력 값 외에도 기본값이 시스템을 구성하는 데 사용됩니다. 기본 이름이 서비스 응용 프로그램, 서비스 응용 프로그램 데이터베이스 및 서비스 응용 프로그램 속성에 사용됩니다.  
   
 > [!TIP]  
->  PowerPivot 구성 도구가 컴퓨터를 검색한 후 왼쪽 창에 빈 작업 목록을 반환하면 구성할 기능이나 설정이 없는 것입니다. SharePoint 또는 PowerPivot 구성을 수정하려면 SharePoint 중앙 관리에서 Windows PowerShell 또는 관리 페이지를 사용합니다. 자세한 내용은 참조 [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
+>  PowerPivot 구성 도구가 컴퓨터를 검색한 후 왼쪽 창에 빈 작업 목록을 반환하면 구성할 기능이나 설정이 없는 것입니다. SharePoint 또는 PowerPivot 구성을 수정하려면 SharePoint 중앙 관리에서 Windows PowerShell 또는 관리 페이지를 사용합니다. 자세한 내용은 [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
   
  서비스 계정의 값은 여러 서비스에 사용됩니다. 예를 들어 PowerPivot 구성 도구는 첫 페이지의 기본 계정을 사용하여 모든 응용 프로그램 풀 ID를 설정합니다. 나중에 중앙 관리에서 서비스 응용 프로그램 속성을 수정하여 이 계정을 변경할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36089739"
 ##  <a name="bkmk_steps"></a> 구성 단계  
  구성 도구 링크는 SharePoint 2010용 PowerPivot이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
-1.  에 **시작** 메뉴에서 **모든 프로그램**, 클릭 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], 클릭 **구성 도구**, 클릭 하 고 **PowerPivot 구성 도구** .  
+1.  에 **시작** 메뉴에서 **프로그램도**, 클릭 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], 클릭 **구성 도구**, 클릭 하 고 **PowerPivot 구성 도구** .  
   
 2.  **SharePoint용 PowerPivot 구성 또는 복구**를 클릭합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36089739"
 ||웹 응용 프로그램 데이터베이스 서버|필요한 경우 기본값|기본 데이터베이스 인스턴스는 응용 프로그램 데이터베이스를 저장하기 위해 미리 선택되지만 도구에서 다른 SQL Server 인스턴스를 지정할 수 있습니다.|  
 ||웹 응용 프로그램 데이터베이스 이름|필요한 경우 기본값|데이터베이스 이름은 SharePoint의 파일 명명 규칙을 기반으로 하지만 다른 이름을 선택할 수 있습니다.|  
 |**웹 응용 프로그램 솔루션 배포**|URL|필요한 경우 기본값|기본 URL은 기본 웹 응용 프로그램에서 가져옵니다.|  
-||최대 파일 크기(MB)|필요한 경우 기본값|기본 설정은 2047입니다. SharePoint 문서 라이브러리에도 최대 크기가 있으며 PowerPivot 설정은 문서 라이브러리 설정을 초과할 수 없습니다. 자세한 내용은 참조 [최대 파일 업로드 크기 구성 &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)합니다.|  
+||최대 파일 크기(MB)|필요한 경우 기본값|기본 설정은 2047입니다. SharePoint 문서 라이브러리에도 최대 크기가 있으며 PowerPivot 설정은 문서 라이브러리 설정을 초과할 수 없습니다. 자세한 내용은 [최대 파일 업로드 크기 구성 &#40;SharePoint 용 PowerPivot&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)합니다.|  
 |**사이트 모음 만들기**|사이트 관리자|필요한 경우 기본값|도구는 기본 계정을 사용합니다. **사이트 모음 만들기** 페이지에서 계정을 재정의할 수 있습니다.|  
 ||담당자 전자 메일|필요한 경우 기본값|서버에 Microsoft Outlook이 구성된 경우 도구는 현재 사용자의 전자 메일 주소를 사용합니다. 그렇지 않으면 자리 표시자 값이 사용됩니다.|  
 ||사이트 URL|필요한 경우 기본값|이 도구는 SharePoint와 동일한 URL 명명 규칙을 사용하여 사이트 URL을 만듭니다.|  
@@ -129,7 +129,7 @@ ms.locfileid: "36089739"
 ||무인 계정 사용자 이름 및 암호||대상 응용 프로그램에 의해 사용되고 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다.|  
 ||사이트 URL||대상 응용 프로그램과 연결된 사이트 모음의 사이트 URL을 입력합니다. 사이트 모음을 추가로 연결하려면 SharePoint 중앙 관리를 사용합니다.|  
 |**Excel Services 서비스 응용 프로그램 만들기**|서비스 응용 프로그램 이름||서비스 응용 프로그램 이름을 입력합니다. SharePoint 팜의 데이터베이스 서버에 동일한 이름의 서비스 응용 프로그램 데이터베이스가 만들어집니다.|  
-|**MSOLAP.5 신뢰할 수 있는 공급자로 추가**|서비스 응용 프로그램 이름||SharePoint 2010의 Excel Services는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 공급자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터에 연결합니다. 이 단계에서는 SharePoint용 PowerPivot으로 설치된 OLE DB 공급자의 버전을 Excel Services에 대한 신뢰할 수 있는 공급자로 추가합니다.|  
+|**MSOLAP.5를 신뢰할 수 있는 공급자로 추가**|서비스 응용 프로그램 이름||SharePoint 2010의 Excel Services는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 공급자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터에 연결합니다. 이 단계에서는 SharePoint용 PowerPivot으로 설치된 OLE DB 공급자의 버전을 Excel Services에 대한 신뢰할 수 있는 공급자로 추가합니다.|  
 ||PowerPivot 서버 이름|||  
 |||||  
   
@@ -173,10 +173,10 @@ ms.locfileid: "36089739"
 3.  링크를 클릭하여 서비스를 설치하는 설치 프로그램을 실행합니다.  
   
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>데이터 새로 고침 및 사용자 권한 확인에 사용된 데이터 공급자 설치  
- 서버 쪽 데이터 새로 고침을 사용하면 사용자가 무인 모드에서 자신의 통합 문서로 업데이트된 데이터를 다시 가져올 수 있습니다. 데이터 새로 고침을 성공하려면 서버에 원래 데이터를 가져오는 데 사용된 것과 동일한 데이터 공급자가 있어야 합니다. 또한 데이터 새로 고침이 실행되는 사용자 계정에도 외부 데이터 원본에 대한 읽기 권한이 필요한 경우가 많습니다. 성공적인 결과를 얻기 위해서는 데이터 새로 고침 설정 및 구성에 대한 요구 사항을 확인해야 합니다. 자세한 내용은 참조 [SharePoint 2010과 PowerPivot 데이터 새로 고침](powerpivot-data-refresh-with-sharepoint-2010.md)합니다.  
+ 서버 쪽 데이터 새로 고침을 사용하면 사용자가 무인 모드에서 자신의 통합 문서로 업데이트된 데이터를 다시 가져올 수 있습니다. 데이터 새로 고침을 성공하려면 서버에 원래 데이터를 가져오는 데 사용된 것과 동일한 데이터 공급자가 있어야 합니다. 또한 데이터 새로 고침이 실행되는 사용자 계정에도 외부 데이터 원본에 대한 읽기 권한이 필요한 경우가 많습니다. 성공적인 결과를 얻기 위해서는 데이터 새로 고침 설정 및 구성에 대한 요구 사항을 확인해야 합니다. 자세한 내용은 [SharePoint 2010을 사용 하 여 PowerPivot 데이터 새로 고침](powerpivot-data-refresh-with-sharepoint-2010.md)합니다.  
   
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>SharePoint에서 응용 프로그램 풀 및 서비스 ID 변경  
- PowerPivot 구성 도구는 단일 계정에서 실행할 팜 기능, 응용 프로그램 및 서비스를 제공합니다. 따라서 설치가 간편해지지만 배포에서 SharePoint 팜의 보안 요구 사항이 충족되지는 않습니다. 보다 강력한 배포를 작성하려면 설치가 완료된 후 응용 프로그램 풀과 서비스 ID가 각각 다른 계정에서 실행되도록 변경합니다. 자세한 내용은 참조 [PowerPivot 서비스 계정 구성](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)합니다.  
+ PowerPivot 구성 도구는 단일 계정에서 실행할 팜 기능, 응용 프로그램 및 서비스를 제공합니다. 따라서 설치가 간편해지지만 배포에서 SharePoint 팜의 보안 요구 사항이 충족되지는 않습니다. 보다 강력한 배포를 작성하려면 설치가 완료된 후 응용 프로그램 풀과 서비스 ID가 각각 다른 계정에서 실행되도록 변경합니다. 자세한 내용은 [PowerPivot 서비스 계정 구성](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)합니다.  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Excel 서비스에서 신뢰할 수 있는 사이트 추가로 만들기  
  신뢰할 수 있는 사이트를 Excel 서비스에 추가하여 Excel 통합 문서 및 PowerPivot 데이터를 제공하는 사이트에 대한 권한 및 구성 설정을 다양하게 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  

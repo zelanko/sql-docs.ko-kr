@@ -1,5 +1,5 @@
 ---
-title: 도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs
+title: 도구 및 접근 방법 처리 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261409"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
   처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36090763"
  처리는 다양하게 구성 가능한 작업으로, 개체 수준에서 전체 처리가 발생하는지 증분 처리가 발생하는지 결정하는 일련의 처리 옵션으로 제어됩니다. 처리 옵션 및 개체에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) 및 [Analysis Services 개체 처리](processing-analysis-services-objects.md)를 참조하세요.  
   
 > [!NOTE]  
->  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 처리, 테이블 또는 파티션](../tabular-models/process-database-table-or-partition-analysis-services.md) 및 [데이터 처리 &#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md)합니다.  
+>  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [Process Database, 테이블 또는 파티션](../tabular-models/process-database-table-or-partition-analysis-services.md) 하 고 [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 처리  
   

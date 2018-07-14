@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.listeners.f1
 - sql12.swb.newagwizard.specifyreplicas.f1
 - sql12.swb.addreplicawizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 878e1a5df6e67129c9146b1ff0c47e4167b54950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a25a08e57395ca8523b29f976b93179e0989a8ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279639"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
   이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
@@ -47,12 +46,12 @@ ms.locfileid: "36092263"
  **자동 장애 조치 (최대 2 개)**  
  이 가용성 복제본을 자동 장애 조치(failover) 파트너로 사용하려는 경우에만 이 확인란을 선택합니다. 자동 장애(failover) 조치를 구성하려면 초기 주 복제본 및 보조 복제본 하나에 대해 이 옵션을 선택해야 합니다. 이러한 복제본은 모두 동기-커밋 가용성 모드를 사용합니다. 두 개의 복제본만 자동 장애 조치(failover)를 지원할 수 있습니다.  
   
- 동기-커밋 가용성 모드에 대 한 정보를 참조 하십시오. [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다. 자동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
+ 동기-커밋 가용성 모드에 대 한 정보를 참조 하세요 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다. 자동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
  **동기 커밋(최대 3개)**  
  복제본에 대해 **자동 장애 조치(Failover)(최대 2개)** 를 선택한 경우 **동기 커밋(최대 3개)** 도 선택됩니다. 확인란이 비어 있으면 이 복제본에서 계획 수동 장애 조치와 함께 동기-커밋을 사용하려는 경우에만 이 확인란을 선택합니다. 3개의 복제본만 동기-커밋 모드를 사용할 수 있습니다.  
   
- 이 복제본에서 비동기-커밋 가용성 모드를 사용하려는 경우 이 확인란을 비워 둡니다. 복제본은 강제 수동 장애 조치(데이터 손실 가능)만 지원합니다. 비동기-커밋 가용성 모드에 대 한 정보를 참조 하십시오. [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다. 계획 수동 장애 조치(failover) 및 강제 수동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
+ 이 복제본에서 비동기-커밋 가용성 모드를 사용하려는 경우 이 확인란을 비워 둡니다. 복제본은 강제 수동 장애 조치(데이터 손실 가능)만 지원합니다. 비동기-커밋 가용성 모드에 대 한 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다. 계획 수동 장애 조치(failover) 및 강제 수동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
  **읽기 가능 보조 역할**  
  다음과 같이 **읽기용 보조** 드롭 목록에서 값을 선택합니다.  
@@ -126,7 +125,7 @@ ms.locfileid: "36092263"
  백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
 > [!IMPORTANT]  
->  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 참조 [활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
 ### <a name="replica-backup-priorities-grid"></a>복제본 백업 우선 순위 표  
  가용성 그룹의 각 복제본에 대한 백업 우선 순위를 지정하려면 **복제 백업 우선 순위** 표를 사용합니다. 이 표에는 다음 열이 있습니다.  
@@ -210,7 +209,7 @@ ms.locfileid: "36092263"
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [데이터베이스를 AlwaysOn 가용성 그룹에 대 한 미러링 끝점 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

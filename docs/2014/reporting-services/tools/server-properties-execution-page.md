@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.execution.f1
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: cbc0262ee569e78b9b75a0b0c496a31f844e79ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d15a9184c61163d59fbe0d23ecf98d018e6fd7a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276359"
 ---
 # <a name="server-properties-execution-page"></a>서버 속성(실행 페이지)
   이 페이지를 사용하여 보고서 실행 제한 시간 값을 설정할 수 있습니다. 이 값은 현재 보고서 서버 인스턴스에서 처리하는 모든 보고서에 적용됩니다. 개별 보고서에 대해 이 값을 다시 정의할 수 있습니다. 보고서 서버에서 수행되는 모든 보고서 처리와 보고서 서버가 보고서에 사용되는 데이터를 검색할 때 데이터베이스에서 수행되는 쿼리 처리를 감안하여 값을 지정해야 합니다.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261329"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>MeasureGroupAttribute _데이터 형식(ASSL)
   특성과 측정값 그룹 간의 관계를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -59,13 +59,13 @@ ms.locfileid: "36091810"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [유형](../properties/type-element-measuregroupattribute-assl.md)|  
-|파생 요소|[특성](../objects/attribute-element-assl.md) ([특성](../collections/attributes-element-assl.md) 컬렉션 [RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md)합니다 [KeyColumns](../collections/columns-element-assl.md), [형식](../properties/type-element-measuregroupattribute-assl.md)|  
+|파생 요소|[특성](../objects/attribute-element-assl.md) ([특성](../collections/attributes-element-assl.md) 모음인 [RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

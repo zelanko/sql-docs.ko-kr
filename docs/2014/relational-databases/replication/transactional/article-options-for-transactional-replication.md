@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], transactional replication options
 - transactional replication, article options
 ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8a39b04efd82147a695c744958a29aae5f449dd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9be81144ab7d2653a050ce36f06bd16211a589cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270519"
 ---
 # <a name="article-options-for-transactional-replication"></a>트랜잭션 복제를 위한 아티클 옵션
   트랜잭션 게시의 아티클에는 여러 가지 옵션이 있습니다. 트랜잭션 복제를 사용하여 다음 작업을 수행할 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: 도구 모음 (큐브 뷰 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 도구 모음 (Perspectives Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64744048-205f-4d4d-add8-ff0ca13943f3
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f593e777b14bdb68f46ceb41591d3bc46088e3e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7f0c8ba9885bed6a3b719072ad462adc10ac5f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247333"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(큐브 뷰 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **큐브 뷰** 탭에서 일반 작업을 수행할 수 있습니다.  

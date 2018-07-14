@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a4d1ab0082c4b5475e0fc54127e7b80f63a9b983
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280039"
 ---
 # <a name="property-element-csdlbi"></a>Property 요소(CSDLBI)
   CSDLBI의 Property 요소는 비즈니스 인텔리전스 데이터 모델을 지원하여 CSDL Property 요소에 대한 추가 기능을 제공하는 복합 유형입니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36091610"
   
  다음 예에서는 이 두 값의 사용을 설명합니다. 이름으로 지정한 특정 사용자에 대해 급여 공제를 반환하도록 쿼리를 설계했다고 가정합시다. 이름은 같고 데이터베이스 식별자는 다른 두 사용자가 데이터베이스에 있을 때, 쿼리 결과는 열에 적용된 특성 값에 따라 달라집니다.  
   
--   `GroupOnValue`: 쿼리 결과 두 사용자의 급여 공제가 합계를 포함 합니다.  
+-   `GroupOnValue`: 쿼리 결과 급여 공제가 합계 되어 표시 됩니다, 두 명의 합니다.  
   
 -   `GroupOnEntityKey`: 쿼리 결과 급여 공제가 개별적으로 나열 되지만 각 사용자에 대 한 합니다.  
   

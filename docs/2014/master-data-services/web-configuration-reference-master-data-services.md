@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1163e8575562c5a81fea3bfef65c89a77b1ce5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250223"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>웹 구성 참조(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 IIS(인터넷 정보 서비스)가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 웹 서비스를 호스트할 수 있도록 하는 구성 설정이 Web.config 파일에 포함됩니다. 이 Web.config 파일은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 설치 경로의 WebApplication 폴더에 있습니다. 경로 및 사용 권한에 대한 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md)을 참조하세요.  
@@ -59,10 +59,10 @@ ms.locfileid: "36089584"
 |항목|Description|  
 |----------|-----------------|  
 |`instance`|자식 요소. 웹 서비스와 데이터베이스 연결 문자열에 대한 정보를 지정하는 특성을 포함합니다.|  
-|`virtualPath`|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 서비스의 가상 경로를 지정합니다. 이에 해당는 `path` 특성의는  **\<응용 프로그램 >** 요소 아래의  **\<사이트 >** 은 IIS ApplicationHost.config 파일의 요소입니다.|  
-|`siteName`|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이에 해당는 `name` 특성의는  **\<사이트 >** 요소 아래의  **\<사이트 >** IIS ApplicationHost.config 파일에서입니다.|  
-|`connectionName`|특성. 사용할 연결 이름을 지정합니다. 이에 해당는 `name` 특성의는  **\<추가 >** 요소 아래에서  **\<connectionStrings >** Web.config의 요소입니다.|  
-|`serviceName`|특성. 웹 서비스의 이름을 지정합니다. 이에 해당는 `name` 특성의는  **\<서비스 >** 요소 아래에서  **\<서비스 >** Web.config의 요소입니다.|  
+|`virtualPath`|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 서비스의 가상 경로를 지정합니다. 에 해당 하는이 `path` 특성을  **\<응용 프로그램 >** 요소 아래에 있는  **\<사이트 >** 은 IIS ApplicationHost.config 파일에서 요소.|  
+|`siteName`|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램과 서비스를 호스트하는 사이트의 이름을 지정합니다. 에 해당 하는이 `name` 특성을  **\<사이트 >** 요소 아래에 있는  **\<사이트 >** 은 IIS ApplicationHost.config 파일에서 합니다.|  
+|`connectionName`|특성. 사용할 연결 이름을 지정합니다. 에 해당 하는이 `name` 특성을  **\<추가 >** 요소 아래에 있는  **\<connectionStrings >** Web.config의 요소.|  
+|`serviceName`|특성. 웹 서비스의 이름을 지정합니다. 에 해당 하는이 `name` 특성을  **\<서비스 >** 요소 아래에 있는  **\<서비스 >** Web.config의 요소.|  
   
 ### <a name="example"></a>예제  
  다음 예에서는 MDSDB를 통해 지정된 연결 문자열을 사용하는 /MDS 경로와 Contoso 사이트의 MDS1이라는 서비스를 보여 줍니다.  

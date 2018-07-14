@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69330b9a1a65ed147d716d47d9a2cc68e34bab6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255825"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>일반 속성 페이지, 폴더(보고서 관리자)
   폴더의 일반 속성 페이지를 사용하여 만든 폴더의 속성을 보거나 설정할 수 있습니다. 폴더를 만들거나 수정한 사람 및 폴더를 수정한 시간에 대한 정보가 일반 속성 페이지 맨 위에 표시됩니다.  
   
- 폴더 속성에는 보안 설정도 포함됩니다. 폴더 보안에 대 한 자세한 내용은 참조 [폴더 보안](security/secure-folders.md)합니다.  
+ 폴더 속성에는 보안 설정도 포함됩니다. 폴더 보안에 대 한 자세한 내용은 참조 하세요. [폴더 보안](security/secure-folders.md)합니다.  
   
  특수한 용도의 폴더(예: 홈, 내 보고서 및 사용자 폴더)는 보고서 서버 네임스페이스 내에서 이름을 바꾸거나 이동할 수 없습니다. 이 폴더에 대해서는 일반 속성 페이지를 사용할 수 없습니다.  
   

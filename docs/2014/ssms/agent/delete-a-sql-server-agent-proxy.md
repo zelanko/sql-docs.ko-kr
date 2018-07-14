@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting SQL Server Agent proxies
 - proxies [SQL Server Agent], deleting
 - removing SQL Server Agent proxies
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 31c75e805dfdbf116208c8e1c702003914b93f0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3cb408f82e10f4abb57ebe010b63707b2b9d5f96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265784"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시 삭제
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 프록시를 삭제하는 방법에 대해 설명합니다.  
@@ -96,6 +96,6 @@ ms.locfileid: "36089217"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_delete_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql)합니다.  
+ 자세한 내용은 [sp_delete_proxy &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql)합니다.  
   
   

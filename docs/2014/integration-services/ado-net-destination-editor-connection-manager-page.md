@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 674fff53082aae97171e8ee282590efabd0a6260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15f5a12e688d18a95e822fbaacb3714236ab7fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256999"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 대상 편집기(연결 관리자 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -60,12 +60,12 @@ ms.locfileid: "36089361"
   
  <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하는 ADO.NET 공급자만 <xref:System.Data.SqlClient.SqlBulkCopy> 인터페이스의 사용을 지원합니다. .NET Data Provider for SQL Server(SqlClient)는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하고, 사용자 지정 공급자는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환할 수 있습니다.  
   
- SQL Server (SqlClient)에 대 한.NET Data Provider를 사용 하 여 연결할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]합니다.  
+ SQL Server (SqlClient)에 대 한.NET 데이터 공급자를 사용 하 여 연결할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]합니다.  
   
  **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전과 후에 SET IDENTITY_INSERT 문을 실행해야 합니다. ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용하면 ID 열에 명시적 값을 삽입할 수 있습니다. 같은 데이터베이스 연결을 CREATE TABLE 및 SET IDENTITY 문을 실행 하려면 설정는 `RetainSameConnection` 의 속성은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 `True`합니다. 또한 SQL 실행 태스크와 ADO NET 대상에 같은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하십시오.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전과 후에 SET IDENTITY_INSERT 문을 실행해야 합니다. ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용하면 ID 열에 명시적 값을 삽입할 수 있습니다. 같은 데이터베이스 연결에서 CREATE TABLE 및 SET IDENTITY 문을 실행 하려면 설정 합니다 `RetainSameConnection` 의 속성을 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 `True`. 또한 SQL 실행 태스크와 ADO NET 대상에 같은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하십시오.  
 >   
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요.  
   
