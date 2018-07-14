@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 142d31727b94a8a5fcab36495314ac853fa92328
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: bae57aef6469c47f71fadcd28567375ce2156c08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241723"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 자습서
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 많은 새로운 기술과 기능이 도입되었습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36173003"
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [PowerPivot 및 Power View의 HelloWorldPicnic 샘플 모델용 이미지 파일](http://www.microsoft.com/download/details.aspx?id=26719)(영문)로 이동합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 기능은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 용 추가 기능을 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 기능은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스의 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 버전을 다운로드하려면 CodePlex의 [Adventure Works 2014 샘플 데이터베이스](http://msftdbprodsamples.codeplex.com/releases/view/125550) (영문)로 이동합니다.  
   

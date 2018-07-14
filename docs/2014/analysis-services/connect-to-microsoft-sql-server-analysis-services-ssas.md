@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserveras.f1
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 800df54ac7fedcad048ada667376cead7447fd53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43a7dd31c52c81f7a2bfcbf87d1a8df3f6740081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323663"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Microsoft SQL Server Analysis Services에 연결(SSAS)
-  이 페이지는 **테이블 가져오기 마법사** 를 Microsoft SQL Server Analysis Services 큐브 또는 SharePoint에서 호스팅되는 PowerPivot 통합 문서에서 데이터를 가져오기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  이 페이지의 **테이블 가져오기 마법사** Microsoft SQL Server Analysis Services 큐브 또는 SharePoint에서 호스팅되는 PowerPivot 통합 문서에서 데이터를 가져오기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   

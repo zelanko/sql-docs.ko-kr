@@ -1,5 +1,5 @@
 ---
-title: 폴링 쿼리 만들기 대화 상자 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 폴링 쿼리 대화 상자 (Analysis Services-다차원 데이터) 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d7f46fbd895f1b9e9bce29674999a3e710a1a33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236233"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>폴링 쿼리 작성 대화 상자(Analysis Services - 다차원 데이터)
   **의** 폴링 쿼리 만들기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **저장소 옵션** 대화 상자의 **알림** 탭에서 폴링 쿼리를 만들 수 있습니다. 폴링 쿼리는 일반적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 테이블 또는 기타 관계형 개체가 변경되었는지 확인하는 데 사용할 수 있는 값을 반환하는 단일 쿼리입니다. **저장소 옵션** 대화 상자 **알림** 탭의 **예약된 폴링** 옵션에 대한 표의 **폴링 쿼리** 열에서 줄임표 단추(**...**)를 클릭하면 **폴링 쿼리 만들기** 대화 상자를 표시할 수 있습니다. **저장소 옵션** 대화 상자의 **알림** 탭에 대한 자세한 내용은 [알림&#40;저장소 옵션 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -106,6 +106,6 @@ ms.locfileid: "36181207"
  **도구 모음** 창에서 **실행** 을 클릭하면 쿼리 결과를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

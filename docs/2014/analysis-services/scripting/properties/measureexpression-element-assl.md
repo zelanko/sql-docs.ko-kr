@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureExpression element
 ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 686bfc84c39c502467089b5957f8320d346e518a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eee18ad981c45c009350be926432a5a7a23c4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265409"
 ---
 # <a name="measureexpression-element-assl"></a>MeasureExpression 요소(ASSL)
   부모 측정값을 얻는 방법을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36182334"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `MeasureExpression` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Measure>합니다.  
+ 부모에 해당 하는 요소가 `MeasureExpression` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Measure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

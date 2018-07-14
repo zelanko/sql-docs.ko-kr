@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d38ef8cb96408db96a04184a30d7a803b00a0239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253885"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
   분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 관리 및 액세스하는 동시에 데이터 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블 또는 인덱스를 보다 편리하게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)을 참조하세요. 복제는 분할된 테이블 및 인덱스를 처리하는 방법을 지정하는 속성 집합을 제공하여 분할을 지원합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36093731"
   
  분할과 관련된 첫 번째 속성 집합은 파티션 개체를 구독자에 복사해야 하는지 여부를 결정하는 아티클 스키마 옵션입니다. 이러한 스키마 옵션은 다음과 같은 방법으로 설정할 수 있습니다.  
   
--   새 게시 마법사의 **아티클 속성** 페이지 또는 게시 속성 대화 상자를 사용합니다. 위의 표에 나열 된 개체를 복사 하려면 값을 지정 `true` 속성에 대 한 **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표 복사**합니다. **아티클 속성** 페이지에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+-   새 게시 마법사의 **아티클 속성** 페이지 또는 게시 속성 대화 상자를 사용합니다. 위의 표에 나열 된 개체를 복사 하려면 값을 지정 `true` 속성에 대 한 **테이블 파티션 구성표 복사** 하 고 **인덱스 파티션 구성표 복사**합니다. **아티클 속성** 페이지에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 -   다음 저장 프로시저 중 하나의 *schema_option* 매개 변수를 사용합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36093731"
 ### <a name="enabling-partition-switching"></a>파티션 전환 설정  
  다음과 같은 트랜잭션 게시 속성을 사용하면 사용자가 복제된 환경에서 파티션 전환의 동작을 제어할 수 있습니다.  
   
--   **@allow_partition_switch**을로 설정 된 경우 `true`, 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
+-   **@allow_partition_switch**을로 설정 하면 `true`, 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
   
 -   **@replicate_partition_switch** . SWITCH PARTITION DDL 문을 구독자에 복제해야 하는지 여부를 결정합니다. 이 옵션은 경우에만 유효 **@allow_partition_switch** 로 설정 된 `true`합니다.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275179"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>비즈니스 규칙에 여러 조건 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 더 복잡한 규칙을 원할 경우 여러 **AND** 또는 **OR** 조건을 비즈니스 규칙에 추가합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36171991"
   
 4.  **엔터티** 목록에서 엔터티를 선택합니다.  
   
-5.  **멤버 유형을** 목록에서 멤버 유형을 선택 합니다.  
+5.  **멤버 유형** 목록에서 멤버 유형을 선택 합니다.  
   
 6.  **특성** 목록에서 특성을 선택하거나 기본값인 **모두**를 그대로 사용합니다.  
   
@@ -56,24 +56,24 @@ ms.locfileid: "36171991"
   
 8.  **선택한 비즈니스 규칙 편집**을 클릭합니다.  
   
-9. 에 **구성 요소** 창에서 확장 된 **논리 연산자** 노드.  
+9. 에 **구성 요소** 창 확장 된 **논리 연산자** 노드.  
   
-10. 클릭 **AND** 또는 **OR** 에 끌어서 놓습니다는 **IF** 창의 **AND** 레이블.  
+10. 클릭 **AND** 또는 **OR** 로 끌어다 놓습니다 합니다 **IF** 창의 **AND** 레이블.  
   
 11. **구성 요소** 창에서 **조건** 노드를 확장합니다.  
   
-12. 조건을 클릭 하 고 끌어 **IF** 창에는 **AND** 또는 **OR** 10 단계에서 레이블을 합니다.  
+12. 조건을 클릭 하 고 끌어 옵니다 **경우** 창에는 **AND** 또는 **OR** 10 단계에서 레이블.  
   
-13. 에 **특성** 창에서 특성을 클릭 하 고 끌어는 **조건 편집** 창의 **특성 선택** 레이블.  
+13. 에 **특성** 창에 특성을 클릭 하 고 끌어 옵니다 합니다 **조건 편집** 창의 **특성 선택** 레이블.  
   
-14. 에 **조건 편집** 창에서 모든 필수 필드를 완료 합니다.  
+14. 에 **조건 편집** 창에 모든 필수 필드를 완료 합니다.  
   
 15. **조건 편집** 창에서 **항목 저장**을 클릭합니다.  
   
-16. 필요에 따라에서 조건을 더 추가 하는 **구성 요소** 테이블 **AND** 또는 **OR** 하나로 **AND** 또는 **OR**에 **IF** 창. 그런 다음 13-15단계를 수행합니다.  
+16. 필요에 따라에서 조건을 더 추가 하는 **구성 요소** 창으로 끕니다 **AND** 또는 **OR** 에 **AND** 또는 **OR**에 **경우** 창입니다. 그런 다음 13-15단계를 수행합니다.  
   
     > [!TIP]  
-    >  조건을 삭제 하려면 이름을 클릭 하는 조건에 **조건 편집** 창에서 클릭 **항목 삭제**합니다.  
+    >  조건을 삭제 하 고 조건의 이름을 클릭 합니다 **조건 편집** 창 클릭 **삭제 항목**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   

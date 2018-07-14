@@ -1,5 +1,5 @@
 ---
-title: XML Updategram (SQLXML 4.0)를 사용 하 여 데이터를 업데이트 합니다. | Microsoft Docs
+title: XML Updategram (SQLXML 4.0)를 사용 하 여 데이터를 업데이트 하는 중 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9afe66f664bf5e1e750ddef529bd9001d776ef82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251745"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
-  기존 데이터를 업데이트할 때 둘 다 지정 해야 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 에 지정 된 요소는  **\<하기 전에 >** 및  **\<후 >** 블록 원하는 변경에 설명 합니다. Updategram에 지정 된 요소를 사용 하 여는  **\<하기 전에 >** 데이터베이스의 기존 레코드를 식별 하는 블록입니다. 해당 요소는  **\<후 >** 블록의 레코드 업데이트 작업을 실행 한 후 모양 나타냅니다. 이 정보를 updategram는 일치 하는 SQL 문을 만듭니다는  **\<후 >** 블록입니다. 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  
+  기존 데이터를 업데이트할 때 둘 다 지정 해야 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 에 지정 된 요소를  **\<하기 전에 >** 하 고  **\<후 >** 블록 원하는 변경 내용을 설명 합니다. Updategram에 지정 된 요소를 사용 합니다  **\<하기 전에 >** 데이터베이스의 기존 레코드를 식별 하는 블록입니다. 해당 요소는  **\<후 >** 블록의 레코드 업데이트 작업을 실행 한 후 표시 되는 방법을 나타냅니다. Updategram은이 정보를 통해 일치 하는 SQL 문의 만듭니다는  **\<후 >** 블록입니다. 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  
   
  다음은 업데이트 작업을 위한 Updategram 형식입니다.  
   
@@ -59,21 +59,21 @@ ms.locfileid: "36172855"
 ```  
   
  `<updg:before>`  
- 요소는  **\<하기 전에 >** 블록 데이터베이스 테이블의 기존 레코드를 식별 합니다.  
+ 요소를  **\<하기 전에 >** 블록은 데이터베이스 테이블의 기존 레코드를 식별 합니다.  
   
  `<updg:after>`  
- 요소는  **\<후 >** 블록 레코드에 지정 하는 방식에 대해 설명는  **\<하기 전에 >** 블록은 업데이트가 적용 된 후 표시 됩니다.  
+ 요소를  **\<후 >** 블록의 레코드를 지정 하는 방법을 설명 합니다  **\<하기 전에 >** 블록은 업데이트가 적용 된 후 표시 됩니다.  
   
- `mapping-schema` 특성은 Updategram에서 사용될 매핑 스키마를 식별합니다. 요소 및 특성 이름에 지정 된 updategram이 매핑 스키마를 지정 하는 경우는  **\<하기 전에 >** 및  **\<후 >** 블록에는 스키마의 이름과 일치 해야 합니다. 매핑 스키마는 이러한 요소 또는 특성 이름을 데이터베이스 테이블 및 열 이름에 매핑합니다.  
+ `mapping-schema` 특성은 Updategram에서 사용될 매핑 스키마를 식별합니다. 요소 및 특성 이름에 지정 된 updategram은 매핑 스키마를 지정 하는 경우는  **\<하기 전에 >** 하 고  **\<후 >** 블록에는 스키마의 이름과 일치 해야 합니다. 매핑 스키마는 이러한 요소 또는 특성 이름을 데이터베이스 테이블 및 열 이름에 매핑합니다.  
   
- Updategram은 스키마를 지정하지 않을 경우 기본 매핑을 사용합니다. 기본 매핑에서  **\<ElementName >** 데이터베이스 테이블에 updategram 지도 데이터베이스 열으로 자식 요소 또는 특성 지도에 지정 합니다.  
+ Updategram은 스키마를 지정하지 않을 경우 기본 매핑을 사용합니다. 기본 매핑에서 합니다  **\<ElementName >** 데이터베이스 테이블에 updategram 맵과 데이터베이스 열으로 자식 요소 또는 특성 맵을 지정 합니다.  
   
- 요소는  **\<하기 전에 >** 블록 데이터베이스에 하나의 테이블 행과만 일치 해야 합니다. Updategram에서 오류를 반환 하 고 전체 취소 요소는 여러 테이블 행을과 일치 하거나 어떤 테이블 행이 일치 하지 않습니다,  **\<동기화 >** 블록입니다.  
+ 요소를  **\<하기 전에 >** 블록 데이터베이스에 하나의 테이블 행과만 일치 해야 합니다. 요소는 여러 테이블 행을과 일치 하거나 어떤 테이블 행이 일치 하지 않습니다, updategram은 오류를 반환 하 고 전체 취소  **\<동기화 >** 블록입니다.  
   
- Updategram에 여러 포함 될 수 있습니다  **\<동기화 >** 블록입니다. 각  **\<동기화 >** 블록 트랜잭션으로 간주 됩니다. 각  **\<동기화 >** 블록에 여러 개 있을 수  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 예를 들어 업데이트 하는 경우 두 개의 기존 레코드를 지정할 수 있습니다 두  **\<하기 전에 >** 및  **\<후 >** 쌍을 업데이트 하 고 각 레코드에 대 한 합니다.  
+ Updategram에는 여러 개 포함할 수 있습니다  **\<동기화 >** 블록입니다. 각  **\<동기화 >** 블록은 트랜잭션으로 간주 됩니다. 각  **\<동기화 >** 블록에는 여러 개 있을 수 있습니다  **\<전에 >** 고  **\<후 >** 블록입니다. 예를 들어, 업데이트 하는 경우 두 개의 기존 레코드를 지정할 수 있습니다 2  **\<하기 전에 >** 하 고  **\<후 >** 쌍을 업데이트 하 고 각 레코드에 대 한 합니다.  
   
 ## <a name="using-the-updgid-attribute"></a>updg:id 특성 사용  
- 여러 요소에 지정 된 경우는  **\<하기 전에 >** 및  **\<후 >** 블록을 사용 하 여는 `updg:id` 특성의 행을 표시할는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 처리 논리에서이 정보를 사용 하 여의 어느 레코드를 결정 하는  **\<하기 전에 >** 블록의 어느 레코드와 쌍은  **\<후 >** 블록입니다.  
+ 여러 요소에 지정 된 경우는  **\<하기 전에 >** 및  **\<후 >** 블록을 사용 하 여 합니다 `updg:id` 특성의 행을 표시 하는  **\<하기 전에 >** 하 고  **\<후 >** 블록입니다. 처리 논리의 어느 레코드를 확인 하려면이 정보를 사용 합니다  **\<하기 전에 >** 블록의 어느 레코드와 쌍을  **\<후 >** 블록입니다.  
   
  다음 중 하나가 존재할 경우 `updg:id` 특성은 있으면 좋지만 꼭 필요하지는 않습니다.  
   
@@ -81,18 +81,18 @@ ms.locfileid: "36172855"
   
 -   Updategram의 키 필드에 대해 하나 이상의 특정 값이 제공된 경우  
   
- 되는 경우 하거나 updategram에 지정 된 키 열을 사용 하 여는 `sql:key-fields` 의 요소와 쌍으로 연결 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다.  
+ 하거나 되는 경우, updategram에 지정 된 키 열을 사용 합니다 `sql:key-fields` 의 요소 쌍에  **\<하기 전에 >** 및  **\<후 >** 블록입니다.  
   
  매핑 스키마에서 `sql:key-fields`를 사용하여 키 열을 식별하지 않는 경우 또는 Updategram이 키 열 값을 업데이트 중인 경우에는 `updg:id`를 지정해야 합니다.  
   
- 식별 되는 레코드는  **\<하기 전에 >** 및  **\<후 >** 블록 동일한 순서로 배열 될 필요가 없습니다. `updg:id` 특성에 지정 된 요소 간의 연결을 강제는  **\<하기 전에 >** 및  **\<후 >** 블록입니다.  
+ 식별 되는 레코드를  **\<하기 전에 >** 하 고  **\<후 >** 요소를 동일한 순서 여야 필요가 없습니다. `updg:id` 특성에 지정 된 요소 간의 연결을 강제로 합니다  **\<하기 전에 >** 하 고  **\<후 >** 블록.  
   
- 요소 중 하나를 지정 하는 경우는  **\<하기 전에 >** 블록과 하나의 해당 요소는  **\<후 >** 블록을 사용 하 여 `updg:id` 필요 하지 않습니다. 그러나 모호성을 피하기 위해 어떤 경우든 `updg:id`를 지정하는 것이 좋습니다.  
+ 한 요소를 지정 하는 경우는  **\<하기 전에 >** 블록과의 해당 요소 중 하나만 합니다  **\<후 >** 블록을 사용 하 여 `updg:id` 필요 하지 않습니다. 그러나 모호성을 피하기 위해 어떤 경우든 `updg:id`를 지정하는 것이 좋습니다.  
   
 ## <a name="examples"></a>예  
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  
   
--   대부분의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram의 더 많은 예제를 참조 하십시오. [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
+-   대부분의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
 -   대부분의 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다. 모든 업데이트는 이 데이터베이스의 테이블에 적용됩니다. AdventureWorks 데이터베이스를 복원할 수 있습니다.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "36172855"
 </ROOT>  
 ```  
   
- 에 설명 된 레코드는  **\<하기 전에 >** 블록은 데이터베이스의 현재 레코드를 나타냅니다. Updategram에 지정 된 열 값이 모두 사용 하 여는  **\<하기 전에 >** 블록의 레코드를 검색 합니다. 이 updategram에는  **\<하기 전에 >** 블록은 ContactID 열만 제공; 따라서 updategram를 사용 하 여 값만 레코드를 검색 합니다. 이 블록에 LastName 값을 추가하면 Updategram은 ContactID와 LastName을 모두 사용하여 검색합니다.  
+ 에 설명 된 레코드를  **\<하기 전에 >** 블록은 데이터베이스의 현재 레코드를 나타냅니다. Updategram에 지정 된 열 값을 모두 사용 합니다  **\<하기 전에 >** 블록의 레코드를 검색 합니다. 이 updategram에는  **\<하기 전에 >** 블록은 ContactID 열만 제공; 따라서 updategram은 레코드를 검색 하려면 값만를 사용 합니다. 이 블록에 LastName 값을 추가하면 Updategram은 ContactID와 LastName을 모두 사용하여 검색합니다.  
   
- 이 updategram에는  **\<후 >** 변경 되는 유일한 값 이므로 블록은 LastName 열 값을 제공 합니다.  
+ 이 updategram에는  **\<후 >** 변경 되는 유일한 값 이기 때문에 블록은 LastName 열 값을 제공 합니다.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36172855"
   
 2.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
 ### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>2. updg:id 특성을 사용하여 여러 레코드 업데이트  
  이 예에서 Updategram은 AdventureWorks 데이터베이스의 HumanResources.Shift 테이블에 다음과 같은 두 가지 업데이트를 수행합니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "36172855"
   
 -   오전 10시에 시작하는 "Late Morning"이라는 새 근무 시간을 삽입합니다.  
   
- Updategram에서 `updg:id` 요소 간의 연결을 생성 하는 특성의  **\<하기 전에 >** 및  **\<후 >** 블록입니다.  
+ Updategram에서 `updg:id` 요소 간의 연결을 생성 하는 특성을  **\<하기 전에 >** 및  **\<후 >** 블록.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -150,7 +150,7 @@ ms.locfileid: "36172855"
 </ROOT>  
 ```  
   
- 알림 방법을 `updg:id` 특성 쌍의 첫 번째 인스턴스는 \<HumanResources.Shift > 요소에는  **\<하기 전에 >** 블록의 두 번째 인스턴스에 \< HumanResources.Shift > 요소에는  **\<후 >** 블록입니다.  
+ 통지 하는 방법을 `updg:id` 특성 쌍의 첫 번째 인스턴스를 \<HumanResources.Shift > 요소에는  **\<하기 전에 >** 의 두 번째 인스턴스를 사용 하 여 블록을 \< HumanResources.Shift > 요소에는  **\<후 >** 블록입니다.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -158,15 +158,15 @@ ms.locfileid: "36172855"
   
 2.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
 ### <a name="c-specifying-multiple-before-and-after-blocks"></a>3. 여러 번 지정 \<하기 전에 > 및 \<후 > 블록  
- 모호성을 피하기 위해 작성할 수 있습니다 updategram 예 b에서 여러 개 사용 하 여  **\<하기 전에 >** 및  **\<후 >** 쌍을 차단 합니다. 지정  **\<하기 전에 >** 및  **\<후 >** 쌍의 혼동을 최소화 하면서 여러 업데이트를 지정 하는 한 가지 방법입니다. 또한 각각의  **\<하기 전에 >** 및  **\<후 >** 블록 지정 최대 하나의 요소를 사용할 필요가 없습니다는 `updg:id` 특성입니다.  
+ 모호성을 피하기 위해 작성할 수 있습니다 updategram은 예 B의 배수를 사용 하 여  **\<하기 전에 >** 하 고  **\<후 >** 쌍을 차단 합니다. 지정  **\<하기 전에 >** 하 고  **\<후 >** 쌍의 혼동을 최소화를 사용 하 여 여러 업데이트를 지정 하는 한 가지 방법입니다. 또한 각 경우의 합니다  **\<하기 전에 >** 및  **\<후 >** 블록은 하나의 요소만 지정을 사용할 필요가 없습니다를 `updg:id` 특성.  
   
 > [!NOTE]  
->  쌍을 구성 하는  **\<후 >** 태그 바로 뒤에 붙여야 하면 해당  **\<하기 전에 >** 태그입니다.  
+>  쌍을 형성 하는  **\<후 >** 태그 바로 뒤에 붙여야 해당  **\<전에 >** 태그입니다.  
   
- 다음 updategram에서 첫 번째  **\<하기 전에 >** 및  **\<후 >** 쌍 일 교대조에 대 한 근무 시간 이름을 업데이트 합니다. 두 번째 쌍은 새 근무 시간 레코드를 삽입합니다.  
+ 다음 updategram에서 첫 번째  **\<하기 전에 >** 하 고  **\<후 >** 쌍 주간 근무의 근무 시간 이름을 업데이트 합니다. 두 번째 쌍은 새 근무 시간 레코드를 삽입합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -195,16 +195,16 @@ ms.locfileid: "36172855"
   
 2.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
 ### <a name="d-specifying-multiple-sync-blocks"></a>4. 여러 번 지정 \<동기화 > 블록  
- 여러 개 지정할 수  **\<동기화 >** updategram에 차단 합니다. 각  **\<동기화 >** 지정 된 블록은 독립 트랜잭션을 합니다.  
+ 여러 개 지정할 수 있습니다  **\<동기화 >** updategram에 차단 합니다. 각  **\<동기화 >** 블록에 지정 된 트랜잭션이 독립적입니다.  
   
  다음 updategram에서 첫 번째  **\<동기화 >** 블록은 Sales.Customer 테이블의 레코드를 업데이트 합니다. 간단하게 보여 주기 위해 이 Updategram은 필수 열 값, 즉 ID 값(CustomerID)과 업데이트되는 값(SalesPersonID)만 지정합니다.  
   
- 두 번째  **\<동기화 >** 블록은 Sales.SalesOrderHeader 테이블에 두 개의 레코드를 추가 합니다. 이 테이블의 경우 SalesOrderID는 IDENTITY 형식 열입니다. 따라서 updategram에서는 SalesOrderID의 값의 각는 \<Sales.SalesOrderHeader > 요소입니다.  
+ 두 번째  **\<동기화 >** 블록은 Sales.SalesOrderHeader 테이블에 두 개의 레코드를 추가 합니다. 이 테이블의 경우 SalesOrderID는 IDENTITY 형식 열입니다. 따라서 updategram은 값을 지정 하지는 SalesOrderID의 각는 \<Sales.SalesOrderHeader > 요소입니다.  
   
- 여러 번 지정  **\<동기화 >** 블록 유용 하기 때문에 경우 두 번째  **\<동기화 >** 블록 (트랜잭션) 레코드를 추가 하지 Sales.SalesOrderHeader 테이블에는 첫 번째  **\<동기화 >** 블록은 Sales.Customer 테이블의 고객 레코드를 업데이트할 수 있습니다.  
+ 여러 번 지정  **\<동기화 >** 블록 유용 하기 때문에 경우 두 번째  **\<동기화 >** 차단 (트랜잭션)에 실패 한 Sales.SalesOrderHeader 테이블에 레코드를 추가 합니다 첫 번째  **\<동기화 >** 블록은 Sales.Customer 테이블의 고객 레코드를 업데이트할 수 있습니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -261,14 +261,14 @@ ms.locfileid: "36172855"
   
 2.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
 ### <a name="e-using-a-mapping-schema"></a>5. 매핑 스키마 사용  
  이 예에서 Updategram은 `mapping-schema` 특성을 사용하여 매핑 스키마를 지정합니다. 기본 매핑은 없습니다. 즉, 매핑 스키마가 데이터베이스 테이블 및 열에 대한 Updategram의 필요한 요소 및 특성 매핑을 제공합니다.  
   
  Updategram에 지정된 요소와 특성은 매핑 스키마의 요소와 특성을 참조합니다.  
   
- 다음 XSD 매핑 스키마에  **\<고객 >**,  **\<순서 >**, 및  **\<OD >** 에 매핑되는 요소는 데이터베이스의 Sales.Customer, Sales.SalesOrderHeader 및 Sales.SalesOrderDetail 테이블입니다.  
+ 다음 XSD 매핑 스키마에  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OD >** 에 매핑되는 요소는 데이터베이스의 Sales.Customer, Sales.SalesOrderHeader 및 Sales.SalesOrderDetail 테이블입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -321,7 +321,7 @@ ms.locfileid: "36172855"
 </xsd:schema>  
 ```  
   
- 이 매핑 스키마(UpdategramMappingSchema.xml)는 다음 Updategram에 지정됩니다. Updategram은 특정 주문에 대한 Sales.SalesOrderDetail 테이블에 주문 세부 정보 항목을 추가합니다. 중첩 된 요소를 포함 하는 updategram:는  **\<OD >** 요소 내에 중첩는  **\<순서 >** 요소입니다. 이 두 요소 간의 기본 키/외래 키 관계는 매핑 스키마에 지정됩니다.  
+ 이 매핑 스키마(UpdategramMappingSchema.xml)는 다음 Updategram에 지정됩니다. Updategram은 특정 주문에 대한 Sales.SalesOrderDetail 테이블에 주문 세부 정보 항목을 추가합니다. 중첩 된 요소를 포함 하는 updategram:는  **\<OD >** 요소 내부에 중첩을  **\<순서 >** 요소입니다. 이 두 요소 간의 기본 키/외래 키 관계는 매핑 스키마에 지정됩니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -347,9 +347,9 @@ ms.locfileid: "36172855"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
- 매핑 스키마를 사용 하는 updategram의 더 많은 예제를 참조 하십시오. [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
+ 매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>6. 매핑 스키마와 IDREFS 특성 함께 사용  
  이 예에서는 Updategram이 매핑 스키마에서 IDREFS 특성을 사용하여 여러 테이블의 레코드를 업데이트하는 방법을 보여 줍니다. 이 예에서는 데이터베이스가 다음 테이블로 구성되어 있다고 가정합니다.  
@@ -362,7 +362,7 @@ ms.locfileid: "36172855"
   
  한 명의 학생이 다수의 과목에 등록할 수 있고, 하나의 과목은 다수의 학생을 가질 수 있으므로 이 M:N 관계를 나타내기 위해 세 번째 테이블인 Enrollment 테이블이 필요합니다.  
   
- 사용 하 여 테이블의 XML 뷰를 제공 하는 다음 XSD 매핑 스키마는  **\<학생 >**,  **\<과정 >**, 및  **\<등록 >** 요소입니다. **IDREFS** 특성 매핑 스키마에서 이러한 요소 간의 관계를 지정 합니다. **StudentIDList** 특성에  **\<과정 >** 요소는 한 **IDREFS** type 특성은 Enrollment 테이블의 StudentID 열을 참조 하는 합니다. 마찬가지로,는 **enrolledin 특성** 특성에  **\<학생 >** 요소는 한 **IDREFS** 등록의 CourseID 열을 참조 하는 type 특성 테이블입니다.  
+ 다음 XSD 매핑 스키마를 사용 하 여 테이블의 XML 뷰를 제공 합니다  **\<학생 >** 합니다  **\<과정 >**, 및  **\<등록 >** 요소입니다. 합니다 **IDREFS** 특성 매핑 스키마에서 이러한 요소 간의 관계를 지정 합니다. **StudentIDList** 특성을  **\<과정 >** 요소는는 **IDREFS** Enrollment 테이블의 StudentID 열을 참조 하는 형식 특성입니다. 마찬가지로 합니다 **enrolledin 특성은** 특성을  **\<학생 >** 요소는는 **IDREFS** 등록의 CourseID 열을 참조 하는 형식 특성 테이블입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -459,7 +459,7 @@ ms.locfileid: "36172855"
   
 5.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
 6.  다음 Updategram을 이전 단계에서 설명된 대로 저장하고 실행합니다. Updategram은 Enrollment 테이블에 레코드를 추가하여 StudentID="1"인 학생을 CS102 과목에 다시 추가합니다.  
   
@@ -557,7 +557,7 @@ ms.locfileid: "36172855"
 </Schema>  
 ```  
   
- 매핑 스키마를 사용 하는 updategram의 더 많은 예제를 참조 하십시오. [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
+ 매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  

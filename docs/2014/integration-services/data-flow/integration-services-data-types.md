@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265350"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
@@ -64,9 +64,9 @@ ms.locfileid: "36092712"
 |DT_UI4|4바이트의 부호 없는 정수입니다.|  
 |DT_UI8|8바이트의 부호 없는 정수입니다.|  
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
-|DT_IMAGE|2의 최대 크기를 사용 하 여 이진 값<sup>31</sup>-1 (2147483647) 바이트입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
-|DT_NTEXT|최대 길이가 2 유니코드 문자열<sup>30</sup> -1 (1073741823) 자인 합니다.|  
-|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 문자열 최대 길이가 2<sup>31</sup>-1 (2147483647) 문자.|  
+|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|DT_NTEXT|최대 길이가 2 사용 하 여 유니코드 문자열<sup>30</sup> -1 (1073741823) 자인 합니다.|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 문자열 2의 최대 길이가<sup>31</sup>-1 (2147483647) 자입니다.|  
   
 ## <a name="conversion-of-data-types"></a>데이터 형식 변환  
  열의 데이터에 원본 데이터 형식으로 할당된 전체 너비가 필요하지 않은 경우 열의 데이터 형식을 변경할 수 있습니다. 각 행이 좁을수록 원본에서 대상으로 데이터를 이동하는 속도가 빨라지기 때문에 각 데이터 행을 가능한 한 좁게 만들면 데이터 전송 시 성능을 최적화할 수 있습니다.  
@@ -232,7 +232,7 @@ ms.locfileid: "36092712"
 |DT_DBTIME||||TIMESTAMP|time|Time|  
 |DT_DBTIME2|[time&#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time&#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|||||  
 |DT_DBTIMESTAMP|[datetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime&#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  

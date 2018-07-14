@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, creating
 - Integration Services packages, creating
@@ -18,13 +18,13 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f28ab22eea6e07cd855e9ff6c8e1ddcbedbbce54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94fddf1871c03bd70f86a61c80a736d2f18a30a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324573"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 만드는 패키지는 파일 시스템에 저장됩니다. 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 패키지 저장소에 저장하려면 패키지 복사본을 저장해야 합니다. 자세한 내용은 [패키지의 복사본 저장](../../2014/integration-services/save-a-copy-of-a-package.md)을 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "36182086"
   
      다시 사용하려는 기능이 기존 패키지에 있는 경우 이러한 패키지의 개체를 복사하여 붙여넣으면 새 패키지에서 제어 흐름 및 데이터 흐름을 훨씬 빠르게 작성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 복사 및 붙여넣기를 사용하는 방법은 [패키지 개체 다시 사용](reuse-of-package-objects.md)을 참조하세요.  
   
-     기존 패키지를 복사하거나 사용자 지정 패키지를 템플릿으로 사용하여 새 패키지를 만드는 경우 기존 패키지의 이름과 GUID도 복사됩니다. 새 패키지와 복사한 원본 패키지를 구분하려면 새 패키지의 이름 및 GUID를 업데이트해야 합니다. 예를 들어 패키지에 동일한 GUID가 포함된 경우 로그 데이터가 속한 패키지를 식별하기가 훨씬 더 어렵습니다. GUID를 다시 생성할 수는 `ID` 속성의 값을 업데이트 하 고는 `Name` 속성의 속성 창을 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 자세한 내용은 [패키지 속성 설정](set-package-properties.md) 및 [dtutil 유틸리티](dtutil-utility.md)를 참조하세요.  
+     기존 패키지를 복사하거나 사용자 지정 패키지를 템플릿으로 사용하여 새 패키지를 만드는 경우 기존 패키지의 이름과 GUID도 복사됩니다. 새 패키지와 복사한 원본 패키지를 구분하려면 새 패키지의 이름 및 GUID를 업데이트해야 합니다. 예를 들어 패키지에 동일한 GUID가 포함된 경우 로그 데이터가 속한 패키지를 식별하기가 훨씬 더 어렵습니다. GUID를 다시 생성할 수 있습니다 합니다 `ID` 속성의 값을 업데이트 하 고는 `Name` 속성에서 속성 창을 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 자세한 내용은 [패키지 속성 설정](set-package-properties.md) 및 [dtutil 유틸리티](dtutil-utility.md)를 참조하세요.  
   
 -   템플릿으로 지정한 사용자 지정 패키지를 사용합니다.  
   

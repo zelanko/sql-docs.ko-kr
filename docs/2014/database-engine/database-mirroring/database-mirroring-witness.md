@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c415d1bea0b901025762bec04114ec4ba8ef558f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218123"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   자동 장애 조치(Failover)를 지원하려면 데이터베이스 미러링 세션을 보호 우선 모드로 구성해야 하며 *미러링 모니터 서버*라는 세 번째 서버 인스턴스가 있어야 합니다. 미러링 모니터 서버는 보호 우선 모드에 있는 미러 서버가 자동 장애 조치의 시작 여부를 인식할 수 있도록 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 선택적 인스턴스입니다. 미러링 모니터 서버는 두 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 자동 장애 조치(Failover)를 지원하는 역할만 수행합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "36093586"
 ##  <a name="SwHwRecommendations"></a> 소프트웨어 및 하드웨어 권장 사항  
  미러링 모니터 서버는 파트너와 별도의 컴퓨터에 있는 것이 좋습니다. 데이터베이스 미러링 파트너는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다. 반대로 미러링 모니터 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express에서도 지원됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드하는 동안을 제외하고 미러링 세션의 서버 인스턴스는 모두 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중이어야 합니다. 예를 들어 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 미러링 구성에서 업그레이드하는 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 미러링 모니터 서버가 지원되지만 이 미러링 모니터 서버를 기존 또는 새로운 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상 버전의 미러링 구성에 추가할 수는 없습니다.  
   
- 미러링 모니터 서버는 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전을 지원하는 모든 신뢰할 수 있는 컴퓨터 시스템에서 실행될 수 있습니다. 그러나 미러링 모니터 서버로 사용되는 모든 서버 인스턴스에는 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 버전에 필요한 최소 구성을 적용하는 것이 좋습니다. 이러한 요구 사항에 대 한 자세한 내용은 참조 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
+ 미러링 모니터 서버는 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전을 지원하는 모든 신뢰할 수 있는 컴퓨터 시스템에서 실행될 수 있습니다. 그러나 미러링 모니터 서버로 사용되는 모든 서버 인스턴스에는 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 버전에 필요한 최소 구성을 적용하는 것이 좋습니다. 이러한 요구 사항에 대 한 자세한 내용은 참조 하세요. [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
   
 ##  <a name="InAutoFo"></a> 자동 장애 조치에서의 미러링 모니터 서버 역할  
  데이터베이스 미러링 세션 동안 모든 서버 인스턴스가 해당 연결 상태를 모니터링합니다. 파트너가 서로 분리되면 미러링 모니터 서버를 통해 둘 중 하나만 데이터베이스를 제공하도록 할 수 있습니다. 동기화된 미러 서버와 주 서버와의 연결이 끊겼지만 미러링 모니터 서버와의 연결은 지속되는 경우 미러 서버는 미러링 모니터 서버에 연결하여 미러링 모니터 서버와 주 서버와의 연결이 끊겼는지 여부를 확인합니다.  

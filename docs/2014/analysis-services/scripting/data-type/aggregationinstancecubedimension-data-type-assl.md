@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceCubeDimension data type
 ms.assetid: b321ad9e-f034-4a7b-b0b7-8ba5fb162e7e
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73a553a301819d8c71ab3464bbace93c00e59e91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1e6c6cc46c975eb89b1ecde559f87328005eb7a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237523"
 ---
 # <a name="aggregationinstancecubedimension-data-type-assl"></a>AggregationInstanceCubeDimension 데이터 형식(ASSL)
   집계 인스턴스에서 사용하는 큐브 차원에 대한 정보를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -62,6 +62,6 @@ ms.locfileid: "36182352"
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

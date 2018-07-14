@@ -1,5 +1,5 @@
 ---
-title: 테스트 집합 만들기 (데이터 마이닝 마법사) | Microsoft Docs
+title: 테스트 집합 (데이터 마이닝 마법사) 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ced530beaaa09954e94c851069ca76d01f3023d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326883"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>테스트 집합 만들기(데이터 마이닝 마법사)
   **테스트 집합 만들기** 페이지를 사용하여 학습에 사용할 데이터 양과 테스트 집합으로 사용하기 위해 예약할 양을 지정할 수 있습니다. 마이닝 구조를 만들 때 학습 집합과 테스트 집합으로 데이터를 분리하면 나중에 만드는 마이닝 모델의 정확도를 보다 편리하게 평가할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36181675"
   
  기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 분할을 시작할 때 사용되는 숫자 시드를 생성합니다. 이 시드는 마이닝 구조의 이름을 기반으로 합니다. 마이닝 구조의 이름이 변경된 후에도 파티션을 동일하게 유지하려면 마이닝 구조의 HoldoutSeed 속성을 설정하여 시드의 값을 지정하면 됩니다. 홀드아웃 시드를 변경하면 구조를 다시 처리해야 합니다.  
   
- 나중에 테스트 또는 학습 데이터의 크기를 변경 하려는 경우 수정할 수 있습니다는 `HoldoutMaxCases` 및 `HoldoutMaxPercent` 속성을 사용 하 여 데이터 마이닝 구조는 **속성** 창. 그러나 변경 후에는 마이닝 구조 및 연결된 모든 마이닝 모델을 다시 처리해야 합니다. 또한 다음과 같은 제한 사항이 적용됩니다.  
+ 나중에 테스트 또는 학습 데이터의 크기를 변경 하려는 경우 수정할 수 있습니다는 `HoldoutMaxCases` 하 고 `HoldoutMaxPercent` 속성을 사용 하 여 데이터 마이닝 구조를 **속성** 창. 그러나 변경 후에는 마이닝 구조 및 연결된 모든 마이닝 모델을 다시 처리해야 합니다. 또한 다음과 같은 제한 사항이 적용됩니다.  
   
 -   데이터 마이닝 구조의 분할은 데이터 마이닝 구조가 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에 저장된 경우에만 지원됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이전 버전은 마이닝 구조에 대한 파티션 정보의 캐싱을 지원하지 않습니다.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "36181675"
  [데이터 마이닝 마법사 F1 도움말 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [관련된 열 제안 &#40;데이터 마이닝 마법사&#41;](suggest-related-columns-data-mining-wizard.md)   
  [테이블 유형 지정 &#40;데이터 마이닝 마법사&#41;](specify-table-types-data-mining-wizard.md)   
- [열의 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [열 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

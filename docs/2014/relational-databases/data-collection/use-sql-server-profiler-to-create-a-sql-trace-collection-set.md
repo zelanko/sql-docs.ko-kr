@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler를 사용 하 여 SQL 추적 컬렉션 집합 (SQL Server Management Studio)을 만들 | Microsoft Docs
+title: SQL Server Profiler를 사용 하 여 SQL 추적 컬렉션 집합 (SQL Server Management Studio) 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260859"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 유형을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보낼 수 있습니다. 이 프로세스는 두 부분으로 구성되어 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36093346"
   
     1.  필터 목록에서 **기간**을 클릭합니다.  
   
-    2.  부울 연산자 창에서 확장의 **보다 크거나 같은** 노드, 형식 `80` 값 및 클릭으로 **확인**합니다.  
+    2.  부울 연산자 창에서 확장을 **보다 크거나** 노드를 입력 `80` 클릭 한 다음 확인 하 고 값으로 **확인**합니다.  
   
 9. **실행** 을 클릭하여 추적을 시작합니다.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "36093346"
   
 3.  스크립트를 스크롤한 다음 스크립트 주석 텍스트에서 설명하는 다음과 같은 대체 작업을 수행합니다.  
   
-    -   **SQLTrace Collection Set Name Here** 를 컬렉션 집합에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 집합 이름을 `SPROC_CollectionSet`합니다.  
+    -   **SQLTrace Collection Set Name Here** 를 컬렉션 집합에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 집합 이름을 `SPROC_CollectionSet`입니다.  
   
-    -   **SQLTrace Collection Item Name Here** 를 컬렉션 항목에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 항목 이름을 `SPROC_Collection_Item`합니다.  
+    -   **SQLTrace Collection Item Name Here** 를 컬렉션 항목에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 항목 이름을 `SPROC_Collection_Item`입니다.  
   
 4.  **실행** 을 클릭하여 쿼리를 실행하고 컬렉션 집합을 만듭니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36093346"
   
     2.  **관리**와 **데이터 컬렉션**을 차례로 확장합니다.  
   
-     `SPROC_CollectionSet` 컬렉션 집합이 표시와 같은 수준에서 **시스템 데이터 컬렉션 집합** 노드. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
+     `SPROC_CollectionSet` 와 같은 수준에 표시 되는 컬렉션 집합을 **시스템 데이터 컬렉션 집합** 노드. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
   
 6.  개체 탐색기를 사용하여 SPROC_CollectionSet에 대해 컬렉션 모드 및 업로드 일정 등의 속성을 편집합니다. 데이터 수집기와 함께 제공되는 시스템 데이터 컬렉션 집합의 경우와 동일한 절차를 따릅니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 2단원. 컨테이너에 정책 만들기 및 공유 액세스 서명 (SAS) 키를 생성 | Microsoft Docs
+title: 2단원. 컨테이너에서 정책 만들기 및 공유 액세스 서명 (SAS) 키 생성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5313872497e120ebfce452547f755f61ba567e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708c347e587d19ebfb7c2f24e94fd59db0289c52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324303"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>2단원. 컨테이너에 정책 만들기 및 SAS(공유 액세스 서명) 키 생성
   이 단원에서는 Blob 컨테이너에서 정책을 만들고 SAS키를 생성하는 방법을 배웁니다.  

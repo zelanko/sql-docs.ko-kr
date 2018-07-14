@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b2aa339c8f68d65bdb1566ff781facccf927358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 364328b3ce519b849b4e7a0c6c7a725f1c24a14b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219663"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>플랫 파일 연결 관리자 편집기(고급 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 Integration Services가 플랫 파일에 있는 데이터를 읽고 쓰는 방법을 지정하는 속성을 설정할 수 있습니다. 사용자는 플랫 파일에 있는 열 이름을 바꿀 수 있고 파일의 각 열에 대해 데이터 형식 및 구분 기호를 포함하는 속성을 설정할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36181375"
 |**ColumnType**|열 유형이 구분 기호로 분리됨, 고정 폭 또는 왼쪽 정렬 중 어떤 것인지를 나타냅니다. 이 속성은 읽기 전용입니다. 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
 |**OutputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 이 값은 문자 수입니다. 데이터 흐름 태스크에서 이 값은 플랫 파일 원본의 출력 열 너비를 설정하는 데 사용됩니다.<br /><br /> 참고: 개체 모델에서 이 속성의 이름은 MaximumWidth입니다.|  
 |**DataType**|사용 가능한 데이터 형식의 목록에서 선택합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.|  
-|**TextQualified**|텍스트 데이터가 인용 문자 등 텍스트 한정자로 묶 였는 지 여부를 나타냅니다. 유효한 값은<br /><br /> **True**: 플랫 파일의 텍스트 데이터가 한정됩니다.<br /><br /> **False**: 플랫 파일의 텍스트 데이터가 한정되지 않습니다.|  
+|**TextQualified**|텍스트 데이터가 인용 문자 등의 텍스트 한정자 문자로 묶 였는 지 여부를 나타냅니다. 유효한 값은<br /><br /> **True**: 플랫 파일의 텍스트 데이터가 한정됩니다.<br /><br /> **False**: 플랫 파일의 텍스트 데이터가 한정되지 않습니다.|  
 |**이름**|설명 열 이름을 지정합니다. 이름을 입력하지 않으면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 자동으로 열 0, 열 1 등과 같은 형식으로 이름을 만듭니다.|  
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.|  
 |**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}**. 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}**. 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}**. 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}**. 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}**. 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}**. 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}**. 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}**. 열이 세로 막대로 구분됩니다.|  

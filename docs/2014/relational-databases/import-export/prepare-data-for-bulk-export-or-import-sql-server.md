@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], planning
 - bulk importing [SQL Server], from a CSV file
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e8c73ee58adca043b3630501137285012bf3e31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 474f771b73e5e3ce6f7a5d567d491edb740f94f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302463"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server)
   이 섹션에서는 대량 내보내기 작업을 계획하는 방법과 관련된 고려 사항 및 대량 가져오기 작업의 요구 사항에 대해 설명합니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "36093305"
   
 -   **bcp** 명령, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하여 데이터를 가져오려면 대상 테이블이 이미 존재해야 합니다.  
   
--   데이터 파일의 각 필드는 대상 테이블의 해당 열과 호환 가능해야 합니다. 예를 들어 한 `int` 에 필드를 로드할 수 없습니다는 `datetime` 열입니다. 자세한 내용은 [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) 및 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
+-   데이터 파일의 각 필드는 대상 테이블의 해당 열과 호환 가능해야 합니다. 예를 들어를 `int` 필드에 로드할 수 없습니다는 `datetime` 열입니다. 자세한 내용은 [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) 및 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
   
     > [!NOTE]  
     >  전체 파일이 아니라 데이터 파일에서 가져올 행의 하위 집합을 지정하려면 **-F** *first_row* 스위치 및/또는 **-L** *last_row* 스위치와 함께 **bcp** 명령을 사용할 수 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  

@@ -5,35 +5,34 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231533"
 ---
 # <a name="search-property-list-editor"></a>검색 속성 목록 편집기
   이 대화 상자를 사용하여 검색 속성 목록에서 검색 속성을 추가하거나 삭제할 수 있습니다.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>SQL Server Management Studio를 사용하여 검색 속성 목록을 관리하려면  
- 만들거나, 보거나, 검색 속성 목록을 삭제 방법에 대 한 속성 검색에 대 한 전체 텍스트 인덱스를 구성 하는 방법에 대 한 정보를 참조 하십시오. [검색 속성 목록으로 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)합니다.  
+ 속성 검색에 대 한 전체 텍스트 인덱스를 구성 하는 방법에 대 한 만들기, 보기 또는 검색 속성 목록을 삭제 하는 방법에 대 한 정보를 참조 하세요 [검색 속성 목록을 사용 하 여 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)합니다.  
   
 ## <a name="options"></a>변수  
  **속성 이름**  
  전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. **속성 이름** 의 최대 길이는 255자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 `System.Author`나 `System.Contact.HomeAddress`와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다. **속성 이름** 은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다.  
   
- 개발자는 속성 이름을 사용 하 여 속성을 식별 하는 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자입니다. 따라서 속성을 추가할 때는 속성을 의미 있게 나타내는 값을 지정해야 합니다.  
+ 개발자는 속성 이름을 사용 하 여 속성을 식별 합니다 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자입니다. 따라서 속성을 추가할 때는 속성을 의미 있게 나타내는 값을 지정해야 합니다.  
   
  **속성 집합 GUID**  
  속성이 속한 속성 집합의 식별자를 지정합니다. 이 식별자는 GUID(Globally Unique Identifier)입니다. 속성 집합은 논리적으로 관련이 있는 속성의 모음입니다. 이 값을 가져오는 방법은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
@@ -57,7 +56,7 @@ ms.locfileid: "36172442"
 -   [검색 속성 목록을 사용하여 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>사용 권한  
- 참조 [ALTER SEARCH PROPERTY LIST &#40;Transact SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)합니다.  
+ 참조 [ALTER SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   

@@ -1,14 +1,13 @@
 ---
-title: 예제:를 사용 하 여 Windows 인증 (Transact SQL) 데이터베이스 미러링 설정 | Microsoft Docs
+title: '예제: Windows 인증 사용 (Transact SQL) 데이터베이스 미러링 설정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - Windows authentication [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82a122a8301e910ffc628589e475b4940d439e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 02b26ad89a5ad1d7cb6620a81829d247fa6b483f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273478"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>예제: Windows 인증을 사용하여 데이터베이스 미러링 설정(Transact-SQL)
   이 예에서는 Windows 인증을 사용하는 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 사용하는 대신 데이터베이스 미러링 보안 구성 마법사를 데이터베이스 미러링 설치에 사용할 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  

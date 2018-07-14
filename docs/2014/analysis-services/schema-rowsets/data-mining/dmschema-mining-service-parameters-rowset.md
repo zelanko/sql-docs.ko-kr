@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9079be52d50da3a400496dc602166c857f2b1691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7203b2f717ec7605fcc52c1387472779488ae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224473"
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합
   서버의 알고리즘 매개 변수에 대해 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DMSCHEMA_MINING_SERVICE_PARAMETERS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DMSCHEMA_MINING_SERVICE_PARAMETERS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "36181435"
 |`PARAMETER_NAME`|`DBTYPE_WSTR`||매개 변수의 이름입니다.|  
 |`PARAMETER_TYPE`|`DBTYPE_WSTR`||매개 변수의 유형입니다.|  
 |`IS_REQUIRED`|`DBTYPE_BOOL`||필수 매개 변수인 경우 `TRUE`를 반환하는 부울입니다.|  
-|`PARAMETER_FLAGS`|`DBTYPE_UI4`||매개 변수의 특징을 설명하는 비트 마스크입니다.<br /><br /> -   `DM_PARAMETER_TRAINING` (`0x0000001`) 매개 변수는 학습에 사용 됨을 나타냅니다<br />-   `DM_PARAMETER_PREDICTION` (`0x00000002`) 매개 변수 예측에 사용 되는지 나타냅니다.<br />-   `DM_PARAMETER_CONTENT` (`0x00000003`) 매개 변수가 콘텐츠 제한에 사용 됨을 나타냅니다|  
+|`PARAMETER_FLAGS`|`DBTYPE_UI4`||매개 변수의 특징을 설명하는 비트 마스크입니다.<br /><br /> -   `DM_PARAMETER_TRAINING` (`0x0000001`) 매개 변수는 학습에 사용 됨을 나타냅니다<br />-   `DM_PARAMETER_PREDICTION` (`0x00000002`) 매개 변수 예측에 사용 됨을 나타냅니다<br />-   `DM_PARAMETER_CONTENT` (`0x00000003`) 매개 변수가 콘텐츠 제한에 사용 됨을 나타냅니다|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||매개 변수에 대한 알기 쉬운 설명입니다.|  
 |`DEFAULT_VALUE`|`DBTYPE_WSTR`||매개 변수의 기본값입니다. 기본값이 단순한 데이터 형식이 아니면 `NULL`을 반환합니다.|  
 |`VALUE_ENUMERATION`|`DBTYPE_WSTR`||매개 변수에 사용할 수 있는 값에 대한 열거자입니다.|  

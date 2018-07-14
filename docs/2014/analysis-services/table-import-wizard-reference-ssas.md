@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267249"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>테이블 가져오기 마법사 참조(SSAS)
   이 섹션에서는 **테이블 가져오기 마법사**에 대한 도움말을 제공합니다. 이 마법사를 사용하여 다양한 데이터 원본에서 데이터를 가져올 수 있습니다. 모델 디자이너에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
@@ -46,11 +46,11 @@ ms.locfileid: "36092957"
   
 -   [Microsoft Excel 파일에 연결 &#40;SSAS&#41;](connect-to-a-microsoft-excel-file-ssas.md)  
   
--   [Azure SQL 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
+-   [Azure SQL Database에 연결 &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
   
 -   [Microsoft SQL Server 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
   
--   [Microsoft SQL Server 병렬 데이터 웨어하우스에 연결 &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
+-   [Microsoft SQL Server 병렬 데이터 웨어하우스를 연결할 &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
   
 -   [Microsoft SQL Server Analysis Services에 연결 &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36092957"
   
 -   [데이터 원본 자격 증명 &#40;SSAS&#41;](data-source-credentials-ssas.md)  
   
--   [세부 정보 &#40;SSAS&#41;](details-ssas.md)  
+-   [자세한 내용은 &#40;SSAS&#41;](details-ssas.md)  
   
 -   [필터 세부 정보 &#40;SSAS&#41;](filter-details-ssas.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36092957"
   
 -   [가져오기 &#40;SSAS&#41;](importing-ssas.md)  
   
--   [가져오기 요약 &#40;SSAS&#41;](import-summary-ssas.md)  
+-   [요약을 가져오려면 &#40;SSAS&#41;](import-summary-ssas.md)  
   
 -   [선택한 테이블 미리 보기 &#40;SSAS&#41;](preview-selected-table-ssas.md)  
   
@@ -84,11 +84,11 @@ ms.locfileid: "36092957"
   
 -   [고급 속성 설정 &#40;SSAS&#41;](set-advanced-properties-ssas.md)  
   
--   [연결 문자열 지정 &#40;SSAS&#41;](specify-a-connection-string-ssas.md)  
+-   [연결 문자열을 지정 &#40;SSAS&#41;](specify-a-connection-string-ssas.md)  
   
 -   [SQL 또는 MDX 쿼리 지정 &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
+ [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
   
   

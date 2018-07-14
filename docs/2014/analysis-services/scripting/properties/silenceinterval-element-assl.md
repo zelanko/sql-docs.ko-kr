@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SilenceInterval element
 ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5914d870d9ebcd288dffa19d9402bf8c92e525a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c099e86540a29c6f60fb4510266d51fceaaed98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293069"
 ---
 # <a name="silenceinterval-element-assl"></a>SilenceInterval 요소(ASSL)
-  인스턴스는 최소 기간 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 MOLAP (다차원 OLAP) 이미징 프로세스를 시작 하기 전에 일시 중지 합니다.  
+  최소한의 시간 인스턴스를 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 MOLAP (다차원 OLAP) 이미징 프로세스를 시작 하기 전에 일시 중지 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36181642"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `SilenceInterval` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
+ 부모에 해당 하는 요소가 `SilenceInterval` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

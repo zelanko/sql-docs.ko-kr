@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23c0c877dd77fe51ed9a3940a177f9898ecdf400
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2088298a2b816b4e4f2b7acf80160cc73c6ed561
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215583"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>행 삭제(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 더 이상 다른 사용자에게 제공하지 않으려는 데이터 행(멤버)을 MDS 리포지토리에서 삭제할 수 있습니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "36182291"
 3.  확인 대화 상자에서 **예**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터를 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

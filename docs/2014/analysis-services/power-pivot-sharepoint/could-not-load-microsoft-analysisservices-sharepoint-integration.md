@@ -1,5 +1,5 @@
 ---
-title: 파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; 또는 해당 종속성 중 하나입니다. 시스템에서 지정한 파일을 찾을 수 없습니다. | Microsoft Docs
+title: 파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.Data.Services, 버전 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =&#39; 또는 해당 종속성 중 하나입니다. 시스템에서 지정한 파일을 찾을 수 없습니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0330867bb1ffc9d7715d285b6c2c4c5143fb40c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63c549d310d283743d17632b814b4a621eee0286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226393"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; 또는 해당 종속성 중 하나입니다. 시스템에서 지정한 파일을 찾을 수 없습니다.
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.Data.Services, 버전 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =&#39; 또는 해당 종속성 중 하나입니다. 시스템에서 지정한 파일을 찾을 수 없습니다.
   SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 데이터 피드 내보내기를 시도할 때 시스템에 필요한 Microsoft ADO.NET Data Services 버전이 없으면 이 오류가 발생합니다.  
   
 ## <a name="details"></a>설명  
@@ -40,7 +40,7 @@ ms.locfileid: "36180978"
   
 ## <a name="user-action"></a>사용자 동작  
   
-1.  SharePoint 2010에 대 한 하드웨어 및 소프트웨어 요구 사항 설명서로 이동 [결정 하드웨어 및 소프트웨어 요구 사항 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)합니다.  
+1.  SharePoint 2010의 하드웨어 및 소프트웨어 요구 사항 설명서로 이동 [결정 하드웨어 및 소프트웨어 요구 사항 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)합니다.  
   
 2.  **소프트웨어 필수 구성 요소 설치**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
   

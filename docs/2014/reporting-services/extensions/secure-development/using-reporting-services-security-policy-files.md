@@ -20,15 +20,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 01ec71af4094dd67d93dc49b881bb7ca22b2a580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6cce76e0d7ae2aaec45c851fa0ab7ee4e65dedff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222993"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services 보안 정책 파일 사용
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 설치 중에 파일 시스템으로 복사되는 세 개의 구성 파일에 구성 요소 보안 정책 정보를 저장합니다. 이러한 구성 파일에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 코드 어셈블리에 대한 내부용 보안 정책과 사용자 정의 보안 정책의 조합이 들어 있을 수 있습니다. 세 개의 구성 파일은 보고서 서버 및 Windows 서비스, 보고서 관리자 웹 응용 프로그램, 보고서 디자이너 미리 보기 창과 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 세 개 보안 개체 구성 요소에 해당합니다.  

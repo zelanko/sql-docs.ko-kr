@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69cdda7c02c2bea92f1fb631b955e223427f3b85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86a5e07518097e01509f24f2969580dec7ba0c34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263589"
 ---
 # <a name="datasourceid-element-assl"></a>DataSourceID 요소(ASSL)
-  식별는 [DataSource](../objects/datasource-element-assl.md) 부모 요소와 연결 된 요소입니다.  
+  하 게 식별 하는 [DataSource](../objects/datasource-element-assl.md) 부모 요소와 연결 된 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36173196"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimensionBinding](../data-type/binding-data-type-assl.md), [DimensionBinding](../data-type/dimensionbinding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md), [QueryBinding](../data-type/querybinding-data-type-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [TableBinding](../data-type/tablebinding-data-type-assl.md)|  
+|부모 요소|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimensionBinding](../data-type/binding-data-type-assl.md)합니다 [DimensionBinding](../data-type/dimensionbinding-data-type-assl.md)를 [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)를 [QueryBinding](../data-type/querybinding-data-type-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [TableBinding](../data-type/tablebinding-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

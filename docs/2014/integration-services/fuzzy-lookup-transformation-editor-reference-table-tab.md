@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1ee024a1237916346e6a64dbd21aba208e34deb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78b04c27986224f1974dc35c3a60e02adcbe5483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217623"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>유사 항목 조회 변환 편집기(참조 테이블 탭)
   **유사 항목 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 조회 시 사용할 원본 테이블 및 인덱스를 지정할 수 있습니다. 참조 데이터 원본은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 있는 테이블이어야 합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36182097"
 >  유사 항목 조회 변환은 참조 테이블의 작업 복사본을 만듭니다. 아래에서 설명하는 인덱스는 일반 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인덱스가 아닌 특수 테이블을 사용하여 이 작업 테이블에 생성됩니다. **저장된 인덱스 유지 관리**를 선택하지 않으면 변환에서 기존 원본 테이블을 수정하지 않습니다. 이 경우 변환에서는 참조 테이블에 대한 변경 내용을 기반으로 작업 테이블 및 조회 인덱스 테이블을 업데이트하는 트리거를 참조 테이블에 만듭니다.  
   
 > [!NOTE]  
->  `Exhaustive` 및 `MaxMemoryUsage` 유사 항목 조회 변환의 속성에서 사용할 수 없는 **유사 항목 조회 변환 편집기**를 사용 하 여 설정할 수 있습니다는 **고급 편집기**합니다. 또한 100 보다 큰 값 `MaxOutputMatchesPerInput` 에 지정할 수는 **고급 편집기**합니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 유사 항목 조회 변환 섹션을 참조하십시오.  
+>  `Exhaustive` 및 `MaxMemoryUsage` 유사 항목 조회 변환의 속성을 사용할 수 없습니다는 **유사 항목 조회 변환 편집기**를 사용 하 여 설정할 수 있습니다를 **고급 편집기**합니다. 또한 값이 100 보다 큰 `MaxOutputMatchesPerInput` 에서만 지정할 수 있습니다 합니다 **고급 편집기**합니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 유사 항목 조회 변환 섹션을 참조하십시오.  
   
  유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
   

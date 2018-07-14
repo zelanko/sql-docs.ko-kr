@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269989"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>파티션(데이터베이스 복원 대화 상자)(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] **데이터베이스 복원** 대화 상자의 **파티션** 페이지를 사용하여 로컬 파티션을 복원할 위치를 지정하고 원격 파티션 복원 여부와 원격 파티션 복원 시 사용할 원격 백업 파일을 지정할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36180960"
 |**측정값 그룹**|로컬 파티션이 포함된 측정값 그룹 이름을 표시합니다.|  
 |**파티션**|로컬 파티션 이름을 표시합니다.|  
 |**크기(MB)**|로컬 파티션의 크기(MB)를 표시합니다.|  
-|**원래 폴더**|로컬 파티션이 저장된 원본 폴더 이름을 표시합니다.|  
+|**원본 폴더**|로컬 파티션이 저장된 원본 폴더 이름을 표시합니다.|  
 |**복원 폴더**|로컬 파티션의 복원 폴더 이름을 입력하거나 줄임표 단추(**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 사용할 폴더의 경로를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
  **원격 파티션 복원**  

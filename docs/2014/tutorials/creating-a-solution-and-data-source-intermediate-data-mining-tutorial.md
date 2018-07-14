@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
 caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cdfb95b68a0ea7f7015738239850528177dce00e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216243"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>솔루션 및 데이터 원본 만들기(중급 데이터 마이닝 자습서)
-  데이터 마이닝을 사용 하려면 먼저 만들어야 합니다 프로젝트에 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 서식 파일을 사용 하 여 **Analysis Services 다차원 및 데이터 마이닝 프로젝트**합니다. 템플릿을 열면 데이터 원본, 마이닝 구조 및 마이닝 모델뿐 아니라 마이닝 구조에서 다차원 데이터를 사용하는 경우 큐브도 포함하여 데이터 마이닝에 필요할 수 있는 모든 스키마가 디자이너로 로드됩니다.  
+  데이터 마이닝을 사용 하려면 먼저 만들어야에서 프로젝트 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 템플릿을 사용 하 여 **Analysis Services 다차원 및 데이터 마이닝 프로젝트**합니다. 템플릿을 열면 데이터 원본, 마이닝 구조 및 마이닝 모델뿐 아니라 마이닝 구조에서 다차원 데이터를 사용하는 경우 큐브도 포함하여 데이터 마이닝에 필요할 수 있는 모든 스키마가 디자이너로 로드됩니다.  
   
- 프로젝트를 만들면 솔루션이 배포될 때까지 솔루션이 로컬 파일로 저장됩니다. 솔루션을 배포할 때 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 찾습니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 프로젝트 속성에 지정 하 고 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트와 동일한 이름 가진 데이터베이스입니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사용 하 여는 **localhost** 새 프로젝트에 대 한 인스턴스. 명명된 인스턴스를 사용하거나 기본 인스턴스에 대해 다른 이름을 지정한 경우에는 프로젝트의 배포 데이터베이스 속성을 데이터 마이닝 개체를 만들려는 위치로 변경해야 합니다.  
+ 프로젝트를 만들면 솔루션이 배포될 때까지 솔루션이 로컬 파일로 저장됩니다. 솔루션을 배포할 때 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 찾습니다 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 프로젝트 속성에 지정 된 만들고 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트와 동일한 이름 가진 데이터베이스입니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사용 하는 **localhost** 새 프로젝트에 대 한 인스턴스. 명명된 인스턴스를 사용하거나 기본 인스턴스에 대해 다른 이름을 지정한 경우에는 프로젝트의 배포 데이터베이스 속성을 데이터 마이닝 개체를 만들려는 위치로 변경해야 합니다.  
   
- 에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 참조 [Analysis Services 프로젝트 만들기 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)합니다.  
+ 에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 참조 하세요 [Analysis Services 프로젝트 만들기 &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)합니다.  
   
 ### <a name="to-create-a-new-analysis-services-project-for-this-tutorial"></a>이 자습서에 사용할 새 Analysis Services 프로젝트를 만들려면  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36312821"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored-optional"></a>데이터 마이닝 개체가 저장되는 인스턴스를 변경하려면(선택 사항)  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **프로젝트** 메뉴를 클릭 하 여 **속성**합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 **프로젝트** 메뉴에서 클릭 **속성**합니다.  
   
 2.  **속성 페이지** 창의 왼쪽에서 **배포**를 클릭합니다.  
   
@@ -54,20 +54,20 @@ ms.locfileid: "36312821"
   
      -- 또는 --  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **프로젝트** 메뉴 선택 **속성**합니다.  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 **프로젝트** 메뉴에서 **속성**합니다.  
   
 2.  **속성 페이지** 창의 왼쪽에서 **배포**를 클릭합니다.  
   
      **옵션** 창에서 **배포 모드**를 선택하고 옵션을 **모두 배포** 로 설정하여 덮어쓰거나 **변경 내용만 배포** 로 설정하여 개체를 업데이트하거나 개체를 추가합니다.  
   
 ## <a name="creating-a-data-source"></a>데이터 원본 만들기  
- 기본 데이터 마이닝 자습서에서 만든는 *데이터 소스* 에 대 한 연결 정보를 저장 하는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스입니다. 동일한 단계를 수행하여 이 솔루션에 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터 원본을 만듭니다.  
+ 기본 데이터 마이닝 자습서에서 만든를 *데이터 원본* 에 대 한 연결 정보를 저장 하는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스. 동일한 단계를 수행하여 이 솔루션에 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터 원본을 만듭니다.  
   
 #### <a name="to-create-a-data-source"></a>데이터 원본을 만들려면  
   
 -   [데이터 원본 만들기 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
- 단일 데이터 원본으로 여러 데이터 원본 뷰를 지원할 수 있으며 각 데이터 원본 뷰에 여러 테이블을 포함할 수 있습니다. 그러나 데이터 원본 및 데이터 원본 뷰가 때문에를 배포 하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 주 데이터베이스와 사용자가 만드는 테이블만 각 데이터 원본 뷰에 포함 해야 하는 모범 사례로 데이터 마이닝 모델 각 데이터 마이닝 모델 또는 모델 그룹에 대해 필요한.  
+ 단일 데이터 원본으로 여러 데이터 원본 뷰를 지원할 수 있으며 각 데이터 원본 뷰에 여러 테이블을 포함할 수 있습니다. 그러나 배포 때문에 데이터 원본 및 데이터 원본 뷰가 됩니다 하 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사용자가 만든 테이블만 각 데이터 원본 뷰에 포함 해야 하는 모범 사례로 데이터 마이닝 모델과 함께 데이터베이스 각 데이터 마이닝 모델 또는 모델 그룹에 대 한 필수 이며  
   
  다음 단원에서는 각 새 시나리오를 지원하기 위해 데이터 원본 뷰를 추가합니다. 시장 바구니 및 시퀀스 클러스터링 단원에서만 동일한 데이터 원본 뷰를 사용하고 각 시나리오에서 다른 데이터 원본 뷰를 사용하므로 두 단원은 서로 독립적이며 별도로 완료할 수 있습니다.  
   

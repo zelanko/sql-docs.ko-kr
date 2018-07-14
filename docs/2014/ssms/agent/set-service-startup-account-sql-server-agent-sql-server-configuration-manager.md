@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트 (SQL Server 구성 관리자)에 대 한 서비스 시작 계정을 설정 | Microsoft Docs
+title: SQL Server 에이전트 (SQL Server 구성 관리자) 서비스 시작 계정 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6d2fb2581a2f2f5b7d851323290665af2c23b8ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f08e086bfcd523904d0f95c1e4b823c05bd7cb6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232574"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되는 Windows 계정과 해당 네트워크 권한을 정의합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 서비스 계정을 설정하는 방법에 대해 설명합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36181699"
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> Permissions  
- 해당 기능을 수행 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 구성원 인 계정의 자격 증명을 사용 하도록 에이전트를 구성 해야 합니다는 `sysadmin` 고정된 서버 역할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 계정에는 다음과 같은 Windows 사용 권한이 필요합니다.  
+ 해당 기능을 수행 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 구성원 인 계정의 자격 증명을 사용 하도록 에이전트를 구성 해야 합니다 `sysadmin` 고정된 서버 역할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 이 계정에는 다음과 같은 Windows 사용 권한이 필요합니다.  
   
 -   서비스로 로그온(SeServiceLogonRight)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36181699"
   
 -   프로세스의 메모리 할당량 조정(SeIncreaseQuotaPrivilege)  
   
- 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 참조 [SQL Server 에이전트 서비스에 대 한 계정을 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 구성 하 고 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
+ 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 참조 [SQL Server 에이전트 서비스 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Configure Windows Service Accounts 및 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

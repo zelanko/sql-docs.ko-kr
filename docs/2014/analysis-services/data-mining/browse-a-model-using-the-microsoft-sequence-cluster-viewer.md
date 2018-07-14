@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
 - clusters [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37a7d3c5be648c1861dbbb33ac20a824e462296f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276219"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시퀀스 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "36180974"
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> 클러스터 프로필  
- **클러스터 프로필** 탭을 사용하여 모델의 알고리즘에서 만드는 클러스터를 전체적으로 볼 수 있습니다. 표에서 **채우기** 열 뒤에 있는 각 열은 해당 모델에 의해 검색된 클러스터를 나타냅니다. \<특성 > 행 여러 클러스터에 있는 데이터의 다른 시퀀스를 나타내며 및 \<특성 > 행은 클러스터에 포함 된 모든 항목 및 전체 분포에 설명 합니다.  
+ **클러스터 프로필** 탭을 사용하여 모델의 알고리즘에서 만드는 클러스터를 전체적으로 볼 수 있습니다. 표에서 **채우기** 열 뒤에 있는 각 열은 해당 모델에 의해 검색된 클러스터를 나타냅니다. 합니다 \<특성 >.samples 행 나타내는 여러 가지 클러스터에 존재 하는 데이터 시퀀스 및 \<특성 > 행 모든 클러스터에 포함 된 항목과 전체 분포에 설명 합니다.  
   
  **히스토그램 막대** 옵션은 히스토그램에 표시되는 막대의 수를 제어합니다. 선택한 것보다 더 많은 막대가 있는 경우 중요성이 가장 높은 막대가 유지되고 나머지 막대는 모두 회색 버킷으로 그룹화됩니다.  
   

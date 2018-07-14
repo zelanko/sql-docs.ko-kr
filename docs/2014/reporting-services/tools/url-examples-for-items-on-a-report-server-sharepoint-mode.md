@@ -1,5 +1,5 @@
 ---
-title: SharePoint 모드 (SSRS)의 보고서 서버에 게시 된 보고서 항목에 대 한 URL 예 | Microsoft Docs
+title: SharePoint 모드 (SSRS)에서 보고서 서버에 게시 된 보고서 항목에 대 한 URL 예 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214733"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "36182500"
  보고서 정의는 외부 파일로 저장된 이미지 파일을 포함할 수 있습니다. 이미지 파일에 대한 정규화된 URL을 설정하여 보고서 정의에서 해당 파일을 참조할 수 있습니다. 이러한 외부 파일은 SharePoint 사이트나 원격 컴퓨터에 저장될 수 있습니다.  
   
 > [!IMPORTANT]  
->  외부 URL이 SharePoint 사이트의 이미지에 대한 URL인 경우 보고서 작성기에서 보고서를 미리 보면 깨진 이미지 아이콘이 표시됩니다. 만 있는 경우 깨진된 이미지 아이콘이 표시 됩니다는 보고서를 SharePoint 사이트에 업로드 하 고 연결 된 모드에서 보고서를 렌더링 하는 경우 `View Items` 사용 권한.  
+>  외부 URL이 SharePoint 사이트의 이미지에 대한 URL인 경우 보고서 작성기에서 보고서를 미리 보면 깨진 이미지 아이콘이 표시됩니다. 만 있으면 깨진된 이미지 아이콘이 표시 됩니다 보고서를 SharePoint 사이트에 업로드 하 고 연결 된 모드에서 보고서를 렌더링 하는 경우 `View Items` 권한.  
   
  보고서 서버 모드에 관계없이 보고서의 외부 이미지에 대한 참조는 정규화된 URL이어야 합니다. 또한 외부 이미지 파일을 참조하는 경우 일반적으로 무인 보고서 처리 계정을 구성해야 합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36182500"
 ### <a name="file-names"></a>파일 이름  
  보고서 항목에 대한 URL의 파일 이름에는 파일 확장명이 포함되어야 합니다. 이러한 파일 확장명에 따라 파일 유형이 결정됩니다. 보고서 제작 도구에서 보고서 항목을 게시하는 경우 파일 확장명이 자동으로 포함됩니다. SharePoint 라이브러리에 보고서 항목을 업로드하는 경우에는 파일 확장명을 포함해야 합니다.  
   
- SharePoint 사이트에 업로드하는 항목의 파일 확장명을 지정하지 않으면 `rsInvalidDataSourceReference` 오류가 발생합니다. SharePoint 응용 프로그램에서 올바른 파일 이름 문자로 인식하지 않는 문자는 파일 이름에 사용할 수 없습니다. 다음 문자는 포함 하지 않습니다: # % & *: \< >? 마십시오.  
+ SharePoint 사이트에 업로드하는 항목의 파일 확장명을 지정하지 않으면 `rsInvalidDataSourceReference` 오류가 발생합니다. SharePoint 응용 프로그램에서 올바른 파일 이름 문자로 인식하지 않는 문자는 파일 이름에 사용할 수 없습니다. 다음 문자는 포함 하지 마십시오. # % & *: \< >? 마십시오.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>업로드와 게시의 차이점  
  보고서 디자이너 또는 보고서 작성기를 사용하여 보고서 및 관련 파일을 라이브러리에 게시하는 경우 파일이 추가되기 전에 해당 유효성이 검사됩니다. SharePoint 라이브러리의 **업로드** 동작을 사용하여 보고서 및 관련 파일을 업로드하면 유효성 검사가 수행되지 않습니다. 보고서에 액세스하여 관리, 편집 또는 실행할 때까지 파일이 올바른지 여부를 확인할 수 없습니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "36182500"
  보고서 서버가 SharePoint 통합 모드로 실행되는 경우에는 리소스의 개념 정의가 보다 좁아집니다. 여기서 리소스는 외부 이미지를 참조하는 보고서를 저장하기 위한 개념입니다. 이 경우 보고서는 내부 사용을 위해 유지되는 복사본이나 스냅숏입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 라이브러리에 보고서를 게시 합니다.](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 보고서 게시](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint 라이브러리에 공유 데이터 원본 게시](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [프로젝트 속성 페이지 대화 상자](project-property-pages-dialog-box.md)  
   

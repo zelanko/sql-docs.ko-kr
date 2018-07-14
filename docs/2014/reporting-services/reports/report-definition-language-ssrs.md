@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
 - Reporting Services, RDL
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb0ac41fef9a28a5023e122963f59fa6d9720a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 93fa1ac42172b4750db5e5dd385925f657fdfdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262049"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36181508"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 스키마 정의  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일은 XSD(XML 스키마 정의) 파일을 사용하여 검증됩니다. 스키마는 .rdl 파일에 RDL 요소의 발생 규칙을 정의합니다. 요소는 데이터 형식과 카디널리티, 즉 허용되는 발생 횟수를 포함합니다. 요소에는 단순 요소와 복합 요소가 있습니다. 단순 요소에는 자식 요소 또는 특성이 없습니다. 복합 요소에는 자식이 있고 선택적으로 특성도 보유합니다.  
   
- 스키마는 RDL 요소를 포함 하는 예를 들어 `ReportParameters`,이 복합 형식은 `ReportParametersType`합니다. 규칙에 따라 요소의 복합 형식을의 이름인 단어로 요소 팔 로우 `Type`합니다. A `ReportParameters` 요소에 포함 될 수는 `Report` 요소 (복합 형식), 포함 될 수 있습니다 및 `ReportParameter` 요소입니다. A `ReportParameterType` 다음 값 중 하나에 될 수 있는 단순 형식이: `Boolean`, `DateTime`, `Integer`, `Float`, 또는 `String`합니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
+ 스키마는 RDL 요소를 포함 하는 예를 들어 `ReportParameters`, 복합 형식인 `ReportParametersType`합니다. 규칙에 따라 요소의 복합 형식을의 이름인 요소 다음의 단어로 `Type`합니다. A `ReportParameters` 요소에 포함 될 수는 `Report` 요소 (복합 형식)를 포함할 수 있습니다 `ReportParameter` 요소입니다. A `ReportParameterType` 는 다음 값 중 하나에 될 수 있는 단순 유형: `Boolean`, `DateTime`, `Integer`를 `Float`, 또는 `String`합니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
  RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다.http://servername/reportserver/reportdefinition.xsd  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36181508"
 |`Language`|미국 영어의 경우 "en-us"와 같이 언어 및 culture 코드가 포함된 텍스트 값을 갖는 속성입니다. 값은 기본 언어가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 정의된 중립 언어 또는 특정 언어여야 합니다.|  
 |`Name`|문자열 텍스트 값을 갖는 속성입니다. 이름은 항목의 네임스페이스 내에서 고유해야 합니다. 지정하지 않을 경우 항목의 네임스페이스는 가장 안쪽에 위치하고 있으며 이름이 있는 포함하는 개체입니다.|  
 |`NormalizedString`|일반화된 문자열 텍스트 값을 갖는 속성입니다.|  
-|`Size`|크기 요소는 숫자를 포함해야 합니다(마침표 문자가 선택적 소수 구분 기호로 사용됨). 숫자 다음에는 cm, mm, in, pt, pc와 같은 CSS 길이 단위 지정자가 와야 합니다. 숫자와 지정자 사이의 공백은 선택적입니다. 크기 지정자에 대한 자세한 내용은 [CSS 길이 단위 참조(CSS Length Units Reference)](http://go.microsoft.com/fwlink/?LinkId=9257)를 참조하십시오.<br /><br /> RDL에 대 한 최대값에서 `Size` 은 160 인치입니다. 최소 크기는 0인치입니다.|  
+|`Size`|크기 요소는 숫자를 포함해야 합니다(마침표 문자가 선택적 소수 구분 기호로 사용됨). 숫자 다음에는 cm, mm, in, pt, pc와 같은 CSS 길이 단위 지정자가 와야 합니다. 숫자와 지정자 사이의 공백은 선택적입니다. 크기 지정자에 대한 자세한 내용은 [CSS 길이 단위 참조(CSS Length Units Reference)](http://go.microsoft.com/fwlink/?LinkId=9257)를 참조하십시오.<br /><br /> RDL에 대 한 최대값에서 `Size` 은 160입니다. 최소 크기는 0인치입니다.|  
 |`String`|문자열 텍스트 값을 갖는 속성입니다.|  
 |`UnsignedInt`|서명되지 않은 정수(int32) 값을 갖는 속성입니다.|  
 |`Variant`|단순 XML 유형을 갖는 속성입니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "36181508"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 정의 스키마 버전 찾기 &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
- [보고서에 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서를 사용 하 여 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [사용자 지정 보고서 항목](../custom-report-items/custom-report-items.md)  
   
   

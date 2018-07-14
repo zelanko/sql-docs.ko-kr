@@ -1,5 +1,5 @@
 ---
-title: 마이닝 연결 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 마이닝 모델 연결에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9ea8207778697b10b0be844dbb8ca5d1c8f72fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d65a79697d42d5d91168edfb211ecb57d1e3229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267609"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -33,7 +33,7 @@ ms.locfileid: "36092585"
 ## <a name="understanding-the-structure-of-an-association-model"></a>연결 모델의 구조 이해  
  연결 모델의 구조는 간단합니다. 각 모델에는 모델과 메타데이터를 나타내는 부모 노드가 한 개 있고 각 부모 노드에는 항목 집합과 규칙에 대한 기본 목록이 있습니다. 항목 집합과 규칙은 트리로 구성되어 있지 않으며 다음 다이어그램에서와 같이 항목 집합 및 규칙 순으로 정렬됩니다.  
   
- ![연결 모델에 대 한 모델 콘텐츠의 구조](../media/modelcontentstructure-assoc.gif "한 연결 모델에 대 한 모델 콘텐츠 구조")  
+ ![연결 모델에 대 한 모델 콘텐츠 구조](../media/modelcontentstructure-assoc.gif "연결 모델에 대 한 모델 콘텐츠 구조")  
   
  각 항목 집합은 자체 노드(NODE_TYPE = 7)에 포함되어 있습니다. *노드* 에는 항목 집합의 정의, 이 항목 집합을 포함하는 사례 수 및 기타 정보가 포함되어 있습니다.  
   

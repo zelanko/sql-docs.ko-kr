@@ -1,5 +1,5 @@
 ---
-title: KPI 브라우저 (Kpi 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: KPI 브라우저 (KPIs Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32373127f72dae058a80712cec564af7dffca45e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257379"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 브라우저(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **KPI 브라우저** 창을 사용하여 KPI(핵심 성과 지표)의 결과를 보고 테스트할 수 있습니다. 검색하기 전에 먼저 KPI를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포해야 합니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "36180765"
 |**같음**|**필터 식**에서 정의한 집합으로 결과가 제한됩니다.|  
 |**같지 않음**|**필터 식**에서 정의한 집합에서 제외된 멤버로 결과가 제한됩니다.|  
 |**입력**|**필터 식**에서 선택한 명명된 집합으로 결과가 제한됩니다.|  
-|**안 함**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
+|**In이 아님**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
 |**포함**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
-|**로 시작**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
+|**시작**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
 |**범위 (포함)**|**필터 식**에서 선택한 범위로 결과가 제한됩니다.|  
 |**범위 (제외)**|**필터 식**에서 선택한 범위에서 제외된 멤버로 결과가 제한됩니다.|  
 |**MDX**|**필터 식**에서 설정한 MDX(Multidimensional Expression) 식으로 결과가 제한됩니다.|  

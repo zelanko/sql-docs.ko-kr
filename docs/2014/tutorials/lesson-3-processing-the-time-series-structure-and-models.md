@@ -1,5 +1,5 @@
 ---
-title: '처리 3 단원: 시계열 구조 및 모델 | Microsoft Docs'
+title: '3 단원: 처리 된 시계열 구조 및 모델 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 652d88a0c977b45f6c1628020ae4e6fd8fae4ad9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f69c21f87a56a65fabd781c18612e6b475ca85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271989"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>3단원: 시계열 구조 및 모델 처리
-  이 단원에서는 사용 하 여는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 시계열 마이닝 구조 및 마이닝 하 여 만든 모델을 처리 하는 문입니다.  
+  이 단원에서는 사용할지는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 시계열 마이닝 구조 및 마이닝 사용자가 만든 모델을 처리 하는 문입니다.  
   
  마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 처음 마이닝 모델 및 구조를 만들면 해당 마이닝 모델 및 구조를 항상 처리해야 합니다. INSERT INTO를 사용하여 마이닝 구조를 지정하는 경우 이 문은 마이닝 구조 및 연결된 모든 마이닝 모델을 처리합니다.  
   
  이미 처리된 마이닝 구조에 마이닝 모델을 추가하는 경우에는 `INSERT INTO MINING MODEL` 문을 사용하여 기존 데이터를 기반으로 새 마이닝 모델만 처리합니다.  
   
- 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  
+ 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  
   
 ## <a name="insert-into-statement"></a>INSERT INTO 문  
- 사용 하 여 시계열 마이닝 구조 및 모든 관련된 마이닝 모델을 학습 하려면는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 시계열 마이닝 구조 및 모든 관련된 마이닝 모델을 학습 하기 위해 사용 합니다 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -69,7 +69,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY (<source data definition>)  
 ```  
   
- 이 단원에서는 `OPENQUERY`를 사용하여 원본 데이터를 정의합니다. 원본 데이터에 대해 쿼리를 정의 합니다. 다른 방법에 대 한 자세한 내용은 참조 [ &#60;원본 데이터 쿼리와&#62;](/sql/dmx/source-data-query)합니다.  
+ 이 단원에서는 `OPENQUERY`를 사용하여 원본 데이터를 정의합니다. 원본 데이터에서 쿼리를 정의 하는 다른 방법에 대 한 자세한 내용은 참조 [ &#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)합니다.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
@@ -82,7 +82,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조 및 관련 마이닝 모델을 처리하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -126,7 +126,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     원본 쿼리 참조는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 는 IntermediateTutorial 예제 프로젝트에 정의 된 데이터 원본입니다. 원본 쿼리는 이 데이터 원본을 사용하여 vTimeSeries 뷰에 액세스합니다. 이 뷰에는 마이닝 모델의 학습에 사용할 원본 데이터가 포함되어 있습니다. 이 프로젝트 또는이 뷰에 익숙하지 않은 경우 참조[2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
+     원본 쿼리 참조는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 는 IntermediateTutorial 예제 프로젝트에 정의 된 데이터 원본입니다. 원본 쿼리는 이 데이터 원본을 사용하여 vTimeSeries 뷰에 액세스합니다. 이 뷰에는 마이닝 모델의 학습에 사용할 원본 데이터가 포함되어 있습니다. 이 프로젝트 또는이 뷰를 사용 하 여 잘 모르는 경우[2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
   
      이제 전체 문이 다음과 같아야 합니다.  
   
@@ -143,7 +143,7 @@ OPENQUERY (<source data definition>)
   
 6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `ProcessForecastingAll.dmx`합니다.  
+7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `ProcessForecastingAll.dmx`입니다.  
   
 8.  도구 모음에서 **실행** 단추를 클릭합니다.  
   

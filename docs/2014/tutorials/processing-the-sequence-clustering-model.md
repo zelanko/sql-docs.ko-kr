@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fb4d586ba00428cec37cea33feff39285637faf4
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 09981cbe61e0f8b15bdbc95344e9df3e5005e9a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267869"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>시퀀스 클러스터링 모델 처리
   새 마이닝 구조를 만든 후에는 데이터 마이닝 솔루션에 적용한 변경 사항을 배포하고 구조를 처리해야 합니다. 새 구조와 마이닝 모델 처리가 모두 완료되면 마이닝 모델을 찾을 수 있습니다.  
@@ -28,17 +28,17 @@ ms.locfileid: "36313107"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>마이닝 구조 및 모델을 처리하려면  
   
-1.  에 **마이닝 모델** 의 메뉴 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]선택, **마이닝 구조 및 모든 모델 처리**합니다.  
+1.  에 **마이닝 모델** 메뉴 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]선택 **모든 모델과 마이닝 구조 처리**합니다.  
   
-2.  프로젝트를 빌드하여을 묻는 경고에서 클릭 **예**합니다.  
+2.  빌드 및 프로젝트를 배포할 것인지 묻는 경고에서 클릭 **예**합니다.  
   
-3.  에 **마이닝 구조 처리-Sequence Clustering with Region** 대화 상자를 클릭 **실행**합니다.  
+3.  에 **마이닝 구조 처리-Sequence Clustering with Region** 대화 상자, 클릭 **실행**합니다.  
   
-     **처리 진행률** 대화 상자가 열리고 모델 처리에 대 한 정보를 표시 합니다. 새 구조 및 모델을 처리하는 데에는 시간이 걸릴 수 있습니다.  
+     합니다 **처리 진행률** 대화 상자가 열리고 모델 처리에 대 한 정보를 표시 합니다. 새 구조 및 모델을 처리하는 데에는 시간이 걸릴 수 있습니다.  
   
-4.  처리가 완료 되 면 클릭 **닫기** 종료 하 고 **처리 진행률** 대화 상자.  
+4.  처리를 완료 한 후 클릭 **닫습니다** 종료 합니다 **처리 진행률** 대화 상자.  
   
-5.  클릭 **닫기** 를 닫습니다는 **마이닝 구조 처리-Sequence Clustering with Region** 대화 상자.  
+5.  클릭 **닫습니다** 종료 하려면 다시 합니다 **마이닝 구조 처리-Sequence Clustering with Region** 대화 상자.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [시퀀스 클러스터링 모델 탐색 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  

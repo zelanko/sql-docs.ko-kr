@@ -1,5 +1,5 @@
 ---
-title: '4 단원: 시퀀스 클러스터링 시나리오 (중급 데이터 마이닝 자습서) 구축 | Microsoft Docs'
+title: '4 단원: 시퀀스 클러스터링 시나리오 (중급 데이터 마이닝 자습서) 빌드 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - sequence clustering algorithms [Analysis Services]
@@ -17,20 +17,20 @@ ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
 caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7bfa4dd3a739e81b5a7f10cda0b17452fe48c4d0
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e594e44dd3c8af8ade94c549d8b489f31623553
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251205"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>4단원: 시퀀스 클러스터링 시나리오 구축(중급 데이터 마이닝 자습서)
-  마케팅 부서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 고객의 이동 방식을 파악 하려고는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 웹 사이트입니다. 이 회사에서는 고객이 시장 바구니에 제품을 넣는 순서에 일정한 패턴이 있으리라고 생각합니다. 이들은 구매 시퀀스 순서를 분석하여 고객의 시장 바구니에 관련된 항목을 추가하는 방식을 알아보고자 합니다. 이 정보로 웹 사이트의 흐름을 능률화하여 고객의 추가 제품 구매를 유도할 수 있습니다.  
+  마케팅 부서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 고객의 이동 방식을 파악 하려고 합니다 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 웹 사이트입니다. 이 회사에서는 고객이 시장 바구니에 제품을 넣는 순서에 일정한 패턴이 있으리라고 생각합니다. 이들은 구매 시퀀스 순서를 분석하여 고객의 시장 바구니에 관련된 항목을 추가하는 방식을 알아보고자 합니다. 이 정보로 웹 사이트의 흐름을 능률화하여 고객의 추가 제품 구매를 유도할 수 있습니다.  
   
  이 단원의 태스크를 완료하면 고객이 시장 바구니에 넣을 다음 항목을 예측할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하는 마이닝 모델을 만들게 됩니다. 두 버전의 모델을 사용합니다. 한 버전은 시장 바구니의 제품 순서만 분석하고 다른 버전에는 클러스터링할 추가 고객 통계가 포함되어 있습니다. 마지막으로 이 모델을 사용하여 고객에게 제품을 권장하는 데 사용할 수 있는 예측을 작성합니다.  
   
- 단원에서 작업을 완료 하려면에서 만든 market basket 마이닝 구조를 사용 하는 [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)합니다. 이 단원에서는 다음 태스크를 다룹니다.  
+ 단원의 태스크를 완료 하려면에서 만든 market basket 마이닝 구조 사용할지 [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md). 이 단원에서는 다음 태스크를 다룹니다.  
   
 -   [시퀀스 클러스터링 마이닝 모델 구조 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/create-sequence-clustering-mining-model-intermediate-data-mining.md)  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: daed1f77d5e1470f39e8ad2d7afe52e66db7e219
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323823"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
-  부터는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 의 소유권을 프로그래밍 방식으로 전송할 수 있습니다는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 다른 한 명의 사용자를 구독 합니다. 이 항목에서는 구독 소유권을 변경하거나 단순히 나열할 수 있는 여러 가지 Windows PowerShell 스크립트를 제공합니다. 각 샘플에는 기본 모드 및 SharePoint 모드에 대한 샘플 구문이 포함됩니다. 구독 소유자를 변경한 후 구독은 새 소유자의 보안 컨텍스트에서 실행되고, 보고서의 User!UserID 필드에 새 소유자 값이 표시됩니다. PowerShell 샘플의 개체 모델에 대한 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  부터는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 소유권을 프로그래밍 방식으로 전송할 수 있습니다는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 한 사용자에서 다른 구독으로 합니다. 이 항목에서는 구독 소유권을 변경하거나 단순히 나열할 수 있는 여러 가지 Windows PowerShell 스크립트를 제공합니다. 각 샘플에는 기본 모드 및 SharePoint 모드에 대한 샘플 구문이 포함됩니다. 구독 소유자를 변경한 후 구독은 새 소유자의 보안 컨텍스트에서 실행되고, 보고서의 User!UserID 필드에 새 소유자 값이 표시됩니다. PowerShell 샘플의 개체 모델에 대한 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36093454"
   
  **기본 모드:**  
   
--   구독 나열: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" 보고서는 보고서의 ReadSubscription 및 사용자가 구독 소유자) 또는 ReadAnySubscription  
+-   구독 나열: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" 보고서를 보고서의 ReadSubscription 및 사용자는 구독 소유자) 또는 ReadAnySubscription  
   
 -   구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원이어야 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36093454"
   
  **SharePoint 모드:**  
   
--   구독 나열: ManageAlerts 또는 (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" 보고서는 보고서의 CreateAlerts 및 사용자가 구독 소유자 및 구독 정해진된 구독 임).  
+-   구독 나열: ManageAlerts 또는 (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" 보고서를 보고서의 CreateAlerts 및 사용자가 구독 소유자 및 구독 정해진된 구독 임).  
   
 -   구독 변경: ManageWeb  
   
@@ -339,7 +339,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- 구성 파일에 대 한 자세한 내용은 참조 하십시오. [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)합니다.  
+ 구성 파일에 대 한 자세한 내용은 참조 하세요. [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)합니다.  
   
  스크립트에는 지연 논리 “`Start-Sleep -s 6`”이 포함되어 있으므로, 업데이트된 상태가 ListSubscription 메서드를 통해 사용 가능할 수 있도록 이벤트 발생 후 시간이 있습니다.  
   

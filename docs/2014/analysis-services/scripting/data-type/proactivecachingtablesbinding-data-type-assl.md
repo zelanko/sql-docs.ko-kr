@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingTablesBinding data type
 ms.assetid: f6b3f6fc-757c-4b1e-bb3a-d26482888d14
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed926bb00b0593cef9d82d4b829325c8f21ca5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98091714acb85771972c8c90c6b445744a33cce6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275609"
 ---
 # <a name="proactivecachingtablesbinding-data-type-assl"></a>ProactiveCachingTablesBinding 데이터 형식(ASSL)
-  정보를 나타내는 파생된 데이터 형식을 정의 [ProactiveCaching](../objects/proactivecaching-element-assl.md) 지정 된 테이블 및 뷰는 캐시 재작성이 필요한 데이터 원본 변경 내용에 대 한 요소입니다.  
+  정보를 나타내는 파생된 데이터 형식을 정의 합니다 [ProactiveCaching](../objects/proactivecaching-element-assl.md) 캐시를 다시 작성 해야 하는 뷰와 지정 된 테이블에서 데이터 원본 변경 내용에 대 한 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,15 +59,15 @@ ms.locfileid: "36093176"
 |파생 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `ProactiveCachingBinding` 테이블의 상속 계층을 포함 하 여 `ProactiveCachingBinding` 형식 참조 [ProactiveCachingBinding 데이터 형식 &#40;ASSL&#41;](proactivecachingbinding-data-type-assl.md)합니다.  
+ 에 대 한 자세한 내용은 합니다 `ProactiveCachingBinding` 상속 계층의 테이블을 포함 하 여 형식이 `ProactiveCachingBinding` 참조 하십시오 [ProactiveCachingBinding 데이터 형식 &#40;ASSL&#41;](proactivecachingbinding-data-type-assl.md).  
   
- 에 대 한 자세한 내용은 `Binding` 유형의 Analysis Services Scripting Language (ASSL) 개체 테이블을 포함 하 여는 `Binding` 유형과의 상속 계층 구조 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL &#41;](binding-data-type-assl.md).  
+ 에 대 한 자세한 내용은 합니다 `Binding` 형식, Analysis Services Scripting Language (ASSL) 개체 테이블을 비롯 한는 `Binding` 형식과 상속 계층 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ProactiveCachingTablesBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35be623fb49787d51c9445ca8a5e5bb9d8c518e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 359f48b4f0177b1e17d0fdb8a0a81cb5759d1b84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269459"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>CDC를 위한 SQL Server 준비
   Oracle CDC Service에서는 모든 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 MSXDBCDC 데이터베이스가 포함되어야 합니다. CDC Service 구성 콘솔에서 SQL Server 준비 작업을 사용하여 이 데이터베이스를 만듭니다. 이 작업은 이 데이터베이스의 필수 테이블, 저장 프로시저 및 기타 필수 아티팩트를 만들기 위해 실행되는 특수 스크립트를 만듭니다. 이 작업은 각 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 한 번만 수행됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36181382"
  설치 스크립트의 읽기 전용 버전을 보려면 **스크립트 보기** 를 클릭합니다. 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 이 스크립트를 SQL Server 관리 콘솔에 복사하여 편집할 수 있습니다. SQL Server 스크립트 준비에 대한 자세한 내용은 [Oracle CDC를 위한 SQL Server 준비-스크립트 보기](prepare-sql-server-for-oracle-cdc-view-script.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC Service에서 작업 하는 방법](work-with-cdc-services.md)   
+ [CDC Service를 사용 하는 방법](work-with-cdc-services.md)   
  [CDC를 위해 SQL Server를 준비하는 방법](prepare-sql-server-for-cdc.md)  
   
   

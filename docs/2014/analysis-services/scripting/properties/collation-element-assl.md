@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Collation element
 ms.assetid: 9b6dbe19-543e-43e6-abe9-1e8b4dfaa275
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8d457901781b177b860fdc4592cf87a2ab99456
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92e4e7eaa9eb4d994fc225c9d3d1c9a0c941b1b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213933"
 ---
 # <a name="collation-element-assl"></a>Collation 요소(ASSL)
   부모 요소에 사용되는 데이터 정렬을 결정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36181184"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md), [DataItem](../data-type/dataitem-data-type-assl.md), [차원](../objects/dimension-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md)를 [DataItem](../data-type/dataitem-data-type-assl.md)를 [차원](../objects/dimension-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

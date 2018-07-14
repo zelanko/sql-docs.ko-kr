@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
 helpviewer_keywords:
 - Calculation Properties dialog box
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bab846407acc147033d7717d2a879ea9ce4b9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f715b54f45c3bf8c676dd8f6c10c25d9d92d00e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222283"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>계산 속성 대화 상자(Analysis Services - 다차원 데이터)
   **의** 계산 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 선택한 큐브에 대해 큐브 디자이너의 **계산** 탭에서 정의한 계산의 표시 폴더 및 연결된 측정값 그룹 속성을 보거나 편집할 수 있습니다. 큐브 디자이너의 **계산** 탭에 있는 **도구 모음** 창에서 **계산 속성** 을 클릭하여 **계산 속성** 대화 상자를 표시할 수 있습니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "36182696"
   
 ## <a name="see-also"></a>관련 항목  
  [계산 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

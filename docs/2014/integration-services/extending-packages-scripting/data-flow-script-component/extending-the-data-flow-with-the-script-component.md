@@ -28,13 +28,13 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88abd34a83bb784a3653da42ec52cbcce672278d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 393c4c4ffb5882b982f3a696c1fa4e625ff5b1ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269409"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>스크립트 구성 요소를 사용하여 데이터 흐름 확장
   스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성되고 패키지 런타임에 컴파일 및 실행되는 사용자 지정 코드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름 기능을 확장합니다. 스크립트 구성 요소를 사용하면 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 제공하는 원본, 변환 및 대상이 개발자의 요구 사항을 완전히 만족시키지 못하는 경우 사용자 지정 데이터 흐름 원본, 변환 또는 대상을 손쉽게 개발할 수 있습니다. 필요한 입력 및 출력으로 구성 요소를 구성한 후에는 이 구성 요소에서 필요한 모든 인프라 코드를 자동으로 작성하므로 개발자는 사용자 지정 처리에 필요한 코드에만 집중하면 됩니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36092672"
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)  
  **스크립트 변환 편집기**에서 구성하는 속성은 스크립트 구성 요소 코드의 기능과 성능에 영향을 줍니다.  
   
- [코딩 및 스크립트 구성 요소 디버깅] (coding-and-debugging-the-script-component.md  
+ [코딩 and Debugging the Script Component] (coding-and-debugging-the-script-component.md  
  스크립트 구성 요소에 포함되는 스크립트를 개발하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA(Tools for Applications) 개발 환경을 사용합니다.  
   
  [스크립트 구성 요소 개체 모델 이해](understanding-the-script-component-object-model.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "36092672"
  [추가 스크립트 구성 요소 예](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  간단한 예를 통해 스크립트 구성 요소의 가능한 몇 가지 사용 방법을 설명하고 보여 줍니다.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]정선는 커뮤니티에서 선택 된 솔루션 방문는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조:<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]커뮤니티에서 선택된 된 솔루션 방문 뿐만 아니라는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조 합니다.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소](../../data-flow/transformations/script-component.md)   

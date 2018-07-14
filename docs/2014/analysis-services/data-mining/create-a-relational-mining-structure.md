@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237913"
 ---
 # <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
   대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "36093876"
   
  마이닝 구조의 데이터는 기존 데이터 원본 뷰에서 파생됩니다. 데이터 원본 뷰 내에서 기본 관계형 데이터에 없을 수 있는 관계 또는 파생 열을 추가하는 등 필요에 따라 데이터를 수정할 수 있습니다. 또한 데이터 원본 뷰 내에서 명명된 계산 또는 집계를 만들 수 있습니다. 이러한 기능은 데이터 원본의 데이터 배열을 제어할 수 없거나 데이터 마이닝 모델에 대해 다른 데이터 집계로 시험하려는 경우에 매우 편리합니다.  
   
- 사용 가능한 데이터를 모두 사용해야 하는 것은 아닙니다. 마이닝 구조에 포함할 열을 선택할 수 있습니다. 에 해당 구조를 기반으로 하는 모든 모델에는 이러한 열을 사용할 수 또는으로 특정 열의 플래그를 지정 하면 `Ignore` 특정 모델에 대 한 합니다. 데이터 마이닝 모델의 사용자가 마이닝 모델의 결과에서 드릴다운하여 마이닝 모델 자체에 포함되지 않은 추가 마이닝 구조 열을 보도록 할 수도 있습니다.  
+ 사용 가능한 데이터를 모두 사용해야 하는 것은 아닙니다. 마이닝 구조에 포함할 열을 선택할 수 있습니다. 해당 구조를 기반으로 하는 모든 모델에는 이러한 열을 사용할 수 있습니다 또는 특정 열으로 플래그를 지정할 수 있습니다 `Ignore` 특정 모델에 대 한 합니다. 데이터 마이닝 모델의 사용자가 마이닝 모델의 결과에서 드릴다운하여 마이닝 모델 자체에 포함되지 않은 추가 마이닝 구조 열을 보도록 할 수도 있습니다.  
   
 ##  <a name="bkmk_ContentDataType"></a> 내용 유형 및 데이터 형식을 지정하는 방법  
  데이터 형식은 SQL Server 또는 기타 응용 프로그램 인터페이스에서 지정하는 데이터 형식(날짜/시간, 여러 크기의 숫자, 부울 값, 텍스트 및 기타 불연속 데이터)과 거의 비슷합니다.  

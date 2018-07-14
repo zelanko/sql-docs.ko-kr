@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 290af78ea4785b3cf54dc9ee59c96a78af7671e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 84eb0888ce489893cb535b38401c7a2e708bf80b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238623"
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
   다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  

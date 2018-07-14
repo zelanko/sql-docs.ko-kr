@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
 - sql12.rtp.rptdesigner.groupproperties.advanced.f1
@@ -36,15 +36,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 80661ab558038af26a9b98fef925c2ec24df83ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8579071257a3f4026a111aaf16d7898bbd28cbb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323903"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>테이블, 행렬 및 목록(보고서 작성기 및 SSRS)
   테이블, 행렬 및 목록은 행과 열로 구성되는 셀에 보고서 데이터를 표시하는 데이터 영역입니다. 셀에는 보통 텍스트, 날짜, 숫자 등의 텍스트 데이터가 포함되지만 계기, 차트, 또는 보고서 항목(예: 이미지)도 포함될 수 있습니다. 테이블, 행렬 및 목록을 집합적으로 테이블릭스 데이터 영역이라고 하는 경우가 많습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "36181513"
   
  또한 처음에 정보 데이터를 숨기는 드릴다운 토글을 포함할 수도 있습니다. 사용자는 필요한 경우 이 토글을 클릭하여 내용을 자세히 또는 간략히 볼 수 있습니다.  
   
- 자세한 내용은 참조 [행렬 &#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)합니다.  
+ 자세한 내용은 [행렬 &#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)합니다.  
   
 
   
@@ -100,7 +100,7 @@ ms.locfileid: "36181513"
   
  ![도구 상자에서 추가된 새 목록 선택](../media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록 선택")  
   
- 자세한 내용은 참조 [나열 &#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  
+ 자세한 내용은 [나열 &#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  
   
 
   
@@ -142,17 +142,17 @@ ms.locfileid: "36181513"
   
 -   [행 높이 또는 열 너비 변경 &#40;보고서 작성기 및 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [열 삭제 또는 삽입 &#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [삽입 또는 열 삭제 &#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [삽입 또는 삭제 한 행 &#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [삽입 또는 행을 삭제 &#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
 -   [데이터 영역의 셀 병합 &#40;보고서 작성기 및 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
 -   [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [추가 또는 데이터 영역에서 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [추가 또는 데이터 영역의 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [함께 그룹 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [그룹을 함께 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
 -   [단계별된 보고서 만들기 &#40;보고서 작성기 및 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36181513"
  [행 및 열 머리글 제어 &#40;보고서 작성기 및 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 행 및 열 머리글을 제어하는 방법에 대해 설명합니다.  
   
- [재귀 계층 구조 그룹 생성 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  부모와 자식 간의 관계가 데이터 집합의 필드에 표시되는 재귀적 데이터를 표시하는 방법에 대해 설명합니다.  
   
  [그룹 이해 &#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  

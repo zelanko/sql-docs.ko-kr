@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323623"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36093880"
   
  Microsoft 시계열 알고리즘은 데이터 계열에서 값을 가져와 데이터를 패턴에 맞추려고 시도합니다. 데이터 계열이 아직 정상이 아니면 알고리즘이 차분 차수를 적용합니다. 차분 차수가 증가할 때마다 시계열이 점점 더 정상화됩니다.  
   
- 예를 들어 시계열에서 (z1, z2,..., zn) 하나의 차분 차수를 사용 하 여 계산을 수행 하는 경우 가져와야 새 계열 (y1, y2,..., yn-1), 여기서 *yi = zi + 1-zi*합니다. 차분 차수가 2 이면 알고리즘이 다른 계열 (x1, x2,..., xn-2) 일차 방정식에서 파생 된 y 계열을 기반으로 생성 합니다. 올바른 차분 양은 데이터에 따라 다릅니다. 단일 차분 차수는 일정한 추세를 표시하는 모델에서 가장 일반적으로 사용됩니다. 두 번째 차분 차수는 시간에 따라 변동되는 추세를 나타낼 수 있습니다.  
+ 예를 들어 (z1, z2,..., zn) 시계열을 하나의 차분 차수를 사용 하 여 계산을 수행 하는 경우 가져와야 새 계열 (y1, y2,..., yn-1), 여기서 *yi = zi + 1-zi*합니다. 차분 차수가 2 이면 알고리즘이 사항과 다른 시리즈 (x1, x2,..., xn-2) 방정식에서 파생 된 y 계열을 기반으로 생성 합니다. 올바른 차분 양은 데이터에 따라 다릅니다. 단일 차분 차수는 일정한 추세를 표시하는 모델에서 가장 일반적으로 사용됩니다. 두 번째 차분 차수는 시간에 따라 변동되는 추세를 나타낼 수 있습니다.  
   
  기본적으로 Microsoft 시계열 알고리즘에 사용된 차분 차수는 -1로서, 알고리즘이 차분 차수의 최적 값을 자동으로 감지합니다. 일반적으로 최적 값은 1이지만(차분이 필요한 경우), 특정 상황에서는 알고리즘이 값을 최대값 2로 늘립니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36093880"
   
  ARIMA_AR_ORDER 값이 1보다 크면 알고리즘이 다항식 항으로 시계열을 곱합니다. 다항식의 한 항이 루트 1 또는 1에 근접한 수로 확인되면 알고리즘이 항을 제거하고 차분 차수를 1 늘려서 모델의 안정성을 보존하려고 시도합니다. 차분 차수가 이미 최대값인 경우 항이 제거되고 차분 차수가 변경되지 않습니다.  
   
- 예를 들어 경우 AR의 값 2 이면 결과 AR 다항식 항이 다음과 같습니다: 1-1.4B +.45B ^2 (1-.9B) = (1-0.5B). 에 약 0.9의 루트 (1-.9B) 용어를 note 합니다. 알고리즘은 다항식에서 이 항을 제거하지만 이미 최대값 2이기 때문에 차분 차수를 1 늘릴 수 없습니다.  
+ 예를 들어 경우 AR의 값 = 2 이면 결과 AR 다항식 항은 다음과 같이 표시 될 수 있습니다: 1-1.4B +.45B ^2 (1-.9B) = (1-0.5B). 약 0.9의 루트에 있는 용어 (1-.9B) note 합니다. 알고리즘은 다항식에서 이 항을 제거하지만 이미 최대값 2이기 때문에 차분 차수를 1 늘릴 수 없습니다.  
   
  차분 차수를 **강제로** 변경할 수 있는 유일한 방법은 지원되지 않는 매개 변수인 ARIMA_DIFFERENCE_ORDER를 사용하는 것입니다. 사용자 지정 알고리즘 매개 변수를 입력하여 설정할 수 있는 이 숨겨진 매개 변수는 알고리즘이 시계열에서 차분을 수행하는 횟수를 제어합니다. 하지만 실험 준비가 되어 있지 않고 관련된 계산에 익숙하지 않다면 이 값을 변경하지 않는 것이 좋습니다. 또한 숨겨진 매개 변수를 포함하여 차분 차수의 증분이 발생하는 임계값을 제어할 수 있는 메커니즘은 현재까지 존재하지 않습니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36093880"
 >  ARTXP 및 ARIMA 알고리즘은 둘 다 계절성 힌트에 매우 민감합니다. 따라서 잘못된 힌트를 제공하면 결과에 부정적인 영향을 줄 수 있습니다.  
   
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>알고리즘 선택 및 알고리즘 혼합 지정  
- 기본적으로 또는 MIXED 옵션을 선택하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 알고리즘을 결합하고 알고리즘에 동일한 가중치를 할당합니다. 그러나 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], 특정 알고리즘을 지정할 수 있습니다 또는 단기 또는 장기 예측 결과 가중치를 적용 하는 매개 변수를 설정 하 여 결과에서 각 알고리즘의 비율을 사용자 지정할 수 있습니다. 기본적으로 *FORECAST_METHOD* 매개 변수가 MIXED로 설정되며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 두 알고리즘을 모두 사용하고 해당 값에 가중치를 적용하여 각 알고리즘의 장점을 극대화합니다.  
+ 기본적으로 또는 MIXED 옵션을 선택하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 알고리즘을 결합하고 알고리즘에 동일한 가중치를 할당합니다. 그러나 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], 특정 알고리즘을 지정 하거나 단기 또는 장기 예측의 결과 가중치 적용 하는 매개 변수를 설정 하 여 결과에서 각 알고리즘의 비율을 사용자 지정할 수 있습니다. 기본적으로 *FORECAST_METHOD* 매개 변수가 MIXED로 설정되며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 두 알고리즘을 모두 사용하고 해당 값에 가중치를 적용하여 각 알고리즘의 장점을 극대화합니다.  
   
 -   알고리즘 선택을 제어하려면 *FORECAST_METHOD* 매개 변수를 설정합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36093880"
   
  다음 다이어그램에서는 *PREDICTION_SMOOTHING* 이 기본값인 0.5로 설정된 경우 모델에서 알고리즘을 혼합하는 방법을 보여 줍니다. 처음에 ARIMA 및 ARTXP에 동일한 가중치가 적용되지만 예측 단계 수가 증가하면서 ARIMA에 더 많은 가중치가 적용됩니다.  
   
- ![시계열 알고리즘의 혼합에 대 한 감소 커브](../media/time-series-mixing-default.gif "시계열 알고리즘의 혼합에 대 한 감소 커브")  
+ ![시계열 알고리즘 혼합에 대 한 감소 커브](../media/time-series-mixing-default.gif "시계열 알고리즘 혼합에 대 한 감소 커브")  
   
  반대로 다음 다이어그램에서는 *PREDICTION_SMOOTHING* 이 0.2로 설정된 경우의 알고리즘 혼합을 보여 줍니다. [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]단계의 경우 모델은 ARIMA는 0.2로, ARTXP는 0.8로 가중치를 적용합니다. 그런 다음 ARIMA의 가중치가 지수적으로 증가하고 ARTXP의 가중치가 지수적으로 감소합니다.  
   
@@ -145,8 +145,8 @@ ms.locfileid: "36093880"
 |*MINIMUM_SERIES_VALUE*|예측할 수 있는 최소값을 지정합니다. 이 매개 변수는 *MAXIMUM_SERIES_VALUE*와 함께 예측을 예상 범위로 제한하는 데 사용됩니다. 예를 들어 예측된 판매 수량이 음수가 아니어야 함을 지정할 수 있습니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*MINIMUM_SUPPORT*|각 시계열 트리에서 분할을 생성하는 데 필요한 최소 시간 조각 수를 지정합니다. 기본값은 10입니다.|  
 |*MISSING_VALUE_SUBSTITUTION*|기록 데이터의 간격을 채우는 방법을 지정합니다. 기본적으로 데이터의 간격은 허용되지 않습니다. 데이터에 여러 계열이 포함된 경우 계열은 또한 비정형 가장자리를 가질 수 없습니다. 즉, 모든 계열은 동일한 시작점과 끝점을 가져야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 또한 시계열 모델에서 `PREDICTION JOIN`을 수행할 때 새 데이터의 간격을 채우기 위해 이 매개 변수의 값이 사용됩니다. 다음 표에서는 이 매개 변수에 사용할 수 있는 값을 나열합니다.<br /><br /> None: 기본값입니다. 누락된 값을 학습된 모델의 곡선을 따라 표시된 값으로 대체합니다.<br /><br /> 이전: 이전 시간 조각의 값을에서 반복합니다.<br /><br /> 평균: 학습에 사용 되는 시간 조각의 이동 평균을 사용 합니다.<br /><br /> 숫자 상수: 누락된 모든 값을 지정된 숫자로 바꿉니다.|  
-|*PERIODICITY_HINT*|데이터의 주기성과 관련된 알고리즘에 대한 힌트를 제공합니다. 예를 들어 판매량이 매년 다르고 계열의 측정 단위가 월인 경우 주기성은 12입니다. 이 매개 변수는 {n [, n]} 형식이며, 여기서 n은 임의의 양수입니다.<br /><br /> 대괄호([]) 안의 n은 선택 사항이며 필요한 만큼 반복할 수 있습니다. 예를 들어 매월 제공되는 데이터에 대한 여러 주기 힌트를 제공하려면 년, 분기 및 월에 대한 패턴을 검색하기 위해 {12, 3, 1}을 입력할 수 있습니다. 그러나 주기는 모델 품질에 큰 영향을 줍니다. 제공한 힌트가 실제 주기와 다르면 결과에 부정적인 영향을 줄 수 있습니다.<br /><br /> 기본값은 {1}입니다.<br /><br /> 참고: 중괄호는 필수입니다. 또한 이 매개 변수는 문자열 데이터 형식을 가집니다. 따라서 이 매개 변수를 DMX(Data Mining Extensions) 문의 일부로 입력할 경우 숫자와 중괄호를 따옴표로 묶어야 합니다.|  
-|*PREDICTION_SMOOTHING*|예측을 최적화하기 위해 모델을 혼합해야 하는 방법을 지정합니다. 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 및 1 사이의 값을 입력하거나 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 예측 ARTXP만 사용 하도록 지정 합니다. 예측은 적은 예측에 맞게 최적화됩니다.<br /><br /> 0.5: (기본값)를 사용 해야 하는 두 알고리즘 모두 예측에 대 한 하 고 결과가 혼합 지정 합니다.<br /><br /> 1: 예측에서 ARIMA만 사용하도록 지정합니다. 예측은 많은 예측에 맞게 최적화됩니다.<br /><br /> <br /><br /> 참고: 사용 된 *FORECAST_METHOD* 매개 변수 학습을 제어 합니다.|  
+|*PERIODICITY_HINT*|데이터의 주기성과 관련된 알고리즘에 대한 힌트를 제공합니다. 예를 들어 판매량이 매년 다르고 계열의 측정 단위가 월인 경우 주기성은 12입니다. 이 매개 변수는 {n [, n]} 형식이며, 여기서 n은 임의의 양수입니다.<br /><br /> 대괄호([]) 안의 n은 선택 사항이며 필요한 만큼 반복할 수 있습니다. 예를 들어 매월 제공되는 데이터에 대한 여러 주기 힌트를 제공하려면 년, 분기 및 월에 대한 패턴을 검색하기 위해 {12, 3, 1}을 입력할 수 있습니다. 그러나 주기는 모델 품질에 큰 영향을 줍니다. 제공한 힌트가 실제 주기와 다르면 결과에 부정적인 영향을 줄 수 있습니다.<br /><br /> 기본값은 {1}입니다.<br /><br /> 참고: 중괄호가 필요 합니다. 또한 이 매개 변수는 문자열 데이터 형식을 가집니다. 따라서 이 매개 변수를 DMX(Data Mining Extensions) 문의 일부로 입력할 경우 숫자와 중괄호를 따옴표로 묶어야 합니다.|  
+|*PREDICTION_SMOOTHING*|예측을 최적화하기 위해 모델을 혼합해야 하는 방법을 지정합니다. 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 및 1 사이의 값을 입력하거나 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 예측에서는 ARTXP만 지정 합니다. 예측은 적은 예측에 맞게 최적화됩니다.<br /><br /> 0.5: (기본값) 두 알고리즘을 사용 해야 하는 예측 하 고 혼합 결과 지정 합니다.<br /><br /> 1: 예측에서 ARIMA만 사용하도록 지정합니다. 예측은 많은 예측에 맞게 최적화됩니다.<br /><br /> <br /><br /> 참고: 사용 된 *FORECAST_METHOD* 매개 변수 학습을 제어 합니다.|  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음과 같은 모델링 플래그를 지원합니다. 마이닝 구조나 마이닝 모델을 만들 경우 분석 중 각 열의 값이 처리되는 방법을 지정하기 위해 모델링 플래그를 정의합니다. 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)를 참조하세요.  

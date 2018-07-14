@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc30bd62cc7a61305e0e0b7953095bda36b34e22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269589"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
   지정된 데이터베이스를 미러링하거나 로그를 전달할 수 있으며 동시에 미러링하고 로그를 전달할 수도 있습니다. 사용할 방법을 선택하려면 다음을 고려합니다.  

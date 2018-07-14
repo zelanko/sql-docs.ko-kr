@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7e1e11074e74a228be0d49a5d8c76196bf5c4463
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29cb245c65976e517aad12ecae636df264dda9d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242013"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
   Microsoft 시퀀스 클러스터링 알고리즘은 Markov 체인 분석을 사용하여 정렬된 시퀀스를 식별하고, 이 분석 결과를 클러스터링 기술과 결합하여 모델의 시퀀스 및 기타 특성에 따라 클러스터를 생성하는 하이브리드 알고리즘입니다. 이 항목에서는 알고리즘의 구현, 알고리즘을 사용자 지정하는 방법 및 시퀀스 클러스터링 모델에 대한 특수한 요구 사항을 설명합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "36093641"
  기본값은 64입니다.  
   
  MAXIMUM_STATES  
- 알고리즘이 지원하는 비시퀀스 특성에 대한 최대 상태 수를 지정합니다. 비시퀀스 특성의 상태 수가 최대 상태 수보다 크면 알고리즘은 특성의 가장 일반적인 상태를 사용 하 여를 나머지 상태는으로 처리 `Missing`합니다.  
+ 알고리즘이 지원하는 비시퀀스 특성에 대한 최대 상태 수를 지정합니다. 알고리즘은 특성의 가장 일반적인 상태 하 고 나머지 상태를 취급 비시퀀스 특성의 상태 수가 최대 상태 수보다 크면 `Missing`합니다.  
   
  기본값은 100입니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36093641"
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열 수 있는 것으로 간주 상태: `Missing` 및 `Existing`합니다. Null로 처리 되는 `Missing` 값입니다.  
+ 열 수 있는 방법을 두 가지 가능한 상태를 가진 것으로 처리 합니다. `Missing` 및 `Existing`합니다. Null로 처리 되는 `Missing` 값입니다.  
   
  마이닝 모델 열에 적용됩니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36093641"
 ## <a name="requirements"></a>요구 사항  
  사례 테이블에는 사례 ID 열이 있어야 합니다. 필요에 따라 사례에 대한 특성을 저장하는 다른 열도 사례 테이블에 포함될 수 있습니다.  
   
- Microsoft 시퀀스 클러스터링 알고리즘을 사용하려면 중첩 테이블로 저장된 시퀀스 정보가 필요합니다. 중첩 테이블에는 단일 Key Sequence 열이 있어야 합니다. A `Key Sequence` 열에는 모든 종류의 데이터를 정렬할 수 있는, 문자열 데이터 형식을 비롯 한 포함 될 수 있지만 열의 각 사례에 대 한 고유 값이 포함 되어야 합니다. 또한 모델을 처리하기 전에 사례 테이블과 중첩 테이블이 모두 해당 테이블과 관련된 키를 기준으로 오름차순으로 정렬되도록 해야 합니다.  
+ Microsoft 시퀀스 클러스터링 알고리즘을 사용하려면 중첩 테이블로 저장된 시퀀스 정보가 필요합니다. 중첩 테이블에는 단일 Key Sequence 열이 있어야 합니다. `Key Sequence` 열 모든 종류의 정렬할 수 있는, 문자열 데이터 형식을 비롯 한 데이터를 포함할 수 있지만 열의 각 사례에 대해 고유한 값을 포함 해야 합니다. 또한 모델을 처리하기 전에 사례 테이블과 중첩 테이블이 모두 해당 테이블과 관련된 키를 기준으로 오름차순으로 정렬되도록 해야 합니다.  
   
 > [!NOTE]  
 >  Microsoft 시퀀스 알고리즘을 사용하는 모델을 만들면서 시퀀스 열은 사용하지 않을 경우 결과 모델은 시퀀스를 포함하지 않고 단지 모델에 포함된 다른 특성에 따라 사례를 클러스터링하기만 합니다.  

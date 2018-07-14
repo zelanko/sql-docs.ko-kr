@@ -1,5 +1,5 @@
 ---
-title: 보고 및 통합에서 실행 중인 패키지 중지 Services 서버 | Microsoft Docs
+title: 보기 및 통합에서 실행 중인 패키지 중지 Services 서버 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
 - managing running packages [Integration Services]
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce4fd750986269c0e92ae2ea764f02e1bd642cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cef267dbb770c0ccb39ea40143ce9591f915db5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215833"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services 서버에서 실행 중인 패키지 보기 및 중지
   `SSISDB` 데이터베이스 사용자에 게 표시 되지 않는 내부 테이블에 실행 기록을 저장 합니다. 그러나 공용 뷰 쿼리를 통해 이 데이터베이스에서 필요한 정보를 얻을 수 있습니다. 또한 이 데이터베이스는 패키지와 관련된 일반적인 태스크를 수행하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  
   
- 일반적으로 서버의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 관리합니다. 그러나 데이터베이스 뷰를 쿼리하고 저장 프로시저를 직접 호출하거나 관리되는 API를 호출하는 사용자 지정 코드를 작성할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 하 고 관리 되는 API는 뷰를 쿼리하고 많은 태스크를 수행 하 고 저장된 프로시저를 호출 합니다. 예를 들어 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 목록을 보고 필요한 경우 패키지를 중지하도록 요청할 수 있습니다.  
+ 일반적으로 서버의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 관리합니다. 그러나 데이터베이스 뷰를 쿼리하고 저장 프로시저를 직접 호출하거나 관리되는 API를 호출하는 사용자 지정 코드를 작성할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 관리 API는 뷰를 쿼리하고 저장된 프로시저를 호출 많은 태스크를 수행 합니다. 예를 들어 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 목록을 보고 필요한 경우 패키지를 중지하도록 요청할 수 있습니다.  
   
 ## <a name="viewing-the-list-of-running-packages"></a>실행 중인 패키지 목록 보기  
  서버에서 현재 실행 중인 패키지 목록을 **활성 작업** 대화 상자에서 볼 수 있습니다. 자세한 내용은 [Active Operations Dialog Box](../../2014/integration-services/active-operations-dialog-box.md)를 참조하세요.  

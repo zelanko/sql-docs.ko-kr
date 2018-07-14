@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b525f90b91d3b1d540513212164b8efc062b6ed3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 79713fc3f83f83774e95a8956cfbc6c591f9d6dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268449"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 끝점
   보고서 서버 웹 서비스는 보고서 서버 관리 및 보고서의 실행과 탐색을 위한 끝점을 다수 제공합니다.  
@@ -70,7 +70,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |프록시 끝점|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:** 이 끝점에서 사용 되지 않는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]합니다.|  
+|<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:** 에서이 끝점은 사용 되지 않습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]합니다.|  
 |<xref:ReportService2010>|기본 모드 또는 SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다.|  
 |<xref:ReportExecution2005>|보고서 실행 및 탐색을 위한 API를 제공합니다.|  
 |<xref:ReportServiceAuthentication>|폼 인증을 위해 SharePoint 웹 응용 프로그램이 구성된 경우 보고서 서버에 대해 사용자를 인증하기 위한 API를 제공합니다.|  

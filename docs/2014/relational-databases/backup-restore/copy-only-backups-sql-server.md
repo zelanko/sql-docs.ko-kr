@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copy-only backups [SQL Server]
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e382d3b0bad1a5c43d6fc745280e302c9422ef0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8d5ef086b610402e2c696196b2baae7705c5f920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248883"
 ---
 # <a name="copy-only-backups-sql-server"></a>복사 전용 백업(SQL Server)
   *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "36092433"
   
 -   복사 전용 전체 백업의 경우:  
   
-     BACKUP DATABASE *database_name* TO \<backup_device*>* ... WITH COPY_ONLY …  
+     데이터베이스 백업 *database_name* TO \<backup_device*>* ... WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  DIFFERENTIAL 옵션과 함께 지정하면 COPY_ONLY가 적용되지 않습니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "36092433"
   
 ###  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-1.  사용 하 여는 `Backup-SqlDatabase` 사용 하 여 cmdlet의 `-CopyOnly` 매개 변수입니다.  
+1.  사용 합니다 `Backup-SqlDatabase` cmdlet을 사용 합니다 `-CopyOnly` 매개 변수입니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **전체 또는 로그 백업을 만들려면**  

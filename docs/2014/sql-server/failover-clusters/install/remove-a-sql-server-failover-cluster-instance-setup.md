@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], removing failover clustered instance
 - failover clustering [SQL Server], removing failover clustered instance
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - removing failover clustered instances
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7638b96c679b57d6b6d41978643ba9103cc7169
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8bab3fe033857578977519f1893b80ae6c37cfef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251165"
 ---
 # <a name="remove-a-sql-server-failover-cluster-instance-setup"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 제거(설치)
   이 절차를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스를 제거할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36180991"
   
 -   두 개 이상의 SQL IP 클러스터 리소스를 갖고 있는 장애 조치(Failover) 클러스터를 제거한 경우 클러스터 관리자를 사용하여 추가 SQL IP 리소스를 제거해야 합니다.  
   
- 명령 프롬프트 구문에 대 한 정보를 참조 하십시오. [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
+ 명령 프롬프트 구문에 대 한 자세한 내용은 [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
 ### <a name="to-uninstall-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 제거하려면  
   

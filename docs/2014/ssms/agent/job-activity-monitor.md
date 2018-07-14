@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.ACTIVITYMON.F1
 - sql12.ag.jobactivitymonitor.alljobs.f1
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ed7b4a4efacf7be8431c5de10b2cc9d56a7e3d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4896661e08c340fe9d61861b44f8915332d7b688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253385"
 ---
 # <a name="job-activity-monitor"></a>작업 활동 모니터
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 현재 활동을 볼 수 있습니다. **필터** 를 클릭하여 표시되는 작업의 수를 제한할 수 있습니다. **에이전트 작업 활동** 표는 읽기 전용입니다. 표를 정렬하려면 열 머리글을 클릭합니다. 작업을 수정하려면 작업을 두 번 클릭하여 **작업 속성** 대화 상자를 엽니다. 표에서 작업을 마우스 오른쪽 단추로 클릭하여 모든 작업 단계의 실행을 시작하거나, 특정 작업 단계에서 시작하거나, 작업을 활성화 또는 비활성화하거나, 작업을 새로 고치거나, 작업을 삭제하거나, 작업 기록이나 작업 속성을 확인하는 등의 작업을 수행할 수 있습니다. 현재 정보로 표를 업데이트하려면 **새로 고침** 을 클릭합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36093222"
  **예약**  
  작업이 작업 일정에 할당되어 있으면**예** 이고, 그렇지 않으면 **아니요** 입니다.  
   
- <sup>1</sup>의 구성원만는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 고정 서버 역할과 서버 관리자 그룹을 볼 수 값이이 열에 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  
+ <sup>1</sup>의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 고정 서버 역할과 서버 관리자 그룹에서 볼 수 값이이 열에 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>작업 활동 모니터를 열려면  
   

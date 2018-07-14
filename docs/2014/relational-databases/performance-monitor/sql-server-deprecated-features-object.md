@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227413"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "36180846"
 |SQL Server Deprecated Features 카운터 인스턴스|Description|  
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. 대체 `SELECT column_list FROM`  *\< function_name >*`()`합니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
+|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. 바꿉니다 `SELECT column_list FROM`  *\< function_name >*`()`합니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
 |'@' 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 '@@'으로 시작하는 이름|@ 또는 @@으로 시작하는 식별자가 발견되었습니다. @@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
-|ADDING TAPE DEVICE|사용 되지 않는 기능인 sp_addumpdevice'`tape`' 발견 되었습니다. Sp_addumpdevice '`disk`' 대신 합니다. 사용할 때마다 한 번씩 발생합니다.|  
+|ADDING TAPE DEVICE|사용 되지 않는 기능인 sp_addumpdevice'`tape`' 발견 되었습니다. Sp_addumpdevice '`disk`' 대신입니다. 사용할 때마다 한 번씩 발생합니다.|  
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|서버 인스턴스가 시작된 이후로 ALTER DATABASE에서 사용되지 않는 기능인 TORN_PAGE_DETECTION 옵션이 사용된 총 횟수입니다. 대신 PAGE_VERIFY 구문을 사용해야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |ALTER LOGIN WITH SET CREDENTIAL|사용되지 않는 기능 구문인 ALTER LOGIN WITH SET CREDENTIAL 또는 ALTER LOGIN WITH NO CREDENTIAL이 발견되었습니다. 대신 ADD 또는 DROP CREDENTIAL 구문을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "36180846"
 |CREATE TRIGGER WITH APPEND|WITH APPEND 절이 포함된 CREATE TRIGGER 문이 발견되었습니다. 대신 전체 트리거를 다시 만들어야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |CREATE_DROP_DEFAULT|CREATE DEFAULT 또는 DROP DEFAULT 구문이 발견되었습니다. CREATE TABLE 또는 ALTER TABLE에 DEFAULT 옵션을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |CREATE_DROP_RULE|CREATE RULE 구문이 발견되었습니다. 제약 조건을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|데이터 형식: text, ntext 또는 image|`text`, `ntext` 또는 `image` 데이터 형식이 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성은 `varchar(max)` 데이터 입력 하 고 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문입니다. 쿼리마다 한 번씩 발생합니다.|  
+|데이터 형식: text, ntext 또는 image|`text`, `ntext` 또는 `image` 데이터 형식이 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성 해야 합니다 `varchar(max)` 데이터 형식으로 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문. 쿼리마다 한 번씩 발생합니다.|  
 |데이터베이스 호환성 수준 80|데이터베이스가 호환성 수준 80으로 변경된 총 횟수입니다. 다음 릴리스 전에 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 또한 호환성 수준이 80인 데이터베이스가 시작될 때도 발생합니다.|  
 |데이터베이스 호환성 수준 90|데이터베이스가 호환성 수준 90으로 변경된 총 횟수입니다. 이후 릴리스로 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 또한 호환성 수준이 90인 데이터베이스가 시작될 때도 발생합니다.|  
 |DATABASE_MIRRORING|데이터베이스 미러링 기능에 대한 참조가 발견되었습니다. AlwaysOn 가용성 그룹으로 업그레이드하도록 계획하거나 AlwaysOn 가용성 그룹을 지원하지 않는 SQL Server 버전을 실행 중인 경우 로그 전달로 마이그레이션하도록 계획하십시오.|  
@@ -165,7 +165,7 @@ ms.locfileid: "36180846"
 |sp_configure의 'set working set size'|sp_configure의 set working set size 옵션이 발견되었습니다. 작업 집합 크기는 더 이상 구성할 수 없습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 저장 프로시저는 마스터 키가 있는지 여부를 확인하지 않습니다. 이전 버전과의 호환성을 위해 허용되지만 경고가 표시됩니다. 이 기능은 더 이상 지원되지 않습니다. 향후 릴리스에서는 마스터 키가 있어야 하며 저장 프로시저 sp_control_dbmasterkey_password에서 사용하는 암호가 데이터베이스 마스터 키를 암호화하는 데 사용된 암호 중 하나와 동일해야 합니다.|  
 |sp_create_removable|sp_create_removable 프로시저가 발견되었습니다. 대신 CREATE DATABASE를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_db_vardecimal_storage_format|사용 하 여 `vardecimal` 저장소 형식 발생 했습니다. 대신 데이터 압축을 사용해야 합니다.|  
+|sp_db_vardecimal_storage_format|사용 `vardecimal` 저장소 형식을 발견 했습니다. 대신 데이터 압축을 사용해야 합니다.|  
 |sp_dbcmptlevel|sp_dbcmptlevel 프로시저가 발견되었습니다. 대신 ALTER DATABASE … SET COMPATIBILITY_LEVEL을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_dbfixedrolepermission|sp_dbfixedrolepermission 프로시저가 발견되었습니다. 사용하지 마십시오. 쿼리마다 한 번씩 발생합니다.|  
 |sp_dboption|sp_dboption 프로시저가 발견되었습니다. 대신 ALTER DATABASE 및 DATABASEPROPERTYEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -183,7 +183,7 @@ ms.locfileid: "36180846"
 |sp_droprole|sp_droprole 프로시저가 발견되었습니다. 대신 DROP ROLE을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_droptype|sp_droptype 프로시저가 발견되었습니다. 대신 DROP TYPE을 사용해야 합니다.|  
 |sp_dropuser|sp_dropuser 프로시저가 발견되었습니다. 대신 DROP USER를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|사용 하 여 `vardecimal` 저장소 형식 발생 했습니다. 대신 데이터 압축 및 sp_estimate_data_compression_savings를 사용해야 합니다.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|사용 `vardecimal` 저장소 형식을 발견 했습니다. 대신 데이터 압축 및 sp_estimate_data_compression_savings를 사용해야 합니다.|  
 |sp_fulltext_catalog|sp_fulltext_catalog 프로시저가 발견되었습니다. 대신 CREATE/ALTER/DROP FULLTEXT CATALOG를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_fulltext_column|sp_fulltext_column 프로시저가 발견되었습니다. 대신 ALTER FULLTEXT INDEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_fulltext_database|sp_fulltext_database 프로시저가 발견되었습니다. 대신 ALTER DATABASE를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -253,13 +253,13 @@ ms.locfileid: "36180846"
 |sysusers|sysusers에 대한 참조가 발견되었습니다. 대신 sys.database_principals를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |WITH가 없는 테이블 힌트|WITH 키워드 없이 테이블 힌트를 사용한 문이 발견되었습니다. WITH 단어를 포함하도록 문을 수정해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |Text in row 테이블 옵션|'text in row' 테이블 옵션에 대한 참조가 발견되었습니다. 대신 sp_tableoption 'large value types out of row'를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성은 `varchar(max)` 데이터 입력 하 고 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문입니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성은 `varchar(max)` 데이터 입력 하 고 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문입니다. 쿼리마다 한 번씩 발생합니다.|  
-|timestamp|총 횟수입니다. 사용 되지 않는 `timestamp` 데이터 형식이 DDL 문에서 발견 되었습니다. 사용 하 여 `rowversion` 데이터 형식을 대신 합니다.|  
-|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성은 `varchar(max)` 데이터 입력 하 고 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문입니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성 해야 합니다 `varchar(max)` 데이터 형식으로 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성 해야 합니다 `varchar(max)` 데이터 형식으로 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문. 쿼리마다 한 번씩 발생합니다.|  
+|timestamp|총 횟수입니다. 사용 되지 않는 `timestamp` 데이터 형식이 DDL 문에서 발견 되었습니다. 사용 된 `rowversion` 데이터 형식 대신 합니다.|  
+|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. 사용 하도록 응용 프로그램을 다시 작성 해야 합니다 `varchar(max)` 데이터 형식으로 제거 `text`, `ntext`, 및 `image` 데이터 형식 구문. 쿼리마다 한 번씩 발생합니다.|  
 |USER_ID|USER_ID 함수에 대한 참조가 발견되었습니다. 대신 DATABASE_PRINCIPAL_ID 함수를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |연결된 서버에 OLEDB 사용||  
-|VarDecimal 저장소 형식|사용 하 여 `vardecimal` 저장소 형식 발생 했습니다. 대신 데이터 압축을 사용해야 합니다.|  
+|VarDecimal 저장소 형식|사용 `vardecimal` 저장소 형식을 발견 했습니다. 대신 데이터 압축을 사용해야 합니다.|  
 |XMLDATA|FOR XML 구문이 발견되었습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용해야 합니다. EXPLICIT 모드의 경우에는 대체할 옵션이 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |XP_API|확장 저장 프로시저 문이 발견되었습니다. 사용하지 마십시오.|  
 |xp_grantlogin|xp_grantlogin 프로시저가 발견되었습니다. 대신 CREATE LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  

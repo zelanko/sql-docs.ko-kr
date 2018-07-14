@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services], formats
 - formats [Reporting Services], script files
@@ -16,13 +16,13 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fd49c4cb6e16c9bbda6dc970e3bb5b0ceb2ef52d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54fb06c849655b8fbb7c60fd2b20117dff610f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276049"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services 스크립트 파일 형식 지정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트는 WSDL(Web Service Description Language)을 기반으로 하는 프록시에 대해 작성된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 코드 파일로, Reporting Services SOAP API를 정의합니다. 스크립트 파일은 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장됩니다.  
@@ -50,7 +50,7 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  사용자 자격 증명은 스크립트 환경에서 관리되며 RS.exe를 사용하여 명령 프롬프트 인수를 통해 전달됩니다. *rs* 변수를 사용하여 웹 서비스의 인증을 설정할 수도 있지만 스크립트 환경을 사용하는 것이 좋습니다. 스크립트 파일 자체에서 웹 서비스를 인증하지 않아도 됩니다. 스크립트 환경을 인증 하는 방법에 대 한 자세한 내용은 참조 [RS.exe 유틸리티 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)합니다.  
+>  사용자 자격 증명은 스크립트 환경에서 관리되며 RS.exe를 사용하여 명령 프롬프트 인수를 통해 전달됩니다. *rs* 변수를 사용하여 웹 서비스의 인증을 설정할 수도 있지만 스크립트 환경을 사용하는 것이 좋습니다. 스크립트 파일 자체에서 웹 서비스를 인증하지 않아도 됩니다. 스크립트 환경을 인증 하는 방법에 대 한 자세한 내용은 참조 하세요. [RS.exe 유틸리티 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)합니다.  
   
  스크립트 파일 내에서는 네임스페이스를 선언하지 않습니다. 스크립팅 환경에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
   

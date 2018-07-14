@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: eed47b9f-0501-4baf-8cac-3ea839a859c3
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5652a7107a17f253c6d813cfdddce8d4edfefec7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 18ee5ec5d9c25715719c3c06eaf2b5c7b081666f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273709"
 ---
 # <a name="source-element-error-xmla"></a>Source 요소(Error)(XMLA)
   부모 [Error](error-element-xmla.md) 요소를 생성한 구성 요소의 이름을 포함합니다.  

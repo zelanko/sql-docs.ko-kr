@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
 - user connections option [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ac585aacfe63de6bddbcaf06f7a36b4df468d0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ce587032e5956e4f86792a60d361e19b4f2a08e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228213"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>user connections 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용자 연결 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 설정하는 방법에 대해 설명합니다. **사용자 연결** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 허용되는 최대 동시 사용자 연결 수를 지정합니다. 허용되는 실제 사용자 연결 수는 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 응용 프로그램 및 하드웨어 제한에 따라서도 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자 연결을 최대 32,767개까지 허용합니다. **사용자 연결 수** 는 동적(자체 구성) 옵션이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 허용 가능한 최대값까지 필요한 만큼 자동으로 최대 사용자 연결 수를 조정합니다. 예를 들어, 10명의 사용자만 로그인했으면 10개의 사용자 연결 개체가 할당됩니다. 대부분의 경우 이 옵션의 값을 변경하지 않아도 됩니다. 기본값은 0이며 최대(32,767) 사용자 연결을 허용합니다.  

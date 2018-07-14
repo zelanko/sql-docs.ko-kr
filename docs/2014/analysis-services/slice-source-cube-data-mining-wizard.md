@@ -1,5 +1,5 @@
 ---
-title: (데이터 마이닝 마법사) 원본 큐브 조각화 | Microsoft Docs
+title: 원본 큐브 (데이터 마이닝 마법사)를 조각화 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326553"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>원본 큐브 조각화(데이터 마이닝 마법사)
   **원본 큐브 조각화** 대화 상자를 사용하여 모델의 학습에 사용되는 데이터를 제한할 수 있습니다. 일반적으로 큐브는 모든 상점, 모든 지역 및 모든 제품 등 여러 다른 차원 및 특성과 관련된 데이터를 포함합니다. 제한 없는 특성 조합의 모델 학습은 실용적이지 않으므로 이 대화 상자를 사용하여 모델 학습에 사용할 특정 집합을 선택하십시오.  
@@ -37,9 +37,9 @@ ms.locfileid: "36173192"
 > [!NOTE]  
 >  동적 MDX 함수(예: [Generate&#40;MDX&#41;](/sql/mdx/generate-mdx) 또는 [Except&#40;MDX&#41;](/sql/mdx/except-mdx-function))는 파티션에 대한 Slice 속성에서 지원되지 않습니다. 명시적 튜플 또는 멤버 참조를 사용하여 조각을 정의해야 합니다.  
 >   
->  예를 들어, 사용 하는 대신 [: &#40;범위&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) 범위를 정의 하려면 특정 연도별로 각 멤버 열거 해야 할 수 있습니다.  
+>  예를 들어, 사용 하는 대신 [: &#40;범위&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) 범위를 정의 하려면 특정 연도별로 각 멤버를 열거 해야 합니다.  
 >   
->  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS를 사용할 수 있습니다 [Analysis Services DDL 실행 태스크가](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 스크립트를 실행 하 고 곧바로 파티션을 처리하기 전에 지정 된 멤버 집합을 만들어야 합니다.  
+>  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS를 사용할 수 있습니다 [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 스크립트를 실행 하 고 파티션을 처리 하기 전에 즉시 지정 된 멤버 집합을 만듭니다.  
   
  **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   

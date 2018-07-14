@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c3b64132-3b2e-46f5-ae11-a3cb3c42099c
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6fc1e1354a84fc7f777c105e83ef2674b63f6a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d648b09d5fa005a290150a8aef91b89a328938b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267069"
 ---
 # <a name="commonidentifierposition-element-xml"></a>CommonIdentifierPosition 요소(XML)
   요소 컬렉션의 요소 위치에 대한 정보를 포함합니다.  

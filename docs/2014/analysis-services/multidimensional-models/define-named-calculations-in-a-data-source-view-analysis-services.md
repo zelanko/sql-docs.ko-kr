@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 명명 된 계산을 정의 합니다. | Microsoft Docs
+title: Data Source View (Analysis Services)에서 명명 된 계산 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f69097c4047950823e51e9450e1bfb3114cf1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b22519994be250c7dc435228265685842f258198
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226443"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 계산 정의(Analysis Services)
   명명된 계산은 계산 열로 표시된 SQL 식입니다. 이 식은 테이블의 열과 같이 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블이나 뷰를 수정하지 않고 데이터 원본 뷰에 있는 기존 테이블이나 뷰의 관계형 스키마를 확장할 수 있습니다. 다음 예를 살펴봅니다.  
@@ -67,7 +67,7 @@ FROM
   
 3.  **테이블** 또는 **다이어그램** 창에서 명명된 계산을 정의할 테이블을 마우스 오른쪽 단추로 클릭한 다음 **새 명명된 계산**을 클릭합니다. 특성이 아닌 테이블 이름을 마우스 오른쪽 단추로 클릭해야 합니다. 다음과 같은 메뉴가 나타납니다.  
   
-     ![오른쪽 클릭 메뉴의 다이어그램 작업 영역에서 스크린샷](../media/ssas-olapdsv-diagram.gif "오른쪽 클릭 메뉴의 다이어그램 작업 영역에서 스크린 샷")  
+     ![오른쪽 클릭 메뉴 다이어그램 작업 영역 스크린샷](../media/ssas-olapdsv-diagram.gif "오른쪽 클릭 메뉴 다이어그램 작업 영역 스크린샷")  
   
     > [!NOTE]  
     >  테이블이나 뷰를 찾으려면 **데이터 원본 뷰** 메뉴를 클릭하거나 **테이블** 또는 **다이어그램** 창의 열린 영역을 마우스 오른쪽 단추로 클릭하여 **테이블 찾기** 옵션을 사용합니다.  

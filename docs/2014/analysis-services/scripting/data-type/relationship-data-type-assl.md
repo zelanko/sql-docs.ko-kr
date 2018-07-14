@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81421605828b064644f0b9a0cfae2a7ed1b301a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224043"
 ---
 # <a name="relationship-data-type-assl"></a>Relationship 데이터 형식(ASSL)
   차원의 관계를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -56,6 +56,6 @@ ms.locfileid: "36180597"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Relationship>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

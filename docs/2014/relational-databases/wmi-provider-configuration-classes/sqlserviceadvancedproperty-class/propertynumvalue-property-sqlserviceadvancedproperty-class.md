@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyNumValue property
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0056cbedb728bad589ebc348425aef3777865d8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 172b9b232fad044f96fe244f83bdc9bc7fa23663
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266279"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue 속성(SqlServiceAdvancedProperty 클래스)
   고급 속성의 숫자 값을 가져옵니다.  

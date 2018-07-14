@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233693"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 요소(XMLA)
   부모 [Tuples](tuples-element-xmla.md) 요소에 포함된 [Member](member-element-xmla.md) 요소의 컬렉션을 포함합니다.  
@@ -65,10 +65,10 @@ ms.locfileid: "36093830"
 |자식 요소|[멤버](member-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 클라이언트 응용 프로그램 설정 하는 경우는 `AxisFormat` 속성을 *TupleFormat*, 축이 튜플 집합을로 표시 됩니다. 각 `Axis` 요소는 해당 축의 튜플 집합을 나타내는 `Tuples` 요소를 포함합니다. 각 튜플은 축의 모든 계층에서 `Tuple` 요소를 포함하는 `Member` 요소를 사용하여 표시됩니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 `AxisFormat` 속성을 *TupleFormat*에서 축이 튜플 집합으로 표시 됩니다. 각 `Axis` 요소는 해당 축의 튜플 집합을 나타내는 `Tuples` 요소를 포함합니다. 각 튜플은 축의 모든 계층에서 `Tuple` 요소를 포함하는 `Member` 요소를 사용하여 표시됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 구조는 `Tuple` 요소는 클라이언트를 지정 하는 경우 *TupleFormat* 또는 *CustomFormat* 에 대 한는 `AxisFormat` 다음을 지정 하는 XMLA 속성인 축의 멤버:  
+ 다음 예제에서는의 구조를 보여 줍니다.는 `Tuple` 클라이언트를 지정 하는 경우 요소 *TupleFormat* 또는 *CustomFormat* 에 대 한는 `AxisFormat` XMLA 속성에 다음 축의 멤버:  
   
 |||||  
 |-|-|-|-|  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 33
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: b85c5ed853ce0ab4782e131bc215ac17def61a9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9ee4d93fb0bbc2d5f4db66fc960cecd26a61d79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323123"
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>활성 보조: 보조 복제본에 백업(Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 보조 복제본에서의 백업 작업 수행 지원이 포함됩니다. 백업 작업은 백업 압축과 함께 I/O 및 CPU에 상당한 부담을 줄 수 있습니다. 백업을 동기화되었거나 동기화 중인 보조 복제본으로 오프로드하면 계층 1 작업에 대한 주 복제본을 호스팅하는 서버 인스턴스에서 리소스를 사용할 수 있습니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "36181875"
   
      가용성 모드(동기 커밋 또는 비동기 커밋)에 관계없이 모든 복제본(주 또는 보조)에서 수행되는 로그 백업에 대해 일관된 로그 체인이 보장됩니다.  
   
--   보조 데이터베이스를 백업 하려면 보조 복제본을 주 복제본과 통신할 수 있어야 하며 이어야 합니다 `SYNCHRONIZED` 또는 `SYNCHRONIZING`합니다.  
+-   보조 데이터베이스를 백업 하려면 보조 복제본을 주 복제본과 통신할 수 있어야 합니다 및 여야 `SYNCHRONIZED` 또는 `SYNCHRONIZING`합니다.  
   
 ##  <a name="WhereBuJobsRun"></a> 백업 작업이 실행되는 위치 구성  
  보조 복제본에서 백업을 수행하여 주 프로덕션 서버에서 백업 작업을 오프로드하면 많은 이점이 있습니다. 그러나 보조 복제본에서 백업을 수행하면 백업 작업이 실행되어야 하는 위치를 결정하는 프로세스가 상당히 복잡해집니다. 이 문제를 해결하려면 백업 작업이 실행되는 위치를 다음과 같이 구성합니다.  

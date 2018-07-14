@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ed537c1070c8a2d382f7e883772d44a078ef208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b5b78b9bd82f9dcade48d653bf5bc2bdb3d6456
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235753"
 ---
 # <a name="view-the-cube-schema"></a>큐브 스키마 보기
   **큐브 디자이너** 에서 **큐브 구조** 탭의 **데이터 원본 뷰** 에는 큐브 스키마가 표시됩니다. 이 스키마는 큐브의 측정값과 차원이 파생된 원본 테이블 집합입니다. 모든 큐브 스키마는 해당 큐브의 측정값과 차원의 기반이 되는 하나 이상의 팩트 테이블과 하나 이상의 차원 테이블로 구성됩니다.  

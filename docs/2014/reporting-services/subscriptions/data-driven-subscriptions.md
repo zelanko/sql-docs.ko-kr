@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
@@ -16,13 +16,13 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 04a5269f5e809a6e17b5b2f50b122abebec17627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270319"
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
   데이터 기반 구독을 통해 런타임에 외부 데이터 원본에서 검색되는 동적 구독 데이터를 사용할 수 있습니다. 데이터 기반 구독에서는 구독이 정의될 때 사용자가 지정한 정적 텍스트와 기본값을 사용할 수도 있습니다. 데이터 기반 구독을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36092804"
   
 -   데이터 기반 구독 기능을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
--   구독 데이터의 경우 보고서 서버에 대한 스키마 정보를 제공할 수 있는 데이터 원본을 선택합니다. 지원되는 데이터 원본 유형의 예로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터, Oracle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 데이터, ODBC 데이터 원본 및 OLE DB 데이터 원본이 있습니다. 구독자 데이터 원본 요구 사항에 대 한 자세한 내용은 참조 [구독자 데이터에 외부 데이터 원본 사용 &#40;데이터 기반 구독&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)합니다.  
+-   구독 데이터의 경우 보고서 서버에 대한 스키마 정보를 제공할 수 있는 데이터 원본을 선택합니다. 지원되는 데이터 원본 유형의 예로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터, Oracle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 데이터, ODBC 데이터 원본 및 OLE DB 데이터 원본이 있습니다. 구독자 데이터 원본 요구 사항에 대 한 자세한 내용은 참조 하세요. [구독자 데이터에 외부 데이터 원본 사용 &#40;데이터 기반 구독&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)합니다.  
   
 ## <a name="working-with-data-driven-subscriptions"></a>데이터 기반 구독 작업  
  다음 항목은 데이터 기반 구독에 대한 추가 정보를 제공합니다.  

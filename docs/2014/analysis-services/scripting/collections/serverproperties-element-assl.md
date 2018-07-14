@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0c0d24c6e74aa88e2ea27582214345ac40671d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323093"
 ---
 # <a name="serverproperties-element-assl"></a>ServerProperties 요소(ASSL)
-  컬렉션을 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 와 관련 된 요소는 [서버](../objects/server-element-assl.md) 요소입니다.  
+  컬렉션을 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 와 관련 된 요소를 [Server](../objects/server-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

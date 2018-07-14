@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261519"
 ---
 # <a name="decision-trees-model-query-examples"></a>의사 결정 트리 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 의사 결정 트리 모델에 대한 내용 쿼리는 각 트리 수준의 사례 수에 대한 통계를 제공하거나 사례를 구분하는 규칙을 제공할 수 있습니다. 또한 예측 쿼리는 권장 사항, 분류 등을 생성하기 위해 모델을 새 데이터에 매핑합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  이 쿼리는 예측 가능한 특정 특성을 나타내는 최상위 트리 노드인 유형 2 노드를 모두 반환합니다.  
   
 > [!NOTE]  
->  열에서 `CHILDREN_CARDINALITY`, 동일한 이름의 MDX 예약 키워드와 구별 하기 위해 대괄호로 묶어야 합니다.  
+>  열 `CHILDREN_CARDINALITY`, 동일한 이름의 MDX 예약 키워드와 구별 하기 위해 대괄호로 묶어야 합니다.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -90,7 +90,7 @@ WHERE NODE_TYPE = 2
  다음 관련 쿼리는 이러한 5개 하위 그룹의 자식을 자식 노드의 특성 및 값 분포와 함께 반환합니다. 지지도, 확률 및 분산과 같은 통계는 중첩 테이블 `NODE_DISTRIBUTION`에 저장되므로 이 예에서는 `FLATTENED` 키워드를 사용하여 중첩 테이블 열을 출력합니다.  
   
 > [!NOTE]  
->  중첩된 테이블 열 이름인 `SUPPORT`, 동일한 이름의 예약된 키워드와 구별 하기 위해 대괄호로 묶어야 합니다.  
+>  중첩된 테이블 열 `SUPPORT`, 동일한 이름의 예약된 키워드와 구별 하기 위해 대괄호로 묶어야 합니다.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- 이 결과에서 알 수 있습니다는 고객의 자전거를 구입한 (`[Bike Buyer]` = 1), 1067 고객 들 명이 차량을 했으며 473 명의 고객이 3 대입니다.  
+ 이러한 결과 통해 확인할 수 있습니다 하는 고객의 자전거를 구입한 (`[Bike Buyer]` = 1), 중 1067 명이 하지 않았으며 473 3 대입니다.  
   
 ###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 모델에서 하위 트리 검색  
  자전거를 구입한 고객에 대한 추가 정보를 검색한다고 가정합니다. 다음 예와 같이 쿼리에 [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 함수를 사용하여 하위 트리에 대한 추가 세부 정보를 볼 수 있습니다. 이 쿼리는 트리에서 42세 이상인 고객을 포함하는 리프 노드(NODE_TYPE = 4)를 검색하여 자전거 구매자 수를 반환합니다. 이 쿼리는 중첩 테이블의 행을 Bike Buyer = 1인 행으로 제한합니다.  
@@ -185,7 +185,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 열 레이블 **Expression**을 사용하여 중첩 테이블을 반환합니다. 반환되는 열에 별칭을 지정하여 이 레이블을 변경할 수 있습니다. 이렇게 하면 별칭(이 경우 **Results**)이 열 제목과 중첩 테이블의 값 모두로 사용됩니다. 결과를 보려면 중첩 테이블을 확장해야 합니다.  
   
- 예의 결과 Bike Buyer = 1:  
+ 예제 결과 Bike Buyer = 1:  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  

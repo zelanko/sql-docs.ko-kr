@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a493991430d2777929e6b997b9f9697056658b41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9580e678aba6c8b556f84583af538df277c386a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263679"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>데이터베이스 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 데이터베이스 디자이너를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경하고 이 데이터베이스에서 생성된 경고를 검토할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36093634"
  **경고** 탭을 사용하여 규칙을 전역적으로 확인 및 해제하고 해제된 경고의 특정 인스턴스를 확인 및 다시 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [다차원 모델 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [다차원 Model 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

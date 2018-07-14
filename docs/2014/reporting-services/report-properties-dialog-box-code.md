@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c31cd76f1de4ffe7ec528f6040718bb4551669e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60d1ee37f078c5abdc4043ef5ea743c3e9e4f883
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272199"
 ---
 # <a name="report-properties-dialog-box-code"></a>보고서 속성 대화 상자, 코드
   **보고서 속성**대화 상자에서 **코드** 를 선택하여 보고서 내에서 식에 사용할 사용자 지정 코드를 정의할 수 있습니다.  

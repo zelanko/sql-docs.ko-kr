@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90837dc0aa815ab56d4f0f8f4b02bf277cd97bb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 248d5431a4f6015b03d5b2f99cec2e1a037d00c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265729"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services에서 지원하는 인증 방법
   클라이언트 응용 프로그램에서 Analysis Services 인스턴스에 연결하려면 Windows 인증(통합)이 필요합니다. 다음 방법 중 하나를 사용하여 Windows 사용자 ID를 제공할 수 있습니다.  

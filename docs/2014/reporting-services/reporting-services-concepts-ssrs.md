@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236303"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36181031"
  SharePoint 사이트에서 SharePoint 사이트 관리자 페이지를 사용하여 보고서 및 보고서 관련 사이트 콘텐츠에 대한 액세스 권한을 관리할 수 있습니다.  
   
  **일정**  
- 기본 보고서 서버에서 보고서 관리자에서 보고서, 공유 데이터 집합 및 구독을 특정 시간이나 사용량이 적은 시간에 데이터를 검색하고 보고서 및 데이터 집합 쿼리를 배달하도록 예약할 수 있습니다. 일정은 한 번 실행하거나 시간, 일, 주 또는 월 간격으로 계속 실행할 수 있습니다. 자세한 내용은 참조 [일정](subscriptions/schedules.md)합니다.  
+ 기본 보고서 서버에서 보고서 관리자에서 보고서, 공유 데이터 집합 및 구독을 특정 시간이나 사용량이 적은 시간에 데이터를 검색하고 보고서 및 데이터 집합 쿼리를 배달하도록 예약할 수 있습니다. 일정은 한 번 실행하거나 시간, 일, 주 또는 월 간격으로 계속 실행할 수 있습니다. 자세한 내용은 [일정](subscriptions/schedules.md)합니다.  
   
  **구독 및 배달**  
  구독은 특정 시간이나 이벤트에 대한 응답으로 구독에서 지정하는 응용 프로그램 파일 형식으로 보고서를 배달하라는 요청입니다. 요청 시 보고서를 실행하는 대신 구독할 수 있습니다. 요청 시 실행 보고서는 볼 때마다 사용자가 보고서를 선택해야 합니다. 반면 구독을 사용하면 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 전자 메일 받은 편지함이나 파일 공유 위치에 보고서를 배달할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "36181031"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 솔루션을 사용자 지정하는 데 사용할 수 있는 확장형 아키텍처를 제공합니다. 보고서 서버는 사용자 지정 인증 확장 프로그램, 데이터 처리 확장 프로그램, 보고서 처리 확장 프로그램, 렌더링 확장 프로그램, 배달 확장 프로그램 및 RSReportServer.config 구성 파일에서 사용자가 구성할 수 있는 확장 프로그램을 지원합니다. 예를 들어, 보고서 뷰어에서 사용할 수 있는 내보내기 형식을 제한할 수 있습니다. 배달 및 보고서 처리 확장 프로그램은 선택적이지만 보고서 배포 또는 사용자 지정 컨트롤을 지원하려는 경우에는 반드시 필요합니다. 자세한 내용은 [확장&#40;SSRS&#41;](extensions-ssrs.md)을 참조하세요.  
   
  **보고서 액세스**  
- 요청 시 액세스 방법을 사용할 경우 보고서 보기 도구에서 보고서를 선택할 수 있습니다. 보고서 서버 구성에 따라 보고서 관리자를 사용할 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 웹 파트, SharePoint 라이브러리 때 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 통합된 모드, 포함된 된 ReportViewer 컨트롤 또는 URL을 사용 하 여 브라우저에 설치 된 액세스 합니다. 요청 시 보고서 액세스에 대한 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 요청 시 액세스 방법을 사용할 경우 보고서 보기 도구에서 보고서를 선택할 수 있습니다. 보고서 서버 구성에 따라 보고서 관리자를 사용할 수는 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 웹 파트, SharePoint 라이브러리 때 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 통합된 모드, 포함된 된 ReportViewer 컨트롤 또는 URL을 사용 하 여 브라우저에 설치 된 액세스 합니다. 요청 시 보고서 액세스에 대한 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
  요청 시 보고서를 실행하는 대신 구독할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36181031"
   
 ##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> 보고서 및 관련 항목 개념  
  **보고서 및 보고서 정의**  
- **RDL 합니다.** 보고서 정의는 RDL(Report Definition Language)이라는 XML 문법에 맞는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서 작성기나 보고서 디자이너와 같은 도구에서 보고서 정의를 만듭니다. 이 파일은 데이터 원본 연결을 정의하는 요소, 데이터 검색에 사용되는 쿼리, 식, 매개 변수, 이미지, 입력란, 테이블 및 기타 디자인 타임 레이아웃을 제공합니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)을 참조하세요.  
+ **RDL입니다.** 보고서 정의는 RDL(Report Definition Language)이라는 XML 문법에 맞는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서 작성기나 보고서 디자이너와 같은 도구에서 보고서 정의를 만듭니다. 이 파일은 데이터 원본 연결을 정의하는 요소, 데이터 검색에 사용되는 쿼리, 식, 매개 변수, 이미지, 입력란, 테이블 및 기타 디자인 타임 레이아웃을 제공합니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)을 참조하세요.  
   
  **RDLX입니다.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(영문)를 참조하세요.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "36181031"
   
 -   **테이블.** 테이블은 데이터를 행 단위로 표시하는 데이터 영역입니다. 테이블의 열은 고정되어 있습니다. 열의 개수는 보고서를 디자인할 때 결정합니다. 그러나 테이블 행은 고정되지 않고 데이터에 맞게 아래쪽으로 확장됩니다. 테이블에 그룹을 추가하여 선택한 필드나 식으로 데이터를 구성할 수 있습니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
   
--   **행렬.** 행렬은 크로스탭이라고도 합니다. 행렬 데이터 영역에는 동적 열과 행이 모두 포함되며 데이터에 맞게 확장됩니다. 또한 행렬에는 동적 열과 행 및 정적 열과 행이 있을 수 있습니다. 열이나 행에 다른 열이나 행을 넣을 수 있으며 데이터를 그룹화하는 데 열이나 행을 사용할 수 있습니다. 자세한 내용은 참조 [행렬 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)합니다.  
+-   **행렬.** 행렬은 크로스탭이라고도 합니다. 행렬 데이터 영역에는 동적 열과 행이 모두 포함되며 데이터에 맞게 확장됩니다. 또한 행렬에는 동적 열과 행 및 정적 열과 행이 있을 수 있습니다. 열이나 행에 다른 열이나 행을 넣을 수 있으며 데이터를 그룹화하는 데 열이나 행을 사용할 수 있습니다. 자세한 내용은 [행렬 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)합니다.  
   
--   **목록.** 목록은 자유로운 형태로 정렬된 데이터를 표시하는 데이터 영역입니다. 보고서 항목을 정렬하여 목록 내의 어느 위치에나 입력란, 이미지 및 기타 데이터 영역을 포함하는 양식을 만들 수 있습니다. 자세한 내용은 참조 [나열 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  
+-   **목록.** 목록은 자유로운 형태로 정렬된 데이터를 표시하는 데이터 영역입니다. 보고서 항목을 정렬하여 목록 내의 어느 위치에나 입력란, 이미지 및 기타 데이터 영역을 포함하는 양식을 만들 수 있습니다. 자세한 내용은 [나열 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  
   
 -   **차트.** 차트는 데이터를 그래픽으로 표시합니다. 차트에는 가로 막대형, 원형 및 꺾은선형 차트가 있으며 이외에도 많은 스타일이 지원됩니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36181031"
  **하위 보고서**  
  하위 보고서는 보고서에 레이아웃 요소로 추가하는 보고서 항목입니다. 하위 보고서는 다른 보고서를 가리키며 이를 주 보고서 본문 안에 하위 보고서 인스턴스로 표시합니다. 하위 보고서는 주 보고서 이외에도 여러 데이터 원본을 사용할 수 있습니다. 하위 보고서의 각 인스턴스에서 데이터를 필터링하는 매개 변수를 사용하여 데이터 영역 내에서 하위 보고서를 반복할 수도 있지만 하위 보고서는 일반적으로 주 보고서에서 요약 책 또는 관련 보고서의 모음에 대한 컨테이너로 사용됩니다. 각 하위 보고서 인스턴스는 보고서 처리를 위해 주 보고서와 하위 보고서 간에 컨텍스트를 전환합니다. 하위 보고서 인스턴스가 많은 보고서의 경우 드릴다운 보고서 대신 드릴스루 보고서를 사용하는 것이 좋습니다. 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
- **/ 세부 정보 보고서 및 드릴스루 보고서**  
+ **주/세부 정보 보고서 및 드릴스루 보고서**  
  주 보고서/세부 정보 보고서 솔루션에는 하나 이상의 세부 정보 보고서로 연결되는 하이퍼링크와 함께 요약 정보를 표시하는 주 보고서가 포함됩니다.  세부 정보 보고서는 보고서를 읽는 사람이 해당 링크를 클릭하는 경우에만 실행됩니다. 드릴스루 보고서는 주 보고서와 별도로 열립니다. 하이퍼링크는 입력란, 자리 표시자 텍스트 또는 차트 계열과 같은 동작 속성이 있는 모든 보고서 항목에 정의할 수 있습니다. 자세한 내용은 [드릴스루 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/drillthrough-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
  **링크 된 보고서**  
@@ -186,7 +186,7 @@ ms.locfileid: "36181031"
   
 -   **클릭 광고 보고서입니다.** 클릭 광고 보고서는 모델 기반 보고서에 포함된 대화형 데이터를 클릭하면 보고서 모델의 관련 데이터를 표시하는 보고서입니다. 클릭 광고 보고서는 자동으로 생성됩니다. 자세한 내용은 [클릭 방문 보고서&#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)를 참조하세요.  
   
- SMDL 모델에 대 한 자세한 내용은 참조 [SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)합니다.  
+ SMDL 모델에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)합니다.  
   
  **저장 된 보고서**  
  저장된 보고서는 보고서 정의 파일(.rdl)입니다. 보고서 정의는 로컬에 저장하거나 보고서 서버에 업로드할 수 있습니다. 보고서 정의를 게시하는 대신 업로드하는 경우 버전 유효성 검사 또는 식 유효성 검사가 발생하지 않습니다. 보고서라 실행될 때까지 오류가 표시되지 않습니다. 자세한 내용은 [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)을(를) 참조하세요.  
@@ -219,7 +219,7 @@ ms.locfileid: "36181031"
  완전히 처리된 보고서는 보고서 렌더러로 전송되어 대상 렌더링 형식의 데이터와 레이아웃을 각 페이지에서 결합합니다. 렌더링 확장 프로그램은 사용자 지정이 가능하며 확장할 수 있습니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 자세한 내용은 [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 및 [확장&#40;SSRS&#41;](extensions-ssrs.md)를 참조하세요.  
   
  **내보낸된 보고서**  
- 내보낸 보고서는 특정 파일 형식으로 저장되고 완전히 페이지 매김된 보고서입니다. 내보내기 형식은 설치된 렌더링 확장 프로그램에 따라 다르며 사용자 지정할 수 있습니다. 기본적으로 내보내기 형식은 Excel, Word, XML, PDF, TIFF 및 CSV입니다. 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
+ 내보낸 보고서는 특정 파일 형식으로 저장되고 완전히 페이지 매김된 보고서입니다. 내보내기 형식은 설치된 렌더링 확장 프로그램에 따라 다르며 사용자 지정할 수 있습니다. 기본적으로 내보내기 형식은 Excel, Word, XML, PDF, TIFF 및 CSV입니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 기능 및 태스크 &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   

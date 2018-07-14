@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 655064d54334aa58d8e997c06c08e04a525f350b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfca955a9c6e2f27835cff6ae6af2531a4e743c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242673"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
   이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 배포를 한 SharePoint 환경에서 다른 SharePoint 환경으로 마이그레이션하는 데 필요한 단계에 대한 개요입니다. 마이그레이션하려는 원본 버전에 따라 특정 단계는 달라질 수 있습니다. SharePoint 모드에 대한 업그레이드 및 마이그레이션 시나리오에 대한 자세한 내용은 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하십시오. 다른 서버 간에 보고서 항목을 복사 하려는 경우 참조 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)합니다.  
@@ -43,14 +43,14 @@ ms.locfileid: "36092820"
  
   
 ##  <a name="bkmk_prior_versions"></a> SQL Server 2012 이전의 Reporting Services SharePoint 모드 버전에서 마이그레이션  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 응용 프로그램 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 이전 버전에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 참조 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 응용 프로그램 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 이전 버전에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
   
  새 SharePoint 환경이 실행 중이면 콘텐츠 데이터베이스가 포함된 데이터베이스 수준에서 콘텐츠 전용 마이그레이션 또는 전체 마이그레이션을 선택할 수 있습니다.  
   
 ###  <a name="bkmk_content_only_migration"></a> 콘텐츠 전용 마이그레이션  
  **Reporting Services 콘텐츠 전용 마이그레이션:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠를 새 팜으로 복사하려는 경우 **rs.exe** 와 같은 도구를 사용하여 콘텐츠를 새 SharePoint 설치에 복사해야 합니다. 콘텐츠 전용 마이그레이션에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 이 스크립트는 기본 모드와 SharePoint 모드의 보고서 서버 사이에 콘텐츠 및 리소스를 마이그레이션할 수 있습니다. 자세한 내용은 참조 [Sample Reporting Services rs.exe 스크립트 마이그레이션 보고서 서버 사이 콘텐츠를](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 및 [를 다른에한보고서서버에서콘텐츠를마이그레이션하는ReportingServicesRS.exe스크립트](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 이 스크립트는 기본 모드와 SharePoint 모드의 보고서 서버 사이에 콘텐츠 및 리소스를 마이그레이션할 수 있습니다. 자세한 내용은 [Sample Reporting Services rs.exe 스크립트 마이그레이션 콘텐츠 between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 고 [다른에하나의보고서서버에서콘텐츠를마이그레이션하는ReportingServicesRS.exe스크립트](http://azuresql.codeplex.com/releases/view/115207).  
   
 -   **Reporting Services 마이그레이션 도구:** 이 도구는 기본 모드 서버에서 SharePoint 모드 서버로 보고서 항목을 복사할 수 있습니다. 자세한 내용은 [Reporting Services 마이그레이션 도구](http://www.microsoft.com/download/details.aspx?id=29560)(영문)를 참조하세요.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36092820"
 |-|-------------|------------|-----------|  
 |**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 응용 프로그램에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 응용 프로그램과 URL을 나열합니다.<br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) 및 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
 |**2**|SQL 데이터베이스에 복원 된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스 (ReportServer).|SQL 데이터베이스 백업 및 복원<br /><br /> **또는**<br /><br /> SQL Server 데이터베이스 연결 및 분리|데이터베이스를 처음 사용하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 환경에서 사용할 수 있도록 필요에 따라 데이터베이스 스키마를 업데이트합니다.|  
-|**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|SharePoint 중앙 관리|새 서비스 응용 프로그램을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리를 사용 하 여에 대 한 자세한 내용은의 "단계 3:: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조 하십시오. [Reporting Services SharePoint 모드 설치 SharePoint 2013 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)합니다.<br /><br /> PowerShell 사용 예제가 필요한 경우 [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)(영문)의 "PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만드는 방법" 섹션을 참조하세요.|  
+|**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|SharePoint 중앙 관리|새 서비스 응용 프로그램을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리를 사용 하 여에 대 한 자세한 내용은에서 "단계 3:: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조 하세요 [Reporting Services SharePoint 모드 설치 SharePoint 2013 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)합니다.<br /><br /> PowerShell 사용 예제가 필요한 경우 [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)(영문)의 "PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만드는 방법" 섹션을 참조하세요.|  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 복원|단순한 파일 복사|파일 기본 위치의 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
 |**5**|복원 된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키입니다.|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 "SystemSettings" 페이지<br /><br /> **또는**<br /><br /> PowerShell을 사용하여 키 백업 파일 복원|[Reporting Services SharePoint 서비스 응용 프로그램 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md) 항목의 "키 관리" 섹션을 참조하세요.|  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36092820"
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 복원합니다.  
   
-     이 항목의 "키 관리" 섹션을 참조 [는 Reporting Services SharePoint 서비스 응용 프로그램 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+     항목의 "키 관리" 섹션을 참조 [Reporting Services SharePoint 서비스 응용 프로그램을 관리 합니다.](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 3.  서비스 응용 프로그램에 대한 UEA 및 Windows 자격 증명을 구성합니다.  
   

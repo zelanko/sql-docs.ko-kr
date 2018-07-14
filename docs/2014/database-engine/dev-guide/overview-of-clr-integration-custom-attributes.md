@@ -1,5 +1,5 @@
 ---
-title: CLR 통합 사용자 지정 특성의 개요 | Microsoft Docs
+title: CLR 통합 사용자 지정 특성 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], custom attributes
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b80a18cd026645fd036741d45794a12880f36b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2153277cbb0592b808fde3e0a8bec3a8ca582455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324943"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 통합 사용자 지정 특성 개요
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 CLR(공용 언어 런타임)에서는 특성이라고 하는 설명적 키워드를 사용할 수 있습니다. 이러한 특성은 메서드와 클래스 같은 많은 요소에 대한 추가적인 정보를 제공합니다. 특성은 개체의 메타데이터와 함께 어셈블리에 저장되며 다른 개발 도구를 위한 코드 설명이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 런타임 동작 제어에 사용될 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 CLR 루틴을 등록할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 루틴에 대한 속성 집합이 파생됩니다. 이러한 루틴 속성은 루틴에 대한 인덱싱 여부를 비롯한 루틴의 여러 가지 기능을 결정합니다. 예를 들어 `DataAccess` 속성을 `DataAccessKind.Read`로 설정하면 CLR 함수 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 테이블의 데이터에 액세스할 수 있습니다. 다음 예제는 간단한 사례가 나와 `DataAccess` 속성은 사용자 테이블에서 데이터에 액세스 **table1**합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 CLR 루틴을 등록할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 루틴에 대한 속성 집합이 파생됩니다. 이러한 루틴 속성은 루틴에 대한 인덱싱 여부를 비롯한 루틴의 여러 가지 기능을 결정합니다. 예를 들어 `DataAccess` 속성을 `DataAccessKind.Read`로 설정하면 CLR 함수 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 테이블의 데이터에 액세스할 수 있습니다. 다음 예제는 단순한 경우에서는 합니다 `DataAccess` 속성은 사용자 테이블에서 데이터 액세스를 용이 하 게 **table1**합니다.  
   
 ```csharp  
 using System;  

@@ -1,5 +1,5 @@
 ---
-title: 데이터와 메타 데이터의 큐브를 찾아보기 | Microsoft Docs
+title: 데이터 및 큐브 메타 데이터 찾아보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61d455c9de96eed430125a9f543ec7bfc72ab7c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288149"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>큐브에서 데이터 및 메타데이터 찾아보기
   큐브 디자이너의 **브라우저** 탭에서 큐브 데이터를 검색할 수 있습니다. 이 뷰를 사용하여 큐브의 구조를 검토하고 데이터베이스 개체의 데이터, 계산, 형식, 보안을 확인할 수 있습니다. 보고 도구 또는 기타 클라이언트 응용 프로그램에서 최종 사용자에게 큐브가 어떻게 표시되는지 신속하게 검토할 수 있습니다. 큐브 데이터를 검색할 때는 차원별로 데이터를 조회하고, 멤버를 드릴다운하고, 차원을 통해 데이터를 조각화할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36092975"
   
      \- 또는-  
   
--   에 **차원** 의 열은 **필터** 창에서 클릭  **\<차원 선택 >** 목록에서 차원을 선택한 다음 클릭  **\<계층 선택 >** 에 **계층** 목록에서 계층을 선택 합니다.  
+-   에 **차원** 열의 합니다 **필터** 창 클릭  **\<차원 선택 >** 목록에서 차원을 선택한 다음 클릭  **\<계층 선택 >** 에 **계층** 목록에서 계층을 선택 합니다.  
   
  계층을 지정한 후 연산자와 필터 식을 지정합니다. 다음 표에 연산자와 필터 식에 대한 설명이 나와 있습니다.  
   

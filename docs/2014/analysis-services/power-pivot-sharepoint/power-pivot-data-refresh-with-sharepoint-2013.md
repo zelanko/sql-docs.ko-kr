@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280779"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot Data Refresh with SharePoint 2013
   SharePoint 2013에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 새로 고치기 위한 디자인에서는 Excel Services를 기본 구성 요소로 사용하여 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 모델을 로드하고 새로 고칩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다.  
   
- 새로 고침 아키텍처는 이전 데이터를 로드 하 고 SharePoint 모드에서 데이터 모델을 새로 고칠 PowerPivot 시스템 서비스만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 PowerPivot 응용 프로그램 서버에서 로컬로 실행되었습니다. 새로운 아키텍처에는 일정 정보를 문서 라이브러리에서 통합 문서 항목의 메타 데이터로 유지 관리하는 새로운 방법도 추가되었습니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
+ 이전 데이터 새로 고침 아키텍처는 PowerPivot 시스템 서비스를 로드 하 고 SharePoint 모드에서 데이터 모델 새로 고침에 의존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 PowerPivot 응용 프로그램 서버에서 로컬로 실행되었습니다. 새로운 아키텍처에는 일정 정보를 문서 라이브러리에서 통합 문서 항목의 메타 데이터로 유지 관리하는 새로운 방법도 추가되었습니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36093201"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 자세한 내용은 참조 [운영 체제의 일부로 작동](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)합니다.  
+ 자세한 내용은 [운영 체제의 일부로 작동할](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)합니다.  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **예약된 데이터 새로 고침의 핵심 사항**  
   
--   SharePoint용 PowerPivot 추가 기능 배포가 필요합니다. 자세한 내용은 참조 [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
+-   SharePoint용 PowerPivot 추가 기능 배포가 필요합니다. 자세한 내용은 [를 설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
   
 -   사용자가 통합 문서에 대한 새로 고침 일정을 구성합니다. 예약된 시간에 PowerPivot 시스템 서비스가 Excel Services에 다음 요청을 보냅니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36093201"
   
 -   **자격 증명:** 저장된 자격 증명을 사용합니다. 현재 사용자의 ID를 사용하지 않습니다.  
   
--   **지원 되는 통합 문서:** 를 사용 하 여 만든 통합 문서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 추가 기능을 Excel 2010 또는 Excel 2013 용입니다. Excel 2010에서 만든 통합 문서는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 추가 기능에서 지원 되지 않습니다. 이상으로 통합 문서를 업그레이드 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 형식입니다. 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
+-   **지원 되는 통합 문서:** 를 사용 하 여 만든 통합 문서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 추가 기능에서 Excel 2010 또는 Excel 2013을 사용 합니다. Excel 2010에서 만든 통합 문서는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 추가 기능에서 지원 되지 않습니다. 통합 문서 이상으로 업그레이드 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 형식입니다. 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
   
  **데이터 새로 고침 관리** 페이지를 표시하려면  
   
@@ -167,15 +167,15 @@ ms.locfileid: "36093201"
   
     -   콘텐츠 데이터베이스에 통합 문서를 다시 저장합니다.  
   
- ![데이터 새로 고침 상황에 맞는 메뉴 관리](../media/as-manage-datarefresh-sharepoint2013.gif "데이터 새로 고침 상황에 맞는 메뉴를 관리 합니다.")  
+ ![데이터 새로 고침 상황에 맞는 메뉴를 관리할](../media/as-manage-datarefresh-sharepoint2013.gif "데이터 새로 고침 상황에 맞는 메뉴 관리")  
   
 > [!TIP]  
->  Online SharePoint에서 통합 문서 새로 고침에 대 한 정보를 참조 하십시오. [새로 고치면 Excel 통합 문서에서 포함 된 PowerPivot 모델로 SharePoint Online (백서)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx)합니다.  
+>  Online SharePoint에서 통합 문서 새로 고침에 대 한 정보를 참조 하세요 [SharePoint Online (백서)에서 포함 된 PowerPivot 모델을 사용 하 여 새로 고침 Excel 통합 문서](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx)합니다.  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013의 예약된 데이터 새로 고침 아키텍처  
  다음 그림에는 SharePoint 2013과 SQL Server 2012 SP1의 데이터 새로 고침 아키텍처가 요약되어 있습니다.  
   
- ![SQL Server 2012 SP1 데이터 새로 고침의 아키텍처](../media/as-scheduled-data-refresh2012sp1-architecture.gif "의 SQL Server 2012 SP1 데이터 새로 고침 아키텍처")  
+ ![SQL Server 2012 SP1 데이터 새로 고침 아키텍처](../media/as-scheduled-data-refresh2012sp1-architecture.gif "SQL Server 2012 SP1 데이터 새로 고침 아키텍처")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -198,7 +198,7 @@ ms.locfileid: "36093201"
   
 2.  대시보드 아래쪽에서 **데이터 새로 고침 - 최근 작업** 과 **데이터 새로 고침 - 최근 실패**를 봅니다.  
   
-3.  사용 현황 데이터 및 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 하십시오. [PowerPivot 관리 대시보드 및 사용 현황 데이터](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+3.  사용 현황 데이터 및 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
   
  **진단 로그 데이터:** 데이터 새로 고침과 관련된 SharePoint 진단 로그 데이터를 볼 수 있습니다. 먼저 SharePoint 중앙 관리 **모니터링** 페이지에서 **PowerPivot 서비스** 에 대한 진단 로깅 구성을 확인합니다. 로깅할 “최소 중요 이벤트”에 대한 로깅 수준을 높여야 할 수 있습니다. 예를 들어, 값을 **자세히** 로 임시 설정한 다음 데이터 새로 고침 작업을 다시 실행하세요.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "36093201"
   
 -   **데이터 새로 고침**의 범주  
   
- **진단 로깅 구성**을 검토합니다. 자세한 내용은 참조 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)합니다.  
+ **진단 로깅 구성**을 검토합니다. 자세한 내용은 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;SharePoint 용 PowerPivot&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)합니다.  
   
 ##  <a name="datarefresh_additional_authentication"></a> 인증에 대한 추가 고려 사항  
  Excel 2013의 **Excel Services 인증 설정** 대화 상자 설정에 따라 Excel Services와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 새로 고침에 사용하는 Windows ID가 결정됩니다.  
@@ -236,10 +236,10 @@ ms.locfileid: "36093201"
 ##  <a name="bkmk_moreinformation"></a> 자세한 정보  
  [PowerPivot 데이터 새로고침 문제해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [SharePoint 2013의 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15))합니다.  
+ [Excel 서비스에서 SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15))합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [통합 문서 및 예약 된 데이터 새로 고침 업그레이드 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [예약 된 데이터 새로 고침 및 통합 문서 업그레이드 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [SharePoint 2013용 PowerPivot 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7e8db71e82f25bb31afbe5a7a789df0af0a98ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 943974287b88249bbd277aa59bd4cccef36800a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325693"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>서버 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대해 실행한 쿼리로 생성된 행 집합의 XML 문서 서식을 서버 쪽에서 지정하는 방법을 설명합니다.  
@@ -55,11 +55,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- FOR XML 절에 대 한 자세한 내용은 참조 [For를 사용 하 여 XML](../../xml/for-xml-sql-server.md)합니다.  
+ FOR XML 절에 대 한 자세한 내용은 참조 하세요. [생성할 XML Using FOR X](../../xml/for-xml-sql-server.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처 &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [클라이언트 쪽 XML 서식을 &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
+ [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML&#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  
   
   

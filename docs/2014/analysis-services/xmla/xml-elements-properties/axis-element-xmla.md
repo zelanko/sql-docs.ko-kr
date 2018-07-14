@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263229"
 ---
 # <a name="axis-element-xmla"></a>Axis 요소(XMLA)
-  에 포함 된 다차원 데이터 집합의 단일 축을 나타내는 데 사용 되는 튜플 집합을 포함 한 [축](axes-element-xmla.md) 요소를 사용 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 [Execute](../xml-elements-methods-execute.md) 메서드.  
+  에 포함 된 다차원 데이터 집합의 단일 축을 나타내는 데 사용 되는 튜플의 집합을 포함를 [축](axes-element-xmla.md) 사용 하는 요소는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,18 +71,18 @@ ms.locfileid: "36092922"
  `Axis` 요소의 내용은 `AxisFormat` 메서드에 사용되는 `Execute` XMLA 속성의 값에 따라 달라집니다.  
   
 ## <a name="tupleformat"></a>TupleFormat  
- 클라이언트 응용 프로그램 설정 하는 경우는 `AxisFormat` 속성을 *TupleFormat*, 축이 튜플 집합을로 표시 됩니다. 각 `Axis` 요소는 해당 축의 튜플 집합을 나타내는 `Tuples` 요소를 포함합니다. 각 튜플은 축의 모든 계층에서 `Tuple` 요소를 포함하는 `Member` 요소를 사용하여 표시됩니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 `AxisFormat` 속성을 *TupleFormat*에서 축이 튜플 집합으로 표시 됩니다. 각 `Axis` 요소는 해당 축의 튜플 집합을 나타내는 `Tuples` 요소를 포함합니다. 각 튜플은 축의 모든 계층에서 `Tuple` 요소를 포함하는 `Member` 요소를 사용하여 표시됩니다.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- 클라이언트 응용 프로그램 설정 하는 경우는 `AxisFormat` 속성을 *ClusterFormat*, 각 축의 멤버가 각 클러스터는 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 나타내는 클러스터로 나누어집니다. 각 `Axis` 요소는 하나 이상의 `CrossProduct` 요소로 구성됩니다. 모든 `CrossProduct`요소에는 축의 각 계층에 대한 `Members`요소가 포함됩니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 `AxisFormat` 속성을 *ClusterFormat*, 각 축의 멤버가 클러스터로 나누어집니다 각 클러스터는 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 나타냅니다. 각 `Axis` 요소는 하나 이상의 `CrossProduct` 요소로 구성됩니다. 모든 `CrossProduct`요소에는 축의 각 계층에 대한 `Members`요소가 포함됩니다.  
   
 ## <a name="customformat"></a>CustomFormat  
- 클라이언트 응용 프로그램 설정 하는 경우는 `AxisFormat` 속성을 *CustomFormat*, 고 값이 처리 동일는 *TupleFormat* Analysis Services 인스턴스에서 값입니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 `AxisFormat` 속성을 *CustomFormat*, 처리 됩니다 동일 합니다 *TupleFormat* Analysis Services 인스턴스에서 값입니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="description"></a>Description  
- 다음 예제에서는의 구조는 `Axis` 클라이언트를 지정 하는 경우 요소 *TupleFormat* 또는 *CustomFormat* 에 대 한는 `AxisFormat` 다음을 지정 하는 XMLA 속성인 축의 멤버:  
+ 다음 예제에서는의 구조를 보여 줍니다.는 `Axis` 클라이언트를 지정 하는 경우 요소 *TupleFormat* 하거나 *CustomFormat* 에 대 한를 `AxisFormat` XMLA 속성에 다음 축의 멤버:  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36092922"
 ```  
   
 ### <a name="description"></a>Description  
- 다음 예제에서는의 구조는 `Axis` 클라이언트를 지정 하는 경우 요소 *ClusterFormat* 에 대 한는 `AxisFormat` 축에 대 한 다음과 같은 멤버를 제공 하는 XMLA 속성:  
+ 다음 예제에서는의 구조를 보여 줍니다.는 `Axis` 클라이언트를 지정 하는 경우 요소 *ClusterFormat* 에 대 한는 `AxisFormat` XMLA 속성에는 축의 멤버가 다음과 같은:  
   
 ||||||  
 |-|-|-|-|-|  

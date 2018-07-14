@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e51ba64f0c9793b4d3cb0b0485c636de1acee3b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbf61a735450551573d0c3b2f2a6f5542bb7dc97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271479"
 ---
 # <a name="data-flow-taps"></a>데이터 흐름 탭
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 런타임에 패키지의 데이터 흐름 경로에 데이터 탭을 추가 하 여 외부 파일에 출력 데이터 탭을 보낼 수 있는 새로운 기능을 소개 합니다. 이 기능을 사용하려면 프로젝트 배포 모델을 사용하여 SSIS 프로젝트를 SSIS 서버에 배포해야 합니다. 서버에 패키지를 배포한 후에는 패키지를 실행하기 전에 SSISDB 데이터베이스에 대해 T-SQL 스크립트를 실행하여 데이터 탭을 추가해야 합니다. 다음은 예제 시나리오입니다.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 런타임에 패키지의 데이터 흐름 경로에 데이터 탭을 추가 하 고 외부 파일에 데이터 탭의 출력에 전달할 수 있는 새 기능이 도입 되었습니다. 이 기능을 사용하려면 프로젝트 배포 모델을 사용하여 SSIS 프로젝트를 SSIS 서버에 배포해야 합니다. 서버에 패키지를 배포한 후에는 패키지를 실행하기 전에 SSISDB 데이터베이스에 대해 T-SQL 스크립트를 실행하여 데이터 탭을 추가해야 합니다. 다음은 예제 시나리오입니다.  
   
 1.  [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) 저장 프로시저를 사용하여 패키지의 실행 인스턴스를 만듭니다.  
   

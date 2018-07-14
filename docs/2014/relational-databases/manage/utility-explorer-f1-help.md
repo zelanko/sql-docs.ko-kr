@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15c92a525164cf2c8c2f89f2b3afb45bc47b70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 456bd7ca29338e2e78b57ffdd8f523e05da7ca1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271189"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
   다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "36182029"
 ## <a name="in-this-section"></a>섹션 내용  
  [유틸리티 대시보드 &#40;SQL Server 유틸리티&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [데이터 계층 응용 프로그램 세부 정보 배포 &#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [데이터 계층 응용 프로그램 세부 정보를 배포 &#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
  [관리 인스턴스 세부 정보 &#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   

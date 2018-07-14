@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251215"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 팜에 도메인 계정이 필요함(업그레이드 관리자)
   팜 환경용으로 구성되는 SharePoint 제품에서는 도메인 계정을 사용해야 합니다.  
@@ -43,13 +43,13 @@ ms.locfileid: "36173029"
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>구성 관리자에서 서비스 계정을 변경하려면  
   
-1.  **시작** 메뉴 선택 **모든 프로그램**, 클릭 하 고 **Microsoft SQL Server 2008 R2**합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**를 클릭 하 고 **Microsoft SQL Server 2008 R2**합니다.  
   
-2.  선택 **구성 도구**, 클릭 하 고 **Reporting Services 구성 관리자**합니다.  
+2.  선택 **구성 도구**를 클릭 하 고 **Reporting Services 구성 관리자**합니다.  
   
-3.  Configuration Manager에서 선택 된 **서비스 계정** 탭 합니다.  
+3.  Configuration Manager에서 선택 합니다 **서비스 계정** 탭 합니다.  
   
-4.  선택 **다른 계정을 사용 하 여** 도메인 계정의 자격 증명을 입력 하 고 있습니다.  
+4.  선택 **다른 계정을 사용 하 여** 도메인 계정의 자격 증명을 입력 합니다.  
   
 5.  **적용**을 클릭합니다.  
   

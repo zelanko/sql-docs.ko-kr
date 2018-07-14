@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a263e00df1978f09a77a4eeebbf90f0059fb2590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8837cb450313df1c72a255a12fe0f26e29c941f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279855"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
   이 항목에서는 업그레이드 프로세스를 준비하고 이해하는 데 필요한 다음과 같은 정보를 제공합니다.  
@@ -106,12 +106,12 @@ ms.locfileid: "36181153"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 업그레이드할 수 있습니다.  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>업그레이드 후 데이터베이스 호환성 수준  
- 호환성 수준이 `tempdb`, `model`, `msdb` 및 **리소스** 데이터베이스는 업그레이드 후 120으로 설정 합니다. `master` 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.  
+ 호환성 수준이 합니다 `tempdb`, `model`를 `msdb` 및 **리소스** 데이터베이스는 업그레이드 후 120으로 설정 합니다. `master` 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.  
   
  사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드 이전에 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.  
   
 > [!NOTE]  
->  새 사용자 데이터베이스의 호환성 수준을 상속 합니다는 `model` 데이터베이스입니다.  
+>  새 사용자 데이터베이스의 호환성 수준을 상속 합니다 `model` 데이터베이스입니다.  
   
 ## <a name="migrating-databases"></a>데이터베이스 마이그레이션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 백업 및 복원 기능이나 분리 및 연결 기능을 사용하여 사용자 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 이동할 수 있습니다. 자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) 또는 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
@@ -136,9 +136,9 @@ ms.locfileid: "36181153"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 생성되어 분할된 테이블 및 인덱스에 대한 쿼리에 적용되는 USE PLAN 힌트의 유효성을 검사하거나 이러한 힌트를 제거합니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 분할 된 테이블 및 인덱스에 대 한 쿼리의 처리 방법이 달라졌습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 생성된 계획에 USE PLAN 힌트를 사용하는 분할된 개체에 대한 쿼리에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용할 수 없는 계획이 포함될 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 다음 절차를 수행하는 것이 좋습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 분할 된 테이블 및 인덱스에 대 한 쿼리의 처리 방법이 달라졌습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 생성된 계획에 USE PLAN 힌트를 사용하는 분할된 개체에 대한 쿼리에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용할 수 없는 계획이 포함될 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 다음 절차를 수행하는 것이 좋습니다.  
   
-     **USE PLAN 힌트에 쿼리에 직접 지정 된 경우:**  
+     **직접 쿼리에서 USE PLAN 힌트를 지정 된 경우:**  
   
     1.  쿼리에서 USE PLAN 힌트를 제거합니다.  
   

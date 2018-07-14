@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting member permissions [Master Data Services]
 - members [Master Data Services], deleting permissions
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 84a342b21ade4e6f241f98545f3b669d0f30d2c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a7c8af9574730f64492e0b3288a23ae94e2cbc7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235253"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체 사용 권한을 삭제하여 모든 할당을 제거합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36181628"
   
 6.  **버전** 목록에서 버전을 선택합니다.  
   
-7.  에 **계층 멤버 권한 요약** 창에서 삭제 하려는 사용 권한의 행을 선택 합니다.  
+7.  에 **계층 멤버 권한 요약** 창 삭제 하려는 사용 권한의 행을 선택 합니다.  
   
 8.  클릭 **선택한 사용 권한 삭제**합니다.  
   

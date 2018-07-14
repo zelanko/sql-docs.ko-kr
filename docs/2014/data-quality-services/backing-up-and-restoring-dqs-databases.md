@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6403dd558991a38bfad6e89224ba3b93d60c57eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c12611f98ce2309e2102f2cd8134659a6534ace5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235653"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
   이 항목에서는 DQS 데이터베이스를 백업 및 복원하는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36181877"
   
 -   DQS를 설치할 때 제공한 데이터베이스 마스터 키에 대한 암호를 알고 있어야 합니다.  
   
--   DQS에서 실행 중인 작업이나 프로세스가 없는지 확인합니다. 이는 **작업 모니터링** 화면을 사용하여 확인할 수 있습니다. 이 화면을 사용 하는 방법에 대 한 자세한 내용은 참조 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)합니다.  
+-   DQS에서 실행 중인 작업이나 프로세스가 없는지 확인합니다. 이는 **작업 모니터링** 화면을 사용하여 확인할 수 있습니다. 이 화면에서 작업 하는 방법에 대 한 자세한 내용은 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)합니다.  
   
 -   DQS 서버에 로그온한 사용자가 없는지 확인합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36181877"
   
 6.  SQL Server의 현재 인스턴스에 대한 연결을 끊고 이러한 데이터베이스를 복원할 SQL Server 인스턴스에 연결합니다.  
   
-7.  DQS_MAIN 데이터베이스를 복원합니다. SQL Server 데이터베이스를 복원 하는 단계별 지침은 참조 하십시오. [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)합니다.  
+7.  DQS_MAIN 데이터베이스를 복원합니다. SQL Server 데이터베이스를 복원 하는 단계별 지침은 참조 하세요 [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)합니다.  
   
 8.  DQS_PROJECTS 데이터베이스를 복원합니다.  
   

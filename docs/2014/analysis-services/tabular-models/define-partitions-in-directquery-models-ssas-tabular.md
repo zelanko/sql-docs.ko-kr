@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269689"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>파티션 및 DirectQuery 모드(SSAS 테이블 형식)
   이 섹션에서는 DirectQuery 모델에서 파티션을 사용하는 방법에 대해 설명합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)을 참조하세요.  
   
- 사용 되는 파티션을 변경 하는 방법 또는 파티션에 대 한 정보 보기에 대 한 지침을 참조 하십시오. [DirectQuery 파티션 변경 &#40;SSAS 테이블 형식&#41;](../change-the-directquery-partition-ssas-tabular.md)합니다.  
+ 파티션에 대 한 정보 보기 및 사용 되는 파티션을 변경 하는 방법에 지침은 [DirectQuery 파티션 변경 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../change-the-directquery-partition-ssas-tabular.md)합니다.  
   
 ## <a name="using-partitions-in-directquery-mode"></a>DirectQuery 모드에서 파티션 사용  
  각 테이블에 대해 DirectQuery 데이터 원본으로 사용할 단일 파티션을 지정해야 합니다.  여러 파티션이 있는 경우에는 DirectQuery 모드를 사용할 수 있도록 모델을 전환하면 기본적으로 테이블에 처음 만들어진 파티션이 DirectQuery 파티션으로 플래그가 지정됩니다. 나중에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자를 사용하여 이를 변경할 수 있습니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "36181882"
 |InMemory With DirectQuery|파티션을 처리하도록 허용|모델이 혼합 모드를 사용 중인 경우 메모리 내 모델에 대한 쿼리와 DirectQuery 데이터 원본에 대한 쿼리에 대해 동일한 파티션을 사용해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
+ [파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
   
   

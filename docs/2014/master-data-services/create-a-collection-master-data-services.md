@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a278341b6ce997a6bad9b84e8e411d719c09c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 84641634751ff54ee5af2f494e548d6dac193981
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227713"
 ---
 # <a name="create-a-collection-master-data-services"></a>컬렉션 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 리프 멤버 및 통합 멤버의 기본 목록을 만들려는 경우 컬렉션을 만듭니다. 엔터티의 모든 멤버를 컬렉션에 포함할 필요는 없습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36182292"
   
 -   엔터티의 컬렉션 모델 개체에 대한 **업데이트** 이상의 권한이 있어야 합니다.  
   
--   명시적 계층 및 컬렉션에 엔터티가 사용되어야 합니다. 자세한 내용은 참조 [명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)합니다.  
+-   명시적 계층 및 컬렉션에 엔터티가 사용되어야 합니다. 자세한 내용은 [명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)합니다.  
   
 ### <a name="to-create-a-collection"></a>컬렉션을 만들려면  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280429"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36093359"
   
 -   Foreach File 열거자는 폴더의 파일을 열거합니다. 열거자는 하위 폴더를 포함할 수 있습니다. 예를 들어 Windows 폴더 및 하위 폴더에서 파일 이름 확장명이 *.log인 모든 파일을 읽을 수 있습니다.  
   
--   Foreach From Variable 열거자는 지정한 변수에 포함된 열거 가능 개체를 열거합니다. 열거 가능한 개체에는 배열, ADO.NET 수 `DataTable`, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 열거자, 및 기타 등등. 예를 들어 서버 이름을 포함하는 배열 값을 열거할 수 있습니다.  
+-   Foreach From Variable 열거자는 지정한 변수에 포함된 열거 가능 개체를 열거합니다. 열거 가능 개체는 배열, ADO.NET 수 `DataTable`, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 열거자 및 등입니다. 예를 들어 서버 이름을 포함하는 배열 값을 열거할 수 있습니다.  
   
 -   Foreach Item 열거자는 컬렉션 항목을 열거합니다. 예를 들어 프로세스 실행 태스크가 사용하는 실행 파일 이름 및 작업 디렉터리를 열거할 수 있습니다.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36093359"
   
 -   Azure 저장소의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
   
--   ADLS Foreach File 열거자 ADLS 디렉터리에 파일을 열거 합니다.
+-   Foreach ADLS File 열거자는 ADLS 디렉터리의 파일을 열거 합니다.
   
  다음 다이어그램에서는 파일 시스템 태스크가 있는 Foreach 루프 컨테이너를 보여 줍니다. Foreach 루프는 Foreach File 열거자를 사용하며 파일 시스템 태스크는 파일을 복사하도록 구성되어 있습니다. 열거자가 지정한 폴더에 4개 파일이 들어 있으면 루프가 4번 반복되어 4개 파일이 복사됩니다.  
   
  ![폴더를 열거하는 Foreach 루프 컨테이너](../media/ssis-foreachloop.gif "폴더를 열거하는 Foreach 루프 컨테이너")  
   
- 변수 및 속성 식의 조합을 사용하여 패키지 개체의 속성을 열거자 컬렉션 값으로 업데이트할 수 있습니다. 먼저 컬렉션 값을 사용자 정의 변수에 매핑한 다음 이 변수를 사용하는 속성 식을 속성에 구현합니다. 예를 들어 Foreach File 열거자의 컬렉션 값 이라는 변수에 매핑됩니다은 `MyFile` 한 변수는 다음 메일 보내기 태스크의 Subject 속성에 대 한 속성 식에 사용 됩니다. 패키지를 실행하면 루프가 반복될 때마다 Subject 속성이 파일 이름으로 업데이트됩니다. 자세한 내용은 [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md)을 참조하세요.  
+ 변수 및 속성 식의 조합을 사용하여 패키지 개체의 속성을 열거자 컬렉션 값으로 업데이트할 수 있습니다. 먼저 컬렉션 값을 사용자 정의 변수에 매핑한 다음 이 변수를 사용하는 속성 식을 속성에 구현합니다. Foreach File 열거자 컬렉션 값 이라는 변수에 매핑되는 예를 들어 `MyFile` 한 변수는 다음 메일 보내기 태스크의 Subject 속성에 대 한 속성 식에 사용 됩니다. 패키지를 실행하면 루프가 반복될 때마다 Subject 속성이 파일 이름으로 업데이트됩니다. 자세한 내용은 [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
  열거자 컬렉션 값에 매핑된 변수를 식과 스크립트에 사용할 수도 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36093359"
 |Foreach Item|열과 열 데이터 형식을 포함하여 Foreach Item 컬렉션의 항목 정의|  
 |Foreach Nodelist|XML 문서의 원본 지정 및 XPath 작업 구성|  
 |Foreach SMO|데이터베이스에 대한 연결과 열거할 SMO 개체 지정|  
-|Foreach Azure Blob|Blob을 열거할 수를 포함 하는 Azure blob 컨테이너를 지정 합니다.|  
+|Foreach Azure Blob|열거할 blob이 포함 된 Azure blob 컨테이너를 지정 합니다.|  
 |Foreach ADLS 파일|일부 필터와 함께 열거할 파일을 포함 하는 ADLS 디렉터리를 지정 합니다.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Foreach 루프 컨테이너의 속성 식  

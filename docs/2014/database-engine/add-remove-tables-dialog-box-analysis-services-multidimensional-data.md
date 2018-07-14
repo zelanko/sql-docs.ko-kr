@@ -1,5 +1,5 @@
 ---
-title: 추가 기능 제거 테이블 대화 상자 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 테이블 대화 상자 (Analysis Services-다차원 데이터)를 추가 / 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69e54f8696aa69d35fca6bb00d160520107411cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235673"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>추가 기능 제거 테이블 대화 상자 (Analysis Services-다차원 데이터)
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>테이블 대화 상자 (Analysis Services-다차원 데이터)를 추가 / 제거 합니다.
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **테이블 추가/제거** 대화 상자를 사용하여 데이터 원본의 테이블을 데이터 원본 뷰에서 추가 또는 제거할 수 있습니다. 다음을 수행하여 **테이블 추가/제거** 대화 상자를 표시할 수 있습니다.  
   
 -   **데이터 원본 뷰 디자이너**의 **도구 모음** 창에서 **개체 추가/제거**를 클릭합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36093827"
  **포함된 개체**에서 선택한 테이블과 관련된 모든 테이블을 추가하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [데이터 원본 뷰 디자이너 &#40;Analysis Services-다차원 데이터&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

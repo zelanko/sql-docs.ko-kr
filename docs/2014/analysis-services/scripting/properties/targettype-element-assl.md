@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4a36c4ca0e38fe00990f2185685205840eafc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b21033bb9a7e20923adccfa135475cf93dafb7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237563"
 ---
 # <a name="targettype-element-assl"></a>TargetType 요소(ASSL)
-  식별 된 항목의 유형을 식별 된 [대상](target-element-assl.md) 요소입니다.  
+  식별 된 항목 유형을 식별 합니다 [대상](target-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36182106"
   
  AMO(Analysis Management Objects) 개체 모델에서 `TargetType`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.ActionTargetType>입니다.  
   
- 부모에 해당 하는 요소 `TargetType` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
+ 부모에 해당 하는 요소가 `TargetType` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

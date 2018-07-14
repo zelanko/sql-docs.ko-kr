@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication]
 - administering replication, restoring
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - administering replication, backing up
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 35570f9248b53589e521480b29d44daa8280fee1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ec33d7601d8f68096152e6ef5e9cac35715f53bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264669"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>복제된 데이터베이스 백업 및 복원
   복제된 데이터베이스의 경우 데이터를 백업 및 복원할 때 특별히 주의를 기울여야 합니다. 이 항목에서는 각 복제 유형의 백업 및 복원 전략에 대한 기초 정보와 추가 정보 링크를 제공합니다.  

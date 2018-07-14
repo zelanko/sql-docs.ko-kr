@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b56892d08db64ee49dd31eeb46359d523d1fca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238783"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
   *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사된 이벤트는 이벤트 로그 또는 감사 파일에 쓸 수 있습니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "36092631"
 > [!IMPORTANT]  
 >  허가 받은 사용자는 Windows 응용 프로그램 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 응용 프로그램 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
   
- Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008을 설정할 수 있습니다 더 세분화 **생성 된 응용 프로그램** 감사 정책 프로그램을 사용 하 여 명령줄에서 정책 (`AuditPol.exe)`합니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](http://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](http://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
+ Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008을 설정할 수 있습니다 보다 세부적인 **생성 된 응용 프로그램** 감사 정책 프로그램을 사용 하 여 명령줄에서 정책 (`AuditPol.exe)`합니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](http://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](http://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 다음과 같은 방법으로 파일 위치에 대한 액세스를 제한할 수 있습니다.  
   
@@ -123,14 +122,14 @@ ms.locfileid: "36092631"
 ### <a name="database-mirroring-and-sql-server-audit"></a>데이터베이스 미러링 및 SQL Server Audit  
  데이터베이스 감사 사양이 정의되어 있고 데이터베이스 미러링을 사용하는 데이터베이스는 데이터베이스 감사 사양을 포함합니다. 미러링된 SQL 인스턴스에서 올바르게 작동하려면 다음 항목을 구성해야 합니다.  
   
--   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이 CREATE AUDIT WITH GUID 명령을 사용 하 여 구성할 수 있습니다`=`*\<원본 서버 감사의 GUID*> 합니다.  
+-   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이 CREATE AUDIT WITH GUID 명령을 사용 하 여 구성할 수 있습니다`=`*\<원본 서버 감사의 GUID*>.  
   
 -   이진 파일 대상의 경우 미러 서버 서비스 계정에 감사 내역이 작성될 위치에 대한 적절한 권한이 있어야 합니다.  
   
 -   Windows 이벤트 로그 대상의 경우 미러 서버가 위치한 컴퓨터의 보안 정책이 보안 또는 응용 프로그램 이벤트 로그에 대한 서비스 계정 액세스를 허용해야 합니다.  
   
 ### <a name="auditing-administrators"></a>감사 관리자  
- 멤버는 `sysadmin` 고정된 서버 역할으로 식별 됩니다는 **dbo** 각 데이터베이스의 사용자입니다. 관리자 작업을 감사하기 위해서는 **dbo** 사용자의 작업을 감사합니다.  
+ 멤버는 `sysadmin` 고정된 서버 역할으로 식별 됩니다 합니다 **dbo** 각 데이터베이스의 사용자입니다. 관리자 작업을 감사하기 위해서는 **dbo** 사용자의 작업을 감사합니다.  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Transact-SQL로 감사 생성 및 관리  
  DDL 문, 동적 관리 뷰/함수 및 카탈로그 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 모든 측면을 구현할 수 있습니다.  

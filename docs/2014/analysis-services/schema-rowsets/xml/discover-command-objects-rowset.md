@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53fccdecc824bd123312a881c1ddcdbcae6060a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261199"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 행 집합
   참조된 명령에서 사용 중인 개체에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36093196"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_COMMAND_OBJECTS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_COMMAND_OBJECTS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

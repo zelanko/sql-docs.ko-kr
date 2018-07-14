@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f14f743b09d23619a89ade34726ff346590b081
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fafdf3ff7c4b04f08d2c8d640566b3bf9cfdfc4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275379"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크는 큐브 및 차원과 같은 다차원 개체와 마이닝 모델을 만들거나 삭제 또는 변경할 수 있는 DDL(데이터 정의 언어) 문을 실행합니다. 예를 들어 DDL 문은 **Adventure Works** 큐브에 파티션을 만들거나 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]에 포함된 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 차원을 삭제할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36093128"
 ## <a name="ddl-statements"></a>DDL 문  
  DDL 문은 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 문으로 표현되고 XML for Analysis(XMLA) 명령에 포함됩니다.  
   
--   ASSL은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 이 인스턴스에 포함된 데이터베이스 및 데이터베이스 개체를 정의하고 설명하는 데 사용합니다. 자세한 내용은 참조 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)합니다.  
+-   ASSL은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 이 인스턴스에 포함된 데이터베이스 및 데이터베이스 개체를 정의하고 설명하는 데 사용합니다. 자세한 내용은 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)합니다.  
   
 -   XMLA는 만들기, 변경 또는 처리와 같은 동작 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 보내는 데 사용하는 명령 언어입니다. 자세한 내용은 [XMLA&#40;XML for Analysis&#41; 참조](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)를 참조하세요.  
   

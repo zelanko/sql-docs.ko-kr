@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editgroup.f1
 - sql12.swb.newgroup.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bdec272826760d43ef15067794d18d6602659b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 40ed6877480c425fc8219779474c71b3feca1a90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253415"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>서버 그룹 만들기 또는 편집(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 서버 그룹을 만들고 등록된 서버를 서버 그룹에 배치하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 언제든지 등록된 서버에서 서버 그룹을 만들고, 또한 서버를 등록할 때 서버 그룹을 만들 수도 있습니다.  

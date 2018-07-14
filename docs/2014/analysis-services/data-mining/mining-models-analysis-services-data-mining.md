@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 203295e2c3c45c5e9d67228e5009bc130d0d49eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ea9bf0ccedda65e75928aa4cca94e65e3901d4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228383"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
   *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.  
@@ -94,9 +94,9 @@ ms.locfileid: "36181217"
   
  또한 각 마이닝 모델에는 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 및 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>라는 두 특수 속성이 있습니다.  
   
--   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 와 함께 제공 되는 알고리즘 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 참조 [Data Mining Algorithms &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)합니다. `Algorithm` 속성은 마이닝 모델에 적용되고 각 모델에 대해 한 번만 설정될 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.  
+-   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 포함 된 알고리즘 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 참조 하세요 [Data Mining Algorithms &#40;&#40;analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md). `Algorithm` 속성은 마이닝 모델에 적용되고 각 모델에 대해 한 번만 설정될 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.  
   
--   **Usage 속성** 모델에서 각 열이 사용되는 방법을 정의합니다. 으로 열 용도 정의할 수 `Input`, `Predict`, `Predict Only`, 또는 `Key`합니다. `Usage` 속성은 개별 마이닝 모델 열에 적용되고 모델에 포함되어 있는 각 열에 대해 개별적으로 설정되어야 합니다. 구조에 모델에서 사용하지 않는 열이 포함되어 있는 경우 사용이 `Ignore`로 설정됩니다. 마이닝 구조에 포함되지만 분석에 사용되지 않는 데이터의 예로는 고객 이름, 전자 메일 주소 등이 있습니다. 이렇게 하면 분석 단계에서 데이터를 포함시키지 않고 나중에 해당 데이터를 쿼리할 수 있습니다.  
+-   **Usage 속성** 모델에서 각 열이 사용되는 방법을 정의합니다. 열 사용법을 정의할 수 있습니다 `Input`, `Predict`를 `Predict Only`, 또는 `Key`합니다. `Usage` 속성은 개별 마이닝 모델 열에 적용되고 모델에 포함되어 있는 각 열에 대해 개별적으로 설정되어야 합니다. 구조에 모델에서 사용하지 않는 열이 포함되어 있는 경우 사용이 `Ignore`로 설정됩니다. 마이닝 구조에 포함되지만 분석에 사용되지 않는 데이터의 예로는 고객 이름, 전자 메일 주소 등이 있습니다. 이렇게 하면 분석 단계에서 데이터를 포함시키지 않고 나중에 해당 데이터를 쿼리할 수 있습니다.  
   
  마이닝 모델을 만든 후 마이닝 모델 속성의 값을 변경할 수 있습니다. 그러나 마이닝 모델의 이름을 포함하여 어떤 속성이든 변경할 경우에는 해당 모델을 다시 처리해야 합니다. 모델을 다시 처리한 후에는 다른 결과가 표시될 수 있습니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36181217"
   
 |항목|링크|  
 |------------|-----------|  
-|여러 마이닝 모델을 지원할 수 있는 마이닝 구조를 작성하는 방법에 대해 알아봅니다. 모델의 열 사용법에 대해 알아봅니다.|[마이닝 구조 열](mining-structure-columns.md)<br /><br /> [마이닝 모델 열](mining-model-columns.md)<br /><br /> [콘텐츠 형식을 &#40;데이터 마이닝&#41;](content-types-data-mining.md)|  
+|여러 마이닝 모델을 지원할 수 있는 마이닝 구조를 작성하는 방법에 대해 알아봅니다. 모델의 열 사용법에 대해 알아봅니다.|[마이닝 구조 열](mining-structure-columns.md)<br /><br /> [마이닝 모델 열](mining-model-columns.md)<br /><br /> [콘텐츠 형식 &#40;데이터 마이닝&#41;](content-types-data-mining.md)|  
 |선택한 알고리즘이 모델 콘텐츠에 미치는 영향과 다른 알고리즘에 대해 알아봅니다.|[마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |컴퍼지션과 동작에 영향을 미치는 모델에 대한 속성을 설정하는 방법에 대해 알아봅니다.|[마이닝 모델 속성](mining-model-properties.md)<br /><br /> [모델링 플래그 &#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
 |데이터 마이닝에 대한 프로그래밍 가능한 인터페이스에 대해 알아봅니다.|[Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)|  

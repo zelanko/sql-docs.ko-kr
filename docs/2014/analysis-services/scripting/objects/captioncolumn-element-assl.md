@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58d10ce00adaa3593f50be99383bdfbdbee14441
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273349"
 ---
 # <a name="captioncolumn-element-assl"></a>CaptionColumn 요소(ASSL)
   특성의 캡션을 제공하는 열을 정의합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36181432"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 입력을 참조 하십시오. [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 자세한 내용은 합니다 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- 부모에 해당 하는 요소 `CaptionColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributeTranslation>합니다.  
+ 부모에 해당 하는 요소가 `CaptionColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributeTranslation>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개체 &#40;ASSL&#41;](objects-assl.md)  

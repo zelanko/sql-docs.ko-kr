@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19d96e9f589a9a83d4d31c5b7b1dfb9c37f29633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224063"
 ---
 # <a name="calculationreference-element-assl"></a>CalculationReference 요소(ASSL)
-  명명 된 집합 또는 계산된 셀에서 참조의 이름이 고 [CalculationProperty](../objects/calculationproperty-element-assl.md)합니다.  
+  명명 된 집합 또는에서 참조 하는 계산된 셀의 이름을 포함 합니다 [CalculationProperty](../objects/calculationproperty-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36093393"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36093393"
 ## <a name="remarks"></a>Remarks  
  `CalculationReference` 값이 기존의 명명된 집합 또는 계산 셀 정의의 이름과 일치하지 않으면 `CalculationReference`가 무시됩니다.  
   
- 부모에 해당 하는 요소 `CalculationReference` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
+ 부모에 해당 하는 요소가 `CalculationReference` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

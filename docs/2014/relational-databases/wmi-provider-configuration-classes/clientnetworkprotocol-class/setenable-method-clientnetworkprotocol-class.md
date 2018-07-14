@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c158c2340731253e6e8595e6e83e4dbcc1c85c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 08bfe6c8c37700ba8b706bb26ccbe7e42d2f3a9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280809"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 메서드(ClientNetworkProtocol 클래스)
-  지정한 클라이언트 네트워크 프로토콜 설정의 [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)합니다.  
+  지정 된 클라이언트 네트워크 프로토콜을 사용 하도록 설정 합니다 [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ClientNetworkProtocol 클래스](clientnetworkprotocol-class.md) 에서 사용 하는 네트워크 프로토콜을 나타내는 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
+ A [ClientNetworkProtocol 클래스](clientnetworkprotocol-class.md) 사용 되는 네트워크 프로토콜을 나타내는 개체를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  

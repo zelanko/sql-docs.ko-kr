@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0d5e7c55b8040496e0714acd98bb81d37c602bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255795"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 집합 속성 대화 상자, 옵션(보고서 작성기)
   **데이터 집합속성** 대화 상자에서 **옵션** 을 선택하여 데이터 정렬 옵션 및 부분합을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/collations/collation-and-unicode-support.md) 에서 [데이터 정렬 및 유니코드 지원](http://go.microsoft.com/fwlink/?linkid=98335)을 참조하세요.  
@@ -49,7 +49,7 @@ ms.locfileid: "36172117"
  전자/반자 구분을 결정하는 값을 선택합니다. 이 옵션은 데이터가 전자/반자를 구분하는지 여부를 나타내며 **True**, **False**또는 **Auto**로 설정할 수 있습니다. 기본값인 **Auto**로 설정하면 보고서가 실행될 때 보고서 서버가 데이터 공급자로부터 값을 가져와야 합니다. 데이터 공급자가 전자/반자 구분 형식을 지원하지 않는 경우에는 이 값이 **False**인 것처럼 보고서가 실행됩니다. 지원되는 값을 알고 있는 경우 **True**를 선택합니다.  
   
  **부분합을 정보 행으로 해석**  
- 부분합 행을 집계 행이 아니라 정보 행으로 해석할지 여부를 나타내는 값을 선택합니다. 기본 값, **자동**, 보고서를 사용 하지 않는 경우 부분합 행 정보 행으로 처리 해야 함을 나타냅니다는 `Aggregate`() 함수가 데이터 집합 필드에에서 액세스할 수 있습니다. 부분합 행을 집계 행으로 해석하려면 **False**를 선택합니다. 부분합 행 정보 행으로 해석 되도록 하 고 사용 하지 않도록 알고 있는 경우는 `Aggregate`() 함수를 선택 **True**합니다.  
+ 부분합 행을 집계 행이 아니라 정보 행으로 해석할지 여부를 나타내는 값을 선택합니다. 기본값인 **자동**, 보고서를 사용 하지 않는 경우 부분합 행 정보 행으로 처리 해야 함을 나타냅니다는 `Aggregate`() 함수를 데이터 집합의 필드에 액세스 합니다. 부분합 행을 집계 행으로 해석하려면 **False**를 선택합니다. 정보 행으로 해석 하려면 부분합 행을 사용 하지 않는다는 사실을 알고 있는 경우는 `Aggregate`() 함수를 선택할 **True**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

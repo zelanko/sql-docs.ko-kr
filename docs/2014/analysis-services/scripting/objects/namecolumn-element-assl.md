@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NameColumn element
 ms.assetid: 9ff79f2e-26d7-4ab9-a166-14c2c2d1fc07
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41a290275de98b460d16115a2c99774bbf6ede9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b2a0ae2308c14caaf46edaed876a31e04b82e46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213943"
 ---
 # <a name="namecolumn-element-assl"></a>NameColumn 요소(ASSL)
   부모 요소의 이름을 제공하는 열을 식별합니다.  
@@ -66,11 +66,11 @@ ms.locfileid: "36173203"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 경우는 [KeyColumns](../collections/columns-element-assl.md) 의 컬렉션 `DimensionAttribute` 포함 하는 하나의 [KeyColumn](column-element-assl.md) 같은 문자열 데이터 형식의 키 열을 나타내는 요소 `DataItem` 값에 대 한 기본값 사용 `NameColumn` 요소입니다.  
+ 경우는 [KeyColumns](../collections/columns-element-assl.md) 컬렉션인 `DimensionAttribute` 하나를 포함 [KeyColumn](column-element-assl.md) 같은 문자열 데이터 형식의 키 열을 나타내는 요소 `DataItem` 값이 기본값으로 사용 됩니다 `NameColumn` 요소입니다.  
   
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 입력을 참조 하십시오. [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 자세한 내용은 합니다 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- 부모에 해당 하는 요소 `NameColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute> 및 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
+ 부모에 해당 하는 요소가 `NameColumn` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.DimensionAttribute> 및 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개체 &#40;ASSL&#41;](objects-assl.md)  

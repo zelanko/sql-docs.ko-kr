@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
 - sql12.rtp.rptwizard.querybuilder.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9d6e087d2df36209c443eb8411e2439fe7400360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fef45f5ec6c4b9e0682ea625b2cc84bc8aaa089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253465"
 ---
 # <a name="query-builder-report-wizard"></a>쿼리 작성기(보고서 마법사)
   쿼리 작성기를 사용하여 보고서에 사용할 결과 집합을 검색하는 쿼리를 지정할 수 있습니다. 다음과 같은 두 개의 쿼리 작성기 중에서 선택할 수 있습니다.  

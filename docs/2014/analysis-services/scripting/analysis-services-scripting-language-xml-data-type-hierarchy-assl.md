@@ -1,5 +1,5 @@
 ---
-title: Analysis Services Scripting Language XML 데이터 형식 계층 구조 (ASSL) | Microsoft Docs
+title: Analysis Services Scripting Language XML 데이터 형식 계층 (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ebea80cfdecc82a3db5bb1c6cc4b10dcf40b06c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 259b843979c16d47c59bc0b3ab74843cc0015592
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243373"
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Analysis Services Scripting Language XML 데이터 형식 계층 구조(ASSL)
   다음 표에서는 ASSL(Analysis Services Scripting Language)의 데이터 형식 상속 계층을 보여 줍니다.  
@@ -119,7 +119,7 @@ TableMiningStructureColumn
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)   
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](data-type/analysis-services-scripting-language-xml-data-types-assl.md)   
  [Analysis Services Scripting Language XML 요소 계층 &#40;ASSL&#41;](analysis-services-scripting-language-xml-element-hierarchy-assl.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; 참조](analysis-services-scripting-language-assl-for-xmla.md)  
   

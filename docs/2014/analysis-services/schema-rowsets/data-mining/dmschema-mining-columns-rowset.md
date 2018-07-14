@@ -18,26 +18,26 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232063"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 행 집합
   모든 데이터 마이닝 모델의 개별 열에 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이 행 집합은 현재 카탈로그로 제한됩니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DMSCHEMA_MINING_COLUMNS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DMSCHEMA_MINING_COLUMNS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`MODEL_CATALOG`|`DBTYPE_WSTR`||카탈로그 이름입니다. 모델이 멤버인 데이터베이스 이름으로 채워집니다.|  
-|`MODEL_SCHEMA`|`DBTYPE_WSTR`||정규화되지 않은 스키마 이름입니다. 이 열에서 지원 하지 않는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 항상 포함 `NULL`합니다.|  
+|`MODEL_SCHEMA`|`DBTYPE_WSTR`||정규화되지 않은 스키마 이름입니다. 이 열에서 지원 되지 않습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 항상 `NULL`합니다.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||마이닝 모델 이름입니다. 이 열은 열과 연결된 마이닝 모델 이름을 포함하며 비어 있을 수 없습니다.|  
 |`COLUMN_NAME`|`DBTYPE_WSTR`||열 이름입니다.|  
 |`COLUMN_GUID`|`DBTYPE_GUID`||열 GUID입니다. 이 열은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 지원하지 않으므로 항상 `NULL`입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "36181197"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||null 값이 허용되는 열인지 여부를 나타내는 부울입니다.<br /><br /> null 값이 허용되는 열이 아니면 `FALSE`이고, null 값이 허용되는 열이면 `TRUE`입니다.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||열 데이터 형식 표시기입니다. 다음 목록에서는 반환되는 표시기 유형의 예를 보여 줍니다.<br /><br /> "`TABLE`"는 `DBTYPE_HCHAPTER`를 반환합니다.<br /><br /> "`TEXT`"는 `DBTYPE_WCHAR`를 반환합니다.<br /><br /> "`LONG`"는 `DBTYPE_I8`를 반환합니다.<br /><br /> "`DOUBLE`"는 `DBTYPE_R8`를 반환합니다.<br /><br /> "`DATE`"는 `DBTYPE_DATE`를 반환합니다.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||열 데이터 형식의 GUID입니다. 이 열은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 지원하지 않으므로 항상 `VT_NULL`입니다.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||열 값의 최대 길이로서 문자, 이진 또는 비트 열의 경우 이 값은 다음 중 하나입니다.<br /><br /> 문자, 바이트 또는 비트 길이 정의 된 경우 열 유형에 따라 각각의 열-최대 길이입니다. 예를 들어 SQL 테이블에 있는 `CHAR(5)` 열의 최대 길이는 5입니다.<br />문자, 바이트 또는 비트, 열에 정의 된 길이가 없는 경우 열 유형에 따라 각각 데이터 형식의-최대 길이입니다.<br />-영 (0)의 정의 된 최대 길이 열 또는 데이터 형식이 아닙니다.<br />-   `NULL` 다른 모든 유형의 열에 대 한|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||열 값의 최대 길이로서 문자, 이진 또는 비트 열의 경우 이 값은 다음 중 하나입니다.<br /><br /> 문자, 바이트 또는 비트 길이가 정의 되어 있으면 열 유형에 따라 각각의 열-최대 길이입니다. 예를 들어 SQL 테이블에 있는 `CHAR(5)` 열의 최대 길이는 5입니다.<br />-최대 길이 문자, 바이트 또는 비트 열 길이가 정의 되지 않은 경우 열 유형에 따라 각각의 데이터 형식입니다.<br />(0) 데이터 형식은 아니고 열에 정의 된 최대 길이 0입니다.<br />-   `NULL` 다른 모든 유형의 열에 대 한|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||열 유형이 문자 또는 이진이면 옥텟(바이트) 단위의 최대 열 길이입니다. 0 값은 열에 최대 길이가 없음을 나타냅니다. 다른 모든 열 유형의 경우 이 열은 `NULL`입니다.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||열의 데이터 형식이 `VARNUMERIC` 이외의 숫자 데이터 형식이면 열의 최대 전체 자릿수입니다.<br /><br /> 열의 데이터 형식이 숫자가 아니거나 `NULL`이면 `VARNUMERIC`입니다.<br /><br /> 데이터 형식이 `DBTYPE_DECIMAL` 또는 `DBTYPE_NUMERIC`인 열의 전체 자릿수는 열 정의에 따라 달라집니다.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||열 유형 표시기가 `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` 또는 `DBTYPE_VARNUMERIC`이면 소수점 이하 자릿수입니다. 그렇지 않으면 이 열은 `VT_NULL`입니다.|  

@@ -1,5 +1,5 @@
 ---
-title: 요소 (MeasureGroup) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (MeasureGroup) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 3a584baf-36bb-4e1d-9128-c4758c0b8f06
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1e583e8debf2f8416ac46574e8c4f5dbc8d4453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8e8bab8b822ccb4cf8a17fe4759519eeefb974a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226373"
 ---
 # <a name="type-element-measuregroup-assl"></a>Type 요소(MeasureGroup)(ASSL)
-  형식을 지정 된 [MeasureGroup](../objects/group-element-assl.md)합니다.  
+  형식을 지정 합니다 [MeasureGroup](../objects/group-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36172464"
   
  AMO(Analysis Management Objects) 개체 모델에서 `Type`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.MeasureGroupType>입니다.  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

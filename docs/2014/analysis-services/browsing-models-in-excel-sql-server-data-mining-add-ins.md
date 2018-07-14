@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c2badba8baf8abad2c366c6b21a28e2e2a236e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214363"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Excel에서 모델 찾아보기(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 모델 찾아보기 단추](media/dmc-browse.gif "데이터 마이닝 리본의 모델 찾아보기 단추")  
@@ -34,16 +34,16 @@ ms.locfileid: "36182373"
   
 ## <a name="using-the-browse-model-wizard"></a>모델 찾아보기 마법사 사용  
   
-1.  클릭는 **데이터 마이닝** 탭 합니다.  
+1.  클릭 합니다 **데이터 마이닝** 탭 합니다.  
   
-2.  에 **모델 사용** 그룹에서 클릭 **찾아보기**합니다.  
+2.  에 **모델 사용법** 그룹에서 클릭 **찾아보기**합니다.  
   
 3.  에 **모델 선택** 대화 상자, 목록에서 마이닝 모델을 선택 하 고 클릭 **다음**합니다.  
   
-4.  마법사에서 열 수는 **찾아보기** 선택한 모델 유형에 대해 적합 한 있는 창입니다.  
+4.  마법사가 열립니다는 **찾아보기** 창에 선택한 모델의 유형에 적합 합니다.  
   
 ## <a name="list-of-data-mining-viewers"></a>데이터 마이닝 뷰어 목록  
- 모델을 만들 때 사용한 데이터 마이닝 알고리즘에 따라는 **찾아보기** 창이 약간 다르게 표시 됩니다. 이 창에는 결과 해석에 도움이 되는 그래프, 추가 정보가 포함된 범례 및 데이터와 상호 작용하기 위한 컨트롤이 포함될 수 있습니다.  
+ 모델을 만들 때 사용한 데이터 마이닝 알고리즘에 따라 합니다 **찾아보기** 창 약간 다르게 보입니다. 이 창에는 결과 해석에 도움이 되는 그래프, 추가 정보가 포함된 범례 및 데이터와 상호 작용하기 위한 컨트롤이 포함될 수 있습니다.  
   
  다음 항목에서는 복잡한 그래프 해석을 위한 팁을 비롯한 각 뷰어 사용 방법과 결과를 변경, 복사 또는 사용하는 방법에 대한 지침을 제공합니다.  
   

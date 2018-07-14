@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching while trace running
 - traces [SQL Server], running
 - traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 868330fc32bdc9c9918c99d8e8540328cad18109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37b497001238c21642863fe22dcfaf027f2f9d67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257679"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>추적 중 값 또는 데이터 열 찾기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 실행 중에 추적 출력에서 특정 값이나 데이터 열을 검색하는 방법에 대해 설명합니다.  

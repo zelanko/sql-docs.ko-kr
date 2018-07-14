@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4989b77f9d551c9c6afacb5e76986c3356a83ee7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd1026d355e2459e93b1f76d35092db7aa7ec3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275269"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning 이벤트 클래스
   **Bitmap Warning** 이벤트 클래스를 사용하여 쿼리 내의 비트맵 필터 사용을 모니터링할 수 있습니다. 또한 이벤트 하위 클래스를 사용하여 쿼리 내에서 비트맵 필터가 해제되면 보고되도록 할 수 있습니다.  

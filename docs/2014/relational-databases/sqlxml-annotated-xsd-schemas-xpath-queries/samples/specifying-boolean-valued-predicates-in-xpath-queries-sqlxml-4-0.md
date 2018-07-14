@@ -1,5 +1,5 @@
 ---
-title: XPath 쿼리에 (SQLXML 4.0) 부울 반환 조건자 지정 | Microsoft Docs
+title: (SQLXML 4.0) XPath 쿼리에 부울 반환 조건자 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c104784dfda86645a869736927367217ab5ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b6ab1ec725924479a30f2f8df43e1c0ccd4c6e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225173"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 반환 조건자 지정(SQLXML 4.0)
-  다음 예에서는 XPath 쿼리에 부울 반환 조건자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하십시오. [XPath 예에 대 한 샘플 주석이 추가 된 XSD 스키마 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
+  다음 예에서는 XPath 쿼리에 부울 반환 조건자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36181310"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(BooleanValuedPredicatesA.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36181310"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
      결과는 다음과 같습니다.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "36181310"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>2. 연속 및 중첩된 조건자 지정  
- 다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 모든 쿼리에서 반환는  **\<고객 >** 둘 다 있어야 하는 컨텍스트 노드에서 자식 요소가 한 **SalesPersonID** 특성 값이 277 인와 **TerritoryID**3의 값을 가진 특성:  
+ 다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 모든 쿼리에서 반환 된  **\<고객 >** 둘 다 있는 컨텍스트 노드의 자식 요소를 **SalesPersonID** 특성 값이 277 인 및 **TerritoryID**특성 값이 3 인:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 쿼리에서 반환 된  **\<고객 >** 조건자에 지정 된 두 조건을 모두 충족 하는 요소입니다.  
+ 쿼리에서 반환 된  **\<고객 >** 조건자에 지정 된 조건을 모두 충족 하는 요소입니다.  
   
  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본값이므로 쿼리에서 생략할 수 있습니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36181310"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 다음 XPath 쿼리에서는 중첩된 조건자를 사용하는 방법을 보여 줍니다. 모든 쿼리에서 반환 된  **\<고객 >** 포함 하는 컨텍스트 노드의 자식 요소  **\<순서 >** 하나 이상 포함 된 자식 요소  **\<순서 >** 된 요소는 **SalesPersonID** 특성 값 2입니다.  
+ 다음 XPath 쿼리에서는 중첩된 조건자를 사용하는 방법을 보여 줍니다. 모든 쿼리에서 반환 된  **\<고객 >** 포함 하는 컨텍스트 노드의 자식 요소  **\<순서 >** 하나 이상 있는 자식 요소  **\<순서 >** 요소를 **SalesPersonID** 특성 값 2입니다.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -116,7 +116,7 @@ ms.locfileid: "36181310"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(nestedSuccessive.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36181310"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36181310"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>3. 최상위 조건자 지정  
- 다음 쿼리에서 반환 된  **\<고객 >** 하는 컨텍스트 노드에서 자식 요소 노드  **\<순서 >** 요소 자식을 합니다. 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
+ 다음 쿼리에서 반환 된  **\<고객 >** 하는 컨텍스트 노드의 자식 요소 노드  **\<순서 >** 요소 자식을 합니다. 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
   
 ```  
 /child::Customer[child::Order]  
@@ -185,7 +185,7 @@ ms.locfileid: "36181310"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(TopLevelPredicate.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "36181310"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 결과의 일부입니다.  
   

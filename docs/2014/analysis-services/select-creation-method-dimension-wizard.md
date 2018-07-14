@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267159"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>생성 방법 선택(차원 마법사)
   **생성 방법 선택** 페이지를 사용하여 차원 생성 방법을 선택할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36092760"
   
  자세한 내용은 [시간 테이블을 생성하여 시간 차원 만들기](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)를 참조하세요.  
   
- **서버에 시간 테이블 생성**  
+ **서버의 시간 테이블 생성**  
  서버에 직접 시간 테이블을 만든 다음 이 테이블을 사용하여 시간 차원을 만듭니다. 이 옵션은 기본 데이터 원본에 개체를 만들 수 있는 권한이 없는 경우에 사용합니다. 새 시간 차원은 마법사에서 지정한 데이터 범위, 특성 및 달력에 대한 데이터를 포함합니다.  
   
  자세한 내용은 [시간 테이블을 생성하여 시간 차원 만들기](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)를 참조하세요.  

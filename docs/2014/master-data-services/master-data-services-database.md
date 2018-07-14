@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f152caf03dd4997dad8b1e177227c330a5e9a30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d426c9c7ffb874cd304932889d41660cf0d3edac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326173"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 데이터베이스
   Master Data Services 데이터베이스에는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템에 대한 모든 정보가 포함되어 있습니다. 이 데이터베이스는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 배포의 핵심입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 기능은 다음과 같습니다.  

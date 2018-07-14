@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28ccf2d9e3c039086a182466d6d93fd5b2606e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 356121b8980d41a3abf3124d5249164d6d23b4e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247743"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
   쿼리 속성은 쿼리 및 뷰 디자이너에서 쿼리를 연 경우 속성 창에 표시됩니다. 별도로 언급하지 않는 한 속성 창에서 이러한 속성을 편집할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "36092796"
  뷰에 WITH TIES 절이 포함되도록 지정합니다. WITH TIES는 백분율을 기반으로 하는 ORDER BY 절과 TOP 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율 값이 ORDER BY 절에서 동일한 값을 가진 행 집합의 중간까지만 포함하면 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [매개 변수가 있는 쿼리 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [쿼리 매개 변수를 사용 하 여 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

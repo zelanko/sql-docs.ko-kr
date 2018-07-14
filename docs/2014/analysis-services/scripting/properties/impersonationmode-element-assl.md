@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e41e5b5fef7759f6ad310a7f04dc012a7b7cb54f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216233"
 ---
 # <a name="impersonationmode-element-assl"></a>ImpersonationMode 요소(ASSL)
-  파생 된 요소에 대 한 가장 방법을 나타내는 값이 포함 된 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 데이터 형식입니다.  
+  파생 된 요소에 대 한 가장 방법을 나타내는 값을 포함 합니다 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 데이터 형식입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36180954"
 |*ImpersonateAccount*|부모가 부모 요소에 지정된 사용자 계정의 자격 증명을 사용합니다.|  
 |*ImpersonateAnonymous*|부모가 익명 사용자의 자격 증명을 사용합니다.|  
 |*ImpersonateCurrentUser*|부모가 현재 사용자의 자격 증명을 사용합니다.|  
-|*ImpersonateServiceAccount*|인스턴스에 연결 된 서비스 계정의 자격 증명을 사용 하는 부모 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
+|*ImpersonateServiceAccount*|인스턴스와 연결 된 서비스 계정의 자격 증명을 사용 하는 부모 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `ImpersonationMode`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.ImpersonationLevel>입니다.  
   

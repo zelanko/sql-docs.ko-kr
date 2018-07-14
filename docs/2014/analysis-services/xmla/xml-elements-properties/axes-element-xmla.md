@@ -1,5 +1,5 @@
 ---
-title: 축은 요소 (XMLA) | Microsoft Docs
+title: 요소 (XMLA) 축 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237403"
 ---
 # <a name="axes-element-xmla"></a>Axes 요소(XMLA)
-  컬렉션을 포함 [축](axis-element-xmla.md) 에 포함 된 축 데이터를 나타내는 요소는 [루트](root-element-xmla.md) 요소를 사용 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.  
+  컬렉션을 포함 [축](axis-element-xmla.md) 에 포함 된 축 데이터를 나타내는 요소를 [루트](root-element-xmla.md) 요소를 사용 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 데이터 형식.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36172032"
 |자식 요소|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Axes` 요소 아래에는  `Axis` 요소가 발생한 순서대로 0부터 시작하여 데이터 집합에 나열됩니다. `AxisFormat` XMLA 속성 설정은 `Axis` 요소의 서식이 지정되는 방식을 결정합니다. 에 대 한 자세한 내용은 `AxisFormat` 속성 참조 [XMLA 속성 지원 &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)합니다.  
+ `Axes` 요소 아래에는  `Axis` 요소가 발생한 순서대로 0부터 시작하여 데이터 집합에 나열됩니다. `AxisFormat` XMLA 속성 설정은 `Axis` 요소의 서식이 지정되는 방식을 결정합니다. 에 대 한 자세한 내용은 합니다 `AxisFormat` 속성을 참조 하세요 [지원 되는 XMLA 속성 &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)합니다.  
   
  축은 튜플의 집합을 나타내며 여기서 집합의 모든 튜플은 차원이 동일합니다. 집합은 각기 다른 이점이 있는 다양한 방식으로 나타낼 수 있습니다. 예를 들어 다음 네 튜플의 집합은 2차원 튜플의 컬렉션 또는 1차원 집합 두 개의 카티션 곱으로 나타낼 수 있습니다.  
   

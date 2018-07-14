@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: 60
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a34a6efad3223ec4d38133571a7c081364f28fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a8a4c0fb1fe9128b40ee00e29c243ede617501f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224703"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
   데이터 집합이 정의되면 보고서 디자인을 시작할 수 있습니다. 데이터 영역, 입력란, 이미지 및 보고서에 포함하려는 항목을 디자인 화면에 끌어다 놓는 방법으로 보고서 레이아웃을 만듭니다.  
@@ -33,15 +33,15 @@ ms.locfileid: "36181014"
     > [!NOTE]  
     >  **보고서 데이터** 창의 왼쪽에 **도구 상자** 가 탭으로 나타날 수 있습니다. **도구 상자**를 열려면 포인터를 **도구 상자** 탭으로 이동합니다. **도구 상자**가 표시되지 않으면 **보기** 메뉴에서 **도구 상자**를 클릭합니다.  
   
-2.  에 **보고서 데이터** 창에서 확장는 **AdventureWorksDataset** 데이터 집합의 필드를 표시 합니다.  
+2.  에 **보고서 데이터** 창 확장 합니다 **AdventureWorksDataset** 필드를 표시 하려면 데이터 집합.  
   
-3.  Date 필드를 끌어는 **보고서 데이터** 테이블의 첫 번째 열에는 창입니다.  
+3.  날짜 필드를 끕니다 합니다 **보고서 데이터** 테이블의 첫 번째 열에는 창입니다.  
   
      필드를 첫 번째 열에 놓으면 두 가지 동작이 발생합니다. 먼저 데이터 셀에는 *필드 식*이라는 필드 이름이 대괄호 안에 표시됩니다. 이 경우 `[Date]`와 같이 표시됩니다. 두 번째로 열 머리글 값이 자동으로 필드 식 바로 위의 머리글 행에 추가됩니다. 기본적으로 열은 필드 이름입니다. 머리글 행 텍스트를 선택한 다음 새 이름을 입력할 수 있습니다.  
   
-4.  Order 필드를 끌어는 **보고서 데이터** 테이블의 두 번째 열에는 창입니다.  
+4.  Order 필드를 끌어 합니다 **보고서 데이터** 테이블의 두 번째 열에는 창입니다.  
   
-5.  Product 필드를 끌어는 **보고서 데이터** 테이블의 세 번째 열에는 창입니다.  
+5.  Product 필드를 끌어 합니다 **보고서 데이터** 테이블의 세 번째 열에는 창입니다.  
   
 6.  세로 커서가 나타나고 포인터가 더하기 기호(+)로 바뀔 때까지 Qty 필드를 세 번째 열의 오른쪽 가장자리로 끕니다. 마우스 단추를 놓으면 네 번째 열이 `[Qty]`에 대해 만들어집니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36181014"
   
      다음 다이어그램은 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.  
   
-     ![디자인, 머리글 행 및 정보 행이 있는 테이블](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "디자인, 머리글 행 및 정보 행이 있는 테이블")  
+     ![디자인, 테이블 머리글 행 및 정보 행](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "디자인, 테이블의 머리글 행 및 정보 행")  
   
 ## <a name="preview-your-report"></a>보고서 미리 보기  
  보고서 미리 보기 기능을 사용하면 보고서 서버에 보고서를 게시하지 않고도 렌더링된 보고서를 볼 수 있으므로 디자인 타임에 보고서를 자주 미리 보면서 작업할 수 있습니다. 보고서를 미리 보면 디자인 및 데이터 연결에 대한 유효성 검사를 실행할 수 있으므로 보고서를 보고서 서버에 게시하기 전에 오류 및 문제를 수정할 수 있습니다.  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], recovery-only
 - recovery-only scenario [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - recovery [SQL Server], without restoring data
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cab7313b1cdde219b6015b0e15bb372b873206c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 921a44f1006f891b3d8662fca2fe376246605c90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225513"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
   일반적으로 데이터베이스가 복구되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 모든 데이터가 복원됩니다. 하지만 예를 들어 데이터베이스와 일치하는 읽기 전용 파일을 복원할 경우 복원 작업에서 백업을 실제로 복원하지 않고 데이터베이스를 복구할 수 있습니다. 이 작업을 *복구 전용 복원*이라고 합니다. 오프라인 데이터가 데이터베이스와 이미 일치하고 사용 가능한 상태로만 만들면 되는 경우 복구 전용 복원 작업은 데이터베이스 복구를 완료하고 데이터를 온라인으로 전환합니다.  

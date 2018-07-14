@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModel element
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593421993631e4cffee671a92b343ee9b4b7e30c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ba98443b953f4107b209dd06af74349a81bb2a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224543"
 ---
 # <a name="miningmodel-element-assl"></a>MiningModel 요소(ASSL)
   단일 데이터 마이닝 모델을 정의합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "36180956"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningModels](../collections/miningmodels-element-assl.md)|  
-|자식 요소|[Algorithm](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [Columns](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md), [Name](../properties/name-element-assl.md), [State](../properties/state-element-assl.md), [Translations](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
+|자식 요소|[알고리즘](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md)를 [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)를 [주석](../collections/annotations-element-assl.md)를 [데이터 정렬을](../properties/collation-element-assl.md), [ 열](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [설명](../properties/description-element-assl.md)를 [ID](../properties/id-element-assl.md)를 [언어](../properties/language-element-assl.md), [ LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)를 [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md)를 [이름](../properties/name-element-assl.md)를 [상태](../properties/state-element-assl.md), [ 번역](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  마이닝 모델의 `FoldingParameters` 요소는 서버 내부에서 사용하기 위한 것이며 DDL 문에서 사용할 수 없습니다.  

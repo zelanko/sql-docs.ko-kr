@@ -1,5 +1,5 @@
 ---
-title: Enabled 속성 (ServerNetworkProtocolIpAddress 클래스) | Microsoft Docs
+title: 속성 (ServerNetworkProtocolIpAddress 클래스)를 사용 하도록 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655acfd106800927bbec8b2fa8021a3b2ba4be87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a2296ec80dc8c97fef8588b810d5d4179dd5ed7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268509"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 속성(ServerNetworkProtocolIpAddress 클래스)
   IP 주소가 설정되었는지 여부를 지정하는 부울 속성을 가져옵니다.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ A [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  IP 주소가 설정되었는지 여부를 지정하는 부울 값입니다. `true`는 IP 주소가 설정되었음을 나타내고 `false`는 IP 주소가 해제되었음을 나타냅니다.  

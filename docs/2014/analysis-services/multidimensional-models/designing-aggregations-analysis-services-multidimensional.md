@@ -1,5 +1,5 @@
 ---
-title: 집계 디자인 (Analysis Services-다차원) | Microsoft Docs
+title: 집계 (Analysis Services-다차원) 디자인 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregations [Analysis Services], partitions
 - partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa8dc9fd8898a188b3d68ae80465af4885ad5697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aae25fb906eed7f31578070e2327a9caf4c7b66c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224723"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>집계 디자인(Analysis Services - 다차원)
   집계는 큐브 데이터의 미리 계산된 요약으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 신속한 쿼리 응답을 제공할 수 있도록 도와 줍니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 403ad238eec72415674acf3d838e7459ebafa529
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79ae1eb490823b18509a5b26432bb05b68131c46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250923"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] SSISDB 데이터베이스를 포함합니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  

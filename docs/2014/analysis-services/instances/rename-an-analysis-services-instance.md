@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
 - renaming instances of Analysis Services
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d9369a62a1fcd5dde7de92c7da81a4fcb6c02ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dfa3a42caf787fad5e8eb64e5bdbab38997640b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326813"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
-  기존 인스턴스의 이름을 바꿔도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용 하 여는 **인스턴스 이름 바꾸기** 대화 상자.  
+  기존 인스턴스의 이름을 바꿀 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 합니다 **인스턴스 이름 바꾸기** 대화 상자.  
   
 > [!IMPORTANT]  
 >  인스턴스의 이름을 바꾸는 동안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 승격된 권한으로 실행되어 해당 인스턴스와 연결된 레지스트리 항목, Windows 서비스 이름 및 보안 계정을 업데이트합니다. 이러한 동작이 수행되도록 하려면 이 도구를 로컬 시스템 관리자로 실행하십시오.  
@@ -39,7 +39,7 @@ ms.locfileid: "36172476"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Analysis Services의 인스턴스 이름을 변경하려면  
   
-1.  시작 된 **인스턴스 이름 바꾸기** 도구, **asinstancerename.exe**, C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio에서 합니다.  
+1.  시작 합니다 **인스턴스 이름 바꾸기** 도구인 **asinstancerename.exe**, C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio에서.  
   
 2.  **인스턴스 이름 바꾸기** 대화 상자의 **이름을 바꿀 인스턴스** 목록에서 이름을 바꿀 인스턴스를 선택합니다.  
   

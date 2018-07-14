@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43c797101826a614c67c7c4f213140a427b51395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261459"
 ---
 # <a name="displayflag-element-assl"></a>DisplayFlag 요소(ASSL)
-  사용자 인터페이스 구성 요소는 연결 된 표시 해야 하는지 여부를 나타내는 읽기 전용 힌트를 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 요소입니다.  
+  사용자 인터페이스 구성 요소는 연결 된 표시할 것인지 여부를 나타내는 읽기 전용 힌트를 포함 [ServerProperty](../objects/serverproperty-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36182333"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `DisplayFlag` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
+ 부모에 해당 요소가 `DisplayFlag` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ServerProperties 요소 &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [서버 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

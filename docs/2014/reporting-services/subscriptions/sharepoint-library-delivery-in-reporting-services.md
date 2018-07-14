@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e26aab503c41cbd64f16708c8b420bf3ae93af1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf32579a40b3290e0126b3a1a92665643ae8c3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264199"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
@@ -75,10 +75,10 @@ ms.locfileid: "36182173"
  대상 라이브러리에 표시할 보고서의 파일 이름과 확장명을 지정합니다. 파일 확장명을 지정하지 않으면 보고서 서버에서 보고서 출력 형식을 기반으로 확장명을 만듭니다. 이 값은 필수 사항입니다. 파일 이름에 다음 문자는 포함하지 마세요. : \ / * ? " \< > | # { } %  
   
  Title  
- 선택적 지정 `Title` 대상 라이브러리에서 보고서에 대 한 속성입니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
+ 선택적인 지정 `Title` 대상 라이브러리에서 보고서에 대 한 속성입니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
   
  경로  
- SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어: http://mySharePointWeb/MySite/MyDocLib; 여기서 "http://mySharePointWeb" 웹 응용 프로그램을 나타내는 "MySite"는 SharePoint 사이트 및 "MyDocLib"는 보고서가 배달 될 SharePoint 라이브러리입니다.  
+ SharePoint 웹 응용 프로그램 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어: http://mySharePointWeb/MySite/MyDocLib; where "http://mySharePointWeb" 웹 응용 프로그램을 나타내는 "나타내고 MySite"는 SharePoint 사이트를 및 "MyDocLib"는 보고서가 배달 될 SharePoint 라이브러리입니다.  
   
  페이지, 사이트 또는 목록은 지정할 수 없습니다. 대상 컨테이너는 동일한 사이트나 팜에 있는 라이브러리여야 합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36182173"
  구독을 처리할 때 이름과 확장명이 같은 파일을 최신 버전으로 바꿀지 여부를 지정합니다. 기존 파일을 최신 버전으로 바꾸려면 **덮어쓰기** 를 선택합니다. 구독에서 파일을 바꾸지 않도록 하려면 **없음** 을 선택합니다. 이 경우 대상 이름 및 확장명과 동일한 파일이 있으면 배달 작업이 수행되지 않습니다. 파일 이름 끝에 번호를 추가하여 동일한 파일의 연속 버전을 추가하려면 **자동 증가** 를 선택합니다.  
   
  자동 복사  
- 자동 복사 기능을 사용하여 파일의 최신 버전을 자동으로 여러 위치에 복사하는 경우 **덮어쓰기** 가 설정되어 있으면 파일이 복사됩니다. 사용 하는 경우 **Autoincrement** 또는 **없음**, 배달이 실패 하 고 `rsDeliveryError` 오류가 발생 합니다.  
+ 자동 복사 기능을 사용하여 파일의 최신 버전을 자동으로 여러 위치에 복사하는 경우 **덮어쓰기** 가 설정되어 있으면 파일이 복사됩니다. 사용 하는 경우 **Autoincrement** 하거나 **None**, 배달 되지 것입니다 및 `rsDeliveryError` 오류가 발생 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

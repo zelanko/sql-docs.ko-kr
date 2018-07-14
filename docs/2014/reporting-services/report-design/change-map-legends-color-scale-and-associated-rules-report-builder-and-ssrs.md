@@ -1,5 +1,5 @@
 ---
-title: 지도 범례 변경, 색 눈금 및 관련 규칙 (보고서 작성기 및 SSRS) | Microsoft Docs
+title: 지도 범례를 변경, 색 눈금 및 관련 규칙 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.maprulesdistribution.f1
 - "10512"
@@ -34,15 +34,15 @@ f1_keywords:
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d05fe9d72ec20ce83d101b039a96234aabdc9785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 154ca9f121f14f64bb2563e106fb05f0c110c277
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301863"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS)
   지도에는 지도 범례, 색 눈금 및 거리 눈금이 포함될 수 있습니다. 이러한 지도 부분은 지도에서 데이터 시각화를 해석하는 데 도움이 됩니다.  

@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d00a0ecf553798fb37a424a516476cd3eb307d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9124d6807bc4fea19e98fb0f099cd31ba15172bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235343"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   확장/DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴스 간에 대량 데이터 전송을 수행하는 경우에는 유니코드 문자 형식을 사용하는 것이 좋습니다. 유니코드 문자 데이터 형식을 사용하면 작업을 수행 중인 클라이언트에서 사용되는 코드 페이지와 다른 코드 페이지를 사용하여 서버에서 데이터를 내보낼 수 있습니다. 이런 경우 유니코드 문자 형식을 사용하면 다음과 같은 이점이 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "36181812"
 > [!IMPORTANT]  
 >  유니코드 문자 데이터 파일에 서식 파일을 사용하려면 모든 입력 필드가 유니코드 텍스트 문자열(고정 크기 또는 문자 종료 유니코드 문자열)이어야 합니다.  
   
- `sql_variant` 제외 하는 데이터는로 저장 유니코드 문자 형식 데이터 파일에 저장 된 데이터를 문자 형식 데이터 파일에서 작동 하는 방식으로 작동 `nchar` 대신 `char` 데이터입니다. 문자 형식에 대한 자세한 내용은 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)을 참조하십시오.  
+ 합니다 `sql_variant` 으로 데이터가 저장 되는 점을 제외 하 고 유니코드 문자 형식 데이터 파일에 저장 된 데이터를 문자 형식 데이터 파일에서 작동 하는 동일한 방식으로 작동 `nchar` 대신 `char` 데이터입니다. 문자 형식에 대한 자세한 내용은 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)을 참조하십시오.  
   
  유니코드 문자 형식으로 제공되는 기본값과 다른 필드 또는 행 종결자를 사용하려면 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   

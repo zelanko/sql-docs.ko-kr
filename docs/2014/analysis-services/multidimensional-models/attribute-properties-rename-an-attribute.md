@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
 - renaming attributes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Name property
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b51406da3fd79878d6634fcdde939972400220d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fefecaf82fac294162c3326c6493a7556d435cb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221983"
 ---
 # <a name="rename-an-attribute"></a>특성 이름 변경
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성 이름은 **Name** 속성으로 정의됩니다. 특성 이름을 바꾸려면 **에 있는 차원 디자이너의** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭합니다. **특성** 창이 표 뷰로 되어 있으면 표에서 직접 특성 이름을 클릭하고 편집합니다. 특성을 선택하고 **속성** 창에서 **Name** 속성을 설정할 수도 있습니다.  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cd1548cb8fb22a49900cc916dc1fde610993a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b05c961fcd9d3a4a64715f6bc96754000969a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216883"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 연결 형식(SSRS)
   보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  
   
  이 데이터 확장 프로그램을 사용하면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 외부 데이터 원본에 정의된 InfoCube, MultiProvider(가상 InfoCube) 및 웹 사용이 가능한 쿼리에서 다차원 데이터를 검색할 수 있습니다.  
   
- 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 참조 하십시오. [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
+ 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
 ##  <a name="support"></a> 지원 되는 버전  
  이 데이터 공급자는 SAP BW 3.5 및 7.0에 대해 개발되고 테스트되었습니다.  
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 또는 [보고서 작성기에서 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
   
   
   
@@ -78,11 +78,11 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 데이터 원본은 확장 필드 속성을 지원합니다. 확장된 필드 속성은 속성 외에 `Value` 및 `IsMissing` 데이터 처리 확장 프로그램에서 데이터 집합 필드에 대해 정의 되어 있습니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
   
 ### <a name="working-with-field-properties"></a>필드 속성 사용  
- 확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 보고서 속성의 부모 필드를 끌어다 하 고 다음 기본 속성을 변경 하는 대신, `Value` 사용 하려는 속성에 있습니다. 예를 들어 MDX 쿼리 디자이너에서 메타데이터 창의 수준을 쿼리 창으로 끌어 **Calendar Year/Month Level 01** 이라는 필드를 만든 경우에는 식에서 다음 구문을 사용하여 사용자 지정 확장 속성 **Long Name** 을 참조합니다.  
+ 확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 대신 속성의 부모 필드에 보고서로 끈 다음 기본 속성을 변경 `Value` 사용 하려는 속성입니다. 예를 들어 MDX 쿼리 디자이너에서 메타데이터 창의 수준을 쿼리 창으로 끌어 **Calendar Year/Month Level 01** 이라는 필드를 만든 경우에는 식에서 다음 구문을 사용하여 사용자 지정 확장 속성 **Long Name** 을 참조합니다.  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- 메타데이터 창에서 필드를 가리키면 확장 필드 속성 이름이 도구 설명에 표시됩니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대 한 자세한 내용은 참조 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)합니다.  
+ 메타데이터 창에서 필드를 가리키면 확장 필드 속성 이름이 도구 설명에 표시됩니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대 한 자세한 내용은 참조 [SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스](sap-netweaver-bi-query-designer-user-interface.md)합니다.  
   
 > [!NOTE]  
 >  보고서가 실행되어 해당 데이터 집합에 대한 데이터를 검색할 때 데이터 원본에서 확장 필드 속성에 대한 값을 제공하는 경우에만 이러한 속성에 대한 값이 있습니다. 참조할 수 있습니다 `Field` 아래에 설명 된 구문을 사용 하 여 모든 식에서 속성 값입니다. 그러나 이러한 필드는 해당 데이터 공급자와만 관련이 있고 보고서 정의 언어에는 포함되지 않으므로 이러한 값을 변경해도 보고서 정의에는 변경된 값이 저장되지 않습니다.  
@@ -112,7 +112,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|수준의 키를 반환합니다.|  
 |`LevelNumber`|`Integer`|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
 |`ParentUniqueName`|`String`|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
-|`UniqueName`|`String`|수준의 정규화된 이름을 반환합니다. 예를 들어는 `UniqueName` 직원에 대 한 값 *[0D_Company]. [ 10D_Department]입니다. [11]* .|  
+|`UniqueName`|`String`|수준의 정규화된 이름을 반환합니다. 예를 들어 합니다 `UniqueName` 직원에 대 한 값 *[0D_Company]. [ 10D_Department]입니다. [11]* .|  
   
  식에서 필드 및 필드 속성을 사용하는 방법은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
 - packages [Integration Services], expressions
@@ -20,16 +20,16 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a9a69fcddc41c72a12bec05e224ce3c0c5d70fdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221833"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
-  속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어, 식을 설정 하는 경우는 `LoggingMode` 속성 하면 이름인 Disabled 대신 숫자 값 2를 사용 해야 합니다.  
+  속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식을 설정 하는 경우는 `LoggingMode` 속성을 설정한 이름인 Disabled 대신 숫자 값 2를 사용 해야 합니다.  
   
  이 항목에서는 해당 멤버가 속성 식에서 일반적으로 사용되는 열거자의 이름에 해당하는 숫자 값만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에는 프로그래밍 방식으로 패키지를 작성하거나 태스크 및 데이터 흐름 구성 요소와 같은 사용자 지정 패키지 요소를 코딩하기 위해 개체 모델을 프로그래밍할 때 사용하는 여러 개의 추가 열거자가 포함되어 있습니다.  
   
@@ -528,7 +528,7 @@ ms.locfileid: "36181702"
 |추가|0|  
 |Overwrite|1|  
   
- `BackupAction` 속성-값을 사용 하 여 설정 된 `BackupTaskType` 열거형입니다. 이 속성은에 사용할는 `BackupIsIncremental` 태스크가 수행 하는 백업 유형을 정의 하는 속성입니다.  
+ `BackupAction` 속성-값을 사용 하 여 설정 된 `BackupTaskType` 열거형입니다. 이 속성이 작동을 `BackupIsIncremental` 태스크가 수행 하는 백업 유형을 정의 하는 속성입니다.  
   
 |BackupTaskType의 이름|숫자 값|  
 |-------------------------------------|-------------------|  

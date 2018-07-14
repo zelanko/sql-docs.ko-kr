@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77e87dc08897954cb210b9e785dc4d6e266a3ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8a8b6cc94bf769be46bf3a2fc101731ba28d2021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321875"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  
@@ -88,6 +88,6 @@ ms.locfileid: "36182502"
   
 ## <a name="see-also"></a>관련 항목  
  [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [입력란의 텍스트 서식을 &#40;보고서 작성기 및 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [텍스트 상자에 텍스트 서식을 &#40;보고서 작성기 및 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

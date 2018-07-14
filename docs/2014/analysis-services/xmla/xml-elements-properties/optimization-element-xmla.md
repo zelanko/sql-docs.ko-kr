@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Optimization element
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4de21674678078bd5dc7a83c3cd60e28fba36b91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b20e8875f982f16a3f7ee128552c65fbbfca0f60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261309"
 ---
 # <a name="optimization-element-xmla"></a>Optimization 요소(XMLA)
   [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) 명령에서 집계를 디자인하는 데 사용된 최적화 임계값 비율을 나타냅니다.  

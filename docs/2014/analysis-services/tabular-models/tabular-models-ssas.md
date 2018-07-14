@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df693d141f3a91c1c0b9b023a89d39c5f2c171ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fe54f13fb065b099983ae58934851af1a3f49a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257219"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>테이블 형식 모델링(SSAS 테이블 형식)
   테이블 형식 모델은 Analysis Services의 인 메모리(in-memory) 데이터베이스입니다. 최첨단 비교 알고리즘과 다중 쿼리 프로세서를 사용하는 xVelocity 메모리 내 분석 엔진(VertiPaq)은 Microsoft Excel 및 Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]등의 보고 클라이언트 응용 프로그램을 통해 테이블 형식 모델 개체와 데이터에 신속하게 액세스할 수 있게 합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "36093842"
  테이블 형식 모델은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 새로운 테이블 형식 모델 프로젝트 템플릿을 사용하여 만듭니다. 여러 원본에서 데이터를 가져온 다음 관계, 계산 열, 측정값, KPI 및 계층을 추가하여 모델을 보강할 수 있습니다. 그런 다음 클라이언트 보고 응용 프로그램에서 연결할 수 있는 Analysis Services 인스턴스에 모델을 배포할 수 있습니다. 배포된 모델은 SQL Server Management Studio에서 다차원 모델처럼 관리할 수 있습니다. 이러한 모델을 처리 최적화를 위해 분할하거나, 역할 기반 보안을 사용하여 행 수준 보안을 설정할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [테이블 형식 모델 솔루션 &#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
- [테이블 형식 모델 데이터베이스 &#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)  
+ [테이블 형식 Model 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)  
   
  [테이블 형식 모델 데이터 액세스](tabular-model-data-access.md)  
   

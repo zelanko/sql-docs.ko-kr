@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249593"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>테이블 속성 편집 대화 상자(SSAS)
   **테이블 속성 편집** 대화 상자에서는 테이블 가져오기 마법사를 사용하여 모델 디자이너로 가져온 테이블의 속성을 보고 수정할 수 있습니다. 모델 디자이너에서 이 대화 상자를 열려면 가져온 데이터의 테이블을 선택한 다음 **테이블** 메뉴를 클릭하고 **테이블 속성**을 클릭합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36172520"
 > [!NOTE]  
 >  테이블의 데이터 원본을 변경하면 현재 테이블의 내용이 새 원본 테이블의 내용으로 바뀝니다.  
   
- **열 이름 숨기기**  
+ **열 이름**  
  |||  
 |-|-|  
 |**원본**|현재 열 이름을 선택된 원본 테이블의 열 이름으로 바꾸려면 이 옵션을 선택합니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "36172520"
  **미리 보기 새로 고침**  
  현재 선택된 원본 테이블의 데이터 열을 보려면 클릭합니다.  
   
- **로 전환**  
+ **전환**  
  |||  
 |-|-|  
 |**테이블 미리 보기**|선택된 테이블과 제한된 수의 데이터 행을 미리 보려면 이 옵션을 선택합니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "36172520"
  **연결 이름**  
  현재 사용 중인 연결의 이름을 표시합니다.  
   
- **로 전환**  
+ **전환**  
  |||  
 |-|-|  
 |**테이블 미리 보기**|선택된 테이블과 몇 개의 데이터 행을 미리 보려면 이 옵션을 선택합니다.|  
@@ -103,6 +103,6 @@ ms.locfileid: "36172520"
  열 바꾸기를 비롯한 모든 변경 내용을 적용하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;SSAS 테이블 형식&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

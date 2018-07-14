@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e3f9f8ad10a31fa7af4b6a517c0c36fcc817494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a2894baa94f9787a38d2c7c49f0f6e330a3537c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215563"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법에 대해 설명합니다. 데이터베이스를 새 디렉터리 경로로 이동하거나 동일한 서버 인스턴스 또는 다른 서버 인스턴스에 데이터베이스의 복사본을 만들 수 있습니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "36172214"
   
      [보안](#Security)  
   
--   **새 위치로 데이터베이스를 복원 및 필요에 따라 데이터베이스 이름 바꾸기를 사용 하 여:**  
+-   **새 위치로 데이터베이스를 복원 하 고 선택적으로 데이터베이스 이름을 바꾸는를 사용 하 여:**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -166,7 +165,7 @@ ms.locfileid: "36172214"
      *backup_device* [ `,`... *n* ]  
      데이터베이스 백업 복원에 사용할 1-64개의 백업 장치 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 장치를 지정하거나, 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
   
-     {디스크 | 테이프} `=` *physical_backup_device_name*  
+     {0} 디스크 | 테이프} `=` *physical_backup_device_name*  
   
      자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36172214"
   
      자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)에서 "백업 세트 지정"을 참조하세요.  
   
-     이동 **'*`logical_file_name_in_backup`*'** TO **'*`operating_system_file_name`*'** [ `,`... *n* ]  
+     이동할 **'*`logical_file_name_in_backup`*'** TO **'*`operating_system_file_name`*'** [ `,`... *n* ]  
      *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
   
     |옵션|Description|  

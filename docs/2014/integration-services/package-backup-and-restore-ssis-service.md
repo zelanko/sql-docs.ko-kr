@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, backup and restore
 - backing up packages [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0effe7b8c6b18967d9d783f082614b9f039066d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aab0068df8906640acb5b8282f1b80d5e966c2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322593"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>패키지 백업 및 복원(SSIS 서비스)
     
@@ -41,7 +41,7 @@ ms.locfileid: "36182079"
   
 -   [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 포함 된 **dtutil** 명령 프롬프트 유틸리티 (dtutil.exec) 패키지를 관리 하는 데 사용할 수 있는 합니다. 자세한 내용은 [dtutil Utility](dtutil-utility.md)를 참조하세요.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 포함 된 **dtutil** 명령 프롬프트 유틸리티 (dtutil.exec)가 사용 하 여 패키지를 관리할 수 있습니다. 자세한 내용은 [dtutil Utility](dtutil-utility.md)를 참조하세요.  
   
 ## <a name="configuration-files"></a>구성 파일  
  패키지에 포함된 모든 구성 파일은 파일 시스템에 저장됩니다. msdb 데이터베이스를 백업할 때는 이러한 파일이 함께 백업되지 않으므로 msdb에 저장된 패키지의 보안을 설정하는 계획의 일부로 주기적으로 구성 파일을 백업해야 합니다. msdb 데이터베이스의 백업에 구성을 포함시키려면 파일 기반 구성 대신 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 유형 사용을 고려해야 합니다.  

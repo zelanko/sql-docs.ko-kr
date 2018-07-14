@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.impersonationinfo.f1
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53b71a06904bd3f898efa3dd2d9946670193845
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c9d9b49d41d8f9320ff414925bb4532145d16f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245683"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>가장 정보 대화 상자(테이블 가져오기 마법사)
-  **가장 정보** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다. 자격 증명 가장에 대 한 자세한 내용은 참조 [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)합니다.  
+  **가장 정보** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다. 자격 증명 가장에 대 한 자세한 내용은 참조 하세요. [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)합니다.  
   
 ## <a name="options"></a>변수  
  **특정 Windows 사용자 이름 및 암호**  
@@ -46,6 +46,6 @@ ms.locfileid: "36172772"
  모델을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서비스와 연결된 보안 자격 증명을 사용하려면 이 옵션을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)  
   
   

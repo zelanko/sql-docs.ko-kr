@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b90a00b1d41cf92abd0952b0ea15e569fa80ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5e21a1085758cc5442d2839dac679cd092875b8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326083"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 이벤트 클래스
   SP:Recompile 이벤트 클래스는 저장 프로시저, 트리거 또는 사용자 정의 함수를 다시 컴파일했음을 나타냅니다. 이 이벤트 클래스가 보고하는 다시 컴파일은 문 수준에서 발생합니다.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b9abb0c20817172b01f48bc83a7ef6b353143cd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f57b2404724a13505130dbc0d328e4a7823c55cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266099"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>PropertyType 속성(ServerNetworkProtocolProperty 클래스)
   속성의 유형을 가져옵니다.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerNetworkProtocolProperty 클래스](servernetworkprotocolproperty-class.md) 인스턴스의 네트워크 프로토콜의 특성을 나타내는 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ A [ServerNetworkProtocolProperty 클래스](servernetworkprotocolproperty-class.md) 인스턴스의 네트워크 프로토콜의 특성을 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  속성의 유형을 지정하는 `uint32` 값입니다.  

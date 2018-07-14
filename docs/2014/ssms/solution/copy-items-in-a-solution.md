@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copying items
 - projects [SQL Server Management Studio], copying
 - solutions [SQL Server Management Studio], item copying
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1150b7a6bb0cf36961238783c8a04915a64fb375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bc38ee51f6f10b3d4cd6378e39070c6fcf84fce1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220743"
 ---
 # <a name="copy-items-in-a-solution"></a>솔루션에서 항목 복사
   솔루션 탐색기나 Windows 탐색기를 사용하여 항목을 복사할 수 있습니다.  

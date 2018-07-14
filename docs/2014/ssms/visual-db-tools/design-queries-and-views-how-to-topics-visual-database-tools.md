@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - • vs.solutionexplorer.file.query
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d1f90707a9f2445f1b4d8fce99f0c5f6834a55c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 21ddf3413cb4ab02a0bf7a0249d34b0bb230ce58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321773"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
   쿼리 및 뷰 디자이너를 사용하면 응용 프로그램의 데이터 검색 및 데이터 조작 부분을 쉽게 만들고 유지 관리할 수 있습니다.  

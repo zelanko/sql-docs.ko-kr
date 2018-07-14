@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237023"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>트랜잭션 로그 백업 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 트랜잭션 로그 백업을 복원하는 방법에 대해 설명합니다.  
@@ -150,9 +149,9 @@ ms.locfileid: "36182285"
   
          게시된 데이터베이스를 해당 데이터베이스가 생성된 서버 이외의 다른 서버로 복원할 경우 복제 설정을 유지합니다.  
   
-         이 옵션은 함께만 사용할 수는 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 준비가 유지 중...**  옵션 (뒷부분에서 설명)를 사용 하 여 백업을 복원 하는 것과 같은 `RECOVERY` 옵션입니다.  
+         이 옵션은만 사용할 수는 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있도록 유지 하는 중...**  해당 백업을 복원 하는 옵션 (뒷부분에서 설명)과 `RECOVERY` 옵션입니다.  
   
-         사용 하는이 옵션을 선택 된 `KEEP_REPLICATION` 옵션에 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문.  
+         사용 하는이 옵션을 선택 합니다 `KEEP_REPLICATION` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
   
     -   **각 백업 복원 전에 확인**  
   
@@ -166,19 +165,19 @@ ms.locfileid: "36182285"
   
          **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
-         이 옵션을 선택 하는 것은 사용 하 여 동의어는 `RESTRICTED_USER` 옵션에 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문.  
+         사용 하 여 동의어는이 옵션을 선택 합니다 `RESTRICTED_USER` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
   
 10. **복구 상태** 옵션에서 복원 작업 이후의 데이터베이스 상태를 지정합니다.  
   
     -   **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. (RESTORE WITH RECOVERY)**  
   
-         데이터베이스를 복구합니다. 이 옵션은 해당 하는 `RECOVERY` 옵션에 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문.  
+         데이터베이스를 복구합니다. 이 옵션은 해당 하는 `RECOVERY` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
   
          복원할 로그 파일이 없는 경우에만 이 옵션을 선택합니다.  
   
     -   **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 (RESTORE WITH NORECOVERY)**  
   
-         데이터베이스를 복원되지 않은 `RESTORING` 상태로 유지합니다. 이 옵션을 사용 하는 `NORECOVERY` 옵션에 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문.  
+         데이터베이스를 복원되지 않은 `RESTORING` 상태로 유지합니다. 이 옵션을 사용 하는 `NORECOVERY` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
   
          이 옵션을 선택하면 **복제 설정 유지** 옵션을 사용할 수 없습니다.  
   
@@ -187,7 +186,7 @@ ms.locfileid: "36182285"
   
     -   **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션 실행을 취소하지만 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 파일에 (RESTORE WITH STANDBY)**  
   
-         데이터베이스를 대기 모드로 유지합니다. 이 옵션을 사용 하는 `STANDBY` 옵션에 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문.  
+         데이터베이스를 대기 모드로 유지합니다. 이 옵션을 사용 하는 `STANDBY` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
   
          이 옵션을 선택하려면 대기 파일을 지정해야 합니다.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65558
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 710511c2c11eaaa7599a060015279ea3155ea29f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4c84cca055d927dc617fea1aebce6c6401eaa991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215163"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
   이러한 속성은 테이블 디자이너의 아래쪽 창에 나타납니다. 별도로 언급하지 않는 한 열을 선택하면 속성 창에서 이러한 속성을 편집할 수 있습니다. **열 속성** 을 범주 또는 사전순으로 표시할 수 있습니다. 많은 속성의 경우 특정 데이터 형식에 대해서만 나타나거나 변경할 수 있습니다.  

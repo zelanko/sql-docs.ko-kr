@@ -1,5 +1,5 @@
 ---
-title: Power View 보고서 (SSAS 테이블 형식)에 대 한 테이블 동작 속성 구성 | Microsoft Docs
+title: Power View 보고서 (SSAS 테이블 형식)의 테이블 동작 속성 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267205"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>파워 뷰 보고서의 테이블 동작 속성 구성(SSAS 테이블 형식)
   테이블 형식 모델을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 대한 데이터 모델로 사용할 경우 정보 행을 더 자세히 표시하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "36171876"
 ### <a name="images-are-missing"></a>이미지가 없습니다.  
  모델에서 설정한 속성에 따라 보고서에서 이미지가 시각화되는지 아니면 텍스트 값으로 표시되는지가 결정됩니다.  
   
- ![이미지 Url이 보고서에 텍스트로 표시](../media/ssas-rptprop-noimageurl.gif "이미지 Url 보고서에서 텍스트로 나타남")  
+ ![이미지 Url을 보고서에서 텍스트로 나타남](../media/ssas-rptprop-noimageurl.gif "이미지 Url을 보고서에서 텍스트로 나타남")  
   
  기본적으로 모델의 텍스트는 보고서에서 텍스트로 해석됩니다. 텍스트 열이 보고서 이미지에 대한 URL 주소인 경우 **에서 이미지 파일을 검색하도록** 이미지 URL [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 속성을 설정해야 합니다. 이진 이미지의 경우 **행 식별자** 속성을 설정해야 합니다.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "36171876"
   
  그러나 기본 행에 다른 항목에 대한 데이터가 포함되어 있어서 행의 여러 인스턴스를 표시하려는 다른 예를 생각해 볼 수 있습니다. 이 예에서는 이름이 **Jon Yang**인 두 고객이 있다고 가정합니다. 기본 그룹화 동작을 사용하면 **Jon Yang** 인스턴스가 보고서에 하나만 표시됩니다. 또한 인스턴스가 목록에 하나만 표시되기 때문에 **연간 수입** 측정값은 두 고객에 대한 해당 값의 합계입니다.  
   
- ![기본 그룹 1에 2를 통합](../media/ssas-jonyang-norowid.gif "기본 그룹 1에 2를 통합")  
+ ![기본 그룹 1에 2를 통합](../media/ssas-jonyang-norowid.gif "기본 그룹 1에 2 통합")  
   
  기본 그룹화 동작을 변경하려면 **행 식별자** 및 **고유한 행 유지** 속성을 설정합니다. **고유한 행 유지**에서 성 값이 다른 행에 이미 표시되어 있더라도 이 값을 행에 대해 반복하도록 성 열을 선택합니다. 속성을 변경하고 통합 문서를 다시 게시한 후 동일한 보고서를 만들 수 있습니다. 이 경우에만 **연간 소득**이 올바르게 할당된 상태로 **Jon Yang** 이라는 두 고객이 모두 표시됩니다.  
   
- ![행 ID에 따라 중복 항목이 포함 된 데이터 행](../media/ssas-jonyang.gif "행 ID에 따라 중복 항목이 포함 된 데이터 행")  
+ ![행 ID를 기반으로 하는 중복 항목이 포함 된 데이터 행](../media/ssas-jonyang.gif "행 ID를 기반으로 하는 중복 항목이 포함 된 데이터 행")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>행렬 레이아웃이 너무 복잡합니다.  
  행렬에 정보 테이블을 표시할 때 기본 그룹화 동작은 각 열에 대한 요약된 값을 제공합니다. 목적에 따라 원하는 것보다 더 많은 요약 내용이 표시될 수 있습니다. 이 동작을 변경하려면 **행 식별자**를 설정하면 됩니다. 추가 속성을 설정할 필요는 없습니다. 고유한 행 식별자를 기반으로 각 행에 대한 요약 내용을 계산하도록 그룹화 동작을 변경하려면 행 식별자를 설정하는 것만으로 충분합니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "36171876"
   
  **이전: 차트의 필드를 기반으로 기본 그룹화**  
   
- ![필드 수준의 기본 그룹화를 기반으로 차트](../media/ssas-rptprop-chartfieldgroup.gif "필드 수준의 기본 그룹화를 기반으로 차트")  
+ ![필드 수준에서 기본 그룹화를 기반으로 차트](../media/ssas-rptprop-chartfieldgroup.gif "필드 수준에서 기본 그룹화를 기반으로 차트")  
   
  **이후: 행 식별자를 기반으로 그룹화(행 식별자가 축이 됨)**  
   

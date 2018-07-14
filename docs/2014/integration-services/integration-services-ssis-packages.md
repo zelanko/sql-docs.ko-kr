@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252385"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
@@ -54,9 +54,9 @@ ms.locfileid: "36181851"
 ## <a name="package-templates"></a>패키지 템플릿  
  패키지는 기본 기능을 공유하는 패키지를 작성하는 템플릿으로 자주 사용됩니다. 기본 패키지를 작성한 다음 복사하거나 해당 패키지가 템플릿이 되도록 지정할 수 있습니다. 예를 들어 파일을 다운로드하고 복사한 다음 데이터를 추출하는 패키지에 한 폴더에 있는 파일을 열거하는 Foreach 루프의 FTP 및 파일 시스템 태스크가 포함될 수 있습니다. 또한 데이터에 액세스할 플랫 파일 연결 관리자 및 데이터를 추출할 플랫 파일 원본이 포함될 수 있습니다. 데이터의 대상은 다양하며 기본 패키지에서 복사된 후 각각의 새 패키지에 추가됩니다. 또한 패키지를 만든 다음 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 새 패키지의 템플릿으로 사용할 수 있습니다. 자세한 내용은 [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)을 참조하세요.  
   
- 에 GUID가 추가 프로그래밍 방식으로 또는 SSIS 디자이너를 사용 하 여 패키지를 처음 만들 때 해당 `ID` 속성과에 이름을 해당 `Name` 속성입니다. 기존 패키지를 복사하거나 템플릿 패키지를 사용하여 새 패키지를 만드는 경우 이름 및 GUID도 복사됩니다. 이는 로깅을 사용하는 경우 로깅된 정보가 속하는 패키지를 식별할 수 있도록 패키지의 GUID 및 이름이 로그에 기록되기 때문에 문제가 발생할 수 있습니다. 따라서 새 패키지와 새 패키지를 복사된 패키지 및 로그 데이터에 있는 패키지와 구분할 수 있도록 새 패키지의 이름 및 GUID를 업데이트해야 합니다.  
+ GUID는 추가할 프로그래밍 방식으로 또는 SSIS 디자이너를 사용 하 여 패키지를 처음 만들 때 해당 `ID` 속성과 이름을 해당 `Name` 속성입니다. 기존 패키지를 복사하거나 템플릿 패키지를 사용하여 새 패키지를 만드는 경우 이름 및 GUID도 복사됩니다. 이는 로깅을 사용하는 경우 로깅된 정보가 속하는 패키지를 식별할 수 있도록 패키지의 GUID 및 이름이 로그에 기록되기 때문에 문제가 발생할 수 있습니다. 따라서 새 패키지와 새 패키지를 복사된 패키지 및 로그 데이터에 있는 패키지와 구분할 수 있도록 새 패키지의 이름 및 GUID를 업데이트해야 합니다.  
   
- GUID 다시 생성 하면 패키지 GUID를 변경 하려면는 `ID` 에서 속성 창에서 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 패키지 이름을 변경 하려면 값을 업데이트할 수 있습니다는 `Name` 속성 창에서 속성입니다. 또한 **dtutil** 명령 프롬프트를 사용하거나 GUID 및 이름을 프로그래밍 방식으로 업데이트할 수 있습니다. 자세한 내용은 [패키지 속성 설정](set-package-properties.md) 및 [dtutil 유틸리티](dtutil-utility.md)를 참조하세요.  
+ GUID를 다시 생성 하면 패키지 GUID를 변경 하려면 합니다 `ID` 속성의 속성 창에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 패키지 이름을 변경 하려면 값을 업데이트할 수 있습니다는 `Name` 속성 창에서 속성입니다. 또한 **dtutil** 명령 프롬프트를 사용하거나 GUID 및 이름을 프로그래밍 방식으로 업데이트할 수 있습니다. 자세한 내용은 [패키지 속성 설정](set-package-properties.md) 및 [dtutil 유틸리티](dtutil-utility.md)를 참조하세요.  
   
 ## <a name="objects-that-extend-package-functionality"></a>패키지 기능을 확장하는 개체  
  패키지는 이벤트 처리기, 구성, 로깅 및 변수와 같이 고급 기능을 제공하거나 기존 기능을 확장하는 추가 개체를 포함할 수 있습니다.  
@@ -119,8 +119,8 @@ ms.locfileid: "36181851"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [Microsoft Dynamics mobile SQL Server Integration Services 구현](http://msdn.microsoft.com/library/cc563950)  
+-   [Microsoft Dynamics Mobile 사용 하 여 SQL Server Integration Services를 구현합니다.](http://msdn.microsoft.com/library/cc563950)  
   
--   [방법: Microsoft Dynamics AX에 대 한 SQL Server Integration Services 패키지 구성](http://msdn.microsoft.com/library/bb986852)  
+-   [방법: Microsoft Dynamics AX 용 SQL Server Integration Services 패키지 구성](http://msdn.microsoft.com/library/bb986852)  
   
   

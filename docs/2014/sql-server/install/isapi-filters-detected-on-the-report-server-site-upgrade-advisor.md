@@ -1,5 +1,5 @@
 ---
-title: ISAPI 필터는 보고서 서버 사이트 (업그레이드 관리자)에서 검색 | Microsoft Docs
+title: ISAPI 필터 (업그레이드 관리자)는 보고서 서버 사이트에서 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ISAPI filters
 - report servers [Reporting Services], upgrade issues
@@ -16,16 +16,16 @@ ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 18a9aab0737cb6d5127bbb3357d307c9c8f03aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 448f334fc5a82dea623a12e2ad143725ec11f711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268139"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>ISAPI 필터가 보고서 서버 사이트에서 검색됨(업그레이드 관리자)
-  업그레이드 관리자가 보고서 서버와 보고서 관리자 가상 디렉터리를 호스팅하는 웹 사이트에서 하나 이상의 ISAPI 필터를 발견했습니다. ISAPI 필터에서 지원 되지 않는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
+  업그레이드 관리자가 보고서 서버와 보고서 관리자 가상 디렉터리를 호스팅하는 웹 사이트에서 하나 이상의 ISAPI 필터를 발견했습니다. ISAPI 필터에서 지원 되지 않습니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다.  
   
 ||  
 |-|  

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0da3e8f61c3db9721d68c441ae2db0d497cf1741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e129d7b64d079104a2378fb24dcc0419dd4e8647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266219"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성해야 합니다. 대화 보안은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 의 높은 수준의 대화 보안 모델에 따라 수동으로 구성해야 합니다. 높은 수준의 보안 모델은 원격 서버와 주고 받는 메시지의 암호화 및 암호 해독을 가능하게 합니다. 이벤트 알림은 한 방향으로 전송되지만 오류와 같은 다른 메시지는 반대 방향으로도 반환됩니다.  

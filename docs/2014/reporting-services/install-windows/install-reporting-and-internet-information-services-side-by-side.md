@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274659"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](SSRS)와 IIS(인터넷 정보 서비스)를 같은 컴퓨터에 설치하고 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36173063"
   
 |예제|요청|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|로 전송 된 모든 요청을 받습니다 http://123.234.345.456/reports 또는 http://\<컴퓨터 이름 > / r 경우 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있습니다.|  
+|http://123.234.345.456:80/reports|전송 되는 모든 요청을 받고 http://123.234.345.456/reports 또는 http://\<컴퓨터 이름 > / 경우 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있습니다.|  
 |http://+:80/reports|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
 |http://123.234.345.456:80|지정 하는 모든 요청을 받습니다 http://123.234.345.456 또는 http://\<컴퓨터 이름 > 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있는 경우.|  
 |http://+:80|**모두 할당됨**에 매핑된 응용 프로그램 끝점에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
@@ -61,7 +61,7 @@ ms.locfileid: "36173063"
 |응용 프로그램|URL 예약|Description|요청 수신|  
 |-----------------|---------------------|-----------------|---------------------|  
 |보고서 서버|http://+:80/ReportServer|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 http://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
-|보고서 관리자|http://+:80/Reports|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 관리자에서 http://에 대 한 모든 요청을 수신\<컴퓨터 이름 > / r 합니다.|  
+|보고서 관리자|http://+:80/Reports|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 관리자는 모든 요청을 http://\<컴퓨터 이름 > / reports.|  
 |IIS|http://*:80/|포트 80의 약한 와일드카드입니다.|포트 80에서 다른 응용 프로그램이 받지 않은 모든 나머지 요청을 받습니다.|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>IIS 6.0, 7.0, 8.0, 8.5에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 SQL Server 2005 Reporting Services 함께 배포  
@@ -69,9 +69,9 @@ ms.locfileid: "36173063"
   
 -   포트 80에 할당된 IIS의 웹 사이트 및 "Reports"라는 가상 디렉터리  
   
--   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 여기서 URL 예약은 포트 80을 지정 하 고 보고서 관리자 응용 프로그램으로도 "Reports" 가상 디렉터리 이름에 대 한 사용 기본 구성으로 설치 된 보고서 서버 인스턴스.  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 여기서 URL 예약은 포트 80을 지정 하 고 보고서 관리자 응용 프로그램 가상 디렉터리 이름에도 "Reports"를 사용 하는 기본 구성으로 설치 된 보고서 서버 인스턴스.  
   
- 이 구성 http://에 전송 된 요청\<컴퓨터 이름 >: 80/reports 보고서 관리자가 수신 됩니다. IIS의 Reports 가상 디렉터리를 통해 액세스되는 응용 프로그램은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버 인스턴스가 설치된 후 더 이상 요청을 받지 않습니다.  
+ 구성이 이와 http://로 전송 되는 요청\<컴퓨터 이름 >: 80/보고서를 보고서 관리자에서 수신 합니다. IIS의 Reports 가상 디렉터리를 통해 액세스되는 응용 프로그램은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버 인스턴스가 설치된 후 더 이상 요청을 받지 않습니다.  
   
  이전 버전 및 최신 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]배포를 함께 실행하는 경우 방금 설명한 라우팅 문제가 발생할 가능성이 높습니다. 이는 모든 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 "ReportServer" 및 "Reports"를 보고서 서버 및 보고서 관리자 응용 프로그램의 가상 디렉터리 이름으로 사용하여 IIS에 "reports" 및 "reportserver" 가상 디렉터리가 있을 가능성이 높아지기 때문입니다.  
   

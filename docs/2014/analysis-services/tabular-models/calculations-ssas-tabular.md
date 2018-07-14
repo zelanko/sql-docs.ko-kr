@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 738816e3-0e1d-44a5-8d1b-81068dce8ac0
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f17c8ab9ebf08379bf0b989924221995d7eaf891
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0628ad4360199ac1710ac9669e27c214287a0e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261371"
 ---
 # <a name="calculations-ssas-tabular"></a>계산(SSAS 테이블 형식)
   데이터를 모델로 가져온 후에는 계산을 추가하여 해당 데이터를 집계, 필터링, 확장, 결합 및 보호할 수 있습니다. 테이블 형식 모델에서는 사용자 지정 계산을 만들기 위한 수식 언어인 DAX(Data Analysis Expressions)가 사용됩니다. 테이블 형식 모델에서 DAX 수식을 사용하여 만드는 계산은 *계산 열*, *측정값*및 *행 필터*에 사용됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36182104"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[테이블 형식 모델의 DAX 이해 &#40;SSAS 테이블 형식&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|테이블 형식 모델에서 계산 열, 측정값 및 행 필터에 대한 계산을 만드는 데 사용되는 DAX(Data Analysis Expressions) 수식 언어에 대해 설명합니다.|  
+|[테이블 형식 모델의 DAX 이해 &#40;&AMP;#40;SSAS 테이블 형식&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|테이블 형식 모델에서 계산 열, 측정값 및 행 필터에 대한 계산을 만드는 데 사용되는 DAX(Data Analysis Expressions) 수식 언어에 대해 설명합니다.|  
 |[DirectQuery 모드에서의 수식 호환성](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|차이점을 설명하고, DirectQuery 모드에서 지원되지 않는 함수와 지원은 되지만 다른 결과를 반환할 수 있는 함수의 목록을 제공합니다.|  
 |[Data Analysis Expressions &#40;DAX&#41; 참조](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)|이 섹션에서는 DAX 구문, 연산자 및 함수에 대해 자세히 설명합니다.|  
   

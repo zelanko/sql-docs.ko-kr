@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7cf717edbf16f8f151bbf278d8bd69aa997c141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244333"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서버는 SharePoint ULS(통합 로깅 서비스) 추적 로그에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 이벤트를 기록할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 범주는 SharePoint 중앙 관리의 모니터링 페이지에서 사용할 수 있습니다.  
@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |로컬 모드 렌더링||  
 |SOAP 클라이언트 프록시||  
 |UI 페이지||  
-|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 포함 하 여 클라이언트 응용 프로그램에서 이러한 항목은 소스가 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 용 추가 기능을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역** 의 **범주** 에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 응용 프로그램에 의해 결정됩니다.|  
+|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 포함 하 여 클라이언트 응용 프로그램에서 제공 됩니다 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역** 의 **범주** 에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 응용 프로그램에 의해 결정됩니다.|  
 |보고서 서버 경고 런타임||  
 |보고서 서버 응용 프로그램 도메인 관리자||  
 |보고서 서버 버퍼링 응답||  

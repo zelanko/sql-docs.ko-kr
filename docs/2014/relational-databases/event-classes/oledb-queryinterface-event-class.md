@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ec866dba3009e9c660710ce65b9d3a202b6bc19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223443"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 이벤트 클래스
   **OLEDB QueryInterface** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB **QueryInterface** 를 호출할 때 발생합니다. 분산 쿼리 및 원격 저장 프로시저와 관련된 문제를 모니터링하는 추적에 이 이벤트 클래스를 포함시킵니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36181344"
 |NTUserName|`nvarchar`|Windows 사용자 이름입니다.|6|예|  
 |ProviderName|`nvarchar`|OLE DB Provider의 이름입니다.|46|예|  
 |RequestID|`int`|문을 포함하는 요청의 ID입니다.|49|예|  
-|SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 에 연결 하는 경우 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1를 사용 하 고, 2로 문을 실행할 `SessionLoginName` 은 Login1 및 `LoginName` 2를 표시 합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어, 연결 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1을 사용 하 여 고 고 Login2로 문을 `SessionLoginName` 은 Login1을 표시 하 고 `LoginName` 은 Login2를 표시 합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|`int`|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|`nvarchar`|OLE DB 호출에서 주고 받는 매개 변수입니다.|1|아니요|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - result sets [SQL Server], queries
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - sorting query results [SQL Server]
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689754f8b44b21a3d24398e4fa0a695a02a19557
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 09a9fe76120023d8cda0ebea8d1e7d366f9e050b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261849"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>쿼리 결과 정렬 및 그룹화(Visual Database Tools)
   쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다.  

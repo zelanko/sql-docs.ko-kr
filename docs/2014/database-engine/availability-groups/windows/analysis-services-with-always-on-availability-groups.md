@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261379"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
   AlwaysOn 가용성 그룹은 미리 정의된 SQL Server 관계형 데이터베이스 컬렉션으로, 조건이 한 데이터베이스에서 장애 조치(failover)를 트리거하면 전체 데이터베이스에서 함께 장애 조치가 수행되고, 동일한 가용성 그룹에 있는 다른 인스턴스의 미러된 데이터베이스로 요청을 리디렉션합니다. 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다. 가용성 데이터베이스를 사용할 경우 데이터 처리 또는 가져오기, 관계형 데이터 직접 쿼리(ROLAP 저장소 또는 DirectQuery 모드 사용), 쓰기 저장과 같은 모든 Analysis Services 작업이 예상대로 작동합니다.  
@@ -119,7 +118,7 @@ ms.locfileid: "36092954"
   
      이제, 방금 구성한 그룹의 데이터베이스를 사용하는 Analysis Services 모델의 데이터 원본을 만듭니다.  
   
-##  <a name="bkmk_ssasAODB"></a> AlwaysOn 가용성 데이터베이스를 사용 하는 Analysis Services 데이터 원본 만들기  
+##  <a name="bkmk_ssasAODB"></a> AlwaysOn 가용성 데이터베이스를 사용 하 여 Analysis Services 데이터 원본 만들기  
  이 섹션에서는 가용성 그룹의 데이터베이스에 연결하는 Analysis Services 데이터 원본을 만드는 방법을 설명합니다. 이 지침을 따르면 이전 섹션의 단계에 따라 구성한 주 복제본(기본값) 또는 읽기 가능한 보조 복제본에 대한 연결을 구성할 수 있습니다. AlwaysOn 구성 설정 및 클라이언트의 연결 속성 설정이 주 복제복 또는 보조 복제본 사용 여부를 결정합니다.  
   
 1.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]의 Analysis Services 다차원 및 데이터 마이닝 모델 프로젝트에서 **데이터 원본**을 마우스 오른쪽 단추로 클릭하고 **새 데이터 원본**을 선택합니다. **새로 만들기** 를 클릭하여 새 데이터 원본을 만듭니다.  
@@ -159,7 +158,7 @@ ms.locfileid: "36092954"
   
 1.  SQL Server Profiler를 시작하고 보조 복제본을 호스팅하는 SQL Server 인스턴스에 연결합니다.  
   
-     추적이 실행 되는, `SQL:BatchStarting` 및 `SQL:BatchCompleting` 이벤트가 데이터베이스 엔진 인스턴스에서 실행 중인 Analysis Services에서 실행 한 쿼리를 보여 줍니다. 이러한 이벤트는 기본적으로 선택되므로 사용자는 추적을 시작하기만 하면 됩니다.  
+     추적이 실행 되는 `SQL:BatchStarting` 고 `SQL:BatchCompleting` 이벤트는 데이터베이스 엔진 인스턴스에서 실행 중인 Analysis Services에서 실행 하는 쿼리가 표시 됩니다. 이러한 이벤트는 기본적으로 선택되므로 사용자는 추적을 시작하기만 하면 됩니다.  
   
 2.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]에서 테스트할 데이터 원본 연결이 포함된 Analysis Services 프로젝트 또는 솔루션을 엽니다. 데이터 원본은 그룹의 인스턴스가 아닌 가용성 그룹 수신기를 지정해야 합니다.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36092954"
   
 4.  솔루션을 배포하고 배포가 완료되면 추적을 중지합니다.  
   
-     추적 창에 **Microsoft SQL Server Analysis Services**응용 프로그램의 이벤트가 표시됩니다. 표시 되어야 `SELECT` 연결이 보조 복제본에 대 한 수신기를 통해 생성 된 증명 보조 복제본을 호스팅하는 서버 인스턴스에 있는 데이터베이스에서 데이터를 검색 하는 문입니다.  
+     추적 창에 **Microsoft SQL Server Analysis Services**응용 프로그램의 이벤트가 표시됩니다. 표시 `SELECT` 보조 복제본에 수신기를 통해 연결 하는 데는 보조 복제본을 호스팅하는 서버 인스턴스에서 데이터베이스에서 데이터를 검색 하는 문입니다.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치(failover)를 수행하여 구성 테스트  
   
@@ -223,7 +222,7 @@ ms.locfileid: "36092954"
 ## <a name="see-also"></a>관련 항목  
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [운영 문제 AlwaysOn 가용성 그룹에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [AlwaysOn 가용성 그룹의 운영 문제에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [차원 쓰기 저장(writeback) 설정](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   

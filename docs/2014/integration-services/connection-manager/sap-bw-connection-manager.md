@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223765"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 연결 관리자
   SAP BW 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 연결 관리자 구성 요소입니다. 따라서 SAP BW 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 원본 및 대상 구성 요소에 필요한 SAP Netweaver BW 버전 7 시스템에 대한 연결을 제공합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 패키지의 일부인 SAP BW 원본 및 대상은 SAP BW 연결 관리자를 사용하는 유일한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소입니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36093810"
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
   
- 패키지에는 SAP BW 연결 관리자를 추가 하는 경우는 `ConnectionManagerType` 연결 관리자의 속성이로 설정 되어 `SAPBI`합니다.  
+ 패키지에 SAP BW 연결 관리자를 추가 합니다 `ConnectionManagerType` 연결 관리자의 속성 `SAPBI`합니다.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>SAP BW 연결 관리자 구성  
  다음과 같은 방법으로 SAP BW 연결 관리자를 구성할 수 있습니다.  

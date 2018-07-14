@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267689"
 ---
 # <a name="aliases-element-assl"></a>Aliases 요소(ASSL)
-  컬렉션을 포함 [별칭](../properties/alias-element-assl.md) 와 관련 된 요소는 [계정](../objects/account-element-assl.md) 요소  
+  컬렉션을 포함 [별칭](../properties/alias-element-assl.md) 와 관련 된 요소를 [계정](../objects/account-element-assl.md) 요소  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36172756"
 |자식 요소|[별칭](../properties/alias-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Aliases` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Account>합니다.  
+ 부모에 해당 요소가 `Aliases` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Account>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소 계정 &#40;ASSL&#41;](accounts-element-assl.md)   
+ [요소를 계정 &#40;ASSL&#41;](accounts-element-assl.md)   
  [Database 요소 &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [컬렉션 &#40;ASSL&#41;](collections-assl.md)  
   

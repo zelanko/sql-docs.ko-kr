@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267579"
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 행 집합
   제공된 제한 조건을 충족하는 모든 열의 열 정보를 제공합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DBSCHEMA_COLUMNS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DBSCHEMA_COLUMNS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36172046"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||1부터 시작하는 열 위치입니다.|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||지원되지 않습니다.|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||지원되지 않습니다.|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||열 속성을 나타내는 `DBCOLUMNFLAGS` 비트 마스크입니다. 'DBCOLUMNFLAGS 열거 형식' 참조 [icolumnsinfo:: Getcolumninfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||열 속성을 나타내는 `DBCOLUMNFLAGS` 비트 마스크입니다. 'DBCOLUMNFLAGS 열거 형식'에 나오는 [icolumnsinfo:: Getcolumninfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||항상 반환 `false`합니다.|  
 |`DATA_TYPE`|`DBTYPE_WSTR`<br /><br /> `DBTYPE_VARIANT`||열의 데이터 형식입니다. 차원 열의 경우 문자열을 반환하고 측정값의 경우 변형을 반환합니다.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||지원되지 않습니다.|  

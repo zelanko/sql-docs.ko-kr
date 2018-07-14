@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b3792a55da4ee30d4e3c09a186ca1bf6d32c965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60ede7801556f50dc59ba3017e3d3fdbd795e04f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221703"
 ---
 # <a name="look-up-process-chain"></a>프로세스 체인 조회
   **프로세스 체인 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 프로세스 체인을 조회할 수 있습니다. 사용할 수 있는 프로세스 체인 목록이 표시될 때 원하는 체인을 선택하면 관련 옵션이 원본의 값으로 채워집니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pages [SQL Server], space
 - space [SQL Server], tables
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8410df06898ed7c536c8a6bc8c368c1ec68d6457
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76f650bbfccba0eef9b269791605ae9a76235494
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250183"
 ---
 # <a name="estimate-the-size-of-a-table"></a>테이블 크기 예측
   다음 단계를 통해 테이블에 데이터를 저장하는 데 필요한 공간을 추정할 수 있습니다.  

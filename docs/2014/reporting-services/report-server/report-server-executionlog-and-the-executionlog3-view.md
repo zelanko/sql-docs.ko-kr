@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255695"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>보고서 서버 실행 로그 및 ExecutionLog3 뷰
   보고서 서버 실행 로그에는 단일 서버 또는 기본 모드를 사용하는 스케일 아웃 배포 또는 SharePoint 팜을 사용한 다중 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|데이터를 검색하는 데 걸린 시간(밀리초)|  
 |TimeProcessing|보고서를 처리하는 데 걸린 시간(밀리초)|  
 |TimeRendering|보고서를 렌더링하는 데 걸린 시간(밀리초)|  
-|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> **라이브**<br /><br /> **캐시**: 쿼리 라이브로 실행 되지 않은 경우 예를 들어 데이터 집합 캐시 된 실행을 나타냅니다.<br /><br /> **스냅숏**<br /><br /> **기록**<br /><br /> **AdHoc** :은 동적으로 생성 된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링을 위해 보고서 서버를 활용 하는 클라이언트에 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> **세션**: 요청 이미 설정 된 세션 안의 후속을 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> **Rdce**: Report Definition Customization Extension을 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
+|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> **라이브**<br /><br /> **캐시**: 쿼리 라이브로 실행 되지 않은 데이터 집합에 예를 들어, 캐시 된 실행을 나타냅니다.<br /><br /> **스냅숏**<br /><br /> **기록**<br /><br /> **임시** : 동적으로 생성 된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링에 대 한 보고서 서버를 활용 하는 클라이언트에 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> **세션**: 요청이 이미 설정 된 세션 안의 후속을 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> **Rdce**: Report Definition Customization Extension을 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
 |상태|상태(rsSuccess 또는 오류 코드: 여러 개의 오류가 발생하면 첫 번째 오류만 기록됨)|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
@@ -226,7 +226,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- 다음에서는 AdditionalInfo 필드에 표시 되는 속성 중 일부를 설명:  
+ 다음 AdditionalInfo 필드에 표시 되는 속성 중 일부를 설명 합니다.  
   
 -   **ProcessingEngine**: 1 = SQL Server 2005, 2 = 새로운 요청 시 처리 엔진입니다. 대부분의 보고서에 값이 계속 1로 표시되면 보다 효율적이고 새로운 요청 시 처리 엔진을 활용할 수 있도록 보고서를 다시 디자인할 방법을 조사해야 할 수 있습니다.  
   
@@ -240,7 +240,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: 예상 양 (킬로바이트), 특정 요청 중 각 구성 요소에서 사용 된 메모리의 최대 양입니다.  
+-   **EstimatedMemoryUsageKB**: (킬로바이트)는 특정 요청 중 각 구성 요소에서 사용 된 메모리의 최대 크기를 예상 합니다.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -248,7 +248,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: 데이터 확장 프로그램 또는 보고서에 사용 된 데이터 원본 유형입니다. 이 수치는 특정 데이터 원본의 발생 횟수입니다.  
+-   **DataExtension**: 데이터 확장 프로그램 또는 보고서에 사용 되는 데이터 원본 유형입니다. 이 수치는 특정 데이터 원본의 발생 횟수입니다.  
   
     ```  
     <DataExtension>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**값은 밀리초에서 단위입니다. 이 데이터를 사용하여 성능 문제를 진단할 수 있습니다. 외부 웹 서버에서 이미지를 검색하는 데 필요한 시간으로 인해 전반적인 보고서 실행 속도가 느려질 수 있습니다. 에 추가 되었습니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
+-   **ExternalImages**값은 밀리초에서 단위입니다. 이 데이터를 사용하여 성능 문제를 진단할 수 있습니다. 외부 웹 서버에서 이미지를 검색하는 데 필요한 시간으로 인해 전반적인 보고서 실행 속도가 느려질 수 있습니다. 추가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **연결**: 여러 수준의 구조입니다. 에 추가 되었습니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
+-   **연결**: 여러 수준의 구조입니다. 추가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
   
     ```  
     <Connections>  

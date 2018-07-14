@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
 - transform noise words option
@@ -17,26 +17,26 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36f615f09fa20c2d5d07853d0a9ef07fdc445704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708333809439bcada782b72ce67890dc7b3d5799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231943"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 서버 구성 옵션
-  사용 하 여는 `transform noise words` 서버 구성 옵션을 오류 메시지를 표시 하지 않는 경우 의미 없는 단어, 즉 [중지 단어](../../relational-databases/search/full-text-search.md), 인해 0 개의 행을 반환 하는 전체 텍스트 쿼리에 대 한 부울 연산이 합니다. 이 옵션은 부울 연산 또는 NEAR 연산에 의미 없는 단어가 들어 있는 CONTAINS 조건자를 사용하는 전체 텍스트 쿼리에 유용합니다. 다음 표에서는 이 옵션에 사용할 수 있는 값을 설명합니다.  
+  사용 된 `transform noise words` 오류 메시지를 표시 하지 않으려면 서버 구성 옵션 경우 의미 없는 단어, 즉 [중지 단어](../../relational-databases/search/full-text-search.md), 0 개 행을 반환 하는 전체 텍스트 쿼리에 대 한 부울 연산이 발생할. 이 옵션은 부울 연산 또는 NEAR 연산에 의미 없는 단어가 들어 있는 CONTAINS 조건자를 사용하는 전체 텍스트 쿼리에 유용합니다. 다음 표에서는 이 옵션에 사용할 수 있는 값을 설명합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|0|의미 없는 단어(또는 중지 단어)가 변환되지 않습니다. 전체 텍스트 쿼리에 의미 없는 단어가 들어 있으면 쿼리에서 행이 반환되지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 경고가 발생합니다. 이것이 기본 동작입니다.<br /><br /> 이 경고는 런타임 경고를 확인 합니다. 쿼리에 있는 전체 텍스트 절이 실행되지 않으면 경고가 발생하지 않습니다. 로컬 쿼리의 경우 여러 개의 전체 텍스트 쿼리 절이 있어도 경고는 하나만 발생합니다. 원격 쿼리의 경우 연결된 서버에서 오류를 릴레이하지 않을 수 있으므로 경고가 발생하지 않을 수도 있습니다.|  
+|0|의미 없는 단어(또는 중지 단어)가 변환되지 않습니다. 전체 텍스트 쿼리에 의미 없는 단어가 들어 있으면 쿼리에서 행이 반환되지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 경고가 발생합니다. 이것이 기본 동작입니다.<br /><br /> 경고는 런타임 경고는 참고 합니다. 쿼리에 있는 전체 텍스트 절이 실행되지 않으면 경고가 발생하지 않습니다. 로컬 쿼리의 경우 여러 개의 전체 텍스트 쿼리 절이 있어도 경고는 하나만 발생합니다. 원격 쿼리의 경우 연결된 서버에서 오류를 릴레이하지 않을 수 있으므로 경고가 발생하지 않을 수도 있습니다.|  
 |1|의미 없는 단어(또는 중지 단어)가 변환되지 않습니다. 이러한 단어는 무시되고 쿼리의 나머지가 평가됩니다.<br /><br /> 근접 단어에서 의미 없는 단어가 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 의미 없는 단어를 제거합니다. 예를 들어 `is` 에서 의미 없는 단어 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`가 제거되고 검색 쿼리가 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`로 변환됩니다. `CONTAINS(<column_name>, 'NEAR(hello,is)')` 는 유효한 검색 단어가 하나만 있으므로 간단히 `CONTAINS(<column_name>, hello)` 로 변환됩니다.|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>의미 없는 단어 변환 설정의 효과  
- 이 섹션에서는 의미 없는 단어가 들어 있는 쿼리의 동작 "`the`"의 설정 별로 `transform noise words`합니다.  예제 전체 텍스트 쿼리 문자열은 다음 데이터가 포함된 테이블 행에 대해 실행되는 것으로 가정합니다. `[1, "The black cat"]`.  
+ 이 섹션에서는 의미 없는 단어가 들어 있는 쿼리의 동작을 보여 줍니다. "`the`"에서의 설정 별로 `transform noise words`합니다.  예제 전체 텍스트 쿼리 문자열은 다음 데이터가 포함된 테이블 행에 대해 실행되는 것으로 가정합니다. `[1, "The black cat"]`.  
   
 > [!NOTE]  
 >  이러한 모든 시나리오에서 의미 없는 단어 경고가 생성될 수 있습니다.  

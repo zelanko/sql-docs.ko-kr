@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
 - sql12.swb.new.datatype.properties.general.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d39ce0a1b6d5672ea574f79ef6427ff0d633072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b3fdf094f1db50860d0f4e29d17463ba1092a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264831"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "36093539"
      `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 길이가 표시되지 않습니다.  
   
      **이름**  
-     새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 최대 문자 수는 시스템 같아야 `sysname` 데이터 형식입니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
+     새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 최대 문자 수는 시스템 일치 해야 `sysname` 데이터 형식입니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
   
      **규칙**  
      필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 규칙을 선택합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "36093539"
     |20 – 28|13|  
     |29 – 38|17|  
   
-     에 대 한 `nchar` 및 `nvarchar` 데이터 형식의 경우 저장소 값이 값의 두 배 항상 **길이**합니다.  
+     에 대 한 `nchar` 하 고 `nvarchar` 데이터 형식의 경우 저장소 값이 값의 두 배 항상 **길이**입니다.  
   
      `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 저장소가 표시되지 않습니다.  
   

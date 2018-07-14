@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4fddd5933314b22fecbfe3791af209f40c3e02d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 457eb70ec1ce9883a5de4c2032fae60ec664703b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220763"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>보고서 속성 대화 상자, 코드(보고서 작성기)
   **보고서 속성** 대화 상자에서 **코드** 를 선택하여 보고서 내에서 식에 사용할 사용자 지정 코드를 정의할 수 있습니다.  

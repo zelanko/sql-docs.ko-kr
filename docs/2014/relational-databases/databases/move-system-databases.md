@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
 - disaster recovery [SQL Server], moving database files
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c7bf033e015ca982610c126ede29f2936c686bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 45673cbae225dbc796fcc84dbc94b33cfc0dedd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326193"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 데이터베이스를 이동하는 방법에 대해 설명합니다. 시스템 데이터베이스 이동은 다음과 같은 경우에 유용할 수 있습니다.  
@@ -213,7 +213,7 @@ ms.locfileid: "36093347"
   
 2.  **오류 로그** 를 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
   
-3.  **SQL Server 에이전트 오류 로그 구성** 대화 상자에서 SQLAGENT.OUT 파일의 새 위치를 지정합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL12. < c e _ > \MSSQL\Log\\합니다.  
+3.  **SQL Server 에이전트 오류 로그 구성** 대화 상자에서 SQLAGENT.OUT 파일의 새 위치를 지정합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL12. < instance_name > \MSSQL\Log\\합니다.  
   
 #### <a name="change-the-database-default-location"></a>데이터베이스 기본 위치 변경  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing query properties
 - displaying query properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [SQL Server], properties
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a42485c712526098a0d509d5243de5917c6495a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 54b2fad8886f0fee98854e3fe9cb93ed8a773669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216403"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>쿼리 속성 표시(Visual Database Tools)
   쿼리 및 뷰 디자이너의 속성 창에서 쿼리의 속성을 표시할 수 있습니다.  

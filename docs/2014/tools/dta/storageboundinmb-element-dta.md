@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c2a7b28ef7f6c5f6853d8b5fad0fb4a5706face
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20e289a5920dba9ab2567a07841010ceaeaa2666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218383"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
   데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성(인덱스 및 분할 집합)에 사용될 수 있는 최대 공간(MB)을 지정합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36173228"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`unsignedInt`길이 제한 합니다.|  
+|**데이터 형식 및 길이**|`unsignedInt`길이 제한 없음된.|  
 |**기본값**|없음|  
 |**발생 빈도**|(선택 사항) `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36173228"
   
  기본 저장소 크기는 비클러스터형 인덱스 및 인덱싱된 뷰를 포함하지 않습니다.  
   
- 에 대 한 지정 된 값은 `StorageBoundInMB` 요소 초과 실제 디스크 공간을 데이터베이스 엔진 튜닝 관리자는 오류를 반환 하지만 튜닝 작업을 계속 합니다. 튜닝이 완료된 후 권장 구성을 구현하려는 경우에는 디스크 공간을 추가할 수 있습니다.  
+ 값을 지정한 경우는 `StorageBoundInMB` 요소 초과 하는 실제 디스크 공간을 데이터베이스 엔진 튜닝 관리자 오류를 반환 하지만 튜닝 작업은 계속 합니다. 튜닝이 완료된 후 권장 구성을 구현하려는 경우에는 디스크 공간을 추가할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   

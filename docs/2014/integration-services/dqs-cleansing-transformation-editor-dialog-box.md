@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f723e04c13dd16c6f872950652dba759f611cbf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0034984a58971af442ab7154bbba50820dfe1a16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219673"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 정리 변환 편집기 대화 상자
   **DQS 정리 변환 편집기** 대화 상자를 통해 DQS(Data Quality Services)를 사용하여 데이터를 수정할 수 있습니다. 자세한 내용은 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)을(를) 참조하세요.  
@@ -115,7 +115,7 @@ ms.locfileid: "36182098"
  기존 참조 데이터 공급자에서 받은 추가 데이터를 출력할지 여부를 나타냅니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
   
  **추가된 데이터 스키마**  
- 데이터 스키마를 출력할지 여부를 나타냅니다. 자세한 내용은 참조 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)합니다.  
+ 데이터 스키마를 출력할지 여부를 나타냅니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)합니다.  
   
 ##  <a name="manager"></a> DQS 정리 연결 관리자 대화 상자에서 옵션 설정  
  **서버 이름**  

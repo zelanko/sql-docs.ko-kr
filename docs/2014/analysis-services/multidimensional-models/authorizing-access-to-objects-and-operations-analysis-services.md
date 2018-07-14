@@ -1,5 +1,5 @@
 ---
-title: 개체 및 작업 (Analysis Services)에 대 한 액세스 권한을 부여 | Microsoft Docs
+title: 개체 및 작업 (Analysis Services)에 대 한 액세스 권한 부여 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249183"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36172477"
   
  **1단계: 서버 관리**  
   
- 첫 번째 단계로, 서버 수준에서 관리자 권한을 가질 사람을 결정합니다. 설치 중 SQL Server를 설치하는 로컬 관리자는 하나 이상의 Windows 계정을 Analysis Services 서버 관리자로 지정해야 합니다. 서버 관리자는 서버의 개체 보기, 수정, 삭제 권한 또는 연결된 데이터 보기 권한을 포함하여 서버에 대해 가능한 모든 권한을 가집니다. 설치가 완료된 후 서버 관리자는 계정을 추가하거나 제거하여 이 역할에 대한 구성원 자격을 변경할 수 있습니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 이 사용 권한 수준에 대 한 세부 정보에 대 한 합니다.  
+ 첫 번째 단계로, 서버 수준에서 관리자 권한을 가질 사람을 결정합니다. 설치 중 SQL Server를 설치하는 로컬 관리자는 하나 이상의 Windows 계정을 Analysis Services 서버 관리자로 지정해야 합니다. 서버 관리자는 서버의 개체 보기, 수정, 삭제 권한 또는 연결된 데이터 보기 권한을 포함하여 서버에 대해 가능한 모든 권한을 가집니다. 설치가 완료된 후 서버 관리자는 계정을 추가하거나 제거하여 이 역할에 대한 구성원 자격을 변경할 수 있습니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 이 권한 수준에 대 한 세부 정보에 대 한 합니다.  
   
  **2단계: 데이터베이스 관리**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36172477"
   
  **3단계: 쿼리 및 작업 처리에 대해 큐브 또는 모델 액세스 활성화**  
   
- 기본적으로 서버 및 데이터베이스 관리자만 큐브 또는 테이블 형식의 모델에 액세스할 수 있습니다. Windows 사용자 및 그룹 계정을 큐브 또는 모델을 지정 하는 권한과 함께 매핑하는 추가 역할 할당이 필요 하면 조직의 다른 사용자에 게 이러한 데이터 구조를 제공 하기 `Read` 권한. 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
+ 기본적으로 서버 및 데이터베이스 관리자만 큐브 또는 테이블 형식의 모델에 액세스할 수 있습니다. 지정 하는 권한이 있는 Windows 사용자 및 그룹 계정을 큐브 또는 모델을 함께 매핑하는 추가 역할 할당이 필요 조직의 다른 사용자에 게 이러한 데이터 구조를 사용할 수 있도록 `Read` 권한. 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
   
  처리 태스크는 다른 관리 기능과 격리되어 서버 및 데이터베이스 관리자가 이 태스크를 다른 사람에게 위임하거나 예약 소프트웨어를 실행하는 서비스 계정을 지정하여 무인 처리를 구성할 수 있습니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)를 참조하세요.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unpivottrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f3b60113f459617fd81854e42cb41c94e78079dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3af98aecfbf87165b6533a8df22f37a53128d5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233783"
 ---
 # <a name="unpivot-transformation"></a>피벗 해제 변환
   피벗 해제 변환은 단일 레코드의 여러 열 값을 단일 열에 동일 값이 포함된 여러 레코드로 확장하여 정규화되지 않은 데이터 집합을 정규화된 버전으로 만듭니다. 예를 들어 고객 이름이 나열된 데이터 집합에 각 고객마다 하나의 행이 있고 행의 열에 제품 및 구매 수량이 표시되어 있습니다. 피벗 해제 변환으로 데이터 집합을 정규화하면 데이터 집합에 고객이 구매한 각 제품이 서로 다른 행에 포함됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36093809"
  일부 경우에는 피벗 해제된 결과에 예기치 않은 값이 있는 행이 포함될 수 있습니다. 예를 들어 다이어그램에 표시된 피벗 해제할 예제 데이터에서 Fred의 모든 Qty 열에 null 값이 있으면 출력에는 Fred에 대한 행이 다섯 개가 아니라 한 개만 포함될 수 있습니다. Qty 열에는 해당 열 데이터 형식에 따라 null이나 0이 포함됩니다.  
   
 ## <a name="configuration-of-the-unpivot-transformation"></a>피벗 해제 변환 구성  
- 피벗 해제 변환에 포함 되어는 `PivotKeyValue` 사용자 지정 속성입니다. 이 속성은 패키지가 로드되면 속성 식을 사용하여 업데이트할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md), [패키지에서 속성 식 사용](../../expressions/use-property-expressions-in-packages.md) 및 [변환 사용자 지정 속성](transformation-custom-properties.md)을 참조하세요.  
+ 피벗 해제 변환에 포함 된 `PivotKeyValue` 사용자 지정 속성입니다. 이 속성은 패키지가 로드되면 속성 식을 사용하여 업데이트할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md), [패키지에서 속성 식 사용](../../expressions/use-property-expressions-in-packages.md) 및 [변환 사용자 지정 속성](transformation-custom-properties.md)을 참조하세요.  
   
  이 변환은 하나의 입력과 하나의 출력을 가지며 오류 출력은 없습니다.  
   

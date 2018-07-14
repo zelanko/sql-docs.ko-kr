@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - isolating performance problems [SQL Server]
 - monitoring performance [SQL Server], isolating problems
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - server performance [SQL Server], isolating problems
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 511c8a2ab560fb318f7db3ab680c9e3c4832bb24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e30f1bd11eb9a29015d9a937d79cec3a4eaf8181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242423"
 ---
 # <a name="isolate-performance-problems"></a>성능 문제 격리
   도구를 하나씩 사용하는 것보다는 여러 개의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 Microsoft Windows 도구를 함께 사용하여 데이터베이스 성능 문제를 격리하는 것이 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  

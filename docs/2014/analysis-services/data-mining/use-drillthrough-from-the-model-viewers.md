@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f18e2efe4a9457e9e7ac320dcf8570d89df0edbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a272b1a86de667087c8a2a583d0fee6fd5584f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265759"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>모델 뷰어에서 드릴스루 사용
   모델 유형에 따라 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 브라우저 뷰어에서 드릴스루를 사용하여 마이닝 모델에 사용된 사례를 탐색하거나 마이닝 구조의 추가 열을 볼 수 있습니다. 모델의 패턴은 특정 사례에 직접 연결할 수 없으므로 대부분의 모델 유형에서 드릴스루를 지원하지 않지만 다음 모델 유형에서는 드릴스루를 지원합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36182372"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
- [마이닝 모델에서의 드릴스루](drillthrough-on-mining-models.md)   
+ [마이닝 모델에 대 한 드릴스루](drillthrough-on-mining-models.md)   
  [마이닝 구조에 대한 드릴스루](drillthrough-on-mining-structures.md)  
   
   

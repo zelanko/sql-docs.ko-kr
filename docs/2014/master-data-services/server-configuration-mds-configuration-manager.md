@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00157520960c85f2cf1c19b390ec63f9c24bc80d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 14c75d3b65b2374df53fea7e0c3c12a4108af1d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256699"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Master Data Services 서버 구성 페이지(구성 관리자)
   **서버 구성** 페이지를 사용하여 로컬 서버 컴퓨터에 대한 구성 정보를 볼 수 있습니다.  

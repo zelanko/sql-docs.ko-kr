@@ -18,21 +18,21 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e5863ed19f306fbaf88cffd02903a958c63cfe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243203"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>가장 및 CLR 통합 보안
   관리 코드에서 외부 리소스를 액세스할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 루틴이 실행되고 있는 현재 실행 컨텍스트를 자동으로 가장하지 않습니다. `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리의 코드에서는 현재 실행 컨텍스트를 명시적으로 가장할 수 있습니다.  
   
 > [!NOTE]  
->  가장의 동작 변경에 대 한 자세한 내용은 참조 [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경 내용](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
+>  가장의 동작 변경 내용에 대 한 자세한 내용은 [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경 내용](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
   
  In-process 데이터 액세스 공급자는 현재 보안 컨텍스트와 연관된 토큰을 검색하는 데 사용할 수 있는 응용 프로그래밍 인터페이스 `SqlContext.WindowsIdentity`를 제공합니다. `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리의 관리 코드에서는 이 메서드를 사용하여 컨텍스트를 검색할 수 있고 .NET Framework `WindowsIdentity.Impersonate` 메서드를 사용하여 해당 컨텍스트를 가장할 수 있습니다. 사용자 코드에서 명시적으로 가장할 때는 다음과 같은 제한 사항이 적용됩니다.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a53224c1618434ff9a7db2dda4ffc8a71f2ad1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8be27c06c27688ad38339ea911bbe0f165658e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220519"
 ---
 # <a name="replay-trace-data"></a>추적 데이터 재생
   입력 추적 데이터를 준비한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작할 수 있습니다. 자세한 내용은 [입력 추적 데이터 준비](prepare-the-input-trace-data.md)를 참조하세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "36172796"
   
 2.  **이벤트 재생 단계 시작**: Distributed Replay를 시작하려면 **replay** 옵션을 사용하여 관리 도구를 실행해야 합니다. 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
-    1.  Windows 명령 프롬프트 유틸리티를 열려면 (`CMD.exe`), Distributed Replay administration tool의 설치 위치로 이동 하 고 (`DReplay.exe`).  
+    1.  Windows 명령 프롬프트 유틸리티를 열어 (`CMD.exe`), Distributed Replay administration tool의 설치 위치로 이동 (`DReplay.exe`).  
   
     2.  (선택 사항) 컨트롤러 서비스가 관리 도구와 다른 컴퓨터에서 실행 중인 경우 *controller* 매개 변수 **-m**을 사용하여 컨트롤러를 지정합니다.  
   

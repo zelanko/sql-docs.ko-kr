@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], skipping data fields
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a60d4d668cb9c7d7d13a60a12df1057b24eea465
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b7a68881bf5609e3a5ab3036b17f4a38faf875cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225243"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
   데이터 파일에는 테이블의 열 수보다 많은 필드를 둘 수 있습니다. 이 항목에서는 테이블 열을 해당 데이터 필드에 매핑하고 나머지 필드는 무시하는 방법으로 데이터 파일에 더 많은 필드를 수용하도록 비 XML 서식 파일과 XML 서식 파일 모두를 수정하는 방법에 대해 설명합니다.  

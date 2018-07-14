@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273969"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
-  보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 설치 하지 않은 했거나 보고서 서버를 구성 하는 경우 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 및 [Reporting Services 기본 모드 보고서 서버관리](manage-a-reporting-services-native-mode-report-server.md).  
+  보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 설치 아직 했거나 보고서 서버를 구성 하는 경우 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 하 고 [Reporting Services 기본 모드 보고서 서버관리](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -59,7 +59,7 @@ ms.locfileid: "36181259"
   
 -   [로컬 보고서 서버 관리에 대해 SSMS(SQL Server Management Studio)를 구성하려면](#bkmk_configure_ssms)  
   
--   [SQL Server Data Tools (SSDT)는 로컬 보고서 서버에 게시 하려면 BI를 구성 하려면](#bkmk_configure_ssdt)  
+-   [SQL Server Data Tools (SSDT)는 로컬 보고서 서버로 게시할 BI를 구성 하려면](#bkmk_configure_ssdt)  
   
 -   [추가 정보](#bkmk_addiitonal_informaiton)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36181259"
   
  이제 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 열 때 **관리자 권한으로 실행** 을 명시적으로 선택하지 않아도 보고서 서버 속성에 액세스할 수 있습니다.  
   
-##  <a name="bkmk_configure_ssdt"></a> SQL Server Data Tools (SSDT)는 로컬 보고서 서버에 게시 하려면 BI를 구성 하려면  
+##  <a name="bkmk_configure_ssdt"></a> SQL Server Data Tools (SSDT)는 로컬 보고서 서버로 게시할 BI를 구성 하려면  
  이 항목의 첫 번째 섹션에 나와 있는 운영 체제 중 하나에 [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] 를 설치했고 SSDT가 로컬 기본 모드 보고서 서버와 상호 작용하도록 하려는 경우 승격된 권한으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 열지 않거나 Reporting Services 역할을 구성하지 않으면 권한 오류가 발생합니다. 예를 들어 충분한 권한이 없으면 다음과 유사한 문제가 발생합니다.  
   
 -   보고서 항목을 로컬 보고서 서버에 배포하려고 하면 **오류 목록** 창에 다음과 유사한 오류 메시지가 표시됩니다.  
@@ -170,7 +170,7 @@ ms.locfileid: "36181259"
   
  **SSDT를 열 때마다 승격된 권한으로 실행하려면**  
   
-1.  시작 화면에서 입력 `sql server` 마우스 오른쪽 단추로 클릭 한 다음 **Visual Studio 용 SQL Server Data Tools**합니다. **관리자 권한으로 실행**을 클릭합니다.  
+1.  시작 화면에서 입력 `sql server` 마우스 오른쪽 단추로 클릭 **Visual Studio 용 SQL Server Data Tools**합니다. **관리자 권한으로 실행**을 클릭합니다.  
   
      **또는**이전 운영 체제에서 다음을 수행합니다.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36181259"
 -   이 항목의 앞부분에 있는 [보고서 관리자 폴더 설정](#bkmk_configure_folder_settings) 및 [보고서 관리자 사이트 설정](#bkmk_configure_site_settings) 섹션을 참조하세요.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> 추가 정보  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리와 관련된 일반적인 추가 구성 단계는 보고서 서버 컴퓨터에 대한 액세스를 허용하도록 Windows 방화벽에서 포트 80을 여는 것입니다. 자세한 내용은 [보고서 서버 액세스를 위한 방화벽 구성](configure-a-firewall-for-report-server-access.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리와 관련된 일반적인 추가 구성 단계는 보고서 서버 컴퓨터에 대한 액세스를 허용하도록 Windows 방화벽에서 포트 80을 여는 것입니다. 자세한 내용은 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 기본 모드 보고서 서버 관리](manage-a-reporting-services-native-mode-report-server.md)  

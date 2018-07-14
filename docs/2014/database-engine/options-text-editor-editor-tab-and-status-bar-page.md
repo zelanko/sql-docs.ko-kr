@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267269"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>옵션(텍스트 편집기: 편집기 탭 및 상태 표시줄 페이지)
   **편집기 탭 및 상태 표시줄** 페이지를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 쿼리 편집기에 표시되는 정보를 사용자 지정할 수 있습니다. 쿼리 편집기 창의 탭 및 상태 표시줄에 표시되는 정보의 수준을 지정하고 상태 표시줄을 편집기 창의 위쪽에 표시할지, 아래쪽에 표시할지를 지정할 수 있습니다.  

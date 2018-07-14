@@ -1,5 +1,5 @@
 ---
-title: URL 액세스와 SOAP 중에서 선택 | Microsoft Docs
+title: URL 액세스와 SOAP 중 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ddeb463427f159717d899f73031306f05fb424e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7d8d60cd6b91e93dbf0fcd71e8cc995a405af88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280539"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL 액세스와 SOAP 중 선택
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 응용 프로그램에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 응용 프로그램에 통합하는 데 있어서 중요한 결정이 필요합니다.  
@@ -46,7 +46,7 @@ Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합�
   
  보고서 도구 모음에 대한 자세한 내용은 [HTML 뷰어 및 보고서 도구 모음](../html-viewer-and-the-report-toolbar.md)을 참조하세요.  
   
- URL 액세스에 대 한 자세한 내용은 참조 [URL 액세스 &#40;SSRS&#41;](../url-access-ssrs.md)합니다.  
+ URL 액세스에 대 한 자세한 내용은 참조 하세요. [URL 액세스 &#40;SSRS&#41;](../url-access-ssrs.md)합니다.  
   
  URL 액세스는 보고서를 보는 데 유용하지만 엔터프라이즈 보고 시나리오에 필수적일 수 있는 보고서 및 네임스페이스 관리 기능을 제공하지 않습니다. 이 경우 Reporting Services SOAP API에서 제공되는 다양하고 풍부한 기능을 사용하는 것이 좋습니다. SOAP API를 통해 보고서 관리 및 배포, 일정 만들기, 서버 속성 구성, 보고서 서버 네임스페이스 관리, 구독 만들기 등의 작업을 수행할 수 있습니다. SOAP API는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 전체 관리 기능 집합을 표시합니다. 또한 SOAP API에서는 API의 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 통해 보고서 보기 및 탐색이 가능합니다. 하지만 SOAP API를 통한 보고서 보기에서는 보고서 도구 모음에 기본 제공되는 보기 기능을 사용할 수 없을 뿐만 아니라 URL 액세스에서 제공하는 보고서 대화형 작업을 자동으로 처리하지도 못합니다.  
   

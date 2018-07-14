@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - Query Designer [SQL Server], query creation
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c3d0e18368e4f6847797aad57aee3f1b1363eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 64332c8ebfd93f8467ae56d594d3c5fcec874be4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224643"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>쿼리 형식(Visual Database Tools)
   쿼리 및 뷰 디자이너에서는 선택, 결과 삽입, 값 삽입, 업데이트, 삭제 및 테이블 만들기 쿼리 형식에 대한 기본적인 기능을 제공하고 UNION 쿼리, 전체 텍스트 검색 쿼리 및 CASE 식 쿼리도 지원합니다.  

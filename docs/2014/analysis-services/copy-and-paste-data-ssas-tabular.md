@@ -1,5 +1,5 @@
 ---
-title: 데이터 (SSAS 테이블 형식) 복사 및 붙여넣기 | Microsoft Docs
+title: 복사 및 붙여넣기 데이터 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02f2675214908685964e22f216e3f40ac91d5a85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83b7c0c4b3861ff18008580e60d0b508c1526fd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224663"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>데이터 복사 및 붙여넣기(SSAS 테이블 형식)
   외부 응용 프로그램에서 테이블 형식의 데이터를 복사하여 모델 디자이너의 신규 또는 기존 테이블에 붙여넣을 수 있습니다. Excel 또는 Word에서 복사한 데이터와 같은 클립보드에서 붙여넣는 데이터는 HTML 형식이어야 합니다. 모델 디자이너는 데이터 형식을 자동으로 감지하여 붙여넣은 데이터에 적용합니다. 사용자가 직접 열의 데이터 형식이나 서식을 수정할 수도 있습니다.  
@@ -90,8 +90,8 @@ ms.locfileid: "36172068"
  클립보드 내용의 예제를 보여 줍니다. 대상 테이블의 기존 데이터가 삭제되고 새 행이 테이블에 삽입됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
- [지원 되는 데이터 원본 &#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [열의 데이터 형식을 설정 &#40;SSAS 테이블 형식&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
+ [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [열의 데이터 형식 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

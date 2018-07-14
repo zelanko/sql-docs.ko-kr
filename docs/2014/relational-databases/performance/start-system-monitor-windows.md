@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], starting
 - starting Windows System Monitor
 - Windows System Monitor [SQL Server], starting
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a47d55fc6ef0a035dd4298b5e6ad6e94972fb8bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa377c7c9138521073b226213d087d2097b6af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254085"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
   시스템 모니터를 사용하여 시스템 리소스의 사용률을 모니터링할 수 있습니다. 프로세서 및 메모리 사용 같은 서버 리소스와 잠금 및 트랜잭션 같은 다양한 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대한 실시간 성능 데이터를 카운터 형식으로 수집하여 확인합니다.  

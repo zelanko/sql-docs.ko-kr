@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266329"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
   전체 텍스트 카탈로그는 파일 그룹에 속하지 않는 가상 개체이며, 전체 텍스트 인덱스의 그룹을 가리키는 논리적인 개념입니다.  
   
-##  <a name="creating"></a> 전체 텍스트 카탈로그를 만들려면  
+##  <a name="creating"></a> 전체 텍스트 카탈로그 만들기  
   
 #### <a name="to-create-a-full-text-catalog"></a>전체 텍스트 카탈로그를 만들려면  
   
@@ -47,7 +46,7 @@ ms.locfileid: "36173084"
   
   
 ##  <a name="props"></a> 전체 텍스트 카탈로그의 속성 보기  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 전체 텍스트 인덱싱에 관련 된 다양 한 속성의 값을 얻기 위해 FULLTEXTCATALOGPROPERTY와 같은 함수를 사용할 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 전체 텍스트 인덱싱에 관련 된 다양 한 속성의 값을 가져오려면 FULLTEXTCATALOGPROPERTY와 같은 함수를 사용할 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
   
  다음 표에서는 전체 텍스트 카탈로그에 관련된 속성을 나열합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36173084"
   
   
   
-##  <a name="rebuildall"></a> 데이터베이스에 대 한 전체 텍스트 카탈로그를 다시 작성  
+##  <a name="rebuildall"></a> 데이터베이스에 대 한 모든 전체 텍스트 카탈로그를 다시 작성  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>데이터베이스의 전체 텍스트 카탈로그를 다시 작성하려면  
   

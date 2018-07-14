@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - result sets [SQL Server], queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 033e1e1f49a8d08b782e1a349ea43e388b9073b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216493"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>결과 삽입 쿼리 만들기(Visual Database Tools)
   결과 삽입 쿼리를 사용하여 테이블 내에서 또는 한 테이블에서 다른 테이블로 행을 복사할 수 있습니다. 예를 들어 `titles` 테이블에서 결과 삽입 쿼리를 사용하여 한 출판사의 모든 도서 제목에 대한 정보를 두 번째 테이블로 복사하고 이 테이블을 해당 출판사에서 사용하도록 만들 수 있습니다. 결과 삽입 쿼리는 테이블 만들기 쿼리와 비슷하지만 행을 기존 테이블에 복사한다는 점에서 차이가 있습니다.  
@@ -80,11 +80,11 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  쿼리 및 뷰 디자이너에서는 업데이트 가능한 테이블과 뷰를 미리 확인할 수 없습니다. 따라서 **결과 삽입의 대상 테이블 선택** 대화 상자의 **테이블 이름** 목록에는 쿼리하려는 데이터 연결에 사용 가능한 모든 테이블과 뷰가 표시됩니다. 여기에는 행을 복사해 넣을 수 없는 테이블이나 뷰도 포함됩니다.  
   
-4.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 복사하려는 내용이 들어 있는 열의 이름을 선택합니다. 전체 행을 복사 하려면 선택  **\* (모든 열)** 합니다.  
+4.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 복사하려는 내용이 들어 있는 열의 이름을 선택합니다. 행 전체를 복사 하려면 선택  **\* (모든 열)** 합니다.  
   
      사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   
-5.  조건 창의 **추가** 열에서 복사하려는 각 열에 대한 대상 테이블의 대상 열을 선택합니다. 선택 *tablename.\**  전체 행을 복사 하는 경우. 대상 테이블 열의 데이터 형식은 원본 테이블 열의 데이터 형식과 동일하거나 호환되어야 합니다.  
+5.  조건 창의 **추가** 열에서 복사하려는 각 열에 대한 대상 테이블의 대상 열을 선택합니다. 선택할 *tablename.\**  행 전체를 복사 하는 경우. 대상 테이블 열의 데이터 형식은 원본 테이블 열의 데이터 형식과 동일하거나 호환되어야 합니다.  
   
 6.  행을 특정 순서에 따라 복사하려면 정렬 순서를 지정합니다. 자세한 내용은 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)를 참조하세요.  
   
@@ -100,7 +100,7 @@ WHERE (pub_id = '0766')
  결과 삽입 쿼리를 실행해도 [결과 창](results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [쿼리의 종류 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [쿼리의 형식은 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

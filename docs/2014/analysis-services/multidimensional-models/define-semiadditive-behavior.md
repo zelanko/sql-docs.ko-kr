@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265419"
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
   다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36093405"
  마법사의 **반가산적 동작 정의** 페이지에서 다음 옵션 중 하나를 선택하여 반가산성을 정의하는 방법을 선택합니다.  
   
  **반가산적 동작 해제**  
- 이전에 반가산적 동작이 정의된 큐브에서 반가산적 동작을 제거합니다. 이 옵션을이 선택 하는 측정값을 다시 설정 `SUM` 다음 집계 함수 유형 중 하나로 설정 된 경우:  
+ 이전에 반가산적 동작이 정의된 큐브에서 반가산적 동작을 제거합니다. 이 옵션을이 선택 하면 측정값이 다시 설정 `SUM` 다음 집계 함수 유형 중 하나에 설정 된 경우:  
   
 -   By Account  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36093405"
   
 -   InclusionThresholdSetting  
   
- 이 옵션은 일반 집계 함수로 측정값을 변경 하지 않습니다: `Sum`, `Min`, `Max`, `Count`, 또는 `Distinct``Count`합니다.  
+ 이 옵션은 일반 집계 함수로 측정값을 변경 되지 않습니다: `Sum`, `Min`를 `Max`, `Count`, 또는 `Distinct``Count`합니다.  
   
  **마법사에서 반가산적 멤버가 포함된 'Account' 계정 차원을 검색했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
  시스템에서 계정 유형 차원별로 차원이 구분된 측정값 그룹의 모든 측정값을 By Account 집계 함수로 설정하도록 하며 서버는 각 계정 유형에 지정된 반가산적 동작에 따라 차원의 멤버를 집계합니다.  

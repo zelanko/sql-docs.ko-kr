@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.mergepartition.f1
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aae229b83f367613cc786a3910b00b45e64f31bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 916f660572de412134fc9fd58e56b288e0c983ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288089"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>병합 파티션 대화 상자(Analysis Services - 다차원 데이터)
   **SQL Server Management Studio** 의 **파티션 병합** 대화 상자를 사용하여 큐브에 있는 측정값 그룹의 파티션을 병합할 수 있습니다. **개체 탐색기** 에서 파티션 폴더 또는 파티션을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **파티션 병합** 을 선택하면 **파티션 병합** 대화 상자를 표시할 수 있습니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "36180616"
   
 ## <a name="see-also"></a>관련 항목  
  [파티션 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Analysis Services의 파티션 병합 &#40;SSAS-다차원 데이터&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services의 파티션 병합 &#40;&AMP;#40;SSAS-다차원&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
