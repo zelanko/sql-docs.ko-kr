@@ -24,18 +24,18 @@ helpviewer_keywords:
 - PropertyList element
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4b49ad0cf03ce331a00a7eefc9f1302176d89e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6b3fdd7f6d59ef6a2523bada292dfb2b8f17a4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323043"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 요소(XMLA)
-  사용 하는 Analysis (XMLA) 속성에 대 한 XML의 컬렉션을 포함는 [Discover](../xml-elements-methods-discover.md) 및 [Execute](../xml-elements-methods-execute.md) 메서드.  
+  Analysis (XMLA) 속성에서 사용 하는 for XML의 컬렉션을 포함 합니다 [Discover](../xml-elements-methods-discover.md) 하 고 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36079631"
 |자식 요소|XMLA 속성(주의 참조)|  
   
 ## <a name="remarks"></a>Remarks  
- `PropertyList` 요소 XMLA 속성의 컬렉션을 포함 합니다. 사용자는 각 속성을 사용하여 `Discover` 또는 `Execute` 메서드의 일부 요소를 제어함으로써 데이터 원본에 연결하는 데 필요한 정보를 정의하거나, 결과 집합의 반환 형식을 지정하거나, 데이터의 서식을 지정할 로캘을 지정할 수 있습니다. 각 XMLA 속성의 `PropertyList` 요소는 별도 XML 요소로 정의 됩니다. XML 속성의 값은 XML 요소에 포함된 데이터이며, XML 속성의 이름은 XML 요소 이름과 일치합니다.  
+ `PropertyList` 요소는 XMLA 속성의 컬렉션을 포함 합니다. 사용자는 각 속성을 사용하여 `Discover` 또는 `Execute` 메서드의 일부 요소를 제어함으로써 데이터 원본에 연결하는 데 필요한 정보를 정의하거나, 결과 집합의 반환 형식을 지정하거나, 데이터의 서식을 지정할 로캘을 지정할 수 있습니다. 각 XMLA 속성은 `PropertyList` 요소는 별도 XML 요소로 정의 됩니다. XML 속성의 값은 XML 요소에 포함된 데이터이며, XML 속성의 이름은 XML 요소 이름과 일치합니다.  
   
  DISCOVER_PROPERTIES 요청 유형을 사용 하 여 사용 가능한 속성 및 해당 값을 가져올 수 있습니다는 `Discover` 메서드. `PropertyList` 요소에 나열되는 속성에 순서를 지정할 필요는 없습니다.  
   
- 지원 되는 XMLA 속성에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 참조 [XMLA 속성 지원 &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)합니다.  
+ 지원 되는 XMLA 속성에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 참조 하십시오 [지원 되는 XMLA 속성 &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
 ## <a name="example"></a>예제  
   

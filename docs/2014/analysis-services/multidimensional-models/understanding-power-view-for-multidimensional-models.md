@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288059"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
   이 문서에서는 Microsoft SQL Server 2014의 다차원 모델용 Power View 기능에 대해 설명하고, 조직에서 다차원 모델용 Power View를 구현하려고 하는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36079880"
   
  **다차원 모델용 파워 뷰 아키텍처**  
   
- ![Power View를 다차원 모델 아키텍처용](../media/daxmd-architecture.gif "Power View를 다차원 모델 아키텍처용")  
+ ![파워 뷰 다차원 모델 아키텍처용](../media/daxmd-architecture.gif "파워 뷰 다차원 모델 아키텍처용")  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  **서버 요구 사항**  
@@ -41,7 +41,7 @@ ms.locfileid: "36079880"
   
  **클라이언트 요구 사항**  
   
--   파워 뷰 클라이언트 기능에는 Microsoft Silverlight 5가 필요합니다. 자세한 내용은 참조 [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.  
+-   파워 뷰 클라이언트 기능에는 Microsoft Silverlight 5가 필요합니다. 자세한 내용은 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.  
   
 ## <a name="features"></a>기능  
  **파워 뷰에 대한 기본 지원**  
@@ -80,7 +80,7 @@ ms.locfileid: "36079880"
   
  **파워 뷰 필드 목록의 측정값 그룹**  
   
- ![필드 목록 Power View에서](../media/daxmd-powerviewfieldlist.gif "필드 Power View의 목록")  
+ ![필드 목록에서 Power View](../media/daxmd-powerviewfieldlist.gif "Power View에서 목록 필드")  
   
  측정값 그룹 내의 측정값은 측정값으로 나타납니다. 연결된 측정값 그룹이 없는 계산 측정값이 있을 경우 이러한 측정값은 Measures라는 특수 테이블에 그룹화됩니다.  
   
@@ -88,14 +88,14 @@ ms.locfileid: "36079880"
   
  **측정값 그룹의 측정값 및 KPI**  
   
- ![Power View 필드 목록의 측정값 그룹](../media/daxmd-fieldlist-group.gif "Power View 필드 목록의 측정값 그룹")  
+ ![파워 뷰 필드 목록의 측정값 그룹과](../media/daxmd-fieldlist-group.gif "Power View 필드 목록의 측정값 그룹")  
   
 ### <a name="measures-as-variants"></a>variant로서의 측정값  
  다차원 모델의 측정값은 variant입니다. 즉, 이 측정값은 강력한 형식이 아니며 다른 데이터 형식일 수 있습니다. 예를 들어 아래 이미지에서 Financial Reporting 테이블의 Amount 측정값은 기본적으로 통화 데이터 형식이지만, 문자열 데이터 형식인 "Statistical Accounts"의 부분합에 대해 문자열 값 "NA"도 가집니다. 파워 뷰에서는 일부 측정값을 variant로 인식하고 다른 시각화 유형으로 올바른 값 및 서식을 표시합니다.  
   
  **variant로서의 측정값**  
   
- ![Power View의 집계할 계층](../media/daxmd-nonaggrattrib.gif "Power View의 집계할 계층 구조")  
+ ![파워 뷰의 집계할 계층](../media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 계층")  
   
 ### <a name="implicit-measures"></a>암시적 측정값  
  테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델의 경우에는 차원 특성 데이터가 다른 방식으로 저장되므로 암시적 측정값을 쿼리하는 데 시간이 오래 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "36079880"
   
  **SSDT(SQL Server Data Tools) 및 파워 뷰 필드 목록의 차원, 특성 및 계층**  
   
- ![SSDT 및 Power View 필드 목록의 차원](../media/daxmd-ssdt-dimensions.gif "SSDT 및 Power View 필드 목록의 차원")  
+ ![SSDT 및 파워 뷰 필드 목록의 차원을](../media/daxmd-ssdt-dimensions.gif "SSDT 및 파워 뷰 필드 목록의 차원")  
   
 ### <a name="dimension-attribute-type"></a>차원 특성 유형  
  다차원 모델에서는 차원 특성을 특정 차원 특성 유형과 연결할 수 있습니다. 아래 이미지에서는 City, State-Province, Country 및 Postal Code 차원 특성에 지리 유형이 연결된 Geography 차원을 보여 줍니다. 이러한 차원 특성은 테이블 형식 메타데이터에 표시됩니다. 파워 뷰에서는 메타데이터를 인식하므로 사용자가 지도 시각화를 만들 수 있습니다. 이는 파워 뷰 필드 목록에서 Geography 테이블의 City, Country, Postal Code 및 State-Province 열 옆에 지도 아이콘으로 표시됩니다.  
@@ -144,14 +144,14 @@ ms.locfileid: "36079880"
   
  **파워 뷰의 집계할 수 없는 계층**  
   
- ![Power View의 집계할 계층](../media/daxmd-nonaggrattrib.gif "Power View의 집계할 계층 구조")  
+ ![파워 뷰의 집계할 계층](../media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 계층")  
   
 ## <a name="images"></a>이미지  
  파워 뷰에서는 이미지를 렌더링할 수 있습니다. 다차원 모델에서 파워 뷰에 이미지를 제공하는 방법 중 하나는 이미지의 URL(Uniform Resource Locator)을 포함하는 열을 표시하는 것입니다. 이 릴리스의 Analysis Services에서는 ImageURL 형식으로 차원 특성의 태그를 지정할 수 있습니다. 그런 다음 이 데이터 형식이 테이블 형식 메타데이터에 포함되어 파워 뷰에 제공됩니다. 그러면 파워 뷰는 시각화 내에서 URL에 지정된 이미지를 다운로드하여 표시할 수 있습니다.  
   
  **SSDT의 ImageURL 차원 특성 유형**  
   
- ![차원 특성 속성](../media/daxmd-dimattribute-properties.gif "차원 특성 속성")  
+ ![특성 속성을 차원](../media/daxmd-dimattribute-properties.gif "차원 특성 속성")  
   
 ## <a name="parent-child-hierarchies"></a>부모-자식 계층  
  다차원 모델은 부모-자식 계층을 지원하며 이 계층은 테이블 형식 메타데이터에 계층으로 표시됩니다. 부모-자식 계층의 각 수준은 숨겨진 열로 제공됩니다. 부모-자식 차원의 키 특성은 테이블 형식 메타데이터에 표시되지 않습니다.  
@@ -178,7 +178,7 @@ ms.locfileid: "36079880"
   
  **고정된 필터**  
   
- ![필터 고정](../media/daxmd-pinnedfilterinpowerview.gif "필터를 고정 합니다.")  
+ ![필터 고정](../media/daxmd-pinnedfilterinpowerview.gif "필터 고정")  
   
 ## <a name="unsupported-features"></a>지원되지 않는 기능  
  **Excel 2013의 Power View** - 다차원 모델에 연결하거나 다차원 모델에 대한 보고서를 만들 수 없습니다. 다차원 모델용 Power View는 브라우저 기반 Power View 클라이언트만 지원합니다.  
@@ -234,7 +234,7 @@ ms.locfileid: "36079880"
 ## <a name="client-help-on-officecom"></a>Office.com의 클라이언트 도움말  
  Office.com에서 제공되는 다음 문서는 파워 뷰에서 다차원 모델 개체가 나타나는 방식과 예제 보고서를 만드는 방법을 배우는 데 유용합니다.  
   
- [Power View에서 다차원 모델 개체 이해](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [파워 뷰의 다차원 모델 개체 이해](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
  [파워 뷰를 사용하여 Adventure Works 다차원 모델 탐색](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c203b085f00f59db437fdf2d1ef057c3c42f44c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c62e73c9a47e87b0890dab8832e9d7a05567b1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326563"
 ---
 # <a name="delete-powerpivot-gallery"></a>PowerPivot 갤러리 삭제
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 삭제하면 예약된 데이터 새로 고침에 대해 구성된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터 새로 고침 기록을 비롯하여 해당 항목이 모두 삭제됩니다.  
   
 > [!NOTE]  
->  이 항목에서는 SharePoint 라이브러리를 삭제하는 방법에 대한 지침을 제공합니다. 라이브러리에서 개별 문서를 삭제 하는 방법에 지침은 [PowerPivot 갤러리 사용](use-power-pivot-gallery.md)합니다.  
+>  이 항목에서는 SharePoint 라이브러리를 삭제하는 방법에 대한 지침을 제공합니다. 라이브러리에서 개별 문서를 삭제 하는 방법에 지침은 [사용 하 여 PowerPivot 갤러리](use-power-pivot-gallery.md)합니다.  
   
  라이브러리를 삭제하려면 사이트 소유자여야 합니다.  
   
-### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>PowerPivot 갤러리 SharePoint 2013 삭제  
+### <a name="delete-powerpivot-gallery-sharepoint-2013"></a>PowerPivot 갤러리 삭제 SharePoint 2013  
   
 1.  설정을 클릭 ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정"), 클릭 **사이트 설정**합니다.  
   

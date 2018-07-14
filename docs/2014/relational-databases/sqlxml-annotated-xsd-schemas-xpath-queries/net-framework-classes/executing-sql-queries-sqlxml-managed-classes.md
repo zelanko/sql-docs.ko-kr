@@ -18,26 +18,26 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2da4e8f0757dad1fb052ec890be695ee957a9df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 72e16fe5cc17e48b110c70f03a6e900be3b76c2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288299"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL 쿼리 실행(SQLXML 관리되는 클래스)
   이 예에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
--   매개 변수 (SqlXmlParameter 개체)를 만듭니다.  
+-   매개 변수 (SqlXmlParameter 개체)를 만드는 중입니다.  
   
--   SqlXmlParameter 개체의 속성 (이름 및 값)에 값을 할당 합니다.  
+-   SqlXmlParameter 개체의 속성 (이름 및 값)에 값을 지정 합니다.  
   
- 이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수를 지정 (*LastName*), Value 속성에만 설정 됩니다. 이 쿼리 매개 변수는 위치 고 따라서 이름이 필요 하기 때문에 Name 속성이 설정 되지 않았습니다.  
+ 이 예에서는 간단한 SQL 쿼리를 실행하여 성이 매개 변수로 전달된 직원의 이름, 성 및 생년월일을 검색합니다. 매개 변수 지정 (*LastName*), Value 속성에만 설정 됩니다. 이 쿼리에서 매개 변수는 위치 이며 이름이 없는 필요 하기 때문에 Name 속성이 설정 되지 않았습니다.  
   
- 기본적으로 SqlXmlCommand 개체의 CommandType 속성은 **Sql**합니다. 명시적으로 설정되지 않았습니다.  
+ 기본적으로 SqlXmlCommand 개체의 CommandType 속성이 **Sql**합니다. 명시적으로 설정되지 않았습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -104,7 +104,7 @@ public static int Main(String[] args)
   
  이 예를 테스트하려면 컴퓨터에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework가 설치되어 있어야 합니다.  
   
- SQL 쿼리를 명령 텍스트로 지정하는 대신 다음 코드 조각에 표시된 것처럼 updategram 템플릿을 실행하는 템플릿을 지정하여 고객 레코드를 삽입할 수 있습니다. 파일에서 템플릿과 updategram을 지정한 후 파일을 실행합니다. 자세한 내용은 참조 [CommandText 속성을 사용 하 여 템플릿 파일 실행](executing-template-files-by-using-the-commandtext-property.md)합니다.  
+ SQL 쿼리를 명령 텍스트로 지정하는 대신 다음 코드 조각에 표시된 것처럼 updategram 템플릿을 실행하는 템플릿을 지정하여 고객 레코드를 삽입할 수 있습니다. 파일에서 템플릿과 updategram을 지정한 후 파일을 실행합니다. 자세한 내용은 [CommandText 속성을 사용 하 여 템플릿 파일 실행](executing-template-files-by-using-the-commandtext-property.md)합니다.  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -125,7 +125,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>ExecuteToStream 사용  
- 기존 스트림을 설정한 경우에 Stream 개체를 만들고 Execute 메서드를 사용 하는 대신 ExecuteToStream 메서드를 사용할 수 있습니다. 위의 예제 코드를에서 수정한 것입니다 ExecuteToStream 메서드를 사용 하려면:  
+ 기존 스트림을 경우 Stream 개체를 만들고 Execute 메서드를 사용 하는 대신 ExecuteToStream 메서드를 사용할 수 있습니다. 앞의 예제에서 코드를 ExecuteToStream 메서드를 사용 하 여기 수정 됩니다.  
   
 ```  
 using System;  
@@ -158,6 +158,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  XmlReader 개체를 반환 하는 ExecuteXMLReadermethod를 사용할 수 있습니다. 자세한 내용은 참조 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](executing-sql-queries-by-using-the-executexmlreader-method.md)합니다.  
+>  XmlReader 개체를 반환 하는 ExecuteXMLReadermethod도 사용할 수 있습니다. 자세한 내용은 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](executing-sql-queries-by-using-the-executexmlreader-method.md)합니다.  
   
   

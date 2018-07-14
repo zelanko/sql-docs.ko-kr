@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322393"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
-  기본 제공 `hierarchyid` 데이터 형식을 사용 하면 계층적 데이터를 저장 및 쿼리를 보다 쉽게 합니다. `hierarchyid` 계층적 데이터의 가장 일반적인 유형인 트리를 나타내기 위해 최적화 됩니다.  
+  기본 제공 `hierarchyid` 데이터 형식을 쉽게 계층적 데이터를 저장 및 쿼리 합니다. `hierarchyid` 계층적 데이터의 가장 일반적인 유형인 트리를 나타내기 위해 최적화 됩니다.  
   
  계층적 데이터는 계층 관계를 통해 서로 관련된 데이터 항목 집합으로 정의됩니다. 계층 관계는 데이터의 한 항목이 다른 항목의 부모인 관계입니다. 데이터베이스에 일반적으로 저장되는 계층적 데이터는 다음과 같습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36079516"
  [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) 를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
   
 ##  <a name="keyprops"></a> hierarchyid의 주요 속성  
- 값은 `hierarchyid` 데이터 형식은 트리 계층에서의 위치를 나타냅니다. `hierarchyid` 값의 속성은 다음과 같습니다.  
+ 값은 `hierarchyid` 기원후는 트리 계층의 위치를 나타냅니다. `hierarchyid` 값의 속성은 다음과 같습니다.  
   
 -   높은 압축성  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36079516"
   
 -   깊이 우선 순서로 비교  
   
-     두 개의 `hierarchyid` 값 **는** 및 **b**, **는 < b** 의미는 트리 깊이 우선 탐색에서 b 앞에 오는 합니다. `hierarchyid` 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다.  
+     두 개의 `hierarchyid` 값 **는** 및 **b**를 **는 < b** 의미는 트리의 깊이 우선 통과 방식 b 앞에 오는 합니다. `hierarchyid` 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다.  
   
 -   임의 삽입 및 삭제 지원  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36079516"
   
   
 ##  <a name="limits"></a> hierarchyid의 제한 사항  
- `hierarchyid` 데이터 형식에는 다음과 같은 제한이 있습니다.  
+ `hierarchyid` 데이터 형식에는 다음 제한이 있습니다.  
   
 -   형식의 열 `hierarchyid` 자동으로 트리를 나타내지 않습니다. 응용 프로그램에 따라 원하는 행 간 관계가 값에 반영되도록 `hierarchyid` 값이 생성되어 할당됩니다. 일부 응용 프로그램에는 다른 테이블에 정의된 계층에서의 위치를 나타내는 `hierarchyid` 형식의 열이 있을 수 있습니다.  
   
--   응용 프로그램 생성 되어 할당에 대 한 동시성이 달리 관리에 `hierarchyid` 값입니다. 응용 프로그램에서 UNIQUE KEY 제약 조건을 사용하거나 자체 논리를 통해 자체적으로 고유성을 적용하지 않는 한 열의 `hierarchyid` 값에 대한 고유성이 보장되지 않습니다.  
+-   생성 되어 할당에 대 한 동시성이 달리 관리 응용 프로그램에 달려 `hierarchyid` 값입니다. 응용 프로그램에서 UNIQUE KEY 제약 조건을 사용하거나 자체 논리를 통해 자체적으로 고유성을 적용하지 않는 한 열의 `hierarchyid` 값에 대한 고유성이 보장되지 않습니다.  
   
 -   나타내는 계층 관계 `hierarchyid` 외래 키 관계와 같은 값이 적용 되지 않습니다. A에 자식 B가 있는 상태에서 A를 삭제하여 B에 존재하지 않는 레코드에 대한 관계가 남게 되는 계층 관계를 만들 수 있으며 이러한 관계가 적절한 경우도 있습니다. 이 동작이 허용되지 않는 경우에는 응용 프로그램에서 부모를 삭제하기 전에 하위 항목에 대해 쿼리해야 합니다.  
   
@@ -98,21 +98,21 @@ GO
   
  일반 작업에 대한 부모/자식과 `hierarchyid` 비교  
   
--   하위 쿼리는 훨씬 더 빨라집니다 `hierarchyid`합니다.  
+-   하위 트리 쿼리가 훨씬 더 빨라집니다와 `hierarchyid`합니다.  
   
 -   `hierarchyid`를 사용하면 직계 하위 항목 쿼리가 약간 더 느려집니다.  
   
--   리프가 아닌 노드 이동이 된 속도가 느릴 `hierarchyid`합니다.  
+-   리프가 아닌 노드 이동이 낮아질 `hierarchyid`합니다.  
   
 -   `hierarchyid`를 사용할 경우 리프가 아닌 노드 삽입과 리프 노드의 삽입 및 이동의 복잡성은 동일합니다.  
   
  다음 경우 부모/자식이 더 우수할 수 있습니다.  
   
--   키의 크기가 중요한 경우. 노드를 동일한 수에 대 한 한 `hierarchyid` 값은 정수 패밀리 보다 크거나 같음 (`smallint`, `int`, `bigint`) 값입니다. 이 드문 경우 이지만 부모/자식을 사용 하는 이유가 때문 `hierarchyid` 가 부모/자식 구조를 사용할 때 필요한 공통 테이블 식 보다 I/O 및 CPU 복잡성의 효율을 크게 향상 합니다.  
+-   키의 크기가 중요한 경우. 동일한 노드 수를 `hierarchyid` 값은 정수 패밀리 보다 크거나 (`smallint`, `int`, `bigint`) 값입니다. 이 드문 경우에서 부모/자식을 사용 하는 이유만 때문 `hierarchyid` 부모/자식 구조를 사용할 때 필요한 공통 테이블 식 보다 I/O 및 CPU 복잡성의 효율을 크게 향상 했습니다.  
   
 -   계층의 섹션 간 쿼리를 거의 하지 않는 쿼리의 경우. 즉, 쿼리가 일반적으로 계층의 단일 지점만 다루는 경우입니다. 이러한 경우 같은 위치에 배치하는 작업이 중요하지 않습니다. 예를 들어 조직 테이블이 개별 직원에 대한 급여를 처리하는 데에만 사용되는 경우 부모/자식이 더 우수합니다.  
   
--   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 에 있는 행의 위치를 변경는 `hierarchyid` 사용에 영향을 미칩니다 *n* 행, 여기서 *n* 은 이동 하는 하위 트리의 노드 수입니다.  
+-   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 행의 위치를 변경를 `hierarchyid` 사용에 영향을 줍니다 *n* 행을 여기서 *n* 하위 트리의 노드 수가 이동할입니다.  
   
      리프가 아닌 하위 트리가 자주 이동하며 성능이 중요하지만 대부분의 이동이 잘 정의된 계층 수준에서 발생하는 경우에는 상위 수준과 하위 수준을 두 개의 계층으로 분할하십시오. 이렇게 하면 모든 트리가 상위 계층의 리프 수준으로 이동됩니다. 예를 들어 서비스에서 호스팅하는 웹 사이트 계층의 경우 사이트에는 계층으로 정렬된 많은 페이지가 있습니다. 호스팅된 사이트는 사이트 계층의 다른 위치로 이동될 수 있지만 하위 페이지는 거의 다시 정렬되지 않습니다. 이는 다음을 통해 나타낼 수 있습니다.  
   
@@ -269,11 +269,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 관련 태스크  
   
 ###  <a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
- 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조에서 사용 하 여 테이블을 마이그레이션하는 가장 쉬운 방법은 `hierarchyid` 계층의 각 수준에서 노드 수를 추적 하기 위해 임시 열 이나 임시 테이블을 사용 하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
+ 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 사용 하 여 테이블에 부모/자식 구조에서 마이그레이션하는 가장 쉬운 방법은 `hierarchyid` 계층의 각 수준에서 노드 수를 추적 하는 임시 열 이나 임시 테이블을 사용 하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
- 하지만 한 `hierarchyid` 열 나타내지는지 않습니다 트리, 응용 프로그램 한다는 것 되도록 쉽게 할 수 있습니다.  
+ 하지만 한 `hierarchyid` 열이 트리에 반드시 나타내지는지 않습니다, 응용 프로그램에는 쉽게 확인할 수 있습니다.  
   
 -   새 값을 생성할 때 다음 중 하나를 수행합니다.  
   
@@ -393,7 +393,7 @@ GO
   
   
 ###  <a name="findclr"></a> CLR을 사용하여 상위 항목 찾기  
- 한 계층의 두 노드를 사용하는 일반적인 작업에는 수준이 가장 낮은 공통 상위 항목을 찾는 작업이 있습니다. 작성할 수 있습니다 [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 CLR에서 때문에 `hierarchyid` 형식은 모두에서 사용할 수 있습니다. 그러나 성능이 향상되는 CLR을 사용하는 것이 좋습니다.  
+ 한 계층의 두 노드를 사용하는 일반적인 작업에는 수준이 가장 낮은 공통 상위 항목을 찾는 작업이 있습니다. 코드로 작성할 수 있습니다 [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 CLR에서 때문에 `hierarchyid` 형식은 둘 다에서 사용할 수 있습니다. 그러나 성능이 향상되는 CLR을 사용하는 것이 좋습니다.  
   
  다음 CLR 코드를 사용하여 상위 항목을 나열하고 수준이 가장 낮은 공통 상위 항목을 찾을 수 있습니다.  
   
