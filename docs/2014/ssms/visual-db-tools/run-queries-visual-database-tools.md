@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b8fb7a2bf155eda1fa683e953ebcb2efee3a36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe1522fc538b8ad2d70ccb6f8a6d69e035efe17b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253585"
 ---
 # <a name="run-queries-visual-database-tools"></a>쿼리 실행(Visual Database Tools)
   쿼리 디자인을 마친 후에 쿼리를 실행할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36081460"
  업데이트, 삽입 원본, 삽입 위치, 삭제 또는 테이블 만들기 쿼리를 만드는 경우 쿼리 및 뷰 디자이너는 쿼리가 적용되는 행의 수를 메시지로 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [결과 창에서 데이터로 작업할 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [결과 창에서 데이터 작업을 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

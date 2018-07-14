@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264331"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
   설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "36081795"
   
 -   [전체 텍스트 업그레이드 옵션](#FT_Upgrade_Options)  
   
--   [전체 텍스트 선택 시 고려 사항 업그레이드 옵션](#Choosing_Upgade_Option)  
+-   [옵션을 업그레이드 하는 전체 텍스트 선택 시 고려 사항](#Choosing_Upgade_Option)  
   
 -   [데이터베이스를 SQL Server 2014로 업그레이드할 때 전체 텍스트 인덱스 마이그레이션](#Upgrade_Db)  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36081795"
  다시 설정  
  전체 텍스트 카탈로그를 다시 설정합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드할 때는 전체 텍스트 카탈로그 파일이 제거되지만 전체 텍스트 카탈로그 및 전체 텍스트 인덱스의 메타데이터는 유지됩니다. 업그레이드가 끝나면 모든 전체 텍스트 인덱스의 변경 내용 추적이 해제되고 탐색이 자동으로 시작되지 않습니다. 업그레이드가 완료된 후 전체 채우기를 수동으로 실행할 때까지 카탈로그가 비어 있습니다.  
   
-##  <a name="Choosing_Upgade_Option"></a> 전체 텍스트 선택 시 고려 사항 업그레이드 옵션  
+##  <a name="Choosing_Upgade_Option"></a> 옵션을 업그레이드 하는 전체 텍스트 선택 시 고려 사항  
  업그레이드 옵션을 선택할 때는 다음 사항을 고려해야 합니다.  
   
 -   쿼리 결과의 일관성을 보장하는 것은 중요한 일입니다.  

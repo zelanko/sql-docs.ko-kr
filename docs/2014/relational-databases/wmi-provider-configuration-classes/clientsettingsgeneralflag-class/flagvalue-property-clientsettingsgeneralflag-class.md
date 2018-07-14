@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagValue property
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e542e2b362ed8f032d3ceda15b86574a851adc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e73996badf5d0ceac19f07ac3114afb13e8bcf79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194965"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 속성(ClientSettingsGeneralFlag 클래스)
   플래그의 값을 가져옵니다.  

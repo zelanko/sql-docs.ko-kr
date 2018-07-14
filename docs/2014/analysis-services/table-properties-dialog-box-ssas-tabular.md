@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.TableProperties.f1
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572b5498e895bb14f426b4ea96d5040bdf8077cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32603dea6e5160f2cde0f3a0326811fa3489cf53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220083"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>테이블 속성 대화 상자(SSAS - 테이블 형식)
   **의** 테이블 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 테이블 형식 model 데이터베이스의 테이블 속성을 볼 수 있습니다. 모든 속성이 읽기 전용입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36081918"
 |**설명**|테이블에 대한 설명을 표시합니다.|  
 |**생성된 타임스탬프**|테이블을 만든 날짜와 시간을 표시합니다.|  
 |**최종 스키마 업데이트**|테이블에 대한 메타데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
-|**State**|테이블의 처리 상태를 표시합니다. 이 속성에 대 한 값에 대 한 자세한 내용은 참조 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
+|**State**|테이블의 처리 상태를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
 |**마지막으로 처리**|테이블을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
 |**현재 저장소 모드**|테이블의 현재 저장소 모드를 표시합니다. 저장소 모드는 데이터베이스 수준에서 설정되며 모든 테이블에 상속됩니다. 테이블 수준에서 서로 다른 저장소 모드를 사용할 수는 없습니다. 유효한 값은 InMemory(기본값), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory입니다.|  
   

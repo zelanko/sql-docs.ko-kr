@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1eaf29caf869de81e397b92f9953d9b673d17019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167534"
 ---
 # <a name="fontsize-element-assl"></a>FontSize 요소(ASSL)
-  글꼴 관련 표시 특성을 설명는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 또는 [측정값](../objects/measure-element-assl.md) 부모 요소입니다.  
+  글꼴 관련 표시 특징을 설명 합니다 [CalculationProperty](../objects/calculationproperty-element-assl.md) 하거나 [측정값](../objects/measure-element-assl.md) 부모 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36081184"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `FontSize` 속성에 적용 하는 MDX (Multidimensional Expressions) 식을 포함 `CalculationProperty` 않은 요소는 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀* .  
+ 합니다 `FontSize` 속성이 MDX (Multidimensional Expressions) 식을 포함 하 고 적용할 `CalculationProperty` 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀* .  
   
- 부모에 해당 하는 요소 `FontSize` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty> 및 <xref:Microsoft.AnalysisServices.Measure>합니다.  
+ 부모에 해당 하는 요소가 `FontSize` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CalculationProperty> 및 <xref:Microsoft.AnalysisServices.Measure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

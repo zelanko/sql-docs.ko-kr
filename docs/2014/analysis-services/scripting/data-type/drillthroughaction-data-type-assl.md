@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DrillThroughAction data type
 ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dfdaf05f2e35c41d99ca61f3cac3624ba28cc82d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8142fd9978ae456b03b4a0381e2ab9261cdc8c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241443"
 ---
 # <a name="drillthroughaction-data-type-assl"></a>DrillThroughAction 데이터 형식(ASSL)
   드릴스루 동작을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -59,12 +59,12 @@ ms.locfileid: "36080991"
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
 |자식 요소|[열](../collections/columns-element-assl.md), [기본](../properties/default-element-assl.md)|  
-|파생 요소|[동작](../objects/action-element-assl.md) ([동작](../collections/actions-element-assl.md), 컬렉션의 [큐브](../objects/cube-element-assl.md), 또는 [관점](../objects/perspective-element-assl.md))|  
+|파생 요소|[동작](../objects/action-element-assl.md) ([동작](../collections/actions-element-assl.md), 컬렉션 [큐브](../objects/cube-element-assl.md), 또는 [관점](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DrillThroughAction>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

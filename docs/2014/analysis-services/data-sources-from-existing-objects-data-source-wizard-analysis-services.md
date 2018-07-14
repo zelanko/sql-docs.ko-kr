@@ -1,5 +1,5 @@
 ---
-title: 기존 개체 (데이터 원본 마법사) (Analysis Services)에서 데이터 원본을 | Microsoft Docs
+title: 기존 개체 (데이터 원본 마법사) (Analysis Services)의 데이터 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60f07885aff1d323cb2627e933330af3f35b8d45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181002"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>기존 개체의 데이터 원본(데이터 원본 마법사)(Analysis Services)
   **기존 개체의 데이터 원본** 페이지를 사용하여 새 데이터 원본의 기반으로 사용할 기존 데이터 원본 또는 프로젝트를 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **솔루션의 기존 데이터 원본을 사용 하 여 데이터 원본 만들기**  
+ **솔루션의 기존 데이터 원본에는 데이터 원본 만들기**  
  솔루션의 기존 데이터 원본을 기반으로 새 데이터 원본을 만들려면 선택합니다. 새 데이터 원본을 사용하는 프로젝트를 작성 또는 배포하거나 새로 고치면 새 데이터 원본은 이 옵션을 선택할 때 지정한 데이터 원본에서 설정을 가져옵니다.  
   
  **데이터 원본**  
  프로젝트별로 그룹화된 데이터 원본 목록에서 새 데이터 원본의 기반으로 사용할 데이터 원본을 선택합니다.  
   
- **Analysis Services 프로젝트에 따라 데이터 원본 만들기**  
+ **Analysis Services 프로젝트를 기반으로 데이터 원본 만들기**  
  현재 솔루션의 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 참조하는 새 데이터 원본을 만들려면 선택합니다. 새 데이터 원본은 선택한 프로젝트의 `TargetServer` 및 `TargetDatabase` 속성에서 설정을 가져옵니다. 새 데이터 원본을 사용하는 프로젝트를 작성 또는 배포하거나 새로 고치면 새 데이터 원본은 이 옵션을 선택할 때 지정한 데이터 원본에서 설정을 가져옵니다.  
   
  **프로젝트**  

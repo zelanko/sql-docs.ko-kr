@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf3e24dd3fe06a06b26adcbfcbf9da57d5b6916a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 73246b1aa2413315718680437ba1da8f46b705fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254095"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
   비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36081772"
 -   비즈니스 요구에 맞게 XML 열에서 처리를 시작하는 Transact-SQL 저장 프로시저와 함수를 작성할 수 있습니다.  
   
 ## <a name="example-applying-xsl-transformation"></a>예제: XSL 변환 적용  
- CLR 함수를 살펴보세요 **transformxml ()** 수락 하는 `xml` 데이터 형식 인스턴스와 XSL 변환을 파일에 저장 된 XML 데이터에 변환을 적용 하 고 다음 결과에 변환 된 XML을 반환 합니다. 다음은 C#으로 작성된 기초 함수입니다.  
+ CLR 함수는 것이 좋습니다 **transformxml ()** 받아들이는 `xml` 데이터 형식 인스턴스와 XSL 변환 파일에 저장, XML 데이터에 변환을 적용 하 고 다음 변환된 된 XML 결과에 반환 합니다. 다음은 C#으로 작성된 기초 함수입니다.  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

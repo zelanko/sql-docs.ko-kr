@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200823"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
   **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
@@ -153,7 +153,7 @@ dta -d AdventureWorks2012 ...
 |매개 변수|기본값|  
 |---------------|-------------------|  
 |*database_name*|*–D* 옵션으로 지정된 **database_name**|  
-|*owner_name*|**dbo**<br /><br /> 참고: *owner_name* 해야 **dbo**합니다. 다른 값을 지정할 경우 **dta** 를 실행할 수 없으며 오류가 반환됩니다.|  
+|*owner_name*|**dbo**<br /><br /> 참고: *owner_name* 있어야 **dbo**합니다. 다른 값을 지정할 경우 **dta** 를 실행할 수 없으며 오류가 반환됩니다.|  
 |*table_name*|InclusionThresholdSetting|  
   
  파일을 사용하는 경우 TuningLog.xml과 같이 확장명으로 .xml을 지정합니다.  
@@ -165,7 +165,7 @@ dta -d AdventureWorks2012 ...
  **dta** 가 기존의 출력 파일을 덮어쓰도록 허용합니다. 이름이 같은 출력 파일이 이미 있을 경우 **-F** 를 지정하지 않으면 **dta**는 오류를 반환합니다. **-of** , **-or**또는 **-ox**와 함께 **-F**를 사용할 수 있습니다.  
   
  **-fa** *physical_design_structures_to_add*  
- **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값 지정은 **dta** 기본값을 사용 하 여 **-fa**`IDX`합니다.  
+ **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정 하면 **dta** 기본값을 사용 하 여 **-fa**`IDX`합니다.  
   
 |값|Description|  
 |-----------|-----------------|  

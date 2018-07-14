@@ -20,18 +20,18 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e1d0b2a3a34cc7f1a52197e08c6b8131ae141c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 968f0082b24001a418e42fb0352db3b831dfcb8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216833"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName 속성(ServerSettings 클래스)
-  인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 설정이 적용 되는에 있습니다.  
+  인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 설정을 적용 하는입니다.  
   
 ## <a name="syntax"></a>구문  
   

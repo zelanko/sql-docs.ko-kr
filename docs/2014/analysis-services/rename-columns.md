@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed2f495f4300abca78b3a1b7597bd0d09fd15292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d4f9d156889bd3a761cff2a18a908df42e8aade
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246111"
 ---
 # <a name="lesson-3-rename-columns"></a>3단원: 열 이름 바꾸기
   이 단원에서는 가져온 각 테이블에 있는 여러 열의 이름을 바꿉니다. 열 이름을 바꾸면 모델 디자이너에서 열을 명확하게 식별하고 탐색할 수 있을 뿐 아니라 사용자는 클라이언트 응용 프로그램에서 필드를 손쉽게 선택할 수 있습니다. 자세한 내용은 [테이블 또는 열 이름 바꾸기&#40;SSAS 테이블 형식&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md)를 참조하세요.  
@@ -40,7 +40,7 @@ ms.locfileid: "36080998"
   
      탭을 클릭하면 해당 테이블이 모델 디자이너 창에서 활성화됩니다.  
   
-2.  두 번 클릭는 **CustomerKey** 열 이름이 고, 다음 입력 `Customer  Id`, 한 다음 ENTER 키를 누릅니다.  
+2.  두 번 클릭 합니다 **CustomerKey** 열 이름을 입력 합니다 `Customer  Id`, 한 다음 ENTER를 누릅니다.  
   
     > [!TIP]  
     >  열 **속성** 창의 **Column Name** 속성 또는 다이어그램 뷰에서 열 이름을 바꿀 수도 있습니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "36080998"
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category 이름|  
   
-     **제품 하위 범주**  
+     **Product Subcategory**  
   
     |원본 이름|이름|  
     |-----------------|-------------------|  

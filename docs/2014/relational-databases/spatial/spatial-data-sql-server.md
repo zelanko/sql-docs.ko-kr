@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
 - planar spatial data [SQL Server], designing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f987594b4891467d5590202b9c88b358d290b18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f042b5ed328f0666fd3b9420963000b5b7898a51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250083"
 ---
 # <a name="spatial-data-sql-server"></a>공간 데이터(SQL Server)
   공간 데이터는 기하학적 개체의 물리적 위치와 모양에 대한 정보를 표시합니다. 이러한 개체는 위치나 지역, 도로 또는 호수와 같은 좀 더 복잡한 개체를 가리킬 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36080839"
   
 -   `geometry` 유형은 유클리드(평면) 좌표계의 데이터를 나타냅니다.  
   
--   `geography` 형식은 둥근 표면 좌표 시스템의에서 데이터를 나타냅니다.  
+-   `geography` 형식은 둥근 표면 좌표계로 데이터를 나타냅니다.  
   
  두 가지 데이터 형식 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   

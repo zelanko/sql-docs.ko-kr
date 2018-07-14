@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268479"
 ---
 # <a name="supported-access-report-features-ssrs"></a>지원되는 Access 보고서 기능(SSRS)
   보고서 디자이너로 보고서를 가져오는 과정에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 보고서가 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일로 변환됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 Access의 여러 기능을 지원하지만 Access와 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 차이로 인해 일부 항목이 약간 수정되거나 지원되지 않을 수 있습니다. 이 항목에서는 Access 보고서 기능이 RDL로 변환되는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36081283"
 ## <a name="importing-access-reports"></a>Access 보고서 가져오기  
  일부 쿼리에는 Access 고유의 코드가 포함됩니다. Access 코드는 보고서와 함께 가져올 수 없습니다. 또한 쿼리에 포함된 문자열이 있으면 보고서를 제대로 가져오지 못할 수 있습니다. 이 문제를 해결하려면 문자열을 문자 코드로 바꿉니다. 예를 들어 쉼표(,)를 CHAR(34)로 바꿉니다.  
   
- 가져오기 프로세스는 세미콜론 (;)를 제대로 전달 되지 않습니다 이나 XML 태그 문자 (\<, > 등)에 연결 문자열 정보입니다. 연결 문자열에 세미콜론이나 XML 태그 문자가 있으면 보고서를 가져온 후 새 보고서에서 암호를 수동으로 설정해야 합니다.  
+ 가져오기 프로세스에서 세미콜론 (;)를 제대로 전달 하지 않습니다 또는 XML 태그 문자 (\<, > 등)에서 연결 문자열 정보. 연결 문자열에 세미콜론이나 XML 태그 문자가 있으면 보고서를 가져온 후 새 보고서에서 암호를 수동으로 설정해야 합니다.  
   
  가져오기 과정에서는 연결 문자열의 연결 설정이나 일반 시간 제한 설정을 가져올 수 없습니다. 보고서를 가져온 후 이러한 설정을 조정해야 합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36081283"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 같은 OLE DB 데이터 원본을 지원합니다. Access 프로젝트 파일(.adp)에서 보고서를 가져오는 경우에는 데이터 원본에 대한 연결 문자열을 .adp 파일의 연결 문자열에서 가져옵니다. Access 데이터베이스 파일(.mdb 또는 .accdb)에서 보고서를 가져오는 경우에는 연결 문자열이 Access 데이터베이스를 가리키므로 보고서를 가져온 후 연결 문자열을 수정해야 합니다. Access 보고서에 대한 데이터 원본이 쿼리이면 쿼리 정보가 수정되지 않고 RDL에 저장됩니다. Access 보고서에 대한 데이터 원본이 테이블이면 변환 과정에서 테이블 이름과 테이블의 필드를 기반으로 쿼리가 생성됩니다.  
   
 ## <a name="reports-with-custom-modules"></a>사용자 지정 모듈이 있는 보고서  
- 사용자 지정 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 모듈에 포함 된 코드는 변환 되지 않습니다. 경고가 생성 되 고에 표시 된 코드 가져오기 프로세스 동안 발생 하는 보고서 디자이너는 **작업 목록** 창.  
+ 있으면 사용자 지정 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 모듈 내에 포함 된 코드 변환 되지 않습니다. 경고가 생성 되 고 표시 코드 가져오기 프로세스 중 발생 하는 보고서 디자이너에는 **작업 목록** 창입니다.  
   
 ## <a name="report-controls"></a>보고서 컨트롤  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 다음 Access 컨트롤을 지원하고 변환된 보고서 정의에 포함합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36081283"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- 경고가 생성 되 고 표시 발견 되 면 이러한 컨트롤이 가져오기 프로세스 동안,는 **작업 목록** 창.  
+ 경고가 생성 되 고 표시 발견 되 면 이러한 컨트롤이 가져오기 프로세스 중에 **작업 목록** 창입니다.  
   
  ActiveX, Office Web Components 등의 다른 컨트롤은 가져올 수 없습니다. 예를 들어 Access 보고서에 OWC 차트 컨트롤이 있는 경우 보고서를 가져올 때 이 컨트롤은 변환되지 않습니다.  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36081283"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 정의에서는 사각형에 다른 보고서 항목이 포함될 수 있습니다. 보고서 항목보다 크고 해당 영역의 90% 이상과 겹치는 사각형은 모두 보고서 항목의 컨테이너가 됩니다.  
   
 ## <a name="bitmaps"></a>비트맵  
- 보고서에 포함된 비트맵은 초기 형식에 관계없이 보고서를 가져올 때 모두 .bmp 형식으로 변환됩니다. 예를 들어 보고서에 .jpg 및 .gif 파일이 있는 경우 보고서와 함께 가져오는 리소스는 .bmp 파일이 됩니다. 비트맵은 포함 이미지로 보고서에 저장됩니다. 포함 된 이미지에 대 한 정보를 참조 하십시오. [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)합니다.  
+ 보고서에 포함된 비트맵은 초기 형식에 관계없이 보고서를 가져올 때 모두 .bmp 형식으로 변환됩니다. 예를 들어 보고서에 .jpg 및 .gif 파일이 있는 경우 보고서와 함께 가져오는 리소스는 .bmp 파일이 됩니다. 비트맵은 포함 이미지로 보고서에 저장됩니다. 포함 이미지에 대 한 정보를 참조 하세요 [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="other-considerations"></a>기타 고려 사항  
  Access에서 보고서를 가져올 때는 위의 항목뿐만 아니라 다음 사항도 적용됩니다.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Files element
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f7556009881e1d4155e47a368bcff4b49aa7988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d4ed9199f5b715c00e70da39e1742a2638cf67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196043"
 ---
 # <a name="files-element-assl"></a>Files 요소(ASSL)
   컬렉션을 포함 [파일](../objects/file-element-assl.md) 구성 하는 요소는 [ClrAssembly](../data-type/assembly-data-type-assl.md) 요소입니다.  
@@ -67,13 +67,13 @@ ms.locfileid: "36088281"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Database 요소 &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Assemblies 요소 &#40;ASSL&#41;](assemblies-element-assl.md)   
  [데이터 요소 &#40;ASSL&#41;](../objects/data-element-assl.md)   
  [DataBlock 데이터 형식 &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
  [요소를 차단 &#40;ASSL&#41;](blocks-element-assl.md)   
- [요소를 차단 &#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [블록 요소 &#40;ASSL&#41;](../objects/block-element-assl.md)   
  [ComAssembly 데이터 형식 &#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [컬렉션 &#40;ASSL&#41;](collections-assl.md)  
   

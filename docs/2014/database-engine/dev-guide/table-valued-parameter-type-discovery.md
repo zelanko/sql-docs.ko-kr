@@ -14,26 +14,26 @@ helpviewer_keywords:
 - table-valued parameters, type discovery
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eea5d45c4c21b740a3ea91ee27023129b33719b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 021109d32ceed7055348aea0bb0cb9ac32a4c7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231953"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>테이블 반환 매개 변수 형식 검색
-  소비자-즉, 응용 프로그램 사용 하는 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자-OLE DB 공급자에 명령 텍스트에 지정 된 경우 각 명령 매개 변수의 형식을 검색할 수 있습니다. 테이블 반환 매개 변수 형식의 알려진 후 소비자는 테이블 반환 매개 변수의 개별 열에 대 한 메타 데이터 정보를 검색할 수 있습니다.  
+  소비자-즉, 응용 프로그램 사용 하는 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자, OLE DB 공급자에 명령 텍스트에 지정 된 경우 각 명령 매개 변수의 형식을 검색할 수 있습니다. 테이블 반환 매개 변수의 형식을 알고 있는 경우 후 소비자는 테이블 반환 매개 변수의 개별 열에 대 한 메타 데이터 정보를 검색할 수 있습니다.  
   
- 프로시저 매개 변수의 형식 정보는 대부분 매개 변수 형식에 대 한 icommandwithparameters:: Getparameterinfo에서 지원 됩니다. 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 사용자 정의 형식의 도입으로 및 `xml` 데이터 형식을 GetParameterInfo 메서드 충분 하지 않은이 목적을 위해 사용자 정의 형식 정보를 제공할 수 없기 때문에 (이름, 스키마 및 ICommandWithParameters 통해 카탈로그). 확장된 유형 정보를 제공 하는 새로운 인터페이스 ISSCommandWithParameters, 정의 되었습니다.  
+ 프로시저 매개 변수의 형식 정보를 대부분의 매개 변수 형식에 대 한 icommandwithparameters:: Getparameterinfo에서 지원 됩니다. 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 사용자 정의 형식의 도입 및 `xml` 데이터 형식으로 GetParameterInfo 메서드 충분 하지 않은이 목적을 위해 사용자 정의 형식 정보를 제공할 수 없기 때문에 (이름, 스키마 및 ICommandWithParameters 통해 카탈로그). ISSCommandWithParameters를 새 인터페이스를 확장된 유형 정보를 제공 하도록 정의 되었습니다.  
   
- 테이블 반환 매개 변수에 대 한도 세부 정보를 검색할 ISSCommandWithParameters 인터페이스를 사용 합니다. 클라이언트는 명령 개체를 준비한 후 ISSCommandWithParameters::GetParameterInfo를 호출 합니다. 에 대 한 테이블 반환 매개 변수는 *wType* 공급자에 의해 DBPARAMINFO 구조체의 멤버 DBTYPE_TABLE로 설정 됩니다. *ulParamSize* DBPARAMINFO 구조의 필드 값은 ~ 0입니다.  
+ 테이블 반환 매개 변수에 대 한도 세부 정보를 검색할 ISSCommandWithParameters 인터페이스를 사용 합니다. 클라이언트는 명령 개체를 준비한 후 ISSCommandWithParameters::GetParameterInfo를 호출 합니다. 에 대 한 테이블 반환 매개 변수를 *wType* DBPARAMINFO 구조체의 멤버는 공급자가 DBTYPE_TABLE로 설정 됩니다. 합니다 *ulParamSize* DBPARAMINFO 구조의 필드의 값이 ~ 0입니다.  
   
- 소비자는 ISSCommandWithParamters를 사용 하 여 추가 속성 (테이블 반환 매개 변수 형식 카탈로그 이름, 테이블 반환 매개 변수 형식 스키마 이름, 테이블 반환 매개 변수 형식 이름, 열 순서 및 기본 열)을 요청 다음:: GetParameterProperties 합니다.  
+ 소비자 ISSCommandWithParamters를 사용 하 여 추가 속성 (테이블 반환 매개 변수 형식 카탈로그 이름, 테이블 반환 매개 변수 형식 스키마 이름, 테이블 반환 매개 변수 형식 이름, 열 순서 및 기본 열)를 요청 합니다: GetParameterProperties 합니다.  
   
- 형식 이름이 알려져 있으면 후 소비자 호출 해야 하거나 개별 열 정보를 검색할 IOpenRowset::OpenRowsetor 가져올 DBSCHEMA_TABLE_TYPE_COLUMNS 행 집합을 테이블 반환 매개 변수 형식 이름을 테이블 이름으로 지정 하 여.  
+ 형식 이름이 알려져 있으면 후 소비자 중 하나를 호출 해야 하는 개별 열 정보를 검색할 IOpenRowset::OpenRowsetor 가져올 DBSCHEMA_TABLE_TYPE_COLUMNS 행 집합을 테이블 반환 매개 변수 형식 이름을 테이블 이름으로 지정 하 여 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimensionID element
 ms.assetid: d1341fb2-9afe-40f1-a704-ce548bce48fc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 925a684b8bd05fabfda6a3e4c8461ca0b549efc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: addd969b2fe6c1014a825ba3f8413258b472b13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196063"
 ---
 # <a name="cubedimensionid-element-assl"></a>CubeDimensionID 요소(ASSL)
   식별 된 [CubeDimension](../data-type/dimension-data-type-assl.md) 부모 요소와 연결 된 요소입니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "36088469"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AggregationDesignDimension](../data-type/aggregationdesigndimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/aggregationinstancecubedimension-data-type-assl.md), [CubeAttributeBinding](../data-type/binding-data-type-assl.md), [ CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md), [CubeDimensionPermission](../data-type/permission-data-type-assl.md), [MeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [MeasureGroupDimensionBinding](../data-type/measuregroupdimensionbinding-data-type-assl.md), [ PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md)|  
+|부모 요소|[AggregationDesignDimension](../data-type/aggregationdesigndimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md)를 [AggregationInstanceCubeDimension](../data-type/aggregationinstancecubedimension-data-type-assl.md)하십시오 [CubeAttributeBinding](../data-type/binding-data-type-assl.md), [ CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md), [CubeDimensionPermission](../data-type/permission-data-type-assl.md), [MeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md)하십시오 [MeasureGroupDimensionBinding](../data-type/measuregroupdimensionbinding-data-type-assl.md)를 [ PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

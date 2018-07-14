@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251515"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>분류 행렬 탭(마이닝 정확도 차트 뷰)
-  **분류 행렬** 탭에서는 **열 매핑** 탭의 모델 표에서 선택한 각 모델에 대한 분류 행렬을 표시합니다. 분류 행렬은 **열 매핑** 탭에서 선택한 예측 가능한 열이 연속 열이 아닌 경우에만 사용할 수 있습니다. 에 대 한 자세한 설명은 **분류 행렬** 탭, 참조 [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)합니다.  
+  **분류 행렬** 탭에서는 **열 매핑** 탭의 모델 표에서 선택한 각 모델에 대한 분류 행렬을 표시합니다. 분류 행렬은 **열 매핑** 탭에서 선택한 예측 가능한 열이 연속 열이 아닌 경우에만 사용할 수 있습니다. 에 대 한 자세한 설명은 합니다 **분류표** 탭을 참조 하십시오 [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md).  
   
 ## <a name="options"></a>변수  
  **복사**  

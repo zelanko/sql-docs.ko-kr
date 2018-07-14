@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
 - links [Reporting Services], URL access
@@ -20,13 +20,13 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1e969deea2a5a2ca99af25a763adf324818ce741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216473"
 ---
 # <a name="url-access-ssrs"></a>URL 액세스(SSRS)
   SQL Server Reporting Services(SSRS)에서 보고서 서버의 URL 액세스를 사용하면 URL 요청을 통해 보고서 서버에 명령을 보낼 수 있습니다. 예를 들어 기본 모드 보고서 서버 또는 SharePoint 라이브러리에서 보고서 렌더링을 사용자 지정할 수 있습니다. 특정 보고서 매개 변수 값 집합을 사용하여 보고서를 보거나 보고서의 관심 있는 특정 페이지를 본 경우 미리 정의된 URL 액세스 매개 변수를 사용하여 이 정보를 URL에 캡슐화할 수 있습니다. 또한 렌더링 형식 및 보고서 뷰어의 디자인에 대한 매개 변수를 포함하여 보고서 서버에서 보고서를 처리하는 방식을 사용자 지정할 수 있습니다. 그런 다음 이 URL을 전자 메일이나 웹 페이지에 직접 붙여넣어 다른 사용자가 브라우저에서 같은 방식으로 보고서에 액세스하도록 할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36081761"
   
 -   보고서 세션 관리  
   
- 명령 및 URL 액세스를 통해 사용할 수 있는 설정의 전체 목록을 참조 하십시오. [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
+ 명령 및 URL 액세스를 통해 사용할 수 있는 설정의 전체 목록은 참조 하세요 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
   
 ## <a name="url-access-concepts"></a>URL 액세스 개념  
  보고서 서버에 대한 URL 요청에는 보고서 서버에서 처리하는 매개 변수가 포함됩니다. 보고서 서버에서 URL 요청을 처리하는 방법은 매개 변수, 매개 변수 접두사, URL에 포함된 항목의 종류 등에 따라 다릅니다. 보고서 서버 URL은 W3C(World Wide Web 컨소시엄)와 IETF의 공동 초안 표준에서 제안한 대로 URL 형식 지정 지침을 따릅니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 기능은 표준 URL 주소 지정을 지원하는 대부분의 인터넷 브라우저나 응용 프로그램에서 호환됩니다.  
@@ -108,7 +108,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  사용 중인 매개 변수의 값에 해당하는 URL 텍스트입니다.  
   
- **참고:** 사용 가능한 URL 액세스 매개 변수 목록에 대 한 참조 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다. URL에 보고서 매개 변수를 전달 하는 예제를 참조 하십시오. [URL을 전달 하는 보고서 매개 변수 내에서 정도](pass-a-report-parameter-within-a-url.md)합니다.  
+ **참고:** 목록을 사용할 수 있는 URL 액세스 매개 변수를 참조 하세요. [URL Access Parameter Reference](url-access-parameter-reference.md)합니다. URL에 보고서 매개 변수를 전달 하는 예제를 참조 하세요 [는 Report Parameter Within a URL 전달](pass-a-report-parameter-within-a-url.md)합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

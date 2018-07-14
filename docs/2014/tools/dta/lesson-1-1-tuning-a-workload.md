@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a414a8fac51b52549982ef08456288981b1c9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172094"
 ---
 # <a name="tuning-a-workload"></a>작업 튜닝
   데이터베이스 엔진 튜닝 관리자를 사용하여 튜닝하려고 선택한 데이터베이스와 테이블의 쿼리 성능에 가장 적합한 물리적 데이터베이스 디자인을 찾을 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36082590"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>작업 Transact-SQL 스크립트 파일 튜닝  
   
-1.  "1. SELECT를 사용하여 행 및 열 검색"([SELECT 예제&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql))에서 샘플 SELECT 문을 복사하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에 붙여넣습니다. 로 파일을 저장 **MyScript.sql** 쉽게 찾을 수 있는 디렉터리에 있습니다.  
+1.  "1. SELECT를 사용하여 행 및 열 검색"([SELECT 예제&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql))에서 샘플 SELECT 문을 복사하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에 붙여넣습니다. 파일로 저장 **MyScript.sql** 쉽게 찾을 수 있는 디렉터리에 있습니다.  
   
 2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. [데이터베이스 엔진 튜닝 관리자 시작](../../relational-databases/performance/database-engine-tuning-advisor.md)을 참조하세요.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e9d85e66cd3ccbfb4c3695f6d7485dbb1a8a9de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162034"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36081039"
   
 -   **여러 데이터 영역에 대해 정렬을 동기화할지 여부:** 보고서를 디자인하여 사용자가 정렬 순서를 전환할 때 다른 데이터 영역도 같은 순서로 정렬되도록 할 수 있습니다.  
   
- 단계별 지침은 참조 하십시오. [테이블 또는 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)합니다.  
+ 단계별 지침은 [테이블이 나 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)합니다.  
   
  다음 표에서는 대화형 정렬 단추를 사용하여 얻을 수 있는 효과에 대해 간략히 설명합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36081039"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>여러 그룹에 대한 대화형 정렬 추가  
  단일 데이터 집합 필드 기반의 중첩 행 그룹이 있는 테이블에서 대화형 정렬 단추를 추가하여 부모 그룹 값, 자식 그룹 값 또는 정보 행을 정렬할 수 있습니다. 여러 번 클릭하지 않고도 부모 및 자식 그룹 값 모두를 기준으로 테이블을 정렬할 수 있는 능력을 사용자에게 제공할 수 있습니다.  
   
- 이렇게 하려면 여러 필드를 결합하는 식을 그룹화하여 테이블을 다시 디자인해야 합니다. 예를 들어 재고 수가 들어 있는 데이터 집합의 경우 원래 테이블을 크기 및 색 순서로 그룹화하는 경우 크기 및 색을 결합한 그룹 식으로 단일 그룹을 지정할 수 있습니다. 자세한 내용은 참조 [테이블 또는 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)합니다.  
+ 이렇게 하려면 여러 필드를 결합하는 식을 그룹화하여 테이블을 다시 디자인해야 합니다. 예를 들어 재고 수가 들어 있는 데이터 집합의 경우 원래 테이블을 크기 및 색 순서로 그룹화하는 경우 크기 및 색을 결합한 그룹 식으로 단일 그룹을 지정할 수 있습니다. 자세한 내용은 [테이블이 나 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   

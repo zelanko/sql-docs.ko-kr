@@ -1,5 +1,5 @@
 ---
-title: 기존 데이터 원본 연결 (SSAS 테이블 형식)을 편집 | Microsoft Docs
+title: 기존 데이터 원본 연결 (SSAS 테이블 형식)를 편집 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c181ada4cb40eba4697f70d78933dcc26fc7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 412529e536e23a988fddd78f83611f4460e3dbf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248033"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>기존 데이터 원본 연결 편집(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 기존 데이터 원본 연결의 속성을 편집하는 방법에 대해 설명합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "36081001"
      현재 테이블 속성 집합을 저장하면 테이블을 처리해야 한다는 메시지가 나타날 수 있습니다. **처리** 를 클릭하여 업데이트된 데이터를 모델에 로드합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 처리 &#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
+ [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

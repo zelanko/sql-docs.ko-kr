@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228253"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 기본 개체 프로그래밍
   복합 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 만드는 과정은 간단하지만 세부 사항에 주의를 기울여야 합니다. 이 항목에서는 OLAP 기본 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36081957"
   
 -   [MeasureGroup 개체](#MG)  
   
--   [파티션 개체](#Part)  
+-   [Partition 개체](#Part)  
   
 -   [Aggregation 개체](#AD)  
   
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>차원 처리  
  차원을 처리하는 과정은 <xref:Microsoft.AnalysisServices.Dimension> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다.  
   
- 차원 처리 작업은 해당 차원을 사용하는 모든 큐브에 영향을 줄 수 있습니다. 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) 및 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 차원 처리 작업은 해당 차원을 사용하는 모든 큐브에 영향을 줄 수 있습니다. 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리할 개체 &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) 하 고 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md).  
   
  다음 코드에서는 제공된 데이터베이스의 모든 차원에서 증분 업데이트를 수행합니다.  
   
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>큐브 처리  
  큐브를 처리하는 과정은 <xref:Microsoft.AnalysisServices.Cube> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다. 큐브를 처리하면 큐브의 모든 측정값 그룹과 측정값 그룹의 모든 파티션도 처리됩니다. 큐브에서는 파티션이 유일하게 처리할 수 있는 개체이며, 처리 목적으로 제공되는 측정값 그룹은 유일한 파티션 컨테이너입니다. 큐브에 대해 지정된 처리 유형은 파티션에 전파됩니다. 큐브 및 측정값 그룹의 처리는 내부적으로 차원 및 파티션의 처리로 확인됩니다.  
   
- 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), 및 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리할 개체 &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), 및 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md).  
   
  다음 코드에서는 지정된 데이터베이스의 모든 큐브에서 전체 처리를 수행합니다.  
   
@@ -419,7 +419,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>측정값 그룹 처리  
  측정값 그룹을 처리하는 과정은 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다. 측정값 그룹을 처리하면 측정값 그룹에 속한 모든 파티션도 처리됩니다. 측정값 그룹의 처리는 내부적으로 차원 및 파티션의 처리로 확인됩니다. 이 문서의 [파티션 처리](#ProcPart) 를 참조하십시오.  
   
- 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), 및 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리할 개체 &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), 및 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md).  
   
  다음 코드에서는 제공된 큐브의 모든 측정값 그룹에서 전체 처리를 수행합니다.  
   
@@ -431,7 +431,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part"></a> 파티션 개체  
+##  <a name="Part"></a> Partition 개체  
  파티션을 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.Partition> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>파티션 만들기, 삭제 및 찾기  
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> 파티션 처리  
  파티션을 처리하는 과정은 <xref:Microsoft.AnalysisServices.Partition> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다.  
   
- 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) 및 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리할 개체 &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) 하 고 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md).  
   
  다음 코드 예제에서는 지정된 측정값 그룹의 모든 파티션에서 전체 처리를 수행합니다.  
   
@@ -510,7 +510,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   파티션이 같은 서버에 있어야 하며, 같은 서버에 있는 경우 원격 파티션을 병합할 수 있습니다.  
   
- 이전 버전과 달리에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모든 원본 파티션의 집계 디자인이 같지 않아도있지 않습니다.  
+ 이전 버전과 달리에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모든 원본 파티션의 집계 디자인이 같지 않아도 아닙니다.  
   
  대상 파티션에 대한 집계 결과 집합이 병합 명령을 실행하기 이전 상태의 집계 집합과 같아야 합니다.  
   
@@ -534,7 +534,7 @@ static void MergeAllPartitions(MeasureGroup mg)
  집계를 디자인하여 하나 이상의 파티션에 적용하려면 <xref:Microsoft.AnalysisServices.Aggregation> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-and-dropping-aggregations"></a>집계 만들기 및 삭제  
- 집계는 <xref:Microsoft.AnalysisServices.AggregationDesign> 개체의 DesignAggregations 메서드를 사용하여 쉽게 만들어서 측정값 그룹에 지정할 수 있습니다. <xref:Microsoft.AnalysisServices.AggregationDesign> 개체는 별개에서의 개체로 <xref:Microsoft.AnalysisServices.AggregationDesign> 에 포함 된 개체는 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체입니다. 집계는 지정된 최적화 수준(0 - 100) 또는 지정된 저장소 수준(바이트)까지 디자인할 수 있습니다. 여러 파티션에서 동일한 집계 디자인을 사용할 수 있습니다.  
+ 집계는 <xref:Microsoft.AnalysisServices.AggregationDesign> 개체의 DesignAggregations 메서드를 사용하여 쉽게 만들어서 측정값 그룹에 지정할 수 있습니다. <xref:Microsoft.AnalysisServices.AggregationDesign> 개체는 파티션에서 별도 개체를 <xref:Microsoft.AnalysisServices.AggregationDesign> 개체가 포함 된를 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체입니다. 집계는 지정된 최적화 수준(0 - 100) 또는 지정된 저장소 수준(바이트)까지 디자인할 수 있습니다. 여러 파티션에서 동일한 집계 디자인을 사용할 수 있습니다.  
   
  다음 코드 예제에서는 제공된 측정값 그룹의 모든 파티션에 대한 집계를 만듭니다. 파티션의 기존 집계는 모두 삭제됩니다.  
   

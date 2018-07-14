@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228153"
 ---
 # <a name="object-element-dimension-xmla"></a>Object 요소(차원)(XMLA)
-  차원에 대 한 개체 참조가 포함 부모 [삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md), 또는 [Drop](../xml-elements-commands/drop-element-xmla.md) 명령을 실행 합니다.  
+  차원에 대 한 개체 참조가 포함 부모 [삽입](../xml-elements-commands/insert-element-xmla.md)를 [업데이트](../xml-elements-commands/update-element-xmla.md), 또는 [Drop](../xml-elements-commands/drop-element-xmla.md) 명령을 실행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,8 +64,8 @@ ms.locfileid: "36081643"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[Drop](../xml-elements-commands/drop-element-xmla.md), [삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md)|  
-|자식 요소|[큐브](cube-element-xmla.md), [데이터베이스](database-element-xmla.md), [차원](dimension-element-xmla.md)|  
+|부모 요소|[Drop](../xml-elements-commands/drop-element-xmla.md)하십시오 [삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md)|  
+|자식 요소|[큐브](cube-element-xmla.md)하십시오 [데이터베이스](database-element-xmla.md), [차원](dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
   

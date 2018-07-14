@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326133"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>알림을 보내도록 비즈니스 규칙 구성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 값 변경 내용을 사용자에게 알리려는 경우 알림을 보내도록 비즈니스 규칙을 구성할 수 있습니다.  
@@ -51,11 +51,11 @@ ms.locfileid: "36081122"
   
 4.  **엔터티** 목록에서 엔터티를 선택합니다.  
   
-5.  **멤버 유형을** 목록에서 멤버 유형을 선택 합니다.  
+5.  **멤버 유형** 목록에서 멤버 유형을 선택 합니다.  
   
 6.  **특성** 목록에서 특성을 선택하거나 기본값인 **모두**를 그대로 사용합니다.  
   
-7.  표 형태의 비즈니스 규칙에 대 한 행에서 두 번 클릭은 **알림** 필드입니다.  
+7.  표 형태의 비즈니스 규칙에 대 한 행에서 두 번 클릭 합니다 **알림** 필드입니다.  
   
 8.  하위 메뉴에서 전자 메일 알림을 보낼 사용자 또는 그룹을 클릭합니다.  
   

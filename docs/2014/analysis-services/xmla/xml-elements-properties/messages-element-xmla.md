@@ -1,5 +1,5 @@
 ---
-title: 메시지를 요소 (XMLA) | Microsoft Docs
+title: 메시지 요소 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Messages element
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64895171a352fd981eb811c39be84b4268d5ed19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0fbaba30716831ef34a40dd94c6c9b2ab507641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176780"
 ---
 # <a name="messages-element-xmla"></a>Messages 요소(XMLA)
-  컬렉션을 포함 [메시지](message-element-xmla.md) 요소에서의 인스턴스로 반환 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 여는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출 합니다.  
+  컬렉션을 포함 [메시지](message-element-xmla.md) 의 인스턴스에서 반환 된 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 여는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36088920"
 |자식 요소|[메시지](message-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 이 요소는 `Discover` 메서드 호출 또는 `Execute` 메서드 호출 내 단일 XMLA 명령이 성공적으로 완료되었지만 오류 또는 경고가 발생한 경우 사용됩니다. 이러한 경우에는 `Messages` 요소가 추가 되는 [루트](root-element-xmla.md) 하나 이상 포함 된 다른 모든 요소 뒤 요소 `Message` 요소입니다. 각 `Message` 요소가 나타내는 단일 메시지를 오류 또는 경고를 반환한는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+ 이 요소는 `Discover` 메서드 호출 또는 `Execute` 메서드 호출 내 단일 XMLA 명령이 성공적으로 완료되었지만 오류 또는 경고가 발생한 경우 사용됩니다. 이러한 경우에는 `Messages` 요소에 추가 됩니다 합니다 [루트](root-element-xmla.md) 하나 이상 포함 된 다른 모든 요소 뒤 요소 `Message` 요소입니다. 각 `Message` 요소가 나타내는 단일 메시지를 오류 또는 경고를 반환한는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  

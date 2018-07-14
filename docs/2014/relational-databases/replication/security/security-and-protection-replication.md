@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication]
 - security [SQL Server replication], about security
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93c90f45738f805f8a1422bfa3af3887592f6082
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2c392ef01680ec58374ef6a0aed5a02fe333abad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201133"
 ---
 # <a name="security-and-protection-replication"></a>보안 및 보호(복제)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에서 배포하는 복제 시나리오를 악의적인 공격으로부터 보호하고 데이터의 보안을 향상시키는 방법을 살펴봅니다.  

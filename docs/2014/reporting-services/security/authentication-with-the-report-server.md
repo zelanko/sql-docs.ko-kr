@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,16 +19,18 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266089"
 ---
 # <a name="authentication-with-the-report-server"></a>보고서 서버 인증
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.  
   
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 IIS를 통해 모든 인증 지원을 제공했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 릴리스부터는 IIS가 더 이상 사용되지 않고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모든 인증 요청을 내부적으로 처리합니다.  
@@ -57,7 +59,7 @@ ms.locfileid: "36081032"
 |다이제스트|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되지 않습니다.|  
   
 ## <a name="configuration-of-authentication-settings"></a>인증 설정 구성  
- 인증 설정은 보고서 서버 URL이 예약될 때 기본 보안용으로 구성됩니다. 이 설정을 잘못 수정하면 보고서 서버는 인증할 수 없는 HTTP 요청에 대해 HTTP 401 액세스 거부 오류를 반환합니다. 인증 유형을 선택하려면 현재 네트워크에서 Windows 인증이 지원되는 방식을 먼저 알아야 합니다. 적어도 하나의 인증 유형을 지정해야 합니다. RSWindows에 대해 여러 인증 유형을 지정할 수 있습니다. RSWindows 인증 유형 (즉, `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, 및 **RSWindowsNegotiate**) 사용자 지정와 함께 사용할 수 없습니다.  
+ 인증 설정은 보고서 서버 URL이 예약될 때 기본 보안용으로 구성됩니다. 이 설정을 잘못 수정하면 보고서 서버는 인증할 수 없는 HTTP 요청에 대해 HTTP 401 액세스 거부 오류를 반환합니다. 인증 유형을 선택하려면 현재 네트워크에서 Windows 인증이 지원되는 방식을 먼저 알아야 합니다. 적어도 하나의 인증 유형을 지정해야 합니다. RSWindows에 대해 여러 인증 유형을 지정할 수 있습니다. RSWindows 인증 유형 (즉, `RSWindowsBasic`, `RSWindowsNTLM`를 `RSWindowsKerberos`, 및 **RSWindowsNegotiate**) 사용자 지정을 사용 하 여 함께 사용할 수 없습니다.  
   
 > [!IMPORTANT]  
 >  Reporting Services는 현재 컴퓨팅 환경에 올바른지 여부를 확인하기 위해 사용자가 지정하는 설정의 유효성을 검사하지 않습니다. 기본 보안이 현재 설치에서 작동하지 않는 경우 또는 현재 보안 인프라에 대해 유효하지 않은 구성 설정이 지정되는 경우가 있습니다. 따라서 보고서 서버 배포를 큰 규모의 조직에 적용하기 전에 통제된 테스트 환경에서 신중하게 테스트하는 것이 중요합니다.  

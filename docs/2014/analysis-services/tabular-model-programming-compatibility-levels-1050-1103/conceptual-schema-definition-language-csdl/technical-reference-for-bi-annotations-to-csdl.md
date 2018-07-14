@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27ed1339d64dd3c4035288a96b31ae163a304733
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192393"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>CSDL용 BI 주석에 대한 기술 참조
   이 섹션에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 나타내는 데 사용되는 CSDL의 요소, 특성 및 속성을 보여 줍니다. 일부 요소는 새로 추가된 요소이고, 나머지는 BI 확장을 지원하도록 주석이 추가되거나 확장된 요소입니다.  
   
- 테이블 형식 모델 및 엔터티, 관계 및 수식을 CSDL에 표시 되는 방법의 개요를 참조 하십시오. [Business Intelligence에 대 한 CSDL 주석 &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md)합니다.  
+ 테이블 형식 모델 및 CSDL에서 엔터티, 관계 및 수식을 나타내는 하는 방법의 개요를 참조 하세요 [비즈니스 인텔리전스에 대 한 CSDL 주석 &#40;CSDLBI&#41;](../csdl-annotations-for-business-intelligence-csdlbi.md)합니다.  
   
 ## <a name="extended-csdl-elements-complex-types"></a>확장된 CSDL 요소: 복합 유형  
  CSDL의 다음 요소는 테이블 형식 및 다차원 비즈니스 인텔리전스 데이터 모델을 지원하도록 추가 또는 확장된 요소입니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "36088466"
   
 -   [KpiStatus 요소 &#40;CSDLBI&#41;](kpistatus-element-csdlbi.md)  
   
--   [수준 요소가 &#40;CSDLBI&#41;](level-element-csdlbi.md)  
+-   [요소 &#40;CSDLBI&#41;](level-element-csdlbi.md)  
   
--   [요소를 측정 &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
+-   [요소를 측정 합니다. &#40;CSDLBI&#41;](measure-element-csdlbi.md)  
   
 -   [Member 요소 &#40;CSDLBI&#41;](member-element-csdlbi.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36088466"
   
 -   [NavigationProperty 요소 &#40;CSDLBI&#41;](navigationproperty-element-csdlbi.md)  
   
--   [속성 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)  
+-   [Property 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)  
   
 -   [PropertyRef 요소 &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36088466"
 |CompareOptions|[EntityContainer 요소 &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
 |내용|[EntityType 요소 &#40;CSDLBI&#41;](entitytype-element-csdlbi.md)|  
 |ContextualNameRule|[Member 요소 &#40;CSDLBI&#41;](member-element-csdlbi.md)|  
-|DefaultAggregationFunction|[속성 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
+|DefaultAggregationFunction|[Property 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |DirectQueryMode|[EntityContainer 요소 &#40;CSDLBI&#41;](entitycontainer-element-csdlbi.md)|  
-|GroupingBehavior|[속성 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
+|GroupingBehavior|[Property 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |MemberRefs|[MemberRef 요소 &#40;CSDLBI&#41;](memberref-element-csdlbi.md)|  
 |PropertyRefs|[PropertyRef 요소 &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)|  
 |SortDirection|[BaseProperty 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |State|[AssociationSet 요소 &#40;CSDLBI&#41;](associationset-element-csdlbi.md)|  
-|안정성|[속성 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
+|안정성|[Property 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
 |SortDirection|[BaseProperty 요소 &#40;CSDLBI&#41;](property-element-csdlbi.md)|  
   
 ## <a name="see-also"></a>관련 항목  

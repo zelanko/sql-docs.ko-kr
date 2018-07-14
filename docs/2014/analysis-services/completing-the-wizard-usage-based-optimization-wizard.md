@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24a18018d6ac3a1ec7c493f49bef6f261f353492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45f284fd0c7d6aecbe3a07bb4694164192ff8289
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187630"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>마법사 완료(사용 빈도 기반 최적화 마법사)
   **마법사 완료** 페이지를 사용하여 집계 디자인을 선택한 파티션에 저장하고 할당할 수 있습니다. 또한 필요에 따라 사용 빈도 기반 최적화 마법사에서 집계 디자인을 완료하고 저장한 다음 선택한 파티션을 처리할 수 있습니다.  

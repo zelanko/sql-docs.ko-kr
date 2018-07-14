@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204403"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslations 요소(ASSL)
-  에 대 한 지역화 된 번역의 컬렉션을 제공 된 [NamingTemplate](../properties/namingtemplate-element-assl.md) 부모 요소의 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)합니다.  
+  지역화 된 번역의 컬렉션을 제공 합니다 [NamingTemplate](../properties/namingtemplate-element-assl.md) 부모 요소의 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36081944"
 |자식 요소|[NamingTemplateTranslation](../objects/translation-element-assl.md) 형식의 [변환](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 값은 `NamingTemplateTranslation` 요소 부모 특성에만 사용 됩니다 (의 값 즉,는 [사용](../properties/usage-element-dimensionattribute-assl.md) 부모 `DimensionAttribute` 로 설정 되어 *부모*.)  
+ 값을 `NamingTemplateTranslation` 요소는 부모 특성에만 사용 됩니다 (값 즉,는 [사용](../properties/usage-element-dimensionattribute-assl.md) 부모 요소의 `DimensionAttribute` 로 설정 되어 *부모*.)  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   

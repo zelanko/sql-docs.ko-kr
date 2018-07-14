@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - report-specific schedules [Reporting Services]
@@ -21,18 +21,18 @@ ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 68971d1dfd25f7e2e15be0007e1aaf5efb19099f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83e1a89611e4d40e1d987e666d14b61f31f1e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255565"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
   사용 중인 공유 일정을 일시 중지하고 다시 시작할 수 있습니다. 공유 일정을 일시 중지하여 보고서 처리 및 구독을 트리거하는 데 사용되는 일정을 일시적으로 중지할 수 있습니다. 공유 일정만 일시 중지하고 다시 시작할 수 있습니다. 보고서별 일정은 일시 중지할 수 없습니다.  
   
- 진행 중인 보고서의 처리는 일시 중지하고 다시 시작할 수 없습니다. SQL Server 에이전트 서비스의 일정 큐에 있는 일정만 일시 중지하고 다시 시작할 수 있습니다. 처리 중인 작업은 일정 예약 엔진 범위 밖에 있습니다. 자세한 내용은 참조 [실행 중인 프로세스 관리](manage-a-running-process.md)  
+ 진행 중인 보고서의 처리는 일시 중지하고 다시 시작할 수 없습니다. SQL Server 에이전트 서비스의 일정 큐에 있는 일정만 일시 중지하고 다시 시작할 수 있습니다. 처리 중인 작업은 일정 예약 엔진 범위 밖에 있습니다. 자세한 내용은 참조 하세요. [실행 중인 프로세스 관리](manage-a-running-process.md)  
   
  공유 일정이 일시 중지된 동안 수행되었어야 하는 모든 작업은 건너뛸 수 있습니다. 공유 일정을 다시 시작하면 서버의 현지 시간을 사용하여 다음 예약된 시간에 보고서 및 구독 처리가 수행됩니다. 기본 모드 보고서 서버 또는 SharePoint 서비스 응용 프로그램은 일정을 일시 중지하지 않았으면 수행되었을 예약된 작업을 만회하려고 하지 않습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36081489"
 -   [공유 일정 일시 중지 및 다시 시작(SharePoint 모드)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 공유 일정 일시 중지 및 다시 시작(기본 모드)  
- 공유 일정을 일시 중지하고 다시 시작하려면 보고서 관리자에서 일정 페이지를 사용합니다. 여기에는 일정을 일시 중지하고 다시 시작하는 옵션이 없으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없습니다. 자세한 내용은 참조 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)합니다.  
+ 공유 일정을 일시 중지하고 다시 시작하려면 보고서 관리자에서 일정 페이지를 사용합니다. 여기에는 일정을 일시 중지하고 다시 시작하는 옵션이 없으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없습니다. 자세한 내용은 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)합니다.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>공유 일정을 일시 중지 또는 다시 시작하려면  
   

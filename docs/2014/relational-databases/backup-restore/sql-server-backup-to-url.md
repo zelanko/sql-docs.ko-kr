@@ -5,21 +5,20 @@ ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92af4cfa0c3ea71693932b7301feed71d1fc1327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264879"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Windows Azure Blob 저장소 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "36081607"
   
 -   [주요 구성 요소 및 개념 소개](#intorkeyconcepts)  
   
--   [Windows Azure Blob 저장소 서비스](#Blob)  
+-   [Windows Azure Blob Storage 서비스](#Blob)  
   
 -   [SQL Server 구성 요소](#sqlserver)  
   
@@ -56,18 +55,18 @@ ms.locfileid: "36081607"
 -   BACKUP 또는 RESTORE 명령을 실행하는 데 사용되는 사용자 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다.  
   
 ###  <a name="intorkeyconcepts"></a> 주요 구성 요소 및 개념 소개  
- 다음 두 섹션에서는 Windows Azure Blob 저장소 서비스 소개 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 하거나 Windows Azure Blob 저장소 서비스에서 복원할 때 사용 되는 구성 요소입니다. 구성 요소와 Windows Azure Blob 저장소 서비스로 백업하거나 복원할 때 구성 요소 간의 상호 작용을 이해하는 것이 중요합니다.  
+ 다음 두 섹션에서는 Windows Azure Blob 저장소 서비스를 소개 하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 하거나 Windows Azure Blob 저장소 서비스에서 복원할 때 사용 되는 구성 요소입니다. 구성 요소와 Windows Azure Blob 저장소 서비스로 백업하거나 복원할 때 구성 요소 간의 상호 작용을 이해하는 것이 중요합니다.  
   
- 이 과정의 첫 단계는 Windows Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여는 **Windows Azure 저장소 계정 이름** 및 해당 **선택 키** 인증 하 고 작성 하 고 읽는 blob 저장소 서비스에는 값입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 저장소 계정을 만들고 간단한 복원을 수행하는 전체 연습은 [SQL Server 백업 및 복원에 Windows Azure 저장소 서비스 사용 자습서](http://go.microsoft.com/fwlink/?LinkId=271615)를 참조하십시오.  
+ 이 과정의 첫 단계는 Windows Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 **Windows Azure 저장소 계정 이름** 및 해당 **액세스 키** 인증 및 작성 하 고 읽는 blob 저장소 서비스에는 값입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 저장소 계정을 만들고 간단한 복원을 수행하는 전체 연습은 [SQL Server 백업 및 복원에 Windows Azure 저장소 서비스 사용 자습서](http://go.microsoft.com/fwlink/?LinkId=271615)를 참조하십시오.  
   
  ![sql 자격 증명에 저장소 계정 매핑](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "sql 자격 증명에 저장소 계정 매핑")  
   
-###  <a name="Blob"></a> Windows Azure Blob 저장소 서비스  
+###  <a name="Blob"></a> Windows Azure Blob Storage 서비스  
  **저장소 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Windows Azure Blob 저장소 서비스에 액세스하려면 먼저 Windows Azure 저장소 계정을 만듭니다. Windows Azure Blob 저장소 서비스와 해당 구성 요소의 인증을 받으려면 **storage account name** 과 해당 **access key** 속성이 필요합니다.  
   
  **컨테이너:** 컨테이너에서는 그룹화된 blob 집합을 제공하며 blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob service에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다.  
   
- **Blob:** 모든 형식과 크기의 파일입니다. Windows Azure Blob 저장소 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 페이지 Blob을 Blob 유형으로 사용 됩니다. Blob는 다음 URL 형식을 사용 하 여 주소 지정 가능한: https://\<저장소 계정 >.blob.core.windows.net/\<컨테이너 > /\<blob >  
+ **Blob:** 모든 형식과 크기의 파일입니다. Windows Azure Blob 저장소 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 페이지 Blob을 Blob 유형으로 사용합니다. Blob은 다음 URL 형식을 사용 하 여 주소 지정 가능: https://\<저장소 계정 >.blob.core.windows.net/\<컨테이너 > /\<blob >  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -81,11 +80,11 @@ ms.locfileid: "36081607"
 > [!WARNING]  
 >  백업 파일을 복사하고 Windows Azure Blob 저장소 서비스로 업로드하도록 선택하는 경우 페이지 Blob을 저장소 옵션으로 사용하십시오. 블록 Blob에서 복원은 지원되지 않습니다. 블록 Blob 유형에서 RESTORE는 오류와 함께 실패합니다.  
   
- 샘플 URL 값은: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<컨테이너 > /\<FILENAME.bak > 합니다. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
+ 샘플 URL 값은: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<컨테이너 > /\<FILENAME.bak >. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
   
- **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다.  여기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스를 Windows Azure Blob 저장소 서비스에 인증 자격 증명을 사용 합니다. 자격 증명에는 저장소 계정 이름과 저장소 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 표시, 복사 또는 저장소 계정을 다시 생성 하는 방법에 대 한 자세한 내용은 **선택키가**, 참조 [저장소 계정 액세스 키](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)합니다.  
+ **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다.  이때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스 자격 증명을 사용 하 여 Windows Azure Blob storage 서비스에 인증할 수 있습니다. 자격 증명에는 저장소 계정 이름과 저장소 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 보기, 복사 또는 저장소 계정을 다시 생성 하는 방법에 대 한 자세한 내용은 **액세스 키**를 참조 하십시오 [저장소 계정 액세스 키](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)합니다.  
   
- 만드는 방법에 대 한 단계별 지침은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명, 참조 [자격 증명 만들기](#credential) 이 항목의 뒷부분에 나오는 예제입니다.  
+ 만드는 방법에 대 한 단계별 지침은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 참조 하세요 [자격 증명 만들기](#credential) 이 항목의 뒷부분에 나오는 예제입니다.  
   
  자격 증명에 대한 자세한 내용은 [자격 증명](http://msdn.microsoft.com/en-us/library/ms161950.aspx)을 참조하십시오.  
   
@@ -218,7 +217,7 @@ ms.locfileid: "36081607"
   
  다음 단계에서는 Windows Azure 저장소로 백업할 수 있도록 변경된 데이터베이스 백업 태스크에 대해 설명합니다.  
   
-1.  SQL Server Management Studio를 시작하고 SQL Server 인스턴스에 연결합니다.  데이터베이스를 백업 하 고 마우스 오른쪽 단추로 클릭 하려는 선택 **작업**, 선택 하 고 **백업...** . 데이터베이스 백업 대화 상자가 열립니다.  
+1.  SQL Server Management Studio를 시작하고 SQL Server 인스턴스에 연결합니다.  백업을 마우스 오른쪽 단추로 클릭 하려는 데이터베이스를 선택 **태스크**, 선택한 **백업...** . 데이터베이스 백업 대화 상자가 열립니다.  
   
 2.  일반 페이지에서 **URL** 옵션이 Windows Azure 저장소에 백업을 만드는 데 사용됩니다. 이 옵션을 선택하면 이 페이지에서 다음과 같은 옵션을 사용할 수 있습니다.  
   
@@ -246,7 +245,7 @@ ms.locfileid: "36081607"
  [자격 증명 만들기 - Azure Storage 인증](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 유지 관리 계획 마법사를 사용하여 URL로 SQL Server 백업  
- 이전에 설명한 백업 태스크와 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Windows Azure 저장소로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다. 자세한 내용은 참조는 **백업 작업 정의** 섹션 [유지 관리 계획 마법사를 사용 하 여](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)합니다.  
+ 이전에 설명한 백업 태스크와 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Windows Azure 저장소로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다. 자세한 내용은 참조는 **백업 태스크 정의** 섹션 [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)합니다.  
   
 ##  <a name="RestoreSSMS"></a> Windows Azure storage Using SQL Server Management Studio에서 복원  
  데이터베이스를 복원하는 경우 **URL** 이 복원할 원본 장치로 포함됩니다. 다음 단계에서는 Windows Azure 저장소에서 복원할 수 있도록 변경된 복원 태스크에 대해 설명합니다.  

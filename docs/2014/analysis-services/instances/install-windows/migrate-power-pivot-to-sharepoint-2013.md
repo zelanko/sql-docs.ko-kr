@@ -1,5 +1,5 @@
 ---
-title: SharePoint 2013으로 PowerPivot 마이그레이션 | Microsoft Docs
+title: PowerPivot을 SharePoint 2013으로 마이그레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 13
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1d817e1bf9b0e09479a15619eae9f25293d8461e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c975ffc274853aee6bd74ce15079626c6cb17a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280009"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrate PowerPivot to SharePoint 2013
   
@@ -56,11 +56,11 @@ ms.locfileid: "36080748"
   
 2.  새로 SharePoint Server 2013 팜을 설치합니다.  
   
-3.  SharePoint 모드에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 인스턴스를 설치합니다. 자세한 내용은 참조 [SharePoint 용 PowerPivot 2013 설치](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
+3.  SharePoint 모드에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 인스턴스를 설치합니다. 자세한 내용은 [SharePoint 용 PowerPivot 2013 설치](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
   
-4.  SharePoint 팜의 각 서버에서 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 설치 패키지 **spPowerPivot.msi** 를 실행합니다. 자세한 내용은 참조 [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
+4.  SharePoint 팜의 각 서버에서 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 설치 패키지 **spPowerPivot.msi** 를 실행합니다. 자세한 내용은 [를 설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot 제거 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)합니다.  
   
-5.  SharePoint 2013 중앙 관리에서 이전 단계에서 만든 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버를 사용하도록 Excel Services 서비스 응용 프로그램을 구성합니다. 자세한 내용은의 "Basic Analysis Services SharePoint 통합 구성" 섹션을 참조 하십시오. [SharePoint 용 PowerPivot 2013 설치](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
+5.  SharePoint 2013 중앙 관리에서 이전 단계에서 만든 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버를 사용하도록 Excel Services 서비스 응용 프로그램을 구성합니다. 자세한 내용은의 "Basic Analysis Services SharePoint 통합 구성" 섹션을 참조 하세요 [SharePoint 용 PowerPivot 2013 설치](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
   
 ##  <a name="bkmk_backup_restore"></a> 2) 데이터베이스 백업, 복사 및 복원  
  "SharePoint 데이터베이스 연결 업그레이드" 프로세스는 PowerPivot 관련 콘텐츠 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013 팜에 백업, 복사 및 복원하는 일련의 단계입니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36080748"
 5.  **데이터베이스를 읽기/쓰기로 설정:** **데이터베이스가 읽기 전용** 을 **False**로 설정합니다.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) 웹 응용 프로그램 준비 및 콘텐츠 데이터베이스 탑재  
- 자세한 설명은 다음 절차를 참조 하십시오. [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)합니다.  
+ 에 대 한 자세한 설명은 다음 절차를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)합니다.  
   
 1.  **데이터베이스를 오프라인 상태로 만들기:**  
   
@@ -94,13 +94,13 @@ ms.locfileid: "36080748"
   
 -   **콘텐츠 데이터베이스 탑재:**  
   
-     SharePoint 2013 관리 셸에서 PowerShell cmdlet을 사용하여 마이그레이션된 콘텐츠 데이터베이스를 탑재합니다. 서비스 응용 프로그램 데이터베이스를 탑재 하지 않아도 콘텐츠 데이터베이스에만: ![PowerShell 관련 내용](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 내용")  
+     SharePoint 2013 관리 셸에서 PowerShell cmdlet을 사용하여 마이그레이션된 콘텐츠 데이터베이스를 탑재합니다. 서비스 응용 프로그램 데이터베이스를 탑재 될 필요가 없습니다 콘텐츠 데이터베이스만: ![PowerShell 관련 콘텐츠](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     자세한 내용은 참조 [연결 또는 분리 (SharePoint Server 2010) 콘텐츠 데이터베이스](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)합니다.  
+     자세한 내용은 [연결 또는 콘텐츠 데이터베이스 (SharePoint Server 2010)을 분리](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)합니다.  
   
      **단계가 완료된 상태:**  탑재 작업이 완료되면 사용자가 이전 콘텐츠 데이터베이스에 있는 파일을 볼 수 있습니다. 따라서 사용자는 문서 라이브러리에서 통합 문서를 보고 열 수 있습니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36080748"
   
 1.  **인증 오류:** 인증 관련 오류가 표시되면 소스 웹 응용 프로그램에서 사용하는 인증 모드를 검토합니다. 이 오류는 SharePoint 2013 웹 응용 프로그램과 SharePoint 2010 웹 응용 프로그램 간의 인증 불일치로 인해 발생할 수 있습니다. 자세한 내용은 [1) SharePoint 2013 팜 준비](#bkmk_prepare_sharepoint2013) 을(를) 참조하십시오.  
   
-2.  **Powerpivot 파일 누락:** powerpivot.dll 누락 관련 오류가 표시 되 면는 **spPowerPivot.msi** 설치 되지 않은 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] PowerPivot을 구성 하려면 구성 도구 사용 되지 않았습니다.  
+2.  **PowerPivot.Files 누락:** PowerPivot.dll 누락 관련 오류가 표시 되 면 합니다 **spPowerPivot.msi** 설치 되지 않은 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] PowerPivot을 구성 하려면 구성 도구 사용 되지 않았습니다.  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) PowerPivot 일정 업그레이드  
  이 섹션에서는 PowerPivot 일정 마이그레이션에 대한 세부 정보와 옵션을 설명합니다. 일정 마이그레이션 프로세스는 두 단계로 구성됩니다. 먼저 마이그레이션된 서비스 응용 프로그램 데이터베이스를 사용하도록 PowerPivot 서비스 응용 프로그램을 구성합니다. 그런 다음, 일정 마이그레이션에 대한 두 가지 옵션 중 하나를 선택합니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "36080748"
   
 -   **일정 옵션 1 마이그레이션: SharePoint 팜 관리자**  
   
-    1.  SharePoint 2013 관리 실행 시는 `Set-PowerPivotServiceApplication` 사용 하 여 cmdlet의 `-StartMigratingRefreshSchedules` 시 필요 시 일정 자동 마이그레이션 수 있도록 스위치 ![PowerShell 관련 내용](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 내용"). 다음 Windows PowerShell 스크립트는 PowerPivot 서비스 응용 프로그램이 한 개만 있다고 가정합니다.  
+    1.  SharePoint 2013 관리 실행에서 합니다 `Set-PowerPivotServiceApplication` cmdlet을 사용 합니다 `-StartMigratingRefreshSchedules` 스위치를 필요 시 일정 마이그레이션에 대 한 자동 ![PowerShell 관련 콘텐츠](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠"). 다음 Windows PowerShell 스크립트는 PowerPivot 서비스 응용 프로그램이 한 개만 있다고 가정합니다.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -177,7 +177,7 @@ ms.locfileid: "36080748"
   
 -   [SharePoint 2013으로 업그레이드 프로세스 개요](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688)합니다.  
   
--   [SharePoint 2013로 업그레이드 하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689)합니다.  
+-   [SharePoint 2013으로 업그레이드 하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689)합니다.  
   
 -   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)합니다.  
   

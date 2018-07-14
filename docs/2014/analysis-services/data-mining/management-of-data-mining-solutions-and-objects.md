@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218303"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
@@ -39,13 +39,14 @@ ms.locfileid: "36081720"
 ## <a name="location-of-data-mining-objects"></a>데이터 마이닝 개체 위치  
  처리된 마이닝 구조 및 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 저장됩니다.  
   
- 에 대 한 연결을 만드는 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 여기에 데이터베이스 `Immediate` 모드 데이터 마이닝 개발 하는 경우 개체를 작업 하는 동안 서버에 즉시는 사용자가 만든 모든 개체를 추가 합니다. 그러나 에서 작업할 때의 기본 설정인 **오프라인** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모드에서 데이터 마이닝 개체를 디자인하는 경우에는 만드는 마이닝 개체가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 배포되기 전까지 메타데이터 컨테이너일 뿐입니다. 따라서 개체를 변경할 때마다 해당 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 다시 배포해야 합니다. 데이터 마이닝 아키텍처에 대한 자세한 내용은 [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)를 참조하세요.  
+ 에 대 한 연결을 만든 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 `Immediate` 모드 데이터 마이닝 개발 하는 경우 개체를 작업할 때 서버에 즉시는 사용자가 만든 모든 개체를 추가 합니다. 그러나 에서 작업할 때의 기본 설정인 **오프라인** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모드에서 데이터 마이닝 개체를 디자인하는 경우에는 만드는 마이닝 개체가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 배포되기 전까지 메타데이터 컨테이너일 뿐입니다. 따라서 개체를 변경할 때마다 해당 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 다시 배포해야 합니다. 데이터 마이닝 아키텍처에 대한 자세한 내용은 [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007용 데이터 마이닝 추가 기능과 같은 일부 클라이언트를 사용하면 인스턴스에 대한 연결을 사용하지만 마이닝 구조 및 모델을 세션 기간 동안만 서버에 저장하는 세션 마이닝 모델 및 마이닝 구조를 만들 수도 있습니다. 이러한 모델도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장된 구조 및 모델과 같이 여전히 클라이언트를 통해 관리할 수 있지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스와의 연결을 끊은 후에는 개체가 유지되지 않습니다.  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>SQL Server Data Tools에서 데이터 마이닝 개체 관리  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 데이터 마이닝 개체를 쉽게 만들고, 찾아보고, 편집할 수 있는 여러 기능을 제공합니다.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 데이터 마이닝 개체를 쉽게 만들고, 찾아보고, 편집할 수 있는 여러 기능을 제공합니다.  
   
  다음 링크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 개체를 수정하는 방법에 대한 정보를 제공합니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "36081720"
 > [!WARNING]  
 >  이름 또는 설명과 같은 메타데이터를 변경하는 작업을 비롯하여 마이닝 구조 또는 마이닝 모델을 변경하는 모든 작업을 수행한 후에는 구조나 모델을 다시 처리해야 합니다.  
   
- 데이터 마이닝 프로젝트 또는 개체를 만드는 데 사용 하는 솔루션 파일이 Analysis Services 가져오기 마법사를 사용 하 여 서버에서 기존 프로젝트를 가져와서, 개체를 수정 하 수 다음 사용 하 여 다시 배포는 `Incremental` 옵션입니다. 자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
+ 데이터 마이닝 프로젝트 또는 개체를 만드는 데 사용 된 솔루션 파일을가 없는 경우 Analysis Services 가져오기 마법사를 사용 하 여 서버에서 기존 프로젝트를 가져와서, 개체를 수정한을 사용 하 여 다시 배포는 `Incremental` 옵션입니다. 자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 데이터 마이닝 개체 관리  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 마이닝 구조 및 마이닝 모델을 스크립팅, 처리 또는 삭제할 수 있습니다. 개체 탐색기를 사용하여 제한된 속성 집합만 볼 수 있지만 **DMX 쿼리** 창을 열고 마이닝 구조를 선택하면 마이닝 모델에 대한 추가 메타데이터를 볼 수 있습니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a01425734f0d3182a90481cb2641bb55e6611d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1118f3a7ee1e9bbace60dc2ac36c813d5b147edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178070"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 **필터** 대화 상자를 사용하여 Excel로 로드하기 전에 MDS 관리 데이터 목록의 범위를 좁힐 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36088868"
 |명시적 계층|**통합** 특성 유형을 선택한 경우 통합 멤버가 속하는 계층을 선택합니다. 자세한 내용은 [명시적 계층&#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)을 참조하세요.|  
 |특성 그룹|특성 그룹은 특성 하위 집합을 그룹화하는 방법입니다. 사용 가능한 특성 하위 집합을 표시하려면 특성 그룹을 선택합니다. 특성 그룹에 대한 자세한 내용은 [특성 그룹&#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)을 참조하세요.|  
 |모두 선택|목록에 표시된 모든 특성을 선택하려면 클릭합니다.|  
-|모두 지우기|목록에 표시된 선택한 특성을 지우려면 클릭합니다.<br /><br /> 참고: 지울 수 없습니다 **이름** 및 **코드**합니다.|  
+|모두 지우기|목록에 표시된 선택한 특성을 지우려면 클릭합니다.<br /><br /> 참고: 지울 수 없습니다. **이름을** 하 고 **코드**합니다.|  
 |위쪽 화살표|선택한 특성을 목록에서 위로 이동하려면 클릭합니다. 열이 워크시트에 왼쪽에서 오른쪽으로 표시된 순서에 따라 위에서 아래쪽의 순서로 표시됩니다.|  
 |아래쪽 화살표|선택한 특성을 목록에서 아래로 이동하려면 클릭합니다. 열이 워크시트에 왼쪽에서 오른쪽으로 표시된 순서에 따라 위에서 아래쪽의 순서로 표시됩니다.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36088868"
 |열|**열** 섹션에서 선택한 특성에 따라 Excel에 로드되는 열 수입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [로드 하기 전에 데이터를 필터링 &#40;MDS 추가 기능에 Excel 용&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
+ [로드 하기 전 데이터 필터링 &#40;MDS 추가 기능에 Excel 용&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
  [데이터 로드 &#40;MDS 추가 기능에 Excel 용&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

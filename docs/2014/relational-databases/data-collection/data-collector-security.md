@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1864b580a681cb3c9e7fca612140f21548d2c96a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235283"
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
   데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 구현하는 역할 기반 보안 모델을 사용합니다. 이 모델을 사용하면 데이터베이스 관리자가 해당 태스크를 수행하는 데 반드시 필요한 사용 권한만 있는 보안 컨텍스트에서 다양한 데이터 수집기 태스크를 실행할 수 있습니다. 이 방법은 저장 프로시저 또는 뷰를 사용해야만 액세스할 수 있는 내부 테이블 관련 작업에도 사용됩니다. 내부 테이블에 대한 사용 권한이 부여되지 않는 대신, 해당 테이블에 액세스하는 데 사용되는 저장 프로시저 또는 뷰의 사용자에 대해 사용 권한을 확인합니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "36082286"
   
  이러한 역할은 msdb 데이터베이스에 저장됩니다. 기본적으로 사용자는 이러한 데이터베이스 역할의 멤버가 아닙니다. 이러한 역할의 사용자 멤버 자격은 명시적으로 부여되어야 합니다.  
   
- 구성원 인 사용자의는 `sysadmin` 고정된 서버 역할에 대 한 전체 액세스 권한이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 개체 및 데이터 수집기 뷰에 있습니다. 단, 데이터 수집기 역할에 명시적으로 추가되어야 합니다.  
+ 구성원 인 사용자의 합니다 `sysadmin` 고정된 서버 역할에 대 한 전체 액세스 권한이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 개체 및 데이터 수집기 뷰. 단, 데이터 수집기 역할에 명시적으로 추가되어야 합니다.  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 및 dc_admin 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 db_ssisadmin 및 dc_admin 역할에 sysadmin 멤버만 추가합니다.  
   
 ### <a name="dcadmin-role"></a>dc_admin 역할  
- 에 할당 된 사용자는 `dc_admin` 역할 서버 인스턴스의 전체 관리자 액세스 권한 (만들기, 읽기, 업데이트 및 삭제)의 데이터 수집기 구성에 있어야 합니다. 이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
+ 에 할당 된 사용자는 `dc_admin` 역할 서버 인스턴스의 전체 관리자 액세스 권한 (만들기, 읽기, 업데이트 및 삭제) 데이터 수집기 구성에 있어야 합니다. 이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
   
 -   수집기 수준 속성 설정  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36082286"
   
 -   **dc_operator** 역할에 허용된 모든 작업 수행  
   
- `dc_admin` 역할은 다음 역할의 구성원:  
+ `dc_admin` 역할은 다음 역할의 멤버:  
   
 -   **SQLAgentUserRole**. 이 역할은 일정을 만들고 작업을 실행하기 위해 필요합니다.  
   
     > [!NOTE]  
-    >  데이터 수집기에 대 한 액세스 권한을 부여 해야에 대해 생성 된 프록시 `dc_admin` 를 만들고 프록시를 필요로 하는 작업 단계에서이 사용 합니다.  
+    >  데이터 수집기에 대 한 액세스 권한을 부여 해야 용으로 만들어진 프록시 `dc_admin` 만들고 프록시를 필요로 하는 모든 작업 단계에서 사용 합니다.  
   
--   **dc_operator**. 멤버 `dc_admin` 에 지정 된 사용 권한을 상속 **dc_operator**합니다.  
+-   **dc_operator**. 멤버인 `dc_admin` 에 지정 된 사용 권한을 상속 **dc_operator**합니다.  
   
 ### <a name="dcoperator-role"></a>dc_operator 역할  
  **dc_operator** 역할의 멤버는 읽기 및 업데이트 권한을 갖습니다. 이 역할은 컬렉션 집합 실행 및 구성과 관련된 작업 태스크를 지원합니다. 이 역할의 멤버는 다음 작업을 수행할 수 있습니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "36082286"
   
  이러한 역할은 msdb 데이터베이스에 저장됩니다. 기본적으로 사용자는 이러한 데이터베이스 역할의 멤버가 아닙니다. 이러한 역할의 사용자 멤버 자격은 명시적으로 부여되어야 합니다.  
   
- 구성원 인 사용자의는 `sysadmin` 고정된 서버 역할에는 데이터 수집기 뷰에 모든 권한을 가집니다. 하지만 다른 작업을 수행하기 위한 데이터베이스 역할에 명시적으로 추가되어야 합니다.  
+ 구성원 인 사용자의는 `sysadmin` 고정된 서버 역할 데이터 수집기 뷰에 대 한 전체 액세스 권한이 있습니다. 하지만 다른 작업을 수행하기 위한 데이터베이스 역할에 명시적으로 추가되어야 합니다.  
   
 ### <a name="mdwadmin-role"></a>mdw_admin 역할  
  **mdw_admin** 역할의 멤버는 관리 데이터 웨어하우스에 대한 읽기, 쓰기, 업데이트 및 삭제 권한을 갖습니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "36082286"
 -   새 컬렉션 유형 설치 시 새 테이블을 추가하는 것과 같이 필요 시 관리 데이터 웨어하우스 스키마 변경.  
   
     > [!NOTE]  
-    >  가 스키마 변경 사용자 이기도 해야의 멤버는 `dc_admin` 역할을이 작업에는 msdb의 데이터 수집기 구성을 업데이트할 수 있는 권한이 필요 하므로 새 수집기 유형을 설치 합니다.  
+    >  스키마 변경 인 사용자 이기도 해야의 멤버는 `dc_admin` 이 작업에는 msdb의 데이터 수집기 구성을 업데이트 하기 위한 권한이 필요 하므로 새 수집기 유형 설치에 역할.  
   
 -   관리 데이터 웨어하우스에 대한 보관 또는 정리와 같은 유지 관리 작업 실행  
   

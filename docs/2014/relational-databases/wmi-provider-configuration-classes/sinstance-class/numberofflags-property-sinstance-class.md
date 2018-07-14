@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e60c65a8acfbcbf3d3961815b5096d8b7e6df2c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 543d708cc90c9b7911ad3603e53446f172bccc64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262405"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 속성(SInstance 클래스)
   인스턴스에 대 한 플래그 수를 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  

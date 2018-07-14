@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measures element
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b21b53bf8173b709a43393710256b7040648b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f781eb542d290635bb01b8582c8e51a7cb2b05f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272299"
 ---
 # <a name="measures-element-assl"></a>Measures 요소(ASSL)
   컬렉션을 포함 [측정값](../objects/measure-element-assl.md) 부모 요소와 관련 된 요소입니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36081425"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AggregationInstance](../objects/aggregationinstance-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding (아웃 아웃오브 라인)](../data-type/measuregroupbinding-data-type-out-of-line-assl.md), [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
+|부모 요소|[AggregationInstance](../objects/aggregationinstance-element-assl.md)하십시오 [MeasureGroup](../objects/group-element-assl.md)를 [MeasureGroupBinding (아웃 아웃오브 라인)](../data-type/measuregroupbinding-data-type-out-of-line-assl.md), [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
 |자식 요소|[측정값](../objects/measure-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.datatypechangerequired
 - vdtsql.chm:65545
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a18c12f71116e64cff594e20ae2672ad893a668d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8e55e77bc228e362182cc13598c92a07f2dcf54b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206363"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>데이터 형식 변경 필요 대화 상자(Visual Database Tools)
   이 대화 상자는 관계에 참여하고 있는 열의 데이터 형식, 길이, 소수 자릿수, 전체 자릿수 또는 데이터 정렬을 변경하는 경우에 나타납니다.  

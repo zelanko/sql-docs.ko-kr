@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - data refresh history [Analysis Services with SharePoint]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6331cbfa7fc019991b004e81acea9c50159fd292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267589"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>데이터 새로 고침 기록 보기(SharePoint용 PowerPivot)
   데이터 새로 고침 기록은 Excel 통합 문서의 PowerPivot 데이터에 대한 모든 데이터 새로 고침 작업의 레코드입니다. 데이터 새로 고침 작업은 제공된 일정에 따라 SharePoint 팜의 Analysis Services 서버 인스턴스에서 수행됩니다. 기본적으로 데이터 새로 고침 기록은 1년 동안 보존됩니다. 그러나 팜 관리자가 데이터 새로 고침 레코드 보관 기간을 결정하는 사용 및 이벤트 기록에 대한 다른 보존 정책을 지정할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36081435"
  현재 Excel 통합 문서의 PowerPivot 데이터에 대한 모든 새로 고침 작업의 전체 레코드를 보여 주는 기록 페이지가 표시됩니다.  
   
 ##  <a name="viewITOps"></a> 모든 통합 문서에 대한 데이터 새로 고침 기록 보기  
- 팜 관리자와 서비스 응용 프로그램 관리자는 중앙 관리의 PowerPivot 관리 대시보드를 사용하여 모든 PowerPivot 통합 문서에 대한 데이터 새로 고침 기록과 상태를 전체적으로 볼 수 있습니다. 자세한 내용은 참조 [PowerPivot 관리 대시보드 및 사용 현황 데이터](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+ 팜 관리자와 서비스 응용 프로그램 관리자는 중앙 관리의 PowerPivot 관리 대시보드를 사용하여 모든 PowerPivot 통합 문서에 대한 데이터 새로 고침 기록과 상태를 전체적으로 볼 수 있습니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
   
 ##  <a name="pageelements"></a> 기록 정보 사용  
  데이터 새로 고침 기록 페이지에는 각 새로 고침 작업에 대한 자세한 정보가 제공됩니다. 이 페이지의 정보를 사용하여 새로 고침이 발생했는지 여부와 새로 고침이 실패한 이유를 확인할 수 있습니다.  

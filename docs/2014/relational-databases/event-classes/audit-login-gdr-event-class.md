@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login GDR event class
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a29a4d19eed7fd72bbb9afa779f20e1bf478553c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f414ee70272654c2b28b00fb346b80a2cd7adcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254225"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 이벤트 클래스
   **Audit Login GDR** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 권한이 추가되거나 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantlogin**, **sp_revokelogin**및 **sp_denylogin** 저장 프로시저에서 사용됩니다.  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eed0b86271cb44565e2724cc6c961521c8d683ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 696b4bc98f4feb47ae7db6cae99d1ba9ae8a6628
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217643"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>파생 계층 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버가 올바른 수준으로 유지되는 수준 기반 계층을 원하는 경우 파생 계층을 만듭니다. 파생 계층은 모델에 있는 도메인 기반 특성 관계를 기반으로 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36081611"
   
 6.  **파생 계층 저장**을 클릭합니다.  
   
-7.  에 **파생 계층 편집** 페이지는 **사용 가능한 엔터티 및 계층** 창, 엔터티 또는 계층을 클릭 하 고 끌어는 **현재 수준** 창.  
+7.  에 **파생 계층 편집** 페이지를 **사용 가능한 엔터티 및 계층** 창에서 엔터티나 계층을 클릭 하 고으로 끌어 합니다 **현재 수준** 창.  
   
 8.  계층이 완성될 때까지 엔터티나 계층을 계속 끌어 놓습니다.  
   

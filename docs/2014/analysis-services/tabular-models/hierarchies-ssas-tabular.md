@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196c71a5fd1202e2c9cfb28934257c847b9fd5eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b371d1baecb2e9e7dea4aa81ac2d2e716d04a651
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180960"
 ---
 # <a name="hierarchies-ssas-tabular"></a>계층(SSAS 테이블 형식)
   테이블 형식 모델에서 계층은 테이블에서 두 개 이상의 열 간의 관계를 정의하는 메타데이터입니다. 계층은 보고 클라이언트 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "36088921"
   
 |태스크|Description|  
 |----------|-----------------|  
-|[계층 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
+|[계층 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 디자이너 &#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
- [큐브 뷰 &#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할 &#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

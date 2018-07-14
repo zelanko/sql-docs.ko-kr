@@ -1,5 +1,5 @@
 ---
-title: 로깅할 메시지 사용자 지정 | Microsoft Docs
+title: Custom Messages for Logging | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221843"
 ---
 # <a name="custom-messages-for-logging"></a>로깅할 메시지 사용자 지정
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 및 여러 태스크에 대 한 로그 항목을 작성 하는 다양 한 사용자 지정 이벤트를 제공 합니다. 이러한 항목을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자가 정의한 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 저장할 수 있습니다. 예를 들면 대량 삽입이 시작되고 끝나는 시간을 기록하여 패키지 실행 시 성능 문제를 식별할 수 있습니다.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 및 여러 태스크에 대 한 로그 항목 기록을 위해 다양 한 사용자 지정 이벤트를 제공 합니다. 이러한 항목을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자가 정의한 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 저장할 수 있습니다. 예를 들면 대량 삽입이 시작되고 끝나는 시간을 기록하여 패키지 실행 시 성능 문제를 식별할 수 있습니다.  
   
  사용자 지정 로그 항목은 패키지 및 모든 컨테이너와 태스크에 사용할 수 있는 표준 로깅 이벤트 집합과는 다른 항목 집합입니다. 사용자 지정 로그 항목은 패키지의 특정 태스크에 대한 유용한 정보를 캡처하도록 조정되어 있습니다. 예를 들어 SQL 실행 태스크에 대한 사용자 지정 로그 항목 중 하나는 해당 태스크에서 실행한 SQL 문을 로그에 기록합니다.  
   
- 모든 로그 항목에는 패키지가 시작되고 끝날 때 자동으로 기록되는 로그 항목을 비롯하여 날짜 및 시간 정보가 포함됩니다. 로그 이벤트는 대부분 여러 항목을 로그에 기록합니다. 일반적으로 이벤트에 여러 단계가 있을 경우 이러한 기록이 수행됩니다. 예를 들어는 `ExecuteSQLExecutingQuery` 로그 이벤트는 3 개의 항목을 기록: 하나의 태스크 작업 후 데이터베이스에 연결을 설정한 후 준비를 시작한 SQL 문과 더 SQL 문의 실행이 완료 된 후입니다.  
+ 모든 로그 항목에는 패키지가 시작되고 끝날 때 자동으로 기록되는 로그 항목을 비롯하여 날짜 및 시간 정보가 포함됩니다. 로그 이벤트는 대부분 여러 항목을 로그에 기록합니다. 일반적으로 이벤트에 여러 단계가 있을 경우 이러한 기록이 수행됩니다. 예를 들어,는 `ExecuteSQLExecutingQuery` 로그 이벤트는 세 가지 항목을 기록: 준비 된 SQL 문을 하나의 SQL 문의 실행이 완료 된 후 태스크 작업 후 다른 데이터베이스에 대 한 연결을 획득 한 후 한 항목을 시작 합니다.  
   
  다음 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체에는 사용자 지정 로그 항목이 있습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36081878"
 |---------------|-----------------|  
 |`PackageStart`|패키지 실행이 시작되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
 |`PackageEnd`|패키지가 완료되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
-|`Diagnostic`|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.<br /><br /> `Diagnostic` 외부 데이터 공급자에 대 한 호출 전후에이 로그 항목 포함 합니다. 자세한 내용은 [패키지 연결 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-connectivity.md)을 참조하세요.|  
+|`Diagnostic`|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.<br /><br /> `Diagnostic` 전후 항목도 외부 데이터 공급자에 대 한 호출에 대 한 로그 항목에도 포함 됩니다. 자세한 내용은 [패키지 연결 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-connectivity.md)을 참조하세요.|  
   
 ###  <a name="BulkInsert"></a> 대량 삽입 태스크  
  다음 표에서는 대량 삽입 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  
@@ -103,9 +103,9 @@ ms.locfileid: "36081878"
 |로그 항목|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|데이터 흐름 태스크로 인해 버퍼 크기가 변경되었음을 나타냅니다. 로그 항목은 크기가 변경된 이유를 설명하고 임시 새 버퍼 크기를 나열합니다.|  
-|`OnPipelinePostEndOfRowset`|구성 요소 중 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 제공 된 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
-|`OnPipelinePostPrimeOutput`|구성 요소에 대 한 마지막 호출을 완료 했음을 나타냅니다는 `PrimeOutput` 메서드. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다. 구성 요소가 원본일 경우에는 구성 요소가 행 처리를 완료했음을 의미합니다.|  
-|`OnPipelinePreEndOfRowset`|구성 요소 중 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 수신 하려고 임을 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
+|`OnPipelinePostEndOfRowset`|구성 요소에 대 한 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 제공 했음을 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
+|`OnPipelinePostPrimeOutput`|구성 요소에 대 한 마지막 호출 완료 되었음을 나타냅니다는 `PrimeOutput` 메서드. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다. 구성 요소가 원본일 경우에는 구성 요소가 행 처리를 완료했음을 의미합니다.|  
+|`OnPipelinePreEndOfRowset`|구성 요소에 대 한 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 수신 하는 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
 |`OnPipelinePrePrimeOutput`|구성 요소가 `PrimeOutput` 메서드에서 해당 호출을 수신하려고 함을 나타냅니다. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다.|  
 |`OnPipelineRowsSent`|`ProcessInput` 메서드 호출로 구성 요소 입력에 제공한 행 수를 보고합니다. 이 로그 항목은 구성 요소 이름을 포함합니다.|  
 |`PipelineBufferLeak`|버퍼 관리자가 없어진 후에 버퍼를 활성 상태로 유지하는 모든 구성 요소에 대한 정보를 제공합니다. 즉, 버퍼 리소스가 릴리스되지 않았기 때문에 메모리 손실이 발생할 수 있음을 나타냅니다. 로그 항목은 구성 요소 이름과 버퍼 ID를 제공합니다.|  
@@ -172,7 +172,7 @@ ms.locfileid: "36081878"
   
 |로그 항목|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 호출에 대해 각각 로그 항목이 기록 되는 `Log` 의 메서드는 `Dts` 개체입니다. 이 항목은 코드가 실행되면 기록됩니다. 자세한 내용은 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
+|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 호출에 대해 각각 로그 항목이 기록 되는 `Log` 메서드를 `Dts` 개체. 이 항목은 코드가 실행되면 기록됩니다. 자세한 내용은 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   
 ###  <a name="SendMail"></a> 메일 보내기 태스크  
  다음 표에서는 메일 보내기 태스크에 대한 사용자 지정 로그 항목을 나열합니다.  

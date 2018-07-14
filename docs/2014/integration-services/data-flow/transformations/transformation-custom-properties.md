@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243193"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "36080947"
 |AggregationType|Integer(열거형)|열에서 수행할 집계 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Group by** (0)|  
 |CountDistinctKeys|정수|집계 유형이 **Count distinct**인 경우 집계에서 쓸 수 있는 정확한 키 수를 지정하는 값입니다. CountDistinctScale 값이 지정되어 있으면 CountDistinctKeys의 값이 우선 순위를 갖습니다.|  
 |CountDistinctScale|Integer(열거형)|집계 유형이 **Count distinct**인 경우 집계에서 쓸 수 있는 대략적인 키 값 수를 설명하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **Low** (1) - 최대 50만 개의 키 값을 나타냅니다.<br /><br /> **Medium** (2) - 최대 500만 개의 키 값을 나타냅니다.<br /><br /> **High** (3) - 2,500만 개 이상의 키 값을 나타냅니다.<br /><br /> **Unspecified** (0) - CountDistinctScale 값이 사용되지 않음을 나타냅니다.|  
-|IsBig|Boolean|열에 40억을 초과하는 값 또는 배정밀도 부동 소수점 값보다 전체 자릿수가 큰 값이 포함되어 있는지 여부를 나타내는 값입니다. 값은 0 또는 1일 수 있습니다. 0 이면 IsBig `False` 및 큰 값 또는 정확한 값이 포함 되지 않은 열입니다. 이 속성의 기본값은 1입니다.|  
+|IsBig|Boolean|열에 40억을 초과하는 값 또는 배정밀도 부동 소수점 값보다 전체 자릿수가 큰 값이 포함되어 있는지 여부를 나타내는 값입니다. 값은 0 또는 1일 수 있습니다. 0은 IsBig 임을 나타냅니다 `False` 열에는 큰 값 또는 정확한 값을 포함 하지 않습니다. 이 속성의 기본값은 1입니다.|  
   
  집계 변환의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36080947"
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|변환에서 기존 파일에 데이터를 추가하는지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`합니다.|  
 |ForceTruncate|Boolean|변환에서 데이터를 쓰기 전에 기존 파일을 자르는지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`합니다.|  
-|FileDataColumnID|정수|변환에서 파일에 삽입하는 데이터가 포함된 열을 식별하는 값입니다. 추출 열에서이 속성의 값에는 **0**; 파일 경로 열에서이 속성에 포함 된 `LineageID` 는 추출 열의 합니다.|  
+|FileDataColumnID|정수|변환에서 파일에 삽입하는 데이터가 포함된 열을 식별하는 값입니다. 추출 열에서이 속성의 값은 **0**; 파일 경로 열에서이 속성에 포함 된 `LineageID` 는 추출 열의 합니다.|  
 |WriteBOM|Boolean|파일에 BOM(바이트 순서 표시)을 쓸지 여부를 지정하는 값입니다.|  
   
  열 내보내기 변환의 입력, 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
@@ -251,7 +251,7 @@ ms.locfileid: "36080947"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|열 가져오기 변환에 BOM(바이트 순서 표시)이 필요한지 여부를 지정하는 값입니다. BOM은 데이터가 DT_NTEXT 데이터 형식인 경우에만 필요합니다.|  
-|FileDataColumnID|정수|변환에서 데이터 흐름에 삽입하는 데이터가 포함된 열을 식별하는 값입니다. 삽입할 데이터 열에서이 속성에 값이 0; 이 속성에 포함 된 원본 파일 경로가 포함 된 열에는 `LineageID` 삽입할 데이터의 열입니다.|  
+|FileDataColumnID|정수|변환에서 데이터 흐름에 삽입하는 데이터가 포함된 열을 식별하는 값입니다. 삽입할 데이터 열을이 속성은 값이 0입니다. 원본 파일 경로가 포함 된 열에서이 속성을 포함 합니다 `LineageID` 삽입 될 데이터의 열입니다.|  
   
  열 가져오기 변환의 입력, 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36080947"
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|유사 항목 조회 인덱스 생성 및 후속 조회를 위해 참조 테이블의 복사본을 만들지 여부를 지정합니다. 이 속성의 기본값은 `True`합니다.|  
 |Delimiters|String|변환에서 열 값을 토큰화하는 데 사용하는 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;) 문자가 포함됩니다. 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
-|DropExistingMatchIndex|Boolean|MatchIndexOptions가 ReuseExistingIndex로 설정되지 않은 경우 MatchIndexName에 지정된 일치 인덱스가 삭제되는지 여부를 지정하는 값입니다. 이 속성에 대 한 기본값은 `True`합니다.|  
+|DropExistingMatchIndex|Boolean|MatchIndexOptions가 ReuseExistingIndex로 설정되지 않은 경우 MatchIndexName에 지정된 일치 인덱스가 삭제되는지 여부를 지정하는 값입니다. 이 속성의 기본값은 `True`합니다.|  
 |Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 `True`는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 `False`합니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
 |MatchIndexName|String|일치 인덱스의 이름입니다. 일치 인덱스는 변환에서 만들어 사용 인덱스를 저장하는 테이블입니다. 일치 인덱스가 다시 사용되는 경우 MatchIndexName에서 다시 사용할 인덱스를 지정합니다. MatchIndexName은 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이름이어야 합니다. 예를 들어 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.|  
 |MatchIndexOptions|Integer(열거형)|변환에서 일치 인덱스를 관리하는 방법을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
@@ -323,7 +323,7 @@ ms.locfileid: "36080947"
  다음 표에서는 유사 항목 조회 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 > [!NOTE]  
->  해당 입력된 열의 통과 값을 포함 하는 출력 열에 대 한 CopyFromReferenceColumn 비어 있고 SourceInputColumnLineageID 포함는 `LineageID` 해당 입력 열입니다. 조회 결과가 포함된 출력 열의 경우 CopyFromReferenceColumn에는 조회 열의 이름이 포함되며 SourceInputColumnLineageID는 비어 있습니다.  
+>  해당 입력 열의 통과 값이 포함 된 출력 열의 경우 CopyFromReferenceColumn 비어와 SourceInputColumnLineageID 포함 된 `LineageID` 해당 입력 열입니다. 조회 결과가 포함된 출력 열의 경우 CopyFromReferenceColumn에는 조회 열의 이름이 포함되며 SourceInputColumnLineageID는 비어 있습니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
@@ -346,7 +346,7 @@ ms.locfileid: "36080947"
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 기본 코드 페이지입니다.|  
 |MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **25**입니다.|  
 |MaxMemoryUsage64|정수|64비트 컴퓨터에서 조회 테이블의 최대 캐시 크기입니다.|  
-|NoMatchBehavior|Integer(열거형)|참조 데이터 집합에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 이 속성이 `Treat rows with no matching entries as errors`(0)로 설정된 경우 일치 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 속성이로 설정 되 면 `Send rows with no matching entries to the no match output` (1), 행은 하지 오류로 처리 합니다.<br /><br /> 기본값은 `Treat rows with no matching entries as errors`(0)입니다.|  
+|NoMatchBehavior|Integer(열거형)|참조 데이터 집합에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 이 속성이 `Treat rows with no matching entries as errors`(0)로 설정된 경우 일치 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 속성이로 설정 된 경우 `Send rows with no matching entries to the no match output` (1), 행을 오류로 처리 되지 않습니다 오류로 합니다.<br /><br /> 기본값은 `Treat rows with no matching entries as errors`(0)입니다.|  
 |ParameterMap|String|`SqlCommand` 문에 사용된 매개 변수에 매핑되는 계보 ID를 세미콜론으로 구분한 목록입니다.|  
 |ReferenceMetadataXML|String|변환에서 해당 출력에 복사하는 조회 테이블의 열에 대한 메타데이터입니다.|  
 |SqlCommand|String|조회 테이블을 채우는 SELECT 문입니다.|  
@@ -377,7 +377,7 @@ ms.locfileid: "36080947"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |JoinType|Integer(열거형)|조인이 내부 조인(2), 왼쪽 우선 외부 조인(1), 완전 조인(0) 중 어느 것인지 여부를 지정합니다.|  
-|MaxBuffersPerInput|정수|값을 구성 해야 하는 더 이상는 `MaxBuffersPerInput` 속성 이므로 Microsoft는 병합 조인 변환에서 과도 한 메모리를 사용할 위험을 줄이려면는 내용을 변경 했습니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.|  
+|MaxBuffersPerInput|정수|값을 구성할 필요가 없습니다를 `MaxBuffersPerInput` 속성 Microsoft 변경 된 병합 조인 변환에서 과도 한 메모리를 사용할 위험을 줄이는 때문입니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.|  
 |NumKeyColumns|정수|조인에 사용되는 열 수입니다.|  
 |TreatNullsAsEqual|Boolean|변환에서 Null 값을 같은 값으로 처리하는지 여부를 지정하는 값입니다. 이 속성의 기본값은 `True`합니다. 속성 값이 `False`인 경우 변환에서는 Null 값을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서와 같이 처리합니다.|  
   
@@ -385,7 +385,7 @@ ms.locfileid: "36080947"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|정수|`LineageID` 의 입력 열이 출력 열에 데이터가 복사 됩니다.|  
+|InputColumnID|정수|`LineageID` 이 출력 열으로 데이터를 복사해 올 입력 열의 합니다.|  
   
  병합 조인 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
   
@@ -426,7 +426,7 @@ ms.locfileid: "36080947"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|선택|Boolean|샘플링된 행을 전송할 출력을 지정합니다. 선택한 출력에서 선택한으로 설정 되어 `True`, 선택 하지 않은 출력에서 선택한을 설정 하 고 `False`합니다.|  
+|선택|Boolean|샘플링된 행을 전송할 출력을 지정합니다. 선택된 된 출력에서 선택한으로 설정 됩니다 `True`를 선택 하지 않은 출력에서 선택한을 설정 하 고 `False`입니다.|  
   
  비율 샘플링 변환의 입력, 입력 열 및 출력 열에는 사용자 지정 속성이 없습니다.  
   
@@ -443,14 +443,14 @@ ms.locfileid: "36080947"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Integer(열거형)|데이터 집합이 피벗 될 때의 열 역할을 지정 하는 다음 값 중 하나입니다.<br /><br /> **0**: 열이 피벗되지 않고 열 값을 변환 출력을 통해 전달 됩니다.<br /><br /> **1**: 열이 하나 이상의 행 집합의 일부로 식별 하는 집합 키의 일부입니다. 동일 집합 키의 모든 입력 행이 하나의 출력 행으로 조합됩니다.<br /><br /> **2**: 열이 피벗 열입니다. 각 열 값으로부터 적어도 하나 이상의 열이 생성됩니다.<br /><br /> **3**:이 열의 값이 피벗 결과로 생성 된 열에 배치 됩니다.|  
+|PivotUsage|Integer(열거형)|데이터 집합이 피벗 될 때 열 역할을 지정 하는 다음 값 중 하나입니다.<br /><br /> **0**: 열이 피벗되지 및 열 값을 변환 출력에 전달 됩니다.<br /><br /> **1**: 하나 이상의 행 집합의 일부로 식별 하는 집합 키의 일부인 열입니다. 동일 집합 키의 모든 입력 행이 하나의 출력 행으로 조합됩니다.<br /><br /> **2**: 열이 피벗 열입니다. 각 열 값으로부터 적어도 하나 이상의 열이 생성됩니다.<br /><br /> **3**:이 열의 값이 피벗 결과로 생성 된 열에 배치 됩니다.|  
   
  다음 표에서는 피벗 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|해당 PivotUsage 속성의 값에 따라 피벗 키로 표시되는 열에서 가능한 값 중 하나입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
-|SourceColumn|정수|`LineageID` 피벗된 된 값 또는-1을 포함 하는 입력된 열입니다. 값 -1은 해당 열이 피벗 작업에 사용되지 않음을 나타냅니다.|  
+|SourceColumn|정수|`LineageID` 피벗된 된 값 또는-1을 포함 하는 입력 열입니다. 값 -1은 해당 열이 피벗 작업에 사용되지 않음을 나타냅니다.|  
   
  자세한 내용은 [Pivot Transformation](pivot-transformation.md)을 참조하세요.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36080947"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|선택|Boolean|샘플링된 행을 전송할 출력을 지정합니다. 선택한 출력에서 선택한으로 설정 되어 `True`, 선택 하지 않은 출력에서 선택한을 설정 하 고 `False`합니다.|  
+|선택|Boolean|샘플링된 행을 전송할 출력을 지정합니다. 선택된 된 출력에서 선택한으로 설정 됩니다 `True`를 선택 하지 않은 출력에서 선택한을 설정 하 고 `False`입니다.|  
   
  다음 표에서는 행 샘플링 변환 출력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
@@ -516,7 +516,7 @@ ms.locfileid: "36080947"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|비즈니스 키가 같은 행 중 현재 행을 선택하는 SELECT 문의 WHERE 절입니다.|  
 |EnableInferredMember|Boolean|유추 멤버 업데이트를 검색할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `True`합니다.|  
-|FailOnFixedAttributeChange|Boolean|고정 특성이 있는 행 열에 변경 내용이 포함되어 있거나 차원 테이블의 조회가 실패하는 경우 변환이 실패하는지 여부를 지정하는 값입니다. 들어오는 행에 새 레코드를 포함 하려는 경우이 값을 설정 `True` 변환 오류를 사용 하 여 새 레코드를 식별 하면 조회가 실패 후 계속 변환 합니다. 이 속성의 기본값은 `False`합니다.|  
+|FailOnFixedAttributeChange|Boolean|고정 특성이 있는 행 열에 변경 내용이 포함되어 있거나 차원 테이블의 조회가 실패하는 경우 변환이 실패하는지 여부를 지정하는 값입니다. 들어오는 행을 새 레코드를 포함할 수를 예상 하는 경우이 값을 설정 `True` 변환이 변환 오류를 사용 하 여 새 레코드를 식별 하면 조회가 실패 후 계속 수 있도록 합니다. 이 속성의 기본값은 `False`합니다.|  
 |FailOnLookupFailure|Boolean|기존 레코드의 조회가 실패할 때 변환이 실패하는지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`합니다.|  
 |IncomingRowChangeType|정수|들어오는 모든 행이 새 행인지, 아니면 변환에서 변경 유형을 검색해야 하는지를 지정하는 값입니다.|  
 |InferredMemberIndicator|String|유추 멤버의 열 이름입니다.|  
@@ -601,7 +601,7 @@ ms.locfileid: "36080947"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|정수|`LineageID` 해당 입력 열의 경우는 `InputColumnType` 해당 열이 0 또는 2입니다.|  
+|CustomLineageID|정수|합니다 `LineageID` 해당 입력 열의 경우는 `InputColumnType` 해당 열이 0 또는 2입니다.|  
   
  용어 조회 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   
@@ -624,7 +624,7 @@ ms.locfileid: "36080947"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|PivotKey|Boolean|나타냅니다 여부의 값의 `PivotKeyValue` 입력된 열의 속성을이 출력 열에 기록 됩니다.<br /><br /> [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
+|PivotKey|Boolean|나타냅니다 여부를 값에는 `PivotKeyValue` 속성 입력 열이 출력 열에 기록 됩니다.<br /><br /> [Unpivot Transformation](unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
   
  피벗 해제 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   
