@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQUARE
 - square values
@@ -16,13 +16,13 @@ ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2ce0704090a7d80931105aaf798a83b8d7f0b17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4203b4e904161a3acf36b6422bc29d41307a6d77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243123"
 ---
 # <a name="square-ssis-expression"></a>SQUARE(SSIS 식)
   숫자 식의 제곱을 반환합니다.  

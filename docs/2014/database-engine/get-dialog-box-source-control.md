@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de0c8be0ee4c5aa37e8ce72d2b1499c10ab5adbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54f349916d429c7872b479077043608d53a16bde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193953"
 ---
 # <a name="get-dialog-box-source-control"></a>가져오기 대화 상자(소스 제어)
   선택한 항목의 읽기 전용 복사본을 원본 제어 데이터베이스에서 작업 폴더나 지정한 다른 폴더로 가져옵니다.  

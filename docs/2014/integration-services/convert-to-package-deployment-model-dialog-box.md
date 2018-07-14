@@ -1,5 +1,5 @@
 ---
-title: 패키지 배포 모델로 변환 대화 상자 | Microsoft Docs
+title: 패키지 배포 모델 대화 상자를 변환할 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.bids.converttolegacydeployment.f1
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69d64b35f39c86b9070df9c9fcfacfcf9a7d68f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1cb982b23645821f6c24c51b4ce4402336c08ea5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233865"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>패키지 배포 모델로 변환 대화 상자
   **패키지 배포 모델로 변환** 명령을 사용하면 프로젝트 및 프로젝트의 각 패키지에서 해당 모델과의 호환성을 검사한 후 패키지를 패키지 배포 모델로 변환할 수 있습니다. 패키지에 매개 변수와 같이 프로젝트 배포 모델에 고유한 기능이 사용된 경우 패키지를 변환할 수 없습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36092906"
   
 ## <a name="see-also"></a>관련 항목  
  [프로젝트 및 패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [배포 패키지 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Integration Services 프로젝트 변환 마법사](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

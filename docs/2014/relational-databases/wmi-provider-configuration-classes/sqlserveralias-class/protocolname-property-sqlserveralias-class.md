@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2973d55a920991b5bc51a47115eb855ce33f20db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2581e0164e12d23f8df50a781a9e60997ab46e35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181570"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 속성(SqlServerAlias 클래스)
   서버 연결 별칭에서 사용하는 프로토콜의 이름을 가져옵니다.  

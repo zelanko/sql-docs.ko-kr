@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203563"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스를 지정 시간으로 복원하는 방법에 대해 설명합니다. 이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
@@ -136,9 +135,9 @@ ms.locfileid: "36092509"
   
  **기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문**  
   
- RESTORE LOG *database_name* < backup_device > WITH STOPAT에서에서  **= *`time`*,** 복구 중...  
+ RESTORE LOG *database_name* < backup_device > WITH STOPAT에서에서  **= *`time`*,** 복구 하는 중...  
   
- 복구 지점은 또는 그 전에 발생 한 최근 트랜잭션 커밋의 `datetime` 하 여 지정 된 값을 *시간*합니다.  
+ 복구 지점은 또는 그 전에 발생 한 최근 트랜잭션 커밋 합니다 `datetime` 하 여 지정 된 값 *시간*합니다.  
   
  특정 시점 이전에 수정한 내용만 복원하려면 복원하는 각 백업에 대해 WITH STOPAT **=** *time* 을 지정합니다. 이렇게 하면 대상 시간을 지나치지 않게 됩니다.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "36092509"
   
 3.  데이터베이스를 복구하지 않고 마지막 전체 데이터베이스 백업과 마지막 차등 데이터베이스 백업(있는 경우)을 복원합니다(RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  각 트랜잭션 로그 백업을 적용 생성 된 동일한 순서에 로그 복원을 중지할 시간을 지정 (데이터베이스 복원 *database_name* < backup_device > WITH STOPAT에서에서 **= *`time`*,** 복구).  
+4.  각 트랜잭션 로그 백업을 적용 생성 된 동일한 순서로 지정 로그 복원을 중지할 시간입니다 (RESTORE DATABASE *database_name* < backup_device > WITH STOPAT에서에서 **= *`time`*,** RECOVERY).  
   
     > [!NOTE]  
     >  RECOVERY 및 STOPAT 옵션. 지정된 시간이 트랜잭션 로그에서 수용하는 시간을 초과하는 경우처럼 요청한 시간이 트랜잭션 로그 백업에 포함되지 않을 경우 경고가 생성되고 데이터베이스는 복구되지 않은 상태로 남습니다.  

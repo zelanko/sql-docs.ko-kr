@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcbb6ce5b9cda3b17b69558cd60f6030f9e097b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194193"
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData 요소(ASSL)
-  얼마나 고유한 이름을 결정에 포함 된 계층에 대해 생성 되는 [CubePermission](../objects/cubepermission-element-assl.md)합니다.  
+  어떻게 고유한 이름을 결정에 포함 된 계층에 대해 생성 되는 [CubePermission](../objects/cubepermission-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36172977"
 |*허용*|계산 패스 0에서 사용 가능한 데이터에 액세스할 수 있습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ReadSourceData` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubePermission>합니다.  
+ 부모에 해당 하는 요소가 `ReadSourceData` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubePermission>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

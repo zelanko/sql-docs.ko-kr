@@ -1,5 +1,5 @@
 ---
-title: 재생 (Analysis Services)에 대 한 프로파일러 추적 만들기 | Microsoft Docs
+title: 재생 (Analysis Services)에 대 한 Profiler 추적 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b7277c52294d88743af5bf99d099a8df4f2f19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03745df066851279d45d5d6dbd8a536e32025cf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169714"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>재생에 대한 프로파일러 추적 만들기(Analysis Services)
   사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 필요한 이벤트를 수집해야 합니다. 이러한 이벤트의 컬렉션을 초기화하려면 **추적 속성** 대화 상자의 **이벤트 선택** 탭에서 적합한 이벤트 클래스를 선택해야 합니다. 예를 들어 Query Begin 이벤트 클래스가 선택된 경우 쿼리를 포함한 이벤트가 수집되고 재생에 사용됩니다. 또한 추적 파일에는 원래 트랜잭션 시퀀스로 분산 환경에서 서버 트랜잭션 재생을 지원하는 데 충분한 정보가 포함됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36093205"
   
 -   모든 데이터 열을 갖는 Audit Login 이벤트 클래스. 이 이벤트 클래스는 로그인한 사용자 및 세션 설정에 대한 정보를 제공합니다. SPID는 사용자 세션에 대한 참조를 제공합니다. 자세한 내용은 [Security Audit Data Columns](../trace-events/security-audit-data-columns.md)을 참조하세요.  
   
--   모든 데이터 열을 갖는 Discover Begin 이벤트 클래스. TextData 열은 제공 된 \<RequestType > discover 요청 및 RequestProperties 열의 부분을 제공는 \<속성 > 부분 검색 요청을 합니다. EventSubclass 열은 검색 유형을 제공합니다. 자세한 내용은 [Discover Events Data Columns](../trace-events/discover-events-data-columns.md)을 참조하세요.  
+-   모든 데이터 열을 갖는 Discover Begin 이벤트 클래스. TextData 열은 제공 합니다 \<RequestType > 검색 요청을 하 고 RequestProperties 열에 대 한 부분을 제공는 \<속성 > discover 요청 부분입니다. EventSubclass 열은 검색 유형을 제공합니다. 자세한 내용은 [Discover Events Data Columns](../trace-events/discover-events-data-columns.md)을 참조하세요.  
   
 -   모든 데이터 열을 갖는 Discover End 이벤트 클래스. 이 이벤트 클래스는 검색 요청 상태를 확인합니다. 자세한 내용은 [Discover Events Data Columns](../trace-events/discover-events-data-columns.md)을 참조하세요.  
   

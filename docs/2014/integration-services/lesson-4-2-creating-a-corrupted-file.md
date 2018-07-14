@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324553"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
@@ -40,10 +40,10 @@ ms.locfileid: "36092664"
   
 2.  텍스트 편집기의 찾기 및 바꾸기의 모든 인스턴스를 찾으려면 기능 사용 `VEB` 로 바꿉니다 `BAD`합니다.  
   
-3.  다른 예제 데이터 파일과 같은 폴더에 수정 된 파일을 저장 `Currency_BAD.txt`합니다.  
+3.  다른 샘플 데이터 파일과 동일한 폴더에서 수정 된 파일을 저장 `Currency_BAD.txt`합니다.  
   
     > [!IMPORTANT]  
-    >  다음 사항을 확인 `Currency_BAD.txt` 다른 예제 데이터 파일과 동일한 폴더에 저장 됩니다.  
+    >  했는지 `Currency_BAD.txt` 다른 샘플 데이터 파일과 동일한 폴더에 저장 됩니다.  
   
 4.  텍스트 편집기를 닫습니다.  
   

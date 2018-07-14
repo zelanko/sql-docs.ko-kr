@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249753"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 집합 디자인 뷰 (보고서 작성기)
   공유 데이터 집합 창에서 다른 사용자와 공유할 수 있는 데이터 집합 쿼리를 만들 수 있습니다. 이 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너에서 쿼리를 만들 수 있습니다.  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 작업 보고서의에서 데이터에 대 한 자세한 내용은 참조 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
+ 보고서에서 데이터 작업에 대 한 자세한 내용은 참조 하세요. [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
   
 ##  <a name="Ribbon"></a> 리본  
  리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 집합, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "36091908"
  연결 그룹의 **선택** 단추를 사용하여 보고서에서 공유 데이터 원본을 선택하거나 보고서 서버에서 공유 데이터 원본을 찾습니다.  
   
 > [!NOTE]  
->  공유 데이터 집합은 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 참조 [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)합니다.  
+>  공유 데이터 집합은 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)합니다.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)합니다.  
   
 ### <a name="dataset"></a>Dataset  
  **옵션 설정** 단추를 사용하여 공유 데이터 집합 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
@@ -56,12 +56,12 @@ ms.locfileid: "36091908"
   
  자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
   
- 캐시 새로 고침 계획에 대 한 자세한 내용은 참조 [공유 데이터 집합 캐시 &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)합니다.  
+ 캐시 새로 고침 계획에 대 한 자세한 내용은 참조 하세요. [공유 데이터 집합 캐시 &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>쿼리 디자이너  
  쿼리 디자이너 도구 모음을 사용하면 데이터 연결에서 검색할 데이터를 지정하는 쿼리를 작성할 수 있습니다. 표시되는 도구 모음은 데이터 연결의 데이터 원본 유형과 연결된 쿼리 디자이너에 따라 다릅니다.  
   
- 자세한 내용은 데이터 원본 유형에 해당 하는 항목을 참조 하십시오. [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) 및 [쿼리 디자이너 &#40;보고서 작성기&#41; ](../query-designers-report-builder.md) .  
+ 자세한 내용은에서 데이터 원본 유형에 해당 하는 항목을 참조 하세요 [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) 하 고 [쿼리 디자이너 &#40;보고서 작성기&#41; ](../query-designers-report-builder.md) .  
   
 
   
@@ -72,7 +72,7 @@ ms.locfileid: "36091908"
   
  일부 데이터 원본 유형은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]등의 다른 도구에서 만든 쿼리에 붙여넣는 데 사용할 수 있는 텍스트 기반 쿼리 디자이너를 지원합니다.  
   
- 각 데이터 원본 유형은 외부 데이터 원본에서 작동하는 쿼리에 대한 특정 요구 사항이 있습니다. 자세한 내용은 데이터 원본 유형에 해당 하는 항목을 참조 하십시오. [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) 및 [Sources Supported by Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)합니다.  
+ 각 데이터 원본 유형은 외부 데이터 원본에서 작동하는 쿼리에 대한 특정 요구 사항이 있습니다. 자세한 내용은에서 데이터 원본 유형에 해당 하는 항목을 참조 하세요 [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) 하 고 [Data Sources Supported by Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?linkid=121312)합니다.  
   
 
   

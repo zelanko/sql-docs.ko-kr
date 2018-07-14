@@ -29,18 +29,18 @@ helpviewer_keywords:
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fe0311a992f0f8c067ba6e7096698f96f8bc4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189050"
 ---
 # <a name="dimension-types"></a>차원 유형
-  `Type` 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대한 정보를 제공합니다. 일부 경우에 `Type` 설정은 클라이언트 응용 프로그램에 대한 지침만 제공하며 선택적입니다. `Accounts` 또는 `Time` 차원의 경우처럼 차원 및 해당 특성에 대한 `Type` 속성 설정에 따라 특정 서버 기반 동작이 결정되는 경우도 있고 큐브의 특정 동작을 구현하는 데 이러한 속성 설정이 필요할 수도 있습니다. 예를 들어 차원의 `Type` 속성을 `Accounts`로 설정하여 표준 차원에 계정 특성이 포함되어 있다는 것을 클라이언트 응용 프로그램에 나타낼 수 있습니다. 시간, 계정 및 통화 차원에 대 한 자세한 내용은 참조 [날짜 유형 차원 만들기](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [부모-자식 유형 차원의 재무 계정 만들기](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), 및 [통화 만들기 차원 입력](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)합니다.  
+  `Type` 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대한 정보를 제공합니다. 일부 경우에 `Type` 설정은 클라이언트 응용 프로그램에 대한 지침만 제공하며 선택적입니다. `Accounts` 또는 `Time` 차원의 경우처럼 차원 및 해당 특성에 대한 `Type` 속성 설정에 따라 특정 서버 기반 동작이 결정되는 경우도 있고 큐브의 특정 동작을 구현하는 데 이러한 속성 설정이 필요할 수도 있습니다. 예를 들어 차원의 `Type` 속성을 `Accounts`로 설정하여 표준 차원에 계정 특성이 포함되어 있다는 것을 클라이언트 응용 프로그램에 나타낼 수 있습니다. 시간, 계정 및 통화 차원에 대 한 자세한 내용은 참조 하세요. [날짜 유형 차원 만들기](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)를 [부모-자식 유형 차원의 재무 계정 만들기](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), 및 [통화 만들기 차원 입력](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)합니다.  
   
  차원 유형의 기본 설정은 차원 내용에 대해 어떠한 가정도 하지 않는 `Regular`입니다. 이 설정은 차원 마법사를 사용하여 차원을 정의할 때 `Time`을 지정하지 않은 한 차원을 처음 정의할 때 모든 차원에 대한 기본 설정이 됩니다. 차원 마법사가 차원 유형에 대한 적절한 유형을 나열하지 않는 경우 `Regular`를 차원 유형으로 유지해야 합니다.  
   

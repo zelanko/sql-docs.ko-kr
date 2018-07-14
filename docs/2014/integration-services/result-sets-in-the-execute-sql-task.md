@@ -1,5 +1,5 @@
 ---
-title: 결과 집합는 SQL 실행 태스크 | Microsoft Docs
+title: 결과 집합을 SQL 실행 태스크 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217563"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 실행 태스크의 결과 집합
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 결과 집합이 SQL 실행 태스크에 반환되는지 여부는 태스크에 사용되는 SQL 명령의 유형에 따라 다릅니다. 예를 들어 SELECT 문은 일반적으로 결과 집합을 반환하지만 INSERT 문은 결과 집합을 반환하지 않습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36093566"
   
 -   [결과 집합 구성에 SQL 실행 태스크 편집기](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a> 결과 집합 지정 형식  
+##  <a name="Result_set_type"></a> 집합 유형 결과 지정 합니다.  
  SQL 실행 태스크는 다음 유형의 결과 집합을 지원합니다.  
   
 -   **없음** 결과 집합은 쿼리에서 결과가 반환되지 않을 때 사용합니다. 예를 들어 이 결과 집합은 테이블에서 레코드를 추가, 변경 및 삭제하는 쿼리에 사용됩니다.  
@@ -59,20 +59,20 @@ ms.locfileid: "36093566"
   
  결과 집합 유형이 **전체 결과 집합** 이나 **XML**이면 결과 집합 이름으로 0을 사용해야 합니다.  
   
- 변수를 **단일 행** 결과 집합 유형이 있는 결과 집합에 매핑하면 변수에는 결과 집합이 포함하는 열의 데이터 형식과 호환되는 데이터 형식이 있어야 합니다. 예를 들어 `String` 데이터 형식이 있는 열을 포함하는 결과 집합은 숫자 데이터 형식의 변수에 매핑할 수 없습니다. 설정 하는 경우는 **TypeConversionMode** 속성을 `Allowed`SQL 실행 태스크는 출력 매개 변수를 변환 하려고 하 고 쿼리 결과 데이터에는 결과 변수 형식에 할당 됩니다.  
+ 변수를 **단일 행** 결과 집합 유형이 있는 결과 집합에 매핑하면 변수에는 결과 집합이 포함하는 열의 데이터 형식과 호환되는 데이터 형식이 있어야 합니다. 예를 들어 `String` 데이터 형식이 있는 열을 포함하는 결과 집합은 숫자 데이터 형식의 변수에 매핑할 수 없습니다. 설정한 경우 합니다 **TypeConversionMode** 속성을 `Allowed`쿼리 결과 데이터를 유형의 변수에 결과 할당 되 고 SQL 실행 태스크는 출력 매개 변수를 변환 하려고 합니다.  
   
- XML 결과 집합은 `String` 또는 `Object` 데이터 형식의 변수에만 매핑할 수 있습니다. 변수가 경우는 `String` 데이터 형식, SQL 실행 태스크 반환 문자열 및 XML 원본은 XML 데이터를 사용할 수 있습니다. 변수가 경우는 `Object` 데이터 형식을 SQL 실행 태스크는 DOM 문서 개체 모델 () 개체를 반환 합니다.  
+ XML 결과 집합은 `String` 또는 `Object` 데이터 형식의 변수에만 매핑할 수 있습니다. 변수가 경우는 `String` 데이터 형식으로 SQL 실행 태스크 반환 문자열로 고 XML 원본은 XML 데이터를 사용할 수 있습니다. 변수가 경우는 `Object` SQL 실행 태스크 데이터 형식으로 문서 개체 모델 (DOM) 개체를 반환 합니다.  
   
- A **전체 결과 집합** 변수에 매핑되어야는 `Object` 데이터 형식입니다. 반환 결과는 행 집합 개체입니다. Foreach 루프 컨테이너를 사용하여 개체 변수에 저장된 테이블 행 값을 패키지 변수로 추출한 다음 스크립트 태스크를 사용하여 패키지 변수에 저장된 데이터를 파일에 쓸 수 있습니다. Foreach 루프 컨테이너 및 스크립트 태스크를 사용하여 이러한 작업을 수행하는 방법에 대한 데모는 msftisprodsamples.codeplex.com에서 CodePlex 샘플인 [SQL 매개 변수 및 결과 집합 실행](http://go.microsoft.com/fwlink/?LinkId=157863)(영문)을 참조하세요.  
+ A **전체 결과 집합** 변수에 매핑되어야 합니다 `Object` 데이터 형식입니다. 반환 결과는 행 집합 개체입니다. Foreach 루프 컨테이너를 사용하여 개체 변수에 저장된 테이블 행 값을 패키지 변수로 추출한 다음 스크립트 태스크를 사용하여 패키지 변수에 저장된 데이터를 파일에 쓸 수 있습니다. Foreach 루프 컨테이너 및 스크립트 태스크를 사용하여 이러한 작업을 수행하는 방법에 대한 데모는 msftisprodsamples.codeplex.com에서 CodePlex 샘플인 [SQL 매개 변수 및 결과 집합 실행](http://go.microsoft.com/fwlink/?LinkId=157863)(영문)을 참조하세요.  
   
  다음 표에는 결과 집합에 매핑될 수 있는 변수의 데이터 형식이 요약되어 있습니다.  
   
 |결과 집합 유형|변수의 데이터 형식|개체 유형|  
 |---------------------|---------------------------|--------------------|  
 |단일 행|결과 집합의 유형 열과 호환되는 모든 형식|해당 사항 없음|  
-|전체 결과 집합|`Object`|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯 한 네이티브 연결 관리자를 사용 하는 경우 반환된 된 개체는 ADO `Recordset`합니다.<br /><br /> 작업 관리 되는 연결 관리자와 같은 사용는 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자는 반환 된 개체는는 `System.Data.DataSet`합니다.<br /><br /> 스크립트 태스크를 사용 하 여 액세스 하는 `System.Data.DataSet` 다음 예제와 같이 개체입니다.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|전체 결과 집합|`Object`|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯 한 네이티브 연결 관리자를 사용 하는 경우 반환된 된 개체는 ADO `Recordset`합니다.<br /><br /> 작업을 관리 되는 연결 관리자와 같은 사용 합니다 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 반환된 하는 개체는는 `System.Data.DataSet`합니다.<br /><br /> 스크립트 태스크를 사용 하 여 액세스 하는 `System.Data.DataSet` 와 다음 예제에서와 같이 개체입니다.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯 한 네이티브 연결 관리자를 사용 하는 경우 반환 된 개체는는 `MSXML6.IXMLDOMDocument`합니다.<br /><br /> 작업 관리 되는 연결 관리자와 같은 사용는 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자는 반환 된 개체는는 `System.Xml.XmlDocument`합니다.|  
+|XML|`Object`|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯 한 네이티브 연결 관리자를 사용 하는 경우 반환 된 개체는는 `MSXML6.IXMLDOMDocument`합니다.<br /><br /> 작업을 관리 되는 연결 관리자와 같은 사용 합니다 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자에서 반환 된 개체는는 `System.Xml.XmlDocument`합니다.|  
   
  변수는 SQL 실행 태스크나 패키지 범위에서 정의할 수 있습니다. 변수 범위가 패키지이면 해당 패키지 내의 다른 태스크와 컨테이너는 물론 패키지 실행 또는 DTS 2000 패키지 실행 태스크가 실행한 모든 패키지에서 결과 집합을 사용할 수 있습니다.  
   

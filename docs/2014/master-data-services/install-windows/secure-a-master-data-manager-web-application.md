@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3909a858310bfcbfc01b552f708622692ebd165a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3316a5469e6b5420178ae34a40ae4e2f9f0abd70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231343"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 응용 프로그램의 보안 설정
   HTTPS를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 보안을 설정할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36092445"
   
 -   사용자가 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 가 설치된 웹 서버의 관리자여야 합니다.  
   
--   MDS가 웹 서버에 설치되어 있으며 웹 응용 프로그램이 있어야 합니다. 자세한 내용은 참조 [Master Data Services 설치](install-master-data-services.md) 및 [마스터 데이터 관리자 웹 응용 프로그램을 만들 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)합니다.  
+-   MDS가 웹 서버에 설치되어 있으며 웹 응용 프로그램이 있어야 합니다. 자세한 내용은 [Master Data Services 설치](install-master-data-services.md) 하 고 [마스터 데이터 관리자 웹 응용 프로그램 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>HTTPS를 사용하여 마스터 데이터 관리자 웹 응용 프로그램의 보안을 설정하려면  
   

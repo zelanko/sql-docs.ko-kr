@@ -29,23 +29,23 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38c8e12137ea2a906269b6cba7b86fefff5c508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167144"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD(XML 스키마)의 데이터 형식은 각각 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 매핑에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 XSD 데이터 형식에 참조 [데이터 형식 강제 변환 및 sql: datatype 주석 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD(XML 스키마)의 데이터 형식은 각각 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 매핑에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 XSD 데이터 형식 참조 [데이터 형식 강제 변환 및 sql: datatype 주석 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)합니다.  
   
- XPath는 세 가지 데이터 형식이: `string`, `number`, 및 `boolean`합니다. `number` 데이터 형식은 항상 IEEE 754 배정밀도 부동 소수점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` 데이터 형식이 XPath에 가장 가까운 `number`합니다. 그러나 `float(53)`가 정확하게 IEEE 754와 같은 것은 아닙니다. 예를 들어 NaN(Not-a-Number)과 무한대는 모두 사용되지 않습니다. 따라서 숫자가 아닌 문자열을 `number`로 변환하고 0으로 나누려고 하면 오류가 발생합니다.  
+ XPath는 세 가지 데이터 형식: `string`, `number`, 및 `boolean`합니다. `number` 데이터 형식은 항상 IEEE 754 배정밀도 부동 소수점입니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` 데이터 형식에 가장 가까운 XPath `number`합니다. 그러나 `float(53)`가 정확하게 IEEE 754와 같은 것은 아닙니다. 예를 들어 NaN(Not-a-Number)과 무한대는 모두 사용되지 않습니다. 따라서 숫자가 아닌 문자열을 `number`로 변환하고 0으로 나누려고 하면 오류가 발생합니다.  
   
 ## <a name="xpath-conversions"></a>XPath 변환  
- `OrderDetail[@UnitPrice > "10.0"]` 같은 XPath 쿼리를 사용할 경우 암시적/명시적 데이터 형식 변환으로 인해 쿼리의 의미가 미세하게 변경될 수 있습니다. 따라서 XPath 데이터 형식의 구현 방법을 올바르게 이해하고 있어야 합니다. XPath 언어 사양 XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 10월 1999, W3C 웹 사이트에서에서 찾을 수 있습니다 http://www.w3.org/TR/1999/PR-xpath-19991008.html합니다.  
+ `OrderDetail[@UnitPrice > "10.0"]` 같은 XPath 쿼리를 사용할 경우 암시적/명시적 데이터 형식 변환으로 인해 쿼리의 의미가 미세하게 변경될 수 있습니다. 따라서 XPath 데이터 형식의 구현 방법을 올바르게 이해하고 있어야 합니다. XPath 언어 사양 XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 10월 1999의 W3C 웹 사이트에서 확인할 수 있습니다 http://www.w3.org/TR/1999/PR-xpath-19991008.html합니다.  
   
  XPath 연산자는 다음의 네 범주로 나뉩니다.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36092826"
 |둘 모두 노드 집합이 아닙니다.|두 피연산자를 모두 `number`로 변환한 다음 비교합니다.|두 피연산자를 모두 일반 형식으로 변환한 다음 비교합니다. 둘 중 하나가 `boolean`이면 `boolean`으로 변환하고 둘 중 하나가 `number`이면 `number`로 변환하며 그 외의 경우에는 `string`으로 변환합니다.|  
   
 > [!NOTE]  
->  XPath 관계형 연산자는 항상 해당 피연산자를 `number`로 변환하므로 `string` 비교는 가능하지 않습니다. 날짜 비교를 포함 하려면 SQL Server 2000을이 변형 XPath 사양에: 관계형 연산자와 비교 하는 경우는 `string` 에 `string`, 즉 노드 집합을는 `string`, 또는 문자열 값 노드 집합을 문자열 값 노드 집합에는 `string` 비교 (하지는 `number` 비교) 수행 됩니다.  
+>  XPath 관계형 연산자는 항상 해당 피연산자를 `number`로 변환하므로 `string` 비교는 가능하지 않습니다. 날짜 비교를 포함 하려면 SQL Server 2000이이 변형 XPath 사양에는 제공: 관계형 연산자를 비교 하는 경우를 `string` 에 `string`, 노드 집합이 `string`, 또는 문자열 값 노드 집합을 문자열 값 노드 집합에는 `string` 비교 (하지는 `number` 비교)을 수행 합니다.  
   
 ## <a name="node-set-conversions"></a>노드 집합 변환  
  노드 집합 변환이 항상 직관적이지는 않습니다. 노드 집합은 집합에 있는 첫 번째 노드의 문자열 값만 사용하여 `string`으로 변환됩니다. 노드 집합은 노드 집합이 `number`으로 변환된 다음 이 `string`이 다시 `string`로 변환되는 방법으로 `number`로 변환됩니다. 노드 집합은 해당 노드 집합의 존재 여부가 테스트되는 방식을 통해 `boolean`으로 변환됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명하는 노드 집합에서 `string`으로의 변환이나 노드 집합에서 `number`로의 변환이 구현되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 XPath 쿼리는 W3C XPath 사양에 따라 `Order[OrderDetail/@UnitPrice > 10.0]` 첫 번째 주문을 선택 **OrderDetail** 올려진는 **UnitPrice** 10.0 보다 큰 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 XPath 쿼리는 모든 주문을 선택 **OrderDetail** 올려진는 **UnitPrice** 10.0 보다 큰 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명하는 노드 집합에서 `string`으로의 변환이나 노드 집합에서 `number`로의 변환이 구현되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 W3C XPath 사양에 XPath 쿼리 기반 `Order[OrderDetail/@UnitPrice > 10.0]` 첫 번째를 사용 하 여 주문을 선택 **OrderDetail** 있는 **UnitPrice** 10.0 보다 큰 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 XPath 쿼리에서 사용 하 여 주문을 선택 **OrderDetail** 있는 **UnitPrice** 10.0 보다 큰 합니다.  
   
  `boolean`으로 변환될 때는 존재 테스트가 수행됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]`는 SQL 식 "Products.Discontinued = 1"이 아니라 SQL 식 "Products.Discontinued is not null"과 같습니다. 이 XPath 쿼리를 "Products.Discontinued = 1"과 같게 만들려면 먼저 노드 집합을 `boolean`와 같은 `number`이 아닌 형식으로 변환합니다. `Products[number(@Discontinued) = true()]`)을 입력합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36092826"
  노드 집합이 `string`이나 `number`로 변환될 경우 주석이 추가된 스키마에서 해당 XDR 유형(있는 경우)이 검사된 다음 이를 기반으로 필요한 변환이 결정됩니다.  
   
 ## <a name="mapping-xdr-data-types-to-xpath-data-types"></a>XDR 데이터 형식을 XPath 데이터 형식에 매핑  
- 다음 표에 나와 있는 것 처럼 노드의 XPath 데이터 형식은 스키마의 XDR 데이터 형식에서 파생 됩니다 (노드 **EmployeeID** 설명을 위한 용도로 사용).  
+ 다음 표에 나와 있는 것 처럼 노드의 XPath 데이터 형식은 스키마의 XDR 데이터 형식에서 파생 됩니다 (노드가 **EmployeeID** 설명을 위한 용도로 사용 됩니다).  
   
 |XDR 데이터 형식|해당<br /><br /> XPath 데이터 형식|사용되는 SQL Server 변환|  
 |-------------------|------------------------------------|--------------------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "36092826"
 |날짜|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |Time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- 날짜 및 시간 변환은 값이 사용 하 여 데이터베이스에 저장 되는 여부 작동 하도록 설계 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` 데이터 형식 또는 `string`합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` 데이터 형식을 사용 하지 않는 `timezone` 하며 XML 보다 작은 전체 자릿수 `time` 데이터 형식입니다. `timezone` 데이터 형식을 사용하거나 전체 자릿수를 늘리려면 `string` 형식을 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하십시오.  
+ 날짜 및 시간 변환 값을 사용 하 여 데이터베이스에 저장 됩니다 있는지 여부를 작동 하도록 설계 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` 데이터 형식 또는 `string`합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` 데이터 형식을 사용 하지 `timezone` XML 보다 작은 정밀도 및 `time` 데이터 형식입니다. `timezone` 데이터 형식을 사용하거나 전체 자릿수를 늘리려면 `string` 형식을 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하십시오.  
   
  노드가 해당 XDR 데이터 형식에서 XPath 데이터 형식으로 변환될 때 한 XPath 데이터 형식에서 다른 XPath 데이터 형식으로의 추가 변환이 필요한 경우가 있습니다. 예를 들어 다음과 같은 XPath 쿼리를 살펴봅니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36092826"
 (@m + 3) = 4  
 ```  
   
- 경우 @m 입니다는 `fixed14.4` XDR 데이터 형식, XDR 데이터 형식에서 변환할 XPath 데이터 형식을 사용 하 여 수행 됩니다.  
+ 경우 @m 입니다.는 `fixed14.4` XDR 데이터 형식으로 변환할 XDR 데이터 형식에서 XPath 데이터 형식을 사용 하 여 이루어집니다.  
   
 ```  
 CONVERT(money, m)  
@@ -138,7 +138,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ## <a name="examples"></a>예  
   
 ### <a name="a-convert-a-data-type-in-an-xpath-query"></a>1. XPath 쿼리에서 데이터 형식 변환  
- 주석이 추가 된 XSD 스키마에 대해 지정 된 다음 XPath 쿼리를 쿼리에서 모든 선택 **직원** 노드는 **EmployeeID** 특성 값이 1 인 "E-"는 사용 하 여 지정 된 접두사는 `sql:id-prefix` 주석입니다.  
+ 주석이 추가 된 XSD 스키마에 대해 지정 된 다음 XPath 쿼리에서 쿼리 모두 선택 **직원** 사용 하 여 노드를 **EmployeeID** 특성 1 인 "E-"가 사용 하 여 지정 된 접두사의 값을 `sql:id-prefix` 주석입니다.  
   
  `Employee[@EmployeeID="E-1"]`  
   
@@ -146,7 +146,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- 때문에 **EmployeeID** 중 하나는 `id` (`idref`, `idrefs`, `nmtoken`, `nmtokens`등) 데이터 형식 값이 XSD 스키마에 **EmployeeID** 은 으로 변환 된 `string` 앞에서 설명한 변환 규칙을 사용 하 여 XPath 데이터 형식입니다.  
+ 때문에 **EmployeeID** 중 하나인 합니다 `id` (`idref`, `idrefs`, `nmtoken`, `nmtokens`등) 데이터 형식 값이 XSD 스키마에서 **EmployeeID** 는 변환 된 `string` 앞에서 설명한 변환 규칙을 사용 하 여 XPath 데이터 형식입니다.  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   
@@ -155,11 +155,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>2. XPath 쿼리에서 몇 가지 데이터 형식 변환 수행  
  주석이 추가된 XSD 스키마에 대해 지정된 XPath 쿼리 `OrderDetail[@UnitPrice * @OrderQty > 98]`을 살펴봅니다.  
   
- 이 XPath 쿼리에서 모두 반환 된  **\<OrderDetail >** 조건자를 충족 요소가 `@UnitPrice * @OrderQty > 98`합니다. 경우는 **UnitPrice** 로 주석이 추가 된 `fixed14.4` 주석이 추가 된 스키마의 데이터 형식이이 조건자가 같고 SQL 식:  
+ 이 XPath 쿼리에서 모두 반환 합니다  **\<OrderDetail >** 조건자를 만족 하는 요소 `@UnitPrice * @OrderQty > 98`합니다. 경우는 **UnitPrice** 로 주석이 추가 된 `fixed14.4` 주석이 추가 된 스키마의 데이터 입력이 조건자가 같고 SQL 식:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
- XPath 쿼리에서 값 변환 시 첫 번째 변환에서는 XDR 데이터 형식을 XPath 데이터 형식으로 변환합니다. XSD 데이터 형식이 **UnitPrice** 은 `fixed14.4`, 이것이 사용 되는 첫 번째 변환 이전 표와 같이:  
+ XPath 쿼리에서 값 변환 시 첫 번째 변환에서는 XDR 데이터 형식을 XPath 데이터 형식으로 변환합니다. XSD 데이터 형식 때문 **UnitPrice** 는 `fixed14.4`, 이것이 사용 되는 첫 번째 변환 이전 표와 같이:  
   
 ```  
 CONVERT(money, OrderDetail.UnitPrice))   
@@ -171,7 +171,7 @@ CONVERT(money, OrderDetail.UnitPrice))
 CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice))   
 ```  
   
- 가정는 **OrderQty** 특성에 XSD 데이터 형식이 없다고 **OrderQty** 으로 변환 됩니다는 `number` XPath 데이터 형식으로 한 번의 변환:  
+ 가정 합니다 **OrderQty** 특성에는 XSD 데이터 형식이 없습니다 **OrderQty** 변환할는 `number` XPath 데이터 형식으로 한 번의 변환:  
   
 ```  
 CONVERT(float(53), OrderDetail.OrderQty)  
@@ -184,6 +184,6 @@ CONVERT(float(53), 98)
 ```  
   
 > [!NOTE]  
->  스키마에 사용된 XSD 데이터 형식이 데이터베이스의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 호환되지 않거나 허용되지 않는 XPath 데이터 형식 변환이 수행되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환할 수 있습니다. 예를 들어 경우는 **EmployeeID** 특성 주석이 `id-prefix` 주석, XPath `Employee[@EmployeeID=1]` 에서 오류가 발생 하기 때문에 **EmployeeID** 에 `id-prefix` 주석 변환할 수 없습니다 및 `number`합니다.  
+>  스키마에 사용된 XSD 데이터 형식이 데이터베이스의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 호환되지 않거나 허용되지 않는 XPath 데이터 형식 변환이 수행되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환할 수 있습니다. 예를 들어 경우는 **EmployeeID** 특성으로 주석이 달린 `id-prefix` xpath `Employee[@EmployeeID=1]` 때문에 오류를 생성 합니다 **EmployeeID** 에 `id-prefix` 주석 변환할 수 없습니다 및 `number`합니다.  
   
   

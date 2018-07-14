@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242883"
 ---
 # <a name="model-database"></a>model 데이터베이스
   **model** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 생성된 모든 데이터베이스에 대한 템플릿으로 사용됩니다. **을(를) 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 생성되기 때문에 **model** 데이터베이스는 항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 있어야 합니다. 데이터베이스 옵션을 포함한 **model** 데이터베이스의 전체 내용이 새 데이터베이스에 복사됩니다. 또한 **model** 의 일부 설정이 시작되는 동안 새 **tempdb** 를 만드는 데 사용되므로 **시스템에 항상** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 있어야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36091519"
  **model** 데이터베이스를 수정하면 해당 변경 내용이 나중에 생성되는 모든 데이터베이스에 상속됩니다. 예를 들어 사용 권한 또는 데이터베이스 옵션을 설정하거나 테이블, 함수 또는 저장 프로시저 같은 개체를 추가할 수 있습니다. **model** 데이터베이스의 파일 속성은 예외이며 데이터 파일의 처음 크기를 제외하고 무시됩니다.  
   
 ## <a name="physical-properties-of-model"></a>model의 물리적 속성  
- 다음 표에서는 **model** 데이터와 로그 파일의 초기 구성 값을 나열합니다. 이러한 파일의 크기의 다양 한 버전에 따라 조금씩 다 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 다음 표에서는 **model** 데이터와 로그 파일의 초기 구성 값을 나열합니다. 이러한 파일의 크기는 다양 한 버전의 약간 달라질 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 |파일|논리적 이름|물리적 이름|파일 증가|  
 |----------|------------------|-------------------|-----------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "36091519"
 |Service Broker 옵션|DISABLE_BROKER|아니요|  
 |TRUSTWORTHY|OFF|아니요|  
   
- <sup>1</sup> 데이터베이스의 현재 복구 모델을 확인 하려면 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 또는 [sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> 데이터베이스의 현재 복구 모델을 확인 하려면 참조 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 하거나 [sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c469e0044faa4295cb100898e8205c3cee7ee4a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16d360e8595b92ab5ff0af56cffdbf59bfdce488
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324813"
 ---
 # <a name="calculated-measure-representation-tabular"></a>계산 측정값 표현(테이블 형식)
   계산 측정값은 사용할 때마다 평가되는 명명된 DAX 식입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36092486"
 ## <a name="calculated-measure-representation"></a>계산 측정값 표현  
   
 ### <a name="calculated-measure-in-amo"></a>AMO의 계산 측정값  
- AMO를 사용하여 테이블 형식 모델 계산 측정값을 관리하는 경우 논리적 계산 측정값 개체와 <xref:Microsoft.AnalysisServices.Command> 개체의 <xref:Microsoft.AnalysisServices.MdxScript>에 정의된 측정값 사이에 일 대 일 일치 관계가 있습니다. 각 **계산 측정값** 로 정의 `CREATE MEASURE` 람다 식을 식 안에 한 <xref:Microsoft.AnalysisServices.Command> 개체를 세미콜론으로 구분 합니다. 테이블 형식 모델의 모든 계산 측정값은 <xref:Microsoft.AnalysisServices.MdxScript> 개체에 있는 하나의 명령 개체에서 컬렉션 `CREATE MEASURE` 문자열과 대응합니다. 또한 각 계산 측정값에는 <xref:Microsoft.AnalysisServices.CalculationProperty>에 대한 일 대 일 매핑이 있습니다.  
+ AMO를 사용하여 테이블 형식 모델 계산 측정값을 관리하는 경우 논리적 계산 측정값 개체와 <xref:Microsoft.AnalysisServices.Command> 개체의 <xref:Microsoft.AnalysisServices.MdxScript>에 정의된 측정값 사이에 일 대 일 일치 관계가 있습니다. 각 **계산 측정값** 로 정의 됩니다는 `CREATE MEASURE` 내부의 식을 <xref:Microsoft.AnalysisServices.Command> 개체 및 세미콜론으로 구분 합니다. 테이블 형식 모델의 모든 계산 측정값은 <xref:Microsoft.AnalysisServices.MdxScript> 개체에 있는 하나의 명령 개체에서 컬렉션 `CREATE MEASURE` 문자열과 대응합니다. 또한 각 계산 측정값에는 <xref:Microsoft.AnalysisServices.CalculationProperty>에 대한 일 대 일 매핑이 있습니다.  
   
  다음 코드 조각에서는 계산 측정값을 만드는 방법을 보여 줍니다.  
   

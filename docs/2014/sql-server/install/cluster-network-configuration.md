@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster network selection, Setup
 - cluster network selection
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a57e2e3ccfcbcd6b564056b69778f5082c52d6c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 74d2e7dd3d29777d21a21c4a9b403bc04e6dcb0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274639"
 ---
 # <a name="cluster-network-configuration"></a>클러스터 네트워크 구성
   **클러스터 네트워크 선택** 페이지를 사용하여 장애 조치(Failover) 클러스터 인스턴스에 대한 네트워크 리소스를 지정할 수 있습니다.  

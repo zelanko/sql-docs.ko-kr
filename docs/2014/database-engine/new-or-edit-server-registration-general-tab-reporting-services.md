@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.reportserver.f1
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 17c10bb36de85a7d0ad1d9522d5d54a540d51a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d03ee36c46ba0fb4e4c026c61d94c1b4ee29befc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202043"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>새 서버 등록 또는 서버 등록 편집(일반 탭)(Reporting Services)
   이 탭을 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]인스턴스의 등록 옵션을 지정할 수 있습니다.  

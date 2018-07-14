@@ -1,5 +1,5 @@
 ---
-title: 만들기 및 공유 데이터 원본 (SharePoint 통합된 모드의 Reporting Services) 관리 | Microsoft Docs
+title: 공유 데이터 원본 (SharePoint 통합된 모드의 Reporting Services) 작성 및 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cab3d9ce31bff00af668a5a10567919bdd106b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194780"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>공유 데이터 원본 만들기 및 관리(SharePoint 통합 모드의 Reporting Services)
   SharePoint 라이브러리에서 보고서를 실행하는 경우 연결 정보는 보고서에 링크된 외부 파일에 또는 보고서 내에 정의될 수 있습니다. 연결 정보가 보고서 내에 포함되어 있는 경우 사용자 지정 데이터 원본이라고 하며 연결 정보가 외부 파일에 정의되어 있는 경우 공유 데이터 원본이라고 합니다. 외부 파일은 보고서 서버 데이터 원본 파일(.rsds)이나 Office 데이터 연결 파일(.odc)이 될 수 있습니다.  
@@ -40,13 +40,13 @@ ms.locfileid: "36172125"
 2.  **새 문서** 메뉴에서 **보고서 데이터 원본**을 클릭합니다.  
   
     > [!NOTE]  
-    >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 참조 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;SharePoint 통합 모드의 Reporting Services&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
+    >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;Reporting Services SharePoint 통합 모드의&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
   
 3.  **이름**에 .rsds 파일을 설명하는 이름을 입력합니다.  
   
 4.  **데이터 원본 유형**의 목록에서 데이터 원본 유형을 선택합니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
   
-5.  **연결 문자열**에 데이터 원본에 대한 포인터 및 외부 데이터 원본에 대한 연결을 설정하는 데 필요한 모든 기타 설정을 지정합니다. 사용하는 데이터 원본 유형에 따라 연결 문자열의 구문이 결정됩니다. 자세한 내용 및 예제에 대 한 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+5.  **연결 문자열**에 데이터 원본에 대한 포인터 및 외부 데이터 원본에 대한 연결을 설정하는 데 필요한 모든 기타 설정을 지정합니다. 사용하는 데이터 원본 유형에 따라 연결 문자열의 구문이 결정됩니다. 자세한 내용 및 예제를 참조 하세요 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
   
 6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다. 자격 증명은 저장 및 통합하거나 무인 보고서 처리를 위해 구성할 수 있으며 입력 메시지가 표시되도록 구성할 수도 있습니다.  
   

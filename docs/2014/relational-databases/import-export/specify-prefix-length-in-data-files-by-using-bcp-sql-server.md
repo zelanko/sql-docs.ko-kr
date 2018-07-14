@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
 - prefix length [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 338a19bca2f465d6af1b4f409d0563caeb71738f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212903"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
   원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 저장소를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "36092860"
 >  **bcp** 명령의 모든 필드를 대화형으로 지정하면 명령에서 비 XML 서식 파일의 각 필드에 대한 응답을 저장하라는 메시지를 표시합니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  
   
 ## <a name="overview-of-prefix-length"></a>접두사 길이 개요  
- 필드의 접두사 길이를 저장하려면 필드의 최대 길이를 나타낼 수 있도록 충분한 바이트가 필요합니다. 또한 필요한 바이트의 수는 파일 저장 유형, 열의 Null 허용 여부 및 데이터 파일에 저장된 데이터가 네이티브 형식인지 문자 형식인지 여부에 따라 달라집니다. 예를 들어 한 `text` 또는 `image` 데이터 형식은 4 개의 접두사 문자 필드 길이 저장할 수는 있지만 `varchar` 두 개의 문자 데이터 형식에 필요한 합니다. 데이터 파일에서 이러한 길이 접두사 문자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 이진 데이터 형식으로 저장됩니다.  
+ 필드의 접두사 길이를 저장하려면 필드의 최대 길이를 나타낼 수 있도록 충분한 바이트가 필요합니다. 또한 필요한 바이트의 수는 파일 저장 유형, 열의 Null 허용 여부 및 데이터 파일에 저장된 데이터가 네이티브 형식인지 문자 형식인지 여부에 따라 달라집니다. 예를 들어를 `text` 또는 `image` 데이터 형식 필드의 길이 저장 하는 문자를 접두사 4 개 필요 하지만 `varchar` 데이터 형식에는 두 문자가 필요 합니다. 데이터 파일에서 이러한 길이 접두사 문자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 이진 데이터 형식으로 저장됩니다.  
   
 > [!IMPORTANT]  
 >  네이티브 형식을 사용할 때는 필드 종결자 대신 길이 접두사를 사용하십시오. 네이티브 형식 데이터 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 이진 데이터 형식에 저장되므로 종결자와 충돌할 수 있습니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "36092860"
 |UDT(사용자 정의 데이터 형식)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> 는 `ntext`, `text`, 및 `image` 데이터 형식은 나중 버전의에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 사용 하 여 `nvarchar(max)`, `varchar(max)`, 및 `varbinary(max)` 대신 합니다.  
+ <sup>1</sup> 는 `ntext`를 `text`, 및 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 사용 하 여 `nvarchar(max)`하십시오 `varchar(max)`, 및 `varbinary(max)` 대신 합니다.  
   
 ##  <a name="PrefixLengthsImport"></a> 대량 가져오기의 접두사 길이  
  데이터를 대량 가져올 때 접두사 길이는 해당 데이터 파일이 원래 작성될 때 지정된 값입니다. **bcp** 을 사용하여 데이터 파일을 만들지 않은 경우에는 길이 접두사 문자가 없을 수도 있습니다. 이 경우에는 접두사 길이에 0을 지정합니다.  

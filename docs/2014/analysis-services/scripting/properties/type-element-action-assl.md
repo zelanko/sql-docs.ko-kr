@@ -1,5 +1,5 @@
 ---
-title: E Element (Action) (ASSL) | Microsoft Docs
+title: Type 요소 (Action) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249086"
 ---
 # <a name="type-element-action-assl"></a>Type 요소(Action)(ASSL)
-  유형을 포함 된 [동작](../objects/action-element-assl.md) 요소입니다.  
+  형식을 포함 합니다 [동작](../objects/action-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36091359"
 |*Url*|가변 페이지를 인터넷 브라우저로 표시합니다.|  
 |*Html*|인터넷 브라우저에서 HTML 스크립트를 실행합니다.|  
 |*문*|OLE DB 명령을 실행합니다.|  
-|*드릴스루*|드릴스루에 대한 행 집합을 검색합니다.<br /><br /> 이 값은 동일 *행 집합* 및 드릴스루 동작을 식별 합니다. 만 사용할 수 인 작업에 사용할 [TargetType](targettype-element-assl.md) 값으로 설정 되어 *셀*합니다.|  
+|*드릴스루*|드릴스루에 대한 행 집합을 검색합니다.<br /><br /> 이 값은 동일 *행 집합* 하며 드릴스루 동작을 식별 합니다. 수만 있으며 해당 작업에 사용할 [TargetType](targettype-element-assl.md) 값으로 설정 됩니다 *셀*합니다.|  
 |*데이터 집합*|데이터 집합을 검색합니다.|  
 |*행 집합*|행 집합을 검색합니다.|  
 |*명령줄*|명령 프롬프트에서 명령을 실행합니다.|  
 |*소유*|이 표의 앞에 나열된 것과는 다른 인터페이스를 사용하여 작업을 수행합니다.|  
-|*보고서*|가변 페이지를 인터넷 브라우저로 표시합니다.<br /><br /> 이 값은 동일 *Url* 보고서 동작을 식별 하 고 있습니다.|  
+|*보고서*|가변 페이지를 인터넷 브라우저로 표시합니다.<br /><br /> 이 값은 동일 *Url* 하며 보고서 동작을 식별 합니다.|  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [DrillThroughAction 데이터 형식 &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

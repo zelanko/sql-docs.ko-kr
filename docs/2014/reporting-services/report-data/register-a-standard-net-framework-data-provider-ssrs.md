@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - .NET Framework data providers for Reporting Services
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fcfaa1e1459df5bd3a399ce80b29dfd6a721e991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200873"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
   타사 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 집합에 대한 데이터를 검색하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리를 보고서 제작 클라이언트와 보고서 서버에 배포하고 등록해야 합니다. 보고서 제작 클라이언트에서 데이터 공급자를 데이터 원본 유형으로 등록하고 쿼리 디자이너와 연결해야 합니다. 그러면 보고서 데이터 집합을 만들 때 이 데이터 공급자를 데이터 원본 유형으로 선택할 수 있습니다. 연결된 쿼리 디자이너가 열려 이 데이터 원본 유형에 대한 쿼리 생성을 도와줍니다. 또한 보고서 서버에서 데이터 공급자를 데이터 원본 유형으로 등록해야 합니다. 그러면 이 데이터 공급자를 사용하여 데이터 원본에서 데이터를 검색하는 게시된 보고서를 처리할 수 있습니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36093256"
   
 1.  bin의 ReportServer 부모 디렉터리에 RSReportServer.config 파일의 백업을 만듭니다.  
   
-2.  RSReportServer.config를 엽니다. 구성 파일을 열면 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 메모장과 같은 간단한 텍스트 편집기입니다.  
+2.  RSReportServer.config를 엽니다. 사용 하 여 구성 파일을 열면 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 메모장과 같은 간단한 텍스트 편집기를 합니다.  
   
-3.  찾기의 `Data` RSReportServer.config 파일의 요소입니다. 다음 위치에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 항목을 만들어야 합니다.  
+3.  찾을 `Data` RSReportServer.config 파일의 요소입니다. 다음 위치에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 항목을 만들어야 합니다.  
   
     ```  
     <Extensions>  
@@ -64,7 +64,7 @@ ms.locfileid: "36093256"
   
     |attribute|Description|  
     |---------------|-----------------|  
-    |`Name`|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 내에서 모든 항목에서 고유 해야 합니다.는 `Extension` 구성 파일의 요소입니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
+    |`Name`|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 내 모든 항목에서 고유 해야 합니다.는 `Extension` 구성 파일의 요소입니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |`Type`|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
   
      예를 들어 보고서 서버 bin 디렉터리에 배포되는 DLL의 경우 다음과 같이 입력할 수 있습니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "36093256"
   
     |attribute|Description|  
     |---------------|-----------------|  
-    |`Name`|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 내에서 모든 항목에서 고유 해야 합니다.는 `Extension` 구성 파일의 요소입니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
+    |`Name`|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 내 모든 항목에서 고유 해야 합니다.는 `Extension` 구성 파일의 요소입니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |`Type`|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
   
      예를 들어 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] PrivateAssemblies 디렉터리에 배포되는 DLL의 경우 다음과 같이 입력할 수 있습니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "36093256"
     </Extensions>  
     ```  
   
-6.  다음 항목 아래에 있는 RSReportDesigner.config 파일을 추가 `Designer` 요소입니다. 만 교체 해야는 `Name` 이전 항목에서 사용자가 제공한 이름이 있는 특성입니다.  
+6.  아래에 있는 RSReportDesigner.config 파일에 다음 항목을 추가 합니다 `Designer` 요소입니다. 만 교체 해야 합니다 `Name` 이전 항목에서 제공한 이름이 있는 특성입니다.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -172,11 +172,11 @@ ms.locfileid: "36093256"
   
 1.  PrivateAssemblies 디렉터리에 RSPreviewPolicy.config 파일의 백업 복사본을 만듭니다.  
   
-2.  RSPreviewPolicy.config를 엽니다 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 메모장과 같은 간단한 텍스트 편집기입니다.  
+2.  사용 하 여 RSPreviewPolicy.config를 엽니다 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 메모장과 같은 간단한 텍스트 편집기를 합니다.  
   
 3.  RSPreviewPolicy.config 파일에서 `CodeGroup` 요소를 찾습니다.  
   
-4.  에 대 한 코드 그룹을 추가 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 부여 하는 데이터 공급자 어셈블리 `FullTrust` 권한. 코드 그룹은 다음과 같을 수 있습니다.  
+4.  에 대 한 코드 그룹을 추가 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 권한을 부여 하는 데이터 공급자 어셈블리 `FullTrust` 권한. 코드 그룹은 다음과 같을 수 있습니다.  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -195,7 +195,7 @@ ms.locfileid: "36093256"
  URL 멤버 자격은 데이터 공급자에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다.  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>보고서 디자이너 클라이언트에서 배포 및 등록 확인  
- 배포를 확인하려면 먼저 로컬 컴퓨터에서 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 인스턴스를 모두 닫아야 합니다. 모든 현재 세션을 종료 한 후 있는지 여부를 데이터 공급자에 성공적으로 배포와 보고서 디자이너에서 새 보고서 프로젝트를 만들어 확인할 수 있습니다 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]합니다. 이때 데이터 공급자는 보고서에 대한 새 데이터 집합을 만들 때 사용 가능한 데이터 원본 유형 목록에 포함되어 있어야 합니다.  
+ 배포를 확인하려면 먼저 로컬 컴퓨터에서 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 인스턴스를 모두 닫아야 합니다. 모든 현재 세션을 종료 한 후 있습니다 수 데이터 공급자가 배포 되었는지 확인할 보고서 디자이너에서 새 보고서 프로젝트를 만들어 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]합니다. 이때 데이터 공급자는 보고서에 대한 새 데이터 집합을 만들 때 사용 가능한 데이터 원본 유형 목록에 포함되어 있어야 합니다.  
   
 ## <a name="platform-considerations"></a>플랫폼 고려 사항  
  64비트(x64) 플랫폼에서 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 32비트 WOW 모드로 실행됩니다. x64 플랫폼에서 보고서를 작성하는 경우 보고서를 미리 보려면 보고서 제작 클라이언트에 32비트 데이터 공급자가 설치되어 있어야 합니다. 동일한 시스템에 보고서를 게시하는 경우 보고서 관리자를 사용하여 보고서를 보려면 x64 데이터 공급자가 필요합니다.  

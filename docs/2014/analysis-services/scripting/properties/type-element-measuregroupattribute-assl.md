@@ -1,5 +1,5 @@
 ---
-title: 요소 (MeasureGroupAttribute) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (MeasureGroupAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254855"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Type 요소(MeasureGroupAttribute)(ASSL)
-  형식을 포함 한 [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) 요소입니다.  
+  형식이 포함 된 [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36092491"
   
  AMO(Analysis Management Objects) 개체 모델에서 `Type`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>입니다.  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소 특성 &#40;ASSL&#41;](../collections/attributes-element-assl.md)   

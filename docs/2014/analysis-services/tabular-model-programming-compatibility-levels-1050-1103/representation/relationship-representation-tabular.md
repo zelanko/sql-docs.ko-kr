@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b42c3737ce2369fa6e2e349e377efecc462d0280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187070"
 ---
 # <a name="relationship-representation-tabular"></a>관계 표현(테이블 형식)
   관계는 두 테이블 데이터 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다.  
   
- 참조 [관계 표현 (테이블 형식만)](relationship-representation-tabular.md) 관계 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
+ 참조 [Relationship Representation (Tabular)](relationship-representation-tabular.md) 관계 표현을 만들고 조작 하는 방법에 대해서는 설명에 대 한 합니다.  
   
 ## <a name="relationship-representation"></a>관계 표현  
  테이블 형식 모델에서는 두 테이블 간에 여러 관계를 정의할 수 있습니다. 두 테이블 간에 여러 관계가 정의되어 있는 경우 하나의 관계만 모델에 대한 기본 관계로 정의할 수 있으며 해당 관계는 활성 관계로 명명됩니다. 나머지 모든 관계는 비활성 관계로 명명됩니다.  

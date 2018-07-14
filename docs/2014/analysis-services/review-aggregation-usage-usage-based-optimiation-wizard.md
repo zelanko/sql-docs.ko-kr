@@ -1,5 +1,5 @@
 ---
-title: 집계 사용 검토 (사용 빈도 기반 최적화 마법사) | Microsoft Docs
+title: 집계 사용 (사용 빈도 기반 최적화 마법사)를 검토 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235683"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>집계 사용법 검토(사용 빈도 기반 최적화 마법사)
   **집계 사용 검토** 페이지를 사용하여 집계 사용 설정을 구성할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36092498"
  **없음**  
  특성의 집계 사용 설정을 없음으로 설정하려면 선택합니다. 이 설정을 사용하면 큐브의 집계에 이 특성을 포함할 수 없습니다.  
   
- **제한 없음**  
+ **무제한**  
  특성의 집계 사용 설정을 제한 없음으로 설정하려면 선택합니다. 이 설정을 사용하면 집계 디자이너에 제한 사항이 지정되지 않지만 해당 특성이 집계에 적절한 특성인지 여부는 계속 평가되어야 합니다.  
   
  **모두 기본값으로 설정**  

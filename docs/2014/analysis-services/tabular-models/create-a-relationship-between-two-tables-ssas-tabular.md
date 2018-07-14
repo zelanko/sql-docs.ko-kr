@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.managereldb.f1
 - sql12.asvs.bidtoolset.createrelatdb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 626bc8153e73e038a26f936d40d814333ebaa0d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3caaf25043cc72246cd173711711ff3ec4ee33f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167254"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>두 테이블 간에 관계 만들기(SSAS 테이블 형식)
-  데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계를 사용 하는 방법에 대 한 정보를 참조 하십시오. [관계 &#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)합니다.  
+  데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계가 사용 되는 방법에 대 한 자세한 내용은 [관계 &#40;&AMP;#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)합니다.  
   
 ## <a name="create-a-relationship-between-two-tables"></a>두 테이블 간에 관계 만들기  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36093611"
 6.  **만들기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [관계 삭제 &#40;SSAS 테이블 형식&#41;](delete-relationships-ssas-tabular.md)   
- [관계 &#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)  
+ [관계 삭제 &#40;&AMP;#40;SSAS 테이블 형식&#41;](delete-relationships-ssas-tabular.md)   
+ [관계 &#40;&AMP;#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)  
   
   

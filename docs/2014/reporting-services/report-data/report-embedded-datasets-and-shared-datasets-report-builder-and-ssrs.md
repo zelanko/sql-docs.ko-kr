@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218933"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
   데이터 집합은 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 집합은 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 집합은 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36093050"
   
 6.  **쿼리 결과** 쿼리를 실행하고 결과 집합 예를 볼 수 있습니다. 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다.  
   
-7.  **스키마의 메타데이터** 데이터 공급자는 쿼리와 별도로 스키마 쿼리 명령을 실행하여 데이터 집합 필드 컬렉션에 대한 메타데이터를 검색합니다. 예를 들어 한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` 문은 데이터베이스 테이블의 열 이름을 반환 합니다. 데이터 집합 필드 컬렉션을 보려면 보고서 데이터 창을 사용하여 데이터 집합을 확장합니다.  
+7.  **스키마의 메타데이터** 데이터 공급자는 쿼리와 별도로 스키마 쿼리 명령을 실행하여 데이터 집합 필드 컬렉션에 대한 메타데이터를 검색합니다. 예를 들어, 한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` 문은 데이터베이스 테이블의 열 이름을 반환 합니다. 데이터 집합 필드 컬렉션을 보려면 보고서 데이터 창을 사용하여 데이터 집합을 확장합니다.  
   
- 데이터는 미리 정의된 공유 데이터 집합 및 보고서 파트를 사용하여 보고서에 포함될 수도 있습니다. 이러한 항목에는 이미 필요한 데이터 연결 정보가 있습니다. 자세한 내용은 참조 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41; ](report-datasets-ssrs.md) 및 [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)합니다.  
+ 데이터는 미리 정의된 공유 데이터 집합 및 보고서 파트를 사용하여 보고서에 포함될 수도 있습니다. 이러한 항목에는 이미 필요한 데이터 연결 정보가 있습니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41; ](report-datasets-ssrs.md) 하 고 [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  기본 제공 데이터 원본 유형 및 데이터 확장 프로그램에 대한 자세한 내용은 [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)를 참조하세요.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36093050"
 ##  <a name="Overview"></a> 보고서 데이터 집합 및 쿼리 이해  
  보고서 데이터 집합에는 외부 데이터 원본에 대해 실행되며 검색할 데이터를 지정하는 쿼리 명령이 들어 있습니다. 쿼리 명령을 작성하려면 외부 데이터 원본용 데이터 확장 프로그램에 연결된 쿼리 디자이너를 사용합니다. 쿼리 디자이너에서 쿼리 명령을 실행하고 결과 집합을 확인할 수 있습니다. 결과 집합은 열 이름이 있으며 각 행에 같은 수의 값이 포함된 사각형 행 집합입니다. *비정형 계층*이라고도 하는 계층적 데이터는 지원되지 않습니다. 열 이름은 데이터 집합 필드 목록으로 보고서 정의에 저장됩니다.  
   
- 보고서에 데이터 집합을 추가하고 나서 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블,  차트 및 기타 보고서 항목에 놓을 수 있습니다. 작업 필드에 대 한 자세한 내용은 참조 [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
+ 보고서에 데이터 집합을 추가하고 나서 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블,  차트 및 기타 보고서 항목에 놓을 수 있습니다. 필드를 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>보고서 데이터 집합의 데이터 이해  
  데이터 확장 프로그램에 따라 보고서 데이터 집합은 다음 데이터 형식으로 구성될 수 있습니다.  
@@ -81,9 +81,9 @@ ms.locfileid: "36093050"
   
 -   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 SQL  Server  온라인 설명서의**Reporting Services 설명서** 에서 “ [보고서 모델](http://go.microsoft.com/fwlink/?linkid=121312) 을 데이터 원본으로 사용”을 참조하세요.  
   
- 런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 null 값에 매핑되는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 값 `System.DBNull.Value`합니다.  
+ 런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 null 값이 매핑되는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 값 `System.DBNull.Value`합니다.  
   
- 데이터 집합 필드에 대 한 자세한 내용은 참조 [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
+ 데이터 집합 필드에 대 한 자세한 내용은 참조 하세요. [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="dataset-query"></a>데이터 집합 쿼리  
  디자인 타임에 쿼리 디자이너에서 데이터 집합 쿼리를 실행하면 예제 데이터를 보여 주는 데이터 원본의 행 집합이 표시됩니다. 런타임에는 데이터 원본의 데이터가 변경되었으므로 사용자가 보고서를 볼 때 데이터 집합 쿼리에서 다른 값이 생성될 수 있습니다. 보고서가 처리될 때마다 새 데이터가 나타날 수 있습니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "36093050"
   
 -   데이터베이스 필드를 기반으로 새 사용자 지정 필드를 만들고 사용자 지정 형식을 제공합니다.  
   
- 자세한 내용은 참조 [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
+ 자세한 내용은 [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>데이터 집합에 대한 기존 쿼리 가져오기  
  데이터 집합을 만드는 경우 새로운 쿼리를 만들거나 파일 또는 다른 보고서에서 기존 쿼리를 가져올 수 있습니다. 다른 보고서에서 쿼리를 가져오는 경우 보고서의 데이터 집합 목록에서 가져올 쿼리를 선택할 수 있습니다.  
@@ -209,7 +209,7 @@ ms.locfileid: "36093050"
   
 -   별도의 데이터 영역을 사용하여 각 데이터 집합의 데이터를 표시합니다. 자세한 내용은 [데이터 영역 및 지도&#40;보고서 작성기 및 SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md)를 참조하세요.  
   
--   데이터 영역에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 자세한 내용은 참조 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
+-   데이터 영역에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
   
 -   데이터 집합을 사용하여 사용 가능한 값이나 보고서 매개 변수 기본값에 대한 드롭다운 목록을 제공할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36093050"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)  
   
   

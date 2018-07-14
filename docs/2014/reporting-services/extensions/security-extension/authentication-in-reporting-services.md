@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df847dc70d13d61a43b6ba3554280cece774b49a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235023"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36092358"
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services의 사용자 지정 인증  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 Windows 운영 체제는 통합 보안을 통해 또는 사용자 자격 증명의 명시적인 수신과 검사를 통해 사용자 인증을 처리합니다. 사용자 지정 인증은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 개발하여 추가 인증 체계를 지원할 수 있습니다. 보안 확장 프로그램 인터페이스 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>을 통해 이 작업을 수행할 수 있습니다. 모든 확장 프로그램은 보고서 서버에서 배포되고 사용되는 모든 확장 프로그램에 대한 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 기본 인터페이스에서 상속됩니다. <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>은 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스의 멤버입니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 서버와 대조하여 인증하는 기본적인 방법은 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드입니다. Reporting Services 웹 서비스의 이 멤버는 확인을 위해 사용자 자격 증명을 보고서 서버에 전달하는 데 사용할 수 있습니다. 기본 보안 확장 프로그램 구현 하 **IAuthenticationExtension.LogonUser** 사용자 지정 인증 코드가 포함 되어 있습니다. 폼 인증 예제에서는 제공된 자격 증명 및 데이터베이스의 사용자 지정 사용자 저장소와 대조하여 인증 검사를 수행하는 **LogonUser**가 있습니다. **LogonUser**의 구현 예는 다음과 같습니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 서버와 대조하여 인증하는 기본적인 방법은 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드입니다. Reporting Services 웹 서비스의 이 멤버는 확인을 위해 사용자 자격 증명을 보고서 서버에 전달하는 데 사용할 수 있습니다. 사용자 기본 보안 확장 프로그램 구현 **IAuthenticationExtension.LogonUser** 에 사용자 지정 인증 코드가 포함 되어 있습니다. 폼 인증 예제에서는 제공된 자격 증명 및 데이터베이스의 사용자 지정 사용자 저장소와 대조하여 인증 검사를 수행하는 **LogonUser**가 있습니다. **LogonUser**의 구현 예는 다음과 같습니다.  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -113,7 +113,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  클라이언트 응용 프로그램에서 사용자를 인증하도록 웹 서비스 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
-2.  웹 서비스를 호출 하는 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 보안 확장 프로그램의 메서드 특히, 구현 하는 클래스 **IAuthenticationExtension**합니다.  
+2.  웹 서비스를 호출 하는 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드의 보안 확장 프로그램 구현 하는 클래스, 특히 **IAuthenticationExtension**합니다.  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> 구현에서 사용자 저장소 또는 보안 기관에 있는 사용자 이름과 암호를 검사합니다.  
   

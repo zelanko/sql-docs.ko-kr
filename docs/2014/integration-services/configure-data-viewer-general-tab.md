@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a58a85deedb322ce43a5b1d4881e457097abda0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35458ecc9e5c7482365ce53fefd32558d04872ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274999"
 ---
 # <a name="configure-data-viewer-general-tab"></a>데이터 뷰어 구성(일반 탭)
   데이터 뷰어에서는 패키지를 실행하는 동안 두 개의 데이터 흐름 구성 요소를 연결하는 경로를 통해 이동하면서 데이터를 표시합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36091558"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 뷰어 구성 &#40;세로 막대형 차트 탭&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [데이터 뷰어 구성 &#40;표 탭&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [데이터 뷰어 구성 &#40;그리드 탭&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [데이터 뷰어 구성 &#40;히스토그램 탭&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [데이터 뷰어 구성 &#40;산 점도 탭&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [데이터 흐름](data-flow/data-flow.md)   

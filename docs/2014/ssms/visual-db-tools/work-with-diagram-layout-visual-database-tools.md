@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], layouts
 - layouts [SQL Server]
 - appearance of database diagrams
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bdf29e41f72408ddf0cfecc0c6bc69441a2d2f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ea8d803d5d1b8e0f845bcfe7a049ad5bfce541b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177170"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>다이어그램 레이아웃 작업(Visual Database Tools)
   데이터베이스 다이어그램이 표시되는 방식을 사용자 지정할 수 있습니다.  

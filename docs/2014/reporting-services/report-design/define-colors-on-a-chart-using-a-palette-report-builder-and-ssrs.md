@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77564d3f8d13242af8b457ef96eb80ca14ff2780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 306f73588ed837771bbb5852d9107e44c28f1f0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276069"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
   미리 정의된 색상표를 선택하거나 사용자 지정 색상표를 정의하여 차트의 색상표를 변경할 수 있습니다. 사용자 지정 색상표는 이를 지정한 보고서에 대해서만 적용됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36092610"
   
 2.  디자인 화면에서 차트를 클릭합니다. 차트 개체의 속성이 속성 창에 표시됩니다.  
   
-3.  에 **차트** 섹션에 대 한는 `Palette` 속성을 선택 **사용자 지정**합니다.  
+3.  에 **차트** 섹션에 대 한 합니다 `Palette` 속성을 선택 **사용자 지정**합니다.  
   
 4.  CustomPaletteColors 속성에서 컬렉션 편집(**…**) 단추를 클릭합니다. **ReportColorExpression 컬렉션 편집기** 가 열립니다.  
   

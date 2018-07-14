@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f81e48f4466bf4f5765273df7c4fa58fbb447f8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8eccaf0e1c13c63d73eff20e7415c6872c967b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269519"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36091553"
   
  CDC 원본은 다음과 같은 구성을 사용합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 액세스하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 연결 관리자 CDC 원본 연결을 구성 하는 방법에 대 한 자세한 내용은 참조 [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 액세스하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 연결 관리자 CDC 원본 연결을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)합니다.  
   
 -   CDC용으로 설정된 테이블  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36091553"
   
 -   **오류 행 열**: 오류의 원인이 되는 레코드 데이터입니다.  
   
- 오류 동작 설정에 따라 CDC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 참조 [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)합니다.  
+ 오류 동작 설정에 따라 CDC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)합니다.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
  Microsoft용 CDC 원본 구성 요소는 올바른 SSIS 데이터 형식에 매핑되는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.  

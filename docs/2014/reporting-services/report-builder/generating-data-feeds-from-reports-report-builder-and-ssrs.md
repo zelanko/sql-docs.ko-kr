@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7bdab22ae7d649e1915cb31c221bf0f546727513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202663"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램에서는 보고서에서 사용할 수 있는 데이터 피드를 나열 하는 Atom 서비스 문서 및 보고서에서 영역 데이터에서 데이터 피드입니다. 이 확장 프로그램을 사용하면 보고서에서 생성된 데이터 피드를 사용할 수 있는 응용 프로그램을 사용하여 읽을 수 있고 교환할 수 있는 Atom 규격 데이터 피드를 생성할 수 있습니다. 예를 들어 Atom 렌더링 확장 프로그램을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트에서 사용할 수 있는 데이터 피드를 생성할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서에서 사용할 수 있는 데이터 피드를 나열 하는 Atom 서비스 문서를 생성 하는 Atom 렌더링 확장 프로그램 및 보고서에는 지역에서 데이터를 데이터 피드 합니다. 이 확장 프로그램을 사용하면 보고서에서 생성된 데이터 피드를 사용할 수 있는 응용 프로그램을 사용하여 읽을 수 있고 교환할 수 있는 Atom 규격 데이터 피드를 생성할 수 있습니다. 예를 들어 Atom 렌더링 확장 프로그램을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트에서 사용할 수 있는 데이터 피드를 생성할 수 있습니다.  
   
- Atom 서비스 문서는 보고서의 각 데이터 영역에 대해 데이터 피드를 하나 이상 나열합니다. 데이터 영역과 데이터 영역에 표시 되는 데이터의 유형에 따라 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 영역에서 여러 데이터 피드를 생성할 수 있습니다. 예를 들어 행렬이나 차트는 여러 데이터 피드를 제공할 수 있습니다. Atom 렌더링 확장 프로그램이 Atom 서비스 문서를 만드는 경우 고유 식별자가 각 데이터 피드에 대해 만들어지며 URL에서 이 식별자를 사용하여 데이터 피드의 내용에 액세스할 수 있습니다.  
+ Atom 서비스 문서는 보고서의 각 데이터 영역에 대해 데이터 피드를 하나 이상 나열합니다. 데이터 영역과 데이터 영역을 표시 하는 데이터의 유형에 따라 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 스 데이터 영역에서 여러 데이터 피드를 생성할 수 있습니다. 예를 들어 행렬이나 차트는 여러 데이터 피드를 제공할 수 있습니다. Atom 렌더링 확장 프로그램이 Atom 서비스 문서를 만드는 경우 고유 식별자가 각 데이터 피드에 대해 만들어지며 URL에서 이 식별자를 사용하여 데이터 피드의 내용에 액세스할 수 있습니다.  
   
  Atom 렌더링 확장 프로그램이 데이터 피드에 대한 데이터를 생성하는 방식은 CSV(쉼표로 구분된 값) 렌더링 확장이 CSV 파일에 데이터를 렌더링하는 방식과 유사합니다. CSV 파일과 마찬가지로 데이터 피드는 보고서 데이터의 일반 표현입니다. 예를 들어 그룹 내의 판매량 합계를 계산하는 행 그룹이 있는 테이블은 각 데이터 행에서 합계를 계산하는 작업을 반복하며 별도의 행에 합계만 포함되지는 않습니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36093257"
 
   
 ##  <a name="DataFeeds"></a> 데이터 피드  
- 데이터 피드는 보고서가 실행될 때마다 다를 수 있는 변수 데이터와 시간이 흐름에 따라 변경되지 않는 일관성 있는 표 형식이 있는 XML 파일입니다. 에 의해 생성 된 데이터 피드 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 은 ADO.NET Data Services에서 생성 된 항목으로 같은 형식입니다.  
+ 데이터 피드는 보고서가 실행될 때마다 다를 수 있는 변수 데이터와 시간이 흐름에 따라 변경되지 않는 일관성 있는 표 형식이 있는 XML 파일입니다. 생성 된 데이터 피드 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ADO.NET Data Services에서 생성 된 것과 같은 형식입니다.  
   
  데이터 피드에는 헤더 섹션과 데이터 섹션이 포함되어 있습니다. Atom 사양은 각 섹션에서 요소를 정의합니다. 헤더에는 데이터 피드에서 사용할 문자 인코딩 스키마와 같은 정보가 포함됩니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36093257"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- XML은 다음 프로그램 <`entry`> 해당 보고서는 데이터 피드의 요소입니다. 에 <`entry`> 요소에는 판매량 및 주문량 그룹의 전체 및의 판매량 및 주문량 모든 그룹에 대 한 합계가 포함 됩니다. <`entry`> 요소에는 보고서의 모든 값이 포함되어 있습니다.  
+ 에서는 다음 XML <`entry`> 보고서 데이터 피드의 요소입니다. 에 <`entry`> 요소 그룹에 대 한 주문을 확인 하 고 판매의 합계와의 모든 그룹의 판매량 및 합계를 포함 합니다. <`entry`> 요소에는 보고서의 모든 값이 포함되어 있습니다.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36093257"
   
  보고서 항목 이름은 기본적으로 보고서 항목의 RDL(Report Definition Language) 요소 이름으로 설정되며 간단하지 않거나 기억하기 쉽지 않은 경우가 많습니다. 예를 들어 보고서에 배치된 첫 번째 행렬의 기본 이름은 Tablix 1입니다. 데이터 피드는 이러한 이름을 사용합니다.  
   
- 데이터 피드를 사용하기 쉽게 만들려면 데이터 영역의 DataElementName 속성을 사용하여 친숙한 이름을 제공할 수 있습니다. 데이터 피드 하위 요소 DataElementName에 대 한 값을 제공 하는 경우 <`d`>는 사용 하는 기본 데이터 영역 이름 대신 합니다. 예를 들어 데이터 영역에 대해 기본 이름인 Tablix1 및 DataElementName SalesByTerritoryYear로 설정 하면 <`d`> 데이터에서 피드는 SalesByTerritoryYear를 사용 합니다. 데이터 영역에 위에서 설명한 행렬 보고서와 같은 두 가지 데이터 피드가 있는 경우 데이터 피드에서 사용되는 이름은 SalesByTerritoryYear _Territory 및 SalesByTerritoryYear _Year입니다.  
+ 데이터 피드를 사용하기 쉽게 만들려면 데이터 영역의 DataElementName 속성을 사용하여 친숙한 이름을 제공할 수 있습니다. DataElementName의 값을 제공 하는 경우 데이터 피드 하위 요소 <`d`>를 사용 하 여 기본 데이터 영역 이름 대신 것 메시지를 표시 합니다. 예를 들어 데이터 영역의 기본 이름이 Tablix1 인 경우 DataElementName이 SalesByTerritoryYear로 설정 하면 <`d`>에서 데이터 피드는 SalesByTerritoryYear를 사용 합니다. 데이터 영역에 위에서 설명한 행렬 보고서와 같은 두 가지 데이터 피드가 있는 경우 데이터 피드에서 사용되는 이름은 SalesByTerritoryYear _Territory 및 SalesByTerritoryYear _Year입니다.  
   
  보고서에 표시된 데이터와 데이터 피드의 데이터를 비교하는 경우 몇 가지 차이점을 확인할 수 있습니다. 보고서에는 형식이 지정된 숫자 및 시간/날짜 데이터가 표시되는 경우가 많지만 데이터 피드에는 형식이 지정되지 않은 데이터가 포함됩니다.  
   
@@ -198,6 +198,6 @@ ms.locfileid: "36093257"
   
 ## <a name="see-also"></a>관련 항목  
  [CSV 파일로 내보내기 &#40;보고서 작성기 및 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

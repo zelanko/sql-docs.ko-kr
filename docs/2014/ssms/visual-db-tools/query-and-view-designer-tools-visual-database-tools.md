@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.querydesigner
 - vdt.pane.diagram
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec0aafb394d43fa55fa940ca5ce23cca798b3ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df346757d4fca96b17b2287fe614d4db95319e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168124"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
   쿼리, 뷰, 인라인 함수 또는 단일 문 저장 프로시저를 디자인할 때 사용하는 디자이너는 다이어그램 창, 조건 창, SQL 창 및 결과 창으로 구성됩니다.  
@@ -52,8 +52,8 @@ ms.locfileid: "36093662"
  창을 숨기거나 보이지 않는 창을 표시하려면 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **창**을 가리킨 다음 창 이름을 클릭합니다. 쿼리 및 뷰 디자이너가 쿼리 디자이너 모드로 열리면 **결과** 창을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [쿼리 및 뷰 디자이너를 열고 &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [쿼리 및 뷰 디자이너를 열려면 &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [SQL 편집기&#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7209dc323011663a9ce07d50fb940941ba4c4a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27fe1e6f8ba6663cc6401fbff082edfe6b702a3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207243"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 이벤트 클래스
   Lock:Deadlock 이벤트 클래스는 잠금을 얻으려고 시도하는 동안 교착 상태가 발생하여 이 시도가 취소될 때 생성됩니다.  

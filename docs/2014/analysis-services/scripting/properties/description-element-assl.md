@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Description element
 ms.assetid: 34d67e7c-e79a-429b-8cc3-6ca13b9cf9c3
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43e54f7c6f72703c0ddaff7776594fe0ac80ac64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dadef861a5b54dafddd6f2dcf3072cd4e0d510ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194133"
 ---
 # <a name="description-element-assl"></a>Description 요소(ASSL)
   부모 요소에 대한 설명을 포함합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36094053"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [AttributePermission](../objects/attributepermission-element-assl.md), [CalculationProperty](../objects/calculationproperty-element-assl.md), [CellPermission](../objects/cellpermission-element-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimensionPermission](../data-type/permission-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [Trace](../objects/trace-element-assl.md), [Translation](../objects/translation-element-assl.md)|  
+|부모 요소|[동작](../objects/action-element-assl.md), [집계](../objects/aggregation-element-assl.md)를 [AggregationDesign](../objects/aggregationdesign-element-assl.md)를 [어셈블리](../objects/assembly-element-assl.md)를 [AttributePermission](../objects/attributepermission-element-assl.md), [ CalculationProperty](../objects/calculationproperty-element-assl.md), [CellPermission](../objects/cellpermission-element-assl.md), [큐브](../objects/cube-element-assl.md), [CubeDimensionPermission](../data-type/permission-data-type-assl.md)하십시오 [데이터베이스](../objects/database-element-assl.md) 를 [데이터 원본](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md)를 [차원](../objects/dimension-element-assl.md)를 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [계층](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md)를 [수준](../objects/level-element-assl.md)를 [MdxScript](../objects/mdxscript-element-assl.md)를 [측정값](../objects/measure-element-assl.md)를 [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)를 [MiningStructure](../objects/miningstructure-element-assl.md)하십시오 [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [ 파티션](../objects/partition-element-assl.md), [권한을](../data-type/permission-data-type-assl.md), [관점](../objects/perspective-element-assl.md)를 [역할](../objects/role-element-assl.md)를 [Server](../objects/server-element-assl.md), [ 추적](../objects/trace-element-assl.md), [번역](../objects/translation-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -69,7 +69,7 @@ ms.locfileid: "36094053"
 -   값은 제어 문자를 포함할 수 없습니다. `Description` 요소 값에 제어 문자가 포함될 경우 이러한 문자는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  에 의해 암시적으로 제거됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Name 요소 &#40;ASSL&#41;](name-element-assl.md)   
+ [요소의 이름을 &#40;ASSL&#41;](name-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

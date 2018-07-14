@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityActual
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4a9986ef1ab5f33be99233203e8b62cc12c96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e9caf0f1fac0108298b7c0f14fae9c266a19de9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166154"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityActual 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 Windows 서비스가 실행되고 있는 ID입니다. 읽기 전용입니다.  
@@ -43,7 +43,7 @@ public string WindowsServiceIdentityActual;
 ```  
   
 ## <a name="property-values"></a>속성 값  
- A `String` 보고서 서버 Windows 서비스가 실행 되 고 있는 id를 포함 하는 개체입니다.  
+ `String` 보고서 서버 Windows 서비스를 실행 하는 id가 들어 있는 개체입니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

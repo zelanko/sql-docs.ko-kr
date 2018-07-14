@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
 - filters [SQL Server replication], about filtering
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03f3d439b4ef4c8d5ea4eb18d634a608ba1ecab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d1f99411e4cdfceebab0d612f45aa8256719281e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193376"
 ---
 # <a name="filter-published-data"></a>게시된 데이터 필터링
   테이블 아티클을 필터링하여 게시할 데이터 파티션을 만들 수 있습니다. 게시된 데이터를 필터링하여 다음 작업을 수행할 수 있습니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "36173139"
 |SQL Server 7.0 병합 게시의 모든 열|SQL Server 7.0 병합 게시에서는 열을 필터링할 수 없습니다.|  
 |타임스탬프|업데이트할 수 있는 구독을 허용하는 SQL Server 7.0 스냅숏 또는 트랜잭션 게시|  
   
- <sup>1</sup> 병합 게시에 테이블을 게시 하 고 해당 테이블이 이미 데이터 형식의 열을 포함 하는 경우 `uniqueidentifier` 와 `ROWGUIDCOL` 속성 집합에 복제 라는 추가 열 만드는대신이열을사용할수있습니다**rowguid**합니다. 이 경우 기존 열을 게시해야 합니다.  
+ <sup>1</sup> 병합 게시에서 테이블을 게시 하는 경우 해당 테이블 데이터 형식의 열이 이미 포함 `uniqueidentifier` 사용 하 여는 `ROWGUIDCOL` 속성 집합을 복제 라는 추가 열 만드는대신이열을사용할수있습니다**rowguid**합니다. 이 경우 기존 열을 게시해야 합니다.  
   
  열 필터를 정의하거나 수정하려면 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)의 "HOST_NAME()으로 필터링" 섹션을 참조하십시오.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36173139"
   
 -   트랜잭션 복제를 사용하면 인덱싱된 뷰를 뷰나 테이블로 복제할 수 있습니다. 뷰를 테이블로 복제하면 테이블의 열을 필터링할 수 없습니다.  
   
- 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 실행을 의도적으로 제한 `sp_replcmds` (필터 실행 대상)는 데이터베이스 소유자 (`dbo`). `dbo` 데이터베이스 간 권한이 없습니다. `sp_replcmds` 논리는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 논리의 실행을 제한 하는 악성 `dbo` 이 실행 경로 가로채지 못하도록 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
+ 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의도적으로의 실행을 제한 `sp_replcmds` (필터 실행 대상)는 데이터베이스 소유자 (`dbo`). `dbo` 데이터베이스 간 권한이 없습니다. `sp_replcmds` 논리는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 논리의 실행을 제한 하도록 악성 `dbo` 이 실행 경로 가로채지 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  

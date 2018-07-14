@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273089"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
-  와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 참조 데이터의 마스터 목록을 Excel을 사용 하는 조직에 있는 모든 사용자에 게 배포할 수 있습니다. 데이터 사용자의 보기 및 업데이트 권한은 보안에 따라 결정됩니다.  
+  사용 하 여 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 참조 데이터의 마스터 목록을 Excel을 사용 하는 조직에서 모든 사용자에 게 배포할 수 있습니다. 데이터 사용자의 보기 및 업데이트 권한은 보안에 따라 결정됩니다.  
   
  MDS의 필터링된 데이터 목록을 Excel에 로드하여 다른 데이터와 같은 방식으로 사용할 수 있습니다. 작업이 끝나면 데이터를 다시 중앙 방식으로 저장되는 MDS에 게시할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36091099"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 DQS(Data Quality Services)를 사용하여 데이터를 MDS에 로드하기 전에 일치시킬 수 있습니다. 이렇게 하면 MDS에서 데이터가 중복되지 않도록 방지하는 데 도움이 됩니다.  
   
 > [!IMPORTANT]  
->  계속 사용할 수 있습니다는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 의 Master Data Services 추가 기능을 Excel 용 Master Data Services 및 Data Quality Services를 업그레이드 한 후의 SP1 버전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 합니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. 다운로드할 수 있습니다는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Master Data Services 추가 기능을 for Excel에서 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)합니다.  
+>  계속 사용 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 의 Master Data Services 추가 기능에 Excel 용 Master Data Services 및 Data Quality Services를 업그레이드 한 후 SP1 버전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 합니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. 다운로드할 수 있습니다 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Master Data Services 추가 기능에 Excel에 대 한 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)합니다.  
   
 ## <a name="terms"></a>용어  
  추가 기능 사용과 관련해서는 다음과 같은 용어가 사용됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36091099"
 |다른 사용자와 바로 가기 공유|[바로 가기 쿼리 파일을 메일로 보내기&#40;Excel용 MDS 추가 기능&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |멤버에 대해 수행된 모든 변경 내용 보기|[멤버에 대한 모든 주석 또는 트랜잭션 보기&#40;Excel용 MDS 추가 기능&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 |새 데이터를 게시하기 전에 중복된 데이터가 있는지 확인|[유사한 데이터 일치&#40;Excel용 MDS 추가 기능&#41;](match-similar-data-mds-add-in-for-excel.md)|  
-|워크시트의 데이터를 MDS 저장소에 게시|[Excel에서 MDS로 데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|워크시트의 데이터를 MDS 저장소에 게시|[Excel에서 MDS로 데이터를 게시 &#40;MDS 추가 기능에 Excel 용&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |워크시트의 데이터가 포함된 새 엔터티 만들기 (관리자 전용)|[엔터티 만들기&#40;Excel용 MDS 추가 기능&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |제한된 목록으로도 알려진 도메인 기반 특성 만들기 (관리자 전용)|[도메인 기반 특성 만들기&#40;Excel용 MDS 추가 기능&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Excel용 Master Data Services 추가 기능에서 데이터를 로드하고 게시하기 위한 속성을 설정합니다. (관리자 전용)|[Excel용 Master Data Services 추가 기능의 속성 설정](setting-properties-for-master-data-services-add-in-for-excel.md)|  
@@ -73,7 +73,7 @@ ms.locfileid: "36091099"
   
 -   [Excel용 MDS 추가 기능의 데이터 품질 일치](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
--   [데이터를 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [모델 작성&#40;Excel용 MDS 추가 기능&#41;](building-a-model-mds-add-in-for-excel.md)  
   

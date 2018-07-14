@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 805dc8effdbd93ddddb81dde4203fff7e808cd36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8139c0bbf423354bd89a413b9fe2f4b13486fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206753"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>보조 선택적 XML 인덱스 만들기, 변경 및 삭제
   새 보조 선택적 XML 인덱스를 만들거나 기존 보조 선택적 XML 인덱스를 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36093009"
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>방법: 보조 선택적 XML 인덱스 만들기  
  **Transact-SQL을 사용하여 보조 선택적 XML 인덱스 만들기**  
- CREATE XML INDEX 문을 호출하여 보조 선택적 XML 인덱스를 만듭니다. 자세한 내용은 참조 하십시오. [CREATE XML INDEX &#40;선택적 XML 인덱스&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/합니다.  
+ CREATE XML INDEX 문을 호출하여 보조 선택적 XML 인덱스를 만듭니다. 자세한 내용은 참조 하세요. [CREATE XML INDEX &#40;선택적 XML 인덱스&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/입니다.  
   
  **예제**  
   
@@ -52,7 +52,7 @@ FOR
  **Transact-SQL을 사용하여 보조 선택적 XML 인덱스 변경**  
  1.  DROP INDEX 문을 호출하여 기존의 보조 선택적 XML 인덱스를 삭제합니다. 자세한 내용은 [DROP INDEX&#40;선택적 XML 인덱스&#41;](../indexes/indexes.md)를 참조하세요.  
   
-2.  CREATE XML INDEX 문을 호출하여 원하는 옵션으로 인덱스를 다시 만듭니다. 자세한 내용은 참조 하십시오. [CREATE XML INDEX &#40;선택적 XML 인덱스&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/합니다.  
+2.  CREATE XML INDEX 문을 호출하여 원하는 옵션으로 인덱스를 다시 만듭니다. 자세한 내용은 참조 하세요. [CREATE XML INDEX &#40;선택적 XML 인덱스&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/입니다.  
   
  **예제**  
   

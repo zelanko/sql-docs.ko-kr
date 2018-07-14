@@ -1,5 +1,5 @@
 ---
-title: 합계, 집계 및 기본 제공 컬렉션 (보고서 작성기 및 SSRS)에 대 한 식 범위 | Microsoft Docs
+title: 합계, 집계 및 기본 제공 컬렉션 (보고서 작성기 및 SSRS)의 식 범위 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253515"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위(보고서 작성기 및 SSRS)
   식을 작성할 때 여러 컨텍스트에서 *범위* 라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  
@@ -166,14 +166,14 @@ ms.locfileid: "36091462"
   
   
 ##  <a name="Nulls"></a> 셀에 Null 또는 0 값 표시하지 않기  
- 많은 보고서의 범위가 그룹인 계산에서 0 또는 Null 값이 있는 셀이 여러 개 생성됩니다. 이러한 경우 보고서를 좀 더 단순하게 하려면 집계 값이 0인 경우 공백을 반환하는 식을 추가할 수 있습니다. 자세한 내용은의 "예제를 표시 하지 않으려면" Null 또는 0 값 참조 [식 예제 &#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)합니다.  
+ 많은 보고서의 범위가 그룹인 계산에서 0 또는 Null 값이 있는 셀이 여러 개 생성됩니다. 이러한 경우 보고서를 좀 더 단순하게 하려면 집계 값이 0인 경우 공백을 반환하는 식을 추가할 수 있습니다. 자세한 내용은 "예제는 표시 하지 않으려면 Null 또는 0 값"를 참조 하세요 [식 예제 &#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)합니다.  
   
   
   
 ## <a name="see-also"></a>관련 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [재귀 계층 구조 그룹 생성 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [텍스트 및 자리 표시자 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   

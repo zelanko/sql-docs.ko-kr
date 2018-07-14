@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244025"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
   이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "36092098"
   
 1.  기존 테이블 외부에서 다이어그램 디자이너를 마우스 오른쪽 단추로 클릭한 다음 **새 테이블**을 선택합니다.  
   
-2.  에 **이름 선택** 대화 상자를 클릭 **확인** 기본 이름을 그대로 `Table1`합니다.  
+2.  에 **이름 선택** 대화 상자, 클릭 **확인** 기본 이름을 적용 `Table1`합니다.  
   
      새 테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 나타납니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36092098"
   
 5.  **파일** 메뉴에서 **Diagram1 저장**을 클릭합니다.  
   
-6.  에 **이름 선택** 대화 상자를 클릭 **확인** 기본 이름을 그대로 `Diagram1`합니다.  
+6.  에 **이름 선택** 대화 상자, 클릭 **확인** 기본 이름을 적용 `Diagram1`합니다.  
   
 7.  **을 데이터베이스에 저장한다는 메시지가 포함된** 저장 `Table1` 대화 상자가 나타납니다. **예**를 클릭합니다.  
   
@@ -211,10 +211,10 @@ ms.locfileid: "36092098"
 -   비트맵으로 다이어그램 복사  
   
 ## <a name="see-also"></a>관련 항목  
- [다이어그램에 표시 되는 정보의 양 사용자 지정 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [다이어그램에 표시 된 정보의 양 사용자 지정 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램 디자이너 설정 &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [다이어그램에 테이블 추가 &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [다이어그램에서 테이블 간의 관계 만들기 &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [다이어그램에서 테이블 간의 관계를 만들 &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [XML 인덱스 만들기](../../relational-databases/xml/create-xml-indexes.md)   
  [데이터베이스 다이어그램의 이미지를 클립보드로 복사 &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [다이어그램 레이아웃 작업&#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  

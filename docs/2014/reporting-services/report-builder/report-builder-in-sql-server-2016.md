@@ -1,5 +1,5 @@
 ---
-title: 보고서 작성기에서 SQL Server 2014 | Microsoft Docs
+title: SQL Server 2014의에서 보고서 작성기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261929"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014의 보고서 작성기
   보고서 작성기는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Microsoft Office 환경에서 작업하는 것을 선호하는 비즈니스 사용자를 위한 보고서 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. 보고서 작성기에서 보고서를 미리 보거나 다른 사람이 보고서를 실행할 수 있도록 보고서 서버 또는 SharePoint 통합 모드의 보고서 서버에 게시할 수 있습니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "36092129"
   
 ##  <a name="JumpStartReptCreation"></a> 빠른 보고서 만들기  
   
--   **시작 보고서 withreport 부품** 팀의 다른 사용자가 만든 합니다. 보고서 파트는 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에 별도로 게시된 보고서 항목이며 다른 보고서에서 다시 사용할 수 있습니다. 테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 보고서 파트로 게시할 수 있습니다.  
+-   **사용자 보고서 withreport 파트 시작** 팀의 누군가에 의해 만들어지면 합니다. 보고서 파트는 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에 별도로 게시된 보고서 항목이며 다른 보고서에서 다시 사용할 수 있습니다. 테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 보고서 파트로 게시할 수 있습니다.  
   
--   **공유 데이터 집합으로 시작** 팀의 다른 사용자가 만든 합니다. 공유 데이터 집합은 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에 저장된 공유 데이터 원본을 기반으로 하는 쿼리입니다.  
+-   **공유 데이터 집합을 사용 하 여 시작** 팀의 누군가에 의해 만들어지면 합니다. 공유 데이터 집합은 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에 저장된 공유 데이터 원본을 기반으로 하는 쿼리입니다.  
   
 -   **테이블, 행렬 또는 차트 마법사를 사용하여 보고서를 작성**합니다. 데이터 원본 연결을 선택하고, 필드를 끌어다 놓는 방법으로 데이터 집합 쿼리를 만들고, 레이아웃과 스타일을 선택하고, 보고서를 사용자 지정합니다.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "36092129"
   
 ##  <a name="DesignRept"></a> 보고서 디자인  
   
--   **테이블, 행렬, 차트 및 자유 형식 보고서 레이아웃으로 보고서를 만듭니다.** 열 중심의 데이터에 대한 테이블 보고서, 요약된 데이터에 대한 행렬 보고서(예: 크로스탭 또는 피벗 테이블 보고서), 그래픽 데이터에 대한 차트 보고서, 그 외 모든 데이터에 대한 자유 형식 보고서를 만듭니다. 목록, 그래픽, 동적 웹 기반 응용 프로그램을 위한 컨트롤 등과 함께 다른 보고서 및 차트를 보고서에 포함할 수 있습니다.  
+-   **테이블, 행렬, 차트 및 자유 형식 보고서 레이아웃을 사용 하 여 보고서를 만듭니다.** 열 중심의 데이터에 대한 테이블 보고서, 요약된 데이터에 대한 행렬 보고서(예: 크로스탭 또는 피벗 테이블 보고서), 그래픽 데이터에 대한 차트 보고서, 그 외 모든 데이터에 대한 자유 형식 보고서를 만듭니다. 목록, 그래픽, 동적 웹 기반 응용 프로그램을 위한 컨트롤 등과 함께 다른 보고서 및 차트를 보고서에 포함할 수 있습니다.  
   
 -   **다양한 데이터 원본을 사용하여 보고서를 작성합니다.** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]관리 데이터 공급자, OLE DB 공급자 또는 ODBC 데이터 원본이 있는 데이터 원본 유형의 데이터를 사용하여 보고서를 작성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion 및 기타 데이터베이스에서 관계형 및 다차원 데이터를 사용하는 보고서를 만들 수 있습니다. XML 데이터 처리 확장 프로그램을 사용하면 어떠한 XML 데이터 원본에서도 데이터를 검색할 수 있습니다. 테이블 반환 함수를 사용하여 사용자 지정 데이터 원본을 디자인할 수 있습니다.  
   
--   **기존 보고서를 수정합니다.** 보고서 작성기를 사용 하 여 사용자 지정 하 고 업데이트할 수에서 만든 보고서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너입니다.  
+-   **기존 보고서를 수정합니다.** 보고서 작성기를 사용 하 여 사용자 지정 하 고 업데이트할 수에서 생성 된 보고서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너입니다.  
   
--   **데이터를 수정** 필터링, 그룹화 및 데이터를 정렬 하거나 수식 또는 식을 추가 합니다.  
+-   **데이터 수정** 필터링, 그룹화 및 데이터를 정렬 하거나 수식 또는 식을 추가 합니다.  
   
 -   **차트, 계기, 스파크라인 및 표시기** 를 추가하여 데이터를 시각적 형식으로 요약하고 많은 양의 집계 정보를 한눈에 볼 수 있게 표시합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36092129"
  [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  보고서 작성기 설명서에서 다루는 주요 개념을 정의합니다.  
   
- [보고서 디자인 보기 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
+ [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
  보고서 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
  [공유 데이터 집합 디자인 뷰 &#40;보고서 작성기&#41;](shared-dataset-design-view-report-builder.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "36092129"
  [바로 가기 키 &#40;보고서 작성기&#41;](keyboard-shortcuts-report-builder.md)  
  보고서 작성기의 보고서를 탐색 및 디자인하는 데 사용할 수 있는 단축 키에 대해 간단히 설명합니다.  
   
- [보고서 작성기 시작 &#40;보고서 작성기&#41;](start-report-builder.md)  
- 두 개의 서로 다른 버전의 보고서 작성기를 시작 하는 방법에 설명 합니다: 독립 실행형 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]합니다.  
+ [보고서 작성기를 시작 &#40;보고서 작성기&#41;](start-report-builder.md)  
+ 두 가지 버전의 보고서 작성기를 시작 하는 방법에 설명 합니다: 독립 실행형 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]합니다.  
   
   

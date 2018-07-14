@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187720"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 응용 프로그램 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36172108"
   
 -   개별 사용자가 소유한 표준 구독  
   
- 작업을 취소하면 보고서 서버에서 실행 중인 프로세스만 취소됩니다. 보고서 서버는 다른 컴퓨터에서 발생하는 데이터 처리를 관리하지 않으므로 이후에 다른 시스템에서 분리되는 쿼리 프로세스는 수동으로 취소해야 합니다. 실행하는 데 시간이 너무 오래 걸리는 쿼리는 자동으로 종료되도록 쿼리 제한 시간 값을 지정하세요. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)를 참조하세요. 보고서를 일시적으로 중지 하는 방법에 대 한 자세한 내용은 참조 [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)합니다.  
+ 작업을 취소하면 보고서 서버에서 실행 중인 프로세스만 취소됩니다. 보고서 서버는 다른 컴퓨터에서 발생하는 데이터 처리를 관리하지 않으므로 이후에 다른 시스템에서 분리되는 쿼리 프로세스는 수동으로 취소해야 합니다. 실행하는 데 시간이 너무 오래 걸리는 쿼리는 자동으로 종료되도록 쿼리 제한 시간 값을 지정하세요. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)를 참조하세요. 보고서를 일시적으로 중지 하는 방법에 대 한 자세한 내용은 참조 하세요. [Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)합니다.  
   
 > [!NOTE]  
 >  간혹 프로세스를 취소하기 위해 서버를 다시 시작해야 할 수도 있습니다. SharePoint 모드의 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 호스팅하는 응용 프로그램 풀을 다시 시작해야 할 수 있습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../report-server/start-and-stop-the-report-server-service.md)를 참조하세요.  
@@ -97,12 +97,12 @@ ms.locfileid: "36172108"
   
 5.  보고서 관리자에서 보고서의 구독 탭 또는 **내 구독**에서 데이터 기반 구독을 삭제합니다.  
   
-6.  RSReportServer.config 파일에서 해당 구독을 삭제 한 후 `IsNotificationService` 로 설정 하 고 `True`합니다.  
+6.  RSReportServer.config 파일에서 구독을 삭제 한 후 `IsNotificationService` 로 설정 하 고 `True`입니다.  
   
 7.  파일을 저장합니다.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>작업 상태 검색을 위한 빈도 설정 구성  
- 실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. `RunningRequestsDbCycle` 설정은 보고서 서버가 실행 중인 프로세스에 대 한 검색 하는 빈도 지정 합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. `RunningRequestsAge` 설정은 지정 된 작업에서 전환 되는 간격 실행을 처음 사용 합니다.  
+ 실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. `RunningRequestsDbCycle` 설정은 보고서 서버 실행 중인 프로세스에 대 한 검색 하는 빈도 지정 합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. `RunningRequestsAge` 작업에서으로 전환 되는 간격을 지정 하는 설정을 실행 하는 새 합니다.  
   
 ##  <a name="bkmk_sharepoint"></a> 작업 보기 및 취소(SharePoint 모드)  
  SharePoint 모드 배포에서 작업 관리는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 SharePoint 중앙 관리를 사용하여 완료됩니다.  
