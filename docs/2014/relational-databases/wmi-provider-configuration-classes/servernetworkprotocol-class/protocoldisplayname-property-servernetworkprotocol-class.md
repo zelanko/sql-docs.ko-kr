@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e6c4a62d85fcf8caad2cb9edd403a9ec6dbb038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 881cad1038e2f583c9e4462c8928f880c47d03e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215173"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 속성(ServerNetworkProtocol 클래스)
   서버 네트워크 프로토콜의 표시 이름을 가져옵니다.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerNetworkProtocol 클래스](servernetworkprotocol-class.md) 개체의 인스턴스에 사용 되는 네트워크 프로토콜을 나타내는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ A [ServerNetworkProtocol 클래스](servernetworkprotocol-class.md) 인스턴스에서 사용 하는 네트워크 프로토콜을 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜의 표시 이름을 지정하는 문자열 값입니다.  

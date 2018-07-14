@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5d812d0eea48c4f2b54352f61a176462b280071a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201963"
 ---
 # <a name="members-element-xmla"></a>Members 요소(XMLA)
-  컬렉션을 포함 [멤버](member-element-xmla.md) 부모에 포함 된 요소 [CrossProduct](crossproduct-element-xmla.md) 요소입니다.  
+  컬렉션을 포함 [멤버](member-element-xmla.md) 요소는 부모에서 포함할 [CrossProduct](crossproduct-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,10 +71,10 @@ ms.locfileid: "36172966"
 |계층|필요한 `String` 특성입니다. `Members` 요소에 포함된 멤버가 속하는 계층의 이름입니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 클라이언트 응용 프로그램 설정 하는 경우는 `AxisFormat` 속성을 *ClusterFormat*, 각 축의 멤버가 각 클러스터는 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 나타내는 클러스터로 나누어집니다. 각 `Axis` 요소는 하나 이상의 `CrossProduct` 요소로 구성됩니다. 모든 `CrossProduct`요소에는 축의 각 계층에 대한 `Members`요소가 포함됩니다. `Members` 요소는 교차곱에 포함되어 있는 지정된 계층의 각 멤버에 대해 하나의 `Member` 요소를 포함합니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 `AxisFormat` 속성을 *ClusterFormat*, 각 축의 멤버가 클러스터로 나누어집니다 각 클러스터는 각 계층의 멤버를에서 정렬 된 집합 간의 교차곱을 나타냅니다. 각 `Axis` 요소는 하나 이상의 `CrossProduct` 요소로 구성됩니다. 모든 `CrossProduct`요소에는 축의 각 계층에 대한 `Members`요소가 포함됩니다. `Members` 요소는 교차곱에 포함되어 있는 지정된 계층의 각 멤버에 대해 하나의 `Member` 요소를 포함합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 구조는 `Members` 요소는 클라이언트를 지정 하는 경우 *ClusterFormat* 에 대 한는 `AxisFormat` 축에 대 한 다음과 같은 멤버를 제공 하는 XMLA 속성:  
+ 다음 예제에서는의 구조를 보여 줍니다.는 `Members` 클라이언트를 지정 하는 경우 요소 *ClusterFormat* 에 대 한는 `AxisFormat` XMLA 속성에는 축의 멤버가 다음과 같은:  
   
 ||||||  
 |-|-|-|-|-|  

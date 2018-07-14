@@ -1,5 +1,5 @@
 ---
-title: Analysis Services에서 서버 속성 구성 | Microsoft Docs
+title: Analysis Services의 서버 속성 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247353"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services에서 서버 속성 구성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정할 수 있는 자체 구성 속성이 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36093848"
  SQL Server Management Studio의 속성 페이지에는 사용 가능한 속성의 하위 집합이 포함되어 있으며 수정할 가능성이 높은 속성만 표시됩니다. 전체 속성 집합은 msmdsrv.ini 파일에 있습니다.  
   
 > [!NOTE]  
->  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성에 대해 설명하지 않습니다. 배포 구성에 대 한 자세한 내용은 참조 [솔루션 배포에 대 한 구성 설정 지정](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)합니다.  
+>  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성에 대해 설명하지 않습니다. 배포 구성에 대 한 자세한 내용은 참조 하세요. [솔루션 배포에 대 한 구성 설정 지정](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)합니다.  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Management Studio에서 구성 속성 보기 또는 설정  
   

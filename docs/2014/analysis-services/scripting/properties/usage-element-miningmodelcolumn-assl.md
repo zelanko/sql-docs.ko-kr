@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265305"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Usage 요소(MiningModelColumn)(ASSL)
-  설명 어떻게 부모에 연결 된 열 [MiningStructure](../objects/miningstructure-element-assl.md) 사용 됩니다.  
+  에 대해 설명 하는 방법을 부모에 연결된 된 열 [MiningStructure](../objects/miningstructure-element-assl.md) 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36182336"
 |*입력*|열이 입력 열입니다.|  
 |*Predict*|열이 예측 열입니다.|  
 |*PredictOnly*|열이 예측 열 전용입니다.|  
-|*없음*|열이 모델에서 사용되지 않습니다. **경고:** Usage 값은 "None", Analysis Services 보내지 않습니다 값 서버에 기본적으로, 따라서 사용 특성은 요청/응답에 포함 되지 않습니다.|  
+|*없음*|열이 모델에서 사용되지 않습니다. **경고:** Usage 값이 "None" 인 경우 Analysis Services 보내지 않도록 모든 값 서버에 기본적으로; 따라서 사용 특성은 요청/응답에 포함 되지 않습니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `Usage`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>입니다.  
   

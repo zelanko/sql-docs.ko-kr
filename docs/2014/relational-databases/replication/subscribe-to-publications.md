@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
 helpviewer_keywords:
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 715fd5e5e88542b0f70ac0917a0931960f6f9c7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: afb416dad396a55040f8534d76638143bd6dc18d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221343"
 ---
 # <a name="subscribe-to-publications"></a>게시 구독
   구독은 게시에 있는 데이터 및 데이터베이스 개체 복사본에 대한 요청입니다. 구독은 어떤 게시를 언제 어디서 받을 것인지를 정의합니다. 구독을 계획하는 경우 에이전트 처리를 수행할 위치를 고려합니다. 선택한 구독 유형에 따라 에이전트가 실행되는 위치가 결정됩니다. 밀어넣기 구독을 사용하면 병합 에이전트 또는 배포 에이전트가 배포자에서 실행되고 끌어오기 구독을 사용하면 에이전트가 구독자에서 실행됩니다. 구독을 만든 후에는 해당 유형을 변경할 수 없습니다.  

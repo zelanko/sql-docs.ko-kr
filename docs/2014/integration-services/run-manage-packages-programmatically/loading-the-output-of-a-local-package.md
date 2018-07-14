@@ -20,16 +20,16 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8a29a37efbfeaa6765b91dc4a345fe316774c3be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7b0056def4b62d7305fe5ac78db93ba15fb22a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254635"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>로컬 패키지의 출력 로드
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 응용 프로그램에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 응용 프로그램이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 `Microsoft.SqlServer.Dts.DtsClient` 의 특수화 된 구현을 포함 하는 네임 스페이스에는 `IDbConnection`, `IDbCommand`, 및 **IDbDataParameter** 에서 인터페이스는 **System.Data** 네임 스페이스입니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 응용 프로그램에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 응용 프로그램이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은는 `Microsoft.SqlServer.Dts.DtsClient` 의 특수화 된 구현을 포함 하는 네임 스페이스를 `IDbConnection`를 `IDbCommand`, 및 **IDbDataParameter** 에서 인터페이스를 **System.Data** 네임 스페이스입니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.  
   
 > [!NOTE]  
 >  이 항목에서 설명하는 절차를 수행하려면 데이터 흐름 태스크와 부모 개체의 DelayValidation 속성이 기본값인 **False**로 설정되어 있어야 합니다.  
@@ -41,16 +41,16 @@ ms.locfileid: "36172435"
   
 1.  패키지에서 DataReader 대상이 클라이언트 응용 프로그램으로 읽어 올 출력을 받도록 구성합니다. DataReader 대상 이름은 나중에 클라이언트 응용 프로그램에서 사용되므로 이 대상에 알기 쉬운 이름을 지정합니다. 또한 DataReader 대상의 이름을 적어 두어야 합니다.  
   
-2.  개발 프로젝트에 대 한 참조를 설정는 `Microsoft.SqlServer.Dts.DtsClient` 어셈블리를 찾아 네임 스페이스 **Microsoft.SqlServer.Dts.DtsClient.dll**합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C#을 사용 하 여 코드에 네임 스페이스를 가져올 `Using` 또는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 문.  
+2.  개발 프로젝트 대 한 참조를 설정 합니다 `Microsoft.SqlServer.Dts.DtsClient` 어셈블리를 찾아 네임 스페이스 **Microsoft.SqlServer.Dts.DtsClient.dll**합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C#을 사용 하 여 네임 스페이스를 코드로 가져옵니다 `Using` 또는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` 문입니다.  
   
-3.  코드에서 형식의 개체를 만들 `DtsClient.DtsConnection` 에 필요한 명령줄 매개 변수를 포함 하는 연결 문자열 **dtexec.exe** 패키지를 실행 합니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요. 그런 다음 이 연결 문자열을 사용하여 연결을 엽니다. **dtexecui** 유틸리티를 사용하여 필요한 연결 문자열을 시각적으로 만들 수도 있습니다.  
+3.  코드에서 형식의 개체를 만듭니다 `DtsClient.DtsConnection` 에 필요한 명령줄 매개 변수를 포함 하는 연결 문자열을 사용 하 여 **dtexec.exe** 패키지를 실행 합니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요. 그런 다음 이 연결 문자열을 사용하여 연결을 엽니다. **dtexecui** 유틸리티를 사용하여 필요한 연결 문자열을 시각적으로 만들 수도 있습니다.  
   
     > [!NOTE]  
     >  예제 코드에서는 `/FILE <path and filename>` 구문을 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 `/SQL <package name>` 구문을 사용하여 MSDB 데이터베이스에서 패키지를 로드하거나 `/DTS \<folder name>\<package name>` 구문을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
   
 4.  이전에 만든 `DtsClient.DtsCommand`을 사용하는 `DtsConnection` 형식의 개체를 만들고 이 개체의 `CommandText` 속성을 패키지의 DataReader 대상 이름으로 설정합니다. 그런 다음 이 명령 개체의 `ExecuteReader` 메서드를 호출하여 패키지 결과를 새 DataReader로 로드합니다.  
   
-5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 때문에 이러한 변수를 정의 해야는 **DtsClient** 네임 스페이스를 사용 하 여 사용 하기 전에 `DtsDataParameter` 클라이언트 응용 프로그램의에서 개체입니다. **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭하여 **네임스페이스** 열을 표시해야 할 수도 있습니다. 클라이언트 코드에서 `DtsDataParameter`의 `Parameters` 컬렉션에 `DtsCommand`를 추가할 때는 변수 이름에서 DtsClient 네임스페이스 참조를 생략합니다. 예를 들어:  
+5.  필요할 경우 `DtsDataParameter` 개체에서 `DtsCommand` 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 패키지에 이러한 변수를 정의 해야 합니다는 **DtsClient** 네임 스페이스를 사용 하 여 사용 하기 전에 `DtsDataParameter` 클라이언트 응용 프로그램에서 개체입니다. **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭하여 **네임스페이스** 열을 표시해야 할 수도 있습니다. 클라이언트 코드에서 `DtsDataParameter`의 `Parameters` 컬렉션에 `DtsCommand`를 추가할 때는 변수 이름에서 DtsClient 네임스페이스 참조를 생략합니다. 예를 들어:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -68,7 +68,7 @@ ms.locfileid: "36172435"
 ## <a name="example"></a>예제  
  다음 예에서는 단일 집계 값을 계산하고 해당 값을 DataReader 대상에 저장하는 패키지를 실행한 다음 DataReader에서 이 값을 읽어 Windows Form의 입력란에 표시합니다.  
   
- 패키지의 출력을 클라이언트 응용 프로그램으로 로드할 때는 매개 변수를 사용할 필요가 없습니다. 매개 변수를 사용 하지 않을 경우에 변수를 사용을 생략할 수 있습니다는 **DtsClient** 네임 스페이스를 사용 하는 코드를 생략 하 고는 `DtsDataParameter` 개체입니다.  
+ 패키지의 출력을 클라이언트 응용 프로그램으로 로드할 때는 매개 변수를 사용할 필요가 없습니다. 매개 변수를 사용 하지 않을 경우에 변수를 사용 하 여를 생략할 수 있습니다 합니다 **DtsClient** 네임 스페이스를 사용 하는 코드를 생략 하 고는 `DtsDataParameter` 개체입니다.  
   
 #### <a name="to-create-the-test-package"></a>테스트 패키지를 만들려면  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36172435"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  클릭 `Parameters` 및에 **쿼리 매개 변수 설정** 대화 상자에서 dtsclient:: Country 변수에 Parameter0, 쿼리에서 단일 입력된 매개 변수를 매핑합니다.  
+6.  클릭 `Parameters` 고 합니다 **쿼리 매개 변수 설정** 대화 상자 단일 입력된 매개 변수인 parameter0을, DtsClient::Country 변수에 합니다.  
   
 7.  데이터 흐름에 집계 변환을 추가하고 OLE DB 원본의 출력을 변환에 연결합니다. 집계 변환 편집기를 열고 이 변환에서 모든 입력 열(*)에 대해 "Count all" 연산을 수행하고 집계된 값을 CustomerCount라는 별칭으로 출력하도록 구성합니다.  
   
@@ -98,15 +98,15 @@ ms.locfileid: "36172435"
   
 1.  새 Windows Forms 응용 프로그램을 만듭니다.  
   
-2.  에 대 한 참조 추가 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스에 있는 동일한 이름의 어셈블리를 찾아 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**합니다.  
+2.  에 대 한 참조를 추가 합니다 `Microsoft.SqlServer.Dts.DtsClient` 네임 스페이스에 있는 동일한 이름의 어셈블리를 찾아 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**합니다.  
   
 3.  다음 예제 코드를 복사하여 폼의 코드 모듈에 붙여 넣습니다.  
   
-4.  값을 수정 된 `dtexecArgs` 필요에 따라 변수를 포함 하 여 필요한 명령줄 매개 변수 **dtexec.exe** 패키지를 실행 합니다. 예제 코드는 파일 시스템에서 패키지를 로드합니다.  
+4.  값을 수정 합니다 `dtexecArgs` 필요에 따라 변수를 포함 하 여 필요한 명령줄 매개 변수 **dtexec.exe** 패키지를 실행 하려면. 예제 코드는 파일 시스템에서 패키지를 로드합니다.  
   
-5.  값을 수정 된 `dataReaderName` 필요에 따라 변수를 포함 패키지의 DataReader 대상의 이름입니다.  
+5.  값을 수정 합니다 `dataReaderName` 필요에 따라 변수를 포함 된 패키지의 DataReader 대상의 이름입니다.  
   
-6.  폼에 단추와 입력란을 추가합니다. 샘플 코드를 사용 하 여 `btnRun` 단추 이름으로 및 `txtResults` 입력란의 이름으로 합니다.  
+6.  폼에 단추와 입력란을 추가합니다. 샘플 코드를 사용 하 여 `btnRun` 단추의 이름으로 및 `txtResults` 입력란의 이름으로 합니다.  
   
 7.  응용 프로그램을 실행하고 단추를 클릭합니다. 그러면 패키지가 실행되는 동안 잠깐 일시 중지된 후 패키지에서 계산한 집계 값, 즉 캐나다의 고객 수가 폼의 입력란에 표시됩니다.  
   
@@ -298,7 +298,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

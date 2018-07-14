@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a57c6cc8d08d64c8f2498125f7df952c70adfd6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab952dba40b28ed0575b6fdb8da442ea6ebeb770
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274489"
 ---
 # <a name="lesson-8-defining-actions"></a>8단원: 동작 정의
   이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 동작을 정의하는 방법을 알아봅니다. 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 저장되며 클라이언트 응용 프로그램에 통합되고 사용자가 시작할 수 있는 MDX(Multidimensional Expressions) 문입니다.  

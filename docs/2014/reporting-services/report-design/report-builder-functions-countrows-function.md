@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a8b972b629608cb1c93f1e0cfde6cf305184f3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 86b8b79fc5bcac1842a4fae82535afdff06c305e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280269"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 함수(보고서 작성기 및 SSRS)
   Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.  
@@ -45,7 +45,7 @@ CountRows(scope, recursive)
  반환 된 `Integer`합니다.  
   
 ## <a name="remarks"></a>Remarks  
- `CountRows` null 값을 가진 행을 포함 하 여, 지정된 된 범위에 있는 모든 행을 계산 합니다.  
+ `CountRows` null 값을 가진 행을 포함 하 여, 지정된 된 범위에서 모든 행을 계산 합니다.  
   
  *scope* 값은 식이 될 수 없으며 현재 범위 또는 포함하는 범위를 참조해야 합니다.  
   
@@ -61,7 +61,7 @@ CountRows(scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - proactive caching [Analysis Services]
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86634be8be55ff48f2eac1a4c4453f7cdd5eddb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9849f5ce2f82b44772a1faf360a530eb712c6dbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224573"
 ---
 # <a name="proactive-caching-dimensions"></a>자동 관리 캐싱(차원)
   자동 관리 캐싱은 OLAP 개체에 자동 MOLAP 캐시 생성 및 관리 기능을 제공합니다. 큐브는 데이터베이스로부터 알림을 수신하는 즉시 데이터베이스에 있는 데이터의 변경 내용을 통합합니다. 자동 관리 캐싱의 목표는 ROLAP에서 제공하는 즉시성과 관리 용이성을 유지하면서 기존 MOLAP의 성능을 제공하는 것입니다.  

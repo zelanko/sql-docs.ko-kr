@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server], jobs
 - SQL Server Agent jobs, status
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logs [SQL Server], jobs
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba83188dc7ad019a1c1779ab401f337c56320d8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 944c75875c138d8dae6c6b17af827462e2d8060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236103"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Windows 응용 프로그램 로그에 작업 상태 쓰기
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 작업 상태를 Windows 응용 프로그램 이벤트 로그에 기록하도록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하는 방법에 대해 설명합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36172092"
   
     -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면**작업 완료 시** 를 클릭합니다.  
   
-##  <a name="SMO"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **Windows 응용 프로그램 로그에 작업 상태를 쓰려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `EventLogLevel` 클래스의 `Job` 속성을 호출합니다.  

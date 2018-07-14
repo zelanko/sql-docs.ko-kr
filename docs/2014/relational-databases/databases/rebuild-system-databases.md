@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
 - REBUILDDATABASE parameter
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b1991dc8af140ee21089f9bd4096923d8e84742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219433"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
   [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)또는 [resource](resource-database.md) 시스템 데이터베이스의 손상 문제를 수정하거나 기본 서버 수준 데이터 정렬을 변경하려면 시스템 데이터베이스를 다시 작성해야 합니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시스템 데이터베이스를 다시 작성하는 단계별 지침을 제공합니다.  
@@ -108,9 +108,9 @@ ms.locfileid: "36172915"
     |/QUIET 또는 /Q|설치 프로그램이 사용자 인터페이스 없이 실행되도록 지정합니다.|  
     |/ACTION=REBUILDDATABASE|설치 시 시스템 데이터베이스를 다시 작성하도록 지정합니다.|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다. 기본 인스턴스의 경우 MSSQLSERVER를 입력합니다.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|에 추가할 Windows 그룹이 나 개별 계정을 지정는 `sysadmin` 고정된 서버 역할입니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들어 입력 `NT AUTHORITY\SYSTEM`합니다.|  
-    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **\*\* 보안 정보 \* \***  는 `sa` 계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 있으며 종종 악의적인 사용자가 대상이 됩니다. 강력한 암호를 사용 하는 것이 중요는 `sa` 로그인 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
-    |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 한 \* \***  서버 수준 데이터 정렬을 변경 해도 기존 사용자 데이터베이스의 데이터 정렬은 변경 되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../collations/set-or-change-the-server-collation.md)을 참조하세요.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|에 추가할 Windows 그룹이 나 개별 계정을 지정 합니다 `sysadmin` 고정된 서버 역할입니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들어 입력 `NT AUTHORITY\SYSTEM`합니다.|  
+    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **\*\* 보안 정보 \* \***  는 `sa` 잘 알려진 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 이므로 악의적인 사용자가 대상 종종 됩니다. 강력한 암호를 사용 하는 것이 중요 합니다 `sa` 로그인 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
+    |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \* \***  서버 수준 데이터 정렬을 변경 해도 기존 사용자 데이터베이스의 데이터 정렬은 변경 되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../collations/set-or-change-the-server-collation.md)을 참조하세요.|  
   
 3.  시스템 데이터베이스를 다시 작성하는 작업이 완료되면 아무런 메시지 없이 명령 프롬프트로 돌아갑니다. Summary.txt 로그 파일을 검토하여 프로세스가 성공적으로 완료되었는지 확인합니다. 이 파일은 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs에 있습니다.  
   
@@ -151,10 +151,10 @@ ms.locfileid: "36172915"
 6.  **복구 준비** 페이지에서 **복구**를 클릭합니다. 완료 페이지에서 작업이 완료되었음을 알려 줍니다.  
   
 ##  <a name="CreateMSDB"></a> 새 msdb 데이터베이스 만들기  
- 경우는 `msdb` 데이터베이스가 손상 된을의 백업이 없는 `msdb` 데이터베이스를 만들 수 있습니다 새 `msdb` 를 사용 하 여는 **instmsdb** 스크립트입니다.  
+ 경우는 `msdb` 데이터베이스가 손상 되 고 백업이 없는 합니다 `msdb` 데이터베이스를 만들 수 있습니다 새 `msdb` 사용 하 여를 **instmsdb** 스크립트입니다.  
   
 > [!WARNING]  
->  다시 작성은 `msdb` 를 사용 하 여 데이터베이스는 **instmsdb** 에 저장 된 모든 정보를 제거 하는 스크립트는 `msdb` 같은 작업, 경고, 운영자, 유지 관리 계획, 백업 기록, 정책 기반 관리 설정 데이터베이스 메일, 성능 데이터 웨어하우스 등입니다.  
+>  다시 작성 합니다 `msdb` 를 사용 하 여 데이터베이스를 **instmsdb** 에 저장 된 모든 정보를 제거 하는 스크립트는 `msdb` 작업, 경고, 운영자, 유지 관리 계획, 백업 기록, 정책 기반 관리 설정 등 데이터베이스 메일, 성능 데이터 웨어하우스, 등입니다.  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs-md.md)]를 포함하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 연결된 서비스 및 데이터 저장소와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 응용프로그램을 모두 중지합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36172915"
   
      자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
-3.  다른 명령줄 창에서 분리 된 `msdb` 다음 명령을 실행 하 여 데이터베이스 대체  *\<서버 이름 >* 의 인스턴스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  다른 명령줄 창에서 분리 합니다 `msdb` 다음 명령을 실행 하 여 데이터베이스 대체  *\<서버 이름 >* 인스턴스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  Windows 탐색기를 사용 하 여 이름 바꾸기는 `msdb` 데이터베이스 파일입니다. 기본적으로 이러한 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 하위 폴더에 있습니다.  
   
@@ -176,9 +176,9 @@ ms.locfileid: "36172915"
   
 8.  인스턴스에 이미 설치된 서비스 팩 또는 핫픽스를 모두 다시 적용합니다.  
   
-9. 에 저장 된 사용자 콘텐츠를 다시 만듭니다는 `msdb` 작업, 경고 데이터베이스 등입니다.  
+9. 에 저장 된 사용자 콘텐츠를 다시는 `msdb` 작업, 경고 데이터베이스 등.  
   
-10. 백업에서 `msdb` 데이터베이스입니다.  
+10. 백업 된 `msdb` 데이터베이스입니다.  
   
 ##  <a name="Troubleshoot"></a> 다시 작성 오류 문제 해결  
  구문 및 기타 런타임 오류는 명령 프롬프트 창에 표시됩니다. 설치 문에 다음과 같은 구문 오류가 없는지 확인합니다.  

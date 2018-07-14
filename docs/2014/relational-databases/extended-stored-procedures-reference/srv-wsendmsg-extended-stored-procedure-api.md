@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_wsendmsg
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cee9fcd37841f8ac232bc3d85d00fb88ff199be9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5ed9efee806d432019be9c8d606c84004f80e97d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260819"
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg(확장 저장 프로시저 API)
     

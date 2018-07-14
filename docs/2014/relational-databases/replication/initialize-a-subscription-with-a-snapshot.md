@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3149d667a2f84aa24bd5ecd061959144abc95968
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 27614b3c2e0ac6669b9f0ad020d1c74b764a951d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233033"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅숏으로 구독 초기화
   게시가 생성된 후 일반적으로 초기 스냅숏이 생성되어 스냅숏 폴더로 복사됩니다. 이 작업은 새 게시 마법사에서 만든 병합 게시에 대해 기본적으로 수행됩니다. 스냅숏은 그런 다음 구독의 초기 동기화 중 배포 에이전트(트랜잭션 및 스냅숏 게시의 경우) 또는 병합 에이전트(병합 게시의 경우)에 의해 구독자에 적용됩니다. 스냅숏 프로세스는 게시 유형에 따라 달라집니다.  

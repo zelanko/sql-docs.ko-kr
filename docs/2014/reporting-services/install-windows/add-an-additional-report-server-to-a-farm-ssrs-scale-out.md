@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e3f59bd35ed4886c5c8ce35107120ab9a5eca87f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13e4dfa2d6fe01908d6144dc0ca6af07216af0fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276129"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
   SharePoint 팜에 두 번째 이상의 SharePoint 모드 보고서 서버를 추가하면 보고서 서버 처리 성능 및 응답 시간을 향상시킬 수 있습니다. 보고서 서버에 더 많은 사용자, 보고서 및 기타 응용 프로그램을 추가할수록 성능이 저하되는 경우에는 보고서 서버를 추가하면 성능을 향상시킬 수 있습니다. 또한 하드웨어에 문제가 있거나 사용자 환경의 개별 서버에 대한 전반적인 관리를 수행하는 경우 보고서 서버의 가용성을 늘리기 위해 두 번째 보고서 서버를 추가하는 것이 좋습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 환경을 확장하는 단계는 표준 SharePoint 팜 배포를 따르며 SharePoint 부하 분산 기능을 이용합니다.  
   
 > [!IMPORTANT]  
->  일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]확장이 지원되지 않습니다. 자세한 내용은 참조는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 섹션 [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]확장이 지원되지 않습니다. 자세한 내용은 참조는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 섹션 [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 > [!TIP]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 서버를 추가하고 보고서 서버를 확장하는 데 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 포함된 SharePoint 서버가 팜에 추가되어 SharePoint 제품에서 보고서 서비스의 확장을 관리합니다.  
@@ -77,11 +77,11 @@ ms.locfileid: "36172124"
 |단계|설명 및 링크|  
 |----------|--------------------------|  
 |SharePoint 2010 제품 준비 도구 실행|SharePoint 2010 설치 미디어가 있어야 합니다. 준비 도구는 설치 미디어의 **PrerequisiteInstaller.exe** 입니다.|  
-|SharePoint 2010 제품 설치|1) 선택 된 **서버 팜** 설치 유형입니다.<br /><br /> 2) 선택 **완료** 서버 유형에 대 한 합니다.<br /><br /> 3) 기존 SharePoint 팜에 SharePoint 2010 SP1이 설치되어 있으면 설치가 완료된 후 SharePoint 제품 구성 마법사를 실행하지 마세요. SharePoint 제품 구성 마법사를 실행하기 전에 SharePoint SP1을 설치해야 합니다.|  
-|SharePoint Server 2010 SP1 설치|기존 SharePoint 팜에 SharePoint 2010 SP1 다운로드 하 여 SharePoint 2010 s p 1에서 설치 하는 경우:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697)합니다.<br /><br /> SharePoint 2010 SP1에 대한 자세한 내용은 [Office 2010 SP1 및 SharePoint 2010 SP1을 설치할 때의 알려진 문제](http://support.microsoft.com/kb/2532126)를 참조하십시오.|  
-|SharePoint 제품 구성 마법사를 실행하여 팜에 서버 추가|1)에 **Microsoft SharePoint 2010 제품** 프로그램 그룹에서 클릭 **Microsoft SharePoint 2010 제품 구성 마법사**합니다.<br /><br /> 2)는 **서버 팜에 연결** 페이지 선택 **기존 팜에 연결** 클릭 **다음**합니다.<br /><br /> 3)는 **구성 데이터베이스 설정 지정** 페이지에서 기존 팜 구성 데이터베이스의 이름에 사용 되는 데이터베이스 서버의 이름을 입력 합니다. **다음**을 클릭합니다.<br />**\*\* 중요 한 \* \***  다음과 비슷한 오류 메시지가 나타나고 권한이 확인 한 경우의에서 SQL Server 네트워크 구성을 위해 어떤 프로토콜이 활성화 되었는지 확인 한 다음 **Sql Server Configuration Manager**: "데이터베이스 서버에 연결할 수 없습니다. 데이터베이스가 존재, Sql Server, 하며 서버에 액세스 하는 적절 한 권한이 있는지 확인 합니다. "<br />**\*\* 중요 한 \* \***  페이지를 참조 하는 경우 **서버 팜 제품 및 패치 상태**를 페이지에 대 한 정보를 검토 하 고 계속 하려면 먼저 서버를 필요한 파일에 업데이트 해야 합니다 서버를 팜에 조인 합니다.<br /><br /> 4)는 **팜 보안 설정 지정** 페이지에서 팜 암호를 입력 하 고 클릭 **다음**합니다. 확인 페이지에서 **다음** 을 클릭하여 마법사를 실행합니다.<br /><br /> 5) 클릭 **다음** 실행 하는 **팜 구성 마법사**합니다.|  
-|서버가 SharePoint 팜에 추가되었는지 확인|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) 새 서버가 추가되었고 상태가 올바른지 확인합니다.<br /><br /> 3) 참고 서비스가 표시 되지 않으면 **SQL Server Reporting Services 서비스** 실행 합니다. 다음 단계에서 서비스가 설치됩니다.<br /><br /> 4) WFE 역할에서이 서버를 제거 하려면 클릭 **서버의 서비스 관리** 서비스를 중지 하 고 **Microsoft SharePoint Foundation 웹 응용 프로그램**합니다.|  
-|Reporting Services SharePoint 모드 설치 및 구성|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 실행합니다. 설치에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 경우 참조 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) 경우 서버는만 사용할 응용 프로그램 서버 및 서버 사용 되지 것입니다으로 WFE 인 필요가 없습니다 선택할 **Reporting Services 추가 기능에 SharePoint 제품용** 에:<br /><br /> **설치 역할** 페이지에서 **SQL Server 기능 설치**<br /><br /> **기능 선택** 페이지에서 **Reporting Services-SharePoint**<br /><br /> -또는-<br /><br /> **Reporting Services 구성** 페이지 확인는 **설치만** 에 대 한 옵션을 선택 **Reporting Services SharePoint 모드**합니다.|  
+|SharePoint 2010 제품 설치|1) 선택 합니다 **팜을** 설치 유형입니다.<br /><br /> 2) 선택 **완료** 서버 유형에 대 한 합니다.<br /><br /> 3) 기존 SharePoint 팜에 SharePoint 2010 SP1이 설치되어 있으면 설치가 완료된 후 SharePoint 제품 구성 마법사를 실행하지 마세요. SharePoint 제품 구성 마법사를 실행하기 전에 SharePoint SP1을 설치해야 합니다.|  
+|SharePoint Server 2010 SP1 설치|기존 SharePoint 팜에 SharePoint 2010 SP1이 설치 된 다운로드 하 고에서 SharePoint 2010 SP1을 설치 하는 경우:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697)합니다.<br /><br /> SharePoint 2010 SP1에 대한 자세한 내용은 [Office 2010 SP1 및 SharePoint 2010 SP1을 설치할 때의 알려진 문제](http://support.microsoft.com/kb/2532126)를 참조하십시오.|  
+|SharePoint 제품 구성 마법사를 실행하여 팜에 서버 추가|1)에 **Microsoft SharePoint 2010 제품** 프로그램 그룹에서 클릭 **Microsoft SharePoint 2010 제품 구성 마법사**합니다.<br /><br /> 2)는 **서버 팜에 연결** 페이지 선택 **기존 팜에 연결** 클릭 **다음**합니다.<br /><br /> 3)는 **구성 데이터베이스 설정 지정** 페이지에서 구성 데이터베이스의 이름 및 기존 팜에 사용 되는 데이터베이스 서버의 이름을 입력 합니다. **다음**을 클릭합니다.<br />**\*\* 중요 \* \***  다음과 비슷한 오류 메시지가 표시 되 고 권한이 확인의 SQL Server 네트워크 구성에 대 한 어떤 프로토콜이 활성화 되었는지 확인 한 다음 **Sql Server Configuration Manager**: "데이터베이스 서버에 연결 하지 못했습니다. 데이터베이스 존재 하 고 Sql server 이며 서버에 액세스 하는 적절 한 권한이 있는지 확인 합니다. "<br />**\*\* 중요 \* \***  페이지를 표시 하는 경우 **서버 팜 제품 및 패치 상태**, 페이지의 정보를 검토 하 고 계속 하기 전에 필요한 파일을 사용 하 여 서버를 업데이트 해야 합니다. 사용 하 여 서버를 팜에 조인 합니다.<br /><br /> 4)는 **팜 보안 설정 지정** 페이지에 팜 암호를 입력 하 고 클릭 **다음**합니다. 확인 페이지에서 **다음** 을 클릭하여 마법사를 실행합니다.<br /><br /> 5) 클릭 **다음** 실행 하는 **팜 구성 마법사**합니다.|  
+|서버가 SharePoint 팜에 추가되었는지 확인|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) 새 서버가 추가되었고 상태가 올바른지 확인합니다.<br /><br /> 3) 참고 서비스 보이지 **SQL Server Reporting Services 서비스** 실행 합니다. 다음 단계에서 서비스가 설치됩니다.<br /><br /> 4) WFE 역할에서이 서버를 제거 하려면 클릭 **서버의 서비스 관리** 서비스를 중지 하 고 **Microsoft SharePoint Foundation 웹 응용 프로그램**합니다.|  
+|Reporting Services SharePoint 모드 설치 및 구성|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 실행합니다. 설치에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 경우 참조 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) 경우 서버 에서만 사용할 응용 프로그램 서버 및 서버 됩니다 하지 수로 사용 WFE를 필요가 없습니다 선택할 **Reporting Services 추가 기능에 SharePoint 제품용** 에서:<br /><br /> 합니다 **설치 역할** 페이지에서 **SQL Server 기능 설치**<br /><br /> 합니다 **기능 선택** 페이지에서 **Reporting Services-SharePoint**<br /><br /> -또는-<br /><br /> **Reporting Services 구성** 페이지 확인 합니다 **설치만** 옵션이 선택 되었는지 **Reporting Services SharePoint 모드**합니다.|  
 |Reporting Services가 작동하는지 확인|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) **SQL Server Reporting Services 서비스**를 확인합니다.<br /><br /> 자세한 내용은 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)를 참조하세요.|  
   
 ##  <a name="bkmk_additional"></a> 기타 고려 사항  
@@ -93,10 +93,10 @@ ms.locfileid: "36172124"
   
  \<IsWebServiceEnable>을 False로 설정하여 모든 보고서 서버를 구성하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하려고 시도할 때 다음과 같은 오류 메시지가 나타납니다.  
   
- Reporting Services 웹 서비스를 사용할 수 없습니다. 구성 하려면 Reporting Services SharePoint 서비스의 인스턴스를 하나 이상 \<IsWebServiceEnable > true로 설정 합니다. 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
+ Reporting Services 웹 서비스를 사용할 수 없습니다. 하도록 Reporting Services SharePoint service 인스턴스를 하나 이상 구성 \<IsWebServiceEnable > true로 설정 합니다. 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 2013에서 팜에 웹 또는 응용 프로그램 서버 추가](http://technet.microsoft.com/library/cc261752.aspx)   
- [(SharePoint Server 2010) 서비스 구성](http://technet.microsoft.com/library/ee794878.aspx)  
+ [서비스 (SharePoint Server 2010)를 구성 합니다.](http://technet.microsoft.com/library/ee794878.aspx)  
   
   

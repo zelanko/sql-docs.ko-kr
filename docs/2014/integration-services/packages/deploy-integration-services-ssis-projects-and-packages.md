@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50da655d029228c4fc2339b49245cd11f5967305
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf58e533b46304d4d8833626381e52e86d017404
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221669"
 ---
 # <a name="deployment-of-projects-and-packages"></a>프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 프로젝트 배포 모델 및 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
   
  프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 방법에 대한 자세한 내용은 [Integration Services 서버에 프로젝트 배포](../deploy-projects-to-integration-services-server.md)를 참조하세요.  
   
- 패키지 배포 모델에 대 한 자세한 내용은 참조 [패키지 배포 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)합니다.  
+ 패키지 배포 모델에 대 한 자세한 내용은 참조 하세요. [패키지 배포 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)합니다.  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>프로젝트 배포와 패키지 배포 비교  
  프로젝트에 대해 선택한 배포 모델 유형에 따라 해당 프로젝트에 사용할 수 있는 배포 및 관리 옵션이 달라집니다. 다음 표에서는 프로젝트 배포 모델을 사용하는 경우와 패키지 배포 모델을 사용하는 경우의 차이점과 유사점을 보여 줍니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36182840"
 |데이터베이스 엔진에서 CLR 통합이 필요합니다.|데이터베이스 엔진에서 CLR 통합이 필요하지 않습니다.|  
 |환경 관련 매개 변수 값이 환경 변수에 저장됩니다.|환경 관련 구성 값이 구성 파일에 저장됩니다.|  
 |카탈로그에 있는 프로젝트 및 패키지를 실행하기 전에 서버에서 유효성을 검사할 수 있습니다. SQL Server Management Studio, 저장 프로시저 또는 관리 코드를 사용하여 유효성 검사를 수행할 수 있습니다.|패키지를 실행하기 바로 전에 유효성을 검사합니다. 또한 dtExec 또는 관리 코드를 사용하여 패키지의 유효성을 검사할 수도 있습니다.|  
-|데이터베이스 엔진에서 실행을 시작하는 방식으로 패키지를 실행합니다. 실행을 시작하기 전에 실행에 프로젝트 식별자, 명시적 매개 변수 값(옵션) 및 환경 참조(옵션)를 할당합니다.<br /><br /> 또한 `dtExec`를 사용하여 패키지를 실행할 수도 있습니다.|패키지를 사용 하 여 실행 된 `dtExec` 및 `DTExecUI` 실행 유틸리티입니다. 해당 구성이 명령 프롬프트 인수(옵션)로 식별됩니다.|  
+|데이터베이스 엔진에서 실행을 시작하는 방식으로 패키지를 실행합니다. 실행을 시작하기 전에 실행에 프로젝트 식별자, 명시적 매개 변수 값(옵션) 및 환경 참조(옵션)를 할당합니다.<br /><br /> 또한 `dtExec`를 사용하여 패키지를 실행할 수도 있습니다.|사용 하 여 패키지를 실행 합니다 `dtExec` 고 `DTExecUI` 실행 유틸리티입니다. 해당 구성이 명령 프롬프트 인수(옵션)로 식별됩니다.|  
 |실행 시 패키지에 의해 생성된 이벤트가 자동으로 캡처되고 카탈로그에 저장됩니다. Transact-SQL 뷰를 사용하여 이러한 이벤트를 쿼리할 수 있습니다.|실행 시 패키지에 의해 생성된 이벤트가 자동으로 캡처되지 않습니다. 이벤트를 캡처하려면 로그 공급자를 패키지에 추가해야 합니다.|  
 |패키지가 별도의 Windows 프로세스에서 실행됩니다.|패키지가 별도의 Windows 프로세스에서 실행됩니다.|  
 |SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|  

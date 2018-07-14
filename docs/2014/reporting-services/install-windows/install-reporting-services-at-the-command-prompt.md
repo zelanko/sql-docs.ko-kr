@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 9699e5eba99b2232bba44238f66b29e936bb56be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08498f8015d1969a091615fc74df61f4b7c9d0d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191583"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Reporting Services SharePoint 모드 및 기본 모드의 명령 프롬프트 설치
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SQL Server 설치 프로그램에서 명령줄 설치를 지원합니다. 이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 몇 가지 명령줄 설치 예가 포함됩니다. 모든 SQL Server 구성 요소에 사용할 수 있는 명령줄 옵션의 전체 설명은 참조 하십시오. [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다. 이 항목에서는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대한 명령줄 옵션은 다루지 않습니다. 추가 기능 명령 설치에 자세한 내용은 [rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)를 참조하세요.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SQL Server 설치 프로그램에서 명령줄 설치를 지원합니다. 이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 몇 가지 명령줄 설치 예가 포함됩니다. 에 대 한 전체 설명은 모든 SQL Server 구성 요소에 대 한 사용 가능한 명령줄 옵션을 참조 하세요 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다. 이 항목에서는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대한 명령줄 옵션은 다루지 않습니다. 추가 기능 명령 설치에 자세한 내용은 [rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)를 참조하세요.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드  
   
 ## <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE(기본 모드)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 위한 기본 입력 설정은 **/RSINSTALLMODE** 입력 설정입니다. 설정에는 **DefaultNativeMode** 와 **FilesOnlyMode**의 두 가지 옵션이 있습니다.  
   
- 설치에 SQL Server 데이터베이스 엔진이 있는 경우 RSINSTALLMODE 기본값은 DefaultNativeMode입니다. 설치에 SQL Server 데이터베이스 엔진이 없는 경우 RSINSTALLMODE 기본값은 FilesOnlyMode입니다. DefaultNativeMode를 선택했지만 설치에 SQL Server 데이터베이스 엔진이 없는 경우 설치가 RSINSTALLMODE를 FilesOnlyMode로 자동으로 변경합니다. 입력된 설정에 대 한 자세한 내용은 참조 하십시오. [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
+ 설치에 SQL Server 데이터베이스 엔진이 있는 경우 RSINSTALLMODE 기본값은 DefaultNativeMode입니다. 설치에 SQL Server 데이터베이스 엔진이 없는 경우 RSINSTALLMODE 기본값은 FilesOnlyMode입니다. DefaultNativeMode를 선택했지만 설치에 SQL Server 데이터베이스 엔진이 없는 경우 설치가 RSINSTALLMODE를 FilesOnlyMode로 자동으로 변경합니다. 입력된 설정에 대 한 자세한 내용은 참조 하세요. [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
 ## <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE(SharePoint 모드)  
- SharePoint 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 위한 입력 설정은 **/RSSHPINSTALLMODE**입니다. 입력 설정에는 SharePointFilesOnlyMode라는 한 옵션만 있습니다. 이 옵션은 SharePoint 모드에 필요한 모든 파일을 설치하지만 설치 후 구성이 필요합니다. SharePoint 중앙 관리를 사용하여 이 추가 구성 단계가 완료됩니다. 자세한 내용은 참조 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)합니다.  
+ SharePoint 모드로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하기 위한 입력 설정은 **/RSSHPINSTALLMODE**입니다. 입력 설정에는 SharePointFilesOnlyMode라는 한 옵션만 있습니다. 이 옵션은 SharePoint 모드에 필요한 모든 파일을 설치하지만 설치 후 구성이 필요합니다. SharePoint 중앙 관리를 사용하여 이 추가 구성 단계가 완료됩니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치 SharePoint 2010 용](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)합니다.  
   
 ## <a name="examples-of-sharepoint-mode-installation"></a>SharePoint 모드 설치 예  
  다음 예에서는 SharePoint 모드로 SQL Server 데이터베이스 엔진 서비스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(RS_SHPWFE)을 설치합니다.  

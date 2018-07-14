@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207103"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 새 테이블을 만들든, 기존 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하든 간에 충분한 메모리로 서버를 프로비전할 수 있도록 각 테이블에 필요한 메모리를 적절히 예측하는 것이 중요합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
@@ -121,9 +121,9 @@ SELECT COUNT(DISTINCT [Col2])
   
  **참고:** 즉석에서 해시 인덱스 배열 크기를 변경할 수 없습니다. 해시 인덱스 배열 크기를 변경하려면 테이블을 삭제하고 bucket_count 값을 변경한 다음 테이블을 다시 만들어야 합니다.  
   
- **해시 인덱스 배열 크기 설정**  
+ **해시 인덱스 배열 크기를 설정합니다.**  
   
- 해시 배열 크기 설정한 `(bucket_count= <value>)` 여기서 \<값 >는 0 보다 큰 정수 값입니다. 경우 \<값 > 거듭제곱이 아닌 2의 실제 bucket_count는 가장 가까운 다음 2의 제곱으로 반올림 됩니다.  예제 테이블, (bucket_count = 5000000), 실제 버킷 수는 8388608 최대 반올림 5,000,000 2의 거듭제곱이 아니므로 (2<sup>23</sup>).  해시 배열에 필요한 메모리를 계산할 때는 5,000,000이 아니라 이 수를 사용해야 합니다.  
+ 해시 배열 크기는 설정한 `(bucket_count= <value>)` 여기서 \<값 > 정수 값을 0 보다 큽니다. 경우 \<값 >은 제곱이 아니므로 2 인 실제 bucket_count는 가장 가까운 다음 2의 제곱으로 반올림 됩니다.  예제 테이블, (bucket_count = 5000000)에서 5,000,000은 2의 제곱이 아니므로 실제 버킷 수 반올림 8388608 (2<sup>23</sup>).  해시 배열에 필요한 메모리를 계산할 때는 5,000,000이 아니라 이 수를 사용해야 합니다.  
   
  따라서 이 예제에서 각 해시 배열에 필요한 메모리는 다음과 같습니다.  
   
@@ -165,7 +165,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- 오래 된 행에 필요한 메모리는 메모리 액세스에 최적화 된 테이블 행의 크기에 따라 오래 된 행 수를 곱하여 예측 됩니다 (참조 [테이블에 대 한 메모리](#bkmk_MemoryForTable) 위에).  
+ 유효 하지 않은 행에 필요한 메모리는 메모리 최적화 테이블 행의 크기에 따라 유효 하지 않은 행의 수를 곱하여 예측 됩니다 (참조 [테이블에 대 한 메모리](#bkmk_MemoryForTable) 위에).  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
@@ -16,13 +16,13 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2892c047bb3826b62da81f8f5f4ddcdea5b46f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ceab28c15a3e0a5e8851fd4d7142a7d0c0b2f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236163"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅숏, 캐시(Reporting Services)
   보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](http://go.microsoft.com/fwlink/?LinkID=77519)을 참조하세요.  
@@ -39,9 +39,9 @@ ms.locfileid: "36173039"
   
 -   PDF로 렌더링할 때처럼 모든 보고서가 특정 형식에서 느리게 처리되는 경우 파일 공유 배달을 사용하거나 메모리를 추가하거나 다른 형식을 선택해 보십시오.  
   
--   보고서 및 기타 사용 메트릭을 처리하는 데 소요되는 시간을 확인하려면 보고서 서버 실행 로그를 검토합니다. 자세한 내용은 참조 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](report-server-executionlog-and-the-executionlog3-view.md)합니다.  
+-   보고서 및 기타 사용 메트릭을 처리하는 데 소요되는 시간을 확인하려면 보고서 서버 실행 로그를 검토합니다. 자세한 내용은 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](report-server-executionlog-and-the-executionlog3-view.md)합니다.  
   
--   메모리 관리 구성 설정을 조정 하 여 성능 문제를 완화 하는 방법에 대 한 자세한 내용은 참조 [보고서 서버 응용 프로그램에 대 한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)합니다.  
+-   메모리 관리 구성 설정을 조정 하 여 성능 문제를 완화 하는 방법에 대 한 자세한 내용은 참조 하십시오 [보고서 서버 응용 프로그램에 대 한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보고서 서버 성능 모니터링](monitoring-report-server-performance.md)  

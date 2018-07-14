@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167014"
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
   복제 모니터는 복제 토폴로지를 모니터링하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 저장 프로시저 또는 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 동일한 모니터링 데이터에 액세스할 수 있습니다. 이러한 개체를 사용하면 다음 태스크를 프로그래밍할 수 있습니다.  
@@ -132,9 +132,9 @@ ms.locfileid: "36181336"
   
 5.  3단계에서 가져온 세션 ID를 사용하여 다음 메서드 중 하나를 호출합니다. 그러면 특정 세션에 대한 세부 정보가 반환됩니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -의 배열을 반환 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> 에서 제공 된 *sessionID*합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -의 배열을 반환 <xref:Microsoft.SqlServer.Replication.MergeSessionDetail> 제공 된 개체 *sessionID*합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -반환는 <xref:System.Data.DataSet> 지정 된 항목에 대 한 정보가 포함 된 개체 *sessionID*합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -반환을 <xref:System.Data.DataSet> 지정 된 정보가 포함 된 개체 *sessionID*합니다.  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>배포자에서 모든 게시에 대한 복제 속성을 모니터링하려면  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36181336"
   
 2.  다음 방법 중 하나로 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 개체를 가져옵니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 클래스의 인스턴스를 만듭니다. 게시자의 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 게시자 이름이 올바르게 정의 된 또는 게시가 없습니다.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 클래스의 인스턴스를 만듭니다. 게시자의 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 게시자 이름이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
     -   기존 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 속성을 통해 액세스한 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 에서 가져옵니다.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "36181336"
         |값|Description|  
         |-----------|-----------------|  
         |1|`expiration` -트랜잭션 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.|  
-        |2|`latency` -트랜잭션 게시에 대 한 구독 성능에 대 한 모니터.|  
+        |2|`latency` -트랜잭션 게시에 대 한 구독의 성능 모니터링 합니다.|  
         |4|`mergeexpiration` -병합 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.|  
         |5|`mergeslowrunduration` -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
         |6|`mergefastrunduration` -고대역폭 (LAN) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  

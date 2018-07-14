@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273749"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "36172251"
   
  비동기 커밋 보조 복제본은 주 복제본으로부터 받은 로그 레코드를 따라잡으려고 합니다. 그러나 비동기 커밋 보조 데이터베이스는 항상 동기화되지 않은 상태로 있으며 해당 주 데이터베이스보다 뒤쳐질 수 있습니다. 일반적으로 비동기 커밋 보조 데이터베이스와 해당 주 데이터베이스 간의 시간차는 작은 편입니다. 그러나 보조 복제본을 호스팅하는 서버가 과부화되거나 네트워크 속도가 느린 경우에는 이 시간차가 상당히 커질 수 있습니다.  
   
- 비동기-커밋 모드에서 지원되는 유일한 형태의 장애 조치는 강제 장애 조치(데이터가 손실될 수 있음)입니다. 강제 장애 조치는 현재 주 복제본을 상당 기간 사용할 수 없으며 데이터 손실의 위험보다 주 데이터베이스 가용성이 더 중요한 경우에만 최후의 수단으로 사용해야 합니다. 장애 조치(Failover) 대상은 역할이 SECONDARY 또는 RESOLVING 상태인 복제본이어야 합니다. 이때 장애 조치(Failover) 대상은 주 역할로 전환되고 해당 데이터베이스 복사본이 주 데이터베이스가 됩니다. 나머지 보조 데이터베이스(사용 가능하게 된 경우)는 이전 주 데이터베이스와 함께 사용자가 수동으로 개별 데이터베이스를 다시 시작할 때까지 일시 중지됩니다. 비동기 커밋 모드에서는 원래 주 복제본이 이전의 보조 복제본으로 아직 보내지지 않은 트랜잭션 로그가 손실됩니다. 즉, 최근에 커밋된 트랜잭션이 새로운 주 데이터베이스의 일부 또는 모두에 없을 수도 있습니다. 강제 장애 조치 작동 방법 및 사용에 대 한 모범 사례에 자세한 내용은 참조 하십시오. [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)합니다.  
+ 비동기-커밋 모드에서 지원되는 유일한 형태의 장애 조치는 강제 장애 조치(데이터가 손실될 수 있음)입니다. 강제 장애 조치는 현재 주 복제본을 상당 기간 사용할 수 없으며 데이터 손실의 위험보다 주 데이터베이스 가용성이 더 중요한 경우에만 최후의 수단으로 사용해야 합니다. 장애 조치(Failover) 대상은 역할이 SECONDARY 또는 RESOLVING 상태인 복제본이어야 합니다. 이때 장애 조치(Failover) 대상은 주 역할로 전환되고 해당 데이터베이스 복사본이 주 데이터베이스가 됩니다. 나머지 보조 데이터베이스(사용 가능하게 된 경우)는 이전 주 데이터베이스와 함께 사용자가 수동으로 개별 데이터베이스를 다시 시작할 때까지 일시 중지됩니다. 비동기 커밋 모드에서는 원래 주 복제본이 이전의 보조 복제본으로 아직 보내지지 않은 트랜잭션 로그가 손실됩니다. 즉, 최근에 커밋된 트랜잭션이 새로운 주 데이터베이스의 일부 또는 모두에 없을 수도 있습니다. 강제 장애 조치 작동 방법 및 사용에 대 한 모범 사례에 자세한 내용은 참조 하세요 [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)합니다.  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  동기-커밋 가용성 모드(*동기-커밋 모드*)에서는 보조 데이터베이스가 가용성 그룹에 조인한 후에 해당 주 데이터베이스를 따라잡고 SYNCHRONIZED 상태로 전환됩니다. 보조 데이터베이스는 데이터 동기화가 계속되는 한 SYNCHRONIZED로 유지됩니다. 그러면 지정된 주 데이터베이스에서 커밋된 모든 트랜잭션이 해당 보조 데이터베이스에서도 커밋됩니다. 지정된 보조 복제본의 모든 보조 데이터베이스가 동기화되면 보조 복제본 전체의 동기화 상태가 HEALTHY가 됩니다.  
@@ -78,7 +77,7 @@ ms.locfileid: "36172251"
 -   네트워크/컴퓨터 지연 또는 결함으로 인해 보조 복제본과 주 복제본 간의 세션 제한 시간이 만료됩니다.  
   
     > [!NOTE]  
-    >  가용성 복제본의 세션-시간 속성에 대 한 정보를 참조 하십시오. [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)합니다.  
+    >  가용성 복제본의 세션-시간 속성에 대 한 자세한 내용은 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)합니다.  
   
 -   보조 복제본에서 보조 데이터베이스를 일시 중지합니다. 보조 복제본이 더 이상 동기화되지 않고 해당 동기화 상태가 NOT_HEALTHY로 표시됩니다. 일시 중지된 보조 데이터베이스가 다시 시작되고 다시 동기화되거나 가용성 그룹에서 제거될 때까지 해당 보조 복제본은 다시 정상이 될 수 없습니다.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36172251"
 ###  <a name="SyncCommitWithAuto"></a> 자동 장애 조치를 사용하는 동기-커밋 모드  
  자동 장애 조치를 사용하면 주 복제본이 손실되어도 데이터베이스를 신속하게 다시 사용할 수 있으므로 고가용성이 보장됩니다. 자동 장애 조치에 대해 가용성 그룹을 구성하려면 현재 주 복제본과 하나의 보조 복제본을 모두 자동 장애 조치를 사용하는 동기-커밋 모드로 설정해야 합니다.  
   
- 또한 특정 시점에 자동 장애 조치가 가능하려면 이 보조 복제본을 주 복제본과 동기화하고, 즉 보조 데이터베이스를 모두 동기화하고 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 쿼럼이 있어야 합니다. 위의 조건에서 주 복제본을 사용할 수 없게 되면 자동 장애 조치가 수행됩니다. 보조 복제본이 주 복제본의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다. 자세한 내용은의 "자동 장애 조치" 섹션을 참조 하십시오.는 [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41; ](failover-and-failover-modes-always-on-availability-groups.md) 항목입니다.  
+ 또한 특정 시점에 자동 장애 조치가 가능하려면 이 보조 복제본을 주 복제본과 동기화하고, 즉 보조 데이터베이스를 모두 동기화하고 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 쿼럼이 있어야 합니다. 위의 조건에서 주 복제본을 사용할 수 없게 되면 자동 장애 조치가 수행됩니다. 보조 복제본이 주 복제본의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다. 자세한 내용은 "자동 장애 조치" 섹션을 참조 합니다 [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41; ](failover-and-failover-modes-always-on-availability-groups.md) 항목입니다.  
   
 > [!NOTE]  
 >  WSFC 쿼럼 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
@@ -153,7 +152,7 @@ ms.locfileid: "36172251"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
   

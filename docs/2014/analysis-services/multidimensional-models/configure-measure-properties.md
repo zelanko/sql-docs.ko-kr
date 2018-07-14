@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
 - ID property
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4072342fcdace380e08b507c118279b837ba26fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7be3b5e73134e65cefad48b3d03c4c912a4279a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323183"
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
   측정값에는 해당 측정값의 작동 방법을 정의하고 측정값의 표시 방법을 제어하는 데 사용할 수 있는 속성이 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36172996"
 |`DataType`|필수 사항입니다. 측정값이 바인딩되는 기본 팩트 테이블 열의 데이터 형식을 지정합니다. 이 값은 기본적으로 원본 열에서 상속됩니다.|  
 |`Description`|클라이언트 응용 프로그램에 노출될 수 있는 측정값에 대한 설명을 제공합니다.|  
 |`DisplayFolder`|사용자가 큐브에 연결할 때 측정값이 표시되는 폴더를 지정합니다. 큐브에 많은 측정값이 있을 때 표시 폴더를 사용하여 측정값을 분류하고 사용자 검색 환경을 개선할 수 있습니다.|  
-|`FormatString`|사용 하 여 사용자에 게 측정값을 표시 하는 데 사용 되는 형식을 선택할 수 있습니다는 `FormatString` 은 측정값의 속성입니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 표시 형식 목록이 제공되지만 목록에 없는 여러 가지 추가 형식을 지정할 수 있습니다. Microsoft Visual Basic에서 유효한 사용자 정의 형식이나 명명된 형식을 지정할 수 있습니다. |  
+|`FormatString`|사용 하 여 측정값이 사용자에 게 표시 하는 데 사용 되는 형식을 선택할 수 있습니다는 `FormatString` 측정값의 속성입니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 표시 형식 목록이 제공되지만 목록에 없는 여러 가지 추가 형식을 지정할 수 있습니다. Microsoft Visual Basic에서 유효한 사용자 정의 형식이나 명명된 형식을 지정할 수 있습니다. |  
 |`ID`|필수 사항입니다. 측정값의 고유 ID를 표시합니다. 이 속성은 읽기 전용입니다.|  
 |`MeasureExpression`|측정값을 정의하는 제한된 MDX 식을 지정합니다. 식은 집계되기 전에 리프 수준에서 평가되고 값의 가중치 적용을 허용합니다. 예를 들어 통화 변환에서 판매액은 환율에 따라 가중치가 적용됩니다.|  
 |`Name`|필수 사항입니다. 측정값의 이름을 지정합니다.|  

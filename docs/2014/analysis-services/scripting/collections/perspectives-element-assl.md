@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Perspectives element
 ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8df6386c14d3c7219826e7df156b6343a92fc1f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35a1667a7df5f33bd4d6b3aa4f0621882b8819f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224115"
 ---
 # <a name="perspectives-element-assl"></a>Perspectives 요소(ASSL)
-  컬렉션을 포함 [관점](../objects/perspective-element-assl.md) 와 관련 된 요소는 [큐브](../objects/cube-element-assl.md) 요소입니다.  
+  컬렉션을 포함 [관점](../objects/perspective-element-assl.md) 와 관련 된 요소를 [큐브](../objects/cube-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

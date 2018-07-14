@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies with explicit caps
 - explicit hierarchies, derived hierarchies with explicit caps
 - derived hierarchies, derived hierarchies with explicit caps
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e377b315bb6d326c7adbb79a93d94eb664ed9ffc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dde0270cd369c5074f966978370fd95db14df726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203573"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>명시적 캡이 포함된 파생 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 수준이 파생 계층의 최상위 수준으로 사용되는 경우 이를 명시적 캡이 포함된 파생 계층이라고 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36172424"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|파생 계층을 만듭니다.|[파생된 계층 만들기 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
+|파생 계층을 만듭니다.|[파생된 계층을 만들려면 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
 |명시적 계층을 만듭니다.|[명시적 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |기존 파생 계층을 삭제합니다.|[파생된 계층 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
 - adding tables
 - related tables [SQL Server]
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b50a280fa5d228b336f0ee435c33a7f78ade5a53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 98cf7aa99fc022520d3947cb82f965b16a11bae6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247843"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>다이어그램에 관련 테이블 추가(Visual Database Tools)
   선택한 테이블과 관련된 모든 테이블을 데이터베이스 다이어그램에 간편하게 추가할 수 있습니다.  

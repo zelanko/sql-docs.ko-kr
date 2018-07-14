@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Begin Tran Starting event class'
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5dcffb6dc702d2663d39f1cd73b728e4fffb24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc784ead7ae39b170f1747566c9661788d9edc99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256432"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 이벤트 클래스
   TM: Begin Tran Starting 이벤트 클래스는 BEGIN TRANSACTION 요청이 시작되고 있음을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  

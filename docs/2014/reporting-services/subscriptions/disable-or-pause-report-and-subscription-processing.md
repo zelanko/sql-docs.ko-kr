@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - subscriptions [Reporting Services], pausing
@@ -24,13 +24,13 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a10c8a9b2d23ea5d4803dfc97911cc5695b26b38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ece2c0fe9ae32652e92a5f8d20b628d924b369a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261969"
 ---
 # <a name="pause-report-and-subscription-processing"></a>보고서 및 구독 처리 일시 중지
   보고서나 구독을 직접 일시 중지할 수 없습니다. 그러나 프로세스가 시작되거나 데이터 원본 연결이 만들어지기 전에 보고서 및 구독 처리를 중단할 수 있습니다. 사용자가 보고서나 구독에 액세스하지 못하도록 하여 보고서나 구독 처리를 중단할 수도 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36093911"
  데이터 원본을 사용할 수 없는 경우에도 보고서는 로드됩니다. 보고서에는 데이터가 포함되지 않지만 적절한 권한이 있는 사용자는 보고서에 연결된 속성 페이지, 보안 설정, 보고서 기록 및 구독 정보에 액세스할 수 있습니다.  
   
 ## <a name="pause-a-shared-schedule"></a>공유 일정 일시 중지  
- 보고서나 구독을 공유 일정에 따라 실행하는 경우 일정을 일시 중지하여 처리를 중단할 수 있습니다. 일정에 따라 진행되는 모든 보고서와 구독 처리는 일정을 다시 시작할 때까지 중단됩니다. 자세한 내용은 참조 [Resume 공유 일정 일시 중지 및](schedules.md)합니다.  
+ 보고서나 구독을 공유 일정에 따라 실행하는 경우 일정을 일시 중지하여 처리를 중단할 수 있습니다. 일정에 따라 진행되는 모든 보고서와 구독 처리는 일정을 다시 시작할 때까지 중단됩니다. 자세한 내용은 [일시 중지 및 다시 시작 공유 일정](schedules.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)   

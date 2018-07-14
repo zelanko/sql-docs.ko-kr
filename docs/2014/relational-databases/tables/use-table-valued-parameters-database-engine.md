@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DECLARE
 - CREATE TYPE
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bbc9653a596eb6c046700fbf3e0a643b1b311656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce96eb2e0cad45e15e03f48bbb27afb5cb61938b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223213"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>테이블 반환 매개 변수 사용(데이터베이스 엔진)
   테이블 반환 매개 변수는 사용자 정의 테이블 형식을 사용하여 선언됩니다. 테이블 반환 매개 변수를 사용하면 임시 테이블이나 많은 매개 변수를 만들지 않고도 저장 프로시저 또는 함수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 루틴에 여러 행의 데이터를 보낼 수 있습니다.  

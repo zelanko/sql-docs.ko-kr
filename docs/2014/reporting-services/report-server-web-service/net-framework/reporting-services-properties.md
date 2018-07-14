@@ -21,15 +21,15 @@ helpviewer_keywords:
 - properties [Reporting Services]
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e3da3152b0f165fac7b03f40f1b5542712d7115f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 764d86808d2febf7ea2199c86cdebd7d7b021f5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198433"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services 속성
   보고서 서버에서는 보고서 서버의 전역 시스템 속성 집합 및 보고서 서버 데이터베이스에 저장된 개별 항목과 연결된 항목 속성 집합을 정의합니다. 보고서 서버에서 정의된 속성은 삭제할 수 없으며 읽기 전용인 경우도 있습니다. 응용 프로그램에서 추가 사용자 정의 속성을 시스템 및 항목 속성에 추가하여 시스템 속성 및 항목 속성을 확장할 수 있습니다.  

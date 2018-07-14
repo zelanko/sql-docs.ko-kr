@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fdbdd223-c3cb-4d88-a96c-c5d362030c83
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3bb2f8a590e38b72048b58042042af24b5142bd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2b2960b0153e0f94bd50d6226fab1504f73d535d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264179"
 ---
 # <a name="post-uninstall"></a>게시 제거
   게시 제거 페이지를 사용하여 작업이 성공적으로 완료되었는지 확인할 수 있습니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10183"
 - sql12.rtp.rptdesigner.legendtitleproperties.shadow.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7f53e64e54b3bb56f0f2070b1fe894d26523c200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244323"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>차트의 범례 서식 지정(보고서 작성기 및 SSRS)
   차트 범례에는 차트의 각 범주에 대한 설명이 포함됩니다. 범례는 항상 하나 이상의 범례 항목을 포함합니다. 각 범례 항목은 다음 그림에 표시된 대로 계열을 나타내는 색 지정된 상자 및 계열을 설명하는 텍스트 문자열로 구성되어 있습니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "36171898"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="ordering-legend-items-in-the-legend"></a>범례에서 범례 항목 순서 지정  
- 계열은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 처리 엔진에서 처리하는 순서에 따라 범례에서 순서가 지정됩니다. 데이터 필드 끌어 놓기 영역에서 필드 순서를 변경하여 순서를 변경할 수 있습니다. 계열 그룹화를 사용하는 경우 계열 데이터는 처리될 때까지 알려지지 않으므로 이러한 항목의 순서를 다시 지정할 방법이 없습니다. 변경 내용을 미리 보기에서 볼 수 있습니다. 계열 그룹화에 대 한 자세한 내용은 참조 [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+ 계열은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 처리 엔진에서 처리하는 순서에 따라 범례에서 순서가 지정됩니다. 데이터 필드 끌어 놓기 영역에서 필드 순서를 변경하여 순서를 변경할 수 있습니다. 계열 그룹화를 사용하는 경우 계열 데이터는 처리될 때까지 알려지지 않으므로 이러한 항목의 순서를 다시 지정할 방법이 없습니다. 변경 내용을 미리 보기에서 볼 수 있습니다. 계열 그룹화에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
   
- 계열을 범례에서 숨길 수 있습니다. 계열 그룹화를 사용하는 경우 데이터 필드와 관련된 모든 계열이 숨겨집니다. 자세한 내용은 참조 [차트에서 범례 항목 숨기기 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-hide-items-report-builder.md)합니다.  
+ 계열을 범례에서 숨길 수 있습니다. 계열 그룹화를 사용하는 경우 데이터 필드와 관련된 모든 계열이 숨겨집니다. 자세한 내용은 [차트에서 범례 항목 숨기기 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-hide-items-report-builder.md)합니다.  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>범례에서 범례 항목의 텍스트 또는 색 변경  
- 차트의 데이터 필드 끌어 놓기 영역에 필드를 배치하면 해당 필드의 이름이 들어 있는 범례 항목이 자동으로 생성됩니다. 기본적으로 각 범례 항목의 텍스트는 데이터 필드 이름에서 가져옵니다. 모든 범례 항목은 차트의 개별 계열에 연결됩니다. 단, 셰이프 차트의 경우 범례는 개별 계열 대신 개별 데이터 요소에 연결됩니다. 셰이프 차트에 범주 그룹이 정의된 경우 각 범례 항목의 텍스트는 범주 그룹의 문자열 표현에서 가져옵니다. 원형, 도넛형 및 깔때기형 차트에 사용자 지정 레이블 텍스트를 지정하여 범례의 각 개별 데이터 요소와 관련된 범주 그룹 레이블 이외의 정보를 표시할 수 있습니다. 이렇게 하려면 범례를 선택하고 **계열 속성** 대화 상자나 속성 창의 **LegendText** 속성에서 범례 텍스트를 지정합니다. 자세한 내용은 참조 [범례 항목의 텍스트 변경 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-change-item-text-report-builder.md)합니다.  
+ 차트의 데이터 필드 끌어 놓기 영역에 필드를 배치하면 해당 필드의 이름이 들어 있는 범례 항목이 자동으로 생성됩니다. 기본적으로 각 범례 항목의 텍스트는 데이터 필드 이름에서 가져옵니다. 모든 범례 항목은 차트의 개별 계열에 연결됩니다. 단, 셰이프 차트의 경우 범례는 개별 계열 대신 개별 데이터 요소에 연결됩니다. 셰이프 차트에 범주 그룹이 정의된 경우 각 범례 항목의 텍스트는 범주 그룹의 문자열 표현에서 가져옵니다. 원형, 도넛형 및 깔때기형 차트에 사용자 지정 레이블 텍스트를 지정하여 범례의 각 개별 데이터 요소와 관련된 범주 그룹 레이블 이외의 정보를 표시할 수 있습니다. 이렇게 하려면 범례를 선택하고 **계열 속성** 대화 상자나 속성 창의 **LegendText** 속성에서 범례 텍스트를 지정합니다. 자세한 내용은 [범례 항목의 텍스트를 변경 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-change-item-text-report-builder.md)합니다.  
   
- **LegendText** 속성이나 **계열 속성** 대화 상자에서 일반적으로 참조되는 특성에 대해 대/소문자를 구분하는 차트 관련 키워드를 지정할 수도 있습니다. 차트 컨트롤은 이러한 키워드를 런타임에 해당 데이터 표현으로 대체합니다. 이 방법을 사용하면 특정 데이터 요소와 관련된 정보를 표시할 수 있으므로 셰이프 차트에 유용합니다. 자세한 내용은 참조 [차트의 데이터 요소에 서식 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)합니다.  
+ **LegendText** 속성이나 **계열 속성** 대화 상자에서 일반적으로 참조되는 특성에 대해 대/소문자를 구분하는 차트 관련 키워드를 지정할 수도 있습니다. 차트 컨트롤은 이러한 키워드를 런타임에 해당 데이터 표현으로 대체합니다. 이 방법을 사용하면 특정 데이터 요소와 관련된 정보를 표시할 수 있으므로 셰이프 차트에 유용합니다. 자세한 내용은 [차트의 데이터 요소에 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)합니다.  
   
  각 범례 항목에 대해 표시되는 색 지정된 상자는 해당 계열의 채우기 색에서 상속됩니다. 따라서 범례 항목에 표시되는 색을 변경하려면 해당 계열 색을 변경해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36171898"
 ## <a name="formatting-the-legend-text"></a>범례 텍스트 서식 지정  
  **범례 속성** 대화 상자의 **글꼴** 페이지에서 범례 텍스트의 글꼴, 크기, 스타일 및 색을 변경할 수 있습니다.  
   
- 기본적으로 범례 텍스트는 범례 영역에 맞게 최적화되지 않습니다. 범례 텍스트를 자동으로 할당 된 공간을 맞추려면 시킬 AutoFitTextDisabled 속성을 설정 `False` MinFontSize 속성 것으로 예상 되는 가장 적은 글꼴 크기로을 인식할 수 있는 되며 여전히 범례 사용할 수에 대 한 최소 글꼴 크기를 설정 하 고 최적화 기능입니다.  
+ 기본적으로 범례 텍스트는 범례 영역에 맞게 최적화되지 않습니다. 범례 텍스트를 자동으로 할당 된 공간에 맞게 시킬 AutoFitTextDisabled 속성을 설정 `False` 생각 하는 가장 작은 글꼴 크기로 MinFontSize 속성 표시 되며 여전히 범례에 대 한 허용에 대 한 최소 글꼴 크기를 설정 하 고 최적화 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [범례 속성 대화 상자, 일반 &#40;보고서 작성기 및 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
@@ -89,6 +89,6 @@ ms.locfileid: "36171898"
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트에서 범례 항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](chart-legend-hide-items-report-builder.md)   
- [색 색상표를 사용 하 여 차트에 정의할 &#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [색 색상표를 사용 하 여 차트에서 &#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

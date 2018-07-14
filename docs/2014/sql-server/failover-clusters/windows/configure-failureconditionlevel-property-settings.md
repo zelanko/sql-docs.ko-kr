@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d4f3796c0e6145e2dc24110e805971fb88058484
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8a0a6c8fb4b87ca1bbb51947b722fc4238a1c187
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161864"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정 구성
   FailureConditionLevel 속성을 사용하여 AlwaysOn FCI(장애 조치(Failover) 클러스터 인스턴스)가 장애 조치(Failover)되거나 다시 시작되는 조건을 설정할 수 있습니다. 이 속성에 대한 변경 내용은 WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 또는 FCI 리소스를 다시 시작할 필요 없이 즉시 적용됩니다.  
@@ -46,10 +45,10 @@ ms.locfileid: "36183977"
   
 2.  클러스터 Cmdlet을 사용할 수 있도록 `FailoverClusters` 모듈을 가져옵니다.  
   
-3.  사용 하 여는 `Get-ClusterResource` 찾으려고 cmdlet는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 사용 하 여 `Set-ClusterParameter` 설정 하는 cmdlet는 **FailureConditionLevel** 장애 조치 클러스터 인스턴스에 대 한 속성입니다.  
+3.  사용 하 여를 `Get-ClusterResource` cmdlet을 찾을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 사용 하 여 `Set-ClusterParameter` cmdlet을 설정 하는 **FailureConditionLevel** a Failover Cluster Instance에 대 한 속성.  
   
 > [!TIP]  
->  새 PowerShell 창을 열 때마다 가져와야 할는 `FailoverClusters` 모듈입니다.  
+>  새 PowerShell 창을 열 때마다를 가져와야 할는 `FailoverClusters` 모듈입니다.  
   
 ### <a name="example-powershell"></a>예제(PowerShell)  
  다음 예에서는 심각한 서버 오류 시 장애 조치(failover) 또는 다시 시작이 수행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 "`SQL Server (INST1)`"의 FailureConditionLevel 설정을 변경합니다.  

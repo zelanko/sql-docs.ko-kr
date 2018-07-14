@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94c05bce76e29f3147af8143fa22f03bdd7844a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8004d3a0342098004286d27e4fe23d4333acb717
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272649"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 배달 확장 프로그램 설정
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 메일 배달 확장 프로그램 및 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 보고서를 개별 사용자 또는 그룹에 전자 메일로 보낼 수 있는 방법을 제공합니다. 파일 공유 배달 확장 프로그램의 경우 렌더링된 보고서를 네트워크의 공유 위치로 자동으로 보낼 수 있습니다. 표준 구독 또는 데이터 기반 구독에서 지원되는 배달 확장 프로그램 중 하나를 사용할 수 있습니다. <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 및 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 메서드를 호출할 때마다 배달 확장 프로그램 유형에 대한 특정 배달 설정을 전달합니다. 배달 설정 목록을 프로그래밍 방식으로 검색하려면 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 메서드를 사용합니다.  

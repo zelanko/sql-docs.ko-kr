@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201853"
 ---
 # <a name="transfer-error-messages-task"></a>오류 메시지 전송 태스크
   오류 메시지 전송 태스크에서는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 간에 전송합니다. 사용자 정의 메시지는 50000보다 크거나 같은 식별자를 가진 메시지입니다. 50000보다 작은 식별자를 가진 메시지는 시스템 오류 메시지이며 오류 메시지 전송 태스크를 사용하여 전송할 수 없습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36172233"
  오류 메시지 전송 태스크는 오류 메시지를 전송하는 진행 과정은 보고하지 않으며 0% 및 100% 완료만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 전송된 오류 메시지의 개수는 태스크의 `ExecutionValue` 속성에 정의된 실행 값으로 반환됩니다. 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 패키지에서 다른 개체에 사용할 수 있는 오류 메시지 전송에 대 한 정보 오류 메시지 전송 태스크의 속성을 지정할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+ 전송된 오류 메시지의 개수는 태스크의 `ExecutionValue` 속성에 정의된 실행 값으로 반환됩니다. 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 오류 메시지 전송에 대 한 정보 오류 메시지 전송 태스크의 속성 수 다른 개체에 사용할 수 있는 패키지에 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  오류 메시지 전송 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36172233"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   이 로그 항목에서는 전송이 완료되었음을 보고합니다. 로그 항목에 종료 시간이 포함됩니다.  
   
- 또한에 대 한 로그 항목의 `OnInformation` 전송 된 오류 메시지 및 로그 항목의 수를 보고 하는 이벤트는 `OnWarning event` 은 덮어쓴 대상에 각 오류 메시지에 대해 기록 됩니다.  
+ 또한 로그 항목을 `OnInformation` 전송 된 오류 메시지 및 로그 항목의 수를 보고 하는 이벤트를 `OnWarning event` 은 덮어쓴 대상에 각 오류 메시지에 대해 기록 됩니다.  
   
 ## <a name="security-and-permissions"></a>보안 및 사용 권한  
  새 오류 메시지를 만들려면 패키지를 실행하는 사용자가 대상 서버의 sysadmin 또는 serveradmin 서버 역할의 멤버여야 합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36172233"
   
 -   [오류 메시지 전송 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [오류 메시지 전송 태스크 편집기 &#40;메시지 페이지&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [오류 메시지 전송 태스크 편집기 &#40;페이지를 메시지&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

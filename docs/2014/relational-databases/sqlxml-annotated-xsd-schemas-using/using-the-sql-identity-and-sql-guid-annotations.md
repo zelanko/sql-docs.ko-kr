@@ -25,18 +25,18 @@ helpviewer_keywords:
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b54109b005956241b87efe89a33bf1c949b792e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fa8661c437f33cd11165c0aa2ad3945a79d5fa7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197123"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 및 sql:guid 주석 사용
-  지정할 수는 `sql:identity` 및 `sql:guid` 데이터베이스 열에 매핑되는 모든 노드에 XSD 스키마에 주석으로 이루어진 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. updategram 형식은 `updg:at-identity` 및 `updg:guid` 특성을 지원하지만 DiffGram 형식은 이러한 특성을 지원하지 않습니다. `updg:at-identity` 특성은 IDENTITY 형식의 열을 업데이트할 때의 동작을 정의합니다. `updg:guid` 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 GUID 값을 가져와서 updategram에 사용할 수 있습니다. 자세한 내용 및 작업 예제에 대 한 참조 [XML Updategram를 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)합니다.  
+  지정할 수 있습니다 합니다 `sql:identity` 하 고 `sql:guid` 데이터베이스 열에 매핑되는 모든 노드에서 XSD 스키마에서 주석을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. updategram 형식은 `updg:at-identity` 및 `updg:guid` 특성을 지원하지만 DiffGram 형식은 이러한 특성을 지원하지 않습니다. `updg:at-identity` 특성은 IDENTITY 형식의 열을 업데이트할 때의 동작을 정의합니다. `updg:guid` 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 GUID 값을 가져와서 updategram에 사용할 수 있습니다. 자세한 내용 및 작업 예제를 참조 하세요 [XML Updategram를 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)합니다.  
   
  `sql:identity` 및 `sql:guid` 주석은 이 기능을 DiffGram으로 확장합니다.  
   

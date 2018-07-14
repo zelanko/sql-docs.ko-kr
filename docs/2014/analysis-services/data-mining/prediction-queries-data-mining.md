@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccebccb18c4b19061de6dbefe17ac9ae132bfeed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59cf6254c290982e8d9c38cbf1ebb77680f12c13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255055"
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
   일반적인 데이터 마이닝 프로젝트의 목표는 마이닝 모델을 사용하여 예측을 수행하는 것입니다. 예를 들어 서버의 특정 클러스터에 대해 예상 작동 중단 시간의 양을 예측하거나, 고객의 세그먼트가 광고 캠페인에 응답할 가능성이 있는지 여부를 표시하는 점수를 생성할 수 있습니다. 이러한 작업을 모두 수행하기 위해 예측 쿼리를 만들 수 있습니다.  
@@ -150,7 +150,7 @@ FROM
  공급자가 계층적 행 집합을 처리할 수 없는 경우 예측 쿼리에 FLATTEN 키워드를 사용하여 결과를 평면화할 수 있습니다. 일반 행 집합의 예를 비롯한 자세한 내용은 [SELECT&#40;DMX&#41;](/sql/dmx/select-dmx)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [내용 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)   
+ [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)   
  [데이터 정의 쿼리 &#40;데이터 마이닝&#41;](data-definition-queries-data-mining.md)  
   
   

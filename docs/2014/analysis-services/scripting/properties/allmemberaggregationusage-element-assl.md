@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1da20a067a1f293bafbca858623ab477aacac6b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252955"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>AllMemberAggregationUsage 요소(ASSL)
-  컨트롤 어떻게에서 집계 디자이너로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 집계를 디자인 합니다.  
+  제어 하는 방법에서 집계 디자이너로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 집계를 디자인 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,15 +68,15 @@ ms.locfileid: "36172258"
 |-----------|-----------------|  
 |*전체*|큐브의 모든 집계가 All 멤버를 포함해야 합니다.|  
 |*없음*|큐브의 어떤 집계도 All 멤버를 포함하지 않아야 합니다.|  
-|*제한 없음*|집계 디자이너에 제한 사항이 지정되지 않습니다.|  
+|*무제한*|집계 디자이너에 제한 사항이 지정되지 않습니다.|  
 |*기본값*|*Unrestricted*와 같습니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `AllMemberAggregationUsage` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimension>합니다.  
+ 부모에 해당 하는 요소가 `AllMemberAggregationUsage` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

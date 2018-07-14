@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216123"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "36172573"
 > [!NOTE]  
 >  Naive Bayes 모델은 연속 데이터 형식을 허용하지 않으므로 입력 열의 모든 값은 불연속 또는 분할된 열로 처리됩니다. 값이 분할되는 방식은 사용자가 지정할 수 있습니다. 자세한 내용은 [마이닝 모델에서 열의 불연속화 변경](change-the-discretization-of-a-column-in-a-mining-model.md)을 참조하세요.  
   
- ![naïve bayes에 대 한 모델 콘텐츠의 구조](../media/modelcontentstructure-nb.gif "한 naïve bayes에 대 한 모델 콘텐츠 구조")  
+ ![한 것은 순진한 bayes에 대 한 모델 콘텐츠 구조](../media/modelcontentstructure-nb.gif "한 것은 순진한 bayes에 대 한 모델 콘텐츠 구조")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Naive Bayes 모델에 대한 모델 콘텐츠  
  이 섹션에서는 Naive Bayes 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다.  
@@ -289,7 +289,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Naive Bayes 모델에는 연속 특성이 있을 수 없으므로 모든 숫자 데이터는 Discrete(VALUE_TYPE = 4) 또는 Discretized(VALUE_TYPE = 5)로 표현됩니다.  
   
- A `Missing` 값 (VALUE_TYPE = 1) 학습 데이터에 없었던 잠재적인 값을 나타내는 모든 입력 및 출력 특성에 추가 됩니다. "Missing"과 기본 문자열로 구분 하기 위해 주의 해야 `Missing` 값입니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
+ `Missing` 값 (VALUE_TYPE = 1)은 학습 데이터에 없었던 잠재적인 값을 나타내는 모든 입력 및 출력 특성에 추가 합니다. 주의 해 서 "없음" 문자열을 기본 구별 해야 `Missing` 값입니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   

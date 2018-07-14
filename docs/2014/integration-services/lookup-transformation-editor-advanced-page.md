@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4982bd1a964e72d6a7e36d88a6f500d2a3ba5d89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b44973dda00e956d25c694c835e7dc1e683eab9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169211"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36181651"
  참조 데이터 집합을 생성하는 데 사용되는 SQL 문을 수정합니다.  
   
 > [!NOTE]  
->  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 참조 [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)합니다.  
+>  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)합니다.  
   
  **매개 변수**  
  **쿼리 매개 변수 설정** 대화 상자를 사용하여 입력 열을 매개 변수에 매핑합니다.  

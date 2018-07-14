@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166304"
 ---
 # <a name="load-xml-data"></a>XML 데이터 로드
   XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 예를 들어:  
@@ -31,7 +31,7 @@ ms.locfileid: "36181745"
   
 -   bcp out을 사용하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 대량 복사한 다음 bcp in을 사용하여 데이터를 최신 버전 데이터베이스로 대량 삽입할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 관계형 열에 데이터가 있는 경우 [n]text 열 및 행 식별자의 경우 기본 키 열(옵션)이 포함된 새 테이블을 만듭니다. 클라이언트 쪽 FOR XML로 서버에서 생성 되는 XML 검색 하기 위해 프로그래밍을 사용 하며로 작성 된 `[n]text` 열입니다. 그런 다음 앞에서 언급한 기술을 사용하여 데이터를 최신 데이터베이스에 전송합니다. 최신 데이터베이스에 있는 XML 열로 XML을 직접 작성하도록 선택할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 관계형 열에 데이터가 있는 경우 [n]text 열 및 행 식별자의 경우 기본 키 열(옵션)이 포함된 새 테이블을 만듭니다. 클라이언트 쪽 FOR XML을 사용 하 여 서버에서 생성 되는 XML 검색 하기 위해 프로그래밍을 사용 하 여 및에 쓰기는 `[n]text` 열입니다. 그런 다음 앞에서 언급한 기술을 사용하여 데이터를 최신 데이터베이스에 전송합니다. 최신 데이터베이스에 있는 XML 열로 XML을 직접 작성하도록 선택할 수 있습니다.  
   
 ## <a name="bulk-loading-xml-data"></a>XML 데이터 대량 로드  
  bcp와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 대량 로드 기능을 사용하여 XML 데이터를 서버에 대량 로드할 수 있습니다. OPENROWSET을 사용하면 데이터를 파일에서 XML 열로 로드할 수 있습니다. 다음 예에서는 이러한 점을 보여 줍니다.  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   인코딩이 유니코드가 아니고 암시적인 경우 원본 코드 페이지로 인해 데이터베이스의 문자열 코드 페이지는 로드하려는 코드 지점과 호환되거나 동일해야 합니다. 필요한 경우 COLLATE를 사용합니다. 이러한 서버 코드 페이지가 없는 경우 명시적 XML 선언을 올바른 인코딩으로 추가해야 합니다.  
   
--   명시적 인코딩을 사용 하려면 하나를 사용는 `varbinary()` 입력, 코드 페이지와 상호 작용이 없는 하거나 적절 한 코드 페이지의 문자열 유형을 사용 합니다. 그런 다음 데이터를 XML 열, 변수 또는 매개 변수에 할당합니다.  
+-   명시적 인코딩을 사용 하려면 하나를 사용 합니다 `varbinary()` 코드 페이지와 상호 작용이 없는 유형을 사용 하거나 적절 한 코드 페이지의 문자열 유형을 사용 합니다. 그런 다음 데이터를 XML 열, 변수 또는 매개 변수에 할당합니다.  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>예: 인코딩을 명시적으로 지정  
- 명시적 XML 선언 없이 `varchar(max)`로 저장된 XML 문서인 vcdoc가 있다고 가정해 보십시오. 다음 문은 "iso8859-1" 인코딩으로 XML 선언을 추가 XML 문서를 연결 하는 결과 캐스팅 `varbinary(max)` 하 여 바이트 표현이 유지 되 고 다음 마지막으로 XML로 캐스팅 합니다. 이렇게 하면 XML 프로세서가 지정된 "iso8859-1" 인코딩에 따라 데이터를 구문 분석하고 문자열 값에 대한 해당 UTF-16 표현을 생성할 수 있습니다.  
+ 명시적 XML 선언 없이 `varchar(max)`로 저장된 XML 문서인 vcdoc가 있다고 가정해 보십시오. 다음 문은 XML 문서를 연결, 결과를 캐스팅 인코딩 "iso8859-1"을 사용 하 여 XML 선언을 추가 `varbinary(max)` 하 여 바이트 표현이 유지 되 면 다음 마지막으로 XML로 캐스팅 합니다. 이렇게 하면 XML 프로세서가 지정된 "iso8859-1" 인코딩에 따라 데이터를 구문 분석하고 문자열 값에 대한 해당 UTF-16 표현을 생성할 수 있습니다.  
   
 ```  
 SELECT CAST(   

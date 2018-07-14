@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232383"
 ---
 # <a name="modifying-measures"></a>측정값 수정
   **FormatString** 속성을 사용하여 측정값이 사용자에게 표시되는 방식을 제어하는 서식 설정을 정의할 수 있습니다. 이 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 통화 및 백분율 측정값에 대한 서식 속성을 지정하는 방법에 대해 설명합니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "36172291"
   
 7.  제목 표시줄 바로 아래의 속성 창 맨 위에 있는 드롭다운 목록에서 **Unit Price Discount Pct**측정값을 선택한 다음 **FormatString** 목록에서 **Percent** 를 선택합니다.  
   
-8.  속성 창에서 변경 된 **이름** 속성에 대 한는 **Unit Price Discount Pct** 측정값을 `Unit Price Discount Percentage`합니다.  
+8.  속성 창에서 변경 합니다 **이름** 에 대 한 속성을 **Unit Price Discount Pct** 측정값을 `Unit Price Discount Percentage`.  
   
-9. 에 **측정값** 창에서 클릭 **Tax Amt** 이 측정값의 이름을 변경 하 고 `Tax Amount`합니다.  
+9. 에 **측정값** 창 클릭 **Tax Amt** 이 측정값의 이름을 변경 하 고 `Tax Amount`입니다.  
   
 10. 속성 창에서 **자동 숨기기** 아이콘을 클릭하여 속성 창을 숨긴 다음 **큐브 구조** 탭의 도구 모음에서 **측정값 트리 표시** 를 클릭합니다.  
   

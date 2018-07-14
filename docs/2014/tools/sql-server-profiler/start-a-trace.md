@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
 - pausing traces
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb735810bcf265076fde9e3834dc7404d1f45079
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 678bf2b9140d5df7d19aa28088d598f4cca450c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224583"
 ---
 # <a name="start-a-trace"></a>추적 시작
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 새 추적을 정의하거나 템플릿을 만든 후 새 추적 정의 또는 템플릿을 사용하여 데이터 캡처를 시작, 일시 중지 또는 중지할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36173011"
 >  기존의 추적으로 작업하면 속성을 볼 수는 있지만 수정할 수는 없습니다. 속성을 수정하려면 추적을 시작하거나 일시 중지하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버에 연결한 후 자동으로 추적 시작 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [서버 연결 후 자동으로 추적 시작 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [추적 일시 중지&#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [추적 중지&#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [추적 창 지우기&#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

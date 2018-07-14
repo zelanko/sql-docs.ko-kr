@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [Analysis Services], creating
 - scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a3f782c215373df1412a81fa8bb7765745c3ae27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e71c6a057606b2a28e08efe1cf8e164c54c29de8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245727"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>SQL Server Data Tools에서 MDX 스크립트 만들기 및 실행
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 MDX 스크립트를 만들고 실행하려면 큐브를 미리 만들고 편집할 준비가 된 상태로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 있어야 합니다.  

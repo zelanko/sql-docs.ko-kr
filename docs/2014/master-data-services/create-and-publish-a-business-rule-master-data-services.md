@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ea043eaf389aa87e1162c2321220c4fd7878923a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322384"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>비즈니스 규칙 만들기 및 게시(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 마스터 데이터의 정확성 유지를 위한 비즈니스 규칙을 만듭니다. 규칙을 만든 후 게시해야 데이터에 적용할 수 있습니다.  
@@ -54,14 +54,14 @@ ms.locfileid: "36172663"
   
 9. **구성 요소** 창에서 **조건** 노드를 확장합니다.  
   
-10. 조건을 클릭 하 고 끌어는 **IF** 창의 **조건** 레이블.  
+10. 조건을 클릭 하 고 끌어 옵니다 합니다 **IF** 창의 **조건** 레이블.  
   
     > [!TIP]  
-    >  마우스 오른쪽 단추로 클릭 하 고 선택 하 여 비즈니스 규칙에서 항목을 삭제할 수 **삭제**합니다.  
+    >  마우스 오른쪽 단추로 클릭 하 고 선택 하 여 비즈니스 규칙에서 항목을 삭제할 수 있습니다 **삭제**합니다.  
   
-11. 에 **특성** 창에서 특성을 클릭 하 고 끌어는 **조건 편집** 창의 **특성 선택** 레이블.  
+11. 에 **특성** 창에 특성을 클릭 하 고 끌어 옵니다 합니다 **조건 편집** 창의 **특성 선택** 레이블.  
   
-12. 에 **조건 편집** 창에서 모든 필수 필드를 완료 합니다.  
+12. 에 **조건 편집** 창에 모든 필수 필드를 완료 합니다.  
   
 13. **조건 편집** 창에서 **항목 저장**을 클릭합니다.  
   

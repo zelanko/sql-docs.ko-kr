@@ -14,15 +14,15 @@ helpviewer_keywords:
 - WMI errors
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aa1928c649e08760ec05ef5d34c566183da7b46e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ade088611479eca1c79a905ac076c9bbb56c6203
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237373"
 ---
 # <a name="wmi-provider-events-and-errors"></a>WMI 공급자 이벤트 및 오류
   이 항목에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련한 몇 가지 WMI 오류의 원인 및 해결 방법 정보가 포함되어 있습니다.  

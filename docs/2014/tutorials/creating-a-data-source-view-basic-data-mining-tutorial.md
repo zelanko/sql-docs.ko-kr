@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 37c1548820bfe40478cdd5a8fd7b7ed051722056
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2b64202ccd2b5f420eceeb0287407656dde1cefe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241843"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>데이터 원본 뷰 만들기(기본 데이터 마이닝 자습서)
   데이터 원본 뷰는 데이터 원본을 기반으로 하고, 마이닝 구조에 사용할 수 있는 데이터 하위 집합을 정의합니다. 데이터 원본 뷰를 사용하여 열을 추가하고 계산 열 및 집계를 만들고 명명된 뷰를 추가할 수도 있습니다. 데이터 원본 뷰를 사용하면 원래 데이터 원본을 수정하지 않고도 프로젝트와 관련된 테이블을 선택하고 테이블 간의 관계를 설정하며 데이터 구조를 수정할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "36311851"
   
 5.  **다음**을 클릭합니다.  
   
-6.  **마법사 완료** 페이지에서는 기본적으로 데이터 원본 뷰의 이름이 Adventure Works DW 2012로 지정되어 있습니다. 이름을 변경한 `Targeted Mailing`, 클릭 하 고 **마침**합니다.  
+6.  **마법사 완료** 페이지에서는 기본적으로 데이터 원본 뷰의 이름이 Adventure Works DW 2012로 지정되어 있습니다. 이름을 `Targeted Mailing`를 클릭 하 고 **완료**합니다.  
   
      **Targeted Mailing.dsv [디자인]** 탭에 새 데이터 원본 뷰가 열립니다.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "36311851"
  [2 단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [정의 데이터 원본 뷰 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [정의 된 데이터 원본 뷰 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

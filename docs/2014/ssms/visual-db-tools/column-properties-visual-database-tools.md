@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236183"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
   열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
@@ -183,12 +183,12 @@ ms.locfileid: "36172605"
  이 열이 다른 위치에 복제되었는지 여부를 표시합니다.  
   
  **RowGuid**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 이 값 설정할 수 있습니다 **예** 의 데이터 형식과 열에 대해서만 `uniqueidentifier`합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 이 값을 설정할 수 있습니다 **Yes** 데이터 형식의 열에 대해서만 `uniqueidentifier`합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
  **크기**  
  열의 데이터 형식에 허용되는 크기(바이트)를 표시합니다. 예를 들어 `nchar` 데이터 형식의 길이가 10(문자 수)까지 허용되면 유니코드 문자 집합 크기는 20까지 허용됩니다.  
   
 > [!NOTE]  
->  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help 길이로 (-1)를 반환 `varchar(max)` 열입니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
+>  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help 길이로 (-1)를 반환 합니다. `varchar(max)` 열입니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
   
   

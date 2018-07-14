@@ -16,22 +16,22 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245733"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>ADO MD에서 ADOMD.NET으로 마이그레이션
   ADOMD.NET 라이브러리는 COM(구성 요소 개체 모델) 기반 클라이언트 응용 프로그램의 다차원 데이터에 액세스하는 데 사용되는 ADO(ActiveX Data Objects) 라이브러리의 확장인 ADO MD(ActiveX Data Objects Multidimensional) 라이브러리와 비슷합니다. ADO MD는 C++ 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic과 같은 관리되지 않는 언어의 다차원 데이터에 쉽게 액세스할 수 있은 방법을 제공합니다. ADOMD.NET은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET과 같은 관리되는 언어의 분석(다차원 및 데이터 마이닝) 데이터에 쉽게 액세스할 수 있는 방법을 제공합니다. 또한 향상된 메타데이터 개체 모델도 제공합니다.  
   
  기존 클라이언트 응용 프로그램을 ADO MD에서 ADOMD.NET으로 마이그레이션하는 과정은 간단하지만 마이그레이션과 관련하여 몇 가지 중요한 차이점이 있습니다.  
   
- **클라이언트 응용 프로그램에 대 한 연결 및 데이터 액세스를 제공 하려면**  
+ **클라이언트 응용 프로그램에 대 한 연결 및 데이터 액세스를 제공 합니다.**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
 |Adodb.dll 및 Adomd.dll에 대한 참조가 필요합니다.|Microsoft.AnalysisServices.AdomdClient.dll에 대한 단일 참조가 필요합니다.|  
@@ -43,12 +43,12 @@ ms.locfileid: "36181196"
 |------------|---------------|  
 |카탈로그 클래스를 사용 합니다.|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A>의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 속성을 사용합니다.|  
   
- **개체 쿼리를 실행 하 고 셀 집합을 반환 하려면**  
+ **쿼리를 실행 하 고 셀 집합 개체를 반환 합니다.**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
 |셀 집합 클래스를 사용 합니다.|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 클래스를 사용합니다.|  
   
- **셀 집합을 표시 하는 데 사용 되는 메타 데이터에 액세스 하려면**  
+ **셀 집합을 표시 하는 데 사용 되는 메타 데이터에 액세스**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
 |위치 클래스를 사용 합니다.|<xref:Microsoft.AnalysisServices.AdomdClient.Set> 및 <xref:Microsoft.AnalysisServices.AdomdClient.Tuple> 개체를 사용합니다.|  
@@ -56,10 +56,10 @@ ms.locfileid: "36181196"
 > [!NOTE]  
 >  <xref:Microsoft.AnalysisServices.AdomdClient.Position> 클래스는 이전 버전과의 호환성을 위해 지원됩니다.  
   
- **마이닝 모델 메타 데이터를 검색**  
+ **마이닝 모델 메타 데이터를 검색 하려면**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|사용할 수 있는 클래스가 없습니다.|다음과 같은 데이터 마이닝 컬렉션 중 하나를 사용합니다.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> 데이터 원본의 모든 마이닝 모델의 목록을 포함 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> 사용 가능한 마이닝 알고리즘에 대 한 정보를 제공 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> 서버에서 마이닝 구조에 대 한 정보를 노출 합니다.|  
+|사용할 수 있는 클래스가 없습니다.|다음과 같은 데이터 마이닝 컬렉션 중 하나를 사용합니다.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> 데이터 원본의 모든 마이닝 모델의 목록을 포함 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> 사용 가능한 마이닝 알고리즘에 대 한 정보를 제공 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> 서버의 마이닝 구조에 대 한 정보를 노출 합니다.|  
   
  이러한 차이점을 보여 주기 위해 다음 마이그레이션 예제에서는 기존 ADO MD 응용 프로그램과 이와 동일한 기능을 수행하는 ADOMD.NET 응용 프로그램을 비교합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36181196"
  이 섹션에서 설명하는 기존 ADO MD 코드 예제와 이와 동일한 기능을 수행하는 ADOMD.NET 코드 예제는 연결을 만들고, MDX(Multidimensional Expressions) 문을 실행하며, 메타데이터 및 데이터를 검색하는 동일한 동작을 수행합니다. 그러나 두 코드 집합은 서로 다른 개체를 사용하여 태스크를 수행합니다.  
   
 ### <a name="existing-ado-md-code"></a>기존 ADO MD 코드  
- ADO MD 2.8 설명서에서 가져온 다음 코드 예제에서는 작성 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 및 ADO MD를 사용 하 여 연결 하 고 쿼리 하는 방법을 보여 주기 위해는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다. 이 ADO MD 예제는 다음과 같은 개체를 사용합니다.  
+ ADO MD 2.8 설명서에서 가져온 다음 코드 예제를 작성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 하 고 쿼리 하는 방법을 보여 주기 위해 Visual Basic® 6.0 및 사용 하 여 ADO MD를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다. 이 ADO MD 예제에서는 다음 개체를 사용합니다.  
   
 -   `Catalog` 개체에서 연결을 만듭니다.  
   

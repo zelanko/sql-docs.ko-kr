@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
 - uninstalling instances of SQL Server
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ab65ffdd02979695fed79211cb02411b4095f85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 42cf94bc46fd8cb31eb11f6afeb9813bc256d657
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187610"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 항목의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36181489"
   
 1.  제거 프로세스를 시작하려면 **제어판** , **프로그램 및 기능**으로 차례로 이동합니다.  
   
-2.  마우스 오른쪽 단추로 클릭 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 선택 **제거**합니다. **제거**를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다.  
+2.  마우스 오른쪽 단추로 클릭 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 선택한 **제거**합니다. **제거**를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다.  
   
      컴퓨터 구성을 확인하기 위해 설치 지원 규칙이 실행됩니다. 계속하려면 **다음**을 클릭합니다.  
   

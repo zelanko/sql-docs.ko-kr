@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - UnattendedExecutionAccount
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - UnattendedExecutionAccount property
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4f97cc66d94459064cc9e71806641533e9cbc064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e011bf4afb2f3588eea2429172bb8487579a1149
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268214"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버가 무인 모드로 보고서를 실행할 때 가장하는 사용자 계정을 반환합니다. 읽기 전용입니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
 - refresh interval for Activity Monitor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2f067d5efbf5b8e3262311e3b351e0443920287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262439"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>작업 모니터 열기(SQL Server Management Studio)
-  이 항목에서는 정보를 가져오는 방법에 대 한 작업 모니터를 여는 방법을 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 이러한 프로세스의 현재 인스턴스에 미치는 영향 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 또한 작업 모니터의 새로 고침 간격을 설정하는 방법에 대해서도 설명합니다.  
+  이 항목에 대 한 정보를 가져올 작업 모니터를 여는 방법에 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 이러한 프로세스의 현재 인스턴스에 미치는 영향 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 또한 작업 모니터의 새로 고침 간격을 설정하는 방법에 대해서도 설명합니다.  
   
  **항목 내용**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36182247"
   
      [보안](#Security)  
   
--   **사용 하 여 작업 모니터를 열려면:**  
+-   **작업 모니터를 열려면:**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36182247"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>SQL Server Management Studio에서 작업 모니터를 열려면  
   
-1.  에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 표준 도구 모음 클릭 **작업 모니터**합니다.  
+1.  에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 표준 도구 모음에서 클릭 **작업 모니터**합니다.  
   
 2.  **서버에 연결** 대화 상자에서 서버 이름과 인증 모드를 선택한 다음 **연결**을 클릭합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36182247"
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>개체 탐색기에서 작업 모니터를 열려면  
   
--   개체 탐색기에서 인스턴스 이름을 마우스 오른쪽 단추로 클릭 한 다음 선택 **작업 모니터**합니다.  
+-   개체 탐색기에서 인스턴스 이름을 마우스 오른쪽 단추로 클릭 하 고 선택한 **작업 모니터**합니다.  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>SQL Server Management Studio를 열 때 작업 모니터를 열려면  
   

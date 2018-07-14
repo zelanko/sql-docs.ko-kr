@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266309"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
   이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하기 위한 단계를 설명합니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 서버의 `master` 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
@@ -51,29 +50,29 @@ ms.locfileid: "36172410"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 인증서 또는 비대칭 키를 설치 해야는 `master` 대상 서버의 데이터베이스 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 파일에 액세스할 수 있습니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](transparent-data-encryption.md)를 참조하세요.  
+-   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 인증서 또는 비대칭 키를 설치 해야 합니다 `master` 대상 서버의 데이터베이스 있도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 파일에 액세스할 수 있습니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](transparent-data-encryption.md)를 참조하세요.  
   
 -   인증서를 복구하려면 인증서 파일 및 개인 키 파일의 사본을 보관해야 합니다. 개인 키의 암호는 데이터베이스 마스터 키 암호와 동일할 필요가 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 여기에서 만든 파일을 저장 **C:\Program Files\Microsoft SQL Server\MSSQL12 합니다. MSSQLSERVER\MSSQL\DATA** 기본적으로 합니다. 파일 이름 및 위치는 다를 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 여기에서 만든 파일을 저장 **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** 기본적으로 합니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> Permissions  
   
--   필요한 `CONTROL DATABASE` 에 대 한 권한이 `master` 데이터베이스 마스터 키를 만들려면 데이터베이스입니다.  
+-   필요 `CONTROL DATABASE` 에 대 한 권한이 `master` 데이터베이스에 데이터베이스 마스터 키를 만듭니다.  
   
--   필요한 `CREATE CERTIFICATE` 에 대 한 권한이 `master` DEK를 보호 하는 인증서를 만들 데이터베이스입니다.  
+-   필요 `CREATE CERTIFICATE` 에 대 한 권한이 `master` DEK를 보호 하는 인증서를 만들려는 데이터베이스입니다.  
   
--   필요한 `CONTROL DATABASE` 암호화 된 데이터베이스에 대 한 권한 및 `VIEW DEFINITION` 인증서 또는 데이터베이스 암호화 키를 암호화 하는 데 사용 되는 비대칭 키에 대 한 권한이 있습니다.  
+-   필요 `CONTROL DATABASE` 암호화 된 데이터베이스에 대 한 권한 및 `VIEW DEFINITION` 인증서 또는 데이터베이스 암호화 키를 암호화 하는 데 사용 되는 비대칭 키에 대 한 권한이 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 만들려면  
   
 ###  <a name="SSMSCreate"></a> SQL Server Management Studio 사용  
   
-1.  데이터베이스 마스터 키 만들기 및의 인증서는 `master` 데이터베이스입니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
+1.  데이터베이스 마스터 키 만들기 및 인증서에 `master` 데이터베이스입니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
-2.  에 서버 인증서의 백업 만들기는 `master` 데이터베이스입니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
+2.  서버 인증서의 백업을 만듭니다는 `master` 데이터베이스입니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
 3.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 선택합니다.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "36172410"
      **데이터베이스 암호화 관리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
      **암호화 알고리즘**  
-     데이터베이스 암호화에 사용할 알고리즘을 표시하거나 설정합니다. `AES128` 기본 알고리즘이입니다. 이 필드는 비워 둘 수 없습니다. 암호화 알고리즘에 대한 자세한 내용은 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)을 참조하세요.  
+     데이터베이스 암호화에 사용할 알고리즘을 표시하거나 설정합니다. `AES128` 기본 알고리즘입니다. 이 필드는 비워 둘 수 없습니다. 암호화 알고리즘에 대한 자세한 내용은 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)을 참조하세요.  
   
      **서버 인증서 사용**  
      인증서로 암호화의 보안을 유지하도록 설정합니다. 목록에서 하나를 선택합니다. 서버 인증서에 대한 `VIEW DEFINITION` 권한이 없으면 이 목록은 비어 있습니다. 암호화의 인증서 방법을 선택한 경우에는 이 값을 비워 둘 수 없습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  

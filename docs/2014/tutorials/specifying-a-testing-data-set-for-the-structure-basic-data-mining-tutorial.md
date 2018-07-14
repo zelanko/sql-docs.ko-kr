@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2023672b21e8ffde191b400329031895d200e1ea
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 09822e47f6fb8e1a4b91832a2b47492ae1d8c2b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198373"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>구조에 대한 테스트 데이터 집합 지정(기본 데이터 마이닝 자습서)
   데이터 마이닝 마법사의 마지막 화면에서 데이터를 테스트 집합과 학습 집합으로 나눕니다. 그런 다음 구조에 이름을 지정하고 모델에 드릴스루를 사용합니다.  
   
 ## <a name="specifying-a-testing-set"></a>학습 집합 지정  
- 마이닝 구조를 만들 때 학습 집합과 테스트 집합으로 데이터를 분리하면 나중에 만드는 마이닝 모델의 정확도를 쉽게 평가할 수 있습니다. 테스트 집합에 대 한 자세한 내용은 참조 하십시오. [학습 및 테스트 데이터 집합](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)합니다.  
+ 마이닝 구조를 만들 때 학습 집합과 테스트 집합으로 데이터를 분리하면 나중에 만드는 마이닝 모델의 정확도를 쉽게 평가할 수 있습니다. 테스트 집합에 대 한 자세한 내용은 참조 하세요. [학습 및 테스트 데이터 집합](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)합니다.  
   
 #### <a name="to-specify-the-testing-set"></a>테스트 집합을 지정하려면  
   
@@ -42,13 +42,13 @@ ms.locfileid: "36312631"
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>모델 및 구조에 이름을 지정하고 드릴스루를 지정하려면  
   
-1.  에 **마법사 완료** 페이지 **마이닝 구조 이름**, 형식 `Targeted Mailing`합니다.  
+1.  에 **마법사 완료** 페이지에서 **마이닝 구조 이름**, 형식 `Targeted Mailing`합니다.  
   
 2.  **마이닝 모델 이름**, 형식 `TM_Decision_Tree`합니다.  
   
 3.  선택 된 **드릴스루 허용** 확인란 합니다.  
   
-4.  검토는 **미리 보기** 창. 으로 선택한 열에 **키**, **입력** 또는 **예측 가능** 표시 됩니다. 선택한 다른 열(예: AddressLine1)은 모델 작성에 사용되지 않지만 기존 구조에 사용할 수 있으며 모델이 처리 및 배포된 후에 쿼리할 수 있습니다.  
+4.  검토 합니다 **미리 보기** 창입니다. 으로 선택한 열에 **키**를 **입력** 하거나 **예측 가능** 표시 됩니다. 선택한 다른 열(예: AddressLine1)은 모델 작성에 사용되지 않지만 기존 구조에 사용할 수 있으며 모델이 처리 및 배포된 후에 쿼리할 수 있습니다.  
   
 5.  **마침**을 클릭합니다.  
   

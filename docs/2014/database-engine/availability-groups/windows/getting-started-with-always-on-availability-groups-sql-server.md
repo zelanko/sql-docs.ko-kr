@@ -1,28 +1,27 @@
 ---
-title: AlwaysOn 가용성 그룹 (SQL Server) 시작 | Microsoft Docs
+title: AlwaysOn 가용성 그룹 (SQL Server)를 시작 하기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: 51
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c4dff6389577217b8b7a6d1cb447507c27f72ff5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3700a2e2d7b96a572fd8c72210a5d287ca56cf6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237643"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 시작(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 지원하도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 구성하고, 가용성 그룹을 만들고 관리하고 모니터링하기 위한 단계를 소개합니다.  
@@ -105,6 +104,6 @@ ms.locfileid: "36172255"
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹에 대 한 TRANSACT-SQL 문 개요 &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
- [AlwaysOn 가용성 그룹에 대 한 PowerShell cmdlet 개요 &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 가용성 그룹에 대 한 PowerShell Cmdlet 개요 &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

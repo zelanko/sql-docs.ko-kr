@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c9dc383d9a895218cf644bafc53be3b43cdc698a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b241374ed21e3e0ab004c5c29c4442f1dc4dcb88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166244"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 함수(보고서 작성기 및 SSRS)
   지정된 식의 지정된 범위에서 마지막 값을 반환합니다.  
@@ -36,7 +36,7 @@ Last(expression, scope)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`Variant` 또는 `Binary`) 예를 들어 집계를 수행할 식 `=Fields!Fieldname.Value`합니다.  
+ (`Variant` 나 `Binary`) 식의 예를 들어 집계를 수행할 `=Fields!Fieldname.Value`합니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 함수를 적용할 보고서 항목을 포함하는 데이터 집합, 데이터 영역 또는 그룹의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
@@ -47,9 +47,9 @@ Last(expression, scope)
 ## <a name="remarks"></a>Remarks  
  `Last` 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 마지막 값을 반환합니다.  
   
- `Last` 함수는 현재 (기본) 범위 외에 그룹 필터 식에 사용할 수 없습니다.  
+ `Last` 현재 (기본) 범위 외 그룹 필터 식에서 함수를 사용할 수 없습니다.  
   
- 사용할 수도 있습니다 `Last` 에서 마지막 값을 반환 하는 페이지 머리글에는 `ReportItems` 페이지에서 첫 번째와 마지막 항목을 표시 하는 사전 스타일의 머리글을 만들기 위해 페이지에 대 한 컬렉션입니다.  
+ 사용할 수도 있습니다 `Last` 에서 마지막 값을 반환 하려면 페이지 머리글에는 `ReportItems` 페이지에서 첫 번째와 마지막 항목을 표시 하는 사전 스타일의 머리글을 만들기 위해 페이지에 대 한 컬렉션입니다.  
   
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   
@@ -59,7 +59,7 @@ Last(expression, scope)
   
 -   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
   
--   *식* 포함 되지 않아야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -75,7 +75,7 @@ Last(expression, scope)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

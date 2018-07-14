@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ServerNetworkProtocolProperty class
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23ea90f40ca4bf3721dc4a80a59e7c276c3b77ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7554cdae2dd8c7c6276f51feb75d9fb6edb0511b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260389"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 클래스
-  [ServerNetworkProtocolProperty 클래스] servernetworkprotocolproperty-class.md) 서버 네트워크 프로토콜의 속성을 나타냅니다.  
+  [ServerNetworkProtocolProperty 클래스] servernetworkprotocolproperty-class.md)는 서버 네트워크 프로토콜의 속성을 나타냅니다.  
   
- [ServerNetworkProtocolProperty 클래스] servernetworkprotocolproperty-class.md) 다음과 같은 작업을 수행할 수 있습니다.  
+ [ServerNetworkProtocolProperty 클래스] servernetworkprotocolproperty-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   
 -   현재 속성이 속한 프로토콜을 확인합니다.  
   

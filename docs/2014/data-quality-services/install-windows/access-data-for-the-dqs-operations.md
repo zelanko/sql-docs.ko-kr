@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1e843ecb2f07ec159f3f440c6a537140c0c18361
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc9d28181a1677953e54857ff4b0ad54418a11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196123"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 작업을 위해 데이터 액세스
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 작업에 원본 데이터를 사용하고 처리된 데이터를 내보내려면 다음 중 하나를 수행할 수 있습니다.  

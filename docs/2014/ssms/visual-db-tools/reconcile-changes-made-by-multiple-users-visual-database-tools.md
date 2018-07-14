@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df791875016fbe6b999a20ca1d5e40c6ec5ecf18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e1e1b53f7ae933317935eb29f1eb62643495c26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264189"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>여러 사용자가 변경한 내용 조정(Visual Database Tools)
   다중 사용자 환경에서는 동일한 개체를 여러 사용자가 동시에 변경할 수 있습니다. 이러한 상황은 테이블 또는 데이터베이스 다이어그램 디자이너에서 개체 구조에 대한 작업을 수행 중일 때 발생할 수도 있고, 쿼리 및 뷰 디자이너의 결과 창에 반환된 결과의 값에 대해 발생할 수도 있습니다. 이 경우 충돌이 발생할 수 있으므로 적절한 해결책이 필요합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 설치할 SQL Server 2014 구성 파일을 사용 하 여 | Microsoft Docs
+title: Install SQL Server 2014 구성 파일을 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33039ca7f957614e4c17d6dbff7a9f68aa21404e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231863"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다.  
@@ -60,7 +60,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE = Normal /ACTION = INSTALL  
   
-2.  마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다. 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)합니다.  
+2.  마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다. 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)합니다.  
   
 3.  설치를 실제로 완료하지는 않고 INI 파일을 생성하기 위해 설치를 취소합니다.  
   

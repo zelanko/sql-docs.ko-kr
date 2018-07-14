@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9dabbcfe72c998991768ee310aead96975f1b3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 50c37c75193aa39a31d61942fb80991746723823
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266689"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 함수
   현재 Windows 사용자가 소유한 모든 SQL Server Express LocalDB 인스턴스에 대해 API 호출 추적을 비활성화합니다.  

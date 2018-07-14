@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176460"
 ---
 # <a name="cellpermissions-element-assl"></a>CellPermissions 요소(ASSL)
-  연결 된 셀에 대 한 사용 권한 컬렉션을 포함 [큐브](../objects/cube-element-assl.md) 요소입니다.  
+  연결 된 셀에 대 한 사용 권한의 컬렉션을 포함 [큐브](../objects/cube-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36181187"
 |자식 요소|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 컬렉션은 하나까지 포함할 수 `CellPermission` 허용 된 각 값에 대 한 개체는 [액세스](../properties/access-element-assl.md) 요소입니다.  
+ 컬렉션 하나를 포함할 수 있습니다 `CellPermission` 허용 된 각 값에 대 한 개체를 [액세스](../properties/access-element-assl.md) 요소입니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.CellPermissionCollection>합니다.  
   

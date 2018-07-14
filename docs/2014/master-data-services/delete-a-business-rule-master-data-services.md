@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting business rules [Master Data Services]
 - business rules [Master Data Services], deleting
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab0f248a06e1a67ac119528774d98bb79d3dc9ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25d8aecc18ff8b92222a0df321cee66012c2f7da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201543"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 비즈니스 규칙이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36172423"
   
 8.  클릭 **선택한 비즈니스 규칙 삭제**합니다.  
   
-9. 확인 대화 상자에서 **확인**을 클릭합니다. 값은 **상태** 열이 **삭제 보류 중**합니다.  
+9. 확인 대화 상자에서 **확인**을 클릭합니다. 값을 **상태** 열인지 **삭제 보류 중**합니다.  
   
 10. **비즈니스 규칙 게시**를 클릭합니다.  
   

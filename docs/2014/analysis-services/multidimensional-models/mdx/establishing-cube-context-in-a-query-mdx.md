@@ -1,5 +1,5 @@
 ---
-title: 쿼리 (MDX)에서 큐브 컨텍스트 설정 | Microsoft Docs
+title: MDX 쿼리에 큐브 컨텍스트 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], MDX
 - MDX [Analysis Services], cube context
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 972b630aea4ebcc427803e226d27d52f919da4a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42357b197b3a691321a5ffd9d066b787288efe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273449"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>쿼리에 큐브 컨텍스트 설정(MDX)
   모든 MDX 쿼리는 지정된 큐브 컨텍스트 내에서 실행됩니다. 이 컨텍스트는 쿼리 내의 식에 의해 계산되는 멤버를 정의합니다.  

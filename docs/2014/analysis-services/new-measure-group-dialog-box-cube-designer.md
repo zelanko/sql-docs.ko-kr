@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuregroupdialog.f1
 helpviewer_keywords:
 - New Measure Group dialog box
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e60219aa3e3388c2b74131e99441754569eb2e6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 385e3c2fb01a251c954d6b4e630127f3f1892fdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196183"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>새 측정값 그룹 대화 상자(큐브 디자이너)
   **의** 새 측정값 그룹 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 큐브 디자이너에서 새 측정값 그룹을 큐브에 추가할 수 있습니다. 다음과 같은 방법으로 **새 측정값 그룹** 대화 상자를 표시할 수 있습니다.  
@@ -38,6 +38,6 @@ ms.locfileid: "36181685"
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 구조 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

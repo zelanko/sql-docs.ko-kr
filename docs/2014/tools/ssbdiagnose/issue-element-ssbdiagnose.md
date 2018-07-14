@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - issue element
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: adff003b1d6b98d7778311b84aca4666dd802d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 39b279a22da8c75573aa0cad2dc50d7f85e46a74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175205"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 요소(ssbdiagnose)
   **ssbdiagnose** 유틸리티가 발견한 문제를 보고합니다. **ssbdiagnose** XML 출력 파일에는 보고되는 문제 당 하나의 Issue 요소가 포함됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36182154"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`길이 제한 됩니다.|  
+|**데이터 형식 및 길이**|`string`길이 제한 되지 않습니다.|  
 |**Value**|오류 메시지 텍스트를 반환합니다.|  
 |**발생 빈도**|보고되는 오류 당 한 번|  
   

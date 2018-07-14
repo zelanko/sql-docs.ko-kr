@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c675c9a84c8b338e64723e7793cfa39a7cef61af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4b64b28ccdfa3dd40918881340f4fc66a5229c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169652"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>차원 디자이너에서 차원 데이터 찾아보기
   **에서 액세스하는 차원 디자이너의** 브라우저 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 차원에 있는 데이터를 찾아볼 수 있습니다.  
   
- **브라우저** 뷰에 차원 데이터를 표시하려면 해당 차원이 처리된 상태에 있어야 합니다. 자세한 내용은 참조 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  
+ **브라우저** 뷰에 차원 데이터를 표시하려면 해당 차원이 처리된 상태에 있어야 합니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>SQL Server Data Tools에서 차원 찾아보기  
   

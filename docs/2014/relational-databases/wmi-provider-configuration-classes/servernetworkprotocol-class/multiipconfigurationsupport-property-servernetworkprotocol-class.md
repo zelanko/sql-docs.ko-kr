@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MultiIpConfigurationSupport property
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 86dbd66d4923520942f2a1196fcb4d6d9bb4d1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c4f7ba582aa5a95abacf4c653fadbba22b51b410
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179600"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 속성(ServerNetworkProtocol 클래스)
   서버 네트워크 프로토콜에서 여러 개의 IP 주소를 지원하는지 여부를 지정하는 부울 속성을 가져옵니다.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ProtocolName 속성 (ServerNetworkProtocol 클래스)](servernetworkprotocol-class.md) 개체의 인스턴스에 사용 되는 네트워크 프로토콜을 나타내는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ A [ProtocolName 속성 (ServerNetworkProtocol 클래스)](servernetworkprotocol-class.md) 의 인스턴스에 사용 되는 네트워크 프로토콜을 나타내는 개체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜에서 여러 개의 IP 주소를 지원하는지 여부를 지정하는 부울 값입니다. `true`는 서버 네트워크 프로토콜에서 여러 개의 IP 주소를 지원함을 나타내고 `false`는 서버 네트워크 프로토콜에서 여러 개의 IP 주소를 지원하지 않음을 나타냅니다.  

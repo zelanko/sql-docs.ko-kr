@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178890"
 ---
 # <a name="slice-element-assl"></a>Slice 요소(ASSL)
   파티션에 포함된 조각을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36181424"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Slice` 요소는 파티션이 정보를 저장하는 큐브 부분을 식별하는 MDX 튜플 식 또는 집합 식을 포함합니다. MDX 식을 비슷합니다는 [StrToSet](/sql/mdx/strtoset-mdx) MDX 식은 MDX 또는 사용자 정의 함수를 포함할 수 없습니다 한다는 점에서 제한 된 키워드와 함께 작동 합니다.  
+ `Slice` 요소는 파티션이 정보를 저장하는 큐브 부분을 식별하는 MDX 튜플 식 또는 집합 식을 포함합니다. MDX 식은 비슷합니다는 [StrToSet](/sql/mdx/strtoset-mdx) MDX 함수와 CONSTRAINED 키워드를 사용 하 여에 식을 MDX 또는 사용자 정의 함수를 포함할 수 없습니다.  
   
- 부모에 해당 하는 요소 `Slice` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Partition>합니다.  
+ 부모에 해당 하는 요소가 `Slice` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Partition>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

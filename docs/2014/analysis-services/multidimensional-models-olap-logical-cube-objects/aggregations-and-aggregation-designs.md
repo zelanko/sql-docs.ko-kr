@@ -20,15 +20,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 283825b20aaad5764744197aca46d3358feb20b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228203"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
   <xref:Microsoft.AnalysisServices.AggregationDesign>개체는 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36173208"
  큐브에서 가능한 집계를 모두 미리 계산하면 모든 쿼리의 응답 시간을 최대한 단축시킬 수 있지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 미리 계산된 다른 집계에서 일부 집계 값을 쉽게 계산할 수 있습니다. 또한 가능한 집계를 모두 계산하려면 처리 시간과 저장소가 많이 소요됩니다. 그러므로 저장소 요구 사항과 미리 계산할 수 있는 집계 비율 간에는 상호 균형이 필요합니다. 집계를 전혀 미리 계산하지 않으면(0%) 큐브에 필요한 처리 시간과 저장 공간이 최소화되지만 먼저 각 쿼리에 응답하는 데 필요한 데이터를 리프 셀에서 검색한 후 쿼리 시에 각 쿼리에 대한 응답을 위해 집계를 수행해야 하므로 쿼리 응답 시간이 연장될 수 있습니다. 예를 들어 앞의 질문 "1998년 북서부 지역의 제품 X 판매량은 얼마입니까?"에 대한 응답으로 단일 숫자를 반환하기 위해 수많은 데이터 행을 읽어야 하며 각 행에서 판매 측정값을 제공하는 데 사용되는 열 값을 추출하여 합계를 계산해야 합니다. 또한 이러한 데이터를 검색하는 데 필요한 시간은 데이터에 대해 선택한 저장소 모드(MOLAP, HOLAP 또는 ROLAP)에 따라 달라집니다.  
   
 ## <a name="designing-aggregations"></a>집계 디자인  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 미리 계산 된 값에서 계산 된 다른 집계를 신속 하 게 계산할 수 있도록 미리 계산할 집계를 선택 하기 위한 고급 알고리즘을 통합 합니다. 예를 들어 시간 계층의 월 수준에 대해 집계를 미리 계산하면 사분기 수준에 대한 계산에는 요청 시 신속하게 계산할 수 있는 3가지 숫자의 요약만 필요합니다. 이 기술을 통해 쿼리 응답 시간에 주는 영향을 최소화하면서 처리 시간을 절약하고 저장소 요구 사항을 줄일 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 미리 계산 된 값에서 다른 집계를 신속 하 게 계산할 수 있도록 미리 계산할 집계를 선택 하기 위한 고급 알고리즘을 통합 합니다. 예를 들어 시간 계층의 월 수준에 대해 집계를 미리 계산하면 사분기 수준에 대한 계산에는 요청 시 신속하게 계산할 수 있는 3가지 숫자의 요약만 필요합니다. 이 기술을 통해 쿼리 응답 시간에 주는 영향을 최소화하면서 처리 시간을 절약하고 저장소 요구 사항을 줄일 수 있습니다.  
   
  집계 디자인 마법사는 쿼리 응답 시간과 저장소 요구 사항 간의 적절한 균형을 이루기 위한 알고리즘에 대해 저장소 및 비율 제약 조건을 지정할 수 있는 옵션을 제공합니다. 그러나 집계 디자인 마법사의 알고리즘은 가능한 쿼리가 모두 균일하다고 가정합니다. 사용 빈도 기반 최적화 마법사를 사용하면 클라이언트 응용 프로그램에서 제출한 쿼리를 분석하여 측정값 그룹에 대한 집계 디자인을 조정할 수 있습니다. 또한 이 마법사를 통해 큐브의 집계를 튜닝하여 큐브에 필요한 저장소에 큰 영향을 주지 않으면서 빈번히 발생하는 쿼리에 대해서는 응답 능력을 향상시키고 빈번히 발생하지 않는 쿼리에 대해서는 응답 능력을 감소시킬 수 있습니다.  
   

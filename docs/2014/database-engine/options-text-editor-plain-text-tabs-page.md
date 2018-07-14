@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c27514ea38602885c26733238f2564211d4f43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275309"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Text Editor - Plain Text - Tabs Page)
   이 대화 상자를 사용하여 특정 개발 언어와 연관되지 않은 문서를 편집하는 데 사용되는 텍스트 편집기의 탭 이동 동작을 변경할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴의 **옵션** 을 클릭한 다음 **텍스트 편집기**를 확장하고 **일반 텍스트**를 확장한 다음 **탭**을 클릭합니다.  

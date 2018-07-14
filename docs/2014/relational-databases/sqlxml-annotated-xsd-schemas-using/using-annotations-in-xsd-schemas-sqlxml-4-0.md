@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56db3f001d68bcaf65d71f793744896944318fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 26fd2f853697765fda82b869aae7780976753749
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321953"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>XSD 스키마에 주석 사용(SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0의 XSD 스키마 언어는 XDR(XML-Data Reduced) 스키마 언어에 도입된 주석과 비슷한 방식으로 주석을 지원합니다. XSD에는 XDR에서는 지원되지 않은 추가 주석도 도입되었습니다.  
@@ -47,34 +47,34 @@ ms.locfileid: "36172837"
  [XSD 주석 &#40;SQLXML 4.0&#41;](xsd-annotations-sqlxml-4-0.md)  
  XSD 스키마에서 사용할 수 있는 주석, 이러한 주석에 대한 설명, 그리고 이러한 주석에 해당하는 XDR 주석을 나열합니다.  
   
- [테이블 및 열에 XSD 요소와 특성의 기본 매핑이 &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [기본 매핑의 XSD 요소 및 특성 테이블 및 열을 &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
  기본 매핑 및 이와 관련된 태스크의 예를 설명합니다.  
   
- [테이블 및 열에 XSD 요소와 특성의 명시적 매핑 &#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
+ [XSD 요소 및 테이블과 열에 특성의 명시적 매핑 &#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
  `sql:relation` 및 `sql:field` 주석을 사용한 명시적 매핑에 대해 설명하고 예를 제공합니다.  
   
  [Sql: relationship을 사용 하 여 관계 지정 &#40;SQLXML 4.0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
  `sql:relationship` 주석에 대해 설명하고 예를 제공합니다.  
   
- [Sql: inverse Attribute on sql: relationship 지정 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
+ [Sql: relationship에 sql: inverse 특성 지정 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
  `sql:inverse` 주석에 대해 설명합니다.  
   
- [Sql 사용 하 여 상수 요소 만들기:은 상수 &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
+ [Sql 사용 하 여 상수 요소 만들기: 상수는 &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
  `sql:is-constant` 주석에 대해 설명하고 예를 제공합니다.  
   
  [결과 XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된 &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
  `sql:mapped` 주석에 대해 설명하고 예를 제공합니다.  
   
- [사용 하 여 값 필터링-필드 및 sql:-값 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [Sql: 사용 하 여 값 필터링-필드와-값 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  `sql:limit-field` 및 `sql:limit-value` 주석에 대해 설명하고 예를 제공합니다.  
   
  [Sql: 사용 하 여 키 열 식별-필드 &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  `sql:key-fields` 주석에 대해 설명하고 예를 제공합니다.  
   
- [대상 Namespace를 사용 하 여 targetNamespace 특성 지정 &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
- 에 대해 설명 하 고 예를 제공 된 **targetNamespace** 특성입니다.  
+ [Target Namespace Using targetNamespace 특성을 지정 &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ 설명 및 예제를 제공 합니다 **targetNamespace** 특성입니다.  
   
- [유효한 ID, IDREF 및 IDREFS 유형 특성을 사용 하 여 sql: prefix 만드는 &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ [유효한 ID, IDREF 및 IDREFS 유형 특성을 사용 하 여 sql: prefix 만들기 &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  `sql:prefix` 주석에 대해 설명하고 예를 제공합니다.  
   
  [데이터 형식 강제 변환 및 sql: datatype 주석 &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
@@ -86,7 +86,7 @@ ms.locfileid: "36172837"
  [Sql:use 사용 하 여 CDATA 섹션 만들기-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  `sql:use-data` 주석에 대해 설명하고 예를 제공합니다.  
   
- [Sql 사용 하 여 BLOB 데이터에 대 한 URL 참조 요청: 인코딩할 &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ [BLOB 데이터를 사용 하 여 sql에 대 한 URL 참조 요청: 인코딩 &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
  `sql:encode` 주석에 대해 설명하고 예를 제공합니다.  
   
  [사용 되지 않은 데이터를 사용 하 여 sql:overflow 검색-필드 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  

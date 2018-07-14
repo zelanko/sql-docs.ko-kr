@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a52c18dffbe35372fd0cf393cce531a59a7a04b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 98aafe228a4dfe8a2e38667fcf58a61527e103e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212383"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS)
   쿼리 디자이너를 사용하면 보고서 데이터 집합에 사용하기 위해 외부 데이터 원본에서 검색할 데이터를 지정할 수 있습니다. 마법사에서 쿼리를 작성하거나 데이터 집합 쿼리를 만들 때 쿼리 디자이너를 사용할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36173276"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 데이터 집합은 데이터 원본을 기반으로 합니다. 데이터 원본의 유형 및 제작 환경에 따라 데이터 집합 쿼리를 정의할 때 열리는 쿼리 디자이너가 결정됩니다. 쿼리 디자이너 기능은 기본 데이터 원본에 따라 다릅니다. 데이터 계층에 대 한 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md) 또는 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ 데이터 집합은 데이터 원본을 기반으로 합니다. 데이터 원본의 유형 및 제작 환경에 따라 데이터 집합 쿼리를 정의할 때 열리는 쿼리 디자이너가 결정됩니다. 쿼리 디자이너 기능은 기본 데이터 원본에 따라 다릅니다. 데이터 계층에 대 한 자세한 내용은 참조 하세요. [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md) 하거나 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
   
  다음과 같은 태스크에 쿼리 디자이너를 사용할 수 있습니다.  
   

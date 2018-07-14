@@ -1,5 +1,5 @@
 ---
-title: (중급 데이터 마이닝 자습서)를 모델링 하는 시계열에 대 한 요구 사항을 이해 | Microsoft Docs
+title: 시계열에 대 한 요구 사항 이해 (중급 데이터 마이닝 자습서)를 모델링 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a60d807aa63f57be7811482cadaabe40bded12b9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: df76b7ac5b50f5dfa9206b0352de4443bfd07a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255225"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>시계열 모델에 대한 요구 사항 이해(중급 데이터 마이닝 자습서)
   예측 모델에서 사용할 데이터를 준비할 때 데이터에 시계열의 단계를 식별하는 데 사용할 수 있는 열이 포함되어 있는지 확인해야 합니다. 이 열은 `Key Time` 열로 지정됩니다. 이 열은 키이므로 고유 숫자 값을 포함해야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36312661"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>예측 모델에 대한 시간 키를 식별하려면  
   
-1.  창에서 **SalesByRegion.dsv [디자인]** 를 vTimeSeries 테이블을 마우스 오른쪽 단추로 클릭 한 다음 선택 **데이터 탐색**합니다.  
+1.  창에서 **SalesByRegion.dsv [디자인]** vTimeSeries 테이블을 마우스 오른쪽 단추로 클릭 한 다음 선택 **데이터 탐색**합니다.  
   
      이라는 새 탭 열립니다 **vTimeSeries 테이블 탐색**합니다.  
   
@@ -43,30 +43,30 @@ ms.locfileid: "36312661"
   
      이 두 열은 모두 고유한 값이 있는 시퀀스이며 시계열 키로 사용할 수 있지만 열의 데이터 형식이 서로 다릅니다. Microsoft 시계열 알고리즘에는 `datetime` 데이터 형식이 필요하지 않으며, 고유하게 정렬할 수 있는 값만 필요합니다. 따라서 한 열을 예측 모델에 대한 시간 키로 사용할 수 있습니다.  
   
-3.  데이터 원본 뷰 디자인 화면에서 Reporting Date 열을 선택 하 고 선택 **속성**합니다. 다음으로 TimeIndex 열을 클릭 하 고 선택 **속성**합니다.  
+3.  데이터 원본 뷰 디자인 화면에서 Reporting Date 열을 선택 하 고 선택 **속성**합니다. 다음으로, TimeIndex 열을 클릭 하 고 선택 **속성**합니다.  
   
-     TimeIndex 필드는 Reporting Date 필드는 System.DateTime 데이터 형식 하는 반면, System.Int32 데이터 형식이 있습니다. 많은 데이터 웨어하우스에서 날짜/시간 값을 정수로 변환하고 이 정수 열을 키로 사용하여 인덱싱 성능을 개선합니다. 그러나 이 열을 사용하는 경우 Microsoft 시계열 알고리즘은 201014 등의 미래 값을 사용하여 예측합니다. 달력 날짜를 사용 하 여 예측 한 매출 데이터를 나타낼 것 이므로 Reporting Date 열을 고유한 계열 식별자로 사용 합니다.  
+     TimeIndex 필드에 데이터 형식이 System.Int32, 반면 Reporting Date 필드는 System.DateTime 데이터 형식 많은 데이터 웨어하우스에서 날짜/시간 값을 정수로 변환하고 이 정수 열을 키로 사용하여 인덱싱 성능을 개선합니다. 그러나 이 열을 사용하는 경우 Microsoft 시계열 알고리즘은 201014 등의 미래 값을 사용하여 예측합니다. 달력 날짜를 사용 하 여 예측 한 매출 데이터를 나타낼 것 이므로 Reporting Date 열을 고유한 계열 식별자로 사용 합니다.  
   
 ### <a name="to-set-the-key-in-the-data-source-view"></a>데이터 원본 뷰에 키를 설정하려면  
   
-1.  창에서 **SalesByRegion.dsv**를 vTimeSeries 테이블을 선택 합니다.  
+1.  창에서 **SalesByRegion.dsv**에서 vTimeSeries 테이블을 선택 합니다.  
   
-2.  Reporting Date 열을 마우스 오른쪽 단추로 클릭 하 고 선택 **논리적 기본 키 설정**합니다.  
+2.  Reporting Date 열을 마우스 오른쪽 단추로 클릭 **논리적 기본 키 설정**합니다.  
   
 ## <a name="handling-missing-data-optional"></a>누락된 데이터 처리(선택 사항)  
  계열에 누락된 데이터가 있을 경우 모델을 처리할 때 오류가 발생할 수 있습니다. 여러 가지 방법으로 누락된 데이터를 해결할 수 있습니다.  
   
--   평균을 계산하거나 이전 값을 사용하여 Analysis Services에서 누락된 값을 채우도록 할 수 있습니다. 이렇게 하려면 마이닝 모델에서 MISSING_VALUE_SUBSTITUTION 매개 변수를 설정합니다. 이 매개 변수에 대 한 자세한 내용은 참조 [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)합니다. 기존 마이닝 모델에서 매개 변수를 변경 하는 방법에 대 한 정보를 참조 하십시오. [보기 또는 변경 하는 알고리즘 매개 변수](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)합니다.  
+-   평균을 계산하거나 이전 값을 사용하여 Analysis Services에서 누락된 값을 채우도록 할 수 있습니다. 이렇게 하려면 마이닝 모델에서 MISSING_VALUE_SUBSTITUTION 매개 변수를 설정합니다. 이 매개 변수에 대 한 자세한 내용은 참조 하세요. [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)합니다. 기존 마이닝 모델에 매개 변수를 변경 하는 방법에 대 한 정보를 참조 하세요 [뷰 또는 알고리즘 매개 변수 변경](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)합니다.  
   
 -   데이터 원본을 변경하거나 기존 뷰를 필터링하여 비정형 계열을 삭제하거나 값을 바꿀 수 있습니다. 관계형 데이터 원본에서 이 작업을 수행하거나 명명된 사용자 지정 쿼리 또는 명명된 계산을 작성하여 데이터 원본 뷰를 수정할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요. 이 단원의 이후 태스크는 명명된 쿼리와 사용자 지정 계산을 작성하는 방식에 대한 예를 제공합니다.  
   
- 이 시나리오에 대 한 일부 데이터가 한 계열의 시작 부분에서 누락 되어: 즉, 데이터가 없는 T1000 제품 라인에 대 한 2007 년 7 월까지 합니다. 이를 제외하면 모든 계열이 같은 날짜에 끝나며 누락된 값이 없습니다.  
+ 이 시나리오에서는 일부 데이터가 한 계열의 시작 부분에서 누락 된: 즉, 2007 년 7 월까지 T1000 제품 라인에 대 한 데이터가 없는 있습니다 됩니다. 이를 제외하면 모든 계열이 같은 날짜에 끝나며 누락된 값이 없습니다.  
   
- Microsoft 시계열 알고리즘의 요구 사항은 단일 모델에 포함 된 모든 계열이 동일한 있어야 한다는 **끝나는** 가리킵니다. T1000 자전거 모델은 2007년에 추가되었으므로 이 계열의 데이터는 다른 자전거 모델의 계열보다 이후에 시작되지만 이 계열은 같은 날짜에 끝나므로 데이터를 사용할 수 있습니다.  
+ Microsoft 시계열 알고리즘의 요구 사항인 단일 모델에 포함 된 모든 계열이 동일한 있어야 함을 **끝나는** 지점입니다. T1000 자전거 모델은 2007년에 추가되었으므로 이 계열의 데이터는 다른 자전거 모델의 계열보다 이후에 시작되지만 이 계열은 같은 날짜에 끝나므로 데이터를 사용할 수 있습니다.  
   
 #### <a name="to-close-the-data-source-view-designer"></a>데이터 원본 뷰 디자이너를 닫으려면  
   
--   탭을 마우스 오른쪽 단추로 클릭 **vTimeSeries 테이블 탐색**를 선택 하 고 **닫기**합니다.  
+-   탭을 마우스 오른쪽 단추로 클릭 **vTimeSeries 테이블 탐색**, 선택한 **닫기**합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [예측 구조 및 모델 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  

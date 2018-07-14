@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276509"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 신경망 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론* 으로 구성된 *다중 계층 퍼셉트론*신경망( *역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "36172306"
   
  Μ = p-상태의 사전 확률  
   
- StdDev = sqrt(p(1-p))  
+ StdDev sqrt(p(1-p)) =  
   
  **연속 값**  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.checkdatabaseintegritytask.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71862e23c831a6b211d461227435bdf6e0b97d99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f2801b550f760c9a14efa2fba780a686dd80ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243043"
 ---
 # <a name="check-database-integrity-task"></a>데이터베이스 무결성 검사 태스크
   데이터 무결성 검사 태스크는 지정한 데이터베이스에서 모든 개체의 할당과 구조적 무결성을 검사합니다. 단일 데이터베이스나 여러 개의 데이터베이스를 검사할 수 있으며 데이터베이스 인덱스 검사 여부도 선택할 수 있습니다.  

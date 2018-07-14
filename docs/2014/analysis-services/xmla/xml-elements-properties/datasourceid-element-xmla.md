@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 695522c7-acca-420a-a5fb-f01f3fd9a96b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2adec20f28e51639352dc89c70b6682e4df240fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e96d9386319fa9d850a755519fad7360da8ec3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231823"
 ---
 # <a name="datasourceid-element-xmla"></a>DataSourceID 요소(XMLA)
-  사용 하는 데이터 소스를 식별 한 [위치](location-element-xmla.md) 중 요소는 [백업](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md), 또는 [동기화](../xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
+  사용 하는 데이터 소스를 식별을 [위치](location-element-xmla.md) 하는 동안 요소를 [백업](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md), 또는 [동기화](../xml-elements-commands/synchronize-element-xmla.md) 명령.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36172252"
 ## <a name="remarks"></a>Remarks  
  `DataSourceID` 요소는 원격 파티션 정보가 백업, 복원 및 동기화될 원격 인스턴스를 식별하는 원본 인스턴스에 있는 데이터 원본의 이름을 포함합니다.  
   
- 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ConnectionString 요소 &#40;XMLA&#41;](connectionstring-element-xmla.md)   

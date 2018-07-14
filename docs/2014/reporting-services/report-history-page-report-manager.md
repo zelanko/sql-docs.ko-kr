@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196743"
 ---
 # <a name="report-history-page-report-manager"></a>보고서 기록 페이지(보고서 관리자)
   보고서 기록 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 보고서 기록에 최근 스냅숏만 포함되어 있을 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36182176"
  보고서 기록 스냅숏을 클릭하면 이 스냅숏을 볼 수 있습니다. 보고서 기록에 표시되는 스냅숏은 스냅숏이 만들어진 날짜와 시간으로만 구별됩니다. 스냅숏이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  

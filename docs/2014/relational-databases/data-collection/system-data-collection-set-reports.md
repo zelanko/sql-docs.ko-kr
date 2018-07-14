@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], server activity
 - server activity [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3b11be998c6a5c972bdf0e42a8f3383c6a02869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9441559299d288c83770d5e9dddddacf90abebec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221635"
 ---
 # <a name="system-data-collection-set-reports"></a>시스템 데이터 컬렉션 집합 보고서
   데이터 수집기는 각 시스템 데이터 컬렉션 집합에 대한 기록 보고서를 제공합니다. 다음 보고서 각각은 관리 데이터 웨어하우스에 저장된 데이터를 사용합니다.  

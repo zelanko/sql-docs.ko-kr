@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e3f5cdbece8396bcc75250146bd43ce79da7f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184660"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 이벤트 클래스
   QN:Parameter table 이벤트는 매개 변수 테이블에 대한 참조 수를 만들고 보관하며 매개 변수 정보를 저장하는 내부 테이블을 삭제하는 데 필요한 작업에 대한 정보를 보고합니다. 이 이벤트는 또한 매개 변수 테이블에 대한 사용 개수를 다시 설정하기 위한 내부 작업도 보고합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36181796"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |EventClass|`Int`|이벤트 유형 = 200|27|아니요|  
 |EventSequence|`int`|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 테이블 생성: 매개 변수 테이블이 데이터베이스에 생성 되었음을 나타냅니다.<br /><br /> 테이블 삭제 시도: 데이터베이스에서 자동으로 테이블을 삭제 하는 사용 되지 않는 매개 변수 리소스를 늘리려고 했음을 나타냅니다.<br /><br /> 테이블 삭제 시도 실패: 데이터베이스에서 사용 되지 않는 매개 변수 테이블을 삭제 하려면 했으나 실패 했음을 나타냅니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 자동으로 매개 변수 테이블 삭제 일정을 다시 조정하여 리소스를 늘립니다.<br /><br /> 테이블 삭제 됨: 데이터베이스가 성공적으로 매개 변수 테이블을 삭제 했음을 나타냅니다.<br /><br /> 테이블 고정 됨: 내부 처리 한 현재 사용량에 대 한 매개 변수 테이블을 표시 했음을 나타냅니다.<br /><br /> 테이블 고정 해제 됨: 매개 변수 테이블이 고정 되었음을 나타냅니다. 내부 처리에서 테이블 사용을 마쳤습니다.<br /><br /> 증가 한 사용자 수: 매개 변수 테이블을 참조 하는 쿼리 알림 구독 수가 증가 했음을 나타냅니다.<br /><br /> 감소 한 사용자의 수: 매개 변수 테이블을 참조 하는 쿼리 알림 구독 수가 감소 했음을 나타냅니다.<br /><br /> LRU 카운터 다시 설정: 매개 변수 테이블에 대 한 사용 수가 다시 설정 되었음을 나타냅니다.<br /><br /> 정리 작업 시작 됨:이 매개 변수 테이블의 모든 구독 정리가 시작 되었음을 나타냅니다. 이 이벤트는 데이터베이스가 시작될 때나 이 매개 변수 테이블 구독의 기반이 되는 테이블이 삭제되었을 때 발생합니다.<br /><br /> 정리 작업 완료 됨:이 매개 변수 테이블의 모든 구독 정리를 마쳤음을 나타냅니다.|21|예|  
+|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 생성 된 테이블: 매개 변수 테이블이 데이터베이스에 생성 되었음을 나타냅니다.<br /><br /> 테이블 삭제 시도: 데이터베이스에서 자동으로 테이블을 삭제 하는 사용 되지 않는 매개 변수 리소스를 늘리려고 했음을 나타냅니다.<br /><br /> 테이블 삭제 시도 실패: 데이터베이스에서 사용 되지 않는 매개 변수 테이블을 삭제 하려고 하 고 실패 한 나타냅니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 자동으로 매개 변수 테이블 삭제 일정을 다시 조정하여 리소스를 늘립니다.<br /><br /> 테이블 삭제 됨: 매개 변수 테이블을 데이터베이스에서 성공적으로 삭제 했음을 나타냅니다.<br /><br /> 테이블 고정 됨: 내부 처리에서 매개 변수 테이블의 현재 사용량에 대 한 표시는 나타냅니다.<br /><br /> 테이블 고정 해제 됨: 매개 변수 테이블이 고정 되었음을 나타냅니다. 내부 처리에서 테이블 사용을 마쳤습니다.<br /><br /> 증가 한 사용자 수: 매개 변수 테이블을 참조 하는 쿼리 알림 구독 수가 증가 했음을 나타냅니다.<br /><br /> 감소 한 사용자 수: 매개 변수 테이블을 참조 하는 쿼리 알림 구독 수가 감소 했음을 나타냅니다.<br /><br /> LRU 카운터 다시 설정 합니다: 매개 변수 테이블에 대 한 사용 수가 다시 설정 되었음을 나타냅니다.<br /><br /> 정리 작업 시작 됨:이 매개 변수 테이블의 모든 구독 정리가 시작 되었음을 나타냅니다. 이 이벤트는 데이터베이스가 시작될 때나 이 매개 변수 테이블 구독의 기반이 되는 테이블이 삭제되었을 때 발생합니다.<br /><br /> 정리 작업 완료 됨:이 매개 변수 테이블의 모든 구독 정리를 마쳤음을 나타냅니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니요|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d63332e69e42b3f8631d37fe24626e108dde14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: aeb662c9457c2f07bda1541c5d21a59cd5cca8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258019"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버가 전자 메일을 보낼 때 사용할 전자 메일 배달 확장 프로그램을 구성합니다.  
@@ -63,7 +63,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="remarks"></a>Remarks  
- 경우는 *SendUsingSMTPServer* 로 설정 된 `true`, **SendUsing** 보고서 서버 구성 파일에 항목이 1로 설정 됩니다. 때 *SendUsingSMTPServer* 로 설정 된 `false`, **SendUsing** 항목이 구성 되지 않습니다.  
+ 경우는 *SendUsingSMTPServer* 매개 변수는 설정 `true`의 **SendUsing** 보고서 서버 구성 파일에 항목이 1로 설정 됩니다. 때 *SendUsingSMTPServer* 로 설정 된 `false`서 **SendUsing** 항목이 구성 되지 않습니다.  
   
  이 메서드를 사용하면 보고서 서버 구성 파일의 **SendUsing** 항목을 1이 아닌 다른 값으로 설정할 수 없습니다. SMTP 메일 외의 다른 항목에 대해 보고서 서버를 구성하려면 구성 파일을 수동으로 편집해야 합니다.  
   

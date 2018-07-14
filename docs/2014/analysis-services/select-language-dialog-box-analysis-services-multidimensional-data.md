@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.languageselection.f1
 - sql12.asvs.dimensiondesigner.languageselection.f1
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Select Language dialog box
 ms.assetid: a85a106f-ff47-4b9e-ac62-4942e214df3b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca2f65b2bb5c0d449bf16a3801c3b727e290fcc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da1213136b8d7ae2e40061bbe776c5ef8c70cf93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220113"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>언어 선택 대화 상자(Analysis Services - 다차원 데이터)
   **의** 언어 선택 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 새 번역에 대한 언어를 선택할 수 있습니다. 다음을 수행하여 **언어 선택** 대화 상자를 표시할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36172972"
  사용 가능한 언어 목록에서 새 번역에 사용할 언어를 선택합니다. 이미 선택한 언어는 목록에 표시되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [번역 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [번역 세부 정보 &#40;번역 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

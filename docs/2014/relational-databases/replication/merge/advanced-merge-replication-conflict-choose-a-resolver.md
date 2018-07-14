@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default conflict resolver
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f3a256b58bb2bf93e99a25758bcae5e6abd8dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 63bacbfaee08750811f9a0c2de4fb9c34f629c54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172744"
 ---
 # <a name="choose-a-resolver"></a>해결 프로그램 선택
   해결 프로그램을 선택할 때는 응용 프로그램에서 충돌 해결의 중요성을 고려하고 우선 순위를 기반으로 하는 기본 충돌 해결 프로그램을 사용할 수 있는지 또는 아티클 해결 프로그램을 사용해야 하는지 여부를 고려해야 합니다.  

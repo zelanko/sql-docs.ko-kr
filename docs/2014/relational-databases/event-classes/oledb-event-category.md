@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event classes [SQL Server], OLEDB event category
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 545b90be48e2eb3ff260915f8ab73d064b2a2c96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce36242fbb6511cb969ec9b3fcbb2be4eb707303
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212853"
 ---
 # <a name="oledb-event-category"></a>OLEDB 이벤트 범주
   **OLEDB** 이벤트 범주는 일반적인 OLEDB 이벤트를 포함합니다.  

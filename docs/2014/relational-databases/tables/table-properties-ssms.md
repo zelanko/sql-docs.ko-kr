@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181770"
 ---
 # <a name="table-properties"></a>테이블 속성
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블 속성 편집 대화 상자에 표시된 테이블 속성에 대해 설명합니다. 이러한 속성을 표시하는 방법은 [테이블 정의 보기](view-the-table-definition.md)를 참조하세요.  
@@ -139,13 +139,13 @@ ms.locfileid: "36182200"
  가능한 값은 `True` 및 `False`입니다.  
   
  **Filestream 파일 그룹**  
- 이면 테이블에 FILESTREAM 데이터 파일 그룹의 이름을 지정는 `varbinary(max)` 는 FILESTREAM 특성이 있는 열입니다. 기본값은 기본 FILESTREAM 데이터 파일 그룹입니다.  
+ 이면 테이블에 FILESTREAM 데이터 파일 그룹의 이름을 지정는 `varbinary(max)` FILESTREAM 특성이 있는 열입니다. 기본값은 기본 FILESTREAM 데이터 파일 그룹입니다.  
   
  테이블에 FILESTREAM 데이터가 없는 경우 이 필드가 비어 있습니다.  
   
 ### <a name="general"></a>일반  
  **VarDecimal 저장소 형식을 사용합니다.**  
- 때 `True`, 읽기 전용 값이이 이면 `decimal` 및 `numeric` 데이터 형식이 vardecimal 저장소 형식을 사용 하 여 저장 합니다. 이 옵션을 변경 하려면 사용 된 `vardecimal storage format` 옵션의 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)합니다. VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
+ 때 `True`를 나타내는 읽기 전용 값이 `decimal` 및 `numeric` 데이터 형식이 vardecimal 저장소 형식을 사용 하 여 저장 됩니다. 이 옵션을 변경 하려면 사용 합니다 `vardecimal storage format` 옵션을 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)합니다. VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
   
  **인덱스 공간**  
  테이블의 인덱스가 차지하는 공간의 크기(MB)입니다. 이 값에 테이블에 대한 XML 인덱스 공간 사용량은 포함되지 않습니다. XML 인덱스가 해당 테이블에 속할 경우 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 를 대신 사용하세요.  

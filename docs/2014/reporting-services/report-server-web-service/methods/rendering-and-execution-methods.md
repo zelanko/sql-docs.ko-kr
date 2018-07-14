@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services], rendering
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd1745f845cda954c0e447a8a1d035646fd298dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 258201e20f1ddecbd5f1e4b6b43454723208d7b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202583"
 ---
 # <a name="rendering-and-execution-methods"></a>렌더링 및 실행 메서드
   다음 메서드를 사용하여 항목 실행 및 캐싱과 보고서 렌더링을 관리할 수 있습니다.  

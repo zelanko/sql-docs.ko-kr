@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0cafd847932ef5f87064defb8e92e7ac4b09784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7d47249b2263ea3d5523458fd34770e7c009800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324733"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 계속 제공되지만 더 이상 사용되지 않는 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36172694"
 ### <a name="slipstream-functionality"></a>통합 설치 기능  
  제품 업데이트 기능은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1에서 제공했던 통합 설치 기능을 대체합니다. 따라서 통합 설치 기능과 관련된 명령줄 매개 변수, /*PCUSource* 및 /*CUSource*는 더 이상 사용되지 않습니다. 이러한 매개 변수는 계속 작동하지만 향후 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램 릴리스에서 제거될 수 있습니다. /*UpdateSource* 매개 변수는 통합 설치 매개 변수 /*PCUSource* 및 /*CUSource*의 기능을 결합합니다.  
   
- 제공 했던 통합 설치 기능에 대 한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] p c u 1, 참조 [SQL Server 업데이트 통합 설치](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945)합니다.  
+ 제공 했던 통합 설치 기능에 대 한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1을 참조 하세요 [SQL Server 업데이트 통합 설치](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)  

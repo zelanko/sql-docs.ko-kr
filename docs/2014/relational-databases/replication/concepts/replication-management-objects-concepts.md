@@ -22,15 +22,15 @@ helpviewer_keywords:
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 caps.latest.revision: 60
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6054a9dba13bf319c04b5e066d009a32c3995fa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b6dd9b98eaca7591cf3fbfa3a7032d3ed0fc066
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199113"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 복제 기능을 캡슐화하는 관리 코드 어셈블리로, <xref:Microsoft.SqlServer.Replication> 네임스페이스를 통해 구현됩니다.  

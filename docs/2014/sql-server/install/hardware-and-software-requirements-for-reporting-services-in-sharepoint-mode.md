@@ -1,5 +1,5 @@
 ---
-title: 하드웨어 및 소프트웨어 요구 사항은 SharePoint 모드의 Reporting Services | Microsoft Docs
+title: 하드웨어 및 소프트웨어 요구 사항 SharePoint 모드의 Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 6b02fd6592ce8b57900bf3c8e5558a6b3cfacc86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e25103ae362a664a4432ee62befd0efbc9681a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166144"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 모드의 Reporting Services에 대한 하드웨어 및 소프트웨어 요구 사항
   이 항목에서는 SharePoint 모드로 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 필수 구성 요소, 하드웨어 요구 사항 및 설치 고려 사항에 대해 설명합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 SharePoint 서버가 필요하기 때문에 대부분의 요구 사항은 SharePoint 환경을 기반으로 합니다. 기본 모드 보고서 서버의 경우 하드웨어가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]실행에 필요한 최소 하드웨어 및 소프트웨어 요구 사항을 충족해야 합니다. 자세한 내용은 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.  
@@ -40,7 +40,7 @@ ms.locfileid: "36173263"
   
 -   SharePoint 모드로 실행 중인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 SharePoint Server가 필요합니다. SharePoint 요구 사항 및 구성에 대한 자세한 내용은 다음을 참조하세요.  
   
-    -   [하드웨어 및 소프트웨어 요구 사항 (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256365) 드 (http://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [하드웨어 및 소프트웨어 요구 사항 (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256365) (http://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
     -   [SharePoint Server 2013의 용량 관리 및 크기 조정](http://technet.microsoft.com/library/cc261700.aspx)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36173263"
  Office.Microsoft.com에서 최신 [Power View 설명서](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 를 참조하세요. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]는 Microsoft Excel 2013의 기능이며, Microsoft SharePoint Server 2010 및 2013 Enterprise Edition용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 추가 기능의 일부입니다.  
   
 ##  <a name="bkmk_more_information"></a> 자세한 정보  
- SharePoint 변경 내용에 대 한 자세한 내용은 참조 하십시오. [SharePoint 2010에서 SharePoint 2013로 변경](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)합니다.  
+ SharePoint 변경에 대 한 정보를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 변경](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)합니다.  
   
  [SQL Server 2014 릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=296445)  
   

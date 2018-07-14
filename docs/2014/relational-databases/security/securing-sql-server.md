@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
 helpviewer_keywords:
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89342bf3f94c2ed56e2040a1fa29b7c74bcf8c7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 4b3b01893519137c5fb707e9cd6b9dad7366c3bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250093"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 응용 프로그램의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  

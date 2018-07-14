@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ecf22fbf730510c0fbb87dff803ea6b69d4881f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4197e80f29f7add23fcb1ddb7594fe5f7e3173f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327063"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "36172811"
 |열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services to SharePoint Groups and Permissions의 역할 및 태스크와 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Reporting Services SharePoint 그룹 및 사용 권한에서 역할 및 태스크와 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

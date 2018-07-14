@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b94705cc21951287df954e74ad322d2efc754052
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169076"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
   이 항목에서는 복제 프로그래밍 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 병합 아티클에 대한 비즈니스 논리 처리기를 구현하는 방법에 대해 설명합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "36181783"
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행하여 어셈블리가 이미 비즈니스 논리 처리기로 등록되어 있지 않은지 확인합니다.  
   
-2.  배포자에서 실행 [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)에 대 한 비즈니스 논리 처리기에 대 한 이름을 지정 하 **@article_resolver**, 값`true`에 대 한 **@is_dotnet_assembly**에 대 한 어셈블리의 이름을 **@dotnet_assembly_name**, 재정의 하는 클래스의 정규화 된 이름 및 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한  **@dotnet_class_name**.  
+2.  배포자에서 실행 [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), 비즈니스 논리 처리기의 이름을 지정 하 **@article_resolver**에 값이 `true`에 대 한 **@is_dotnet_assembly**, 어셈블리의 이름을 **@dotnet_assembly_name**, 및를 재정의 하는 클래스의 정규화 된 이름을 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한  **@dotnet_class_name**.  
   
     > [!NOTE]  
     >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
@@ -218,7 +218,7 @@ ms.locfileid: "36181783"
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 3 단계에서 아티클 속성이 올바르게 정의 된 또는 아티클이 없습니다. 자세한 내용은 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)을 참조하세요.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 3 단계에서 아티클 속성이 올바르게 정의 되지 또는 아티클이 없습니다. 자세한 내용은 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)을 참조하세요.  
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>에 대한 비즈니스 논리 처리기의 이름을 설정합니다. 이 이름은 비즈니스 논리 처리기를 등록할 때 지정된 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 속성의 값입니다.  
   

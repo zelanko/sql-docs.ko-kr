@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - UNION queries
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - merged SELECT query [SQL Server]
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbfe0de4422aba4a73a5cabf16c42566c272a7d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3469f186285d5885e1353b5c8a1f8cffe444e3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263929"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>통합 쿼리 만들기(Visual Database Tools)
-  UNION 키워드를 사용하면 두 SELECT 문의 결과를 하나의 결과 테이블에 포함할 수 있습니다. 각 SELECT 문에서 반환된 모든 행이 UNION 식의 결과로 결합됩니다. 예제를 보려면 [선택 예제 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)합니다.  
+  UNION 키워드를 사용하면 두 SELECT 문의 결과를 하나의 결과 테이블에 포함할 수 있습니다. 각 SELECT 문에서 반환된 모든 행이 UNION 식의 결과로 결합됩니다. 예제를 보려면 [SELECT 예 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)합니다.  
   
 > [!NOTE]  
 >  다이어그램 창에는 SELECT 절을 하나만 표시할 수 있습니다. 따라서 통합 쿼리 작업을 진행할 때는 쿼리 디자이너에서 테이블 작업 창이 숨겨집니다.  
@@ -55,8 +55,8 @@ ms.locfileid: "36172308"
   
 ## <a name="see-also"></a>관련 항목  
  [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
- [UNION &#40;Transact SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
+ [공용 구조체 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

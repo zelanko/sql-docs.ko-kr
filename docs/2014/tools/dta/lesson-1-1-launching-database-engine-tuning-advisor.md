@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server]
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad466c0792e3666f7407f6cb120ad932ad1e936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed2001ff159681f78a9287be8e1931ee5d432948
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282289"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작
   시작하려면 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스)를 엽니다. 처음 사용할 때는 **sysadmin** 고정 서버 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 시작하여 응용 프로그램을 초기화해야 합니다. 초기화 후에는 **db_owner** 고정 데이터베이스 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 사용하여 자신이 소유한 데이터베이스를 튜닝할 수 있습니다. 데이터베이스 엔진 튜닝 관리자를 초기화하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/database-engine-tuning-advisor.md)을 참조하세요.  

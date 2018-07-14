@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215973"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
   큐브에 대한 읽기 권한을 활성화한 후 차원 구성원(큐브에 사용된 모든 측정값을 포함하는 측정값 차원에 포함된 측정값 포함)에 대한 액세스를 명시적으로 허용하거나 거부하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
@@ -72,10 +72,10 @@ ms.locfileid: "36173218"
   
      또는 **멤버 모두 선택 취소** 하여 전체 액세스를 취소한 다음 허용할 구성원을 선택할 수 있습니다. 향후 처리 작업에서, 차원 데이터 보안을 수동으로 편집하여 새 구성원에 대한 액세스를 허용할 때까지 새 구성원이 표시되지 않습니다.  
   
-5.  필요에 따라 **고급** 사용할 수 있도록 `Visual Totals` 이 특성 계층에 대 한 합니다. 이 옵션은 역할을 통해 사용 가능한 구성원을 기준으로 집계를 다시 계산합니다.  
+5.  필요에 따라 클릭 **고급** 있도록 `Visual Totals` 이 특성 계층에 대 한 합니다. 이 옵션은 역할을 통해 사용 가능한 구성원을 기준으로 집계를 다시 계산합니다.  
   
     > [!NOTE]  
-    >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 가정 된 `All` 특성 계층의 멤버 권한이 적용 되기 전에 200을 반환 합니다. 일부 구성원에 대 한 액세스를 거부 하는 권한이 적용 된 후 `All` 사용자에 게 보이는 멤버 값은 훨씬 더 적은 경우에 여전히 200을 반환 합니다. 큐브의 소비자가 혼동을 방지 하려면 구성할 수 있습니다는 `All` 멤버의 모든 특성 계층의 멤버에 대 한 집계가 아니라, 역할 구성원에 구성원의 집계 되어야 합니다. 이 동작을 호출 하려면 사용할 수 있습니다 `Visual Totals` 에 **고급** 차원 보안을 구성할 때을 탭 합니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
+    >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 가정 된 `All` 특성 계층의 멤버 권한이 적용 되기 전에 200의 개수를 반환 합니다. 일부 구성원에 대 한 액세스를 거부 하는 권한이 적용 된 후 `All` 사용자에 게 표시 되는 구성원 값 훨씬 적은 경우에 계속 200을 반환 합니다. 큐브의 소비자가 혼동을 방지 하려면 구성할 수 있습니다는 `All` 멤버의 모든 특성 계층의 멤버에 대 한 집계가 아니라, 역할 구성원에 대 한 구성원의 집계 됩니다. 이 동작을 호출 하기 위해 사용할 수 있습니다 `Visual Totals` 에 **고급** 차원 보안을 구성 하는 경우를 탭 합니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
   
 ## <a name="hiding-measures"></a>측정값 숨기기  
  [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "36173218"
  AllowedSet을 생성하면 특성이 여러 수준 계층에 참여할 때 파급 효과가 있습니다. 예를 들어 역할이 워싱턴 주에 대한 액세스를 허용한다고 가정해 봅시다(역할이 회사의 워싱턴 주 영업 부서에 대한 권한을 부여하는 시나리오를 가정). 이 역할을 통해 연결된 사람은 상위 항목(미국) 또는 하위 항목(시애틀 및 레드먼드)이 포함된 쿼리를 통해 워싱턴 주를 포함한 체인의 구성원만 볼 수 있습니다. 다른 주를 명시적으로 허용하지 않았기 때문에 거부된 것과 같은 효과가 나타납니다.  
   
 > [!NOTE]  
->  빈 집합을 정의 하는 경우 ({}) 특성 멤버의 특성의 멤버가 없는 데이터베이스 역할에 표시 됩니다. 허용 집합이 없는 경우가 빈 집합으로 해석되지는 않습니다.  
+>  빈 집합을 정의 하는 경우 ({}) 특성 멤버의 특성의 멤버가 데이터베이스 역할에 표시 됩니다. 허용 집합이 없는 경우가 빈 집합으로 해석되지는 않습니다.  
   
  **거부된 멤버 집합**  
  DeniedSet 속성은 멤버 없음, 모든 멤버(기본값) 또는 일부 특성 멤버로 분석할 수 있습니다. 거부 집합에 특정한 특성 구성원 집합만 포함되어 있으면 특성이 여러 수준 계층에 있는 경우 하위 항목뿐만 아니라 그러한 특정 구성원에 대해서만 데이터베이스 역할의 액세스가 거부됩니다. 워싱턴 주 영업 부서 예를 생각해 봅시다. 워싱턴이 DeniedSet에 있는 경우 이 역할을 통해 연결하는 사람들에게 워싱턴과 하위 특성을 제외한 다른 모든 주가 표시됩니다.  
@@ -115,16 +115,16 @@ ms.locfileid: "36173218"
   
 -   데이터베이스 역할이 특성에 대한 기본 멤버를 정의하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성 자체에 대해 정의된 기본 멤버를 사용합니다. 특성이 집계할 수 없는 것으로 정의된 경우를 제외하고는 달리 지정하지 않는 한 특성에 대한 기본 멤버는 `All` 멤버입니다.  
   
- 예를 들어, 데이터베이스 역할을 지정 `Male` 에 대 한 기본 멤버로 `Gender` 특성입니다. 쿼리가 `Gender` 특성을 명시적으로 포함하면서 이 특성에 대해 다른 멤버를 지정하는 경우가 아니면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 남성 고객만 포함하는 데이터 집합을 반환합니다. 기본 멤버 설정에 대한 자세한 내용은 [기본 멤버 정의](attribute-properties-define-a-default-member.md)를 참조하세요.  
+ 예를 들어 데이터베이스 역할을 지정 한다고 가정 `Male` 에 대 한 기본 멤버로 `Gender` 특성입니다. 쿼리가 `Gender` 특성을 명시적으로 포함하면서 이 특성에 대해 다른 멤버를 지정하는 경우가 아니면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 남성 고객만 포함하는 데이터 집합을 반환합니다. 기본 멤버 설정에 대한 자세한 내용은 [기본 멤버 정의](attribute-properties-define-a-default-member.md)를 참조하세요.  
   
  **보이는 값 합계 사용**  
  VisualTotals 속성은 표시되는 집계된 셀 값이 모든 셀 값에 따라 계산되는지 또는 데이터베이스 역할에 표시되는 셀 값에 따라서만 계산되는지 나타냅니다.  
   
- VisualTotals 속성 기본적으로 사용 되지 않는지 (로 설정 `False`). 이 기본 설정을 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 계산할 셀 값을 선택하는 데 시간을 들이는 대신 모든 셀 값의 합계를 빠르게 계산할 수 있기 때문에 성능이 향상됩니다.  
+ VisualTotals 속성은 기본적으로 (로 `False`). 이 기본 설정을 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 계산할 셀 값을 선택하는 데 시간을 들이는 대신 모든 셀 값의 합계를 빠르게 계산할 수 있기 때문에 성능이 향상됩니다.  
   
  그러나 VisualTotals 속성이 사용되지 않는 경우 사용자가 집계된 셀 값을 사용하여 자신의 데이터베이스 역할이 액세스할 수 없는 특성 멤버의 값을 추론할 수 있다면 보안 문제가 발생할 수 있습니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 세 개의 특성 멤버 값을 사용하여 집계된 셀 값을 계산한다고 가정합니다. 이 경우 데이터베이스 역할은 이러한 세 개의 특성 멤버 중 두 개를 볼 수 있는 액세스 권한을 가집니다. 이 데이터베이스 역할의 멤버는 집계된 셀 값을 사용하여 세 번째 특성 멤버의 값을 추론할 수 있습니다.  
   
- VisualTotals 속성을 설정 `True` 이러한 위험을 제거할 수 있습니다. VisualTotals 속성을 사용할 경우 데이터베이스 역할은 해당 역할이 사용 권한을 갖는 차원 멤버에 대해 집계된 합계만 볼 수 있습니다.  
+ VisualTotals 속성을 설정 `True` 이 위험을 제거할 수 있습니다. VisualTotals 속성을 사용할 경우 데이터베이스 역할은 해당 역할이 사용 권한을 갖는 차원 멤버에 대해 집계된 합계만 볼 수 있습니다.  
   
  **확인**  
  이 페이지에서 정의한 MDX 구문을 테스트하려면 클릭합니다.  
@@ -133,6 +133,6 @@ ms.locfileid: "36173218"
  [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 원본 개체에 대 한 권한을 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [데이터 원본 개체에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

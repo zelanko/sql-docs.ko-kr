@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
 - modifying folders
@@ -20,13 +20,13 @@ ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8a6971e6746c7e35afdb010435bda10767e7b8f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177270"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>폴더 만들기, 삭제 또는 수정(보고서 관리자)
   폴더를 만들어 보고서 서버에 게시하는 항목을 구성하고 관리할 수 있습니다. 폴더를 만들면 관심 있는 보고서를 찾는 데 도움이 될 수 있습니다. 내용 관리자의 경우 폴더는 사용 권한을 적용하는 프레임워크를 제공합니다. 개발 중인 보고서나 배포되면 안 되는 보고서에 대한 액세스를 제한하기 위해 특정 폴더에 역할 할당을 만들 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "36184197"
   
 ## <a name="see-also"></a>관련 항목  
  [새 폴더 페이지 &#40;보고서 관리자&#41;](../new-folder-page-report-manager.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

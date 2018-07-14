@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 31dcb2ef4f2d4881bd2e4ffb94865c9a9d71faad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a05f5b165c72fa57795d22b2dc86d8dac616268b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198533"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 셀 병합(보고서 작성기 및 SSRS)
   데이터 영역의 셀을 병합하여 셀을 결합하거나 데이터 영역 모양을 개선하거나 열 그룹 및 행 그룹에 대한 확장 레이블을 제공할 수 있습니다.  
   
 > [!NOTE]  
->  데이터 영역의 각 영역(모퉁이, 열 머리글, 그룹 정의 또는 행 머리글) 내에서만 셀을 병합할 수 있습니다. 영역의 경계를 넘어서 셀을 병합할 수 없습니다. 예를 들어 데이터 영역 모퉁이 영역의 셀을 행 그룹 영역의 셀과 병합할 수 없습니다. 테이블 릭 스 영역에 대 한 자세한 내용은 참조 [나열 &#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)합니다.  
+>  데이터 영역의 각 영역(모퉁이, 열 머리글, 그룹 정의 또는 행 머리글) 내에서만 셀을 병합할 수 있습니다. 영역의 경계를 넘어서 셀을 병합할 수 없습니다. 예를 들어 데이터 영역 모퉁이 영역의 셀을 행 그룹 영역의 셀과 병합할 수 없습니다. 테이블 릭 스 영역에 대 한 자세한 내용은 참조 하세요. [나열 &#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc2bbf20b7219d55f14911142913e7b6a941bcae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 64b922b5181ddb5fdab24b232864671d60457a97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200243"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
   이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36173176"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>메모리의 페이지 잠금 옵션을 설정하려면  
   
-1.  **시작** 메뉴에서 **실행**을 클릭합니다. 에 **열려** 상자에서 입력 `gpedit.msc`합니다.  
+1.  **시작** 메뉴에서 **실행**을 클릭합니다. 에 **엽니다** 상자에 입력 `gpedit.msc`합니다.  
   
 2.  **로컬 그룹 정책 편집기** 콘솔에서 **컴퓨터 구성**을 확장한 다음 **Windows 설정**을 확장합니다.  
   

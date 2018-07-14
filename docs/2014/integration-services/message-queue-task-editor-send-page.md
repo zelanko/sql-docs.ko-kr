@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 152b01a69c462e7d736b5e2aeef7d96af4cf5ac3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250403"
 ---
 # <a name="message-queue-task-editor-send-page"></a>메시지 큐 태스크 편집기(보내기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **보내기** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 메시지를 보내도록 메시지 큐 태스크를 구성할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36093560"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [메시지 큐 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [메시지 큐 태스크 편집기 &#40;받기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [메시지 큐 태스크 편집기 &#40;페이지를 수신 합니다.&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   
