@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d2fdbe4d44dd16d4f3094725c7032379ab163902
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e58d21c2dd26e26e9389829d92cc70aed0a5a4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192855"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>보고서 또는 입력란에 대한 로캘 설정(Reporting Services)
   보고서 또는 입력란의 **Language** 속성에는 날짜, 통화 또는 숫자 값과 같이 언어 및 국가에 따라 다른 보고서 데이터를 표시하기 위한 기본 형식을 결정하는 로캘 설정이 포함됩니다. 입력란의 **Language** 속성은 보고서의 **Language** 속성을 재정의합니다. **Language**에 값을 지정하지 않을 경우 Reporting Services는 게시된 보고서에 대해서는 보고서 서버의 운영 체제 로캘을 사용하고 보고서 미리 보기에 대해서는 보고서 작성 컴퓨터의 로캘을 사용합니다.  
   
  HTML 보고서의 경우 보고서 또는 입력란의 **Language** 속성에 대한 식에 기본 제공 필드 User!Language를 사용하여 기본 **Language** 값을 재정의하고 브라우저 클라이언트의 HTTP 헤더로 지정된 언어를 사용할 수 있습니다.  
   
- 보고서의 **Language** 속성을 URL로 지정할 수도 있습니다. 자세한 내용은 참조 [URL에 보고서 매개 변수 언어 설정](../set-the-language-for-report-parameters-in-a-url.md)합니다.  
+ 보고서의 **Language** 속성을 URL로 지정할 수도 있습니다. 자세한 내용은 [URL에 보고서 매개 변수 언어 설정](../set-the-language-for-report-parameters-in-a-url.md)합니다.  
   
 ### <a name="to-set-the-locale-for-a-report"></a>보고서에 대한 로캘을 설정하려면  
   
@@ -55,6 +55,6 @@ ms.locfileid: "36081491"
     -   **UnicodeBiDi** 속성에서 입력란에 사용할 양방향 포함 수준을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

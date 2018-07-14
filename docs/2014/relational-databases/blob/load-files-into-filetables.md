@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169104"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
@@ -48,15 +47,15 @@ ms.locfileid: "36079783"
 ###  <a name="HowToMigrateFiles"></a> 예: 파일 시스템에서 FileTable로 파일 마이그레이션  
  이 시나리오에서는 파일이 파일 시스템에 저장되어 있고 파일에 대한 포인터가 포함된 메타데이터의 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있다고 가정합니다. 파일을 FileTable로 이동한 다음 메타데이터에 있는 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꾸려고 합니다. [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수를 사용하면 이 목표를 쉽게 달성할 수 있습니다.  
   
- 이 예에서는 기존 데이터베이스 테이블 이라고 가정 하겠습니다 `PhotoMetadata`, 사진에 대 한 데이터가 들어 있는입니다. 이 테이블에 열 `UNCPath` 형식의 `varchar`(512)는.jpg 파일의 실제 UNC 경로가 포함 된 합니다.  
+ 예를 들어 있다고 가정 기존 데이터베이스 테이블을 `PhotoMetadata`, 사진에 대 한 데이터가 포함 되어 있습니다. 이 테이블에 열 `UNCPath` 형식의 `varchar`(512)는.jpg 파일의 실제 UNC 경로가 포함 하는 합니다.  
   
  파일 시스템의 이미지 파일을 FileTable로 마이그레이션하려면 다음을 수행해야 합니다.  
   
-1.  파일을 저장할 새 FileTable을 만듭니다. 이 예에서는 테이블 이름 `dbo.PhotoTable`, 하지만 테이블을 만드는 코드는 표시 되지 않습니다.  
+1.  파일을 저장할 새 FileTable을 만듭니다. 이 예에서는 테이블 이름으로 `dbo.PhotoTable`, 하지만 테이블을 만들기 위한 코드 표시 되지 않습니다.  
   
 2.  xcopy 또는 유사한 도구를 사용하여 .jpg 파일과 해당 디렉터리 구조를 FileTable의 루트 디렉터리에 복사합니다.  
   
-3.  메타 데이터를 수정는 `PhotoMetadata` 다음과 비슷한 코드를 사용 하 여 테이블:  
+3.  메타 데이터를 수정 합니다 `PhotoMetadata` 다음과 비슷한 코드를 사용 하 여 테이블:  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  

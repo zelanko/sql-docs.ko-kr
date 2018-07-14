@@ -1,5 +1,5 @@
 ---
-title: 통합에 대 한 액세스 Services 서비스 | Microsoft Docs
+title: 서비스 서비스 통합에 대 한 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - viewing packages while running
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, security
 ms.assetid: 1088aafc-14c5-4e7d-9930-606a24c3049b
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fdae3756442b1af660095fe53cbc8e4e3db82da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eac9b692732d11903e358ef5e53e59a4a81bf6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180410"
 ---
 # <a name="access-to-the-integration-services-service"></a>Integration Services 서비스 액세스
   패키지 보호 수준으로 패키지를 편집 및 실행할 수 있는 사용자를 제한할 수 있지만, 현재 서버에서 실행 중인 패키지 목록을 볼 수 있는 사용자 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 현재 실행 중인 패키지를 중지할 수 있는 사용자를 제한하려면 보다 높은 수준의 보호가 필요합니다.  

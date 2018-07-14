@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
 - subscriptions [Reporting Services], external data sources
@@ -20,13 +20,13 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 15d1bfd8489a8150fb0773708fa7f62b6a659cbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b81ef71db369b8ede4b85043c860edc73763252
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255535"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>구독자 데이터에 외부 데이터 원본 사용(데이터 기반 구독)
   데이터 기반 구독에서는 외부 데이터 원본에서 데이터를 검색하는 쿼리 또는 명령에 의해 동적 구독 데이터가 제공됩니다. 데이터 기반 구독 처리 요구 사항을 만족하는 지원되는 모든 데이터 원본에서 구독 데이터를 검색할 수 있습니다. 쿼리 또는 명령 구문은 보고서 서버와 함께 설치되는 데이터 처리 확장 프로그램에 유효해야 합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36080578"
 -   보고서 서버에서는 결과 집합의 모든 행에 대한 보고서 배달을 만듭니다. 결과 집합이 300개의 행으로 구성된 경우에는 보고서 서버에서 300개의 보고서 배달을 시도합니다.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>구독자 데이터베이스에서 변수 데이터를 사용하여 배달 옵션 설정  
- 구독자 데이터베이스에 있는 데이터를 사용하여 각 받는 사람에 대한 배달 옵션을 사용자 지정할 수 있습니다. 사용하는 배달 확장 프로그램 종류에 따라 사용 가능한 옵션이 결정됩니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하는 경우 쿼리에는 각 구독자에 대한 전자 메일 별칭이 포함되어야 합니다. 파일 공유 배달을 사용하고 있는 경우 구독자 데이터에는 구독자별 보고서 파일을 만들거나 배달 대상을 제공하는 데 사용할 수 있는 값이 포함되어야 합니다. 자세한 내용은 참조 [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md) 및 [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)합니다.  
+ 구독자 데이터베이스에 있는 데이터를 사용하여 각 받는 사람에 대한 배달 옵션을 사용자 지정할 수 있습니다. 사용하는 배달 확장 프로그램 종류에 따라 사용 가능한 옵션이 결정됩니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하는 경우 쿼리에는 각 구독자에 대한 전자 메일 별칭이 포함되어야 합니다. 파일 공유 배달을 사용하고 있는 경우 구독자 데이터에는 구독자별 보고서 파일을 만들거나 배달 대상을 제공하는 데 사용할 수 있는 값이 포함되어야 합니다. 자세한 내용은 [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md) 하 고 [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)합니다.  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>구독자 데이터베이스에서 보고서로 매개 변수 값 전달  
  매개 변수가 있는 보고서에 대해 데이터 기반 구독을 만드는 경우 변수 매개 변수 값을 사용하여 각 보고서의 출력을 사용자 지정할 수 있습니다. 예를 들어 구독자 데이터베이스에는 보고서 데이터를 필터링하는 데 사용할 수 있는 직원 ID 번호, 채용일, 직함, 사무실 위치 정보 등이 포함될 수 있습니다. 보고서에서 이러한 열 데이터나 기타 사용 가능한 열 데이터를 기반으로 하는 매개 변수를 사용하면 매개 변수를 해당 열로 매핑할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "36080578"
  이렇게 변경하는 경우에는 구독을 업데이트해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기, 수정 및 데이터 기반 구독 삭제](data-driven-subscriptions.md)   
+ [만들기, 수정 및 데이터 기반 구독을 삭제 합니다.](data-driven-subscriptions.md)   
  [데이터 기반 구독](data-driven-subscriptions.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

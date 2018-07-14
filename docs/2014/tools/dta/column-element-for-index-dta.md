@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58d8827fe160ef1acb300e7501fd9faeaa369efd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bfd0483abe0b5c5134f34361040cb46e033e6214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175009"
 ---
 # <a name="column-element-for-index-dta"></a>Index의 Column 요소(DTA)
   사용자 지정 구성에서 인덱스가 만들어지는 열을 지정합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36079881"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[요소 인덱스 &#40;DTA&#41;](index-element-dta.md)|  
-|**자식 요소**|[Name 요소 열에 대 한 &#40;DTA&#41;](name-element-for-column-dta.md)|  
+|**자식 요소**|[요소의 열에 대 한 이름을 &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>예제  
  이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조하세요.  

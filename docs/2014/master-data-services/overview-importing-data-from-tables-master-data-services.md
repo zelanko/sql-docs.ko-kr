@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162834"
 ---
 # <a name="data-import-master-data-services"></a>데이터 가져오기(Master Data Services)
-  데이터에 대 한 모델을 만든 후 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 데이터 추가 시작할 수 있습니다 및 변경 데이터에 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스입니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.  
+  데이터 모델을 만든 후 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 데이터를 추가할 수 있습니다 및 데이터에 변경 된 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스입니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.  
   
- 사용할 수도 있습니다는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], MDS 저장소에 데이터를 추가 하려면 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스). 자세한 내용은 참조 [데이터 게시 &#40;MDS 추가 기능 Excel 용&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)합니다.  
+ 사용할 수도 있습니다는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]MDS 저장소에 데이터 추가 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스). 자세한 내용은 [데이터 게시 &#40;MDS 추가 기능에 Excel에 대 한&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)합니다.  
   
  데이터를 추가 및 업데이트할 때 다음을 수행할 수 있습니다.  
   

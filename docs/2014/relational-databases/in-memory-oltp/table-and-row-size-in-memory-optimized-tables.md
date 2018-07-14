@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5c35ff979ce6d5e37d8eaba1942da681d3a73470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231097"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
   메모리 최적화 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 최적화 테이블에서 행은 8,060바이트를 초과할 수 없습니다. 메모리 최적화 테이블의 크기를 알면 컴퓨터 메모리가 충분한지 이해하는 데 도움이 됩니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "36080420"
   
  ![두 개의 인덱스가 있는 테이블의 행 구조](../../database-engine/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
   
- 시작 및 종료 타임스탬프는 특정 행 버전의 유효 기간을 나타냅니다. 이 기간에 시작되는 트랜잭션은 이 행 버전을 참조할 수 있습니다. 자세한 내용은 참조 [메모리 최적화 된 테이블의 트랜잭션은](memory-optimized-tables.md)합니다.  
+ 시작 및 종료 타임스탬프는 특정 행 버전의 유효 기간을 나타냅니다. 이 기간에 시작되는 트랜잭션은 이 행 버전을 참조할 수 있습니다. 자세한 내용은 참조 하세요 [Transactions in Memory-Optimized Tables](memory-optimized-tables.md)합니다.  
   
  인덱스 포인터는 체인에서 해시 버킷에 속한 그 다음 행을 가리킵니다. 다음 그림에서는 두 개의 열(이름, 도시)이 있는 테이블의 구조를 보여 줍니다. 여기에는 두 개의 인덱스가 있는데, 하나의 이름 열에 대한 것이고 다른 하나는 도시 열에 대한 것입니다.  
   

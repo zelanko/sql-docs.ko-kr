@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Help [PowerShell]
 - Help [SQL Server], PowerShell
 - PowerShell [SQL Server], help
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 caps.latest.revision: 18
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 2275949b8380e407c8f759b77a7940659ded45a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cd87e91e3a463294d5039583f669a989d7e3ef3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265459"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  

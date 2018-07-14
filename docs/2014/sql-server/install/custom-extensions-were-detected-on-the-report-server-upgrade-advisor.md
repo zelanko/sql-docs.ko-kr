@@ -1,5 +1,5 @@
 ---
-title: 보고서 서버 (업그레이드 관리자)에서 사용자 지정 확장 프로그램이 검색 됨 | Microsoft Docs
+title: 사용자 지정 확장 프로그램이 보고서 서버 (업그레이드 관리자)에서 검색 됨 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
 - security extensions [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4ae9dbac7395e44bf67731bd0e7a714c73fac296
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220843"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>보고서 서버에서 사용자 지정 확장 프로그램이 검색됨(업그레이드 관리자)
   업그레이드 관리자가 구성 파일에서 사용자 지정 확장 프로그램 설정을 검색했으며, 이는 데이터 처리, 배달, 렌더링, 보안 또는 인증을 위한 하나 이상의 사용자 지정 확장이 사용자 설치에 포함되어 있음을 나타냅니다. 업그레이드 관리자는 업그레이드된 보고서 서버와 함께 확장 프로그램 구성 설정을 이동합니다. 그러나 사용자 지정 확장 프로그램이 기존 보고서 서버 설치 폴더에 설치되어 있으면 업그레이드 프로세스 중 해당 사용자 지정 확장 프로그램에 대한 어셈블리 파일이 새 설치 폴더로 이동되지 않습니다. 이 경우 업그레이드가 완료된 후 어셈블리 파일을 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 폴더로 이동해야 합니다.  
@@ -38,12 +38,12 @@ ms.locfileid: "36080820"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개발자가 데이터 처리, 배달, 렌더링, 보안 및 인증에 대 한 사용자 지정 확장을 만들 수 있는 확장 가능한 아키텍처를 제공 합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개발자가 데이터 처리, 배달, 렌더링, 보안 및 인증에 대 한 사용자 지정 확장 프로그램을 만들 수 있도록 확장 가능한 아키텍처를 제공 합니다.  
   
  사용자 지정 확장 프로그램 또는 어셈블리가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 사용되는 경우 설치 프로그램을 사용하여 업그레이드를 수행할 수 있지만 업그레이드가 완료된 후 확장 프로그램을 새 설치 위치로 이동하거나 업그레이드 전 단계를 수행해야 합니다.  
   
 > [!NOTE]  
->  업그레이드 관리자는 사용자 지정 코드 어셈블리가 보고서에서 항목 값, 스타일 및 서식을 계산할 용도로 사용되도록 구성되어 있는지 여부를 감지하지 못합니다. 자세한 내용은 참조 [기타 Reporting Services 업그레이드 문제](../../../2014/sql-server/install/other-reporting-services-upgrade-issues.md)합니다.  
+>  업그레이드 관리자는 사용자 지정 코드 어셈블리가 보고서에서 항목 값, 스타일 및 서식을 계산할 용도로 사용되도록 구성되어 있는지 여부를 감지하지 못합니다. 자세한 내용은 [기타 Reporting Services 업그레이드 문제](../../../2014/sql-server/install/other-reporting-services-upgrade-issues.md)합니다.  
   
  소프트웨어 공급업체로부터 사용자 지정 확장 프로그램을 구입한 경우 해당 업체에 사용자 지정 기능의 업그레이드에 대한 추가 정보를 문의하십시오.  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36080820"
   
 3.  솔루션을 다시 빌드하여 확장 프로그램을 바인딩합니다.  
   
- 업그레이드를 중단하려는 경우 대신 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 마이그레이션하는 방법을 고려해 볼 수 있습니다. 사용자 지정 확장 프로그램을 마이그레이션하는 단계를 참조 하십시오. [사용자 지정 확장 프로그램 마이그레이션](#migrcustext) 이 항목의 합니다.  
+ 업그레이드를 중단하려는 경우 대신 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 마이그레이션하는 방법을 고려해 볼 수 있습니다. 사용자 지정 확장 프로그램을 마이그레이션하는 단계를 참조 하세요 [사용자 지정 확장 프로그램 마이그레이션](#migrcustext) 이 항목의 합니다.  
   
 ###  <a name="dataprocdeliver"></a> 사용자 지정 데이터 처리 또는 배달 확장 프로그램  
  업그레이드 관리자가 사용자 지정 데이터 처리 또는 배달 확장 프로그램을 검색할 경우 업그레이드 프로세스가 차단되지 않습니다. 그러나 업그레이드가 완료된 후 추가 단계를 수행해야만 이러한 확장 프로그램에서 제공하는 사용자 지정 기능이 작동합니다. 예를 들어 사용자 지정 확장 프로그램 파일이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 폴더에 설치되어 있으면 업그레이드가 완료된 후 추가 단계를 수행해야 합니다.  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>사용자 지정 데이터 처리 또는 배달 확장 프로그램에 대해 수행할 업그레이드 후 단계  
   
-1.  확장 프로그램 파일을 새 보고서 서버 프로그램 폴더로 이동합니다. 기본적으로 보고서 서버 프로그램 폴더는 \program files\microsoft SQL Server\MSRS10_50 합니다. \< *instance_name*> \report 서버입니다.  
+1.  확장 프로그램 파일을 새 보고서 서버 프로그램 폴더로 이동합니다. 기본적으로 보고서 서버 프로그램 폴더 \Program Files\Microsoft SQL Server\MSRS10_50에 있습니다. \< *instance_name*> \report server입니다.  
   
  자세한 내용은 SQL Server 온라인 설명서의 "데이터 처리 확장 프로그램 배포" 및 "배달 확장 프로그램 구현"을 참조하십시오.  
   

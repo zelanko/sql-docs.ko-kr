@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 66accb9aab2c970c1fd09b1e14408b5585269d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237233"
 ---
 # <a name="properties-element-xmla"></a>Properties 요소(XMLA)
-  사용 하는 분석 XMAL () 속성에 대 한 XML이 포함 되어는 [Discover](../xml-elements-methods-discover.md) 및 [Execute](../xml-elements-methods-execute.md) 메서드.  
+  사용 분석 (XMAL) 속성에 대 한 XML이 포함 된 [Discover](../xml-elements-methods-discover.md) 및 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36080507"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[검색](../xml-elements-methods-discover.md), [실행](../xml-elements-methods-execute.md)|  
+|부모 요소|[검색할](../xml-elements-methods-discover.md), [실행](../xml-elements-methods-execute.md)|  
 |자식 요소|[PropertyList](propertylist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  

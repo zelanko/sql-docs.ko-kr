@@ -1,5 +1,5 @@
 ---
-title: 방법 도움말 항목 (SQL Server 구성 관리자)을 서비스 관리 | Microsoft Docs
+title: 방법 도움말 항목 (SQL Server 구성 관리자)를 서비스 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, managing services
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9969dde00baf89afcdd8c2ab4027b60566ccded1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f640c9d4e876870cd64e60e289385838492f2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248913"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>서비스 관리 방법 도움말 항목(SQL Server 구성 관리자)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 서비스로 실행됩니다. 서비스에 대한 자세한 내용은 [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md)를 참조하십시오.  

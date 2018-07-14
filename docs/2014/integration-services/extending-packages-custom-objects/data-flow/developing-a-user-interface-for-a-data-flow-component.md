@@ -26,13 +26,13 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 32d8ad6f22324c43c9955c01f9551eb4634d7bba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d2933552418cf299933217d6b5e4365e6534e2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166954"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
   구성 요소 개발자는 구성 요소를 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 표시되는 사용자 지정 사용자 인터페이스를 구성 요소에 제공할 수 있습니다. 사용자 지정 사용자 인터페이스를 구현하면 해당 구성 요소가 데이터 흐름 태스크에 추가되거나 데이터 흐름 태스크에서 삭제될 때와 해당 구성 요소에 대한 도움말이 요청될 때 이에 대한 알림을 받을 수 있습니다.  
@@ -286,7 +286,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 지정 데이터 흐름 구성 요소 만들기](creating-a-custom-data-flow-component.md)  

@@ -1,5 +1,5 @@
 ---
-title: '7 단원: Windows Azure 저장소에 데이터 파일을 이동 | Microsoft Docs'
+title: '7 단원: Windows Azure Storage에 데이터 파일 이동 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 014fd10ecd738f46160358506b3b165640d3fe09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 44bc025ce3eb536e10f4c77410ea487e59f006ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162714"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>7단원: Windows Azure 저장소에 데이터 파일 이동
   이 단원에서는 Windows Azure 저장소로 데이터 파일을 이동하는 방법을 배웁니다(SQL Server 인스턴스로는 이동하지 않음). 이 단원을 수행하기 위해 4, 5, 6단원을 완료할 필요는 없습니다.  

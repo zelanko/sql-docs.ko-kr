@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ab58b6fedbf00bfc6f7bf981ca51ca7e7c4087e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3d42ddbe423a2122d0b581fcf8119b2d9ae43f84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205373"
 ---
 # <a name="database-properties-query-store-page"></a>데이터베이스 속성(쿼리 저장소 페이지)
   이 페이지는 주 데이터베이스에서 액세스하며 데이터베이스 쿼리 저장소의 속성을 구성하고 수정하는 데 사용합니다. [ALTER DATABASE SET 옵션](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 사용하여 이러한 옵션을 구성할 수도 있습니다. 쿼리 저장소에 대한 자세한 내용은 [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)을 참조하세요.  

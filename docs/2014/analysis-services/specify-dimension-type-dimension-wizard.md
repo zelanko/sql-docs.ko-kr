@@ -1,5 +1,5 @@
 ---
-title: 차원 유형 지정 (차원 마법사) | Microsoft Docs
+title: 차원 유형 (차원 마법사)를 지정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185321"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>차원 유형 지정(차원 마법사)
   **차원 유형 지정** 페이지를 사용하여 차원 유형을 정의하고 선택한 차원 유형과 관련된 특수 특성 유형을 차원에 추가할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36082358"
 |**제품**|제품 차원은 데이터와 메타데이터가 제품 정보를 나타내는 일반 차원입니다.<br /><br /> 일반 차원에 대한 자세한 내용은 [차원 유형](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)을 참조하세요.|  
 |**홍보 행사**|홍보 행사 차원은 데이터와 메타데이터가 마케팅 홍보 행사 정보를 나타내는 일반 차원입니다.<br /><br /> 일반 차원에 대한 자세한 내용은 [차원 유형](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)을 참조하세요.|  
 |**정량**|정량 차원은 데이터와 메타데이터가 정량 정보를 나타내는 일반 차원입니다.<br /><br /> 일반 차원에 대한 자세한 내용은 [차원 유형](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)을 참조하세요.|  
-|**속도**|요율 차원은 환율과 통화 변환 정보를 나타내는 데이터와 메타데이터를 포함합니다.|  
+|**요금**|요율 차원은 환율과 통화 변환 정보를 나타내는 데이터와 메타데이터를 포함합니다.|  
 |**Regular**|일반 차원은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 가장 많이 사용되는 차원 유형입니다.<br /><br /> 일반 차원에 대한 자세한 내용은 [차원 유형](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)을 참조하세요.|  
 |**시나리오**|시나리오 차원은 데이터와 메타데이터가 계획 또는 전략 분석 정보를 나타내는 일반 차원입니다.<br /><br /> 일반 차원에 대한 자세한 내용은 [차원 유형](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)을 참조하세요.|  
 |**Time**|시간 차원은 시간 지향적인 데이터와 메타데이터를 포함합니다.<br /><br /> 시간 차원에 대한 자세한 내용은 [날짜 유형 차원 만들기](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)를 참조하세요.|  

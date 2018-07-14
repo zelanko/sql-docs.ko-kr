@@ -1,5 +1,5 @@
 ---
-title: 웹 페이지 (SharePoint 통합된 모드의 Reporting Services)에 보고서 뷰어 웹 파트를 추가할 | Microsoft Docs
+title: 웹 페이지 (SharePoint 통합된 모드의 Reporting Services)에 보고서 뷰어 웹 파트 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1c6e7c2900595c99518f5ea43aa298a37f3bc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c351c37c9666c3b0f5723fa8ea049efe788e6a02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172054"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>웹 페이지에 보고서 뷰어 웹 파트 추가(SharePoint 통합 모드의 Reporting Services)
   보고서 뷰어 웹 파트를 사용하여 SharePoint 통합 모드로 구성된 보고서 서버에서 실행되는 보고서를 볼 수 있습니다. 또한 이 웹 파트를 사용하여 보고서 작성기나 보고서 디자이너에서 만들어 라이브러리에 업로드한 보고서 정의 파일(.rdl)을 표시할 수 있습니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "36080152"
 9. 도구 창의 아래쪽에서 **적용** 을 클릭한 다음 **확인** 을 클릭하여 창을 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 사이트에서 보고서 뷰어 웹 파트](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 뷰어 웹 파트](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [보고서 뷰어 웹 파트를 사용자 지정](../customize-the-report-viewer-web-part.md)   
- [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [설치 또는 제거는 Reporting Services 추가 기능에 SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 부여](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [설치 또는 제거는 Reporting Services 추가-SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

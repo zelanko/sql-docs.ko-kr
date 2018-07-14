@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0d949e86f79214efbb1b4632fa2abee61eea3b90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1e6db9afb690f2819be36f9308ecf9de2ae81999
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217413"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker가 메시지를 전달할 때 Broker:Forwarded Message Sent 이벤트를 생성합니다.  

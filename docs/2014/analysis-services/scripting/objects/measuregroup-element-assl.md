@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroup element
 ms.assetid: 7aa099db-5dc7-4cac-b437-f73fc0921b24
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f66d555ed09410985622fd2f5edb5d021b9d26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee73b594fde5e3a9e915615d1a343296ce846d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163374"
 ---
 # <a name="measuregroup-element-assl"></a>MeasureGroup 요소(ASSL)
   동일한 세분성 수준에서 측정값 집합을 정의합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "36080285"
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
-|[Cube](../collections/aggregationdesigns-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataAggregation](aggregation-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MeasureQualification](../properties/measurequalificaton-element-assl.md), [Measures](../collections/measures-element-assl.md), [Name](../properties/name-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [Source](../properties/source-element-measure-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-measuregroup-assl.md)|  
+|[큐브](../collections/aggregationdesigns-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md)를 [주석](../collections/annotations-element-assl.md)를 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [DataAggregation](aggregation-element-assl.md), [ 설명을](../properties/description-element-assl.md), [차원](../collections/dimensions-element-assl.md)를 [ErrorConfiguration](errorconfiguration-element-assl.md)를 [EstimatedRows](../properties/estimatedrows-element-assl.md)를 [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md)를 [LastProcessed](../properties/lastprocessed-element-assl.md)하십시오 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [ MeasureQualification](../properties/measurequalificaton-element-assl.md), [측정값](../collections/measures-element-assl.md)를 [이름](../properties/name-element-assl.md)를 [파티션](../collections/partitions-element-assl.md)를 [ProactiveCaching](proactivecaching-element-assl.md), [ ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md)를 [소스](../properties/source-element-measure-assl.md)를 [상태](../properties/state-element-assl.md)를 [StorageLocation](../properties/storagelocation-element-assl.md), [ StorageMode](../properties/storagemode-element-assl.md)하십시오 [번역](../collections/translations-element-assl.md), [형식](../properties/type-element-measuregroup-assl.md)|  
 |[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|InclusionThresholdSetting|  
 |[큐브 뷰](perspective-element-assl.md)|InclusionThresholdSetting|  
   

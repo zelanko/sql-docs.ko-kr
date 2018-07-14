@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8469a144844e7b4bb7c02ea7fa5255a04654a34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241693"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>메타데이터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **브라우저** 탭에 있는 **메타데이터** 창을 사용하여 큐브 구조를 찾아보고, 관련 측정값을 확인하고, 차원을 보거나 만들 수 있습니다. 계층을 드릴다운하고, 사용 가능한 측정값 및 KPI 목록을 보고, 개체의 정규화된 이름을 복사할 수 있습니다.  

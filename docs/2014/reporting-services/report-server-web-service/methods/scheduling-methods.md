@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10513c14e2d9c65a210eee837ce3c23b21ff77aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f4e9adafb6fa7311ca246e2ce4233ed03e073df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282629"
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  

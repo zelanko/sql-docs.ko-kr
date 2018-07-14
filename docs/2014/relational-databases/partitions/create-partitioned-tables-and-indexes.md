@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.createpartition.partitionscheme.f1
 - sql12.swb.createpartition.selectoutput.f1
@@ -28,16 +27,15 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1dc34a6fdd21b8d4debd2f32df73ef97ba3b281c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d6e7ccf536d221117ecc8359af753a4319f7f5d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244793"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 분할된 테이블 및 인덱스에 있는 데이터는 데이터베이스의 여러 파일 그룹에 분산할 수 있는 가로로 구분된 단위로 되어 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
@@ -146,7 +144,7 @@ ms.locfileid: "36079734"
      이 페이지에서는 다음과 같은 옵션을 추가로 선택할 수 있습니다.  
   
      **경계 설정...**  
-     **경계 값 설정** 대화 상자를 열어 파티션에 사용할 경계 값과 날짜 범위를 선택할 수 있습니다. 이 옵션은 다음 데이터 형식 중 하나를 포함 하는 분할 열을 선택한 경우 사용할 수만: `date`, `datetime`, `smalldatetime`, `datetime2`, 또는 `datetimeoffset`합니다.  
+     **경계 값 설정** 대화 상자를 열어 파티션에 사용할 경계 값과 날짜 범위를 선택할 수 있습니다. 다음 데이터 형식 중 하나를 포함 하는 분할 열을 선택한 경우이 옵션은만 사용할 수: `date`, `datetime`, `smalldatetime`합니다 `datetime2`, 또는 `datetimeoffset`합니다.  
   
      **저장소 계산**  
      파티션에 대해 지정된 각 파일 그룹에 대해 행 개수, 필요한 공간 및 사용 가능한 저장 공간을 예상합니다. 이러한 값은 표에 읽기 전용 값으로 표시됩니다.  

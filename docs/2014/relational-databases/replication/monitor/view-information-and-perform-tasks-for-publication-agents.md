@@ -1,5 +1,5 @@
 ---
-title: 정보 보기 및 게시 (복제 모니터)와 연결 된 에이전트에 대 한 작업을 수행 합니다. | Microsoft Docs
+title: 정보 보기 및 (복제 모니터) 게시 관련 에이전트에 대 한 작업 수행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a82df3ae01b49d8ad7c8b48c5a07d6f57d2dbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f385a167fe56db1c9db2a2238b22de66daa3ab6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280999"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-publication-replication-monitor"></a>게시 관련 에이전트에 대한 정보 보기 및 태스크 수행(복제 모니터)
   복제 모니터에는 선택한 게시와 연결된 에이전트에 대한 정보가 포함된 **에이전트** 탭이 있습니다. 배포 에이전트 및 병합 에이전트는 구독과 연결됩니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  

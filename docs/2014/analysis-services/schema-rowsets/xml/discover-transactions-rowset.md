@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3869d4f8cd3adf96bd006a8669d7d82778b02450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 979067978855e8aa1012deb8df39bea61862fdeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204553"
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS 행 집합
   시스템에서 현재 보류 중인 트랜잭션 집합을 반환합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36080990"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_TRANSACTIONS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_TRANSACTIONS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|Description|  
 |-----------------|--------------------|-----------------|  

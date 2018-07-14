@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6ebf82db488b9369ad80cc3132b2b43812f6f85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c363d20e709728531896648693871e74a84fe7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198803"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>큐브 선택 대화 상자(보고서 작성기)
   **큐브 선택** 대화 상자를 사용하여 보고서의 데이터 원본으로 다른 큐브를 선택할 수 있습니다. 다른 큐브를 선택하면 사용자 쿼리는 더 이상 유효하지 않을 수 있습니다.  

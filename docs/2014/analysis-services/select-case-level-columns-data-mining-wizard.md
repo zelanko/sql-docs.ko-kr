@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcaselevelcolumn.f1
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b80369e13d26b4bdb68f1b32dbf58179ec19f29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b57cf4ff913210c8a0fc7fd48593914c76a315dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241323"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>사례 수준 열 선택(데이터 마이닝 마법사)
   **사례 수준 열 선택** 페이지를 사용하여 기본 원본 큐브 차원에서 마이닝 구조의 사례 수준 열이 될 특성 및 측정값을 선택할 수 있습니다.  

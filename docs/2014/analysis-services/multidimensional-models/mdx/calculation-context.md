@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e0837a34f8e54e9d6042e5b0dcc10b84c3084e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 854e53962dcc1b206d20b441b56b7746650aaf94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202143"
 ---
 # <a name="calculation-context"></a>계산 컨텍스트
   계산 컨텍스트는 식이 계산되고 모든 좌표가 명시적으로 알려지거나 식에서 파생될 수 있는 큐브의 알려진 하위 공간입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36080724"
   
 5.  각 축의 큐브 또는 하위 큐브 셀. 이때 축의 빈 튜플은 제거하고 HAVING 절을 적용합니다.  
   
-6.  자세한 내용은 참조 [쿼리에 큐브 컨텍스트 설정 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)합니다.  
+6.  자세한 내용은 [쿼리에 큐브 컨텍스트 설정 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)합니다.  
   
  다음 쿼리에서 행 축의 계산 컨텍스트는 WHERE 절에 지정된 Country 특성 멤버와 Calendar Year 특성 멤버에 의해 제한됩니다.  
   
@@ -76,6 +76,6 @@ WHERE (Customer.Country.France,
 ## <a name="see-also"></a>관련 항목  
  [쿼리에 큐브 컨텍스트 설정 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [주요 개념 mdx에서 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

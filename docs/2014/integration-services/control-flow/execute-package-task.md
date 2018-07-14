@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c71123c2b91cd07ca8fb93faf458f7ff42cb04d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171144"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36080466"
   
  또는 한 단위의 부모 패키지와 해당 자식 패키지가 함께 실행되지 못하게 하거나 다른 프로세스의 추가 오버헤드를 발생시키지 않으려는 경우도 있습니다. 예를 들어 패키지 부모 프로세스의 후속 처리가 자식 프로세스의 성공 여부에 따라 달라지는 경우 자식 프로세스가 실패하면 부모 패키지 프로세스에서 자식 패키지를 실행해야 합니다.  
   
- 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 자식 패키지가 부모 패키지와 같은 프로세스에서 실행 합니다. 이 속성을 `True`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 설정 하는 경우 `True`, 도구 전용 설치 패키지를에서 디버깅할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
+ 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 및 자식 패키지가 부모 패키지와 동일한 프로세스에서 실행 합니다. 이 속성을 `True`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 설정 하는 경우 `True`, 도구 전용 설치 패키지를에서 디버깅할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
   
 ## <a name="extending-transactions"></a>트랜잭션 확장  
  부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](../inherited-transactions.md)을 참조하세요.  

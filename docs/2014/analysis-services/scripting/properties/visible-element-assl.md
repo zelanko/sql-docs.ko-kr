@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Visible element
 ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90a6ddadf0bc6654fb0c30c02f22b78a88655daa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025ca22c56d0f7c61f1626b2c861961da432ae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213853"
 ---
 # <a name="visible-element-assl"></a>Visible 요소(ASSL)
   부모 요소의 표시 유형을 결정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36080942"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [큐브](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [데이터베이스](../objects/database-element-assl.md), [측정값 ](../objects/measure-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md)|  
+|부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [큐브](../objects/cube-element-assl.md)를 [CubeDimension](../data-type/dimension-data-type-assl.md)를 [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)를 [데이터베이스](../objects/database-element-assl.md), [측정값 ](../objects/measure-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

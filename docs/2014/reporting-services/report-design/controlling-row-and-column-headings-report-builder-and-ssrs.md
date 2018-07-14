@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2377a270850540f137bb0a53a9d4c8016c8a398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9b2832e59db33e645847e7787e80e467c285454
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188130"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
   테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 보고서 관리자나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
@@ -168,6 +168,6 @@ ms.locfileid: "36082003"
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

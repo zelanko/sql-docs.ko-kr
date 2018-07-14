@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Kpi element
 ms.assetid: 1979a58f-97a8-4c1a-aa65-dcfb6d2404cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6205e1a14a992ed8bd0fc05f91d162e90be3346c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27b0bcbe2ddaabcc7b3f9ef16f3fa620a8c2db38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235643"
 ---
 # <a name="kpi-element-assl"></a>Kpi 요소(ASSL)
   핵심 성과 지표 (KPI) 내에서 정의 된 [큐브](cube-element-assl.md) 요소 또는 [관점](perspective-element-assl.md) 요소입니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36080732"
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
-|[Cube](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [Goal](../properties/goal-element-assl.md), [ID](../properties/id-element-assl.md), [Name](../properties/name-element-assl.md), [Status](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [Translations](../collections/translations-element-assl.md), [Trend](../properties/trend-element-assl.md), [TrendGraphic](../properties/trendgraphic-element-assl.md), [Value](../properties/value-element-assl.md)|  
+|[큐브](../collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../properties/id-element-assl.md), [CurrentTimeMember](member-element-assl.md)를 [설명을](../properties/description-element-assl.md)를 [DisplayFolder](../properties/displayfolder-element-assl.md)를 [목표](../properties/goal-element-assl.md), [ID](../properties/id-element-assl.md)를 [이름](../properties/name-element-assl.md)합니다 [상태](../properties/status-element-assl.md), [StatusGraphic](../properties/statusgraphic-element-assl.md), [번역 ](../collections/translations-element-assl.md)하십시오 [추세](../properties/trend-element-assl.md)합니다 [TrendGraphic](../properties/trendgraphic-element-assl.md), [값](../properties/value-element-assl.md)|  
 |[큐브 뷰](perspective-element-assl.md)|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

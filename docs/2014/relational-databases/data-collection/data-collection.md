@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6669b33697e573ef0cff9de86adf39aa98301ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cb2709d0296ce83a842086329f64d5cf0812560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171054"
 ---
 # <a name="data-collection"></a>데이터 컬렉션
   데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36080440"
   
 ## <a name="data-collector-terminology"></a>데이터 수집기 용어  
  target  
- 데이터 컬렉션을 지원하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. 지원 되는 버전에 대 한 자세한 내용은의 "관리 효율성" 섹션을 참조 하십시오. [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 데이터 컬렉션을 지원하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. 지원 되는 버전에 대 한 자세한 내용은의 "관리 효율성" 섹션을 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  *대상 루트* 는 대상 계층의 하위 트리를 정의합니다. *대상 집합* 은 대상 루트를 통해 정의된 하위 트리에 필터를 적용하여 생성되는 대상 그룹입니다. 대상 루트는 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 또는 컴퓨터 인스턴스가 될 수 있습니다.  
   

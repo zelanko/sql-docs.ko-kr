@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c6babd1b2e15235bd95b0233c5449e3bd88d697a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7fad4d95dda446d63f76a059228ff575a808a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222593"
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 제거해도 사용자가 만든 콘텐츠나 수정한 구성은 제거되지 않습니다. 그러나 제거를 완료한 후에도 필요한 콘텐츠가 있는 경우 제거 프로세스를 시작하기 전에 콘텐츠를 복사하는 것이 좋습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36081025"
 -   **보고서 서버 경고 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>SharePoint 제품을 위한 추가 기능을 제거합니다.  
- 컴퓨터에서 추가 기능을 제거할 때는 파일만 제거하거나 팜에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능도 제거할지를 선택할 수 있습니다. 제거에 대 한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에서 SharePoint 제품에 대 한 자세한 내용은 [설치 SharePoint 용 Reporting Services 추가 기능을 제거 하거나 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다.  
+ 컴퓨터에서 추가 기능을 제거할 때는 파일만 제거하거나 팜에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능도 제거할지를 선택할 수 있습니다. 제거 하는 방법은 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에서 SharePoint 제품에 대 한 내용은 [설치 하거나 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다.  
   
 ## <a name="uninstall-native-mode"></a>기본 모드 제거  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드를 제거하면 설치 후에 **만들었거나** 또는 **수정한** 내용은 그대로 남아 있습니다. 예를 들어 데이터베이스 파일, 로그 파일, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 및 보고서와 데이터 원본 파일과 같은 콘텐츠 항목이 포함됩니다.  
@@ -68,6 +68,6 @@ ms.locfileid: "36081025"
 ## <a name="see-also"></a>관련 항목  
  [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot을 제거할 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [설치 또는 제거는 Reporting Services 추가 기능에 SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [설치 또는 제거는 Reporting Services 추가-SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

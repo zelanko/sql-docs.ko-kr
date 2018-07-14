@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], source controls
 - source controls [SQL Server Management Studio], connections
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bb9453806d27f55cf081eb1196e886cecf1789c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188950"
 ---
 # <a name="change-source-control-connections"></a>원본 제어 연결 변경
   소스 제어에서 솔루션을 처음 추가하거나 열면 원본 제어 공급자는 로컬 솔루션 디렉터리의 루트 폴더와 해당 서버 폴더 간에 연결을 설정합니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "36081916"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Studio 환경에서 소스 제어 사용자 인터페이스를 열려면  
   
-1.  에 **파일** 메뉴에서 **소스 제어**, 클릭 하 고 **Microsoft Visual SourceSafe 시작**합니다.  
+1.  에 **파일** 메뉴에서 **소스 제어**를 클릭 하 고 **Microsoft Visual SourceSafe 시작**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [소스 제어 기본 사항](../../2014/database-engine/source-control-basics.md)   
- [소스 제어 옵션 설정](../../2014/database-engine/set-source-control-options.md)   
+ [원본 제어 옵션 설정](../../2014/database-engine/set-source-control-options.md)   
  [원본 제어에서 파일 제외](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

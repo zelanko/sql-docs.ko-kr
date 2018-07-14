@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ConnectionString property
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c68bd21561b79cf535b964fa2ab037a90f265164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 827a6968bb7073747c5a35eac0206e35f58544d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236463"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 속성(SqlServerAlias 클래스)
   서버 연결 별칭에 대한 연결을 설정하는 데 사용되는 연결 문자열을 가져옵니다.  

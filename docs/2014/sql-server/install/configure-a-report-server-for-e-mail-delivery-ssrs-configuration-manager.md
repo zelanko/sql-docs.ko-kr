@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], distributing
 - report servers [Reporting Services], e-mail delivery
@@ -25,13 +25,13 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a8954f5ea5c2e38991868734a6347596883bd7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e189890845bad34153ebef4231465c260b538848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179200"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 전자 메일을 통해 보고서를 배포할 수 있는 전자 메일 배달 확장 프로그램이 있습니다.  전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다.  전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.  
@@ -67,17 +67,17 @@ ms.locfileid: "36081993"
   
  전자 메일 배달을 위한 보고서 서버를 구성하려면 다음을 수행합니다.  
   
--   SMTP 서버와 전자 메일을 보낼 수 있는 권한이 있는 사용자 계정만 지정하는 경우 Reporting Services 구성 관리자를 사용합니다. 이는 보고서 서버 전자 메일 배달 확장 프로그램을 구성하는 데 필요한 최소 설정입니다. 자세한 내용은 참조 [전자 메일 설정-Configuration Manager &#40;SSRS 기본 모드&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) 및 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)합니다.  
+-   SMTP 서버와 전자 메일을 보낼 수 있는 권한이 있는 사용자 계정만 지정하는 경우 Reporting Services 구성 관리자를 사용합니다. 이는 보고서 서버 전자 메일 배달 확장 프로그램을 구성하는 데 필요한 최소 설정입니다. 자세한 내용은 [전자 메일 설정-Configuration Manager &#40;SSRS 기본 모드&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) 하 고 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 찾기 및 구성 파일을 수정 하는 방법에 대 한 자세한 내용은 참조 [Reporting Services 구성 파일 수정 &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server 온라인 설명서의 합니다.  
+-   텍스트 편집기를 사용하여 RSreportserver.config 파일에 추가 설정을 지정합니다(옵션). 이 파일에는 보고서 서버 전자 메일 배달을 위한 모든 구성 설정이 포함되어 있습니다. 로컬 SMTP 서버를 사용하거나 전자 메일 배달을 특정 호스트로 제한하는 경우 이러한 파일에 추가 설정을 지정해야 합니다. 찾기 및 구성 파일을 수정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Reporting Services 구성 파일 수정 &#40;RSreportserver.config&#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) SQL Server 온라인 설명서의 합니다.  
   
 > [!NOTE]  
 >  보고서 서버 전자 메일 설정은 CDO를 기반으로 합니다. 특정 설정에 대한 세부 정보를 보려면 CDO 제품 설명서를 참조하십시오.  
   
 
   
-##  <a name="bkmk_example_config_file"></a> 보고서 서버 전자 메일 구성의 예  
- 다음 예에서는 원격 SMTP 서버에 대한 RSreportserver.config 파일 설정을 보여 줍니다. 설정 설명 및 유효한 값에 대해 알아보려면 참조 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서 또는 CDO 제품 설명서입니다.  
+##  <a name="bkmk_example_config_file"></a> 예제 보고서 서버 전자 메일 구성  
+ 다음 예에서는 원격 SMTP 서버에 대한 RSreportserver.config 파일 설정을 보여 줍니다. 설정 설명 및 유효한 값에 대 한 자세한 내용은를 참조 하세요 [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 또는 CDO 제품 설명서입니다.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -109,7 +109,7 @@ ms.locfileid: "36081993"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 설정에 대 한 구성 옵션의를: 구성 옵션  
+##  <a name="bkmk_setting_TO_field"></a> 설정에 대 한 구성 옵션을를: 메시지에는 필드  
  **개인 구독 관리** 태스크에 의해 부여된 권한에 따라 만들어진 사용자 정의 구독에는 도메인 사용자 계정에 따라 사전 설정된 사용자 이름이 들어 있습니다. 사용자가 구독을 생성할 때 구독을 생성하는 사람의 도메인 사용자 계정이 **받는 사람:** 필드의 수신자 이름으로 자동으로 삽입됩니다.  
   
  도메인 사용자 계정과는 다른 전자 메일 계정을 사용하는 SMTP 서버 또는 전달자를 사용하는 경우 SMTP 서버가 보고서를 해당 사용자에게 배달할 수 없습니다.  
@@ -118,9 +118,9 @@ ms.locfileid: "36081993"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2.  설정 `SendEmailToUserAlias` 를 `False`합니다.  
+2.  설정할 `SendEmailToUserAlias` 에 `False`입니다.  
   
-3.  설정 `DefaultHostName` 도메인 이름 (DNS System) 이름이 나 SMTP 서버 또는 전달자의 IP 주소입니다.  
+3.  설정 `DefaultHostName` 도메인 이름 시스템 (DNS) 이름이 나 SMTP 서버 또는 전달자의 IP 주소입니다.  
   
 4.  파일을 저장합니다.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "36081993"
   
 -   `SendUsing` 메시지를 보내는 방법을 지정 합니다. 네트워크 SMTP 서비스나 로컬 SMTP 서비스 선택 디렉터리 중에서 선택할 수 있습니다. 원격 SMTP 서비스를 사용하려면 RSReportServer.config 파일에서 이 값을 **2** 로 설정해야 합니다.  
   
--   `SMTPServer` 원격 SMTP 서버 또는 전달자를 지정 합니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.  
+-   `SMTPServer` 원격 SMTP 서버 또는 전달자를 지정합니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.  
   
--   `From` 에 표시 되는 값을 설정 하는 **에서:** 전자 메일 메시지의 선입니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.  
+-   `From` 에 표시 되는 값을 설정 합니다 **에서:** 전자 메일 메시지의 줄. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.  
   
  원격 SMTP 서비스에 사용되는 기타 값은 다음과 같습니다. 기본값을 재설정하지 않으려면 이 값을 지정할 필요가 없습니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36081993"
 
   
 ##  <a name="bkmk_options_local_SMTP"></a> 로컬 SMTP 서비스에 대 한 구성 옵션  
- 보고서 서버 전자 메일 배달을 테스트하거나 문제를 해결하려면 로컬 SMTP 서비스를 구성하는 것이 효율적입니다. 로컬 SMTP 서비스는 기본적으로 활성화되어 있지 않습니다. 사용 하도록 설정 하는 방법에 지침은 [(SSRS 구성 관리자) 전자 메일 배달을 위한 보고서 서버 구성](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 및 [전자 메일 설정-Configuration Manager &#40;SSRS 기본 모드&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
+ 보고서 서버 전자 메일 배달을 테스트하거나 문제를 해결하려면 로컬 SMTP 서비스를 구성하는 것이 효율적입니다. 로컬 SMTP 서비스는 기본적으로 활성화되어 있지 않습니다. 를 사용 하도록 설정 하는 방법에 대 한 참조 [(SSRS 구성 관리자) 전자 메일 배달을 위한 보고서 서버 구성](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 하 고 [전자 메일 설정-Configuration Manager &#40;SSRS 기본 모드&#41; ](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) .  
   
  보고서 서버와 로컬 SMTP 서버 또는 전달자 간의 연결은 다음과 같은 구성 설정에 의해 결정됩니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36081993"
     > [!NOTE]  
     >  설정 하지 않으면 `SMTPServer` 로컬 SMTP 서버를 사용 하는 경우.  
   
--   `From` 에 표시 되는 값을 설정 하는 **에서:** 전자 메일 메시지의 선입니다. 이 값은 필수 사항입니다.  
+-   `From` 에 표시 되는 값을 설정 합니다 **에서:** 전자 메일 메시지의 줄. 이 값은 필수 사항입니다.  
   
  
   
@@ -175,13 +175,13 @@ ms.locfileid: "36081993"
   
 
   
-##  <a name="bkmk_confiugre_remote_SMTP"></a> 보고서 서버에 대해 원격 SMTP 서비스를 구성 하려면  
+##  <a name="bkmk_confiugre_remote_SMTP"></a> 보고서 서버에 대 한 원격 SMTP 서비스를 구성 하려면  
   
 1.  보고서 서버 Windows 서비스에 SMTP 서버에 대한 `Send As` 권한이 있는지 확인합니다.   
   
 2.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
   
-3.  되어 있는지 확인 <`UrlRoot`> 보고서 서버 URL 주소로 설정 됩니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다.  그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
+3.  확인 <`UrlRoot`> 보고서 서버 URL 주소로 설정 됩니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다.  그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
   
 4.  배달 섹션에서 &lt;`ReportServerEmail`>을 찾습니다.   
   
@@ -193,11 +193,11 @@ ms.locfileid: "36081993"
   
 8.  파일을 저장합니다.  
   
-     보고서 서버가 자동으로 새 설정을 사용하므로 서비스를 다시 시작할 필요가 없습니다.  추가 SMTP 설정을 지정하여 보고서 서버 전자 메일 배달에 SMTP 서버가 사용되는 방법을 추가로 구성할 수 있습니다. 자세한 내용은 참조 [전자 메일 배달을 위한 보고서 서버 구성](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 및 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
+     보고서 서버가 자동으로 새 설정을 사용하므로 서비스를 다시 시작할 필요가 없습니다.  추가 SMTP 설정을 지정하여 보고서 서버 전자 메일 배달에 SMTP 서버가 사용되는 방법을 추가로 구성할 수 있습니다. 자세한 내용은 참조 하세요. [전자 메일 배달을 위한 보고서 서버 구성](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 하 고 [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
   
 
   
-##  <a name="bkmk_confiugre_local_SMTP"></a> 보고서 서버에 대해 로컬 SMTP 서비스를 구성 하려면  
+##  <a name="bkmk_confiugre_local_SMTP"></a> 보고서 서버에 대 한 로컬 SMTP 서비스를 구성 하려면  
   
 1.  제어판에서 **프로그램 추가/제거**를 클릭합니다.  
   

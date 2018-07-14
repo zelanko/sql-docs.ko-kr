@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
 - notifications [Master Data Services], about notifications
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8213976a69f360fe13fa9d085919992e3daadf4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7ff9bcb9009c28a400c92c75a8dbed34ceec727
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248903"
 ---
 # <a name="notifications-master-data-services"></a>알림(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델 버전 변경의 상태 또는 비즈니스 규칙 유효성 검사가 실패할 때 전자 메일 알림을 보내도록 구성할 수 있습니다.  

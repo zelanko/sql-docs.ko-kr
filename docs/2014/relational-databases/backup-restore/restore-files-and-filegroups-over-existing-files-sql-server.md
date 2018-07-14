@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring files [SQL Server], how-to topics
 - restoring files [SQL Server], steps
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbde16fffb2a7f427b747532a7a0719c6a93ff16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: beeec0cfe3310121e7feba5008e650f7c1752f40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221513"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>기존 파일에서 파일 및 파일 그룹 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 기존 파일에 대해 파일 및 파일 그룹을 복원하는 방법에 대해 설명합니다.  

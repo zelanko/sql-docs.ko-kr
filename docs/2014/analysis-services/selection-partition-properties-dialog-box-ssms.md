@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.selection.f1
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd3cb642e6f8850d9a369f53f3cce79bc6415a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8533f27f5cd58991b83833522c8b04ad07d1705b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173334"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>선택(파티션 속성 대화 상자)(SSMS)
   SQL Server Management Studio **파티션 속성** 대화 상자의 **선택** 페이지를 사용하여 **일반**, **자동 관리 캐싱**또는 **오류 구성** 창에서 속성을 보거나 수정할 파티션을 측정값 그룹에서 선택할 수 있습니다.  
@@ -44,6 +44,6 @@ ms.locfileid: "36080250"
  [파티션 속성 대화 상자 &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [일반 &#40;파티션 속성 대화 상자&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
  [자동 관리 캐싱 &#40;파티션 속성 대화 상자&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
- [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;SSAS-다차원 데이터&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
+ [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;&AMP;#40;SSAS-다차원&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

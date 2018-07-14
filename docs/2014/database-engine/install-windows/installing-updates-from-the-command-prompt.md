@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5d1fb09edce06159c748be8393f8cbd46e0397b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c48f38fdb03f7fdb2c6e17214187d5d415c06e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187140"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
   조직의 필요에 따라 설치 스크립트를 테스트하고 수정할 수 있습니다.  

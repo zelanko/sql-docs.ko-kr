@@ -1,5 +1,5 @@
 ---
-title: 패키지 실행 유틸리티 (DtExecUI) UI 참조 | Microsoft Docs
+title: 실행 패키지 유틸리티 (DtExecUI) UI 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
 - sql12.dts.dtexecui.executionoptions.f1
@@ -26,16 +26,16 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6213873f823c8b4cb89a7db03c612971845b75a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256849"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>패키지 실행 유틸리티(DtExecUI) UI 참조
-  **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스에서 열 수는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 입력 하 여 `dtexecui` 가 사용 하 여 패키지를 실행 하는 대신 명령 프롬프트는 **DTExec** 명령 프롬프트 도구입니다.  
+  **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 열 수 있는이 사용자 인터페이스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 입력 하 여 `dtexecui` 명령 프롬프트를 사용 하 여 패키지를 실행 하지 않아도 됩니다 합니다 **DTExec** 명령 프롬프트 도구입니다.  
   
  패키지는 **dtexecui.exe** 유틸리티와 같은 프로세스로 실행됩니다. 이 유틸리티는 32비트 도구이므로 패키지는 WOW(Windows on Win32)에서 실행되는 64비트 환경에서 **dtexecui.exe** 를 사용하여 실행됩니다. 64비트 컴퓨터에서 dtexecui.exe 유틸리티를 사용하여 명령을 개발하고 테스트하는 경우에는 프로덕션 서버에서 명령을 배포하거나 예약하기 전에 64비트 버전의 **dtexec.exe** 를 사용하여 64비트 모드에서 명령을 테스트해야 합니다.  
   

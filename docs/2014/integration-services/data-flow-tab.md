@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowwindow.f1
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a8bae39a6e96d09be1fb88ddfd1dca53537779b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd6b4a0f859c301db3c314bdb163821390141fd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192013"
 ---
 # <a name="data-flow-tab"></a>데이터 흐름 탭
   **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 데이터 흐름을 만들 수 있습니다.  

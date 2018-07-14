@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_SCHEMA_ROWSETS rowset
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8071da248e9c7d69a76a22f7c339fad0a217295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa16f7ff677efd8e39367b9e618bdc95d778b405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220243"
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 행 집합
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자에서 지원하는 모든 열거 값과 추가 공급자별 열거 값에 대한 이름, 제한, 설명 및 기타 정보를 반환합니다.  
   
- 호출 하는 경우는 [Discover](../../xmla/xml-elements-methods-discover.md) 사용 하 여 메서드는 `DISCOVER_SCHEMA_ROWSETS` 열거 값은 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) 요소는 `Discover` 메서드가 반환 되는 `DISCOVER_SCHEMA_ROWSETS` 행 집합.  
+ 호출 하는 경우는 [검색](../../xmla/xml-elements-methods-discover.md) 메서드를 `DISCOVER_SCHEMA_ROWSETS` 열거 값을 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) 요소를 `Discover` 메서드가 반환 되는 `DISCOVER_SCHEMA_ROWSETS` 행 집합입니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  DISCOVER_SCHEMA_ROWSETS 행 집합에는 다음 열이 포함되어 있습니다.  

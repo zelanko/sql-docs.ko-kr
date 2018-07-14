@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
 - databases [Analysis Services], backing up
 ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d7c4d99153f3bf47589edeecebf7b6444968573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7ca784325be140ffbd62880be2fb717ce058f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257289"
 ---
 # <a name="backup-options"></a>백업 옵션
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 여러 가지 방법으로 백업할 수 있지만 백업하기 위해서는 서버 관리자 권한과 데이터베이스 관리자 권한이 필요합니다. **에서** 백업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적절한 옵션 구성을 선택한 후 백업을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다.  

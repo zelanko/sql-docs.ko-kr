@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7b77ccd5d7fdae2ef81b3a19ae557ef6e662d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7af236b8e48b76787e77baa0e0720153ee8489f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244993"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
   DAC(데이터 계층 응용 프로그램)는 가장 일반적으로 사용되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 개체를 지원합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "36080009"
 ##  <a name="Considerations"></a> 배포 작업에 대한 추가 고려 사항  
  DAC Framework 데이터 배포 작업에 대한 다음 고려 사항에 유의하세요.  
   
--   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다. **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과 발생한 데이터 유형 및 값에만 적용됩니다. 영향 받는 데이터 및이 제한을 해결 하는 방법에 대 한 자세한 내용은 참조** [이 항목](http://go.microsoft.com/fwlink/?LinkId=267086)합니다.  
+-   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다. **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과 발생한 데이터 유형 및 값에만 적용됩니다. 영향 받는 데이터 및이 제한을 해결 하는 방법에 대 한 자세한 내용은 참조 하세요.** [이 항목에서는](http://go.microsoft.com/fwlink/?LinkId=267086)합니다.  
   
 -   **배포/게시/가져오기** - DAC Framework를 사용하여 패키지를 데이터베이스에 배포하는 작업(예: .dacpac 파일 배포 또는 게시, .bacpac 파일 가져오기 등)에서는 이러한 제한이 적용됩니다. 대상 데이터베이스를 만드는 데이터에 패키지에 있는 데이터의 전체 정확도 표현이 포함되지 않을 수 있습니다. 배포/가져오기 로그에는 문제가 발생한 모든 인스턴스에 대해 위에서 언급한 메시지가 포함됩니다. 오류로 인해 작업은 차단되지만(위의 범주 3 참조) 다른 경고와 함께 계속됩니다.  
   

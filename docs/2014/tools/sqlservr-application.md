@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
 - command prompt [SQL Server], pausing/resuming instance of SQL Server
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: be73654766cc1ab6418ca88bbc83d332f1aa144b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f5c43b08b444813f64eb94a751a633a7a90d20de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214293"
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
   **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  

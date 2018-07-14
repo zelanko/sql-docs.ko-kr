@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copymaptransformation.f1
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 361e0426e4101a281bfb302dad8f4b9d4cc5ded9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd2e21da9766248e2004e2101b4422f8a1942cbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250473"
 ---
 # <a name="copy-column-transformation-editor"></a>열 복사 변환 편집기
   **열 복사 변환 편집기** 대화 상자를 사용하여 복사할 열을 선택하고 새 출력 열의 이름을 할당할 수 있습니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reading data in a table
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7eb28bcefab604d070b2d3599accb4045faae8aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3c1d00391f9d43564cf53cf244ff4144b37bb1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273999"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>테이블의 데이터 읽기(자습서)
   SELECT 문을 사용하여 테이블의 데이터를 읽을 수 있습니다. SELECT 문은 가장 중요한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 중 하나이며 구문은 다양하게 변형되어 사용됩니다. 이 자습서에서는 5개의 간단한 버전을 사용합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "36079884"
 |||  
 |-|-|  
 |[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[수치 연산 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[텍스트 및 이미지 함수 &#40;Transact SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[수치 연산 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[텍스트 및 이미지 함수 &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [요약: 데이터베이스 개체 만들기](lesson-1-5-summary-creating-database-objects.md)  

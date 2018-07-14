@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
 caps.latest.revision: 4
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a90b15b4294ceaf3818fb5144bf79dae809c687a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f308a9c890c36b5948c0f2c8a8468350c2e7cf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265269"
 ---
 # <a name="memberref-element-csdlbi"></a>MemberRef 요소(CSDLBI)
   MemberRef 요소는 참조 대상인 속성의 이름을 식별합니다.  

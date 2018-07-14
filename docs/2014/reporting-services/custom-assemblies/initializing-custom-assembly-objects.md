@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8d8e71579b5fa00e2f615da8e48a2dcfe37de929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ea8336f9e771676ab261b11570a57e68ad3eb321
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272849"
 ---
 # <a name="initializing-custom-assembly-objects"></a>사용자 지정 어셈블리 개체 초기화
   사용자 지정 어셈블리 클래스를 인스턴스화할 때 속성 및 필드 값을 초기화해야 하는 경우가 있습니다. 대개 보고서의 전역 개체 컬렉션에서 제공되는 값으로 사용자 지정 클래스를 초기화해야 합니다. 이 작업은 보고서 **Code** 개체의 **OnInit** 메서드를 다시 정의하여 수행합니다. **OnInit**에 액세스하려면 보고서 정의의 **Code** 요소를 사용합니다. 보고서에서 사용하려는 사용자 지정 어셈블리에 있는 클래스의 속성이나 필드 값을 초기화하는 데는 두 가지 방법이 있습니다. **OnInit**를 사용하여 클래스의 새 인스턴스를 선언 및 만들거나 **OnInit**를 사용하여 공개적으로 사용 가능한 메서드를 호출하는 방법입니다.  

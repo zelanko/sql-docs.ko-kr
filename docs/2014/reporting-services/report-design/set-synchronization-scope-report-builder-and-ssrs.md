@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 02ff1a63d0d629b4da008d2a42bc5326857d1e77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 73751e253c70964419d0691525a920f63e125637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274169"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>동기화 범위 설정(보고서 작성기 및 SSRS)
   표시기는 지정된 범위 내에서 전체 표시기 데이터 값 범위를 동기화하여 데이터 값을 나타냅니다. 이 범위는 기본적으로 표시기가 포함된 테이블, 행렬 등 표시기의 상위 컨테이너입니다. 보고서 레이아웃에 따라 표시기 동기화를 변경할 수 있습니다. 예를 들어 테이블 같은 데이터 영역에 행 그룹이 있는 경우 이 그룹을 표시기 범위로 지정할 수 있습니다. 표시기의 동기화를 생략할 수도 있습니다.  

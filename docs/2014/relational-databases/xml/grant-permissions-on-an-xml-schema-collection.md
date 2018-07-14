@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0375361f4fa794045ab51d65cadada49b73a39dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276119"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
   XML 스키마 컬렉션을 만들 권한 및 XML 스키마 컬렉션 개체에 대한 권한을 부여할 수 있습니다.  
@@ -61,11 +61,11 @@ ms.locfileid: "36079478"
   
 -   한 보안 주체에서 다른 보안 주체로 XML 스키마 컬렉션의 소유권을 이전하는 데는 TAKE OWNERSHIP 권한이 필요합니다.  
   
--   REFERENCES 권한은 보안 주체가를 입력 하거나 제한 하는 XML 스키마 컬렉션을 사용 하도록 권한을 부여 `xml` 유형 열, 테이블, 뷰 및 매개 변수입니다. REFERENCES 권한은 하나의 XML 스키마 컬렉션이 다른 컬렉션을 참조할 때도 필요합니다.  
+-   REFERENCES 권한은 보안 주체가 XML 스키마 컬렉션이 형식화 하거나 제약 하는 데 인증 `xml` 테이블, 뷰 및 매개 변수에서 열을 입력 합니다. REFERENCES 권한은 하나의 XML 스키마 컬렉션이 다른 컬렉션을 참조할 때도 필요합니다.  
   
 -   보안 주체가 컬렉션에 대해 ALTER, REFERENCES 또는 CONTROL 권한 중 하나를 가진 경우 VIEW DEFINITION 권한을 사용하면 보안 주체가 XML_SCHEMA_NAMESPACE 또는 카탈로그 뷰를 통해 XML 스키마 컬렉션의 내용을 쿼리할 수 있습니다.  
   
--   값 삽입 되거나 업데이트 형식화 하거나 제약 하는 XML 스키마 컬렉션에 대해 보안 주체가 유효성을 검사 하려면 EXECUTE 권한이 필요는 `xml` 열, 변수 및 매개 변수를 입력 합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
+-   값은 형식화 하거나 제약 하는 XML 스키마 컬렉션에 대해 보안 주체에서 삽입 되거나 업데이트의 유효성을 검사 하려면 EXECUTE 권한이 필요 합니다 `xml` 열, 변수 및 매개 변수를 입력 합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243733"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI 정의 및 찾아보기
   KPI(핵심 성과 지표)를 정의하려면 먼저 KPI 이름 및 KPI와 연관된 측정값 그룹을 정의합니다. KPI는 모든 측정값 그룹 또는 단일 측정값 그룹과 연관될 수 있습니다. 그런 후 KPI의 다음 요소를 정의합니다.  
@@ -69,9 +69,9 @@ ms.locfileid: "36079883"
   
      다음 그림에 표시된 것처럼 표시 창에 빈 KPI 템플릿이 나타납니다.  
   
-     ![디스플레이 창에서 빈 KPI 템플릿이](../../2014/tutorials/media/l7-kpi-2.gif "디스플레이 창에서 빈 KPI 템플릿")  
+     ![표시 창의 빈 KPI 템플릿이](../../2014/tutorials/media/l7-kpi-2.gif "표시 창의 빈 KPI 템플릿")  
   
-3.  에 **이름** 상자에 입력 합니다 `Reseller Revenue`를 선택한 후 **Reseller Sales** 에 **관련 된 측정값 그룹** 목록입니다.  
+3.  에 **이름** 상자에 입력 `Reseller Revenue`를 선택한 후 **Reseller Sales** 에서 **관련 된 측정값 그룹** 목록.  
   
 4.  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Reseller Sales**를 차례로 확장한 후 **Reseller Sales-Sales Amount** 측정값을 **값 식** 상자로 끌어옵니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36079883"
   
 1.  **KPI** 탭의 도구 모음에서 **폼 보기** 단추를 클릭한 후 **새 KPI** 단추를 클릭합니다.  
   
-2.  에 **이름** 상자에 입력 합니다 `Product Gross Profit Margin`, 고 그런 다음  **\<모든 >** 에 표시는 **관련 된 측정값 그룹** 목록입니다.  
+2.  에 **이름** 상자에 입력 `Product Gross Profit Margin`, 되는지 확인 합니다  **\<모든 >** 나타나는 합니다 **관련 된 측정값 그룹** 목록.  
   
 3.  **계산 도구** 창의 **메타데이터** 탭에서 **Total GPM** 측정값을 **값 식** 상자로 끌어옵니다.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36079883"
   
 2.  배포가 성공적으로 완료되면 **KPI** 탭의 도구 모음에서 **브라우저 보기** 를 클릭한 후 **다시 연결**을 클릭합니다.  
   
-     `Product Gross Profit Margin` KPI가 표시 되 고에 대 한 KPI 값을 표시 **Q3 CY 2007** 및 **북미 지역** 영업 지역입니다.  
+     `Product Gross Profit Margin` KPI가 나타나며 KPI 값을 표시 **Q3 CY 2007** 하며 **North America** 영업 지역입니다.  
   
 3.  **필터** 창의 **차원** 목록에서 **Product** 를, **계층** 목록에서 **Category** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Bikes** 를 선택한 다음 **확인**을 클릭합니다.  
   

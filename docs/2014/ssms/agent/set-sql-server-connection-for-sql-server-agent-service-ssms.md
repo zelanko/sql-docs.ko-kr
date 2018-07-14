@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트 서비스 (SQL Server Management Studio)에 대 한 SQL Server 연결을 설정 | Microsoft Docs
+title: SQL Server 에이전트 서비스 (SQL Server Management Studio)에 대 한 SQL Server 연결 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, connections
 - connections [SQL Server], SQL Server Agent service
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e24e3e8cf353e4fd82333a68bc1126489fb9caf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c07251ad2cb614e6524e2397deb92ab5dfaddaa4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212103"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에이전트와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]간의 연결을 설정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 Windows 인증을 사용하여 SQL Server의 로컬 인스턴스에 연결할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36080764"
   
 -   프로세스의 메모리 할당량 조정(SeIncreaseQuotaPrivilege)  
   
- 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 참조 [SQL Server 에이전트 서비스에 대 한 계정을 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 구성 하 고 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
+ 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 참조 [SQL Server 에이전트 서비스 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Configure Windows Service Accounts 및 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

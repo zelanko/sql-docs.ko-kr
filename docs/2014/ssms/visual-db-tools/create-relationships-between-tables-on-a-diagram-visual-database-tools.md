@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80aff8b6f574b21bf5287e8388201e959f65765d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14d6a6334c4d618cf48b73e1bfa84f7dac517983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168057"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
   다이어그램 디자이너에서 테이블 간에 열을 끌어 서로 다른 테이블의 열 간에 관계를 만들 수 있습니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee10aa434e25dd2243133ceaea09921ddf32b000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d3685d6827f8ed57394f6440b018935662fb9e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266969"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **후보 키 프로필 요청** 의 옵션을 설정할 수 있습니다. 후보 키 프로필은 열 또는 열 집합이 선택한 테이블에 대해 키, 아니면 근사 키인지 보고합니다. 또한 이 프로필을 사용하면 잠재적 키 열의 중복 값과 같은 데이터 문제를 식별할 수 있습니다.  

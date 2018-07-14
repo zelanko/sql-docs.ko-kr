@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullProcessing element
 ms.assetid: 697be5c6-e9a6-4f74-9ff4-5f31400c2178
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54b75b2e1a7bddd6f7b5df1aeda0311c1b60ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc55d97fabaf3f2391beb5c33e3889f6866738d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246110"
 ---
 # <a name="nullprocessing-element-assl"></a>NullProcessing Element (ASSL)
   Null 값이 처리되는 방식을 정의합니다.  
@@ -66,11 +66,11 @@ ms.locfileid: "36080058"
   
 |값|Description|  
 |-----------|-----------------|  
-|*유지*|Null 값을 유지합니다. **참고:** 이 값은 고유 카운트 측정값에 대 한 지원 되지 않습니다.|  
-|*오류*|Null 키 오류를 발생시킵니다. 값 [NullKeyNotAllowed](nullkeynotallowed-element-assl.md) 은 인스턴스가 오류에 반응 하는 방식을 결정 합니다. **참고:** 측정값에 대 한이 값은 지원 되지 않습니다.|  
-|*UnknownMember*|알 수 없는 멤버를 생성하고 Null 변환 오류를 발생시킵니다. 값 [NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md) 은 인스턴스가 오류에 반응 하는 방식을 결정 합니다. **참고:** 측정값에 연결 된 열에 대 한이 값은 지원 되지 않습니다.|  
+|*유지*|Null 값을 유지합니다. **참고:** 이 값은 고유 카운트 측정값에 대해 지원 되지 않습니다.|  
+|*오류*|Null 키 오류를 발생시킵니다. 변수의 [NullKeyNotAllowed](nullkeynotallowed-element-assl.md) 인스턴스가 오류에 반응 하는 방법을 결정 합니다. **참고:** 측정값에 대 한이 값이 지원 되지 않습니다.|  
+|*UnknownMember*|알 수 없는 멤버를 생성하고 Null 변환 오류를 발생시킵니다. 변수의 [NullKeyConvertedToUnknown](nullkeyconvertedtounknown-element-assl.md) 인스턴스가 오류에 반응 하는 방법을 결정 합니다. **참고:** 측정값과 연결 된 열에 대 한이 값이 지원 되지 않습니다.|  
 |*ZeroOrBlank*|Null 값을 0(숫자 데이터 항목의 경우) 또는 빈 문자열(문자열 데이터 항목의 경우)로 변환합니다. **참고:** 이 값은 이전 버전과의 호환성을 제공 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
-|*자동*|다음과 같이 요소에 적합한 기본 처리를 사용합니다.<br /><br /> -   *ZeroOrBlank* OLAP 데이터 항목입니다.<br />-   *UnknownMember* 데이터 마이닝 데이터 항목에 대 한 합니다.|  
+|*자동*|다음과 같이 요소에 적합한 기본 처리를 사용합니다.<br /><br /> -   *ZeroOrBlank* OLAP 데이터 항목에 대 한 합니다.<br />-   *UnknownMember* 데이터 마이닝 데이터 항목에 대 한 합니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `NullProcessing`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.NullProcessing>입니다.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 793052419843c2e2421458da07b2815932683645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f48df99f595bb313d8ca2406850f75cae82c7020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274209"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 작업 그룹 또는 리소스 풀을 삭제할 수 있습니다.  
@@ -71,9 +71,9 @@ ms.locfileid: "36080192"
 ##  <a name="DelWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 삭제  
  **Transact-SQL을 사용하여 작업 그룹을 삭제하려면**  
   
-1.  실행 된 `DROP WORKLOAD GROUP` 삭제할 작업 그룹의 이름을 지정 하는 문이 있습니다.  
+1.  실행 된 `DROP WORKLOAD GROUP` 삭제할 작업 그룹의 이름을 지정 하는 문입니다.  
   
-2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행하기 전에 삭제할 작업 그룹에 활성 요청이 없어야 합니다. 활성 요청이 있으면 `ALTER RESOURCE GOVERNOR` 실패 합니다. 이 문제를 방지하려면 다음 동작 중 하나를 수행하세요.  
+2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행하기 전에 삭제할 작업 그룹에 활성 요청이 없어야 합니다. 활성 요청이 없으면 `ALTER RESOURCE GOVERNOR` 실패 합니다. 이 문제를 방지하려면 다음 동작 중 하나를 수행하세요.  
   
     -   작업 그룹에서 모든 세션의 연결이 끊어질 때까지 기다립니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36080192"
   
     -   `DROP WORKLOAD GROUP` 문을 실행했지만 변경 내용을 적용하기 위해 세션을 명시적으로 중지하지 않으려는 경우 DROP 문을 실행하기 이전의 이름을 사용하여 그룹을 다시 만든 다음 해당 그룹을 원래 리소스 풀로 이동하십시오.  
   
-3.  실행 된 `ALTER RESOURCE GOVERNOR RECONFIGURE` 문.  
+3.  실행 된 `ALTER RESOURCE GOVERNOR RECONFIGURE` 문입니다.  
   
 ### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예에서는 `groupAdhoc`이라는 작업 그룹을 삭제합니다.  

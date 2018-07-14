@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ClusterCount property
 - AllowedProvidersInOpenRowset property
@@ -58,15 +58,15 @@ helpviewer_keywords:
 - MaximumSeriesValue property
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7febe30dd05f52525b579474ec7a68cdd15a31f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c7db78e6f09191f0c778fd8026d1b8a251eb126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253055"
 ---
 # <a name="data-mining-properties"></a>데이터 마이닝 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 데이터 마이닝 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -123,7 +123,7 @@ ms.locfileid: "36080703"
   
 ## <a name="see-also"></a>관련 항목  
  [물리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   
+ [Analysis Services의 서버 속성 구성](server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

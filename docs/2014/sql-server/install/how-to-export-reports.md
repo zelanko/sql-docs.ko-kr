@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flat-file report versions [Upgrade Advisor]
 - exporting reports, steps
@@ -18,28 +18,28 @@ helpviewer_keywords:
 - distributing reports
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ef0c376f329d0249a2ef61cd83078c859e27898f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7884d6bac743cbbd46ee87cb97769e885ba8db7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181490"
 ---
 # <a name="how-to-export-reports"></a>방법: 보고서 내보내기
   업그레이드 관리자 보고서 뷰어를 사용하여 보고서의 플랫 파일 버전을 내보낼 수 있습니다. 이렇게 하면 스프레드시트나 워드 프로세싱 문서에서 정보를 처리하거나 전자 메일로 정보를 다른 사용자에게 보낼 수 있습니다.  
   
 ### <a name="to-export-a-report"></a>보고서를 내보내려면  
   
-1.  보고서 뷰어에서 내보낼 보고서를 표시합니다. 자세한 내용은 [하는 방법: 업그레이드 관리자 보고서 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)합니다.  
+1.  보고서 뷰어에서 내보낼 보고서를 표시합니다. 자세한 내용은 [방법: 업그레이드 관리자 보고서를 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)합니다.  
   
-2.  보고서를 필터링 하려면에서 값을 선택 된 **기준으로 필터링** 상자입니다.  
+2.  보고서를 필터링 하려면에서 값을 선택 합니다 **별** 상자입니다.  
   
-3.  클릭 **보고서 내보내기**합니다.  
+3.  클릭 **보고서를 내보내기**합니다.  
   
-4.  에 **보고서 파일 내보내기** 대화 상자에서 파일 이름을 입력 대상을 선택한 하 고 클릭 **확인**합니다. 파일은 CSV(쉼표로 구분된 값) 형식으로 저장됩니다. Microsoft Excel이나 이와 유사한 응용 프로그램을 사용하여 파일을 열 수 있습니다. 데이터를 다른 형식으로 표시하려면 Excel에서 Microsoft Word와 같은 다른 응용 프로그램으로 정보를 복사하면 됩니다.  
+4.  에 **보고서 파일 내보내기** 대화 상자에서 파일 이름을 입력 대상을 선택 하 고 클릭 한 다음 **확인**합니다. 파일은 CSV(쉼표로 구분된 값) 형식으로 저장됩니다. Microsoft Excel이나 이와 유사한 응용 프로그램을 사용하여 파일을 열 수 있습니다. 데이터를 다른 형식으로 표시하려면 Excel에서 Microsoft Word와 같은 다른 응용 프로그램으로 정보를 복사하면 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [방법: 업그레이드 관리자 시작](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   

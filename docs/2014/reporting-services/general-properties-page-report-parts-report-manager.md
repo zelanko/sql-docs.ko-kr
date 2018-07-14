@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238513"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>일반 속성 페이지, 보고서 파트(보고서 관리자)
   속성 페이지를 사용하여 보고서 파트의 일반 속성을 보고 수정할 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "36080596"
  보고서 서버 데이터베이스에서 보고서 파트를 제거합니다. 서버에서 보고서 파트를 삭제해도 보고서 파트가 추가된 기존 보고서는 렌더링됩니다.  
   
  **이동**  
- 보고서 서버 폴더 계층 구조 내에서 보고서 파트를 이동하기 위해 항목 이동 페이지를 열려면 클릭합니다. 자세한 내용은 참조 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
+ 보고서 서버 폴더 계층 구조 내에서 보고서 파트를 이동하기 위해 항목 이동 페이지를 열려면 클릭합니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
   
  **다운로드**  
  .rsc 파일로 저장할 보고서 파트 정의의 복사본을 추출합니다. .rsc 파일을 보고서 서버 폴더에 업로드하거나 보고서 서버 폴더의 기존 보고서 파트를 바꾸는 데 사용할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "36080596"
 ## <a name="see-also"></a>관련 항목  
  [보고서 파트 관리](report-design/managing-report-parts.md)   
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 작성기의 보고서 파트 및 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)  

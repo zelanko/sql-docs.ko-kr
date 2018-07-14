@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, monitoring
 - Merge Agent, monitoring
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 191735b8b5be2a7828136abfaf09e95d295a7850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4a2e0c852f81e2cddead086cdbcb95955df4226
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238723"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  

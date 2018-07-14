@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.newperfprofile.f1
 helpviewer_keywords:
 - New Agent Profile dialog box
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8549be8d4c8a40aaaa35c171e0d2183c7b490768
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b879f333ce4d3ae038819a736579bbf3195fff1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256392"
 ---
 # <a name="new-agent-profile"></a>새 에이전트 프로필
   **새 에이전트 프로필** 대화 상자를 사용하여 새 프로필을 만들 수 있습니다. 새 프로필은 항상 기존 프로필에 기반하지만 이를 응용 프로그램 요구 사항에 맞게 수정할 수 있습니다. 만든 프로필은 **에이전트 프로필** 대화 상자에서 기존 및 후속 에이전트 작업에 적용할 수 있습니다. \<**AgentProfileName> 속성** 대화 상자에서 에이전트 매개 변수 값을 편집할 수 있습니다.  

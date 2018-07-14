@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f97ad80771839d00ee73e75a3b30bdcaf5b09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 139058c982315f12141d55c315a18554d4babd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217723"
 ---
 # <a name="dimension-processing-destination"></a>차원 처리 대상
   차원 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원을 로드하고 처리합니다. 차원에 대한 자세한 내용은 [차원&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)을 참조하세요.  

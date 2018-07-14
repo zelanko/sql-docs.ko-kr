@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Dimension element
 ms.assetid: 85093468-e971-4b8e-9ee4-7b264ad01711
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f9684a8629a03bc2f0d328152b7f9f6daff1e7ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0c416afd86a698358693937e35717c08009be75f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192523"
 ---
 # <a name="dimension-element-xmla"></a>Dimension 요소(XMLA)
-  부모 나타내는 큐브 차원을 식별 [개체](object-element-dimension-xmla.md) 요소입니다.  
+  부모를 나타내는 큐브 차원을 식별 [개체](object-element-dimension-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

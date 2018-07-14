@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237183"
 ---
 # <a name="backup-devices-sql-server"></a>백업 장치(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 장치에 기록됩니다. 이 물리적 백업 장치는 미디어 세트의 첫 번째 백업을 장치에 기록할 때 초기화됩니다. 하나 이상의 백업 장치 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "36081113"
   
 -   [실제 이름을 (Transact SQL)를 사용 하 여 백업 파일을 지정 합니다.](#BackupFileUsingPhysicalName)  
   
--   [디스크 백업 파일의 경로 지정](#BackupFileDiskPath)  
+-   [디스크 백업 파일의 경로 지정합니다.](#BackupFileDiskPath)  
   
 -   [네트워크 공유의 파일로 백업](#NetworkShare)  
   
@@ -113,7 +112,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
   
-###  <a name="BackupFileDiskPath"></a> 디스크 백업 파일의 경로 지정  
+###  <a name="BackupFileDiskPath"></a> 디스크 백업 파일의 경로 지정합니다.  
  백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup입니다.  
   
  특히 스크립트에서 모호성을 피하기 위해 모든 DISK 절에 백업 디렉터리의 경로를 명시적으로 지정하는 것이 좋습니다. 그러나 쿼리 편집기를 사용할 경우 이는 그다지 중요하지 않습니다. 쿼리 편집기를 사용할 경우 백업 파일이 확실히 기본 백업 디렉터리에 있으면 DISK 절에서 경로를 생략할 수 있습니다. 예를 들어 다음 `BACKUP` 문은 기본 백업 디렉터리에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 백업합니다.  
@@ -157,9 +156,9 @@ GO
   
  **섹션 내용**  
   
--   [실제 이름을 (Transact SQL)를 사용 하 여 백업 테이프를 지정 합니다.](#BackupTapeUsingPhysicalName)  
+-   [실제 이름을 (Transact SQL)를 사용 하 여 백업 테이프 지정](#BackupTapeUsingPhysicalName)  
   
--   [테이프와 관련 된 BACKUP 및 RESTORE 옵션 (Transact SQL)](#TapeOptions)  
+-   [테이프와 관련 된 BACKUP 및 RESTORE 옵션 (TRANSACT-SQL)](#TapeOptions)  
   
 -   [열려 있는 테이프 관리](#OpenTapes)  
   
@@ -173,7 +172,7 @@ GO
   
 -   백업 작업 중에 테이프 백업 장치가 찼는데 작성할 데이터가 더 남아 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 새 테이프를 넣으라는 메시지를 표시하고 새 테이프가 로드된 후에 백업 작업을 계속합니다.  
   
-###  <a name="BackupTapeUsingPhysicalName"></a> 실제 이름을 (Transact SQL)를 사용 하 여 백업 테이프를 지정 합니다.  
+###  <a name="BackupTapeUsingPhysicalName"></a> 실제 이름을 (Transact SQL)를 사용 하 여 백업 테이프 지정  
  테이프 드라이브의 물리적 장치 이름을 사용하여 백업 테이프를 지정하기 위한 기본 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 구문은 다음과 같습니다.  
   
  BACKUP { DATABASE | LOG } *database_name*  
@@ -194,7 +193,7 @@ GO
   
  FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
-###  <a name="TapeOptions"></a> 테이프와 관련 된 BACKUP 및 RESTORE 옵션 (Transact SQL)  
+###  <a name="TapeOptions"></a> 테이프와 관련 된 BACKUP 및 RESTORE 옵션 (TRANSACT-SQL)  
  테이프를 편리하게 관리할 수 있도록 BACKUP 문은 다음과 같은 테이프 관련 옵션을 제공합니다.  
   
 -   { NOUNLOAD | **UNLOAD** }  

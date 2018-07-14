@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 665626323e435eeed50b73f4d94de4506dba4f19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 262114f7bbd9200bfab3a74bb14e8cea08400f5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185120"
 ---
 # <a name="attribute-element-xmla"></a>Attribute 요소(XMLA)
-  정의 하거나 필터링 되는 특성의 멤버는 부모 [삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md), 또는 [Drop](../xml-elements-commands/drop-element-xmla.md) 명령은 작업을 수행 합니다.  
+  정의 하거나 필터링 되는 특성의 멤버는 부모 [삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md), 또는 [삭제](../xml-elements-commands/drop-element-xmla.md) 명령을 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -77,11 +77,11 @@ ms.locfileid: "36081919"
 |||  
 |-|-|  
 |**상위 항목 또는 부모**|**자식 요소**|  
-|[Drop](../xml-elements-commands/drop-element-xmla.md), [여기서](name-element-xmla.md), [키](keys-element-xmla.md)|  
-|[삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md), [CustomRollup](customrollup-element-xmla.md), [CustomRollupProperties](properties-element-xmla.md), [키](keys-element-xmla.md), [이름](name-element-xmla.md), [ SkippedLevels](skippedlevels-element-xmla.md), [번역](translations-element-xmla.md), [UnaryOperator](unaryoperator-element-xmla.md)|  
+|[Drop](../xml-elements-commands/drop-element-xmla.md)하십시오 [여기서](name-element-xmla.md), [키](keys-element-xmla.md)|  
+|[삽입](../xml-elements-commands/insert-element-xmla.md), [업데이트](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md), [CustomRollup](customrollup-element-xmla.md)를 [CustomRollupProperties](properties-element-xmla.md)를 [키](keys-element-xmla.md)를 [이름을](name-element-xmla.md), [ SkippedLevels](skippedlevels-element-xmla.md)하십시오 [번역](translations-element-xmla.md), [UnaryOperator](unaryoperator-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Attribute` 요소 정의 특성 멤버를 삽입, 업데이트 또는 삭제 하 여 각각의 `Insert`, `Update`, 또는 `Drop` 명령입니다. 이러한 명령은 한 번에 하나의 특성 멤버 에서만 작동할 수 있으므로 대로 [특성](attributes-element-xmla.md) 의 컬렉션은 `Insert`, `Update`, 및 `Drop` 명령을 하나만 사용할 수 있습니다 `Attribute` 요소입니다. 그러나 `Attributes` 및 `Where` 명령에 대한 `Drop` 요소의 `Update` 컬렉션은 두 개 이상의 `Attribute` 요소를 포함할 수 있으므로 쓰기 가능 차원에서 삭제 또는 업데이트될 특성을 필터링할 수 있습니다.  
+ `Attribute` 요소를 삽입, 업데이트 또는 삭제 하 여 각각 되는 특성 멤버를 정의 합니다 `Insert`, `Update`, 또는 `Drop` 명령입니다. 이러한 명령은 한 번에 하나의 특성 멤버 에서만 작동할 수 있으므로으로 [특성](attributes-element-xmla.md) 의 컬렉션을 `Insert`, `Update`, 및 `Drop` 명령을 하나만 포함 될 수 있습니다 `Attribute` 요소입니다. 그러나 `Attributes` 및 `Where` 명령에 대한 `Drop` 요소의 `Update` 컬렉션은 두 개 이상의 `Attribute` 요소를 포함할 수 있으므로 쓰기 가능 차원에서 삭제 또는 업데이트될 특성을 필터링할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)   

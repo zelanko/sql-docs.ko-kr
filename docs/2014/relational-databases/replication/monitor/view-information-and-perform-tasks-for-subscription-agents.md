@@ -1,5 +1,5 @@
 ---
-title: 정보 보기 및 구독 (복제 모니터)에 연결 된 에이전트에 대 한 작업을 수행 합니다. | Microsoft Docs
+title: 정보 보기 및 Subscription (Replication Monitor)를 사용 하 여 연결 된 에이전트에 대 한 작업 수행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0a9747d46beda33ace53f1a33b394b21602eef5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71ec17050728d3108c3841c73b16865bbc6259ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266359"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-subscription-replication-monitor"></a>구독 관련 에이전트에 대한 정보 보기 및 태스크 수행(복제 모니터)
   복제 모니터에서는 구독과 연결된 에이전트 정보에 액세스할 수 있는 두 가지 탭을 제공합니다.  

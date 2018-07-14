@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176490"
 ---
 # <a name="impersonation-ssas-tabular"></a>가장(SSAS 테이블 형식)
   이 항목에서는 테이블 형식의 모델 작성자를 대상으로 데이터 원본에 연결하여 데이터를 가져오고 처리(새로 고침)할 때 로그온 자격 증명이 Analysis Services에서 사용되는 방법에 대해 설명합니다.  
@@ -71,12 +71,12 @@ ms.locfileid: "36081913"
   
 |옵션|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**특정 Windows 사용자 이름 및 암호** <sup>2</sup>|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 다음과 같은 형식을 사용 하 여 도메인 및 사용자 계정의 이름을:**\<도메인 이름 >\\< 사용자 계정 이름을\>** 합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
+|**특정 Windows 사용자 이름 및 암호** <sup>2</sup>|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다.**\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
 |**서비스 계정**|ImpersonateServiceAccount|이 옵션은 모델에서 모델을 관리하는 Analysis Services 서비스 인스턴스와 연결된 보안 자격 증명을 사용하도록 지정합니다.|  
   
- <sup>1</sup>에 대 한 값을 지정 하는 ImpersonationMode는 [DataSourceImpersonationInfo 요소 &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) 데이터 원본에 대 한 속성.  
+ <sup>1</sup>ImpersonationMode에 대 한 값을 지정 합니다 [DataSourceImpersonationInfo 요소 &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) 데이터 원본에 대 한 속성입니다.  
   
- <sup>2</sup>작업 영역 데이터베이스는 다시 부팅 되었기 때문 메모리에서 제거 된 경우이 옵션을 사용 하는 경우 또는 **작업 영역 보존** 속성이 **메모리에서 언로드** 또는  **작업 영역에서 삭제**, 모델 프로젝트가 및 닫힌 경우 후속 세션에서는 테이블 데이터를 처리 하려고 하면 됩니다 하 라는 메시지가 각 데이터 원본에 대 한 자격 증명을 입력 합니다. 이와 마찬가지로 배포된 model 데이터베이스가 메모리에서 제거된 경우 각 데이터 원본에 대한 자격 증명을 묻는 메시지가 표시됩니다.  
+ <sup>2</sup>작업 영역 데이터베이스가 다시 부팅 하거나 메모리에서 제거 된 경우이 옵션을 사용 하는 경우 또는 **작업 영역 보존** 속성이로 설정 되어 **메모리에서 언로드** 또는  **작업 영역에서 삭제**, 고 모델 프로젝트가 닫히면 이후 세션에서 테이블 데이터를 처리 하려고 하면 메시지가 표시 됩니다 각 데이터 원본에 대 한 자격 증명을 입력 합니다. 이와 마찬가지로 배포된 model 데이터베이스가 메모리에서 제거된 경우 각 데이터 원본에 대한 자격 증명을 묻는 메시지가 표시됩니다.  
   
 ##  <a name="bkmk_impers_sec"></a> 보안  
  가장에서 사용되는 자격 증명은 작업 영역 데이터베이스 또는 배포된 모델을 관리하는 Analysis Services 서버와 연결된 xVelocity 메모리 내 분석 엔진(VertiPaq)™에 의해 메모리에 유지됩니다.  자격 증명이 디스크에 기록되는 경우는 없습니다. 모델이 배포될 때 작업 영역 데이터베이스가 메모리에 없으면 데이터 원본에 연결하고 데이터를 인출하는 데 사용되는 자격 증명을 입력하라는 메시지가 표시됩니다.  
@@ -87,18 +87,18 @@ ms.locfileid: "36081913"
 ##  <a name="bkmk_imp_newmodel"></a> 모델을 가져오는 경우의 가장  
  몇 가지 가장 모드를 사용하여 out-of-process 데이터 컬렉션을 지원할 수 있는 테이블 형식 모델과 달리 PowerPivot에서는 ImpersonateCurrentUser 모드만 사용합니다. PowerPivot은 항상 in-process로 실행되므로 현재 로그온한 사용자의 자격 증명을 사용하여 데이터 원본에 연결합니다. 테이블 형식 모델을 사용하는 경우 현재 로그온한 사용자의 자격 증명은 테이블 가져오기 마법사의 **미리 보기 및 필터** 기능과 **테이블 속성**보기에서만 사용됩니다. 가장 자격 증명은 데이터를 작업 영역 데이터베이스로 가져오거나 처리하는 경우 또는 데이터를 배포된 model로 가져오거나 처리하는 경우에 사용됩니다.  
   
- 기존 PowerPivot 통합 문서를 가져와서 새 모델을 만드는 경우 기본적으로 모델 디자이너는 서비스 계정을 사용하도록 가장을 구성합니다(ImpersonateServiceAccount). PowerPivot에서 Windows 사용자 계정으로 가져온 모델에 대한 가장 자격 증명을 변경하는 것이 좋습니다. PowerPivot 통합 문서를 가져오고 새 모델에 모델 디자이너에서에서 만든, 후 사용 하 여 자격 증명을 변경할 수 있습니다는 **기존 연결** 대화 상자.  
+ 기존 PowerPivot 통합 문서를 가져와서 새 모델을 만드는 경우 기본적으로 모델 디자이너는 서비스 계정을 사용하도록 가장을 구성합니다(ImpersonateServiceAccount). PowerPivot에서 Windows 사용자 계정으로 가져온 모델에 대한 가장 자격 증명을 변경하는 것이 좋습니다. PowerPivot 통합 문서를 가져온 후 모델 디자이너에서 새 모델을 만든 자격 증명을 사용 하 여 변경할 수 있습니다 합니다 **기존 연결** 대화 합니다.  
   
  Analysis Services 서버에 있는 기존 모델에서 가져와서 새 모델을 만드는 경우 가장 자격 증명이 기존 model 데이터베이스에서 새 모델 작업 영역 데이터베이스로 전달됩니다. 필요한 경우 **기존 연결** 대화 상자를 사용하여 새 모델에 대한 자격 증명을 변경할 수 있습니다.  
   
 ##  <a name="bkmk_conf_imp_info"></a> 가장 구성  
  모델이 있는 위치 및 컨텍스트에 따라 가장 정보를 구성하는 방법이 달라집니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 작성되는 모델의 경우 테이블 가져오기 마법사의 **가장 정보** 페이지를 사용하거나 **기존 연결** 대화 상자에서 데이터 원본 연결을 편집하여 가장 정보를 구성할 수 있습니다. 기존 연결을 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **모델** 메뉴에서 **기존 연결**을 클릭합니다.  
   
- Analysis Services 서버에 배포 된 모델에 대 한 가장 정보의 줄임표 (...)를 클릭 하 여 구성할 수는 **데이터 원본 가장 정보** 속성에는 **데이터베이스속성** 의 대화 상자 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ Analysis Services 서버에 배포 된 모델에 대 한 가장 정보의 줄임표 (...)를 클릭 하 여 구성할 수는 **데이터 원본 가장 정보** 속성에는 **데이터베이스속성** 대화 상자 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)   
- [데이터 원본 &#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
- [테이블 형식 모델 솔루션 배포 &#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
+ [테이블 형식 모델 솔루션 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   
