@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7b3c8428b34a72f16986044db1652b9907384b07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f50b7fa39bca030c7864f75b856b8e7ee2953de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207973"
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 행 집합
   서버에서 현재 활성 상태인 추적에 대한 정보를 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36180598"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_TRACES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_TRACES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|Description|  
 |-----------------|--------------------|-----------------|  

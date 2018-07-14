@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - private keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bea136573490ba06fba1ce5f8ca7c7a47a17d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187980"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>암호화 키 구성 및 관리(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 연결 정보 및 자격 증명을 보호합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화는 중요한 데이터를 보호하는 데 사용되는 공개 키, 개인 키 및 대칭 키의 조합을 통해 지원됩니다. 대칭 키는 보고서 서버의 설치 또는 구성 과정에서 보고서 서버를 초기화하는 동안 생성되며, 보고서 서버에서 이 서버에 저장된 중요한 데이터를 암호화하는 데 사용됩니다. 공개 키 및 개인 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 보고서 서버 데이터베이스의 중요한 데이터를 저장하는 각 보고서 서버 인스턴스당 하나의 공개 키 및 개인 키 쌍이 생성됩니다.  
@@ -58,10 +58,10 @@ ms.locfileid: "36182748"
  [암호화 된 보고서 서버 데이터 저장 &#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  보고서 서버의 암호화에 대해 설명합니다.  
   
- [삭제 하 고 암호화 키를 다시 만드는 &#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [삭제 및 다시 암호화 키를 만들기 &#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  대칭 키를 새 버전으로 바꾸는 방법과 대칭 키의 유효성을 검사할 수 없는 경우 다시 시작하는 방법을 설명합니다.  
   
- [추가 하 고 확장 배포에 대 한 암호화 키를 제거 &#40;SSRS 구성 관리자&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [추가 하 고 스케일 아웃 배포에 대 한 암호화 키를 제거 &#40;SSRS 구성 관리자&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  암호화 키를 추가 및 제거하여 스케일 아웃 배포에 속하는 보고서 서버를 제어하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

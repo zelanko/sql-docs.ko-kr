@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ClearCache command
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: abf566bd7be4f1a0aaba504acc299d266f3fe2ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37b43439705b3288530a919f77da7b0ead461b35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184573"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188970"
 ---
 # <a name="clearcache-element-xmla"></a>ClearCache 요소(XMLA)
-  에 지정된 된 개체에 대 한 메모리 캐시를 지웁니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+  지정된 된 개체에 대 한 메모리 내 캐시를 지웁니다를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36184573"
 |자식 요소|[개체](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `ClearCache` 명령에 지정 된 데이터베이스, 차원, 큐브, 측정값 그룹 또는 파티션에 대 한 캐시를 플러시합니다는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스. `Object` 요소에 데이터베이스, 차원, 큐브, 측정값 그룹 또는 파티션 이외의 개체가 지정되면 오류가 발생합니다.  
+ 합니다 `ClearCache` 명령에 지정 된 데이터베이스, 차원, 큐브, 측정값 그룹 또는 파티션의 캐시를 플러시합니다는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스. `Object` 요소에 데이터베이스, 차원, 큐브, 측정값 그룹 또는 파티션 이외의 개체가 지정되면 오류가 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [명령 &#40;XMLA&#41;](xml-elements-commands.md)  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - SkippedLevels element
 ms.assetid: 4887b557-0ffc-4f42-b6b9-c98ad1208ca5
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1033b7227e9617b4d4617c2a101a1e6a95ae4a82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d9293098996c927b0327f2718eba7d39e9b8b826
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169494"
 ---
 # <a name="skippedlevels-element-xmla"></a>SkippedLevels 요소(XMLA)
   부모 [Attribute](attribute-element-xmla.md) 요소에서 나타내는 특성 멤버가 건너뛰는 수준의 수를 포함합니다.  

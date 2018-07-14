@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllMemberTranslations element
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2a1a8b9b72895c69cb8d415d00d633be99ebc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 977168f25f81c1755b6c25e442bae4b7e6e3bfa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171544"
 ---
 # <a name="allmembertranslations-element-assl"></a>AllMemberTranslations 요소(ASSL)
-  컬렉션을 포함 [번역](../objects/translation-element-assl.md) 요소에 있는 All 멤버의 캡션에 대 한 [계층](../objects/hierarchy-element-assl.md) 요소입니다.  
+  컬렉션을 포함 [번역](../objects/translation-element-assl.md) 의 모든 멤버의 캡션에 대 한 요소를 [계층](../objects/hierarchy-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36183333"
 |자식 요소|[AllMemberTranslation](../objects/allmembertranslation-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `AllMemberTranslations` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Hierarchy>합니다.  
+ 부모에 해당 요소가 `AllMemberTranslations` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Hierarchy>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Translation 요소 &#40;ASSL&#41;](../objects/translation-element-assl.md)   

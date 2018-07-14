@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d3ae469cc1a02a02dc2bdb2ff7d6db7f75a46a69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194233"
 ---
 # <a name="name-element-xmla"></a>Name 요소(XMLA)
-  부모에 대 한 특성 멤버의 이름을 포함 [특성](attribute-element-xmla.md) 또는 [번역](translation-element-xmla.md) 요소입니다.  
+  부모 특성 멤버의 이름이 [특성](attribute-element-xmla.md) 또는 [번역](translation-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36183306"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|상위 항목 또는 부모:|카디널리티|  
+|상위 항목 또는 부모.|카디널리티|  
 |[Attribute](attribute-element-xmla.md)|1-1: 한 번만 나타나는 필수 요소입니다.|  
 |[번역](translation-element-xmla.md)|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   

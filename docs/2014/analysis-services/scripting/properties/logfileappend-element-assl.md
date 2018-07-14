@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d337d4110afc07d8aa211bc17685bc0fc2e8d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190913"
 ---
 # <a name="logfileappend-element-assl"></a>LogFileAppend 요소(ASSL)
-  결정 여부는 [추적](../objects/trace-element-assl.md) 요소가 해당 로깅 출력을 기존 로그 파일에 아니면 덮어쓸지가 됩니다.  
+  결정 여부는 [추적](../objects/trace-element-assl.md) 요소 해당 로깅 출력을 기존 로그 파일에 추가 하거나 덮어씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36180592"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `LogFileAppend` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  
+ 부모에 해당 하는 요소가 `LogFileAppend` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 추적 &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [요소를 추적 합니다. &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

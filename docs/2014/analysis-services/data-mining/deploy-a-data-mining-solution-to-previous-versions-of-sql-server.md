@@ -1,5 +1,5 @@
 ---
-title: 이전 버전의 SQL Server 데이터 마이닝 솔루션을 배포 | Microsoft Docs
+title: 이전 버전의 SQL Server 데이터 마이닝 솔루션에 배포 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [Analysis Services]
 - holdout [data mining]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28bb6c9ffd7f51c322e1e01d1c60cb40feb20492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b56e7e62c0717c94edfb4c8aaf7183f8e3e1f88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177240"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
   이 섹션에서는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 만든 데이터 마이닝 모델이나 데이터 마이닝 구조를 SQL Server 2005 Analysis Services를 사용하는 데이터베이스에 배포하려고 하거나 SQL Server 2005에서 만든 모델을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 배포할 때 발생할 수 있는 알려진 호환성 문제에 대해 설명합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36184148"
   
  SQL Server 2005 Analysis Services에서 마이닝 구조를 열면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 오류가 발생하고 홀드아웃 파티션이 제거된 구조가 다시 생성됩니다.  
   
- 구조 다시 작성 후 홀드 아웃 파티션의 크기를 더 이상 사용할 수; 속성 창에서 그러나 값 \<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >)은 ASSL 스크립트 파일에 있는 수 있습니다.  
+ 구조를 다시 작성 후 홀드 아웃 파티션의 크기를 사용할 수 없는 속성 창의; 그러나 값 \<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >)은 ASSL 스크립트 파일에 있는 수 있습니다.  
   
 ##  <a name="bkmk_Filter"></a> 필터가 있는 모델 배포  
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 를 사용하여 마이닝 모델에 필터를 적용하는 경우 SQL Server 2005 인스턴스에 모델을 배포할 수 있지만 필터는 적용되지 않습니다.  

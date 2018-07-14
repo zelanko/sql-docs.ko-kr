@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a20f733fd9a6fb2ca3c6e00eb4d1e84b7cb654
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59c097bcc9ee8e2e1b6872ab84cf807deec9d9ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162854"
 ---
 # <a name="variables-window"></a>변수 창
   **변수** 창을 사용하여 사용자 정의 변수를 생성 및 수정하고 시스템 변수를 볼 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36182054"
  **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
 > [!NOTE]  
->  값은 `Name` 및 `Namespace` 속성 유니코드 표준 2.0 또는 밑줄 (_)에 정의 된 대로 영문자로 시작 해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
+>  값을 `Name` 및 `Namespace` 속성은 Unicode Standard 2.0 또는 밑줄 (_)에 정의 된 대로 영문자를 사용 하 여 시작 해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **변수 추가**  
@@ -42,7 +42,7 @@ ms.locfileid: "36182054"
  **변수 이동**  
  목록에서 변수를 클릭하고 **변수 이동** 을 클릭하여 변수 범위를 변경합니다. **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
   
- 변수 범위에 대 한 자세한 내용은 참조 [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+ 변수 범위에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
   
  **변수 삭제**  
  목록에서 변수를 선택한 다음 **변수 삭제**를 클릭합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36182054"
  변수 값을 봅니다. 사용자 정의 변수에 대한 값을 업데이트할 수 있습니다. 이 값은 리터럴 또는 식일 수 있으며 값은 다중 행 문자열일 수 있습니다. 변수에 식을 할당하려면 **변수** 창의 **식** 열 옆에 있는 줄임표 단추를 클릭합니다.  
   
  `Namespace`  
- 네임스페이스 이름을 봅니다. 사용자 정의 변수는 처음에 생성 되는 **사용자** 수 있지만 네임 스페이스에서 네임 스페이스 이름을 변경할 수는 `Namespace` 필드입니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
+ 네임스페이스 이름을 봅니다. 사용자 정의 변수는 처음에 생성 합니다 **사용자** 있지만 네임 스페이스에서 네임 스페이스 이름을 변경할 수는 `Namespace` 필드. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
  **Raise Change Event**  
  값이 변경될 때 `OnVariableValueChanged` 이벤트를 발생시킬지 여부를 나타냅니다. 사용자 정의 및 시스템 변수에 대한 값을 업데이트할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  

@@ -1,5 +1,5 @@
 ---
-title: AMO로 관리 태스크 프로그래밍 | Microsoft Docs
+title: AMO 사용 하 여 관리 태스크 프로그래밍 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95267e9d51a0c7908c49bb91d0f02cf5a882fa28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1563187c936c76c41759d94a6af2949094e83cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197843"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO로 관리 태스크 프로그래밍
   AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 관리하는 데 사용되는 프로그래밍 라이브러리입니다. 이 섹션에서는 AMO 개체를 사용하여 프로그래밍하는 방법을 배웁니다.  

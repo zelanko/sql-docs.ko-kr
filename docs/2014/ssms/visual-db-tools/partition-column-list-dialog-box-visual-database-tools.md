@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67077100464f304d78ed714c1132b564f25ba5b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7625135e097627776eae7fc63222c578f9b535d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172224"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
   테이블에 관련된 분할 구성표가 있으면 이 대화 상자를 사용하여 분할 함수를 적용할 열을 선택할 수 있습니다. 함수가 작동하기 위해서는 전환한 열의 데이터 형식이 분할 함수에 정의되어 있는 열의 데이터 형식과 동일해야 합니다.  

@@ -15,23 +15,23 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181680"
 ---
 # <a name="deploying-a-rendering-extension"></a>렌더링 확장 프로그램 배포
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 렌더링 확장 프로그램을 작성하고 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후에는 보고서 서버 및 보고서 디자이너에서 이를 찾을 수 있도록 해야 합니다. 이 작업을 수행하려면 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가합니다.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>구성 파일 렌더링 확장 프로그램 요소  
- 렌더링 확장 프로그램이 .DLL로 컴파일되었으면 항목을 rsreportserver.config 파일에 추가합니다. 기본적으로 이 파일은 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer에 있습니다. 부모 요소는 \<Render>입니다. Render 요소 아래에 각 렌더링 확장 프로그램에 대한 Extension 요소가 있습니다. `Extension` 요소 이름 및 형식을 두 가지 특성을 포함 합니다.  
+ 렌더링 확장 프로그램이 .DLL로 컴파일되었으면 항목을 rsreportserver.config 파일에 추가합니다. 기본적으로 이 파일은 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer에 있습니다. 부모 요소는 \<Render>입니다. Render 요소 아래에 각 렌더링 확장 프로그램에 대한 Extension 요소가 있습니다. `Extension` 요소 두 개의 특성 이름 및 형식을 포함 합니다.  
   
- 다음 표에서 설명에 대 한 특성은 `Extension` 렌더링 확장 프로그램에 대 한 요소:  
+ 다음 표에서 특성을 설명 합니다 `Extension` 렌더링 확장 프로그램에 대 한 요소:  
   
 |attribute|Description|  
 |---------------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "36180795"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 에 대한 값은 렌더링 확장 프로그램의 고유한 이름입니다. **Type**의 값은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 구현의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 렌더링 확장 프로그램은 표시됩니다. 보고서 관리자와 같은 사용자 인터페이스에서 확장 프로그램을 숨기려면 추가 **Visible** 특성을 `Extension` 요소인으로 설정 하 고 `false`합니다.  
+     **Name** 에 대한 값은 렌더링 확장 프로그램의 고유한 이름입니다. **Type**의 값은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 구현의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 렌더링 확장 프로그램은 표시됩니다. 보고서 관리자와 같은 사용자 인터페이스에서 확장 프로그램을 숨기려면 추가 **Visible** 특성을 합니다 `Extension` 요소를로 설정 `false`.  
   
 ## <a name="verifying-the-deployment"></a>배포 확인  
  보고서 관리자를 열고 확장 프로그램이 보고서에 대해 사용 가능한 내보내기 유형 목록에 포함되어 있는지 확인할 수도 있습니다.  

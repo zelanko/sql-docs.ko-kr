@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e091df45f6531dfd0922c795105fe8aadd69b4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 437f225da3d771298a0fcf7af864a45953b194be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169304"
 ---
 # <a name="column-properties-ssas-tabular"></a>열 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 열 속성에 대해 설명합니다.  
@@ -65,8 +65,8 @@ ms.locfileid: "36173189"
 2.  **속성** 창에서 속성을 클릭한 다음 값을 입력하거나 아래쪽 화살표를 클릭하여 설정 옵션을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [전원 보고 속성을 볼 &#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
- [열 숨기기 또는 고정 &#40;SSAS 테이블 형식&#41;](hide-or-freeze-columns-ssas-tabular.md)   
- [테이블에 열 추가 &#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)  
+ [전원 보고 속성을 보려면 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
+ [열 숨기기 또는 고정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hide-or-freeze-columns-ssas-tabular.md)   
+ [테이블에 열 추가 &#40;&AMP;#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
 - estimating heap size
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 49e8f426443784cd84a226fd1bce79f9042b87ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd6d7c46c1f1aed62f0196640175bb566bca7471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203339"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>힙 크기 예측
   다음 단계에 따라 힙에 데이터를 저장하는 데 필요한 공간의 크기를 예측할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36093996"
      ***Max_Var_Size*** 에 추가된 바이트는 각 가변 길이 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
     > [!NOTE]  
-    >  결합할 수 `varchar`, `nvarchar`, `varbinary`, 또는 `sql_variant` 정의 된 총 테이블 너비가 8, 060 바이트를 초과 하는 열입니다. 이러한 열의 각 레코드의 길이 대 한 8, 000 바이트 이내 여야는 `varchar`, `nvarchar,``varbinary`, 또는 `sql_variant` 열입니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
+    >  결합할 수 있습니다 `varchar`, `nvarchar`하십시오 `varbinary`, 또는 `sql_variant` 정의 된 총 테이블 너비가 8,060 바이트를 초과 하는 열. 각 이러한 열의 길이 여전히 8,000 바이트 이내 여야를 `varchar`하십시오 `nvarchar,``varbinary`, 또는 `sql_variant` 열. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
   
      가변 길이 열이 없는 경우에는 ***Variable_Data_Size*** 를 0으로 설정합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36093996"
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식을 저장 하기 위해 공간 사용될지 정확 하 게 측정 하는 알고리즘 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, 및 `image` 값은 복잡 합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
+     공간 LOB 데이터 형식을 저장 하려면 사용할 정확 하 게 하는 알고리즘 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`를 **ntextxml**, 및 `image` 값은 복잡 합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
   
 -   압축  
   

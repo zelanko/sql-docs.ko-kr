@@ -1,5 +1,5 @@
 ---
-title: 백업 및 Reporting Services SharePoint 서비스 응용 프로그램 복원 | Microsoft Docs
+title: 백업 및 복원 Reporting Services SharePoint 서비스 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212573"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원
   이 항목에서는 SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 백업하고 복원하는 방법에 대해 설명합니다. 이 항목에는 다음과 같은 내용이 포함되어 있습니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "36093929"
   
 3.  **최상위 구성 요소** 목록에서 서비스 응용 프로그램 백업을 선택하고 **다음**을 클릭합니다.  
   
-4.  선택 하면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 응용 프로그램과 클릭 **다음**합니다.  
+4.  선택 하면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 응용 프로그램 및 클릭 **다음**합니다.  
   
 5.  **로그인 이름 및 암호** 섹션에 로그인 이름의 암호를 입력합니다. 로그인 이름 입력란은 백업 전에 서비스 응용 프로그램에 사용되던 로그인으로 채워야 합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36093929"
  [서비스 응용 프로그램 복원(SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>중앙 관리를 사용하여 암호화 키 복원  
- 복원에 대 한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 "암호화 키" 섹션을 참조 하는 암호화 키 [는 Reporting Services SharePoint 서비스 응용 프로그램 관리](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)합니다.  
+ 복원에 대 한 정보에 대 한 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 "암호화 키" 섹션을 참조 하는 암호화 키 [Reporting Services SharePoint 서비스 응용 프로그램을 관리](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)합니다.  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 구성  
  **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있었던 경우 다음 단계를 수행하여 구성하세요.  

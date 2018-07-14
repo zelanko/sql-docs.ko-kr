@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InstallationID Property
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InstanceID property
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: db0f56b842dd29c1a7062eb0ff88a0bc7ad28791
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4d1964f68b33d7adefed25990de9ea7d213f471b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166164"
 ---
 # <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>InstallationID 속성(WMI MSReportServer_ConfigurationSetting)
   이 속성은 특정 보고서 서버 인스턴스의 고유 식별자를 반환합니다.  

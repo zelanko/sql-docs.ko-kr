@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c2c513f4caeb820e561d5b6be889a850404d79ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 81db67b6450e7b259d84b647ffe2173024a7430f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191213"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에 사용된 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../report-builder/glossary-report-builder.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "36182744"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [보고서 파트를 보고서 및 보고서 정의 &#40;보고서 작성기 및 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [보고서, 보고서 파트 및 보고서 정의 &#40;보고서 작성기 및 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 보고서를 설명하는 데 사용되는 다양한 용어에 대해 설명합니다.  
   
  [포함 된 데이터 원본과 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  

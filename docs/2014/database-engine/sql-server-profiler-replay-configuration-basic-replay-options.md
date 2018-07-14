@@ -1,5 +1,5 @@
 ---
-title: SQL Server 프로파일러-재생 구성 (기본 재생 옵션) | Microsoft Docs
+title: SQL Server Profiler-재생 구성 (기본 재생 옵션) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2d67c2c481c44012a6e6fc63ae9bd560be90264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cef06029d3ac1af86955f7a2df89fbe570c15245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178380"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server 프로파일러 - 재생 구성(기본 재생 옵션)
   **재생 구성** 대화 상자에서 **기본 재생 옵션** 페이지를 사용하여 추적 파일 또는 테이블을 재생하는 방법을 지정할 수 있습니다.  

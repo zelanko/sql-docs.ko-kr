@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec628981acc51d660a0e8a99dba991d957955e9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170184"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 열에서 뷰 만들기
-  사용할 수는 `xml` 유형 열 뷰를 만들 수 있습니다. 다음 예에서는 뷰를 만듭니다에서 값은 `xml` 유형 열을 사용 하 여 검색 하는 `value()` 의 메서드는 `xml` 데이터 형식입니다.  
+  사용할 수는 `xml` 뷰를 만들려면 유형 열입니다. 다음 예에서는 뷰를 만듭니다에서 값을는 `xml` 형식 열이 사용 하 여 검색 됩니다 합니다 `value()` 메서드의 `xml` 데이터 형식입니다.  
   
 ```  
 -- Create the table.  
@@ -59,7 +59,7 @@ ProductID   PName
 1           SomeName   
 ```  
   
- 사용 하는 방법에 대 한 다음과 같은 사항에 유의 하세요는 `xml` 뷰를 만드는 데이터 형식:  
+ 사용에 대 한 다음 사항에 유의 합니다 `xml` 뷰를 만들 데이터 형식:  
   
 -   xml 데이터 형식은 구체화된 뷰에서 만들 수 있습니다. 구체화된 뷰는 XML 데이터 형식의 메서드를 기반으로 할 수 없습니다. 하지만 기본 테이블에 있는 xml 유형의 열과는 다른 XML 스키마 컬렉션으로 캐스팅할 수 있습니다.  
   

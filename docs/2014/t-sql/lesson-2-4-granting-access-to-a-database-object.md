@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e4b0c1a8c07e5504723e45f5985f495337ac00a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d07ed4bc46ef1872f656adb09ce1883b04514f02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187570"
 ---
 # <a name="granting-access-to-a-database-object"></a>데이터베이스 개체에 대한 액세스 권한 부여
   관리자는 **Products** 테이블 및 **vw_Names** 뷰에서 SELECT를 실행하고 **pr_Names** 프로시저를 실행할 수 있지만 Mary는 이러한 작업을 수행할 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  
@@ -48,6 +48,6 @@ ms.locfileid: "36172794"
   
 ## <a name="see-also"></a>관련 항목  
  [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [해지 &#40;Transact SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [취소 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5109aee94d7f566da2f3cf3d61b1a9569d6a44e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09e0d8813ccb444bdbc2713a6a18d028f5f8d21b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209313"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>플랫 파일 연결 관리자 편집기(일반 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **일반** 페이지를 사용하여 파일과 데이터 형식을 선택할 수 있습니다. 플랫 파일 연결을 사용하면 패키지를 텍스트 파일에 연결할 수 있습니다.  

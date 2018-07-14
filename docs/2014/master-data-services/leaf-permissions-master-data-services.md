@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
 - members [Master Data Services], leaf member permissions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6487c15c05fa157afdb8e644ead2f692e35f6ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 82dea3e40d1e6c367441b8fa057fad36570430bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175830"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
   리프 권한은 엔터티의 모든 리프 멤버에 대한 특성 값에 적용됩니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36182827"
   
 ## <a name="see-also"></a>관련 항목  
  [모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
- [사용 권한 통합 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
+ [통합 사용 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
  [모델 개체 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42a02eedcc2c054269872e4c0f9523ab63632eda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176440"
 ---
 # <a name="miningmodelpermission-element-assl"></a>MiningModelPermission 요소(ASSL)
   사용 권한 멤버를 정의 [역할](role-element-assl.md) 요소 가지는 개별 [MiningModel](miningmodel-element-assl.md) 요소입니다.  
@@ -64,13 +64,13 @@ ms.locfileid: "36183332"
 |자식 요소|[AllowBrowsing](../properties/allowbrowsing-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 추가 하 여 마이닝 구조에서 드릴스루를 사용할 수는 `AllowDrillthrough` 수 있는 권한을 [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) 컬렉션입니다. 경우 `AllowDrillthrough` 마이닝 구조와 마이닝 모델을 가지는 역할의 모든 멤버가 모두에서 활성화 [AllowDrillThrough 요소 &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) 모델에 대 한 데이터 마이닝 모델을 쿼리하고 반환할 수 있습니다 다음 구문을 사용 하 여 모델에 포함 되지 않은 구조 열:  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 추가 하 여 마이닝 구조에서 드릴스루를 설정할 수 있습니다 합니다 `AllowDrillthrough` 권한을 [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md) 컬렉션. 하는 경우 `AllowDrillthrough` 마이닝 구조와 마이닝 모델을 가지는 역할의 멤버에 사용 하도록 설정할지 [AllowDrillThrough 요소 &#40;ASSL&#41; ](../properties/allowdrillthrough-element-assl.md) 모델에 대 한 데이터 마이닝 모델을 쿼리하고 반환할 수 있습니다 다음 구문을 사용 하 여 모델에 포함 되지 않은 구조 열:  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- 따라서 중요한 데이터나 개인 정보를 보호하려면 필요한 경우에만 마이닝 모델에 대한 `AllowDrillthrough` 권한을 부여해야 합니다. 자세한 내용은 참조 [AllowDrillThrough 요소 &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md)합니다.  
+ 따라서 중요한 데이터나 개인 정보를 보호하려면 필요한 경우에만 마이닝 모델에 대한 `AllowDrillthrough` 권한을 부여해야 합니다. 자세한 내용은 [AllowDrillThrough 요소 &#40;ASSL&#41;](../properties/allowdrillthrough-element-assl.md)합니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.MiningModelPermission>합니다.  
   

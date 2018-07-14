@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bed4f06e073d370b10be04e614a18b041f0d1dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 042dde7beeff33dd988f5d21d0d5975e4ee88aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190763"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>1단계: 5단원 패키지 복사
   이 태스크에서는 5단원에서 만든 Lesson 5.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 5단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 6단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36184093"
   
 7.  속성 창에서 Name 속성을 Lesson 6으로 업데이트합니다.  
   
-8.  ID 속성에 대 한 상자를 클릭 한 다음 드롭다운 화살표를 클릭 한 다음 클릭 \<새 ID 만들기 > 합니다.  
+8.  ID 속성에 대 한 상자를 클릭 하 고 드롭다운 화살표를 클릭 한 다음 클릭 \<새 ID 생성 >.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>완성된 5단원 패키지를 추가하려면  
   

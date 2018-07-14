@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Materialization element
 ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08e3607d1cb04f3a4483d43ead544edbbcf42a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf6b3121159a1a98cfac56c91af1920c5b96935b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176410"
 ---
 # <a name="materialization-element-assl"></a>Materialization 요소(ASSL)
   측정값 그룹과 참조 차원 간의 관계 유형을 나타냅니다.  
@@ -67,10 +67,10 @@ ms.locfileid: "36182114"
 |*일반*|참조 차원은 정규 차원과 같이 정규 관계를 갖습니다.|  
 |*간접*|참조 차원은 다 대 다 차원과 같이 간접 관계를 갖습니다.|  
   
- 부모에 해당 하는 요소 `Materialization` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>합니다.  
+ 부모에 해당 하는 요소가 `Materialization` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

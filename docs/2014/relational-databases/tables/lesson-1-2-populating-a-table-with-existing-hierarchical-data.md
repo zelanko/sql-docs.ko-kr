@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186120"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>기존 계층적 데이터로 테이블 채우기
   이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "36182986"
   
      `10        4         2`  
   
-3.  **NewOrg** 테이블을 채웁니다. GetRoot 및 ToString 메서드를 사용 하 여 연결할는 **Num** 값에 `hierarchyid` 서식을 지정 하 고 다음 업데이트는 **OrgNode** 열을 결과 계층 값:  
+3.  **NewOrg** 테이블을 채웁니다. GetRoot 및 ToString 메서드를 사용 하 여 연결 합니다 **Num** 값을 `hierarchyid` 서식을 지정 하 고 다음 업데이트를 **OrgNode** 열을 결과 계층 값으로:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -155,7 +155,7 @@ ms.locfileid: "36182986"
   
     ```  
   
-     **LogicalNode** 열 변환의 `hierarchyid` 계층을 나타내는 보다 읽기 쉬운 텍스트 형식으로 열입니다. 나머지 태스크에서는 `ToString()` 메서드를 사용하여 `hierarchyid` 열의 논리 형식을 표시합니다.  
+     **LogicalNode** 열으로 변환 합니다 `hierarchyid` 계층을 나타내는 보다 읽기 쉬운 텍스트 형식으로 열입니다. 나머지 태스크에서는 `ToString()` 메서드를 사용하여 `hierarchyid` 열의 논리 형식을 표시합니다.  
   
 5.  더 이상 필요하지 않은 임시 테이블을 삭제합니다.  
   

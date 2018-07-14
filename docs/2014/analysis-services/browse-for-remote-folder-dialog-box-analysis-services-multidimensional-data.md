@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5316d36dc38f41343c9f0dc3afa1638c68b1dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212073"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>원격 폴더 찾아보기 대화 상자(Analysis Services - 다차원 데이터)
   **원격 폴더 찾아보기** 대화 상자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대해 정의된 사용 가능한 로그 및 데이터 폴더 목록을 표시합니다. 나열된 폴더 중 하나를 선택하거나 필요한 경우 다른 폴더를 지정할 수 있습니다. **원격 폴더 찾아보기** 대화 상자는 다음 단계 중 하나를 수행하면 표시됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36093638"
  **폴더 선택**에서 선택한 경로를 수정하거나 **폴더 선택**에 나열되지 않은 폴더를 선택하려면 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [처리 및 저장소 위치 &#40;파티션 마법사&#41;](processing-and-storage-locations-partition-wizard.md)   
  [파티션 &#40;데이터베이스 복원 대화 상자&#41; &#40;Analysis Services-다차원 데이터&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [원격 파티션-고급 설정 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  

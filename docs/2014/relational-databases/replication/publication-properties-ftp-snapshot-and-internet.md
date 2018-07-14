@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.internetsynchronization.f1
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 994f77e71e3630537021a293a33e79ff3795aa7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 759bce5473161cb2b9c53e17d644ddf0e19e06b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197133"
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>게시 속성, FTP 스냅숏 및 인터넷
   이 페이지에서는 다음 작업을 수행할 수 있습니다.  
   
--   FTP(파일 전송 프로토콜)를 통해 스냅숏을 배달하는 속성을 설정합니다. 자세한 내용은 참조 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md) 에 대 한 자세한 내용은 Windows 설명서입니다.  
+-   FTP(파일 전송 프로토콜)를 통해 스냅숏을 배달하는 속성을 설정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md) 자세한 내용은 Windows 설명서.  
   
     > [!NOTE]  
     >  FTP 설정을 변경하면 새 스냅숏을 생성해야 합니다.  

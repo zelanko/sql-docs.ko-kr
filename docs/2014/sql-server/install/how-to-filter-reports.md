@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Upgrade Advisor], filtering
 - filtering reports [Reporting Services]
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 784c435a62a4388ec18ef86383c5ccf024d093bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e7a37889bfd795fda62074f2d74efc7d0647eb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191193"
 ---
-# <a name="how-to-filter-reports"></a>방법: 보고서 필터링
+# <a name="how-to-filter-reports"></a>방법: 보고서를 필터링 합니다.
   이 항목에서는 업그레이드 관리자 보고서 뷰어를 사용하여 보고서에 필터를 적용하는 방법에 대해 설명합니다.  
   
 ### <a name="to-filter-reports"></a>보고서를 필터링하려면  
   
-1.  보고서 뷰어에서 필터링할 보고서를 표시합니다. 자세한 내용은 [하는 방법: 업그레이드 관리자 보고서 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)합니다.  
+1.  보고서 뷰어에서 필터링할 보고서를 표시합니다. 자세한 내용은 [방법: 업그레이드 관리자 보고서를 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)합니다.  
   
 2.  에 **기준으로 필터링** 목록에서 보려는 문제 유형을 선택 합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36181494"
   
     -   **문제를 해결 한**합니다. 해결된 것으로 표시된 모든 문제를 표시합니다.  
   
-    -   **해결 되지 않은 문제**합니다. 아직 해결되지 않은 모든 문제를 표시합니다.  
+    -   **문제를 확인할 수 없는**합니다. 아직 해결되지 않은 모든 문제를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [방법: 업그레이드 관리자 분석 마법사 실행](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   

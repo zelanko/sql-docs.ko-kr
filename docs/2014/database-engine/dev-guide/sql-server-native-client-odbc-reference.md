@@ -17,22 +17,22 @@ helpviewer_keywords:
 - ODBC drivers
 ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0bf06b24a7a71938da7c073d7cd275d082832f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e8d75ba1cd25b32a49924105c2b298e5b31c0a6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205973"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client(ODBC) 참조
   ODBC(Open Database Connectivity)는 응용 프로그램에서 ODBC 데이터 원본의 데이터에 액세스하는 데 사용하는 Microsoft Win32 응용 프로그래밍 인터페이스입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 참조에는 ODBC 함수 호출이 모두 문서화되어 있지는 않습니다. 드라이버 관련 매개 변수를 가지는 함수나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용될 때의 동작에 대해서만 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51의 포괄적인 참조를 위해에서 Microsoft Data Access Components SDK를 다운로드는 [데이터 액세스 및 저장소 개발자 센터](http://go.microsoft.com/fwlink?linkid=4173)를 보거나는 [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 3.51 사양을 준수합니다. ODBC 3.51에 대 한 포괄적인 참조에 대 한 Microsoft Data Access Components SDK를 다운로드 합니다 [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), 보거나 합니다 [ODBC 프로그래머 참조](http://go.microsoft.com/fwlink/?LinkId=45250) 온라인입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

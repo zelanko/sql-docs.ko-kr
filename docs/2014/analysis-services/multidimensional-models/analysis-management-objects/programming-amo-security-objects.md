@@ -16,27 +16,27 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197953"
 ---
 # <a name="programming-amo-security-objects"></a>AMO 보안 개체 프로그래밍
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 서버 관리자 그룹 또는 Database Administrator 그룹의 구성원 보안 개체 프로그래밍 또는 AMO 보안 개체를 사용 하는 응용 프로그램을 실행 해야 합니다. Server Administrator와 Database Administrator는 액세스 수준을 제공한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 보안 개체 프로그래밍 또는 AMO 보안 개체를 사용 하는 응용 프로그램을 실행 하려면 Server Administrator 그룹 또는 Database Administrator 그룹의 멤버입니다. Server Administrator와 Database Administrator는 액세스 수준 제공한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 사용자는 해당 개체에 할당된 역할과 권한의 조합을 통해 가져온 모든 개체에 액세스합니다. 자세한 내용은 참조 [AMO 보안 클래스](amo-security-classes.md)합니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 사용자는 해당 개체에 할당된 역할과 권한의 조합을 통해 가져온 모든 개체에 액세스합니다. 자세한 내용은 [AMO 보안 클래스](amo-security-classes.md)합니다.  
   
 ## <a name="role-and-permission-objects"></a>역할 및 권한 개체  
  서버 역할에는 해당 컬렉션의 유일한 역할인 관리자 역할만 있습니다. 서버 역할 컬렉션에는 새 역할을 추가할 수 없습니다. 관리자 역할의 멤버 자격에서는 서버의 모든 개체에 대한 전체 액세스를 허용합니다.  
   
  <xref:Microsoft.AnalysisServices.Role> 개체는 데이터베이스 수준에서 만들어집니다. 역할에서 멤버를 추가 또는 제거하고 역할을 <xref:Microsoft.AnalysisServices.Database> 개체에 추가 또는 제거하는 작업만으로 역할을 유지 관리할 수 있습니다. <xref:Microsoft.AnalysisServices.Permission> 개체가 연결되어 있는 역할은 삭제할 수 없습니다. 역할을 삭제하려면 먼저 <xref:Microsoft.AnalysisServices.Permission> 개체에서 모든 <xref:Microsoft.AnalysisServices.Database> 개체를 검색한 후 권한에서 <xref:Microsoft.AnalysisServices.Role>을 제거해야만 <xref:Microsoft.AnalysisServices.Role>에서 <xref:Microsoft.AnalysisServices.Database>을 삭제할 수 있습니다.  
   
- 권한은 권한이 제공된 개체에서 수행할 수 있는 동작을 정의합니다. 다음 개체에 사용 권한을 제공할 수 있습니다: <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MiningStructure>, 및 <xref:Microsoft.AnalysisServices.MiningModel>합니다. 권한 유지 관리 작업에는 해당 액세스 속성에 따라 사용 가능한 액세스를 부여 또는 취소하는 작업이 포함됩니다. 사용 가능한 각 액세스에는 원하는 액세스 수준으로 설정할 수 있는 속성이 있습니다. 액세스는 처리, 정의 읽기, 읽기, 쓰기 및 관리 작업에 대해 정의될 수 있습니다. 관리 액세스는 <xref:Microsoft.AnalysisServices.Database> 개체에만 정의됩니다. 데이터베이스 관리자 보안 수준은 역할에 데이터베이스 관리 권한이 부여된 경우에 얻을 수 있습니다.  
+ 권한은 권한이 제공된 개체에서 수행할 수 있는 동작을 정의합니다. 사용 권한 개체에 제공할 수 있습니다: <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>를 <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>를 <xref:Microsoft.AnalysisServices.MiningStructure>, 및 <xref:Microsoft.AnalysisServices.MiningModel>합니다. 권한 유지 관리 작업에는 해당 액세스 속성에 따라 사용 가능한 액세스를 부여 또는 취소하는 작업이 포함됩니다. 사용 가능한 각 액세스에는 원하는 액세스 수준으로 설정할 수 있는 속성이 있습니다. 액세스는 처리, 정의 읽기, 읽기, 쓰기 및 관리 작업에 대해 정의될 수 있습니다. 관리 액세스는 <xref:Microsoft.AnalysisServices.Database> 개체에만 정의됩니다. 데이터베이스 관리자 보안 수준은 역할에 데이터베이스 관리 권한이 부여된 경우에 얻을 수 있습니다.  
   
  다음 예제에서는 Database Administrators, Processors, Writers 및 Readers라는 4가지 역할을 만듭니다.  
   

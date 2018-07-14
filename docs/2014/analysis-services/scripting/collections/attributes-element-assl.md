@@ -1,5 +1,5 @@
 ---
-title: 특성을 요소 (ASSL) | Microsoft Docs
+title: Attribute 요소 (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Attributes element
 ms.assetid: d6b545e6-1521-496f-a731-f2c2c44118e4
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e3dda6122030b789f9cccbf9f300a0a41a37ec5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bf52ecd3bce593e130b4a8cbd912fa08a4c1c20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180780"
 ---
 # <a name="attributes-element-assl"></a>Attributes 요소(ASSL)
   연결된 차원에 대한 특성의 컬렉션을 포함합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36183116"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AggregationDesignDimension](../data-type/dimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/cubedimension-data-type-assl.md), [CubeDimension](../data-type/cubedimension-data-type-assl.md), [차원 ](../objects/dimension-element-assl.md), [PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md), [RegularMeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|  
+|부모 요소|[AggregationDesignDimension](../data-type/dimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/cubedimension-data-type-assl.md)하십시오 [CubeDimension](../data-type/cubedimension-data-type-assl.md), [차원 ](../objects/dimension-element-assl.md)하십시오 [PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md)하십시오 [RegularMeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|  
 |자식 요소|[Attribute](../objects/attribute-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
 - Toolbox [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e29019df2d10653b69ce03b56d5414310dd6a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d5d8ef26cb4d9717682c47bf6680dd87694bdba1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172044"
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
   도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  

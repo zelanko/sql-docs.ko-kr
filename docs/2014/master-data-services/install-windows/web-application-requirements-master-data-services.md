@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205683"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 응용 프로그램 요구 사항(MDS(Master Data Services))
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Internet Explorer (IE) 에서만 7 이상 사용할 수 있습니다. IE 7 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 만 Internet Explorer (IE) 7 이상을 사용할 수 있습니다. IE 7 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  
   
  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 웹 응용 프로그램을 만들고 구성하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 사용합니다. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 는 로컬 컴퓨터에서 IIS를 구성하므로 초기 웹 구성 작업을 수행할 때 가장 적합합니다. 예를 들어 단일 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 있는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 환경을 구성하거나 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 스케일 아웃 배포에서 초기 웹 응용 프로그램을 구성할 수 있습니다. IIS 도구는 스케일 아웃 배포에서 여러 웹 서버를 구성하는 등 보다 복잡한 태스크를 수행하는 데 사용됩니다.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "36182602"
 ### <a name="operating-system"></a>운영 체제  
  아래 Windows 운영 체제에는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 응용 프로그램 및 웹 서비스에 필요한 인터넷 정보 서비스(IIS)가 포함되어 있습니다.  
   
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64 비트) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 비트) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence(64비트) x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64 비트) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64 비트) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence(64비트) x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] S P 2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise 및 Ultimate<br /><br /> Windows 8.0 Professional, Enterprise 및 Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] S P 2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] S P 2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise 및 Ultimate<br /><br /> Windows 8.0 Professional, Enterprise 및 Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- 해당 버전에 지원 되는 Windows 운영 체제의 전체 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
+ 버전의 지원 되는 Windows 운영 체제의 전체 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [여기](http://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36182602"
  Windows Server 2008 R2의 MMC(Microsoft Management Console)에서 **서버 관리자**를 사용하여 **웹 서버(IIS)** 역할 및 다음 필수 역할 서비스를 설치할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Windows 7 운영 체제에서 사용 하 여 **프로그램 및 기능** 에서 이러한 옵션을 사용 하도록 설정 하려면 제어판에서는 **Windows 기능** 대화 상자.  
+>  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Windows 7 운영 체제를 사용 하 여 **프로그램 및 기능** 에서 이러한 옵션을 사용 하도록 설정 하려면 제어판에서의 **Windows 기능** 대화 상자.  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36182602"
 |인터넷 정보 서비스<br /><br /> 웹 관리 도구<br /><br /> IIS 관리 콘솔<br /><br /> World Wide Web 서비스<br /><br /> 응용 프로그램 개발<br /><br /> .NET 확장성 3.5<br /><br /> .NET 확장성 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 확장<br /><br /> ISAPI 필터<br /><br /> 일반 HTTP 기능<br /><br /> 기본 문서<br /><br /> 디렉터리 검색<br /><br /> HTTP 오류<br /><br /> 정적 콘텐츠<br /><br /> [참고: WebDAV 게시를 설치하지 마세요.]<br /><br /> 상태 및 진단<br /><br /> HTTP 로깅<br /><br /> 요청 모니터<br /><br /> 성능<br /><br /> 정적 콘텐츠 압축<br /><br /> 보안<br /><br /> 요청 필터링<br /><br /> Windows 인증|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>기능(Windows Server 2008 또는 Windows Server 2008 R2, Windows 7 운영 체제)  
- [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 하거나 사용할 수 있습니다 Windows Server 2008 R2 **서버 관리자** 다음과 같은 설치에 기능을 필요 합니다.  
+ [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 사용할 수 있습니다 Windows Server 2008 R2 **서버 관리자** 다음을 설치 하려면 필수 기능입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Windows 7 운영 체제에서 사용 하 여 **프로그램 및 기능** 에서 이러한 옵션을 사용 하도록 설정 하려면 제어판에서는 **Windows 기능** 대화 상자.  
+>  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Windows 7 운영 체제를 사용 하 여 **프로그램 및 기능** 에서 이러한 옵션을 사용 하도록 설정 하려면 제어판에서의 **Windows 기능** 대화 상자.  
   
 ||  
 |-|  

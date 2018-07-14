@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34d447d0fca75012d786bd7de5911c2846dd76c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e74a05e025f474737130f1faeb61f2647d8e69bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212993"
 ---
 # <a name="handling-smo-events"></a>SMO 이벤트 처리
   이벤트 처리기 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 구독할 수 있는 서버 이벤트 유형이 있습니다.  
@@ -40,9 +40,9 @@ ms.locfileid: "36182981"
 ## <a name="event-subscription"></a>이벤트 구독  
  이벤트 처리기 클래스를 작성하고, 해당 인스턴스를 만들고, 이벤트 처리기를 부모 개체에 할당하고, 이벤트를 구독하는 방법으로 이벤트를 처리합니다.  
   
- 이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트에 대 한 정보를 수신 하는 이벤트 처리기 함수는 *ServerEventNotificatificationArgs* 이벤트에 대 한 정보를 보고 하기 위해 사용할 수 있는 매개 변수입니다.  
+ 이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트 처리기 함수에서 이벤트에 대 한 정보를 수신 합니다 *ServerEventNotificatificationArgs* 이벤트에 대 한 정보를 보고 사용할 수 있는 매개 변수입니다.  
   
- 처리 될 수 있는 데이터베이스와 서버 이벤트의 종류에 나열 되어는 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스입니다.  
+ 처리할 수 있는 데이터베이스 및 서버 이벤트의 종류에 나열 되어는 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스입니다.  
   
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

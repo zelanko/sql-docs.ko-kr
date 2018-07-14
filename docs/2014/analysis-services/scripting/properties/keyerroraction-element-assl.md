@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyErrorAction element
 ms.assetid: 91fa9f88-b79e-4996-9717-d7ca82b64ddd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41ebffd86a67ef474180e09770b4e8c0cdef3f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119cf38dc30683c4d1c4fc7edc67c77c8f01e4f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173534"
 ---
 # <a name="keyerroraction-element-assl"></a>KeyErrorAction 요소(ASSL)
-  에 대 한 동작을 지정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 키에서 오류가 발생할 때 실행 됩니다.  
+  동작을 지정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 키에서 오류가 발생할 때.  
   
 ## <a name="syntax"></a>구문  
   

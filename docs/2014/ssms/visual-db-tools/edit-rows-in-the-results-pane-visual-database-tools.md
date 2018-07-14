@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28573e955ff50d32a19ef003c23fc8c68f21e0f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b695be014eb0576373513fd8f1d176a50b74adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187598"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 편집(Visual Database Tools)
   대부분의 경우 [결과 창](visual-database-tools.md)에서 데이터를 편집할 수 있습니다. 데이터 변경에 대한 자세한 내용은 [결과 업데이트 규칙&#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) 및 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)에서 데이터를 편집할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36181223"
 4.  행에서 포커스를 옮겨 변경 내용을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [결과 창에서 데이터로 작업할 &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+ [결과 창에서 데이터 작업을 &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [결과 업데이트 규칙&#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md)  
   
   

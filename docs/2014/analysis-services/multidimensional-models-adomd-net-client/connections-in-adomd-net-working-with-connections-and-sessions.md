@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET에서 연결 및 세션 작업 | Microsoft Docs
+title: 연결 및 ADOMD.NET에서 세션을 사용 하 여 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07c17333b58d34a99e8d393a1dbc8ec00d75f60e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef7c679aa0f295c486836763158a89a1f593ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176960"
 ---
 # <a name="working-with-connections-and-sessions-in-adomdnet"></a>ADOMD.NET에서 연결 및 세션 작업
   XMLA(XML for Analysis)에서 세션은 분석 데이터 액세스 동안 상태 저장 작업에 필요한 지원을 제공합니다. 세션은 분석 데이터 원본에 대한 명령 및 트랜잭션의 범위와 컨텍스트를 지정합니다. 세션 관리에 사용되는 XMLA 요소로는 [BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../xmla/xml-elements-headers/session-element-xmla.md)및 [EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md)이 있습니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36172770"
  세션 ID는 세션이 계속 유효한 상태로 유지됨을 보장하지 않습니다. 세션이 만료된 경우(예를 들어, 세션의 시간이 초과되거나 연결이 끊어진 경우) 공급자는 해당 세션의 동작을 종료하고 롤백할 수 있습니다. 이 경우 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체의 후속 메서드를 호출하면 항상 예외가 throw됩니다. 세션이 만료될 때가 아니라 다음 요청이 공급자에게 전송될 때만 예외가 throw되므로 응용 프로그램에서 공급자의 데이터 또는 메타데이터를 검색할 때 이러한 예외를 처리할 수 있어야 합니다.  
   
 ## <a name="closing-a-session"></a>세션 닫기  
- 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> 메서드는 값을 지정 하지 않고는 *endSession* 매개 변수 또는 경우에는 *endSession* 매개 변수가 세션은 세션에 대 한 연결과 모두 True로 설정 된 와 연결 된는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 닫힙니다. 세션을 닫기 위해 ADOMD.NET에서는 세션 ID가 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> 속성의 값으로 설정된 XMLA `EndSession` 헤더를 공급자에게 보냅니다.  
+ 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> 메서드는 값을 지정 하지 않고는 *endSession* 매개 변수를 또는 경우에는 *endSession* 매개 변수가 모두 연결 세션 및 세션을 True로 설정 된 연관 된 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체 닫힙니다. 세션을 닫기 위해 ADOMD.NET에서는 세션 ID가 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.SessionID%2A> 속성의 값으로 설정된 XMLA `EndSession` 헤더를 공급자에게 보냅니다.  
   
- 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> 메서드는 *endSession* 매개 변수가 False로 설정 되어 연관 된 세션에서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체를 활성 상태로 유지 되지만 세션에 대 한 연결이 닫힙니다.  
+ 경우는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Close%2A> 메서드를 호출 합니다 *endSession* 매개 변수가 False로 설정 되어 연결 된 세션을 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체를 활성 상태로 유지 되지만 세션에 대 한 연결이 닫혀 합니다.  
   
 ## <a name="example-of-managing-a-session"></a>세션 관리 예  
  다음 예제에서는 ADOMD.NET에서 연결을 열고, 세션을 만들고, 세션을 열린 상태로 유지하면서 연결을 닫는 방법을 보여 줍니다.  

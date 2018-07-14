@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
 - disk space [SQL Server], indexes
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b371198e36cc2e8047ab88275331dab076e0b97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6e2fc74a9134a03c69e6d436c11de84ef2867b1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182270"
 ---
 # <a name="index-disk-space-example"></a>인덱스 디스크 공간 예
   인덱스를 생성하거나, 다시 작성하거나, 삭제할 때마다 해당 파일 및 파일 그룹에서 이전(원본) 및 새(대상) 구조 모두에 대한 디스크 공간이 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다. 또한 분류 작업을 위한 임시 디스크 공간도 추가로 필요할 수 있습니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
@@ -100,7 +99,7 @@ ms.locfileid: "36172875"
   
 -   임시 매핑 인덱스에 대한 공간을 확인합니다.  
   
-     이 예에서 이전 책갈피는 힙 (8 바이트) 행 ID (RID) 및 새 책갈피는 클러스터링 키 (포함 하 여 24 바이트는 `uniqueifier`). 이전 책갈피와 새 책갈피 사이에 겹치는 열은 없습니다.  
+     이 예에서 이전 책갈피는 힙 (8 바이트)의 행 ID (RID) 및 새 책갈피는 클러스터링 키 (포함 하 여 24 바이트를 `uniqueifier`). 이전 책갈피와 새 책갈피 사이에 겹치는 열은 없습니다.  
   
      임시 매핑 인덱스 크기 = 1백만*(8바이트+24바이트)/80%~40MB  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36172875"
 |---------------------|---------------------------------------------------------------------------|  
 |SORT_IN_TEMPDB = ON인 경우 오프라인 인덱스 작업|작업 중 전체 공간: 1018MB:<br /><br /> -기존 테이블 및 인덱스: 363MB\*<br /><br /> -<br />                    **tempdb**: 202MB*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
 |SORT_IN_TEMPDB = OFF인 경우 오프라인 인덱스 작업|작업 중 전체 공간: 816MB:<br /><br /> -기존 테이블 및 인덱스: 363MB*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
-|SORT_IN_TEMPDB = ON인 경우 온라인 인덱스 작업|작업 중 전체 공간: 1058MB:<br /><br /> -기존 테이블 및 인덱스: 363MB\*<br /><br /> -**tempdb** (매핑 인덱스 포함): 242 MB *<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
+|SORT_IN_TEMPDB = ON인 경우 온라인 인덱스 작업|작업 중 전체 공간: 1058MB:<br /><br /> -기존 테이블 및 인덱스: 363MB\*<br /><br /> -**tempdb** (매핑 인덱스 포함): 242 (mb) *<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
 |SORT_IN_TEMPDB = OFF인 경우 온라인 인덱스 작업|작업 중 전체 공간: 856MB:<br /><br /> -기존 테이블 및 인덱스: 363MB*<br /><br /> -임시 매핑 인덱스: 40MB\*<br /><br /> -새 인덱스: 453MB<br /><br /> 작업 후 필요한 전체 공간: 453MB|  
   
  *이 공간은 인덱스 작업이 커밋된 후 할당 취소됩니다.  

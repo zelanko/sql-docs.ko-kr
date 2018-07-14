@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 853566f5826ca1ba073c20e2ceeeb56fbbbfbcc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 720247c11ce1be297d275af923070e8a8f88342b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178450"
 ---
 # <a name="file-load-and-save-event-category"></a>File Load and Save 이벤트 범주
   File Load and Save 이벤트 범주에는 다음 표에서 설명하는 이벤트 클래스가 있습니다.  

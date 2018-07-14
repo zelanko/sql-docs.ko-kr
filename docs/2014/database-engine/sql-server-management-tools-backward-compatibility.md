@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d9d98eea07e8f9a062ae4a5be168e831589ae729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7a7cea6026f043f42c0af433d41dd982e3bc747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195673"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 관리 도구 이전 버전과의 호환성
   이전 버전과의 호환성 섹션 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전 간의 동작 변경 내용에 대해 설명합니다.  

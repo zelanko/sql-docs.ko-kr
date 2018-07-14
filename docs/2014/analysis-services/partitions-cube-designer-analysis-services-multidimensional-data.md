@@ -1,5 +1,5 @@
 ---
-title: 파티션 (큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 파티션 (Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.f1
 ms.assetid: ac3ce774-eebf-4915-9307-90d0ac11c271
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 691018c375f139dcb3a78f5601203d1ff0d568e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e3d9acc1887cb47967b06aef4d68ca6a3dd6092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178910"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>파티션(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **파티션** 탭을 사용하여 큐브의 각 측정값 그룹에 대한 저장소, 자동 관리 캐싱 및 쓰기 저장(writeback) 설정을 포함하여 파티션을 생성 및 수정할 수 있습니다.  

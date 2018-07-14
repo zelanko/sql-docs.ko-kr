@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181638"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
-  공간 인덱스의 열에 대해 특정 작업을 보다 효율적으로 수행할 수는 `geometry` 또는 `geography` 데이터 형식 (한 *공간 열*). 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
+  공간 인덱스의 열에 특정 작업을 수행할 보다 효율적으로 수를 `geometry` 또는 `geography` 데이터 형식 (한 *공간 열*). 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
   
  공간 인덱스를 만드는 작업에 대한 제한 사항이 많이 있습니다. 자세한 내용은 이 항목의 [공간 인덱스의 제한 사항](#restrictions) 을 참조하십시오.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36182542"
   
 7.  인덱싱하려는 공간 열을 지정하려면 **추가**를 클릭합니다.  
   
-8.  에 **에서 열 선택**  *\<테이블 이름 >* 유형의 열 선택 대화 상자 `geometry` 또는 `geography` 에서 해당 확인란을 선택 하 여 합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
+8.  에 **에서 열 선택**  *\<테이블 이름 >* 유형의 열 선택 대화 상자 `geometry` 또는 `geography` 해당 확인란을 선택 하 여 합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
   
 9. **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36182542"
   
 11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
-     인덱스를 만들 때 한 `geometry` 지정 해야 유형 열은 **(*`X-min`*,*`Y-min`*)** 및 **(*`X-max`*,*`Y-max`*)** 경계 상자 좌표입니다. 에 대 한 인덱스는 `geography` 유형 열 경계 상자 필드는 읽기 전용이 지정 하면는 **지리 표** 지리 표 공간 분할이 경계 상자를 사용 하지 않으므로 공간 분할 구성표입니다.  
+     인덱스를 만들 때를 `geometry` 를 지정 해야 유형 열을 **(*`X-min`* 를*`Y-min`*)** 및 **(*`X-max`* 하십시오*`Y-max`*)** 경계 상자 좌표입니다. 에 대 한 인덱스를 `geography` 유형의 열에 경계 상자 필드는 읽기 전용이 지정한 후 합니다 **지리 표** 지리 표 공간 분할 경계 상자를 사용 하지 않으므로 공간 분할 구성표입니다.  
   
      필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]입니다.  
   

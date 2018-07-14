@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Aggregations element
 ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a81b8107738121797d06c185b6043ca81a90c50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c94129a76064bbbc98f300a855e77826ec57794
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189200"
 ---
 # <a name="aggregations-element-assl"></a>Aggregations 요소(ASSL)
   에 대해 정의 된 집계의 컬렉션을 포함 한 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 요소입니다.  

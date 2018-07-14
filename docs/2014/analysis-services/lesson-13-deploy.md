@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181040"
 ---
 # <a name="lesson-14-deploy"></a>14단원: 배포
   이 단원에서는 테이블 형식 모드로 실행되는 Analysis Services의 배포 서버 인스턴스를 지정하고 배포할 모델의 이름을 지정하여 배포 속성을 구성합니다. 그 다음에는 모델을 해당 인스턴스에 배포합니다. 모델을 배포한 후 사용자는 보고 클라이언트 응용 프로그램을 사용하여 모델에 연결할 수 있습니다. 자세한 내용은 [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)를 참조하세요.  
@@ -40,14 +40,14 @@ ms.locfileid: "36181195"
     > [!IMPORTANT]  
     >  원격 Analysis Services 인스턴스에 배포하려면 해당 인스턴스에 대한 관리자 권한이 있어야 합니다.  
   
-3.  확인 된 **쿼리 모드** 속성이로 설정 되어 **메모리**합니다.  
+3.  확인 합니다 **쿼리 모드** 속성이 **In-memory**합니다.  
   
     > [!NOTE]  
     >  이 자습서를 사용하여 만든 모델은 DirectQuery 모드에서는 지원되지 않습니다.  
   
-4.  에 **데이터베이스** 속성, 유형 `Adventure Works Internet Sales Model`합니다.  
+4.  에 **데이터베이스** 속성에 입력 `Adventure Works Internet Sales Model`합니다.  
   
-5.  에 **큐브** Name 속성을 입력 `Adventure Works Internet Sales Model`합니다.  
+5.  에 **큐브** 이름 속성에 입력 `Adventure Works Internet Sales Model`합니다.  
   
 6.  선택한 내용을 확인하고 **확인**을 클릭합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36181195"
   
 ## <a name="see-also"></a>관련 항목  
  [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [기본 데이터 모델링 및 배포 속성 구성 &#40;SSAS 테이블 형식&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [테이블 형식 모델 데이터베이스 &#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [기본 데이터 모델링 및 배포 속성 구성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [테이블 형식 Model 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

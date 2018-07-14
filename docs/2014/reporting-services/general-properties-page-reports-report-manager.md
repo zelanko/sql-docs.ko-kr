@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189900"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>일반 속성 페이지, 보고서(보고서 관리자)
   보고서의 일반 속성 페이지를 사용하여 보고서 정의의 이름을 바꾸거나 보고서 정의를 이동, 삭제 또는 대체할 수 있을 뿐만 아니라 링크된 보고서도 만들 수 있습니다. 보고서를 만들거나 수정한 사람 및 내용이 변경된 시간에 대한 자세한 내용이 페이지 맨 위에 표시됩니다.  
@@ -54,17 +54,17 @@ ms.locfileid: "36182515"
  보고서 서버 데이터베이스에서 보고서를 제거하려면 클릭합니다. 보고서를 삭제하면 연결된 보고서 기록은 물론 보고서별 일정 및 구독이 모두 삭제됩니다. 보고서가 링크된 보고서에 연결되어 있으면 이 링크된 보고서도 무효화됩니다.  
   
  **이동**  
- 보고서 서버 폴더 계층 구조 내의 다른 위치로 보고서를 옮기려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 참조 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
+ 보고서 서버 폴더 계층 구조 내의 다른 위치로 보고서를 옮기려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
   
  **링크 된 보고서 만들기**  
- 새 링크된 보고서 페이지를 열려면 클릭합니다. 이 페이지 및 링크 된 보고서에 대 한 자세한 내용은 참조 [새 링크 된 보고서 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)합니다.  
+ 새 링크된 보고서 페이지를 열려면 클릭합니다. 이 페이지 및 링크 된 보고서에 대 한 자세한 내용은 참조 하세요. [새 연결 된 보고서 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)합니다.  
   
  **저장**  
  보고서 정의의 읽기 전용 복사본을 추출하려면 클릭합니다. 컴퓨터에 정의된 파일 연결에 따라 파일이 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 또는 다른 응용 프로그램에서 열립니다. 대부분의 경우 보고서는 XML 파일로 열립니다.  
   
  사용자가 여는 복사본은 보고서 서버에 초기에 게시된 원래 보고서 정의와 동일합니다. 보고서가 게시된 후 보고서에 설정된 모든 속성(예: 매개 변수 및 데이터 원본 속성)은 여는 파일에 반영되지 않습니다.  
   
- 보고서 정의를 수정하고 공유 폴더에 새 파일로 저장한 다음 보고서 서버에 새 항목으로 업로드할 수 있습니다. 수정한 내용은 보고서 정의에 열려 있는 동안 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (또는 다른 응용 프로그램) 보고서 서버에 직접 저장 되지 않습니다. 수정한 보고서를 보고서 서버에 게시하려면 해당 파일을 업로드해야 합니다.  
+ 보고서 정의를 수정하고 공유 폴더에 새 파일로 저장한 다음 보고서 서버에 새 항목으로 업로드할 수 있습니다. 열려 있는 동안 보고서 정의에 설정한 수정 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (또는 다른 응용 프로그램) 보고서 서버에 직접 저장 되지 않습니다. 수정한 보고서를 보고서 서버에 게시하려면 해당 파일을 업로드해야 합니다.  
   
  **바꾸기**  
  현재 보고서에 사용되는 보고서 정의를 파일 시스템에 있는 .rdl 파일의 다른 보고서 정의로 바꾸려면 클릭합니다. 보고서 정의를 업데이트하는 경우에는 업데이트를 완료한 후 데이터 원본 설정을 다시 설정해야 합니다.  

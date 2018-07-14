@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Storage element
 ms.assetid: c3590af8-a24b-4fd3-b846-17edbd399b6d
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 8bccf119846d699d653a480f6479412b46dcc4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 65a301134d245cc419c762a139e81b05010dbdcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195973"
 ---
 # <a name="storage-element-xmla"></a>Storage 요소(XMLA)
   [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) 명령에서 집계를 디자인하는 데 사용되는 최대 저장소 크기(바이트)를 지정합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 (보고서 작성기 및 SSRS)를 추가 합니다. | Microsoft Docs
+title: 추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4c92a62b97f4f0af7985afbc20c5dd1e9c6a85ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200813"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가(보고서 작성기 및 SSRS)
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 집합, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 집합을 사용하는 경우와 같이 데이터 집합 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36093684"
  다음 섹션에서는 필터 수식의 각 부분에 대해 설명합니다.  
   
 ### <a name="expression"></a>식  
- 런타임에 보고서 처리기에서 필터 수식이 계산될 때는 식의 데이터 형식과 값이 동일해야 합니다. **식** 에 선택할 수 있는 필드의 데이터 형식은 데이터 원본에서 데이터를 검색하는 데 사용되는 데이터 처리 확장 프로그램이나 데이터 공급자에 따라 결정됩니다. 에 입력할 수 있는 식의 데이터 형식 `Value` 따라 사용자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본값입니다. 선택하는 데이터 형식은 보고서 정의에 대해 지원되는 데이터 형식에 따라 결정됩니다. 데이터 공급자에서는 데이터베이스의 값을 CLR 형식으로 변환할 수 있습니다.  
+ 런타임에 보고서 처리기에서 필터 수식이 계산될 때는 식의 데이터 형식과 값이 동일해야 합니다. **식** 에 선택할 수 있는 필드의 데이터 형식은 데이터 원본에서 데이터를 검색하는 데 사용되는 데이터 처리 확장 프로그램이나 데이터 공급자에 따라 결정됩니다. 에 대 한 입력할 수 있는 식의 데이터 형식을 `Value` 에 의해 결정 됩니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본값입니다. 선택하는 데이터 형식은 보고서 정의에 대해 지원되는 데이터 형식에 따라 결정됩니다. 데이터 공급자에서는 데이터베이스의 값을 CLR 형식으로 변환할 수 있습니다.  
   
 ### <a name="data-type"></a>데이터 형식  
  보고서 처리기에서 두 값을 비교하려면 데이터 형식이 동일해야 합니다. 다음 표에서는 CLR 데이터 형식과 보고서 정의 데이터 형식 간의 매핑을 보여 줍니다. 데이터 원본에서 검색한 데이터가 보고서 데이터로 표시될 때는 다른 데이터 형식으로 변환될 수 있습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "36093684"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|식을 하나의 값과 비교합니다.|  
 |**TopN, BottomN**|식을 하나의 `Integer` 값과 비교합니다.|  
-|**TopPercent, BottomPercent**|식을 하나의 비교 `Integer` 또는 `Float` 값입니다.|  
+|**TopPercent, BottomPercent**|하나에 해당 식을 `Integer` 또는 `Float` 값입니다.|  
 |**사이**|식이 두 값 사이에 있는지(해당 값 포함) 여부를 테스트합니다.|  
 |**입력**|식이 일련의 값에 포함되어 있는지 여부를 테스트합니다.|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36093684"
  이 값에는 사용자가 필터링할 값을 대화형으로 선택할 수 있게 해 주는 매개 변수 참조도 포함될 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

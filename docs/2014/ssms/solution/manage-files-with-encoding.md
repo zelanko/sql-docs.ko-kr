@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7a252e4e766b85c83c97ee55a5204932932ee3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc038e491f895ad3ee017ff9e06835ad25c48912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208423"
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
   특정 언어와 특정 플랫폼에서 코드를 더 쉽게 표시할 수 있도록 특정 문자 인코딩을 파일과 연결할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36180775"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>다른 인코딩 또는 줄 끝 형식으로 파일을 저장하려면  
   
-1.  에 **파일** 메뉴를 클릭 하 여 **저장 \<파일 이름 >으로**합니다.  
+1.  에 **파일** 메뉴에서 클릭 **저장 \<파일 이름 >으로**입니다.  
   
 2.  **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추를 확장한 다음 **인코딩하여 저장**을 클릭합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36180775"
 -   UTF8 파일의 경우에는 체크 인, 체크 아웃, 차이 검사 및 병합 중에 UTF8 파일 편집기의 문제를 일으키는 변경 내용이 적용되기 때문에 Visual SourceSafe에서 안전하게 작동하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [솔루션 및 프로젝트를 관리 하는 파일](files-that-manage-solutions-and-projects.md)   
+ [솔루션 및 프로젝트 관리 파일](files-that-manage-solutions-and-projects.md)   
  [파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: (보고서 관리자) 보고서 기록을 보거나 삭제 | Microsoft Docs
+title: 보기 보고서 기록 또는 삭제 (보고서 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], viewing snapshots
 - report history [Reporting Services], creating snapshots
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 caps.latest.revision: 34
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c32b60bf255351a93771dcc34c9b18de55e652fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a972408c7e21995f9b1c28482bcb74eea1e7f495
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192973"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>보고서 기록 보기 또는 삭제(보고서 관리자)
   보고서 기록은 기반이 되는 보고서와 함께 관리됩니다. 보고서를 볼 수 있는 권한을 가진 모든 사용자는 해당 보고서의 기록을 볼 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36180992"
   
 2.  보고서 관리자에서 **내용** 페이지로 이동합니다. 기록 스냅숏을 만들거나 보려는 보고서로 이동한 후 해당 보고서를 클릭하여 엽니다.  
   
-3.  **기록** 탭을 클릭합니다. 기록 스냅숏을에 표시 되는 **실행** 열입니다.  
+3.  **기록** 탭을 클릭합니다. 기록 스냅숏에 표시 되는 **실행** 열입니다.  
   
 4.  기록 스냅숏을 보려면 스냅숏을 클릭합니다.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36180992"
   
 1.  보고서 관리자에서 **내용** 페이지로 이동합니다. 기록 스냅숏을 삭제할 보고서로 이동한 후 해당 보고서를 클릭하여 엽니다.  
   
-2.  **기록** 탭을 클릭합니다. 기록 스냅숏을에 표시 되는 **실행** 열입니다.  
+2.  **기록** 탭을 클릭합니다. 기록 스냅숏에 표시 되는 **실행** 열입니다.  
   
-3.  기록 스냅숏 삭제 하 고 클릭 하려는 옆에 있는 확인란을 선택 **삭제**합니다.  
+3.  를 삭제 하 고 클릭 하려는 기록 스냅숏 옆의 확인란을 선택 **삭제**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 기록에 스냅숏 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   

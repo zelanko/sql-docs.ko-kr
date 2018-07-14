@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195314"
 ---
 # <a name="supported-data-types"></a>지원되는 데이터 형식
   다음은 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에서 **지원되는** 데이터 형식입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36182576"
   
  <sup>1</sup> 제한은 가변 길이 형식의 (n) 계산 행 합계 당 8060 바이트입니다.  
   
- 지원 되는 데이터 정렬에 대 한 정보를 참조 하십시오. [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)합니다.  
+ 지원 되는 데이터 정렬에 대 한 자세한 내용은 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)합니다.  
   
  **날짜 및 시간 데이터 형식**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36182576"
 |날짜|[날짜 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |Time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
-|Datetime2|[datetime2 &#40;Transact SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|Datetime2|[datetime2 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **이진 데이터 형식**  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], deleting
 - leaf members [Master Data Services], deleting
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 871a4b76bd3e5b03017ded5ef01b88f8bd9efd27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cbfc5554d70a460d137b0938319f3025e581218c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172934"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 프로세스를 대신 사용합니다. 자세한 내용은 참조 [를 비활성화 하거나 준비 프로세스를 사용 하 여 구성원 삭제 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)합니다.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 프로세스를 대신 사용합니다. 자세한 내용은 [비활성화 하거나 준비 프로세스를 사용 하 여 멤버가 삭제 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)합니다.  
   
 > [!NOTE]  
 >  다른 멤버의 도메인 기반 특성 값으로 사용되는 멤버는 삭제할 수 없습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36183829"
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   멤버의 경우 최소 있어야 **업데이트** 에서 멤버를 삭제할 리프 모델 개체에 대 한 사용 권한입니다.  
+-   멤버에 대 한 최소 있어야 **업데이트** 에서 멤버를 삭제할 리프 모델 개체에 대 한 사용 권한.  
   
 -   컬렉션의 경우 컬렉션을 삭제할 리프 컬렉션 모델 개체에 대한 **업데이트** 이상의 권한이 있어야 합니다.  
   

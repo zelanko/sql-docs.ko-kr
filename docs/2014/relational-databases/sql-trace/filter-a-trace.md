@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - events [SQL Server], filters
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23d93e00dde20ef9d97fd707dbb938907e9ef7a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212833"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
   필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 예를 들어 특정 사용자에 대한 추적에서 Windows 사용자 이름을 제한하면 출력 데이터는 해당 사용자만 표시되도록 간략해집니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "36182782"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> 에서 이벤트를 추적 하는 경우는 **osql** 유틸리티 또는 **sqlcmd** 유틸리티를 항상 추가 **%** 필터에 **TextData**  데이터 열입니다.  
+ <sup>1</sup> 이벤트를 추적 하는 경우는 **osql** 유틸리티 또는 **sqlcmd** 유틸리티를 항상 추가 **%** 필터에 **TextData**  데이터 열입니다.  
   
  보안 예방 조치로서 SQL 추적은 암호에 영향을 미치는 보안 관련 저장 프로시저의 모든 정보를 자동으로 추적에서 생략합니다. 이 보안 메커니즘은 따로 구성할 수 없고 항상 유효하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 모든 작업을 추적할 수 있는 권한을 가진 사용자가 암호를 캡처할 수 없도록 합니다.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d868930792e1d381e8f476d6be5c83cdfc05e1f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f379b41d4620197db75ffdd29b80295ee5dc67d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190563"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서 보기
-  현재 릴리스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], 표준 보고서에서 사용할 수 있는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 모니터링 하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 배포 된 프로젝트는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버입니다.  보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../2014/integration-services/reports-for-the-integration-services-server.md)를 참조하세요.  
+  현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], 표준 보고서를 사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 모니터링 하는 데 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 배포 된 프로젝트는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버.  보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../2014/integration-services/reports-for-the-integration-services-server.md)를 참조하세요.  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서를 보려면  
   

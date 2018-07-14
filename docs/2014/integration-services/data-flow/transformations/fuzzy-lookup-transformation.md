@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185190"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
   유사 항목 조회 변환은 데이터 표준화, 데이터 수정, 누락된 값 제공 등 데이터 정리 태스크를 수행합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36182299"
   
  이 변환은 하나의 입력과 하나의 출력을 가지며  
   
- `DT_WSTR` 및 `DT_STR` 데이터 형식의 입력 열만 유사 일치에 사용할 수 있습니다. 정확히 일치에는 `DT_TEXT`, `DT_NTEXT` 및 `DT_IMAGE`를 제외한 모든 DTS 데이터 형식을 사용할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요. 입력과 참조 테이블 사이에서 조인에 참여하는 열은 호환 가능한 데이터 형식이어야 합니다. DTS에서 지정 된 열을 조인 하는 예를 들어 `DT_WSTR` 데이터 형식을 가진 열에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` 데이터 형식이 아니라 잘못 지정 된 열을 조인 하는 `DT_WSTR` 데이터 형식을 가진 열에는 `int` 데이터 형식입니다.  
+ `DT_WSTR` 및 `DT_STR` 데이터 형식의 입력 열만 유사 일치에 사용할 수 있습니다. 정확히 일치에는 `DT_TEXT`, `DT_NTEXT` 및 `DT_IMAGE`를 제외한 모든 DTS 데이터 형식을 사용할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요. 입력과 참조 테이블 사이에서 조인에 참여하는 열은 호환 가능한 데이터 형식이어야 합니다. DTS 사용 하 여 열을 조인할 유효 예를 들어, `DT_WSTR` 데이터 형식 열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` 데이터 형식이 아니라 잘못 된 열에 조인 하는 `DT_WSTR` 데이터 형식 열에 `int` 데이터 형식.  
   
  최대 메모리 양, 행 비교 알고리즘, 변환에서 사용하는 인덱스 및 참조 테이블의 캐싱을 지정하여 이 변환을 사용자 지정할 수 있습니다.  
   
@@ -113,12 +113,12 @@ ms.locfileid: "36182299"
 >  **저장된 인덱스 유지 관리** 옵션에는 CLR 통합이 필요하므로 CLR 통합이 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 있는 참조 테이블을 선택하는 경우에만 이 기능이 작동합니다.  
   
 ## <a name="row-comparison"></a>행 비교  
- 유사 항목 조회 변환을 구성하는 경우 변환에서 참조 테이블에서 일치하는 레코드를 찾는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 설정 하면 `True`, 변환은 참조 테이블의 모든 행에 대 한 입력의 모든 행을 비교 합니다. 이 비교 알고리즘은 보다 정확한 결과를 생성할 수 있지만 참조 테이블의 행 개수가 많으면 변환이 느리게 수행될 수 있습니다. 철저 한 속성이로 설정 된 경우 `True`, 전체 참조 테이블이 메모리에 로드 됩니다. 성능 문제를 방지 하려면 Exhaustive 속성 설정 하는 것이 좋습니다.이 `True` 패키지 개발 시에만 합니다.  
+ 유사 항목 조회 변환을 구성하는 경우 변환에서 참조 테이블에서 일치하는 레코드를 찾는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 설정 하면 `True`, 변환은 참조 테이블의 모든 행에 대 한 입력의 모든 행을 비교 합니다. 이 비교 알고리즘은 보다 정확한 결과를 생성할 수 있지만 참조 테이블의 행 개수가 많으면 변환이 느리게 수행될 수 있습니다. Exhaustive 속성 설정 된 경우 `True`, 전체 참조 테이블이 메모리로 로드 됩니다. 성능 문제를 방지 하는 것이 좋습니다 Exhaustive 속성 설정 하려면 `True` 패키지 개발 시에만 합니다.  
   
- 철저 한 속성이로 설정 된 경우 `False`, 유사 항목 조회 변환에는 인덱싱된 토큰이 나 부분 문자열을 하나 이상 있는 일치 항목만 반환 합니다 (부분 문자열 라고는 *q 그램*) 입력된 레코드와 공통 된 합니다. 조회 효율성을 최대화하기 위해 테이블의 각 행에 있는 토큰의 하위 집합만 유사 항목 조회 변환에서 일치 항목을 찾는 데 사용하는 반전된 인덱스 구조에 인덱싱됩니다. 입력된 데이터 집합이 작으면를 Exhaustive를 설정할 수 있습니다 `True` 에 공통 된 토큰이 없는 인덱스 테이블에서 일치 항목이 누락 되지 않도록 합니다.  
+ Exhaustive 속성 설정 된 경우 `False`, 유사 항목 조회 변환에는 인덱싱된 토큰이 나 부분 문자열을 하나 이상 있는 일치 항목만 반환 합니다 (부분 문자열 이라고는 *질문 및 답변-그램*) 입력된 레코드와 합니다. 조회 효율성을 최대화하기 위해 테이블의 각 행에 있는 토큰의 하위 집합만 유사 항목 조회 변환에서 일치 항목을 찾는 데 사용하는 반전된 인덱스 구조에 인덱싱됩니다. 입력된 데이터 집합이 작은 경우 설정할 수 있습니다 Exhaustive `True` 인덱스 테이블에 존재 하는 공통 된 토큰이 없는 일치 항목이 누락을 방지 하려면.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>인덱스 및 참조 테이블의 캐싱  
- 유사 항목 조회 변환을 구성할 때 변환이 자체 작업을 수행하기 전에 메모리에서 인덱스와 참조 테이블을 부분적으로 캐시할지 여부를 지정할 수 있습니다. WarmCaches 속성을 설정 하는 경우 `True`, 인덱스와 참조 테이블은 메모리에 로드 됩니다. 입력 많은 행을 WarmCaches 속성을 설정 하는 경우 `True` 변환의 성능을 향상 시킬 수 있습니다. 입력된 행 수가 작을 때 WarmCaches 속성을 설정 `False` 큰 인덱스를 다시 사용할을 더 빠르게 만들 수 있습니다.  
+ 유사 항목 조회 변환을 구성할 때 변환이 자체 작업을 수행하기 전에 메모리에서 인덱스와 참조 테이블을 부분적으로 캐시할지 여부를 지정할 수 있습니다. WarmCaches 속성을 설정 하는 경우 `True`, 인덱스와 참조 테이블이 메모리에 로드 됩니다. 입력에 WarmCaches 속성을 설정 하는 많은 행이 있는 경우 `True` 변환의 성능을 향상 시킬 수 있습니다. 입력된 행 개수가 적은 경우 WarmCaches 속성을 설정 `False` 큰 인덱스를 다시를 더 빠르게 사용할 수 있습니다.  
   
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 조회 변환은 런타임에 변환이 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 테이블 및 인덱스 등의 임시 개체를 만듭니다. 이러한 임시 테이블 및 인덱스의 크기는 참조 테이블에 있는 행 및 토큰 개수와 유사 항목 조회 변환이 만드는 토큰 개수에 비례하므로 많은 양의 디스크 공간을 소모할 수 있습니다. 변환은 또한 이 임시 테이블을 쿼리합니다. 그러므로 특히 프로덕션 서버가 사용 가능한 디스크 공간을 제한한 경우 유사 항목 조회 변환을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 비-프로덕션 인스턴스에 연결하는 방법을 고려해야 합니다.  

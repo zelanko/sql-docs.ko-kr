@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ColumnBinding data type
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ad7cea5041f8d65964b85e36a0b992f9f5afdae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 227801af8b66d66ebeba50d2713267720adffa9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200113"
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding 데이터 형식(ASSL)
-  한 데이터 원본 뷰의 열 바인딩을 나타내는 파생된 데이터 형식을 정의 [DataItem](dataitem-data-type-assl.md) 요소입니다.  
+  데이터 원본 뷰의 열 바인딩을 나타내는 파생된 데이터 형식을 정의 [DataItem](dataitem-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,13 +72,13 @@ ms.locfileid: "36172991"
   
  테이블 및 열 이름에 구분 기호가 포함되지 않습니다(예: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우 "[").  
   
- 에 대 한 자세한 내용은 `Binding` 유형의 Analysis Services Scripting Language (ASSL) 개체 테이블을 포함 하 여는 `Binding` 유형과의 상속 계층 구조 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md)합니다.  
+ 에 대 한 추가 정보에 대 한는 `Binding` 형식, Analysis Services Scripting Language (ASSL) 개체 테이블을 비롯 한는 `Binding` 형식과 상속 계층 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md)합니다.  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
  AMO 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ColumnBinding>입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connectionmanager.f1
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fcf90923ffc83f0190667d67b7d0b4ed9cd0255
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2e07bf52ce89d2a9928c05034cbdfebb21710ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178160"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 연결 관리자 편집기
   **OData 연결 관리자 편집기** 대화 상자를 사용하여 OData 원본에 연결을 추가하거나 기존 연결을 편집할 수 있습니다.  

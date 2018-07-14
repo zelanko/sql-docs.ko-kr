@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MdxScript element
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81d83e2d179e5a16d17cc6988b209f348dbc2572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3aa8d72073f5459a7e260a81ca4bf5c67ad3209b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169478"
 ---
 # <a name="mdxscript-element-assl"></a>MdxScript 요소(ASSL)
   연결 된 MDX (Multidimensional Expressions) 스크립트에 대 한 정보를 포함 한 [큐브](cube-element-assl.md) 요소입니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36181175"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MdxScripts](../collections/mdxscripts-element-assl.md)|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [CalculationProperties](../collections/calculationproperties-element-assl.md), [명령을](../collections/commands-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DefaultScript](../properties/defaultscript-element-assl.md), [설명](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [이름](../properties/name-element-assl.md)|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [CalculationProperties](../collections/calculationproperties-element-assl.md), [명령](../collections/commands-element-assl.md)를 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [DefaultScript](../properties/defaultscript-element-assl.md)를 [설명](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md)하십시오 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [이름](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  스크립트의 `DefaultScript` 요소는 기본적으로 `True`로 설정됩니다. 특정 스크립트에 대해 `DefaultScript`를 `True`로 설정하면 다른 모든 스크립트에 대해 `DefaultScript`가 `False`로 설정됩니다.  

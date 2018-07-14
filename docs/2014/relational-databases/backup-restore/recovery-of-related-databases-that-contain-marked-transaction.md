@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188610"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
   이 항목에서는 표시된 트랜잭션을 포함하며 전체 복구 모델 또는 대량 로그 복구 모델을 사용하는 데이터베이스와 관련된 내용을 다룹니다.  
@@ -58,18 +57,18 @@ ms.locfileid: "36182591"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 표시 이름 (트랜잭션 이름), 설명, 데이터베이스, 사용자, 트랜잭션 로그에 기록 `datetime` 정보와 로그 시퀀스 번호 (LSN). `datetime` 정보 표시를 고유 하 게 식별 하는 표시 이름과 함께 사용 됩니다.  
+ 트랜잭션 로그 기록 (트랜잭션 이름) 표시 이름, 설명, 데이터베이스, 사용자 `datetime` 정보와 로그 시퀀스 번호 (LSN). `datetime` 정보는 표시 이름과 함께 표시를 고유 하 게 식별 하는 데 사용 됩니다.  
   
  여러 데이터베이스에 걸쳐 있는 트랜잭션에 표시를 삽입하는 방법은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)을 참조하세요.  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>표시 지점으로 복구하는 Transact-SQL 구문  
  [RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)문을 사용하여 표시된 트랜잭션을 대상으로 지정할 때 중지된 곳이나 표시 바로 앞에 다음 절 중 하나를 사용할 수 있습니다.  
   
--   WITH stopatmark = **'*`<mark_name>`*'** 표시 된 트랜잭션이 복구 지점으로 지정 하려면 절.  
+-   WITH stopatmark = **'*`<mark_name>`*'** 절에 표시 된 트랜잭션이 복구 지점 임을 지정 합니다.  
   
      STOPATMARK는 표시로 롤포워드하고 표시된 트랜잭션을 롤포워드에 포함시킵니다.  
   
--   WITH STOPBEFOREMARK를 사용 하 여 = **'*`<mark_name>`*'** 로그 레코드가 지정 하는 절이 표시는 복구 지점 직전 합니다.  
+-   WITH STOPBEFOREMARK 사용 = **'*`<mark_name>`*'** 표시가 복구 지점 직전 로그 레코드를 지정 하는 절이 있습니다.  
   
      STOPBEFOREMARK는 표시로 롤포워드하고 롤포워드에서 표시된 트랜잭션을 제외시킵니다.  
   

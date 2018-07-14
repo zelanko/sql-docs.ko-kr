@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180980"
 ---
 # <a name="multidimensional-model-object-processing"></a>다차원 모델 개체 처리
   처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 저장소를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 저장소의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 저장소를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36172986"
   
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소  
   
--   처리하려면 Analysis Services 인스턴스에 대한 관리 권한이 필요합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]로부터 대화식으로 처리할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 서버 관리자 역할의 멤버여야 합니다. SQL Server 에이전트를 통해 예약하는 SSIS 패키지를 사용하는 경우같이 수동으로 실행되는 처리의 경우 패키지 실행에 사용되는 계정이 서버 관리자 역할의 멤버여야 합니다. 관리자 권한 설정에 대 한 자세한 내용은 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
+-   처리하려면 Analysis Services 인스턴스에 대한 관리 권한이 필요합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]로부터 대화식으로 처리할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 서버 관리자 역할의 멤버여야 합니다. SQL Server 에이전트를 통해 예약하는 SSIS 패키지를 사용하는 경우같이 수동으로 실행되는 처리의 경우 패키지 실행에 사용되는 계정이 서버 관리자 역할의 멤버여야 합니다. 관리자 권한 설정에 대 한 자세한 내용은 참조 하세요. [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
   
 -   데이터를 검색하는 데 사용되는 계정은 데이터 원본 개체에 가장 옵션으로(Windows 인증을 사용하는 경우) 또는 연결 문자열의 사용자 이름으로(데이터베이스 인증을 사용하는 경우) 지정됩니다. 이 계정은 모델에서 사용되는 관계형 데이터 원본에 대한 읽기 권한이 있어야 합니다.  
   

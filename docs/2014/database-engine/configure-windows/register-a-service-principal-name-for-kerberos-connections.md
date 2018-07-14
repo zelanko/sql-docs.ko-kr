@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211893"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Kerberos 인증을 사용하려면 다음 조건 중 하나에 해당해야 합니다.  
@@ -75,7 +75,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **명명된 인스턴스**  
   
--   *MSSQLSvc/FQDN*: [*포트***|*** instancename*], 여기서:  
+-   *MSSQLSvc/FQDN*: [*포트***|*** instancename*] 여기서:  
   
     -   *MSSQLSvc* 는 등록할 서비스입니다.  
   
@@ -87,7 +87,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **기본 인스턴스**  
   
--   *MSSQLSvc/FQDN*:*포트***|*** MSSQLSvc/FQDN*, 여기서:  
+-   *MSSQLSvc/FQDN*:*포트***|*** MSSQLSvc/FQDN*여기서:  
   
     -   *MSSQLSvc* 는 등록할 서비스입니다.  
   
@@ -109,7 +109,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Auto"></a> SPN 자동 등록  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>*:*\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며, *\<tcpport>* 값을 사용하여 구분합니다.  
   
- Kerberos를 지 원하는 다른 연결에 대 한 형식의 SPN이 등록 *MSSQLSvc /\<FQDN >*:*\<인스턴스 이름 >* 명명 된 인스턴스에 대 한 합니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
+ Kerberos를 지 원하는 다른 연결 형식의 SPN이 등록 *MSSQLSvc /\<FQDN >*:*\<n a m e >* 명명 된 인스턴스에 대 한 합니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
   
  서비스 계정에 이러한 동작을 수행하는 데 필요한 권한이 없는 경우에는 수동으로 SPN을 등록하거나 등록 취소해야 합니다.  
   
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |시나리오|인증 방법|  
 |--------------|---------------------------|  
-|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다. 예를 들어 로컬 시스템 또는 NETWORK SERVICE에 매핑됩니다.<br /><br /> 참고: 등록 된 SPN에 의해 매핑되는 계정이 SQL Server 서비스가 실행 되는 계정에 방법을 수정 합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
-|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정입니다.<br /><br /> 참고: 등록 된 SPN에 의해 매핑되는 계정이 SQL Server 서비스가 실행 되는 계정에 방법을 수정 합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
+|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다. 예를 들어 로컬 시스템 또는 NETWORK SERVICE에 매핑됩니다.<br /><br /> 참고: 매핑되는 등록 된 SPN을 사용 하는 계정이 SQL Server 서비스가 실행 되는 계정을 의미를 수정 합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
+|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정입니다.<br /><br /> 참고: 매핑되는 등록 된 SPN을 사용 하는 계정이 SQL Server 서비스가 실행 되는 계정을 의미를 수정 합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
 |SPN이 잘못된 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다.|인증에 실패하게 됩니다.|  
 |SPN 조회에 실패했거나 SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑되지 않거나 SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정이 아닙니다.|로컬 및 원격 연결이 NTLM을 사용합니다.|  
   

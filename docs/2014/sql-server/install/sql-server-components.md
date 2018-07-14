@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177126"
 ---
 # <a name="sql-server-components"></a>SQL Server 구성 요소
-  된 로컬 또는 원격 컴퓨터에 대해 업그레이드 관리자 분석 마법사를 실행할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 합니다. 업그레이드 이전 분석의 첫 번째 단계는 분석을 위한 컴퓨터 및 구성 요소를 식별하는 작업입니다.  
+  있는 로컬 또는 원격 컴퓨터에 대해 업그레이드 관리자 분석 마법사를 실행할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]를 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 합니다. 업그레이드 이전 분석의 첫 번째 단계는 분석을 위한 컴퓨터 및 구성 요소를 식별하는 작업입니다.  
   
 ## <a name="options"></a>변수  
  **컴퓨터 이름**  
- 분석할 컴퓨터의 이름을 지정합니다. 그러면 채워집니다는 **서버 이름** 상자가 로컬 컴퓨터 이름으로 합니다. "." 및 "localhost"를 사용하여 로컬 컴퓨터에 연결할 수도 있습니다.  
+ 분석할 컴퓨터의 이름을 지정합니다. 채워집니다 합니다 **서버 이름** 상자가 로컬 컴퓨터 이름으로 합니다. "." 및 "localhost"를 사용하여 로컬 컴퓨터에 연결할 수도 있습니다.  
   
  다른 컴퓨터를 분석하려면 다음 지침을 사용하십시오.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36183179"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 검색하는 경우 로컬 컴퓨터의 이름을 지정해야 합니다. 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
   
  **검색**  
- **검색** 단추 지정 된 컴퓨터에 액세스 하 고 분석할 구성 요소를 검색 합니다.  
+ 합니다 **검색** 단추는 지정 된 컴퓨터에 액세스 하 고 분석할 구성 요소를 검색 합니다.  
   
 -   원격 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 분석하는 경우에는 원격 컴퓨터에서 원격 레지스트리 서비스를 사용하도록 설정해야 합니다.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36183179"
 -   컴퓨터의 레지스트리에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 발견되면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 검색됩니다. 그러나 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
   
  **Components**  
- 분석할 구성 요소를 선택합니다. 클릭할 수는 **검색** 단추를 선택 하는 컴퓨터에 설치 된 모든 구성 요소를 선택 합니다. 컴퓨터에 설치된 것으로 검색된 구성 요소 옆에는 확인 표시가 나타납니다. 각 구성 요소의 옆에 있는 확인란을 선택하거나 선택 취소하여 분석할 구성 요소를 수동으로 선택할 수도 있습니다.  
+ 분석할 구성 요소를 선택합니다. 클릭할 수는 **검색** 단추를 컴퓨터에 설치 된 모든 구성 요소를 선택 합니다. 컴퓨터에 설치된 것으로 검색된 구성 요소 옆에는 확인 표시가 나타납니다. 각 구성 요소의 옆에 있는 확인란을 선택하거나 선택 취소하여 분석할 구성 요소를 수동으로 선택할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

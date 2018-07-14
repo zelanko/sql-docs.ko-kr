@@ -1,5 +1,5 @@
 ---
-title: 편집 또는 삭제 (Analyisis Services-다차원) | Microsoft Docs
+title: (&#40;analysis Services-다차원) 파티션 편집 또는 삭제 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180930"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
   큐브 파티션은 **에서 큐브 디자이너의** 파티션 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]탭을 사용하여 수정됩니다. **파티션** 탭에서는 큐브에 있는 모든 측정값 그룹의 파티션을 나열합니다. 또한 쓰기 저장(writeback)이 설정된 쓰기 저장 파티션을 나열합니다.  
@@ -53,6 +53,6 @@ ms.locfileid: "36172473"
 ## <a name="see-also"></a>관련 항목  
  [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [집계 디자인 &#40;Analysis Services-다차원&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services의 파티션 병합 &#40;SSAS-다차원 데이터&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services의 파티션 병합 &#40;&AMP;#40;SSAS-다차원&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

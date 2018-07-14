@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8f37c659b224c2428b99d1f74b3b64c46f5c5cd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166204"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>다른 파일 형식으로 보고서 내보내기(보고서 작성기 및 SSRS)
   보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보면서 CSV, 이미지, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] 또는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 같은 다른 파일 형식으로 보고서를 렌더링할 수도 있고, 보고서 서버에서 보고서를 보면서 보고서를 렌더링할 수도 있습니다. 보고서를 특정 형식으로 렌더링하면 보고서를 보고서 서버에 게시하지 않고서 보고서를 다른 파일 형식으로 즉시 저장하려는 경우나 보고서를 읽는 사람에게 특정 형식으로 배달된 보고서의 디자인이 어떤 모양일지 미리 확인하려는 경우에 도움이 됩니다. 보고서 서버에서 보고서를 렌더링하면 구독을 설정하려는 경우나 전자 메일을 통해 보고서를 배달하려는 경우 또는 보고서 서버에서 사용할 수 있도록 보고서를 저장하려는 경우에 도움이 됩니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "36181297"
      **참고** 선택한 파일 형식에 연결된 프로그램이 없어서 지정된 형식으로 보고서를 열 수 없는 경우에는 내보낸 보고서를 저장하거나 보고서를 여는 데 필요한 프로그램을 온라인으로 찾으라는 메시지가 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   

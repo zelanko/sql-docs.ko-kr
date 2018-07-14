@@ -1,5 +1,5 @@
 ---
-title: Microsoft 보고 및 분석 도구 선택 | Microsoft Docs
+title: Microsoft 보고 및 분석 도구를 선택 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 001dc3a5dc24a3ca764a35552c1e07135b4e524d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3db142c979aba9a2ac6b42782bc3d2beef8c1587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166314"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Microsoft 보고 및 분석 도구 선택
   다음 표는 데이터 분석 작업과 이러한 작업에 가장 적합한 Microsoft BI 도구에 대한 보고를 매핑합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36180803"
 |||내보내기|**SharePoint**|**SharePoint Online**|**Office 365 용 power BI**|**SQL Server**|  
 |**셀프 서비스 BI**|분석가/최종 사용자||||||  
 |쉽게 공용 및 회사 데이터 검색 및 액세스||[파워 쿼리](http://go.microsoft.com/fwlink/p/?LinkId=391845)|||[데이터 카탈로그](http://go.microsoft.com/fwlink/p/?LinkId=391855)<br /><br /> [관리 센터](http://go.microsoft.com/fwlink/p/?LinkId=391856)||  
-|강력한 데이터 모델 만들기||[Power Pivot](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  
+|강력한 데이터 모델 만들기||[파워 피벗](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  
 |셀프 서비스 예측 분석 수행||||||[Excel 용 데이터 마이닝 추가 기능](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |데이터 시각화 및 탐색||[Power View](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [파워 맵](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |자연어 쿼리를 사용하여 질문|||||[Q & A](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
@@ -41,7 +41,7 @@ ms.locfileid: "36180803"
 |공동 작업 및 공유|||[SharePoint 사이트](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint 팀 사이트](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI 사이트](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
 |**기업 BI**|IT 전문가||||||  
 |다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](http://msdn.microsoft.com/library/bb522607\(v=sql.120\).aspx)|  
-|임시 데이터 시각화 만들기|||[SharePoint 용 power View](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
+|임시 데이터 시각화 만들기|||[SharePoint 용 파워 뷰](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |대시보드 만들기|||[SharePoint 대시보드](http://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||||  
 |작업 보고서 만들기||||||<sup>1</sup> [reporting Services](http://msdn.microsoft.com/library/ms159106\(v=sql.120\).aspx)|  
 |사용자 지정 및 포함된 보고서 만들기||||||<sup>1</sup> [reporting Services](http://msdn.microsoft.com/library/ms159106\(v=sql.120\).aspx)|  
@@ -49,6 +49,6 @@ ms.locfileid: "36180803"
 |셀프 서비스 예측 분석 수행||||||[Excel 용 데이터 마이닝 추가 기능](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](http://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
- <sup>1</sup> reporting Services에는 운영 보고서 및 구독 및 데이터 알림과 같은 사용자 지정 보고서 배달을 지 원하는 여러 기능이 있습니다.  
+ <sup>1</sup> reporting Services에 운영 보고서 및 구독, 데이터 경고 등과 같은 사용자 지정 보고서 배달을 지 원하는 여러 기능이 있습니다.  
   
   

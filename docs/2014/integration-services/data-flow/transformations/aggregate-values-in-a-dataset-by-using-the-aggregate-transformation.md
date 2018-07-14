@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21f4e4749518036a1c2c40496102617c556f6aec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab590e5016b7230124aa88a4a7fa73b0fcd7f4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180390"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>집계 변환을 사용하여 데이터 집합의 값 집계
   집계 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36183895"
     > [!NOTE]  
     >  정확하게든 또는 대략적으로든 고유 값 수를 제공하면 변환을 통해 작업을 수행할 수 있도록 해당 메모리 양을 미리 할당할 수 있으므로 성능이 최적화됩니다.  
   
-12. 선택적으로 **고급** 을 클릭하여 집계 변환 출력의 이름을 업데이트합니다. 집계를 포함 하는 경우는 `Group By` 작업에서 키 값 그룹의 대략적인 개수를 선택할 수 있습니다는 **키 배율** 열에서 키 값 그룹의 정확한 개수를 지정 하거나는 **키** 열입니다.  
+12. 선택적으로 **고급** 을 클릭하여 집계 변환 출력의 이름을 업데이트합니다. 집계를 포함 하는 경우는 `Group By` 작업에서 키 값 그룹의 대략적인 개수를 선택할 수 있습니다 합니다 **키 배율** 열에서 키 값 그룹의 정확한 수를 지정 하거나 합니다 **키** 열입니다.  
   
     > [!NOTE]  
     >  정확하게든 또는 대략적으로든 고유 값 수를 제공하면 변환을 통해 작업을 수행할 수 있도록 해당 메모리 양을 미리 할당할 수 있으므로 성능이 최적화됩니다.  

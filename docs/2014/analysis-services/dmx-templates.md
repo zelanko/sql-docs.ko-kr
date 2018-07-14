@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194363"
 ---
 # <a name="dmx-templates"></a>DMX 템플릿
   데이터 마이닝 템플릿을 사용하면 정교한 쿼리를 신속하게 작성할 수 있습니다. DMX 쿼리의 일반 구문이 잘 설명되어 있더라도 템플릿을 사용하면 인수 및 데이터 원본을 클릭하고 가리켜서 쿼리를 보다 쉽게 작성할 수 있습니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "36184820"
 8.  **마침**을 클릭합니다. **대상 선택** 대화 상자에서 결과를 저장하려는 위치를 지정합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  문을 성공적으로 실행한 경우 서버로 전송한 DMX 문은 **추적** 창에도 기록됩니다. 추적 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 [추적 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](trace-data-mining-client-for-excel.md)합니다.  
+>  문을 성공적으로 실행한 경우 서버로 전송한 DMX 문은 **추적** 창에도 기록됩니다. 추적 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [추적 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](trace-data-mining-client-for-excel.md)합니다.  
   
- 데이터 마이닝 고급 쿼리 편집기를 사용 하는 방법에 대 한 자세한 내용은 참조 [쿼리 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](query-sql-server-data-mining-add-ins.md) 및 [데이터 마이닝 고급 쿼리 편집기](advanced-data-mining-query-editor.md)합니다.  
+ 데이터 마이닝 고급 쿼리 편집기를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [쿼리 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](query-sql-server-data-mining-add-ins.md) 하 고 [데이터 마이닝 고급 쿼리 편집기](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>DMX 템플릿 목록  
  다음 DMX 템플릿은 Excel용 데이터 마이닝 클라이언트에 포함됩니다.  

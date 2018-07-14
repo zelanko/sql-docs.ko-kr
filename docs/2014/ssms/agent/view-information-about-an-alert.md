@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - viewing alerts
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9324249df2f96bf7ddf2a94b199cdfcfe003cb55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 862613ec00fb0274c5c227ab9903568b31969dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187750"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 정보를 보는 방법을 설명합니다.  
@@ -63,9 +63,9 @@ ms.locfileid: "36181936"
   
      *alert_name***경고 속성** 대화 상자에 포함된 사용 가능한 옵션에 대한 자세한 내용은 다음을 참조하세요.  
   
-    -   [속성-새 경고를 경고 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [경고 속성-새 경고 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [속성-새 경고를 경고 &#40;응답 페이지&#41;](alert-properties-new-alert-response-page.md)  
+    -   [경고 속성-새 경고 &#40;응답 페이지&#41;](alert-properties-new-alert-response-page.md)  
   
     -   [경고 속성: 새 경고 &#40;옵션 페이지&#41;](alert-properties-new-alert-options-page.md)  
   
@@ -93,6 +93,6 @@ ms.locfileid: "36181936"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)합니다.  
+ 자세한 내용은 [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)합니다.  
   
   

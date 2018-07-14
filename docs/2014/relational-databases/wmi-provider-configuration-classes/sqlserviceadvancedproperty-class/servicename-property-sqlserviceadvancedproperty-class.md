@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServiceName property
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56f24bb05a1dee87d498638809a410b6c8bc963a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2f692589d3817b5e33b8756a457f8c3898ad9108
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201203"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 속성(SqlServiceAdvancedProperty 클래스)
   고급 속성과 연결된 관리되는 서비스의 이름을 가져옵니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9300e8e8aefbe436ca3acba141f8800779e6e637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171674"
 ---
 # <a name="multidimensional-modeling-ssas"></a>다차원 모델링(SSAS)
   Analysis Services 다차원 솔루션은 여러 차원에서 비즈니스 데이터를 분석하기 위해 큐브 구조를 사용합니다. 다차원 모드는 Analysis Services의 기본 서버 모드입니다. 데이터 확장 요구 사항과 성능의 균형을 맞추기 위한 MOLAP, ROLAP 및 HOLAP 저장소 모드와 함께 OLAP 데이터의 쿼리 및 계산 엔진을 포함합니다. Analysis Services OLAP 엔진은 광범위한 BI 도구와 함께 효과적으로 작동하는 업계 최고의 OLAP 서버입니다. 대부분의 Analysis Services 배포는 기존 OLAP 서버로 설치됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36181185"
 ## <a name="in-this-section"></a>섹션 내용  
  [다차원 모델 솔루션 &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [다차원 모델 데이터베이스 &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [다차원 Model 데이터베이스 &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)  
   

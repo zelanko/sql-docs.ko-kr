@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HelpFile element
 ms.assetid: 537ea7a8-5064-4a31-b0cd-ab7e891fef09
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6dbaa94570fd865cef79eeff4b13e51f3f8403e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6ccf47f3e47e6521dd9c3909b71315ae4d9768de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195983"
 ---
 # <a name="helpfile-element-xmla"></a>HelpFile 요소(XMLA)
   부모 [Error](error-element-xmla.md) 요소를 설명하는 도움말 파일 또는 항목의 경로 및 URL을 포함합니다.  

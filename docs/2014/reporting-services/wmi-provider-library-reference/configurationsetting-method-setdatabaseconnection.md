@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetDatabaseConnection method
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 006fe47cfa2a994c3acfbd29d8be94a14e60c65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8808b7ccaf08ecbaad2b124853425c5b1f2792c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181550"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseConnection 메서드(WMI MSReportServer_ConfigurationSetting)
   특정 보고서 서버 데이터베이스에 대한 보고서 서버 데이터베이스 연결을 설정합니다.  
@@ -87,7 +87,7 @@ public void BackupEncryptionKey(string Server,
   
  처음 설정하는 경우 ConnectionPoolSize 속성은 ConnectionPoolSize = #Processors * 75 프로세서를 기반으로 설정됩니다.  
   
- SetDatabaseConnection 메서드는 지정된 계정에 권한을 부여하지 않습니다. 호출 해야 합니다는 [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) 보고서 서버 데이터베이스에 액세스 해야 하 고 결과 스크립트를 실행 하는 각 계정에 대 한 메서드.  
+ SetDatabaseConnection 메서드는 지정된 계정에 권한을 부여하지 않습니다. 호출 해야 합니다 [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) 보고서 서버 데이터베이스에 대 한 액세스를 해야 하 고 결과 스크립트를 실행 하는 각 계정에 대 한 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

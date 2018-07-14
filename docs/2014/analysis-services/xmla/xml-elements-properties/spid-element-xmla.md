@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167024"
 ---
 # <a name="spid-element-xmla"></a>SPID 요소(XMLA)
-  활성 서버 프로세스 id (SPID)를 실행할 부모 식별 [취소](../xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
+  부모를 실행 하는 활성 서버 프로세스 식별자 (SPID)를 식별 [취소](../xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36172249"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `SPID` 요소 나타냅니다 서버 프로세스 ID (SPID)에 해당된 세션의 인스턴스에서 사용 되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+ 합니다 `SPID` 요소를 서버 프로세스 ID (SPID) 인스턴스에서 지정된 된 세션에 사용 되는 나타냅니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CancelAssociated 요소 &#40;XMLA&#41;](cancelassociated-element-xmla.md)   

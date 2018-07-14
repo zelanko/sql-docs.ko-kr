@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServerName property
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 317035d73eae387b9de06324415b795693527489
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0e483fceeae8e659d8f9f5ad1080f49b27554130
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188140"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>ServerName 속성(SqlServerAlias 클래스)
   서버 연결 별칭에서 지정한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 가져옵니다.  

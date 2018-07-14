@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7fa1c983ae58fd56450e6182499b105b68a322f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2cf3003b45c30fe785d8e0f2e5cc2562cc35726
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206243"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>5단원: 보고서 정의를 보고서 서버에 게시
   보고서 정의를 업데이트하는 마지막 단계는 해당 정의를 다시 보고서 서버에 게시하는 것입니다.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>보고서를 보고서 카탈로그에 게시하려면  
   
-1.  에 대 한 코드는 `PublishReportDefinition()` Program.cs 파일의 메서드 (의 경우 Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])를 다음 코드로:  
+1.  에 대 한 코드를 `PublishReportDefinition()` Program.cs 파일 (의 경우 module1.vb) 라는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 다음 코드를 사용 하 여:  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -81,10 +81,10 @@ ms.locfileid: "36172298"
     ```  
   
 ## <a name="next-lesson"></a>다음 단원  
- 다음 단원에서 컴파일 및 실행 됩니다는 `SampleRDLSchema` 응용 프로그램입니다. 참조 [6 단원: RDL Schema 응용 프로그램 실행 &#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)합니다.  
+ 다음 단원에서는 컴파일하고 실행 합니다 `SampleRDLSchema` 응용 프로그램입니다. 참조 [6 단원: RDL Schema 응용 프로그램 실행 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [RDL 스키마에서 생성 한 클래스를 사용 하 여 보고서 업데이트 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

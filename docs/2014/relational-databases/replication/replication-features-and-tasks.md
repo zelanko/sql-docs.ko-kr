@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [SQL Server replication]
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffc90e3f231dfc98344e6df0155a40557bf19e4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ee7536c8ab3b2069d2cdd2bcc8fec34c267cf589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162334"
 ---
 # <a name="replication-features-and-tasks"></a>복제 기능 및 태스크
   디자이너, 개발자, 분석가 또는 관리자를 포함한 모든 사용자가 복제 솔루션을 디자인하고 구현하는 데 필요한 정보를 찾아 보십시오.  

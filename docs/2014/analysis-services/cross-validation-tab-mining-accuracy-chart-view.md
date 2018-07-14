@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169824"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>교차 유효성 검사 탭(마이닝 정확도 차트 뷰)
-  교차 유효성 검사를 사용하면 마이닝 구조를 교집합 영역으로 분할하고 각 교집합 영역에 대해 모델을 반복적으로 학습 및 테스트할 수 있습니다. 데이터를 분할할 접기 수를 지정하면 각 접기가 테스트 데이터로 사용되고 나머지 데이터는 새 모델을 학습하는 데 사용됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 그러면 각 모델에 대 한 표준 정확도 메트릭 집합을 생성합니다. 각 교집합 영역에 대해 생성된 모델의 메트릭을 비교하여 전체 데이터 집합에 대한 마이닝 모델의 안정성을 파악할 수 있습니다.  
+  교차 유효성 검사를 사용하면 마이닝 구조를 교집합 영역으로 분할하고 각 교집합 영역에 대해 모델을 반복적으로 학습 및 테스트할 수 있습니다. 데이터를 분할할 접기 수를 지정하면 각 접기가 테스트 데이터로 사용되고 나머지 데이터는 새 모델을 학습하는 데 사용됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 각 모델에 대해 표준 정확도 메트릭 집합을 생성 합니다. 각 교집합 영역에 대해 생성된 모델의 메트릭을 비교하여 전체 데이터 집합에 대한 마이닝 모델의 안정성을 파악할 수 있습니다.  
   
  자세한 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36182474"
   
  예를 들어 특정 대상 상태에 대해 세 개의 예측을 만들었으며 각 예측의 확률이 0.05, 0.15 및 0.8이라고 가정합니다. 임계값을 0.5로 설정하면 한 예측만 올바른 것으로 간주됩니다. **대상** **임계값** 을 0.10으로 설정하면 두 예측이 올바른 것으로 간주됩니다.  
   
- 때 **대상** **임계값** 로 설정 된 `null`은 기본 값, 각 사례에 대해 가장 가능성이 높은 예측이 올바른 것으로 간주 됩니다. 위의 예에서 0.05, 0.15 및 0.8은 세 개의 사례에서 예측에 대한 확률입니다. 확률이 서로 많이 다르지만 각 사례는 하나의 예측만 생성하고 이러한 예측은 사례에 대한 최상의 예측이므로 각 예측은 올바른 것으로 간주됩니다.  
+ 때 **대상** **임계값** 로 설정 된 `null`, 기본 값, 각 사례에 대해 가장 가능성이 높은 예측이 올바른 것으로 간주 됩니다. 위의 예에서 0.05, 0.15 및 0.8은 세 개의 사례에서 예측에 대한 확률입니다. 확률이 서로 많이 다르지만 각 사례는 하나의 예측만 생성하고 이러한 예측은 사례에 대한 최상의 예측이므로 각 예측은 올바른 것으로 간주됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)   

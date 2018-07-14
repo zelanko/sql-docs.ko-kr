@@ -24,18 +24,18 @@ helpviewer_keywords:
 - NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64779ceab6d83365755ed212a93685ee3f31837f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 612738591115a2e7af964ba4ee5d9950587e45bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203903"
 ---
 # <a name="notifytablechange-element-xmla"></a>NotifyTableChange 요소(XMLA)
-  인스턴스를에 알립니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 지정된 된 데이터 원본의 테이블에 변경 내용이 발생 하는 합니다.  
+  인스턴스에 알립니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 지정 된 데이터 원본의 테이블이 변경 발생 합니다.  
   
 ## <a name="syntax"></a>구문  
   

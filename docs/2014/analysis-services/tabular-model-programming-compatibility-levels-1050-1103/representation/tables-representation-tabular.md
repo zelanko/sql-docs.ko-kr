@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e642969cb2fa91b6edf5d514a47a9135d39a0ed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f266b37ea40a6c0796f6b8f5676f12fbbe6666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205983"
 ---
 # <a name="tables-representation-tabular"></a>테이블 표현(테이블 형식)
   테이블 형식 모델에서 테이블은 데이터의 기본 표현입니다.  

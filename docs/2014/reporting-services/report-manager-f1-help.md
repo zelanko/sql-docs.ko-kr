@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da311acc4787c077fd4ad33637b46507a2979f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208443"
 ---
 # <a name="report-manager-f1-help"></a>보고서 관리자 F1 도움말
   다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 대한 페이지 수준 도움말을 제공합니다. 응용 프로그램의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "36093022"
   
 -   [새 일정 / 일정 편집 페이지](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [새 구독 / 구독 페이지를 편집 합니다.](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [새 구독 / 구독 편집 페이지](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
 -   [새 시스템 역할 할당 / 시스템 역할 할당 편집 페이지](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
@@ -107,9 +107,9 @@ ms.locfileid: "36093022"
  보고서 관리자 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 대한 자세한 내용은 MSDN의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [기능 참조 (Reporting Services)](feature-reference-reporting-services.md)   
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 관리자](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 구성 요소 개요](tools/reporting-services-tools.md)  
   

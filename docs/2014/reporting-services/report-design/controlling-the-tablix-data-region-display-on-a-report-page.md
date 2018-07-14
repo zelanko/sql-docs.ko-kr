@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179240"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>보고서 페이지에서 테이블릭스 데이터 영역 표시 제어(보고서 작성기 및 SSRS)
   이 항목에서는 보고서에서 테이블릭스 데이터 영역이 표시되는 방법을 변경하기 위해 수정할 수 있는 테이블릭스 데이터 영역의 속성에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36180995"
   
 -   **데이터가 없을 때 메시지 표시**. 런타임에 보고서 데이터 집합에 대한 데이터가 없을 때 데이터 영역에 표시할 고유의 메시지를 작성할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
--   **조건에 따라 데이터 숨기기**. 데이터 영역 또는 데이터 영역의 부분이 표시 하거나 숨길 것인지를 조건부로 제어 하려면 Hidden 속성 설정할 수 있습니다 `True` 또는 식입니다. 식에는 보고서 매개 변수에 대한 참조를 포함할 수 있습니다. 토글 항목을 지정하면 사용자가 정보 데이터를 표시할지를 결정할 수도 있습니다. 자세한 내용은 [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)을 참조하세요.  
+-   **조건에 따라 데이터 숨기기**. 데이터 영역 또는 데이터 영역의 일부를 표시할지 여부를 조건부로 제어 하려면 Hidden 속성 설정할 수 있습니다 `True` 또는 식입니다. 식에는 보고서 매개 변수에 대한 참조를 포함할 수 있습니다. 토글 항목을 지정하면 사용자가 정보 데이터를 표시할지를 결정할 수도 있습니다. 자세한 내용은 [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   **셀 병합.** 테이블 내의 여러 연속 셀을 하나의 셀로 병합할 수 있습니다. 이를 열 확장 또는 셀 병합이라고 합니다. 셀은 가로 또는 세로로만 결합할 수 있습니다. 셀을 병합하면 첫 번째 셀의 데이터만 유지됩니다. 다른 셀의 데이터는 제거됩니다. 병합된 셀은 원래 열로 나눌 수 있습니다. 자세한 내용은 [데이터 영역의 셀 병합&#40;보고서 작성기 및 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36180995"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>테이블릭스 행과 열 그룹의 렌더링 방법 제어  
  테이블릭스 데이터 영역 그룹이 렌더링되는 방식을 제어하려면 그룹 구조를 고려해야 합니다. 테이블릭스 데이터 영역은 그림과 같이 네 가지 영역으로 구성될 수 있습니다.  
   
- ![테이블 릭 스 데이터 영역의 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역의 영역")  
+ ![테이블 릭 스 데이터 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역")  
   
  행 그룹 영역과 열 그룹 영역에는 그룹 머리글이 들어 있습니다. 테이블릭스 데이터 영역에 그룹 머리글이 있는 경우에는 **테이블릭스 속성** 대화 상자의 **일반** 페이지에 있는 속성을 설정하여 행과 열이 반복되는 방식을 제어합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36180995"
  [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [제어 페이지 나누기, 머리글, 열 및 행 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [나누기, 머리글, 열 및 행 제어 페이지 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dcabe0b31b44b293fe54e24699d25dc340e3302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196013"
 ---
 # <a name="action-element-assl"></a>Action 요소(ASSL)
   사용 가능한 동작에 대 한 정보를 포함 한 [큐브](cube-element-assl.md) 요소 또는 [관점](perspective-element-assl.md) 요소입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36184586"
   
 |상위 항목 또는 부모|데이터 형식|  
 |------------------------|---------------|  
-|[큐브](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
+|[큐브](../data-type/action-data-type-assl.md)하십시오 [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
 |[큐브 뷰](../data-type/perspectiveaction-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -72,7 +72,7 @@ ms.locfileid: "36184586"
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](cube-element-assl.md)   
- [Perspective 요소 &#40;ASSL&#41;](perspective-element-assl.md)   
+ [Perspective 요소의 &#40;ASSL&#41;](perspective-element-assl.md)   
  [PerspectiveAction 데이터 형식 &#40;ASSL&#41;](../data-type/perspectiveaction-data-type-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   

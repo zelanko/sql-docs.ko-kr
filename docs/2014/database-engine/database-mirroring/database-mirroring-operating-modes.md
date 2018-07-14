@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176520"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
   이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "36183701"
  이 섹션에서는 비동기 데이터베이스 미러링의 작동 방식 및 성능 우선 모드를 사용하기에 적합한 경우에 대해 설명하고 주 서버 실패 시 어떻게 반응하는지에 대해 설명합니다.  
   
 > [!NOTE]  
->  대부분의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 동기 데이터베이스 미러링("Safety Full만")만 지원합니다. 데이터베이스 미러링을 모두 지 원하는 버전에 대 한 내용은 "고가용성 (AlwaysOn)"를 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  대부분의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 동기 데이터베이스 미러링("Safety Full만")만 지원합니다. 데이터베이스 미러링을 모두 지 원하는 버전에 대 한 내용은의 "고가용성 (AlwaysOn)"를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  트랜잭션 보안을 OFF로 설정하면 데이터베이스 미러링 세션은 비동기적으로 작동합니다. 비동기 작업은 성능 우선 모드의 운영 모드만 지원합니다. 이 모드는 성능을 강화하지만 고가용성은 저하됩니다. 성능 우선 모드에서는 주 서버와 미러 서버만 사용됩니다. 미러 서버의 문제점은 주 서버에 영향을 주지 않습니다. 주 서버가 손실되면 미러 데이터베이스는 DISCONNECTED로 표시되지만 웜 대기로 사용할 수 있습니다.  
   
@@ -224,9 +223,9 @@ ms.locfileid: "36183701"
 |자동 장애 조치(Failover)를 지원하지 않는 보호 우선 모드|FULL|NULL(미러링 모니터 없음)|  
 |자동 장애 조치 있는 보호 우선 모드<sup>1</sup>|FULL|CONNECTED|  
   
- <sup>1</sup> 미러링 모니터 서버의 연결이 끊어질 경우 미러링 모니터 서버 인스턴스 사용 가능할 때까지 witness 속성을 OFF 설정 하는 것이 좋습니다.  
+ <sup>1</sup> 미러링 모니터 서버 연결이 끊어질 경우 미러링 모니터 서버 인스턴스 사용 가능할 때까지 witness 속성을 OFF 설정 하는 것이 좋습니다.  
   
- <sup>2</sup> 성능 우선 모드에 미러링 모니터 서버가 있으면 미러링 모니터 서버 세션에 참여 하지 않습니다. 그러나 데이터베이스를 사용하려면 최소 두 개의 서버 인스턴스가 연결되어 있어야 합니다. 따라서 성능 우선 모드 세션에서는 WITNESS 속성을 OFF로 설정된 상태로 유지하는 것이 좋습니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+ <sup>2</sup> 미러링 모니터 서버를 성능 우선 모드에 있을 경우 미러링 모니터 서버 세션에 참여 하지 않습니다. 그러나 데이터베이스를 사용하려면 최소 두 개의 서버 인스턴스가 연결되어 있어야 합니다. 따라서 성능 우선 모드 세션에서는 WITNESS 속성을 OFF로 설정된 상태로 유지하는 것이 좋습니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 ###  <a name="ViewWitness"></a> 보안 설정 및 미러링 모니터 상태 보기  
  데이터베이스의 보안 설정 및 미러링 모니터 상태를 보려면 **sys.database_mirroring** 카탈로그 뷰를 사용합니다. 관련된 열은 다음과 같습니다.  

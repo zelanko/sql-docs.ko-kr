@@ -18,34 +18,34 @@ helpviewer_keywords:
 - DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9033dc2f48b74bc13268d06f66a084f4ada22cfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83537dc9159331342ae344e5003d9c04fd8980eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211833"
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES 행 집합
-  내의 테이블로 표시 된 차원과 측정값 그룹을 식별 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+  측정값 그룹 및 차원을 내의 테이블로 표시 된 식별 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DBSCHEMA_TABLES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DBSCHEMA_TABLES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |`TABLE_CATALOG`|`DBTYPE_WSTR`|255|이 개체가 속한 카탈로그의 이름입니다.|  
 |`TABLE_SCHEMA`|`DBTYPE_WSTR`|255|이 개체가 속한 큐브의 이름입니다.|  
 |`TABLE_NAME`|`DBTYPE_WSTR`|255|`TABLE_TYPE`이 `TABLE`인 경우 개체의 이름입니다.|  
-|`TABLE_TYPE`|`DBTYPE_WSTR`||테이블의 유형입니다.<br /><br /> `TABLE` 개체는 측정값 그룹을 나타냅니다.<br /><br /> `SYSTEM TABLE`은 개체가 차원임을 나타냅니다.|  
+|`TABLE_TYPE`|`DBTYPE_WSTR`||테이블의 유형입니다.<br /><br /> `TABLE` 개체가 측정값 그룹을 나타냅니다.<br /><br /> `SYSTEM TABLE`은 개체가 차원임을 나타냅니다.|  
 |`TABLE_GUID`|`DBTYPE_GUID`||지원되지 않습니다.|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||사람이 읽을 수 있는 개체 설명입니다.|  
 |`TABLE_PROPID`|`DBTYPE_UI4`||지원되지 않습니다.|  
 |`DATE_CREATED`|`DBTYPE_DBTIMESTAMP`||지원되지 않습니다.|  
 |`DATE_MODIFIED`|`DBTYPE_DBTIMESTAMP`||개체를 마지막으로 수정한 날짜입니다.|  
-|`TABLE_OLAP_TYPE`|`DBTYPE_WSTR`||개체의 OLAP 유형입니다.<br /><br /> **MEASURE_GROUP** 는 개체가 측정값 그룹 임을 나타냅니다.<br /><br /> `CUBE_DIMENSION`은 개체가 차원임을 나타냅니다.|  
+|`TABLE_OLAP_TYPE`|`DBTYPE_WSTR`||개체의 OLAP 유형입니다.<br /><br /> **MEASURE_GROUP** 개체가 측정값 임을 나타냅니다.<br /><br /> `CUBE_DIMENSION`은 개체가 차원임을 나타냅니다.|  
   
  행 집합은 `TABLE_TYPE`, `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`을 기준으로 정렬됩니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
@@ -16,13 +16,13 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2611f683ee02180bc5b90b0b08fe961d049e9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189830"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>보고서 서버에서 기본 인증 구성
   기본적으로 Reporting Services는 Negotiate 및 NTLM 인증을 지정하는 요청을 수락합니다. 현재 배포에 기본 인증을 사용하는 클라이언트 응용 프로그램 또는 브라우저가 포함된 경우 지원되는 유형 목록에 기본 인증을 추가해야 합니다. 또한 보고서 작성기를 사용하려면 보고서 작성기 파일에 대한 익명 액세스를 설정해야 합니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "36183985"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-     파일은  *\<드라이브 >:* files\microsoft SQL Server\MSRS12 합니다. MSSQLSERVER\Reporting Services\ReportServer입니다.  
+     파일에 위치한  *\<드라이브 >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer입니다.  
   
-2.  찾을 <`Authentication`> 합니다.  
+2.  찾을 <`Authentication`>.  
   
 3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. 첫 번째 XML 구조는 다음 섹션에 설명되어 있는 모든 요소를 지정하기 위한 자리 표시자를 제공합니다.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36183985"
           </AuthenticationTypes>  
     ```  
   
-4.  에 대 한 기존 항목을 통해 붙여 <`Authentication`> 합니다.  
+4.  에 대 한 기존 항목 위에 붙여넣습니다 <`Authentication`>.  
   
-     여러 인증 유형을 사용 하는 경우 추가 테이블만 `RSWindowsBasic` 요소에 대 한 항목을 삭제 하지 않고 `RSWindowsNegotiate`, `RSWindowsNTLM`, 또는 `RSWindowsKerberos`합니다.  
+     여러 인증 유형을 사용 하는 경우 추가 테이블만 `RSWindowsBasic` 요소에 대 한 항목을 삭제 하지 마십시오 `RSWindowsNegotiate`를 `RSWindowsNTLM`, 또는 `RSWindowsKerberos`합니다.  
   
      Safari 브라우저를 지원하려는 경우에는 여러 인증 유형을 사용하도록 보고서 서버를 구성할 수 없습니다. 만 지정 해야 `RSWindowsBasic` 다른 항목을 삭제 합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36183985"
   
 |요소|필수|유효한 값|  
 |-------------|--------------|------------------|  
-|LogonMethod|예<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|`2` = 일반 텍스트 암호를 인증 하는 고성능 서버를 위한 네트워크 로그온을 제공 합니다.<br /><br /> `3` = 일반 텍스트 로그온 각 HTTP 요청과 함께 전송 되는 인증 패키지에 로그온 자격 증명, 보존 하는 서버를 네트워크에 있는 다른 서버에 연결할 때 사용자를 가장할 수 있습니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|  
+|LogonMethod|예<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|`2` = 일반 텍스트 암호를 인증 하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> `3` = 각 HTTP 요청과 함께 전송 되는 인증 패키지에 로그온 자격 증명을 유지 하는 일반 텍스트 로그온 서버를를 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있습니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|  
 |Realm|선택 사항|조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|  
 |DefaultDomain|선택 사항|사용자를 인증할 때 서버가 사용하는 도메인을 지정합니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 컴퓨터가 도메인 멤버인 경우 해당 도메인이 기본 도메인입니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36183985"
   
 -   RSReportServer.config에 `IsReportBuilderAnonymousAccessEnabled` 요소를 추가하고 `True`로 설정합니다. 파일을 저장하면 보고서 서버가 보고서 작성기에 대한 새 끝점을 만듭니다. 이 끝점은 프로그램 파일에 액세스하기 위해 내부적으로 사용되며 코드에서 사용할 수 있는 프로그래밍 인터페이스는 제공하지 않습니다. 별도의 끝점을 통해 보고서 작성기는 보고서 서버 서비스 프로세스 경계 내에 자체 응용 프로그램 도메인을 실행할 수 있습니다.  
   
--   필요에 따라 최소 권한 계정을 지정하여 보고서 서버와 다른 보안 컨텍스트에서 요청을 처리할 수 있습니다. 이 계정은 보고서 서버의 보고서 작성기 파일에 액세스하기 위한 익명 계정이 됩니다. 이 계정은 ASP.NET 작업자 프로세스에 있는 스레드의 ID를 설정합니다. 이 스레드에서 실행되는 요청은 인증 검사 없이 보고서 서버로 전달됩니다. 이 계정에서 s r _과 같습니다\<컴퓨터 > 익명 액세스 및 가장 사용할 경우를 처리 하는 계정에 인터넷 정보 서비스 (IIS), ASP.NET 작업자에 대 한 보안 컨텍스트를 설정 하는 데 사용 됩니다. 계정을 지정하려면 보고서 작성기 Web.config 파일에 계정을 추가합니다.  
+-   필요에 따라 최소 권한 계정을 지정하여 보고서 서버와 다른 보안 컨텍스트에서 요청을 처리할 수 있습니다. 이 계정은 보고서 서버의 보고서 작성기 파일에 액세스하기 위한 익명 계정이 됩니다. 이 계정은 ASP.NET 작업자 프로세스에 있는 스레드의 ID를 설정합니다. 이 스레드에서 실행되는 요청은 인증 검사 없이 보고서 서버로 전달됩니다. 이 계정이 IUSR_ 같음\<컴퓨터 > 계정에서 인터넷 정보 서비스 (IIS)를 ASP.NET 작업자에 대 한 보안 컨텍스트를 설정 하는 데 사용 되는 익명 액세스 및 가장이 사용 하는 경우를 처리 합니다. 계정을 지정하려면 보고서 작성기 Web.config 파일에 계정을 추가합니다.  
   
  보고서 작성기 프로그램 파일에 대한 익명 액세스를 사용하려면 보고서 서버를 기본 인증용으로 구성해야 합니다. 보고서 서버가 기본 인증으로 구성되지 않은 경우 익명 액세스를 허용하려고 하면 오류가 발생합니다.  
   
@@ -141,15 +141,15 @@ ms.locfileid: "36183985"
   
      인증 모드 설정 해야 `Windows` Web.config 파일을 포함 하는 경우.  
   
-     `Identity impersonate` 수 `True` 또는 `False`합니다.  
+     `Identity impersonate` 일 수 있습니다 `True` 또는 `False`합니다.  
   
-    -   로 설정 `False` ASP.NET 보안 토큰을 읽지 않도록 하려는 경우. 요청은 보고서 서버 서비스의 보안 컨텍스트에서 실행됩니다.  
+    -   로 설정 `False` ASP.NET 보안 토큰을 읽도록 하려면 원하지 않는 경우. 요청은 보고서 서버 서비스의 보안 컨텍스트에서 실행됩니다.  
   
     -   로 설정 `True` asp.net이 호스트 계층에서 보안 토큰을 읽을 수 있습니다. `True`로 설정하는 경우 `userName` 및 `password`도 지정하여 익명 계정을 지정해야 합니다. 지정하는 자격 증명은 요청이 실행되는 보안 컨텍스트를 결정합니다.  
   
 5.  Web.config 파일을 ReportBuilder\bin 폴더에 저장합니다.  
   
-6.  찾을 서비스 섹션의 RSReportServer.config 파일을 열어 `IsReportManagerEnabled` 그 아래의 다음 설정을 추가 합니다.  
+6.  서비스 섹션에서 RSReportServer.config 파일을 열어 찾을 `IsReportManagerEnabled` 그 아래의 다음 설정을 추가 합니다.  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  

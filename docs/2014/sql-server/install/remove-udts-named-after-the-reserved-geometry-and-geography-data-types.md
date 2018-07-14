@@ -1,5 +1,5 @@
 ---
-title: 예약된 된 GEOMETRY 및 GEOGRAPHY 데이터 형식의 이름이 지정 된 Udt 제거 | Microsoft Docs
+title: 예약된 된 GEOMETRY 및 GEOGRAPHY 데이터 형식의 명명 된 Udt 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], UDTs
 - geography data type [SQL Server], UDTs
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d772f880e1ad88c6423d0a34f71d1a75205169f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e557c8c41596045390127ad066681a2f5c872875
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208523"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>예약된 GEOMETRY 및 GEOGRAPHY 데이터 형식의 이름을 따서 명명된 UDT를 제거합니다.
   업그레이드 관리자가 `geometry` 또는 `geography` 데이터 형식용으로 예약된 용어를 따서 명명된 UDT(사용자 정의 형식)를 발견했습니다. `geometry` 및 `geography` 데이터 형식은 공간 데이터 기능의 일부입니다.  

@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc774b0dfd87ae4f63e9332dd6813d92f79e4a5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169346"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
   이 섹션에서는 **전체 텍스트 카탈로그 속성** 대화 상자의 **일반** 페이지에서 사용할 수 있는 옵션과 기능을 보여 줍니다.  
@@ -91,7 +90,7 @@ ms.locfileid: "36184103"
 |-|-|  
 |**없음**|**카탈로그 최적화**, **카탈로그 다시 작성**또는 **카탈로그 다시 채우기** 작업을 수행하지 않습니다.|  
 |**카탈로그 최적화**|카탈로그의 공간 사용률을 최적화하고 쿼리 성능을 향상시킵니다. 카탈로그를 최적화하면 검색 결과의 검색 순위 정확도도 향상됩니다.<br /><br /> 이 동작은 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE를 실행합니다.|  
-|**카탈로그를 다시 작성**|전체 텍스트 카탈로그를 삭제하고 다시 작성합니다. 악센트 구분과 같은 기본 카탈로그 속성이 변경된 경우에는 이 작업을 반드시 수행해야 합니다.<br /><br /> 카탈로그를 다시 작성하려면 전체 텍스트 카탈로그가 있는 파일 그룹이 온라인 상태 또는 읽고 쓸 수 있는 상태여야 합니다. 다시 작성 후 전체 텍스트 인덱스가 다시 채워집니다.<br /><br /> 이 동작은 ALTER FULLTEXT CATALOG *catalog_name* REBUILD를 실행합니다.|  
+|**카탈로그 다시 작성**|전체 텍스트 카탈로그를 삭제하고 다시 작성합니다. 악센트 구분과 같은 기본 카탈로그 속성이 변경된 경우에는 이 작업을 반드시 수행해야 합니다.<br /><br /> 카탈로그를 다시 작성하려면 전체 텍스트 카탈로그가 있는 파일 그룹이 온라인 상태 또는 읽고 쓸 수 있는 상태여야 합니다. 다시 작성 후 전체 텍스트 인덱스가 다시 채워집니다.<br /><br /> 이 동작은 ALTER FULLTEXT CATALOG *catalog_name* REBUILD를 실행합니다.|  
 |**카탈로그 다시 채우기**|데이터의 최근 변경 내용을 적용하여 카탈로그를 업데이트합니다. 이 작업을 수행하는 동안에는 카탈로그를 사용하지 않아야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

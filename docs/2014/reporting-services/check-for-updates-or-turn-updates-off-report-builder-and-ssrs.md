@@ -1,5 +1,5 @@
 ---
-title: 업데이트 또는 업데이트 해제 (보고서 작성기 및 SSRS)에 대 한 확인 | Microsoft Docs
+title: 확인 한 업데이트 또는 업데이트 해제 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c355099f67128f90a958d59f91de5f0d21c68a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88dda740e842ad4b7a96d1e1b73dd9bf7b14844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201223"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)
   보고서를 열 때마다 보고서 작성기는 해당 보고서에 있는 보고서 파트의 게시된 인스턴스가 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에서 업데이트되었는지 확인합니다. 또한 데이터 집합 및 매개 변수와 같은 보고서 파트의 종속 항목에서 변경 내용을 확인합니다. 보고서 파트나 보고서 파트의 종속성이 사이트 또는 서버에서 업데이트되었으면 보고서의 알림 표시줄에 업데이트된 파트의 수가 표시됩니다. 업데이트를 확인하고 허용 또는 거부하도록 선택하거나 알림 표시줄을 해제할 수 있습니다.  
@@ -30,14 +30,14 @@ ms.locfileid: "36180459"
   
 1.  보고서 작성기 단추를 클릭 한 다음 클릭 **옵션**합니다.  
   
-2.  에 **옵션** 대화 상자의 **리소스** 탭을 선택 하거나 선택을 취소는 **내 보고서에 보고서 파트에 대 한 업데이트 표시** 확인란 합니다.  
+2.  에 **옵션** 대화 상자의 **리소스** 탭을 선택 하거나 선택을 취소 합니다 **내 보고서에 보고서 파트에 대 한 업데이트를 표시** 확인란 합니다.  
   
 > [!NOTE]  
 >  이것은 사용자 설정이므로 사용자가 여는 모든 보고서에 대해 사용하지 않도록 설정됩니다.  
   
 ### <a name="to-check-for-updates"></a>업데이트를 확인하려면  
   
--   보고서 외부 또는 보고서 본문에서 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 클릭 **업데이트 확인**합니다.  
+-   보고서 본문 또는 보고서 외부의 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 클릭 **업데이트 확인**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.analysisservices.f1
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5cbf692e94d0a8dcd6da63ca9b0cda9abb2c2b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e006cbe7729d35a34bf8f652c7560a66a39e0ad8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184800"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>새 서버 등록 또는 서버 등록 편집(일반 탭)(Analysis Services - 다차원 데이터)
   이 탭을 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 등록 옵션을 지정할 수 있습니다.  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc059cfde938bebe2503108faf835271786c3150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163324"
 ---
 # <a name="audit-element-assl"></a>Audit 요소(ASSL)
-  지정 하는 [추적](../objects/trace-element-assl.md) 요소 서버의 성능이 저하 되는 경우에 이벤트를 삭제할 수 없습니다.  
+  지정 된 [추적](../objects/trace-element-assl.md) 서버의 성능이 저하 되는 경우에 요소가 이벤트를 삭제할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36172753"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Audit` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  
+ 부모에 해당 하는 요소가 `Audit` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Trace>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 추적 &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [요소를 추적 합니다. &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 배포 스크립트를 서비스의 분석을 이해 | Microsoft Docs
+title: 배포 스크립트를 서비스 분석을 이해 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, scripts
 - deploying [Analysis Services], scripts
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [Analysis Services], deployment
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba5d08decac64e8215d99c15102c791c5c92c685
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5473cc30dff70813c252e9529b4490962c329abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194443"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Analysis Services 배포 스크립트 이해
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 생성하는 XMLA 배포 스크립트는 다음 두 섹션으로 구성됩니다.  

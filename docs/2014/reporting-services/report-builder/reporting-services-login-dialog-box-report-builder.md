@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a36e0597ca34ed17d2ecf6bed6c0c7e0a0923229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 76c6a0b6266871b74fbeb15169df34e89507cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168056"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 로그인 대화 상자(보고서 작성기)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다. 이러한 자격 증명과 관련하여 도움을 얻으려면 보고서 서버 관리자에게 문의하십시오.  

@@ -1,5 +1,5 @@
 ---
-title: 게시 된 보고서 (SharePoint 통합된 모드의 Reporting Services)에서 매개 변수를 설정 합니다. | Microsoft Docs
+title: 게시 된 보고서 (SharePoint 통합된 모드의 Reporting Services)에 매개 변수를 설정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 caps.latest.revision: 8
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2e6fc8260135151635971d1f0bd77bb74e21cc79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 11145fe92935f4e964b750310d70a753eb2e424c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189993"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>게시된 보고서에 매개 변수 설정(SharePoint 통합 모드의 Reporting Services)
   매개 변수가 있는 보고서는 보고서 실행 시 데이터를 필터링하는 데 사용되는 입력 값을 받아들이는 보고서입니다. 매개 변수는 보고서를 만들 때 정의됩니다. 보고서 매개 변수는 보고서 정의에 정의된 방식에 따라 단일 값, 다중 값 또는 동적 값을 받아들일 수 있습니다. 여기서 동적 값은 이전 선택 사항에 따라 변경되는 값입니다. 예를 들어 제품 범주를 선택하면 다음 선택 사항은 해당 범주에 속한 특정 제품이 될 수 있습니다. 매개 변수에는 기본값을 지정할 수 있으며 이 값을 사용하여 자동으로 보고서의 필터링된 버전을 실행하거나 해당 값을 다른 값으로 바꿀 수 있습니다.  

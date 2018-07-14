@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171644"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 데이터 마이닝 클래스
   데이터 마이닝 클래스는 데이터 마이닝 개체를 만들고, 수정하고, 삭제하고, 처리하는 데 사용됩니다. 데이터 마이닝 개체 작업에는 데이터 마이닝 구조 만들기, 데이터 마이닝 모델을 만들기 및 모델 처리가 포함됩니다.  
   
- 및에 대 한 정보는 환경을 설정 하는 방법에 대 한 자세한 내용은 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체 참조 [AMO 기본 클래스](amo-fundamental-classes.md)합니다.  
+ 및에 대 한 환경을 설정 하는 방법에 대 한 자세한 내용은 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체를 참조 하십시오 [AMO 기본 클래스](amo-fundamental-classes.md)합니다.  
   
  AMO(Analysis Management Objects)에서 개체를 정의하려면 올바른 컨텍스트를 설정하도록 각 개체에 대해 여러 속성을 설정해야 합니다. OLAP 및 데이터 마이닝 개체와 같이 복잡한 개체는 길고 세부적인 코드 작업이 필요합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36183134"
  <xref:Microsoft.AnalysisServices.MiningStructure>는 고유 프로세스 메서드를 사용하여 처리될 수 있으며, 부모 개체에서 고유 프로세스 메서드를 사용하여 자체적으로 처리할 때 처리될 수도 있습니다.  
   
 ### <a name="columns"></a>열  
- 열은 모델에 대 한 데이터를 보관 및 용도 따라 서로 다른 형식이 될 수 있습니다: 키, 입력, 예측 가능, 또는 InputPredictable 합니다. Predictable 열은 마이닝 모델의 작성 대상입니다.  
+ 열 모델에 대 한 데이터를 저장 및 사용에 따라 다른 유형일 수 있습니다: 키, 입력, 예측 가능, 또는 InputPredictable 합니다. Predictable 열은 마이닝 모델의 작성 대상입니다.  
   
  AMO에서 단일 값 열은 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>이라고 합니다. 여러 값 열은 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>이라고 합니다.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36183134"
   
  기본 정보에는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>의 이름 및 ID(내부 식별자)가 포함됩니다.  
   
- 값의 데이터 형식: 부울, 텍스트, DOUBLE, LONG, 날짜입니다.  
+ 값의 데이터 형식: LONG, BOOLEAN, 텍스트, DOUBLE 날짜입니다.  
   
- 엔진은 내용을 통해 열의 모델링 방법을 알 수 있습니다. 값은 가능: Discrete, Continuous, Discretized, 순서가 지정 된, Cyclical, 확률, Variance, StdDev은 ProbabilityVariance은 ProbabilityStdDev, 지원, 키입니다.  
+ 엔진은 내용을 통해 열의 모델링 방법을 알 수 있습니다. 값은: 불연속, Continuous, Discretized, 정렬, Cyclical, 확률, Variance, StdDev은 ProbabilityVariance, ProbabilityStdDev, 지원, 키입니다.  
   
  데이터 바인딩은 데이터 원본 뷰 요소를 사용하여 데이터 마이닝 열을 기본 데이터 모델과 연결합니다.  
   

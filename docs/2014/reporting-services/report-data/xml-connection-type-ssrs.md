@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 421567faa999f075bb3961b82f23c14aa14334b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17b03e4ca74b5aa8d9e59d6bcc32eafe4ef1139e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191803"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
   보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  
   
  이 데이터 확장 프로그램은 연결 문자열과 별개로 관리되는 자격 증명 및 매개 변수를 지원합니다.  
   
- 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 참조 하십시오. [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
+ 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
 ##  <a name="Connection"></a> 연결 문자열  
  연결 문자열은 HTTP를 통해 사용할 수 있는 웹 서비스, 웹 기반 응용 프로그램 또는 XML 문서를 가리키는 URL이어야 합니다. XML 문서에는 XML 확장명을 사용해야 합니다. 데이터 집합 쿼리에 포함된 XML 데이터의 경우 빈 연결 문자열을 사용할 수도 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36184643"
   
  저장된 자격 증명 및 입력 정보를 요청하는 자격 증명은 지원되지 않습니다. Windows 통합 보안을 사용하지 않도록 설정한 경우 이를 사용하여 데이터를 검색할 수 없습니다. 저장된 자격 증명 및 입력 정보를 요청하는 자격 증명을 지정할 경우 런타임에 오류가 발생합니다.  
   
- 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 또는 [보고서 작성기에서 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
   
 ##  <a name="Query"></a> 쿼리  
  쿼리는 보고서 데이터 집합에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 집합의 필드 컬렉션을 채웁니다. 보고서는 쿼리에서 검색된 첫 번째 결과 집합만 처리합니다.  
@@ -67,13 +67,13 @@ ms.locfileid: "36184643"
   
 -   *빈*: 기본 결과 집합을 만들려면 빈 쿼리를 사용 합니다. 기본 쿼리는 데이터 원본을 읽고 XML 노드 계층에서 첫 번째 리프 컬렉션까지 탐색하도록 만들어집니다. 결과 집합에는 텍스트 값이 있는 모든 노드와 해당 경로의 모든 노드 특성이 포함됩니다. 결과 집합의 열은 데이터 집합의 필드에 매핑됩니다.  
   
--   요소 경로: 데이터 소스에서 XML 데이터를 검색할 때 사용할 노드 시퀀스를 지정 합니다.  
+-   요소 경로: 데이터 원본의 XML 데이터를 검색할 때 사용할 노드 시퀀스를 지정 합니다.  
   
--   XML 쿼리 요소가: 다음과 같은 선택적 요소를 포함 하는 XML 쿼리 사양:  
+-   XML 쿼리 요소가: 다음과 같은 선택적 요소를 사용 하 여 XML 쿼리 사양:  
   
-    -   **웹 서비스의 경우:**  
+    -   **웹 서비스:**  
   
-         필수 XML 요소:  
+         필요한 XML 요소:  
   
          `<Method Namespace=` *"namespace"*  `Name="MethodName" />`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36184643"
   
     -   **포함 XML 문서의:**  
   
-         필수 XML 요소:  
+         필요한 XML 요소:  
   
          `<XmlData>` inner XML `</XmlData>`  
   

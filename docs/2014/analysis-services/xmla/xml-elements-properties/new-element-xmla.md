@@ -1,5 +1,5 @@
 ---
-title: 새 요소 (XMLA) | Microsoft Docs
+title: New 요소 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 983c32cc19ebbc876d53d46865f81b0d37e10d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203983"
 ---
 # <a name="new-element-xmla"></a>New 요소(XMLA)
   사용 하는 새 파일 시스템 저장소 위치를 포함 한 [폴더](folder-element-xmla.md) 요소입니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36172732"
 ## <a name="remarks"></a>Remarks  
  `New` 요소는 각각 `Original` 또는 `Folder` 명령 중에 복원 또는 동기화되는 모든 개체에 대해 부모 `Restore` 요소에 포함된 `Synchronize` 요소의 값을 바꾸는 UNC 경로를 포함합니다. `Original` 요소의 값은 각 큐브, 측정값 그룹 또는 파티션에 대한 `StorageLocation` 요소의 값과 비교되며 일치하는 항목이 있을 경우 이 요소의 값이 복원 또는 동기화 중에 개체의 `StorageLocation`을 업데이트하는 데 사용됩니다.  
   
- 백업 및 개체를 복원 하는 방법에 대 한 자세한 내용은 참조 [백업 및 복원 Objects (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 백업 및 복원 하는 개체에 대 한 자세한 내용은 참조 하세요. [백업 및 복원 Objects (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Original 요소 &#40;XMLA&#41;](original-element-xmla.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
 - sequence [Database Engine]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3576cf9ce9df0d5d75f9657f4e0f70378b29fc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 92a8365fe780da67a408ae1aa776ae97d0b4fa2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162314"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
   시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다. ID 열과 달리 시퀀스는 테이블에 연결되어 있지 않습니다. 응용 프로그램은 다음 값을 가져오기 위해 시퀀스 개체를 참조합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에 걸쳐 값 키를 조정할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36183771"
   
  행을 삽입하면 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) 함수를 호출하여 행을 삽입하기 전에 다음 시퀀스 번호를 가져올 수 있습니다. NEXT VALUE FOR가 호출되면 테이블에 삽입되지 않더라도 시퀀스 번호가 할당됩니다. 테이블 정의에서 행의 기본값으로 NEXT VALUE FOR 함수를 사용할 수 있습니다. 일정 범위의 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) 를 사용합니다.  
   
- 시퀀스는 임의의 정수 데이터 형식으로 정의할 수 있습니다. 데이터 형식을 지정 하지 않으면 시퀀스의 기본값은 `bigint`합니다.  
+ 시퀀스는 임의의 정수 데이터 형식으로 정의할 수 있습니다. 데이터 형식을 지정 하지 않으면 경우는 시퀀스의 기본값은 `bigint`합니다.  
   
 ## <a name="using-sequences"></a>시퀀스 사용  
  다음 시나리오에서는 ID 열 대신 시퀀스를 사용하십시오.  

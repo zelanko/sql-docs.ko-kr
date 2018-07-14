@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212013"
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
   데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "36181211"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- 데이터 마이닝에 사용하는 데이터를 OLAP(온라인 분석 처리) 큐브나 관계형 데이터베이스에 저장하지 않아도 이 두 가지를 모두 데이터 원본으로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본으로 정의된 데이터의 원본을 사용하여 데이터 마이닝을 수행할 수 있습니다. 여기에는 텍스트 파일, Excel 통합 문서 또는 다른 외부 공급자의 데이터가 포함될 수 있습니다. 자세한 내용은 참조 [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)합니다.  
+ 데이터 마이닝에 사용하는 데이터를 OLAP(온라인 분석 처리) 큐브나 관계형 데이터베이스에 저장하지 않아도 이 두 가지를 모두 데이터 원본으로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본으로 정의된 데이터의 원본을 사용하여 데이터 마이닝을 수행할 수 있습니다. 여기에는 텍스트 파일, Excel 통합 문서 또는 다른 외부 공급자의 데이터가 포함될 수 있습니다. 자세한 내용은 [지 원하는 데이터 원본 &#40;SSAS 다차원&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)합니다.  
   
 ##  <a name="ExploringData"></a> 데이터 탐색  
  데이터 마이닝 프로세스의 3번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 준비된 데이터를 탐색하는 것입니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "36181211"
 ##  <a name="DeployingandUpdatingModels"></a> 모델 배포 및 업데이트  
  데이터 마이닝 프로세스의 마지막 단계는 다음 다이어그램에 강조 표시된 바와 같이 가장 효율적인 모델을 프로덕션 환경에 배포하는 것입니다.  
   
- ![데이터 마이닝 6 단계: 마이닝 모델 배포](../media/dmprocess-deploying.gif "데이터 마이닝 6 단계: 마이닝 모델 배포")  
+ ![데이터 마이닝 6 단계: 마이닝 모델을 배포](../media/dmprocess-deploying.gif "데이터 마이닝 6 단계: 마이닝 모델 배포")  
   
  프로덕션 환경에 마이닝 모델을 배포한 다음에는 필요에 따라 다양한 태스크를 수행할 수 있습니다. 다음은 수행할 수 있는 일부 태스크입니다.  
   

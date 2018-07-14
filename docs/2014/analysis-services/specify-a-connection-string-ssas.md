@@ -1,5 +1,5 @@
 ---
-title: 연결 문자열 지정 (SSAS) | Microsoft Docs
+title: 연결 문자열 (SSAS)를 지정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.speconnstring.f1
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc0988701ba21ef7e6880b85abab6309479a8a2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e253ad8c84b85406cb3c4bf0a9576db419ab7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169374"
 ---
 # <a name="specify-a-connection-string-ssas"></a>연결 문자열 지정(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 OLE DB 또는 ODBC 데이터 원본에 연결하기 위한 연결 문자열을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

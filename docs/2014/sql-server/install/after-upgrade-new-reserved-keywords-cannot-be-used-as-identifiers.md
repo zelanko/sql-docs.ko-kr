@@ -1,5 +1,5 @@
 ---
-title: 업그레이드 후 새롭게 예약 된 키워드 식별자로 사용할 수 없는 | Microsoft Docs
+title: 업그레이드 후 새 예약된 키워드 식별자로 사용할 수 없습니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
 - keywords [SQL Server], reserved
 - keywords [SQL Server]
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 177c36aaeca8e6cc9d84aae21e1f99fe0bb96867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7569837d0442b23e16c365ea1076b734f23892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172123"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>업그레이드 후 새 예약 키워드는 식별자로 사용할 수 없습니다.
   업그레이드 관리자가 예약 키워드 사용을 감지했습니다. 예약 키워드는 구분 기호로 구분하지 않는 한 식별자나 개체 이름으로 사용될 수 없습니다.  
@@ -53,10 +53,10 @@ ms.locfileid: "36181958"
   
 -   90 이하의 데이터베이스 호환성 수준 설정을 유지합니다.  
   
--   구분 기호로 구분 식별자를 사용하여 개체를 참조합니다. 예를 들어 문을 `CREATE TABLE [MERGE] ([MERGE] int);` 대괄호를 사용 하 여 개체 이름 MERGE를 구분 합니다.  
+-   구분 기호로 구분 식별자를 사용하여 개체를 참조합니다. 예를 들어, 다음 문 `CREATE TABLE [MERGE] ([MERGE] int);` 대괄호를 사용 하 여 개체 이름 MERGE를 구분 합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- [예약 된 키워드 &#40;Transact SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [예약 된 키워드 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE&#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
