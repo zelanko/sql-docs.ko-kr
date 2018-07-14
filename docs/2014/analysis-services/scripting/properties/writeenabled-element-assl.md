@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WriteEnabled element
 ms.assetid: 681290b3-ae8f-4659-9b17-a26d401a3fb0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f78be490a8d171dbdbbf6fddbd9ffb1d4289f050
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 900aa5be98245eeaef4b40cb9e8492182604499d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243623"
 ---
 # <a name="writeenabled-element-assl"></a>WriteEnabled 요소(ASSL)
   보안 권한에 따라 차원 쓰기 저장(writeback)을 사용할 수 있는지 여부를 나타냅니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36093181"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `WriteEnabled` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
+ 부모에 해당 하는 요소가 `WriteEnabled` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

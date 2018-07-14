@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff50a3388fd83c23d13bc201c9c27ffc7f43fd44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7dd190efcf5a593017fb9c1bc3dbb3cc3ccd9fc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270369"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 메서드(ClientNetworkProtocol 클래스)
   지정된 순서 값을 가진 프로토콜을 클라이언트 프로토콜 목록에서 선택합니다.  
