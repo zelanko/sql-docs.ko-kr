@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 65bbe363e6b8148d9a9f3a7f4391eb6bbc5b97ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 40332e5894e444ad8818d04bd738a2a52670c557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177840"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 트랜잭션 복제와 스냅숏 복제는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 데이터 게시를 지원합니다. 지원되는 구독자 플랫폼에 대한 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다.  
@@ -157,12 +157,12 @@ ms.locfileid: "36089543"
   
 2.  게시 데이터베이스의 게시자에서 [sp_helppublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)을 실행하여 게시에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하는지 확인합니다.  
   
-    -   하는 경우의 값 `enabled_for_het_sub` 는 비-1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 지원 됩니다.  
+    -   경우 값 `enabled_for_het_sub` 는 1, 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 지원 됩니다.  
   
-    -   하는 경우의 값 `enabled_for_het_sub` 은 0으로, 실행 [sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)로 지정 하 여 `enabled_for_het_sub` 에 대 한 **@property** 및 `true` 에대한 **@value**.  
+    -   경우 값 `enabled_for_het_sub` 가 0 이면 실행 [sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 지정 하 고 `enabled_for_het_sub` 에 대 한 **@property** 및 `true` 에대한 **@value**.  
   
         > [!NOTE]  
-        >  변경 하기 전에 `enabled_for_het_sub` 를 `true`, 게시에 기존 구독을 모두 삭제 해야 합니다. 게시에서 업데이트 구독도 지원하는 경우 `enabled_for_het_sub`을 `true`로 설정할 수 없습니다. `enabled_for_het_sub` 변경은 다른 게시 속성에도 영향을 줍니다. 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
+        >  변경 하기 전에 `enabled_for_het_sub` 에 `true`, 게시에 기존 구독을 모두 삭제 해야 합니다. 게시에서 업데이트 구독도 지원하는 경우 `enabled_for_het_sub`을 `true`로 설정할 수 없습니다. `enabled_for_het_sub` 변경은 다른 게시 속성에도 영향을 줍니다. 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber**를 지정하고 **@destination_db**에 **(기본 대상)** 값을, **@subscription_type**에 **push** 값을, **@subscriber_type**에 3 값을 지정합니다(OLE DB 공급자 지정).  
   

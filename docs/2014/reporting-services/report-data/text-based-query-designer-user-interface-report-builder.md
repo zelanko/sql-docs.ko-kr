@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162124"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>텍스트 기반 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   텍스트 기반 쿼리 디자이너에서 데이터 원본에서 지원하는 쿼리 언어를 사용하여 쿼리를 지정하고, 쿼리를 실행하고, 디자인 타임에 결과를 볼 수 있습니다. 여러 개의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 사용자 지정 데이터 처리 확장 프로그램에 대한 쿼리 또는 명령 구문, 식으로 지정된 쿼리를 지정할 수 있습니다. 텍스트 기반 쿼리 디자이너는 쿼리를 전처리하지 않고 모든 종류의 쿼리 구문을 포함할 수 있으므로 많은 데이터 원본 유형에 대한 기본 쿼리 디자이너 도구입니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36088328"
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|  
   
 #### <a name="example"></a>예제  
- 다음 쿼리에서 성 목록을 반환는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스 `ContactType` 에 대 한 테이블에서 `Person` 스키마입니다.  
+ 다음 쿼리는에서 성 목록을 반환 합니다 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스 `ContactType` 테이블는 `Person` 스키마.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -83,7 +83,7 @@ SELECT Name FROM Person.ContactType
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|  
   
 #### <a name="example"></a>예제  
- 다음 쿼리 호출의 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 저장 프로시저 `uspGetWhereUsedProductID`합니다. 쿼리를 실행할 때 제품 ID 번호 매개 변수에 대한 값을 입력해야 합니다.  
+ 다음 호출을 쿼리 합니다 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 저장 프로시저 `uspGetWhereUsedProductID`합니다. 쿼리를 실행할 때 제품 ID 번호 매개 변수에 대한 값을 입력해야 합니다.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  **명령 typeTableDirect**를 선택하면 텍스트 기반 쿼리 디자이너에 쿼리 창 및 결과 창이 제공됩니다. 테이블을 입력하고 **실행** 단추를 클릭할 경우 해당 테이블의 모든 열이 반환됩니다.  
   
 #### <a name="example"></a>예제  
- OLE DB 데이터 원본 유형, 다음 데이터 집합 쿼리 반환의 모든 연락처 유형에 대 한 결과 집합의 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스입니다.  
+ OLE DB 데이터 원본 유형의 경우 다음 데이터 집합 쿼리는 결과의 모든 연락처 유형에 대 한 집합을 반환 합니다 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스입니다.  
   
  `Person.ContactType`  
   

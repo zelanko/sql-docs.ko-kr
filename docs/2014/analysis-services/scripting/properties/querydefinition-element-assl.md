@@ -22,18 +22,18 @@ helpviewer_keywords:
 - QueryDefinition element
 ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8dc7a5407514bbe212aa7425fe9fc886ac3c7126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcfe589a233d17f51220db3a46bc5e69b42a5bb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231883"
 ---
 # <a name="querydefinition-element-assl"></a>QueryDefinition 요소(ASSL)
-  와 연결 된 쿼리에 대 한 불투명 식을 포함 한 [DataSource](../objects/datasource-element-assl.md) 요소에는 [QueryBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
+  연결 된 쿼리에 대 한 불투명 식을 포함을 [데이터 원본](../objects/datasource-element-assl.md) 요소에는 [QueryBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36082762"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `QueryDefinition` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.QueryBinding>합니다.  
+ 부모에 해당 하는 요소가 `QueryDefinition` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.QueryBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

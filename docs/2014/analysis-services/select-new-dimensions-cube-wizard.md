@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.newdimselection.f1
 ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3233f1e421479cac1d2e4bfc3e9150cc9a83afcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ef4e23603077b75ef173c246a861996bed9fdbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271569"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>새 차원 선택(큐브 마법사)
   **새 차원 선택** 페이지를 사용하여 만들 새로 만들 차원을 선택할 수 있습니다.  

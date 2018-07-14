@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
 - connections [Reporting Services], report server
@@ -18,13 +18,13 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34145968707e6ccc2a531fdddead84ba805aadb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172160"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품군의 모든 서버에 연결하고 해당 내용을 그래픽 방식으로 찾아볼 수 있는 개체 탐색기를 제공합니다. Reporting Services의 경우 개체 탐색기를 사용하여 다음을 수행할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36081769"
   
 2.  연결을 클릭하여 서버 유형 목록을 표시한 다음 **Reporting Services**를 선택합니다.  
   
-3.  **서버에 연결** 대화 상자에서 SharePoint 사이트 URL을 입력합니다. 다음 예에서는 구문을 보여 줍니다: http://\<웹 서버 > /sites/\<사이트 > 합니다.  
+3.  **서버에 연결** 대화 상자에서 SharePoint 사이트 URL을 입력합니다. 다음 예에서는 구문을 보여 줍니다: http://\<웹 서버 > /sites/\<사이트 >.  
   
 4.  인증 유형을 선택합니다. Windows 인증을 사용하는 경우 자격 증명을 사용하여 연결해야 합니다. 기본 인증 또는 폼 인증을 선택하는 경우 계정과 암호를 입력합니다.  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 968cb13c9a115fcc0445cdfba194a2087a06a234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326903"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
-  이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 **저장**  *\<파일 >* **으로** 에 **파일** 메뉴 (여기서  *\<파일 >* 현재 항목의 이름), 또는 ALT + F, A 코드 편집기에서 키를 누릅니다.  
+  이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 클릭 **저장할**  *\<파일 >* **으로** 에 **파일** 메뉴 (여기서  *\<파일 >* 현재 항목의 이름)에 코드 편집기에서 ALT + F를 누르십시오.  
   
 ## <a name="central-panel"></a>중앙 창  
  **저장 위치**  

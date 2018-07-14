@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab6c3ab7b14b8e7443b9ac6b39225aa02671fa88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 633e71fd1755746a37c258500d4f98c93db28b4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322223"
 ---
 # <a name="lesson-3-configuring-distribution"></a>3단원: 배포 구성
   이 단원에서는 게시자에서 배포를 구성하고 게시 및 배포 데이터베이스에서 필수 사용 권한을 설정합니다. 배포자를 이미 구성한 경우 이 단원을 시작하기 전에 우선 게시와 배포를 해제해야 합니다. 기존 복제 토폴로지를 유지해야 하는 경우에는 이 작업을 수행하지 마십시오.  
@@ -39,7 +39,7 @@ ms.locfileid: "36090201"
   
      배포 구성 마법사가 시작됩니다.  
   
-3.  에 **배포자** 페이지에서 **'***\<서버 이름 >***' 역할을 자체 배포자로 사용. SQL Server에서 배포 데이터베이스와 로그 만듭니다**, 클릭 하 고 **다음**합니다.  
+3.  에 **배포자** 페이지에서 **'***\<ServerName >***' 자체 배포자 역할을 할 SQL Server에서 배포 데이터베이스와 로그를 만듭니다**를 클릭 하 고 **다음**합니다.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되고 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**에이전트 시작** 페이지에서 **예**를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작되도록 구성합니다. **다음**을 클릭합니다.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36090201"
   
 3.  **사용자 매핑** 페이지의 **이 로그인으로 매핑된 사용자** 목록에서 **배포** 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 둘 다 선택합니다.  
   
-     에 **데이터베이스 역할 멤버 자격** 목록는 `db_owner` 두 데이터베이스 모두에 대 한 로그인에 대 한 역할입니다.  
+     에 **데이터베이스 역할 멤버 자격** 목록는 `db_owner` 두 데이터베이스에 대 한 로그인에 대 한 역할입니다.  
   
 4.  **확인** 을 클릭하여 로그인을 만듭니다.  
   
-5.  1-4단계를 반복하여 로컬 repl_logreader 계정에 대한 로그인을 만듭니다. 이 로그인 매핑되어야의 구성원 인 사용자에 게는 `db_owner` 고정된 데이터베이스 역할에는 **배포** 및 **AdventureWorks** 데이터베이스.  
+5.  1-4단계를 반복하여 로컬 repl_logreader 계정에 대한 로그인을 만듭니다. 이 로그인의 멤버인 사용자 에게도 매핑되어야도 해야 합니다는 `db_owner` 고정된 데이터베이스 역할을 합니다 **배포** 및 **AdventureWorks** 데이터베이스.  
   
-6.  1-4단계를 반복하여 로컬 repl_distribution 계정에 대한 로그인을 만듭니다. 이 로그인의 구성원 인 사용자에 게 매핑해야는 `db_owner` 고정된 데이터베이스 역할에는 **배포** 데이터베이스입니다.  
+6.  1-4단계를 반복하여 로컬 repl_distribution 계정에 대한 로그인을 만듭니다. 구성원 인 사용자에 게이 로그인을 매핑해야 합니다 `db_owner` 고정된 데이터베이스 역할에는 **배포** 데이터베이스.  
   
 7.  1-4단계를 반복하여 로컬 repl_merge 계정에 대한 로그인을 만듭니다. 이 로그인에는 **배포** 와 **AdventureWorks** 데이터베이스의 사용자 매핑이 있어야 합니다.  
   

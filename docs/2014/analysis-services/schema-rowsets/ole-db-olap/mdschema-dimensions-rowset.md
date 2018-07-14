@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273399"
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 행 집합
   데이터베이스 내의 공유 차원과 전용 차원을 설명합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36081220"
 |`IS_READWRITE`|`DBTYPE_BOOL`||차원이 쓰기 가능한지 여부를 나타내는 부울입니다.<br /><br /> 차원이 쓰기 가능하도록 설정된 경우 `TRUE`입니다.|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||차원에 고유한 이름을 가진 멤버만 있는 경우 고유 값을 포함하는 열을 지정하는 비트맵입니다. 이 비트맵에 대해 다음 비트 값 상수가 Msmd.h에 정의됩니다.<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE`|  
 |`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||항상 `NULL`입니다.|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||항상 `TRUE`입니다. **참고:** 차원에 하나 이상의 계층은 표시 하지 않는 한는 차원이 표시 되지 않습니다.|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||항상 `TRUE`입니다. **참고:** 차원을 표시 되지 않는 차원에 하나 이상의 계층 구조를 표시 합니다.|  
   
  행 집합은 `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_NAME`을 기준으로 정렬됩니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36081220"
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 큐브<br />-2 차원<br /><br /> 기본 제한 값은 1입니다.|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 Visible<br />-2 not 표시<br /><br /> 기본 제한 값은 1입니다.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 표시<br />-2 not 표시<br /><br /> 기본 제한 값은 1입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [OLAP용 OLE DB 스키마 행 집합](ole-db-for-olap-schema-rowsets.md)  

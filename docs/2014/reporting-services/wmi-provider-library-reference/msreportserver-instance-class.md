@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Class
 api_location:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a370ef9ef43de7de78412a2756b65e6a5257a182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f7bc08df999c6c1c5e6a16eefb483284e5fea15f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232483"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance 클래스
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
- 이 유형의 모든 멤버 목록은 참조 [MSReportServer_Instance 멤버](msreportserver-instance-members.md)  
+ 이 유형의 모든 멤버 목록을 보려면 참조 [MSReportServer_Instance 멤버](msreportserver-instance-members.md)  
   
 ## <a name="syntax"></a>구문  
   

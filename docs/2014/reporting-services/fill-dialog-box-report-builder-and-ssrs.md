@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.fill.f1
 - "10065"
@@ -20,22 +20,22 @@ f1_keywords:
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1378fb461e3a52f751f79cb0d31e0dcd498d8c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 135a2d1d7ac4a9783bf2cc66f26dc60953ec2f76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262299"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>채우기 대화 상자(보고서 작성기 및 SSRS)
   **채우기** 탭에서 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **채우기 색**  
- 사각형의 채우기 색을 선택하려면 색 단추를 클릭합니다. 클릭는 **Expression***(fx)* RGB 색 또는에 제공 되는 미리 정의 된 색 이름 중 하나에 대 한 16 진수 값일 수 있는 식을 편집 하려면 단추는 **식** 대화 상자. 미리 정의된 색 목록을 보려면 **항목** 창에서 **웹**을 선택합니다. **제목** 창에 나열된 색 이름을 식 텍스트 창에 입력할 수 있습니다. 색 이름을 입력할 때 등호(=) 또는 큰따옴표("")를 사용하지 마십시오.  
+ 사각형의 채우기 색을 선택하려면 색 단추를 클릭합니다. 클릭는 **Expression***(fx)* RGB 색 또는에서 제공 되는 미리 정의 된 색 이름 중 하나에 대 한 16 진수 값일 수 있는 식을 편집 하려면 단추를 **식** 대화 상자. 미리 정의된 색 목록을 보려면 **항목** 창에서 **웹**을 선택합니다. **제목** 창에 나열된 색 이름을 식 텍스트 창에 입력할 수 있습니다. 색 이름을 입력할 때 등호(=) 또는 큰따옴표("")를 사용하지 마십시오.  
   
  **이미지 원본 선택**  
  이미지를 저장할 위치를 나타내어 보고서를 렌더링할 때 보고서 처리기에서 이미지를 표시할 수 있도록 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36082433"
   
  이미지를 포함하려는 경우 드롭다운 목록에서 보고서에 추가할 그림을 선택합니다. **가져오기** 를 클릭하여 드롭다운 목록에 이미지를 추가합니다. **데이터** 창에 이미지를 추가한 경우 **포함** 을 선택한 다음 드롭다운 목록에서 해당 이미지를 선택하여 이미지를 선택할 수 있습니다.  
   
- **외부** 옵션을 선택할 경우 이미지의 URL을 입력합니다. 기본 모드로 구성 된 보고서 서버에 게시 된 보고서의 경우 전체 경로나 상대 경로 사용 하 여 (예를 들어 http://*\<서버 이름 >*/images/image1.jpg). SharePoint 통합 모드로 구성 된 보고서 서버에 게시 된 보고서의 경우 정규화 된 URL을 사용 하 여 (예를 들어 http://*\<SharePointservername > /\<사이트 >*  /이미지/설명 / image1.jpg)입니다.  
+ **외부** 옵션을 선택할 경우 이미지의 URL을 입력합니다. 기본 모드로 구성 된 보고서 서버에 게시 된 보고서를 사용할 경우 전체 경로나 상대 경로 (예를 들어, http://*\<서버 이름 >*  /images/image1.jpg). SharePoint 통합 모드로 구성 된 보고서 서버에 게시 된 보고서를 사용 하 여 정규화 된 URL (예를 들어, http://*\<SharePointservername > /\<사이트 >* 문서/이미지 / / image1.jpg)입니다.  
   
  **가져오기**  
  **포함**을 선택하면 사용할 수 있습니다. **이 이미지 사용** 드롭다운 목록에 이미지를 추가하려면 클릭합니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185782"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>색 선택 대화 상자(보고서 작성기 및 SSRS)
   **색 선택** 대화 상자를 사용하여 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정하거나 차트의 색 옵션을 지정할 수 있습니다.  
@@ -39,18 +39,18 @@ ms.locfileid: "36089897"
   
 -   **색상표 - 표준 색** 미리 정의된 색 값의 목록에서 색을 선택합니다.  
   
- **원형 색상표**  
+ **색 원**  
  HSB 값은 원통형 좌표계에 매핑되므로 HSB 색에 사용합니다. 색상은 실제 색이고, 채도는 색의 순수한 정도이고, 명도는 밝음이나 어두움의 상대적인 정도입니다.  
   
  색을 선택하면 결정된 색이 원의 중앙에 표시됩니다. 색상을 변경하려면 색 슬라이더를 사용합니다. x 및 y 좌표는 각각 채도와 명도 값을 나타냅니다.  
   
- **색 사각형**  
+ **사각형 색상표**  
  RGB 값은 데카르트 좌표계에 매핑되므로 RGB 색에 사용합니다. R은 빨강의 값, G는 녹색의 값, B는 파랑의 값입니다.  
   
  색을 선택하면 결정된 색이 사각형의 중앙에 나타납니다. 선택된 색의 범위를 변경하려면 색 슬라이더를 사용합니다. x 및 y 좌표는 다른 두 색을 나타냅니다. 예를 들어 녹색을 선택하면 슬라이더에 녹색 값의 범위가 표시되고 x 및 y 좌표는 각각 빨강 및 파랑 값을 나타냅니다.  
   
  **표준 색상표 색**  
- 명명 된 색에 사용 된 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` 열거 합니다.  
+ 명명 된 색에 사용 된 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` 열거형입니다.  
   
  **색 시스템**  
  RGB 또는 HSB 색을 지정합니다. 이 선택에 따라 RGB 또는 HSB 값을 표시하도록 디스플레이가 변경됩니다. RGB와 HSB 값은 **색 선택기**에서 색 원 또는 색 사각형을 사용할 때 대화형으로 업데이트됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: 옵션 (환경 도움말 온라인 페이지) | Microsoft Docs
+title: 옵션 (환경-도움말-온라인 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a6be02ad438f35c145c7cadc3738525c1ea60d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2e15edf6e83edf97d39da4a20e99891c7b08a3a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204393"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
   **옵션** 대화 상자를 사용하면 F1 도움말을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 검색에 사용할 도움말 원본을 지정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **도움말**을 선택하고 **온라인**을 클릭합니다. **온라인** 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자의 **모든 설정 표시** 확인란을 선택합니다.  

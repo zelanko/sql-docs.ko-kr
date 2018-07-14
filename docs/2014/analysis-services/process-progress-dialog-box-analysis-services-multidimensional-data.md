@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 80bbb03d206bc3b87e27043de0ad29bb258a624d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7ac5f499c857fda608fd9f6e66e9aa20f145312
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090259"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189230"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>처리 진행률 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 처리 진행률 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서의 처리 상황을 모니터링할 수 있습니다. **처리 진행률** 대화 상자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체 처리를 시작할 때 표시됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36090259"
  **자세히 보기** 대화 상자를 열어 **상태 트리 뷰**에서 선택한 항목의 상세 정보를 표시하려면 클릭합니다. **자세히 보기** 대화 상자에 대한 자세한 내용은 [자세히 보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [다차원 모델 개체 처리](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

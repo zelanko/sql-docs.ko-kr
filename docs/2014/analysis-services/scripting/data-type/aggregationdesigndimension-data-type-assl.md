@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0828fb652833b84948552ffe1802af77e0d1e83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247253"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>AggregationDesignDimension 데이터 형식(ASSL)
-  큐브 차원 관계를 나타내는 기본 데이터 형식을 정의 및 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 요소입니다.  
+  큐브 차원 간의 관계를 나타내는 기본 데이터 형식을 정의 및 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,14 +58,14 @@ ms.locfileid: "36082556"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [특성](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
-|파생 요소|[차원](../objects/dimension-element-assl.md) ([차원](../collections/dimensions-element-assl.md) 컬렉션 [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md)하십시오 [특성](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
+|파생 요소|[차원](../objects/dimension-element-assl.md) ([차원](../collections/dimensions-element-assl.md) 모음인 [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationDesignDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [AggregationDesign 요소 &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

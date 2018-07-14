@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubePermission element
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 557fd858a02ed3e0d05679dca56740d2d8eb2128
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15009d244d0c110d15f1c7dc62e66dec76ce859b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253165"
 ---
 # <a name="cubepermission-element-assl"></a>CubePermission 요소(ASSL)
   특정 멤버의 사용 권한을 정의 [역할](role-element-assl.md) 요소의 특정 [큐브](cube-element-assl.md) 요소입니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36081421"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubePermissions](../collections/cubepermissions-element-assl.md)|  
-|자식 요소|[CellPermissions](../collections/cellpermissions-element-assl.md), [DimensionPermissions](../collections/dimensionpermissions-element-assl.md), [ReadSourceData](data-element-assl.md)|  
+|자식 요소|[CellPermissions](../collections/cellpermissions-element-assl.md)하십시오 [DimensionPermissions](../collections/dimensionpermissions-element-assl.md), [ReadSourceData](data-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.CubePermission>합니다.  

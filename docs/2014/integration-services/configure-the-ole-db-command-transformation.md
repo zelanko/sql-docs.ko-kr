@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43024686011ed5c1dea232e397df988b97a35a78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a29642a667d4d22ecf5c7f6d3de0848b4725df91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254485"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB 명령 변환 구성
   OLE DB 명령 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 플랫 파일 원본이나 OLE DB 원본과 같은 원본이 이미 들어 있어야 합니다. 이러한 변환은 일반적으로 매개 변수가 있는 쿼리에 사용됩니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243093"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "36324707"
   
 -   일괄 처리의 행 수 및 커밋 크기를 지정합니다.  
   
- 일부 빠른 로드 옵션은 OLE DB 대상의 특정 속성에 저장됩니다. 예를 들어 FastLoadKeepIdentity는 ID 값을 유지할지 여부를 지정하고, FastLoadKeepNulls는 Null 값을 유지할지 여부를 지정하며, FastLoadMaxInsertCommitSize는 일괄 처리로 커밋할 행 수를 지정합니다. 기타 빠른 로드 옵션은 쉼표로 구분된 목록으로 FastLoadOptions 속성에 저장됩니다. OLE DB 대상 FastLoadOptions에 저장 되 고에 나열 된 모든 빠른 로드 옵션을 사용 하는 경우는 **OLE DB 대상 편집기** 대화 상자에서 속성의 값으로 설정 되 `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`합니다. 값 1000은 대상이 1000개의 행을 일괄적으로 사용하도록 구성되었음을 나타냅니다.  
+ 일부 빠른 로드 옵션은 OLE DB 대상의 특정 속성에 저장됩니다. 예를 들어 FastLoadKeepIdentity는 ID 값을 유지할지 여부를 지정하고, FastLoadKeepNulls는 Null 값을 유지할지 여부를 지정하며, FastLoadMaxInsertCommitSize는 일괄 처리로 커밋할 행 수를 지정합니다. 기타 빠른 로드 옵션은 쉼표로 구분된 목록으로 FastLoadOptions 속성에 저장됩니다. OLE DB 대상 FastLoadOptions에 저장 되 고에 나열 된는 모든 빠른 로드 옵션을 사용 하는 경우는 **OLE DB 대상 편집기** 대화 상자에서 속성의 값 설정할지 `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`합니다. 값 1000은 대상이 1000개의 행을 일괄적으로 사용하도록 구성되었음을 나타냅니다.  
   
 > [!NOTE]  
 >  대상에서 제약 조건에 맞지 않아 오류가 발생하면 FastLoadMaxInsertCommitSize에 의해 정의된 행에 대한 전체 일괄 처리가 실패하게 됩니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "36324707"
   
 |빠른 로드 옵션|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 옵션은 폼 `KILOBYTES_PER_BATCH`  =  \<양의 정수 값**>** 합니다.|  
+|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 옵션은 폼 `KILOBYTES_PER_BATCH`  =  \<integer value**>** 합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
 |ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<열 이름> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
   

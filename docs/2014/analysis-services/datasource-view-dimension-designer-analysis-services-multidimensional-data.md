@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (차원 구조 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 데이터 원본 뷰 (Dimension Structure Tab, Dimension Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246163"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **데이터 원본 뷰** 창을 사용하여 선택한 차원과 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. **데이터 원본 뷰** 창에서 **특성** 또는 **계층 및 수준** 창으로 열을 끌어서 특성, 멤버 속성, 계층 및 수준을 만들 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36081719"
  **모든 테이블 표시**  
  해당 차원과 연결된 데이터 원본 뷰의 모든 테이블을 창에 표시합니다.  
   
- **사용 되는 테이블만 표시**  
+ **사용 된 테이블만 표시**  
  연결된 데이터 원본 뷰의 차원에서 사용된 테이블만 창에 표시합니다.  
   
  **이름 표시**  
@@ -72,7 +72,7 @@ ms.locfileid: "36081719"
  **데이터 원본 뷰 편집**  
  해당 차원과 연결된 데이터 원본 뷰에 대한 **데이터 원본 뷰 디자이너**를 표시합니다. **데이터 원본 뷰 디자이너**에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **데이터 원본 뷰 표시**  
+ **데이터 원본 뷰를 표시 합니다.**  
  다음 옵션 중 하나를 선택하여 **데이터 원본 뷰** 창의 뷰 모드를 전환할 수 있습니다.  
   
 -   다이어그램  

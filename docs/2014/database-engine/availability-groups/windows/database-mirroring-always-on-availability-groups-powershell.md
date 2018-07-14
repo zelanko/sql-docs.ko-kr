@@ -1,29 +1,28 @@
 ---
-title: 데이터베이스를 AlwaysOn 가용성 그룹 (SQL Server PowerShell)에 대 한 미러링 끝점 만들기 | Microsoft Docs
+title: 데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 (SQL Server PowerShell) 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 caps.latest.revision: 7
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c9c2bba0d4a950e8db0159292947b629475df187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 861b5154e987dd4647a8637c35600f3da752ca1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196073"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기(SQL Server PowerShell)
   이 항목에서는 PowerShell을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 사용할 데이터베이스 미러링 끝점을 만드는 방법에 대해 설명합니다.  

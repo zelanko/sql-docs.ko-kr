@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - cross-database transactions [SQL Server]
@@ -17,22 +16,22 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: fdfb419c6200cc185128332d790f554c9b10efd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6014fcc072e9ce6d85fffc62d76f5ba51f341556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271709"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대해 지원되지 않는 데이터베이스 간 트랜잭션(SQL Server)
   데이터베이스 간 트랜잭션 또는 분산 트랜잭션은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에서 지원되지 않습니다. 이는 다음과 같은 이유로 인해 트랜잭션 원자성/무결성을 보장할 수 없기 때문입니다.  
   
 -   데이터베이스 간 트랜잭션에 대 한: 각 데이터베이스는 독립적으로 커밋합니다. 따라서 단일 가용성 그룹에 있는 데이터베이스의 경우에도 한 데이터베이스에서 트랜잭션을 커밋한 후 다른 데이터베이스가 커밋하기 전에 장애 조치(failover)가 발생할 수 있습니다. 데이터베이스 미러링의 경우 장애 조치(failover) 후 미러된 데이터베이스가 일반적으로 다른 데이터베이스와 다른 서버 인스턴스에 있으며, 두 데이터베이스가 동일한 두 파트너 사이에서 미러된 경우에도 두 데이터베이스가 동시에 장애 조치를 실행한다고 보장할 수 없으므로 이 문제가 더 복잡해집니다.  
   
--   분산 트랜잭션의: 장애 조치 후 새 주 서버/주 복제본이 이전 주 서버/주 복제본에서 distributed transaction coordinator에 연결할 수 있습니다. 따라서 새 주 서버/주 복제본은 해당 트랜잭션 상태를 가져올 수 없습니다.  
+-   분산된 트랜잭션에 대 한: 장애 조치 후 새 주 서버/주 복제본이 이전의 주 서버/주 복제본에 distributed transaction coordinator에 연결할 수 있습니다. 따라서 새 주 서버/주 복제본은 해당 트랜잭션 상태를 가져올 수 없습니다.  
   
  다음 데이터베이스 미러링 예에서는 논리적 불일치가 발생하는 방식을 보여 줍니다. 이 예에서 응용 프로그램은 데이터베이스 간 트랜잭션을 사용하여 두 행의 데이터를 삽입합니다. 한 행은 미러된 데이터베이스 A의 테이블에 삽입되고 다른 행은 데이터베이스 B의 테이블에 삽입됩니다. 데이터베이스 A는 자동 장애 조치(failover) 있는 보호 우선 모드로 미러됩니다. 트랜잭션이 커밋되는 동안 데이터베이스 A를 사용할 수 없게 되고 미러링 세션이 자동으로 데이터베이스 A의 미러로 장애 조치됩니다.  
   

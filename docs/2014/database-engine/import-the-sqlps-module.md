@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 8c20daf51270931609fb876b9a7035da343d19f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192475"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
   PowerShell에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하는 데 권장되는 방법은 `sqlps` 모듈을 Windows PowerShell 2.0 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36092466"
 -   Microsoft.SqlServer.Management.Smo 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 효율성 개체 모델을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 관리합니다.  
   
 > [!NOTE]  
->  두 SQL Server cmdlet(`Encode-Sqlname` 및 `Decode-Sqlname`)의 이름에 사용되는 동사는 Windows PowerShell 2.0에 대해 승인된 동사와 일치하지 않습니다. 이 인해 작동에 영향을 주지 않지만 Windows PowerShell에서 경고를 표시 하면는 `sqlps` 모듈을 세션으로 가져올 합니다.  
+>  두 SQL Server cmdlet(`Encode-Sqlname` 및 `Decode-Sqlname`)의 이름에 사용되는 동사는 Windows PowerShell 2.0에 대해 승인된 동사와 일치하지 않습니다. 이 해당 작업에 영향을 주지 않지만 Windows PowerShell에서 경고를 때는 `sqlps` 세션에 모듈을 가져옵니다.  
   
 ###  <a name="Security"></a> 보안  
  기본적으로 Windows PowerShell은 모든 Windows PowerShell 스크립트 실행을 방지하는 **제한됨**으로 설정된 스크립팅 실행 정책과 함께 실행됩니다. `sqlps` 모듈을 로드하려면 `Set-ExecutionPolicy` cmdlet을 사용하여 서명된 스크립트나 기타 스크립트를 실행할 수 있도록 설정합니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. Windows PowerShell 스크립트를 사용하도록 설정하는 방법은 [Windows PowerShell 스크립트 실행](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)을 참조하십시오.  
@@ -50,9 +50,9 @@ ms.locfileid: "36092466"
 ##  <a name="LoadSqlps"></a> sqlps 모듈 로드  
  **Windows PowerShell에서 sqlps 모듈을 로드하려면**  
   
-1.  사용 하 여는 `Set-ExecutionPolicy` cmdlet을 적절 한 스크립트 실행 정책을 설정 합니다.  
+1.  사용 된 `Set-ExecutionPolicy` 적절 한 스크립트 실행 정책을 설정 하는 cmdlet입니다.  
   
-2.  사용 하 여는 `Import-Module` cmdlet sqlps 모듈을 가져옵니다. 지정 된 `DisableNameChecking` 에 대 한 경고를 억제 하려면 매개 변수 `Encode-Sqlname` 및 `Decode-Sqlname`합니다.  
+2.  사용 된 `Import-Module` sqlps 모듈을 가져오기 위한 cmdlet입니다. 지정 된 `DisableNameChecking` 에 대 한 경고를 표시 하지 않으려는 경우 매개 변수 `Encode-Sqlname` 및 `Decode-Sqlname`합니다.  
   
 ### <a name="example-powershell"></a>예제(PowerShell)  
  이 예에서는 이름 확인을 해제한 상태로 `sqlps` 모듈을 로드합니다.  

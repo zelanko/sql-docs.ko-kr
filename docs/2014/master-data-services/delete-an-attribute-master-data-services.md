@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c1317806b4d0d6e5a52082b7fc343e3fe28cd1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 64bc668f8f9d90ee2e2c99fb2d447d0eadc9de78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281279"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>특성 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 및 연결된 모든 특성 값을 영구적으로 삭제하려는 경우 특성을 삭제할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36081604"
   
 5.  **선택한 엔터티 편집**을 클릭합니다.  
   
-6.  에 **엔터티 편집** 페이지에서 삭제할 특성을 클릭 합니다.  
+6.  에 **엔터티 편집** 페이지에서 삭제 하려는 특성을 클릭 합니다.  
   
     > [!NOTE]  
     >  Name 또는 Code 특성은 삭제할 수 없습니다.  

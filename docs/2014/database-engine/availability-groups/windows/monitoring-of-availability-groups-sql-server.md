@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: dbcb69181150f1dd6003ff868e4a1b6909ee8990
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8080c3d0825104019f1e3156d39348b5676d8159
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257449"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>가용성 그룹 모니터링(SQL Server)
   AlwaysOn 가용성 그룹의 속성 및 상태를 모니터링하려면 다음 도구를 사용할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "36082335"
   
      [PowerShell-2 부를 사용 하 여 AlwaysOn 상태 모니터링: 고급 Cmdlet 사용](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
-     [PowerShell-3 부를 사용 하 여 AlwaysOn 상태 모니터링: 간단한 응용 프로그램 모니터링](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [PowerShell-3 부를 사용 하 여 AlwaysOn 상태 모니터링: 간단한 모니터링 응용 프로그램](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
      [PowerShell-4 부를 사용 하 여 AlwaysOn 상태 모니터링: SQL Server 에이전트와의 통합](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
@@ -63,11 +62,11 @@ ms.locfileid: "36082335"
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;Transact SQL&#41;](/sql/relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql)   
- [AlwaysOn 가용성 그룹 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions)   
+ [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql)   
+ [AlwaysOn 가용성 그룹 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions)   
  [가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)   
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [자동 페이지 복구 &#40;가용성 그룹 및 데이터베이스 미러링에 대 한&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [자동 페이지 복구 &#40;가용성 그룹 및 데이터베이스 미러링&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

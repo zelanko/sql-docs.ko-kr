@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf0b1f24fe823a2e9e718b63d0a5644e3924faac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: abbe6fc47b75b8d1e4bf4cdbf8e90f936e6bf834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166214"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Version 속성(WMI MSReportServer_ConfigurationSetting)
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  
@@ -37,7 +37,7 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>속성 값  
- A `string` 보고서 서버의 버전을 포함 하 합니다.  
+ `string` 보고서 서버의 버전이 들어 있는입니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

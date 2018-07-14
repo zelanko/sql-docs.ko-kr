@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.proxy.general.f1
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ec665f80304740049b0eec0a706ba09eaa62261e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 275ef2bbb5caa00bb954e3d0d225c615fbf2ad53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288269"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>프록시 계정 속성 및 새 프록시 계정 (일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 속성을 확인하거나 변경할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36081756"
  프록시에 대한 자격 증명 이름을 입력합니다.  
   
 > [!NOTE]  
->  기존 자격 증명의 이름을 제공해야 합니다. 자격 증명을 만드는 방법에 대 한 정보를 참조 하세요. [자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대 한 정보를 참조 하세요. [자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
  **...**  
  **자격 증명 선택** 대화 상자를 시작합니다.  

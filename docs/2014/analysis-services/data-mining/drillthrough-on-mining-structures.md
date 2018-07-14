@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f65a4b6e97fab978ec156d97f525818722b299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e01f903d28368179a7c249f3a8bbb7ac7c159e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246105"
 ---
 # <a name="drillthrough-on-mining-structures"></a>마이닝 구조에서의 드릴스루
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 노출되지 않는 세부 데이터를 가져오는 기능입니다.  
@@ -36,13 +36,13 @@ ms.locfileid: "36082187"
 ## <a name="enabling-drillthrough-to-structure-data"></a>구조 데이터에 드릴스루 사용  
  마이닝 구조에 드릴스루를 사용하려면 다음 조건을 충족해야 합니다.  
   
--   모델에서도 드릴스루를 사용할 수 있어야 합니다. 기본적으로는 두 종류의 드릴스루가 모두 사용되지 않습니다. 데이터 마이닝 마법사에서 드릴스루를 사용하도록 설정하려면 마법사의 마지막 페이지에서 모델 사례에 대한 드릴스루를 사용하도록 설정하는 옵션을 선택합니다. 또한 나중 추가할 수 있습니다 수 모델에서 드릴스루를 변경 하 여는 `AllowDrillthrough` 속성입니다.  
+-   모델에서도 드릴스루를 사용할 수 있어야 합니다. 기본적으로는 두 종류의 드릴스루가 모두 사용되지 않습니다. 데이터 마이닝 마법사에서 드릴스루를 사용하도록 설정하려면 마법사의 마지막 페이지에서 모델 사례에 대한 드릴스루를 사용하도록 설정하는 옵션을 선택합니다. 또한 나중 추가할 수 있습니다 기능이 모델에 드릴스루를 변경 하 여는 `AllowDrillthrough` 속성입니다.  
   
 -   DMX를 사용하여 마이닝 구조를 만드는 경우 WITH DRILLTHROUGH 절을 사용합니다. 자세한 내용은 [CREATE MINING STRUCTURE&#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)를 참조하세요.  
   
--   드릴스루는 마이닝 구조를 처리할 때 캐시된 학습 사례에 대한 정보를 검색하는 방식으로 작동합니다. 따라서 구조를 변경 하 여 처리 한 후 캐시 된 데이터의 선택을 취소 하면는 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `ClearAfterProcessing`, 드릴스루가 작동 하지 것입니다. 구조 열으로 드릴스루를 사용 하려면 리소스는 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `KeepTrainingCases` 다음 구조를 다시 처리 하 고 있습니다.  
+-   드릴스루는 마이닝 구조를 처리할 때 캐시된 학습 사례에 대한 정보를 검색하는 방식으로 작동합니다. 따라서 변경 하 여 구조를 처리 한 후 캐시 된 데이터를 지운 경우 합니다 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `ClearAfterProcessing`, 드릴스루가 작동 하지 것입니다. 구조 열으로 드릴스루를 사용 하려면 변경 해야 합니다 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `KeepTrainingCases` 다음 구조를 다시 처리 하 고 있습니다.  
   
--   마이닝 구조와 마이닝 모델 모두 있는지 확인 하십시오는 [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) 속성이로 설정 `True`합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다.  
+-   마이닝 구조와 마이닝 모델 모두 있는지 확인 합니다 [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) 속성으로 설정 `True`합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다.  
   
 ## <a name="security-issues-for-drillthrough"></a>드릴스루의 보안 문제  
  드릴스루 권한은 구조와 모델에 개별적으로 설정됩니다. 모델 사용 권한이 있으면 구조에 대한 사용 권한이 없는 경우에도 모델에서 드릴스루할 수 있습니다. 구조에 대한 드릴스루 권한이 있으면 추가적으로 [StructureColumn&#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 함수를 사용하여 모델에서 드릴스루 쿼리에 구조 열을 포함할 수도 있습니다.  

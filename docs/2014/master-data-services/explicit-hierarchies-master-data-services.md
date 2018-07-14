@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, about explicit hierarchies
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be188904b52896376b36023bc254f05826acebea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: eb2760274d8db96aefd578e124b9d69eca67e4a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245063"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층은 지정한 방법으로 단일 엔터티의 멤버를 구성합니다. 구조는 비정형일 수 있으며 파생 계층과 달리 명시적 계층은 도메인 기반 특성 관계를 기반으로 하지 않습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36082499"
  명시적 계층은 비정형일 수 있습니다. 즉, 계층이 동시에 다른 수준에서 끝날 수 있습니다. 각 통합 멤버는 통합 및 리프 멤버를 무제한 포함할 수도 있고 하나도 포함하지 않을 수도 있습니다. 또한 리프 멤버는 단일 통합 멤버에 속할 수도 있고 여러 수준의 통합 멤버에 속할 수도 있습니다.  
   
 > [!NOTE]  
->  명시적 계층을 만들려면 먼저 엔터티가 명시적 계층을 사용하도록 설정되어 있어야 합니다. 자세한 내용은 참조 [명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)합니다.  
+>  명시적 계층을 만들려면 먼저 엔터티가 명시적 계층을 사용하도록 설정되어 있어야 합니다. 자세한 내용은 [명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)합니다.  
   
 ## <a name="types-of-explicit-hierarchies"></a>명시적 계층 유형  
  명시적 계층에는 필수 계층과 필수가 아닌 계층의 두 가지 유형이 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "36082499"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|명시적 계층 및 컬렉션에 엔터티를 사용합니다.|[명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|명시적 계층 및 컬렉션에 엔터티를 사용합니다.|[명시적 계층 및 컬렉션에 대 한 엔터티를 사용 하도록 설정 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |새 명시적 계층을 만듭니다.|[명시적 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |기존 명시적 계층을 삭제합니다.|[명시적 계층 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  

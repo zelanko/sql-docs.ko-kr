@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Wizard
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb555a9db8130b7c02e12e89ba40cdf8b79a0d19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9389b01e0304a84ed3b103ef415d4f046bfc843
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321293"
 ---
 # <a name="cube-wizard-f1-help"></a>큐브 마법사 F1 도움말
   큐브 마법사를 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 대한 큐브를 만들 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36080316"
   
 -   [데이터 원본 뷰 선택 &#40;큐브 마법사&#41;](select-a-data-source-view-cube-wizard.md)  
   
--   [측정값 그룹 선택 테이블 &#40;큐브 마법사&#41;](select-measure-group-tables-cube-wizard.md)  
+-   [측정값 그룹 테이블 선택 &#40;큐브 마법사&#41;](select-measure-group-tables-cube-wizard.md)  
   
 -   [측정값 선택 &#40;큐브 마법사&#41;](select-measures-cube-wizard.md)  
   

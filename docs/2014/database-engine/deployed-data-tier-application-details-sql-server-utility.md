@@ -1,5 +1,5 @@
 ---
-title: 데이터 계층 응용 프로그램 세부 정보 (SQL Server 유틸리티)를 배포 합니다. | Microsoft Docs
+title: 배포 데이터 계층 응용 프로그램 세부 정보 (SQL Server 유틸리티) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.UE.dac.details.F1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c76314d835c13a63f4dfcd22f9ed54b819953a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4761049c87ee75e4b0bc6dc4511200f0b607d287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178440"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>배포된 데이터 계층 응용 프로그램 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 배포된 데이터 계층 응용 프로그램 뷰에 나오는 정보는 개별 데이터 계층 응용 프로그램의 사용 데이터, CPU 사용 기록, 파일 수준의 저장소 사용 세부 정보, 그리고 정책 임계값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 데이터 계층 응용 프로그램 수준에서 CPU 사용에 대해, 그리고 데이터베이스 데이터 파일 및 로그 파일에 대해 제어할 수 있습니다. 개별 데이터 계층 응용 프로그램의 속성 정보를 볼 수도 있습니다.  

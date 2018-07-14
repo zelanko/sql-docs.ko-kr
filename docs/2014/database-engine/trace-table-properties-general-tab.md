@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.general.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dd4a18bf81d89df26aec8c7c1e39637f3dbe7a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04730fcf274b8e8febf9533b84949222e96978b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326253"
 ---
 # <a name="trace-table-properties-general-tab"></a>추적 테이블 속성(일반 탭)
   **추적 테이블 속성** 대화 상자의 **일반** 탭을 사용하여 추적 테이블의 속성을 볼 수 있습니다.  

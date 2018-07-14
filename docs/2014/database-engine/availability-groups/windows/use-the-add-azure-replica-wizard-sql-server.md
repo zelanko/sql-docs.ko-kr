@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 8
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c2912564cb2866090f428cd96a2adc9d83faf9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d6b390a88a652da41623e49437fb2c022b7e3b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198183"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
   Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Windows Azure VM을 만들고 새로운 또는 기존 AlwaysOn 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "36089991"
 -   **복제본을 추가하려면:**  [Azure 복제본 추가 마법사(SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 가용성 그룹에 가용성 복제본을 추가 하지 있을 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조 [필수 구성 요소, 제한 사항 및 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
+ 가용성 그룹에 가용성 복제본을 추가한 적이 없는, 하는 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션에서 참조 [필수 구성 요소, 제한 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   

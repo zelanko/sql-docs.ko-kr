@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264209"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
   보고서를 작성할 때 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더러의 동작을 이해하여 렌더링된 보고서가 페이지 레이아웃 및 페이지 나누기를 비롯하여 원하는 식으로 표시되도록 해야 합니다. 렌더링된 보고서가 사용자나 조직이 흔히 사용하는 용지 크기에 맞게 표시되도록 설정해야 할 수도 있습니다.  
@@ -57,11 +57,11 @@ ms.locfileid: "36088526"
     > [!NOTE]  
     >  Atom 렌더링은 다른 형식으로 직접 내보낼 수는 없지만 보고서에서 데이터 파일을 생성합니다.  
   
--   **소프트 페이지 나누기 렌더러** 소프트 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성된 파일은 웹 페이지 등의 화면 중심 보기 및 배달용으로 최적화됩니다. 사용할 수 있는 소프트 페이지 나누기 렌더러는: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, 웹 보관 파일 (MHTML) 및 HTML입니다.  
+-   **소프트 페이지 나누기 렌더러** 소프트 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성된 파일은 웹 페이지 등의 화면 중심 보기 및 배달용으로 최적화됩니다. 사용할 수 있는 소프트 페이지 나누기 렌더러는: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 보관 파일 (MHTML), Word 및 HTML입니다.  
   
 -   **하드 페이지 나누기 렌더러** 하드 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다. 사용할 수 있는 하드 페이지 나누기 렌더러는 TIFF와 PDF입니다.  
   
- 보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보거나 보고서 관리자에서 보고서를 실행하면 보고서는 항상 먼저 HTML로 렌더링됩니다. 보고서를 실행한 후에는 다른 파일 형식으로 내보낼 수 있습니다. 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
+ 보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보거나 보고서 관리자에서 보고서를 실행하면 보고서는 항상 먼저 HTML로 렌더링됩니다. 보고서를 실행한 후에는 다른 파일 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
   
   
@@ -98,7 +98,7 @@ ms.locfileid: "36088526"
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 페이지 매김을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [페이지 나누기 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [페이지 나누기를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
 -   [여러 페이지에 행 및 열 머리글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36088526"
   
 -   [페이지 번호 또는 기타 보고서 속성 표시 &#40;보고서 작성기 및 SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [페이지 머리글 또는 바닥글 첫 페이지 또는 마지막 페이지에서 숨기기 &#40;보고서 작성기 및 SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [페이지 머리글 또는 첫 번째 또는 마지막 페이지에 바닥글을 숨기려면 &#40;보고서 작성기 및 SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
@@ -118,13 +118,13 @@ ms.locfileid: "36088526"
  [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  보고서의 머리글 및 바닥글을 사용하는 방법과 이를 사용하여 페이지 매김을 제어하는 방법에 대해 설명합니다.  
   
- [제어 페이지 나누기, 머리글, 열 및 행 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [나누기, 머리글, 열 및 행 제어 페이지 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  페이지 나누기를 사용하는 방법에 대해 설명합니다.  
   
   
   
 ## <a name="see-also"></a>관련 항목  
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

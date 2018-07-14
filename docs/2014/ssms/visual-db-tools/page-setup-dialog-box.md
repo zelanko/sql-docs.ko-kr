@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1a94e294d52b7f381d4759c979bc5292a471126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42a8b0f67544bebc7642b8218c714f3f195d8888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284449"
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
   **페이지 설정** 대화 상자에서 옵션을 선택하여 페이지 디자인을 사용자 지정할 수 있습니다. 일부 옵션의 사용 가능성은 편집하기 위해 설치 및 설정된 언어에 따라 달라집니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202603"
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36088098"
 ```  
   
 ## <a name="log-file-fields"></a>로그 파일 필드  
- 다음 표에서는 로그에서 사용 가능한 필드를 설명합니다.  필드 목록은 구성 가능 합니다. 통해 포함할 필드를 지정할 수는 `HTTPTraceSwitches` 구성 설정입니다. **기본** 열 포함될지 여부를 필드 로그 파일에 자동으로 지정 하지 않으면 지정 `HTTPTraceSwitches`합니다.  
+ 다음 표에서는 로그에서 사용 가능한 필드를 설명합니다.  필드 목록은 구성할 수 없습니다. 통해 포함할 필드를 지정할 수 있습니다는 `HTTPTraceSwitches` 구성 설정입니다. 합니다 **기본** 포함될지 여부를 필드 로그 파일에 자동으로 지정 하지 않으면 열 지정 `HTTPTraceSwitches`합니다.  
   
 |필드|Description|Default|  
 |-----------|-----------------|-------------|  

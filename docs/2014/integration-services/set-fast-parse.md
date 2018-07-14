@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94f4fe123cb37e60e175ad39b932e61376e217b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79307cdd25f15f34eaaf3be084a3d46045ee7d8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162844"
 ---
 # <a name="set-fast-parse"></a>빠른 구문 분석 설정
   빠른 구문 분석을 사용하는 원본 또는 변환의 각 열에는 빠른 구문 분석 속성을 설정해야 합니다. 이 속성을 설정하려면 플랫 파일 원본 및 데이터 변환의 고급 편집기를 사용합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36081868"
   
 3.  **입/출력** 창에서 빠른 구문 분석을 설정할 열을 클릭합니다.  
   
-4.  속성 창에서 확장 된 **사용자 지정 속성** 노드를 제거한 다음 설정의 `FastParse` 속성을 `True`합니다.  
+4.  속성 창에서 확장을 **사용자 지정 속성** 노드와 설정 합니다 `FastParse` 속성을 `True`입니다.  
   
 5.  **확인**을 클릭합니다.  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274119"
 ---
 # <a name="backcolor-element-assl"></a>BackColor 요소(ASSL)
   부모 요소의 색 관련 표시 특징을 설명합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36081668"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `BackColor` 속성에 적용 하는 MDX (Multidimensional Expressions) 언어 식을 포함 `CalculationProperty` 사용 하 여 요소는 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는  *셀*합니다.  
+ 합니다 `BackColor` 속성이 MDX (Multidimensional Expressions) 언어 식을 포함 하 고 적용할 `CalculationProperty` 사용 하 여 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는  *셀*합니다.  
   
- 부모에 해당 하는 요소 `BackColor` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
+ 부모에 해당 하는 요소가 `BackColor` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

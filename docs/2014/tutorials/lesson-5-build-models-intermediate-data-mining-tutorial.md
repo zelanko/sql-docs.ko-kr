@@ -1,5 +1,5 @@
 ---
-title: '5 단원: 신경망 및 로지스틱 회귀 모델 (중급 데이터 마이닝 자습서) 작성 | Microsoft Docs'
+title: '5 단원: 신경망 및 로지스틱 회귀 모델 (중급 데이터 마이닝 자습서) 빌드 | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - data mining [Analysis Services], tutorials
@@ -19,18 +19,18 @@ ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d94de9698ea0e4d8fa0dce110a6e661b941d1be
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93946e13e9836aef4cd10bc39ec964e7f8c0d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222343"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>5단원: 신경망 및 로지스틱 회귀 모델 작성(중급 데이터 마이닝 자습서)
   
   
- 운영 부서가 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 콜 센터에 대 한 고객 만족도 개선 하기 위해 프로젝트에 참여 하는 합니다. 이 부서에서는 콜 센터를 관리하고 콜 센터 효율성에 대한 메트릭을 보고할 한 업체를 선정하고 여러분에게 이 업체가 제공한 일부 예비 정보를 분석하는 업무를 요청합니다. 이 부서에서는 업체가 보고한 정보에 관심이 갈 만한 내용이 있는지 알고 싶습니다. 특히 이 데이터에서 직원 배치의 문제점 또는 고객 만족도를 개선하는 방법을 제안하는지 알고 싶습니다.  
+ 운영 부서가 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 콜 센터를 사용 하 여 고객 만족도 개선 하기 위해 프로젝트에 참여 하는 합니다. 이 부서에서는 콜 센터를 관리하고 콜 센터 효율성에 대한 메트릭을 보고할 한 업체를 선정하고 여러분에게 이 업체가 제공한 일부 예비 정보를 분석하는 업무를 요청합니다. 이 부서에서는 업체가 보고한 정보에 관심이 갈 만한 내용이 있는지 알고 싶습니다. 특히 이 데이터에서 직원 배치의 문제점 또는 고객 만족도를 개선하는 방법을 제안하는지 알고 싶습니다.  
   
  데이터 집합은 작으며 30일간의 콜 센터 운영 기간만 포함합니다. 데이터는 각 교대조의 신규 및 경력 전화 상담원 수, 수신 전화 수, 주문 수는 물론 해결해야 할 문제 및 고객의 평균 통화 응답 대기 시간을 추적합니다. 또한 데이터에는 고객 불만 지표인 *중단율*을 기반으로 한 서비스 품질 메트릭도 포함됩니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36311831"
   
  이 단원에서는 다음 항목을 다룹니다.  
   
--   [추가 데이터 원본 뷰를 콜 센터 데이터에 대 한 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+-   [추가 데이터 원본 뷰의 콜 센터 데이터에 대 한 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 -   [신경망 구조 및 모델 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
@@ -55,10 +55,10 @@ ms.locfileid: "36311831"
   
 -   [콜 센터 구조에 로지스틱 회귀 모델 추가 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
--   [콜 센터 모델에 대 한 예측 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+-   [콜 센터 모델에 대 한 예측을 만드는 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [추가 데이터 원본 뷰를 콜 센터 데이터에 대 한 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+ [추가 데이터 원본 뷰의 콜 센터 데이터에 대 한 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>모든 단원  
  [1 단원: 중간 데이터 마이닝 솔루션 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  

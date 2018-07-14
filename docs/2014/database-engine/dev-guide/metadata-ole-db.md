@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB, metadata
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e9979d9f2005f1d383206cb26c0f5fb5d1c6d95d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 47d727e52109aa19f9ebf21b2b93d82b91fce4a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263329"
 ---
 # <a name="metadata-ole-db"></a>메타데이터(OLE DB)
   이 섹션에서는 매개 변수 메타데이터, 결과 집합 열 메타데이터 및 스키마 행 집합 메타데이터에 대해 설명합니다.  

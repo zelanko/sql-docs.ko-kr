@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f1f86d8bc9b9be2a503e6e245d2b0b4d88917903
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 49dd8abf026cc3beffe30b0137abe643b29a97d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175357"
 ---
 # <a name="migrating-triggers"></a>트리거 마이그레이션
   이 항목에서는 DDL 및 DML 트리거와 메모리 최적화 테이블에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36089551"
   
  트리거 이벤트(FOR/AFTER 또는 INSTEAD OF)에 따라 해당 테이블에 대해 INSERT, UPDATE 또는 DELETE를 수행하는 트리거 내용을 적합한 저장 프로시저에 포함할 수 있습니다. 예를 들어 AFTER INSERT 트리거를 마이그레이션하는 경우 적합한 INSERT 문 다음에 트리거 내용을 포함하여 삽입 작업을 수행하는 저장 프로시저를 변경할 수 있습니다.  
   
- 해석된 저장 프로시저 또는 고유하게 컴파일된 저장 프로시저를 사용할 수 있습니다. 해석된 저장 프로시저에 있는 대부분의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 메모리 최적화 테이블에서 실행할 수 있습니다. 그러나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 하위 집합만 고유하게 컴파일된 저장 프로시저에서 지원됩니다. 에 대 한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 메모리 액세스에 최적화 된 테이블에서는 지원, 참조 [표를 사용 하 여 해석 된 TRANSACT-SQL 메모리](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)합니다. 에 대 한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조를 고유 하 게 컴파일된 저장된 프로시저에서 지원 [TRANSACT-SQL에서 메모리 내 OLTP에서 지원 되지 않는 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)합니다.  
+ 해석된 저장 프로시저 또는 고유하게 컴파일된 저장 프로시저를 사용할 수 있습니다. 해석된 저장 프로시저에 있는 대부분의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 메모리 최적화 테이블에서 실행할 수 있습니다. 그러나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 하위 집합만 고유하게 컴파일된 저장 프로시저에서 지원됩니다. 에 대 한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 메모리 최적화 테이블에서 지원 참조 하십시오 [메모리를 사용 하 여 해석 된 TRANSACT-SQL 테이블](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)합니다. 에 대 한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 고유 하 게 컴파일된 저장된 프로시저에서 지원 참조 하십시오 [Transact SQL 메모리 내 OLTP에서 지원 되지 않는 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)합니다.  
   
  다음은 메모리 최적화 테이블에 대한 DML 트리거 동작을 시뮬레이션하는 간단한 예입니다.  
   

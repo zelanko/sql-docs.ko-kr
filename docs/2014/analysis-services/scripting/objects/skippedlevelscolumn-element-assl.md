@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ae469982f39e1274759eaaea992fe456330d8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c04dea8c63d71483de9a8194a15bc4e4d7be5b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196033"
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>SkippedLevelsColumn 요소(ASSL)
     
@@ -66,15 +66,15 @@ ms.locfileid: "36089161"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `SkippedLevelsColumn` 요소는 부모 특성에만 적용할 수 (즉, 값은 [사용](../properties/usage-element-dimensionattribute-assl.md) 요소에 대 한는 `DimensionAttribute` 로 설정 됩니다 *부모*). `SkippedLevelsColumn` 요소는 각 멤버와 해당 부모 멤버 간의 건너뛴 수준 수를 저장하는 부모 특성에 대한 열 또는 특성을 포함합니다. 따라서 부모 특성을 기반으로 하는 부모-자식 계층이 멤버 간 수준을 건너뛸 수 있습니다. 이 열 또는 특성에 포함된 값은 음수가 아닌 정수여야 하며 그렇지 않으면 처리 오류가 발생합니다. `SkippedLevelsColumn` 요소를 지정하지 않거나 이 요소에 값을 포함하지 않으면 현재 멤버가 해당 부모 멤버보다 한 수준 아래에 있게 됩니다.  
+ `SkippedLevelsColumn` 요소는 부모 특성에만 적용 (값 즉,는 [사용량](../properties/usage-element-dimensionattribute-assl.md) 요소에 대 한 합니다 `DimensionAttribute` 로 설정 됩니다 *부모*). `SkippedLevelsColumn` 요소는 각 멤버와 해당 부모 멤버 간의 건너뛴 수준 수를 저장하는 부모 특성에 대한 열 또는 특성을 포함합니다. 따라서 부모 특성을 기반으로 하는 부모-자식 계층이 멤버 간 수준을 건너뛸 수 있습니다. 이 열 또는 특성에 포함된 값은 음수가 아닌 정수여야 하며 그렇지 않으면 처리 오류가 발생합니다. `SkippedLevelsColumn` 요소를 지정하지 않거나 이 요소에 값을 포함하지 않으면 현재 멤버가 해당 부모 멤버보다 한 수준 아래에 있게 됩니다.  
   
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 테이블에서 참조 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 자세한 내용은 합니다 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 테이블을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- 부모에 해당 하는 요소 `SkippedLevelsColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `SkippedLevelsColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소 특성 &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](dimension-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   
   

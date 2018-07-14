@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fe6a783cef802e9b68a063cf80016e7f31011cfa
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194393"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>5단원: 시계열 모델 확장
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise에서는 시계열 모델에 새 데이터를 추가하고 새 데이터를 모델에 자동으로 통합할 수 있습니다. 다음 두 가지 방법 중 하나를 사용하여 시계열 마이닝 모델에 새 데이터를 추가할 수 있습니다.  
@@ -53,7 +53,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>시계열 모델에 대한 단일 예측 쿼리를 만들려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -144,7 +144,7 @@ PREDICTION JOIN <source query>
   
 7.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-8.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Singleton_TimeSeries_Query.dmx`합니다.  
+8.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Singleton_TimeSeries_Query.dmx`입니다.  
   
 9. 도구 모음에서 **실행** 단추를 클릭합니다.  
   
@@ -196,7 +196,7 @@ PREDICTION JOIN <source query>
   
 -   네 개의 시간 조각에 대한 예측을 요청합니다. 여기에서 시작 지점은 3, 종료 지점은 시간 조각 6입니다.  
   
- 즉, 새 데이터에 n 개의 시간 조각이 시간 단계 1부터 n까지에 대 한 예측을 요청할 경우 예측은 새 데이터와 동일한 기간와 일치 합니다. 가지고 있는 데이터의 범위를 벗어나는 기간에 대한 새 예측을 구하려면 새 데이터 계열 다음의 n+1 시간 조각에서 예측을 시작하거나 추가 시간 조각을 요청해야 합니다.  
+ 즉, 새 데이터에 n 개의 시간 조각이 포함 되어 시간 단계 1부터 n까지에 대 한 예측을 요청할 경우 예측은 새 데이터와 동일한 기간와 일치 합니다. 가지고 있는 데이터의 범위를 벗어나는 기간에 대한 새 예측을 구하려면 새 데이터 계열 다음의 n+1 시간 조각에서 예측을 시작하거나 추가 시간 조각을 요청해야 합니다.  
   
 > [!NOTE]  
 >  새 데이터를 추가할 때에는 기록 예측을 수행할 수 없습니다.  
@@ -234,7 +234,7 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>REPLACE_MODEL_CASES로 예측 수행  
- 모델 사례 대체는 하나의 사례 집합을 학습시킨 다음 이 모델을 다른 데이터 계열에 적용하려는 경우 유용합니다. 이 시나리오의 자세한 연습에 표시 된 [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
+ 모델 사례 대체는 하나의 사례 집합을 학습시킨 다음 이 모델을 다른 데이터 계열에 적용하려는 경우 유용합니다. 이 시나리오의 자세한 연습에 제공 됩니다 [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [시계열 모델 쿼리 예제](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

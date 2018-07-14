@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a915013d779392d585bd5609384fab7bffd2800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 240ae9701aa48f393c77dd27aafcd350bdd89d51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220530"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기
   이 작업에서는 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 가져옵니다. 자세한 내용은 [정리 프로젝트 값을 도메인으로 가져오기](http://msdn.microsoft.com/library/hh479581.aspx) 항목을 참조하십시오. 또한 업데이트된 **Suppliers** 기술 자료를 게시하기 전에 기술 자료를 DQS로 내보냅니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36082182"
   
 3.  도구 모음에서 **값 가져오기** 아이콘 옆의 **아래쪽 화살표** 를 클릭하고 **프로젝트 값 가져오기**를 클릭합니다.  
   
-     ![프로젝트 가져오기 도구 모음 단추 값](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "가져오기 프로젝트 값 도구 모음 단추")  
+     ![프로젝트 가져오기 도구 모음 단추를 값](../../2014/tutorials/media/et-importingvaluesfromthecslistproject-01.jpg "가져오기 프로젝트 값 도구 모음 단추")  
   
 4.  **프로젝트 값 가져오기** 대화 상자에서 **Cleanse Supplier List** 프로젝트를 선택하고 **확인**을 클릭합니다.  
   

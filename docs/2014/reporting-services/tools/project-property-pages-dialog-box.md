@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5ccad4480d09fad1aab6b406cbd3a42ad9083b9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238383"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
   프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 *\<Report Project Name>***속성**을 클릭합니다.  
@@ -57,32 +57,32 @@ ms.locfileid: "36088087"
  보고서가 게시될 때 서버의 데이터 원본을 프로젝트의 데이터 원본으로 덮어쓰려면 **True** 를 선택하고, 서버의 기존 데이터 원본을 그대로 두려면 **False** 를 선택합니다.  
   
  **TargetServerVersion**  
- 중 하나를 선택는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 선택 또는 **버전 검색** 를 식별 하는 서버에 설치 된 버전을 자동으로 결정 된 **TargetServer URL** 속성입니다. 기본값은 **SQL Server 2008 R2**입니다.  
+ 중 하나를 선택 합니다 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 선택 하거나 **버전 검색** 자동으로 식별 하는 서버에 설치 된 버전을 확인 하는 **TargetServer URL** 속성입니다. 기본값은 **SQL Server 2008 R2**입니다.  
   
  **TargetDataSourceFolder**  
  게시된 공유 데이터 원본을 저장할 폴더의 이름입니다. 폴더를 지정하지 않는 경우 데이터 원본은 보고서와 같은 폴더에 게시됩니다. 보고서 서버에 폴더가 없는 경우 보고서가 게시될 때 보고서 디자이너에서 폴더를 만듭니다.  
   
  기본 모드로 실행 중인 보고서 서버에 게시하는 경우 루트로 시작되는 폴더 계층의 전체 경로를 지정합니다. Folder1/Folder2/Folder3).  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어 http://*\<서버 이름 > /\<사이트 >*/documents/myfolder 합니다.  
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어, http://*\<서버 이름 > /\<사이트 >*/documents/myfolder 합니다.  
   
  **TargetReportFolder**  
  게시된 보고서를 저장할 폴더의 이름입니다. 기본적으로 보고서 프로젝트의 이름입니다. 보고서 서버에 폴더가 없는 경우 보고서가 게시될 때 보고서 디자이너에서 폴더를 만듭니다.  
   
  기본 모드로 실행 중인 보고서 서버에 게시하는 경우 루트로 시작되는 폴더 계층의 전체 경로를 지정합니다. 폴더가 다른 폴더 안에 있는 경우 루트로 시작되는 폴더 경로를 입력합니다(예: Folder1/Folder2/Folder3).  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어 http://*\<서버 이름 >*/*\<사이트 >*/documents/myfolder 합니다.  
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어, http://*\<서버 이름 >*/*\<사이트 >*/documents/myfolder 합니다.  
   
  **TargetServerURL**  
  대상 보고서 서버의 URL입니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다.  
   
- 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL을 사용합니다(예: 예를 들어 http://\<서버 > / reportserver입니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다. 기본적으로 보고서 서버는 "reportserver"라는 가상 디렉터리에 설치되어 있습니다.  
+ 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL을 사용합니다(예: 예를 들어, http://\<서버 > / reportserver입니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다. 기본적으로 보고서 서버는 "reportserver"라는 가상 디렉터리에 설치되어 있습니다.  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 예를 들어 http://\<*서버 이름 >*, http://&lt*servername*/\<*사이트 >* 또는 http://\< *서버 이름 >*/\<*사이트 >*/\<*하위 >* 합니다.  
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 예를 들어, http://\<*서버 이름 >*, http://&lt*servername*/\<*사이트 >* 또는 http://\< *서버 이름 >*/\<*사이트 >*/\<*하위 >* 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 게시](../publish-reports.md)   
- [SharePoint 라이브러리에 보고서를 게시 합니다.](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 보고서 게시](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [배포 속성 설정 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [보고서 디자이너 F1 도움말](report-designer-f1-help.md)  
   

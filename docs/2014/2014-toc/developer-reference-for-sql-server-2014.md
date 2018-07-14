@@ -1,27 +1,26 @@
 ---
-title: SQL Server 2014 개발자 참조 | Microsoft Docs
+title: SQL Server 2014 용 개발자 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b31e616e301c659ee25f4f6e4be1779ec362b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d28d430ee7401fcdf248d6a5d13da558519a71ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192903"
 ---
 # SQL Server 2014 개발자 참조
   다음 기능과 기술을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 응용 프로그램을 개발할 수 있습니다.  
@@ -35,9 +34,9 @@ ms.locfileid: "36089192"
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [SQLXML 4.0 프로그래밍 개념](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
- ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [WMI Provider for Configuration Management Concepts](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
+ ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [용 WMI 공급자 구성 관리 개념](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
- ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [서버 이벤트 개념에 대 한 WMI 공급자](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
+ ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [용 WMI 공급자 서버 이벤트 개념](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [WMI 공급자 이벤트 및 오류](../relational-databases/native-client-ole-db-errors/errors.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "36089192"
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [개발 analysis Services Scripting Language &#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [데이터 마이닝용 OLE DB](../analysis-services/dev-guide/ole-db-for-data-mining.md)  
   

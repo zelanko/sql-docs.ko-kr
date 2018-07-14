@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: de909a10f9a0a76b8cf9c505120fa75ca1ff0a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177286"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>집계 함수 참조(보고서 작성기 및 SSRS)
   보고서에 집계 값을 포함하려면 식에서 기본 제공 집계 함수를 사용할 수 있습니다. 숫자 필드에 대한 기본 집계 함수는 SUM입니다. 식을 편집하고 다른 기본 제공 집계 함수를 사용하거나 다른 범위를 지정할 수 있습니다. 범위는 계산에 사용할 데이터 집합을 식별합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36089251"
   
 -   [범위 테스트](#TestingforScope)  
   
- 각 함수에 대한 유효한 범위를 확인하려면 개별 함수 참조 항목을 확인하십시오. 자세한 정보 및 예제 참조 [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)합니다.  
+ 각 함수에 대한 유효한 범위를 확인하려면 개별 함수 참조 항목을 확인하십시오. 자세한 정보 및 예제를 참조 하세요 [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -125,7 +125,7 @@ ms.locfileid: "36089251"
   
 |**함수**|**설명**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|지정한 범위에서 행 개수의 실행 개수를 반환합니다. `RowNumber` 0이 아닌 1부터 계산을 다시 시작 합니다.|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|지정한 범위에서 행 개수의 실행 개수를 반환합니다. `RowNumber` 1, 0이 아닌 계산을 다시 시작 합니다.|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.|  
   
 ##  <a name="RetrievingRowCounts"></a> 행 개수 검색  
@@ -145,7 +145,7 @@ ms.locfileid: "36089251"
 |[Multilookup 함수](report-builder-functions-multilookup-function.md)|이름/값 쌍을 포함하는 데이터 집합에서 이름 집합과 처음 일치하는 값 집합을 반환합니다.|  
   
 ##  <a name="RetrievingPostsortValues"></a> 정렬 종속 값 검색  
- 다음 기본 제공 함수는 지정된 범위 내의 첫 번째, 마지막 또는 이전 값을 반환합니다. 이러한 함수는 데이터 값의 정렬 순서에 따라 달라집니다. 예를 들어 이러한 함수를 사용하여 페이지의 첫 번째와 마지막 값을 찾아 사전 스타일의 페이지 머리글을 만들 수 있습니다. 사용 하 여 `Previous` 동기 대비 백분율 찾을 연도 값 테이블에서 예를 들어 특정 범위 내의 이전 행의 값을 한 행에 값을 비교 합니다.  
+ 다음 기본 제공 함수는 지정된 범위 내의 첫 번째, 마지막 또는 이전 값을 반환합니다. 이러한 함수는 데이터 값의 정렬 순서에 따라 달라집니다. 예를 들어 이러한 함수를 사용하여 페이지의 첫 번째와 마지막 값을 찾아 사전 스타일의 페이지 머리글을 만들 수 있습니다. 사용 하 여 `Previous` 예를 들어 특정 범위 내에서 이전 행의 값으로 하나의 행에 있는 값을 비교에 테이블에서 연도 값에 대해 백분율을 찾을 수 있습니다.  
   
 |**함수**|**설명**|  
 |------------------|---------------------|  
@@ -168,14 +168,14 @@ ms.locfileid: "36089251"
 |[InScope](report-builder-functions-inscope-function.md)|항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 재귀 수준 검색  
- 다음 기본 제공 함수는 재귀 계층이 처리될 때 현재 수준을 검색합니다. 이 함수의 결과 사용 하 여는 `Padding` 재귀 그룹에 대 한 시각적 계층의 들여쓰기 수준을 제어할 수 있는 텍스트 상자에는 속성입니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
+ 다음 기본 제공 함수는 재귀 계층이 처리될 때 현재 수준을 검색합니다. 이 함수를 사용 하 여 결과를 사용 하 여를 `Padding` 재귀 그룹에 대 한 시각적 계층의 들여쓰기 수준을 제어 하려면 텍스트 상자에는 속성입니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
   
 |기능|Description|  
 |--------------|-----------------|  
 |[Level](report-builder-functions-level-function.md)|재귀 계층의 현재 수준을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   

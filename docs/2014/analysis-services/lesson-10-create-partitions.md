@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261375"
 ---
 # <a name="lesson-11-create-partitions"></a>11단원: 파티션 만들기
   이 단원에서는 다른 파티션과 독립적으로 처리(새로 고침)할 수 있도록 파티션을 만들어 Internet Sales 테이블을 더 작은 논리적 부분으로 나눕니다. 기본적으로 모델에 포함하는 각 테이블에는 테이블의 열과 행이 모두 들어 있는 파티션이 하나씩 포함되어 있습니다. 여기서는 Internet Sales 테이블의 데이터를 연도별로 나누고, 테이블에 있는 5개의 연도 각각에 대해 파티션을 하나씩 만들려고 합니다.  이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
@@ -37,9 +37,9 @@ ms.locfileid: "36088037"
   
      **파티션 관리자** 대화 상자가 열립니다.  
   
-2.  에 **파티션 관리자** 대화 상자의 **파티션을**, 클릭는 **인터넷 판매** 파티션 합니다.  
+2.  에 **파티션 관리자** 대화 상자의 **파티션**를 클릭 합니다 **Internet Sales** 파티션.  
   
-3.  **파티션 이름**, 이름을 `Internet Sales 2005`합니다.  
+3.  **파티션 이름을**, 이름을 `Internet Sales 2005`입니다.  
   
     > [!TIP]  
     >  다음 단계로 진행하기 전에 테이블 미리 보기 창을 보면 열 이름에 모델 테이블(선택됨)에 포함된 열이 원본의 열 이름과 함께 표시되는 것을 확인할 수 있습니다. 이는 테이블 미리 보기 창에 모델 테이블의 열이 아니라 원본 테이블의 열이 표시되기 때문입니다.  
@@ -83,43 +83,43 @@ ms.locfileid: "36088037"
   
 6.  **유효성 검사**를 클릭합니다.  
   
-     특정 열이 원본에 없음을 나타내는 경고가 표시됩니다. ¿¡´에 [3 단원: 열 이름 바꾸기](rename-columns.md), 원본에 있는 동일한 열과에서 일치 하지 않아도 모델에 Internet Sales 테이블의 열 이름을 변경 합니다.  
+     특정 열이 원본에 없음을 나타내는 경고가 표시됩니다. 때문에 [3 단원: 열 이름 바꾸기](rename-columns.md), 원본에 동일한 열에서 서로 다른 모델의 Internet Sales 테이블의 열 이름을 바꾼 합니다.  
   
-#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>2006 년 인터넷 판매 테이블에서 파티션을 만들려면  
+#### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Internet Sales 테이블에서 2006 년에 대 한 파티션을 만들려면  
   
-1.  에 **파티션 관리자** 대화 상자의 **파티션을**, 클릭는 `Internet Sales 2005` 방금 만든 파티션을 차례로 **복사**합니다.  
+1.  에 **파티션 관리자** 대화 상자의 **파티션**, 클릭 합니다 `Internet Sales 2005` 방금 만든 파티션을 차례로 **복사**.  
   
-2.  **파티션 이름**, 형식 `Internet Sales 2006`합니다.  
+2.  **파티션 이름을**, 형식 `Internet Sales 2006`합니다.  
   
-3.  순서로 2006 년에 대 한 행만 포함 하도록 파티션에 대 한 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
+3.  순서 대로 파티션에 2006 년에 한 행만 포함 되도록 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>인터넷 판매 테이블에서 2007 년에 대 한 파티션을 만들려면  
+#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>Internet Sales 테이블에서 2007 년에 대 한 파티션을 만들려면  
   
 1.  **파티션 관리자** 대화 상자에서 **복사**를 클릭합니다.  
   
-2.  **파티션 이름**, 형식 `Internet Sales 2007`합니다.  
+2.  **파티션 이름을**, 형식 `Internet Sales 2007`합니다.  
   
-3.  **전환**선택, **쿼리 편집기**합니다.  
+3.  **전환**를 선택 **쿼리 편집기**합니다.  
   
-4.  순서로 2007 년에 대 한 행만 포함 하도록 파티션에 대 한 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
+4.  순서로 파티션에 2007 년에 한 행만 포함 되도록 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>인터넷 판매 테이블에서 2008 년에 대 한 파티션을 만들려면  
+#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>Internet Sales 테이블에서 2008 년에 대 한 파티션을 만들려면  
   
 1.  **파티션 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
-2.  **파티션 이름**, 형식 `Internet Sales 2008`합니다.  
+2.  **파티션 이름을**, 형식 `Internet Sales 2008`합니다.  
   
-3.  **전환**선택, **쿼리 편집기**합니다.  
+3.  **전환**를 선택 **쿼리 편집기**합니다.  
   
-4.  2008 년에 대 한 행만 포함 하도록 파티션에 대 한 순서 대로 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
+4.  순서 대로 파티션에 2008 년에 한 행만 포함 되도록 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -129,9 +129,9 @@ ms.locfileid: "36088037"
   
 1.  **파티션 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
-2.  **파티션 이름**, 형식 `Internet Sales 2009`합니다.  
+2.  **파티션 이름을**, 형식 `Internet Sales 2009`합니다.  
   
-3.  **전환**선택, **쿼리 편집기**합니다.  
+3.  **전환**를 선택 **쿼리 편집기**합니다.  
   
 4.  2009년에 해당하는 행만 파티션에 포함되도록 SQL 문에서 WHERE 절을 다음으로 바꿉니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36088037"
   
      가장 자격 증명을 요청하는 메시지가 표시되면 2단원의 6단계에서 지정한 Windows 사용자 이름 및 암호를 입력합니다.  
   
-     **데이터 프로세스** 대화 상자가 다음 표시 되 고 각 파티션에 대 한 처리 정보가 표시 됩니다. 파티션마다 서로 다른 개수의 행이 전송되었음을 확인할 수 있습니다. 이는 각 파티션에 해당 SQL 문의 WHERE 절에 지정된 연도의 행만 포함되어 있기 때문입니다. 2010년에는 해당하는 데이터가 없습니다.  
+     합니다 **데이터 프로세스** 대화 상자가 다음 나타나고 각 파티션에 대 한 처리 정보가 표시 됩니다. 파티션마다 서로 다른 개수의 행이 전송되었음을 확인할 수 있습니다. 이는 각 파티션에 해당 SQL 문의 WHERE 절에 지정된 연도의 행만 포함되어 있기 때문입니다. 2010년에는 해당하는 데이터가 없습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  이 자습서를 계속하려면 다음 단원인 [12단원: 역할 만들기](lesson-11-create-roles.md)로 이동하세요.  

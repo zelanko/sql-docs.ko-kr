@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c3d32e750728e1b427b7c33179d4dcf3de6eb395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f612ac92f6741f83a92f29987cea03f662815e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181500"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 응용 프로그램
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 서비스 아키텍처에 맞게 구축 되었으며 SharePoint 서비스와 일대다 서비스 응용 프로그램 하나를 활용 합니다. 서비스 응용 프로그램을 만들면 서비스를 사용할 수 있게 되며 서비스 응용 프로그램 데이터베이스가 생성됩니다. Reporting Services 서비스 응용 프로그램은 여러 개 만들 수 있지만 대부분의 배포 시나리오에서 서비스 응용 프로그램은 하나면 충분합니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 서비스 아키텍처에 맞게 구축 되었으며 SharePoint 서비스와 일대다 서비스 응용 프로그램을 사용 합니다. 서비스 응용 프로그램을 만들면 서비스를 사용할 수 있게 되며 서비스 응용 프로그램 데이터베이스가 생성됩니다. Reporting Services 서비스 응용 프로그램은 여러 개 만들 수 있지만 대부분의 배포 시나리오에서 서비스 응용 프로그램은 하나면 충분합니다.  
   
  이 항목에는 다음과 같은 정보가 포함되어 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36090183"
   
 2.  서비스 응용 프로그램 연결 페이지에서 보기를 **서비스 응용 프로그램**으로 변경합니다.  
   
-3.  찾기 및 새 사용자의 이름을 클릭 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 또한 응용 프로그램 프록시 그룹 이름인 **기본값** 을 클릭하여 다음 단계를 완료하는 대신 기본 그룹에 프록시를 추가할 수도 있습니다.  
+3.  찾기 및 새 이름을 클릭 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 또한 응용 프로그램 프록시 그룹 이름인 **기본값** 을 클릭하여 다음 단계를 완료하는 대신 기본 그룹에 프록시를 추가할 수도 있습니다.  
   
 4.  **다음 연결 그룹 편집** 선택 상자에서 **사용자 지정**을 선택합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6dbda4a8b745e0745ff13d641a93c3350c8af20e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6aafcdccb92c093b6ff0e8c2a4a163cc6878b21e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217733"
 ---
 # <a name="xml-source"></a>XML 원본
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36088254"
 ## <a name="configuration-of-the-xml-source"></a>XML 원본 구성  
  XML 원본은 3가지 데이터 액세스 모드를 지원합니다. XML 데이터 파일의 파일 위치, 이 파일 위치가 포함된 변수 또는 XML 데이터가 포함된 변수를 지정할 수 있습니다.  
   
- XML 원본에 포함 되어는 `XMLData` 및 `XMLSchemaDefinition` 패키지가 로드 되 면 속성 식을 통해 업데이트할 수 있는 사용자 지정 속성입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../expressions/integration-services-ssis-expressions.md), [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md) 및 [XML 원본 사용자 지정 속성](xml-source-custom-properties.md)을 참조하세요.  
+ XML 소스에 포함 된 `XMLData` 및 `XMLSchemaDefinition` 를 패키지 로드 시 속성 식을 통해 업데이트할 수 있는 사용자 지정 속성입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../expressions/integration-services-ssis-expressions.md), [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md) 및 [XML 원본 사용자 지정 속성](xml-source-custom-properties.md)을 참조하세요.  
   
  XML 원본은 여러 개의 일반 출력과 여러 개의 오류 출력을 지원합니다.  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportingFirstMonth element
 ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 227793bb2de61aa38166ee9cca0d0d01d0f5f6a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d7e17e35e334e982ba3a230af5b1506f3d071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275219"
 ---
 # <a name="reportingfirstmonth-element-assl"></a>ReportingFirstMonth 요소(ASSL)
-  첫 번째 보고 월을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
+  첫 번째 보고 월을 정의 합니다 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36081204"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ReportingFirstMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
+ 부모에 해당 하는 요소가 `ReportingFirstMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

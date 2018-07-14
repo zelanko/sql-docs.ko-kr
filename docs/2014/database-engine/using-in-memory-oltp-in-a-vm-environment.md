@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ac5bae341711dc0ded20efdf57fe1ac776ec208b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e048f54a3ba3824981c1561c7f2308571e72c450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180320"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>VM 환경에서 메모리 내 OLTP 사용
   서버 가상화 기술을 사용하면 IT 자본 및 운영 비용을 줄이고 향상된 응용 프로그램 프로비전, 유지 관리, 가용성 및 백업/복구 프로세스를 통해 IT 효율성을 높일 수 있습니다. 최근의 기술적 진보에 따라 가상화를 사용하면 복잡한 데이터베이스 작업도 보다 쉽고 간단하게 통합할 수 있습니다. 이 항목에서는 가상화된 환경에서 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 를 사용하기 위한 모범 사례에 대해 설명합니다.  

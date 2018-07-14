@@ -1,5 +1,5 @@
 ---
-title: 보고서 관리자를 사용 하 여 모델을 만들 | Microsoft Docs
+title: 보고서 관리자를 사용 하 여 모델 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175092"
 ---
 # <a name="create-a-model-using-report-manager"></a>보고서 관리자를 사용하여 모델 만들기
   보고서 관리자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 또는 Oracle 데이터베이스에서 모델을 생성할 수 있습니다. 보고서 모델은 보고서 서버에 게시된 공유 데이터 원본에서 생성됩니다. 공유 데이터 원본이 없는 경우 새로 만들어야 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36080838"
  생성되는 보고서 모델은 전적으로 공유 데이터 원본의 스키마를 기반으로 합니다. 모델에 포함될 데이터 원본 부분을 선택하거나 생성되는 모델의 규칙 또는 메타데이터를 편집할 수는 없습니다. 그러나 모델이 생성된 후 속성을 설정하고 모델 전체 또는 일부에 대한 액세스를 제한하는 역할 할당을 정의할 수 있습니다.  
   
 > [!NOTE]  
->  보고서 관리자를 사용 하 여 생성 하는 Oracle 기반 모델 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Oracle 데이터 원본에 연결 하는 데 사용 되는 사용자 계정에 대 한 스키마의 일부인 데이터베이스 개체가 포함 됩니다. 사용자 계정 이름은 데이터 원본 속성 자격 증명에 지정되어 있습니다.  
+>  보고서 관리자를 사용 하 여 생성 된 Oracle 기반 모델을 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Oracle 데이터 원본에 연결할 때 사용할 사용자 계정에 대 한 스키마의 일부인 데이터베이스 개체가 포함 됩니다. 사용자 계정 이름은 데이터 원본 속성 자격 증명에 지정되어 있습니다.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>보고서 관리자를 사용하여 보고서 모델에 대한 새 데이터 원본을 만들려면  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36080838"
   
     -   Windows 인증: 운영 체제에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자를 인증하게 하려면 이 옵션을 선택합니다. 이 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 암호 암호화 같은 Windows 보안 기능을 사용하여 사용자를 인증할 수 있습니다. 이 옵션을 반드시 선택하도록 합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증: 사용자가 사용 하도록 하려는 경우이 옵션을 선택는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 만든 로그인 계정입니다. 사용자는 유효한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인 이름과 암호를 제공해야 합니다.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증: 사용자가 사용 하도록 하려는 경우이 옵션을 선택 된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 만든 로그인 계정입니다. 사용자는 유효한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인 이름과 암호를 제공해야 합니다.  
   
         > [!CAUTION]  
         >  가능하면 Windows 인증을 사용하십시오.  

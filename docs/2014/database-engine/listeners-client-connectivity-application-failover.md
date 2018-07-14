@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197873"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 클라이언트 연결 및 응용 프로그램 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에는 `ApplicationIntent` 속성이로 설정 `ReadOnly`,이 *읽기 전용 연결 문자열*합니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
+ 이 연결 문자열 예에서 클라이언트는 포트 1433에서 `AGListener` 라는 가용성 그룹 수신기에 연결을 시도합니다. 가용성 그룹 수신기가 1433에서 수신하는 경우 포트를 생략할 수도 있습니다.  연결 문자열에는 `ApplicationIntent` 속성으로 설정 `ReadOnly`,이 *읽기 전용 연결 문자열*합니다.  이 설정이 없으면 서버에서 연결에 대한 읽기 전용 라우팅을 시도하지 않습니다.  
   
  가용성 그룹의 주 데이터베이스는 들어오는 읽기 전용 라우팅 요청을 처리한 다음 주 복제본에 조인되고 읽기 전용 라우팅을 위해 구성된 온라인 읽기 전용 복제본을 찾습니다.  클라이언트는 주 복제본 서버에서 연결 정보를 다시 받고 식별된 읽기 전용 복제본에 연결합니다.  
   
  응용 프로그램 의도는 클라이언트 드라이버에서 SQL Server의 하위 인스턴스로 보낼 수 있습니다.  이 경우에는 응용 프로그램의 읽기 전용 의도가 무시되고 연결이 정상적으로 진행됩니다.  
   
- 응용 프로그램 의도 연결 속성 설정 하지 않은 경우 읽기 전용 라우팅을 무시할 수 있습니다 `ReadOnly` (지정 하지 않을 경우 기본값은 `ReadWrite` 로그인 하는 동안) 사용 하는 대신 SQL Server의 주 복제본 인스턴스에 직접 연결 하거나 가용성 그룹 수신기 이름입니다.  또한 읽기 전용 복제본에 직접 연결하면 읽기 전용 라우팅이 발생하지 않습니다.  
+ 응용 프로그램 의도 연결 속성 설정 하지 않으면 읽기 전용 라우팅을 무시할 수 있습니다 `ReadOnly` (기본값은 지정 하지 않을 경우 `ReadWrite` 로그인 하는 동안) 사용 하는 대신 SQL Server의 주 복제본 인스턴스에 직접 연결 하거나 가용성 그룹 수신기 이름입니다.  또한 읽기 전용 복제본에 직접 연결하면 읽기 전용 라우팅이 발생하지 않습니다.  
   
 ####  <a name="RelatedTasksApps"></a> 관련 태스크  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  가용성 그룹 수신기와 SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름에 대한 단일 및 다중 서브넷 연결 모두에 대해 이 설정을 사용하는 것이 좋습니다.  이 옵션을 사용하면 단일 서브넷 시나리오에 대해서도 최적화가 추가됩니다.  
   
- `MultiSubnetFailover` 연결 옵션은 TCP 네트워크 프로토콜에 대해서만 작동 하 고 하며 모든 가상 네트워크에 연결 이름에 대 한 가용성 그룹 수신기에 연결할 때만 지원 됩니다 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]합니다.  
+ 합니다 `MultiSubnetFailover` 연결 옵션은 TCP 네트워크 프로토콜에만 작동 하 고 및 가상 네트워크 이름을 연결 하는 모든 가용성 그룹 수신기에 연결할 때만 지원 됩니다 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]합니다.  
   
  다중 서브넷 장애 조치(failover)를 사용하는 ADO.NET 공급자(System.Data.SqlClient) 연결 문자열의 예는 다음과 같습니다.  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover` 로 연결 옵션을 설정 해야 `True` 가용성 그룹이 단일 서브넷에만 있는 경우에 합니다.  그러면 나중에 클라이언트 연결 문자열을 변경하지 않고도 서브넷 확장을 지원하도록 새 클라이언트를 미리 구성하여 단일 서브넷 장애 조치(failover)에 대한 장애 조치(failover) 성능을 최적화할 수 있습니다.  반면는 `MultiSubnetFailover` 연결 옵션은 필수가, 더 빠른는 서브넷 장애 조치는 이점이 있습니다.  클라이언트 드라이버가 가용성 그룹과 병렬로 연결된 각 IP 주소에 대해 TCP 소켓을 열려고 하기 때문입니다.  클라이언트 드라이버는 첫 번째 IP가 응답할 때까지 기다린 다음 성공적으로 응답하면 해당 IP를 사용하여 연결합니다.  
+ 합니다 `MultiSubnetFailover` 연결 옵션 설정 해야 `True` 가용성 그룹이 단일 서브넷에만 적용 되는 경우에 합니다.  그러면 나중에 클라이언트 연결 문자열을 변경하지 않고도 서브넷 확장을 지원하도록 새 클라이언트를 미리 구성하여 단일 서브넷 장애 조치(failover)에 대한 장애 조치(failover) 성능을 최적화할 수 있습니다.  하지만 `MultiSubnetFailover` 연결 옵션이 필요 하지 않습니다, 더 빠른 서브넷 장애 조치의 이점을 제공 합니다.  클라이언트 드라이버가 가용성 그룹과 병렬로 연결된 각 IP 주소에 대해 TCP 소켓을 열려고 하기 때문입니다.  클라이언트 드라이버는 첫 번째 IP가 응답할 때까지 기다린 다음 성공적으로 응답하면 해당 IP를 사용하여 연결합니다.  
   
 ##  <a name="SSLcertificates"></a> 가용성 그룹 수신기 및 SSL 인증서  
  가용성 그룹 수신기에 연결할 때 SQL Server의 참여 인스턴스에서 SSL 인증서를 세션 암호화와 함께 사용하는 경우 암호화를 적용하려면 연결하는 클라이언트 드라이버가 SSL 인증서에서 Subject Alternate 이름을 지원해야 합니다.  인증서 Subject Alternative 이름에 대한 SQL Server 드라이버 지원은 ADO.NET(SqlClient), Microsoft JDBC 및 SNAC(SQL Native Client)에 포함될 계획입니다.  
@@ -210,7 +209,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)(가용성 그룹 수신기 소개)(SQL Server AlwaysOn 팀 블로그)  
   

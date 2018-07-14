@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d5690f488c5cb0119c62be819e1cfece41d2fda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218003"
 ---
 # <a name="measures-ssas-tabular"></a>측정값(SSAS 테이블 형식)
   테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
@@ -96,17 +96,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> KPI의 측정값 사용  
  KPI(핵심 성과 지표)는 측정값으로 정의된 *기본* 값을 측정값이나 절대값으로 정의된 *대상* 값과 비교하여 정의됩니다. 또한 KPI는 그래픽 형식으로 표시되며 기본 값이 임계값 사이의 대상 값에 대해서만 평가를 수행하는 계산인 *상태*를 포함합니다. KPI는 경영진이 중요한 비즈니스 메트릭 동향을 식별하는 데 자주 사용됩니다.  
   
- 모든 측정값을 KPI의 기본 측정값으로 사용할 수 있습니다. KPI를 만들려면 측정값 표에서 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. KPI 대화 상자에서 측정값 또는 절대값으로 정의된 대상 값을 지정하고 상태 임계값과 그래픽 종류를 정의할 수 있습니다. 자세한 내용은 참조 [Kpi &#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)합니다.  
+ 모든 측정값을 KPI의 기본 측정값으로 사용할 수 있습니다. KPI를 만들려면 측정값 표에서 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. KPI 대화 상자에서 측정값 또는 절대값으로 정의된 대상 값을 지정하고 상태 임계값과 그래픽 종류를 정의할 수 있습니다. 자세한 내용은 [Kpi &#40;&AMP;#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_rel_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  
-|[측정값 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)|모델 디자이너의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법에 대해 설명합니다.|  
+|[측정값 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)|모델 디자이너의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Kpi &#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
- [Kpi 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](create-and-manage-kpis-ssas-tabular.md)   
- [계산 된 열 &#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)  
+ [Kpi &#40;&AMP;#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
+ [Kpi 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [계산 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)  
   
   

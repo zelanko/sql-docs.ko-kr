@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8b02460500a79d1ff98dfac84a07782c388ef10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfebce28ae08d0d76fa851b9d9df3ded8f6c28fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200093"
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 요소(ASSL)
   데이터베이스의 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36082766"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AggregationDesigns](../collections/aggregationdesigns-element-assl.md)|  
-|자식 요소|[집계](../collections/aggregations-element-assl.md), [주석](../collections/annotations-element-assl.md), [설명](../properties/description-element-assl.md), [차원](../collections/dimensions-element-assl.md), [EstimatedPerformanceGain](../properties/estimatedperformancegain-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [이름](../properties/name-element-assl.md)|  
+|자식 요소|[집계](../collections/aggregations-element-assl.md), [주석을](../collections/annotations-element-assl.md)를 [설명](../properties/description-element-assl.md)를 [차원](../collections/dimensions-element-assl.md)를 [EstimatedPerformanceGain](../properties/estimatedperformancegain-element-assl.md)를 [EstimatedRows](../properties/estimatedrows-element-assl.md)하십시오 [ID](../properties/id-element-assl.md), [이름](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationDesign>합니다.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
 - permissions [Master Data Services], deleting model object permissions
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd91a175738da87a77857bc74f8b09d357b0dd12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: aff62adeb15d83cdf5e543d5ecea77b70911b76c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169140"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체 사용 권한을 삭제하여 모든 할당을 제거합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36082292"
   
 5.  또는 **모델** 목록에서 모델을 선택합니다.  
   
-6.  에 **모델 권한 요약** 창에서 삭제 하려는 사용 권한의 행을 선택 합니다.  
+6.  에 **모델 권한 요약** 창 삭제 하려는 사용 권한의 행을 선택 합니다.  
   
 7.  클릭 **선택한 사용 권한 삭제**합니다.  
   

@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235563"
 ---
 # <a name="execute-method-xmla"></a>Execute 메서드(XMLA)
-  인스턴스를 Analysis (XMLA) 명령에 대 한 XML 보냅니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 여기에는 서버의 데이터 검색 또는 업데이트와 같은 데이터 전송 관련 요청이 포함됩니다.  
+  Analysis (XMLA) 명령에 대 한 XML의 인스턴스로 보냅니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 여기에는 서버의 데이터 검색 또는 업데이트와 같은 데이터 전송 관련 요청이 포함됩니다.  
   
  **네임스페이스** urn:schemas-microsoft-com:xml-analysis  
   
@@ -67,10 +67,10 @@ ms.locfileid: "36081629"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[명령](xml-elements-properties/command-element-xmla.md), [매개 변수](xml-elements-properties/parameters-element-xmla.md), [속성](xml-elements-properties/properties-element-xmla.md)|  
+|자식 요소|[명령](xml-elements-properties/command-element-xmla.md)하십시오 [매개 변수](xml-elements-properties/parameters-element-xmla.md), [속성](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Execute` 메서드가에 제공 된 XMLA 명령을 실행의 `Command` 요소 XMLA 결과 중 하나를 사용 하 여 데이터를 반환 하 고 [행 집합](xml-data-types/rowset-data-type-xmla.md) (테이블 형식 결과 집합 지원)에 대 한 데이터 형식이 나 XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) 데이터 형식 (다차원 결과 집합입니다.)  
+ `Execute` 메서드가에 제공 된 XMLA 명령을 실행 합니다 `Command` 요소 XMLA 중 하나를 사용 하 여 모든 결과 데이터를 반환 하 고 [행 집합](xml-data-types/rowset-data-type-xmla.md) 데이터 형식 (테이블 형식 결과 집합) 또는 XMLA [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) 데이터 형식 (다차원 결과 집합입니다.)  
   
 ## <a name="example"></a>예제  
  다음 코드 예제는 MDX(Multidimensional Expressions) SELECT 문을 포함하는 `Execute` 메서드 호출의 예입니다.  

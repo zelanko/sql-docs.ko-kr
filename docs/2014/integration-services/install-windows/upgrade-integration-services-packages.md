@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233443"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
-  인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 현재 버전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지는 패키지 형식으로 현재 버전으로 자동으로 업그레이드 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용합니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  
+  인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 나 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 현재 릴리스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지는 현재 릴리스는 패키지 형식으로 자동 업그레이드 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용합니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지를 업그레이드할 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 모든 스크립트 태스크와 스크립트 구성 요소의 스크립트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)로 마이그레이션합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 스크립트 태스크나 스크립트 구성 요소의 스크립트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications)를 사용합니다. 마이그레이션 전에 스크립트에서 변경해야 할 내용과 스크립트 변환 실패에 대한 자세한 내용은 [VSTA로 스크립트 마이그레이션](../../sql-server/install/migrate-scripts-to-vsta.md)을 참조하세요.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36088444"
 ## <a name="custom-applications-and-custom-components"></a>사용자 지정 응용 프로그램 및 사용자 지정 구성 요소  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 사용자 지정 구성 요소는 현재 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 작동하지 않습니다.  
   
- 현재 버전의를 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 도구를 실행 하 고 포함 된 패키지를 관리할 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 사용자 지정 구성 요소입니다. 버전 10.0.0.0([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])에서 버전 11.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 런타임 어셈블리를 리디렉션할 수 있도록 4개의 바인딩 리디렉션 규칙을 다음 파일에 추가했습니다.  
+ 현재 릴리스를 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 실행 하 고 포함 된 패키지 관리 도구 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 사용자 지정 구성 요소입니다. 버전 10.0.0.0([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])에서 버전 11.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 런타임 어셈블리를 리디렉션할 수 있도록 4개의 바인딩 리디렉션 규칙을 다음 파일에 추가했습니다.  
   
 -   DTExec.exe.config  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36088444"
   
 -   DTExecUI.exe.config  
   
- 사용 하도록 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 포함 된 패키지를 디자인 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에 있는 devenv.exe.config 파일을 수정 해야 하는 사용자 지정 구성 요소  *\<드라이브 >*: files\ Microsoft Visual Studio 10.0\Common7\IDE 합니다.  
+ 사용 하도록 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 포함 된 패키지를 디자인 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에 있는 devenv.exe.config 파일을 수정 해야 하는 사용자 지정 구성 요소  *\<드라이브 >*: files\ Microsoft Visual Studio 10.0\Common7\IDE 합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 응용 프로그램으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전11.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>용 \<assemblyBinding>요소](http://msdn.microsoft.com/library/twy1dw1e.aspx)를 참조하세요.  
   
@@ -102,8 +102,8 @@ ms.locfileid: "36088444"
   
 |구성 요소 또는 기능|업그레이드 결과|  
 |--------------------------|---------------------|  
-|연결 문자열|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 패키지의 경우 특정 공급자의 이름이 변경되어 연결 문자열에 필요한 값이 달라졌습니다. 연결 문자열을 업데이트하려면 다음 절차 중 하나를 따르십시오.<br /><br /> - [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 사용하여 패키지를 업그레이드하고 **새 공급자 이름을 사용하도록 연결 문자열 업데이트** 옵션을 선택합니다.<br /><br /> - [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 옵션 대화 상자에 있는 일반 페이지에서 **새 공급자 이름을 사용하도록 연결 문자열 업데이트** 옵션을 선택합니다. 이 옵션에 대한 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)를 참조하십시오.<br /><br /> - [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 열고 ConnectionString 속성의 텍스트를 수동으로 변경합니다.<br /><br /> 참고: 연결 문자열 구성 파일 또는 데이터 원본 파일에 저장 되어 있거나 식을 설정 하는 경우 연결 문자열을 업데이트 하는 앞의 절차를 사용할 수 없습니다는 `ConnectionString` 속성입니다. 이런 경우 연결 문자열을 업데이트하려면 파일 또는 식을 수동으로 업데이트해야 합니다.<br /><br /> 사용 가능한 데이터 소스에 대한 자세한 내용은 [데이터 소스](../connection-manager/data-sources.md)를 참조하세요.|  
-|조회 변환|에 대 한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지, 업그레이드 과정으로 자동 업그레이드 조회 변환을 현재 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]합니다. 하지만 이러한 구성 요소의 현재 버전에는 일부 유용한 기능이 추가되었습니다.<br /><br /> 자세한 내용은 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.|  
+|연결 문자열|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 패키지의 경우 특정 공급자의 이름이 변경되어 연결 문자열에 필요한 값이 달라졌습니다. 연결 문자열을 업데이트하려면 다음 절차 중 하나를 따르십시오.<br /><br /> - [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 사용하여 패키지를 업그레이드하고 **새 공급자 이름을 사용하도록 연결 문자열 업데이트** 옵션을 선택합니다.<br /><br /> - [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 옵션 대화 상자에 있는 일반 페이지에서 **새 공급자 이름을 사용하도록 연결 문자열 업데이트** 옵션을 선택합니다. 이 옵션에 대한 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)를 참조하십시오.<br /><br /> - [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 열고 ConnectionString 속성의 텍스트를 수동으로 변경합니다.<br /><br /> 참고: 연결 문자열 구성 파일 또는 데이터 원본 파일에 저장 되어 있거나 식을 설정 하는 경우 연결 문자열을 업데이트 하려면 앞의 절차를 사용할 수 없습니다는 `ConnectionString` 속성입니다. 이런 경우 연결 문자열을 업데이트하려면 파일 또는 식을 수동으로 업데이트해야 합니다.<br /><br /> 사용 가능한 데이터 소스에 대한 자세한 내용은 [데이터 소스](../connection-manager/data-sources.md)를 참조하세요.|  
+|조회 변환|에 대 한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지 업그레이드 프로세스 자동 업그레이드 조회 변환의 현재 릴리스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]합니다. 하지만 이러한 구성 요소의 현재 버전에는 일부 유용한 기능이 추가되었습니다.<br /><br /> 자세한 내용은 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)을(를) 참조하세요.|  
 |스크립트 태스크 및 스크립트 구성 요소|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지의 경우 업그레이드 프로세스에서는 스크립트 태스크 및 스크립트 구성 요소의 스크립트를 VSA에서 VSTA로 자동 마이그레이션합니다.<br /><br /> 마이그레이션 전에 스크립트에서 변경해야 할 내용과 스크립트 변환 실패에 대한 자세한 내용은 [VSTA로 스크립트 마이그레이션](../../sql-server/install/migrate-scripts-to-vsta.md)을 참조하세요.|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>ADODB.dll을 사용하는 스크립트  

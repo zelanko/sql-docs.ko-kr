@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228413"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>6단원: 계산 열 만들기
   이 단원에서는 계산 열을 추가하여 모델에 새 데이터를 만듭니다. 계산 열은 모델에 이미 있는 데이터를 기반으로 합니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](tabular-models/ssas-calculated-columns.md)을 참조하세요.  
@@ -41,9 +41,9 @@ ms.locfileid: "36082370"
   
 2.  모델 디자이너에서 **Date** 테이블(탭)을 클릭합니다.  
   
-3.  마우스 오른쪽 단추로 클릭는 **Calendar Quarter** 열을 마우스 클릭 한 다음 **열 삽입**합니다.  
+3.  마우스 오른쪽 단추로 클릭 합니다 **Calendar Quarter** 열 및 클릭 **열 삽입**합니다.  
   
-     이라는 새 열 **CalculatedColumn1** 의 왼쪽에 삽입 되는 **Calendar Quarter** 열입니다.  
+     이라는 새 열 **CalculatedColumn1** 왼쪽에 삽입 되는 **Calendar Quarter** 열입니다.  
   
 4.  테이블 위의 수식 입력줄에 다음 수식을 입력합니다. 자동 완성 기능을 사용하면 정규화된 열 및 테이블 이름을 입력하고 사용 가능한 함수를 나열할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36082370"
     > [!NOTE]  
     >  오류 메시지가 표시되면 수식의 열 이름이 [3단원: 열 이름 바꾸기](rename-columns.md)에서 변경한 열 이름과 일치하는지 확인합니다.  
   
-5.  이 열을 이름 바꾸기 `Month Calendar`합니다.  
+5.  이 열의 이름을 바꿀 `Month Calendar`합니다.  
   
  Month Calendar 계산 열은 월에 대해 정렬 가능한 이름을 제공합니다.  
   

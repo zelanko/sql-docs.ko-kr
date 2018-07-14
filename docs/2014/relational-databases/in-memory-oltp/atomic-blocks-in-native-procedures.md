@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182310"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 블록
   `BEGIN ATOMIC`은 ANSI SQL 표준의 일부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유하게 컴파일된 저장 프로시저의 최상위 수준에서만 ATOMIC 블록을 지원합니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "36088158"
 ## <a name="transactions-and-error-handling"></a>트랜잭션 및 오류 처리  
  세션에 트랜잭션이 이미 있는 경우(`BEGIN TRANSACTION` 문과 트랜잭션을 실행한 일괄 처리가 활성 상태로 유지되므로) ATOMIC 블록을 시작하면 트랜잭션에서 저장점을 만듭니다. 예외가 발생하지 않고 블록이 종료되면 블록 커밋에 대한 새 저장점이 만들어지지만 세션 수준에서 트랜잭션이 커밋되어야 트랜잭션이 커밋됩니다. 블록에서 예외가 발생하면 블록의 효과는 롤백되지만 예외로 인해 트랜잭션이 실패하지 않으면 세션 수준의 트랜잭션이 진행됩니다. 예를 들어, 쓰기 충돌로 인해 트랜잭션이 실패하지만 쓰기 충돌이 형식 캐스팅 오류는 아닙니다.  
   
- 세션에 활성 트랜잭션이 없는 경우 `BEGIN ATOMIC`은 새 트랜잭션을 시작합니다. 블록 범위 밖에서 예외가 발생하지 않는다면 트랜잭션은 블록 끝에서 커밋됩니다. 블록에서 예외가 발생하면(예외가 catch되지 않고 블록 내에서 처리됨) 트랜잭션이 롤백됩니다. 단일 atomic 블록 (고유 하 게 컴파일된 단일 저장된 프로시저)에 걸쳐 있는 트랜잭션은 필요가 없습니다 쓰려고 명시적 `BEGIN TRANSACTION` 및 `COMMIT` 또는 `ROLLBACK` 문.  
+ 세션에 활성 트랜잭션이 없는 경우 `BEGIN ATOMIC`은 새 트랜잭션을 시작합니다. 블록 범위 밖에서 예외가 발생하지 않는다면 트랜잭션은 블록 끝에서 커밋됩니다. 블록에서 예외가 발생하면(예외가 catch되지 않고 블록 내에서 처리됨) 트랜잭션이 롤백됩니다. 단일 atomic 블록 (고유 하 게 컴파일된 단일 저장된 프로시저)에 걸쳐 있는 트랜잭션에 대 한 필요가 없습니다 쓸 명시적 `BEGIN TRANSACTION` 하 고 `COMMIT` 또는 `ROLLBACK` 문입니다.  
   
- 고유 하 게 컴파일된 저장된 프로시저 지원은 `TRY`, `CATCH`, 및 `THROW` 오류 처리에 대 한 구문입니다. `RAISERROR` 지원 되지 않습니다.  
+ 고유 하 게 컴파일된 저장된 프로시저 지원 합니다 `TRY`, `CATCH`, 및 `THROW` 오류 처리를 생성 합니다. `RAISERROR` 지원 되지 않습니다.  
   
  다음 예에서는 ATOMIC 블록 및 고유하게 컴파일된 저장 프로시저에 대한 오류 처리 동작을 설명합니다.  
   
@@ -130,22 +130,22 @@ GO
  메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위 내에서 10772, 41301, 41302, 41305, 41325, 41332 및 41333 오류가 발생하면 트랜잭션을 중단시킵니다.  
   
 ## <a name="session-settings"></a>세션 설정  
- 저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 일부 설정을 지정할 수 있습니다 `BEGIN ATOMIC` 있고 같은 값으로 항상 고정할 됩니다.  
+ 저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 일부 설정을 지정할 수 있습니다 `BEGIN ATOMIC` 동안 기타 설정을 항상 동일한 값으로 고정 됩니다.  
   
  `BEGIN ATOMIC`에는 다음 옵션이 필요합니다.  
   
 |필요한 설정|Description|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|지원 되는 값은 `SNAPSHOT`, `REPEATABLEREAD`, 및 `SERIALIZABLE`합니다.|  
+|`TRANSACTION ISOLATION LEVEL`|지원 되는 값은 `SNAPSHOT`하십시오 `REPEATABLEREAD`, 및 `SERIALIZABLE`합니다.|  
 |`LANGUAGE`|날짜 및 시간 형식과 시스템 메시지를 결정합니다. [sys.syslanguages&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql)의 모든 언어와 별칭이 지원됩니다.|  
   
  다음 설정은 선택 사항입니다.  
   
 |선택적 설정|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 을 지정 하면 `DATEFORMAT` 와 연결 된 기본 날짜 형식을 재정의 `LANGUAGE`합니다.|  
+|`DATEFORMAT`|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정 하면 `DATEFORMAT` 와 연결 된 기본 날짜 형식을 재정의 `LANGUAGE`합니다.|  
 |`DATEFIRST`|지정되면 `DATEFIRST`에서 `LANGUAGE`와 관련된 기본값을 재정의합니다.|  
-|`DELAYED_DURABILITY`|지원 되는 값은 `OFF` 및 `ON`합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다. 자세한 내용은 [트랜잭션 내구성 제어](../logs/control-transaction-durability.md)를 참조하세요.|  
+|`DELAYED_DURABILITY`|지원 되는 값은 `OFF` 고 `ON`입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다. 자세한 내용은 [트랜잭션 내구성 제어](../logs/control-transaction-durability.md)를 참조하세요.|  
   
  다음 SET 옵션은 고유하게 컴파일된 모든 저장 프로시저의 모든 ATOMIC 블록에 대해 동일한 시스템 기본값을 가집니다.  
   

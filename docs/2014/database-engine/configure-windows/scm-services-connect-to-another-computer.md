@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167224"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>다른 컴퓨터에 연결(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 응용 프로그램 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36082749"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  에 **열고** 상자에 입력 합니다 `mmc -a` 열려는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 작성자 모드로 합니다.  
+2.  에 **엽니다** 상자에 입력 `mmc -a` 열려는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 작성자 모드로 합니다.  
   
 3.  **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36082749"
   
 11. **창** 메뉴에서 **콘솔 루트**를 클릭하여 첫 번째 창으로 전환한 다음 창을 삭제합니다.  
   
-12. 에 **파일** 메뉴를 클릭 **다른 이름으로 저장**, 가진 적절 한 이름을 원하는 폴더에 파일을 저장 하 고는 `.msc` 파일 확장명입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
+12. 에 **파일** 메뉴에서 클릭 **다른 이름으로 저장**, 적절 한 이름을 사용 하 여 원하는 폴더에 파일을 저장 하 고는 `.msc` 파일 확장명입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
   
 13. 대상 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 파일을 두 번 클릭합니다. 필요한 경우 파일에 대한 링크를 바탕 화면이나 **시작** 메뉴에 저장합니다.  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureID element
 ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70b7695644f2aa0da85050bb9db96ac277ede298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7a1ff1e817ae78307f8da134e88e742295892ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326533"
 ---
 # <a name="measureid-element-assl"></a>MeasureID 요소(ASSL)
   연결 된 [측정값](../objects/measure-element-assl.md) 부모 요소와 요소입니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36082151"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md), [MeasureBinding](../data-type/binding-data-type-assl.md), [PerspectiveMeasure](../data-type/perspectivemeasure-data-type-assl.md)|  
+|부모 요소|[AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md)하십시오 [MeasureBinding](../data-type/binding-data-type-assl.md), [PerspectiveMeasure](../data-type/perspectivemeasure-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

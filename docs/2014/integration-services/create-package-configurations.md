@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
 - Package Configurations Organizer dialog box
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 caps.latest.revision: 71
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be150c6e13e1e677539e19fd96398eaa659bc26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec353414e9b910285152ed3f391ca4dc1970ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266789"
 ---
 # <a name="create-package-configurations"></a>패키지 구성 만들기
   **패키지 구성 도우미** 대화 상자 및 패키지 구성 마법사를 사용하여 패키지 구성을 만들 수 있습니다. 이 도구에 액세스하려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 클릭합니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "36081626"
   
 ## <a name="see-also"></a>관련 항목  
  [패키지 구성](../../2014/integration-services/package-configurations.md)   
- [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [배포 패키지 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [프로그래밍 방식으로 변수 작업](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

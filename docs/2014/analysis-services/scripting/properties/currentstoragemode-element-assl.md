@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cce7bfd399c0c986a79e919c6227ee604e9ff470
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233823"
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode 요소(ASSL)
   부모 요소에 대한 현재 저장소 모드를 결정합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36090949"
 |-----------|-----------------|  
 |*MOLAP*|부모가 MOLAP(다차원 OLAP) 저장소를 사용합니다.|  
 |*ROLAP*|부모가 ROLAP(관계형 OLAP) 저장소를 사용합니다.|  
-|*HOLAP*|부모가 HOLAP(하이브리드 OLAP) 저장소를 사용합니다. **참고:** 이 값은 적합만 [파티션](../objects/partition-element-assl.md) 부모 요소입니다.|  
+|*HOLAP*|부모가 HOLAP(하이브리드 OLAP) 저장소를 사용합니다. **참고:** 이 값에만 유효 [파티션](../objects/partition-element-assl.md) 부모 요소입니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `CurrentStorageMode`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.StorageMode>입니다.  
   

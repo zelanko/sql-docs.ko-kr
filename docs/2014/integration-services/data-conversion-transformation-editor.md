@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c5157175181c7a43a2c8e3209c23905a4129d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 330ac6f9211afbc1dd3e89d9d4c7298a41026f31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225979"
 ---
 # <a name="data-conversion-transformation-editor"></a>데이터 변환 편집기
   **데이터 변환 편집기** 대화 상자를 사용하여 변환할 열을 선택하고, 열이 변환될 데이터 형식을 선택하고, 변환 특성을 설정할 수 있습니다.  
   
 > [!NOTE]  
->  `FastParse` 데이터 변환 출력 열의 속성에서 사용할 수 없는 **데이터 변환 편집기**, 이지만 사용 하 여 설정할 수 있습니다는 **고급 편집기**합니다. 이 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 데이터 변환 섹션을 참조하십시오.  
+>  `FastParse` 데이터 변환 출력 열의 속성을 사용할 수 없습니다는 **데이터 변환 편집기**를 사용 하 여 설정할 수 있습니다를 **고급 편집기**합니다. 이 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 데이터 변환 섹션을 참조하십시오.  
   
  데이터 변환에 대한 자세한 내용은 [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md)을 참조하십시오.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36082733"
  사용 가능한 입력 열 목록에서 변환할 열을 선택합니다. 선택 내용에 따라 위의 확인란이 달라집니다.  
   
  **출력 별칭**  
- 각 새 열의 별칭을 입력합니다. 기본값은 `Copy of` 입력된 열 이름이 뒤 오는 형식 이지만 설명이 포함 된 고유 이름을 임의로 선택할 수 있습니다.  
+ 각 새 열의 별칭을 입력합니다. 기본값은 `Copy of` 뒤에 입력된 열 이름이; 이지만 설명이 포함 된 고유 이름을 임의로 선택할 수 있습니다.  
   
  **데이터 형식**  
  목록에서 사용 가능한 데이터 형식을 선택합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  

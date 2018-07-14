@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 - Upgrade Advisor [SQL Server], process description
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - upgrade process [Upgrade Advisor]
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1cab41d5ec522964887237decdf426da3cf833d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb54124a1646b65632a74db6d8c4cc9630e30046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288259"
 ---
 # <a name="upgrade-process-overview"></a>업그레이드 프로세스 개요
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자를 사용하는 최선의 구현 방법과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 위한 권장 프로세스에 대한 요약 정보를 제공합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36080353"
   
 ## <a name="see-also"></a>관련 항목  
  [업그레이드 관리자 실행 &#40;사용자 인터페이스&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
- [보고서 사용](../../../2014/sql-server/install/using-reports.md)   
+ [보고서를 사용 하 여](../../../2014/sql-server/install/using-reports.md)   
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

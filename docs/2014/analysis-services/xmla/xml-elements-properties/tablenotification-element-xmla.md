@@ -24,15 +24,15 @@ helpviewer_keywords:
 - TableNotification element
 ms.assetid: 097b0d53-cb0b-4454-963f-60964fd429e0
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fb0524d835c2ada3df0d92119d0510bb55181459
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ff45810e2c21ad73126e061e9353645417199692
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220034"
 ---
 # <a name="tablenotification-element-xmla"></a>TableNotification 요소(XMLA)
   [NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md) 명령에 대한 테이블 알림을 나타냅니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328ebd3f09037c3288450b75b4acd011481c40a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272609"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>필터 대화 상자(마이닝 정확도 차트)
   **필터** 대화 상자를 사용하면 데이터 집합에 적용할 수 있는 조건을 작성할 수 있습니다. 데이터 집합은 테스트에 사용되는 외부 데이터 집합이나 마이닝 모델 학습에 사용되는 사례 데이터일 수 있습니다. 이 대화 상자를 사용하면 **데이터 집합 필터** 대화 상자 또는 **모델 필터** 대화 상자에서 보다 복잡한 필터 조건의 일부로 저장할 수 있는 조건을 작성할 수 있습니다.  

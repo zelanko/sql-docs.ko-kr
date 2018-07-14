@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - RestoreEncryptionKey method
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d6ac5da7c9867b7ce84c9f29bfe82f905d5c626a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d4ed1e00dde20d16aa65e88368c0ca6f86b0aa59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222903"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>RestoreEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 암호화 키를 보고서 서버 데이터베이스에 다시 적용합니다.  
@@ -67,7 +67,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="remarks"></a>Remarks  
  보고서 서버 데이터베이스에 보고서 서버에 대한 항목이 이미 있으면 삭제됩니다. 그런 다음 지정된 암호화 키와 보고서 서버의 공개 키를 사용하여 새로운 항목이 만들어집니다.  
   
- 방법은 다음에 호출 될 때 가장 효과적는 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 암호화 키 목록을 지우는 메서드.  
+ 메서드를 이후에 호출 하는 경우에 가장 효과적입니다 합니다 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 암호화 키 목록을 지우는 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

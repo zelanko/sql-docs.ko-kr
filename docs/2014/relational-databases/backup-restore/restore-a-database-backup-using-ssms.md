@@ -1,14 +1,13 @@
 ---
-title: 데이터베이스 백업 (SQL Server Management Studio) 복원 | Microsoft Docs
+title: 데이터베이스 백업 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184750"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>데이터베이스 백업 복원(SQL Server Management Studio)
   이 항목에서는 전체 데이터베이스 백업을 복원하는 방법에 대해 설명합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "36089338"
   
 2.  **데이터베이스**를 확장합니다. 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스**를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  가리키는 데이터베이스를 마우스 오른쪽 단추로 **작업**, 가리킨 **복원**, 클릭 하 고 **데이터베이스**, 열립니다는 **데이터베이스 복원** 대화 상자입니다.  
+3.  데이터베이스를 마우스 오른쪽 **작업**, 가리킨 **복원**를 클릭 하 고 **데이터베이스**, 열리는 **Restore Database** 대화 상자입니다.  
   
 4.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.  
   
@@ -67,20 +66,20 @@ ms.locfileid: "36089338"
         >  이 목록은 **장치** 를 선택한 경우에만 사용할 수 있습니다. 선택한 장치에 백업이 있는 데이터베이스만 사용할 수 있습니다.  
   
          **백업 미디어**  
-         복원 작업에 사용할 미디어: **파일**, **테이프**, **URL**또는 **백업 장치**합니다. **테이프** 옵션은 컴퓨터에 테이프 드라이브가 탑재된 경우에만 나타나고 **백업 장치** 옵션은 적어도 하나의 백업 장치가 있는 경우에만 나타납니다.  
+         복원 작업에 사용할 미디어를 선택 합니다. **파일**, **테이프**를 **URL**또는 **백업 장치**합니다. **테이프** 옵션은 컴퓨터에 테이프 드라이브가 탑재된 경우에만 나타나고 **백업 장치** 옵션은 적어도 하나의 백업 장치가 있는 경우에만 나타납니다.  
   
          **백업 위치**  
          복원 작업에 사용할 미디어를 표시하거나 추가하거나 제거합니다. 목록에는 파일, 테이프 또는 백업 장치가 64개까지 포함될 수 있습니다.  
   
          **추가**  
-         백업 장치를 위치 추가 **백업 위치** 목록입니다. **백업 미디어** 필드에서 선택한 미디어 유형에 따라 **추가** 를 클릭하면 다음 대화 상자 중 하나가 열립니다.  
+         백업 장치를의 위치를 추가 합니다 **백업 위치** 목록입니다. **백업 미디어** 필드에서 선택한 미디어 유형에 따라 **추가** 를 클릭하면 다음 대화 상자 중 하나가 열립니다.  
   
         |미디어 유형|대화 상자|Description|  
         |----------------|----------------|-----------------|  
         |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
         |**장치**|**백업 장치 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 장치의 목록에서 장치를 선택할 수 있습니다.|  
         |**테이프**|**백업 테이프 선택**|이 대화 상자에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브의 목록에서 백업 테이프를 선택할 수 있습니다.|  
-        |**URL**|이는 두 대화 상자를 다음 순서로 시작합니다.<br /><br /> 1) **Windows 연결할 Azure 저장소**<br /><br /> 2) **Windows Azure에서 백업 파일 찾기**|**Windows Azure 저장소에 연결**  대화 상자에서 Windows Azure 저장소 계정 이름 및 액세스 키 정보를 저장하는 기존 SQL 자격 증명을 선택하거나 저장소 계정 이름 및 저장소 액세스 키 정보를 지정하여 새 SQL 자격 증명을 만듭니다. 자세한 내용은 참조 [Windows Azure 저장소에 연결 &#40;복원&#41;](connect-to-microsoft-azure-storage-restore.md)합니다.<br /><br /> **백업 파일 찾기** 대화 상자에서는 왼쪽 프레임에 표시된 컨테이너 목록에서 파일을 선택할 수 있습니다.|  
+        |**URL**|이는 두 대화 상자를 다음 순서로 시작합니다.<br /><br /> 1) **Windows 연결할 Azure Storage**<br /><br /> 2) **Windows Azure에서 백업 파일 찾기**|**Windows Azure 저장소에 연결**  대화 상자에서 Windows Azure 저장소 계정 이름 및 액세스 키 정보를 저장하는 기존 SQL 자격 증명을 선택하거나 저장소 계정 이름 및 저장소 액세스 키 정보를 지정하여 새 SQL 자격 증명을 만듭니다. 자세한 내용은 [Windows Azure Storage에 연결 &#40;복원&#41;](connect-to-microsoft-azure-storage-restore.md)합니다.<br /><br /> **백업 파일 찾기** 대화 상자에서는 왼쪽 프레임에 표시된 컨테이너 목록에서 파일을 선택할 수 있습니다.|  
   
          목록이 꽉 차면 **추가** 단추를 사용할 수 없습니다.  
   

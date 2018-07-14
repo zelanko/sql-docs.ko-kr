@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Insert command
 ms.assetid: d1137033-cc19-4bcb-b93d-8575f17bea6b
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6b381a2b0cd45e80309f2b6a759374fd9f214f51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cfec9c9a5be2cc19c609bc9de788a4a0df388e5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169294"
 ---
 # <a name="insert-element-xmla"></a>Insert 요소(XMLA)
   특성 멤버를 차원에 삽입합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36090527"
 ## <a name="remarks"></a>Remarks  
  `Insert` 명령은 쓰기 가능 차원에 새 특성 멤버를 삽입합니다.  
   
- 구성원을 삭제 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
+ 구성원을 삭제 하는 방법에 대 한 자세한 내용은 참조 하세요. [삽입, 업데이트 및 삭제 하는 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Drop 요소 &#40;XMLA&#41;](drop-element-xmla.md)   

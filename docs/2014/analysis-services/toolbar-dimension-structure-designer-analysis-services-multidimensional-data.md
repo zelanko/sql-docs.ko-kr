@@ -1,5 +1,5 @@
 ---
-title: 도구 모음 (차원 구조 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 도구 모음 (Dimension Structure Tab, Dimension Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c0a2269df759769c6b0c22cbfab5a3193b4fdc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32bc1568a2e12b8e48978857f169a58f7dffef41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187220"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   도구 모음을 사용하여 **차원 디자이너** 의 **차원 구조**페이지에서 일반적인 작업을 수행할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36089628"
   
  아래쪽 화살표를 클릭하여 세 가지 옵션 중에서 선택합니다.  
   
- **선택한 개체 삭제**  
+ **선택 영역 삭제**  
  현재 선택한 개체를 삭제합니다.  
   
  **테이블 표시**  

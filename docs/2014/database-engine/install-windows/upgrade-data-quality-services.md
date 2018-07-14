@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171436"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
   이 항목에서는 기존 DQS(Data Quality Services) 설치를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2로 업그레이드하는 방법을 설명합니다. DQS의 Data Quality 서버를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36090487"
 > [!IMPORTANT]  
 >  -   스키마 업그레이드 중에 데이터 손실을 방지하기 위해 DQS를 업그레이드하기 전에 DQS 데이터베이스를 백업해야 합니다. DQS 데이터베이스 백업에 대한 자세한 내용은 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)을 참조하십시오.  
 > -   데이터 품질 태스크를 수행하기 위해 Integration Services의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS 정리 변환 편집기 [나 최신 또는 이전 버전의 Data Quality 클라이언트를 사용하여](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) 버전의 Data Quality 서버에 연결할 수 있습니다.  
-> -   Data Quality Services 및 MDS(Master Data Services)를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. 다운로드할 수 있습니다는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Master Data Services 추가 기능을 for Excel에서 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)합니다.  
+> -   Data Quality Services 및 MDS(Master Data Services)를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. 다운로드할 수 있습니다 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Master Data Services 추가 기능에 Excel에 대 한 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)합니다.  
   
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36090487"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  설치 관리자에서 계속하기 전에 DQS 데이터베이스를 백업하라는 메시지를 표시합니다. DQS 데이터베이스를 백업 이미 있는 경우 입력 `Y` 또는 `Yes`, 고 enter 키를 눌러 업그레이드를 계속 진행 합니다.  
+    4.  설치 관리자에서 계속하기 전에 DQS 데이터베이스를 백업하라는 메시지를 표시합니다. DQS 데이터베이스를 백업한 이미 있는 경우 입력 `Y` 또는 `Yes`, enter 키를 눌러 업그레이드를 계속 합니다.  
   
     5.  DQS 데이터베이스 스키마 업그레이드에 성공하면 완료 메시지가 표시됩니다.  
   

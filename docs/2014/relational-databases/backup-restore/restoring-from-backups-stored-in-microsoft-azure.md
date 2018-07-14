@@ -5,21 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 90fe4fd8aacb3d945aab6d2b0872f2aff958f01f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5eb28e1bf53d889db8767d0c7fcdfcf94a2e5a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269079"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Microsoft Azure에 저장된 백업 복원
   이 항목에서는 Windows Azure Blob 저장소 서비스에 저장된 백업을 사용하여 데이터베이스를 복원할 때의 고려 사항에 대해 간단히 설명합니다. 이 내용은 URL에 대한 SQL Server 백업이나 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 만들어진 백업에 적용됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "36081838"
   
 -   SQL Server는 백업 파일을 검색하기 위해 외부 원본에 연결해야 하므로 저장소 계정을 인증하는 데 SQL 자격 증명이 사용됩니다. 결과적으로 RESTORE 문에 WITH CREDENTIAL 옵션이 필요합니다. 자세한 내용은 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 사용하여 클라우드로의 백업을 관리하는 경우 **smart_admin.fn_available_backups** 시스템 함수를 사용하여 저장소에서 사용 가능한 모든 백업을 검토할 수 있습니다. 이 시스템 함수는 테이블에 데이터베이스에 대한 사용 가능한 모든 백업을 반환합니다. 결과가 테이블에 반환되면 해당 결과를 필터링하거나 정렬할 수 있습니다. 자세한 내용은 참조 [smart_admin.fn_available_backups &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)합니다.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 사용하여 클라우드로의 백업을 관리하는 경우 **smart_admin.fn_available_backups** 시스템 함수를 사용하여 저장소에서 사용 가능한 모든 백업을 검토할 수 있습니다. 이 시스템 함수는 테이블에 데이터베이스에 대한 사용 가능한 모든 백업을 반환합니다. 결과가 테이블에 반환되면 해당 결과를 필터링하거나 정렬할 수 있습니다. 자세한 내용은 [smart_admin.fn_available_backups &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)합니다.  
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
   

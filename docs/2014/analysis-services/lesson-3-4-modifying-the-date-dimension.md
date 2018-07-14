@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d4141cd5b26af4c44613b32ddc486154096d3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03e0f8938c5a35f917c921248d4f3913ae1667f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216093"
 ---
 # <a name="modifying-the-date-dimension"></a>Date 차원 수정
   이 항목의 태스크에서는 사용자 정의 계층을 만들고 Date, Month, Calendar Quarter 및 Calendar Semester 특성에 대해 표시되는 멤버 이름을 변경합니다. 또한 특성에 대한 복합 키를 정의하고 차원 멤버의 정렬 순서를 제어하고 특성 관계도 정의합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "36088728"
   
 1.  **Adventure Works DW 2012** 데이터 원본 뷰를 열려면 솔루션 탐색기의 **데이터 원본 뷰** 폴더에서 해당 뷰를 두 번 클릭합니다.  
   
-2.  하단에 있는 **테이블** 창에서 마우스 오른쪽 단추로 클릭 `Date`, 클릭 하 고 **새 명명 된 계산**합니다.  
+2.  아래쪽의 **테이블** 창 마우스 오른쪽 단추로 클릭 `Date`를 클릭 하 고 **새 명명 된 계산**.  
   
-3.  에 **명명 된 계산 만들기** 대화 상자에서 `SimpleDate` 에 **열 이름** 상자의 하 고 다음을 입력 하거나 복사 하 ö ½ à ´ `DATENAME` 의 문에서 **식**  상자:  
+3.  에 **명명 된 계산 만들기** 대화 상자에서 `SimpleDate` 에 **열 이름** 상자의 및 다음 입력 하거나 복사 하는 다음을 붙여 넣습니다 `DATENAME` 문에서 **식**  상자:  
   
     ```  
     DATENAME(mm, FullDateAlternateKey) + ' ' +  
@@ -43,17 +43,17 @@ ms.locfileid: "36088728"
   
      `DATENAME` 문은 FullDateAlternateKey 열에서 연도, 월 및 날짜 값을 추출합니다. 이 새 열을 FullDateAlternateKey 특성에 대한 표시 이름으로 사용합니다.  
   
-4.  클릭 **확인**을 펼친 다음 `Date` 에 **테이블** 창.  
+4.  클릭 **확인**를 차례로 확장 하 고 `Date` 에 **테이블** 창.  
   
-     `SimpleDate` 날짜 테이블의 열 목록에 표시 되는 명명 된 계산 임을 나타내는 아이콘과 함께 명명 된 계산 합니다.  
+     `SimpleDate` 임을 나타내는 아이콘과 함께 명명 된 계산이 Date 테이블의 열 목록에 나타납니다 명명된 된 계산 합니다.  
   
 5.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-6.  에 **테이블** 창에서 마우스 오른쪽 단추로 클릭 `Date`, 클릭 하 고 **데이터 탐색**합니다.  
+6.  에 **테이블** 창 마우스 오른쪽 단추로 클릭 `Date`를 클릭 하 고 **데이터 탐색**합니다.  
   
 7.  오른쪽으로 스크롤하여 **Date 테이블 탐색** 뷰의 마지막 열을 검토합니다.  
   
-     에 `SimpleDate` 원래 데이터 원본을 수정 하지 않고 기본 데이터 원본에서 여러 열의 데이터를에서 올바르게 연결한 열 데이터 원본 뷰에 나타납니다.  
+     다음에 유의 합니다 `SimpleDate` 원래 데이터 원본을 수정 하지 않고 기본 데이터 원본에서 여러 열의 데이터를에서 올바르게 연결한 열 데이터 원본 뷰에 나타납니다.  
   
 8.  **Date 테이블 탐색** 뷰를 닫습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36088728"
   
 #### <a name="to-use-the-named-calculation-for-member-names"></a>멤버 이름에 명명된 계산을 사용하려면  
   
-1.  **에서 Date 차원에 대한** 차원 디자이너 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 엽니다. 이 작업을 수행 하려면 두 번 클릭은 `Date` 차원에 **차원** 의 노드 **솔루션 탐색기**합니다.  
+1.  **에서 Date 차원에 대한** 차원 디자이너 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 엽니다. 이 작업을 수행 하려면 두 번 클릭 합니다 `Date` 차원에 **차원** 노드의 **솔루션 탐색기**합니다.  
   
 2.  **차원 구조** 탭의 **특성** 창에서 **Date Key** 특성을 클릭합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36088728"
   
 4.  창 아래쪽에서 **NameColumn** 속성 필드를 클릭한 다음 줄임표 단추(**…**)를 클릭하여 **이름 열** 대화 상자를 엽니다.  
   
-5.  선택 `SimpleDate` 맨 아래에 **원본 열** 목록으로 이동한 다음 클릭 **확인**합니다.  
+5.  선택 `SimpleDate` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   
 6.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -79,19 +79,19 @@ ms.locfileid: "36088728"
   
 #### <a name="to-create-a-hierarchy"></a>계층을 만들려면  
   
-1.  **차원 구조** 에 대 한 차원 디자이너의 탭은 `Date` 차원에서 끌어는 **역 년** 에서 특성의 **특성** 창에는 **계층** 창.  
+1.  **차원 구조** 에 대 한 차원 디자이너의 탭을 `Date` 차원에 끌어 옵니다를 **역 년** 에서 특성을 **특성** 창을 **계층** 창입니다.  
   
-2.  끌어서는 **Calendar Semester** 에서 특성의 **특성** 창에는  **\<새 수준 >** 셀에 **계층**창, 아래에서 **역 년** 수준입니다.  
+2.  끌어서를 **Calendar Semester** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층**창에서 아래 합니다 **역 년** 수준입니다.  
   
-3.  끌어서는 **Calendar Quarter** 에서 특성는 **특성** 창에는  **\<새 수준 >** 셀에 **계층**창, 아래에서 **Calendar Semester** 수준입니다.  
+3.  끌어서를 **Calendar Quarter** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층**창에서 아래 합니다 **Calendar Semester** 수준입니다.  
   
-4.  끌어서는 **English Month Name** 에서 특성의 **특성** 창에는  **\<새 수준 >** 셀에 **계층**창, 아래에서 **Calendar Quarter** 수준입니다.  
+4.  끌어서를 **English Month Name** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층**창에서 아래 합니다 **Calendar Quarter** 수준입니다.  
   
-5.  끌어서는 **Date Key** 에서 특성의 **특성** 창에는  **\<새 수준 >** 셀에 **계층** 창 아래에서 **English Month Name** 수준입니다.  
+5.  끌어서를 **Date Key** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층** 창 를 아래 합니다 **English Month Name** 수준입니다.  
   
-6.  에 **계층** 창의 제목 표시줄을 마우스 오른쪽 단추로 클릭는 **계층** 계층, 편집할 **이름 바꾸기**, 한 다음 입력 `Calendar Date`합니다.  
+6.  에 **계층** 창의 제목 표시줄을 마우스 오른쪽 단추로 클릭는 **계층** 계층, 클릭 **이름 바꾸기**, 입력 `Calendar Date`합니다.  
   
-7.  오른쪽 클릭 상황에 맞는 메뉴를 사용 하 여는 `Calendar Date` 계층, 이름 바꾸기는 **English Month Name** 수준을 `Calendar Month`, 선택한 다음 이름을 **Date Key** 수준을 `Date`합니다.  
+7.  마우스 오른쪽 단추 클릭 상황에 맞는 메뉴를 사용 하 여는 `Calendar Date` 계층 이름 바꾸기는 **English Month Name** 수준을 `Calendar Month`, 바꾸고, 합니다 **Date Key** 수준을 `Date`합니다.  
   
 8.  **Full Date Alternate Key** 특성은 사용하지 않으므로 **특성** 창에서 삭제합니다. **개체 삭제** 확인 창에서 **확인** 을 클릭합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36088728"
   
 #### <a name="to-define-attribute-relationships"></a>특성 관계를 정의하려면  
   
-1.  에 **차원 디자이너** 에 대 한는 `Date` 차원에서 클릭 된 **특성 관계** 탭 합니다.  
+1.  에 **차원 디자이너** 에 대 한 합니다 `Date` 차원을 클릭 합니다는 **특성 관계** 탭.  
   
 2.  다이어그램에서 **English Month Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 클릭합니다.  
   
@@ -139,9 +139,9 @@ ms.locfileid: "36088728"
   
 1.  **[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** 데이터 원본 뷰로 전환하려면 솔루션 탐색기의 **데이터 원본 뷰** 폴더에서 해당 뷰를 두 번 클릭합니다.  
   
-2.  에 **테이블** 창에서 마우스 오른쪽 단추로 클릭 `Date`, 클릭 하 고 **새 명명 된 계산**합니다.  
+2.  에 **테이블** 창 마우스 오른쪽 단추로 클릭 `Date`를 클릭 하 고 **새 명명 된 계산**합니다.  
   
-3.  에 **명명 된 계산 만들기** 대화 상자에서 `MonthName` 에 **열 이름** 상자의 또는 복사 한 후에 다음 문을 붙여는 **식** 상자:  
+3.  에 **명명 된 계산 만들기** 대화 상자에서 `MonthName` 에 **열 이름** 상자의 및 입력 하거나 복사 하에서 다음 문을 붙여 넣습니다를 **식** 상자:  
   
     ```  
     EnglishMonthName+' '+ CONVERT(CHAR (4), CalendarYear)  
@@ -151,9 +151,9 @@ ms.locfileid: "36088728"
   
 4.  **확인**을 클릭합니다.  
   
-5.  에 **테이블** 창에서 마우스 오른쪽 단추로 클릭 `Date`, 클릭 하 고 **새 명명 된 계산**합니다.  
+5.  에 **테이블** 창 마우스 오른쪽 단추로 클릭 `Date`를 클릭 하 고 **새 명명 된 계산**합니다.  
   
-6.  에 **명명 된 계산 만들기** 대화 상자에서 `CalendarQuarterDesc` 에 **열 이름** 상자의 및 다음를 입력 하거나 복사한 다음 SQL 스크립트를 붙여는 **식** 상자:  
+6.  에 **명명 된 계산 만들기** 대화 상자에서 `CalendarQuarterDesc` 에 **열 이름** 상자의 및 입력 하거나 복사 하에서 다음 SQL 스크립트를 붙여넣습니다를 **식** 상자:  
   
     ```  
     'Q' + CONVERT(CHAR (1), CalendarQuarter) +' '+ 'CY ' +  
@@ -164,9 +164,9 @@ ms.locfileid: "36088728"
   
 7.  **확인**을 클릭합니다.  
   
-8.  에 **테이블** 창에서 마우스 오른쪽 단추로 클릭 `Date`, 클릭 하 고 **새 명명 된 계산**합니다.  
+8.  에 **테이블** 창 마우스 오른쪽 단추로 클릭 `Date`를 클릭 하 고 **새 명명 된 계산**합니다.  
   
-9. 에 **명명 된 계산 만들기** 대화 상자에서 `CalendarSemesterDesc` 에 **열 이름** 상자의 및 다음를 입력 하거나 복사한 다음 SQL 스크립트를 붙여는 **식** 상자:  
+9. 에 **명명 된 계산 만들기** 대화 상자에서 `CalendarSemesterDesc` 에 **열 이름** 상자의 및 입력 하거나 복사 하에서 다음 SQL 스크립트를 붙여넣습니다를 **식** 상자:  
   
     ```  
     CASE  
@@ -202,7 +202,7 @@ ms.locfileid: "36088728"
   
 7.  **EnglishMonthName** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
   
-8.  에 **이름 열** 대화 상자는 **원본 열** 목록에서 `MonthName`, 클릭 하 고 **확인**합니다.  
+8.  에 **이름 열** 대화 상자의 합니다 **원본 열** 목록에서 `MonthName`를 클릭 하 고 **확인**.  
   
 9. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36088728"
   
 5.  **Calendar Quarter** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
   
-6.  에 **이름 열** 대화 상자는 **원본 열** 목록에서 `CalendarQuarterDesc`, 클릭 하 고 **확인**합니다.  
+6.  에 **이름 열** 대화 상자의 합니다 **원본 열** 목록에서 `CalendarQuarterDesc`를 클릭 하 고 **확인**.  
   
 7.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "36088728"
   
 5.  **Calendar Semester** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
   
-6.  에 **이름 열** 대화 상자는 **원본 열** 목록에서 `CalendarSemesterDesc`, 클릭 하 고 **확인**합니다.  
+6.  에 **이름 열** 대화 상자의 합니다 **원본 열** 목록에서 `CalendarSemesterDesc`를 클릭 하 고 **확인**.  
   
 7.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36088728"
   
 1.  **의** 빌드 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
-2.  받은 후는 **배포가 완료 되었습니다.** 메시지는 **브라우저** 탭 **차원 디자이너** 에 대 한는 `Date` 차원 및 그런 다음 디자이너 도구 모음에서 다시 연결 단추를 클릭 합니다.  
+2.  받은 후는 **배포가 완료 되었습니다** 메시지를 클릭 합니다 **브라우저** 탭 **차원 디자이너** 에 대 한는 `Date` 차원 및 디자이너의 도구 모음에서 다시 연결 단추를 클릭 합니다.  
   
 3.  **계층** 목록에서 **Calendar Quarter** 를 선택합니다. **Calendar Quarter** 특성 계층의 멤버를 검토합니다.  
   
@@ -264,7 +264,7 @@ ms.locfileid: "36088728"
   
 #### <a name="to-modify-the-composite-key-member-order"></a>복합 키 멤버 순서를 수정하려면  
   
-1.  열기는 **차원 구조** 에 대 한 차원 디자이너의 탭에서 `Date` 차원을 선택한 후 **Calendar Semester** 에 **특성** 창.  
+1.  열기는 **차원 구조** 에 대 한 차원 디자이너의 탭을 `Date` 차원을 선택한 후 **Calendar Semester** 에 **특성** 창.  
   
 2.  속성 창에서 **OrderBy** 속성 값을 검토합니다. **키**로 설정되어 있습니다.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "36088728"
   
      이제 특성 계층의 멤버가 연도순으로 정렬된 다음 월순으로 정렬됩니다.  
   
-9. **의** 빌드 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다. 배포가 성공적으로 완료 되 면 클릭는 **브라우저** 탭에 대 한 차원 디자이너에는 `Date` 차원입니다.  
+9. **의** 빌드 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다. 배포가 성공적으로 완료 하는 경우 클릭 합니다 **브라우저** 에 대 한 차원 디자이너의 탭을 `Date` 차원입니다.  
   
 10. **브라우저** 탭의 도구 모음에서 다시 연결 단추를 클릭합니다.  
   

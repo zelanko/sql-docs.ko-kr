@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupPropertiesColumn element
 ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9452dbc1d6c3104fe76760ad4460e636fdd45fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92125569eec6b0642efea7c9164e41c7740ded66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180840"
 ---
 # <a name="customrolluppropertiescolumn-element-assl"></a>CustomRollupPropertiesColumn 요소(ASSL)
   사용자 지정 롤업 수식의 속성을 제공하는 열의 세부 정보를 정의합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36091811"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 입력을 참조 하십시오. [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 추가 정보에 대 한는 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- 부모에 해당 하는 요소 `CustomRollupPropertiesColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `CustomRollupPropertiesColumn` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CustomRollupColumn 요소 &#40;ASSL&#41;](column-element-assl.md)   

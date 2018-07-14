@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214503"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 하는 기본 테이블 보고서를 만든 다음 테이블의 셀에 스파크라인 차트를 추가합니다.  
@@ -30,10 +30,10 @@ ms.locfileid: "36082416"
   
  비디오 [방법: 테이블에 스파크라인 만들기(보고서 작성기 비디오)](http://technet.microsoft.com/bi/ff871942.aspx) 는 스파크라인이 있는 비슷한 보고서를 만드는 방법을 보여줍니다.  
   
-##  <a name="BackToTop"></a> 학습 내용  
+##  <a name="BackToTop"></a> 학습할 내용  
  이 자습서에서는 다음 작업 방법을 배웁니다.  
   
- 1. [테이블이 있는 보고서 만들기](#CreateTable)  
+ 1. [테이블을 사용 하 여 보고서 만들기](#CreateTable)  
   
  2. [테이블 또는 행렬 마법사에서 쿼리 만들기](#Query)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36082416"
   
      **데이터 원본 =\<서버 이름 >**  
   
-     식 \<서버 이름 > SQL Server 데이터베이스 엔진의 인스턴스로 설치 된 컴퓨터를 지정 하는 예제 Report001에 대 한 합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
+     식 \<서버 이름 >에는 SQL Server 데이터베이스 엔진 인스턴스의 설치 된 컴퓨터를 지정 하는 예제 Report001, 합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
   
 9. **자격 증명**을 클릭합니다. 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 입력합니다.  
   

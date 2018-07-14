@@ -14,15 +14,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], about extended stored procedures
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b51dc3d5e0401861e188814fd229753428ded9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 08f7c6f353264b11ac0b927ac1ec19bbb6cacd1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184590"
 ---
 # <a name="how-extended-stored-procedures-work"></a>확장 저장 프로시저 작동 원리
     
@@ -31,7 +31,7 @@ ms.locfileid: "36088150"
   
  확장 저장 프로시저가 작동하는 프로세스는 다음과 같습니다.  
   
-1.  표 형식 데이터 스트림 (TDS) 또는 클라이언트 응용 프로그램에서 액세스 프로토콜 SOAP (Simple Object) 형식 요청이 전송 되는 클라이언트가 확장된 저장된 프로시저를 실행할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+1.  요청 표 형식 데이터 스트림 (TDS) 또는 클라이언트 응용 프로그램에서 액세스 프로토콜 SOAP (Simple Object) 형식으로 전송 되는 클라이언트는 확장된 저장된 프로시저를 실행할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 확장 저장 프로시저와 연결된 DLL을 검색하고 아직 로드되지 않은 경우 DLL을 로드합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225833"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
   용어 조회 변환은 변환 입력 열의 텍스트에서 추출된 용어와 참조 테이블에 있는 용어가 일치하는지 확인합니다. 그런 다음 조회 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 계산하고 해당 개수를 참조 테이블의 용어와 함께 변환 출력의 열에 기록합니다. 이러한 변환은 입력 텍스트를 기준으로 단어 빈도 통계가 모두 포함된 사용자 지정 단어 목록을 만들 때 유용합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "36088885"
   
  InputColumnType 속성이 0이나 2로 설정된 변환 출력 열에는 업스트림 데이터 흐름 구성 요소에 의해 열에 할당된 계보 식별자를 포함하는 열에 대한 CustomLineageID 속성이 포함됩니다.  
   
- 기본적으로 명명 된 변환 출력에 두 개의 열을 추가 하는 용어 조회 변환은 `Term` 및 `Frequency`합니다. `Term`은 조회 테이블의 용어를 포함하고 `Frequency`는 참조 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 포함합니다.  이러한 열에는 CustomLineageID 속성이 포함되지 않습니다.  
+ 기본적으로 명명 된 변환 출력에 두 개의 열을 추가 하는 용어 조회 변환은 `Term` 고 `Frequency`입니다. `Term`은 조회 테이블의 용어를 포함하고 `Frequency`는 참조 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 포함합니다.  이러한 열에는 CustomLineageID 속성이 포함되지 않습니다.  
   
  조회 테이블은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Access 데이터베이스의 테이블이어야 합니다. 용어 추출 변환의 출력이 테이블에 저장되는 경우 이 테이블을 참조 테이블로 사용할 수 있지만 다른 테이블도 사용할 수 있습니다. 플랫 파일, Excel 통합 문서 또는 다른 원본에 있는 텍스트는 용어 조회 변환을 사용하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스나 Access 데이터베이스로 가져와야 합니다.  
   

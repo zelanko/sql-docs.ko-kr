@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceViewID element
 ms.assetid: dcf617fe-0bf6-4767-af35-07c0c7fd96e5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c1789393052688657dcd2d05e2e03d4a04b9986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5f74aa1a747dedce0d3b9beae8b8aa9886bb681
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271549"
 ---
 # <a name="datasourceviewid-element-assl"></a>DataSourceViewID 요소(ASSL)
-  식별 된 [DataSourceView](../objects/datasourceview-element-assl.md) 요소와 연관 된는 [바인딩](../data-type/binding-data-type-assl.md) 부모 요소입니다.  
+  하 게 식별 하는 [DataSourceView](../objects/datasourceview-element-assl.md) 요소와 연관 된 [바인딩](../data-type/binding-data-type-assl.md) 부모 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36082548"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `DataSourceViewID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataSourceViewBinding> 및 <xref:Microsoft.AnalysisServices.DSVTableBinding>합니다.  
+ 부모에 해당 하는 요소가 `DataSourceViewID` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.DataSourceViewBinding> 및 <xref:Microsoft.AnalysisServices.DSVTableBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

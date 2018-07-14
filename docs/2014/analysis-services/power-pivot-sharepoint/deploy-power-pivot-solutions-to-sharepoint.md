@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243663"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
-  다음 지침을 사용하여 SharePoint Server 2010 환경에 PowerPivot 기능을 추가하는 두 개의 솔루션 패키지를 수동으로 배포할 수 있습니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 PowerPivot을 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면 참조 [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
+  다음 지침을 사용하여 SharePoint Server 2010 환경에 PowerPivot 기능을 추가하는 두 개의 솔루션 패키지를 수동으로 배포할 수 있습니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 PowerPivot을 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면를 참조 하세요 [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
   
- 또는 PowerPivot 구성 도구를 사용하여 솔루션을 배포할 수 있습니다. 구성 도구를 사용하는 방법은 단일 서버 설치의 경우 더 쉽고 효율적인 방법이지만 친숙한 도구를 사용하고 싶거나 동시에 여러 기능을 구성하려는 경우 중앙 관리 및 Powershell을 사용할 수도 있습니다. 구성 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [PowerPivot 구성 도구](power-pivot-configuration-tools.md)합니다.  
+ 또는 PowerPivot 구성 도구를 사용하여 솔루션을 배포할 수 있습니다. 구성 도구를 사용하는 방법은 단일 서버 설치의 경우 더 쉽고 효율적인 방법이지만 친숙한 도구를 사용하고 싶거나 동시에 여러 기능을 구성하려는 경우 중앙 관리 및 Powershell을 사용할 수도 있습니다. 구성 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [PowerPivot 구성 도구](power-pivot-configuration-tools.md)합니다.  
   
  솔루션을 배포하기 전에 먼저 SQL Server 2012 설치 미디어를 사용하여 SharePoint용 PowerPivot을 설치해야 합니다. SQL Server 설치 프로그램은 배포할 솔루션 패키지를 설치합니다.  
   
@@ -43,20 +43,20 @@ ms.locfileid: "36082558"
  [PowerPivot 솔루션 정보](#intro)  
   
 ##  <a name="bkmk_classic"></a> 사전 요구 사항: 웹 응용 프로그램에서 클래식 모드 인증을 사용하는지 확인  
- SharePoint용 PowerPivot은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 다음 PowerShell cmdlet을 실행 하는 응용 프로그램에서 클래식 모드가 사용 여부를 확인 하려면는 **SharePoint 2010 관리 셸을**, 대체 `http://<top-level site name>` SharePoint 사이트의 이름으로:  
+ SharePoint용 PowerPivot은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 응용 프로그램에서 클래식 모드가 사용 되는지 확인 하려면에서 다음 PowerShell cmdlet을 실행 합니다 **SharePoint 2010 관리 셸**대체, `http://<top-level site name>` SharePoint 사이트의 이름:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- 반환 값은 **false**여야 합니다. 이 경우 **true**를이 웹 응용 프로그램을 사용 하 여 PowerPivot 데이터에 액세스할 수 없습니다.  
+ 반환 값은 **false**여야 합니다. 있으면 **true**,이 웹 응용 프로그램을 사용 하 여 PowerPivot 데이터에 액세스할 수 없습니다.  
   
 ##  <a name="bkmk_farm"></a> 1단계: 팜 솔루션 배포  
- 이 섹션에서는 PowerShell을 사용하여 솔루션을 배포하는 방법을 보여 주지만 PowerPivot 구성 도구를 사용하여 이 태스크를 완료할 수도 있습니다. 자세한 내용은 참조 [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41;](../configure-repair-powerpivot-sharepoint-2010.md)합니다.  
+ 이 섹션에서는 PowerShell을 사용하여 솔루션을 배포하는 방법을 보여 주지만 PowerPivot 구성 도구를 사용하여 이 태스크를 완료할 수도 있습니다. 자세한 내용은 [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41;](../configure-repair-powerpivot-sharepoint-2010.md)합니다.  
   
  이 태스크는 SharePoint용 PowerPivot을 설치한 후 한 번만 수행해야 합니다.  
   
-1.  SharePoint 용 PowerPivot이 설치 된 서버에서 사용 하 여 SharePoint 2010 관리 셸을 열고는 **관리자 권한으로 실행** 옵션입니다.  
+1.  SharePoint 용 PowerPivot이 설치 된 서버에서 사용 하 여 SharePoint 2010 관리 셸을 엽니다는 **관리자 권한으로 실행** 옵션입니다.  
   
 2.  다음 cmdlet을 실행하여 팜 솔루션을 추가합니다.  
   
@@ -123,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  **솔루션 취소**를 클릭합니다.  
   
- 팜 솔루션까지 다시 추적 하는 서버 배포 문제가 발생 하는 경우 실행 하 여 배포할 수 있습니다는 **복구** PowerPivot 구성 도구에서 옵션입니다. 사용자가 수행할 단계가 더 적으므로 도구를 통해 복구 작업을 수행하는 것이 좋습니다. 자세한 내용은 참조 [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41;](../configure-repair-powerpivot-sharepoint-2010.md)합니다.  
+ 팜 솔루션을 다시 추적 하는 서버 배포 문제가 발생 하는 경우 실행 하 여 배포할 수 있습니다 합니다 **복구** PowerPivot 구성 도구를 사용 하는 옵션입니다. 사용자가 수행할 단계가 더 적으므로 도구를 통해 복구 작업을 수행하는 것이 좋습니다. 자세한 내용은 [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41;](../configure-repair-powerpivot-sharepoint-2010.md)합니다.  
   
  모든 솔루션을 다시 배포하려는 경우에는 다음 순서로 작업을 수행합니다.  
   

@@ -9,35 +9,35 @@ ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 caps.latest.revision: 3
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 700fed6039c53bd7e3c485d06fe5df4eae32e7f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189480"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드 (SSAS 2014)에서 DAX 수식 호환성
-Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 기타 사용자 지정 수식을 사용 하기 위해 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 경우에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드에서 배포 하는 경우 사용할 수 있는 수식에 대 한 몇 가지 제한 사항이 됩니다. 이 항목에서는 이러한 차이점에 대해 간략하게 설명, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델에서 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
+Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
   
-이 항목 내에서 사용 하 여 용어 *메모리 내 모델* 호스팅 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 참조 하려면. 사용 하 여 *DirectQuery 모델* 작성 있거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 정보를 참조 하십시오. [DirectQuery 모드 (SSAS 테이블 형식)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  
+이 항목에서 사용 하 여 용어 *메모리 내 모델에서는* 호스트 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 가리킵니다. 사용 하 여 *DirectQuery 모델* 작성 하거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 자세한 내용은 [DirectQuery 모드 (SSAS 테이블 형식)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  
   
   
-## <a name="bkmk_SemanticDifferences"></a>메모리 내 모델과 DirectQuery 모드 간의 차이점  
-DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모델이 메모리 내 모드로 배포되었을 때와 다른 결과를 반환할 수 있습니다. Directquery를 사용할 경우 관계형 데이터 저장소에서 직접 데이터를 쿼리 및 저장소에 대해 xVelocity 메모리 내 분석 엔진 (VertiPaq)을 사용 하는 대신 관련 된 관계형 엔진을 사용 하 여 수식에 필요한 집계가 수행 되기 때문에 이것이 및 계산을 추가 합니다.  
+## <a name="bkmk_SemanticDifferences"></a>메모리 내 모드와 DirectQuery 모드 간의 차이점  
+DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모델이 메모리 내 모드로 배포되었을 때와 다른 결과를 반환할 수 있습니다. DirectQuery를 사용 하 여 관계형 데이터 저장소에서 직접 데이터를 쿼리 및 저장소 용 xVelocity 메모리 내 분석 엔진 (VertiPaq)을 사용 하 여 하는 대신 관련 된 관계형 엔진을 사용 하 여 수식에 필요한 집계가 수행 하기 때문에 이것이 및 계산을 추가 합니다.  
   
 예를 들어 일부 관계형 데이터 저장소는 숫자 값, 날짜, Null 등을 처리하는 방식에 차이점이 있습니다.  
   
 반면 DAX 언어는 Microsoft Excel의 함수 동작을 가능한 한 비슷하게 에뮬레이트하기 위한 것입니다. 예를 들어 Null, 빈 문자열 및 0 값을 처리할 때 Excel에서는 정확한 데이터 형식에 관계없이 최상의 답을 제공하려고 하므로 xVelocity 엔진에서도 이와 동일하게 동작합니다. 그러나 DirectQuery 모드로 배포된 테이블 형식 모델에서 평가를 위해 관계형 데이터 원본에 수식을 전달할 경우 데이터는 관계형 데이터 원본의 의미 체계에 따라 처리되어야 합니다. 이 경우 일반적으로 빈 문자열과 Null은 서로 다르게 처리되어야 합니다. 이 때문에 동일한 수식이라도 캐시된 데이터에 대해 실행될 때와 관계형 저장소에서만 인출된 데이터에 대해 실행될 때 서로 다른 결과를 반환할 수 있습니다.  
   
-또한 일부 함수 사용할 수 없습니다 전혀 DirectQuery 모드에서 하기 때문에 계산을 매개 변수로 관계형 데이터 원본으로 현재 컨텍스트에서 데이터를 전달 합니다. 예를 들어의 측정값을 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서 내에서 사용할 수 있는 날짜 범위를 참조 하는 시간 인텔리전스 함수에 자주 사용 하 여 통합 문서. 이러한 수식은 일반적으로 DirectQuery 모드에서 사용할 수 없습니다.  
+또한 일부 기능은 사용할 수 없습니다 전혀 DirectQuery 모드에서 계산 시 현재 컨텍스트의 데이터를에서 관계형 데이터 원본에 매개 변수로 보내야 하므로. 예를 들어 측정값을 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 통합 문서는 통합 문서 내에서 사용할 수 있는 날짜 범위를 참조 하는 시간 인텔리전스 함수를 자주 사용 합니다. 이러한 수식은 일반적으로 DirectQuery 모드에서 사용할 수 없습니다.  
   
 ## <a name="semantic-differences"></a>의미 체계 차이점  
 이 섹션에서는 예상 가능한 의미 체계 차이점의 유형을 나열하고 함수 사용 또는 쿼리 결과에 적용될 수 있는 제한 사항에 대해 설명합니다.  
@@ -92,7 +92,7 @@ DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및
 **문자열에서 날짜/시간으로 캐스팅**  
 DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datetime** 값으로 캐스팅하는 동작은 SQL Server에서와 동일합니다.  
   
-캐스트 문자열을 제어 하는 규칙에 대 한 내용은 **datetime** 데이터 형식을 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델 참조는 [DAX 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)합니다.  
+문자열에서 캐스팅을 제어 하는 규칙에 대 한 자세한 **날짜/시간** 데이터 형식 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델 참조를 [DAX 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)합니다.  
   
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
@@ -162,7 +162,7 @@ Excel 및 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델에서도 0으�
 `BLANK/BLANK` 식은 메모리 내 모델과 DirectQuery 모드 모두에서 `BLANK` 를 반환하는 특수한 경우입니다.  
   
 ### <a name="bkmk_Ranges"></a>지원 되는 숫자 및 날짜-시간 범위  
-수식은 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 및 메모리 내 테이블 형식 모델은 최대 관련 하 여 Excel과 동일한 제한 사항이 적용 허용 실수 및 날짜에 대 한 값입니다. 그러나 계산 또는 쿼리에서 최대값이 반환되거나 값에 변환, 캐스팅, 반올림 또는 잘림이 적용되는 경우에는 차이점이 있을 수 있습니다.  
+수식 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 메모리 내 테이블 형식 모델은 최대와 관련 하 여 Excel과 동일한 제한 사항이 적용 허용 실수 및 날짜에 대 한 값입니다. 그러나 계산 또는 쿼리에서 최대값이 반환되거나 값에 변환, 캐스팅, 반올림 또는 잘림이 적용되는 경우에는 차이점이 있을 수 있습니다.  
   
 -   **Currency** 및 **Real** 형식의 값을 곱할 경우 결과가 가능한 최대값보다 크면 DirectQuery 모드에서는 오류가 발생하지 않고 Null이 반환됩니다.  
   
@@ -222,7 +222,7 @@ DirectQuery 모드에서는 SQL Server 규칙에 따라 결과가 잘리고 식�
 **SQL Time 데이터 형식이 지원되지 않음**  
 메모리 내 모델은 새로운 SQL **Time** 데이터 형식의 사용을 지원하지 않습니다. DirectQuery 모드에서 이 데이터 형식의 열을 참조하는 수식은 오류를 반환합니다. Time 데이터 열은 메모리 내 모델로 가져올 수 없습니다.  
   
-그러나 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 및 캐시 된 모델에서 경우에 따라 엔진은 사용할 수 있는 데이터 형식으로 시간 값 하 고 수식 결과 반환 합니다.  
+그러나 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 캐시 된 모델의 경우에 따라 엔진 캐스팅을 사용할 수 있는 데이터 형식으로 시간 값 및 수식 결과 반환 합니다.  
   
 이 동작은 날짜 열을 매개 변수로 사용하는 모든 함수에 적용됩니다.  
   

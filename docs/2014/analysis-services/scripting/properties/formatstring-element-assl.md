@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0760432767a8f7fb1dcdec99c2ca7d76722ddb38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273199"
 ---
 # <a name="formatstring-element-assl"></a>FormatString 요소(ASSL)
-  에 대 한 표시 형식을 설명는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소 또는 [측정값](../objects/measure-element-assl.md) 요소입니다.  
+  에 대 한 표시 형식을 설명 합니다는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소 또는 [측정값](../objects/measure-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36088930"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `FormatString` 속성은 MDX(Multidimensional Expressions) 식을 포함합니다. 경우 `CalculationProperty` 요소를 사용 하 여 요소에 적용 한 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀*합니다.  
+ `FormatString` 속성은 MDX(Multidimensional Expressions) 식을 포함합니다. 경우 `CalculationProperty` 요소에 적용 됩니다 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 하거나 *셀*.  
   
- 부모에 해당 하는 요소 `FormatString` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty> 및 <xref:Microsoft.AnalysisServices.Measure>합니다.  
+ 부모에 해당 하는 요소가 `FormatString` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CalculationProperty> 및 <xref:Microsoft.AnalysisServices.Measure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

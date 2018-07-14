@@ -5,28 +5,27 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalog.general.f1
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92272cb7d631265a868a79ae3bbdcdc9944a2bf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72ef177888c7eb646cebed8d7a74195f809cdd28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228323"
 ---
 # <a name="new-full-text-catalog-general-page"></a>새 전체 텍스트 카탈로그(일반 페이지)
   이 대화 상자를 사용하여 새 전체 텍스트 카탈로그를 만들 수 있습니다.  
   
- **전체 텍스트 카탈로그를 만들려면 SQL Server Management Studio를 사용 하려면**  
+ **전체 텍스트 카탈로그를 만들기 위해 SQL Server Management Studio를 사용 하려면**  
   
 -   [전체 텍스트 카탈로그 만들기 및 관리](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "36090930"
  이 카탈로그를 새 전체 텍스트 카탈로그의 기본 카탈로그로 설정하려면 선택합니다.  
   
  **악센트 구분**  
- 카탈로그에서 물결표(**~**), 양음 악센트 기호(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 나타냅니다. **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 기호에 대 한 정보를 참조 하십시오.[분음 부호](http://go.microsoft.com/fwlink/?LinkId=154091) MSN Encarta 사전에서 합니다.  
+ 카탈로그에서 물결표(**~**), 양음 악센트 기호(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 나타냅니다. **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 기호에 대 한 정보를 참조 하세요[분음 부호 표시](http://go.microsoft.com/fwlink/?LinkId=154091) MSN Encarta 백과 사전에서.  
   
 ## <a name="see-also"></a>관련 항목  
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f83aa59c76750a0e6384a88e9755b0c51333bb58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7d2397f64e5e987e2346938d5c4a9a4ad805482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282399"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 구성
   이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 **SQL Server Native Client 구성** 대화 상자에 대한 F1 도움말 항목을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 클라이언트 컴퓨터가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 시작하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 사용하는 네트워크 라이브러리입니다.  
@@ -32,17 +32,17 @@ ms.locfileid: "36090101"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL Server Native Client 구성 속성 &#40;탭 플래그&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
+-   [SQL Server Native Client 구성 속성 &#40;탭을 플래그 지정&#41;](../../../2014/tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
   
 -   [클라이언트 프로토콜 &#40;SQL Server 구성 관리자&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
     -   [클라이언트 프로토콜 속성 &#40;탭 순서&#41;](../../../2014/tools/configuration-manager/client-protocols-properties-order-tab.md)  
   
-    -   [클라이언트 프로토콜-공유 메모리 속성 &#40;프로토콜 탭&#41;](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
+    -   [클라이언트 프로토콜-공유 메모리 속성 &#40;탭을 프로토콜&#41;](../../../2014/tools/configuration-manager/client-protocols-shared-memory-properties-protocol-tab.md)  
   
-    -   [클라이언트 프로토콜-TCP 및 IP 속성 &#40;프로토콜 탭&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
+    -   [클라이언트 프로토콜-TCP 및 IP 속성 &#40;탭을 프로토콜&#41;](../../../2014/tools/configuration-manager/client-protocols-tcp-and-ip-properties-protocol-tab.md)  
   
-    -   [클라이언트 프로토콜-명명 된 파이프 속성 &#40;프로토콜 탭&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
+    -   [클라이언트 프로토콜-명명 된 파이프 속성 &#40;탭을 프로토콜&#41;](../../../2014/tools/configuration-manager/client-protocols-named-pipes-properties-protocol-tab.md)  
   
 -   [별칭 &#40;SQL Server 구성 관리자&#41;](../../../2014/tools/configuration-manager/aliases-sql-server-configuration-manager.md)  
   

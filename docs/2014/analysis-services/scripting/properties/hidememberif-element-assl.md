@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b1540a3b7f5d1e1a93ea3b4628bfbde186e5bb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0829804ae0225c848da3583c429e39d9bc176821
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187030"
 ---
 # <a name="hidememberif-element-assl"></a>HideMemberIf 요소(ASSL)
   클라이언트 응용 프로그램에서 수준의 멤버를 숨길지 여부와 숨길 조건을 나타냅니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36091804"
 |특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|*하지*|  
+|기본값|*되지*|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -66,7 +66,7 @@ ms.locfileid: "36091804"
   
 |값|Description|  
 |-----------|-----------------|  
-|*하지*|멤버를 숨기지 않습니다.|  
+|*되지*|멤버를 숨기지 않습니다.|  
 |*OnlyChildWithNoName*|멤버가 부모의 유일한 자식이고 이름이 비어 있는 경우 멤버를 숨깁니다.|  
 |*OnlyChildWithParentName*|멤버가 부모의 유일한 자식이고 이름이 부모와 동일한 경우 멤버를 숨깁니다.|  
 |*NoName*|멤버의 이름이 비어 있는 경우 멤버를 숨깁니다.|  

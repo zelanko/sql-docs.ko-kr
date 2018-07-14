@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d59d600d78aaf70a601382df1cacdea560db1073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: add8f27df3830fb474f849aa54e21fc4963ab115
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235263"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   병합 조인 변환은 FULL, LEFT 또는 INNER 조인으로 두 개의 정렬된 데이터 집합을 조인하여 생성된 출력을 제공합니다. 예를 들어 LEFT 조인을 사용하여 제품 정보가 포함된 테이블을 제품 제조 국가/지역이 나열된 테이블과 조인할 수 있습니다. 조인 결과로 모든 제품과 제조 국가/지역이 나열된 테이블이 생성됩니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36088650"
  병합 조인 변환을 사용하려면 조인된 열에 일치하는 메타데이터가 있어야 합니다. 예를 들어 숫자 데이터 형식의 열을 문자 데이터 형식의 열과 조인할 수는 없습니다. 데이터가 문자열 데이터 형식이면 두 번째 입력의 열 길이는 함께 병합될 첫 번째 입력의 열 길이보다 작거나 같아야 합니다.  
   
 ## <a name="buffer-throttling"></a>버퍼 스로틀  
- 값을 구성 해야 하는 더 이상는 `MaxBuffersPerInput` 속성 이므로 Microsoft는 병합 조인 변환에서 과도 한 메모리를 사용할 위험을 줄이려면는 내용을 변경 했습니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.  
+ 값을 구성할 필요가 없습니다를 `MaxBuffersPerInput` 속성 Microsoft 변경 된 병합 조인 변환에서 과도 한 메모리를 사용할 위험을 줄이는 때문입니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  

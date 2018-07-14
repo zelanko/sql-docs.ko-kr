@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267549"
 ---
 # <a name="standardaction-data-type-assl"></a>StandardAction 데이터 형식(ASSL)
-  모든 나타내는 파생된 데이터 형식을 정의 [동작](../objects/action-element-assl.md) 이외의 요소는 [DrillThroughAction](action-data-type-assl.md) 요소 또는 [ReportAction](reportaction-data-type-assl.md) 요소입니다.  
+  나타내는 파생된 데이터 형식을 정의 [동작](../objects/action-element-assl.md) 이외의 다른 요소를 [DrillThroughAction](action-data-type-assl.md) 요소 또는 [ReportAction](reportaction-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,12 +58,12 @@ ms.locfileid: "36082560"
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
 |자식 요소|[식](../properties/expression-element-assl.md)|  
-|파생 요소|[동작](../objects/action-element-assl.md) ([동작](../collections/actions-element-assl.md) 컬렉션 [큐브](../objects/cube-element-assl.md) 또는 [관점](../objects/perspective-element-assl.md))|  
+|파생 요소|[작업](../objects/action-element-assl.md) ([작업](../collections/actions-element-assl.md) 모음인 [큐브](../objects/cube-element-assl.md) 하거나 [관점](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.StandardAction>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

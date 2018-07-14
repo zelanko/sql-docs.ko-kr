@@ -1,5 +1,5 @@
 ---
-title: 차원 디자이너에서 특성 보기 | Microsoft Docs
+title: 차원 디자이너에서 특성을 보려면 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying attributes
 - attributes [Analysis Services], viewing
 - viewing attributes
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78e76030fe216df9e610b0e1ab6e6f37a652b30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4300c35e8c62c640808ef3658198439bf561313b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326623"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>차원 디자이너에서 특성 보기
   특성은 차원 개체에 대해 생성됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 디자이너를 사용하여 특성을 보고 구성할 수 있습니다. 차원 디자이너의 **차원 구조** 탭에 있는 **특성** 창에 차원에 포함된 특성이 나열됩니다. 이 창에서 특성을 추가하거나 제거하고 구성할 수 있습니다. 또한 새 계층에서 수준으로 사용하거나 기존 계층에 수준으로 추가할 특성을 선택할 수도 있습니다.  
   
- 차원의 특성을 보려면 해당 차원의 차원 디자이너를 엽니다. 디자이너의 **차원 구조** 탭에 있는 **특성**  창에 해당 차원에 포함된 특성이 표시됩니다. 가리켜 목록, 트리 또는 표 뷰 간에 전환할 수 있습니다 **특성 표시** 에 **차원** 의 메뉴 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 다음 표에 나오는 명령 중 하나를 클릭 하 고 있습니다.  
+ 차원의 특성을 보려면 해당 차원의 차원 디자이너를 엽니다. 디자이너의 **차원 구조** 탭에 있는 **특성**  창에 해당 차원에 포함된 특성이 표시됩니다. 가리키는 방식으로 목록, 트리 또는 표 뷰 간에 전환할 수 있습니다 **특성 표시 위치** 에 **차원** 메뉴 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 다음 표에 나오는 명령 중 하나를 클릭 한 다음.  
   
 |특성 표시 위치|Description|  
 |------------------------|-----------------|  
 |**목록**|특성을 목록 형식으로 표시합니다.<br /><br /> 특성을 목록에서 삭제하거나, 이름을 바꾸거나, 사용법을 변경하려면 특성을 마우스 오른쪽 단추로 클릭합니다.<br /><br /> 계층을 만들 때 이 뷰를 사용합니다. 특성 정보와 멤버 속성은 표시되지 않습니다.|  
 |**트리**|특성을 트리 형식으로 표시합니다. 차원이 트리의 최상위 노드입니다. 멤버 속성을 보거나 만들 때 이 뷰를 사용합니다. 이 뷰를 사용하여 계층을 만들 수도 있습니다. 다음 동작을 수행하여 특성 관계를 보거나 새 특성 관계를 만들 특성을 확장합니다.<br /><br /> **속성** 창에서 속성을 보려면 차원, 특성 또는 멤버 속성을 클릭합니다.<br /><br /> 목록에서 삭제하거나, 이름을 바꾸거나, 사용법을 변경하려면 특성이나 멤버 속성을 마우스 오른쪽 단추로 클릭합니다.|  
-|**표**|특성을 표 형식으로 표시합니다. 해당 특성의 속성을 보려면 표에서 아무 행이나 클릭합니다.  특성을 만들고 구성할 때 이 뷰를 사용합니다. 표에는 다음 열이 표시됩니다.<br /><br /> **이름**: 값이 표시는 **이름** 속성입니다. 이 설정을 변경하려면 다른 이름을 입력합니다.<br /><br /> **사용 현황**:은 특성의 용도가 Regular, Key, 부모 또는 AccountType 여부를 지정 합니다. 다른 설정을 선택하려면 이 열의 값을 클릭합니다.<br /><br /> **형식**: 특성에 대 한 비즈니스 인텔리전스 범주를 지정 합니다. 다른 설정을 선택하려면 이 셀을 클릭합니다.<br /><br /> **키 열**:에 대 한 OLE DB 데이터 형식을 표시는 **KeyColumn** 특성에는 속성입니다. 이 열은 변경할 수 없습니다.<br /><br /> **이름 열**: 나타냅니다 여부는 **l u m n** 특성 설정 속성은 동일한 열에 대 한 설정으로는 **KeyColumn** 속성입니다. 이 열은 변경할 수 없습니다.|  
+|**표**|특성을 표 형식으로 표시합니다. 해당 특성의 속성을 보려면 표에서 아무 행이나 클릭합니다.  특성을 만들고 구성할 때 이 뷰를 사용합니다. 표에는 다음 열이 표시됩니다.<br /><br /> **이름**:의 값을 표시 합니다 **이름** 속성입니다. 이 설정을 변경하려면 다른 이름을 입력합니다.<br /><br /> **사용 현황**: Regular, Key, 부모 또는 AccountType 특성 인지 여부를 지정 합니다. 다른 설정을 선택하려면 이 열의 값을 클릭합니다.<br /><br /> **형식**: 특성에 대 한 비즈니스 인텔리전스 범주를 지정 합니다. 다른 설정을 선택하려면 이 셀을 클릭합니다.<br /><br /> **키 열**: OLE DB 데이터 형식을 표시 합니다 **KeyColumn** 속성입니다. 이 열은 변경할 수 없습니다.<br /><br /> **열의 이름을**: 나타냅니다 여부를 합니다 **NameColumn** 특성의 속성 설정에 대 한 설정으로 동일한 열인지를 **KeyColumn** 속성. 이 열은 변경할 수 없습니다.|  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서는 특성의 용도에 따라 다음 표의 아이콘이 특성에 표시됩니다.  
   

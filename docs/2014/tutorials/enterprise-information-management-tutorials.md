@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bf0662a624fac18b83c1bb0d41e4c532d15ad00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202113"
 ---
 # <a name="enterprise-information-management-tutorials"></a>엔터프라이즈 정보 관리 자습서
   이 단원에는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 포함된 EIM(엔터프라이즈 정보 관리) 기술을 사용해서 기업에서 정보를 관리하기 위한 자습서가 포함되어 있습니다. EIM(엔터프라이즈 통합 관리)은 조직이 중요한 비즈니스 의사 결정을 내릴 수 있도록 데이터의 진실성 및 일관성을 신뢰할 수 있게 해주는 솔루션 포트폴리오를 제공합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에는 기업 환경에 EIM 솔루션을 구현할 수 있도록 도와주는 다음과 같은 기술이 포함되어 있습니다.  

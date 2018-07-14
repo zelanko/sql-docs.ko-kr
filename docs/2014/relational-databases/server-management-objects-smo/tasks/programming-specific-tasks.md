@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00bd816625c9f4aa4116c1c3810957f8a95bc12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274409"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
   SMO 개체를 사용하는 프로그래밍 관련 태스크에는 백업, 통계 모니터링, 복제, 인스턴스 개체 관리, 구성 옵션 설정 등 특정 기능이 있는 프로그램에만 필요한 복잡한 작업이 포함됩니다.  

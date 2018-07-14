@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5eced520aee906a2b56abfa5034196add27bfe7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 574f391a94df9881bdec346635197fd273bc836f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194423"
 ---
 # <a name="testserver-element-dta"></a>TestServer 요소(DTA)
   프로덕션 서버를 튜닝할 때 사용할 테스트 서버를 지정합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36090366"
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**기본값**|없음|  
-|**발생 빈도**|(선택 사항) 각각에 대해 한 번만 사용할 수 `TuningOptions` 요소입니다.|  
+|**발생 빈도**|(선택 사항) 각각에 대 한 번만 사용할 수 있습니다 `TuningOptions` 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

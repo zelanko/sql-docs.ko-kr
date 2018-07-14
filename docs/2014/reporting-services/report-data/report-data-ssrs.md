@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2e2d3940aed13a6225bceb6f8e28e53cbbfeee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214793"
 ---
 # <a name="report-data-ssrs"></a>보고서 데이터(SSRS)
   보고서 데이터는 조직의 다양한 데이터 원본에서 가져올 수 있습니다. 보고서 디자인의 첫 단계는 기본 보고서 데이터를 나타내는 데이터 원본 및 데이터 집합을 만드는 것입니다. 각 데이터 원본은 데이터 연결 정보를 포함합니다. 각 데이터 집합은 데이터 원본의 데이터로 사용할 필드 집합을 정의하는 쿼리 명령을 포함합니다. 각 데이터 집합의 데이터를 시각화하려면 테이블, 행렬, 차트 및 지도와 같은 데이터 영역을 추가합니다. 보고서를 처리하면 데이터 원본에 대한 쿼리가 실행되고 각 데이터 영역이 필요에 따라 확장되어 데이터 집합에 대한 쿼리 결과를 표시합니다.  
   
 ##  <a name="BkMk_ReportDataTerms"></a> 용어  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ 경우에 잘 알고 있다면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개념에 다음 사용 약관을 검토 [Reporting Services 개념 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *데이터 연결*, *포함 된 데이터 원본*, *공유 데이터 원본을*를 *포함 된 데이터 집합*를 *공유 데이터 집합*를 *데이터 집합 쿼리* 하십시오 *보고서 파트*, 및 *데이터 경고*합니다.  
   
 ##  <a name="BkMk_ReportDataTips"></a> 보고서 데이터 지정 시 유용한 정보  
  다음 정보를 사용하여 보고서 데이터 전략을 설계하십시오.  
   
--   **데이터 원본** 보고서 서버 또는 SharePoint 사이트에 있는 보고서와 별도로 데이터 원본을 게시 및 관리할 수 있습니다. 각 데이터 원본의 경우 개발자나 데이터베이스 소유자가 한 장소에서 연결 정보를 관리할 수 있습니다. 데이터 원본 자격 증명은 보고서 서버에 안전하게 저장됩니다. 연결 문자열에 암호를 포함하지 마십시오. 데이터 원본을 테스트 서버에서 프로덕션 서버로 리디렉션할 수 있습니다. 데이터 원본을 비활성화하여 해당 데이터 원본을 사용하는 모든 보고서를 일시 중지할 수 있습니다. 참조는 지원 되는 데이터 원본의 목록은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+-   **데이터 원본** 보고서 서버 또는 SharePoint 사이트에 있는 보고서와 별도로 데이터 원본을 게시 및 관리할 수 있습니다. 각 데이터 원본의 경우 개발자나 데이터베이스 소유자가 한 장소에서 연결 정보를 관리할 수 있습니다. 데이터 원본 자격 증명은 보고서 서버에 안전하게 저장됩니다. 연결 문자열에 암호를 포함하지 마십시오. 데이터 원본을 테스트 서버에서 프로덕션 서버로 리디렉션할 수 있습니다. 데이터 원본을 비활성화하여 해당 데이터 원본을 사용하는 모든 보고서를 일시 중지할 수 있습니다. 지원 되는 데이터 원본의 목록을 보려면 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
   
 -   **데이터 집합** 기반이 되는 공유 데이터 원본 또는 보고서와 별도로 데이터 집합을 게시 및 관리할 수 있습니다. 개발자 또는 데이터베이스 소유자는 보고서 작성자가 사용할 최적화된 쿼리를 제공할 수 있습니다. 쿼리를 변경하면 공유 데이터 집합을 사용하는 모든 보고서에 업데이트된 쿼리가 사용됩니다. 성능 향상을 위해 데이터 집합 캐싱을 활성화할 수 있습니다. 특정 시간 동안 쿼리 캐싱 일정을 예약하거나 공유 일정을 사용할 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36088096"
   
 -   **데이터 필터링** 쿼리 또는 보고서의 보고서 데이터를 필터링할 수 있습니다. 데이터 집합 및 쿼리 변수를 사용하여 연계 매개 변수를 만들고, 사용자에게 수천 가지의 선택권을 좀 더 관리 가능한 수치로 좁히는 기능을 제공할 수 있습니다. 매개 변수 값이나 지정하는 기타 값을 기반으로 테이블 또는 차트의 데이터를 필터링할 수 있습니다.  
   
--   **매개 변수** 쿼리 변수를 포함하는 데이터 집합 쿼리 명령은 일치하는 보고서 매개 변수를 자동으로 만듭니다. 매개 변수를 직접 만들 수도 있습니다. 보고서를 볼 때 보고서 도구 모음에 매개 변수가 표시됩니다. 사용자는 보고서 데이터 또는 보고서 모양을 제어하는 값을 선택할 수 있습니다. 보고서 데이터를 특정 대상에 대 한 사용자 지정 하려면 동일한 보고서 정의에 연결 하는 다른 기본 값으로 보고서 매개 변수 집합을 만들 하거나 기본 제공을 사용할 수 있습니다 `UserID` 필드입니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) 및 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
+-   **매개 변수** 쿼리 변수를 포함하는 데이터 집합 쿼리 명령은 일치하는 보고서 매개 변수를 자동으로 만듭니다. 매개 변수를 직접 만들 수도 있습니다. 보고서를 볼 때 보고서 도구 모음에 매개 변수가 표시됩니다. 사용자는 보고서 데이터 또는 보고서 모양을 제어하는 값을 선택할 수 있습니다. 보고서 데이터를 특정 대상을 위한 사용자 지정 하려면 동일한 보고서 정의에 연결 하는 다른 기본 값을 사용 하 여 보고서 매개 변수 집합 만들기 또는 기본 제공 수 `UserID` 필드입니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) 및 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
 -   **데이터 경고** 보고서가 게시된 후 보고서 데이터를 기반으로 경고를 만들어 지정한 규칙에 부합하는 경우 전자 메일 메시지를 수신할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36088096"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 클라이언트/서버 아키텍처 및 도구를 이해합니다. 예를 들어 보고서 디자이너에서 기본 제공 데이터 원본 유형을 사용하는 클라이언트 컴퓨터에 보고서를 작성합니다. 보고서를 게시하는 경우 데이터 원본 유형이 보고서 서버 또는 SharePoint 사이트에서 지원되어야 합니다.  자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
   
--   데이터 원본 및 데이터 집합은 보고서에 작성되고 클라이언트 제작 도구에서 보고서 서버 또는 SharePoint 사이트로 게시됩니다. 데이터 원본을 보고서 서버에서 직접 만들 수 있습니다. 게시 후에는 보고서 서버에서 자격 증명 및 기타 속성을 구성할 수 있습니다. 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 및 [Reporting Services 도구](../tools/reporting-services-tools.md)합니다.  
+-   데이터 원본 및 데이터 집합은 보고서에 작성되고 클라이언트 제작 도구에서 보고서 서버 또는 SharePoint 사이트로 게시됩니다. 데이터 원본을 보고서 서버에서 직접 만들 수 있습니다. 게시 후에는 보고서 서버에서 자격 증명 및 기타 속성을 구성할 수 있습니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하 고 [Reporting Services 도구](../tools/reporting-services-tools.md)합니다.  
   
 -   사용할 수 있는 데이터 원본은 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 확장 프로그램에 따라 다릅니다. 데이터 원본에 대한 지원은 클라이언트 제작 도구, 보고서 서버 버전 및 보고서 서버 플랫폼에 따라 다를 수 있습니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
   

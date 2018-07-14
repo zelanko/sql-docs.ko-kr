@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254925"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>AMO OLAP 고급 개체 프로그래밍
   이 항목에서는 AMO(Analysis Management Objects) OLAP 고급 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36088291"
   
 3.  동작을 큐브 컬렉션에 추가하고 큐브를 업데이트합니다. 동작은 업데이트 가능한 개체가 아닙니다.  
   
- 동작을 테스트하려면 다른 응용 프로그램이 필요합니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 동작을 테스트할 수 있습니다. 먼저 설치 해야 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 샘플 참조 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 동작을 테스트하려면 다른 응용 프로그램이 필요합니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 동작을 테스트할 수 있습니다. 먼저 설치 해야 합니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 샘플을 참조 하세요 [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  다음 코드 예제에서는 Adventure Works Analysis Services Project 예제의 세 가지 동작을 복제합니다. 다음 예제에 사용되는 동작은 "My"로 시작되므로 쉽게 구별할 수 있습니다.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 245d02d18fdaf9fdce5d1b63b965525642bebcc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8311f5a4762e016fc0fae7d5594a3453aac601fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271939"
 ---
 # <a name="designing-stored-procedures"></a>저장 프로시저 디자인
   저장 프로시저에서 관리 개체 모델 AMO(Analysis Management Objects) 및 클라이언트 기반 개체 모델 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ADO MD(ActiveX  Data Objects Multidimensional)를 모두 사용할 수 있습니다.  

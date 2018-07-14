@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c22387c74c49446c74b06125da02bda11acd0b7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253005"
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 요소(ASSL)
   불연속화에 사용할 방법을 정의합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36082153"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `DiscretizationMethod` 요소의 값은 `DimensionAttribute` 또는 `ScalarMiningStructureColumn`에 대한 값을 불연속화하거나 특정 그룹 집합으로 구성하는 방법을 결정합니다. 불연속화 방법에 대 한 자세한 내용은 참조 [분할 방법 &#40;데이터 마이닝&#41;](../../data-mining/discretization-methods-data-mining.md)합니다.  
+ `DiscretizationMethod` 요소의 값은 `DimensionAttribute` 또는 `ScalarMiningStructureColumn`에 대한 값을 불연속화하거나 특정 그룹 집합으로 구성하는 방법을 결정합니다. 불연속화 방법에 대 한 자세한 내용은 참조 하세요. [분할 메서드 &#40;데이터 마이닝&#41;](../../data-mining/discretization-methods-data-mining.md)합니다.  
   
  이 요소의 값은 다음 표에 있는 문자열 중 하나로 제한됩니다.  
   

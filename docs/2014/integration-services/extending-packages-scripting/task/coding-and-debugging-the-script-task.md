@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184720"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
   **스크립트 태스크 편집기**에서 스크립트 태스크를 구성한 후에 스크립트 태스크 개발 환경에서 사용자 지정 코드를 작성합니다.  
@@ -54,9 +54,9 @@ ms.locfileid: "36089966"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>스크립트 태스크 프로젝트의 프로젝트 항목 및 클래스  
  기본적으로 VSTA 프로젝트 탐색기 창에 표시되는 스크립트 태스크 프로젝트에는 `ScriptMain`이라는 단일 항목이 포함되어 있으며, 이 `ScriptMain` 항목에는 역시 `ScriptMain`이라는 단일 클래스가 포함되어 있습니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.  
   
--   스크립트 태스크에 대해 구성 된 경우는 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어는 `ScriptMain` 클래스에 공용 서브루틴이 `Main`합니다. `ScriptMain.Main` 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.  
+-   에 대 한 스크립트 태스크를 구성 하는 경우는 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어에는 `ScriptMain` 클래스에 공용 서브루틴이 `Main`합니다. `ScriptMain.Main` 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.  
   
-     기본적으로 새 스크립트의 `Main` 서브루틴에 있는 유일한 코드는 `Dts.TaskResult = ScriptResults.Success` 줄뿐입니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. `Dts.TaskResult` 속성에 대해서는 설명 [스크립트 태스크에서 결과 반환](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)합니다.  
+     기본적으로 새 스크립트의 `Main` 서브루틴에 있는 유일한 코드는 `Dts.TaskResult = ScriptResults.Success` 줄뿐입니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. 합니다 `Dts.TaskResult` 속성에 대해서는 설명 [스크립트 태스크에서 결과 반환](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)합니다.  
   
 -   스크립트 태스크가 Visual C# 프로그래밍 언어를 사용하도록 구성된 경우 `ScriptMain` 클래스에는 `Main`이라는 공용 메서드가 있습니다. 이 메서드는 스크립트 태스크가 실행될 때 호출됩니다.  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](http://go.microsoft.com/fwlink/?LinkId=215661)  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]정선는 커뮤니티에서 선택 된 솔루션 방문는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조:<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]커뮤니티에서 선택된 된 솔루션 방문 뿐만 아니라는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조 합니다.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md)   

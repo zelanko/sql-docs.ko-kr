@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.general.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5269d8c0ce124384e2b0a5635b697ab260484a7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 583ad9bac0cbdfeb81024f123fc91ff327b51356
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262779"
 ---
 # <a name="database-properties-general-page"></a>데이터베이스 속성(일반 페이지)
   이 페이지를 사용하여 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다.  

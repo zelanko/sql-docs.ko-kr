@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - certificates [SQL Server], database mirroring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c61db45a0b4a6b1326c74472158423bdabd05d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 046d73e4317696c579bbcc6e2ad512227b12f37e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248873"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
   이 예에서는 인증서 기반 인증을 사용하여 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. 네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다.  
@@ -261,7 +260,7 @@ ms.locfileid: "36082747"
     ```  
   
     > [!NOTE]  
-    >  자동 장애 조치 있는 보호 우선 모드에서 실행 하려는 경우 트랜잭션 보안 설정 FULL (기본 설정)로 두고 두 번째 SET PARTNER를 실행 한 후 즉시 미러링 모니터 서버 추가 **'*`partner_server`*'** 문. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
+    >  자동 장애 조치 있는 보호 우선 모드에서 실행 하려는 경우을 FULL (기본 설정) 트랜잭션 안전성 설정 된 채로 및 두 번째 SET PARTNER를 실행 한 후 가능한 한 빨리 미러링 모니터 서버 추가 **'*`partner_server`*'** 문입니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   

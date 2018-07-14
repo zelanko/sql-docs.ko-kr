@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75bf7b8fc40f7eb4a926ec1d43a858b06f704a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3b1ff0b00bbbee79b5d24144e733f367807a91d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257699"
 ---
 # <a name="create-queries-visual-database-tools"></a>쿼리 만들기(Visual Database Tools)
   쿼리를 사용하면 데이터베이스에서 테이블과 뷰의 데이터를 검색할 수 있습니다. 쿼리는 **쿼리 및 뷰 디자이너**에서 만들고 사용합니다. 이 디자이너는 [다이어그램 창](visual-database-tools.md), [SQL 창](sql-pane-visual-database-tools.md), [조건 창](criteria-pane-visual-database-tools.md)및 [결과 창](results-pane-visual-database-tools.md)의 네 가지 창으로 구성됩니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36088057"
   
 ## <a name="see-also"></a>관련 항목  
  [쿼리 저장 &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
- [쿼리의 종류 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [쿼리의 형식은 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [검색 조건 지정 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
  [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  

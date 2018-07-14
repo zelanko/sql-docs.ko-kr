@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba34243609b796eef635fc3b55cd99ef4f225638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321283"
 ---
 # <a name="user-defined-member-properties-mdx"></a>사용자 정의 멤버 속성(MDX)
-  사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 사용자 정의 멤버 속성에 추가할 수 없습니다는 `(All)` 자체 또는 계층의 수준입니다.  
+  사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 사용자 정의 멤버 속성을 추가할 수 없습니다는 `(All)` 자체 계층 구조 또는 계층의 수준입니다.  
   
 ## <a name="creating-user-defined-member-properties"></a>사용자 정의 멤버 속성 만들기  
  사용자 정의 멤버 속성을 서버 기반 차원 또는 큐브에 추가하는 데는 사용자 인터페이스 방식 또는 프로그래밍 방식을 사용할 수 있습니다.  
@@ -34,14 +34,14 @@ ms.locfileid: "36088023"
 -   프로그래밍 방식으로 사용자 정의 멤버 속성을 추가하려면 응용 프로그램에서 AMO(Analysis Management Objects)를 사용하거나 XMLA(XML for Analysis) 및 ASSL(Analysis Services Scripting Language)을 조합하여 사용하십시오. 자세한 내용은 [특성 관계](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 참조하세요.  
   
 ## <a name="retrieving-user-defined-member-properties"></a>사용자 정의 멤버 속성 검색  
- 중 하나를 사용 하 여 사용자 정의 멤버 속성을 검색할 수 있습니다는 `PROPERTIES` 키워드 또는 [속성](/sql/mdx/properties-mdx) 함수입니다.  
+ 사용자 정의 멤버 속성 중 하나를 사용 하 여 검색할 수 있습니다 합니다 `PROPERTIES` 키워드와 [속성](/sql/mdx/properties-mdx) 함수입니다.  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>PROPERTIES 키워드를 사용한 사용자 정의 멤버 속성 검색  
  사용자 정의 멤버 속성을 검색하는 구문은 다음 구문과 같이 기본 수준 멤버 속성을 검색하는 구문과 비슷합니다.  
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시 합니다. 예를 들어 다음 MDX 쿼리는 `PROPERTIES` 키워드 검색는 `List Price` 및 `Dealer Price` 사용자 정의 멤버 속성 및 1 월에 판매 된 제품을 식별 하는 집합 식을 한 후 표시:  
+ `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시 됩니다. 예를 들어 다음 MDX 쿼리를 `PROPERTIES` 키워드를 검색 합니다 `List Price` 및 `Dealer Price` 사용자 정의 멤버 속성 년 1 월에 판매 된 제품을 식별 하는 집합 식 뒤 및:  
   
 ```  
 SELECT   
@@ -56,7 +56,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Properties 함수를 사용하여 사용자 정의 멤버 속성 검색  
- 또는 `Properties` 함수를 사용해 사용자 정의 멤버 속성에 액세스할 수 있습니다. 예를 들어 다음 MDX 쿼리에서 사용 하 여는 `WITH` 로 구성 된 계산된 멤버를 만들어서 키워드는 `List Price` 멤버 속성:  
+ 또는 `Properties` 함수를 사용해 사용자 정의 멤버 속성에 액세스할 수 있습니다. 예를 들어 다음 MDX 쿼리를 사용 하는 `WITH` 구성 된 계산된 멤버를 만들려면 키워드를 `List Price` 멤버 속성:  
   
 ```  
 WITH   

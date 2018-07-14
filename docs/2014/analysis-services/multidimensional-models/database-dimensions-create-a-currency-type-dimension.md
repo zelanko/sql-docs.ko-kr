@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232023"
 ---
 # <a name="create-a-currency-type-dimension"></a>통화 유형 차원 만들기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 통화 유형 차원은 재무 보고용 통화 목록을 나타내는 특성이 있는 차원입니다.  
@@ -37,14 +37,14 @@ ms.locfileid: "36081223"
   
  비즈니스 인텔리전스 마법사는 이 정보를 사용하여 대상 통화를 나타내는 통화 차원인 적합한 대상 통화 차원을 식별하는 통화 변환 프로세스를 디자인합니다. 비즈니스 인텔리전스 마법사는 비즈니스 인텔리전스 솔루션에 필요한 통화 변환 수에 따라 여러 대상 통화 차원을 정의할 수 있습니다. 통화 환산을 정의하는 방법은 [통화 환산&#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)을 참조하세요.  
   
- 차원을 통화 차원으로 식별 하려면 설정는 `Type` 차원의 속성 `Currency`합니다.  
+ 차원을 통화 차원으로 식별 하려면 설정 합니다 `Type` 차원의 속성 `Currency`합니다.  
   
 ## <a name="dimension-structure"></a>차원 구조  
  통화 차원에는 통화 차원의 차원 테이블에 있는 개별 통화를 식별하는 키 특성이 기본적으로 포함되어 있습니다. 키 특성의 값은 원본 통화 차원 및 대상 통화 차원에 따라 다릅니다.  
   
 -   특성을 원본 통화 차원의 키 특성으로 식별하려면 특성의 `Type` 속성을 `CurrencySource`로 설정합니다.  
   
--   특성 대상 통화 차원으로 식별, 설정 된 `Type` 특성의 속성 `CurrencyDestination`합니다.  
+-   특성을 대상 통화 차원으로 식별 하려면 설정 합니다 `Type` 특성의 속성 `CurrencyDestination`합니다.  
   
  보고를 위해 필요한 경우 원본 통화 차원과 대상 통화 차원 모두에 다음 특성이 포함될 수 있습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36081223"
   
 -   통화 ISO(International Standards Organization) 코드  
   
-     통화 ISO 코드 특성으로 특성을 식별 하려면 설정는 `Type` 특성의 속성 `CurrencyIsoCode`합니다.  
+     특성을 통화 ISO 코드 특성으로 식별 하려면 설정 합니다 `Type` 특성의 속성 `CurrencyIsoCode`합니다.  
   
  특성 유형에 대한 자세한 내용은 [특성 유형 구성](attribute-properties-configure-attribute-types.md)을 참조하세요.  
   

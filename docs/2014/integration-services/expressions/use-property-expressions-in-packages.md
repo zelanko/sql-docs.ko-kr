@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289379"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.  
@@ -56,10 +56,10 @@ ms.locfileid: "36088657"
   
  속성은 하나의 속성 식만 사용할 수 있고 속성 식은 하나의 속성에만 적용할 수 있습니다. 그러나 여러 동일한 속성 식을 작성하고 다른 속성에 할당할 수 있습니다.  
   
- 일부 속성은 열거자의 값을 사용하여 설정됩니다. 속성 식의 열거자 멤버를 참조할 경우 열거자 멤버의 이름에 해당하는 숫자 값을 사용해야 합니다. 예를 들어 속성 식을 설정 하는 경우는 `LoggingMode` 속성에서 값을 사용 하는 `DTSLoggingMode` 열거형 속성 식 이름 대신 0, 1 또는 2를 사용 해야 `Enabled`, `Disabled`, 또는 `UseParentSetting`합니다. 자세한 내용은 [속성 식의 열거 상수](enumerated-constants-in-property-expressions.md)를 참조하세요.  
+ 일부 속성은 열거자의 값을 사용하여 설정됩니다. 속성 식의 열거자 멤버를 참조할 경우 열거자 멤버의 이름에 해당하는 숫자 값을 사용해야 합니다. 예를 들어 속성 식을 설정 하는 경우는 `LoggingMode` 속성의 값을 사용 하는 `DTSLoggingMode` 열거형 속성 식 이름 대신 0, 1 또는 2를 사용 해야 합니다 `Enabled`, `Disabled`, 또는 `UseParentSetting`. 자세한 내용은 [속성 식의 열거 상수](enumerated-constants-in-property-expressions.md)를 참조하세요.  
   
 ## <a name="property-expression-user-interface"></a>속성 식 사용자 인터페이스  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 작성 하 고 속성 식을 관리 하기 위한 도구 집합을 제공 합니다.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 빌드하고 관리 하는 속성 식에 대 한 도구 집합을 제공 합니다.  
   
 -   **식** 페이지는 태스크용 사용자 지정 편집기, For 루프 컨테이너 및 Foreach 컨테이너에 있습니다. **식** 페이지를 사용하여 식을 편집하고 태스크, Foreach 루프 또는 For 루프에서 사용하는 속성 식의 목록을 볼 수 있습니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36088657"
  속성 식은 패키지 구성이 로드된 후에 로드됩니다. 예를 들어 변수가 해당 구성에 의해 먼저 업데이트된 다음 변수를 사용하는 속성 식이 평가되고 로드됩니다. 즉, 속성 식은 항상 구성에 의해 설정된 변수 값을 사용합니다.  
   
 > [!NOTE]  
->  사용할 수 없습니다는 `Set` 옵션의는 **dtexec** 유틸리티 속성 식을 채울 수 있습니다.  
+>  사용할 수 없습니다는 `Set` 옵션을 **dtexec** 속성 식을 채울 수 있는 유틸리티.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 의 속성 식이 평가되고 로드되는 시기를 요약합니다.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36088657"
 |Foreach 열거자|구성 로드 후<br /><br /> 유효성 검사 전<br /><br /> 실행 전<br /><br /> 각 루프 열거 전|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Foreach 루프에 속성 식 사용  
- Foreach 루프 컨테이너 내에서 사용되는 연결 관리자의 `ConnectionString` 속성 값을 설정하도록 속성 식을 구현하는 것이 유용한 경우가 종종 있습니다. 열거자의 현재 값은 루프의 각 반복에을 변수에 매핑한, 후 속성 식의 값을 업데이트 하이 변수의 값을 사용할 수는 `ConnectionString` 속성 동적으로 합니다.  
+ Foreach 루프 컨테이너 내에서 사용되는 연결 관리자의 `ConnectionString` 속성 값을 설정하도록 속성 식을 구현하는 것이 유용한 경우가 종종 있습니다. 열거자의 현재 값 루프의 각 반복을 변수에 매핑한, 후 속성 식의 값을 업데이트 하려면이 변수의 값을 사용 수를 `ConnectionString` 속성 동적으로 합니다.  
   
- Foreach 루프에서 사용하는 파일, 다중 파일, 플랫 파일 및 다중 플랫 파일 연결 관리자의 `ConnectionString` 속성과 함께 속성 식을 사용하려는 경우 몇 가지 사항을 고려해야 합니다. `MaxConcurrentExecutables` 속성을 1보다 큰 값이나 -1 값으로 설정하여 여러 실행 파일을 동시에 실행하도록 패키지를 구성할 수 있습니다. 값 -1은 동시에 실행되는 최대 실행 파일 수가 프로세서 수 +2가 되도록 합니다. 실행 파일의 병렬 실행에서 부정적인 결과가 발생하지 않도록 하려면 `MaxConcurrentExecutables` 값을 1로 설정해야 합니다. 경우 `MaxConcurrentExecutables` 값을 1로 설정 되어 있지는 `ConnectionString` 속성을 보장할 수 없습니다 및 결과 예측할 수 없습니다.  
+ Foreach 루프에서 사용하는 파일, 다중 파일, 플랫 파일 및 다중 플랫 파일 연결 관리자의 `ConnectionString` 속성과 함께 속성 식을 사용하려는 경우 몇 가지 사항을 고려해야 합니다. `MaxConcurrentExecutables` 속성을 1보다 큰 값이나 -1 값으로 설정하여 여러 실행 파일을 동시에 실행하도록 패키지를 구성할 수 있습니다. 값 -1은 동시에 실행되는 최대 실행 파일 수가 프로세서 수 +2가 되도록 합니다. 실행 파일의 병렬 실행에서 부정적인 결과가 발생하지 않도록 하려면 `MaxConcurrentExecutables` 값을 1로 설정해야 합니다. 하는 경우 `MaxConcurrentExecutables` 의 값을 1로 설정 되지 않은 `ConnectionString` 속성을 보장할 수 없으므로 결과 예측할 수 없습니다.  
   
  예를 들어 Foreach 루프가 폴더에 있는 파일을 열거하고 파일 이름을 검색한 다음 SQL 실행 태스크를 사용하여 각 파일 이름을 테이블에 삽입한다고 가정합니다. `MaxConcurrentExecutables`가 1로 설정되지 않은 경우 SQL 실행 태스크의 인스턴스 두 개가 동시에 테이블에 쓰기를 시도하면 쓰기 충돌이 발생할 수 있습니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36088657"
  다음 예제 식에서는 속성 식에서 시스템 변수, 연산자, 함수 및 문자열 리터럴을 사용하는 방법을 보여 줍니다.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>패키지의 LoggingMode 속성에 대한 속성 식  
- 다음 속성 식을 사용하여 패키지의 LoggingMode 속성을 설정할 수 있습니다. 이 식은 DAY 및 GETDATE 함수를 사용하여 날짜의 일 부분을 나타내는 정수를 가져옵니다. 일이 1이거나 15이면 로깅이 설정되고 그렇지 않으면 로깅 설정이 해제됩니다. 1 값은 정수 LoggingMode 열거자 멤버의 해당 `Enabled`, 값 2는 정수 및 해당 멤버의 `Disabled`합니다. 식에는 열거자 멤버 이름 대신 숫자 값을 사용해야 합니다.  
+ 다음 속성 식을 사용하여 패키지의 LoggingMode 속성을 설정할 수 있습니다. 이 식은 DAY 및 GETDATE 함수를 사용하여 날짜의 일 부분을 나타내는 정수를 가져옵니다. 일이 1이거나 15이면 로깅이 설정되고 그렇지 않으면 로깅 설정이 해제됩니다. 1 값은 정수 LoggingMode 열거자 멤버와 동등한 `Enabled`, 값 2는 정수 이며 멤버에 해당 `Disabled`합니다. 식에는 열거자 멤버 이름 대신 숫자 값을 사용해야 합니다.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

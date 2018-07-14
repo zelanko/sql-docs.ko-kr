@@ -1,5 +1,5 @@
 ---
-title: '통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. 다음과 같은 연결을 새로 고치지 못했습니다: PowerPivot 데이터 | Microsoft Docs'
+title: '통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. 다음 연결을 새로 고치지 못했습니다: PowerPivot 데이터 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220273"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
   Excel Services는 PowerPivot 서버에 연결 요청을 제출하고 이 요청이 실패하는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  
@@ -38,13 +38,13 @@ ms.locfileid: "36081445"
   
  **시나리오 1: 서비스가 시작되지 않은 경우**  
   
- SQL Server Analysis Services(PowerPivot) 인스턴스가 시작되지 않았습니다. 만료된 암호로 인해 서비스 실행이 중지됩니다. 암호를 변경 하는 방법에 대 한 자세한 내용은 참조 [PowerPivot 서비스 계정 구성](configure-power-pivot-service-accounts.md) 및 [시작 하거나 PowerPivot for SharePoint 서버 중지](start-or-stop-a-power-pivot-for-sharepoint-server.md)합니다.  
+ SQL Server Analysis Services(PowerPivot) 인스턴스가 시작되지 않았습니다. 만료된 암호로 인해 서비스 실행이 중지됩니다. 암호를 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [Configure PowerPivot Service Accounts](configure-power-pivot-service-accounts.md) 하 고 [시작 또는 Stop a PowerPivot for SharePoint 서버](start-or-stop-a-power-pivot-for-sharepoint-server.md)합니다.  
   
  **시나리오 2a: 서버에서 이전 버전의 통합 문서를 여는 경우**  
   
  열려는 통합 문서가 SQL Server 2008 R2 버전의 PowerPivot for Excel에서 작성되었을 수 있습니다. 이는 대개 데이터 연결 문자열에 지정된 Analysis Services 데이터 공급자가 요청을 처리할 컴퓨터에 없는 경우에 해당합니다.  
   
- 이 경우 ULS 로그에서이 메시지를 찾을 수 있습니다: "통합 문서에서 ' PowerPivot 데이터 '에 대 한 새로 고침이 실패 했습니다 '\<통합 문서에 URL >'", "연결 가져올 수 없습니다."입니다.  
+ 이 경우 ULS 로그에서이 메시지를 확인할 수 있습니다: "통합 문서에서 ' PowerPivot 데이터 '에 대 한 새로 고침 실패 '\<통합 문서에 대 한 URL >'", "연결을 가져올 수 없습니다."입니다.  
   
  통합 문서의 버전을 확인하려면 Excel에서 해당 통합 문서를 열고 연결 문자열에 지정된 데이터 공급자를 확인합니다. SQL Server 2008 R2 통합 문서는 MSOLAP.4를 데이터 공급자로 사용합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36081445"
   
  이 문제를 해결하려면 컴퓨터를 PowerPivot 서버와 같은 도메인에 참가시키거나 로컬 컴퓨터에 도메인 컨트롤러를 설치합니다. 두 번째 해결 방법인 도메인 컨트롤러 설치를 수행하려면 모든 서비스 및 사용자에 대해 로컬 도메인 계정을 만들어야 합니다. 정의한 계정에 대해 서비스 계정 및 SharePoint 권한을 구성해야 합니다.  
   
- 오프라인 상태로 SharePoint용 PowerPivot을 사용하는 것이 목적인 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. PowerPivot을 오프 라인으로 사용 하는 방법에 자세한 내용은 블로그 항목에 대 한 참조 "Taking your PowerPivot server가 네트워크" 이라는 [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)합니다.  
+ 오프라인 상태로 SharePoint용 PowerPivot을 사용하는 것이 목적인 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. 자세한 지침은 PowerPivot을 오프 라인으로 사용 하는 방법에 대 한 블로그 항목을 참조에서 "Taking your PowerPivot server off the network" [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)합니다.  
   
  **시나리오 4: 서버가 불안정한 경우**  
   

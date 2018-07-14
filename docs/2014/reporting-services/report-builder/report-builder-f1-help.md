@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10426"
 helpviewer_keywords:
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - dialog boxes
 - Help, dialog boxes
 - user interface, dialog boxes
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 40fe2d677d3189cbf5fecaff6cc1164a2798271b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a40bdd3e1081d7e7b6fde7071dcd03ae57c560a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191643"
 ---
 # <a name="report-builder-f1-help"></a>보고서 작성기 F1 도움말
-  이 섹션에는 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대 한 도움말이 포함 되어 있습니다. 대화 상자에서 도움말 단추를 클릭 하거나 F1 키를 누르거나 도움말을 열 수도 있습니다.  
+  이 섹션에서는 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대 한 도움말을 포함합니다. 또한 대화 상자에서 도움말 단추를 클릭 하거나 F1 키를 누르거나 도움말을 열 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사 (F1)에 대 한 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) [보고서 디자인 보기 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)   
+ [대화 상자, 창 및 마법사 (F1)에 대 한 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)   
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [보고서 작성기 문제 해결](../troubleshoot-report-builder.md)  
   

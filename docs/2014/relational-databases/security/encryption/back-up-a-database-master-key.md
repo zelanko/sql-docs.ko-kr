@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ee22c85e09a93bb78307320fbe592f0efa2e0e0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 6b32c82901d00ce7505119d20a1e8261784dcd86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201073"
 ---
 # <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 백업하는 방법에 대해 설명합니다. 데이터베이스 마스터 키는 데이터베이스 내의 다른 키와 인증서를 암호화하는 데 사용됩니다. 데이터베이스 마스터 키가 삭제되거나 손상된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 해당 마스터 키를 해독하지 못할 수 있으며 해당 마스터 키를 사용하여 암호화한 데이터는 사실상 손실됩니다. 그러므로 데이터베이스 마스터 키를 백업하고 이 백업을 안전한 오프 사이트 위치에 저장해야 합니다.  

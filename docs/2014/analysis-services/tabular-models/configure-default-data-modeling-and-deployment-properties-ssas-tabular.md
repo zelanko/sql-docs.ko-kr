@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171474"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 만든 각각의 새로운 테이블 형식 모델 프로젝트에 대해 미리 정의될 수 있는 기본 호환성 수준, 배포 및 작업 영역 데이터베이스 속성 설정을 구성하는 방법에 대해 설명합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36081424"
   
     |속성|기본 설정|Description|  
     |--------------|---------------------|-----------------|  
-    |**새 프로젝트의 기본 호환성 수준**|SQL Server 2012 (1100)|이 설정은 새 테이블 형식 모델 프로젝트를 만들 때 사용할 기본 호환성 수준을 지정합니다. SP1이 적용되지 않은 Analysis Services 인스턴스에 배포하려는 경우 SQL Server 2012 RTM(1100)을 선택하거나 배포 인스턴스에 SP1이 적용된 경우 SQL Server 2012 SP1 또는 SQL Server 2014를 선택할 수 있습니다. 자세한 내용은 참조 [호환성 수준이 &#40;SSAS 테이블 형식 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)합니다.|  
+    |**새 프로젝트의 기본 호환성 수준**|SQL Server 2012 (1100)|이 설정은 새 테이블 형식 모델 프로젝트를 만들 때 사용할 기본 호환성 수준을 지정합니다. SP1이 적용되지 않은 Analysis Services 인스턴스에 배포하려는 경우 SQL Server 2012 RTM(1100)을 선택하거나 배포 인스턴스에 SP1이 적용된 경우 SQL Server 2012 SP1 또는 SQL Server 2014를 선택할 수 있습니다. 자세한 내용은 [호환성 &#40;SSAS 테이블 형식 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)합니다.|  
     |**호환성 수준 옵션**|모든 선택됨|새 테이블 형식 모델 프로젝트의 호환성 수준 옵션 및 다른 Analysis Services 인스턴스에 배포할 시기를 지정합니다.|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>새 모델 프로젝트의 기본 배포 서버 속성 설정을 구성하려면  
@@ -75,8 +75,8 @@ ms.locfileid: "36081424"
 >  기본 모델 속성을 변경해도 변경 전에 만들어진 기존 모델의 속성은 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [프로젝트 속성 &#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
- [모델 속성 &#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)   
- [호환성 수준이 &#40;SSAS 테이블 형식 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
+ [모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)   
+ [호환성 수준 &#40;SSAS 테이블 형식 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

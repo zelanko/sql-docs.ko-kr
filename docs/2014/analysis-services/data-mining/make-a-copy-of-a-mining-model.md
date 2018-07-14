@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델의 복사본을 만듭니다 | Microsoft Docs
+title: 마이닝 모델의 복사본 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da23bba72674c1f9ca4dd80bab01dd9d8e8e35cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187780"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>마이닝 모델 복사본 만들기
   마이닝 모델의 복사본을 만들면 동일한 데이터를 기반으로 여러 마이닝 모델을 빠르게 만들 때 유용합니다. 모델을 복사한 후 매개 변수를 변경하거나 필터를 추가하여 새 복사본을 편집할 수도 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36089668"
   
      필터 편집기 대화 상자를 사용하는 방법에 대한 자세한 내용은 [마이닝 모델에 필터 적용](apply-a-filter-to-a-mining-model.md)을 참조하세요.  
   
-4.  에 **속성** 창에는 `AlgorithmParameters` 텍스트 상자 클릭 **Setalgorithm 매개 변수**, 고 필요한 경우 알고리즘 매개 변수를 변경 합니다.  
+4.  에 **속성** 창에서를 `AlgorithmParameters` 텍스트 상자 클릭 **알고리즘 매개 변수**, 고 필요한 경우 알고리즘 매개 변수를 변경 합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

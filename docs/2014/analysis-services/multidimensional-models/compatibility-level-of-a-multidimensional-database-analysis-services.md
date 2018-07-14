@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c781f8e2a8b93653354bd5e39244a56e68c2bbab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76f3369760bd03019221d296d958f2a74191aac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241783"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스의 호환성 수준 설정(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터베이스 호환성 수준 속성은 데이터베이스의 기능 수준을 결정합니다. 호환성 수준은 각 모델 유형에 고유합니다. 예를 들어, 호환성 수준이 `1100` 다차원 또는 테이블 형식 데이터베이스 인지에 따라 의미가 다릅니다.  
   
- 이 항목에서는 다차원 데이터베이스의 호환성 수준에 대해서만 설명합니다. 테이블 형식 솔루션에 대 한 자세한 내용은 참조 [호환성 수준이 &#40;SSAS 테이블 형식 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)합니다.  
+ 이 항목에서는 다차원 데이터베이스의 호환성 수준에 대해서만 설명합니다. 테이블 형식 솔루션에 대 한 자세한 내용은 참조 하세요. [호환성 &#40;SSAS 테이블 형식 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)합니다.  
   
 > [!NOTE]  
->  테이블 형식 모델은 다차원 모델에 적용되지 않는 추가 데이터베이스 호환성 수준이 있습니다. 호환성 수준이 `1103` 다차원 모델에 대 한 존재 하지 않습니다. 참조 [SQL Server 2012 SP1 및 호환성 수준의 테이블 형식 모델에 대 한 새로운](http://go.microsoft.com/fwlink/?LinkId=301727) 에 대 한 자세한 내용은 `1103` 테이블 형식 솔루션에 대 한 합니다.  
+>  테이블 형식 모델은 다차원 모델에 적용되지 않는 추가 데이터베이스 호환성 수준이 있습니다. 호환성 수준 `1103` 다차원 모델에 존재 하지 않습니다. 참조 [SQL Server 2012 SP1 및 호환성 수준의 테이블 형식 모델에 대 한 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=301727) 에 대 한 자세한 내용은 `1103` 테이블 형식 솔루션에 대 한 합니다.  
   
  **다차원 데이터베이스의 호환성 수준**  
   
@@ -38,10 +38,10 @@ ms.locfileid: "36090084"
 |설정|Description|  
 |-------------|-----------------|  
 |`1050`|이 값은 스크립트나 도구에 표시되지 않지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 만든 데이터베이스에 해당됩니다. `CompatibilityLevel`이 명시적으로 설정되지 않은 모든 데이터베이스는 `1050` 수준에서 암시적으로 실행됩니다.|  
-|`1100`|이 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 만드는 새 데이터베이스의 기본값입니다. 이 호환성 수준에서만 지원되는 기능(즉, 차원 특성의 증가된 문자열 저장소 또는 문자열 데이터가 포함된 고유 카운트 측정값)을 사용할 수 있도록 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스에 대해 이 값을 지정할 수도 있습니다.<br /><br /> 가 있는 데이터베이스는 `CompatibilityLevel` 로 설정 `1100` 추가 속성을 가져올 `StringStoresCompatibilityLevel`, 파티션 및 차원에 대 한 대체 문자열 저장소를 선택할 수 있는 합니다.|  
+|`1100`|이 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 만드는 새 데이터베이스의 기본값입니다. 이 호환성 수준에서만 지원되는 기능(즉, 차원 특성의 증가된 문자열 저장소 또는 문자열 데이터가 포함된 고유 카운트 측정값)을 사용할 수 있도록 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스에 대해 이 값을 지정할 수도 있습니다.<br /><br /> 데이터베이스를 `CompatibilityLevel` 로 설정 `1100` 추가 속성을 가져옵니다 `StringStoresCompatibilityLevel`, 파티션 및 차원에 대 한 대체 문자열 저장소를 선택할 수 있는 합니다.|  
   
 > [!WARNING]  
->  데이터베이스 호환성 수준을 더 높여서 설정하는 경우 되돌릴 수 없습니다. 호환성 수준을 높인 후 `1100`, 최신 서버에서 데이터베이스를 실행 하려면 계속 해야 합니다. 으로 롤백할 수 없습니다 `1050`합니다. 연결 하거나 복원할 수 없습니다는 `1100` 미만의 서버 버전에서 데이터베이스 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
+>  데이터베이스 호환성 수준을 더 높여서 설정하는 경우 되돌릴 수 없습니다. 호환성 수준을 높인 후 `1100`, 최신 서버에서 데이터베이스를 실행 하려면 계속 해야 합니다. 롤백할 수 없습니다 `1050`합니다. 연결 하거나 복원할 수 없습니다는 `1100` 이전의 서버 버전에서 데이터베이스 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  데이터베이스 호환성 수준은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. 데이터베이스 호환성 수준을 보거나 설정하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상이 있어야 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36090084"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>다차원 데이터베이스에 대한 기존 데이터베이스 호환성 수준을 결정합니다.  
  데이터베이스 호환성 수준은 XMLA를 통해서만 보거나 수정할 수 있습니다. SQL Server Management Studio에서 데이터베이스를 지정하는 XMLA 스크립트를 보거나 수정할 수 있습니다.  
   
- 속성에 대 한 데이터베이스의 XMLA 정의 검색 하는 경우 `CompatibilityLevel` 존재 하지 않는 하 고, 데이터베이스에 있을 가능성이 가장 높습니다는 `1050` 수준입니다.  
+ 속성에 대 한 데이터베이스의 XMLA 정의 검색 하는 경우 `CompatibilityLevel` 존재 하지 않는, 데이터베이스가 있을 가능성이 가장 높습니다는 `1050` 수준입니다.  
   
  XMLA 스크립트 보기 및 수정에 대한 지침은 다음 섹션에서 제공됩니다.  
   
@@ -88,12 +88,12 @@ ms.locfileid: "36090084"
   
 1.  다른 데이터베이스에서 파티션을 병합하는 경우 두 데이터베이스의 호환성 수준이 같아야 합니다.  
   
-2.  다른 데이터베이스의 연결된 차원을 사용하려면 호환성 수준이 같아야 합니다. 예를 들어, 연결 된 차원을 사용 하려면는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 여기에 데이터베이스는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 포트 해야 데이터베이스에는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 데이터베이스를 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서버 설정의 호환성 수준을 `1100`합니다.  
+2.  다른 데이터베이스의 연결된 차원을 사용하려면 호환성 수준이 같아야 합니다. 예를 들어, 연결 된 차원을 사용 하려는 경우는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 데이터베이스에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 포트 해야 데이터베이스를 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 데이터베이스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서버 집합 호환성 수준을 `1100`.  
   
 3.  서버 동기화는 동일한 버전과 데이터베이스 호환성 수준을 공유하는 서버에 대해서만 지원됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 데이터베이스 호환성 수준을 증가 시키면 후 설정할 수 있습니다는 `StringStoresCompatibilityLevel` 속성 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다. 그러면 측정값 및 차원에 대한 문자열 저장소가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
+ 데이터베이스 호환성 수준을 높인 후 설정할 수 있습니다 합니다 `StringStoresCompatibilityLevel` 속성에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다. 그러면 측정값 및 차원에 대한 문자열 저장소가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [백업, 복원 및 데이터베이스를 동기화 할 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  

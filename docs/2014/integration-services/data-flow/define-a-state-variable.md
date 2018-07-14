@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322683"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -53,10 +53,10 @@ ms.locfileid: "36088660"
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 `MarkInitialLoadStart` 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  
-|ILEND(초기 로드 종료)|초기 로드 패키지가 성공적으로 끝날 때 이것은 상태 후는 `MarkInitialLoadEnd` CDC 제어 태스크에 대 한 작업을 호출 합니다.|  
-|ILUPDATE(초기 로드 업데이트)|초기 처리 범위를 처리 중인 동안 초기 로드 이후에 trickle feed 업데이트 패키지를 실행할 때의 상태입니다. 이후에 `GetProcessingRange` CDC 제어 태스크에 대 한 작업을 호출 합니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
+|ILEND(초기 로드 종료)|초기 로드 패키지가 성공적으로 종료 될 때이 상태 후의 `MarkInitialLoadEnd` CDC 제어 태스크 작업 호출 합니다.|  
+|ILUPDATE(초기 로드 업데이트)|초기 처리 범위를 처리 중인 동안 초기 로드 이후에 trickle feed 업데이트 패키지를 실행할 때의 상태입니다. 이 이후의 `GetProcessingRange` CDC 제어 태스크 작업 호출 합니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
 |TFEND(Trickle-Feed 업데이트 종료)|일반 CDC 실행에 대해 예상되는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되었으며 새 처리 범위를 사용한 새 실행을 시작할 수 있음을 나타냅니다.|  
-|TFSTART|이후에 trickle feed 업데이트 패키지를 실행 하는 비 초기의 상태입니다는 `GetProcessingRange` CDC 제어 태스크에 대 한 작업을 호출 합니다.<br /><br /> 이 일반 CDC 실행 시작 하지만 완료 되지 않았습니다 또는 나타냅니다가 아직 완료 되지 못하고 (`MarkProcessedRange`).|  
+|TFSTART|이후에 trickle feed 업데이트 패키지를 실행 하는 초기 비 상태는이 `GetProcessingRange` CDC 제어 태스크 작업 호출 합니다.<br /><br /> 이 일반 CDC 실행 시작 하지만 완료 되지 않았습니다 또는 나타냅니다가 아직 완료 되지 완전히 (`MarkProcessedRange`).|  
 |TFREDO(Trickle-Feed 업데이트 다시 처리)|이 상태는 TFSTART 실행 후`GetProcessingRange`에서 발생하는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되지 않았음을 나타냅니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
 |ERROR|CDC 그룹이 ERROR 상태에 있습니다.|  
   

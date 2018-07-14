@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델 (데이터 마이닝 추가 기능 Excel 용) 문서화 | Microsoft Docs
+title: 마이닝 모델 (데이터 마이닝 추가 기능 Excel 용)를 문서화 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
 - mining structures, managing
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - model properties
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a093deb3764c154ae45596ad64d2805aa6d00d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f605fd2ef1e0aafad5b34a2b74c12fc95be6ef7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167714"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 문서화(Excel용 데이터 마이닝 추가 기능)
   ![문서 모델 단추, 데이터 마이닝 리본의](media/dmc-docmodel.gif "데이터 마이닝 리본, 모델 문서화 단추")  
   
- **문서 모델** 마법사가 만든 마이닝 모델에 대 한 유용한 정보를 제공 하는 보고서를 만듭니다. 만드는 모델을 문서화하면 모델을 생성하는 데 사용한 데이터 원본을 추적하고, 모델이 처리된 시점에 대한 추가 정보를 가져오고, 모델의 결과에 영향을 주는 매개 변수 변경을 추적할 수 있습니다.  
+ 합니다 **문서 모델** 사용자가 만든 마이닝 모델에 대 한 유용한 정보를 제공 하는 보고서를 만듭니다. 만드는 모델을 문서화하면 모델을 생성하는 데 사용한 데이터 원본을 추적하고, 모델이 처리된 시점에 대한 추가 정보를 가져오고, 모델의 결과에 영향을 주는 매개 변수 변경을 추적할 수 있습니다.  
   
 ## <a name="using-the-document-model-wizard"></a>모델 문서화 마법사 사용  
   
-1.  클릭는 **데이터 마이닝** 탭 합니다.  
+1.  클릭 합니다 **데이터 마이닝** 탭 합니다.  
   
-2.  에 **모델 사용** 그룹에서 클릭 **문서 모델**합니다.  
+2.  에 **모델 사용법** 그룹에서 클릭 **문서 모델**합니다.  
   
-3.  에 **모델 선택** 대화 상자에서 보고서로 모델을 선택 하 고 클릭 **다음**합니다. 실행 해야는 **문서 모델** 문서화 하고자 하는 각 모델에 대해 별도로 마법사.  
+3.  에 **모델 선택** 대화 상자에서 보고서로 모델을 선택 하 고 클릭 **다음**합니다. 실행 해야 합니다 **문서 모델** 문서화 하려는 각 모델에 대해 별도로 마법사.  
   
-4.  에 **문서 세부 정보 선택** 대화 상자에서 두 가지 옵션 중 하나를 선택: **완전 한 정보를** 또는 **요약 정보**합니다.  
+4.  에 **문서 세부 정보 선택** 대화 상자에서 두 옵션 중 하나를 선택: **정보** 또는 **요약 정보**합니다.  
   
 5.  **마침**을 클릭합니다.  
   
-6.  자동으로 만듭니다는 라는 제목의 지정된 된 보고서를 포함 하는 새 워크시트 **모델 설명서**,  
+6.  마법사는 자동으로 라는 지정된 된 보고서를 포함 하는 새 워크시트를 만듭니다 **모델 설명서**,  
   
 ## <a name="understanding-the-report"></a>보고서 이해  
  데이터 마이닝 모델을 문서화하는 보고서를 만들 때 모델의 이름 및 설명 등의 기본 정보가 포함된 요약 보고서를 만들거나 마이닝 모델의 기본 구조 및 고급 정보에 대한 세부 사항이 포함된 전체 보고서를 만들 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "36090569"
 ||불연속 열|전달 횟수<br /><br /> 실패 횟수<br /><br /> 로그 점수<br /><br /> 리프트|  
   
 > [!NOTE]  
->  SQL Server Analysis Services에서 지원하는 모든 모델 유형은 문서화할 수 있습니다. 따라서 테이블 분석 도구 또는 데이터 마이닝 클라이언트의 마법사를 통해 만들 수 없는 일부 모델 유형만 표에 나열되어 있습니다. 그러나 모든 모델 유형에 사용 하 여 만들 수는 **데이터 마이닝 고급 쿼리 편집기**합니다. 자세한 내용은 참조 [쿼리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](query-sql-server-data-mining-add-ins.md)합니다.  
+>  SQL Server Analysis Services에서 지원하는 모든 모델 유형은 문서화할 수 있습니다. 따라서 테이블 분석 도구 또는 데이터 마이닝 클라이언트의 마법사를 통해 만들 수 없는 일부 모델 유형만 표에 나열되어 있습니다. 그러나 모든 모델 유형에 사용 하 여 만들 수 있습니다 합니다 **데이터 마이닝 고급 쿼리 편집기**합니다. 자세한 내용은 [쿼리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](query-sql-server-data-mining-add-ins.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 배포 및 확장 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

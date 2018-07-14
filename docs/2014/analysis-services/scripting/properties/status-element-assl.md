@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Status element
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd27525f6a0a7457a3fd6a3f63f102b1f6ae7bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5f67c4f94e5817d36f54d5d54465425c7837119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247293"
 ---
 # <a name="status-element-assl"></a>Status 요소(ASSL)
-  에 대 한 상태 표시를 반환 하는 MDX (Multidimensional Expressions) 식을 포함 한 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
+  상태 표시기를 반환 하는 MDX (Multidimensional Expressions) 식을 포함 한 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36082547"
 ## <a name="remarks"></a>Remarks  
  `Status` 요소는 MDX 식을 포함합니다.  
   
- 부모에 해당 하는 요소 `Status` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
+ 부모에 해당 하는 요소가 `Status` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

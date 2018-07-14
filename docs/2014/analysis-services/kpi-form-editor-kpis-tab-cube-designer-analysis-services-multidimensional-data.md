@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af159d0cdc724af8f0b7e768146527588b4e16fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224843"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 폼 편집기(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **KPI 폼 편집기** 창을 사용하여 선택한 KPI(핵심 성과 지표)를 생성하거나 수정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36082595"
  **이름**  
  KPI의 이름을 입력합니다.  
   
- **관련 된 측정값 그룹**  
+ **연결 된 측정값 그룹**  
  KPI와 관련된 측정값 그룹을 선택합니다. 클라이언트 응용 프로그램에서는 이 정보를 사용하여 사용자가 이 KPI를 찾아볼 때 사용할 수 있는 차원을 확인할 수 있습니다.  
   
  **값 식**  

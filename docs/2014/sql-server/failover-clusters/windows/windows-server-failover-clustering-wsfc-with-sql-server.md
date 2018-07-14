@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Windows Server Failover Clustering (WSFC), with SQL Server
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5489a7997f6b4aab1ef61226b90fe4de7cb28473
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187740"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
   WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 응용 프로그램 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
@@ -84,7 +83,7 @@ ms.locfileid: "36091893"
  참조 항목: [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 기술 및 WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* 는 새로운 고가용성 고가용성 및 재해 복구 솔루션 WSFC를 활용 하는 합니다. AlwaysOn은 응용 프로그램 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* 새 높은 가용성 및 재해 복구 솔루션을 WSFC를 활용 하는 합니다. AlwaysOn은 응용 프로그램 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스는 WSFC를 플랫폼 기술로 사용하고 구성 요소를 WSFC 클러스터 리소스로 등록합니다.  관련 리소스는 *리소스 그룹*에 결합되므로 다른 WSFC 클러스터 리소스에 종속될 수 있습니다. WSFC 클러스터 서비스에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 하는지 감지하여 신호를 보내거나 WSFC 클러스터의 다른 서버 노드에 자동으로 장애 조치합니다.  
   

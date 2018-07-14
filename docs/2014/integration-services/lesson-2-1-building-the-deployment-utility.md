@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225593"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 작성
   이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36082501"
   
 4.  **Deployment Tutorial 속성 페이지** 대화 상자에서 구성 속성을 확장하고 배포 유틸리티를 클릭합니다.  
   
-5.  오른쪽 창에서는 **Deployment Tutorial 속성 페이지** 대화 상자를 확인 하는 `AllowConfigurationChanges` 로 설정 되어 `true`설정, `CreateDeploymentUtility` 를 `true`, 필요에 따라의 기본값을 업데이트 하 고 `DeploymentOutputPath`합니다.  
+5.  오른쪽 창에서를 **Deployment Tutorial 속성 페이지** 대화 상자에서 확인 하는 `AllowConfigurationChanges` 로 설정 되어 `true`설정 `CreateDeploymentUtility` 에 `true`, 필요에 따라 기본 값을 업데이트 하 고 `DeploymentOutputPath`.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36082501"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [2단계: 배포 번들 확인](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [배포 유틸리티 만들기](../../2014/integration-services/create-a-deployment-utility.md)  

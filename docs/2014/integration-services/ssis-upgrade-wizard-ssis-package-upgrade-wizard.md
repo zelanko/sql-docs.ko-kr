@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.ssisupgradewizard.f1
 ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3002361d8b435e3a0bb1ae617dbd0217f926fdb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e33f4fdc1789f97dd0be33274ecb7d6a590a1492
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186610"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS 업그레이드 마법사(SSIS 패키지 업그레이드 마법사)
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사를 사용하여 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 및 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 에서 개발된 패키지를 현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용하는 패키지 형식으로 마이그레이션할 수 있습니다.  

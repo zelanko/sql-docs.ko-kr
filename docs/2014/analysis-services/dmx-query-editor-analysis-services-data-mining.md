@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.dmx.f1
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c3cf15329eba066bc417e42acf414e3442721bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 1c1efcb4ecef6c311882b471a56535543bcc25b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236063"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>DMX 쿼리 편집기(Analysis Services - 데이터 마이닝)
   DMX 쿼리 편집기를 사용하여 DMX(Data Mining Extensions) 언어로 작성된 문을 디자인 및 실행할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36081432"
   
 |용어|정의|  
 |----------|----------------|  
-|**쿼리 편집기 창**|DMX 쿼리 편집기에서 실행할 DMX 문 및 스크립트를 입력합니다.<br /><br /> 쿼리 편집기의 상황에 맞는 메뉴에서는 다음 옵션을 제공합니다.<br /><br /> **잘라내기**: 현재 선택 영역을 클립보드에 복사 하 고 쿼리 편집기 창에서 선택한 항목을 제거 합니다.<br /><br /> **복사**: 현재 선택 영역을 클립보드에 복사합니다.<br /><br /> **붙여넣기**: 현재 선택 영역을 클립보드의 내용을 붙여 넣습니다.<br /><br /> **연결**: **인스턴스에 대한 연결을 설정할 수 있는** 서버에 연결 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 대화 상자를 엽니다.<br /><br /> **연결 끊기**: 현재 쿼리 편집기의 연결을 끊습니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br /><br /> **모든 쿼리 연결 끊기**: 모든 열린 쿼리 편집기의 연결을 끊습니다.<br /><br /> **연결 변경**: 열립니다는 **서버에 연결** 대화 상자를 다른 연결을 설정 하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br /><br /> **개체 탐색기에서 서버 열기**: 열립니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 현재 쿼리 편집기가 연결 된 인스턴스 **개체 탐색기**합니다.<br /><br /> **실행**: 선택한 코드를 실행 하거나 없는 코드를 선택 하는 경우 현재 쿼리 편집기에 있는 코드 전체를 실행 합니다.<br /><br /> **속성 창**: 표시는 **속성** 창을 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 현재 쿼리 창에 대 한 합니다.<br /><br /> **쿼리 옵션**: 표시 된 **쿼리 옵션** 대화 상자.|  
+|**쿼리 편집기 창**|DMX 쿼리 편집기에서 실행할 DMX 문 및 스크립트를 입력합니다.<br /><br /> 쿼리 편집기의 상황에 맞는 메뉴에서는 다음 옵션을 제공합니다.<br /><br /> **잘라내기**: 현재 선택 영역을 클립보드에 복사 하 고 쿼리 편집기 창에서 선택 영역을 제거 합니다.<br /><br /> **복사**: 현재 선택 영역을 클립보드에 복사합니다.<br /><br /> **붙여넣기**: 현재 선택 영역을 클립보드의 내용을 붙여 넣습니다.<br /><br /> **연결**: **인스턴스에 대한 연결을 설정할 수 있는** 서버에 연결 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 대화 상자를 엽니다.<br /><br /> **연결 끊기**: 현재 쿼리 편집기의 연결을 끊습니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br /><br /> **모든 쿼리 연결 끊기**: 모든 열려 있는 쿼리 편집기의 연결을 끊습니다.<br /><br /> **연결 변경**: 엽니다는 **서버에 연결** 대화 상자에서 다른 연결을 설정 하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스.<br /><br /> **개체 탐색기에서 서버 열기**: 엽니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 현재 쿼리 편집기가 연결 하는 인스턴스 **개체 탐색기**합니다.<br /><br /> **실행**: 선택한 코드를 실행 하거나, 없는 코드를 선택 하는 경우 현재 쿼리 편집기에서 코드 전체를 실행 합니다.<br /><br /> **속성 창**: 표시 된 **속성** 창에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 현재 쿼리 창에 대 한 합니다.<br /><br /> **쿼리 옵션**: 표시 된 **쿼리 옵션** 대화 상자.|  
 |**메타 데이터 창**|현재 연결된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 메타데이터를 표시합니다.|  
 |**Cube**|현재 연결된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 **메타데이터** 탭의 해당 큐브와 연결된 메타데이터를 표시할 큐브를 선택합니다.|  
 |**메타데이터**|측정값 그룹과 측정값, 핵심 성과 지표, 차원, 계층, 수준, 멤버, 멤버 속성 등 **큐브**에서 선택한 큐브의 메타데이터를 표시합니다. 개체의 정규화된 키를 검색하려면 다음 중 하나를 수행하십시오.<br /><br /> 개체를 **메타데이터** 탭에서 쿼리 창으로 끌어 옵니다.<br /><br /> 또는<br /><br /> 개체를 마우스 오른쪽 단추로 클릭하고 **복사**를 선택한 다음 쿼리 창을 마우스 오른쪽 단추로 클릭하고 **붙여넣기**를 선택합니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "36081432"
 |**메시지 창**|DMX 문 실행 방법에 대한 정보를 표시합니다. 예를 들어 이 창은 실행 중 발견된 모든 오류 또는 실행 후 검색된 셀 수를 표시합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
  [MDX 쿼리 편집기 &#40;Analysis Services-다차원 데이터&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [XMLA 쿼리 편집기 &#40;Analysis Services-다차원 데이터&#41;](xmla-query-editor-analysis-services-multidimensional-data.md)   

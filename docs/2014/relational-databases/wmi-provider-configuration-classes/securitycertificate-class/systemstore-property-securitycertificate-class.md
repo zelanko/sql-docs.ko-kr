@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SystemStore property
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d04feaff9d7fb9b3ebf82b0482b26848b03325b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1ab536ff2f1dd814c09d2ae6476b18d6379b587d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204913"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore 속성(SecurityCertificate 클래스)
   보안 인증서용 시스템 저장소를 가져옵니다.  

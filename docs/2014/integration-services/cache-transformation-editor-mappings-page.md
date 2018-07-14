@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17e8b9894ddd1aa375a16703bced5d0cf05b77bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ec474543bad0eb83d313fd4bf16b2b3163176b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243063"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>캐시 변환 편집기(매핑 페이지)
   **캐시 변환 편집기** 의 **매핑** 페이지를 사용하여 캐시 변환의 입력 열을 캐시 연결 관리자의 대상 열에 매핑할 수 있습니다.  

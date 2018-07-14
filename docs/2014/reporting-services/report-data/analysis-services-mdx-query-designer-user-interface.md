@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql12.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ce6de26e90d652c238d1b59dc2a288d3e65733df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f322526680b3a91f2fcb7e93e3159f79b79793a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323853"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] MDX (Multidimensional Expression) 쿼리 및에 대 한 식이 DMX (Data Mining) 쿼리를 작성 하기 위한 그래픽 쿼리 디자이너를 제공는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본입니다. 이 항목에서는 MDX 쿼리 디자이너에 대해 설명합니다. DMX 쿼리 디자이너에 대 한 자세한 내용은 참조 [DMX 용 Analysis Services 연결 유형 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)합니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] MDX (Multidimensional Expression) 쿼리 및 식 DMX (Data Mining) 쿼리를 작성 하기 위한 그래픽 쿼리 디자이너를 제공는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본입니다. 이 항목에서는 MDX 쿼리 디자이너에 대해 설명합니다. DMX 쿼리 디자이너에 대 한 자세한 내용은 참조 하세요. [DMX 용 Analysis Services 연결 형식 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)합니다.  
   
  MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공합니다. 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시에 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36088540"
 |![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![집계 표시 단추](../../analysis-services/media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|  
-|![삭제](../../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제할](../../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](../../analysis-services/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 보고서 매개 변수가 자동으로 만들어집니다. 쿼리 매개 변수의 값은 보고서 매개 변수를 참조하는 식으로 설정됩니다.|  
 |![쿼리 준비 단추](../../analysis-services/media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|  
 |![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
@@ -110,7 +110,7 @@ ms.locfileid: "36088540"
   
 -   **텍스트로 편집**  
   
--   **계산 멤버 추가** (![계산된 멤버 추가](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
+-   **Add Calculated Member** (![추가 계산된 멤버](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
   
 -   **빈 셀 표시**(![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36088540"
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 용 MDX 쿼리 디자이너에서 매개 변수 정의 &#40;보고서 작성기 및 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [분석 DMX에 대 한 연결 형식을 서비스 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [DMX 용 analysis Services 연결 형식 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 구성 파일](../report-server/rsreportdesigner-configuration-file.md)   
  [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274669"
 ---
 # <a name="create-a-login"></a>로그인 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인을 만드는 방법에 대해 설명합니다. 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결하는 사용자 또는 프로세스의 ID입니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "36082271"
   
      [보안](#Security)  
   
--   **로그인을 사용 하 여:**  
+-   **로그인을 만들려면 사용 합니다.**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,7 +57,7 @@ ms.locfileid: "36082271"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../choose-an-authentication-mode.md)을 참조하세요.  
   
- 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 전체 인스턴스에 범위를 갖는 사용 권한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (예를 들어는 `CREATE ENDPOINT` 권한)을 로그인에 부여할 수 있습니다.  
+ 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위의의 전체 인스턴스에 속하는 사용 권한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (예를 들어를 `CREATE ENDPOINT` 권한)을 로그인에 부여할 수 있습니다.  
   
 ##  <a name="Security"></a> 보안  
   
@@ -114,7 +113,8 @@ ms.locfileid: "36082271"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **로그인 - 신규** 대화 상자에는 또한 **서버 역할**, **사용자 매핑**, **보안 개체**및 **상태**의 추가 페이지에 대한 옵션이 제공됩니다.  
+ 
+  **로그인 - 신규** 대화 상자에는 또한 **서버 역할**, **사용자 매핑**, **보안 개체**및 **상태**의 추가 페이지에 대한 옵션이 제공됩니다.  
   
 ### <a name="server-roles"></a>서버 역할  
  **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 사용할 수 있는 옵션은 다음과 같습니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "36082271"
 2.  **개체 추가** 대화 상자에서 **특정 개체...**, **유형의 모든 개체...** 또는 **서버***server_name*옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  선택 하면 **서버 * * * server_name* 자동으로 상단 표에 해당 서버의 보안 개체의 모든 채워집니다.  
+    >  선택 하면 **서버 * * * server_name* 에 자동으로 채워 상단 표에 해당 서버의 보안 개체의 모든.  
   
 3.  **특정 개체...** 를 선택한 경우:  
   

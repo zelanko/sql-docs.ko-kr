@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7730b07877b0cfe6cdcc6d4a749d28ce4cf093d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323133"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 프로필 탭(마이닝 모델 뷰어
   **Microsoft 시퀀스 클러스터링 뷰어**의 **클러스터 프로필** 탭에는 각 클러스터에 포함된 시퀀스가 색으로 지정되어 표시됩니다.  
   
  이 시퀀스 클러스터링 모델 뷰를 사용하여 모델이 검색한 시퀀스가 그룹화되는 방법을 신속하게 확인할 수 있습니다. 긴 시퀀스의 수와 짧은 시퀀스의 수를 한눈에 볼 수 있습니다. 또한 클러스터를 클릭하고 **마이닝 범례** 를 표시하여 각 시퀀스의 색이 나타내는 상태를 정확히 확인할 수 있습니다.  
   
- **자세한 내용은:**[Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **자세한 내용은**[Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -53,9 +53,9 @@ ms.locfileid: "36088464"
   
  두 히스토그램 집합은 모델의 각 클러스터에 대해 표시되며 각각 그래프의 다른 행에 있습니다.  
   
--   **\<특성 이름 > 여러**:이 행의 히스토그램은 각 클러스터의 특징을 나타내는 항목의 시퀀스를 보여 줍니다. DMX 측면에서 이러한 항목은 각 클러스터에 대한 샘플 사례입니다.  
+-   **\<특성 이름 >.samples**:이 행의 히스토그램은 각 클러스터의 특징을 나타내는 항목의 시퀀스를 보여 줍니다. DMX 측면에서 이러한 항목은 각 클러스터에 대한 샘플 사례입니다.  
   
--   **\<특성 이름 >**:이 행의 히스토그램은 클러스터에 포함 된 모든 항목 및 전체 분포에 설명 합니다. **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
+-   **\<특성 이름 >**:이 행의 히스토그램 모든 클러스터에 포함 된 항목과 전체적인 분포를 설명 합니다. **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
   
  **상태**  
  차트의 이 열은 선택 사항이며 **범례 표시** 옵션을 선택하여 표시하거나 제거할 수 있습니다. **상태** 열은 해당 클러스터 히스토그램에서 어떤 색이 어떤 상태를 나타내는지를 안내합니다.  

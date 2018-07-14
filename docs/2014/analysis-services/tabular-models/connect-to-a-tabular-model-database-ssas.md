@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71bfa13950656ea662ba91532abf765bd1b126c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190923"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
   테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 응용 프로그램에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "36089732"
   
 2.  **Analysis Services**를 선택합니다.  
   
-3.  **서버 이름**에서 해당 데이터베이스를 호스팅하는 Analysis Services 인스턴스를 지정합니다. 서버 이름은 대개 서버 소프트웨어를 실행하는 컴퓨터의 이름입니다. 이 형식으로 이름을 지정 해야 합니다는 서버를 명명 된 인스턴스로 설치할 경우: \<서버 이름 >\\< instancename\>합니다.  
+3.  **서버 이름**에서 해당 데이터베이스를 호스팅하는 Analysis Services 인스턴스를 지정합니다. 서버 이름은 대개 서버 소프트웨어를 실행하는 컴퓨터의 이름입니다. 이 형식으로 이름 서버를 명명 된 인스턴스로 설치 된 경우 지정 해야 합니다. \<서버 이름 >\\< n a m e\>합니다.  
   
      서버 인스턴스는 독립 실행형 테이블 형식 배포를 사용하도록 구성되어야 하며 서버 인스턴스에는 액세스를 허용하는 인바운드 규칙이 있어야 합니다. 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 및 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36089732"
  연결이 설정되면 데이터를 사용하여 피벗 테이블 또는 피벗 차트를 만들 수 있습니다. 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)을 참조하세요.  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint에서 연결  
- SharePoint용 PowerPivot을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 끝점을 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. 만들기 및 BI 의미 체계 모델 연결 파일을 사용 하는 방법에 대 한 자세한 내용은 참조 [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 및 [테이블 형식 모델에 BI 의미 체계 모델 연결 만들기 데이터베이스](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
+ SharePoint용 PowerPivot을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 끝점을 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. 만들기 및 BI 의미 체계 모델 연결 파일을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 하 고 [테이블 형식 모델에 BI 의미 체계 모델 연결 만들기 데이터베이스](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
   
 ##  <a name="bkmk_Tshoot"></a> 연결 문제 해결  
  이 섹션에서는 테이블 형식 모델 데이터베이스에 연결하는 동안 발생하는 문제에 대한 원인과 해결 단계를 제공합니다.  
@@ -105,11 +105,11 @@ ms.locfileid: "36089732"
   
  데이터를 가져올 때 마법사를 사용하여 원격 Analysis Services 서버에 있는 테이블 형식 모델 데이터베이스에 연결하려고 하지만 권한이 부족한 경우 이 Microsoft Excel 오류가 발생합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   
- **외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. 다음과 같은 연결을 새로 고치지 못했습니다: \<모델 이름 > 샌드박스**  
+ **외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. 다음 연결을 새로 고치지 못했습니다: \<모델 이름 > 샌드박스**  
   
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 원격 Analysis Services 서버에 대한 충분한 사용 권한이 없기 때문에 발생합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   
- **이 작업을 수행하는 동안 오류가 발생했습니다. 통합 문서를 다시 로드 되 고이 작업을 다시 시도 하십시오.**  
+ **이 작업을 수행하는 동안 오류가 발생했습니다. 통합 문서를 로드 하 고이 작업을 다시 수행 하려고 합니다.**  
   
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 모델 데이터가 배포된 Analysis Services 인스턴스가 Excel 서비스를 신뢰하지 않기 때문에 발생합니다. 이 오류를 해결하려면 Analysis Services 인스턴스에 대한 Excel 서비스 관리 권한을 부여해야 합니다. 이 항목의 앞부분에 있는 관리자 권한 부여 지침을 참조하십시오. 오류가 계속되면 Excel 서비스 응용 프로그램 풀을 재활용하십시오.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "36089732"
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 사용자가 통합 문서에 대해 충분한 SharePoint 권한을 가지고 있지 않기 때문에 발생합니다. 사용자에게 **읽기** 이상의 권한이 있어야 합니다. **보기 전용** 권한으로는 데이터에 액세스할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 솔루션 배포 &#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

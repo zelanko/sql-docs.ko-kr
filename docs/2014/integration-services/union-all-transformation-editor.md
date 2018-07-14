@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9b8f598ce33a23370ff4a60ab0a13d6dba3ae5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb90ad5c378ca80b9e365dca939e3cd3c632d7dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213303"
 ---
 # <a name="union-all-transformation-editor"></a>UNION ALL 변환 편집기
   **UNION ALL 변환 편집기** 대화 상자를 사용하여 여러 개의 입력 행 집합을 단일 출력 행 집합으로 병합할 수 있습니다. UNION ALL 변환을 데이터 흐름에 포함하면 여러 데이터 흐름의 데이터를 병합하고, UNION ALL 변환을 중첩하여 복잡한 데이터 집합을 만들고, 데이터의 오류를 수정한 다음 행을 다시 병합할 수 있습니다.  

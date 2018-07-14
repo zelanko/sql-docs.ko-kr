@@ -15,17 +15,17 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216733"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>방법: 보고서 디자이너에 데이터 처리 확장 프로그램 배포
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>방법: 데이터 처리 확장 프로그램을 보고서 디자이너에 배포
   보고서 디자이너에서는 보고서를 디자인하는 동안 데이터 검색 및 처리를 위해 데이터 처리 확장 프로그램을 사용합니다. 데이터 처리 확장 프로그램 어셈블리를 보고서 디자이너에 전용 어셈블리로 배포해야 합니다. 또한 보고서 디자이너 구성 파일인 RSReportDesigner.config에서 항목을 만들어야 합니다.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>데이터 처리 확장 프로그램 어셈블리를 배포하려면  
@@ -44,13 +44,13 @@ ms.locfileid: "36081496"
     </Extensions>  
     ```  
   
-4.  포함 하는 데이터 처리 확장 프로그램에 대 한 항목을 추가 **확장** 에 대 한 값이 있는 요소는 `Name`, `Type`, 및 `Visible` 특성입니다. 항목은 다음과 같습니다.  
+4.  포함 하는 데이터 처리 확장 프로그램에 대 한 항목을 추가 **확장** 에 대 한 값이 있는 요소를 `Name`를 `Type`, 및 `Visible` 특성입니다. 항목은 다음과 같습니다.  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     `Name`의 값은 데이터 처리 확장 프로그램의 고유한 이름입니다. `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 데이터 처리 확장 프로그램은 표시됩니다. 보고서 디자이너와 같은 사용자 인터페이스에 확장 프로그램을 숨기려면 추가 `Visible` 특성을 **확장** 요소인으로 설정 하 고 `false`합니다.  
+     `Name`의 값은 데이터 처리 확장 프로그램의 고유한 이름입니다. `Type`의 값은 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스에 대한 항목과 그 다음에 어셈블리의 이름(.dll 파일 확장명 포함 안 함)이 따라오는 형태가 포함되며 쉼표로 구분된 목록입니다. 기본적으로 데이터 처리 확장 프로그램은 표시됩니다. 보고서 디자이너와 같은 사용자 인터페이스에 확장 프로그램을 숨기려면 추가 `Visible` 특성을 합니다 **확장** 요소인으로 설정 `false`.  
   
 5.  마지막으로 확장 프로그램에 대해 **FullTrust** 권한을 부여하는 사용자 지정 어셈블리에 대한 코드 그룹을 추가합니다. 기본 위치가 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies인 rspreviewpolicy.config 파일에 코드 그룹을 추가하면 됩니다. 코드 그룹은 다음과 같습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36081496"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>사용자 지정 확장 프로그램에 대해 일반 쿼리 디자이너를 사용하려면  
   
--   다음 항목 아래에 있는 RSReportDesigner.config 파일을 추가 **디자이너** 요소를 교체는 `Name` 이전 항목에서 제공 하는 이름 가진 특성입니다.  
+-   아래에 있는 RSReportDesigner.config 파일에 다음 항목을 추가 합니다 **디자이너** 요소를 대체 합니다 `Name` 이전 항목에서 제공한 이름 사용 하 여 특성.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

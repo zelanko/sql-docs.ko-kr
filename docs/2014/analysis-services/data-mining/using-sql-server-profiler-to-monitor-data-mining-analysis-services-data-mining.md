@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323403"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링(Analysis Services - 데이터 마이닝)
   필요한 권한이 있는 경우 SQL Server 프로파일러를 사용하여 SQL Server Analysis Services 인스턴스에 보낸 요청으로 실행된 데이터 마이닝 작업을 모니터링할 수 있습니다. 데이터 마이닝 작업에는 모델 또는 구조의 처리, 예측 또는 내용 쿼리, 새 모델 또는 구조의 작성 등이 포함될 수 있습니다.  
   
- SQL Server Profiler를 사용 하 여 한 `trace` 등의 여러 클라이언트에서 보낸 요청을 모니터링 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, 웹 서비스 또는 데이터 마이닝 추가 기능 Excel에 대 한 모든 활동으로 한 SQL Server의 같은 인스턴스를 사용 Analysis Services입니다. 모니터링할 각 SQL Server Analysis Services 인스턴스에 대해서는 별도의 추적을 만들어야 합니다. 추적에 대한 일반적인 정보와 SQL Server Profiler를 사용하는 방법은 [SQL Server Profiler를 사용하여 Analysis Services 모니터링](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)을 참조하세요.  
+ SQL Server Profiler를 사용 하는 `trace` 등의 여러 클라이언트에서 보낸 요청을 모니터링 하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, 웹 서비스 또는 데이터 마이닝 추가 기능 Excel에 대 한 모든 작업으로 한 SQL Server의 동일한 인스턴스를 사용 Analysis Services입니다. 모니터링할 각 SQL Server Analysis Services 인스턴스에 대해서는 별도의 추적을 만들어야 합니다. 추적에 대한 일반적인 정보와 SQL Server Profiler를 사용하는 방법은 [SQL Server Profiler를 사용하여 Analysis Services 모니터링](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)을 참조하세요.  
   
  캡처할 이벤트의 유형에 대한 구체적인 지침은 [재생에 대한 프로파일러 추적 만들기&#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md)를 참조하세요.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36080315"
  추적 로그에 있는 명령 문을 보면 시스템 저장 프로시저에 대한 호출을 포함하여 클라이언트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 보낸 복잡한 문의 구문도 볼 수 있습니다. 이 정보를 사용하여 디버깅을 수행하거나 유효한 문을 새 예측 쿼리 또는 모델을 만들기 위한 템플릿으로 사용할 수 있습니다. 추적을 통해 캡처할 수 있는 저장 프로시저 호출의 예는 [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 인스턴스 모니터](../instances/monitor-an-analysis-services-instance.md)   
- [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; Services 분석을 모니터링 하려면](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Analysis Services 인스턴스 모니터링](../instances/monitor-an-analysis-services-instance.md)   
+ [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; 모니터는 분석 서비스](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

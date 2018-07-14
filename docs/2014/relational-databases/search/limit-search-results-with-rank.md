@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row ranking [full-text search]
 - relevance ranking values [full-text search]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cef510acee74d2ce261a1e000761f214571c16ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4452b79dda89affda2d964b1d1dc8fb844a3f82b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233093"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 함수는 0부터 1000까지의 서수 값(순위 값)이 포함된 RANK라는 열을 반환합니다. 이러한 값은 반환된 행이 선택 조건에 얼마나 일치하는지에 따라 순위를 매기는 데 사용됩니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐이며 값이 작을수록 관련이 없는 것입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다.  
@@ -145,7 +144,7 @@ GO
 ### <a name="rank-computation-issues"></a>순위 계산 문제  
  많은 요소가 순위 계산 과정에 영향을 줍니다.  각 언어별 단어 분리기는 텍스트를 다르게 토큰화합니다. 예를 들어 "dog-house"란 문자열을 특정 단어 분리기는 "dog" "house"로 분리하고 다른 단어 분리기는 "dog-house"로 분리할 수 있습니다. 즉, 단어뿐만 아니라 문서 길이도 다르기 때문에 지정된 언어에 따라 일치 항목과 순위가 달라집니다. 문서 길이의 차이는 모든 쿼리의 순위에 영향을 줄 수 있습니다.  
   
- 와 같은 통계 `IndexRowCount` 다양할 수 있습니다. 예를 들어 카탈로그의 마스터 인덱스에 20억 개 행이 있고 메모리 내 중간 인덱스에 하나의 새 문서가 인덱싱되면 메모리 내 인덱스의 문서 수를 기준으로 한 해당 문서의 순위와 마스터 인덱스 문서에 대한 순위에 차이가 생길 수 있습니다. 이런 이유로 다수의 행이 인덱싱 또는 다시 인덱싱 채우기 후에는 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 인덱스를 마스터 인덱스에 병합하는 것이 좋습니다. 또한 전체 텍스트 검색 엔진은 중간 인덱스의 개수와 크기 같은 매개 변수를 기준으로 인덱스를 자동으로 병합합니다.  
+ 와 같은 통계 `IndexRowCount` 크게 달라질 수 있습니다. 예를 들어 카탈로그의 마스터 인덱스에 20억 개 행이 있고 메모리 내 중간 인덱스에 하나의 새 문서가 인덱싱되면 메모리 내 인덱스의 문서 수를 기준으로 한 해당 문서의 순위와 마스터 인덱스 문서에 대한 순위에 차이가 생길 수 있습니다. 이런 이유로 다수의 행이 인덱싱 또는 다시 인덱싱 채우기 후에는 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 인덱스를 마스터 인덱스에 병합하는 것이 좋습니다. 또한 전체 텍스트 검색 엔진은 중간 인덱스의 개수와 크기 같은 매개 변수를 기준으로 인덱스를 자동으로 병합합니다.  
   
  `MaxOccurrence` 값은 32개 범위 중 하나로 정규화됩니다. 예를 들어 이것은 50단어 길이의 문서가 100단어 길이의 문서와 동일하게 처리된다는 것을 의미합니다. 정규화에 사용되는 표는 아래와 같습니다. 문서 길이가 둘 다 인접 테이블 값 32와 128 사이의 범위에 있기 때문에 실제로 두 문서는 모두 길이가 128인 것으로 처리됩니다(32 < `docLength` <= 128).  
   

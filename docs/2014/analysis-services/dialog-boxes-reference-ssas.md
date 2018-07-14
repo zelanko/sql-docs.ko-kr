@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d1059a-3133-4884-b2f0-518febfc56ad
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe923450d0bc23940250728c52c0f61144293870
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb38f8a65dbf1fccc9dac0cf467e204b5ab7700b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221993"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>대화 상자 참조(SSAS)
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 대화 상자에 대한 자세한 내용은 다음 항목을 참조하십시오.  

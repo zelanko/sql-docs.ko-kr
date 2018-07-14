@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonAccount
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 75a929c87f963f102535c7fbe015a4bb49e6278f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b94a45ed2c528972fffb79d2f8f51ad9bcba56d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185764"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 로그온 계정을 지정합니다. 읽기 전용입니다.  
@@ -49,9 +49,9 @@ public string DatabaseLogonAccount;
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 속성에 대 한 유효한 값의 값에 따라 달라 집니다는 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성입니다.  
+ 이 속성에 대 한 유효한 값의 값에 따라 달라 집니다 합니다 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성입니다.  
   
- 이 속성은 무시는 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성이 `2 (Service)`합니다.  
+ 경우이 속성은 무시 합니다 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성이 `2 (Service)`.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

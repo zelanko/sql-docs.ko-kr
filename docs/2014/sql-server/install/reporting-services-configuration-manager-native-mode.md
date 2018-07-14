@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 342cca1892640e1e5c32fda049427d70c478f910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220783"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치를 구성할 수 있습니다. 파일 전용 설치 옵션을 사용하여 보고서 서버를 설치한 경우, 이를 사용할 수 있으려면 먼저 구성 관리자를 사용해서 서버를 구성해야 합니다. 기본 구성 설치 옵션을 사용하여 보고서 서버를 설치한 경우에는 구성 관리자를 사용하여 설치 중에 지정된 설정을 확인하거나 수정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하면 로컬 또는 원격 보고서 서버 인스턴스를 구성할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36082205"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다. 자세한 내용은 참조 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다. 정보를 참조 하세요 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
   
  **섹션 내용**  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36082205"
  일반 태스크에 대한 단계별 지침을 제공합니다.  
   
  [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- 페이지에 대 한 도움말 항목을 제공 된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구입니다.  
+ 페이지에 대 한 도움말 항목을 제공 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구입니다.  
   
  **항목 내용**  
   
--   [Reporting Services 구성 관리자 사용 시나리오](#bkmk_scenarios)  
+-   [Reporting Services 구성 관리자를 사용 하는 시나리오](#bkmk_scenarios)  
   
 -   [요구 사항](#bkmk_requirements)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36082205"
   
 -   보고서 서버 서비스 계정 구성. 이 계정은 설치 중에 처음 구성되지만 암호를 업데이트하거나 다른 계정을 사용하려는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수정할 수 있습니다.  
   
--   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 끝점에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 응용 프로그램에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
+-   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 끝점에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 응용 프로그램에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
   
 -   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 저장소로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36082205"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 완전한 배포를 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 추가 기능을 활성화하거나 기본값을 수정하고 보고서 관리자가 서버에 대한 액세스 권한을 사용자에게 부여할 수 있도록 해야 합니다.  
   
 ##  <a name="bkmk_requirements"></a> 요구 사항  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 버전 별로 다릅니다. 이 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성할 수 없습니다. 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 이전 버전과 최신 버전이 함께 실행되고 있는 경우 각 버전과 함께 제공되는 Reporting Services 구성 관리자를 사용하여 각 인스턴스를 구성해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager는 버전 별로 다릅니다. 이 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성할 수 없습니다. 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 이전 버전과 최신 버전이 함께 실행되고 있는 경우 각 버전과 함께 제공되는 Reporting Services 구성 관리자를 사용하여 각 인스턴스를 구성해야 합니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하려면 다음 사항을 충족해야 합니다.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "36082205"
   
     -   Windows 시작 화면에서 **Reporting** 을 입력하고 검색 결과에서 **Reporting Services 구성 관리자** 를 선택합니다.  
   
-    -   클릭 **시작**, 가리킨 **모든 프로그램**, 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 차례로 **구성 도구**합니다.  
+    -   클릭 **시작**, 가리킨 **모든 프로그램**를 가리킵니다 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 가리킨 다음 **구성 도구**합니다.  
   
-         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이전 버전의 보고서 서버 인스턴스를 구성하려면 해당 버전의 프로그램 폴더를 엽니다. 예를 들어 가리킨 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 대신 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 에 대 한 구성 도구를 열려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 서버 구성 요소입니다.  
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이전 버전의 보고서 서버 인스턴스를 구성하려면 해당 버전의 프로그램 폴더를 엽니다. 예를 들어, 가리킨 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 요소용 구성 도구를 열려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 서버 구성 요소입니다.  
   
          **Reporting Services 구성 관리자**를 클릭합니다.  
   

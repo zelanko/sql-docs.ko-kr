@@ -1,5 +1,5 @@
 ---
-title: Office 데이터 연결 (.odc)을 사용 하 여 보고서 (SharePoint 통합된 모드의 Reporting Services)와 함께 | Microsoft Docs
+title: (SharePoint 통합된 모드의 Reporting Services) 보고서에 Office 데이터 연결 (.odc) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177210"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>보고서에 Office 데이터 연결(.odc) 사용(SharePoint 통합 모드의 Reporting Services)
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36089245"
   
 -   .odc 파일에서 연결 문자열을 지정해야 합니다.  
   
--   자격 증명으로 설정할 수 있습니다 `None`, `Stored`, 또는 `Integrated`합니다. 자격 증명 방법을로 설정 되어 있으면 `Stored`, 보고서 서버에서 사용자에 게 저장 된 자격 증명을 사용 하는 대신 자격을 요청 합니다. 보고서 서버는 .odc 파일에 정의된 대로 저장된 자격 증명을 사용할 수 없습니다.  
+-   자격 증명 설정할 수 있습니다 `None`, `Stored`, 또는 `Integrated`합니다. 자격 증명 방법을로 설정 된 경우 `Stored`, 보고서 서버에 저장된 된 자격 증명을 사용 하는 대신 자격 증명에 대 한 라는 메시지가 나타납니다. 보고서 서버는 .odc 파일에 정의된 대로 저장된 자격 증명을 사용할 수 없습니다.  
   
 -   보고서를 만드는 데 사용된 스키마와 동일한 스키마가 데이터 원본에 있어야 합니다. 데이터 구조가 다른 경우 보고서가 실행되지 않습니다.  
   
@@ -105,6 +105,6 @@ ms.locfileid: "36089245"
      [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 예제 보고서를 사용하여 이러한 단계를 수행하는 경우 Company Sales 보고서만 .odc 파일에서 추가 작업 없이 작동한다는 사실에 유의하십시오. 다른 예제 보고서에는 OLE DB 공급자에서 작동하지 않는 쿼리 매개 변수와 기능이 들어 있습니다. 하지만 먼저 보고서 디자이너에서 이러한 보고서를 수정하면 OLE DB 공급자에서 작동하도록 만들 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기, 수정 및 공유 데이터 원본을 삭제 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+ [만들기, 수정 및 공유 데이터 원본 삭제 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

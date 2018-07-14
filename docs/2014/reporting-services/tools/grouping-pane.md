@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10033"
 - sql12.rtp.rptdesigner.group.f1
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e989f128bba1f122091da48a0c57f82db18f0bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189820"
 ---
 # <a name="grouping-pane"></a>그룹화 창
   그룹화 창에는 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다. 차트 및 계기 데이터 영역은 그룹화 창에서 사용할 수 없습니다. 그룹화 창은 행 그룹 창과 열 그룹 창으로 구성되며 기본 및 고급 모드의 두 가지 모드를 제공합니다. 기본 모드에서는 행 및 열 그룹의 동적 멤버의 계층 뷰를 표시하고 고급 모드에서는 행과 열 그룹의 동적 및 정적 멤버를 모두 표시합니다. 그룹은 데이터 영역에 표시되는 보고서 데이터 집합의 명명된 데이터 집합입니다. 그룹은 정적 및 동적 멤버를 포함하는 계층으로 구성됩니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
->  경우 보이지 않으면 그룹화 창에는 **보고서** 메뉴를 클릭 하 여 **그룹화**합니다.  
+>  경우 보이지 그룹화 창에는 **보고서** 메뉴에서 클릭 **그룹화**합니다.  
   
  행과 열 그룹 영역에 있는 셀은 그룹의 정적 또는 동적 멤버일 수 있습니다. 정적 멤버는 그룹당 한 번씩 반복되며 일반적으로 레이블 또는 합계를 포함합니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복되며 일반적으로 그룹 식의 고유한 값을 포함합니다. 행 그룹 영역이나 열 그룹 영역에 있는 테이블릭스 셀을 선택하면 행 그룹 또는 열 그룹 창에서 해당 그룹 멤버가 선택됩니다. 반대로 그룹화 창에서 그룹을 선택하면 디자인 화면에서 이 그룹 멤버와 연결된 해당 셀이 선택됩니다. 테이블릭스 행 및 열 그룹 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   

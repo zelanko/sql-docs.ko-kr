@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3969d727e4e93bf80de0c195895a6b5c19bcf799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 136c23698e9fe9aff170a66d6a959f57e8cf304a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196003"
 ---
 # <a name="connection-representation-tabular"></a>연결 표현(테이블 형식)
   연결 개체는 테이블 형식 모델을 채우는 데이터의 원본을 정의합니다.  

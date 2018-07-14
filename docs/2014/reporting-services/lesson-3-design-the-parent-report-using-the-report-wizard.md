@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b92aba7afebc203ba8d32386eaf0dd154d97c208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d47f5480a5e01000b23830d36fb6b0da586dfa4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246473"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>3단원: 보고서 마법사를 사용하여 부모 보고서 디자인
   부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 부모 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
@@ -30,11 +30,11 @@ ms.locfileid: "36082629"
   
 2.  웹 사이트를 마우스 오른쪽 단추로 클릭하고 **새 항목 추가**를 선택합니다.  
   
-3.  에 **새 항목 추가** 대화 상자에서 **보고서 마법사**보고서 파일에 대 한 이름을 입력 한 다음 클릭 **추가**합니다.  
+3.  에 **새 항목 추가** 대화 상자에서 **보고서 마법사**보고서 파일의 이름을 입력 하 고 클릭 **추가**합니다.  
   
      그러면 보고서 마법사가 시작됩니다.  
   
-4.  에 **데이터 집합 속성** 페이지는 **데이터 소스** 상자는 **DataSet1** 에서 만든 [2 단원: 데이터 연결 및 데이터 테이블에 대 한 정의 부모 보고서](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)합니다.  
+4.  에 **데이터 집합 속성** 페이지를 **데이터 원본** 상자에서를 **DataSet1** 에서 만든 [2 단원: 데이터 연결 및 데이터 테이블 정의 보고서를 부모](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)합니다.  
     **사용 가능한 데이터 집합** 상자가 위에서 만든 **DataTable** 로 자동 업데이트됩니다.  
   
 5.  **다음**을 클릭합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36082629"
   
     1.  **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**및 **ReorderLevel** 을 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
-    2.  옆에 있는 화살표를 클릭 **sum (productid)**, **sum (safetystocklevel)**, **sum (reorderlevel)** 선택을 취소 하 고는 **합계** 선택 합니다.  
+    2.  옆에 화살표를 클릭 **sum (productid)**, **sum (safetystocklevel)**, **sum (reorderlevel)** 선택을 취소 합니다 **합계** 선택 합니다.  
   
 7.  **다음** 을 두 번 클릭한 다음 **마침** 을 클릭하여 **보고서 마법사**를 닫습니다.  
   

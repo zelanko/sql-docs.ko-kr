@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260399"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
   Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합을 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 및 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 사이트에 연결하고 이러한 사이트에서 목록 데이터를 검색할 수 있습니다.  
   
- 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 참조 하십시오. [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
+ 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
 ##  <a name="Connection"></a> 연결 문자열  
  SharePoint 목록에 대한 연결 문자열은 SharePoint 사이트 또는 하위 사이트에 대한 URL입니다(예: `http://MySharePointWeb/MySharePointSite` 또는 `http://MySharePointWeb/MySharePointSite/Subsite`).  
@@ -45,24 +45,24 @@ ms.locfileid: "36082632"
 ||지원되는 자격 증명|클래식 모드 Windows 인증|<sup>3</sup> 클레임 인증|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
-||저장 됨, 프롬프트, 없음 (Windows 자격 증명으로<sup>1</sup>)|예|아니요|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|더<sup>2</sup>|  
-||저장 됨, 프롬프트, 없음 (Windows 자격 증명으로<sup>1</sup>)|예|더<sup>2</sup>|  
+||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|예|아니요|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|이상<sup>2</sup>|  
+||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|예|이상<sup>2</sup>|  
   
  **표 2**  
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|<sup>3</sup> 클레임 인증|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
-||저장 됨, 프롬프트, 없음 (Windows 자격 증명으로<sup>1</sup>)|아니요|아니요|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|더<sup>2</sup>|  
-||저장 됨, 프롬프트, 없음 (Windows 자격 증명으로<sup>1</sup>)|아니요|더<sup>2</sup>|  
+||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|아니요|아니요|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|이상<sup>2</sup>|  
+||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|아니요|이상<sup>2</sup>|  
   
- <sup>1</sup> 저장 및 프롬프트 자격 증명 비 Windows 자격 증명으로 지원 되지 않습니다.  
+ <sup>1</sup> 저장 및 프롬프트 자격 증명 비 Windows 자격 증명을 사용 하 여 지원 되지 않습니다.  
   
- <sup>2</sup> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원 되지 않습니다.  
+ <sup>2</sup> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원 되지 않습니다 됩니다.  
   
- <sup>3</sup> 명시 된 인증 공급자를 Windows 인증, 폼 기반 인증, (FBA), SAML Secure Application Markup Language () 토큰, 기타 id 공급자 또는 위의 항목 중 하나 이상의 조합입니다.  
+ <sup>3</sup> 명시 된 인증 공급자를 Windows 인증, 폼 기반 인증, (FBA), 보안 응용 프로그램 Markup Language (SAML) 토큰, 기타 id 공급자 또는 위에 둘 이상의 조합입니다.  
   
  **Windows 인증**  
  트러스트된 계정 모드에서 보고서 서버와 함께 작동하도록 구성된 SharePoint 기술의 경우 이 옵션은 지원되지 않습니다. 이 옵션은 SQL Server 2012 Reporting Services 이전 릴리스에만 적용됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36082632"
   
  Microsoft BI 스택 간 클레임 인증 지원에 대한 자세한 내용은 [Microsoft BI 스택 간 클레임 인증 사용](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)을 참조하십시오.  
   
- 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [보고서 작성기에서 자격 증명 지정](../specify-credentials-in-report-builder.md), 및 [에서 지 원하는 데이터 원본 Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)를 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md), 및 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
   
 ##  <a name="Query"></a> 쿼리  
  쿼리를 디자인하려면 데이터 원본을 기준으로 새 데이터 집합을 만든 다음 연결된 쿼리 디자이너를 엽니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  

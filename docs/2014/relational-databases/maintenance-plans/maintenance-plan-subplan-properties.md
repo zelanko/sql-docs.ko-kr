@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.general.f1
 - sql12.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2d857f09260c40c79f9a9528575cf9cdee54db6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 522562dcbac9f8171b0a0a5ec18c9e6360e1f8a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170394"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>유지 관리 계획(하위 계획 속성)
   **유지 관리 계획(하위 계획 속성)** 대화 상자를 사용하여 유지 관리 계획에 대한 하위 계획의 이름, 설명 및 일정을 지정할 수 있습니다. 유지 관리 계획 **디자인** 탭의 **하위 계획 속성** 을 클릭하거나 디자이너 표에서 하위 계획을 두 번 클릭하여 이 대화 상자를 표시할 수 있습니다.  
