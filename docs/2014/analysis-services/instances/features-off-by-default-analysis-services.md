@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services) 기본적으로 해제 기능 | Microsoft Docs
+title: (Analysis Services)를 기본적으로 해제 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 46b5d847385eafa4bbe2318c937201f8d48c49da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9bcb28d99f8d06430ca1ff68563e8ab8c075929f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214181"
 ---
 # <a name="features-off-by-default-analysis-services"></a>기본적으로 해제되어 있는 기능(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 기본적으로 보안되도록 디자인되었습니다. 따라서 보안을 손상시킬 수 있는 기능은 기본적으로 비활성화됩니다. 다음 기능은 기본적으로 비활성화된 상태로 설치되며 이러한 기능을 사용하려면 별도로 활성화해야 합니다.  

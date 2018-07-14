@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: da8b4e9e642fcaa7585041102422f05832e6ded3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f0443443f4863ed788aa22a4aeb1ca717ee891d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200743"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>보고서 항목 서식 지정(보고서 작성기 및 SSRS)
   보고서의 항목에 서식을 지정하여 보고서를 더 보기 좋게 만들고 가독성을 높일 수 있습니다. 보고서 디자인 모드에서 데이터, 식, 이미지, 입력란 내에 있는 개별 항목 및 입력란의 서식을 지정할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36090177"
  [선, 색 및 이미지 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)  
  보고서 항목 및 데이터 영역 내에서 선, 눈금선, 색 및 이미지의 서식을 지정하는 방법에 대해 설명합니다.  
   
- [보고서 또는 입력란에 대 한 로캘을 설정 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [보고서 또는 입력란에 대 한 로캘 설정 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  날짜, 통화 및 숫자 값과 같이 언어와 지역에 따라 달라지는 데이터 표시 형식의 설정을 변경하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

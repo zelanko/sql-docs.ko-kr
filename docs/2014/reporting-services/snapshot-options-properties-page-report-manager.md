@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218875"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>스냅숏 옵션 속성 페이지(보고서 관리자)
   스냅숏 옵션 속성 페이지를 사용하여 보고서 스냅숏이 보고서 기록에 추가되는 일정을 예약할 수 있고 보고서 기록에 저장되는 보고서 스냅숏 수에 제한을 설정할 수 있습니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [추가 데이터베이스 서비스](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [추가 데이터베이스 서비스](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -67,7 +67,7 @@ ms.locfileid: "36091887"
 ## <a name="see-also"></a>관련 항목  
  [보고서 기록에 스냅숏 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [만들기, 수정 및 보고서 기록의 스냅숏 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [만들기, 수정 및 보고서 기록에서 스냅숏 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

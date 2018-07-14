@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
 - TDE, EKM how to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a498859f53efb6c70d57c0ed5cb19d202a8e1149
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: f9b31103c887986210e96d39ffdfb00da0d6bac7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202893"
 ---
 # <a name="enable-tde-using-ekm"></a>EKM을 사용하여 TDE 설정
   이 항목에서는 EKM(확장 가능 키 관리) 모듈에 저장된 비대칭 키를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 사용하여 데이터베이스 암호화 키를 보호하기 위해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 TDE(투명한 데이터 암호화)를 사용하도록 설정하는 방법에 대해 설명합니다.  

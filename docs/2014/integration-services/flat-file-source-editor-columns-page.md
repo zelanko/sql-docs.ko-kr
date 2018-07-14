@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be667dc6fe7dcaefdc183a831f762a566a56c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d0007a98a02da095887aa0faedb12ba629f5e01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171024"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>플랫 파일 원본 편집기(열 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
   
 > [!NOTE]  
->  `FileNameColumnName` 플랫 파일 원본의 속성 및 `FastParse` 해당 출력 열의 속성에서 사용할 수 없는 **플랫 파일 원본 편집기**를 사용 하 여 설정할 수 있습니다는 **고급 편집기** . 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
+>  `FileNameColumnName` 플랫 파일 원본의 속성 및 `FastParse` 해당 출력 열의 속성을 사용할 수 없습니다는 **플랫 파일 원본 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기** . 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
   
  플랫 파일 원본에 대한 자세한 내용은 [Flat File Source](data-flow/flat-file-source.md)을 참조하십시오.  
   

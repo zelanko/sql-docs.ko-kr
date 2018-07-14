@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default protocols
 - network protocols [SQL Server], client configuration
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5178b2f4559a506d15c868cdf13fef17869f2279
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 293a0cf9104b07f7ca0ef995cf32485a6564f9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173324"
 ---
 # <a name="configure-client-protocols"></a>클라이언트 프로토콜 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 응용 프로그램이 사용하는 클라이언트 프로토콜을 구성하는 방법에 대해 설명합니다. Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TCP/IP 네트워크 프로토콜 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다.  

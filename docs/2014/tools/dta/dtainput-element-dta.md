@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b414d14cf69815086973849d5e0f6b3badb6b3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a754e81ea8fe094bb840cb57851685b3b6626521
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179022"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 요소(DTA)
   데이터베이스 엔진 튜닝 관리자에 대한 XML 입력의 정의를 포함합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36091649"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[DTAXML 요소 &#40;DTA&#41;](dtaxml-element-dta.md)|  
-|**자식 요소**|[서버 요소 &#40;DTA&#41;](server-element-dta.md)<br /><br /> [Workload 요소 &#40;DTA&#41;](workload-element-dta.md)<br /><br /> [TuningOptions 요소 &#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [구성 요소 &#40;DTA&#41;](configuration-element-dta.md)|  
+|**자식 요소**|[Server 요소 &#40;DTA&#41;](server-element-dta.md)<br /><br /> [Workload 요소 &#40;DTA&#41;](workload-element-dta.md)<br /><br /> [TuningOptions 요소 &#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [구성 요소 &#40;DTA&#41;](configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  이 요소는 데이터베이스 엔진 튜닝 관리자 입력 스키마 계층의 루트입니다. 데이터베이스 엔진 튜닝 관리자에 대한 입력은 튜닝할 데이터베이스가 있는 서버, 작업, 튜닝 옵션 또는 사용자 지정 구성을 지정하는 인수가 될 수 있습니다.  

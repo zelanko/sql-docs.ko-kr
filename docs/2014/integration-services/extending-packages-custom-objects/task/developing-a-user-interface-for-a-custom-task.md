@@ -25,13 +25,13 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 354420f069357b7a8d350049cbddb04d25caf627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d86350195a980f87e5e67ea4634ebadd0116355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217633"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 사용자 지정 태스크 개발자가 태스크의 사용자 지정 사용자 인터페이스를 쉽게 만들 수 있으며 이러한 태스크는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 통합 및 표시될 수 있습니다. 사용자 인터페이스는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 사용자에게 유용한 정보를 제공하고 사용자 지정 태스크의 속성 및 설정을 올바르게 구성할 수 있도록 안내해 줍니다.  
@@ -202,7 +202,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 지정 태스크 만들기](creating-a-custom-task.md)   

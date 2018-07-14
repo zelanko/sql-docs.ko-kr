@@ -17,22 +17,22 @@ helpviewer_keywords:
 - transferring data
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc0b4f2e79564bbdc6ceaabb088cdb070636a3d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 70224f60f7bd6da21b757cdff265749c9ac35979
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186140"
 ---
 # <a name="transferring-data"></a>데이터 전송
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 클래스는 개체와 데이터를 전송하기 위한 도구를 제공하는 유틸리티 클래스입니다.  
   
  데이터베이스 스키마의 개체는 대상 서버에서 생성된 스크립트를 실행하여 전송됩니다. <xref:Microsoft.SqlServer.Management.Smo.Table> 데이터는 동적으로 생성된 DTS 패키지를 사용하여 전송됩니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체에는 DMO에 있는 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체의 모든 기능과 추가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능이 포함되어 있습니다. 그러나 SMO에 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체에서 사용 하는 [SQLBulkCopy](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 데이터를 전송 합니다. 또한 데이터 전송을 수행하는 메서드와 속성은 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체가 아니라 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에 있습니다. 인스턴스 클래스에서 유틸리티 클래스로 기능을 이동하면 특정 태스크의 코드가 필요할 때만 로드되므로 개체 모델이 보다 단순해집니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체에는 DMO에 있는 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체의 모든 기능과 추가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능이 포함되어 있습니다. 그러나 SMO에서 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]는 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체에서 사용 하는 [SQLBulkCopy](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) 데이터를 전송 하는 API입니다. 또한 데이터 전송을 수행하는 메서드와 속성은 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체가 아니라 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에 있습니다. 인스턴스 클래스에서 유틸리티 클래스로 기능을 이동하면 특정 태스크의 코드가 필요할 때만 로드되므로 개체 모델이 보다 단순해집니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A>이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 버전보다 낮은 대상 데이터베이스로의 데이터 전송을 지원하지 않습니다.  
   

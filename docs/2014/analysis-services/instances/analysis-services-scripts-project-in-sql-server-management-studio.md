@@ -1,5 +1,5 @@
 ---
-title: Analysis Services SQL Server Management Studio에서 스크립트 프로젝트 | Microsoft Docs
+title: Analysis Services 스크립트 프로젝트에서 SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Analysis Services]
 - scripts [Analysis Services], projects
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - items [Analysis Services]
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2fb85f3620a24b75d25b4e44f36b8385fcc1c12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8aac556b6547656303d4baefb591c2e9f3f13fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216413"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 분석 서버 스크립트 프로젝트를 만들어 개발, 관리 및 원본 제어를 위해 관련 스크립트를 그룹화할 수 있습니다. 현재 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 솔루션이 로드되어 있지 않은 경우 새 분석 서버 스크립트 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 그렇지 않은 경우 새 분석 서버 스크립트 프로젝트를 기존 솔루션에 추가하거나 새 솔루션에 만들 수 있습니다.  

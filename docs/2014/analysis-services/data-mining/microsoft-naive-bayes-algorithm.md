@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196613"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 분류 알고리즘 Bayes 정리를 기반으로 하며 제공한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예측 모델링에 사용 합니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
+  합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리를 기반으로 하며 제공한 분류 알고리즘 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예측 모델링에 사용 합니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
   
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘을 사용하여 초기 데이터 탐색을 수행한 후 나중에 그 결과를 적용하여 보다 복잡하고 정확한 다른 알고리즘으로 추가 마이닝 모델을 만들 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36090771"
   
 -   **단일 키 열** 각 모델은 각 레코드를 고유하게 식별하는 숫자 또는 텍스트 열을 하나 포함해야 합니다. 복합 키는 사용할 수 없습니다.  
   
--   **입력 열** Naive Bayes 모델에서는 모든 열 해야 불연속 또는 불연속화 된 열입니다. 열을 분할 하는 방법에 대 한 정보를 참조 하십시오. [분할 방법 &#40;데이터 마이닝&#41;](discretization-methods-data-mining.md)합니다.  
+-   **입력 열** Naive Bayes 모델에서 모든 열은 되어야 불연속 또는 불연속화 된 열입니다. 열을 분할 하는 방법에 대 한 내용은 [분할 메서드 &#40;데이터 마이닝&#41;](discretization-methods-data-mining.md)합니다.  
   
      Naive Bayes 모델의 경우 입력 특성이 서로 독립적인지도 확인해야 합니다. 이는 예측을 위해 이 모델을 사용하는 경우에 특히 중요합니다.  
   

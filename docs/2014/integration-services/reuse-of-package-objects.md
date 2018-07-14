@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GUID regenerating [Integration Services]
 - reusing packages
@@ -19,13 +19,13 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe70bf7dd471d11f023adab63f6581bcbb2feb9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2be515df284d420790350c6be6fcc609666bcd56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206083"
 ---
 # <a name="reuse-of-package-objects"></a>패키지 개체 다시 사용
   다시 사용하려는 자주 사용되는 패키지 기능입니다. 예를 들어 태스크 집합을 만든 경우 항목을 모두 그룹으로 다시 사용하거나 다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에서 만든 연결 관리자와 같은 단일 항목을 다시 사용하려고 할 수 있습니다.  

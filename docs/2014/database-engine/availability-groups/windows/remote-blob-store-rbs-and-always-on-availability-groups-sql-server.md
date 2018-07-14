@@ -1,25 +1,24 @@
 ---
-title: Remote Blob Store (RBS) 및 AlwaysOn 가용성 그룹 (SQL Server) | Microsoft Docs
+title: RBS (remote Blob Store) 및 AlwaysOn 가용성 그룹 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: bbcbdcc96831a27b24fc47ba8ec9c20b16f6f1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55f604d9c85cd93baa564a0bd5a99a483f310fdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169344"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>RBS(Remote Blob Store) 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][RBS(Remote Blob Store)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB 개체에 대한 고가용성 재해 복구 솔루션을 제공할 수 있습니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 가용성 데이터베이스에 저장된 RBS 메타데이터 및 스키마를 보조 복제본에 복제하여 보호합니다. 다음은 SharePoint 콘텐츠 데이터베이스입니다. 일반적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 BLOB에서 이 RBS 메타데이터를 독립적으로 저장합니다.  

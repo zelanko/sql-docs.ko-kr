@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
@@ -16,13 +16,13 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ef1c8dce4ce1ed22f8067a5409ec8394bcb66d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03334b761d9c5e9fa479fd939f06089e7aae8c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162776"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF(SSIS 식)
   지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다. *datepart* 매개 변수는 비교할 날짜 및 시간 범위를 식별합니다.  
@@ -85,7 +85,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 이 예에서는 **ModifiedDate** 열의 날짜와 **YearEndDate** 변수 사이의 주 수를 반환합니다. 경우 **YearEndDate** 에 `date` 데이터 형식으로 명시적 캐스트는 필요 없습니다.  
+ 이 예에서는 **ModifiedDate** 열의 날짜와 **YearEndDate** 변수 사이의 주 수를 반환합니다. 하는 경우 **YearEndDate** 에 `date` 데이터 형식으로 명시적 캐스트는 필요 없습니다.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

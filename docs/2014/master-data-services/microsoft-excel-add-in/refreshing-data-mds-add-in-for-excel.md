@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 126c696da22e2b3e483ae7fb4692469d617f125a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9a31c9d497b94836bb6a41e707e3285f337f7985
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203483"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>데이터 새로 고침(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 새로 고쳐 새 워크시트를 열지 않고도 MDS 리포지토리에서 최신 정보를 가져올 수 있습니다. 모든 셀이나 선택한 셀을 새로 고칠 수 있습니다. 이 방법은 사용자 지정 수식이나 MDS에서 관리되지 않는 기타 데이터가 포함된 열을 삽입했으며 이를 보존하려는 경우에 유용하게 사용할 수 있습니다.  
@@ -59,6 +59,6 @@ ms.locfileid: "36089945"
   
 -   [데이터 로드 &#40;MDS 추가 기능에 Excel 용&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Master Data Services 추가 기능을 for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (큐브 구조 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 데이터 원본 뷰 (Cube Structure Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185310"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **데이터 원본 뷰** 창을 사용하여 선택한 큐브와 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. 이 창은 **데이터 원본 뷰** 창에서 **측정값** 창으로 열을 끌어 측정값 그룹 및 측정값을 만드는 데 사용합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36091404"
  **모든 테이블 표시**  
  해당 큐브와 연결된 데이터 원본 뷰의 모든 테이블을 창에 표시합니다.  
   
- **사용 되는 테이블만 표시**  
+ **사용 된 테이블만 표시**  
  연결된 데이터 원본 뷰의 큐브에서 사용한 테이블만 창에 표시합니다.  
   
  **이름 표시**  
@@ -72,7 +72,7 @@ ms.locfileid: "36091404"
  **데이터 원본 뷰 편집**  
  해당 개체와 연결된 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **데이터 원본 뷰 표시**  
+ **데이터 원본 뷰를 표시 합니다.**  
  다음 옵션 중 하나를 선택하여 **데이터 원본 뷰** 창의 뷰 모드를 전환할 수 있습니다.  
   
 -   다이어그램  

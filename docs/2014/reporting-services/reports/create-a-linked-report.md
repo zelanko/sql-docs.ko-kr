@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 971f07256e5f8b678d62f3a9b75e13299fad3ed3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191333"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
   링크된 보고서는 기존 보고서에 대한 액세스 지점을 제공하는 보고서 서버 항목입니다. 개념적으로 링크된 보고서는 프로그램을 실행하거나 파일을 열 때 사용하는 프로그램 바로 가기와 비슷합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36091007"
   
 2.  새 링크된 보고서의 이름을 입력합니다. 설명을 입력합니다(옵션).  
   
-3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택 하지 않은 경우 링크 된 보고서 (보고서에 기반 하는 저장 됨)은 현재 폴더에 만들어집니다.  
+3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택 하지 않으면 현재 폴더 (기반이 되는 보고서가 저장 하는 곳)에 링크 된 보고서 생성 됩니다.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크 된 보고서가 열립니다.  
   

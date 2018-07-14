@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
@@ -16,13 +16,13 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3208fbea606a066d5f1a2e9fdf566cb907267200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac7362079175711c7027919abccf246670497545
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173084"
 ---
 # <a name="month-ssis-expression"></a>MONTH(SSIS 식)
   날짜의 월 부분을 나타내는 정수를 반환합니다.  

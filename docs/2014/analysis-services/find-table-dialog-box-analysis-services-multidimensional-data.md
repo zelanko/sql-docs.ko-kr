@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
 helpviewer_keywords:
 - Find Table dialog box
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e3386756ade73e6e04391debdae8415b9b00c75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 489f85e874c6cb8ba2c9d9ca457626e52db89cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243673"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>테이블 찾기 대화 상자(Analysis Services - 다차원 데이터)
   **의** 테이블 찾기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브 또는 마이닝 구조와 연결된 데이터 원본 뷰에서 테이블을 찾을 수 있습니다. 다음과 같은 방법으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 이 대화 상자를 표시할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36088474"
   
 ## <a name="see-also"></a>관련 항목  
  [어셈블리 속성 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [데이터 원본 뷰를 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [데이터 원본 뷰를 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+ [데이터 원본 뷰 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [데이터 원본 뷰 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

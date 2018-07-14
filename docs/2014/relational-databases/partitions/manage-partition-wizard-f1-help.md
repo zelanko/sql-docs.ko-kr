@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
 - sql12.swb.managepartition.selectoutput.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58fb07069d831020fac201e9a63b12f316105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197563"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>파티션 관리 마법사 F1 도움말
   **파티션 관리 마법사** 를 사용하여 파티션 전환이나 슬라이딩 윈도우(Sliding Window) 시나리오의 구현을 통해 기존 파티션 테이블을 관리하고 수정할 수 있습니다. 이 마법사는 파티션 관리를 용이하게 하고 테이블로 또는 테이블로부터의 정기적인 데이터 마이그레이션을 단순화합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "36091503"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 선택하고 파티션을 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **저장소**를 가리킨 후 **파티션 관리**를 클릭합니다.  
   
-     `Note` 경우 **파티션 관리** 은 사용할 수 없으면 선택한 파티션을 포함 하지 않는 테이블입니다. 테이블에 파티션을 만들려면 **저장소** 하위 메뉴에서 **파티션 만들기** 를 클릭하고 **파티션 작성 마법사** 를 사용합니다.  
+     `Note` 하는 경우 **파티션 관리** 는 사용할 수 없게 수 없으면 선택한 테이블 파티션이 포함 되지 않습니다. 테이블에 파티션을 만들려면 **저장소** 하위 메뉴에서 **파티션 만들기** 를 클릭하고 **파티션 작성 마법사** 를 사용합니다.  
   
  파티션과 인덱스에 대한 자세한 내용은 [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)를 참조하십시오.  
   

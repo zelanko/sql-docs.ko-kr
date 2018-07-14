@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2421d501ea5040a177cb1d52aea1c3a56b59e107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 220d9b284175e9427a28a886e46ffe91b277fe3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226603"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA를 사용하여 데이터 마이닝 쿼리 만들기
   AMO, DMX 또는 XML/A를 사용하여 데이터 마이닝 개체에 대한 다양한 쿼리를 만들 수 있습니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36088964"
   
      현재 인스턴스에서 사용할 수 있는 모든 행 집합에 대한 행 집합 이름 및 행 집합 열이 포함된 스키마 행 집합 목록이 **결과** 창에 반환됩니다.  
   
-2.  에 **쿼리** 창 뒤에 커서를 배치  **\<제한 목록 >** 하 고 enter 키를 눌러 새 줄을 추가 합니다.  
+2.  에 **쿼리** 창 뒤에 커서  **\<제한 목록 >** 하 고 enter 키를 눌러 새 줄을 추가 합니다.  
   
-3.  형식 빈 줄에 커서를 놓고  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  입력 하 고 빈 줄에 커서를 놓고  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      제한에 대한 전체 섹션은 다음과 같아야 합니다.  
   

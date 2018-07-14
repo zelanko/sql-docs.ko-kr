@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsybasedb.f1
 ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f14add31b6a0c34f8715ad6bf0c2b86e3e0a3013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ca5d291cfdbf4ff62998bba30c6afbed5c7279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212616"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Sybase 데이터베이스에 연결(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 Sybase 데이터베이스에 연결하기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

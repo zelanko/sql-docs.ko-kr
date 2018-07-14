@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9ef9a7289db262643b6a8dd6766aee7f5f988bd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7e5637defc1c1de00efc44229de678acc9cfd9da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225275"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>잘못된 문자 및 이스케이프 규칙
   이 항목에서는 FOR XML 절에서 잘못된 XML 문자를 처리하는 방법에 대해 설명하고 XML 이름의 잘못된 문자에 대한 이스케이프 규칙을 나열합니다.  

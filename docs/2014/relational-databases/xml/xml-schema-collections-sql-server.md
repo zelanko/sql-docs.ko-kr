@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - xml_schema_namespace function
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 707cb288e9c0ba85454493024350e378ae66e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221093"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
-  항목에 설명 된 대로 [xml &#40;Transact SQL&#41;](/sql/t-sql/xml/xml-transact-sql)를 통해 XML 데이터의 기본 저장소를 제공 하는 SQL Server는 `xml` 데이터 형식입니다. 열 또는 변수를 선택적으로 XSD 스키마를 연결할 수 `xml` XML 스키마 컬렉션을 통해 형식입니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
+  항목에 설명 된 대로 [xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)를 통해 XML 데이터의 기본 저장소를 제공 하는 SQL Server는 `xml` 데이터 형식입니다. 열 또는 변수와 XSD 스키마를 필요에 따라 연결할 수 있습니다 `xml` XML 스키마 컬렉션을 통해 형식입니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
   
 -   XML 인스턴스 유효성 검사  
   
@@ -45,14 +45,14 @@ ms.locfileid: "36088558"
   
  쿼리 프로세싱 엔진은 또한 유형 검사 및 쿼리와 데이터 수정 최적화를 위해 스키마를 사용합니다.  
   
- SQL Server에 연결 된 XML 스키마 컬렉션을 사용 하는 또한의 경우 입력 한 `xml`, XML 인스턴스의 유효성을 검사 합니다. XML 인스턴스가 스키마로 컴파일되는 경우 데이터베이스에서 인스턴스를 해당 유형 정보와 함께 시스템에 저장할 수 있습니다. 그렇지 않으면 인스턴스가 거부됩니다.  
+ SQL Server 연결 된 XML 스키마 컬렉션을 사용 하는 또한의 경우 형식화 된 `xml`를 XML 인스턴스의 유효성을 검사 합니다. XML 인스턴스가 스키마로 컴파일되는 경우 데이터베이스에서 인스턴스를 해당 유형 정보와 함께 시스템에 저장할 수 있습니다. 그렇지 않으면 인스턴스가 거부됩니다.  
   
  내장 함수 XML_SCHEMA_NAMESPACE를 사용하여 데이터베이스에 저장된 스키마 컬렉션을 검색할 수 있습니다. 자세한 내용은 [저장된 XML 스키마 컬렉션 보기](../xml/view-a-stored-xml-schema-collection.md)를 참조하세요.  
   
  또한 XML 스키마 컬렉션을 사용하여 XML 변수, 매개 변수 및 열을 형식화할 수 있습니다.  
   
 ##  <a name="ddl"></a> 스키마 컬렉션 관리 DDL  
- 데이터베이스에 XML 스키마 컬렉션을 만들어 하는 변수 및 열과 연결할 `xml` 유형입니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 DDL 문을 제공합니다.  
+ 데이터베이스에서 XML 스키마 컬렉션을 만들고를 변수 및 열과 연결할 `xml` 형식입니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 DDL 문을 제공합니다.  
   
 -   [CREATE XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)은 데이터베이스에 스키마 구성 요소를 가져옵니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36088558"
   
 -   [DROP XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql)은 전체 XML 스키마 컬렉션 및 모든 해당 구성 요소를 삭제합니다.  
   
- XML 스키마 컬렉션과 여기에 포함되는 스키마를 사용하려면 먼저 CREATE XML SCHEMA COLLECTION 문을 사용하여 컬렉션과 스키마를 만들어야 합니다. 스키마 컬렉션을 만든 후 만들 수 있습니다 변수 및 열 `xml` 입력 하 고 스키마 컬렉션과 연결할 합니다. 스키마 컬렉션을 만든 다음에는 여러 스키마 구성 요소가 메타데이터에 포함됩니다. 또한 ALTER XML SCHEMA COLLECTION을 사용하여 기존 스키마에 더 많은 구성 요소를 추가하거나 기존 컬렉션에 새로운 스키마를 추가할 수 있습니다.  
+ XML 스키마 컬렉션과 여기에 포함되는 스키마를 사용하려면 먼저 CREATE XML SCHEMA COLLECTION 문을 사용하여 컬렉션과 스키마를 만들어야 합니다. 스키마 컬렉션을 만든 후 다음 만들면 변수 및 열 `xml` 입력 하 고 스키마 컬렉션과 연결할입니다. 스키마 컬렉션을 만든 다음에는 여러 스키마 구성 요소가 메타데이터에 포함됩니다. 또한 ALTER XML SCHEMA COLLECTION을 사용하여 기존 스키마에 더 많은 구성 요소를 추가하거나 기존 컬렉션에 새로운 스키마를 추가할 수 있습니다.  
   
  스키마 컬렉션을 삭제하려면 DROP XML SCHEMA COLLECTION 문을 사용합니다. 이렇게 하면 컬렉션에 포함된 모든 스키마가 삭제되고 컬렉션 개체가 제거됩니다. 스키마 컬렉션을 삭제하려면 [DROP XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql)에 기술된 조건을 충족해야 합니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36088558"
   
 -   XML 스키마 컬렉션에 적합한 카탈로그 뷰에 Transact-SQL 쿼리를 작성합니다.  
   
--   기본 제공 함수 **XML_SCHEMA_NAMESPACE()** 를 사용합니다. 적용할 수 있습니다 `xml` 에서이 함수의 출력 데이터 형식 메서드. 하지만 기본 XML 스키마는 수정할 수 없습니다.  
+-   기본 제공 함수 **XML_SCHEMA_NAMESPACE()** 를 사용합니다. 적용할 수 있습니다 `xml` 이 함수의 출력에 데이터 형식 메서드. 하지만 기본 XML 스키마는 수정할 수 없습니다.  
   
  이러한 내용은 다음 예에 설명되어 있습니다.  
   
@@ -192,7 +192,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 컬렉션 내의 개별 XML 스키마를 가져올 수 `xml` 데이터 형식에 대 한 세 번째 인수로 대상 네임 스페이스를 지정 하 여 인스턴스 **xml_schema_namespace ()** 합니다. 이는 다음 예에서 확인할 수 있습니다.  
+ 컬렉션 내의 개별 XML 스키마로 가져올 수 있습니다 `xml` 세 번째 인수로 대상 네임 스페이스를 지정 하 여 데이터 형식의 인스턴스로 **xml_schema_namespace ()** 합니다. 이는 다음 예에서 확인할 수 있습니다.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
  다음 명령문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 대상 네임스페이스가 http://www.microsoft.com/books인 XML 스키마를 출력합니다.  

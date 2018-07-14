@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a3ff1b93efe374b9ddc8b080de143550aae8388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b31922593446e7d8aafd88cdb5667bef8b109ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218283"
 ---
 # <a name="data-element-assl"></a>Data 요소(ASSL)
-  포함 된 (자식 컬렉션에 [블록 요소 &#40;ASSL&#41; ](block-element-assl.md) 요소)의 이진 내용을 [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) 요소입니다.  
+  포함 (자식 컬렉션에 [블록 요소 &#40;ASSL&#41; ](block-element-assl.md) 요소)의 이진 콘텐츠를 [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36093400"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Data` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
+ 부모에 해당 하는 요소가 `Data` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ClrAssemblyFile>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Assembly 요소 &#40;ASSL&#41;](assembly-element-assl.md)   

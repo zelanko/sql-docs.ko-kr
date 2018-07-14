@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179110"
 ---
 # <a name="create-a-job-category"></a>작업 범주 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 관리 개체를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업 범주를 만드는 방법에 대해 설명합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36090586"
   
 8.  **작업 범주 관리***server_name* 대화 상자에서 **새로 고침**을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
   
- 이러한 대화 상자에 대 한 자세한 내용은 참조 하십시오. [작업 범주: 작업 범주 관리](job-categories-manage-job-categories.md) 및 [새 작업 범주 및 작업 범주 속성](job-categories-properties-new-job-category.md)합니다.  
+ 이러한 대화 상자에 대 한 자세한 내용은 참조 하세요. [작업 범주: 작업 범주 관리](job-categories-manage-job-categories.md) 하 고 [작업 범주 속성 및 새 작업 범주](job-categories-properties-new-job-category.md)합니다.  
   
  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36090586"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)합니다.  
+ 자세한 내용은 [sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)합니다.  
   
 
   
-##  <a name="SMO"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업 범주를 만들려면**  
   
- 호출 된 `JobCategory` Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
+ 호출 된 `JobCategory` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
   
  
   

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OpenXML method [XML in SQL Server]
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1fbb67b5bd0f1f891e35dd638cb6e1938e396ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d55a482435673d69b82cca0f95f4a31656a21a96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219083"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML에서 value() 및 nodes() 사용
-  여러 개 사용할 수 있습니다 **value ()** 에 대 한 메서드 `xml` 데이터 형식에 **선택** 추출 된 값의 행 집합을 생성 하는 절. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
+  여러 개 사용할 수 있습니다 **value ()** 메서드 `xml` 데이터 형식에 **선택** 추출 된 값의 행 집합을 생성 하는 절. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
   
- **nodes ()** 메서드는 특수 한 인스턴스를 양보 `xml` 데이터 형식에는 각각 한 컨텍스트 서로 다른 선택된 노드에로 설정 합니다. 이러한 종류의 XML 인스턴스는 **query()**, **value()**, **nodes()** 및 **exist()** 메서드를 지원하며 **count(\*)** 집계에 사용될 수 있습니다. 다른 용도로 사용하면 오류가 발생합니다.  
+ 합니다 **nodes ()** 메서드는 특수 한 인스턴스를 생성 `xml` 데이터 형식으로 하며 각 인스턴스에 서로 다른 선택된 노드에 대 한 컨텍스트 집합이 있습니다. 이러한 종류의 XML 인스턴스는 **query()**, **value()**, **nodes()** 및 **exist()** 메서드를 지원하며 **count(\*)** 집계에 사용될 수 있습니다. 다른 용도로 사용하면 오류가 발생합니다.  
   
 ## <a name="example-using-nodes"></a>예: nodes() 사용  
  저자의 성과 이름을 추출한다고 가정해 보십시오. 이때 이름은 "David"가 아닙니다. 또한 이 정보를 FirstName 및 LastName의 두 열이 포함된 행 집합으로 추출합니다. **nodes()** 및 **value()** 메서드를 사용하면 다음과 같이 이 작업을 수행할 수 있습니다.  

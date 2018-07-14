@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dbfa449e19f77b7537232e0fc8689a47f30ea1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dee016784a438de226877d94d7271048749a859c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170324"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 만드는 방법에 대해 설명합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "36093065"
   
     -   결과 집합이 비어 있으면 로그 판독기 에이전트 작업을 만듭니다. 게시자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행합니다. **@job_name** 및 **@password**에 에이전트가 실행되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password**에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 3단계로 진행합니다.  
   
-3.  게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 에 대 한 게시 이름을 지정 **@publication**, 및에 대 한는 **@repl_freq** 매개 변수 값을 지정 `snapshot` 값 또는 스냅숏 게시에 대 한 `continuous` 에 대 한는 트랜잭션 게시입니다. 다른 게시 옵션을 지정합니다. 이렇게 하면 게시가 정의됩니다.  
+3.  게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 에 게시 이름을 지정 **@publication**, 및를 **@repl_freq** 매개 변수 값을 지정 `snapshot` 값 또는 스냅숏 게시에 대 한 `continuous` 에 대 한는 트랜잭션 게시입니다. 다른 게시 옵션을 지정합니다. 이렇게 하면 게시가 정의됩니다.  
   
     > [!NOTE]  
     >  게시 이름은 다음과 같은 문자를 포함할 수 없습니다:  
@@ -166,13 +166,13 @@ ms.locfileid: "36093065"
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 경우 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 반환 `false`, 데이터베이스가 있는지 확인 합니다.  
+2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 하는 경우 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 반환 `false`, 데이터베이스가 있는지 확인 합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 속성이 `false`이면 `true`로 설정합니다.  
   
-4.  트랜잭션 게시에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 속성의 값을 확인합니다. 이 속성이 `true`,이 데이터베이스에 대 한 로그 판독기 에이전트 작업이 이미 있습니다. 이 속성이 `false`에서 다음을 수행 합니다.  
+4.  트랜잭션 게시에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 속성의 값을 확인합니다. 이 속성이 `true`,이 데이터베이스에 대 한 로그 판독기 에이전트 작업이 이미 있습니다. 이 속성이 `false`, 다음을 수행 합니다.  
   
-    -   설정의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 또는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 의 필드 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 에 대 한 자격 증명을 제공 하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 로그 판독기 에이전트가 실행 되는 Windows 계정입니다.  
+    -   설정 합니다 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 또는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 필드 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 에 대 한 자격 증명을 제공 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 로그 판독기 에이전트가 실행 되는 Windows 계정입니다.  
   
         > [!NOTE]  
         >  설정 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 의 멤버가 게시를 만들 때는 필요 하지 않습니다는 `sysadmin` 고정된 서버 역할입니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
@@ -213,9 +213,9 @@ ms.locfileid: "36093065"
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 경우 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 반환 `false`, 데이터베이스가 있는지 확인 합니다.  
+2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 하는 경우 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 반환 `false`, 데이터베이스가 있는지 확인 합니다.  
   
-3.  경우 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성은 `false`로 설정 `true`, 호출 및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>합니다.  
+3.  경우 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성은 `false`로 설정 `true`를 호출 하 고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   

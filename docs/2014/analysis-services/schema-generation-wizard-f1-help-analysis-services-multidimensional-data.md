@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52536b8132a0c42b67439a45e6a808a7674b008b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca4ce364da49d35e7f9e901937196f3dbad63af7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218173"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>스키마 생성 마법사 F1 도움말(Analysis Services - 다차원 데이터)
   스키마 생성 마법사를 사용하여 기존 큐브 및 차원을 기반으로 하는 주제 영역 데이터베이스에 대한 관계형 스키마를 자동으로 생성할 수 있습니다. 또한 시간 차원에 대해 마법사에서 생성된 테이블을 채우고 주제 영역 데이터베이스에 대한 명명 규칙 및 옵션을 관리할 수 있습니다.  

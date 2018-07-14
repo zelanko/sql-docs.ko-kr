@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220802"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
   보고서 파트는 기본 설정으로 기본 위치에 게시할 수도 있고 이름, 설명 등의 보고서 파트 메타데이터를 편집한 다음 보고서 서버의 다른 위치에 저장할 수도 있습니다. 또한 올바른 권한이 있는 경우에는 보고서 서버와 통합된 SharePoint 사이트에 보고서 파트를 저장할 수도 있습니다.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c74a4177be994d890a5cc30bdf85f5778b6c008e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f76b2e3cbb713a99e3e6d531e0afcad4572b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197083"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 속성(ServerNetworkProtocolIPAddress 클래스)
   IP 주소를 참조하는 서버 네트워크 프로토콜의 이름을 가져옵니다.  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ A [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜의 이름을 지정하는 문자열 값입니다.  

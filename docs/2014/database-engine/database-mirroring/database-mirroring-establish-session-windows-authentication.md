@@ -1,28 +1,27 @@
 ---
-title: 데이터베이스 미러링 (Transact SQL) Windows 인증을 사용 하 여 세션 구성 | Microsoft Docs
+title: 데이터베이스 미러링 Windows 인증 (Transact SQL)를 사용 하 여 세션 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07452bdf27bec54e927d43416e35b9ec3451200d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 65d308cbc742aaa7fe6413d291f5ebd93b1f3f84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216043"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL)
     
@@ -35,7 +34,7 @@ ms.locfileid: "36092254"
 >  미러링 구성은 성능에 영향을 줄 수 있으므로 사용률이 낮은 시간에 데이터베이스 미러링을 구성하는 것이 좋습니다.  
   
 > [!NOTE]  
->  지정된 서버 인스턴스는 같은 파트너 또는 다른 파트너에 있는 여러 개의 동시 데이터베이스 미러링 세션에 참여할 수 있습니다. 서버 인스턴스는 한 세션에서는 파트너가 되고, 다른 세션에서는 미러링 모니터 서버가 될 수 있습니다. 미러 서버 인스턴스는 주 서버 인스턴스와 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 데이터베이스 미러링을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
+>  지정된 서버 인스턴스는 같은 파트너 또는 다른 파트너에 있는 여러 개의 동시 데이터베이스 미러링 세션에 참여할 수 있습니다. 서버 인스턴스는 한 세션에서는 파트너가 되고, 다른 세션에서는 미러링 모니터 서버가 될 수 있습니다. 미러 서버 인스턴스는 주 서버 인스턴스와 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 데이터베이스 미러링을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>데이터베이스 미러링 세션을 구성하려면  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36092254"
      데이터베이스 미러링 세션의 각 서버 인스턴스에는 데이터베이스 미러링 끝점이 필요합니다. 따라서 끝점이 없으면 만들어야 합니다.  
   
     > [!NOTE]  
-    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 끝점의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 참조 [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)합니다.  
+    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 끝점의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)합니다.  
   
      각 파트너 서버에서 데이터베이스 미러링의 끝점이 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 끝점이 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 끝점에 파트너 역할을 할당합니다(ROLE**=** PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 끝점 역할을 ALL로 지정합니다.  
   

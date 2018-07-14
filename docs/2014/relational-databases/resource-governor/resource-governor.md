@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b146aa6a44f99002c9cd1d67e748b5c3e5b7a47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 91023c40feeae880db3afd20603645ea0fecadb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166996"
 ---
 # <a name="resource-governor"></a>관리
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  

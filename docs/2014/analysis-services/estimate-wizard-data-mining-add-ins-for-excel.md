@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - estimation
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 231afdcfdc5c6e9e461e463fb5b6c3c682e70cde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e81ee7d3ff6115cbec5774d8c139c0d9933afb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231995"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>추정 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 추정 마법사](media/dmc-estimate.gif "데이터 마이닝 리본의 추정 마법사")  
@@ -96,7 +96,7 @@ ms.locfileid: "36089738"
 ### <a name="requirements"></a>요구 사항  
  데이터 추정 마법사를 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 연결되어 있어야 합니다.  
   
- 연결을 만드는 방법에 대 한 정보를 참조 하십시오. [원본 데이터에 연결 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](connect-to-source-data-data-mining-client-for-excel.md)합니다.  
+ 연결을 만드는 방법에 대 한 자세한 내용은 [원본 데이터에 연결 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](connect-to-source-data-data-mining-client-for-excel.md)합니다.  
   
  추정 알고리즘을 사용하려면 예측하려는 결과가 통화, 판매 금액, 날짜 또는 시간과 같은 숫자 값으로 표시되어야 합니다.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorial creating a database
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71b57935e3add7bc6121968b7b1d4f3fb9531ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: c4f5933c5e653ee4c219e289dc71a8032b056f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196593"
 ---
 # <a name="creating-a-database-tutorial"></a>데이터베이스 만들기(자습서)
   많은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 마찬가지로 CREATE DATABASE 문에는 필수 매개 변수로 데이터베이스 이름이 있습니다. 또한 CREATE DATABASE에는 데이터베이스 파일을 저장할 디스크 위치와 같은 많은 선택적 매개 변수가 있습니다. 선택적 매개 변수 없이 CREATE DATABASE를 실행할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 이러한 여러 매개 변수에 기본값을 사용합니다. 이 자습서에서는 아주 약간의 선택적 구문 매개 변수만 사용합니다.  

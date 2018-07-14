@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FiscalFirstDayOfMonth element
 ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf66dd72e1d74104a2008a0535ff5986dd3c53cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d183e519ddd3a103cd8e9cf90105b9c8848acb55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235543"
 ---
 # <a name="fiscalfirstdayofmonth-element-assl"></a>FiscalFirstDayOfMonth 요소(ASSL)
-  에 대 한 회계 월의 첫 번째 날을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
+  에 대 한 회계 월의 첫째 날을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36090256"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `FiscalFirstDayOfMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
+ 부모에 해당 하는 요소가 `FiscalFirstDayOfMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

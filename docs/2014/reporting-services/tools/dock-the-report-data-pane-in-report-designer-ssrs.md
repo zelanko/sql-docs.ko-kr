@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220723"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>보고서 디자이너에서 보고서 데이터 창 도킹(SSRS)
   보고서 디자이너에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 보고서 데이터 창의 데이터 원본, 데이터 집합, 필드, 매개 변수 및 이미지를 포함 하 여 보고서에서 사용할 수 있는 데이터 개체의 계층 뷰를 표시 합니다. 이 뷰의 데이터 원본은 포함된 데이터 원본이거나 솔루션 탐색기에 표시되는 공유 데이터 원본에 대한 참조일 수 있습니다.  

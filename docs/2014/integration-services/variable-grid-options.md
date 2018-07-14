@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variableoptionswindow.f1
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3ef640f5aadc018702c9141de97e18e1920edb8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec0b57e2c65080a00ecef30be21a6151d544a9e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172984"
 ---
 # <a name="variable-grid-options"></a>가변 눈금 옵션
-  **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대 한 자세한 내용은 참조 [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+  **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
   
 ## <a name="options-for-filter"></a>필터 옵션  
  **시스템 변수 표시**  
@@ -37,7 +37,7 @@ ms.locfileid: "36093108"
  **모든 범위의 변수 표시**  
  패키지의 범위 내에 있는 변수와 패키지의 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수를 표시하려면 이 옵션을 선택합니다. 패키지의 범위 내에 있는 변수와 선택된 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수만 표시하려면 이 옵션의 선택을 취소합니다.  
   
- 변수 범위에 대 한 자세한 내용은 참조 [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+ 변수 범위에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
   
 ## <a name="options-for-columns"></a>열 옵션  
  **변수** 창에 표시할 열을 선택합니다.  

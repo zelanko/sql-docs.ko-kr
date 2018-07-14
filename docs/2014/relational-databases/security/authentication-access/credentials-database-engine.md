@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - principals [SQL Server], credentials
 - schemas [SQL Server], credentials
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9de71af86c410658ab37aa1959ab2c9962b30a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 579b9d6f9847652ab2088eeb5111372fc4377c02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198783"
 ---
 # <a name="credentials-database-engine"></a>자격 증명(데이터베이스 엔진)
   자격 증명은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]외부의 리소스에 연결하는 데 필요한 인증 정보(자격 증명)가 포함된 레코드입니다. 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 내부적으로 사용됩니다. 대부분의 자격 증명에는 Windows 사용자 이름 및 암호가 들어 있습니다.  
@@ -39,10 +38,10 @@ ms.locfileid: "36091701"
   
  시스템 자격 증명은 자동으로 생성되며 특정 끝점과 연결됩니다. 시스템 자격 증명의 이름은 2개의 해시 기호(##)로 시작됩니다.  
   
- 자격 증명에 대 한 자세한 내용은 참조는 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) 카탈로그 뷰에 있습니다.  
+ 자격 증명에 대 한 자세한 내용은 참조는 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) 카탈로그 뷰.  
   
 ## <a name="related-content"></a>관련 내용  
- [자격 증명 만들기](../authentication-access/create-a-credential.md) [자격 증명을 만들지 &#40;Transact SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [자격 증명을 만듭니다](../authentication-access/create-a-credential.md) [자격 증명 만들기 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [SQL Server 보안 설정](../securing-sql-server.md)  
   

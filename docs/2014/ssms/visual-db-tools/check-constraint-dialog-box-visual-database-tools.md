@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3dc13f77788f46796c274d43d5dea920167033f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e4908c1ea2bb110c176e07e5fe8a0ffc8a0ad496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202253"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK 제약 조건 대화 상자(Visual Database Tools)
   이 대화 상자는 테이블 디자이너에서 테이블 정의 표를 마우스 오른쪽 단추로 클릭한 다음 **CHECK 제약 조건**을 클릭하면 나타납니다. 이 대화 상자에는 데이터베이스의 테이블에 연결된 비 UNIQUE 제약 조건에 대한 속성 집합이 포함되어 있습니다. UNIQUE 제약 조건에 적용되는 속성은 **인덱스/키** 대화 상자에 표시됩니다.  
@@ -68,6 +68,6 @@ ms.locfileid: "36090787"
   
 ## <a name="see-also"></a>관련 항목  
  [Unique 제약 조건 및 Check 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [인덱스 및 대화 상자 키 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [인덱스 및 키 대화 상자 &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fe0ce79236df71a14e914b0de004bf27d8aacf92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ddc5834ba3db783740b2325816d392dfd2a949a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170884"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 이벤트 클래스
   User Error Message 이벤트 클래스는 오류 또는 예외 발생 시 사용자에게 나타나는 오류 메시지를 표시합니다. 오류 메시지 텍스트는 TextData 필드에 나타납니다.  

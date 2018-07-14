@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9598249ac124362b76492e60af5531b7d5b3d418
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46c3f16f0adc630e246b1ee6634a523a295ae2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220759"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>사용자 및 경고 담당자에게 권한 부여
   사용자 및 경고 담당자는 SharePoint 권한을 부여 받아야 경로를 만들고, 편집하고, 삭제하고 볼 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 알림 기능을 사용하는 데에는 특별한 권한이 필요 없이 기본 제공 SharePoint 권한을 사용합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36091904"
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 사이트에 보고서 서버 항목에 대 한 사용 권한을 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

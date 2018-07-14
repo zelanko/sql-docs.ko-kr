@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 331ee3440a3cab5959f83880a08a4ef0d589cddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189190"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity 요소(ASSL)
-  에 제공 된 보안 자격 증명에이 변경 사항이 여부를 나타내는 읽기 전용 값이 포함 된 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 데이터 형식입니다.  
+  제공 되는 보안 자격 증명에 변경 된 경우를 나타내는 읽기 전용 값이 포함 된 [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) 데이터 형식입니다.  
   
 ## <a name="syntax"></a>구문  
   

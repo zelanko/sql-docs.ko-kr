@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataSourceImpersonationInfo element
 ms.assetid: a153044b-2d6c-406b-aeb3-15bf096931f4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d99a11e1f0801024544e7a64a4321e8f6e53d6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da8889abe558a33b18e20ca8ee81855656f149f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187080"
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>DataSourceImpersonationInfo 요소(ASSL)
-  에 대 한 데이터 원본에 연결할 때 가장 동작을 확인 하는 데 사용 되는 정보를 포함 한 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
+  데이터 원본에 연결할 때 가장 동작을 확인 하는 데 사용 하는 정보를 포함 한 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

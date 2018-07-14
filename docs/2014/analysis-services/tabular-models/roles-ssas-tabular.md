@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3748f99899990bd46379928b3d524e43e48d277a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235693"
 ---
 # <a name="roles-ssas-tabular"></a>역할(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  
@@ -139,11 +139,11 @@ ms.locfileid: "36092296"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[역할 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
+|[역할 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [큐브 뷰 &#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [Excel에서 분석 &#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)   
+ [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [Excel에서 분석 &#40;&AMP;#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [CUSTOMDATA 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

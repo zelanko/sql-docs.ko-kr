@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlService class
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edb7b1cc97f7dc1906214ec00f10a476c3e5569e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6a0cb192de294c831a884c4b11676d1db3a380e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179570"
 ---
 # <a name="sqlservice-class"></a>SqlService 클래스
   [SqlService 클래스](sqlservice-class.md) 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스의 인스턴스를 나타냅니다.  

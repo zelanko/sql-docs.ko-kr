@@ -20,18 +20,18 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d75bc87e5c6546e57c9cf3e3d67053117edffd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6acc27bd3d60a5768a331a117e18ebc7cde2abe3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233763"
 ---
 # <a name="partitionid-element-assl"></a>PartitionID 요소(ASSL)
-  연결 된 [파티션](../objects/partition-element-assl.md) 을 부모 요소, 바인딩 또는 아웃오브 라인 바인딩 요소입니다.  
+  연결 된 [파티션](../objects/partition-element-assl.md) 부모 요소, 바인딩 또는 아웃오브 라인 바인딩 요소.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36092257"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36092257"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 바인딩 및 아웃오브 라인 바인딩에 대 한 자세한 내용은 참조 하십시오. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ 바인딩 및 아웃오브 라인 바인딩에 대 한 자세한 내용은 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

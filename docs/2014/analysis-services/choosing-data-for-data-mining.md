@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
 - nested tables
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 014c39cea8baea721c51308e65f894e8216ae7e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170299"
 ---
 # <a name="choosing-data-for-data-mining"></a>데이터 마이닝을 위한 데이터 선택
   데이터 마이닝을 시작할 때 “데이터가 얼마나 필요합니까?”또는 “내 데이터를 정리하거나 서식화할 때 알아둬야 할 특별한 요구 사항이 있습니까?”라는 의문이 들 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36088093"
   
 -   여러 버전의 데이터를 만들고 여러 모델을 작성합니다.  
   
- 수정 하 고 데이터를 검토 하는 추가 팁을 선택 하는 방법에 대 한 참조 [데이터 마이닝을 위한 준비의 검사 목록](checklist-of-preparation-for-data-mining.md)합니다.  
+ 를 선택 하는 방법에 대 한 추가 팁 수정 하 고 데이터를 검토 하 여 참조 [검사 목록의 Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)합니다.  
   
 ### <a name="how-much-data-do-i-need"></a>데이터가 얼마나 필요합니까?  
  일반적으로 가장 간단한 모델 유형 및 시나리오의 경우 50-100행 이상의 데이터를 사용해야 합니다. 예를 들어 Naïve Bayes 모델을 사용하여 단일 특성을 예측하는 경우, 데이터 집합이 올바른 형식이면 50-100행의 데이터를 사용하여 상당히 정확한 예측을 생성할 수 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "36088093"
   
  남자와 여자 같은 불연속 값에 레이블 1과 2를 사용하여 숫자 데이터로 표현하는 경우가 많습니다. 일반적으로 이 코딩은 데이터 입력을 간소화하거나 데이터베이스의 저장 공간을 절약하기 위해 수행되지만 코딩을 수행하면 값의 특성이나 의미가 모호해질 수 있습니다. 또한 불연속 값이 숫자로 저장되기 때문에 응용 프로그램 간에 데이터를 이동하면 데이터 형식 변환 오류가 발생하여 값이 연속으로 계산되거나 처리될 수 있습니다. 이러한 문제를 방지하기 위해, 데이터 마이닝을 시작하기 전에 숫자 레이블을 불연속 텍스트 레이블로 다시 변환합니다.  
   
- **숫자 범주화**  
+ **숫자를 범주화합니다.**  
   
  원칙적으로 모든 숫자는 무한하며 연속적이지만 정보를 모델링하는 경우에는 가능한 값을 *불연속화* 또는 *범주화* 하는 것이 더 유용할 수도 있습니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36088093"
   
  기본적으로 숫자 데이터를 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel로 가져오면 해당 숫자는 소수 두 자리의 10진수 형식으로 저장됩니다. 이 숫자 형식이 적절하지 않은 경우 다른 숫자 형식으로 변경하거나 소수 자릿수를 변경합니다.  
   
- 한 가지 옵션은 사용 하는 [레이블 재지정](relabel-sql-server-data-mining-add-ins.md) 숫자 표시 또는 그룹화 방법을 변경 하는 도구입니다.  
+ 하나의 옵션은 사용 하 여 [레이블 재지정](relabel-sql-server-data-mining-add-ins.md) 숫자 표시 또는 그룹화 방법을 변경 하려면 도구.  
   
  그러나 데이터가 너무 복잡해서 **레이블 재지정** 도구로 처리할 수 없는 경우 Excel의 숫자 함수를 사용하여 데이터를 불연속 범위로 변환하고 결과를 별개의 열에 저장한 다음 분류용으로 불연속화된 열을 대신 사용할 수 있습니다.  
   
@@ -154,19 +154,19 @@ ms.locfileid: "36088093"
 ### <a name="requirements-by-algorithm-type"></a>알고리즘 유형별 요구 사항  
  추가 기능에서 사용되는 일부 알고리즘은 특정 데이터 형식 또는 내용 유형이 있어야만 모델을 만들 수 있습니다.  
   
- **Naïve Bayes 모델**  
+ **원시 Bayes 모델**  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 알고리즘에서는 연속 열을 입력으로 사용할 수 없습니다. 즉, 숫자를 범주화해야 하거나 충분한 값이 없는 경우 숫자를 불연속 값으로 처리해야 합니다.  
   
 -   이 유형의 모델에서는 연속 값을 예측할 수도 없습니다. 따라서 소득 등의 연속 숫자를 예측하려는 경우 먼저 값을 의미 있는 범위로 범주화해야 합니다. 적절한 범위를 모르는 경우 클러스터링 알고리즘을 사용하여 데이터에서 숫자의 그룹을 식별할 수 있습니다.  
   
--   이 알고리즘에 따라 마법사를 사용 하는 경우 (예: [주요 영향 요인 분석 &#40;Excel 용 테이블 분석 도구&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), 마법사에서 연속 열을 범주화 됩니다 있습니다.  
+-   이 알고리즘을 기반으로 하는 마법사를 사용 하는 경우 (같은 [주요 영향 요인 분석 &#40;Excel 용 테이블 분석 도구&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md))를 연속 된 열 마법사에 의해 범주화 됩니다 있습니다.  
   
--   사용 하 여 Naive Bayes 모델을 작성 하는 경우는 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) 옵션을 숫자 열이 모델에서 제거 됩니다. 이 문제를 방지 하려면 사용 된 [레이블 재지정 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](relabel-sql-server-data-mining-add-ins.md) 범주화 된 값을 사용 하 여 새 열을 만들려면 도구입니다.  
+-   사용 하 여 Naive Bayes 모델을 작성 하는 경우는 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) 옵션을 숫자 열이 모델에서 제거 됩니다. 이 문제를 방지 하려는 경우 사용 합니다 [레이블 재지정 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](relabel-sql-server-data-mining-add-ins.md) 범주화 된 값을 사용 하 여 새 열을 만들려면 도구입니다.  
   
  **클러스터링 모델**  
   
--   클러스터링 도구 ([클러스터 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) 및 [범주 검색 &#40;Excel 용 테이블 분석 도구&#41;](detect-categories-table-analysis-tools-for-excel.md))도 연속 사용할 수 없습니다 숫자 하지만 이러한 도구는 자동으로 저장 숫자 열.  
+-   클러스터링 도구 ([클러스터 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) 하 고 [범주 검색 &#40;Excel 용 테이블 분석 도구&#41;](detect-categories-table-analysis-tools-for-excel.md))도 연속 사용할 수 없습니다 수치가 아니라 이러한 도구는 자동으로 숫자 열을 범주화 있습니다.  
   
 -   두 가지 도구 모두 결과에서 출력 범주 수를 선택할 수 있지만, 개별 열의 값 그룹화 방식을 제어하려는 경우에는 원하는 방식으로 그룹화된 열을 새로 만들어야 합니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36088093"
   
  예를 들어 특정 간격으로 반복되면서 요일을 나타내는 숫자가 열에 있으면 해당 열의 내용 유형을 `Cyclical`로 지정할 수 있습니다.  
   
- 이 추가 기능의 도구와 마법사를 사용하면 내용 유형에 대해 걱정하지 않아도 됩니다. 그러나 사용 하는 경우는 [구조에 모델 추가 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) 모델링 기존 데이터에 새 모델을 추가 하는 옵션, 콘텐츠 형식 관련 오류가 발생할 수 있습니다.  
+ 이 추가 기능의 도구와 마법사를 사용하면 내용 유형에 대해 걱정하지 않아도 됩니다. 그러나 사용 하는 경우는 [구조에 모델 추가 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) 기존 데이터에 새 모델을 추가 하는 옵션을 모델링, 콘텐츠 형식에 관련 된 오류가 발생할 수도 있습니다.  
   
  일부 모델 유형에는 특정 종류의 데이터(예: 타임스탬프)가 필요하기 때문입니다. 이 도구는 특정 요구 사항에 따라 이러한 열을 처리하고 내용 유형 속성도 추가합니다. 따라서 완전히 다른 알고리즘을 사용하여 데이터를 다시 사용하는 경우 데이터 형식이나 내용 유형을 변경해야 합니다.  
   
@@ -197,26 +197,26 @@ ms.locfileid: "36088093"
  `Continuous`  
  임시 값을 허용하는 소수 자릿수의 숫자 데이터를 나타내는 값이 열에 포함됩니다. 연속 열은 조정 가능한 측정값을 나타내며 데이터에 무한 개의 소수 값이 포함될 수 있습니다. 연속 특성 열의 예로는 Temperatures 열이 있습니다.  
   
- `Continuous` 콘텐츠 형식을 데이터 형식에서 사용할 수 있습니다: `Date`, `Double`, 및 `Long`합니다.  
+ `Continuous` 콘텐츠 유형은 데이터 형식: `Date`, `Double`, 및 `Long`합니다.  
   
  `Discretized`  
  이 열은 연속 열에서 파생된 값 그룹을 나타내는 값을 포함합니다. 버킷은 **정렬된** 불연속 값으로 처리됩니다.  
   
- `Discretized` 콘텐츠 형식을 데이터 형식에서 사용할 수 있습니다: `Date`, `Double`, `Long`합니다.  
+ `Discretized` 콘텐츠 유형은 데이터 형식: `Date`, `Double`, `Long`합니다.  
   
  **Key**  
  열이 행을 고유하게 식별합니다.  
   
  일반적으로 키 열은 기록 추적 전용의 숫자 또는 텍스트 식별자로, 분석에 사용할 수 없습니다. 예외는 시계열 키와 시퀀스 키입니다.  
   
- **중첩 테이블 키** 로 정의 된 데이터를 가져올 때 외부 데이터 원본의 있는 사용 되는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 뷰. 중첩된 테이블에 대 한 자세한 내용은 참조 [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **중첩 테이블 키** 으로 정의 된 데이터를 가져올 때 외부 데이터 원본에서는 사용 되는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 뷰. 중첩된 테이블에 대 한 자세한 내용은 참조 하세요. [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
   
  이 내용 유형은 데이터 형식에서 사용할 수 있습니다: `Date`, `Double`, `Long`, 및 `Text`합니다.  
   
  **키 시퀀스**  
  열이 이벤트의 시퀀스를 나타내는 값을 포함합니다. 이러한 값은 정렬되지만 간격은 달라도 됩니다.  
   
- 이 내용 유형은 데이터 형식에서 지원 됩니다: `Double`, `Long`, `Text`, 및 `Date`합니다.  
+ 이 내용 유형은 데이터 형식에서 지원 됩니다. `Double`, `Long`, `Text`, 및 `Date`합니다.  
   
  **Key Time**  
  정렬된 시간 단위를 나타내는 값이 열에 포함됩니다. 모델이 시계열 모델 또는 시퀀스 클러스터링 모델인 경우에만 Key Time 내용 유형을 사용할 수 있습니다.  
@@ -228,7 +228,7 @@ ms.locfileid: "36088093"
   
  다시 말해, 실제로 하나 이상의 열과 하나 이상의 행이 있는 중첩 데이터 테이블이 각 데이터 행에 들어 있습니다.  
   
- 중첩된 테이블은 매우 편리 하지만에 사용할 수 있습니다는 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) 모델링 옵션입니다. 예를 들어, 샘플 데이터에는 [연결 마법사 &#40;Excel 용 데이터 마이닝 클라이언트&#41; ](associate-wizard-data-mining-client-for-excel.md) 마법사 및 [시장 바구니 분석 &#40;Excel 용 테이블 분석 도구&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) 도구 중첩된 테이블에서 일반화 한 데이터가 포함 됩니다.  
+ 중첩된 테이블은 매우 유용 하지만 사용할 수 있습니다 합니다 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) 옵션을 모델링 합니다. 예를 들어, 샘플 데이터에는 [연결 마법사 &#40;Excel 용 데이터 마이닝 클라이언트&#41; ](associate-wizard-data-mining-client-for-excel.md) 마법사와 [시장 바구니 분석 &#40;Excel 용 테이블 분석 도구&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) 도구 중첩된 테이블에서 일반화 된 데이터가 있습니다.  
 
   
   

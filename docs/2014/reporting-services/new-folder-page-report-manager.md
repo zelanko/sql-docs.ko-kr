@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5ec855928ab92734695594a79ed23e917b3bb8d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162294"
 ---
 # <a name="new-folder-page-report-manager"></a>새 폴더 페이지(보고서 관리자)
   새 폴더 페이지를 사용하여 보고서 서버 폴더 계층에 새 폴더를 만들 수 있습니다. 이 페이지에서 만드는 폴더는 보고서 서버 데이터베이스에 저장되는 가상 폴더입니다. 컴퓨터의 파일 시스템에서는 폴더가 생성되지 않습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36090814"
  [만들기, 삭제 또는 수정 폴더 &#40;보고서 관리자&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   

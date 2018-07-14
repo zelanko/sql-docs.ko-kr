@@ -1,5 +1,5 @@
 ---
-title: SQL Server 프로파일러-성능 카운터 제한 | Microsoft Docs
+title: SQL Server Profiler-성능 카운터 제한 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.performancecounterlimit.f1
 helpviewer_keywords:
 - Performance Counters List dialog box
 ms.assetid: d10140ef-36c4-449c-b365-1cff1b2524e4
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2548fbd28af45cbd888a183a739362f0e7767218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4d2265147cf660430e1995030354013a518e76a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237223"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server 프로파일러 - 성능 카운터 제한
   성능 카운터 제한 대화 상자를 사용하여 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적과 상관 관계를 지정할 시스템 모니터 성능 로그 파일의 정보를 제한할 수 있습니다. 이 대화 상자를 사용하여 상관 관계를 지정하는 데 사용하도록 표시할 카운터를 선택할 수 있습니다.  

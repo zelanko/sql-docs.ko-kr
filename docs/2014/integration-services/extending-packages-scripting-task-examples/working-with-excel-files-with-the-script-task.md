@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192123"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다. 이러한 예제는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 공급자가 지원하는 다른 파일 기반 데이터 원본에도 사용할 수 있도록 쉽게 수정할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "36093119"
   
          -또는-  
   
-    -   줄임표를 클릭 (**...** ) 단추 옆 속성 필드는 **변수 선택** 대화 상자를 선택은 `ExcelFile` 변수입니다.  
+    -   줄임표 (**...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자에서를 `ExcelFile` 변수입니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36093119"
   
          -또는-  
   
-    -   줄임표를 클릭 (**...** ) 단추 옆 속성 필드는 **변수 선택** 대화 상자를 선택은 `ExcelFileExists` 변수입니다.  
+    -   줄임표 (**...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자에서를 `ExcelFileExists` 변수입니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -158,11 +158,11 @@ public class ScriptMain
   
 2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   형식 `ExcelTable` 및 `ExcelFile` 쉼표로 구분 하 여`.`  
+    -   형식 `ExcelTable` 고 `ExcelFile` 쉼표로 구분 하 여`.`  
   
          -또는-  
   
-    -   줄임표를 클릭 (**...** ) 단추 옆 속성 필드는 **변수 선택** 대화 상자를 선택은 `ExcelTable` 및 `ExcelFile` 변수입니다.  
+    -   줄임표 (**...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자를 선택 합니다 `ExcelTable` 및 `ExcelFile` 변수.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -170,7 +170,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   줄임표를 클릭 (**...** ) 단추 옆 속성 필드는 **변수 선택** 대화 상자를 선택은 `ExcelTableExists` 변수입니다.  
+    -   줄임표 (**...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자에서를 `ExcelTableExists` 변수입니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Excel 연결 관리자](../connection-manager/excel-connection-manager.md)   

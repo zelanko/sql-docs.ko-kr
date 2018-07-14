@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
 - job steps [SQL Server Agent]
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d8635c9836277f915896c17dbd4719d5d1da71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: adc6f111ce968259fc599649807b514771825490
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187660"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
   작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36093447"
   
  모든 작업 단계는 특정 보안 컨텍스트에서 실행됩니다. 작업 단계에서 프록시를 지정하면 해당 작업 단계는 프록시의 자격 증명 보안 컨텍스트에서 실행됩니다. 작업 단계에서 프록시를 지정하지 않으면 작업 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정의 컨텍스트에서 실행됩니다. sysadmin 고정 서버 역할의 멤버만이 프록시를 명시적으로 지정하지 않는 작업을 만들 수 있습니다.  
   
- 작업 단계는 특정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자의 컨텍스트에서 실행되기 때문에 해당 사용자는 작업 단계를 실행하는 데 필요한 권한과 구성이 있어야 합니다. 예를 들어 드라이브 문자나 UNC(Universal Naming Convention) 경로가 필요한 작업을 만드는 경우 작업 단계는 태스크를 테스트하는 동안 사용자의 Windows 사용자 계정으로 실행됩니다. 그러나 해당 작업 단계의 Windows 사용자도 필요한 권한, 드라이브 문자 구성 또는 필요한 드라이브에 대한 액세스 권한이 있어야 합니다. 그렇지 않으면 작업 단계가 실패합니다. 이런 문제가 발생하지 않도록 각 작업 단계의 프록시에 작업 단계에서 수행하는 태스크에 필요한 권한이 있는지 확인하십시오. 자세한 내용은 참조 [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대 한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)합니다.  
+ 작업 단계는 특정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자의 컨텍스트에서 실행되기 때문에 해당 사용자는 작업 단계를 실행하는 데 필요한 권한과 구성이 있어야 합니다. 예를 들어 드라이브 문자나 UNC(Universal Naming Convention) 경로가 필요한 작업을 만드는 경우 작업 단계는 태스크를 테스트하는 동안 사용자의 Windows 사용자 계정으로 실행됩니다. 그러나 해당 작업 단계의 Windows 사용자도 필요한 권한, 드라이브 문자 구성 또는 필요한 드라이브에 대한 액세스 권한이 있어야 합니다. 그렇지 않으면 작업 단계가 실패합니다. 이런 문제가 발생하지 않도록 각 작업 단계의 프록시에 작업 단계에서 수행하는 태스크에 필요한 권한이 있는지 확인하십시오. 자세한 내용은 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)합니다.  
   
 ## <a name="job-step-logs"></a>작업 단계 로그  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 일부 작업 단계의 출력을 운영 체제 파일이나 msdb 데이터베이스의 sysjobstepslogs 테이블에 기록할 수 있습니다. 다음은 두 대상에 모두 출력을 기록할 수 있는 작업 단계 유형입니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "36093447"
   
  필요에 따라 기존의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 파일을 작업 단계에 대한 명령으로 열 수 있습니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하지 않습니다. 대신에 작업 단계가 작업 단계 소유자의 계정으로 실행되거나 작업 단계 소유자가 sysadmin 고정 서버 역할의 멤버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정으로 실행됩니다. sysadmin 고정 서버 역할의 멤버는 sp_add_jobstep 저장 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *매개 변수를 사용하여* 작업 단계가 다른 사용자의 컨텍스트에서 실행되도록 지정할 수도 있습니다. 자세한 내용은 참조 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하지 않습니다. 대신에 작업 단계가 작업 단계 소유자의 계정으로 실행되거나 작업 단계 소유자가 sysadmin 고정 서버 역할의 멤버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정으로 실행됩니다. sysadmin 고정 서버 역할의 멤버는 sp_add_jobstep 저장 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *매개 변수를 사용하여* 작업 단계가 다른 사용자의 컨텍스트에서 실행되도록 지정할 수도 있습니다. 자세한 내용은 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)합니다.  
   
 > [!NOTE]  
 >  단일 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에는 다수의 일괄 처리가 여러 개 포함될 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계에는 포함된 GO 명령이 있을 수 있습니다.  
@@ -170,7 +170,7 @@ Set oServer = nothing
   
 -   실행할 문을 입력합니다. 이 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다.  
   
- MDX에 대 한 자세한 내용은 참조 하십시오. [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)합니다.  
+ MDX에 대 한 자세한 내용은 참조 하세요. [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)합니다.  
   
 ## <a name="integration-services-packages"></a>Integration Services 패키지  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 작업 단계를 만들 때는 다음을 수행해야 합니다.  
@@ -215,7 +215,7 @@ Set oServer = nothing
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [dbo.sysjobstepslogs &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [작업 만들기](create-jobs.md)   
  [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

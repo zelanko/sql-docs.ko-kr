@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208563"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>데이터 집합 속성 대화 상자, 쿼리
-  선택 **쿼리** 에 **데이터 집합 속성** 대화 상자에서 데이터 원본을 선택 하 고 쿼리를 만듭니다.  
+  선택 **쿼리** 에 **데이터 집합 속성** 대화 상자의 데이터 원본을 선택 하 고 쿼리를 만듭니다.  
   
  **데이터 집합 속성** 대화 상자에는 다음과 같은 항목이 있습니다.  
   

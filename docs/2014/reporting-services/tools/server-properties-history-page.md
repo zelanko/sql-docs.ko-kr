@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b8e5a906afeb39effa9dc72601748f45c70be6bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d88efe344aaed2ce6d5d0f1da3626a1a11417afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218633"
 ---
 # <a name="server-properties-history-page"></a>서버 속성(기록 페이지)
   이 페이지를 사용하여 보관할 보고서 기록 복사본 수의 기본값을 설정할 수 있습니다. 이 기본값은 모든 보고서에 대한 보고서 기록 제한을 설정하는 초기 설정이 됩니다. 이 설정은 보고서마다 다르게 설정할 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 제거 하는 트리거 | Microsoft Docs
+title: 생성, 변경 및 트리거를 제거 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f8a29df21e0f633a95291e7e636e6028468fd696
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db6140fe0c717bd99f6b812ab6788ea711286cf8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194904"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>트리거 생성, 변경 및 제거
-  SMO에서 트리거는 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체를 사용하여 표시됩니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 트리거는 발생 하 설정 된 경우 실행 하는 코드는 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> 트리거 개체의 속성입니다. <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체의 다른 속성(예: <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 속성)을 사용하여 트리거 유형을 설정할 수 있습니다. Update 속성은 부모 테이블의 레코드 `UPDATE`에 의해 트리거 실행 여부를 지정하는 부울 값입니다.  
+  SMO에서 트리거는 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체를 사용하여 표시됩니다. 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 발생 하는 트리거에 의해 설정 된 경우 실행 되는 코드는 <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> 트리거 개체의 속성입니다. <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체의 다른 속성(예: <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 속성)을 사용하여 트리거 유형을 설정할 수 있습니다. Update 속성은 부모 테이블의 레코드 `UPDATE`에 의해 트리거 실행 여부를 지정하는 부울 값입니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Trigger> 개체는 전통적인 DML(데이터 조작 언어) 트리거를 나타냅니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전에서 DDL(데이터 정의 언어) 트리거도 지원됩니다. DDL 트리거는 <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> 개체로 표시됩니다.  
   

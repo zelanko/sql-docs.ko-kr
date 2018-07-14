@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - create extended events session
 - extended events [SQL Server], create session
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 38e5ff6e5da2f8800dda895fb3ffde5dfea435ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8524274c0fe1f79bb0f62008ba0caf6ad115004b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207703"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기
   쿼리 편집기를 사용하거나 개체 탐색기에서 확장 이벤트 세션을 만들 수 있습니다. 개체 탐색기에서 확장 이벤트는 이벤트 세션 데이터를 생성, 수정 및 보는 데 사용할 수 있는 두 가지 인터페이스를 제공합니다. 즉, 마법사는 이벤트 세션 생성 프로세스를 단계별로 안내하고 새 세션 UI는 고급 구성 옵션을 제공합니다. 확장 이벤트 세션을 만들어 SQL Server 추적을 진단하면 다음과 같은 문제를 해결할 수 있습니다.  

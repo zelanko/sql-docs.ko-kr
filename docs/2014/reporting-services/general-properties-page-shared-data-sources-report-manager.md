@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0a570567691692f008f6f71966b5ee0b01921dab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b729c41bf0ed0950c20b465bd1f0c70ebbee4a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162284"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>일반 속성 페이지, 공유 데이터 원본(보고서 관리자)
   일반 속성 페이지를 사용하여 공유 데이터 원본 항목의 속성을 보거나 수정할 수 있습니다. 속성에 대한 모든 변경 내용은 **적용**을 클릭하면 해당 항목을 참조하는 모든 보고서에 적용됩니다.  
@@ -49,12 +49,12 @@ ms.locfileid: "36089249"
  공유 데이터 원본을 설정 또는 해제하도록 선택합니다. 공유 데이터 원본을 해제하여 항목을 참조하는 모든 보고서, 보고서 모델 및 데이터 기반 구독이 처리되지 않도록 할 수 있습니다.  
   
  **데이터 원본 유형**  
- 데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 서버에 대 한 데이터 처리 확장 프로그램에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC 및 OLE DB 합니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
+ 데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 서버에 대 한 데이터 처리 확장 프로그램이 포함 되어 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC 및 OLE DB입니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
   
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services를 사용하는 경우에는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 원본만 선택할 수 있습니다.  
   
  **연결 문자열**  
- 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 형식에 따라 사용하는 구문이 결정됩니다. 예를 들어 XML 데이터 처리 확장 프로그램에 대한 연결 문자열은 XML 문서에 대한 URL입니다. 대부분의 경우 일반적인 연결 문자열은 데이터베이스 서버와 데이터 파일을 지정합니다. 다음 예제에서는 연결 문자열에 연결 하는 데 사용 된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스:  
+ 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 형식에 따라 사용하는 구문이 결정됩니다. 예를 들어 XML 데이터 처리 확장 프로그램에 대한 연결 문자열은 XML 문서에 대한 URL입니다. 대부분의 경우 일반적인 연결 문자열은 데이터베이스 서버와 데이터 파일을 지정합니다. 다음 예제에 연결할 때 사용할 연결 문자열을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스:  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -72,7 +72,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  사용자가 제공하는 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. SQL Server 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
  **보고서 서버에 안전 하 게 저장 된 자격 증명**  
- 암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정이나 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택하십시오. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 지정: \<도메인 >\\< 사용자 이름\>합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
+ 암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정이나 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택하십시오. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 지정 합니다. \<도메인 >\\< 사용자 이름\>합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
  자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 데이터베이스 인증을 사용 하는 경우이 확인란을 선택 하지 마십시오 (예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증).  
   
@@ -85,10 +85,10 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  이 보고서를 예약 또는 구독하려는 경우 이 옵션을 사용하지 마십시오. 예약된 보고서 처리 또는 무인 보고서 처리를 위해서는 사용자 입력이나 현재 사용자의 보안 컨텍스트 없이 얻을 수 있는 자격 증명이 필요합니다. 저장된 자격 증명만 이 기능을 제공합니다. 따라서 보고서가 Windows 통합 보안 자격 증명 유형으로 구성된 경우 보고서 서버는 보고서 처리나 구독 처리를 예약할 수 없도록 차단합니다. 이미 구독되는 보고서 또는 예약된 작업이 있는 보고서에 대해 이 옵션을 선택하면 해당 구독 및 예약된 작업이 중지됩니다.  
   
- **자격 증명 필요 하지 않습니다.**  
+ **자격 증명 필요 없음**  
  자격 증명 없이 데이터 원본에 액세스할 수 있도록 지정합니다. 데이터 원본에 사용자 로그온이 필요한 경우에는 이 옵션을 선택해도 적용되지 않습니다. 데이터 원본 연결에 사용자 자격 증명이 필요하지 않은 경우에만 이 옵션을 선택해야 합니다.  
   
- 이 옵션을 사용하려면 보고서 서버 배포를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 원본을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대 한 자세한 내용은 참조 [무인 실행 계정을 구성 &#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)합니다.  
+ 이 옵션을 사용하려면 보고서 서버 배포를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 원본을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대 한 자세한 내용은 참조 하십시오 [무인 실행 계정 구성 &#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)합니다.  
   
  **적용**  
  클릭하여 변경 내용을 저장합니다.  

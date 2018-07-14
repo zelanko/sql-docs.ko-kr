@@ -1,5 +1,5 @@
 ---
-title: 등록 된 서버 또는 등록 된 서버 그룹 (SQL Server Management Studio)를 이동 | Microsoft Docs
+title: 등록 된 서버 또는 등록 된 서버 그룹 (SQL Server Management Studio)를 이동 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving registered server or server group
 - Registered Servers [SQL Server], server groups
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4727f6d6bb0dac403510536f1231bef075c2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2472a88caaf08616a12bb0b4fb54458c141115c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189620"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>등록된 서버 및 등록된 서버 그룹 이동(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  

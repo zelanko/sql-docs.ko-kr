@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
 - behavior changes [full-text search]
@@ -17,13 +16,13 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 caps.latest.revision: 39
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 52bfa898e60fc41f436928fd7636c6479a7106d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f136a7016e1b17248a3b547da0561cc3d4b30c68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233803"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>전체 텍스트 검색의 동작 변경
   이 항목에서는 전체 텍스트 검색의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "36091351"
   
  경우에 따라 새 구성 요소는 *더 많은* 결과를 반환합니다.  
   
-|**용어**|**이전 단어 분리기 및 형태소 분석기의 결과**|**새 단어 분리기 및 형태소 분석기의 결과**|  
+|**용어**|**이전 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|**새 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |cat-dog|cat<br /><br /> dog|cat<br /><br /> cat-dog<br /><br /> dog|  
 |cat@dog.com|cat<br /><br /> com<br /><br /> dog|cat<br /><br /> cat@dog.com<br /><br /> com<br /><br /> dog|  
@@ -62,7 +61,7 @@ ms.locfileid: "36091351"
   
  경우에 따라 새 구성 요소는 *유사한* 결과를 반환합니다.  
   
-|**용어**|**이전 단어 분리기 및 형태소 분석기의 결과**|**새 단어 분리기 및 형태소 분석기의 결과**|  
+|**용어**|**이전 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|**새 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |100$|100$<br /><br /> nn100$|100$<br /><br /> nn100usd|  
 |022|022<br /><br /> nn022|022<br /><br /> nn22|  
@@ -70,9 +69,9 @@ ms.locfileid: "36091351"
   
  경우에 따라 새 구성 요소는 *더 적은* 결과 또는 응용 프로그램에서 예상되지 않을 수 있는 결과를 반환합니다.  
   
-|**용어**|**이전 단어 분리기 및 형태소 분석기의 결과**|**새 단어 분리기 및 형태소 분석기의 결과**|  
+|**용어**|**이전 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|**새 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(여기서 용어는 아님 유효한 영어 문자가)*|‘jěˊÿｑℭžl’|je yq zl|  
+|jěˊÿqℭžl<br /><br /> *(여기서 용어는 하지 유효한 영어 문자가)*|‘jěˊÿｑℭžl’|je yq zl|  
 |table's|table’s<br /><br /> 테이블|table’s|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(여기서 v 및 z는 의미 없는 단어)*|*(결과 없음)*|v-z|  
@@ -81,13 +80,13 @@ ms.locfileid: "36091351"
 |Mt. Kent and Mt Challenger|challenger<br /><br /> kent<br /><br /> mt<br /><br /> Mt.|mt<br /><br /> kent<br /><br /> challenger|  
   
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 전체 텍스트 검색의 동작 변경 내용  
- [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 엔진에 서버 쿼리 및 저장소 엔진 인프라의 일부로 관계형 데이터베이스에 데이터베이스 서비스로 통합 되었습니다. 새로운 전체 텍스트 검색 아키텍처는 다음과 같은 목표를 달성합니다.  
+ [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 엔진은 서버 쿼리 및 저장소 엔진 인프라의 일부로 관계형 데이터베이스에 데이터베이스 서비스로 통합 되어 있습니다. 새로운 전체 텍스트 검색 아키텍처는 다음과 같은 목표를 달성합니다.  
   
--   저장과 관리가 통합-전체 텍스트 검색의 기본 저장소 및 관리 기능와 직접 통합 이제 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], MSFTESQL 서비스는 더 이상 없습니다.  
+-   저장과 관리가 통합-전체 텍스트 검색의 내재 된 저장소 및 관리 기능을 사용 하 여 직접 통합 되었습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], MSFTESQL 서비스는 더 이상 없습니다.  
   
     -   전체 텍스트 인덱스가 파일 시스템이 아닌 데이터베이스 파일 그룹 내에 저장됩니다. 데이터베이스에 대한 백업 만들기와 같은 관리 작업은 전체 텍스트 인덱스에 자동으로 영향을 줍니다.  
   
-    -   이제 전체 텍스트 카탈로그는 파일 그룹에 속하지 않는 가상 개체이며, 전체 텍스트 인덱스의 그룹을 나타내는 논리적인 개념입니다. 따라서 여러 가지 카탈로그 관리 기능이 더 이상 사용되지 않으며, 이로 인해 일부 기능이 크게 변경되었습니다. 자세한 내용은 참조 [SQL Server 2014 데이터베이스 엔진 기능의 사용 되지 않는](deprecated-database-engine-features-in-sql-server-2016.md) 및 [Changes to Full-text Search](breaking-changes-to-full-text-search.md)합니다.  
+    -   이제 전체 텍스트 카탈로그는 파일 그룹에 속하지 않는 가상 개체이며, 전체 텍스트 인덱스의 그룹을 나타내는 논리적인 개념입니다. 따라서 여러 가지 카탈로그 관리 기능이 더 이상 사용되지 않으며, 이로 인해 일부 기능이 크게 변경되었습니다. 자세한 내용은 참조 하세요. [SQL Server 2014 데이터베이스 엔진 기능의 사용 되지 않음](deprecated-database-engine-features-in-sql-server-2016.md) 하 고 [전체 텍스트 검색의 주요 변경 내용](breaking-changes-to-full-text-search.md)합니다.  
   
         > [!NOTE]  
         >  전체 텍스트 카탈로그를 지정하는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] DDL 문은 올바르게 작동합니다.  
@@ -98,17 +97,17 @@ ms.locfileid: "36091351"
   
 -   의미 없는 단어 및 의미 없는 단어 파일 대신 중지 단어 및 중지 목록이 사용됩니다. 중지 목록은 중지 단어에 대한 관리 태스크를 지원하고 서로 다른 서버 인스턴스와 환경 사이의 무결성을 높여 주는 데이터베이스 개체입니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 이후 버전에는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 있는 언어 중 다수에 대한 새로운 단어 분리기가 포함되어 있습니다. 영어, 한국어, 태국어 및 중국어(모든 형태 포함)에 대한 단어 분리기만 동일하게 유지됩니다. 다른 언어의 경우 전체 텍스트 카탈로그를 가져온 경우에 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 로 업그레이드 된 데이터베이스 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 또는 이상 버전을 전체 텍스트 카탈로그의 전체 텍스트 인덱스에서 사용 하는 하나 이상의 언어 이제 것일 새로운 단어 분리기와 연결 하는 수는 단어 분리기는 가져온된 단어 분리기에서와 약간 다르게 작동 합니다. 쿼리와 전체 텍스트 인덱스 내용 간에 일관성을 유지 하는 방법에 대 한 자세한 내용은 참조 [전체 텍스트 검색 업그레이드](../relational-databases/search/upgrade-full-text-search.md)합니다.  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 이후 버전에는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 있는 언어 중 다수에 대한 새로운 단어 분리기가 포함되어 있습니다. 영어, 한국어, 태국어 및 중국어(모든 형태 포함)에 대한 단어 분리기만 동일하게 유지됩니다. 다른 언어의 전체 텍스트 카탈로그를 가져온 경우에 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드 된 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그의 전체 텍스트 인덱스에 사용 되는 언어 중 하나 이상 연결 될 수 있습니다 새 단어 분리기를 사용 하 여 또는 수는 단어 분리기는 가져온된 단어 분리기에서와 약간 다르게 작동 합니다. 쿼리와 전체 텍스트 인덱스 내용 간에 일관성을 유지 하는 방법에 대 한 자세한 내용은 참조 하세요. [전체 텍스트 검색 업그레이드](../relational-databases/search/upgrade-full-text-search.md)합니다.  
   
--   새로운 FDHOST Launcher(MSSQLFDLauncher) 서비스가 추가되었습니다. 자세한 내용은 참조 [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)합니다.  
+-   새로운 FDHOST Launcher(MSSQLFDLauncher) 서비스가 추가되었습니다. 자세한 내용은 [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)합니다.  
   
--   전체 텍스트 인덱싱 사용는 [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) 열에서와 동일한 방식으로는 `varbinary(max)` 열입니다. FILESTREAM 테이블에는 각 FILESTREAM BLOB에 대한 파일 이름 확장명을 포함하는 열이 있어야 합니다. 자세한 내용은 참조 [전체 텍스트 검색을 사용한 쿼리](../relational-databases/search/query-with-full-text-search.md),[필터 구성 및 관리 검색에 대 한](../relational-databases/search/configure-and-manage-filters-for-search.md), 및 [sys.fulltext_document_types &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+-   전체 텍스트 인덱싱 사용 하 여 작동는 [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) 열에서와 동일한 방식에서를 `varbinary(max)` 열입니다. FILESTREAM 테이블에는 각 FILESTREAM BLOB에 대한 파일 이름 확장명을 포함하는 열이 있어야 합니다. 자세한 내용은 [전체 텍스트 검색을 사용 하 여 쿼리](../relational-databases/search/query-with-full-text-search.md)를[필터 구성 및 관리 검색에 대 한](../relational-databases/search/configure-and-manage-filters-for-search.md), 및 [sys.fulltext_document_types &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
      전체 텍스트 엔진은 FILESTREAM BLOB의 내용을 인덱싱합니다. 이미지와 같은 인덱싱 파일은 유용하지 않을 수도 있습니다. FILESTREAM BLOB이 업데이트되면 인덱스가 다시 작성됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [전체 텍스트 검색] ((.. / relational-databases/search/full-text-search.md)   
- [전체 텍스트 검색의 이전 버전과 호환성](../../2014/database-engine/full-text-search-backward-compatibility.md)   
+ [전체 텍스트 Search 이전 버전과 호환성](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [전체 텍스트 검색 업그레이드](../relational-databases/search/upgrade-full-text-search.md)   
  [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)  
   

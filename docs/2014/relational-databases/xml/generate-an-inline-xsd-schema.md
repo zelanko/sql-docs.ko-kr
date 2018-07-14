@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194792"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
   FOR XML 절에서는 쿼리가 쿼리 결과와 함께 인라인 스키마를 반환하도록 요청할 수 있습니다. XDR 스키마가 필요한 경우 FOR XML 절에 XMLDATA 키워드를 사용합니다. XSD 스키마가 필요한 경우 XMLSCHEMA 키워드를 사용합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36091469"
   
 -   XMLSCHEMA는 RAW 및 AUTO 모드에서만 지정할 수 있으며 EXPLICIT 모드에서는 지정할 수 없습니다.  
   
--   중첩된 FOR XML 쿼리에 TYPE 지시어를 지정 하는 경우 쿼리 결과 `xml` 유형이 며이 결과 형식화 되지 않은 XML 데이터의 인스턴스로 취급 됩니다. 자세한 내용은 [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)를 참조하세요.  
+-   TYPE 지시어를 지정 하는 중첩된 FOR XML 쿼리를 하는 경우 쿼리 결과 `xml` 유형이 며이 결과 형식화 되지 않은 XML 데이터의 인스턴스로 취급 됩니다. 자세한 내용은 [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)를 참조하세요.  
   
  FOR XML 쿼리에 XMLSCHEMA를 지정하는 경우 스키마와 XML 데이터를 모두 쿼리 결과로 수신합니다. 데이터의 각 최상위 요소는 기본 네임스페이스 선언을 사용하여 이전 스키마를 참조하며, 이 선언은 인라인 스키마의 대상 네임스페이스를 참조합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36091469"
   
 -   다른 스키마 문서는 FOR XML 쿼리 결과의 셰이프를 기술합니다.  
   
- 또한 형식화 된 경우 `xml` 데이터 형식이 쿼리 결과, 형식화 된 해당와 관련 된 스키마에에서 포함 된 `xml` 데이터 형식이 포함 됩니다.  
+ 또한 형식화 된 경우 `xml` 데이터 형식이 쿼리 결과 연결 된 형식화 된 해당 스키마에에서 포함 된 `xml` 데이터 형식이 포함 됩니다.  
   
  FOR XML 결과의 셰이프를 기술하는 스키마 문서의 대상 네임스페이스에는 고정 부분과 자동으로 증가하는 숫자 부분이 포함됩니다. 이 네임스페이스의 형식은 다음과 같으며 여기서 *n* 은 양의 정수입니다. 예를 들어 이전 쿼리에서 urn:schemas-microsoft-com:sql:SqlRowSet1은 대상 네임스페이스입니다.  
   

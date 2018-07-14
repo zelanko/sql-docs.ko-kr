@@ -22,15 +22,15 @@ helpviewer_keywords:
 - State element
 ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391babe6cba3330c0a072739c01748d618aec3e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 507dab440db095f844b4fad9dcdd96e29d18d487
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206033"
 ---
 # <a name="state-element-assl"></a>State 요소(ASSL)
   부모 요소의 현재 처리 상태를 나타내는 읽기 전용 값을 포함합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36090944"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [차원](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md), [차원](../objects/dimension-element-assl.md)를 [MeasureGroup](../objects/group-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md)를 [MiningStructure](../objects/miningstructure-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -67,8 +67,8 @@ ms.locfileid: "36090944"
 |값|Description|  
 |-----------|-----------------|  
 |*처리*|요소가 완전히 처리되었습니다.|  
-|*PartiallyProcessed*|요소가 부분적으로 처리되었습니다. ([큐브](../objects/cube-element-assl.md) 및 [MeasureGroup](../objects/group-element-assl.md) 만 합니다.)|  
-|*처리 되지 않았습니다.*|요소가 처리되지 않았습니다.|  
+|*PartiallyProcessed*|요소가 부분적으로 처리되었습니다. ([큐브](../objects/cube-element-assl.md) 하 고 [MeasureGroup](../objects/group-element-assl.md) 만 합니다.)|  
+|*처리 되지 않은*|요소가 처리되지 않았습니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `State`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.AnalysisState>입니다.  
   

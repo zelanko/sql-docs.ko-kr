@@ -1,5 +1,5 @@
 ---
-title: 연결 및 세션 (XMLA) 관리 | Microsoft Docs
+title: 연결 및 세션 관리 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192519"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
-  *상태 저장* id와 컨텍스트 메서드 호출 간에 클라이언트의 서버에서 유지 하는 조건입니다. *상태 비저장* 는 서버 기억 하지 id와 클라이언트의 컨텍스트 메서드 호출이 완료 된 후 상태입니다.  
+  *상태 저장* 는 서버 id와 메서드 호출 간에 클라이언트의 컨텍스트를 유지 하는 조건입니다. *상태 비저장* 는 서버에서 유지 하지 않는 id와 컨텍스트를 클라이언트의 메서드 호출을 완료 하는 조건입니다.  
   
- XML for Analysis (XMLA)은 상태 저장을 제공 하려면 다음을 지원 합니다. *세션* 일련의 문 함께 수행할 수 있도록 합니다. 예를 들어, 이러한 일련의 문을 사용하여 후속 쿼리에서 사용할 계산 멤버를 만들 수 있습니다.  
+ XMLA (XML for Analysis)는 상태 저장 기능을 제공 하려면 다음을 지원 합니다. *세션* 일련의 문 함께 수행할 수 있도록 합니다. 예를 들어, 이러한 일련의 문을 사용하여 후속 쿼리에서 사용할 계산 멤버를 만들 수 있습니다.  
   
  일반적으로 XMLA의 세션은 OLE DB 2.6 사양에 설명된 다음과 같은 동작을 따릅니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36092781"
   
 -   단일 세션 컨텍스트에서 여러 명령을 실행할 수 있습니다.  
   
--   XMLA 컨텍스트의 트랜잭션은 지원은 함께 전송 되는 공급자별 명령을 통해는 [Execute](../xmla/xml-elements-methods-execute.md) 메서드.  
+-   XMLA 컨텍스트의 트랜잭션은 대 한 지원은 함께 전송 되는 공급자별 명령을 통해 합니다 [Execute](../xmla/xml-elements-methods-execute.md) 메서드.  
   
  XMLA에는 느슨하게 연결된 환경에서 잠금을 구현하기 위해 DAV(Distributed Authoring and Versioning) 프로토콜에서 사용하는 방법과 비슷한 모드로 웹 환경에서 세션을 지원하는 방법이 정의되어 있습니다. 이 구현은 공급자가 제한 시간, 연결 오류 등의 여러 가지 이유로 세션을 만료시킬 수 있다는 점에서 DAV와 같습니다. 세션이 지원되는 경우 웹 서비스는 다시 시작해야 하는 중단된 명령 집합을 인식하고 처리할 수 있어야 합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36092781"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  공급자의 SOAP 응답 메시지에 포함 되어 세션 ID가 반환 헤더 영역에는 XMLA 헤더 태그를 사용 하 여 \<SessionId > 합니다.  
+2.  공급자의 SOAP 응답 메시지는 세션 ID를 포함 반환 헤더 영역에는 XMLA 헤더 태그를 사용 하 여 \<SessionId >.  
   
     ```  
     <SOAP-ENV:Header>  

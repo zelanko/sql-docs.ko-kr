@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], replication
 - backward compatibility [SQL Server], replication
 - publications [SQL Server replication], backward compatibility
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 85db4e7bab39292e36035b58672ce4b2e1f27a57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 97445e6e91ede08ee518157edade0eca3ec3399d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181920"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 병합 복제는 게시 호환성 수준을 사용하여 지정된 데이터베이스에서 게시에 사용할 수 있는 기능을 확인합니다.  

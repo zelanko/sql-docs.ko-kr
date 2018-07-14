@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7c69029b006c4fde006a83a8849e104cc5a74ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a3a5fca76e95cf790511a78372ae248cbf4bb790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169834"
 ---
 # <a name="unknown-service-log-on-tab"></a>알 수 없는 서비스(로그온 탭)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 이 서비스를 식별할 수 없습니다.  

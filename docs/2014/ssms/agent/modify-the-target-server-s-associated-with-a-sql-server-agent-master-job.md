@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f4999c835d85dd06cab2e6ac3f3bef64ed12231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6ac1737f7fe4bb4ac7706c5ff83b3ba84b65cfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206523"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 에이전트 마스터 작업과 연결된 대상 서버를 수정하는 방법에 대해 설명합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36090104"
   
 4.  대상 서버를 수정할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성 –***job_name* 대화 상자의 **페이지 선택**에서 **대상**을 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)합니다.  
+5.  **작업 속성 –***job_name* 대화 상자의 **페이지 선택**에서 **대상**을 선택합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)합니다.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36090104"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql)합니다.  
+ 자세한 내용은 [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql)합니다.  
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>대상 서버를 현재 SQL Server 에이전트 마스터 작업과 연결하려면  
   
@@ -109,6 +109,6 @@ ms.locfileid: "36090104"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)합니다.  
+ 자세한 내용은 [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)합니다.  
   
   

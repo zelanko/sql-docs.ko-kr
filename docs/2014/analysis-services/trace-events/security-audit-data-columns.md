@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf737330922500f8e9b33c7645fdd5e6b8b6b244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0decf6588f44b6026608254fa1a196a310e37ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171564"
 ---
 # <a name="security-audit-data-columns"></a>Security Audit 데이터 열
   Security Audit 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  

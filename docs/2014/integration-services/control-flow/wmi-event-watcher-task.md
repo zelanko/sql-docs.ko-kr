@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6e56f807e6f0d1bc7155c71d1332e56124b17da9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f4fa442175db0b00033e4c616f7572a3ad26da6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169237"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
   WMI 이벤트 감시자 태스크는 WQL(WMI Query Language) 이벤트 쿼리를 사용하여 특정 이벤트를 지정하기 위해 WMI(Windows Management Instrumentation) 이벤트를 감시합니다. WMI 이벤트 감시자 태스크는 다음 용도로 사용할 수 있습니다.  

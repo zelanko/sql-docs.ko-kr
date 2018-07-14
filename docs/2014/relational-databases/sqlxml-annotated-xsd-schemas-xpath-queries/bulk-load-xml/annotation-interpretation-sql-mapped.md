@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177860"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped(SQLXML 4.0)
-  XML 대량 로드 프로세스는 `sql:mapped` 주석을 예상 대로 XSD 스키마에서-즉, 매핑 스키마 지정 하는 경우 `sql:mapped="false"` 임의의 요소 또는 특성에 대 한 XML 대량 로드는 해당 열에 연결 된 데이터를 저장 하려고 시도 하지 않습니다.  
+  XML 대량 로드 프로세스를 `sql:mapped` 예상 대로 XSD 스키마에서 주석-즉, 매핑 스키마 지정 하는 경우 `sql:mapped="false"` 임의의 요소 또는 특성에 대 한 XML 대량 로드가 해당 열에 연결 된 데이터를 저장 하려고 시도 하지 않습니다.  
   
  XML 대량 로드는 스키마에 기술되지 않았거나 XSD 스키마에서 `sql:mapped="false"`로 주석이 지정되어 있어 매핑되지 않은 요소 및 특성을 무시합니다. 매핑되지 않은 모든 데이터는 `sql:overflow-field`를 사용하여 지정된 오버플로 열에 저장됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36090614"
 </xsd:schema>  
 ```  
   
- 때문에 **HomePhone** 특성 지정 `sql:mapped="false"`, XML 대량 로드가이 특성의 해당 열으로 매핑되지 않습니다. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
+ 때문에 합니다 **HomePhone** 특성을 지정 `sql:mapped="false"`, XML 대량 로드가이 특성의 해당 열에 매핑되지 않는 경우. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

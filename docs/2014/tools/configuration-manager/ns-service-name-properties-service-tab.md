@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;서비스 이름&gt; 속성 (서비스 탭) | Microsoft Docs
+title: NS$&lt;서비스 이름은&gt; 속성 (서비스 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c02ad64dfada49434900795f49802e75cf8d2945
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad78ef3b5a142ca7b9d3f1d9a805d7b46e36ce7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189580"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;service name&gt; 속성(서비스 탭)
   이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  

@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181580"
 ---
 # <a name="subscriptions-page-report-manager"></a>구독 페이지(보고서 관리자)
   구독 페이지를 사용하여 현재 보고서나 공유 데이터 원본의 구독을 모두 나열할 수 있습니다. 모든 구독 태스크 관리가 뜻하는 바와 같이 충분한 권한이 있으면 모든 사용자의 구독을 볼 수 있습니다. 그렇지 않으면 이 페이지는 사용자가 소유하는 구독만 표시합니다.  
   
 > [!NOTE]  
->  다른 페이지에서도 구독 정보를 포함할 수 있습니다. 자세한 내용은 참조 [내 구독 페이지 &#40;보고서 관리자&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) 한 곳에서 모든 구독에 액세스 하려면 또는 [새 구독 또는 구독 편집 페이지 &#40;보고서 관리자&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) 만들거나 구독을 편집 합니다.  
+>  다른 페이지에서도 구독 정보를 포함할 수 있습니다. 자세한 내용은 [내 구독 페이지 &#40;보고서 관리자&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) 한곳에서 모든 구독에 액세스 하려면 또는 [새 구독 또는 구독 편집 페이지 &#40;보고서 관리자&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) 을 만들거나 구독을 편집 합니다.  
   
  일부 옵션은 작업할 기존 구독이 있는 경우에만 표시됩니다. 정의된 구독이 없는 경우 보고서에서 이 페이지를 액세스하면 페이지에 **새 구독** 및 **새 데이터 기반 구독** 옵션만 표시됩니다.  
   
- 새 구독을 만들기 전에 보고서 데이터 원본에서 저장된 자격 증명을 사용하는지 확인해야 합니다. 자격 증명을 저장하려면 데이터 원본 속성 페이지를 사용하십시오. 자세한 내용은 참조 [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)합니다.  
+ 새 구독을 만들기 전에 보고서 데이터 원본에서 저장된 자격 증명을 사용하는지 확인해야 합니다. 자격 증명을 저장하려면 데이터 원본 속성 페이지를 사용하십시오. 자세한 내용은 [데이터 원본 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)합니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  

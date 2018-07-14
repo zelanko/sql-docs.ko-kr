@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb9d6f15c9819a9c5653130664b340931a9a5d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181540"
 ---
 # <a name="create-a-job"></a>작업 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 SMO(SQL Server 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 에이전트 작업을 만드는 방법에 대해 설명합니다.  
@@ -75,17 +75,17 @@ ms.locfileid: "36093230"
   
 3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 작업...** 을 선택합니다.  
   
-4.  **새 작업** 대화 상자의 **일반** 페이지에서 작업의 일반 속성을 수정합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성 및 새로운 작업 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  **새 작업** 대화 상자의 **일반** 페이지에서 작업의 일반 속성을 수정합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성 및 새 작업 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  **단계** 페이지에서 작업 단계를 구성합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성: 새 작업 &#40;단계 페이지&#41;](job-properties-new-job-steps-page.md)  
+5.  **단계** 페이지에서 작업 단계를 구성합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;단계 페이지&#41;](job-properties-new-job-steps-page.md)  
   
-6.  **일정** 페이지에서 작업 일정을 구성합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성: 새 작업 &#40;일정 페이지&#41;](job-properties-new-job-schedules-page.md)  
+6.  **일정** 페이지에서 작업 일정을 구성합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;일정 페이지&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  **경고** 페이지에서 작업에 대한 경고를 구성합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성: 새 작업 &#40;경고 페이지&#41;](job-properties-new-job-alerts-page.md)  
+7.  **경고** 페이지에서 작업에 대한 경고를 구성합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;경고 페이지&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  **알림** 페이지에서 작업이 완료되었을 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작을 설정합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성: 새 작업 &#40;알림 페이지&#41;](job-properties-new-job-notifications-page.md)합니다.  
+8.  **알림** 페이지에서 작업이 완료되었을 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작을 설정합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;알림 페이지&#41;](job-properties-new-job-notifications-page.md)합니다.  
   
-9. **대상** 페이지에서 작업의 대상 서버를 관리합니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하십시오. [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)합니다.  
+9. **대상** 페이지에서 작업의 대상 서버를 관리합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)합니다.  
   
 10. 완료되었으면 **확인**을 클릭합니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36093230"
   
 -   [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMOProcedure"></a> SQL Server 관리 개체를 사용 하 여  
  **SQL Server 에이전트 작업을 만들려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Create` 클래스의 `Job` 메서드를 호출합니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  

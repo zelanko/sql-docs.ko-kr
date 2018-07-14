@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DbStorageLocation element
 ms.assetid: 1f448249-103a-479f-ae86-b0017acd0436
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 651dc0424c492efefa7828ae327f9bdcf837ed77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 055780c9c91817a44dce6dfdaeb6ea3b541c05a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224003"
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation 요소
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 가 모든 데이터베이스 데이터 및 메타데이터 파일을 만들고 관리할 폴더를 지정합니다.  

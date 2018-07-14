@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177830"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
   메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../database-engine/media/hekaton-query-plan-2.gif "디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.  
   
- 이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. `Hash Match` 물리 연산자는 이제에 사용 되는 `Inner Join`합니다. 순서에 클러스터형된 인덱스가 customerid로 정렬 되지가 사용 하 고 있어서는 `Merge Join` 성능에 영향을 주므로 하는 sort 연산자가 필요 합니다. 이전 예에서 `Hash Match` 연산자의 비용(46%)에 대비해서 `Merge Join` 연산자의 상대적 비용(75%)에 주의하십시오. 최적화 프로그램은 생각는 `Hash Match` 연산자도 이전 예에서 결정 되었습니다는 `Merge Join` 연산자 더 나은 성능을 제공 합니다.  
+ 이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. 합니다 `Hash Match` 물리 연산자는 이제는 `Inner Join`합니다. 순서에 클러스터형된 인덱스가 customerid로 정렬 되지 않으므로 `Merge Join` 성능에 영향을 줄 것을 sort 연산자가 필요 합니다. 이전 예에서 `Hash Match` 연산자의 비용(46%)에 대비해서 `Merge Join` 연산자의 상대적 비용(75%)에 주의하십시오. 최적화 프로그램이 고려할 수도 합니다 `Hash Match` 연산자도 이전 예에서 겠지만는 `Merge Join` 연산자가 더 나은 성능을 제공 합니다.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
@@ -174,7 +174,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   클러스터형 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 대신 메모리 최적화 모든 테이블에 적어도 하나 이상의 비클러스터형 인덱스가 있어야 하고 메모리 최적화 테이블의 모든 인덱스는 인덱스에 행을 저장하거나 클러스터형 인덱스를 참조할 필요 없이 테이블의 모든 열에 효율적으로 액세스할 수 있습니다.  
   
--   이 계획에는 `Hash Match`이 아니라 `Merge Join`가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. A `Merge Join` 위해서는 성능 저하가 발생 하는 정렬 연산자가 필요 합니다.  
+-   이 계획에는 `Hash Match`이 아니라 `Merge Join`가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. `Merge Join` 성능 저하가 발생 하는 sort 연산자가 필요 합니다.  
   
 ## <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures  
  고유하게 컴파일된 저장 프로시저는 쿼리 실행 엔진에서 해석되지 않고 기계어 코드로 컴파일된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저입니다. 다음 스크립트는 예제 쿼리(예제 쿼리 섹션 참조)를 실행하는 기본적으로 컴파일되는 저장 프로시저를 만듭니다.  
@@ -209,7 +209,7 @@ END
   
  프로세스에 대한 설명은 다음과 같습니다.  
   
-1.  사용자 문제는 `CREATE PROCEDURE` 문을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+1.  사용자는 `CREATE PROCEDURE` 문을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 2.  파서 및 algebrizer가 프로시저에 대한 처리 흐름과 저장 프로시저에 있는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리에 대한 쿼리 트리를 만듭니다.  
   
@@ -226,11 +226,11 @@ END
   
  고유하게 컴파일된 저장 프로시저의 호출에 대한 설명은 다음과 같습니다.  
   
-1.  사용자 문제는 `EXEC` *usp_myproc* 문.  
+1.  사용자는 `EXEC` *usp_myproc* 문입니다.  
   
 2.  파서가 이름 및 저장 프로시저 매개 변수를 추출합니다.  
   
-     예를 사용 하 여 문이 준비 되었으면 `sp_prep_exec`, 파서가 프로시저 이름과 실행 시 매개 변수를 추출할 필요가 없습니다.  
+     예를 들어 사용 하 여 문을 준비 되었으면 `sp_prep_exec`, 파서가 프로시저 이름과 실행 시 매개 변수를 추출할 필요가 없습니다.  
   
 3.  메모리 내 OLTP 런타임이 저장 프로시저에 대한 DLL 진입점을 찾습니다.  
   
@@ -240,7 +240,7 @@ END
   
  생성 시에 컴파일되는 고유하게 컴파일된 저장 프로시저와 달리 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저는 첫 실행 시 컴파일됩니다. 호출 시에 해석된 저장 프로시저가 컴파일될 때 이 호출을 위해 제공된 매개 변수의 값은 최적화 프로그램이 실행 계획을 생성할 때 사용됩니다. 이렇게 컴파일 중 매개 변수의 사용을 매개 변수 스니핑이라고 부릅니다.  
   
- 고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 해석 된 저장된 프로시저 처럼 고유 하 게 컴파일된 저장된 프로시저도 지원은 `OPTIMIZE FOR` 힌트입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
+ 고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 같은 해석 된 저장된 프로시저를 고유 하 게 컴파일된 저장된 프로시저도 지원 합니다 `OPTIMIZE FOR` 힌트입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 검색  
  고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예를 들어:  
@@ -304,7 +304,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   IX_CustomerID에 대한 전체 인덱스 검색은 index seek로 바뀌었습니다. 그 결과 전체 인덱스 검색에 필요한 830개 행 대신 5개 행이 검색되었습니다.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계 및 카디널리티  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 메모리 액세스에 최적화 된 테이블에 대 한 열 수준 통계를 유지 관리합니다. 또한 테이블의 실제 행 개수도 유지 관리합니다. 그러나 디스크 기반 테이블과 달리 메모리 최적화 테이블에 대한 통계는 자동으로 업데이트되지 않습니다. 따라서 테이블이 크게 변경된 후 통계를 수동으로 업데이트해야 합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](memory-optimized-tables.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 메모리 최적화 테이블에 대 한 열 수준 통계를 유지 관리합니다. 또한 테이블의 실제 행 개수도 유지 관리합니다. 그러나 디스크 기반 테이블과 달리 메모리 최적화 테이블에 대한 통계는 자동으로 업데이트되지 않습니다. 따라서 테이블이 크게 변경된 후 통계를 수동으로 업데이트해야 합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](memory-optimized-tables.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)  

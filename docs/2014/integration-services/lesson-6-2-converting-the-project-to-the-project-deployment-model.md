@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 caps.latest.revision: 3
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 903b68ba22842d05ceca29467f4a6c523a82f4db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aea3e9e297f4440ccb73805b87e73bca4cb6a30d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245023"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>2단계: 프로젝트를 프로젝트 배포 모델로 변환
   이 작업에서는 프로젝트를 프로젝트 배포 모델로 변환하기 위해 Integration Services 프로젝트 변환 마법사를 사용합니다.  

@@ -18,23 +18,23 @@ helpviewer_keywords:
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b35c5a8e2e7e6e03c0fd943572b25b30bf017e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86a05a23577eefa1231a4a5f4bdf8447e4f6b285
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233003"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
-  다음 예에서는 XPath 쿼리에 부울 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하십시오. [XPath 예에 대 한 샘플 주석이 추가 된 XSD 스키마 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
+  다음 예에서는 XPath 쿼리에 부울 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
   
 ## <a name="examples"></a>예  
   
 ## <a name="a-specify-the-not-boolean-function"></a>1. not() 부울 함수 지정  
- 이 쿼리 모두 반환 된  **\<고객 >** 가 없는 컨텍스트 노드의 자식 요소  **\<순서 >** 자식 요소:  
+ 이 쿼리 모두 반환 합니다  **\<고객 >** 하지 않은 컨텍스트 노드의 자식 요소  **\<순서 >** 자식 요소:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -48,7 +48,7 @@ ms.locfileid: "36090189"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(BooleanFunctionsA.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36090189"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36090189"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>2. true() 및 false() 부울 함수 지정  
- 이 쿼리 모두 반환  **\<고객 >** 가 없는 컨텍스트 노드의 요소 자식을  **\<순서 >** 자식 요소입니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
+ 이 쿼리 모두 반환  **\<고객 >** 하지 않은 컨텍스트 노드의 요소 자식을  **\<순서 >** 자식 요소입니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -114,7 +114,7 @@ ms.locfileid: "36090189"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(BooleanFunctionsB.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36090189"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   

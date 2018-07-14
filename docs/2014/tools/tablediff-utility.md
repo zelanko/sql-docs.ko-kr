@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
 - tablediff utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 851ba198020abf234c793ad65acf3f5dbbcd8e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180970"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
   **tablediff** 유틸리티는 두 테이블에 포함된 데이터의 불일치 여부를 비교하는 데 사용되며, 복제 토폴로지의 데이터 불일치 문제를 해결하는 데 특히 유용합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "36090577"
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 대상 테이블이 잠깁니다.  
   
  **-b** *large_object_bytes*  
- 포함 하는 큰 개체 데이터 형식 열에 대해 비교할 바이트 수: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)`합니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
+ 포함 하는 큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)`합니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
   
  **-bf**  *number_of_statements*  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements*를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "36090577"
 ## <a name="remarks"></a>Remarks  
  **이외 서버에서는** tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
   
- 포함 된 테이블을 `sql_variant` 데이터 형식 열이 지원 되지 않습니다.  
+ 사용 하 여 테이블 `sql_variant` 데이터 형식 열이 지원 되지 않습니다.  
   
  기본적으로 **tablediff** 유틸리티는 원본 열과 대상 열 간에 다음 데이터 형식 매핑을 지원합니다.  
   

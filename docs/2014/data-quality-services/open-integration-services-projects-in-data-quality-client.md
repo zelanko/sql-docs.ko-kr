@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 534bbcada8b7db3d6a96d57b4f2d4be867676469
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c3763ac1fa89ae69d905510944e75ec2a10116d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217993"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>데이터 품질 클라이언트에서 Integration Services 프로젝트 열기
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 정리 프로젝트를 일괄 처리 모드로 실행할 수 있습니다. 그러나 경우에 따라 DQS의 데이터 품질 프로젝트에서 정리 작업의 **결과 관리 및 보기** 탭에 있는 정리 결과를 검토하는 방법과 유사한 방식으로 Integration Services 패키지의 정리 결과를 검토할 수도 있습니다. DQS는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 의 Integration Services 프로젝트를 다른 데이터 품질 프로젝트와 마찬가지로 **프로젝트 열기** 화면에서 열 수 있도록 지원하고 Integration Services 프로젝트의 정리 결과에 대한 대화식 정리 환경을 제공합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36092502"
 ####  <a name="Permissions"></a> Permissions  
  Integration Services 프로젝트를 열려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../2014-toc/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 항목의](#Intro)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목에서](#Intro)  
   
 ##  <a name="Open"></a> Integration Services 프로젝트 열기  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36092502"
   
 6.  데이터를 내보낸 후 **마침** 을 클릭하여 Integration Services 프로젝트를 닫습니다.  
   
- ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../2014-toc/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [이 항목의](#Intro)  
+ ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목에서](#Intro)  
   
 ## <a name="see-also"></a>관련 항목  
  [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   

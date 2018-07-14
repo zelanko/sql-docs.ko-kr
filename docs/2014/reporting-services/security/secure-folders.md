@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
 - low-security folders
@@ -18,13 +18,13 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fb5806011f24d6853962b54b172d874829cb65f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4889b0385f3f55b4e0ca220d6b1f5f9ecda356b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238253"
 ---
 # <a name="secure-folders"></a>보안 폴더
   폴더 보안 설정은 보고서 서버의 모든 내용에 보안을 설정하기 위한 기본 토대입니다. 보안 설정은 폴더 구조를 통해 상속되므로 폴더 계층의 큰 부분이나 작은 부분을 지정하여 특정 종류의 액세스를 허용할 수 있습니다.  

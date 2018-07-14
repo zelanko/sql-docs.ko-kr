@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172954"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services(SSIS) 매개 변수
   SSIS([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 **Project.params** 창을 사용하여 프로젝트 매개 변수를 만들거나, 수정하거나, 삭제합니다. 디자이너의 **매개 변수** [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 패키지 매개 변수를 만들고, 수정하고, 삭제합니다. **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크 속성과 연결합니다. 사용에 대 한 자세한 내용을 **Project.params** 창 및 **매개 변수** 탭, 참조 [매개 변수 만들기](create-parameters.md)합니다. 에 대 한 자세한 내용은 **매개 변수화** 대화 상자, 참조 [Parameterize Dialog Box](parameterize-dialog-box.md)합니다.  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 **Project.params** 창을 사용하여 프로젝트 매개 변수를 만들거나, 수정하거나, 삭제합니다. 디자이너의 **매개 변수** [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 패키지 매개 변수를 만들고, 수정하고, 삭제합니다. **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크 속성과 연결합니다. 사용에 대 한 자세한 합니다 **Project.params** 창 및 **매개 변수** 탭을 참조 하십시오 [Create Parameters](create-parameters.md)합니다. 에 대 한 자세한 내용은 합니다 **매개 변수화** 대화 상자, 참조 [Parameterize Dialog Box](parameterize-dialog-box.md)합니다.  
   
 ## <a name="parameters-and-package-deployment-model"></a>매개 변수 및 패키지 배포 모델  
  일반적으로 패키지 배포 모델을 사용하여 패키지를 배포하려면 매개 변수 대신 구성을 사용해야 합니다.  
@@ -86,12 +86,12 @@ ms.locfileid: "36089097"
   
  또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **패키지 실행** 대화 상자를 사용하여 매개 변수 값을 수정할 수 있습니다. 자세한 내용은 [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)을 참조하세요.  
   
- Dtexec를 사용할 수도 있습니다 `/Parameter` 매개 변수 값을 수정 합니다. 자세한 내용은 [dtexec Utility](packages/dtexec-utility.md)를 참조하세요.  
+ Dtexec를 사용할 수도 있습니다 `/Parameter` 매개 변수 값을 수정할 수 있습니다. 자세한 내용은 [dtexec Utility](packages/dtexec-utility.md)를 참조하세요.  
   
 ### <a name="parameter-validation"></a>매개 변수 유효성 검사  
  매개 변수 값을 확인할 수 없는 경우 해당 패키지 실행이 실패합니다. 오류를 방지하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **유효성 검사** 대화 상자를 사용하여 프로젝트 및 패키지의 유효성을 검사합니다. 유효성 검사를 통해 모든 매개 변수가 필요한 값을 가지고 있는지 확인하거나 특정 환경 참조에 필요한 값을 확인할 수 있습니다. 유효성 검사는 또한 다른 일반적인 패키지 문제도 확인합니다.  
   
- 자세한 내용은 참조 [확인 대화 상자](catalog/validate-dialog-box.md)합니다.  
+ 자세한 내용은 [Validate Dialog Box](catalog/validate-dialog-box.md)합니다.  
   
 ### <a name="parameter-example"></a>매개 변수 예  
  이 예에서는 패키지의 옵션을 지정하는 데 사용되는 **pkgOptions** 라는 매개 변수를 설명합니다.  

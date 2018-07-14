@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ba2e554136b01190adfc6fd95cb6b7927553f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b9bc5c7e4845adbc15d2e73d45ea85ff851084d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207543"
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
   데이터 변환은 입력 열의 데이터를 다른 데이터 형식으로 변환한 다음 새 출력 열에 복사합니다. 예를 들어 패키지는 여러 개의 원본에서 데이터를 추출한 다음 이 변환을 사용하여 대상 데이터 저장소에 필요한 데이터 형식으로 열을 변환할 수 있습니다. 단일 입력 열에 여러 개의 변환을 적용할 수 있습니다.  

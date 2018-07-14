@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bccfc04258207e0c9010f2d906d815f3beae9927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1e42ec1e943f53c8e2250f55335c667ed15eaf0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163014"
 ---
 # <a name="monitor-data-tier-applications"></a>데이터 계층 응용 프로그램 모니터링
   SSMS( **)의** 유틸리티 탐색기 **및** 개체 탐색기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 시스템 뷰 및 테이블과 함께 DAC(데이터 계층 응용 프로그램)를 모니터링할 수 있습니다. 또한 DAC에 포함된 데이터베이스의 모든 개체를 표준 데이터베이스 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 모니터링 기술을 사용하여 모니터링할 수 있습니다.  

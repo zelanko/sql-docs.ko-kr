@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트와 SSAS 관리 태스크 예약 | Microsoft Docs
+title: SQL Server 에이전트를 사용 하 여 SSAS 관리 태스크 예약 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b94fa6a5c38b08d9756581063c497e4440105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e02a5f91994d0002873984a6e77db53169d024e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243683"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
   SQL Server 에이전트 서비스를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 작업을 예약하여 필요한 순서 및 시간에 실행할 수 있습니다. 예약된 태스크를 사용하면 정기적으로 또는 예측 가능한 주기에 따라 프로세스가 자동으로 실행되도록 할 수 있습니다. 비즈니스 활동을 수행하지 않는 시간 동안 큐브 처리 등의 관리 태스크가 실행되도록 예약할 수 있습니다. 또한 SQL Server 에이전트 작업 내에 작업 단계를 만들어 태스크 실행 순서를 지정할 수 있습니다. 예를 들어 큐브를 처리한 다음 큐브 백업을 수행할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36091641"
 ## <a name="prerequisites"></a>사전 요구 사항  
  SQL Server 에이전트 서비스가 설치되어 있어야 합니다.  
   
- 기본적으로 서비스 계정으로 작업이 실행됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<인스턴스 이름 >. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
+ 기본적으로 서비스 계정으로 작업이 실행됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<n a m e >입니다. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
   
  또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)을(를) 참조하세요.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36091641"
   
 7.  **서버**에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대해 **localhost**를 입력하고 명명된 인스턴스에 대해 **localhost\\**\<*instance name*>를 입력합니다.  
   
-     원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. 형식을 사용 하 여 \< *서버 이름*> 기본 인스턴스에 대 한 및 \< *서버 이름*>\\<*인스턴스 이름*> 명명 된 인스턴스에 대 한 합니다.  
+     원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. 형식을 사용 하 여 \< *서버 이름*> 기본 인스턴스의 경우 및 \< *서버 이름*>\\<*인스턴스 이름*> 명명 된 인스턴스에 대 한 합니다.  
   
 8.  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
   

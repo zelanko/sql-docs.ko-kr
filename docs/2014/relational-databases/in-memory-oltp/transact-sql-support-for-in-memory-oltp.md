@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 caps.latest.revision: 52
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f5c7dd02a31a466e5e6e96a815ed27795f62f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2900d6cd155faf29dbd3ecb398320c0e5311d747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242553"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 Transact-SQL 지원
-  Transact-SQL 쿼리 또는 DML 문(SELECT, INSERT, UPDATE 또는 DELETE), 임시 문과, 저장 프로시저, 테이블 반환 함수, 스칼라 함수, 트리거, 뷰와 같은 SQL 모듈을 사용하여 메모리 최적화 테이블에 액세스할 수 있습니다. 자세한 내용은 참조 [표를 사용 하 여 해석 된 TRANSACT-SQL 메모리](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)합니다.  
+  Transact-SQL 쿼리 또는 DML 문(SELECT, INSERT, UPDATE 또는 DELETE), 임시 문과, 저장 프로시저, 테이블 반환 함수, 스칼라 함수, 트리거, 뷰와 같은 SQL 모듈을 사용하여 메모리 최적화 테이블에 액세스할 수 있습니다. 자세한 내용은 참조 [메모리를 사용 하 여 해석 된 TRANSACT-SQL 테이블](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)합니다.  
   
  메모리 최적화 테이블만 참조하는 저장 프로시저는 기계어 코드에 고유하게 컴파일될 수 있으며, 일반적으로 해석되는 (디스크 기반) 저장 프로시저에서 상당한 성능 향상을 제공합니다. 메모리 최적화 테이블에 최적으로 액세스하려면 고유하게 컴파일된 저장 프로시저를 사용합니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)를 참조하세요.  
   
@@ -32,15 +32,15 @@ ms.locfileid: "36091079"
   
 -   [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-database-sql-server-transact-sql) (참조 `MEMORY_OPTIMIZED_DATA`)  
   
--   [CREATE PROCEDURE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-procedure-transact-sql) (참조 `NATIVE_COMPILATION`, `SCHEMABINDING`, `EXECUTE AS`, 및 `BEGIN ATOMIC`)  
+-   [CREATE PROCEDURE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-procedure-transact-sql) (참조 `NATIVE_COMPILATION`를 `SCHEMABINDING`합니다 `EXECUTE AS`, 및 `BEGIN ATOMIC`)  
   
--   [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) (참조 `MEMORY_OPTIMIZED`, `DURABILITY`, `BUCKET_COUNT`, `INDEX`, 및 `HASH`)  
+-   [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) (참조 `MEMORY_OPTIMIZED`, `DURABILITY`에 `BUCKET_COUNT`를 `INDEX`, 및 `HASH`)  
   
--   [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (참조 `MEMORY_OPTIMIZED`, `BUCKET_COUNT`, `INDEX`, 및 `HASH`)  
+-   [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (참조 `MEMORY_OPTIMIZED`를 `BUCKET_COUNT`합니다 `INDEX`, 및 `HASH`)  
   
 -   [선언 @local_variable &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (참조 `NULL`  |  `NOT NULL`)  
   
- 메모리 액세스에 최적화된 테이블은 `PRIMARY KEY` 및 `NOT NULL` 제약 조건을 지원합니다. 지원 되지 않는 제약 조건 구현에 대 한 자세한 내용은 참조 하십시오. [마이그레이션 확인 및 Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)합니다.  
+ 메모리 액세스에 최적화된 테이블은 `PRIMARY KEY` 및 `NOT NULL` 제약 조건을 지원합니다. 지원 되지 않는 제약 조건 구현에 대 한 내용은 참조 하세요 [마이그레이션 확인 및 Foreign Key 제약 조건](../../database-engine/migrating-check-and-foreign-key-constraints.md)합니다.  
   
  지원되지 않는 기능에 대한 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](transact-sql-constructs-not-supported-by-in-memory-oltp.md)을 참조하세요.  
   

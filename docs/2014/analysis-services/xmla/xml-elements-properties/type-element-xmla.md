@@ -1,5 +1,5 @@
 ---
-title: E Element (XMLA) | Microsoft Docs
+title: Type 요소 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193783"
 ---
 # <a name="type-element-xmla"></a>Type 요소(XMLA)
-  수행 될 처리 유형을 결정는 [프로세스](../xml-elements-commands/process-element-xmla.md) 요소입니다.  
+  수행 될 처리 유형을 결정 합니다 [프로세스](../xml-elements-commands/process-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36091358"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 인스턴스의 개체에 사용할 수 있는 옵션을 처리 하는 방법에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 참조 [다차원 모델 개체 처리](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 인스턴스의 개체에 사용할 수 있는 옵션을 처리 하는 방법에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 참조 하십시오 [다차원 모델 개체 처리](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  `Type` 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   

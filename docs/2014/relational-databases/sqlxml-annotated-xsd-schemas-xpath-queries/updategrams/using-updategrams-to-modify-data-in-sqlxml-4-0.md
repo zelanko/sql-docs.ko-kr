@@ -26,18 +26,18 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d085fdb34388071019001dd2fbf445903052bdf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f838dd23a17e2fc4555b8f9dc69e185fc8caefeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221063"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0에서 updategram을 사용하여 데이터 수정
-  수정할 수 있습니다 (삽입, 업데이트 또는 삭제)에서 데이터베이스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] updategram 이나 OPENXML을 사용 하 여 문서에서 기존 XML [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수입니다.  
+  수정할 수 있습니다 (삽입, 업데이트 또는 삭제)의 데이터베이스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] updategram 이나 OPENXML을 사용 하 여 문서에서 기존 XML [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수입니다.  
   
  이 섹션에서는 updategram에 대해 설명하고 updategram 사용 예를 보여 줍니다.  
   
@@ -51,16 +51,16 @@ ms.locfileid: "36090612"
  [NULL 처리 &#40;SQLXML 4.0&#41;](null-handling-sqlxml-4-0.md)  
  요소 및 특성 값에 NULL을 지정하는 방법에 대해 설명합니다.  
   
- [XML Updategram을 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [XML Updategram을 사용 하 여 데이터를 삽입 합니다. &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Updategram을 사용하여 데이터를 삽입하는 방법을 설명하고 이에 대한 예를 제공합니다.  
   
- [XML Updategram을 사용 하 여 데이터를 삭제 &#40;SQLXML 4.0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [XML Updategram을 사용 하 여 데이터 삭제 &#40;SQLXML 4.0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Updategram을 사용하여 데이터를 삭제하는 방법을 설명하고 이에 대한 예를 제공합니다.  
   
- [XML Updategram을 사용 하 여 데이터 업데이트 &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [XML Updategram을 사용 하 여 데이터를 업데이트 하는 중 &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  Updategram을 사용하여 기존 데이터를 수정하는 방법을 설명하고 이에 대한 예를 제공합니다.  
   
- [Updategram에 매개 변수가 전달 &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
+ [Updategram에 매개 변수를 전달 &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
  매개 변수를 updategram에 전달하는 방법을 설명하고 이에 대한 예를 제공합니다.  
   
  [Updategram의 데이터베이스 동시성 문제 처리 &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "36090612"
  [Updategram 예제 응용 프로그램 &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
  Updategram을 사용하는 예제 응용 프로그램을 제공합니다.  
   
- [지침 및 제한 사항 XML Updategram의 &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
+ [XML Updategram에 대 한 제한 사항 및 지침 &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  Updategram 사용 시 주의해야 할 사항에 대해 설명합니다.  
   
   

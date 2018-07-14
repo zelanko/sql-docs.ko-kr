@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236243"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
   원형 차트와 도넛형 차트는 데이터를 전체에 대한 비율로 표시합니다. 원형 차트는 그룹 간의 비교에 가장 일반적으로 사용됩니다. 원형 및 도넛형 차트는 피라미드형 및 깔때기형 차트와 마찬가지로 셰이프 차트라고 하는 차트 그룹으로 이루어집니다. 셰이프 차트에는 축이 없습니다. 셰이프 차트에 숫자 필드를 배치하면 차트에서 각각의 값이 전체 합계에 대해 차지하는 비율이 계산됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36092805"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a> 학습 내용  
+##  <a name="BackToTop"></a> 학습할 내용  
  이 자습서에서는 다음 작업 방법을 배웁니다.  
   
 1.  [차트 마법사에서 원형 차트 만들기](#Chart)  
@@ -68,7 +68,7 @@ ms.locfileid: "36092805"
      시작 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  시작 대화 상자가 표시 되지 않으면 보고서 작성기 단추에서 클릭 **새로**합니다.  
+    >  시작 대화 상자가 나타나지 않으면 보고서 작성기 단추에서 클릭 **새로 만들기**합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36092805"
   
 #### <a name="to-add-a-pie-chart"></a>원형 차트를 추가하려면  
   
-1.  에 **차트 종류 선택** 페이지 **원형**, 클릭 하 고 **다음**합니다. **차트 필드 정렬** 페이지가 열립니다.  
+1.  에 **차트 종류 선택** 페이지에서 **원형**를 클릭 하 고 **다음**합니다. **차트 필드 정렬** 페이지가 열립니다.  
   
      **차트 필드 정렬** 페이지에서 Product 필드를 **범주** 창으로 끌어옵니다. 범주는 원형 차트의 조각 수를 정의합니다. 이 예제에서는 각 제품에 대해 하나씩 총 8개의 조각이 사용됩니다.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "36092805"
   
 3.  레이블을 마우스 오른쪽 단추로 누른 **계열 레이블 속성**합니다.  
   
-4.  레이블 데이터 드롭다운 상자에서에서 선택 **#PERCENT**합니다.  
+4.  데이터 레이블, 드롭다운 목록 상자에서 선택 **#percent{p0}"** 합니다.  
   
      값을 백분율로 표시하려면 UseValueAsLabel 속성이 false여야 합니다. **동작 확인** 대화 상자에서 이 값을 설정할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   
-5.  (선택 사항) 레이블 소수 자릿수를 지정 하려면 입력 `#PERCENT{Pn}` 여기서 *n* 표시할 소수 자릿수의 수입니다. 예를 들어 소수 자릿수를 표시 하지 하려면 입력 `#PERCENT{P0}`합니다.  
+5.  (선택 사항) 소수 자릿수 레이블을 지정 하려면 입력 `#PERCENT{Pn}` 여기서 *n* 표시할 소수 자릿수입니다. 예를 들어 소수 자리를 표시 하려면 입력 `#PERCENT{P0}`합니다.  
   
     > [!NOTE]  
     >  **계열 레이블 속성** 대화 상자의 **숫자 형식** 은 백분율 서식을 지정하는 데 영향을 주지 않고 레이블의 서식을 백분율로 지정하기만 하며 각 조각이 원형 차트에서 나타내는 백분율을 계산하지는 않습니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "36092805"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  에 **보기** 탭에 **표시/숨기기** 그룹에서 **속성**합니다.  
+2.  에 **보기** 탭의 **표시/숨기기** 그룹을 선택 **속성**합니다.  
   
 3.  디자인 화면에서 원형 차트의 조각을 아무 것이나 클릭합니다. 계열의 속성이 속성 창에 표시됩니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36092805"
   
 7.  **CollectedThresholdUsePercent** 속성이 **True**로 설정되었는지 확인합니다.  
   
-8.  리본 메뉴에 **홈** 탭을 클릭 **실행** 는 보고서를 미리 봅니다.  
+8.  리본 메뉴에 **홈** 탭을 클릭 **실행** 보고서를 미리 보려면.  
   
  이제 범례에 "기타"라는 범주가 나타납니다. 새 원형 조각은 5% 미만인 모든 조각을 전체 원형의 6%를 차지하는 조각 하나로 결합합니다.  
   
@@ -183,16 +183,16 @@ ms.locfileid: "36092805"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  속성 창이 열려 있지 않으면 이미,에 **보기** 탭에서 **속성**합니다.  
+2.  속성 창이 열려 있지 않으면를 하는 경우는 **뷰** 탭을 선택 **속성**합니다.  
   
 3.  원형 차트를 두 번 클릭합니다. 원형 차트의 계열 속성이 속성 창에 표시됩니다.  
   
 4.  속성 창에서 **CustomAttributes** 노드를 확장합니다.  
   
-5.  설정의 **PieDrawingStyle** 를 **부드러운 가장자리**합니다.  
+5.  설정 된 **PieDrawingStyle** 하 **SoftEdge**합니다.  
   
     > [!NOTE]  
-    >  그리기 효과와 3D 효과 옵션은 함께 사용할 수 없습니다. 차트에 3d 효과가 적용 **PieDrawingStyle** 를 속성 창에서 사용할 수 없습니다.  
+    >  그리기 효과와 3D 효과 옵션은 함께 사용할 수 없습니다. 차트에 3 차원 효과 적용 **PieDrawingStyle** 를 속성 창에서 사용할 수 없습니다.  
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36092805"
   
      **As a Percentage of Total Sales**  
   
-3.  선택 **Camera and Camcorder Sales**를 클릭 하 고는 **b o l d** 에서 단추는 **글꼴** 의 섹션은 **홈** 리본 메뉴의 탭 합니다.  
+3.  선택 **Camera and Camcorder Sales**, 클릭는 **굵게** 에서 단추를 **글꼴** 섹션을 **홈** 리본 메뉴의 탭.  
   
-4.  선택 **으로 a Percentage of Total Sales**, 및는 **글꼴** 섹션에서 **홈** 탭, 글꼴 크기를 설정 **10**합니다.  
+4.  선택 **으로 a Percentage of Total Sales**, 및는 **글꼴** 섹션에서 합니다 **홈** 탭, 글꼴 크기를 설정 합니다 **10**합니다.  
   
 5.  (선택 사항) 제목 입력란을 두 줄 텍스트를 포함하도록 크게 만들어야 할 수 있습니다.  
   

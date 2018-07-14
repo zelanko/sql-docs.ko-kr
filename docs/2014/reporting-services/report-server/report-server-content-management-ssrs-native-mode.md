@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - published reports [Reporting Services], managing
@@ -18,13 +18,13 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3428d1e16bf2531c0c339835ed083d2cce272490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212363"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "36091457"
   
 |연산|파일 유형|  
 |---------------|---------------|  
-|업로드|리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 응용 프로그램 페이지를 사용해야 합니다. 자세한 내용은 참조 [파일 또는 보고서 업로드 &#40;보고서 관리자&#41; ](../reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드 &#40;Reporting Services SharePoint 모드에서&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|업로드|리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 응용 프로그램 페이지를 사용해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드 &#40;보고서 관리자&#41; ](../reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드 &#40;SharePoint 모드의 Reporting Services&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |게시|보고서, 보고서 파트, 데이터 원본 또는 데이터 집합이 아닌 프로젝트의 모든 파일이 리소스로 업로드됩니다. 리소스를 게시하려면 보고서 디자이너에서 프로젝트에 기존 항목을 추가한 다음 보고서 서버에 해당 프로젝트를 게시합니다.|  
   
  모든 리소스는 파일 시스템의 파일로 시작되어 이후에 보고서 서버에 업로드됩니다. ASP.NET의 기본 파일 크기 제한(4MB)을 제외하고 업로드할 수 있는 파일 종류에 대한 제한은 없습니다. 그러나 보고서 서버에 리소스로 게시할 경우 MIME 형식이 동일한 파일 유형이 다른 파일 유형보다 적합합니다. 예를 들어 HTML 및 JPG 파일 기반의 리소스는 사용자가 클릭할 때 각각 웹 페이지와 사용자가 볼 수 있는 이미지로 렌더링되어 브라우저 창에서 열립니다. 이와 달리 데스크톱 응용 프로그램 파일처럼 동일한 MIME 형식이 없는 리소스는 브라우저 창에서 렌더링되지 않을 수 있습니다.  

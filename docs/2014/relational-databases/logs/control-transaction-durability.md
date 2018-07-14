@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201503"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "36089943"
   
  **완전 트랜잭션 내구성 보장**  
   
--   트랜잭션 커밋에 성공하면 트랜잭션에 의한 변경 사항이 시스템의 다른 트랜잭션에 표시됩니다. 항목을 참조 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 자세한 정보에 대 한 합니다.  
+-   트랜잭션 커밋에 성공하면 트랜잭션에 의한 변경 사항이 시스템의 다른 트랜잭션에 표시됩니다. 항목을 참조 하세요 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 자세한 내용은 합니다.  
   
 -   내구성이 커밋에서 보장됩니다. 트랜잭션 커밋이 성공하여 클라이언트에 컨트롤을 반환하기 이전에는 해당 로그 레코드가 디스크에 지속됩니다.  
   
@@ -62,20 +61,20 @@ ms.locfileid: "36089943"
     > [!NOTE]  
     >  동시성이 높은 경우 특히, 로그 버퍼를 플러시 속도보다 더 빠르게 채울 경우 로그 I/O 경합이 여전히 발생할 수 있습니다.  
   
- **지연 된 트랜잭션 내 구성을 사용할 경우**  
+ **지연 된 트랜잭션 내 구성을 사용 하는 경우**  
   
  지연된 트랜잭션 내구성을 사용하는 것이 유리한 경우는 다음과 같습니다.  
   
- **데이터 손실을 허용할 수 있습니다.**  
+ **일부 데이터 손실을 허용할 수 있습니다.**  
  약간의 데이터 손실을 허용할 수 있는 경우(예: 대부분의 데이터를 보유하여 개별 데이터가 중요하지는 않은 경우)에는 지연된 내구성을 고려하는 것이 좋습니다. 데이터 손실을 허용할 수 없는 경우에는 지연된 트랜잭션 내구성을 사용하지 마세요.  
   
- **트랜잭션 로그 쓰기 중에 병목 현상이 발생 합니다.**  
+ **트랜잭션 로그 쓰기 중에 병목 상태가 발생 합니다.**  
  트랜잭션 로그 쓰기의 지연으로 인해 성능 문제가 발생하는 경우 응용 프로그램에서 지연된 트랜잭션 내구성을 사용하는 것이 좋습니다.  
   
  **작업의 경합 률이 높은 경우**  
  작업의 경합 수준이 높은 경우 잠금이 해제되는 동안 대기하는 데 많은 시간이 소요됩니다. 지연된 트랜잭션 내구성은 커밋 시간을 단축하여 잠금을 더 빠르게 해제하여 처리 속도를 높입니다.  
   
- **지연 된 트랜잭션 내구성 보장**  
+ **지연 트랜잭션 내구성 보장**  
   
 -   트랜잭션 커밋에 성공하면 트랜잭션에 의한 변경 사항이 시스템의 다른 트랜잭션에 표시됩니다.  
   

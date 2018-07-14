@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74daf001b5594bb550265b4b209d5f2b73f5e672
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e13be4085808f029ad29b6154910bc4ab442c78f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219113"
 ---
 # <a name="create-a-workload-group"></a>작업 그룹 만들기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 작업 그룹을 만들 수 있습니다.  

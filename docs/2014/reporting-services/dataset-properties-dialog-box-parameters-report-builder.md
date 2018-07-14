@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0b2d38e3cb08d0fd3370557e3c3ad1aa53e97fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232463"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>데이터 집합 속성 대화 상자, 매개 변수(보고서 작성기)
   선택 **매개 변수** 에 **데이터 집합 속성** 대화 상자를 추가, 변경 및 쿼리 매개 변수를 삭제 합니다.  

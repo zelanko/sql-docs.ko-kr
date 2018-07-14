@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
 - input files [Analysis Services]
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - deploying [Analysis Services], configuration settings
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c69729aea8ae3fac9cbac17c9da7bde98401ea73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b87007b98d8e67125d6173b47c4936b3087d251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222253"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>솔루션 배포를 위한 구성 설정 지정
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 파티션 및 역할 배포 옵션을 읽습니다 로부터 배포 스크립트에서 사용 하 여 \< *프로젝트 이름을*>.configsettings 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 현재 프로젝트의 구성 설정을 사용 하 여 만듭니다는 \< *프로젝트 이름을*>.configsettings 파일입니다.  
+  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 파티션 및 역할 배포 옵션을 읽습니다 로부터 배포 스크립트에서 사용 하는 합니다 \< *프로젝트 이름을*>.configsettings 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 현재 프로젝트의 구성 설정을 사용 하 여 만듭니다는 \< *프로젝트 이름*>.configsettings 파일입니다.  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>배포를 위한 구성 설정 검토  
- 다음은에 저장 된 구성 설정의 \< *프로젝트 이름을*>.configsettings 파일:  
+ 다음은 구성 설정을 저장 합니다 \< *프로젝트 이름*>.configsettings 파일:  
   
 -   **데이터 원본 연결 문자열** 이 문자열은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 지정된 값에 따른 각 데이터 원본에 대한 연결 문자열입니다. 사용자 ID와 암호는 문자열의 나머지 부분이 이 파일에 저장되기 전에 항상 연결 문자열에서 제거됩니다. 그러나 배포 마법사가 Analysis Services 인스턴스에 직접 배포하는 경우 마법사 내에서 적절한 사용자 ID와 암호 정보를 추가하여 배포 데이터베이스가 성공적으로 처리되도록 할 수 있습니다. 이 연결 정보는 배포 마법사에 의해 저장되는 경우 배포 스크립트 자체에 저장되지 않습니다.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36090265"
 -   **보고서 서버** 이 설정은 보고서 서버 및 데이터베이스에 있는 각 큐브에 정의된 각 보고서 동작의 폴더 위치를 지정합니다.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>배포를 위한 구성 설정 수정  
- 경우에 따라 배포 해야 할 수 있습니다는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 구성 설정을 사용 하 여 프로젝트의 \< *프로젝트 이름을*>.configsettings 파일입니다. 예를 들어 하나 이상의 데이터 원본에 대한 연결 문자열을 변경하거나 특정 파티션 또는 측정값 그룹에 대한 저장소 위치를 지정해야 할 수 있습니다.  
+ 일부 경우에 배포 해야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 구성 설정을 사용 하 여 프로젝트를 \< *프로젝트 이름을*>.configsettings 파일입니다. 예를 들어 하나 이상의 데이터 원본에 대한 연결 문자열을 변경하거나 특정 파티션 또는 측정값 그룹에 대한 저장소 위치를 지정해야 할 수 있습니다.  
   
- 파티션 및 역할의 배포를 수정 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 내에서이 정보를 변경 해야는 \< *프로젝트 이름을*> 아래 절차에 설명 된 대로.configsettings 파일입니다. 때문에 프로젝트 내에서 파티션 및 역할 설정을 변경할 수 없습니다는  *\<프로젝트 이름 >* **속성 페이지** 대화 상자에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 옵션이 표시 되지 않습니다.  
+ 파티션 및 역할 배포를 수정 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 내에서이 정보를 변경 해야 합니다 \< *프로젝트 이름*> 아래 절차에 설명 된 대로.configsettings 파일. 때문에 프로젝트 내에서 파티션 및 역할 설정을 변경할 수 없습니다는  *\<프로젝트 이름 >* **속성 페이지** 대화 상자 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 옵션이 표시 되지 않습니다.  
   
 > [!NOTE]  
->  구성 설정은 모든 개체나 새로 만든 개체에만 적용될 수 있습니다. 이전에 배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 추가 개체를 배포할 때 기존 개체를 덮어쓰지 않으려는 경우에만 새로 만든 개체에 구성 설정을 적용하십시오. 구성 설정이 모든 개체에 적용 또는 새로 만든 사람 에게만이 옵션을 설정 하는지 여부를 지정 하는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. 자세한 내용은 [파티션 및 역할 배포 옵션 지정](deployment-script-files-partition-and-role-deployment-options.md)을 참조하세요.  
+>  구성 설정은 모든 개체나 새로 만든 개체에만 적용될 수 있습니다. 이전에 배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 추가 개체를 배포할 때 기존 개체를 덮어쓰지 않으려는 경우에만 새로 만든 개체에 구성 설정을 적용하십시오. 구성 설정을 모든 개체에 적용 또는 새로 만든 이미지에이 옵션 설정 여부를 지정 하는 \< *프로젝트 이름*>.deploymentoptions 파일입니다. 자세한 내용은 [파티션 및 역할 배포 옵션 지정](deployment-script-files-partition-and-role-deployment-options.md)을 참조하세요.  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>입력 파일을 생성한 다음 구성 설정을 변경하려면  
   

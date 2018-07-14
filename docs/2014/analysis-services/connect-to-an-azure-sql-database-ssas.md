@@ -1,5 +1,5 @@
 ---
-title: Azure SQL 데이터베이스 (SSAS)에 연결 | Microsoft Docs
+title: Azure SQL Database (SSAS)에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlazure.f1
 ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e127b69e30032a31a97f4cc46ae87279de7987d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1caee43f182c92c3a01193a852a067e20c9a579c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214283"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Azure SQL Database에 연결(SSAS)
   **테이블 가져오기 마법사**의 이 페이지에서는 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

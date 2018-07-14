@@ -1,5 +1,5 @@
 ---
-title: (SSAS 테이블 형식) 열 숨기기 또는 고정 | Microsoft Docs
+title: 숨기기 또는 고정 열 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.hideunhidecolumnsdb.f1
 ms.assetid: 5407aee5-6a07-4559-a2ba-2ca00a242f02
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a83b824fc6e2079c5c1db1ac9c673f9e42f7568e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3277c722652e67036d0c0bfe2a904797f327a4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214053"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>열 숨기기 또는 고정(SSAS 테이블 형식)
   모델 디자이너에서 테이블에 표시하지 않으려는 열이 있는 경우 해당 열을 임시로 숨길 수 있습니다. 열을 숨기면 새 열을 추가하거나 관련 데이터 열만 사용하여 작업하기 위해 화면에서 공간을 확보할 수 있습니다. 모델 디자이너의 **열** 메뉴 및 각 열 머리글을 마우스 오른쪽 단추로 클릭했을 때 열리는 메뉴를 사용하여 열을 숨기거나 숨겨진 열을 표시할 수 있습니다. 모델의 다른 영역으로 스크롤할 때 모델의 특정 영역이 계속 표시되도록 하려면 해당 영역의 열을 고정하여 잠글 수 있습니다.  
@@ -62,8 +62,8 @@ ms.locfileid: "36090939"
     >  열이 고정되면 디자이너에서 테이블의 왼쪽(또는 앞)으로 이동합니다. 나중에 열의 고정을 취소해도 다시 원래 위치로 이동하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
- [큐브 뷰 &#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할 &#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
+ [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

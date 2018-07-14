@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
 - backup media [SQL Server], about backup media
@@ -24,21 +23,21 @@ helpviewer_keywords:
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06ebab2fa2db5be88f30b228d209318469788ff4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231423"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>미디어 세트, 미디어 패밀리 및 백업 세트(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 처음 접하는 사용자를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 백업 미디어를 사용하는 형식, 백업 미디어와 백업 장치 간의 관계, 백업 미디어에서의 백업 구성, 미디어 세트 및 미디어 패밀리에 대한 몇 가지 고려 사항에 대해 설명합니다. 이 항목에서는 백업 미디어를 처음 사용하기 전에 초기화하거나 포맷하는 방법과 기존 미디어 세트를 새로운 미디어 세트로 교체하는 방법, 미디어 세트의 기존 백업 세트를 덮어쓰는 방법 및 미디어 세트에 새로운 백업 세트를 추가하는 방법에 대해서도 설명합니다.  
   
 > [!NOTE]  
->  Windows Azure Blob 저장소 서비스로 SQL Server 백업에 대 한 자세한 내용은 참조, [SQL Server 백업 및 Windows Azure Blob 저장소 서비스로 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)합니다.  
+>  Windows Azure Blob 저장소 서비스로 SQL Server 백업에 대 한 자세한 내용은 참조 하세요 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)합니다.  
   
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
@@ -93,7 +92,7 @@ ms.locfileid: "36092025"
 -   미디어 설명에 MTF 미디어 레이블이나 미디어 설명이 포함되는지 여부  
   
     > [!NOTE]  
-    >  백업 또는 복원 작업에 사용 되는 모든 미디어 라는 표준 백업 형식을 사용 하 여 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 다른 응용 프로그램에서 작성 한 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블을 직접 작성 하지는 않습니다.  
+    >  백업 또는 복원 작업에 사용 되는 모든 미디어 라는 표준 백업 형식을 사용 하 여 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 다른 응용 프로그램에서 작성 한 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블을 직접 작성 하지 않습니다.  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 미디어 레이블 또는 자유형 텍스트로 된 미디어 설명  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36092025"
 ### <a name="backup-sets"></a>백업 세트  
  백업 작업에 성공하면 미디어 세트에 *백업 세트* 하나가 추가됩니다. 백업 세트는 백업이 속해 있는 미디어 세트와 관련해서 설명됩니다. 백업 미디어에 미디어 패밀리가 하나뿐이면 해당 패밀리에 전체 백업 세트가 포함됩니다. 백업 미디어에 미디어 패밀리가 여러 개 있으면 백업 세트가 여러 패밀리에 분산됩니다. 각 미디어에서 백업 세트를 설명하는 헤더가 백업 세트에 포함됩니다.  
   
- 다음 예제에서는 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 이라는 미디어 세트 만들기 `MyAdvWorks_MediaSet_1` 에 대 한는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 백업 장치로 테이프 드라이브 세 개를 사용 하 여 데이터베이스:  
+ 에서는 다음 예제는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이라는 미디어 세트를 만드는 문 `MyAdvWorks_MediaSet_1` 에 대 한는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 3 개의 테이프 드라이브일 백업 장치로 사용 하 여 데이터베이스:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -223,7 +222,7 @@ GO
  테이프 헤더는 현재 위치에 두어도 됩니다. 디스크 백업 미디어의 경우 백업 작업에서 지정하여 백업 장치에서 사용하는 파일만 덮어쓰므로 디스크의 다른 파일에는 영향을 주지 않습니다. 백업을 덮어쓸 때 기존의 미디어 헤더는 모두 보존되며 새 백업은 백업 장치의 첫 번째 백업으로 생성됩니다. 기존에 미디어 헤더가 없으면 관련된 미디어 이름과 미디어 설명이 있는 유효한 미디어 헤더가 자동으로 작성됩니다. 기존의 미디어 헤더가 잘못되었으면 백업 작업이 종료됩니다. 미디어가 비어 있으면 지정된 MEDIANAME, MEDIAPASSWORD 및 MEDIADESCRIPTION(있는 경우)으로 새 미디어 헤더가 생성됩니다.  
   
 > [!IMPORTANT]  
->  부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], MEDIAPASSWORD 옵션은 백업을 만드는 데 중단 되었습니다. 하지만 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
+>  부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], MEDIAPASSWORD 옵션은 백업을 만드는 데 중단 됩니다. 하지만 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
   
  백업 미디어가 다음 조건 중 하나를 만족하면 덮어쓰지 않습니다.  
   
@@ -263,7 +262,7 @@ GO
      디스크 백업에서 복원하는 경우와 온라인 복원의 경우 모든 미디어 패밀리를 동시에 탑재해야 합니다. 테이프 백업에서 오프라인으로 복원하는 경우 더 적은 백업 장치의 미디어 패밀리를 처리할 수 있습니다. 각 미디어 패밀리를 완전히 처리한 후에 다른 미디어 패밀리의 처리를 시작할 수 있습니다. 단일 장치를 사용하여 복원하는 경우가 아니면 미디어 패밀리는 항상 병렬로 처리됩니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
- **새 미디어 세트를 만들려면**  
+ **새 미디어 세트 만들려면**  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)(**새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기** 옵션)  
   
@@ -283,17 +282,17 @@ GO
   
 -   [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (INIT 옵션)  
   
- **만료 날짜를 설정 하려면**  
+ **만료 날짜 설정**  
   
 -   [백업의 만료 날짜 설정&#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **미디어 시퀀스 번호 및 패밀리 시퀀스 번호를 보려면**  
+ **미디어 시퀀스 및 패밀리 시퀀스 번호를 보려면**  
   
 -   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [backupmediafamily&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)(**family_sequence_number** 열)  
   
- **특정 백업 장치에 백업 세트를 보려면**  
+ **특정 백업 장치의 백업 세트를 보려면**  
   
 -   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
@@ -301,7 +300,7 @@ GO
   
 -   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
- **백업 장치에 있는 미디어의 미디어 헤더를 읽으려면**  
+ **백업 장치의 미디어의 미디어 헤더 읽기**  
   
 -   [RESTORE LABELONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   

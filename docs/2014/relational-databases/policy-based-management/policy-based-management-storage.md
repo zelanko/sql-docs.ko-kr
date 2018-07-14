@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, storage
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b741f03de6a1c36678752b1d0f926479dec91c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 98d275813b0fb7435e61e24bffa5ce84ac119a63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203043"
 ---
 # <a name="policy-based-management-storage"></a>정책 기반 관리 저장소
   정책은 msdb 데이터베이스에 저장됩니다. 정책 또는 조건이 변경되면 msdb를 백업해야 합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  

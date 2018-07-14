@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8433ac306fa85c983d959f5678072a51759b9133
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9fc93b6684ee98a641d6f8989f1c77d7aa9b468b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239133"
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
   준비 프로세스가 완료되면 준비 테이블에 있는 처리된 모든 레코드의 ErrorCode 열에 값이 지정됩니다. 이러한 값에 대해서는 다음 표에서 설명합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36090918"
 |210048|**ParentCode** 와 **ChildCode** 는 같을 수 없습니다.|**ParentCode** 값은 **ChildCode** 값과 동일합니다. 이 값은 달라야 합니다.|관계|  
   
 ## <a name="see-also"></a>관련 항목  
- [준비 프로세스 동안 발생 하는 오류 보기 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
+ [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

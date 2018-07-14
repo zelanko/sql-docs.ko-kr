@@ -1,5 +1,5 @@
 ---
-title: 중첩된 조인 지정 대화 상자 (마이닝 정확도 차트 뷰) | Microsoft Docs
+title: 중첩된 조인 대화 상자 (마이닝 정확도 차트 뷰)를 지정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.specifynestedjoin.f1
 helpviewer_keywords:
 - Specify Nested Join dialog box
 ms.assetid: e6dd5c26-d6ba-4fcb-8c03-c012fea760f1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fee9abe1f9bcb7bbd70ca0c41d35e71e4e03834b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01bbd11cc9aaf547a204935ca6f55c4927fe2bdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214303"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>중첩 조인 지정 대화 상자(마이닝 정확도 차트 뷰)
   **중첩 조인 지정** 대화 상자에서는 중첩 테이블과 사례 테이블 간의 관계를 만듭니다. **중첩 조인 지정** 대화 상자를 열려면 중첩 테이블을 선택하고 **조인 수정**을 클릭합니다.  

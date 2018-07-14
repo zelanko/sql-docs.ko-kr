@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 024884c89881330114b8f52043388612a5a0c9a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d50af2f3dd3d5bddcce5a723d3016c29dcf5817d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171074"
 ---
 # <a name="connect-to-oracle"></a>Oracle에 연결
   CDC 인스턴스에 사용되는 테이블을 처음으로 추가하거나 편집하는 경우 Oracle 데이터베이스에 연결하라는 메시지가 표시됩니다. 캡처할 테이블의 스키마에 액세스할 수 있는 Oracle 사용자의 자격 증명을 입력해야 합니다. 이 대화 상자에 다음을 입력합니다.  

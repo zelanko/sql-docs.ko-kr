@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Name element
 ms.assetid: 180e3b4d-058e-4deb-843d-ec60949edab0
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 426e02aa9b0d005085422bba55d3bae6a598f540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b2f5bdd209d6f84d22253c1c47ee430db2facc81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226343"
 ---
 # <a name="name-element-parameter-xmla"></a>Name 요소(매개 변수)(XMLA)
-  가 나타내는 매개 변수 이름을 포함 된 [매개 변수](parameter-element-xmla.md) 요소입니다.  
+  나타내는 매개 변수의 이름이 포함 된 [매개 변수](parameter-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

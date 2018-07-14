@@ -18,13 +18,13 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce07e05c0535764bad42174fe54b2dc85b795496
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ec97729e8e1cdeefa2851cca00075dff0566901
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195683"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>데이터 흐름의 데이터 형식 작업
   Integration Services에서 사용자 지정 데이트 흐름 구성 요소를 개발할 때는 데이터를 데이터 흐름 버퍼에 복사하거나 데이터 흐름 버퍼에서 복사해 오고 값을 변환하는 방식으로 데이터 형식에 대한 작업을 지속적으로 수행하게 됩니다. 이 항목에서는 올바른 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 선택하고 데이터 형식에 대한 작업을 수행할 때 올바른 메서드를 사용할 수 있도록 유용한 정보를 제공합니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "36172440"
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 메서드는 DT_DBTIMESTAMPOFFSET 데이터 형식에 대한 값은 반환하지 않으며 이때 <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException>이 발생됩니다. 따라서 DT_DBTIMESTAMPOFFSET 데이터 형식은 관리되는 데이터 형식에 매핑할 수 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 날짜/시간 데이터 형식 중 하나로 변환해야 합니다. 관리되는 데이터 형식에 매핑할 수 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 날짜/시간 데이터 형식의 목록은 앞부분의 "Integration Services와 관리되는 데이터 형식 간의 매핑" 섹션에 나오는 표를 참조하십시오. 데이터 형식 변환에 대한 자세한 내용은 [Integration Services 데이터 형식](../../data-flow/integration-services-data-types.md)을 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   

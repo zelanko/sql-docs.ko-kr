@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7159085aacfe569af079c9f7c457a460df960189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb55b8db046e3d4fd76143f37f883b458e8bab64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245003"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>코드 자동 생성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 코드 특성 또는 기타 숫자 특성에 대해 숫자 값을 자동으로 생성할 수 있습니다. 코드가 자동으로 생성될 때 코드에 다른 값을 입력할 수 없는 것은 아니지만 초기 값이 자동으로 설정됩니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "36090453"
 ## <a name="deleting-automatically-generated-values"></a>자동으로 생성된 값 삭제  
  관리자가 코드 특성에 대해 자동 생성 값을 설정한 후 사용자가 다시 사용하려는 코드 값이 포함된 멤버를 실수로 삭제할 수 있습니다. 그러면 "삭제된 멤버에서 이미 멤버 코드를 사용합니다."라는 오류 메시지가 표시됩니다. 가능한 해결 방법으로는 다음 두 가지가 있습니다.  
   
--   **버전 관리** 기능 영역에서 관리자가 멤버가 삭제될 때 발생한 트랜잭션을 되돌릴 수 있습니다. 그러나 이렇게 하면 계층 및 컬렉션에서 이전 멤버의 모든 특성 및 멤버 자격이 복원됩니다. 자세한 내용은 참조 [트랜잭션 되돌리기 &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)합니다.  
+-   **버전 관리** 기능 영역에서 관리자가 멤버가 삭제될 때 발생한 트랜잭션을 되돌릴 수 있습니다. 그러나 이렇게 하면 계층 및 컬렉션에서 이전 멤버의 모든 특성 및 멤버 자격이 복원됩니다. 자세한 내용은 [트랜잭션 되돌리기 &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)합니다.  
   
--   관리자는 준비 프로세스를 사용하여 멤버를 영구적으로 삭제할 수 있습니다. 자세한 내용은 참조 [를 비활성화 하거나 준비 프로세스를 사용 하 여 구성원 삭제 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)합니다.  
+-   관리자는 준비 프로세스를 사용하여 멤버를 영구적으로 삭제할 수 있습니다. 자세한 내용은 [비활성화 하거나 준비 프로세스를 사용 하 여 멤버가 삭제 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

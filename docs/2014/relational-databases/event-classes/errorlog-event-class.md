@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - ErrorLog event class
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80c2931cb1d41efaa1c07cabfd3d222211aaf0be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: efb0f103d5b84775d1e03ba8934fef23cdfd5bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236623"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog 이벤트 클래스
   ErrorLog 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록되었음을 나타냅니다.  

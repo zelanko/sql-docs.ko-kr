@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193973"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>수준 및 멤버(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
-  이 창을 사용하여 현재 선택한 계층 및 언어의 멤버를 찾아볼 수 있습니다. 찾아볼 계층 또는 언어를 선택하려면 **도구 모음** 창의 **계층** 및 **언어** 옵션을 사용합니다. 도구 모음 창에 대 한 자세한 내용은 참조 [도구 모음 &#40;브라우저 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)합니다.  
+  이 창을 사용하여 현재 선택한 계층 및 언어의 멤버를 찾아볼 수 있습니다. 찾아볼 계층 또는 언어를 선택하려면 **도구 모음** 창의 **계층** 및 **언어** 옵션을 사용합니다. 도구 모음 창에 대 한 자세한 내용은 참조 하세요. [도구 모음 &#40;브라우저 탭, 차원 디자이너&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)합니다.  
   
 ## <a name="writeback-mode"></a>쓰기 저장 모드  
- 쓰기 저장 모드를 설정하면 이 창의 기능이 바뀝니다. 선택한 차원을 쓰기 가능 해야 (즉,는 `WriteEnabled` 차원의 속성을 설정 해야 true로) 차원에 배포 되어야 합니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쓰기 저장 모드를 사용 하도록 설정 하려면 인스턴스.  
+ 쓰기 저장 모드를 설정하면 이 창의 기능이 바뀝니다. 선택한 차원을 쓰기 가능 해야 (즉, 합니다 `WriteEnabled` 차원의 속성을 설정 해야 true로) 차원에 배포 되어야 합니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쓰기 저장 모드를 사용 하도록 설정 하기 위해 인스턴스.  
   
  쓰기 저장 모드를 설정하려면 **도구 모음** 창에서 **쓰기 저장** 을 선택하거나 **수준 및 멤버** 창을 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **쓰기 저장** 을 선택합니다.  
   

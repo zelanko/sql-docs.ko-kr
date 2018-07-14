@@ -20,13 +20,13 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 298de53535be79f452d3f1a70cd399cb66595abb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2b4f1f659bd118827a13c774a8727ea6541d59b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236973"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail 태스크에서는 일반 텍스트 형식의 메일 메시지만 지원합니다. 그러나 스크립트 태스크와 .NET Framework의 메일 기능을 사용하여 HTML 메일 메시지를 쉽게 보낼 수도 있습니다.  
@@ -155,7 +155,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [메일 보내기 태스크](../control-flow/send-mail-task.md)  

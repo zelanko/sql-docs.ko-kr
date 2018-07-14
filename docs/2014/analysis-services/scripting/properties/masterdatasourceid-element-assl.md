@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228463"
 ---
 # <a name="masterdatasourceid-element-assl"></a>MasterDatasourceID 요소(ASSL)
-  에 대 한 마스터 데이터 원본 식별자 (ID)를 포함 한 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
+  마스터 데이터 원본 식별자 (ID)를 포함 한 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36090749"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 원격 인스턴스에서 데이터베이스에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 원격 파티션을 포함 하는 `MasterDatasourceID` 요소는 데이터 원본의 ID의 마스터 인스턴스를 식별 하는 데 데이터 원본이 포함 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 을 관리 하는 원격 파티션입니다.  
+ 원격 인스턴스에서 데이터베이스에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 원격 파티션을 포함 하는 합니다 `MasterDatasourceID` 요소에는 데이터 원본의 ID의 마스터 인스턴스를 식별 하는 데 데이터 원본이 포함 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 관리 하는 원격 파티션입니다.  
   
- 부모에 해당 하는 요소 `MasterDatasourceID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Database>합니다.  
+ 부모에 해당 하는 요소가 `MasterDatasourceID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Database>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

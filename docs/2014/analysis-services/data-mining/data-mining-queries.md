@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170204"
 ---
 # <a name="data-mining-queries"></a>데이터 마이닝 쿼리
   데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음 작업을 수행할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36093003"
   
      모델의 패턴을 기반으로 입력 데이터에서 추론하는 쿼리입니다.  
   
--   [내용 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)  
+-   [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)  
   
      모델 자체에 대한 메타데이터, 통계 및 기타 정보를 반환하는 쿼리입니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36093003"
   
  데이터 마이닝 모델과 쿼리 작성 방법을 익히면 DMX(Data Mining Extensions)를 사용하여 쿼리를 직접 작성할 수도 있습니다. DMX는 Transact-SQL과 유사하며 다양한 여러 클라이언트에서 사용할 수 있는 쿼리 언어입니다. DMX는 사용자 지정 예측과 복잡한 쿼리를 만들 수 있는 최상의 도구입니다. DMX에 대한 소개는 [DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md)를 참조하세요.  
   
- DMX 편집기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 예측 쿼리 작성기를 사용하여 쿼리를 시작한 다음 뷰를 텍스트 편집기로 변경하고 DMX 문을 다른 클라이언트에 복사할 수도 있습니다. 자세한 내용은 참조 [데이터 마이닝 쿼리 인터페이스](data-mining-query-tools.md)합니다.  
+ DMX 편집기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 예측 쿼리 작성기를 사용하여 쿼리를 시작한 다음 뷰를 텍스트 편집기로 변경하고 DMX 문을 다른 클라이언트에 복사할 수도 있습니다. 자세한 내용은 [데이터 마이닝 쿼리 인터페이스](data-mining-query-tools.md)합니다.  
   
  프로그래밍 방식으로 DMX 문을 작성하고 AMO 또는 XMLA를 사용하여 클라이언트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 보낼 수 있습니다. 그러나 DMX는 마이닝 모델에 대해 쿼리를 만드는 데 사용해야 하는 언어입니다.  
   
@@ -99,14 +99,14 @@ ms.locfileid: "36093003"
   
  다음 목록에서는 쿼리에서 사용할 수 있는 함수에 대한 요약을 제공합니다.  
   
--   **일반 예측 함수:** 는 `Predict` 함수는 다형성을 갖고 있으므로 모든 모델 유형과 함께 사용할 합니다. 이 함수는 작업하고 있는 모델의 유형을 자동으로 검색하고 추가 매개 변수를 묻는 메시지를 표시합니다. 자세한 내용은 [예측&#40;DMX&#41;](/sql/dmx/predict-dmx)을 참조하세요.  
+-   **일반 예측 함수:** 는 `Predict` 함수는 다형성을 모든 모델 유형과 함께 작동 합니다. 이 함수는 작업하고 있는 모델의 유형을 자동으로 검색하고 추가 매개 변수를 묻는 메시지를 표시합니다. 자세한 내용은 [예측&#40;DMX&#41;](/sql/dmx/predict-dmx)을 참조하세요.  
   
     > [!WARNING]  
     >  일부 모델만 예측을 수행하는 데 사용됩니다. 예를 들어 예측 가능한 특성이 없는 클러스터링 모델을 만들 수 있습니다. 그러나 모델에 예측 가능한 특성이 없는 경우에도 모델에서 다른 유형의 유용한 정보를 반환하는 예측 쿼리를 만들 수 있습니다.  
   
 -   **사용자 지정 예측 함수:** 각 모델 유형은 해당 알고리즘으로 만들어진 패턴으로 작업하도록 설계된 예측 함수의 집합을 제공합니다.  
   
-     예를 들어 `Lag` 함수는 시계열 모델에 사용되는 기록 데이터를 볼 수 있도록 시계열 모델에 제공됩니다. 클러스터링 모델의 경우와 같은 함수가 `ClusterDistance` 더 중요 합니다.  
+     예를 들어 `Lag` 함수는 시계열 모델에 사용되는 기록 데이터를 볼 수 있도록 시계열 모델에 제공됩니다. 함수에 대 한 클러스터링 모델의 경우와 같은 `ClusterDistance` 더 중요 합니다.  
   
      각 모델 유형에 대해 지원되는 함수에 대한 자세한 내용은 다음 링크를 참조하십시오.  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36093003"
   
 -   **일반 통계:** 표준 편차와 같은 기술 통계의 표준 집합을 반환하는, 거의 모든 모델 유형과 함께 사용할 수 있는 다양한 함수가 있습니다.  
   
-     예를 들어는 `PredictHistogram` 함수는 지정 된 열의 모든 상태를 나열 하는 테이블을 반환 합니다.  
+     예를 들어를 `PredictHistogram` 함수는 지정 된 열의 모든 상태를 나열 된 테이블을 반환 합니다.  
   
      자세한 내용은 [일반 예측 함수&#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)를 참조하세요.  
   
 -   **사용자 지정 통계:** 특정 분석 태스크와 관련된 통계를 생성하기 위한 추가 지원 함수가 각 모델 유형에 제공됩니다.  
   
-     예를 들어 클러스터링 모델을 사용 하는 경우 함수를 사용할 수 `PredictCaseLikelihood`특정 사례 및 클러스터와 연결 된 유사도 점수를 반환할 합니다. 그러나 선형 회귀 모델을 만든 경우 내용 쿼리를 사용하여 수행할 수 있는 계수 및 절편 검색에 더 관심이 있을 수 있습니다.  
+     예를 들어 클러스터링 모델로 작업 하는 경우 함수를 사용할 수 `PredictCaseLikelihood`, 특정 사례 및 클러스터와 연결 된 유사도 점수를 반환 합니다. 그러나 선형 회귀 모델을 만든 경우 내용 쿼리를 사용하여 수행할 수 있는 계수 및 절편 검색에 더 관심이 있을 수 있습니다.  
   
 -   **모델 콘텐츠 함수:** 모든 모델의 *콘텐츠* 는 단순 쿼리로 정보를 검색할 수 있는 표준화된 형식으로 표시됩니다. DMX를 사용하여 모델 콘텐츠에 대한 쿼리를 만듭니다. 또한 데이터 마이닝 스키마 행 집합을 사용하여 일부 유형의 모델 콘텐츠를 가져올 수도 있습니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "36093003"
   
  [예측 쿼리 &#40;데이터 마이닝&#41;](prediction-queries-data-mining.md)  
   
- [내용 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)  
+ [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)  
   
  [드릴스루 쿼리 &#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36093003"
 |예측 쿼리에 사용하는 외부 데이터 작업|[예측 쿼리에 대한 입력 데이터 선택 및 매핑](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [예측 쿼리에 대한 입력 데이터 선택 및 매핑](choose-and-map-input-data-for-a-prediction-query.md)|  
 |쿼리 결과 사용|[예측 쿼리 결과 보기 및 저장](view-and-save-the-results-of-a-prediction-query.md)|  
 |Management Studio에서 제공하는 DMX 및 XMLA 쿼리 템플릿 사용|[템플릿에서 단일 예측 쿼리 작성](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio에서 Analysis Services 템플릿 사용](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|내용 쿼리에 대한 자세한 정보 및 예제 참조|[마이닝 모델에 내용 쿼리 만들기](create-a-content-query-on-a-mining-model.md)<br /><br /> [마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [내용 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)|  
+|내용 쿼리에 대한 자세한 정보 및 예제 참조|[마이닝 모델에 내용 쿼리 만들기](create-a-content-query-on-a-mining-model.md)<br /><br /> [마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](content-queries-data-mining.md)|  
 |쿼리 옵션 설정과 쿼리 권한 및 문제 해결|[데이터 마이닝 쿼리에 대한 제한 시간 값 변경](data-mining-queries.md)|  
 |Integration Services에서 데이터 마이닝 구성 요소 사용|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   

@@ -5,29 +5,28 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 966ec6aaf9a5cf0367dfc8d1b2e0f7895e4eb46c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: bd3deed243e921ea7c15065b127f455d30cad0a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236693"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   
- 문서 속성에서에서 추출 된 Ifilter를 통해 이진 데이터에서 즉,에 저장 된 데이터는 `varbinary`, `varbinary(max)` (포함 하 여 `FILESTREAM`), 또는 `image` 데이터 형식 열-전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
+ 문서에서 추출 된 Ifilter를 통해 이진 데이터 – 즉,에 저장 된 데이터에서 속성을 `varbinary`, `varbinary(max)` (등 `FILESTREAM`), 또는 `image` 데이터 형식 열 전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
  사용 가능한 속성을 속성 목록에 추가하려면 먼저 속성에 대한 다음 두 가지 정보를 찾아야 합니다.  
   

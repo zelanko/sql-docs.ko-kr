@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a9dfd4e3db4b84df6a64e8c0fe6de80bca19ca3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e94fcb4fdffacfad0bbf735bfc2fe3c7b19b798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171464"
 ---
 # <a name="attribute-element-assl"></a>Attribute 요소(ASSL)
   특성에 대한 설명을 포함합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36088933"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>, <xref:Microsoft.AnalysisServices.AggregationAttribute>, <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>, 및 <xref:Microsoft.AnalysisServices.PerspectiveAttribute>합니다.  
+ Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>, <xref:Microsoft.AnalysisServices.AggregationAttribute>, <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다 <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>, 및 <xref:Microsoft.AnalysisServices.PerspectiveAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [개체 &#40;ASSL&#41;](objects-assl.md)  

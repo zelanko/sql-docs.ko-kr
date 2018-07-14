@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c9c5e0dfee13c8c0bd08ad5d1c6433d16ca7df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdfd3f5d3e9fbf433f4c041a156adb31a4264fc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191263"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>특성 프로필 탭(마이닝 모델 뷰어)
   **특성 프로필** 탭을 사용하여 Naive Bayes 모델 상태의 입력 값 분포가 결과 특성의 각 상태에 주는 영향을 확인할 수 있습니다. 값의 분포는 색이 지정된 히스토그램으로 표시되고 모든 분포가 표 형식으로 제공되므로 보다 쉽게 값을 비교할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36091406"
 |**특성**|마이닝 모델에 포함된 마이닝 모델 열을 나열합니다.|  
 |**상태**|필요에 따라 특성의 해당 행에 있는 색이 나타내는 상태를 설명하는 열입니다. **범례 표시** 확인란을 사용하여 추가하거나 제거합니다.|  
 |**모집단**|전체 데이터 집합의 특성 배포를 표시합니다.|  
-|**예측 가능한 특성의 상태 열**|각 행이 모델의 입력 특성에 해당하는 예측 가능한 열의 각 상태에 대한 열을 표시합니다.|  
+|**예측 가능한 특성의 상태에 대 한 열**|각 행이 모델의 입력 특성에 해당하는 예측 가능한 열의 각 상태에 대한 열을 표시합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

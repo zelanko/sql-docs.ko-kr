@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213543"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36092694"
 |열 길이 분포 프로필|선택한 열에 있는 문자열 값의 모든 고유 길이, 그리고 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 문자로 이루어진 미국 주 코드의 열을 프로파일링하여 두 문자보다 긴 값을 검색할 수 있습니다.|  
 |열 Null 비율 프로필|선택한 열의 Null 값 비율을 보고합니다.<br /><br /> 이 프로필을 사용하면 열에 포함된 지나치게 높은 null 값 비율과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 우편 번호 열을 프로파일링하여 허용 불가능한 수준의 누락된 코드 비율을 검색할 수 있습니다.|  
 |열 패턴 프로필|문자열 열의 지정된 값 비율을 포괄하는 정규식 집합을 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별할 수 있습니다. 또한 이 프로필은 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안해 줍니다. 예를 들어 미국 우편 번호 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 발견된다면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.|  
-|열 통계 프로필|최소값, 최대값, 평균 및 표준 편차를 숫자 열 및 최소값, 최대값과 같은 통계를 보고 `datetime` 열입니다.<br /><br /> 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 기록 날짜 열을 프로파일링하여 미래의 최대 날짜를 검색할 수 있습니다.|  
+|열 통계 프로필|최소, 최대, 평균 및 숫자 열에 최소 표준 편차, 최대값과 같은 통계를 보고 `datetime` 열입니다.<br /><br /> 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 기록 날짜 열을 프로파일링하여 미래의 최대 날짜를 검색할 수 있습니다.|  
 |열 값 분포 프로필|선택한 열에 있는 모든 고유 값, 그리고 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 테이블에서 지정된 행 비율을 초과하는 값을 보고할 수도 있습니다.<br /><br /> 이 프로필을 사용하면 열에 포함된 잘못된 수의 고유 값과 같은 데이터의 문제를 식별할 수 있습니다. 예를 들어 미국의 주를 포함하는 열을 프로파일링하여 50개를 초과하는 고유 값을 검색할 수 있습니다.|  
   
  다음의 3개 프로필은 여러 열 또는 열과 테이블 간의 관계를 분석합니다.  
@@ -79,14 +79,14 @@ ms.locfileid: "36092694"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|숫자 형식 또는 `datetime` 형식(`mean` 열에 대해 `stddev` 및 `datetime`는 안 됨)|  
 |ColumnNullRatioProfile|모든 열**|  
-|ColumnValueDistributionProfile|열 `integer` 형식 `char` 형식 및 `datetime` 유형|  
-|ColumnLengthDistributionProfile|열 `char` 유형|  
-|ColumnPatternProfile|열 `char` 유형|  
-|CandidateKeyProfile|열 `integer` 형식 `char` 형식 및 `datetime` 유형|  
-|FunctionalDependencyProfile|열 `integer` 형식 `char` 형식 및 `datetime` 유형|  
-|InclusionProfile|열 `integer` 형식 `char` 형식 및 `datetime` 유형|  
+|ColumnValueDistributionProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
+|ColumnLengthDistributionProfile|열의 `char` 형식|  
+|ColumnPatternProfile|열의 `char` 형식|  
+|CandidateKeyProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
+|FunctionalDependencyProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
+|InclusionProfile|열의 `integer` 유형을 `char` 유형 및 `datetime` 형식|  
   
- \* 올바른 데이터 형식의 앞의 표에 `integer`, `char`, `datetime`, 및 `numeric` 유형에 다음과 같은 특정 데이터 형식:  
+ \* 위의 표에서 유효한 데이터 형식에는 `integer`, `char`를 `datetime`, 및 `numeric` 유형은 특정 데이터 형식:  
   
  정수 형식에는 `bit`, `tinyint`, `smallint`, `int` 및 `bigint`가 포함됩니다.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "36092694"
   
  날짜 및 시간 형식에는 `datetime`, `smalldatetime` 및 `timestamp`가 포함됩니다.  
   
- 숫자 형식에는 `integer` 형식 (제외 하 고 `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, 및 `numeric`합니다.  
+ 숫자 형식 포함 `integer` 형식 (제외 하 고 `bit`), `money`, `smallmoney`, `decimal`를 `float`, `real`, 및 `numeric`합니다.  
   
- \*\* `image``text`, `XML`, `udt`, 및 `variant` 형식은 열 Null 비율 프로필 이외의 프로필에 대 한 지원 되지 않습니다.  
+ \*\* `image`를 `text`, `XML`를 `udt`, 및 `variant` 형식은 열 Null 비율 프로필 이외의 프로필에 대 한 지원 되지 않습니다.  
   
 ### <a name="valid-tables-and-columns"></a>유효한 테이블 및 열  
  테이블 또는 열이 비어 있으면 데이터 프로파일링이 다음 동작을 수행합니다.  

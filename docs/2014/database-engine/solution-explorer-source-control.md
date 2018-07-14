@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
 - SQL Server Management Studio [SQL Server], source control services
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7165143ad238bbbeda14ac91f214f1410082beb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3975c43263e8ad7dc19c5bd8b01c1f32badea35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213703"
 ---
 # <a name="solution-explorer-source-control"></a>솔루션 탐색기 원본 제어
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 솔루션 탐색기는 별도 소스 제어 시스템에 통합할 수 있습니다. 솔루션 또는 프로젝트가 원본 제어 시스템에 통합된 경우 프로젝트에서 스크립트 및 쿼리에 대한 파일 액세스와 버전을 제어할 수 있습니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "36090238"
   
 2.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]의 **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
-3.  에 **옵션** 대화 상자에서 **소스 제어**, 클릭 하 고는 **플러그 인 선택** 페이지.  
+3.  에 **옵션** 대화 상자에서 **소스 제어**를 클릭 하 고는 **플러그 인 선택** 페이지입니다.  
   
-4.  에 **현재 소스 제어 플러그 인** 상자에서 소스 제어 플러그 인을 선택 합니다.  
+4.  에 **현재 원본 제어 플러그 인** 상자에서 원본 제어 플러그 인을 선택 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

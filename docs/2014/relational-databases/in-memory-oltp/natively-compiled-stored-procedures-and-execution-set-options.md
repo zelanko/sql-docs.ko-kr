@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 87ac7e07c0153f2221c3d5eda402b070711ffca3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 274f389a1d15c998177d5ab7895122de3200dec4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201473"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>고유하게 컴파일된 저장 프로시저 및 Execution Set 옵션
   ATOMIC 블록에서 Session 옵션은 고정됩니다. 저장 프로시저 실행은 세션의 SET 옵션의 영향을 받지 않습니다. 하지만 SET NOEXEC, SET SHOWPLAN_XML과 같은 일부 SET 옵션은 저장 프로시저(고유하게 컴파일된 저장 프로시저 포함)가 실행되지 않도록 합니다.  

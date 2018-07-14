@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetDatabaseQueryTimeout method
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8141e0edeb4ccea67e1980b06be455d67ebf6ad9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 32cfae03e241fcc71d83e37acd28162a404c7fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222843"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseQueryTimeout 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스 쿼리에 대한 기본 제한 시간 값을 지정합니다.  

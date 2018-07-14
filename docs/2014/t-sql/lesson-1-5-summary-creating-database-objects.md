@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating database objects
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 269a1a61588f84acf23b40894176e0147a4b919d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3a5e4b849b7be14011ac23e022f737e742fca481
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222493"
 ---
 # <a name="summary-creating-database-objects"></a>요약: 데이터베이스 개체 만들기
   이 자습서에서는 데이터베이스를 만들어 데이터베이스에 테이블을 만들고 테이블에 데이터를 삽입한 다음 데이터를 변경하고 테이블에서 데이터를 읽었습니다. 사용된 문의 구문은 기본 구문에 불과하기 때문에 많은 구문 옵션을 이 자습서에서 다루지 않았습니다. 이러한 문에 대해 자세히 알아보려면 SQL Server 온라인 설명서에서 이러한 문의 전체 구문을 확인하고 해당 항목에서 제공되는 여러 예를 살펴보십시오.  

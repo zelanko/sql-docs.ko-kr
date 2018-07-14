@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165504"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>관계 정의 대화 상자(Analysis Services - 다차원 데이터)
   **관계 정의** 대화 상자를 사용하여 큐브 디자이너에서 큐브 차원과 측정값 그룹 간의 관계를 정의할 수 있습니다. 큐브 디자이너 **차원 용도** 탭의 **표** 창에서 셀의 **...** 를 클릭하면 **관계 정의** 대화 상자를 표시할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36092295"
   
 |관계 유형|Description|옵션|  
 |-----------------------|-----------------|------------|  
-|**관계 없음**|관계를 정의하지 않으면 **세부 정보** 창에 옵션이 표시되지 않습니다.||  
+|**관계가 없습니다**|관계를 정의하지 않으면 **세부 정보** 창에 옵션이 표시되지 않습니다.||  
 |**Regular**|일반 차원 관계를 지정합니다. **세부 정보** 창에는 다음 옵션이 표시됩니다.|**세분성 특성**: <br />                      차원과 관련하여 측정값 그룹의 세분성을 정의하는 특성을 선택합니다. 이 특성은 일반적으로 차원의 키 특성입니다.|  
 |||**차원 테이블**: 차원의 주 테이블을 표시합니다.|  
 |||**측정값 그룹 테이블**: 측정값 그룹의 팩트 테이블을 표시합니다.|  
@@ -64,6 +64,6 @@ ms.locfileid: "36092295"
 ## <a name="see-also"></a>관련 항목  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [차원 용도 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

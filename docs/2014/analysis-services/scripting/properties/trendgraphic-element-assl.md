@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TrendGraphic element
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d4030a0936eee85fd32cfc87a4d5b441ef63b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c42a75f2dcb09b88008ea2776d215153ec7c557b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228163"
 ---
 # <a name="trendgraphic-element-assl"></a>TrendGraphic 요소(ASSL)
-  추세에 대 한 권장된 그래픽 표현을 포함 된 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
+  추세에 대 한 권장된 그래픽 표현을 포함 합니다 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36092049"
 |*상태 화살표-내림차순*|역방향 상태 화살표|  
 |*웃는 얼굴*|얼굴|  
   
- 부모에 해당 하는 요소 `TrendGraphic` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
+ 부모에 해당 하는 요소가 `TrendGraphic` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

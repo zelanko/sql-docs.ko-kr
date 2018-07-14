@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - heterogeneous data sources, non-SQL Server Subscribers
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ddef8686ebc8c0451216b3e853ec96f32c070b30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0287d3ecf1b3bcbb68acab13eb9a576ea4106477
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230803"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅숏 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
@@ -91,9 +91,11 @@ ms.locfileid: "36091479"
   
 ### <a name="replication-feature-support"></a>복제 기능 지원  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 두 가지 유형의 구독(밀어넣기 및 끌어오기)을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 배포 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 실행되는 밀어넣기 구독을 사용해야 합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 두 가지 유형의 구독(밀어넣기 및 끌어오기)을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 배포 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 실행되는 밀어넣기 구독을 사용해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에는 문자 모드 스냅숏이 필요합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에는 문자 모드 스냅숏이 필요합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 즉시 업데이트 구독 또는 지연 업데이트 구독을 사용할 수 없거나 피어 투 피어 토폴로지의 노드일 수 없습니다.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 46d0ee10acb57e4553c176be34572fc7f6dd02d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 954da454e2953f14cf61f1d49794829c385a6df3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206693"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 합집합을 반환합니다.  
@@ -36,7 +36,7 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`SqlGeometry` 또는 `SqlGeography`) 집계를 수행할 식입니다.  
+ (`SqlGeometry` 또는 `SqlGeography`) 집계를 수행 하는 식입니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 집합, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
@@ -45,7 +45,7 @@ Union(expression, scope, recursive)
  (**열거 형식**) 선택 사항입니다. `Simple` (기본값) 또는 `RdlRecursive`합니다. 집계를 재귀적으로 수행할지 여부를 지정합니다.  
   
 ## <a name="return"></a>반환 값  
- 식 유형에 따라 `SqlGeometry` 또는 `SqlGeography` 공간 개체를 반환합니다. 에 대 한 자세한 내용은 `SqlGeometry` 및 `SqlGeography` 공간 데이터 형식을 참조 [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)합니다.  
+ 식 유형에 따라 `SqlGeometry` 또는 `SqlGeography` 공간 개체를 반환합니다. 에 대 한 자세한 내용은 `SqlGeometry` 하 고 `SqlGeography` 공간 데이터 형식을 참조 하십시오 [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)합니다.  
   
 ## <a name="remarks"></a>Remarks  
  식에 지정한 데이터 집합은 동일한 데이터 형식으로 구성되어야 합니다.  
@@ -58,7 +58,7 @@ Union(expression, scope, recursive)
   
 -   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
   
--   *식* 포함 되지 않아야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -67,7 +67,7 @@ Union(expression, scope, recursive)
  재귀 집계에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 표에서 예를 보여 줍니다. `SqlGeometry` 식 및 `Union` 결과 식을, 공간 데이터는 WKT (Well Known Text) 형식에 표시 된 것입니다.  
+ 다음 표에 예가 나와 `SqlGeometry` 식 및 `Union` 결과 식을, 공간 데이터는 WKT (Well Known Text) 형식으로 표시 합니다.  
   
 |공간 데이터가 포함된 필드|예제|Union 결과|  
 |-----------------------------|-------------|------------------|  
@@ -82,7 +82,7 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

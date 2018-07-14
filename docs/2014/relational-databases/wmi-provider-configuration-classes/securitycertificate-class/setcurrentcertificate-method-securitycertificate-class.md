@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dbc39c89311681026b190eb3032ce6a1ecc5981
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b406ecc02bcdf0466903beb71de9e633cc2d985c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191773"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 메서드(SecurityCertificate 클래스)
   현재 보안 인증서를 설정합니다.  
@@ -46,13 +46,13 @@ SHA , SQLInstance
   
 ## <a name="parts"></a>부분  
  *object*  
- Securitycertificate [SecurityCertificate 클래스]-class.md) 보안 인증서를 나타내는 개체입니다.  
+ [SecurityCertificate 클래스] securitycertificate-class.md) 보안 인증서를 나타내는 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*S H A*|필요한 보안 인증서의 SHA(Secure Hash Algorithm) 지문을 지정하는 문자열 값입니다.|  
+|*SHA*|필요한 보안 인증서의 SHA(Secure Hash Algorithm) 지문을 지정하는 문자열 값입니다.|  
 |*SQLInstance*|인증서가 필요한 인스턴스를 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

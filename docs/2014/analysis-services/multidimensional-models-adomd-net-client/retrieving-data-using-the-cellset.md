@@ -1,5 +1,5 @@
 ---
-title: 셀 집합을 사용 하 여 데이터를 검색 합니다. | Microsoft Docs
+title: CellSet을 사용 하 여 데이터를 검색 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cda35dc6151d17e1dad2d341337d67ef39d9f839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178900"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>CellSet을 사용하여 데이터 검색
   <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체에서는 분석 데이터 검색에 필요한 상호 작용 기능과 유연성을 제공합니다. <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 데이터의 원래 차원을 유지하는 기록 데이터 및 메타데이터의 메모리 내 캐시입니다. 또한 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 연결된 상태뿐 아니라 연결이 끊어진 상태에서도 이동할 수 있습니다. 연결이 끊어진 상태에서도 이동할 수 있으므로 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 순서에 상관 없이 데이터와 메타데이터를 보는 데 사용할 수 있으며 가장 종합적인 데이터 검색 개체 모델을 제공합니다. 이에 반해 연결이 끊어진 상태에서 이동하는 기능 때문에 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체는 오버헤드가 많아서 가장 느리게 채워지는 ADOMD.NET 데이터 검색 개체 모델입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36091394"
  이전 쿼리에서 반환된 XML을 로드하면 활성 연결 없이 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체를 사용하여 분석 데이터를 검색하는 종합적인 방법을 제공할 수 있습니다.  
   
 > [!NOTE]  
->  연결이 끊어진 상태에서는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체에서 사용 가능한 개체 속성이 모두 사용 가능하지는 않습니다. 자세한 내용은 참조 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>합니다.  
+>  연결이 끊어진 상태에서는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 개체에서 사용 가능한 개체 속성이 모두 사용 가능하지는 않습니다. 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>합니다.  
   
 ### <a name="example-of-retrieving-data-in-a-disconnected-state"></a>연결이 끊어진 상태에서 데이터 검색 예  
  다음 예제는 이 항목의 이전 예제인 메타데이터 및 데이터 예제와 비슷합니다. 그러나 다음 예제에서 명령은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> 호출로 실행되고 결과가 `System.Xml.XmlReader`로 반환됩니다. 그런 다음 이 `System.Xml.XmlReader`를 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 메서드와 함께 사용하여 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> 개체를 채웁니다. 이 예제에서는 `System.Xml.XmlReader`를 즉시 로드하지만 데이터를 셀 집합에 로드하기 전에 다른 방법을 사용하여 판독기에 포함된 XML을 하드 디스크에 캐시하거나 해당 데이터를 다른 응용 프로그램에 전송할 수도 있습니다.  

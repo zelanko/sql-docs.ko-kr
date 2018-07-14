@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6016ec6964ba7045cbad65913fe441b9e2ac38b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 657ab183836530888773b6709d2efbd75577ee37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177300"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 데이터 경고를 관리할 수 있도록 SharePoint 경고 담당자를 위한 데이터 경고 관리자가 제공됩니다. 경고 담당자는 사이트에 저장된 모든 경고에 대한 정보를 보고, 경고를 삭제할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 SharePoint 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.  

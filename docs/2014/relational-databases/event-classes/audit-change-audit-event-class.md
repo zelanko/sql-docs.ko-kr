@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Change Audit event class
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb94391f1e991b612c2b19a3e6c7f50ce06031d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 71e90f9b20603601e96981ac8aab37e615ad9d1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233403"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 이벤트 클래스
   **Audit Change Audit** 이벤트 클래스는 감사 추적을 수정할 때마다 발생합니다.  

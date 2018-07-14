@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95c1d2f98e89536b2875193b8dc00d9a7c0c189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d5fd5e94c8a92ee21b1cb04e5f9ef62eddae91f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206193"
 ---
 # <a name="lastprocessed-element-assl"></a>LastProcessed 요소(ASSL)
   부모 요소를 포함하는 데이터베이스가 마지막으로 처리된 시간을 나타내는 읽기 전용 타임스탬프를 포함합니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "36089391"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md), [차원](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md)를 [차원](../objects/dimension-element-assl.md)를 [MeasureGroup](../objects/group-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 인스턴스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 값을 유지 관리는 `LastProcessed` 요소입니다. 이 값은 부모 요소를 포함하는 데이터베이스가 처리되는 경우에만 변경됩니다. 부모 요소를 개별적으로 처리하면 `LastProcessed` 요소 값이 변경되지 않습니다.  
+ 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 값을 유지 관리는 `LastProcessed` 요소입니다. 이 값은 부모 요소를 포함하는 데이터베이스가 처리되는 경우에만 변경됩니다. 부모 요소를 개별적으로 처리하면 `LastProcessed` 요소 값이 변경되지 않습니다.  
   
  AMO(Analysis Management Objects) 개체 모델에서 `LastProcessed`의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup>, <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningStructure> 및 <xref:Microsoft.AnalysisServices.Partition>입니다.  
   

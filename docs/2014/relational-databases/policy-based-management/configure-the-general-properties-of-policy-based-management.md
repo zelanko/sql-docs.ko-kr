@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.PolicyManagement.f1
 helpviewer_keywords:
 - Policy-Based Management, configure properties
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262020eddeb920b79ad9e0b1eb08e7b1dd5c8ee8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e06b3431cee345d4cec6448fabe37ad6bbbd7476
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162344"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>정책 기반 관리의 일반 속성 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리에 대한 속성을 구성하는 방법에 대해 설명합니다.  

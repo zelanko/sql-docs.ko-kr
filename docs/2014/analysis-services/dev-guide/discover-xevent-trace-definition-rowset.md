@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2994ce526ff0f8035d16485bf99b146e2366389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bfb6747562f5f0c64d77aaceec1baa4f1bd6d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237693"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 행 집합
   서버에서 현재 활성 상태인 XEvent 추적에 대한 정보를 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36090765"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "36090765"
   
 ## <a name="see-also"></a>관련 항목  
  [XML for Analysis 스키마 행 집합](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
- [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; Services 분석을 모니터링 하려면](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; Services 분석을 모니터링 하려면](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; 모니터는 분석 서비스](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; 모니터는 분석 서비스](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

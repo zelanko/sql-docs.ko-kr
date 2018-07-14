@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dd3018910d3285ff833ef6e42ff8421e585669cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7acf39da6b68b353c4c659dd2ac641b1759f3ae4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216623"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS)
   보고서를 처음 실행할 때 데이터 영역에 있는 데이터의 정렬 순서를 변경하려면 데이터 영역 또는 그룹에서 정렬 식을 설정해야 합니다. 기본적으로 그룹의 정렬 식은 그룹 식과 같은 값으로 자동으로 설정됩니다.  

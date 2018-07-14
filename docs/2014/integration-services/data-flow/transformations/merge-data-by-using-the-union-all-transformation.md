@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging inputs [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 05a72777ee0244173d54f294d6c89411acb6126a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b113a2ca169ebc1f49a522d51800b09b9a30343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221813"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  

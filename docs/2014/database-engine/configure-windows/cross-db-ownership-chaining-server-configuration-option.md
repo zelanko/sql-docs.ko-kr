@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-database ownership chaining
 - cross db ownership chaining option
 - chaining ownership
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0eeedb591ad2a7f3330a9dae53f4982e16489b8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 719bab9cb337d035fccffb43e7ee74c550f1a89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197883"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining 서버 구성 옵션
   **cross db ownership chaining** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 데이터베이스 간 소유권 체인을 구성할 수 있습니다.  

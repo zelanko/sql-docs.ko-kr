@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f1d60cd5a256a13f56025454c37f64406467da02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c25013c90d6789cf8f7b4e640a5dc9027734cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207283"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙 동작은 비즈니스 규칙 조건 평가의 결과입니다. 조건이 True이면 동작이 시작됩니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
 - Transact-SQL debugger, supported versions
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33509006a58d65cb87c106572b6e68ba3621cca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1c8ab80ff9c697ac3f7a9a7eaa466e11d003adfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162214"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36091703"
 ## <a name="starting-and-stopping-the-debugger"></a>디버거 시작 및 중지  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 시작하기 위한 요구 사항은 다음과 같습니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 다른 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 원격 디버깅을 사용하도록 디버거가 구성되어 있어야 합니다. 자세한 내용은 참조 [TRANSACT-SQL 디버거 구성](configure-firewall-rules-before-running-the-tsql-debugger.md)합니다.  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 다른 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 원격 디버깅을 사용하도록 디버거가 구성되어 있어야 합니다. 자세한 내용은 [TRANSACT-SQL 디버거 구성](configure-firewall-rules-before-running-the-tsql-debugger.md)합니다.  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 sysadmin 고정 서버 역할의 멤버인 Windows 계정으로 실행해야 합니다.  
   

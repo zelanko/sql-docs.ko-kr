@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208193"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
   큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36093000"
   
      ![큐브 뷰 이름 열의 새 큐브 뷰](../../2014/tutorials/media/l9-perspectives-2.gif "큐브 뷰 이름 열의 새 큐브 뷰")  
   
-3.  큐브 뷰 이름을 `Internet Sales`합니다.  
+3.  큐브 뷰 이름을 `Internet Sales`입니다.  
   
 4.  다음 행에서 DefaultMeasure를 **Internet Sales-Sales Amount**로 설정합니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36093000"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  에 새 큐브 뷰의 이름을 변경 `Reseller Sales`합니다.  
+2.  에 새 큐브 뷰의 이름을 변경할 `Reseller Sales`합니다.  
   
 3.  **Reseller Sales-Sales Amount** 를 기본 측정값으로 설정합니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36093000"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  에 새 큐브 뷰의 이름을 변경 `Sales Summary`합니다.  
+2.  에 새 큐브 뷰의 이름을 변경할 `Sales Summary`합니다.  
   
     > [!NOTE]  
     >  계산 측정값은 기본 측정값으로 지정할 수 없습니다.  
@@ -174,19 +174,19 @@ ms.locfileid: "36093000"
   
 4.  다음 그림에 표시된 것처럼 Excel에서 분석에서 Excel에서 모델을 검색할 때 사용할 큐브 뷰를 선택하라는 메시지를 표시합니다.  
   
-     ![Internet Sales 큐브 뷰에 대 한 개체](../../2014/tutorials/media/l9-perspectives-3.gif "인터넷 판매 큐브 뷰에 대 한 개체")  
+     ![Internet Sales 큐브 뷰에 대 한 개체](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales 큐브 뷰 개체")  
   
 5.  또는 다음 그림에 표시된 것처럼 Windows 시작 메뉴에서 Excel을 시작하고 localhost의 Analysis Services 자습서 데이터베이스에 대한 연결을 정의하고 데이터 연결 마법사에서 큐브 뷰를 선택합니다.  
   
      ![Excel에서 데이터 연결 마법사](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel에서 데이터 연결 마법사")  
   
-6.  선택 `Internet Sales` 에 **관점** 나열 하 고 측정값과 차원을 메타 데이터 창에서 검토 합니다.  
+6.  선택 `Internet Sales` 에 **관점** 목록 및 측정값과 차원을 메타 데이터 창에서 검토 합니다.  
   
      Internet Sales 큐브 뷰에 대해 지정된 개체만 나타납니다.  
   
 7.  메타데이터 창에서 **Measures**를 확장합니다.  
   
-     공지만는 `Internet Sales` 측정값 그룹과 함께 함께 표시는 **Internet GPM** 및 **Internet Sales Ratio to All Products** 계산 멤버입니다.  
+     멤버만 합니다 `Internet Sales` 측정값 그룹만 표시 됩니다, 함께 사용 하 여는 **Internet GPM** 하 고 **Internet Sales Ratio to All Products** 계산 멤버입니다.  
   
 8.  모델에서 Excel을 다시 선택합니다. `Sales Summary`을(를) 선택합니다.  
   

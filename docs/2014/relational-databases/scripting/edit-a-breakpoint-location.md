@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c722d78d579d7468db74cbbd6ba8e10c57f782ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 93b4127793631aa9ea393bfa420ac82390023910
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186130"
 ---
 # <a name="edit-a-breakpoint-location"></a>중단점 위치 편집
   중단점 위치는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일에서 중단점이 나오는 줄과 문자를 지정합니다. 중단점 위치를 편집하여 중단점을 스크립트의 다른 위치나 다른 스크립트로 이동할 수 있습니다.  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Member element
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f612e2cff38d71a956a9f273feba54cb8a867ffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 318a54528ed5f9d22f0925ff10e0596413e47043
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217933"
 ---
 # <a name="member-element-xmla"></a>Member 요소(XMLA)
   부모 [Members](members-element-xmla.md) 또는 [Tuple](tuple-element-xmla.md) 요소의 단일 멤버를 나타냅니다.  

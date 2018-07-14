@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0c17514fda839a155dbe2f58f1e6b8c653b65ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cae7505f4ff135b9b1939dba39359feaed9458b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204633"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>사용자 정의 계층의 특성 간 특성 관계 지정
   이 자습서에서 이미 설명한 대로 특성 계층을 사용자 계층 안에 수준으로 구성하여 큐브 사용자를 위한 탐색 경로를 제공할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
@@ -188,7 +188,7 @@ ms.locfileid: "36090094"
  [알 수 없는 멤버 및 Null 처리 속성 정의](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 관계 정의](multidimensional-models/attribute-relationships-define.md)   
+ [특성 관계를 정의 합니다.](multidimensional-models/attribute-relationships-define.md)   
  [사용자 계층 속성](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

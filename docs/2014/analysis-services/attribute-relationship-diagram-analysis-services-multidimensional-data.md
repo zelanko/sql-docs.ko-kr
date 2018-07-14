@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a8d895599cf800b7ca0e6b882f3d1451800b0db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208123"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계 다이어그램(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **특성 관계** 탭의 도구 모음 바로 아래에 있는 창을 사용하여 특성 관계 다이어그램을 확인하고 특성 관계를 만들고 수정하고 삭제할 수 있습니다.  

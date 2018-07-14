@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac17b8e72209a25c1e8e213d775012e800ca35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 762006e2e5e6292fc17519894d74e6ca8f250472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239103"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
   계층 멤버 권한은 선택 사항이며 사용자에게 특정 멤버에 대한 제한된 액세스 권한을 부여하려는 경우에만 사용해야 합니다. **계층 멤버** 탭에서 아무 권한도 할당하지 않을 경우 사용자의 권한은 전적으로 **모델** 탭에서 할당한 권한을 기반으로 합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "36091097"
 > [!NOTE]  
 >  계층의 노드에 사용 권한을 할당하면 같은 수준 이상의 다른 모든 노드에 있는 모든 멤버는 암시적으로 거부됩니다.  
   
- **탐색기**에서는 멤버가 표시되는 모든 곳에 멤버 권한이 적용됩니다. 예를 들어 멤버가 **읽기 전용** 권한은 속해 있는 하 모든 엔터티, 계층 및 컬렉션에서 읽기 전용입니다.  
+ **탐색기**에서는 멤버가 표시되는 모든 곳에 멤버 권한이 적용됩니다. 예를 들어, 멤버 **읽기 전용** 속한 하 모든 엔터티, 계층 및 컬렉션에서 읽기 전용 권한입니다.  
   
  계층 멤버 권한은 할당 대상 모델 버전과 해당 버전의 모든 이후 복사본에 적용되며, 할당 대상 버전보다 이전 버전에는 적용되지 않습니다.  
   
 |사용 권한|Description|  
 |----------------|-----------------|  
-|**읽기 전용**|멤버가 표시되지만 사용자가 멤버를 변경할 수 없습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 없습니다.<br /><br /> 참고: 할당 하는 경우 **읽기 전용** 수 있는 권한을 **루트**, 아래에 있는 멤버 **루트** 은 읽기 전용입니다; 그러나 명시적 계층 및 컬렉션에서 이동할 수 멤버를 **루트** 새 멤버를 추가할 수 있습니다 및 **루트**합니다.|  
+|**읽기 전용**|멤버가 표시되지만 사용자가 멤버를 변경할 수 없습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 없습니다.<br /><br /> 참고: 할당 하는 경우 **읽기 전용** 권한을 **루트**, 아래에 있는 멤버 **루트** 는 읽기 전용입니다; 단, 명시적 계층 및 컬렉션에서 이동할 수 멤버 **루트** 새 멤버를 추가할 수 있습니다 **루트**입니다.|  
 |**Update**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
 |**거부**|멤버가 표시되지 않습니다.|  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36091097"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>멤버가 여러 계층에 속한 경우  
  둘 이상의 계층이 같은 멤버를 포함할 수 있습니다.  
   
--   한 계층 노드에 할당 된 경우 **업데이트** 권한과 다른 할당 된 **읽기 전용**, 노드의 멤버 권한은 **읽기 전용**합니다.  
+-   한 계층 노드에 할당 되 면 **업데이트** 권한과 다른 할당 된 **읽기 전용**, 노드의 멤버 권한은 **읽기 전용**합니다.  
   
--   한 계층 노드에 할당 된 경우 **업데이트** 또는 **읽기 전용** 사용 권한 및 다른 노드에 할당 된 **Deny**, 다음 노드의 멤버가 표시 되지 않습니다.  
+-   한 계층 노드에 할당 되 면 **업데이트** 또는 **읽기 전용** 권한과 다른 노드에 할당 됩니다 **거부**, 다음 노드의 멤버가 표시 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [계층 멤버 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방식 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [계층&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
  [멤버 권한 즉시 적용 &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  

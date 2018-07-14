@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217833"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름을 완료한 후 다음 태스크는 변경 데이터를 검색하는 테이블 반환 함수를 만드는 것입니다. 첫 번째 증분 로드 전에 이 함수를 한 번만 만들면 됩니다.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>테이블 반환 함수 직접 작성  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 변경 데이터 캡처 쿼리 함수를 호출하는 테이블 반환 함수를 직접 작성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수도 있습니다. TRANSACT-SQL 함수를 만드는 방법에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)을 참조하세요.  
   
- 다음 예에서는 지정한 변경 간격 동안 Customer 테이블에서 변경 내용을 검색하는 테이블 반환 함수를 정의합니다. 이 함수 사용 하 여 변경 데이터 캡처 함수에 매핑하는 `datetime` 값을 이진 로그 시퀀스 번호 (LSN) 값을 변경 테이블에는 내부적으로 사용 합니다. 또한 이 함수는 다음과 같은 몇 가지 특수 상황을 처리합니다.  
+ 다음 예에서는 지정한 변경 간격 동안 Customer 테이블에서 변경 내용을 검색하는 테이블 반환 함수를 정의합니다. 이 함수는 변경 데이터 캡처 함수에 매핑하는 `datetime` 값이 이진 로그 시퀀스 번호 (LSN) 값을 변경 테이블은 내부적으로 사용 합니다. 또한 이 함수는 다음과 같은 몇 가지 특수 상황을 처리합니다.  
   
 -   시작 시간에 대해 Null 값이 전달되는 경우 이 함수는 사용할 수 있는 가장 오래된 값을 사용합니다.  
   

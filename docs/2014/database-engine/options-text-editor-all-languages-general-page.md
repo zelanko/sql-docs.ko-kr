@@ -1,5 +1,5 @@
 ---
-title: 옵션 (텍스트 편집기 모든 언어-일반 페이지) | Microsoft Docs
+title: 옵션 (텍스트 편집기-모든 언어-일반 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189080"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>옵션(텍스트 편집기 - 모든 언어 - 일반 페이지)
   이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 일반 편집 옵션을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **일반**을 클릭합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36091130"
 > [!NOTE]  
 >  이러한 줄 번호는 코드에 추가되거나 인쇄되지 않으며 참조용으로만 사용됩니다.  
   
- **단일 클릭으로 URL 탐색**  
+ **한 번 클릭으로 URL 탐색**  
  편집기에서 커서를 URL 위로 가져갈 때 가리키는 손 모양 기호로 커서를 변경합니다. URL을 클릭하면 웹 브라우저에 해당 페이지를 표시할 수 있습니다.  
   
  **탐색 모음**  

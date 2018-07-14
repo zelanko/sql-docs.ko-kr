@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XDR schemas [SQL Server]
 - inline XDR schema generation [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 00ef9ba22e2923700e75cd7c38bc7e68a716da5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 136eb4624680d6a372d36313216ad54ee17beb07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212563"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>인라인 XDR 스키마 생성
   FOR XML의 **XMLDATA** 지시어는 쿼리 결과와 함께 인라인 XDR 스키마를 반환합니다. 하지만 XDR 스키마는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 제공되는 새로운 데이터 형식과 기타 향상된 기능 중 일부를 지원하지 않습니다. 대신 [XMLSCHEMA](generate-an-inline-xsd-schema.md)지시어를 사용하여 인라인 XSD 스키마를 요청할 수 있습니다.  

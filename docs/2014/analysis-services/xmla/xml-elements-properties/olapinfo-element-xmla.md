@@ -25,18 +25,18 @@ helpviewer_keywords:
 - OlapInfo element
 ms.assetid: 8828fdd7-c0f7-48ce-a0d0-ab4bc1a995cf
 caps.latest.revision: 27
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9b183bfa01d2e4060c38fa2768f63b21fff693e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0d1665a174cdff0d4afcd8bea69b9bdca9212d9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178390"
 ---
 # <a name="olapinfo-element-xmla"></a>OlapInfo 요소(XMLA)
-  에 포함 된 축 및 셀 메타 데이터를 포함 한 [루트](root-element-xmla.md) 요소를 사용 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.  
+  에 포함 된 축 및 셀 메타 데이터를 포함을 [루트](root-element-xmla.md) 사용 하는 요소는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36172030"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[root](root-element-xmla.md)|  
-|자식 요소|[AxesInfo](axesinfo-element-xmla.md), [CellInfo](cellinfo-element-xmla.md), [CubeInfo](cubeinfo-element-xmla.md)|  
+|자식 요소|[AxesInfo](axesinfo-element-xmla.md)하십시오 [CellInfo](cellinfo-element-xmla.md), [CubeInfo](cubeinfo-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `OLAPInfo` 데이터 형식을 사용하는 `root` 요소의 `MDDataSet` 섹션은 큐브에 대한 메타데이터, 다차원 결과의 축 및 결과에 포함된 셀의 속성을 제공합니다.  

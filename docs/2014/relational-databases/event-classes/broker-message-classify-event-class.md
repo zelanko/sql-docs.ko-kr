@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Message Classify event class
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5cfb54eb1ce98b899b4745009725b8301fdc2921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6097a06f1a239dc6e3af181ba983c5575567cbbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225619"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker가 메시지 라우팅을 확인하면 **Broker:Message Classify** 이벤트를 생성합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36090911"
 |**DatabaseID**|**int**|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 실행된 USE *database* 문이 없는 경우 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Message Classify** 의 경우 항상 **141**입니다.|27|아니요|  
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **Local**: 선택한 경로에 주소 LOCAL이 있습니다.<br /><br /> **원격**: 선택한 경로 LOCAL 이외의 주소가 있습니다.<br /><br /> **지연 된**: 전달이 비활성화 되거나 일치 하는 경로가 없기 때문에 메시지가 지연 됩니다.|21|예|  
+|**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **Local**: 선택한 경로에 주소 LOCAL이 있습니다.<br /><br /> **원격**: 선택한 경로 LOCAL 이외의 주소가 있습니다.<br /><br /> **지연**: 전달이 비활성화 되거나 일치 하는 경로가 없기 때문에 메시지가 지연 됩니다.|21|예|  
 |**FileName**|**nvarchar**|메시지가 전송되는 서비스 이름입니다.|36|아니요|  
 |**GUID**|**uniqueidentifier**|대화의 대화 ID입니다. 이 식별자는 메시지의 일부로 전송되며 양쪽 대화 상대 간에 공유합니다.|54|아니요|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

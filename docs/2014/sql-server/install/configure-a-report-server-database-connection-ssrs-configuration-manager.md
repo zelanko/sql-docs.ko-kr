@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208553"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
   각 보고서 서버 인스턴스에는 보고서 서버에서 관리하는 보고서, 보고서 모델, 공유 데이터 원본, 리소스 및 메타데이터를 저장하는 보고서 서버 데이터베이스에 대한 연결이 필요합니다. 기본 구성을 설치하는 경우 보고서 서버를 설치하는 동안 초기 연결을 만들 수 있습니다. 대부분의 경우 설치를 완료한 다음에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 구성합니다. 언제라도 연결을 수정하여 계정 유형을 변경하거나 자격 증명을 다시 설정할 수 있습니다. 데이터베이스를 만들고 연결을 구성하기 위한 단계별 지침은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
@@ -57,7 +57,7 @@ ms.locfileid: "36090594"
   
 -   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름  
   
--   보고서 서버 데이터베이스의 이름. 처음으로 연결을 만드는 경우 보고서 서버 데이터베이스를 새로 만들거나 기존 데이터베이스를 선택할 수 있습니다. 자세한 내용은 참조 [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)합니다.  
+-   보고서 서버 데이터베이스의 이름. 처음으로 연결을 만드는 경우 보고서 서버 데이터베이스를 새로 만들거나 기존 데이터베이스를 선택할 수 있습니다. 자세한 내용은 [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)합니다.  
   
 -   자격 증명 유형. 서비스 계정, Windows 도메인 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용할 수 있습니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36090594"
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
   
- 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. (즉, 서비스 계정 연결을 만들)에서 기본값을 사용 하 여 연결을 구성 하는 경우 <`LogonUser`>, <`LogonDomain`>, 및 <`LogonCred`>가 비게 됩니다 다음과 같습니다.  
+ 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. (사용 하 여 서비스 계정을 연결을 만드는 데) 기본값을 사용 하 여 연결을 구성 하는 경우 <`LogonUser`>, <`LogonDomain`>, 및 <`LogonCred`> 같이 비어 있게 됩니다.  
   
 ```  
 <Dsn></Dsn>  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22d9e7f6a9d78093287c146f007a9a722343baea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5bc369f74b77db20a9f7766f8bce0bc93e510bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242863"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>유사한 데이터 일치(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 DQS(Data Quality Services) 기능을 사용하여 데이터의 유사성을 찾을 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36088442"
   
 ## <a name="prerequisites"></a>사전 요구 사항  
   
--   MDS 관리 데이터가 포함된 워크시트가 있어야 합니다. 자세한 내용은 참조 [mds Excel로 데이터 로드](export-data-to-excel-from-master-data-services.md)합니다.  
+-   MDS 관리 데이터가 포함된 워크시트가 있어야 합니다. 자세한 내용은 [Excel에 MDS에서 데이터 로드](export-data-to-excel-from-master-data-services.md)합니다.  
   
 -   (선택 사항) 유사성을 검사하기 전에 다른 데이터와 MDS 관리 데이터를 결합할 수 있습니다. 자세한 내용은 [데이터 결합&#40;Excel용 MDS 추가 기능&#41;](combine-data-mds-add-in-for-excel.md)을 참조하세요.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36088442"
 -   추가 정보를 보고 어떤 데이터가 비슷한지 결정합니다. 자세한 내용은 [데이터 품질 일치 열&#40;Excel용 MDS 추가 기능&#41;](data-quality-matching-columns-mds-add-in-for-excel.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 품질 일치 MDS에 추가 기능 Excel 용](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [데이터 품질 일치 MDS 추가 기능에서 Excel에 대 한](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [데이터 일치](../../data-quality-services/data-matching.md)  
   
   

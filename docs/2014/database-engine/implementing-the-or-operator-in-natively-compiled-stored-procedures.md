@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 562917bdb9cad0fd8471d97663e01616091ce475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce9b8660fa52d2a09302b51b0f95e368071caa4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228183"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 OR 연산자 구현
   OR 연산자는 고유하게 컴파일된 저장 프로시저의 쿼리 조건자에서 지원되지 않습니다. NOT 연산자도 고유하게 컴파일된 저장 프로시저의 쿼리 조건자에서 지원되지 않으므로 동등한 논리 연산자만 사용하여 OR 연산자를 시뮬레이션할 수 없습니다. 그러나 메모리 최적화 테이블 변수를 통해 OR 연산자의 효과를 시뮬레이션할 수 있습니다.  

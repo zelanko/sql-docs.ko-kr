@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae51d176ecef04060c58be629b72fe867cd51960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f5e645098da53c720d37814b4dc4dbfe6f1c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169554"
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES 행 집합
   클라이언트가 테이블 형식 또는 SharePoint 모드에서 실행되는 Analysis Services 데이터베이스에 포함된 테이블을 확인할 수 있도록 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_STORAGE_TABLES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_STORAGE_TABLES` 행 집합에는 다음 열을 포함 합니다.  
   
 |**열 이름**|**유형 표시기**|**길이**|**설명**|  
 |---------------------|------------------------|----------------|---------------------|  

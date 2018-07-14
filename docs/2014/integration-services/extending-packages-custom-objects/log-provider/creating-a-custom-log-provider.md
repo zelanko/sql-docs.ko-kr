@@ -19,13 +19,13 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f043459fc065c69ac8ee613e6c007c98709be145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f5b6e73501e4b047e7f61fe6f256a6f215cb583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206023"
 ---
 # <a name="creating-a-custom-log-provider"></a>사용자 지정 로그 공급자 만들기
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 환경에는 광범위한 로깅 기능이 있습니다. 로그를 사용하면 패키지를 실행하는 동안 발생하는 이벤트를 캡처할 수 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 XML, 텍스트, 데이터베이스, Windows 이벤트 로그 등의 다양한 형식으로 로그를 만들고 저장하는 데 사용할 수 있는 다양한 로그 공급자가 포함되어 있습니다. 이러한 공급자 또는 출력 형식이 요구 사항에 맞지 않을 경우에는 사용자 지정 로그 공급자를 만들 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36090235"
 >  대부분의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 로그 공급자에는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>를 구현하며 **SSIS 로그 구성** 대화 상자의 **구성** 텍스트 상자를 사용 가능한 연결 관리자의 필터링된 드롭다운 목록으로 바꾸는 사용자 지정 사용자 인터페이스가 있습니다. 그러나 사용자 지정 로그 공급자의 사용자 지정 사용자 인터페이스는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에 구현되어 있지 않습니다.  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>DtsLogProvider 특성 적용  
- 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 특성을 적용하여 해당 클래스를 로그 공급자로 식별합니다. 이 특성은 로그 공급자의 이름 및 설명 같은 디자인 타임 정보를 제공합니다. `DisplayName` 및 `Description` 특성의 속성에 해당 하는 **이름** 및 `Description` 에 표시 된 열은 **SSIS 로그 구성** 편집기를 선택할 때 표시 된 패키지에 대 한 로깅을 구성 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]합니다.  
+ 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 특성을 적용하여 해당 클래스를 로그 공급자로 식별합니다. 이 특성은 로그 공급자의 이름 및 설명 같은 디자인 타임 정보를 제공합니다. `DisplayName` 및 `Description` 특성의 속성에 해당 하는 **이름** 및 `Description` 에 표시 된 열을 **SSIS 로그 구성** 편집기를 선택할 때 표시 된 패키지에 대 한 로깅 구성 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]합니다.  
   
 > [!IMPORTANT]  
 >  이 특성의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> 속성은 사용되지 않습니다. 그러나 이 속성을 설정하지 않으면 사용 가능한 로그 공급자 목록에 해당 사용자 지정 로그 공급자가 표시되지 않으므로 이 속성 값을 반드시 입력해야 합니다.  
@@ -78,7 +78,7 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>사용자 지정 로그 공급자 빌드, 배포 및 디버깅  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 사용자 지정 로그 공급자의 빌드, 배포 및 디버깅 단계는 다른 형식의 사용자 지정 개체에 대해 필요한 단계와 매우 비슷합니다. 자세한 내용은 [사용자 지정 개체 빌드, 배포 및 디버그](../building-deploying-and-debugging-custom-objects.md)를 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 지정 로그 공급자 코딩](coding-a-custom-log-provider.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209173"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
   보안을 강화하기 위해 처음 설치 시에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer, Express 및 Evaluation 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 다른 컴퓨터에서 액세스할 수 없습니다. 이 단원에서는 다른 컴퓨터에서 연결하기 위해 프로토콜을 설정하고 포트를 구성하며 Windows 방화벽을 구성하는 방법을 보여 줍니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36090657"
     > [!NOTE]  
     >  32비트 및 64비트 옵션을 모두 사용할 수 있습니다.  
   
-2.  **SQL Server 구성 관리자**를 확장 하 고 **SQL Server 네트워크 구성**, 클릭 하 고 **에 대 한 프로토콜**  *\<InstanceName >* 합니다.  
+2.  **SQL Server 구성 관리자**를 확장 하 고 **SQL Server 네트워크 구성**를 클릭 하 고 **에 대 한 프로토콜**  *\<InstanceName >* 합니다.  
   
      기본 인스턴스(명명되지 않은 인스턴스)는 **MSSQLSERVER**로 나열됩니다. 명명된 인스턴스를 설치한 경우 제공한 이름이 나열됩니다. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 는 설치하는 동안 이름을 변경하지 않는 한 **SQLEXPRESS**로 설치됩니다.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "36090657"
   
 3.  **TCP/IP 속성** 대화 상자에서 **IP 주소** 탭을 클릭합니다.  
   
-4.  **IPAll** 섹션의 **TCP 포트** 상자에 사용 가능한 포트 번호를 입력합니다. 이 자습서를 사용 합니다 `49172`합니다.  
+4.  **IPAll** 섹션의 **TCP 포트** 상자에 사용 가능한 포트 번호를 입력합니다. 이 자습서에서는 사용 `49172`합니다.  
   
 5.  **확인** 을 클릭하여 대화 상자를 닫고 서비스를 다시 시작해야 한다는 경고에 대해 **확인** 을 클릭합니다.  
   
 6.  왼쪽 창에서 **SQL Server 서비스**를 클릭하고  
   
-7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. 경우는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 포트에서 수신 합니다를 다시 시작 하면 `49172`합니다.  
+7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. 경우는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 포트에서 수신를 다시 시작 하면 `49172`합니다.  
   
 ##  <a name="firewall"></a> 방화벽에서 포트 열기  
  방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽이 설정된 경우 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하려면 방화벽에서 포트를 열어야 합니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "36090657"
   
 3.  **규칙 유형** 대화 상자에서 **포트**를 선택한 다음 **다음**을 클릭합니다.  
   
-4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 포트 번호를 입력합니다. 기본 인스턴스의 경우 1433을 입력합니다. 형식 `49172` 명명된 된 인스턴스를 구성 하는 경우에 이전 작업에서 고정된 포트를 구성 합니다. **다음**을 클릭합니다.  
+4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 포트 번호를 입력합니다. 기본 인스턴스의 경우 1433을 입력합니다. 형식 `49172` 명명된 된 인스턴스를 구성 하는 경우 이전 태스크에서 고정된 포트를 구성 합니다. **다음**을 클릭합니다.  
   
 5.  **동작** 대화 상자에서 **연결 허용**을 선택한 다음 **다음**을 클릭합니다.  
   

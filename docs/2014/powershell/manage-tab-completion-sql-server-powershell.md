@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 96eb376791d1b30fb73d834733de07df8a46c64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a3f19a5c197eb519aa9e78a0d99d7e88132da123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231433"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>탭 완성 기능 관리(SQL Server PowerShell)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인에 도입 된 3 개의 변수 (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, 및 `$SqlServerIncludeSystemObjects`) Windows PowerShell 탭 완성 기능을 제어 합니다. 탭 완성 기능은 이름이 입력한 문자열로 시작하는 항목의 테이블을 반환하여 사용자 입력을 줄여 줍니다.  
+  합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인에 도입 된 3 개의 변수 (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, 및 `$SqlServerIncludeSystemObjects`) Windows PowerShell 탭 완성 기능을 제어 합니다. 탭 완성 기능은 이름이 입력한 문자열로 시작하는 항목의 테이블을 반환하여 사용자 입력을 줄여 줍니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  Windows PowerShell 탭 완성 기능을 사용하는 경우 특정 경로나 cmdlet 이름의 일부를 입력한 후 Tab 키를 누르면 입력한 이름과 일치하는 항목의 목록을 가져올 수 있습니다. 그런 다음 나머지 이름을 입력하지 않고 목록에서 원하는 항목을 선택할 수 있습니다.  

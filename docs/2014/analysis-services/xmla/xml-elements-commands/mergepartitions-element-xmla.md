@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MergePartitions command
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 80f94365da716e08c50a2b3e0ce8df82132ea99e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64d6352cd0c5a0cb7a408722b501dd62a0d47e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226383"
 ---
 # <a name="mergepartitions-element-xmla"></a>MergePartitions 요소(XMLA)
   하나 이상의 원본 파티션의 데이터를 대상 파티션에 병합한 다음 원본 파티션을 삭제합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36089389"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[소스](../xml-elements-properties/sources-element-xmla.md), [대상](../xml-elements-properties/target-element-xmla.md)|  
+|자식 요소|[원본](../xml-elements-properties/sources-element-xmla.md), [대상](../xml-elements-properties/target-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `Sources` 및 `Target` 요소의 모든 개체 참조는 동일한 측정값 그룹의 서로 다른 파티션을 가리켜야 합니다. 그렇지 않으면 오류가 발생합니다.  

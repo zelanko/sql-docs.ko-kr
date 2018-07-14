@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef845a4c77a66ad1c59a0bdad527856a86849de9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202303"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>MembersWithDataCaption 요소(ASSL)
   시스템 생성 데이터 멤버에 대한 캡션을 만드는 데 사용되는 템플릿 문자열을 제공합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "36091367"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 값은 `MembersWithDataCaption` 요소 부모 특성에만 사용 됩니다 (의 값 즉,는 [사용](usage-element-dimensionattribute-assl.md) 의 요소는 `DimensionAttribute` 로 설정 된 부모 *부모*) 확인 하는 부모 특성의 데이터 멤버의 캡션입니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](../../multidimensional-models/parent-child-dimension-attributes.md)을 참조하세요.  
+ 값을 `MembersWithDataCaption` 요소는 부모 특성에만 사용 됩니다 (값 즉,를 [사용](usage-element-dimensionattribute-assl.md) 요소의 `DimensionAttribute` 부모 요소가로 설정 되어 *부모*) 결정할를 부모 특성의 데이터 멤버의 캡션입니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](../../multidimensional-models/parent-child-dimension-attributes.md)을 참조하세요.  
   
- 부모에 해당 하는 요소 `MembersWithDataCaption` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributeTranslation> 및 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `MembersWithDataCaption` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.AttributeTranslation> 및 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [MembersWithData 요소 &#40;ASSL&#41;](../objects/data-element-assl.md)   

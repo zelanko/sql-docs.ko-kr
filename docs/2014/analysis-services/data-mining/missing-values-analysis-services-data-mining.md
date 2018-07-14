@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a17112244a037c82e6c2df57a613be99a1c6844
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fb5e69c5f65dc92345a3e8b6f33b2c59136d3fef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220473"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
   *누락 값* 을 올바르게 처리하는 것은 효과적인 모델링을 위해 매우 중요합니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "36093214"
 ## <a name="calculation-of-the-missing-state"></a>누락 상태 계산  
  데이터 마이닝 알고리즘에서는 누락 값이 정보입니다. 사례 테이블에서 `Missing`은 다른 상태와 마찬가지로 유효한 상태입니다. 또한 데이터 마이닝 모델에서는 다른 값을 사용하여 값의 누락 여부를 예측할 수 있습니다. 즉, 값이 누락된 사실이 오류로 간주되지 않습니다.  
   
- 마이닝 모델을 만들 때 한 `Missing` 상태가 모든 불연속 열에 대 한 모델에 자동으로 추가 됩니다. 예를 들어 [Gender] 입력된 열에 Male 및 Female 이며 두 가지 값을 포함 하는 경우 세 번째 값은 자동으로 나타내는 추가 `Missing` 값 및 열 수를 항상 포함에 대 한 모든 값의 분포를 보여 주는 히스토그램 이 있는 사례 `Missing` 값입니다. Gender 열에 누락된 값이 없는 경우 히스토그램은 0개의 사례에서 누락 상태가 발견되었음을 보여 줍니다.  
+ 마이닝 모델을 만들 때는 `Missing` 상태가 모든 불연속 열에 대 한 모델에 자동으로 추가 됩니다. 예를 들어 [Gender] 입력된 열에 Male과 Female 두 가지 값을 포함 하는 경우 세 번째 값은 나타내는 자동으로 추가 된 `Missing` 값 및 열 개수를 항상 포함에 대 한 모든 값의 분포를 보여 주는 히스토그램 있는 사례의 `Missing` 값입니다. Gender 열에 누락된 값이 없는 경우 히스토그램은 0개의 사례에서 누락 상태가 발견되었음을 보여 줍니다.  
   
- 데이터에 가능한 값의 예가 모두 포함되지 않을 수도 있다고 생각하고, 데이터에 예가 없다는 이유만으로 모델에서 가능성을 배제하려고 하지 않는 경우에는 기본적으로 `Missing` 상태를 포함하는 것이 좋습니다. 예를 들어 어떤 매장의 판매 데이터에서 특정 제품을 구입한 고객 전체가 여성임을 나타낸다고 해서 여성만 해당 제품을 구입할 수 있다고 예측하는 모델을 만들려고 하지는 않을 것입니다. 대신, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 라는 추가 알 수 없는 값에 대 한 자리 표시자를 추가 `Missing`, 가능한 수용 하는 방법으로 다른 상태입니다.  
+ 데이터에 가능한 값의 예가 모두 포함되지 않을 수도 있다고 생각하고, 데이터에 예가 없다는 이유만으로 모델에서 가능성을 배제하려고 하지 않는 경우에는 기본적으로 `Missing` 상태를 포함하는 것이 좋습니다. 예를 들어 어떤 매장의 판매 데이터에서 특정 제품을 구입한 고객 전체가 여성임을 나타낸다고 해서 여성만 해당 제품을 구입할 수 있다고 예측하는 모델을 만들려고 하지는 않을 것입니다. 대신 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 라는 추가 알 수 없는 값에 대 한 자리 표시자를 추가 `Missing`, 수용 가능한 방법으로 다른 상태입니다.  
   
  예를 들어 다음 표에서는 Bike Buyer 자습서에서 사용하기 위해 만든 의사 결정 트리 모델에 있는 (All) 노드에 대한 값의 분포를 보여 줍니다. 예제 시나리오에서 [Bike Buyer] 열은 예측 가능한 특성이며, 여기서 1은 "예"를 나타내고 0은 "아니요"를 나타냅니다.  
   
@@ -58,15 +58,15 @@ ms.locfileid: "36093214"
 |1|9098|  
 |Missing|0|  
   
- 이 분포는 고객의 절반 정도는 자전거를 구입했고 나머지 절반은 구입하지 않았음을 보여 줍니다. 이 특정 데이터 집합은 아주 간결하여 모든 사례의 [Bike Buyer] 열에 값이 있고 `Missing` 값의 수가 0입니다. 그러나 어떤 경우 [Bike Buyer] 필드에 null이 있으면, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 행 가진 사례로 간주는 `Missing` 값입니다.  
+ 이 분포는 고객의 절반 정도는 자전거를 구입했고 나머지 절반은 구입하지 않았음을 보여 줍니다. 이 특정 데이터 집합은 아주 간결하여 모든 사례의 [Bike Buyer] 열에 값이 있고 `Missing` 값의 수가 0입니다. 그러나 모든 경우 [Bike Buyer] 필드에 null이 있으면, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 행 가진 사례로 간주는 `Missing` 값입니다.  
   
- 입력이 연속 열인 경우 모델 표 형식으로 만듭니다는 특성에 대 한 두 가지 가능한 상태: `Existing` 및 `Missing`합니다. 즉, 열에 숫자 데이터 형식 값이 포함되거나 값이 포함되지 않습니다. 값이 있는 사례의 경우 모델은 평균, 표준 편차 및 기타 의미 있는 통계를 계산합니다. 값이 없는 경우에 대 한 모델의 개수를 제공는 `Missing` 값 고 그에 따라 예측을 조정 합니다. 예측을 조정하는 방법은 알고리즘에 따라 다르며 다음 섹션에 설명되어 있습니다.  
+ 입력이 연속 열인 경우 모델 특성에 대 한 두 가지 가능한 상태를 표로 작성 합니다. `Existing` 고 `Missing`입니다. 즉, 열에 숫자 데이터 형식 값이 포함되거나 값이 포함되지 않습니다. 값이 있는 사례의 경우 모델은 평균, 표준 편차 및 기타 의미 있는 통계를 계산합니다. 값이 없는 경우 모델의 수를 제공 합니다 `Missing` 값 및 예측을 적절 하 게 조정 합니다. 예측을 조정하는 방법은 알고리즘에 따라 다르며 다음 섹션에 설명되어 있습니다.  
   
 > [!NOTE]  
 >  중첩 테이블에 있는 특성의 경우에는 누락 값이 정보를 제공하지 못합니다. 예를 들어 고객이 제품을 구입하지 않은 경우 중첩 **Products** 테이블에는 해당 제품에 해당하는 행이 없으며 마이닝 모델에서 누락 제품에 대한 특성을 만들지 않습니다. 그러나 특정 제품을 구입하지 않은 고객에게 관심이 있는 경우 모델 필터에 NOT EXISTS 문을 사용하여 중첩 테이블에 존재하지 않는 제품을 기준으로 필터링된 모델을 만들 수 있습니다. 자세한 내용은 [마이닝 모델에 필터 적용](apply-a-filter-to-a-mining-model.md)을 참조하세요.  
   
 ## <a name="adjusting-probability-for-missing-states"></a>누락 상태에 대한 확률 조정  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 값의 개수를 계산할 뿐 아니라 데이터 집합 값의 확률도 계산합니다. 에 마찬가지입니다는 `Missing` 값입니다. 예를 들어 다음 표에서는 위의 예에 있는 사례에 대한 확률을 보여 줍니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 값의 개수를 계산할 뿐 아니라 데이터 집합 값의 확률도 계산합니다. 같은 기준이 `Missing` 값입니다. 예를 들어 다음 표에서는 위의 예에 있는 사례에 대한 확률을 보여 줍니다.  
   
 |값|사례|Probability|  
 |-----------|-----------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "36093214"
 |1|9098|49.42%|  
 |Missing|0|0.03%|  
   
- 홀수 보일 수 있지만 하의 확률은 `Missing` 사례 수가 0 인 경우 값은 0.03%로 계산 합니다. 사실 이 동작은 의도적으로 설계된 동작이며 모델에서 알 수 없는 값을 정상적으로 처리할 수 있도록 하는 조정을 나타냅니다.  
+ 아 할 수 있습니다 하는 확률을 `Missing` 사례 수가 0 인 경우 값은 0.03%로 계산 합니다. 사실 이 동작은 의도적으로 설계된 동작이며 모델에서 알 수 없는 값을 정상적으로 처리할 수 있도록 하는 조정을 나타냅니다.  
   
  일반적으로 확률은 긍적적인 사례 수를 모든 가능한 사례 수로 나누어 계산됩니다. 이 예에서 알고리즘은 특정 조건([Bike Buyer] = 1 또는 [Bike Buyer] = 0)을 만족하는 사례 수의 합계를 계산한 다음 해당 숫자를 총 행 수로 나눕니다. 그러나 `Missing` 사례를 고려하기 위해 모든 가능한 사례 수에 1이 추가됩니다. 따라서 알 수 없는 사례에 대한 확률이 더 이상 0은 아니지만 아주 작은 숫자입니다. 이는 거의 희박하지만 발생할 가능성이 있는 상태임을 나타냅니다.  
   

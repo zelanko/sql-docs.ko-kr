@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca326118ce782962b0100c310ddb308af91f21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241363"
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission 요소(ASSL)
-  기본 사용 권한을 정의 [DataSource](../data-type/datasource-data-type-assl.md) 는 특정 데이터 형식을 [역할](role-element-assl.md) 요소입니다.  
+  기본 사용 권한을 정의 [데이터 원본](../data-type/datasource-data-type-assl.md) 특정 데이터 형식 [역할](role-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36091157"
  `DataSourcePermission` 개체는 데이터베이스가 소유한 역할에 대해서만 존재할 수 있습니다. 모든 역할에 대해 `DataSourcePermission` 개체는 하나만 존재할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Role 요소 &#40;ASSL&#41;](role-element-assl.md)   
+ [역할 요소 &#40;ASSL&#41;](role-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   
   

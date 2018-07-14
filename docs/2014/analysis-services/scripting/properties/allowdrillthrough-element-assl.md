@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5ee132903b98c616ce756b423455302ca6e65f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178870"
 ---
 # <a name="allowdrillthrough-element-assl"></a>AllowDrillThrough 요소(ASSL)
   부모 요소에서 드릴스루가 허용되는지 여부를 결정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36091608"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[MiningModel 요소](../objects/miningmodel-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)|  
+|부모 요소|[MiningModel 요소](../objects/miningmodel-element-assl.md)하십시오 [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -78,7 +78,7 @@ ms.locfileid: "36091608"
  `SELECT StructureColumn('<structure-column-name>') FROM <model>.CASES`  
   
 ## <a name="see-also"></a>관련 항목  
- [Role 요소 &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [역할 요소 &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

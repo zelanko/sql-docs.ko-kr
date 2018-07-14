@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86d7c0aeec81133a2bfdc8e5d30bd962a5c7cce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236013"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>교차 유효성 검사(Analysis Services - 데이터 마이닝)
   *교차 유효성 검사*는 분석의 표준 도구이며 데이터 마이닝 모델 개발 및 미세 조정에 도움이 되는 중요한 기능입니다. 마이닝 구조 및 관련 마이닝 모델을 만든 후 교차 유효성 검사를 사용하여 모델의 유효성을 확인합니다.  교차 유효성 검사는 다음과 같이 적용됩니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36092308"
   
  다음 다이어그램의 예에서는 3개의 접기가 지정된 경우의 데이터 사용을 보여 줍니다.  
   
- ![교차 유효성 검사 데이터를 분할 하는 방법을](../media/xvoverviewmain.gif "교차 유효성 검사 데이터를 분할 하는 방법")  
+ ![교차 유효성 검사 데이터를 분할 하는 방법](../media/xvoverviewmain.gif "교차 유효성 검사 데이터를 분할 하는 방법")  
   
  위 다이어그램의 시나리오에서 마이닝 구조에는 테스트에 사용되는 홀드아웃 데이터 집합이 포함되어 있지만 테스트 데이터 집합은 교차 유효성 검사에 포함되지 않았습니다. 따라서 마이닝 구조 데이터의 70%인 학습 데이터 집합의 모든 데이터가 교차 유효성 검사에 사용됩니다. 교차 유효성 검사 보고서에는 각 파티션에 사용된 총 사례 수가 표시됩니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36092308"
 ### <a name="choosing-models-and-columns-to-validate"></a>유효성을 검사할 모델 및 열 선택  
  데이터 마이닝 디자이너의 **교차 유효성 검사** 탭을 사용할 때는 먼저 목록에서 예측 가능한 열을 선택해야 합니다. 일반적으로 마이닝 구조는 여러 마이닝 모델을 지원할 수 있으며 이러한 모델 중 일부는 같은 예측 가능한 열을 사용하지 않을 수 있습니다. 교차 유효성 검사를 실행할 때는 같은 예측 가능한 열을 사용하는 모델만 보고서에 포함될 수 있습니다.  
   
- 예측 가능한 특성을 선택하려면 **대상 특성** 을 클릭하고 목록에서 열을 선택합니다. 형식을 사용 하는 중첩 열의 이름을 입력 해야 대상 특성이 중첩된 열 또는 중첩된 테이블의 열 이면 \<중첩 테이블 이름 > (키).\< 중첩 열 > 합니다. 중첩된 테이블에서 사용 된 유일한 열은 키 열을 사용 하면 \<중첩 테이블 이름 > (키)입니다.  
+ 예측 가능한 특성을 선택하려면 **대상 특성** 을 클릭하고 목록에서 열을 선택합니다. 대상 특성이 중첩된 열 또는 중첩된 테이블의 열 이면 형식을 사용 하는 중첩 열의 이름을 입력 해야 합니다 \<중첩 테이블 이름 > (키).\< 중첩 열 >. 중첩된 테이블에서 사용 되는 유일한 열이 키 열인 경우 사용할 수 있습니다 \<중첩 테이블 이름 > (키).  
   
  예측 가능한 특성을 선택하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 동일한 예측 가능한 특성을 사용하는 모든 모델을 자동으로 테스트합니다. 대상 특성에 불연속 값이 포함되어 있는 경우에는 예측 가능한 열을 선택한 후 예측할 특정 값이 있으면 필요에 따라 대상 상태를 입력할 수 있습니다.  
   

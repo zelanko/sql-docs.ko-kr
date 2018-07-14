@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e166059c1ea7e93672dc752bef0de5508f20a46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4f4566700d8e5cf7963cae7bb2801be9db64f6fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237213"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>SQL Server 2014 설치 삭제
   복구 작업은 다음 시나리오에서 사용할 수 있습니다.  

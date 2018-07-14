@@ -27,13 +27,13 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18a4e657b4b4e0b434656f6a03538ec4a8f89957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169220"
 ---
 # <a name="implementing-external-metadata"></a>외부 메타데이터 구현
   구성 요소와 해당 데이터 원본의 연결이 끊어진 경우 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 인터페이스를 사용하여 외부 데이터 원본의 열을 기준으로 입력 및 출력 열 컬렉션의 열에 대한 유효성을 검사할 수 있습니다. 이 인터페이스를 사용하면 외부 데이터 원본에 있는 열의 스냅숏을 유지 관리하고 이러한 열을 구성 요소의 입력 및 출력 열 컬렉션에 있는 열에 매핑할 수 있습니다.  
@@ -82,7 +82,7 @@ End Sub
 ### <a name="connected-validation"></a>연결 시 유효성 검사  
  구성 요소가 외부 데이터 원본에 연결되어 있는 경우 입력 또는 출력 컬렉션의 열은 외부 데이터 원본을 기준으로 직접 유효성이 검사됩니다. 외부 메타데이터 컬렉션의 열에 대한 유효성 검사도 수행해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **고급 편집기**에서는 외부 메타데이터 컬렉션을 수정할 수 있으며 이 때 컬렉션의 변경 내용은 검색할 수 없으므로 이 작업이 필요합니다. 따라서 연결된 상태일 때 구성 요소에서는 외부 메타데이터 열 컬렉션의 열이 계속해서 외부 데이터 원본의 열을 반영하는지 확인해야 합니다.  
   
- 외부 메타 데이터 컬렉션을 숨길 수 있습니다는 **고급 편집기** 설정 하 여는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 속성 컬렉션의 `false`합니다. 그러나 이렇게 하면 사용자가 입력 또는 출력 컬렉션의 열을 외부 메타데이터 열 컬렉션의 열에 매핑하는 데 사용할 수 있는 편집기의 **열 매핑** 탭도 숨겨집니다. 이 속성을 `false`로 설정해도 개발자는 컬렉션을 프로그래밍 방식으로 수정할 수 있지만 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서만 사용되는 구성 요소의 외부 메타데이터 열 컬렉션은 어느 정도 보호됩니다.  
+ 외부 메타 데이터 컬렉션을 숨길 수도 있습니다는 **고급 편집기** 설정 하 여 합니다 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 컬렉션의 속성 `false`합니다. 그러나 이렇게 하면 사용자가 입력 또는 출력 컬렉션의 열을 외부 메타데이터 열 컬렉션의 열에 매핑하는 데 사용할 수 있는 편집기의 **열 매핑** 탭도 숨겨집니다. 이 속성을 `false`로 설정해도 개발자는 컬렉션을 프로그래밍 방식으로 수정할 수 있지만 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서만 사용되는 구성 요소의 외부 메타데이터 열 컬렉션은 어느 정도 보호됩니다.  
   
 ### <a name="disconnected-validation"></a>연결 해제 시 유효성 검사  
  구성 요소가 외부 데이터 원본에 연결되어 있지 않은 경우 입력 또는 출력 컬렉션의 열은 외부 원본이 아니라 외부 메타데이터 컬렉션의 열을 기준으로 유효성이 검사되므로 유효성 검사 과정이 간단해집니다. 외부 데이터 원본에 대한 연결이 설정되어 있지 않거나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 `false`인 경우 구성 요소에서는 연결 해제 시 유효성 검사를 수행해야 합니다.  
@@ -113,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 흐름](../../data-flow/data-flow.md)  

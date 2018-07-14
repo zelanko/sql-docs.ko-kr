@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e18a43b8556101607fede94852e37f1c636d4561
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6770168bf37031a8236756f88a737bb4e1ba32da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241229"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  

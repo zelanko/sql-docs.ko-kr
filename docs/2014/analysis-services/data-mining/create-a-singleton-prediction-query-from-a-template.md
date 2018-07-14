@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224593"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
   단일 쿼리는 예측에 사용하려는 모델이 있지만 이 모델을 외부 입력 데이터 집합에 매핑하거나 대량 예측을 수행하지는 않으려는 경우에 유용합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
@@ -73,30 +73,30 @@ AS [t]
   
 5.  **mining model** 행에 **개체 탐색기**에 나타나는 마이닝 모델 목록에 있는 마이닝 모델의 이름을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 예제 코드는 **마이닝 모델** 행의 이름으로 설정 되었습니다 `TM_Decision_Tree`합니다.  
+     이 항목의 시작 부분에 표시 된 샘플 코드는 **마이닝 모델** 행 이름에 설정 된 `TM_Decision_Tree`합니다.  
   
 6.  **value** 행에 예측을 수행할 새 데이터 값을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 예제 코드는 **값** 행으로 설정 된 `2` 자녀 수에 기반 자전거 구매 양상을 예측 하기.  
+     이 항목의 시작 부분에 표시 된 샘플 코드는 **값** 행으로 설정 된 `2` 자전거 구매 양상을 자녀 수를 기준으로 예측을 합니다.  
   
 7.  **column** 행에 새 데이터가 매핑되어야 하는 마이닝 모델의 열 이름을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 예제 코드는 **열** 행으로 설정 된 `Number Children at Home`합니다.  
+     이 항목의 시작 부분에 표시 된 샘플 코드는 **열** 행으로 설정 된 `Number Children at Home`합니다.  
   
     > [!NOTE]  
     >  **템플릿 매개 변수 값 지정** 대화 상자를 사용할 때는 열 이름을 대괄호로 묶을 필요가 없습니다. 대괄호는 자동으로 추가됩니다.  
   
-8.  유지 된 **입력된 별칭** 으로 `t`합니다.  
+8.  유지 된 **입력된 별칭** 으로 `t`입니다.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. 쿼리 텍스트 창에서 구문 오류를 나타내는 쉼표 및 줄임표 아래의 빨간색 물결 기호를 찾습니다. 줄임표를 삭제하고 원하는 쿼리 조건을 추가합니다. 다른 조건을 추가하지 않는 경우 쉼표를 삭제합니다.  
   
-     로 설정 된 경우 추가 쿼리 조건이이 항목의 시작 부분에 표시 된 예제 코드, `'45' as [Age]`합니다.  
+     이 항목의 시작 부분에 표시 된 샘플 코드에서 추가 쿼리 조건이로 설정 되었습니다 `'45' as [Age]`합니다.  
   
 11. **실행**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [예측 만들기 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [예측을 만드는 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

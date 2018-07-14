@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193349"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
   메모리 최적화 테이블에 대한 ALTER 작업 수행은 지원되지 않습니다. 여기에는 bucket_count 변경, 인덱스 추가 또는 제거, 열 추가 또는 제거 등의 작업이 포함됩니다. 이 항목에서는 메모리 최적화 테이블을 업데이트하는 방법에 대한 지침을 제공합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36093770"
 ## <a name="updating-the-definition-of-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블의 정의 업데이트  
  메모리 최적화 테이블의 정의를 업데이트하려면 업데이트된 테이블 정의를 사용하여 새 테이블을 만들고 데이터를 새 테이블에 복사한 다음 새 테이블 사용을 시작해야 합니다. 테이블이 읽기 전용이 아닌 경우 이렇게 하려면 데이터 복사가 수행되는 동안 테이블이 변경되지 않도록 테이블에 대한 작업을 중지해야 합니다.  
   
- 다음 절차에서는 테이블을 업데이트하는 데 필요한 단계를 대략적으로 설명합니다. 이 예제에서는 업데이트를 통해 인덱스를 추가합니다. 이 프로시저는 테이블의 이름을 유지 하며 두 개의 데이터 복사 작업 필요: 임시 테이블에 한 번만 하 고 새 테이블에 한 번입니다. 인덱스의 bucket_count를 변경하거나 열을 추가 또는 제거하는 작업은 같은 방식으로 수행됩니다.  
+ 다음 절차에서는 테이블을 업데이트하는 데 필요한 단계를 대략적으로 설명합니다. 이 예제에서는 업데이트를 통해 인덱스를 추가합니다. 이 절차는 테이블의 이름을 유지 하며 두 개의 데이터 복사 작업: 임시 테이블에 한 번만 하 고 새 테이블에 한 번입니다. 인덱스의 bucket_count를 변경하거나 열을 추가 또는 제거하는 작업은 같은 방식으로 수행됩니다.  
   
 1.  테이블에 대한 작업을 중지합니다.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "36093770"
     select @permissions  
     ```  
   
-4.  테이블의 복사본을 생성하고 원래 테이블에서 테이블의 복사본으로 데이터를 복사합니다. 다음을 사용 하 여는 복사본을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>합니다.  
+4.  테이블의 복사본을 생성하고 원래 테이블에서 테이블의 복사본으로 데이터를 복사합니다. 다음을 사용 하 여 복사본을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>합니다.  
   
     ```tsql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     충분 한 메모리가 없을 경우 `T_copy` 복사가 더 빠르게 데이터를 사용 하는 메모리 액세스에 최적화 된 테이블 일 수 있습니다.<sup> 2</sup>  
+     사용 가능한 메모리가 부족 한 경우 `T_copy` 데이터 복사가 더 빠르게 수행 되는 메모리 최적화 테이블 일 수 있습니다.<sup> 2</sup>  
   
 5.  원래 테이블을 참조하는 스키마 바운드 개체를 삭제합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36093770"
   
 10. `T`에 대한 작업을 시작합니다.  
   
- <sup>1</sup> 는 `T_copy` 유지 되이 예제는 디스크에 있습니다. `T`의 백업을 사용할 수 있는 경우 `T_copy`는 임시 또는 비 영속성 테이블일 수 있습니다.  
+ <sup>1</sup> 는 `T_copy` 유지는이 예제의 디스크. `T`의 백업을 사용할 수 있는 경우 `T_copy`는 임시 또는 비 영속성 테이블일 수 있습니다.  
   
  <sup>2</sup> 에 대 한 충분 한 메모리가 있어야 `T_copy`합니다. 메모리는 `DROP TABLE`에서 즉시 비워지지 않습니다. `T_copy`가 메모리 액세스에 최적화된 경우 `T`의 추가 복사본 두 개에 대한 충분한 메모리가 있어야 합니다. `T_copy`가 디스크 기반 테이블인 경우 기존 버전의 `T`를 삭제한 후 따라 잡아야 하는 가비지 수집기로 인해 `T`의 추가 복사본 하나에 대해 충분한 메모리만 있으면 됩니다.  
   

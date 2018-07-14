@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a35eed078cf0b9317c7621f40ea3aaf51a836a41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a0272f84e3203b5fba89fb80947d065da2013ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188100"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>차트에 이동 평균 추가(보고서 작성기 및 SSRS)
   이동 평균은 정의된 기간 동안 계산되는 계열 데이터의 평균입니다. 이동 평균은 차트에서 중요한 추세를 파악하는 데 사용될 수 있습니다.  

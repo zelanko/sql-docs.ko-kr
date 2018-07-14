@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2bb1b7aa8b6013eeffb7aa0253ab71a7e39c96b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a608f6fe0ab40eae3e525b3ff8d6aa49a8534e99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243413"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>.dqs 파일에서 도메인 가져오기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 파일의 도메인을 기존 기술 자료로 가져오는 방법에 대해 설명합니다. .dqs 데이터 파일은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 도메인이나 기술 자료를 내보내면 생성됩니다. .dqs 데이터 파일은 암호화되어 있으므로 볼 수 없습니다.  

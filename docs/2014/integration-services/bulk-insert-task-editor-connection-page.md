@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.connection.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 04c81b9bd101ec66d0ec1f47fb4c48c2179635ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed6ab27e4c60aa398cafe1be0d4bbcb19ce3bb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201813"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>대량 삽입 태스크 편집기(연결 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **연결** 페이지를 사용하여 대량 삽입 태스크의 원본 및 대상과 사용할 서식을 지정할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36092242"
 |값|Description|  
 |-----------|-----------------|  
 |**파일 사용**|서식 지정을 포함하는 파일을 선택합니다. 이 옵션을 선택하면 동적 옵션 **FormatFile**이 표시됩니다.|  
-|**지정**|서식을 지정합니다. 이 옵션을 선택 하면 동적 옵션이 표시 됩니다. `RowDelimiter` 및 `ColumnDelimiter`합니다.|  
+|**지정**|서식을 지정합니다. 이 옵션을 선택 하면 동적 옵션을 표시 `RowDelimiter` 고 `ColumnDelimiter`입니다.|  
   
  **최근에 사용한 파일**  
  목록에서 파일 또는 플랫 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  

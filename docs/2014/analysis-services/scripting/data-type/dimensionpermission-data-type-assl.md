@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178840"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>DimensionPermission 데이터 형식(ASSL)
   데이터베이스 차원에 할당된 사용 권한을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -71,6 +71,6 @@ ms.locfileid: "36091370"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DimensionPermission>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

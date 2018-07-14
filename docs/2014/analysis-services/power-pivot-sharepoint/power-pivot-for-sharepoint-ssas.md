@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224853"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>SharePoint용 PowerPivot(SSAS)
   SharePoint용 PowerPivot은 SharePoint 모드에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버입니다. SharePoint용 PowerPivot은 SharePoint 팜에서 PowerPivot 데이터의 서버 호스팅을 제공합니다. PowerPivot 데이터는 다음 중 하나를 사용하여 빌드하는 분석 데이터 모델입니다.  

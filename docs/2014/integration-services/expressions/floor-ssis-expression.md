@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
@@ -16,13 +16,13 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cae43e01a262258fa2fce824797b3d20682c3829
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb7c221ddca8bd07b0e75b616267f8efaaa8427e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199613"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR(SSIS 식)
   숫자 식보다 작거나 같은 최대 정수를 반환합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 전용된 데이터 새로 고침 또는 쿼리만 처리 (PowerPivot for SharePoint) 구성 | Microsoft Docs
+title: 전용된 데이터 새로 고침 또는 쿼리만 처리 (SharePoint 용 PowerPivot) 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d84528c4d4db768ba58f125e15175604aed7af0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222303"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>전용 데이터 새로 고침 또는 쿼리만 처리 구성(SharePoint용 PowerPivot)
   SharePoint 통합 모드에서 Analysis Services 서버 인스턴스를 데이터 새로 고침 또는 쿼리만 처리와 같이 처리 요청의 특정 유형을 지원하도록 구성할 수 있습니다. 기본적으로 두 가지 유형의 로드 요청이 모두 설정됩니다. 한 가지 유형을 해제하여 전용 쿼리 엔진이나 데이터 새로 고침 서버를 만들 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36089196"
   
 |설정|유효한 값|Description|  
 |-------------|------------------|-----------------|  
-|기본값|RAM을 기반으로 계산|기본값은 사용 가능한 메모리 용량을 4GB로 나눈 값을 기반으로 합니다. 기본값은 수식에 의해 계산되므로 시스템의 기능에 따라 설정이 조정될 수 있습니다.<br /><br /> 참고: 4gb 제 수 실제 PowerPivot 데이터 원본의 대규모 샘플링에 대 한 RAM 사용량에 따라 선택 되었습니다. PowerPivot 물리적 아키텍처 또는 논리적 아키텍처를 기반으로 한 것이 아닙니다.|  
+|기본값|RAM을 기반으로 계산|기본값은 사용 가능한 메모리 용량을 4GB로 나눈 값을 기반으로 합니다. 기본값은 수식에 의해 계산되므로 시스템의 기능에 따라 설정이 조정될 수 있습니다.<br /><br /> 참고: 4gb 제 수 실제 PowerPivot 데이터 원본의 대규모 샘플링을 위해 RAM 사용량을 기준으로 선택 되었습니다. PowerPivot 물리적 아키텍처 또는 논리적 아키텍처를 기반으로 한 것이 아닙니다.|  
 |최대값|CPU 수를 기반으로 계산|지정할 수 있는 최대 동시 작업 수는 컴퓨터의 프로세서 수를 기반으로 합니다. 예를 들어 소켓이 4개인 쿼드-코어 컴퓨터에서 동시에 실행할 수 있는 최대 작업 수는 16입니다.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>기본값을 더 큰 값으로 증가  

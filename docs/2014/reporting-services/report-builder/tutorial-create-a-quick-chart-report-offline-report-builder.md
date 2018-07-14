@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216813"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
   이 자습서에서는 마법사를 사용하여 원형 차트를 만든 다음 차트를 어떤 식으로 수정할 수 있는지 보여 주기 위해 차트를 조금 수정합니다. 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과가 같습니다. 즉, 아래 그림의 원형 차트와 동일한 원형 차트가 만들어집니다.  
   
- ! ["My First Pie" 실행 시 보려면] (.. /media/rs-my1stpierunview.gif "my First Pie Chart" 실행 시 "보기")  
+ ! ["내 첫 번째 원형 차트" 실행에서 보기] (.. /media/rs-my1stpierunview.gif "my First Pie Chart" 실행에서 "보기")  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- XML 데이터나 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스 권한이 있어야 합니다. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 ClickOnce 버전 또는 독립 실행형 버전을 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다. 자세한 내용은 참조 [설치, 제거 및 지원 되는 보고서 작성기](../install-uninstall-and-report-builder-support.md)합니다.  
+ XML 데이터나 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스 권한이 있어야 합니다. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 ClickOnce 버전 또는 독립 실행형 버전을 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다. 자세한 내용은 [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)합니다.  
   
 ##  <a name="TwoWays"></a> 이 자습서에서 수행하는 두 가지 방법  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36092620"
  [XML 데이터로 원형 차트 만들기](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>이 자습서에서 데이터가 포함된 Transact-SQL 쿼리 사용  
- 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. 인스턴스 이름이 필요 합니다 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 필요한 자격 증명입니다. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 인스턴스에서 처리해야 보고서 데이터 집합에 필요한 메타데이터가 반환됩니다.  
+ 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. 인스턴스의 이름이 필요 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 집합 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 인스턴스에서 처리해야 보고서 데이터 집합에 필요한 메타데이터가 반환됩니다.  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하는 경우 좋은 점은, 다른 모든 보고서 작성기 자습서에서도 같은 방법을 사용하므로 다른 자습서를 사용할 때 수행할 작업을 미리 알게 된다는 것입니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36092620"
     > [!NOTE]  
     >  **시작** 대화 상자가 나타나지 않으면 **보고서 작성기** 단추에서 **새로 만들기**를 클릭합니다.  
   
-2.  왼쪽된 창의 확인 **보고서** 을 선택 합니다.  
+2.  왼쪽된 창에 있는지를 확인 **보고서** 을 선택 합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭한 다음 **만들기**를 클릭합니다.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36092620"
   
 7.  에 **연결 유형 선택** 상자 **XML입니다.**  
   
-8.  **자격 증명** 탭을 클릭하고 **현재 Windows 사용자를 사용하십시오. Kerberos 위임이 필요할 수도**, 클릭 하 고 **확인**합니다.  
+8.  **자격 증명** 탭을 클릭하고 **현재 Windows 사용자를 사용하십시오. Kerberos 위임이 필요할 수도 있습니다**를 클릭 하 고 **확인**합니다.  
   
 9. **데이터 원본에 대한 연결 선택** 페이지에서 **MyPieChart**를 클릭하고 **다음**을 클릭합니다.  
   
-10. 다음 텍스트를 복사 하 고의 가운데 있는 큰 상자에 붙여는 **쿼리 디자인** 페이지.  
+10. 다음 텍스트를 복사 하 고 가운데 있는 큰 상자에 붙여 합니다 **쿼리 디자인** 페이지입니다.  
   
     ```  
     <Query>  
@@ -126,7 +126,7 @@ ms.locfileid: "36092620"
   
 15. **사용 가능한 필드** 상자에서 **FullName** 필드를 **범주** 상자로 끌어 오거나 FullName 필드를 두 번 클릭하여 **범주** 상자로 이동한 후 **다음**을 클릭합니다.  
   
-16. 에 **스타일 선택** 페이지 **Ocean** 기본적으로 선택 됩니다. 다른 스타일을 클릭하여 모양을 확인합니다.  
+16. 에 **스타일을 선택 합니다** 페이지에서 **Ocean** 기본적으로 선택 됩니다. 다른 스타일을 클릭하여 모양을 확인합니다.  
   
 17. **마침**을 클릭합니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36092620"
   
 1.  **시작**을 클릭하고 **프로그램**, **Microsoft SQL Server 2012 보고서 작성기**를 차례로 가리킨 다음 **보고서 작성기**를 클릭합니다.  
   
-2.  에 **새 보고서 또는 데이터 집합** 대화 상자를 확인 하는 **보고서** 왼쪽된 창에서 선택 합니다.  
+2.  에 **새 보고서 또는 데이터 집합** 대화 상자에서 **보고서** 왼쪽된 창에서 선택한 합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭한 다음 **만들기**를 클릭합니다.  
   
@@ -200,26 +200,26 @@ ms.locfileid: "36092620"
   
 ##### <a name="to-display-percentage-values-as-labels-on-a-pie-chart"></a>원형 차트에 레이블로 백분율 값을 표시하려면  
   
-1.  원형 차트에서 마우스 오른쪽 단추로 클릭 하 고 선택 **데이터 레이블 표시**합니다. 원형 차트의 각 조각 내에 데이터 레이블이 표시됩니다.  
+1.  원형 차트를 마우스 오른쪽 단추로 클릭 하 고 선택 **데이터 레이블 표시**합니다. 원형 차트의 각 조각 내에 데이터 레이블이 표시됩니다.  
   
-2.  레이블 및 선택을 마우스 오른쪽 단추로 클릭 **계열 레이블 속성**합니다. **계열 레이블 속성** 대화 상자가 표시됩니다.  
+2.  선택한 레이블을 마우스 오른쪽 단추로 클릭 **계열 레이블 속성**합니다. **계열 레이블 속성** 대화 상자가 표시됩니다.  
   
-3.  형식 `#PERCENT{P0}` 에 대 한는 **데이터 레이블이** 옵션입니다.  
+3.  형식 `#PERCENT{P0}` 에 대 한 합니다 **레이블 데이터** 옵션입니다.  
   
-     `{P0}` 추가 하면 백분율이 소수 자릿수 없이 합니다. 만 입력 `#PERCENT`, 하면 숫자가 소수점 두 자리까지 표시 됩니다. `#PERCENT` 하면;에 대 한 계산 이나 기능을 수행 하는 키워드 도 많은 키워드가 있습니다.  
+     `{P0}` 소수 자릿수 없이 백분율을 제공 합니다. 만 입력 `#PERCENT`, 숫자가 두 소수 자릿수를 갖습니다. `#PERCENT` ;으로 계산 이나 기능을 수행 하는 키워드 도 많은 키워드가 있습니다.  
   
  차트 레이블 및 범례를 사용자 지정하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 및 [범례 항목의 텍스트 변경 #40;보고서 작성기 및 SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> 다음 단계  
- 보고서 작성기에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. 사용 하 여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한을 보고서 작성기를 실행 하려면 필요는 *연결 문자열*, 실제로 데이터 원본에 연결입니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
+ 보고서 작성기에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. 보고서 작성기를 실행 하려면 사용 하 여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한이 필요는 *연결 문자열*, 실제로 데이터 원본에 연결 하는 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
   
- 다른 자습서를 진행 하려면 인스턴스의 이름을 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 필요한 자격 증명입니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
+ 다른 자습서를 진행 하려면 인스턴스의 이름을 알아야 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
   
  마지막으로, 보고서를 보고서 서버나 보고서 서버와 통합된 SharePoint 사이트에 저장하려면 URL 및 해당 권한이 있어야 합니다. 만든 보고서를 사용자의 컴퓨터에서 직접 실행할 수도 있지만 보고서 서버나 SharePoint 사이트에서 실행하면 더 많은 기능을 사용할 수 있습니다. 자신이 만든 보고서나 다른 사용자의 보고서를 보고서가 게시된 보고서 서버나 SharePoint 사이트에서 실행할 수 있는 권한이 있어야 합니다. 시스템 관리자에게 액세스 권한을 요청하십시오.  
   
- 시작하기 전에 몇 가지 개념이나 용어에 대해 알아 두면 좋습니다. 자세한 내용은 참조 [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)합니다. 또한 처음 보고서를 만들 때는 사전에 시간을 들여 계획을 세우는 것이 좋습니다. 자세한 내용은 참조 [보고서 계획 &#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md)합니다.  
+ 시작하기 전에 몇 가지 개념이나 용어에 대해 알아 두면 좋습니다. 자세한 내용은 [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)합니다. 또한 처음 보고서를 만들 때는 사전에 시간을 들여 계획을 세우는 것이 좋습니다. 자세한 내용은 [보고서 계획 &#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md)합니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#TwoWays)  
   

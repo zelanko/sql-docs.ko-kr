@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4316e91e465922ca1f7c428a9f25e781837ec6e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04a76cd2216b8f19816950c0a86dce9840caca39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184770"
 ---
 # <a name="about-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 정보
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 기업에서 수요가 높아지고 있는 대부분의 데이터 소비형 응용 프로그램의 요구 사항을 만족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 한 대의 컴퓨터에서 최대 50개의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 지원합니다. 일반적인 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 한 대의 컴퓨터에서 최대 50개의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 지원합니다. 일반적인 만들려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 참조 하세요 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)합니다.  
   
  **중요** 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36092246"
  [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [업그레이드를 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

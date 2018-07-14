@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5febecdb07be72a154605b7e66bce8f4d9ad87f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7f8c761a052bc3c82789087bb955c760e9a1b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181240"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>서버에 연결(로그인 페이지) 데이터베이스 엔진
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 연결할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증으로 연결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 구성해야 합니다. 인증 모드를 확인 하 고 인증 모드를 변경 하는 방법에 대 한 자세한 내용은 참조 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증으로 연결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 구성해야 합니다. 인증 모드를 확인 하 고 인증 모드를 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)합니다.  
   
 ## <a name="options"></a>변수  
  **서버 유형**  

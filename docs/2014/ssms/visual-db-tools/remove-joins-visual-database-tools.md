@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing joins
 - joins [SQL Server], removing
 - deleting joins
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75ee172ba9dcdb5761e7dd1eefe5722441c9983a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dab1cccfd160a4dc3ed69b24700873d0bc2839f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244133"
 ---
 # <a name="remove-joins-visual-database-tools"></a>조인 제거(Visual Database Tools)
   내부 조인 또는 외부 조인을 통해 테이블을 더 이상 조인하지 않으려면 테이블 간의 조인을 제거하면 됩니다. 예를 들어 [쿼리 및 뷰 디자이너](visual-database-tools.md) 가 두 테이블 간에 자동으로 만든 조인을 제거할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36091182"
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 자동 조인 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [테이블을 수동으로 조인 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [테이블 수동 조인 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

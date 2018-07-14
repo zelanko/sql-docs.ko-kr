@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 633fa882fb31d8e870f46891fc7749234f407cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 136f03a7d3dd2223ed1806c47d9a168c3d6c8bee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232493"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>꺾은선형 차트(보고서 작성기 및 SSRS)
-  꺾은선형 차트에서 계열은 단일 선으로 연결된 일련의 점으로 표시됩니다. 꺾은선형 차트는 연속적인 일정 기간 동안 발생하는 많은 양의 데이터를 표시하는 데 사용됩니다. 데이터는 꺾은선형 차트를 추가 하는 방법에 대 한 자세한 내용은 참조 [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+  꺾은선형 차트에서 계열은 단일 선으로 연결된 일련의 점으로 표시됩니다. 꺾은선형 차트는 연속적인 일정 기간 동안 발생하는 많은 양의 데이터를 표시하는 데 사용됩니다. 꺾은선형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
   
  다음 그림에서는 계열이 세 개 포함된 꺾은선형 차트를 보여 줍니다.  
   

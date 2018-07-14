@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e0607febc04aec78a7310bd069b3af4c19cc8ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203553"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 *테이블에 데이터를 대량으로 가져오는 데 사용할* XML 형식 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 작성하기 위한 구문을 정의하는 XML 스키마를 제공합니다. XML 서식 파일은 XSDL(XML Schema Definition Language)에 정의되어 있는 이 스키마에 충실해야 합니다. XML 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  
@@ -159,7 +158,7 @@ ms.locfileid: "36088860"
   
  ID **= "*`fieldID`*"**  
   
- xsi **:** 형식 **= "*`fieldType`*"**  
+ xsi **:** 형식을 **= "*`fieldType`*"**  
   
  [ LENGTH **="*`n`*"** ]  
   
@@ -177,7 +176,7 @@ ms.locfileid: "36088860"
   
 |FIELD 특성|설명|선택 /<br /><br /> 필수|  
 |---------------------|-----------------|------------------------------|  
-|ID **= "*`fieldID`*"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> < 필드 ID **= "*`fieldID`*"**/ >에 매핑됩니다 < 열 소스 **= "*`fieldID`*"**/>|필수|  
+|ID **= "*`fieldID`*"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> < 필드 ID **= "*`fieldID`*"**/ >에 매핑됩니다 < COLUMN SOURCE **= "*`fieldID`*"**/>|필수|  
 |xsi: type **= "*`fieldType`*"**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
 |LENGTH **="*`n`*"**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
 |PREFIX_LENGTH **= "*`p`*"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
@@ -230,12 +229,12 @@ ms.locfileid: "36088860"
   
 |COLUMN 특성|Description|선택 /<br /><br /> 필수|  
 |----------------------|-----------------|------------------------------|  
-|소스 **= "*`fieldID`*"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> < 열 소스 **= "*`fieldID`*"**/ >에 매핑됩니다 < 필드 ID **= "*`fieldID`*"**/>|필수|  
+|소스 **= "*`fieldID`*"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> < COLUMN SOURCE **= "*`fieldID`*"**/ >에 매핑됩니다 < ID 필드 **= "*`fieldID`*"**/>|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** 형식 **= "*`ColumnType`*"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고:의 가능한 값 *ColumnType* 및 관련된 특성은 다음 테이블에 나열 됩니다.|선택 사항|  
+|xsi **:** 형식을 **= "*`ColumnType`*"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고:의 가능한 값 *ColumnType* 관련된 특성은 다음 표에 나열 됩니다.|선택 사항|  
 |LENGTH **="*`n`*"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="*`n`*"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
-|배율 **= "*`int`*"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
+|크기 조정 **= "*`int`*"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|열이 NULL 값을 허용하는지 여부를 나타냅니다. 이 특성은 FIELDS와는 독립적입니다. 그러나 열이 NULLABLE이 아닌 경우 필드에서 NULL을 지정하면(아무 값도 지정하지 않음) 런타임 오류가 발생합니다.<br /><br /> NULLABLE 특성은 일반 SELECT FROM OPENROWSET(BULK...) 문의 경우에만 사용됩니다.|선택 사항(모든 데이터 형식에 사용 가능)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 요소의 xsi:type 값  
@@ -245,7 +244,7 @@ ms.locfileid: "36088860"
   
 |형식 범주|\<COLUMN> 데이터 형식|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|고정|`SQLBIT``SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT`, 및 `SQLUNIQUEID`|없음|NULLABLE|  
+|고정|`SQLBIT``SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`를 `SQLFLT8`, `SQLDATETIME`를 `SQLDATETIM4`, `SQLDATETIM8`를 `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT`, 및 `SQLUNIQUEID`|없음|NULLABLE|  
 |가변 숫자|`SQLDECIMAL` 및 `SQLNUMERIC`|없음|NULLABLE, PRECISION, SCALE|  
 |LOB|`SQLIMAGE`, `CharLOB`, `SQLTEXT` 및 `SQLUDT`|없음|NULLABLE|  
 |문자 LOB|`SQLNTEXT`|없음|NULLABLE|  

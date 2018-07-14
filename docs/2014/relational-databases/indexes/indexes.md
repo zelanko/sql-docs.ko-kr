@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b501af28b1c9fbfb8f8fbdca9099aa11d4f2e3db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177750"
 ---
 # <a name="indexes"></a>인덱스
   다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 인덱스 유형을 나열하고 추가 정보에 대한 링크를 제공합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "36092010"
 |계산 열의 인덱스|하나 이상의 다른 열 또는 특정 결정적 열의 값에서 파생되는 열의 인덱스입니다.|[계산 열의 인덱스](indexes-on-computed-columns.md)|  
 |필터링됨|특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 저장소 비용을 줄일 수 있습니다.|[필터링된 인덱스 만들기](create-filtered-indexes.md)|  
 |공간|공간 인덱스는*geometry*데이터 형식 열의 공간 개체( **공간 데이터** )에서 특정 작업을 보다 효율적으로 수행할 수 있는 기능을 제공합니다. 공간 인덱스는 상대적으로 비용이 많이 드는 공간 작업에서 적용해야 하는 개체 수를 줄여 줍니다.|[공간 인덱스 개요](../spatial/spatial-indexes-overview.md)|  
-|XML|XML 이진 대형 개체 (Blob)에서 영구적인된 단편 형태로 표현한은 `xml` 데이터 형식 열입니다.|[XML 인덱스&#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|XML 이진 대형 개체 (Blob)를 영구적인 단편 표현 된 `xml` 데이터 형식 열입니다.|[XML 인덱스&#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |전체 텍스트|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 Microsoft 전체 텍스트 검색 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 문자열 데이터에서의 복잡한 단어 검색을 효율적으로 지원합니다.|[전체 텍스트 인덱스 채우기](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>관련 작업  

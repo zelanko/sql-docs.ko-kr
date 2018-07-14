@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - licensing
 ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5d4664f3f0abea2b17c7e597cc9bbeccb4987b52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 34212554d5cb7257894f8782c7e85a200d3f7844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212153"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>SQL Server의 라이선스 고려 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 라이선스 옵션에 대한 자세한 내용은 [Microsoft SQL Server 웹 사이트](http://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하십시오.  

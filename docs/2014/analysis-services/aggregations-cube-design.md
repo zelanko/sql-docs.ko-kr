@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e20da00-519e-40bb-a7b7-6233a0ec9a06
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b6499597cd53c65b58d48a30ded3b9939d8976
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22125797706f54e4235f162f3ee8c282f6aa1f06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172024"
 ---
 # <a name="aggregations-cube-design"></a>집계(큐브 디자인)
   큐브 디자이너의 **집계** 탭을 사용하여 집계 디자인을 만들고 수정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36090358"
  **표준 뷰**  
  **표준 뷰** 창을 사용하여 집계 디자인을 만들고 수정할 수 있습니다.  
   
- **고급 뷰**  
+ **고급 보기**  
  **고급 뷰** 창을 사용하여 집계를 만들고 수정할 수 있습니다. 이 뷰는 고급 사용자만 사용해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

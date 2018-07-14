@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0bc54855c11b3e0bb3cfea36f1e577272d5c160
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c57fb7cd0ced32a6de3c898f343bb6e4b66796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171714"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>매핑 수정 대화 상자(마이닝 정확도 차트)
-  **매핑 수정** 대화 상자를 사용하여 입력 열이 마이닝 모델의 열에 조인되는 방법을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 열에서는 열 이름과 데이터 형식에 따라 자동으로 매핑하지만이 대화 상자를 사용 하 여 열 매핑을 변경할 수 있습니다. 변경하려면 외부 데이터 원본의 열이 테스트하는 마이닝 모델의 열과 데이터 형식 및 내용 유형이 일치하는지 확인해야 합니다.  
+  **매핑 수정** 대화 상자를 사용하여 입력 열이 마이닝 모델의 열에 조인되는 방법을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 열 이름과 데이터 형식에 따라 자동으로 열 매핑하지만이 대화 상자를 사용 하 여 열 매핑을 변경할 수 있습니다. 변경하려면 외부 데이터 원본의 열이 테스트하는 마이닝 모델의 열과 데이터 형식 및 내용 유형이 일치하는지 확인해야 합니다.  
   
 ## <a name="options"></a>변수  
  **마이닝 구조 열**  

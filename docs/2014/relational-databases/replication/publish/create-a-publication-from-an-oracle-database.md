@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b989637b5c16d57aaf6d33fc033229fd08028dc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd46103f4810564317c5072be78b297150c1f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190060"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle 데이터베이스에서 게시 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "36172405"
   
 2.  원격 배포자가 없는 경우 원격 배포자를 구성합니다. 자세한 내용은 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)을 참조하세요.  
   
-3.  Oracle 게시자가 사용할 원격 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행합니다. 에 대 한 Oracle 데이터베이스 인스턴스의 네트워크 TNS (Transparent Substrate) 이름을 지정 **@publisher** 값 `ORACLE` 또는 `ORACLE GATEWAY` 에 대 한 **@publisher_type**합니다. Oracle 게시자에서 원격`Specify` 배포자에 연결할 때 사용하는 보안 모드를 다음 중 하나로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
+3.  Oracle 게시자가 사용할 원격 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행합니다. 에 Oracle 데이터베이스 인스턴스의 네트워크 TNS (Transparent Substrate) 이름을 지정 **@publisher** 값 `ORACLE` 하거나 `ORACLE GATEWAY` 에 대 한 **@publisher_type**합니다. Oracle 게시자에서 원격`Specify` 배포자에 연결할 때 사용하는 보안 모드를 다음 중 하나로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
     -   기본값인 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@security_mode**, **@login**에 구성 중 Oracle 게시자에 만든 복제 관리 사용자 스키마의 로그인, **@password**의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
   

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58aeafeaee114c1d08d0ad8b0119bee2dc5d5dea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197829"
 ---
 # <a name="reportparameter-element-assl"></a>ReportParameter 요소(ASSL)
-  이름 및에 전달 되는 매개 변수 값을 포함 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 런타임 시 보고서입니다.  
+  이름 및 전달 되는 매개 변수의 값을 포함 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 런타임에 보고서입니다.  
   
 ## <a name="syntax"></a>구문  
   

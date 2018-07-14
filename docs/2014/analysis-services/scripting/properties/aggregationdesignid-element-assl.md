@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0548685e81b7c98b80e49ea67bdb754cb0dfe887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 373f77f8195f0e8d9c3000f9e55e0f1395c91b67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194283"
 ---
 # <a name="aggregationdesignid-element-assl"></a>AggregationDesignID 요소(ASSL)
-  식별 된 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 요소와 연관 된는 [파티션](../objects/partition-element-assl.md) 요소입니다.  
+  하 게 식별 하는 [AggregationDesign](../objects/aggregationdesign-element-assl.md) 요소와 연관 된 [파티션](../objects/partition-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36092970"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `AggregationDesignID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Partition>합니다. 참고 항목 <xref:Microsoft.AnalysisServices.AggregationDesign>합니다.  
+ 부모에 해당 하는 요소가 `AggregationDesignID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Partition>합니다. 참고 항목 <xref:Microsoft.AnalysisServices.AggregationDesign>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [AggregationDesign 요소 &#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

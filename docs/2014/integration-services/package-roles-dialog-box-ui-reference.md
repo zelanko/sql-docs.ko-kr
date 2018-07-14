@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad91939638592cfbd1265bd77bff13b1d60b093a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 688ecec3ac3e40221cb205273fe4d581d6be8de1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215383"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>패키지 역할 대화 상자 UI 참조
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 **패키지 역할** 대화 상자를 통해 패키지에 대한 읽기 권한이 있는 데이터베이스 수준 역할 및 패키지에 대한 쓰기 권한이 있는 데이터베이스 수준 역할을 지정할 수 있습니다. 데이터베이스 수준 역할은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 데이터베이스에 저장된 패키지에만 적용됩니다.  

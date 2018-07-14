@@ -1,5 +1,5 @@
 ---
-title: 동작 변경 내용에 데이터베이스 엔진의 SQL Server 2014 기능 | Microsoft Docs
+title: 동작 변경 내용을 데이터베이스 엔진 기능의 SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 caps.latest.revision: 134
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b91a84ac2973ee5569ff9a9f4b3fa54737492068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193963"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -34,12 +34,12 @@ ms.locfileid: "36090512"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>동작 변경 내용 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>메타데이터 검색  
- 향상 된 기능은 [!INCLUDE[ssDE](../includes/ssde-md.md)] 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol를 이전 버전의 SQLDescribeCol에서 반환 하는 것 보다 예상된 결과 대 한 한 보다 정확한 설명을 얻을 수 있도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 참조 [메타 데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)합니다.  
+ 향상 된 기능을 [!INCLUDE[ssDE](../includes/ssde-md.md)] 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol SQLDescribeCol의 이전 버전에서 반환 하는 것 보다 예상된 결과 대 한 한 보다 정확한 설명의 얻을에 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타 데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)합니다.  
   
- The [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) option for determining the format of a response without actually running the query is replaced with [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
+ 합니다 [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) 바뀝니다 쿼리를 실제로 실행 하지 않고 응답 형식을 결정 하기 위한 옵션 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)를 [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)하십시오 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), 및 [sys.dm _ exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)합니다.  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>SQL Server 에이전트 태스크의 스크립팅 동작 변경 내용  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 기존 작업의 스크립트를 복사하여 새 작업을 만드는 경우 해당하는 새 작업은 기존 작업에 영향을 줄 수 있습니다. 기존 작업에서 스크립트를 사용 하 여 새 작업을 만들려면 매개 변수를 삭제 수동으로 *@schedule_uid* 이 일반적으로 기존 작업에 작업 일정을 만드는 섹션의 마지막 매개 변수입니다. 이렇게 하면 기존 작업에 영향을 주지 않고 새 작업의 독립적인 새 스케줄을 만들 수 있습니다.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 기존 작업의 스크립트를 복사하여 새 작업을 만드는 경우 해당하는 새 작업은 기존 작업에 영향을 줄 수 있습니다. 기존 작업에서 스크립트를 사용 하 여 새 작업을 만들려면 매개 변수를 삭제 수동으로 *@schedule_uid* 은 일반적으로 기존 작업에서 작업 스케줄을 만드는 섹션의 마지막 매개 변수입니다. 이렇게 하면 기존 작업에 영향을 주지 않고 새 작업의 독립적인 새 스케줄을 만들 수 있습니다.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 사용자 정의 함수 및 메서드를 위한 상수 폴딩  
  이제 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서는 다음 사용자 정의 CLR 개체를 폴딩할 수 있습니다.  
@@ -75,10 +75,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
 -- returns GEOMETRYCOLLECTION EMPTY  
 ```  
   
- 공간 개체가 비어 있는지를 확인 하려면 호출는 [STIsEmpty &#40;geometry 데이터 형식&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) 메서드.  
+ 공간 개체가 비어 있는지 여부를 결정할 호출을 [STIsEmpty &#40;geometry 데이터 형식&#41; ](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type) 메서드.  
   
 ### <a name="log-function-has-new-optional-parameter"></a>로그 함수에 새로운 선택적 매개 변수 포함  
- `LOG` 이제 함수에는 선택적 *기본* 매개 변수입니다. 자세한 내용은 참조 [로그 &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)합니다.  
+ 합니다 `LOG` 함수에 선택적 *기본* 매개 변수입니다. 자세한 내용은 [로그 &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/log-transact-sql)합니다.  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>분할된 인덱스 작업 중의 통계 계산이 변경됨  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검색하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 FULLSCAN 절에서 CREATE STATISTICS 또는 UPDATE STATISTICS를 사용합니다.  
@@ -105,7 +105,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  SELECT * from T FOR XML …을 실행할 때 XML 모드(:XML ON 명령)에서 sqlcmd.exe를 사용할 경우 동작 변경 내용이 있습니다.  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 수정 메시지  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], 다시 시드를 사용할 때만 DBCC CHECKIDENT 명령에 의해 반환 되는 메시지 변경 되었습니다 *new_reseed_value* 현재 id 값을 변경할 수 있습니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], reseed 사용는 경우에 DBCC CHECKIDENT 명령에서 반환 된 메시지가 변경 되었습니다. *new_reseed_value* 현재 id 값을 변경 합니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
   
  이전 버전의 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >', 현재 열 값 '\<현재 열 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요." DBCC CHECKIDENT를 지정할 때 NORESEED를 사용하거나 두 번째 매개 변수를 사용하지 않거나 reseed 값을 사용하지 않으면 메시지가 변경되지 않습니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)를 참조하세요.  
   
@@ -130,7 +130,7 @@ SELECT COUNT(1) WHERE @test.exist('/dogs') IS NULL; -- 1 expected, 1 returned
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL server 2014 데이터베이스 엔진 기능의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경 내용](breaking-changes-to-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2014에서에서 사용 되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2014에서에서 지원 되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  

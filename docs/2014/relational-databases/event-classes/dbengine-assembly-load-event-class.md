@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09089787cf369b18c54f9e0c4afabc5d22bed61d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c242f305b5a51458b1f18c52af9a82b3a378bee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227433"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 이벤트 클래스
   참조 [load 이벤트 클래스 어셈블리](../../database-engine/assembly-load-event-class.md)합니다.  

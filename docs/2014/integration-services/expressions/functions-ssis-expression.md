@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - expressions [Integration Services], functions
@@ -19,13 +19,13 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c272c738877eef0d8f931c7ed3a9262eeeae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171034"
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
   식 언어에는 식에 사용할 함수 집합이 포함되어 있습니다. 식은 단일 함수를 사용할 수도 있지만 일반적으로 연산자와 함수를 결합하여 여러 개의 함수를 사용합니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "36092026"
 |[FLOOR &#40;SSIS 식&#41;](floor-ssis-expression.md)|숫자 식보다 작거나 같은 최대 정수를 반환합니다.|  
 |[LN &#40;SSIS 식&#41;](ln-ssis-expression.md)|숫자 식의 자연 로그를 반환합니다.|  
 |[로그 &#40;SSIS 식&#41;](log-ssis-expression.md)|숫자 식의 상용 로그를 반환합니다.|  
-|[전원 &#40;SSIS 식&#41;](power-ssis-expression.md)|숫자 식의 거듭제곱을 반환합니다.|  
+|[POWER &#40;SSIS 식&#41;](power-ssis-expression.md)|숫자 식의 거듭제곱을 반환합니다.|  
 |[ROUND &#40;SSIS 식&#41;](round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
-|[SIGN &#40;SSIS 식&#41;](sign-ssis-expression.md)|숫자 식의 양수(+), 음수(-) 또는 영(0) 부호를 반환합니다.|  
-|[정사각형 &#40;SSIS 식&#41;](square-ssis-expression.md)|숫자 식의 제곱을 반환합니다.|  
+|[로그인 &#40;SSIS 식&#41;](sign-ssis-expression.md)|숫자 식의 양수(+), 음수(-) 또는 영(0) 부호를 반환합니다.|  
+|[사각형 &#40;SSIS 식&#41;](square-ssis-expression.md)|숫자 식의 제곱을 반환합니다.|  
 |[SQRT &#40;SSIS 식&#41;](sqrt-ssis-expression.md)|숫자 식의 제곱근을 반환합니다.|  
   
  식 계산기는 다음 문자열 함수를 제공합니다.  
@@ -65,14 +65,14 @@ ms.locfileid: "36092026"
 |[16 진수 &#40;SSIS 식&#41;](hex-ssis-expression.md)|정수의 16진수 값을 나타내는 문자열을 반환합니다.|  
 |[LEN &#40;SSIS 식&#41;](len-ssis-expression.md)|문자 식에 포함된 문자의 수를 반환합니다.|  
 |[왼쪽 &#40;SSIS 식&#41;](left-ssis-expression.md)|지정한 문자 식의 왼쪽부터 지정한 개수의 문자를 반환합니다.|  
-|[더 낮은 &#40;SSIS 식&#41;](lower-ssis-expression.md)|대문자를 소문자로 변환한 후에 문자 식을 반환합니다.|  
+|[낮은 &#40;SSIS 식&#41;](lower-ssis-expression.md)|대문자를 소문자로 변환한 후에 문자 식을 반환합니다.|  
 |[LTRIM &#40;SSIS 식&#41;](trim-ssis-expression.md)|선행 공백을 제거하고 문자 식을 반환합니다.|  
 |[대체 &#40;SSIS 식&#41;](replace-ssis-expression.md)|식 내의 문자열을 다른 문자열이나 빈 문자열로 바꾼 후 문자 식을 반환합니다.|  
 |[복제 &#40;SSIS 식&#41;](replicate-ssis-expression.md)|지정한 횟수만큼 복제된 문자 식을 반환합니다.|  
 |[역방향 &#40;SSIS 식&#41;](reverse-ssis-expression.md)|문자 식을 역 순서로 반환합니다.|  
 |[오른쪽 &#40;SSIS 식&#41;](right-ssis-expression.md)|지정한 문자 식의 오른쪽에서부터 지정한 개수의 문자를 반환합니다.|  
 |[RTRIM &#40;SSIS 식&#41;](rtrim-ssis-expression.md)|후행 공백을 제거하고 문자 식을 반환합니다.|  
-|[부분 문자열 &#40;SSIS 식&#41;](substring-ssis-expression.md)|문자 식의 일부를 반환합니다.|  
+|[부분 문자열이 &#40;SSIS 식&#41;](substring-ssis-expression.md)|문자 식의 일부를 반환합니다.|  
 |[TRIM &#40;SSIS 식&#41;](trim-ssis-expression.md)|선행 및 후행 공백을 제거하고 문자 식을 반환합니다.|  
 |[위 &#40;SSIS 식&#41;](upper-ssis-expression.md)|소문자를 대문자로 변환한 후에 문자 식을 반환합니다.|  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36092026"
 |[DATEADD &#40;SSIS 식&#41;](dateadd-ssis-expression.md)|지정한 날짜에 날짜 또는 시간 간격을 더하여 새로운 DT_DBTIMESTAMP 값을 반환합니다.|  
 |[DATEDIFF &#40;SSIS 식&#41;](datediff-ssis-expression.md)|지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다.|  
 |[DATEPART &#40;SSIS 식&#41;](datepart-ssis-expression.md)|날짜의 특정 부분을 나타내는 정수를 반환합니다.|  
-|[DAY &#40;SSIS 식&#41;](day-ssis-expression.md)|지정한 날짜의 일을 나타내는 정수를 반환합니다.|  
+|[일 &#40;SSIS 식&#41;](day-ssis-expression.md)|지정한 날짜의 일을 나타내는 정수를 반환합니다.|  
 |[GETDATE &#40;SSIS 식&#41;](getdate-ssis-expression.md)|시스템의 현재 날짜를 반환합니다.|  
 |[GETUTCDATE &#40;SSIS 식&#41;](getutcdate-ssis-expression.md)|시스템의 현재 날짜를 UTC 시간(국제 표준시 또는 그리니치 표준시)으로 반환합니다.|  
 |[월 &#40;SSIS 식&#41;](month-ssis-expression.md)|지정한 날짜의 월을 나타내는 정수를 반환합니다.|  
-|[연도 &#40;SSIS 식&#41;](year-ssis-expression.md)|지정한 날짜의 연도를 나타내는 정수를 반환합니다.|  
+|[YEAR &#40;SSIS 식&#41;](year-ssis-expression.md)|지정한 날짜의 연도를 나타내는 정수를 반환합니다.|  
   
  식 계산기는 다음 Null 함수를 제공합니다.  
   

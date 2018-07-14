@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: afee43abcadea62f4b1a925a3546693f28919e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cea6ddb8e6a7d29d5dffeb43648dd5c08267261d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236203"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>식 참조(보고서 작성기 및 SSRS)
   보고서 식은 기본 제공 함수 및 기본 제공 컬렉션에 대한 다양한 참조를 지원합니다. 식에 올바른 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 구문이 있어야만 보고서를 게시하거나 처리할 수 있습니다.  

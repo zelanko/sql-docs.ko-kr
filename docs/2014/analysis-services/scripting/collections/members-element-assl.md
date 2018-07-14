@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 4bf585a3-b681-486d-852b-1244c5658a04
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45b1dea7d3d3bee599f73b0fc0110933eb0cc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13718829cb38ff1cbe82071e0f5e3c436888c466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218083"
 ---
 # <a name="members-element-assl"></a>Members 요소(ASSL)
   부모 요소에 있는 [Member](../objects/member-element-assl.md) 요소의 컬렉션을 포함합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36088716"
 |자식 요소|[멤버](../objects/member-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Members` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Group> 및 <xref:Microsoft.AnalysisServices.Role>합니다.  
+ 부모에 해당 하는 요소가 `Members` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.Group> 및 <xref:Microsoft.AnalysisServices.Role>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [컬렉션 &#40;ASSL&#41;](collections-assl.md)  

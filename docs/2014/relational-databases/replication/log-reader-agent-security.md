@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.LRA.f1
 helpviewer_keywords:
 - Log Reader Agent Security dialog box
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 303c52d88f234fe09947b093a830d6cdba1aa11f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aaefce06d1306e03b6efb89214191902f6c920ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175730"
 ---
 # <a name="log-reader-agent-security"></a>로그 판독기 에이전트 보안
   **로그 판독기 에이전트 보안** 대화 상자에서 다음을 지정할 수 있습니다.  

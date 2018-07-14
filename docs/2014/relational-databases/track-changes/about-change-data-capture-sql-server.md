@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 656a66a9c0567c7d65a66983a2f459ee802ef523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 279e47c38c5339f74545cd0b13a175a4a9a604b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170262"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
   변경 데이터 캡처는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용되는 삽입, 업데이트 및 삭제 작업을 기록합니다. 이로 인해 변경 세부 정보가 쉽게 사용할 수 있는 관계형 형식으로 제공됩니다. 대상 환경에 변경 내용을 적용하는 데 필요한 열 정보 및 메타데이터가 수정된 행에 대해 캡처되고 추적된 원본 테이블의 열 구조를 반영하는 변경 테이블에 저장됩니다. 소비자가 변경 데이터에 체계적으로 액세스할 수 있도록 테이블 반환 함수가 제공됩니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "36088550"
  변경 데이터 캡처에 대한 변경 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그입니다. 추적된 원본 테이블에 삽입, 업데이트 및 삭제가 적용되면 이러한 변경을 설명하는 항목이 로그에 추가됩니다. 로그는 캡처 프로세스에 대한 입력으로 사용됩니다. 이 프로세스는 로그를 읽고 변경에 대한 정보를 추적된 테이블의 관련 변경 테이블에 추가합니다. 지정된 범위에서 변경 테이블에 나타나는 변경을 열거하여 해당 정보를 필터링된 결과 집합의 형태로 반환하는 함수가 제공됩니다. 필터링된 결과 집합은 일반적으로 일부 외부 환경의 원본 표현을 업데이트하는 응용 프로그램 프로세스에서 사용됩니다.  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>변경 데이터 캡처 및 캡처 인스턴스 이해  
- 데이터베이스 내에 있는 개별 테이블에 대한 변경 내용을 추적하려면 먼저 해당 데이터베이스에 변경 데이터 캡처를 사용하도록 명시적으로 설정해야 합니다. 이 작업은 저장 프로시저 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)를 사용하여 수행합니다. 데이터베이스에 변경 데이터 캡처를 사용하도록 설정하면 저장 프로시저 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)을 사용하여 원본 테이블을 추적된 테이블로 식별할 수 있습니다. 테이블에 변경 데이터 캡처를 사용하도록 설정하면 관련 캡처 인스턴스가 만들어져 원본 테이블에서의 변경 데이터 배포가 지원됩니다. 캡처 인스턴스는 변경 테이블과 최대 두 개의 쿼리 함수로 구성됩니다. 캡처 인스턴스의 구성 세부 정보를 설명 하는 메타 데이터는 변경 데이터 캡처 메타 데이터 테이블에 보존 되는 `cdc.change_tables`, `cdc.index_columns`, 및 `cdc.captured_columns`합니다. 이 정보는 저장 프로시저 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)를 사용하여 검색할 수 있습니다.  
+ 데이터베이스 내에 있는 개별 테이블에 대한 변경 내용을 추적하려면 먼저 해당 데이터베이스에 변경 데이터 캡처를 사용하도록 명시적으로 설정해야 합니다. 이 작업은 저장 프로시저 [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)를 사용하여 수행합니다. 데이터베이스에 변경 데이터 캡처를 사용하도록 설정하면 저장 프로시저 [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)을 사용하여 원본 테이블을 추적된 테이블로 식별할 수 있습니다. 테이블에 변경 데이터 캡처를 사용하도록 설정하면 관련 캡처 인스턴스가 만들어져 원본 테이블에서의 변경 데이터 배포가 지원됩니다. 캡처 인스턴스는 변경 테이블과 최대 두 개의 쿼리 함수로 구성됩니다. 캡처 인스턴스의 구성 세부 정보를 설명 하는 메타 데이터는 변경 데이터 캡처 메타 데이터 테이블에 유지 됩니다 `cdc.change_tables`, `cdc.index_columns`, 및 `cdc.captured_columns`합니다. 이 정보는 저장 프로시저 [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)를 사용하여 검색할 수 있습니다.  
   
- 캡처 인스턴스와 관련된 모든 개체는 변경 데이터 캡처를 사용하도록 설정된 데이터베이스의 변경 데이터 캡처 스키마에 만들어집니다. 캡처 인스턴스 이름은 올바른 개체 이름이어야 하며 데이터베이스 캡처 인스턴스 전체에서 고유해야 합니다. 기본적으로 이름은 원본 테이블의 \<*스키마 이름*_*테이블 이름*>입니다. 관련된 변경 테이블을 추가 하 여 지정 `_CT` 캡처 인스턴스 이름에 있습니다. 함수를 사용 하 여 모든 변경 내용 쿼리 앞에 추가 하 여 지정 `fn_cdc_get_all_changes_` 캡처 인스턴스 이름에 있습니다. 캡처 인스턴스를 지원 하도록 구성 된 경우 `net changes`, `net_changes` 함수는 또한 생성 하 고 앞에 추가 하 여 명명 된 쿼리 **fn_cdc_get_net_changes\_**  캡처 인스턴스 이름에 있습니다.  
+ 캡처 인스턴스와 관련된 모든 개체는 변경 데이터 캡처를 사용하도록 설정된 데이터베이스의 변경 데이터 캡처 스키마에 만들어집니다. 캡처 인스턴스 이름은 올바른 개체 이름이어야 하며 데이터베이스 캡처 인스턴스 전체에서 고유해야 합니다. 기본적으로 이름은 원본 테이블의 \<*스키마 이름*_*테이블 이름*>입니다. 추가 하 여 관련된 변경 테이블 이름은 `_CT` 캡처 인스턴스 이름입니다. 하는 데 사용 되는 함수를 추가 하 여 모든 변경 내용 쿼리 이름은 `fn_cdc_get_all_changes_` 캡처 인스턴스 이름입니다. 캡처 인스턴스를 지원 하도록 구성 된 경우 `net changes`서 `net_changes` 함수도 생성 되어 추가 하 여 명명 된 쿼리 **fn_cdc_get_net_changes\_**  캡처 인스턴스 이름에 있습니다.  
   
 ## <a name="change-table"></a>변경 테이블  
  변경 데이터 캡처 변경 테이블의 처음 5개 열은 메타데이터 열입니다. 이러한 열은 기록된 변경 내용과 관련된 추가 정보를 제공합니다. 나머지 열은 원본 테이블에서 이름 및 유형(일반적으로 사용됨)으로 식별된 캡처된 열을 반영합니다. 이러한 열은 원본 테이블에서 수집된 캡처된 열을 보유합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36088550"
   
  변경 테이블에 보관되어 있는 데이터는 주기적이며 체계적으로 정리하지 않으면 관리할 수 없을 정도로 커집니다. 변경 데이터 캡처 정리 프로세스는 보존을 기반으로 하는 정리 정책을 적용합니다. 먼저 이 프로세스는 시간 제한에 따라 유효성 간격의 하위 끝점으로 이동한 다음 만료된 변경 테이블 항목을 제거합니다. 기본적으로 3일 분량의 데이터가 보존됩니다.  
   
- 높은 끝점에서 캡처 프로세스가 변경 데이터를 각각 새 일괄 처리를 커밋하면 새 항목에 추가 됩니다 `cdc.lsn_time_mapping` 변경 테이블 항목을 포함 하는 각 트랜잭션에 대해 합니다. 매핑 테이블 내에서 커밋 LSN(로그 시퀀스 번호)과 트랜잭션 커밋 시간(각각 start_lsn 열 및 tran_end_time 열)은 모두 보존됩니다. 에 있는 최대 LSN 값 `cdc.lsn_time_mapping` 데이터베이스 유효성 기간의 상위 워터 마크를 나타냅니다. 이 값의 해당 커밋 시간은 보존 기반 정리에서 새 하위 워터마크를 계산하는 기반으로 사용됩니다.  
+ 높은 끝점에서 캡처 프로세스가 각각 새 변경 데이터의 일괄 처리를 커밋하면 새 항목이 추가 되 `cdc.lsn_time_mapping` 변경 테이블 항목을 포함 하는 각 트랜잭션에 대해 합니다. 매핑 테이블 내에서 커밋 LSN(로그 시퀀스 번호)과 트랜잭션 커밋 시간(각각 start_lsn 열 및 tran_end_time 열)은 모두 보존됩니다. 에 있는 최대 LSN 값 `cdc.lsn_time_mapping` 데이터베이스 유효성 기간의 상위 워터 마크를 나타냅니다. 이 값의 해당 커밋 시간은 보존 기반 정리에서 새 하위 워터마크를 계산하는 기반으로 사용됩니다.  
   
  캡처 프로세스에서 트랜잭션 로그의 변경 데이터를 추출하기 때문에 변경 내용이 원본 테이블에 커밋되는 시간과 변경 내용이 관련 변경 테이블 내에 나타나는 시간 사이에는 기본적으로 대기 시간이 있게 됩니다. 이러한 대기 시간은 일반적으로 짧지만, 캡처 프로세스에서 관련 로그 항목을 처리할 때까지 변경 데이터를 사용할 수 없다는 점을 알아두는 것이 중요합니다.  
   

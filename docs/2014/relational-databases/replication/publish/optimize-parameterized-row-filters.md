@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - filters [SQL Server replication], parameterized
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - parameterized filters [SQL Server replication], optimizing
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13c5a3ca9324b79c6c8844534ce5eff8b495eeed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95cd675d8c774b7b0321eb3ffc15e1c15a213f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242263"
 ---
 # <a name="optimize-parameterized-row-filters"></a>매개 변수가 있는 행 필터 최적화
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 최적화하는 방법에 대해 설명합니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "36088828"
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>새 게시를 만들 때 병합 필터 최적화를 지정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 지정 **@publication** 값 `true` 하나에 대해 다음 매개 변수:  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 지정할 **@publication** 값 `true` 하나에 대해 다음 매개 변수:  
   
     -   **@use_partition_groups**: - 아티클이 사전 계산 파티션의 요구 사항을 충족하는 경우 가장 높은 성능 최적화를 제공합니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "36088828"
   
 1.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 실행하고 **@publication**에서 매개 변수가 있는 행 필터를 최적화하는 방법에 대해 설명합니다. 결과 집합에서 **keep_partition_changes** 및 **use_partition_groups** 값을 확인합니다.  
   
-2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 값을 지정 **use_partition_groups** 에 대 한 **@property** 고 `true` 또는 `false` 에 대 한 **@value**합니다.  
+2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 값을 지정 **use_partition_groups** 에 대 한 **@property** 고 `true` 하거나 `false` 에 대 한 **@value**합니다.  
   
-3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 값을 지정 **keep_partition_changes** 에 대 한 **@property** 고 `true` 또는 `false` 에 대 한 **@value**합니다.  
+3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 값을 지정 **keep_partition_changes** 에 대 한 **@property** 고 `true` 하거나 `false` 에 대 한 **@value**합니다.  
   
     > [!NOTE]  
     >  **keep_partition_changes**를 설정할 때는 먼저 **use_partition_groups**를 해제하고 **@force_reinit_subscription**에 **1** 값을 지정해야 합니다.  

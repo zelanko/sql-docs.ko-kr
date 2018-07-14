@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220043"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>테이블 형식 모델 솔루션 배포(SSAS 테이블 형식)
   테이블 형식 모델 프로젝트를 제작한 후에는 사용자가 보고 클라이언트 응용 프로그램을 사용하여 모델을 찾아볼 수 있도록 프로젝트를 배포해야 합니다. 이 항목에서는 사용자 환경에서 테이블 형식 모델 솔루션을 배포할 때 사용할 수 있는 다양한 속성과 메서드에 대해 설명합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36089153"
 |--------------|---------------------|-----------------|  
 |**서버**<br /><br /> 프로젝트가 생성될 때 설정됩니다.|**localhost**|프로젝트가 생성될 때 설정되는 이 속성은 모델이 배포될 이름별 Analysis Services 인스턴스를 지정합니다. 기본적으로 모델은 로컬 컴퓨터에 있는 기본 Analysis Services 인스턴스로 배포됩니다. 하지만 이 설정을 변경하여 로컬 컴퓨터의 명명된 인스턴스 또는 Analysis Services 개체를 만들 권한이 있는 원격 컴퓨터의 인스턴스를 지정할 수 있습니다.|  
 |**버전(Edition)**|작업 영역 서버가 위치한 인스턴스와 동일한 버전입니다.|이 속성은 모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다. 기본적으로 로컬 Analysis Services 서버의 버전이 사용됩니다. 프로덕션 Analysis Services 서버 등의 다른 Analysis Services 서버를 지정하는 경우 해당 Analysis Services 서버의 버전을 지정해야 합니다.|  
-|**데이터베이스 백업**|**\<projectname>**|이 속성은 배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 보고 클라이언트 데이터 연결 또는 .bism 데이터 연결 파일에도 지정됩니다.<br /><br /> 모델을 제작할 때 언제든지 이 이름을 변경할 수 있습니다. 모델을 배포한 후 이름을 변경하면 배포 후의 변경 내용은 이전에 배포한 모델에 영향을 주지 않습니다. 예를 들어 라는 솔루션을 열고 `TestDB` 기본 모델 데이터베이스 이름인 Model로 솔루션을 배포 하 고, 솔루션을 수정 고 모델 데이터베이스 이름을 바꿀 `Sales`, 하면 솔루션이 배포 된 Analysis Services의 인스턴스 디스플레이 구분 데이터베이스 라는 이름의 하나는 Sales 라는 합니다.|  
+|**데이터베이스 백업**|**\<projectname>**|이 속성은 배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 보고 클라이언트 데이터 연결 또는 .bism 데이터 연결 파일에도 지정됩니다.<br /><br /> 모델을 제작할 때 언제든지 이 이름을 변경할 수 있습니다. 모델을 배포한 후 이름을 변경하면 배포 후의 변경 내용은 이전에 배포한 모델에 영향을 주지 않습니다. 예를 들어 명명 된 솔루션을 열면 `TestDB` 및 기본 모델 데이터베이스 이름인 Model로 솔루션을 배포한 다음 솔루션을 수정 및 model 데이터베이스 이름을 바꿀 `Sales`에 솔루션이 배포 된 Analysis Services 인스턴스 표시 구분 데이터베이스, 명명 된 모델을 하나 및 하나는 Sales 라는 합니다.|  
 |**큐브 이름**|**Model**|이 속성은 클라이언트 도구(예: Excel)와 AMO(Analysis Management Objects)에 표시된 큐브 이름을 지정합니다.|  
   
 ### <a name="directquery-options-properties"></a>DirectQuery 옵션 속성  
@@ -80,7 +80,7 @@ ms.locfileid: "36089153"
   
 |메서드|Description|링크|  
 |------------|-----------------|----------|  
-|**SQL Server Data Tools의 배포 명령**|배포 명령은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 제작 환경에서 테이블 형식 모델 프로젝트를 배포하는 간단하고 직관적인 방법을 제공합니다.<br /><br /> **\*\* 주의 \*\*** 이 방법은 프로덕션 서버에 배포하는 데 사용하면 안 됩니다. 이 방법을 사용하면 기존 모델에서 특정 속성을 덮어쓸 수 있습니다.|[SQL Server Data Tools에서 배포 &#40;SSAS 테이블 형식&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
+|**SQL Server Data Tools의 배포 명령**|배포 명령은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 제작 환경에서 테이블 형식 모델 프로젝트를 배포하는 간단하고 직관적인 방법을 제공합니다.<br /><br /> **\*\* 주의 \*\*** 이 방법은 프로덕션 서버에 배포하는 데 사용하면 안 됩니다. 이 방법을 사용하면 기존 모델에서 특정 속성을 덮어쓸 수 있습니다.|[SQL Server Data Tools에서 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**AMO(Analysis Management Objects) 자동화**|AMO는 솔루션 배포에 사용할 수 있는 명령을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 전체 명령 집합을 프로그래밍 방식으로 사용할 수 있는 인터페이스를 개발자에게 제공합니다. 솔루션 배포를 위한 방법으로 AMO 자동화는 가장 유연한 방법이지만 프로그래밍이 필요합니다.  AMO를 사용하는 경우의 주요 이점은 SQL Server 에이전트와 AMO 응용 프로그램을 함께 사용하여 미리 설정된 일정에 따라 배포를 실행할 수 있다는 것입니다.|[Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 메타데이터의 XMLA 스크립트를 생성하고 다른 서버에서 이 스크립트를 실행하여 초기 데이터베이스를 다시 만듭니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 배포 프로세스를 정의하고 코드화한 다음 XMLA 스크립트로 저장하여 XMLA 스크립트를 쉽게 만들 수 있습니다. XMLA 스크립트를 파일로 저장한 후에는 쉽게 일정에 따라 스크립트를 실행하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 직접 연결하는 응용 프로그램에 스크립트를 포함할 수 있습니다.<br /><br /> SQL Server 에이전트를 사용하여 미리 설정된 기준에 따라 XMLA 스크립트를 실행할 수도 있지만 XMLA 스크립트에는 AMO만큼의 융통성은 없습니다. AMO는 전체적인 범위의 관리 명령을 호스팅하여 가장 폭넓은 기능을 제공합니다.|[XMLA를 사용하여 모델 솔루션 배포](../multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**배포 마법사**|배포 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 생성된 XMLA 출력 파일로 프로젝트의 메타데이터를 대상 서버에 배포합니다. 배포 마법사를 사용하면 프로젝트 빌드의 출력 디렉터리에 생성되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파일을 사용하여 직접 배포할 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사의 주요 이점은 편리함입니다. XMLA 스크립트를 나중에 사용하기 위해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 저장하는 것처럼 배포 마법사 스크립트를 저장할 수 있습니다. 배포 마법사는 대화형으로 실행하거나 배포 유틸리티를 통해 명령 프롬프트에서 실행할 수 있습니다.|[배포 마법사를 사용하여 모델 솔루션 배포](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
@@ -97,7 +97,7 @@ ms.locfileid: "36089153"
   
 |태스크|Description|  
 |----------|-----------------|  
-|[SQL Server Data Tools에서 배포 &#40;SSAS 테이블 형식&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 배포 명령을 사용하여 배포 속성을 구성하고 테이블 형식 모델 프로젝트를 배포하는 방법에 대해 설명합니다.|  
+|[SQL Server Data Tools에서 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 배포 명령을 사용하여 배포 속성을 구성하고 테이블 형식 모델 프로젝트를 배포하는 방법에 대해 설명합니다.|  
 |[배포 마법사를 사용하여 모델 솔루션 배포](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|이 섹션의 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 사용하여 테이블 형식 및 다차원 모델 솔루션 모두를 배포하는 방법에 대해 설명합니다.|  
 |[배포 유틸리티를 사용하여 모델 솔루션 배포](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 유틸리티를 사용하여 테이블 형식 및 다차원 모델 솔루션을 배포하는 방법에 대해 설명합니다.|  
 |[XMLA를 사용하여 모델 솔루션 배포](../multidimensional-models/deploy-model-solutions-using-xmla.md)|XMLA를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 솔루션 및 다차원 솔루션을 배포하는 방법에 대해 설명합니다.|  

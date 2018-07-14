@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowcounttrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 035ba7e1777dac88efb59265ea61ab6181bada1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 966f42cf41f93c162ef3aac7be17fce920edbceb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209533"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
   행 개수 변환은 행이 데이터 흐름을 통과할 때 행 수를 세어 최종 개수를 변수에 저장합니다.  

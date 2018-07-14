@@ -21,13 +21,13 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d118ff880ad3209cd348794b90aeac8ad76318aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03a12904a08c964a122f0658ccb53a4f5f0bd4ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245193"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지와 같은 엔터프라이즈 데이터 처리 응용 프로그램에서는 Active Directory에 저장된 직원의 직급, 직함 또는 기타 특징에 따라 데이터를 각기 다르게 처리해야 하는 경우가 종종 있습니다. Active Directory는 사용자에 대한 메타데이터뿐 아니라 컴퓨터 및 프린터와 같은 조직의 기타 자산에 대한 메타데이터도 저장하는 중앙 저장소를 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 디렉터리 서비스입니다. Microsoft .NET Framework의 `System.DirectoryServices` 네임스페이스에서는 Active Directory에 저장된 정보에 따라 데이터 처리 워크플로를 제어할 수 있도록 Active Directory 작업을 위한 클래스를 제공합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36088874"
   
 1.  `email`, `name` 및 `title`이라는 세 개의 문자열 변수를 만듭니다. `email` 변수 값으로 올바른 회사 전자 메일 주소를 입력합니다.  
   
-2.  에 **스크립트** 의 페이지는 **스크립트 태스크 편집기**, 추가 된 `email` 변수를 `ReadOnlyVariables` 속성입니다.  
+2.  에 **스크립트** 페이지를 **스크립트 태스크 편집기**, 추가 합니다 `email` 변수를 `ReadOnlyVariables` 속성.  
   
 3.  `ReadWriteVariables` 속성에 `name` 및 `title` 변수를 추가합니다.  
   
@@ -115,6 +115,6 @@ public void Main()
   
 -   social.technet.microsoft.com의 기술 문서 [SSIS에서 Active Directory 정보 처리](http://go.microsoft.com/fwlink/?LinkId=199588)  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

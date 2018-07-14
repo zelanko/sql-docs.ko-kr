@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
 - sql12.swb.registerdacwizard.summary.f1
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7b197a130a1caa9ec467d529b36373b8aa648b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197203"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
-  사용 하 여는 **데이터 계층 응용 프로그램 등록 마법사** 또는 DAC정의등록하고기존데이터베이스의개체를설명하는데이터계층응용프로그램(DAC)정의작성하는스크립트가WindowsPowerShell`msdb` 시스템 데이터베이스 (**마스터** 에 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  하나를 사용 합니다 **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 및 합니다 DAC정의등록하는기존데이터베이스의개체를설명하는데이터계층응용프로그램(DAC)정의스크립팅`msdb` 시스템 데이터베이스 (**마스터** 에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -82,11 +82,11 @@ ms.locfileid: "36093110"
   
  **응용 프로그램 이름.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
   
- **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우에 버전에 저장 됩니다는 `msdb` 데이터베이스에 있으며 나중에 아래에서 볼 수 있습니다는 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우에 버전에 저장 됩니다는 `msdb` 데이터베이스 및에서 나중에 볼 수 있습니다 합니다 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
- **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포 하는 경우 설명에 저장 됩니다는 `msdb` 데이터베이스에 있으며 나중에 아래에서 볼 수 있습니다는 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
+ **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포에 대 한 설명에 저장 됩니다는 `msdb` 데이터베이스 및에서 나중에 볼 수 있습니다 합니다 **데이터 계층 응용 프로그램** 노드에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
   
- **\< 이전** -돌아갑니다는 **소개** 페이지.  
+ **\< 이전** -반환 하는 **소개** 페이지입니다.  
   
  **다음 >** - 데이터베이스의 개체로 DAC를 작성할 수 있는지 확인하고 **유효성 검사 및 요약** 페이지에 결과를 표시합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36093110"
 ### <a name="retrieving-objects"></a>개체 검색  
  **데이터베이스 및 서버 개체 검색** - 마법사가 데이터베이스의 모든 필요한 개체 및 데이터베이스 엔진의 인스턴스를 검색할 때 진행률 표시줄을 표시합니다.  
   
- **\< 이전** -돌아갑니다는 **속성 설정** 페이지를 변경 합니다.  
+ **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36093110"
 ### <a name="validating-objects"></a>개체 유효성 확인  
  **.**  *.* **를 실행할 수 없습니다.** *ObjectName* **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. *SchemaName ***.*** ObjectName*은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
- **\< 이전** -돌아갑니다는 **속성 설정** 페이지를 변경 합니다.  
+ **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36093110"
   
  **보고서 저장** - 유효성 검사 보고서의 복사본을 HTML 파일로 저장하려면 이 단추를 선택합니다. 기본 폴더는 Windows 계정의 Documents 폴더에 있는 **SQL Server Management Studio\DAC Packages** 폴더입니다.  
   
- **\< 이전** -돌아갑니다는 **속성 설정** 페이지를 변경 합니다.  
+ **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
   
  **다음 >** - DAC를 등록하고 **DAC 등록** 페이지에 결과를 표시합니다.  
   

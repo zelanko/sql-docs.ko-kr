@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f480ecda36c5243665488a4328d80304dd402216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: be31b82e3ce6d2ed319d0ef293332b65e9aa1e24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190233"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
   복제 에이전트는 스키마와 데이터의 복사본 만들기, 게시자 또는 구독자에서 업데이트 검색, 서버 간에 변경 내용 전파 등 복제와 관련된 많은 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행됩니다. 에이전트는 단순히 실행 파일이므로 명령줄 및 일괄 처리 스크립트에서 직접 호출할 수도 있습니다. 각 응용 프로그램 에이전트는 실행 방식을 제어하는 데 사용되는 일련의 런타임 매개 변수를 지원합니다. 이러한 매개 변수는 에이전트 프로필 또는 명령줄에서 지정됩니다.  

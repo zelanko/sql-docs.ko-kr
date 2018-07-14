@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3a2113a46869312d1954115c60723dcb51c1d262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168154"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 및 DataSets 컬렉션 참조(보고서 작성기 및 SSRS)
   `DataSources` 컬렉션은 보고서에 사용되는 모든 데이터 원본을 나타냅니다. 마찬가지로,는 `DataSets` 컬렉션은 보고서의 모든 데이터 원본에 대 한 모든 데이터 집합을 나타냅니다. **보고서 데이터** 창을 사용하여 참조하는 데이터 원본 아래에 구성된 보고서 데이터 집합을 계층적으로 볼 수 있습니다. 이러한 컬렉션에 대한 참조를 추가할 경우 보고서를 미리 볼 때 값이 표시되지 않습니다. 이러한 컬렉션은 보고서가 보고서 서버에 게시된 다음에만 사용할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36091010"
 |`Type`|`String`|데이터 원본의 데이터 공급자 유형입니다. `SQL`)을 입력합니다.|  
   
 ## <a name="datasets"></a>DataSets  
- `DataSets` 컬렉션은 보고서 정의에 참조되는 데이터 집합을 나타냅니다. 보고서에 입력란으로 쿼리를 포함하면 보고서에 정확히 어떤 데이터가 있는지 알고자 하는 사용자가 원본 명령 텍스트를 볼 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 멤버를 설명 하는 다음 표에서 `DataSets` 컬렉션입니다.  
+ `DataSets` 컬렉션은 보고서 정의에 참조되는 데이터 집합을 나타냅니다. 보고서에 입력란으로 쿼리를 포함하면 보고서에 정확히 어떤 데이터가 있는지 알고자 하는 사용자가 원본 명령 텍스트를 볼 수 있습니다. 이 컬렉션은 **미리 보기** 모드에서는 사용할 수 없습니다. 다음 표에의 멤버는 `DataSets` 컬렉션입니다.  
   
 |**멤버**|`Type`|**설명**|  
 |----------------|--------------|---------------------|  

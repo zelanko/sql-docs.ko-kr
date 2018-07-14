@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트 로그 작업 범주를 전달 하면 업그레이드가 실패할 | Microsoft Docs
+title: 작업 범주를 전달 하는 SQL Server 에이전트 로그에는 업그레이드가 실패 하면 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
 - job categories [SQL Server Agent]
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47d7d5024d234478b8b54e3c05b3c22335758782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0e235b33ae24ff823e8492690e6775951dc4ef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242233"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>SQL Server 에이전트 로그 전달 작업 범주로 인해 업그레이드하지 못합니다.
   로그 전달이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 범주가 있으면 업그레이드 프로세스가 실패합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36091656"
   
 ## <a name="see-also"></a>관련 항목  
  [로그 전달 업그레이드 한 후 실행 되지 않습니다.](../../../2014/sql-server/install/log-shipping-will-not-run-after-upgrading.md)   
- [SQL Server 에이전트 사용자 프록시 계정이 임시 UpgradedProxyAccount에 변경 됩니다 업그레이드](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
+ [SQL Server 에이전트 사용자 프록시 계정이 임시 UpgradedProxyAccount로 변경 됩니다 업그레이드](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
  [SQL Server 에이전트 업그레이드 문제](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

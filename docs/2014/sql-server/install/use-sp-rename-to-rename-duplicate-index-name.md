@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
 - duplicate table names
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b47cb1000c4b427f8780c8a3f3ba57ef73fef9bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232513"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>sp_rename을 사용하여 중복 인덱스 이름을 바꿉니다.
   업그레이드 관리자가 중복된 테이블 또는 뷰 인덱스 이름을 검색했습니다. 업그레이드하기 전에 인덱스 이름을 바꾸어 중복을 제거하십시오.  
@@ -66,6 +66,6 @@ ms.locfileid: "36089215"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

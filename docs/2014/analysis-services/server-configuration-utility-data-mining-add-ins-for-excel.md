@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178930"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>서버 구성 유틸리티(Excel용 데이터 마이닝 추가 기능)
   Excel용 데이터 마이닝 추가 기능을 설치하면 서버 구성 유틸리티도 설치되며, 추가 기능을 처음 열 때 함께 실행됩니다. 이 항목에서는 이 유틸리티를 사용해서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결하고 데이터 마이닝 모델에 사용할 수 있도록 데이터베이스를 설정하는 방법에 대해 설명합니다.  
@@ -42,11 +42,11 @@ ms.locfileid: "36091150"
 ##  <a name="bkmk_step2"></a> 2 단계: 임시 모델 허용  
  추가 기능을 사용하려면 먼저 임시 마이닝 모델 생성을 허용하도록 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 속성을 변경해야 합니다.  
   
- 임시 마이닝 모델은 라고도 *세션 모델*합니다. 현재 세션이 열려 있는 동안에만 모델이 저장되기 때문입니다. 서버에 대한 연결을 닫으면 세션이 종료되고 세션이 열려 있는 동안 사용된 모든 모델이 삭제됩니다.  
+ 임시 마이닝 모델 이라고 *세션 모델*합니다. 현재 세션이 열려 있는 동안에만 모델이 저장되기 때문입니다. 서버에 대한 연결을 닫으면 세션이 종료되고 세션이 열려 있는 동안 사용된 모든 모델이 삭제됩니다.  
   
  세션 마이닝 모델을 사용하더라도 서버의 저장 공간에는 영향이 없지만 데이터 마이닝 모델을 만드는 데 따르는 오버헤드가 서버 성능에 영향을 줄 수 있습니다.  
   
- 마법사는 먼저 사용자가 지정한 서버에서 설정을 검색합니다. 서버에서 이미 임시 마이닝 모델을 허용 하는 경우 클릭할 수 있는 **다음** 를 계속 합니다. 마법사에는 또한 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버에서 임시 마이닝 모델을 사용하도록 설정하는 방법 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자에게 요청을 수행하는 방법에 대한 지침이 제공됩니다.  
+ 마법사는 먼저 사용자가 지정한 서버에서 설정을 검색합니다. 서버에서 이미 임시 마이닝 모델을 허용 하는 경우 클릭할 수 있습니다 **다음** 계속 합니다. 마법사에는 또한 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버에서 임시 마이닝 모델을 사용하도록 설정하는 방법 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자에게 요청을 수행하는 방법에 대한 지침이 제공됩니다.  
   
 ##  <a name="bkmk_step3"></a> 3 단계: 추가 기능 사용자 용 데이터베이스 만들기  
  설정 및 구성 마법사의 이 페이지에서 데이터 마이닝 전용의 새 데이터베이스를 만들거나 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 선택할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "36091150"
  나열된 사용자에게 데이터베이스에 대한 관리 액세스 권한을 부여하려면 이 옵션을 선택합니다.  
   
 > [!NOTE]  
->  이러한 권한은에 나열 된 데이터베이스에만 적용 된 **데이터베이스 이름** 상자입니다.  
+>  이러한 권한은에 나열 된 데이터베이스에만 적용 합니다 **데이터베이스 이름** 상자입니다.  
   
  **데이터베이스 이름**  
  선택한 데이터베이스의 이름을 표시합니다.  

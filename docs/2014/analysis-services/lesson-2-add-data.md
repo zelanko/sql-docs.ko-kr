@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165514"
 ---
 # <a name="lesson-2-add-data"></a>2단원: 데이터 추가
   이 섹션에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 의 테이블 가져오기 마법사를 사용하여 AdventureWorksDW SQL Database에 연결하고, 데이터를 선택하고, 미리 보고 필터링한 다음 해당 데이터를 모델 작업 영역으로 가져옵니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36089188"
   
 2.  **테이블 가져오기 마법사**의 **관계형 데이터베이스**에서 **Microsoft SQL Server**를 클릭한 후 **다음**을 클릭합니다.  
   
-3.  에 **Microsoft SQL Server 데이터베이스에 연결** 페이지 **연결 이름**, 형식 `Adventure Works DB from SQL`합니다.  
+3.  에 **Microsoft SQL Server 데이터베이스에 연결** 페이지에서 **연결 이름**, 형식 `Adventure Works DB from SQL`합니다.  
   
 4.  **서버 이름**에 AdventureWorksDW 데이터베이스가 설치되어 있는 서버의 이름을 입력합니다.  
   

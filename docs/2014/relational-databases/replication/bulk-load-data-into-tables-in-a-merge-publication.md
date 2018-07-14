@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01c29e00546b0b90fce67fa4242c8398b2392614
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5fe31b5f7720896c149af4463de3ef9a72cae23b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166974"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>병합 게시에서 데이터를 테이블로 대량 로드(복제 Transact-SQL 프로그래밍)
   [bcp 유틸리티](../../tools/bcp-utility.md) 또는 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 명령을 사용하여 데이터를 테이블로 로드할 경우 기본적으로 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql) 시스템 테이블의 추적 데이터를 유지 관리하는 병합 복제 트리거가 발생하지 않습니다. 데이터가 로드될 때 병합 복제 트리거가 강제로 발생하도록 하거나 복제 저장 프로시저를 사용하여 대량 복사 작업을 수행한 후 생성된 복제 메타데이터를 프로그래밍 방식으로 삽입할 수 있습니다.  

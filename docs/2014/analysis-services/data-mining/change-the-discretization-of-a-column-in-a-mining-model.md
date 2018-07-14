@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델에서 열의 분할 변경 | Microsoft Docs
+title: 마이닝 모델에서 열의 불연속화 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202173"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>마이닝 모델에서 열의 분할 변경
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 특정 시나리오에서 값을 자동으로 불연속화합니다. 즉, 숫자 열의 데이터가 범주화됩니다. 예를 들어 데이터에 연속 숫자 데이터가 포함되고 있고 의사 결정 트리 모델을 만드는 경우 데이터의 배포에 따라 연속 데이터의 각 열이 자동으로 범주화됩니다. 데이터가 불연속화되는 방법을 제어하려면 모델에서 데이터가 사용되는 방법을 제어하는 마이닝 구조 열의 속성을 변경해야 합니다.  
@@ -43,14 +43,14 @@ ms.locfileid: "36090565"
   
 ### <a name="to-change-the-discretization-method"></a>분할 메서드를 변경하려면  
   
-1.  에 **마이닝 속성** 창, 옆에 있는 입력란을 클릭 **콘텐츠**를 선택 하 고 `Discretized` 드롭다운 목록에서 합니다.  
+1.  에 **마이닝 속성** 창, 텍스트 상자 옆에 클릭 **콘텐츠**를 선택한 `Discretized` 드롭다운 목록에서.  
   
      이제 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 및 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성을 사용할 수 있습니다.  
   
-2.  에 **속성** 창, 옆에 있는 입력란을 클릭 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 다음 값 중 하나를 선택 하 고: `Automatic`, `EqualAreas`, 또는 `Cluster`합니다.  
+2.  에 **속성** 창, 텍스트 상자 옆에 클릭 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 다음 값 중 하나를 선택 하 고: `Automatic`를 `EqualAreas`, 또는 `Cluster`합니다.  
   
     > [!NOTE]  
-    >  열 사용법으로 설정 되어 있으면 `Ignore`, **속성** 열 창은 비어 있습니다.  
+    >  열 사용법으로 설정 되어 있으면 `Ignore`는 **속성** 열 창은 비어 있습니다.  
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   

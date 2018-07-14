@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8d460ad3e85f1884a101ad1ad52adc1cd04fe43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198513"
 ---
 # <a name="schedules-page-report-manager"></a>일정 페이지(보고서 관리자)
   일정 페이지를 사용하여 공유 일정을 작성, 수정, 삭제, 일시 중지 또는 다시 시작할 수 있습니다. 공유 일정은 보고서, 구독 및 일정 정보를 사용하는 기타 프로세스와는 별도로 만들고 관리할 수 있는 명명된 일정입니다. 다른 사용자가 제공하는 공유 일정을 선택할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36092811"
  공유 일정을 삭제, 일시 중지 또는 다시 시작하려면 수정할 공유 일정 옆의 확인란을 선택하십시오.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  

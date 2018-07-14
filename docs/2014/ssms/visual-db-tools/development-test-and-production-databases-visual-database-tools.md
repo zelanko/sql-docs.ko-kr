@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - production databases [SQL Server]
 - testing databases
 - database testing [SQL Server]
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b59509cadb56fbbc9896b82d20f38f48e874da71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b90b7f4b96e3d32bab9131f12e5305f32af9a6f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224623"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>개발, 테스트 및 프로덕션 데이터베이스(Visual Database Tools)
   동일한 구조의 데이터베이스가 두 개 있으면 한 데이터베이스에서 변경한 내용을 다른 데이터베이스로 전파할 수 있습니다. 예를 들어, 개인 개발 데이터베이스와 그룹 범위의 테스트 데이터베이스가 있는 경우 개발 데이터베이스를 수정한 다음 해당 수정 내용을 테스트 데이터베이스로 전파할 수 있습니다.  

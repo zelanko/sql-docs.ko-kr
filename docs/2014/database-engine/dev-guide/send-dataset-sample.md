@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffe7f23a8f20a325f84fe68df90778ec321e0885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171364"
 ---
 # <a name="send-dataset-sample"></a>데이터 집합 보내기 예제
   `DataSet` 보내기 예제에서는 서버 쪽 CLR(공용 언어 런타임) 기반 저장 프로시저 내에서 ADO.NET 기반 `DataSet`을 결과 집합으로 클라이언트에 반환하는 방법을 보여 줍니다. 예를 들어 이러한 저장 프로시저가 쿼리 결과를 사용하여 `DataSet`을 채운 다음 이 `DataSet`에 있는 데이터를 조작하는 경우 이 예제가 유용합니다. 저장 프로시저가 `DataSet`을 처음부터 만들고 채우는 경우에도 이 예제가 유용합니다. 이 예제는 두 개의 클래스인 `DataSetUtilities`와 `TestSendDataSet`으로 구성됩니다. 일반적으로 `SendDataSet` 클래스의 `DataSetUtilities` 메서드가 `DataSet` 인스턴스의 내용을 클라이언트로 전송합니다. `DoTest` 클래스에 정의된 `TestSendDataSet` 메서드는 `SendDataSet`을 만들고 이 DataSet을 `DataSet` Transact-SQL 저장 프로시저의 데이터로 채움으로써 `uspGetTwoBOMTestData` 메서드가 작동하는지 확인합니다. `uspGetTwoBOMTestData`는 Transact-SQL 저장 프로시저인 `uspGetBillOfMaterials`를 두 번 실행하여 `usp_GetTwoBOMTestData` 저장 프로시저에 대한 매개 변수로 지정된 두 제품의 제품 구성 정보(BOM)를 재귀적으로 쿼리합니다. 일반적으로 데이터 집합을 채운 후에는 `SendDataSet`을 호출하여 데이터 집합 내의 데이터를 결과 집합으로 클라이언트에 배달하기 전에 데이터가 수정됩니다. 간단하게 하기 위해 이 예제에서는 데이터를 수정하지 않고 반환합니다.  

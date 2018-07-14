@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치 | Microsoft Docs
+title: Analysis Services 다차원 모델링 자습서에 대 한 샘플 데이터 및 프로젝트 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218273"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
   
 ## <a name="step-1-install-sql-server-software"></a>1단계: SQL Server 소프트웨어 설치  
- 이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 다음 소프트웨어는 모두 SQL Server 설치 미디어를 사용하여 설치됩니다. 배포를 간단하게 하기 위해 모든 기능을 단일 컴퓨터에 설치할 수도 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다. 자세한 내용은 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
+ 이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 다음 소프트웨어는 모두 SQL Server 설치 미디어를 사용하여 설치됩니다. 배포를 간단하게 하기 위해 모든 기능을 단일 컴퓨터에 설치할 수도 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다. 자세한 내용은 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
   
 -   데이터베이스 엔진  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36091840"
  이제 자습서를 사용할 준비가 되었습니다. 시작하는 방법에 대한 자세한 내용은 [다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

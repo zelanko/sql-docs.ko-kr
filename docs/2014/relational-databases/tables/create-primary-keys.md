@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 180dac17cd2aa504c7fd253761fd636e1baa5166
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d4ba48188473aaa5286e8121bcbfcd3a9b50101
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177680"
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 키를 정의할 수 있습니다. 기본 키를 만들면 해당하는 고유 클러스터형 또는 비클러스터형 인덱스가 자동으로 만들어집니다.  

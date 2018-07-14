@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - grouping containers
 - tasks [Integration Services], grouping
@@ -18,13 +18,13 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd7feaf302c920d34180246d45224b344642d765
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cece9e943ad2c551b60f4a468a3ce0b89d85059f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227783"
 ---
 # <a name="group-or-ungroup-components"></a>구성 요소 그룹화 또는 그룹 해제
   **디자이너의**제어 흐름 **,** 데이터 흐름 **및** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭에서는 축소 가능한 그룹화를 지원합니다. 패키지에 여러 구성 요소가 있는 경우 탭이 복잡해져서 모든 구성 요소를 한 번에 확인하기 어렵고 사용하려는 항목을 쉽게 찾기 어려울 수 있습니다. 축소 가능한 그룹화 기능을 사용하면 작업 공간을 절약하고 큰 패키지를 쉽게 사용할 수 있습니다.  

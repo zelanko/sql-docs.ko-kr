@@ -1,5 +1,5 @@
 ---
-title: TCP/IP 속성 (IP 주소 탭) | Microsoft Docs
+title: TCP IP 속성 (IP 주소 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187597"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP 속성 (IP 주소 탭)
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP IP 속성 (IP 주소 탭)
   **TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
   
  변경 내용을 적용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 온라인 설명서의 "방법: SQL Server Browser 서비스 시작 및 중지"를 참조하십시오.  

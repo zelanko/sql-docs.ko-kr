@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236363"
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
   이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36092362"
   
 -   기본 XML 인덱스 이름에는 뷰 이름과 같은 제한이 있습니다.  
   
- 에 XML 인덱스를 만들 수 없습니다는 `xml` 한 뷰의 열에 입력 한 **테이블** 와 값된 변수에 `xml` 유형 열을 또는 `xml` 변수를 입력 합니다.  
+ XML 인덱스를 만들 수 없습니다는 `xml` 뷰에서 열에 입력을 **테이블** 반환된 변수 `xml` 유형 열을 또는 `xml` 변수를 입력 합니다.  
   
--   변경 하려면 프로그램 `xml` 형식화 된 XML 유형 열을 형식화 되지 않은에서 또는 그 반대로 ALTER TABLE ALTER COLUMN 옵션을 사용 하 여 열에 XML 인덱스가 있어야 합니다. XML 인덱스가 있으면 열 형식 변경을 시도하기 전에 먼저 삭제해야 합니다.  
+-   변경 하는 `xml` 유형 열을 형식화 되지 않은 XML에서 형식화 된 또는 그 반대의 경우 ALTER TABLE ALTER COLUMN 옵션을 사용 하면 열에 XML 인덱스가 있어야 합니다. XML 인덱스가 있으면 열 형식 변경을 시도하기 전에 먼저 삭제해야 합니다.  
   
 -   ARITHABORT 옵션은 XML 인덱스를 만들 때 ON으로 설정되어야 합니다. XML 데이터 형식 메서드를 사용하여 XML 열의 값을 쿼리, 삽입, 삭제 또는 업데이트하려면 같은 옵션을 연결에 설정해야 합니다. 그렇지 않으면 XML 데이터 형식 메서드가 실패합니다.  
   

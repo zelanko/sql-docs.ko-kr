@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200363"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>13단원: Excel에서 분석
   이 단원에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 Excel에서 분석 기능을 사용하여 Microsoft Excel을 열고, 모델 작업 영역에 자동으로 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 자동으로 추가합니다. Excel에서 분석 기능을 사용하면 모델을 배포하기 전에 모델 디자인의 효율성을 빠르고 손쉽게 테스트해 볼 수 있습니다. 이 단원에서는 데이터 분석을 수행하지 않습니다. 이 단원의 목표는 모델 작성자가 모델 디자인을 테스트하는 데 사용할 수 있는 도구를 익히도록 하는 것입니다. 모델 작성자를 위한 Excel에서 분석 기능을 사용하는 것과 달리 최종 사용자는 Excel 또는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]와 같은 클라이언트 보고 응용 프로그램을 사용하여 배포된 모델 데이터에 연결하고 해당 데이터를 검색합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36091399"
   
      새 통합 문서와 함께 Excel이 열립니다. 현재 사용자 계정을 사용하여 데이터 원본이 연결되고 보기 가능한 필드를 정의하는 데 기본 큐브 뷰가 사용됩니다. 피벗 테이블이 자동으로 워크시트에 추가됩니다.  
   
-3.  Excel에서에서 **피벗 테이블 필드 목록**, 확인 된 **날짜** 및 **인터넷 판매** 측정값 표시으로 **고객**,  **날짜**, **Geography**, **제품**, **제품 범주**, **Product Subcategory**, 및 **인터넷 판매** 은 해당 열의 모든 테이블이 표시 됩니다.  
+3.  Excel에서에서 **피벗 테이블 필드 목록**, 확인 합니다 **날짜** 및 **Internet Sales** 측정값 표시 뿐만 **고객**,  **날짜**, **지리**를 **제품**를 **Product Category**를 **Product Subcategory**, 및 **Internet Sales** 테이블이 모든 해당 열을 사용 하 여 표시 합니다.  
   
 4.  통합 문서를 저장하지 않은 채 Excel을 닫습니다.  
   

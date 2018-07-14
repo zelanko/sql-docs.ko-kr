@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 330334330fd27459f19d3746187150e20900bd93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83863c8bc5547ec0839eed7e0883de4d22c4f693
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168144"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client 구성
   **설치 마법사의** Distributed Replay Client 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 Distributed Replay Client 서비스에 대한 관리 권한을 부여할 사용자를 지정합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36091205"
   
 ## <a name="options"></a>변수  
  **컨트롤러 이름**  
- 선택적 매개 변수 이며 기본값은 \< *빈*> 합니다.  
+ 이 선택적 매개 변수 이며 기본값은 \< *빈*>.  
   
  클라이언트 컴퓨터에서 Distributed Replay Client 서비스를 위해 통신할 컨트롤러의 이름을 입력합니다. 다음에 유의하세요.  
   

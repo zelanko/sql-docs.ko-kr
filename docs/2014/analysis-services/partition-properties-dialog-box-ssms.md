@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 31d7ea8727ce11ef52e23b1dc580e6ba706ae12d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30192ebd1ac739612e36f6895e22e455419a7449
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241673"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>파티션 속성 대화 상자(SSMS)
   SQL Server Management Studio의 **파티션 속성** 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 큐브에 대한 파티션 속성을 설정할 수 있습니다.  
@@ -42,6 +42,6 @@ ms.locfileid: "36088957"
 ## <a name="see-also"></a>관련 항목  
  [파티션 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [원격 파티션](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

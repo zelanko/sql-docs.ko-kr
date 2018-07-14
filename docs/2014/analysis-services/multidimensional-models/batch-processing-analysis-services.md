@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - batches [Analysis Services]
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66cc1d67c589d1794e2beabb03b680e1b1015254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 744c769b7d9627142f7eaa0ddf23590e2e3bd44b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218203"
 ---
 # <a name="batch-processing-analysis-services"></a>일괄 처리(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 일괄 처리 명령을 사용하여 여러 처리 명령을 단일 요청으로 서버에 보낼 수 있습니다. 일괄 처리를 사용하여 처리할 개체와 처리 순서를 제어할 수 있습니다. 또한 일괄 처리는 일련의 독립 실행형 작업으로 실행되거나 한 프로세스가 실패하면 완료된 일괄 처리가 롤백되는 트랜잭션으로 실행될 수 있습니다.  

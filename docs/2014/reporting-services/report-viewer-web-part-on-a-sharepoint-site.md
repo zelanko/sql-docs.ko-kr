@@ -1,5 +1,5 @@
 ---
-title: SharePoint 사이트에서 보고서 뷰어 웹 파트 | Microsoft Docs
+title: SharePoint 사이트의 보고서 뷰어 웹 파트 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,16 +18,16 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6be315ce2da4f17ab821a97c3a82f615e84cc181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198483"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 뷰어 웹 파트
-  보고서 뷰어 웹 파트는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능에 의해 설치되는 사용자 지정 웹 파트입니다. 웹 파트를 사용하여 SharePoint 통합 모드로 실행되도록 구성된 보고서 서버에서 보고서를 보고 탐색하며 인쇄하고 내보낼 수 있습니다. 보고서 뷰어 웹 파트는 보고서 정의 파일 (.rdl)에서 처리와 연결 된 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버. 다른 소프트웨어 제품에서 만든 다른 보고서 문서와 함께 이 웹 파트를 사용할 수 없습니다.  
+  보고서 뷰어 웹 파트는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능에 의해 설치되는 사용자 지정 웹 파트입니다. 웹 파트를 사용하여 SharePoint 통합 모드로 실행되도록 구성된 보고서 서버에서 보고서를 보고 탐색하며 인쇄하고 내보낼 수 있습니다. 보고서 뷰어 웹 파트는 보고서 정의 (.rdl) 파일에서 처리 되는 연관 된 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버. 다른 소프트웨어 제품에서 만든 다른 보고서 문서와 함께 이 웹 파트를 사용할 수 없습니다.  
   
  웹 파트를 설치하려면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능 설치 프로그램을 실행해야 합니다. 웹 파트를 독립적으로 설치하거나 제거하지 마십시오. 웹 파트는 추가 기능의 일부이며 추가 기능 설치 패키지를 통해서만 설치할 수 있습니다. 보고서 뷰어 웹 파트의 파일 이름은 ReportViewer.dwp입니다. 이 파일은 Program Files\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver 폴더에 있으며 다른 폴더로 이동하면 안 됩니다.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36093028"
  **자격 증명** 및 **매개 변수** 는 보기 영역 옆에 나타나는 창입니다. **자격 증명** 은 데이터 원본에 대한 액세스 권한이 있는 계정과 암호를 요청하는 메시지를 사용자에게 표시하도록 보고서에 대한 데이터 원본 연결을 구성한 경우 나타납니다. **매개 변수** 는 보고서에 정의된 매개 변수에 대한 사용자 입력을 보고서에서 사용하는 경우 나타납니다.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트에 속성 설정  
- 웹 파트의 속성에는 보고서 뷰어와 관련된 사용자 지정 속성과 모든 웹 파트에 설정할 수 있는 일반 속성이 포함됩니다. 자세한 내용은 참조 [보고서 뷰어 웹 파트를 사용자 지정할](../../2014/reporting-services/customize-the-report-viewer-web-part.md)합니다.  
+ 웹 파트의 속성에는 보고서 뷰어와 관련된 사용자 지정 속성과 모든 웹 파트에 설정할 수 있는 일반 속성이 포함됩니다. 자세한 내용은 [보고서 뷰어 웹 파트를 사용자 지정](../../2014/reporting-services/customize-the-report-viewer-web-part.md)합니다.  
   
  기본적으로 보고서는 전체 페이지 모드로 열립니다. 전체 페이지 모드에서는 페이지 탐색, 검색 및 기타 기능을 제공하는 도구 모음이 표시됩니다. 웹 파트를 사용자 지정하여 모양이나 기본 동작을 변경할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [설치 또는 제거는 Reporting Services 추가 기능에 SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [웹 페이지에 보고서 뷰어 웹 파트를 추가할 &#40;Reporting Services sharepoint에서 통합 모드&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [설치 또는 제거는 Reporting Services 추가-SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [웹 페이지에 보고서 뷰어 웹 파트 추가 &#40;Reporting Services sharepoint에서 통합 모드&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

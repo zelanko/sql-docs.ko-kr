@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 376188e66efbaba27deda5932bd0e65cce581af1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d59ad6ad8059e7261054470c310d8fd82dbd88d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208489"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>극좌표형 차트(보고서 작성기 및 SSRS)
-  극좌표형 차트에서는 360도 원에서 범주별로 그룹화된 점의 집합으로 계열이 표시됩니다. 값은 원의 중심에서 측정한 점까지의 거리로 표현됩니다. 점이 중심에서 멀수록 더 큰 값을 의미합니다. 범주 레이블은 차트의 주위에 표시됩니다. 극좌표 형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하십시오. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+  극좌표형 차트에서는 360도 원에서 범주별로 그룹화된 점의 집합으로 계열이 표시됩니다. 값은 원의 중심에서 측정한 점까지의 거리로 표현됩니다. 점이 중심에서 멀수록 더 큰 값을 의미합니다. 범주 레이블은 차트의 주위에 표시됩니다. 극좌표 형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,6 +61,6 @@ ms.locfileid: "36091895"
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [빈 데이터 요소 및 Null 데이터 요소 차트의 &#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [빈 데이터 요소 및 Null 데이터 요소 차트에서 &#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

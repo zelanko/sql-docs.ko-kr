@@ -1,5 +1,5 @@
 ---
-title: 모델 열의 별칭을 만들어 | Microsoft Docs
+title: 모델 열의 별칭 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - mining models [Analysis Services], columns
 - column names [Analysis Services]
 ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf049cdd7fabbc50fdacf5ab72ca3ce1845482f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db477052fb30a9759ad61df1ff42652fe9ed594a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228263"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>모델 열의 별칭 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 모델 열의 별칭을 만들 수 있습니다. 이것은 마이닝 구조 이름이 너무 길어서 쉽게 사용할 수 없거나 모델에서 열의 내용과 사용을 잘 설명하도록 열 이름을 변경할 경우에 유용합니다. 예를 들어 구조 열의 복사본을 만든 다음 특정 모델과 다르게 열을 불연속화한 경우 내용을 보다 정확하게 나타내도록 열의 이름을 바꿀 수 있습니다.  

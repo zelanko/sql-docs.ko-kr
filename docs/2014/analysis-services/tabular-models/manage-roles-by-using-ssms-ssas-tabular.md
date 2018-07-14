@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 907b1ea2b655c9da1b9754441be5a933ac8380af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c1aa9fc419c80bed7ca38e6d0174fb723ca648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226423"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS를 사용하여 역할 관리(SSAS 테이블 형식)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델에 대한 역할을 생성, 편집 및 관리할 수 있습니다.  
@@ -62,12 +62,12 @@ ms.locfileid: "36092727"
   
 6.  **멤버 자격 설정 창에서 추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 멤버로 추가할 Windows 사용자 또는 그룹을 추가합니다.  
   
-7.  만들고 있는 역할에 읽기 권한이 있는 경우 DAX 수식을 사용하여 테이블에 대한 행 필터를 추가할 수 있습니다. 행 필터를 추가 하려면는 **역할 속성- \<rolename >** 대화 상자의 **페이지 선택**, 클릭 **행 필터**합니다.  
+7.  만들고 있는 역할에 읽기 권한이 있는 경우 DAX 수식을 사용하여 테이블에 대한 행 필터를 추가할 수 있습니다. 행 필터를 추가 하는 **역할 속성- \<rolename >** 대화 상자의 **페이지 선택**, 클릭 **행 필터**합니다.  
   
-8.  행 필터 창에서 테이블을 클릭 한 다음는 **DAX 필터** 필드를 선택한 후는 **DAX 필터- \<tablename >** 필드에 DAX 수식을 입력 합니다.  
+8.  행 필터 창에서 테이블을 선택한 다음 클릭는 **DAX 필터** 필드를 선택한 다음는 **DAX 필터- \<tablename >** 필드에서 DAX 수식을 입력 합니다.  
   
     > [!NOTE]  
-    >  DAX 필터- \<tablename > 필드 자동 완성 쿼리 편집기를 포함 하지 않거나 함수 삽입 기능이 있습니다. DAX 수식을 작성할 때 자동 완성을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 DAX 수식 편집기를 사용해야 합니다.  
+    >  DAX 필터- \<tablename > 필드는 자동 완성 쿼리 편집기를 포함 하지 않거나 함수 삽입 기능이 있습니다. DAX 수식을 작성할 때 자동 완성을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 DAX 수식 편집기를 사용해야 합니다.  
   
 9. **확인** 을 클릭하여 역할을 저장합니다.  
   
@@ -79,13 +79,13 @@ ms.locfileid: "36092727"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 편집할 역할을 포함하는 테이블 형식 model 데이터베이스와 **역할**을 차례로 확장하고 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-     에 **역할 속성** \<역할 이름 > 대화 상자는 추가/편집 행 필터 및 사용 권한 변경, 추가 또는 구성원을 제거할 수 있습니다.  
+     에 **역할 속성** \<rolename > 대화 상자의 행 필터를 추가/편집할 및 사용 권한 변경, 추가 하거나 구성원을 제거할 수 있습니다.  
   
 ###  <a name="bkmk_deletet_role"></a> 역할을 삭제하려면  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 삭제할 역할을 포함하는 테이블 형식 model 데이터베이스와 **역할**을 차례로 확장하고 역할을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 &#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

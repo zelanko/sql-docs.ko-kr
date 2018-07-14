@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 976f1ee9539731da6036990da754dc1f894ced8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217363"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
   복제에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법을 배우는 데 사용할 수 있는 자습서가 포함되어 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36090403"
  복제 자습서에서 "게시자"는 복제되고 있는 원본 데이터가 있는 서버를 가리키며 "구독자"는 대상 서버를 가리킵니다. 게시자와 구독자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 같은 인스턴스를 공유할 수 있지만 반드시 이렇게 해야 하는 것은 아닙니다. 자세한 내용은 [복제 게시 모델 개요](publish/replication-publishing-model-overview.md)를 참조하세요.  
   
 > [!NOTE]  
->  이 자습서에 표시된 대부분의 태스크는 프로그래밍 방식으로 수행할 수 있습니다. 자세한 내용은 참조 [개발자 가이드 &#40;복제&#41;](concepts/replication-developer-documentation.md)합니다.  
+>  이 자습서에 표시된 대부분의 태스크는 프로그래밍 방식으로 수행할 수 있습니다. 자세한 내용은 [개발자 가이드 &#40;복제&#41;](concepts/replication-developer-documentation.md)합니다.  
   
 ## <a name="replication-tutorials"></a>복제 자습서  
  [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)  

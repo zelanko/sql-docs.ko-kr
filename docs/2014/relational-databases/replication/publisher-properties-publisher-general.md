@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.general.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11cd7e8c8d4759a9c49c631284622846297e9652
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b50a28dd6faaa4731ec9c0af952b88dce487627c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203011"
 ---
 # <a name="publisher-properties---publisher-general"></a>게시자 속성 - 게시자, 일반
   **게시자 속성** 대화 상자의 **일반** 페이지는 게시자가 사용하는 배포자 및 배포 데이터베이스에 대한 읽기 전용 정보를 표시합니다. 게시자에 대한 배포자 또는 배포 데이터베이스를 변경하려면 다음을 수행하십시오.  

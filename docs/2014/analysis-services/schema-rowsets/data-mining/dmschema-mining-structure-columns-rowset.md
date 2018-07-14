@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c8ec286e12cfe6198c36900067a26eefd5e1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171584"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 행 집합
   실행 중인 서버에 배포 된 모든 마이닝 구조의 개별 열에 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DMSCHEMA_MINING_STRUCTURE_COLUMNS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DMSCHEMA_MINING_STRUCTURE_COLUMNS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -45,11 +45,11 @@ ms.locfileid: "36088478"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||열의 서수입니다. 열 번호는 1부터 시작됩니다. 열에 대한 안정적인 서수 값이 없으면 `NULL`입니다.|  
 |`COLUMN_HASDEFAULT`|`DBTYPE_BOOL`||이 열에 기본값이 있는지 여부를 나타내는 부울입니다.<br /><br /> 열에 기본값이 있으면 `TRUE`입니다.<br /><br /> 열에 기본값이 없거나 기본값이 있는지 알 수 없으면 `FALSE`입니다.|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||열의 기본값입니다. 공급자는 `DBCOLUMN_DEFAULTVALUE`에서 반환하는 행 집합의 `DBCOLUMN_HASDEFAULT`(ISO 테이블의 경우)가 아닌 `IColumnsRowset::GetColumnsRowset`를 표시할 수 있습니다.<br /><br /> 기본값이 `NULL`이면 `COLUMN_HASDEFAULT`는 `TRUE`이고 `COLUMN_DEFAULT` 열은 `NULL` 값입니다.|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||-열 특징을 설명 하는 비트 마스크입니다. `DBCOLUMNFLAGS` 열거 형식은 비트 마스크의 비트를 지정합니다. 이 열은 `NULL` 값을 포함할 수 없습니다. 유효한 값은 다음과 같습니다.<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||열 특징을 설명 하는-비트 마스크입니다. `DBCOLUMNFLAGS` 열거 형식은 비트 마스크의 비트를 지정합니다. 이 열은 `NULL` 값을 포함할 수 없습니다. 유효한 값은 다음과 같습니다.<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||이 열에 기본값이 있는지 여부를 나타내는 부울입니다.<br /><br /> 열에 `TRUE`이 포함될 수 있으면 `NULL`이고, 그렇지 않으면 `FALSE`입니다.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||열 데이터 형식 표시기입니다. 예를 들어:<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||열 데이터 형식의 GUID입니다. 데이터 형식을 식별하는 데 GUID를 사용하지 않는 공급자는 이 열에 `NULL`을 반환해야 합니다.|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||열 값의 최대 길이로서 문자, 이진 또는 비트 열의 경우 이 값은 다음 중 하나입니다.<br /><br /> -에 있는 열의 최대 길이 문자, 바이트 또는 비트, 각각 길이가 정의 되어 있는 경우. 예를 들어 SQL 테이블에 있는 `CHAR(5)` 열의 최대 길이는 5입니다.<br />-데이터의 최대 길이를 문자, 바이트 또는 비트를 각각 입력, 열에 정의 된 길이가 없는 경우.<br />-영 (0)의 정의 된 최대 길이 열 또는 데이터 형식이 아닙니다.<br />-   `NULL` 다른 모든 형식의 열입니다.|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||열 값의 최대 길이로서 문자, 이진 또는 비트 열의 경우 이 값은 다음 중 하나입니다.<br /><br /> -열의 최대 길이 문자, 바이트 또는 비트 각각 길이가 정의 되어 있는 경우. 예를 들어 SQL 테이블에 있는 `CHAR(5)` 열의 최대 길이는 5입니다.<br />-형식의 최대 길이 데이터의 문자, 바이트 또는 비트 각각 열 길이가 정의 되지 않은 경우.<br />(0) 데이터 형식은 아니고 열에 정의 된 최대 길이 0입니다.<br />-   `NULL` 다른 모든 형식의 열입니다.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||열 유형이 문자 또는 이진이면 옥텟(바이트) 단위의 최대 열 길이입니다. 0 값은 열에 최대 길이가 없음을 나타냅니다. 다른 모든 열 유형의 경우에는 `NULL`입니다.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||열의 데이터 형식이 `VARNUMERIC` 이외의 숫자 데이터 형식이면 열의 최대 전체 자릿수입니다. 열의 데이터 형식이 숫자가 아니거나 `NULL`이면 `VARNUMERIC`입니다.<br /><br /> 데이터 형식이 `DBTYPE_DECIMAL` 또는 `DBTYPE_NUM`ERIC인 열의 전체 자릿수는 열 정의에 따라 달라집니다.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||열 유형 표시기가 `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` 또는 `DBTYPE_VARNUMERIC`이면 소수점 이하 자릿수입니다. 그렇지 않으면 `NULL`입니다.|  

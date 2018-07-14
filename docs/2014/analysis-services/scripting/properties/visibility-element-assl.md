@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Visibility element
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a434fe35437c049f5ec16c474695a67cfb102ffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e4580071cefc21035ba36c645019b4c768e4a1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185200"
 ---
 # <a name="visibility-element-assl"></a>Visibility 요소(ASSL)
   표시 유형을 정의 [주석](../objects/annotation-element-assl.md) 요소입니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36090746"
   
 |값|Description|  
 |-----------|-----------------|  
-|*W s e t*|주석이 스키마 행 집합에 표시됩니다.|  
+|*SchemaRowset*|주석이 스키마 행 집합에 표시됩니다.|  
 |*없음*|주석이 표시되지 않습니다.|  
   
  AMO(Analysis Management Objects) 개체 모델에서 `Visibility`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.Annotation>입니다.  

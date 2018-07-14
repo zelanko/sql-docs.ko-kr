@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
 - performance counters [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bdc7ec8be368cdb6bd361e17fde9fcf2c8711879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25ce27eae1909535a8dbddc642d032df1ddd5c32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245013"
 ---
 # <a name="performance-counters"></a>성능 카운터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 흐름 엔진의 성능을 모니터링하는 데 사용할 수 있는 성능 카운터 집합을 설치합니다. 예를 들어 "Buffers spooled" 카운터를 보면 패키지가 실행되는 동안 데이터 버퍼가 디스크에 임시로 기록되는지 여부를 확인할 수 있습니다. 이러한 스와핑은 성능을 저하시키고 컴퓨터에 메모리가 부족함을 나타냅니다.  

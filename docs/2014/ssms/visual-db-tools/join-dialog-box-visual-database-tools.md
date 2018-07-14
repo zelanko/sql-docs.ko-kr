@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6adb9f0f9ee0d265124e0c3648279516018eb92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57490e0592f11e78ffddf44f0d3c3f60d90925a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238173"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36092101"
 |**모든 행 \<table1 >**|오른쪽 테이블에 일치하는 항목이 없는 경우에도 왼쪽 테이블의 모든 행이 출력되도록 지정합니다. 오른쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 왼쪽 우선 외부 조인을 지정하는 것과 결과가 같습니다.|  
 |**모든 행 \<table2 >**|왼쪽 테이블에 일치하는 항목이 없는 경우에도 오른쪽 테이블의 모든 행이 출력되도록 지정합니다. 왼쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 RIGHT OUTER JOIN을 지정하는 것과 결과가 같습니다.|  
   
- 둘 다 선택 하면 **에서 행 \<table1 >** 및 **의 모든 행 \<table2 >** SQL 문에 FULL OUTER JOIN을 지정 하는 것과 같습니다.  
+ 둘 다 선택 하면 **에서 행 \<table1 >** 하 고 **의 모든 행 \<table2 >** SQL 문에서 FULL OUTER JOIN을 지정 하는 것과 같습니다.  
   
  외부 조인을 만들기 위한 옵션을 선택하면 조인 선의 다이아몬드 모양이 변경되어 왼쪽 우선 외부 조인인지 오른쪽 우선 외부 조인인지 또는 완전 외부 조인인지를 나타냅니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36092101"
 >  "왼쪽"과 "오른쪽"이라는 말이 반드시 다이어그램 창의 테이블 위치를 의미하지는 않습니다. "왼쪽"은 SQL 문에서 JOIN 키워드의 왼쪽에 이름이 나타나는 테이블을 말하고 "오른쪽"은 JOIN 키워드의 오른쪽에 이름이 나타나는 테이블을 말합니다. **다이어그램** 창에서 테이블의 위치를 바꾸어도 여기에서 언급하는 왼쪽과 오른쪽이 바뀌는 것은 아닙니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [조인을 사용 하 여 쿼리 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [조인을 사용한 쿼리 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

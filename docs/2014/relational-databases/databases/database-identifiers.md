@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 70656cbec692852b60fd6b683e96fd1489f0f2a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ec8e78ebf44a325490e937bea070cb4fc4d59178
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231263"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
   데이터베이스 개체 이름을 그 개체의 식별자라고 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 개체에는 식별자가 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.  

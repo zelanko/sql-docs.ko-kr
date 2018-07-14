@@ -1,5 +1,5 @@
 ---
-title: 변환에서 데이터 소스에 포함 된 공유 (보고서 작성기 및 SSRS) | Microsoft Docs
+title: 변환에서 데이터 원본을 포함 된 공유 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6a56cf7b9f2e087f44166f2ded7cb55ebf95b01c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cfc136c8d41ef3461d378cbe5f5b66064e1de2be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185820"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>포함된 데이터 원본에서 공유 데이터 원본으로 변환(보고서 작성기 및 SSRS)
   보고서 데이터 창의 각 데이터 원본은 보고서에 관련 및 포함되거나 공유됩니다. 보고서 작성기에서 공유 데이터 원본은 보고서 서버 또는 SharePoint 사이트의 게시된 공유 데이터 원본을 가리킵니다. 보고서 디자이너에서 공유 데이터 원본은 솔루션 탐색기의 **공유 데이터 원본** 폴더에 있는 공유 데이터 원본을 가리킵니다.  

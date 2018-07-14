@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
 - remote connections [SQL Server], enabling using Configuration Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f4e4c9329504532b5173018ae7143406e8bccb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: aafa905b9f1f1367cfca0fc6dfaedb25c3672170
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237543"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>서버 네트워크 프로토콜 설정 또는 해제
   기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 모든 네트워크 프로토콜이 설치되지만 일부 프로토콜이 설정되거나 설정되지 않을 수 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 또는 PowerShell을 사용하여 서버 네트워크 프로토콜을 설정하거나 해제하는 방법에 대해 설명합니다. 변경 내용을 적용하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 중지한 뒤 다시 시작해야 합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "36089381"
   
 2.  작업 표시줄에서 Windows PowerShell 2.0을 시작하거나, 시작, 모든 프로그램, 보조프로그램, Windows PowerShell, Windows PowerShell을 차례로 클릭합니다.  
   
-3.  가져오기는 **sqlps** 입력 하 여 모듈 `Import-Module “sqlps”`  
+3.  가져오기의 **sqlps** 입력 하 여 모듈 `Import-Module “sqlps”`  
   
 4.  다음 문을 실행하여 TCP 및 명명된 파이프 프로토콜을 모두 사용하도록 설정합니다. `<computer_name>` 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 컴퓨터의 이름으로 바꿉니다. 명명된 인스턴스를 구성할 경우 `MSSQLSERVER` 를 인스턴스의 이름으로 바꿉니다.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyStrValue property
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fabffe836580df1e28b683e6617d060244205043
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f6053f9d0374d2b70e204f01a9105d086ca3e723
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168244"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue 속성(SqlServiceAdvancedProperty 클래스)
   고급 속성의 문자열 값을 가져옵니다.  

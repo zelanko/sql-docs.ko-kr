@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d0e96880f661a05f150785c53c24afbfbf66d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217353"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
   메모리 내 OLTP에서는 네이티브 컴파일이라는 개념이 도입됩니다. 
             [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 최적화 테이블에 액세스하는 저장 프로시저를 고유하게 컴파일할 수 있습니다. 
             [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기본적으로 메모리 최적화 테이블을 컴파일할 수도 있습니다. 네이티브 컴파일을 사용하면 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 빠르게 데이터에 액세스할 수 있으며 더 효율적으로 쿼리를 실행할 수 있습니다. 테이블과 저장 프로시저의 네이티브 컴파일은 DLL을 생성합니다.  
   
- 메모리 액세스에 최적화된 테이블 형식의 네이티브 컴파일도 지원됩니다. 자세한 내용은 참조 [최적화 된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)합니다.  
+ 메모리 액세스에 최적화된 테이블 형식의 네이티브 컴파일도 지원됩니다. 자세한 내용은 [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)합니다.  
   
  네이티브 컴파일은 추가로 컴파일하거나 해석할 필요 없이 프로세서 명령으로 구성된 네이티브 코드로 프로그래밍 구문을 변환하는 프로세스를 말합니다.  
   
@@ -121,12 +121,12 @@ go
  테이블 및 저장 프로시저의 네이티브 컴파일에서는 메모리 내 OLTP 컴파일러를 사용합니다. 이 컴파일러는 디스크에 기록되고 메모리에 로드되는 파일을 생성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음과 같은 메커니즘을 사용하여 이러한 파일에 대한 액세스를 제한합니다.  
   
 ### <a name="native-compiler"></a>기본 컴파일러  
- 컴파일러 실행 파일과 네이티브 컴파일에 필요한 이진 파일 및 헤더 파일은 MSSQL\Binn\Xtp 폴더 아래에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 일부로 설치됩니다. 따라서 기본 인스턴스가 C:\Program Files 아래 설치 되어 컴파일러 파일은 설치 C:\Program Files에\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\ 합니다. MSSQLSERVER\MSSQL\Binn\Xtp 합니다.  
+ 컴파일러 실행 파일과 네이티브 컴파일에 필요한 이진 파일 및 헤더 파일은 MSSQL\Binn\Xtp 폴더 아래에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 일부로 설치됩니다. 따라서 기본 인스턴스가 C:\Program Files 아래에 설치 하는 경우 컴파일러 파일 설치할지에서 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 합니다. MSSQLSERVER\MSSQL\Binn\Xtp 합니다.  
   
  컴파일러에 대한 액세스를 제한하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 ACL(액세스 제어 목록)을 사용하여 이진 파일에 대한 액세스를 제한합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이진 파일은 ACL을 통해 수정이나 변조로부터 보호됩니다. 기본 컴파일러의 ACL은 컴파일러의 사용도 제한합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 시스템 관리자에게만 기본 컴파일러 파일에 대한 읽기 및 실행 권한이 있습니다.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>네이티브 컴파일에서 생성된 파일  
- 테이블이나 저장 프로시저가 컴파일될 때 생성되는 파일에는 DDL과 .c, .obj, .xml 및 .pdb 확장명을 사용하는 파일을 비롯한 중간 파일이 있습니다. 생성된 파일은 기본 데이터 폴더의 하위 폴더에 저장됩니다. 하위 폴더를 Xtp라고 합니다. 기본 인스턴스의 기본 데이터 폴더를 설치할 때 생성 된 파일은 C:\Program 파일에 배치\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\ 합니다. MSSQLSERVER\MSSQL\DATA\Xtp 합니다.  
+ 테이블이나 저장 프로시저가 컴파일될 때 생성되는 파일에는 DDL과 .c, .obj, .xml 및 .pdb 확장명을 사용하는 파일을 비롯한 중간 파일이 있습니다. 생성된 파일은 기본 데이터 폴더의 하위 폴더에 저장됩니다. 하위 폴더를 Xtp라고 합니다. 기본 데이터 폴더를 사용 하 여 기본 인스턴스를 설치할 때 생성된 된 파일은 C:\Program 파일에 배치\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 합니다. MSSQLSERVER\MSSQL\DATA\Xtp 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 생성된 DDL의 변조를 다음 세 가지 방법으로 방지합니다.  
   

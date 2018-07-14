@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 385ec4ed64d4700b075ed986a27aba45b861e7ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 500563c36d3b196b8a871ec4c4dd8435dd853501
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215603"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plan Cache 개체
   **Plan Cache** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 저장 프로시저, 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 트리거와 같은 개체를 저장하기 위해 메모리를 사용하는 방법을 모니터링하는 카운터를 제공합니다. **Plan Cache** 개체의 여러 인스턴스를 한 번에 모니터링할 수 있으며 각 인스턴스는 모니터링할 다양한 유형의 계획을 나타냅니다.  

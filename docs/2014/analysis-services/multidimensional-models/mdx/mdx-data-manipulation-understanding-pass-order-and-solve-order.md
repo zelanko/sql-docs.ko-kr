@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196533"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>패스 순서 및 계산 순서 이해(MDX)
   MDX 스크립트 결과로 계산될 때 큐브는 사용되는 여러 계산 관련 기능에 따라 여러 계산 단계를 거칠 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  결과 집합에서 첫 번째 쿼리와 두 번째 쿼리의 차이는 계산 멤버의 배치 차이로 인해 비롯됩니다. 첫 번째 쿼리에서 계산 멤버는 두 번째 쿼리에 표시된 COLUMNS 축이 아니라 ROWS 축의 일부입니다. 이러한 배치 차이는 두 계산 멤버를 단일 MDX 쿼리로 조합하는 다음 쿼리에서 중요해집니다.  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>쿼리 3 - 조합된 연간 차이 및 순수입 계산  
- 이 마지막 쿼리에서는 이전 예에서의 두 쿼리를 단일 MDX 쿼리로 조합하며 열과 행 모두에 대한 계산 때문에 계산 순서가 중요해집니다. 올바른 순서로 계산 발생을 하려면 사용 하 여 계산이 발생 하는 순서를 정의 고 `SOLVE_ORDER` 키워드입니다.  
+ 이 마지막 쿼리에서는 이전 예에서의 두 쿼리를 단일 MDX 쿼리로 조합하며 열과 행 모두에 대한 계산 때문에 계산 순서가 중요해집니다. 올바른 순서로 계산 수행 되도록 확인을 사용 하 여 계산이 발생 하는 순서 정의 `SOLVE_ORDER` 키워드입니다.  
   
- `SOLVE_ORDER` 키워드는 MDX 쿼리 또는 `CREATE MEMBER` 명령의 계산 멤버에 대한 계산 순서를 지정합니다. 사용 된 정수 값은 `SOLVE_ORDER` 키워드는 상대적 이며 할 0부터 시작 하는 그렇지 않습니다 필요가 없습니다 연속적 이어야 합니다. 이 값은 MDX에서 단순히 더 큰 값의 멤버 계산으로부터 파생된 값에 따라 멤버를 계산하도록 지정합니다. 계산된 멤버 없이 정의 된 경우는 `SOLVE_ORDER` 키워드를 기본값인 하는 계산 멤버는 0입니다.  
+ `SOLVE_ORDER` 키워드는 MDX 쿼리 또는 `CREATE MEMBER` 명령의 계산 멤버에 대한 계산 순서를 지정합니다. 사용 된 정수 값을 `SOLVE_ORDER` 키워드 상대적 이며 필요를 0부터 시작 하지 않아도 연속적 일입니다. 이 값은 MDX에서 단순히 더 큰 값의 멤버 계산으로부터 파생된 값에 따라 멤버를 계산하도록 지정합니다. 계산된 멤버 없이 정의 된 경우는 `SOLVE_ORDER` 키워드, 계산 멤버는 0의 기본값입니다.  
   
  예를 들어 처음 두 쿼리 예에서 사용된 값을 조합할 경우 두 계산 멤버인 `Year Difference` 및 `Profit Margin`은 MDX 쿼리 예의 결과 데이터 집합에 있는 단일 셀에서 교차합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 이 셀을 계산하는 방법은 계산 순서에 의해서만 결정할 수 있습니다. 이 셀을 구성하는 데 사용된 수식은 두 계산 멤버의 계산 순서에 따라 서로 다른 결과를 생성합니다.  
   

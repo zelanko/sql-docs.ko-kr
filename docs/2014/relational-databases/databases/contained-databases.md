@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223673"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
   *포함된 데이터베이스* 는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 격리된 데이터베이스입니다.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 인스턴스에서 데이터베이스를 격리하는 방법은 네 가지가 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36089335"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경은 포함 정보를 보고하며 그에 따라 조치를 취할 수 있습니다.  
   
- 메타데이터를 데이터베이스에 저장하는 등의 부분적으로 포함된 데이터베이스의 일부 기능은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 적용됩니다. 데이터베이스 수준 인증 및 카탈로그 데이터 정렬 등의 부분적으로 포함된 데이터베이스의 일부 이점은 먼저 사용하도록 설정해야만 사용할 수 있습니다. 사용 하 여 부분 포함을 사용할 수는 `CREATE DATABASE` 및 `ALTER DATABASE` 문 또는 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 부분 데이터베이스 포함을 사용하도록 설정하는 방법은 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)을 참조하십시오.  
+ 메타데이터를 데이터베이스에 저장하는 등의 부분적으로 포함된 데이터베이스의 일부 기능은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 적용됩니다. 데이터베이스 수준 인증 및 카탈로그 데이터 정렬 등의 부분적으로 포함된 데이터베이스의 일부 이점은 먼저 사용하도록 설정해야만 사용할 수 있습니다. 부분 포함을 사용 하 여 사용할 수는 `CREATE DATABASE` 하 고 `ALTER DATABASE` 문 또는 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다. 부분 데이터베이스 포함을 사용하도록 설정하는 방법은 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)을 참조하십시오.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36089335"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>AlwaysOn을 사용하는 포함된 데이터베이스 사용자의 이점  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 관련성을 줄이면 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 사용할 때 장애 조치 중에 부분적으로 포함된 데이터베이스가 유용할 수 있습니다.  
   
- 포함된 사용자를 만들면 사용자가 포함된 데이터베이스에 직접 연결할 수 있습니다. 이 기능은 AlwaysOn 솔루션과 같은 고가용성 및 재해 복구 시나리오에서 매우 중요한 기능입니다. 사용자가 포함된 사용자인 경우 장애 조치(failover) 시 보조 복제본을 호스팅하는 인스턴스에 대한 로그인을 만들지 않고도 보조 복제본에 연결할 수 있습니다. 이는 즉각적인 이점을 제공합니다. 자세한 내용은 참조 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 및 [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ 포함된 사용자를 만들면 사용자가 포함된 데이터베이스에 직접 연결할 수 있습니다. 이 기능은 AlwaysOn 솔루션과 같은 고가용성 및 재해 복구 시나리오에서 매우 중요한 기능입니다. 사용자가 포함된 사용자인 경우 장애 조치(failover) 시 보조 복제본을 호스팅하는 인스턴스에 대한 로그인을 만들지 않고도 보조 복제본에 연결할 수 있습니다. 이는 즉각적인 이점을 제공합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 하 고 [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>초기 데이터베이스 개발  
  개발자는 새 데이터베이스가 배포될 위치를 알지 못할 수 있으므로 데이터베이스에 대한 배포 환경의 영향을 제한하면 개발자의 작업이 더 쉬워질 수 있습니다. 포함되지 않은 모델에서 개발자는 새 데이터베이스 및 프로그램에 대해 가능한 환경적 영향을 고려해야 합니다. 하지만 개발자는 부분적으로 포함된 데이터베이스를 사용하여 데이터베이스에 대한 인스턴스 수준의 영향과 인스턴스 수준에서 개발자가 고려해야 할 요소를 검색할 수 있습니다.  
@@ -163,7 +163,7 @@ ms.locfileid: "36089335"
  XEvent는 런타임 시 포함되지 않은 엔터티가 식별될 때마다 발생합니다. 여기에는 클라이언트 코드에서 시작된 엔터티가 포함됩니다. 이 XEvent는 실제로 포함되지 않은 엔터티에 대해서만 발생합니다. 그러나 이벤트는 런타임에만 발생합니다. 따라서 실행하지 않은, 포함되지 않은 모든 사용자 엔터티는 이 XEvent에서 식별되지 않습니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [기능 수정 &#40;포함 된 데이터베이스&#41;](modified-features-contained-database.md)  
+ [수정 된 기능 &#40;포함 된 데이터베이스&#41;](modified-features-contained-database.md)  
   
  [Contained Database Collations](contained-database-collations.md)  
   

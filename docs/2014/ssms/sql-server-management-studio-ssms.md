@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e6bb90d0f5aa4c92ac8b92898e65361d745418f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178996"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server 인프라를 관리 하기 위한 통합된 환경이입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]는 SQL Server 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 또한 데이터 계층 구성 요소(예: 응용 프로그램에 사용되는 데이터 웨어하우스 및 데이터베이스)를 배포, 모니터링 및 업그레이드하는 도구와 쿼리 및 스크립트를 작성하는 도구를 제공합니다.  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>SQL Server Management Studio의 이점  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server를 관리 하기 위한 포괄적인 유틸리티 사용 하기 쉬운 그래픽 인터페이스를 다양 한 스크립팅 기능과 결합 하는 개체입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 관리 하는 데 사용 될 [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQL Server를 관리 하기 위한 포괄적인 유틸리티를 사용 하기 쉬운 그래픽 인터페이스를 다양 한 스크립팅 기능과 결합 하는 개체입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 관리에 사용할 수 있습니다 [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다.  
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   

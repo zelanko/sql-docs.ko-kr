@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unnamed parameters
 - parameters [SQL Server], unnamed
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2245bf5298d6b760b0b52a8dc83f233d337283f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d1aa3f9bd450b644a8dde13867ce6c27e4c26fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214373"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>명명되지 않은 매개 변수를 사용하여 쿼리 만들기(Visual Database Tools)
   리터럴 값에 대한 자리 표시자로 물음표(?)를 지정하면 명명되지 않은 매개 변수를 사용하여 쿼리를 만들 수 있습니다. 쿼리 및 뷰 디자이너에서 이러한 매개 변수에 임시 이름이 지정됩니다. 쿼리에서 지정할 수 있는 명명되지 않은 매개 변수의 수에는 제한이 없습니다.  

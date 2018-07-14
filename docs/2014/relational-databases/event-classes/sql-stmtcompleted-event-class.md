@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1e92cf8decdf6d9dd03e4cbbc1806d419985199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 49ab7bdf885b6dc2d2344c49f581529641dbb260
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221453"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 이벤트 클래스
   SQL:StmtCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 완료되었음을 나타냅니다.  

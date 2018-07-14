@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34595ca07e370bb0a66512c839a6843f8c38f5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202653"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
   데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
   
- 보고서 디자이너에서 쿼리 디자이너를 사용하여 쿼리를 디자인할 수 있습니다. 이 자습서에서 판매 주문 정보를 검색 하는 쿼리를 만듭니다는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** 데이터베이스입니다.  
+ 보고서 디자이너에서 쿼리 디자이너를 사용하여 쿼리를 디자인할 수 있습니다. 이 자습서에서 판매 주문 정보를 검색 하는 쿼리 만듭니다는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** 데이터베이스입니다.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>보고서 데이터에 대한 Transact-SQL 쿼리를 정의하려면  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36091669"
   
 6.  (옵션) **쿼리 디자이너** 단추를 클릭합니다. 쿼리가 텍스트 기반 쿼리 디자이너에 표시됩니다. **텍스트로 편집**을 클릭하여 그래픽 쿼리 디자이너로 전환할 수 있습니다. 쿼리 디자이너 도구 모음에서 실행 **(!)** 단추를 클릭하여 쿼리 결과를 봅니다.  
   
-     데이터에 네 가지 테이블의 여섯 필드를 볼 수 있습니다는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 soh라고 부릅니다.  
+     네 가지 테이블의 여섯 필드의 데이터를 표시 합니다 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 soh라고 부릅니다.  
   
      **확인** 을 클릭하여 쿼리 디자이너를 종료합니다.  
   

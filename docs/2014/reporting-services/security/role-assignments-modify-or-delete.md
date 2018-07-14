@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - roles [Reporting Services], assignments
@@ -19,13 +19,13 @@ ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8c68d1b0375fb8fa565ec3b24c59f8a4eab1b066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3eb2aa1b151866166e77ea89eda4ba98c2866a53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166094"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>역할 할당 수정 또는 삭제(보고서 관리자)
   역할 할당은 수행할 수 있는 태스크를 포함하는 미리 정의된 역할 정의에 그룹 또는 사용자 계정을 매핑하며 폴더, 보고서, 모델 또는 기타 내용 유형에 상대적으로 수행할 수 있는 작업 유형을 결정합니다. 역할 할당을 만들거나 수정하거나 삭제하려면 보고서 관리자를 사용합니다. 특정 사용자 또는 그룹에 대한 역할 할당을 만든 후에는 나중에 다른 역할을 선택하여 수정할 수 있습니다. 보고서 서버에 대한 사용 권한을 취소하려면 보고서 서버에서 역할 할당을 삭제합니다.  

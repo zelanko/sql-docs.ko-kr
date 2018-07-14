@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3c3a358c9403d6bf14bede017380fbf4872a51b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 578042b4ce8b5892b62916f5d41f271e5081271e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175072"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>원형 차트(보고서 작성기 및 SSRS)
   원형 차트와 도넛형 차트는 데이터를 전체에 대한 비율로 표시합니다. 원형 차트는 그룹 간의 비교에 가장 일반적으로 사용됩니다. 원형 및 도넛형 차트는 피라미드형 및 깔때기형 차트와 마찬가지로 셰이프 차트라고 하는 차트 그룹으로 이루어집니다. 셰이프 차트에는 축이 없습니다. 셰이프 차트에 숫자 필드를 배치하면 차트에서 각각의 값이 전체 합계에 대해 차지하는 비율이 계산됩니다. 셰이프 차트에 대한 자세한 내용은 [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
@@ -57,7 +57,7 @@ ms.locfileid: "36091891"
   
 -   원형 차트에서 각 비율을 제대로 비교하려면 적어도 두 개 이상의 값이 있어야 합니다. 원형 차트가 한 가지 색으로만 그려진다면 그룹의 기준으로 삼을 범주 필드를 추가했는지 확인해 보십시오. 원형 차트에 범주가 포함되어 있지 않으면 데이터 필드의 값이 한 개의 값으로 집계 및 표시됩니다.  
   
--   다른 모든 차트 종류와 마찬가지로 원형 차트에서는 기본 색상표에 들어 있는 색 값을 기준으로 색을 생성합니다. 따라서 보고서에 여러 개의 원형 차트를 사용하는 경우 원형 차트마다 데이터 요소를 표시하는 데 서로 다른 색이 적용될 수 있습니다. 보고서에 포함된 원형 차트가 여러 개이면 각 차트마다 동일한 색 구성을 유지하도록 각 범주 그룹에 대한 색을 수동으로 설정할 수 있습니다. 차트의 색을 정의 하는 방법에 대 한 자세한 내용은 참조 [차트에서 계열 색 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)합니다.  
+-   다른 모든 차트 종류와 마찬가지로 원형 차트에서는 기본 색상표에 들어 있는 색 값을 기준으로 색을 생성합니다. 따라서 보고서에 여러 개의 원형 차트를 사용하는 경우 원형 차트마다 데이터 요소를 표시하는 데 서로 다른 색이 적용될 수 있습니다. 보고서에 포함된 원형 차트가 여러 개이면 각 차트마다 동일한 색 구성을 유지하도록 각 범주 그룹에 대한 색을 수동으로 설정할 수 있습니다. 차트의 색을 정의 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트에서 계열 색 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>원형 차트에 그리기 스타일 적용  
  원형 차트에 특별한 그리기 스타일을 추가하여 시각적 효과를 더욱 높일 수 있습니다. 그리기 스타일에는 빗면 및 오목 효과가 있습니다. 이러한 효과는 2차원 원형 차트에서만 사용할 수 있습니다. 다음 그림에서는 원형 차트에 빗면 및 오목 그리기 스타일을 적용한 예를 보여 줍니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36091891"
  자세한 내용은 [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)를 참조하세요.  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>원형 차트에 백분율 값 표시  
- 다른 셰이프 차트와 마찬가지로 원형 차트는 전체 합계에 대해 각 부분이 차지하는 비율을 표시합니다. 따라서 원형 차트 레이블은 백분율로 서식 지정하는 것이 일반적입니다. 그러나 다른 차트 종류와의 일관성을 유지하기 위해 이 차트에서는 기본적으로 백분율 레이블을 표시하지 않습니다. 값은 차트에서 백분율로 표시 하는 방법에 대 한 자세한 내용은 참조 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)합니다. 보고서에서 숫자를 백분율로 서식 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)을 참조하세요.  
+ 다른 셰이프 차트와 마찬가지로 원형 차트는 전체 합계에 대해 각 부분이 차지하는 비율을 표시합니다. 따라서 원형 차트 레이블은 백분율로 서식 지정하는 것이 일반적입니다. 그러나 다른 차트 종류와의 일관성을 유지하기 위해 이 차트에서는 기본적으로 백분율 레이블을 표시하지 않습니다. 값은 차트에서 백분율로 표시 하는 방법에 대 한 자세한 내용은 참조 하세요. [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)합니다. 보고서에서 숫자를 백분율로 서식 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)을 참조하세요.  
   
  ![데이터 요소 레이블(백분율)을 포함하는 원형 차트](../media/rs-piechartpercentages.gif "데이터 요소 레이블(백분율)을 포함하는 원형 차트")  
   

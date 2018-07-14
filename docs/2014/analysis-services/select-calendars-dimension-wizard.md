@@ -1,5 +1,5 @@
 ---
-title: 달력 선택 (차원 마법사) | Microsoft Docs
+title: 달력 (차원 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245593"
 ---
 # <a name="select-calendars-dimension-wizard"></a>달력 선택(차원 마법사)
   **달력 선택** 페이지를 사용하여 시간 차원에 대한 회계 달력, 보고 달력, 제조 달력 또는 ISO(International Standards Organization) 8601 달력을 나타내는 추가 계층을 만들 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36090255"
 |값|Description|  
 |-----------|-----------------|  
 |**주 445**|사분기의 첫 번째 달에 4주, 두 번째 달에 4주, 세 번째 달에 5주가 있습니다.|  
-|**주 454**|사분기의 첫 번째 달에 4주, 두 번째 달에 5주, 세 번째 달에 4주가 있습니다.|  
+|**454 주**|사분기의 첫 번째 달에 4주, 두 번째 달에 5주, 세 번째 달에 4주가 있습니다.|  
 |**주 544**|사분기의 첫 번째 달에 5주, 두 번째 달에 4주, 세 번째 달에 4주가 있습니다.|  
   
  **제조 달력**  

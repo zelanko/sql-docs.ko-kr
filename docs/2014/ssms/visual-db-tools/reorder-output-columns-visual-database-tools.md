@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reordering output columns [SQL Server]
 - output columns [SQL Server]
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bfceaa1acaa61bb58399a528cfda03a7da80e8a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aef4c693b0b90d7d288fc13825b1b18e0d3ad8ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212443"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>출력 열 다시 정렬(Visual Database Tools)
   출력 열이 결과에 표시되는 순서는 선택 쿼리에 데이터 열을 추가하는 순서에 따라 결정됩니다. 쿼리에 추가하는 첫 번째 열은 결과의 가장 왼쪽에 나타나고 두 번째 열은 그 다음에 나타나는 방식입니다.  

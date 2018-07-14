@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
 - custom measures [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d12f7ef55272960d8e120fd46dec4039ca036cbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b55ab5f489ce9a8b24f6ad39dde643f30c3712f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228363"
 ---
 # <a name="create-calculated-members"></a>계산 멤버 만들기
   큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  

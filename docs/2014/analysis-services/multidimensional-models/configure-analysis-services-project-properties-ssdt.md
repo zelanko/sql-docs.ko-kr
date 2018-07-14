@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b5c6062d07c10b171da7b3bc534836ddfe7752b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167724"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services 프로젝트 속성 구성(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 작성 및 배포에 영향을 미치는 몇 가지 기본 속성과 함께 정의됩니다.  

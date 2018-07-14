@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186060"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
-##  <a name="BackToTop"></a> 학습 내용  
+##  <a name="BackToTop"></a> 학습할 내용  
  이 자습서에서는 다음 작업 방법을 배웁니다.  
   
 1.  [시작 대화 상자에서 새 보고서 만들기](#CreateTable)  
@@ -43,7 +43,7 @@ ms.locfileid: "36093689"
   
 2.  [데이터 서식 통화로](#FormatCurrency)  
   
-3.  [데이터 서식 날짜로](#FormatDate)  
+3.  [데이터 형식 날짜로 지정](#FormatDate)  
   
 4.  [열 너비 변경](#Width)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36093689"
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
 ##  <a name="CreateTable"></a> 1. 시작 대화 상자에서 새 보고서 만들기  
- 테이블 보고서 만들기는 **시작** 대화 상자. 보고서 디자인 모드와 공유 데이터 집합 디자인 모드라는 두 가지 모드가 있습니다. 보고서 디자인 모드에서는 보고서 데이터 창에서 데이터를 지정하고 디자인 화면에서 보고서 레이아웃을 지정합니다. 공유 데이터 집합 디자인 모드에서는 다른 사용자와 공유할 데이터 집합 쿼리를 만듭니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
+ 테이블 보고서를 만드는 합니다 **Getting Started** 대화 상자. 보고서 디자인 모드와 공유 데이터 집합 디자인 모드라는 두 가지 모드가 있습니다. 보고서 디자인 모드에서는 보고서 데이터 창에서 데이터를 지정하고 디자인 화면에서 보고서 레이아웃을 지정합니다. 공유 데이터 집합 디자인 모드에서는 다른 사용자와 공유할 데이터 집합 쿼리를 만듭니다. 이 자습서에서는 보고서 디자인 모드를 사용합니다.  
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36093689"
   
 2.  **새로 만들기**를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   
-3.  **이름**, 형식 **제품 판매** 데이터 원본에 대 한 이름입니다.  
+3.  **이름을**, 형식 **Product Sales** 데이터 원본의 이름입니다.  
   
 4.  **연결 유형 선택**에서 **Microsoft SQL Server** 가 선택되어 있는지 확인합니다.  
   
-5.  **연결 문자열**를 다음 텍스트를 입력 여기서  *\<서버 이름 >* 인스턴스의의 이름인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  **연결 문자열**, 다음 텍스트를 입력 합니다. 여기서  *\<servername >* 인스턴스의 이름 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -167,7 +167,7 @@ ms.locfileid: "36093689"
   
 4.  **다음**을 클릭합니다.  
   
-##  <a name="Groups"></a> 1 c 합니다. 테이블 마법사에서 데이터를 그룹으로 구성  
+##  <a name="Groups"></a> 1c 합니다. 테이블 마법사에서 데이터를 그룹으로 구성  
  그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 테이블을 디자인합니다.  
   
 #### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -194,7 +194,7 @@ ms.locfileid: "36093689"
   
 6.  **다음**을 클릭합니다.  
   
-##  <a name="Subtotals"></a> 1 일입니다. 테이블 마법사에서 부분합 및 합계 행 추가  
+##  <a name="Subtotals"></a> 1d입니다. 테이블 마법사에서 부분합 및 합계 행 추가  
  그룹을 만든 후 필드에 대한 집계 값을 표시할 행을 추가하고 행 서식을 지정할 수 있습니다. 모든 데이터를 표시할지 또는 사용자가 그룹화된 데이터를 대화형으로 확장하거나 축소할 수 있도록 할지 여부를 선택할 수 있습니다.  
   
 #### <a name="to-add-subtotals-and-totals"></a>부분합 및 합계를 추가하려면  
@@ -219,7 +219,7 @@ ms.locfileid: "36093689"
   
 4.  **다음**을 클릭합니다.  
   
-##  <a name="Style"></a> 1e 합니다. 테이블 마법사에서 스타일 선택  
+##  <a name="Style"></a> 1e입니다. 테이블 마법사에서 스타일 선택  
  스타일은 글꼴 스타일, 색 집합 및 테두리 스타일을 지정합니다.  
   
 #### <a name="to-specify-a-table-style"></a>테이블 스타일을 지정하려면  
@@ -274,7 +274,7 @@ ms.locfileid: "36093689"
   
 2.  `[SalesDate]`가 들어 있는 셀을 클릭합니다.  
   
-3.  에 **홈** 탭에 **번호** 그룹을 대화 상자 표시 아이콘을 클릭 합니다.  
+3.  에 **홈** 탭의 **수** 그룹, 대화 상자 표시 아이콘을 클릭 합니다.  
   
      그룹의 오른쪽 모퉁이에 있는 작은 화살표가 실행 프로그램입니다. **입력란 속성** 대화 상자가 열립니다.  
   
@@ -360,7 +360,7 @@ ms.locfileid: "36093689"
 4.  **저장**을 클릭합니다.  
   
 ##  <a name="Export"></a> 7. 보고서 내보내기  
- 보고서는 Microsoft Excel 및 CSV(쉼표로 구분된 값)와 같은 여러 형식으로 내보낼 수 있습니다. 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
+ 보고서는 Microsoft Excel 및 CSV(쉼표로 구분된 값)와 같은 여러 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
  이 자습서에서는 보고서를 Excel로 내보내고 보고서에 속성을 설정하여 통합 문서 탭 이름을 사용자 지정합니다.  
   
@@ -370,30 +370,30 @@ ms.locfileid: "36093689"
   
 2.  보고서 바깥쪽 아무 곳이나 클릭합니다.  
   
-3.  . 속성 창에서 InitialPageName 속성 및 종류를 찾을 **Product Sales Excel**합니다.  
+3.  . 속성 창에서 InitialPageName 속성을 형식 찾습니다 **Product Sales Excel**합니다.  
   
     > [!NOTE]  
-    >  속성 창이 표시 되지 않으면 리본의 보기 탭을 클릭 하 고 클릭 **속성**합니다.  
+    >  속성 창이 표시 되지 않으면, 리본의 보기 탭을 클릭 한 다음 클릭 **속성**합니다.  
   
 #### <a name="to-export-a-report-to-excel"></a>보고서를 Excel로 내보내려면  
   
 1.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-2.  . 리본 메뉴에서 클릭 **내보내기**, 클릭 하 고 **Excel**합니다.  
+2.  . 리본 메뉴에서 클릭 **내보낼**를 클릭 하 고 **Excel**.  
   
      **다른 이름으로 저장** 대화 상자가 열립니다.  
   
-3.  찾아는 **문서** 폴더입니다.  
+3.  로 이동 합니다 **문서** 폴더입니다.  
   
 4.  에 **파일 이름** 텍스트 상자에서 **Product Sales Excel**합니다.  
   
-5.  파일 형식이 확인 **Excel 통합 문서**합니다.  
+5.  파일 형식 인지 확인 **Excel 통합 문서**합니다.  
   
 6.  **저장**을 클릭합니다.  
   
 #### <a name="to-view-the-report-in-excel"></a>Excel에서 보고서를 보려면  
   
-1.  열기는 **문서** 폴더를 두 번 클릭 **Product Sales Excel.xlsx**합니다.  
+1.  엽니다는 **문서** 폴더 및 두 번 클릭 **Product Sales Excel.xlsx**합니다.  
   
 2.  통합 문서 탭의 이름이 **Product Sales Excel**인지 확인합니다.  
   

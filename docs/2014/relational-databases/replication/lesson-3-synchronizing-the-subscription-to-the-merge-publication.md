@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af7e1e4c59cfc624e9e83a24fcbb6095a20d2dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 587d8514ede68f731ccacfef8861b95bbcfa1406
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199023"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>3단원: 병합 게시에 구독 동기화
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 병합 에이전트를 시작하여 구독을 초기화합니다. 또한 이 절차를 사용하여 게시자와 동기화합니다. 이 단원을 수행하려면 이전 단원인 [2단원: 병합 게시에 대한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)를 완료해야 합니다.  

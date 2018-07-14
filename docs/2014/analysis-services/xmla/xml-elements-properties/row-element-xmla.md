@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223993"
 ---
 # <a name="row-element-xmla"></a>row 요소(XMLA)
-  에 대 한 데이터의 단일 행을 포함 한 [루트](root-element-xmla.md) 요소에서 반환 된 테이블 형식 데이터를 포함 하는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
+  에 대 한 데이터의 단일 행을 포함을 [루트](root-element-xmla.md) 반환 되는 테이블 형식 데이터를 포함 하는 요소를 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36089629"
 </row>  
 ```  
   
- 자세한 열 이름을 지정 하는 방법에 대 한 정보 및 테이블 형식 데이터에 대 한 스키마 정보를 참조 하세요. [Rowset 데이터 형식 &#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md)합니다.  
+ 자세한 열 명명에 대 한 정보 및 테이블 형식 데이터에 대 한 스키마 정보를 참조 하세요 [Rowset 데이터 형식 &#40;XMLA&#41;](../xml-data-types/rowset-data-type-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  

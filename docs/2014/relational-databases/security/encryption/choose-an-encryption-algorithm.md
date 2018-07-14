@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cryptography [SQL Server], algorithms
 - encryption [SQL Server], algorithms
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b0879e06e43ad1cbab089012cdbcd6e4935d0864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 9c0d9aee4e9e7ade9de4721249e2133491dcb245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206773"
 ---
 # <a name="choose-an-encryption-algorithm"></a>암호화 알고리즘 선택
   암호화는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인터페이스를 보호하려는 관리자가 사용할 수 있는 여러 가지 심층 방어 중 하나입니다.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Commands element
 ms.assetid: c9f69fe8-2221-469b-b5b0-08563aaa01dc
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbbe06ea797473335c5b370e02909cd866205c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce425ce522f2288a5567fa36651bcd937a1f226b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212063"
 ---
 # <a name="commands-element-assl"></a>Commands 요소(ASSL)
   [MdxScript](../objects/command-element-assl.md) 요소와 연결된 [Command](../objects/mdxscript-element-assl.md) 요소의 컬렉션을 포함합니다.  

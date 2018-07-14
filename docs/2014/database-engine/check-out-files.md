@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Visual Studio.SourceControl.CheckOutDialog
 helpviewer_keywords:
 - checking out files
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d8b36e03ff939cb7ddbc15bdec1d41532a87d9b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 319555e7a87922b65ff4846b8b5830041893d3c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167174"
 ---
 # <a name="check-out-files"></a>파일 체크 아웃
   체크 인한 파일을 편집하는 것을 허용하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경을 구성하지 않은 경우 파일을 수정할 수 있으려면 체크 아웃해야 합니다. 파일을 체크 아웃하면 파일 버전의 복사본이 로컬 디스크에 복사되며 파일의 읽기 전용 특성이 제거됩니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36088677"
      **설명**  
      체크 아웃 작업과 관련한 설명을 지정합니다.  
   
-     **체크 아웃할 때 체크 아웃 표시 대화 상자 안 함**  
+     **체크 아웃할 때 체크 아웃 표시 대화 상자를 하지 않습니다.**  
      체크 아웃 작업을 실행하는 동안 대화 상자를 표시하지 않습니다.  
   
      **플랫 보기**  
@@ -74,7 +74,7 @@ ms.locfileid: "36088677"
      체크 아웃하는 항목의 폴더 및 파일 계층 구조를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [체크 인 파일 편집](../../2014/database-engine/edit-checked-in-files.md)   
+ [체크 인 된 파일을 편집](../../2014/database-engine/edit-checked-in-files.md)   
  [자동으로 파일을 체크 아웃 편집 시](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
  [체크 아웃 취소](../../2014/database-engine/undo-checkouts.md)   
  [체크 아웃 관리](../../2014/database-engine/manage-checkouts.md)  

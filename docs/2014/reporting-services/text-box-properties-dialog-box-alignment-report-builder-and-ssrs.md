@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf6aec0a4375c495f49d4ad0484c1893ef4ccdc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214653"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>입력란 속성 대화 상자, 맞춤(보고서 작성기 및 SSRS)
   **입력란 속성** 대화 상자의 **맞춤** 을 선택하여 선택한 셀 또는 데이터 영역 내 값의 위치를 지정할 수 있습니다.  

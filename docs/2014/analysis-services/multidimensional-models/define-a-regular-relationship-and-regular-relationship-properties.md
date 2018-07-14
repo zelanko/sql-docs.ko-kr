@@ -1,5 +1,5 @@
 ---
-title: 일반 관계 및 일반 관계 속성 정의 합니다. | Microsoft Docs
+title: 일반 관계 및 일반 관계 속성 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granularity attribute
 - relationships [Analysis Services], regular relationships
 ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62820860d8479776abc232f9355367cc35da1966
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbf4b0f179c0c4ba0990b8fe61b2cd2a7584f058
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211933"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>일반 관계 및 일반 관계 속성 정의
   새 큐브 차원이나 새 측정값 그룹을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 일반 관계가 존재하는지 확인한 후 차원 용도 설정을 `Regular`로 지정하려고 합니다. 큐브 디자이너의 **차원 용도** 탭에서 일반 차원 관계를 보거나 편집할 수 있습니다.  

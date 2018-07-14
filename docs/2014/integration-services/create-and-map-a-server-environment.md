@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
 - sql12.ssis.ssms.iscreateenv.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 caps.latest.revision: 11
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b386dd13218d78bc8b70dacba6a0103bf9a8581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5650c579c1fab390b98b3bb7777e9c8f8f07595
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173104"
 ---
 # <a name="create-and-map-a-server-environment"></a>서버 환경 만들기 및 매핑
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 프로젝트에 포함된 패키지의 런타임 값을 지정하기 위한 서버 환경을 만듭니다. 그런 다음 특정 패키지, 진입점 패키지 또는 지정된 프로젝트의 모든 패키지에 대한 매개 변수에 환경 변수를 매핑할 수 있습니다. 진입점 패키지는 일반적으로 자식 패키지를 실행하는 부모 패키지입니다.  

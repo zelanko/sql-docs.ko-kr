@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberName element
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9014fb486a11dc5b35f8fcab394032f26408b338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 425e9c092dff8cc3c303672b6bfb1e2b3a8096ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208053"
 ---
 # <a name="attributeallmembername-element-assl"></a>AttributeAllMemberName 요소(ASSL)
   차원의 All 멤버에 대한 캡션을 기본 언어로 포함합니다.  
@@ -62,10 +62,10 @@ ms.locfileid: "36092055"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `AttributeAllMemberName` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
+ 부모에 해당 하는 요소가 `AttributeAllMemberName` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [구성에서 &#40;모든&#41; 특성 계층의 수준](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
+ [구성 된 &#40;모든&#41; 특성 계층의 수준](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

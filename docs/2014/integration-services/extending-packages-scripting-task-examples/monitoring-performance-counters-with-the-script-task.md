@@ -23,13 +23,13 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38df5cbca1c0bc2d269de9696645e9a275e57915
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f3cfee74c54cdc4dae24391dfbc7d7779c1e05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207403"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
   관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36092023"
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
--   사용 하 여 프로그램 `Imports` 가져오려는 코드에 문이 **System.Diagnostics** 네임 스페이스입니다.  
+-   사용 하 여는 `Imports` 가져오려는 코드에서 문을 합니다 **System.Diagnostics** 네임 스페이스입니다.  
   
 ### <a name="example-code"></a>코드 예  
   
@@ -125,6 +125,6 @@ public void Main()
   
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

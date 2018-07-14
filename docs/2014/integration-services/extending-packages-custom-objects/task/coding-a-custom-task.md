@@ -22,13 +22,13 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c8c13dce43c9fb618ae5de4fa7cc3d5afbd9fe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d731139c23e42dc23bdd744ae20ed2aa6508278f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176140"
 ---
 # <a name="coding-a-custom-task"></a>사용자 지정 태스크 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.  
@@ -162,7 +162,7 @@ End Class
  이 섹션에서는 태스크에서 상속하고 재정의한 `Execute` 메서드의 사용 방법을 보여 주며, 태스크 실행 결과에 대한 정보를 제공하는 다양한 방법에 대해 설명합니다.  
   
 ### <a name="execute-method"></a>Execute 메서드  
- 패키지에 포함된 태스크는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임에서 해당 `Execute` 메서드를 호출하면 실행됩니다. 작업이 메서드에서 핵심 비즈니스 논리 및 기능을 구현 하 고 실행 결과의 값을 반환 하는 메시지를 게시 하 여 제공 된 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거 및 속성을 재정의 `get` 의 `ExecutionValue` 속성입니다.  
+ 패키지에 포함된 태스크는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임에서 해당 `Execute` 메서드를 호출하면 실행됩니다. 태스크는이 메서드에서 핵심 비즈니스 논리 및 기능을 구현 및의 값을 반환 되는 메시지를 게시 하 여 실행 결과 제공 합니다 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거 및 속성을 재정의 `get` 의 `ExecutionValue` 속성입니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 메서드의 기본 구현을 제공합니다. 사용자 지정 태스크에서는 이 메서드를 재정의하여 해당 태스크의 런타임 기능을 정의합니다. <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 개체는 태스크를 런타임 엔진과 패키지의 다른 개체에서 격리하여 해당 태스크를 래핑합니다. 이 격리로 인해 태스크는 실행 순서와 관련된 패키지 내에서의 태스크 위치를 알 수 없으므로 런타임에서 호출될 때만 실행됩니다. 이 아키텍처를 통해 실행 중 태스크에서 패키지를 수정할 때 발생할 수 있는 문제를 방지할 수 있습니다. 격리된 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 메서드에 매개 변수로 지정된 개체를 통해서만 패키지의 다른 개체에 액세스할 수 있습니다. 태스크에서는 이러한 매개 변수를 통해 패키지의 안정성을 보장하는 데 필요한 격리 상태를 유지하면서 이벤트를 발생시키고, 이벤트 로그에 항목을 기록하고, 변수 컬렉션에 액세스하고, 데이터 원본에 대한 연결을 트랜잭션에 참여시킬 수 있습니다.  
   
@@ -290,7 +290,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 지정 태스크 만들기](creating-a-custom-task.md)   

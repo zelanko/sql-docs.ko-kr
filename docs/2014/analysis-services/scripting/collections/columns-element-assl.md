@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231913"
 ---
 # <a name="columns-element-assl"></a>Columns 요소(ASSL)
   부모 요소와 연결된 열의 컬렉션을 포함합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "36091371"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[동작](../objects/action-element-assl.md) 형식의 [DrillThroughAction](../data-type/action-data-type-assl.md), [이벤트](../objects/event-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|부모 요소|[동작](../objects/action-element-assl.md) 형식의 [DrillThroughAction](../data-type/action-data-type-assl.md)를 [이벤트](../objects/event-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md)를 [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "36091371"
 ## <a name="remarks"></a>Remarks  
  에 대 한 `DrillThroughAction` 요소는 `Columns` 컬렉션은 동작이 수행 될 때 반환 될 데이터를 포함 하는 열을 식별 합니다.  
   
- 에 대 한 `TableMiningStructureColumn` 요소는 `Columns` 컬렉션에서는 한 수준의 재귀 합니다. 즉, 모든 `TableMiningStructureColumn` 이 컬렉션에 포함 된 요소를 사용할 수 없습니다 `TableMiningStructureColumn` 요소에 해당 `Columns` 컬렉션입니다.  
+ 에 대 한 `TableMiningStructureColumn` 요소는 `Columns` 컬렉션 재귀 수준이 하나만 허용 합니다. 즉, 모든 `TableMiningStructureColumn` 이 컬렉션에 포함 된 요소를 사용할 수 없습니다 `TableMiningStructureColumn` 요소에 해당 `Columns` 컬렉션입니다.  
   
  AMO(Analysis Management Objects) 개체 모델의 일부 해당 요소는 <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> 및 <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>입니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196543"
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
   동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 응용 프로그램을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -56,7 +56,7 @@ ms.locfileid: "36091173"
  대상 개체 유형을 선택한 후 **대상 개체**에서 지정된 유형의 큐브 개체를 선택합니다.  
   
  **조건(옵션)**  
- 부울 값으로 확인되는 선택적 MDX(Multidimensional Expression) 식을 지정합니다. 값이 `True`, 지정된 된 대상에서 동작이 수행 됩니다. 값이 `False`, 동작이 수행 되지 않습니다.  
+ 부울 값으로 확인되는 선택적 MDX(Multidimensional Expression) 식을 지정합니다. 값이 `True`, 지정된 된 대상에서 동작이 수행 됩니다. 값이 `False`된 동작이 수행 되지 않습니다.  
   
  **동작 내용**  
  동작의 유형을 선택합니다. 다음 표에는 사용 가능한 유형이 요약되어 있습니다.  
@@ -79,8 +79,8 @@ ms.locfileid: "36091173"
 |**호출**|동작 실행 방법을 지정합니다. 기본값인 대화형은 사용자가 개체에 액세스할 때 동작이 실행되도록 지정합니다. 가능한 설정은 아래와 같습니다.<br /><br /> 일괄 처리<br /><br /> 대화형<br /><br /> 열 때|  
 |**응용 프로그램**|동작의 응용 프로그램을 나타냅니다.|  
 |**설명**|동작에 대한 설명입니다.|  
-|**캡션**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 이면 지정 `True` 에 대 한 **캡션 is MDX**합니다.|  
-|**True**|지정 `True` 캡션이 MDX 이면 또는 `False` 없는 경우.|  
+|**캡션**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 이면 지정할 `True` 에 대 한 **캡션이 MDX 인지**합니다.|  
+|**True**|지정할 `True` 캡션이 MDX 이면 또는 `False` 없는 경우.|  
   
 > [!NOTE]  
 >  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) 및 [AMO OLAP 고급 개체 프로그래밍](analysis-management-objects/programming-amo-olap-advanced-objects.md)을 참조하세요.  

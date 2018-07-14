@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CustomRollupProperties element
 ms.assetid: 4abf0129-e529-4355-b8d5-6f4e6a88e796
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 004cc629790be3840e7c2b43f71c58dc8416cca7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a564296dd022dece7ff20a7187c2c80bba9c6b7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233703"
 ---
 # <a name="customrollupproperties-element-xmla"></a>CustomRollupProperties 요소(XMLA)
   부모를 나타내는 특성 멤버에 대 한 사용자 지정 롤업 속성을 포함 [특성](attribute-element-xmla.md) 요소입니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36090733"
 ## <a name="remarks"></a>Remarks  
  `CustomRollupProperties` 요소는 부모 `Attribute` 요소에 지정된 특성 멤버의 사용자 지정 롤업 속성을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
   
- MDX 식에 대 한 자세한 내용은 참조 [식 &#40;MDX&#41;](/sql/mdx/expressions-mdx)합니다.  
+ MDX 식에 대 한 자세한 내용은 참조 하십시오 [식 &#40;MDX&#41;](/sql/mdx/expressions-mdx)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소를 삽입 &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   

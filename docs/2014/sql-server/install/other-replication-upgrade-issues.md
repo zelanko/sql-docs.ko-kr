@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system tables [SQL Server], replication
 - passwords [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ActiveX controls [SQL Server replication]
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1710220edea8623b0e1cb9ca61cd179461b14423
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1aa132e53e3d3328863c8f30fc86277fc6b394ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200683"
 ---
 # <a name="other-replication-upgrade-issues"></a>기타 복제 업그레이드 문제
   이 항목에서는 업그레이드 관리자가 보고하지 않는 몇 가지 업그레이드 문제에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36089451"
   
 -   모든 ActiveX 컨트롤은 스크립팅 및 초기화에 안전하지 않은 것으로 표시됩니다.  
   
--   스냅숏 ActiveX 컨트롤은 삭제되었습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 스냅숏을 만들고 관리할 수 있습니다. 자세한 내용은 항목을 참조 하십시오. "하는 방법: 초기 스냅숏 만들기 및 적용 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" 및 "하는 방법: 초기 스냅숏 (복제 TRANSACT-SQL 프로그래밍) 만들기"에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
+-   스냅숏 ActiveX 컨트롤은 삭제되었습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 스냅숏을 만들고 관리할 수 있습니다. 자세한 내용은 항목을 참조 하세요. "하는 방법: 초기 스냅숏 만들기 및 적용 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" 및 "방법: 초기 스냅숏 (복제 TRANSACT-SQL 프로그래밍) 만들기"에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
   
 -   분산 ActiveX 컨트롤 및 병합 ActiveX 컨트롤은 이후에는 지원되지 않습니다. RMO(복제 관리 개체)를 사용한 관리 코드 응용 프로그램에 비슷한 기능이 제공됩니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "구독 동기화(RMO 프로그래밍)"를 참조하십시오.  
   

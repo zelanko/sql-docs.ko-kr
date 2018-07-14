@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efb3386935bd8f3b1f3b359b0eeb40613709e9b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 561c02100785ba1b56b6498fdd0f8fd3b3b6241f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197933"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 끝점 만들기(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만드는 방법에 대해 설명합니다. 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 을 지원하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 데이터베이스 미러링 끝점이 필요합니다. 서버 인스턴스는 하나의 포트가 있는 데이터베이스 미러링 끝점을 하나만 가질 수 있습니다. 데이터베이스 미러링 끝점은 끝점이 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 서버 인스턴스의 모든 데이터베이스 미러링 세션이 이 포트에서 수신하고 데이터베이스 미러링에 대해 들어오는 모든 연결에 이 포트가 사용됩니다.  
@@ -134,7 +133,7 @@ ms.locfileid: "36093828"
          서버 인스턴스가 데이터베이스 미러링 세션에 따라 각기 다른 역할을 하도록 하려면 ROLE=ALL을 지정합니다. 서버 인스턴스가 파트너 또는 미러링 모니터 서버가 되도록 제한하려면 ROLE=PARTNER와 ROLE=WITNESS를 각각 지정합니다.  
   
         > [!NOTE]  
-        >  다양 한 버전에 대 한 데이터베이스 미러링 옵션에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+        >  다양 한 버전의 데이터베이스 미러링 옵션에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
      CREATE ENDPOINT 구문에 대한 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)에서 Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만드는 방법에 대해 설명합니다.  
   
@@ -184,7 +183,7 @@ GO
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **데이터베이스 미러링 끝점을 구성하려면**  
   
--   [데이터베이스를 AlwaysOn 가용성 그룹에 대 한 미러링 끝점 만들기 &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
