@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 61
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74e1a00c89050b632ca01a5f67f734484bff8de7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308793"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘에서 제공 하는 세그먼트화 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 집합의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
+  합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘에서 제공 하는 세그먼트화 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 집합의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
   
  클러스터링 모델은 관찰만 가지고는 논리적으로 이끌어 낼 수 없을 수 있는 데이터 집합 내 관계를 식별합니다. 예를 들어 자전거로 통근하는 사람은 일반적으로 회사에서 먼 곳에 살지 않는다는 사실을 논리적으로 인식할 수 있습니다. 그러나 알고리즘은 자전거 통근자에 대해 확연하게 드러나지 않는 다른 특징을 찾아낼 수 있습니다. 다음 다이어그램에서 클러스터 A는 자가용으로 통근하는 사람에 대한 데이터를 나타내고 클러스터 B는 자전거로 통근하는 사람에 대한 데이터를 나타냅니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36082371"
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 먼저 데이터 집합 내 관계를 식별하고 이러한 관계를 기반으로 일련의 클러스터를 생성합니다. 다음 다이어그램에서 볼 수 있는 것과 같이 알고리즘이 데이터를 그룹화하는 방법을 시각적으로 나타내는 데에는 산점도가 유용합니다. 산점도는 데이터 집합 내 모든 사례를 나타내며 각 사례는 그래프에서 하나의 점으로 표시됩니다. 클러스터는 그래프에 나타난 요소를 그룹화하고 이를 통해 알고리즘이 식별하는 관계를 보여 줍니다.  
   
- ![산 점도 데이터 집합 내에서 사례의](../media/clustering-plot.gif "데이터 집합 내에서 사례의 산 점도")  
+ ![데이터 집합에 있는 사례의 산 점도](../media/clustering-plot.gif "데이터 집합 내에서 사례의 산 점도")  
   
  클러스터를 정의한 다음 알고리즘은 클러스터가 요소의 그룹화를 얼마나 잘 나타내는지를 계산하고 그룹화를 다시 정의하여 데이터를 보다 잘 나타내는 클러스터를 만듭니다. 알고리즘은 클러스터를 다시 정의하여 결과를 더 이상 향상시킬 수 없을 때까지 이 과정을 반복합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36082371"
   
 -   **입력 열** 각 모델은 클러스터 작성에 사용되는 값을 포함하는 입력 열을 하나 이상 포함해야 합니다. 입력 열은 원하는 만큼 사용할 수 있지만 각 열의 값 수에 따라 추가되는 열로 인해 모델 학습에 걸리는 시간이 길어질 수 있습니다.  
   
--   **선택적 예측 가능한 열** 이 알고리즘의 경우 모델을 작성하는 데 예측 가능한 열이 필요하지는 않지만 거의 모든 데이터 형식의 예측 가능한 열을 추가할 수는 있습니다. 예측 가능한 열의 값은 클러스터링 모델에 대한 입력으로 처리되거나 예측용으로만 사용되도록 지정할 수 있습니다. 예를 들어, 지역 또는 연령과 같은 인구 통계를 클러스터링 하 여 고객의 소득을 예측 하려는 경우 소득을 지정는 `PredictOnly` 하 고 다른 모든 열, 지역 또는 연령과 같은 입력으로 추가 합니다.  
+-   **선택적 예측 가능한 열** 이 알고리즘의 경우 모델을 작성하는 데 예측 가능한 열이 필요하지는 않지만 거의 모든 데이터 형식의 예측 가능한 열을 추가할 수는 있습니다. 예측 가능한 열의 값은 클러스터링 모델에 대한 입력으로 처리되거나 예측용으로만 사용되도록 지정할 수 있습니다. 예를 들어, 지역 또는 연령과 같은 인구 통계를 클러스터링 하 여 고객의 소득을 예측 하려는 경우 지정으로 income `PredictOnly` 하 고 다른 모든 열, 지역 또는 연령과 같은 입력으로 추가 합니다.  
   
  클러스터링 모델에 대해 지원되는 콘텐츠 형식 및 데이터 형식에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)의 요구 사항 섹션을 참조하세요.  
   

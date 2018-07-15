@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0723d7b079fef518f80d468f3a3a08c179a01fbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f897668d21a9f213cf841a688f217a5ff1a9fe02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310763"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>텍스트 파일에서 가져오기(SSAS 테이블 형식)
   텍스트 가져오기 마법사를 사용하여 Microsoft Excel 파일 및 텍스트 파일에서 데이터를 가져올 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36078664"
 3.  테이블 가져오기 마법사의 단계별 지침을 따릅니다. 다음 페이지에서 **테이블 및 뷰 선택** 페이지를 사용하여 특정 테이블을 선택하고 필터를 적용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
+ [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay 요구 사항 | Microsoft Docs
+title: Distributed Replay Requirements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38f09e4b9c5bcf2d3d6611f4a6d5e8bdc9534d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bc0ae7de69ac9887e7bb3e75acfc97a1ae9be822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312733"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하기 전에 이 항목에서 설명하는 제품 요구 사항을 검토하세요.  
@@ -129,7 +129,7 @@ ms.locfileid: "36081727"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- 관리 도구, 컨트롤러 및 클라이언트 서비스를 실행할 수 있는 운영 체제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 동일합니다. 운영 체제에 대 한 지원 되는 방법에 대 한 자세한 정보에 대 한 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 참조 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
+ 관리 도구, 컨트롤러 및 클라이언트 서비스를 실행할 수 있는 운영 체제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 동일합니다. 에 대 한 지원 되는 운영 체제에 대 한 자세한 내용은 대 한 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 참조 하십시오 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
   
  Distributed Replay 기능은 x86 기반 및 x64 기반 운영 체제 모두에서 지원됩니다. x64 기반 운영 체제의 경우 WOW(Windows on Windows) 모드만 지원됩니다.  
   

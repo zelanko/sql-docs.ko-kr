@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298733"
 ---
 # <a name="create-a-new-integration-services-project"></a>새 Integration Services 프로젝트 만들기
   이 절차에서는 새 프로젝트와 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 솔루션을 만듭니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36081378"
     > [!NOTE]  
     >  선택한 원본 제어 플러그 인을 확인 및 변경하고 원본 제어 환경을 구성하려면 **도구** 메뉴에서 **옵션**을 클릭한 후 **원본 제어** 노드를 확장합니다.  
   
-8.  클릭 **확인** 솔루션을 추가 하려면 **솔루션 탐색**r 솔루션에 프로젝트를 추가 합니다.  
+8.  클릭 **확인** 솔루션을 추가할 **솔루션 탐색기**r 솔루션에 프로젝트를 추가 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 프로젝트](integration-services-ssis-projects-and-solutions.md)   

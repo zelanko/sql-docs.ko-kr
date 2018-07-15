@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f29fae6a9f9284bd35b2779029d7b3f176bcd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27869a87ed10056517806bd872ef1e48d572690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302393"
 ---
 # <a name="data-profile-viewer-f1-help"></a>데이터 프로필 뷰어 F1 도움말
   데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 볼 수 있습니다.  
@@ -58,10 +58,10 @@ ms.locfileid: "36081625"
  이 열의 값에 대한 최대 길이를 표시합니다.  
   
  **선행 공백 무시**  
- 이 프로필은으로 계산 되었는지 여부를 표시 한 `IgnoreLeadingSpaces` True 또는 False 값입니다. 이 속성은 데이터 프로파일링 태스크 편집기의 **프로필 요청** 페이지에서 설정했습니다.  
+ 이 프로필은으로 계산 되었는지 여부를 표시는 `IgnoreLeadingSpaces` True 또는 False 값입니다. 이 속성은 데이터 프로파일링 태스크 편집기의 **프로필 요청** 페이지에서 설정했습니다.  
   
  **후행 공백 무시**  
- 이 프로필은으로 계산 되었는지 여부를 표시 한 `IgnoreTrailingSpaces` True 또는 False 값입니다. 이 속성은 데이터 프로파일링 태스크 편집기의 **프로필 요청** 페이지에서 설정했습니다.  
+ 이 프로필은으로 계산 되었는지 여부를 표시는 `IgnoreTrailingSpaces` True 또는 False 값입니다. 이 속성은 데이터 프로파일링 태스크 편집기의 **프로필 요청** 페이지에서 설정했습니다.  
   
  **행 개수**  
  테이블 또는 뷰의 행 수를 표시합니다.  

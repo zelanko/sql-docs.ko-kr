@@ -1,5 +1,5 @@
 ---
-title: 텍스트 요소 (ASSL) | Microsoft Docs
+title: Text 요소 (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Text element
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8cfc13728fa8c6f73e14e8534dd911316bb4616f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26eebe93b7bdf9662011363a2023aaf9e4fe0efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328421"
 ---
 # <a name="text-element-assl"></a>Text 요소(ASSL)
   텍스트를 포함 한 [명령](../objects/command-element-assl.md) 요소입니다.  
@@ -60,10 +60,10 @@ ms.locfileid: "36081415"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Text` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Command>합니다.  
+ 부모에 해당 하는 요소가 `Text` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Command>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 명령 &#40;ASSL&#41;](../collections/commands-element-assl.md)   
+ [요소는 명령 &#40;ASSL&#41;](../collections/commands-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

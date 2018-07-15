@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 56b26f0c43df3257fc563ea246045ad3baf1e3ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73a67a807ee928315b264ea52bd0d993e0ee81f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295083"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "36082545"
   
 -   [스크립트 변환 편집기 &#40;입력 열 페이지&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [스크립트 변환 편집기 &#40;입 / 출력 페이지&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [스크립트 변환 편집기 &#40;입력 및 출력 페이지&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
 -   [스크립트 변환 편집기 &#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
 - Visio shapes
 - shapes
 ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc0f145ce45a616308e96836d1e54ab818091010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb7c0ec79029f434f626d6f060b52e8f44048af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304353"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Visio 데이터 마이닝 다이어그램 문제 해결(SQL Server 데이터 마이닝 추가 기능)
   이 항목에는 Visio 데이터 마이닝 다이어그램 문제를 해결할 때 사용할 수 있는 몇 가지 추가 정보가 들어 있습니다.  

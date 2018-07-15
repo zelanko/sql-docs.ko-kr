@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
 - SQL Server Integration Services packages, configurations
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3b80e197cedae2b8a9902b8e3de4f9066fab374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314153"
 ---
 # <a name="package-configurations"></a>패키지 구성
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임 시 속성의 값을 업데이트 하는 데 사용할 수 있는 패키지 구성을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임에 속성 값을 업데이트 하는 데 사용할 수 있는 패키지 구성을 제공 합니다.  
   
 > [!NOTE]  
 >  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
@@ -48,7 +48,7 @@ ms.locfileid: "36082324"
   
 -   구성은 패키지를 좀 더 융통성 있게 만듭니다. 예를 들어 구성으로 속성 식에서 사용되는 변수의 값을 업데이트할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] XML 파일과 같은 패키지 구성 저장의 여러 가지 방법을 지원, 테이블에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 및 환경 및 패키지 변수입니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 여러 가지 XML 파일과 같은 패키지 구성 저장 방식을 지원, 테이블에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 및 환경 변수와 패키지 있습니다.  
   
  각 구성은 한 개의 속성/값 쌍입니다. XML 구성 파일 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 유형은 여러 구성을 포함할 수 있습니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36082324"
   
 -   **/ConfigFile** 옵션을 사용하여 디자인 타임에 지정한 구성을 대체하는 구성을 로드할 수는 없습니다.  
   
- 이러한 옵션과 이러한 옵션의 동작이 간에 어떻게 다른 지에 대 한 자세한 내용은 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 이전 버전에서는 참조 및 [SQL Server 2014에서 Integration Services 기능의 동작 변경 내용](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)합니다.  
+ 이러한 옵션과 이러한 옵션의 동작 간에 어떻게 다른 지에 대 한 자세한 내용은 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 이전 버전에서는 내용과 [SQL Server 2014 Integration Services 기능의 동작 변경 내용](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)합니다.  
   
 ## <a name="package-configuration-types"></a>패키지 구성 유형  
  다음 표에서는 패키지 구성 유형에 대해 설명합니다.  

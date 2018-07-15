@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3548492e83a9e9273901d9107ec2a1cd6fc8e80b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 668da5e97862fb27b9051e71be60d74713951d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297873"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue 메서드(ClientSettingsGeneralFlag 클래스)
   참조된 플래그의 모든 값을 설정합니다.  

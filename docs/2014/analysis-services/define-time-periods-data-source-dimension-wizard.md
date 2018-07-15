@@ -1,5 +1,5 @@
 ---
-title: 기간 정의 (데이터 원본) (차원 마법사) | Microsoft Docs
+title: 기간 (데이터 원본) 정의 (차원 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c20dc34617590c5e4d1ab7134378afb2b7cfb93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b62c3da0e8a92eda40d883a596e862a6c679364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328863"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>기간 정의(데이터 원본)(차원 마법사)
   **기간 정의** 페이지를 사용하여 **차원 유형 선택** 페이지에서 지정한 테이블의 열로 시간 차원의 기간을 나타내는 특성을 정의할 수 있습니다.  

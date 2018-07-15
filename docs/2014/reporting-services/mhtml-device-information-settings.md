@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 caps.latest.revision: 39
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7eb07733e9db0a1002658cd1e29de02d95d8ad08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ca071d0ebdf37db3e9929d177f8afc8fd4973c55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234843"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 장치 정보 설정
   다음 표는 웹 보관 파일(MHTML) 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  

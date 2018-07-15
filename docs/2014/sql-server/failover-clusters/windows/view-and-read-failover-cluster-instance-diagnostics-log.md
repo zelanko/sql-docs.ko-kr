@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 93471f74f608febd0f6920b0b93646eac394eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317523"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
   SQL Server 리소스 DLL에 대한 모든 오류 및 경고 이벤트는 Windows 이벤트 로그에 기록됩니다. [sp_server_diagnostics&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 시스템 저장 프로시저에서 캡처된 SQL Server 관련 진단 정보의 실행 로그는 SQL Server 장애 조치(failover) 클러스터 진단(*SQLDIAG* 로그라고도 함) 로그 파일에 기록됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "36081031"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 기본적으로 SQLDIAG 저장 된 SQL Server 인스턴스 디렉터리의 로컬 LOG 폴더 예를 들어 ' C\Program Files\Microsoft SQL Server\MSSQL12 합니다. \<InstanceName > \MSSQL\LOG' AlwaysOn 장애 조치 클러스터 인스턴스 (FCI) 소유 노드의 합니다. 각 SQLDIAG 로그 파일의 크기는 100MB로 고정됩니다. 새 로그에 재활용하기 전에 이러한 로그 파일이 컴퓨터에 10개 저장됩니다.  
+ 기본적으로 SQLDIAG는 저장 된 SQL Server 인스턴스 디렉터리의 로컬 LOG 폴더 예를 들어, ' C\Program Files\Microsoft SQL Server\MSSQL12. \<N a m e > \MSSQL\LOG' AlwaysOn 장애 조치 클러스터 인스턴스 (FCI) 소유 노드의 합니다. 각 SQLDIAG 로그 파일의 크기는 100MB로 고정됩니다. 새 로그에 재활용하기 전에 이러한 로그 파일이 컴퓨터에 10개 저장됩니다.  
   
  로그는 확장 이벤트 파일 형식을 사용합니다. **sys.fn_xe_file_target_read_file** 시스템 함수를 사용하여 확장 이벤트에서 만든 파일을 읽을 수 있습니다. 행당 하나의 이벤트가 XML 형식으로 반환됩니다. XML 데이터를 결과 집합으로 구문 분석하려면 시스템 뷰를 쿼리합니다. 자세한 내용은 [sys.fn_xe_file_target_read_file&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)을 참조하세요.  
   
@@ -97,7 +96,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  이 절차에 대한 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
- 데이터 정의 언어 (DDL) 문을 사용 하 여 `ALTER SERVER CONFIGURATION`, 시작 하거나에 의해 캡처된 진단 데이터의 로깅을 중지는 [sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 프로시저와 저장 프로시저 집합 SQLDIAG 로그 로그 파일 롤오버 수, 로그 파일 크기 및 파일 위치 등의 구성 매개 변수입니다. 구문에 대한 자세한 내용은 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)을 참조하세요.  
+ 데이터 정의 언어 (DDL) 문을 사용 하 여 `ALTER SERVER CONFIGURATION`시작할 수 있습니다, 또는에서 캡처된 진단 데이터 로깅을 중지 합니다 [sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 절차 및 집합 SQLDIAG 로그 로그 파일 롤오버 수, 로그 파일 크기 및 파일 위치와 같은 구성 매개 변수입니다. 구문에 대한 자세한 내용은 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)을 참조하세요.  
   
 ###  <a name="ConfigTsqlExample"></a> 예(Transact-SQL)  
   

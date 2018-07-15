@@ -20,15 +20,15 @@ helpviewer_keywords:
 - CacheMode element
 ms.assetid: bfb8f7bb-ccd3-4dfe-a36a-1cea15edfe40
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0698628ee699ab19abaf7c1b1857db3c1d68dfc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 790f3a087e0e7beda2d3cdbf228356fe1fa125d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330393"
 ---
 # <a name="cachemode-element-assl"></a>CacheMode 요소(ASSL)
   마이닝 구조를 처리하는 동안 검색된 학습 데이터에 사용되는 캐싱 메커니즘을 결정합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "36081420"
 |*ClearAfterProcessing*|학습 사례가 처리 도중에 캐시되지만 처리 후에는 삭제됩니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `CacheMode` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.  
+ 부모에 해당 하는 요소가 `CacheMode` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

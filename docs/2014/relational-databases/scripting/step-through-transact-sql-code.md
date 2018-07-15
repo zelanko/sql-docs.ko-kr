@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331283"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
@@ -55,10 +55,10 @@ ms.locfileid: "36081544"
   
 |작업|프로시저|  
 |------------|---------------|  
-|현재 문부터 다음 중단점까지 모든 문을 실행합니다.|에 **디버그** 메뉴를 클릭 하 여 **계속**합니다.<br /><br /> 에 **디버그** 도구 모음을 클릭는 **계속** 단추입니다.|  
-|다음 문 또는 모듈을 한 단계씩 코드 실행합니다.|에 **디버그** 메뉴를 클릭 하 여 **한 단계씩 코드 실행**합니다.<br /><br /> 에 **디버그** 도구 모음을 클릭는 **한 단계씩 코드 실행** 단추입니다.<br /><br /> F11 키를 누릅니다.|  
-|다음 문 또는 모듈을 프로시저 단위로 실행합니다.|에 **디버그** 메뉴를 클릭 하 여 **프로시저 단위 실행**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 된 **프로시저 단위 실행** 단추입니다.<br /><br /> F10 키를 누릅니다.|  
-|모듈 프로시저를 나갑니다.|에 **디버그** 메뉴를 클릭 하 여 **나가기**합니다.<br /><br /> 에 **디버그** 도구 모음을 클릭는 **나가기** 단추입니다.<br /><br /> Shift+F11을 누릅니다.|  
+|현재 문부터 다음 중단점까지 모든 문을 실행합니다.|에 **디버그** 메뉴에서 클릭 **계속**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **계속** 단추입니다.|  
+|다음 문 또는 모듈을 한 단계씩 코드 실행합니다.|에 **디버그** 메뉴에서 클릭 **단계씩**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **한 단계씩 코드 실행** 단추입니다.<br /><br /> F11 키를 누릅니다.|  
+|다음 문 또는 모듈을 프로시저 단위로 실행합니다.|에 **디버그** 메뉴에서 클릭 **단계씩**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **프로시저 단위 실행** 단추입니다.<br /><br /> F10 키를 누릅니다.|  
+|모듈 프로시저를 나갑니다.|에 **디버그** 메뉴에서 클릭 **나가기**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **프로시저 나가기** 단추입니다.<br /><br /> Shift+F11을 누릅니다.|  
 |현재 커서 위치까지 실행합니다.|쿼리 편집기 창에서 마우스 오른쪽을 클릭한 다음 **커서까지 실행**을 클릭합니다.<br /><br /> Ctrl+F10을 누릅니다.|  
   
 ## <a name="see-also"></a>관련 항목  

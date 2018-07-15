@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: efaa7da1a6e198f4e8fc122df0b7fe0360f625b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 48bb2922f8f86712a838de95b31a3be2b08c3150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282899"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>예제: ID 및 IDREFS 지시어 지정
-  요소 특성으로 지정할 수는 `ID` type 특성 및 `IDREFS` 특성 참조 하는 데 사용할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
+  요소 특성으로 지정할 수 있습니다는 `ID` 유형의 특성 및 `IDREFS` 특성 참조 하는 데 사용할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
   
  이 예에서는 `ID` 및 `IDREFS` 지시어를 사용하여 `ID` 및 `IDREFS` 유형의 특성을 만드는 방법을 보여 줍니다. ID는 정수 값일 수 없기 때문에 이 예에서는 ID 값이 변환됩니다. 즉, 다른 유형으로 캐스팅됩니다. ID 값에는 접두사가 사용됩니다.  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319953"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36081037"
 -   데이터 원본에서 검색된 값을 한 데이터 형식에서 다른 데이터 형식으로 변환할 경우  
   
 ## <a name="determining-the-data-type-of-report-data"></a>보고서 데이터의 데이터 형식 확인  
- 보고서 항목의 데이터 형식을 확인하려면 해당 항목의 데이터 형식을 반환하는 식을 작성합니다. 예를 들어 `MyField`필드의 데이터 형식을 표시하려면 테이블 셀에 `=Fields!MyField.Value.GetType().ToString()`식을 추가합니다. 결과를 나타내는 데 사용 하 고 CLR 데이터 형식을 표시 `MyField`, 예를 들어 `System.String` 또는 `System.DateTime`합니다.  
+ 보고서 항목의 데이터 형식을 확인하려면 해당 항목의 데이터 형식을 반환하는 식을 작성합니다. 예를 들어 `MyField`필드의 데이터 형식을 표시하려면 테이블 셀에 `=Fields!MyField.Value.GetType().ToString()`식을 추가합니다. 결과 나타내는 데 CLR 데이터 형식을 표시 `MyField`, 예를 들어 `System.String` 또는 `System.DateTime`합니다.  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>데이터 집합 필드를 다른 데이터 형식으로 변환  
  데이터 집합 필드를 보고서에 사용하기 전에 변환할 수도 있습니다. 다음 목록에서는 기존 데이터 집합 필드를 변환하는 방법을 설명합니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "36081037"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 이 예제에서는 날짜(2008년 7월 1일), 소수 자릿수가 7개인 시간(오전 6:05:07.9999999), 시간 및 분 단위의 UTC 표준 시간대 오프셋(더하기 8시간 0분)을 차례로 보여 줍니다. 다음 예제를 보려면이 값에 배치 되는 `String` 라는 필드가 `MyDateTime.Value`합니다.  
+ 이 예제에서는 날짜(2008년 7월 1일), 소수 자릿수가 7개인 시간(오전 6:05:07.9999999), 시간 및 분 단위의 UTC 표준 시간대 오프셋(더하기 8시간 0분)을 차례로 보여 줍니다. 다음 예제에서이 값에 배치 되는 `String` 라는 필드가 `MyDateTime.Value`합니다.  
   
  다음 방법 중 하나를 사용하여 이 데이터를 하나 이상의 CLR 값으로 변환할 수 있습니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36081037"
   
          `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 `DateTime` 값은 `2007-07-06 04:07:07 PM`(2007년 7월 6일 오후 4:07)입니다.  
   
- 문자열 변환 하는 방법에 대 한 자세한 내용은 `DateTime` 데이터 형식을 참조 [구문 분석 하는 날짜 및 시간 문자열](http://go.microsoft.com/fwlink/?LinkId=89703), [날짜 서식 지정 및 특정 문화권에 대 한 시간](http://go.microsoft.com/fwlink/?LinkId=89704), 및 [선택 DateTime, DateTimeOffset 및 TimeZoneInfo 사이의](http://go.microsoft.com/fwlink/?linkid=110652) msdn 합니다.  
+ 문자열을 변환 하는 방법에 대 한 자세한 내용은 `DateTime` 데이터 형식 참조 [구문 분석 하는 날짜 및 시간 문자열](http://go.microsoft.com/fwlink/?LinkId=89703)를 [특정 문화권에 대 한 시간과 날짜 서식 지정](http://go.microsoft.com/fwlink/?LinkId=89704), 및 [선택 DateTime, DateTimeOffset 및 TimeZoneInfo 간의](http://go.microsoft.com/fwlink/?linkid=110652) MSDN에 있습니다.  
   
 -   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 집합에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   

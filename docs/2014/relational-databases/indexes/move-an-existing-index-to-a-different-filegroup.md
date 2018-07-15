@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving tables
 - switching filegroups for index
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3ea31b77f210eca22d5ddea56984880a3056be1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 597ed7b2207302ff897f255479c6183ef44b255d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285169"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 현재 파일 그룹에서 다른 파일 그룹으로 기존 인덱스를 이동하는 방법을 설명합니다.  
@@ -99,11 +98,11 @@ ms.locfileid: "36081841"
   
      클러스터형 인덱스를 이동할 경우 온라인 처리를 사용할 수 있습니다. 온라인 처리는 인덱스 작업 중 기본 데이터 및 비클러스터형 인덱스에 대한 동시 사용자 액세스를 허용합니다. 자세한 내용은 [Perform Index Operations Online](perform-index-operations-online.md)을 참조하세요.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하는 다중 프로세서 컴퓨터에서는 최대 병렬 처리 값을 지정하여 인덱스 문 실행에 사용되는 프로세서 수를 구성할 수 있습니다. 병렬 인덱스 작업 기능은 일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 병렬 인덱스 작업에 대한 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하는 다중 프로세서 컴퓨터에서는 최대 병렬 처리 값을 지정하여 인덱스 문 실행에 사용되는 프로세서 수를 구성할 수 있습니다. 병렬 인덱스 작업 기능은 일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 병렬 인덱스 작업에 대한 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요.  
   
 8.  **확인**을 클릭합니다.  
   
- **인덱스 속성 –**  **저장소** *저장소* 페이지에서 다음 정보를 사용할 수 있습니다.  
+  **인덱스 속성 –**  **저장소** *저장소* 페이지에서 다음 정보를 사용할 수 있습니다.  
   
  **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다.  

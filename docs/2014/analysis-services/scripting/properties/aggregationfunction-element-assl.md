@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308443"
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction 요소(ASSL)
   계정 유형에 사용할 집계 함수를 포함합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "36082356"
  AMO(Analysis Management Objects) 개체 모델에서 `AggregationFunction`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.AggregationFunction>입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소 계정 &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
+ [요소를 계정 &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

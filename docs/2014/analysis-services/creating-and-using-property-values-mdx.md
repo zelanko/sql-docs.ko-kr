@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
 - queries [MDX], property values
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], property values
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c16f2505b5abc3ff876df1cedf93ca7570334d38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b615fcec15421e46157c3d1c4485ca2668b52e8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286465"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>속성 값 만들기 및 사용(MDX)
   MDX는 차원, 수준, 멤버 및 셀에 대한 기본 및 사용자 정의 속성을 지원합니다. 기본 속성은 개별 셀에 대해 고유한 이름과 캡션은 물론, 서식과 글꼴 크기를 제공합니다. 반면, 사용자 정의 속성은 거의 모든 종류의 특성을 멤버에 추가로 제공할 수 있습니다.  

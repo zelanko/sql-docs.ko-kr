@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286109"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
-  종종 때는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자 (dba)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경 해야 합니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  
+  경우가 때를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 관리자 (dba)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경 하려고 합니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  
   
  데이터베이스 모드는 여러 가지 방법으로 전환할 수 있습니다. 이 문서에서는 다음과 같은 일반적인 시나리오에 대해 설명합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36079146"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 왼쪽 또는 오른쪽 창에서 전환할 데이터베이스를 찾습니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 데이터베이스 폴더를 찾은 후 위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 누르고 **속성**합니다. 데이터베이스 폴더를 찾은 후 위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
   
     > [!IMPORTANT]  
     >  데이터베이스를 분리하면 즉시 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 데이터베이스 위치를 찾을 수 없게 됩니다.  
@@ -51,15 +51,15 @@ ms.locfileid: "36079146"
   
 4.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   
-5.  찾을 **데이터베이스** 의 왼쪽 또는 오른쪽 창에서 폴더 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
+5.  찾을 합니다 **데이터베이스** 의 왼쪽 또는 오른쪽 창에서 폴더 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
   
-6.  마우스 오른쪽 단추로 클릭는 **데이터베이스** 폴더를 선택 **연결 중...**  
+6.  마우스 오른쪽 단추로 클릭 합니다 **데이터베이스** 선택한 폴더 **연결 하는 중...**  
   
 7.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추 (**…**)를 사용하여 데이터베이스 폴더를 찾을 수 있습니다.  
   
 8.  데이터베이스의 읽기/쓰기 모드를 선택합니다.  
   
-9. 3 단계에서 사용 된 암호를 입력 하 고 클릭 **확인** 하 여 연결 명령을 실행 합니다.  
+9. 3 단계에서 사용 된 암호를 입력 하 고 클릭 **확인** attach 명령을 실행 합니다.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>AMO를 사용하여 데이터베이스의 읽기/쓰기 모드를 프로그래밍 방식으로 전환하려면  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36079146"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 왼쪽 또는 오른쪽 창에서 전환할 데이터베이스를 찾습니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 데이터베이스 폴더를 찾은 후 위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 누르고 **속성**합니다. 데이터베이스 폴더를 찾은 후 위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
   
     > [!IMPORTANT]  
     >  데이터베이스를 분리하면 즉시 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 데이터베이스 위치를 찾을 수 없게 됩니다.  

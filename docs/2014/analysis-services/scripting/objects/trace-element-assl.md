@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trace element
 ms.assetid: dda9136a-a9c1-44a1-b8d3-b0ec4dc65c87
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb089bc193316a56ab0a7355411178ece44c8788
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b1aa2ff2c3f00d5c6cb96c5cef4f2ff73e80636
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289519"
 ---
 # <a name="trace-element-assl"></a>Trace 요소(ASSL)
   쿼리할 수 있는 추적을 정의합니다.  
@@ -90,13 +90,13 @@ ms.locfileid: "36078894"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[추적](../collections/traces-element-assl.md)|  
-|자식 요소|[Annotations](../collections/annotations-element-assl.md), [Audit](../properties/audit-element-assl.md), [AutoRestart](../properties/autorestart-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Description](../properties/description-element-assl.md), [Events](../collections/events-element-assl.md), [Filter](../properties/filter-element-trace-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [LogFileAppend](../properties/logfileappend-element-assl.md), [LogFileName](../properties/name-element-assl.md), [LogFileRollover](../properties/logfilerollover-element-assl.md), [LogFileSize](../properties/logfilesize-element-assl.md), [Name](../properties/name-element-assl.md), [StopTime](../properties/stoptime-element-assl.md)|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [감사](../properties/audit-element-assl.md), [AutoRestart](../properties/autorestart-element-assl.md)를 [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [설명](../properties/description-element-assl.md), [이벤트](../collections/events-element-assl.md), [필터](../properties/filter-element-trace-assl.md)를 [ID](../properties/id-element-assl.md)를 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)를 [LogFileAppend](../properties/logfileappend-element-assl.md), [LogFileName](../properties/name-element-assl.md), [LogFileRollover](../properties/logfilerollover-element-assl.md), [LogFileSize](../properties/logfilesize-element-assl.md)하십시오 [이름](../properties/name-element-assl.md), [StopTime](../properties/stoptime-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Trace>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 요소 &#40;ASSL&#41;](server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](server-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b02a91751697d2b21e58516373bb990626291b64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a57ccf36600ba4a25bd2476af5b2550ab1e8d89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306953"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>차트의 3D, 빗면 및 기타 효과(보고서 작성기 및 SSRS)
   3D(3차원) 효과를 사용하여 차트에 깊이를 더하고 시각적 효과를 강화할 수 있습니다. 예를 들어 쪼개진 원형 차트에서 특정 조각을 강조하려는 경우 차트를 돌려 원근감을 변경함으로써 해당 조각이 가장 먼저 보이도록 할 수 있습니다. 차트에 3D 효과를 적용할 경우 모든 그라데이션 색과 해칭 스타일이 해제됩니다.  
   
  3차원 효과는 개별 차트에 적용할 수 있으며, 동일 보고서에서 2차원 및 3차원 차트를 모두 표시할 수 있습니다.  
   
- **3D 사용** 을 선택하면 모든 차트 종류에 대해 **차트 영역 속성**대화 상자의 차트 영역에 3차원 효과를 추가할 수 있습니다. 자세한 내용은 참조 [차트에 3D 효과 추가 &#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)합니다.  
+ **3D 사용** 을 선택하면 모든 차트 종류에 대해 **차트 영역 속성**대화 상자의 차트 영역에 3차원 효과를 추가할 수 있습니다. 자세한 내용은 [차트에 3D 효과 추가 &#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)합니다.  
   
  가로 막대형 차트, 세로 막대형 차트, 원형 차트 및 도넛형 차트에 빗면 효과, 볼록 효과 및 질감 스타일을 추가하여 차트에 시각적 효과를 줄 수도 있습니다. 자세한 내용은 [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)를 참조하세요.  
   

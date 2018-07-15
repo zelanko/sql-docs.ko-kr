@@ -1,5 +1,5 @@
 ---
-title: 패키지 선택 (SSIS 패키지 업그레이드 마법사) | Microsoft Docs
+title: 패키지 (SSIS 패키지 업그레이드 마법사)를 선택 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d4c82a2029f0bb425a891abfb41013f6601799a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed7ffd7d56fb0a25091d0e3719c6eebb2bd9240c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308013"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>패키지 선택(SSIS 패키지 업그레이드 마법사)
   **패키지 선택** 페이지를 사용하여 업그레이드할 패키지를 선택할 수 있습니다. 이 페이지에는 마법사의 **원본 위치 선택** 페이지에서 지정한 위치에 저장된 패키지가 나열됩니다.  

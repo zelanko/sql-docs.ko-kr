@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e92f595bcf701e20378fe94dfde6c91d8c57bee1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b83229221afc84634689c70e29311fba7b2c1374
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289109"
 ---
 # <a name="model-permissions-master-data-services"></a>모델 권한(Master Data Services)
   모델 권한은 모델 내의 모든 엔터티, 파생 계층, 명시적 계층 및 컬렉션에 적용됩니다. 모델에 할당된 사용 권한은 개별 개체에 대해 재정의할 수 있습니다.  
@@ -32,8 +32,8 @@ ms.locfileid: "36082497"
   
 |사용 권한|Description|  
 |----------------|-----------------|  
-|**읽기 전용**|**탐색기**모델이 표시 되지만 사용자를 추가할 수 없습니다, 또는 멤버를 제거 하 고 특성 값, 계층 멤버 자격 또는 컬렉션 멤버 자격을 업데이트할 수 없습니다.|  
-|**Update**|**탐색기**, 모델이 표시 되 고 사용자를 추가 하 고 구성원을 제거할 수 속성 값, 계층 멤버 자격 및 컬렉션 멤버 자격을 업데이트할 수 있습니다.|  
+|**읽기 전용**|**탐색기**모델이 표시 되지만 사용자를 추가할 수 없습니다 또는 멤버를 제거 하 고 특성 값, 계층 멤버 자격 또는 컬렉션 멤버 자격을 업데이트할 수 없습니다.|  
+|**Update**|**탐색기**에 모델 표시 되 고 사용자를 추가 하 고 구성원을 제거할 수 특성 값, 계층 멤버 자격 및 컬렉션 멤버 자격을 업데이트할 수 있습니다.|  
 |**거부**|모델이 표시되지 않습니다.|  
   
  모델에 사용 권한을 할당하면 사용자가 모델의 모든 버전에 액세스할 수 있습니다. 개별 버전에는 사용 권한을 할당할 수 없습니다.  

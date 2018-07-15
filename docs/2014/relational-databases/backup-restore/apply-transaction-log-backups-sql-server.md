@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab3a27eea48c0d34d2cf994c29fff99f91f3ef37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 287fbe416b7e0b824f9a6287b85e8dcb7aa17aa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289119"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
   이 항목에서는 전체 복구 모델 또는 대량 로그 복구 모델과 관련된 내용을 다룹니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "36081860"
   
 -   [복구 및 트랜잭션 로그](#RecoveryAndTlogs)  
   
--   [로그 백업을 사용 하 여 실패 지점으로 복원 하려면](#PITrestore)  
+-   [로그 백업을 사용 하 여 오류 지점으로 복원](#PITrestore)  
   
 -   [관련 작업](#RelatedTasks)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36081860"
 > [!NOTE]  
 >  경우에 따라서는 로그 복원 중에 파일을 명시적으로 추가할 수 있습니다.  
   
-##  <a name="PITrestore"></a> 로그 백업을 사용 하 여 실패 지점으로 복원 하려면  
+##  <a name="PITrestore"></a> 로그 백업을 사용 하 여 오류 지점으로 복원  
  예를 들어 다음과 같은 순서의 이벤트가 발생한다고 가정합니다.  
   
 |Time|이벤트|  

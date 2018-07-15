@@ -1,5 +1,5 @@
 ---
-title: 추적 결과 보기 수정 | Microsoft Docs
+title: 추적 결과 뷰 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302763"
 ---
 # <a name="modify-the-trace-results-view"></a>추적 결과 보기 수정
   이 항목에서는 다음 작업을 수행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 확장 이벤트 세션에 대한 추적 결과 뷰를 수정하는 방법에 대해 설명합니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "36082320"
   
 4.  **확인**을 클릭합니다.  
   
-##  <a name="AggregateResults"></a> 결과 집계  
+##  <a name="AggregateResults"></a> 집계 결과  
  확장 이벤트는 다섯 가지 집계 함수를 지원합니다.  
   
 -   합계  

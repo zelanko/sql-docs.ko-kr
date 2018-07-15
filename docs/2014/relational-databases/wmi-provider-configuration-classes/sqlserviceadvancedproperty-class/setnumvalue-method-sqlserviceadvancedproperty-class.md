@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumValue method
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bde7b7dec97f7541ee8761f92faa369137daa171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 9bc64d8d9ae3dba57fd054f6314b4295a0d116e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232623"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue 메서드(SqlServiceAdvancedProperty 클래스)
   속성의 숫자 값을 설정합니다.  
