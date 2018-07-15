@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextindexingwizard.selecttablecolumns.f1
 - sql12.swb.fulltextindexingwizard.welcome.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69b7caacb7d6731731aaae11c18e9f960278136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5395a6ee63d3fbf4456a3da4e4e19390e042e2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309523"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
   전체 텍스트 인덱싱 마법사는 전체 텍스트 인덱스를 만드는 과정을 단계별로 안내합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "36187378"
      **유형 열**  
      전체 텍스트 인덱싱되는 열의 문서 유형을 보관하는 열 이름을 선택합니다.  
   
-     **유형 열** 에 명명 된 열 때만 사용할 수는 **사용 가능한 열** 형식의 열이 `varbinary(max)` 또는 `image`합니다.  
+     **유형 열** 열에 명명 된 경우에 사용 합니다 **사용 가능한 열** 형식의 열이 `varbinary(max)` 또는 `image`합니다.  
   
      **통계 의미 체계**  
      선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](semantic-search-sql-server.md)을 참조하세요.  
@@ -71,7 +70,7 @@ ms.locfileid: "36187378"
      **변경 내용 추적 안 함**  
      기본 데이터의 변경 내용으로 전체 텍스트 인덱스가 업데이트되지 않도록 하려면 이 라디오 단추를 선택합니다.  
   
-     **인덱스가 생성 될 때 전체 채우기 시작**  
+     **인덱스를 만들 때 전체 채우기 시작**  
      이 마법사가 성공적으로 완료될 때 전체 채우기를 시작하려면 이 라디오 단추를 선택합니다. 이 과정은 카탈로그에 전체 텍스트 인덱스 구조를 만드는 단계와 이 구조를 전체 텍스트 인덱싱된 데이터로 채우는 단계로 구성됩니다.  
   
 3.  카탈로그, 인덱스 파일 그룹 및 중지 목록을 선택합니다.  
@@ -99,7 +98,7 @@ ms.locfileid: "36187378"
   
     |값|Description|  
     |-----------|-----------------|  
-    |**\<기본 >**|테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|  
+    |**\<기본값 >**|테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|  
     |**PRIMARY**|새 전체 텍스트 인덱스에 주 파일 그룹을 사용하려면 선택합니다.|  
     |*사용자가 지정한 기본 파일 그룹*|사용자 정의 기본 중지 목록이 있으면 이 목록에서 새 전체 텍스트 인덱스에 사용할 파일 그룹의 이름을 선택합니다.|  
   
@@ -113,7 +112,7 @@ ms.locfileid: "36187378"
     |값|Description|  
     |-----------|-----------------|  
     |**\<시스템 >**|새 전체 텍스트 인덱스에 시스템 중지 목록을 사용하려면 선택합니다. 이것이 기본값입니다.|  
-    |**\<off >**|새 전체 텍스트 인덱스에 중지 목록을 사용하지 않으려면 선택합니다.|  
+    |**\<해제 >**|새 전체 텍스트 인덱스에 중지 목록을 사용하지 않으려면 선택합니다.|  
     |*user-defined-stoplist-name*|이 목록에는 데이터베이스에서 만든 각 사용자 정의 중지 목록의 이름을 표시합니다(있는 경우). 새 전체 텍스트 인덱스에 사용할 사용자 정의 중지 목록을 선택합니다.|  
   
 4.  선택적으로 채우기 일정을 정의합니다. 나중에 실행하도록 예약한 경우가 아니면 인덱싱 작업이 바로 시작됩니다. 예약된 시간이 되기 전까지 인덱싱 작업이 실행되지 않더라도 일정은 즉시 만들어집니다.  

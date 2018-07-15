@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205753"
 ---
 # <a name="query-options-results-text-page"></a>쿼리 옵션 결과(텍스트 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. **파일로 결과 저장** 을 선택한 경우에도 이 페이지의 설정이 적용됩니다.  

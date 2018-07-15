@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51aced8c191943330b6df9f08fc65292b1a77d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff9d359bb82c0197c4ebdc1b9c088ca50556b9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312443"
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS 행 집합
   특정 계층 내의 각 수준을 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `MDSCHEMA_LEVELS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `MDSCHEMA_LEVELS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -49,8 +49,8 @@ ms.locfileid: "36091374"
 |`LEVEL_CARDINALITY`|`DBTYPE_UI4`||수준의 멤버 수입니다.|  
 |`LEVEL_TYPE`|`DBTYPE_I4`||수준의 유형입니다.<br /><br /> -   `MDLEVEL_TYPE_GEO_CONTINENT` (`0x2001`)<br />-   `MDLEVEL_TYPE_GEO_REGION` (`0x2002`)<br />-   `MDLEVEL_TYPE_GEO_COUNTRY` (`0x2003`)<br />-   `MDLEVEL_TYPE_GEO_STATE_OR_PROVINCE` (`0x2004`)<br />-   `MDLEVEL_TYPE_GEO_COUNTY` (`0x2005`)<br />-   `MDLEVEL_TYPE_GEO_CITY` (`0x2006`)<br />-   `MDLEVEL_TYPE_GEO_POSTALCODE` (`0x2007`)<br />-   `MDLEVEL_TYPE_GEO_POINT` (`0x2008`)<br />-   `MDLEVEL_TYPE_ORG_UNIT` (`0x1011`)<br />-   `MDLEVEL_TYPE_BOM_RESOURCE` (`0x1012`)<br />-   **MDLEVEL_TYPE_QUANTITATIVE** (`0x1013`)<br />-   `MDLEVEL_TYPE_ACCOUNT` (`0x1014`)<br />-   `MDLEVEL_TYPE_CUSTOMER` (`0x1021`)<br />-   `MDLEVEL_TYPE_CUSTOMER_GROUP` (`0x1022`)<br />-   `MDLEVEL_TYPE_CUSTOMER_HOUSEHOLD` (`0x1023`)<br />-   `MDLEVEL_TYPE_PRODUCT` (`0x1031`)<br />-   `MDLEVEL_TYPE_PRODUCT_GROUP` (`0x1032`)<br />-   `MDLEVEL_TYPE_SCENARIO` (`0x1015`)<br />-   `MDLEVEL_TYPE_UTILITY` (`0x1016`)<br />-   `MDLEVEL_TYPE_PERSON` (`0x1041`)<br />-   `MDLEVEL_TYPE_COMPANY` (`0x1042`)<br />-   `MDLEVEL_TYPE_CURRENCY_SOURCE` (`0x1051`)<br />-   `MDLEVEL_TYPE_CURRENCY_DESTINATION` (`0x1052`)<br />-   `MDLEVEL_TYPE_CHANNEL` (`0x1061`)<br />-   `MDLEVEL_TYPE_REPRESENTATIVE` (`0x1062`)<br />-   `MDLEVEL_TYPE_PROMOTION` (`0x1071`)|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||사람이 읽을 수 있는 수준 설명입니다. 설명이 없는 경우 NULL입니다.|  
-|`CUSTOM_ROLLUP_SETTINGS`|`DBTYPE_I4`||사용자 지정 롤업 옵션을 지정하는 비트맵입니다.<br /><br /> -   `MDLEVELS_CUSTOM_ROLLUP_EXPRESSION` (`0x01`)이이 수준에 대 한 식을 존재 여부를 나타냅니다. (사용되지 않음)<br />-   `MDLEVELS_CUSTOM_ROLLUP_COLUMN` (`0x02`)이이 수준에 대 한 사용자 지정 롤업 열 임을 나타냅니다.<br />-   `MDLEVELS_SKIPPED_LEVELS` (`0x04`)이 수준의 멤버와 연결 된 건너뛴된 수준이 있음을 나타냅니다.<br />-   `MDLEVELS_CUSTOM_MEMBER_PROPERTIES` (`0x08`) 수준의 멤버가 사용자 정의 멤버 속성을가지고 있음을 나타냅니다.<br />-   `MDLEVELS_UNARY_OPERATOR` (`0x10`) 수준의 멤버가 단항 연산자를가지고 있음을 나타냅니다.|  
-|`LEVEL_UNIQUE_SETTINGS`|`DBTYPE_I4`||고유한 이름 또는 키를 가진 멤버가 해당 수준에만 있는 경우 고유 값을 포함하는 열을 지정하는 비트맵입니다. 이 비트맵에 대해 다음 비트 값 상수가 Msmd.h 파일에 정의됩니다.<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE` (`1`)<br />-   `MDDIMENSIONS_MEMBER_NAME_UNIQUE` (`2`)<br /><br /> 키는 항상 고유에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이름은 특성의 설정이 `UniqueInDimension` 또는 `UniqueInAttribute`인 경우 고유합니다.|  
+|`CUSTOM_ROLLUP_SETTINGS`|`DBTYPE_I4`||사용자 지정 롤업 옵션을 지정하는 비트맵입니다.<br /><br /> -   `MDLEVELS_CUSTOM_ROLLUP_EXPRESSION` (`0x01`)이이 수준에 대 한 식을 나타냅니다. (사용되지 않음)<br />-   `MDLEVELS_CUSTOM_ROLLUP_COLUMN` (`0x02`)이이 수준에 대 한 사용자 지정 롤업 열 임을 나타냅니다.<br />-   `MDLEVELS_SKIPPED_LEVELS` (`0x04`)이 수준의 멤버와 연결 된 건너뛴된 수준이 있음을 나타냅니다.<br />-   `MDLEVELS_CUSTOM_MEMBER_PROPERTIES` (`0x08`) 수준의 멤버가 사용자 정의 멤버 속성을가지고 있음을 나타냅니다.<br />-   `MDLEVELS_UNARY_OPERATOR` (`0x10`) 수준의 멤버가 단항 연산자를가지고 있음을 나타냅니다.|  
+|`LEVEL_UNIQUE_SETTINGS`|`DBTYPE_I4`||고유한 이름 또는 키를 가진 멤버가 해당 수준에만 있는 경우 고유 값을 포함하는 열을 지정하는 비트맵입니다. 이 비트맵에 대해 다음 비트 값 상수가 Msmd.h 파일에 정의됩니다.<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE` (`1`)<br />-   `MDDIMENSIONS_MEMBER_NAME_UNIQUE` (`2`)<br /><br /> 키는 항상 고유 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 이름은 특성의 설정이 `UniqueInDimension` 또는 `UniqueInAttribute`인 경우 고유합니다.|  
 |`LEVEL_IS_VISIBLE`|`DBTYPE_BOOL`||수준이 표시되는지 여부를 나타내는 부울입니다.<br /><br /> 항상 True를 반환합니다. 수준을 볼 수 없으면 스키마 행 집합에 포함되지 않습니다.|  
 |`LEVEL_ORDERING_PROPERTY`|`DBTYPE_WSTR`||수준의 정렬 기준이 되는 특성의 ID입니다.|  
 |`LEVEL_DBTYPE`|`DBTYPE_I4`||수준 특성에 사용되는 멤버 키 열의 `DBTYPE` 열거형입니다.<br /><br /> 연결된 키가 멤버 키 열로 사용되는 경우 Null입니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "36091374"
 |`LEVEL_UNIQUE_NAME_SQL_COLUMN_NAME`|`DBTYPE_WSTR`||멤버 고유 이름의 SQL 표현입니다.|  
 |`LEVEL_ATTRIBUTE_HIERARCHY_NAME`|`DBTYPE_WSTR`||수준의 원본을 제공하는 특성 속성의 이름입니다.|  
 |`LEVEL_KEY_CARDINALITY`|`DBTYPE_UI2`||수준 키에 있는 열 수입니다.|  
-|`LEVEL_ORIGIN`|`DBTYPE_UI2`||수준의 원본이 지정된 방식을 정의하는 비트맵입니다.<br /><br /> -   `MD_ORIGIN_USER_DEFINED` 사용자 정의 계층의 수준을 식별 합니다.<br />-   `MD_ORIGIN_ATTRIBUTE` 특성 계층의 수준을 식별합니다.<br />-   `MD_ORIGIN_KEY_ATTRIBUTE` 키 특성 계층의 수준을 식별합니다.<br />-   `MD_ORIGIN_INTERNAL` 활성화 되지 않은 특성 계층의 수준을 식별 합니다.|  
+|`LEVEL_ORIGIN`|`DBTYPE_UI2`||수준의 원본이 지정된 방식을 정의하는 비트맵입니다.<br /><br /> -   `MD_ORIGIN_USER_DEFINED` 사용자 정의 계층의 수준을 식별합니다.<br />-   `MD_ORIGIN_ATTRIBUTE` 특성 계층의 수준을 식별합니다.<br />-   `MD_ORIGIN_KEY_ATTRIBUTE` 키 특성 계층의 수준을 식별합니다.<br />-   `MD_ORIGIN_INTERNAL` 활성화 되지 않은 특성 계층의 수준을 식별 합니다.|  
   
  행 집합은 `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`, `DIMENSION_UNIQUE_NAME`, `HIERARCHY_UNIQUE_NAME`, `LEVEL_NUMBER`를 기준으로 정렬됩니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36091374"
 |`LEVEL_UNIQUE_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
 |`LEVEL_ORIGIN`|`DBTYPE_UI2`|(옵션) 기본 제한은 `MD_USER_DEFINED` 및 `MD_SYSTEM_ENABLED`에 적용됩니다.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 큐브<br />-2 차원<br /><br /> 기본 제한 값은 1입니다.|  
-|`LEVEL_VISIBILITY`|`DBTYPE_UI2`|(옵션) 다음 값 중 하나가 포함된 비트맵입니다.<br /><br /> -1 Visible<br />-2 not 표시<br /><br /> 기본 제한 값은 1입니다.|  
+|`LEVEL_VISIBILITY`|`DBTYPE_UI2`|(옵션) 다음 값 중 하나가 포함된 비트맵입니다.<br /><br /> -1 표시<br />-2 not 표시<br /><br /> 기본 제한 값은 1입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [OLAP용 OLE DB 스키마 행 집합](ole-db-for-olap-schema-rowsets.md)  

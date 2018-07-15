@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232693"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  
   
- CSV 렌더링 확장 프로그램에서는 필드와 행을 구분하기 위해 문자열 구분 기호를 사용하는데 이 문자열 구분 기호는 쉼표 이외의 문자로 구성 가능합니다. 결과 파일은 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 과 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. 내보낸된 보고서는.csv 파일이 고의 MIME 형식을 반환 `text/csv`합니다.  
+ CSV 렌더링 확장 프로그램에서는 필드와 행을 구분하기 위해 문자열 구분 기호를 사용하는데 이 문자열 구분 기호는 쉼표 이외의 문자로 구성 가능합니다. 결과 파일은 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 과 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. 내보낸된 보고서는.csv 파일이 되며의 MIME 형식을 반환 `text/csv`합니다.  
   
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]의 차트, 데이터 막대, 스파크라인, 계기 및 표시기와 관련된 데이터를 사용하려면 보고서를 CSV 파일로 내보낸 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel에서 이 파일을 엽니다.  
   

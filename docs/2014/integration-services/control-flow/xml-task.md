@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8278f24e51e6288eb31f2f8ac4ec941a7f23e3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc356cd9401b28a102124d81af3a6f8dda7a64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331933"
 ---
 # <a name="xml-task"></a>XML 태스크
   XML 태스크는 XML 데이터를 통한 작업 시 사용됩니다. 패키지는 이 태스크를 사용하여 XML 문서를 검색하고, XSLT(Extensible Stylesheet Language Transformations) 스타일시트 및 XPath 식을 통해 문서에 작업을 적용하고, 여러 문서를 병합하거나 업데이트된 문서를 파일 및 변수에 대해 유효성을 검사하고, 비교 및 저장할 수 있습니다.  
@@ -74,8 +74,8 @@ ms.locfileid: "36093127"
 |옵션|Description|  
 |------------|-----------------|  
 |**IgnoreComments**|열 노드가 비교되는지 여부를 지정하는 값입니다.|  
-|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션 설정 하는 경우 `true`, 로컬 이름이 같지만 네임 스페이스가 다른 두 요소는 동일한 것으로 간주 됩니다.|  
-|**IgnorePrefixes**|요소의 접두사 및 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션 설정 하는 경우 `true,` 로컬 이름은 같지만 다른 네임 스페이스 URI 및 접두사가 있는 두 가지 요소는 동일한 것으로 간주 합니다.|  
+|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션 설정 하는 경우 `true`, 로컬 이름이 같지만 네임 스페이스가 다른 두 요소는 동일한 것으로 간주 합니다.|  
+|**IgnorePrefixes**|요소의 접두사 및 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션 설정 하는 경우 `true,` 두 요소는 로컬 이름은 같지만 다른 네임 스페이스 URI 및 접두사를 동일한 것으로 간주 됩니다.|  
 |**IgnoreXMLDeclaration**|XML 선언이 비교되는지 여부를 지정하는 값입니다.|  
 |**IgnoreOrderOfChildElements**|자식 요소의 순서가 비교되는지 여부를 지정하는 값입니다. 이 옵션을 `true`로 설정하면 형제 목록에서 위치만 다른 자식 요소는 동일한 것으로 간주됩니다.|  
 |**IgnoreWhiteSpaces**|공백이 비교되는지 여부를 지정하는 값입니다.|  
@@ -97,7 +97,7 @@ ms.locfileid: "36093127"
 ### <a name="validation-operation"></a>유효성 검사 작업  
  유효성 검사 작업은 DTD(문서 유형 정의) 또는 XSD(XML 스키마 정의) 스키마를 사용하도록 구성될 수 있습니다.  
   
- 사용 하도록 설정 `ValidationDetails` 자세한 오류 출력을 얻으려고 합니다. 자세한 내용은 [Validate XML with the XML Task](xml-task.md)를 참조하십시오.  
+ 사용 하도록 설정 `ValidationDetails` 자세한 오류 출력을 가져오려고 합니다. 자세한 내용은 [Validate XML with the XML Task](xml-task.md)를 참조하십시오.  
   
 ## <a name="xml-document-encoding"></a>XML 문서 인코딩  
  XML 태스크는 유니코드 문서의 병합만 지원합니다. 즉, 태스크에서 유니코드 인코딩이 포함된 문서로만 병합 작업을 적용할 수 있습니다. 다른 인코딩을 사용하면 XML 태스크가 실패합니다.  

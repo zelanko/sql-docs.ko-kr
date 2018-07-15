@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243403"
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 행 집합
   데이터베이스 내의 큐브 구조를 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `MDSCHEMA_CUBES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `MDSCHEMA_CUBES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

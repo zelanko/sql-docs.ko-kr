@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
 - versions [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2777ef1871da042c18459ac33c93e71844b89838
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217683"
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 내에 여러 버전의 마스터 데이터를 만들 수 있습니다. 버전은 데이터 유효성을 검사하는 동안 잠그고 데이터 유효성 검사 이후에 커밋할 수 있습니다. 커밋된 버전은 감사 가능한 변경 사항 레코드를 형성합니다. 이러한 각 버전에는 모델의 모든 멤버, 특성 값, 계층 멤버, 계층 관계 및 컬렉션이 포함됩니다.  

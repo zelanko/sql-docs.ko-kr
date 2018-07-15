@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0cb54e42b9acf1ac4b4224feb0c25dcdb98cab8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2158ea2131d917ff1ca5ababcc93392ffce8c0dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303153"
 ---
 # <a name="name-element-for-table-dta"></a>Table의 Name 요소(DTA)
   튜닝을 위한 테이블 이름을 지정합니다.  
@@ -43,13 +43,13 @@ ms.locfileid: "36186873"
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|`string`, 1에서 255자 사이|  
 |**기본값**|없음|  
-|**발생 빈도**|필수 사항입니다. 각각에 대해 한 번씩 `Table` 요소입니다.|  
+|**발생 빈도**|필수 사항입니다. 한 번 `Table` 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[스키마에 대 한 요소를 표에서 &#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**부모 요소**|[테이블 요소 스키마에 대 한 &#40;DTA&#41;](table-element-for-schema-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  

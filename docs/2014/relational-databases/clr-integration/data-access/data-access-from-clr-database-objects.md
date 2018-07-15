@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +23,18 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab43297c592258075e9c80ec9808b10c7bd267df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092013"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351145"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 데이터 액세스
-  공용 언어 런타임 (CLR) 루틴의 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 에서 실행 되 원격 인스턴스에 저장 된 데이터 뿐만 아니라 합니다. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. .NET Framework Data Provider for를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 되는 클라이언트 및 중간 계층 응용 프로그램에서 데이터입니다. 따라서 클라이언트 및 중간 계층 응용 프로그램에서 ADO.NET 및 `SqlClient`에 대한 지식을 활용할 수 있습니다.  
+  공용 언어 런타임 (CLR) 루틴의 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 이 실행 되는 원격 인스턴스에 저장 된 데이터 뿐만 아니라에서. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. .NET Framework Data Provider for를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 되는 클라이언트 및 중간 계층 응용 프로그램에서 데이터입니다. 따라서 클라이언트 및 중간 계층 응용 프로그램에서 ADO.NET 및 `SqlClient`에 대한 지식을 활용할 수 있습니다.  
   
 > [!NOTE]  
 >  기본적으로 사용자 정의 형식 메서드 및 사용자 정의 함수를 사용하여 데이터 액세스를 수행할 수는 없습니다. UDT(사용자 정의 형식) 메서드 또는 사용자 정의 함수를 사용하여 읽기 전용 데이터에 액세스하려면 `DataAccess` 또는 `SqlMethodAttribute`의 `SqlFunctionAttribute` 속성을 `DataAccessKind.Read`로 설정해야 합니다. 데이터 수정 작업은 UDT 또는 사용자 정의 함수를 통해 수행할 수 없으며 이를 시도할 경우 실행 시에 예외가 throw됩니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89605a9aa9a1dd6f5fdf0a5042d39d1afa5600c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a2b6ecc75ade6da9d489c30105ad3bc4e961bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220553"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
   **색 대화 상자** 에서는 사용자가 선택한 색의 RGB 값을 반환합니다. 사용자는 디스플레이 드라이버에 의해 결정된 기본 색 집합이나 사용자 지정 색 집합에서 선택할 수 있습니다. 기본 색에서 선택하거나 사용자 지정 색을 만듭니다. 색 매트릭스에서 클릭하거나 **색상**, **채도**, **명도**, **빨강**, **녹색**및 **파랑** 상자에 입력하여 색을 정의합니다.  

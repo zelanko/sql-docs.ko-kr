@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceMeasure data type
 ms.assetid: 3250970a-a67d-486c-b205-038f1bd1770f
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c6fa3111688504996bd885be501799256bcc70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8cd25248eac6ed347011db8377085cc4cd2bdd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263619"
 ---
 # <a name="aggregationinstancemeasure-data-type-assl"></a>AggregationInstanceMeasure 데이터 형식(ASSL)
   집계 인스턴스에서 사용하는 측정값에 대한 정보를 나타내는 기본 데이터 형식을 정의합니다.  
@@ -55,13 +55,13 @@ ms.locfileid: "36184583"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[MeasureID](../properties/id-element-assl.md), [소스](../properties/source-element-binding-assl.md)|  
+|자식 요소|[MeasureID](../properties/id-element-assl.md), [원본](../properties/source-element-binding-assl.md)|  
 |파생 요소|[측정값](../objects/measure-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

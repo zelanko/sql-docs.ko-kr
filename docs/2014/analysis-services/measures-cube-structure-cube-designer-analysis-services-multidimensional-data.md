@@ -1,5 +1,5 @@
 ---
-title: 측정값 (큐브 구조 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 측정값 (Cube Structure Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b81387a3eb85ca695ffd9860e09a9bf2c696ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319463"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>측정값(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에서 **측정값** 창을 사용하여 측정값 그룹 및 멤버를 조작할 수 있습니다.  

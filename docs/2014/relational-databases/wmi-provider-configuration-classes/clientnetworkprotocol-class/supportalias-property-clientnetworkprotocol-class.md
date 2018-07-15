@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SupportAlias property
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be78007f210519c9b9fb67a9e2a67f3697b4a2b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: bd18c837ca94878887bdf30fc0412dddff59cb83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327553"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 속성(ClientNetworkProtocol 클래스)
-  현재 네트워크에 지정 된 프로토콜 있는지 여부를 지정 하는 부울 속성을 가져옵니다는 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md) 별칭을 지원 합니다.  
+  현재 네트워크에 지정 된 프로토콜 여부를 지정 하는 부울 속성을 가져옵니다 합니다 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md) 별칭을 지원 합니다.  
   
 ## <a name="syntax"></a>구문  
   

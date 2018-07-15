@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 86
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6589261f0ad1a800bcf88d11abe2ebe6314a4855
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307593"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
   이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "36186517"
   
     1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-    2.  에 **열려** 상자에 입력 합니다 `inetmgr`, 클릭 하 고 **확인**합니다.  
+    2.  에 **열기** 상자에 입력 `inetmgr`를 클릭 하 고 **확인**합니다.  
   
 3.  IIS 인증서 마법사를 실행합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36186517"
         > [!NOTE]  
         >  기본적으로 SelfSSL에서 설치한 인증서는 7일 동안 유효합니다.  
   
-    -   하나 이상의 매개 변수에 대한 값을 지정하려면 **시작**, **실행**을 차례로 클릭합니다. 에 **열려** 상자에 입력 `cmd`, 클릭 하 고 **확인**합니다. SelfSSL 설치 디렉터리를 찾고 `SelfSSL`을 입력한 다음 하나 이상의 매개 변수에 대해 값을 지정합니다. 매개 변수 목록을 보려면 `SelfSSL -?`를 입력합니다.  
+    -   하나 이상의 매개 변수에 대한 값을 지정하려면 **시작**, **실행**을 차례로 클릭합니다. 에 **열려** 상자에 입력 합니다 `cmd`를 클릭 하 고 **확인**합니다. SelfSSL 설치 디렉터리를 찾고 `SelfSSL`을 입력한 다음 하나 이상의 매개 변수에 대해 값을 지정합니다. 매개 변수 목록을 보려면 `SelfSSL -?`를 입력합니다.  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>연결 구성 요소 및 SQL Server Management Studio 설치  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36186517"
   
 1.  IIS를 실행하는 컴퓨터에 관리자로 로그온합니다.  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 디스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다. 이 마법사를 사용 하는 방법에 대 한 자세한 내용은 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 디스크에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 시작합니다. 이 마법사를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
   
 3.  **기능 선택** 페이지에서 **클라이언트 도구 연결**을 선택합니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36186517"
   
     1.  **별칭** 상자에 가상 디렉터리의 별칭을 입력합니다.  
   
-    2.  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어, 입력 한 경우 `websync1` 에 **별칭** 상자에 입력 `C:\Inetpub\wwwroot\websync1` 에 **경로** 상자입니다. **다음**을 클릭합니다.  
+    2.  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어, 입력 한 경우 `websync1` 에 **별칭** 상자에 입력 합니다 `C:\Inetpub\wwwroot\websync1` 에 **경로** 상자입니다. **다음**을 클릭합니다.  
   
     3.  두 대화 상자에서 모두 **예**를 클릭합니다. 새 폴더가 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI(Internet Server API) DLL이 복사됩니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
@@ -183,11 +183,11 @@ ms.locfileid: "36186517"
   
 11. IIS를 실행하는 컴퓨터에서 64비트 버전의 Windows를 실행 중인 경우 replisapi.dll을 해당 디렉터리에 복사해야 합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 `iisreset`, 클릭 하 고 **확인**합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 합니다 `iisreset`를 클릭 하 고 **확인**합니다.  
   
     2.  IIS를 중지했다가 다시 시작한 다음 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi에 있는 replisapi.dll을 6b단계에서 지정한 디렉터리로 복사합니다.  
   
-    3.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 `cmd`, 클릭 하 고 **확인**합니다.  
+    3.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 합니다 `cmd`를 클릭 하 고 **확인**합니다.  
   
     4.  6b단계에서 지정한 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36186517"
   
 3.  replisapi.dll을 등록합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 `cmd`, 클릭 하 고 **확인**합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. 에 **열려** 상자에 입력 합니다 `cmd`를 클릭 하 고 **확인**합니다.  
   
     2.  1단계에서 만든 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "36186517"
   
     1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-    2.  에 **열려** 상자에 입력 합니다 `inetmgr`, 클릭 하 고 **확인**합니다.  
+    2.  에 **열기** 상자에 입력 `inetmgr`를 클릭 하 고 **확인**합니다.  
   
     3.  **인터넷 정보 서비스(IIS) 관리자**에서 **로컬 컴퓨터** 노드를 확장합니다.  
   

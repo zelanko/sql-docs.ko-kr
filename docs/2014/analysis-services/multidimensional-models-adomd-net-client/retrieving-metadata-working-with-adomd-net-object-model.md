@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328543"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>ADOMD.NET 개체 모델 사용
   ADOMD.NET에서는 분석 데이터 원본에 들어 있는 큐브 및 하위 개체를 보기 위한 개체 모델을 제공합니다. 하지만 개체 모델을 통해 특정 분석 데이터 원본의 모든 메타데이터를 사용할 수 있는 것은 아닙니다. 개체 모델을 통해서는 클라이언트 응용 프로그램에서 사용자가 대화형으로 명령을 생성할 수 있도록 하기 위해 표시하기에 가장 유용한 정보에만 액세스할 수 있습니다. 제공되는 메타데이터의 복잡성이 줄어들기 때문에 ADOMD.NET 개체 모델은 보다 사용하기 쉽습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36172280"
  여러 OLAP 서버를 지원하도록 설계되거나 일반적인 메타데이터 표시 및 액세스용으로 설계된 클라이언트 응용 프로그램에서 메타데이터를 나타내는 데는 가능하면 항상 <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> 개체를 사용해야 합니다.  
   
 > [!NOTE]  
->  공급자 관련 메타데이터나 세부적인 메타데이터 표시 및 액세스의 경우에는 스키마 행 집합을 사용하여 메타데이터를 검색하십시오. 자세한 내용은 참조 [Working with Schema Rowsets in ADOMD.NET](retrieving-metadata-working-with-schema-rowsets.md)).  
+>  공급자 관련 메타데이터나 세부적인 메타데이터 표시 및 액세스의 경우에는 스키마 행 집합을 사용하여 메타데이터를 검색하십시오. 자세한 내용은 [Schema Rowsets in ADOMD.NET 사용 하 여 작업](retrieving-metadata-working-with-schema-rowsets.md)).  
   
  다음 예에서는 <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> 개체를 사용하여 로컬 서버에서 표시 가능한 큐브와 큐브 차원을 검색합니다.  
   

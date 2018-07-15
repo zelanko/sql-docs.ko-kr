@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197213"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
   문자 데이터 필드의 경우 데이터 파일의 각 필드 끝은 *필드 종결자* 를, 그리고 각 행의 끝은 필요에 따라 *행 종결자*를 사용해 표시할 수 있습니다. 종결 문자는 프로그램이 한 개의 필드 또는 행이 끝나고 다른 필드 또는 행이 시작되는 부분을 읽도록 나타내는 한 가지 방법입니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "36186821"
 |인쇄 가능한 모든 문자(Null, 탭, 줄 바꿈, 캐리지 리턴을 제외한 모든 제어 문자는 인쇄되지 않음)|(*, A, t, l 등)|  
 |앞에서 나열된 종결 문자 중 일부 또는 전체를 포함한 최고 10개까지의 출력 가능한 문자열|(**\t\*\*, end, !!!!!!!!!!, \t—\n 등)|  
   
- <sup>1</sup> t, n, r, 0 및 '\0' 문자만 백슬래시 이스케이프 문자 제어 문자를 생성 하기 위해 사용 합니다.  
+ <sup>1</sup> t, n, r, 0 및 '\0' 문자만 백슬래시 이스케이프 문자와 제어 문자를 사용 합니다.  
   
  <sup>2</sup> null 제어 문자 (\0)가 인쇄 시 표시 되지 않는 없지만 데이터 파일에서는 고유한 문자입니다. 즉, Null 제어 문자를 필드 또는 행 종결자로 사용하는 것은 필드 또는 행 종결자를 아예 사용하지 않는 것과는 다릅니다.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "36186821"
 >  **bcp** 를 대화형으로 사용하고 \n(줄 바꿈)을 행 종결자로 지정하면 **bcp** 가 \r(캐리지 리턴) 문자를 접두사로 자동 지정하므로 \r\n이 행 종결자가 됩니다.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>대량 내보내기를 위한 종결자 지정  
- 대량으로 내보내면서 `char` 또는 `nchar` 데이터 및 기본이 아닌 종결자를 사용 하려는 종결자를 지정 해야 합니다는 **bcp** 명령입니다. 다음 중 한 가지 방법으로 종결자를 지정할 수 있습니다.  
+ 때 대량으로 내보낼 `char` 또는 `nchar` 데이터 및 기본이 아닌 종결자를 사용 하려는 종결자를 지정 해야 합니다 **bcp** 명령. 다음 중 한 가지 방법으로 종결자를 지정할 수 있습니다.  
   
 -   필드별로 종결자를 지정하는 서식 파일을 사용합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36186821"
   
          `Enter field terminator [none]:`  
   
-         일반적으로 기본값을 사용하면 적합합니다. 그러나 `char` 또는 `nchar` 데이터 필드는 다음 하위 섹션인 "종결자 사용 지침"을 참조 하십시오. 컨텍스트에서 이 메시지가 표시되는 예제를 보려면 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
+         일반적으로 기본값을 사용하면 적합합니다. 그러나 `char` 또는 `nchar` 데이터 필드의 경우 다음 하위 섹션인 "종결자 사용 지침입니다."를 참조 하세요. 컨텍스트에서 이 메시지가 표시되는 예제를 보려면 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
   
         > [!NOTE]  
         >  **bcp** 명령의 모든 필드를 대화형으로 지정하면 명령에서 비 XML 서식 파일의 각 필드에 대한 응답을 저장하라는 메시지를 표시합니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  

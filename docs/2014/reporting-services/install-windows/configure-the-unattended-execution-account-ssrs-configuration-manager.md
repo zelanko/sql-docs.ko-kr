@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - security [Reporting Services], unattended report processing
@@ -21,18 +21,18 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 063fd32c8b94bc10bc22aea0d117a6d41a0a84fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321923"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
   
--   데이터베이스 인증을 사용하는 보고서에 대해 네트워크로 연결 요청을 전송하거나 인증을 요구 또는 사용하지 않는 외부 보고서 데이터 원본에 연결합니다. 자세한 내용은 참조 [자격 증명을 지정 하 고 보고서 데이터 원본에 대 한 연결 정보](../../integration-services/connection-manager/data-sources.md) SQL Server 온라인 설명서의 합니다.  
+-   데이터베이스 인증을 사용하는 보고서에 대해 네트워크로 연결 요청을 전송하거나 인증을 요구 또는 사용하지 않는 외부 보고서 데이터 원본에 연결합니다. 자세한 내용은 [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](../../integration-services/connection-manager/data-sources.md) SQL Server 온라인 설명서의 합니다.  
   
 -   보고서에 사용되는 외부 이미지 파일 검색. 이미지 파일을 사용하려는 경우 익명 액세스를 통해 해당 파일에 액세스할 수 없으면 무인 모드로 실행되는 보고서 처리 계정을 구성하고 이 계정에 해당 파일에 액세스할 수 있는 권한을 부여할 수 있습니다.  
   

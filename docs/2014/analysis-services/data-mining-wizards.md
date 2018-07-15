@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 442e77491d2254c230c60c99c8f1ede91117d171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263829"
 ---
 # <a name="data-mining-wizards"></a>데이터 마이닝 마법사
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 고 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]입니다.  
   
  다음 표에서는 데이터 마이닝 원본, 뷰 및 개체를 만드는 데 사용할 수 있는 마법사에 대해 설명합니다.  
   

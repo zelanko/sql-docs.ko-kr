@@ -3,10 +3,9 @@ title: 공용 언어 런타임 (CLR) 통합을 사용 하 여 데이터베이스
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -20,16 +19,16 @@ caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2be82adf07487e66bed43a16af289e30d751a414
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6bd6cbf88b471af8d80f61f65ac0903a740a9675
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699624"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358965"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 .NET Framework CLR(공용 언어 런타임)을 통합하여 데이터베이스 개체를 작성할 수 있습니다. 내에 실행 되는 관리 코드 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 "CLR 루틴" 이라고 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 .NET Framework CLR(공용 언어 런타임)을 통합하여 데이터베이스 개체를 작성할 수 있습니다. 내부에서 실행 되는 코드를 관리할 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 "CLR 루틴" 이라고 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  
   
 -   스칼라 반환 사용자 정의 함수(스칼라 UDF)  
   

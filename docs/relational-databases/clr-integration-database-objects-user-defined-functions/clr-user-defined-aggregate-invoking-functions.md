@@ -1,11 +1,11 @@
 ---
-title: CLR 사용자 정의 집계 함수 호출 | Microsoft Docs
+title: CLR 사용자 정의 집계 함수를 호출 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,12 +21,12 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700344"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355375"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 사용자 정의 집계-함수 호출
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "35700344"
   
  다음 추가 규칙이 적용됩니다.  
   
--   현재 사용자가 **EXECUTE** 사용자 정의 집계에 대 한 권한이 있습니다.  
+-   현재 사용자에 게 있어야 **EXECUTE** 사용자 정의 집계에 대 한 권한이 있습니다.  
   
 -   형식의 두 부분으로 된 이름을 사용 하 여 사용자 정의 집계를 호출 해야 *schema_name.udagg_name*합니다.  
   
--   사용자 정의 집계의 인수 형식과 접두사와 일치 하거나 암시적으로 변환할 수는 *input_type* 에 정의 된 집계의는 **CREATE AGGREGATE** 문.  
+-   사용자 정의 집계의 인수 형식과 일치 하거나 암시적으로 변환할 수 해야 합니다 *input_type* 에 정의 된 집계의는 **CREATE AGGREGATE** 문입니다.  
   
--   사용자 정의 집계의 반환 형식이 일치 해야 합니다는 *return_type* 에 **CREATE AGGREGATE** 문.  
+-   사용자 정의 집계의 반환 형식이 일치 해야 합니다 *return_type* 에 **CREATE AGGREGATE** 문.  
   
 ## <a name="example-1"></a>예 1  
  테이블의 열에서 가져온 문자열 값 집합을 연결하는 사용자 정의 집계 함수의 예는 다음과 같습니다.  
@@ -200,7 +200,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 코드를 컴파일하 되 면 **MyAgg.dll**에서 집계를 등록할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같습니다.  
+ 에 코드를 컴파일하고 나면 **MyAgg.dll**에서 집계를 등록할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같습니다.  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -212,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  /clr:pure 컴파일러 옵션을 사용하여 컴파일된 Visual C++ 데이터베이스 개체(예: 스칼라 반환 함수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행할 수 없습니다.  
   
- 마찬가지로 대부분의 집계는 논리의 대부분에는 **Accumulate** 메서드. 여기, 문자열 매개 변수로 전달 되는 **Accumulate** 메서드에 추가 되는 **StringBuilder** 초기화 된 개체는 **Init** 메서드. 이 처음으로 이라고 가정할는 **Accumulate** 메서드를 호출한에 쉼표도 추가 됩니다는 **StringBuilder** 전달 된 문자열을 추가 하기 전에. 계산 태스크를 마칠 때는 **Terminate** 메서드가 호출 되 면 반환 하는 **StringBuilder** 문자열입니다.  
+ 대부분의 집계를 사용 하 여 논리의 대량 되는 **Accumulate** 메서드. 여기, 매개 변수로 전달 되는 문자열을 **Accumulate** 메서드에 추가 됩니다 합니다 **StringBuilder** 초기화 된 개체를 **Init** 메서드. 이 처음으로 가정 합니다 **Accumulate** 메서드를 호출한, 쉼표에도 추가 됩니다는 **StringBuilder** 전달 된 문자열을 추가 하기 전에. 계산 태스크를 마칠 때를 **Terminate** 반환 하는 메서드 호출을 **StringBuilder** 문자열로.  
   
  예를 들어 다음 스키마가 있는 테이블을 고려해 보십시오.  
   
@@ -245,7 +245,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>예제 2  
- 다음 예제에서 두 개의 매개 변수를 가진 집계를 설명는 **Accumulate** 메서드.  
+ 다음 샘플에서는 두 개의 매개 변수가 있는 집계를 **Accumulate** 메서드.  
   
  [C#]  
   

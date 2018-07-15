@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326403"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 이후에는 지원되지 않는 데이터베이스 엔진 기능
   이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36183125"
 |Configuration|SET ANSI_NULLS OFF 및 ANSI_NULLS OFF 데이터베이스 옵션<br /><br /> SET ANSI_PADDING OFF 및 ANSI_PADDING OFF 데이터베이스 옵션<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF 및 CONCAT_NULL_YIELDS_NULL OFF 데이터베이스 옵션<br /><br /> SET OFFSETS|없음<br /><br /> ANSI_NULLS, ANSI_PADDING 및 CONCAT_NULLS_YIELDS_NULL은 항상 ON으로 설정됩니다. SET OFFSETS는 사용할 수 없습니다.|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |데이터 형식|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |데이터 형식|`timestamp` 데이터 형식에 대한 `rowversion` 구문|`rowversion` 데이터 형식 구문|timestamp|158|  
-|데이터 형식|에 null 값을 삽입 하는 기능 `timestamp` 열입니다.|대신 DEFAULT를 사용합니다.|TIMESTAMP 열에 대한 INSERT NULL|179|  
+|데이터 형식|Null 값을 삽입 하는 기능 `timestamp` 열입니다.|대신 DEFAULT를 사용합니다.|TIMESTAMP 열에 대한 INSERT NULL|179|  
 |데이터 형식|'text in row' 테이블 옵션|사용 하 여 `varchar(max)`, `nvarchar(max)`, 및 `varbinary(max)` 데이터 형식입니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)을 참조하세요.|Text in row 테이블 옵션|9|  
 |데이터 형식|데이터 형식:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|사용 하 여 `varchar(max)`, `nvarchar(max)`, 및 `varbinary(max)` 데이터 형식입니다.|데이터 형식: `text`, `ntext` 또는 `image`|4|  
 |데이터베이스 관리|sp_attach_db<br /><br /> sp_attach_single_file_db|FOR ATTACH 옵션을 사용하는 CREATE DATABASE 문. 하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성하려면 FOR ATTACH_REBUILD_LOG 옵션을 사용합니다.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
@@ -119,7 +119,7 @@ ms.locfileid: "36183125"
 |서버 구성 옵션|c2 audit 옵션<br /><br /> default trace enabled 옵션|[common criteria compliance enabled 서버 구성 옵션](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 클래스|`Microsoft.SQLServer.Management.Smo.Information` 클래스<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` 클래스<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` 클래스<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` 속성|`Microsoft.SqlServer.Management.Smo.Server` 클래스<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` 클래스<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` 클래스<br /><br /> InclusionThresholdSetting|InclusionThresholdSetting|InclusionThresholdSetting|  
 |SQL Server 에이전트|**Net Send** 알림<br /><br /> 호출기 알림<br /><br /> ActiveX 하위 시스템|전자 메일 알림<br /><br /> 전자 메일 알림<br /><br /> 명령 또는 PowerShell 스크립트|InclusionThresholdSetting|InclusionThresholdSetting|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> 원본 제어 통합 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||InclusionThresholdSetting|InclusionThresholdSetting|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]| [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> 원본 제어 통합 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||InclusionThresholdSetting|InclusionThresholdSetting|  
 |시스템 저장 프로시저|sp_db_increased_partitions|없음 증가 파티션에 대한 지원은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 기본적으로 사용할 수 있습니다.|sp_db_increased_partitions|253|  
 |시스템 테이블|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|호환성 뷰입니다. 자세한 내용은 [호환성 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)를 참조하세요.<br /><br /> **\*\* 중요 \*\*** 호환성 뷰는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 도입된 기능의 메타데이터를 제공하지 않습니다. 응용 프로그램에서 카탈로그 뷰를 사용하도록 업그레이드하는 것이 좋습니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)를 참조하세요.|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> InclusionThresholdSetting<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |시스템 테이블|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|InclusionThresholdSetting|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
@@ -151,7 +151,7 @@ ms.locfileid: "36183125"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 구문:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |기타|DB-Library<br /><br /> C 언어용 Embedded SQL|[!INCLUDE[ssDE](../includes/ssde-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 응용 프로그램과의 연결을 계속 지원하지만 이들 API를 사용하는 응용 프로그램에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 응용 프로그램과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 응용 프로그램을 개발하지 마십시오. 기존의 응용 프로그램을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 ODBC 등의 API를 사용하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 이러한 응용 프로그램을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 응용 프로그램을 실행하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.|InclusionThresholdSetting|InclusionThresholdSetting|  
 |Tools|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.<br /><br /> 참고: Analysis Services 작업에 대 한 추적 캡처용 SQL Server Profiler를 사용 하 여 계속 합니다.|SQL Server 프로파일러|InclusionThresholdSetting|  
-|Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 참고: Analysis Services 작업에 대 한 추적 재생용 SQL Server Profiler를 사용 하는 계속 됩니다.|SQL Server 프로파일러|InclusionThresholdSetting|  
+|Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 참고: Analysis Services 작업에 대 한 추적 재생용 SQL Server Profiler를 사용 하 여 계속 합니다.|SQL Server 프로파일러|InclusionThresholdSetting|  
 |Trace Management Objects|Microsoft.SqlServer.Management.Trace 네임 스페이스(SQL Server 추적 및 재생 개체용 API 포함)|추적 구성: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 추적 읽기: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 추적 재생: 없음|||  
 |SQL 추적 저장 프로시저, 함수 및 카탈로그 뷰|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   

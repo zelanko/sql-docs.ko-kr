@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8d7f1572a662f143f53169c41dfa747d8b1e317b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70a5c80424f9260a1e6f6f69554b7f25e00789f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293173"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>기술 자료 검색 시 Excel 파일에서 도메인 가져오기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 기술 자료 검색 작업을 통해 Excel 파일에서 하나 이상의 도메인을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스는 기술 자료 생성 프로세스를 간소화하여 시간과 노력을 절감합니다. Excel 파일이나 텍스트 파일에 데이터가 있는 사용자는 이 프로세스를 통해 해당 데이터를 포함한 기술 자료를 만들 수 있습니다. (기존 기술 자료의 도메인에 값을 가져오는 방법에 대한 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  

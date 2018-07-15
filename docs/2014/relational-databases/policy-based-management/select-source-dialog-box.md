@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c71819f3ac9b31b3a6edce55d517987d3a89d612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 46b84d90174fc77321a8962c45d0689c8c8c19ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307443"
 ---
 # <a name="select-source-dialog-box"></a>원본 선택 대화 상자
   이 대화 상자를 사용하여 실행할 정책의 원본을 선택할 수 있습니다. 정책이 포함된 하나 이상의 XML 파일을 선택하려면 **파일**을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 정책을 실행하려면 **서버**를 선택합니다.  

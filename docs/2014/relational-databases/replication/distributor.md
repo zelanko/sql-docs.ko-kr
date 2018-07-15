@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d5a2f5c5d7f70624baa9b3f55d732e54642708c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a482479689ebfbbb81f79ae7d3b71ede1039d834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296483"
 ---
 # <a name="distributor"></a>배포자
   **배포자** 페이지는 배포 구성 마법사 및 새 게시 마법사에 표시됩니다. 배포자는 배포 데이터베이스를 포함하고 모든 유형의 복제에 대한 메타데이터 및 기록 데이터를 저장하는 서버입니다. 또한 배포자는 트랜잭션 복제에 대한 트랜잭션을 저장합니다. 배포자는 게시자와 별개인 서버(원격 배포자)가 되거나 게시자와 같은 서버(로컬 배포자)가 될 수 있습니다. 배포자의 역할은 구현하는 복제의 유형에 따라 달라집니다. 일반적으로 배포자의 역할은 병합 복제 및 스냅숏 복제보다 트랜잭션 복제에서 훨씬 큽니다. 보통 병합 및 스냅숏 복제에서는 로컬 배포자를 사용하지만 사용률이 매우 높은 시스템에서는 트랜잭션 배포에서 원격 배포자를 사용하는 것이 유리할 수 있습니다.  

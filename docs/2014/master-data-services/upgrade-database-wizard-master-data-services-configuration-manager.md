@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c077e53cbca0e9c97d6ac347ff85cec5c5e752f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d19c17410c5cf6511db7b53ccf0de758dfefc0aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329983"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
   **데이터베이스 업그레이드 마법사** 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 업그레이드합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36093543"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services에 대 한 데이터베이스 및 웹 사이트를 설정 합니다.](set-up-the-database-and-website-for-master-data-services.md)   
+ [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](set-up-the-database-and-website-for-master-data-services.md)   
  [Master Data Services 업그레이드](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

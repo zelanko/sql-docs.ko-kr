@@ -3,10 +3,9 @@ title: 어셈블리 속성 (일반 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 f1_keywords:
 - sql13.swb.assemblies.general.f1
@@ -15,12 +14,12 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2eaea8f9b417a11134fb59108c83d452f1954fcd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4efc892d633698dd9ce1ea08edcb2f563ac20ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701194"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350325"
 ---
 # <a name="assemblies---properties"></a>어셈블리-속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "35701194"
  **어셈블리 소유자**  
  소유자 이름 또는 스키마 이름을 입력하거나 목록에서 선택합니다.  
   
- **사용 권한 집합**  
+ **권한 집합**  
  어셈블리에 대한 보안 수준을 설정합니다. 제공되는 세 가지 보안 수준은 **Safe**, **External access**, **Unsafe** 액세스입니다.  
   
  **어셈블리에 대 한 경로**  

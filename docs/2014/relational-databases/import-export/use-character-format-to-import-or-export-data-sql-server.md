@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c5efc1697e9911a667872f7293ab971b75a1398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a4249f87cf7a8361056caf6c49b3775848d7dfe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250193"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보내거나 다른 프로그램에서 생성한 텍스트 파일에서 데이터를 대량으로 가져오는 경우 문자 형식을 사용하는 것이 좋습니다.  
@@ -46,9 +45,9 @@ ms.locfileid: "36181822"
   
 -   변환 작업 중에 확장 문자가 손실되는 것을 방지하려면 유니코드 문자 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
--   문자 서식 파일로 저장되는 모든 `sql_variant` 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값으로 변환 됩니다 `char` 암시적 데이터 변환 규칙에 따라 형식입니다. `sql_variant` 열로 데이터를 가져오는 경우 `char`로 변환됩니다. 이외의 다른 데이터 형식과 열으로 가져올 때 `sql_variant`에서 해당 데이터는 변환 `char` 암시적 변환을 사용 하 여 합니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
+-   문자 서식 파일로 저장되는 모든 `sql_variant` 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값으로 변환 됩니다 `char` 암시적 데이터 변환 규칙에 따라 합니다. `sql_variant` 열로 데이터를 가져오는 경우 `char`로 변환됩니다. 이외의 다른 데이터 형식의 열으로 가져올 때 `sql_variant`에서 변환 되는 데이터 `char` 암시적 변환을 사용 하 여 합니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
   
--   **bcp** 유틸리티 내보내기 `money` 4 자리만 표시 하며 쉼표 구분자 등 숫자 구분 기호는 사용 하지 소수점 문자 형식 데이터 파일로 값입니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 `money` 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
+-   합니다 **bcp** 유틸리티 내보내기 `money` 4 자리만 표시 하며 쉼표 구분자 등 모든 자릿수 구분 기호 없이 소수점 문자 형식 데이터 파일로 값입니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 `money` 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
   
 ## <a name="command-options-for-character-format"></a>문자 형식의 명령 옵션  
  **bcp**, BULK INSERT 또는 INSERT ...를 사용하여 문자 형식 데이터를 테이블로 가져올 수 있습니다. SELECT \* FROM OPENROWSET(BULK...)를 사용하여 테이블로 유니코드 원시 형식 데이터를 가져올 수 있습니다. **bcp** 명령 또는 BULK INSERT 문의 경우 명령줄에서 데이터 형식을 지정할 수 있습니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
@@ -57,10 +56,10 @@ ms.locfileid: "36181822"
   
 |Command|옵션|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|로 인해는 **bcp** 유틸리티가 문자 데이터를 사용 하도록 합니다.<sup> 1</sup>|  
+|**bcp**|**-c**|발생 합니다 **bcp** 유틸리티가 문자 데이터를 사용 하도록 합니다.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  
   
- <sup>1</sup> 문자 로드 하려면 (**-c**)의 이전 버전과 호환 되는 형식에 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 사용 하 여는 **-V** 전환 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
+ <sup>1</sup> 문자를 로드 하려면 (**-c**)의 이전 버전과 호환 되는 형식에 대 한 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 사용 하 여는 **-V** 전환 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36181822"
  다음 예에서는 **bcp** 를 사용하여 문자 데이터의 대량 내보내기를 수행하고 내보낸 데이터에 BULK INSERT를 사용하여 대량 가져오기를 수행하는 방법을 보여 줍니다.  
   
 ### <a name="sample-table"></a>예제 테이블  
- 이 예에서는 **dbo** 스키마의 **AdventureWorks** 예제 데이터베이스에 **myTestCharData** 라는 테이블이 필요하며 예를 실행하려면 이 테이블을 만들어야 합니다. SQL에서이 테이블을 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기 실행:  
+ 이 예에서는 **dbo** 스키마의 **AdventureWorks** 예제 데이터베이스에 **myTestCharData** 라는 테이블이 필요하며 예를 실행하려면 이 테이블을 만들어야 합니다. SQL에서이 테이블을 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 실행 합니다.  
   
 ```  
 USE AdventureWorks;  

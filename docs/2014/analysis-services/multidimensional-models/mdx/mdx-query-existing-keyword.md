@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7205cad36bbeb5adee16ca10bd881280b59d98f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228393"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 키워드(MDX)
   지정한 집합이 현재 컨텍스트 내에서 계산되도록 합니다.  
@@ -40,10 +40,10 @@ Existing Set_Expression
  유효한 MDX 집합 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 기본적으로 집합은 집합의 멤버가 포함된 큐브의 컨텍스트 내에서 계산됩니다. `Existing` 키워드는 지정 된 집합이 현재 컨텍스트 내에서 대신 계산 되도록 합니다.  
+ 기본적으로 집합은 집합의 멤버가 포함된 큐브의 컨텍스트 내에서 계산됩니다. `Existing` 키워드는 지정 된 집합이 현재 컨텍스트 내에서 대신 평가 강제로 수행 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 사용자가 선택한 State-Province 멤버에 대해 `Aggregate` 함수를 사용하여 계산한 값에 따라 이전 기간에 비해 판매량이 감소한 대리점의 수를 반환합니다. 그러나 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 및 [DrilldownLevel(MDX)](/sql/mdx/drilldownlevel-mdx) 함수는 Product 차원의 제품 범주에 대해 판매량 감소 값을 반환하는 데 사용됩니다. `Existing` 키워드는 집합에는 `Filter` State-province 특성 계층의 Washington 및 Oregon 멤버에 대 한 현재 컨텍스트-즉,에서 계산 되는 함수입니다.  
+ 다음 예에서는 사용자가 선택한 State-Province 멤버에 대해 `Aggregate` 함수를 사용하여 계산한 값에 따라 이전 기간에 비해 판매량이 감소한 대리점의 수를 반환합니다. 그러나 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 및 [DrilldownLevel(MDX)](/sql/mdx/drilldownlevel-mdx) 함수는 Product 차원의 제품 범주에 대해 판매량 감소 값을 반환하는 데 사용됩니다. 합니다 `Existing` 키워드는 집합을 `Filter` State-province 특성 계층의 Washington 및 Oregon 멤버에 대 한 현재 컨텍스트에서-즉, 실행할 함수입니다.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

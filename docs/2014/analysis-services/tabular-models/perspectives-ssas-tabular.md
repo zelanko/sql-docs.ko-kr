@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f15ca3035759717de251f6d300ace3182430ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ad07ccba62df7054f4ec19e0713192154ad62db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304303"
 ---
 # <a name="perspectives-ssas-tabular"></a>큐브 뷰(SSAS 테이블 형식)
   테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 응용 프로그램의 관점에서 파악할 수 있습니다.  
@@ -48,10 +48,10 @@ ms.locfileid: "36186642"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[만들기 및 큐브 뷰 관리 &#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
+|[큐브 뷰를 만들고 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 &#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
- [계층 &#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
+ [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
+ [계층 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
   
   

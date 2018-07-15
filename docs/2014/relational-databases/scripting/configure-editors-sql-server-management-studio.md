@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 41681e604a7346f7b675e86692a8809b9417b7ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c51fd3286fe45ca6a8ead6bc269ad0f85c6e9dfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206763"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>편집기 구성(SQL Server Management Studio)
   각 편집기에 대한 옵션을 구성하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 작업을 사용자 지정할 수 있습니다.  

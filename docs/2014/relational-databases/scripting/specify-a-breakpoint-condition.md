@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c9f8d69cd320009562b81c4b33c0cbd3374f1498
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8ecee19e4846d2ccf49c21d90b8ab9815ed63a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282779"
 ---
 # <a name="specify-a-breakpoint-condition"></a>중단점 조건 지정
   중단점 조건은 중단점에 도달할 때마다 디버거가 평가하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식입니다. 지정한 조건을 만족하고 지정한 적중 횟수에 도달하면 디버거는 중단점에 대해 지정된 동작을 중단하거나 수행합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36186500"
   
 2.  **중단점 조건** 대화 상자에서 **조건** 상자에 올바른 부울 식을 입력합니다.  
   
-3.  선택 **참인** 식이 계산 되는 경우 중단 하려면 `true`, 선택 또는 **변경 된** 식의 값이 변경 되었을 때 중단 하려는 경우.  
+3.  선택 **그렇습니다** 식이 계산 되 면 중단 하려는 경우 `true`를 선택 하거나 **변경 되었습니다** 식의 값이 변경 되었을 때 중단 하려는 경우.  
   
     > [!NOTE]  
     >  중단점에 처음 도달할 때까지 디버거는 부울 식을 평가하지 않습니다. **이(가) 변경된 경우**를 선택한 경우 디버거는 첫 번째 평가를 변경으로 간주하지 않으므로 첫 번째 평가 시에는 중단하지 않습니다.  

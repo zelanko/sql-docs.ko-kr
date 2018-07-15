@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0bdc2134723cddd5acf6ead6e137b91bf52f68e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319763"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>예제: ID 및 IDREF 지시어 지정
   이 예는 [ELEMENTXSINIL 지시어 지정](example-specifying-the-elementxsinil-directive.md) 예와 가장 비슷합니다. 쿼리가 **ID** 및 **IDREF** 지시어를 지정한다는 점만 다릅니다. 이러한 지시어는 <`OrderHeader`> 및 <`OrderDetail`> 요소에 있는 **SalesPersonID** 특성의 유형을 덮어씁니다. 이 쿼리는 문서 간 연결을 형성합니다. 덮어쓴 유형을 확인하려면 스키마가 필요합니다. 따라서 이 쿼리에서는 FOR XML 절에 스키마를 검색하기 위한 **XMLDATA** 옵션을 지정합니다.  

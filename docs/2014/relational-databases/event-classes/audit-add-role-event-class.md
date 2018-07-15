@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add Role event class
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2fa21eeede18d34d22d2e9dec242bd6052fec5b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 189197a4eec5c296dfc73606ba28e02e9d662450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219443"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 이벤트 클래스
   **Audit Add Role** 이벤트 클래스는 데이터베이스에서 데이터베이스 역할이 추가되거나 제거될 때 발생합니다. 이 이벤트 클래스는 **sp_addrole** 및 **sp_droprole** 저장 프로시저에서 사용됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: 큐브 구조 (큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 큐브 구조 (Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilderview.f1
 ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a0a4e37c4d47996c5f96a9723c0c4a76f5bf6e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: ca43c8107dd05c348890d6402c50430d698c4298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249563"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>큐브 구조(큐브 디자이너)(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **큐브 디자이너**의 **큐브 구조** 탭을 사용하여 측정값 그룹과 측정값을 생성 및 수정하고, 큐브 차원을 추가하고, 연결된 데이터 원본 뷰에서 큐브에 포함된 개체를 표시할 수 있습니다.  

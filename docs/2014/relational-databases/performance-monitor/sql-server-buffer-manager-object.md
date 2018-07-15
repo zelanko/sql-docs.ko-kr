@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 574e7cce629a7ac9dcf3ecae6653c8e1dbbefdb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2a6c64cbdc8130d08f2e2e1b9e940fe4dd5a0c5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181970"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
   **Buffer Manager** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다음 항목을 어떻게 사용하는지 모니터링하는 카운터를 제공합니다.  

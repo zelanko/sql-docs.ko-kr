@@ -14,15 +14,15 @@ helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e84bc4ca13d6352b90aa51b172db095fb06f4063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4a764394b02379459dcf5b3a77396210c1e3f060
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284679"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services의 권한 부여
   권한 부여는 보고서 서버 데이터베이스의 지정된 리소스에 대해 요청된 유형의 액세스 권한을 ID에 부여해야 하는지 여부를 결정하는 과정입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 응용 프로그램에 대한 사용자의 역할 할당을 기준으로 지정된 리소스에 대한 액세스 권한을 사용자에게 부여하는 역할 기반 권한 부여 아키텍처입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 보안 확장 프로그램에는 사용자가 보고서 서버에서 인증되면 사용자에게 액세스 권한을 부여하는 데 사용되는 권한 부여 구성 요소의 구현이 포함됩니다. 권한 부여는 사용자가 SOAP API 및 URL 액세스를 통해 시스템 또는 보고서 서버 항목에 대한 작업을 수행하려고 시도할 때 호출됩니다. 보안 확장 프로그램 인터페이스 **IAuthorizationExtension**을 통해 이 작업을 수행할 수 있습니다. 앞에서 언급한 대로 모든 확장 프로그램은 배포되는 모든 확장 프로그램에 대한 **IExtension** 기본 인터페이스에서 상속됩니다. **IExtension** 및 **IAuthorizationExtension** 은 **Microsoft.ReportingServices.Interfaces** 네임스페이스의 멤버입니다.  

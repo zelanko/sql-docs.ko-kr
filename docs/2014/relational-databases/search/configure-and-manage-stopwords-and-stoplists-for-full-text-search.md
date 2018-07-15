@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284839"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
   전체 텍스트 인덱스가 너무 확장되지 않도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 검색에 도움이 되지 않지만 자주 사용되는 문자열을 무시하는 메커니즘이 있습니다. 이렇게 무시된 문자열을 *중지 단어*라고 합니다. 인덱스를 만드는 동안 전체 텍스트 엔진은 전체 텍스트 인덱스에서 중지 단어를 생략합니다. 즉, 전체 텍스트 쿼리는 중지 단어에서 검색하지 않습니다.  
@@ -102,15 +101,15 @@ ms.locfileid: "36172142"
 ##  <a name="queries"></a> 전체 텍스트 쿼리에 중지 목록 사용  
  쿼리에서 중지 목록을 사용하려면 해당 중지 목록을 전체 텍스트 인덱스와 연결해야 합니다. 인덱스를 만들 때 중지 목록을 전체 텍스트 인덱스에 연결하거나 나중에 인덱스를 변경하여 중지 목록을 추가할 수 있습니다.  
   
- **전체 텍스트 인덱스를 만들고 중지 목록 연결**  
+ **전체 텍스트 인덱스를 만들고이 사용 하 여 중지 목록 연결**  
   
 -   [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **연결 하거나 중지 목록을 기존 전체 텍스트 인덱스와 연결을 끊으려면**  
+ **연결 하거나 기존 전체 텍스트 인덱스와 중지 목록 연결 해제**  
   
 -   [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **중지 단어로 인해 전체 텍스트 쿼리가 실패 하지 대 한 부울 연산이 경우 오류 메시지를 표시 하지 않으려면**  
+ **중지 단어는 전체 텍스트 쿼리가 실패에 대 한 부울 연산이 발생할 경우 오류 메시지를 표시 하지 않으려면**  
   
 -   [의미 없는 단어 변환 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
@@ -131,8 +130,8 @@ ms.locfileid: "36172142"
 -   [sys.dm_fts_parser&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a> 중지 목록에 중지 단어 변경  
- **추가 하거나 중지 목록에서 중지 단어 삭제**  
+##  <a name="change"></a> 중지 목록의 중지 단어 변경  
+ **에 더하거나 중지 목록에서 중지 단어 삭제**  
   
 -   [ALTER FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   

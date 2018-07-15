@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ClientNetLibInfo class
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d453fefe0320002f9c45f862cac0b134af1a32fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ac2c07d89c6513491af51fc3b4b304102cf2d0ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317933"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 클래스
   [ClientNetLibInfo 클래스](clientnetlibinfo-class.md) 는 클라이언트 네트워크 라이브러리에 대한 정보를 나타냅니다.  

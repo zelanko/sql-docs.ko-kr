@@ -1,5 +1,5 @@
 ---
-title: 계산 멤버를 하위 Select 및 하위 큐브 | Microsoft Docs
+title: 계산 멤버를 하위 Select 및 하위 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323193"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
   이전 릴리스에서는 계산 멤버가 하위 SELECT 또는 하위 큐브에서 허용되지 않았습니다. 그러나 SQL Server 2008부터 계산 멤버가 허용되며 연결 속성에 의해 활성화됩니다. 또한 하위 SELECT 및 하위 큐브의 계산 멤버에 대한 새 동작이 SQL Server 2008 R2에서 도입되었습니다.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버  
- `SubQueries` 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 `DBPROPMSMDSUBQUERIES` 속성에 [XMLA 속성 지원 &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 동작이 나 허용 되는 계산된 멤버를 정의 하거나 계산 하위 select 또는 하위에 설정 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
+ 합니다 `SubQueries` 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 `DBPROPMSMDSUBQUERIES` 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 동작이 나 허용 계산된 멤버의 정의 또는 계산 하위 select 또는 하위 큐브에서에 설정 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
   
  SubQueries 속성은 다음 값을 허용합니다.  
   

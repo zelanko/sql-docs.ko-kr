@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdc365671beae3d0037ca9f3dca9b0c2a1f21ad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74cc7160d66909523628c173e4b80db4045a90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302643"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>추적 파일 속성(이벤트 선택 탭)
   **추적 파일 템플릿 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적의 열 속성을 보거나 추적에서 데이터 열을 제거할 수 있습니다.  
@@ -52,8 +52,8 @@ ms.locfileid: "36185448"
  **이벤트** 를 선택하고 추적할 데이터 열을 선택한 다음 **열 구성** 을 클릭하여 추적 결과 창에서 표에 있는 열의 순서를 다시 정렬합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 파일에 대 한 이벤트 및 데이터 열 지정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [추적에서 이벤트를 필터링 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [추적 파일에 대 한 이벤트 및 데이터 열을 지정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [추적에서 이벤트 필터링 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [필터 정보 보기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [필터 수정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server 프로파일러](../tools/sql-server-profiler/sql-server-profiler.md)   

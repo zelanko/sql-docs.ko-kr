@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f4b54da69923a73d5c73647683fd9136c970e81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00f9386b6940d24f3ce7a063a58fb76c436221f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255395"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)
   데이터베이스 디자이너는 연결할 데이터베이스를 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 데이터베이스를 디자인할 때 데이터베이스 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다. 데이터베이스를 시각화하기 위해 테이블, 열, 키, 관계의 일부 또는 전부를 표시하는 다이어그램을 하나 이상 만들 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36182937"
   
  테이블을 수정한 다음 아직 저장하지 않은 경우 테이블 이름의 끝에 별표(*)가 표시되어 변경 내용이 저장되지 않았음을 나타냅니다. 수정된 테이블 및 다이어그램을 저장하는 방법에 대한 자세한 내용은 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- **행 선택기** 행 선택기를 클릭하여 테이블에서 데이터베이스 열을 선택할 수 있습니다. 행 선택기는 해당 열이 테이블의 기본 키에 있는 경우 키 기호를 표시합니다. 기본 키에 대 한 정보를 참조 하십시오. [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)합니다.  
+ **행 선택기** 행 선택기를 클릭하여 테이블에서 데이터베이스 열을 선택할 수 있습니다. 행 선택기는 해당 열이 테이블의 기본 키에 있는 경우 키 기호를 표시합니다. 기본 키에 대 한 자세한 내용은 [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)합니다.  
   
  **속성 열** 속성 열 집합은 테이블의 특정 뷰에만 표시됩니다. 다섯 가지 뷰 형식 중 하나를 사용하여 테이블을 볼 수 있으며, 이를 통해 다이어그램의 크기 및 레이아웃을 쉽게 관리할 수 있습니다.  
   

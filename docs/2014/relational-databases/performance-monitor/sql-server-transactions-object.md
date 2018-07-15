@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: edc150f4977be2a85dddce1735385782e6d0fe9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 48e61e47e9752b187dd8b391cfe8b7983f00f136
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290489"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
   Microsoft **의** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 활성 트랜잭션 수와 **tempdb**의 스냅숏 격리 행 버전 저장소 등의 리소스에 대해 이러한 트랜잭션이 미치는 영향을 모니터링하기 위한 카운터를 제공합니다. 트랜잭션은 논리적 작업 단위이며 데이터의 논리적 무결성을 유지하기 위해 모두 성공하거나 데이터베이스에서 지워져야 하는 작업 집합입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 데이터는 모두 트랜잭션에서 수정됩니다.  

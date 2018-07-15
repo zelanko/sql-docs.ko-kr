@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Conversation Group event class
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 04e8fd6c939774838b306096c9ee3fa91bc3c229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b66505d8c7e33aecbe4bc52e22ded57514b77bf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195300"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker에서 새 대화 그룹을 만들거나 기존 대화 그룹을 삭제할 때 **Broker:Conversation Group** 이벤트를 생성합니다.  

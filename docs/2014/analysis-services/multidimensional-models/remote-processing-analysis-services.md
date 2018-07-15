@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e89e3be5679f9e4152eed81ee77d4a5e6bc89628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddc902acb9d3e1d2339f9d8efe2c62a9c07ad54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274149"
 ---
 # <a name="remote-processing-analysis-services"></a>원격 처리(Analysis Services)
   원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대해 예약된 처리 또는 무인 모드 처리를 실행할 수 있습니다. 여기서 처리 요청은 한 컴퓨터에서 시작되지만 동일한 네트워크상의 다른 컴퓨터에서 실행됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "36185083"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 구성 요소](../../ssms/agent/sql-server-agent.md#Components)   
- [SQL Server 에이전트와 SSAS 관리 태스크 예약](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [SQL Server 에이전트를 사용 하 여 SSAS 관리 태스크 예약](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [일괄 처리 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)   
  [개체 처리 &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c03b77cf021e387544cfc3a235bcd5e933fd2681
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9406ca3d37cbfa8749a039cdf78bb7020467da5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280209"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 원본 편집기(오류 출력 페이지)
   **SAP BW 원본 편집기** 의 **오류 출력** 페이지에서는 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36185035"
  데이터 원본의 이름을 표시합니다.  
   
  **열**  
- **SAP BW 원본 편집기** 대화 상자의 **열** 페이지에서 선택한 외부(원본) 열을 표시합니다. 이 대화 상자에 대 한 자세한 내용은 참조 [SAP BW 원본 편집기 &#40;열 페이지&#41;](sap-bw-source-editor-columns-page.md)합니다.  
+ **SAP BW 원본 편집기** 대화 상자의 **열** 페이지에서 선택한 외부(원본) 열을 표시합니다. 이 대화 상자에 대 한 자세한 내용은 참조 하세요. [SAP BW 원본 편집기 &#40;열 페이지&#41;](sap-bw-source-editor-columns-page.md)합니다.  
   
  **오류**  
  오류가 발생할 경우 수행해야 할 SAP BW 원본을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  

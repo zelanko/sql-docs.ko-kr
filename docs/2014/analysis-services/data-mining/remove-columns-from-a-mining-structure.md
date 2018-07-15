@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
 - removing columns
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85906ae2b1388b7937f5420ba04144426475ffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 61bca79fe550622ac5c5967a71a2705aa8891536
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286339"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>마이닝 구조에서 열 제거
   마이닝 구조를 만든 후 데이터 마이닝 디자이너를 사용하여 해당 구조에서 열을 제거할 수 있습니다. 마이닝 구조 열을 제거하는 이유는 다음과 같을 수 있습니다.  

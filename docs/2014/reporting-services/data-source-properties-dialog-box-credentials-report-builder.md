@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 237e1c9ef26c5dba838fa8071b2dce7293f2077a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238593"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>데이터 원본 속성 대화 상자, 자격 증명(보고서 작성기)
   **데이터 원본 속성** 대화 상자에서 **자격 증명** 을 선택하여 보고서의 포함된 데이터 원본에 연결하는 데 사용할 자격 증명을 표시하고 수정할 수 있습니다. 사용자가 제공하는 자격 증명은 데이터 원본에 액세스하여 보고서를 미리 보는 데 사용됩니다. 자격 증명에 대한 자세한 내용은 [보고서 작성기에 자격 증명 지정](../../2014/reporting-services/specify-credentials-in-report-builder.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
- **Windows 인증 (통합된 보안)를 사용 하 여**  
+ **Windows 인증 (통합된 보안)를 사용 합니다.**  
  Windows 인증을 사용하려면 이 옵션을 선택합니다.  
   
  **이 사용자 이름 및 암호 사용**  

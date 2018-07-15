@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295953"
 ---
 # <a name="lesson-9-create-perspectives"></a>9단원: 큐브 뷰 만들기
   이 단원에서는 Internet Sales 큐브 뷰를 만듭니다. 큐브 뷰는 비즈니스 또는 응용 프로그램 중심의 관점에서 파악할 수 있게 해 주는 보기 가능한 모델 하위 집합을 정의합니다. 사용자가 큐브 뷰를 사용하여 모델에 연결하는 경우 해당 모델 개체(테이블, 열, 측정값, 계층 및 KPI)만 해당 큐브 뷰에 정의되어 있는 필드로 볼 수 있습니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "36183934"
   
 #### <a name="to-create-an-internet-sales-perspective"></a>Internet Sales 큐브 뷰를 만들려면  
   
-1.  모델 디자이너에서 클릭 된 **모델** 메뉴를 차례로 클릭 **큐브 뷰**합니다.  
+1.  모델 디자이너에서를 클릭 합니다 **모델** 메뉴를 클릭 한 다음 **큐브 뷰**합니다.  
   
 2.  **큐브 뷰** 대화 상자에서 **새 큐브 뷰**를 클릭합니다.  
   
-3.  큐브 뷰의 이름을 바꾸려면를 두 번 클릭 하 여 **새 큐브 뷰 1** 열 머리글을 입력 한 후 `Internet Sales`합니다.  
+3.  큐브 뷰의 이름을 바꾸려면 두 번 클릭 하 여 **새 큐브 뷰 1** 열 머리글을 입력 한 다음 `Internet Sales`합니다.  
   
-4.  **필드**, 다음 테이블을 선택 **날짜**, **Geography**, **제품**, **제품 범주**, **Product Subcategory**, 및 `Internet Sales`합니다.  
+4.  **필드**, 다음 테이블을 선택 **날짜**를 **Geography**, **제품**, **Product Category**하십시오 **product Subcategory**, 및 `Internet Sales`합니다.  
   
      이 큐브 뷰에서 Customer 테이블과 이 테이블의 모든 열을 제외했습니다. 나중에 12단원에서 Excel에서 분석 기능을 사용하여 이 큐브 뷰를 테스트합니다. Excel 피벗 테이블 필드 목록에는 Customer 테이블을 제외한 각 테이블이 포함됩니다.  
   

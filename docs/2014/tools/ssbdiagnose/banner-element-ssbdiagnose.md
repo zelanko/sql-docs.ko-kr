@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - banner element
 - XML output file format [ssbdiagnose], banner element
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccb62b49257c2f406bedb34e9bbf58c3bd40ffd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 52317f57ee87becc266ebec9a742cd548b190846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218363"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
   **ssbdiagnose** 출력 XML 파일을 생성한 유틸리티를 식별합니다.  

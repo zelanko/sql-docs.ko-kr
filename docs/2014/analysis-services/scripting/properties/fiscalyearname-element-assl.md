@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FiscalYearName element
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e60ce6332e049f0528316a83c0dc62374c2bb4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2564345c916d73c5984be851523a234d2be6bbe4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197893"
 ---
 # <a name="fiscalyearname-element-assl"></a>FiscalYearName 요소(ASSL)
-  에 대 한 회계 연도 이름에 대 한 명명 규칙을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
+  회계 연도 이름의 명명 규칙을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

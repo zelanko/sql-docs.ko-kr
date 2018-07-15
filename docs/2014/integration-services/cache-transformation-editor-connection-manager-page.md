@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fbbbf560242448abb4704d595f1907e664b6529
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f20f4054b80f9a76b9748174332d207f55c5d4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235553"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>캐시 변환 편집기(연결 관리자 페이지)
   **캐시 변환 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 기존 캐시 연결 관리자를 선택하거나 새 연결을 만들 수 있습니다.  

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321703"
 ---
 # <a name="create-custom-templates"></a>사용자 지정 템플릿 만들기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 함께 많은 일반 태스크에 사용할 템플릿이 제공되지만 템플릿의 진정한 힘은 자주 만들어야 할 복잡한 스크립트의 사용자 지정 템플릿을 만드는 기능에 있습니다. 이 연습에서 소수의 매개 변수가 있는 단순 스크립트를 만들지만 템플릿은 반복되는 긴 스크립트에도 유용합니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "36184843"
   
 10. 쿼리 편집기에 **EXECUTE dbo.WorkOrdersForBlade**를 입력한 다음 F5 키를 눌러 쿼리를 실행합니다. **결과** 창에서 Blade에 대한 작업 주문 목록이 반환되는지 확인합니다.  
   
-11. 템플릿 스크립트 (7 단계의 스크립트)를 편집 매개 변수와 함께 제품 이름 Blade를 대체 ***< * product_name**, `nvarchar(50)`, **이름*> * * *, 네 가지 위치에 있습니다.  
+11. 템플릿 스크립트 (7 단계의 스크립트)를 편집 제품 이름 Blade를 매개 변수로 바꾸어 ***< * product_name**를 `nvarchar(50)`, **이름*> * * *를 네 곳에서.  
   
     > [!NOTE]  
     >  매개 변수에는 바꾸려는 매개 변수의 이름, 매개 변수의 데이터 형식 및 매개 변수 기본값의 세 가지 요소가 필요합니다.  
@@ -107,7 +106,7 @@ ms.locfileid: "36184843"
   
 3.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 클릭합니다.  
   
-4.  에 **템플릿 매개 변수 바꾸기** 대화 상자에 대 한는 `product_name` 값을 입력 **FreeWheel** (기본 내용 덮어쓰기)을 클릭 하 고 **확인** 를 닫으려면는 **템플릿 매개 변수 바꾸기** 대화 상자 및 쿼리 편집기에서 스크립트를 수정 합니다.  
+4.  에 **템플릿 매개 변수 바꾸기** 대화 상자에서에 대 한 합니다 `product_name` 값을 입력 **FreeWheel** (기본 내용 덮어쓰기)을 클릭 하 고 **확인** 를 닫습니다는 **템플릿 매개 변수 바꾸기** 대화 상자 및 쿼리 편집기에서 스크립트를 수정 합니다.  
   
 5.  F5 키를 눌러 쿼리를 실행하면 프로시저가 생성됩니다.  
   

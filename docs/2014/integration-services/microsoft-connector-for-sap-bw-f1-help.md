@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9664b98f85a551a2ea040b4e595f35f618cf1cca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a3f24dbb9fffb7719ec48e4f792ca8cf813fa87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252322"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW F1 도움말
   이 섹션에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW의 세 가지 구성 요소에 대한 F1 도움말 항목이 포함되어 있습니다. 마법사 페이지와 대화 상자에서 F1 키를 누르거나 도움말을 클릭하여 사용자 인터페이스에서 이러한 항목을 볼 수도 있습니다.  

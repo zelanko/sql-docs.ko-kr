@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 246e613d43cceda5cdd87cdbbb30c9e4ddb74724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ae156babe1859686386274c029b2aa34748f2f1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327523"
 ---
 # <a name="implementing-an-outer-join"></a>외부 조인 구현
   외부 조인은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 왼쪽 우선 외부 조인의 기능을 구현하는 방법을 보여 줍니다.  
   
  이 예제에서는 테이블 변수를 사용하여 조인의 왼쪽에서 커서를 시뮬레이트하고 또 다른 테이블 변수를 사용하여 단일 결과 집합을 생성합니다. 이는 데이터 행의 추가 복사본을 만들어야 하므로 제한된 수의 행을 처리하는 경우에만 적합합니다.  
   
- 변수 (@outer) while을 사용 하 여 t 1에서 행을 반복 하는 데는 t1_type 형식의 루프 커서를 시뮬레이트하고를 합니다. 변수 @result 형식의 t1t2_join_type을 사용 하 여 결과 집합을 생성 합니다.  
+ 변수 (@outer) 동안 사용 하 여 t1부터 행을 반복 하는 데는 t1_type 형식의 커서를 시뮬레이트하고 루프입니다. 변수의 @result 형식의 t1t2_join_type을 사용 하는 결과 집합을 생성 합니다.  
   
  이 방법의 성능을 테스트하여 응용 프로그램에서 예상대로 실행되는지 확인해야 합니다.  
   

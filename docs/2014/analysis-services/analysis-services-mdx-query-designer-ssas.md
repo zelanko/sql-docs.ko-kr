@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 252c4623149c4a96ccab9ded6ff76788e436d544
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bbe57da905e12d644de39eff98216bd2d0f1218
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282229"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 쿼리 디자이너(SSAS)
   Analysis Services MDX(Multidimensional Expression) 쿼리 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX 쿼리를 만드는 데 유용한 그래픽 사용자 인터페이스를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하는 데 이 창에서는 선택한 큐브에서 멤버를 끌어 사용할 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "36184608"
 |![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![집계 표시 단추](media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|  
-|![삭제](media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제할](media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 매개 변수가 자동으로 만들어집니다.|  
 |![쿼리 준비 단추](media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|  
 |![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
@@ -112,7 +112,7 @@ ms.locfileid: "36184608"
   
 -   **텍스트로 편집**  
   
--   **계산 멤버 추가** (![계산된 멤버 추가](media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
+-   **Add Calculated Member** (![추가 계산된 멤버](media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
   
 -   **빈 셀 표시**(![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   

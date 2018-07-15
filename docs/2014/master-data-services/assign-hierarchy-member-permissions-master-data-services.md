@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning member permissions
 - members [Master Data Services], assigning permissions
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 79ed00e101c252cff63e8978ef55a27e6c5c8258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e18ee83a164659904864b84dc80fb21e7f07f463
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305999"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한 할당(Master Data Services)
   계층 멤버에 사용 권한을 할당하여 사용자나 그룹에 **의** 탐색기 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에서 데이터를 볼 수 있는 액세스 권한을 부여합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36172916"
   
 9. 트리를 확장하고 사용 권한을 할당할 계층 노드를 클릭합니다.  
   
-10. 메뉴에서 선택 **읽기 전용**, **업데이트**, 또는 **Deny**합니다.  
+10. 메뉴에서 선택 **읽기 전용**하십시오 **업데이트**, 또는 **거부**.  
   
 11. **저장**을 클릭합니다.  
   

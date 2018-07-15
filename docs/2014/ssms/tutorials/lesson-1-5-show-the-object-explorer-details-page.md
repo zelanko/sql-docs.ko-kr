@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
-caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36d4d60f7aa6a677ac7ec85d81f3996d8b01c996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c196db40452128395fa4c2c1f803b86cbfe8d99a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301393"
 ---
 # <a name="show-the-object-explorer-details-page"></a>개체 탐색기 정보 페이지 표시
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 개체 탐색기에서 선택한 개체마다 보고서를 표시할 수 있습니다. 개체 탐색기 정보 페이지라고 하는 이 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성되며 문서 창으로 열립니다.  

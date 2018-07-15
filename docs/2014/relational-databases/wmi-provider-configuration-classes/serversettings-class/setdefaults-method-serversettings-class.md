@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b3bdeab96cbbc5ff142970f1ecf6598e11a589a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7f42f7149b20dc51149dcece77bb076e32b4109b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297953"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 메서드(ServerSettings 클래스)
-  인스턴스에 대 한 모든 기본값을 설정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기존 데이터 덮어쓰기 옵션을 사용 합니다.  
+  인스턴스에 대 한 모든 기본값을 설정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기존 데이터 덮어쓰기 옵션을 사용 하 여 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ OverwriteAll
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ServerSettings 클래스](serversettings-class.md) 을 나타내는 개체를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 인스턴스.  
+ A [ServerSettings 클래스](serversettings-class.md) 나타내는 개체를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 인스턴스.  
   
 #### <a name="parameters"></a>매개 변수  
   

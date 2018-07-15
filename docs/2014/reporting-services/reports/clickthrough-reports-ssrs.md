@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clickthrough reports
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6bb00e29b5edc039d33a345addc596f18669f3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2f8c96a114557bcef8252f2c21b70c9a50dbfb94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216653"
 ---
 # <a name="clickthrough-reports-ssrs"></a>클릭 광고 보고서(SSRS)
   클릭 광고 보고서는 주 보고서 내에 포함되어 있는 데이터에 대한 세부 정보를 제공하는 보고서입니다. 클릭 광고 보고서는 사용자가 주 보고서에 나타나는 대화형 데이터를 클릭할 때 표시됩니다. 이러한 보고서는 보고서 서버에 의해 자동으로 생성됩니다. 모델 디자이너 결정을 설정 하 여 클릭 광고 보고서에 표시할 항목의 `DefaultDetailAttribute` 및 `DefaultAggregateAttribute` 보고서 모델의 엔터티에 할당 하는 속성입니다.  
   
 > [!NOTE]  
->  클릭 광고 보고서의 일부 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 조직에서 실행 중인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 잘 모를 경우 데이터베이스 관리자에게 문의하십시오.  
+>  클릭 광고 보고서의 모든 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 조직에서 실행 중인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 잘 모를 경우 데이터베이스 관리자에게 문의하십시오.  
   
 ## <a name="using-default-templates"></a>기본 템플릿 사용  
  기본적으로 보고서 서버는 엔터티별로 단일 인스턴스 템플릿과 여러 인스턴스 템플릿이라는 두 개의 클릭 광고 템플릿 유형을 생성합니다. 클릭하는 항목에 따라 사용되는 템플릿이 결정됩니다. 보고서를 읽는 사람이 스칼라 특성을 클릭하면 단일 인스턴스 템플릿이 사용되고 집계 특성을 클릭하면 여러 인스턴스 템플릿이 사용됩니다.  

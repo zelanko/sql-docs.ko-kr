@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308113"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>태스크 또는 컨테이너에 중단점을 설정하여 패키지 디버깅
   이 절차에서는 패키지, 태스크, For 루프 컨테이너, Foreach 루프 컨테이너 또는 시퀀스 컨테이너에 중단점을 설정하는 방법을 설명합니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "36186128"
 6.  패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [패키지 배포 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [스크립트 태스크와 스크립트 구성 요소에서 중단점을 설정 하 여 스크립트 디버깅](data-flow/transformations/script-component.md)   
- [코딩 및 스크립트 태스크 디버깅](control-flow/script-task.md)   
+ [패키지 개발용 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정 하 여 스크립트 디버깅](data-flow/transformations/script-component.md)   
+ [스크립트 태스크 코딩 및 디버깅](control-flow/script-task.md)   
  [스크립트 구성 요소 코딩 및 디버깅](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

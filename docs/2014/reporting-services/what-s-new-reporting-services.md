@@ -1,5 +1,5 @@
 ---
-title: 어떤&#39;s 새 (Reporting Services) | Microsoft Docs
+title: 새로운&#39;s (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Reporting Services]
 - Reporting Services, what's new
@@ -18,24 +18,24 @@ ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 caps.latest.revision: 143
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 84cd5432d9f4b9808a5a16521410902129b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d25e63c996c0b5d80bfcf44b22e219906328a2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323643"
 ---
-# <a name="what39s-new-reporting-services"></a>어떤&#39;s 새 (Reporting Services)
+# <a name="what39s-new-reporting-services"></a>새로운&#39;s (Reporting Services)
   
   
 ||  
 |-|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 릴리스에는 Google Chrome 브라우저에 대한 지원이 추가되었습니다. 지원 되는 브라우저에 대 한 자세한 내용은 참조 하십시오. [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 릴리스에는 Google Chrome 브라우저에 대한 지원이 추가되었습니다. 지원 되는 브라우저에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.|  
   
- 다른 작업에 대 한 내용은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제품 및 기술에 참조 [SQL Server 2014의 새로운](../sql-server/what-s-new-in-sql-server-2016.md)합니다.  
+ 다른 방법은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제품 및 기술 참조 [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)합니다.  
   
- 관련 된 변경 내용에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence 참조 [What's New in Analysis Services 및 Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)합니다.  
+ 관련 변경 사항에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence 참조 [What's New in Analysis Services 및 Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 이전 버전과의 호환성](reporting-services-backward-compatibility.md)   

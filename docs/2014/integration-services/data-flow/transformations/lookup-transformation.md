@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7a4d4a05d738ee844b6eb63ab5c762fb84f6194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298813"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 집합의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "36090921"
 -   불일치 항목 출력. 불일치 항목 출력은 참조 데이터 집합과 하나의 항목도 일치하지 않는 입력 행을 처리합니다. 일치하는 항목이 없는 행을 오류로 처리하도록 조회 변환을 구성하면 해당 행이 오류 출력으로 리디렉션됩니다. 그렇지 않으면 변환이 이러한 행을 불일치 항목 출력으로 리디렉션합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]에서는 조회 변환에 하나의 출력만 제공합니다. 만든 조회 변환을 실행 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], 참조 [조회 변환 업그레이드](../../../sql-server/install/upgrade-lookup-transformations.md)합니다.  
+    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]에서는 조회 변환에 하나의 출력만 제공합니다. 만든 조회 변환을 실행 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]를 참조 하세요 [조회 변환 업그레이드](../../../sql-server/install/upgrade-lookup-transformations.md)합니다.  
   
 -   오류 출력.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36090921"
   
  캐시를 파일로 저장할 경우의 추가 이점은 다음과 같습니다.  
   
--   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은*** [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***을 참조하세요.***  
+-   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은 ***[캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)***을 참조하세요.***  
   
 -   패키지와 함께 캐시 파일을 배포합니다. ***그러면 데이터를 여러 컴퓨터에서 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FriendlyName property
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 677151dc70ac6ecaff307be60f2ff54274b59630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 662103d438a54bfc084068ff93ea3602cf074653
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315633"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName 속성(SecurityCertificate 클래스)
   보안 인증서의 대체 이름을 가져오거나 설정합니다.  

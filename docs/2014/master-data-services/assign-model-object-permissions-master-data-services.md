@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], assigning object permissions
 - permissions [Master Data Services], assigning model object permissions
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ca0d06883d50ac92ae064cfa930111836667a4c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 0a81b831ea324d71e6c5ac6c7cef92549e76cc65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309953"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 할당(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 **의** 탐색기 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에 있는 데이터에 대해 사용자 또는 그룹 액세스 권한을 부여해야 하거나 사용자나 그룹을 관리자로 지정해야 할 경우 모델 개체에 사용 권한을 할당합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36092440"
   
 7.  트리를 확장하고 사용 권한을 할당하려는 모델 개체를 클릭합니다.  
   
-8.  메뉴에서 선택 **읽기 전용**, **업데이트**, 또는 **Deny**합니다.  
+8.  메뉴에서 선택 **읽기 전용**하십시오 **업데이트**, 또는 **거부**.  
   
 9. **저장**을 클릭합니다.  
   

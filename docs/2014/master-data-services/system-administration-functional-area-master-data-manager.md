@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e1600f24a0cd4d8b667e5fa6a8110bd52dcb2e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e7f6f90aab70c08be52c002dc92a9bc3f1943358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314003"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>시스템 관리 기능 영역(마스터 데이터 관리자)
   시스템 관리 기능 영역에서 관리자는 모델 및 해당 모든 개체를 만들 수 있습니다. 또한 비즈니스 규칙을 만들 수 있으며 모델 패키지를 만들어 배포할 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
@@ -27,7 +27,7 @@ ms.locfileid: "36186109"
 ## <a name="model"></a>Model  
  [모델&#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
- [모델을 만들 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [모델을 만드는 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
  [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36186109"
   
  [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
- [명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
+ [명시적 계층 및 컬렉션에 대 한 엔터티를 사용 하도록 설정 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
   
  [도메인 기반 특성 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   

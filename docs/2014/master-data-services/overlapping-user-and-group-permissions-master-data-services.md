@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264939"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
   사용자의 사용 권한은 다음 요소에 따라 결정됩니다.  
@@ -76,14 +76,14 @@ ms.locfileid: "36185416"
   
  사용자가 계층 노드의 멤버 그룹에 대한 **업데이트** 권한을 가지고 있습니다.  
   
- 그룹 1에 **읽기 전용** 계층 노드의 멤버 그룹 수 있는 권한이 있습니다.  
+ 그룹 1에 **읽기 전용** 계층 노드의 멤버 그룹에 대 한 사용 권한.  
   
- 그룹 2에 **읽기 전용** 계층 노드의 멤버 그룹 수 있는 권한이 있습니다.  
+ 그룹 2에 **읽기 전용** 계층 노드의 멤버 그룹에 대 한 사용 권한.  
   
  결과: 멤버에 대한 사용자의 유효 권한은 **업데이트** 입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [사용 권한이 결정 되는 방식 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

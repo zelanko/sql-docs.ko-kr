@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290309"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>일반 속성 페이지, 공유 데이터 집합(보고서 관리자)
   공유 데이터 집합 페이지를 사용하여 공유 데이터 집합 항목의 속성을 보고 관리할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36184660"
  보고서 서버 데이터베이스에서 공유 데이터 집합을 제거합니다. 공유 데이터 집합을 삭제하면 보고서 또는 캐시된 버전이 비활성화됩니다. 보고서를 다시 활성화하려면 보고서 제작 도구에서 해당 보고서를 열고 동일한 이름과 동일한 필드 컬렉션을 갖는 데이터 집합을 지정합니다. 또는 동일한 필드 컬렉션을 갖는 다른 데이터 집합을 사용하도록 각 데이터 영역 참조를 업데이트할 수도 있습니다.  
   
  **이동**  
- 보고서 서버 폴더 계층 구조 내의 다른 위치로 공유 데이터 집합을 옮깁니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 참조 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
+ 보고서 서버 폴더 계층 구조 내의 다른 위치로 공유 데이터 집합을 옮깁니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
   
  **다운로드**  
  공유 데이터 집합 정의의 복사본을 추출합니다. 컴퓨터에 정의된 파일 연결에 따라 파일이 Visual Studio 또는 다른 응용 프로그램에서 열립니다. 대부분의 경우 공유 데이터 집합은 XML 파일로 열립니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36184660"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [캐시 새로 고침 옵션 &#40;보고서 관리자&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [캐싱 페이지, 공유 데이터 집합 &#40;보고서 관리자&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   

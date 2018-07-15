@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbf2c7f97f86e1c20ead22b06b06d2ec3b468bb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2cc8e96e4e45558571e062ab70c3b30ea6040c0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327685"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 이벤트 클래스
   Object:Altered 이벤트 클래스는 ALTER INDEX, ALTER TABLE 또는 ALTER DATABASE 문 등에 의해 개체가 변경되었음을 나타냅니다. 이 이벤트 클래스는 개체가 변경되었는지 확인하는 데 사용할 수 있습니다. 예를 들어 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램의 경우 개체가 자주 변경될 수 있으므로 이 이벤트 클래스를 사용하면 유용합니다.  

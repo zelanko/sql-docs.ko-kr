@@ -1,5 +1,5 @@
 ---
-title: 테이블 힌트에 인덱싱된 뷰 정의 호환성 모드 80에서는 무시 되 고 이상 90 이상의 모드에서 허용 되지 않습니다 | Microsoft Docs
+title: 인덱싱된 뷰 정의 호환성 모드 80에서는 무시 되 고 모드를 90 이상에서는 허용 되지 않습니다의 테이블 힌트 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
 - indexed views [SQL Server], query hints
 ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b56e965ecfcfc802457bfa3b5a78118afae5c531
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 93159a8c32f484fd9c734b4847dfd1e7fca854a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317433"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>인덱싱된 뷰 정의의 테이블 힌트는 호환성 모드 80에서는 무시되고 호환성 모드 90 이상에서는 허용되지 않습니다.
-  인덱싱된 뷰 정의에서 테이블 힌트는 호환성 모드 90 이상에서 허용되지 않습니다. 자세한 내용은의 다음 항목을 참조 하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서: "디자인 인덱싱된 뷰," 인덱싱된 뷰 만들기, "및" 쿼리 힌트 ([!INCLUDE[tsql](../../includes/tsql-md.md)]). "  
+  인덱싱된 뷰 정의에서 테이블 힌트는 호환성 모드 90 이상에서 허용되지 않습니다. 자세한 내용은의 다음 항목을 참조 하세요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서: "디자인 인덱싱된 뷰," 인덱싱된 뷰 만들기 "," 및 "쿼리 힌트 ([!INCLUDE[tsql](../../includes/tsql-md.md)])."  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -35,6 +35,6 @@ ms.locfileid: "36093673"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

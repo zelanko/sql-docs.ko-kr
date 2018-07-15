@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328442196ded3537b8f6926bdfd67ea8e9100c5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249043"
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions 요소(ASSL)
-  개인에 대 한 특성 권한의 컬렉션을 포함 [역할](../objects/role-element-assl.md) 요소의 특정 차원에는 [큐브](../objects/cube-element-assl.md) 요소입니다.  
+  개인에 대 한 특성 권한의 컬렉션을 포함 [역할](../objects/role-element-assl.md) 의 특정 차원에서 요소를 [큐브](../objects/cube-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

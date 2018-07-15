@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.policyeval.f1
 - swb.agdashboard.policyeval.f1
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0efad6e52d9d297f42b98c2268daeca46b2d5a14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 68837a04228b90c389cd909190c62915c4bb88db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271629"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>정책 평가 결과(AlwaysOn)
   AlwaysOn 대시보드의 **정책 평가 결과** 페이지를 사용하여 현재 정책 문제를 확인할 수 있습니다.  
@@ -53,6 +52,6 @@ ms.locfileid: "36184563"
 
   
 ## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [운영 문제 AlwaysOn 가용성 그룹에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹의 운영 문제에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

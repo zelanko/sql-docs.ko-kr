@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81bfb6671a5c504505de34d368c972de98e21b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300413"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   확장/DBCS(더블바이트 문자 집합) 문자가 포함되어 있지 않은 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송할 때는 네이티브 형식을 사용하는 것이 바람직합니다.  
@@ -61,16 +60,16 @@ ms.locfileid: "36092212"
   
 -   `char` 또는 `varchar` 데이터  
   
-     각각의 시작 부분에서 `char` 또는 `varchar` 필드 **bcp** 접두사 길이 추가 합니다.  
+     각 부분 `char` 나 `varchar` 필드 **bcp** 접두사 길이 추가 합니다.  
   
     > [!IMPORTANT]  
-    >  기본적으로 기본 모드를 사용 하는 경우는 **bcp** 유틸리티가 문자를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일에 복사 하기 전에 OEM 문자로 합니다. **bcp** 유틸리티가 문자 데이터 파일에서 ANSI 문자로 변환 대량 가져올로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
+    >  기본적으로 네이티브 모드를 사용 하는 경우는 **bcp** 유틸리티가 문자에서 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일에 복사 하기 전에 OEM 문자로 합니다. 합니다 **bcp** 유틸리티가 문자 데이터 파일에서를 ANSI 문자로 변환 대량 가져오기 전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
 -   `sql_variant` 데이터  
   
-     경우 `sql_variant` 데이터 네이티브 형식 데이터 파일에 SQLVARIANT로 저장 되므로, 그 특성을 모두 유지 합니다. 각 데이터 값의 데이터 형식을 기록하는 메타데이터는 데이터 값과 함께 저장됩니다. 이 메타 데이터는 대상에서 동일한 데이터 형식과 데이터 값을 다시 만드는 데 `sql_variant` 열입니다.  
+     경우 `sql_variant` 데이터 네이티브 형식 데이터 파일에 SQLVARIANT로 저장 되므로, 해당 특성을 모두 유지 합니다. 각 데이터 값의 데이터 형식을 기록하는 메타데이터는 데이터 값과 함께 저장됩니다. 이 메타 데이터는 다시 대상에 동일한 데이터 형식 가진 데이터 값을 만드는 데 `sql_variant` 열입니다.  
   
-     대상 열의 데이터 형식이 없으면 `sql_variant`, 각 데이터 값은 암시적 데이터 변환의 기본 규칙에 따라 대상 열의 데이터 형식으로 변환 됩니다. 데이터 변환 중에 오류가 발생하면 현재 일괄 처리가 롤백됩니다. `char` 열 간에 전송되는 모든 `varchar` 및 `sql_variant` 값에는 코드 페이지 변환 문제가 있을 수 있습니다.  
+     대상 열의 데이터 형식이 없으면 `sql_variant`, 각 데이터 값은 암시적 데이터 변환 규칙에 따라 대상 열의 데이터 형식으로 변환 됩니다. 데이터 변환 중에 오류가 발생하면 현재 일괄 처리가 롤백됩니다. `char` 열 간에 전송되는 모든 `varchar` 및 `sql_variant` 값에는 코드 페이지 변환 문제가 있을 수 있습니다.  
   
      데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
   
@@ -81,10 +80,10 @@ ms.locfileid: "36092212"
   
 |Command|옵션|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|로 인해는 **bcp** 데이터의 네이티브 데이터 형식을 사용 하는 유틸리티.<sup> 1</sup>|  
+|**bcp**|**-n**|발생 합니다 **bcp** 유틸리티가 네이티브 데이터 형식의 데이터를 사용 하도록 합니다.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|데이터의 네이티브 또는 와이드 네이티브 데이터 형식을 사용합니다. 서식 파일로 데이터 형식을 지정하면 DATAFILETYPE은 필요하지 않습니다.|  
   
- <sup>1</sup> 네이티브 로드 (**-n**)의 이전 버전과 호환 되는 형식에 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 사용 하 여는 **-V** 전환 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
+ <sup>1</sup> 네이티브 로드 (**-n**)의 이전 버전과 호환 되는 형식에 대 한 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 사용 하 여 합니다 **-V** 전환 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   

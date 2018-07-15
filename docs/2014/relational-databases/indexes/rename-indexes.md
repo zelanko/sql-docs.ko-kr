@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming indexes
 - index names [SQL Server]
 - indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11fcfe1bf9a0bc3735a1c18a3484549e6ec9f833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2c1b3a0d180ece76066e3f443d9d3cdb9c5f3015
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287259"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 이름을 바꾸는 방법에 대해 설명합니다. 인덱스 이름을 바꾸면 현재 인덱스 이름이 새 이름으로 바뀝니다. 지정된 이름은 테이블 또는 뷰에서 고유해야 합니다. 예를 들어 **XPK_1**이라는 인덱스가 두 테이블에 있을 수는 있지만 동일한 테이블에 **XPK_1**이라는 인덱스가 두 개 있을 수는 없습니다. 기존의 비활성 인덱스와 동일한 이름의 인덱스는 만들 수 없습니다. 인덱스 이름을 바꾼다고 인덱스가 다시 작성되는 것은 아닙니다.  

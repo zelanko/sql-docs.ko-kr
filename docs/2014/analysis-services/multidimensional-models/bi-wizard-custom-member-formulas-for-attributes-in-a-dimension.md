@@ -1,5 +1,5 @@
 ---
-title: 차원 특성에 대 한 사용자 지정 멤버 수식 설정 | Microsoft Docs
+title: 차원의 특성에 대 한 사용자 지정 멤버 수식 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], custom member formulas
 - member formulas [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7354a79069de0dd3b35c9860e05f5bb69980fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 584fa3b944671aa80e01c8f5ae0080e0c1860366
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295853"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>차원에 특성의 사용자 지정 멤버 수식 설정
   큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expressions) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 `CustomRollupColumn` 속성을 설정합니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
 - SQL12.SWB.makemanaged.Summary.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ae119f84af86a44e994e0a4684f99783a7edf2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 499516a41c06d31a32bb6846d16cb4be6f43de9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279159"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관리 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36187217"
   
  이 릴리스에서 UCP는 다음 요구 사항을 충족해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 -   대/소문자를 구분하는 SQL Server 인스턴스에서 UCP를 호스팅하는 것이 좋습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36187217"
   
 -   FILESTREAM 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 모니터링에서 지원되지 않습니다.  
   
- 자세한 내용은 참조 [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 자세한 내용은 [SQL Server에 대 한 최대 용량 사양](../../sql-server/maximum-capacity-specifications-for-sql-server.md) 하 고 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36187217"
 |조건|수정 동작|  
 |---------------|-----------------------|  
 |지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 UCP에 대한 관리자 권한이 있어야 합니다.|지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 UCP에 대한 관리자 권한이 있는 계정으로 로그온합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 인스턴스 등록을 지원해야 합니다.|버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 인스턴스 등록을 지원해야 합니다.|버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에서 TCP/IP를 사용하도록 설정해야 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에서 TCP/IP를 사용하도록 설정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 이미 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에 등록되어 있으면 안 됩니다.|지정하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 일부로 이미 관리되고 있는 경우 이를 다른 UCP에 등록할 수 없습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 이미 UCP이면 안 됩니다.|지정하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 연결하려는 UCP가 아닌 다른 UCP인 경우 이를 이 UCP에 등록할 수 없습니다.|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fa5cfaec81c0e2b22e7b66a36907daf57e443bdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b4b452f37f06610ccccd042fd1aae6d616bac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305453"
 ---
 # <a name="delete-an-article"></a>아티클 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 아티클을 삭제하는 방법에 대해 설명합니다. 아티클을 삭제할 수 있는 조건 및 아티클 삭제로 인해 새 스냅숏 또는 구독 다시 초기화가 필요한지 여부에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
@@ -72,7 +72,7 @@ ms.locfileid: "36183762"
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 `false`, 3 단계에서 아티클 속성이 올바르게 정의 된 또는 아티클이 없습니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 `false`, 3 단계에서 아티클 속성이 올바르게 정의 되지 또는 아티클이 없습니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 메서드를 호출합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36183762"
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 `false`, 3 단계에서 아티클 속성이 올바르게 정의 된 또는 아티클이 없습니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 확인하여 아티클이 존재하는지 확인합니다. 이 속성의 값이 `false`, 3 단계에서 아티클 속성이 올바르게 정의 되지 또는 아티클이 없습니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 메서드를 호출합니다.  
   

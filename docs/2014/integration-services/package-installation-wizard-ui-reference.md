@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
 - sql12.dts.deploymentwizard.deploydtspackages.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72e058913f4447ea14aa21934bffaf75bde62bdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 637ed65f38b53cf39630d4fb3ba04ab9f7a2158d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316813"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>패키지 설치 마법사 UI 참조
   **패키지 설치 마법사** 를 사용하여 프로젝트에 포함된 패키지 및 기타 파일과 모든 패키지 종속 파일을 포함한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 배포할 수 있습니다.  
@@ -173,6 +173,6 @@ ms.locfileid: "36172681"
  **마침**을 클릭하여 마법사를 종료합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [배포 패키지 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

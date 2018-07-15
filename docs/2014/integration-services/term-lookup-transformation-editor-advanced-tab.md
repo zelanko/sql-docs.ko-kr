@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 511583983fac4372b04cb1ac7f11353bb99fa517
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 193652a7e813f929191a3e677e164190f0ea3edf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314133"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>용어 조회 변환 편집기(고급 탭)
   **용어 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 조회에서 대/소문자를 구분할지 여부를 지정할 수 있습니다.  

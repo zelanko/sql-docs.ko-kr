@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8de86adb899b08cf37151524f2b451b6c54723b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5914bd0020a2d82e9f38ed4f5b60f0c880aaeb66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290279"
 ---
 # <a name="move-items-page-report-manager"></a>항목 이동 페이지(보고서 관리자)
   항목 이동 페이지를 사용하여 보고서, 폴더 또는 기타 항목을 보고서 서버의 새 위치로 이동할 수 있습니다. 새 위치의 경로를 입력하거나 트리 뷰를 사용하여 보고서 서버 네임스페이스에서 새 위치를 찾아볼 수 있습니다. 현재 보고서 서버에 저장되어 있고 이동 권한 있는 항목만 이동할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36093917"
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [일반 속성 페이지, 리소스 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [일반 속성 페이지, 공유 데이터 원본을 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [일반 속성 페이지, 공유 데이터 원본 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

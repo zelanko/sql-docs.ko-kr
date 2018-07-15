@@ -5,24 +5,23 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8af441227c9a584b6252d5d02b7e9989a772d526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0c12ef425f898b8406884fef8eff27c8c80c3df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329333"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
   통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
@@ -69,7 +68,7 @@ GO
   
 2.  **SemanticLanguageDatabase.msi** Windows Installer 패키지를 실행하여 데이터베이스 및 로그 파일을 추출합니다.  
   
-     필요에 따라 대상 디렉터리를 변경할 수 있습니다. 기본적으로 설치 관리자는 명명 된 폴더에 파일 추출 **Microsoft Semantic Language Database** 32 비트 또는 64 비트 Program Files 폴더에 있습니다. MSI 파일에는 압축된 데이터베이스 파일 및 로그 파일이 포함되어 있습니다.  
+     필요에 따라 대상 디렉터리를 변경할 수 있습니다. 기본적으로 설치 관리자 파일을 추출 합니다 라는 폴더로 **Microsoft Semantic Language Database** 32 비트 또는 64 비트 Program Files 폴더에 있습니다. MSI 파일에는 압축된 데이터베이스 파일 및 로그 파일이 포함되어 있습니다.  
   
 3.  추출한 데이터베이스 파일 및 로그 파일을 파일 시스템의 적절한 위치로 이동합니다.  
   
@@ -124,7 +123,7 @@ GO
  **의미 체계 언어 통계 데이터베이스를 제거 합니다.**  
  데이터베이스를 등록 취소하고 분리한 후 데이터베이스 파일을 간단히 삭제할 수 있습니다. 제거 프로그램은 없으며 제어판의 **프로그램 및 기능** 에도 해당 항목이 없습니다.  
   
-###  <a name="reqinstall"></a> 요구 사항 및 의미 체계 언어 통계 데이터베이스 설치 및 제거에 대 한 제한  
+###  <a name="reqinstall"></a> 요구 사항 및 설치 하 고 의미 체계 언어 통계 데이터베이스 제거에 대 한 제한  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스별로 하나의 의미 체계 언어 통계 데이터베이스만 연결하고 등록할 수 있습니다.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronous event counter target [SQL Server extended events]
 - targets [SQL Server extended events], synchronous event counter target
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 370835af2532a3602bbc5aa944b114ba8f7e61ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5ca55e050a313d49421cfcc6992dbdfea60c3780
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219783"
 ---
 # <a name="event-counter-target"></a>이벤트 카운터 대상
   이벤트 카운터 대상은 확장 이벤트 세션 동안 발생하는 모든 이벤트를 계산합니다. 이벤트 카운터 대상을 사용하면 전체 이벤트 컬렉션의 오버헤드를 추가하지 않고도 작업 특성에 대한 정보를 얻을 수 있습니다. 이 대상에는 사용자 지정할 수 있는 매개 변수가 없습니다.  

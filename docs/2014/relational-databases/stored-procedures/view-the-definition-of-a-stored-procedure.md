@@ -3,28 +3,26 @@ title: 저장 프로시저의 정의 보기 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], viewing
 - definition of stored procedure
 - viewing stored procedures
 - displaying stored procedures
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3b63ca5ff5b5373ea56c0df355c519d23054d07f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 09737f1b9764680e67dbb0bbefb2d0ec86df71e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288409"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>저장 프로시저의 정의 보기
     
@@ -74,7 +72,7 @@ ms.locfileid: "36093039"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력는 `sp_helptext` 시스템 저장 프로시저입니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
+3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 `sp_helptext` 시스템 저장 프로시저입니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -100,7 +98,7 @@ ms.locfileid: "36093039"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력는 `sys.sql_modules` 카탈로그 뷰에 있습니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
+3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 `sys.sql_modules` 카탈로그 뷰에 있습니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
   
     ```  
     USE AdventureWorks2012;  

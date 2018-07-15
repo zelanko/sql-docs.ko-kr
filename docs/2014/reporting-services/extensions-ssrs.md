@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282939"
 ---
 # <a name="extensions-ssrs"></a>확장 프로그램(SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 보고서 서버는 받는 입력 또는 출력 유형을 인증, 데이터 처리, 보고서 렌더링, 보고서 배달을 위해 모듈화하는 확장 프로그램을 사용합니다. 이 기능 덕분에 기존 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치에서 업계의 새 소프트웨어 표준(예: 새 인증 체계 또는 사용자 지정 데이터 원본 유형)을 손쉽게 활용할 수 있습니다. 보고서 서버는 사용자 지정 인증 확장 프로그램, 데이터 처리 확장 프로그램, 보고서 처리 확장 프로그램, 렌더링 확장 프로그램, 배달 확장 프로그램 및 RSReportServer.config 구성 파일에서 사용자가 구성할 수 있는 확장 프로그램을 지원합니다. 예를 들어, 보고서 뷰어에서 사용할 수 있는 내보내기 형식을 제한할 수 있습니다. 보고서 서버는 하나 이상의 인증 확장 프로그램, 데이터 처리 확장 프로그램 및 렌더링 확장 프로그램을 필요로 합니다. 배달 및 보고서 처리 확장 프로그램은 선택적이지만 보고서 배포 또는 사용자 지정 컨트롤을 지원하려는 경우에는 반드시 필요합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36186028"
 ## <a name="rendering-extensions"></a>렌더링 확장 프로그램  
  렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 장치 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 HTML, Excel, CSV, XML, 이미지, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 단어의 7개 렌더링 확장 프로그램이 포함되어 입습니다.  
   
--   **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 참조 [HTML로 렌더링 &#40;보고서 작성기 및 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) 및 [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 [HTML로 렌더링 &#40;보고서 작성기 및 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) 하 고 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;&#40;reporting Services 2014&#41&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 -   **Excel 렌더링 확장 프로그램** Excel 렌더링 확장 프로그램은 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 이상에서 보고 수정할 수 있는 보고서를 렌더링합니다. 이 렌더링 확장 프로그램은 BIFF(Binary Interchange File Format) 파일을 만듭니다. BIFF는 Excel 데이터에 대한 네이티브 파일 형식입니다. [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 에서 렌더링한 보고서는 스프레드시트에서 사용할 수 있는 모든 기능을 지원합니다. 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.  
   

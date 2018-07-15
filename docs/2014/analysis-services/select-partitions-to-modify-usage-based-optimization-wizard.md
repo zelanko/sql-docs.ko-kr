@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.selectpartitions.f1
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b95186b841d39d94ffce58a848e4ac87603891c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d21e350003def5092caa0ec935893e9905478b8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196163"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>수정할 파티션 선택(사용 빈도 기반 최적화 마법사)
   **수정할 파티션 선택** 페이지를 사용하여 집계를 디자인할 파티션을 선택할 수 있습니다.  

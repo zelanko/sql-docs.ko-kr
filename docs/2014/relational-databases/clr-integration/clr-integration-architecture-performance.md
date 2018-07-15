@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2259cf7be33fdf0e1ded99345db8102875f95618
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de2c903436475790b1d7b6fa01c5c59ae16f20b5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172207"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352585"
 ---
 # <a name="performance-of-clr-integration"></a>통합된 CLR의 성능
-  이 항목에서는의 성능을 개선할 수 있는 디자인 선택 사항 중 일부에 대해 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 통합은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 공용 언어 런타임 (CLR).  
+  이 항목에서는의 성능을 개선할 수 있는 디자인 선택 사항 중 일부를 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 통합 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework CLR (공용 언어 런타임).  
   
 ## <a name="the-compilation-process"></a>컴파일 프로세스  
  SQL 식을 컴파일하는 중에 관리되는 루틴에 대한 참조가 발견되면 MSIL([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Intermediate Language) 스텁이 생성됩니다. 이 스텁에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR로의 루틴 매개 변수 마샬링, 함수 호출 및 결과 반환을 위한 코드가 포함됩니다. 이러한 "글루" 코드는 매개 변수의 형식과 매개 변수 방향(입력, 출력 또는 참조)에 기반을 둡니다.  
@@ -40,7 +38,7 @@ ms.locfileid: "36172207"
  컴파일 프로세스를 수행하면 런타임에 네이티브 코드에서 호출할 수 있는 함수 포인터가 생성됩니다. 스칼라 반환 사용자 정의 함수의 경우 이 함수 호출은 행 단위로 수행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 CLR 간의 전환 비용을 최소화하기 위해 관리되는 호출을 포함하는 문에는 대상 응용 프로그램 도메인을 확인하는 시작 단계가 있습니다. 이러한 확인 단계를 통해 각 행에서 전환 비용을 줄일 수 있습니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
- 다음 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 통합된 CLR과 관련된 성능 고려 사항에 대해 간략히 설명합니다. 더 자세한 정보를 찾을 수 있습니다 "[SQL Server 2005에서 사용 하 여 CLR 통합](http://go.microsoft.com/fwlink/?LinkId=50332)" MSDN 웹 사이트에 있습니다. 관리 코드 성능에 대 한 일반 정보를 확인할 수 있습니다 "[향상.NET 응용 프로그램 성능 및 확장성](http://go.microsoft.com/fwlink/?LinkId=50333)" MSDN 웹 사이트에 있습니다.  
+ 다음 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 통합된 CLR과 관련된 성능 고려 사항에 대해 간략히 설명합니다. 자세한 정보를 찾을 수 있습니다 "[SQL Server 2005의 CLR 통합 사용 하 여](http://go.microsoft.com/fwlink/?LinkId=50332)" MSDN 웹 사이트입니다. 관리 되는 코드 성능에 대 한 일반 정보를 찾을 수 있습니다 "[.NET 응용 프로그램 성능 및 확장성](http://go.microsoft.com/fwlink/?LinkId=50333)" MSDN 웹 사이트입니다.  
   
 ### <a name="user-defined-functions"></a>사용자 정의 함수  
  CLR 함수는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 사용자 정의 함수보다 호출 경로가 빠르다는 장점이 있습니다. 또한 관리 코드는 프로시저 코드, 계산 및 문자열 조작 부분에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)]보다 훨씬 성능이 뛰어납니다. 계산을 많이 수행하고 데이터 액세스는 수행하지 않는 CLR 함수는 관리 코드로 작성하는 것이 좋습니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수는 CLR 통합보다 데이터 액세스를 효율적으로 수행합니다.  

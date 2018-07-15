@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 서비스 및 데이터 원본을 | Microsoft Docs
+title: 데이터 마이닝 서비스 및 데이터 원본 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297473"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36181456"
  이 항목에서는 데이터 마이닝 모델을 생성, 처리, 배포 또는 쿼리하기 위해 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 필요한 정보를 제공합니다.  
   
 ## <a name="data-mining-services"></a>데이터 마이닝 서비스  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
   
 -   클라이언트로부터 수신한 문 구문 분석  
   
@@ -48,13 +48,13 @@ ms.locfileid: "36181456"
 -   서버 리소스 관리  
   
 ### <a name="xmla-listener"></a>XMLA 수신기  
- XMLA 수신기 구성 요소는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 와 클라이언트 간의 모든 XMLA 통신을 처리합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini 파일에서 구성 설정에 포트를 지정 하려면 사용할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 수신 합니다. 이 파일의 값이 0이면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 기본 포트에서 수신합니다. 달리 지정하지 않는 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 기본 TCP 포트를 사용합니다.  
+ XMLA 수신기 구성 요소는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 와 클라이언트 간의 모든 XMLA 통신을 처리합니다. 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini 파일에서 구성 설정을는 포트를 지정 하려면 사용할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 수신 하 합니다. 이 파일의 값이 0이면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 기본 포트에서 수신합니다. 달리 지정하지 않는 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 기본 TCP 포트를 사용합니다.  
   
 |포트|Description|  
 |----------|-----------------|  
-|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
-|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
-|서버 시작 시 동적으로 할당됩니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
+|2383| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
+|2382| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
+|서버 시작 시 동적으로 할당됩니다.| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
   
  이 서비스에서 사용된 포트를 제어하는 방법은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36181456"
 ## <a name="configuring-permissions-and-server-properties"></a>사용 권한 및 서버 속성 구성  
  데이터 마이닝에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 추가 권한이 필요합니다. 대부분의 데이터 마이닝 속성은 [Analysis Server 속성 대화 상자&#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md)를 사용하여 설정할 수 있습니다.  
   
- 구성할 수 있는 속성에 대 한 자세한 내용은 참조 [Analysis Services 서버 속성 구성](../server-properties/server-properties-in-analysis-services.md)합니다.  
+ 구성할 수 있는 속성에 대 한 자세한 내용은 참조 하세요. [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)합니다.  
   
  다음 서버 속성은 데이터 마이닝과 특별히 관련된 속성입니다.  
   
 -   `AllowAdHocOpenRowsetQueries` 서버 메모리 공간에 직접 로드 되는 OLE DB 공급자에 대 한 임시 액세스를 제어 합니다.  
   
     > [!IMPORTANT]  
-    >  보안을 강화하려면 이 속성을 `false`로 설정하는 것이 좋습니다. 기본값은 `false`입니다. 그러나 경우에이 속성이 `false`, 사용자는 계속 단일 쿼리를 만들고 및 허용 된 데이터 원본에 대해 OPENQUERY를 사용할 수 있습니다.  
+    >  보안을 강화하려면 이 속성을 `false`로 설정하는 것이 좋습니다. 기본값은 `false`입니다. 그러나이 경우에 속성이 `false`, 사용자는 계속 단일 쿼리를 만들고 및 허용 된 데이터 원본에 대해 OPENQUERY를 사용할 수 있습니다.  
   
 -   **AllowedProvidersInOpenRowset** 임시 액세스가 설정된 경우 공급자를 지정합니다. 쉼표로 구분된 ProgID 목록을 입력하여 여러 공급자를 지정할 수 있습니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36181456"
  서버를 튜닝하고 클라이언트 사용에 대한 보안을 제어하는 속성도 설정할 수 있습니다. 자세한 내용은 [Feature Properties](../server-properties/feature-properties.md)을 참조하세요.  
   
 > [!NOTE]  
->  버전에서 플러그 인 알고리즘 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+>  버전에서 플러그 인 알고리즘 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
  다음 개체 모델을 사용하여 Analysis Services 데이터베이스에 대한 연결을 만들고 데이터 마이닝 개체 작업을 수행할 수 있습니다.  

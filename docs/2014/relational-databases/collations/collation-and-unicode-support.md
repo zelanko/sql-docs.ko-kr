@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f7ba7721287907142e7966b6d4e298afa07a89f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287339"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. 와 같은 문자 데이터 형식과 함께 사용 되는 데이터 정렬은 `char` 및 `varchar` 사항이 코드 페이지와 해당 데이터 형식을 나타낼 수 있는 해당 문자입니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)를 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. 같은 문자 데이터 형식을 함께 사용 되는 데이터 정렬은 `char` 및 `varchar` 코드 지정 페이지와 해당 문자 데이터 형식에 나타낼 수 있는 합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)를 참조하세요.  
   
  서버, 데이터베이스, 열 또는 식에 대한 데이터 정렬을 선택하면 데이터에 일정한 특성이 부여되며, 이는 여러 데이터베이스 작업의 결과에 영향을 줍니다. 예를 들어 ORDER BY를 사용하여 쿼리를 작성할 경우 결과 집합의 정렬 순서는 쿼리의 식 수준에서 COLLATE 절에 지정되거나 데이터베이스에 적용된 데이터 정렬에 따라 달라집니다.  
   
@@ -117,7 +117,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> 유니코드 지원  
- 유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 여러 언어를 반영 하는 문자 데이터를 저장 하는 경우 항상 유니코드 데이터 형식 사용 (`nchar`, `nvarchar`, 및 `ntext`) 유니코드가 아닌 데이터 형식 대신 (`char`, `varchar`, 및 `text`).  
+ 유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 여러 언어를 반영 하는 문자 데이터를 저장 하는 경우 항상 유니코드 데이터 형식 사용 (`nchar`, `nvarchar`, 및 `ntext`)에서 비유니코드 데이터 형식 대신 (`char`, `varchar`, 및 `text`).  
   
  비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 이는 비유니코드 컴퓨터에서는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환이 별로 필요하지 않으므로 성능이 향상될 수 있습니다. 이러한 경우 유니코드 데이터 정렬이 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 유니코드 데이터 정렬을 개별적으로 선택해야 합니다.  
   
@@ -148,7 +148,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> 보조 문자  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 데이터 형식을 제공 `nchar` 및 `nvarchar` 유니코드 데이터를 저장 합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 데이터 형식을 제공 `nchar` 고 `nvarchar` 유니코드 데이터를 저장 합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.  
   
  보조 문자를 사용하는 경우  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Errors and Warnings event category [SQL Server]
 - event classes [Analysis Services], warnings
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - warnings events [Analysis Services]
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9601603c1bc0cc2a02005ab98d986d80897ebfb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a70b8cd5646c8fd9c28e0538e8a0c822b2c226ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284029"
 ---
 # <a name="errors-and-warnings-event-category"></a>Errors and Warnings 이벤트 범주
   Errors and Warnings 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fe704e638cb32ff397bf906c61593af6d07ba866
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b89788698662245d69cb8b209286e1e5dd2f93a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235323"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크
   master 저장 프로시저 전송 태스크는 **인스턴스의** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 간에 하나 이상의 사용자 정의 저장 프로시저를 전송합니다. **master** 데이터베이스에서 저장 프로시저를 전송하려면 프로시저 소유자가 dbo여야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36185890"
  Master 저장 프로시저 전송 태스크는 로그인 전송의 진행 상황은 보고하지 않으며 0% 및 100% 완료만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 에 정의 된 실행 값은 `ExecutionValue` 전송 된 저장된 프로시저 수를 반환 하는 작업의 속성입니다. 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 패키지에서 다른 개체에 사용할 수 있는 저장된 프로시저 전송에 대 한 정보 Master 저장 프로시저 전송 태스크의 속성을 지정할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+ 에 정의 된 실행 값은 `ExecutionValue` 전송 된 저장된 프로시저의 수를 반환 하는 태스크의 속성입니다. 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 저장된 프로시저 전송에 대 한 정보는 Master 저장 프로시저 전송 태스크의 속성 수 다른 개체에 사용할 수 있는 패키지에 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  Master 저장 프로시저 전송 태스크는 다음 사용자 지정 로그 항목을 포함합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36185890"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  이 로그 항목은 전송이 완료되었음을 보고합니다. 로그 항목에 종료 시간이 포함됩니다.  
   
- 또한에 대 한 로그 항목은 `OnInformation` 전송 된 저장된 프로시저 및에 대 한 로그 항목의 수를 보고 하는 이벤트는 `OnWarning` 은 덮어쓴 대상에 각 저장된 프로시저에 대 한 이벤트가 기록 됩니다.  
+ 또한 로그 항목을 `OnInformation` 전송 된 저장된 프로시저 및 로그 항목의 수를 보고 하는 이벤트를 `OnWarning` 은 덮어쓴 대상에 각 저장된 프로시저에 대 한 이벤트가 기록 됩니다.  
   
 ## <a name="security-and-permissions"></a>보안 및 사용 권한  
  사용자는 원본에서 **master** 데이터베이스의 저장 프로시저 목록을 볼 수 있는 권한이 있어야 하며 sysadmin 서버 역할의 멤버이거나 대상 서버의 **master** 데이터베이스에서 저장 프로시저를 만들 수 있는 권한이 있어야 합니다.  

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fdeb52e70e215ccbcd8a3d07baac71e85f4a939
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e0a6c5fe31a244e60e57a14453a29f1392fdcb73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330523"
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
   올바른 사용 권한이 있는 경우 데이터베이스 미러링 모니터를 사용하여 서버 인스턴스에 있는 미러된 데이터베이스의 모든 하위 집합을 모니터링할 수 있습니다. 모니터링을 사용하면 데이터베이스 미러링 세션에서 데이터가 제대로 흐르고 있는지 확인할 수 있습니다. 또한 데이터베이스 미러링 모니터는 데이터 흐름 감소의 원인을 해결하는 데 도움이 됩니다.  

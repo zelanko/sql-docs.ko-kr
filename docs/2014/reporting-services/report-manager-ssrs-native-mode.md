@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327073"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>보고서 관리자(SSRS 기본 모드)
   보고서 관리자는 HTTP 연결을 통해 원격 위치의 단일 보고서 서버 인스턴스를 관리하는 데 사용되는 웹 기반 보고서 액세스 및 관리 도구입니다. 또한 보고서 관리자를 보고서 뷰어로 사용하고 탐색 기능도 활용할 수 있습니다. 항목 내용  
@@ -51,7 +51,7 @@ ms.locfileid: "36184212"
   
 -   보고서 실행 속성, 보고서 기록 및 보고서 매개 변수 구성  
   
--   에 연결 하 고 데이터를 검색 하는 보고서 모델 만들기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본입니다.  
+-   에 연결 하 고 데이터를 검색 하는 보고서 모델 만들기를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본입니다.  
   
 -   모델의 특정 엔터티에 대한 액세스를 허용하도록 모델 항목 보안 설정 또는 미리 정의된 클릭 광고 보고서에 엔터티 매핑  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36184212"
  보고서 관리자를 사용하여 보고서 서버 폴더를 찾아보거나 특정 보고서를 검색할 수 있습니다. 보고서, 해당 일반 속성 및 보고서 기록에 캡처된 보고서의 지난 복사본을 볼 수 있습니다. 권한에 따라 보고서를 구독하여 전자 메일 받은 편지함 또는 파일 시스템의 공유 폴더로 배달되도록 할 수도 있습니다.  
   
 > [!NOTE]  
->  지원 되는 브라우저 및 버전 정보를 참조 하십시오. [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.  
+>  지원 되는 브라우저 및 버전에 대 한 내용은 참조 하세요 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.  
   
  보고서 관리자는 기본 모드로 실행되는 보고서 서버에만 사용되며 SharePoint 통합 모드용으로 구성된 보고서 서버에 대해서는 지원되지 않습니다.  
   
- 일부 보고서 관리자 기능은 지정 된 버전의에서 가지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
+ 일부 보고서 관리자 기능은 에서만 지정 된 버전의 사용 가능한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   
  새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 응용 프로그램 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)를 참조하세요.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36184212"
  보고서 관리자의 사용자 지정 범위는 상당히 제한되어 있습니다. 예를 들면 사이트 설정 페이지에서 응용 프로그램 제목을 수정할 수 있습니다. 웹 개발자인 경우 보고서 관리자에 사용되는 스타일 정보가 들어 있는 스타일시트를 수정할 수 있습니다. 보고서 관리자는 사용자 지정을 지원하도록 특수하게 디자인되지 않았으므로 수정한 사항을 철저히 테스트해야 합니다. 보고서 관리자로 원하는 작업을 수행할 수 없으면 사용자 지정 보고서 뷰어를 개발하거나 SharePoint 사이트에서 보고서를 찾고 확인할 수 있도록 SharePoint 웹 파트를 구성할 수 있습니다. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](report-server/configure-web-portal.md)을 참조하세요.  
   
 ##  <a name="bkmk_icon_descriptions"></a> 아이콘 설명  
- 다음 표에서는 보고서 관리자에 사용되는 아이콘에 대해 설명합니다. 보고서 도구 모음에 나타나는 아이콘에 대 한 자세한 내용은 참조 [HTML 뷰어 및 보고서 도구 모음](html-viewer-and-the-report-toolbar.md)합니다.  
+ 다음 표에서는 보고서 관리자에 사용되는 아이콘에 대해 설명합니다. 보고서 도구 모음에 표시 되는 아이콘에 대 한 자세한 내용은 참조 하세요. [HTML 뷰어 및 보고서 도구 모음](html-viewer-and-the-report-toolbar.md)합니다.  
   
 |아이콘|Description|작업|  
 |----------|-----------------|------------|  
@@ -118,10 +118,10 @@ ms.locfileid: "36184212"
   
 ## <a name="see-also"></a>관련 항목  
  [URL 구성 &#40;SSRS 구성 관리자&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+ [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [보고서 작성기 &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Reporting Services 도구](tools/reporting-services-tools.md)   
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [SharePoint 웹 파트를 사용 하 여 기본 모드 보고서 보기 및 탐색 &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   

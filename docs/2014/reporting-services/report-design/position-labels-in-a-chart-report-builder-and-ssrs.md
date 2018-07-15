@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7782cb836f437aa61064d64d084859dedf97ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0eabbd703d04e5aca74b8b94e449d5d8fd18ae97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261999"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>차트의 레이블 위치 지정(보고서 작성기 및 SSRS)
   차트 종류마다 셰이프가 다르므로 데이터 요소 레이블은 차트에서 방해가 되지 않을 최적의 위치에 배치됩니다. 레이블의 기본 위치는 차트 종류에 따라 달라집니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36185336"
   
 2.  디자인 화면에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택합니다.  
   
-3.  속성 창을 엽니다. **보기** 탭에서 **속성**을 클릭합니다.  
+3.  속성 창을 엽니다.  **보기** 탭에서 **속성**을 클릭합니다.  
   
 4.  디자인 화면에서 차트를 클릭합니다. 차트의 속성이 속성 창에 표시됩니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36185336"
 6.  깔때기형 차트의 경우 FunnelLabelStyle 속성의 값을 선택하고, 피라미드형 차트의 경우 PyramidLabelStyle 속성의 값을 선택합니다.  
   
     > [!NOTE]  
-    >  이 속성 값으로 설정 된 경우 `OutsideInColumn`, 레이블이 세로 열에 그려집니다. 열의 위치는 변경할 수 없습니다.  
+    >  이 속성 값으로 설정 되는 경우 `OutsideInColumn`, 레이블이 세로 열에 그려집니다. 열의 위치는 변경할 수 없습니다.  
   
 ### <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>가로 막대형 차트에서 요소 레이블의 위치를 변경하려면  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36185336"
   
 2.  디자인 화면에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택합니다.  
   
-3.  속성 창을 엽니다. **보기** 탭에서 **속성**을 클릭합니다.  
+3.  속성 창을 엽니다.  **보기** 탭에서 **속성**을 클릭합니다.  
   
 4.  디자인 화면에서 차트를 클릭합니다. 차트의 속성이 속성 창에 표시됩니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36185336"
   
 2.  디자인 화면에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택합니다.  
   
-3.  속성 창을 엽니다. **보기** 탭에서 **속성**을 클릭합니다.  
+3.  속성 창을 엽니다.  **보기** 탭에서 **속성**을 클릭합니다.  
   
 4.  디자인 화면에서 계열을 클릭합니다. 계열의 속성이 속성 창에 표시됩니다.  
   

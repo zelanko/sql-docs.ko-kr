@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6b3261baa126f40291429b14080ed419cfe2081
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e2392b6ee2bdafe0cc6a836cadb0bca94bf71612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309973"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 이벤트 클래스
   OLEDB Errors 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 OLE DB 공급자에 대한 호출이 오류를 반환하는 경우 발생합니다. OLE DB 공급자의 실패한 HRESULT를 보려면 이 이벤트 클래스를 추적에 포함시킵니다.  

@@ -1,5 +1,5 @@
 ---
-title: 글꼴 색, 크기 및 스타일 다이어그램 (Visual Database Tools)에서 변경 | Microsoft Docs
+title: 글꼴 색, 크기 및 다이어그램 (Visual Database Tools)의 스타일 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], changing text size
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96bd9cddc0821887982f26485f38be8370fba9c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8ecb71fc2a9dce37bf3797da0326c16d5965afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232403"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)
   글꼴 색, 크기 및 스타일을 변경하여 데이터베이스 다이어그램에 나타나는 텍스트 모양을 사용자 지정할 수 있습니다. 변경 내용은 새 다이어그램과 수정 시 기존 다이어그램에 적용됩니다.  

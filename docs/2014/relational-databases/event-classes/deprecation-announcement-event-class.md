@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecation Announcement event class
 ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3f0c25031a54be1b4b3131483e3aecacf1bb683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0c9511f650f86744b2fe96a724cfbe4c48010bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252515"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 이벤트 클래스
   **Deprecation Announcement** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 제거되지만 다음 번 주요 릴리스에서는 제거되지 않을 기능을 사용할 때 발생합니다. 응용 프로그램을 오랫동안 유지하려면 **Deprecation Announcement** 이벤트 클래스 또는 **Deprecation Final Support** 이벤트 클래스가 발생되는 기능을 사용하지 마십시오.  
@@ -35,7 +35,7 @@ ms.locfileid: "36182599"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
-|DatabaseID|`int`|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 경우 데이터베이스의 이름을 표시 하는 `ServerName` 데이터 열이 추적에서 캡처되고 서버를 사용 합니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
+|DatabaseID|`int`|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터베이스의 이름이 표시는 `ServerName` 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있습니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |EventClass|`int`|이벤트 유형 = 125|27|아니요|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
@@ -51,7 +51,7 @@ ms.locfileid: "36182599"
 |Offset|`int`|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|61|예|  
 |RequestID|`int`|문을 포함하는 요청의 ID입니다.|49|예|  
 |데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|`nvarchar`|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
-|SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 에 연결 하는 경우 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1를 사용 하 고, 2로 문을 실행할 `SessionLoginName` 은 Login1 및 `LoginName` 2를 표시 합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어, 연결 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1을 사용 하 여 고 고 Login2로 문을 `SessionLoginName` 은 Login1을 표시 하 고 `LoginName` 은 Login2를 표시 합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|`int`|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |SqlHandle|`image`|SQL 일괄 처리나 저장 프로시저를 식별하는 데 사용할 수 있는 이진 핸들입니다.|63|예|  
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  

@@ -1,5 +1,5 @@
 ---
-title: 가져오기 및 내보내기 (SSIS 서비스) 패키지 | Microsoft Docs
+title: (SSIS 서비스) 패키지 가져오기 및 내보내기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
 - packages [Integration Services], exporting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ee81709bb8f0c9b30ab528d78a21b4ff72c1eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322693"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>패키지 가져오기 및 내보내기(SSIS 서비스)
     
@@ -43,7 +43,7 @@ ms.locfileid: "36183488"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 통해 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경 합니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 하면 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경 합니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
   
  **dtutil** 명령 프롬프트 유틸리티(dtutil.exe)를 사용하여 패키지를 다른 형식으로 복사할 수 있습니다. 자세한 내용은 [dtutil Utility](dtutil-utility.md)를 참조하세요.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36183488"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 다음과 같은 위치에서 가져오거나 내보낼 수 있습니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
+-    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 다른 저장소 형식 또는 위치로 내보낼 수 있습니다.  
   
@@ -137,6 +137,6 @@ ms.locfileid: "36183488"
 8.  **확인** 을 클릭하여 내보내기를 완료합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [관리 패키지 &#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)  
+ [패키지 관리 &#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)  
   
   

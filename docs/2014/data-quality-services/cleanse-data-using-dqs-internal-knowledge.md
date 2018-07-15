@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dqproject.map.f1
 - sql12.dqs.dqproject.export.f1
@@ -18,13 +18,13 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f62073c593ec13dedc3d046d94cfc7dd6da92ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e2ade132f39a66f1627a2dfeabac03b3dafd7e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310493"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [기술 자료 구축](../../2014/data-quality-services/building-a-knowledge-base.md)을 참조하세요.  

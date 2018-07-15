@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305113"
 ---
 # <a name="event-notifications"></a>이벤트 알림
   이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스에 이벤트 정보를 보냅니다. 이벤트 알림은 다양한 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL(데이터 언어 정의) 문과 SQL 추적 이벤트에 대한 응답으로 실행되어 이러한 이벤트에 대한 정보를 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스로 보냅니다.  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>이벤트 알림 개념  
  이벤트 알림이 생성되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스와 지정한 대상 서비스 간에 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화가 열립니다. 대화는 일반적으로 이벤트 알림이 서버 인스턴스의 개체로 존재하는 한 열린 상태로 유지됩니다. 몇몇 오류가 발생하는 경우에는 이벤트 알림을 삭제하기 전에 대화가 종료될 수 있습니다. 이러한 대화는 이벤트 알림 간에 공유되지 않습니다. 각 이벤트 알림에는 자체적인 배타 대화가 있습니다. 대화를 명시적으로 종료하면 대상 서비스가 더 이상의 메시지를 받지 못하게 되며 이벤트 알림이 다음에 실행될 때 해당 대화가 다시 열리지 않습니다.  
   
- 이벤트 정보에 전달 되는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 형식의 변수로 서비스 `xml` 이벤트 발생 시기, 영향을 받는 데이터베이스 개체에 대 한 정보를 제공 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 관련 된 일괄 처리 문 및 기타 정보입니다. 이벤트 알림이 만드는 XML 스키마에 대한 자세한 내용은 [EVENTDATA&#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)를 참조하세요.  
+ 이벤트 정보에 전달 됩니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 형식 변수의 서비스 `xml` 이벤트 발생 시기, 영향을 받는 데이터베이스 개체에 대 한 정보를 제공 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 관련 된 일괄 처리 문 및 기타 정보입니다. 이벤트 알림이 만드는 XML 스키마에 대한 자세한 내용은 [EVENTDATA&#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)를 참조하세요.  
   
 ### <a name="event-notifications-vs-triggers"></a>이벤트 알림과 트리거  
  다음 표에서는 트리거와 이벤트 알림을 비교 및 대조합니다.  
@@ -71,7 +70,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML 트리거 이름은 스키마 범위입니다. DDL 트리거 이름은 데이터베이스 범위이거나 서버 범위입니다.|이벤트 알림 이름은 서버 또는 데이터베이스 범위입니다. QUEUE_ACTIVATION 이벤트에 대한 이벤트 알림의 범위는 특정 큐로 한정됩니다.|  
 |DML 트리거는 트리거가 적용되는 테이블과 동일한 소유자에 의해 소유됩니다.|큐에 대한 이벤트 알림의 소유자는 해당 이벤트 알림이 적용되는 개체의 소유자와 다를 수 있습니다.|  
 |트리거는 EXECUTE AS 절을 지원합니다.|이벤트 알림은 EXECUTE AS 절을 지원하지 않습니다.|  
-|반환 하는 EVENTDATA 함수를 사용 하 여 DDL 트리거 이벤트 정보를 캡처할 수 있습니다는 `xml` 데이터 형식입니다.|이벤트 알림 보내기 `xml` Service Broker 서비스에 이벤트 정보입니다. 해당 정보는 EVENTDATA 함수와 같은 스키마 형식으로 지정됩니다.|  
+|DDL 트리거 이벤트 정보를 반환 하는 EVENTDATA 함수를 사용 하 여 캡처할 수 있습니다는 `xml` 데이터 형식입니다.|이벤트 알림을 보낼 `xml` Service Broker 서비스에 이벤트 정보입니다. 해당 정보는 EVENTDATA 함수와 같은 스키마 형식으로 지정됩니다.|  
 |트리거의 메타데이터는 **sys.triggers** 및 **sys.server_triggers** 카탈로그 뷰에 포함됩니다.|이벤트 알림의 메타데이터는 **sys.event_notifications** 및 **sys.server_event_notifications** 카탈로그 뷰에 포함됩니다.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>이벤트 알림과 SQL 추적  

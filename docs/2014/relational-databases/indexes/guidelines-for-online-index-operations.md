@@ -5,10 +5,9 @@ ms.date: 11/11/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
 - online index operations
@@ -18,25 +17,25 @@ helpviewer_keywords:
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 62
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0a7ea8359dfaff23a2d3926c1cfa7ccc41065a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e027535f9b70acc518bd6fa3e3f4324007021311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316133"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
   온라인 인덱스 작업을 수행할 때 다음 지침이 적용됩니다.  
   
--   클러스터형된 인덱스 만들어야, 다시 작성 또는 삭제 된 오프 라인으로 원본 테이블에는 다음 (large object) 데이터 형식이 포함 된 경우: `image`, **ntext**, 및 `text`합니다.  
+-   클러스터형된 인덱스 만들어야 합니다를 다시 작성 또는 삭제 오프 라인으로 기본 테이블 (large object) 데이터 형식은 포함 하는 경우: `image`, **ntext**, 및 `text`합니다.  
   
 -   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  다음 테이블은 온라인으로 수행할 수 있는 인덱스 작업 및 이러한 온라인 작업에서 제외되는 인덱스를 보여 줍니다. 추가 제한 사항도 포함됩니다.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "36182025"
   
  온라인 작업을 권장하지만 사용 환경 및 특정 요구 사항도 고려해야 합니다. 인덱스 작업을 오프라인 상태에서 실행하는 것이 가장 좋을 수도 있습니다. 이 경우 사용자가 작업 수행 동안 데이터 액세스를 제한하지만 작업은 더욱 빨리 끝나고 보다 적은 리소스를 사용합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 추가 프로세스를 사용하여 인덱스 문과 관련된 검색 및 정렬 작업을 수행할 수 있습니다. MAXDOP 인덱스 옵션을 사용하여 온라인 인덱스 작업에만 사용되는 프로세서 수를 제어할 수 있습니다. 이 방법으로 인덱스 작업에서 사용하는 리소스와 동시 사용자가 사용하는 리소스의 균형을 맞출 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요. 지원 병렬 인덱스 작업의 SQL Server 버전에 대 한 자세한 내용은 참조 하십시오. [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 추가 프로세스를 사용하여 인덱스 문과 관련된 검색 및 정렬 작업을 수행할 수 있습니다. MAXDOP 인덱스 옵션을 사용하여 온라인 인덱스 작업에만 사용되는 프로세서 수를 제어할 수 있습니다. 이 방법으로 인덱스 작업에서 사용하는 리소스와 동시 사용자가 사용하는 리소스의 균형을 맞출 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](configure-parallel-index-operations.md)을 참조하세요. 자세한 내용은 SQL Server 버전에 대 한 지원 병렬 인덱스 작업을 참조 하세요. [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  인덱스 작업의 마지막 단계에 S  잠금 또는 Sch-M  잠금이 보유되므로 BEGIN  TRANSACTION...COMMIT  블록 등의 명시적 사용자 트랜잭션 내에서 온라인 인덱스 작업을 실행할 때는 주의해야 합니다. 이 작업을 실행하면 트랜잭션이 끝날 때까지 잠금이 보유되어 사용자 동시성을 방해할 수 있습니다.  
   

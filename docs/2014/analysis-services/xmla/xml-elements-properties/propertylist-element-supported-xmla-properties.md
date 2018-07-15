@@ -18,38 +18,38 @@ helpviewer_keywords:
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
 caps.latest.revision: 24
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 89293d101513cb2cec07fe69b2ba22e67f55dd21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 04e2b96df0cc549acadd50d80356a62bf327b7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243963"
 ---
 # <a name="supported-xmla-properties-xmla"></a>지원되는 XMLA 속성(XMLA)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 표에 나열 된 속성을 지원 합니다. 이러한 나열 된 속성을 사용 하 여는 [속성](properties-element-xmla.md) 의 요소는 [Discover](../xml-elements-methods-discover.md) 및 [Execute](../xml-elements-methods-execute.md) 메서드.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 표에 나열 된 속성을 지원 합니다. 이러한 나열 된 속성을 사용 합니다 [속성](properties-element-xmla.md) 의 요소를 [검색](../xml-elements-methods-discover.md) 및 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
 |속성|요소|  
 |----------|-------------|  
-|AxisFormat|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 내에서 사용 하는 형식을 결정 한 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 다차원 데이터 집합의 축을 설명 하기 위해 결과 집합입니다. 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
+|AxisFormat|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 내에서 사용 되는 형식을 결정 하는 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 다차원 데이터 집합의 축을 설명 하기 위해 결과 집합입니다. 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
   
 |값|Description|  
 |-----------|-----------------|  
-|*ClusterFormat*|`MDDataSet` 축 구성 된 하나 이상의 [CrossProduct](crossproduct-element-xmla.md) 요소입니다.|  
-|*CustomFormat*|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 사용 하 여는 *TupleFormat* 이 설정 합니다.|  
-|*TupleFormat*|(기본값) `MDDataSet` 하나 이상 포함 되어 있는 축 [튜플](tuple-element-xmla.md) 요소입니다.|  
+|*ClusterFormat*|합니다 `MDDataSet` 하나 이상의 축 이루어집니다 [CrossProduct](crossproduct-element-xmla.md) 요소입니다.|  
+|*CustomFormat*|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 사용 하는 *TupleFormat* 이 설정에 대 한 형식입니다.|  
+|*TupleFormat*|(기본값) 합니다 `MDDataSet` 하나 이상 포함 되어 있는 축 [튜플](tuple-element-xmla.md) 요소입니다.|  
   
  이 속성은 `Execute` 메서드와 함께 사용할 수 있습니다.  
   
 |속성|요소|  
 |----------|-------------|  
-|BeginRange|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> `CellOrdinal` 특성 값에 해당하는 정수 값(0부터 시작)을 포함합니다. (의 `CellOrdinal` 특성이 포함 되어는 [셀](cell-element-mddataset-xmla.md) 요소에는 [CellData](celldata-element-xmla.md) 섹션 `MDDataSet`.)<br /><br /> 클라이언트 응용 프로그램은 `EndRange` 속성과 함께 이 속성을 사용하여 명령에 의해 반환되는 OLAP 데이터 집합을 셀의 특정 범위로 제한할 수 있습니다. -1을 지정하면 `EndRange` 속성에 지정된 셀까지 모든 셀이 반환됩니다.<br /><br /> 이 속성에 대 한 기본값은-1입니다.<br /><br /> 이 속성은 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|BeginRange|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> `CellOrdinal` 특성 값에 해당하는 정수 값(0부터 시작)을 포함합니다. (합니다 `CellOrdinal` 특성이 포함 되어는 [셀](cell-element-mddataset-xmla.md) 요소에는 [CellData](celldata-element-xmla.md) 부분 `MDDataSet`.)<br /><br /> 클라이언트 응용 프로그램은 `EndRange` 속성과 함께 이 속성을 사용하여 명령에 의해 반환되는 OLAP 데이터 집합을 셀의 특정 범위로 제한할 수 있습니다. -1을 지정하면 `EndRange` 속성에 지정된 셀까지 모든 셀이 반환됩니다.<br /><br /> 이 속성의 기본값은-1입니다.<br /><br /> 이 속성은 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |Catalog|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스로 세션을 설정하여 XMLA 명령을 보내는 경우 이 속성은 OLE DB 속성인 DBPROP_INIT_CATALOG와 같습니다.<br /><br /> 세션 중 이 속성을 설정하여 세션에 대한 현재 데이터베이스를 변경하는 경우 이 속성은 OLE DB 속성인 DBPROP_CURRENTCATALOG와 같습니다.<br /><br /> 이 속성의 기본값은 빈 문자열입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |CatalogLocation|*사용법*<br /> 읽기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_CATALOGLOCATION과 같습니다.<br /><br /> 이 속성의 기본값은 DBPROPVAL_CL_START와 같은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |ClientProcessID|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 현재 세션에 대한 프로세스 스레드의 ID(식별자)를 포함합니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|CommitTimeout|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 롤백하기 전에 현재 실행 중인 XMLA 명령의 커밋 단계에서 대기하는 시간(초)을 결정합니다. 커밋 단계와 같은 XMLA 명령에 해당 [문을](../xml-elements-commands/statement-element-xmla.md) 또는 [프로세스](../xml-elements-commands/process-element-xmla.md)합니다.<br /><br /> 영(0) 값은 인스턴스가 무기한 대기함을 나타냅니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|CommitTimeout|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 롤백하기 전에 현재 실행 중인 XMLA 명령의 커밋 단계에서 대기하는 시간(초)을 결정합니다. 커밋 단계와 같은 XMLA 명령에 해당 [문](../xml-elements-commands/statement-element-xmla.md) 하거나 [프로세스](../xml-elements-commands/process-element-xmla.md)합니다.<br /><br /> 영(0) 값은 인스턴스가 무기한 대기함을 나타냅니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |콘텐츠|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> `Discover` 및 `Execute` 메서드에서 반환되는 데이터 형식을 결정합니다. 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
   
 |값|Description|  
@@ -63,8 +63,8 @@ ms.locfileid: "36184388"
   
 |속성|요소|  
 |----------|-------------|  
-|Cube|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 명령에 대한 컨텍스트를 설정하는 큐브의 이름을 포함합니다. 명령 자체의 MDX (Multidimensional Expressions) FROM 절 내에서 같은 큐브 이름을 포함 하는 경우 [선택](/sql/mdx/mdx-data-manipulation-select) 문,이 속성의 설정이 무시 됩니다.<br /><br /> 이 속성의 기본값은 빈 문자열입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|DataSourceInfo|*사용법*<br /> 읽기/쓰기 `String` 속성(필수)<br /><br /> *Description*<br /> 데이터 원본에 연결하는 데 필요한 인스턴스 이름과 같은 정보를 포함합니다.<br /><br /> 클라이언트 응용 프로그램은 인스턴스로 보낼 `DataSourceInfo` 속성의 내용을 구성하지 않아야 합니다. 대신, 클라이언트 응용 프로그램이 사용 하 여 공급자가 지 원하는 데이터 소스를 찾아야는 `Discover` 를 검색할 메서드는 [DISCOVER_DATASOURCES](../../schema-rowsets/xml/discover-datasources-rowset.md) 행 집합입니다. 그런 다음 클라이언트 응용 프로그램은 DISCOVER_DATASOURCES 행 집합에서 클라이언트가 검색한 `DataSourceInfo` 속성에 대해 같은 값을 다시 보냅니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|Cube|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 명령에 대한 컨텍스트를 설정하는 큐브의 이름을 포함합니다. 명령 자체에 큐브 이름이 같은 FROM 절에는 MDX (Multidimensional Expressions) 내에서 포함 하는 경우 [선택](/sql/mdx/mdx-data-manipulation-select) 문은이 속성의 설정은 무시 됩니다.<br /><br /> 이 속성의 기본값은 빈 문자열입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|DataSourceInfo|*사용법*<br /> 읽기/쓰기 `String` 속성(필수)<br /><br /> *Description*<br /> 데이터 원본에 연결하는 데 필요한 인스턴스 이름과 같은 정보를 포함합니다.<br /><br /> 클라이언트 응용 프로그램은 인스턴스로 보낼 `DataSourceInfo` 속성의 내용을 구성하지 않아야 합니다. 대신 클라이언트 응용 프로그램이 사용 하 여 공급자가 지 원하는 데이터 원본을 찾아야 합니다 `Discover` 검색 하는 메서드를 [DISCOVER_DATASOURCES](../../schema-rowsets/xml/discover-datasources-rowset.md) 행 집합입니다. 그런 다음 클라이언트 응용 프로그램은 DISCOVER_DATASOURCES 행 집합에서 클라이언트가 검색한 `DataSourceInfo` 속성에 대해 같은 값을 다시 보냅니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |DbpropCatalogTerm|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_CATALOGTERM과 같습니다.<br /><br /> 이 속성의 기본값은 "데이터베이스"입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |DbpropCatalogUsage|*사용법*<br /> 읽기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_CATALOGUSAGE와 같습니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |DbpropColumnDefinition|*사용법*<br /> 읽기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_COLUMNDEFINITION과 같습니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
@@ -178,7 +178,7 @@ ms.locfileid: "36184388"
   
  세션을 만들 때만 설정할 수 있는 세션 속성입니다.  
   
- 참조 [하위 Select 및 하위 큐브의 계산 멤버](../../multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 계산된 멤버 또는 하위 select 및 하위 큐브의 계산된 집합의 동작에 대 한 자세한 내용은 대 한 합니다.  
+ 참조 [하위 Select 및 하위 큐브의 계산 멤버](../../multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 계산된 멤버 또는 하위 select 및 하위 큐브의 계산된 집합의 동작에 대 한 자세한 설명은 대 한 합니다.  
   
 |속성|요소|  
 |----------|-------------|  
@@ -209,22 +209,22 @@ ms.locfileid: "36184388"
   
 |속성|요소|  
 |----------|-------------|  
-|Disable Prefetch Facts|*사용법*<br /> 읽기/쓰기 `Boolean` 속성(옵션)<br /><br /> *Description*<br /> True로 설정하면 엔진에서 더 이상 세션의 길이에 대한 값을 사전 인출하지 않습니다.<br /><br /> 이 속성에 대 한 기본값은 `False`합니다.|  
+|Disable Prefetch Facts|*사용법*<br /> 읽기/쓰기 `Boolean` 속성(옵션)<br /><br /> *Description*<br /> True로 설정하면 엔진에서 더 이상 세션의 길이에 대한 값을 사전 인출하지 않습니다.<br /><br /> 이 속성의 기본값은 `False`합니다.|  
 |EffectiveRoles|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|EffectiveUserName|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 사용자 이름을 재정의하는 데 사용할 계정의 이름을 지정합니다. 속성의 값이 정규화 되지 않으므로, 하는 MDX [UserName](/sql/mdx/username-mdx) 이 속성을 사용 하는 경우 함수는 리터럴 값을 반환 합니다. 이 속성은 서버 관리자만 사용할 수 있습니다.<br /><br /> 이 속성은 다음 SID 유형을 지원: 사용자, 그룹, 별칭, WellKnownGroup, 컴퓨터입니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|EndRange|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> `CellOrdinal` 특성 값에 해당하는 정수 값(0부터 시작)을 지정합니다. `CellOrdinal` 특성은 `Cell`의 `CellData` 섹션에 있는 `MDDataSet` 요소의 일부입니다.<br /><br /> 클라이언트 응용 프로그램은 `BeginRange` 속성과 함께 이 속성을 사용하여 명령에 의해 반환되는 OLAP 데이터 집합을 셀의 특정 범위로 제한할 수 있습니다. -1을 지정하면 `BeginRange` 속성에 지정된 셀에서 모든 셀이 반환됩니다.<br /><br /> 이 속성에 대 한 기본값은-1입니다.<br /><br /> 이 속성은 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|ExecutionMode|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성에 대 한 기본값은 *Execute*합니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|EffectiveUserName|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 사용자 이름을 재정의하는 데 사용할 계정의 이름을 지정합니다. 속성의 값이 정규화 되지 않으므로, 하는 MDX [UserName](/sql/mdx/username-mdx) 이 속성을 사용 하는 경우 함수는 리터럴 값을 반환 합니다. 이 속성은 서버 관리자만 사용할 수 있습니다.<br /><br /> 이 속성은 다음 SID 유형을 지원: 사용자, 그룹, 별칭, WellKnownGroup, 컴퓨터.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|EndRange|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> `CellOrdinal` 특성 값에 해당하는 정수 값(0부터 시작)을 지정합니다. `CellOrdinal` 특성은 `Cell`의 `CellData` 섹션에 있는 `MDDataSet` 요소의 일부입니다.<br /><br /> 클라이언트 응용 프로그램은 `BeginRange` 속성과 함께 이 속성을 사용하여 명령에 의해 반환되는 OLAP 데이터 집합을 셀의 특정 범위로 제한할 수 있습니다. -1을 지정하면 `BeginRange` 속성에 지정된 셀에서 모든 셀이 반환됩니다.<br /><br /> 이 속성의 기본값은-1입니다.<br /><br /> 이 속성은 `Execute` 메서드와 함께 사용할 수 있습니다.|  
+|ExecutionMode|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성의 기본값은 *Execute*합니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |ForceCommitTimeout|*사용법*<br /> 쓰기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 이전에 실행된 명령을 강제로 롤백하기 전에 현재 실행 중인 XMLA 명령의 커밋 단계에서 대기하는 시간(초)을 결정합니다. 커밋 단계는 `Statement` 또는 `Process`와 같은 XMLA 명령에 해당합니다.<br /><br /> 영(0) 값은 인스턴스가 무기한 대기함을 나타냅니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |형식|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> `Discover` 및 `Execute` 메서드에서 반환되는 결과 집합의 유형을 결정합니다. 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
   
- 이 속성에 대 한 기본값은 *네이티브*합니다.  
+ 이 속성의 기본값은 *네이티브*합니다.  
   
  이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|*테이블 형식*|결과 사용 하 여 집합을 반환 된 [행 집합](../xml-data-types/rowset-data-type-xmla.md) 데이터 형식입니다.|  
-|*다차원*|사용 하 여 행 집합 반환 된 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.|  
+|*테이블 형식*|결과 사용 하 여 집합을 반환 합니다 [행 집합](../xml-data-types/rowset-data-type-xmla.md) 데이터 형식입니다.|  
+|*다차원*|사용 하 여 행 집합을 반환 합니다 [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.|  
 |*네이티브*|형식이 명시적으로 지정되지 않습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 명령에 적합한 형식을 반환합니다. 실제 결과 유형은 결과의 네임스페이스로 식별됩니다.|  
   
 |속성|요소|  
@@ -279,7 +279,7 @@ ms.locfileid: "36184388"
 |속성|요소|  
 |----------|-------------|  
 |MdpropNamedLevels|*사용법*<br /> 읽기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 MDPROP_NAMED_LEVELS와 같습니다.<br /><br /> 이 속성의 기본값은 MDPROPVAL_NL_NAMEDLEVELS 및 MDPROPVAL_NL_NUMBEREDLEVELS의 조합과 같은 3입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|MdxMissingMemberMode|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> MDX 문에서 누락된 멤버를 무시할 것인지 여부를 나타냅니다.<br /><br /> 이 속성은 OLE DB 속성인 DBPROP_MDX_MISSING_MEMBER_MODE와 같습니다.<br /><br /> 이 속성에 대 한 기본값은 *기본*합니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
+|MdxMissingMemberMode|*사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> MDX 문에서 누락된 멤버를 무시할 것인지 여부를 나타냅니다.<br /><br /> 이 속성은 OLE DB 속성인 DBPROP_MDX_MISSING_MEMBER_MODE와 같습니다.<br /><br /> 이 속성의 기본값은 *기본*입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -289,23 +289,23 @@ ms.locfileid: "36184388"
   
 |속성|요소|  
 |----------|-------------|  
-|MDXSupport|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> MDX 지원 수준을 설명하는 열거형을 지정합니다.<br /><br /> `Value` = *코어* 모든 MDX 옵션이 지원 됩니다.<br /><br /> 열거형에 포함 되는 유일한 값은 현재 *코어*합니다. 이후 릴리스에서 이 열거형에 대해 다른 값이 정의될 예정입니다.<br /><br /> 이 속성에 대 한 기본값은 *코어*합니다.<br /><br /> 이 속성은 `Discover` 메서드와 함께 사용할 수 있습니다.|  
+|MDXSupport|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> MDX 지원 수준을 설명하는 열거형을 지정합니다.<br /><br /> `Value` = *Core* 모든 MDX 옵션이 지원 됩니다.<br /><br /> 열거형에 포함 하는 유일한 값은 현재 *Core*합니다. 이후 릴리스에서 이 열거형에 대해 다른 값이 정의될 예정입니다.<br /><br /> 이 속성의 기본값은 *Core*합니다.<br /><br /> 이 속성은 `Discover` 메서드와 함께 사용할 수 있습니다.|  
 |NonEmptyThreshold|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|암호|**이 속성은 더 이상 지원 됩니다.**<br /><br /> *사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 이전 버전과의 호환성을 위해 이 속성은 `Execute` 또는 `Discover` 메서드와 함께 사용될 경우 오류를 생성하지 않고 무시됩니다.|  
+|암호|**이 속성은 더 이상 지원 합니다.**<br /><br /> *사용법*<br /> 쓰기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 이전 버전과의 호환성을 위해 이 속성은 `Execute` 또는 `Discover` 메서드와 함께 사용될 경우 오류를 생성하지 않고 무시됩니다.|  
 |ProviderName|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_DBMSNAME과 같습니다.<br /><br /> 이 속성의 기본값은 "OLAP 서버"입니다.<br /><br /> 이 속성은 `Discover` 메서드와 함께 사용할 수 있습니다.|  
 |ProviderType|*사용법*<br /> 읽기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_DATASOURCE_TYPE과 같습니다.<br /><br /> 이 속성의 기본값은 6입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |ProviderVersion|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_DBMSVER와 같습니다.<br /><br /> 이 속성의 기본값은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스의 버전입니다.<br /><br /> 이 속성은 `Discover` 메서드와 함께 사용할 수 있습니다.|  
 |ReadOnlySession|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |RealTimeOlap|*사용법*<br /> 읽기/쓰기 `Boolean` 속성(옵션)<br /><br /> *Description*<br /> TRUE로 설정하면 테이블 알림을 수신하는 모든 파티션이 캐싱을 무시하고 실시간으로 쿼리됩니다. 이 속성은 OLE DB 속성인 DBPROP_MSMD_REAL_TIME_OLAP과 같습니다.<br /><br /> 이 속성의 기본값은 FALSE입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |ReturnCellProperties|*사용법*<br /> 읽기/쓰기 `Boolean` 속성(옵션)<br /><br /> *Description*<br /> 이 속성의 기본값은 FALSE입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|역할|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 응용 프로그램이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 역할 이름의 쉼표로 구분된 문자열을 지정합니다. 이 속성을 통해 사용자는 현재 사용 중인 역할 이외의 역할을 사용하여 연결할 수 있습니다. 예를 들어 서버 관리자가 역할의 멤버로 큐브에 연결하여 해당 역할에 부여된 사용 권한을 테스트할 수 있습니다. 이 사용자는 이 속성을 사용하여 연결하도록 지정된 역할의 멤버여야 합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> **참고!** 역할 이름은 대/소문자를 구분합니다. **사용 하지 마십시오** 쉼표로 구분 된 역할 이름 사이 공백이 있습니다. 공백을 사용하면 쿼리에서 오류 및 예기치 않은 결과를 보안된 셀 집합으로 반환할 수 있습니다.|  
-|SafetyOptions|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 응용 프로그램에서 안전하지 않은 라이브러리를 등록 및 로드할 수 있는지 여부를 결정합니다.<br /><br /> 이 속성의 값은 로컬 큐브에 PASSTHROUGH 키워드가 허용되는지 여부도 결정합니다. 다음과 같은 경우 오류가 발생합니다.<br /><br /> -있으면 클라이언트 응용 프로그램이 PASSTHROUGH 키워드를 포함 하는 INSERT INTO 문을 사용 하 여 로컬 큐브를 만들려고 시도 합니다.<br />-있으면 클라이언트 응용 프로그램이 PASSTHROUGH 키워드를 사용 하는 INSERT INTO 문이 있는 로컬 큐브를 업데이트 하려고 시도 합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
+|역할|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 응용 프로그램이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 역할 이름의 쉼표로 구분된 문자열을 지정합니다. 이 속성을 통해 사용자는 현재 사용 중인 역할 이외의 역할을 사용하여 연결할 수 있습니다. 예를 들어 서버 관리자가 역할의 멤버로 큐브에 연결하여 해당 역할에 부여된 사용 권한을 테스트할 수 있습니다. 이 사용자는 이 속성을 사용하여 연결하도록 지정된 역할의 멤버여야 합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> **참고!** 역할 이름은 대/소문자를 구분합니다. **사용 하지 않는** 쉼표로 구분 된 역할 이름 사이 공백이 있습니다. 공백을 사용하면 쿼리에서 오류 및 예기치 않은 결과를 보안된 셀 집합으로 반환할 수 있습니다.|  
+|SafetyOptions|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 응용 프로그램에서 안전하지 않은 라이브러리를 등록 및 로드할 수 있는지 여부를 결정합니다.<br /><br /> 이 속성의 값은 로컬 큐브에 PASSTHROUGH 키워드가 허용되는지 여부도 결정합니다. 다음과 같은 경우 오류가 발생합니다.<br /><br /> 인 경우 클라이언트 응용 프로그램이 PASSTHROUGH 키워드를 포함 하는 INSERT INTO 문을 사용 하 여 로컬 큐브를 만들려면 하려고 시도 합니다.<br />인 경우 클라이언트 응용 프로그램이 PASSTHROUGH 키워드를 사용 하는 INSERT INTO 문이 있는 로컬 큐브를 업데이트 하려고 시도 합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
   
 |속성|값|Description|  
 |----------|-----------|-----------------|  
 |DBPROPVAL_MSMD_SAFETY_OPTIONS_DEFAULT|*0*|이 값은 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE로 처리됩니다.<br /><br /> 로컬 큐브에 대한 연결의 경우 이 값은 CREATECUBE 연결 문자열 속성의 사용 여부에 따라 달라집니다. CREATECUBE 연결 문자열 속성이 사용되면 이 값은 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL과 같습니다. 그렇지 않으면 이 값은 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE와 같습니다.|  
 |DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL|*1.*|이 값은 초기화 및 스크립팅을 수행하기에 안전한지 확인하지 않고 모든 사용자 정의 함수 라이브러리를 활성화합니다. 로컬 큐브에 대한 연결의 경우 이 값은 저장 프로시저와 PASSTHROUGH 키워드(INSERT INTO 문)를 사용할 수 있도록 합니다.<br /><br /> **이 옵션은 좋지 않습니다**합니다.|  
-|DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE|*2*|이 값은 특정 사용자 정의 함수 라이브러리의 모든 클래스가 초기화 및 스크립팅을 수행하기에 안전한지 확인되도록 합니다. 로컬 큐브에 대한 연결의 경우 이 값은 PermissionSet 속성이 안전으로 설정되지 않은 저장 프로시저와 PASSTHROUGH 키워드(INSERT INTO 문)를 사용하지 못하도록 합니다.<br /><br /> 이 값의 동작도 제거는 [MDSCHEMA_ACTIONS](../../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md) ACTION_TYPE 열에 HTML 값인지 명령 있거나 ACTION_TYPE 열에는 URL의 값과 값 하지 않는 콘텐츠 열에 있는 스키마 행 집합 "http://" 또는 "https://"로 시작 합니다.|  
+|DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE|*2*|이 값은 특정 사용자 정의 함수 라이브러리의 모든 클래스가 초기화 및 스크립팅을 수행하기에 안전한지 확인되도록 합니다. 로컬 큐브에 대한 연결의 경우 이 값은 PermissionSet 속성이 안전으로 설정되지 않은 저장 프로시저와 PASSTHROUGH 키워드(INSERT INTO 문)를 사용하지 못하도록 합니다.<br /><br /> 이 값의 동작도 제거 합니다 [MDSCHEMA_ACTIONS](../../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md) 명령 또는 HTML의 값은 ACTION_TYPE 열에 있거나 ACTION_TYPE 열에 url 값과 값 하지 않는 CONTENT 열에는 스키마 행 집합 "http://" 또는 "https://"로 시작 합니다.|  
 |DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_NONE|*3*|이 값은 세션 중 사용자 정의 함수가 사용되지 않도록 합니다. 로컬 큐브에 대한 연결의 경우 이 값은 모든 저장 프로시저와 PASSTHROUGH 키워드(INSERT INTO 문)를 사용하지 못하도록 합니다.<br /><br /> 이 값은 MDSCHEMA_ACTIONS 스키마 행 집합의 모든 동작도 제거합니다.|  
   
 |속성|요소|  
@@ -325,7 +325,7 @@ ms.locfileid: "36184388"
 |----------|-------------|  
 |데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 이 속성은 OLE DB 속성인 DBPROP_SERVERNAME과 같습니다.<br /><br /> 이 속성의 기본값은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스의 이름입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |ShowHiddenCubes|*사용법*<br /> 읽기/쓰기 `Boolean` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성의 기본값은 FALSE입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|SQLQueryMode|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> SQL 쿼리에 계산이 포함되는지 여부를 결정합니다.<br /><br /> 이 속성에 대 한 기본값은 *계산*합니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
+|SQLQueryMode|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> SQL 쿼리에 계산이 포함되는지 여부를 결정합니다.<br /><br /> 이 속성의 기본값은 *계산*합니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.<br /><br /> 이 속성은 다음 표에 나열된 값일 수 있습니다.|  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ ms.locfileid: "36184388"
 |SspropInitAppName|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 응용 프로그램의 이름을 포함합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |SspropInitPacketsize|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 응용 프로그램의 ID를 포함합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |SspropInitWsid|*사용법*<br /> 읽기/쓰기 `String` 속성(옵션)<br /><br /> *Description*<br /> 클라이언트 워크스테이션의 ID를 포함합니다.<br /><br /> 이 속성의 기본값은 없습니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
-|StateSupport|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 상태 저장에 대한 지원 수준을 지정합니다.<br /><br /> *없음* = <br />                        상태 저장이 지원되지 않습니다.<br /><br /> *세션* = 상태 저장 세션 지원을 통해 제공 됩니다.<br /><br /> 상태 저장 및 세션 지원에 대 한 자세한 내용은 참조 [관리 연결 및 세션 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)합니다.<br /><br /> 이 속성에 대 한 기본값은 *세션*합니다.<br /><br /> 이 속성은 `Discover` 메서드와 함께 사용할 수 있습니다.|  
+|StateSupport|*사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> 상태 저장에 대한 지원 수준을 지정합니다.<br /><br /> *없음* = <br />                        상태 저장이 지원되지 않습니다.<br /><br /> *세션* = 상태 저장 세션 지원을 통해 제공 됩니다.<br /><br /> 상태 저장 및 세션 지원에 대 한 자세한 내용은 참조 하세요. [관리 연결 및 세션 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)합니다.<br /><br /> 이 속성의 기본값은 *세션*합니다.<br /><br /> 이 속성은 `Discover` 메서드와 함께 사용할 수 있습니다.|  
 |Timeout|*사용법*<br /> 읽기/쓰기 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 오류를 반환하기 전에 요청이 성공할 때까지 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스가 대기해야 하는 최대 시간(초)을 지정합니다. 이 속성은 오류를 반환하기 전에 쓰기 저장(writeback) 테이블에 대한 업데이트가 성공할 때까지 인스턴스가 대기해야 하는 최대 시간도 결정합니다. 이 시간은 연결 문자열 속성인 Writeback Timeout과 같습니다.<br /><br /> 이 속성의 기본값은 영(0)입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |TransactionDDL|*사용법*<br /> 읽기 전용 `Integer` 속성(옵션)<br /><br /> *Description*<br /> 나중에 사용하도록 예약되어 있습니다.<br /><br /> 이 속성의 기본값은 0입니다.<br /><br /> 이 속성은 `Discover` 및 `Execute` 메서드와 함께 사용할 수 있습니다.|  
 |UserName|이 속성은 더 이상 지원되지 않습니다.<br /><br /> *사용법*<br /> 읽기 전용 `String` 속성(옵션)<br /><br /> *Description*<br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스가 명령과 연결하는 사용자 이름을 반환하는 문자열을 지정합니다. 이전 버전과의 호환성을 위해 이 속성은 `Execute` 또는 `Discover` 메서드와 함께 사용될 경우 오류를 생성하지 않고 무시됩니다. 이 속성은 OLE DB 속성인 DBPROP_USERNAME과 같습니다.<br /><br /> 이 속성의 기본값은 현재 세션 또는 연결을 연 사용자 이름입니다.<br /><br /> 이 속성은 `Execute` 메서드와 함께 사용할 수 있습니다.|  

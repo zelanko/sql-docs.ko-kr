@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c4a2fb1db64456fe63bc814adda8278b253937a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 3953936761ac031a352ef17544e4818c276ab54a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299313"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>1단원: Windows Azure 저장소 계정 및 컨테이너 만들기
   Windows Azure 저장소에 SQL Server 데이터 파일을 저장하려면 먼저 Windows Azure 저장소 계정, BLOB 컨테이너 및 공유 액세스 서명을 만들어야 합니다. 1단원에서는 Windows Azure 관리 포털에 로그인하여 저장소 계정, BLOB 컨테이너 및 공유 액세스 서명을 만드는 과정을 단계별로 안내합니다.  
@@ -65,6 +65,6 @@ ms.locfileid: "36183149"
   
  **다음 단원:**  
   
- [2단원. 컨테이너에 정책 만들기 및 공유 액세스 서명 생성 &#40;SAS&#41; 키](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [2단원. 컨테이너에 정책을 만들고 공유 액세스 서명 생성 &#40;SAS&#41; 키](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

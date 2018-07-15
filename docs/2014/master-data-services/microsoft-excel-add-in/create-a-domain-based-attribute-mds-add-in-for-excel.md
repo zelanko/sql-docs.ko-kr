@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0dc03dad5cfd346b76691113988ba126e67ae3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c7a91411531cccb253b42f4c6b075ebb73b5d78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217593"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>도메인 기반 특성 만들기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 열에 있는 값을 특정 값 집합으로 제약하려는 경우 도메인 기반 특성을 만들 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36186326"
   
 ### <a name="to-perform-this-procedure"></a>이 절차를 수행하려면  
   
-1.  Excel에서 제약할 열(특성)이 포함된 엔터티를 로드합니다. 자세한 내용은 참조 [mds Excel로 데이터 로드](export-data-to-excel-from-master-data-services.md)합니다.  
+1.  Excel에서 제약할 열(특성)이 포함된 엔터티를 로드합니다. 자세한 내용은 [Excel에 MDS에서 데이터 로드](export-data-to-excel-from-master-data-services.md)합니다.  
   
 2.  제약할 열에서 셀을 클릭합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36186326"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   제약된 목록에 값을 추가하거나 목록에서 값을 삭제하려면 특성의 기반이 되는 엔터티를 로드합니다. 엔터티를 로드 한 자세한 내용은 참조 하십시오. [mds Excel로 데이터 로드](export-data-to-excel-from-master-data-services.md)합니다.  
+-   제약된 목록에 값을 추가하거나 목록에서 값을 삭제하려면 특성의 기반이 되는 엔터티를 로드합니다. 참조 엔터티를 로드 하는 방법은 [Excel에 MDS에서 데이터 로드](export-data-to-excel-from-master-data-services.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [도메인 기반 특성 &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   

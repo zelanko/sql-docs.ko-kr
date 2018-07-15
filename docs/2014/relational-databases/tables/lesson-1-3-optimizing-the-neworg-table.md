@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236563"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg 테이블 최적화
-  **NewOrd** 에서 만든 테이블에는 [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 작업 모든 직원 정보를 포함 하 고는 를사용하여계층구조를나타냅니다.`hierarchyid`데이터 형식입니다. 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
+  합니다 **NewOrd** 에서 만든 테이블의 [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 작업 모든 직원 정보를 포함 하 고 를사용하여계층구조를나타냅니다`hierarchyid`데이터 형식입니다. 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
   
 ## <a name="clustered-index"></a>클러스터형 인덱스  
- `hierarchyid` 열 (**OrgNode**)에 대 한 기본 키가는 **NewOrg** 테이블입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  
+ 합니다 `hierarchyid` 열 (**OrgNode**)에 대 한 기본 키를 **NewOrg** 테이블입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  
   
 ## <a name="nonclustered-index"></a>비클러스터형 인덱스  
  이 단계에서는 일반적인 검색을 지원하는 두 개의 비클러스터형 인덱스를 만듭니다.  

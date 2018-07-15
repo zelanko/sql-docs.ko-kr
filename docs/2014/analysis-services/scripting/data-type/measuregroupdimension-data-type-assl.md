@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupDimension data type
 ms.assetid: 9d1c1c19-31ce-4c42-b2e6-4c1b08875a83
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 369e20e1eaf3c5716e81a580b587c69efa64455f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dcbba7071e1f2efc8ede59259a48a334652de81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249123"
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>MeasureGroupDimension 데이터 형식(ASSL)
   차원과 측정값 그룹 간의 관계를 나타내는 추상 기본 데이터 형식을 정의합니다.  
@@ -75,6 +75,6 @@ ms.locfileid: "36184359"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.MeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

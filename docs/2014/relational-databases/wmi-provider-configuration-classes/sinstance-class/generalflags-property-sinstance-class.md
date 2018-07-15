@@ -20,18 +20,18 @@ helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54daa43c2ccb4e05691d04c2d9e20baad98b9ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 544536253cd7de2c62dbd54f891f5b72d534d74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294253"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags 속성(SInstance 클래스)
-  과 관련 된 일반 플래그를 가져옵니다는 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+  연결 된 일반 플래그를 가져옵니다는 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="syntax"></a>구문  
   

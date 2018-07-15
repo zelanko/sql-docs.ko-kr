@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edfb5ab290d6a5756e88f23497a4ea88c14db5d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 427d7439395c9264741e215672d1ae9390b41b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304613"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>수동으로 데이터 처리(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업 영역 데이터를 수동으로 처리하는 방법에 대해 설명합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "36186855"
  처리 작업을 중지하려면 클릭합니다. 이 옵션은 작업에 시간이 너무 많이 걸리거나 오류가 너무 많은 경우에 유용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 처리 &#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
- [데이터 처리 문제 해결 &#40;SSAS 테이블 형식&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
+ [데이터 처리 문제 해결 &#40;&AMP;#40;SSAS 테이블 형식&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

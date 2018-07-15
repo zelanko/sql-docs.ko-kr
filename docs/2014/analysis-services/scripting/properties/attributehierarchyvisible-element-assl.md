@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyVisible element
 ms.assetid: a3289a9a-dbd6-43e8-a7ca-ee8a1da92a32
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b5ec37036d23c8e1c70e9fe7ba333a8e4c370bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0f2e335a9c8aeb9cdca6e0c95003942800dad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185140"
 ---
 # <a name="attributehierarchyvisible-element-assl"></a>AttributeHierarchyVisible 요소(ASSL)
   클라이언트 응용 프로그램에서 특성 계층을 볼 수 있는지 여부를 결정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36184584"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
+|부모 요소|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md)하십시오 [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309323"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
   보고서 서버에 게시하는 보고서 및 보고서 관련 항목은 폴더에 저장됩니다. 항목을 다른 폴더로 이동할 수 있으며 해당 항목에 대한 참조는 보고서 서버에서 자동으로 유지 관리됩니다. 항목을 삭제하기 전에 해당 항목에 다른 항목이 종속되어 있는지 확인하십시오.  
@@ -45,7 +45,7 @@ ms.locfileid: "36184195"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>내용 페이지에서 항목을 이동하려면  
   
-1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-관리자-ssrs-네이티브-mode.md).  
+1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-manager-ssrs-네이티브-mode.md).  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 이동할 항목을 찾습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36184195"
   
 #### <a name="to-delete-a-report-or-item"></a>보고서 또는 항목을 삭제하려면  
   
-1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-관리자-ssrs-네이티브-mode.md).  
+1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-manager-ssrs-네이티브-mode.md).  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 삭제할 항목을 찾습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36184195"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 내용 &#40;보고서 관리자&#41;]... / 내용 페이지-보고서 manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;]... / 콘텐츠 페이지-보고서 manager.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,30 +1,29 @@
 ---
-title: AlwaysOn 정책을 사용 하 여 가용성 그룹 (SQL Server)의 상태를 보려면 | Microsoft Docs
+title: AlwaysOn 정책을 사용 하 여 가용성 그룹 (SQL Server)의 상태 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: ba1f977cf2846438494bedc7b084ade659fca753
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4189c70c8e4cf9e3d2fce378dbbb039ae2c0c601
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297143"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 AlwaysOn 정책 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 작동 상태를 확인하는 방법에 대해 설명합니다. AlwaysOn 정책 기반 관리에 대 한 정보를 참조 하십시오. [운영 문제 AlwaysOn 가용성 그룹 (SQL Server)에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 AlwaysOn 정책 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 작동 상태를 확인하는 방법에 대해 설명합니다. AlwaysOn 정책 기반 관리에 대 한 정보를 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
   
 > [!IMPORTANT]  
 >  AlwaysOn 정책의 경우 범주 이름이 ID로 사용됩니다. AlwaysOn 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 따라서 AlwaysOn 범주의 이름을 수정해서는 안 됩니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "36184335"
  AlwaysOn 대시보드를 사용하는 방법에 대한 자세한 내용은 [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)을 참조하세요.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **AlwaysOn 정책을 사용 하 여 가용성 그룹의 상태를 보려면**  
+ **AlwaysOn 정책을 사용 하 여 가용성 그룹의 상태 보기**  
   
 1.  기본 설정 (`cd`) 가용성 복제본 중 하나를 호스팅하는 서버 인스턴스에 있습니다. 가용성 그룹의 모든 가용성 복제본에 대한 정보를 보려면 주 복제본을 호스팅하는 서버 인스턴스를 사용합니다.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "36184335"
     |------------|-----------------|  
     |`AllowUserPolicies`|AlwaysOn 정책 범주에 있는 사용자 정책을 실행합니다.|  
     |`InputObject`|사용 중인 cmdlet에 따라 가용성 그룹, 가용성 복제본 또는 가용성 데이터베이스 상태를 나타내는 개체 모음입니다. cmdlet은 지정된 개체의 상태를 계산합니다.|  
-    |`NoRefresh`|이 매개 변수를 설정한 경우 cmdlet 수동으로 새로 고치지 것입니다 지정 된 개체는 `-Path` 또는 `-InputObject` 매개 변수입니다.|  
+    |`NoRefresh`|이 매개 변수 설정 되 면 cmdlet을 수동으로 새로 고치지 것입니다 지정 된 개체를 `-Path` 또는 `-InputObject` 매개 변수입니다.|  
     |`Path`|사용 중인 cmdlet에 따라 가용성 그룹의 경로, 하나 이상의 가용성 복제본 또는 가용성 데이터베이스의 데이터베이스 복제본 클러스터 상태입니다. 선택적 매개 변수입니다. 지정하지 않으면 이 매개 변수의 값은 기본적으로 현재 작업 위치입니다.|  
     |`ShowPolicyDetails`|이 cmdlet에서 수행하는 각 정책 평가의 결과를 표시합니다. cmdlet은 정책 평가당 하나의 개체를 출력하며, 이 개체에는 평가 결과(정책 통과 여부, 정책 이름과 범주 등)를 설명하는 필드가 있습니다.|  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36184335"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -133,6 +132,6 @@ ms.locfileid: "36184335"
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [운영 문제 AlwaysOn 가용성 그룹 (SQL Server)에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

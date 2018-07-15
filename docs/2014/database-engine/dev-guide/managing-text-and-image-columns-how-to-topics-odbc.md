@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbb4a8e9ea832764b16530cb0d63c3b8d28a7bd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 68ecb484c1ee7a6dc43b28c1079326a6cb80ad6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228233"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>text 및 image 열 관리 방법 도움말 항목(ODBC)
   Microsoft  SQL Server  ODBC 드라이버를 사용하면 텍스트 및 이미지 매개 변수를 사용하여 결과 집합의 text, ntext 및 image 열에서 데이터를 검색할 수 있습니다.  

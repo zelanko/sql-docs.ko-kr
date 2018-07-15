@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293633"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>마이닝 모델 뷰어(데이터 마이닝 모델 디자이너)
   **마이닝 모델 뷰어** 탭을 사용하여 마이닝 구조에 포함된 마이닝 모델을 탐색할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36184138"
   
 -   아래쪽 다이어그램은 **Microsoft 일반 콘텐츠 트리 뷰어**를 사용하여 표시되는 동일한 모델을 보여 줍니다. 이 뷰어에는 표준화된 스키마에 따라 마이닝 모델의 내용이 표시됩니다. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  
   
- ![마이닝 모델 디자이너 개요](media/generic-mining-model-tab1.gif "마이닝 모델 디자이너의 개요")  
+ ![마이닝 모델 디자이너 개요](media/generic-mining-model-tab1.gif "마이닝 모델 디자이너 개요")  
   
 ## <a name="viewers-and-their-components"></a>뷰어 및 해당 구성 요소  
  선택한 모델에 따라, 선택된 데이터 마이닝 모델을 만들 때 사용한 알고리즘에 맞게 조정된 각기 다른 사용자 지정 뷰어가 표시됩니다. 각 사용자 지정 뷰어에는 모델의 패턴 및 통계를 탐색하는 데 도움이 되는 다양한 도구 및 대화 상자가 있습니다.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 67d8e5fbf2182abea4dda5bd5aaf5ebb30ba1273
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4214f0fc64e121cecf40f4723d95e8c53d1e38bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204113"
 ---
 # <a name="translation-element-assl"></a>Translation 요소(ASSL)
   [Translations](../collections/translations-element-assl.md) 컬렉션의 부모에 대해 지역화된 번역을 제공합니다.  

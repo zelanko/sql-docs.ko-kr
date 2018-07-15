@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310853"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>데이터 원본 만들기(SSAS 다차원)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델에서 데이터 원본 개체는 데이터를 처리하거나 가져올 데이터 원본에 대한 연결을 나타냅니다. 다차원 모델은 적어도 하나 이상의 데이터 원본 개체를 포함해야 하지만 더 추가하여 여러 데이터 웨어하우스의 데이터를 결합할 수 있습니다. 이 항목의 지침에 따라 모델에 대한 데이터 원본 개체를 만들 수 있습니다. 이 개체의 속성 설정에 대한 자세한 내용은 [데이터 원본 속성 설정&#40;SSAS 다차원&#41;](set-data-source-properties-ssas-multidimensional.md)을 참조하세요.  
@@ -70,7 +70,7 @@ ms.locfileid: "36187100"
 >  기본적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 연결 문자열과 함께 암호를 저장하지 않습니다. 암호를 저장하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 필요한 경우 암호를 입력하라는 메시지를 표시합니다. 암호를 저장하면 해당 암호는 데이터 연결 문자열에 암호화된 형식으로 저장됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 데이터 원본이 포함된 데이터베이스의 데이터베이스 암호화 키를 사용하여 데이터 원본에 대한 암호 정보를 암호화합니다. 암호화된 연결 정보를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정이나 암호를 변경해야 하며 그렇지 않으면 암호화된 정보를 복구할 수 없습니다. 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>데이터 마이닝 개체에 대한 가장 정보 정의  
- 데이터 마이닝 쿼리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정의 컨텍스트에서 실행할 수 있지만 쿼리를 제출하는 사용자의 컨텍스트나 지정한 사용자의 컨텍스트에서 실행할 수도 있습니다. 쿼리가 실행되는 컨텍스트는 쿼리 결과에 영향을 줄 수도 있습니다. 데이터 마이닝을 위한 `OPENQUERY` 유형 작업, 데이터 마이닝 쿼리를 서비스 계정의 컨텍스트 대신 현재 사용자의 컨텍스트나 (쿼리를 실행 하는 사용자)와 상관 없이 지정된 된 사용자의 컨텍스트에서 실행할 수도 있습니다. 이렇게 하면 제한된 보안 자격 증명을 사용하여 쿼리를 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 현재 사용자를 가장하거나 지정한 사용자를 가장하려면 **특정 사용자 이름 및 암호 사용** 또는 **현재 사용자의 자격 증명 사용** 옵션을 선택합니다.  
+ 데이터 마이닝 쿼리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정의 컨텍스트에서 실행할 수 있지만 쿼리를 제출하는 사용자의 컨텍스트나 지정한 사용자의 컨텍스트에서 실행할 수도 있습니다. 쿼리가 실행되는 컨텍스트는 쿼리 결과에 영향을 줄 수도 있습니다. 데이터 마이닝을 위한 `OPENQUERY` 유형 작업에 데이터 마이닝 쿼리를 서비스 계정의 컨텍스트 대신 현재 사용자의 컨텍스트나 (쿼리를 실행 하는 사용자)에 관계 없이 지정된 된 사용자의 컨텍스트에서 실행 되지 않는 것이 좋습니다. 이렇게 하면 제한된 보안 자격 증명을 사용하여 쿼리를 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 현재 사용자를 가장하거나 지정한 사용자를 가장하려면 **특정 사용자 이름 및 암호 사용** 또는 **현재 사용자의 자격 증명 사용** 옵션을 선택합니다.  
   
 ##  <a name="bkmk_steps"></a> 데이터 원본 마법사를 사용하여 데이터 원본 만들기  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36187100"
   
      새 연결의 기본 공급자는 네이티브 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자입니다. 이 공급자는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스에 연결하는 데 사용됩니다. SQL Server 관계형 데이터베이스에 대한 연결의 경우 네이티브 OLE DB\SQL Server Native Client 11.0을 사용하면 다른 공급자를 사용할 때보다 더 빠른 경우가 많습니다.  
   
-     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 공급자 및 관계형 데이터베이스에서 지 원하는 목록은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 참조 [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)합니다.  
+     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 공급자 및 관계형 데이터베이스에서 지원 되는 목록은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 참조 하세요 [지 원하는 데이터 원본 &#40;SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)합니다.  
   
 5.  기본 데이터 원본에 연결하기 위해 선택한 공급자가 요청한 정보를 입력합니다. **네이티브 OLE DB\SQL Server Native Client** 공급자를 선택한 경우 다음 정보를 입력합니다.  
   
-    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 인스턴스 이름을 포함 해야는 서버가 명명 된 인스턴스로 설치 된 경우 (예를 들어 \<컴퓨터 이름 >\\< instancename\>).  
+    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된, 인스턴스 이름을 포함 해야 합니다 (예를 들어 \<컴퓨터 이름 >\\< n a m e\>).  
   
     2.  **서버에 로그온** 은 연결이 인증이 되는 방식을 지정합니다. **Windows 인증 사용** 은 Windows 인증을 사용합니다. **SQL Server 인증 사용** 은 혼합 모드 인증을 지원하는 Windows Azure SQL Database 또는 SQL Server 인스턴스의 데이터베이스 사용자 로그인을 지정합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36187100"
  추가 데이터 원본에 대한 연결을 지원하기 위한 두 개 이상의 데이터 원본 개체를 만들 수 있습니다. 각 데이터 원본에는 관계를 만드는 데 사용할 수 있는 열이 있어야 합니다.  
   
 > [!NOTE]  
->  여러 데이터 원본이 정의 되어 한 번의 쿼리로 여러 원본의 데이터를 쿼리 하는 경우와 같은 눈송이 차원에 대 한 정의 해야 데이터 원본을 사용 하 여 원격 쿼리를 지 원하는 `OpenRowset`합니다. 일반적으로 Microsoft SQL Server 데이터 원본이 사용됩니다.  
+>  여러 데이터 원본이 정의 되어 단일 쿼리로 여러 원본의 데이터를 쿼리 하는 경우와 같이 눈송이 차원에 대 한 정의 해야 합니다를 사용 하 여 원격 쿼리를 지 원하는 데이터 원본 `OpenRowset`합니다. 일반적으로 Microsoft SQL Server 데이터 원본이 사용됩니다.  
   
  여러 데이터 원본을 사용하기 위한 요구 사항에는 다음과 같은 내용이 포함됩니다.  
   

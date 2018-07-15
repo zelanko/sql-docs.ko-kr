@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: mikeraymsft
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c19735c4cdae900f9d9d05b911e37224a31ddf96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 24f1a371cf69c825d9ec251fa4271c5c8d596210
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303163"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 속성(AlwaysOn 고가용성 탭)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 속성** 대화 상자의 **AlwaysOn 고가용성** 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 AlwaysOn 가용성 그룹을 사용하도록 설정해야 합니다.  
