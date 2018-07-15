@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AcceptPause property
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c72866ac66f8e002ed063ad827d61e8c48d81cfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 94cd875e65c5086c12734f45279548c5ec14d432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234813"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 속성(SqlService 클래스)
   서비스를 일시 중지할 수 있는지 여부를 지정하는 부울 속성 값을 가져옵니다.  

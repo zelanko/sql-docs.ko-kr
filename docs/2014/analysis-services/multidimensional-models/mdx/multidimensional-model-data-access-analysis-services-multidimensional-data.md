@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
 - objects [Analysis Services], data access interfaces
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac594d938497d90acd87e047aa8370144f8e8ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291729"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
   이 항목에서는 네트워크의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 대한 연결을 기본적으로 지원하는 클라이언트 응용 프로그램, 프로그래밍 방법 또는 스크립트를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터에 액세스하는 방법에 대해 설명합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36079673"
   
  [MDX를 사용하여 다차원 데이터 쿼리](querying-multidimensional-data-with-mdx.md)  
   
- [주요 개념 mdx에서 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
  [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36079673"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에 연결](../../instances/connect-to-analysis-services.md)   
- [개발 analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Analysis Services에서 XMLA를 사용 하 여 개발](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [테이블 형식 모델 데이터 액세스](../../tabular-models/tabular-model-data-access.md)  
   

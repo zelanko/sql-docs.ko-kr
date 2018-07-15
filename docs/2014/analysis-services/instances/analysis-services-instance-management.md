@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b4bbcc49f28b0f8cd75d8d00e6935559d50c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11f18bd8c1c72bcaf93b74529e604c69440506c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289789"
 ---
 # <a name="analysis-services-instance-management"></a>Analysis Services 인스턴스 관리
   Analysis Services 인스턴스는 운영 체제 서비스로 실행되는 `msmdsrv.exe` 실행 파일의 복사본입니다. 각 인스턴스는 동일한 서버에서 완전히 독립적이며 고유한 구성 설정, 사용 권한, 포트, 시작 계정, 파일 저장소 및 서버 모드 속성을 가지고 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36080088"
  수행해야 하는 대부분의 관리 태스크는 대개 모드별로 다릅니다. Analysis Services 시스템 관리자는 동일한 절차와 스크립트를 사용하여 인스턴스의 설치 방법에 상관없이 네트워크에서 모든 Analysis Services 인스턴스를 관리할 수 있습니다.  
   
 > [!NOTE]  
->  SharePoint용 PowerPivot은 예외입니다. PowerPivot 배포 서버 관리는 항상 SharePoint 팜 컨텍스트 내에서 이루어집니다. PowerPivot은 다른 서버 모드와 달리 항상 단일 인스턴스이고 SharePoint 중앙 관리 또는 PowerPivot 구성 도구를 통해 관리됩니다. SQL Server Management Studio에서 SharePoint 용 PowerPivot에 연결할 수 있지만 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 것은 바람직하지 않습니다. SharePoint 팜에는 서버 상태를 동기화하고 서버 가용성을 감독하는 인프라가 포함되어 있습니다. 다른 도구를 사용하면 이 작업에 방해가 될 수 있습니다. PowerPivot 서버 관리에 대 한 자세한 내용은 참조 [PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)합니다.  
+>  SharePoint용 PowerPivot은 예외입니다. PowerPivot 배포 서버 관리는 항상 SharePoint 팜 컨텍스트 내에서 이루어집니다. PowerPivot은 다른 서버 모드와 달리 항상 단일 인스턴스이고 SharePoint 중앙 관리 또는 PowerPivot 구성 도구를 통해 관리됩니다. SQL Server Management Studio에서 SharePoint 용 PowerPivot에 연결할 수 있지만 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 것은 바람직하지 않습니다. SharePoint 팜에는 서버 상태를 동기화하고 서버 가용성을 감독하는 인프라가 포함되어 있습니다. 다른 도구를 사용하면 이 작업에 방해가 될 수 있습니다. PowerPivot 서버 관리에 대 한 자세한 내용은 참조 하세요. [SharePoint 용 PowerPivot &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

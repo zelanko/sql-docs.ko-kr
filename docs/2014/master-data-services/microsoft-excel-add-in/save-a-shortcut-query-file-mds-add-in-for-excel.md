@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1e2c8560461f121b7d51a69878144bd01755f3e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 0a9d466501b09dbfc30b5a948f43cd49dc58c9a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285359"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일 저장(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 같은 데이터 집합에 자주 액세스해야 할 경우 바로 가기 쿼리 파일을 저장할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36082713"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   활성 워크시트에는 원하는 형식으로 MDS 관리 데이터가 포함되어 있어야 합니다. 예를 들어 필터를 적용하여 원하는 순서로 열을 표시할 수 있습니다. 자세한 내용은 참조 [로드 하기 전에 데이터 필터링 &#40;MDS 추가 기능 Excel 용&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) 및 [열 순서 바꾸기 &#40;MDS 추가 기능 Excel 용&#41;](reorder-columns-mds-add-in-for-excel.md)합니다.  
+-   활성 워크시트에는 원하는 형식으로 MDS 관리 데이터가 포함되어 있어야 합니다. 예를 들어 필터를 적용하여 원하는 순서로 열을 표시할 수 있습니다. 자세한 내용은 참조 하세요. [로드 전 데이터 필터링 &#40;MDS 추가 기능에 Excel에 대 한&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) 하 고 [열 다시 정렬 &#40;MDS 추가 기능에 Excel에 대 한&#41;](reorder-columns-mds-add-in-for-excel.md).  
   
 ### <a name="to-save-a-shortcut-query-file"></a>바로 가기 쿼리 파일을 저장하려면  
   

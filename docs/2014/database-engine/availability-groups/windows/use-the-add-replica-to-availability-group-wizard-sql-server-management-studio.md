@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 20
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29b5dbd44e02515cc2bdab7445bacb0e61d1dcca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291399"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
   복제본을 가용성 그룹에 추가 마법사를 사용하여 기존 AlwaysOn 가용성 그룹에 새 보조 복제본을 쉽게 추가할 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "36089386"
 
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 가용성 그룹에 가용성 복제본을 추가 하지 있을 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조 [필수 구성 요소, 제한 사항 및 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
+ 가용성 그룹에 가용성 복제본을 추가한 적이 없는, 하는 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션에서 참조 [필수 구성 요소, 제한 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -79,14 +78,14 @@ ms.locfileid: "36089386"
   
 3.  보조 복제본을 추가할 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **복제본 추가** 명령을 선택합니다. 그러면 복제본을 가용성 그룹에 추가 마법사가 시작됩니다.  
   
-4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 참조 [기존 보조 복제본 페이지로 연결 &#40;복제본 추가 마법사 및 데이터베이스 추가 마법사&#41;](connect-to-existing-secondary-replicas-page.md)합니다.  
+4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 [기존 보조 복제본 페이지로 연결 &#40;복제본 추가 마법사 및 데이터베이스 추가 마법사&#41;](connect-to-existing-secondary-replicas-page.md)합니다.  
   
 5.  **복제본 선택** 페이지에서 가용성 그룹에 대해 하나 이상의 새 보조 복제본을 지정하고 구성합니다. 이 페이지에는 세 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)을 참조하세요.  
   
     |탭|간단한 설명|  
     |---------|-----------------------|  
     |**복제본**|이 탭에서는 새 보조 복제본을 호스팅할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정할 수 있습니다.|  
-    |**끝점**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 끝점(있는 경우)을 확인할 수 있습니다. 이 끝점이 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 끝점을 자동으로 만들도록 시도합니다. **참고:** 는 수동 서버 인스턴스를 먼저 변경 마법사를 계속 하려면 해야 하는 모든 서버 인스턴스는 도메인이 아닌 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
+    |**끝점**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 끝점(있는 경우)을 확인할 수 있습니다. 이 끝점이 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 끝점을 자동으로 만들도록 시도합니다. **참고:** 는 수동 서버 인스턴스를 하려면 먼저 변경 마법사를 계속 해야 하는 서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
     |**백업 기본 설정**|이 탭에서는 현재 설정을 수정하려는 경우 가용성 그룹 전체에 대한 백업 기본 설정을 지정하고 개별 가용성 복제본에 대한 백업 우선 순위를 지정할 수 있습니다.|  
   
 6.  **초기 데이터 동기화 선택** 페이지에서 새 보조 복제본을 만들고 가용성 그룹에 조인할 방법을 선택합니다. 다음 옵션 중 하나를 선택합니다.  

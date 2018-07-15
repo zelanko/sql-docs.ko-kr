@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 365d51004820d3b8c18a9f7667e1328d5bc10143
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c9d7c759d2cdcd16903ce6e249722cacab3fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283819"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>메모리 내 OLTP의 메모리 관리
   메모리 액세스에 최적화된 테이블을 사용하려면 모든 행과 인덱스를 메모리 내에 유지하는 데 충분한 메모리가 있어야 합니다. 메모리는 한정된 리소스이므로 시스템에서 메모리 사용량을 파악하고 관리해야 합니다. 이 섹션의 항목에서는 일반적인 메모리 사용 및 관리 시나리오를 다룹니다.  

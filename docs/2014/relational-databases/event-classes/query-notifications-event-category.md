@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83145796c52a43c4089dbfd88b4bf9b2ad3d80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8a8f349b44d3854c38481184c5d7f39ad37a85c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285289"
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications 이벤트 범주
   **Query Notifications** 이벤트 범주에는 개발자와 관리자가 쿼리 알림을 모니터링하고 문제를 해결하는 데 사용할 수 있는 정보를 보고하는 이벤트 클래스가 들어 있습니다.  

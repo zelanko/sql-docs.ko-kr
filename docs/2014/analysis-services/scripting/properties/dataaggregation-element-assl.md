@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataAggregation element
 ms.assetid: baf6d2c9-54f6-4a6d-95f7-e1e758be458d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795555e24dbdc30a02b0fd3b286e4122323c00f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eca6c0e89bcc120334e179ad59c1dfce657ab057
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289589"
 ---
 # <a name="dataaggregation-element-assl"></a>DataAggregation 요소(ASSL)
-  인스턴스가 영구 데이터 나 캐시 된 데이터를 집계할 수 있는지 여부를 결정은 [MeasureGroup](../objects/group-element-assl.md)합니다.  
+  인스턴스가 영구 데이터 나 캐시 된 데이터를 집계할 수 있는지 여부를 결정 합니다 [MeasureGroup](../objects/group-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,11 +69,11 @@ ms.locfileid: "36080710"
 |*CacheAggregatable*|이 측정값 그룹에서 캐시된 데이터를 집계할 수 있습니다.|  
 |*DataAndCacheAggregatable*|이 측정값 그룹에서 영구 데이터 및 캐시된 데이터를 모두 집계할 수 있습니다.|  
   
- 부모에 해당 하는 요소 `DataAggregation` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
+ 부모에 해당 하는 요소가 `DataAggregation` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

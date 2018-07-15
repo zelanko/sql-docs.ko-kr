@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
 - MinimumAllocatedMemory property
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c80e57803c1635cf6688ac8d8a562aa7e40f8818
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286379"
 ---
 # <a name="memory-properties"></a>메모리 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 다음 표에 나열된 서버 메모리 속성을 사용할 수 있습니다. 이 속성 설정에 대한 지침을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하세요.  
@@ -51,7 +51,7 @@ ms.locfileid: "36089400"
  `TotalMemoryLimit`는 항상 `HardMemoryLimit`보다 작아야 합니다.  
   
  `HardMemoryLimit`  
- 인스턴스가 메모리 사용량을 줄이기 위해 활성 사용자 세션을 적극적으로 종료하기 시작하는 메모리 임계값을 지정합니다. 종료된 모든 세션은 메모리 부족으로 인해 취소되고 있다는 오류를 수신합니다. 기본값 영 (0) 의미는 `HardMemoryLimit` 사이의 중간 값으로 설정 됩니다 `TotalMemoryLimit` 및 시스템의 실제 메모리는 프로세스에 다음 가상 주소의 가상 주소 공간 보다 큰 경우 시스템의 총 실제 메모리 공간 계산을 대신 사용 됩니다 `HardMemoryLimit`합니다.  
+ 인스턴스가 메모리 사용량을 줄이기 위해 활성 사용자 세션을 적극적으로 종료하기 시작하는 메모리 임계값을 지정합니다. 종료된 모든 세션은 메모리 부족으로 인해 취소되고 있다는 오류를 수신합니다. 기본값 영 (0)를 의미 합니다 `HardMemoryLimit` 사이의 중간 값으로 설정 됩니다 `TotalMemoryLimit` 및 시스템의 실제 메모리가 프로세스 다음 가상 주소의 가상 주소 공간 보다 큰 경우 시스템의 총 실제 메모리 공간 계산을 대신 사용 됩니다 `HardMemoryLimit`합니다.  
   
  `VirtualMemoryLimit`  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
@@ -63,9 +63,9 @@ ms.locfileid: "36089400"
   
  **1** 은 기본값이며 운영 체제 페이지 파일(pagefile.sys)을 통해 디스크로의 페이징을 사용하도록 설정합니다.  
   
- 때 `VertiPaqPagingPolicy` 설정 된 1로 처리는 서버는 지정 된 방법을 사용 하 여 디스크로 페이징을 시도 하기 때문에 메모리 제약 조건으로 인해 실패할 가능성이 적습니다. `VertiPaqPagingPolicy`속성을 설정한다고 해서 메모리 오류가 절대로 발생하지 않는 것은 아닙니다. 다음과 같은 상황에서 메모리 부족 오류가 여전히 발생할 수 있습니다.  
+ 때 `VertiPaqPagingPolicy` 설정 되어 1로 처리는 서버는 지정 된 메서드를 사용 하 여 디스크로 페이징을 시도 하기 때문에 메모리 제약 조건으로 인해 실패할 가능성이 적습니다. `VertiPaqPagingPolicy`속성을 설정한다고 해서 메모리 오류가 절대로 발생하지 않는 것은 아닙니다. 다음과 같은 상황에서 메모리 부족 오류가 여전히 발생할 수 있습니다.  
   
--   모든 사전에 대해 메모리가 충분하지 않습니다. Analysis Services 메모리 내에 각 열에 대해 사전을 잠그며 처리 하는 동안 및에 대 한 지정 된 값 보다 모든 합 커야 `VertiPaqMemoryLimit`합니다.  
+-   모든 사전에 대해 메모리가 충분하지 않습니다. Analysis Services 메모리의 각 열에 대해 사전을 잠그며 처리 중 이며 지정 된 값 보다 더 많은 일 수 없습니다 모든 합 `VertiPaqMemoryLimit`합니다.  
   
 -   프로세스를 수용하기에 가상 주소 공간이 부족합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36089400"
  `VertiPaqMemoryLimit`  
  디스크로의 페이징이 허용되는 경우 이 속성은 페이징이 시작되는 메모리 소비 수준(총 메모리에 대한 백분율)을 지정합니다. 기본값은 60입니다. 메모리 소비가 60% 이하이면 서버가 디스크로 페이징하지 않습니다.  
   
- 이 속성에 따라 달라 집니다는 `VertiPaqPagingPolicyProperty`, 페이징이 발생할 수 있도록 1로 설정 해야 합니다.  
+ 이 속성에 따라 달라 집니다는 `VertiPaqPagingPolicyProperty`, 페이징이 발생 하는 1로 설정 해야 합니다.  
   
  테이블 형식 서버 모드에만 적용됩니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36089400"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   
+ [Analysis Services의 서버 속성 구성](server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

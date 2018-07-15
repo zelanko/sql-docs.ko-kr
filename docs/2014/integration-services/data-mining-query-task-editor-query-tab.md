@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.query.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f42a411985780b7c6fe8fa77cb0b7391eed88921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6721e47efbbff4e7e6abd39b8cc895411a54aa1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281799"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>데이터 마이닝 쿼리 태스크 편집기(쿼리 탭)
   **데이터 마이닝 쿼리 태스크** 대화 상자의 **쿼리** 탭을 사용하여 마이닝 모델을 기반으로 하는 예측 쿼리를 만들 수 있습니다. 또한 이 대화 상자에서 매개 변수 및 결과 집합을 변수에 바인딩할 수 있습니다.  

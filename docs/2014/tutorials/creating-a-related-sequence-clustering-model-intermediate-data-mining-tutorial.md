@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: c0820b087583194e78af1d1de46b4affe3a1d9fc
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2fe714a808a7b5e8b31b674027e00814a9632f58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234413"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>관련된 시퀀스 클러스터링 모델 만들기(중급 데이터 마이닝 자습서)
   시퀀스 클러스터링 모델 탐색을 통해 Region 또는 Income과 같은 다른 특성이 모델에 중요한 영향을 준다는 것을 알게 되었습니다. 따라서 시퀀스를 보다 잘 이해하려면 관련된 시퀀스 클러스터링 모델을 만들고 고객 인구 통계와 관련된 특성을 제거합니다.  
@@ -30,31 +30,31 @@ ms.locfileid: "36311811"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>시퀀스 클러스터링 모델의 복사본을 만들려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], 데이터 마이닝 디자이너에서 클릭 된 **마이닝 모델** 탭 합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], 데이터 마이닝 디자이너를 클릭 합니다 **마이닝 모델** 탭 합니다.  
   
 2.  복사 하 고 선택 하려는 모델을 마우스 오른쪽 단추로 클릭 **새 마이닝 모델**합니다.  
   
-3.  에 **새 마이닝 모델** 대화 상자에서 모델 이름을 입력 하 고 Microsoft 선택 `Sequence Clustering`합니다.  
+3.  에 **새 마이닝 모델** 대화 상자에서 모델 이름을 입력 하 고 microsoft `Sequence Clustering`합니다.  
   
-     이 자습서에 대 한 이름을 입력 `Sequence Clustering`합니다.  
+     이 자습서에서는 이름을 `Sequence Clustering`입니다.  
   
 4.  **확인**을 클릭합니다.  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>마이닝 모델에서 열을 제거하려면  
   
-1.  에 **마이닝 모델** 탭 Sequence Clustering 이라는 새 모델에 대 한 열에 대 한 행을 클릭는 **Income Group** 특성을 마우스 선택 **무시**합니다.  
+1.  에 **마이닝 모델** 탭 Sequence Clustering 이라는 새 모델의 열에 대 한 행을 클릭 합니다 **Income Group** 특성을 선택한 **무시**합니다.  
   
 2.  특성에 대해이 단계를 반복 **지역**합니다.  
   
-3.  테이블 이름 옆의 더하기 기호를 클릭 **v Assoc Seq Line Items**테이블을 확장 하 고 중첩된 테이블의 열을 확인 합니다.  
+3.  테이블 이름 옆에 있는 더하기 기호를 클릭 **v Assoc Seq Line Items**하는 테이블을 확장 하 고 중첩된 테이블의 열을 확인 합니다.  
   
      새 모델에는 다음 열만 있어야 합니다.  
   
-     **주문 NumberKey**  
+     **순서 NumberKey**  
   
      **줄 번호 키**  
   
-     **예측 모델**  
+     **모델 예측**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>새 시퀀스 클러스터링 모델을 처리하려면  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36311811"
   
      간단한 새 마이닝 모델은 이미 처리된 구조를 기반으로 하므로 구조를 다시 처리하지 않아도 됩니다. 이제 새 마이닝 모델을 처리할 수 있습니다.  
   
-2.  클릭 **예** 서버에 업데이트 된 데이터 마이닝 프로젝트를 배포 해야 합니다.  
+2.  클릭 **예** 서버에 업데이트 된 데이터 마이닝 프로젝트를 배포 합니다.  
   
-3.  에 **마이닝 모델 처리** 대화 상자를 클릭 **실행**합니다.  
+3.  에 **마이닝 모델 처리** 대화 상자, 클릭 **실행**합니다.  
   
-4.  클릭 **닫습니다** 를 닫으려면는 **처리 진행률** 대화 상자를 닫은 다음 **닫습니다** 에서 다시는 **마이닝 모델 처리** 대화 상자.  
+4.  클릭 **닫습니다** 를 닫습니다 합니다 **처리 진행률** 대화 상자에서을 클릭 한 다음 **닫습니다** 다시 합니다 **마이닝 모델 처리** 대화 상자.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [시퀀스 클러스터링 모델에서 예측 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  

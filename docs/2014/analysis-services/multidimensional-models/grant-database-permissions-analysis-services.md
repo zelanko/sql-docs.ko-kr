@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 37022a42bc8e5347551a49c24ffc0ae9f8b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286169"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
   관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36080722"
   
  Analysis Services에는 로그인이 없습니다. **멤버 자격** 창에서 역할을 만들고 Windows 계정을 할당하기만 하면 됩니다. 관리자를 비롯하여 모든 사용자는 Windows 계정을 사용하여 Analysis Services에 연결합니다.  
   
- ![역할 만들기 대화 상자 보여 주는 데이터베이스 권한](../media/ssas-permsdbrole.png "역할 대화 상자 표시 된 데이터베이스 사용 권한 만들기")  
+ ![역할 대화 상자 보여 주는 데이터베이스 만들기 권한이](../media/ssas-permsdbrole.png "역할 대화 상자 보여 주는 데이터베이스 사용 권한 만들기")  
   
  데이터베이스 수준에서 지정한 세 가지 유형의 사용 권한이 있습니다.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36080722"
 > [!NOTE]  
 >  또한 서버 관리자(서버 관리자 역할의 구성원)는 해당 서버의 모든 데이터베이스에 대해 암시적으로 모든 권한을 갖게 됩니다.  
   
- `Process Database` 이 권한은 데이터베이스 수준에서 처리를 위임 하는 데 사용 되며 따라 합니다. 관리자는 다른 사용자 또는 서비스가 데이터베이스의 모든 개체에 대한 처리 작업을 호출할 수 있는 역할을 만들어 이 작업을 오프로드할 수 있습니다. 또는 특정 개체에 대한 처리를 사용할 수 있는 역할을 만들 수도 있습니다. 자세한 내용은 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 를 참조하세요.  
+ `Process Database` 이 권한은 데이터베이스 수준에서 처리를 위임 하는 데 사용 되며 대조적입니다. 관리자는 다른 사용자 또는 서비스가 데이터베이스의 모든 개체에 대한 처리 작업을 호출할 수 있는 역할을 만들어 이 작업을 오프로드할 수 있습니다. 또는 특정 개체에 대한 처리를 사용할 수 있는 역할을 만들 수도 있습니다. 자세한 내용은 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 를 참조하세요.  
   
- `Read Definition` 이 사용 권한은 개체 메타 데이터를 읽을 수 있는 기능을 부여 따라 연결 된 데이터를 볼 수 기능을 제외 합니다. 일반적으로 이 사용 권한은 전용 처리를 위해 만든 역할에 사용되며, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 와 같은 도구를 사용하여 데이터베이스를 대화형으로 처리하는 기능을 추가합니다. `Read Definition` 권한이 없는 `Process Database` 권한은 스크립팅된 시나리오에서만 효과적입니다. 아마도 SSIS 또는 다른 스케줄러를 통해 처리를 자동화 하려는 경우 싶을를 가지는 역할을 만드는 `Process Database` 없이 `Read Definition`합니다. 그렇지 않으면 동일한 역할에 두 속성을 함께 결합하여 사용자 인터페이스에서 데이터 모델을 시각적으로 표시하는 SQL Server 도구를 통해 무인 및 대화형 처리를 둘 다 지원하는 방법도 고려해 볼 수 있습니다.  
+ `Read Definition` 이 사용 권한은 개체 메타 데이터를 읽을 수 있는 기능을 부여 하는 권한은 연결 된 데이터를 볼 수 기능을 제외 합니다. 일반적으로 이 사용 권한은 전용 처리를 위해 만든 역할에 사용되며, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 와 같은 도구를 사용하여 데이터베이스를 대화형으로 처리하는 기능을 추가합니다. `Read Definition` 권한이 없는 `Process Database` 권한은 스크립팅된 시나리오에서만 효과적입니다. 아마도 SSIS 또는 다른 스케줄러를 통해 처리를 자동화 하려는 경우 아마도 원하는 있는 역할을 만드는 `Process Database` 없이 `Read Definition`합니다. 그렇지 않으면 동일한 역할에 두 속성을 함께 결합하여 사용자 인터페이스에서 데이터 모델을 시각적으로 표시하는 SQL Server 도구를 통해 무인 및 대화형 처리를 둘 다 지원하는 방법도 고려해 볼 수 있습니다.  
   
 ## <a name="full-control-administrator-permissions"></a>모든 권한(관리자)  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 데이터베이스 관리자는 모든 권한(관리자)을 갖는 역할에 할당된 임의의 Windows 사용자 ID입니다. 데이터베이스 관리자는 데이터베이스 내에서 다음을 비롯한 모든 작업을 수행할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36080722"
   
 -   데이터베이스에 어셈블리(또는 저장 프로시저) 등록  
   
- 데이터베이스 관리자는 서버에서 데이터베이스를 추가 또는 삭제할 수 없거나, 동일한 서버에서 다른 데이터베이스에 대한 관리자 권한을 부여할 수 없습니다. 이러한 권한은 서버 관리자에게만 있습니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 이 사용 권한 수준에 대 한 자세한 내용은 합니다.  
+ 데이터베이스 관리자는 서버에서 데이터베이스를 추가 또는 삭제할 수 없거나, 동일한 서버에서 다른 데이터베이스에 대한 관리자 권한을 부여할 수 없습니다. 이러한 권한은 서버 관리자에게만 있습니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 이 권한 수준에 대 한 자세한 내용은 합니다.  
   
  모든 역할이 사용자 정의되므로 이러한 용도에 대한 전용 역할(예: 이름이 "dbadmin"인 역할)을 만든 후 Windows 사용자 및 그룹 계정을 적절하게 할당하는 것이 좋습니다.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "36080722"
   
 2.  **일반** 창에서 DBAdmin 등의 이름을 입력합니다.  
   
-3.  큐브에 대해 **모든 권한(관리자)** 확인란을 선택합니다. `Process Database` 및 `Read Definition` 권한은 자동으로 선택됩니다. 포함 하는 역할에 항상 포함 됩니다 이러한 권한은 모두 `Full Control`합니다.  
+3.  큐브에 대해 **모든 권한(관리자)** 확인란을 선택합니다. `Process Database` 및 `Read Definition` 권한은 자동으로 선택됩니다. 포함 하는 역할에 포함 된 항상 이러한 권한을 모두 `Full Control`합니다.  
   
 4.  **멤버 자격** 창에서 이 역할을 사용하여 Analysis Services에 연결하는 Windows 사용자 및 그룹 계정을 입력합니다.  
   
 5.  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
   
 ## <a name="process-database"></a>Process Database  
- 건너뛸 수 있습니다에 데이터베이스 사용 권한을 부여 하는 역할을 정의할 때 `Full Control` 만 선택할 `Process Database`합니다. 이 사용 권한은 데이터베이스 수준에서 설정되며, 데이터베이스 내 모든 개체에 대한 처리를 허용합니다. 자세한 내용은 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ 데이터베이스 사용 권한을 부여 하는 역할을 정의할 때 건너뛰어도 `Full Control` 만 선택 하 고 `Process Database`입니다. 이 사용 권한은 데이터베이스 수준에서 설정되며, 데이터베이스 내 모든 개체에 대한 처리를 허용합니다. 자세한 내용은 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>Read Definition  
- 마찬가지로 `Process Database`설정 `Read Definition` 데이터베이스 수준에서 사용 권한을 데이터베이스 내 다른 개체에 연계 효과 미칩니다. 정의 읽기 권한을 더욱 세밀한 수준으로 설정하려는 경우 일반 창에서 데이터베이스 속성인 정의 읽기 선택을 취소해야 합니다. 자세한 내용은 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)를 참조하세요.  
+ 와 같은 `Process Database`설정, `Read Definition` 데이터베이스 수준에서 권한을 데이터베이스 내 다른 개체에 연계 효과 미칩니다. 정의 읽기 권한을 더욱 세밀한 수준으로 설정하려는 경우 일반 창에서 데이터베이스 속성인 정의 읽기 선택을 취소해야 합니다. 자세한 내용은 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   

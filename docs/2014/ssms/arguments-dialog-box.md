@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26926b8259475687bc0e48babf39ff41a2827068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd21eb41730ad1d214361bee779fef375b8c75ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284609"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
   **인수** 대화 상자는 도구에 대한 새 인수나 기존 인수를 지정합니다. **외부 도구** 대화 상자에서 선택한 **인수 확인** 옵션이 있는 외부 도구를 시작하면 이 대화 상자가 나타납니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36089445"
  **인수** 대화 상자에 지정된 인수의 값을 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [외부 도구의 인수](menu-help/external-tools.md)   
+ [외부 도구에 대 한 인수](menu-help/external-tools.md)   
  [외부 도구 대화 상자](external-tools-dialog-box.md)   
  [일반 사용자 인터페이스 요소](general-user-interface-elements.md)  
   

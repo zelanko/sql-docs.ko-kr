@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 caps.latest.revision: 10
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 62c6b2f80730ecb1d82cd0e35f8904651ac041d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c9c8ce45ca1ae4efdb65d8d1aae44261be80a0a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282206"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>가용성 복제본 속성 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 AlwaysOn 가용성 그룹에 대한 가용성 복제본 속성을 보는 방법에 대해 설명합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "36080690"
   
 4.  속성을 보려는 가용성 복제본을 마우스 오른쪽 단추로 클릭하고 **속성** 명령을 선택합니다.  
   
-5.  **가용성 복제본 속성** 대화 상자에서 **일반** 페이지를 사용하여 이 복제본의 속성을 봅니다. 주 복제본에 연결된 경우 가용성 모드, 장애 조치(failover) 모드, 주 역할에 대한 연결 액세스, 보조 역할에 대한 읽기 액세스(읽기 가능 보조), 세션 제한 시간 값 등의 속성을 변경할 수 있습니다. 자세한 내용은 참조 [가용성 복제본 속성 &#40;일반 페이지&#41;](availability-replica-properties-general-page.md)합니다.  
+5.  **가용성 복제본 속성** 대화 상자에서 **일반** 페이지를 사용하여 이 복제본의 속성을 봅니다. 주 복제본에 연결된 경우 가용성 모드, 장애 조치(failover) 모드, 주 역할에 대한 연결 액세스, 보조 역할에 대한 읽기 액세스(읽기 가능 보조), 세션 제한 시간 값 등의 속성을 변경할 수 있습니다. 자세한 내용은 [가용성 복제본 속성 &#40;일반 페이지&#41;](availability-replica-properties-general-page.md)합니다.  
   
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -85,7 +84,7 @@ ms.locfileid: "36080690"
   
 -   [가용성 그룹 수신기 속성 보기&#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [운영 문제 AlwaysOn 가용성 그룹에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [AlwaysOn 가용성 그룹의 운영 문제에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
 -   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -125,7 +124,7 @@ ms.locfileid: "36080690"
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)   
- [운영 문제 AlwaysOn 가용성 그룹에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [AlwaysOn 가용성 그룹의 운영 문제에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)  
   
   

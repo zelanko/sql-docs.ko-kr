@@ -14,20 +14,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], objects
 ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 783caa7a2ea334da09ab038694c09795fa3af229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d722b34679ccef20a939fc505e735886e7f16d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282225"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>큐브 개체(Analysis Services - 다차원 데이터)
     
 ## <a name="introducing-cube-objects"></a>큐브 개체 소개  
- 간단한 <xref:Microsoft.AnalysisServices.Cube> 개체를 구성: 기본 정보, 차원 및 측정값 그룹입니다. 기본 정보에는 큐브의 이름, 큐브의 기본 측정값, 데이터 원본, 저장소 모드 등이 포함됩니다.  
+ 간단한 <xref:Microsoft.AnalysisServices.Cube> 개체는 구성: 기본 정보, 차원 및 측정값 그룹입니다. 기본 정보에는 큐브의 이름, 큐브의 기본 측정값, 데이터 원본, 저장소 모드 등이 포함됩니다.  
   
  Dimensions 컬렉션에는 데이터베이스 차원 컬렉션의 큐브에 사용되는 실제 차원 집합이 포함되어 있습니다. 모든 차원은 큐브에서 참조되기 전에 데이터베이스의 차원 컬렉션에 정의되어야 합니다. 사용할 수 없는 개인 차원을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
   

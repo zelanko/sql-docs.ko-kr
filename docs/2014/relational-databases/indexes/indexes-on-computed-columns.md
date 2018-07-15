@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b7d9b25ccb9404011c459ba0275f2ba0c63746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ffa842513c5cd185c7760bc737aeb64a4c33742e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279119"
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
   다음 요구 사항을 충족하면 계산 열에 인덱스를 정의할 수 있습니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "36089063"
   
 -   `float` 또는 `real` 데이터 형식의 식이 아닙니다.  
   
--   사용 하지 않는 한 `float` 또는 `real` 해당 정의에서 데이터 형식입니다. 예를 들어 다음 문에서 열 `y` 은 `int` 고 결정적 이지만 정확 하지는 않습니다.  
+-   사용 하지 않는 한 `float` 또는 `real` 해당 정의의 데이터 형식. 예를 들어 다음 문에서 열 `y` 는 `int` 고 결정적 이지만 정확 하지는 않습니다.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -86,13 +85,13 @@ ms.locfileid: "36089063"
     ```  
   
 > [!NOTE]  
->  모든 `float` 또는 `real` 식은 정확 하지 않은 것으로 간주 됩니다 및 인덱스의 키 커야; `float` 또는 `real` 식은 인덱싱된 뷰에서 시 키 지 않고 키를 사용할 수 있습니다. 계산 열의 경우에도 마찬가지입니다. 모든 함수, 식 또는 사용자 정의 함수가 포함 되어 있으면 정확 하지 않은 간주 됩니다 `float` 또는 `real` 식입니다. 논리 식(비교)이 여기에 포함됩니다.  
+>  모든 `float` 나 `real` 식은 정확 하지 않은 것으로 간주 됩니다 및 인덱스의 키 일 수 없습니다는 `float` 또는 `real` 식은 인덱싱된 뷰에서 아니지만 키를 사용할 수 있습니다. 계산 열의 경우에도 마찬가지입니다. 모든 함수, 식 또는 사용자 정의 함수가 포함 되어 있으면 정확 하지 않은 비율은 `float` 또는 `real` 식입니다. 논리 식(비교)이 여기에 포함됩니다.  
   
  COLUMNPROPERTY 함수의 **IsPrecise** 속성은 *computed_column_expression* 이 정확한지 여부를 보고합니다.  
   
  **Data Type Requirements**  
   
--   *computed_column_expression* 계산된 열으로 평가 될 수에 대해 정의 된는 `text`, `ntext`, 또는 `image` 데이터 형식입니다.  
+-   합니다 *computed_column_expression* 으로 계산할 수 없습니다 계산된 열에 대해 정의 된 합니다 `text`, `ntext`, 또는 `image` 데이터 형식입니다.  
   
 -   `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` 및 `xml` 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 인덱스 키 열로 사용할 수 있으면 인덱스를 만들 수 있습니다.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "36089063"
      데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다.  
   
 ##  <a name="BKMK_persisted"></a> 지속형 계산 열에 인덱스 만들기  
- CREATE TABLE 또는 ALTER TABLE 문에서 열이 PERSISTED로 표시된 경우 결정적이지만 정확하지 않은 식으로 정의된 계산 열에 인덱스를 만들 수 있습니다. 즉는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 인덱스가 쿼리에서 참조 될 때와 열에 인덱스를 만들 때 이러한 지속형된 값을 사용 합니다. 이 옵션을 사용 하면 계산된 열에 인덱스를 만들 때 [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], 결정적이 고 정확 하 게 됩니다.  
+ CREATE TABLE 또는 ALTER TABLE 문에서 열이 PERSISTED로 표시된 경우 결정적이지만 정확하지 않은 식으로 정의된 계산 열에 인덱스를 만들 수 있습니다. 즉는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 시점과 쿼리에서 참조 되는 인덱스 열에 인덱스를 만들 때 이러한 지속형된 값을 사용 합니다. 이 옵션을 사용 하면 계산된 열에 인덱스를 만들 수 있습니다 때 [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], 결정적이 고 정확 하 게 됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [COLUMNPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

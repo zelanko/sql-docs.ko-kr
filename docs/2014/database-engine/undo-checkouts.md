@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourcControl.UndoCheckDialog
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - undoing checkouts
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 84fe5f531edfa8f122dea1b021aa4534b7c2a1f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c726f47ecb042b8d4ba87e972d14f8e384f7a88a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289511"
 ---
 # <a name="undo-checkouts"></a>체크 아웃 취소
   **체크 아웃 취소** 명령을 사용하여 기존 체크 아웃을 취소할 수 있습니다. 파일을 수정 및 저장한 다음 나중에 변경 내용을 롤백해야 하는 경우에 이 명령이 특히 유용합니다.  

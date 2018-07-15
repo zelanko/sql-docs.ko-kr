@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d7b626cd1d4868e078174830bcfbaa4cc7abdc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0767df9d8ad010e17560b1f2b5e2e227d52a9f99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285699"
 ---
 # <a name="open-solutions-from-source-control"></a>원본 제어에서 솔루션 열기
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원본 제어에서 솔루션을 직접 열 수 있습니다. 이렇게 할 경우 Studio 환경은 최신 버전의 솔루션 파일에 대한 복사본을 지정된 위치에 만듭니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "36079832"
   
 2.  로그온하라는 메시지가 표시되면 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe에 로그온합니다.  
   
-3.  에 **SourceSafe에서 로컬 프로젝트 만들기** 대화 상자를 열고 클릭 하려는 솔루션을 포함 하는 폴더 선택 **확인**합니다.  
+3.  에 **SourceSafe에서 로컬 프로젝트 만들기** 대화 상자를 열려면 클릭 하려는 솔루션을 포함 하는 폴더를 선택 합니다 **확인**합니다.  
   
-4.  솔루션에 대 한 작업 폴더는 로컬 디스크 드라이브에 이미 있는 경우는 **폴더에 새 프로젝트를 만들** 상자 로컬 디렉터리를 식별 하도록 변경 합니다. 솔루션의 작업 폴더가 존재하지 않을 경우 솔루션을 열어야 하는 로컬 디렉터리를 입력하거나 찾을 수 있습니다.  
+4.  솔루션에 대 한 작업 폴더는 로컬 디스크 드라이브에 이미 있는 경우는 **폴더에서 새 프로젝트를 만들** 상자 로컬 디렉터리를 식별 하도록 변경 합니다. 솔루션의 작업 폴더가 존재하지 않을 경우 솔루션을 열어야 하는 로컬 디렉터리를 입력하거나 찾을 수 있습니다.  
   
 5.  에 **열려 있는 솔루션** 대화 상자에서 솔루션 파일을 선택 하 고 클릭 **확인**합니다.  
   

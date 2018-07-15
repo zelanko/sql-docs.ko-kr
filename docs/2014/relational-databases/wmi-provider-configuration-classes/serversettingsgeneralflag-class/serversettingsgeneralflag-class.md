@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ServerSettingsGeneralFlag class
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 429548e0bcb2abd73bfa40e29e28d5e4ce7c97e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f4e12ac9a13286bdd26fd86568b553621b686e00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290329"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 클래스
-  [ServerSettingsGeneralFlag 클래스](serversettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 일반 플래그 설정을 나타냅니다.  
+   [ServerSettingsGeneralFlag 클래스](serversettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 일반 플래그 설정을 나타냅니다.  
   
  이 클래스를 사용하여 다음을 수행할 수 있습니다.  
   
