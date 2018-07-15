@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293293"
 ---
 # <a name="translations-analysis-services"></a>번역(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터 모델에서 캡션의 여러 번역을 포함하여 LCID를 기반으로 한 로캘 관련 문자열을 제공할 수 있습니다. 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다.  
   
- 번역을 정의하면 모델 내부에 메타데이터와 번역된 캡션이 생성되지만 클라이언트 응용 프로그램에서 지역화된 문자열을 렌더링하려면 개체에서 `Language` 속성을 설정하거나 연결 문자열에서 `Locale Identifier` 매개 변수를 전달해야 합니다(예를 들어 프랑스어 문자열을 반환하려면 `LocaleIdentifier=1036` 설정). 동일한 개체에 대한 여러 개의 동시 번역을 서로 다른 언어로 지원하려면 `Locale Identifier` 사용을 계획합니다. 설정의 `Language` 속성은 영향을 줍니다 처리 및 쿼리 수를 포함 하는 의도 하지 않은 결과입니다. 설정 `Locale Identifier` 번역 된 문자열을 반환 하려면만 사용 되므로 더 좋습니다.  
+ 번역을 정의하면 모델 내부에 메타데이터와 번역된 캡션이 생성되지만 클라이언트 응용 프로그램에서 지역화된 문자열을 렌더링하려면 개체에서 `Language` 속성을 설정하거나 연결 문자열에서 `Locale Identifier` 매개 변수를 전달해야 합니다(예를 들어 프랑스어 문자열을 반환하려면 `LocaleIdentifier=1036` 설정). 동일한 개체에 대한 여러 개의 동시 번역을 서로 다른 언어로 지원하려면 `Locale Identifier` 사용을 계획합니다. 설정의 `Language` 속성의 작동에 영향을 처리 및 쿼리 수는 있지만 의도 하지 않은 결과. 설정 `Locale Identifier` 번역 된 문자열을 반환 하려면만 사용 되므로 것이 좋습니다.  
   
  번역은 LCID(로캘 식별자) 및 개체에 대한 번역된 캡션(예: 차원 또는 특성 이름)과 (원할 경우) 데이터 값을 대상 언어로 제공하는 열에 대한 바인딩으로 구성됩니다. 여러 번역이 있을 수 있지만 지정된 연결에 대해 하나씩만 사용할 수 있습니다. 모델에 포함할 수 있는 번역의 수에 이론적인 제한은 없지만 각 번역은 테스트를 더 복잡하게 하고 모든 번역은 동일한 데이터 정렬을 공유해야 하므로 솔루션을 디자인할 때에는 이러한 기본적인 제약 조건을 염두에 두어야 합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36082350"
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>차원 및 특성에 번역 추가  
  데이터베이스 차원, 특성, 계층 구조 및 계층 구조 내 수준에 번역을 추가할 수 있습니다.  
   
- 번역된 캡션은 키보드나 복사-붙여넣기를 사용하여 수동으로 모델에 추가되지만 차원 특성 멤버의 경우 외부 데이터베이스에서 번역된 값을 얻을 수 있습니다. 특히,는 `CaptionColumn` 특성의 속성을 데이터 원본 뷰의 열에 바인딩될 수 있습니다.  
+ 번역된 캡션은 키보드나 복사-붙여넣기를 사용하여 수동으로 모델에 추가되지만 차원 특성 멤버의 경우 외부 데이터베이스에서 번역된 값을 얻을 수 있습니다. 구체적으로 `CaptionColumn` 특성의 속성을 데이터 원본 뷰의 열에 바인딩될 수 있습니다.  
   
  특성 수준에서 데이터 정렬 설정을 재정의할 수 있습니다. 예를 들어 전자/반자 구분을 조정하거나 특정 특성에 이진 정렬을 사용할 수도 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 데이터 정렬은 데이터 바인딩이 정의되어 있는 곳에 노출됩니다. 차원 특성 번역을 DSV에 있는 다른 원본 열에 바인딩하게 되므로 원본 열에 의해 사용되는 데이터 정렬을 지정할 수 있도록 데이터 정렬 설정을 사용할 수 있습니다. 관계형 데이터베이스의 열 데이터 정렬에 대한 자세한 내용은 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 을 참조하세요.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36082350"
   
 2.  번역에서 대상 언어(LCID로 확인), 번역된 캡션 및 번역된 설명을 지정합니다. 언어 목록은 Management Studio에서 서버 언어를 설정하든, 아니면 단일 특성에 대한 번역 재정의를 추가하든 상관없이 전체 Analysis Services에서 일관됩니다.  
   
-3.  데이터베이스의 속성 페이지에서 설정 `Language` 번역에 대해 지정한 것과 동일한 LCID를 합니다. 필요에 따라 설정 된 `Collation` 더 이상 적합 한 기본 하는 경우에 합니다.  
+3.  데이터베이스의 속성 페이지에서 설정 `Language` 를 번역에 지정한 동일한 LCID로 합니다. 필요에 따라 설정 된 `Collation` 더 이상 적합 한 기본 경우에 합니다.  
   
 4.  데이터베이스를 빌드하고 배포합니다.  
   

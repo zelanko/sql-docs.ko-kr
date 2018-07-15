@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293373"
 ---
 # <a name="cellpermission-element-assl"></a>CellPermission 요소(ASSL)
-  멤버는 사용 권한을 설명는 [역할](role-element-assl.md) 요소 내의 개별 셀에 있는 한 [큐브](cube-element-assl.md) 요소입니다.  
+  해당 멤버의 권한을 설명를 [역할](role-element-assl.md) 요소 내의 개별 셀에는 [큐브](cube-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36079852"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CellPermissions](../collections/cellpermissions-element-assl.md)|  
-|자식 요소|[액세스](../properties/access-element-assl.md), [주석](../collections/annotations-element-assl.md), [설명](../properties/description-element-assl.md), [식](../properties/expression-element-assl.md)|  
+|자식 요소|[액세스](../properties/access-element-assl.md)하십시오 [주석](../collections/annotations-element-assl.md), [설명](../properties/description-element-assl.md), [식](../properties/expression-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.CellPermission>합니다.  

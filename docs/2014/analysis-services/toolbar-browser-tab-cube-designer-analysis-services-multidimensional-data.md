@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c20904d56add8256de37351c1435d06f8f526277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300923"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **도구 모음** 에 있는 기능을 사용하여 큐브 또는 해당 개체를 디자인하거나 찾아보는 동안, 또는 MDX 쿼리를 만드는 동안 일반적인 작업을 수행할 수 있습니다. 디자인 타임과 쿼리 뷰에 공통적인 작업에는 사용자 컨텍스트 설정, 개체 처리 및 기본 언어 설정 등이 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36079841"
 |![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![집계 표시 단추](media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|  
-|![삭제](media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제할](media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 매개 변수가 자동으로 만들어집니다.|  
 |![쿼리 준비 단추](media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|  
 |![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "36079841"
   
 -   **텍스트로 편집**  
   
--   **계산 멤버 추가** (![계산된 멤버 추가](media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
+-   **Add Calculated Member** (![추가 계산된 멤버](media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
   
 -   **빈 셀 표시**(![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   

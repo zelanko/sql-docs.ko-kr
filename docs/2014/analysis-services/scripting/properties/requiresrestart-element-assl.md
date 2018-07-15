@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295423"
 ---
 # <a name="requiresrestart-element-assl"></a>RequiresRestart 요소(ASSL)
-  와 연결 된 읽기 전용 값을 포함 한 [ServerProperty](../objects/serverproperty-element-assl.md) 결정를 인스턴스에 변경 내용을 적용 하기 위해 다시 시작 해야 하는지 여부를 서버 속성의 값을 변경 해야 하는 요소입니다.  
+  와 연결 된 읽기 전용 값을 포함 한 [ServerProperty](../objects/serverproperty-element-assl.md) 하는지 여부를 결정 서버 속성의 값을 변경를 인스턴스에 변경 내용을 적용 하려면 다시 시작 해야 하는 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36080251"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `RequiresRestart` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
+ 부모에 해당 하는 요소가 `RequiresRestart` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ServerProperties 요소 &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [서버 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

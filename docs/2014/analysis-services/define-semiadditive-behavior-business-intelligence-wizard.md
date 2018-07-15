@@ -1,5 +1,5 @@
 ---
-title: (비즈니스 인텔리전스 마법사) 반 가산적 동작 정의 | Microsoft Docs
+title: 반 가산적 동작 (비즈니스 인텔리전스 마법사)를 정의 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.semiadditivememberdetection.f1
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 79ee4ffdb89c4ee8ccb13f4a4985f6d545f573ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201a5a24e8bafa2f2f919f6ad0b072ca801a694e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310813"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>반가산적 동작 정의(비즈니스 인텔리전스 마법사)
   **반가산적 동작 정의** 페이지를 사용하여 측정값에 대한 반가산적 동작을 설정 또는 해제할 수 있습니다. 반가산적 동작은 큐브에 포함된 측정값이 시간 차원에 대해 집계되는 방법을 결정합니다.  
@@ -33,8 +33,8 @@ ms.locfileid: "36088745"
  **반가산적 동작 해제**  
  큐브에 포함된 모든 측정값의 반가산적 동작을 해제합니다.  
   
- **요소가 \<차원 이름 > 반 가산적 멤버가 포함 된 계정 차원. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
- 반가산적 멤버를 포함하는 계정 차원에 대한 반가산적 동작을 설정합니다. 이 옵션을 선택 하면 계정 차원을 참조 하는 측정값 그룹에 모든 측정값 집계 함수가 설정 `ByAccount`합니다.  
+ **검색 되었습니다.는 \<차원 이름 > 반 가산적 멤버가 포함 된 계정 차원입니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
+ 반가산적 멤버를 포함하는 계정 차원에 대한 반가산적 동작을 설정합니다. 계정 차원에 참조 된 측정값 그룹의 모든 측정값의 집계 함수를 설정이 옵션을 선택 하면 `ByAccount`합니다.  
   
  계정 차원에 대한 자세한 내용은 [부모-자식 유형 차원의 재무 계정 만들기](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)를 참조하세요.  
   

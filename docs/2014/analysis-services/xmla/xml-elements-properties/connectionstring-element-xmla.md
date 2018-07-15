@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293213"
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 요소(XMLA)
-  부모에서 사용 하는 연결 문자열이 들어 [위치](location-element-xmla.md) 또는 [소스](source-element-xmla.md) 요소입니다.  
+  부모에서 사용 하는 연결 문자열을 포함 [위치](location-element-xmla.md) 하거나 [원본](source-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36080512"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[위치](location-element-xmla.md), [소스](source-element-xmla.md)|  
+|부모 요소|[위치](location-element-xmla.md), [원본](source-element-xmla.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -70,7 +70,7 @@ ms.locfileid: "36080512"
   
  `Source` 요소의 경우 `ConnectionString` 요소는 `Synchronize` 명령이 원본 인스턴스에 연결하는 데 사용하는 연결 문자열을 포함합니다.  
   
- 백업 및 개체를 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 백업 및 복원 하는 개체에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Restore 요소 &#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

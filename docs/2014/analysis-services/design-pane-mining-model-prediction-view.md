@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316033"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>디자인 창(마이닝 모델 예측 뷰)
   **디자인** 창에는 데이터 마이닝 예측을 작성할 때 사용할 수 있는 예측 쿼리 작성기가 있습니다. 데이터 원본 뷰에서 입력 데이터의 테이블을 사용하는 예측 쿼리를 디자인하여 대량 예측을 생성하거나 개별 값을 제공할 수 있는 단일 예측 쿼리를 만들 수 있습니다.  

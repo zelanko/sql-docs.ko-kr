@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306603"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
   이 섹션에서는 클러스터링 모델의 동작을 제어하는 데 사용할 수 있는 매개 변수를 비롯한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘 구현에 대해 설명합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36079663"
   
  EM  클러스터링 메서드의 결과는 확률적입니다. 즉,  각 데이터 요소는 모든 클러스터에 속해 있지만 데이터 요소를 클러스터에 할당할 때마다 확률은 다릅니다. 이 메서드는 클러스터 중복을 허용하므로 모든 클러스터에 있는 항목의 합계가 학습 집합에 있는 총 항목 수를 초과할 수 있습니다. 마이닝 모델 결과에서 지지도를 나타내는 점수는 이를 설명하기 위해 조정됩니다.  
   
- EM  알고리즘은 Microsoft  클러스터링 모델에 사용되는 기본 알고리즘으로, K-Means  클러스터링에 비해 다음과 같은 여러 이점을 제공하기 때문에 기본 알고리즘으로 사용됩니다.  
+ EM  알고리즘은 Microsoft  클러스터링 모델에 사용되는 기본 알고리즘으로, K-Means 클러스터링에 비해 다음과 같은 여러 이점을 제공하기 때문에 기본 알고리즘으로 사용됩니다.  
   
 -   데이터베이스 검색은 최대 한 번만 필요합니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36079663"
 |NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- 클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. 열으로 설정 `Predict Only` 클러스터 작성에 사용 되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
+ 클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. 열으로 `Predict Only` 클러스터 작성에 사용 되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
   
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  

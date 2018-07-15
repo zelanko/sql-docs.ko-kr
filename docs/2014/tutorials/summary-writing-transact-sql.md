@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e159c3a3-564e-4487-a538-b608dc29c235
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6442f29db25c61c15bf139176118637540791a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 877933629f98bea9421c625dddf3767b182926ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302953"
 ---
 # <a name="summary-writing-transact-sql"></a>요약: Transact-SQL 작성
   쿼리 편집기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개발에서 보다 정교한 제작 환경으로 나아가는 중요한 단계입니다. 손쉽게 쿼리 편집기를 전체 화면 모드로 전환하여 코드를 보거나 빠르게 다른 서버로 연결을 전환할 수 있습니다. 추가 기능은 **도구** 메뉴에서 사용할 수 있는 **옵션** 대화 상자에서 찾는 것이 좋습니다.  

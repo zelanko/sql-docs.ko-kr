@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329843"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버와 해당 특성을 포함할 엔터티를 만듭니다.  
@@ -48,18 +48,18 @@ ms.locfileid: "36080213"
   
 5.  에 **엔터티 이름** 상자에 엔터티의 이름을 입력 합니다.  
   
-6.  에 **준비 테이블 이름** 준비 테이블에 대 한 이름을 입력 합니다.  
+6.  에 **준비 테이블 이름** 준비 테이블의 이름을 입력 합니다.  
   
     > [!TIP]  
-    >  모델 이름을 준비 테이블의 일부로 사용합니다(예: *Modelname_Entityname*). 그러면 데이터베이스에서 테이블을 더 쉽게 찾을 수 있습니다. 준비 테이블에 대 한 자세한 내용은 참조 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.  
+    >  모델 이름을 준비 테이블의 일부로 사용합니다(예: *Modelname_Entityname*). 그러면 데이터베이스에서 테이블을 더 쉽게 찾을 수 있습니다. 준비 테이블에 대 한 자세한 내용은 참조 하세요. [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.  
   
 7.  (선택 사항) **코드 값 자동으로 만들기** 확인란을 선택합니다. 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.  
   
 8.  **명시적 계층 및 컬렉션 사용** 목록에서 다음 옵션 중 하나를 선택 합니다.  
   
-    -   **더**합니다. 명시적 계층 및 컬렉션에 대해 엔터티를 사용할 필요가 없으면 이 옵션을 선택합니다. 필요할 경우 나중에 이 옵션을 변경할 수 있습니다.  
+    -   **이상**합니다. 명시적 계층 및 컬렉션에 대해 엔터티를 사용할 필요가 없으면 이 옵션을 선택합니다. 필요할 경우 나중에 이 옵션을 변경할 수 있습니다.  
   
-    -   **예**합니다. 명시적 계층 및 컬렉션에 대해 엔터티를 사용하려면 이 옵션을 선택합니다. 에 **명시적 계층 이름** 상자에 이름을 입력 합니다. 필요에 따라 선택 **필수 계층 (모든 리프 멤버가 포함 되** 명시적 계층을 필수 계층으로 설정 합니다.  
+    -   **예**합니다. 명시적 계층 및 컬렉션에 대해 엔터티를 사용하려면 이 옵션을 선택합니다. 에 **명시적 계층 이름** 상자에 이름을 입력 합니다. 필요에 따라 선택할 **필수 계층 (모든 리프 멤버가 포함 되** 명시적 계층을 필수 계층 수 있도록 합니다.  
   
 9. **엔터티 저장**을 클릭합니다.  
   

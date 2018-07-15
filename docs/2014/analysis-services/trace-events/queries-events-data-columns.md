@@ -1,5 +1,5 @@
 ---
-title: 이벤트 데이터 열을 쿼리하여 | Microsoft Docs
+title: Events 데이터 열을 쿼리하여 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 174fa26fd7ed7105c14514b216f02d85224fcf82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0577680218a6059a0a14a5232fd328131e0f69c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310463"
 ---
 # <a name="queries-events-data-columns"></a>Queries Events 데이터 열
   Queries Events 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36079637"
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|이벤트 클래스는 이벤트를 분류하는 데 사용됩니다.|  
-|EventSubclass|1|1|이벤트 하위 클래스는 각 이벤트 클래스에 대 한 추가 정보를 제공 합니다.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|1|1|이벤트 하위 클래스는 각 이벤트 클래스에 대 한 추가 정보를 제공합니다.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|이벤트의 현재 시간을 포함합니다(사용 가능한 경우). 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
 |StartTime|3|5|이벤트가 시작된 시간을 포함합니다(사용 가능한 경우). 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
 |ConnectionID|25|1|쿼리 이벤트와 연결된 고유 연결 ID를 포함합니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "36079637"
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|이벤트 클래스는 이벤트를 분류하는 데 사용됩니다.|  
-|EventSubclass|1|1|이벤트 하위 클래스는 각 이벤트 클래스에 대 한 추가 정보를 제공 합니다.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
+|EventSubclass|1|1|각 이벤트 클래스에 대 한 추가 정보를 제공 하는 이벤트 하위 클래스입니다.<br /><br /> 0: MDXQuery<br /><br /> 1: DMXQuery<br /><br /> 2: SQLQuery<br /><br /> 3: DAXQuery|  
 |CurrentTime|2|5|이벤트의 현재 시간을 포함합니다(사용 가능한 경우). 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
 |StartTime|3|5|이벤트가 시작된 시간을 포함합니다(사용 가능한 경우). 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
 |EndTime|4|5|이벤트가 종료된 시간을 포함합니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  

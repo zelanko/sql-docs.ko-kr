@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3491f444347d57273cd86914e21c4d7b46ad02b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300363"
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
   **도구 상자** 에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트에 사용할 다양한 항목이 표시됩니다. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  

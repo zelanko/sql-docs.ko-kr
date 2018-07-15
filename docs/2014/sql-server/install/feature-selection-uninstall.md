@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b8aae88dfab7846f7764b79e4d275a9d4275958
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b1eb8582e0c48f676d35ff54bc84a50730be59b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295923"
 ---
 # <a name="feature-selection-uninstall"></a>기능 선택(제거)
   기능 선택 - 제거 페이지를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 선택합니다.  

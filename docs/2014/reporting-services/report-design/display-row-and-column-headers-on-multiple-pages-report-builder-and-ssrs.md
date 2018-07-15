@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51a549b7fbea2bc4b1c5e41114e831ff3f68550b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ef91743d7a5a4106b51761901ba6f18b9f24d5a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303673"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
   여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역에 대해 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다. 테이블릭스 데이터 영역은 테이블, 행렬 또는 목록일 수 있습니다.  
   
  행과 열을 제어하는 방법은 테이블릭스 데이터 영역에 그룹 머리글이 있는지 여부에 따라 달라집니다. 그룹 머리글이 있는 테이블릭스 데이터 영역을 클릭하면 다음 그림에서처럼 테이블릭스 영역이 점선으로 표시됩니다.  
   
- ![테이블 릭 스 데이터 영역의 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역의 영역")  
+ ![테이블 릭 스 데이터 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역")  
   
  새 테이블 또는 행렬 마법사나 새 차트 마법사를 사용하거나, 그룹화 창에 필드를 추가하거나, 상황에 맞는 메뉴를 사용하여 그룹을 추가하면 행 및 열 그룹 머리글이 자동으로 만들어집니다. 테이블릭스 데이터 영역에 테이블릭스 본문 영역만 있고 그룹 머리글은 없는 경우 행과 열은 테이블릭스 멤버입니다.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "36088521"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [제어 페이지 나누기, 머리글, 열 및 행 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [나누기, 머리글, 열 및 행 제어 페이지 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [보고서를 스크롤할 때 머리글 계속 표시 &#40;보고서 작성기 및 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   

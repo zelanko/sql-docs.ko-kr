@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331863"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36079556"
   
 -   **WSDLFile** 옵션으로 이 빈 파일을 선택합니다.  
   
--   값을 설정할 **OverwriteWSDLFile** 를 `True` 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
+-   값을 설정할 **OverwriteWSDLFile** 에 `True` 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
   
 -   **WSDL 다운로드** 를 클릭하여 실제 WSDL 파일을 다운로드하고 빈 파일을 덮어씁니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36079556"
  **OverwriteWSDLFile**  
  웹 서비스 태스크에 대한 WSDL 파일을 덮어쓸지 여부를 나타냅니다.  
   
- 사용 하 여 WSDL 파일을 다운로드 하려는 경우는 **WSDL 다운로드** 단추,이 값을 설정 `True`합니다.  
+ 사용 하 여 WSDL 파일을 다운로드 하려는 경우는 **WSDL 다운로드** 단추를이 값을 설정 `True`합니다.  
   
  **이름**  
  웹 서비스 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
@@ -76,8 +76,8 @@ ms.locfileid: "36079556"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [웹 서비스 태스크 편집기 &#40;입력 페이지&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [웹 서비스 태스크 편집기 &#40;페이지 출력&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [웹 서비스 태스크 편집기 &#40;페이지를 입력 합니다.&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [웹 서비스 태스크 편집기 &#40;페이지를 출력 합니다.&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

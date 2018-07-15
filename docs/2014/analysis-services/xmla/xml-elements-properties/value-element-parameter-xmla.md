@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: e590d189-91aa-40c7-8669-09c87812f4ce
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 37e0ac55da5c8bae13fcddcaad52aeb8cf51da22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 05535bb119ce20334b5681ea001e4e8528a507f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302703"
 ---
 # <a name="value-element-parameter-xmla"></a>Value 요소(매개 변수)(XMLA)
-  매개 변수 값이 포함 되어는 [매개 변수](parameter-element-xmla.md) 요소입니다.  
+  나타내는 매개 변수의 값이 포함 된 [매개 변수](parameter-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36088476"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `Value` 요소를 저장할 수 모든 단순 XML 형식 뿐만 아니라 XML for Analysis (XMLA) `Rowset` XMLA 명령으로 사용 되는 매개 변수에 대 한 데이터 형식에서 [Execute](../xml-elements-methods-execute.md) 메서드.  
+ `Value` 요소를 저장할 수 있습니다 모든 단순 XML 형식 뿐만 아니라 XML for Analysis (XMLA) `Rowset` XMLA 명령으로 사용 된 매개 변수의 데이터 형식에는 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  

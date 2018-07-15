@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f69c4a6dd5f2593650067be51eae3b63e49dcd96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328994"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>차트 종류(보고서 작성기 및 SSRS)
-  표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 어떤 차트 종류를 선택하는가에 따라 데이터를 차트 폼에 삽입했을 때 그 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 예를 들어 차트의 크기에 비해 많은 양의 데이터 요소가 데이터 집합에 포함되어 있으면 영역형, 꺾은선형 또는 분산형 차트를 사용하여 데이터를 표현하는 것이 더 나을 수 있습니다. 선택한 차트 종류에 따라 데이터를 준비 하는 방법에 대 한 논의 알려면 [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+  표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 어떤 차트 종류를 선택하는가에 따라 데이터를 차트 폼에 삽입했을 때 그 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 예를 들어 차트의 크기에 비해 많은 양의 데이터 요소가 데이터 집합에 포함되어 있으면 영역형, 꺾은선형 또는 분산형 차트를 사용하여 데이터를 표현하는 것이 더 나을 수 있습니다. 선택한 차트 종류에 따라 데이터를 준비 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,15 +45,15 @@ ms.locfileid: "36080138"
 |[꺾은선형 차트 &#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
 |[원형 차트 &#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
 |[극좌표 형 차트 &#40;보고서 작성기 및 SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
-|[범위 차트 &#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
+|[범위 형 차트 &#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
 |[분산형 차트 &#40;보고서 작성기 및 SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")||  
-|[셰이프 차트는 &#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
+|[셰이프 차트 &#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
 |[스파크 라인](sparklines-and-data-bars-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
-|[차트를 판매 &#40;보고서 작성기 및 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")|  
+|[주식형 차트 &#40;보고서 작성기 및 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")|  
   
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [보고서에 차트를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [보고서에 차트 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

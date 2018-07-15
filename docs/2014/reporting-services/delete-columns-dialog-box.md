@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10139"
 - sql12.rtp.rptdesigner.deletecolumns.f1
@@ -18,13 +18,13 @@ ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4fe5ad2c79bc1a2b7226a4b5408eb58d4b06546b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80011c1e73366da9562a522534b5cee5f75a4efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318013"
 ---
 # <a name="delete-columns-dialog-box"></a>열 삭제 대화 상자
   **열 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 열을 삭제할 수 있습니다. 그룹과 연결된 열의 경우에는 그룹 정의도 삭제할 수 있습니다.  

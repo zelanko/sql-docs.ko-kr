@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SOAP [Reporting Services], calls
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fce65cf5ed4e8342005e058aec793fa88e6aa182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c52f4101b6dd8defcf0b98eb92d1b9799957e0c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315223"
 ---
 # <a name="calling-web-service-methods"></a>웹 서비스 메서드 호출
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 프록시 클래스를 사용하여 웹 서비스 작업을 호출할 경우 해당 클래스의 메서드를 사용합니다. 이러한 메서드는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 클래스 라이브러리의 다른 클래스 메서드와 같이 응답합니다. 모든 웹 서비스 메서드는 공용 액세스 권한을 가지며 알맞은 수의 인수와 인수 유형을 제공하도록 요구합니다. 프로젝트에서 프록시 클래스의 인스턴스를 만들었으면 메서드를 호출하여 보고서 서버를 통해 보고 작업을 수행할 수 있습니다. 다음 C# 코드는 <xref:ReportService2010.ReportingService2010> 프록시 클래스의 <xref:ReportService2010.ReportingService2010.ListChildren%2A> 메서드 사용을 보여 줍니다. 이 코드는 보고서 서버 데이터베이스의 모든 항목 목록이 포함된 <xref:ReportService2010.CatalogItem> 개체 배열을 반환하는 웹 서비스 재귀 호출을 수행하는 데 사용됩니다.  

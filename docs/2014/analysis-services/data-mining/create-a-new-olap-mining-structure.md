@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297443"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조를 만들려면  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36089433"
   
         -   열을 모델의 예측 가능한 특성 중 하나로만 포함하려는 경우 **예측**을 선택합니다.  
   
-        -   구조에 포함 되지만 한 입력으로 지정 하지 않으면 또는 예측 가능한 특성은 플래그와 함께 구조에 추가 하는 모든 항목 `Ignore`; 즉, 모델을 작성 하지만, 분석에서 사용 되지 않으며 dr에만 사용할 수는 경우 해당 데이터를 처리 illthrough 합니다. 따라서 이러한 기능은 고객 이름과 같은 세부 정보를 포함하되 분석에 사용하지는 않으려는 경우 유용할 수 있습니다.  
+        -   구조에 포함 되어 있지만 입력으로 지정 하지 않았거나 예측 가능한 특성 플래그를 사용 하 여 구조에 추가 하는 모든 항목 `Ignore`; 즉, 모델을 작성 하지만 분석에서 사용 되지 않으며 dr에만 사용할 수 있는 경우 해당 데이터를 처리 illthrough 합니다. 따라서 이러한 기능은 고객 이름과 같은 세부 정보를 포함하되 분석에 사용하지는 않으려는 경우 유용할 수 있습니다.  
   
      **마침** 를 클릭하여 중첩 테이블을 사용하는 마법사 부분을 닫습니다. 프로세스를 반복하여 여러 중첩 열을 추가할 수 있습니다.  
   

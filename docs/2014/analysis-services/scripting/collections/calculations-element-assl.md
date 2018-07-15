@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Calculations element
 ms.assetid: 03e5e91c-1f66-4dc7-8aad-4d9876928df0
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12d1ad22a305c6adb198348a1cd7fe6b858e72cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130288eb3a628a746d3b7b19b1635a31250cdb8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319291"
 ---
 # <a name="calculations-element-assl"></a>Calculations 요소(ASSL)
-  컬렉션을 포함 [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) 와 관련 된 요소는 [관점](../objects/perspective-element-assl.md) 요소입니다.  
+  컬렉션을 포함 [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) 와 관련 된 요소를 [관점](../objects/perspective-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

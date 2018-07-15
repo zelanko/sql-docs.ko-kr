@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - null values [Integration Services]
 - ISNULL function
@@ -16,13 +16,13 @@ ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f4a9062fe3133a512cacf6cfe34921d36f7aacc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6158fda0ff047d2bd38a0e8b6c4cb8391291a68e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304333"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL(SSIS 식)
   식이 Null인지 여부에 따라 부울 결과를 반환합니다.  

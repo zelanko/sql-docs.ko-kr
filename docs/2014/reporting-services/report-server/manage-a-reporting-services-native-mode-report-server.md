@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305013"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 관리
   이 섹션에서는 Reporting Services 구성 관리자를 사용하여 기본 모드 보고서 서버 인스턴스를 구성하는 절차를 제공합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36079219"
  [서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  보고서 서버 서비스에 대한 계정 및 암호 정보를 지정하는 방법에 대해 설명합니다.  
   
- [서비스 사용자 이름 등록 &#40;SPN&#41; 보고서 서버에 대 한](register-a-service-principal-name-spn-for-a-report-server.md)  
+ [서비스 주체 이름 등록 &#40;SPN&#41; 보고서 서버에 대 한](register-a-service-principal-name-spn-for-a-report-server.md)  
  Kerberos 인증을 사용하는 네트워크에서 도메인 사용자 계정으로 실행되는 보고서 서버의 SPN을 수동으로 등록하는 방법에 대해 설명합니다.  
   
  [URL 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "36079219"
  보고서 서버 데이터베이스를 만드는 단계에 대해 설명합니다. 이 단계는 Reporting Services 설치를 배포하는 데 필요합니다.  
   
 ### <a name="advanced-or-optional-configuration"></a>고급 또는 선택 사항 구성  
- [기본 모드 보고서 서버 확장 배포 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [기본 모드 보고서 서버 스케일 아웃 배포 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  여러 보고서 서버에서 보고서 서버 데이터베이스를 공유하도록 구성하는 단계에 대해 설명합니다.  
   
  [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c4ac89d35cfe118cb82e945ef48d87c24b56abed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317883"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
   이 항목에서는 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  
@@ -40,12 +40,12 @@ ms.locfileid: "36082421"
   
 -   [공유 일정 관리 개요](#bkmk_overview)  
   
--   [공유 일정 (SharePoint 모드) 만들기 및 관리](#bkmk_sharepoint)  
+-   [만들기 및 공유 일정 관리 (SharePoint 모드)](#bkmk_sharepoint)  
   
 -   [공유 일정 (기본 모드) 만들기 및 관리](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> 공유 일정 관리 개요  
- 기본 모드에 대 한 공유 일정을 관리 하려면 보고서 관리자에서 일정 페이지 또는의 공유 일정 폴더 사용 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 위한 관리 페이지를 사용합니다.  
+ 기본 모드에 대 한 공유 일정을 관리 하려면 보고서 관리자에서 일정 페이지 또는 공유 일정 폴더를 사용 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 위한 관리 페이지를 사용합니다.  
   
  보고서 서버에 대해 정의된 모든 공유 일정을 보고, 일정을 일시 중지 및 재개하고(보고서 관리자에만 해당), 수정 또는 삭제할 일정을 선택할 수 있습니다. 공유 일정 페이지에는 각 일정에 대한 정보, 즉 빈도, 소유자, 만료 날짜 및 상태 정보가 요약되어 있습니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36082421"
 1.  보고서 관리자의 일반 도구 모음에서 **사이트 설정**을 클릭합니다.  
   
     > [!NOTE]  
-    >  경우 **사이트 설정** 은 사용할 수 없는 사이트 설정에 액세스할 권한이 있습니다.  
+    >  하는 경우 **사이트 설정** 는 사용할 수 없는 사이트 설정에 액세스할 수 있는 권한이 있습니다.  
   
 2.  페이지의 **기타** 섹션에서 **공유 일정 관리**를 클릭합니다.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36082421"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개별 일정을 중앙에서 관리하지 않습니다. 공유 일정을 삭제하면 개별 항목에 대해 일정 정보를 관리해야 합니다. 사용 하 여 공유 일정을 삭제 하기 전에 [보고서 페이지](../tools/schedule-properties-reports-page.md) 는 보고서는 현재 공유 일정 사용을 확인 하려면.  
+ 여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개별 일정을 중앙에서 관리하지 않습니다. 공유 일정을 삭제하면 개별 항목에 대해 일정 정보를 관리해야 합니다. 공유 일정을 삭제 하기 전에 사용 하 여는 [보고서 페이지](../tools/schedule-properties-reports-page.md) 를 보고 하는 현재 공유 일정을 사용 하는지 확인 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [일정](schedules.md)   

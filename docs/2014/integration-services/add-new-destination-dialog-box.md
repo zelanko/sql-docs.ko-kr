@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.destinationassistant.f1
 - SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4e8937297d7ad4d9404490bd4e1d5a7952243d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26a08ad3ad3797097553b7129c0c4c473018bf34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318833"
 ---
 # <a name="add-new-destination-dialog-box"></a>새 대상 추가 대화 상자
   다음 표에서는 새 대상 추가 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  

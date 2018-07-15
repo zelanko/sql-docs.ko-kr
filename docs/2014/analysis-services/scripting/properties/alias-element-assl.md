@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Alias element
 ms.assetid: 674fdb06-e33c-4f35-bd6a-d9bbb13ececa
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6da42c2c6e01a261972ce5d8b64fe738cc4734d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97823c9c491a354b71e73aea460c562e7c317044
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310513"
 ---
 # <a name="alias-element-assl"></a>Alias 요소(ASSL)
   에 대 한 별칭을 정의 [계정](../objects/account-element-assl.md) 요소입니다.  

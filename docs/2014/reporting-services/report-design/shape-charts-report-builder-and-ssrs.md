@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294063"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>셰이프 차트(보고서 작성기 및 SSRS)
   세이프 차트에서는 값 데이터를 전체의 백분율로 표시합니다. 셰이프 차트는 집합의 서로 다른 값이 차지하는 비율을 비교하여 표시하는 데 주로 사용됩니다. 범주는 셰이프의 개별 세그먼트로 표현됩니다. 세그먼트의 크기는 값에 따라 결정됩니다. 셰이프 차트는 원형 차트와 비슷하지만 범주를 가장 큰 것부터 가장 작은 것 순으로 정렬한다는 점에서 차이가 있습니다.  
   
- 깔대기형 차트에서는 값을 점점 감소하는 비율로 표시합니다. 영역의 크기는 모든 값의 합계에 대한 계열 값의 비율로 결정됩니다. 예를 들어 웹 사이트 방문자 추세를 표시하는 데 깔대기형 차트를 사용할 수 있습니다. 이 경우 홈 페이지 방문자 수가 가장 많았던 시점을 나타내는 제일 넓은 영역이 깔대기형 차트의 맨 위에 표시되고 다른 영역은 크기에 비례하여 그 아래 표시됩니다. 깔때기형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+ 깔대기형 차트에서는 값을 점점 감소하는 비율로 표시합니다. 영역의 크기는 모든 값의 합계에 대한 계열 값의 비율로 결정됩니다. 예를 들어 웹 사이트 방문자 추세를 표시하는 데 깔대기형 차트를 사용할 수 있습니다. 이 경우 홈 페이지 방문자 수가 가장 많았던 시점을 나타내는 제일 넓은 영역이 깔대기형 차트의 맨 위에 표시되고 다른 영역은 크기에 비례하여 그 아래 표시됩니다. 깔때기형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
   
  다음 그림에서는 깔대기형 차트의 예를 보여 줍니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36079687"
   
 -   셰이프 차트는 백분율을 비례에 따라 정렬된 순서로 표시하는 데 가장 효과적입니다. 그러나 일관성을 유지하기 위해 이 차트에서는 기본적으로 데이터 집합의 값을 정렬하지 않습니다. 데이터를 깔때기형 또는 피라미드형으로 가장 정확하게 나타내려면 값을 내림차순으로 정렬하는 것이 좋습니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
   
--   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 셰이프 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 셰이프 차트가 아닌 다른 차트 종류로 변경해야 합니다. 셰이프 이외의 차트에 빈 요소를 추가 하는 방법에 대 한 자세한 내용은 참조 [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)합니다.  
+-   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 셰이프 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 셰이프 차트가 아닌 다른 차트 종류로 변경해야 합니다. 셰이프 이외의 차트에 빈 요소를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)합니다.  
   
 -   사용자 지정 색상표를 사용하여 셰이프 차트의 색을 직접 정의하는 경우에는 쉽게 구분할 수 있는 고유한 색으로 각 데이터 요소를 강조 표시할 수 있도록 색상표에 다양한 색을 준비해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   

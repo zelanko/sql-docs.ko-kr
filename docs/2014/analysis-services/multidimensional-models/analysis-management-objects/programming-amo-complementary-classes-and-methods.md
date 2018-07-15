@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317333"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO 보완 클래스 및 메서드 프로그래밍
   이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -40,10 +40,10 @@ ms.locfileid: "36088284"
   
 -   [Trace 클래스](#TRC)  
   
--   [CaptureLog 클래스 및 CaptureXML 특성](#CL)  
+-   [Capturelog 및 CaptureXML 특성](#CL)  
   
 ##  <a name="Assembly"></a> Assembly 클래스  
- 어셈블리의 기능을 확장 하는 사용자가 수 있도록 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 새 저장된 프로시저 또는 MDX (Multidimensional Expressions) 함수를 추가 하 여 합니다. 자세한 내용은 참조 [AMO 기타 클래스 및 메서드](amo-other-classes-and-methods.md)합니다.  
+ 어셈블리의 기능을 확장 하는 사용자 수 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 새 저장된 프로시저 또는 MDX (Multidimensional Expressions) 함수를 추가 하 여 합니다. 자세한 내용은 [AMO 기타 클래스 및 메서드](amo-other-classes-and-methods.md)합니다.  
   
  어셈블리를 추가하거나 삭제하는 작업은 간단하며 온라인으로 수행할 수 있습니다. 단, 어셈블리를 데이터베이스에 추가하려면 데이터베이스 관리자여야 하며 서버 개체에 추가하려면 서버 관리자여야 합니다.  
   
@@ -283,7 +283,7 @@ static public string TestCaptureLog(Server svr)
 ## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.AnalysisServices>   
  [AMO 클래스 소개](amo-classes-introduction.md)   
- [AMO 다른 클래스와 메서드](amo-other-classes-and-methods.md)   
+ [AMO 기타 클래스 및 메서드](amo-other-classes-and-methods.md)   
  [논리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [데이터베이스 개체 &#40;Analysis Services-다차원 데이터&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [다차원 모델 개체 처리](../processing-a-multidimensional-model-analysis-services.md)  

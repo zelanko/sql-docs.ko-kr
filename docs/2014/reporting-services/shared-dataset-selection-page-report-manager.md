@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 24535c8bbc232852dd4706d32ac8b3910447a97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c364c6d7d72860f031f81d33fe5bca39305f9f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330823"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>공유 데이터 집합 선택 페이지(보고서 관리자)
   공유 데이터 집합 선택 페이지를 사용하여 현재 보고서와 연결된 공유 데이터 집합을 검토하고 수정할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36078970"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 파트 및 보고서 작성기에서 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)   

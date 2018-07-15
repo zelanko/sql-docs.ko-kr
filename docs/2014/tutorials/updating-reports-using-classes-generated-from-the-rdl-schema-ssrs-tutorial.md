@@ -1,5 +1,5 @@
 ---
-title: RDL 스키마 (SSRS 자습서)에서 생성 한 클래스를 사용 하 여 보고서 업데이트 | Microsoft Docs
+title: RDL 스키마 (SSRS 자습서)에서 생성 된 클래스를 사용 하 여 보고서 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 caps.latest.revision: 26
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a13d94965eebf99c401159c86e5fed065f5ec7ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96d125a3d69b564c94b64d23f825778c55068991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297563"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL 스키마에서 생성한 클래스를 사용하여 보고서 업데이트(SSRS 자습서)
-  이 자습서에서는 XML 스키마 정의 도구 (Xsd.exe) 클래스를 생성 하려면 serialize 하 고 보고서 정의 파일 (.rdl 및.rdlc)을 deserialize 할 수 있도록 사용 방법의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다.  
+  이 자습서에는 XML 스키마 정의 도구 (Xsd.exe) 클래스를 생성 및 보고서 정의 파일 (.rdl 및.rdlc)을 deserialize 할 serialize 할 수 있는 사용 하는 방법을 보여 줍니다 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서를 통해 다음 작업을 완료합니다.  
   
--   사용 하 여 응용 프로그램 만들기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 콘솔 응용 프로그램 프로젝트 템플릿을 합니다.  
+-   응용 프로그램 만들기를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 콘솔 응용 프로그램 프로젝트 템플릿.  
   
 -   **xsd** 도구를 사용하여 RDL(Report Definition Language) 스키마의 클래스를 생성합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36079172"
   
  [5단원: 보고서 정의를 보고서 서버에 게시](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [6 단원: RDL Schema 응용 프로그램을 실행 &#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [6 단원: RDL Schema 응용 프로그램을 실행 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

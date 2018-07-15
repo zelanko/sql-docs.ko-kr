@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5cdff5f44079c6c4946f30f9d4cc12ecc1bcac85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293043"
 ---
 # <a name="query-options-execution-advanced-page"></a>쿼리 옵션 실행(고급 페이지)
   **SET** 문을 사용하여 다양한 옵션을 사용할 수 있습니다. 이 페이지를 사용하여 Microsoft SQL Server 쿼리를 실행하기 위한 **set** 옵션을 지정할 수 있습니다. 이러한 각 옵션에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
@@ -67,7 +67,7 @@ GO
  **SET QUERY_GOVERNOR_COST_LIMIT**  
  **query governor cost limit** 옵션을 사용하여 쿼리 실행 제한 시간에 대한 상한값을 지정할 수 있습니다. 쿼리 비용이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다. 기본값 0은 쿼리 실행 제한 시간이 없다는 것을 나타냅니다.  
   
- **공급자 메시지 머리글 무시**  
+ **공급자 메시지 헤더 표시 안 함**  
  이 확인란을 선택하면 OLE DB 공급자와 같은 공급자의 상태 메시지가 표시되지 않습니다. 이 확인란은 기본적으로 선택되어 있습니다. 공급자 수준에서 오류가 발생할 수 있는 쿼리 문제를 해결할 때 공급자 메시지를 보려면 이 확인란의 선택을 취소합니다.  
   
  **쿼리 실행 후 연결 끊기**  

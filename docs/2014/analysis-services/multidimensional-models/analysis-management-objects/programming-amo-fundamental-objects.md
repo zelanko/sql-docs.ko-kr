@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321303"
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 기본 개체 프로그래밍
   기본 개체는 일반적으로 단순하고 간단한 개체입니다. 이러한 개체는 대개 만들어지고 인스턴스화된 후 더 이상 필요하지 않게 되면 사용자가 개체와의 연결을 끊습니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다. AMO 기본 개체 중 유일하게 복잡한 개체는 <xref:Microsoft.AnalysisServices.DataSourceView>로, 이 개체는 세부 정보가 있어야 데이터 원본 뷰를 나타내는 추상 모델을 빌드할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36081695"
   
 -   [DataSourceView 개체](#DSV)  
   
-##  <a name="ServerObjects"></a> 서버 개체  
+##  <a name="ServerObjects"></a> Server 개체  
  <xref:Microsoft.AnalysisServices.Server> 개체를 사용하려면 서버에 연결한 다음 <xref:Microsoft.AnalysisServices.Server> 개체가 서버에 연결되어 있는지 확인하여 이 개체가 서버에 연결되어 있으면 서버에서 <xref:Microsoft.AnalysisServices.Server>의 연결을 끊어야 합니다.  
   
 ### <a name="connecting-to-the-server-object"></a>Server 개체에 연결  
@@ -108,7 +108,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> AmoException 예외 개체  
- AMO는 다양한 문제가 발생할 때 예외를 throw합니다. 예외에 대 한 자세한 내용은 참조 하십시오. [AMO 기타 클래스 및 메서드](amo-other-classes-and-methods.md)합니다. 다음 예제 코드에서는 AMO의 예외를 캡처하는 올바른 방법을 보여 줍니다.  
+ AMO는 다양한 문제가 발생할 때 예외를 throw합니다. 에 대 한 자세한 설명은 예외를 참조 하세요 [AMO 기타 클래스 및 메서드](amo-other-classes-and-methods.md)합니다. 다음 예제 코드에서는 AMO의 예외를 캡처하는 올바른 방법을 보여 줍니다.  
   
 ```  
 try  
@@ -181,7 +181,7 @@ static Database CreateDatabase(Server svr, String DatabaseName)
 ### <a name="processing-a-database"></a>데이터베이스 처리  
  <xref:Microsoft.AnalysisServices.Database> 개체에는 Process 메서드가 포함되어 있으므로 데이터베이스와 모든 자식 개체를 처리하는 것은 매우 간단합니다.  
   
- Process 메서드에는 매개 변수가 포함될 수 있지만 매개 변수가 반드시 필요한 것은 아닙니다. 매개 변수를 지정하지 않으면 모든 자식 개체는 `ProcessDefault` 옵션을 사용하여 처리됩니다. 처리 옵션에 대 한 자세한 내용은 참조 <xref:Microsoft.AnalysisServices.Database>합니다.  
+ Process 메서드에는 매개 변수가 포함될 수 있지만 매개 변수가 반드시 필요한 것은 아닙니다. 매개 변수를 지정하지 않으면 모든 자식 개체는 `ProcessDefault` 옵션을 사용하여 처리됩니다. 처리 옵션에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Database>합니다.  
   
 1.  다음 예제 코드에서는 기본값에 따라 데이터베이스를 처리합니다.  
   
@@ -247,7 +247,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 >  다음 예제 코드는 읽기 쉽도록 일부가 잘려 있습니다. 전체 코드는 이 항목의 맨 끝에 포함되어 있습니다.  
   
 > [!NOTE]  
->  다음 방법의 샘플 코드의 일부인: `AddTable`, `AddComputedColumn`, `AddRelation`, 및 `AddCompositeRelation`합니다.  
+>  다음 메서드는 일부 샘플 코드: `AddTable`, `AddComputedColumn`를 `AddRelation`, 및 `AddCompositeRelation`합니다.  
   
 > [!NOTE]  
 >  `'WHERE 1=0'` 절은 쿼리에서 `DataSet` 개체에 행이 반환되지 않도록 하기 위한 것입니다.  

@@ -5,10 +5,9 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 03111a596ba59bd22e2c6c4811ab37c93a9bf138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c6da139e873434bec21e7dd053094ff0a5eeff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302743"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
   기본적으로 주 복제본에 대한 읽기/쓰기 및 읽기 전용 액세스가 모두 허용되며 AlwaysOn 가용성 그룹의 보조 복제본에 대한 연결은 허용되지 않습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 가용성 복제본에 대한 연결 액세스를 구성하는 방법에 대해 설명합니다.  
@@ -146,7 +145,7 @@ GO
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 관련 매개 변수는 다음과 같습니다.  
   
-    -   보조 역할에 대 한 연결 액세스를 구성 하려면 지정 된 `ConnectionModeInSecondaryRole` *secondary_role_keyword* 매개 변수를 여기서 *secondary_role_keyword* 다음 값 중 하나:  
+    -   보조 역할에 대 한 연결 액세스를 구성 하려면 다음을 지정 합니다 `ConnectionModeInSecondaryRole` *secondary_role_keyword* 매개 변수를 여기서 *secondary_role_keyword* 다음 값 중 하나:  
   
          `AllowNoConnections`  
          보조 복제본의 데이터베이스에 대한 직접 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.  
@@ -157,7 +156,7 @@ GO
          `AllowAllConnections`  
          보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
-    -   주 역할에 대 한 연결 액세스를 구성 하려면 지정 `ConnectionModeInPrimaryRole` *primary_role_keyword*여기서 *primary_role_keyword* 다음 값 중 하나:  
+    -   주 역할에 대 한 연결 액세스를 구성 하려면 지정할 `ConnectionModeInPrimaryRole` *primary_role_keyword*여기서 *primary_role_keyword* 다음 값 중 하나:  
   
          `AllowReadWriteConnections`  
          응용 프로그램 의도 연결 속성이 ReadOnly로 설정된 연결은 허용되지 않습니다. 응용 프로그램 의도 속성이 ReadWrite로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 응용 프로그램 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
@@ -166,14 +165,14 @@ GO
          주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="PSExample"></a> 예제(PowerShell)  
- 다음 예제에서는 설정 모두는 `ConnectionModeInSecondaryRole` 및 `ConnectionModeInPrimaryRole` 매개 변수를 `AllowAllConnections`합니다.  
+ 다음 예제에서는 설정 모두를 `ConnectionModeInSecondaryRole` 하 고 `ConnectionModeInPrimaryRole` 매개 변수를 `AllowAllConnections`.  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
@@ -189,7 +188,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> 후속 작업: 가용성 복제본에 대한 읽기 전용 액세스를 구성한 후의 작업  
  **읽을 수 있는 보조 복제본에 대한 읽기 전용 액세스**  
   
--   사용 하는 경우는 [bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 지정 하 여 읽기 전용 액세스를 사용 하도록 설정 된 보조 복제본에 읽기 전용 액세스를 지정할 수 있습니다는 `-K ReadOnly` 전환 합니다.  
+-   사용 하는 경우는 [bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 지정 하 여 읽기 전용 액세스를 위해 사용 되는 모든 보조 복제본에 읽기 전용 액세스를 지정할 수 있습니다는 `-K ReadOnly` 전환 합니다.  
   
 -   클라이언트 응용 프로그램을 읽을 수 있는 보조 복제본에 연결할 수 있도록 설정하려면:  
   
@@ -218,7 +217,7 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [읽기 가능한 보조 복제본의 가치 제안을 AlwaysOn:](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: 읽기용 보조 복제본의 가치](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
 -   [AlwaysOn: 읽기 작업에 보조 복제본을 사용 하도록 설정 하는 방법은 두 가지가 이유?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
@@ -226,13 +225,13 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [AlwaysOn: 설정 읽기 가능한 보조 복제본 하지만 내 쿼리가 차단?](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: 최신 통계를 읽기용 보조 복제본, 읽기 전용 데이터베이스 및 데이터베이스 스냅숏을 사용할 수 있도록 설정](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: 읽기용 보조 복제본, 읽기 전용 데이터베이스 및 데이터베이스 스냅숏에서에서 사용할 수 있는 최신 통계 만들기](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
 -   [AlwaysOn: 문제에 대 한 통계 읽기 전용 데이터베이스, 데이터베이스 스냅숏 및 보조 복제본](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: 보조 복제본에서 보고 작업을 실행할 때 주 작업에 미치는 영향](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: 보조 복제본에서 보고 작업을 실행할 때 주 작업에는 영향](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: 읽기용 보조 복제본에서 보고 작업을 스냅숏 격리로 매핑할의의 영향](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: 읽기용 보조 복제본에서 보고 작업을 스냅숏 격리로 매핑할 미치](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
 -   [AlwaysOn: 보조 복제본에서 보고 작업을 실행할 때 REDO 스레드 차단 최소화](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320643"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>레지스트리 값을 설정하여 서명 정책 구현
   선택적 레지스트리 값을 사용하여 서명된 패키지나 서명되지 않은 패키지를 로드하기 위한 조직의 정책을 관리할 수 있습니다. 이 레지스트리 값을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 실행하고 정책을 적용할 각 컴퓨터에 이 레지스트리 값을 만들어야 합니다. 레지스트리 값이 설정된 후 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 로드하기 전에 서명을 확인합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36080016"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  실행 대화 상자에 입력 `Regedit`, 클릭 하 고 **확인**합니다.  
+2.  실행 대화 상자에서 입력 `Regedit`를 클릭 하 고 **확인**합니다.  
   
 3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS 레지스트리 키를 찾습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36080016"
   
 5.  새 값의 이름을 업데이트 `BlockedSignatureStates`합니다.  
   
-6.  마우스 오른쪽 단추로 클릭 `BlockedSignatureStates` 클릭 **수정**합니다.  
+6.  마우스 오른쪽 단추로 클릭 `BlockedSignatureStates` 누릅니다 **수정**합니다.  
   
 7.  **DWORD 값 편집** 대화 상자에서 값 0, 1, 2 또는 3을 입력합니다.  
   

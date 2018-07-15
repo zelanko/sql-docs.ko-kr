@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c66a2e16370ac3ca55dea32a2409b79c4b5aceb3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a990cf4223e77e68fd62d7d8e98bca420520d4cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318441"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 이벤트 클래스
   SQL:BatchCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 완료되었음을 나타냅니다.  

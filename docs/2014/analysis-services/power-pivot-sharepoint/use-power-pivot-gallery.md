@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321263"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot 갤러리 사용
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 특수한 용도의 SharePoint 문서 라이브러리로서 PowerPivot 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 풍부한 미리 보기와 문서 관리 기능을 제공합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36079661"
   
 -   [통합 문서 또는 보고서를 전체 페이지 모드로 열기](#view)  
   
--   [PowerPivot 갤러리의 PowerPivot 통합 문서에 대 한 데이터 새로 고침 예약](#newdr)  
+-   [PowerPivot 갤러리에 PowerPivot 통합 문서의 데이터 새로 고침 예약](#newdr)  
   
 -   [통합 문서 또는 PowerPivot 갤러리에서 보고서 삭제](#delete)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36079661"
 > 기본 보기를 변경하려면 **라이브러리** 탭을 클릭한 다음 보기 수정을 클릭합니다. "이 보기를 기본 보기로 만듭니다"를 클릭한 다음 확인을 클릭하여 기본 보기를 저장합니다.  
 >  Edge에서 지원하는 사항에 대한 자세한 내용은 Windows 블로그 [과거로부터의 완벽한 변화, 2부: ActiveX, VBScript의 종말...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)(영문)을 참조하세요.  
   
- 필수 조건의 전체 목록은 참조 하십시오. [만들기 및 사용자 지정 PowerPivot 갤러리](create-and-customize-power-pivot-gallery.md)합니다.  
+ 필수 구성 요소 전체 목록은 참조 하세요. [만들기 및 사용자 지정 PowerPivot 갤러리](create-and-customize-power-pivot-gallery.md)합니다.  
   
 ##  <a name="icons"></a> PowerPivot 갤러리의 아이콘  
  아이콘은 콘텐츠 사용 가능 여부와 상태를 시각적으로 표시합니다.  
@@ -122,12 +122,12 @@ ms.locfileid: "36079661"
   
  브라우저에서 통합 문서를 보는 다른 방법은 클라이언트 워크스테이션의 Excel에서 여는 것입니다. 파일을 보려면 Excel 2013 또는 Excel 2010과 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 추가 기능이 있어야 합니다. Excel 2007을 사용하여 파일을 열 수 있지만 이를 사용하여 데이터를 피벗할 수 없습니다. 따라서 PowerPivot 보기와 만들기에는 Excel 2013 또는 Excel 2010을 사용하는 것이 좋습니다. 필요한 응용 프로그램이 없는 경우 브라우저를 사용하여 SharePoint에서 통합 문서를 표시해야 합니다.  
   
-##  <a name="newdr"></a> PowerPivot 갤러리의 PowerPivot 통합 문서에 대 한 데이터 새로 고침 예약  
+##  <a name="newdr"></a> PowerPivot 갤러리에 PowerPivot 통합 문서의 데이터 새로 고침 예약  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 예약된 간격으로 새로 고칠 수 있습니다.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|데이터 새로 고침 관리 단추를 클릭하여 연결된 데이터 원본에서 업데이트된 데이터를 검색하는 일정을 만들거나 봅니다. 일정을 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [데이터 새로 고침 예약 &#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)합니다.|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|데이터 새로 고침 관리 단추를 클릭하여 연결된 데이터 원본에서 업데이트된 데이터를 검색하는 일정을 만들거나 봅니다. 일정을 만드는 방법에 지침은 [데이터 새로 고침 예약 &#40;SharePoint 용 PowerPivot&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)합니다.|  
   
 ##  <a name="delete"></a> 통합 문서 또는 PowerPivot 갤러리에서 보고서 삭제  
  라이브러리에서 문서를 삭제하려면 먼저 모든 문서 보기로 전환합니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "36079661"
 ## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [PowerPivot 갤러리 삭제](delete-power-pivot-gallery.md)   
- [만들기 및 PowerPivot 갤러리에 사용자 지정](create-and-customize-power-pivot-gallery.md)   
+ [만들고 PowerPivot 갤러리를 사용자 지정](create-and-customize-power-pivot-gallery.md)   
  [데이터 새로 고침 예약 &#40;SharePoint 용 PowerPivot&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

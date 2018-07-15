@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32e636425cf8e04d48c05cc0e343504505c25f39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31ca797c34be8624c5d47ea874439167c5dbeede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315983"
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
   이 페이지를 사용하여 공유 일정 및 역할 정의를 삭제할 수 있습니다.  
   
- 여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개별 일정을 중앙에서 관리하지 않습니다. 공유 일정을 삭제하면 개별 항목에 대한 일정 정보를 관리해야 합니다. 사용 하 여 공유 일정을 삭제 하기 전에 [보고서 페이지](schedule-properties-reports-page.md) 는 보고서는 현재 공유 일정 사용을 확인 하려면.  
+ 여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개별 일정을 중앙에서 관리하지 않습니다. 공유 일정을 삭제하면 개별 항목에 대한 일정 정보를 관리해야 합니다. 공유 일정을 삭제 하기 전에 사용 하 여는 [보고서 페이지](schedule-properties-reports-page.md) 를 보고 하는 현재 공유 일정을 사용 하는지 확인 합니다.  
   
  역할 정의의 경우 역할 할당에 현재 사용 중이 아닌 역할 정의만 삭제할 수 있습니다. 현재 사용 중인 역할을 삭제하려고 시도하면 보고서 서버는 해당 역할을 삭제하지 않고 이에 대한 오류 메시지가 표시됩니다. 이 페이지에 현재 사용 중이 아닌 하나의 역할 정의만 있는 경우 **확인**을 클릭하면 이 역할 정의가 삭제됩니다. 이 페이지에 여러 역할이 있는 경우 보관하거나 제거할 역할을 선택할 수 없습니다. **확인**을 클릭하면 사용되지 않는 모든 역할 정의가 삭제됩니다.  
   
