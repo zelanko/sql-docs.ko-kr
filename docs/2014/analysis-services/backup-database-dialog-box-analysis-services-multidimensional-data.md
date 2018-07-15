@@ -1,5 +1,5 @@
 ---
-title: 백업 데이터베이스 대화 상자 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 데이터베이스 대화 상자 (Analysis Services-다차원 데이터) 백업 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 64e8b814cab69ca66127f28b55062232e45a60fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234443"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 백업 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **데이터베이스 백업** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백업 파일(.abf) 형식을 사용하는 백업 파일에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 백업할 수 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "36092077"
 |**원격 백업 파일**|사용할 원격 백업 파일의 전체 경로 및 파일 이름을 입력하거나 줄임표 단추(**...**)를 클릭하여 **다른 이름으로 파일 저장** 대화 상자를 표시하고 사용할 원격 백업 파일의 경로 및 파일 이름을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에 대한 자세한 내용은 [다른 이름으로 파일 저장 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Analysis Services 데이터베이스 백업 및 복원](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 열 매핑 지정 대화 상자 (마이닝 정확도 차트) | Microsoft Docs
+title: 열 매핑 대화 상자 (마이닝 정확도 차트)를 지정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.coltotablecolmapping.f1
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 350b0f55f7ae4d445945905984f3e68a34d5c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ed607ca38d0cfda0aee7a3b5d8ebbd683570676
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306533"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>열 매핑 지정 대화 상자(마이닝 정확도 차트)
   **열 매핑 지정** 탭을 사용하여 외부 데이터 원본에서 테이블을 선택하고 열을 데이터 마이닝 모델에 매핑할 수 있습니다. 그런 다음 외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트하고 결과를 정확도 차트에 표시할 수 있습니다.  

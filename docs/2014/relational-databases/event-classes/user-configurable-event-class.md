@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf1ce2159300b790042ac7979cdc63adae3e05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8bc28433c9d54f3563bb635cbdbb12590f985a40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300463"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 이벤트 클래스
   User-Configurable 이벤트 범주를 사용하여 사용자 정의 이벤트를 모니터링할 수 있습니다. 다른 이벤트 범주의 시스템 제공 이벤트 클래스에서 모니터링할 수 없는 이벤트를 모니터링하도록 사용자 정의 이벤트 클래스를 만듭니다. 예를 들어 테스트 중인 응용 프로그램의 진행률을 모니터링하도록 사용자 정의 이벤트를 만들 수 있습니다. 응용 프로그램이 실행될 때 미리 정의한 지점에서 이벤트를 생성하여 응용 프로그램의 현재 실행 지점을 판단하도록 할 수 있습니다.  

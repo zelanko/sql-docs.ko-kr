@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b471acfdbaa82005bbfb0b70b68a78a62498a7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e0f67935fd46e27ad107221de96d8816e056e421
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294083"
 ---
 # <a name="options-environment-help-general-page"></a>옵션 (환경-도움말-일반 페이지)
-  **옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
+   **옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
   
 > [!NOTE]  
 >  이 페이지에서 수행한 옵션 변경 내용은 환경을 다시 시작해야만 적용됩니다.  

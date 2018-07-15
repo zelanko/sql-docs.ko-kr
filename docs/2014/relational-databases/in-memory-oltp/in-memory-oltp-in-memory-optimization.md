@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316203"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]의 새로운 기능인 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 로 OLTP 데이터베이스 응용 프로그램 성능이 상당히 개선될 수 있습니다. 
@@ -30,7 +30,7 @@ ms.locfileid: "36081392"
   
 |||  
 |-|-|  
-|![Azure 가상 컴퓨터](../../master-data-services/media/azure-virtual-machine.png "Azure 가상 컴퓨터")|SQL Server 2016을 사용해 보시겠나요? Microsoft Azure에 등록한 다음 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 이미 설치된 SQL Server 2016으로 가상 머신을 실행합니다. 완료된 경우 가상 머신을 삭제할 수 있습니다.|  
+|![Azure 가상 머신](../../master-data-services/media/azure-virtual-machine.png "Azure 가상 머신")|SQL Server 2016을 사용해 보시겠나요? Microsoft Azure에 등록한 다음 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 이미 설치된 SQL Server 2016으로 가상 머신을 실행합니다. 완료된 경우 가상 머신을 삭제할 수 있습니다.|  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]를 사용하려면 자주 액세스하는 테이블을 메모리 액세스에 최적화된 상태로 정의합니다. 메모리 액세스에 최적화된 테이블은 내구성 있는 완전 트랜잭션이며 디스크 기반 테이블과 같은 방법으로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 액세스됩니다. 쿼리는 메모리 최적화 테이블 및 디스크 기반 테이블을 모두 참조할 수 있습니다. 트랜잭션은 메모리 최적화 테이블 및 디스크 기반 테이블에서 데이터를 업데이트할 수 있습니다. 메모리 최적화 테이블만 참조하는 저장 프로시저는 성능 향상을 위해 기계어 코드에 고유하게 컴파일될 수 있습니다. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 고도로 확장된 중간 계층에서 파생되는 OLTP 유형의 트랜잭션을 위한 매우 높은 수준의 세션 동시성을 지원하도록 설계되었습니다. 이를 위해서 래치가 설정되지 않은 데이터 구조와 낙관적인 여러 버전의 동시성 제어를 사용합니다. 따라서 결과는 예측 가능하며, 지연 시간은 밀리초 미만으로 짧고, 처리량은 많으며 데이터베이스 트랜잭션을 위해 직선형으로 확장됩니다. 실제 성능 향상은 많은 요인에 따라 달라지지만 일반적으로 성능이 5 - 20배 향상됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36081392"
   
  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 대해 지원되는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]노출 영역이 제한됩니다.  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용 하 여 성능 및 확장성을 크게 향상을 제공 합니다.  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용 하 여 성능과 확장성을 크게 향상을 달성 합니다.  
   
 -   메모리 상주 데이터에 액세스할 수 있도록 최적화된 알고리즘  
   

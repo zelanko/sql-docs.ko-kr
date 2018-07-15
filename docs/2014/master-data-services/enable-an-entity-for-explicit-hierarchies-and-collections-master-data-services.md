@@ -1,5 +1,5 @@
 ---
-title: 명시적 계층 및 컬렉션 (Master Data Services)에 엔터티 사용 | Microsoft Docs
+title: 명시적 계층 및 컬렉션 (Master Data Services)에 대 한 엔터티를 사용 하도록 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311923"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>명시적 계층 및 컬렉션에 엔터티 사용(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티에 대한 명시적 계층 및 컬렉션을 만들 수 있도록 명시적 계층 및 컬렉션에 엔터티를 사용합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36081597"
   
 5.  **선택한 엔터티 편집**을 클릭합니다.  
   
-6.  **명시적 계층 및 컬렉션 사용** 목록에서 **예**합니다.  
+6.  **명시적 계층 및 컬렉션을 사용 하도록 설정** 목록에서 **예**합니다.  
   
 7.  에 **명시적 계층 이름** 상자 명시적 계층에 대 한 이름을 입력 합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36081597"
   
 -   [명시적 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [컬렉션을 만들 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [컬렉션 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [엔터티 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   

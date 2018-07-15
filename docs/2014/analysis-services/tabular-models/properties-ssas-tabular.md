@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c42d815d8b70fda1739e27e92763e35d6b5f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a35d8e93874e05a81c8ba479c309a6dc97735672
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297183"
 ---
 # <a name="properties-ssas-tabular"></a>속성(SSAS 테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 모델 프로젝트에는 프로젝트, 모델, 보고 및 배포를 위한 동작을 정의하는 다양한 속성이 있습니다. 속성 설정은 Model.bim 파일에 XML 형식으로 저장되지만, 이 섹션에서 설명하는 모든 속성은 **의** 속성 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창에서 구성할 수 있습니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "36081649"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[전원 보고 속성을 볼 &#40;SSAS 테이블 형식&#41;](power-view-reporting-properties-ssas-tabular.md)|이 섹션의 항목에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 연결되고 여기서 검색되는 테이블 형식 모델에 대한 설명과 구성 옵션을 제공합니다.|  
-|[프로젝트 속성 &#40;SSAS 테이블 형식&#41;](project-properties-ssas-tabular.md)|프로젝트 속성에 대해 설명합니다. 프로젝트 속성에는 프로젝트 파일 및 배포 옵션 설정이 포함됩니다.|  
-|[모델 속성 &#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)|모델 속성에 대해 설명합니다. 모델 속성은 모델을 제작하는 동안 모델 프로젝트의 빌드 동작, 백업 및 작업 영역 데이터베이스에 영향을 줍니다.|  
-|[테이블 속성 &#40;SSAS 테이블 형식&#41;](table-properties-ssas-tabular.md)|기본 테이블 속성에 대해 설명합니다. 여기에서 설명하는 테이블 속성은 원본에 있는 열을 표시하고 선택 및 필터링할 수 있도록 하는 테이블 속성 편집 대화 상자의 테이블 속성과 다릅니다.|  
-|[열 속성 &#40;SSAS 테이블 형식&#41;](column-properties-ssas-tabular.md)|열 속성에 대해 설명합니다. 열 속성은 열의 데이터 형식, 형식 및 숨기기 설정을 정의합니다.|  
-|[기본 데이터 모델링 및 배포 속성 구성 &#40;SSAS 테이블 형식&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|기본 모델링 및 배포 속성에 대한 설명 및 구성 단계를 제공합니다. 기본 속성은 새 테이블 형식 모델 프로젝트에 적용됩니다. 프로젝트를 만든 후 요구 사항에 따라 특정 모델 프로젝트에 대해 이러한 속성을 변경할 수 있습니다.|  
+|[전원 보고 속성을 보려면 &#40;&AMP;#40;SSAS 테이블 형식&#41;](power-view-reporting-properties-ssas-tabular.md)|이 섹션의 항목에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 연결되고 여기서 검색되는 테이블 형식 모델에 대한 설명과 구성 옵션을 제공합니다.|  
+|[프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](project-properties-ssas-tabular.md)|프로젝트 속성에 대해 설명합니다. 프로젝트 속성에는 프로젝트 파일 및 배포 옵션 설정이 포함됩니다.|  
+|[모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)|모델 속성에 대해 설명합니다. 모델 속성은 모델을 제작하는 동안 모델 프로젝트의 빌드 동작, 백업 및 작업 영역 데이터베이스에 영향을 줍니다.|  
+|[테이블 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](table-properties-ssas-tabular.md)|기본 테이블 속성에 대해 설명합니다. 여기에서 설명하는 테이블 속성은 원본에 있는 열을 표시하고 선택 및 필터링할 수 있도록 하는 테이블 속성 편집 대화 상자의 테이블 속성과 다릅니다.|  
+|[열 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](column-properties-ssas-tabular.md)|열 속성에 대해 설명합니다. 열 속성은 열의 데이터 형식, 형식 및 숨기기 설정을 정의합니다.|  
+|[기본 데이터 모델링 및 배포 속성 구성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|기본 모델링 및 배포 속성에 대한 설명 및 구성 단계를 제공합니다. 기본 속성은 새 테이블 형식 모델 프로젝트에 적용됩니다. 프로젝트를 만든 후 요구 사항에 따라 특정 모델 프로젝트에 대해 이러한 속성을 변경할 수 있습니다.|  
   
   

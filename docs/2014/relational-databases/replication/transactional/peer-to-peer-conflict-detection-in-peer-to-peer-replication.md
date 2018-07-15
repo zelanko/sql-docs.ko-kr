@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01cc02c299d4a5fc617a8177efe141ea4916babe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318133"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 복제에서 충돌 검색
   피어 투 피어 트랜잭션 복제를 사용하면 토폴로지의 모든 노드에서 데이터를 삽입, 업데이트 및 삭제하고 데이터 변경 내용을 다른 노드로 전파할 수 있습니다. 모든 노드에서 데이터를 변경할 수 있으므로 각 노드에서의 변경이 서로 충돌할 수 있습니다. 두 개 이상의 노드에서 행이 수정되면 이 행이 다른 노드에 전파될 때 충돌이 발생하거나 업데이트가 손실될 수 있습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "36089918"
   
 -   배포 에이전트에서 변경 내용 적용을 계속하도록 하여 노드를 다시 동기화합니다.  
   
-    1.  실행 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): 'p2p_continue_onconflict'에 대 한 지정 된 @property 매개 변수 및 `true` 에 대 한는 @value 매개 변수입니다.  
+    1.  실행 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql):에 대 한 'p2p_continue_onconflict'를 지정 합니다 @property 매개 변수 및 `true` 에 대 한는 @value 매개 변수입니다.  
   
     2.  배포 에이전트를 시작합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36089918"
         > [!NOTE]  
         >  이 단계를 수행한 이후에도 데이터에 일관성이 없는 경우에는 우선 순위가 가장 높은 노드의 행을 수동으로 업데이트한 후 이 노드에서 변경 내용이 전파되도록 해야 합니다. 토폴로지에 더 이상 충돌하는 변경 내용이 없으면 모든 노드가 일관적인 상태가 됩니다.  
   
-    5.  실행 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): 'p2p_continue_onconflict'에 대 한 지정 된 @property 매개 변수 및 `false` 에 대 한는 @value 매개 변수입니다.  
+    5.  실행 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql):에 대 한 'p2p_continue_onconflict'를 지정 합니다 @property 매개 변수 및 `false` 에 대 한는 @value 매개 변수입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  

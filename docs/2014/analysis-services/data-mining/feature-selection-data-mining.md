@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296003"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
-  *기능 선택* 도구 및 처리 및 분석을 위해 관리 하기 쉬운 크기에 대 한 입력을 줄이는 데 사용할 수 있는 기술을 설명 하기 위해 데이터 마이닝에 자주 사용 되는 용어입니다. 기능 선택은 뿐만 아니라 *카디널리티 감소가*, 즉, 모델을 뿐만 아니라는 의미 특성 선택 작성할 때 고려할 수 있는 특성의 수에는 임의의 또는 미리 정의 된 구분 부과 데이터 마이닝 분석가 또는 모델링 도구가 적극적으로 선택 하거나 삭제 특성을 분석에 유용 합니다.  
+  *기능 선택* 도구와 입력 처리 및 분석을 위해 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 기법을 설명 하기 위해 데이터 마이닝에서 일반적으로 사용 하는 용어입니다. 기능 선택은 뿐 아니라 *카디널리티 감소가*, 즉, 모델 뿐만 아니라 특성, 즉 선택 빌드할 때 고려할 수 있는 특성의 수에는 임의의 또는 미리 정의 된 구분 나아가 분석가 또는 모델링 도구가 적극적으로 선택 하거나 분석의 유용성을 기반으로 특성을 삭제 합니다.  
   
  데이터 집합에는 모델을 작성하는 데 필요한 것보다 훨씬 많은 정보가 자주 포함되기 때문에 기능 선택을 적용하는 기능은 효과적인 분석에 중요합니다. 예를 들어, 데이터 집합에 고객의 특성을 설명하는 열이 500개 있지만 일부 열에 데이터가 매우 드물 경우 해당 열을 모델에 추가하여 얻는 이점이 거의 없을 수 있습니다. 모델을 작성하는 동안 불필요한 열을 그대로 둘 경우 학습 프로세스에 더 많은 CPU와 메모리가 필요하고 완료된 모델에 더 많은 저장 공간이 필요합니다.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36090574"
  데이터 원본의 500개 열 중에서 50개 열에만 모델 작성에 유용한 정보가 있을 경우 이러한 열을 모델에 포함하지 않거나, 기능 선택 기술을 사용하여 최상의 기능을 자동으로 검색하고 통계적으로 중요하지 않은 값을 제외할 수 있습니다. 기능 선택은 중요하지 않은 데이터가 너무 많거나, 매우 중요한 데이터가 너무 적은 두 가지 문제를 해결하는 데 도움이 됩니다.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 데이터 마이닝의 기능 선택  
- 기능 선택에서 자동으로 수행 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 되며 각 알고리즘에 기능 축소를 지능형으로 적용 하기 위한 기본 기술 집합이 있습니다. 기능 선택은 모델에 사용될 가능성이 가장 높은 특성을 데이터 집합에서 자동으로 선택하기 위해 모델을 학습하기 전에 항상 수행됩니다. 하지만 기능 선택 동작에 영향을 주는 매개 변수를 수동으로 설정할 수도 있습니다.  
+ 일반적으로 기능 선택에서 자동으로 수행 됩니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 및 각 알고리즘에는 기능 축소를 지능형으로 적용 하기 위한 기본 기술 집합이 있습니다. 기능 선택은 모델에 사용될 가능성이 가장 높은 특성을 데이터 집합에서 자동으로 선택하기 위해 모델을 학습하기 전에 항상 수행됩니다. 하지만 기능 선택 동작에 영향을 주는 매개 변수를 수동으로 설정할 수도 있습니다.  
   
- 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이러한 점수를 계산 하기 위한 여러 메서드 및 모든 모델에 적용 되는 정확한 방법은 이러한 요인에 따라 결정을 제공 합니다.  
+ 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이러한 요인에 따라 특정 모델에 적용 되는 정확한 방법과 이러한 점수를 계산 하기 위한 여러 방법을 제공 합니다.  
   
 -   모델에 사용되는 알고리즘  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36090574"
  다음 섹션에서는 기능 선택의 각 방법에 대해 설명합니다.  
   
 #### <a name="interestingness-score"></a>흥미도 점수  
- 유용한 정보를 제공하는 기능은 흥미롭습니다. 데이터 마이닝 업계 시나리오에 따라 달라 집니다 무엇이 유용한 정보의 정의 했기 때문에 측정 하는 다양 한 방법을 개발 했습니다 *흥미도*합니다. 예를 들어 *새로 움* 이상 값 검색에 유용 하지만 밀접 하 게 관련 된 항목을 구분 하는 기능에 주목 해야 할 또는 *판별 가중치*에 더 관심이 있을 수 있습니다 분류 합니다.  
+ 유용한 정보를 제공하는 기능은 흥미롭습니다. 데이터 마이닝 업계 측정 하는 다양 한 방법 개발한 시나리오에 따라 달라 집니다 무엇이 유용한 정의 되므로 *흥미도*합니다. 예를 들어 *새로 움* 이상 값 검색 하지만 밀접 하 게 관련된 항목을 구분 하는 기능이 유용할 수 있습니다 또는 *판별 가중치*에 대 한 흥미로운 수 분류 합니다.  
   
- SQL Server Analysis Services에서 사용 되는 흥미도 측정은 *entropy 기반*즉, 분포가 특성에는 더 높은 entropy는 많지만 정보 획득; 따라서 이러한 특성은 작은 흥미로운 합니다. 특정 특성에 대한 Entropy는 다음과 같이 다른 모든 특성의 Entropy와 비교됩니다.  
+ SQL Server Analysis Services에 사용 되는 흥미도 측정은 *entropy 기반*즉, 분포가 특성 보다 높은 엔트로피 있고 낮은 정보 획득, 따라서 이러한 특성은 작은 된 흥미로운 합니다. 특정 특성에 대한 Entropy는 다음과 같이 다른 모든 특성의 Entropy와 비교됩니다.  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d24237c0464b79eb193001baef23e8a7b4362233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307573"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일을 볼 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36081391"
   
 -   오류 로그 파일을 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그 파일은 다음 경로에 있습니다. 여기서 \<*드라이브>* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 \<*InstanceName*>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름을 나타냅니다.  
   
-     **\<드라이브 >: files\microsoft SQL Server\MSSQL12 합니다. \<InstanceName > \MSSQL\Log**  
+     **\<드라이브 >: \Program Files\Microsoft SQL Server\MSSQL12. \<N a m e > \MSSQL\Log**  
   
  WMI 네임스페이스 보안 설정을 확인하려면 WMI 컨트롤 스냅인을 사용합니다.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36081391"
   
 1.  WMI 컨트롤 스냅인을 엽니다. WMI 컨트롤 스냅인을 열려면 운영 체제에 따라 다음 중 하나를 수행합니다.  
   
-    -   클릭 **시작**, 형식 `wmimgmt.msc` 에 **검색 시작** 상자, 한 다음 ENTER 키를 누릅니다.  
+    -   클릭 **시작**, 형식 `wmimgmt.msc` 에 **검색 시작** 상자의 및 다음 ENTER를 누릅니다.  
   
-    -   클릭 **시작**, 클릭 **실행**, 형식 `wmimgmt.msc`, 한 다음 ENTER 키를 누릅니다.  
+    -   클릭 **시작**, 클릭 **실행**, 형식 `wmimgmt.msc`, 한 다음 ENTER를 누릅니다.  
   
 2.  기본적으로 WMI 컨트롤 스냅인은 로컬 컴퓨터를 관리합니다.  
   

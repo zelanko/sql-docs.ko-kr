@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e09f7b68748aa40620196b0402ce81521591781a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310473"
 ---
 # <a name="cross-container-transactions"></a>크로스 컨테이너 트랜잭션
   크로스 컨테이너 트랜잭션은 메모리 최적화 테이블에서 고유하게 컴파일된 저장 프로시저 또는 작업에 대한 호출을 포함하는 암시적이거나 명시적인 사용자 트랜잭션입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "36089997"
  메모리 최적화 테이블을 참조하는 해석된 쿼리는 명시적이거나 암시적인 트랜잭션 또는 자동 커밋 모드에서 실행되는지 여부에 관계없이 크로스 컨테이너 트랜잭션의 일부로 간주됩니다.  
   
 ##  <a name="isolation"></a> 개별 작업의 격리  
- 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 트랜잭션마다 격리 수준이 있습니다. 기본 격리 수준은 커밋된 읽기입니다. 사용할 다른 격리 수준을 설정할 수 있습니다 사용 하 여 격리 수준 [SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)합니다.  
+ 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 트랜잭션마다 격리 수준이 있습니다. 기본 격리 수준은 커밋된 읽기입니다. 다른 격리 수준을 사용 하려면 설정할 수 있습니다 사용 하 여 격리 수준 [SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)합니다.  
   
  따라서 디스크 기반 테이블과는 다른 격리 수준의 메모리 최적화 테이블에서 작업을 수행해야 하는 경우가 있습니다. 트랜잭션에서는 문의 컬렉션 또는 개별 읽기 작업에 대해 다른 격리 수준을 설정할 수 있습니다.  
   
@@ -69,13 +69,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>개별 작업에 대한 격리 의미  
  직렬화 트랜잭션 T는 완벽한 격리 상태에서 실행됩니다. 이런 상황은 다른 모든 트랜잭션이 T가 시작되기 전에 커밋되거나 T가 커밋된 후에 시작된 것과 같습니다. 따라서 트랜잭션의 작업마다 격리 수준이 다르면 더 복잡해집니다.  
   
- 트랜잭션 격리 수준의 일반적인 의미 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 잠금 기능에 영향을 줄 함께 대해서는 설명 [SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)합니다.  
+ 트랜잭션 격리 수준은 일반 의미 체계 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 잠금에 미치는 영향, 함께 방법은 [SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  작업마다 다른 격리 수준을 가질 수 있는 크로스 컨테이너 트랜잭션의 경우 개별 읽기 작업의 격리에 대한 의미를 이해해야 합니다. 쓰기 작업은 항상 격리됩니다. 다른 트랜잭션의 쓰기는 서로 간에 영향을 미치지 않습니다.  
   
  데이터 읽기 작업은 필터 조건을 충족하는 행의 개수를 반환합니다.  
   
- 읽기를 수행 하는 읽기 작업에 대 한 트랜잭션 화 격리 수준의 일부의 측면에서 이해할 수 있습니다.  
+ 측면에서 인식할 수는 트랜잭션 T. 격리 수준은 읽기 작업에 대 한 부분으로 읽기를 수행 합니다.  
   
  커밋 상태  
  커밋 상태는 데이터 읽기 커밋이 보증되는지 여부를 나타냅니다.  
@@ -86,7 +86,7 @@ commit
  안정성은 시스템이 데이터 읽기에 대해 트랜잭션 T에 제공하는 것을 보장합니다.  
  안정성은 트랜잭션의 읽기가 반복 가능한지 여부를 나타냅니다. 즉, 읽기가 반복될 때 동일한 행 및 행 버전이 반환되는지 여부를 나타냅니다.  
   
- 특정 보증은 트랜잭션의 논리적 종료 시간을 나타냅니다. 일반적으로 논리적 종료 시간은 트랜잭션이 데이터베이스에 커밋되는 시간입니다. 메모리 최적화 테이블이 트랜잭션에 의해 액세스되는 경우 논리적 종료 시간은 기술적으로 유효성 검사 단계의 시작 시간입니다. (자세한 내용은의 트랜잭션 수명 설명을 참조 [메모리 최적화 된 테이블의 트랜잭션은](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 특정 보증은 트랜잭션의 논리적 종료 시간을 나타냅니다. 일반적으로 논리적 종료 시간은 트랜잭션이 데이터베이스에 커밋되는 시간입니다. 메모리 최적화 테이블이 트랜잭션에 의해 액세스되는 경우 논리적 종료 시간은 기술적으로 유효성 검사 단계의 시작 시간입니다. (자세한 내용은의 트랜잭션 수명 설명을 참조 하세요 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
  격리 수준에 관계없이 트랜잭션(T)은 항상 자체 업데이트를 확인합니다.  
   
@@ -103,7 +103,7 @@ commit
  데이터 읽기는 커밋을 보장하며 트랜잭션의 논리적 종료 시간이 될 때까지 안정적입니다.  
   
  SERIALIZABLE  
- 모든 REPEATABLE READ와 가상 회피 및 화 가상 회피 의미 검색 작업이 T에 의해 기록 된 추가 행만 반환할 수 있습니다이 수행한 모든 직렬화 읽기 작업과 관련 한 트랜잭션 일관성 보증이 없는 다른 트랜잭션에 의해 기록 된 행 수입니다.  
+ REPEATABLE READ와 가상 회피 및 T. 가상 회피 검색 작업이 T에 의해 작성 된 추가 행만 반환할 수 있습니다 의미 수행한 모든 직렬화 읽기 작업과 관련 한 트랜잭션 일관성은 모두 보장 하지 않지만 다른 트랜잭션에 의해 기록 된 행입니다.  
   
  다음과 같은 트랜잭션이 있다고 합시다.  
   
@@ -132,14 +132,14 @@ commit
   
  이 트랜잭션은 커밋된 읽기 격리에서 t3의 모든 행을 삭제하고 직렬화 격리 상태에서 t1의 모든 행을 t3으로 복사한 다음 t1과 t3을 비교합니다. 일부 행[t1에는 없음]은 테이블이 비어 있기 때문에 t3에 추가되었을 수 있습니다. 복사본은 직렬화될 수 있기 때문에 t1에는 행이 추가되지 않았습니다.  
   
- 트랜잭션이 끝날 때 t 1의 읽기는 구문상 커밋된 읽기 이지만 직렬화 효과적으로 직렬화 격리에서 트랜잭션 앞부분에서 동일한 읽기가 수행 되었기: 순차성을 보장 하는 경우 읽기 트랜잭션에서 나중 시점 수행, 동일한 행이 반환 됩니다.  
+ 트랜잭션이 끝날 때 t1의 읽기는 구문상 커밋된 읽기 이지만 효과적으로 직렬화 serializable 격리 상태에서 트랜잭션에서 이전에 동일한 읽기가 수행 되었으므로: 순차성을 보장 하는 경우 읽기 트랜잭션에서 나중 시점 수행 같은 행이 반환 됩니다.  
   
 ## <a name="cross-container-transactions-and-isolation-levels"></a>크로스 컨테이너 트랜잭션 및 격리 수준  
- 크로스 컨테이너 트랜잭션 두 변 있는 것으로 볼 수 있습니다:는 디스크 기반 측면 (디스크 기반 테이블에 대 한 작업) 및는 메모리 액세스에 최적화 된 측면 (메모리 액세스에 최적화 된 테이블에 대 한 작업). 이러한 두 가지 측면은 다른 격리 수준을 가질 수 있습니다. 사실, 각 측면에서 개별 읽기 작업마다 다른 격리 수준을 가질 수 있습니다.  
+ 크로스 컨테이너 트랜잭션 양쪽에 있는 것으로 볼 수 있습니다:는 디스크 기반 측면 (디스크 기반 테이블에 대 한 작업) 및는 메모리 최적화 측면 (메모리 최적화 테이블에 대 한 작업). 이러한 두 가지 측면은 다른 격리 수준을 가질 수 있습니다. 사실, 각 측면에서 개별 읽기 작업마다 다른 격리 수준을 가질 수 있습니다.  
   
  지정된 트랜잭션 T의 디스크 기반 측면은 다음 조건 중 하나가 충족되는 경우 특정 격리 수준에 도달합니다.  
   
--   X에서 시작 합니다. 즉,는 세션 기본값이 X 였습니다, 하거나 실행 하기 때문에 `SET TRANSACTION ISOLATION LEVEL`, 이기는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본값입니다.  
+-   X에서 시작합니다. 즉, 세션 기본값 이어서 X 하거나 실행할 `SET TRANSACTION ISOLATION LEVEL`, 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본입니다.  
   
 -   트랜잭션 동안 `SET TRANSACTION ISOLATION LEVEL`을 사용하여 기본 격리 수준이 X로 변경되었습니다.  
   
@@ -151,7 +151,7 @@ commit
   
  트랜잭션의 디스크 기반 측면은 이 수준에서 시작하므로 격리 수준 커밋된 읽기에 도달합니다. 또한 디스크 기반 측면은 첫 번째 읽기 작업이 격리 수준 상태에서 실행되므로 반복 읽기에 도달합니다. 트랜잭션이 끝날 때 커밋된 읽기 격리 수준 상태에서 삭제가 실행되므로 새로운 격리 수준이 도입되지 않습니다.  
   
- 트랜잭션의 메모리 액세스에 최적화 된 측면은 두 수준 중 하나에 도달할 수: 조건 1이 true 이면이 직렬화에 도달 하지만 false 이면 메모리 액세스에 최적화 된 측면 도달 스냅숏 격리만 합니다.  
+ 트랜잭션의 메모리 최적화 측면 두 수준 중 하나에 도달할 수 있습니다: condition1이 true 이면이 직렬화에 도달 하지만 false 인 경우 스냅숏 격리만 메모리 최적화 측면이 도달 합니다.  
   
 ```tsql  
 set transaction isolation level read committed  
@@ -187,11 +187,11 @@ commit
   
  자동 커밋 모드의 크로스 컨테이너 읽기 전용 트랜잭션은 트랜잭션이 끝날 때 롤백됩니다. 유효성 검사가 수행되지 않습니다.  
   
- 명시적 또는 암시적 크로스 컨테이너 읽기 전용 트랜잭션은 REPEATABLE READ 또는 SERIALIZABLE 격리 상태에서 트랜잭션이 메모리 최적화 테이블에 액세스하는 경우 커밋할 때 유효성 검사를 수행합니다. 충돌 검색, 유효성 검사 섹션을 참조 하는 유효성 검사에 대 한 세부 정보 및 커밋 종속성 확인 대 한 [메모리 최적화 된 테이블의 트랜잭션은](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 명시적 또는 암시적 크로스 컨테이너 읽기 전용 트랜잭션은 REPEATABLE READ 또는 SERIALIZABLE 격리 상태에서 트랜잭션이 메모리 최적화 테이블에 액세스하는 경우 커밋할 때 유효성 검사를 수행합니다. 충돌 검색, 유효성 검사 섹션을 참조 하는 유효성 검사에 대 한 세부 정보 및 커밋 종속성 확인에 대 한 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화 된 테이블에 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [메모리 액세스에 최적화 된 테이블이 포함 된 트랜잭션 격리 수준에 대 한 지침](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [메모리 최적화 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [메모리 최적화 테이블을 사용 하 여 트랜잭션 격리 수준에 대 한 지침](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

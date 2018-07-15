@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMeasure element
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72585d3d1bbce32fd3af4bedbf60e660f8b197f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6650ad99a21a4c2628e94e483c4cd2947d240bc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314643"
 ---
 # <a name="defaultmeasure-element-assl"></a>DefaultMeasure 요소(ASSL)
   에 대 한 기본 측정값을 정의 하는 MDX (Multidimensional Expressions) 식을 포함 한 [큐브](../objects/cube-element-assl.md) 또는 [관점](../objects/perspective-element-assl.md) 요소입니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36089158"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `DefaultMeasure` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Cube> 및 <xref:Microsoft.AnalysisServices.Perspective>합니다.  
+ 부모에 해당 하는 요소가 `DefaultMeasure` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.Cube> 및 <xref:Microsoft.AnalysisServices.Perspective>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

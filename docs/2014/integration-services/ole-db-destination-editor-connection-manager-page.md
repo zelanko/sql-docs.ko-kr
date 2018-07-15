@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328073"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 대상 편집기(연결 관리자 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 OLE DB 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
 > [!NOTE]  
->  `CommandTimeout` OLE DB 대상의 속성에서 사용할 수 없는 **OLE DB 대상 편집기**, 이지만 사용 하 여 설정할 수 있습니다는 **고급 편집기**합니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)의 OLE DB 대상 섹션을 참조하십시오.  
+>  `CommandTimeout` OLE DB 대상의 속성을 사용할 수 없습니다는 **OLE DB 대상 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**합니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)의 OLE DB 대상 섹션을 참조하십시오.  
   
  OLE DB 대상에 대한 자세한 내용은 [OLE DB Destination](data-flow/ole-db-destination.md)을 참조하십시오.  
   

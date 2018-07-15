@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308508"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>데이터 피드 라이브러리 만들기 또는 사용자 지정(SharePoint용 PowerPivot)
   *데이터 피드 라이브러리* 는 Atom 데이터 서비스 문서(.atomsvc)를 등록 및 공유할 수 있도록 해 주는 특수 용도의 SharePoint 라이브러리입니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 응용 프로그램에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36081218"
   
 -   중앙 위치에서 데이터 서비스 문서 공유 및 관리  
   
--   동일한 라이브러리에 저장 된 다른 문서에서 서비스 문서를 쉽게 구분할 수 있도록 아이콘을 사용 하 여 데이터 서비스 문서를 시각적으로 식별: ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   동일한 라이브러리에 저장 된 다른 문서에서 서비스 문서를 쉽게 구분할 수 있도록 아이콘을 사용 하 여 데이터 서비스 문서를 시각적으로 식별 합니다. ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  데이터 피드 라이브러리에는 항상 데이터 서비스 문서(.atomsvc) 파일이 포함되어 있고 데이터 피드 자체는 포함되어 있지 않습니다. 정적 XML 데이터로 구성되는 데이터 피드와 달리 데이터 서비스 문서는 반복 가능한 가져오기 작업에 재사용 가능한 연결 정보를 제공하여 요청에 따라 피드를 생성하는 서비스 또는 응용 프로그램에 대한 URL을 지정합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36081218"
  [라이브러리에 데이터 피드 콘텐츠 형식 추가](#addtolib)  
   
 ##  <a name="prereq"></a> 필수 구성 요소  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 데이터 피드 라이브러리 템플릿 유형을 사용할 수 없는 경우 이 사전 요구 사항이 충족되지 않았을 수 있습니다. 자세한 내용은 참조 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 데이터 피드 라이브러리 템플릿 유형을 사용할 수 없는 경우 이 사전 요구 사항이 충족되지 않았을 수 있습니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
   
  라이브러리를 만들려면 사이트 소유자여야 합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36081218"
   
  데이터 피드 라이브러리에 대한 링크가 현재 사이트의 탐색 빠른 실행 창에 표시됩니다.  
   
- 라이브러리를 만든 후 해당 라이브러리를 사용하여 데이터 서비스 문서를 만들 수 있습니다. 자세한 내용은 참조 [사용 하 여 데이터 피드 &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)합니다.  
+ 라이브러리를 만든 후 해당 라이브러리를 사용하여 데이터 서비스 문서를 만들 수 있습니다. 자세한 내용은 [사용 하 여 데이터 피드 &#40;SharePoint 용 PowerPivot&#41;](use-data-feeds-power-pivot-for-sharepoint.md)합니다.  
   
 ##  <a name="addtolib"></a> 라이브러리에 데이터 피드 콘텐츠 형식 추가  
  전용 데이터 피드 라이브러리를 만들지 않지만 SharePoint 사이트에서 데이터 서비스 문서를 만들고 관리하려는 경우 데이터 서비스 문서(.atomsvc) 파일을 공유하는 데 사용할 라이브러리에 대한 데이터 서비스 문서 콘텐츠 형식을 수동으로 추가하여 구성할 수 있습니다.  

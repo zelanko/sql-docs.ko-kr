@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deadlocks [SQL Server], printing files
 - deadlocks [SQL Server], opening files
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - printing deadlock files
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a81f92fb80e094b0347baea38632bac41c7661c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 394a06c9d5e60f94308f2b63508e089a2082c266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311663"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>교착 상태 파일 열기, 보기 및 인쇄(SQL Server Management Studio)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 교착 상태가 생성되면 교착 상태 정보를 캡처하여 파일에 저장할 수 있습니다. 교착 상태 파일을 저장한 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 해당 파일을 열어서 보거나 인쇄할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36090410"
   
 3.  인쇄할 교착 상태 파일을 선택하고 **열기**를 클릭합니다.  
   
-4.  **파일** 메뉴에서 **인쇄**를 클릭합니다.  
+4.   **파일** 메뉴에서 **인쇄**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [교착 상태 그래프 저장&#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d51e71307cceec375cc410debf112cd066d6c10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 441434839fa15b1f9345ddecf55eef3f7f248724
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307463"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
   전체 텍스트 인덱스의 정보는 전체 텍스트 엔진이 테이블에서 특정 단어나 단어 조합을 빠르게 검색할 수 있는 전체 텍스트 쿼리를 컴파일하는 데 사용됩니다. 전체 텍스트 인덱스는 하나 이상의 데이터베이스 테이블 열에 중요한 단어와 그 위치에 대한 정보를 저장합니다. 전체 텍스트 인덱스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 전체 텍스트 엔진이 작성하고 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 전체 텍스트 인덱스의 작성 과정은 다른 유형의 인덱스를 작성하는 것과 다릅니다. 특정 행에 저장된 값을 기준으로 B-트리 구조를 생성하는 대신 전체 텍스트 엔진은 인덱싱되는 텍스트의 개별 토큰을 기준으로 반전된 누적 압축 인덱스 구조를 작성합니다.  전체 텍스트 인덱스 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 사용 가능한 메모리 리소스에 의해서만 제한됩니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "36091501"
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 엔진이 별도의 서비스가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 있습니다. 전체 텍스트 엔진을 데이터베이스 엔진에 통합하면 전체 텍스트 관리 효율성, 혼합 쿼리의 최적화 및 전체 성능이 향상됩니다.  
   
- 테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. 형식의 열에 대해 전체 텍스트 인덱스를 만들 수 `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, 및 `varbinary(max)` 을 위해 인덱싱할 수 전체 텍스트 검색 합니다. 형식이 데이터 열에 전체 텍스트 인덱스를 만들기 `varbinary`, `varbinary(max)`, `image`, 또는 `xml` 유형 열을 지정 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
+ 테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. 형식의 열에 대해 전체 텍스트 인덱스를 만들 수 있습니다 `char`, `varchar`, `nchar`, `nvarchar`, `text`를 `ntext`, `image`를 `xml`를 `varbinary`, 및 `varbinary(max)` 위해 인덱싱할 수 있는 전체 텍스트 검색 합니다. 형식은 데이터 열에 전체 텍스트 인덱스를 만들 `varbinary`, `varbinary(max)`를 `image`, 또는 `xml` 유형 열을 지정 해야 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
   
  전체 텍스트 인덱스를 만들고 유지 관리하는 과정을 *채우기* (또는 *탐색*)라고 합니다. 전체 텍스트 인덱스 채우기에는 전체 채우기, 변경 내용 추적 기반 채우기 및 증분 타임스탬프 기반 채우기의 세 가지가 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](populate-full-text-indexes.md)를 참조하세요.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "36091501"
   
  **ColId** 열에는 전체 텍스트 인덱싱된 특정 열에 해당하는 값이 포함됩니다.  
   
- `DocId` 열 전체 텍스트 인덱싱된 테이블의 특정 전체 텍스트 키 값에 매핑되는 8 바이트 정수에 대 한 값을 포함 합니다. 이 매핑은 전체 텍스트 키가 정수 데이터 형식이 아닌 경우에만 필요합니다. 이 경우 매핑은 전체 텍스트 키 값 및 `DocId` 값은 DocId Mapping 테이블 이라는 개별 테이블에서 유지 관리 합니다. 이러한 매핑을 쿼리하려면 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 시스템 저장 프로시저를 사용합니다. 검색 조건을 충족하려면 위 테이블의 DocId 값이 쿼리 중인 기본 테이블에서 행을 검색할 수 있도록 DocId Mapping 테이블과 조인되어야 합니다. 기본 테이블의 전체 텍스트 키 값이 정수 형식인 경우 값은 DocId로 직접 사용되며 매핑이 필요하지 않습니다. 따라서 정수 전체 텍스트 키 값을 사용하면 전체 텍스트 쿼리 최적화에 도움이 될 수 있습니다.  
+ `DocId` 열 전체 텍스트 인덱싱된 테이블의 특정 전체 텍스트 키 값에 매핑되는 8 바이트 정수에 대 한 값을 포함 합니다. 이 매핑은 전체 텍스트 키가 정수 데이터 형식이 아닌 경우에만 필요합니다. 이러한 경우 전체 텍스트 간의 매핑을 키 값 및 `DocId` 값 DocId Mapping 테이블 이라는 개별 테이블에 유지 됩니다. 이러한 매핑을 쿼리하려면 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 시스템 저장 프로시저를 사용합니다. 검색 조건을 충족하려면 위 테이블의 DocId 값이 쿼리 중인 기본 테이블에서 행을 검색할 수 있도록 DocId Mapping 테이블과 조인되어야 합니다. 기본 테이블의 전체 텍스트 키 값이 정수 형식인 경우 값은 DocId로 직접 사용되며 매핑이 필요하지 않습니다. 따라서 정수 전체 텍스트 키 값을 사용하면 전체 텍스트 쿼리 최적화에 도움이 될 수 있습니다.  
   
  **Occurrence** 열에는 정수 값이 포함됩니다. 각 DocId 값에는 해당 DocId 내의 특정 키워드에 대한 상대적 단어 오프셋에 해당하는 발생 빈도 값의 목록이 있습니다. 발행 빈도 값은 구 또는 근접 단어 일치를 확인하는 데 유용합니다. 예를 들어 구는 발생 빈도 값의 숫자가 서로 인접해 있습니다. 발생 빈도 값은 관련성을 평가하는 데에도 유용합니다. 예를 들어 DocId의 키워드 발생 빈도를 평가 시 사용할 수 있습니다.  
   

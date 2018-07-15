@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: baceb951040c86be5b42e8d881deb51d84df3849
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a8bfc88933351eb818b1412c249475fa34222c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294233"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 응용 프로그램, 보고서 관리자 또는 브라우저에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
@@ -101,8 +101,8 @@ ms.locfileid: "36090809"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [보고서 속성 대화 상자, 페이지 설정&#40;보고서 작성기&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
- [보고서 디자인 보기 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
+ [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
   
   

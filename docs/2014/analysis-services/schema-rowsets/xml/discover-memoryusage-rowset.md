@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304583"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 행 집합
   서버에 의해 할당된 다양한 개체에 대한 DISCOVER_MEMORYUSAGE 통계를 반환합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36090545"
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_MEMORYUSAGE` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_MEMORYUSAGE` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "36090545"
 |`ElementCount`|`DBTYPE_UI4`||컨테이너 개체의 경우 해당 개체에 포함된 개체 수입니다.|  
 |`Shrinkable`|`DBTYPE_BOOL`|예|메모리가 축소 가능(메모리 가중으로 인해 삭제 가능)한지 여부를 나타내는 부울입니다. true이면 메모리가 축소 가능하며, false이면 축소 불가능합니다.|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||이 개체의 전체 경로를 식별하는 문자열입니다.|  
-|`ObjectID`|`DBTYPE_WSTR`||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열에 의해 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
+|`ObjectID`|`DBTYPE_WSTR`||개체를 식별하는 문자열입니다. 이 개체의 전체 경로 문자열로 표시 됩니다: (ObjectParentPath + '.' + ObjectId).|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   

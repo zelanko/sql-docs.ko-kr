@@ -5,26 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e564784e5f3fcae652068dcb200a805062a5e6bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83eeb3ca9ea1f2e22f3d2dadf8089b8ba510c951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306233"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>전체 텍스트 인덱스 속성(일정 페이지)
-  이 페이지를 사용하여 전체 텍스트 인덱스의 기본 테이블에 대한 업데이트의 증분 채우기를 시작하는 SQL Server 에이전트 작업을 실행하는 일정을 보거나 만들 수 있습니다. 기본 테이블 또는 뷰의 열에 포함 되어 있지 않습니다는 `timestamp` 데이터 형식, 전체 채우기가 수행 됩니다.  
+  이 페이지를 사용하여 전체 텍스트 인덱스의 기본 테이블에 대한 업데이트의 증분 채우기를 시작하는 SQL Server 에이전트 작업을 실행하는 일정을 보거나 만들 수 있습니다. 기본 테이블 또는 뷰 열의 없으면는 `timestamp` 데이터 형식, 전체 채우기가 수행 됩니다.  
   
  **전체 텍스트 인덱스의 속성 보기 또는 변경 하려면**  
   

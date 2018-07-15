@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ccedd48fcebab07eeb7b27821917b684d98a11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd8c345a0f5b1cafdf675fa5ed57b857d9714b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317543"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치
   Excel Services 또는 SharePoint용 PowerPivot이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 PowerPivot을 설치하는 경우, PowerPivot 관리 대시보드의 모든 기본 제공 보고서에 액세스하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 PowerPivot 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36090588"
   
 3.  **버전**을 클릭합니다.  
   
-4.  버전에 12.00 포함 되어 있는지 확인 합니다. \<빌드 번호 > 설명이 Microsoft.AnalysisService.AdomdClient 인지 하 고 있습니다.  
+4.  버전에 12.00.<이 포함 되어 있는지 확인 합니다. \<빌드 번호 > Microsoft.AnalysisService.AdomdClient 인지 하 고 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [PowerPivot 관리 대시보드 및 사용 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

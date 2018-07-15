@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b734e817739d887c6e342aa841e3701f770175a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330983"
 ---
 # <a name="setup-role"></a>설치 역할
   이 페이지를 통해 기능 선택 페이지를 사용하여 개별 기능을 선택할지 설치 역할을 사용하여 설치할지 지정할 수 있습니다.  

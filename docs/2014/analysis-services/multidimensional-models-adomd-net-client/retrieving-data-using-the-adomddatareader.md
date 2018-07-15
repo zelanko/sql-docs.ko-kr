@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321233"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader를 사용하여 데이터 검색
   분석 데이터 검색 시 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 오버헤드와 상호 작용 간에 적절한 균형을 맞춥니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 분석 데이터 원본에서 정방향 및 읽기 전용의 평면화된 데이터 스트림을 검색합니다. 이 버퍼링되지 않은 데이터 스트림을 사용하면 절차적인 논리에서 분석 데이터 원본의 결과를 순차적으로 처리할 수 있습니다. 따라서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 데이터가 메모리에 캐시되지 않기 때문에 표시를 목적으로 많은 양의 데이터를 검색할 때 유용하게 사용할 수 있습니다.  
   
- 또한 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 쿼리의 전체 결과가 반환될 때까지 기다리지 않고 사용 가능한 데이터를 바로 검색하기 때문에 응용 프로그램 성능을 높일 수 있으며, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 도 기본적으로이 판독기에서는 메모리에 한 번에 하나의 행을 저장 하기 때문에 시스템 오버 헤드를 감소 합니다.  
+ 또한 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 쿼리의 전체 결과가 반환될 때까지 기다리지 않고 사용 가능한 데이터를 바로 검색하기 때문에 응용 프로그램 성능을 높일 수 있으며, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 기본적으로이 판독기는 메모리에서 한 번에 하나의 행을 저장 하기 때문에 시스템 오버 헤드가 감소 합니다.  
   
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 성능을 최적화하지만 검색된 데이터에 대해 제공하는 정보량이 다른 데이터 검색 메서드보다 적습니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 데이터 또는 메타데이터를 나타내기 위한 큰 개체 모델을 지원하지 않으며 이 개체 모델에는 셀 쓰기 저장(writeback)과 같이 복잡한 분석 기능도 사용할 수 없습니다. 하지만 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 셀 집합 데이터를 검색하는 강력한 형식의 메서드 집합과 셀 집합 메타데이터를 테이블 형식으로 검색하는 메서드를 제공합니다. 또한 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 구현 하는 **지** 데이터 바인딩을 지원 하 고 사용 하 여 데이터를 검색 하기 위한 인터페이스는 `SelectCommand` 메서드를에서 **System.Data** 의 네임 스페이스는 Microsoft.NET Framework 클래스 라이브러리입니다.  
+ <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 성능을 최적화하지만 검색된 데이터에 대해 제공하는 정보량이 다른 데이터 검색 메서드보다 적습니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 데이터 또는 메타데이터를 나타내기 위한 큰 개체 모델을 지원하지 않으며 이 개체 모델에는 셀 쓰기 저장(writeback)과 같이 복잡한 분석 기능도 사용할 수 없습니다. 하지만 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 셀 집합 데이터를 검색하는 강력한 형식의 메서드 집합과 셀 집합 메타데이터를 테이블 형식으로 검색하는 메서드를 제공합니다. 또한 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 구현 합니다 **원하는** 데이터 바인딩을 지 원하는 사용 하 여 데이터를 검색 하기 위한 인터페이스는 `SelectCommand` 메서드를에서 **System.Data** 의 네임 스페이스는 Microsoft.NET Framework 클래스 라이브러리입니다.  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>AdomdDataReader에서 데이터 검색  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체를 사용하여 데이터를 검색하려면 다음 단계를 수행하십시오.  
@@ -122,7 +122,7 @@ foreach (DataRow objRow in schemaTable.Rows)
   
 ## <a name="see-also"></a>관련 항목  
  [분석 데이터 원본에서 데이터 검색](retrieving-data-from-an-analytical-data-source.md)   
- [셀 집합을 사용 하 여 데이터를 검색 합니다.](retrieving-data-using-the-cellset.md)   
+ [CellSet을 사용 하 여 데이터를 검색 합니다.](retrieving-data-using-the-cellset.md)   
  [XmlReader를 사용하여 데이터 검색](retrieving-data-using-the-xmlreader.md)  
   
   

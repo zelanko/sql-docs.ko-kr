@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f5095c28bb6a5d09ae7b872272e8ed4f58efc584
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a675b9f671631030e2fd49a8f3aba3534e8fa30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294023"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
   SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36091207"
 > [!IMPORTANT]  
 >  SQL Server 2005에 대한 추가 지원이 2016년 4월 12일에 끝납니다. 2016년 4월 12일 후에도 SQL Server 2005를 실행하는 경우 보안 업데이트를 더 이상 받을 수 없습니다.  
   
- SQL Server 2005에서 업그레이드 하는 방법에 대 한 PDF 형식의 데이터 시트를 가져오려면 [여기를 클릭](https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Infographic-UpgradeSQL2005Datasheet.pdf) (아래의 축소판 이미지)에 없는 합니다.  
+ SQL Server 2005에서 업그레이드 하는 방법에 대 한 PDF 형식의 데이터 시트를 가져오려면 [여기를 클릭](https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Infographic-UpgradeSQL2005Datasheet.pdf) (아래의 축소판 이미지)에 없습니다.  
   
  ![SQL Server 2005에서 업그레이드 하는 방법에 대 한 데이터 시트](../../../2014/sql-server/install/media/sqlserver2005eos.png "SQL Server 2005에서 업그레이드 하는 방법에 대 한 데이터 시트")  
   
@@ -42,9 +42,9 @@ ms.locfileid: "36091207"
   
 |관계형 저장소 옵션|이점|고려할 기타 요소|  
 |-------------------------------|--------------|-------------------------------|  
-|**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 응용 프로그램의 경우 이 옵션을 고려합니다.<br /><br /> 자세한 내용은 참조 하십시오. [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)합니다.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server 2005에서 업그레이드하는 경우 이 환경이 가장 유사한 환경입니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.|  
-|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음을 원하는 경우 이 옵션을 고려합니다.<br />-호스트 환경으로 마이그레이션하는 경우의 이점<br />-운영 환경을 제어할 수 있습니다.<br />-SQL Server 친숙 한 기능 집합입니다.<br /><br /> 자세한 내용은 참조 하십시오. [SQL Server에 대 한 Azure 가상 컴퓨터 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)합니다.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.|  
-|**Azure SQL 데이터베이스에서 호스트된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.<br /><br /> 자세한 내용은 참조 하십시오. [SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)합니다.<br /><br /> 마이그레이션에 대 한 정보를 참조 하십시오. [Azure SQL 데이터베이스로 SQL Server 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)합니다.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 저장소뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL 데이터베이스의 최대 데이터베이스 크기는 500GB이고 SQL Server의 경우에는 524PB입니다.|  
+|**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 응용 프로그램의 경우 이 옵션을 고려합니다.<br /><br /> 자세한 내용은 참조 하세요. [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)합니다.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server 2005에서 업그레이드하는 경우 이 환경이 가장 유사한 환경입니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.|  
+|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음을 원하는 경우 이 옵션을 고려합니다.<br />-호스 티 드 환경으로 마이그레이션할 경우의 이점입니다.<br />-운영 환경을 제어 합니다.<br />-SQL server 친숙 한 기능 집합입니다.<br /><br /> 자세한 내용은 참조 하세요. [SQL Server에 대 한 Azure Virtual Machines 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)합니다.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.|  
+|**Azure SQL 데이터베이스에서 호스트된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.<br /><br /> 자세한 내용은 참조 하세요. [SQL Database](https://azure.microsoft.com/services/sql-database/)합니다.<br /><br /> 마이그레이션에 대 한 자세한 내용은 참조 하십시오 [Azure SQL Database로 SQL Server 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)합니다.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 저장소뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL 데이터베이스의 최대 데이터베이스 크기는 500GB이고 SQL Server의 경우에는 524PB입니다.|  
   
  특정 데이터 및 응용 프로그램의 경우 비관계형 또는 NoSQL 솔루션을 고려할 수도 있습니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36091207"
   
     -   [SQL Server 2005에서 효율적인 업그레이드 계획: 3/3단계](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
--   요구 사항 및 고려 사항에서 검토 [SQL Server 설치 계획](../../../2014/sql-server/install/planning-a-sql-server-installation.md)를 포함 하 여는 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
+-   요구 사항 및 고려 사항에서 검토 [SQL Server 설치 계획](../../../2014/sql-server/install/planning-a-sql-server-installation.md)등의 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
   
 -   업그레이드 하는 방법에 대해 알아봅니다.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36091207"
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [SQL Server 2005 지원 종료](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [SQL Server 2005에서에서 SQL Server 2016로 업그레이드](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [SQL Server 2005에서에서 SQL Server 2016으로 업그레이드](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
   
   

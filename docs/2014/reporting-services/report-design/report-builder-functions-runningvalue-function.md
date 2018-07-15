@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 41f2345cf31347fba98448a02d4d3014b8883d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319863"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.  
@@ -39,10 +39,10 @@ RunningValue(expression, function, scope)
  집계를 수행할 식입니다(예: `[Quantity]`).  
   
  *function*  
- (`Enum`) 예를 들어 식에 적용할 집계 함수의 이름 `Sum`합니다. 두이 일 수 없습니다 `RunningValue`, `RowNumber`, 또는 `Aggregate`합니다.  
+ (`Enum`) 예를 들어 식에 적용할 집계 함수의 이름을 `Sum`입니다. 이 함수가 있을 수 없습니다 `RunningValue`하십시오 `RowNumber`, 또는 `Aggregate`합니다.  
   
  *범위*  
- (`String`) 집계를 계산할 컨텍스트를 지정하는 데이터 집합, 데이터 영역, 그룹의 이름인 문자열 상수 또는 Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 `Nothing`)입니다. `Nothing` 일반적으로 보고서 데이터 집합은 가장 바깥쪽 컨텍스트를 지정합니다.  
+ (`String`) 집계를 계산할 컨텍스트를 지정하는 데이터 집합, 데이터 영역, 그룹의 이름인 문자열 상수 또는 Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 `Nothing`)입니다. `Nothing` 보고서 데이터 집합을 일반적으로 하는 가장 바깥쪽 컨텍스트를 지정합니다.  
   
 ## <a name="return-type"></a>반환 형식  
  반환 형식은 *function* 매개 변수에 지정된 집계 함수에 의해 결정됩니다.  
@@ -52,7 +52,7 @@ RunningValue(expression, function, scope)
   
  `RunningValue`는 필터 또는 정렬 식에 사용할 수 없습니다.  
   
- 실행 값이 계산되는 데이터 집합의 데이터 형식은 동일해야 합니다. 같은 변환 함수를 사용 하 여 동일한 데이터 형식으로 여러 숫자 데이터 형식이 있는 데이터를 변환할 `CInt`, `CDbl` 또는 `CDec`합니다. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
+ 실행 값이 계산되는 데이터 집합의 데이터 형식은 동일해야 합니다. 같은 변환 함수를 사용 하 여 동일한 데이터 형식으로 여러 숫자 데이터 형식이 포함 된 데이터를 변환할 `CInt`하십시오 `CDbl` 또는 `CDec`합니다. 자세한 내용은 [형식 변환 함수](http://go.microsoft.com/fwlink/?LinkId=96142)를 참조하세요.  
   
  *Scope* 는 식이 될 수 없습니다.  
   
@@ -62,7 +62,7 @@ RunningValue(expression, function, scope)
   
 -   중첩 집계의 범위는 데이터 집합의 이름일 수 없습니다.  
   
--   *식* 포함 되지 않아야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -92,7 +92,7 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

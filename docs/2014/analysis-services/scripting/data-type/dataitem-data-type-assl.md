@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5622ca2cdda5a08bdcfdfd486e44b6fcd8fbf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300893"
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem 데이터 형식(ASSL)
   열 또는 특성과 같은 데이터 항목의 데이터 관련 특성을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -71,28 +71,28 @@ ms.locfileid: "36081672"
 ## <a name="remarks"></a>Remarks  
  `DataItem` 데이터 형식은 측정값, 특성 키 및 특성 이름과 같은 바인딩할 수 있는 모든 데이터 항목에 사용됩니다. 관련된 세부 사항 및 적용되는 기본값은 사용 방식에 따라 달라집니다. 예를 들어 특성 이름은 문자열이어야 합니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에서는 특정 데이터 형식 집합만 허용합니다. 다른 데이터 형식을 사용하면 해당 형식이 유효한 형식으로 암시적으로 변환되지 않고 오류가 발생합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에서는 특정 데이터 형식 집합만 허용합니다. 다른 데이터 형식을 사용하면 해당 형식이 유효한 형식으로 암시적으로 변환되지 않고 오류가 발생합니다.  
   
  다음 표에서는 `DataItem` 형식의 요소를 나열합니다.  
   
 |부모 요소|`DataItem` 형식의 요소|주석|  
 |--------------------|----------------------------------|--------------|  
-|[AttributeTranslation](../objects/column-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
-|[DimensionAttribute](../objects/customrollupcolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
-|[DimensionAttribute](../objects/customrolluppropertiescolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
-|[DimensionAttribute](../objects/keycolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md), [AttributeBinding](attributebinding-data-type-assl.md) 또는 [TimeBinding](timebinding-data-type-assl.md)|  
-|[DimensionAttribute](../objects/namecolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
-|[DimensionAttribute](../objects/skippedlevelscolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
-|[DimensionAttribute](../objects/unaryoperatorcolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
-|[측정값](../objects/measure-element-assl.md)|[원본](../properties/source-element-binding-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [RowBinding](rowbinding-data-type-assl.md), [ColumnBinding](binding-data-type-assl.md), [MeasureBinding](measurebinding-data-type-assl.md), 또는 [CubeDimensionBinding](dimensionbinding-data-type-assl.md)|  
-|[MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)|[KeyColumn](../objects/keycolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md), [AttributeBinding](attributebinding-data-type-assl.md) 또는 [InheritedBinding](inheritedbinding-data-type-assl.md)|  
-|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[KeyColumn](../objects/keycolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)|  
-|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[L u m n](../objects/namecolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)|  
-|[TableMiningStructureColumn](../objects/foreignkeycolumn-element-assl.md)|`Source` 요소는 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)|  
+|[AttributeTranslation](../objects/column-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[DimensionAttribute](../objects/customrollupcolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[DimensionAttribute](../objects/customrolluppropertiescolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[DimensionAttribute](../objects/keycolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)하십시오 [AttributeBinding](attributebinding-data-type-assl.md) 또는 [TimeBinding](timebinding-data-type-assl.md)|  
+|[DimensionAttribute](../objects/namecolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[DimensionAttribute](../objects/skippedlevelscolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[DimensionAttribute](../objects/unaryoperatorcolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md) 또는 [AttributeBinding](attributebinding-data-type-assl.md)|  
+|[측정값](../objects/measure-element-assl.md)|[원본](../properties/source-element-binding-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [RowBinding](rowbinding-data-type-assl.md)를 [ColumnBinding](binding-data-type-assl.md)를 [MeasureBinding](measurebinding-data-type-assl.md), 또는 [CubeDimensionBinding](dimensionbinding-data-type-assl.md)|  
+|[MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)|[KeyColumn](../objects/keycolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)하십시오 [AttributeBinding](attributebinding-data-type-assl.md) 또는 [InheritedBinding](inheritedbinding-data-type-assl.md)|  
+|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[KeyColumn](../objects/keycolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)|  
+|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[NameColumn](../objects/namecolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)|  
+|[TableMiningStructureColumn](../objects/foreignkeycolumn-element-assl.md)|`Source` 요소를 `DataItem` 형식 이어야 합니다 [ColumnBinding](binding-data-type-assl.md)|  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DataItem>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

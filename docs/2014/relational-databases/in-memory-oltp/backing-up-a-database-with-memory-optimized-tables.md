@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279399"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
   메모리 액세스에 최적화된 테이블은 일반적인 데이터베이스 백업의 일부로 백업됩니다. 디스크 기반 테이블의 경우 저장소 손상을 검색하기 위해 데이터베이스 백업의 일부로 데이터 및 델타 파일 쌍의 CHECKSUM 유효성이 검사됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36090430"
 |IN TRANSITION TO TOMBSTONE|파일 메타데이터만|  
 |TOMBSTONE|파일 메타데이터만|  
   
- 메모리 최적화 테이블이 하나 이상 포함된 데이터베이스 백업의 크기는 일반적으로 메모리 내의 해당 크기보다 크지만 디스크상 저장소보다는 작습니다. 추가 크기는 삭제된 행 수와 작업에 간접적으로 의존하는 REQUIRED FOR BACKUP/HA 및 MERGE SOURCE 상태의 검사점 파일 쌍 수에 따라 달라집니다. 검사점 파일 쌍의 상태에 대 한 설명은 참조 하십시오. [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)합니다.  
+ 메모리 최적화 테이블이 하나 이상 포함된 데이터베이스 백업의 크기는 일반적으로 메모리 내의 해당 크기보다 크지만 디스크상 저장소보다는 작습니다. 추가 크기는 삭제된 행 수와 작업에 간접적으로 의존하는 REQUIRED FOR BACKUP/HA 및 MERGE SOURCE 상태의 검사점 파일 쌍 수에 따라 달라집니다. 검사점 파일 쌍에 대 한 상태 설명을 보려면 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)합니다.  
   
 ### <a name="estimating-size-of-full-database-backup"></a>전체 데이터베이스 백업의 크기 예측  
   

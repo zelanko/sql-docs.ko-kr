@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233893"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
     
@@ -61,7 +60,7 @@ ms.locfileid: "36081416"
   
 -   업그레이드 중에 프로덕션 데이터베이스의 가용성이 증가합니다.  
   
-     미러된 데이터베이스의 작동 중단을 최소화하려면 장애 조치(failover) 파트너를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 순차적으로 업그레이드하면 됩니다. 이렇게 하면 단일 장애 조치(failover)에 대해서만 가동 중단이 발생합니다. 이러한 형태의 업그레이드를 *롤링 업그레이드*라고 합니다. 자세한 내용은 참조 [System with Minimal Downtime에 미러된 데이터베이스에 대 한 서비스 팩을 설치할](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)합니다.  
+     미러된 데이터베이스의 작동 중단을 최소화하려면 장애 조치(failover) 파트너를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 순차적으로 업그레이드하면 됩니다. 이렇게 하면 단일 장애 조치(failover)에 대해서만 가동 중단이 발생합니다. 이러한 형태의 업그레이드를 *롤링 업그레이드*라고 합니다. 자세한 내용은 [미러된 데이터베이스에 대 한 서비스 팩을 System with Minimal Downtime 설치](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)합니다.  
   
 ##  <a name="TermsAndDefinitions"></a> 데이터베이스 미러링 용어 및 정의  
  자동 장애 조치(automatic failover)  
@@ -331,7 +330,7 @@ ms.locfileid: "36081416"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 미러링 끝점&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [자동 페이지 복구 &#40;가용성 그룹 및 데이터베이스 미러링에 대 한&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [자동 페이지 복구 &#40;가용성 그룹 및 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [데이터베이스 미러링: 상호 운용성 및 공존성&#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [데이터베이스 미러링을 위한 필수 조건, 제한 사항 및 권장 사항](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   

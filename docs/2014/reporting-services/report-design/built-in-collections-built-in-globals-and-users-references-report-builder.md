@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331013"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS)
   `Globals` 및 `User` 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. `Globals` 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. `User` 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
@@ -28,12 +28,12 @@ ms.locfileid: "36080586"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>전역 컬렉션 사용  
- `Globals` 컬렉션은 보고서에 대 한 전역 변수를 포함 합니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 멤버를 설명 하는 다음 표에서 `Globals` 컬렉션입니다.  
+ `Globals` 컬렉션 보고서에 대 한 전역 변수를 포함 합니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 다음 표에의 멤버는 `Globals` 컬렉션입니다.  
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|보고서가 실행되기 시작한 날짜와 시간입니다.|  
-|PageNumber|`Integer`|페이지 번호를 다시 설정하는 페이지 나누기를 기준으로 한 현재 페이지 번호입니다. 보고서 처리를 시작할 때 초기 값은 -1로 설정됩니다. 페이지 번호는 각 렌더링된 페이지에 대해 증가합니다.<br /><br /> 사각형, 데이터 영역, 데이터 영역 그룹 또는 PageBreak 속성에서 지도 대 한 페이지 나누기 내에서 페이지 번호 ResetPageNumber 속성을 설정 `True`합니다. 테이블릭스 열 계층 구조 그룹에는 지원되지 않습니다.<br /><br /> PageNumber는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
+|PageNumber|`Integer`|페이지 번호를 다시 설정하는 페이지 나누기를 기준으로 한 현재 페이지 번호입니다. 보고서 처리를 시작할 때 초기 값은 -1로 설정됩니다. 페이지 번호는 각 렌더링된 페이지에 대해 증가합니다.<br /><br /> 사각형, 데이터 영역, 데이터 영역 그룹 또는 지도 PageBreak 속성에 대 한 페이지 나누기 내에서 페이지 번호 ResetPageNumber 속성을 설정 `True`합니다. 테이블릭스 열 계층 구조 그룹에는 지원되지 않습니다.<br /><br /> PageNumber는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |ReportFolder|`String`|보고서를 포함하는 폴더의 전체 경로입니다. 여기에는 보고서 서버 URL이 포함되지 않습니다.|  
 |ReportName|`String`|보고서 서버 데이터베이스에 저장되어 있는 보고서의 이름입니다.|  
 |ReportServerUrl|`String`|보고서가 실행 중인 보고서 서버의 URL입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "36080586"
 |OverallTotalPages|`Integer`|전체 보고서의 총 페이지 수입니다. 이 값은 ResetPageNumber의 영향을 받지 않습니다.<br /><br /> OverallTotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |RenderFormat|`RenderFormat`|현재 렌더링 요청에 대한 정보입니다.<br /><br /> 자세한 내용은 다음 섹션의 "RenderFormat"을 참조하십시오.|  
   
- 멤버는 `Globals` 컬렉션은 variant를 반환 합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 참조 [식의 데이터 형식 &#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)합니다.  
+ 멤버는 `Globals` 컬렉션은 variant를 반환 합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 [식의 데이터 형식 &#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="renderformat"></a>RenderFormat  
  다음 표에서는 `RenderFormat`의 멤버에 대해 설명합니다.  
@@ -72,9 +72,9 @@ ms.locfileid: "36080586"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User 컬렉션 사용  
- `User` 보고서를 실행 하는 사용자에 대 한 데이터를 포함 하는 컬렉션입니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
+ `User` 컬렉션 보고서를 실행 하는 사용자에 대 한 데이터가 포함 됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
   
- 멤버를 설명 하는 다음 표에서 `User` 컬렉션입니다.  
+ 다음 표에의 멤버는 `User` 컬렉션입니다.  
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  

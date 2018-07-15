@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], logins and users
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58f4f0ee8e3edea3958250ee9a0334ebd53631f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: a5a73766344951de75386c9cc298adfb1c45ec5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315513"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>로그인, 사용자 및 스키마 관리 방법 도움말 항목
   이 페이지에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인, 데이터베이스 사용자 및 데이터베이스 스키마를 관리하는 방법뿐만 아니라 역할을 조인하고 사용 권한을 보안 주체에 부여하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  

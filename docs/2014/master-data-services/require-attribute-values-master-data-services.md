@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf1df107725eb50ca8c291838ef289b7ca8ee62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 080f6ef911ee36a8f71efbf3c8783457ac1dc403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306003"
 ---
 # <a name="require-attribute-values-master-data-services"></a>특성 값 요구(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 마스터 데이터를 완전한 상태로 유지하려면 특성 값을 요구합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36090689"
   
 9. **구성 요소** 창에서 **동작** 노드를 확장합니다.  
   
-10. 클릭 **필요** 에 끌어서 놓습니다는 **다음** 창의 **동작** 레이블.  
+10. 클릭 **필요** 로 끌어다 놓습니다 합니다 **한 다음** 창의 **작업** 레이블.  
   
 11. **특성** 창에서 특성을 클릭하고 **동작 편집** 창의 **특성 선택** 레이블로 끌어 놓습니다.  
   

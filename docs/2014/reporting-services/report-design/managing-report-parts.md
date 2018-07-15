@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286699"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
-  부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 보고서 파트는 보고서 서버에 게시 하 고 적절 한 권한이 있는 다른 보고서에서 및 다른 사용자가을 다시 사용할 수 있습니다.  
+  부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 보고서 파트는 보고서 서버에 게시 하 고 적절 한 권한이 있는 경우 다른 사용자가 다른 보고서에서 다시 사용할 수 있습니다.  
   
  보고서 파트는 여러 사용자가 다시 사용하고 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  
   
@@ -97,8 +97,8 @@ ms.locfileid: "36091892"
 ## <a name="see-also"></a>관련 항목  
  [보고서 파트 및 보고서 작성기에서 데이터 집합](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [일반 속성 페이지, 보고서 파트 &#40;보고서 관리자&#41;](../general-properties-page-report-parts-report-manager.md)   
- [이동 항목 페이지 &#40;보고서 관리자&#41;](../move-items-page-report-manager.md)   
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [항목 페이지 이동 &#40;보고서 관리자&#41;](../move-items-page-report-manager.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

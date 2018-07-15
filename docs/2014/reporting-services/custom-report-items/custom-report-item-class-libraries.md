@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b45b9db6304df41d14f30ca226346ff73ef2a9f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 34c755a1f4152d2c710d2c8794f39590fc075f1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290259"
 ---
 # <a name="custom-report-item-class-libraries"></a>사용자 지정 보고서 항목 클래스 라이브러리
   사용자 지정 보고서 항목은 `Microsoft.ReportDesigner` 네임스페이스의 클래스를 사용합니다. 사용자 지정 보고서 항목 구현에 사용되는 클래스는 두 개의 기본 범주로 그룹화할 수 있습니다. 하나는 사용자 지정 보고서 항목 인프라를 지원하도록 설계된 고유 클래스이고, 다른 하나는 관련 RDL(Report Definition Language) 요소의 기능을 캡슐화하는 관리되는 래퍼 클래스입니다. 이러한 클래스 사용 방법에 대한 코드 예는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
@@ -51,7 +51,7 @@ ms.locfileid: "36090608"
 |`AltReportItem`|사용자 지정 보고서 항목 런타임 컨트롤이 지원되지 않는 곳에서 사용하는, 대체 보고서 항목 개체입니다.|  
 |`Style`|사용자 지정 보고서 항목의 스타일 속성입니다.|  
 |`Adornment`|컨트롤의 대화형 편집에 사용되는 도구 영역 창입니다.|  
-|`Site`|`ISite` 의 구성 요소입니다.|  
+|`Site`|`ISite` 구성 요소입니다.|  
 |`DesignerVerbCollection`|컨트롤의 바로 가기 메뉴를 위한 사용자 지정 동사 배열입니다.|  
   
 #### <a name="public-methods"></a>Public 메서드  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fff5a7975d19ca53ea9cca780f792a2d5c6057e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297243"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 행 집합
   계산 간 종속성과 해당 계산에서 참조하는 개체에 대한 보고서입니다. 클라이언트 응용 프로그램에 이 정보를 사용하여 복잡한 수식과 관련된 문제를 보고하거나 관련 개체가 삭제 또는 수정될 때 경고할 수 있습니다. 행 집합을 사용하여 측정값 또는 계산 열에 사용된 DAX 식을 추출할 수도 있습니다.  
@@ -30,12 +30,12 @@ ms.locfileid: "36090077"
  **다음에 적용:** 테이블 형식 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_CALC_DEPENDENCY` 행 집합에는 다음과 같은 열을 포함 합니다. 테이블은 데이터 형식을 지정하고, 반환되는 행을 제한하도록 열을 제한할 수 있는지 여부를 나타내며, 각 열에 대한 설명을 제공합니다.  
+ `DISCOVER_CALC_DEPENDENCY` 행 집합에는 다음 열을 포함 합니다. 테이블은 데이터 형식을 지정하고, 반환되는 행을 제한하도록 열을 제한할 수 있는지 여부를 나타내며, 각 열에 대한 설명을 제공합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |`DATABASE_NAME`|`DBTYPE_WSTR`|예|종속성 분석이 요청된 개체를 포함하는 데이터베이스 이름을 지정합니다. 생략하는 경우 현재 데이터베이스가 사용됩니다.<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|예|종속성 분석이 요청된 개체의 유형을 나타냅니다. 개체의 유형은 다음 중 하나여야 합니다.<br /><br /> -   `ACTIVE_RELATIONSHIP`: 활성 관계<br />-   `CALC_COLUMN`: 계산 된 열<br />-   `HIERARCHY`: 계층 구조<br />-   `MEASURE`: 측정값<br />-   `RELATIONSHIP`: 관계<br />-   `KPI`: KPI (핵심 성과 지표)<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|예|종속성 분석이 요청된 개체의 유형을 나타냅니다. 개체의 유형은 다음 중 하나여야 합니다.<br /><br /> -   `ACTIVE_RELATIONSHIP`: 활성 관계<br />-   `CALC_COLUMN`: 계산 된 열<br />-   `HIERARCHY`: 계층<br />-   `MEASURE`: 측정값<br />-   `RELATIONSHIP`: 관계<br />-   `KPI`: KPI (핵심 성과 지표)<br /><br /> `DISCOVER_DEPENDENCY_CALC` 이 열을 사용 하 여 행 집합을 제한할 수 있습니다.|  
 |`QUERY`|`DBTYPE_WSTR`|예|[!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]에서 만든 테이블 형식 모델의 경우 해당 쿼리 또는 식에 대한 종속성 그래프를 표시하도록 DAX 쿼리 또는 식을 포함할 수 있습니다. QUERY 제한은 DAX 쿼리에 사용되는 개체를 결정하는 방법을 클라이언트 응용 프로그램에 제공합니다.<br /><br /> `QUERY` 제한은 DMV 쿼리의 XMLA 또는 WHERE 절에 지정할 수 있습니다. 자세한 내용은 "예" 섹션을 참조하십시오.|  
 |`TABLE`|`DBTYPE_WSTR`||종속성 정보가 생성된 개체를 포함하는 테이블의 이름입니다.|  
 |`OBJECT`|`DBTYPE_WSTR`||종속성 정보가 생성된 개체의 이름입니다. 개체가 측정값 또는 계산된 열인 경우 측정값의 이름을 사용합니다. 개체가 관계인 경우 관계에 참가하는 열이 포함된 테이블(또는 큐브 차원)의 이름을 사용합니다.|  
@@ -66,14 +66,14 @@ SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY ORDER BY [TABLE] ASC
 ## <a name="example"></a>예제  
  **WHERE 절을 사용 하 여 필터링**  
   
- 다음 쿼리에서는 WHERE 절을 사용하여 제한을 추가하는 방법을 보여 줍니다. WHERE 절에 쿼리 필터로 사용할 수는 다음과 같은 열: `Database_Name`, `Object_Type`, 및 `Query`합니다.  
+ 다음 쿼리에서는 WHERE 절을 사용하여 제한을 추가하는 방법을 보여 줍니다. 다음 열을 WHERE 절에 대 한 쿼리 필터로 사용할 수: `Database_Name`, `Object_Type`, 및 `Query`합니다.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'RELATIONSHIP' OR OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
 ```  
   
 ## <a name="example"></a>예제  
- **측정값 및 계산 된 열 기본 DAX 식 보기에 대해 필터링**  
+ **측정값과 계산된 열이 기본 DAX 식 보기 필터링**  
   
  이 쿼리에서는 측정값 또는 계산된 열을 선택하는 작업만으로 계산에 사용된 DAX 식을 볼 수 있습니다. EXPRESSION 열에 DAX 식이 포함되어 있습니다. DISCOVER_CALC_DEPENDENCY를 사용하여 모델에 사용된 DAX 식을 추출하려는 경우에는 이 쿼리만으로 충분합니다. 이 쿼리에서는 모델에 사용된 모든 식을 오름차순으로 반환합니다.  
   
@@ -91,7 +91,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
  첫 번째 쿼리에서는 공백을 포함하는 개체 이름에 대한 QUERY 제한을 지정하는 방법을 보여 줍니다. The second query, borrowed from [OLE DB 및 ADOMD.NET을 통해 DAX 쿼리 실행](http://go.microsoft.com/fwlink/?LinkId=254329)에서 가져온 두 번째 쿼리는 여러 테이블의 개체를 포함하는 좀 더 복잡한 쿼리입니다.  
   
 > [!NOTE]  
->  쿼리에 큰따옴표가 사용되는 것처럼 보이지만 사실은 작은따옴표만 사용됩니다. 한 쌍의 작은따옴표로 묶습니다 ' Evaluate \<Tablename >', 작은 따옴표의 테이블 이름에 사용 되는 이중으로 추가 하 여 이스케이프 해야 합니다. 테이블 이름을 묶는 작은따옴표는 공백이 있는 테이블 이름에만 필요합니다.  
+>  쿼리에 큰따옴표가 사용되는 것처럼 보이지만 사실은 작은따옴표만 사용됩니다. 한 쌍의 작은따옴표로 묶습니다 ' Evaluate \<Tablename >',으로 이중 이스케이프 작은따옴표로 테이블 이름을 사용 해야 합니다. 테이블 이름을 묶는 작은따옴표는 공백이 있는 테이블 이름에만 필요합니다.  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE ''Reseller Sales'''  
@@ -130,6 +130,6 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 스키마 행 집합](../analysis-services-schema-rowsets.md)   
- [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; Services 분석을 모니터링 하려면](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; 모니터는 분석 서비스](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

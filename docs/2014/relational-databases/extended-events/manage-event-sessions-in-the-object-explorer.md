@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279709"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
   이 항목에서는 **개체 탐색기** 에서 수행할 수 있는 확장 이벤트에 영향을 주는 동작에 대해 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36080875"
  확장 이벤트 세션을 만드는 방법은 [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)를 참조하십시오.  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>확장 이벤트 세션 시작 또는 중지  
- 시작 하거나 통해 확장 이벤트 세션을 중지할 수 있습니다는 **쿼리 편집기** 를 사용 하는 `ALTER EVENT SESSION` 문, 또는 사용 하 여는 **확장 이벤트** 의 노드 **개체 탐색기**.  
+ 시작 하거나 통해 확장 이벤트 세션을 중지할 수 있습니다는 **쿼리 편집기** 를 사용 하 여 합니다 `ALTER EVENT SESSION` 문, 또는 사용 하 여를 **확장 이벤트** 노드의 **개체 탐색기**.  
   
  이벤트 세션을 중지하면 해당 세션은 sys.dm_xe_sessions DMV(동적 관리 뷰)에서 더 이상 활성 세션으로 표시되지 않습니다. 그러나 세션 정의는 그대로 유지되므로 세션을 다시 시작할 수 있습니다. 세션 정의를 완전히 제거하려면 세션을 삭제해야 합니다.  
   
@@ -86,7 +86,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>확장 이벤트 세션 템플릿 가져오기  
  **개체 탐색기**를 사용하여 확장 이벤트 세션 템플릿을 가져올 수 있습니다. 예를 들어 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 내보낸 템플릿을 사용하여 세션을 만들려는 경우 템플릿을 가져옵니다.  
   
- 확장 이벤트 세션을 가져오려면 필요한 있어야 `ALTER ANY EVENT SESSION` 사용 권한.  
+ 확장 이벤트 세션을 가져오려면 필요한 있어야 `ALTER ANY EVENT SESSION` 권한.  
   
  템플릿 파일을 가져오기 전에 파일 원본을 신뢰할 수 있는지 확인합니다. NTFS 파일 시스템을 사용하며 인증된 사용자만 해당 정보를 볼 수 있도록 액세스가 제한된 위치에 템플릿 파일을 저장해야 합니다.  
   
@@ -132,7 +132,7 @@ STATE = STOP
  이벤트 세션을 삭제하면 모든 구성 정보도 제거되므로 해당 세션 정의가 더 이상 sys.server_event_sessions 카탈로그 뷰에 나타나지 않습니다.  
   
 > [!NOTE]  
->  system_health와 AlwaysOn_health에 포함 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 삭제 하지 마십시오. system_health는 기본적으로 사용됩니다. 자세한 내용은 [system_health 세션 사용](use-the-ssms-xe-profiler.md)을 참조하세요. AlwaysOn_health는 기본적으로 해제 되어 있습니다. 이러한 세션은 성능 문제를 진단하는 데 유용한 데이터를 수집합니다.  
+>  system_health와 AlwaysOn_health에 포함 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 삭제 하지 마세요. system_health는 기본적으로 사용됩니다. 자세한 내용은 [system_health 세션 사용](use-the-ssms-xe-profiler.md)을 참조하세요. AlwaysOn_health는 기본적으로 해제 되어 있습니다. 이러한 세션은 성능 문제를 진단하는 데 유용한 데이터를 수집합니다.  
   
  확장 이벤트 세션을 삭제하려면 ALTER ANY EVENT SESSION 권한이 있어야 합니다.  
   

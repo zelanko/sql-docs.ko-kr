@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c959f1c2fe298217b46849c6a13d3e0f313f6803
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293203"
 ---
 # <a name="displayfolder-element-assl"></a>DisplayFolder 요소(ASSL)
   부모 요소를 나열할 폴더를 지정합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 응용 프로그램 개발자와 관리자에 대 한 여러 요소를 시각적으로 범주화 표시 폴더의 사용을 지원할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36090751"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [계층](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [측정값](../objects/measure-element-assl.md), [번역](../objects/translation-element-assl.md)|  
+|부모 요소|[CalculationProperty](../objects/calculationproperty-element-assl.md), [계층](../objects/hierarchy-element-assl.md)합니다 [Kpi](../objects/kpi-element-assl.md)를 [측정값](../objects/measure-element-assl.md), [번역](../objects/translation-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,9 +68,9 @@ ms.locfileid: "36090751"
   
 -   단일 폴더 이름을 포함합니다. 측정값이 동일한 이름의 폴더에 속하는 것으로 렌더링되어야 함을 나타냅니다.  
   
--   백슬래시로 구분 된 여러 폴더 이름을 포함 (\\), 포함된 된 폴더 계층을 나타냅니다.  
+-   백슬래시로 구분 된 여러 폴더 이름을 포함 (\\), 포함 된 폴더 계층 구조를 나타내는입니다.  
   
- `DisplayFolder` 속성에 적용 됩니다. `CalculationProperty` 경우에만 요소 값 [CalculationType](calculationtype-element-assl.md) 로 설정 되어 *멤버*합니다.  
+ `DisplayFolder` 속성에 적용 됩니다 `CalculationProperty` 경우에만 요소 변수의 [CalculationType](calculationtype-element-assl.md) 로 설정 되어 *멤버*합니다.  
   
  AMO(Analysis Management Object) 개체 모델에서 `DisplayFolder`의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.Measure> 및 <xref:Microsoft.AnalysisServices.Translation>입니다.  
   

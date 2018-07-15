@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
 - sql12.swb.summary.general.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45c9e3808bb3d546441060431c0d311f22c95904
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313143"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소인 개체 탐색기 정보는 서버의 모든 개체를 테이블 형식으로 표시하고 이러한 개체를 관리하기 위한 사용자 인터페이스를 제공합니다. 개체 탐색기의 기능은 서버의 유형에 따라 조금씩 다르지만 일반적으로 데이터베이스를 위한 개발 기능과 모든 서버 유형을 위한 관리 기능을 포함합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "36081980"
 ## <a name="sql-server-object-search"></a>SQL Server 개체 검색  
  와일드카드  
   
--   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 참조 [와일드 카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)합니다.  
+-   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [와일드 카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)합니다.  
   
  검색 범위  
   

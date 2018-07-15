@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300473"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 이벤트 클래스
   QN:Dynamics 이벤트 클래스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 쿼리 알림을 지원하기 위해 수행하는 백그라운드 작업에 대한 정보를 보고합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]내에서 백그라운드 스레드는 구독 제한 시간, 시작될 보류 중인 구독 및 매개 변수 테이블 소멸을 모니터링합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36090225"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |EventClass|`int`|이벤트 유형 = 202|27|아니요|  
 |EventSequence|`int`|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 실행이 시작 되는 클록: 나타냅니다의 백그라운드 스레드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 일정이 만료 된 매개 변수 테이블의 정리가 시작 되었음을 합니다.<br /><br /> 완성 된를 실행 하는 클록: 나타냅니다의 백그라운드 스레드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 일정이 만료 된 매개 변수 테이블의 정리가 완료 합니다.<br /><br /> 마스터 정리 작업 시작 됨: 만료 된 쿼리 알림 구독 데이터를 제거 하는 정리 (가비지 수집)가 시작 되었음을 나타냅니다.<br /><br /> 마스터 정리 작업 완료 됨: 만료 된 쿼리 알림 구독 데이터를 제거 하는 정리 (가비지 수집)가 완료 되었음을 나타냅니다.<br /><br /> 마스터 정리 태스크를 생략: 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 만료 된 쿼리 알림 구독 데이터를 제거 하는 정리 (가비지 수집)를 수행 하지 않았습니다.|21|예|  
+|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 실행이 시작 하는 클록: 나타내는의 백그라운드 스레드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 일정이 만료 된 매개 변수 테이블의 정리가 시작 되었음을 합니다.<br /><br /> 실행 완료 하는 클록: 나타내는의 백그라운드 스레드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 일정 만료 된 매개 변수 테이블의 정리를 완료 합니다.<br /><br /> 마스터 정리 작업 시작 됨: 만료 된 쿼리 알림 구독 데이터를 제거 하기 위해 정리 (가비지 수집)가 시작 되었음을 나타냅니다.<br /><br /> 마스터 정리 작업 완료 됨: 만료 된 쿼리 알림 구독 데이터를 제거 하는 정리 (가비지 수집)가 완료를 나타냅니다.<br /><br /> 마스터 정리 작업을 건너뛰었습니다: 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 만료 된 쿼리 알림 구독 데이터를 제거 하기 위해 정리 (가비지 수집)를 수행 하지 않았습니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니요|  

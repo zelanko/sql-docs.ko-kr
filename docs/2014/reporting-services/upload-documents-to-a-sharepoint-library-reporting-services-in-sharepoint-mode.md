@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - SharePoint integration [Reporting Services], content management
@@ -17,13 +17,13 @@ ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4dbac694b3c91cb75ba0bb5ffe54919ceee90437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65f3388137c4fe26e1fcc51c11711944c89bd0c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295883"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
   SharePoint 라이브러리에 보고서 정의 및 보고서 모델을 업로드할 수 있습니다. 보고서 서버 항목을 업로드하는 경우 라이브러리 또는 라이브러리 내의 폴더를 선택해야 합니다. 보고서 서버 항목을 목록 또는 페이지에 업로드할 수는 없습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36090593"
  사용자가 데이터를 필터링할 수 있도록 보고서에 매개 변수를 포함할 수 있으며 이러한 매개 변수에 특정 값을 지정하거나 사용자에게 매개 변수가 표시되는 방식을 변경할 수 있습니다. 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 라이브러리에 보고서를 게시 합니다.](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 보고서 게시](reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint 라이브러리에 공유 데이터 원본 게시](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

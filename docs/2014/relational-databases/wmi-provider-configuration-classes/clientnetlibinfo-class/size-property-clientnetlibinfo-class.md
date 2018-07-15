@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Size property
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 334e98a57d8e4a67034684a4bf9a40e64134919e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: acc960b04e3deb5299a1ac43000809ab6c42b7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329363"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리의 크기(KB)를 가져옵니다.  

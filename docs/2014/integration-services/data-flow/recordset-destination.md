@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.recordsetdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bedd18c7aa79420c23c935058e4b23d584b6fa1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c42208733182a3347c243a0bf538b5b3e2f6d1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304343"
 ---
 # <a name="recordset-destination"></a>레코드 집합 대상
   레코드 집합 대상은 메모리 내 ADO 레코드 집합을 만들고 채웁니다. 레코드 집합의 모양은 디자인 타임에 레코드 집합 대상에 대한 입력에 의해 정의됩니다.  

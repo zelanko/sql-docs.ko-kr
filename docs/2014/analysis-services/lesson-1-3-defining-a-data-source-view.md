@@ -1,5 +1,5 @@
 ---
-title: 정의 데이터 원본 뷰 | Microsoft Docs
+title: 뷰를 원본 데이터를 정의 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 54cce390a82259430abf9820804cb5c9ca556532
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 556c860f3714de07e2b0f0242b9c73b731af2f4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286152"
 ---
 # <a name="defining-a-data-source-view"></a>데이터 원본 뷰 정의
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 사용할 데이터 원본을 정의한 후 수행해야 할 다음 단계는 일반적으로 프로젝트에 대한 데이터 원본 뷰를 정의하는 것입니다. 데이터 원본 뷰는 프로젝트에서 데이터 원본에 의해 정의되는 뷰와 지정된 테이블의 메타데이터에 대한 단일 통합 뷰입니다. 메타데이터를 데이터 원본 뷰로 저장하면 기본 데이터 원본에 대한 연결이 열려 있지 않아도 개발 중에 메타데이터를 사용할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
@@ -56,7 +56,7 @@ ms.locfileid: "36081430"
   
 5.  **>** 를 클릭하여 선택한 테이블을 **포함된 개체** 목록에 추가합니다.  
   
-6.  **다음.**  
+6.   **다음.**  
   
 7.  이름 필드에서 **Adventure Works DW 2012** 가 표시되는지 확인하고 **마침**을 클릭합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36081430"
   
     -   데이터 원본 뷰 디자이너용 도구 모음  
   
-8.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경을 최대화하려면 **최대화** 단추를 클릭합니다.  
+8.   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경을 최대화하려면 **최대화** 단추를 클릭합니다.  
   
 9. **다이어그램** 창의 테이블을 50% 비율로 보려면 데이터 원본 뷰 디자이너 도구 모음의 **확대/축소** 아이콘을 클릭합니다. 이렇게 하면 각 테이블의 열 정보가 숨겨집니다.  
   

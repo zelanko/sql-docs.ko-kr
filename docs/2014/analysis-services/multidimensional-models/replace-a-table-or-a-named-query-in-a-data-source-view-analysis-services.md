@@ -1,5 +1,5 @@
 ---
-title: 테이블 또는 데이터 원본 뷰 (Analysis Services)에서 명명된 된 쿼리 바꾸기 | Microsoft Docs
+title: 테이블 또는 Data Source View (Analysis Services)에서 명명된 된 쿼리 바꾸기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replacing tables
 - data source views [Analysis Services], tables
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17928764bbeb2b13df0763d653cf98d3933bb7d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6b16c98f438a02309a2509e0d070f7718b0c97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295803"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기(Analysis Services)
   데이터 원본 뷰 디자이너에서 데이터 원본 뷰(DSV)의 테이블, 뷰 또는 명명된 쿼리를 같은 데이터 원본이나 다른 데이터 원본의 다른 테이블 또는 뷰와 바꾸거나 DSV에 정의된 명명된 쿼리와 바꿀 수 있습니다. 테이블을 바꾸는 경우 DSV의 테이블에 대한 개체 ID는 변경되지 않으므로 해당 테이블에 대한 참조를 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 또는 프로젝트의 다른 모든 개체는 계속해서 이 테이블을 참조합니다. 이름 및 열 유형 일치를 기반으로 관련된 모든 관계는 유지됩니다. 반면 테이블을 삭제한 다음 추가하면 참조 및 관계가 모두 손실되며 다시 만들어야 합니다.  

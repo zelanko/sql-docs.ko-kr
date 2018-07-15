@@ -1,5 +1,5 @@
 ---
-title: 서버 (연결 속성 페이지) Reporting Services에 연결 | Microsoft Docs
+title: 서버에 연결 (연결 속성 페이지) Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.connectionproperties.f1
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a66de16f4454742983bde4f45d3da496122ed9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308033"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>서버에 연결(연결 속성 페이지) Reporting Services
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결하거나 [!INCLUDE[ssRS](../includes/ssrs-md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssRS](../includes/ssrs-md.md)]등록 시에만 이 대화 상자에 나타납니다.  

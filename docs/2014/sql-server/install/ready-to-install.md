@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Installation
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Ready to Install page [SQL Server Installation Wizard]
 ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74dc0b3f3efb1cf69167ab8c090b033e216b973e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a109e7d6e417baa00a585ba090f53e6df2b279b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299633"
 ---
 # <a name="ready-to-install"></a>설치 준비 완료
   설치 준비 완료 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설치하거나 변경할 기능을 요약해서 보여 줍니다.  

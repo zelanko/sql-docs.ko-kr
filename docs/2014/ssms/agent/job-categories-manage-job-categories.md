@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categories.f1
 helpviewer_keywords:
 - Job Categories dialog box
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 996593dc8d6a74b3a328dc61af0359c01e3dac60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d3db326c0097a57997133ae93173d9da8c791844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299593"
 ---
 # <a name="job-categories-manage-job-categories"></a>작업 범주: 작업 범주 관리
   **작업 범주** 대화 상자를 사용하여 작업 범주를 추가하거나 삭제할 수 있습니다. 기본 제공 작업 범주는 삭제할 수 없습니다.  

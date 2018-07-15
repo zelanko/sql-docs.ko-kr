@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bc8f55fbbd939964d22521948ac1132ced4c73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331423"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 분할된 테이블에 추가되는 다음 파티션을 보관할 파일 그룹을 지정하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파티션 구성표를 수정할 수 있습니다. 이렇게 하려면 파일 그룹에 NEXT USED 속성을 할당합니다. 빈 파일 그룹이나 파티션이 이미 있는 파일 그룹에 NEXT USED 속성을 할당할 수 있습니다. 즉, 파일 그룹에 한 개 이상의 파티션을 보관할 수 있습니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "36089535"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **파티션 구성표를 수정하려면**  
   
- 이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 참조 [Create Partitioned Tables and 인덱스를 사용 하 여 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) 아래 **만들 Partitioned Tables and Indexes**합니다.  
+ 이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 [Create Partitioned Tables and 인덱스를 사용 하 여 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) 아래에서 **만들기 Partitioned Tables and Indexes**합니다.  
   
 #### <a name="to-delete-a-partition-scheme"></a>파티션 구성표를 삭제하려면  
   

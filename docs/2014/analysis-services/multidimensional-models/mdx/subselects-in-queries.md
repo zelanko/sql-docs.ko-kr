@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5f616181a6fffe42fa04e3978142c48375adb0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299183"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
   하위 SELECT 식은 바깥쪽 외부 SELECT가 실행되는 큐브 공간을 제한하는 데 사용되는 중첩 SELECT 식입니다. 하위 SELECT를 사용하면 모든 계산이 실행되는 새로운 공간을 정의할 수 있습니다.  
@@ -353,6 +353,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   축 절에서는 HAVING 절을 사용할 수 없습니다. 대신 [필터&#40;MDX&#41;](/sql/mdx/filter-mdx) 함수 식을 사용하세요.  
   
--   기본적으로 계산된 멤버; 하위 select에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로에서 값을 할당 하 여는 `SubQueries` 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 `DBPROP_MSMD_SUBQUERIES` 속성 [XMLA 속성 지원 &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 참조 [하위 Select 및 하위 큐브의 계산 멤버](calculated-members-in-subselects-and-subcubes.md) 의 값에 따라 계산된 멤버의 동작에 대 한 자세한 내용은 대 한 `SubQueries` 또는 `DBPROP_MSMD_SUBQUERIES`합니다.  
+-   기본적으로 계산된 멤버가 하위 select;에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로의 값을 할당 하 여는 `SubQueries` 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 하거나 `DBPROP_MSMD_SUBQUERIES` 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 참조 [하위 Select 및 하위 큐브의 계산 멤버](calculated-members-in-subselects-and-subcubes.md) 에 대 한 값에 따라 계산된 멤버의 동작에 대 한 자세한 설명은 `SubQueries` 또는 `DBPROP_MSMD_SUBQUERIES`합니다.  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executetsqlstatementtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 74be247e47e50b61dfea84863a5969008f160ff0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 36aac75b9fece324fd2ee9f8f31dff43b549ee3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281689"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL 문 실행 태스크
   T-SQL 문 실행 태스크는 Transact-SQL 문을 실행합니다. 자세한 내용은 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference) 및 [Integration Services&#40;SSIS&#41; 쿼리](../integration-services-ssis-queries.md)를 참조하세요.  

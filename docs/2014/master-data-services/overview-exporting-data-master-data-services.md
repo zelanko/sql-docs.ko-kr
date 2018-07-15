@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 656578a35e70b8371056330e0edec69073816687
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2d42511c3e7fecfba3f1a8fd92e9f8633564bf17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332163"
 ---
 # <a name="exporting-data-master-data-services"></a>데이터 내보내기(Master Data Services)
-  내보낼 수 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 구독 시스템으로 구독 뷰를 만들어 데이터입니다. 그러면 임의의 구독 시스템에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 게시된 데이터를 볼 수 있습니다. 뷰에 대한 자세한 내용은 [뷰](../relational-databases/views/views.md)를 참조하세요.  
+  내보낼 수 있습니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 구독 뷰를 만들어 구독 시스템으로 데이터입니다. 그러면 임의의 구독 시스템에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 게시된 데이터를 볼 수 있습니다. 뷰에 대한 자세한 내용은 [뷰](../relational-databases/views/views.md)를 참조하세요.  
   
 ## <a name="subscription-view-formats"></a>구독 뷰 형식  
  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 뷰를 만들 때 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 제공하는 표준 뷰 형식 집합 중에서 선택합니다. 이러한 형식을 사용하여 다음을 표시하는 뷰를 만들 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36091304"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|마스터 데이터 구독 뷰를 만듭니다.|[구독 뷰를 만든 &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
+|마스터 데이터 구독 뷰를 만듭니다.|[구독 뷰를 만들어 &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
 |기존 구독 뷰를 삭제합니다.|[구독 뷰 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  

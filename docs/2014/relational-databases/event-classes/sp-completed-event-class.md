@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72cfd1b46d4bd43a690a6f82d1405e475a906dc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9401dd59c23b08548c3cb5a02770a8dbf7e51450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330053"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 이벤트 클래스
   SP:Completed 이벤트 클래스는 저장 프로시저 실행이 완료되었음을 나타냅니다.  

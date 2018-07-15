@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 0d742a0985177d9a6c860c6dedcb34eba128c930
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290879"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
   
@@ -29,7 +29,7 @@ ms.locfileid: "36089944"
  디스크 기반 테이블 또는 메모리 최적화 내구성이 있는 테이블에 대한 모든 변경은 하나 이상의 트랜잭션 로그 레코드에 캡처됩니다. 트랜잭션이 커밋될 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 트랜잭션이 커밋된 응용 프로그램 또는 사용자 세션과 통신하기 전에 디스크에 트랜잭션과 관련된 로그 레코드를 씁니다. 이렇게 하면 트랜잭션에 의한 변경 사항이 내구성을 가집니다. 메모리 최적화 테이블에 대한 트랜잭션 로그는 디스크 기반 테이블에서 사용되는 동일한 로그 스트림과 완전히 통합되어 있습니다. 이러한 통합에 따라 기존 트랜잭션 로그 백업, 복구 및 복원 작업이 추가 단계를 필요로 하지 않고 계속 수행될 수 있습니다. 그러나 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]가 작업의 트랜잭션 처리량을 크게 증가시킬 수 있으므로 트랜잭션 로그 저장소가 증가한 IO 요구 사항을 처리할 수 있도록 적절하게 구성되어 있는지 확인해야 합니다.  
   
 ## <a name="data-and-delta-files"></a>데이터 및 델타 파일  
- 메모리 최적화 테이블의 데이터는 하나 이상의 메모리 내 인덱스를 통해 연결된 자유 형식 데이터 행으로 메모리에 저장됩니다. 디스크 기반 테이블에 사용되는 페이지 구조와 같이 데이터 행에 대한 페이지 구조는 없습니다. 응용 프로그램이 트랜잭션을 커밋할 준비가 됨 일 때의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 트랜잭션에 대 한 로그 레코드를 생성 합니다. 메모리 최적화 테이블의 지속성은 백그라운드 스레드를 사용하여 데이터 집합 및 델타 파일로 수행됩니다. 데이터 및 델타 파일은 (FILESTREAM 데이터에 사용되는 동일한 메커니즘을 사용하는) 하나 이상의 컨테이너에 있습니다. 이러한 컨테이너는 메모리 최적화 파일 그룹이라는 파일 그룹의 새 형식에 매핑됩니다.  
+ 메모리 최적화 테이블의 데이터는 하나 이상의 메모리 내 인덱스를 통해 연결된 자유 형식 데이터 행으로 메모리에 저장됩니다. 디스크 기반 테이블에 사용되는 페이지 구조와 같이 데이터 행에 대한 페이지 구조는 없습니다. 응용 프로그램이 트랜잭션을 커밋할 준비가 되 면는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 트랜잭션에 대 한 로그 레코드를 생성 합니다. 메모리 최적화 테이블의 지속성은 백그라운드 스레드를 사용하여 데이터 집합 및 델타 파일로 수행됩니다. 데이터 및 델타 파일은 (FILESTREAM 데이터에 사용되는 동일한 메커니즘을 사용하는) 하나 이상의 컨테이너에 있습니다. 이러한 컨테이너는 메모리 최적화 파일 그룹이라는 파일 그룹의 새 형식에 매핑됩니다.  
   
  데이터는 이 파일에 기록될 때 회전 미디어의 디스크 대기 시간을 최소화하는 엄격한 순차적 방식으로 기록됩니다. 서로 다른 디스크의 여러 컨테이너를 사용하여 I/O 작업을 분산할 수 있습니다. 서로 다른 디스크의 여러 컨테이너에 있는 데이터 및 델타 파일은 디스크의 데이터 및 델타 파일에서 메모리로 데이터를 읽을 때 복구 성능을 향상시킵니다.  
   
@@ -115,12 +115,12 @@ ms.locfileid: "36089944"
   
  사용 가능한 공간이 있는 CFP 중 일부는 병합할 수 없습니다. 예를 들어, 두 개의 인접한 CFP가 60% 채워진 경우 해당 CFP는 병합되지 않고 각 CFP의 저장소 중 40%는 사용되지 않습니다. 최악의 경우 모든 CFP가 50% 채워진 경우 저장소의 50%만 사용됩니다. CFP가 병합되지 않아 삭제된 행이 저장소에 존재할 수 있지만 삭제된 행은 메모리 내 가비지 수집에 의해 메모리에서 이미 제거되었을 수 있습니다. 저장소 관리와 메모리는 가비지 수집에 종속되지 않습니다. 활성 CFP가 차지하는 저장소(일부 CFP는 업데이트되지 않음)는 메모리 내 영구 테이블 크기보다 최대 2배 더 클 수 있습니다.  
   
- 호출 하 여 수동 병합을 명시적으로 수행할 수 필요에 따라 [sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)합니다.  
+ 필요한 경우 수동 병합을 수행할 수 있습니다 명시적으로 호출 하 여 [sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)합니다.  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP의 수명 주기  
  CPF 할당을 취소하려면 여러 상태를 전환해야 합니다. 언제든지 CFP는 PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE 및 TOMBSTONE 단계 중 하나에 속합니다. 이러한 단계에 대한 자세한 내용은 [sys.dm_db_xtp_checkpoint_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)를 참조하세요.  
   
- 다양한 상태의 CFP가 차지하는 저장소를 고려한 후 메모리 최적화 영구 테이블이 차지하는 전체 저장소는 메모리 내 해당 테이블 크기의 2배보다 훨씬 클 수 있습니다. DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) 모든 Cfp는 메모리 액세스에 최적화 된 파일 그룹의 해당 단계를 나열 하려면 쿼리할 수 있습니다. MERGE SOURCE 상태의 CFP를 TOMBSTONE으로 전환하면 결국 가비지 수집에서 최대 5개의 검사점을 사용할 수 있으며, 데이터베이스가 전체 또는 대량 로그 복구 모델에 대해 구성된 경우 각 검사점 뒤에는 트랜잭션 로그 백업이 수행됩니다.  
+ 다양한 상태의 CFP가 차지하는 저장소를 고려한 후 메모리 최적화 영구 테이블이 차지하는 전체 저장소는 메모리 내 해당 테이블 크기의 2배보다 훨씬 클 수 있습니다. DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) 모든 Cfp는 메모리 최적화 파일 그룹의 해당 단계를 나열 하려면 쿼리할 수 있습니다. MERGE SOURCE 상태의 CFP를 TOMBSTONE으로 전환하면 결국 가비지 수집에서 최대 5개의 검사점을 사용할 수 있으며, 데이터베이스가 전체 또는 대량 로그 복구 모델에 대해 구성된 경우 각 검사점 뒤에는 트랜잭션 로그 백업이 수행됩니다.  
   
  검사점 후에 강제 로그 백업을 수동으로 수행하여 가비지를 빠르게 수집할 수 있지만 그러면 5개의 빈 CFP(데이터 파일의 크기가 각각 128MB인 5개의 데이터/델타 파일 쌍)가 추가됩니다. 프로덕션 시나리오에서 백업 전략의 일부로 수행되는 자동 검사점 및 로그 백업에서는 수동 작업을 수행할 필요 없이 이러한 단계에서 CFP를 완벽하게 전환합니다. 가비지 수집 프로세스의 영향으로 메모리 최적화 테이블을 포함하는 데이터베이스에 메모리 내 크기에 비해 큰 저장소가 존재할 수 있습니다. CFP가 메모리에 있는 메모리 최적화 영구 테이블 크기의 최대 4배인 경우도 드물지 않습니다.  
   

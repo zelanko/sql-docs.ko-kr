@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286905"
 ---
 # <a name="linestring"></a>LineString
   `LineString`은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
   
 ## <a name="linestring-instances"></a>LineString 인스턴스  
- 다음 그림에서는 예를 보여 줍니다. `LineString` 인스턴스.  
+ 아래 그림의 예를 보여 줍니다. `LineString` 인스턴스.  
   
  ![geometry LineString 인스턴스의 예](../../database-engine/media/linestring.gif "geometry LineString 인스턴스의 예")  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36091033"
   
 -   그림 1은 단순하고 닫혀 있지 않은 `LineString` 인스턴스입니다.  
   
--   그림 2는 단순 하지 않고 닫혀 있지 않은 `LineString` 인스턴스.  
+-   그림 2는 단순 하지 않고 닫혀 있지 않은, `LineString` 인스턴스.  
   
 -   그림 3은 닫혀 있고 단순한 `LineString` 인스턴스이므로 링입니다.  
   

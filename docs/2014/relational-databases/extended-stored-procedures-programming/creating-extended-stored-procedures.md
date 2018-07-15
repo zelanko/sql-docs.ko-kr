@@ -17,15 +17,15 @@ helpviewer_keywords:
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39fd8a55e334dea4fb6e220656e55696ae325a54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 22d32b74437fe27d1a70197a420ef728dcf0ce6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311889"
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
     
@@ -44,7 +44,7 @@ ms.locfileid: "36090652"
   
 -   DLL 외부에서 호출된 모든 함수(모든 확장 저장 프로시저 Efunction)는 내보내야 합니다.  
   
-     .Def 파일의 EXPORTS 섹션에서 해당 이름을 나열 하 여 함수를 내보낼 수 있습니다 또는 Microsoft 컴파일러 확장인 __declspec (dllexport) 사용 하 여 소스 코드에서 함수 이름을 접두사로 사용할 수 있습니다 (유의 \__declspec() 두 개의 밑줄로 시작)입니다.  
+     .Def 파일의 EXPORTS 섹션에서 해당 이름을 나열 하 여 함수를 내보낼 수 있습니다 또는 Microsoft 컴파일러 확장인 __declspec (dllexport) 사용 하 여 소스 코드에서 함수 이름을 접두사로 붙일 수 있습니다 (유의 \__declspec()에 밑줄 두 개를 사용 하 여 시작)입니다.  
   
  확장 저장 프로시저 DLL을 만드는 데 필요한 파일은 다음과 같습니다.  
   
@@ -67,16 +67,16 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport)은 Microsoft 전용 컴파일러 확장입니다. 컴파일러에서 이 지시어를 지원하지 않으면 DEF 파일의 EXPORTS 섹션 아래에서 이 함수를 내보내야 합니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적을 시작 플래그-T260 또는 시스템 관리자 권한이 있는 사용자가 DBCC TRACEON (260) 실행 하 고 확장 저장 프로시저 DLL __getxpversion (), 경고 메시지를 지원 하지 않습니다 (오류 8131: 확장 저장된 프로시저 DLL '%' 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion() 두 개의 밑줄로 시작 합니다.)  
+ 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적을 사용 하 여 시작 플래그-T260 또는 시스템 관리자 권한이 있는 사용자는 DBCC TRACEON (260)를 실행 하는 경우 및 확장 저장 프로시저가 DLL __getxpversion (), 경고 메시지를 지원 하지 않습니다 (오류 8131: 확장 저장된 프로시저 DLL '%' 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion()에 밑줄 두 개를 사용 하 여 시작 합니다.)  
   
- 확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 잘못 된 값을 반환 하는이 메시지를 받을 경우 \_이전 버전 srv.h로 컴파일하는 _GetXpVersion(), 또는 있습니다.  
+ 확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 잘못 된 값을 반환 하는이 메시지를 받게 되 면 \__GetXpVersion(), 또는 이전 버전 srv.h를 사용 하 여 컴파일하는 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 함수인 SetErrorMode는 확장 저장 프로시저 내에서 호출하지 않아야 합니다.  
   
  장기 실행 확장 저장 프로시저의 경우 연결이 끊기거나 일괄 처리가 중단될 경우 프로시저가 자동으로 종료될 수 있도록 주기적으로 srv_got_attention을 호출하는 것이 좋습니다.  
   
- 확장 저장 프로시저 DLL을 디버깅하려면 DLL을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 디렉터리에 복사합니다. 디버깅 세션에 대 한 실행 파일을 지정 하려면의 경로 파일 이름을 입력 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일 (예: C:\Program Files\Microsoft SQL Server\MSSQL12 합니다. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)입니다. Sqlservr 인수에 대 한 정보를 참조 하십시오. [sqlservr 응용 프로그램](../../tools/sqlservr-application.md)합니다.  
+ 확장 저장 프로시저 DLL을 디버깅하려면 DLL을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 디렉터리에 복사합니다. 디버깅 세션에 대 한 실행 파일을 지정 하려면의 경로 및 파일 이름을 입력 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일 (예: C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)입니다. Sqlservr 인수에 대 한 자세한 내용은 [응용 프로그램 sqlservr](../../tools/sqlservr-application.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [srv_got_attention &#40;확장 저장 프로시저 API&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

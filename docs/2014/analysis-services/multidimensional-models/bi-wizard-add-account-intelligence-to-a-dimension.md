@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7114a48bf24fcd7f22f68d83ecff8bf3873c3b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80704cdf9df5481f1ec098ca29443e38fcf97bc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301183"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>차원에 계정 인텔리전스 추가
   계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분류를 사용하여 시간별로 계정을 집계할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36081679"
     |**Liability**|`LastNonEmpty`|특정 시간에 진 빚의 가치나 금액입니다. 이 계정 유형은 시간에 따라 누적되지 않으므로 자연히 시간에 따라 집계되지 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다. 이 계정 유형은 End of Period 비율을 사용하여 통화 간을 변환합니다.|  
     |**Asset**|`LastNonEmpty`|특정 시간에 보유하고 있는 빚의 가치나 금액입니다. 이 계정 유형은 시간에 따라 누적되지만 시간에 따라 자연히 집계되지는 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다. 이 계정 유형은 End of Period 비율을 사용하여 통화 간을 변환합니다.|  
     |**Balance**|`LastNonEmpty`|특정 시간의 항목 합계입니다. 이 계정 유형은 누적되지만 시간에 따라 자연히 집계되지 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다.|  
-    |**Flow**|`Sum`|항목의 증분 합계입니다. 이 계정 유형은으로 집계는 `Sum` 시간이 지남에 따라 되지만 통화 변환 규칙으로 변환 하지 않습니다.|  
+    |**Flow**|`Sum`|항목의 증분 합계입니다. 이 계정 유형은으로 집계를 `Sum` 시간이 지남에 따라 되지만 통화 변환 규칙을 사용 하 여 변환 하지 않습니다.|  
     |**Expense**|`Sum`|소비한 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 `Sum`으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
     |**Income**|`Sum`|받은 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 `Sum`으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
   

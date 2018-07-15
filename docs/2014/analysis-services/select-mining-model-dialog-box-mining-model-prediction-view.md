@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델 선택 대화 상자 (마이닝 모델 예측 뷰) | Microsoft Docs
+title: 마이닝 모델 대화 상자 (마이닝 모델 예측 뷰) 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.selectminingmodel.f1
 helpviewer_keywords:
 - Select Mining Model dialog box
 ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1f83a7b6b3599bb7665e5ce9970a0b6f73dd7b03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15c4a05bb3347e9457aac81ade72fb95eb0434ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297193"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>마이닝 모델 선택 대화 상자(마이닝 모델 예측 뷰)
   **마이닝 모델 선택** 대화 상자를 사용하여 예측의 기반으로 사용할 마이닝 모델을 선택할 수 있습니다.  

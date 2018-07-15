@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232633"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 업그레이드에 따르는 영향을 쉽게 평가할 수 있습니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 업그레이드에 따르는 영향을 쉽게 평가할 수 있습니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.  
   
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay의 이점  
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]와 마찬가지로 Distributed Replay를 사용하면 캡처된 추적을 업그레이드된 테스트 환경에 대해 재생할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]와 달리 Distributed Replay는 여러 컴퓨터의 작업을 재생할 수 있습니다.  
   
  Distributed Replay는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]보다 확장성이 뛰어난 솔루션을 제공합니다. Distributed Replay를 사용하면 여러 컴퓨터의 작업을 재생하고 중요한 작업을 효율적으로 시뮬레이션할 수 있습니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능은 여러 컴퓨터를 사용하여 추적 데이터를 재생하고 중요 업무용 작업을 시뮬레이트할 수 있습니다. 응용 프로그램 호환성 테스트, 성능 테스트 또는 용량 계획에 Distributed Replay를 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능은 여러 컴퓨터를 사용하여 추적 데이터를 재생하고 중요 업무용 작업을 시뮬레이트할 수 있습니다. 응용 프로그램 호환성 테스트, 성능 테스트 또는 용량 계획에 Distributed Replay를 사용할 수 있습니다.  
   
 ## <a name="when-to-use-distributed-replay"></a>Distributed Replay를 사용하는 경우  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 와 Distributed Replay 기능이 일부 중복을 제공 합니다.  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 와 Distributed Replay는 기능이 일부 중복을 제공 합니다.  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 를 사용하면 캡처된 추적을 업그레이드된 테스트 환경에 대해 재생할 수 있습니다. 재생 결과를 분석하여 잠재적인 기능 및 성능 관련 비호환성 문제가 있는지도 검토할 수 있습니다. 그러나 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 는 단일 컴퓨터에서만 작업을 재생할 수 있습니다. 리소스를 많이 사용하는 OLTP 응용 프로그램(활성 동시 연결 수가 많거나 처리량이 많음)을 재생할 때는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 로 인해 리소스 병목 상태가 야기될 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36082193"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 개념  
  Distributed Replay 환경을 구성하는 요소는 다음과 같습니다.  
   
--   **Distributed Replay 관리 도구**: 콘솔 응용 프로그램 `DReplay.exe`, distributed replay controller와 통신 하는 데 사용 합니다. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.  
+-   **Distributed Replay 관리 도구**: 콘솔 응용 프로그램을 `DReplay.exe`distributed replay controller와 통신 하는 데 사용 합니다. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.  
   
 -   **Distributed Replay Controller**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller라는 Windows 서비스를 실행하는 컴퓨터. Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다.  
   

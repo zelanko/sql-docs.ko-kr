@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cube element
 ms.assetid: c2b6fe41-6ad4-4181-98a9-3a2517f0b7cc
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 9b2d768289a89646566f1eacd37132223bf7a3e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4619f13251e7b514234e5cd71201f16f0819a2a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308243"
 ---
 # <a name="cube-element-olapinfo-xmla"></a>Cube 요소(OlapInfo)(XMLA)
-  부모 큐브에 대 한 정보를 포함 [CubeInfo](cubeinfo-element-xmla.md) 요소입니다.  
+  부모는 큐브에 대 한 정보를 포함 [CubeInfo](cubeinfo-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36089145"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[CubeInfo](cubeinfo-element-xmla.md)|  
-|자식 요소|[CubeName](name-element-xmla.md), [LastDataUpdate](../xml-elements-commands/update-element-xmla.md), [LastSchemaUpdate](lastschemaupdate-element-xmla.md)|  
+|자식 요소|[CubeName](name-element-xmla.md)하십시오 [LastDataUpdate](../xml-elements-commands/update-element-xmla.md), [LastSchemaUpdate](lastschemaupdate-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
   

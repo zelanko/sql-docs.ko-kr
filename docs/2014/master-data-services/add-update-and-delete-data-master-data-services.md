@@ -1,5 +1,5 @@
 ---
-title: 추가, 업데이트 및 삭제 (Master Data Services) 데이터 | Microsoft Docs
+title: 추가, 데이터 업데이트 및 삭제 (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311993"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>데이터 추가, 업데이트 및 삭제(MDS(Master Data Services))
   데이터를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 모델에 대량으로 추가하고 변경할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36090230"
   
  **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터를 추가, 업데이트 및 삭제하려면**  
   
-1.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 적절한 준비 테이블로 가져올 구성원을 준비합니다. 예를 들어 필수 필드의 값을 입력합니다. 준비 테이블의 개요를 참조 하십시오. [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+1.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 적절한 준비 테이블로 가져올 구성원을 준비합니다. 예를 들어 필수 필드의 값을 입력합니다. 준비 테이블의 개요를 보려면 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
     -   리프 멤버의 경우 테이블은 stg.\<name>_Leaf입니다. 여기서 \<name>은 해당 엔터티를 나타냅니다. 필수 필드에 대한 자세한 내용은 [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)을 참조하세요.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "36090230"
   
     -   명시적 계층에서 멤버의 위치를 이동하는 경우 테이블은 stg.\<name>_Relationship입니다. 필수 필드에 대한 자세한 내용은 [관계 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)을 참조하세요.  
   
-         명시적 계층에서 구성원 이동에 대 한 개요를 참조 하세요. [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.  
+         명시적 계층에서 멤버 이동에 대 한 개요를 참조 하세요 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.  
   
     -   **ImportType** 필드 값을 사용하여 새 구성원을 만드는지, 구성원을 비활성화하는지 또는 구성원을 삭제하는지를 명시합니다. 값에 대한 자세한 내용은 [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) 및 [통합 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)을 참조하세요.  
   
-         멤버 비활성화 및 삭제의 개요를 참조 하십시오. [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.  
+         멤버 비활성화 및 삭제의 개요를 보려면 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.  
   
 2.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 데이터베이스 엔진 인스턴스에 연결합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36090230"
   
     -   데이터를 이동하려는 준비 테이블에 해당하는 준비 저장 프로시저를 실행합니다.  
   
-         준비 저장된 프로시저 및 준비 테이블의 개요를 참조 하십시오. [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다. 준비 저장 프로시저의 매개 변수에 대한 자세한 내용과 코드 예제는 [준비 저장 프로시저&#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)를 참조하세요.  
+         준비 저장된 프로시저 및 준비 테이블의 개요를 보려면 [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다. 준비 저장 프로시저의 매개 변수에 대한 자세한 내용과 코드 예제는 [준비 저장 프로시저&#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)를 참조하세요.  
   
     -   마스터 데이터 관리의 **통합 관리** 기능 영역을 사용합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36090230"
   
          **의** 준비 일괄 처리 간격 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]설정에 지정된 간격마다 준비 프로세스가 시작됩니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-5.  준비 과정에서 발생한 오류를 봅니다. 자세한 내용은 참조 [준비 프로세스 중에 발생 하는 오류 보기 &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) 및 [준비 프로세스 오류 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)합니다.  
+5.  준비 과정에서 발생한 오류를 봅니다. 자세한 내용은 [준비 프로세스 중에 발생 하는 오류 보기 &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) 하 고 [준비 프로세스 오류 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 6.  비즈니스 규칙에 대해 데이터의 유효성을 검사합니다.  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286719"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
   데이터 기반 구독을 정의하려면 먼저 구독 데이터를 제공하는 데이터 원본이 있어야 합니다. 이 단계에서는 이 자습서에 사용되는 구독 데이터를 저장할 소규모 데이터베이스를 만듭니다. 나중에 구독을 처리할 때 보고서 서버에서는 이 데이터를 검색하여 보고서 출력, 배달 옵션 및 보고서 표시 형식을 사용자 지정하는 데 사용합니다.  
   
- 이 단원에서는 사용 하는 가정 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 만들려는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스입니다.  
+ 이 단원에서는 사용 한다고 가정 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 만들려면를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스입니다.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>예제 구독자 데이터베이스를 만들려면  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36082008"
   
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스...** 를 선택합니다.  
   
-3.  새 데이터베이스 대화 상자의 데이터베이스 이름에서 입력 *구독자*합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  새 데이터베이스 대화 상자에서 데이터베이스 이름을 입력 *구독자*합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  도구 모음에서 **새 쿼리** 단추를 클릭합니다.  
   

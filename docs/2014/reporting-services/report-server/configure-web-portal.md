@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299763"
 ---
 # <a name="configure-report-manager-native-mode"></a>보고서 관리자 구성(기본 모드)
   보고서 관리자는 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 응용 프로그램입니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 보고서 관리자를 사후 설치 태스크로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 보고서 관리자 구성 시나리오에 대한 정보를 제공합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36090386"
   
 -   보고서 서버를 기본 모드로 실행해야 합니다. SharePoint 통합 모드로 구성된 보고서 서버에는 보고서 관리자를 사용할 수 없습니다. SQL Server 2012 에서는 보고서 서버를 한 모드에서 다른 모드로 전환할 수 없습니다. 환경에 사용되는 보고서 서버 유형을 변경하려면 원하는 보고서 서버 모드를 설치하고 보고서 항목을 새 보고서 서버로 복사하거나 이동해야 합니다. 이러한 프로세스를 일반적으로 '마이그레이션'이라고 합니다. 마이그레이션하는 데 필요한 단계는 마이그레이션할 모드 및 원본 버전에 따라 달라집니다. 자세한 내용은 [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   
--   스크립팅이 사용되는 Internet Explorer 7.0 이상도 필요합니다. 자세한 내용은 참조 [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)합니다.  
+-   스크립팅이 사용되는 Internet Explorer 7.0 이상도 필요합니다. 자세한 내용은 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)합니다.  
   
 ##  <a name="ConfigureRMURL"></a> 기본 URL을 사용하도록 보고서 관리자 구성  
  기본적으로 보고서 관리자 URL은 고유한 가상 디렉터리 이름과 동일 인스턴스에서 실행되는 보고서 서버 웹 서비스에 대해 정의된 포트 및 호스트 이름으로 구성됩니다. 대부분의 경우 호스트 이름은 보고서 서버 컴퓨터의 네트워크 이름이지만 이 컴퓨터를 식별하는 IP 주소나 호스트 헤더가 될 수도 있습니다. 보고서 관리자가 기본 URL을 사용하도록 구성하려면 **구성 도구의** 보고서 관리자 URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하십시오.  
@@ -90,7 +90,7 @@ ms.locfileid: "36090386"
   
 4.  변경 내용을 저장하고 파일을 닫습니다.  
   
- 구성 파일에 대 한 자세한 내용은 참조 [Reporting Services 구성 파일 수정 &#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) 및 [RSReportServer 구성 파일](rsreportserver-config-configuration-file.md)합니다.  
+ 구성 파일에 대 한 자세한 내용은 참조 하세요. [Reporting Services 구성 파일 수정 &#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md) 하 고 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).  
   
 ##  <a name="ConfigureRemoteRS"></a> 원격 보고서 서버를 사용하도록 보고서 관리자 구성  
  보고서 관리자와 보고서 서버가 각기 다른 컴퓨터에 배치되는 배포 구성의 경우 두 컴퓨터에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 각각 설치해야 합니다. 보고서 관리자는 보고서 서버 서비스에 포함되어 있으므로 단독으로 설치할 수 없습니다. 보고서 관리자를 다른 컴퓨터에서 자체 프로세스로 실행하려면 두 번째 보고서 서버를 설치해야 합니다. 두 서버 인스턴스는 모두 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버여야 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "36090386"
   
 4.  보고서 관리자 컴퓨터에서 RSReportServer.config의 구성 설정을 수정하여 원격 보고서 서버 인스턴스를 가리키도록 만듭니다. 시작할 때 보고서 관리자는 구성 파일을 읽어 보고서 서버에 대한 URL을 가져옵니다.  
   
-    1.  텍스트 편집기에서 RSReportServer.config를 엽니다. 기본적으로 \program files\microsoft SQL Server\MSRS11 커서가 있습니다. \< *instancename*> services\reportserver입니다.  
+    1.  텍스트 편집기에서 RSReportServer.config를 엽니다. 기본적으로 SQL Server\MSRS11 \Program Files\Microsoft에 있습니다. \< *instancename*> services\reportserver입니다.  
   
     2.  찾을 `ReportServerURL`합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36090386"
   
 8.  사용하지 않을 서버 기능을 해제합니다.  
   
-    -   보고서 관리자 컴퓨터에서 해제 `WebServiceAndHTTPAccessEnabled` 및 `ScheduleEventsAndReportDeliveryEnabled`합니다.  
+    -   보고서 관리자 컴퓨터에서 해제 `WebServiceAndHTTPAccessEnabled` 고 `ScheduleEventsAndReportDeliveryEnabled`입니다.  
   
     -   보고서 서버 컴퓨터에서 해제 `ReportManagerEnabled`합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36090386"
   
 #### <a name="to-turn-off-report-manager"></a>보고서 관리자를 해제하려면  
   
-1.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다. 기본적으로 \program files\microsoft SQL Server\MSRS11 커서가 있습니다. \< *instancename*> services\reportserver입니다.  
+1.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다. 기본적으로 SQL Server\MSRS11 \Program Files\Microsoft에 있습니다. \< *instancename*> services\reportserver입니다.  
   
 2.  **IsReportManagerEnabled**를 찾습니다.  
   
@@ -176,10 +176,10 @@ ms.locfileid: "36090386"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [URL 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Reporting Services 설치 확인](../install-windows/verify-a-reporting-services-installation.md)   
- [HTML 뷰어 및 보고서 관리자 스타일 시트를 사용자 지정](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [HTML 뷰어 및 보고서 관리자 스타일 시트 사용자 지정](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
  [Reporting Services 기능 설정 또는 해제](turn-reporting-services-features-on-or-off.md)   
  [Reporting Services 기본 모드 보고서 서버를 관리 합니다.](manage-a-reporting-services-native-mode-report-server.md)   
  [RSReportServer 구성 파일](rsreportserver-config-configuration-file.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
 - ordering job steps [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 61ef225fef854dddba24ffc72575e6d1c5c4775f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5ec0a6966a7bb87112329ec20a0c5dd507d791cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308923"
 ---
 # <a name="handle-multiple-job-steps"></a>다중 작업 단계 처리
   작업에 둘 이상의 작업 단계가 있는 경우에는 작업 단계가 실행되는 순서를 지정해야 합니다. 이를 *흐름 제어**라고 합니다.* 언제든지 새 작업 단계를 추가하고 작업 단계의 흐름을 다시 정렬할 수 있습니다. 변경 내용은 다음에 작업이 실행될 때 적용됩니다. 다음 그림에서는 데이터베이스 백업 작업에 대한 흐름 제어를 보여 줍니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "36090793"
   
 ## <a name="see-also"></a>관련 항목  
  [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo.sysjobhistory &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [dbo.sysjobs &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [dbo.sysjobsteps &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+ [dbo.sysjobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [dbo.sysjobs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysjobsteps &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [작업 구현](implement-jobs.md)   
  [작업 단계 관리](manage-job-steps.md)  
   

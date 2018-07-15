@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 13e83d3a022416de56cba7bbf6693ea408b51562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7405b3b6dd7f673b199509388d43164f47dd90eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304553"
 ---
 # <a name="actionid-element-assl"></a>ActionID 요소(ASSL)
-  이름을 포함 한 [작업](../objects/action-element-assl.md) 에 정의 된 요소는 [큐브](../objects/cube-element-assl.md) 요소에서 사용할 수 있는 [관점](../objects/perspective-element-assl.md) 요소도는 [PerspectiveAction](../data-type/action-data-type-assl.md) 요소입니다.  
+  이름을 포함는 [작업](../objects/action-element-assl.md) 에 정의 된 요소를 [큐브](../objects/cube-element-assl.md) 에서 사용할 수 있는 요소를 [관점](../objects/perspective-element-assl.md) 요소로 [PerspectiveAction](../data-type/action-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36090750"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ActionID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveAction>합니다.  
+ 부모에 해당 하는 요소가 `ActionID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.PerspectiveAction>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Actions 요소 &#40;ASSL&#41;](../collections/actions-element-assl.md)   

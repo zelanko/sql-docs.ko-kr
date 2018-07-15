@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 143ab55a3ebfa3036fe23afd120d8b9c36f73a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 535859d04212b09af5a96745f3fb4e234af3f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289849"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>마이닝 모델에서 필터 삭제
   마이닝 모델에 대한 필터를 정의할 때 데이터 원본 뷰에서 데이터의 하위 집합에 대한 모델을 만들 수 있습니다. 필터는 원래 데이터의 하위 집합에 대한 모델의 정확도를 테스트하는 데에도 유용합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36081437"
 -   **필터 편집기** 대화 상자에서 표의 아무 행이나 마우스 오른쪽 단추로 클릭하고 **모두 삭제**를 선택합니다.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>속성 창을 사용하여 모델 필터 작업  
- 전체 필터를 삭제하는 경우에는 필터 편집기 대화 상자를 열지 않아도 됩니다. 만든 필터 조건에 사용할 수는 `Filter` 마이닝 모델의 속성입니다.  
+ 전체 필터를 삭제하는 경우에는 필터 편집기 대화 상자를 열지 않아도 됩니다. 만든 필터 조건에서 사용할 수는 `Filter` 마이닝 모델의 속성입니다.  
   
 > [!NOTE]  
 >  마이닝 모델의 속성은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 볼 수 있지만 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 볼 수 없습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36081437"
   
 1.  솔루션 탐색기에서 필터가 포함된 마이닝 모델을 클릭합니다.  
   
-2.  에 **속성** 창의 필터 텍스트를 마우스 오른쪽 단추로 클릭는 `Filter` 속성과 선택 **모두 선택**합니다.  
+2.  에 **속성** 창의 필터 텍스트를 마우스 오른쪽 단추로 클릭 합니다 `Filter` 속성을 선택한 **모두 선택**합니다.  
   
 3.  백스페이스 또는 Delete 키를 누릅니다.  
   

@@ -27,13 +27,13 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 42511f1f79510d163c3211b3e0d82cb1ee2635ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0266f6683e354f87edb6423bab638436447fcc5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285649"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>스크립트 태스크에서 데이터 원본에 연결
   연결 관리자를 사용하면 패키지에 구성된 데이터 원본에 액세스할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
@@ -48,9 +48,9 @@ ms.locfileid: "36091544"
  코드에서 연결을 사용하기 전에 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> 속성에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 메서드를 사용하여 기존 연결을 찾을 수 있습니다.  
   
 > [!IMPORTANT]  
->  스크립트 태스크의 관리 코드에서는 OLE DB 연결 관리자 및 Excel 연결 관리자와 같이 관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출할 수 없습니다. 그러나 이러한 연결 관리자의 ConnectionString 속성을 읽을 수 있으며 연결 문자열을 사용 하 여 코드에서 직접 데이터 원본에 연결 된 `OledbConnection` 에서 **System.Data.OleDb** 네임 스페이스입니다.  
+>  스크립트 태스크의 관리 코드에서는 OLE DB 연결 관리자 및 Excel 연결 관리자와 같이 관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출할 수 없습니다. 그러나 이러한 연결 관리자의 ConnectionString 속성을 읽고 수의 연결 문자열을 사용 하 여 코드에서 직접 데이터 원본에 연결을 `OledbConnection` 에서 **System.Data.OleDb** 네임 스페이스입니다.  
 >   
->  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 사용합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB를 사용하여 연결합니다. 이 경우에 대 한 AcquireConnection 메서드 반환는 `System.Data.OleDb.OleDbConnection` 관리 되지 않는 개체 대신 합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 **연결 관리자** 대화 상자의 **모두** 페이지에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet를 선택하고 Excel 파일을 지정한 다음 **확장 속성** 값으로 `Excel 8.0`(Excel 97 이상의 경우)을 입력합니다.  
+>  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 사용합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드 반환을 `System.Data.OleDb.OleDbConnection` 관리 되지 않는 개체 대신 합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 **연결 관리자** 대화 상자의 **모두** 페이지에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet를 선택하고 Excel 파일을 지정한 다음 **확장 속성** 값으로 `Excel 8.0`(Excel 97 이상의 경우)을 입력합니다.  
   
 ## <a name="connections-example"></a>연결 예  
  다음 예에서는 스크립트 태스크 내에서 연결 관리자에 액세스하는 방법을 보여 줍니다. 이 예제에서는 **Test ADO.NET Connection**이라는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자와 **플랫 파일 연결 관리자**라는 플랫 파일 연결 관리자를 만들고 구성했다고 가정합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자는 데이터 원본에 즉시 연결하는 데 사용할 수 있는 `SqlConnection` 개체를 반환합니다. 반면에 플랫 파일 연결 관리자는 경로와 파일 이름이 들어 있는 문자열만 반환합니다. 플랫 파일을 열어 작업하려면 `System.IO` 네임스페이스의 메서드를 사용해야 합니다.  
@@ -103,7 +103,7 @@ public class ScriptMain
   
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)   

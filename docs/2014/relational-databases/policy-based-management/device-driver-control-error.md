@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a398e9edca7bf1755c47650c3ddbb192469fc38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 25de2e0ab2e5921bf0e83c2d22d1040d9728f7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296393"
 ---
 # <a name="device-driver-control-error"></a>장치 드라이버 컨트롤 오류
   이 규칙은 시스템 이벤트 로그에서 EventId 11을 검사합니다. 이 오류는 손상된 장치 드라이버, 하드웨어 문제, 잘못된 케이블 연결 또는 기타 연결 문제로 인해 발생할 수 있습니다.  

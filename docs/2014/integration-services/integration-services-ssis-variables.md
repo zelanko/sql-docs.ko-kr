@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283619"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "36090469"
  변수에 대한 설명을 지정합니다.  
   
  EvaluateAsExpression  
- 속성이로 설정 되 면 `True`, 제공 된 식이 변수 값을 설정 하는 데 사용 됩니다.  
+ 속성이로 설정 된 경우 `True`, 제공 된 식이 변수 값을 설정 하는 데 사용 됩니다.  
   
  식  
  변수에 할당되는 식을 지정합니다.  
@@ -118,17 +118,17 @@ ms.locfileid: "36090469"
  IncludeInDebugDump  
  디버그 덤프 파일에 변수 값이 포함되는지 여부를 나타냅니다.  
   
- 사용자 정의 변수 및 시스템 변수에 대 한의 기본값은 **InclueInDebugDump** 옵션은 `true`합니다.  
+ 사용자 정의 변수 및 시스템 변수의 기본값에 대 한 값을 **InclueInDebugDump** 옵션은 `true`합니다.  
   
- 그러나 사용자 정의 변수에 대 한이 다시 설정 됩니다는 **IncludeInDebugDump** 옵션을 `false` 다음 조건이 충족 되는 경우:  
+ 그러나 사용자 정의 변수에 대 한 시스템을 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false` 다음 조건이 충족 될 때:  
   
--   경우는 **EvaluateAsExpression** 변수 속성이로 설정 되어 `true`, 다시 설정 됩니다는 **IncludeInDebugDump** 옵션을 `false`합니다.  
+-   경우는 **EvaluateAsExpression** 변수 속성이로 설정 되어 `true`, 시스템을 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false`합니다.  
   
-     디버그 덤프 파일에 변수 값으로 식의 텍스트를 포함 하려면 설정는 **IncludeInDebugDump** 옵션을 `true`합니다.  
+     디버그 덤프 파일에 변수 값으로 식의 텍스트를 포함 하려면 설정 합니다 **IncludeInDebugDump** 옵션을 `true`입니다.  
   
--   변수 데이터 형식이 문자열로 변경 되 면 다시 설정 됩니다는 **IncludeInDebugDump** 옵션을 `false`합니다.  
+-   변수 데이터 형식이 문자열로 변경 되 면 시스템이 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false`입니다.  
   
- 시스템으로 다시 설정 된 **IncludeInDebugDump** 옵션을 `false`, 사용자가 선택한 값이 재정의 될 수 있습니다.  
+ 시스템으로 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false`, 사용자가 선택한 값이 재정의 될 수 있습니다.  
   
  값  
  사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 포함됩니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "36090469"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [변수 창](../../2014/integration-services/variables-window.md)을 참조하세요.  
   
- 프로그래밍 방식으로 이러한 속성을 설정 하는 방법에 대 한 자세한 내용은 및 변수 속성에 대 한 자세한 내용을 보려면을 참조 하십시오. <xref:Microsoft.SqlServer.Dts.Runtime.Variable>합니다.  
+ 프로그래밍 방식으로 이러한 속성을 설정 하는 방법에 대 한 자세한 내용은 및 변수 속성에 대 한 자세한 내용은를 참조 하세요. <xref:Microsoft.SqlServer.Dts.Runtime.Variable>합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

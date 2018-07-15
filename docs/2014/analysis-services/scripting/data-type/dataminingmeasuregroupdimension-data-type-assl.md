@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataMiningMeasureGroupDimension data type
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f25a5e72e185085479be12ea6eddd3cdf890020b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c50bf707f105ba40b023e2f1970dda875b0570b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314603"
 ---
 # <a name="dataminingmeasuregroupdimension-data-type-assl"></a>DataMiningMeasureGroupDimension 데이터 형식(ASSL)
   측정값 그룹과 데이터 마이닝 차원 간의 관계를 나타내는 파생 데이터 형식을 정의합니다.  
@@ -58,12 +58,12 @@ ms.locfileid: "36081210"
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
 |자식 요소|[CaseCubeDimensionID](../properties/id-element-assl.md)|  
-|파생 요소|참조 [차원](../objects/dimension-element-assl.md) ([차원](../collections/dimensions-element-assl.md) 컬렉션 [MeasureGroup](../objects/group-element-assl.md))|  
+|파생 요소|참조 [차원](../objects/dimension-element-assl.md) ([차원](../collections/dimensions-element-assl.md) 모음인 [MeasureGroup](../objects/group-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

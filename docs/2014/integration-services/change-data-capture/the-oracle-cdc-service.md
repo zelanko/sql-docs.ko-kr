@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc492ecae459c0ff697f829ad6db14872e00da41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a95f78439afc186c7301a5e4b139494601a358aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328123"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service는 xdbcdcsvc.exe 프로그램을 실행하는 Windows 서비스입니다. 동일한 컴퓨터에서 각각 다른 Windows 서비스 이름이 있는 여러 Windows 서비스를 실행하도록 Oracle CDC Service를 구성할 수 있습니다. 일반적으로 서비스 간을 더 잘 분리하기 위해 또는 각 서비스가 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 작업해야 하는 경우에 단일 컴퓨터에서 여러 Oracle CDC Windows 서비스를 만듭니다.  
   
- Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 만들어지거나 xdbcdcsvc.exe 프로그램에 기본 제공되는 명령줄 인터페이스를 통해 정의됩니다. 두 경우 모두 만들어진 각 Oracle CDC Service는 단일 연관 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (클러스터링 하거나 미러링할 수 있음 **AlwaysOn** 설치 프로그램) 및 연결 정보 (연결 문자열 및 자격 증명에 액세스)는 서비스 구성의 일부입니다.  
+ Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 만들어지거나 xdbcdcsvc.exe 프로그램에 기본 제공되는 명령줄 인터페이스를 통해 정의됩니다. 두 경우 모두 만들어진 각 Oracle CDC Service는 연결 된 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (클러스터링 하거나 미러링할 수 있음 **AlwaysOn** 설치) 및 연결 정보 (연결 문자열 및 자격 증명에 액세스)는 서비스 구성의 일부입니다.  
   
  Oracle CDC Service가 시작되면 관련된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결을 시도하고, 처리해야 할 Oracle CDC 인스턴스 목록을 가져온 다음, 초기 환경 유효성 검사를 수행합니다. 서비스 시작 중 오류와 모든 시작/중지 정보가 항상 Windows 응용 프로그램 이벤트 로그에 기록됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 설정되면 모든 오류와 정보 메시지가 **인스턴스의 MSXDBCDC 데이터베이스에 있는** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 기록됩니다. 시작 중에 수행되는 확인 중 하나는 같은 이름의 다른 Oracle CDC Service가 현재 작업 중이 아닌지 확인하는 것입니다. 같은 이름의 서비스가 다른 컴퓨터에서 현재 연결되어 있는 경우 Oracle CDC Service는 대기 루프를 시작하여 다른 서비스의 연결이 끊어질 때까지 기다린 후 Oracle CDC 작업 처리를 진행합니다.  
   

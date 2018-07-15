@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d6261a52d4ff41923e87402327b98ff60622af7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1894d321f6dc8321f4c2b53369d7140f500ce003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310873"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
   SQL 창을 사용하여 고유한 SQL 문을 만들거나 조건 창 및 다이어그램 창을 사용하여 문을 만들 수 있습니다. 조건 창이나 다이어그램 창을 사용해도 SQL 문은 SQL 창에 작성됩니다. 쿼리를 작성할 때 SQL 창은 자동으로 업데이트되고 읽기 쉽도록 서식이 다시 지정됩니다.  
@@ -60,8 +60,8 @@ ms.locfileid: "36090782"
 ## <a name="see-also"></a>관련 항목  
  [쿼리를 만들 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [다이어그램 창을 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [다이어그램 창 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [조건 창 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [결과 창&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   

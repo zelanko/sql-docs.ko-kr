@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3ec962379f992bcb89b6227cf3af13705d1193ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312773"
 ---
 # <a name="creating-a-login"></a>로그인 만들기
   [!INCLUDE[ssDE](../includes/ssde-md.md)]에 액세스하려면 사용자는 로그인이 필요합니다. 로그인은 사용자의 ID를 Windows 계정 또는 Windows 그룹의 멤버로 나타내거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 존재하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로그인이 될 수 있습니다. 가능하면 Windows 인증을 사용해야 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36089206"
   
 ### <a name="to-create-a-new-windows-account"></a>새 Windows 계정을 만들려면  
   
-1.  클릭 **시작**, 클릭 **실행**에 **열고** 상자에 입력 합니다 `%SystemRoot%\system32\compmgmt.msc /s`, 클릭 하 고 **확인** 컴퓨터 관리 프로그램을 열려면 합니다.  
+1.  클릭 **시작**, 클릭 **실행**를 **엽니다** 상자에 입력 `%SystemRoot%\system32\compmgmt.msc /s`를 클릭 하 고 **확인** 컴퓨터 관리 프로그램을 열려면 합니다.  
   
 2.  **시스템 도구**에서 **로컬 사용자 및 그룹**을 확장하고 **사용자**를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 클릭합니다.  
   

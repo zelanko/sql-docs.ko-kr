@@ -17,23 +17,23 @@ helpviewer_keywords:
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f597ddc37d61337bd60714afbcb564c87c6747f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8133a762b1bc0f687529ee375bd8e9c5699051b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307483"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 환경에서 SQLXML 대량 로드 사용
-  이 항목에서는 .NET 환경에서 XML 대량 로드 기능을 사용하는 방법에 대해 설명합니다. XML 대량 로드에 대 한 자세한 내용은 참조 하십시오. [XML 데이터의 대량 로드 수행 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)합니다.  
+  이 항목에서는 .NET 환경에서 XML 대량 로드 기능을 사용하는 방법에 대해 설명합니다. XML 대량 로드에 대 한 자세한 내용은 [XML 데이터의 대량 로드 수행 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)합니다.  
   
  관리되는 환경에서 SQLXML 대량 로드 COM 개체를 사용하려면 이 개체에 대한 프로젝트 참조를 추가해야 합니다. 이렇게 하면 대량 로드 COM 개체에 대한 관리되는 래퍼 인터페이스가 생성됩니다.  
   
 > [!NOTE]  
->  관리되는 XML 대량 로드는 관리되는 스트림에는 사용할 수 없으며 네이티브 스트림에 대한 래퍼가 있어야 합니다. SQLXML 대량 로드 구성 요소는 다중 스레드 환경('[MTAThread]' 특성)에서는 실행되지 않습니다. 다중 스레드 환경에서 대량 로드 구성 요소를 실행 하려고 하면 예외가 InvalidCastException 다음과 같은 추가 정보: "SQLXMLBULKLOADLib.ISQLXMLBulkLoad 인터페이스에 대 한 QueryInterface 실패 했습니다." 대량 로드 개체가 단일 스레드 액세스할 수 있는 개체를 설정 하 여이 문제를 해결 (사용 하 여 예를 들어는 **[STAThread]** 샘플에 표시 된 대로 특성).  
+>  관리되는 XML 대량 로드는 관리되는 스트림에는 사용할 수 없으며 네이티브 스트림에 대한 래퍼가 있어야 합니다. SQLXML 대량 로드 구성 요소는 다중 스레드 환경('[MTAThread]' 특성)에서는 실행되지 않습니다. 하면 다음과 같은 추가 정보를 사용 하 여 InvalidCastException 예외가 다중 스레드 환경에서 대량 로드 구성 요소를 실행 하려는 경우: "SQLXMLBULKLOADLib.ISQLXMLBulkLoad 인터페이스에 대 한 queryinterface가 실패 했습니다." 대량 로드 개체가 단일 스레드 액세스할 수 있는 개체가 되도록이 문제를 해결 (사용 하 여 예를 들어 합니다 **[STAThread]** 샘플에 표시 된 대로 특성).  
   
  이 항목에서는 XML 데이터를 데이터베이스에 대량 로드하기 위한 C# 작업 예제 응용 프로그램을 제공합니다. 작업 예제를 만들려면 다음 단계를 수행합니다.  
   
@@ -116,11 +116,11 @@ ms.locfileid: "36089916"
   
 5.  C# 콘솔 응용 프로그램을 만듭니다.  
   
-6.  **프로젝트** 메뉴 선택 **참조 추가**합니다.  
+6.  **프로젝트** 메뉴에서 **참조 추가**합니다.  
   
-7.  에 **COM** 탭에서 **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll)를 클릭 하 고 **확인**합니다. 표시 됩니다는 **Interop.SQLXMLBULKLOADLib** 어셈블리를 프로젝트에 생성 합니다.  
+7.  에 **COM** 탭을 선택 **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll) 클릭 **확인**합니다. 표시 됩니다는 **Interop.SQLXMLBULKLOADLib** 프로젝트에서 생성 된 어셈블리입니다.  
   
-8.  Main() 메서드를 다음 코드로 바꿉니다. 업데이트는 **ConnectionString** 속성과 스키마 및 데이터 파일의 파일 경로입니다.  
+8.  Main() 메서드를 다음 코드로 바꿉니다. 업데이트를 **ConnectionString** 속성과 스키마 및 데이터 파일에 파일 경로입니다.  
   
     ```  
     [STAThread]  

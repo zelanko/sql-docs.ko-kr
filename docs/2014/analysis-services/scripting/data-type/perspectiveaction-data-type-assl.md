@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e3e3df8f864c862dd101b97eeeabb63066e051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8886962d5b2014d3cdaa466861d4693319d21d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316913"
 ---
 # <a name="perspectiveaction-data-type-assl"></a>PerspectiveAction 데이터 형식(ASSL)
-  작업 하는 방법에 대 한 정보를 나타내는 기본 데이터 형식을 정의 [관점](../objects/perspective-element-assl.md) 요소입니다.  
+  동작에 대 한 정보를 나타내는 기본 데이터 형식을 정의 [관점](../objects/perspective-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,12 +58,12 @@ ms.locfileid: "36090549"
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
 |자식 요소|[ActionID](../properties/id-element-assl.md), [주석](../collections/annotations-element-assl.md)|  
-|파생 요소|[동작](../objects/action-element-assl.md) ([동작](../collections/actions-element-assl.md) 컬렉션 [관점](../objects/perspective-element-assl.md))|  
+|파생 요소|[동작](../objects/action-element-assl.md) ([동작](../collections/actions-element-assl.md) 모음인 [관점](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.PerspectiveAction>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

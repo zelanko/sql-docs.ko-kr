@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
 - joins [SQL Server], outer
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbde6fbf96809a3ab05ecf1814ce90437436a503
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ef4e658ffd8af66ec8b3ad7e43eba8dade79bf85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306873"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 기본적으로 테이블 간에 내부 조인을 만듭니다. 다른 테이블의 행과 일치하지 않는 행은 없앱니다. 그러나 외부 조인은 FROM 절에 지정된 하나 이상의 테이블이나 뷰에서 WHERE 또는 HAVING 검색 조건을 만족하는 모든 행을 반환합니다. 조인된 테이블에 일치 값이 없는 데이터 행을 결과 집합에 포함하려면 외부 조인을 만들면 됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36089212"
   
 1.  자동 또는 수동으로 조인을 만듭니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) 또는 [테이블 수동 조인&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)을 참조하세요.  
   
-2.  다이어그램 창에서 조인 선을 선택은 **쿼리 디자이너** 메뉴 선택 **모든 행 선택 \<tablename >**, 해당 추가 테이블을 포함 하는 명령을 선택 행을 포함 합니다.  
+2.  다이어그램 창에서 조인 선을 선택 합니다 **쿼리 디자이너** 메뉴 선택 **의 모든 행 선택 \<tablename >**, 해당 추가 테이블을 포함 하는 명령을 선택 행을 포함 합니다.  
   
     -   첫 번째 테이블을 선택하여 왼쪽 우선 외부 조인을 만듭니다.  
   
@@ -62,7 +62,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [조인을 사용 하 여 쿼리 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [조인을 사용한 쿼리 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [조인 대화 상자&#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

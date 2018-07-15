@@ -1,5 +1,5 @@
 ---
-title: 표 (차원 용도 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 표 (Dimension Usage Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295833"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>표(차원 용도 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **차원 용도** 탭의 **표** 창을 사용하여 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 각 차원 관계는 표에 셀로 표시되며 측정값 그룹과 차원은 각각 열과 행에 표시됩니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "36090263"
 |------------|----------------|  
 |**큐브 차원 추가**|**큐브 차원 추가** 대화 상자를 표시하고 큐브의 기존 또는 새 데이터베이스 차원에 참조를 추가하려면 선택합니다. **큐브 차원 추가** 대화 상자에 대한 자세한 내용은 [큐브 차원 추가 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**새 연결 된 개체**|**연결된 개체 마법사** 를 표시하여 다른 큐브의 측정값 그룹 및 차원을 연결하고 선택한 큐브로 동작, KPI 및 계산을 가져오려면 선택합니다. **연결된 개체 마법사**에 대한 자세한 내용은 [연결된 개체 마법사 F1 도움말](linked-object-wizard-f1-help.md)을 참조하세요.|  
-|**잘라내기**|참고:이 옵션은 사용할 수 없습니다.|  
-|**복사**|참고:이 옵션은 사용할 수 없습니다.|  
-|**붙여넣기**|참고:이 옵션은 사용할 수 없습니다.|  
+|**잘라내기**|참고:이 옵션이 비활성화 됩니다.|  
+|**복사**|참고:이 옵션이 비활성화 됩니다.|  
+|**붙여넣기**|참고:이 옵션이 비활성화 됩니다.|  
 |**Delete**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계를 큐브에서 삭제하려면 선택합니다.|  
 |**이름 바꾸기**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계의 이름을 바꾸려면 선택합니다.|  
 |**Properties**|**에 선택한 큐브 차원, 측정값 그룹 또는 차원 관계에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시하려면 선택합니다.|  

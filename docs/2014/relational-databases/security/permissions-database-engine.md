@@ -5,10 +5,9 @@ ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f4be5133cc17aef8c24bea72c214039debffb34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f45a4c892af973850161733508cd9ab43eb7e772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331473"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. 이 항목에서는 다음 정보를 제공합니다.  
@@ -108,21 +107,21 @@ ms.locfileid: "36089062"
 |SELECT|동의어<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 및 열<br /><br /> 뷰 및 열|  
 |VIEW CHANGE TRACKING|테이블<br /><br /> 스키마|  
 |UPDATE|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
-|REFERENCES|스칼라와 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR), 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
+|REFERENCES|스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR), 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
 |INSERT|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |Delete|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
-|CREATE 문을 실행하기 전에|프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라와 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
+|CREATE 문을 실행하기 전에|프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐|  
-|VIEW DEFINITION|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 스칼라와 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
-|ALTER|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라와 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 시퀀스 개체<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰|  
-|TAKE OWNERSHIP|가용성 그룹<br /><br /> 역할<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라와 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 서버 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
-|CONTROL|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라와 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|VIEW DEFINITION|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|ALTER|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 시퀀스 개체<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰|  
+|TAKE OWNERSHIP|가용성 그룹<br /><br /> 역할<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 서버 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|CONTROL|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
 |IMPERSONATE|로그인 및 사용자|  
   
 > [!CAUTION]  
 >  설치 시 시스템 개체에 부여되는 기본 사용 권한은 발생할 수 있는 위협이 있는지 신중하게 평가되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 보안 강화의 일환으로 변경할 필요는 없습니다. 시스템 개체에 대한 사용 권한을 변경하면 기능이 제한 또는 중단될 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치가 지원되지 않는 상태가 될 수 있습니다.  
   
-##  <a name="_permissions"></a> SQL Server 및 SQL 데이터베이스 사용 권한  
+##  <a name="_permissions"></a> SQL Server 및 SQL Database 권한  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한의 전체 목록을 제공합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용 권한은 지원되는 기본 보안 개체에만 사용할 수 있습니다. 서버 수준 사용 권한은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 부여될 수 없지만 일부 경우에 데이터베이스 사용 권한을 대신 사용할 수 있습니다.  
   
 |기본 보안 개체|기본 보안 개체에 대한 세부적 사용 권한|사용 권한 유형 코드|기본 보안 개체를 포함하는 보안 개체|기본 보안 개체의 세부적 사용 권한을 나타내는 컨테이너 보안 개체의 사용 권한|  

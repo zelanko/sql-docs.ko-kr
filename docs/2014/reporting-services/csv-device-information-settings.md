@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 205d1ac37c78001d4f34f4f1cbc92731b88cfd1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5e2183790fcc7af3f173d7f674173f3dd49857fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307503"
 ---
 # <a name="csv-device-information-settings"></a>CSV 장치 정보 설정
   CSV 렌더링 확장 프로그램에 대한 장치 정보 설정을 통해 구분 기호 및 한정자를 변경하고 줄 바꿈 처리를 지정할 수 있습니다. 출력에 파일 확장명과 인코딩 및 머리글 행도 포함하여 제출할 수 있습니다. 구분 기호는 특수 문자일 수 있기 때문에 설정이 XML로 작성된 경우 CDATA 섹션에서 인코딩해야 합니다.  
@@ -38,8 +38,8 @@ ms.locfileid: "36089252"
 |**NoHeader**|머리글 행이 출력에서 제외되는지 여부를 나타냅니다. 기본값은 `false`입니다.|  
 |`Qualifier`|필드 구분 기호 또는 레코드 구분 기호를 포함하는 결과 주위에 사용할 한정자 문자열입니다. 결과에 한정자가 포함되어 있을 경우 해당 한정자가 반복됩니다. `Qualifier` 설정은 `FieldDelimiter` 및 `RecordDelimiter` 설정과 달라야 합니다. 기본값은 따옴표(")입니다.|  
 |`RecordDelimiter`|각 레코드의 마지막에 사용할 레코드 구분 기호입니다. 기본값은 \<cr>\<lf>입니다.|  
-|**SuppressLineBreaks**|출력에 포함된 데이터에서 줄 바꿈이 제거되는지 여부를 나타냅니다. 기본값은 `false`입니다. 값이 `true`, `FieldDelimiter`, `RecordDelimiter`, 및 `Qualifier` 설정은 공백 문자가 될 수 없습니다.|  
-|`UseFormattedValues`|서식 있는 문자열을 CSV 출력에 사용할지 여부를 나타냅니다. 기본값은 `true` 때 `ExcelMode` 은 `true`; 그렇지 않으면 `false`합니다.|  
+|**SuppressLineBreaks**|출력에 포함된 데이터에서 줄 바꿈이 제거되는지 여부를 나타냅니다. 기본값은 `false`입니다. 값이 `true`서 `FieldDelimiter`를 `RecordDelimiter`, 및 `Qualifier` 설정은 공백 문자가 될 수 없습니다.|  
+|`UseFormattedValues`|서식 있는 문자열을 CSV 출력에 사용할지 여부를 나타냅니다. 기본값은 `true` 때 `ExcelMode` 됩니다 `true`; 그렇지 않으면 `false`합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

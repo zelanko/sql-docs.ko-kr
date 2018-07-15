@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6bc04894a372f4391c12622158673e4ba4068098
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312333"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
     
 ## <a name="overview"></a>개요  
- 이 샘플에서는 새 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 참가 하는 기능을의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 새 메모리 액세스에 최적화 된 테이블 및 고유 하 게 컴파일된 저장된 프로시저를 보여주며의 성능 이점을 설명 하는 데 사용 될 [!INCLUDE[hek_2](../includes/hek-2-md.md)]합니다.  
+ 이 샘플에서는 새 소개 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 참가 하는 기능을의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 새 메모리 최적화 테이블 및 고유 하 게 컴파일된 저장된 프로시저를 보여주며의 성능 이점을 설명 하는 데 사용 될 수 [!INCLUDE[hek_2](../includes/hek-2-md.md)]입니다.  
   
 > [!NOTE]  
 >  SQL Server 2016에 대한 이 항목을 보려면 [메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장](https://msdn.microsoft.com/en-US/library/mt465764.aspx)을 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "36090954"
   
 -   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
+-    [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
 -   
             [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
@@ -50,14 +50,14 @@ ms.locfileid: "36090954"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation, Developer 또는 Enterprise edition  
   
--   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 에 대 한 하드웨어에 대 한 일반 지침은 [!INCLUDE[hek_2](../includes/hek-2-md.md)], 블로그 게시물을 참조 하십시오.[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 하드웨어에 대 한 일반 지침은 [!INCLUDE[hek_2](../includes/hek-2-md.md)], 다음 블로그 게시물을 참조 하세요.[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
   
 1.  AdventureWorks2014 데이터베이스의 전체 백업에 대한 보관 파일을 다운로드합니다.  
   
-    1.  다음: [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661)합니다.  
+    1.  다음을 엽니다. [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661)합니다.  
   
     2.  파일을 로컬 폴더에 저장하라는 메시지가 표시됩니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36090954"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  샘플 스크립트를 다운로드 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql'에서 [SQL Server 2014 RTM 메모리 내 OLTP 예제](http://go.microsoft.com/fwlink/?LinkID=396372) 로컬 폴더에 있습니다.  
+5.  샘플 스크립트를 다운로드 합니다. '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql'에서 [SQL Server 2014 RTM 메모리 내 OLTP 샘플](http://go.microsoft.com/fwlink/?LinkID=396372) 로컬 폴더에 있습니다.  
   
 6.  '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 스크립트의 ‘checkpoint_files_location’ 변수 값을 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 검사점 파일의 대상 위치를 가리키도록 변경합니다. 검사점 파일은 순차 IO 성능이 좋은 드라이브에 배치되어야 합니다.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "36090954"
 -   
             *계산 열* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
   
--   *외래 키 제약 조건을* 메모리 액세스에 최적화 된 테이블에 대해 지원 되지 않습니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다. 이 테이블의 데이터에 대한 참조 무결성은 다음 스크립트를 사용하여 dbo.usp_ValidateIntegrity 저장 프로시저를 통해 확인될 수 있습니다.  
+-   *Foreign key 제약 조건을* 메모리 최적화 테이블에 대 한 지원 되지 않습니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 또한 SalesOrderHeader_inmem은 예제 작업에서 핫 테이블이며, FOREIGN KEY 제약 조건을 지정하려면 모든 DML 작업에 대한 추가 처리가 필요합니다. 이는 이러한 제약 조건에서 참조된 다른 모든 테이블에서 조회가 필요하기 때문입니다. 따라서 응용 프로그램에서 참조 무결성을 보장하며 참조 무결성은 행이 삽입될 때 확인되지 않는다고 가정합니다. 이 테이블의 데이터에 대한 참조 무결성은 다음 스크립트를 사용하여 dbo.usp_ValidateIntegrity 저장 프로시저를 통해 확인될 수 있습니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -233,7 +233,7 @@ ms.locfileid: "36090954"
   
 -   *별칭 UDT* - 원래 테이블은 시스템 데이터 형식 bit와 동일한 사용자 정의 데이터 형식 dbo.Flag를 사용합니다. 마이그레이션된 테이블은 bit 데이터 형식을 대신 사용합니다.  
   
--   *BIN2 데이터 정렬을* -Name 및 ProductNumber 열을 인덱스 키에 포함 되어 있고에서 BIN2 데이터 정렬 해야 하므로 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
+-   *BIN2 데이터 정렬을* -Name 및 ProductNumber 열을 인덱스 키에 포함 되어 있고 BIN2 데이터 정렬이 있어야 하므로 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -248,7 +248,8 @@ ms.locfileid: "36090954"
   
  Sales.SpecialOffer  
   
--   *CHECK* 및 *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOffer_inmem 및 Sales.usp_DeleteSpecialOffer_inmem을 사용하여 특별 행사를 삽입하고 삭제할 수 있습니다. 이러한 프로시저는 도메인 및 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 도메인 및 참조 무결성을 있는 그대로 확인할 수 있습니다.  
+-   
+  *CHECK* 및 *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOffer_inmem 및 Sales.usp_DeleteSpecialOffer_inmem을 사용하여 특별 행사를 삽입하고 삭제할 수 있습니다. 이러한 프로시저는 도메인 및 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 도메인 및 참조 무결성을 있는 그대로 확인할 수 있습니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -259,7 +260,8 @@ ms.locfileid: "36090954"
   
  Sales.SpecialOfferProduct  
   
--   *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOfferProduct_inmem을 사용하여 특별 행사와 제품 간의 관계를 삽입할 수 있습니다. 이 프로시저는 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 참조 무결성을 있는 그대로 확인할 수 있습니다.  
+-   
+  *외래 키 제약 조건* 은 두 가지 방식으로 처리됩니다. 저장 프로시저 Sales.usp_InsertSpecialOfferProduct_inmem을 사용하여 특별 행사와 제품 간의 관계를 삽입할 수 있습니다. 이 프로시저는 참조 무결성을 확인하며 무결성이 위반되는 경우 실패합니다. 또한 다음 스크립트를 사용하여 참조 무결성을 있는 그대로 확인할 수 있습니다.  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -472,7 +474,7 @@ END
  ostress 도구를 사용하여 여러 동시 연결을 통해 스크립트를 실행할 것입니다. ‘-n’ 매개 변수를 사용하여 연결 수를 제어하고 ‘r’ 매개 변수를 사용하여 스크립트가 각 연결에서 실행되는 횟수를 제어하려고 합니다.  
   
 #### <a name="functional-validation-of-the-workload"></a>작업의 기능 유효성 검사  
- 모든 항목은 동작는 예제 테스트부터 시작 하겠습니다를 확인 하려면 연결 10 개의 동시를 사용 하 여 총 10 * 5 번의 삽입 5 회의 반복을 \* 20 = 1000 개의 판매 주문 합니다.  
+ 예제 테스트부터 시작 하겠습니다, 모든 항목이 작동을 확인 하려면 10 개의 동시 사용 하 여 연결 및 총 10 * 5 번의 삽입 5 회의 반복을 \* 20 = 1000 개의 판매 주문 합니다.  
   
  아래의 명령을 사용할 때 로컬 컴퓨터에서 기본 인스턴스를 사용한다고 가정합니다. 명명된 인스턴스나 원격 서버를 사용하는 경우 -S 매개 변수를 사용하여 서버 이름을 적절하게 변경합니다.  
   
