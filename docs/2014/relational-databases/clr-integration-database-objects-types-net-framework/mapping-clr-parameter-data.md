@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,18 +26,18 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186115"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354525"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
-  다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 공용 언어 런타임 (CLR)에서 동등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 `System.Data.SqlTypes` 네임 스페이스 및 해당 네이티브 CLR 형식에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework입니다.  
+  다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 CLR (공용 언어 런타임)에 있는 동등한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 `System.Data.SqlTypes` 네임 스페이스와 해당 기본 CLR에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
@@ -53,23 +51,23 @@ ms.locfileid: "36186115"
 |`datetime`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
 |`datetime2`|InclusionThresholdSetting|**DateTime, Nullable\<DateTime>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
-|`decimal`|`SqlDecimal`|**10 진수, null은 허용\<10 진수 >**|  
+|`decimal`|`SqlDecimal`|**Decimal, Nullable\<10 진수 >**|  
 |`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|InclusionThresholdSetting|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|InclusionThresholdSetting|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|InclusionThresholdSetting|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|InclusionThresholdSetting|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|InclusionThresholdSetting|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|InclusionThresholdSetting|  
 |`image`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
-|`money`|`SqlMoney`|**10 진수, null은 허용\<10 진수 >**|  
+|`money`|`SqlMoney`|**Decimal, Nullable\<10 진수 >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`numeric`|`SqlDecimal`|**10 진수, null은 허용\<10 진수 >**|  
+|`numeric`|`SqlDecimal`|**Decimal, Nullable\<10 진수 >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars`는 데이터 전송 및 액세스에 더 적합하고 `SQLString`은 문자열 작업에 더 적합합니다.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char[], Nullable\<char>**|  
 |`real`|`SqlSingle`(`SqlSingle` 범위, 단, `real`보다 큼)|**Single, Nullable\<Single>**|  
 |`rowversion`|InclusionThresholdSetting|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Nullable\<Int16>**|  
-|`smallmoney`|`SqlMoney`|**10 진수, null은 허용\<10 진수 >**|  
+|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<10 진수 >**|  
 |`sql_variant`|InclusionThresholdSetting|`Object`|  
 |`table`|InclusionThresholdSetting|InclusionThresholdSetting|  
 |`text`|InclusionThresholdSetting|InclusionThresholdSetting|  

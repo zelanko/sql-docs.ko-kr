@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Restrictions element
 ms.assetid: e745ce13-b468-4372-a6f0-0da3d772dda3
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a096ea973d6b8ba900c3b1d890f49ad019d8e93f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fd8e2be999b848524a2d62d921b24bfc07be89fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257079"
 ---
 # <a name="restrictions-element-xmla"></a>Restrictions 요소(XMLA)
-  제한 열 및 사용 하는 데이터가 포함 된 [Discover](../xml-elements-methods-discover.md) 메서드.  
+  제한 열 및 사용 되는 데이터를 포함 합니다 [Discover](../xml-elements-methods-discover.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   

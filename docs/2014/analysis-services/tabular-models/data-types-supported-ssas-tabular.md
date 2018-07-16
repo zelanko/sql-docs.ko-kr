@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237633"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>지원되는 데이터 형식(SSAS 테이블 형식)
   이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  
@@ -50,11 +50,11 @@ ms.locfileid: "36185944"
 |Currency|Currency|통화 데이터 형식에는 -922,337,203,685,477.5808부터 922,337,203,685,477.5807 사이의 소수 자릿수가 고정된 네 자릿수를 사용할 수 있습니다.|  
 |해당 사항 없음|공백|공백은 SQL null을 나타내거나 대체하는 DAX의 데이터 형식입니다. BLANK 함수를 사용하여 공백을 만들고 논리 함수 ISBLANK를 사용하여 공백을 테스트할 수 있습니다.|  
   
- <sup>1</sup> DAX 수식은 테이블에 나와 있는 것 보다 작은 데이터 형식을 지원 하지 않습니다.  
+ <sup>1</sup> DAX 수식은 테이블에 나열 된 것 보다 작은 데이터 형식을 지원 하지 않습니다.  
   
- <sup>2</sup> 매우 큰 숫자 값을 가진 데이터 하려고 하면 다음 오류와 함께 가져오기가 실패할 수 있습니다.  
+ <sup>2</sup> 매우 큰 숫자 값이 포함 된 데이터를 가져오려고 하면 다음 오류로 인해 가져오기가 실패할 수 있습니다.  
   
- 메모리 내 데이터베이스 오류:는 '\<열 이름 >'의 열은 '\<테이블 이름 >' 테이블에 값이 있는 ' 1.7976931348623157 e + 308' 지원 되지 않습니다. 작업이 취소되었습니다.  
+ 메모리 내 데이터베이스 오류:는 '\<열 이름 >'의 열은 '\<테이블 이름 >' 테이블에 값이 있는 ' 1.7976931348623157 e + 308'는 지원 되지 않습니다. 작업이 취소되었습니다.  
   
  이 오류는 모델 디자이너에서 해당 값을 사용하여 null을 나타내기 때문에 발생합니다. 다음 목록의 값은 앞에서 말한 null 값과 동의어입니다.  
   
@@ -152,11 +152,11 @@ ms.locfileid: "36185944"
   
  다음 DAX 식은 이 동작을 보여 줍니다.  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`를 반환 `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`를 반환 합니다 `"Expression is true"`  
   
- `=IF("12">12,"Expression is true", "Expression is false")`를 반환 `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`를 반환 합니다 `"Expression is true"`  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`를 반환 `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`를 반환 합니다 `"Expression is false"`  
   
  숫자 또는 날짜/시간 형식에 대해서는 다음 표에서 설명한 대로 암시적으로 변환이 수행됩니다.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "36185944"
  특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](https://msdn.microsoft.com/library/ee634396.aspx)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 &#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
- [데이터 가져오기 &#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
+ [데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
+ [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
   
   

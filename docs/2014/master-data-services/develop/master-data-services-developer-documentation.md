@@ -5,22 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2a97da74004fb5f40d63cfac67cca253ef3f5e3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d16e4e431a7df73cd775b635ad6ebd8efb1e1e75
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186337"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349505"
 ---
 # <a name="developer39s-guide-master-data-services"></a>개발자&#39;가이드 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]와 상호 작용하는 방식을 사용자 지정하기 위해 코드를 작성하는 방법에 대한 정보를 찾아볼 수 있습니다. 다음 작업을 수행하는 방법을 배워 보십시오.  

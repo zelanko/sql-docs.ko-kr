@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.Distributor.Publications.f1
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ba4a27cfd34c1ac192844bda90723639de4b1db2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 735ac38472991b3898934a1e6ec496a403a0ee23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281269"
 ---
 # <a name="distributor-information-publications"></a>배포자 정보, 게시
   **게시** 탭은 왼쪽 창에서 선택한 배포자에서의 모든 게시에 대한 요약 정보를 제공합니다.  

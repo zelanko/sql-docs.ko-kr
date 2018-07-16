@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 97a762d7552b69aebf4eda07d918be6be23abad9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: af68d962b41d97a9b4b5de2641919ff8835f10aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274179"
 ---
 # <a name="subscription-properties---ltsubscriptiongt"></a>구독 속성 - &lt;Subscription&gt;
   이 섹션에서는 **구독 속성** 대화 상자에 대한 정보를 제공합니다.  

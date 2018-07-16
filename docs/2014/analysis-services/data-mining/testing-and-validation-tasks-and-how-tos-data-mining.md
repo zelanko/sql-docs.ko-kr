@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
 - predictive modeling [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecc1fadea54aa289fd6ed4ce74fb7f410e99fba9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c93a36d33ed9f0071d396cc736bd10fc06e57c15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243973"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>테스트 및 유효성 검사 태스크 및 방법(데이터 마이닝)
   **에서 데이터 마이닝 디자이너의** 마이닝 정확도 차트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조에 있는 마이닝 모델의 예측 정확도를 비교할 수 있습니다.  

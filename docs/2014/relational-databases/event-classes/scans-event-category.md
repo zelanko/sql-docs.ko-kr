@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event classes [SQL Server], Scans event category
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d1b68c5b58083e4970730bcb199bdaa9d2f8cb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 567b0f0ca2e6a80deb71d80d4505c4f259c97a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322333"
 ---
 # <a name="scans-event-category"></a>Scans 이벤트 범주
   **Scans** 이벤트 범주에는 검색 이벤트가 포함됩니다.  

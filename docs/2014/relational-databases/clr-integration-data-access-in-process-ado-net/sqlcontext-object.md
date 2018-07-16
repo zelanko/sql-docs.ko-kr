@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181354"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354015"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 개체
   프로시저 또는 함수를 호출하거나, CLR(공용 언어 런타임) 사용자 정의 형식의 메서드를 호출하거나, 사용자의 동작이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 언어로 정의된 트리거를 발생시키면 서버에서 관리 코드가 호출됩니다. 이러한 코드 실행은 사용자 연결의 일부로 요청되므로 서버에서 실행되는 코드에서 호출자의 컨텍스트에 대한 액세스가 필요합니다. 또한 특정 데이터 액세스 작업은 호출자의 컨텍스트에서 실행해야만 유효합니다. 예를 들어 트리거 작업에서 사용된 삽입되거나 삭제된 의사 테이블에 대한 액세스는 호출자의 컨텍스트에서만 유효합니다.  
@@ -33,13 +31,13 @@ ms.locfileid: "36181354"
   
  `SqlContext`는 다음 구성 요소에 대한 액세스를 제공합니다.  
   
--   `SqlPipe`: `SqlPipe` 개체를 통해 결과를 클라이언트로 전달 하는 "파이프"를 나타냅니다. 에 대 한 자세한 내용은 `SqlPipe` 개체, 참조 [SqlPipe 개체](sqlpipe-object.md)합니다.  
+-   `SqlPipe`: `SqlPipe` 개체는 클라이언트에 흐름을 통해 "파이프"를 나타냅니다. 에 대 한 자세한 내용은 합니다 `SqlPipe` 개체를 참조 하십시오 [SqlPipe 개체](sqlpipe-object.md)합니다.  
   
--   `SqlTriggerContext`: `SqlTriggerContext` 개체는 CLR 트리거에서 검색할 수 있습니다. 이 개체는 트리거를 발생시킨 작업에 대한 정보와 업데이트된 열의 맵을 제공합니다. 에 대 한 자세한 내용은 `SqlTriggerContext` 개체, 참조 [SqlTriggerContext 개체](sqltriggercontext-object.md)합니다.  
+-   `SqlTriggerContext`: `SqlTriggerContext` 개체는 CLR 트리거에서 검색할 수 있습니다. 이 개체는 트리거를 발생시킨 작업에 대한 정보와 업데이트된 열의 맵을 제공합니다. 에 대 한 자세한 내용은 합니다 `SqlTriggerContext` 개체를 참조 하십시오 [SqlTriggerContext 개체](sqltriggercontext-object.md)합니다.  
   
--   `IsAvailable`: `IsAvailable` 속성은 컨텍스트 가용성을 확인 하는 데 사용 됩니다.  
+-   `IsAvailable`: `IsAvailable` 속성 상황에 맞는 가용성을 확인 하는 데 사용 됩니다.  
   
--   `WindowsIdentity`: `WindowsIdentity` 속성은 호출자의 Windows id를 검색 하는 데 사용 합니다.  
+-   `WindowsIdentity`: `WindowsIdentity` 속성 호출자의 Windows id를 검색 하는 데 사용 됩니다.  
   
 ## <a name="determining-context-availability"></a>컨텍스트 가용성 확인  
  `SqlContext` 클래스를 쿼리하면 현재 실행 중인 코드가 in-process로 실행 중인지 확인할 수 있습니다. 이렇게 하려면 `IsAvailable` 개체의 `SqlContext` 속성을 확인합니다. `IsAvailable` 속성은 읽기 전용이며, 호출 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 실행 중이고 다른 `True` 멤버에 액세스가 허용되면 `SqlContext`를 반환합니다. `IsAvailable` 속성이 `False`를 반환하는 경우 다른 모든 `SqlContext` 멤버를 사용하면 `InvalidOperationException`이 throw됩니다. `IsAvailable`이 `False`를 반환하는 경우 연결 문자열에 "context connection=true"가 있는 연결 개체를 열려고 하면 오류가 발생합니다.  

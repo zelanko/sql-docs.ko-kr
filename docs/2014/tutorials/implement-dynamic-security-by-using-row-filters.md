@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257599"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>행 필터를 사용하여 동적 보안 구현
   이 추가 단원에서는 동적 보안을 구현하는 추가 역할을 만들어 봅니다. 동적 보안은 현재 로그온한 사용자의 사용자 이름 또는 로그인 ID를 기반으로 하는 행 수준 보안을 제공합니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요.  
   
  동적 보안을 구현하려면 데이터 원본인 모델에 대해 연결을 만들고 모델 개체와 데이터를 찾아볼 수 있는 사용자의 Windows 사용자 이름이 포함된 테이블을 모델에 추가해야 합니다. 이 자습서를 사용하여 만드는 모델은 Adventure Works Corp.의 컨텍스트에 있지만 이 단원을 완료하려면 자체 도메인의 사용자가 포함된 테이블을 추가해야 합니다. 추가할 사용자 이름의 암호는 필요 없습니다. 해당 도메인의 일부 사용자 예제를 사용하여 Employee Security 테이블을 만들려면 붙여넣기 기능을 사용하여 Excel 스프레드시트의 데이터를 붙여 넣습니다. 실제 시나리오에서 모델에 추가하는 사용자 이름이 포함된 테이블은 일반적으로 실제 데이터베이스의 테이블을 데이터 원본으로 사용합니다(예: 실제 dimEmployee 테이블).  
   
- 동적 보안을 구현 하기 위해 두 개의 새로운 DAX 함수를 사용 합니다: [USERNAME 함수 &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) 및 [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)합니다. 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. 이 수식은 LOOKUPVALUE 함수를 사용하여 Employee Security 테이블의 값을 지정한 다음 이 값을 USERNAME 함수에 전달하며, 이 함수는 로그온한 사용자의 사용자 이름이 이 역할에 속하도록 지정합니다. 그런 다음 사용자는 역할의 행 필터에 지정된 데이터만 검색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 속한 영업 지역에 대한 인터넷 매출 데이터만 찾아볼 수 있도록 지정합니다.  
+ 동적 보안을 구현 하기 위해 두 개의 새 DAX 함수인 사용할지: [USERNAME 함수 &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) 하 고 [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. 이 수식은 LOOKUPVALUE 함수를 사용하여 Employee Security 테이블의 값을 지정한 다음 이 값을 USERNAME 함수에 전달하며, 이 함수는 로그온한 사용자의 사용자 이름이 이 역할에 속하도록 지정합니다. 그런 다음 사용자는 역할의 행 필터에 지정된 데이터만 검색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 속한 영업 지역에 대한 인터넷 매출 데이터만 찾아볼 수 있도록 지정합니다.  
   
  이 추가 단원을 완료하기 위해 일련의 태스크를 완료합니다. 이러한 태스크는 이 Adventure Works 테이블 형식 모델 시나리오에 해당되는 것이며 실제 시나리오에 반드시 적용되는 것은 아닙니다. 각 태스크에는 태스크의 목적을 설명하는 추가 정보가 포함되어 있습니다.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "36185992"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<사용자 이름 >|\<사용자 성 >|\<도메인 \ 사용자 이름 >|  
-    |1|3|\<사용자 이름 >|\<사용자 성 >|\<도메인 \ 사용자 이름 >|  
-    |2|4|\<사용자 이름 >|\<사용자 성 >|\<도메인 \ 사용자 이름 >|  
-    |3|5|\<사용자 이름 >|\<사용자 성 >|\<도메인 \ 사용자 이름 >|  
+    |1|2|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
+    |1|3|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
+    |2|4|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
+    |3|5|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
   
 3.  새 워크시트에서 이름, 성 및 domain\username을 사용자 조직에 있는 사용자 세 명의 이름과 로그인 ID로 바꿉니다. Employee Id 1의 처음 두 행에 동일한 사용자 이름을 입력합니다. 이렇게 하면 사용자가 두 개 이상의 영업 지역에 속해 있음을 표시할 수 있습니다. Employee Id 및 Sales Territory Id 필드를 그대로 둡니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36185992"
   
      없음 권한을 가진 새 역할이 목록에 추가됩니다.  
   
-3.  새 역할을 선택한 다음 클릭은 **이름** 열을 역할 이름 바꾸기 `Sales Employees by Territory`합니다.  
+3.  새 역할을 선택한 다음 클릭 합니다 **이름** 열에서 역할 이름 바꾸기 `Sales Employees by Territory`합니다.  
   
 4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 다음 **읽기** 권한을 선택합니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36185992"
   
 7.  **행 필터** 탭을 클릭합니다.  
   
-8.  에 대 한는 `Employee Security` 의 테이블은 **DAX 필터** 열에서 다음 수식을 입력 합니다.  
+8.  에 대 한 합니다 `Employee Security` 테이블의 **DAX 필터** 열 다음 수식을 입력 합니다.  
   
      `=FALSE()`  
   

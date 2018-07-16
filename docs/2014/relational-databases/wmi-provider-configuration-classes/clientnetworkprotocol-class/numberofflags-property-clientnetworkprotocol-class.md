@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e2d483fc4916be6175093cd68470a57819544ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 10a3ca3269b07206ef9d67f28de4e490e77140b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256105"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags 속성(ClientNetworkProtocol 클래스)
-  지정한 클라이언트 네트워크 프로토콜에 필요한 플래그 옵션의 수를 가져옵니다는 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md)합니다.  
+  지정한 클라이언트 네트워크 프로토콜에 필요한 플래그 옵션의 수를 가져옵니다 합니다 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   

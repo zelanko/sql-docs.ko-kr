@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_KEYWORDS rowset
 ms.assetid: 70cc680d-9530-469b-8a61-4e6779aec17a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fb62e984a810f636a22abf733809bfafc91f2d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 117e5b2d706a23bc847e5450ab2a2c5cf277a80e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247483"
 ---
 # <a name="discoverkeywords-rowset-ole-db-for-olap"></a>DISCOVER_KEYWORDS 행 집합(OLAP용 OLE DB)
   공급자에서 예약된 단어 목록을 열거합니다.  

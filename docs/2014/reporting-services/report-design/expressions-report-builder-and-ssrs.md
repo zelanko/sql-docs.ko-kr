@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268589"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
-  식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 보고서 전체에서 광범위하게 사용됩니다. 많은 보고서 항목 속성을 식으로 설정할 수 있으므로 식을 사용하면 보고서의 내용, 디자인 및 상호 작용을 제어할 수 있습니다. 에 식이 작성 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]보고서 정의에 저장 하 고 보고서를 실행할 때 보고서 처리기에서 계산 합니다.  
+  식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 보고서 전체에서 광범위하게 사용됩니다. 많은 보고서 항목 속성을 식으로 설정할 수 있으므로 식을 사용하면 보고서의 내용, 디자인 및 상호 작용을 제어할 수 있습니다. 식 쓰는지 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], 보고서 정의에 저장 하 고 보고서를 실행할 때 보고서 처리기에서 계산 합니다.  
   
- 등의 응용 프로그램과 달리 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel 워크시트에서 직접 데이터로 작업 하는 위치는 보고서의 데이터에 대 한 자리 표시자 인 식을 사용 하 여 작동 합니다. 계산된 식을 사용하여 실제 데이터를 보려면 보고서 미리 보기를 수행해야 합니다. 보고서를 실행하면 보고서 처리기가 보고서 데이터와 보고서 레이아웃 요소(예: 테이블 및 차트)가 결합될 때 각 식을 계산합니다.  
+ 등의 응용 프로그램과 달리 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel 워크시트에서 직접 데이터를 사용 하 여 작업할 보고서에서 데이터에 대 한 자리 표시자 인 식을 사용 하 여 작동 합니다. 계산된 식을 사용하여 실제 데이터를 보려면 보고서 미리 보기를 수행해야 합니다. 보고서를 실행하면 보고서 처리기가 보고서 데이터와 보고서 레이아웃 요소(예: 테이블 및 차트)가 결합될 때 각 식을 계산합니다.  
   
  보고서를 디자인할 때 보고서 항목에 대한 여러 식이 설정됩니다. 예를 들어 데이터 창의 필드를 보고서 디자인 화면의 테이블 셀로 끌어서 놓으면 입력란 값이 필드의 간단한 식으로 설정됩니다. 다음 그림에서는 보고서 데이터 창에 데이터 집합 필드 ID, Name, SalesTerritory, Code 및 Sales가 표시됩니다. [Name], [Code] 및 [Sales]라는 세 개의 필드가 테이블에 추가되었습니다. 디자인 화면에서 표기법 [Name]은 기본 식 `=Fields!Name.Value`를 나타냅니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36185131"
   
  자세한 내용 및 예제는 다음 항목을 참조하십시오.  
   
--   [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
@@ -103,17 +103,17 @@ ms.locfileid: "36185131"
  식에는 함수, 연산자, 상수, 필드, 매개 변수, 기본 제공 컬렉션의 항목 및 포함된 사용자 지정 코드나 사용자 지정 어셈블리에 대한 참조가 포함될 수 있습니다.  
   
 > [!NOTE]  
->  복잡 한 식이나 사용자 지정 코드 또는 사용자 지정 어셈블리를 사용 하는 식을 개발 하려면의 보고서 디자이너를 사용 하는 권장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]합니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
+>  복잡 한 식이나 사용자 지정 코드나 사용자 지정 어셈블리를 사용 하는 식을 개발 하려면에서 보고서 디자이너를 사용 하는 권장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]합니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
  다음 표에서는 식에 포함할 수 있는 참조의 종류를 보여 줍니다.  
   
 |참조|Description|예제|  
 |----------------|-----------------|-------------|  
 |[상수](expressions-report-builder-and-ssrs.md)|글꼴 색과 같은 상수 값을 요구하는 속성에 대해 대화형으로 액세스할 수 있는 상수에 대해 설명합니다.|`="Blue"`|  
-|[연산자](operators-in-expressions-report-builder-and-ssrs.md)|식에서 참조를 조합하는 데 사용할 수 있는 연산자에 대해 설명합니다. 예를 들어는 `&` 연산자는 문자열을 연결 하는 데 사용 됩니다.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
+|[연산자](operators-in-expressions-report-builder-and-ssrs.md)|식에서 참조를 조합하는 데 사용할 수 있는 연산자에 대해 설명합니다. 예를 들어를 `&` 연산자는 문자열을 연결 하는 데 사용 됩니다.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[기본 제공 컬렉션](built-in-collections-in-expressions-report-builder.md)|식에 포함할 수 있는 기본 제공 컬렉션(예: `Fields`, `Parameters`및 `Variables`)에 대해 설명합니다.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[기본 제공 보고서 및 집계 함수](report-builder-functions-aggregate-functions-reference.md)|`Sum` 또는 `Previous`와 같이 식에서 액세스할 수 있는 기본 제공 함수에 대해 설명합니다.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[사용자 지정 코드 및 어셈블리 참조의 식에서 보고서 디자이너 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|기본 제공 CLR 클래스 <xref:System.Math> 및 <xref:System.Convert>, 다른 CLR 클래스, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 런타임 라이브러리 함수 또는 외부 어셈블리의 메서드에 액세스할 수 있는 방법에 대해 설명합니다.<br /><br /> 보고서에 포함된 사용자 지정 코드 또는 컴파일하여 사용자 지정 어셈블리로 보고서 클라이언트와 보고서 서버에 설치한 사용자 지정 코드에 액세스할 수 있는 방법에 대해 설명합니다.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[사용자 지정 코드 및 어셈블리 참조의 식에서 보고서 디자이너는 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|기본 제공 CLR 클래스 <xref:System.Math> 및 <xref:System.Convert>, 다른 CLR 클래스, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 런타임 라이브러리 함수 또는 외부 어셈블리의 메서드에 액세스할 수 있는 방법에 대해 설명합니다.<br /><br /> 보고서에 포함된 사용자 지정 코드 또는 컴파일하여 사용자 지정 어셈블리로 보고서 클라이언트와 보고서 서버에 설치한 사용자 지정 코드에 액세스할 수 있는 방법에 대해 설명합니다.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
@@ -133,7 +133,7 @@ ms.locfileid: "36185131"
 ##  <a name="Section"></a> 섹션 내용  
  [식 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   

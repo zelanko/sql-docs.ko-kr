@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Database element
 ms.assetid: c3bc7eaf-ed0d-4395-a3b7-8d9cfacfe911
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d11843c74cff55a2cfae686f5e7ee6e632427850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56efc69c0e8f7f0e3e008aa5ea769774ee5014af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332823"
 ---
 # <a name="database-element-assl"></a>Database 요소(ASSL)
-  정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
+  정의 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -83,13 +83,13 @@ ms.locfileid: "36093184"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[데이터베이스](../collections/databases-element-assl.md)|  
-|자식 요소|[Accounts](../collections/accounts-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Assemblies](../collections/assemblies-element-assl.md), [Collation](../properties/collation-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Cubes](../collections/cubes-element-assl.md), [DatabasePermissions](../collections/databasepermissions-element-assl.md), [DataSources](../collections/datasources-element-assl.md), [DataSourceViews](../collections/datasourceviews-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [LastUpdate](../properties/lastupdate-element-assl.md), [MasterDatasourceID](../properties/datasourceid-element-assl.md), [MiningStructures](../collections/miningstructures-element-assl.md), [Name](../properties/name-element-assl.md), [Roles](../collections/roles-element-assl.md), [State](../properties/state-element-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|자식 요소|[계정](../collections/accounts-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md)를 [주석](../collections/annotations-element-assl.md)를 [어셈블리](../collections/assemblies-element-assl.md)를 [데이터 정렬을](../properties/collation-element-assl.md), [ CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [큐브](../collections/cubes-element-assl.md)를 [DatabasePermissions](../collections/databasepermissions-element-assl.md)를 [DataSources](../collections/datasources-element-assl.md)를 [DataSourceViews](../collections/datasourceviews-element-assl.md), [설명을](../properties/description-element-assl.md), [차원](../collections/dimensions-element-assl.md)를 [EstimatedSize](../properties/estimatedsize-element-assl.md)를 [ID](../properties/id-element-assl.md)를 [언어](../properties/language-element-assl.md), [ LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)를 [LastUpdate](../properties/lastupdate-element-assl.md)하십시오 [MasterDatasourceID](../properties/datasourceid-element-assl.md), [MiningStructures](../collections/miningstructures-element-assl.md), [이름을](../properties/name-element-assl.md)합니다 [역할](../collections/roles-element-assl.md), [상태](../properties/state-element-assl.md), [번역](../collections/translations-element-assl.md), [표시](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Database>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 요소 &#40;ASSL&#41;](server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](server-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   
   

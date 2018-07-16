@@ -17,24 +17,24 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241623"
 ---
 # <a name="monitoring-traces-xmla"></a>추적 모니터링(XMLA)
-  사용할 수는 [Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md) XML for Analysis (XMLA)의 인스턴스에 정의 된 기존 추적을 모니터링 하려면 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. `Subscribe` 명령에서는 추적 결과를 행 집합으로 반환합니다.  
+  사용할 수는 [Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md) XMLA (XML for Analysis)의 인스턴스에 정의 된 기존 추적을 모니터링 하려면 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. `Subscribe` 명령에서는 추적 결과를 행 집합으로 반환합니다.  
   
 ## <a name="specifying-a-trace"></a>추적 지정  
- [개체](../xmla/xml-elements-properties/object-element-xmla.md) 의 속성은 `Subscribe` 명령 중 하나에 대 한 개체 참조가 있어야 합니다.는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 추적에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스. `Object` 속성을 지정하지 않거나 `Object` 속성에 추적 식별자를 지정하지 않은 경우 `Subscribe` 명령에서는 명령의 SOAP 헤더에 지정된 명시적 세션에 대한 기본 세션 추적을 모니터링합니다.  
+ [개체](../xmla/xml-elements-properties/object-element-xmla.md) 의 속성을 `Subscribe` 명령 중 하나에 대 한 개체 참조를 포함 해야 합니다는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스나에 대 한 추적은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스. `Object` 속성을 지정하지 않거나 `Object` 속성에 추적 식별자를 지정하지 않은 경우 `Subscribe` 명령에서는 명령의 SOAP 헤더에 지정된 명시적 세션에 대한 기본 세션 추적을 모니터링합니다.  
   
 ## <a name="returning-results"></a>결과 반환  
- `Subscribe` 명령에서는 지정된 추적에 의해 캡처된 추적 이벤트가 포함되어 있는 행 집합을 반환합니다. `Subscribe` 명령에서 취소 되기 될 때까지 추적 결과 반환 된 [취소](../xmla/xml-elements-commands/cancel-element-xmla.md) 명령입니다.  
+ `Subscribe` 명령에서는 지정된 추적에 의해 캡처된 추적 이벤트가 포함되어 있는 행 집합을 반환합니다. `Subscribe` 명령을 명령에서 취소 되기 전까지 추적 결과 반환 합니다 [취소](../xmla/xml-elements-commands/cancel-element-xmla.md) 명령입니다.  
   
  행 집합에는 다음 표에 나열된 열이 들어 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36184136"
 |ObjectReference|String|ObjectName에 지정된 개체에 대한 개체 참조의 XML 표현입니다.|  
 |NestLevel|정수|이벤트가 발생한 트랜잭션의 수준입니다.|  
 |NumSegments|정수(Long)|이벤트를 발생시킨 명령에서 영향을 받거나 액세스된 데이터 세그먼트의 수입니다.|  
-|Severity|정수|이벤트에 대한 예외의 심각도 수준입니다. 이 열 값은 다음 중 하나일 수 있습니다.<br /><br /> 값: 0 = 성공<br /><br /> 값: 1 = 정보<br /><br /> 값: 2 = 경고<br /><br /> 값: 3 = 오류|  
+|Severity|정수|이벤트에 대한 예외의 심각도 수준입니다. 이 열 값은 다음 중 하나일 수 있습니다.<br /><br /> 값: 0 = 성공<br /><br /> 값: 1 = 정보<br /><br /> 값: 2 = 경고<br /><br /> Value: 3 = 오류|  
 |성공|Boolean|명령의 성공 여부를 나타냅니다.|  
 |Error|정수(Long)|이벤트의 오류 번호입니다(해당되는 경우).|  
 |ConnectionID|String|이벤트가 발생한 연결의 식별자입니다.|  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: c8e7684f241ea5ab69709cdaaea9b2c6faffe889
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0667c3fc2154875d3f68e5eea22f9cd0a6600956
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264319"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
   한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 다른 서버 모드로 업그레이드하거나 변환할 수 없습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 사용되는 데이터베이스 스키마가 다르기 때문에 모드 간에 보고서 서버 데이터베이스를 복사할 수 없습니다. 한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션할 수 있습니다. 사용하는 도구는 원본 서버 및 대상 서버에 맞게 구성된 보고서 서버 모드의 유형에 따라 달라집니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36184893"
 |데이터 집합|예||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
 |일정|예|ListSchedules 메서드 참조 [구독 및 배달 메서드](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
-|구독|예|List Subscriptions 메서드 참조 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) 와 ChangeSubscriptionOwner 메서드 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|구독|예|List Subscriptions 메서드를 참조 하세요 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) 와 ChangeSubscriptionOwner 메서드 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |스냅숏|||  
 ||||  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271029"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
   열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
@@ -55,12 +55,12 @@ ms.locfileid: "36185166"
 ## <a name="assigning-identity-ranges"></a>ID 범위 할당  
  병합 복제 및 트랜잭션 복제는 여러 가지 방법으로 범위를 할당합니다. 이 섹션에서는 3가지 방법을 설명합니다.  
   
- ID 열을 복제하는 경우에는 두 가지 범위, 즉 게시자와 구독자에 할당된 범위와 열의 데이터 형식 범위를 고려해야 합니다. 다음 표에서는 일반적으로 ID 열에 사용되는 데이터 형식에 사용할 수 있는 범위를 보여 줍니다. 범위는 토폴로지의 모든 노드에서 사용됩니다. 예를 들어, 사용 하는 경우 `smallint` 게시자에 대 한 32, 767 및 모든 구독자 최대 삽입 수는 1로 시작 1 씩 증가 합니다. 실제 삽입 수는 사용된 값에 차이가 있는지 여부와 임계값이 사용되는지 여부에 따라 달라집니다. 임계값에 대한 자세한 내용은 이 항목의 뒷부분에 나올 "병합 복제" 및 "지연 업데이트 구독이 있는 트랜잭션 복제" 섹션을 참조하십시오.  
+ ID 열을 복제하는 경우에는 두 가지 범위, 즉 게시자와 구독자에 할당된 범위와 열의 데이터 형식 범위를 고려해야 합니다. 다음 표에서는 일반적으로 ID 열에 사용되는 데이터 형식에 사용할 수 있는 범위를 보여 줍니다. 범위는 토폴로지의 모든 노드에서 사용됩니다. 예를 들어, 사용 하는 경우 `smallint` 32,767 게시자와 모든 구독자 삽입의 최대 수는 1 씩 증가 하는 1에서 시작 합니다. 실제 삽입 수는 사용된 값에 차이가 있는지 여부와 임계값이 사용되는지 여부에 따라 달라집니다. 임계값에 대한 자세한 내용은 이 항목의 뒷부분에 나올 "병합 복제" 및 "지연 업데이트 구독이 있는 트랜잭션 복제" 섹션을 참조하십시오.  
   
  **db_owner** 고정 데이터베이스 역할의 멤버가 삽입을 수행했으면 게시자가 삽입 후 ID 범위를 모두 사용한 경우 구독자가 자동으로 새 범위를 할당할 수 있습니다. 해당 역할의 사용자가 아닌 사용자가 삽입을 수행했으면 로그 판독기 에이전트, 병합 에이전트 또는 **db_owner** 역할의 멤버인 사용자가 [sp_adjustpublisheridentityrange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)를 실행해야 합니다. 트랜잭션 게시의 경우 새 범위를 자동으로 할당하려면 로그 판독기 에이전트가 실행되고 있어야 합니다. 기본적으로 에이전트는 계속 실행됩니다.  
   
 > [!WARNING]  
->  큰 일괄 처리 동안 복제 트리거 삽입은 삽입의 각 행에 대해 한 번만 발생합니다. 와 같은 id 범위가 큰 삽입 시 사용 되는 경우 insert 문의 오류가 발생할 수 있습니다는 `INSERT INTO` 문.  
+>  큰 일괄 처리 동안 복제 트리거 삽입은 삽입의 각 행에 대해 한 번만 발생합니다. id 범위가 큰 삽입 시와 같은 사용 되는 경우 insert 문에 오류가 발생할 수 있습니다는 `INSERT INTO` 문입니다.  
   
 |데이터 형식|범위|  
 |---------------|-----------|  

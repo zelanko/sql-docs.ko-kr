@@ -1,13 +1,11 @@
 ---
-title: CLR 통합 개요 | Microsoft Docs
+title: CLR 통합의 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f435a50028358a0db3b9289ae4c7ccb157a6761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 95ffe3d7ddef362caf0985ac780f299a81151e44
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091089"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349435"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 통합 개요
   CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드의 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR은 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리, 보안을 비롯하여 프로그램 실행에 필요한 다양한 기능과 서비스를 제공합니다.  자세한 내용은 .NET Framework SDK를 참조하십시오.  
@@ -49,7 +47,7 @@ ms.locfileid: "36091089"
   
  관리 코드의 이점 중 하나는 코드가 잘 정의된 허용 가능한 방식으로만 형식에 액세스하도록 하는 형식 안전성입니다. 관리 코드가 실행되기 전에 CLR에서 해당 코드가 안전한지 확인합니다. 예를 들어 코드를 검사하여 이전에 기록되지 않은 메모리를 읽지 않도록 합니다. CLR은 코드가 관리되지 않는 메모리를 조작하지 않도록 하는 데에도 유용합니다.  
   
- CLR 통합은 잠재적 성능 향상을 제공합니다. 자세한 내용은 참조 [CLR 통합의 성능을](clr-integration-architecture-performance.md)합니다.  
+ CLR 통합은 잠재적 성능 향상을 제공합니다. 정보를 참조 하세요 [CLR 통합의 성능을](clr-integration-architecture-performance.md)합니다.  
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Transact-SQL 및 관리 코드 선택  
  저장 프로시저, 트리거 및 사용자 정의 함수를 작성하는 경우 일반적인 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용할지 또는 Visual Basic .NET 또는 Visual C#과 같은 .NET Framework 언어를 사용할지 결정해야 합니다. 거의 또는 전혀 절차적 논리 없이 코드에서 대체로 데이터 액세스를 수행하는 경우에 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용합니다. 복잡한 논리를 제공하는 CPU 사용량이 많은 함수 및 프로시저의 경우나 .NET Framework의 BCL을 이용하려는 경우에 관리 코드를 사용합니다.  
@@ -58,7 +56,7 @@ ms.locfileid: "36091089"
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 관리 코드를 사용할지 결정할 때 고려되는 또 다른 요소는 코드를 배치할 위치(서버 컴퓨터 또는 클라이언트 컴퓨터)입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 관리 코드는 모두 서버에서 실행할 수 있습니다. 이 경우 코드와 데이터가 더 가까이 있고 서버의 처리 능력을 이용할 수 있습니다. 반면, 프로세서를 많이 사용하는 태스크를 데이터베이스 서버에 배치하는 것은 피하는 것이 좋습니다. 현재 대부분의 클라이언트 컴퓨터는 매우 강력하며, 가능한 한 많은 코드를 클라이언트에 배치하여 이 처리 능력을 이용할 수도 있습니다. 관리 코드는 클라이언트 컴퓨터에서 실행할 수 있지만 [!INCLUDE[tsql](../../../includes/tsql-md.md)]은 실행할 수 없습니다.  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>확장 저장 프로시저 및 관리 코드 선택  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저로는 수행할 수 없는 기능을 수행하도록 확장 저장 프로시저를 작성할 수 있습니다. 하지만 형식 안전성이 확인된 관리 코드와 달리 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스의 무결성을 손상시킬 수 있습니다. 또한 메모리 관리, 스레드 및 파이버 예약, 동기화 서비스 등이 CLR의 관리 코드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 보다 강력하게 통합되어 있습니다. CLR 통합을 사용하면 확장 저장 프로시저보다 안전한 방식으로 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 불가능한 태스크를 수행하는 데 필요한 저장 프로시저를 작성할 수 있습니다. CLR 통합 및 확장된 저장된 프로시저에 대 한 자세한 내용은 참조 [CLR 통합의 성능을](clr-integration-architecture-performance.md)합니다.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저로는 수행할 수 없는 기능을 수행하도록 확장 저장 프로시저를 작성할 수 있습니다. 하지만 형식 안전성이 확인된 관리 코드와 달리 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스의 무결성을 손상시킬 수 있습니다. 또한 메모리 관리, 스레드 및 파이버 예약, 동기화 서비스 등이 CLR의 관리 코드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 보다 강력하게 통합되어 있습니다. CLR 통합을 사용하면 확장 저장 프로시저보다 안전한 방식으로 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 불가능한 태스크를 수행하는 데 필요한 저장 프로시저를 작성할 수 있습니다. CLR 통합 및 확장된 저장된 프로시저에 대 한 자세한 내용은 참조 하세요. [CLR 통합의 성능을](clr-integration-architecture-performance.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [.NET Framework 설치](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   

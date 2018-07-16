@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
@@ -16,13 +16,13 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e9333ffac363c12176057ab4da006881ce4cbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d03b080b757fc8cdc8ffdc52d4ac7c0734cdbfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250553"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;(보다 큼)(SSIS 식)
   비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  
@@ -104,7 +104,7 @@ ListPrice > 500
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [&#60;&#40;미만&#41; &#40;SSIS 식&#41;](less-than-ssis-expression.md)   
+ [&#60;&#40;보다 작거나&#41; &#40;SSIS 식&#41;](less-than-ssis-expression.md)   
  [&#62;=&#40;크거나 같음&#41;&#40;SSIS 식&#41;](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;=&#40;작거나 같음&#41;&#40;SSIS 식&#41;](less-than-or-equal-to-ssis-expression.md)   
  [= = &#40;같은&#41; &#40;SSIS 식&#41;](equal-ssis-expression.md)   

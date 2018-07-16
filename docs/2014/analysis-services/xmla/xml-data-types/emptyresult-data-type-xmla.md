@@ -24,18 +24,18 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257159"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 데이터 형식(XMLA)
-  나타내는 파생된 데이터 형식을 정의 [루트](../xml-elements-properties/root-element-xmla.md) 요소에서 데이터를 반환 하지 않는 한 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
+  나타내는 파생된 데이터 형식을 정의 [루트](../xml-elements-properties/root-element-xmla.md) 에서 데이터를 반환 하지 않는 요소를 [검색](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출 합니다.  
   
  **네임스페이스** urn:schemas-microsoft-com:xml-analysis:empty  
   

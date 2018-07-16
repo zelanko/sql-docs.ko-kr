@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227101"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36185772"
   
 2.  `[Date]` 필드 식이 있는 셀을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
-3.  클릭 **번호**, 한 다음는 **범주** 필드를 선택한 `Date`합니다.  
+3.  클릭 **수**를 선택한 다음는 **범주** 필드를 선택한 `Date`합니다.  
   
 4.  **형식** 상자에서 **January 31, 2000**을 선택합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36185772"
   
 1.  테이블을 클릭하여 열 핸들과 행 핸들이 테이블 위와 옆에 표시되도록 합니다.  
   
-     ![디자인, 머리글 행 및 정보 행이 있는 테이블](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "디자인, 머리글 행 및 정보 행이 있는 테이블")  
+     ![디자인, 테이블 머리글 행 및 정보 행](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "디자인, 테이블의 머리글 행 및 정보 행")  
   
      테이블 위쪽 및 옆쪽을 따라 표시되는 회색 막대는 행 및 열 핸들입니다.  
   

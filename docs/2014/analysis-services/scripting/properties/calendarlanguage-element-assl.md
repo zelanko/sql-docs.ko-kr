@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d3be256a83ee4ee0d6b1c448699f50076e44e186
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241383"
 ---
 # <a name="calendarlanguage-element-assl"></a>CalendarLanguage 요소(ASSL)
-  에 사용 되는 달력 언어를 정의 고 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
+  에 사용 되는 달력 언어를 정의 합니다 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36184797"
 ## <a name="remarks"></a>Remarks  
  차원 멤버 이름을 만들 때 사용하는 언어입니다. 캡션 언어는 정수 기반 LCID 코드로 정의되어야 합니다. 예를 들어 기본값은 미국 영어 LCID를 나타냅니다.  
   
- 부모에 해당 하는 요소 `CalendarLanguage` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
+ 부모에 해당 하는 요소가 `CalendarLanguage` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

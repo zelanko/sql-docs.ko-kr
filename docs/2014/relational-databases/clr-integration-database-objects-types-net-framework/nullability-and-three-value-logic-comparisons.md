@@ -1,13 +1,11 @@
 ---
-title: Null 허용 여부 및 3 값 논리 비교 | Microsoft Docs
+title: Null 허용 여부 및 3 개의 값 논리 비교 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07a0076cadc805b3534d778070b7b61b28e1bf3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 43420c9e796605617e3884d8b5bf0aae0c5cfb6c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181826"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353935"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 허용 여부 및 3개의 값 논리 비교
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대해 잘 아는 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 `System.Data.SqlTypes` 네임스페이스와 의미 체계 및 전체 자릿수가 유사하다는 것을 알 수 있습니다. 그러나 약간의 차이가 있으며 이 항목에서는 이러한 차이 중 가장 중요한 점에 대해 설명합니다.  
@@ -41,7 +39,7 @@ ms.locfileid: "36181826"
  `System.Data.SqlTypes` 네임스페이스에서는 이 3값 논리를 나타내기 위해 `SqlBoolean` 형식을 제공합니다. `SqlTypes` 간을 비교하면 `SqlBoolean` 값 형식이 반환됩니다. UNKNOWN 값은 `SqlBoolean` 형식의 null 값으로 표현됩니다. `IsTrue` 형식의 값을 확인하기 위해 `IsFalse`, `IsNull` 및 `SqlBoolean` 속성이 제공됩니다.  
   
 ## <a name="operations-functions-and-null-values"></a>연산, 함수 및 NULL 값  
- 모든 산술 연산자 (+,-, \*, /, %), 비트 연산자 (~, &, 및 |), 대부분의 함수 경우 피연산자 중 하나가 또는 인수에 NULL을 반환 하 고 `SqlTypes` 은 NULL입니다. `IsNull` 속성은 항상 true 또는 false 값을 반환합니다.  
+ 모든 산술 연산자 (+,-, \*, /, %), 비트 연산자 (~, &, 및 |), 대부분의 함수 인수 또는 피연산자가 있을 경우 NULL을 반환 하 고 `SqlTypes` null입니다. `IsNull` 속성은 항상 true 또는 false 값을 반환합니다.  
   
 ## <a name="precision"></a>전체 자릿수  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR의 decimal 데이터 형식에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 숫자 및 decimal 데이터 형식의 최대값과는 다른 최대값이 있습니다. 또한 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR decimal 데이터 형식에는 최대 전체 자릿수가 있는 것으로 간주됩니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 CLR의 `SqlDecimal`은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 decimal 데이터 형식과 동일한 전체 자릿수, 소수 자릿수 및 의미 체계를 제공합니다.  

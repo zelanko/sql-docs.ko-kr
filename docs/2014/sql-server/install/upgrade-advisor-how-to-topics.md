@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, how-to topics
 - Upgrade Advisor [SQL Server], how-to topics
 ms.assetid: d73bf759-58f7-4789-af49-ac8ca94f913d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afff2aecf81b1a84ab510eaa2ff4c7fe751ef777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 009b42d22345e8b58abdc5f26092cc113da259b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323833"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>업그레이드 관리자 방법 도움말 항목
   이 섹션에는 업그레이드 관리자를 사용하는 일반적인 절차가 포함되어 있습니다.  

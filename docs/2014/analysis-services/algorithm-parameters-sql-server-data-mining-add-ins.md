@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,24 +48,24 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267679"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>알고리즘 매개 변수(SQL Server 데이터 마이닝 추가 기능)
   Excel용 테이블 분석 도구를 사용하여 데이터 마이닝을 수행하는 경우 데이터 마이닝 알고리즘이나 매개 변수를 구성할 필요가 없습니다. 각 도구에서 데이터를 분석하여 최적의 매개 변수를 자동으로 선택합니다. 그러나 모델을 수정하거나 마이닝 모델을 새로 만들려는 경우 Excel용 데이터 마이닝 클라이언트는 사용자가 지정할 수 있는 몇 가지 옵션을 제공합니다.  
   
--   클릭 하 여 데이터 마이닝 모델을 수동으로 만들 **고급** 클릭 한 다음 **구조에 모델 추가**합니다.  
+-   클릭 하 여 데이터 마이닝 모델을 수동으로 만들 **Advanced** 클릭 한 다음 **구조에 모델 추가**합니다.  
   
 -   데이터 마이닝 클라이언트에서 모델링 마법사 중 하나를 사용 하 고 클릭 **매개 변수** 의 동작을 제어 하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘입니다.  
   
--   클릭 **쿼리** 쿼리 모델 마법사를 열려면 마우스 클릭 **고급** 열려는 **데이터 마이닝 고급 쿼리 편집기**합니다. 이 편집기에서는 DMX 템플릿을 사용하여 모델을 작성할 수 있습니다.  
+-   클릭 **쿼리** 모델 쿼리 마법사를 열고 클릭 **고급** 열려는 **데이터 마이닝 고급 쿼리 편집기**합니다. 이 편집기에서는 DMX 템플릿을 사용하여 모델을 작성할 수 있습니다.  
   
  마이닝 모델 뷰어에서 매개 변수를 설정하여 이미 만든 마이닝 모델의 동작을 수정하거나 결과를 필터링할 수도 있습니다.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "36185094"
 |AUTO_DETECT_PERIODICITY|Microsoft 시계열 알고리즘|주기성을 찾는 데 사용되는 0과 1 사이의 숫자 값을 지정합니다. 이 값을 1에 가깝게 설정하면 거의 주기적인 패턴을 다양하게 검색하고 주기 힌트를 자동으로 생성할 수 있습니다. 많은 주기 힌트를 처리할수록 모델 학습 시간은 현저하게 길어지지만 보다 정확한 모델을 만들 수 있습니다. 이 값을 0에 가깝게 설정하면 주기성이 강한 데이터에 대해서만 주기성을 검색합니다.<br /><br /> 기본값은 0.6입니다.|  
 |CLUSTER_COUNT|Microsoft Clustering Algorithm<br /><br /> Microsoft 시퀀스 클러스터링 알고리즘|알고리즘에서 작성할 클러스터의 대략적인 개수를 지정합니다. 데이터에서 대략적인 개수의 클러스터를 작성할 수 없는 경우 알고리즘은 가능한 한 많은 클러스터를 작성합니다. CLUSTER_COUNT를 0으로 설정하면 알고리즘은 추론을 사용하여 작성할 클러스터의 수를 정확하게 결정합니다.<br /><br /> 기본값은 10입니다.|  
 |CLUSTER_SEED|Microsoft Clustering Algorithm|모델 작성 초기 단계에서 임의로 클러스터를 생성하는 데 사용되는 초기값을 지정합니다.<br /><br /> 기본값은 0입니다.|  
-|CLUSTERING_METHOD|Microsoft Clustering Algorithm|알고리즘에서 사용할 클러스터링 메서드를 지정합니다. 사용할 수 있는 클러스터링 메서드에: scalable EM (1), 비 scalable EM (2), scalable K-means (3), 및 비 scalable K-means (4).<br /><br /> 기본값은 1입니다.|  
-|COMPLEXITY_PENALTY|Microsoft 의사 결정 트리 알고리즘<br /><br /> Microsoft 시계열 알고리즘|의사 결정 트리의 증가를 제어합니다. 낮은 값을 지정하면 분할 수가 증가되고 높은 값을 지정하면 분할 수가 감소됩니다. 기본값은 다음 목록에 설명된 것과 같이 특정 모델의 특성 수에 따라 달라집니다.<br /><br /> 특성 수가 1에서 9 사이인 경우 기본값은 0.5입니다.<br /><br /> 특성 수가 10에서 99 사이인 경우 기본값은 0.9입니다.<br /><br /> 특성 수가 100 이상인 경우 기본값은 0.99입니다.<br /><br /> 참고: 시계열 모델의 경우이 매개 변수 적용 혼합된 모델 또는 ARTxp 알고리즘을 사용 하 여 작성 된 모델에만 합니다.|  
-|FORCED_REGRESSOR|Microsoft 의사 결정 트리 알고리즘<br /><br /> Microsoft 선형 회귀 알고리즘|알고리즘에서 계산한 열의 중요도에 관계없이 알고리즘에서 표시된 열을 회귀 변수로 사용하도록 합니다.<br /><br /> 참고:이 매개 변수는 연속 특성을 예측 하는 의사 결정 트리에만 사용 됩니다. 정의에 따르면 선형 회귀 모델은 연속 특성을 예측하는 특수한 사례의 의사 결정 트리입니다. 그러나 의사 결정 트리 모델은 선형 회귀 수식을 나타내는 노드를 포함할 수 있습니다.|  
+|CLUSTERING_METHOD|Microsoft Clustering Algorithm|알고리즘에서 사용할 클러스터링 메서드를 지정합니다. 클러스터링 메서드에 사용할: scalable EM (1), 비 scalable EM (2), scalable K-means (3) 및 비 scalable K-means (4).<br /><br /> 기본값은 1입니다.|  
+|COMPLEXITY_PENALTY|Microsoft 의사 결정 트리 알고리즘<br /><br /> Microsoft 시계열 알고리즘|의사 결정 트리의 증가를 제어합니다. 낮은 값을 지정하면 분할 수가 증가되고 높은 값을 지정하면 분할 수가 감소됩니다. 기본값은 다음 목록에 설명된 것과 같이 특정 모델의 특성 수에 따라 달라집니다.<br /><br /> 특성 수가 1에서 9 사이인 경우 기본값은 0.5입니다.<br /><br /> 특성 수가 10에서 99 사이인 경우 기본값은 0.9입니다.<br /><br /> 특성 수가 100 이상인 경우 기본값은 0.99입니다.<br /><br /> 참고: 시계열 모델의 경우이 매개 변수 적용 혼합된 모델 또는 ARTxp 알고리즘을 사용 하 여 만든 모델에만 합니다.|  
+|FORCED_REGRESSOR|Microsoft 의사 결정 트리 알고리즘<br /><br /> Microsoft 선형 회귀 알고리즘|알고리즘에서 계산한 열의 중요도에 관계없이 알고리즘에서 표시된 열을 회귀 변수로 사용하도록 합니다.<br /><br /> 참고:이 매개 변수는 연속 특성 예측 하는 의사 결정 트리에 대 한만 사용 됩니다. 정의에 따르면 선형 회귀 모델은 연속 특성을 예측하는 특수한 사례의 의사 결정 트리입니다. 그러나 의사 결정 트리 모델은 선형 회귀 수식을 나타내는 노드를 포함할 수 있습니다.|  
 |FORECAST_METHOD|Microsoft 시계열 알고리즘|ARTxp 알고리즘, ARIMA 알고리즘 또는 두 알고리즘의 조합을 사용하여 예측을 수행할지 여부를 나타냅니다.<br /><br /> 기본값은 MIXED입니다.|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|입력 및 출력 뉴런에 대한 숨겨진 뉴런의 비율을 지정합니다. 다음 수식에서는 숨겨진 계층의 초기 뉴런 수를 결정합니다.<br /><br /> HIDDEN_NODE_RATIO * SQRT(총 입력 뉴런 \* 총 출력 뉴런)<br /><br /> 기본값은 4.0입니다.|  
 |HISTORIC_MODEL_COUNT|Microsoft 시계열 알고리즘|작성할 기록 모델 수를 지정합니다.<br /><br /> 기본값은 1입니다.|  
@@ -107,14 +107,14 @@ ms.locfileid: "36185094"
 |MINIMUM_SUPPORT|Microsoft 의사 결정 트리 알고리즘|의사 결정 트리에서 분할을 생성하는 데 필요한 최소 리프 사례 수를 결정합니다.<br /><br /> 기본값은 10입니다.|  
 |MINIMUM_SUPPORT|Microsoft 시퀀스 클러스터링 알고리즘|각 클러스터의 최소 사례 수를 지정합니다.<br /><br /> 기본값은 10입니다.|  
 |MINIMUM_SUPPORT|Microsoft 시계열 알고리즘|각 시계열 트리에서 분할을 생성하는 데 필요한 최소 시간 조각 수를 지정합니다.<br /><br /> 기본값은 10입니다.|  
-|MISSING_VALUE_SUBSTITUTION|Microsoft 시계열 알고리즘|기록 데이터의 간격을 채우는 데 사용되는 메서드를 지정합니다. 기본적으로 데이터의 간격이나 가장자리 값은 불규칙하면 안 됩니다. 다음 방법 불규칙 한 간격이 나 가장자리 채우는 데 사용 될 수 있습니다: 이전 값을 사용 하거나, 평균 값을 사용 하거나 특정 숫자 상수를 사용 합니다.|  
+|MISSING_VALUE_SUBSTITUTION|Microsoft 시계열 알고리즘|기록 데이터의 간격을 채우는 데 사용되는 메서드를 지정합니다. 기본적으로 데이터의 간격이나 가장자리 값은 불규칙하면 안 됩니다. 다음 메서드를 사용 하 여 불규칙 한 간격이 나 가장자리 채울 수 있습니다: 이전 값을 사용 하 여 평균 값을 사용 하거나 특정 숫자 상수를 사용 합니다.|  
 |MODELLING_CARDINALITY|Microsoft Clustering Algorithm|클러스터링 프로세스 중 생성되는 샘플 모델 수를 지정합니다.<br /><br /> 기본값은 10입니다.|  
 |PERIODICITY_HINT|Microsoft 시계열 알고리즘|데이터의 주기성과 관련된 알고리즘에 대한 힌트를 제공합니다. 예를 들어 판매량이 매년 다르고 계열의 측정 단위가 월인 경우 주기성은 12입니다. 이 매개 변수는 {n [, n]} 형식이며, 여기서 n은 임의의 양수입니다. 대괄호([]) 안의 n은 선택 사항이며 필요한 만큼 반복할 수 있습니다.<br /><br /> 기본값은 {1}입니다.|  
 |PREDICTION_SMOOTHING|Microsoft 시계열 알고리즘|ARTXP 및 ARIMA 시계열 알고리즘의 혼합을 제어합니다. FORECAST_METHOD 매개 변수가 MIXED로 설정된 경우에만 지정된 값이 유효합니다. 값은 0에서 1 사이여야 합니다. 값이 0이면 모델에서 ARTXP만 사용합니다. 값이 1이면 모델에서 ARIMA만 사용합니다. 값이 0에 가까울수록 ARTXP에 더 가중되고 값이 1에 가까울수록 ARIMA에 더 가중됩니다.|  
 |SAMPLE_SIZE|Microsoft Clustering Algorithm|CLUSTERING_METHOD  매개 변수가 확장 가능한 클러스터링 메서드 중 하나로 설정될 경우 각 패스에서 알고리즘이 사용하는 사례 수를 지정합니다. SAMPLE_SIZE  매개 변수를 0으로 설정하면 전체 데이터 집합이 단일 패스로 클러스터링되어 메모리 및 성능 문제가 발생할 수 있습니다.<br /><br /> 기본값은 50000입니다.|  
 |SAMPLE_SIZE|Microsoft 로지스틱 회귀 알고리즘<br /><br /> Microsoft Neural Network Algorithm|모델의 학습에 사용되는 사례 수를 지정합니다. 알고리즘 공급자는 지정한 수와 HOLDOUT_PERCENTAGE 매개 변수로 지정된 홀드아웃 비율에 포함되지 않은 총 사례 수의 비율 중 더 작은 값을 사용합니다.<br /><br /> 즉, HOLDOUT_PERCENTAGE를 30으로 설정하면 알고리즘은 이 매개 변수 값이나 총 사례 수의 70%에 해당하는 값 중 더 작은 값을 사용합니다.<br /><br /> 기본값은 10000입니다.|  
-|SCORE_METHOD|Microsoft 의사 결정 트리 알고리즘|분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있는: (1) Entropy, (2) Bayesian with K2 Prior 또는 (3) Bayesian Dirichlet 해당 (BDE) Prior입니다.<br /><br /> 기본값은 3입니다.|  
-|SPLIT_METHOD|Microsoft 의사 결정 트리 알고리즘|노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있는: Binary (1), Complete (2) 또는 Both (3).<br /><br /> 기본값은 3입니다.|  
+|SCORE_METHOD|Microsoft 의사 결정 트리 알고리즘|분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다. (1) Entropy, (2) Bayesian with K2 Prior 또는 (3) Bayesian Dirichlet 해당 (BDE) Prior입니다.<br /><br /> 기본값은 3입니다.|  
+|SPLIT_METHOD|Microsoft 의사 결정 트리 알고리즘|노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다: Binary (1), Complete (2) 또는 Both (3).<br /><br /> 기본값은 3입니다.|  
 |STOPPING_TOLERANCE|Microsoft 클러스터링 알고리즘 기술 참조|일치 상태에 도달하고 알고리즘이 모델 작성을 마치는 시기를 결정하는 데 사용되는 값을 지정합니다. 클러스터 확률의 전체 변경 비율이 STOPPING_TOLERANCE  매개 변수를 모델 크기로 나눈 비율보다 작으면 일치 상태에 도달합니다.<br /><br /> 기본값은 10입니다.|  
   
 ### <a name="comments"></a>주석  

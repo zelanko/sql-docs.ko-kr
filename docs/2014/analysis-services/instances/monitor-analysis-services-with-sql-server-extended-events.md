@@ -1,5 +1,5 @@
 ---
-title: SQL Server 확장 이벤트 (XEvents)를 사용 하 여 Analysis Services를 모니터링할 | Microsoft Docs
+title: SQL Server 확장 이벤트 (Xevent)를 사용 하 여 Analysis Services 모니터링 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332803"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 확장 이벤트(XEvent)를 사용하여 Analysis Services 모니터링
-  Analysis Services의 사용을 통해 추적 기능을 제공 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
+  사용 하 여 추적 기능을 제공 하는 analysis Services [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
   
  확장 이벤트는 서버 시스템에 대해 구성할 수 있는 확장성이 높은 이벤트 인프라입니다. 확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다.  
   
- 모든 Analysis Services 이벤트를 캡처할 수 있습니다 및 대상에 정의 된 대로 특정 소비자에 게 [확장 이벤트](../../relational-databases/extended-events/extended-events.md), XEvents를 통해.  
+ 모든 Analysis Services 이벤트를 캡처할 수 있습니다 및에 정의 된 특정 소비자를 대상 [확장 이벤트](../../relational-databases/extended-events/extended-events.md), XEvents를 통해.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Analysis Services에서 확장 이벤트 시작  
  확장 이벤트 추적은 다음과 같은 XMLA 개체 만들기 스크립트 명령을 사용하여 설정할 수 있습니다.  

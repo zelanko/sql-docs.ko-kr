@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.wb.templates.f1
 - sql12.swb.templates.explorer.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18f36d27472338e7ba8c596b6d51a9b1f22a6522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8702521d385b6036825190ed5652bf395997160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241813"
 ---
 # <a name="template-explorer"></a>Template Explorer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음으로 열면 템플릿 복사본이 사용자 폴더의 AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 아래에 배치됩니다.  

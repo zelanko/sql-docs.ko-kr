@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280019"
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS 행 집합
   데이터베이스 내의 멤버를 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `MDSCHEMA_MEMBERS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `MDSCHEMA_MEMBERS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "36185509"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|(선택 사항)|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|(선택 사항)|  
-|`TREE_OP`|`DBTYPE_I4`|단일 멤버에만 적용됩니다(선택 사항).<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) 모든 상위 항목을 반환 합니다.<br />-   `MDTREEOP_CHILDREN` (`0x01`)은 인접 자식만 반환 합니다.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) 동일한 수준의 멤버를 반환 합니다.<br />-   `MDTREEOP_PARENT` (`0x04`)은 인접 부모만 반환 합니다.<br />-   `MDTREEOP_SELF` (`0x08`) 자체 반환 된 행의 목록에 반환 합니다.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) 모든 하위 항목을 반환 합니다.|  
+|`TREE_OP`|`DBTYPE_I4`|단일 멤버에만 적용됩니다(선택 사항).<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) 모든 상위 항목을 반환 합니다.<br />-   `MDTREEOP_CHILDREN` (`0x01`)은 인접 자식만 반환 합니다.<br />-   `MDTREEOP_SIBLINGS` (`0x02`) 동일한 수준의 멤버를 반환 합니다.<br />-   `MDTREEOP_PARENT` (`0x04`)은 인접 부모만 반환 합니다.<br />-   `MDTREEOP_SELF` (`0x08`) 자체 반환 된 행 목록을 반환 합니다.<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) 모든 하위 요소를 반환 합니다.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 큐브<br />-2 차원<br /><br /> 기본 제한 값은 1입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87dba93120a3779a35f7f445427dc48f228cd012
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322325"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
   **토폴로지 구성** 페이지를 사용하여 새 노드 추가, 노드 삭제, 기존 노드 간 새 연결 추가와 같은 일반적인 구성 태스크를 수행할 수 있습니다. 이 마법사의 **게시** 페이지에서 선택한 노드는 디자인 화면에 표시됩니다. 구성 옵션을 지정하려면 노드, 연결 또는 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.  
@@ -36,8 +36,8 @@ ms.locfileid: "36185171"
 |-----------------------|-----------------|  
 |디자인 화면|다른 인터페이스 요소가 표시됩니다. 요소를 추가하려면 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.|  
 |![토폴로지의 첫 번째 노드](media/p2pwizard-firstnode.gif "토폴로지의 첫 번째 노드")|토폴로지의 원래 노드입니다. 새 노드는 원래 노드의 게시 데이터베이스 복사본을 사용하여 초기화됩니다.|  
-|![완전 한 정보를가지고 있는 노드](media/p2pwizard-complete.gif "완전 한 정보를가지고 있는 노드") 또는 복제에 대 한 전체 정보는 최신 버전을 합니다. 구성 옵션을 지정하려면 노드를 마우스 오른쪽 단추로 클릭합니다.|  
-|![불완전한 정보가 있는 노드](media/p2pwizard-incomplete.gif "불완전한 정보가 있는 노드")|복제 기능에서 완전하지 않은 정보를 갖고 있는 노드입니다. 구성 옵션을 지정하려면 노드를 마우스 오른쪽 단추로 클릭합니다. 다음과 같은 경우 복제 기능에서 완전하지 않은 정보를 갖게 됩니다.<br /><br /> 노드에서 마법사에 필요한 메타데이터 중 일부를 저장하지 않는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 인스턴스를 실행하는 경우<br /><br /> 노드에서 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있지만 복제 기능에서 해당 노드의 구독 정보를 검색할 수 없는 경우. 이러한 상황에서 문제를 해결하려면 다음을 수행합니다.<br />-지정한 노드에 연결 하는 배포 에이전트와 동일한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 하 고 해당 노드에서 데이터베이스 온라인 인지 확인 하십시오.<br />-지정한 노드에 연결 된 모든 배포 에이전트 및 로그 판독기 에이전트가 실행 합니다.<br />-지정한 새로 고침 제한 시간이 모든 토폴로지 정보를 수집할 수 있도록 충분히 높게 설정 되어 있는지 합니다. 제한 시간을 설정하려면 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **새로 고침 제한 시간 설정**을 클릭합니다.|  
+|![완전 한 정보가 있는 노드](media/p2pwizard-complete.gif "는 완전 한 정보가 있는 노드") 복제에 대 한 전체 정보에는 이상 버전으로 합니다. 구성 옵션을 지정하려면 노드를 마우스 오른쪽 단추로 클릭합니다.|  
+|![불완전한 정보가 있는 노드](media/p2pwizard-incomplete.gif "불완전한 정보가 있는 노드")|복제 기능에서 완전하지 않은 정보를 갖고 있는 노드입니다. 구성 옵션을 지정하려면 노드를 마우스 오른쪽 단추로 클릭합니다. 다음과 같은 경우 복제 기능에서 완전하지 않은 정보를 갖게 됩니다.<br /><br /> 노드에서 마법사에 필요한 메타데이터 중 일부를 저장하지 않는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 인스턴스를 실행하는 경우<br /><br /> 노드에서 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있지만 복제 기능에서 해당 노드의 구독 정보를 검색할 수 없는 경우. 이러한 상황에서 문제를 해결하려면 다음을 수행합니다.<br />-지정한 있어야 노드에서 데이터베이스가 온라인 상태 인지 노드로 연결 되는 배포 에이전트와 동일한 자격 증명을 사용 하 여를 연결할 수 있습니다.<br />-지정한 노드에 연결 된 모든 배포 에이전트 및 로그 판독기 에이전트를 실행 해야 합니다.<br />-지정한 새로 고침 제한 시간이 모든 토폴로지 정보를 수집 하도록 충분히 높게 설정 되어 있는지 합니다. 제한 시간을 설정하려면 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **새로 고침 제한 시간 설정**을 클릭합니다.|  
 |화살표가 있는 회색 선|두 노드 사이의 연결입니다. 연결을 추가하려면 연결할 노드 중 하나를 마우스 오른쪽 단추로 클릭합니다. 연결을 제거하려면 연결을 마우스 오른쪽 단추로 클릭합니다.<br /><br /> 선에 화살표가 하나만 있는 경우 복제 기능에서 노드 중 하나에 대해 완전하지 않은 정보를 갖고 있는 것입니다.|  
   
 ### <a name="options-for-the-design-surface"></a>디자인 화면에서 사용할 수 있는 옵션  

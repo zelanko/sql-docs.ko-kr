@@ -1,5 +1,5 @@
 ---
-title: Attribute Members (Discretization) 그룹화 | Microsoft Docs
+title: Attribute Members (Discretization) 그룹 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,31 +23,31 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251455"
 ---
 # <a name="group-attribute-members-discretization"></a>특성 멤버 그룹화(불연속화)
-  멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특성의 멤버를 불연속화라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
+  멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특성의 멤버를 불연속화라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
   
  특성에 대한 `DiscretizationMethod` 속성은 멤버의 그룹화 방식을 제어합니다.  
   
 |`DiscretizationMethod` 설정|Description|  
 |--------------------------------------|-----------------|  
 |`None`|멤버를 표시합니다.|  
-|`Automatic`|데이터를 가장 잘 표현 하는 메서드: 중 하나는 `EqualAreas` 메서드 또는 `Clusters` 메서드.|  
+|`Automatic`|데이터를 가장 잘 나타내는 방법을 선택 합니다.: 중 하나는 `EqualAreas` 메서드 또는 `Clusters` 메서드.|  
 |`EqualAreas`|특성의 멤버를 동일한 수의 멤버를 포함하는 그룹으로 나눕니다.|  
 |`Clusters`|학습 데이터를 샘플링하여 임의의 지점 수로 초기화하고 EM(Expectation-Maximization) 클러스터링 알고리즘을 몇 차례 반복 실행하여 특성의 멤버를 그룹으로 나눕니다.<br /><br /> 이 방법은 모든 분포 곡선에 대해 작동하므로 유용하지만 처리 시간 면에서는 비용이 더 듭니다.|  
   
  특성에 대한 `DiscretizationNumber` 속성은 표시할 그룹의 수를 지정합니다. 속성을 기본값인 0으로 설정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 `DiscretizationMethod` 속성의 설정에 따라 데이터를 샘플링하거나 읽어서 그룹 수를 결정합니다.  
   
- 멤버 그룹의 멤버의 정렬 순서를 사용 하 여 제어 되는 `OrderBy` 특성의 속성입니다. 이 정렬 순서를 바탕으로 멤버 그룹의 멤버가 연속적으로 정렬됩니다.  
+ 멤버 그룹의 멤버의 정렬 순서를 사용 하 여 제어 됩니다는 `OrderBy` 특성의 속성입니다. 이 정렬 순서를 바탕으로 멤버 그룹의 멤버가 연속적으로 정렬됩니다.  
   
  멤버 그룹의 일반적인 용도는 멤버 수가 적은 수준에서 멤버 수가 많은 수준으로 드릴다운하는 것입니다. 사용자가 수준 간에 드릴다운할 수 있도록 하려면 멤버 수를 많이 포함하는 수준에 대해 특성의 `DiscretizationMethod` 속성을 `None`에서 앞 표에서 설명한 불연속화 메서드 중 하나로 변경합니다. 예를 들어 Client 차원에는 멤버가 500,000개인 Client Name이라는 특성 계층이 포함되어 있습니다. 이 특성의 이름을 Client Groups 이름을 변경 하 고 설정할 수는 `DiscretizationMethod` 속성을 `Automatic` 특성 계층 멤버 수준에서 멤버 그룹을 표시 합니다.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88db7af7bbca5a202b79ec42d8cade77e85cd258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2a6021971575b0a17821e415aaf738ff651e9ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323973"
 ---
 # <a name="drop-xml-indexes"></a>XML 인덱스 삭제
   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 기존 기본 또는 보조 XML 인덱스 및 비 XML 인덱스를 삭제할 수 있습니다. 그러나 DROP INDEX의 옵션은 XML 인덱스에 적용되지 않습니다. 기본 XML 인덱스를 삭제하려면 존재하는 보조 인덱스도 모두 삭제됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36184657"
  *TableName.IndexName* 이 있는 DROP 구문은 단계적으로 제거하며 XML 인덱스에 대해서는 지원되지 않습니다.  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기 및 삭제  
- 다음 예제에서는 XML 인덱스에 생성 됩니다는 `xml` 유형 열입니다.  
+ 다음 예제에서는 XML 인덱스가 만들어집니다에 `xml` 유형 열입니다.  
   
 ```  
 DROP TABLE T  
@@ -55,7 +55,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  테이블이 삭제될 때 그 테이블의 모든 XML 인덱스도 자동으로 삭제됩니다. 그러나 XML 인덱스가 열에 있는 경우 XML 열은 테이블에서 삭제할 수 없습니다.  
   
- 다음 예제에서는 XML 인덱스에 생성 됩니다는 `xml` 유형 열입니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 다음 예제에서는 XML 인덱스가 만들어집니다에 `xml` 유형 열입니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
 ```  
 CREATE TABLE TestTable(  

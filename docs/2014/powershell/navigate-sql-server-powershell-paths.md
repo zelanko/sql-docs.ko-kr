@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242763"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
@@ -118,7 +118,7 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>사용자 지정 드라이브 만들기  
  **사용자 지정 드라이브 만들기 및 사용**  
   
-1.  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. 사용 하 여 `Root` 매개 변수를 사용자 지정 드라이브 이름으로 표시 되는 경로 지정 합니다.  
+1.  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. 사용 된 `Root` 매개 변수를 사용자 지정 드라이브 이름으로 표시 되는 경로 지정 합니다.  
   
 2.  같은 경로 탐색 cmdlet에서 사용자 지정 드라이브 이름을 참조 `Set-Location`합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UPPER function
 - converting lowercase to uppercase
@@ -18,13 +18,13 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc7b01b83ad0fac1f5da68fcd99ab082cebe89ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3208bd294197a77345a762f8fe08de42678cd585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248533"
 ---
 # <a name="upper-ssis-expression"></a>UPPER(SSIS 식)
   소문자를 대문자로 변환한 후에 문자 식을 반환합니다.  
@@ -68,7 +68,7 @@ UPPER(@PostalCode)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [더 낮은 &#40;SSIS 식&#41;](lower-ssis-expression.md)   
+ [낮은 &#40;SSIS 식&#41;](lower-ssis-expression.md)   
  [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

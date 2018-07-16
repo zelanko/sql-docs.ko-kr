@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c26c713f7032038b3cb969ff7681dc23c7deea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250953"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 행 집합
   데이터 공급자가 지원하는 기본 데이터 형식을 식별합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DBSCHEMA_PROVIDER_TYPES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DBSCHEMA_PROVIDER_TYPES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -42,9 +42,9 @@ ms.locfileid: "36183716"
 |`LITERAL_PREFIX`|`DBTYPE_WSTR`||텍스트 명령에서 이 형식의 리터럴에 접두사로 사용할 문자(들)입니다.|  
 |`LITERAL_SUFFIX`|`DBTYPE_WSTR`||텍스트 명령에서 이 형식의 리터럴에 접미사로 사용할 문자(들)입니다.|  
 |`CREATE_PARAMS`|`DBTYPE_WSTR`||이 데이터 형식의 열을 만들 때 소비자가 지정한 생성 매개 변수입니다. 예를 들어, SQL 데이터 형식 `DECIMAL,`에 전체 자릿수와 소수 자릿수가 필요합니다. 이 경우 생성 매개 변수는 "precision,scale" 문자열일 수 있습니다. 전체 자릿수 10, 소수 자릿수 2를 사용하여 `DECIMAL` 열을 만드는 텍스트 명령에서 `TYPE_NAME` 열의 값은 `DECIMAL()`이 되고 완전한 유형 사양은 `DECIMAL(10,2)`입니다.<br /><br /> 생성 매개 변수는 쉼표로 구분된 값 목록으로 나타나며 매개 변수가 공급되는 순서대로 괄호 없이 표시됩니다. 생성 매개 변수가 길이, 최대 길이, 전체 자릿수, 소수 자릿수, 초기값, 증분인 경우 각각 "length", "max length", "precision", "scale", "seed", "increment"를 사용하십시오. 생성 매개 변수가 그 밖의 다른 값이면 공급자가 생성 매개 변수를 설명하는 데 사용할 텍스트를 결정합니다.<br /><br /> 데이터 형식에 생성 매개 변수가 필요하면 대개 형식 이름에 "()"가 나타납니다. 이는 생성 매개 변수를 삽입할 위치를 나타냅니다. 형식 이름에 "()"가 없으면 생성 매개 변수가 괄호로 묶여서 데이터 형식 이름에 첨부됩니다.|  
-|`IS_NULLABLE`|`DBTYPE_BOOL`||데이터 형식이 null을 허용하는지 여부를 나타내는 부울입니다.<br /><br /> `VARIANT_TRUE`는 null을 허용하는 데이터 형식임을 나타냅니다.<br /><br /> `VARIANT_FALSE` 데이터 형식이 null을 허용 하지 않음을 나타냅니다.<br /><br /> `NULL` - 데이터 형식이 null을 허용하는지 여부를 알 수 없음을 나타냅니다.|  
+|`IS_NULLABLE`|`DBTYPE_BOOL`||데이터 형식이 null을 허용하는지 여부를 나타내는 부울입니다.<br /><br /> `VARIANT_TRUE`는 null을 허용하는 데이터 형식임을 나타냅니다.<br /><br /> `VARIANT_FALSE` 데이터 형식이 null을 허용 되지 않음을 나타냅니다.<br /><br /> `NULL` - 데이터 형식이 null을 허용하는지 여부를 알 수 없음을 나타냅니다.|  
 |`CASE_SENSITIVE`|`DBTYPE_BOOL`||데이터 형식이 문자 유형이고 대/소문자를 구분하는지 여부를 나타내는 부울입니다.<br /><br /> `VARIANT_TRUE`는 데이터 형식이 문자 유형이고 대/소문자를 구분함을 나타냅니다.<br /><br /> `VARIANT_FALSE`는 데이터 형식이 문자 유형이 아니거나 대/소문자를 구분하지 않음을 나타냅니다.|  
-|`SEARCHABLE`|`DBTYPE_UI4`||공급자가 `ICommandText`를 지원하는 경우 데이터 형식이 검색에 사용되는 방식을 나타내는 정수입니다. 그렇지 않으면 `NULL`입니다.<br /><br /> 이 열에는 다음과 같은 값이 올 수 있습니다.<br /><br /> -   `DB_UNSEARCHABLE` 데이터 형식에 사용할 수 없음을 나타냅니다는 `WHERE` 절.<br />-   `DB_LIKE_ONLY` 데이터 형식에 사용할 수 있음을 나타냅니다는 `WHERE` 절만는 `LIKE` 조건자입니다.<br />-   `DB_ALL_EXCEPT_LIKE` 데이터 형식에 사용할 수 있음을 나타냅니다는 `WHERE` 절을 제외한 모든 비교 연산자를 `LIKE`합니다.<br />-   `DB_SEARCHABLE` 데이터 형식에 사용할 수 있음을 나타냅니다는 `WHERE` 모든 비교 연산자와 함께 절.|  
+|`SEARCHABLE`|`DBTYPE_UI4`||공급자가 `ICommandText`를 지원하는 경우 데이터 형식이 검색에 사용되는 방식을 나타내는 정수입니다. 그렇지 않으면 `NULL`입니다.<br /><br /> 이 열에는 다음과 같은 값이 올 수 있습니다.<br /><br /> -   `DB_UNSEARCHABLE` 데이터 형식에 사용할 수 없음을 나타냅니다는 `WHERE` 절.<br />-   `DB_LIKE_ONLY` 데이터 형식에 사용할 수 있음을 나타냅니다는 `WHERE` 절만을 `LIKE` 조건자입니다.<br />-   `DB_ALL_EXCEPT_LIKE` 데이터 형식에 사용할 수 있음을 나타냅니다는 `WHERE` 절을 제외한 모든 비교 연산자를 사용 하 여 `LIKE`입니다.<br />-   `DB_SEARCHABLE` 데이터 형식에 사용할 수 있음을 나타냅니다는 `WHERE` 임의의 비교 연산자를 사용 하 여 절.|  
 |`UNSIGNED_ATTRIBUTE`|`DBTYPE_BOOL`||데이터 형식이 부호 없는 형식인지 여부를 나타내는 부울입니다.<br /><br /> `VARIANT_TRUE`는 데이터 형식이 부호 없는 형식임을 나타냅니다.<br /><br /> `VARIANT_FALSE`는 데이터 형식이 부호 있는 형식임을 나타냅니다.<br /><br /> `NULL`은 데이터 형식에 적용할 수 없음을 나타냅니다.|  
 |`FIXED_PREC_SCALE`|`DBTYPE_BOOL`||데이터 형식이 고정 전체 자릿수 및 소수 자릿수를 갖는지 여부를 나타내는 부울입니다.<br /><br /> `VARIANT_TRUE`는 데이터 형식이 고정 전체 자릿수 및 소수 자릿수를 가짐을 나타냅니다.<br /><br /> `VARIANT_FALSE`는 데이터 형식이 고정 전체 자릿수 및 소수 자릿수를 갖지 않음을 나타냅니다.|  
 |`AUTO_UNIQUE_VALUE`|`DBTYPE_BOOL`||데이터 형식이 자동 증가인지 여부를 나타내는 부울입니다.<br /><br /> `VARIANT_TRUE`는 이 형식의 값이 자동 증가할 수 있음을 나타냅니다.<br /><br /> `VARIANT_FALSE`는 이 형식의 값이 자동 증가할 수 없음을 나타냅니다.<br /><br /> 이 값이 `VARIANT_TRUE`이면 공급자의 `DBPROP_COL_AUTOINCREMENT` 열 속성에 따라 이 형식의 열이 항상 자동 증가되는지 여부가 결정됩니다. `DBPROP_COL_AUTOINCREMENT` 속성이 읽기/쓰기이면 `DBPROP_COL_AUTOINCREMENT` 속성의 설정에 따라 이 형식의 열이 자동 증가되는지 여부가 결정됩니다. `DBPROP_COL_AUTOINCREMENT`가 읽기 전용 속성이면 이 형식의 열이 전부 자동 증가하거나 아무것도 자동 증가하지 않습니다.|  

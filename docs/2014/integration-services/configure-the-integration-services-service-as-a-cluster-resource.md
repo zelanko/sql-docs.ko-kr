@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223773"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Integration Services 서비스를 클러스터 리소스로 구성
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성할 때 얻는 장점이 단점보다 많다고 생각하는 사용자를 위해 이 섹션에서는 필요한 구성 방법을 설명합니다. 그러나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 서비스를 클러스터 리소스로 구성하지 않는 것이 좋습니다( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 권장).  
@@ -104,9 +104,9 @@ ms.locfileid: "36186139"
   
 2.  공유 디스크에서 패키지 저장소로 사용할 **Packages** 라는 새 폴더를 만듭니다. 해당 사용자 및 그룹에 새 폴더에 대한 폴더 보기 및 쓰기 권한을 부여합니다.  
   
-3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. 값을 변경는 `ServerName` 가상의 이름을 요소 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 동일한 리소스 그룹에 있습니다.  
+3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. 값을 변경 합니다 `ServerName` 가상의 이름으로 요소 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 동일한 리소스 그룹에 있습니다.  
   
-4.  값을 변경는 `StorePath` 의 정규화 된 경로에 요소는 **패키지** 이전 단계에서 공유 디스크에 만든 폴더에 있습니다.  
+4.  값을 변경 합니다 `StorePath` 의 정규화 된 경로에 요소는 **패키지** 이전 단계에서 공유 디스크에 만든 폴더입니다.  
   
 5.  레지스트리의 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 값을 공유 디스크의 정규화된 경로 및 서비스 구성 파일의 파일 이름에 업데이트합니다.  
   

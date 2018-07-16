@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
 - bidirectional transactional replication
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 59817a189d1e52f7d4e8532c35fc024aa1745e3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2a9707eeb6deb5738ebe67911fb5bac2cc366668
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242354"
 ---
 # <a name="bidirectional-transactional-replication"></a>양방향 트랜잭션 복제
   양방향 트랜잭션 복제는 두 개의 서버가 서로 변경 내용을 교환할 수 있는 특수 트랜잭션 복제 토폴로지입니다. 각 서버는 데이터를 게시한 다음 상대 서버에서 게시한 것과 동일한 데이터가 포함된 게시를 구독합니다. [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)의 **@loopback_detection** 매개 변수를 TRUE로 설정하면 변경 내용이 구독자에게만 전송되고 다시 게시자에게 전송되지 않습니다.  

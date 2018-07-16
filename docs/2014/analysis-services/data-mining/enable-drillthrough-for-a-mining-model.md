@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0086339e2f4286257b6236f8caf297ce8cded202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93793f4a13d3d590ecf031addb8e11f1d93f11e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273537"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>마이닝 모델에 드릴스루 사용
   마이닝 모델에 드릴스루를 사용하는 경우 모델을 찾을 때 모델을 만드는 데 사용된 사례에 대한 세부 정보를 검색할 수 있습니다. 이 정보를 보려면 필요한 사용 권한이 있어야 하고 구조가 이미 처리되어 있어야 합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "36186201"
   
 -   모델에 대한 드릴스루 권한이 있으면 구조에 대한 사용 권한이 없는 경우에도 모델에서 드릴스루할 수 있습니다.  
   
--   구조에 대한 드릴스루 권한이 있으면 추가적으로 [StructureColumn&#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 함수를 사용하여 모델에서 드릴스루 쿼리에 구조 열을 포함할 수도 있습니다. SELECT… \<구조 > 합니다. 경우 구문입니다.  
+-   구조에 대한 드릴스루 권한이 있으면 추가적으로 [StructureColumn&#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 함수를 사용하여 모델에서 드릴스루 쿼리에 구조 열을 포함할 수도 있습니다. SELECT… \<구조 >. 경우 구문입니다.  
   
- **학습 사례의 캐싱** 드릴스루는 마이닝 구조의 학습 사례에 대한 정보를 검색하는 방식으로 작동합니다. 이 정보는 구조가 처리될 때 캐시됩니다. 따라서를 지우도록 선택한 경우 모든 캐시 된 데이터를 변경 하 여는 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `ClearAfterProcessing`, 드릴스루가 작동 하지 것입니다.  
+ **학습 사례의 캐싱** 드릴스루는 마이닝 구조의 학습 사례에 대한 정보를 검색하는 방식으로 작동합니다. 이 정보는 구조가 처리될 때 캐시됩니다. 따라서를 지우도록 선택한 경우 모든 캐시 된 데이터를 변경 하 여 합니다 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `ClearAfterProcessing`, 드릴스루가 작동 하지 것입니다.  
   
 > [!NOTE]  
 >  학습 사례가 캐시되지 않은 경우에는 사례 데이터를 보기 전에 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 **KeepTrainingCases** 로 변경한 다음 모델을 다시 처리해야 합니다.  

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ helpviewer_keywords:
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 070e9df2a42cbed665de1b076600d333926f6ea1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182601"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351015"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
-  데이터베이스 개체를 사용 하 여 빌드할 수는 [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 "CLR 루틴" 이라고 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  
+  사용 하 여 데이터베이스 개체를 만들 수는 [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 "CLR 루틴" 이라고 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  
   
 -   스칼라 반환 사용자 정의 함수(스칼라 UDF)  
   
@@ -42,7 +40,7 @@ ms.locfileid: "36182601"
   
  CLR 루틴은 관리 코드에서도 구조가 동일하고 클래스의 공용 및 정적([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET의 경우 공유) 메서드에 매핑됩니다. .NET Framework를 사용하면 루틴뿐만 아니라 UDT(사용자 정의 형식)와 사용자 정의 집계 함수도 정의할 수 있습니다. UDT와 사용자 정의 집계 함수는 .NET Framework 클래스 전체에 매핑됩니다.  
   
- .NET Framework 루틴의 각 형식에는 [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] 하는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 해당 키를 사용할 수 있습니다. 예를 들어 스칼라 UDF는 모든 스칼라 식에 사용할 수 있고, TVF는 모든 FROM 절에 사용할 수 있습니다. 프로시저는 EXEC 문에서 호출되거나 클라이언트 응용 프로그램에서 호출될 수 있습니다.  
+ .NET Framework 루틴의 각 형식에는 [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 해당을 사용할 수 있습니다. 예를 들어 스칼라 UDF는 모든 스칼라 식에 사용할 수 있고, TVF는 모든 FROM 절에 사용할 수 있습니다. 프로시저는 EXEC 문에서 호출되거나 클라이언트 응용 프로그램에서 호출될 수 있습니다.  
   
 > [!NOTE]  
 >  쿼리 최적화 프로그램에서 적절하다고 판단할 경우 공용 언어 런타임에서 CLR 개체(사용자 정의 함수, 사용자 정의 형식 또는 트리거)의 실행은 여러 스레드(병렬 계획)에서 발생할 수 있습니다. 그러나 사용자 정의 함수는 데이터에 액세스하므로 직렬 계획에서 실행됩니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 서버 버전에서 LOB 매개 변수나 반환 값을 포함하는 사용자 정의 함수를 실행할 경우 직렬 계획에서도 해당 함수를 실행해야 합니다.  

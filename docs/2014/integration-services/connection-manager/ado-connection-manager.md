@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ADO
 - connection managers [Integration Services], ADO
@@ -17,18 +17,18 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6278b15b3e99808a015496dfa15b7b4b48b8724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 434468c487d1dc758eeef10a04b8623c88abb529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243053"
 ---
 # <a name="ado-connection-manager"></a>ADO 연결 관리자
   ADO 연결 관리자를 사용하면 패키지에서 레코드 집합과 같은 ADO(ActiveX Data Objects) 개체에 연결할 수 있습니다. 이 연결 관리자는 일반적으로 Microsoft Visual Basic 6.0과 같은 초기 버전의 언어로 작성된 사용자 지정 태스크나 데이터 원본에 연결하기 위해 ADO를 사용하는 기존 응용 프로그램의 일부인 사용자 지정 태스크에서 사용됩니다.  
   
- 패키지에 ADO 연결 관리자를 추가 하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임 시 ADO 연결으로 확인 되는 연결 관리자 속성을 설정 하 고 연결 관리자는 를추가하는관리자는연결을만들고`Connections` 패키지의 컬렉션입니다. `ConnectionManagerType` 연결 관리자의 속성이로 설정 되어 `ADO`합니다.  
+ 패키지에 ADO 연결 관리자를 추가 하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 런타임 시 ADO 연결으로 확인 되, 연결 관리자 속성을 설정 합니다 연결관리자를추가하는관리자를만들고`Connections` 패키지의 컬렉션입니다. 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `ADO`합니다.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>ADO 연결 관리자 문제 해결  
  ADO 연결 관리자에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 데이터 형식을 읽으면 다음 표에 표시된 결과가 생성됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36184530"
   
 -   [OLE DB 연결 관리자 구성](ole-db-connection-manager.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 정보를 참조 하십시오. <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 하 고 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 연결](integration-services-ssis-connections.md)  

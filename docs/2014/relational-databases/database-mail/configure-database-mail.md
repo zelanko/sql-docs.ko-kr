@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
 - Sql12.swb.sqlimail.manageexistingaccount.f1
@@ -40,15 +40,15 @@ f1_keywords:
 - Sql12.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a56c620c26a7ef2a7af3dccf59f2f6bcdb0bf3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d4b20236528e1908c5012ef6cae19d7fb62e580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269359"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36185221"
   
 2.  **관리** 노드를 확장합니다.  
   
-3.  단추로 **데이터베이스 메일**, 클릭 하 고 **데이터베이스 메일 구성**합니다.  
+3.  긴밀 하 게 원클릭 **데이터베이스 메일**를 클릭 하 고 **데이터베이스 메일 구성**합니다.  
   
 4.  마법사의 대화 상자를 완료합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36185221"
  이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 입력합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정에 대한 회신은 데이터베이스 관리자인 danw@Adventure-Works.com을 클릭합니다.  
   
  **서버 이름**  
- 계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 이 형식에는 일반적으로 `smtp.` *< your_company >*`.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
+ 계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 일반적으로 이것이 비슷한 형식 `smtp.` *< your_company >*`.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
   
  **포트 번호**  
  이 계정에 대한 SMTP 서버의 포트 번호를 입력합니다. 대부분의 SMTP 서버에서는 포트 25를 사용합니다.  

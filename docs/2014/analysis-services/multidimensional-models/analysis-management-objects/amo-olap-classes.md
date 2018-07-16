@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280409"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 클래스
   AMO(Analysis Management Objects) OLAP 클래스를 사용하면 큐브 및 차원과 KPI(핵심 성과 지표), 동작, 자동 관리 캐싱 등의 관련 개체를 손쉽게 만들고 수정, 삭제 및 처리할 수 있습니다.  
   
- AMO 프로그래밍 환경 설정에 대 한 자세한 내용은 데이터베이스 액세스 또는 데이터를 정의 하는 서버와 연결할 원본 및 데이터 원본 뷰 표시 방법 [AMO 기본 클래스](amo-fundamental-classes.md)합니다.  
+ AMO 프로그래밍 환경 설정에 대 한 자세한 내용은 어떻게 연결 서버, 데이터베이스 액세스 또는 데이터 정의 사용 하 여 원본 및 데이터 원본 뷰를 참조 하세요 [AMO 기본 클래스](amo-fundamental-classes.md)합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36185521"
   
 -   [MeasureGroup 개체](#MeasureGroups)  
   
--   [파티션 개체](#Partition)  
+-   [Partition 개체](#Partition)  
   
 -   [AggregationDesign 개체](#AggregationDesign)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36185521"
 ###  <a name="Dimensions"></a> 차원 개체  
  부모 데이터베이스의 차원 컬렉션에 차원을 추가한 다음 Update 메서드를 사용하여 해당 <xref:Microsoft.AnalysisServices.Dimension> 개체를 서버로 업데이트하면 차원이 만들어집니다.  
   
- 차원을 제거 하려면의 Drop 메서드를 사용 하 여 삭제 해야에 <xref:Microsoft.AnalysisServices.Dimension>합니다. Remove 메서드를 사용하여 데이터베이스의 차원 컬렉션에서 <xref:Microsoft.AnalysisServices.Dimension>을 제거하면 해당 차원이 서버에서는 삭제되지 않고 AMO 개체 모델에서만 삭제됩니다.  
+ 차원을 제거 하려면의 Drop 메서드를 사용 하 여 삭제에 <xref:Microsoft.AnalysisServices.Dimension>합니다. Remove 메서드를 사용하여 데이터베이스의 차원 컬렉션에서 <xref:Microsoft.AnalysisServices.Dimension>을 제거하면 해당 차원이 서버에서는 삭제되지 않고 AMO 개체 모델에서만 삭제됩니다.  
   
  <xref:Microsoft.AnalysisServices.Dimension> 개체를 만든 후 이 개체를 처리할 수 있습니다. <xref:Microsoft.AnalysisServices.Dimension>은 해당 개체의 Process 메서드를 사용하여 처리하거나, 부모 개체가 처리될 때 부모 개체의 Process 메서드를 사용하여 처리할 수 있습니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36185521"
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.MeasureGroup>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-###  <a name="Partition"></a> 파티션 개체  
+###  <a name="Partition"></a> Partition 개체  
  <xref:Microsoft.AnalysisServices.Partition> 개체를 부모 측정값 그룹의 파티션 컬렉션에 추가한 다음 Update 메서드를 사용하여 서버의 <xref:Microsoft.AnalysisServices.Partition> 개체를 업데이트하면 해당 개체가 만들어집니다. <xref:Microsoft.AnalysisServices.Partition> 개체는 Drop 메서드를 사용하여 제거할 수 있습니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Partition>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  

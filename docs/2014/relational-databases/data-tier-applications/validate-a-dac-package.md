@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322293"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "36184722"
   
 3.  DAC 이름을 변수로 지정합니다.  
   
-4.  사용 하 여는 `GetDatabaseChanges()` 를 검색할 메서드는 `ChangeResults` 삭제 및 개체 변경 된 개체 및 개체의 간단한 보고서를 새로 생성 하는 텍스트 파일에 파이프 합니다.  
+4.  사용 하 여는 `GetDatabaseChanges()` 검색 하는 메서드를 `ChangeResults` 개체 및 개체의 간단한 보고서를 새로 생성 하는 텍스트 파일에 파이핑하여 삭제 및 변경 된 개체입니다.  
   
 ### <a name="view-database-changes-example-powershell"></a>데이터베이스 변경 내용 보기 예(PowerShell)  
  **데이터베이스 변경 내용 보기 예(PowerShell)**  
@@ -133,7 +133,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  DAC 이름을 변수로 지정합니다.  
   
-5.  사용 하 여 `GetIncrementalUpgradeScript()` 업그레이드 하는 TRANSACT-SQL 문 목록을 가져올 메서드를 실행 하 고 텍스트 파일에 목록을 파이프 합니다.  
+5.  사용 된 `GetIncrementalUpgradeScript()` 업그레이드 TRANSACT-SQL 문 목록을 가져오기 위한 메서드는 실행 하 고 목록을 텍스트 파일에 파이핑 합니다.  
   
 6.  DAC 패키지 파일을 읽는 데 사용되는 파일 스트림을 닫습니다.  
   
