@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f900a871527e85cdc28f47ec3349eeb64f9853c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268169"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 행렬 보고서를 만드는 방법을 배웁니다. 행렬에는 중첩 행 및 열 그룹과 인접 열 그룹이 있습니다. 열의 서식을 지정하고 텍스트를 회전하는 방법도 배웁니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36185340"
   
  이 자습서에서 만드는 향상된 버전의 보고서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 예제 보고서(Report Builder sample reports)](http://go.microsoft.com/fwlink/?LinkId=184851)를 참조하십시오.  
   
-##  <a name="BackToTop"></a> 학습 내용  
+##  <a name="BackToTop"></a> 학습할 내용  
  이 자습서에서는 다음 작업 방법을 배웁니다.  
   
 1.  [새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 집합 만들기](#CreateMatrix)  
@@ -43,7 +43,7 @@ ms.locfileid: "36185340"
   
 6.  [행렬 셀 병합](#MergeCells)  
   
-7.  [보고서 머리글을 추가 및 보고서 제목](#HeaderTitle)  
+7.  [추가 보고서 머리글 및 보고서 제목](#HeaderTitle)  
   
 8.  [보고서 저장](#Save)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36185340"
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
   
 ##  <a name="CreateMatrix"></a> 1. 새 테이블 또는 행렬 마법사에서 행렬 보고서 및 데이터 집합 만들기  
- **시작** 대화 상자 보고서 작성기에서 공유 데이터 원본을 선택 고 포함된 된 데이터 집합을 만들고 행렬의 데이터를 표시 합니다.  
+ **Getting Started** 대화 상자에서 보고서 작성기 공유 데이터 원본을 선택, 포함된 된 데이터 집합 만들기 및 행렬의 데이터를 표시 합니다.  
   
 > [!NOTE]  
 >  이 자습서의 쿼리에는 이미 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36185340"
 1.  **시작**을 클릭하고 **프로그램**, **Microsoft SQL Server 2012 보고서 작성기**를 차례로 가리킨 다음 **보고서 작성기**를 클릭합니다.  
   
     > [!NOTE]  
-    >  **시작** 대화 상자가 나타나야 합니다. 보고서 작성기 단추에서 되지 않으면 클릭 **새로**합니다.  
+    >  **시작** 대화 상자가 나타나야 합니다. 그렇지 않으면 보고서 작성기 단추에서 클릭 **새로 만들기**합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36185340"
   
 5.  **다음**을 클릭합니다.  
   
-6.  에 **데이터 원본에 대 한 연결 선택** 페이지 기존 데이터 원본 또는 보고서 서버를 찾아 선택한 다음 데이터 소스를 선택 합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 된 데이터 원본을 만드는 방법에 대 한 자세한 내용은 참조 [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+6.  에 **데이터 원본에 대 한 연결 선택** 페이지, 기존 데이터 원본을 선택 하거나 보고서 서버로 이동 및 데이터 소스를 선택 합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 된 데이터 원본을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
   
 7.  **다음**을 클릭합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36185340"
   
 3.  Subcategory를 **열 그룹**으로 끌어옵니다.  
   
-4.  Product를 끌어 옵니다 **열 그룹** Subcategory 아래에 배치 합니다.  
+4.  Product를 끌어 옵니다 **열 그룹** Subcategory 아래에 배치 하 고 있습니다.  
   
      에 필드가 나열 되는 순서 **열 그룹** 그룹 계층 구조를 정의 합니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36185340"
   
 11. **다음**을 클릭합니다.  
   
-12. 선택의 스타일 창에서 스타일 페이지에서 선택 **슬레이트**합니다.  
+12. 선택의 스타일 창에서 스타일 페이지 선택 **슬레이트**합니다.  
   
 13. **마침**을 클릭합니다.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "36185340"
   
 4.  `[SalesDate]`가 들어 있는 셀을 클릭합니다.  
   
-5.  에 **번호** 드롭 다운 목록에서 그룹 **날짜**합니다.  
+5.  에 **번호** 선택 드롭다운 목록에서 그룹 **날짜**합니다.  
   
      셀에 예제 날짜 **[1/31/2000]** 이 표시됩니다. 예제 날짜가 표시되지 않으면 **숫자** 그룹에서 **자리 표시자 스타일** 을 클릭한 다음 **보기 값**을 클릭합니다.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "36185340"
  보고서에 Monday 및 Tuesday라는 열이 포함됩니다. 데이터 집합에는 이러한 두 요일에 대한 데이터만 포함됩니다.  
   
 > [!NOTE]  
->  데이터에 다른 요일이 포함된 경우 보고서에도 해당 요일에 대한 열이 포함됩니다. 각 열에 열 머리글이 `Sales`, 지역별 판매 합계가 표시 됩니다.  
+>  데이터에 다른 요일이 포함된 경우 보고서에도 해당 요일에 대한 열이 포함됩니다. 각 열에 열 머리글을 `Sales`, 지역별 판매 합계가 됩니다.  
   
 ##  <a name="Width"></a> 5. 열 너비 변경  
  행렬이 포함된 보고서를 실행하면 일반적으로 가로와 세로로 확장됩니다. 가로 확장을 제어하는 기능은 특히 보고서를 인쇄용 보고서에 사용되는 Microsoft Word 또는 Adobe PDF 등의 형식으로 내보내려고 할 때 중요합니다. 보고서가 여러 페이지에 걸쳐 가로로 확장될 경우에는 인쇄된 페이지를 이해하기 어렵습니다. 가로 확장을 최소화하려면 데이터를 자르지 않고 표시하는 데 필요한 너비로만 열 크기를 조정합니다. 제목이 데이터를 표시하는 데 필요한 너비에 맞도록 열의 이름을 변경해도 됩니다.  
@@ -274,13 +274,13 @@ ms.locfileid: "36185340"
   
 3.  Ctrl 키를 누른 상태로 네 개의 모퉁이 셀을 선택합니다.  
   
-4.  셀을 마우스 오른쪽 단추로 누른 **셀 병합**합니다.  
+4.  셀을 마우스 오른쪽 단추로 누른 **셀 병합**입니다.  
   
 5.  모퉁이 셀을 마우스 오른쪽 단추로 누른 **텍스트 상자 속성**합니다.  
   
 6.  **채우기** 탭을 클릭합니다.  
   
-7.  클릭는 (***fx***)에 대 한 단추 **채우기 색**합니다.  
+7.  클릭 합니다 (***fx***) 단추 **채우기 색**합니다.  
   
 8.  다음 식을 복사하여 식 상자에 붙여 넣습니다.  
   
@@ -303,9 +303,9 @@ ms.locfileid: "36185340"
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  텍스트 상자를 포함 하는 보고서 본문의 맨 위쪽에 클릭 **제목을 추가 하려면 클릭**, 한 다음 Delete 키를 누릅니다.  
+2.  포함 하는 보고서 본문의 맨 위에 있는 입력란을 클릭 **제목을 추가 하려면 클릭**, 한 다음 Delete 키를 누릅니다.  
   
-3.  에 **삽입** 탭 클릭 하 고 리본 메뉴의 **헤더** 클릭 하 고 **헤더 추가**합니다.  
+3.  에 **삽입** 탭 리본 메뉴 클릭 **헤더** 클릭 하 고 **헤더 추가**합니다.  
   
      머리글이 보고서 본문의 위쪽에 추가됩니다.  
   
@@ -313,14 +313,14 @@ ms.locfileid: "36185340"
   
 5.  입력란에 **Sales by Territory, Subcategory, and Day**를 입력합니다.  
   
-6.  입력 한 텍스트를 마우스 클릭 한 다음 선택 **텍스트 속성**합니다.  
+6.  입력 한 텍스트를 마우스 오른쪽 단추를 클릭 한 다음 선택 **텍스트 속성**합니다.  
   
     > [!NOTE]  
     >  문자의 서식을 동시에 지정하려면 문자가 연속적이어야 합니다.  
   
-7.  에 **텍스트 속성** 대화 상자를 클릭 **글꼴**합니다.  
+7.  에 **텍스트 속성** 대화 상자, 클릭 **글꼴**합니다.  
   
-8.  에 **글꼴** 목록에서 **Times New Roman**, **크기** 선택 **24pt**에 **색** 선택 **적갈색**, 및 **스타일** 선택 **기울임꼴**합니다.  
+8.  에 **글꼴** 목록에서 **Times New Roman**; **크기** 선택 **24pt**에서 **색** 를선택합니다. **적갈색**, 및 **스타일** 선택 **기울임꼴**합니다.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -370,11 +370,11 @@ ms.locfileid: "36185340"
   
 2.  `[Territory].`가 들어 있는 셀을 클릭합니다.  
   
-3.  속성 창에서 WritingMode 속성을 찾은 다음 해당 드롭 다운 목록에서 선택 **Rotate270**합니다.  
+3.  속성 창에서 WritingMode 속성을 찾은 다음 해당 드롭다운 목록에서 선택 **Rotate270**합니다.  
   
      속성 창이 열려 있지 않으면 리본의 **보기** 탭을 클릭하고 **속성**을 선택합니다.  
   
-4.  CanGrow 속성으로 설정 되어 있는지 확인 하십시오. `True`합니다.  
+4.  CanGrow 속성이로 설정 되어 있는지 확인 `True`합니다.  
   
 5.  Territory 열의 너비를 1/2인치로 조정하고 열 제목을 삭제합니다.  
   
@@ -383,7 +383,7 @@ ms.locfileid: "36185340"
  지역 이름이 아래에서 위쪽으로 세로로 표시됩니다. Territory 행 그룹의 높이는 지역 이름의 길이에 따라 달라집니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 이것으로 행렬 보고서를 만드는 자습서를 마칩니다. 행렬에 대 한 자세한 내용은 참조 [테이블, 행렬 및 목록을 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [행렬 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ 테이블 릭 스 데이터 영역의 영역 &#40;보고서 작성기 및 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), 및 [테이블 릭 스 데이터 영역 셀, 행 및 열 &#40;보고서 작성기&#41; 및 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ 이것으로 행렬 보고서를 만드는 자습서를 마칩니다. 행렬에 대 한 자세한 내용은 참조 하세요. [테이블, 행렬 및 목록 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)를 [행렬 &#40;보고서 작성기 및 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)하십시오 [ 테이블 릭 스 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), 및 [테이블 릭 스 데이터 영역 셀, 행 및 열 &#40;보고서 작성기&#41; 및 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [자습서 &#40;보고서 작성기&#41;](report-builder-tutorials.md)   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f46357975476ac301c28f639a3508edc992e5e5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3eb895440cc6680acd719b47a88200d6c92eff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289059"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
   이 항목에서는 대량 가져오기 작업에서 서식 파일을 사용하는 방법에 대해 설명합니다. 서식 파일은 데이터 파일의 필드를 테이블 열에 매핑합니다.  **bcp** 명령이나 BULK INSERT 또는 INSERT ...를 사용할 때 비 XML 서식 파일 또는 XML 서식 파일을 사용하여 데이터를 대량으로 가져올 수 있습니다. SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하는 경우 비 XML 또는 XML 형식 파일을 사용하여 데이터를 대량으로 가져올 수 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "36092410"
 >  유니코드 문자 데이터 파일에 서식 파일을 사용하려면 모든 입력 필드가 유니코드 텍스트 문자열(고정 크기 또는 문자 종료 유니코드 문자열)이어야 합니다.  
   
 > [!NOTE]  
->  서식 파일에 없는 경우 참조 [비 XML 서식 파일 &#40;SQL Server&#41; ](xml-format-files-sql-server.md) 및 [XML 서식 파일 &#40;SQL Server&#41;](xml-format-files-sql-server.md)합니다.  
+>  서식 파일을 사용 하 여 잘 모르는 경우 [비 XML 서식 파일 &#40;SQL Server&#41; ](xml-format-files-sql-server.md) 하 고 [XML 서식 파일 &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>대량 가져오기 명령의 서식 파일 옵션  
  다음 표에서는 대량 가져오기 명령 각각에 대한 서식 파일 옵션을 요약하여 보여 줍니다.  

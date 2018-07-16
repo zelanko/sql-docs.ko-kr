@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
 - "10508"
@@ -18,15 +18,15 @@ f1_keywords:
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b73b5364e4ccd9cdb86210a25a8ee281dc6ad85c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313308"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
   지리적 배경에 대해 비즈니스 데이터를 시각화하기 위해 보고서에 지도를 추가할 수 있습니다. 선택하는 지도 유형은 보고서에 나타낼 정보에 따라 다릅니다. 위치만 표시하는 지도, 지역의 세대 수에 따라 거품 크기가 달라지는 거품형 지도, 각 상점에서 이윤이 가장 높은 제품에 따라 표식 스타일이 달라지는 표식 지도 또는 상점 간 경로를 표시하는 선 지도 등을 추가할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "36092625"
   
      쿼리 디자이너에 나타나는 결과 집합에서 각 공간 데이터 행은 하나의 단위로 처리되고 단일 지도 요소에 저장됩니다. 예를 들어 결과 집합에서 한 행에 여러 개의 점이 정의되어 있으면 표시 속성이 해당 지도 요소의 모든 점에 적용됩니다.  
   
--   **만드는 사용자 지정 위치.** 위치를 포함된 점 계층에 포함된 점으로 직접 추가할 수 있습니다. 자세한 내용은 참조 [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)합니다.  
+-   **만드는 사용자 지정 위치.** 위치를 포함된 점 계층에 포함된 점으로 직접 추가할 수 있습니다. 자세한 내용은 [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)합니다.  
   
 #### <a name="spatial-data-in-design-view"></a>디자인 뷰의 공간 데이터  
  디자인 뷰에서 보고서 처리기는 지도 계층을 디자인하는 데 도움이 되는 예제 공간 데이터를 표시합니다. 표시되는 데이터는 공간 데이터의 사용 가능 여부에 따라 달라집니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "36092625"
   
 -   보안 연결을 사용하여 Bing Maps 웹 서비스의 타일을 검색할지 여부  
   
- 단계별 지침은 참조 하십시오. [추가, 변경 또는 삭제 지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)합니다.  
+ 단계별 지침은 [추가, 변경 또는 지도 또는 지도 계층을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)합니다.  
   
  타일에 대한 자세한 내용은 [Bing 지도 타일 시스템(Bing Maps Tiles System)](http://go.microsoft.com/fwlink/?linkid=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36092625"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 지도 계층에 대 한 자세한 내용은 참조 [추가, 변경 또는 삭제 지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)합니다.  
+ 지도 계층에 대 한 자세한 내용은 참조 하세요. [추가, 변경 또는 지도 또는 지도 계층을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>점, 선 및 다각형의 표시 속성 변경  
  지도 요소의 표시 옵션은 계층에 대한 규칙을 사용하여 계층 수준에서 설정하거나 개별 요소에서 설정할 수 있습니다. 예를 들어 계층의 모든 점에 대한 표시 속성을 설정하거나, 포함되었는지 여부와 관계없이 계층의 모든 점에 대한 표시 속성을 제어하는 규칙을 설정하거나, 특정 포함된 점에 대한 표시 속성 설정을 무시할 수 있습니다.  
@@ -254,9 +254,9 @@ ms.locfileid: "36092625"
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 지도와 지도 계층을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [추가, 변경 또는 지도 또는 지도 계층을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [추가, 변경 또는 삭제 지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [지도 범례 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
 -   [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
@@ -271,12 +271,12 @@ ms.locfileid: "36092625"
   
  [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [추가, 변경 또는 지도 또는 지도 계층을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [추가, 변경 또는 삭제 지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [지도 범례 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
  [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [보고서 문제 해결: 보고서에 지도 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

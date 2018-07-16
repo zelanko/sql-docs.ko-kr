@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d303321941668d5115c3796022f70195b4a0d066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9265d42cdde8ac528118cb72dead19726f3d3173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228423"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
   사용자 지정 보고서에 대한 경고 대화 상자에는 두 가지가 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이러한 상자를 표시하는 방법에 대해 설명합니다.  
@@ -32,27 +32,27 @@ ms.locfileid: "36186676"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>주 사용자 지정 보고서 경고 대화 상자를 표시하려면  
   
-1.  연결할 \< *서버*>\\<*공유*>|\<*드라이브*> \ \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml 합니다.  
+1.  연결할 \< *Server*>\\<*공유*>|\<*드라이브*> \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml 합니다.  
   
-2.  마우스 오른쪽 단추로 클릭 `reports.xml`, 클릭 하 고 **편집**합니다.  
+2.  마우스 오른쪽 단추로 클릭 `reports.xml`를 클릭 하 고 **편집**합니다.  
   
-3.  변경**\<SuppressWarning > true\</SuppressWarning >에 \<SuppressWarning > false\</SuppressWarning >** 합니다.  
+3.  변경**\<SuppressWarning > true\</SuppressWarning > 하 \<SuppressWarning > false\</SuppressWarning >** 합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>드릴스루 사용자 지정 보고서 경고 대화 상자를 표시하려면  
   
-1.  연결할 \< *서버*>\\<*공유*>|\<*드라이브*> \ \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml 합니다.  
+1.  연결할 \< *Server*>\\<*공유*>|\<*드라이브*> \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml 합니다.  
   
-2.  마우스 오른쪽 단추로 클릭 `reports.xml`를 클릭 하 고 **편집**합니다.  
+2.  마우스 오른쪽 단추로 클릭 `reports.xml`, 클릭 **편집**합니다.  
   
-3.  변경  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning >에 \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  변경  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > 하 \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)   
- [Management Studio를 사용자 지정 보고서 추가](add-a-custom-report-to-management-studio.md)   
+ [Management Studio에 사용자 지정 보고서 추가](add-a-custom-report-to-management-studio.md)   
  [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

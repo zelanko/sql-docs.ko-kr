@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184407"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172334"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
   **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  응용 프로그램에 있는 대화 끝점을 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 끝점에 고유하기 때문에 시작자 끝점과 대상 끝점은 서로 다른 대화 핸들을 갖습니다.  
   
- 대화 핸들에 의해 응용 프로그램에 반환 되는 *@dialog_handle* 의 매개 변수는 **BEGIN DIALOG** 문, 및 `conversation_handle` 결과에 열 집합이 **수신**  문.  
+ 대화 핸들은 응용 프로그램에 반환 됩니다는 *@dialog_handle* 의 매개 변수를 **BEGIN DIALOG** 문, 및 `conversation_handle` 결과의 열 집합을 **수신**  문입니다.  
   
- 대화 핸들에 보고 되는 `conversation_handle` 의 열은 **sys.transmission_queue** 및 **sys.conversation_endpoints** 카탈로그 뷰.  
+ 대화 핸들에 보고 되는 `conversation_handle` 열의 합니다 **sys.transmission_queue** 및 **sys.conversation_endpoints** 카탈로그 뷰.  
   
  *conversation_group_id*  
  대화 그룹을 식별하는 고유 식별자입니다.  
   
- 대화 그룹 Id 하 여 응용 프로그램에 반환 되는 *@conversation_group_id* 의 매개 변수는 **GET CONVERSATION GROUP** 문 및 `conversation_group_id` 는 의결과집합열에에서**수신** 문.  
+ 대화 그룹 Id는 응용 프로그램에 반환 됩니다 합니다 *@conversation_group_id* 의 매개 변수를 **GET CONVERSATION GROUP** 문 및 `conversation_group_id` 는결과집합에열**수신** 문입니다.  
   
- 대화 그룹 Id에 보고 되는 `conversation_group_id` 의 열은 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰.  
+ 대화 그룹 Id에 보고 되는 `conversation_group_id` 열의 합니다 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰.  
   
  *conversation_id*  
  대화를 식별하는 고유 식별자입니다. 대화의 시작자 끝점과 대상 끝점은 둘 다 동일한 대화 ID를 사용합니다.  
   
- 대화 Id에는 보고는 `conversation_id` 의 열은 **sys.conversation_endpoints** 카탈로그 뷰.  
+ 대화 Id에는 보고를 `conversation_id` 열의 합니다 **sys.conversation_endpoints** 카탈로그 뷰.  
   
  **-TIMEOUT** *timeout_interval*  
  **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  

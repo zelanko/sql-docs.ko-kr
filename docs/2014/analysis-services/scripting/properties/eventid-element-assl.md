@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EventID element
 ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ee579bd4bc20bea12b1dbb9490a7f9c93fde32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79fd7c49c9749430bc5e73518d2f7eeb4fc450f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310713"
 ---
 # <a name="eventid-element-assl"></a>EventID 요소(ASSL)
-  고유 하 게 식별 하는 [이벤트](../objects/event-element-assl.md) 의 일환으로 캡처할 수 있는 요소는 [추적](../objects/trace-element-assl.md) 요소입니다.  
+  고유 하 게 식별 하는 [이벤트](../objects/event-element-assl.md) 의 일환으로 캡처할 수 있는 요소를 [추적](../objects/trace-element-assl.md) 요소.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36092487"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36092487"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `EventID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TraceEvent>합니다.  
+ 부모에 해당 요소가 `EventID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TraceEvent>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Events 요소 &#40;ASSL&#41;](../collections/events-element-assl.md)   

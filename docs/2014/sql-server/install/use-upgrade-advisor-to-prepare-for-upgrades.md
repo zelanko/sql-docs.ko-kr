@@ -1,5 +1,5 @@
 ---
-title: 업그레이드 관리자를 사용 하 여 업그레이드에 대 한 준비 | Microsoft Docs
+title: 업그레이드 관리자를 사용 하 여 업그레이드 준비 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234423"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>업그레이드 관리자를 사용하여 업그레이드 준비
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 업그레이드를 준비할 수 있도록 도와 줍니다. 업그레이드 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전에서 설치된 구성 요소를 분석한 다음 업그레이드 전이나 후에 해결해야 할 문제를 보여 주는 보고서를 생성합니다.  
@@ -70,15 +70,15 @@ ms.locfileid: "36078393"
   
 -   Windows  Installer  4.5  버전 이상 Windows Installer를 설치할 수는 [Windows Installer 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=49112)합니다.  
   
--   Microsoft .NET Framework 4 .NET framework 4는에서 사용할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 제품 미디어에서의 [.NET Framework 4 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=209895)합니다.  
+-   Microsoft .NET Framework 4 .NET framework 4에서 사용할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 제품 미디어 및 합니다 [.NET Framework 4 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=209895)합니다.  
   
     -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 미디어에서 .NET  Framework  4를 설치하려면 디스크 드라이브의 루트를 찾습니다. 그런 다음 \redist  폴더와 DotNetFrameworks  폴더를 차례로 두 번 클릭하고 dotNetFx40_Full_x86_x64.exe(32비트 운영 체제 및 64비트 운영 체제용)를 실행합니다.  
   
  웹에서 업그레이드 관리자를 설치하려면 다운로드 페이지에서 다운로드 단추를 클릭합니다. 그러면 설치를 바로 실행할 수 있으며 나중에 설치하기 위해 SQLUA.msi  파일을 저장할 수도 있습니다. 제품 디스크를 사용해서 설치하는 경우에는 제품 디스크에서 SQLUA.msi  파일을 직접 실행합니다.  
   
- 업그레이드 관리자를 설치한 후에서 열 수 있습니다는 **시작** 메뉴:  
+ 업그레이드 관리자를 설치한 후에서 열 수 있습니다 합니다 **시작** 메뉴:  
   
--   클릭 **시작**, 가리킨 **모든 프로그램**, 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], 클릭 하 고  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**합니다.  
+-   클릭 **시작**, 가리킨 **모든 프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭 하 고  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**.  
   
  자세한 내용은 업그레이드 관리자 다운로드에 포함된 업그레이드 관리자 설명서 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스 정보를 참조하십시오.  
   

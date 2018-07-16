@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00ee95942a8022ee8d299ab400d36676b51467ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219973"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
-  이 항목에서는 다른 항목의 지침을 사용하여 만든 BI 의미 체계 모델 연결을 사용하는 방법에 대해 설명합니다. BI 의미 체계 모델을 아직 만들지 않은 경우 참조 [PowerPivot 통합 문서에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 및 [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
+  이 항목에서는 다른 항목의 지침을 사용하여 만든 BI 의미 체계 모델 연결을 사용하는 방법에 대해 설명합니다. BI 의미 체계 모델을 아직 만들지 않은 경우 [PowerPivot 통합 문서에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 하 고 [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
   
 ##  <a name="bkmk_connect"></a> Excel에서 연결  
  Analysis Services 테이블 형식 모델 데이터를 사용하는 다른 비즈니스 응용 프로그램이나 Excel에서 BI 의미 체계 모델 연결을 데이터 원본으로 지정할 수 있습니다. 이 섹션에서는 Excel을 사용하여 BI 의미 체계 모델에 연결하는 두 가지 방법에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36183714"
   
 -   라이브러리에서 BI 의미 체계 모델 연결을 마우스 오른쪽 단추로 클릭하고 **Excel 시작**을 선택합니다.  
   
- ![빠른 시작 명령의 스크린 샷의 BISM](../media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 실행 명령")  
+ ![빠른 시작 명령의 스크린 샷의 BISM](../media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 시작 명령")  
   
  데이터 연결을 사용하도록 설정할지를 묻는 메시지가 표시되면 **사용** 을 클릭합니다. 기본 데이터 원본의 필드로 채워진 피벗 테이블 필드 목록이 포함된 통합 문서가 Excel에서 열립니다.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "36183714"
   
 5.  마지막 페이지에서 이름 및 설명을 제공할 수 있습니다. **마침**을 클릭하고 데이터 가져오기 대화 상자에서 **확인** 을 클릭하여 데이터를 가져옵니다.  
   
- 연결에 성공하려면 Excel 2010 및 MSOLAP.5.dll이 클라이언트 컴퓨터에 설치되어 있어야 합니다. 이 릴리스에 대 한 현재 Excel에 대 한 버전의 PowerPivot 설치 하 여 공급자를 얻을 수 또는 Analysis Services OLE DB provider를 다운로드할 수 있습니다는 [기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/?linkid=214066)합니다.  
+ 연결에 성공하려면 Excel 2010 및 MSOLAP.5.dll이 클라이언트 컴퓨터에 설치되어 있어야 합니다. 버전의 PowerPivot for Excel이이 릴리스에 현재 사용할을 설치 하 여 공급자를 가져올 수 있습니다 또는에서 Analysis Services OLE DB 공급자를 다운로드할 수 있습니다 합니다 [기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/?linkid=214066)합니다.  
   
- MSOLAP.5.dll이 최신 버전을 확인 하려면 확인 `HKEY_CLASSES_ROOT\MSOLAP` 레지스트리에 합니다. `CurVer` MSOLAP.5로 설정 해야 합니다.  
+ MSOLAP.5.dll이 최신 버전 인지를 확인 하려면 확인 `HKEY_CLASSES_ROOT\MSOLAP` 레지스트리에서 합니다. `CurVer` MSOLAP.5로 설정 되어야 합니다.  
   
  또한 SharePoint에서 BI 의미 체계 모델 파일에 대한 읽기 권한도 있어야 합니다. 읽기 권한에는 다운로드 권한이 포함됩니다. Excel에서는 SharePoint에서 BI 의미 체계 모델 연결 정보를 다운로드하고 `HTTP Get`을 통해 데이터베이스에 직접 연결합니다. BI 의미 체계 모델 연결 정보가 로컬로 저장되면 연결 요청이 SharePoint를 통해 전달되지 않습니다.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
 helpviewer_keywords:
 - Data Source View Designer
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b440c0186e60e6622d861110a8de2284e2b2589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08fb948e9dd0cd401e1cc2fa3fe2a4bc60ff4e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296053"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰 디자이너(Analysis Services - 다차원 데이터)
   DSV(데이터 원본 뷰)는 다차원 모델에서 큐브 및 차원을 만들기 위해 사용되는 외부 관계형 데이터 원본에 대한 논리적 뷰입니다.  
@@ -53,10 +53,10 @@ ms.locfileid: "36092068"
 |테이블 관계 수동 추가|[데이터 원본 뷰에서 논리적 관계 정의 &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
 |T-SQL 쿼리를 기반으로 새로운 개체를 정의하기 위한 명명된 쿼리를 만듭니다.|[데이터 원본 뷰에서 명명 된 쿼리 정의 &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
 |기본 데이터를 탐색하여 모델 개체로 표시되는 실제 데이터 값을 봅니다.<br /><br /> 데이터 탐색을 사용하여 기본 차원 테이블 또는 쿼리에서 반환되는 데이터를 시각적으로 검사하고 복사할 수 있습니다. 데이터 탐색 시 기본적으로 샘플 개수 5000개의 최대 개수 샘플링 방법이 사용되지만 이러한 설정을 수정할 수 있습니다.|[데이터 원본 뷰에서 데이터 탐색 &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|DSV에 있는 테이블 및 관계의 일부 또는 전체를 다이어그램으로 작성|[데이터 원본 뷰 디자이너에서의 다이어그램 작업 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|DSV에 있는 테이블 및 관계의 일부 또는 전체를 다이어그램으로 작성|[데이터 원본 뷰 디자이너의 다이어그램 작업 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [추가 또는 제거 있는 테이블이 나 뷰의 데이터 원본 뷰 &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [원본 뷰에 테이블이 나 뷰 데이터에서를 추가 또는 제거 하거나 &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

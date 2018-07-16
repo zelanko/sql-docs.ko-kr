@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dd0f464aeefcbd77f2a4f0dee726516a55a60132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200203"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn 게시 데이터베이스 유지 관리(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  
@@ -36,17 +35,17 @@ ms.locfileid: "36186627"
   
 -   복제 모니터는 항상 원래 게시자에서 게시 정보를 표시합니다. 그러나 원래 게시자를 서버로 추가하면 어떤 복제본에서든지 복제 모니터에서 이 정보를 볼 수 있습니다.  
   
--   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 현재 주 복제본에서 복제를 관리할 때는 복제용으로 설정된 데이터베이스(원래 게시자)에서 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 `PUBLISHINGSERVERNAME` 함수를 사용하십시오. 게시 데이터베이스를 가용성 그룹에 조인하면 보조 데이터베이스 복제본에 저장된 복제 메타데이터가 주 데이터베이스 복제본의 복제 메타데이터와 동일해집니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 보조 서버에서 시스템 테이블에 저장된 게시자 인스턴스 이름은 보조 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 보조로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 복제 저장된 프로시저는 보조 서버에서를 장애 조치 후에 구성할 경우 다른 복제본에서 설정 된 게시 데이터베이스에 끌어오기 구독을 대신 원래 게시자의 이름을 지정 해야 합니다는 변수로 현재 게시자는 *@publisher* 의 매개 변수 `sp_addpullsubscription` 또는 `sp_addmergepulllsubscription`합니다. 그러나 장애 조치 후 게시 데이터베이스를 활성화하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 현재 주 호스트의 이름이 됩니다. 이 경우 *@publisher* 매개 변수에 대해 현재 주 복제본의 호스트 이름을 사용합니다.  
+-   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 현재 주 복제본에서 복제를 관리할 때는 복제용으로 설정된 데이터베이스(원래 게시자)에서 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 `PUBLISHINGSERVERNAME` 함수를 사용하십시오. 게시 데이터베이스를 가용성 그룹에 조인하면 보조 데이터베이스 복제본에 저장된 복제 메타데이터가 주 데이터베이스 복제본의 복제 메타데이터와 동일해집니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 보조 서버에서 시스템 테이블에 저장된 게시자 인스턴스 이름은 보조 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 보조로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치 후 보조에서 저장된 프로시저를 사용 하 여 복제를 구성할 경우 다른 복제본에서 사용 하도록 설정 된 게시 데이터베이스에 끌어오기 구독을 대신 원래 게시자의 이름을 지정 해야 합니다 변수로 현재 게시자는 *@publisher* 의 매개 변수 `sp_addpullsubscription` 또는 `sp_addmergepulllsubscription`합니다. 그러나 장애 조치 후 게시 데이터베이스를 활성화하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 현재 주 호스트의 이름이 됩니다. 이 경우 *@publisher* 매개 변수에 대해 현재 주 복제본의 호스트 이름을 사용합니다.  
   
     > [!NOTE]  
-    >  일부 프로시저와 같은 `sp_addpublication`, *@publisher* 매개 변수는 인스턴스는 게시자에 대해서만 지원 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];이 경우에는 관련이 없습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 합니다.  
+    >  일부 프로시저의 경우와 같은 `sp_addpublication`, *@publisher* 매개 변수는 인스턴스는 게시자에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 이러한 경우에 관련 되지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 합니다.  
   
 -   장애 조치 후 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서 구독을 동기화하려면 구독자에서 끌어오기 구독을 동기화하고 활성 게시자에서 밀어넣기 구독을 동기화합니다.  
   
 ##  <a name="RemovePublDb"></a> 가용성 그룹에서 게시된 데이터베이스 제거  
  게시된 데이터베이스를 가용성 그룹에서 제거하거나 게시된 멤버 데이터베이스가 있는 가용성 그룹을 삭제할 경우 다음 문제를 고려하세요.  
   
--   원래 게시자에서 게시 데이터베이스는 가용성 그룹 주 복제본에서 제거 되 면 경우에 실행 해야 `sp_redirect_publisher` 에 대 한 값을 지정 하지 않고는 *@redirected_publisher* 제거 하기 위해 매개 변수는 게시자/데이터베이스 쌍에 대 한 리디렉션을 합니다.  
+-   원래 게시자의 게시 데이터베이스의 가용성 그룹 주 복제본에서 제거 되 면 실행 해야 합니다 `sp_redirect_publisher` 값을 지정 하지 않고 합니다 *@redirected_publisher* 제거 하기 위해 매개 변수는 게시자/데이터베이스 쌍에 대 한 리디렉션입니다.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -85,7 +84,7 @@ ms.locfileid: "36186627"
         @ignore_distributor = 1;  
     ```  
   
-     실행 `sp_droppublication` 하려면 모든 게시를 제거 합니다. 다시 *@ignore_distributor* 매개 변수를 1로 설정하여 배포자의 활성 게시 데이터베이스에 대한 메타데이터를 유지합니다.  
+     실행 `sp_droppublication` 모든 게시를 제거 합니다. 다시 *@ignore_distributor* 매개 변수를 1로 설정하여 배포자의 활성 게시 데이터베이스에 대한 메타데이터를 유지합니다.  
   
     ```  
     EXEC sys.sp_droppublication   

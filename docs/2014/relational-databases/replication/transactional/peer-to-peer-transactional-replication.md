@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236653"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   피어 투 피어 복제는 *노드*라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다. 트랜잭션 복제를 기반으로 구축된 피어 투 피어 복제는 트랜잭션 측면에서 일관적인 변경 내용을 거의 실시간으로 전파합니다. 따라서 읽기 작업을 확장해야 하는 응용 프로그램은 클라이언트의 읽기 작업을 여러 노드에 배포할 수 있습니다. 여러 노드의 데이터가 거의 실시간으로 유지 관리되므로 피어 투 피어 복제는 데이터 중복을 제공하며 이러한 중복은 데이터의 가용성을 높여 줍니다.  
@@ -149,16 +149,16 @@ ms.locfileid: "36183225"
   
 -   게시 속성 **@allow_initialize_from_backup** 의 값은 `true`합니다.  
   
--   아티클 속성 **@replicate_ddl** 의 값은 `true`; **@identityrangemanagementoption** 의 값은 `manual`; 및 **@status** 옵션 **24** 설정 됩니다.  
+-   아티클 속성 **@replicate_ddl** 의 값은 `true`; **@identityrangemanagementoption** 의 값이 필요 `manual`; 하 고 **@status** 옵션에 **24** 설정 됩니다.  
   
--   아티클 속성에 대 한 값 **@ins_cmd**, **@del_cmd**, 및 **@upd_cmd** 로 설정할 수 없습니다 `SQL`합니다.  
+-   아티클 속성에 대 한 값 **@ins_cmd**합니다 **@del_cmd**, 및 **@upd_cmd** 로 설정할 수 없습니다 `SQL`합니다.  
   
--   구독 속성 **@sync_type** 의 값은 `none` 또는 `automatic`합니다.  
+-   구독 속성 **@sync_type** 의 값이 필요 `none` 또는 `automatic`합니다.  
   
 ### <a name="maintenance-considerations"></a>유지 관리 고려 사항  
  다음 동작을 수행하려면 시스템을 정지해야 합니다. 즉, 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 모두 받았는지 확인해야 합니다.  
   
--   추가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 기존 토폴로지에 노드  
+-   추가 된 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 기존 토폴로지에 노드  
   
 -   기존 게시에 아티클 추가  
   

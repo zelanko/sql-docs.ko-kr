@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 076d8fdde6d26872ba1323b0091b4c5060a9dd46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187b3de9fe21bae7636939e6d222e99006cc3194
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282259"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
   네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36092546"
   
 -   Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우에는 서버 액세스를 구성하는 데 다른 지침을 사용하십시오. [Windows Azure 가상 컴퓨터의 SQL Server Business Intelligence](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx)를 참조하십시오.  
   
- 하지만의 기본 인스턴스 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP 포트 2383에서 수신 대기를 구성할 수 있습니다 다른 고정된 포트에서 수신 하도록 서버를이 형식으로 서버에 연결: \<서버 이름 >:\<포트 번호 >.  
+ 하지만 기본 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP 포트 2383에서 수신 대기를 구성할 수 있습니다 다른 고정된 포트에서 수신 하도록 서버를 서버에이 형식에 연결: \<서버 이름 >:\<portnumber >.  
   
  하나의 TCP 포트만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 사용할 수 있습니다. 여러 네트워크 카드 또는 여러 IP 주소가 있는 컴퓨터에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 컴퓨터에 할당되거나 컴퓨터의 별칭을 가진 모든 IP 주소에 대해 하나의 TCP 포트에서 수신 대기합니다. 여러 포트 요구 사항이 있는 경우 HTTP 액세스에 대해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 구성하는 것이 좋습니다. 그런 다음 선택한 포트에서 여러 HTTP 끝점을 설정할 수 있습니다. [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "36092546"
 ##  <a name="bkmk_checkport"></a> Analysis Services의 포트 및 방화벽 설정 확인  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]가 지원하는 Microsoft Windows 운영 체제에서는 기본적으로 Windows 방화벽이 설정되어 원격 연결을 차단합니다. 방화벽에서 수동으로 포트를 열어 Analysis Services에 대한 인바운드 요청을 허용해야 합니다. SQL Server 설치 프로그램에서는 이 단계를 수행하지 않습니다.  
   
- 포트 설정은 msmdsrv.ini 파일 및 SQL Server Management Studio의 Analysis Services 인스턴스 일반 속성 페이지에서 지정됩니다. 경우 `Port` 설정 된 값을 양의 정수로 서비스는 고정된 포트에서 수신 대기 합니다. 경우 `Port` 설정 된 0으로 서비스는 기본 인스턴스인 경우 포트 2383에서 포트에서 수신 대기를 동적으로 할당 된 명명 된 인스턴스인 경우.  
+ 포트 설정은 msmdsrv.ini 파일 및 SQL Server Management Studio의 Analysis Services 인스턴스 일반 속성 페이지에서 지정됩니다. 경우 `Port` 설정할지 양의 정수로, 서비스는 고정된 포트에서 수신 대기 합니다. 경우 `Port` 설정할지를 0으로 서비스가 수신 하는 기본 인스턴스인 경우 포트 2383에서 또는 동적으로 할당된 된 포트에서 명명 된 인스턴스인 경우.  
   
  동적 포트 할당은 명명된 인스턴스에서만 사용합니다. `MSOLAP$InstanceName` 서비스는 시작할 때, 사용할 포트를 결정합니다. 다음을 수행하여 명명된 인스턴스가 사용하는 실제 포트 번호를 확인할 수 있습니다.  
   
--   작업 관리자를 시작 하 고 클릭 **서비스** 의 PID를 가져오려는 `MSOLAP$InstanceName`합니다.  
+-   작업 관리자를 시작 하 고 클릭 **Services** 의 PID를 가져오려고 합니다 `MSOLAP$InstanceName`합니다.  
   
 -   명령줄에서 `netstat –ao –p TCP`를 실행하여 해당 PID의 TCP 포트 정보를 확인합니다.  
   
--   SQL Server Management Studio를 사용 하 여 포트를 확인 하 고이 형식으로 Analysis Services 서버에 연결: \<ip 주소 >:\<포트 번호 >.  
+-   SQL Server Management Studio를 사용 하 여 포트를 확인 하 고이 형식으로 Analysis Services 서버에 연결 합니다. \<ip 주소 >:\<portnumber >.  
   
  응용 프로그램이 특정 포트에서 수신 대기하고 있더라도 방화벽에서 액세스를 차단하면 연결에 성공할 수 없습니다. 명명된 Analysis Services 인스턴스에 연결하려면 msmdsrv.exe 또는 msmdsrv.exe가 방화벽에서 수신 대기하고 있는 고정 포트에 대한 액세스 차단을 해제해야 합니다. 이 항목의 남은 섹션에서는 액세스 차단을 해제하는 방법에 대한 지침을 제공합니다.  
   
@@ -95,15 +95,15 @@ ms.locfileid: "36092546"
   
 2.  **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭하고 **새 규칙**을 선택합니다.  
   
-3.  규칙 유형에 클릭 `Port` 클릭 하 고 **다음**합니다.  
+3.  규칙 유형에 서 클릭 `Port` 을 클릭 한 다음 **다음**합니다.  
   
-4.  프로토콜 및 포트에서 **TCP** 한 다음 입력 `2383` 에 **특정 로컬 포트**합니다.  
+4.  프로토콜 및 포트에서 선택 **TCP** 차례로 `2383` 에서 **특정 로컬 포트**합니다.  
   
 5.  동작에서 **연결 허용** 을 클릭하고 **다음**을 클릭합니다.  
   
 6.  프로필에서 적용되지 않는 네트워크 위치의 선택을 모두 취소하고 **다음**을 클릭합니다.  
   
-7.  이름에이 규칙에 대해 설명 하는 이름을 입력 합니다 (예를 들어 `SQL Server Analysis Services (tcp-in) 2383`)를 클릭 하 고 **마침**합니다.  
+7.  이름에이 규칙에 대 한 설명이 포함 된 이름을 입력 합니다 (예를 들어 `SQL Server Analysis Services (tcp-in) 2383`)를 클릭 하 고 **완료**합니다.  
   
 8.  원격 연결이 설정되어 있는지 확인하려면 다른 컴퓨터에서 SQL Server Management Studio 또는 Excel을 열고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 이름 **에 서버의 네트워크 이름을 지정하여**에 연결합니다.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "36092546"
   
  다음과 같은 방법을 선택하여 Analysis Services의 명명된 인스턴스에 대한 원격 액세스를 설정할 수 있습니다.  
   
--   동적 포트 할당 및 SQL Server Browser 서비스를 사용합니다. Windows 방화벽에서 SQL Server Browser 서비스에 사용되는 포트를 차단 해제합니다. 이 형식으로 서버에 연결: \<서버 이름 >\\< instancename\>합니다.  
+-   동적 포트 할당 및 SQL Server Browser 서비스를 사용합니다. Windows 방화벽에서 SQL Server Browser 서비스에 사용되는 포트를 차단 해제합니다. 이 형식으로 서버에 연결: \<서버 이름 >\\< n a m e\>합니다.  
   
--   고정 포트 및 SQL Server Browser 서비스를 함께 사용합니다. 이 접근 방식 사용 하면이이 형식을 사용 하 여 연결: \<서버 이름 >\\< instancename\>, 점을 제외 하는 서버가 고정된 포트에서 수신 하는 경우 동적 포트 할당 방법과 동일 합니다. 이 시나리오에서 SQL Server Browser 서비스는 고정 포트에서 수신하는 Analysis Services 인스턴스에 이름 확인을 제공합니다. 이 방법을 사용하려면 고정 포트에서 수신하도록 서버를 구성하고, 해당 포트에 대한 액세스 및 SQL Server Browser 서비스에 사용되는 포트에 대한 액세스를 차단 해제합니다.  
+-   고정 포트 및 SQL Server Browser 서비스를 함께 사용합니다. 이 방법은 연결할 수 있습니다이 형식을 사용 하 여: \<서버 이름 >\\< n a m e\>, 서버가 고정된 포트에서 수신 하는 경우에 동적 포트 할당 방법과 동일 합니다. 이 시나리오에서 SQL Server Browser 서비스는 고정 포트에서 수신하는 Analysis Services 인스턴스에 이름 확인을 제공합니다. 이 방법을 사용하려면 고정 포트에서 수신하도록 서버를 구성하고, 해당 포트에 대한 액세스 및 SQL Server Browser 서비스에 사용되는 포트에 대한 액세스를 차단 해제합니다.  
   
  SQL Server Browser 서비스는 기본 인스턴스가 아닌 명명된 인스턴스와만 사용됩니다. 이 서비스는 SQL Server 기능을 명명된 인스턴스로 설치할 때마다 자동으로 설치되고 사용되도록 설정됩니다. SQL Server Browser 서비스가 필요한 방법을 선택한 경우 해당 서비스가 서버에서 사용되도록 설정되어 있고 시작되었는지 확인해야 합니다.  
   
@@ -148,17 +148,17 @@ ms.locfileid: "36092546"
   
 2.  SQL Server Browser 서비스에 대한 액세스 차단을 해제하려면 **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭한 후 **새 규칙**을 클릭합니다.  
   
-3.  규칙 유형에 클릭 `Port` 클릭 하 고 **다음**합니다.  
+3.  규칙 유형에 서 클릭 `Port` 을 클릭 한 다음 **다음**합니다.  
   
-4.  프로토콜 및 포트에서 **TCP** 한 다음 입력 `2382` 에 **특정 로컬 포트**합니다.  
+4.  프로토콜 및 포트에서 선택 **TCP** 차례로 `2382` 에서 **특정 로컬 포트**합니다.  
   
 5.  동작에서 **연결 허용** 을 클릭하고 **다음**을 클릭합니다.  
   
 6.  프로필에서 적용되지 않는 네트워크 위치의 선택을 모두 취소하고 **다음**을 클릭합니다.  
   
-7.  이름에이 규칙에 대해 설명 하는 이름을 입력 합니다 (예를 들어 `SQL Server Browser Service (tcp-in) 2382`)를 클릭 하 고 **마침**합니다.  
+7.  이름에이 규칙에 대 한 설명이 포함 된 이름을 입력 합니다 (예를 들어 `SQL Server Browser Service (tcp-in) 2382`)를 클릭 하 고 **완료**합니다.  
   
-8.  원격 연결이 설정 되어 있는지를 확인 하려면 다른 컴퓨터에 SQL Server Management Studio 또는 Excel을 열고를이 형식에 서버의 네트워크 이름 및 인스턴스 이름을 지정 하 여 Analysis Services에 연결: \<서버 이름 > \\< instancename\>합니다. 예를 들어 서버 이름은 **AW-SRV01** 이고 명명된 인스턴스 이름은 **Finance**인 경우 네트워크 서버 이름은 **AW-SRV01\Finance**가 됩니다.  
+8.  원격 연결이 설정 되어 있는지를 확인 하려면 다른 컴퓨터에 SQL Server Management Studio 또는 Excel을 열고 및 형식이으로 서버의 네트워크 이름 및 인스턴스 이름을 지정 하 여 Analysis Services에 연결: \<서버 이름 > \\< n a m e\>합니다. 예를 들어 서버 이름은 **AW-SRV01** 이고 명명된 인스턴스 이름은 **Finance**인 경우 네트워크 서버 이름은 **AW-SRV01\Finance**가 됩니다.  
   
  **옵션 2: 명명된 인스턴스에 고정 포트 사용**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36092546"
   
 2.  Analysis Services에 대한 액세스 차단을 해제하려면 **인바운드 규칙** 을 마우스 오른쪽 단추로 클릭한 후 **새 규칙**을 클릭합니다.  
   
-3.  규칙 유형에 클릭 `Port` 클릭 하 고 **다음**합니다.  
+3.  규칙 유형에 서 클릭 `Port` 을 클릭 한 다음 **다음**합니다.  
   
 4.  프로토콜 및 포트에서 **TCP** 를 선택한 다음 **특정 로컬 포트**에 고정 포트를 입력합니다.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "36092546"
   
 6.  프로필에서 적용되지 않는 네트워크 위치의 선택을 모두 취소하고 **다음**을 클릭합니다.  
   
-7.  이름에이 규칙에 대해 설명 하는 이름을 입력 합니다 (예를 들어 `SQL Server Analysis Services on port 54321`)를 클릭 하 고 **마침**합니다.  
+7.  이름에이 규칙에 대 한 설명이 포함 된 이름을 입력 합니다 (예를 들어 `SQL Server Analysis Services on port 54321`)를 클릭 하 고 **완료**합니다.  
   
-8.  원격 연결이 설정 되어 있는지를 확인 하려면 다른 컴퓨터에 SQL Server Management Studio 또는 Excel을 열고를이 형식에는 서버 및 포트 번호의 네트워크 이름을 지정 하 여 Analysis Services에 연결: \<서버 이름 >: \<포트 번호 >.  
+8.  원격 연결이 설정 되어 있는지를 확인 하려면 다른 컴퓨터에 SQL Server Management Studio 또는 Excel을 열고 및이 형식으로 네트워크 이름 서버 및 포트 번호를 지정 하 여 Analysis Services 연결: \<서버 이름 >: \<portnumber >.  
   
 #### <a name="netsh-advfirewall-syntax"></a>Netsh AdvFirewall 구문  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36092546"
   
  고정 포트를 사용하면 서버 이름 뒤에 포트 번호를 추가해야 하므로 기본 인스턴스에 대한 연결 구문이 변경됩니다. 예를 들어 SQL Server Management Studio에서 포트 54321에서 수신하는 기본 로컬 Analysis Services 인스턴스에 연결하는 경우 Management Studio의 '서버에 연결' 대화 상자에 서버 이름으로 localhost:54321을 입력해야 합니다.  
   
- 명명된 된 인스턴스를 사용 하는 경우 서버 이름을 지정 하는 방법을 변경 하지 않고 고정된 포트를 할당할 수 있습니다 (특히, 사용할 수 있습니다 \<a m e \ > 명명 된 인스턴스에 고정된 포트에서 수신 연결). SQL Server Browser 서비스가 실행되고 있으며 해당 서비스가 수신 대기 중인 포트를 차단 해제한 경우에만 이 방법이 가능합니다. SQL Server Browser 서비스에서 기준으로 고정된 포트에 대 한 리디렉션을 제공 \<a m e \ > 합니다. 고정 포트에서 수신 대기하는 SQL Server Browser 서비스 및 Analysis Services의 명명된 인스턴스 모두에 대해 포트를 열기만 하면 SQL Server Browser 서비스는 명명된 인스턴스에 대한 연결을 확인합니다.  
+ 명명된 된 인스턴스를 사용 하는 경우 서버 이름을 지정 하는 방법을 변경 하지 않고 고정된 포트를 할당할 수 있습니다 (특히, 사용할 수 있습니다 \<servername\instancename > 명명 된 인스턴스에 고정된 포트에서 수신 대기 연결). SQL Server Browser 서비스가 실행되고 있으며 해당 서비스가 수신 대기 중인 포트를 차단 해제한 경우에만 이 방법이 가능합니다. SQL Server Browser 서비스에 기반한 고정된 포트로 리디렉션을 제공 됩니다 \<servername\instancename >. 고정 포트에서 수신 대기하는 SQL Server Browser 서비스 및 Analysis Services의 명명된 인스턴스 모두에 대해 포트를 열기만 하면 SQL Server Browser 서비스는 명명된 인스턴스에 대한 연결을 확인합니다.  
   
 1.  사용 가능한 TCP/IP 포트 중에서 사용할 포트를 결정합니다.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "36092546"
   
 4.  지정한 TCP 포트의 차단을 해제하도록 Windows 방화벽을 구성합니다. 명명된 인스턴스에 고정 포트를 사용하는 경우에는 해당 인스턴스에 대해 지정한 TCP 포트 및 SQL Server Browser 서비스에 대한 TCP 포트 2382의 차단을 해제합니다.  
   
-5.  Management Studio에서 로컬로 연결하여 확인한 다음 다른 컴퓨터의 클라이언트 응용 프로그램에서 원격으로 연결하여 확인합니다. Management Studio를 사용 하려면이 형식에 서버 이름을 지정 하 여 Analysis Services 기본 인스턴스로에 연결: \<서버 이름 >:\<포트 번호 >. 명명된 된 인스턴스를 서버 이름으로 지정 \<서버 이름 >\\< instancename\>합니다.  
+5.  Management Studio에서 로컬로 연결하여 확인한 다음 다른 컴퓨터의 클라이언트 응용 프로그램에서 원격으로 연결하여 확인합니다. Management Studio를 사용 하려면 Analysis Services 기본 인스턴스에 연결 형식으로 서버 이름을 지정 하 여: \<서버 이름 >:\<portnumber >. 명명 된 인스턴스의 경우 서버 이름 지정 \<서버 이름 >\\< n a m e\>합니다.  
   
 ##  <a name="bkmk_cluster"></a> Analysis Services 클러스터에 대한 포트 구성  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 장애 조치(failover) 클러스터는 기본 인스턴스 또는 명명된 인스턴스로 설치했는지 여부에 관계없이 항상 TCP 포트 2383에서 수신합니다. 동적 포트 할당은 Windows 장애 조치(failover) 클러스터에 설치되어 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용되지 않습니다. 클러스터에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터에.를 실행하는 모든 노드에서 TCP 2383을 열어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]클러스터링에 대한 자세한 내용은 [SQL Server Analysis Services를 클러스터링하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  

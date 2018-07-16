@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 caps.latest.revision: 25
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66c714d7b0e2555a732958b8b23259f6106e8389
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 653782ef61866adfa1a495deca49b563f12ca110
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176150"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>1단계: 4단원 패키지 복사
   이 태스크에서는 4단원에서 만든 Lesson 4.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 4단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 5단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -40,9 +40,9 @@ ms.locfileid: "36186566"
   
 6.  **제어 흐름** 탭 배경의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-7.  속성 창에서 업데이트 된 `Name` 속성을 `Lesson 5`합니다.  
+7.  속성 창에서 업데이트를 `Name` 속성을 `Lesson 5`입니다.  
   
-8.  에 대 한 상자 클릭는 **ID** 속성을 다음 드롭다운 화살표를 클릭 한 다음 클릭  **\<새 ID 만들기 >** 합니다.  
+8.  에 대 한 상자를 클릭 합니다 **ID** 속성을 다음 드롭다운 화살표를 클릭 한 다음 클릭  **\<새 ID 생성 >** 합니다.  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>완성된 4단원 패키지를 추가하려면  
   

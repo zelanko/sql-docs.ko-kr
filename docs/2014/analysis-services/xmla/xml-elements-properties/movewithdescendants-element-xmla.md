@@ -24,18 +24,18 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332573"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 요소(XMLA)
-  특성 멤버의 하위 항목의 부모에 의해 업데이트 되는지 여부를 나타냅니다. [업데이트](../xml-elements-commands/update-element-xmla.md) 명령입니다.  
+  특성 멤버의 하위 항목의 부모에 의해 업데이트 되는지 여부를 나타냅니다 [업데이트](../xml-elements-commands/update-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,12 +64,12 @@ ms.locfileid: "36092926"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `MoveWithDescendants` 요소 결정 여부는 `Update` 명령에서 식별 특성 멤버를 방금 업데이트 해서는 안는 [특성](attributes-element-xmla.md) 요소 뿐만 아니라는 해당 특성 멤버의 하위 항목 수는 업데이트.  
+ `MoveWithDescendants` 요소 결정 하는지 여부를 `Update` 명령에서 식별 한 특성 멤버를 바로 업데이트 하지 않아야 합니다 [특성](attributes-element-xmla.md) 요소 뿐만 되도록 해당 특성 멤버의 하위 항목을 도 업데이트 합니다.  
   
 > [!NOTE]  
 >  이 요소는 부모-자식 계층에 있는 특성 멤버에만 적용됩니다.  
   
- 구성원을 업데이트 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
+ 구성원을 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요. [삽입, 업데이트 및 삭제 하는 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  

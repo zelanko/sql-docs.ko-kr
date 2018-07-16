@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318333"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독을 다시 초기화하는 방법에 대해 설명합니다. 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅숏을 적용할 수 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "36082045"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_reinitmergepullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)을 실행합니다. **@publisher**, **@publisher_db**및 **@publication**를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면의 값을 지정 `true` 에 대 한 **@upload_first**합니다. 이렇게 하면 다음 병합 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_reinitmergepullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)을 실행합니다. **@publisher**, **@publisher_db**및 **@publication**를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면 값을 지정 `true` 에 대 한 **@upload_first**합니다. 이렇게 하면 다음 병합 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -132,7 +132,7 @@ ms.locfileid: "36082045"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독을 다시 초기화하려면  
   
-1.  게시자에서 [sp_reinitmergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber**및 **@subscriber_db**를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면의 값을 지정 `true` 에 대 한 **@upload_first**합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  게시자에서 [sp_reinitmergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber**및 **@subscriber_db**를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면 값을 지정 `true` 에 대 한 **@upload_first**합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -177,7 +177,7 @@ ms.locfileid: "36082045"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 끌어오기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 끌어오기 구독이 존재 하지 않습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> 메서드를 호출합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36082045"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 밀어넣기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 밀어넣기 구독이 존재 하지 않습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 메서드를 호출합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36082045"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 끌어오기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 끌어오기 구독이 존재 하지 않습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> 메서드를 호출합니다. 다시 초기화하기 전에 구독자의 변경 내용을 업로드하려면 `true` 값을 전달하고, 다시 초기화할 때 보류 중인 모든 변경 내용을 무시하려면 `false`를 전달합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36082045"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 된 또는 밀어넣기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 밀어넣기 구독이 존재 하지 않습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> 메서드를 호출합니다. 다시 초기화하기 전에 구독자의 변경 내용을 업로드하려면 `true` 값을 전달하고, 다시 초기화할 때 보류 중인 모든 변경 내용을 무시하려면 `false`를 전달합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file system permissions
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02a84ea92555c74c0fed76b4f90b2d9c2337f46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d16d2580775cde3c1b87c934c1bd69133501d3ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260959"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성
   이 항목에서는 데이터베이스 파일이 저장된 위치에 파일 시스템 즉, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 액세스 권한을 부여하는 방법에 대해 설명합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 사용하려면 Windows 파일 시스템에서 데이터베이스 파일이 저장된 파일 폴더에 액세스할 수 있는 권한이 있어야 합니다. 기본 위치에 대한 사용 권한은 설치 중에 구성됩니다. 데이터베이스 파일을 다른 위치에 저장한 경우 다음 단계를 수행하여 해당 위치에 대한 모든 권한을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 부여해야 할 수 있습니다.  
@@ -38,15 +38,15 @@ ms.locfileid: "36187038"
   
 3.  **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 대화 상자에서 위치 목록 맨 위에 있는 **위치**를 클릭하고 컴퓨터 이름을 선택한 다음 **확인**을 클릭합니다.  
   
-4.  에 **선택할 개체 이름을 입력** 온라인 설명서 항목에 나열 된 서비스별 SID의 이름 상자에서 **Windows 서비스 계정 및 권한 구성**합니다. (에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스별 SID 사용 하 여 **NT SERVICE\MSSQLSERVER** 기본 인스턴스에 대 한 또는 **NT SERVICE\MSSQL$ InstanceName** 명명 된 인스턴스에 대 한 합니다.)  
+4.  에 **선택할 개체 이름을 입력 하십시오** 온라인 설명서 항목에 나열 된 서비스별 SID의 이름 상자에서 **Windows 서비스 계정 및 권한 구성**합니다. (에 대 한 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스별 SID 사용 하 여 **NT SERVICE\MSSQLSERVER** 기본 인스턴스의 경우 또는 **NT SERVICE\MSSQL$ InstanceName** 명명 된 인스턴스에 대 한 합니다.)  
   
 5.  **이름 확인** 을 클릭하여 항목의 유효성을 검사합니다. 유효성 검사가 종종 실패하며 이름을 찾을 수 없음이 표시될 수 있습니다. **확인**을 클릭하면 **여러 이름 찾음** 대화 상자가 표시됩니다.  
   
-6.  이제 서비스별 SID를 선택할 **MSSQLSERVER** 또는 **NT SERVICE\MSSQL$ InstanceName**, 클릭 하 고 **확인**합니다.  
+6.  이제 서비스별 SID를 선택할 **MSSQLSERVER** 하거나 **NT SERVICE\MSSQL$ InstanceName**를 클릭 하 고 **확인**합니다.  
   
 7.  **확인** 을 다시 클릭하여 **사용 권한** 대화 상자로 돌아갑니다.  
   
-8.  **그룹 또는 사용자** 이름 상자에서 서비스별 sid를 선택한 다음는 **에 대 한 권한을** \<이름 > 상자에서는 **허용** 에대한확인란 **모든 권한**합니다.  
+8.  에 **사용자나 그룹** 이름 상자에서 서비스별 sid를 한 다음는 **에 대 한 권한을** \<이름 > 상자에서를 **허용** 에대한확인란 **모든 권한**합니다.  
   
 9. **적용**을 클릭한 다음 **확인** 을 두 번 클릭하여 종료합니다.  
   

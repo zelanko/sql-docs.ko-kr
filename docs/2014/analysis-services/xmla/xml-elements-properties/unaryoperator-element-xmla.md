@@ -24,18 +24,18 @@ helpviewer_keywords:
 - UnaryOperator element
 ms.assetid: 4dc9cfbe-6f8b-42bc-8d3a-42f48ca5d299
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c4e40b91c8d8f3d533362e3d938d99c351ae4f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d8d0edb8231a27a2eb52241298d29ed271f86d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306093"
 ---
 # <a name="unaryoperator-element-xmla"></a>UnaryOperator 요소(XMLA)
-  부모를 나타내는 특성 멤버에 대 한 단항 연산자가 포함 된 [특성](attribute-element-xmla.md) 요소입니다.  
+  부모를 나타내는 특성 멤버의 단항 연산자를 포함 [특성](attribute-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36092488"
 ## <a name="remarks"></a>Remarks  
  `UnaryOperator` 요소는 부모 `Attribute` 요소에서 정의하는 특성 멤버의 단항 연산자를 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
   
- MDX 식에 대 한 자세한 내용은 참조 [식 &#40;MDX&#41;](/sql/mdx/expressions-mdx)합니다.  
+ MDX 식에 대 한 자세한 내용은 참조 하십시오 [식 &#40;MDX&#41;](/sql/mdx/expressions-mdx)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소를 삽입 &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   

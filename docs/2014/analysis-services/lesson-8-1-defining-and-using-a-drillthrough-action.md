@@ -1,5 +1,5 @@
 ---
-title: 정의 하 고 드릴스루 동작을 사용 하 여 | Microsoft Docs
+title: 드릴스루 동작 정의 및 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263729"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>드릴스루 동작 정의 및 사용
   쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -34,15 +34,15 @@ ms.locfileid: "36186654"
   
      다음 그림에서는 큐브 디자이너의 **동작** 탭을 보여 줍니다.  
   
-     ![큐브 디자이너의 동작 탭](../../2014/tutorials/media/l8-action1.gif "큐브 디자이너의 동작 탭")  
+     ![큐브 디자이너의 작업 탭](../../2014/tutorials/media/l8-action1.gif "큐브 디자이너의 작업 탭")  
   
 2.  **동작** 탭의 도구 모음에서 **새 드릴스루 동작** 단추를 클릭합니다.  
   
      표시 창에 빈 동작 템플릿이 표시됩니다.  
   
-     ![디스플레이 창에서 빈 동작 템플릿](../../2014/tutorials/media/l8-action2.gif "디스플레이 창에서 빈 동작 템플릿이")  
+     ![표시 창의 빈 동작 템플릿](../../2014/tutorials/media/l8-action2.gif "표시 창의 빈 동작 템플릿이")  
   
-3.  에 **이름** 이 동작의 이름을 변경 합니다 `Internet Sales Details Drillthrough Action`합니다.  
+3.  에 **이름을** 상자에서이 동작의 이름을 변경 `Internet Sales Details Drillthrough Action`합니다.  
   
 4.  **측정값 그룹 멤버** 목록에서 **Internet Sales**를 선택합니다.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36186654"
   
      ![추가 속성 상자](../../2014/tutorials/media/l8-action4.gif "추가 속성 상자")  
   
-8.  에 **최대 행** 상자에서 입력 `10`합니다.  
+8.  에 **최대 행** 상자에 입력 `10`합니다.  
   
-9. 에 **캡션** 상자에서 입력 `Drillthrough to Order Details…`합니다.  
+9. 에 **캡션** 상자에 입력 `Drillthrough to Order Details…`합니다.  
   
      이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 응용 프로그램 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36186654"
   
      다음 그림에 표시된 것처럼 Adam Powell에게 운송된 주문에 대한 세부 정보가 **데이터 샘플 뷰어**에 표시됩니다. 그러나 주문일, 기한 및 운송일과 같은 일부 추가 세부 정보가 도움이 될 수도 있습니다. 다음 절차에서는 이러한 세부 정보를 추가합니다.  
   
-     ![Adam Powell에 게 운송 된 주문](../../2014/tutorials/media/l8-action6.gif "Adam Powell에 게 운송 된 주문")  
+     ![Adam Powell에 주문 배송](../../2014/tutorials/media/l8-action6.gif "Adam Powell에 배송 주문")  
   
 8.  Excel 닫기  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36186654"
   
     -   ShipDateKey  
   
-6.  변경의 **이름** 속성에 대 한는 **Order Date Key** 특성을 `Order Date` 에 대 한 찾아보기 단추를 클릭는 **이름 열** 속성 및는 **이름 열** 대화 상자에서 **날짜** 원본 테이블 및 원본 열으로 SimpleDate를 선택 합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  변경을 **이름을** 속성에 대 한를 **Order Date Key** 특성을 `Order Date` 에 대 한 찾아보기 단추를 클릭 합니다 **이름 열** 속성에는 **이름 열** 대화 상자에서 **날짜** 원본 테이블 및 원본 열으로 SimpleDate를 선택 합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  변경의 **이름** 속성에 대 한는 **Due Date Key** 특성을 `Due Date`와 동일한 방법을 사용 하 여 다음의 **Order Date Key** 는 특성에서 **이름 열** 이 특성에 대 한 속성 **Date.SimpleDate (WChar)** 합니다.  
+7.  변경 합니다 **이름** 속성에 대 한 합니다 **Due Date Key** 특성을 `Due Date`, 한 다음, 동일한 방법을 사용 하 여를 **Order Date Key** 특성을 변경 합니다  **열의 이름을** 속성에이 특성에 대 한 **Date.SimpleDate (WChar)** 합니다.  
   
-8.  변경의 **이름** 속성에 대 한는 **Ship Date Key** 특성을 `Ship Date`, 한 다음 변경는 **이름 열** 에이 특성에 대 한 속성  **Date.SimpleDate (WChar)** 합니다.  
+8.  변경 합니다 **이름** 속성에 대 한 합니다 **Ship Date Key** 특성을 `Ship Date`, 변경한 후를 **이름 열** 이 특성에 대 한 속성  **Date.SimpleDate (WChar)** 합니다.  
   
 9. **Tutorial 큐브에 대한 큐브 디자이너의** 동작 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 탭으로 전환합니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36186654"
   
      Adam Powell에게 운송된 이 주문에 대한 세부 정보가 임시 워크시트에 표시됩니다. 다음 그림에 표시된 것처럼 여기에는 항목에 대한 설명, 주문 번호, 주문 날짜, 기한 및 운송 날짜 정보가 포함됩니다.  
   
-     ![Adam Powell에 게 운송 된 주문](../../2014/tutorials/media/l8-action8.gif "Adam Powell에 게 운송 된 주문")  
+     ![Adam Powell에 주문 배송](../../2014/tutorials/media/l8-action8.gif "Adam Powell에 배송 주문")  
   
 ## <a name="next-lesson"></a>다음 단원  
  [9단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  

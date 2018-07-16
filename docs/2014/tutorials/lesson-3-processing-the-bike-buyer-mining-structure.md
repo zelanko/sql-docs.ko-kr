@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: ae7d871f4695d4109866a6a25979936116838d17
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 4fdf27dce12915a8cf0f26f976543c00ad70725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306633"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>3 단원: Bike Buyer 마이닝 구조 처리
-  이 단원에서는 사용 하 여 INSERT INTO 문과 vTargetMail 뷰를는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 마이닝 구조와 마이닝 모델에서 만든 처리 예제 데이터베이스 [1 단원: Bike Buyer 마이닝 구조만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 및 [2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  
+  이 단원에서는 사용 하 여 INSERT INTO 문과의 vTargetMail 뷰를 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 데이터베이스에서 만든 마이닝 모델과 마이닝 구조를 처리 하는 데 [1 단원:BikeBuyer마이닝구조만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 하 고 [2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  
   
- 마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 마이닝 모델을 처리하면 마이닝 구조에서 정의한 데이터가 사용자가 선택한 데이터 마이닝 알고리즘을 통해 전달됩니다. 이 알고리즘에서는 경향 및 패턴을 검색한 다음 마이닝 모델에 이 정보를 저장합니다. 따라서 마이닝 모델은 실제 원본 데이터 대신 알고리즘에서 발견한 정보를 포함합니다. 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  
+ 마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 마이닝 모델을 처리하면 마이닝 구조에서 정의한 데이터가 사용자가 선택한 데이터 마이닝 알고리즘을 통해 전달됩니다. 이 알고리즘에서는 경향 및 패턴을 검색한 다음 마이닝 모델에 이 정보를 저장합니다. 따라서 마이닝 모델은 실제 원본 데이터 대신 알고리즘에서 발견한 정보를 포함합니다. 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  
   
  구조 열이나 원본 데이터를 변경하는 경우에만 마이닝 구조를 다시 처리하면 됩니다. 이미 처리된 마이닝 구조에 마이닝 모델을 추가하는 경우에는 INSERT INTO MINING MODEL 문을 사용하여 새 마이닝 모델을 학습합니다.  
   
 ## <a name="train-structure-template"></a>구조 템플릿의 학습  
- 마이닝 구조 및 연결된 된 마이닝 모델을 학습 하기 위해 사용 하 여는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 마이닝 구조 및 연결된 된 마이닝 모델을 학습 하기 위해 사용 합니다 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -67,7 +67,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- 이 단원에서는 `OPENQUERY`를 사용하여 원본 데이터를 정의합니다. 원본 쿼리를 정의의 다른 방법에 대 한 정보를 참조 하십시오. [ &#60;원본 데이터 쿼리와&#62;](/sql/dmx/source-data-query)합니다.  
+ 이 단원에서는 `OPENQUERY`를 사용하여 원본 데이터를 정의합니다. 원본 쿼리를 정의 하는 다른 방법에 대 한 정보를 참조 하세요 [ &#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)합니다.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
@@ -78,7 +78,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조를 처리하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -174,7 +174,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Process Bike Buyer Structure.dmx`합니다.  
+7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Process Bike Buyer Structure.dmx`입니다.  
   
 8.  도구 모음에서 **실행** 단추를 클릭합니다.  
   

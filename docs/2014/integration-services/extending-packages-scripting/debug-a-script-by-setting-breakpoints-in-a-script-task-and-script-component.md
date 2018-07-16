@@ -17,13 +17,13 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e171650a4f3fa04644bf87303cf26caf4eb172dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6327983f42efbf0b8d891495c9048d1ab963d0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306213"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정하여 스크립트 디버깅
   이 절차에서는 스크립트 태스크 및 스크립트 구성 요소에 사용되는 스크립트에서 중단점을 설정하는 방법에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36078837"
  스크립트에 중단점을 설정하면 중단점이 기본 제공 중단점과 함께 **중단점 설정 - \<개체 이름>** 대화 상자에 나열됩니다.  
   
 > [!IMPORTANT]  
->  스크립트 태스크 및 스크립트 구성 요소의 중단점이 무시되는 경우도 있습니다. 자세한 내용은 참조는 **스크립트 태스크 디버깅** 섹션 [코딩 및 스크립트 태스크 디버깅](../control-flow/script-task.md) 및 **Debugging the Script Component** [코딩의 섹션 and Debugging the Script Component] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md 합니다.  
+>  스크립트 태스크 및 스크립트 구성 요소의 중단점이 무시되는 경우도 있습니다. 자세한 내용은 참조는 **스크립트 태스크 디버깅** 섹션 [스크립트 태스크 코딩 및 디버깅](../control-flow/script-task.md) 및 **Debugging the Script Component** [코딩의 섹션 and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md 합니다.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>스크립트에 중단점을 설정하려면  
   

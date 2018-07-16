@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293723"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. `Language` 및 `Collation` 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
   
  다차원 모델(전용)의 데이터베이스나 큐브에서 이러한 속성을 설정할 수 있으며, 큐브 내 개체에 대해 만드는 번역에서도 이 속성을 설정할 수 있습니다.  
   
- 설정할 때 `Language` 및 `Collation`, 처리 및 쿼리 실행 중 또는 (다차원 모델에만 해당) 데이터 모델에서 사용 하는 설정을 지정 하거나는 하므로 즉 외래 여러 번역을 사용 하 여 모델을 착용 하기는 언어 스피커 외국어에서 모델을 작업할 수 있습니다. 개체(데이터베이스, 모델 또는 큐브)에 대한 `Language` 및 `Collation` 속성을 명시적으로 설정하는 것은 개발 환경 및 프로덕션 서버가 다양한 로캘용으로 구성되고 언어 및 데이터 정렬이 의도한 대상 환경의 언어 및 데이터 정렬과 일치해야 하는 경우를 위한 것입니다.  
+ 설정 하는 경우 `Language` 고 `Collation`, 처리 및 쿼리를 실행 하는 동안 또는 (다차원 모델에만 해당)에 대 한 데이터 모델에서 사용 되는 설정을 지정 하거나는 외국어 사용자 수 있으므로 해당 외래 여러 번역을 사용 하 여 모델 언어 발표자는 사용자의 기본 언어 모델을 작업할 수 있습니다. 개체(데이터베이스, 모델 또는 큐브)에 대한 `Language` 및 `Collation` 속성을 명시적으로 설정하는 것은 개발 환경 및 프로덕션 서버가 다양한 로캘용으로 구성되고 언어 및 데이터 정렬이 의도한 대상 환경의 언어 및 데이터 정렬과 일치해야 하는 경우를 위한 것입니다.  
   
  이 항목에는 다음의 섹션이 포함됩니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36078939"
 -   [Analysis Services에서의 GB18030 지원](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> 언어 및 데이터 정렬 속성을 지원하는 개체  
- `Language` 및 `Collation` 속성은 종종 함께 표시을 설정할 수 있는 `Language`를 설정할 수도 있습니다 `Collation`합니다.  
+ `Language` 및 `Collation` 속성은 종종 함께 표시 설정할 수 있습니다 `Language`를 설정할 수도 있습니다 `Collation`합니다.  
   
- 설정할 수 있습니다 `Language` 및 `Collation` 이러한 개체에서:  
+ 설정할 수 있습니다 `Language` 고 `Collation` 이러한 개체에서:  
   
 -   **인스턴스**. 인스턴스에 배포하는 모든 프로젝트는 언어와 데이터 정렬이 정의되어 있지 않다고 가정하고 인스턴스의 언어와 데이터 정렬을 채택하게 됩니다. 기본적으로 다차원 모델은 언어 및 데이터 정렬을 비워 둡니다. 프로젝트가 배포되면 결과 데이터베이스와 큐브는 인스턴스의 언어와 데이터 정렬을 가져옵니다.  
   
@@ -65,29 +65,29 @@ ms.locfileid: "36078939"
   
 -   **데이터베이스**. 상속을 중단하기 위해 데이터베이스에 포함된 모든 큐브에 의해 사용되는 프로젝트 수준에서 언어 및 데이터 정렬을 명시적으로 설정할 수 있습니다. 달리 명시하지 않는 한 데이터베이스에 있는 모든 큐브는 이 수준에서 지정하는 언어와 데이터 정렬을 가져오게 됩니다. 정기적으로 코드를 하고 서로 다른 로캘에 배포하는 경우(예를 들어 중국어 컴퓨터에서 솔루션을 개발하지만 프랑스어 자회사가 소유한 서버에 배포하는 경우) 데이터베이스 수준에서 언어와 데이터 정렬을 설정하는 것은 솔루션이 대상 환경에서 작동하도록 하는 첫 번째이자 가장 중요한 단계입니다. 이러한 속성을 설정하는 가장 좋은 곳은 프로젝트 내부입니다(프로젝트에서 **데이터베이스 편집** 명령을 통해).  
   
--   **데이터베이스 차원**. 노출 하지만 `Language` 및 `Collation` 속성이이 개체의 속성을 설정 하는 데이터베이스 차원에는 유용 하지 않습니다. 데이터베이스 차원은 독립 실행형 개체로 사용되지 않으므로 사용자가 정의하는 속성을 사용하는 것은 불가능하지 않다면 어려울 수 있습니다. 차원은 큐브에 있으면 항상 큐브 부모로부터 `Language`와 `Collation`를 상속받습니다. 독립 실행형 데이터베이스 차원 개체에 설정했을 수 있는 모든 값은 무시됩니다.  
+-   **데이터베이스 차원**. 디자이너 노출 하더라도 `Language` 고 `Collation` 이 개체의 속성을 설정 하는 데이터베이스 차원에 대 한 속성은 유용 하지 않습니다. 데이터베이스 차원은 독립 실행형 개체로 사용되지 않으므로 사용자가 정의하는 속성을 사용하는 것은 불가능하지 않다면 어려울 수 있습니다. 차원은 큐브에 있으면 항상 큐브 부모로부터 `Language`와 `Collation`를 상속받습니다. 독립 실행형 데이터베이스 차원 개체에 설정했을 수 있는 모든 값은 무시됩니다.  
   
 -   **큐브**. 기본 쿼리 구조로서 큐브 수준에서 언어와 데이터 정렬을 설정할 수 있습니다. 예를 들어, 동일한 프로젝트 내에서 영어 및 중국어 버전과 같이 여러 언어로 된 큐브 버전을 만들 수 있습니다. 여기서 각 큐브에는 자체 언어 및 데이터 정렬이 있습니다.  
   
      설정한 언어와 데이터 정렬이 무엇이든 간에 큐브는 큐브에 포함된 모든 측정값 및 차원에 의해 사용됩니다. 데이터 정렬 속성을 더욱 상세한 수준으로 설정하는 유일한 방법은 차원 특성에서 번역을 만드는 경우입니다. 그렇지 않고 특성 수준에서 번역이 없는 것으로 가정하면 큐브당 하나의 데이터 정렬이 존재하게 됩니다.  
   
- 설정할 수 있습니다 `Language`, 자체에 **번역** 개체입니다.  
+ 또한 설정할 수 있습니다 `Language`, 자체로는 **번역** 개체입니다.  
   
- 번역 개체는 큐브나 차원에 번역을 추가할 때 생성됩니다. `Language` 번역 정의의 일부가입니다. `Collation`반면에 큐브 이상으로 설정 되며 모든 번역에서 공유 합니다. 이것은 여러 언어 속성(각 번역에 대해 하나)과 오직 한 데이터 정렬이 표시되는 번역이 포함된 큐브의 XMLA에서 명백히 나타납니다. 차원 특성 번역에 대한 한 가지 예외가 있습니다. 이 예외에서는 원본 열과 일치하는 특성 데이터 정렬을 지정하기 위해 큐브 데이터 정렬을 재정의합니다. (데이터베이스 엔진에서는 개별 열에 대한 데이터 정렬 설정을 지원하며, 다른 원본 열에서 멤버 데이터를 가져오도록 개별 번역을 구성하는 것은 일반적입니다.) 하지만 그렇지 않으면 다른 모든 번역에 대 한 `Language` 없이 단독으로 사용 되는 `Collation` 단독 합니다. 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
+ 번역 개체는 큐브나 차원에 번역을 추가할 때 생성됩니다. `Language` 번역 정의의 일부가입니다. `Collation`다른 한편으로 큐브의 이상으로 설정 되며 모든 번역에서 공유 합니다. 이것은 여러 언어 속성(각 번역에 대해 하나)과 오직 한 데이터 정렬이 표시되는 번역이 포함된 큐브의 XMLA에서 명백히 나타납니다. 차원 특성 번역에 대한 한 가지 예외가 있습니다. 이 예외에서는 원본 열과 일치하는 특성 데이터 정렬을 지정하기 위해 큐브 데이터 정렬을 재정의합니다. (데이터베이스 엔진에서는 개별 열에 대한 데이터 정렬 설정을 지원하며, 다른 원본 열에서 멤버 데이터를 가져오도록 개별 번역을 구성하는 것은 일반적입니다.) 하지만 다른 모든 번역에 대해이 고, 그렇지 `Language` 없이 단독으로 사용 되는 `Collation` 필연적인 결과입니다. 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_lang"></a> Analysis Services의 언어 지원  
- `Language` 속성 및 쿼리를 처리 하는 동안 사용 되는 개체의 로캘을 설정 `Captions` 및 `Translations` 다국어 시나리오를 지원 하도록 합니다. 로캘은 영어와 같은 언어 식별자와 미국이나 오스트레일리아와 같이 날짜와 시간 표현을 더 구체적으로 정의하는 지역을 기반으로 합니다.  
+ 합니다 `Language` 와 쿼리 처리 중 사용 된 개체의 로캘을 설정 하는 속성 `Captions` 및 `Translations` 다국어 시나리오를 지원 합니다. 로캘은 영어와 같은 언어 식별자와 미국이나 오스트레일리아와 같이 날짜와 시간 표현을 더 구체적으로 정의하는 지역을 기반으로 합니다.  
   
  인스턴스 수준에서 속성은 Windows Server 운영 체제의 언어(37개 언어 중 하나)를 기반으로 설치 중에 설정됩니다(언어 팩 하나가 설치되어 있다고 가정). 설치 프로그램에서는 언어를 변경할 수 없습니다.  
   
- 재정의할 수 있습니다 설치 후 `Language` msmdsrv.ini 구성 파일 또는 Management Studio의 서버 속성 페이지를 사용 하 여 합니다. Windows 클라이언트에서 지원하는 모든 언어를 포함하여 보다 많은 언어 중에서 선택할 수 있습니다. 서버에서 인스턴스 수준에서 설정 된 경우 `Language` 가 이후에 배포 되는 모든 데이터베이스의 로캘을 결정 합니다. 예를 들어 `Language`를 독일어로 설정하는 경우 인스턴스에 배포되는 모든 데이터베이스에는 독일어용 LCID인 언어 속성 1031이 생깁니다.  
+ 재정의할 수 있습니다 설치 후 `Language` msmdsrv.ini 구성 파일 또는 Management studio에서 서버 속성 페이지를 사용 합니다. Windows 클라이언트에서 지원하는 모든 언어를 포함하여 보다 많은 언어 중에서 선택할 수 있습니다. 서버에서 인스턴스 수준에서 설정 된 경우 `Language` 이후에 배포 되는 모든 데이터베이스의 로캘을 결정 합니다. 예를 들어 `Language`를 독일어로 설정하는 경우 인스턴스에 배포되는 모든 데이터베이스에는 독일어용 LCID인 언어 속성 1031이 생깁니다.  
   
 ###  <a name="bkmk_lcid"></a> 언어 속성의 값이 LCID(로캘 식별자)입니다.  
  유효한 값에는 드롭다운 목록에 표시되는 LCID가 포함됩니다. Management Studio 및 SQL Server Data Tools에서는 LCID가 해당 문자열로 표시됩니다. `Language` 속성이 노출되는 곳에는 도구에 관계없이 같은 언어가 표시됩니다. 동일한 언어 목록이 있으면 모델 전체에서 일관되게 번역을 구현 및 테스트할 수 있습니다.  
   
  Analysis Services에 언어가 이름별로 나열되더라도 속성에 대해 저장된 실제 값은 LCID입니다. 언어 속성을 프로그래밍 방식이나 msmdsrv.ini 파일을 통해 설정할 때에는 [LCID(로캘 식별자)](http://en.wikipedia.org/wiki/Locale) 를 값으로 사용하세요. LCID는 언어 ID, 정렬 ID 및 특정 언어를 식별하는 예약된 비트로 구성된 32비트 값입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 개체에 대해 선택할 언어를 지정합니다.  
   
- 16진수나 10진수 형식을 사용하여 LCID를 설정할 수 있습니다. 에 대 한 유효한 값의 몇 가지 예는 `Language` 속성에 포함 합니다.  
+ 16진수나 10진수 형식을 사용하여 LCID를 설정할 수 있습니다. 유효한 값에 대 한 몇 가지 예는 `Language` 속성 포함:  
   
 -   0x0409 또는 1033 - **영어(미국)**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36078939"
      이진 데이터 정렬에서는 언어 값이 아니라 유니코드 코드 포인트로 정렬합니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다. 모든 대문자의 코드 포인트가 소문자의 코드 포인트보다 높으므로 이진 정렬은 ABCDabcd인 반면 언어적 정렬은 aAbBcCdD와 같은 결과를 산출할 수 있습니다.  
   
 ###  <a name="bkmk_sortorder"></a> 정렬 순서 옵션  
- 정렬 옵션은 대/소문자, 악센트, 가나 및 전자/반자 구분을 기준으로 정렬 및 비교 규칙을 세분화하는 데 사용됩니다. 예를 들어, 기본값인은 `Collation` 구성 속성에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Latin1_General_AS_CS, 악센트 구분, 대/소문자 구분 정렬 순서는 Latin1_General 데이터 정렬이 사용 지정 됩니다.  
+ 정렬 옵션은 대/소문자, 악센트, 가나 및 전자/반자 구분을 기준으로 정렬 및 비교 규칙을 세분화하는 데 사용됩니다. 예를 들어, 기본값인 합니다 `Collation` 구성 속성 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] latin1_general_as_cs를 사용 하도록 지정 Latin1_General 데이터 정렬에 악센트 구분, 대/소문자 구분 정렬 순서는 합니다.  
   
  BIN 및 BIN2는 다른 정렬 옵션과 함께 사용할 수 없으며, BIN 또는 BIN2를 사용하려면 악센트 구분용 정렬 옵션의 선택을 취소합니다. 마찬가지로 BIN2를 선택하면 대/소문자 구분, 대/소문자 구분 안 함, 악센트 구분, 악센트 구분 안 함, 일본어 가나 구분 및 전자/반자 구분 옵션을 사용할 수 없습니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36078939"
   
 -   데이터 정렬이 업데이트된 후에는 파티션 및 차원은 다시 처리합니다.  
   
- SQL Server Management Studio나 AMO PowerShell을 사용하면 서버 수준에서 기본 언어나 데이터 정렬을 변경할 수 있습니다. 수정할 수 있습니다는  **\<언어 >** 및  **\<CollationName >** 언어의 LCID를 지정 하 여 msmdsrv.ini 파일에서 설정 합니다.  
+ SQL Server Management Studio나 AMO PowerShell을 사용하면 서버 수준에서 기본 언어나 데이터 정렬을 변경할 수 있습니다. 수정할 수 있습니다 합니다  **\<언어 >** 하 고  **\<CollationName >** 언어의 LCID를 지정 하 여 msmdsrv.ini 파일에서 설정 합니다.  
   
 1.  Management Studio에서 서버 이름 | **속성** | **언어/데이터 정렬**을 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36078939"
 4.  큐브를 다시 처리합니다.  
   
 ##  <a name="bkmk_enablefast1033"></a> EnableFast1033Locale을 통해 영어 로캘에 대한 성능 향상  
- 에 대 한 기본 언어는 한국어 (대한민국) 언어 식별자 (0x0409 또는 1033)를 사용 하는 경우는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 설정 하 여 성능상 이점을 추가로 얻을 수는 `EnableFast1033Locale` 구성 속성, 고급 구성 언어 식별자에만 사용할 수 있는 속성입니다. 이 속성의 값을 **true** 로 설정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 문자열 해시 및 비교에 보다 빠른 알고리즘을 사용할 수 있습니다. 구성 속성을 설정하는 방법에 대한 자세한 내용은 [Analysis Services에서 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
+ 영어 (미국) 식별자 ((0x0409 또는 1033)에 대 한 기본 언어로 사용 하는 경우는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 설정 하 여 성능상 이점을 추가로 얻을 수는 `EnableFast1033Locale` 구성 속성, 고급 구성 언어 식별자에만 사용할 수 있는 속성입니다. 이 속성의 값을 **true** 로 설정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 문자열 해시 및 비교에 보다 빠른 알고리즘을 사용할 수 있습니다. 구성 속성을 설정하는 방법에 대한 자세한 내용은 [Analysis Services에서 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_gb18030"></a> Analysis Services에서의 GB18030 지원  
  GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. Analysis Services에는 외부 원본의 데이터를 처리할 때 데이터 변환이 이루어지지 않습니다. 데이터는 유니코드로 간단히 저장됩니다. 쿼리 시 클라이언트 운영 체제 설정에 따라 쿼리 결과에 텍스트 데이터가 반환되면 Analysis Services 클라이언트 라이브러리를 통해 GB18030 변환이 수행됩니다(특히, MSOLAP.dll OLE DB 공급자). 데이터베이스 엔진은 GB18030도 지원합니다. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)를 참조하십시오.  

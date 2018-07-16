@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331213"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services의 파일 공유 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36082024"
   
  항목 내용  
   
--   [공유 폴더에 배달 되는 보고서의 특징](#bkmk_Characteristics)  
+-   [공유 폴더로 배달 되는 보고서의 특징](#bkmk_Characteristics)  
   
 -   [대상 폴더](#bkmk_target_folders)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36082024"
   
 -   [파일 옵션](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> 공유 폴더에 배달 되는 보고서의 특징  
+##  <a name="bkmk_Characteristics"></a> 공유 폴더로 배달 되는 보고서의 특징  
  보고서 서버에서 호스팅하고 관리하는 보고서와 달리 공유 폴더에 배달되는 보고서는 정적 파일입니다. 보고서에 대해 정의된 대화형 기능은 파일 시스템에서 파일로 저장된 보고서에 대해 작동하지 않습니다. 상호 작용 기능은 정적 요소로 표시됩니다. 예를 들어 행렬 보고서를 배달하는 경우 결과 파일은 보고서의 최상위 보기를 표시하기 때문에 행 및 열을 확장하여 지원 데이터를 볼 수 없습니다. 보고서에 차트가 포함되어 있는 경우 기본 표시가 사용됩니다. 보고서에 포함되어 있는 다른 보고서에 대한 링크는 정적 텍스트로 렌더링됩니다. 배달된 보고서에서 대화형 기능을 유지하려면 전자 메일 배달을 대신 사용하십시오. 자세한 내용은 [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_target_folders"></a> 대상 폴더  
@@ -71,7 +71,7 @@ ms.locfileid: "36082024"
   
  각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용하거나 새 파일을 만들려면 덮어쓰기 옵션을 지정할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
   
- 배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이 작업을 수행 하려면 추가 `@timestamp` 변수를 파일 이름 (예를 들어 *CompanySales@timestamp*). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
+ 배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이 작업을 수행 하려면 추가 합니다 `@timestamp` 변수를 파일 이름 (예를 들어 *CompanySales@timestamp*). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [만들기, 수정 및 표준 구독을 삭제 &#40;기본 모드의 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

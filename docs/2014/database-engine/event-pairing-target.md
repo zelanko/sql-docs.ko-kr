@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291339"
 ---
 # <a name="event-pairing-target"></a>이벤트 쌍 대상
   이벤트 쌍 대상은 각 이벤트에 있는 하나 이상의 데이터 열을 사용하여 두 이벤트를 연결합니다. 잠금 획득과 잠금 해제 등 많은 이벤트가 쌍을 이루게 됩니다. 이벤트 시퀀스가 쌍을 이루면 두 이벤트는 삭제됩니다. 일치하는 집합을 삭제하면 해제되지 않은 잠금 획득을 쉽게 찾아낼 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36080040"
   
  이벤트와 연결된 모든 데이터는 캡처된 후 나중에 쌍을 이루기 위해 저장됩니다. 또한 동작에 의해 추가된 데이터도 수집됩니다. 수집된 이벤트 데이터는 메모리에 저장되므로 일정한 제한이 따릅니다. 이러한 제한은 시스템 용량 및 활동에 따라 달라집니다. 사용 가능한 시스템 리소스의 기준은 매개 변수로 사용 가능한 최대 메모리 양이 아니라 사용된 메모리 양이며 시스템 리소스를 사용할 수 없는 경우 저장된 짝이 없는 이벤트가 삭제됩니다. 이벤트가 짝이 없어 삭제된 경우 연결 이벤트는 짝이 없는 이벤트로 표시됩니다.  
   
- 이벤트 쌍 대상은 짝이 없는 이벤트를 XML 형식으로 직렬화합니다. 이 형식은 어떤 스키마도 따르지 않으며 두 요소 유형만 포함합니다. **\<짝이 없는 >** 요소는 다음에 하나, 루트입니다. **\<이벤트 >** 현재 추적 중인 각 쌍을 이루지 않는 이벤트에 대 한 요소입니다. **\<이벤트 >** 요소 쌍을 이루지 않는 이벤트의 이름이 들어 있는 특성이 포함 됩니다.  
+ 이벤트 쌍 대상은 짝이 없는 이벤트를 XML 형식으로 직렬화합니다. 이 형식은 어떤 스키마도 따르지 않으며 두 요소 유형만 포함합니다. 합니다  **\<쌍을 이루지 않는 >** 요소는 루트에 옵니다. **\<이벤트 >** 현재 추적 중인 각 쌍을 이루지 않는 이벤트에 대 한 요소입니다. 합니다  **\<이벤트 >** 요소 쌍을 이루지 않는 이벤트의 이름이 들어 있는 특성이 포함 되어 있습니다.  
   
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  
  확장 이벤트 세션에 쌍 일치 대상을 추가하려면 이벤트 세션을 만들거나 변경할 때 다음 문을 포함해야 합니다.  

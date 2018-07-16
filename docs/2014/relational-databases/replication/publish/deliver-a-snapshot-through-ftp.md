@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331533"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅숏 배달
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 FTP를 통해 스냅숏을 배달하는 방법에 대해 설명합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "36081074"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 FTP 스냅숏 배달을 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 지정 **@publication**, 값이 `true` 에 대 한 **@enabled_for_internet**, 적절 한 다음 매개 변수 값:  
+1.  게시 데이터베이스의 게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 지정할 **@publication**를 값 `true` 에 대 한 **@enabled_for_internet**, 적절 한 다음 매개 변수 값:  
   
     -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36081074"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>병합 게시에 대한 FTP 스냅숏 배달을 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 지정 **@publication**, 값이 `true` 에 대 한 **@enabled_for_internet** 적절 한 다음 매개 변수 값:  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 지정할 **@publication**에 값 `true` 에 대 한 **@enabled_for_internet** 적절 한 다음 매개 변수 값:  
   
     -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36081074"
   
 1.  구독 데이터베이스의 구독자에서 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다.  
   
-    -   구독 데이터베이스의 구독자에서 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. 지정 **@publisher**, **@publisher_db**, **@publication**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 Windows 자격 증명에서 배포 에이전트는 구독자에 대 한 실행 **@job_login** 및 **@job_password**, 값을 `true` 에 대 한 **@use_ftp**합니다.  
+    -   구독 데이터베이스의 구독자에서 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. 지정 **@publisher**, **@publisher_db**를 **@publication**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 Windows 자격 증명에서 배포 에이전트는 구독자에 대 한 실행 **@job_login** 하 고 **@job_password**에 값 `true` 에 대 한 **@use_ftp**합니다.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md)를 참조하세요.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36081074"
   
 1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)를 실행합니다. 지정 **@publisher**, **@publisher_db**, **@publication**에 대 한 구독자에서 배포 에이전트가 실행 되는 Windows 자격 증명 **@job_login** 및 **@job_password**, 값을 `true` 에 대 한 **@use_ftp**합니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)를 실행합니다. 지정할 **@publisher**를 **@publisher_db**를 **@publication**, 구독자에서 배포 에이전트가 실행 되는 Windows 자격 증명 **@job_login** 하 고 **@job_password**에 값 `true` 에 대 한 **@use_ftp**합니다.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md)를 참조하세요.  
   

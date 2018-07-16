@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 79de2148e10d4e43ae6560741435b1dcf3f31e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298063"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 테이블 아티클 간 논리적 레코드 관계를 정의하는 방법에 대해 설명합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "36080850"
   
     -   논리적 레코드의 관련 행 내에서 발생하는 충돌을 감지하여 해결하려면 **@value** 에 **@logical_record_level_conflict_detection** 및 **@logical_record_level_conflict_resolution**을 참조하세요.  
   
-    -   표준 행 또는 열 수준의 충돌 감지 및 해결을 사용 하려면 값을 지정 `false` 에 대 한 **@logical_record_level_conflict_detection** 및 **@logical_record_level_conflict_resolution**, 기본값입니다.  
+    -   표준 행 수준 또는 열 수준의 충돌 감지 및 해결을 사용 하려면 값을 지정 `false` 에 대 한 **@logical_record_level_conflict_detection** 하 고 **@logical_record_level_conflict_resolution**, 기본값입니다.  
   
 3.  논리적 레코드를 구성하는 각 아티클에 대해 2단계를 반복합니다. 논리적 레코드의 각 아티클에 대해 동일한 충돌 감지 및 해결 옵션을 사용해야 합니다. 자세한 내용은 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36080850"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 게시에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정한 다음, 1단계에서 만든 연결에 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 된 또는 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> 속성이 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>로 설정된 경우 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>로 설정합니다.  
   

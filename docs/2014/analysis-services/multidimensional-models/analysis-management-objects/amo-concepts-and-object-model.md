@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310723"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 개념 및 개체 모델
-  이 항목에서는 정의의 AMO Analysis Management Objects (), 다른 도구와의 아키텍처에 제공 된 라이브러리와 AMO의 관계 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 AMO의 모든 주요 개체의 개념을 설명 합니다.  
+  이 항목에서는 정의의 Analysis Management Objects (AMO), 다른 도구 및 아키텍처에서 제공 하는 라이브러리와 AMO의 관계 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 AMO의 모든 주요 개체의 개념을 설명 합니다.  
   
- AMO는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]용 관리 클래스를 모두 포함하는 컬렉션으로, 관리되는 환경의 <xref:Microsoft.AnalysisServices> 네임스페이스에서 프로그래밍 방식으로 사용할 수 있습니다. 일반적으로 위치에서 액세스할 수 있는 AnalysisServices.dll 파일에 포함 된 클래스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 폴더 \100\SDK\Assemblies에서 파일이 설치\\합니다. AMO 클래스를 사용하려면 이 어셈블리에 대한 참조를 프로젝트에 포함합니다.  
+ AMO는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]용 관리 클래스를 모두 포함하는 컬렉션으로, 관리되는 환경의 <xref:Microsoft.AnalysisServices> 네임스페이스에서 프로그래밍 방식으로 사용할 수 있습니다. Where가 일반적으로 AnalysisServices.dll 파일에 포함 된 클래스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치의 파일, 폴더 \100\SDK\Assemblies\\합니다. AMO 클래스를 사용하려면 이 어셈블리에 대한 참조를 프로젝트에 포함합니다.  
   
- 만들 수 있는 AMO를 사용 하 여 수정 하 고 큐브, 차원, 마이닝 구조와 같은 개체를 삭제 하 고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스; 끝남, 이러한 모든 개체 동작은.NET Framework의 응용 프로그램에서 수행할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스에 저장된 정보를 처리하고 업데이트할 수도 있습니다.  
+ 만들 수는 AMO를 사용 하 여 수정 하 고 큐브, 차원, 마이닝 구조와 같은 개체를 삭제 하 고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스; 모든 이러한 개체에 대해.NET Framework의 응용 프로그램에서 작업을 수행할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스에 저장된 정보를 처리하고 업데이트할 수도 있습니다.  
   
  AMO를 사용하여 데이터를 쿼리할 수는 없습니다. 사용 데이터를 쿼리하려면 [ADOMD.NET을 사용 하 여 개발](../adomd-net/developing-with-adomd-net.md)합니다.  
   
@@ -48,21 +48,21 @@ ms.locfileid: "36092298"
   
  [AMO를 사용 하 여](#bkmk_UsingAMO)  
   
- [AMO로 관리 태스크 자동화](#AutomatingAdministrativeTaskswithAMO)  
+ [AMO 사용 하 여 관리 태스크 자동화](#AutomatingAdministrativeTaskswithAMO)  
   
 ##  <a name="AMOintheAnalysisServicesArchitecture"></a> Analysis Services 아키텍처의 AMO  
- AMO는 개체 관리용으로만 설계되었으며 데이터를 쿼리하는 데는 사용할 수 없습니다. 사용자가 해야 할 경우 쿼리 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램에서 사용 해야 클라이언트 응용 프로그램에서 데이터를 [ADOMD.NET을 사용 하 여 개발](../adomd-net/developing-with-adomd-net.md)합니다.  
+ AMO는 개체 관리용으로만 설계되었으며 데이터를 쿼리하는 데는 사용할 수 없습니다. 사용자가 해야 할 경우 쿼리 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램에서 데이터를 클라이언트 응용 프로그램을 사용할지 [ADOMD.NET을 사용 하 여 개발](../adomd-net/developing-with-adomd-net.md)합니다.  
   
 ##  <a name="AMOArchitecture"></a> AMO 아키텍처  
- AMO는 클래스의 인스턴스를 관리 하기 위한의 전체 라이브러리 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램에서.NET Framework 버전 2.0의 관리 코드로 합니다.  
+ AMO는의 인스턴스를 관리 하기 위해 설계 된 클래스의 전체 라이브러리 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램에서.NET Framework 버전 2.0에서 관리 되는 코드입니다.  
   
  AMO 클래스 라이브러리는 클래스 계층 구조로 설계되었으며 일부 클래스는 다른 클래스보다 먼저 인스턴스화되어야 코드에서 사용할 수 있습니다. 코드에서 언제든지 인스턴스화할 수 있는 보조 클래스도 있지만 대개는 이러한 보조 클래스 중 하나를 사용하기 전에 하나 이상의 계층 구조 클래스를 이미 인스턴스화한 경우가 많습니다.  
   
  다음 그림에서는 주요 클래스가 포함된 AMO 계층 구조를 개괄적으로 보여 줍니다. 이 그림에서는 클래스의 위치를 클래스의 컨테이너 및 피어 위치와 구분하여 보여 줍니다. <xref:Microsoft.AnalysisServices.Dimension>은 <xref:Microsoft.AnalysisServices.Database>와 <xref:Microsoft.AnalysisServices.Server>에 속하며 <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.MiningStructure>와 동시에 만들어질 수 있습니다. 일부 피어 클래스는 다른 클래스를 사용하기 전에 인스턴스화되어야 합니다. 예를 들어 새 <xref:Microsoft.AnalysisServices.DataSource> 또는 <xref:Microsoft.AnalysisServices.Dimension>를 추가하려면 먼저 <xref:Microsoft.AnalysisServices.MiningStructure>의 인스턴스를 만들어야 합니다.  
   
- ![AMO 클래스 높은 수준의 뷰입니다](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO 클래스 개요")  
+ ![AMO 클래스 높은 수준의 뷰입니다](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO 클래스 높은 수준의 뷰")  
   
- A *주요 개체* 다른 개체의 일부가 아니라 전체 엔터티인와 완전 한 개체를 나타내는 클래스입니다. <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> 및 <xref:Microsoft.AnalysisServices.MiningStructure>는 그 자체가 엔터티이므로 주요 개체에 해당합니다. 그러나 <xref:Microsoft.AnalysisServices.Level>은 <xref:Microsoft.AnalysisServices.Dimension>을 구성하는 요소이므로 주요 개체가 아닙니다. 주요 개체는 다른 개체와는 독립적으로 만들고 삭제, 수정 및 처리할 수 있습니다. 보조 개체는 부모 주요 개체를 만드는 작업의 일부로서만 만들 수 있는 개체입니다. 보조 개체는 일반적으로 주요 개체가 만들어질 때 만들어집니다. 보조 개체의 경우에는 기본 생성 개체가 없으므로 해당 개체를 만들 때 개체 값을 정의해야 합니다.  
+ A *주요 개체* 다른 개체의 일부가 아니라 전체 엔터티인 완전 한 개체를 나타내는 클래스입니다. <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension> 및 <xref:Microsoft.AnalysisServices.MiningStructure>는 그 자체가 엔터티이므로 주요 개체에 해당합니다. 그러나 <xref:Microsoft.AnalysisServices.Level>은 <xref:Microsoft.AnalysisServices.Dimension>을 구성하는 요소이므로 주요 개체가 아닙니다. 주요 개체는 다른 개체와는 독립적으로 만들고 삭제, 수정 및 처리할 수 있습니다. 보조 개체는 부모 주요 개체를 만드는 작업의 일부로서만 만들 수 있는 개체입니다. 보조 개체는 일반적으로 주요 개체가 만들어질 때 만들어집니다. 보조 개체의 경우에는 기본 생성 개체가 없으므로 해당 개체를 만들 때 개체 값을 정의해야 합니다.  
   
  다음 그림에서는 <xref:Microsoft.AnalysisServices.Server> 개체에 포함된 주요 개체를 보여 줍니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36092298"
 ##### <a name="data-mining-advanced-users"></a>데이터 마이닝 고급 사용자  
  데이터 마이닝 고급 사용자의 경우 AMO는 정기적으로 다시 학습해야 하는 모델 집합이 매우 많을 때 가장 유용합니다.  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO"></a> AMO로 관리 태스크 자동화  
+##  <a name="AutomatingAdministrativeTaskswithAMO"></a> AMO 사용 하 여 관리 태스크 자동화  
  대부분의 반복적인 태스크는 개발자가 선택한 언어를 사용하여 응용 프로그램으로 개발된 경우보다 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]를 사용하여 개발된 경우에 가장 적절하게 디자인, 배포 및 유지 관리됩니다. 하지만 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]를 사용하여 자동화할 수 없는 반복적 태스크의 경우에는 AMO를 사용할 수 있습니다. AMO는 또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 사용하여 비즈니스 인텔리전스를 위한 특수화된 응용 프로그램을 개발하려는 경우에도 유용합니다.  
   
 ##### <a name="automatic-object-management"></a>자동 개체 관리  
@@ -118,6 +118,6 @@ ms.locfileid: "36092298"
  자동 백업 관리는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 태스크를 사용하여 수행하거나 자동으로 실행되는 특수화된 AMO 응용 프로그램을 만들어 수행할 수 있습니다. AMO를 사용하면 운영자의 일상 업무에 도움이 되는 운영자용 백업 인터페이스를 개발할 수 있습니다.  
   
 ##### <a name="tasks-amo-is-not-intended-for"></a>AMO를 사용할 수 없는 태스크  
- AMO는 데이터를 쿼리하는 데는 사용할 수 없습니다. 큐브 및 마이닝 모델을 포함한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터를 쿼리하려면 사용자 응용 프로그램에서 ADOMD.NET을 사용해야 합니다. 자세한 내용은 참조 [ADOMD.NET을 사용 하 여 개발](../adomd-net/developing-with-adomd-net.md)합니다.  
+ AMO는 데이터를 쿼리하는 데는 사용할 수 없습니다. 큐브 및 마이닝 모델을 포함한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터를 쿼리하려면 사용자 응용 프로그램에서 ADOMD.NET을 사용해야 합니다. 자세한 내용은 [ADOMD.NET을 사용 하 여 개발](../adomd-net/developing-with-adomd-net.md)합니다.  
   
   

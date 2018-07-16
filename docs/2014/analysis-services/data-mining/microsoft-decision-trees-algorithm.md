@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
 - predictions [Analysis Services], continuous attributes
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 70
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc3f7cac98736fe558bf19ce00fc57115cade782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4f1b4bb2311231e09e6e150592c6a2dabb3d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310783"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 의사 결정 트리 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 분류와 회귀 알고리즘에서 제공 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 불연속 및 연속 특성 모두의 예측 모델링에 사용 합니다.  
+  합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 분류 및 회귀 알고리즘 제공한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 불연속 및 연속 특성 모두의 예측 모델링에 사용 합니다.  
   
  불연속 특성의 경우 알고리즘은 데이터 집합 내 입력 열 간의 관계를 기반으로 예측합니다. 이 알고리즘은 해당 열의 값인 상태를 사용하여 사용자가 예측 가능으로 지정하는 열의 상태를 예측합니다. 특히 알고리즘은 예측 가능한 열과 상관 관계에 있는 입력 열을 식별합니다. 예를 들어 자전거를 구입할 가능성이 높은 고객을 예측하는 시나리오에서 청년층 고객의 경우 10명 중 9명이 자전거를 구입한 반면 중장년층 고객의 경우 10명 중 2명만이 자전거를 구입했다면 알고리즘은 자전거 구입에 있어 연령이 좋은 지표가 될 수 있음을 유추합니다. 의사 결정 트리에서는 이러한 경향을 기반으로 특정 결과를 예측합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36092785"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 *기능 선택* 을 사용하여 가장 유용한 특성이 선택되도록 안내합니다. 기능 선택을 사용 하 여 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 분석 품질 및 성능을 개선 하기 위해 데이터 마이닝 알고리즘입니다. 기능 선택은 중요하지 않은 특성이 프로세서 시간을 사용하는 것을 방지하는 데 중요합니다. 데이터 마이닝 모델을 디자인할 때 너무 많은 입력 또는 예측 가능한 특성을 사용할 경우 모델을 처리하는 데 너무 오래 걸리거나 메모리가 부족해질 수 있습니다. 트리를 분할할지 여부를 결정하는 데 사용되는 방법에는 *entropy* 및 Bayesian 네트워크에 대한 업계 표준 메트릭이 포함됩니다 *.* 의미 있는 특성을 선택한 다음 특성의 점수와 순위를 매기는 데 사용되는 방법은 [기능 선택&#40;데이터 마이닝&#41;](feature-selection-data-mining.md)을 참조하세요.  
   
- 데이터 마이닝 모델의 일반적인 문제는 모델이 너무 민감해 학습 데이터의 작은 차이에, 않는 경우에 있다고 *과도 한 맞춤* 또는 *과도 한 학습*합니다. 과도한 맞춤이 수행된 모델은 다른 데이터 집합에 대해 일반화될 수 없습니다. 특정 데이터 집합에 대해 과잉 맞춤이 수행되지 않도록 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리 증가를 제어하기 위한 기술을 사용합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘 작동 방법은 [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)를 참조하세요.  
+ 데이터 마이닝 모델의 일반적인 문제는 모델 학습 데이터의 작은 차이에 너무 중요 한 된다는 것이 경우 민감해 져 *과도 하 게 맞추는* 하거나 *과도 한 학습*합니다. 과도한 맞춤이 수행된 모델은 다른 데이터 집합에 대해 일반화될 수 없습니다. 특정 데이터 집합에 대해 과잉 맞춤이 수행되지 않도록 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리 증가를 제어하기 위한 기술을 사용합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘 작동 방법은 [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)를 참조하세요.  
   
 ### <a name="predicting-discrete-columns"></a>불연속 열 예측  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘이 예측 가능한 불연속 열에 대한 트리를 작성하는 방법은 히스토그램을 사용하여 설명할 수 있습니다. 다음 다이어그램에서는 입력 열인 Age에 대해 예측 가능한 열인 Bike Buyer를 표시하는 히스토그램을 보여 줍니다. 이 히스토그램에서는 고객의 연령으로 고객이 자전거를 구입할지 여부를 구분할 수 있음을 보여 줍니다.  

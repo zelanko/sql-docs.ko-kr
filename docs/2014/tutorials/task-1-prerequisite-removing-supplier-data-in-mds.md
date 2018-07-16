@@ -10,23 +10,23 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1189c064ec1a55da1c77837d1533855266ed4274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7cf9ccd921ecdef56560e712415604355b97b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172004"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>태스크 1(필수): MDS에서 공급자 데이터 제거
   이 작업에서는 MDS에 저장된 공급자 데이터를 제거합니다. 이전 단원에서는 **MDS Excel 추가 기능** 을 사용하여 데이터를 수동으로 업로드했습니다. 이 단원에서 만드는 SSIS 패키지는 데이터를 MDS에 자동으로 업로드합니다. 따라서 SSIS 패키지를 테스트하기 전에 MDS에서 공급자 데이터를 제거하고, 파생 계층을 제거하고, 공급자 및 상태 엔터티를 제거하고 포함된 데이터 없이 공급자 엔터티를 만들어야 합니다.  
   
-1.  시작 **마스터 데이터 관리자** 로 이동 하 여 **http://localhost/MDS** MDS를 구성할 때 지정한 응용 프로그램 및 웹 사이트 또는 합니다. **마스터 데이터 관리자** 가 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 **홈 페이지**로 전환합니다.  
+1.  시작할 **마스터 데이터 관리자** 로 이동 하 여 **http://localhost/MDS** 또는 MDS를 구성할 때 지정한 응용 프로그램 및 웹 사이트입니다. **마스터 데이터 관리자** 가 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 **홈 페이지**로 전환합니다.  
   
 2.  **관리 작업** 섹션에서 **시스템 관리** 를 클릭합니다.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36187318"
   
     1.  **새 연결 만들기**를 선택하고 **새로 만들기** 단추를 클릭합니다.  
   
-    2.  새 연결 추가 대화 상자에서 입력 **로컬 MDS 서버** 에 대 한 **설명** 및 **http://localhost/MDS** 에 대 한 **MDS 서버 주소**, 클릭 하 고 **확인** 대화 상자를 닫습니다.  
+    2.  새 연결 추가 대화 상자에서 입력 **Local MDS Server** 에 대 한 **설명** 하 고 **http://localhost/MDS** 에 대 한 **MDS 서버 주소**, 클릭 **확인** 대화 상자를 닫습니다.  
   
-15. **연결 관리** 대화 상자에서 **로컬 MDS 서버** (http://localhost/MDS), 클릭 **테스트** 연결을 테스트 합니다. 메시지 상자에서 **확인** 을 클릭합니다.  
+15. **연결 관리** 대화 상자에서 **Local MDS Server** (http://localhost/MDS), 클릭 **테스트** 연결을 테스트 합니다. 메시지 상자에서 **확인** 을 클릭합니다.  
   
 16. **연결** 을 클릭하여 MDS 서버에 대한 연결을 설정합니다.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36187318"
 22. **탐색기**를 클릭합니다. 모든 특성이 포함된 **Supplier** 엔터티가 **값 없음**으로 만들어졌는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 2 &#40;Optional&#41;: 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [작업 2 &#40;옵션&#41;: 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

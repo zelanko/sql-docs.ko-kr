@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e063de7ce9ea45197c17f4d863c56228d9473e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238363"
 ---
 # <a name="defining-calculated-members"></a>계산 멤버 정의
   계산 멤버는 큐브 데이터, 산술 연산자, 숫자 및 함수 조합을 기반으로 정의되는 차원 또는 측정값 그룹의 멤버입니다. 예를 들어 큐브에 있는 두 개의 물리적 측정값 합계를 계산하는 계산 멤버를 만들 수 있습니다. 계산 멤버 정의는 큐브에 저장되지만 해당 값은 쿼리 시간에 계산됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36185719"
   
      ![계산 식 창 양식](../../2014/tutorials/media/l6-calculatedmembers-02.gif "계산 식 창 양식")  
   
-3.  에 **이름** 계산된 측정값의 이름을 변경 합니다 `[Total Sales Amount]`합니다.  
+3.  에 **이름을** 상자에서 계산된 측정값의 이름을 변경 `[Total Sales Amount]`합니다.  
   
      계산 멤버의 이름에 공백이 들어 있으면 계산 멤버 이름을 대괄호로 묶어야 합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36185719"
   
 5.  **계산 도구** 창의 **메타데이터** 탭에서 **계산 식** 창의 **식** 상자로 **Internet Sales-Sales Amount** 를 끌어옵니다.  
   
-6.  에 **식** 더하기 기호를 입력 합니다 (`+`) 후 **[Measures]. [ Internet Sales-sales Amount]** 합니다.  
+6.  에 **식을** 상자에서 더하기 기호를 입력 (`+`) 후 **[Measures]. [ Internet Sales-sales Amount]** 합니다.  
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 **Reseller Sales**를 확장한 후 **계산 식** 창의 **식** 상자에서 더하기 기호(+) 뒤로 **Reseller Sales-Sales Amount** 를 끌어옵니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36185719"
   
      다음 그림에서는 이전 단계에서 지정한 설정으로 채워진 **계산 식** 창을 보여 줍니다.  
   
-     ![계산 식 창 Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "채워진 계산 식 창")  
+     ![계산 식 창의 Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "채워진 계산 식 창")  
   
 10. **계산** 탭의 도구 모음에서 **스크립트 보기**를 클릭한 후 **계산 식** 창에서 계산 스크립트를 검토합니다.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36185719"
   
      다음 그림에서는 자습서의 이 부분에서 **계산 식** 창에 표시되어야 하는 계산 스크립트를 보여 줍니다.  
   
-     ![계산 식 창에 스크립트](../../2014/tutorials/media/l6-calculatedmembers-04.gif "계산 식 창에 스크립트")  
+     ![계산 식 창의 스크립트](../../2014/tutorials/media/l6-calculatedmembers-04.gif "계산 식 창의 스크립트")  
   
-12. 도구 모음에서 **계산** 탭을 클릭 **폼 보기**, 되어 있는지 확인 `[Total Sales Amount]` 에서 선택한는 **스크립트 구성 도우미** 창과 클릭 한 다음  **새 계산된 멤버**합니다.  
+12. 도구 모음에서 합니다 **계산** 탭을 클릭 **폼 보기**, 확인 `[Total Sales Amount]` 에서 선택한를 **스크립트 구성 도우미** 창과 클릭  **새 계산된 멤버**합니다.  
   
-13. 이 새 계산된 멤버의 이름을 변경 `[Total Product Cost]`, 다음에 다음 식을 만듭니다는 **식** 상자:  
+13. 이 새 계산된 멤버의 이름을 변경할 `[Total Product Cost]`을 만든 다음에 다음 식을 합니다 **식** 상자:  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -105,9 +105,9 @@ ms.locfileid: "36185719"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>매출이익률 계산 정의  
   
-1.  되어 있는지 확인 `[Total Product Cost]` 에서 선택한는 **스크립트 구성 도우미** 창과 클릭 **새 계산 멤버** 의 도구 모음에는 **계산** 탭 합니다.  
+1.  확인 `[Total Product Cost]` 에서 선택한는 **스크립트 구성 도우미** 창과 클릭 **새 계산 멤버** 도구 모음에서는 **계산** 탭 합니다.  
   
-2.  에 **이름** 상자에서이 새 계산된 측정값의 이름을 변경 `[Internet GPM]`합니다.  
+2.  에 **이름을** 상자에서이 새 계산된 측정값의 이름을 변경 `[Internet GPM]`합니다.  
   
 3.  **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36185719"
   
 6.  **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-7.  에 **이름** 상자에서이 새 계산된 측정값의 이름을 변경 `[Reseller GPM]`합니다.  
+7.  에 **이름을** 상자에서이 새 계산된 측정값의 이름을 변경 `[Reseller GPM]`합니다.  
   
 8.  **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36185719"
   
 11. **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-12. 에 **이름** 이 계산 된 측정값의 이름을 변경 합니다 `[Total GPM]`합니다.  
+12. 에 **이름을** 상자에서이 계산된 측정값의 이름을 변경 `[Total GPM]`합니다.  
   
 13. **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36185719"
   
 16. **계산** 탭의 도구 모음에서 **스크립트 보기** 를 클릭하고 계산 스크립트에 방금 추가한 3개의 계산을 검토합니다.  
   
-17. 바로 앞에 계산 스크립트의 새 행 추가 `[Internet GPM]` 계산을를 스크립트 별도 줄에 다음 텍스트를 추가 합니다.  
+17. 바로 앞에 계산 스크립트에서 새 행 추가 `[Internet GPM]` 계산 후에 자체 줄으로 스크립트에 다음 텍스트를 추가 하 고:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -165,13 +165,13 @@ ms.locfileid: "36185719"
   
      다음 그림에서는 3개의 새 계산을 포함하는 **식** 창을 보여 줍니다.  
   
-     ![계산 식 창에 새 계산](../../2014/tutorials/media/l6-calculatedmembers-05.gif "계산 식 창에 새 계산")  
+     ![계산 식 창의 새 계산](../../2014/tutorials/media/l6-calculatedmembers-05.gif "계산 식 창의 새 계산")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>총 계산의 백분율 정의  
   
 1.  **계산** 탭의 도구 모음에서 **폼 보기**를 클릭합니다.  
   
-2.  에 **스크립트 구성 도우미** 창 선택 `[Total GPM]`, 클릭 하 고 **새 계산 멤버** 의 도구 모음에는 **계산** 탭 합니다.  
+2.  에 **스크립트 구성 도우미** 창 `[Total GPM]`를 클릭 하 고 **새 계산 멤버** 도구 모음에서는 **계산** 탭 합니다.  
   
      **새 계산 멤버** 를 클릭하기 전에 **스크립트 구성 도우미** 창에서 최종 계산 멤버를 클릭하면 새 계산 멤버가 스크립트 끝에 삽입됩니다. 스크립트는 **스크립트 구성 도우미** 창에 나타난 순서대로 실행됩니다.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36185719"
   
 17. **계산** 탭의 도구 모음에서 **스크립트 보기**를 클릭하고 계산 스크립트에 방금 추가한 3개의 계산을 검토합니다.  
   
-18. 바로 앞에 계산 스크립트의 새 행 추가 `[Internet Sales Ratio to All Products]` 계산을를 스크립트 별도 줄에 다음 텍스트를 추가 합니다.  
+18. 바로 앞에 계산 스크립트에서 새 행 추가 `[Internet Sales Ratio to All Products]` 계산 후에 자체 줄으로 스크립트에 다음 텍스트를 추가 하 고:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  

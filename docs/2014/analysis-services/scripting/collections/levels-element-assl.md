@@ -1,5 +1,5 @@
 ---
-title: 수준 요소 (ASSL) | Microsoft Docs
+title: 요소 (ASSL) 수준 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Levels element
 ms.assetid: a9dd4890-a5da-48e7-9bbf-f857107cde8d
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aafc68525f656f77eca7c8cdcd0fdc4cb4534791
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf2019ee06a053cc047bfd47a04a98865f611949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304573"
 ---
 # <a name="levels-element-assl"></a>Levels 요소(ASSL)
-  컬렉션을 포함 [수준](../objects/level-element-assl.md) 의 요소는 [계층](../objects/hierarchy-element-assl.md) 요소입니다.  
+  컬렉션을 포함 [수준](../objects/level-element-assl.md) 의 요소를 [계층](../objects/hierarchy-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

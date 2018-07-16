@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4be4778be16da0271e2f46643a165864d679e8ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310373"
 ---
 # <a name="session-element-xmla"></a>Session 요소(XMLA)
-  인스턴스에서 기존의 명시적 세션을 식별 하는 SOAP 요청 메시지에 SOAP 헤더를 사용 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+  SOAP 요청 메시지의 SOAP 헤더를 사용 하 여 인스턴스의 기존 명시적 세션을 식별 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
  **네임스페이스** urn:schemas-microsoft-com:xml-analysis  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36092731"
 ## <a name="remarks"></a>Remarks  
  `Session` 헤더 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에서 명시적으로 시작된 기존 세션을 식별합니다. `Session` 요소는 다음 메시지 유형에서 SOAP 헤더의 일부입니다.  
   
--   포함 하는 SOAP 응답은 [BeginSession](session-element-xmla.md) SOAP 헤더 요소입니다.  
+-   포함 하는 SOAP 응답을 [BeginSession](session-element-xmla.md) SOAP 헤더 요소입니다.  
   
--   실행할 세션을 식별 하는 SOAP 요청에서 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드.  
+-   실행할 세션을 식별 하는 SOAP 요청을 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드.  
   
  세션 식별자는 세션이 계속 유효한 상태로 유지됨을 보장하지 않습니다. `Session` 요소에 지정된 세션은 만료될 수 있습니다. 예를 들어 세션의 시간이 초과되거나 세션 관련 연결이 끊어지면 세션이 만료될 수 있습니다. 세션이 만료되어 더 이상 유효하지 않으면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 세션을 종료하고 현재 처리 중인 모든 트랜잭션을 롤백합니다. 더 이상 유효하지 않은 세션 식별자로 전송된 모든 SOAP 메시지는 지정된 세션을 찾을 수 없다는 SOAP 오류와 함께 실패합니다.  
   

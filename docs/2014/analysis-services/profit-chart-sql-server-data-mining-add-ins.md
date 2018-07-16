@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297363"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>수익 차트(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 수익 차트 단추](media/dmc-profitchart.gif "데이터 마이닝 리본의 수익 차트 단추")  
@@ -51,9 +51,9 @@ ms.locfileid: "36081970"
      성공적인 각 판매와 관련된 수익입니다.  
   
 ## <a name="using-the-profit-chart-wizard"></a>수익 차트 마법사 사용  
- 수익 차트를 만들려면 기존 데이터 마이닝 모델을 참조해야 합니다. 클릭 하 여 데이터를 일치 하는 모델을 찾을 모델을 찾아볼 수 **모델 관리** 또는 **찾아보기** 사용 된 알고리즘에 대 한 세부 정보 및 마이닝 모델의 열을 볼 수 있습니다.  
+ 수익 차트를 만들려면 기존 데이터 마이닝 모델을 참조해야 합니다. 클릭 하 여 데이터를 일치 하는 모델을 찾는 모델을 찾아볼 수 있습니다 **모델 관리** 하거나 **찾아보기** 사용 된 알고리즘에 대 한 세부 정보 및 마이닝 모델의 열입니다.  
   
- 자세한 내용은 참조 [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) 및 [모델 관리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](manage-models-sql-server-data-mining-add-ins.md)합니다.  
+ 자세한 내용은 [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) 하 고 [모델 관리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
 #### <a name="to-create-a-profit-chart"></a>수익 차트를 만들려면  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36081970"
   
 4.  새 원본 데이터의 열을 데이터 마이닝 모델에 사용된 열에 매핑합니다. 열 이름이 비슷한 경우 마법사가 자동으로 매핑합니다.  
   
-5.  마법사에 필요한 비용 정보 입력: 고정된 비용, 개별 비용, 모집단 및 예상 수익입니다.  
+5.  마법사에 필요한 비용 정보를 입력 합니다: 고정된 비용, 개별 비용, 모집단 및 예상 수익입니다.  
   
-6.  필요에 따라 한 일련의 누진된 비용을 입력할 수 있습니다 (찾아보기 **(...)**  단추). 예를 들어 전송하는 항목 수가 증가함에 따라 우편 비용은 더 저렴해질 수 있으므로 항목 수에 따라 다른 비용을 입력할 수 있으며 마법사는 각 샘플 크기에 대해 자동으로 비용을 조정합니다.  
+6.  필요에 따라는 일련의 누진된 비용을 입력할 수 있습니다 (찾아보기 **(...)**  단추). 예를 들어 전송하는 항목 수가 증가함에 따라 우편 비용은 더 저렴해질 수 있으므로 항목 수에 따라 다른 비용을 입력할 수 있으며 마법사는 각 샘플 크기에 대해 자동으로 비용을 조정합니다.  
   
 7.  마법사는 모델에 대한 비용 대비 이점 분석을 포함하는 차트를 만듭니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36081970"
  불연속 숫자 값을 예측하는 경우 예측할 정확한 대상 값을 선택해야 합니다.  
   
 ## <a name="understanding-the-profit-chart"></a>수익 차트 이해  
- 수익 차트에는 차트에서 위치를 클릭하여 이동할 수 있는 회색 세로줄이 포함되어 있습니다. **마이닝 범례** 점수, 정확한 모집단 및 차트에 회색 선의 위치와 관련 된 예측 확률이 표시 됩니다. 회색 선을 사용하여 차트에서 최대 수익점을 선택하면 예측 확률 값을 사용하여 고객에게 연락할 확률 임계값을 결정할 수 있습니다.  
+ 수익 차트에는 차트에서 위치를 클릭하여 이동할 수 있는 회색 세로줄이 포함되어 있습니다. 합니다 **마이닝 범례** 점수, 정확한 모집단 및 차트의 회색 선의 위치와 관련 된 예측 확률이 표시 됩니다. 회색 선을 사용하여 차트에서 최대 수익점을 선택하면 예측 확률 값을 사용하여 고객에게 연락할 확률 임계값을 결정할 수 있습니다.  
   
  예를 들어 수익 곡선의 최고점이 모집단의 55%이고 관련 예측 확률의 20%인 경우 최대 수익을 얻으려면 응답 가능성이 20% 이상으로 예측되는 고객에게만 연락을 해야 합니다.  
   

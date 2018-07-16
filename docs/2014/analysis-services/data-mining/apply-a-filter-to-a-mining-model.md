@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filters [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb6cdfdf92e5cec0da4e27a78474037e2bd7d70e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f550dde21f45d7850db5cc6a27d2247c565dcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253205"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>마이닝 모델에 필터 적용
   마이닝 구조에 중첩 테이블이 포함된 경우 사례 테이블, 중첩 테이블 또는 두 테이블 모두에 필터를 적용할 수 있습니다.  
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **값** 입력란을 클릭하고 상자에 값을 입력합니다.  
   
-     예를 들어 선택 `Income` 열으로 선택 큼 연산자 (>)를 입력 한 후 보다 `30000`합니다.  
+     예를 들어 선택할 `Income` 열 선택 큼 연산자 (>)를 입력 한 후와 `30000`합니다.  
   
 9. 표에서 다음 행을 클릭합니다.  
   
@@ -78,11 +78,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 10. 표의 다음 행에서 **AND/OR** 입력란을 클릭하여 조건을 추가합니다.  
   
-     예를 들어 BETWEEN 조건을 만들려면 선택 `AND` 논리 피연산자의 드롭다운 목록에서 합니다.  
+     예를 들어 BETWEEN 조건을 만들려면 선택 `AND` 논리 피연산자의 드롭다운 목록에서.  
   
 11. 7-8단계의 설명에 따라 연산자를 선택하고 값을 입력합니다.  
   
-     예를 들어 선택 `Income` 열으로 다시, 보다 작음 연산자 (<), 선택한 다음 입력 `40000`합니다.  
+     예를 들어 선택할 `Income` 다시 열 보다 작음 (<) 연산자를 선택한 다음 입력 `40000`합니다.  
   
 12. 표에서 다음 행을 클릭합니다.  
   
@@ -90,7 +90,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>마이닝 모델의 중첩 테이블에 필터를 추가하려면  
   
-1.  에  **\<이름 > 모델 필터** 대화 상자에서 아래 표의 빈 행을 클릭 **마이닝 구조 열**합니다.  
+1.  에  **\<이름 > 모델 필터** 대화 상자에서 아래 표의 빈 행 **마이닝 구조 열**합니다.  
   
 2.  드롭다운 목록에서 중첩 테이블 이름을 선택합니다.  
   
@@ -102,7 +102,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  **값** 상자를 클릭한 다음 **(…)** 단추를 클릭하여 식을 작성합니다.  
   
-     **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
+     합니다  **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
   
 5.  **마이닝 구조 열** 상자를 클릭하고 중첩 테이블 열의 드롭다운 목록에서 열 이름을 선택합니다.  
   
@@ -110,7 +110,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  **값** 을 클릭한 다음 값을 입력합니다.  
   
-     예를 들어 **마이닝 구조 열** 선택 `Model`합니다. 에 대 한 **연산자**선택, `<>`, 값을 입력 하 고 `Water Bottle`합니다. 이 조건은 다음 필터 식을 만듭니다.  
+     예를 들어 **마이닝 구조 열** 선택 `Model`합니다. 에 대 한 **연산자**를 선택 `<>`에 값을 입력 하 고 `Water Bottle`입니다. 이 조건은 다음 필터 식을 만듭니다.  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -119,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  중첩 테이블 특성의 수는 잠재적으로 제한이 없기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 선택 가능한 값 목록을 제공하지 않습니다. 정확한 값을 입력해야 합니다. 또한 중첩 테이블에서는 LIKE 연산자를 사용할 수 없습니다.  
   
-1.  선택 하 여 조건을 결합 하는 필요에 따라 조건을 더 추가 `AND` 또는 `OR` 에 **및/또는** 의 왼쪽에 있는 상자는 **조건** 눈금. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  선택 하 여 조건을 결합 필요에 따라 조건을 더 추가 `AND` 또는 `OR` 에 **및/또는** 의 왼쪽 위에 있는 상자를 **조건** 표입니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  **모델 필터** 대화 상자에서 **필터** 대화 상자를 사용하여 만든 조건을 검토합니다. 중첩 테이블의 조건이 사례 테이블의 조건에 추가되며 필터 조건의 전체 집합이 **식** 입력란에 표시됩니다.  
   

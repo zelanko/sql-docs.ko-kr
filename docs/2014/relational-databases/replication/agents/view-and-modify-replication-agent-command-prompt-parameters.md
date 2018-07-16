@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffef46898a1909171ff8a314246e80292417d464
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a3282ba855984dcf8a9880616ef9c582de7475a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283519"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정(SQL Server Management Studio)
   복제 에이전트는 명령줄 매개 변수를 받는 실행 파일입니다. 기본적으로 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행되므로 **작업 속성 - \<Job>** 대화 상자를 사용하여 이러한 매개 변수를 확인한 다음 수정할 수 있습니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 폴더 및 복제 모니터의 **에이전트** 탭에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
@@ -75,7 +75,7 @@ ms.locfileid: "36079245"
   
 3.  구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
   
-4.  에 **구독 \< s u b >** 창 클릭 **동작**, 클릭 하 고  **\<AgentName > 작업 속성**합니다.  
+4.  에 **구독 \< SubscriptionName >** 창 클릭 **동작**를 클릭 하 고  **\<AgentName > 작업 속성**합니다.  
   
 5.  **작업 속성 - \<Job>** 대화 상자의 **단계** 페이지에서 **에이전트 실행** 단계를 선택한 다음 **편집**을 클릭합니다.  
   

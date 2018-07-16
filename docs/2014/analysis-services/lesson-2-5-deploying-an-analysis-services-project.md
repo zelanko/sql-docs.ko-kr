@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 261dbd3dc8aa0ff5158f05e1097af4ed6f915479
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9426c3afabb53c158feffa22c9b3ee53166ceb5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301263"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Analysis Services 프로젝트 배포
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 있는 개체에 대한 큐브 및 차원 데이터를 보려면 지정한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 이 프로젝트를 배포한 다음 큐브와 큐브 차원을 처리해야 합니다. *프로젝트를* 배포 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 정의된 개체가 만들어집니다. *인스턴스의 개체를* 처리 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하면 데이터가 기본 데이터 원본에서 큐브 개체로 복사됩니다. 자세한 내용은 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "36078678"
      프로젝트의 배포 속성을 검토합니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 통해 모든 프로젝트를 로컬 컴퓨터의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 인스턴스에 증분식으로 배포하며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트와 같은 이름으로 데이터베이스를 만들고 기본 처리 옵션을 사용하여 배포 후에 개체를 처리하도록 해당 프로젝트를 구성합니다. 자세한 내용은 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  프로젝트의 명명된 된 인스턴스를 배포 하려는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 로컬 컴퓨터에서 또는 원격 서버의 인스턴스에 변경는 **서버** 같은 속성을 적절 한 인스턴스 이름 \<  *ServerName**>\\<** InstanceName * * >* 합니다.  
+    >  프로젝트의 명명된 된 인스턴스를 배포 하려는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 컴퓨터의 로컬 또는 원격 서버의 인스턴스에 변경 합니다 **Server** 와 같은 속성을 적절 한 인스턴스 이름 \<  *ServerName**>\\<** InstanceName * * >* 합니다.  
   
 3.  **확인**을 클릭합니다.  
   

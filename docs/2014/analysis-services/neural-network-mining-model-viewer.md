@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2db48dccb854d2dc51eaae3b8202324a8feed9aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297413"
 ---
 # <a name="neural-network-mining-model-viewer"></a>신경망(마이닝 모델 뷰어)
   **신경망** 뷰어를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 로지스틱 회귀 알고리즘을 기반으로 하는 마이닝 모델을 탐색할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36081954"
   
 |값|Description|  
 |-----------|-----------------|  
-|**Attribute**|목록에서 입력 특성을 선택합니다. 기본적으로 선택 하지 않으면  **\<모든 >**, 차트에는 예측 가능한 특성에 대 한 영향에 따라 순위를 지정 하는 모든 입력된 특성의 목록을 표시 합니다.|  
+|**Attribute**|목록에서 입력 특성을 선택합니다. 기본적으로 선택 영역을 두면  **\<모든 >**, 차트에는 예측 가능한 특성에 대 한 영향 순으로 순위가 지정 된 모든 입력된 특성의 목록을 보여 줍니다.|  
 |**Value**|입력 특성의 값을 선택합니다.|  
   
  **출력**  
@@ -62,8 +62,8 @@ ms.locfileid: "36081954"
 |-----------|-----------------|  
 |**Attribute**|**특성**에서 선택한 입력 특성의 이름을 보여 줍니다.|  
 |**Value**|선택한 입력 특성의 값을 보여 줍니다.|  
-|**유사성 \<값 1 >**|이 특정 특성-값 조합이 **값 1**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
-|**유사성 \<값 2 >**|이 특정 특성-값 조합이 **값 2**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
+|**유사성 \<1 값 >**|이 특정 특성-값 조합이 **값 1**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
+|**유사성 \<2 값 >**|이 특정 특성-값 조합이 **값 2**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

@@ -1,5 +1,5 @@
 ---
-title: 보조 특성을 기준으로 특성 멤버 정렬 | Microsoft Docs
+title: 보조 특성에 따라 특성 멤버 정렬 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5286bcca918cd77985ea6aef98cd3c99b89e20f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299293"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>보조 특성을 기준으로 특성 멤버 정렬
   3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36092069"
   
      다음 이미지와 같이 이제 월이 시간순으로 정렬됩니다.  
   
-     ![시간 순서에 따라 사용자 계층 구조 수정](../../2014/tutorials/media/l4-memberproperties-3.gif "시간 순서에 따라 사용자 계층 구조 수정")  
+     ![시간순으로 사용자 계층을 수정할](../../2014/tutorials/media/l4-memberproperties-3.gif "순서로 사용자 계층 구조를 수정 합니다.")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Customer 차원의 특성 관계 및 정렬 순서 정의  
   

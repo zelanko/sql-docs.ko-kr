@@ -1,7 +1,8 @@
 ---
-title: SQL Server 2014 용 온라인 설명서 | Microsoft Docs
+title: SQL Server 2014 용 온라인 | Microsoft Docs
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
+ms.technology: release-landing
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -17,23 +18,22 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92236bc057996a66ca12484e03154d91a1bbbd58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232540"
 ---
 # SQL Server 2014용 온라인 설명서
-  시작 [!INCLUDE[msCoName](../includes/msconame-md.md)]®에 대 한 온라인 설명서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. 온라인 설명서에는 태스크 설명과 참조 설명서를 사용 하 여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행 하는 방법을 설명 하는 포함 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+  시작 [!INCLUDE[msCoName](../includes/msconame-md.md)]®에 대 한 온라인 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 합니다. 태스크 설명과 참조 설명서를 사용 하 여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행 하는 방법을 설명 하는 온라인 설명서에 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
  **사용해보기:**  
  
-  ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 하 여 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 를 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)로 가상 컴퓨터를 스핀 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하십시오. [SQL Server 2014 서비스 팩 1 릴리스 정보 ](https://support.microsoft.com/en-us/kb/3058865)합니다. 
+  ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보 ](https://support.microsoft.com/en-us/kb/3058865)합니다. 
   
 ## SQL Server 기술  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 여러 가지 데이터 관리 및 분석 기술이 포함되어 있습니다. 각 기술에 대한 기능, 태스크 및 참조 설명서를 찾으려면 다음 테이블의 링크를 클릭하십시오.  
@@ -61,7 +61,7 @@ ms.locfileid: "36185528"
   
 -   [SQL Server 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [데이터 플랫폼의 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [데이터 플랫폼 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
