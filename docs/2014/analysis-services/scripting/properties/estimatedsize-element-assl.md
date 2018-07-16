@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedSize element
 ms.assetid: a9c63a22-d424-4f27-a186-5372f7b0224d
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b77fb03d387139aa503882c166109ba87c36eb20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3ebc8dbfb1c363da88bcb1faf5431be12064a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208093"
 ---
 # <a name="estimatedsize-element-assl"></a>EstimatedSize 요소(ASSL)
   부모 요소의 읽기 전용 예상 크기(바이트)를 포함합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36183112"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[데이터베이스](../objects/database-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
+|부모 요소|[데이터베이스](../objects/database-element-assl.md)하십시오 [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

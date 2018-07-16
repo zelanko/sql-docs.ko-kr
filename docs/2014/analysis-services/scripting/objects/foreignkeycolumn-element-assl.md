@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb037ad571884c6bd5cbc6936d3072078f2decc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824589905f1acf1834e971b8a049005ef1465c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207883"
 ---
 # <a name="foreignkeycolumn-element-assl"></a>ForeignKeyColumn 요소(ASSL)
   관계형 데이터 원본에 대한 부모 테이블로의 조인을 식별합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36182893"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `DataItem` 테이블의 Analysis Services Scripting Language (ASSL) 개체 및 속성을 포함 하 여는 `DataItem` 입력을 참조 하십시오. [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)합니다.  
+ 에 대 한 추가 정보에 대 한는 `DataItem` 형식, Analysis Services Scripting Language (ASSL) 개체의 속성을 테이블을 포함 하는 `DataItem` 입력을 참조 하십시오 [DataItem 데이터 형식 &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  AMO(Analysis Management Object) 개체 모델에서 `ForeignKeyColumns` 컬렉션의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>입니다.  
   

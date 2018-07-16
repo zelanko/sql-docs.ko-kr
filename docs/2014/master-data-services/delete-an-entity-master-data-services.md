@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], deleting
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f2d1d4f1d0bfc77f2777d3650ee62c6bca5f983f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cc0c5fb7822c7e411f29ef154f90de4c9eeeaa2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221733"
 ---
 # <a name="delete-an-entity-master-data-services"></a>엔터티 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티를 삭제하여 엔터티의 모든 멤버와 특성을 삭제합니다.  

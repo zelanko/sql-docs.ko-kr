@@ -1,5 +1,5 @@
 ---
-title: RollupChildren 함수 (MDX) 작업 | Microsoft Docs
+title: RollupChildren 함수 (MDX)를 사용 하 여 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
 - RollupChildren function
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7776ad0bf70060912e4ad8d3e612b04bbcd4183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314989"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 함수 작업(MDX)
-  MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [찾기 및 바꾸기에 대 한 스크립트] 함수 각 자식에 다른 단항 연산자를 적용 하는 멤버의 자식을 롤업 하 고이 롤업 값을 반환 합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
+  다차원 식 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [찾기 및 바꾸기에 대 한 스크립트] 함수는 각각의 자식에 다른 단항 연산자를 적용 하는 멤버의 자식을 롤업 하 고 숫자로이 롤업 값을 반환 합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 함수 예  
  MDX 문에서 `RollupChildren` 함수를 사용하는 방법을 설명하기는 쉽지만 MDX 쿼리에 미치는 이 함수의 효과는 매우 다양할 수 있습니다.  
@@ -68,7 +68,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  이 함수를 호출하면 멤버 속성에 저장된 연산자를 사용하여 각 자식의 값을 합계에 적용합니다. 국내 및 해외 수입에 대한 멤버를 무시하고 `RollupChildren` 함수가 반환한 롤업 합계에 1.1을 곱합니다.  
   
 ### <a name="using-the-iif-function"></a>IIf 함수 사용  
- 예제 작업이 하지 않거나 연산이 한 MDX 쿼리에만 적용 되는 경우는 [IIf](/sql/mdx/iif-mdx) 함수에 사용할 수는 `RollupChildren` 동일한 결과 제공 하는 함수입니다. 다음 MDX 쿼리를 이용하면 사용자 지정 멤버 속성을 사용하지 않고도 앞선 예로 든 MDX와 같은 결과가 나옵니다.  
+ 예로 든 연산이 일반적이. 아니면 연산이 한 MDX 쿼리에만 적용 되는 [IIf](/sql/mdx/iif-mdx) 함수를 사용 하 여 사용할 수 있습니다는 `RollupChildren` 동일한 결과 제공 하는 함수입니다. 다음 MDX 쿼리를 이용하면 사용자 지정 멤버 속성을 사용하지 않고도 앞선 예로 든 MDX와 같은 결과가 나옵니다.  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing project history
 - version control services [SQL Server], project history
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], projects
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99c3a27a74d41efc895489a8690d735dadd3b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287849"
 ---
 # <a name="view-project-history"></a>프로젝트 기록 보기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] VSS(Visual SourceSafe) 프로젝트의 기록에는 파일 작성, 추가, 삭제, 복구 등을 비롯하여 각 프로젝트 파일에서 수행된 모든 동작의 목록이 포함됩니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "36182401"
   
 1.  솔루션 탐색기에서 프로젝트를 선택합니다.  
   
-2.  에 **파일** 메뉴에서 **소스 제어** 클릭 **기록 보기**합니다.  
+2.  에 **파일** 메뉴에서 **소스 제어** 누릅니다 **기록 보기**합니다.  
   
-3.  에 **기록을** \<프로젝트 > 대화 상자에서 다음 작업 중 필요한 작업을 수행 합니다.  
+3.  에 **기록을** \<프로젝트 > 대화 상자에서 다음 작업 중 하나를 수행 합니다.  
   
     -   선택한 파일에 대한 원본 제어 시스템의 복사본을 확인합니다.  
   

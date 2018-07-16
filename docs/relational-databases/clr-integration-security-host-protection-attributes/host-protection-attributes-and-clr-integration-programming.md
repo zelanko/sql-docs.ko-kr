@@ -5,7 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,26 +20,26 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4230a545122968a6b87005f4d10ad8f72ce03df2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 501c85065f0519987a7837042bec45b5d5b4db9d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699244"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350315"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>호스트 보호 특성 및 CLR 통합 프로그래밍
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   CLR(공용 언어 런타임)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 시작하여, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같은 CLR 호스트에 유용할 수 있는 특성으로 .NET Framework의 일부인 관리되는 API(응용 프로그래밍 인터페이스)에 주석을 추가하는 메커니즘을 제공합니다. 이러한 HPA(호스트 보호 특성)의 예는 다음과 같습니다.  
   
--   **Sharedstate:**, 상태 (예: 정적 클래스 필드)를 공유 하는 API 만들기 또는 관리 하는 기능을 노출 하는지 여부를 나타내는입니다.  
+-   **Sharedstate:**, 공유 된 상태 (예: 정적 클래스 필드) API가 만들거나 관리 하는 기능을 노출 하는지 여부를 나타냅니다.  
   
--   **동기화**, API 스레드 간 동기화를 수행 하는 기능을 노출 하는지 여부를 나타내는입니다.  
+-   **동기화**, API가 스레드 간 동기화를 수행 하는 기능을 노출 하는지 여부를 나타냅니다.  
   
--   **ExternalProcessMgmt**, API가 호스트 프로세스를 제어할 수 있는 방법을 노출 하는지 여부를 나타냅니다.  
+-   **ExternalProcessMgmt**, API가 호스트 프로세스를 제어 하는 방법을 노출 하는지 여부를 나타냅니다.  
   
- 이러한 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CAS(코드 액세스 보안)를 통해 호스팅된 환경에서 허용하지 않는 HPA 목록을 지정합니다. CAS 요구 사항은 3 가지 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한 집합: **안전**, **EXTERNAL_ACCESS**, 또는 **UNSAFE**합니다. 이러한 세 보안 수준 중 하나가 서버에 어셈블리를 등록 하는 경우 지정 된 사용 하는 **CREATE ASSEMBLY** 문. 내에서 실행 되는 코드는 **안전** 또는 **EXTERNAL_ACCESS** 사용 권한 집합에는 특정 형식 또는 멤버를 하지 않아야 합니다는 **System.Security.Permissions.HostProtectionAttribute** 특성이 적용 합니다. 자세한 내용은 참조 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) 및 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
+ 이러한 특성을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CAS(코드 액세스 보안)를 통해 호스팅된 환경에서 허용하지 않는 HPA 목록을 지정합니다. CAS 요구 사항은 세 가지 중 하나에 의해 지정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한 집합: **안전**합니다 **EXTERNAL_ACCESS**, 또는 **UNSAFE**합니다. 서버에서 어셈블리를 등록 하는 경우 이러한 세 보안 수준 중 하나가 지정 된 사용 하는 **CREATE ASSEMBLY** 문입니다. 코드 내에서 실행 되는 **안전한** 또는 **EXTERNAL_ACCESS** 권한 집합에는 특정 형식 또는 멤버를 되지 않도록 해야 합니다는 **System.Security.Permissions.HostProtectionAttribute** 특성을 적용 합니다. 자세한 내용은 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) 하 고 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
   
- **HostProtectionAttribute** 않습니다 보안 권한을 특정 코드 식별 한다는 점에서 안정성 향상을 위해 생성 형식 또는 메서드를 필요한 만큼 호스트 허용 될 수 있습니다. 사용은 **HostProtectionAttribute** 호스트의 안정성을 보호 하는 데 도움이 되는 프로그래밍 모델을 적용 합니다.  
+ 합니다 **HostProtectionAttribute** 아닙니다 보안 권한이 형식 또는 메서드를 특정 코드 식별 한다는 점에서 안정성 향상을 위해 생성 하는 만큼의 호스트는 허용 되지 않을 수 있습니다. 사용 된 **HostProtectionAttribute** 호스트의 안정성을 보호 하는 프로그래밍 모델을 적용 합니다.  
   
 ## <a name="host-protection-attributes"></a>호스트 보호 특성  
  HPA는 호스트 프로그래밍 모델에 맞지 않고 다음과 같이 안정성 위협의 증가 수준을 나타내는 형식이나 멤버를 식별합니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "35699244"
   
 -   서버 프로세스 자체를 불안정하게 만들 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. 이로 인해 상태를 공유할 수 있게 하거나, 동기화를 수행하거나, 종료할 때 리소스 누출을 일으키거나 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 멤버를 어셈블리가 호출할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식 또는 멤버에는 사용할 수 없게 하는 **HostProtectionAttribute** 를 지정 하는 **System.Security.Permissions.HostProtectionResource** 열거형의 값을 사용 하 여 ** ExternalProcessMgmt**, **ExternalThreading**를 **MayLeakOnAbort**하십시오 **SecurityInfrastructure**, ** SelfAffectingProcessMgmnt**, **SelfAffectingThreading**를 **: SharedState**를 **동기화**, 또는 **UI**. 이로 인해 상태를 공유할 수 있게 하거나, 동기화를 수행하거나, 종료할 때 리소스 누출을 일으키거나 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 멤버를 어셈블리가 호출할 수 없습니다.  
   
 ### <a name="disallowed-types-and-members"></a>허용되지 않는 유형 및 멤버  
- 형식 및 멤버를 식별 하는 다음 항목에서는 해당 **HostProtectionResource** 값에서 금지 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 형식 및 멤버를 식별 하는 다음 항목은 해당 **HostProtectionResource** 값에서 허용 되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 > [!NOTE]  
 >  이러한 항목에 있는 목록은 지원되는 어셈블리에서 생성되었습니다.  자세한 내용은 [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  

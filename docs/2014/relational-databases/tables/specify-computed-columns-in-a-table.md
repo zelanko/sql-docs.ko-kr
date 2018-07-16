@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc44d75cd4ab87623c84eff94f6569872038c1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234903"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
   계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 계산 열의 식을 지정할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36181997"
 4.  **(수식)** 자식 속성에서 오른쪽에 있는 표 형태 셀에 현재 열의 식을 입력합니다. 예를 들어 `SalesTotal` 열에 입력한 수식이 `SubTotal+TaxAmt+Freight`일 경우 이 수식은 테이블의 각 행에 대해 이 열에 값을 추가합니다.  
   
     > [!IMPORTANT]  
-    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 형식의 열 `nvarchar` 유형의 열과 결합할 `int`, 정수 형식으로 변환 해야 `nvarchar` 이 수식에 나와 있는 것 처럼 `('Prod'+CONVERT(nvarchar(23),ProductID))`합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
+    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 형식의 열에 대 한 `nvarchar` 형식의 열을 사용 하 여 결합 됩니다 `int`, 정수 형식으로 변환 해야 `nvarchar` 이 수식에 표시 된 것 처럼 `('Prod'+CONVERT(nvarchar(23),ProductID))`합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
   
 5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.  
   

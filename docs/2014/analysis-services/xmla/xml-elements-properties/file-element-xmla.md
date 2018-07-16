@@ -24,18 +24,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 644e08e68ef38338d5b93c5abc7afe211c04c935
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319223"
 ---
 # <a name="file-element-xmla"></a>File 요소(XMLA)
-  부모에서 사용할 파일을 식별 [백업](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령이 나 부모 [위치](location-element-xmla.md) 요소입니다.  
+  부모에서 사용할 파일 식별 [Backup](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령이 나 부모 [위치](location-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36182642"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[백업](../xml-elements-commands/backup-element-xmla.md), [위치](location-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
+|부모 요소|[Backup](../xml-elements-commands/backup-element-xmla.md)하십시오 [위치](location-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -70,7 +70,7 @@ ms.locfileid: "36182642"
   
  `Restore` 명령의 경우 `File` 요소는 `Restore` 명령으로 복원되는 백업 파일의 이름을 결정합니다.  
   
- `Location` 요소의 경우 `File` 요소는 원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대한 원격 백업 파일을 설명합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ `Location` 요소의 경우 `File` 요소는 원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대한 원격 백업 파일을 설명합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [AllowOverwrite 요소 &#40;XMLA&#41;](allowoverwrite-element-xmla.md)   

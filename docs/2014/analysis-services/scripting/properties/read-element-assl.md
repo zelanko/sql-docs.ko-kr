@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e7f26c9064f754633420cd58a0f15197189d1ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321203"
 ---
 # <a name="read-element-assl"></a>Read 요소(ASSL)
-  데이터 또는 메타 데이터에 대 한 읽을 수 있는지 여부를 결정 한 주어진 [CubeDimensionPermission](../data-type/permission-data-type-assl.md) 또는 [권한](../data-type/permission-data-type-assl.md) 요소입니다.  
+  에 대 한 데이터 또는 메타 데이터를 읽을 수 있는지 여부를 결정을 지정 [CubeDimensionPermission](../data-type/permission-data-type-assl.md) 하거나 [권한](../data-type/permission-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36094049"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[CubeDimensionPermission](../objects/cubepermission-element-assl.md), [사용 권한](../data-type/permission-data-type-assl.md)|  
+|부모 요소|[CubeDimensionPermission](../objects/cubepermission-element-assl.md), [권한](../data-type/permission-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,11 +68,11 @@ ms.locfileid: "36094049"
 |*허용*|부모 개체의 데이터 및 메타데이터에 대한 읽기 액세스가 허용됩니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Read` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 및 <xref:Microsoft.AnalysisServices.Permission>합니다.  
+ 부모에 해당 하는 요소가 `Read` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 및 <xref:Microsoft.AnalysisServices.Permission>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [CubePermission 요소 &#40;ASSL&#41;](../objects/cubepermission-element-assl.md)   
  [Permission 데이터 형식 &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  

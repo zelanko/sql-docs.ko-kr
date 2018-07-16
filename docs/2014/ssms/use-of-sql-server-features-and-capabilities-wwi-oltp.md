@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a568423d865e9ffea07f4e4487ea6d3680e2b417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2693c20a4b1e26730085e9f84fcf3f920cf50314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310913"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
   인수는 **도구** 메뉴에서 외부 도구가 시작될 때 Studio 환경에서 값을 제공하는 변수입니다. **외부 도구** 대화 상자를 사용하여 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36181720"
 |**솔루션 디렉터리**|$(SolutionDir)|현재 솔루션의 디렉터리(드라이브 + 경로로 정의됨)|  
 |**솔루션 파일 이름**|$(SolutionFileName)|현재 솔루션의 파일 이름(드라이브 + 경로 + 파일 이름으로 정의됨)|  
   
- <sup>1</sup> 상태 표시줄에 표시 된 것 처럼 현재 줄, 현재 열 또는 현재 텍스트는 텍스트 편집기에서 커서의 위치에 따라 됩니다.  
+ <sup>1</sup> 상태 표시줄에 표시 된 것 처럼 현재 줄, 현재 열 또는 현재 텍스트 텍스트 편집기에서 커서의 위치에 따라 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [외부 도구 대화 상자](external-tools-dialog-box.md)   

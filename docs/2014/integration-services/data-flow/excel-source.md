@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b27e464fc28ed85d3b3c3b33eaf4b1d05a38e2
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: ed8d16bc5c9d9d653404a5c049ac10cedc9f129a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199683"
 ---
 # <a name="excel-source"></a>Excel 원본
   Excel 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36324667"
   
 -   **데이터 원본**. Excel 통합 문서의 데이터 원본은 $ 기호가 붙은 워크시트(예: Sheet1$) 또는 명명된 범위(예: MyRange)일 수 있습니다. SQL 문에서 $ 기호로 인한 구문 오류가 없도록 워크시트의 이름을 구분해야 합니다(예: [Sheet1$]). 쿼리 작성기는 자동으로 이러한 구분 기호를 추가합니다. 워크시트 또는 범위를 지정하면 드라이버는 워크시트 또는 범위의 가장 왼쪽에서 비어 있지 않은 첫 번째 셀부터 인접한 블록의 셀을 읽습니다. 따라서 원본 데이터나 제목 또는 머리글 행과 데이터 행 사이에 빈 행이 있을 수 없습니다.  
   
--   **누락된 값**. Excel 드라이버는 지정한 원본에서 특정 개수의 행(기본값: 8행)을 읽어 각 열의 데이터 형식을 추측합니다. 열에 혼합된 데이터 형식, 특히 숫자 데이터와 텍스트 데이터가 혼합되어 있으면 드라이버는 주로 사용된 데이터 형식을 지정하고 다른 형식의 데이터가 포함된 셀에 Null 값을 반환합니다. 사용된 횟수가 같은 경우에는 숫자 유형이 적용됩니다. Excel 워크시트에서 대부분의 셀 서식 옵션은 이러한 데이터 형식 결정에 영향을 주지 않습니다. 가져오기 모드를 지정하여 Excel 드라이버의 이러한 동작을 수정할 수 있습니다. 가져오기 모드를 지정 하려면 `IMEX=1` 에서 Excel 연결 관리자의 연결 문자열에서 확장 속성의 값에는 **속성** 창. 자세한 내용은 [PRB: DAO OpenRecordset를 사용할 때 Excel 값이 NULL로 반환된다](http://support.microsoft.com/kb/194124)를 참조하십시오.  
+-   **누락된 값**. Excel 드라이버는 지정한 원본에서 특정 개수의 행(기본값: 8행)을 읽어 각 열의 데이터 형식을 추측합니다. 열에 혼합된 데이터 형식, 특히 숫자 데이터와 텍스트 데이터가 혼합되어 있으면 드라이버는 주로 사용된 데이터 형식을 지정하고 다른 형식의 데이터가 포함된 셀에 Null 값을 반환합니다. 사용된 횟수가 같은 경우에는 숫자 유형이 적용됩니다. Excel 워크시트에서 대부분의 셀 서식 옵션은 이러한 데이터 형식 결정에 영향을 주지 않습니다. 가져오기 모드를 지정하여 Excel 드라이버의 이러한 동작을 수정할 수 있습니다. 가져오기 모드를 지정 하려면 추가 `IMEX=1` 에서 Excel 연결 관리자의 연결 문자열의 확장 속성 값에는 **속성** 창입니다. 자세한 내용은 [PRB: DAO OpenRecordset를 사용할 때 Excel 값이 NULL로 반환된다](http://support.microsoft.com/kb/194124)를 참조하십시오.  
   
 -   **잘린 텍스트**. Excel 열에 텍스트 데이터가 포함되어 있음이 확인되면 드라이버는 샘플링하는 값 중 가장 긴 값을 기준으로 데이터 형식(문자열 또는 메모)을 선택합니다. 샘플링하는 행에서 255자보다 긴 값이 검색되지 않으면 이 드라이버는 해당 열을 메모 열이 아닌 255자 문자열 열로 처리합니다. 따라서 255자보다 긴 값은 잘릴 수 있습니다. 메모 열에서 데이터를 가져올 때 데이터가 잘리지 않도록 하려면 샘플링된 행 중 하나 이상의 행에 있는 메모 열에 255자보다 긴 값을 포함시키거나 드라이버가 샘플링하는 행 수를 늘려 이러한 행을 포함하도록 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** 레지스트리 키 아래 **TypeGuessRows** 값을 늘려 샘플링된 행 수를 늘릴 수 있습니다. 자세한 내용은 [PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error](http://support.microsoft.com/kb/281517)(PRB: Jet 4.0 OLEDB 원본에서 데이터를 전송하면 버퍼 오버플로 오류가 발생하면서 실패)를 참조하세요.  
   
@@ -122,6 +122,6 @@ ms.locfileid: "36324667"
   
 -   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 3부: 문제 및 대안](http://go.microsoft.com/fwlink/?LinkId=217676)  
   
--   블로그 항목- [SSIS에서 XLSX 파일 사용](http://go.microsoft.com/fwlink/?LinkId=233704), sqlservergeeks.com의 합니다.  
+-   블로그 항목 [SSIS에서 XLSX 파일 사용](http://go.microsoft.com/fwlink/?LinkId=233704), sqlservergeeks.com의 합니다.  
   
   

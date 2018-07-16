@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClassifiedColumnID element
 ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa8223969facc66d126bcba7c7d74a8056e60f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc9938b44568e0641f97697216780ec4f31ad424
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316863"
 ---
 # <a name="classifiedcolumnid-element-assl"></a>ClassifiedColumnID 요소(ASSL)
-  분류 되는 관련 열의 식별자 (ID)가 포함 된 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
+  분류 되는 관련 열의 식별자 (ID)를 포함 합니다 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

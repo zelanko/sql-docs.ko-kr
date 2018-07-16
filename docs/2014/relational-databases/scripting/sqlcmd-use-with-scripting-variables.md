@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a125e23c197b488a921755aa04f60d94c12a7b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 84a4f389b7f72d23e072410cb6862fdcb780044d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300023"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>스크립팅 변수와 함께 sqlcmd 사용
   스크립트에서 사용할 수 있는 변수를 스크립팅 변수라고 합니다. 스크립팅 변수를 사용하면 하나의 스크립트를 여러 시나리오에서 사용할 수 있습니다. 예를 들어 하나의 스크립트를 여러 서버에서 실행해야 하는 경우 각 서버에 맞게 스크립트를 수정하는 대신 서버 이름에 스크립팅 변수를 사용할 수 있습니다. 스크립팅 변수로 제공되는 서버 이름을 변경하여 같은 스크립트를 다른 서버에서 실행할 수 있습니다.  

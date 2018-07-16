@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d1e14cca1726ec72d60f3c309d63f1d773c521d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb1f53dba9fc2b4289ff0d900a53401035300602
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311933"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 이벤트 클래스
   Sort Warnings 이벤트 클래스는 정렬 작업이 메모리에 맞지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 SELECT 문에 사용된 ORDER BY 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.  

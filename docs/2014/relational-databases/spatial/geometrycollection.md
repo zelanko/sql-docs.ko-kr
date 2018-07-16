@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a5c21c01ab776a17d3e160fee51167c426dfa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3a0f4ad36d9664d6627d02edfc401af9ed3d8b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307523"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  A `GeometryCollection` 0 개 이상의 컬렉션이 `geometry` 또는 `geography` 인스턴스. A `GeometryCollection` 비어 있을 수 있습니다.  
+  A `GeometryCollection` 0 개 이상의 컬렉션인 `geometry` 또는 `geography` 인스턴스. `GeometryCollection` 비어 있을 수 있습니다.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 인스턴스  
   
@@ -38,14 +38,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 다음 예제에서는 throw 한 `System.FormatException` 때문에 `LinesString` 인스턴스는 `GeometryCollection` 인스턴스가 허용 되지 않습니다.  
+ 다음 예제에서는 throw를 `System.FormatException` 때문에 `LinesString` 의 인스턴스는 `GeometryCollection` 인스턴스가 허용 되지 않습니다.  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- `GeometryCollection` 인스턴스는 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 유효한 경우 유효합니다. 다음은 세 가지 유효한 `GeometryCollection` 인스턴스 개와 유효 하지 않은 인스턴스 하나 있습니다.  
+ `GeometryCollection` 인스턴스는 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 유효한 경우 유효합니다. 다음은 세 가지 유효한 `GeometryCollection` 인스턴스와 유효 하지 않은 한 인스턴스.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

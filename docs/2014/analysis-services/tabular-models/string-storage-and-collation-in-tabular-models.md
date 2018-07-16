@@ -1,5 +1,5 @@
 ---
-title: 문자열 저장소 및 테이블 형식 모델에서 데이터 정렬 | Microsoft Docs
+title: 문자열 저장소 및 테이블 형식 모델의 데이터 정렬 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6312157544413369574248a06477946a6a45bd71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b61d01e59aa99e6ed97a328d14cee8ab82c3427a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280549"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 저장소 및 데이터 정렬
   테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  

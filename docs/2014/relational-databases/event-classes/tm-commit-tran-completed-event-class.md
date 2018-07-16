@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1422823237bd5d68b34ba5c33c9e8c1888d80265
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6026573b752088a4910acf09265b66a266c15b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288949"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed 이벤트 클래스
   TM: Commit Tran Completed 이벤트 클래스는 COMMIT TRANSACTION 요청이 완료되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다. EventSubClass 열은 현재 트랜잭션이 커밋된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  

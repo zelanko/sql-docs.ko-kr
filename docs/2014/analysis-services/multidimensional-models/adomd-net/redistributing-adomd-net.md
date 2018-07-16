@@ -15,22 +15,22 @@ helpviewer_keywords:
 - redistributing ADOMD.NET
 ms.assetid: f8db3c99-0243-4b92-b486-0d8786c264f4
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0451623dd44f5730a62e26232916a6c093155f3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fde698740a417076f7fe139250765b9610e91b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245613"
 ---
 # <a name="redistributing-adomdnet"></a>ADOMD.NET 재배포
   ADOMD.NET을 사용하는 응용 프로그램을 작성할 때 응용 프로그램과 함께 적합한 ADOMD.NET 버전을 재배포해야 합니다. ADOMD.NET을 재배포하려면 ADOMD.NET 설치 프로그램을 응용 프로그램의 설치 프로그램에 포함합니다.  
   
  ADOMD.NET 설치 프로그램뿐만 아니라 최신 버전의 ADOMD.NET은 SQL Server 기능 팩의 일부로 Microsoft 다운로드 센터에 있습니다.  
   
- ADOMD.NET 설치 프로그램에서는 ADOMD.NET 파일을 설치 \< *시스템 드라이브*>: \Program Files\Microsoft.NET\ADOMD.NET\\*버전 번호*합니다.  
+ ADOMD.NET 설치 프로그램에서는 ADOMD.NET 파일에서 \< *시스템 드라이브*>: \Program Files\Microsoft.NET\ADOMD.NET\\*버전 번호*합니다.  
   
  ADOMD.NET 설치 프로그램을 포함한 후 응용 프로그램의 설치 프로그램을 통해 ADOMD.NET 설치 프로그램을 시작하고 ADOMD.NET을 설치합니다. 또한 사용자 환경에 따라 SQL Server가 관련 어셈블리를 신뢰할 수 있는지 확인해야 할 수 있습니다.  
   

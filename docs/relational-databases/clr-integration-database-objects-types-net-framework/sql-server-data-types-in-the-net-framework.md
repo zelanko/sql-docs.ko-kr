@@ -5,7 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ed5a1608807d1a05638ee1854ff6676c4cdc7db6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702054"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350195"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework의 SQL Server 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTypes** 라이브러리는 기본 클래스 라이브러리의 일부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목.NET Framework 프로그래머에 게 새로운 의미 체계에 설명 하 고에서 구현 하는 형식을 소개는 **System.Data.SqlTypes** 에 포함 된 네임 스페이스는 **System.Data** 라이브러리입니다.  
+  합니다 **SqlTypes** 라이브러리의 기본 클래스 라이브러리의 일부인는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목에서는.NET Framework 프로그래머에 게 새로운 의미 체계를 설명 하 고 구현 형식을 소개 합니다 **System.Data.SqlTypes** 에 포함 된 네임 스페이스의 **System.Data** 라이브러리입니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35702054"
  [데이터 정렬 및 CLR 통합 데이터 형식](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  CLR 통합에서 데이터 정렬이 처리되는 방법에 대해 설명합니다.  
   
- [큰 개체 처리 &#40;LOB&#41; CLR에서 매개 변수](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [큰 개체 처리 &#40;LOB&#41; clr에서 매개 변수](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 사이에서 LOB 형식을 전달하는 방법에 대해 설명합니다.  
   
  [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

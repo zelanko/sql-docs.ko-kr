@@ -1,5 +1,5 @@
 ---
-title: 대상 요소 (XMLA) | Microsoft Docs
+title: Target 요소 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd34f3102d477d9a2e89af8c8ba7e5ff2d37ef62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287869"
 ---
 # <a name="target-element-xmla"></a>Target 요소(XMLA)
-  동안 병합할 대상 파티션을 나타냅니다는 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다.  
+  하는 동안 병합할 대상 파티션을 나타냅니다는 [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36180947"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
-|자식 요소|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
+|자식 요소|[CubeID](id-element-xmla.md)하십시오 [DatabaseID](databaseid-element-xmla.md)합니다 [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- `Target` 요소는 대상으로 지정 된 원본 파티션의 내용을 단일 파티션에 대 한 개체 참조는 [소스](sources-element-xmla.md) 부모 `MergePartitions` 요소를 병합할 합니다.  
+ `Target` 요소는 원본 파티션의 내용을 지정 된는 단일 파티션에 대 한 개체 참조를 [원본](sources-element-xmla.md) 부모 요소의 `MergePartitions` 요소를 병합할 파티션은 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Internet Sales 측정값 그룹의 4개 파티션을 모두 `Internet_Sales_2004` 대상 파티션에 결합합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]의 예제 데이터베이스인 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 큐브를 참조합니다.  

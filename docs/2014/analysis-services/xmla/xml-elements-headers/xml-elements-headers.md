@@ -20,21 +20,21 @@ helpviewer_keywords:
 - headers [XML for Analysis]
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bb2cff2e70ccd1ac0cf391f7832db4978a415f56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1b04b85e3267e7432f37c5f70e823c859a82a952
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291299"
 ---
 # <a name="headers-xmla"></a>헤더(XMLA)
   XMLA(XML for Analysis) 프로토콜은 SOAP 헤더 내의 XML 요소를 사용하여 프로토콜 수준의 기능(예: 세션 지원, 지원 기능 협상)을 관리합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- 다음 항목에서 설명 하 여 구현 되는 XMLA 헤더 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+ 다음 항목에서 구현 되는 XMLA 헤더 요소를 설명 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 |메서드|Description|  
 |------------|-----------------|  

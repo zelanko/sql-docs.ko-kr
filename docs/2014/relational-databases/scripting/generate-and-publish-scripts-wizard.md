@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
 - sql9.swb.generatescriptswizard.scriptwizarddescription.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 06b4bbbca6699c274701ae479cf24daaabdcf18b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4c784a16a3539b52c2f900af7af6e08afca098e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307613"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
   **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
@@ -192,9 +192,9 @@ ms.locfileid: "36171953"
   
 -   **개체 수준 사용 권한 스크립팅** - 데이터베이스의 개체에 대한 사용 권한을 설정하는 스크립트를 포함합니다. 기본값은 **False**입니다.  
   
--   **통계 스크립팅** -로 설정 된 경우 **통계 스크립팅**,이 옵션은 포함는 `CREATE STATISTICS` 문 개체에서 통계를 다시 만들려고 합니다. **통계 및 히스토그램 스크립팅** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 스크립팅 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
+-   **통계 스크립팅** -로 설정 하면 **통계 스크립팅**,이 옵션은 포함는 `CREATE STATISTICS` 문 개체에 대 한 통계를 다시 만들려고 합니다. **통계 및 히스토그램 스크립팅** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 스크립팅 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
   
--   **USE DATABASE 스크립팅** -추가 `USE DATABASE` 문을 스크립트에 있습니다. 올바른 데이터베이스에서 생성 되는 데이터베이스 개체를 포함 된 `USE DATABASE` 문. 스크립트는 다른 데이터베이스에 사용 해야 하는 경우 선택 **False** 생략 하는 `USE DATABASE` 문. 기본값은 **True**입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)를 참조하세요.  
+-   **USE DATABASE 스크립팅** -추가 된 `USE DATABASE` 문을 스크립트에 있습니다. 올바른 데이터베이스에서 데이터베이스 개체가 만들어졌는지 확인 하려면 포함는 `USE DATABASE` 문입니다. 스크립트는 다른 데이터베이스에 사용할 경우 선택 **False** 생략 하는 `USE DATABASE` 문입니다. 기본값은 **True**입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)를 참조하세요.  
   
 -   **스크립팅할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마만**입니다.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "36171953"
   
 -   **변경 내용 추적 스크립팅** - 원본 데이터베이스 또는 원본 데이터베이스의 테이블에서 변경 내용 추적을 사용하도록 설정되어 있는 경우 변경 내용 추적을 스크립팅합니다. 기본값은 **False**입니다. 자세한 내용은 [변경 내용 추적 정보&#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)를 참조하세요.  
   
--   **Check 제약 조건 스크립팅** – Adds `CHECK` 제약 조건을 스크립트입니다. 기본값은 **True**입니다. `CHECK` 제약 조건에는 일부 지정 된 조건에 맞게 테이블에 입력 된 데이터가 있어야 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
+-   **Check 제약 조건 스크립팅** – Adds `CHECK` 제약 조건을 스크립트입니다. 기본값은 **True**입니다. `CHECK` 제약 조건에는 일부 지정 된 조건을 충족 하는 테이블에 입력 한 데이터가 필요 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
 -   **데이터 압축 옵션 스크립팅** - 원본 데이터베이스 또는 원본 데이터베이스의 테이블에서 데이터 압축 옵션이 구성되어 있는 경우 데이터 압축 옵션을 스크립팅합니다. 자세한 내용은 [Data Compression](../data-compression/data-compression.md)을 참조하세요. 기본값은 **False**입니다.  
   
@@ -256,9 +256,9 @@ ms.locfileid: "36171953"
   
 7.  **개체 수준 사용 권한 게시** - 데이터베이스에서 선택한 개체에 대한 사용 권한을 포함합니다. 기본값은 **False**입니다.  
   
-8.  **통계 게시** -로 설정 된 경우 **통계 게시**, 포함는 `CREATE STATISTICS` 문 개체에서 통계를 다시 만들려고 합니다. **통계 및 히스토그램 게시** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 게시 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
+8.  **통계 게시** -로 설정 하면 **통계 게시**, 포함는 `CREATE STATISTICS` 문 개체에 대 한 통계를 다시 만들려고 합니다. **통계 및 히스토그램 게시** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 게시 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
   
-9. **Vardecimal 옵션 게시** -사용 하도록 설정 된 `vardecimal` 테이블 형식을 원본 데이터베이스 테이블에 설정 된 경우 대상 데이터베이스 테이블 에서도 합니다. 기본값은 **True**입니다.  
+9. **Vardecimal 옵션 게시** -사용 하도록 설정 된 `vardecimal` 테이블 형식을 원본 데이터베이스 테이블에서 사용 하는 경우 대상 데이터베이스 테이블입니다. 기본값은 **True**입니다.  
   
 10. **개체 이름 스키마 한정** - 만들어지는 개체 이름에 스키마 이름을 포함합니다. 기본값은 **True**입니다.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "36171953"
   
  **테이블/뷰 옵션** - 다음 옵션은 테이블 또는 뷰에만 적용됩니다.  
   
-1.  **Check 제약 조건 게시** -만들기를 포함 `CHECK` 게시 프로세스에 대 한 제약 조건입니다. 기본값은 **True**입니다. `CHECK` 제약 조건에는 일부 지정 된 조건에 맞게 테이블에 입력 된 데이터가 있어야 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
+1.  **Check 제약 조건 게시** -만들기를 포함 `CHECK` 게시 프로세스에 대 한 제약 조건입니다. 기본값은 **True**입니다. `CHECK` 제약 조건에는 일부 지정 된 조건을 충족 하는 테이블에 입력 한 데이터가 필요 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
 2.  **외래 키 게시** - 게시 프로세스에 외래 키 만들기를 포함합니다. 기본값은 **True**입니다. 외래 키는 테이블 간의 관계를 나타내고 적용합니다. 자세한 내용은 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)을 참조하세요.  
   

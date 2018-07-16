@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cc52b0264c547c6dd6fabe14cd82762193a5f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 6f0888b95eb765313b2cf766b0f61c1d71f642b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306043"
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
   엔터티는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델에 포함된 개체입니다. 각 엔터티에는 관리하는 마스터 데이터의 행인 멤버가 들어 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36094010"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |새 엔터티를 만듭니다.|[엔터티를 만듭니다. &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
-|엔터티에 명시적 계층 및 컬렉션을 포함할 수 있음을 지정합니다.|[명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|엔터티에 명시적 계층 및 컬렉션을 포함할 수 있음을 지정합니다.|[명시적 계층 및 컬렉션에 대 한 엔터티를 사용 하도록 설정 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |기존 엔터티의 이름을 변경합니다.|[엔터티 이름 변경 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |기존 엔터티를 삭제합니다.|[엔터티 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
 |엔터티에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  

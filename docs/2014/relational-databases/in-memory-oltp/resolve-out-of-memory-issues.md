@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b57ae0faef29326a510dddbbfe049c1c9b4a9b3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253985"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 방법으로 더 많은 메모리를 사용합니다. 필요 증가에 따라 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대해 설치하고 할당한 메모리의 양이 불충분해질 수 있습니다. 이 경우 메모리가 부족해질 수 있습니다. 이 항목에서는 OOM 상황에서 복구하는 방법을 설명합니다. 여러 OOM 상황을 방지하는 데 도움이 될 수 있는 지침은 [메모리 사용량 모니터링 및 문제 해결](monitor-and-troubleshoot-memory-usage.md) 을 참조하세요.  
@@ -139,7 +139,7 @@ GO
 > 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 항목을 참조하세요.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> 사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결  
- 작업에 사용할 수 있는 메모리가 충분한데 “'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대해 페이지를 할당할 수 없습니다."라는 오류 메시지가 표시되는 경우. 참조 'http://go.microsoft.com/fwlink/?LinkId=330673'에 대 한 자세한 내용은. " 라는 오류 메시지가 기록된 경우 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
+ 작업에 사용할 수 있는 메모리가 충분한데 “'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대해 페이지를 할당할 수 없습니다."라는 오류 메시지가 표시되는 경우. 참조 'http://go.microsoft.com/fwlink/?LinkId=330673' 자세한. " 라는 오류 메시지가 기록된 경우 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
   
  이 오류를 해결하려면 리소스 관리자를 사용하도록 설정해야 합니다.  
   

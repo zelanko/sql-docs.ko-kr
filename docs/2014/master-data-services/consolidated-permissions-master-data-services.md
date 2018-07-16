@@ -1,5 +1,5 @@
 ---
-title: 사용 권한 (Master Data Services) 통합 | Microsoft Docs
+title: 통합 권한 (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], consolidated member attribute permissions
 - consolidated members [Master Data Services], attribute permissions
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - members [Master Data Services], consolidated member permissions
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0436df9a9aa4f21d9a581172e2874ca2dad6aa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45b5b6ac268dda2d0462c1a4ada895efe8f90171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283439"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>통합 사용 권한(Master Data Services)
   통합 사용 권한은 엔터티의 모든 통합 멤버에 대한 특성 값에 적용됩니다.  

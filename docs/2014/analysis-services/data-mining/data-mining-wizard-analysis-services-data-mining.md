@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - OLAP [Analysis Services], mining models
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 caps.latest.revision: 56
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49b3ecb1f8cc1bb63344b201145f9d6639aace89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288419"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>데이터 마이닝 마법사(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
   
  마법사의 마지막 단계에서는 원하는 경우 데이터를 학습 및 테스트 집합으로 나누고 드릴스루와 같은 기능을 사용하도록 설정할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36182686"
   
 -   예측에 사용할 열 또는 특성은 무엇입니까? 분석에 대한 입력으로 사용하기에 적합한 열 또는 특성은 무엇입니까?  
   
--   어떤 알고리즘을 사용해야 합니까? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 제공되는 알고리즘은 모두 다른 특징을 가지고 있으며 생성되는 결과도 다릅니다. 각 데이터 집합에 대해 하나의 모델만 사용할 수 있는 것은 아니므로 원하는 대로 다양한 모델을 추가해 볼 수 있습니다.  
+-   어떤 알고리즘을 사용해야 합니까?  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 제공되는 알고리즘은 모두 다른 특징을 가지고 있으며 생성되는 결과도 다릅니다. 각 데이터 집합에 대해 하나의 모델만 사용할 수 있는 것은 아니므로 원하는 대로 다양한 모델을 추가해 볼 수 있습니다.  
   
 -   통합된 데이터 집합에서 모델을 테스트할 수 있어야 합니까? 그런 경우 일부 데이터를 테스트용으로 따로 떼어놓는 옵션을 사용하는 것이 좋습니다. 백분율을 선택할 수 있으며 원하는 경우 지정된 행 수로 상한을 정할 수 있습니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36182686"
   
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [콘텐츠 형식을 &#40;데이터 마이닝&#41;](content-types-data-mining.md)  
+ [콘텐츠 형식 &#40;데이터 마이닝&#41;](content-types-data-mining.md)  
   
  [데이터 형식 &#40;데이터 마이닝&#41;](data-types-data-mining.md)  
   

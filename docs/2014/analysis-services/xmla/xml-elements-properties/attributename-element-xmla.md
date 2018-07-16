@@ -24,18 +24,18 @@ helpviewer_keywords:
 - AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1251de0a3f81a0b3a25d44de5bfbe2e41fa0f90a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 528bd232e9b49bfab5376b6dee16d22c6e6677d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306152"
 ---
 # <a name="attributename-element-xmla"></a>AttributeName 요소(XMLA)
-  부모에서 나타내는 특성의 이름을 포함 [특성](attribute-element-xmla.md) 요소입니다.  
+  부모를 나타내는 특성의 이름이 [특성](attribute-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36093387"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

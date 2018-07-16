@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163034"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치와 백업 미디어를 소개합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "36180527"
   
 -   [백업 압축](#BackupCompression)  
   
--   [SQL Server의 백업 작업에 대 한 제한](#Restrictions)  
+-   [SQL Server에서 백업 작업에 대 한 제한](#Restrictions)  
   
 -   [관련 작업](#RelatedTasks)  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36180527"
 ##  <a name="BackupCompression"></a> 백업 압축  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 압축 백업을 지원하며, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 압축된 백업을 복원할 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.  
   
-##  <a name="Restrictions"></a> SQL Server의 백업 작업에 대 한 제한  
+##  <a name="Restrictions"></a> SQL Server에서 백업 작업에 대 한 제한  
  백업은 데이터베이스가 온라인 상태이며 사용 중인 경우 발생할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>오프라인 데이터는 백업할 수 없음  

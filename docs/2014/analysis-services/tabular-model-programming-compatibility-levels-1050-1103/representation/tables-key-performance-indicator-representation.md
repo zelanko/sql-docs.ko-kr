@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4673e33ba3b6ecce58d8d4c06a12d7311b98cde0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295413"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>KPI(핵심 성과 지표) 표현(테이블 형식)
   KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다.  
@@ -226,6 +226,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 예제  
- AMO를 사용 하 여 만들고 핵심 성과 지표를 조작 하는 방법을 이해 하 게 표현 AMO to Tabular 예제의;의 소스 코드 참조 특히 다음 소스 파일에 체크 인: AddKPIs.cs 합니다. 예제는 Codeplex에서 사용할 수 있습니다. 코드에 대한 중요 정보: 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다. 그리고 교육 목적 이외의 목적으로는 사용할 수 없습니다.  
+ AMO를 사용 하 여 만들고 핵심 성과 지표를 조작 하는 방법은 이해 하 게 표현 AMO to Tabular 예제의;의 소스 코드 참조 특히 다음 원본 파일을 체크: AddKPIs.cs 합니다. 예제는 Codeplex에서 사용할 수 있습니다. 코드에 대한 중요 정보: 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다. 그리고 교육 목적 이외의 목적으로는 사용할 수 없습니다.  
   
   

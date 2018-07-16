@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server], jobs
 - jobs [SQL Server Agent], notification options
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - notifications [SQL Server], job status
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b9f90b5f23e5b630cb13a1feaf33bf9f3896827
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 26bb76499741ff1448a30ed818bc07e2d96d1928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181450"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 알림 옵션을 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업에 대한 알림을 운영자에게 전송할 수 있도록 하는 방법에 대해 설명합니다.  
@@ -106,11 +106,11 @@ ms.locfileid: "36184403"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)합니다.  
+ 자세한 내용은 [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)합니다.  
   
-##  <a name="SMO"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **운영자에게 작업 상태를 알리려면**  
   
- 사용 하 여 `Job` Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
+ 사용 된 `Job` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
   

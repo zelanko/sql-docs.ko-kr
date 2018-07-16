@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd0a2dcedc20cc1448ef16b89bc3f933e986ce15
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a16dc823d7428f61391d44e6e0511e07667a3f23
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703114"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356955"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL 서버의 사용자 정의 형식 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

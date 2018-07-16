@@ -1,5 +1,5 @@
 ---
-title: '1 단원: 요청에 최선의 구현 방법 평가 | Microsoft Docs'
+title: 1 단원:를 주문형으로 최선의 구현 방법 평가 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db311853675ad5dc80569bc5043e3124e790152c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 77a51ea896e6880ba373042b8201c55e5dec26eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289839"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>1단원: 요청 시 최선의 구현 방법 평가
   요청 시(또는 "임시") 정책 평가 방법을 사용하여 최선의 구현 방법 정책을 신속히 평가함으로써 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스가 최선의 구현 방법 지침과 권장 사항을 충족하는지 여부를 확인할 수 있습니다.  

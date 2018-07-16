@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f1782eb62cec4d028a17f380a8bd924458e1e65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca1905c6790ff71b9a263182a4812c2fedaa1e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285999"
 ---
 # <a name="connectionstring-element-assl"></a>ConnectionString 요소(ASSL)
   암호화 된 연결 문자열을 포함 한 [DataSource](../objects/datasource-element-assl.md) 요소입니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36183330"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36183330"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ConnectionString` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataSource>합니다.  
+ 부모에 해당 하는 요소가 `ConnectionString` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataSource>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

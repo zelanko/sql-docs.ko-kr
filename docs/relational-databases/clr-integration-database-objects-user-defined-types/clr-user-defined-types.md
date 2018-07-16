@@ -5,7 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -35,12 +35,12 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22dbbb2a3a8bc4f89682928701b70406ac5db7f8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695034"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353985"
 ---
 # <a name="clr-user-defined-types"></a>CLR 사용자 정의 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "35695034"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR 코드 실행 기능은 기본적으로 OFF로 설정되어 있습니다. CLR을 사용 하 여 사용할 수는 **sp_configure** 시스템 저장 프로시저입니다.  
   
- 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], CLR 개체를 저장할 수 있도록 서버의 스칼라 형식 시스템을 확장 하려면 사용자 정의 형식 (Udt)에 사용할 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. UDT에는 여러 요소와 동작이 포함될 수 있어, 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다.  
+ 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서의 사용자 정의 형식 (Udt) CLR 개체의 저장소를 사용 하도록 설정 하면 서버의 스칼라 형식 시스템을 확장 하는 데 사용할를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스. UDT에는 여러 요소와 동작이 포함될 수 있어, 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다.  
   
  UDT는 시스템 전체에서 액세스하므로 복잡한 데이터 형식을 사용하면 성능이 저하될 수 있습니다. 복잡한 데이터는 일반적인 행과 테이블을 사용하여 모델링하는 것이 효율적입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 UDT는 다음에 적합합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "35695034"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDT를 개발하는 프로세스는 다음 단계로 구성됩니다.  
   
-1.  **코딩 및 UDT를 정의 하는 어셈블리를 작성 합니다.** UDT는 검증할 수 있는 코드를 생성하는 .NET Framework CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 이러한 언어에는 Visual C# 및 Visual Basic .NET 등이 있습니다. 데이터는 .NET Framework 클래스 또는 구조의 필드와 속성으로 노출되며 동작은 클래스 또는 구조의 메서드로 정의됩니다.  
+1.  **코드 및 UDT를 정의 하는 어셈블리를 빌드하십시오.** UDT는 검증할 수 있는 코드를 생성하는 .NET Framework CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. 이러한 언어에는 Visual C# 및 Visual Basic .NET 등이 있습니다. 데이터는 .NET Framework 클래스 또는 구조의 필드와 속성으로 노출되며 동작은 클래스 또는 구조의 메서드로 정의됩니다.  
   
 2.  **어셈블리를 등록 합니다.** 데이터베이스 프로젝트에서 Visual Studio 사용자 인터페이스를 통해 UDT를 배포하거나, 클래스 또는 구조가 포함된 어셈블리를 데이터베이스에 복사하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 UDT를 배포할 수 있습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "35695034"
     > [!NOTE]  
     >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 .NET Framework 어셈블리에서 만든 UDT가 지원되지 않았습니다. 그러나 계속 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 별칭 데이터 형식을 사용 하 여 **sp_addtype**합니다. CREATE TYPE 구문은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 데이터 형식과 UDT를 만드는 데 모두 사용할 수 있습니다.  
   
-4.  **테이블, 변수 또는 UDT를 사용 하 여 매개 변수를 만듭니다** 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 사용자 정의 형식을 테이블의 열 정의 변수로 사용할 수 있습니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는의 인수로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 또는 저장 프로시저입니다.  
+4.  **테이블, 변수 또는 UDT를 사용 하 여 매개 변수를 만듭니다** 부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 사용자 정의 형식 테이블의 열 정의 변수로 사용할 수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는의 인수로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 또는 저장 프로시저입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

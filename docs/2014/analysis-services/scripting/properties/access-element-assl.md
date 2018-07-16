@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eea0d7e8b0d26692c2cc6e0400d4ceaf7aa8ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314733"
 ---
 # <a name="access-element-assl"></a>Access 요소(ASSL)
   에 지정 된 액세스 수준을 나타냅니다는 [CellPermission](../objects/cellpermission-element-assl.md) 요소입니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36182337"
  AMO(Analysis Management Objects) 개체 모델에서 `Access`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.CellPermissionAccess>입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Role 요소 &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [역할 요소 &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

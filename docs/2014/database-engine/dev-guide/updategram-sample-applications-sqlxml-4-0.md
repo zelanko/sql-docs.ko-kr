@@ -17,20 +17,20 @@ helpviewer_keywords:
 - examples [SQLXML], Updategram
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91e7c134cb1564adc92540626e1b774866ed4082
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5989d87461736535b7c8b1d8cb6d024a4c2ae991
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252765"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Updategram 예제 응용 프로그램(SQLXML 4.0)
   이 섹션에서는 updategram을 사용하는 예를 보여 줍니다.  
   
- 이 섹션의 모든 예제에서 AdventureWorks 예제 데이터베이스를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 모든 업데이트는 AdventureWorks 데이터베이스의 테이블에 적용됩니다.  
+ 이 단원의 모든 예제에서 AdventureWorks 예제 데이터베이스 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 모든 업데이트는 AdventureWorks 데이터베이스의 테이블에 적용됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ADO를 사용 하 여 Updategram 실행 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  

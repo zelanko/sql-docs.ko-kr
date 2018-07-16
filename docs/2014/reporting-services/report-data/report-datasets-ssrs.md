@@ -1,5 +1,5 @@
 ---
-title: (보고서 작성기 및 SSRS) 보고서에 데이터 추가 | Microsoft Docs
+title: 데이터 보고서를 추가 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aeae106d4ab76cb6ab04248126b4b32e1e4a160a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284750"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>보고서에 데이터 추가(보고서 작성기 및 SSRS)
   보고서에 데이터를 추가하려면 데이터 집합을 만듭니다. 각 데이터 집합은 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 집합에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 집합을 검색하는 데 필요한 정보가 포함됩니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "36171899"
   
  쿼리 디자이너에서는 쿼리를 실행해 예제 데이터를 보고 쿼리 명령 구문의 유효성을 검사할 수 있습니다. 결과 집합의 열 이름이 보고서 데이터 창에 표시되는 필드 이름이 됩니다. 결과 집합은 단일 행 및 열 집합이어야 하며 각 데이터 행에는 같은 수의 값이 있어야 합니다. 단일 쿼리에 여러 결과 집합이 있을 수는 없습니다. 열 수가 일정하지 않으며 각 행에 대해 생성되는 데이터 값 수가 다를 수 있는 비정형 계층은 지원되지 않습니다.  
   
- 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 참조 [보고서 작성기에서 자격 증명 지정](../specify-credentials-in-report-builder.md) 및 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+ 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md) 하 고 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
   
  데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자이너&#40;보고서 작성기&#41;](../query-designers-report-builder.md)를 참조하세요.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36171899"
   
  [관계형 쿼리 디자이너에서 쿼리 작성 &#40;보고서 작성기 및 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [다차원 데이터에 대 한 매개 변수 값에 대해 숨겨진된 데이터 집합 표시 &#40;보고서 작성기 및 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [다차원 데이터에 대 한 매개 변수 값에 대해 숨겨진된 데이터 집합을 표시 &#40;보고서 작성기 및 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   

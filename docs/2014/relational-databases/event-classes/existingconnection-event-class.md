@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08b213035641d22aae7a9e4b1c3c2fbcbdf5b876
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 845f94a258b237dc571276001647321f505b3708
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329543"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection 이벤트 클래스
   ExistingConnection 이벤트 클래스는 추적이 시작될 때의 기존 사용자 연결 속성을 나타냅니다. 서버에서는 기존 사용자 연결당 하나의 ExistingConnection 이벤트를 발생시킵니다.  

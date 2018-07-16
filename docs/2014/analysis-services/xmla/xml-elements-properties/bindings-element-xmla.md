@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Bindings element
 ms.assetid: caa34cab-f61f-4f39-b800-af1601714daa
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c630f6f5992c528ee89099c44d2ea69a9e352f5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ee02beeb04987680cf9cf516bc6f25e66287b7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302693"
 ---
 # <a name="bindings-element-xmla"></a>Bindings 요소(XMLA)
   부모 [Batch](binding-element-xmla.md) 또는 [Process](../xml-elements-commands/batch-element-xmla.md) 요소의 [Binding](../xml-elements-commands/process-element-xmla.md) 요소 컬렉션을 포함합니다.  

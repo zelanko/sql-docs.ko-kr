@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - failover modes [SQL Server]
 - Availability Groups [SQL Server], deploying
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 caps.latest.revision: 26
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6a3b16ef9e881332bc6aab301ccf1defdd4cc86a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa3771b373292278ac3131dfd7f8484b6f4b8601
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304253"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>가용성 복제본의 장애 조치(failover) 모드 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 가용성 복제본에 대한 장애 조치(failover) 모드를 변경하는 방법에 대해 설명합니다. 장애 조치(failover) 모드는 동기-커밋 가용성 모드에서 실행되는 복제본에 대한 장애 조치(failover) 모드를 결정하는 복제본 속성입니다. 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md) 및 [가용성 모드&#40;AlwaysOn 가용성 그룹&#41;](availability-modes-always-on-availability-groups.md)를 참조하세요.  
@@ -105,7 +104,7 @@ ms.locfileid: "36183315"
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  사용 하 여는 `Set-SqlAvailabilityReplica` 사용 하 여 cmdlet의 `FailoverMode` 매개 변수입니다. 복제본을 자동 장애 조치가 가능 하도록 설정할 때 사용 해야 할 수 있습니다는 `AvailabilityMode` 매개 변수를 복제본을 동기-커밋 가용성 모드로 변경 합니다.  
+2.  사용 합니다 `Set-SqlAvailabilityReplica` cmdlet을 사용 합니다 `FailoverMode` 매개 변수입니다. 복제본을 자동 장애 조치를 설정할 때 사용 해야 할 수 있습니다는 `AvailabilityMode` 매개 변수는 복제본을 동기-커밋 가용성 모드로 변경 합니다.  
   
      예를 들어 다음 명령은 `MyReplica` 가용성 그룹의 `MyAg` 복제본이 동기-커밋 가용성 모드를 사용하고 자동 장애 조치(failover)를 지원하도록 수정합니다.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36183315"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   

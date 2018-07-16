@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc4ffd0658e150e0fee8913f20d3e5cc02384f68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b152587ad63cd09281e61dcc746fd1dc18cda1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297913"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>요약: 계층적 테이블의 데이터 관리
   `hierarchyid` 데이터 형식을 사용하면 계층적 데이터를 반영하는 테이블을 쉽게 만든 다음 깊이 우선 및 너비 우선 인덱스를 만들어 테이블에 효율적으로 액세스할 수 있습니다. 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  

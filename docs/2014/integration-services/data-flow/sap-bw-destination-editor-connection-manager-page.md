@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18e56dea2976e5a058a1161c1ea87eaec64d7dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f837d1380fc5198b0d42bdf0399717807ac81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302273"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 대상 편집기(연결 관리자 페이지)
   **SAP BW 대상 편집기** 의 **연결 관리자** 페이지를 사용하여 SAP BW 대상이 사용할 SAP BW 연결 관리자를 선택할 수 있습니다. 이 페이지에서는 SAP Netweaver BW 시스템으로 데이터를 로드하기 위한 매개 변수도 선택합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "36093811"
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 입력합니다. 일반적으로 이름 또는 IP 주소는 SAP 응용 프로그램 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 형식으로 입력 `sapgwNN`여기서 `NN` 은 시스템 번호입니다.  
+ 게이트웨이 서비스의 이름 형식으로 입력 `sapgwNN`여기서 `NN` 은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 입력합니다.  

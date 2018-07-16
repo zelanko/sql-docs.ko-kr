@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d0487ac38c36a8f327df6fbb60a3e084958ec85f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c728fec6573dbcfd36bcc973c1fddbf7ffbe1b45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328183"
 ---
 # <a name="sequence-container"></a>시퀀스 컨테이너
   시퀀스 컨테이너는 패키지 제어 흐름의 하위 집합인 제어 흐름을 정의합니다. 시퀀스 컨테이너는 패키지를 여러 개의 별도 제어 흐름으로 그룹화하며, 각 제어 흐름에는 전체 패키지 제어 흐름 내에서 실행되는 하나 이상의 태스크 및 컨테이너가 포함됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36182637"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [태스크 또는 컨테이너는 제어 흐름에 추가 또는 삭제](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [태스크 또는 컨테이너 제어 흐름에 추가 또는 삭제](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Integration Services 컨테이너](integration-services-containers.md)  
   

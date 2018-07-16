@@ -1,5 +1,5 @@
 ---
-title: XPath 예 (SQLXML 4.0)에 대 한 주석이 추가 된 XSD 스키마 샘플 | Microsoft Docs
+title: 주석이 추가 된 예제 XSD 스키마 (SQLXML 4.0) XPath 예 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f4d8c06249a89f46317babc55b52eb45d8f6f8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9a78bacbc6c407946d20fc8e21a3ae91a30b04ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303603"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 예에 대한 주석이 추가된 예제 XSD 스키마(SQLXML 4.0)
-  이 섹션의 예제 XPath 쿼리는 매핑 스키마를 참조합니다. 해당 매핑 스키마는 주석이 추가된 XSD(XML 스키마) 파일입니다. 매핑 스키마에 대 한 자세한 내용은 참조 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다.  
+  이 섹션의 예제 XPath 쿼리는 매핑 스키마를 참조합니다. 해당 매핑 스키마는 주석이 추가된 XSD(XML 스키마) 파일입니다. 매핑 스키마에 대 한 자세한 내용은 참조 하세요. [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다.  
   
  주석이 추가된 XSD 스키마에 대해 XPath 쿼리를 실행하려면 다음 작업을 수행해야 합니다.  
   
 -   XPath 쿼리가 포함된 템플릿을 만듭니다. 이 템플릿에서 XPath 쿼리를 실행할 대상 매핑 스키마를 지정합니다. 이 경우 템플릿 파일과 연결된 디렉터리(또는 템플릿에 상대 경로가 `mapping-schema` 특성 값으로 지정되어 있는 경우 해당 하위 디렉터리 중 하나)에 매핑 스키마를 저장해야 합니다.  
   
--   쿼리를 실행하는 데 ADO에 대한 SQLXML 확장을 사용하는 테스트 응용 프로그램을 만듭니다. 자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+-   쿼리를 실행하는 데 ADO에 대한 SQLXML 확장을 사용하는 테스트 응용 프로그램을 만듭니다. 자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  이 섹션의 모든 예에서는 이해를 돕기 위해 템플릿에 XPath 쿼리를 지정하고 ADO를 사용하여 템플릿을 실행합니다. 따라서 SampleSchema1.xml이라는 다음 매핑 스키마 파일을 사용해야 합니다. 이 파일을 템플릿이 저장된 디렉터리에 저장합니다.  
   

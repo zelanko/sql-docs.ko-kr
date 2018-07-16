@@ -1,11 +1,11 @@
 ---
-title: System.Transactions 사용 | Microsoft Docs
+title: System.Transactions를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,16 +20,16 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 985669c18716faec4ac731fe76c09c84f8f5584a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e9e09ae1d55065f7f50d25c3538f3c9218d8ed52
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700574"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349808"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **System.Transactions** 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. **System.Transactions.TransactionScope** 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. **Complete** 로 표시된 코드 블록의 끝에서 **TransactionScope**메서드를 호출해야 합니다. **Dispose** 메서드는 프로그램 실행이 코드 블록을 종료할 때 호출되며 **Complete** 메서드가 호출되지 않으면 트랜잭션이 중단되도록 합니다. 예외가 발생하여 코드가 범위를 벗어나게 되면 트랜잭션이 중단된 것으로 볼 수 있습니다.  
+   **System.Transactions** 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. **System.Transactions.TransactionScope** 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. **Complete** 로 표시된 코드 블록의 끝에서 **TransactionScope**메서드를 호출해야 합니다. **Dispose** 메서드는 프로그램 실행이 코드 블록을 종료할 때 호출되며 **Complete** 메서드가 호출되지 않으면 트랜잭션이 중단되도록 합니다. 예외가 발생하여 코드가 범위를 벗어나게 되면 트랜잭션이 중단된 것으로 볼 수 있습니다.  
   
  **using** 블록이 종료될 때 **Dispose** 개체에 대해 **TransactionScope** 메서드가 호출되도록 **using** 블록을 사용하는 것이 좋습니다. **TransactionScope** 의 기본 제한 시간은 1분이므로 보류 중인 트랜잭션을 커밋 또는 롤백하지 못하면 성능이 매우 저하됩니다. **using** 문을 사용하지 않는 경우 **Try** 블록에서 모든 작업을 수행하고 **Dispose** 블록에서 명시적으로 **Finally** 메서드를 호출해야 합니다.  
   

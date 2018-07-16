@@ -1,12 +1,11 @@
 ---
-title: 어셈블리 구현 | Microsoft Docs
+title: 어셈블리를 구현 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
@@ -15,12 +14,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd0f474a0d71f0cb760f12a0c743696fddeac191
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695174"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353095"
 ---
 # <a name="assemblies---implementing"></a>어셈블리-구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "35695174"
 -   어셈블리 버전 관리  
   
 ## <a name="creating-assemblies"></a>어셈블리 만들기  
- 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 만듭니다. SQL Server 프로젝트를 배포 하는 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 대해 지정 된 데이터베이스에 어셈블리를 등록 합니다. 자세한 내용은 [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md)을 참조하세요.  
+ 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 만듭니다. 또한 SQL Server에서 프로젝트를 배포 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 대해 지정 된 데이터베이스에 어셈블리를 등록 합니다. 자세한 내용은 [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md)을 참조하세요.  
   
  **TRANSACT-SQL을 사용 하 여 어셈블리를 만들려면**  
   
@@ -48,7 +47,7 @@ ms.locfileid: "35695174"
 ## <a name="modifying-assemblies"></a>어셈블리 수정  
  어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 문을 사용하여 수정하고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 수정합니다. 다음을 수행할 때 어셈블리를 수정할 수 있습니다.  
   
--   새로운 버전의 어셈블리 바이너리를 업로드하여 어셈블리 구현을 변경합니다. 자세한 내용은 참조 [어셈블리 버전 관리](#_managing) 이 항목의 뒷부분에 나오는 합니다.  
+-   새로운 버전의 어셈블리 바이너리를 업로드하여 어셈블리 구현을 변경합니다. 자세한 내용은 [어셈블리 버전 관리](#_managing) 이 항목의에서 뒷부분에 있습니다.  
   
 -   어셈블리의 권한 집합을 변경합니다. 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하세요.  
   
@@ -75,14 +74,14 @@ ms.locfileid: "35695174"
   
 -   [개체 삭제](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 어셈블리는 모두 기본적으로 실행할 수 없습니다. 사용할 수는 **사용 하도록 설정 하는 clr** 옵션의는 **sp_configure** 시스템 저장 프로시저를 사용 하지 않도록 설정 하거나에 업로드 된 모든 어셈블리를 실행할 수 있게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 어셈블리 실행을 해제하면 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 집계 및 사용자 정의 유형이 실행되지 않고 현재 실행 중인 경우 중지됩니다. 어셈블리 실행을 해제하더라도 어셈블리를 만들거나, 변경하거나, 삭제하는 기능은 해제되지 않습니다. 자세한 내용은 참조 [clr enabled 서버 구성 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 어셈블리는 모두 기본적으로 실행할 수 없습니다. 사용할 수 있습니다는 **사용 하도록 설정 하는 clr** 옵션을 **sp_configure** 시스템 저장 프로시저를 사용 하지 않도록 설정 하거나에서 업로드 되는 모든 어셈블리를 실행할 수 있게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 어셈블리 실행을 해제하면 CLR(공용 언어 런타임) 함수, 저장 프로시저, 트리거, 집계 및 사용자 정의 유형이 실행되지 않고 현재 실행 중인 경우 중지됩니다. 어셈블리 실행을 해제하더라도 어셈블리를 만들거나, 변경하거나, 삭제하는 기능은 해제되지 않습니다. 자세한 내용은 [clr enabled 서버 구성 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)합니다.  
   
  **어셈블리 실행을 사용 하지 않도록 설정 하려면**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 ##  <a name="_managing"></a> 어셈블리 버전 관리  
- 어셈블리가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되면 데이터베이스 시스템 카탈로그에 저장되어 이 카탈로그에서 관리됩니다. 에 있는 어셈블리의 정의에 대 한 변경 내용을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터베이스 카탈로그에 저장 되어 있는 어셈블리로 전파 되어야 합니다.  
+ 어셈블리가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되면 데이터베이스 시스템 카탈로그에 저장되어 이 카탈로그에서 관리됩니다. 어셈블리의 정의를 변경 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터베이스 카탈로그에 저장 되어 있는 어셈블리로 전파 되어야 합니다.  
   
  어셈블리를 수정해야 할 경우 ALTER ASSEMBLY 문을 실행하여 데이터베이스의 어셈블리를 업데이트해야 합니다. 이렇게 하면 어셈블리가 해당 구현을 보유하고 있는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트됩니다.  
   
@@ -95,11 +94,11 @@ ms.locfileid: "35695174"
 > [!CAUTION]  
 >  WITH UNCHECKED DATA를 지정하지 않으면 새 어셈블리 버전이 테이블, 인덱스 또는 다른 영구 사이트의 기존 데이터에 영향을 주는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ASSEMBLY를 실행하지 못하도록 합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR 어셈블리를 업데이트할 때 계산 열, 인덱스, 인덱싱된 뷰 또는 식이 기본 루틴 및 유형과 일치하도록 보장하지는 않습니다. ALTER ASSEMBLY를 실행할 때는 어셈블리에 저장된 이 식을 기반으로 하는 값과 식의 결과가 일치하는지 주의해서 확인하십시오.  
   
- 구성원만는 **db_owner** 및 **db_ddlowner** 고정된 데이터베이스 역할 WITH UNCHECKED DATA 절을 사용 하 여 ALTER ASSEMBLY를 실행할 수 있습니다.  
+ 구성원만 합니다 **db_owner** 하 고 **db_ddlowner** 고정된 데이터베이스 역할 WITH UNCHECKED DATA 절을 사용 하 여 실행된 ALTER ASSEMBLY를 실행할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리가 테이블의 검사하지 않은 데이터로 수정되었다는 메시지를 Windows 응용 프로그램 이벤트 로그에 게시합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. **has_unchecked_assembly_data** 의 열은 **sys.tables** 카탈로그 뷰에 선택 되지 않은 데이터 및 검사 하지 않은 데이터가 없는 테이블에 대해 0이 포함 된 테이블에 대 한 값 1을 포함 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리가 테이블의 검사하지 않은 데이터로 수정되었다는 메시지를 Windows 응용 프로그램 이벤트 로그에 게시합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. 합니다 **has_unchecked_assembly_data** 열을 **sys.tables** unchecked data를 및 0 하지 않은 데이터가 없는 테이블을 포함 하는 테이블에 대 한 값 1을 포함 하는 카탈로그 뷰.  
   
- 검사 되지 않은 데이터의 무결성을 해결 하려면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS를 실행 된 각 테이블에 대해 검사 되지 않은 데이터입니다. 오류가 발생 하면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 하거나 잘못 된 하거나 문제를 해결 하는 어셈블리 코드를 수정 하는 테이블 행을 삭제 하며 다음 추가 ALTER ASSEMBLY 문을 실행 합니다.  
+ 검사 되지 않은 데이터의 무결성을 해결 하려면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS를 실행 된 각 테이블에 대해 확인 되지 않은 데이터입니다. DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 못하면 하거나 유효 하지 않거나 문제를 해결 하는 어셈블리 코드를 수정 하는 테이블 행을 삭제 하며 다음 추가 ALTER ASSEMBLY 문을 실행 합니다.  
   
  ALTER ASSEMBLY는 어셈블리 버전을 변경합니다. 어셈블리의 문화권과 공개 키 토큰은 그대로 유지됩니다 .SQL Server는 동일한 이름, 문화권 및 공개 키를 사용하여 다른 버전의 어셈블리를 등록하는 것을 허용하지 않습니다.  
   

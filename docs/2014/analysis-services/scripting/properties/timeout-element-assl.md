@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Timeout element
 ms.assetid: 7694872b-bd05-459f-b5dc-3cfbd92a9664
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07aeb620045b3b53bb04369abfd16b0a500f9172
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9069f5ec57d313b89342533d79e66f8c021604e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269559"
 ---
 # <a name="timeout-element-assl"></a>Timeout 요소(ASSL)
   데이터 검색 시도의 제한 시간(초)을 지정합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36182650"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Timeout` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataSource>합니다.  
+ 부모에 해당 하는 요소가 `Timeout` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataSource>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

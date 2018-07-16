@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VDI [SQL Server]
 - restoring [SQL Server], SQL Writer Service
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9e3ae2f7a02aadacabde65ad899f651185b9b85f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cc4be5b5cd41373e21152487e2abee4c21278607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295253"
 ---
 # <a name="sql-writer-service"></a>SQL 기록기 서비스
   SQL 기록기 서비스는 볼륨 섀도 복사본 서비스 프레임워크를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 백업 및 복원을 위한 추가 기능을 제공합니다.  

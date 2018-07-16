@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
 - Policy-Based Management, best practices policies
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abcb108fc5f19bba718173674fccb08fc0aa29d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 129fdbd715df234c05319ab02b15fcb99b19ac08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315063"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용 하 여 최선의 구현 방법 평가
   정책 기반 관리를 사용한 최선의 구현 방법 평가 자습서입니다. 이 자습서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용에는 익숙하지만 정책 기반 관리는 사용 경험이 없는 사용자를 위한 것입니다. 정책 기반 관리는 사이트 관리 표준을 강화하는 데 사용할 수 있는 정책을 정의하기 위한 시스템입니다. 정책 기반 관리에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 분석하여 인스턴스가 최선의 구현 방법 지침과 권장 사항을 충족하는지 여부를 확인하는 데 사용할 수 있는 최선의 구현 방법 정책 집합이 포함되어 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: '1 단원: Services 프로젝트 내의 분석 데이터 원본 뷰 정의 | Microsoft Docs'
+title: '1 단원: Analysis 내의 데이터 원본 뷰 정의 Services 프로젝트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b27476650b88a77be4f00b62e76b742fc3774f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303093"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 비즈니스 인텔리전스 응용 프로그램 디자인은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트를 만드는 것부터 시작됩니다. 이 프로젝트에서 솔루션의 모든 요소를 정의하고 데이터 원본 뷰를 사용하여 시작합니다.  

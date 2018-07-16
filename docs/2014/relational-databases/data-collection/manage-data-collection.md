@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bd9b3d11069fd035c9a96fcba8d2114f6df0eeb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296523"
 ---
 # <a name="manage-data-collection"></a>데이터 컬렉션 관리
-  사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 는 컬렉션을 변경 하는 데이터 컬렉션 활성화 또는 비활성화, 집합 구성 관리 데이터 웨어하우스에서 데이터 보기와 같은 저장 프로시저 및 데이터 컬렉션의 다양 한 측면을 관리 하는 함수 .  
+  사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 컬렉션 변경, 데이터 컬렉션 활성화 또는 비활성화, 집합 구성 관리 데이터 웨어하우스에서 데이터 보기와 같은 저장 프로시저 및 데이터 컬렉션의 다른 측면을 관리 하는 함수 .  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터 컬렉션 관리  
- 개체 탐색기를 사용 하 여 다음과 같은 데이터 수집기 관련 태스크를 수행할 수 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ 개체 탐색기를 사용 하 여 다음 데이터 수집기 관련 태스크를 수행할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36171865"
 > [!IMPORTANT]  
 >  일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저는 정확하게 입력된 매개 변수를 사용하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
- 사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 만들고 제공된 된 코드 예제를 실행 합니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. 사용 하 여 Windows 명령 프롬프트에서 쿼리를 실행할 수는 `sqlcmd` 유틸리티입니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
+ 사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 만들고 제공 된 코드 샘플을 실행 합니다. 자세한 내용은 [개체 탐색기](../../ssms/object/object-explorer.md)를 참조하세요. 임의의 편집기에서 쿼리를 만들어 이를 확장명이 .sql인 텍스트 파일에 저장할 수도 있습니다. 사용 하 여 Windows 명령 프롬프트에서 쿼리를 실행할 수는 `sqlcmd` 유틸리티입니다. 자세한 내용은 [sqlcmd 유틸리티 사용](../scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 ### <a name="stored-procedures-and-views"></a>저장 프로시저 및 뷰  
  **데이터 수집기 작업**  

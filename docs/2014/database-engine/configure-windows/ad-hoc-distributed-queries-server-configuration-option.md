@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OPENROWSET function, ad hoc distributed queries option
 - Ad Hoc Distributed Queries option
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ad hoc access
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d172024326dd3b5728fa5aa498a77551403bf9b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2451cdb31019da9c21efabec216fdf24b7c71bbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286039"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>임시 분산 쿼리 서버 구성 옵션
   기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 OPENROWSET 및 OPENDATASOURCE를 사용하는 임시 분산 쿼리를 허용하지 않습니다. 이 옵션을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 임시 액세스가 허용됩니다. 이 옵션을 설정하지 않거나 0로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 임시 액세스가 허용되지 않습니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317480"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 로지스틱 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로지스틱 회귀 분석 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘의 변형으로, *HIDDEN_NODE_RATIO* 매개 변수가 0으로 설정됩니다. 이렇게 설정하면 숨겨진 계층을 포함하지 않으므로 로지스틱 회귀와 동등한 신경망 모델이 생성됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36171887"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 로지스틱 회귀 알고리즘 구현  
  예측 가능한 열에 포함된 상태가 두 개뿐이지만 예측 가능한 열에 특정 상태가 포함될 확률과 입력 열을 연결하여 회귀 분석을 수행한다고 가정합니다. 다음 다이어그램에서는 예측 가능한 열의 상태에 1과 0을 할당하고 열에 특정 상태가 포함될 확률을 계산한 다음 입력 변수에 대해 선형 회귀를 수행할 경우 나타나는 결과를 보여 줍니다.  
   
- ![선형 회귀를 사용 하 여 데이터를 불완전 하 게 모델링](../media/logistic-linear-regression.gif "불완전 하 게 선형 회귀를 사용 하 여 데이터 모델링")  
+ ![선형 회귀를 사용 하 여 데이터를 모델링 잘못](../media/logistic-linear-regression.gif "잘못 선형 회귀를 사용 하 여 데이터 모델링")  
   
  x축은 입력 열의 값을 포함합니다. y축은 예측 가능한 열이 특정 상태일 확률을 포함합니다. 이 경우 선형 회귀가 열의 최대값과 최소값인 0과 1 사이에 있도록 열을 제한하지 않는다는 문제점이 있습니다. 이 문제를 해결하는 방법은 로지스틱 회귀를 수행하는 것입니다. 선형 회귀 분석은 직선을 만드는 대신 최대 및 최소 제약 조건이 포함된 "S"자 곡선을 만듭니다. 예를 들어 다음 다이어그램에서는 이전 예에 사용된 것과 동일한 데이터에 대해 로지스틱 회귀를 수행할 경우 나타나는 결과를 보여 줍니다.  
   
@@ -56,19 +56,19 @@ ms.locfileid: "36171887"
   
  **연속 값**  
   
- 값이 있음: (X – μ) / σ / / X는 인코딩 되는 실제 값)  
+ 값이 있음: (X – μ) / σ / X가 인코딩 되는 실제 값)  
   
- 값이 없음:-μ/σ / 음수 mu 시그마 나눈 /)  
+ 값이 없음:-μ/σ / / 음의 mu를 시그마로 나눔)  
   
  **불연속 값**  
   
  Μ = p-(상태의 사전 확률)  
   
- StdDev = sqrt(p(1-p))  
+ StdDev sqrt(p(1-p)) =  
   
- 값이 있음: (1-μ) / σ 시그마로 나눈 값 (mu 뺀 하나) /)  
+ 값이 있음: (1 일 – μ) / σ 시그마로 나눔 (에서 mu를 뺀 하나) /)  
   
- 값이 없음: (– μ) / σ/음수 mu 시그마 나눈 /)  
+ 값이 없음: (– μ) / σ / 음의 mu를 시그마로 나눔)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>로지스틱 회귀 계수 이해  
  통계 자료에서는 다양한 방법으로 로지스틱 회귀를 수행할 수 있지만 모든 방법에서 중요한 부분은 모델의 적합도를 평가하는 것입니다. 교차비와 공변량 패턴 간에는 다양한 적합도 통계가 제안됩니다. 모델의 적합도를 측정하는 방법에 대한 설명은 이 항목에서 다루지 않습니다. 그러나 모델에서 계수 값을 검색하고 이 값을 사용하여 고유한 적합도 측정 방법을 디자인할 수 있습니다.  
@@ -141,7 +141,7 @@ WHERE NODE_TYPE = 23
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열 수 있는 것으로 간주 상태: `Missing` 및 `Existing`합니다. Null은 누락 값입니다.  
+ 열 수 있는 방법을 두 가지 가능한 상태를 가진 것으로 처리 합니다. `Missing` 및 `Existing`합니다. Null은 누락 값입니다.  
   
  마이닝 모델 열에 적용됩니다.  
   

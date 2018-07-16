@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 178ca5746ee5c7936d8a2cab6c4d0d08ad227364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8f87139ed82025b35173465f346709e384a858c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299773"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 연결 형식(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 포함하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 현재 버전 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 이 데이터베이스에서 데이터를 검색할 수 있습니다.  
   
  이 데이터 확장 프로그램은 연결 문자열과 별개로 관리되는 다중값 매개 변수, 서버 집계 및 자격 증명을 지원합니다.  
   
- 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 참조 하십시오. [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
+ 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
 ##  <a name="Connection"></a> 연결 문자열  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결할 때는 서버에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스 개체에 연결하게 됩니다. 데이터베이스에는 여러 개의 테이블, 뷰 및 저장 프로시저가 있는 스키마가 여러 개 있을 수 있습니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 데이터베이스 관리자가 할당한 기본 데이터베이스에 연결됩니다.  
@@ -54,7 +54,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
- 자세한 내용은 참조 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 또는 [보고서 작성기에서 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
+ 자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
   
   
 ##  <a name="Query"></a> 쿼리  
@@ -134,7 +134,7 @@ WHERE EmployeeID = (@EmpID)
   
 -   기본적으로 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 기본 데이터의 데이터 형식이 다르면 매개 변수 데이터 형식을 변경해야 합니다.  
   
--   사용 하 여 값 집합의 일부 인지 여부를 테스트 하도록 쿼리를 수동으로 변경 해야 다중값된 매개 변수에 대 한 옵션을 선택 하는 경우는 `IN` 연산자, 예를 들어 `WHERE EmployeeID IN (@EmpID)`합니다.  
+-   다중값된 매개 변수에 대 한 옵션을 선택 하면 수동으로 사용 하 여 값 집합의 일부 인지 여부를 테스트 하도록 쿼리를 변경 해야 합니다는 `IN` 연산자, 예를 들어 `WHERE EmployeeID IN (@EmpID)`합니다.  
   
  자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   

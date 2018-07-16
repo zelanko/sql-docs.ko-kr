@@ -24,18 +24,18 @@ helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b1b2bcc4bf6f97659239a9e53d4adac52d7794a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171194"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 요소(XMLA)
-  반환 된 메타 데이터의 유형을 결정는 [Discover](../xml-elements-methods-discover.md) 메서드.  
+  반환 된 메타 데이터의 형식을 결정 합니다 [Discover](../xml-elements-methods-discover.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36184339"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `RequestType` 요소는 `Discover` 메서드가 데이터를 가져오는 스키마 행 집합을 결정합니다. 지 원하는 스키마 행 집합의 이름에 제한 된이 열거형은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 스키마 행 집합에 대 한 자세한 내용은 참조 [Analysis Services 스키마 행 집합](../../schema-rowsets/analysis-services-schema-rowsets.md)합니다.  
+ `RequestType` 요소는 `Discover` 메서드가 데이터를 가져오는 스키마 행 집합을 결정합니다. 이 열거형에서 지 원하는 스키마 행 집합의 이름으로 제한 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 스키마 행 집합에 대 한 자세한 내용은 참조 하세요. [Analysis Services 스키마 행 집합](../../schema-rowsets/analysis-services-schema-rowsets.md)합니다.  
   
 > [!NOTE]  
 >  `RequestType` 요소는 스키마 행 집합 이름만 열거합니다. 스키마 행 집합 GUID를 사용하면 오류가 발생합니다.  

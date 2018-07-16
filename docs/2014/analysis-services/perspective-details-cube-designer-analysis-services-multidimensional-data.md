@@ -1,5 +1,5 @@
 ---
-title: 큐브 뷰 세부 정보 (큐브 뷰 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 큐브 뷰 세부 정보 (Perspectives Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.perspectivedetails.f2
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 82ef66f332173ad6f0369be32f2bc09b44ef4941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fd74b1e946ba55c2c647368317b6d872189523a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325123"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>큐브 뷰 세부 정보(큐브 뷰 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 뷰** 탭에 있는 **큐브 뷰 세부 정보** 창을 사용하면 선택한 큐브 뷰를 쿼리하는 사용자에게 제공되는 메타데이터를 관리할 수 있습니다.  

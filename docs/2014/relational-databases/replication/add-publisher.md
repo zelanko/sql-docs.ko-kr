@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
 helpviewer_keywords:
 - Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4507609049c5cda2ca8163bc7506884f588a9a37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 25ae8b6ad22f2c12d6292237b196792216d2210c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298133"
 ---
 # <a name="add-publisher"></a>게시자 추가
   **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36172397"
   
 -   **Oracle 게시자 추가...**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
+      [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
   
 -   **배포자를 지정한 후 해당 게시자 추가...**  
   

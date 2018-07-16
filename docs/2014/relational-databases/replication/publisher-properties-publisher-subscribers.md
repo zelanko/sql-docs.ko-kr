@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.subscribers.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 552d2bd6-13f9-4876-b8f1-89adb242ef70
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 949d95aff6b2a8aeaae7409c8b6f04d0c4aa577d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9d117a82a04fd7a8301b74a821a09aa2b196d8a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319843"
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>게시자 속성 - 게시자, 구독자
   **게시자 속성** 대화 상자의 **구독자** 페이지는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행하는 게시자에 사용됩니다. 이 페이지를 사용하여 구독자가 이 게시자의 게시에서 데이터를 받도록 설정할 수 있습니다. 구독자가 이 게시자에서 데이터를 받도록 설정해도 이 게시자의 게시에 대한 구독이 생성되지 않습니다. 구독을 만들려면 새 구독 마법사를 사용해야 합니다.  

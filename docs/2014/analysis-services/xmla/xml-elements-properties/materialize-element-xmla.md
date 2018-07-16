@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Materialize element
 ms.assetid: cda19474-7170-4b0e-b0ea-297ce5128112
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5cc2c35ffb2fc615bfc1d6afad1dbb55ac20ffbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 10848ac990c19f5b4b3a63aa9dfa0478700a525e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302653"
 ---
 # <a name="materialize-element-xmla"></a>Materialize 요소(XMLA)
   [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) 명령이 디자인한 집계를 구체화할지 여부를 지정합니다.  

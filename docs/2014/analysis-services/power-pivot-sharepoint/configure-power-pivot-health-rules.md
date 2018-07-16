@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265430"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 상태 규칙 - 구성
   SharePoint용 PowerPivot에는 서버 가용성과 구성 문제를 모니터링하고 해결하는 데 유용한 SharePoint 상태 규칙이 포함되어 있습니다. SharePoint용 PowerPivot에 적용되는 상태 규칙은 규칙 정의 검토 페이지에 나타납니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36182662"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **참고:** 상태 규칙 설정은 SQL Server Analysis Services 인스턴스와 PowerPivot 서비스 응용 프로그램에 대해 별도로 구성됩니다. 이 항목의 지침을 사용하여 각 서비스에 대한 상태 규칙을 구성할 수 있습니다. SharePoint 2013 배포의 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 는 서비스 응용 프로그램만 사용합니다. 따라서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서는 다른 버전의 다른 SharePoint 상태 규칙 집합을 설치합니다. 항목의 "버전" 열 참조 [상태 규칙 참조 &#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), 설치 된 규칙을 보려면 다음 Windows PowerShell 명령을 실행할 수 있습니다.  
+ **참고:** 상태 규칙 설정은 SQL Server Analysis Services 인스턴스와 PowerPivot 서비스 응용 프로그램에 대해 별도로 구성됩니다. 이 항목의 지침을 사용하여 각 서비스에 대한 상태 규칙을 구성할 수 있습니다. SharePoint 2013 배포의 경우 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 는 서비스 응용 프로그램만 사용합니다. 따라서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서는 다른 버전의 다른 SharePoint 상태 규칙 집합을 설치합니다. 항목의 "버전" 열을 참조 하세요 [상태 규칙 참조 &#40;SharePoint 용 PowerPivot&#41;](health-rules-reference-power-pivot-for-sharepoint.md), 또는 설치 된 규칙을 확인 하려면 다음 Windows PowerShell 명령을 실행할 수 있습니다.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -68,7 +68,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  페이지 맨 위에서 Analysis Services 인스턴스가 있는 SharePoint 팜의 서버(다음 그림의 경우 서버 이름은 AW-SRV033)를 선택합니다. **SQL Server Analysis Services** 가 서비스 목록에 나타납니다.  
   
-     ![스크린 샷 관리 서비스의 서버 페이지에서](../media/ssas-centraladmin-servicesonserver.gif "스크린 샷의 관리 서비스 페이지")  
+     ![스크린 샷의 관리 서비스 페이지](../media/ssas-centraladmin-servicesonserver.gif "스크린 샷의 관리 서비스 페이지")  
   
 3.  **SQL Server Analysis Services**를 클릭합니다.  
   
@@ -95,7 +95,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: 연결 수가 크므로 현재 로드를 처리하기 위해 서버를 더 많이 배포해야 합니다.** 규칙 정의에 해당합니다.  
   
      디스크 공간 부족(기본값: 5%)  
-     디스크 공간은 데이터베이스가 요청될 때마다 PowerPivot 데이터를 캐시하는 데 사용됩니다. 이 규칙을 사용하여 디스크 공간이 부족한 때를 알 수 있습니다. 기본적으로 이 상태 규칙은 백업 폴더가 있는 디스크 드라이브의 디스크 공간이 5%  미만일 때 트리거됩니다. 디스크 사용에 대 한 자세한 내용은 참조 [디스크 공간 사용 구성 &#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)합니다.  
+     디스크 공간은 데이터베이스가 요청될 때마다 PowerPivot 데이터를 캐시하는 데 사용됩니다. 이 규칙을 사용하여 디스크 공간이 부족한 때를 알 수 있습니다. 기본적으로 이 상태 규칙은 백업 폴더가 있는 디스크 드라이브의 디스크 공간이 5%  미만일 때 트리거됩니다. 디스크 사용량에 대 한 자세한 내용은 참조 하세요. [디스크 공간 사용 구성 &#40;SharePoint 용 PowerPivot&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)합니다.  
   
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: PowerPivot 데이터가 캐시된 드라이브의 디스크 공간이 부족합니다.** 규칙 정의에 해당합니다.  
   
@@ -108,11 +108,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  서비스 응용 프로그램 페이지에서 **기본 PowerPivot 서비스 응용 프로그램**을 클릭합니다.  
   
-     ![ManageService 스크린샷 응용 프로그램 페이지](../media/ssas-centraladmin-app.gif "ManageService 스크린 샷 응용 프로그램 페이지")  
+     ![ManageService 스크린 샷 응용 프로그램 페이지](../media/ssas-centraladmin-app.gif "ManageService 스크린 샷 응용 프로그램 페이지")  
   
 3.  PowerPivot 관리 대시보드가 나타납니다. **동작** 목록에서 **서비스 응용 프로그램 설정 구성** 을 클릭하여 서비스 응용 프로그램 설정 페이지를 엽니다.  
   
-     ![작업 목록에 있는 대시보드의 스크린 샷 집중](../media/ssas-centraladmin-actionslist.gif "작업 목록에 집중 있는 대시보드의 스크린 샷")  
+     ![작업 목록에 집중 대시보드의 스크린 샷](../media/ssas-centraladmin-actionslist.gif "작업 목록에 집중 대시보드의 스크린 샷")  
   
 4.  상태 규칙 설정에서 다음 설정을 수정합니다.  
   
@@ -127,7 +127,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      PowerPivot Management Dashboard.xlsx에 대한 업데이트 확인(기본값: 5일)  
      PowerPivot Management Dashboard.xlsx 파일은 PowerPivot 관리 대시보드의 보고서에 사용되는 데이터 원본입니다. 기본 서버 구성에서 .xlsx 파일은 SharePoint 및 PowerPivot 시스템 서비스에 수집한 사용 데이터를 사용하여 매일 새로 고쳐집니다. 파일이 업데이트되지 않은 경우에는 상태 규칙에서 이를 문제로 보고합니다. 기본적으로 규칙은 파일의 타임스탬프가 5일 동안 변경되지 않은 경우에 트리거됩니다.  
   
-     사용 현황 데이터 수집에 대 한 자세한 내용은 참조 [에 대 한 사용 현황 데이터 수집 구성 &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
+     사용 현황 데이터 수집에 대 한 자세한 내용은 참조 하세요. [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
   
      이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **PowerPivot: 사용 데이터가 예상된 빈도로 업데이트되지 않습니다.** 규칙 정의에 해당합니다.  
   

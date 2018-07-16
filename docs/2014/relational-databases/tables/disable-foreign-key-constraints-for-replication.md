@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], foreign keys
 - foreign keys [SQL Server], disabling constraints
 - disabling constraints
 ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03011cafe567a3ef2627d068c838b59cfee4ba81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11c1452224bdeef6d4a5b654bcca63a7450ddb05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296313"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>복제할 때 FOREIGN KEY 제약 조건 비활성화
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 복제에 대한 FOREIGN KEY 제약 조건을 비활성화할 수 있습니다. 이 기능은 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 데이터를 게시하는 경우에 유용할 수 있습니다.  

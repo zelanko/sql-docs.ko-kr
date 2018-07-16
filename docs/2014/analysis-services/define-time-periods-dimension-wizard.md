@@ -1,5 +1,5 @@
 ---
-title: 기간 정의 (차원 마법사) | Microsoft Docs
+title: 기간 (차원 마법사)를 정의 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d0eaa7b29e84be26032618fe7470652adc1a7b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46d6cea52d34599e44a4439121730c1412e08bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315933"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>기간 정의(차원 마법사)
   **기간 정의** 페이지를 사용하여 시간 차원 또는 서버 시간 차원에 포함할 역년 정보 및 시간 빈도를 정의할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36172575"
  **시작 요일**  
  한 주의 시작 요일을 선택합니다.  
   
- **시간 단위**  
+ **기간**  
  시간 차원의 역년 기간을 선택합니다.  
   
 > [!NOTE]  

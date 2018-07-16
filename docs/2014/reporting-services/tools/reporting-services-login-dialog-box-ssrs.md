@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e4a3feeca737e1d4db6627af5ece9fa9d36c6b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 505288382a078a020984db3b9f560f7c2e52fcbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305025"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 로그인 대화 상자(SSRS)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "36172380"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [보고서 디자이너 F1 도움말](report-designer-f1-help.md)  
+ [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [보고서 디자이너 F1 도움말](report-designer-f1-help.md)  
   
   

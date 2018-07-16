@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244103"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>처리 쿼리 만들기 대화 상자(Analysis Services - 다차원 데이터)
   **의** 처리 쿼리 만들기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **저장소 옵션** 대화 상자의 **알림** 탭에서 처리 쿼리를 만들 수 있습니다. 처리 쿼리는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 MOLAP(다차원 OLAP) 캐시를 증분 업데이트하기 위해 이 개체에 연결된 테이블이 마지막으로 폴링된 후에 이 테이블에 적용된 변경 내용을 포함하는 행 집합을 반환하는 쿼리입니다. Analysis Services에서는 폴링 쿼리를 사용하여 개체에 연결된 테이블을 폴링하고 테이블이 변경되었는지 여부를 확인합니다. 개체에 대한 MOLAP 캐시를 완전히 업데이트하는 경우에는 처리 쿼리가 필요하지 않습니다.  
@@ -108,6 +108,6 @@ ms.locfileid: "36181457"
  **도구 모음** 창에서 **실행** 을 클릭하면 쿼리 결과를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

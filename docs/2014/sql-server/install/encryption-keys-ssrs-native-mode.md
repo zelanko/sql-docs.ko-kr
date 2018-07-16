@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 43c1935debbb7ef5f26579c2a526b177d14d38d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328914"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>암호화 키(SSRS 기본 모드)
   암호화 키 페이지를 사용하여 보고서 서버의 데이터를 암호화 및 암호 해독하는 데 사용되는 대칭 키를 관리할 수 있습니다. 암호화 키 관리는 보고서 서버 구성에 있어 매우 중요합니다. 대칭 키는 보고서 서버 데이터베이스를 만들 때 자동으로 만들어지고 적용됩니다. 일상적인 유지 관리 작업을 수행할 수 있도록 대칭 키의 백업 복사본을 만드십시오. 다음 유지 관리 태스크를 수행하려면 올바른 대칭 키 복사본이 있어야 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36172800"
 > [!IMPORTANT]  
 >  대칭 키 삭제 및 다시 만들기 동작은 되돌리거나 실행 취소할 수 없습니다. 키를 삭제 또는 다시 만들기는 현재 설치에 중요한 결과를 가져올 수 있습니다. 키를 삭제하면 대칭 키로 암호화된 모든 기존 데이터도 삭제됩니다. 삭제된 데이터에는 외부 보고서 데이터 원본에 대한 연결 문자열, 저장된 연결 문자열 및 일부 구독 정보가 포함되어 있습니다.  
   
- 이 페이지를 열려면 시작는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager와의 탐색 창에서 링크를 클릭 합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+ 이 페이지를 열려면 시작을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 및 탐색 창에서 링크를 클릭 합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **백업**  
@@ -55,7 +55,7 @@ ms.locfileid: "36172800"
  **복원**  
  이전에 저장한 대칭 키 복사본을 보고서 서버 데이터베이스에 적용합니다. 해당 파일의 잠금을 해제하려면 암호를 입력해야 합니다.  
   
- 현재 연결된 보고서 서버 인스턴스에 대한 대칭 키의 이전 복사본은 복원된 버전으로 덮어쓰여집니다. 대칭 키를 복원한 다음에는 해당 보고서 서버 데이터베이스를 사용하는 모든 보고서 서버를 초기화해야 합니다. 보고서 서버를 초기화 하는 방법에 대 한 자세한 내용은 참조 [보고서 서버 초기화 &#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)합니다.  
+ 현재 연결된 보고서 서버 인스턴스에 대한 대칭 키의 이전 복사본은 복원된 버전으로 덮어쓰여집니다. 대칭 키를 복원한 다음에는 해당 보고서 서버 데이터베이스를 사용하는 모든 보고서 서버를 초기화해야 합니다. 보고서 서버를 초기화 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 서버 초기화 &#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)합니다.  
   
  **변경**  
  대칭 키를 다시 만들고 보고서 서버 데이터베이스에 암호화된 모든 값을 다시 암호화합니다. 대칭 키를 다시 만들기 전에 보고서 서버 서비스를 중지해야 합니다.  

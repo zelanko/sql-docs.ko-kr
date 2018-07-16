@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns without
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 734f9b099976ce3498fcc1f355e034e1f89195fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 723ee2f2c9d9da6665c6a9a4b530e3deb247ff2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292163"
 ---
 # <a name="columns-without-a-name"></a>이름이 없는 열
-  이름이 없는 열은 인라인됩니다. 예를 들어 계산 열이나 열 별칭을 지정하지 않는 중첩된 스칼라 쿼리는 이름이 없는 열을 생성합니다. 열이 `xml` 유형일 경우 해당 데이터 형식 인스턴스의 내용이 삽입 됩니다. 그렇지 않을 경우에는 열 내용이 텍스트 노드로 삽입됩니다.  
+  이름이 없는 열은 인라인됩니다. 예를 들어 계산 열이나 열 별칭을 지정하지 않는 중첩된 스칼라 쿼리는 이름이 없는 열을 생성합니다. 열이 있으면 `xml` 형식, 해당 데이터 형식 인스턴스의 내용이 삽입 됩니다. 그렇지 않을 경우에는 열 내용이 텍스트 노드로 삽입됩니다.  
   
 ```  
 SELECT 2+2  

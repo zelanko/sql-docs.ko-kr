@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RollbackTransaction command
 ms.assetid: 40e7dc00-656f-412f-97f0-d05bf7caa196
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 8ec4d33c0e4f54c906bdc07650ce54fabb0fc8b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: eaaf3d92849e0d2ddb7f94686bb30e627d3abcb7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300803"
 ---
 # <a name="rollbacktransaction-element-xmla"></a>RollbackTransaction 요소(XMLA)
   인스턴스로 현재 세션에서 트랜잭션을 롤백합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  

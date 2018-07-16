@@ -1,11 +1,11 @@
 ---
-title: 형식 및 멤버 System.dll에 허용 되지 않는 | Microsoft Docs
+title: 형식 및 Members in System.dll에 허용 되지 않는 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,16 +16,16 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 99b70ae8310b03e5027d99cc3041decf5420ac56
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cd8ab6f864bf809d853297c313868bcecbb0ac72
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697956"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354795"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Disallowed Types and Members In System.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 언어 통합 (CLR) 프로그래밍 형식 또는 멤버에는 사용할 수 없게 하는 **HostProtectionAttribute** 를 지정 하는 **System.Security.Permissions.HostProtectionResource** 열거형의 값을 사용 하 여 **ExternalProcessMgmt**, **ExternalThreading**하십시오 **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**합니다 **SelfAffectingThreading**, **: SharedState**, **동기화**, 또는 **UI**합니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
   
 > [!NOTE]  
 >  이 목록은 지원되는 어셈블리에서 생성되었습니다. 자세한 내용은 [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295513"
 ---
 # <a name="log-properties"></a>로그 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -80,7 +80,7 @@ ms.locfileid: "36180588"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="error-log"></a>오류 로그  
- 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;SSAS-다차원 데이터&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 및 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 자세한 정보에 대 한 합니다.  
+ 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;&AMP;#40;SSAS-다차원&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 하 고 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 에 대 한 자세한 내용은 합니다.  
   
  **ErrorLog\ErrorLogFileName**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
@@ -89,11 +89,11 @@ ms.locfileid: "36180588"
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
   
  **ErrorLog\KeyErrorAction**  
- 서버에서 수행할 동작을 지정 하면 한 `KeyNotFound` 오류가 발생 합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
+ 서버에서 수행할 동작을 지정 하면를 `KeyNotFound` 오류가 발생 합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
 -   `ConvertToUnknown` 알 수 없는 멤버로 오류 키 값을 할당 하도록 서버에 지시 합니다.  
   
--   `DiscardRecord` 레코드를 제외 하도록 서버에 지시 합니다.  
+-   `DiscardRecord` 레코드를 제외 하도록 서버를 알려 줍니다.  
   
  **ErrorLog\KeyErrorLogFile**  
  서비스 계정이 읽기-쓰기 권한을 가지고 있는 폴더에 있는 사용자 정의 파일 이름이며, 이 파일의 확장명은 .log여야 합니다. 이 로그 파일에는 처리 중에 생성된 오류만 포함됩니다. 보다 자세한 정보가 필요한 경우 비행 레코더를 사용하십시오.  
@@ -109,22 +109,22 @@ ms.locfileid: "36180588"
 -   `StopLogging`은 오류 제한에 도달하는 경우 오류 기록을 중지하되 처리를 계속하도록 서버에 알려 줍니다.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- 서버에서 수행할 동작을 지정 하면 한 `KeyNotFound` 오류가 발생 합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
+ 서버에서 수행할 동작을 지정 하면를 `KeyNotFound` 오류가 발생 합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   `IgnoreError` 계속 하려면 서버 지시 오류를 기록 하거나 키 오류 제한에 대해 개수를 계산 하지 않고 처리 합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드 삭제 하거나 알 수 없는 멤버에 의해 결정 된 대로 집계는 `KeyErrorAction` 속성입니다.  
+-   `IgnoreError` 계속 하도록 서버에 지시 하지 않고 오류를 기록 하거나 키 오류 제한에 대해 계산 처리 합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드를 삭제 하거나 알 수 없는 멤버를 기준으로 집계를 `KeyErrorAction` 속성입니다.  
   
 -   `ReportAndContinue`는 오류를 기록하고 키 오류 제한에 오류 수를 계산하고 처리를 계속하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
 -   `ReportAndStop`은 키 오류 제한에 관계없이 오류를 기록하고 즉시 처리를 중지하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 중복 키가 있을 때 서버가 수행하는 동작을 지정합니다. 유효한 값은 `IgnoreError` 는 오류가 발생 하지 않은 경우 처럼 처리를 계속 하려면 `ReportAndContinue` 하 여 오류를 기록 하 고 처리를 계속 및 `ReportAndStop` 오류 기록 하 고 오류 개수가 오류 제한 미만인 경우에 처리를 즉시 중지 합니다.  
+ 중복 키가 있을 때 서버가 수행하는 동작을 지정합니다. 유효한 값은 `IgnoreError` 오류가 발생 하지 않은 것 처럼 처리를 계속 하려면 `ReportAndContinue` 오류 로그를 처리를 계속 하려면 및 `ReportAndStop` 를 오류를 로깅하고 오류 개수가 오류 제한에 미만인 경우에 즉시 처리를 중지 합니다.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- null 키가 알 수 없는 멤버로 변환된 경우 서버에서 수행하는 동작을 지정합니다. 유효한 값은 `IgnoreError` 는 오류가 발생 하지 않은 경우 처럼 처리를 계속 하려면 `ReportAndContinue` 하 여 오류를 기록 하 고 처리를 계속 및 `ReportAndStop` 오류 기록 하 고 오류 개수가 오류 제한 미만인 경우에 처리를 즉시 중지 합니다.  
+ null 키가 알 수 없는 멤버로 변환된 경우 서버에서 수행하는 동작을 지정합니다. 유효한 값은 `IgnoreError` 오류가 발생 하지 않은 것 처럼 처리를 계속 하려면 `ReportAndContinue` 오류 로그를 처리를 계속 하려면 및 `ReportAndStop` 를 오류를 로깅하고 오류 개수가 오류 제한에 미만인 경우에 즉시 처리를 중지 합니다.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- 서버에서 수행할 동작을 지정 하면 `NullProcessing` 로 설정 된 `Error` 차원 특성에 대 한 합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값은 `IgnoreError` 는 오류가 발생 하지 않은 경우 처럼 처리를 계속 하려면 `ReportAndContinue` 하 여 오류를 기록 하 고 처리를 계속 및 `ReportAndStop` 오류 기록 하 고 오류 개수가 오류 제한 미만인 경우에 처리를 즉시 중지 합니다.  
+ 서버에서 수행할 동작을 지정 하면 `NullProcessing` 로 설정 된 `Error` 차원 특성에 대 한 합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값은 `IgnoreError` 오류가 발생 하지 않은 것 처럼 처리를 계속 하려면 `ReportAndContinue` 오류 로그를 처리를 계속 하려면 및 `ReportAndStop` 를 오류를 로깅하고 오류 개수가 오류 제한에 미만인 경우에 즉시 처리를 중지 합니다.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
@@ -236,7 +236,7 @@ ms.locfileid: "36180588"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   
+ [Analysis Services의 서버 속성 구성](server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

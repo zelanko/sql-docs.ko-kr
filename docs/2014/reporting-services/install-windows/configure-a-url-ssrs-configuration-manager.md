@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8426f8980bd10877c07d814921f3c73ee91f0c4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c22aac59568cac600904ebdd7e1508d0ada8bc98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288579"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
   보고서 관리자 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다. 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 보고서 서버 웹 서비스 URL을 업데이트하는 경우 SharePoint 중앙 관리에서도 URL을 업데이트해야 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36181975"
   
 -   추가 URL을 정의하는 고급 URL 속성 설정  
   
- 자세한 Url을 저장 및 유지 관리 하는 방법에 대 한 정보 또는 상호 운용성 문제에 대 한 참조 [에 대 한 URL 예약 및 등록 &#40;SSRS 구성 관리자&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) 및 [Reporting 설치 서비스 및 인터넷 정보 서비스 나란히 &#40;SSRS 기본 모드&#41;](install-reporting-and-internet-information-services-side-by-side.md)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
+ 자세한 Url을 저장 및 유지 관리 하는 방법에 대 한 정보, 상호 운용성 문제에 대 한 참조 [에 대 한 URL 예약 및 등록 &#40;SSRS 구성 관리자&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) 하 고 [Reporting 설치 서비스 및 인터넷 정보 서비스 Side-by-side- &#40;SSRS 기본 모드&#41;](install-reporting-and-internet-information-services-side-by-side.md)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 참조 하십시오. Reporting Services 설치에 자주 사용되는 URL에 대한 예를 검토하려면 이 항목에 포함된 [URL 예](#URLExamples) 를 참조하십시오.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  URL을 만들거나 수정하기 전에 다음 사항을 유념하십시오.  
@@ -47,7 +47,7 @@ ms.locfileid: "36181975"
   
 -   IIS 6.0 또는 7.0이 같은 컴퓨터에 설치되어 있는 경우 포트 80을 사용하는 웹 사이트의 가상 디렉터리 이름을 확인하십시오. 기본 Reporting Services 가상 디렉터리 이름("Reports" 및 "ReportServer")을 사용하는 가상 디렉터리가 존재하는 경우 구성할 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대해 다른 가상 디렉터리 이름을 선택합니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 URL을 구성해야 합니다. 시스템 유틸리티를 사용하지 마십시오. URL 예약을 수정 하지 마십시오는 `URLReservations` 섹션의 RSReportServer.config 파일을 직접 합니다. 내부에 저장된 기본 URL 예약을 업데이트하고 RSReportServer.config 파일에 저장된 URL 설정을 동기화하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용해야 합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 URL을 구성해야 합니다. 시스템 유틸리티를 사용하지 마십시오. URL 예약을 수정 하지 마십시오는 `URLReservations` 직접 RSReportServer.config 파일의 섹션입니다. 내부에 저장된 기본 URL 예약을 업데이트하고 RSReportServer.config 파일에 저장된 URL 설정을 동기화하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용해야 합니다.  
   
 -   보고서 작업이 적은 시간을 선택합니다. URL 예약이 변경될 때마다 보고서 서버 웹 서비스 및 보고서 관리자에 대한 응용 프로그램 도메인이 재활용될 수 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36181975"
   
          카드가 여러 개 있거나 네트워크에서 IPv4와 IPv6 주소를 모두 지원하는 경우 IP 주소가 여러 개 표시됩니다. IP 주소를 한 개만 선택할 경우 선택한 IP 주소(및 도메인 이름 서버가 이 IP 주소에 매핑한 호스트 이름)만 응용 프로그램에 액세스할 수 있습니다. localhost를 사용하여 보고서 서버에 액세스할 수 없으며, 보고서 서버 컴퓨터에 설치된 다른 네트워크 어댑터 카드의 IP 주소를 사용할 수 없습니다. 일반적으로 이 값을 선택하는 경우는 명시적 IP 주소 또는 호스트 이름도 지정하는 URL 예약을 여러 개 구성하고 있기 때문입니다. 예를 들면 한 개는 인트라넷 연결에 사용되는 네트워크 어댑터 카드용으로, 다른 한 개는 익스트라넷 연결에 사용되는 네트워크 어댑터 카드용으로 구성할 수 있습니다.  
   
-5.  포트를 지정합니다. 포트 80에 대 한 기본값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 Windows Server 2008 다른 응용 프로그램과 공유할 수 있기 때문입니다. 사용자 지정 포트 번호를 사용하려는 경우에는 보고서 서버에 액세스할 때 사용되는 URL에 항상 포트 번호를 지정해야 합니다. 사용 가능한 포트를 찾을 때 사용할 수 있는 기술은 다음과 같습니다.  
+5.  포트를 지정합니다. 포트 80에 대 한 기본값인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 Windows Server 2008 다른 응용 프로그램과 공유할 수 있기 때문입니다. 사용자 지정 포트 번호를 사용하려는 경우에는 보고서 서버에 액세스할 때 사용되는 URL에 항상 포트 번호를 지정해야 합니다. 사용 가능한 포트를 찾을 때 사용할 수 있는 기술은 다음과 같습니다.  
   
     -   명령 프롬프트에서 사용 중인 TCP 포트를 반환하는 다음 명령을 입력합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36181975"
   
     -   Microsoft 고객 지원 문서 [TCP/IP 포트 할당에 대한 정보](http://support.microsoft.com/kb/174904)에서 TCP 포트 할당 및 잘 알려진 포트(0 - 1023), 등록된 포트(1024 - 49151), 동적 또는 전용 포트(49152 - 65535) 간의 차이를 검토합니다.  
   
-    -   Windows 방화벽을 사용하고 있는 경우 포트를 열어야 합니다. 자세한 내용은 [보고서 서버 액세스를 위한 방화벽 구성](../report-server/configure-a-firewall-for-report-server-access.md)합니다.  
+    -   Windows 방화벽을 사용하고 있는 경우 포트를 열어야 합니다. 자세한 내용은 [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md)합니다.  
   
 6.  아직 확인하지 않은 경우 사용하려는 이름과 동일한 가상 디렉터리 이름을 IIS(설치된 경우)에서 사용하고 있지 않은지 확인합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36181975"
   
 10. 페이지의 **URL** 섹션에 있는 링크를 클릭하여 URL을 테스트합니다. URL을 테스트하려면 먼저 보고서 서버 데이터베이스를 만들어 구성해야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
   
-11. 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성된 경우 SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 구성합니다. SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 업데이트 하는 방법에 대 한 자세한 내용은 참조 [구성 및 관리의 보고서 서버 &#40;Reporting Services SharePoint 모드&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) 및 [Reporting Services 보고서 서버 &#40;SharePoint 모드&#41;](../reporting-services-report-server-sharepoint-mode.md)합니다.  
+11. 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성된 경우 SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 구성합니다. SharePoint 중앙 관리에서 보고서 서버 웹 서비스 URL을 업데이트 하는 방법에 대 한 자세한 내용은 참조 하십시오 [구성 및 보고서 서버 관리 &#40;Reporting Services SharePoint 모드&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) 및 [Reporting Services 보고서 서버 &#40;SharePoint 모드&#41;](../reporting-services-report-server-sharepoint-mode.md)합니다.  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>보고서 관리자에 대한 URL 예약을 만들려면  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36181975"
   
 2.  **보고서 관리자 URL**을 클릭합니다.  
   
-3.  가상 디렉터리를 지정합니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 IP 주소와 포트를 수신합니다. 다른 보고서 서버 웹 서비스를 가리키도록 보고서 관리자를 구성한 경우 RSReportServer.config 파일에서 보고서 관리자 URL 설정을 수정해야 합니다. 자세한 내용은 [보고서 관리자 구성 &#40;기본 모드&#41; ](../report-server/configure-web-portal.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
+3.  가상 디렉터리를 지정합니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 IP 주소와 포트를 수신합니다. 다른 보고서 서버 웹 서비스를 가리키도록 보고서 관리자를 구성한 경우 RSReportServer.config 파일에서 보고서 관리자 URL 설정을 수정해야 합니다. 자세한 내용은 [보고서 관리자 구성 &#40;기본 모드&#41; ](../report-server/configure-web-portal.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
   
 4.  SSL 인증서를 설치한 경우 지금 이 인증서를 선택하여 보고서 관리자에 대한 모든 요청이 HTTPS를 통해 라우팅되도록 할 수 있습니다.  
   

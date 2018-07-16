@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 791d2e660c3672e63b3fea12ad28afcf46e9ffa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fc9021085fd238ac2c86fbe73d7db372540cabd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287689"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 원본 편집기(열 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  

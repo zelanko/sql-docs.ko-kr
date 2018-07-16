@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318883"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 루프 편집기(컬렉션 페이지)
   **Foreach 루프 편집기** 대화 상자의 **컬렉션** 페이지를 사용하여 열거자 유형을 지정하고 열거자를 구성할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36182641"
 |**Foreach Nodelist 열거자**|XML 문서의 노드를 열거합니다. 이 값을 선택하면 아래의 **Foreach Nodelist 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach SMO 열거자**|SMO 개체를 열거합니다. 이 값을 선택하면 아래의 **Foreach SMO 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Azure Blob 열거자**|지정된 Blob 위치에 있는 Blob 파일을 열거합니다. 이 값을 선택하면 **Foreach Azure Blob 열거자**섹션에 동적 옵션이 표시됩니다.|  
-|**Foreach ADLS File 열거자**|필터가 있는 ADLS에 파일을 열거 합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
+|**Foreach ADLS File 열거자**|필터를 사용 하 여 ADLS에 파일을 열거 합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
   
  **식**  
  기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(…)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "36182641"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 열거자  
  XML 파일에 XPath 식을 적용한 결과 생성된 XML 노드 집합을 열거하는 데 Foreach Nodelist 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 스크립트 태스크를 포함하는 경우 Foreach NodeList 열거자를 사용하여 XPath 식 조건에 부합하는 값을 XML 파일에서 스크립트 태스크로 전달할 수 있습니다.  
   
- XML 파일에 적용되는 XPath 식은 OuterXPathString 속성에 저장되는 외부 XPath 작업입니다. XPath 열거형 설정 된 경우 `ElementCollection`, Foreach NodeList 열거자는 내부 XPath 식을 요소 모음에 InnerXPathString 속성에 저장을 적용할 수 있습니다.  
+ XML 파일에 적용되는 XPath 식은 OuterXPathString 속성에 저장되는 외부 XPath 작업입니다. XPath 열거형으로 설정 된 경우 `ElementCollection`, Foreach NodeList 열거자는 InnerXPathString 속성 요소의 컬렉션을에 저장 되는 내부 XPath 식을 적용할 수 있습니다.  
   
  XML 문서 및 데이터 작업 방법은 MSDN Library의 "[.NET Framework에 XML 적용(Employing XML in the .NET Framework)](http://go.microsoft.com/fwlink/?LinkId=56214)"을 참조하십시오.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36182641"
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **InnerElementType**  
- 경우 **EnumerationType** 로 설정 된 `ElementCollection`를 목록에서 내부 요소의 유형을 선택 합니다.  
+ 하는 경우 **EnumerationType** 로 설정 된 `ElementCollection`, 목록에서 내부 요소의 유형을 선택 합니다.  
   
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -278,7 +278,7 @@ ms.locfileid: "36182641"
  **Blob 시간 범위 시작/끝 필터**  
  시간 범위 필터를 지정합니다. **TimeRangeFrom** 에서 **TimeRangeTo** 사이에 수정된 파일이 열거됩니다.  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a>열거자 = Foreach ADLS File 열거자  
-**ADLS File 열거자** 는 SSIS 패키지가 필터가 있는 ADLS에 파일을 열거할 수 있습니다. 슬래시 (`/`)-열거 되는 파일의 전체 경로 접두사를 변수에 저장 하 고 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.
+합니다 **ADLS File 열거자** 필터를 사용 하 여 ADLS에 파일을 열거 하는 SSIS 패키지를 사용 하도록 설정 합니다. 슬래시 (`/`)-열거 되는 파일의 전체 경로 접두사를 변수에 저장 하 고 Foreach 루프 컨테이너 내의 작업에 사용 되는 수입니다.
   
 **AzureDataLakeConnection**  
 Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 새 연결 관리자를 만듭니다.   

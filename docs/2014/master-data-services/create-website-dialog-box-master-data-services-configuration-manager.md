@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285409"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>웹 사이트 만들기 대화 상자(Master Data Services 구성 관리자)
   **웹 사이트 만들기** 대화 상자를 사용하여 로컬 컴퓨터에서 새 웹 사이트를 만들 수 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 웹 사이트를 만든 경우 해당 사이트는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램으로 구성된 루트 응용 프로그램이 있는 로컬 컴퓨터의 IIS(인터넷 정보 서비스)에 추가됩니다. 또한 새 응용 프로그램 풀이 만들어지고 웹 응용 프로그램이 해당 응용 프로그램 풀에 배치됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36183049"
   
 ## <a name="see-also"></a>관련 항목  
  [웹 구성 페이지 &#40;Master Data Services 구성 관리자&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services에 대 한 데이터베이스 및 웹 사이트를 설정 합니다.](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [웹 응용 프로그램 요구 사항 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

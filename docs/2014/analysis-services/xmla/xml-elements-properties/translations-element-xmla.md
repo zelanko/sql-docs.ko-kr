@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 180a570d7b466a33c0c057066d88b1bd28d00d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205653"
 ---
 # <a name="translations-element-xmla"></a>Translations 요소(XMLA)
   부모 [Attribute](translation-element-xmla.md) 요소가 나타내는 특성 멤버의 멤버 키를 식별하기 위해 사용되는 [Translation](attribute-element-xmla.md) 요소의 컬렉션을 포함합니다.  

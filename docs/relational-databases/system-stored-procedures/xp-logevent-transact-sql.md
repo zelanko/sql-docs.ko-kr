@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (Transact SQL) | Microsoft Docs
+title: xp_logevent (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582035"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854265"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  사용자 정의 메시지를 기록는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일 및 Windows 이벤트 뷰어에 있습니다. xp_logevent는 클라이언트에 메시지를 보내지 않고 경고를 보내는 데 사용할 수 있습니다.  
+  사용자 정의 메시지를 기록 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 Windows 이벤트 뷰어. xp_logevent은 클라이언트에 메시지를 보내지 않고 경고를 보내는 데 사용할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  최대 2048자의 문자열입니다.  
   
  **'** *심각도* **'**  
- 세 문자열 중 하나: 정보, 경고 또는 오류입니다. *심각도* 는 선택적 이며 기본값은 INFORMATIONAL입니다.  
+ 세 문자열 중 하나입니다: 정보, 경고 또는 오류입니다. *심각도* 는 선택적 이며 기본값은 INFORMATIONAL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -62,7 +62,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>Remarks  
- 메시지를 보낼 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 트리거, 일괄 처리, 및 등 xp_logevent 대신 RAISERROR 문을 사용 합니다. xp_logevent는 클라이언트의 메시지 처리기를 호출 하거나 설정 하지 않습니다@ERROR합니다. Windows 이벤트 뷰어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일에 메시지를 기록하려면 RAISERROR 문을 실행하십시오.  
+ 메시지를 보낼 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 트리거, 일괄 처리 및 등과 xp_logevent 대신 RAISERROR 문을 사용 합니다. xp_logevent는 클라이언트의 메시지 처리기를 호출 하거나 설정 하지 않습니다@ERROR합니다. Windows 이벤트 뷰어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일에 메시지를 기록하려면 RAISERROR 문을 실행하십시오.  
   
 ## <a name="permissions"></a>사용 권한  
  master 데이터베이스에서 db_owner 고정 데이터베이스 역할의 멤버이거나 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -71,7 +71,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  다음 예는 메시지로 전달된 변수와 함께 메시지를 Windows 이벤트 뷰어에 로깅합니다.  
   
 ```  
-DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30), @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   
@@ -85,6 +85,6 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
  [PRINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [일반 확장 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [일반 확장 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

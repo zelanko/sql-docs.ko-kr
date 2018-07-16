@@ -5,26 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 caps.latest.revision: 6
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 553f76520f9bb292d795fbbd5e13833391d6bdab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d7ab91fe3fac841c11a0e237a9ec44a4f1ad6911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330513"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>옵션(SQL Server AlwaysOn, 대시보드 페이지)
-  사용 하 여는 **SQL Server AlwaysOn 대시보드** 의 페이지는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **옵션** 대화 상자의 AlwaysOn 대시보드를 구성 합니다.  
+  사용 합니다 **SQL Server AlwaysOn 대시보드** 페이지를 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **옵션** AlwaysOn 대시보드를 구성 하려면 대화 상자.  
   
  **이 페이지에 액세스하려면**  
   

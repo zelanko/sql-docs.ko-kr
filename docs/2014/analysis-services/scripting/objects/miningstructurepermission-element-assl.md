@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c74423bfbf199825dc707d80e21c5b5a4555cc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295493"
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 요소(ASSL)
   사용 권한을 해당 멤버의 정의 [역할](role-element-assl.md) 요소 가지는 개별 [MiningStructure](miningstructure-element-assl.md) 요소입니다.  

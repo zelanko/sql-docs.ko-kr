@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 96841d12896ed3bdb414fa1db1825cf5c07ba0cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196823"
 ---
 # <a name="planning-a-report-report-builder"></a>보고서 계획(보고서 작성기)
   보고서 작성기를 사용하여 다양한 종류의 보고서를 만들 수 있습니다. 예를 들어 판매 데이터, 마케팅 및 판매 추세를 요약하거나 자세히 보여 주는 보고서를 만들거나 운영 보고서 또는 대시보드를 만들 수 있습니다. 판매 주문, 제품 카탈로그 또는 양식 편지와 같은 서식 있는 텍스트를 사용한 보고서를 만들 수도 있습니다. 이러한 보고서는 모두 보고서 작성기에 있는 동일한 기본 빌딩 블록을 다르게 조합하여 만듭니다. 보고서를 만들기 전에 먼저 계획을 세우면 보다 유용하고 이해하기 쉬운 보고서를 만들 수 있습니다. 보고서 생성 작업을 시작하기 전에 고려해야 할 사항은 다음과 같습니다.  
   
 -   **보고서를 렌더링할 형식**  
   
-     보고서 관리자와 같은 브라우저에서 온라인으로 보고서를 렌더링하거나 Excel, Word 또는 PDF와 같은 다른 형식으로 보고서를 내보낼 수 있습니다. 내보내는 모든 형식에서 모든 기능을 사용할 수 있는 것은 아니므로 보고서의 최종 형식을 결정할 때는 신중을 기해야 합니다. 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
+     보고서 관리자와 같은 브라우저에서 온라인으로 보고서를 렌더링하거나 Excel, Word 또는 PDF와 같은 다른 형식으로 보고서를 내보낼 수 있습니다. 내보내는 모든 형식에서 모든 기능을 사용할 수 있는 것은 아니므로 보고서의 최종 형식을 결정할 때는 신중을 기해야 합니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
 -   **보고서에 데이터를 표시하는 데 사용할 구조**  
   
-     테이블 형식, 행렬(크로스탭 또는 피벗 테이블 보고서와 유사), 차트 또는 자유 형식 구조 중에서 선택하거나 이들을 조합하여 데이터를 나타낼 수 있습니다. 자세한 내용은 참조 [나열 &#40;보고서 작성기 및 SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md) 및 [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+     테이블 형식, 행렬(크로스탭 또는 피벗 테이블 보고서와 유사), 차트 또는 자유 형식 구조 중에서 선택하거나 이들을 조합하여 데이터를 나타낼 수 있습니다. 자세한 내용은 [나열 &#40;보고서 작성기 및 SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md) 하 고 [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 -   **원하는 보고서의 모양**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36185335"
   
 -   **보고서 배달 방법**  
   
-     사용자 본인에게만 필요한 정보가 포함된 보고서의 경우 보고서를 로컬 컴퓨터에 저장하고 보고서에 대한 작업을 계속하거나 보고서를 로컬에서 실행할 수 있습니다. 그러나 보고서를 다른 사용자와 공유하려면 보고서를 기본 모드에서 구성한 보고서 서버나 SharePoint 통합 모드에 있는 보고서 서버에 저장해야 합니다. 보고서를 서버에 저장하면 다른 사용자가 필요할 때마다 보고서를 실행할 수 있습니다. 또는 보고서 서버 관리자가 보고서에 대해 구독을 설정하거나 다른 개인 사용자에 대해 전자 메일 보고서 배달을 설정할 수 있습니다. 원하는 경우 특정 내보내기 형식으로 보고서가 배달되도록 할 수도 있습니다. 자세한 내용은 참조 [찾기, 보기 및 보고서 관리 &#40;보고서 작성기 및 SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)합니다.  
+     사용자 본인에게만 필요한 정보가 포함된 보고서의 경우 보고서를 로컬 컴퓨터에 저장하고 보고서에 대한 작업을 계속하거나 보고서를 로컬에서 실행할 수 있습니다. 그러나 보고서를 다른 사용자와 공유하려면 보고서를 기본 모드에서 구성한 보고서 서버나 SharePoint 통합 모드에 있는 보고서 서버에 저장해야 합니다. 보고서를 서버에 저장하면 다른 사용자가 필요할 때마다 보고서를 실행할 수 있습니다. 또는 보고서 서버 관리자가 보고서에 대해 구독을 설정하거나 다른 개인 사용자에 대해 전자 메일 보고서 배달을 설정할 수 있습니다. 원하는 경우 특정 내보내기 형식으로 보고서가 배달되도록 할 수도 있습니다. 자세한 내용은 [찾기, 보기 및 보고서 관리 &#40;보고서 작성기 및 SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014의에서 보고서 작성기](../report-builder/report-builder-in-sql-server-2016.md)   

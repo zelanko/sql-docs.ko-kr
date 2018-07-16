@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 11b4552c73c07f40e40c900aeb29bf738c554dc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c17a66cff53551f9bb4aa6687b8529c45e7f42e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301763"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>동일한 데이터 집합에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
   여러 데이터 영역을 보고서에 추가하면 동일한 보고서 데이터 집합의 데이터를 여러 가지 방식으로 표시할 수 있습니다. 예를 들어 데이터를 테이블에 표시하고 차트로도 표시하려는 경우 해당 필터 식, 정렬 식 및 그룹 식에 동일한 식과 범위를 사용해야 합니다.  

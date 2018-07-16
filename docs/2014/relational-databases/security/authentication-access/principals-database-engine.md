@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,20 +28,20 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318043"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
   *보안 주체* 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 요청할 수 있는 엔터티입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한 부여 모델의 다른 구성 요소와 같이 보안 주체는 계층으로 정렬될 수 있습니다. 보안 주체의 영향 범위는 보안 주체의 정의 범위인 Windows, 서버 및 데이터베이스와 보안 주체가 분해 불가능하거나 컬렉션인지 여부에 따라 달라집니다. 분해 불가능한 보안 주체의 예로는 Windows 로그인을 들 수 있으며 Windows 그룹은 컬렉션인 보안 주체입니다. 모든 보안 주체에는 SID(보안 식별자)가 있습니다.  
   
- **Windows 수준의 보안 주체**  
+ **Windows 수준 보안 주체**  
   
 -   Windows 도메인 로그인  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36093718"
   
 -   서버 역할  
   
- **데이터베이스 수준의 보안 주체**  
+ **데이터베이스 수준 보안 주체**  
   
 -   데이터베이스 사용자  
   
@@ -89,10 +88,10 @@ ms.locfileid: "36093718"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest 사용자  
- 각 데이터베이스에는 **guest**가 포함되어 있습니다. **guest** 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. **게스트** 취소 하 여 해제할 수 있습니다 하지만 사용자는 삭제할 수 없지만 `CONNECT` 권한. `CONNECT` 권한을 실행 하 여 취소할 수 있습니다 `REVOKE CONNECT FROM GUEST` master 또는 tempdb 이외의 데이터베이스 내 합니다.  
+ 각 데이터베이스에는 **guest**가 포함되어 있습니다. **guest** 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. 합니다 **게스트** 사용자는 삭제할 수 없지만 취소 하 여 해제할 수 있습니다의 `CONNECT` 권한. 합니다 `CONNECT` 권한을 실행 하 여 취소할 수 있습니다 `REVOKE CONNECT FROM GUEST` master 또는 tempdb 이외의 데이터베이스 내에서.  
   
 ## <a name="client-and-database-server"></a>클라이언트 및 데이터베이스 서버  
- 정의에 따르면 클라이언트 및 데이터베이스 서버는 보안 주체이며 보안을 설정할 수 있습니다. 이러한 항목은 보안 네트워크 연결이 설정되기 전에 상호 인증될 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원 된 [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) 클라이언트가 네트워크 인증 서비스와 상호 작용 하는 방법을 정의 하는 인증 프로토콜입니다.  
+ 정의에 따르면 클라이언트 및 데이터베이스 서버는 보안 주체이며 보안을 설정할 수 있습니다. 이러한 항목은 보안 네트워크 연결이 설정되기 전에 상호 인증될 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원 합니다 [Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758) 클라이언트가 네트워크 인증 서비스와 상호 작용 하는 방법을 정의 하는 인증 프로토콜입니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서 섹션에는 다음과 같은 항목이 포함되어 있습니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
 - renaming SQL Server Agent error log
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - errors [SQL Server Agent]
 ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb195793732393788f698b2e8dca904bf1e5e8ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 751c97828e5c113bb825f19f3b85a0fe5c3be8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293983"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그 이름 바꾸기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류가 기록된 파일의 이름을 바꾸는 방법에 대해 설명합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36172589"
   
 -   프로세스의 메모리 할당량 조정(SeIncreaseQuotaPrivilege)  
   
- 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 참조 [SQL Server 에이전트 서비스에 대 한 계정을 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 구성 하 고 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
+ 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 참조 [SQL Server 에이전트 서비스 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Configure Windows Service Accounts 및 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

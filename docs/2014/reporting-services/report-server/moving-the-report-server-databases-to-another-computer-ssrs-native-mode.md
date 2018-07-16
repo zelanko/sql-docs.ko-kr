@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3745d2334f8b8abf4c60c292bba1a820432d088e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319833"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36173041"
   
 2.  보고서 서버 서비스를 중지합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 서비스를 중지할 수 있습니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
+3.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
   
 4.  보고서 서버 데이터베이스를 마우스 오른쪽 단추로 클릭하고 태스크를 가리킨 다음 **분리**를 클릭합니다. 보고서 서버 임시 데이터베이스에 대해 이 단계를 반복합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36173041"
   
 8.  **추가** 를 클릭하고 연결할 보고서 서버 데이터베이스 .mdf 및 .ldf 파일을 선택합니다. 보고서 서버 임시 데이터베이스에 대해 이 단계를 반복합니다.  
   
-9. 데이터베이스, 연결 후 확인 하는 `RSExecRole` 은 보고서 서버 데이터베이스와 임시 데이터베이스의 데이터베이스 역할입니다. `RSExecRole` 저장된 프로시저에 대 한 실행 및 select, insert, update, delete 및 참조 권한과 보고서 서버 데이터베이스 테이블에 있어야 합니다. 자세한 내용은 [RSExecRole 만들기](../security/create-the-rsexecrole.md)를 참조하세요.  
+9. 데이터베이스 연결 되 면 확인을 `RSExecRole` 은 보고서 서버 데이터베이스와 임시 데이터베이스의 데이터베이스 역할. `RSExecRole` select, insert, update, delete 및 참조 권한과 보고서 서버 데이터베이스 테이블에 있어야 하 고 저장된 프로시저에 대 한 실행 해야 합니다. 자세한 내용은 [RSExecRole 만들기](../security/create-the-rsexecrole.md)를 참조하세요.  
   
 10. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 시작하고 보고서 서버에 대한 연결을 엽니다.  
   
@@ -218,16 +218,16 @@ GO
 7.  **다음** , **마침**을 차례로 클릭합니다.  
   
 > [!NOTE]  
->  A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 실행 하려면는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 포함 된 `RSExecRole` 역할입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 보고서 서버 데이터베이스 연결을 설정하면 역할 만들기, 로그인 등록 및 역할 할당이 발생합니다. rsconfig.exe 명령 프롬프트 유틸리티를 사용하는 등 다른 방법을 사용하여 연결을 구성하면 보고서 서버가 작동 상태에 있지 않게 됩니다. 이 경우 WMI 코드를 작성하여 보고서 서버를 사용할 수 있게 만들어야 할 수 있습니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
+>  A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 되어 있어야 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 포함는 `RSExecRole` 역할. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 보고서 서버 데이터베이스 연결을 설정하면 역할 만들기, 로그인 등록 및 역할 할당이 발생합니다. rsconfig.exe 명령 프롬프트 유틸리티를 사용하는 등 다른 방법을 사용하여 연결을 구성하면 보고서 서버가 작동 상태에 있지 않게 됩니다. 이 경우 WMI 코드를 작성하여 보고서 서버를 사용할 수 있게 만들어야 할 수 있습니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [RSExecRole 만들기](../security/create-the-rsexecrole.md)   
  [보고서 서버 서비스 시작 및 중지](start-and-stop-the-report-server-service.md)   
  [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [무인된 실행 계정을 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [무인된 실행 계정 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig 유틸리티&#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
  [암호화 키 구성 및 관리 &#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)  
+ [보고서 서버 데이터베이스를 &#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec5ec0ebab56cd5e836385a26fc60a1c5cf1a0d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297433"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
   Analysis Services는 다차원 및 데이터 마이닝(기본값), SharePoint용 PowerPivot, 테이블 형식 중 한 가지 서버 모드로 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36181912"
  [다차원 및 데이터 마이닝 모드에서 Analysis Services 설치](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 설치](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Analysis Services에 연결](connect-to-analysis-services.md)   
- [테이블 형식 모델 솔루션 &#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [테이블 형식 모델 솔루션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [다차원 모델 솔루션 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   

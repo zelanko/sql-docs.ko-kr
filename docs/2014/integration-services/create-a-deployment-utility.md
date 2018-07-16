@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7e51388856f6bbd63382410100b5655194ec3d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273119"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   패키지를 배포하는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 배포 유틸리티를 만드는 것입니다. 배포 유틸리티는 다른 서버로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 패키지를 배포하는 데 필요한 파일이 포함된 폴더입니다. 배포 유틸리티는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트가 저장된 컴퓨터에 만들어집니다.  
@@ -51,9 +51,9 @@ ms.locfileid: "36186596"
   
 3.  **\<프로젝트 이름> 속성 페이지** 대화 상자에서 **배포 유틸리티**를 클릭합니다.  
   
-4.  패키지를 배포할 때 패키지 구성을 업데이트 하려면 설정 **AllowConfigurationChanges** 를 `True`합니다.  
+4.  패키지를 구축할 때 패키지 구성을 업데이트 하려면 **AllowConfigurationChanges** 에 `True`입니다.  
   
-5.  설정 `CreateDeploymentUtility` 를 `True`합니다.  
+5.  설정할 `CreateDeploymentUtility` 에 `True`입니다.  
   
 6.  필요에 따라 `DeploymentOutputPath` 속성을 수정하여 배포 유틸리티의 위치를 업데이트합니다.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36186596"
  [패키지 구성](../../2014/integration-services/package-configurations.md)   
  [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)   
  [배포 유틸리티를 사용 하 여 패키지 배포](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [배포 패키지 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

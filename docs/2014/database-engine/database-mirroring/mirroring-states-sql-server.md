@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - PENDING_FAILOVER state
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e74c22410ea2eb256d68f5b83703528406884eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 10cc3385d0bbcd7832533e1e375401b1b060c959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320726"
 ---
 # <a name="mirroring-states-sql-server"></a>미러링 상태(SQL Server)
   데이터베이스 미러링 세션 동안 미러된 데이터베이스는 항상 특정 상태( *미러링 상태*)가 됩니다. 이러한 데이터베이스의 상태는 통신 상태, 데이터 흐름 및 파트너 간의 데이터 차이를 반영합니다. 데이터베이스 미러링 세션은 주 데이터베이스와 같은 상태가 됩니다.  

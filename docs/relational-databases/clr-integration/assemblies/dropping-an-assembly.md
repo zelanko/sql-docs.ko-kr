@@ -1,12 +1,11 @@
 ---
-title: 어셈블리를 삭제 하는 중 | Microsoft Docs
+title: 어셈블리 삭제 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9948122e98c86e6c4ccb310c23b0513679379f
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694324"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356925"
 ---
 # <a name="dropping-an-assembly"></a>어셈블리 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   데이터베이스에 WITH SCHEMABINDING 절로 만든 함수, 저장 프로시저 또는 트리거가 있고 이러한 루틴이 UDT의 변수 또는 매개 변수를 사용하는 경우  
   
 ### <a name="finding-udt-dependencies"></a>UDT 종속성 찾기  
- 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리는 열과에서 UDT를 사용 하는 매개 변수 모두를 찾습니다는 **AdventureWorks** 데이터베이스입니다.  
+ 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리 매개 변수에서 UDT를 사용 하는 열을 모두 찾습니다 합니다 **AdventureWorks** 데이터베이스입니다.  
   
 ```  
 USE Adventureworks;  
@@ -71,10 +70,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [어셈블리 변경](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [어셈블리 만들기](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [DROP 집계 &#40;Transact SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP AGGREGATE &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [삭제 유형을 &#40;Transact SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [삭제 유형을 &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

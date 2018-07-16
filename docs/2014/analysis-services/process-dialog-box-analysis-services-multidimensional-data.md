@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315003"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>처리 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 처리 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체를 처리할 수 있습니다. 다음과 같은 방법으로 **에서** 처리 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 표시할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36182450"
  처리할 개체 유형을 표시합니다.  
   
  **처리 옵션**  
- 선택한 개체에 대해 수행할 처리 유형을 선택합니다. 사용 가능한 처리 옵션에 대 한 자세한 내용은 참조 [다차원 모델 개체 처리](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
+ 선택한 개체에 대해 수행할 처리 유형을 선택합니다. 사용 가능한 처리 옵션에 대 한 자세한 내용은 참조 하세요. [다차원 모델 개체 처리](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  **설정**  
  큐브, 측정값 그룹 또는 파티션에 대한 **처리 옵션** 에서 **증분 처리** 를 선택한 경우 **구성** 하이퍼링크가 표시됩니다. **구성** 을 클릭하여 **증분 업데이트** 대화 상자를 시작합니다. **증분 업데이트** 대화 상자에 대한 자세한 내용은 [증분 업데이트 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
@@ -68,7 +68,7 @@ ms.locfileid: "36182450"
  개체를 처리하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [처리 진행률 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

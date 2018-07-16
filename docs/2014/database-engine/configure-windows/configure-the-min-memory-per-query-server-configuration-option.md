@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [SQL Server], queries
 - minimum query memory
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - min memory per query option
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6df30afb559101285a693495b7d8155c49e5c176
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 766a4e704695de1af842fe3a978cbc05424f575f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289469"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query 서버 구성 옵션 구성
-  이 항목에서는 구성 하는 `min memory per query` 서버 구성 옵션을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `min memory per query` 옵션 (킬로바이트 단위)에 할당 되는 쿼리 실행에 대 한 메모리의 최소 크기를 지정 합니다. 예를 들어 경우 `min memory per query` 설정 2, 048 kb 쿼리는 최소한 그 만큼의 총 메모리를 얻을 보장 됩니다. 기본값은 1,024KB입니다. 최소값은 512KB이고 최대값은 2,147,483,647KB(2GB)입니다.  
+  이 항목에서는 구성 하는 방법에 설명 합니다 `min memory per query` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `min memory per query` 옵션의 메모리 (킬로바이트 단위)는 쿼리의 실행을 위해 할당할 최소 크기를 지정 합니다. 예를 들어 경우 `min memory per query` 설정할지 2,048KB로 쿼리는 훨씬 총 메모리를 얻을 수 이상 하도록 보장 됩니다. 기본값은 1,024KB입니다. 최소값은 512KB이고 최대값은 2,147,483,647KB(2GB)입니다.  
   
  **항목 내용**  
   

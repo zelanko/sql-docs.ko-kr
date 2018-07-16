@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331273"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>새 시스템 역할 할당: 시스템 역할 할당 편집 페이지(보고서 관리자)
   새 시스템 역할 할당 또는 시스템 역할 할당 편집 페이지를 사용하여 보고서 서버의 보안을 정의할 수 있습니다. 모든 보안은 특정 사용자나 그룹을 각기 수행 가능한 태스크에 매핑하는 역할 할당을 통해 정의됩니다. 태스크 목록은 역할 할당을 만들 때 선택하는 역할 정의로 표시됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36182172"
   
 ## <a name="options"></a>변수  
  **그룹 또는 사용자**  
- 사용자 도메인의 그룹 또는 사용자 계정의 이름을 입력합니다. 보고서 서버가 로컬 계정으로 실행되고 있는 경우에는 로컬 그룹 또는 사용자를 지정해야 하고, 보고서 서버가 도메인 계정으로 실행되고 있는 경우에는 도메인 그룹 또는 사용자를 지정해야 합니다. 이 형식으로 계정을 입력 하십시오.: \<도메인 >\\< 계정\>합니다.  
+ 사용자 도메인의 그룹 또는 사용자 계정의 이름을 입력합니다. 보고서 서버가 로컬 계정으로 실행되고 있는 경우에는 로컬 그룹 또는 사용자를 지정해야 하고, 보고서 서버가 도메인 계정으로 실행되고 있는 경우에는 도메인 그룹 또는 사용자를 지정해야 합니다. 이 형식으로 계정을 입력 합니다. \<도메인 >\\< 계정\>합니다.  
   
 > [!NOTE]  
 >  이 입력란은 새 역할 할당 페이지에서만 사용할 수 있습니다.  
@@ -55,9 +55,9 @@ ms.locfileid: "36182172"
  **Roles**  
  다른 사용자에게 할당할 수 있는 시스템 수준 역할의 목록을 제공합니다. 하나의 역할 할당에 대해 여러 역할을 지정할 수 있습니다.  
   
- 보고서 관리자는 각 역할의 태스크를 표시하지 않으며 태스크를 추가 또는 수정하는 방법을 제공하지 않습니다. 정의된 그대로 역할을 사용해야 합니다. 작성, 수정 또는 역할을 삭제할 사용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 자세한 내용은 참조 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)합니다.  
+ 보고서 관리자는 각 역할의 태스크를 표시하지 않으며 태스크를 추가 또는 수정하는 방법을 제공하지 않습니다. 정의된 그대로 역할을 사용해야 합니다. 만들고, 수정 또는 삭제할 역할을 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 자세한 내용은 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)합니다.  
   
- 사용 하는 경우에 [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services를 제공 하는 기본 역할을 사용 해야 합니다.  
+ 사용 하는 경우 [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services를 제공 하는 기본 역할을 사용 해야 합니다.  
   
  **설명**  
  역할에 대한 추가 정보를 표시합니다. 시스템 사용자 또는 시스템 관리자와 같은 미리 정의된 역할의 경우 설명에는 각 역할이 지원하는 태스크가 요약되어 표시됩니다.  

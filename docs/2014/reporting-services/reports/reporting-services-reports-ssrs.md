@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307003"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 보고서가 게시된 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 보고서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "36182747"
 ##  <a name="bkmk_SecureReportsSummary"></a> 보고서 보안  
  보고서 보안을 유지하려면  
   
--   보고서 서버 관리자로부터 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치에 사용된 권한 부여 및 인증 시스템을 확인합니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 게시 된 보고서에 대 한 액세스 제어를 위해 Windows 인증, 통합된 보안 및 역할 할당을 사용 합니다. 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) 및 [Reporting Services 보안 및 보호](../security/reporting-services-security-and-protection.md)를 참조하세요.  
+-   보고서 서버 관리자로부터 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치에 사용된 권한 부여 및 인증 시스템을 확인합니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 게시 된 보고서에 대 한 액세스 제어 하는 데 Windows 인증, 통합된 보안 및 역할 할당을 사용 합니다. 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) 및 [Reporting Services 보안 및 보호](../security/reporting-services-security-and-protection.md)를 참조하세요.  
   
 ## <a name="create-notifications-based-on-report-data"></a>보고서 데이터 기반 알림 만들기  
  SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들 수 있습니다. 데이터 경고는 보고서 내 데이터 영역의 데이터 피드를 기반으로 합니다. 기본적으로 데이터 영역의 이름은 자동으로 지정됩니다. 보고서 작성자는 비즈니스 용도에 따라 데이터 영역의 이름을 지정하여 보고서에 데이터 경고를 보다 쉽게 만들 수 있습니다. 데이터 경고를 만들면 데이터가 지정한 조건을 충족하는 경우 전자 메일 알림이 제공됩니다. 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [데이터 경고 디자이너에서 데이터 경고 만들기](../create-a-data-alert-in-data-alert-designer.md) 및 [Reporting Services 데이터 경고](../reporting-services-data-alerts.md)를 참조하세요.  

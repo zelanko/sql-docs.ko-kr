@@ -3,10 +3,9 @@ title: CLR 통합의 성능을 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -17,16 +16,16 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 937a8ad81b3c2b03291c8032ece6af71cb82f360
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 21480acac0ba1d54ede060c127114da46d0ba8a3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703004"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355065"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 통합 아키텍처-성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는의 성능을 개선할 수 있는 디자인 선택 사항 중 일부에 대해 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 통합은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 공용 언어 런타임 (CLR).  
+  이 항목에서는의 성능을 개선할 수 있는 디자인 선택 사항 중 일부를 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 통합 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework CLR (공용 언어 런타임).  
   
 ## <a name="the-compilation-process"></a>컴파일 프로세스  
  SQL 식을 컴파일하는 중에 관리되는 루틴에 대한 참조가 발견되면 MSIL([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) 스텁이 생성됩니다. 이 스텁에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR로의 루틴 매개 변수 마샬링, 함수 호출 및 결과 반환을 위한 코드가 포함됩니다. 이러한 "글루" 코드는 매개 변수의 형식과 매개 변수 방향(입력, 출력 또는 참조)에 기반을 둡니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "35703004"
  컴파일 프로세스를 수행하면 런타임에 네이티브 코드에서 호출할 수 있는 함수 포인터가 생성됩니다. 스칼라 반환 사용자 정의 함수의 경우 이 함수 호출은 행 단위로 수행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 간의 전환 비용을 최소화하기 위해 관리되는 호출을 포함하는 문에는 대상 응용 프로그램 도메인을 확인하는 시작 단계가 있습니다. 이러한 확인 단계를 통해 각 행에서 전환 비용을 줄일 수 있습니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
- 다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합된 CLR과 관련된 성능 고려 사항에 대해 간략히 설명합니다. 더 자세한 정보를 찾을 수 있습니다 "[SQL Server 2005에서 사용 하 여 CLR 통합](http://go.microsoft.com/fwlink/?LinkId=50332)" MSDN 웹 사이트에 있습니다. 관리 코드 성능에 대 한 일반 정보를 확인할 수 있습니다 "[향상.NET 응용 프로그램 성능 및 확장성](http://go.microsoft.com/fwlink/?LinkId=50333)" MSDN 웹 사이트에 있습니다.  
+ 다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합된 CLR과 관련된 성능 고려 사항에 대해 간략히 설명합니다. 자세한 정보를 찾을 수 있습니다 "[SQL Server 2005의 CLR 통합 사용 하 여](http://go.microsoft.com/fwlink/?LinkId=50332)" MSDN 웹 사이트입니다. 관리 되는 코드 성능에 대 한 일반 정보를 찾을 수 있습니다 "[.NET 응용 프로그램 성능 및 확장성](http://go.microsoft.com/fwlink/?LinkId=50333)" MSDN 웹 사이트입니다.  
   
 ### <a name="user-defined-functions"></a>사용자 정의 함수  
  CLR 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수보다 호출 경로가 빠르다는 장점이 있습니다. 또한 관리 코드는 프로시저 코드, 계산 및 문자열 조작 부분에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 훨씬 성능이 뛰어납니다. 계산을 많이 수행하고 데이터 액세스는 수행하지 않는 CLR 함수는 관리 코드로 작성하는 것이 좋습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수는 CLR 통합보다 데이터 액세스를 효율적으로 수행합니다.  
@@ -50,16 +49,16 @@ ms.locfileid: "35703004"
 ### <a name="streaming-table-valued-functions"></a>스트리밍 테이블 반환 함수  
  응용 프로그램에서는 함수 호출의 결과로 테이블을 반환해야 하는 경우가 많습니다. 가져오기 작업의 일부로 파일에서 표 형식 데이터를 읽거나 쉼표로 구분된 값을 관계형 표현으로 변환하는 경우를 예로 들 수 있습니다. 일반적으로 이러한 작업은 호출자가 소비하기 전에 결과 테이블을 구체화하고 채우는 방법으로 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 CLR이 통합됨에 따라 STVF(스트리밍 테이블 반환 함수)라는 새로운 확장성 메커니즘을 사용할 수 있게 되었습니다. 관리되는 STVF는 비슷한 기능의 확장 저장 프로시저 구현보다 성능이 우수합니다.  
   
- Stvf는 반환 하는 관리 되는 함수는 **IEnumerable** 인터페이스입니다. **IEnumerable** 는 STVF가 반환 하는 결과 집합을 탐색 하는 방법이 있습니다. STVF가 호출 되 면 반환 된 **a b l e** 쿼리 계획에 직접 연결 되어 있습니다. 쿼리 계획 호출 **a b l e** 메서드에서 때 행을 인출 해야 합니다. 이 반복 모델을 사용하면 전체 테이블이 채워질 때까지 기다리지 않고 첫 번째 행이 생성되면 즉시 결과를 소비할 수 있습니다. 또한 함수 호출에 소비되는 메모리 양을 크게 줄일 수 있습니다.  
+ Stvf는 반환 하는 관리 되는 함수는 **IEnumerable** 인터페이스입니다. **IEnumerable** STVF 반환한 결과 집합을 탐색 하는 방법이 있습니다. STVF가 호출 되 면 반환 된 **IEnumerable** 쿼리 계획에 직접 연결 되어 있습니다. 쿼리 계획 호출 **IEnumerable** 메서드 행을 인출 해야 할 경우. 이 반복 모델을 사용하면 전체 테이블이 채워질 때까지 기다리지 않고 첫 번째 행이 생성되면 즉시 결과를 소비할 수 있습니다. 또한 함수 호출에 소비되는 메모리 양을 크게 줄일 수 있습니다.  
   
 ### <a name="arrays-vs-cursors"></a>배열 및 커서  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서가 배열로 쉽게 표현할 수 있는 데이터를 트래버스해야 하는 경우 관리 코드를 사용하면 성능을 크게 높일 수 있습니다.  
   
 ### <a name="string-data"></a>문자열 데이터  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 과 같은 데이터를 문자 **varchar**, 관리 되는 함수에서 SqlString 또는 SqlChars 형식일 수 있습니다. SqlString 변수는 메모리에 전체 값의 인스턴스를 만듭니다. SqlChars 변수는 메모리에 전체 값의 인스턴스를 만들지 않고도 성능 및 확장성을 개선하는 데 사용할 수 있는 스트리밍 인터페이스를 제공합니다. LOB(큰 개체) 데이터의 경우 이러한 기능은 특히 중요합니다. 반환 되는 스트리밍 인터페이스를 통해 서버 XML 데이터에 액세스할 수 또한 **SqlXml.CreateReader()** 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 데이터를 문자 **varchar**, 관리 되는 함수에서 SqlString 또는 SqlChars 형식 될 수 있습니다. SqlString 변수는 메모리에 전체 값의 인스턴스를 만듭니다. SqlChars 변수는 메모리에 전체 값의 인스턴스를 만들지 않고도 성능 및 확장성을 개선하는 데 사용할 수 있는 스트리밍 인터페이스를 제공합니다. LOB(큰 개체) 데이터의 경우 이러한 기능은 특히 중요합니다. 또한 반환한 스트리밍 인터페이스를 통해 서버 XML 데이터에 액세스할 수 있습니다 **SqlXml.CreateReader()** 합니다.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 및 확장 저장 프로시저  
- 관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(응용 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 System.Data.SqlServer Api 지원 데이터와 같은 형식은 **xml**, **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)** 에 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]반면 ODS Api 새로운 데이터 형식을 지원 하도록 확장 되지 않았습니다.  
+ 관리되는 프로시저가 결과 집합을 클라이언트로 다시 보낼 수 있도록 지원하는 Microsoft.SqlServer.Server API(응용 프로그래밍 인터페이스)는 확장 저장 프로시저에서 사용되는 ODS(개방형 Data Services) API보다 성능이 우수합니다. 또한 System.Data.SqlServer Api 지원 데이터 형식 등 **xml**를 **varchar (max)** 합니다 **nvarchar (max)**, 및 **varbinary (max)** 에 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]반면 ODS Api는 새 데이터 형식을 지원 하도록 확장 되지 않았습니다.  
   
  관리 코드를 사용하면 메모리, 스레드 및 동기화와 같은 리소스 사용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 관리합니다. 이러한 리소스를 노출하는 관리되는 API가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자를 기반으로 구현되기 때문입니다. 이와 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 확장 저장 프로시저의 리소스 사용량을 보거나 제어할 수 없습니다. 예를 들어 확장 저장 프로시저가 CPU나 메모리 리소스를 너무 많이 소비하더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이를 감지하거나 제어할 수 없습니다. 반면에 관리 코드를 사용하면 지정된 스레드가 오랫동안 양보하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 이를 감지하여 다른 작업을 예약할 수 있도록 해당 태스크에 양보를 강요합니다. 따라서 관리 코드를 사용하면 확장성과 시스템 리소스 사용 효율이 개선됩니다.  
   

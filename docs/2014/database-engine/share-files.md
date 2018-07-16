@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308083"
 ---
 # <a name="share-files"></a>파일 공유
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 여러 원본 제어 프로젝트에서 항목을 공유할 수 있습니다. 항목을 공유할 경우 항목에 대한 모든 변경 내용이 항목이 공유되는 모든 프로젝트에 반영됩니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "36182853"
   
 1.  솔루션 탐색기에서 공유 파일을 넣으려는 폴더나 프로젝트를 선택합니다.  
   
-2.  에 **파일** 메뉴에서 **소스 제어**, 클릭 하 고 **공유**합니다.  
+2.  에 **파일** 메뉴에서 **소스 제어**를 클릭 하 고 **공유**합니다.  
   
-3.  에 **공유할** 대화 상자를 공유 하려는 항목에 대 한 디렉터리 목록을 찾아보고 해당 항목을 클릭 합니다.  
+3.  에 **공유할** 대화 상자에서 공유 하려는 항목에 대 한 디렉터리 목록을 검색 하 고 해당 항목을 클릭 합니다.  
   
 4.  클릭 **공유**합니다.  
   

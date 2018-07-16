@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 517208d1fa790739a2008cd5e149147cbf91643c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 458fa987ee31f024534b184b2729667cea3597c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287229"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
   이 항목에서는 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36182028"
   
  다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 때 적용되는 권장 사항입니다.  
   
- 저장된 프로시저를 한 번 호출 하는 가장 효율적인 방법은 사용 하 여 직접 RPC 호출을 발급 하는 것 `SQLExecDirect` 및 ODBC CALL 절. 사용 하지 않는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` 문. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.  
+ 저장된 프로시저를 한 번 호출 하는 가장 효율적인 방법은 사용 하 여 직접 RPC 호출을 발급 하는 것 `SQLExecDirect` 및 ODBC CALL 절. 사용 하지 않는 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` 문입니다. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 두 번 이상 호출하는 가장 효율적인 방법은 준비된 RPC 프로시저 호출을 사용하는 것입니다. 다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 준비된 RPC 호출을 수행하는 방법입니다.  
   

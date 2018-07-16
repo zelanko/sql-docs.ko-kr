@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf958a7ffa9044b7cd432a5d08ae9197315aa51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: adc7d7a6700373227d5508cbd77e4101a0051ba9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268989"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 이벤트 클래스
   QN:Template 이벤트는 쿼리 템플릿의 내부 사용에 대한 정보를 보고합니다. 여기서 쿼리 템플릿이란 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 알리기 위해 쿼리 정의를 공유하는 데 사용하는 메커니즘을 말합니다. 이러한 템플릿은 매개 변수 테이블과 함께 만들어집니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 쿼리 템플릿이 만들어지거나 사용되거나 소멸될 때 이러한 유형의 이벤트를 만듭니다.  

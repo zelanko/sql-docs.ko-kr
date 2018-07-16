@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
 - connections [Integration Services], flat files
@@ -20,13 +20,13 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8af018faa1ed8de9d47cb640e485ce17d5cbe56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56b90bb24e67b5cdb511a5729c4c7396aed5e93d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285609"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  
@@ -34,18 +34,18 @@ ms.locfileid: "36180938"
  플랫 파일 연결 관리자는 하나의 파일만 액세스할 수 있습니다. 파일을 여러 개 참조하려면 플랫 파일 연결 관리자 대신 다중 플랫 파일 연결 관리자를 사용하십시오. 자세한 내용은 [Multiple Flat Files Connection Manager](multiple-flat-files-connection-manager.md)을 참조하세요.  
   
 ## <a name="column-length"></a>열 길이  
- 기본적으로 플랫 파일 연결 관리자는 문자열 열의 길이를 50자로 설정합니다. **플랫 파일 연결 관리자 편집기** 대화 상자에서 샘플 데이터를 평가하고 이러한 열의 길이를 자동으로 조정하여 데이터가 잘리지 않거나 열 너비를 초과하지 않도록 할 수 있습니다. 또한 플랫 파일 원본 또는 변환에서 열 길이를 나중에 조정하지 않는 한 문자열 열 길이가 데이터 흐름 전체에서 동일하게 유지됩니다. 이러한 문자열 열이 보다 좁은 대상 열에 매핑되면 사용자 인터페이스에 경고가 나타나고 런타임 시 데이터 잘림으로 인한 오류가 발생할 수 있습니다. 오류나 잘림이 발생하지 않도록 하기 위해 플랫 파일 연결 관리자, 플랫 파일 원본 또는 변환에서 대상 열과 호환 가능하도록 열 크기를 조정할 수 있습니다. 출력 열의 길이 수정 하려면 설정는 `Length` 에서 출력 열의 속성은 **입 / 출력 속성** 탭에 **고급 편집기** 대화 상자.  
+ 기본적으로 플랫 파일 연결 관리자는 문자열 열의 길이를 50자로 설정합니다. **플랫 파일 연결 관리자 편집기** 대화 상자에서 샘플 데이터를 평가하고 이러한 열의 길이를 자동으로 조정하여 데이터가 잘리지 않거나 열 너비를 초과하지 않도록 할 수 있습니다. 또한 플랫 파일 원본 또는 변환에서 열 길이를 나중에 조정하지 않는 한 문자열 열 길이가 데이터 흐름 전체에서 동일하게 유지됩니다. 이러한 문자열 열이 보다 좁은 대상 열에 매핑되면 사용자 인터페이스에 경고가 나타나고 런타임 시 데이터 잘림으로 인한 오류가 발생할 수 있습니다. 오류나 잘림이 발생하지 않도록 하기 위해 플랫 파일 연결 관리자, 플랫 파일 원본 또는 변환에서 대상 열과 호환 가능하도록 열 크기를 조정할 수 있습니다. 설정한 출력 열의 길이 수정 하려면 합니다 `Length` 에서 출력 열의 속성을 **입 / 출력 속성** 탭에서 **고급 편집기** 대화 상자.  
   
  연결 관리자를 사용하는 플랫 파일 원본을 추가 및 구성한 후에 플랫 파일 연결 관리자에서 열 길이를 업데이트한 경우에는 플랫 파일 원본에서 출력 열의 크기를 수동으로 조정하지 않아도 됩니다. **플랫 파일 원본** 대화 상자를 열면 플랫 파일 원본에 열 메타데이터를 동기화하는 옵션이 제공됩니다.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>플랫 파일 연결 관리자 구성  
- 패키지에 플랫 파일 연결 관리자를 추가 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 관리자를 만들고 런타임에 플랫 파일 연결으로 확인 되, 플랫 파일 연결 속성을 설정 하며 플랫 파일 연결 관리자를 추가 하는 `Connections` 는 패키지의 컬렉션입니다.  
+ 패키지에 플랫 파일 연결 관리자를 추가 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결, 런타임에 플랫 파일 연결으로 확인 됩니다 하 고, 플랫 파일 연결 속성을 설정 하 고, 플랫 파일 연결 관리자를 추가 하는 관리자를 만들고 합니다 `Connections` 패키지의 컬렉션입니다.  
   
- `ConnectionManagerType` 연결 관리자의 속성이로 설정 되어 `FLATFILE`합니다.  
+ 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `FLATFILE`합니다.  
   
  기본적으로 플랫 파일 연결 관리자는 따옴표로 표시되지 않은 데이터에서 항상 행 구분자를 검사하고 행 구분자를 찾으면 새 행을 시작합니다. 그러면 연결 관리자가 열 필드가 누락된 행을 사용하여 파일을 올바르게 구문 분석할 수 있습니다.  
   
- 일부 경우에는 이 기능을 비활성화해야 패키지 성능이 향상될 수 있습니다. 플랫 파일 연결 관리자 속성을 설정 하 여이 기능을 해제 하면 **AlwaysCheckForRowDelimiters**을 `False`입니다.  
+ 일부 경우에는 이 기능을 비활성화해야 패키지 성능이 향상될 수 있습니다. 플랫 파일 연결 관리자 속성을 설정 하 여이 기능을 비활성화할 수 있습니다 **AlwaysCheckForRowDelimiters**를 `False`입니다.  
   
  다음과 같은 방법으로 플랫 파일 연결 관리자를 구성할 수 있습니다.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "36180938"
   
 -   [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 정보를 참조 하십시오. <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 하 고 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
   
   

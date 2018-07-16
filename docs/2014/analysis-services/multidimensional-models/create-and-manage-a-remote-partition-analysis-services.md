@@ -1,5 +1,5 @@
 ---
-title: 원격 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs
+title: (Analysis Services)는 원격 파티션 만들기 및 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10dc1d65f147c070a740b1e6adbe4b681af667bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315043"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
   측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "36172054"
 -   재해 복구 계획이 원격 파티션의 백업 및 복원에 적합한지 확인해야 합니다. 원격 파티션을 사용하면 백업 및 복원 작업이 복잡해질 수 있습니다. 필요한 데이터를 복원할 수 있도록 계획을 철저히 테스트해야 합니다.  
   
 ## <a name="configure-remote-partitions"></a>원격 파티션 구성  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스를 실행하는 별도의 두 컴퓨터는 각각 한 컴퓨터는 마스터 서버로 지정하고 다른 컴퓨터는 하위 서버로 지정하는 원격 파티션 배열을 만드는 데 필요합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스를 실행하는 별도의 두 컴퓨터는 각각 한 컴퓨터는 마스터 서버로 지정하고 다른 컴퓨터는 하위 서버로 지정하는 원격 파티션 배열을 만드는 데 필요합니다.  
   
  다음 절차에서는 마스터 서버에 배포된 큐브 데이터베이스가 있는 두 개의 서버 인스턴스가 있다고 가정합니다. 이 절차에서는 큐브 데이터베이스를 db 마스터라고 합니다. 원격 파티션을 포함하는 저장소 데이터베이스는 db 저장소라고 합니다.  
   

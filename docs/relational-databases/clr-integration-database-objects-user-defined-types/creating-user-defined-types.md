@@ -5,7 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,12 +18,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702614"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349486"
 ---
 # <a name="creating-user-defined-types"></a>사용자 정의 형식 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ Reconfigure
  사용자 정의 형식을 만드는 것과 관련된 코딩 방법을 설명합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 샘플에서 자세히 설명 된 Point UDT 정의 [코딩 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)합니다.  
+ 다음 코드 샘플에서 자세히 설명 된 Point UDT를 정의 [코딩 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)합니다.  
   
- 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 이러한 예제를 설치 하는 방법에 지침은 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
+ 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 에 대 한 지침은이 예제를 설치 합니다 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
   
  C#  
   

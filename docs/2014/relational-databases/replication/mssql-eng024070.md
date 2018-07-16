@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 583603105c6c5ce4a7c24dc09ef50b56ccf77173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305413"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -39,7 +39,7 @@ ms.locfileid: "36182826"
 ## <a name="explanation"></a>설명  
  이 오류는 복제가 사용 중인지 여부에 관계없이 발생할 수 있는 일반 오류입니다. 복제 토폴로지의 서버에서 이 오류는 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 제어 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정을 변경한 경우에 발생합니다. 해당 서비스 계정을 변경한 후 에이전트 작업을 실행하려고 하면 작업이 실패하고 다음과 유사한 오류 메시지가 나타날 수 있습니다.  
   
- "사용자로 실행 되었습니다: \<UserAccount > 합니다. 복제-복제 스냅숏 하위 시스템: agent \<AgentName > 하지 못했습니다. 사용자로 실행 되었습니다: \<UserAccount > 합니다. 클라이언트에 필수 권한이 없습니다. 단계가 실패했습니다. `[SQLSTATE 42000] (Error 14151)`을 참조하세요. 단계가 실패했습니다."  
+ "사용자로 실행: \<UserAccount >. 복제-복제 스냅숏 하위 시스템: agent \<AgentName > 실패 했습니다. 사용자로 실행: \<UserAccount >. 클라이언트에 필수 권한이 없습니다. 단계가 실패했습니다. `[SQLSTATE 42000] (Error 14151)`을 참조하세요. 단계가 실패했습니다."  
   
  이 문제는 Windows 서비스 제어 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 새 서비스 계정에 필요한 권한을 부여할 수 없기 때문에 발생합니다.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69c6e3563bce0caafd48ece33e39c0a11e67c456
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3d4908e180530afa5e82acf5599c1e3f718636c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279219"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
   확장 이벤트 세션으로 변환할 기존 SQL 추적 스크립트가 있는 경우 이 항목의 절차를 따라 해당하는 확장 이벤트 세션을 만들 수 있습니다. trace_xe_action_map 및 trace_xe_event_map 시스템 테이블의 정보를 사용하여 변환을 수행하는 데 필요한 정보를 수집할 수 있습니다.  
