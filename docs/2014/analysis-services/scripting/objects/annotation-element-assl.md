@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dfe8ea881948de8ed53cea0ddcff1e1325a96d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304503"
 ---
 # <a name="annotation-element-assl"></a>Annotation 요소(ASSL)
   ASSL(Analysis Services Scripting Language) 스키마를 확장하는 데 사용되는 요소를 포함합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "36092764"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[주석](../collections/annotations-element-assl.md)|  
-|자식 요소|[이름](../properties/name-element-assl.md), [값](../properties/value-element-assl.md), [표시 유형](../properties/visibility-element-assl.md)|  
+|자식 요소|[이름을](../properties/name-element-assl.md)하십시오 [값](../properties/value-element-assl.md), [표시 유형](../properties/visibility-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `Annotation` 요소는 복합 데이터 형식을 정의하는 데만 사용되는 개체를 제외한 모든 개체에 ASSL 스키마 확장성을 제공합니다. `Value` 요소의 `Annotation` 요소는 다음 규칙에 따라 ASSL 이외의 모든 XML 네임스페이스에서 유효한 XML을 포함할 수 있습니다.  

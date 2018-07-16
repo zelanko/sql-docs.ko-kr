@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287570"
 ---
 # <a name="security-master-data-services"></a>보안(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 사용하면 사용자가 작업을 수행하는 데 필요한 특정 마스터 데이터에 액세스할 수 있도록 하며 사용해서는 안 되는 데이터에는 액세스할 수 없도록 할 수 있습니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "36093106"
   
 -   [기능 영역 액세스 권한](../../2014/master-data-services/functional-area-permissions-master-data-services.md)- 다섯 가지 기능 영역 중 사용자가 액세스할 수 있는 영역을 결정합니다.  
   
--   [모델 개체 권한](../../2014/master-data-services/model-object-permissions-master-data-services.md), 사용자가 액세스할 수, 특성 및 해당 특성에는 사용자가 액세스 (읽기 또는 업데이트) 유형을 결정 합니다.  
+-   [모델 개체 권한](../../2014/master-data-services/model-object-permissions-master-data-services.md), 사용자가 액세스할 수, 특성 및 해당 특성에 사용자가 액세스 (읽기 또는 업데이트) 유형을 결정 합니다.  
   
--   필요에 따라 [계층 멤버 권한](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)이며 사용자가 액세스할 수, 멤버를 확인 하 고 해당 멤버에는 사용자에 게 액세스 (읽기 또는 업데이트) 유형을 합니다.  
+-   필요에 따라 [계층 멤버 권한](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)는 사용자가 액세스할 수, 멤버를 확인 하 고 해당 멤버에 액세스 (읽기 또는 업데이트) 유형을 사용자가 있습니다.  
   
  특성 및 멤버에 사용 권한을 할당할 때는 사용 권한 Intersect와 규칙에 따라 우선 적용되는 사용 권한이 결정됩니다. 자세한 내용은 [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)을 참조하세요.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "36093106"
   
  ![파생 계층 및 멤버 권한 스타일](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "스타일 파생 계층 및 멤버 권한")  
   
- 계층 구조를 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [명시적 계층 만들기 &#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) 및 [파생 계층 구조를 만들 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)합니다.  
+ 계층 구조를 만드는 방법에 대 한 자세한 내용은 [명시적 계층 만들기 &#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) 하 고 [파생 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md).  
   
- 멤버 권한을 할당 하는 방법에 대 한 정보를 참조 하십시오. [계층 멤버 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ 멤버 권한을 할당 하는 방법에 대 한 자세한 내용은 [계층 멤버 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Excel용 추가 기능의 보안  
  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 설정된 보안이 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에도 적용됩니다. 사용자는 해당 사용 권한을 가진 데이터만 보고 이를 사용할 수 있습니다. 관리자는 관리 태스크를 수행할 수 있습니다.  
@@ -74,11 +74,11 @@ ms.locfileid: "36093106"
 |계층 노드에 사용 권한을 할당하여 멤버에 사용 권한을 할당합니다.|[계층 멤버 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [관리자가 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
+ [관리자 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
  [사용자 및 그룹&#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)   
  [기능 영역 권한&#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [모델 개체 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [계층 멤버 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방식 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

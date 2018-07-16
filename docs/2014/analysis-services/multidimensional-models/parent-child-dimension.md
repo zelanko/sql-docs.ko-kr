@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
 - dimensions [Analysis Services], parent-child
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f4dea929cc67ca1d44fb2c439947edbdef5bcfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b22ee5d9324b1d1b18d6ff033876d22bc0c1bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328573"
 ---
 # <a name="parent-child-hierarchy"></a>부모-자식 계층
-  부모-자식 계층은 부모 특성이 포함된 표준 차원의 계층입니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 멤버의 위치에 의해 결정 되는 `KeyColumns` 및 `RootMemberIf` 부모의 속성 특성 멤버의 위치를 한 수준에 따라 사용자가 반면는 `OrderBy` 부모 특성의 속성입니다. 특성 속성에 대한 자세한 내용은 [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
+  부모-자식 계층은 부모 특성이 포함된 표준 차원의 계층입니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층에서 멤버의 위치에 의해 결정 됩니다는 `KeyColumns` 및 `RootMemberIf` 수준의 멤버의 위치에 의해 결정 되는 반면 부모의 속성 특성은 `OrderBy` 부모 특성의 속성입니다. 특성 속성에 대한 자세한 내용은 [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
   
  부모-자식 계층의 수준 간 부모-자식 관계로 인해 일부 리프가 아닌 멤버는 자식 멤버에서 집계한 데이터뿐만 아니라 기본 데이터 원본에서 파생된 데이터를 가질 수도 있습니다.  
   

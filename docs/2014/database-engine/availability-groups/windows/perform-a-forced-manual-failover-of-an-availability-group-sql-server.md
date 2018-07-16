@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287995"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 강제 수동 장애 조치(Failover) 수행(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법에 대해 설명합니다. 강제 장애 조치(failover)는 [예정된 수동 장애 조치(failover)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 가 가능하지 않을 때 재해 복구용으로만 사용하기 위한 수동 장애 조치(failover)의 한 형태입니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 따라서 서비스를 즉시 가용성 그룹으로 복원해야 하고 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  
@@ -161,7 +160,7 @@ ms.locfileid: "36187294"
   
     -   `-AllowDataLoss`  
   
-         기본적으로 `-AllowDataLoss` 매개 변수를 사용하면 `Switch-SqlAvailabilityGroup`에서 강제 장에 조치를 수행하면 커밋되지 않은 트랜잭션이 손실될 수 있음을 알리고 확인을 요청하는 메시지가 나타납니다. 계속 하려면를 입력 `Y`작업 취소를 입력 하려면 `N`합니다.  
+         기본적으로 `-AllowDataLoss` 매개 변수를 사용하면 `Switch-SqlAvailabilityGroup`에서 강제 장에 조치를 수행하면 커밋되지 않은 트랜잭션이 손실될 수 있음을 알리고 확인을 요청하는 메시지가 나타납니다. 계속 하려면 입력 `Y`입력, 작업을 취소 하려면 `N`합니다.  
   
          다음 예제에서는 `MyAg` 이라는 서버 인스턴스의 보조 복제본으로 가용성 그룹 `SecondaryServer\InstanceName`의 강제 장애 조치(failover)(데이터가 손실될 수 있음)를 수행합니다. 이 작업을 확인하라는 메시지가 나타납니다.  
   
@@ -173,7 +172,7 @@ ms.locfileid: "36187294"
   
     -   **-AllowDataLoss-Force**  
   
-         확인하지 않고 강제 장애 조치(failover)를 시작하려면 `-AllowDataLoss` 및 `-Force` 매개 변수를 모두 지정합니다. 이 작업은 명령을 스크립트에 포함시키고 사용자 상호 작용 없이 명령을 실행하려는 경우에 유용합니다.  그러나 사용 하 여는 `-Force` 옵션을 강제 장애 조치에서 가용성 그룹에 참여 하는 데이터베이스에서 데이터가 손실 될 수 있으므로 주의 해야 합니다.  
+         확인하지 않고 강제 장애 조치(failover)를 시작하려면 `-AllowDataLoss` 및 `-Force` 매개 변수를 모두 지정합니다. 이 작업은 명령을 스크립트에 포함시키고 사용자 상호 작용 없이 명령을 실행하려는 경우에 유용합니다.  그러나 사용 하 여는 `-Force` 강제 장애 조치는 가용성 그룹에 참여 하는 데이터베이스에서 데이터가 손실 될 수 있으므로 주의 해야 옵션입니다.  
   
          다음 예제에서는 `MyAg` 이라는 서버 인스턴스로 가용성 그룹 `SecondaryServer\InstanceName`의 강제 장애 조치(failover)(데이터가 손실될 수 있음)를 수행합니다. `-Force` 옵션을 사용하면 이 작업의 확인 메시지가 표시되지 않습니다.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "36187294"
         ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 3.  가용성 그룹을 강제로 장애 조치한 후 필요한 후속 단계를 완료합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [후속 작업: 강제 장애 조치(Failover) 후 필수 태스크](#FollowUp)를 참조하세요.  
   
@@ -325,7 +324,7 @@ ms.locfileid: "36187294"
   
 -   **백서:**  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
   

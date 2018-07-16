@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296653"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
   다음 단계에 따라 비클러스터형 인덱스를 저장하는 데 필요한 공간을 예측합니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "36186554"
     >  인덱스 키 열과 함께 키가 아닌 열을 포함하여 비클러스터형 인덱스를 확장할 수 있습니다. 이러한 추가 열은 비클러스터형 인덱스의 리프 수준에만 저장됩니다. 자세한 내용은 [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  결합할 수 `varchar`, `nvarchar`, `varbinary`, 또는 `sql_variant` 정의 된 총 테이블 너비가 8, 060 바이트를 초과 하는 열입니다. 이러한 각 열의 길이는 `varchar`, `varbinary` 또는 `sql_variant` 열의 경우 8,000바이트 이내여야 하고 `nvarchar` 열의 경우 4,000바이트 이내여야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다. 이 규정은 포괄 열이 있는 비클러스터형 인덱스 리프 행에도 적용됩니다.  
+    >  결합할 수 있습니다 `varchar`, `nvarchar`하십시오 `varbinary`, 또는 `sql_variant` 정의 된 총 테이블 너비가 8,060 바이트를 초과 하는 열. 이러한 각 열의 길이는 `varchar`, `varbinary` 또는 `sql_variant` 열의 경우 8,000바이트 이내여야 하고 `nvarchar` 열의 경우 4,000바이트 이내여야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다. 이 규정은 포괄 열이 있는 비클러스터형 인덱스 리프 행에도 적용됩니다.  
   
      비클러스터형 인덱스에 포괄 열이 없는 경우 1단계의 값을 사용하되 해당 값에 1.3단계에서 결정된 모든 수정 내용을 적용합니다.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36186554"
   
 1.  인덱스의 리프가 아닌 수준의 수를 계산합니다.  
   
-     ***리프가 아닌 수준*** = 1 + Index_Rows_Per_Page 로그 (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***리프가 아닌 수준*** = 1 + 로그 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      이 값을 가장 근사한 정수로 올립니다. 비클러스터형 인덱스의 리프 수준은 이 값에 포함되지 않습니다.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "36186554"
   
      ***Non-leaf_levels*** = 1 + log25 (1000 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43 예에서 설명한 페이지 수입니다.  
+     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, 예에서 설명한 페이지 수입니다.  
   
 3.  인덱스 크기를 계산합니다. 페이지당 총 바이트 수는 8,192바이트입니다.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "36186554"
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식을 저장 하기 위해 공간 사용될지 정확 하 게 측정 하는 알고리즘 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, 및 `image` 값은 복잡 합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 비클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
+     공간 LOB 데이터 형식을 저장 하려면 사용할 정확 하 게 하는 알고리즘 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`를 `xml`, 및 `image` 값은 복잡 합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 비클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
   
 -   압축  
   

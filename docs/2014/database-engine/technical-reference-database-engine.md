@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
 - Database Engine [SQL Server], getting assistance
@@ -16,13 +16,13 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 caps.latest.revision: 31
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d4632f40972cfa555358746dac5b0ff49422e61a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c79c55c9eab4c165f2fd49e57c622a802c549375
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298933"
 ---
 # <a name="technical-reference-database-engine"></a>기술 참조(데이터베이스 엔진)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대한 도구, 언어 및 관리 프로그래밍 참조 설명서를 찾습니다.  

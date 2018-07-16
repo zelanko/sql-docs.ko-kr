@@ -15,15 +15,15 @@ helpviewer_keywords:
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e525dec6972d68ce8695bc7fab6aa6ab177e0a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328533"
 ---
 # <a name="introducing-amo-classes"></a>AMO 클래스 소개
   AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 인스턴스를 관리하기 위해 설계된 클래스 라이브러리입니다. AMO 클래스는 데이터베이스, 차원, 큐브, 마이닝 구조 및 모델, 역할 및 권한, 예외 등의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 관리하는 데 사용되는 클래스입니다.  

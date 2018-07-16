@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDD_SCC_CONNECTION_DIALOG
 helpviewer_keywords:
 - Change Source Control dialog box
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2584a7981662bc96fff975d93dfd24ec79d5d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312303"
 ---
 # <a name="change-source-control"></a>소스 제어 변경
   로컬에 저장된 솔루션 또는 프로젝트를 원본 제어 데이터베이스 폴더로 연결하는 연결 및 바인딩을 만들고 관리합니다.  

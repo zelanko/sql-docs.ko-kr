@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
 - main dimension tables
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d01e7148df98b5b05cb3adac6e5f64ce68905191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319253"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>기존 테이블을 사용하여 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
   
  기존 테이블을 사용하여 차원을 만드는 경우 차원 마법사는 다음 단계로 이루어집니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36093199"
 > [!NOTE]  
 >  차원을 만들 때 차원 유형과 표준 특성 유형을 설정하지 않은 경우 차원을 만든 후 비즈니스 인텔리전스 마법사를 사용하여 이러한 값을 설정하십시오. 자세한 내용은 [차원에 차원 인텔리전스 추가](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 또는 계정 유형 차원의 경우 [차원에 계정 인텔리전스 추가](bi-wizard-add-account-intelligence-to-a-dimension.md)를 참조하세요.  
   
- 지정된 특성 유형에 따라 자동으로 차원 유형이 설정됩니다. 마법사 집합에 지정 된 특성 유형을 `Type` 특성에 대 한 속성입니다. 차원 및 차원 특성에 대한 `Type` 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대한 정보를 제공합니다. 경우에 따라 이러한 `Type` 속성 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우에 계정, 시간 또는 통화 차원에 대 한 이러한 `Type` 속성 설정이 특정 서버 기반 동작을 결정 하며 특정 큐브 동작을 구현 해야 할 수 있습니다.  
+ 지정된 특성 유형에 따라 자동으로 차원 유형이 설정됩니다. 마법사 집합에서 지정한 특성 유형은 `Type` 특성에 대 한 속성입니다. 차원 및 차원 특성에 대한 `Type` 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대한 정보를 제공합니다. 경우에 따라 이러한 `Type` 속성 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우 계정, 시간 또는 통화 차원에 `Type` 속성 설정이 특정 서버 기반 동작을 결정 하며 특정 큐브 동작을 구현 해야 할 수 있습니다.  
   
  차원 및 특성 유형에 대한 자세한 내용은 [차원 유형](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [특성 유형 구성](attribute-properties-configure-attribute-types.md)을 참조하세요.  
   

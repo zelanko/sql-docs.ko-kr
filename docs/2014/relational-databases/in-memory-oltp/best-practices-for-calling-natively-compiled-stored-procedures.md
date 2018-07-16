@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298343"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
   고유하게 컴파일된 저장 프로시저의 특징  
@@ -52,7 +52,7 @@ ms.locfileid: "36183433"
   
  XEvent `hekaton_slow_parameter_passing`에 `reason=named_parameters`을 사용하면 고유하게 컴파일된 저장 프로시저에 비효율적인 명명된 매개 변수가 사용되었는지 감지할 수 있습니다.  
   
- 마찬가지로 동일한 xevent 일치 하지 않는 형식의 사용을 감지할 수 있습니다 `hekaton_slow_parameter_passing`와 `reason=parameter_conversion`합니다.  
+ 마찬가지로 동일한 xevent 일치 하지 않는 형식의 사용을 감지할 수 있습니다 `hekaton_slow_parameter_passing`를 사용 하 여 `reason=parameter_conversion`입니다.  
   
  메모리 최적화 테이블을 사용할 때 많은 시나리오에서 재시도 논리를 구현해야 하며 몇 가지 기능 제한에 대한 문제를 해결해야 하기 때문에 래퍼에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만들어야 할 수 있습니다. 예를 보려면 [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](memory-optimized-tables.md)을 참조하세요.  
   

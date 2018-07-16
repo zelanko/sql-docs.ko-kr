@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4a06b4ad95b844dd002bf1efbb367b22193d3979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312293"
 ---
 # <a name="query-options-results-grid-page"></a>쿼리 옵션 결과(표 형태 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36182631"
  **쿼리 실행 후 결과 탭으로 전환**  
  자동으로 화면 포커스를 결과 집합에 둡니다.  
   
- **검색 되는 최대 문자 수**  
+ **최대 검색 문자 수**  
  **비-XML 데이터**:  
   
  1에서 65535 사이의 숫자를 입력하여 각 셀에 표시될 최대 문자 수를 지정합니다.  

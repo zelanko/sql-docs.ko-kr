@@ -1,5 +1,5 @@
 ---
-title: 메모리 액세스에 최적화 된 테이블의 LOB 열 구현 | Microsoft Docs
+title: 메모리 최적화 테이블에 LOB 열 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2af703360aa56e48658fc7b76098eb5db0cdc2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 733183e50a631e86f391070ae45b1e70d179a643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283839"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 LOB 열 구현
   메모리 액세스에 최적화된 테이블에는 행 외부 또는 LOB(큰 개체)가 없으며 행 크기 제한은 8060바이트입니다. 다음 두 가지 방법으로 큰 이진 또는 문자열 값을 저장할 수 있습니다.  

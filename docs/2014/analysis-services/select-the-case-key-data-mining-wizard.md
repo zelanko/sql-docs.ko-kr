@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcasekey.f1
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac22701b451360e5877af76a770b106b5c91b699
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de7c1972cdf7a39fe39b045f8a7d555cd9a328c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300913"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>사례 키 선택(데이터 마이닝 마법사)
   **사례 키 선택** 페이지를 사용하여 마이닝 구조의 키로 지정할 원본 큐브 차원의 특성을 선택할 수 있습니다. 이 특성은 계층 내에 있어야 하며 그렇지 않은 경우 해당 특성 계층을 설정해야 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 논리적 아키텍처 개요 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 논리 아키텍처 개요 (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89260e7ed530216d514e3237ed0ffe11322e17d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284119"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
-  Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로드 하 고 쿼리 통합 문서 내부의 Excel 또는 PowerPivot 데이터 모델에 사용 되는 SharePoint 용 PowerPivot으로 설치 된 Analysis Services의 인스턴스를 참조 합니다.  
+  Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로드 및 쿼리 하는 통합 문서 내부의 Excel 또는 PowerPivot 데이터 모델에 사용 되는 SharePoint 용 powerpivot 설치 된 Analysis Services의 인스턴스를 가리킵니다.  
   
- 이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 [테이블 형식 모델링 &#40;SSAS 테이블 형식&#41; ](../../tabular-models/tabular-models-ssas.md) 및 [비교 테이블 형식 및 다차원 솔루션 &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
+ 이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델링 &#40;&AMP;#40;SSAS 테이블 형식&#41; ](../../tabular-models/tabular-models-ssas.md) 하 고 [비교 테이블 형식 및 다차원 솔루션 &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>기본 아키텍처  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 응용 프로그램은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 관계로 명명 됩니다 "\<서버 이름 >\\< InstanceName\>"입니다. 다음 그림 언급 된 모든 관계를 보여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체입니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 응용 프로그램은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 명칭은 "\<서버 이름 >\\< n a m e\>"입니다. 다음 그림에서는 언급 된 모든 관계를 보여 줍니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체입니다.  
   
  ![AMO 실행 개체 관계](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36181915"
  Route 차원은 수입품이 목적지에 도착하는 방법을 나타냅니다. 이 차원의 멤버에는 ground, nonground, air, sea, road 또는 rail이 있습니다. Source 차원은 수입품이 생산되는 Africa 또는 Asia 등의 지역을 나타냅니다. Time 차원은 단일 연도의 분기와 반기를 나타냅니다.  
   
 ### <a name="aggregates"></a>집계  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에서와 같이 Time 차원에서 Calendar Time 계층을 사용 하 여 표준 달력 계층에 따라 앞의 그림에는 측정값 집계 될 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에 표시 된 것과 같이 Time 차원에서 Calendar Time 계층을 사용 하 여 앞의 그림에서 측정값을 표준 달력 계층에 따라 집계할 수 있습니다.  
   
  ![시간 차원에 따라 구성 된 측정값 다이어그램](../../../analysis-services/dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성 된 측정값 다이어그램")  
   
@@ -88,10 +88,10 @@ ms.locfileid: "36181915"
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
 |All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|6 월-20-99|Jun-28-99|  
-|||1st quarter|5108|1452|3656|Mar-30-99|3 월-19-99|Mar-30-99|  
+|||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|6 월-20-99|Jun-28-99|  
 ||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
-|||3rd quarter|6119|1444|4675|Sep-30-99|9 월-18-99|Sep-30-99|  
+|||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
  큐브를 정의한 다음에는 새 집계를 만들거나, 집계를 처리하는 동안 미리 계산할 것인지 또는 쿼리 시 계산할 것인지와 같은 옵션을 설정하기 위해 기존 집계를 변경할 수 있습니다. **관련된 항목:**[집계 및 집계 디자인](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
@@ -110,25 +110,25 @@ ms.locfileid: "36181915"
 |Time 차원의 Half 특성|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Time 차원의 Quarter 특성|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- 단일 큐브 셀의 데이터는 일반적으로 팩트 테이블의 여러 행에서 파생됩니다. 예를 들어 air 멤버, Africa 멤버 및 1st quarter 멤버가 교차 하는 지점의 큐브 셀의 다음 행을 집계 하 여 파생 값이 포함 되어는 **i m p** 팩트 테이블입니다.  
+ 단일 큐브 셀의 데이터는 일반적으로 팩트 테이블의 여러 행에서 파생됩니다. 예를 들어 air 멤버, Africa 멤버 및 1st quarter 멤버가 교차 큐브 셀의 다음 행을 집계 하 여 파생 되는 값이 포함 된 **ImportsFactTable** 팩트 테이블입니다.  
   
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|패키지|마지막|  
 |3516987|1|6|1|15|1 월-10-99|  
-|3554790|1|6|1|40|1 월-19-99|  
+|3554790|1|6|1|40|1 월 1 일 ~ 19-99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  
 |3645541|1|6|1|20|Feb-09-99|  
 |3674906|1|6|1|36|Feb-17-99|  
   
- 이전 테이블의 각 행에 동일한 값에 대 한는 **RouteKey**, **SourceKey**, 및 **TimeKey** 이러한 행은 동일한 큐브 셀을 발생할 수 있음을 나타내는 열입니다.  
+ 앞의 표에서 각 행에 동일한 값을 **RouteKey**, **SourceKey**, 및 **TimeKey** 동일한 큐브 셀에 영향을 이러한 행을 나타내는 열입니다.  
   
- 여기에 제시된 예는 큐브에 단일 측정값 그룹이 있으며 모든 차원 테이블이 별모양 스키마로 팩트 테이블에 조인된다는 점에서 매우 단순한 큐브를 나타냅니다. 팩트 테이블에 직접 조인되는 것이 아니라 또 다른 차원 테이블에 하나 이상의 차원 테이블이 조인되는 눈송이 스키마도 많이 사용됩니다. **관련된 항목:**[차원 &#40;Analysis Services-다차원 데이터&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)합니다.  
+ 여기에 제시된 예는 큐브에 단일 측정값 그룹이 있으며 모든 차원 테이블이 별모양 스키마로 팩트 테이블에 조인된다는 점에서 매우 단순한 큐브를 나타냅니다. 팩트 테이블에 직접 조인되는 것이 아니라 또 다른 차원 테이블에 하나 이상의 차원 테이블이 조인되는 눈송이 스키마도 많이 사용됩니다. **관련된 항목:**[차원 &#40;Analysis Services-Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)합니다.  
   
  여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:**[차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [다차원 모델 데이터베이스 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [다차원 Model 데이터베이스 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

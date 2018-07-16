@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
 - threads [Analysis Services]
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e6a6225c80140d293fb505a5b1206a774b715d6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303033"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 여러 작업에 다중 스레드를 사용하여 여러 작업을 병렬로 실행함으로써 전반적인 서버 성능을 향상시킵니다. 스레드를 보다 효율적으로 관리하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 스레드 풀을 사용해서 스레드를 미리 할당하고 다음 작업에 스레드를 쉽게 사용할 수 있도록 지원합니다.  
   
- 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 고유한 스레드 풀 집합을 유지 관리합니다. 테이블 형식과 다차원 인스턴스에서 스레드 풀이 사용되는 방법에는 중요한 차이점이 있습니다. 가장 중요 한 차이점은 다차원 솔루션만 사용 하 여 `IOProcess` 스레드 풀입니다. 따라서는 `PerNumaNode` 이 항목에 설명 된 속성은 테이블 형식 인스턴스에 대 한 의미가 없습니다.  
+ 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 고유한 스레드 풀 집합을 유지 관리합니다. 테이블 형식과 다차원 인스턴스에서 스레드 풀이 사용되는 방법에는 중요한 차이점이 있습니다. 가장 중요 한 차이점은 다차원 솔루션만 사용 하 여 `IOProcess` 스레드 풀입니다. 따라서는 `PerNumaNode` 이 항목에서 설명 하는 속성은 테이블 형식 인스턴스에 대 한 의미가 없습니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "36092531"
   
 -   `Query` 구문 분석 스레드 풀에서 처리 되지 않은 모든 요청을 실행 하는 스레드 풀이입니다. 이 스레드 풀의 스레드는 검색, MDX, DAX, DMX 및 DDL 명령과 같은 모든 유형의 작업을 실행합니다.  
   
--   `IOProcess` 다차원 엔진에서 저장소 엔진 쿼리와 연관 된 IO 작업에 사용 됩니다. 이러한 스레드에서 수행되는 작업은 다른 스레드에 대한 종속성이 없는 것으로 고려됩니다. 이러한 스레드는 일반적으로 파티션의 단일 세그먼트를 검사하고 세그먼트 데이터에 대한 필터링 및 집계를 수행합니다. `IOProcess` 스레드는 특히 NUMA 하드웨어 구성에 민감합니다. 따라서이 스레드 풀에는 `PerNumaNode` 필요에 따라 성능을 조정 하는 데 사용할 수 있는 구성 속성입니다.  
+-   `IOProcess` 다차원 엔진에서 저장소 엔진 쿼리와 연관 된 IO 작업에 사용 됩니다. 이러한 스레드에서 수행되는 작업은 다른 스레드에 대한 종속성이 없는 것으로 고려됩니다. 이러한 스레드는 일반적으로 파티션의 단일 세그먼트를 검사하고 세그먼트 데이터에 대한 필터링 및 집계를 수행합니다. `IOProcess` 스레드는 특히 NUMA 하드웨어 구성에 민감합니다. 따라서이 스레드 풀에는 `PerNumaNode` 필요에 따라 성능을 조정에 사용할 수 있는 구성 속성입니다.  
   
--   `Process` 오래 걸리는 저장소 엔진 작업을 집계, 인덱싱 및 커밋 작업을 포함 하는입니다. ROLAP 저장소 모드에서도 처리 스레드 풀의 스레드가 사용됩니다.  
+-   `Process` 오래 걸리는 저장소 엔진 작업을 집계, 인덱싱 및 커밋 작업을 포함 하 여입니다. ROLAP 저장소 모드에서도 처리 스레드 풀의 스레드가 사용됩니다.  
   
 > [!NOTE]  
->  Msmdsrv.ini의 스레드 풀 설정 있지만 `VertiPaq` 섹션 `VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` 및 `ThreadPool` \\ `CPUs` 는 의도적으로 설명 합니다. 이러한 속성은 현재 작동 가능하지 않으며, 이후에 사용할 수 있도록 예약되어 있습니다.  
+>  Msmdsrv.ini에서 스레드 풀 설정이 있지만 합니다 `VertiPaq` 섹션인 `VertiPaq` \\ `ThreadPool` \\ `GroupAffinity` 및 `ThreadPool` \\ `CPUs` 는 의도적으로 설명 합니다. 이러한 속성은 현재 작동 가능하지 않으며, 이후에 사용할 수 있도록 예약되어 있습니다.  
   
  작업 수행에 필요한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 서비스 요청에 대해 최대 스레드 풀 한도를 초과하여 추가 스레드를 요청할 수 있습니다. 하지만 현재 스레드 수가 최대 한도보다 큰 경우, 스레드의 작업 수행이 완료되면 스레드가 스레드 풀로 반환되는 대신 단순히 종료됩니다.  
   
@@ -102,12 +102,12 @@ ms.locfileid: "36092531"
 |`IOProcess` \ `StackSizeKB`|ssNoversion|스레드 실행 중 메모리 할당을 조정하는 데 사용할 수 있는 부호 있는 32비트 정수입니다.|0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.<br /><br /> 다차원 모델에만 적용됩니다.|  
 |**구문 분석**  \ `Long` \ `Concurrency`|double|큐에 한 번에 넣을 수 있는 스레드 수의 목표치를 설정하는 알고리즘을 결정하는 배정밀도 부동 소수점 값입니다.|2.0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.<br /><br /> Windows에서 IO 완료 포트를 사용해서 구현되는 동시성을 사용해서 스레드 풀이 초기화됩니다. 자세한 내용은 [I/O 완료 포트](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 를 참조하세요.|  
 |**구문 분석**  \ `Long` \ `GroupAffinity`|string|시스템의 프로세서 그룹에 해당하는 16진수 값 배열로, 각 프로세서 그룹의 논리적 프로세서에 대한 구문 분석 스레드의 선호도를 설정하는 데 사용됩니다.|none|이 속성을 사용해서 사용자 지정 선호도를 만들 수 있습니다. 이 속성은 기본적으로 비어 있습니다.<br /><br /> 자세한 내용은 [GroupAffinity를 설정하여 프로세서 그룹의 프로세서에 대한 스레드 선호도 설정](#bkmk_groupaffinity) 를 참조하세요.|  
-|**구문 분석**  \ `Long` \ `NumThreads`|ssNoversion|긴 명령에 대해 만들 수 있는 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다.|0|0은 서버에서 기본값이 결정됨을 나타냅니다. 기본 동작은 설정 하는 `NumThreads` 를 절대값 4 또는 논리적 프로세서의 2 배 수 중 더 높은 합니다.<br /><br /> 이 값을 음수 값으로 설정하는 경우 서버는 해당 값을 논리적 프로세서 수와 곱합니다. 예를 들어 논리적 프로세서가 32개인 서버에서 -10으로 설정된 경우 최대값은 320개의 스레드입니다.<br /><br /> 최대값은 이전에 정의한 사용자 지정 선호도 마스크당 사용 가능한 프로세서 수의 영향을 받습니다. 예를 들어 32개의 프로세서 중에서 8개를 사용하도록 스레드 풀 선호도를 이미 설정한 경우 NumThreads를 -10으로 설정하면 스레드 풀의 상한이 10에 8을 곱한 80개의 스레드가 됩니다.<br /><br /> 이 스레드 풀 속성에 사용되는 실제 값은 서비스 시작 시 msmdsrv 로그 파일에 기록됩니다.|  
+|**구문 분석**  \ `Long` \ `NumThreads`|ssNoversion|긴 명령에 대해 만들 수 있는 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다.|0|0은 서버에서 기본값이 결정됨을 나타냅니다. 기본 동작을 설정 하는 것 `NumThreads` 를 절대값 4 또는 논리적 프로세서 수가 2 배 중 더 높습니다.<br /><br /> 이 값을 음수 값으로 설정하는 경우 서버는 해당 값을 논리적 프로세서 수와 곱합니다. 예를 들어 논리적 프로세서가 32개인 서버에서 -10으로 설정된 경우 최대값은 320개의 스레드입니다.<br /><br /> 최대값은 이전에 정의한 사용자 지정 선호도 마스크당 사용 가능한 프로세서 수의 영향을 받습니다. 예를 들어 32개의 프로세서 중에서 8개를 사용하도록 스레드 풀 선호도를 이미 설정한 경우 NumThreads를 -10으로 설정하면 스레드 풀의 상한이 10에 8을 곱한 80개의 스레드가 됩니다.<br /><br /> 이 스레드 풀 속성에 사용되는 실제 값은 서비스 시작 시 msmdsrv 로그 파일에 기록됩니다.|  
 |**구문 분석**  \ `Long` \ `PriorityRatio`|ssNoversion|우선 순위가 더 높은 큐가 비어 있지 않을 경우에도 우선 순위가 낮은 스레드가 가끔 실행되도록 보장하기 위해 사용할 수 있는 부호 있는 32비트 정수입니다.|0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.|  
 |**구문 분석**  \ `Long` \ `StackSizeKB`|ssNoversion|스레드 실행 중 메모리 할당을 조정하는 데 사용할 수 있는 부호 있는 32비트 정수입니다.|0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.|  
 |**구문 분석**  \ `Short` \ `Concurrency`|double|큐에 한 번에 넣을 수 있는 스레드 수의 목표치를 설정하는 알고리즘을 결정하는 배정밀도 부동 소수점 값입니다.|2.0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.<br /><br /> Windows에서 IO 완료 포트를 사용해서 구현되는 동시성을 사용해서 스레드 풀이 초기화됩니다. 자세한 내용은 [I/O 완료 포트](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 를 참조하세요.|  
 |**구문 분석**  \ `Short` \ `GroupAffinity`|string|시스템의 프로세서 그룹에 해당하는 16진수 값 배열로, 각 프로세서 그룹의 논리적 프로세서에 대한 구문 분석 스레드의 선호도를 설정하는 데 사용됩니다.|none|이 속성을 사용해서 사용자 지정 선호도를 만들 수 있습니다. 이 속성은 기본적으로 비어 있습니다.<br /><br /> 자세한 내용은 [GroupAffinity를 설정하여 프로세서 그룹의 프로세서에 대한 스레드 선호도 설정](#bkmk_groupaffinity) 를 참조하세요.|  
-|**구문 분석**  \ `Short` \ `NumThreads`|ssNoversion|짧은 명령에 대해 만들 수 있는 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다.|0|0은 서버에서 기본값이 결정됨을 나타냅니다. 기본 동작은 설정 하는 `NumThreads` 를 절대값 4 또는 논리적 프로세서의 2 배 수 중 더 높은 합니다.<br /><br /> 이 값을 음수 값으로 설정하는 경우 서버는 해당 값을 논리적 프로세서 수와 곱합니다. 예를 들어 논리적 프로세서가 32개인 서버에서 -10으로 설정된 경우 최대값은 320개의 스레드입니다.<br /><br /> 최대값은 이전에 정의한 사용자 지정 선호도 마스크당 사용 가능한 프로세서 수의 영향을 받습니다. 예를 들어 32개의 프로세서 중에서 8개를 사용하도록 스레드 풀 선호도를 이미 설정한 경우 NumThreads를 -10으로 설정하면 스레드 풀의 상한이 10에 8을 곱한 80개의 스레드가 됩니다.<br /><br /> 이 스레드 풀 속성에 사용되는 실제 값은 서비스 시작 시 msmdsrv 로그 파일에 기록됩니다.|  
+|**구문 분석**  \ `Short` \ `NumThreads`|ssNoversion|짧은 명령에 대해 만들 수 있는 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다.|0|0은 서버에서 기본값이 결정됨을 나타냅니다. 기본 동작을 설정 하는 것 `NumThreads` 를 절대값 4 또는 논리적 프로세서 수가 2 배 중 더 높습니다.<br /><br /> 이 값을 음수 값으로 설정하는 경우 서버는 해당 값을 논리적 프로세서 수와 곱합니다. 예를 들어 논리적 프로세서가 32개인 서버에서 -10으로 설정된 경우 최대값은 320개의 스레드입니다.<br /><br /> 최대값은 이전에 정의한 사용자 지정 선호도 마스크당 사용 가능한 프로세서 수의 영향을 받습니다. 예를 들어 32개의 프로세서 중에서 8개를 사용하도록 스레드 풀 선호도를 이미 설정한 경우 NumThreads를 -10으로 설정하면 스레드 풀의 상한이 10에 8을 곱한 80개의 스레드가 됩니다.<br /><br /> 이 스레드 풀 속성에 사용되는 실제 값은 서비스 시작 시 msmdsrv 로그 파일에 기록됩니다.|  
 |**구문 분석**  \ `Short` \ `PriorityRatio`|ssNoversion|우선 순위가 더 높은 큐가 비어 있지 않을 경우에도 우선 순위가 낮은 스레드가 가끔 실행되도록 보장하기 위해 사용할 수 있는 부호 있는 32비트 정수입니다.|0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.|  
 |**구문 분석**  \ `Short` \ `StackSizeKB`|ssNoversion|스레드 실행 중 메모리 할당을 조정하는 데 사용할 수 있는 부호 있는 32비트 정수입니다.|64 * 논리적 프로세서|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.|  
 |`Process` \ `Concurrency`|double|큐에 한 번에 넣을 수 있는 스레드 수의 목표치를 설정하는 알고리즘을 결정하는 배정밀도 부동 소수점 값입니다.|2.0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.<br /><br /> Windows에서 IO 완료 포트를 사용해서 구현되는 동시성을 사용해서 스레드 풀이 초기화됩니다. 자세한 내용은 [I/O 완료 포트](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 를 참조하세요.|  
@@ -124,21 +124,21 @@ ms.locfileid: "36092531"
 |`Query`  \ `StackSizeKB`|ssNoversion|스레드 실행 중 메모리 할당을 조정하는 데 사용할 수 있는 부호 있는 32비트 정수입니다.|0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.|  
   
 ##  <a name="bkmk_groupaffinity"></a> GroupAffinity를 설정하여 프로세서 그룹의 프로세서에 대한 스레드 선호도 설정  
- `GroupAffinity`는 고급 튜닝 목적으로 제공됩니다. 사용할 수는 `GroupAffinity` 사이의 선호도 설정 하려면 속성 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 스레드 풀과 특정 프로세서; 그러나 대부분의 설치에 대 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 가능한 논리적 프로세서를 모두 사용할 때 최상의 성능을 발휘 합니다. 따라서 그룹 선호도는 기본적으로 지정되지 않습니다.  
+ `GroupAffinity`는 고급 튜닝 목적으로 제공됩니다. 그러나 사용할 수는 `GroupAffinity` 사이의 선호도 설정 하려면 속성 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 스레드 풀과 특정 프로세서 대부분의 설치에 대 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 가능한 모든 논리적 프로세서를 사용할 수 있는 경우 최고의 성능을 발휘 합니다. 따라서 그룹 선호도는 기본적으로 지정되지 않습니다.  
   
  성능 테스트에서 CPU 최적화가 필요한 것으로 나타날 경우 Windows Server 리소스 관리자를 사용해서 논리적 프로세서와 서버 프로세스 사이의 선호도를 설정하는 등 조금 더 고급스러운 접근 방식을 고려해야 할 수 있습니다. 이러한 접근 방식은 개별 스레드 풀에 대해 사용자 지정 선호도를 정의하는 것보다 구현 및 관리가 간단할 수 있습니다.  
   
  이 방법으로 충분하지 않을 경우에는 스레드 풀에 대해 사용자 지정 선호도를 정의하여 정밀도를 높일 수 있습니다. 너무 넓은 프로세서 범위로 분산되는 스레드 풀로 인해 성능이 저하되는 대형 다중 코어 시스템 (NUMA 또는 비 NUMA)에서 선호도 설정을 사용자 지정하는 것이 좋습니다. 논리적 프로세서가 64개 미만인 시스템에서도 `GroupAffinity`를 설정할 수 있지만 이 경우 성능 이점이 저하되고 오히려 성능이 감소할 수도 있습니다.  
   
 > [!NOTE]  
->  `GroupAffinity`는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용하는 코어 수를 제한하는 버전에 따라 제약을 받습니다. 시작 시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에디션 정보를 사용 하 여 및 `GroupAffinity` 속성을 관리 하는 5 개의 스레드 풀 각각에 대해 선호도 마스크를 계산 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. Standard Edition에서는 최대 16개의 코어를 사용할 수 있습니다. 16개를 초과하는 코어가 포함된 대형 다중 코어 시스템에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition을 설치하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 16개의 코어만 사용됩니다. 이전 버전의 Enterprise 인스턴스를 업그레이드하는 경우 20개의 코어로 제한됩니다. 버전 및 라이선스에 대한 자세한 내용은 [SQL Server 2012 라이선스 개요](http://go.microsoft.com/fwlink/?LinkId=246061)를 참조하세요.  
+>  `GroupAffinity`는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용하는 코어 수를 제한하는 버전에 따라 제약을 받습니다. 시작 시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 버전 정보를 사용 하며 `GroupAffinity` 속성을 관리 하는 5 개의 스레드 풀 각각에 대 한 선호도 마스크를 계산 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Standard Edition에서는 최대 16개의 코어를 사용할 수 있습니다. 16개를 초과하는 코어가 포함된 대형 다중 코어 시스템에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition을 설치하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 16개의 코어만 사용됩니다. 이전 버전의 Enterprise 인스턴스를 업그레이드하는 경우 20개의 코어로 제한됩니다. 버전 및 라이선스에 대한 자세한 내용은 [SQL Server 2012 라이선스 개요](http://go.microsoft.com/fwlink/?LinkId=246061)를 참조하세요.  
   
 ### <a name="syntax"></a>구문  
  값은 각 프로세서 그룹에 대한 16진수 값이며,  16진수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 지정된 스레드 풀에 대해 스레드를 할당할 때 처음 사용하도록 시도하는 논리적 프로세서를 나타냅니다.  
   
  **논리적 프로세서에 대한 비트 마스크**  
   
- 단일 프로세서 그룹 내에 최대 64개의 논리적 프로세서를 포함할 수 있습니다. 비트 마스크는 스레드 풀에서 사용되는(또는 사용되지 않는) 그룹의 각 논리적 프로세서에 대해 1(또는 0)입니다. 비트 마스크를 계산 계산한 다음에 16 진수 값에 대 한 값으로 `GroupAffinity`합니다.  
+ 단일 프로세서 그룹 내에 최대 64개의 논리적 프로세서를 포함할 수 있습니다. 비트 마스크는 스레드 풀에서 사용되는(또는 사용되지 않는) 그룹의 각 논리적 프로세서에 대해 1(또는 0)입니다. 비트 마스크를 계산 계산한 다음에 16 진수 값에 대 한 값으로 `GroupAffinity`입니다.  
   
  **다중 프로세서 그룹**  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36092531"
  `<GroupAffinity>0x0, 0xFF, 0x0, 0xFF</GroupAffinity>`  
   
 ### <a name="steps-for-computing-the-processor-affinity-mask"></a>프로세서 선호도 마스크 계산 단계  
- 설정할 수 있습니다 `GroupAffinity` msmdsrv.ini 또는 SQL Server Management Studio의 서버 속성 페이지.  
+ 설정할 수 있습니다 `GroupAffinity` msmdsrv.ini에서 또는 SQL Server Management Studio에서 서버 속성 페이지에서.  
   
 1.  **프로세서 및 프로세서 그룹 수 결정**  
   
@@ -173,21 +173,21 @@ ms.locfileid: "36092531"
   
 5.  **GroupAffinity 속성에 16진수 값을 입력합니다.**  
   
-     Msmdsrv.ini 또는 Management Studio의 서버 속성 페이지에서 설정 `GroupAffinity` 에서 계산 된 값에 4 단계.  
+     Msmdsrv.ini에서 또는 Management Studio에서 서버 속성 페이지의 설정 `GroupAffinity` 4 단계에서 계산 된 값입니다.  
   
 > [!IMPORTANT]  
->  설정 `GroupAffinity` 은 여러 단계가 포함 된 수동 작업입니다. 계산할 때 `GroupAffinity`, 계산을 신중 하 게 확인 합니다. 전체 마스크가 잘못된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 오류를 반환하지만 올바른 설정과 잘못된 설정이 조합된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 속성이 무시됩니다. 예를 들어 비트 마스크에 추가 값이 포함된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 설정을 무시하고,  시스템에서 모든 프로세서를 사용합니다. 이 동작이 발생할 때 오류나 경고가 발생하지 않지만, msmdsrv.log 파일을 확인하여 선호도가 실제로 어떻게 설정되었는지 알아볼 수 있습니다.  
+>  설정 `GroupAffinity` 설정은 여러 단계가 포함 된 수동 작업입니다. 계산할 때 `GroupAffinity`, 계산을 신중 하 게 확인 합니다. 전체 마스크가 잘못된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 오류를 반환하지만 올바른 설정과 잘못된 설정이 조합된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 속성이 무시됩니다. 예를 들어 비트 마스크에 추가 값이 포함된 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 설정을 무시하고,  시스템에서 모든 프로세서를 사용합니다. 이 동작이 발생할 때 오류나 경고가 발생하지 않지만, msmdsrv.log 파일을 확인하여 선호도가 실제로 어떻게 설정되었는지 알아볼 수 있습니다.  
   
 ##  <a name="bkmk_pernumanode"></a> NUMA 노드에서 프로세서에 대한 IO 스레드 선호도를 설정하기 위한 PerNumaNode 설정  
- 다차원 Analysis Services 인스턴스에 대해 설정할 수 있습니다 `PerNumaNode` 에 `IOProcess` 스레드 풀 스레드 예약 및 실행을 추가로 최적화할 합니다. 반면 `GroupAffinity` 는 지정 된 스레드 풀에 사용할 논리적 프로세서 집합을 식별 `PerNumaNode` 추가로 허용된 된 논리 프로세서의 일부 하위 집합으로 선호도 설정 하는 다중 스레드 풀을 만들 것인지를 지정 하 여 한 단계 더 발전을 이동 합니다.  
+ 다차원 Analysis Services 인스턴스에 대해 설정할 수 있습니다 `PerNumaNode` 에 `IOProcess` 스레드 풀 스레드 예약 및 실행을 추가로 최적화할 합니다. 반면 `GroupAffinity` 는 지정 된 스레드 풀에 사용할 논리적 프로세서 집합을 식별 `PerNumaNode` 더 나아갑니다 허용된 된 논리적 프로세서의 일부 하위 집합으로 다중 스레드 풀을 만들지 여부를 지정 하 여 한 단계 더 이동 합니다.  
   
 > [!NOTE]  
 >  Windows Server 2012에서 작업 관리자를 사용하여 컴퓨터의 NUMA 노드 수를 확인할 수 있습니다. 작업 관리자의 성능 탭에서 **CPU** 를 선택한 다음 그래프 영역을 마우스 오른쪽 단추로 클릭하면 NUMA 노드 수가 표시됩니다. 또는 Windows  Sysinternals에서 Coreinfo  유틸리티를 [다운로드](http://technet.microsoft.com/sysinternals/cc835722.aspx) 하고 `coreinfo –n` 을 실행하여 NUMA  노드 수와 각 노드의 논리적 프로세서 수를 반환합니다.  
   
- 유효한 값에 대 한 `PerNumaNode` 에 설명 된 대로-1, 0, 1, 2, 됩니다는 [스레드 풀 속성 참조](#bkmk_propref) 이 항목의 섹션입니다.  
+ 에 대 한 유효한 값 `PerNumaNode` 에 설명 된 대로-1, 0, 1, 2, 되는 [스레드 풀 속성 참조](#bkmk_propref) 섹션을이 참조 합니다.  
   
 ### <a name="default-recommended"></a>기본값(권장)  
- NUMA 노드가 포함된 시스템에서는 기본 설정 PerNumaNode=-1을 사용해서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 노드 수에 따라 스레드 풀의 수와 스레드 선호도를 조정하도록 허용하는 것이 좋습니다. 시스템에 4 개 미만의 노드가 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 으로 설명 된 동작을 구현 `PerNumaNode`= 0 `PerNumaNode`= 1이 4 개 이상의 노드가 포함 된 시스템에서 사용 됩니다.  
+ NUMA 노드가 포함된 시스템에서는 기본 설정 PerNumaNode=-1을 사용해서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 노드 수에 따라 스레드 풀의 수와 스레드 선호도를 조정하도록 허용하는 것이 좋습니다. 시스템에 4 개 미만의 노드가 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 설명 된 동작을 구현 `PerNumaNode`= 0 `PerNumaNode`= 1은 4 개 이상의 노드가 포함 된 시스템에서 사용 합니다.  
   
 ### <a name="choosing-a-value"></a>값 선택  
  다른 유효한 값을 사용하기 위해 기본값을 재정의할 수도 있습니다.  
@@ -208,14 +208,14 @@ ms.locfileid: "36092531"
   
  이 설정은 많은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 작업을 실행하는 고성능 시스템을 위한 설정입니다. 이 속성은 IOProcess 스레드 풀 선호도를 가장 세분화된 수준으로 설정해서 논리적 프로세서 수준에서 개별 스레드 풀을 만들고 선호도를 설정합니다.  
   
- 다음 예제에서는에 포함 된 시스템에서 NUMA 노드 4 개와 논리적 프로세서가 32 개, 설정 `PerNumaNode` IOProcess 스레드 풀이 32 개가 2로 발생 합니다. 처음 8개 스레드 풀의 스레드는 NUMA 노드 0의 모든 논리적 프로세서로 선호도가 설정되지만 이상적인 프로세서 설정은 0, 1, 2부터 최대 7까지입니다. 다음 8개 스레드 풀은 NUMA 노드 1의 모든 논리적 프로세서로 선호도가 설정되며, 이상적인 프로세서 설정은 8, 9, 10부터 최대 15까지입니다.  
+ 다음 예제에서는에 포함 된 시스템에서 NUMA 노드 4 개와 논리적 프로세서가 32 개, 설정 `PerNumaNode` IOProcess 스레드 풀이 32 2로 발생 합니다. 처음 8개 스레드 풀의 스레드는 NUMA 노드 0의 모든 논리적 프로세서로 선호도가 설정되지만 이상적인 프로세서 설정은 0, 1, 2부터 최대 7까지입니다. 다음 8개 스레드 풀은 NUMA 노드 1의 모든 논리적 프로세서로 선호도가 설정되며, 이상적인 프로세서 설정은 8, 9, 10부터 최대 15까지입니다.  
   
  ![Numa, 프로세서 및 스레드 풀 항목](../media/ssas-threadpool-numaex2.PNG "Numa, 프로세서 및 스레드 풀 항목")  
   
  이러한 선호도 수준에서 스케줄러는 항상 선호되는 NUMA 노드 내에서 이상적인 논리적 프로세서를 먼저 사용하도록 시도합니다. 논리적 프로세서를 사용할 수 없으면, 스케줄러가 동일한 노드 내에서 또는 동일한 프로세서 그룹 내에서(다른 스레드를 사용할 수 없는 경우) 다른 프로세서를 선택합니다. 자세한 내용 및 예제를 보려면 [Analysis Services 2012 구성 설정(Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)을 참조하세요.  
   
 ###  <a name="bkmk_workdistrib"></a> IOProcess 스레드 간 작업 분산  
- 설정할 것인지를 고려할 때는 `PerNumaNode` 속성을 알고 있으면 어떻게 `IOProcess` 스레드가 사용 되는 보다 합리적인된 결정을 내릴 수 있습니다.  
+ 설정할지 여부를 고려할 때 합니다 `PerNumaNode` 속성을 알고 있으면 어떻게 `IOProcess` 스레드가 사용 되 도움이 될 수 있습니다 더 합리적인된 결정을 내릴 합니다.  
   
  이전에 설명한 대로 `IOProcess` 은 다차원 엔진에서 저장소 엔진 쿼리와 연관 된 IO 작업에 사용 됩니다.  
   
@@ -225,11 +225,11 @@ ms.locfileid: "36092531"
   
 -   분할되지 않은(예를 들어 파티션이 하나뿐인) 측정값 그룹의 경우 파티션 수를 늘립니다. 파티션을 하나만 사용하면 엔진이 항상 하나의 스레드 풀(스레드 풀 0)에 작업을 대기시킵니다. 파티션을 더 추가하면 엔진이 추가 스레드 풀을 사용할 수 있습니다.  
   
-     또는 추가 파티션을 만들 수 없는 설정을 시도할 `PerNumaNode`스레드 풀 0에 사용할 수 있는 스레드 수를 증가 하는 방법으로 = 0.  
+     또는 추가 파티션을 만들 수 없으면, 시도 설정을 `PerNumaNode`스레드 풀 0에서 사용 가능한 스레드 수가 증가 하는 방법으로 = 0.  
   
--   어떤 세그먼트에서 검색은 전체에 고르게 분산을 설정 하는 여러 개의 파티션이 데이터베이스에 대 한 `PerNumaNode` 1 또는 2로 쿼리 성능을 높일 수는 전체 수가 증가 하기 때문에 `IOProcess` 스레드 풀 시스템에서 사용 합니다.  
+-   어느 세그먼트 검사 균등 하 게 설정 하는 여러 파티션 간에 분산 됩니다 데이터베이스용 `PerNumaNode` 1 또는 2로 쿼리 성능을 높일 수는 전체 수가 증가 하기 때문에 `IOProcess` 스레드 풀 시스템에서 사용 합니다.  
   
--   포함 하는 솔루션에 대 한 여러 파티션이 있지만 하나만 많이 검색, 설정 시도 `PerNumaNode`= 성능을 향상 시키는 경우 볼 수는 0입니다.  
+-   포함 하는 솔루션에 대 한 여러 파티션이 있지만 하나만 많이 검색 되, 설정을 시도 `PerNumaNode`= 0으로 하는 경우 성능이 향상 됩니다.  
   
  파티션 검색과 차원 검색 사용 하 여 모두 있지만 `IOProcess` 스레드 풀을 차원 검색만 사용 하 여 스레드 풀 0입니다. 이로 인해 이 스레드 풀에서 약간 균등하지 않은 부하가 발생할 수 있지만, 일반적으로 차원 검색이 매우 빠르고 자주 발생하지 않으므로 이러한 불균형은 일시적입니다.  
   
@@ -239,7 +239,7 @@ ms.locfileid: "36092531"
  작업 아키텍처에 대한 자세한 내용은 [SQL Server 2008 Analysis Services 성능 가이드](http://www.microsoft.com/download/details.aspx?id=17303)의 2.2 섹션을 참조하세요.  
   
 ##  <a name="bkmk_related"></a> 종속되었거나 관련된 속성  
- 2.4 섹션에 설명 된 대로 [Analysis Services 작업 가이드](http://msdn.microsoft.com/library/hh226085.aspx), 처리 스레드 풀을 늘리면 확인 해야 하는 `CoordinatorExecutionMode` 설정으로 `CoordinatorQueryMaxThreads` 설정 값이 포함 하는 사용 증가 된 스레드 풀 크기를 충분히 활용할 수 있습니다.  
+ 2.4 섹션에 설명 된 대로 합니다 [Analysis Services 작업 가이드](http://msdn.microsoft.com/library/hh226085.aspx), 처리 스레드 풀을 늘리면 확인 해야 하는 합니다 `CoordinatorExecutionMode` 설정을 뿐만 `CoordinatorQueryMaxThreads` 설정 값이 있는 사용 증가 한 스레드 풀 크기를 충분히 활용할 수 있습니다.  
   
  Analysis Services는 처리 또는 쿼리 요청을 완료하는 데 필요한 데이터 수집을 위해 코디네이터 스레드를 사용합니다. 코디네이터는 각 파티션에 대해 먼저 처리되어야 하는 최대 1개의 작업을 큐에 넣습니다. 이러한 각 작업은 파티션에서 검색되어야 하는 총 세그먼트 수에 따라 계속해서 추가 작업을 큐에 넣습니다.  
   
@@ -282,9 +282,9 @@ ms.locfileid: "36092531"
  [프로세스 및 스레드 정보](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [다중 프로세서](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [프로세서 그룹](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [SQL Server 2012 analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [SQL Server 2012에서에서 analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 구성 설정 (Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [64 개 이상의 프로세서를 포함 하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [프로세서가 64 개를 초과 하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

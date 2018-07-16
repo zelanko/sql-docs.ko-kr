@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320683"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>패키지 배포 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 개발하면서 패키지의 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "36182603"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 유효성 검사 오류를 방지하는 데 도움이 되는 다음과 같은 추가 기능이 있습니다.  
   
--   **데이터 원본을 사용할 수 없을 때 오프라인으로 작업하도록 모든 패키지와 모든 연결을 설정합니다**. **SSIS** 메뉴에서 **오프라인으로 작업** 을 사용하도록 설정할 수 있습니다. 와 달리는 `DelayValidation` 속성은 **오프 라인으로 작업** 옵션은 패키지를 열기 전에 사용할 수 있습니다. 또한 **오프라인으로 작업** 을 설정하여 디자이너에서의 작업 속도를 높이고, 패키지의 유효성을 검사하려는 경우에만 이 옵션을 해제할 수도 있습니다.  
+-   **데이터 원본을 사용할 수 없을 때 오프라인으로 작업하도록 모든 패키지와 모든 연결을 설정합니다**. **SSIS** 메뉴에서 **오프라인으로 작업** 을 사용하도록 설정할 수 있습니다. 달리 합니다 `DelayValidation` 속성을 **오프 라인으로 작업** 옵션은 패키지를 열기 전에 사용할 수. 또한 **오프라인으로 작업** 을 설정하여 디자이너에서의 작업 속도를 높이고, 패키지의 유효성을 검사하려는 경우에만 이 옵션을 해제할 수도 있습니다.  
   
--   **런타임까지 유효하지 않은 패키지 요소에 대해 DelayValidation 속성을 구성합니다**. 디자인 타임에는 구성이 유효하지 않은 패키지 요소의 `DelayValidation`을 `True`로 설정하여 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. `DelayValidation` 패키지 수준에서 또는 개별 작업 및 패키지에 포함 하는 컨테이너 수준에서 속성을 설정할 수 있습니다. 일반적으로이 속성을 설정 떠나야 `True` 런타임에 동일한 유효성 검사 오류를 방지 하기 위해 패키지를 배포할 때는 동일한 패키지 요소에서 합니다.  
+-   **런타임까지 유효하지 않은 패키지 요소에 대해 DelayValidation 속성을 구성합니다**. 디자인 타임에는 구성이 유효하지 않은 패키지 요소의 `DelayValidation`을 `True`로 설정하여 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. `DelayValidation` 패키지 수준 또는 개별 태스크와 패키지를 포함 하는 컨테이너 수준의 속성을 설정할 수 있습니다. 일반적으로이 속성을 설정 두어야 `True` 런타임에 동일한 유효성 검사 오류를 방지 하기 위해 패키지를 배포할 때는 동일한 패키지 요소에서.  
   
-     `DelayValidation` 속성에 데이터 흐름 태스크만 개별 데이터 흐름 구성 요소입니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 `false`로 설정하면 비슷한 효과를 얻을 수 있습니다. 그러나 값이이 속성의이 `false`, 구성 요소는 외부 데이터 원본의 메타 데이터 변경 내용을 인식 하지 못합니다.  
+     `DelayValidation` 속성은 데이터 흐름 태스크에 개별 데이터에는 없지만 흐름 구성 요소입니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 `false`로 설정하면 비슷한 효과를 얻을 수 있습니다. 그러나이 속성의 값이 `false`, 구성 요소는 외부 데이터 원본의 메타 데이터 변경 내용을 인식 하지 못합니다.  
   
  유효성 검사가 발생할 때 패키지에서 사용하는 데이터베이스 개체가 잠기면 유효성 검사 프로세스가 응답하지 않을 수 있습니다. 이 경우 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너도 응답하지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 연관된 세션을 닫으면 유효성 검사를 다시 시작할 수 있습니다. 또한 이 섹션에서 설명하는 설정을 사용하면 이러한 문제를 방지할 수 있습니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36182603"
     > [!NOTE]  
     >  스크립트 태스크가 여러 개 포함된 패키지를 디버깅할 경우 한 개의 스크립트 태스크에서만 디버거가 중단점에 도달하며 다른 스크립트 태스크에서는 중단점이 무시됩니다. 스크립트 태스크가 Foreach 루프 또는 For 루프 컨테이너의 일부일 경우 디버거는 루프의 첫 번째 반복 뒤에 있는 스크립트 태스크의 중단점을 무시합니다.  
   
- 자세한 내용은 [Debugging Script](debugging-script.md)을(를) 참조하세요. 스크립트 구성 요소를 디버깅 하는 방법에 대 한 제안 사항이 있는 경우 [코딩 and Debugging the Script Component]를 참조 하십시오. (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md 합니다.  
+ 자세한 내용은 [Debugging Script](debugging-script.md)을(를) 참조하세요. 스크립트 구성 요소를 디버깅 하는 방법에 대 한 제안 사항이 있는 경우 참조 [코딩 and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md 합니다.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>설명이 없는 오류 문제 해결  
  패키지 개발 과정에서 설명이 없는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 번호가 발생할 경우 [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)에서 해당 설명을 찾을 수 있습니다. 이 목록에는 현재 문제 해결 정보는 들어 있지 않습니다.  

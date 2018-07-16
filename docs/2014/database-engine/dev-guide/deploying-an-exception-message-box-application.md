@@ -15,18 +15,18 @@ helpviewer_keywords:
 - exception message box [SQL Server]
 ms.assetid: d8ecc67a-ef33-4d44-8ae6-eaacb8ca3e74
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b07b7b06757e2ed2c27f8a030a9322fcf92de678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9b10cab0b1eefe92c6355a723bd696fa0528643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307975"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>예외 메시지 상자 응용 프로그램 배포
-  예외 메시지 상자 설치자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예외 처리를 개선 하기 위해 사용자 지정 Windows 응용 프로그램에서 사용 하기 위해 지원 됩니다. 예외 메시지 상자 제품의 모든 버전에서 설치 되어 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제외 하 고 [!INCLUDE[ssEW](../../includes/ssew-md.md)], 있는 모든 컴퓨터에서 추가 구성 없이 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK를 포함 하는 클라이언트 구성 요소가 설치 되었습니다.  
+  예외 메시지 상자는 설치자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예외 처리를 개선 하기 위해 사용자 지정 Windows 응용 프로그램에서 사용 하기 위해 지원 됩니다. 예외 메시지 상자는 모든 버전에서 설치 되어 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제외한 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 있는 모든 컴퓨터에서 추가 구성 없이 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 구성 요소에서 SDK를 포함 하 여 설치 된.  
   
 ## <a name="see-also"></a>관련 항목  
  [프로그램 예외 메시지 상자](../../../2014/database-engine/dev-guide/program-exception-message-box.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92279d4ee154bbac96341680fe2c8bcd1d3c2231
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc09916ca71dabcdf9e50ddb109c9b60ac0401b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303503"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>매개 변수 쿼리(Visual Database Tools)
   경우에 따라 매번 다른 값으로 여러 번 사용할 수 있는 쿼리를 만들 필요가 있습니다. 예를 들어, 한 명의 저자가 저술한 책의 `title_ids` 를 모두 찾기 위해 쿼리하는 경우가 종종 있습니다. 각 요청에 대해 매번 저자의 ID 또는 이름만 다른 동일한 쿼리를 실행할 수 있습니다.  
@@ -69,7 +69,7 @@ WHERE au_fname = %first name% AND
  쿼리 및 뷰 디자이너에서 쿼리를 실행하면 [쿼리 매개 변수 대화 상자](query-parameters-dialog-box-visual-database-tools.md) 에 명명된 매개 변수의 목록이 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [매개 변수가 있는 쿼리 &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
+ [쿼리 매개 변수를 사용 하 여 &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
  [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

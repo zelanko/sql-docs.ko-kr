@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.securitycontext.f1
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dea478729f3ca99b63df6d94c90e062bb140dbf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 038f01f4603ed4724b095e5a1593d788fcf93796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310364"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>보안 컨텍스트 대화 상자(Analysis Services - 다차원 데이터)
-  **의** 보안 컨텍스트 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 또는 메타데이터를 검사하는 데 사용되는 사용자 및 역할을 변경할 수 있습니다. 큐브 디자이너의 **계산** 탭 또는 **브라우저** 탭에서 **도구 모음** 창의 **보안 컨텍스트** 를 클릭하여 **보안 컨텍스트** 대화 상자를 표시할 수 있습니다.  
+   **의** 보안 컨텍스트 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 또는 메타데이터를 검사하는 데 사용되는 사용자 및 역할을 변경할 수 있습니다. 큐브 디자이너의 **계산** 탭 또는 **브라우저** 탭에서 **도구 모음** 창의 **보안 컨텍스트** 를 클릭하여 **보안 컨텍스트** 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **현재 사용자**  
@@ -35,7 +35,7 @@ ms.locfileid: "36182645"
   
  사용자 또는 그룹의 도메인과 이름은  
   
- *\<도메인 이름 >* **\\**  *\<사용자 계정 이름 >*  
+ *\<도메인 이름 >* ** \\ ** * \<사용자 계정 이름 >*  
   
  **Roles**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 보는 동안 지정한 역할을 하나 이상 사용하려면 선택합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 여러 개의 역할이 정의되어 있으면 사용할 역할을 선택할 수 있습니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "36182645"
 ## <a name="see-also"></a>관련 항목  
  [Kpi &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [브라우저 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

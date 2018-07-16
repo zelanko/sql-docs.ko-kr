@@ -1,25 +1,24 @@
 ---
-title: PowerShell을 사용 하 여 Windows Azure Blob 저장소 서비스에 여러 데이터베이스 백업 | Microsoft Docs
+title: PowerShell을 사용 하 여 Windows Azure Blob 저장소 서비스에 여러 데이터베이스를 백업 하려면 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acc1410256b89f3501ab261921d32c582ed2c80e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c53e405bad7e81b4ea0344eea857f5dd2e067151
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269119"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>PowerShell을 사용하여 Microsoft Azure Blob Storage Service에 여러 데이터베이스 백업
   이 항목에서는 PowerShell cmdlet을 사용하여 Windows Azure Blob 저장소 서비스에 대한 백업을 자동화하는 데 사용할 수 있는 예제 스크립트를 제공합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "36183788"
   
 1.  **SQL Server PowerShell 경로 탐색:** Windows PowerShell은 cmdlet을 구현하여 PowerShell 공급자가 지원하는 개체의 계층 구조를 나타내는 경로 구조를 탐색합니다. 경로의 노드를 탐색한 후 다른 cmdlet을 사용하여 현재 개체에 대한 기본 작업을 수행할 수 있습니다.  
   
-2.  `Get-ChildItem` cmdlet:에서 반환 된 정보는 `Get-ChildItem` SQL Server PowerShell 경로에서 위치에 따라 달라 집니다. 예를 들어 위치가 컴퓨터 수준에 있는 경우 이 cmdlet은 컴퓨터에 설치된 모든 SQL Server 데이터베이스 엔진 인스턴스를 반환합니다. 또 다른 예로, 위치가 데이터베이스와 같은 개체 수준에 있으면 이 cmdlet은 데이터베이스 개체의 목록을 반환합니다.  기본적으로는 `Get-ChildItem` cmdlet은 시스템 개체를 반환 합니다.  –Force 매개 변수를 사용하면 시스템 개체를 표시할 수 있습니다.  
+2.  `Get-ChildItem` cmdlet: 반환 하는 정보는 `Get-ChildItem` SQL Server PowerShell 경로에서 위치에 따라 달라 집니다. 예를 들어 위치가 컴퓨터 수준에 있는 경우 이 cmdlet은 컴퓨터에 설치된 모든 SQL Server 데이터베이스 엔진 인스턴스를 반환합니다. 또 다른 예로, 위치가 데이터베이스와 같은 개체 수준에 있으면 이 cmdlet은 데이터베이스 개체의 목록을 반환합니다.  기본적으로는 `Get-ChildItem` cmdlet은 시스템 개체를 반환 하지 않습니다.  –Force 매개 변수를 사용하면 시스템 개체를 표시할 수 있습니다.  
   
      자세한 내용은 [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md)을 참조하세요.  
   
@@ -269,7 +268,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 백업 및 Windows Azure Blob 저장소 서비스로 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: debc2d15deda7079c54d3b763ef89afaa86f17f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7697fba2cadf0f7199b047ce7e84656b838cedb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283359"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 트랜잭션은 멤버에 대해 동작이 수행될 때마다 기록됩니다. 트랜잭션은 모든 사용자가 보고 관리자가 되돌릴 수 있습니다. 트랜잭션은 동작이 수행된 날짜와 시간, 동작을 수행한 사용자를 그 외 다른 세부 정보와 함께 보여 줍니다. 사용자는 트랜잭션에 주석을 추가하여 트랜잭션이 시작된 이유를 나타낼 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36186330"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [관리자가 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [관리자 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
 -   [주석 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   

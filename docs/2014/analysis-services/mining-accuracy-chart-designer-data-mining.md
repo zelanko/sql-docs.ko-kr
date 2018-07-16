@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.overview.f1
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6fbe39da10dfd1793110148388c1ae0cf0f1ad69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9df4f4a29a0a6d61422a9b82e2d5f62c16ec29c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301233"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>마이닝 정확도 차트 디자이너(데이터 마이닝)
   **마이닝 정확도 차트** 뷰를 사용하여 선택한 마이닝 구조를 기반으로 작성된 마이닝 모델의 성능을 비교할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36181677"
   
 -   [분류 행렬 탭 &#40;마이닝 정확도 차트 뷰&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     선택한 모델에 대 한 분류 행렬을 표시는 `Input Selection` 탭 합니다.  
+     선택한 모델에 대 한 분류 행렬을 표시 합니다 `Input Selection` 탭 합니다.  
   
 -   [교차 유효성 검사 탭 &#40;마이닝 정확도 차트 뷰&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36181677"
   
 -   [테이블 선택 대화 상자 &#40;마이닝 정확도 차트 뷰&#41;](select-table-dialog-box-mining-accuracy-chart-view.md)  
   
--   [중첩된 조인 지정 대화 상자 &#40;마이닝 정확도 차트 뷰&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
+-   [중첩된 조인 대화 상자를 지정 &#40;마이닝 정확도 차트 뷰&#41;](specify-nested-join-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [수익 차트 설정 대화 상자 &#40;마이닝 정확도 차트 뷰&#41;](profit-chart-settings-dialog-box-mining-accuracy-chart-view.md)  
   

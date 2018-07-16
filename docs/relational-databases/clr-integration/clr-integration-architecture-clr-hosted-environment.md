@@ -1,12 +1,11 @@
 ---
-title: CLR 호스팅 환경 | Microsoft Docs
+title: CLR 호스 티 드 환경 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -30,12 +29,12 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6292f8fd453b0031b36e1c9a244c442e94d323f1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697514"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352815"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처-CLR 호스팅된 환경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "35697514"
  데이터베이스에서 실행되는 사용자 코드는 테이블과 열 같은 데이터베이스 개체에 액세스할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 및 권한 부여 규칙을 준수해야 합니다. 또한 데이터베이스 관리자는 데이터베이스에서 실행되는 사용자 코드를 통해 파일 같은 운영 체제 리소스에 대한 액세스 및 네트워크 액세스를 제어할 수 있어야 합니다. Transact-SQL과 같이 관리되지 않는 언어와 달리 관리되는 프로그래밍 언어는 이와 같은 리소스에 액세스하기 위한 API를 제공하기 때문에 액세스 제어가 중요합니다. 시스템에서는 사용자 코드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스 외부에서 컴퓨터 리소스에 액세스할 수 있는 안전한 방법을 제공해야 합니다. 자세한 내용은 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)을 참조하세요.  
   
 ###### <a name="performance"></a>성능  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행되는 관리되는 사용자 코드는 서버 외부에서 실행되는 동일한 코드와 비교할 수 있을 정도의 계산 성능을 가지고 있어야 합니다. 관리되는 사용자 코드에서 데이터베이스에 액세스하면 네이티브 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용할 때보다 속도가 느립니다. 자세한 내용은 참조 [CLR 통합의 성능을](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실행되는 관리되는 사용자 코드는 서버 외부에서 실행되는 동일한 코드와 비교할 수 있을 정도의 계산 성능을 가지고 있어야 합니다. 관리되는 사용자 코드에서 데이터베이스에 액세스하면 네이티브 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용할 때보다 속도가 느립니다. 자세한 내용은 [CLR 통합의 성능을](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)합니다.  
   
 ## <a name="clr-services"></a>CLR Services  
  CLR은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와의 CLR 통합에 대한 디자인 목표를 달성하는 데 도움이 되는 여러 가지 서비스를 제공합니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "35697514"
  형식 안전 코드는 명확하게 정의된 방법으로만 메모리 구조에 액세스하는 코드입니다. 예를 들어 올바른 개체 참조에 대해 형식 안전 코드는 실제 필드 멤버에 대응하는 고정 오프셋에서 메모리에 액세스할 수 있습니다. 그러나 개체에 속하는 메모리 범위 안이나 밖의 임의의 오프셋에서 메모리에 액세스하는 코드는 형식 안전 코드가 아닙니다. 어셈블리가 CLR에 로드되고 JIT(Just-In-Time) 컴파일을 사용하여 MSIL을 컴파일되기 전에 런타임에서는 코드의 형식 안전성을 검사하는 확인 단계를 수행합니다. 이 확인 과정을 통과한 코드는 형식 안전 코드라고 할 수 있습니다.  
   
 ###### <a name="application-domains"></a>응용 프로그램 도메인  
- CLR은 호스트 프로세스에서 관리 코드 어셈블리를 로드하고 실행할 수 있는 실행 영역이라는 개념으로 응용 프로그램 도메인을 지원합니다. 응용 프로그램 도메인 경계는 어셈블리 사이를 구분합니다. 어셈블리는 정적 변수와 데이터 멤버의 표시 유형 및 코드를 동적으로 호출할 수 있는지 여부를 기준으로 격리됩니다. 응용 프로그램 도메인은 코드를 로드하고 언로드하는 메커니즘이기도 합니다. 메모리에서 코드를 언로드하는 유일한 방법은 응용 프로그램 도메인을 언로드하는 것입니다. 자세한 내용은 참조 [응용 프로그램 도메인 및 CLR 통합 보안](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)합니다.  
+ CLR은 호스트 프로세스에서 관리 코드 어셈블리를 로드하고 실행할 수 있는 실행 영역이라는 개념으로 응용 프로그램 도메인을 지원합니다. 응용 프로그램 도메인 경계는 어셈블리 사이를 구분합니다. 어셈블리는 정적 변수와 데이터 멤버의 표시 유형 및 코드를 동적으로 호출할 수 있는지 여부를 기준으로 격리됩니다. 응용 프로그램 도메인은 코드를 로드하고 언로드하는 메커니즘이기도 합니다. 메모리에서 코드를 언로드하는 유일한 방법은 응용 프로그램 도메인을 언로드하는 것입니다. 자세한 내용은 [응용 프로그램 도메인 및 CLR 통합 보안](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)합니다.  
   
 ###### <a name="code-access-security-cas"></a>CAS(코드 액세스 보안)  
  CLR 보안 시스템을 사용하면 코드에 사용 권한을 할당하여 관리 코드로 수행할 수 있는 작업의 유형을 제어할 수 있습니다. 코드 액세스 권한은 코드 ID(예: 어셈블리의 서명 또는 코드 원본)를 기준으로 할당됩니다.  
@@ -90,7 +89,7 @@ ms.locfileid: "35697514"
   
  .NET Framework의 관리되는 API가 코드 액세스 권한으로 보호되는 리소스에 대한 작업을 노출할 경우, API는 리소스에 액세스하기 전에 해당 사용 권한을 요청합니다. 이 요청이 발생하면 CLR 보안 시스템에서는 호출 스택에 포함된 모든 코드 단위(어셈블리)에 대한 포괄적인 검사를 트리거합니다. 전체 호출 체인에 사용 권한이 있는 경우에만 리소스에 대한 액세스가 허용됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 호스팅 환경 내에서는 Reflection.Emit API를 사용하여 관리 코드를 동적으로 생성할 수 없습니다. 이러한 코드는 적절한 CAS 권한을 가지고 있지 않기 때문에 런타임에 실패합니다. 자세한 내용은 참조 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 호스팅 환경 내에서는 Reflection.Emit API를 사용하여 관리 코드를 동적으로 생성할 수 없습니다. 이러한 코드는 적절한 CAS 권한을 가지고 있지 않기 때문에 런타임에 실패합니다. 자세한 내용은 [CLR 통합 코드 액세스 보안](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)합니다.  
   
 ###### <a name="host-protection-attributes-hpas"></a>HPA(호스트 보호 특성)  
  CLR은 .NET Framework의 일부인 관리되는 API에 대해 CLR 호스트에서 유용할 수 있는 특성으로 주석을 지정하기 위한 메커니즘을 제공합니다. 이러한 특성의 예를 들면 다음과 같습니다.  
@@ -101,12 +100,12 @@ ms.locfileid: "35697514"
   
 -   ExternalProcessMgmt: API가 호스트 프로세스 제어 기능을 노출하는지 여부를 나타냅니다.  
   
- 이러한 특성을 사용하면 호스트에서는 호스팅 환경에서 허용하지 않는 HPA 목록(예: SharedState 특성)을 지정할 수 있습니다. 이렇게 하면 CLR에서는 금지 목록에 포함된 HPA로 주석이 지정된 API를 호출하는 사용자 코드를 거부합니다. 자세한 내용은 참조 [호스트 보호 특성 및 CLR 통합 프로그래밍](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)합니다.  
+ 이러한 특성을 사용하면 호스트에서는 호스팅 환경에서 허용하지 않는 HPA 목록(예: SharedState 특성)을 지정할 수 있습니다. 이렇게 하면 CLR에서는 금지 목록에 포함된 HPA로 주석이 지정된 API를 호출하는 사용자 코드를 거부합니다. 자세한 내용은 [호스트 보호 특성 및 CLR 통합 프로그래밍](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)합니다.  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server와 CLR이 함께 작동하는 방법  
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR의 스레딩, 일정 관리, 동기화 및 메모리 관리 모델을 통합하는 방법에 대해 설명합니다. 특히 이 섹션에서는 확장성, 안정성 및 보안 목표 측면에서의 통합을 검사합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 CLR을 호스팅하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 CLR의 운영 체제 역할을 합니다. CLR에서는 스레딩, 일정 예약, 동기화 및 메모리 관리를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 하위 수준의 루틴을 호출합니다. 이는 나머지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진에서 사용하는 기본 형식과 동일합니다. 이 방식을 사용하면 확장성, 안정성 및 보안상 여러 가지 이점을 얻을 수 있습니다.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>확장성: 일반적인 스레딩, 일정 및 동기화  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>확장성: 일반적인 스레딩, 예약 및 동기화  
  CLR에서는 사용자 코드를 실행하기 위한 경우나 내부적인 용도로 사용하기 위한 경우 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API를 호출하여 스레드를 만듭니다. 여러 스레드를 동기화하기 위해 CLR에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동기화 개체를 호출합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러는 스레드가 동기화 개체를 대기하고 있을 때 다른 태스크의 일정을 예약할 수 있습니다. 예를 들어 CLR에서 가비지 수집을 시작하면 가비지 수집이 완료될 때까지 모든 스레드가 대기합니다. CLR 스레드 및 CLR 스레드에서 대기 중인 동기화 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 알고 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR과 관련되지 않은 다른 데이터베이스 태스크를 실행하는 스레드를 예약할 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 동기화 개체의 잠금과 관련된 교착 상태를 검색한 후 일반적인 기술을 사용하여 교착 상태를 해결할 수 있습니다.  
   
  관리 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 선점형 모드로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러에는 리소스를 오랫동안 점유하고 있는 스레드를 확인하여 중지하는 기능이 있습니다. CLR 스레드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드에 후크하는 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러가 CLR의 "런어웨이" 스레드를 식별하여 해당 스레드의 우선 순위를 관리할 수 있음을 의미합니다. 이와 같은 런어웨이 스레드는 일시 중지되어 큐에 다시 배치됩니다. 런어웨이 스레드로 반복적으로 식별되는 스레드는 작업을 수행하는 다른 스레드가 실행될 수 있도록 일정 기간 동안 일시 중지됩니다.  
@@ -123,7 +122,7 @@ ms.locfileid: "35697514"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅되는 경우 이러한 스레드 중단은 다음과 같이 처리됩니다. 즉, CLR이 응용 프로그램 도메인 내에서 스레드 중단이 발생한 모든 공유 상태를 검색합니다. CLR은 동기화 개체가 있는지 여부를 확인하여 이 작업을 수행합니다. 응용 프로그램 도메인에 공유 상태가 있으면 응용 프로그램 도메인 자체가 언로드됩니다. 응용 프로그램 도메인이 언로드되면 해당 응용 프로그램 도메인에서 현재 실행 중인 데이터베이스 트랜잭션이 중지됩니다. 공유 상태가 있는 경우 예외를 트리거한 세션 이외의 다른 사용자 세션도 이와 같은 중대한 예외의 영향을 받을 수 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR은 공유 상태의 가능성을 줄이기 위한 조치를 취합니다. 자세한 내용은 .NET Framework 설명서를 참조하십시오.  
   
 ###### <a name="security-permission-sets"></a>보안: 사용 권한 집합  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되는 경우 어셈블리를 만든 사람 하나를 지정할 수 세 가지 권한 집합 중 해당 어셈블리에 대해: SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되 면 어셈블리의 작성자 하나를 지정할 수 세 가지 권한 집합이 해당 어셈블리에 대 한: SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
   
 |||||  
 |-|-|-|-|  
@@ -146,7 +145,7 @@ ms.locfileid: "35697514"
   
  이러한 점을 고려하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 클래스의 정적 변수와 정적 데이터 멤버는 사용하지 않는 것이 좋습니다. SAFE 및 EXTERNAL_ACCESS 어셈블리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE ASSEMBLY 시간에 해당 어셈블리의 메타데이터를 검사하고 정적 데이터 멤버와 변수가 사용된 경우 어셈블리를 만드는 데 오류가 발생합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주석을 지정 하 여.NET Framework Api 호출을 허용 하지 않습니다는 **: SharedState**, **동기화** 및 **ExternalProcessMgmt** 호스트 보호 특성입니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 참조 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 주석이 지정 된.NET Framework Api 호출을 허용 하지 않습니다 합니다 **: SharedState**, **동기화** 하 고 **ExternalProcessMgmt** 호스트 보호 특성입니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 [CLR 통합 프로그래밍 모델 제한 사항](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)   

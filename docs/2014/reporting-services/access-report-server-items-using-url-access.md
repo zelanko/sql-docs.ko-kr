@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
@@ -16,20 +16,20 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d8c509675ed604582fe83ce7ddf539b0e7be717e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7184a0a5aa72ea7fe4ff681103044f2791bdf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227097"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스
   이 항목에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다.  
   
  이 매개 변수 문자열을  추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
   
- 아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용 하는 방법에 대 한 자세한 내용은 참조 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
+ 아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
   
 ## <a name="access-a-report"></a>보고서 액세스  
  브라우저에서 보고서를 보려면 *rs:Command*=*Render* 매개 변수를 사용합니다. 예를 들어:  
@@ -69,7 +69,7 @@ ms.locfileid: "36183211"
 </DataSourceDefinition>  
 ```  
   
- 연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. 에 대 한 자세한 내용은 **SecureConnectionLevel** 참조 설정, [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)합니다.  
+ 연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. 에 대 한 자세한 내용은 합니다 **SecureConnectionLevel** 설정을 참조 하세요 [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)합니다.  
   
 ## <a name="access-the-contents-of-a-folder"></a>폴더 내용 액세스  
  폴더의 내용에 액세스하려면 *rs:Command*=*GetChildren* 매개 변수를 사용합니다. 요청된 폴더의 하위 폴더, 보고서, 데이터 원본 및 리소스에 대한 링크가 포함된 일반적인 폴더 탐색 페이지가 반환됩니다. 예를 들어:  

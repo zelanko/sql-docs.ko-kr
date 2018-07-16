@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fca55f69bcd97e0b3ac2199383cf28c0ad327313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fed7c8d79acf9f02620e6f11ac6eaee08113a819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313200"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>보고서 관리자에서 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
-  보고서 관리자는 보고서 보기 및 관리 기능을 제공하는 웹 기반 도구입니다. 이 도구는 보고서 서버를 설치할 때 함께 설치됩니다. 보고서 관리자를 열려면 브라우저 창에 보고서 관리자 URL을 입력하십시오. 브라우저 요구 사항에 대 한 자세한 내용은 참조 [Reporting Services 및 Power View 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)합니다. 보고서 서버에서 보고서 관리자 URL을 구성하는 방법에 대한 자세한 내용은 시스템 관리자에게 문의하십시오. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](../report-server/configure-web-portal.md)을 참조하세요.  
+  보고서 관리자는 보고서 보기 및 관리 기능을 제공하는 웹 기반 도구입니다. 이 도구는 보고서 서버를 설치할 때 함께 설치됩니다. 보고서 관리자를 열려면 브라우저 창에 보고서 관리자 URL을 입력하십시오. 브라우저 요구 사항에 대 한 내용은 참조 하세요 [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)합니다. 보고서 서버에서 보고서 관리자 URL을 구성하는 방법에 대한 자세한 내용은 시스템 관리자에게 문의하십시오. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](../report-server/configure-web-portal.md)을 참조하세요.  
   
- 시스템 관리자가 보고서 서버에서 설정한 사용 권한에 따라 사용자가 보고서 관리자를 사용할 때 표시되는 기능이 달라집니다. 사용 권한은 역할 할당을 통해 부여됩니다. 보고서를 찾고 볼 수 있으려면 역할 할당에 보고서 보기 태스크가 포함되어 있어야 합니다. 보고서 서버에서 보고서를 찾으려면 이름 또는 설명을 기준으로 보고서를 검색하거나 보고서 서버 폴더를 탐색해야 합니다. 보고서 서버에 게시 또는 업로드된 보고서만 검색하거나 찾아볼 수 있습니다. 보고서를 검색 하는 방법에 대 한 자세한 내용은 참조 [보고서 및 기타 항목 검색 &#40;보고서 작성기 및 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)합니다.  
+ 시스템 관리자가 보고서 서버에서 설정한 사용 권한에 따라 사용자가 보고서 관리자를 사용할 때 표시되는 기능이 달라집니다. 사용 권한은 역할 할당을 통해 부여됩니다. 보고서를 찾고 볼 수 있으려면 역할 할당에 보고서 보기 태스크가 포함되어 있어야 합니다. 보고서 서버에서 보고서를 찾으려면 이름 또는 설명을 기준으로 보고서를 검색하거나 보고서 서버 폴더를 탐색해야 합니다. 보고서 서버에 게시 또는 업로드된 보고서만 검색하거나 찾아볼 수 있습니다. 보고서를 검색 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 및 기타 항목 검색 &#40;보고서 작성기 및 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "36093490"
   
  폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 보고서 관리자에서 보고서 열기에 대한 자세한 내용은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
   
- 보고서 작성기에서 직접 보고서 서버의 보고서를 탐색하거나 열 수도 있습니다. 자세한 내용은 참조 [보고서 및 기타 항목 검색 &#40;보고서 작성기 및 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)합니다.  
+ 보고서 작성기에서 직접 보고서 서버의 보고서를 탐색하거나 열 수도 있습니다. 자세한 내용은 [보고서 및 기타 항목 검색 &#40;보고서 작성기 및 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="to-search-for-a-items"></a>항목을 검색하려면  
   

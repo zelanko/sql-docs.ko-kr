@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01f0f1513d2b627f0097005487bae4e86f2507e8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695284"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358755"
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  트랜잭션이 시점에서 실행 되는 공용 언어 런타임 (CLR) 코드에 활성화 되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 입력 트랜잭션을 통해 노출 되는 **System.Transactions.Transaction** 클래스입니다. **Transaction.Current** 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 **Transaction.Current** 메서드를 호출할 때 **Connection.Open** 를 자동으로 검사하고 연결 문자열에서 **Enlist** 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
+  트랜잭션 시점에서 실행 되는 공용 언어 런타임 (CLR) 코드에 활성 상태 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 입력 트랜잭션을 통해 노출 되는 **System.Transactions.Transaction** 클래스입니다. **Transaction.Current** 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 **Transaction.Current** 메서드를 호출할 때 **Connection.Open** 를 자동으로 검사하고 연결 문자열에서 **Enlist** 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
   
  다음 시나리오에서는 **Transaction** 개체를 직접 사용할 수 있습니다.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "35695284"
 ## <a name="canceling-an-external-transaction"></a>외부 트랜잭션 취소  
  관리되는 프로시저나 함수에서 다음과 같은 방법으로 외부 트랜잭션을 취소할 수 있습니다.  
   
--   관리되는 프로시저나 함수에서 출력 매개 변수를 사용하여 값을 반환할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 반환된 값을 확인 하 고, 필요한 경우 실행할 수 **ROLLBACK TRANSACTION**합니다.  
+-   관리되는 프로시저나 함수에서 출력 매개 변수를 사용하여 값을 반환할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 반환 된 값을 확인 하 고, 해당 하는 경우 실행할 수 **ROLLBACK TRANSACTION**합니다.  
   
--   관리되는 프로시저나 함수에서 사용자 지정 예외를 throw할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저에서 관리 되는 프로시저나 함수는 try/catch 블록에서 throw 된 예외를 catch 하 고 실행할 수 **ROLLBACK TRANSACTION**합니다.  
+-   관리되는 프로시저나 함수에서 사용자 지정 예외를 throw할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저에서 관리 되는 프로시저 또는 함수를 try/catch 블록에서 throw 된 예외를 catch 하 고 실행할 수 **ROLLBACK TRANSACTION**합니다.  
   
 -   관리되는 프로시저나 함수에서 특정 조건에 맞는 경우 **Transaction.Rollback** 메서드를 호출하여 현재 트랜잭션을 취소할 수 있습니다.  
   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.linkedobjectwizard.selectdatasource.f2
 ms.assetid: 23edb339-2fe9-4d83-b5cb-522a585c9db5
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 22ab032c98dfad0a27f7da97484887dac21b72dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 834783c7d3573d30f6373452b65f5a2a5401c8d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315973"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>데이터 원본 선택(연결된 개체 마법사)
-  **데이터 원본 선택** 페이지를 사용하여 연결하거나 가져올 개체가 포함된 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본을 선택할 수 있습니다.  
+   **데이터 원본 선택** 페이지를 사용하여 연결하거나 가져올 개체가 포함된 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본을 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **Analysis Services 데이터 원본**  

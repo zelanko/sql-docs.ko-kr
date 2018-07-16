@@ -1,5 +1,5 @@
 ---
-title: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers | Microsoft Docs
+title: 샘플 Reporting Services rs.exe Script to Migrate Content between Report Servers | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1490220bc414ba4ad830bea7dfcfe0134363c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290299"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe
   이 항목에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  **보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플** RSS 스크립트를 보여 주고 설명합니다. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36173271"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- 스크립트를 사용하면 동일한 모드 또는 서로 다른 모드의 보고서 서버 사이에 콘텐츠를 복사할 수 있습니다. 예를 들어 콘텐츠를 복사 하는 스크립트를 실행할 수 있습니다는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 를 기본 모드 보고서 서버는 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 모드 보고서 서버. 스크립트는 RS.exe가 설치된 모든 서버에서 실행할 수 있습니다. 예를 들어 배포에서 다음 작업을 수행할 수 있습니다.  
+ 스크립트를 사용하면 동일한 모드 또는 서로 다른 모드의 보고서 서버 사이에 콘텐츠를 복사할 수 있습니다. 예를 들어 콘텐츠를 복사 하는 스크립트를 실행할 수 있습니다는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 기본 모드 보고서 서버에는 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 모드 보고서 서버. 스크립트는 RS.exe가 설치된 모든 서버에서 실행할 수 있습니다. 예를 들어 배포에서 다음 작업을 수행할 수 있습니다.  
   
 -   서버 A **상에서** RS.exe 및 스크립트를 실행합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36173271"
 |항목|마이그레이션|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |암호|**아니요**|**아니요**|암호는 마이그레이션되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다. 예: 저장된 자격 증명이 포함된 데이터 원본.|  
-|내 보고서|**아니오**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스가 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 이외에는 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한을 갖지 않습니다. 또한 "내 보고서"는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 스크립트 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목을 복사 하지 않습니다. 이 스크립트를 사용해서 "내 보고서" 폴더에 있는 콘텐츠를 마이그레이션하려면 다음을 수행합니다.<br /><br /> 1) 새 폴더 보고서 관리자에서 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br /><br /> 2) "내 보고서" 콘텐츠가 있는 사용자 중 하나로 로그인 합니다.<br /><br /> 3) 보고서 관리자에서 클릭 하 고 **내 보고서** 폴더입니다.<br /><br /> 4)을 클릭은 **세부 정보** 폴더에 대 한 보기입니다.<br /><br /> 5) 복사 하려는 각 보고서를 선택 합니다.<br /><br /> 6) 클릭 **이동** 보고서 관리자 도구 모음에서 합니다.<br /><br /> 7) 원하는 대상 폴더를 선택 합니다.<br /><br /> 8) 각 사용자에 대해 2-7 단계를 반복 합니다.<br /><br /> 9) 스크립트를 실행 합니다.|  
+|내 보고서|**아니오**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스가 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 이외에는 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한을 갖지 않습니다. 또한 "내 보고서"는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 스크립트 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목을 복사 하지 않습니다. 이 스크립트를 사용해서 "내 보고서" 폴더에 있는 콘텐츠를 마이그레이션하려면 다음을 수행합니다.<br /><br /> 1) 새 폴더 보고서 관리자에서 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br /><br /> 2) "내 보고서" 콘텐츠가 있는 사용자 중 하나로 로그인 합니다.<br /><br /> 3) 보고서 관리자를 클릭 합니다 **내 보고서** 폴더입니다.<br /><br /> 4) 클릭 합니다 **세부 정보** 폴더에 대 한 보기입니다.<br /><br /> 5) 복사 하려는 각 보고서를 선택 합니다.<br /><br /> 6) 클릭 **이동** 보고서 관리자 도구 모음에서 합니다.<br /><br /> 7) 원하는 대상 폴더를 선택 합니다.<br /><br /> 8) 각 사용자에 대해 2-7 단계를 반복 합니다.<br /><br /> 9) 스크립트를 실행 합니다.|  
 |기록|**아니요**|**아니요**||  
 |기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
 |일정|예|예|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
@@ -111,7 +111,7 @@ ms.locfileid: "36173271"
 |구독|예|예||  
 |기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
 |처리 옵션|예|예||  
-|캐시 새로 고침 옵션|예|예|종속 설정은 카탈로그 항목의 일부로 마이그레이션됩니다. 다음은 보고서(.rdl) 및 캐시 새로 고침 옵션과 같은 관련 설정을 마이그레이션하는 스크립트의 예제입니다.<br /><br /> TitleOnly.rdl 보고서에 대한 매개 변수를 마이그레이션하는 중: 0개 항목이 발견되었습니다.<br /><br /> TitleOnly.rdl 보고서에 대한 구독을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br /><br /> 마이그레이션 구독 저장에서 \\\server\public\savedreports로 마이그레이션하는 중... SUCCESS<br /><br /> TitleOnly.rdl 보고서에 대한 기록 설정을 마이그레이션하는 중... SUCCESS<br /><br /> TitleOnly.rdl 보고서에 대한 처리 옵션을 마이그레이션하는 중... 0개 항목이 발견되었습니다.<br /><br /> TitleOnly.rdl 보고서에 대한 캐시 새로 고침 옵션을 마이그레이션하는 중... SUCCESS<br /><br /> TitleOnly.rdl 보고서에 대한 캐시 새로 고침 계획을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br /><br /> 캐시 새로 고침 계획 titleonly_refresh735amM2F를 마이그레이션하는 중... SUCCESS|  
+|캐시 새로 고침 옵션|예|예|종속 설정은 카탈로그 항목의 일부로 마이그레이션됩니다. 다음은 보고서(.rdl) 및 캐시 새로 고침 옵션과 같은 관련 설정을 마이그레이션하는 스크립트의 예제입니다.<br /><br /> TitleOnly.rdl 보고서에 대한 매개 변수를 마이그레이션하는 중: 0개 항목이 발견되었습니다.<br /><br /> TitleOnly.rdl 보고서에 대한 구독을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br /><br /> 에 구독 저장을 마이그레이션하 \\\server\public\savedreports는 하는 중... SUCCESS<br /><br /> TitleOnly.rdl 보고서에 대한 기록 설정을 마이그레이션하는 중... SUCCESS<br /><br /> TitleOnly.rdl 보고서에 대한 처리 옵션을 마이그레이션하는 중... 0개 항목이 발견되었습니다.<br /><br /> TitleOnly.rdl 보고서에 대한 캐시 새로 고침 옵션을 마이그레이션하는 중... SUCCESS<br /><br /> TitleOnly.rdl 보고서에 대한 캐시 새로 고침 계획을 마이그레이션하는 중: 1개 항목이 발견되었습니다.<br /><br /> 캐시 새로 고침 계획 titleonly_refresh735amM2F를 마이그레이션하는 중... SUCCESS|  
 |캐시 새로 고침 계획|예|예||  
 |이미지|예|예||  
 |보고서 파트|예|예||  

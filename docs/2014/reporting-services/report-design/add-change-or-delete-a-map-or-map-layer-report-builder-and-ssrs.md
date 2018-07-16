@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10526"
 - sql12.rtp.rptdesigner.maptilelayerproperties.general.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9f187f50864bfccdcf093ca8270c096f5032d57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 951fe65c8cf9876d5ea5afe2e8eda25b2f8e8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286689"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36182975"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 지도 계층은 지도 창에 나타나는 순서대로 아래쪽에서 위쪽으로 그려집니다. 위의 그림에서 타일 계층이 가장 먼저 그려지고 다각형 계층이 마지막으로 그려집니다. 이후에 그려지는 계층은 이전에 그려진 계층의 지도 요소를 숨길 수 있습니다. 지도 창 도구 모음에서 화살표 키를 사용하여 계층의 순서를 변경할 수 있습니다. 계층을 표시하거나 숨기려면 표시 유형 아이콘을 설정하거나 해제합니다. 계층의 투명도 변경할 수는 `Visibility` 의 페이지는 **계층 데이터** 속성 대화 상자.  
+ 지도 계층은 지도 창에 나타나는 순서대로 아래쪽에서 위쪽으로 그려집니다. 위의 그림에서 타일 계층이 가장 먼저 그려지고 다각형 계층이 마지막으로 그려집니다. 이후에 그려지는 계층은 이전에 그려진 계층의 지도 요소를 숨길 수 있습니다. 지도 창 도구 모음에서 화살표 키를 사용하여 계층의 순서를 변경할 수 있습니다. 계층을 표시하거나 숨기려면 표시 유형 아이콘을 설정하거나 해제합니다. 계층의 투명도 변경할 수 있습니다 합니다 `Visibility` 페이지의 **계층 데이터** 속성 대화 상자.  
   
  다음 표에서는 **지도** 창의 도구 모음 아이콘을 보여 줍니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36182975"
   
  지도 창의 아래쪽에는 지도 보기 영역이 있습니다. 지도의 중심 및 확대/축소 옵션을 변경하려면 화살표 키를 사용하여 보기 중심을 조정하고 슬라이더를 사용하여 확대/축소 수준을 조정합니다.  
   
- 계층에 대 한 자세한 내용은 참조 [지도 &#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)합니다.  
+ 계층에 대 한 자세한 내용은 참조 하세요. [Maps &#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -128,7 +128,7 @@ ms.locfileid: "36182975"
   
 1.  **지도 점 속성** 대화 상자에서 **일반** 을 선택하여 다음 지도 요소의 레이블, 도구 설명 및 표식 유형 옵션을 변경할 수 있습니다.  
   
-    -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대 한 옵션을 무시 하려면 사용 된 [지도 포함 점 속성 대화 상자, 표식](../map-embedded-point-properties-dialog-box-marker.md) 페이지.  
+    -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대 한 옵션을 재정의 하려면 사용 합니다 [지도 포함 점 속성 대화 상자, 표식](../map-embedded-point-properties-dialog-box-marker.md) 페이지입니다.  
   
     -   다각형 계층의 모든 동적 또는 포함된 다각형에 대한 중심점. 중심점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 중심점에 대한 옵션을 무시하려면 [지도 포함 점 속성 대화 상자, 표식](../map-embedded-point-properties-dialog-box-marker.md) 페이지를 사용합니다.  
   
@@ -286,6 +286,6 @@ ms.locfileid: "36182975"
   
 ## <a name="see-also"></a>관련 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 보고서에 지도 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

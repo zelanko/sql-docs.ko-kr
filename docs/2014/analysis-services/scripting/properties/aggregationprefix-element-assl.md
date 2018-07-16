@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293283"
 ---
 # <a name="aggregationprefix-element-assl"></a>AggregationPrefix 요소(ASSL)
   관련 부모 요소 전체에서 집계 이름에 사용할 공통 접두사를 정의합니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "36186408"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md)하십시오 [데이터베이스](../objects/database-element-assl.md)를 [MeasureGroup](../objects/group-element-assl.md), [파티션](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 집계 접두사에서 집계 이름을 생성 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 및 관계형 ROLAP (OLAP) 파티션에 저장 된 집계에 대 한 관계형 데이터베이스의 테이블 이름도 생성 합니다.  
+ 집계 접두사에서 집계 이름을 생성 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 고 관계형 ROLAP (OLAP) 파티션에 저장 된 집계에 대 한 관계형 데이터베이스의 테이블 이름도 생성 합니다.  
   
  완전히 확장된 집계 이름은 다음 부분으로 구성됩니다.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "36186408"
   
  집계 이름의 처음 네 부분은 집계 접두사를 구성합니다. 사용자가 다음과 같이 처음 네 부분을 제공합니다.  
   
--   *DatabasePrefix* 의 값을 나타내는 `AggregationPrefix` 연관 된 요소는 `Database` 요소입니다.  
+-   *DatabasePrefix* 의 값을 나타내는 합니다 `AggregationPrefix` 요소와 연관는 `Database` 요소입니다.  
   
--   *CubePrefix* 의 값을 나타내는 `AggregationPrefix` 연관 된 요소는 `Cube` 요소입니다.  
+-   *CubePrefix* 의 값을 나타내는 합니다 `AggregationPrefix` 요소와 연관는 `Cube` 요소입니다.  
   
--   *MeasureGroupPrefix* 의 값을 나타내는 `AggregationPrefix` 연관 된 요소는 `MeasureGroup` 요소입니다.  
+-   *MeasureGroupPrefix* 의 값을 나타내는 합니다 `AggregationPrefix` 요소와 연관는 `MeasureGroup` 요소입니다.  
   
--   *PartitionPrefix* 의 값을 나타내는 `AggregationPrefix` 연관 된 요소는 `Partition` 요소입니다.  
+-   *PartitionPrefix* 의 값을 나타내는 합니다 `AggregationPrefix` 요소와 연관는 `Partition` 요소입니다.  
   
  이름의 다섯 번째 부분인 *AggregationID*는 시스템 정의 ID로, 사용자는 이름의 이 부분을 제어할 수 없습니다.  
   

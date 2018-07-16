@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManyToManyMeasureGroupDimension data type
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14233f2e39771174b4d1b15acdeafb76bc76f32d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96a6df09c6474994a38930fa07c0a7b5f73cfd61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308423"
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>ManyToManyMeasureGroupDimension 데이터 형식(ASSL)
   다 대 다 차원과 측정값 그룹 간의 관계를 나타내는 파생 데이터 형식을 정의합니다.  
@@ -65,6 +65,6 @@ ms.locfileid: "36093404"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

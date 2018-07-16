@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: 85
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2f8f3ef496f04bc44134340b997a3969f0a029cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bfb3e87fd7d98c2a7daadb649c6a272a79355bd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328173"
 ---
 # <a name="database-properties-mirroring-page"></a>데이터베이스 속성(미러링 페이지)
   주 데이터베이스에서 이 페이지에 액세스한 다음 이 페이지를 사용하여 데이터베이스의 데이터베이스 미러링 속성을 구성하고 수정할 수 있습니다. 또한 이 페이지를 사용하여 데이터베이스 미러링 보안 구성 마법사를 시작하면 미러링 세션의 상태를 보거나 데이터베이스 미러링 세션을 일시 중지 또는 제거할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36180528"
   
 ## <a name="options"></a>변수  
  **보안 구성**  
- **데이터베이스 미러링 보안 구성 마법사**를 시작하려면 이 단추를 클릭합니다.  
+  **데이터베이스 미러링 보안 구성 마법사**를 시작하려면 이 단추를 클릭합니다.  
   
  마법사가 성공적으로 완료되면 미러링이 이미 시작되었는지 여부에 따라 다른 동작이 수행됩니다.  
   

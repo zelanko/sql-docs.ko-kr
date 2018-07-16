@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327563"
 ---
 # <a name="parameters-properties-page-report-manager"></a>매개 변수 속성 페이지(보고서 관리자)
   매개 변수 속성 페이지를 사용하여 매개 변수가 있는 보고서의 매개 변수 설정을 보거나 수정할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36093694"
   
  보고서를 무인 모드로 실행하려는 경우(예: 보고서 기록 또는 보고서 실행 스냅숏 생성), 모든 사용자에 대해 동일한 매개 변수 값을 사용하려는 경우 또는 사용자가 값을 입력하지 않도록 하려는 경우에는 이 확인란의 선택을 취소합니다.  
   
- **텍스트 표시**  
+ **텍스트를 표시 합니다.**  
  매개 변수 입력란 옆에 표시되는 텍스트 문자열을 제공합니다. 이 문자열은 레이블이나 설명문으로 사용됩니다. 문자열 길이는 제한이 없습니다. 텍스트 문자열이 긴 경우 해당 공간에 맞게 줄 바꿈됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

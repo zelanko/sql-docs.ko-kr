@@ -1,14 +1,13 @@
 ---
-title: 미러된 데이터베이스에 대 한 System with Minimal Downtime에 서비스 팩을 설치 | Microsoft Docs
+title: 미러된 데이터베이스에 대 한 서비스 팩을 System with Minimal Downtime 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296923"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>미러된 데이터베이스 작동 중단을 최소화하면서 시스템에 서비스 팩 설치
-  이 항목에서는 서비스 팩과 핫픽스를 설치할 때 미러된 데이터베이스의 작동 중단을 최소화하는 방법에 대해 설명합니다. 이 프로세스에는 데이터베이스 미러링에 참여하는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스를 순차적으로 업그레이드하는 과정이 포함됩니다. 이러한 형태의 업데이트 라고 하는 *롤링 업데이트*, 단일 장애 조치만 가동 중지 시간이 감소 합니다. 성능 우선 모드 세션의 미러 서버는 주 서버와에서 지리적으로 떨어져 있는 경우 롤링 업데이트 되었을 수 있음을 적절 한 note 합니다.  
+  이 항목에서는 서비스 팩과 핫픽스를 설치할 때 미러된 데이터베이스의 작동 중단을 최소화하는 방법에 대해 설명합니다. 이 프로세스에는 데이터베이스 미러링에 참여하는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스를 순차적으로 업그레이드하는 과정이 포함됩니다. 이러한 형태의 업데이트 라고도 함를 *롤링 업데이트*만 단일 장애 조치를 가동 중지 시간을 줄입니다. Note는 미러 서버는 지리적으로 먼 거리에서에 있는 주 서버는 성능 우선 모드 세션에 대 한 업데이트가 적합 하지 않습니다.  
   
  롤링 업데이트는 다음과 같은 여러 단계로 구성되는 프로세스입니다.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "36185049"
   
 ### <a name="to-perform-the-rolling-update"></a>롤링 업데이트를 수행하려면  
   
-1.  가동 중지 시간을 최소화 하려면 다음 권장: 모든 미러링 파트너 모든 자체 미러링 세션에는 현재 미러 서버를 업데이트 하 여 롤링 업데이트를 시작 합니다. 이때 여러 서버 인스턴스를 업데이트해야 할 수도 있습니다.  
+1.  가동 중지 시간을 최소화 하려면 다음 권장: 롤링 업데이트는 모든 미러링 세션에는 현재 미러 서버인 모든 미러링 파트너를 업데이트 하 여 시작 합니다. 이때 여러 서버 인스턴스를 업데이트해야 할 수도 있습니다.  
   
     > [!NOTE]  
     >  미러링 모니터는 롤링 업데이트 프로세스 도중 언제라도 업데이트할 수 있습니다. 예를 들어 서버 인스턴스가 Session 1의 미러 서버이고 미러링 모니터가 Session 2에 있을 경우 지금 서버 인스턴스를 업데이트할 수 있습니다.  
@@ -129,7 +128,7 @@ ms.locfileid: "36185049"
   
     -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 경우: **데이터베이스 속성** 대화 상자의 **미러링 페이지** 를 사용하여 [운영 모드](../relational-databases/databases/database-properties-mirroring-page.md) 옵션을 **성능 우선(동기)** 으로 변경합니다.  
   
-    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 사용 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) 트랜잭션 보안을 OFF로 설정 합니다.  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 사용 하 여 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) 트랜잭션 보안을 OFF로 설정 합니다.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>미러링 모니터를 미러링 세션에 다시 추가하려면  
   

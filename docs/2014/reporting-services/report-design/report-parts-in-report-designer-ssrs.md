@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c4f2ae1acfdc15bd8ca2882a7d5acbff88acf965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5b50efbb6879866d459a775f2c6a0f9ffd86228f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311313"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
   보고서 디자이너에서 프로젝트에 테이블, 차트 및 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다.  
   
- 일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대해 알아보려면 참조 [보고서 파트 &#40;보고서 작성기 및 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) 에 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494) msdn.microsoft.com 합니다.  
+ 일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대 한 자세한 내용은를 참조 하세요 [보고서 파트 &#40;보고서 작성기 및 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) 에 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494) msdn.microsoft.com 합니다.  
   
  그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능합니다. 보고서 파트를 만들고 게시합니다. 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시하면 다른 사람이 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36181968"
   
 -   목록  
   
- 테이블, 행렬, 차트 등의 데이터를 표시하는 보고서 파트를 게시하는 경우에는 공유 데이터 집합을 기준으로 사용할 수 있습니다. 그렇지 않으면 보고서 파트를 게시할 때 이 파트가 사용하는 데이터 집합이 포함된 데이터 집합으로 저장됩니다. 포함된 데이터 집합은 포함된 데이터 원본을 기반으로 할 수 있지만 자격 증명은 포함된 데이터 원본에 저장되지 않습니다. 따라서 보고서 파트에서 사용하는 포함된 데이터 집합이 포함된 데이터 원본을 사용하는 경우 이 보고서 파트를 다시 사용하는 사람은 모두 포함된 데이터 원본에 대한 자격 증명을 제공해야 합니다. 그렇게 하지 않으려면 자격 증명이 저장되어 있는 공유 데이터 원본을 포함된 데이터 집합과 공유 데이터 집합의 기준으로 사용하십시오. 자세한 내용은 참조 [보고서 파트 및 보고서 작성기에서 데이터 집합](../report-data/report-parts-and-datasets-in-report-builder.md) 에 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494) msdn.microsoft.com 합니다.  
+ 테이블, 행렬, 차트 등의 데이터를 표시하는 보고서 파트를 게시하는 경우에는 공유 데이터 집합을 기준으로 사용할 수 있습니다. 그렇지 않으면 보고서 파트를 게시할 때 이 파트가 사용하는 데이터 집합이 포함된 데이터 집합으로 저장됩니다. 포함된 데이터 집합은 포함된 데이터 원본을 기반으로 할 수 있지만 자격 증명은 포함된 데이터 원본에 저장되지 않습니다. 따라서 보고서 파트에서 사용하는 포함된 데이터 집합이 포함된 데이터 원본을 사용하는 경우 이 보고서 파트를 다시 사용하는 사람은 모두 포함된 데이터 원본에 대한 자격 증명을 제공해야 합니다. 그렇게 하지 않으려면 자격 증명이 저장되어 있는 공유 데이터 원본을 포함된 데이터 집합과 공유 데이터 집합의 기준으로 사용하십시오. 자세한 내용은 [보고서 파트 및 보고서 작성기에서 데이터 집합](../report-data/report-parts-and-datasets-in-report-builder.md) 에 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494) msdn.microsoft.com 합니다.  
   
  보고서 디자이너에서 보고서 파트를 게시할 때는 두 단계를 수행합니다.  
   

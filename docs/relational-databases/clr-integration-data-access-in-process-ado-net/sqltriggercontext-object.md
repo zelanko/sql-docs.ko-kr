@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +17,16 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b4c34b6412d531444b8f1d38be15fe9d20ea139
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 24c7187e74b2729ccaddc651abf421ad64832f77
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700244"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357695"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTriggerContext** 클래스는 트리거에 대한 컨텍스트 정보를 제공합니다. 이 컨텍스트 정보에는 트리거를 발생시킨 동작 유형, UPDATE 작업에서 수정된 열, DDL(데이터 정의 언어) 트리거의 경우 트리거 작업을 설명하는 **EventData** 구조가 포함됩니다. 자세한 내용 및 예제를 사용 하는 방법에 대 한는 **SqlTriggerContext** 클래스를 참조 하십시오. [CLR 트리거](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)합니다.  
+  **SqlTriggerContext** 클래스는 트리거에 대한 컨텍스트 정보를 제공합니다. 이 컨텍스트 정보에는 트리거를 발생시킨 동작 유형, UPDATE 작업에서 수정된 열, DDL(데이터 정의 언어) 트리거의 경우 트리거 작업을 설명하는 **EventData** 구조가 포함됩니다. 자세한 내용 및 사용 하는 방법의 예는 **SqlTriggerContext** 클래스를 참조 하십시오 [CLR 트리거](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)합니다.  
   
  자세한 내용은 .NET Framework SDK 설명서의 **Microsoft.SqlServer.Server.SqlTriggerContext** 클래스 참조 설명서를 참조하십시오.  
   

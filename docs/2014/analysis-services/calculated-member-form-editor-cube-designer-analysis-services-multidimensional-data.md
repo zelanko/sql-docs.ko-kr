@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218373"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>계산 멤버 폼 편집기(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **계산 멤버 폼 편집기** 창을 사용하여 계산 멤버를 만들거나 수정할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36183948"
  계산 멤버에 대해 MDX로 NON EMPTY 쿼리를 해결하는 데 사용하는 측정값의 이름을 선택합니다. **비어 있지 않은 동작** 속성이 비어 있는 경우 계산 멤버를 반복적으로 계산하여 멤버가 비어 있는지 확인해야 합니다. **비어 있지 않은 동작** 속성에 측정값의 이름이 있는 경우 지정한 측정값이 비어 있으면 계산 멤버도 비어 있는 것으로 처리됩니다.  
   
 > [!WARNING]  
->  이 속성은 더 이상 사용되지 않습니다. 이 속성을 설정하지 마세요. 참조 [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) 대 한 자세한 내용은 합니다.  
+>  이 속성은 더 이상 사용되지 않습니다. 이 속성을 설정하지 마세요. 참조 [SQL Server 2014에서 Analysis Services 기능의 사용 되지 않는](deprecated-analysis-services-features-in-sql-server-2014.md) 세부 정보에 대 한 합니다.  
   
  **색 식**  
  **전경색** 및 **배경색** 옵션을 보려면 확장합니다.  

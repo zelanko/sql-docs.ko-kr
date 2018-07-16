@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43c0988abc3ea5043873421054fc370a58ed9347
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 57edecff9fbebb062381e9d236d24ee329facd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313163"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 통합의 보고서 뷰어 웹 파트 프로그래밍 기능
   보고서 뷰어 웹 파트는 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` 서버 컨트롤로, 개발자가 사용자 지정 SharePoint 응용 프로그램을 만드는 데 사용할 수 있는 공용 API(응용 프로그래밍 인터페이스) 집합을 포함합니다. 웹 파트 연결을 사용하여 보고서 뷰어 웹 파트에 보고서 경로 및 매개 변수를 제공하는 사용자 지정 웹 파트를 만들 수 있습니다. 사용자 지정 SharePoint 웹 파트 페이지 내에 웹 파트를 포함하고 공용 API를 사용하여 웹 파트를 사용자 지정할 수도 있습니다.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>사용자 지정 웹 파트를 사용하여 보고서 뷰어 웹 파트에 연결  
- 보고서 뷰어 웹 파트는 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 또는 `T:Microsoft.SharePoint.WebPartPages.IFilterValues`를 구현하는 SharePoint 웹 파트에 대한 연결 소비자입니다. **문서** 웹 파트와 같은 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 웹 파트는 보고서 뷰어 웹 파트와 동일한 웹 파트 페이지에 배치되는 경우 보고서 뷰어 웹 파트에 보고서 경로를 제공할 수 있습니다. 마찬가지로, 한 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` 웹 파트와 같은 **텍스트 필터** 또는 **선택 필터**, 보고서 뷰어 웹와 동일한 웹 파트 페이지에 배치 하는 경우 보고서 뷰어 웹 파트를 보고서 매개 변수를 제공할 수 있습니다 부분입니다.  
+ 보고서 뷰어 웹 파트는 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 또는 `T:Microsoft.SharePoint.WebPartPages.IFilterValues`를 구현하는 SharePoint 웹 파트에 대한 연결 소비자입니다. **문서** 웹 파트와 같은 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 웹 파트는 보고서 뷰어 웹 파트와 동일한 웹 파트 페이지에 배치되는 경우 보고서 뷰어 웹 파트에 보고서 경로를 제공할 수 있습니다. 마찬가지로,는 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` 웹 파트와 같은 합니다 **텍스트 필터** 또는 **선택 필터**, 보고서 뷰어 웹와 동일한 웹 파트 페이지에 배치 하는 경우 보고서 뷰어 웹 파트에 보고서 매개 변수를 제공할 수 있습니다 부분입니다.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>IWebPartRow를 사용하여 보고서 경로 공급자 구현  
  웹 파트 연결을 통해 보고서 뷰어 웹 파트에 보고서 경고를 제공하려면 다음을 수행하십시오.  

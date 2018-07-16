@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forecasting [data mining]
 - time series [data mining]
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 118d66a0bd06ced70860e7de91938115b1e499be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84860116150a802648e93686d3e8beb86c4ba037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323253"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>예측 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-forecast.gif "연결 데이터 마이닝 리본의 마법사")  
@@ -33,21 +33,21 @@ ms.locfileid: "36183936"
   
  새 입력 데이터를 제공하지 않아도 예측 모델로부터 예측을 만들 수 있습니다.  
   
- [예측 &#40;Excel 용 테이블 분석 도구&#41; ](forecast-table-analysis-tools-for-excel.md) 도구에 **분석** 리본 메뉴를 사용 하면 예측 모델을 만들 되었지만 사용자 지정 기능이 부족 하며 Excel 테이블에만 데이터를 사용할 수 있습니다.  
+ [예측 &#40;Excel 용 테이블 분석 도구&#41; ](forecast-table-analysis-tools-for-excel.md) 도구를 합니다 **분석** 예측 모델을 만들 리본, 수 있지만 사용자 지정 기능이 부족 하며 Excel 테이블에만 데이터를 사용할 수 있습니다.  
   
 ## <a name="using-the-forecast-wizard"></a>예측 마법사 사용  
   
-1.  에 **데이터 마이닝** 리본에서 클릭 **예측**합니다.  
+1.  에 **데이터 마이닝** 리본 메뉴 **예측**합니다.  
   
 2.  에 **원본 데이터 선택**, Excel 테이블, 범위 또는 입력으로 사용할 외부 데이터 원본을 선택 합니다.  
   
      외부 데이터 원본을 사용할 경우에는 사용자 지정 뷰 또는 쿼리를 정의하거나 데이터 원본을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본으로 저장할 수 있습니다.  
   
-3.  에 **Forecasting** 페이지에 대 한 **타임 스탬프**을 사례 계열로 사용할 수 있는 고유한 숫자 값 (날짜 및 시간 값 포함)를 포함 하는 열을 선택 합니다. 데이터 원본은 이 열을 기준으로 오름차순으로 정렬되어야 합니다.  
+3.  에 **Forecasting** 페이지에 대 한 **타임 스탬프**을 사례 계열로 사용할 수 있는 고유 숫자 값 (날짜 및 시간 값 포함)이 포함 된 열을 선택 합니다. 데이터 원본은 이 열을 기준으로 오름차순으로 정렬되어야 합니다.  
   
-     데이터에 이러한 열이 없는 경우에 옵션을 사용할 수 있습니다 \<타임 스탬프 없음 >. 마법사는 입력 데이터에 대한 고유 순서 열을 추가합니다. 따라서 마법사를 실행하고 이 옵션을 선택하기 전에 데이터가 원하는 순서로 정렬되어 있는지 확인해야 합니다.  
+     데이터에 이러한 열이 없으면 옵션을 사용할 수 있습니다 \<타임 스탬프 없음 >. 마법사는 입력 데이터에 대한 고유 순서 열을 추가합니다. 따라서 마법사를 실행하고 이 옵션을 선택하기 전에 데이터가 원하는 순서로 정렬되어 있는지 확인해야 합니다.  
   
-4.  클릭 수 필요에 따라 **매개 변수** 마이닝 모델의 동작을 사용자 지정 합니다.  
+4.  필요에 따라 눌러도 **매개 변수** 마이닝 모델의 동작을 사용자 지정 합니다.  
   
      예측 모델에는 여러 가지 알고리즘이 지원됩니다.  
   
@@ -57,15 +57,15 @@ ms.locfileid: "36183936"
   
     -   ARTXP 및 ARIMA 조합  
   
-     차이점에 대 한 정보를 참조 하십시오. [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md)합니다.  
+     차이점에 대 한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md)합니다.  
   
      또한 모델에 대해 주기 힌트를 추가하고, 다듬기(smoothing) 옵션을 지정하고, 회귀 옵션을 사용자 지정할 수도 있습니다.  
   
-5.  에 **마침** 페이지 데이터 집합 및 모델에 대 한 설명이 포함 된 이름을 입력 하 고 완성 된 모델을 사용 하는 방법을 제어 하는 다음 옵션을 설정 합니다.  
+5.  에 **완료** 페이지에서 데이터 집합 및 모델에 대해 설명 하는 이름을 제공 하 고 완성된 된 모델을 사용 하는 방법을 제어 하는 다음 옵션을 설정 합니다.  
   
-    -   **모델을 찾으면**합니다. 이 옵션을 선택 하면 마법사 빨리 모델 처리를 마치고 열립니다는 **찾아보기** 창 결과 탐색할 수 있도록 합니다. 뷰어 내용은 작성한 모델 유형에 따라 달라집니다. 자세한 내용은 참조 [예측 모델을 탐색](browsing-a-forecasting-model.md)합니다.  
+    -   **모델을 찾으면**합니다. 이 옵션을 선택 하면 마법사 되 자 마자 모델 처리를 완료 함 열립니다는 **찾아보기** 창 결과 살펴볼 수 있도록 합니다. 뷰어 내용은 작성한 모델 유형에 따라 달라집니다. 자세한 내용은 [예측 모델을 탐색](browsing-a-forecasting-model.md)합니다.  
   
-    -   **드릴스루를 사용 하도록 설정**합니다. 완료된 모델에서 기본 데이터를 보려면 이 옵션을 선택합니다. 이 옵션은 의사 결정 트리 모델을 작성하는 경우에만 사용할 수 있습니다.  
+    -   **드릴스루**합니다. 완료된 모델에서 기본 데이터를 보려면 이 옵션을 선택합니다. 이 옵션은 의사 결정 트리 모델을 작성하는 경우에만 사용할 수 있습니다.  
   
     -   **임시 모델 사용**. 이 옵션을 선택하면 모델이 서버에 저장되지 않습니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
   

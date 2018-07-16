@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262079"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 보고서 항목으로, 다른 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "36183285"
   
  일부 보고서 파트에는 다른 보고서 항목을 포함할 수 있습니다. 예를 들어 테이블에는 차트를, 사각형에는 행렬 및 차트를 포함할 수 있습니다. 다른 보고서 항목이 포함된 보고서 항목을 게시하면 함께 한 단위로 저장됩니다. 다른 보고서 항목은 컨테이너 보고서 파트에 포함된 상태로 저장됩니다. 이들을 별도로 업데이트할 수 없으며 컨테이너의 항목은 별도의 보고서 파트로 저장할 수 없습니다.  
   
- 보고서 파트 게시에 대 한 자세한 내용은 참조 하십시오. [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)합니다.  
+ 보고서 파트 게시에 대 한 자세한 내용은 참조 하세요. [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="modifying-report-part-metadata"></a>보고서 파트 메타데이터 수정  
  보고서 파트는 기본 설정으로 기본 위치에 게시할 수도 있고 각 보고서 파트를 다른 위치에 저장해 제목, 설명 등의 메타데이터를 수정할 수도 있습니다.  
@@ -97,12 +97,12 @@ ms.locfileid: "36183285"
 ### <a name="searching-for-report-parts"></a>보고서 파트 검색  
  보고서 파트 갤러리에서 보고서에 추가할 보고서 파트를 찾습니다. 보고서 파트 이름(전체 또는 일부분), 파트를 만든 사람, 마지막으로 수정한 사람, 마지막으로 수정한 시간, 저장 위치 또는 파트 유형으로 파트를 필터링할 수 있습니다. 예를 들어 지난 주에 동료 중 한 사람이 만든 모든 차트를 검색할 수 있습니다.  
   
- 검색 결과는 축소판 그림이나 목록으로 볼 수 있으며 이름, 만든 날짜/수정한 날짜 및 작성자로 정렬할 수 있습니다. 자세한 내용은 참조 [보고서 파트 찾아보기 및 기본 폴더 설정 &#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)합니다.  
+ 검색 결과는 축소판 그림이나 목록으로 볼 수 있으며 이름, 만든 날짜/수정한 날짜 및 작성자로 정렬할 수 있습니다. 자세한 내용은 [보고서 파트 찾아보기 및 기본 폴더 설정 &#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)합니다.  
   
 ### <a name="what-comes-with-a-report-part"></a>보고서 파트와 함께 추가되는 내용  
  보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 집합, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 집합 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
   
- 보고서 파트의 데이터 집합은 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 집합일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 집합의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 자세한 정보에 대 한 공유 및 포함 된 데이터 집합, 한 참조 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
+ 보고서 파트의 데이터 집합은 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 집합일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 집합의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 자세한 내용에 대 한 공유 및 포함 된 데이터 집합을 참조 하세요 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
   
 ### <a name="resolving-naming-conflicts"></a>이름 지정 충돌 해결  
  보고서 파트를 추가할 때 보고서 작성기는 이름 충돌을 해결합니다. 예를 들어 보고서에 이미 Chart1이 있는데 Chart1 보고서 파트를 또 추가하면 보고서 작성기가 자동으로 새 보고서 파트 이름을 Chart2로 바꿉니다. 보고서에 이미 Dataset1이 있는데 역시 이름이 Dataset1인 다른 데이터 집합을 참조하는 보고서 파트를 추가하는 경우에는 보고서 작성기가 새 데이터 집합 이름을 Dataset2로 바꾸고 참조를 업데이트합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "36183285"
  보고서를 열 때마다 보고서 작성기는 해당 보고서에 있는 보고서 파트의 서버 인스턴스가 서버에서 업데이트되었는지 확인합니다. 또한 데이터 집합 및 매개 변수와 같은 보고서 파트의 종속 항목에서 변경 내용을 확인합니다. 게시된 보고서 파트나 보고서 파트의 종속성이 서버에서 업데이트되었으면 보고서의 알림 표시줄에 업데이트된 항목의 개수가 표시됩니다. 업데이트를 확인하고 허용 또는 거부하도록 선택하거나 알림 표시줄을 해제할 수 있습니다. 업데이트가 표시되도록 선택하면 보고서 파트의 축소판 그림, 보고서 파트를 마지막으로 수정한 사람 및 시간이 표시됩니다. 그러면 업데이트된 항목 중 일부나 전부를 허용할 수 있습니다.  
   
 > [!NOTE]  
->  알림 표시줄을 사용하지 않도록 설정하고 보고서 파트가 변경된 경우 알림을 받지 않을 수 있습니다. 이 옵션은 보고서에 보고서 파트를 추가할 때 설정합니다. 알림 표시줄을 사용하지 않도록 설정한 경우에도 여전히 업데이트를 확인할 수 있습니다. 자세한 내용은 참조 [업데이트 확인 또는 업데이트 해제 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)합니다.  
+>  알림 표시줄을 사용하지 않도록 설정하고 보고서 파트가 변경된 경우 알림을 받지 않을 수 있습니다. 이 옵션은 보고서에 보고서 파트를 추가할 때 설정합니다. 알림 표시줄을 사용하지 않도록 설정한 경우에도 여전히 업데이트를 확인할 수 있습니다. 자세한 내용은 [업데이트 확인 또는 업데이트 해제 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)합니다.  
   
  보고서 작성기는 보고서 파트를 서버에서 마지막으로 업데이트한 날짜와 보고서 파트를 서버와 마지막으로 동기화한 날짜 간의 차이를 확인합니다. 그러나 보고서에서 보고서 파트를 수정한 날짜는 확인하지 않습니다. 따라서 보고서의 보고서 파트와 서버의 보고서 파트가 크게 다를 수 있지만 보고서 작성기는 업데이트를 확인할 때 이 차이점을 찾지 않습니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36183285"
  [보고서 파트 및 보고서 작성기에서 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [보고서 파트 관리](report-design/managing-report-parts.md)   
- [보고서 작성기 3 보고서 파트의 SQL Server 2008 R2 (비디오)](http://technet.microsoft.com/edge/Video/ff711300)   
+ [보고서 작성기 3 보고서 파트 (비디오) SQL Server 2008 R2에서](http://technet.microsoft.com/edge/Video/ff711300)   
  [SQL Server 보고서 작성기 (비디오)를 사용 하 여 만들기 재사용 가능한 보고서 파트 작업 방법:](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

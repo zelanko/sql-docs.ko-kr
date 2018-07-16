@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (SSAS-다차원 데이터)의 파티션 병합 | Microsoft Docs
+title: Analysis Services (SSAS-다차원)의 파티션을 병합할 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b926c685b87f863c0b04e4ce570bec2573aebdf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306573"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services의 파티션 병합(SSAS - 다차원 데이터)
   기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 파티션을 병합하여 같은 측정값 그룹의 여러 파티션에 있는 팩트 데이터를 통합할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36092779"
 ##  <a name="bkmk_Where"></a> 파티션을 병합한 후 파티션 원본 업데이트  
  파티션은 데이터를 처리하는 데 사용되는 SQL 쿼리의 WHERE 절과 같은 쿼리 또는 파티션에 데이터를 제공하는 명명된 쿼리나 테이블을 기준으로 분할됩니다. 파티션의 `Source` 속성은 파티션이 쿼리에 바인딩되는지 테이블에 바인딩되는지 나타냅니다.  
   
- 파티션을 병합 하면 파티션 있는 파티션의 내용은 통합 되지만 `Source` 속성은 파티션의 추가 범위를 반영 하도록 업데이트 되지 않습니다. 즉, 이후에 원래 유지 하는 파티션을 다시 처리 하는 경우 `Source`, 해당 파티션에서 잘못 된 데이터를 받습니다. 파티션은 부모 수준에서 데이터를 잘못 집계합니다. 다음 예에서는 이러한 동작을 보여 줍니다.  
+ 파티션을 병합할 파티션의 내용을 통합 되지만 `Source` 속성은 파티션의 추가 범위를 반영 하도록 업데이트 되지 않습니다. 즉, 이후에 원래 유지 하는 파티션을 다시 처리 하는 경우 `Source`, 해당 파티션에서 잘못 된 데이터를 얻게 됩니다. 파티션은 부모 수준에서 데이터를 잘못 집계합니다. 다음 예에서는 이러한 동작을 보여 줍니다.  
   
  **문제**  
   
@@ -81,16 +81,16 @@ ms.locfileid: "36092779"
   
  **솔루션**  
   
- 업데이트 하는 솔루션의 `Source` 속성을 WHERE 절 또는 명명 된 쿼리를 조정 하거나 기본 팩트 테이블을 후속 처리 정확 하 게 제공 되도록 파티션의 확장 된 범위에서 데이터를 수동으로 병합 합니다.  
+ 솔루션 업데이트 하는 것을 `Source` 속성, WHERE 절 또는 명명 된 쿼리를 조정 하거나 확장된 된 파티션 범위가 지정 된 후속 처리가 정확한 지 확인 하는 기본 팩트 테이블에서 데이터를 수동으로 병합 합니다.  
   
  이 예에서는 파티션 3을 파티션 2로 병합한 후 결과 파티션 2에 ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet')와 같은 필터를 제공하여 팩트 테이블에서 [ColaDecaf] 및 [ColaDiet]에 대한 데이터만 추출하고 [ColaFull]에 관련된 데이터는 제외하도록 지정할 수 있습니다. 다른 방법으로는 파티션 2와 파티션 3이 만들어질 때 그에 대한 필터를 지정할 수 있으며 이러한 필터들은 병합기 프로세스 중에 결합됩니다. 어떤 방법을 사용하든 파티션 처리 후 큐브에는 중복 데이터가 포함되지 않습니다.  
   
  **결론**  
   
- 파티션을 병합 한 후 항상 확인는 `Source` 병합 된 데이터에 대 한 올바른 필터 인지 확인 합니다. Q1, Q2 및 Q3에 대한 기록 데이터가 포함된 파티션으로 시작했고 이제 Q4를 병합하는 경우 Q4를 포함하도록 필터를 조정해야 합니다. 그렇지 않으면 파티션의 후속 처리 시 잘못된 결과가 발생합니다. Q4에 대해 올바르지 않습니다.  
+ 파티션을 병합 한 후 검사할는 `Source` 병합된 된 데이터에 대 한 올바른 필터 인지 확인 합니다. Q1, Q2 및 Q3에 대한 기록 데이터가 포함된 파티션으로 시작했고 이제 Q4를 병합하는 경우 Q4를 포함하도록 필터를 조정해야 합니다. 그렇지 않으면 파티션의 후속 처리 시 잘못된 결과가 발생합니다. Q4에 대해 올바르지 않습니다.  
   
 ##  <a name="bkmk_fact"></a> 팩트 테이블 또는 명명된 쿼리를 통해 분할되는 파티션에 대한 특별 고려 사항  
- 쿼리 외에 파티션도 테이블 또는 명명된 쿼리를 기준으로 분할할 수 있습니다. 원본 파티션과 대상 파티션이 데이터 원본 또는 데이터 원본 뷰의 동일한 팩트 테이블을 사용하는 경우 파티션 병합 후 `Source` 속성이 유효합니다. 결과 파티션에 적합한 팩트 테이블 데이터가 지정됩니다. 결과 파티션에 필요한 팩트가 팩트에서 테이블 있으므로를 수정 하지 않으면는 `Source` 속성은 필요 합니다.  
+ 쿼리 외에 파티션도 테이블 또는 명명된 쿼리를 기준으로 분할할 수 있습니다. 원본 파티션과 대상 파티션이 데이터 원본 또는 데이터 원본 뷰의 동일한 팩트 테이블을 사용하는 경우 파티션 병합 후 `Source` 속성이 유효합니다. 결과 파티션에 적합한 팩트 테이블 데이터가 지정됩니다. 결과 파티션에 필요한 팩트가 팩트에서 테이블에 있으므로 수정 하지 않습니다는 `Source` 속성이 필요 합니다.  
   
  여러 팩트 테이블 또는 명명된 쿼리의 데이터를 사용하는 파티션에는 추가 작업이 필요합니다. 원본 파티션의 팩트 테이블에 있는 팩트를 대상 파티션의 팩트 테이블에 수동으로 병합해야 합니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36092779"
   
 1.  개체 탐색기에서 병합할 파티션이 포함된 큐브의 **측정값 그룹** 노드를 확장하고 **파티션**을 확장한 다음 병합 작업의 대상 파티션을 마우스 오른쪽 단추로 클릭합니다. 예를 들어 연간 팩트 데이터를 저장하는 파티션에 분기별 팩트 데이터를 이동하는 경우 연간 팩트 데이터가 들어 있는 파티션을 선택합니다.  
   
-2.  클릭 **파티션 병합** 열려는 **파티션 병합 \<파티션 이름 >** 대화 상자.  
+2.  클릭 **파티션 병합** 열려는 합니다 **파티션 병합 \<파티션 이름 >** 대화 상자.  
   
 3.  **원본 파티션**에서 대상 파티션과 병합할 각 원본 파티션 옆의 확인란을 선택하고 **확인**을 클릭합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36092779"
   
 4.  누적된 데이터를 포함하는 파티션을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  열기는 `Source` 속성을 방금 병합 한 파티션 데이터를 포함 하도록 WHERE 절을 수정 합니다. 이전에 설명한 대로 `Source` 속성이 자동으로 업데이트 되지 않습니다. 먼저 업데이트 하지 않고 다시 처리 하면는 `Source`를 필요한 데이터 중 일부를 얻지 못할 수 있습니다.  
+5.  열기는 `Source` 속성 및 방금 병합 한 파티션 데이터를 포함 하도록 WHERE 절을 수정 합니다. 이전에 설명한 대로 `Source` 속성이 자동으로 업데이트 되지 않습니다. 첫 번째 업데이트 하지 않고 다시 처리 하는 경우는 `Source`, 모든 필요한 데이터에 얻지 못할 수도 있습니다.  
   
 ##  <a name="bkmk_partitionsXMLA"></a> XMLA를 사용하여 파티션을 병합하는 방법  
  자세한 내용은 [파티션 병합&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md) 항목을 참조하세요.  
@@ -140,7 +140,7 @@ ms.locfileid: "36092779"
  [파티션 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [원격 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
- [파티션 쓰기 설정](set-partition-writeback.md)   
+ [파티션 쓰기 저장 설정](set-partition-writeback.md)   
  [쓰기 가능 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)  
   

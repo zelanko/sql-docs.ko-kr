@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosename
 - vdt.dlgbox.newdatabaseview
 - vdt.dlgbox.newtablename
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 191da426970c364d6b6d9a6af3bfbf5478866950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b6198bb639cf4b56f943b47d9b82e5419daef001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304973"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>이름 선택 대화 상자(Visual Database Tools)
-  이 대화 상자를 선택 하면 나타납니다 **저장 \<TableName**>, **저장 \<DiagramName >**, 또는 **저장 \<ViewName >** 에서 **파일** 메뉴.  
+  선택한 경우이 대화 상자에 나타납니다 **저장할 \<TableName**>를 **저장 \<DiagramName >**, 또는 **저장 \<ViewName >** 에서 **파일** 메뉴.  
   
  **테이블/다이어그램/뷰 이름 입력**  
  테이블, 다이어그램이나 뷰의 이름을 입력할 수 있는 입력란이 제공됩니다.  

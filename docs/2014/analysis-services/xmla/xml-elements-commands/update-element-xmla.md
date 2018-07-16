@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 68eb54e24daccb08a77cc88b2396d31114a29b25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283961"
 ---
 # <a name="update-element-xmla"></a>Update 요소(XMLA)
   차원의 특성 멤버를 업데이트합니다.  
@@ -64,12 +64,12 @@ ms.locfileid: "36172968"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[특성](../xml-elements-properties/attributes-element-xmla.md), [MoveWithDescendants](../xml-elements-properties/movewithdescendants-element-xmla.md), [개체](../xml-elements-properties/object-element-dimension-xmla.md), [위치](../xml-elements-properties/where-element-xmla.md)|  
+|자식 요소|[특성](../xml-elements-properties/attributes-element-xmla.md)하십시오 [MoveWithDescendants](../xml-elements-properties/movewithdescendants-element-xmla.md), [개체](../xml-elements-properties/object-element-dimension-xmla.md), [위치](../xml-elements-properties/where-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `Update` 명령은 쓰기 가능 차원에서 특성 멤버를 이동시킵니다.  
   
- 구성원을 업데이트 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
+ 구성원을 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요. [삽입, 업데이트 및 삭제 하는 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Drop 요소 &#40;XMLA&#41;](drop-element-xmla.md)   

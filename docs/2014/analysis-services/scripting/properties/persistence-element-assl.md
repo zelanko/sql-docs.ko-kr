@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1409ee5b58ee0e65aa324bb8009758430ef95224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330293"
 ---
 # <a name="persistence-element-assl"></a>Persistence 요소(ASSL)
-  바인딩된 원본 데이터의 어떤 부분에는 동적 이며 지정 된 빈도 사용 하 여 업데이트 확인 결정는 [RefreshPolicy](refreshpolicy-element-assl.md) 요소입니다.  
+  바인딩된 원본 데이터의 어떤 부분이 동적 부분과 지정 된 빈도 사용 하 여 업데이트 확인을 확인 합니다 [RefreshPolicy](refreshpolicy-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

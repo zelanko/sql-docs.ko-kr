@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8a55eb14c606348a63072d669db98fe3cae6b3f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9bf7e4f7a162bf172812ed555463c061611237e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191783"
 ---
 # <a name="specify-a-breakpoint-filter"></a>중단점 필터 지정
   중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 응용 프로그램을 디버깅할 때 사용됩니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "36186274"
   
     -   `MachineName`은 데이터베이스 엔진 인스턴스를 실행 중인 컴퓨터입니다.  
   
-    -   `ProcessID`및 `ProcessName` 은 데이터베이스 엔진의 인스턴스를 실행 중인 운영 체제 프로세스입니다.  
+    -   `ProcessID`및 `ProcessName` 은 데이터베이스 엔진 인스턴스를 실행 중인 운영 체제 프로세스입니다.  
   
-    -   `ThreadID` 및 `ThreadName` 는 실행 중인 운영 체제 스레드는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 함수는 데이터베이스 엔진의 인스턴스에 있습니다.  
+    -   `ThreadID` 및 `ThreadName` 는 실행 중인 운영 체제 스레드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 데이터베이스 엔진 인스턴스의 함수입니다.  
   
 3.  **확인** 을 클릭하여 변경 내용을 구현하거나 **취소** 를 클릭하여 변경 내용을 적용하지 않고 종료합니다.  
   

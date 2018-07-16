@@ -20,18 +20,18 @@ helpviewer_keywords:
 - TableNotification element
 ms.assetid: 3afd075a-74f9-428c-b527-ee497cbe71e7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12dec839000f56e8d82a3f5b0e6398f20ccfb35f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e952acc38173462440ec94c050fb27e7a96cce89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321133"
 ---
 # <a name="tablenotification-element-assl"></a>TableNotification 요소(ASSL)
-  에 대 한 정보가 포함 되어는 [ProactiveCaching](proactivecaching-element-assl.md) 의 수정 된 데이터 원본 뷰나 테이블에 대 한 요소입니다.  
+  에 대 한 정보를 포함 합니다 [ProactiveCaching](proactivecaching-element-assl.md) 에서 수정 된 데이터 원본 뷰나 테이블에 대 한 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

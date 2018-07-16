@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesigns element
 ms.assetid: 7291956a-9c53-41fe-af2e-2418e26956c5
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dfddae8284e32f08edc4cf1e0868c7c71c97db2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89140d57aafd7a74b5d1ad8082e8feba075c33bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279599"
 ---
 # <a name="aggregationdesigns-element-assl"></a>AggregationDesigns 요소(ASSL)
   데이터베이스의 여러 파티션에서 공유할 수 있는 집계 디자인의 컬렉션을 포함합니다.  

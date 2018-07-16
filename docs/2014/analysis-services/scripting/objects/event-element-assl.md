@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Event element
 ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 441d8758f25092d1e10128a44ace8d12f3eee79a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119bc279e1313e0b7b8bd0790c631b8e9a896428
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233883"
 ---
 # <a name="event-element-assl"></a>Event 요소(ASSL)
-  정의 `Event` 의 일부로 캡처할는 [추적](trace-element-assl.md) 요소입니다.  
+  정의 `Event` 의 일부로 캡처할를 [추적](trace-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36172982"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[이벤트](../collections/events-element-assl.md)|  
-|자식 요소|[열](../collections/columns-element-assl.md), [이벤트 Id](../properties/id-element-assl.md)|  
+|자식 요소|[열](../collections/columns-element-assl.md), [EventID](../properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.TraceEvent>합니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246283"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>큐브 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **큐브 디자이너**를 사용하여 큐브에 포함된 데이터를 찾아볼 수 있을 뿐만 아니라 큐브에 포함된 측정값 그룹 및 측정값, 큐브 차원 및 차원 관계, 계산, KPI(핵심 성과 지표), 동작, 파티션, 큐브 뷰 및 번역을 포함하여 기존 큐브의 다양한 속성을 편집할 수 있습니다. 다음 방법으로 **큐브 디자이너** 대화 상자를 표시할 수 있습니다.  
@@ -49,6 +49,6 @@ ms.locfileid: "36182694"
 ## <a name="see-also"></a>관련 항목  
  [큐브 개체 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

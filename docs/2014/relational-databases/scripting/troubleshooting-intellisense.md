@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unavailable options [IntelliSense]
 - IntelliSense [SQL Server], troubleshooting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b6c298ab9894dafa208edbe1cb32a6e16210c128
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 517996d1b15b1e0fbc8eba47b10535d6bf833e9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181710"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio) 문제 해결
   다음과 같은 몇몇 경우에서는 IntelliSense 옵션이 제대로 작동하지 않을 수 있습니다.  

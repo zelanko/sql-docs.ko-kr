@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320773"
 ---
 # <a name="ado-net-source"></a>ADO.NET 원본
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36183308"
 >  SQL 문을 사용하여 임시 테이블의 결과를 반환하는 저장 프로시저를 호출하는 경우 WITH RESULT SETS 옵션을 사용하여 결과 집합의 메타데이터를 정의합니다.  
   
 > [!NOTE]  
->  SQL 문을 사용 하 여 저장된 프로시저를 실행 하는 경우 다음 오류와 함께 실패 하는 패키지를 추가 하 여 오류를 해결할 수 있습니다는 `SET FMTONLY OFF` exec 문 전에 문입니다.  
+>  SQL 문을 사용 하 여 저장된 프로시저를 실행 하 고 다음 오류로 인해 작업이 실패할 경우에 추가 하 여 오류를 해결할 수 있습니다는 `SET FMTONLY OFF` exec 문 전에 문입니다.  
 >   
 >  **열 <열_이름>을(를) 데이터 원본에서 찾을 수 없습니다.**  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 545c219623331ef167731c3142f36642e530307a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301303"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>중급 데이터 마이닝 자습서(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 만들고 데이터 마이닝 모델을 작업 하기 위한 통합된 환경을 제공 합니다. 데이터 원본에 쉽게 바인딩하고, 여러 모델을 만들어 같은 데이터에 대해 테스트하고, 예측 분석에 사용할 모델을 배포할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 만들고 데이터 마이닝 모델을 사용 하 여 작업 하기 위한 통합된 환경을 제공 합니다. 데이터 원본에 쉽게 바인딩하고, 여러 모델을 만들어 같은 데이터에 대해 테스트하고, 예측 분석에 사용할 모델을 배포할 수 있습니다.  
   
  기본 데이터 마이닝 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 솔루션을 만드는 방법을 학습하고, 고객 구매 행동을 분석하고 잠재적인 구매자를 대상으로 하는 타겟 메일링 캠페인을 지원하는 3개의 모델을 작성했습니다.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "36312301"
   
 -   **예측:** 전세계 여러 지역에서 제품 판매를 예측하는 *시계열* 모델을 만듭니다. 각 지역의 개별 모델을 개발하고 *교차 예측*을 사용하는 방법을 배웁니다.  
   
--   **시장 바구니 분석:** 만듭니다는 *연결 모델*, 그룹 방문 하는 동안 구매한 제품을 분석 하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 전자 상거래 사이트입니다. 이 시장 바구니 모델을 기반으로 하여 고객에게 제품을 권장할 수 있습니다.  
+-   **시장 바구니 분석:** 만들려는 *association 모델*는 방문 하는 동안 구매한 제품 그룹을 분석 하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 전자 상거래 사이트입니다. 이 시장 바구니 모델을 기반으로 하여 고객에게 제품을 권장할 수 있습니다.  
   
--   **시퀀스 분석:** 고객이 제품을 구매한 순서를 분석하는 *시퀀스 클러스터링 모델*을 작성합니다. 이 모델을 기반으로 하여 웹 사이트 디자인 또는 새 제품의 변경 사항을 계획할 수 있습니다.  
+-   **시퀀스 분석:** 고객이 제품을 구매한 순서를 분석하는 *시퀀스 클러스터링 모델*을 작성합니다. 이 모델을 기반으로 하여 웹 사이트 디자인 또는 새 제안의 변경 사항을 계획할 수 있습니다.  
   
 -   **요소 분석:** *신경망* 모델을 사용하여 콜 센터 데이터에서 서비스 품질 불량의 가능한 원인을 탐색합니다. 예비 모델이 나타내는 정보를 기반으로 사용자 환경을 개선하기 위한 전략을 예측하는 *로지스틱 회귀 모델* 을 만듭니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36312301"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스가 있는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 공식 데이터베이스를 설치 하려면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 방문는 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) 페이지 하 고 샘플 데이터베이스의 적절 한 버전을 선택 합니다.  
+ 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 공식 데이터베이스를 설치 하려면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 방문 합니다 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) 페이지 및 예제 데이터베이스의 적절 한 버전을 선택 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)   

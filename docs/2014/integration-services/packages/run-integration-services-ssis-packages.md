@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
 - SSIS packages, running
@@ -21,20 +21,20 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21c4bff7eb74b556aa41e27430b23e9eb2e2d061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287609"
 ---
 # <a name="execution-of-projects-and-packages"></a>프로젝트 및 패키지 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하려면 해당 패키지가 저장된 위치에 따라 여러 도구 중 하나를 사용할 수 있습니다. 도구는 다음 표에 나열되어 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 패키지를 저장하려면 프로젝트 배포 모델을 사용하여 프로젝트를 서버에 배포합니다. 자세한 내용은 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)을 참조하세요.  
   
- SSIS 패키지 저장소, msdb 데이터베이스 또는 파일 시스템에 패키지를 저장하려면 패키지 배포 모델을 사용합니다. 자세한 내용은 참조 [패키지 배포 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)합니다.  
+ SSIS 패키지 저장소, msdb 데이터베이스 또는 파일 시스템에 패키지를 저장하려면 패키지 배포 모델을 사용합니다. 자세한 내용은 [패키지 배포 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)합니다.  
   
 |도구|Integration Services 서버에 저장된 패키지|SSIS 패키지 저장소 또는 msdb 데이터베이스에 저장된 패키지|SSIS 패키지 저장소에 포함되는 위치 외부에 있는 파일 시스템에 저장된 패키지|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "36183473"
 |**dtexecui**<br /><br /> 자세한 내용은 [패키지 실행 유틸리티&#40;DtExecUI&#41; UI 참조](execute-package-utility-dtexecui-ui-reference.md)를 참조하세요.|아니요|예|예|  
 |**SQL Server 에이전트**<br /><br /> 패키지를 예약하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)을 참조하세요.|예|예|예|  
 |**기본 제공 저장 프로시저**<br /><br /> 자세한 내용은 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)을 참조하세요.|예|아니오|아니요|  
-|**<xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|예|아니오|아니요|  
-|**<xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|예|예|  
+|** <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|예|아니오|아니요|  
+|** <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|예|예|  
   
 ## <a name="execution-and-logging"></a>실행 및 로깅  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 대한 로깅을 활성화할 수 있으며 로그 파일에서 런타임 정보를 확인할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md)을 참조하세요.  

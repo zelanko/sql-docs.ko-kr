@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [data mining]
 - Data Mining Query Advanced Editor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - DMX
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2314c847745ac51d1bc7fb99b7c6f55a3f061af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c2ddae6582355e271488389d6e4005a5d235a74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289779"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>쿼리(SQL Server 데이터 마이닝 추가 기능)
-  ![데이터 마이닝 리본, 모델 쿼리 단추](media/dmc-query.gif "데이터 마이닝 리본, 모델 쿼리 단추")  
+  ![쿼리 모델 단추, 데이터 마이닝 리본의](media/dmc-query.gif "데이터 마이닝 리본, 모델 쿼리 단추")  
   
  **쿼리** 마법사를 사용하여 기존 마이닝 모델과의 상호 작용을 통해 Excel 테이블, Excel 범위 또는 다른 데이터 원본에 있는 데이터를 기반으로 예측을 만들 수 있습니다. 추세 예측을 위해 새 데이터를 기존 모델에 적용하는 프로세스를 *예측 쿼리*라고 합니다.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "36180599"
   
 4.  마지막으로 마법사는 하나 이상의 예측을 선택하고 결과를 저장할 대상을 지정하는 능력을 제공합니다.  
   
- 언제든지 **고급** 을 클릭하여 DMX 문의 각 부분을 더 세부적으로 제어할 수 있는 **데이터 마이닝 고급 쿼리 편집기**로 전환할 수 있습니다. 고급 쿼리 편집 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [고급 데이터 마이닝 쿼리 편집기](advanced-data-mining-query-editor.md)합니다.  
+ 언제든지 **고급** 을 클릭하여 DMX 문의 각 부분을 더 세부적으로 제어할 수 있는 **데이터 마이닝 고급 쿼리 편집기**로 전환할 수 있습니다. 고급 쿼리 편집 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [고급 데이터 마이닝 쿼리 편집기](advanced-data-mining-query-editor.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 사용 하 여 **쿼리** 마법사의 인스턴스에 연결 해야 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 또한 서버에는 적절한 유형의 데이터 마이닝 모델이 최소 한 개 이상 있어야 합니다. 사용할 수 있는 마이닝 모델이 없는 경우 Excel용 데이터 마이닝 클라이언트에서 제공하는 마법사를 사용하여 만들 수 있습니다. 마법사를 사용 하 여 새 마이닝 모델을 만드는 방법에 대 한 정보를 참조 하십시오. [데이터 마이닝 모델을 만드는](creating-a-data-mining-model.md)합니다.  
+ 사용 하 여 **쿼리** 마법사의 인스턴스에 연결 해야 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 또한 서버에는 적절한 유형의 데이터 마이닝 모델이 최소 한 개 이상 있어야 합니다. 사용할 수 있는 마이닝 모델이 없는 경우 Excel용 데이터 마이닝 클라이언트에서 제공하는 마법사를 사용하여 만들 수 있습니다. 마법사를 사용 하 여 새 마이닝 모델을 만드는 방법에 대 한 자세한 내용은 [데이터 마이닝 모델을 만드는](creating-a-data-mining-model.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 배포 및 확장 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

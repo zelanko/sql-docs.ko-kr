@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Dimension data type
 ms.assetid: 3fe6adc2-5206-44c3-a689-a731705f43ca
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1451da2c20228e00b99482a7c9b43a92a8478154
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b60c51847900fee89f0baee2d5b04d96dc3c9ad5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289559"
 ---
 # <a name="dimension-data-type-assl"></a>Dimension 데이터 형식(ASSL)
   데이터베이스 차원을 나타내는 기본 데이터 형식을 정의합니다.  
@@ -105,9 +105,9 @@ ms.locfileid: "36092770"
   
 -   *ProactiveCaching*  
   
- Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, 및 <xref:Microsoft.AnalysisServices.PerspectiveDimension>합니다.  
+ Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>합니다 <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, 및 <xref:Microsoft.AnalysisServices.PerspectiveDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

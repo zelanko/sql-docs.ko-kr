@@ -1,5 +1,5 @@
 ---
-title: Working with Schema Rowsets in ADOMD.NET | Microsoft Docs
+title: Schema Rowsets in ADOMD.NET 사용 하 여 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310753"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>ADOMD.NET에서 스키마 행 집합 작업
   ADOMD.NET 개체 모델에서 사용할 수 있는 메타데이터보다 많은 메타데이터가 필요한 경우 ADOMD.NET에서는 모든 범위의 XMLA (XML for Analysis), OLE DB, OLAP용 OLE DB 및 데이터 마이닝용 OLE DB 스키마 행 집합을 검색할 수 있는 기능을 제공합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36172993"
  **OLAP 메타 데이터**  
  분석 데이터 원본에 제공되는 스키마 정보에는 분석 데이터 원본에서 사용할 수 있는 데이터베이스 또는 카탈로그, 데이터베이스의 큐브 및 마이닝 모델, 데이터 원본에 있는 큐브의 역할 등이 포함됩니다.  
   
- 자세한 내용은: [OLAP 스키마 행 집합 용 OLE DB](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ 자세한 내용은: [OLAP 스키마 행 집합에 대 한 OLE DB](../schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
  **데이터 마이닝 메타 데이터**  
  스키마 행 집합을 사용하여 OLAP 메타데이터뿐 아니라 마이닝 메타데이터도 검색할 수 있습니다. 사용할 수 있는 행 집합은 데이터베이스에서 사용 가능한 데이터 마이닝 모델, 사용 가능한 마이닝 알고리즘, 알고리즘에 필요한 매개 변수, 마이닝 구조 등에 대한 정보를 노출합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "36172993"
  이러한 메서드는 각각 스키마 정보로 채워진 `DataSet` 개체의 인스턴스를 반환합니다. `DataSet` 개체는 Microsoft .NET Framework 클래스 라이브러리의 `System.Data` 네임스페이스에 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 GetActions 함수는 연결, 큐브 이름, 좌표 및 좌표 형식을 사용, 검색 된 [MDSCHEMA_ACTIONS 행 집합](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md), 다음 선택한 좌표에서 사용할 수 있는 작업을 반환 합니다.  
+ 다음 예제에서는 GetActions 함수는 연결, 큐브 이름, 좌표 및 좌표 형식을 사용, 검색을 [MDSCHEMA_ACTIONS 행 집합](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md), 선택한 좌표에서 사용할 수 있는 동작을 반환 합니다.  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

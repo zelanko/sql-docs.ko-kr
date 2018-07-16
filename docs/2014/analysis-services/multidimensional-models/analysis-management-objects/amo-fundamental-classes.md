@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ee31478a526dad385d9721256beebc4324cadb60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c1b94f30b21b71a6290e7b782e2eeb411d14f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270029"
 ---
 # <a name="amo-fundamental-classes"></a>AMO 기본 클래스
   AMO(Analysis Management Objects) 작업은 기본 클래스에서 시작합니다. 이러한 클래스를 통해 응용 프로그램에 사용할 나머지 개체의 환경을 설정합니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다.  
@@ -40,20 +40,20 @@ ms.locfileid: "36182463"
   
   
   
-##  <a name="ServerObjects"></a> 서버 개체  
+##  <a name="ServerObjects"></a> Server 개체  
  또한 다음 메서드에 액세스할 수 있습니다.  
   
--   연결 관리: 연결, 연결 끊기, Reconnect 및 GetConnectionState 합니다.  
+-   연결 관리: 연결 끊기, Reconnect 및 GetConnectionState에 연결 합니다.  
   
 -   트랜잭션 관리: BeginTransaction, CommitTransaction 및 RollbackTransaction 합니다.  
   
 -   Backup 및 Restore  
   
--   DDL 실행: CancelCommand, SendXmlaRequest 및을 실행 합니다.  
+-   DDL 실행: CancelCommand, SendXmlaRequest, StartXmlaRequest를 실행 합니다.  
   
 -   메타 데이터 관리: UpdateObjects 및 유효성 검사 합니다.  
   
- 서버에 연결하려면 ADOMD.NET 및 OLEDB에서 사용하는 것과 같은 표준 연결 문자열이 필요합니다. 자세한 내용은 참조 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>합니다. 연결 문자열 형식을 사용할 필요 없이 서버 이름을 연결 문자열로 지정할 수도 있습니다.  
+ 서버에 연결하려면 ADOMD.NET 및 OLEDB에서 사용하는 것과 같은 표준 연결 문자열이 필요합니다. 자세한 내용은 참조 하세요. <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>합니다. 연결 문자열 형식을 사용할 필요 없이 서버 이름을 연결 문자열로 지정할 수도 있습니다.  
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Server>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   

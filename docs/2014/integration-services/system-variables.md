@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311974"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36181849"
 |`ExecutionInstanceGUID`|String|실행 중인 패키지의 고유 식별자입니다.|  
 |`FailedConfigurations`|String|실패한 패키지 구성 이름입니다.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|패키지를 로드할 때 패키지 구성을 무시할지 여부를 지정합니다.|  
-|**InteractiveMode**|Boolean|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 `True`로 설정됩니다. 사용 하 여 패키지를 실행 하는 경우는 **DTExec** 명령 프롬프트 유틸리티는 속성이로 설정 된 `False`합니다.|  
+|**InteractiveMode**|Boolean|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 `True`로 설정됩니다. 사용 하 여 패키지를 실행 하는 경우는 **DTExec** 명령 프롬프트 유틸리티는 속성이 `False`합니다.|  
 |`LocaleId`|Int32|패키지에서 사용되는 로캘입니다.|  
 |**MachineName**|String|패키지가 실행 중인 컴퓨터 이름입니다.|  
 |**OfflineMode**|Boolean|패키지가 오프라인 모드인지 여부를 나타냅니다. 오프라인 모드에서는 데이터 원본에 연결하지 않습니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "36181849"
 |**ProgressCountHigh**|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 상위 부분입니다.|OnProgress 이벤트 처리기|  
 |`ProgressCountLow`|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 하위 부분입니다.|OnProgress 이벤트 처리기|  
 |**ProgressDescription**|String|진행률에 대한 설명입니다.|OnProgress 이벤트 처리기|  
-|`Propagate`|Boolean|이벤트가 상위 수준의 이벤트 처리기로 전달되는지 여부를 나타냅니다.<br /><br /> 참고:의 값은 `Propagate` 변수는 패키지의 유효성을 검사 하는 동안 무시 됩니다.<br /><br /> 자식 패키지에서 `Propagate`를 `False`로 설정해도 이벤트가 부모 패키지로 전달될 수 있습니다.|모든 이벤트 처리기|  
+|`Propagate`|Boolean|이벤트가 상위 수준의 이벤트 처리기로 전달되는지 여부를 나타냅니다.<br /><br /> 참고:의 값을 `Propagate` 변수는 패키지의 유효성을 검사 하는 동안 무시 됩니다.<br /><br /> 자식 패키지에서 `Propagate`를 `False`로 설정해도 이벤트가 부모 패키지로 전달될 수 있습니다.|모든 이벤트 처리기|  
 |`SourceDescription`|String|이벤트 처리기에서 이벤트를 발생시킨 실행 개체에 대한 설명입니다.|모든 이벤트 처리기|  
 |`SourceID`|String|이벤트 처리기에서 이벤트를 발생시킨 실행 개체의 고유 식별자입니다.|모든 이벤트 처리기|  
 |**SourceName**|String|이벤트 처리기에서 이벤트를 발생시킨 실행 개체의 이름입니다.|모든 이벤트 처리기|  

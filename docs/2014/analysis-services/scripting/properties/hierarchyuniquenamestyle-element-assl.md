@@ -20,18 +20,18 @@ helpviewer_keywords:
 - HierarchyUniqueNameStyle element
 ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4948cc104e39c6d7aec7e2822594e891c52b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d19fa53581241686d68179162762a0909fcc69f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304293"
 ---
 # <a name="hierarchyuniquenamestyle-element-assl"></a>HierarchyUniqueNameStyle 요소(ASSL)
-  얼마나 고유한 이름을 결정에 포함 된 계층에 대해 생성 되는 [CubeDimension](../data-type/dimension-data-type-assl.md)합니다.  
+  어떻게 고유한 이름을 결정에 포함 된 계층에 대해 생성 되는 [CubeDimension](../data-type/dimension-data-type-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,11 +67,11 @@ ms.locfileid: "36092758"
 |*IncludeDimensionName*|차원 이름이 계층 이름의 일부로 포함됩니다.|  
 |*ExcludeDimensionName*|차원 이름이 계층 이름의 일부로 포함되지 않습니다.|  
   
- 부모에 해당 하는 요소 `HierarchyUniqueNameStyle` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimension>합니다.  
+ 부모에 해당 하는 요소가 `HierarchyUniqueNameStyle` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Role element
 ms.assetid: 56f52462-a7fd-4b51-a7fb-4311134439e9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce56ee33ea5e79fcd5390e392c52506e2a270676
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0486e6f0f8cc5886c5bcab5ea389440c8d26523b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285979"
 ---
 # <a name="role-element-assl"></a>Role 요소(ASSL)
   보안 역할에 대한 정보를 포함합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36183707"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Roles](../collections/roles-element-assl.md)|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [설명](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [멤버 ](../collections/members-element-assl.md), [이름](../properties/name-element-assl.md)|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)를 [설명](../properties/description-element-assl.md)를 [ID](../properties/id-element-assl.md)를 [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [멤버 ](../collections/members-element-assl.md), [이름](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  역할 정의는 역할의 멤버인 사용자를 포함합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "36183707"
   
 ## <a name="see-also"></a>관련 항목  
  [Database 요소 &#40;ASSL&#41;](database-element-assl.md)   
- [서버 요소 &#40;ASSL&#41;](server-element-assl.md)   
+ [Server 요소 &#40;ASSL&#41;](server-element-assl.md)   
  [개체 &#40;ASSL&#41;](objects-assl.md)  
   
   

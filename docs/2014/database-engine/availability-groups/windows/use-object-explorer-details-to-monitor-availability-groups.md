@@ -1,14 +1,13 @@
 ---
-title: 개체 탐색기 정보를 사용 하 여 가용성 그룹 (SQL Server Management Studio)를 모니터링할 | Microsoft Docs
+title: 개체 탐색기 정보를 사용 하 여 가용성 그룹 (SQL Server Management Studio) 모니터링 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29e86a6914ced21ac6c5941c2f728b18da2c7f9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282207"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링(SQL Server Management Studio)
   이 항목에서는 **의** 개체 탐색기 정보 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 창을 사용하여 기존 AlwaysOn 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
@@ -72,13 +71,13 @@ ms.locfileid: "36181400"
          여러 가용성 데이터베이스에 대해 작업을 수행하려면 원하는 가용성 데이터베이스를 선택한 후 마우스 오른쪽 단추로 클릭하여 사용 가능한 명령을 나열하는 상황에 맞는 메뉴를 엽니다.  
   
 ##  <a name="AvGroupsDetails"></a> 가용성 그룹 정보  
- **가용성 그룹** 정보 화면에 다음 열이 표시됩니다.  
+  **가용성 그룹** 정보 화면에 다음 열이 표시됩니다.  
   
  **이름**  
  선택한 가용성 그룹의 **가용성 복제본**, **가용성 데이터베이스**및 **가용성 그룹** 수신기 폴더를 나열합니다.  
   
 ##  <a name="AvReplicaDetails"></a> 가용성 복제본 정보  
- **가용성 복제본** 정보 화면에 다음 열이 표시됩니다.  
+  **가용성 복제본** 정보 화면에 다음 열이 표시됩니다.  
   
  **서버 인스턴스**  
  가용성 복제본을 호스팅하는 서버 인스턴스 이름을 로컬 서버 인스턴스에 대한 서버 인스턴스의 현재 연결 상태를 나타내는 아이콘과 함께 표시합니다.  

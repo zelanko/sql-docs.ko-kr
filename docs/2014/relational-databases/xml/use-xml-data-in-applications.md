@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [XML in SQL Server]
 - XML [SQL Server], ADO
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c4dbf8007297478af88784b183089db9d4774c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 13440d6941d05fd02c1c98c8a75d538adbf749de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293953"
 ---
 # <a name="use-xml-data-in-applications"></a>응용 프로그램에서 XML 데이터 사용
-  이 항목에서는 작업에 사용할 수 있는 옵션에 설명 된 `xml` 응용 프로그램에서 데이터 형식입니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
+  작업에 사용할 수 있는 옵션에 설명 합니다 `xml` 응용 프로그램에서 데이터 형식입니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
   
 -   ADO 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 `xml` 유형의 열에서 XML 처리  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36173135"
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>ADO 및 SQL Server Native Client를 사용하여 xml 유형의 열에서 XML 처리  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 제공된 유형 및 기능에 액세스하여 MDAC 구성 요소를 사용하려면 ADO 연결 문자열에 DataTypeCompatibility 초기화 속성을 설정해야 합니다.  
   
- 다음 Visual Basic Scripting Edition (VBScript) 예제 쿼리 한 결과 설명 하는 예를 들어는 `xml` 데이터 형식 열 `Demographics`에 `Sales.Store` 목차는 `AdventureWorks2012` 예제 데이터베이스. 특히 이 쿼리는 이 열의 항목 값에서 `CustomerID` 가 `3`인 행을 검색합니다.  
+ 다음 Visual Basic Scripting Edition (VBScript) 예제 쿼리 한 결과 설명 하는 예를 들어,는 `xml` 데이터 형식의 열인 `Demographics`를 `Sales.Store` 목차는 `AdventureWorks2012` 샘플 데이터베이스. 특히 이 쿼리는 이 열의 항목 값에서 `CustomerID` 가 `3`인 행을 검색합니다.  
   
 ```  
 Const DS = "MyServer"  
@@ -92,7 +92,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- 이 예에서는 데이터 형식 호환성 속성을 설정하는 방법을 보여 줍니다. 기본적으로 이 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용할 경우 0으로 설정됩니다. 값을 80으로 설정 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자 하면 `xml` 및 사용자 정의 형식 열으로 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 데이터 형식입니다. 이러한 유형은 각각 DBTYPE_WSTR 및 DBTYPE_BYTES입니다.  
+ 이 예에서는 데이터 형식 호환성 속성을 설정하는 방법을 보여 줍니다. 기본적으로 이 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용할 경우 0으로 설정됩니다. 값을 80으로 설정 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자에 게 `xml` 사용자 정의 형식 열으로 나타나고 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 데이터 형식입니다. 이러한 유형은 각각 DBTYPE_WSTR 및 DBTYPE_BYTES입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 클라이언트 컴퓨터에도 설치되어 있어야 하며 연결 문자열에는 "`Provider=SQLNCLI11;...`"에서 데이터 공급자로 사용할 수 있도록 이 클라이언트가 지정되어 있어야 합니다.  
   
@@ -149,12 +149,12 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET을 사용하여 xml 유형의 열에서 XML 처리  
- XML을 처리 하는 `xml` ADO.NET을 사용 하 여 데이터 형식 열 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 표준 동작을 사용할 수 있습니다는 `SqlCommand` 클래스입니다. 예를 들어 한 `xml` 데이터 형식 열과 해당 값과 같은 방식으로 SQL 열을 사용 하 여 검색 검색할 수 있습니다는 `SqlDataReader`합니다. 그러나의 내용으로 작업 하려면는 `xml` 데이터 형식의 열에 XML로 먼저 나면 콘텐츠를 할당 하는 `XmlReader` 형식입니다.  
+ XML을 처리 하는 `xml` ADO.NET을 사용 하 여 데이터 형식 열 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 표준 동작을 사용할 수는 `SqlCommand` 클래스입니다. 예를 들어를 `xml` 데이터 형식 열과 해당 값과 동일한 방식으로 SQL 열을 사용 하 여 검색은 검색할 수는 `SqlDataReader`합니다. 그러나의 내용으로 작업 하려는 경우는 `xml` 데이터 형식 열의 XML로 먼저 해야 콘텐츠를 할당 하는 `XmlReader` 형식.  
   
  자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Column Values in a Data Reader"를 참조하십시오.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>ADO.NET을 사용하여 매개 변수의 xml 유형 열 처리  
- ADO.NET 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 매개 변수로 전달된 xml 데이터 형식을 처리하려면 `SqlXml` 데이터 형식의 인스턴스로 값을 제공할 수 있습니다. 때문에 특수 처리 하지 않는 포함 된 `xml` 데이터 형식 열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 방식으로 다른 열과 데이터 형식, 매개 변수 값 같이 수락할 수 `string` 또는 `integer`합니다.  
+ ADO.NET 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 매개 변수로 전달된 xml 데이터 형식을 처리하려면 `SqlXml` 데이터 형식의 인스턴스로 값을 제공할 수 있습니다. 특수 처리 하지 않는 관련 되어 있으므로 `xml` 데이터 형식 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 방식으로 다른 열과 데이터 형식에서 매개 변수 값과 같은 허용할 수 `string` 또는 `integer`합니다.  
   
  자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Values as Command Parameters"를 참조하십시오.  
   
