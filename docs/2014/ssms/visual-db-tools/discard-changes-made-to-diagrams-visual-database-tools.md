@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discarding database diagram changes
 - database diagrams [SQL Server], discarding changes
 - diagrams [SQL Server], discarding changes
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c873ca272b9fb2700a7b9dda54a2db094af60358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6e896e93a07e56cb26b2a83e3cd8f7290f60e847
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253425"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>다이어그램 변경 내용 취소(Visual Database Tools)
   데이터베이스에 저장할 필요가 없는 변경 내용은 데이터베이스 다이어그램에서 취소할 수 있습니다.  

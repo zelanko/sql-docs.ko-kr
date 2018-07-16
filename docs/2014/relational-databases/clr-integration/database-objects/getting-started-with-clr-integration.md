@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,18 +25,18 @@ helpviewer_keywords:
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7616d610cbdd581325325f9ad00a57b417ef2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 12eb63552fea685ce9d1e453e99e785045839ac5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088437"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349815"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
-  이 항목에서는 네임 스페이스 및 데이터베이스 개체를 사용 하 여 컴파일하는 데 필요한 라이브러리에 대 한 개요는 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] .NET Framework 공용 언어 런타임 (CLR)와 통합 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
+  이 항목에서는 라이브러리를 사용 하 여 데이터베이스 개체를 컴파일하는 데 필요한 확인 하 고 네임 스페이스의 개요를 제공 합니다 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 는.NET Framework CLR (공용 언어 런타임)와 통합 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
   
 ## <a name="required-namespaces"></a>필수 네임스페이스  
  부터는 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]합니다. CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
@@ -90,7 +88,7 @@ End Class
   
 ```  
   
- 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 텍스트 메시지를 출력할 관리되는 데이터베이스 개체를 만들기 위해 `SqlContext`와 `SqlPipe`라는 새로운 클래스 두 개를 사용합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 저장된 프로시저에로 선언할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 저장 프로시저입니다.  
+ 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 간단한 텍스트 메시지를 출력할 관리되는 데이터베이스 개체를 만들기 위해 `SqlContext`와 `SqlPipe`라는 새로운 클래스 두 개를 사용합니다. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 에 저장된 된 절차로이 메서드를 선언할 수 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 저장 프로시저입니다.  
   
  이제 이 프로그램을 라이브러리로 컴파일하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로드한 다음 저장 프로시저로 실행해 봅니다.  
   
@@ -124,7 +122,7 @@ vbc /target:library helloworld.vb
  이러한 명령은 라이브러리 DLL을 빌드하도록 지정하는 /target 옵션을 사용하여 Visual C# 또는 Visual Basic 컴파일러를 시작합니다.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>SQL Server에서 "Hello World" 저장 프로시저 로드 및 실행  
- 테스트할 수 예제 프로시저에 성공적으로 컴파일되면 [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] 적절 한 테스트 데이터베이스 (예를 들어 AdventureWorks 예제 데이터베이스)에 연결 하는 새 쿼리를 작성 하 고 있습니다.  
+ 샘플 프로시저에 성공적으로 컴파일되면에서 테스트할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] 적절 한 테스트 데이터베이스 (예를 들어, AdventureWorks 샘플 데이터베이스)에 연결 하는 새 쿼리를 만듭니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. CLR 코드를 사용 하 여 사용할 수는 **sp_configure** 시스템 저장 프로시저입니다. 자세한 내용은 [Enabling CLR Integration](../clr-integration-enabling.md)을 참조하세요.  
   
@@ -181,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 저장 프로시저](../../../database-engine/dev-guide/clr-stored-procedures.md)   
- [ADO.NET에 SQL Server In-process 전용 확장](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [ADO.NET으로 SQL Server In-process 전용 확장](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [CLR 데이터베이스 개체 디버깅](../debugging-clr-database-objects.md)   
  [CLR 통합 보안](../security/clr-integration-security.md)  
   

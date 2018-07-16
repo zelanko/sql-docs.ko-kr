@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -31,21 +29,21 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f618cb1faa8c1b5682e069bd7568ad9d856cdc52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b9d8d594b60b5e9ed9716d8aa3c0eed322db98fd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183451"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349895"
 ---
 # <a name="manipulating-udt-data"></a>UDT 데이터 조작
   [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 UDT(사용자 정의 형식) 열의 데이터를 수정할 때 INSERT, UPDATE 또는 DELETE 문에 대한 특별한 구문을 제공하지 않습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 또는 CONVERT 함수는 네이티브 데이터 형식을 UDT 형식으로 캐스트하는 데 사용됩니다.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 열에 데이터 삽입  
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은에 샘플 데이터의 세 개의 행을 삽입의 **포인트** 테이블입니다. **지점** 데이터 형식을 X 및 Y 정수 값 UDT 속성으로 노출 됩니다. 쉼표로 구분 된 하려면 CAST 또는 CONVERT 함수를 사용 해야 X 및 Y 값을 **지점** 유형입니다. 처음 두 문은 CONVERT 함수를 사용 하 여 문자열 값을 변환 하는 **지점** 유형 및 세 번째 문은 CAST 함수를 사용 합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 데이터 샘플의 세 개의 행을 삽입 합니다 **지점** 테이블입니다. 합니다 **지점** X 이루어져 있습니다 데이터 형식 및 Y 정수 값 UDT 속성으로 노출 됩니다. 쉼표로 구분 된 하려면 CAST 또는 CONVERT 함수를 사용 해야 X 및 Y 값을 **지점** 형식입니다. 처음 두 문은 CONVERT 함수를 사용 하 여 문자열 값을 변환할 합니다 **지점** 유형 및 세 번째 문은 CAST 함수를 사용 합니다.  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -60,7 +58,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 읽을 수 있는 형식으로 표시 된 출력을 보려면 호출는 `ToString` 의 메서드는 **지점** UDT 값을 해당 문자열 표현으로 변환 합니다.  
+ 읽기 쉬운 형식으로 표시 되는 출력을 보려면 호출을 `ToString` 메서드를 **지점** UDT 값을 해당 문자열 표현으로 변환 하는 합니다.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -87,7 +85,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **지점** UDT의 X 및 Y 좌표를 개별적으로 선택한 다음 수 있는 속성으로 노출 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X 및 Y 좌표를 개별적으로 선택합니다.  
+ 합니다 **지점** UDT 속성을 개별적으로 선택할 수 있습니다와 X 및 Y 좌표를 노출 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X 및 Y 좌표를 개별적으로 선택합니다.  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -134,7 +132,7 @@ SELECT @PointValue.ToString() AS PointValue;
  변수 할당에 SELECT 및 SET를 사용할 경우의 차이점은 SELECT를 사용하면 하나의 SELECT 문에서 여러 변수를 할당할 수 있는 반면 SET 구문에서는 각 변수 할당에 고유한 SET 문이 필요하다는 것입니다.  
   
 ## <a name="comparing-data"></a>데이터 비교  
- 클래스를 정의할 때 `IsByteOrdered` 속성을 `true`로 설정한 경우 비교 연산자를 사용하여 UDT의 값을 비교할 수 있습니다. 자세한 내용은 참조 [사용자 정의 형식 만들기](creating-user-defined-types.md)합니다.  
+ 클래스를 정의할 때 `IsByteOrdered` 속성을 `true`로 설정한 경우 비교 연산자를 사용하여 UDT의 값을 비교할 수 있습니다. 자세한 내용은 [사용자 정의 형식 만들기](creating-user-defined-types.md)합니다.  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -161,7 +159,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT 메서드 호출  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. **지점** 클래스 세 가지 메서드가 포함 되어 `Distance`, `DistanceFrom`, 및 `DistanceFromXY`합니다. 이러한 세 가지 방법을 정의 하는 코드 목록은 참조 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. 합니다 **지점** 클래스에는 세 가지 메서드가 포함 되어 있습니다. `Distance`를 `DistanceFrom`, 및 `DistanceFromXY`합니다. 이러한 세 가지 메서드를 정의 코드 샘플을 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `PointValue.Distance` 메서드를 호출합니다.  
   
@@ -182,7 +180,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- `DistanceFrom` 형식의 인수를 사용 하는 메서드 **가리킨** 데이터 형식 및 지정 된 점에서 pointvalue 거리를 표시 합니다.  
+ `DistanceFrom` 의 인수를 사용 하는 메서드 **가리킨** 데이터 형식 및 지정 된 점에서 PointValue 까지의 거리를 표시 합니다.  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  

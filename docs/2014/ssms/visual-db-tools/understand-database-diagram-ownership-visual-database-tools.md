@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.CannotOpenWithInvalidOwner
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - owners [SQL Server], database diagrams
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a05d1be7a194bd3ed47aed4936cdc51d479e81f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da66b3b6958d2b726d3e4229773284ae991e5ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272129"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>데이터베이스 다이어그램 소유권 이해(Visual Database Tools)
-  데이터베이스 다이어그램 디자이너를 사용하려면 먼저 db_owner 역할([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 역할)의 멤버로 설정하여 다이어그램에 대한 액세스를 제어해야 합니다. 각 다이어그램에는 반드시 한 명의 소유자(다이어그램을 만든 사용자)가 있어야 합니다. 다이어그램 설정에 대 한 자세한 내용은 참조 [설정을 데이터베이스 다이어그램 디자이너 &#40;Visual Database Tools&#41;](visual-database-tools.md)합니다.  
+  데이터베이스 다이어그램 디자이너를 사용하려면 먼저 db_owner 역할([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 역할)의 멤버로 설정하여 다이어그램에 대한 액세스를 제어해야 합니다. 각 다이어그램에는 반드시 한 명의 소유자(다이어그램을 만든 사용자)가 있어야 합니다. 다이어그램을 설정 하는 방법은 참조 하세요 [데이터베이스 다이어그램 디자이너 설정 &#40;Visual Database Tools&#41;](visual-database-tools.md)합니다.  
   
  다이어그램 소유권과 관련하여 유의할 점은 다음과 같습니다.  
   

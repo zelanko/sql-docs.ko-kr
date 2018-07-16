@@ -1,5 +1,5 @@
 ---
-title: 내용 페이지 (보고서 관리자) | Microsoft Docs
+title: 콘텐츠 페이지 (보고서 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224823"
 ---
 # <a name="contents-page-report-manager"></a>내용 페이지(보고서 관리자)
   내용 페이지를 사용하여 현재 폴더의 내용을 보거나, 볼 항목을 선택하거나, 다른 폴더로 이동할 수 있습니다. 폴더를 선택하면 열리는 이 페이지는 보고서 관리자의 홈 페이지이기도 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36186919"
   
  항목 위로 마우스를 이동하고 드롭다운 화살표를 클릭하면 선택한 항목의 속성을 액세스하고 구성할 수 있는 드롭다운 메뉴가 열립니다.  
   
- **Tile 보기**  
+ **타일 보기**  
  **자세히 보기**와 같은 세부 정보가 없는 내용 페이지를 표시하려면 클릭합니다. 목록 뷰는 폴더를 열거나 보고서 관리자 홈 페이지에 액세스할 때 표시되는 기본 뷰입니다.  
   
  항목 위로 마우스를 이동하고 드롭다운 화살표를 클릭하면 선택한 항목의 속성을 액세스하고 구성할 수 있는 드롭다운 메뉴가 열립니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36186919"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbdeployment.settings.f1
 - sql12.swb.dbdeployment.progress.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 122fb199052592bebb0f201358f6ff4c25149fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ec4cff220e8e3e08c71eb5a43986817c3c434332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199563"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
   **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
@@ -133,13 +133,13 @@ ms.locfileid: "36187007"
   
 2.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
   
-3.  사용 하 여는 `Export` 의 메서드는 `Microsoft.SqlServer.Management.Dac.DacStore` 형식 데이터베이스를 BACPAC 파일로 내보냅니다. 내보낼 데이터베이스의 이름과 BACPAC 파일을 배치할 폴더의 경로를 지정합니다.  
+3.  사용 합니다 `Export` 메서드는 `Microsoft.SqlServer.Management.Dac.DacStore` 데이터베이스를 BACPAC 파일로 내보낼 형식입니다. 내보낼 데이터베이스의 이름과 BACPAC 파일을 배치할 폴더의 경로를 지정합니다.  
   
 4.  SMO Server 개체를 만든 다음 대상 인스턴스 또는 서버로 설정합니다.  
   
 5.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
   
-6.  사용 하 여는 `Import` 의 메서드는 `Microsoft.SqlServer.Management.Dac.DacStore` BACPAC를 가져올 형식입니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
+6.  사용 합니다 `Import` 메서드는 `Microsoft.SqlServer.Management.Dac.DacStore` BACPAC를 가져올 형식입니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 계층 응용 프로그램](data-tier-applications.md)   

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ca94410d7011c30de0a5481451337d11fa57120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 21f11e1d27ce94c62e2d3115134bf714c918a5d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175165"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 요소
-  W3C XSD **redefine** 요소를 사용하면 스키마 구성 요소를 다시 정의할 수 있습니다. 그러나 지원이 지시문에 성능 비용이 많이 들 수 있으며 필요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수의 모든 인스턴스의 유효성을 다시 검사는 `xml` 재정의 된 스키마와 연결 된 데이터 형식입니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. **\<xsd:redefine>** 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
+  W3C XSD **redefine** 요소를 사용하면 스키마 구성 요소를 다시 정의할 수 있습니다. 그러나 지원이 지시문 성능 비용이 많이 들도 필요 하지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모든 인스턴스의 유효성을 다시 검사를 `xml` 재정의 된 스키마와 연결 된 데이터 형식입니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. **\<xsd:redefine>** 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
   
  스키마나 해당 구성 요소를 업데이트하려면 대신 다음을 수행합니다.  
   

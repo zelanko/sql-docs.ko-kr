@@ -1,5 +1,5 @@
 ---
-title: 어떤&#39;SQL Server 2014 용 보고서 작성기의 새로운 s | Microsoft Docs
+title: 새로운&#39;SQL Server 2014 용 보고서 작성기의 새로운 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf08740110d2b7517a692e0c7a7f53351767d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224903"
 ---
-# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>어떤&#39;의 새로운 SQL Server 2014 용 보고서 작성기
+# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>새로운&#39;SQL Server 2014 용 보고서 작성기의 새로운
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에는 많은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능이 도입되었습니다.  
   
- 이 릴리스의 다른 기능에 대 한 내용은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제품 및 기술에 참조 [SQL Server 2014의 새로운](../sql-server/what-s-new-in-sql-server-2016.md)합니다.  
+ 이 릴리스의 다른 기능에 대 한 자세한 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제품 및 기술 참조 [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)합니다.  
   
 > [!TIP]  
->  가장 최근의 정보 및이 릴리스의 새로운 기능에 대 한 리소스에 대 한 참조 [새로운 기능에 SQL Server Reporting Services (SSRS)에 대 한 추가 정보](http://go.microsoft.com/fwlink/?LinkId=207147)합니다.  
+>  최신 정보 및이 릴리스의 새로운 기능에 대 한 리소스에 대 한 참조 [새로운 기능에 SQL Server Reporting Services (SSRS)에 대 한 자세한 내용은](http://go.microsoft.com/fwlink/?LinkId=207147)합니다.  
   
 ##  <a name="ExcelRenderer"></a> Microsoft Excel 2007-2010 및 Microsoft Excel 2003 용 excel 렌더러  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로운 기능인 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Excel 렌더링 확장 프로그램은 Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩이 설치된 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003뿐만 아니라 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010과도 호환되는 Excel 문서로 보고서를 렌더링합니다 형식은 Office Open XML이고 파일 확장명은 .xlsx입니다.  

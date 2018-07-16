@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256352"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 집합을 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 집합 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36186019"
   
  가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 집합 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
   
- 외부 데이터 원본에서 데이터를 검색한 후 데이터 집합, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 집합에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 참조 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
+ 외부 데이터 원본에서 데이터를 검색한 후 데이터 집합, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 집합에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
   
  각 필터에 *필터 수식*을 지정합니다. 필터 수식은 필터링할 데이터를 지정하는 데이터 집합 필드나 식, 연산자 및 비교할 값을 포함합니다. 필터 조건과 일치하는 데이터 값만 항목을 처리할 때 포함됩니다.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "36186019"
 ### <a name="defining-group-variables"></a>그룹 변수 정의  
  그룹을 정의할 때 그룹으로 범위가 한정되고 중첩 그룹에서 액세스할 수 있는 식에서 사용하기 위한 그룹 변수를 만들 수 있습니다. 그룹 변수는 그룹 인스턴스당 한 번씩 계산되며 자식 그룹의 식에서 액세스할 수 있습니다. 예를 들어 영역과 부분 영역으로 그룹화된 데이터의 경우 각 영역에 대한 세금을 계산하고 해당 세금을 부분 영역 그룹의 계산에 사용할 수 있습니다.  
   
- 자세한 내용은 참조 [보고서 및 그룹 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)합니다.  
+ 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md) 하 고 [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)합니다.  
   
 ### <a name="groups-and-scope-in-data-regions"></a>데이터 영역의 그룹 및 범위  
- 동일한 데이터 집합에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 집합과 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 참조 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
+ 동일한 데이터 집합에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 집합과 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
   
  테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36186019"
 ### <a name="sorting-data-in-a-dataset-query"></a>데이터 집합 쿼리에서 데이터 정렬  
  보고서에서 데이터를 가져오기 전에 미리 정렬하려면 데이터 집합 쿼리에 정렬 순서를 추가합니다. 쿼리에서 데이터를 정렬하면 보고서 처리기가 아닌 데이터 원본에 의해 정렬 작업이 수행됩니다.  
   
- 에 대 한는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우 데이터 집합 쿼리에 ORDER BY 절을 추가할 수 있습니다. 예를 들어, 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 내림차순 SalesOrders 테이블에서 Sales 및 Region 매출액으로 열을 정렬 하는 쿼리: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`합니다. 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "ORDER BY로 행 정렬"을 참조하십시오.  
+ 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우 데이터 집합 쿼리에 ORDER BY 절을 추가할 수 있습니다. 다음 예를 들어 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 내림차순 SalesOrders 테이블에서 Sales 및 Region 매출액으로 열을 정렬 하는 쿼리: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`합니다. 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "ORDER BY로 행 정렬"을 참조하십시오.  
   
 > [!NOTE]  
 >  쿼리에서 정렬 순서를 지정할 수 없는 데이터 원본도 있습니다.  
@@ -177,7 +177,7 @@ FROM Production.Product
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [보고서를 스크롤할 때 머리글 계속 표시 &#40;보고서 작성기 및 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [함께 그룹 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [그룹을 함께 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
  [테이블 또는 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
@@ -185,9 +185,9 @@ FROM Production.Product
   
  [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [추가 또는 데이터 영역에서 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [추가 또는 데이터 영역의 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [함께 그룹 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [그룹을 함께 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
  [추가 하거나 차트에서 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
@@ -203,7 +203,7 @@ FROM Production.Product
 ##  <a name="Related"></a> 관련 단원  
  [그룹 이해 &#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [재귀 계층 구조 그룹 생성 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 계정 인텔리전스 정의 (차원) (비즈니스 인텔리전스 마법사) | Microsoft Docs
+title: 계정 인텔리전스 (차원) (비즈니스 인텔리전스 마법사)를 정의 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectdimension.f1
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 27e33821094b1499646aec42262b9a3b0b27c10f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4acb73063603e367d0443e709c875be0871382d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211903"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>계정 인텔리전스 정의(차원)(비즈니스 인텔리전스 마법사)
   이 페이지를 사용하여 차원 및 특성 유형 설정, 반가산적 측정값 정의 및 기타 기능을 포함한 계정 인텔리전스를 적용할 차원을 선택할 수 있습니다.  

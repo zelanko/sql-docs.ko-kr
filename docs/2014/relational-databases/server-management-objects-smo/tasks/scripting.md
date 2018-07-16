@@ -15,18 +15,18 @@ helpviewer_keywords:
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bf854648bc4180ca87d004d43002feb3c1baaac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262281"
 ---
 # <a name="scripting"></a>스크립팅
-  SMO의 스크립팅은 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체, 또는 개별 개체의 `Script` 메서드로 제어합니다. <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체의 인스턴스에서 개체에 대 한 종속성 관계의 매핑을 제어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+  SMO의 스크립팅은 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체, 또는 개별 개체의 `Script` 메서드로 제어합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체의 인스턴스에서 개체에 대 한 종속성 관계의 매핑을 제어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체를 사용한 고급 스크립팅은 다음 3단계 프로세스를 거칩니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36186040"
   
 3.  스크립트 생성  
   
- 검색 단계에서는 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 개체를 사용합니다. 개체의 URN 목록을 제공하면 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 메서드가 URN 목록의 개체에 대해 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 개체를 반환합니다. 부울 *fParents* 매개 변수를 사용 하는 부모 또는 지정된 된 개체의 자식으로를 검색할 수 있는지 여부를 선택 합니다. 이 단계에서 종속성 트리를 수정할 수 있습니다.  
+ 검색 단계에서는 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 개체를 사용합니다. 개체의 URN 목록을 제공하면 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 메서드가 URN 목록의 개체에 대해 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 개체를 반환합니다. 부울 *fParents* 매개 변수를 사용 하는 부모 또는 자식이 지정된 된 개체의 검색 되는지 여부를 선택 합니다. 이 단계에서 종속성 트리를 수정할 수 있습니다.  
   
  목록 생성 단계에서는 트리가 전달되고 결과 목록이 반환됩니다. 이 개체 목록은 스크립팅 순서로 나열되며 조작할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36186040"
  마지막 세 번째 단계에서는 지정된 목록 및 스크립팅 옵션으로 스크립트가 생성됩니다. 결과가 <xref:System.Collections.Specialized.StringCollection> 시스템 개체로 반환됩니다. 이 단계에서는 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 개체의 항목 컬렉션과 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 및 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>와 같은 속성으로부터 종속 개체 이름이 추출됩니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
  이 코드 예제에는 System.Collections.Specialized 네임스페이스에 대한 `Imports` 문이 필요합니다. 응용 프로그램의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
   

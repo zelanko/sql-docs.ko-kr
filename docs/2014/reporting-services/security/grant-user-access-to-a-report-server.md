@@ -1,5 +1,5 @@
 ---
-title: 보고서 서버 (보고서 관리자)에 대 한 Grant 사용자 액세스 | Microsoft Docs
+title: 사용자 액세스 권한 부여는 보고서 서버 (보고서 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256145"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>사용자에게 보고서 서버에 대한 액세스 권한 부여(보고서 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 역할 기반 보안을 사용하여 보고서 서버에 대한 액세스 권한을 사용자에게 부여합니다. 새 보고서 서버 설치에서는 로컬 관리자 그룹의 멤버인 사용자에게만 보고서 서버 내용 및 작업에 대한 사용 권한이 있습니다. 다른 사용자가 보고서 서버를 사용할 수 있게 하려면 태스크 모음을 지정하는 미리 정의된 역할에 사용자 또는 그룹 계정을 매핑하는 역할 할당을 만들어야 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36186238"
   
 -   시스템 수준 역할은 특정 항목으로 한정되지 않은 사이트 전체 작업에 대한 액세스 권한을 부여합니다. 보고서 작성기를 사용하는 작업과 공유 일정을 사용하는 작업을 예로 들 수 있습니다.  
   
-     이러한 두 역할 유형은 상호 보완적이며 함께 사용해야 합니다. 따라서 보고서 서버에 사용자를 추가하는 작업은 두 부분으로 구성됩니다. 즉, 사용자를 항목 수준 역할에 할당하는 경우 시스템 수준 역할에도 할당해야 합니다. 사용자를 역할에 할당할 때는 이미 정의되어 있는 역할을 선택해야 합니다. 역할을 생성, 수정 또는 삭제하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용합니다. 자세한 내용은 참조 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)합니다.  
+     이러한 두 역할 유형은 상호 보완적이며 함께 사용해야 합니다. 따라서 보고서 서버에 사용자를 추가하는 작업은 두 부분으로 구성됩니다. 즉, 사용자를 항목 수준 역할에 할당하는 경우 시스템 수준 역할에도 할당해야 합니다. 사용자를 역할에 할당할 때는 이미 정의되어 있는 역할을 선택해야 합니다. 역할을 생성, 수정 또는 삭제하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용합니다. 자세한 내용은 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)합니다.  
   
 ## <a name="before-you-start"></a>시작하기 전 주의 사항  
  기본 모드 보고서 서버에 사용자를 추가하기 전에 다음 목록을 검토합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36186238"
   
 -   이 태스크를 다른 사용자에게 위임하려면 사용자 계정을 내용 관리자 및 시스템 관리자 역할에 매핑하는 역할 할당을 만듭니다. 내용 관리자 및 시스템 관리자 권한이 있는 사용자는 보고서 서버에 사용자를 추가할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 각 역할의 태스크 종류에 익숙해질 수 있도록 시스템 역할 및 사용자 역할에 대해 미리 정의된 역할을 확인합니다. 보고서 관리자에는 태스크 설명이 표시되지 않으므로 사용자를 추가하기 전에 역할에 익숙해지는 것이 좋습니다.  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 각 역할의 태스크 종류에 익숙해질 수 있도록 시스템 역할 및 사용자 역할에 대해 미리 정의된 역할을 확인합니다. 보고서 관리자에는 태스크 설명이 표시되지 않으므로 사용자를 추가하기 전에 역할에 익숙해지는 것이 좋습니다.  
   
 -   필요에 따라 필요한 태스크 모음을 포함하는 추가 역할을 정의하거나 역할을 사용자 지정합니다. 예를 들어 개별 항목에 대해 사용자 지정 보안 설정을 사용하려는 경우 폴더에 대한 보기 액세스 권한을 부여하는 새 역할 정의를 만들 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36186238"
   
 4.  **새 역할 할당**을 클릭합니다.  
   
-5.  **그룹 또는 사용자 이름**, Windows 도메인 사용자 또는 그룹 계정 형식에서: \<도메인 >\\< 계정\>합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
+5.  **그룹 또는 사용자 이름**에 Windows 도메인 사용자 또는 그룹 계정 형식에서: \<도메인 >\\< 계정\>합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
   
 6.  시스템 역할을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36186238"
     > [!NOTE]  
     >  항목이 현재 부모 항목의 보안을 상속하는 경우에는 도구 모음에서 **항목 보안 편집** 을 클릭하여 보안 설정을 변경합니다. 그런 다음 **새 역할 할당**을 클릭합니다.  
   
-5.  **그룹 또는 사용자 이름**, Windows 도메인 사용자 또는 그룹 계정 형식에서: \<도메인 >\\< 계정\>합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
+5.  **그룹 또는 사용자 이름**에 Windows 도메인 사용자 또는 그룹 계정 형식에서: \<도메인 >\\< 계정\>합니다. 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.  
   
 6.  사용자 또는 그룹에서 항목에 액세스하는 방법을 설명하는 역할 정의를 하나 이상 선택한 다음 **확인**을 클릭합니다.  
   

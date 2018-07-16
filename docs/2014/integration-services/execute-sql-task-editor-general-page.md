@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322653"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>SQL 실행 태스크 편집기(일반 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 SQL 실행 태스크를 구성하고 해당 태스크에서 실행할 SQL 문을 제공할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36185897"
 >  SQL 실행 태스크에서 ADO 또는 ODBC 연결 관리자를 사용할 때는 **CodePage** 속성을 사용할 수 없습니다. 솔루션에 코드 페이지의 사용이 필요한 경우에는 SQL 실행 태스크에서 OLE DB 또는 ADO.NET 연결 관리자를 사용하십시오.  
   
  **TypeConversionMode**  
- 이 속성을 설정 하면 `Allowed`SQL 실행 태스크는 출력 매개 변수를 변환 하려고 하 고 쿼리 결과 데이터에는 결과 변수 형식에 할당 됩니다. 이는 **단일 행** 결과 집합 유형에 적용됩니다.  
+ 이 속성을 설정 하면 `Allowed`쿼리 결과 데이터를 유형의 변수에 결과 할당 되 고 SQL 실행 태스크는 출력 매개 변수를 변환 하려고 합니다. 이는 **단일 행** 결과 집합 유형에 적용됩니다.  
   
  **ResultSet**  
  실행 중인 SQL 문에서 예상하는 결과 유형을 지정합니다. **단일 행**, **전체 결과 집합**, **XML**또는 **없음**중에서 선택합니다.  

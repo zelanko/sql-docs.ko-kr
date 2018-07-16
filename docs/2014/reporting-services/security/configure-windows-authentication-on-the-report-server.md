@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
@@ -16,13 +16,13 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3147e590c5a7fa7c258b705404d5b9ae5a8c1ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325723"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
   기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 응용 프로그램 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
@@ -31,33 +31,33 @@ ms.locfileid: "36185761"
   
  다음의 추가 요구 사항도 만족해야 합니다.  
   
--   RSeportServer.config 파일에서 있어야 `AuthenticationType` 로 설정 `RSWindowsNegotiate`, `RSWindowsKerberos`, 또는 `RSWindowsNTLM`합니다. 기본적으로 보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 RSReportServer.config 파일에는 `RSWindowsNegotiate` 설정이 들어 있습니다. 그렇지 않으면 `RSWindowsNTLM` 설정이 사용됩니다. Kerberos 인증만 사용하는 응용 프로그램이 있는 경우 `RSWindowsKerberos`를 추가할 수 있습니다.  
+-   RSeportServer.config 파일 있어야 `AuthenticationType` 로 설정 `RSWindowsNegotiate`를 `RSWindowsKerberos`, 또는 `RSWindowsNTLM`합니다. 기본적으로 보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 RSReportServer.config 파일에는 `RSWindowsNegotiate` 설정이 들어 있습니다. 그렇지 않으면 `RSWindowsNTLM` 설정이 사용됩니다. Kerberos 인증만 사용하는 응용 프로그램이 있는 경우 `RSWindowsKerberos`를 추가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  사용 하 여 `RSWindowsNegotiate` 도메인 사용자 계정으로 실행 되도록 보고서 서버 서비스를 구성 하 고는 이름 SPN (서비스 사용자)는 계정에 대 한 등록 하지 않은 경우 Kerberos 인증 오류가 발생 합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  
+    >  사용 하 여 `RSWindowsNegotiate` 를 이름 SPN (서비스 사용자) 계정에 등록 하지 않은 경우 도메인 사용자 계정으로 실행 되도록 보고서 서버 서비스를 구성 하는 Kerberos 인증 오류가 발생 합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 보고서 서버 웹 서비스 및 보고서 관리자 Web.config 파일에 포함 기본적으로는 \<인증 모드 = "Windows" > 설정 합니다. 이를 \<authentication mode="Forms">로 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 Windows 인증이 실패합니다.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 보고서 서버 웹 서비스 및 보고서 관리자 Web.config 파일에는 기본적으로 포함 합니다 \<mode = "Windows" > 설정 합니다. 이를 \<authentication mode="Forms">로 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 Windows 인증이 실패합니다.  
   
--   Web.config 파일에 보고서 서버 웹 서비스 및 보고서 관리자가 있어야 \<identity impersonate = "true" / >입니다.  
+-   보고서 서버 웹 서비스에 대 한 Web.config 파일 및 보고서 관리자 있어야 \<impersonate = "true" / >입니다.  
   
 -   클라이언트 응용 프로그램 또는 브라우저에서 Windows 통합 보안을 지원해야 합니다.  
   
  보고서 서버 인증 설정을 변경하려면 RSReportServer.config 파일에서 XML 요소 및 값을 편집합니다. 이 항목의 예를 복사하고 붙여 넣어 특정 조합을 구현할 수 있습니다.  
   
- 모든 클라이언트 및 서버 컴퓨터가 동일한 도메인 또는 트러스트된 도메인에 있고 회사 방화벽을 통해 인트라넷으로 액세스되도록 보고서 서버가 배포된 경우 기본 설정이 가장 적합합니다. Windows 자격 증명을 전달하려면 트러스트된 단일 도메인이 필요합니다. 서버에 대해 Kerberos 버전 5 프로토콜을 사용하는 경우 자격 증명을 두 번 이상 전달할 수 있습니다. 그렇지 않으면 만료 전까지 자격 증명을 한 번만 전달할 수 있습니다. 여러 컴퓨터 연결에 대 한 자격 증명을 구성 하는 방법에 대 한 자세한 내용은 참조 [자격 증명을 지정 하 고 보고서 데이터 원본에 대 한 연결 정보](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)합니다.  
+ 모든 클라이언트 및 서버 컴퓨터가 동일한 도메인 또는 트러스트된 도메인에 있고 회사 방화벽을 통해 인트라넷으로 액세스되도록 보고서 서버가 배포된 경우 기본 설정이 가장 적합합니다. Windows 자격 증명을 전달하려면 트러스트된 단일 도메인이 필요합니다. 서버에 대해 Kerberos 버전 5 프로토콜을 사용하는 경우 자격 증명을 두 번 이상 전달할 수 있습니다. 그렇지 않으면 만료 전까지 자격 증명을 한 번만 전달할 수 있습니다. 여러 컴퓨터 연결에 대 한 자격 증명을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)합니다.  
   
  다음은 기본 모드 보고서 서버에 대한 지침입니다. 보고서 서버가 SharePoint 통합 모드로 배포된 경우 Windows 통합 보안을 지정하는 기본 인증 설정을 사용해야 합니다. 보고서 서버는 기본 Windows 인증 확장 프로그램의 내부 기능을 사용하여 SharePoint 통합 모드의 보고서 서버를 지원합니다.  
   
 ## <a name="extended-protection-for-authentication"></a>인증에 대한 확장된 보호  
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터는 인증에 대한 확장된 보호가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 채널 바인딩 및 서비스 바인딩을 사용해 인증 보호를 향상시킬 수 있도록 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능은 확장된 보호를 지원하는 운영 체제에서 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성은 RSReportServer.config 파일의 설정에 의해 결정됩니다. 이 파일은 WMI API를 사용하거나 파일을 편집하여 업데이트할 수 있습니다. 자세한 내용은 참조 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)합니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터는 인증에 대한 확장된 보호가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 채널 바인딩 및 서비스 바인딩을 사용해 인증 보호를 향상시킬 수 있도록 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능은 확장된 보호를 지원하는 운영 체제에서 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성은 RSReportServer.config 파일의 설정에 의해 결정됩니다. 이 파일은 WMI API를 사용하거나 파일을 편집하여 업데이트할 수 있습니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)합니다.  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Windows 통합 보안을 사용하도록 보고서 서버를 구성하려면  
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2.  찾을 <`Authentication`> 합니다.  
+2.  찾을 <`Authentication`>.  
   
-3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. 지정할 수 있습니다 `RSWindowsNegotiate`, `RSWindowsNTLM`, 및 `RSWindowsKerberos` 순서에 관계 없이 합니다. 각 개별 요청이 아닌 연결을 인증하려는 경우 인증 지속성을 사용해야 합니다. 인증 지속성을 사용하면 인증이 필요한 모든 요청이 연결 기간 동안 허용됩니다.  
+3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. 지정할 수 있습니다 `RSWindowsNegotiate`하십시오 `RSWindowsNTLM`, 및 `RSWindowsKerberos` 순서에 관계 없이 합니다. 각 개별 요청이 아닌 연결을 인증하려는 경우 인증 지속성을 사용해야 합니다. 인증 지속성을 사용하면 인증이 필요한 모든 요청이 연결 기간 동안 허용됩니다.  
   
      보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 첫 번째 XML 구조가 기본 구성입니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36185761"
           </AuthenticationTypes>  
     ```  
   
-4.  에 대 한 기존 항목을 통해 붙여 <`Authentication`> 합니다.  
+4.  에 대 한 기존 항목 위에 붙여넣습니다 <`Authentication`>.  
   
      `Custom` 유형에서는 `RSWindows`을 사용할 수 없습니다.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36185761"
   
  Kerberos 로깅을 사용하는 경우 오류를 감지할 수 있습니다. 자격 증명을 요청하는 메시지가 여러 번 표시된 다음 빈 브라우저 창이 표시되는 것도 오류의 다른 증상입니다.  
   
- 제거 하 여 Kerberos 인증 오류를 발생 하는 있는지 확인할 수 있습니다 < `RSWindowsNegotiate` / >에서 구성 파일 및 연결을 다시 시도 합니다.  
+ 발생 하는 것인지 Kerberos 인증 오류를 제거 하 여 확인할 수 있습니다 < `RSWindowsNegotiate` / > 구성 파일 및 연결을 다시 시도 합니다.  
   
  문제를 확인한 후에는 다음과 같은 방법으로 해결할 수 있습니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36185761"
   
 -   서비스 계정이 네트워크 서비스와 같은 기본 제공 계정으로 실행되도록 변경합니다. 기본 제공 계정은 컴퓨터를 네트워크에 조인할 때 정의한 Host SPN에 HTTP SPN을 매핑합니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)를 참조하세요.  
   
--   NTLM을 사용합니다. NTLM은 Kerberos 인증이 실패하는 경우에도 일반적으로 작동합니다. NTLM을 사용 하려면 제거 `RSWindowsNegotiate` 만 확인 하 고 RSReportServer.config 파일에서 `RSWindowsNTLM` 지정 됩니다. 이 방법을 선택하는 경우 보고서 서버 서비스의 SPN을 정의하지 않아도 해당 서비스의 도메인 사용자 계정을 계속 사용할 수 있습니다.  
+-   NTLM을 사용합니다. NTLM은 Kerberos 인증이 실패하는 경우에도 일반적으로 작동합니다. NTLM을 사용 하려면 제거 `RSWindowsNegotiate` RSReportServer.config 파일에서 확인 및 `RSWindowsNTLM` 지정 됩니다. 이 방법을 선택하는 경우 보고서 서버 서비스의 SPN을 정의하지 않아도 해당 서비스의 도메인 사용자 계정을 계속 사용할 수 있습니다.  
   
 #### <a name="logging-information"></a>로깅 정보  
  다양한 로깅 정보 출처를 통해 Kerberos 관련 문제를 해결할 수 있습니다.  
@@ -179,7 +179,7 @@ ms.locfileid: "36185761"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- 자세한 내용은 참조 하십시오 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ 자세한 내용은 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>브라우저가 Negotiated Kerberos 또는 Negotiated NTLM을 선택하는 방법  
  Internet Explorer를 사용하여 보고서 서버에 연결하는 경우 브라우저에서는 인증 헤더에 Negotiated Kerberos 또는 NTLM을 지정합니다. NTLM은 다음과 같은 경우에 Kerberos 대신 사용됩니다.  

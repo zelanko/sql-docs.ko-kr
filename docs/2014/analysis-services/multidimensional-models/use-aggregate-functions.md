@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257549"
 ---
 # <a name="use-aggregate-functions"></a>집계 함수 사용
   차원을 사용하여 측정값을 분할하는 경우 측정값은 해당 차원에 포함된 계층에서 요약됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 `Sum`입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  
   
- Analysis Services에서 만드는 모든 측정값은 측정값의 연산을 결정하는 집계 함수에 의해 지원됩니다. 미리 정의 된 집계 유형으로는 `Sum`, `Min`, `Max`, `Count`, **고유 카운트**, 및 몇 가지 기타 추가 특수 함수가 있습니다. 또는 복잡한 수식이나 사용자 지정 수식을 기반으로 한 집계가 필요한 경우 미리 작성된 집계 함수를 사용하는 대신 MDX 계산을 작성할 수 있습니다. 예를 들어 백분율 값에 대한 측정값을 정의하려는 경우 MDX에서 계산된 측정값을 사용하여 정의할 수 있습니다. [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)을 참조하세요.  
+ Analysis Services에서 만드는 모든 측정값은 측정값의 연산을 결정하는 집계 함수에 의해 지원됩니다. 미리 정의 된 집계 유형은 `Sum`, `Min`, `Max`, `Count`, **고유 카운트**, 및 기타 추가 특수 함수가 여러. 또는 복잡한 수식이나 사용자 지정 수식을 기반으로 한 집계가 필요한 경우 미리 작성된 집계 함수를 사용하는 대신 MDX 계산을 작성할 수 있습니다. 예를 들어 백분율 값에 대한 측정값을 정의하려는 경우 MDX에서 계산된 측정값을 사용하여 정의할 수 있습니다. [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)을 참조하세요.  
   
- 큐브 마법사를 통해 만들어진 측정값은 측정값 정의의 일부로 집계 유형이 할당됩니다. 집계 유형이 항상 `Sum`, 숫자 데이터가 포함 된 원본 열 되었다고 가정 합니다. `Sum` 원본 열의 데이터 형식에 관계 없이 할당 됩니다. 예를 들어 큐브 마법사를 사용하여 측정값을 만든 경우 팩트 테이블의 모든 열을 가져오면 원본이 날짜 시간 열이더라도 모든 결과 측정값의 집계가 `Sum`임을 알 수 있습니다. 마법사를 통해 만든 측정값의 미리 할당된 집계 방법을 항상 검토하여 집계 함수가 적합한지 확인하세요.  
+ 큐브 마법사를 통해 만들어진 측정값은 측정값 정의의 일부로 집계 유형이 할당됩니다. 집계 유형은 항상 `Sum`에 숫자 데이터가 포함 된 원본 열 되었다고 가정 합니다. `Sum` 원본 열의 데이터 형식과 관계 없이 할당 됩니다. 예를 들어 큐브 마법사를 사용하여 측정값을 만든 경우 팩트 테이블의 모든 열을 가져오면 원본이 날짜 시간 열이더라도 모든 결과 측정값의 집계가 `Sum`임을 알 수 있습니다. 마법사를 통해 만든 측정값의 미리 할당된 집계 방법을 항상 검토하여 집계 함수가 적합한지 확인하세요.  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]또는 MDX를 통해 큐브 정의에서 집계 방법을 할당하거나 변경할 수 있습니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](create-measures-and-measure-groups-in-multidimensional-models.md) 또는 [집계&#40;MDX&#41;](/sql/mdx/aggregate-mdx)를 참조하세요.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36186182"
 |`Max`|반가산적|모든 자식 멤버의 최대값을 검색합니다.|  
 |`DistinctCount`|비가산적|모든 고유 자식 멤버의 수를 검색합니다. 자세한 내용은 다음 섹션의 [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) 를 참조하세요.|  
 |`None`|비가산적|집계가 수행되지 않습니다. 차원에 있는 리프 멤버 및 리프가 아닌 멤버의 모든 값은 측정값이 포함된 측정값 그룹의 팩트 테이블에서 직접 제공됩니다. 멤버의 팩트 테이블에서 값을 읽을 수 없는 경우 해당 멤버의 값은 Null로 설정됩니다.|  
-|`ByAccount`|반가산적|계정 차원에 있는 멤버의 계정 유형에 할당된 집계 함수에 따라 집계를 계산합니다. 측정값 그룹에 계정 유형 차원이 없는 경우,으로 처리는 `None` 집계 함수입니다.<br /><br /> 계정 차원에 대한 자세한 내용은 [부모-자식 유형 차원의 재무 계정 만들기](database-dimensions-finance-account-of-parent-child-type.md)를 참조하세요.|  
+|`ByAccount`|반가산적|계정 차원에 있는 멤버의 계정 유형에 할당된 집계 함수에 따라 집계를 계산합니다. 계정 유형 차원이 없는 측정값 그룹에 있는 경우 취급 합니다 `None` 집계 함수입니다.<br /><br /> 계정 차원에 대한 자세한 내용은 [부모-자식 유형 차원의 재무 계정 만들기](database-dimensions-finance-account-of-parent-child-type.md)를 참조하세요.|  
 |`AverageOfChildren`|반가산적|비어 있지 않은 모든 자식 멤버 값의 평균을 계산합니다.|  
 |`FirstChild`|반가산적|첫 번째 자식 멤버의 값을 검색합니다.|  
 |`LastChild`|반가산적|마지막 자식 멤버의 값을 검색합니다.|  

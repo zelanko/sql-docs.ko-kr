@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing job activity
 - jobs [SQL Server Agent], viewing
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - displaying job activity
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a71eb46918d9ae7c0189293b6c67313b6b8a285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4efd9964bc375071fcf4cf078a08099bd7fe3b4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280509"
 ---
 # <a name="view-job-activity"></a>작업 활동 보기
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 작업의 런타임 상태를 보는 방법에 대해 설명합니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작할 때 새 세션이 만들어지고 **sysjobactivity** 데이터베이스의 **sysjobactivity** 테이블에 기존에 정의된 작업이 표시됩니다. 이 테이블은 현재 작업 활동과 상태를 기록합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 활동 모니터를 사용하여 작업의 현재 상태를 볼 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 예기치 않게 종료되는 경우 **sysjobactivity** 테이블을 참조하여 서비스 종료 시 어떤 작업이 실행 중이었는지 확인할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작할 때 새 세션이 만들어지고 **sysjobactivity** 데이터베이스의 **sysjobactivity** 테이블에 기존에 정의된 작업이 표시됩니다. 이 테이블은 현재 작업 활동과 상태를 기록합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 활동 모니터를 사용하여 작업의 현재 상태를 볼 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 예기치 않게 종료되는 경우 **sysjobactivity** 테이블을 참조하여 서비스 종료 시 어떤 작업이 실행 중이었는지 확인할 수 있습니다.  
   
  **항목 내용**  
   
@@ -83,6 +83,6 @@ ms.locfileid: "36185742"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)합니다.  
+ 자세한 내용은 [sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)합니다.  
   
   

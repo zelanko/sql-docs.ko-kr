@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
 - troubleshooting [SQL Server], full transaction log
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adfc6e8f46a916244ddbaf81383ed8c3c169f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254035"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
   이 항목에서는 트랜잭션 로그가 꽉 찼을 때 알맞은 대처 방법에 대해 설명하고 앞으로 이런 상황을 방지하기 위한 방법을 제시합니다. 트랜잭션 로그가 꽉 차면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 9002 오류가 발생합니다. 로그는 데이터베이스가 온라인 상태이거나 복구 중일 때 꽉 찰 수 있습니다. 데이터베이스가 온라인 상태일 때 로그가 꽉 차면 계속 온라인 상태로 유지되지만 데이터베이스를 읽을 수만 있고 업데이트할 수 없습니다. 복구 중에 로그가 꽉 차면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 데이터베이스를 RESOURCE PENDING으로 표시합니다. 두 경우 모두 사용자 동작을 통해 사용 가능한 로그 공간을 만들어야 합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "36186529"
  트랜잭션 로그가 꽉 찬 경우의 적절한 대처 방법은 로그가 꽉 차게 된 조건에 의해서도 영향을 받습니다. 지정된 경우에서 로그 잘림이 발생하지 않는 이유를 확인하려면 **sys.database** 카탈로그 뷰의 **log_reuse_wait** 및 **log_reuse_wait_desc** 열을 사용합니다. 자세한 내용은 [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)를 참조하세요. 로그 잘림을 지연시킬 수 있는 요소에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](the-transaction-log-sql-server.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  데이터베이스 복구 경우 문제를 해결 한 후에 9002 오류가 발생 했을 때 ALTER DATABASE를 사용 하 여 데이터베이스를 복구 *database_name* 를 온라인으로 설정 합니다.  
+>  문제를 해결 한 후 9002 오류가 발생 했을 때 데이터베이스를 복구에서 하는 경우 ALTER DATABASE를 사용 하 여 데이터베이스를 복구할 *database_name* 를 온라인으로 설정 합니다.  
   
  트랜잭션 로그가 꽉 찬 경우의 대처 방법으로 다음 방법을 사용할 수도 있습니다.  
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2306c5d35aa6b36196348c6733430dadbbf0b5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7016c90e98e7719c4566e53b7aa071edf469b080
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269789"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1의 Server Core 설치에서 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 를 구성하는 방법에 대한 자세한 내용을 다룹니다. 다음 섹션을 참조하십시오.  
   
--   [Windows Server에서 Server Core 구성 및 관리](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
+-   [Windows Server의 Server Core 구성 및 관리](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
 -   [SQL Server 업데이트 설치](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
@@ -52,26 +52,26 @@ ms.locfileid: "36186369"
   
  Server Core 설치를 원격으로 구성하고 관리하는 방법에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [Windows Server 2008 R2: Server Core 배포에 대 한 유용한](http://go.microsoft.com/fwlink/?LinkID=245957) 드 (http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2: Server Core 배포에 대 한 유용한](http://go.microsoft.com/fwlink/?LinkID=245957) (http://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Server Core 설치 구성: 개요](http://go.microsoft.com/fwlink/?LinkId=245958) 드 (http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Server Core 설치 구성: 개요](http://go.microsoft.com/fwlink/?LinkId=245958) (http://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Sconfig.cmd를 사용한 Windows Server 2008 r 2의 Server Core 설치 구성](http://go.microsoft.com/fwlink/?LinkId=245959) 드 (http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Sconfig.cmd를 사용한 Windows Server 2008 R2의 Server Core 설치 구성](http://go.microsoft.com/fwlink/?LinkId=245959) (http://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Windows Server 2008 r 2의 Server Core 설치를 실행 하는 서버에 서버 역할 설치: 개요](http://go.microsoft.com/fwlink/?LinkId=245960) 드 (http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Windows Server 2008 R2의 Server Core 설치를 실행 하는 서버의 서버 역할 설치: 개요](http://go.microsoft.com/fwlink/?LinkId=245960) (http://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Windows Server 2008 r 2의 Server Core 설치를 실행 하는 서버에 Windows 기능 설치: 개요](http://go.microsoft.com/fwlink/?LinkId=245961) 드 (http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Windows Server 2008 R2의 Server Core 설치를 실행 하는 서버에 Windows 기능 설치: 개요](http://go.microsoft.com/fwlink/?LinkId=245961) (http://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [Server Core 설치 관리: 개요](http://go.microsoft.com/fwlink/?LinkId=245962) 드 (http://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Server Core 설치 관리: 개요](http://go.microsoft.com/fwlink/?LinkId=245962) (http://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Server Core 설치 관리](http://go.microsoft.com/fwlink/?LinkId=245963) 드 (http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Server Core 설치 관리](http://go.microsoft.com/fwlink/?LinkId=245963) (http://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치  
- 이 섹션에서는 Windows Server Core 시스템에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치에 대한 정보를 제공합니다. 시스템이 최신 보안 업데이트로 업데이트되도록 고객이 적절한 시기에 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 확인하고 설치하는 것이 좋습니다. 설치에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server Core 시스템에서 참조 [Server Core에 SQL Server 2014 설치](install-sql-server-on-server-core.md)합니다.  
+ 이 섹션에서는 Windows Server Core 시스템에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 설치에 대한 정보를 제공합니다. 시스템이 최신 보안 업데이트로 업데이트되도록 고객이 적절한 시기에 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 확인하고 설치하는 것이 좋습니다. 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server Core 컴퓨터에서 참조 [Server Core에 SQL Server 2014 설치](install-sql-server-on-server-core.md)합니다.  
   
  제품 업데이트를 설치하기 위한 두 가지 시나리오는 다음과 같습니다.  
   
--   [새로 설치 하는 동안 SQL Server 2014에 대 한 업데이트 설치](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
+-   [새로 설치 하는 동안 SQL Server 2014 용 업데이트 설치](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
   
 -   [SQL Server 2014 설치한 후에 대 한 업데이트를 설치 합니다.](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
   
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  서버 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 AlwaysOn 가용성 그룹을 사용하도록 설정해야 합니다. AlwaysOn 가용성 그룹 관리에 대한 자세한 내용은 [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>원격으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 사용  
- PC에서 수행 됨을 클라이언트 버전을 실행 하는 다음이 단계는 의미 [!INCLUDE[win7](../../includes/win7-md.md)] 이상, 또는 서버 그래픽 셸이 설치 된 다른 서버 (전체 설치의 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 또는 서버와 Windows Server 8 설치 그래픽 셸 기능이 활성화)입니다.  
+ PC에서 수행할 클라이언트 버전을 실행 하는이 단계는 의미 [!INCLUDE[win7](../../includes/win7-md.md)] 이상 또는 서버 그래픽 셸이 설치 된 다른 서버 (즉, 전체 설치 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 또는 서버를 사용 하 여 Windows Server 8 설치 그래픽 셸 기능이 활성화)입니다.  
   
 1.  컴퓨터 관리를 엽니다. 컴퓨터 관리를 열려면 다음 중 하나를 수행합니다.  
   
@@ -144,7 +144,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 두 번 클릭합니다.  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 클릭 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<인스턴스 이름 >), 여기서 \<인스턴스 이름 >은 AlwaysOn을 사용 하도록 설정할 로컬 서버 인스턴스의 이름 가용성 그룹 속성을 클릭 합니다.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<인스턴스 이름 >), 여기서 \<인스턴스 이름 >은 AlwaysOn을 사용 하도록 설정 하려는 로컬 서버 인스턴스의 이름 가용성 그룹 속성을 클릭 합니다.  
   
 7.  AlwaysOn 고가용성 탭을 선택합니다.  
   
@@ -186,7 +186,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> Server Core에서 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 원격 액세스 구성  
  아래 설명된 작업을 수행하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core SP1에서 실행하는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 인스턴스의 원격 액세스를 구성합니다.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  원격 연결을 설정하려면 SQLCMD.exe를 로컬로 사용하고 Server Core 인스턴스에 대해 다음 문을 실행합니다.  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -253,9 +253,9 @@ $Tcp
 |[sqlagent90 응용 프로그램](../../tools/sqlagent90-application.md)|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 시작하는 데 사용합니다.|\<드라이브>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*instance_name*>\MSSQL\Binn|  
 |[sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[SQLdiag 유틸리티](../../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 서비스 지원 센터에 제공할 진단 정보를 수집하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlmaint 유틸리티](../../tools/sqlmaint-utility.md)|이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 데이터베이스 유지 관리 계획을 실행하는 데 사용합니다.|\<드라이브 >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\ 합니다. MSSQLSERVER\MSSQL\Binn|  
+|[sqlmaint 유틸리티](../../tools/sqlmaint-utility.md)|이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 데이터베이스 유지 관리 계획을 실행하는 데 사용합니다.|\<드라이브 >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 합니다. MSSQLSERVER\MSSQL\Binn|  
 |[sqlps 유틸리티](../../tools/sqlps-utility.md)|PowerShell 명령 및 스크립트를 실행하는 데 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 로드하고 등록합니다.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[sqlservr 응용 프로그램](../../tools/sqlservr-application.md)|문제 해결을 위해 명령 프롬프트에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 시작 및 중지하는 데 사용합니다.|\<드라이브 >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\ 합니다. MSSQLSERVER\MSSQL\Binn|  
+|[sqlservr 응용 프로그램](../../tools/sqlservr-application.md)|문제 해결을 위해 명령 프롬프트에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 시작 및 중지하는 데 사용합니다.|\<드라이브 >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 합니다. MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="BKMK_troubleshoot"></a> 문제 해결 도구 사용  
  [SQLdiag 유틸리티](../../tools/sqldiag-utility.md) 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. SQLdiag는 Microsoft 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  

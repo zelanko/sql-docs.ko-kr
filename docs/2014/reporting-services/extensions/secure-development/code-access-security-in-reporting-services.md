@@ -19,15 +19,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 63c945219362a677c2dcb74f9eda1aff875aa9c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94cae16b2cfd437ff5e2e1d4878ffb027745e3ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218903"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services의 코드 액세스 보안
   코드 액세스 보안은 증명 정보, 코드 그룹 및 명명된 권한 집합 등의 핵심 개념을 기반으로 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 관리자, 보고서 디자이너 및 보고서 서버 구성 요소에는 각각 데이터, 배달, 렌더링 및 보안 확장 프로그램뿐만 아니라 사용자 지정 어셈블리에 대한 코드 액세스 보안을 구성하는 정책 파일이 있습니다. 다음 섹션에서는 코드 액세스 보안에 대한 개요를 제공합니다. 이 섹션에서 다루는 항목에 대한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 “보안 정책 모델”을 참조하십시오.  

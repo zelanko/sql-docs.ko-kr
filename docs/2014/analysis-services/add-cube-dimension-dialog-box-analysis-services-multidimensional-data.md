@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.addcubedimensiondialog.f1
 helpviewer_keywords:
 - Add Cube Dimension dialog box
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff89f880df12126f173f1f5ad47d1841e532262d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ab3e91d2571c4186ad6eeb1e858a6fe5f3f2d53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232423"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>큐브 차원 추가 대화 상자(Analysis Services - 다차원 데이터)
   **의** 큐브 차원 추가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터베이스 차원에 대한 참조를 큐브에 추가할 수 있습니다. 다음 중 하나를 수행하여 **큐브 차원 추가** 대화 상자를 표시할 수 있습니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "36186663"
 >  동일한 데이터베이스 차원에 기반한 둘 이상의 큐브 차원을 큐브에 추가하는 경우 추가 큐브 차원을 롤플레잉 차원이라고 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

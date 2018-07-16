@@ -19,13 +19,13 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db92a9dddb75f8dd7b6856124a8a1abd450f7323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9caf48a0ba48956e6f732a2cd2514422a3d6139a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245233"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
   기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 ErrorCode 및 ErrorColumn에는 오류 번호를 나타내는 숫자 코드와 오류가 발생한 열의 ID만 포함됩니다. 이러한 숫자 값은 해당 오류 설명이 없으므로 사용이 제한적일 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36185425"
 ## <a name="example"></a>예제  
  이 예에서는 변환으로 구성된 스크립트 구성 요소를 사용하여 데이터 흐름의 기존 오류 출력 데이터에 오류 설명 열을 추가합니다.  
   
- 데이터 흐름의 변환으로 사용 하기 위해 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)및 [대 한 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환을](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
+ 데이터 흐름의 변환으로 사용 하 여 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)고 [는 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36185425"
   
 7.  스크립트 변환 편집기에서에 **입력 열** 페이지에서 ErrorCode 열을 선택 합니다.  
   
-8.  에 **입 / 출력** 페이지에서 형식의 새 출력 열을 추가 `String` 라는 **ErrorDescription**합니다. 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
+8.  에 **입 / 출력** 형식의 새 출력 열을 추가, 페이지 `String` 라는 **ErrorDescription**합니다. 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
   
 9. **스크립트 변환 편집기**를 닫습니다.  
   
@@ -90,7 +90,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 오류 처리](../data-flow/error-handling-in-data.md)   

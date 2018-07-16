@@ -20,13 +20,13 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e7b894400b6342064aac4762fc6707eca04962f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 827721e691e197faf0b786db5999b0061e42c516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263199"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>스크립트 태스크 편집기에서 스크립트 태스크 구성
   스크립트 태스크에서 사용자 지정 코드를 작성하려면 먼저 **스크립트 태스크 편집기**의 세 페이지에서 주 속성을 구성해야 합니다. 속성 창에서는 스크립트 태스크에 고유하지 않은 추가 태스크 속성을 구성할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36185648"
  스크립트 태스크 및 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에 있는 **ScriptLanguage** 속성을 사용합니다. 자세한 내용은 [General Page](../../general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
 ### <a name="entrypoint-property"></a>EntryPoint 속성  
- `EntryPoint` 속성은 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임이 VSTA 프로젝트의 `ScriptMain` 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. `ScriptMain` 클래스는 스크립트 템플릿에서 생성 되는 기본 클래스입니다.  
+ `EntryPoint` 속성은 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임이 VSTA 프로젝트의 `ScriptMain` 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. `ScriptMain` 클래스는 스크립트 템플릿에서 생성 된 기본 클래스입니다.  
   
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 `EntryPoint` 속성의 값을 변경해야 합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36185648"
 ## <a name="expressions-page-of-the-script-task-editor"></a>스크립트 태스크 편집기의 식 페이지  
  **스크립트 태스크 편집기**의 **식**에서 식을 사용하여 위에 나열된 스크립트 태스크의 속성과 그 밖의 여러 태스크 속성에 대한 값을 제공할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]정선는 커뮤니티에서 선택 된 솔루션 방문는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조:<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> 최신 다운로드, 문서, 샘플 및 비디오에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]커뮤니티에서 선택된 된 솔루션 방문 뿐만 아니라는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] MSDN 페이지를 참조 합니다.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 태스크 코딩 및 디버깅](coding-and-debugging-the-script-task.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 caps.latest.revision: 4
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d33304db2d5383b6f5c18865a74fea8c086fc43e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f4d8836d16c0ca55c9778dad26ff862e6a46a616
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244653"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>메모리 내 OLTP 가비지 수집
   데이터 행은 더 이상 활성화되지 않는 트랜잭션에서 삭제된 경우 유효하지 않은 것으로 간주됩니다. 유효하지 않은 행에는 가비지 수집을 수행할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]에서 가비지 수집의 특성은 다음과 같습니다.  

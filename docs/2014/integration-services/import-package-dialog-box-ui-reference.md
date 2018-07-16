@@ -1,5 +1,5 @@
 ---
-title: 패키지 대화 상자 UI 참조 가져오기 | Microsoft Docs
+title: 가져오기 패키지 대화 상자 UI 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.importpackage.f1
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc1c4ab12c5617d8c60e898587b664f552709299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e34f7c697df4b7c9ba183adfdf71753e47bf6619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245563"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>패키지 가져오기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 가져오기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 가져오고 해당 패키지의 보호 수준을 설정 또는 수정할 수 있습니다.  
