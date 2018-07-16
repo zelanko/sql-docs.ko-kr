@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], configuration files
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c00a5798cffb73a862aa3d7e8b636b25c2cf3c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ec9a10af6160682df84e112d7ab1fb5a07d787
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251275"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 구성 파일
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 설치 중에 파일 시스템으로 복사되는 구성 파일과 레지스트리에 구성 요소 정보를 저장합니다. 구성 파일에는 내부 전용 값과 사용자 정의 값의 조합이 들어 있습니다. 사용자 정의 값은 설치 프로그램, 구성 도구, 명령줄 유틸리티를 통해 지정하거나 구성 파일을 수동으로 편집하여 지정합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36186015"
  고급 설정을 추가하거나 구성하는 경우에만 구성 파일을 수정해야 합니다. 구성 설정은 XML 요소나 특성으로 지정됩니다. XML과 구성 파일에 대해 이해하고 있으면 텍스트나 코드 편집기를 사용하여 사용자 정의 가능한 설정을 수정할 수 있습니다. 구성 파일을 수정하는 방법 또는 보고서 서버가 새 구성 설정/업데이트된 구성 설정을 읽는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)를 참조하세요.  
   
 > [!NOTE]  
->  이전 버전에서 보고서 관리자에는 RSWebApplication.config라는 자체 구성 파일이 있었습니다. 이 파일은 이제 사용되지 않습니다. 이전 설치에서 업그레이드한 경우 이 파일이 삭제되지 않지만 보고서 서버가 해당 파일에서 설정을 읽지 않습니다. 파일이 컴퓨터에 있는 경우 삭제해야 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 모든 보고서 관리자 구성 설정은 RSReportServer.config 파일에 저장되고 이 파일에서 읽힙니다. 설정을 삭제 또는 이동 된 목록을 참조 하십시오 [SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)합니다.  
+>  이전 버전에서 보고서 관리자에는 RSWebApplication.config라는 자체 구성 파일이 있었습니다. 이 파일은 이제 사용되지 않습니다. 이전 설치에서 업그레이드한 경우 이 파일이 삭제되지 않지만 보고서 서버가 해당 파일에서 설정을 읽지 않습니다. 파일이 컴퓨터에 있는 경우 삭제해야 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 모든 보고서 관리자 구성 설정은 RSReportServer.config 파일에 저장되고 이 파일에서 읽힙니다. 삭제 또는 이동 된 설정 목록을 참조 하세요 [SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)합니다.  
   
  항목 내용  
   
@@ -49,7 +49,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
   
 |저장 위치|Description|위치|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대 한 자세한 내용은 참조 [RSReportServer 구성 파일](rsreportserver-config-configuration-file.md)합니다.|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대 한 자세한 내용은 참조 하세요. [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)합니다.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSMgrPolicy.config|보고서 관리자에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportManager|  
 |보고서 서버 웹 서비스용 Web.config|ASP.NET에 필요한 설정만 포함합니다.|\<Installation directory> \Reporting Services \ReportServer|  
@@ -70,7 +70,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |저장 위치|Description|위치|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대 한 자세한 내용은 참조 [RSReportServer 구성 파일](rsreportserver-config-configuration-file.md)합니다.|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대 한 자세한 내용은 참조 하세요. [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)합니다.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
 |보고서 서버 웹 서비스용 Web.config|ASP.NET에 필요한 설정만 포함합니다.|\<Installation directory> \Reporting Services \ReportServer|  
 |레지스트리 설정|Reporting Services 제거에 사용되는 구성 상태 및 기타 설정을 저장합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 정보도 저장합니다.<br /><br /> 설치가 무효화될 수 있으므로 이러한 설정을 직접 수정하지 마세요.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 예제 인스턴스 ID: MSSQL12.MSSQLSERVER<br /><br /> **-및-**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  

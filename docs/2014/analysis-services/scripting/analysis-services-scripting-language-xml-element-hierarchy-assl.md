@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0811c567582c3bc241a6abae6c2be2405afa68ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab6bcc89947c051dff31f566820e9fa9cdd5077a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274269"
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Analysis Services Scripting Language XML 요소 계층(ASSL)
   다음 표에서는 ASSL(Analysis Services Scripting Language)의 개체 계층을 보여 줍니다.  

@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac5edd8e03f7094bec05298057f081053ef13640
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253015"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 의미 체계 모델 연결(.bism)
-  BI 의미 체계 모델 연결 (.bism)은 Excel를 연결 하는 이식 가능한 연결 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모드의 인스턴스. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  
+  BI 의미 체계 모델 연결 (.bism)은 Excel을 연결 하는 이식 가능한 연결 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모드의 인스턴스. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  
   
- BI 의미 체계 모델 연결은 SharePoint를 통해 만들고 액세스합니다. BI 의미 체계 모델 연결을 만들면 라이브러리에서 BI 의미 체계 모델 연결에 대한 빠른 시작 명령을 사용할 수 있습니다. 빠른 시작 명령은 새 Excel 통합 문서 또는 연결 파일 편집 옵션을 엽니다. 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 설치를 살펴보면를 만드는 명령도 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서입니다.  
+ BI 의미 체계 모델 연결은 SharePoint를 통해 만들고 액세스합니다. BI 의미 체계 모델 연결을 만들면 라이브러리에서 BI 의미 체계 모델 연결에 대한 빠른 시작 명령을 사용할 수 있습니다. 빠른 시작 명령은 새 Excel 통합 문서 또는 연결 파일 편집 옵션을 엽니다. 하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 설치를 살펴보면 만드는 명령도 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서.  
   
- ![빠른 시작 명령의 스크린 샷의 BISM](../media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 실행 명령")  
+ ![빠른 시작 명령의 스크린 샷의 BISM](../media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 시작 명령")  
   
 ##  <a name="bkmk_prereq"></a> 지원되는 데이터베이스  
  BI 의미 체계 모델 연결은 테이블 형식 모델 데이터를 가리킵니다. 이 데이터의 원본은 다음 세 가지입니다.  
   
 -   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스하려면 사용 권한이 추가로 필요합니다. 이에 대해서는 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목에서 설명합니다.  
   
--   SharePoint에 저장된 PowerPivot 통합 문서. Excel 통합 문서 안에 포함된 PowerPivot 데이터베이스는 독립 실행형 Analysis Services 테이블 형식 모드 서버에서 실행되는 테이블 형식 모델 데이터베이스에 해당합니다. 이미 PowerPivot for Excel과 PowerPivot for SharePoint를 사용 하는 경우 빌드를 SharePoint 라이브러리에서 PowerPivot 통합 문서를 가리키는 BI 의미 체계 모델 연결을 정의할 수 있습니다 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 기존 PowerPivot 데이터를 사용 하 여 보고서입니다.  SQL Server 2008 R2 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전의 PowerPivot for Excel에서 만든 통합 문서를 사용할 수 있습니다.  
+-   SharePoint에 저장된 PowerPivot 통합 문서. Excel 통합 문서 안에 포함된 PowerPivot 데이터베이스는 독립 실행형 Analysis Services 테이블 형식 모드 서버에서 실행되는 테이블 형식 모델 데이터베이스에 해당합니다. 하면 이미 PowerPivot for Excel 및 PowerPivot for SharePoint를 사용 하는 경우에 빌드를 SharePoint 라이브러리에서 PowerPivot 통합 문서를 가리키는 BI 의미 체계 모델 연결을 정의할 수 있습니다 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 기존 PowerPivot 데이터를 사용 하 여 보고서입니다.  SQL Server 2008 R2 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전의 PowerPivot for Excel에서 만든 통합 문서를 사용할 수 있습니다.  
   
--   다차원 데이터 모델에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스.  
+-   다차원 데이터 모델을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스.  
   
  데이터 원본의 비교는 커뮤니티 콘텐츠 [SQL Server 2012 BISM(BI 의미 체계 모델) 이해](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)를 참조하세요.  
   
@@ -58,22 +58,22 @@ ms.locfileid: "36187293"
   
  파워 뷰와 테이블 형식 모델 데이터베이스 간의 연결은, 사용자 ID가 클라이언트에서 SharePoint로 전송된 다음 SharePoint에서 팜의 외부에서 실행되는 백 엔드 Analysis Services 테이블 형식 모델 데이터베이스로 전송되는 이중 홉 인증 시퀀스 후에 이루어집니다. 연결 요청을 처리하는 ADOMD.NET 클라이언트 라이브러리는 첫 번째 시도에서 항상 Kerberos를 사용하려고 시도합니다. Kerberos가 구성되어 있으면 사용자 ID는 테이블 형식 모델 데이터베이스로의 연결에 대해 가장하고 연결이 성공합니다.  
   
- Kerberos가 구성 되어 있지 않고 요청이 실패할 경우 Reporting Services는 두 번째 시도를 합니다. 이 시나리오에서 클라이언트 라이브러리는 Reporting Services서비스 ID 및 NTLM 인증을 사용하여 Analysis Services에 연결합니다. Power View 사용자 id 사용 하 여 연결 문자열에 전달 되는 `effectiveusername` 매개 변수입니다.  
+ Kerberos가 구성 되어 있지 않고 요청이 실패할 경우 Reporting Services는 두 번째 시도를 합니다. 이 시나리오에서 클라이언트 라이브러리는 Reporting Services서비스 ID 및 NTLM 인증을 사용하여 Analysis Services에 연결합니다. Power View 사용자의 id를 사용 하 여 연결 문자열에 전달 되는 `effectiveusername` 매개 변수입니다.  
   
  Analysis Services 인스턴스의 시스템 관리자 역할 중 한 멤버만이 `effectiveusername` 매개 변수를 사용하여 연결할 권한을 가지며 서버 인스턴스의 또 다른 사용자를 가장합니다. 따라서 Reporting Services 공유 서비스의 실행 계정은 Analysis Services 인스턴스에 대한 관리 권한을 가져야 합니다.  서비스 계정에 관리 권한을 부여하는 방법에 대한 자세한 내용은 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목을 참조하세요.  
   
- 다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. 마지막 연결을 Analysis Services, Reporting Services 서비스 응용 프로그램 id를 사용 하 여 Windows 사용자 id를 전달 하 여 연결이 이루어집니다 `effectiveusername`합니다.  
+ 다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. Analysis Services, 마지막 연결에서 연결 되는 Reporting Services 서비스 응용 프로그램 id를 사용 하 여 Windows 사용자 id를 전달 하 여 `effectiveusername`입니다.  
   
  ![테이블 형식 데이터베이스에 대 한 가장 된 연결](../media/ssas-powerpivotbismconnection-2.gif "테이블 형식 데이터베이스에 대 한 가장 된 연결")  
   
- **파워 뷰에서 SharePoint의 PowerPivot 데이터 연결**  
+ **파워 뷰에서 SharePoint의 PowerPivot 데이터에 연결**  
   
  SharePoint 사용자가 동일한 팜에 있는 PowerPivot 통합 문서로 확인되는 BI 의미 체계 연결을 클릭하면 연결이 SharePoint 환경의 컨텍스트 내에서 이루어집니다. PowerPivot 서비스 응용 프로그램이 연결 요청을 처리하여 동일한 컴퓨터의 Analysis Services 인스턴스로 전달합니다. Analysis Services 인스턴스가 통합 문서에서 PowerPivot 데이터를 추출하여 로드합니다. 모든 후속 연결은 팜에 있는 PowerPivot 서비스 응용 프로그램에 의해 관리됩니다.  
   
  이 시나리오에서는 모든 연결이 동일한 팜 내에서 이루어지므로 Kerberos나 제한 위임에 대한 요구 사항이 없습니다.  
   
 ##  <a name="bkmk_rel"></a> 관련 작업  
- [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식을 추가 &#40;SharePoint 용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
+ [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint 용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ab904cff026149194c3bd2d242ab448da4be89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09aec1da2c7e9001585b0793b12f0faf89feaf27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235703"
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 행 집합
   서비스가 시작된 이후의 개체별 리소스 사용량을 제공합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_OBJECT_ACTIVITY` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_OBJECT_ACTIVITY` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

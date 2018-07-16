@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e484d362d5bc25a5aeddd6ed2ad9fee417837f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4e2ecc8dbf59ddf108b8090bbcb5ad784b09fe67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242823"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 함수
   지정한 SQL Server Express LocalDB 인스턴스를 시작합니다.  

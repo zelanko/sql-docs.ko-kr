@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cde5dc49851e7d8c808d4a6273f4d4caf6603e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ce6d1ec5ab2fc9c57bd56e12b56b13231e74606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279999"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>태스크 6: 데이터 흐름에 Excel 원본 추가
   이 작업에서는 데이터 흐름에 Excel 원본을 추가하여 원본 Excel 파일에서 공급자 데이터를 읽습니다. Excel 원본은 Microsoft Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다. 자세한 내용은 [Excel 원본](http://msdn.microsoft.com/library/ms141683.aspx) 항목을 참조하십시오.  
@@ -42,7 +42,7 @@ ms.locfileid: "36187525"
   
 7.  **Excel 원본 편집기** 대화 상자의 **Excel 시트의 이름** 목록 상자에서 **IncomingSuppliers$** 를 선택합니다.  
   
-     ![Excel 시트-들어오는 공급자 $ 이름을](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Excel 시트-들어오는 공급자 $의 이름")  
+     ![Excel 시트-들어오는 공급자 $의 이름을](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Excel 시트-들어오는 공급자 $의 이름")  
   
 8.  **미리 보기** 를 클릭하여 Excel 파일의 데이터를 미리 봅니다.  
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01d963c2adacfb7df778787eac5f3ef37a66b1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65f585fe2a6ac0046cebd99878f6e2bf8c5a5061
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250865"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot에서 복원
   SQL Server Management Studio의 PowerPivot 기능에서 복원을 사용하여 테이블 형식 모드에서 실행되는 Analysis Services 인스턴스에서 새 테이블 형식 model 데이터베이스를 만들거나 PowerPivot 통합 문서(.xlsx)에서 기존 데이터베이스를 복원할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server Data Tools의 PowerPivot 프로젝트 템플릿에서 가져오기가 비슷한 기능을 제공합니다. 자세한 내용은 참조 [PowerPivot에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)합니다.  
+>  SQL Server Data Tools의 PowerPivot 프로젝트 템플릿에서 가져오기가 비슷한 기능을 제공합니다. 자세한 내용은 [PowerPivot에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)합니다.  
   
  PowerPivot에서 복원을 사용할 때는 다음 사항에 유의해야 합니다.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "36185264"
   
 ### <a name="to-restore-from-powerpivot"></a>PowerPivot에서 복원하려면  
   
-1.  SSMS의 복원 하려는 Active Directory 인스턴스에서 마우스 오른쪽 단추로 클릭 **데이터베이스**, 클릭 하 고 **PowerPivot에서 복원**합니다.  
+1.  SSMS의 복원 하려는 Active Directory 인스턴스를 마우스 오른쪽 단추로 클릭 **데이터베이스**를 클릭 하 고 **PowerPivot에서 복원**합니다.  
   
-2.  에 **PowerPivot에서 복원** 대화 상자의 **복원 원본**에 **백업 파일**, 클릭 **찾아보기**, 한 다음 복원할.abf 또는.xslx 선택 파일에서 복원입니다.  
+2.  에 **PowerPivot에서 복원** 대화 상자의 **복원 원본**의 **백업 파일**, 클릭 **찾아보기**를 선택한 다음 복원할.abf 또는.xslx를 파일에서 복원입니다.  
   
 3.  **대상 복원**의 **데이터베이스 복원**에 새 데이터베이스 또는 기존 데이터베이스의 이름을 입력합니다. 이름을 지정하지 않으면 통합 문서의 이름이 사용됩니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36185264"
 5.  **옵션**에서 **보안 정보 포함** 을 선택합니다. PowerPivot 통합 문서에서 복원할 때 이 설정은 적용되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 데이터베이스 &#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
- [PowerPivot에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)  
+ [테이블 형식 Model 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
+ [PowerPivot에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

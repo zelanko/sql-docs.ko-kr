@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
@@ -17,13 +17,13 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a3a4e7c39c487830a2368c00b37292d14fc8aecc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bd7b26e51233a042c4d693012b577103718faea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323733"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
   ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정이 들어 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36186013"
  이 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다.  
   
 ## <a name="editing-guidelines"></a>편집 지침  
- 로그 파일 이름을 바꾸거나 추적 수준을 올리거나 내리기 위해 이 파일을 수정할 수 있습니다. 다른 설정은 수정하지 마십시오. 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 추적 로그에 대 한 자세한 내용은 참조 [보고서 서버 서비스 추적 로그](report-server-service-trace-log.md)합니다.  
+ 로그 파일 이름을 바꾸거나 추적 수준을 올리거나 내리기 위해 이 파일을 수정할 수 있습니다. 다른 설정은 수정하지 마십시오. 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 추적 로그에 대 한 자세한 내용은 참조 하세요. [보고서 서버 서비스 추적 로그](report-server-service-trace-log.md)합니다.  
   
 ## <a name="example-configuration"></a>구성 예  
  다음 예에서는 ReportingServicesService.exe.config 파일에 나오는 설정 및 기본값을 보여 줍니다.  

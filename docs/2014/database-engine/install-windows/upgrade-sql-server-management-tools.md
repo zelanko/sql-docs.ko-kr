@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1cfdd0e84020a3cb9eb919b9ac5e9d8ed0055938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2895efa338745f8935674ff42620c1f8d6272652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289428"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서의 업그레이드가 지원됩니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구 및 관리 구성 요소(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 메일, 유지 관리 계획, XPStar 및 XPWeb) 업그레이드를 위한 지원 및 동작에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36187043"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 구성 요소를 동시에 업그레이드해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에서 동일해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 때 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 설치에 구성 요소를 추가할 수 있습니다. 자세한 내용은 참조 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 때 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 설치에 구성 요소를 추가할 수 있습니다. 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 도구(예: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자, sqlcmd, osql)는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되지 않습니다. 대신 클라이언트 도구는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구와 함께 실행됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 클라이언트 도구의 설정을 가져올 수 있습니다.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "36187043"
 ## <a name="see-also"></a>관련 항목  
  [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)   
  [이전 버전과의 호환성](../../getting-started/backward-compatibility.md)   
- [업그레이드를 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ecb8a8b7ada49666d2b6144d1ba258a7c26b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98eb9ba8186c395b598bff6a7ad2ea63ed101999
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261319"
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 요소(ASSL)
   RelationshipEnd의 특성이 관계의 "일" 쪽인지 "다" 쪽인지를 나타냅니다.  

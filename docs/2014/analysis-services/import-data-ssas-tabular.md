@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc8728c2a4e023fb03e0e2de8e3c457e0f15fd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35312647eeb1b452c155c05d7f4392fa540aa156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253565"
 ---
 # <a name="import-data-ssas-tabular"></a>데이터 가져오기(SSAS 테이블 형식)
   다양한 원본의 데이터를 테이블 형식 모델로 가져올 수 있습니다. 이 섹션의 항목에서는 데이터 가져오기 마법사를 사용하여 데이터를 가져올 모델 프로젝트에 연결하고 가져올 데이터를 선택하는 방법에 대해 설명합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "36186859"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[관계형 데이터 원본에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Microsoft SQL Server, Oracle, Teradata 데이터베이스 등의 관계형 데이터 원본에서 데이터를 가져오는 방법을 설명합니다.|  
-|[다차원 데이터 원본에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|다차원 SQL Server Analysis Services 큐브에서 데이터를 가져오는 방법을 설명합니다.|  
-|[데이터 피드에서 데이터 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-a-data-feed-ssas-tabular.md)|Microsoft Reporting Services 보고서나 Azure Data Market 데이터 집합 등의 데이터 피드에서 데이터를 가져오는 방법을 설명합니다.|  
-|[텍스트 파일에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-a-text-file-ssas-tabular.md)|Microsoft Excel 통합 문서 또는 텍스트 파일에서 데이터를 가져오는 방법을 설명합니다.|  
-|[데이터 복사 및 붙여넣기 &#40;SSAS 테이블 형식&#41;](copy-and-paste-data-ssas-tabular.md)|붙여넣기 및 추가하여 붙여넣기를 사용하여 모델 디자이너의 기존 테이블에 데이터를 추가하는 방법을 설명합니다.|  
+|[관계형 데이터 원본에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Microsoft SQL Server, Oracle, Teradata 데이터베이스 등의 관계형 데이터 원본에서 데이터를 가져오는 방법을 설명합니다.|  
+|[다차원 데이터 원본에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|다차원 SQL Server Analysis Services 큐브에서 데이터를 가져오는 방법을 설명합니다.|  
+|[데이터 피드에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-a-data-feed-ssas-tabular.md)|Microsoft Reporting Services 보고서나 Azure Data Market 데이터 집합 등의 데이터 피드에서 데이터를 가져오는 방법을 설명합니다.|  
+|[텍스트 파일에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-a-text-file-ssas-tabular.md)|Microsoft Excel 통합 문서 또는 텍스트 파일에서 데이터를 가져오는 방법을 설명합니다.|  
+|[데이터 복사 및 붙여넣기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](copy-and-paste-data-ssas-tabular.md)|붙여넣기 및 추가하여 붙여넣기를 사용하여 모델 디자이너의 기존 테이블에 데이터를 추가하는 방법을 설명합니다.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 관련된 테이블 선택 (차원 마법사) | Microsoft Docs
+title: 관련된 테이블 (차원 마법사)를 선택 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.selectrelatedtables.f1
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 917f0a874e49376f8055a8c817c13bfb6dd64a5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be23882667a61d0bb93ab208e844fcd4fb072fda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324933"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>관련 테이블 선택(차원 마법사)
   **관련 테이블 선택** 페이지를 사용하여 관련 테이블(주 차원 테이블과 관련된 데이터 원본 뷰의 테이블)을 차원에 포함할 수 있습니다.  

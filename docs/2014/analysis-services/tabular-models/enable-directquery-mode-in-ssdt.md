@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ba954a8f296200070493625803aad263fa71520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93b95dc39c0efb088003af9d5fb8b68cfce11ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310413"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>DirectQuery 디자인 모드를 사용하도록 설정(SSAS 테이블 형식)
   DirectQuery 모드에서 모델을 만들려면 먼저 DirectQuery 모드 사용자를 지원하도록 디자인 타임 환경을 변경해야 합니다. 이렇게 하면 디자이너에서 다음과 같은 작업이 수행됩니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "36088270"
 4.  오류가 발생하면 Visual Studio에서 **오류 목록** 을 열고 모델을 DirectQuery 모드로 전환할 수 없도록 하는 문제를 해결합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)  
+ [DirectQuery 모드 &#40;&AMP;#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)  
   
   

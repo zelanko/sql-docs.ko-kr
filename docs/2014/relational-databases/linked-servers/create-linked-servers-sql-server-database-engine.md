@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294791"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36187412"
 ##  <a name="Security"></a> 보안  
   
 ### <a name="permissions"></a>사용 권한  
- 사용 하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 필요 `ALTER ANY LINKED SERVER` 서버 또는 구성원에 대 한 권한이 **setupadmin** 고정된 서버 역할입니다. 사용 하는 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 필요 `CONTROL SERVER` 권한이 나 멤버 자격에는 **sysadmin** 고정된 서버 역할입니다.  
+ 사용 하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 필요 `ALTER ANY LINKED SERVER` 자격이 확인 하는 서버에 대 한 권한이 합니다 **setupadmin** 고정된 서버 역할입니다. 사용 하는 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 필요 `CONTROL SERVER` 권한 또는 멤버 자격이 합니다 **sysadmin** 고정된 서버 역할입니다.  
   
 ##  <a name="Procedures"></a> 방법: 연결된 서버 만들기  
  다음 중 하나를 사용할 수 있습니다.  
@@ -184,7 +184,7 @@ ms.locfileid: "36187412"
      공급자에 대해 수준 0 OLE DB 인터페이스만 호출됩니다.  
   
      **Inprocess 허용**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공급자가 in-process 서버로 인스턴스화될 수 있습니다. 이 옵션을 설정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하는 것이 기본 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하면 공급자 오류로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스를 보호할 수 있습니다. 외부 공급자 인스턴스가 만들어질 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 처리, 업데이트 또는 삽입 하는 긴 열 참조 (`text`, `ntext`, 또는 `image`)는 허용 되지 않습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공급자가 in-process 서버로 인스턴스화될 수 있습니다. 이 옵션을 설정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하는 것이 기본 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 외부에서 공급자를 인스턴스화하면 공급자 오류로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스를 보호할 수 있습니다. 외부 공급자 인스턴스가 만들어질 때 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 처리, 업데이트 또는 삽입 긴 열 참조 (`text`, `ntext`, 또는 `image`) 허용 되지 않습니다.  
   
      **트랜잭션되지 않은 업데이트**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **ITransactionLocal** 을 사용할 수 없는 경우에도 업데이트를 허용합니다. 이 옵션을 사용하면 공급자가 트랜잭션을 지원하지 않으므로 공급자에 대한 업데이트를 복구할 수 없습니다.  

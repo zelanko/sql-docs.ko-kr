@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd437c11712872df22ecadbf7f0ae0521c09c696
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2a058012e450dbb763e26bd7f9efb3ac45b8ec00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237173"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 모델 배포 마법사를 사용하여 모델 개체만 포함된 패키지를 배포할 수 있습니다. 데이터가 포함된 패키지를 배포해야 하는 경우 [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
@@ -61,7 +61,7 @@ ms.locfileid: "36187631"
   
  **참고:**  
   
--   패키지의 구독 뷰에 구독 뷰 이름이 같은 기존 모델의 경우 뷰가으로 만들어질 *modelname.subscriptionviewname*합니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
+-   패키지의 구독 뷰에 구독 뷰 이름이 기존 모델의 경우 보기로 만들어집니다 *modelname.subscriptionviewname*합니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
   
 -   배포 프로세스는 다음과 같은 4단계로 진행됩니다.  
   

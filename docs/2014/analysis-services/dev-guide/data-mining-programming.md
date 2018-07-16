@@ -16,13 +16,13 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 1ad8f0d8e066fde6f199af26c977b5a9ba3d8917
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: fce4bd16cdc64aeabb2367d757b0b68a5cab6144
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297373"
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 제공 도구 및 뷰어가 사용자의 요구 사항을 충족시키지 못할 경우 사용자 고유의 확장을 코딩하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "36313291"
   
      데이터 마이닝 개체를 XMLA 스크립트에서 전적으로 만들고 수정할 수 있으며, 사용자 고유의 응용 프로그램에서 모델에 대한 예측 쿼리를 프로그래밍 방식으로 실행할 수 있습니다.  
   
--   **Analysis Management Objects (AMO)**  
+-   **AMO (analysis Management Objects)**  
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 또한 타사 데이터 마이닝 공급자가 데이터 마이닝 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 통합할 수 있도록 하는 완전한 프레임워크를 제공합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36313291"
  [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  AMO 프로그래밍 라이브러리를 소개합니다.  
   
- [개발 analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XMLA(XML for Analysis) 및 해당 확장을 소개합니다.  
   
 ## <a name="see-also"></a>관련 항목  

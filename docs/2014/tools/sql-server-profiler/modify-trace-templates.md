@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
 - Profiler [SQL Server Profiler], templates
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 08c08bd8838380ce1054e13697aa6873a8e98860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 131c10dde4557fd7f462a1dd2324819c58bbf1d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200653"
 ---
 # <a name="modify-trace-templates"></a>추적 템플릿 수정
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 실행 중인 로컬 컴퓨터에서 파일에 저장된 템플릿을 수정할 수 있습니다. 이런 파일에서 파생된 템플릿도 수정할 수 있습니다. 기존 템플릿을 수정할 때 **추적 속성** 대화 상자의 **이벤트 선택** 탭에서 속성이 원래 설정된 순서와 동일한 순서대로 이벤트 클래스나 데이터 열 같은 템플릿 속성을 편집합니다. 이벤트 클래스 및 데이터 열을 추가 또는 제거할 수도 있고 필터도 같은 방법으로 변경할 수 있습니다. 템플릿을 수정하면 사용자 특정 템플릿이 만들어지고 원래 시스템 템플릿은 그대로 남습니다. 자세한 내용은 [추적 및 추적 템플릿 저장](save-traces-and-trace-templates.md)을 참조하세요.  
@@ -42,13 +42,13 @@ ms.locfileid: "36187530"
   
  **추적 템플릿을 수정하려면**  
   
- [SQL Server Profiler 사용](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [SQL Server Profiler를 사용 하 여](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
  [Transact-SQL 사용](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
  **추적 템플릿 또는 추적 파일에서 이벤트를 추가하거나 제거하려면**  
   
- [SQL Server Profiler 사용](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [SQL Server Profiler를 사용 하 여](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
  [Transact-SQL 사용](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

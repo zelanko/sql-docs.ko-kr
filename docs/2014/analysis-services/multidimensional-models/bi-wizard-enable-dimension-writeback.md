@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
 - writeback [Analysis Services], setting up
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a05010b2f102170b64df13e4eb079dde8fbe325
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247433"
 ---
 # <a name="enable-dimension-writeback"></a>차원 쓰기 저장(writeback) 설정
   큐브나 차원에 차원 쓰기 저장 기능을 추가하면 수동으로 차원 구조와 멤버를 수정할 수 있습니다. 쓰기 가능 차원에 대한 업데이트는 차원 테이블에 직접 기록됩니다. 이 기능은 차원의 `WriteEnabled` 속성 설정을 변경합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "36185519"
  마법사의 첫 번째 **차원 쓰기 저장(writeback) 설정** 페이지에서 차원 쓰기 저장을 적용할 차원을 지정합니다. 선택한 차원에 차원 쓰기 저장 기능을 추가하면 차원이 변경됩니다. 이러한 변경 내용은 선택된 차원을 포함하는 모든 큐브에 상속됩니다.  
   
 ## <a name="setting-dimension-writeback-capability"></a>차원 쓰기 저장(Writeback) 기능 설정  
- 마법사의 두 번째 **차원 쓰기 저장(writeback) 설정** 페이지에서 실제로 **차원에 쓰기 저장(writeback) 설정** 옵션을 설정합니다. 이 옵션을 선택 하면 자동으로 설정 하는 `WriteEnabled` 차원의 속성 `True`합니다. 이 옵션을 자동으로 취소 속성을 설정 `False`합니다.  
+ 마법사의 두 번째 **차원 쓰기 저장(writeback) 설정** 페이지에서 실제로 **차원에 쓰기 저장(writeback) 설정** 옵션을 설정합니다. 이 옵션을 선택 하면 자동으로 설정 합니다 `WriteEnabled` 차원의 속성 `True`합니다. 속성을 설정 자동으로이 옵션의 선택을 취소 `False`합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 새 멤버를 만들 때 차원에 모든 특성을 포함해야 합니다. 차원의 키 특성 값을 지정하지 않고 멤버를 삽입할 수 없습니다. 따라서 멤버를 만들 때는 차원 테이블에 정의된 모든 제약 조건(예: Null이 아닌 키 값)이 적용됩니다. 지정 된 열과 같은 차원 속성에 의해 선택적으로 지정 된 고려해 야는 `CustomRollupColumn`, `CustomRollupPropertiesColumn` 또는 `UnaryOperatorColumn` 차원 속성입니다.  
+ 새 멤버를 만들 때 차원에 모든 특성을 포함해야 합니다. 차원의 키 특성 값을 지정하지 않고 멤버를 삽입할 수 없습니다. 따라서 멤버를 만들 때는 차원 테이블에 정의된 모든 제약 조건(예: Null이 아닌 키 값)이 적용됩니다. 열에 지정 된 같은 차원 속성에 의해 선택적으로 지정 된 열을도 고려해 야 합니다 `CustomRollupColumn`, `CustomRollupPropertiesColumn` 또는 `UnaryOperatorColumn` 차원 속성입니다.  
   
 > [!WARNING]  
 >  SQL Azure를 데이터 원본으로 사용하여 Analysis Services에 쓰기 저장(writeback)을 수행할 경우 작업이 실패합니다. MARS(Multiple Active Result Set)를 활성화하는 공급자 옵션이 기본적으로 설정되어 있지 않기 때문에 이 작업이 실패하는 것입니다.  

@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURES rowset
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61df846e3b9da7301650a8029d12eb72a218049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab600b39e4a8347e470153cf21510554605d1c71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323073"
 ---
 # <a name="dmschemaminingstructures-rowset"></a>DMSCHEMA_MINING_STRUCTURES 행 집합
   현재 카탈로그의 마이닝 구조에 대한 정보를 열거합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DMSCHEMA_MINING_STRUCTURES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DMSCHEMA_MINING_STRUCTURES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

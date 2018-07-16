@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276379"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  
@@ -46,17 +46,17 @@ ms.locfileid: "36186685"
     > [!NOTE]  
     >  여러 구성을 사용하여 서로 다른 보고서 서버 또는 설정 사이에서 빠르게 전환할 수 있습니다.  
   
-3.  에 **OutputPath** textbox를 입력 하거나 빌드 확인, 배포 및 보고서의 미리 보기에 사용 되는 보고서 정의를 저장할 로컬 파일 시스템 경로 붙여 넣습니다. 이 경로는 프로젝트에 사용하는 경로 및 프로젝트 경로 아래의 자식 폴더인 상대 경로와 달라야 합니다.  
+3.  에 **OutputPath** 텍스트 상자에 입력 하거나 빌드 확인, 배포 및 보고서의 미리 보기에 사용 되는 보고서 정의를 저장할 로컬 파일 시스템의 경로 붙여 넣습니다. 이 경로는 프로젝트에 사용하는 경로 및 프로젝트 경로 아래의 자식 폴더인 상대 경로와 달라야 합니다.  
   
-4.  에 **ErrorLevel** 오류로 보고 되는 텍스트 상자는는 빌드 문제의 심각도 입력 합니다. 값 보다 작거나 같은 심각도 보고서, 데이터 원본 또는 기타 프로젝트 리소스를 빌드할 때 발생 한 문제 수준 **ErrorLevel** 문제는 경고로 보고 되 고, 그렇지 않으면 오류로 보고 됩니다. 오류가 발생하면 빌드 태스크가 실패합니다. 유효한 심각도 수준은 0에서 4까지입니다. 기본값은 2입니다.  
+4.  에 **ErrorLevel** 텍스트 상자에는 문제의 심각도 빌드 오류로 보고 됩니다. 값 보다 작거나 같은 심각도 사용 하 여 보고서, 데이터 원본 또는 기타 프로젝트 리소스를 빌드할 때 발생 한 문제 수준이 **ErrorLevel** 되 고, 그렇지 않으면 오류로 보고 문제를 경고로 보고 됩니다. 오류가 발생하면 빌드 태스크가 실패합니다. 유효한 심각도 수준은 0에서 4까지입니다. 기본값은 2입니다.  
   
      **ErrorLevel** 을 사용하여 빌드의 중요도를 높이거나 낮출 수 있습니다. 예를 들어 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 보고서 서버에 배포하는 동안 지도가 있는 보고서를 빌드할 경우 기본적으로 오류가 표시되고 보고서 빌드가 실패합니다. **ErrorLevel** 을 낮추면 지도가 보고서에서 제거되고 경고가 표시되며 보고서 빌드가 계속됩니다.  
   
-5.  에 **StartItem** 목록에서 보고서 프로젝트가 실행 중일 때 미리 보기 창이 나 브라우저 창에서 표시할 보고서를 선택 합니다.  
+5.  에 **StartItem** 목록 보고서 프로젝트가 실행 중일 때 미리 보기 창이 나 브라우저 창에서 표시 하는 보고서를 선택 합니다.  
   
 6.  **OverwriteDataSources** 목록에서 공유 데이터 원본이 게시될 때마다 서버에서 공유 데이터 원본을 덮어쓰게 하려면 **True** 를 선택하고, 서버에서 데이터 원본을 그대로 유지하려면 **False** 를 선택합니다.  
   
-7.  에 **TargetServerVersion** 목록 중 하나를 선택 합니다는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 선택 또는 **버전 검색** 를 설치 된 버전을 자동으로 결정 식별 하는 서버는 **TargetServer URL** 속성입니다. 기본값은 **SQL Server 2008 R2**입니다.  
+7.  에 **TargetServerVersion** 목록 중 하나를 선택 합니다를 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 누르거나 **버전 검색** 가 자동으로 설치 된 버전을 확인 식별 하는 서버를 **TargetServer URL** 속성입니다. 기본값은 **SQL Server 2008 R2**입니다.  
   
      **TargetServerVersion** 을 사용하여 **TargetServer URL**에 지정된 보고서 서버의 버전에 맞게 OutputPath에 지정된 경로에 있는 빌드된 보고서를 사용자 지정할 수 있습니다.  
   

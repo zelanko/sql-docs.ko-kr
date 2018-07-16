@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306683"
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
   **sqllogship** 응용 프로그램은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
   
- ![항목 링크 아이콘](../../2014/database-engine/media/topic-link.gif "항목 링크 아이콘") 구문 표기 규칙에 대 한 참조 [명령 프롬프트 유틸리티 참조 &#40;데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md)합니다.  
+ ![항목 링크 아이콘](../../2014/database-engine/media/topic-link.gif "항목 링크 아이콘") 구문 표기 규칙에 대 한 참조 [명령 프롬프트 유틸리티 참조 &#40;데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  **sqllogship** 에서 생성된 로그 전달 기록은 로그 전달 백업, 복사 및 복원 작업으로 생성된 기록과 섞여 있습니다. 로그 전달 구성에 대해 백업, 복사 또는 복원 작업을 수행하도록 **sqllogship** 을 반복적으로 사용하려면 해당 로그 전달 작업을 비활성화하는 것을 고려하십시오. 자세한 내용은 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
   
- **sqllogship** 응용 프로그램인 SqlLogShip.exe는 x:\Program Files\Microsoft SQL Server\120\Tools\Binn 디렉터리에 설치 됩니다.  
+ 합니다 **sqllogship** SqlLogShip.exe, 응용 프로그램은 x:\Program Files\Microsoft SQL Server\120\Tools\Binn 디렉터리에 설치 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **sqllogship** 은 Windows 인증을 사용합니다. 명령이 실행될 Windows 인증 계정에는 Windows 디렉터리 액세스 권한 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 권한이 필요합니다. 요구 사항은 **sqllogship** 명령이 **-backup**, **-copy**또는 **-restore** 옵션을 지정하는지에 따라 다릅니다.  

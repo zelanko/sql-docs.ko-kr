@@ -1,5 +1,5 @@
 ---
-title: SQL Server 프로파일러-찾기 대화 상자 | Microsoft Docs
+title: SQL Server Profiler-찾기 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.find.f1
 helpviewer_keywords:
 - Find dialog box
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 12c2fce80877fd14412558b673fa94662b712dba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 311d248acae2b64d106c57f5c7f92024c4174e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199993"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server 프로파일러 - 찾기 대화 상자
   **찾기** 대화 상자를 사용하여 추적에서 특정 문자 또는 단어를 검색할 수 있습니다. 진행 중인 검색을 취소하려면 Esc 키를 누릅니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36187463"
  추적에서 뒤로 검색하여 **다음 찾기** 상자에 입력한 문자의 이전 예를 찾습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [값 또는 추적 중에 데이터 열 찾기 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
+ [값 또는 추적 하는 동안 데이터 열 찾기 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
  [추적 만들기 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [추적 테이블 열기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [추적 파일 열기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   

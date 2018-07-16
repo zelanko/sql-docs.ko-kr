@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, replaying traces
 - Run to Cursor option
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], replaying traces
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e6f0b2068faf1fb5282eb0effd348cb01d4ac91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76ef0ddde1f23d68e198854466a8b0abbbecc427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325283"
 ---
 # <a name="replay-traces"></a>추적 재생
   재생은 추적에 캡처된 작업을 재현하는 기능입니다. 추적을 만들거나 편집할 때 추적을 파일에 저장하면 나중에 재생할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 단일 컴퓨터의 추적 작업만 재생할 수 있습니다. 대규모 작업의 경우 Distributed Replay Utility를 사용하면 여러 컴퓨터의 추적 데이터를 재생할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36185988"
 |-----------|-----------------|  
 |[재생 요구 사항](replay-requirements.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생될 수 있도록 추적 정의에 꼭 포함되어야 하는 이벤트에 대해 설명합니다.|  
 |[재생 옵션 &#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|**의** 재생 구성 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]대화 상자에서 설정할 수 있는 옵션에 대해 설명합니다.|  
-|[추적 재생에 대 한 고려 사항 &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생할 수 없는 추적 이벤트 및 추적 재생이 서버 성능에 미치는 영향에 대해 설명합니다.|  
+|[추적 재생 시 고려 사항 &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생할 수 없는 추적 이벤트 및 추적 재생이 서버 성능에 미치는 영향에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)  

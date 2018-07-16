@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.previewselecttable.f1
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ccaa243593d2885ab935e1cbe4da5c194d36b708
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49207b2d1574593c14ca6b005febebb28864dec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314993"
 ---
 # <a name="preview-selected-table-ssas"></a>선택한 테이블 미리 보기(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 선택된 테이블의 데이터를 미리 보고, 데이터 가져오기에 포함할 열을 선택하고, 선택된 열의 데이터를 필터링할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

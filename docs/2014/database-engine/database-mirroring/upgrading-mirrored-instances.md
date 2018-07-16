@@ -1,37 +1,36 @@
 ---
-title: 서버 인스턴스 업그레이드 시 미러된 데이터베이스에 대 한 작동 중단을 최소화 | Microsoft Docs
+title: 서버 인스턴스 업그레이드 시 미러된 데이터베이스의 가동 중지 시간을 최소화 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300823"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화
-  서버 인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 순차적 업그레이드를 수행 하 여 단일 수동 장애 조치만에 미러된 각 데이터베이스에 대 한 가동 중지 시간을 줄일 수 있습니다 라고는 *롤링 업그레이드*합니다. 롤링 업그레이드란 간단히 말해서 현재 미러링 세션에서 미러 서버 역할을 하고 있는 서버 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(Failover)하고, 이전 주 서버를 업그레이드하고, 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 정확한 프로세스는 업그레이드 중인 서버 인스턴스에서 실행되는 미러링 세션의 개수 및 레이아웃과 운영 모드에 따라 달라집니다.  
+  서버 인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 순차적 업그레이드를 수행 하 여 단일 수동 장애 조치만 미러된 각 데이터베이스에 대 한 가동 중지 시간을 줄일 수 있습니다 이라고는 *롤링 업그레이드*합니다. 롤링 업그레이드란 간단히 말해서 현재 미러링 세션에서 미러 서버 역할을 하고 있는 서버 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(Failover)하고, 이전 주 서버를 업그레이드하고, 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 정확한 프로세스는 업그레이드 중인 서버 인스턴스에서 실행되는 미러링 세션의 개수 및 레이아웃과 운영 모드에 따라 달라집니다.  
   
 > [!NOTE]  
->  서비스 팩 이나 핫픽스를 설치 하려면 롤링 업그레이드를 수행 하는 방법에 대 한 정보를 참조 하십시오. [System with Minimal Downtime에 미러된 데이터베이스에 대 한 서비스 팩을 설치할](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)합니다.  
+>  서비스 팩 이나 핫픽스를 설치 하려면 롤링 업그레이드를 수행 하는 방법에 대 한 내용은 [미러된 데이터베이스에 대 한 서비스 팩을 System with Minimal Downtime 설치](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)합니다.  
   
- **권장된 준비 (모범 사례)**  
+ **권장 되는 준비 (모범 사례)**  
   
  롤링 업그레이드를 시작하기 전에 다음과 같이 하는 것이 좋습니다.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "36079625"
     > [!NOTE]  
     >  새 미러링 세션을 시작하려면 모든 서버 인스턴스가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행해야 합니다.  
   
-3.  장애 조치 후 실행 하는 것이 좋습니다는 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) theprincipal 데이터베이스에서 명령을 합니다.  
+3.  장애 조치 후 실행 하는 것이 좋습니다 합니다 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) theprincipal 데이터베이스에서 명령을 합니다.  
   
 4.  파트너로 참여하는 모든 미러링 세션에서 이제 미러 서버가 된 각 서버 인스턴스를 업그레이드합니다. 이때 여러 서버를 업데이트해야 할 수도 있습니다.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36079625"
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [미러된 데이터베이스 상태 보기&#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [미러된 데이터베이스에 대 한 on a System with Minimal Downtime 서비스 팩 설치](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [미러된 데이터베이스에 대 한 서비스 팩을 System with Minimal Downtime 설치](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 세션에 서비스 강제 수행&#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edd8600e3c8e577ef020d732cce3924252393ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243103"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 통합 보안의 링크
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 코드 조각이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 관리 언어 중 하나로 상호 호출하는 방법을 설명합니다. 개체 간의 이러한 관계를 링크라고 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36186365"
  테이블 액세스 링크는 테이블, 뷰 또는 테이블 반환 함수의 값을 검색하거나 수정하는 것에 해당합니다. 테이블 액세스 링크는 SELECT, INSERT, UPDATE 및 DELETE 권한에 따라 액세스를 보다 세부적으로 제어한다는 점을 제외하고는 호출 링크와 유사합니다.  
   
 ## <a name="gated-links"></a>게이트 링크  
- 게이트 링크는 권한이 설정된 후에는 실행하는 동안 전체 개체 관계에서 권한을 확인하지 않는다는 것을 의미합니다. 두 개체 간에 게이트 링크가 있는 경우 (예를 들어 개체 **x** 용이고 **y**), 개체에 대 한 권한을 **y** 및 기타 개체 개체에서액세스**y** 개체의 생성 시간에만 체크 **x**합니다. 개체의 생성 시 **x**, `REFERENCE` 권한을 확인 **y** 의 소유자에 대해 **x**합니다. 실행 시 (예를 들어 누군가가 호출 하는 경우 개체 **x**), 여부를 검사 권한은 **y** 또는 다른 개체가 정적으로 참조 합니다. 실행 시간에 적절 한 권한이 개체에 대해 검사 됩니다 **x** 자체입니다.  
+ 게이트 링크는 권한이 설정된 후에는 실행하는 동안 전체 개체 관계에서 권한을 확인하지 않는다는 것을 의미합니다. 두 개체 간 게이트 링크가 있는 경우 (예를 들어 개체 **x** 및 개체 **y**), 개체에 대 한 권한을 **y** 개체에서액세스되는다른개체및**y** 개체의 생성 시간에만 검사할지 **x**합니다. 개체 생성 당시 **x**, `REFERENCE` 권한을 확인 **y** 소유자에 대 한 **x**합니다. 실행 시 (예를 들어 개체를 호출 하는 사람이 **x**), 검사 권한은 **y** 또는 정적으로 참조 하는 다른 개체입니다. 실행 시 적절 한 권한이 개체에 대해 검사 됩니다 **x** 자체입니다.  
   
  게이트 링크는 항상 두 개체 사이의 메타데이터 종속성과 함께 사용됩니다. 이 메타데이터 종속성은 다른 개체가 종속되어 있는 경우 개체를 삭제하지 못하게 하는 관계로, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에서 설정합니다.  
   

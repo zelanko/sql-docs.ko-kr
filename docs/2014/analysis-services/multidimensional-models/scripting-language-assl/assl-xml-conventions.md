@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279899"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
   ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36185957"
   
 -   ‘xml:lang’과 같은 표준 XML 특성을 제외한 개체와 속성은 모두 요소로 표현됩니다.  
   
--   요소 이름과 열거형 값의 파스칼식 Microsoft.NET Framework 명명 규칙을 따르는 없는 밑줄을 사용 합니다.  
+-   요소 이름과 열거형 값을 모두 파스칼식 Microsoft.NET Framework 명명 규칙을 따르는 없습니다 밑줄을 사용 합니다.  
   
 -   모든 값의 대/소문자는 유지됩니다. 열거형의 값도 대/소문자를 구분합니다.  
   
@@ -140,10 +140,10 @@ ms.locfileid: "36185957"
   
 -   내부 공백이 유지됩니다.  
   
- `Name` 및 `ID` 속성에는 문자열 요소의 유효한 문자에 대한 특별한 제한이 있습니다. 에 대 한 자세한 내용은 `Name` 및 `ID` 규칙, 참조 [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)합니다.  
+ `Name` 및 `ID` 속성에는 문자열 요소의 유효한 문자에 대한 특별한 제한이 있습니다. 에 대 한 자세한 내용은 `Name` 하 고 `ID` 규칙을 참조 하십시오 [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)합니다.  
   
  `DateTime`  
- A `DateTime` .NET Framework에서 구조입니다. `DateTime` 값은 NULL일 수 없습니다. `DataTime` 데이터 형식에서 지원되는 가장 이른 날짜는 1601년 1월 1일이며 프로그래머는 이 날짜를 `DateTime.MinValue`로 사용할 수 있습니다. 지원되는 가장 낮은 날짜는 `DateTime` 값이 누락되었음을 나타냅니다.  
+ `DateTime` .NET Framework에서 구조입니다. `DateTime` 값은 NULL일 수 없습니다. `DataTime` 데이터 형식에서 지원되는 가장 이른 날짜는 1601년 1월 1일이며 프로그래머는 이 날짜를 `DateTime.MinValue`로 사용할 수 있습니다. 지원되는 가장 낮은 날짜는 `DateTime` 값이 누락되었음을 나타냅니다.  
   
  `Boolean`  
  {true, false} 또는 {0, 1}처럼 두 개의 값만 가지는 열거형입니다.  
@@ -183,6 +183,6 @@ ms.locfileid: "36185957"
   
  `</Dimension>`  
   
- 상속 된 기본값에 대 한 자세한 내용은 참조 하십시오. [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)합니다.  
+ 상속 된 기본값에 대 한 자세한 내용은 참조 하세요. [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)합니다.  
   
   

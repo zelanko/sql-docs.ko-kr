@@ -1,5 +1,5 @@
 ---
-title: 추적 파일 (SQL Server Profiler) 재생 | Microsoft Docs
+title: 재생 추적 파일 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bc4047ddac3d088b92a4854c30eb7342151feb29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 066c9169f99d8180bb49668dfb76e77a468a0126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284339"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>추적 파일 재생(SQL Server Profiler)
   재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36187334"
     -   재생하는 동안 SQL Server가 프로세스를 관리하는 방법을 제어하려면 **상태 모니터 옵션**을 구성합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러 실행에 필요한 권한](sql-server-profiler.md)   
+ [SQL Server Profiler를 실행 하는 데 필요한 사용 권한](sql-server-profiler.md)   
  [추적 재생](replay-traces.md)   
  [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)  

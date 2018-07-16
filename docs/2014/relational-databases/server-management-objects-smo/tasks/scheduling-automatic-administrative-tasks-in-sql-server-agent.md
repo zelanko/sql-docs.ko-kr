@@ -16,15 +16,15 @@ helpviewer_keywords:
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd9f5ca6e2b00893bcf5fea14829d76a18b85fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad4b0fa53b7a15d9ff8118336d0ec0b9d31a4b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256055"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
   SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 다음 개체로 표시됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36186927"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램에 대해 에이전트 네임스페이스를 한정하는 `Imports` 문을 포함해야 합니다. 다음과 같이 응용 프로그램의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
@@ -171,7 +171,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Visual Basic에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | : _Total counterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. `operator`가 Visual Basic 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
   
@@ -180,7 +180,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C#에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | : _Total counterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. `operator`가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
   
@@ -213,7 +213,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | : _Total counterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. `operator`가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
   

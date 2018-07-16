@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0ce5b6f55d8ed8d14b192de800c62237629195e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605f5055d4fc3939cb8b30f123281e3d920db6fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246335"
 ---
 # <a name="dimensionpermissions-element-assl"></a>DimensionPermissions 요소(ASSL)
   에 적용 가능한 권한 컬렉션을 포함 한 [차원](../objects/dimension-element-assl.md) 요소 또는 [CubePermission](../objects/cubepermission-element-assl.md) 요소입니다.  

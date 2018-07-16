@@ -1,5 +1,5 @@
 ---
-title: 로컬 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs
+title: (Analysis Services)는 로컬 파티션 만들기 및 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321273"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>로컬 파티션 만들기 및 관리(Analysis Services)
   처리 성능 향상을 위해 측정값 그룹에 대한 추가 파티션을 만들 수 있습니다. 여러 개의 파티션이 있으면 로컬 서버뿐만 아니라 원격 서버의 해당하는 개수의 실제 데이터 파일에 팩트 데이터를 할당할 수 있습니다. Analysis Services에서는 파티션을 독립적으로 병렬 처리할 수 있어 서버에서 작업을 처리할 때 더 세부적으로 제어할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36187513"
  모델을 디자인할 때 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 나 XMLA를 사용하여 솔루션을 배포한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 파티션을 만들 수 있습니다. 한 가지 방법만 선택하는 것이 좋습니다. 도구를 번갈아 사용하면 이후에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 솔루션을 다시 배포할 때 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 배포된 데이터베이스에 대한 변경 내용이 덮어쓰기될 수도 있습니다.  
   
 ## <a name="before-you-start"></a>시작하기 전 주의 사항  
- 가지고 있는 버전이 비즈니스 인텔리전스 버전인지 엔터프라이즈 버전인지 확인합니다. 스탠더드 버전에서는 여러 파티션을 지원하지 않습니다. 버전을 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **보고서** | **일반**을 선택합니다. 기능 가용성에 대 한 자세한 내용은 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 가지고 있는 버전이 비즈니스 인텔리전스 버전인지 엔터프라이즈 버전인지 확인합니다. 스탠더드 버전에서는 여러 파티션을 지원하지 않습니다. 버전을 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **보고서** | **일반**을 선택합니다. 기능 가용성에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
  나중에 파티션을 병합하려는 경우 처음부터 해당 파티션이 같은 집계 디자인을 공유해야 합니다. 파티션은 집계 디자인과 저장소 모드가 동일한 경우에만 병합할 수 있습니다.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "36187513"
 ## <a name="see-also"></a>관련 항목  
  [파티션 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [원격 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services의 파티션 병합 &#40;SSAS-다차원 데이터&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services의 파티션 병합 &#40;&AMP;#40;SSAS-다차원&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

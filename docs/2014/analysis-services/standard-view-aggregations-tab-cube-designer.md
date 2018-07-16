@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.aggregations.standard.f1
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ada9abd6b87fa00a10158e9e9f2ed1570576bc59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14df3e7e01ccd1bd5a4f0405685f0ec9729f68a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246483"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>표준 뷰(집계 탭, 큐브 디자이너)
   집계 디자이너의 **표준 뷰** 를 사용하여 집계를 볼 수 있습니다. 또한 이 뷰에서 **집계 디자인 마법사** 또는 **사용 빈도 기반 최적화 마법사**를 사용하여 집계 디자인을 만들고 수정할 수도 있습니다.  

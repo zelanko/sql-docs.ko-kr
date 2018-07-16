@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3874e787b6e6923568a9d72277249e949aa31550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae16d1e77e5e7dd16113bd8ee4ed4a0d5234668
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275709"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 저장소 구성
   문자열 저장소에 대한 4GB 파일 크기 제한을 초과하는 차원 특성 또는 파티션의 매우 큰 문자열을 수용할 수 있도록 문자열 저장소를 다시 구성할 수 있습니다. 차원 또는 파티션이 이 크기의 문자열 저장소를 포함하는 경우, 연결된(로컬 또는 원격) 개체는 물론 로컬 개체에 대해 차원 또는 파티션 수준에서 **StringStoresCompatibilityLevel** 속성을 변경하여 파일 크기 제한을 해결할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "36187295"
   
  차원 및 파티션은 MOLAP 저장소를 사용해야 합니다.  
   
- 데이터베이스 호환성 수준이 1100으로 설정되어야 합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 데이터베이스를 만들거나 배포하는 경우 데이터베이스 호환성 수준은 이미 1100으로 설정되어 있습니다. 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스를 ssSQL11 이상으로 이동한 경우 호환성 수준을 업데이트해야 합니다. 이동은 하지만 다시 배포하지 않으려는 데이터베이스의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 호환성 수준을 설정할 수 있습니다. 자세한 내용은 참조 [다차원 데이터베이스의 호환성 수준을 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)합니다.  
+ 데이터베이스 호환성 수준이 1100으로 설정되어야 합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 데이터베이스를 만들거나 배포하는 경우 데이터베이스 호환성 수준은 이미 1100으로 설정되어 있습니다. 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스를 ssSQL11 이상으로 이동한 경우 호환성 수준을 업데이트해야 합니다. 이동은 하지만 다시 배포하지 않으려는 데이터베이스의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 호환성 수준을 설정할 수 있습니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준을 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)합니다.  
   
 ##  <a name="bkmk_step1"></a> 1단계: SQL Server Data Tools에서 StringStoreCompatiblityLevel 속성 설정  
   

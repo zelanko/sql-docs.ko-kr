@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c39eaa58152fd1a75eeaefdc79bae93ccd36b98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304723"
 ---
 # <a name="exploring-and-cleaning-data"></a>데이터 탐색 및 지우기
   데이터 준비는 데이터 정리보다 훨씬 많이 수행됩니다. 데이터가 준비되는 방식은 결과가 결국 해석되는 방식에도 영향을 미칩니다. 데이터 준비는 다음과 같은 태스크로 이루어집니다.  
@@ -36,13 +36,13 @@ ms.locfileid: "36079889"
   
 -   분석에 필요한 경우 데이터 형식 변환 또는 값 범주화  
   
- 데이터 모델링을 처음 접하는 경우 관련된 항목을 읽는 것이 좋습니다 [데이터 마이닝을 위한 준비의 검사 목록](checklist-of-preparation-for-data-mining.md)합니다.  
+ 데이터 모델링을 처음 접하는 경우 관련된 항목을 읽어보는 것이 좋습니다 [검사 목록의 Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)합니다.  
   
 ## <a name="data-preparation-tools"></a>데이터 준비 도구  
  Office용 데이터 마이닝 추가 기능에는 다음과 같은 데이터 정리 및 준비 도구가 포함됩니다.  
   
 ### <a name="explore-data"></a>데이터 탐색  
- 사용 하 여 **데이터 탐색** 이러한 데이터 준비 작업에 대 한 마법사:  
+ 사용 된 **데이터 탐색** 이러한 데이터 준비 작업에 대 한 마법사:  
   
 -   분석하기 전에 데이터를 미리 보고 수정이 필요한 오류를 식별합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36079889"
  [데이터 탐색 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](explore-data-sql-server-data-mining-add-ins.md)합니다.  
   
 ### <a name="detect-and-handle-outliers"></a>이상값 검색 및 처리  
- **이상 값** 마법사는 데이터의 값 분포가 그래프로 표시 하 고 극단적인 값을 제거할 수 있습니다. 사용 하 여 **이상 값** 다음 데이터 준비 작업에 대 한 도구:  
+ 합니다 **이상** 마법사에 데이터의 값 분포가 그래프로 표시 되며 극단적인 값을 제거할 수 있습니다. 사용 된 **이상** 다음 데이터 준비 작업에 대 한 도구:  
   
 -   데이터의 패턴에 따라 개별 값을 신뢰할 수 있는지 확인합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36079889"
  [이상 값 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](outliers-sql-server-data-mining-add-ins.md)합니다.  
   
 ### <a name="relabel-and-bin-data"></a>데이터 레이블 재지정 및 범주화  
- **레이블 재지정** 마법사는 데이터에 있는 레이블을 변경할 수 있도록 값으로 데이터를 그룹화 합니다. 다음 데이터 준비 작업에 레이블 재지정 도구를 사용합니다.  
+ 합니다 **레이블 재지정** 마법사 데이터의 레이블을 변경할 수 없도록 값으로 데이터를 그룹화 합니다. 다음 데이터 준비 작업에 레이블 재지정 도구를 사용합니다.  
   
 -   설문 조사 결과에 사용된 숫자 코드를 해당 숫자 코드가 의미하는 바에 대한 텍스트 설명으로 변경합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36079889"
   
 -   숫자 범위를 나타내는 그룹을 만들어 데이터를 범주화합니다.  
   
-     와 같은 숫자의 Income 열 레이블이 대체 하려는 하는 예를 들어 **수입-보통** 및 **수입-높음**합니다.  
+     숫자의 Income 열 레이블와 같은 대체 하려는 하는 예를 들어 **수입-보통** 하 고 **수입-높음**합니다.  
   
 -   고유 값들을 범주별로 분류합니다.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "36079889"
 ### <a name="sample-data"></a>데이터 샘플링  
  데이터 샘플링 마법사에서 모델 학습 및 테스트에 사용되는 균형 잡힌 데이터 집합을 만드는 방법은 두 가지입니다.  
   
--   **무작위 샘플링 합니다.** 학습 또는 테스트에 사용하기 위해 큰 데이터 집합에서 대표성을 지닌 데이터 집합을 추출하려면 이 옵션을 사용합니다. 데이터 마이닝 추가 기능에서 사용 하 여 *층 별 샘플링* 균형 잡힌된 값 집합을 샘플링 된 각 변수에 대해 가져온가 되도록 합니다.  
+-   **무작위 샘플링 합니다.** 학습 또는 테스트에 사용하기 위해 큰 데이터 집합에서 대표성을 지닌 데이터 집합을 추출하려면 이 옵션을 사용합니다. 데이터 마이닝 추가 기능 사용 *층 별 샘플링* 에 샘플링 된 각 변수에 대해 균형 잡힌된 값 집합은 가져온 것인지 확인 합니다.  
   
 -   **과다 샘플링 합니다.** 대상 결과에 사용하려는 것보다 데이터의 양이 적고 해당 데이터의 가중치를 높게 잡아야 하는 경우 이 옵션을 사용합니다. 예를 들어 부정 행위가 거의 발생하지 않을 수 있지만 부정 행위와 관련된 사례를 과다 샘플링하여 모델링에 충분한 데이터를 구할 수 있습니다.  
   
- [데이터 샘플 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](sample-data-sql-server-data-mining-add-ins.md)합니다.  
+ [샘플 데이터 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](sample-data-sql-server-data-mining-add-ins.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 모델 만들기](creating-a-data-mining-model.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290229"
 ---
 # <a name="saving-reports-report-builder"></a>보고서 저장(보고서 작성기)
   보고서 작성기에서 보고서 서버, SharePoint 라이브러리, 쓰기 권한이 있는 파일 공유 또는 컴퓨터에 보고서를 저장할 수 있습니다. 보고서를 연 동일한 위치에 보고서를 저장하거나, 다른 위치에 보고서를 저장하거나, 동일한 위치나 다른 위치에 새 이름으로 보고서를 저장할 수 있습니다. 기본적으로 보고서는 보고서를 연 위치에 다시 저장됩니다. 보고서를 저장할 때 실제로 저장하는 것은 보고서 레이아웃을 설명하는 보고서 정의이며, 데이터를 저장하지는 않습니다. 보고서를 실행할 때마다 보고서 데이터는 새로 고쳐지고 보고서를 이전에 실행했을 때와 다를 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36092355"
   
  보고서 서버에서 보고서를 직접 보고 관리하는 방법에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) 및 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
   
-##  <a name="SavingReportDefinitions"></a> 보고서 정의 저장  
+##  <a name="SavingReportDefinitions"></a> 보고서 정의 저장 하는 중  
  컴퓨터에 보고서를 저장할 수 있지만 보고서 서버에 보고서를 저장하면 많은 이점이 있습니다.  
   
  보고서 서버에 보고서를 저장하면 다음과 같은 이점이 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36092355"
 
   
 ##  <a name="ExportingAndSavingReports"></a> 보고서 내보내기 및 저장  
- 보관할 보고서가 적으면 보고서를 파일로 내보내고 저장하는 것이 좋습니다. PDF나 Excel 등의 응용 프로그램으로 보고서를 내보내면 보고서를 파일로 저장하여 네트워크의 보호된 공유 디렉터리에 보관할 수 있습니다. 또는 보고서의 모든 복사본을 형식에 관계없이 보고서 서버 데이터베이스에 보관하려는 경우 저장된 PDF나 Excel 파일을 리소스 항목으로 업로드할 수 있습니다. 보고서 내보내기에 대 한 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 및 [파일 또는 보고서 업로드 &#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md)합니다.  
+ 보관할 보고서가 적으면 보고서를 파일로 내보내고 저장하는 것이 좋습니다. PDF나 Excel 등의 응용 프로그램으로 보고서를 내보내면 보고서를 파일로 저장하여 네트워크의 보호된 공유 디렉터리에 보관할 수 있습니다. 또는 보고서의 모든 복사본을 형식에 관계없이 보고서 서버 데이터베이스에 보관하려는 경우 저장된 PDF나 Excel 파일을 리소스 항목으로 업로드할 수 있습니다. 보고서를 내보내는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 하 고 [파일 또는 보고서 업로드 &#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
@@ -81,10 +81,10 @@ ms.locfileid: "36092355"
 
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 파트를 보고서 및 보고서 정의 &#40;보고서 작성기 및 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [보고서, 보고서 파트 및 보고서 정의 &#40;보고서 작성기 및 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

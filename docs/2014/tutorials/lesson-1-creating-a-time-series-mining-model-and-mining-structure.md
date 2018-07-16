@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: e6092c624d6fbbac57411d3e6d2e1c65c437a7d6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251185"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기
   이 단원에서는 기록 데이터를 기반으로 시간 경과에 따라 값을 예측할 수 있는 마이닝 모델을 만듭니다. 모델을 만들면 기본 구조가 자동으로 생성되고 추가 마이닝 모델에 대한 기초로 사용될 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36312311"
  이 단원에서는 사용자가 예측 모델과 Microsoft 시계열 알고리즘의 요구 사항을 잘 알고 있다고 가정합니다. 자세한 내용은 [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)을 참조하세요.  
   
 ## <a name="create-mining-model-statement"></a>CREATE MINING MODEL 문  
- 사용 하기 위해 직접 마이닝 모델을 만들려면 기본 마이닝 구조를 자동으로 생성 하는 경우는 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 마이닝 모델을 직접 만들고 기본 마이닝 구조를 자동으로 생성, 하기 위해 사용 하는 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) 문. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   모델 이름 지정  
   
@@ -55,7 +55,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Analysis Services에서는 모델 이름에 "_structure"를 추가하여 기본 구조의 이름을 자동으로 생성하므로 구조 이름이 모델 이름과 달리 고유합니다. DMX에서 개체 이름을 지정 하는 방법에 대 한 정보를 참조 하십시오. [식별자 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)합니다.  
+ Analysis Services에서는 모델 이름에 "_structure"를 추가하여 기본 구조의 이름을 자동으로 생성하므로 구조 이름이 모델 이름과 달리 고유합니다. DMX에서 개체를 이름 지정에 대 한 자세한 내용은 [식별자 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)합니다.  
   
  코드의 다음 줄에서는 시계열 모델의 경우 원본 데이터의 시간 단계를 고유하게 식별하는 마이닝 모델에 대한 키 열을 정의합니다. 시간 단계는 열 이름과 데이터 형식 뒤에 `KEY TIME` 키워드로 식별합니다. 시계열 모델에 별도의 계열 키가 있으면 `KEY` 키워드를 사용하여 해당 키를 식별합니다.  
   
@@ -85,9 +85,9 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**, 형식 `LocalHost`의 인스턴스의 이름 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 단원에 연결 하 고 원하는 합니다. **연결**을 클릭합니다.  
+2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**, 형식 `LocalHost`, 또는 인스턴스의 이름을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 단원에 연결 하려는 합니다. **연결**을 클릭합니다.  
   
-3.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+3.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -178,10 +178,10 @@ CREATE MINING MODEL [Mining Model Name]
   
 6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Forecasting_MIXED.dmx`합니다.  
+7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Forecasting_MIXED.dmx`입니다.  
   
 ## <a name="executing-the-query"></a>쿼리 실행  
- 마지막 단계는 쿼리를 실행하는 것입니다. 쿼리를 만들어 저장한 다음 서버에 마이닝 모델 및 해당 마이닝 구조를 만들려면 해당 쿼리를 실행해야 합니다. 쿼리 편집기에서 쿼리를 실행 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)합니다.  
+ 마지막 단계는 쿼리를 실행하는 것입니다. 쿼리를 만들어 저장한 다음 서버에 마이닝 모델 및 해당 마이닝 구조를 만들려면 해당 쿼리를 실행해야 합니다. 쿼리 편집기에서 쿼리를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)합니다.  
   
 #### <a name="to-execute-the-query"></a>쿼리를 실행하려면  
   

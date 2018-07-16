@@ -16,28 +16,28 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9562c7aab750f4114ef59c1a7c17f44c8e3b05e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0adbcc122e87ef95a349b357f0cfd173bd98a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220293"
 ---
 # <a name="amo-security-classes"></a>AMO 보안 클래스
   
  다음 그림에서는 이 항목에 설명된 클래스의 관계를 보여 줍니다.  
   
- ![이 항목에서 amo에서 보안 클래스 설명](../../../analysis-services/dev-guide/media/amo-securityclasses.gif "AMO의 보안 클래스는이 항목의 내용")  
+ ![이 항목에서 amo에서 보안 클래스 설명](../../../analysis-services/dev-guide/media/amo-securityclasses.gif "이 항목에서 설명에서 AMO 보안 클래스")  
   
 ##  <a name="RolesMembers"></a> Role 및 RoleMember 개체  
  <xref:Microsoft.AnalysisServices.Role> 개체를 데이터베이스의 역할 컬렉션에 추가한 다음 Update 메서드를 사용하여 서버로 업데이트하면 <xref:Microsoft.AnalysisServices.Role> 개체가 만들어집니다. <xref:Microsoft.AnalysisServices.Role> 개체를 사용하려면 먼저 업데이트해야 합니다.  
   
  <xref:Microsoft.AnalysisServices.Role> 개체를 제거하려면 <xref:Microsoft.AnalysisServices.Role> 개체의 Drop 메서드를 사용하여 삭제해야 합니다. 역할 컬렉션의 Remove 메서드를 사용하더라도 역할이 서버에서 제거되지는 않습니다. 해당 역할이 응용 프로그램에 표시되지 않을 뿐입니다. <xref:Microsoft.AnalysisServices.Role> 개체에 연결된 권한이 있으면 해당 개체를 삭제할 수 없습니다.  
   
- A <xref:Microsoft.AnalysisServices.RoleMember> 사용자 역할의 멤버 컬렉션에 추가 하 고 업데이트 하 여 개체를 만듭니다는 <xref:Microsoft.AnalysisServices.Role> Update 메서드를 사용 하 여 서버에는 개체입니다. 서버 관리자 또는 데이터베이스 관리자에게만 역할을 만들 수 있는 권한이 있습니다. 먼저 <xref:Microsoft.AnalysisServices.Role> 개체를 서버로 업데이트해야 해당 멤버가 사용자에게 권한이 부여된 개체를 사용할 수 있습니다.  
+ A <xref:Microsoft.AnalysisServices.RoleMember> 사용자 역할의 멤버 컬렉션에 추가 하 고 업데이트 하 여 개체를 만들는 <xref:Microsoft.AnalysisServices.Role> Update 메서드를 사용 하 여 서버에는 개체입니다. 서버 관리자 또는 데이터베이스 관리자에게만 역할을 만들 수 있는 권한이 있습니다. 먼저 <xref:Microsoft.AnalysisServices.Role> 개체를 서버로 업데이트해야 해당 멤버가 사용자에게 권한이 부여된 개체를 사용할 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.RoleMember> 개체를 제거하려면 컬렉션의 Remove 메서드를 사용하여 컬렉션에서 개체를 제거한 다음 Update 메서드를 사용하여 역할을 업데이트해야 합니다.  
   

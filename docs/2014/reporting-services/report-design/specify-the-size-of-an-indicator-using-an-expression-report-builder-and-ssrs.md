@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a43c85e5bfc36927b5374d8fb5e2165c01482c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e2dbeac74a4640102ea6a8ccc41f6fc33ca6eec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301853"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>식을 사용하여 표시기 크기 지정(보고서 작성기 및 SSRS)
   색, 방향 및 모양 외에 크기도 표시기의 시각적 효과를 최대화하는 데 사용할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36078977"
   
  **속성** 창에서 표시기의 IndicatorStates 컬렉션 속성에 액세스할 수 있습니다. 아이콘을 다양한 크기로 구성하려면 식을 사용하여 IndicatorStates 컬렉션 멤버의 ScaleFactor 속성을 설정합니다. 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
- 이 절차에 사용 된 식에 표시 된 표시기의 다양 한 크기를 사용 하 여 보고서를 생성 하려면 에서도 사용 되었습니다 [표시기 &#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)합니다.  
+ 표시기가에서 다양 한 크기를 사용 하 여 보고서를 생성 하려면이 절차에 사용 된 식 에서도 사용 되었습니다 [표시기 &#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

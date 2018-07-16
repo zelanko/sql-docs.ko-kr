@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325153"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약(SharePoint용 PowerPivot)
   SharePoint 사이트에 게시한 Excel 통합 문서 내의 PowerPivot 데이터가 자동으로 업데이트되도록 데이터 새로 고침을 예약할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36187089"
   
  [데이터 새로 고침 개요](#intro)  
   
- [데이터 새로 고침 설정 및 예약](#drenablesched)  
+ [사용 및 일정 데이터 새로 고침](#drenablesched)  
   
  [데이터 새로 고침 확인](#drverify)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36187089"
   
  개별 데이터 원본에 대한 세분화된 일정을 만들면 새로 고침 일정을 외부 데이터 원본의 변동에 맞출 수 있습니다. 예를 들어 외부 데이터 원본에 하루 동안 생성된 트랜잭션 데이터가 포함되는 경우 해당 데이터 원본에 대한 개별 데이터 새로 고침 일정을 만들어 매일 밤 업데이트된 정보를 가져올 수 있습니다.  
   
-##  <a name="drenablesched"></a> 데이터 새로 고침 설정 및 예약  
+##  <a name="drenablesched"></a> 사용 및 일정 데이터 새로 고침  
  다음 지침에 따라 SharePoint 라이브러리에 게시되는 Excel 통합 문서 내의 PowerPivot 데이터에 대한 데이터 새로 고침 일정을 예약할 수 있습니다.  
   
 1.  통합 문서가 포함된 라이브러리에서 통합 문서를 선택한 다음 아래쪽 화살표를 클릭하여 명령 목록을 표시합니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "36187089"
   
     3.  사용하려는 이전에 저장된 자격 증명이 포함된 대상 응용 프로그램의 ID를 알고 있는 경우 **보안 저장소 서비스에 저장된 자격 증명을 사용하여 연결** 을 선택합니다.  
   
-     이러한 옵션에 대 한 자세한 내용은 참조 [PowerPivot 데이터 새로 고침에 대 한 저장 된 자격 증명 구성 &#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) 및 [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)합니다.  
+     이러한 옵션에 대 한 자세한 내용은 참조 하세요. [PowerPivot 데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint 용 PowerPivot&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) 하 고 [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)합니다.  
   
 9. 데이터 원본에서 데이터 새로 고침 수행 시 원래 데이터 원본을 모두 다시 쿼리하려는 경우 **모든 데이터 원본** 확인란을 선택합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36187089"
   
     -   데이터 원본을 데이터 새로 고침이 수행될 때와 명시된 위치에서 사용할 수 있어야 합니다. 원래 데이터 원본이 통합 문서를 작성한 사용자의 로컬 디스크 드라이브에 있을 경우 데이터 새로 고침 작업에서 해당 데이터 원본을 제외하거나 네트워크 연결을 통해 액세스할 수 있는 위치에 해당 데이터 원본을 게시할 방법을 찾아야 합니다. 데이터 원본을 네트워크 위치로 이동한 경우에는 [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]에서 통합 문서를 열고 데이터 원본 연결 정보를 업데이트해야 합니다. PowerPivot 통합 문서에 저장되어 있는 연결 정보를 다시 설정하기 위해 이 작업이 필요합니다.  
   
-    -   PowerPivot 통합 문서에 포함되어 있거나 일정에 지정된 자격 증명 정보를 사용하여 데이터 원본에 액세스해야 합니다. 포함된 자격 증명 정보는 PowerPivot for Excel을 사용하여 데이터를 가져올 때 PowerPivot 통합 문서에 저장됩니다. 포함된 자격 증명 정보는 SSPI=IntegratedSecurity 또는 SSPI=TrustedConnection인 경우가 많습니다. 이는 현재 사용자의 자격 증명을 사용하여 데이터 원본에 연결함을 의미합니다. 데이터 새로 고침 일정에서 자격 증명 정보를 재정의하려는 경우 미리 정의된 저장된 자격 증명을 지정할 수 있습니다. 자세한 내용은 참조 [PowerPivot 데이터 새로 고침에 대 한 저장 된 자격 증명 구성 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
+    -   PowerPivot 통합 문서에 포함되어 있거나 일정에 지정된 자격 증명 정보를 사용하여 데이터 원본에 액세스해야 합니다. 포함된 자격 증명 정보는 PowerPivot for Excel을 사용하여 데이터를 가져올 때 PowerPivot 통합 문서에 저장됩니다. 포함된 자격 증명 정보는 SSPI=IntegratedSecurity 또는 SSPI=TrustedConnection인 경우가 많습니다. 이는 현재 사용자의 자격 증명을 사용하여 데이터 원본에 연결함을 의미합니다. 데이터 새로 고침 일정에서 자격 증명 정보를 재정의하려는 경우 미리 정의된 저장된 자격 증명을 지정할 수 있습니다. 자세한 내용은 [PowerPivot 데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint 용 PowerPivot&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
     -   지정한 모든 데이터 원본에 대해 데이터 새로 고침이 성공해야 합니다. 그렇지 않으면 새로 고친 데이터가 무시되고 마지막으로 저장한 통합 문서 버전이 남게 됩니다. 확신할 수 없는 데이터 원본은 제외합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36187089"
  데이터 새로 고침 문제 해결에 대한 도움말은 TechNet WIKI의 PowerPivot 데이터 새로 고침 문제 해결 페이지를 검토하십시오. 자세한 내용은 이 항목에서 [PowerPivot 데이터 새로 고침 문제 해결](http://go.microsoft.com/fwlink/?LinkId=251594)을 참조하십시오.  
   
 > [!NOTE]  
->  SharePoint 관리자가 중앙 관리의 PowerPivot 관리 대시보드에서 통합 데이터 새로 고침 보고서를 검토하여 데이터 새로 고침 문제를 해결할 수 있도록 도와 줍니다. 자세한 내용은 참조 [PowerPivot 관리 대시보드 및 사용 현황 데이터](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)합니다.  
+>  SharePoint 관리자가 중앙 관리의 PowerPivot 관리 대시보드에서 통합 데이터 새로 고침 보고서를 검토하여 데이터 새로 고침 문제를 해결할 수 있도록 도와 줍니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 2010에서 PowerPivot 데이터 새로 고침](powerpivot-data-refresh-with-sharepoint-2010.md)   

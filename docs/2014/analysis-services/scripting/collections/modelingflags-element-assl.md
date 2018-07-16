@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 219b5b7dfc0ff50a1dfe5a49be69121925ce63ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcaab47515c02a2ba40a6fb837309a7f5bed4308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207913"
 ---
 # <a name="modelingflags-element-assl"></a>ModelingFlags 요소(ASSL)
-  컬렉션을 포함 [ModelingFlag](../objects/modelingflag-element-assl.md) 의 열에 대 한 요소는 [MiningStructure](../objects/miningstructure-element-assl.md) 또는 [MiningModel](../objects/miningmodel-element-assl.md)합니다.  
+  컬렉션을 포함 [ModelingFlag](../objects/modelingflag-element-assl.md) 의 열에 대 한 요소를 [MiningStructure](../objects/miningstructure-element-assl.md) 또는 [MiningModel](../objects/miningmodel-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   

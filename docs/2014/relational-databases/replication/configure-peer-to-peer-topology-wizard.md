@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Configure Peer-to-Peer Topology Wizard
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46a2e4679d9bb807bcde2fbd869a25f62dfd430d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: febce52fe43b4b0494c6c8a6d754f85049b1f2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254075"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>피어 투 피어 토폴로지 구성 마법사
   이 섹션에서는 피어 투 피어 토폴로지 구성 마법사의 모든 페이지에 대한 정보를 제공합니다.  

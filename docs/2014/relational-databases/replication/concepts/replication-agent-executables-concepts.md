@@ -18,15 +18,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 44351b4adda94c65362d495aad5b7db3e4d68bd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b13a99e38dae51035a90385df3f5737969c9cc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238753"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
   다음과 같은 방법으로 복제 에이전트를 프로그래밍 방식으로 제어할 수 있습니다.  

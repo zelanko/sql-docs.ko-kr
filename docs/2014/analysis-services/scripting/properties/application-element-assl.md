@@ -1,5 +1,5 @@
 ---
-title: Application 요소 (ASSL) | Microsoft Docs
+title: 응용 프로그램 요소 (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279499"
 ---
 # <a name="application-element-assl"></a>Application 요소(ASSL)
-  와 연결 된 응용 프로그램을 식별 한 [동작](../objects/action-element-assl.md) 요소입니다.  
+  연결 된 응용 프로그램을 식별 하는 [동작](../objects/action-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36079649"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[동작](../objects/action-element-assl.md) 또는 해당 파생 된 요소 중 하나: [DrillThroughAction](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
+|부모 요소|[동작](../objects/action-element-assl.md) 또는 해당 파생 된 요소 중 하나: [DrillThroughAction](../data-type/action-data-type-assl.md)하십시오 [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
  `Application` 요소는 클라이언트 응용 프로그램에서 특정 클라이언트 응용 프로그램에 적용되는 동작을 확인하는 데 사용할 수 있습니다. 클라이언트 응용 프로그램에서는 이 요소 값을 계산해야 합니다.  
   
- 부모에 해당 하는 요소 `Application` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
+ 부모에 해당 하는 요소가 `Application` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Action>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Actions 요소 &#40;ASSL&#41;](../collections/actions-element-assl.md)   

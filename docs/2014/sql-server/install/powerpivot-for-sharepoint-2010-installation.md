@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26f7d5188f5c119bcd4fd114e955638f22b9efd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db5a6400ee6191c6be328857ea44365238adcab6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232525"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>SharePoint 2010용 PowerPivot 설치
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]는 SharePoint에 게시하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 쿼리 처리 및 관리 제어를 제공하는 서버 구성 요소의 모음입니다. 서비스에는 Analysis Services 엔진 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스가 포함됩니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "36187550"
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 및 SharePoint Server 2013과 함께 설치하는 방법은 다음을 참조하십시오.  
 >   
->  -   "SQL Server 2012 SP1" 섹션 [의 SQL Server 서비스 설치 개요](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)합니다.  
+>  -   "SQL Server 2012 SP1" 섹션 [SQL Server 서비스 설치 개요](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)합니다.  
   
- Analysis Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대한 서버 쪽 처리를 제공합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 Analysis Services와 함께 작동하며 SharePoint 통합, 부하 분산 및 연결 관리 기능을 추가합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 대규모 데이터 처리 기능과 Excel에서 제공 하는 데이터 렌더링 서비스를 결합 하 여 Excel 서비스를 확장 합니다.  
+ Analysis Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대한 서버 쪽 처리를 제공합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 Analysis Services와 함께 작동하며 SharePoint 통합, 부하 분산 및 연결 관리 기능을 추가합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 대규모 데이터 처리 기능과 Excel에서 제공 하는 데이터 렌더링 서비스를 사용 하 여 연결 하 여 Excel Services를 확장 합니다.  
   
  설치 하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 사용 하 여는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]설치 미디어입니다.  
   
- 고급 배포 시나리오에 대 한 자세한 내용은 참조 하십시오. [배포 검사 목록: Reporting Services, Power View 및 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) 및 [배포 검사 목록: PowerPivot 서버를 추가 하 여 확장을 SharePoint 2010 팜에서](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
+ 고급 배포 시나리오에 대 한 지침을 참조 하세요 [배포 검사 목록: Reporting Services, Power View 및 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) 고 [배포 검사 목록: PowerPivot 서버를 추가 하 여 스케일 아웃을 SharePoint 2010 팜에서](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

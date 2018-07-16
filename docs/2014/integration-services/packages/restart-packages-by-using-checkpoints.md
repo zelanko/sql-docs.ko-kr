@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260989"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36186562"
   
 -   반복적인 값 집계를 피할 수 있습니다. 예를 들어 각 집계를 수행하기 위해 별도의 데이터 흐름 태스크를 사용하여 평균 및 합계와 같은 많은 집계를 계산하는 패키지의 경우 특정 집계 계산이 실패하면 패키지를 다시 시작할 수 있으며 해당 집계만 다시 계산됩니다.  
   
- 패키지가 검사점을 사용하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 검사점 파일에서 다시 시작 지점을 캡처합니다. 실패한 컨테이너 유형 및 트랜잭션과 같은 기능의 구현은 검사점 파일에 기록된 다시 시작 지점에 영향을 미칩니다. 변수의 현재 값도 검사점 파일에 캡처됩니다. 그러나 변수 값이 있는 `Object` 데이터 형식을 검사점 파일에 저장 되지 않습니다.  
+ 패키지가 검사점을 사용하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 검사점 파일에서 다시 시작 지점을 캡처합니다. 실패한 컨테이너 유형 및 트랜잭션과 같은 기능의 구현은 검사점 파일에 기록된 다시 시작 지점에 영향을 미칩니다. 변수의 현재 값도 검사점 파일에 캡처됩니다. 그러나 변수 값이 없는 `Object` 기원후 검사점 파일에 저장 되지 않습니다.  
   
 ## <a name="defining-restart-points"></a>다시 시작 지점 정의  
  단일 태스크를 캡슐화하는 태스크 호스트 컨테이너는 다시 시작할 수 있는 가장 작은 단위입니다. 또한 Foreach Loop 컨테이너 및 트랜잭션이 적용된 컨테이너도 작업의 최소 단위로 간주됩니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "36186562"
 |`IfExists`|검사점 파일이 있는 경우 이를 사용하도록 지정합니다. 검사점 파일이 있으면 패키지는 이전 실행 오류 지점부터 다시 시작하고, 그렇지 않으면 패키지 워크플로의 처음부터 실행됩니다.|  
   
 > [!NOTE]  
->  **에 /CheckPointing** dtexec 옵션 설정에 해당 하는 `SaveCheckpoints` 패키지의 속성 `True`, 및 `CheckpointUsage` 속성을 Always 합니다. 자세한 내용은 [dtexec Utility](dtexec-utility.md)를 참조하세요.  
+>  합니다 **에서 /CheckPointing** dtexec 옵션 설정에 해당 하는 합니다 `SaveCheckpoints` 패키지의 속성 `True`, 및 `CheckpointUsage` 속성을 Always. 자세한 내용은 [dtexec Utility](dtexec-utility.md)를 참조하세요.  
   
 ## <a name="securing-checkpoint-files"></a>검사점 파일 보안 설정  
  패키지 수준 보호에는 검사점 파일 보호가 포함되지 않으므로 이러한 파일에 대해 보안을 별도로 설정해야 합니다. 검사점 데이터는 파일 시스템에만 저장할 수 있으므로 운영 체제의 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일에는 현재 변수 값을 비롯하여 패키지 상태에 대한 정보가 들어 있으므로 검사점 파일에 대해 보안을 설정하는 것은 중요합니다. 예를 들어 변수에 전화 번호와 같은 개인 데이터 행이 여러 개 있는 레코드 집합이 포함될 수 있습니다. 자세한 내용은 [패키지에서 사용되는 파일 액세스](../access-to-files-used-by-packages.md)를 참조하세요.  

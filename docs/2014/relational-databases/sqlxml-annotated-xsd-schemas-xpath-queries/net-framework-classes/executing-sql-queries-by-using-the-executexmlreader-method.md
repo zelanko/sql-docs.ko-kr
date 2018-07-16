@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 707364644cab1f2f025b0e735f531753637fb815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1acabdc04e8ac24efb5e16858defb2649e52ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247893"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader 메서드를 사용하여 SQL 쿼리 실행
-  ExecuteToStream 메서드를 사용 하지 않고 명령을 실행 하는 SqlXmlCommand 개체의 ExecuteXmlReader 메서드를 사용할 수 있습니다. 이 메서드는 결과 (이 예제는 요소 또는 특성 이름과 값 인쇄)의 추가 처리를 위해 사용할 수 있는 XmlReader 개체를 반환 합니다.  
+  ExecuteToStream 메서드를 사용 하는 대신 명령을 실행 하 여 SqlXmlCommand 개체의 ExecuteXmlReader 메서드를 사용할 수 있습니다. 이 메서드는 결과 (이 예제에서 요소 또는 특성 이름과 값 인쇄)의 추가 처리를 위해 사용할 수 있는 XmlReader 개체를 반환 합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

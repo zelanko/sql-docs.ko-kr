@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 26c0378caeca7fd904cd793bc483dd28a464a5d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292213"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>이미지 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **이미지 속성** 대화 상자에서 **일반** 을 선택하여 그림을 추가하고, 이미지의 기본 이름을 변경하고, 도구 설명 텍스트를 추가할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36078983"
   
  이미지를 포함하려는 경우 드롭다운 목록에서 보고서에 추가할 이미지를 선택합니다. **가져오기** 단추를 클릭하여 드롭다운 목록에 이미지를 추가합니다.  
   
- **외부** 옵션을 선택할 경우 이미지의 URL을 입력합니다. 기본 모드로 구성된 보고서 서버에 게시된 보고서의 경우 전체 경로나 상대 경로를 사용합니다(예: 예를 들어 http://\<서버 이름 > / /images/image1.jpg와 같습니다. SharePoint 통합 모드로 구성된 보고서 서버에 게시된 보고서의 경우 정규화된 URL을 사용합니다(예: 예를 들어 http://\<*SharePointservername*>/\<*사이트*> / Documents/images/image1.jpg 합니다.  
+ **외부** 옵션을 선택할 경우 이미지의 URL을 입력합니다. 기본 모드로 구성된 보고서 서버에 게시된 보고서의 경우 전체 경로나 상대 경로를 사용합니다(예: 예를 들어, http://\<서버 이름 > / images/image1.jpg입니다. SharePoint 통합 모드로 구성된 보고서 서버에 게시된 보고서의 경우 정규화된 URL을 사용합니다(예: 예를 들어, http://\<*SharePointservername*>/\<*사이트*> / Documents/images/image1.jpg입니다.  
   
  **가져오기**  
  **이 이미지 사용** 드롭다운 목록에 이미지를 추가하려면 클릭합니다.  

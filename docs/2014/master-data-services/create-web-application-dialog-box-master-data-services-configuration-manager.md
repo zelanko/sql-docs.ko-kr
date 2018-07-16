@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0edae9b1692eb12f14f66ebb067758f5a6c468f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 92ca9531bd94f2fc81fc4c074841b4049b6e3120
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273009"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>웹 응용 프로그램 만들기 대화 상자(Master Data Services 구성 마법사)
   **웹 응용 프로그램 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 만들 수 있습니다. 이 웹 응용 프로그램은 **웹 구성** 페이지에서 선택한 사이트에 만들어집니다.  
   
 ## <a name="web-application"></a>웹 응용 프로그램  
- 웹 서버는 파일 시스템의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 폴더에서 이 웹 응용 프로그램의 콘텐츠를 제공합니다. 설치 하는 동안이 위치를 지정 하 고 경로 기본적으로 *드라이브*: files\microsoft SQL Server\120\Master Data Services\WebApplication입니다.  
+ 웹 서버는 파일 시스템의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 폴더에서 이 웹 응용 프로그램의 콘텐츠를 제공합니다. 이 위치는 설치 중에 지정 되며 기본 경로 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication입니다.  
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "36186559"
   
 ## <a name="see-also"></a>관련 항목  
  [웹 구성 페이지 &#40;Master Data Services 구성 관리자&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services에 대 한 데이터베이스 및 웹 사이트를 설정 합니다.](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [웹 응용 프로그램 요구 사항 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

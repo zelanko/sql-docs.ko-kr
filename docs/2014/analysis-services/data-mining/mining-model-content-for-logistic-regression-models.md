@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328939"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>로지스틱 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 Microsoft 로지스틱 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -144,7 +144,7 @@ ms.locfileid: "36078942"
  부모 노드에서 해당 노드에 도달할 확률입니다. 로지스틱 회귀 모델의 경우 항상 0입니다.  
   
  NODE_DISTRIBUTION  
- 노드에 대한 통계 정보가 들어 있는 중첩 테이블입니다. 각 노드 유형에 대해이 테이블의 내용에 대 한 자세한 내용은 NODE_DISTRIBUTION 테이블 이해 섹션을 참조 [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41; ](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ 노드에 대한 통계 정보가 들어 있는 중첩 테이블입니다. 각 노드 유형에 대해이 테이블의 내용에 대 한 자세한 정보에서 NODE_DISTRIBUTION 테이블 이해 섹션을 참조 하세요 [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41; ](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  로지스틱 회귀 모델의 경우 항상 0입니다.  

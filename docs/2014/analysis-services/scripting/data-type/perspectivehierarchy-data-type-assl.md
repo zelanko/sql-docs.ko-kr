@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dddceea6ee82d02ef1a68953bd16d6fc728537ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208063"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>PerspectiveHierarchy 데이터 형식(ASSL)
   계층에 대 한 정보를 나타내는 기본 데이터 형식을 정의 [PerspectiveDimension](dimension-data-type-assl.md) 요소입니다.  
@@ -58,12 +58,12 @@ ms.locfileid: "36187292"
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
 |자식 요소|[Annotations](../collections/annotations-element-assl.md), [HierarchyID](../properties/id-element-assl.md)|  
-|파생 요소|[계층 구조](../objects/hierarchy-element-assl.md) ([계층](../collections/hierarchies-element-assl.md) 컬렉션 [PerspectiveDimension](dimension-data-type-assl.md))|  
+|파생 요소|[계층 구조](../objects/hierarchy-element-assl.md) ([계층](../collections/hierarchies-element-assl.md) 모음인 [PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

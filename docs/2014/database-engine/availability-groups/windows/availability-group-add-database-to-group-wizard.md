@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2eae2dbc1f6031b18f6edf3a92e65d05d56b4ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3900ee843069adb8775497168069716e68eea352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243503"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 데이터베이스 추가 마법사 사용(SQL Server Management Studio)
   가용성 그룹에 데이터베이스 추가 마법사를 사용하여 기존 AlwaysOn 가용성 그룹에 하나 이상의 데이터베이스를 손쉽게 추가할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "36185689"
 -   **데이터베이스를 추가하려면:**  [가용성 그룹에 데이터베이스 추가 마법사 사용(SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 가용성 그룹에 데이터베이스를 추가한 적 있어야 하는 경우의 "가용성 데이터베이스" 섹션을 참조 [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
+ 가용성 그룹에 데이터베이스를 추가한 적이 없는, 하는 경우의 "가용성 데이터베이스" 섹션을 참조 하세요 [필수 조건, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소, 제한 사항 및 권장 사항  
   
@@ -51,7 +50,7 @@ ms.locfileid: "36185689"
   
 -   데이터가 암호화되었거나 심지어 DEK(데이터베이스 암호화 키)를 포함하는 경우 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 또는 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 를 사용하여 데이터베이스를 가용성 그룹에 추가할 수 없습니다. 암호화된 데이터베이스가 암호 해독된 경우라도 해당 로그 백업에는 암호화된 데이터가 포함될 수 있습니다. 이 경우 데이터베이스에서 전체 초기 데이터 동기화를 수행하면 작업이 실패할 수 있습니다. 로그 복원 작업에는 DEK(데이터베이스 암호화 키)에서 사용된 인증서가 필요한데 이 인증서를 사용할 수 없기 때문입니다.  
   
-     **데이터베이스를 마법사를 사용 하 여 가용성 그룹에 추가할 수 있도록 설정 하려면:**  
+     **데이터베이스를 확인 마법사를 사용 하 여 가용성 그룹에 추가 하기에 적합 합니다.**  
   
     1.  주 데이터베이스의 로그 백업을 만듭니다.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36185689"
   
 3.  데이터베이스를 추가할 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **데이터베이스 추가** 명령을 선택합니다. 이 명령은 가용성 그룹에 데이터베이스 추가 마법사를 시작합니다.  
   
-4.  **데이터베이스 선택** 페이지에서 하나 이상의 데이터베이스를 선택합니다. 자세한 내용은 참조 [데이터베이스 선택 페이지 &#40;새 가용성 그룹 마법사 데이터베이스 추가 마법사&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)합니다.  
+4.  **데이터베이스 선택** 페이지에서 하나 이상의 데이터베이스를 선택합니다. 자세한 내용은 [데이터베이스 선택 페이지 &#40;새 가용성 그룹 마법사 / 데이터베이스 추가 마법사&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)합니다.  
   
 5.  **초기 데이터 동기화 선택** 페이지에서 새 보조 복제본을 만들고 가용성 그룹에 조인할 방법을 선택합니다. 다음 옵션 중 하나를 선택합니다.  
   
@@ -110,25 +109,25 @@ ms.locfileid: "36185689"
   
          주 데이터베이스의 로그 백업과 사용자 데이터베이스를 사용하려는 경우 이 옵션을 선택합니다. 자세한 내용은 [AlwaysOn 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
   
-     자세한 내용은 참조 [초기 데이터 동기화 페이지 선택 &#40;AlwaysOn 가용성 그룹 마법사&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)합니다.  
+     자세한 내용은 [초기 데이터 동기화 페이지 선택 &#40;AlwaysOn 가용성 그룹 마법사&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)합니다.  
   
 6.  **기존 보조 복제본에 연결** 페이지에서 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 모두 동일한 사용자 계정의 서비스로 실행 중인 경우 **모든 연결**을 클릭합니다. 다른 계정에서 서비스로 실행 중인 서버 인스턴스가 있는 경우 각 서버 인스턴스 이름의 오른쪽에 있는 개별 **연결** 단추를 클릭합니다.  
   
-     자세한 내용은 참조 [기존 보조 복제본 페이지로 연결 &#40;복제본 추가 마법사 및 데이터베이스 추가 마법사&#41;](connect-to-existing-secondary-replicas-page.md)합니다.  
+     자세한 내용은 [기존 보조 복제본 페이지로 연결 &#40;복제본 추가 마법사 및 데이터베이스 추가 마법사&#41;](connect-to-existing-secondary-replicas-page.md)합니다.  
   
 7.  **유효성 검사** 페이지에서는 이 마법사에서 지정한 값이 새 가용성 그룹 마법사의 요구 사항을 충족하는지 여부를 확인합니다. 변경하려면 **이전** 을 클릭하여 이전 마법사 페이지로 돌아가서 하나 이상의 값을 변경하면 됩니다. **다음** 을 클릭하여 **유효성 검사** 페이지로 돌아가서 **유효성 검사 다시 실행**을 클릭합니다.  
   
-     자세한 내용은 참조 [유효성 검사 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](validation-page-always-on-availability-group-wizards.md)합니다.  
+     자세한 내용은 [유효성 검사 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](validation-page-always-on-availability-group-wizards.md)합니다.  
   
 8.  **요약** 페이지에서 새 가용성 그룹에 대한 선택 사항을 확인합니다. 변경하려면 **이전** 을 클릭하여 관련 페이지로 돌아갑니다. 변경 후에는 **다음** 을 클릭하여 **요약** 페이지로 돌아갑니다.  
   
-     자세한 내용은 참조 [요약 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](summary-page-always-on-availability-group-wizards.md)합니다.  
+     자세한 내용은 [요약 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](summary-page-always-on-availability-group-wizards.md)합니다.  
   
      선택이 완료되었으면 필요에 따라 스크립트를 클릭하여 마법사에서 실행할 단계에 대한 스크립트를 만들 수 있습니다. 새 가용성 그룹을 만들어 구성하려면 **마침**을 클릭합니다.  
   
 9. **진행률** 페이지에 가용성 그룹을 만들기 위한 단계(끝점 구성, 가용성 그룹 만들기 및 가용성 그룹에 보조 복제본 조인)의 진행 상태가 표시됩니다.  
   
-     자세한 내용은 참조 [진행률 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](progress-page-always-on-availability-group-wizards.md)합니다.  
+     자세한 내용은 [진행률 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](progress-page-always-on-availability-group-wizards.md)합니다.  
   
 10. 이러한 단계가 완료되면 **결과** 페이지에 각 단계의 결과가 표시됩니다. 단계가 모두 성공하면 새 가용성 그룹이 완전히 구성됩니다. 단계에서 오류가 발생한 경우 구성을 수동으로 완료해야 할 수 있습니다. 주어진 오류의 원인에 대한 자세한 내용을 보려면 **결과** 열에서 연결된 "오류" 링크를 클릭합니다.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268609"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다.  
@@ -39,16 +39,16 @@ ms.locfileid: "36187152"
   
  ![ssrs 구독 흐름 예제](../media/ssrs-subscription-example-flow.png "ssrs 구독 흐름 예제")  
   
- 일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 구독을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 일부 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 구독을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 > [!NOTE]  
->  부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구독의 소유권을 프로그래밍 방식으로 전송할 수 있습니다. 구독 소유권을 전송하는 데 사용할 수 있는 사용자 인터페이스는 없습니다. 자세한 내용은 참조 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>및 [변경 하 고 목록 Reporting Services Subscription Owners and Run a Subscription에 PowerShell을 사용 하 여](manage-subscription-owners-and-run-subscription-powershell.md)합니다.  
+>  부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구독의 소유권을 프로그래밍 방식으로 전송할 수 있습니다. 구독 소유권을 전송하는 데 사용할 수 있는 사용자 인터페이스는 없습니다. 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>하 고 [변경 하 고 목록 Reporting Services Subscription Owners and Run a Subscription 사용 하 여 PowerShell](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **항목 내용**  
   
 -   [구독 및 배달 시나리오](#bkmk_subscription_scenarios)  
   
--   [표준 및 데이터 기반 구독](#bkmk_standard_and_datadriven)  
+-   [표준 구독과 데이터 기반 구독](#bkmk_standard_and_datadriven)  
   
 -   [구독 요구 사항](#bkmk_subscription_requirements)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36187152"
 |캐시 미리 로드|매개 변수가 있는 보고서 인스턴스가 여러 개 있거나 보고서를 볼 사람이 많은 경우 캐시에서 보고서를 미리 로드하여 보고서를 표시하기 위해 걸리는 처리 시간을 줄일 수 있습니다.|  
 |데이터 기반 보고서|데이터 기반 구독을 사용하여 런타임에 보고서 출력, 배달 옵션 및 보고서 매개 변수 설정을 사용자 지정합니다. 구독에서는 쿼리를 사용하여 런타임에 데이터 원본의 입력된 값을 가져옵니다. 데이터 기반 구독을 사용하여 구독 처리 시 결정되는 구독자 목록으로 보고서를 보낼 메일 병합 작업을 수행할 수 있습니다.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> 표준 및 데이터 기반 구독  
+##  <a name="bkmk_standard_and_datadriven"></a> 표준 구독과 데이터 기반 구독  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 두 가지 구독인 **표준** 과 **데이터 기반**구독을 지원합니다. 표준 구독은 개별 사용자가 만들어 관리합니다. 표준 구독은 구독 처리 시에 변경되지 않는 정적 값으로 구성됩니다. 각 표준 구독에는 보고서 표시 옵션, 배달 옵션 및 보고서 매개 변수 세트가 하나씩 있습니다.  
   
  데이터 기반 구독은 받는 사람, 보고서 매개 변수 또는 응용 프로그램 형식을 지정하는 데 사용되는 값을 제공하는 외부 데이터 원본을 쿼리하여 런타임에 구독 정보를 가져옵니다. 받는 사람 목록이 아주 크거나 받는 사람마다 보고서 출력을 다르게 나타내려는 경우 데이터 기반 구독을 사용할 수 있습니다. 데이터 기반 구독을 사용하려면 쿼리 작성에 대한 전문 지식이 필요하며 매개 변수 사용 방법을 잘 알고 있어야 합니다. 일반적으로 보고서 서버 관리자가 이러한 구독을 만들고 관리합니다. 자세한 내용은 다음 항목을 참조하세요.  
@@ -107,7 +107,7 @@ ms.locfileid: "36187152"
 |요구 사항|Description|  
 |-----------------|-----------------|  
 |사용 권한|보고서에 대한 액세스 권한이 있어야 합니다. 보고서를 구독하려면 보고서를 볼 사용 권한이 있어야 합니다.<br /><br /> 사용자 역할 할당에는 "개별 구독 관리" 태스크가 포함되어야 합니다.|  
-|저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 참조 [만들기 및 기본 모드 보고서 서버에 대 한 구독 관리](../create-manage-subscriptions-native-mode-report-servers.md)합니다.|  
+|저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 [Create and Manage Subscriptions for Native Mode Report Servers](../create-manage-subscriptions-native-mode-report-servers.md)합니다.|  
 |보고서의 사용자 종속 값|표준 구독의 경우에는 사용자 계정 정보를 필터에 통합하거나 보고서에 표시되는 텍스트로 통합하는 보고서에 대한 구독을 만들 수 있습니다. 보고서를 사용자 계정 이름을 통해 지정 됩니다는 `User!UserID` 현재 사용자로 확인 되는 식입니다. 구독을 만들 때 구독을 만드는 사용자는 현재 사용자로 간주됩니다.|  
 |모델 항목 보안 불가|모델에 모델 항목 보안 설정이 포함된 경우 모델을 데이터 원본으로 사용하는 보고서 작성기 보고서를 구독할 수 없습니다. 모델 항목 보안을 사용하는 보고서만 이러한 제한을 받습니다.|  
 |매개 변수 값|보고서에서 매개 변수를 사용하는 경우 보고서 자체 또는 정의된 구독에 매개 변수 값을 지정해야 합니다. 보고서에 기본값이 정의된 경우 기본값을 사용하도록 매개 변수 값을 설정할 수 있습니다.|  

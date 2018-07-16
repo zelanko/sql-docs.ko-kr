@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 367fcdacc7172a79155b1865464e92d0596a38ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309233"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>컴퓨터에 보고서 저장(보고서 작성기)
   보고서 작성기에서 컴퓨터에 보고서 정의를 저장할 수 있습니다. 그러나 보고서 정의가 컴퓨터에 저장되는 경우 다른 사용자는 해당 보고서를 볼 수 없으며 공유 데이터 원본을 참조하거나 이미지, 하위 보고서 등의 보고서 항목을 외부에 저장하는 보고서가 실행되지 않을 수 있습니다. 보고서 서버나 SharePoint 사이트에 보고서를 저장하는 것이 좋습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36079203"
     > [!NOTE]  
     >  보고서를 다시 저장하는 경우 보고서가 이전 위치에 자동으로 다시 저장됩니다. **다른 이름으로 저장** 옵션을 사용하여 위치를 변경할 수 있습니다.  
   
-2.  필요에 따라 **데스크톱**, **내 문서**, 또는 **내 컴퓨터** 해당 폴더 중 하나로 보고서를 저장 하려면.  
+2.  필요에 따라 클릭 **데스크톱**를 **My Documents**, 또는 **내 컴퓨터** 해당 폴더 중 하나로 보고서를 저장 하려면.  
   
 3.  컴퓨터에서 보고서를 저장하려는 위치로 이동합니다. **이름**에 보고서의 이름을 입력합니다.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "36079203"
   
 2.  컴퓨터에서 보고서를 저장하려는 위치로 이동합니다.  
   
-3.  **이름**에 보고서의 이름을 입력합니다. 필요에 따라 **데스크톱**, **내 문서**, 또는 **내 컴퓨터** 해당 폴더 중 하나로 보고서를 저장 하려면.  
+3.  **이름**에 보고서의 이름을 입력합니다. 필요에 따라 클릭 **데스크톱**를 **My Documents**, 또는 **내 컴퓨터** 해당 폴더 중 하나로 보고서를 저장 하려면.  
   
 4.  **항목 유형**에서 저장 중인 보고서 항목의 유형을 선택합니다. 보고서의 유형은 보고서 (*.rdl)입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [보고서 저장 &#40;보고서 작성기&#41;](report-builder/saving-reports-report-builder.md)   
  [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

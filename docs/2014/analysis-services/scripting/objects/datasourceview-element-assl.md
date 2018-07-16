@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d1813af76ff460aedb5345156b85e8d9b9667cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d8f72a69164071af4c9c2346c549cee2a56020b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324903"
 ---
 # <a name="datasourceview-element-assl"></a>DataSourceView 요소(ASSL)
-  사용 하는 데이터 원본 뷰 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](database-element-assl.md) 요소입니다.  
+  사용 하는 데이터 원본 뷰를 정의 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36186402"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DataSourceViews](../collections/datasourceviews-element-assl.md)|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [설명](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [이름](../properties/name-element-assl.md), [스키마](../properties/schema-element-assl.md)|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataSourceID](../properties/id-element-assl.md)를 [설명을](../properties/description-element-assl.md)를 [ID](../properties/id-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)하십시오 [이름](../properties/name-element-assl.md), [스키마](../properties/schema-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DataSourceView>합니다.  
