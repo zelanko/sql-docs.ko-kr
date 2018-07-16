@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 caps.latest.revision: 60
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45952fdec3955614cb7b69b053ffc635d9ab2ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e356283274c7ea741acfabcd6d56cb6bc0db7ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281519"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services 서비스 관리
     
@@ -32,7 +32,7 @@ ms.locfileid: "36183307"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]구성 요소를 설치할 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스도 함께 설치됩니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 기본적으로 시작되며 서비스의 시작 유형은 자동으로 설정됩니다. 그러나 서비스를 사용하여 저장 및 실행 중인 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 패키지를 관리하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도 설치해야 합니다.  
   
 > [!NOTE]  
->  인스턴스에 연결할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 즉,는 **서버에 연결** 대화 상자에 서버 이름을 입력할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 버전의는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 실행 되 고 있습니다. 그러나 서비스에 대 한 구성 파일을 편집 하 고 관리할 수 있습니다 함으로써의 인스턴스에 저장 된 패키지를 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 에서 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)을 참조하세요.  
+>  인스턴스에 연결할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 서비스를 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 즉,를 **서버에 연결** 대화 상자는 서버의 이름을 입력할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 버전의는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 실행 중인지. 그러나 서비스 구성 파일을 편집 하 고 인스턴스에 저장 된 패키지를 관리할 수 수 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 에서 합니다 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)을 참조하세요.  
   
  컴퓨터에는 하나의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스만 설치할 수 있습니다. 서비스는 특정 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 국한되지 않습니다. 서비스가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36183307"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 서비스 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
- [Integration Services 구성 서비스 &#40;SSIS 서비스&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [서비스 서비스를 통합 구성 &#40;SSIS 서비스&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server 가져오기 및 내보내기 마법사](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec 유틸리티](packages/dtexec-utility.md)   
  [프로젝트 및 패키지 실행](packages/run-integration-services-ssis-packages.md)  

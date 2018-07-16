@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], interoperability
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: 18
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e7a8ea0a461bb261b8a85769b0fe2048e6cc569c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 604933cc3cf24941ae0d1ef1b23c0966ffb007b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321193"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 가용성 그룹: 상호 운용성(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 다른 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능과의 상호 운용성에 대해 설명합니다.  
@@ -36,17 +35,17 @@ ms.locfileid: "36183913"
 |-------------|----------------------|  
 |변경 데이터 캡처|[복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |변경 내용 추적|[복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|포함된 데이터베이스|[AlwaysOn 가용성 그룹 (SQL Server)에 포함 된 데이터베이스](always-on-availability-groups-sql-server.md)|  
-|데이터베이스 암호화|[AlwaysOn 가용성 그룹이 있는 데이터베이스를 암호화 &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
-|데이터베이스 스냅숏|[AlwaysOn 가용성 그룹을 사용 하 여 스냅숏을 데이터베이스 &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
-|FILESTREAM 및 FileTable|[FILESTREAM 및 FileTable AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
+|포함된 데이터베이스|[AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 포함 된 데이터베이스](always-on-availability-groups-sql-server.md)|  
+|데이터베이스 암호화|[AlwaysOn 가용성 그룹을 사용 하 여 데이터베이스 암호화 &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
+|데이터베이스 스냅숏|[AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅숏 &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
+|FILESTREAM 및 FileTable|[FILESTREAM 및 FileTable AlwaysOn 가용성 그룹을 사용 하 여 &#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
 |전체 텍스트 검색|참고: 전체 텍스트 인덱스는 AlwaysOn 보조 데이터베이스와 동기화됩니다.|  
-|로그 전달|[AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션하기 위한 필수 조건 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
+|로그 전달|[AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션에 대 한 필수 구성 요소 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |RBS(Remote Blob Store)|[Remote Blob Store &#40;RBS&#41; 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |복제[AlwaysOn 가용성 그룹 (SQL Server)에 대 한 복제 구성](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [복제 구독자 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
-|Analysis Services|[AlwaysOn 가용성 그룹이 포함 된 analysis Services](analysis-services-with-always-on-availability-groups.md)|  
-|Reporting Services|읽기 전용 보조 복제본을 보고 데이터 원본으로 사용하고 주 읽기/쓰기 주 복제본에 대한 부하를 줄일 수 있습니다.<br /><br /> [AlwaysOn 가용성 그룹에 포함 된 reporting Services &#40;SQL Server&#41;](reporting-services-with-always-on-availability-groups-sql-server.md)|  
-|Service Broker|[Service Broker AlwaysOn 가용성 그룹이 있는 &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
+|Analysis Services|[AlwaysOn 가용성 그룹을 사용 하 여 analysis Services](analysis-services-with-always-on-availability-groups.md)|  
+|Reporting Services|읽기 전용 보조 복제본을 보고 데이터 원본으로 사용하고 주 읽기/쓰기 주 복제본에 대한 부하를 줄일 수 있습니다.<br /><br /> [AlwaysOn 가용성 그룹이 포함 된 reporting Services &#40;SQL Server&#41;](reporting-services-with-always-on-availability-groups-sql-server.md)|  
+|Service Broker|[Service Broker AlwaysOn 가용성 그룹을 사용 하 여 &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server 에이전트||  
   
 ##  <a name="NoInterop"></a> AlwaysOn 가용성 그룹과 상호 운용 되지 않는 기능  
@@ -72,7 +71,7 @@ ms.locfileid: "36183913"
   
      [마이그레이션 가이드: AlwaysOn 가용성 그룹으로 마이그레이션 결합 하는 이전 배포에서 데이터베이스 미러링 및 로그 전달](http://msdn.microsoft.com/library/jj635217)  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
   

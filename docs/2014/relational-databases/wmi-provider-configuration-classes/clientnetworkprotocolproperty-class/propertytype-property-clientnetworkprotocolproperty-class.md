@@ -20,18 +20,18 @@ helpviewer_keywords:
 - PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40603fc717d8ec0a07d2e73e68910c6cfa775b86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 29fe521e607e1eb70ce6f3bf83110450d7a26383
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232903"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 속성(ClientNetworkProtocolProperty 클래스)
-  참조 하는 속성의 형식을 가져옵니다는 [PropertyIdx 속성 (ClientNetworkProtocolProperty 클래스)](clientnetworkprotocolproperty-class.md) 값입니다.  
+  참조 하는 속성의 형식을 가져옵니다 합니다 [PropertyIdx 속성 (ClientNetworkProtocolProperty 클래스)](clientnetworkprotocolproperty-class.md) 값입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- A [ClientNetworkProtocolProperty 클래스](clientnetworkprotocolproperty-class.md) 에서 사용 하는 네트워크 프로토콜의 특성을 나타내는 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
+ A [ClientNetworkProtocolProperty 클래스](clientnetworkprotocolproperty-class.md) 사용 되는 네트워크 프로토콜의 특성을 나타내는 개체를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  속성의 유형을 지정하는 `uint32` 값입니다.  

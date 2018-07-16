@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d65d778e54a712e3fce18bdac5b3a0e31426863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d61633743b4ce7e7b72f868b280e1bb376f1846
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299013"
 ---
 # <a name="storagemode-element-assl"></a>StorageMode 요소(ASSL)
   부모 요소의 저장소 모드를 결정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36172750"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md), [요소 치수 &#40;ASSL&#41;](../objects/dimension-element-assl.md), [MeasureGroup 요소 &#40;ASSL&#41;](../objects/group-element-assl.md), [파티션 요소 &#40;ASSL&#41;](../objects/partition-element-assl.md)|  
+|부모 요소|[큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)를 [요소 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)를 [MeasureGroup 요소 &#40;ASSL&#41;](../objects/group-element-assl.md)를 [파티션 요소 &#40;ASSL&#41;](../objects/partition-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

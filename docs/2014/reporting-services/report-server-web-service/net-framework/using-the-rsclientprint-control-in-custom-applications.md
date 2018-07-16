@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181561"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSPrintClient**는 HTML 뷰어에 표시되는 보고서에 대한 클라이언트 쪽 인쇄 기능을 제공합니다. 사용자는 제공된 **인쇄** 대화 상자를 사용하여 인쇄 작업 시작, 보고서 미리 보기, 인쇄할 페이지 지정, 여백 조정 등의 작업을 수행할 수 있습니다. 클라이언트 쪽 인쇄 작업 과정에서 보고서 서버는 이미지(EMF) 렌더링 확장 프로그램으로 보고서를 렌더링하고 운영 체제의 인쇄 기능으로 인쇄 작업을 만들어 프린터에 보냅니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "36185941"
 |MarginBottom|Double|RW|보고서 설정|아래쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
 |PageWidth|Double|RW|보고서 설정|페이지 너비를 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서 정의에 지정되지 않은 경우 기본값은 215.9밀리미터입니다.|  
 |PageHeight|Double|RW|보고서 설정|페이지 높이를 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서 정의에 지정되지 않은 경우 기본값은 279.4밀리미터입니다.|  
-|Culture|Int32|RW|브라우저 로캘|LCID(로캘 ID)를 지정합니다. 이 값에 따라 사용자 입력 단위가 결정됩니다. 예를 들어 사용자가 `3`, 경우 언어가 프랑스어 또는 언어는 영어 (미국) 이면 인치 값이 밀리미터 단위로 측정 됩니다. 유효한 값은 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082와 같습니다.|  
+|Culture|Int32|RW|브라우저 로캘|LCID(로캘 ID)를 지정합니다. 이 값에 따라 사용자 입력 단위가 결정됩니다. 예를 들어, 사용자가 `3`, 언어가 영어 (미국) 이면 인치 프랑스어 이면 값이 밀리미터 단위로 측정 됩니다. 유효한 값은 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082와 같습니다.|  
 |UICulture|String|RW|클라이언트 culture|대화 상자의 문자열 지역화를 지정합니다. 인쇄 대화 상자의 텍스트는 독일어, 스페인어, 영어, 이탈리아어, 일본어, 중국어 간체, 중국어 번체, 프랑스어 및 한국어와 같은 언어로 지역화됩니다. 유효한 값은 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082와 같습니다.|  
 |Authenticate|Boolean|RW|False|사용 가능한 세션이 없는 인쇄에 대한 연결을 시작하기 위해 컨트롤이 보고서 서버에 대해 GET 명령을 실행할지 여부를 지정합니다.|  
   

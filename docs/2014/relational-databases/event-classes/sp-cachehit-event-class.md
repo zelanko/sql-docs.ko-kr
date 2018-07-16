@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheHit event class
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34a0a8beba7b9d8f0ac667777ce0d7c0b8587294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 466caff52f0b715cc5a0d9ee491abc1ae095f9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162804"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 이벤트 클래스
   SP:CacheHit 이벤트 클래스는 저장 프로시저가 계획 캐시에 있음을 나타냅니다.  

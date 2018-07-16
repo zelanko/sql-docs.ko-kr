@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c309ca3781bea3594c6d7e8d1b912730371635e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306523"
 ---
 # <a name="granting-process-database-permissions"></a>데이터베이스 처리 권한 부여
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 설치하면 해당 인스턴스에 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 관리자 역할의 모든 멤버가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 내에서 모든 태스크를 수행할 수 있는 서버 차원의 사용 권한을 갖습니다. 기본적으로 어떠한 사용자에게도 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스의 개체를 관리하거나 볼 수 있는 권한이 없습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36185096"
   
 2.  **데이터베이스 처리** 확인란을 클릭합니다.  
   
-3.  속성 창에서 변경 된 **이름** 이 새 역할에 대해 속성 `Process Database Objects Role`합니다.  
+3.  속성 창에서 변경 된 **이름을** 이 새 역할에 대 한 속성 `Process Database Objects Role`합니다.  
   
      ![역할 디자이너](../../2014/tutorials/media/l10-security-1.png "역할 디자이너")  
   

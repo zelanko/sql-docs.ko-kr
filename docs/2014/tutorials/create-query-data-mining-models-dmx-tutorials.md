@@ -1,5 +1,5 @@
 ---
-title: 'DMX와 데이터 마이닝 모델 만들기 및 쿼리: 자습서 (Analysis Services-데이터 마이닝) | Microsoft Docs'
+title: 'DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 (Analysis Services-데이터 마이닝) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 46a60e6fc75613b2f763a31185f3e3861b125fc5
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93bdf0ee8ed305e9e3843b011ce8057894b8b287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234409"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서(Analysis Services - 데이터 마이닝)
-  사용 하 여 데이터 마이닝 솔루션을 만든 후 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 추세를 예측 데이터에서 패턴을 검색 하 고 마이닝 모델의 정확도 측정 하려면 데이터 마이닝 모델에 대 한 쿼리를 만들 수 있습니다.  
+  사용 하 여 데이터 마이닝 솔루션을 만든 후 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 추세를 예측 데이터의 패턴을 검색 하 고, 마이닝 모델의 정확도 측정 하려면 데이터 마이닝 모델에 대 한 쿼리를 만들 수 있습니다.  
   
- 다음 목록의 단계별 자습서 빌드 및 사용 하 여 데이터 마이닝 쿼리를 실행 하는 방법을 배우는 데 도움이 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터에서 많은 정보를 얻을 수 있도록 합니다.  
+ 다음 목록의 단계별 자습서에서는 빌드 및 사용 하 여 데이터 마이닝 쿼리를 실행 하는 방법을 알아봅니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터에서 가장 많이 얻을 수 있도록 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

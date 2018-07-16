@@ -1,5 +1,5 @@
 ---
-title: 옵션 (디자이너를 유지 관리 계획 페이지) | Microsoft Docs
+title: 옵션 (디자이너-유지 관리 계획 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ab6ddd2d43d7055d458ac475ed5eb775b61c5b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4bacbb1b5b4ef708055affe400b12ac9604dbabc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249523"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>옵션 (디자이너를 유지 관리 계획 페이지)
+# <a name="options-designers-maintenance-plans-page"></a>옵션 (디자이너-유지 관리 계획 페이지)
   **옵션** 대화 상자를 사용하여 디자인 화면에 새 셰이프를 추가할 때의 디자이너 기본 동작을 결정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너**를 확장한 다음 **유지 관리 계획**을 선택합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  

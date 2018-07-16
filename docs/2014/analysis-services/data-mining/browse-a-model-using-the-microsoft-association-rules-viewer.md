@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - mining models [Analysis Services], associations
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ba0999f9ad3ffbad558610e07b64ba24f7c51bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dec01cc20a5863e29b115d0c0225084fdf9ab603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192923"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](microsoft-association-algorithm.md)를 참조하십시오.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](microsoft-association-algorithm.md)를 참조하십시오.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하는 주된 이유는 다음과 같습니다.  
   

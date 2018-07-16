@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8e943437d555d7a0910a1b0657ca0f27368202f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ddd050608557d8a721ad986ea5aa5b1eef5dee66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305563"
 ---
 # <a name="article-issues"></a>아티클 문제
   **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 응용 프로그램이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  

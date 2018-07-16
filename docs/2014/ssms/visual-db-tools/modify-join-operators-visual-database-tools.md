@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], operators
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87174d9f5c13ebc29252076db2f919445181aa6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865eee3e48d99914e2f04ad0ae59e42443447f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304953"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>조인 연산자 수정(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 기본적으로 두 조인 열의 값을 일치시키는 등호(동등 조인)를 사용하여 테이블을 조인합니다. 필요한 경우 조인 열의 값을 비교하는 데 사용되는 연산자를 변경할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36183350"
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 자동 조인 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [테이블을 수동으로 조인 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [테이블 수동 조인 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

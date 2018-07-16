@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172874"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
   이 항목에서 설명하는 지침을 따르면 응용 프로그램 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
   
 ## <a name="server-and-network"></a>서버 및 네트워크  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
   
      기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36186068"
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
-     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. 데이터 형식 `text`, `ntext`, 및 `image` 사용 되지 않습니다. Lob를 포함 시킬 경우 데이터 형식을 사용 하는 것이 좋습니다 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`각각.  
+     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. 데이터 형식 `text`, `ntext`, 및 `image` 사용 되지 않습니다. Lob를 포함 시킬 경우 데이터 형식을 사용 하는 것이 좋습니다 `varchar(max)`하십시오 `nvarchar(max)`, `varbinary(max)`각각.  
   
      트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
   

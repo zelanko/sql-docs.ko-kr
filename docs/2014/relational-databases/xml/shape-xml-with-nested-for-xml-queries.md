@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af69cc7956717388f9a8f97a8220e7ffe02db76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1c970d2472b304e3dbc2591019f7d70a9405cfd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234793"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>중첩 FOR XML 쿼리로 XML 구체화
   다음 예에서는 `Production.Product` 테이블을 쿼리하여 특정 제품의 `ListPrice` 및 `StandardCost` 값을 검색합니다. 쿼리를 효과적으로 만들기 위해 두 가격이 모두 <`Price`> 요소에 반환되고 각 <`Price`> 요소에는 `PriceType` 특성이 포함됩니다.  
@@ -90,7 +90,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- 사용 하 여 이전 예제는 `query()` 의 메서드는 `xml` 데이터 내부 FOR XML 쿼리에 의해 반환 된 XML 쿼리를 입력 하 고 예상된 결과 생성 합니다.  
+ 앞의 예제에서는 합니다 `query()` 메서드는 `xml` 데이터 내부 FOR XML 쿼리에 의해 반환 된 XML 쿼리를 입력 하 고 예상된 결과 생성 합니다.  
   
  다음은 결과입니다.  
   

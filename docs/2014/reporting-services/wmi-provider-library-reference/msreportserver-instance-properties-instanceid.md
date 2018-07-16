@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InstanceID Property (WMI MSReportServer_Instance)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fda235584cab9f769e49214acc4e0da8bd6e1a75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7f97076d0341755ed901dd00a489c1312bd6729c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297843"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>InstanceID 속성(WMI MSReportServer_Instance)
   이 개체는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c3fea9b837915fff37bad632780544bcf7ebb1a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306333"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>번역 세부 정보(번역 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너에서 **번역** 탭의 **번역 세부 정보** 창을 사용하여 현재 선택한 차원의 번역을 정의하고 관리할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36186631"
   
 -   attribute  
   
-     `Caption``AttributeHierarchyDisplayFolder`, 및 `NamingTemplate` 속성  
+     `Caption`하십시오 `AttributeHierarchyDisplayFolder`, 및 `NamingTemplate` 속성  
   
     > [!NOTE]  
     >  `NamingTemplate` 속성은 부모 특성에 대해서만 사용할 수 있습니다.  

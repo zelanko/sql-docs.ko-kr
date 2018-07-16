@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event end times [SQL Server]
 - filters [SQL Server], traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae6ba13adfd2cd482a8c52383ae220557f0bcc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d319f09716ec35cc0af52414c0f8c76f63a9248
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241823"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 종료 시간을 기반으로 추적 이벤트를 필터링하는 방법을 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36182930"
   
 5.  **이벤트 선택**탭에서 **EndTime** 데이터 열을 클릭하여 **필터 편집** 대화 상자를 시작합니다. 열 제목을 마우스 오른쪽 단추로 클릭한 다음 **열 필터 편집**을 선택할 수도 있습니다.  
   
-6.  확장 **보다 큰** 또는 **미만**, 입력 한 `datetime`비교 연산자 아래 나타나는 필드의 값입니다.  
+6.  확장 **보다 큰** 또는 **미만**를 입력 하 고는 `datetime`비교 연산자 아래 나타나는 필드의 값.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)   

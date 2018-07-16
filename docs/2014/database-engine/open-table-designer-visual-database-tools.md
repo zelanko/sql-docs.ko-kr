@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening tables
 - opening Table Designer
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Table Designer, opening
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eee9d6c9a62b1b3d6b07fd5078ca311ed0a86a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4cb680ae0028958ee704f0e5a8d787a14dff67d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328163"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>테이블 디자이너 열기(Visual Database Tools)
   테이블 디자이너는 연결할 데이터베이스 테이블을 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 테이블 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36185233"
      **테이블 디자이너** 메뉴가 주 메뉴에 추가되고 디자이너 창에 테이블이 열립니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블을 디자인 &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [테이블 디자인 &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [테이블](../relational-databases/tables/tables.md)  
   
   

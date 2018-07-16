@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e390c18563b092fd0460da5b9aed90828921d10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212373"
 ---
 # <a name="server-configuration---service-accounts"></a>서버 구성 - 서비스 계정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 로그인 계정을 할당할 수 있습니다. 이 페이지에서 구성하는 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
   
- 시작 하 고 실행 하는 데 사용 되는 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하이퍼링크 "ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm" \l "Domain_User" 도메인 사용자 계정, 로컬 사용자 계정, 관리 서비스 계정 수 가상 계정 또는 기본 제공 시스템 계정입니다.  
+ 시작 하 고 실행 하는 데 사용 되는 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] HYPERLINK "ms-help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm" \l "Domain_User" 도메인 사용자 계정, 로컬 사용자 계정, 관리 되는 서비스 계정 수 가상 계정 또는 기본 제공 시스템 계정입니다.  
   
 ## <a name="options"></a>변수  
  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. 대부분의 설치에 기본 계정을 사용하는 것이 좋습니다.  

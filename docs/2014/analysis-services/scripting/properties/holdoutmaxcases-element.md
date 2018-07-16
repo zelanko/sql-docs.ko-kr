@@ -18,15 +18,15 @@ helpviewer_keywords:
 - HoldoutMaxCases element
 ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 083ff97f8d739f4f970a6fec8a5c7353b43b5763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6eb53625e7f1fd7f595871bf505481cad4145866
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314743"
 ---
 # <a name="holdoutmaxcases-element"></a>HoldoutMaxCases 요소
   테스트 집합이 들어 있는 홀드 아웃 파티션에 사용 되는 데이터 원본의 최대 사례 수를 지정 된 [MiningStructure](../objects/miningstructure-element-assl.md) 요소입니다. 데이터 집합의 나머지 사례는 학습에 사용됩니다. 0 값은 테스트 집합으로 홀드아웃할 수 있는 사례 수에 대한 제한이 없음을 나타냅니다.  
@@ -62,12 +62,12 @@ ms.locfileid: "36184800"
   
  `HoldoutMaxCases`가 기본값 0으로 설정되고 `HoldoutMaxPercent`에 대한 값이 설정되지 않은 경우 알고리즘은 전체 데이터 집합을 학습에 사용합니다.  
   
- 새 속성 `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed`, 또는 `HoldoutActualSize` 에 사용할 수 있는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전입니다. 따라서 구문 설명에 표시된 대로 새 네임스페이스로 이러한 속성에 접두사를 지정해야 합니다. 그렇지 않으면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 오류를 반환합니다.  
+ 새 속성 `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed`, 또는 `HoldoutActualSize` 으로만 사용할 수 있는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상. 따라서 구문 설명에 표시된 대로 새 네임스페이스로 이러한 속성에 접두사를 지정해야 합니다. 그렇지 않으면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 오류를 반환합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 마이닝 구조에서 홀드아웃 파티션의 사용을 지원하지 않았습니다. 따라서 홀드아웃 매개 변수 `HoldoutMaxCases`, `HoldoutMaxPercent`, `HoldoutSeed` 또는 `HoldoutActualSize` 중 하나를 포함하는 ASSL([!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language) 문은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 ASSL 문의 이러한 홀드아웃 매개 변수 중 하나를 사용하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 오류를 반환합니다.  
   
- 부모에 해당 하는 요소 `HoldoutMaxCases` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.  
+ 부모에 해당 하는 요소가 `HoldoutMaxCases` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)   

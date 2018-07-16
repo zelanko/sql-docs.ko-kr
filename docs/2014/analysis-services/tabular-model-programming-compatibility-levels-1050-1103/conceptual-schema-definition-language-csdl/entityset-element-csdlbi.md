@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 243dd308d996f82c9a51c8ae9f7f44cfd473dcb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d8b1e7438714807260b4e317e9367ff77f9916df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314573"
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet 요소(CSDLBI)
   EntitySet 요소는 CSDLBI 데이터 모델에서 특정 유형의 엔터티 컬렉션을 정의합니다.  

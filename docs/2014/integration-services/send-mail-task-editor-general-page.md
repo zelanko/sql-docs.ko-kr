@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.general.f1
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 959502ba0da952cc77e544a633bbe0afd0ef1200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ffe3ac894f42a953bcf279e5a3162285c6f5db4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199593"
 ---
 # <a name="send-mail-task-editor-general-page"></a>메일 보내기 태스크 편집기(일반 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메일 보내기 태스크의 이름을 지정하고 설명할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "36184527"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [메일 보내기 태스크 편집기 &#40;페이지 메일&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
+ [메일 보내기 태스크 편집기 &#40;페이지를 메일&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

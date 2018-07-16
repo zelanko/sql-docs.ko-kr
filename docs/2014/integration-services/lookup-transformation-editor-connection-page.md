@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91794c83736042672026f5a0fe35ead15dd112eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c3236fe156e103269995a0707be17602af0a5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318913"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
   **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 집합을 생성할 수도 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36185422"
  목록에서 기존 테이블 또는 뷰를 선택하거나 **새로 만들기**를 클릭하여 새 테이블을 만듭니다.  
   
 > [!NOTE]  
->  **조회 변환 편집기** 의 **고급**페이지에서 SQL 문을 지정하는 경우 해당 SQL 문이 여기서 선택한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 참조 [조회 변환 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)합니다.  
+>  **조회 변환 편집기** 의 **고급**페이지에서 SQL 문을 지정하는 경우 해당 SQL 문이 여기서 선택한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)합니다.  
   
  **새로 만들기**  
  **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - period over period growth [Analysis Services]
 - parallel period comparisons [Analysis Services]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 54d0e5cf5562049ee239d21a2d7fdeae8d46fed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 319408b079ce5be4a381e02f47f5189edbde3ed0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295983"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
   시간 인텔리전스 기능은 선택한 계층에 시간 계산(또는 시간 보기)을 추가하는 큐브 기능입니다. 이 기능은 다음과 같은 계산 범주를 지원합니다.  
@@ -45,14 +45,14 @@ ms.locfileid: "36184372"
   
 -   동일 기간 비교  
   
- 시간 차원이 있는 큐브에 시간 인텔리전스를 적용합니다. 시간 차원은 차원의 `Type` 속성이 `Time`으로 설정되어 있는 차원입니다. 또한 해당 차원의 시간 특성에는 관련 `Type` 속성에 대한 적절한 설정(예: Years 또는 Months)이 있어야 합니다. `Type` 차원과 차원의 특성 모두의 속성이 올바르게 설정 됩니다 차원 마법사를 사용 하 여 시간 차원을 만들 수 있습니다.  
+ 시간 차원이 있는 큐브에 시간 인텔리전스를 적용합니다. 시간 차원은 차원의 `Type` 속성이 `Time`으로 설정되어 있는 차원입니다. 또한 해당 차원의 시간 특성에는 관련 `Type` 속성에 대한 적절한 설정(예: Years 또는 Months)이 있어야 합니다. `Type` 차원 마법사를 사용 하 여 시간 차원을 만들면 차원과 차원의 특성 모두의 속성이 올바르게 설정 수 됩니다.  
   
  큐브에 시간 인텔리전스를 추가하려면 비즈니스 인텔리전스 마법사의 **기능 선택** 페이지에서 **시간 인텔리전스 정의** 옵션을 선택합니다. 그런 다음 마법사의 안내를 따라 시간 인텔리전스를 추가할 계층을 선택하고 계층에서 시간 인텔리전스를 적용할 멤버를 지정합니다. 마법사의 마지막 페이지에서 선택한 시간 인텔리전스를 추가하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 변경 사항을 확인할 수 있습니다.  
   
 ## <a name="selecting-a-time-hierarchy"></a>시간 계층 선택  
  **대상 계층 및 계산 선택** 페이지에서 시간 기능을 적용할 시간 계층을 선택합니다. 비즈니스 인텔리전스 마법사를 실행할 때마다 시간 계층 하나에만 시간 기능을 적용할 수 있습니다. 여러 시간 계층에 기능을 적용하려면 마법사를 다시 실행해야 합니다.  
   
- 시간 계층을 선택한 후 **사용 가능한 시간 계산** 목록에서 계층에 적용할 계산을 선택합니다. 나열 되는 계산은 계층 및 수준에 따라 달라 집니다는 `Type` 각 수준에 대 한 특성에 속성을 설정 합니다. 예를 들어 년 계층은 연간 누계 및 전년동기대비 성장을 지원하지만 분기 계층은 이러한 계산을 지원하지 않습니다.  
+ 시간 계층을 선택한 후 **사용 가능한 시간 계산** 목록에서 계층에 적용할 계산을 선택합니다. 나열 되는 계산은 계층의 수준과에 종속 된 `Type` 각 수준에 대 한 특성에 대 한 속성 설정 합니다. 예를 들어 년 계층은 연간 누계 및 전년동기대비 성장을 지원하지만 분기 계층은 이러한 계산을 지원하지 않습니다.  
   
 > [!NOTE]  
 >  Timeintelligence.xml 템플릿 파일은 **사용 가능한 시간 계산**에 나열되는 시간 계산을 정의합니다. 나열된 계산이 요구에 맞지 않으면 기존 계산을 변경하거나 Timeintelligence.xml 파일에 새 계산을 추가할 수 있습니다.  

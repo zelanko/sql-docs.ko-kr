@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
@@ -16,16 +16,16 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 878f8fc674659d91a732549fcd68da134cdf5fc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fa0589e7ac68f3662929c6316cdd0ddf427911d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306113"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
-  Azure HDInsight 연결 관리자 속성에 대해 지정 된 값을 사용 하 여 Azure 구독에 연결 하려면 SSIS 패키지를 통해: Azure 구독 ID 및 관리 인증서.  
+  Azure HDInsight 연결 관리자 속성에 대해 지정 된 값을 사용 하 여 Azure 구독에 연결할 SSIS 패키지를 사용 하도록 설정: Azure 구독 ID 및 관리 인증서.  
   
 1.  위에 나와 있는 **SSIS 연결 관리자 추가** 대화 상자에서 **Azure 구독**을 선택하고 **추가**를 클릭합니다.  다음과 같은 **Azure 구독 연결 관리자 편집기** 대화 상자가 표시됩니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36186593"
   
 3.  드롭다운 목록에서 **관리 인증서 저장소 위치** 및 **관리 인증서 저장소 이름** 을 선택합니다.  
   
-4.  **관리 인증서 지문** 을 입력하거나 **찾아보기...** 를 클릭하여 선택한 저장소에서 인증서를 선택합니다. 인증서는 구독용 관리 인증서로 업로드해야 합니다. 이렇게 하려면 Azure 포털의 다음 페이지에서 **업로드** 를 클릭합니다. 자세한 내용은 이 [MSDN 게시물](https://msdn.microsoft.com/library/azure/gg551722.aspx) 을 참조하세요.  
+4.   **관리 인증서 지문** 을 입력하거나 **찾아보기...** 를 클릭하여 선택한 저장소에서 인증서를 선택합니다. 인증서는 구독용 관리 인증서로 업로드해야 합니다. 이렇게 하려면 Azure 포털의 다음 페이지에서 **업로드** 를 클릭합니다. 자세한 내용은 이 [MSDN 게시물](https://msdn.microsoft.com/library/azure/gg551722.aspx) 을 참조하세요.  
   
      ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorepage.general.f1
 helpviewer_keywords:
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d13ed1c3e6ca12ae0ba61fdb4f8ce0126a1b3614
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6dcda45c3aa53bfe6e3e73338e2a37f207b3007d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279719"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 페이지를 복원하는 방법에 대해 설명합니다. 페이지 복원의 목표는 전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 페이지를 복원하는 것입니다. 일반적으로 복원 후보 페이지는 페이지에 액세스할 때 발생한 오류 때문에 "주의 대상"으로 표시됩니다. 주의 대상 페이지는 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 데이터베이스의 **suspect_pages** 테이블에서 확인할 수 있습니다.  

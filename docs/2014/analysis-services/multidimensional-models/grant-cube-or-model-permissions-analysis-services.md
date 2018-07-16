@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306563"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
   큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36184805"
  연속적인 솔루션 배포 중에 역할 정의를 유지하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 모델의 필수적인 부분으로 역할을 정의한 다음, 데이터베이스를 게시한 후 데이터베이스 관리자가 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 역할 멤버 자격을 할당하는 것이 가장 좋습니다. 그러나 두 작업 모두에 어느 도구든 사용할 수 있습니다. 연습을 단순화하려면 역할 정의와 멤버 자격 둘 다에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용합니다.  
   
 > [!NOTE]  
->  모든 권한을 보유한 서버 관리자 또는 데이터베이스 관리자만 원본 파일에서 서버로 큐브를 배포하거나 역할을 만들고 구성원을 할당할 수 있습니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 및 [데이터베이스 사용 권한을 부여 &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) 이러한 사용 권한에 대 한 세부 정보에 대 한 수준입니다.  
+>  모든 권한을 보유한 서버 관리자 또는 데이터베이스 관리자만 원본 파일에서 서버로 큐브를 배포하거나 역할을 만들고 구성원을 할당할 수 있습니다. 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 하 고 [데이터베이스 권한 부여 &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) 이러한 사용 권한에 대 한 세부 정보에 대 한 수준입니다.  
   
 #### <a name="step-1-create-the-role"></a>1단계: 역할 만들기  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36184805"
   
 1.  에 **큐브** 창에서 큐브를 선택한 다음 클릭 `Read` 또는 **읽기/쓰기** 액세스 합니다.  
   
-     `Read` 액세스가 대부분의 작업에 충분 합니다. **읽기/쓰기** 권한은 쓰기 저장에만 사용되며 처리에는 사용되지 않습니다. 이 기능에 대한 자세한 내용은 [Set Partition Writeback](set-partition-writeback.md) 을 참조하세요.  
+     `Read` 액세스는 대부분의 작업에 대 한 충분 한입니다. **읽기/쓰기** 권한은 쓰기 저장에만 사용되며 처리에는 사용되지 않습니다. 이 기능에 대한 자세한 내용은 [Set Partition Writeback](set-partition-writeback.md) 을 참조하세요.  
   
      여러 큐브는 물론 역할 만들기 대화 상자에서 만들 수 있는 다른 개체도 선택할 수 있습니다. 큐브에 대한 사용 권한을 부여하면 해당 큐브와 연결된 차원 및 큐브 뷰에 대한 액세스 권한도 부여됩니다. 이미 큐브에 있는 개체를 수동으로 추가할 필요는 없습니다.  
   
@@ -107,6 +107,6 @@ ms.locfileid: "36184805"
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 원본 개체에 대 한 권한을 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [데이터 원본 개체에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

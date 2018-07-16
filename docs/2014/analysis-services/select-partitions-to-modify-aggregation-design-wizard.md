@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.selectpartition.f1
 ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0284e94f94231f19d0034586d1ba2ca002893a36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf185daee0369212dd94d2aa0844640cbc2e3783
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197833"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>수정할 파티션 선택(집계 디자인 마법사)
   **수정할 파티션 선택** 페이지를 사용하여 집계를 디자인할 파티션을 선택할 수 있습니다.  

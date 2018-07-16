@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -19,13 +19,13 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8bd434ee91f53e747b6291d6c718f9e073f8af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd5e04688dcea2b43d7093a73b828ba58ff1460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292833"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services(SSIS) 식
   식은 하나의 데이터 값으로 계산되는 기호(식별자, 리터럴, 함수 및 연산자)의 조합입니다. 간단한 식으로는 단일 상수, 변수 또는 함수가 있습니다. 그러나 식이 여러 개의 연산자와 함수를 사용하고 여러 개의 열과 변수를 참조하는 경우가 더 많습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 식은 CASE 문의 조건 정의, 데이터 열의 값 만들기 및 업데이트, 변수에 값 할당, 런타임에 속성 업데이트 또는 채우기, 선행 제약 조건에 제약 조건 정의, For Loop 컨테이너에 사용되는 식 제공 등에 사용할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "36184296"
   
 -   식을 사용하여 값이 설정되는 변수. 예를 들어 GETDATE()는 변수의 값을 현재 날짜로 설정합니다.  
   
--   식을 사용하여 패키지에서 제약된 태스크 또는 컨테이너의 실행 여부를 결정을 위한 조건을 지정하는 선행 제약 조건. 선행 제약 조건에서 사용 되는 식이 계산 되어야 `true` 또는 `false`합니다. 예를 들어 @A > @B 식은 두 개의 사용자 정의 변수를 비교하여 제약된 태스크를 실행할지 여부를 결정합니다.  
+-   식을 사용하여 패키지에서 제약된 태스크 또는 컨테이너의 실행 여부를 결정을 위한 조건을 지정하는 선행 제약 조건. 선행 제약 조건에 사용 된 식은 여야 `true` 또는 `false`합니다. 예를 들어 @A > @B 식은 두 개의 사용자 정의 변수를 비교하여 제약된 태스크를 실행할지 여부를 결정합니다.  
   
 -   식을 사용하여 루프 구조의 초기값, 비교값 및 증가값 문을 작성하는 For Loop 컨테이너. 예를 들어 @Counter = 1 식은 루프 카운터를 초기화합니다.  
   

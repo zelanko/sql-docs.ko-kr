@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e2f65e97eaff15057b5d427a09f015b7bcdd218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0e206306e959df9e61e2f07d842fad7900cabb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272029"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결
   팜의 여러 SharePoint 웹 응용 프로그램에서 PowerPivot 서비스 응용 프로그램을 사용할 수 있습니다. PowerPivot 서비스 응용 프로그램을 사용할 수 있도록 하려면 서비스 연결 목록에 이를 추가합니다.  

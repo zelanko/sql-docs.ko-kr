@@ -15,15 +15,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 287110485742ac9f8cce945d9fdb3864cfa69c23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ccd35eb05019c606e794323fbd12bea60771e9be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319983"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL 액세스를 사용하여 Reporting Services 통합
   URL 액세스를 사용하여 보고서 서버 URL을 통해 보고서에 액세스할 수 있습니다. URL 요청을 통해 특정 보고서 서버는 물론 보고서 서버 데이터베이스의 보고서, 리소스 및 기타 항목에 액세스할 수 있습니다. 또한 사용자를 위해 보고서 보기 및 탐색 환경을 사용자 지정할 수도 있습니다. URL의 쿼리 문자열에는 장치 정보 설정, 보고서를 대상으로 하는 보고서 매개 변수 및 선택한 렌더링 출력이 포함됩니다. 보고서 서버에서 URL 요청을 처리하는 방법은 매개 변수, 매개 변수 접두사, URL을 통해 액세스하는 항목의 형식 등에 따라 다릅니다.  

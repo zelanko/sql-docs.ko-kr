@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215963"
 ---
 # <a name="statusgraphic-element-assl"></a>StatusGraphic 요소(ASSL)
-  상태에 대 한 권장된 그래픽 표현을 포함 된 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
+  상태에 대 한 권장된 그래픽 표현을 포함 합니다 [Kpi](../objects/kpi-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,15 +67,15 @@ ms.locfileid: "36184343"
 |값|Description|  
 |-----------|-----------------|  
 |*단일 신호등*|신호등(단일)|  
-|*다중 신호등*|신호등(다중)|  
+|*여러 신호등*|신호등(다중)|  
 |*도 표지*|도로 표지|  
 |*계기-오름차순*|계기|  
 |*계기-내림차순*|역방향 계기|  
 |*온도계*|온도계|  
-|*실린더*|실린더|  
+|*원기둥*|실린더|  
 |*웃는 얼굴*|얼굴|  
   
- 부모에 해당 하는 요소 `StatusGraphic` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
+ 부모에 해당 하는 요소가 `StatusGraphic` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Kpi>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

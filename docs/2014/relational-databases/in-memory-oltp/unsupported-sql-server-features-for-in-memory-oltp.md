@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 48
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5233c8ab4eaa9926fe8c058c3f6d410d536306da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205383"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "36183301"
   
 -   메모리 최적화 데이터 파일 그룹에서 메모리 내 OLTP 개체를 저장하고 RTO(복구 시간 목표)를 줄이기 위한 컨테이너 여러 개  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 블록 체크섬을 계산 하 고 유효성을 검사 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 블록 체크섬을 계산 하 고 확인 합니다.  
   
 -   새 SNAPSHOT 테이블 힌트. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36183301"
   
 -   제한 사항이 있는 Service Broker. 고유하게 컴파일된 저장 프로시저에서 큐에 액세스할 수 없습니다. 메모리 최적화 테이블에 액세스하는 트랜잭션에서 원격 데이터베이스에 있는 큐에 액세스할 수 없습니다.  
   
--   장애 조치(failover) 클러스터링: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공의 일부로 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 기능을 활용하여 FCI(장애 조치(failover) 클러스터 인스턴스)라는 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
+-   장애 조치(failover) 클러스터링: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공을 위해 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 기능을 사용하여 FCI(장애 조치(failover) 클러스터 인스턴스)라고 부르는 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   AlwaysOn과 통합: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 AlwaysOn을 비롯하여 서버 또는 데이터베이스의 고가용성 유지를 위한 여러 가지 옵션을 제공합니다. 자세한 내용은 [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요.  
   

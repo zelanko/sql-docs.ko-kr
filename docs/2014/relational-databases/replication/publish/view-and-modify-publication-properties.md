@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - modifying replication properties, articles
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8168a9cb358f2be2a4b5c7c120ee06a8c10f7ccc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7d6dd823e7f19ad13a8921146d13e59f4e443f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230843"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -160,11 +160,11 @@ ms.locfileid: "36184677"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만들고 게시에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정한 다음, 1단계에서 만든 연결에 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 된 또는 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
-4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자를 사용 하 여 (`&` Microsoft Visual C# 및 `And` Microsoft Visual Basic) 여부를 확인 하는 지정 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 에 대 한 값이 설정의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
+4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자를 사용 하 여 (`&` Microsoft Visual C# 및 `And` Microsoft Visual Basic) 여부를 확인 하려면를 지정 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 에 대 한 값이 설정는 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성입니다. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
   
-5.  (선택 사항) 값을 지정한 경우 `true` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, 호출 된 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드는 서버에서 변경 내용을 커밋 하도록 합니다. 값을 지정한 경우 `false` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (기본값) 이면 변경 내용이 서버에 즉시 전송 합니다.  
+5.  (선택 사항) 값을 지정 하는 경우 `true` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>를 호출 합니다 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 서버의 변경 내용을 적용 하는 방법입니다. 값을 지정 하는 경우 `false` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (기본값) 변경 내용이 서버로 즉시 전송 합니다.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>병합 게시의 속성을 보거나 수정하려면  
   
@@ -172,11 +172,11 @@ ms.locfileid: "36184677"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 게시에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정한 다음, 1단계에서 만든 연결에 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 된 또는 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Visual C#에서는 `&`, Visual Basic에서는 `And`)를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
   
-5.  (선택 사항) 값을 지정한 경우 `true` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, 호출 된 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드는 서버에서 변경 내용을 커밋 하도록 합니다. 값을 지정한 경우 `false` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (기본값) 이면 변경 내용이 서버에 즉시 전송 합니다.  
+5.  (선택 사항) 값을 지정 하는 경우 `true` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>를 호출 합니다 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 서버의 변경 내용을 적용 하는 방법입니다. 값을 지정 하는 경우 `false` 에 대 한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (기본값) 변경 내용이 서버로 즉시 전송 합니다.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  이 예에서는 트랜잭션 게시에 대한 게시 특성을 설정합니다. 변경 내용은 명시적으로 서버로 전송될 때까지 캐시됩니다.  

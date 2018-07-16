@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
@@ -16,13 +16,13 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44ffe15525667ad907e282efda510a63d347c30e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cccc4857558d90f25b9b246391a66fdd81d46bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199623"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만들어진 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 형식으로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 과정을 돕는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 제공합니다. 원래 패키지를 백업하도록 마법사를 구성할 수 있으므로 업그레이드에 문제가 있을 경우 원래 패키지를 계속 사용할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36185424"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>명령 프롬프트에서 마법사를 실행하려면  
   
--   명령 프롬프트에서 SSISUpgrade.exe 파일을 실행 된 **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** 폴더입니다.  
+-   명령 프롬프트에서 SSISUpgrade.exe 파일을 실행 합니다 **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** 폴더입니다.  
   
 ## <a name="backing-up-the-original-packages"></a>원래 패키지 백업  
  원래 패키지를 백업하려면 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되어 있어야 합니다. 마법사를 실행하는 방법에 따라 이 저장 위치는 자동으로 선택될 수 있습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "36185424"
 2.  마법사의 **패키지 관리 옵션 선택** 페이지에서 **원래 패키지 백업** 옵션을 선택합니다.  
   
     > [!WARNING]  
-    >  **원래 패키지 백업** 열 때 옵션이 표시 되지 않습니다는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 마법사가 자동으로 시작 됩니다.  
+    >  합니다 **원래 패키지 백업** 열면 옵션이 표시 되지 않습니다는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 마법사가 자동으로 시작 됩니다.  
   
 3.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 실행합니다.  
   

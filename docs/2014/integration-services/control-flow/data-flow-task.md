@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320753"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "36182845"
 |로그 항목|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|데이터 흐름 태스크로 인해 버퍼 크기가 변경되었음을 나타냅니다. 로그 항목은 크기가 변경된 이유를 설명하고 임시 새 버퍼 크기를 나열합니다.|  
-|`OnPipelinePostEndOfRowset`|구성 요소 중 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 제공 된 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
-|`OnPipelinePostPrimeOutput`|구성 요소에 대 한 마지막 호출을 완료 했음을 나타냅니다는 `PrimeOutput` 메서드. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다. 구성 요소가 원본일 경우 이 로그 항목은 구성 요소가 행 처리를 완료했음을 의미합니다.|  
-|`OnPipelinePreEndOfRowset`|구성 요소 중 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 수신 하려고 임을 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
+|`OnPipelinePostEndOfRowset`|구성 요소에 대 한 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 제공 했음을 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
+|`OnPipelinePostPrimeOutput`|구성 요소에 대 한 마지막 호출 완료 되었음을 나타냅니다는 `PrimeOutput` 메서드. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다. 구성 요소가 원본일 경우 이 로그 항목은 구성 요소가 행 처리를 완료했음을 의미합니다.|  
+|`OnPipelinePreEndOfRowset`|구성 요소에 대 한 마지막 호출으로 설정 된 해당 행 집합의 끝 신호를 수신 하는 나타냅니다는 `ProcessInput` 메서드. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
 |`OnPipelinePrePrimeOutput`|구성 요소가 `PrimeOutput` 메서드에서 해당 호출을 수신하려고 함을 나타냅니다. 데이터 흐름에 따라 여러 로그 항목이 기록될 수 있습니다.|  
 |`OnPipelineRowsSent`|`ProcessInput` 메서드 호출로 구성 요소 입력에 제공한 행 수를 보고합니다. 이 로그 항목은 구성 요소 이름을 포함합니다.|  
 |`PipelineBufferLeak`|버퍼 관리자가 없어진 후에 버퍼를 활성 상태로 유지하는 모든 구성 요소에 대한 정보를 제공합니다. 버퍼가 여전히 활성 상태인 경우 버퍼 리소스가 해제되지 않으므로 메모리가 손실될 수 있습니다. 로그 항목은 구성 요소 이름과 버퍼 ID를 제공합니다.|  
@@ -95,8 +95,8 @@ ms.locfileid: "36182845"
 |Column|Description|값|  
 |------------|-----------------|-----------|  
 |**PathID**|값은 `ID` OLE DB 원본과 정렬 변환 사이의 경로 대 한 속성입니다.|1185|  
-|**PathName**|값은 `Name` 경로의 속성입니다.|OLE DB 원본 출력|  
-|**ComponentID**|값은 `ID` 정렬 변환의 속성입니다.|1180|  
+|**PathName**|값을 `Name` 경로의 속성입니다.|OLE DB 원본 출력|  
+|**ComponentID**|값을 `ID` 정렬 변환의 속성입니다.|1180|  
 |**ComponentName**|정렬 변환의 `Name` 속성 값입니다.|Sort|  
 |**InputID**|정렬 변환에 대한 입력의 `ID` 속성 값입니다.|1181|  
 |**InputName**|정렬 변환에 대한 입력의 `Name` 속성 값입니다.|정렬 입력|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 726133083a8cd0f5be2bb6d20740c80c79c3fe75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65eb54a5db89a535497c4aed32214b9cef006d23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190719"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 연결 관리자 편집기(프록시 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **프록시** 탭을 사용하여 프록시 서버를 사용하도록 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다.  
@@ -63,6 +63,6 @@ ms.locfileid: "36186345"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 연결 관리자 편집기 &#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [HTTP 연결 관리자 편집기 &#40;Server 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - roles [Reporting Services], methods
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97bd2cfb91d42248bf210e89e3ace17f5e7b11b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 137bd3d94e33524b724076cf6371ef84fb3bec05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309313"
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  

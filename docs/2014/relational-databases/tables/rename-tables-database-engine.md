@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table renaming [SQL Server]
 - table names [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 258997de3639b208c8b977a0d245780fdfa889f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fdf02dc9b8cefd59b75f6a2d77683930fefb7996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311410"
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블 이름을 바꿀 수 있습니다.  

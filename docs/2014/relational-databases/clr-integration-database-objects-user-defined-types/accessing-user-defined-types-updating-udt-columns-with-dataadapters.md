@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079774"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354875"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>DataAdapter로 UDT 열 업데이트
   UDT(사용자 정의 형식)는 데이터를 검색하고 수정하기 위해 `System.Data.DataSet` 및 `System.Data.SqlClient.SqlDataAdapter`를 사용하여 지원됩니다.  
   
 ## <a name="populating-a-dataset"></a>데이터 집합 채우기  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 집합을 채울 수 있습니다. 다음 예제에서는 있다고 가정 합니다.는 **포인트** 테이블은 다음과 같은 구조와 예제 데이터를 사용 하 여 정의 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다는 **포인트** 테이블 및 행을 몇 개 삽입 합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 집합을 채울 수 있습니다. 다음 예제에서는 있다고 가정 된 **지점** 다음 구조와 몇 가지 샘플 데이터를 사용 하 여 정의 된 테이블입니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다 합니다 **지점** 테이블과 몇 개의 행을 삽입 합니다.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -51,7 +49,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 다음 ADO.NET 코드는 유효한 연결 문자열을 검색, 새 `SqlDataAdapter`, 정보를 표시 하 고는 `System.Data.DataTable` 에서 데이터의 행이 있는 **포인트** 테이블입니다.  
+ 다음 ADO.NET 코드는 유효한 연결 문자열을 검색, 새 `SqlDataAdapter`, 채웁니다를 `System.Data.DataTable` 에서 데이터의 행을 포함 합니다 **지점** 테이블.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  다음 ADO.NET 예에는 두 개의 메서드가 있습니다.  
   
--   `UserProvidedCommands`를 제공 하는 방법을 보여 주는 `InsertCommand`, `UpdateCommand`, 및 `DeleteCommand` 업데이트에 대 한 개체는 `Point` 에서 UDT는 **포인트** 테이블 (포함 하지 않는 한 `timestamp` 열) 합니다.  
+-   `UserProvidedCommands`를 제공 하는 방법을 보여 줍니다 `InsertCommand`, `UpdateCommand`, 및 `DeleteCommand` 업데이트에 대 한 개체를 `Point` 에서 UDT를 **지점** 테이블 (포함 하지 않는 `timestamp` 열).  
   
--   `CommandBuilder`를 사용 하는 방법을 보여 주는 `SqlCommandBuilder` 에 **Points_ts** 포함 된 테이블의 `timestamp` 열입니다.  
+-   `CommandBuilder`를 사용 하는 방법을 보여 줍니다는 `SqlCommandBuilder` 에 **Points_ts** 포함 된 테이블은 `timestamp` 열.  
   
 ```vb  
 Imports System  

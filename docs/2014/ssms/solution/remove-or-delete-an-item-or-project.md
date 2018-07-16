@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting project items
 - projects [SQL Server Management Studio], item removal
 - removing project items
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7834be297cef98d18f78d74999750bf347454bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 10a5ee3209b6101deda62171c1f0f57bebf23121
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246223"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>항목이나 프로젝트 제거 또는 삭제
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 저장소에서 파일을 지우지 않고 솔루션에서 프로젝트 쿼리 및 기타 파일을 제거할 수 있습니다. 프로젝트 또는 항목이 현재 솔루션에는 유용하지 않지만 다른 솔루션에 포함하려는 경우 해당 프로젝트 또는 항목을 제거합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36182691"
   
 ## <a name="see-also"></a>관련 항목  
  [솔루션 탐색기](solution-explorer.md)   
- [프로젝트에 새 항목을 추가 합니다.](add-new-items-to-a-project.md)   
+ [프로젝트에 새 항목 추가](add-new-items-to-a-project.md)   
  [프로젝트에 기존 항목 추가](add-existing-items-to-a-project.md)  
   
   

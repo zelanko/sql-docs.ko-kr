@@ -16,30 +16,30 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319973"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
   이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 updategram을 실행합니다. 사용되는 updategram은 특정 직원의 성을 업데이트합니다. 이 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다.  
   
  이 예제 응용 프로그램에서는 다음 작업이 수행됩니다.  
   
--   **conn** 개체 (**ADODB 합니다. 연결**)의 실행 중인 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 서버 컴퓨터에 있습니다.  
+-   합니다 **conn** 개체 (**ADODB 합니다. 연결**)에 연결 하는 실행 중인 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 서버 컴퓨터입니다.  
   
--   **cmd** 개체 (**ADODB.Command**) 설정된 된 연결에서 실행 합니다.  
+-   합니다 **cmd** 개체 (**ADODB.Command**) 설정된 된 연결에서 실행 합니다.  
   
 -   명령 언어가 DBGUID_MSSQLXML로 설정됩니다.  
   
--   Updategram이 명령 스트림에 복사 됩니다 (**strmIn**).  
+-   Updategram은 명령 스트림에 복사 됩니다 (**strmIn**).  
   
--   로 설정 된 명령의 출력 스트림에 **StrmOut** 개체 (**ADODB 합니다. 스트림**)를 받는 모든 데이터를 반환 합니다.  
+-   명령의 출력 스트림에로 설정 되는 **StrmOut** 개체 (**ADODB 합니다. Stream**) 나타나면 데이터를 반환 합니다.  
   
 -   최종적으로 명령(updategram)이 실행됩니다.  
   
@@ -187,7 +187,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>매개 변수 전달  
- 앞서 살펴보았던 Visual Basic 응용 프로그램에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에는 **ContactID** 및 **MiddleName** 값으로 updategram에 매개 변수가 있는 입력으로 전달 됩니다.  
+ 앞서 살펴보았던 Visual Basic 응용 프로그램에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에는 **ContactID** 하 고 **MiddleName** 값으로 updategram에 매개 변수화 된 입력으로 전달 됩니다.  
   
 ```vb  
 Private Sub Form_Load()  

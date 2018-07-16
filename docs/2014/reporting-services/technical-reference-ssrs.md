@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
 - technical reference [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f749612e65681ec7daf2f556ada02e9f84b5fd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87b75fe08c201d7aace1d2465351300447e5ae7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255915"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 사용하거나 관리하기 위한 도구 및 PowerShell 참조 설명서를 찾습니다.  

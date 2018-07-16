@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.Backup.f1
 - sql12.asvs.ssmsimbi.Restore.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d778b7b21242cdd7f994caba33360ad61f9bf3bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3881b600453b66723afae9369fac8b18ca0012aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312633"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  

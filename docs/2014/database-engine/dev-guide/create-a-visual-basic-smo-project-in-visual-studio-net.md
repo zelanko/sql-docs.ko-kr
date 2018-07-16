@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a3f3db2487a60c80d9fdb933298784b69db8718
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213793"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기
   이 섹션에서는 간단한 SMO 콘솔 응용 프로그램을 빌드하는 방법을 설명합니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "36184109"
   
 3.  **프로젝트 형식** 대화 상자에서 **Visual Basic**를 선택한 후 **Windows**합니다. 에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 된 템플릿 창 **콘솔 응용 프로그램입니다.**  
   
-4.  (선택 사항) 에 **이름** 필드 새 응용 프로그램의 이름을 입력 합니다.  
+4.  (선택 사항) 에 **이름을** 필드에 새 응용 프로그램의 이름을 입력 합니다.  
   
-5.  클릭 **확인** 로드 하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 콘솔 응용 프로그램 템플릿을 합니다.  
+5.  클릭 **확인** 로드 하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 콘솔 응용 프로그램 템플릿.  
   
 6.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-7.  클릭 **찾아보기**, C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 폴더에서 SMO 어셈블리를 찾아서 선택한 후 다음 파일입니다. SMO 응용 프로그램을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
+7.  클릭 **찾아보기**고 C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 폴더에서 SMO 어셈블리를 찾아서 다음 파일을 선택 합니다. SMO 응용 프로그램을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36184109"
   
 9. **열기**를 클릭합니다.  
   
-10. 에 **보기** 메뉴를 클릭 하 여 **코드**. 또는 Module1.vb 창을 선택 하 여 코드 창을 표시 합니다.  
+10. 에 **뷰** 메뉴에서 클릭 **코드**. 또는 Module1.vb 창을 선택 하 여 코드 창을 표시 합니다.  
   
-11. 다른 모든 선언 앞에 코드에서 다음 명령을 입력 **Imports** 문을 SMO 네임 스페이스의 형식을 한정 합니다.  
+11. 다른 모든 선언 앞의 코드를 다음 입력 **가져오기** 문을 SMO 네임 스페이스의 형식을 한정 합니다.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

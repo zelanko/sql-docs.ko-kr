@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b8405be955cdfd4f0d8b9665665f8817c98b9d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcd15f49067a9c6a1091f98e6b361ab11baf2a0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295123"
 ---
 # <a name="create-a-user-defined-role"></a>사용자 정의 역할 만들기
     
@@ -31,7 +31,7 @@ ms.locfileid: "36185433"
   
 3.  개체 탐색기 도구 모음에서 **연결**, **데이터베이스 엔진**을 차례로 클릭합니다.  
   
-4.  **서버에 연결** 대화 상자에 서버 이름을 입력하고 인증 모드를 선택합니다. 마침표 (.), (local)을 사용할 수 있습니다 또는 `localhost` 로컬 서버를 지정 합니다.  
+4.  **서버에 연결** 대화 상자에 서버 이름을 입력하고 인증 모드를 선택합니다. 마침표 (.), (local)을 사용할 수 있습니다 또는 `localhost` 로컬 서버를 나타냅니다.  
   
 5.  **연결**을 클릭합니다.  
   

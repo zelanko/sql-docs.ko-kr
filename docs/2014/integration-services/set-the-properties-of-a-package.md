@@ -1,5 +1,5 @@
 ---
-title: 패키지의 속성을 설정 | Microsoft Docs
+title: 패키지의 속성 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec97db89a74170ee04c9cc23486032958cb16a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 197dbb96b08d484bce2f5235c106dc3f21433528
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328003"
 ---
 # <a name="set-the-properties-of-a-package"></a>패키지의 속성 설정
   이 절차에서는 **속성** 창을 사용하여 패키지 속성을 구성하는 방법을 설명합니다.  

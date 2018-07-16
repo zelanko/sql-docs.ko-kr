@@ -1,5 +1,5 @@
 ---
-title: 동적 관리 뷰 (Dmv)를 사용 하 여 Analysis Services를 모니터링할 | Microsoft Docs
+title: 동적 관리 뷰 (Dmv)를 사용 하 여 Analysis Services 모니터링 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288569"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  
   
- 사용 하면 대부분의 DMV 쿼리에서 `SELECT` 문 및 `$System` 스키마는 XML/A 스키마 행 집합을 사용 합니다.  
+ 사용할 대부분의 DMV 쿼리에서 `SELECT` 문 및 `$System` 스키마는 XML/A 스키마 행 집합을 사용 하 여 합니다.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  서버에 다음 오류가 반환 DMV 주어진된 행 집합에 대해 사용할 수 없는 경우: "는 \<w s e t > 서버에서 요청 유형을 인식할 수 없습니다". 다른 모든 오류는 구문 문제를 가리킵니다.  
+>  DMV는 지정 된 행 집합에 대해 사용할 수 없는 경우 서버는 다음 오류를 반환 하는: "는 \<schemarowset > 서버에서 요청 유형을 인식할 수 없습니다". 다른 모든 오류는 구문 문제를 가리킵니다.  
   
 |행 집합|Description|  
 |------------|-----------------|  

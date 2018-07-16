@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceviewproperties.f1
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5dcffe8ea685edcb0d1494f3860e7f7e01e6aaaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25afba8b1e342595fd4777c9122aa474fada8f84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301213"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>데이터 원본 뷰 속성 대화 상자(SSAS)
   **의** 데이터 원본 뷰 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 데이터 원본 뷰 속성을 설정할 수 있습니다. **개체 탐색기** 에서 데이터 원본 뷰를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **데이터 원본 뷰 속성**대화 상자를 표시할 수 있습니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.table.tablerecreatenosave.f1
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 776342b7f6a9d40bf2ed8e57ff7b86494f053541
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5577fc8ee51d3af811ea52603c8a0b2a30df6b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187680"
 ---
 # <a name="save-not-permitted-dialog-box"></a>저장(허용되지 않음) 대화 상자
   **저장** (허용되지 않음) 대화 상자는 변경한 내용을 적용하려면 나열된 테이블을 삭제한 다음 다시 만들어야 하므로 변경 내용 저장이 허용되지 않음을 경고합니다.  

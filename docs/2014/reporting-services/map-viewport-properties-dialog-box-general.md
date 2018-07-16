@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 98b0749983e079249c35d98e2d033b04273e2dd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea57f5e98aec1e95264908cc080d229d8be573f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284649"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>지도 뷰포트 속성 대화 상자, 일반
   **지도 뷰포트 속성** 대화 상자에서 **일반** 을 선택하여 좌표계, 도법 및 경계 옵션을 변경할 수 있습니다.  

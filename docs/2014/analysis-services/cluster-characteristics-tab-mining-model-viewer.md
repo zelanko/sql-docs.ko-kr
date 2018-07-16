@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e5dcac98dd53edbd5e894c639c067106288e7e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f3b5076884e44926457437ef1c31fd595418edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172084"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>클러스터 특징 탭(마이닝 모델 뷰어)
   **클러스터 특징** 탭에서는 클러스터링 모델에 있는 클러스터의 특징이나 모델에 있는 모든 사례 집합의 특징을 탐색할 수 있습니다. 이 그래프에는 다른 클러스터와 비교한 각 특성-값 쌍의 중요도가 클러스터를 정의하는 특징으로 표시됩니다.  

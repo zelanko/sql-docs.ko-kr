@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319813"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>1단원: RDL Schema Visual Studio 프로젝트 만들기
-  이 자습서에서는 간단한 콘솔 응용 프로그램을 만듭니다. 이 자습서에서 개발 하는 것으로 가정 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]합니다.  
+  이 자습서에서는 간단한 콘솔 응용 프로그램을 만듭니다. 이 자습서에서는 개발 하는 가정 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되는 보고서 서버 웹 서비스에 액세스하는 경우 "ReportServer" 경로에 "_SQLExpress"를 추가해야 합니다. 예를 들어:  
@@ -55,11 +55,11 @@ ms.locfileid: "36184175"
   
 3.  **콘솔 응용 프로그램** 프로젝트 형식을 선택합니다.  
   
-4.  **이름** 입력란에 프로젝트 이름을 이름을 입력 `SampleRDLSchema`합니다.  
+4.  **이름** 입력란에 프로젝트 이름을 이름을 입력 하 고 `SampleRDLSchema`입니다.  
   
 5.  **위치** 상자에 프로젝트를 저장할 경로를 입력하거나 **찾아보기** 를 클릭하여 원하는 폴더로 이동합니다.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 축소 된 보기로 프로젝트의 솔루션 탐색기에 나타납니다.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 솔루션 탐색기에서 프로젝트의 축소 된 보기로 표시 됩니다.  
   
 7.  **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36184175"
   
      **참조 추가** 대화 상자의 **.NET** 탭에서 **System.Web.Services**를 선택하고 **확인**을 클릭합니다.  
   
-     보고서 서버 웹 서비스에 연결 하는 방법에 대 한 자세한 내용은 참조 [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)합니다.  
+     보고서 서버 웹 서비스에 연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [웹 서비스 및.NET Framework를 사용 하 여 응용 프로그램 빌드](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)합니다.  
   
 10. 솔루션 탐색기에서 프로젝트 노드를 확장합니다. Program.cs([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 Module1.vb)라는 기본 이름을 가진 코드 파일이 프로젝트에 추가되었음을 확인할 수 있습니다.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "36184175"
  다음 단원에서는 XML 스키마 정의 도구(Xsd.exe)를 사용하여 RDL 스키마의 클래스를 생성하고 이를 프로젝트에 포함시킵니다. 참조 [2 단원: xsd 도구를 사용 하 여 RDL 스키마에서 클래스 생성](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [RDL 스키마에서 생성 한 클래스를 사용 하 여 보고서 업데이트 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

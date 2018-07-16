@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed5092f93494162179dc2ee142a6769eddd5d6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173294"
 ---
 # <a name="solveorder-element-assl"></a>SolveOrder 요소(ASSL)
-  계산 순서를 나타냅니다는 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소는 계산된 멤버 또는 계산된 셀 정의에 적용 합니다.  
+  계산 순서를 나타냅니다 합니다 [CalculationProperty](../objects/calculationproperty-element-assl.md) 요소가 계산된 멤버 또는 계산된 셀 정의에 적용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36184795"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `SolveOrder` 속성에 적용 됩니다. `CalculationProperty` 사용 하 여 요소는 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀*합니다.  
+ 합니다 `SolveOrder` 속성에 적용 됩니다 `CalculationProperty` 사용 하 여 요소를 [CalculationType](calculationtype-element-assl.md) 의 *멤버* 또는 *셀*합니다.  
   
- 부모에 해당 하는 요소 `SolveOrder` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
+ 부모에 해당 하는 요소가 `SolveOrder` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CalculationProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CalculationProperties 요소 &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

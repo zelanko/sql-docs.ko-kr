@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
 - remote servers [SQL Server], configuring
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a75d5e665654acca7a1748a6ad54fa05d1c2dec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 254dc9a0160527be50654ac00cac30d02152abab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328203"
 ---
 # <a name="remote-servers"></a>원격 서버
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 응용 프로그램은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "36187471"
   
  대개 원격 서버에 대한 구성 옵션은 설정할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Set은 로컬 및 원격 컴퓨터 모두에 기본값을 설정하여 원격 서버 연결을 허용합니다.  
   
- 원격 서버에 액세스하려면 **remote access** 구성 옵션을 로컬 컴퓨터와 원격 컴퓨터에서 1로 설정해야 합니다. 이것은 기본 설정입니다.  **원격 액세스** 는 원격 서버로부터의 로그인을 제어합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 저장 프로시저 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 이 구성 옵션을 다시 설정할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하려면 **서버 속성 연결** 페이지에서 **이 서버에 대한 원격 연결 허용**을 사용합니다. **서버 속성 연결** 페이지에 접근하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **서버 속성** 페이지에서 **연결** 페이지를 클릭합니다.  
+ 원격 서버에 액세스하려면 **remote access** 구성 옵션을 로컬 컴퓨터와 원격 컴퓨터에서 1로 설정해야 합니다. 이것은 기본 설정입니다.  **원격 액세스** 는 원격 서버로부터의 로그인을 제어합니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** 저장 프로시저 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 이 구성 옵션을 다시 설정할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하려면 **서버 속성 연결** 페이지에서 **이 서버에 대한 원격 연결 허용**을 사용합니다. **서버 속성 연결** 페이지에 접근하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **서버 속성** 페이지에서 **연결** 페이지를 클릭합니다.  
   
  로컬 서버에서 원격 서버 구성을 해제하여 쌍을 이루는 원격 서버의 사용자가 해당 로컬 서버에 액세스하는 것을 차단할 수 있습니다.  
   
@@ -97,7 +97,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>로컬 서버 또는 원격 서버 속성 보기  
- **xp_msver** 확장 저장 프로시저를 사용하여 로컬 서버 또는 원격 서버의 특성을 검토할 수 있습니다. 이러한 특성에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 번호, 컴퓨터의 프로세서 유형과 개수 및 운영 체제 버전이 포함됩니다. 로컬 서버에서는 원격 서버의 데이터베이스, 파일, 로그인 및 도구를 볼 수 있습니다. 자세한 내용은 참조 하십시오. [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/합니다.  
+ **xp_msver** 확장 저장 프로시저를 사용하여 로컬 서버 또는 원격 서버의 특성을 검토할 수 있습니다. 이러한 특성에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 번호, 컴퓨터의 프로세서 유형과 개수 및 운영 체제 버전이 포함됩니다. 로컬 서버에서는 원격 서버의 데이터베이스, 파일, 로그인 및 도구를 볼 수 있습니다. 자세한 내용은 참조 하세요. [xp_msver &#40;TRANSACT-SQL&#41;] (~ relational-databases/system-stored-procedures/xp-msver-transact-sql.md/입니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325113"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 시간에 따른 제품 판매량과 같은 연속 값을 예측에 대 한 최적화 된 회귀 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 집합만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 시간이 지남에 따라 제품 판매량과 같은 연속 값을 예측에 최적화 된 회귀 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 집합만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  
   
  다음 다이어그램에서는 4개의 다른 판매 지역에서 시간에 따른 제품 판매량을 예측하기 위한 일반적인 모델을 보여 줍니다. 다이어그램에 표시된 모델은 빨간색, 노란색, 보라색 및 파란색 선으로 표시된 각 지역별 판매량을 보여 줍니다. 각 지역의 선은 다음 두 부분으로 구성됩니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36184386"
   
  원본 데이터와 예측 데이터의 조합을 *계열*이라고 합니다.  
   
- ![시계열 예](../media/time-series.gif "시계열 예")  
+ ![시계열의 예로](../media/time-series.gif "시계열 예")  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘의 중요한 기능은 교차 예측을 수행할 수 있다는 것입니다. 관련된 두 개의 별도 계열이 있는 알고리즘을 학습하는 경우 결과 모델을 사용하여 한 계열의 동작을 기반으로 다른 계열의 결과를 예측할 수 있습니다. 예를 들어 관찰된 특정 제품의 판매량이 다른 제품의 예측 판매량에 영향을 줄 수 있습니다. 또한 교차 예측은 여러 계열에 적용될 수 있는 일반 모델을 만드는 데에도 유용합니다. 예를 들어 계열에 높은 품질의 데이터가 부족하기 때문에 특정 지역에 대한 예측이 불안정합니다. 4개 지역 모두의 평균으로 일반 모델을 학습한 다음 개별 계열에 이 모델을 적용하여 각 지역에 대해 더 안정된 예측을 만들 수 있습니다.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36184386"
  이 회사는 각 분기마다 최신 판매량 데이터로 모델을 업데이트하고 이들의 예측을 업데이트하여 최신 추세로 모델링할 계획입니다. 판매량 데이터를 정확하거나 일관되게 업데이트하지 않는 점포의 문제를 해결하려면 일반 예측 모델을 만들고 이 모델을 사용하여 모든 지역에 대한 예측을 만듭니다.  
   
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 단일 알고리즘인 ARTXP를 사용 합니다. ARTXP 알고리즘은 단기 예측에 맞게 최적화 된 한을 일련의 다음 값입니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 ARTXP 알고리즘 및 두 번째 알고리즘인 ARIMA 모두를 사용 합니다. ARIMA 알고리즘은 장기 예측에 대해 최적화되어 있습니다. ARTXP 및 ARIMA 알고리즘의 구현에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)를 참조하십시오.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 단일 알고리즘인 ARTXP를 사용 합니다. ARTXP 알고리즘은 단기 예측에 대해 최적화 된 한 시리즈의 다음 값을 예측 합니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 ARTXP 알고리즘 및 두 번째 알고리즘인 ARIMA 모두를 사용 합니다. ARIMA 알고리즘은 장기 예측에 대해 최적화되어 있습니다. ARTXP 및 ARIMA 알고리즘의 구현에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)를 참조하십시오.  
   
  기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 패턴을 분석하고 예측을 수행할 때 알고리즘을 혼합하여 사용합니다. 알고리즘은 동일한 데이터에서 두 개의 모델을 별도로 학습 합니다: 한 모델은 ARTXP 알고리즘을 사용 하 고 다른 모델은 ARIMA 알고리즘을 사용 합니다. 그러면 알고리즘은 두 모델의 결과를 혼합하여 여러 개의 시간 조각에 대한 최상의 예측을 생성합니다. ARTXP는 단기 예측에 가장 적합하므로 일련의 예측이 시작되는 부분에서는 ARTXP에 더 비중을 둡니다. 그러나 예측하는 시간 조각이 보다 미래로 이동하면 ARIMA에 더 비중을 둡니다.  
   
- 알고리즘의 혼합을 제어하여 시계열에서 단기 예측 또는 장기 예측 중 하나를 우선시할 수도 있습니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 표준 되도록 지정할 수 있습니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다음 설정 중 하나를 시계열 알고리즘 사용:  
+ 알고리즘의 혼합을 제어하여 시계열에서 단기 예측 또는 장기 예측 중 하나를 우선시할 수도 있습니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard를 지정할 수 있습니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다음 설정 중 하나를 시계열 알고리즘 사용:  
   
 -   단기 예측에 ARTXP만 사용합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36184386"
   
 -   두 알고리즘의 혼합을 기본값으로 사용합니다.  
   
- 부터는 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]를 사용자 지정할 수 있습니다는 방법을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘이 예측에 대 한 모델을 혼합 합니다. 혼합 모델을 사용하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 두 가지 알고리즘을 다음과 같은 방식으로 혼합합니다.  
+ 부터는 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]를 사용자 지정할 수 있습니다 하는 방법을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘이 예측 모델을 혼합 합니다. 혼합 모델을 사용하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 두 가지 알고리즘을 다음과 같은 방식으로 혼합합니다.  
   
 -   처음 두 개의 예측을 수행하는 데 항상 ARTXP만 사용됩니다.  
   

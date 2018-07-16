@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48a56983486d07e2331394a9a07b39bde38925b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206493"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 원본 편집기(연결 관리자 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 OLE DB 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36184295"
 >  [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 이전 버전을 사용하는 데이터 원본에서 데이터를 로드하려면 Excel 원본을 사용하십시오. 자세한 내용은 [Excel 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)를 참조하세요.  
   
 > [!NOTE]  
->  `CommandTimeout` OLE DB 원본의 속성에서 사용할 수 없는 **OLE DB 원본 편집기**, 이지만 사용 하 여 설정할 수 있습니다는 **고급 편집기**합니다. 이 속성에 대한 자세한 내용은 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
+>  `CommandTimeout` OLE DB 원본의 속성을 사용할 수 없습니다는 **OLE DB 원본 편집기**를 사용 하 여 설정할 수 있습니다를 **고급 편집기**합니다. 이 속성에 대한 자세한 내용은 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)의 Excel 원본 섹션을 참조하십시오.  
   
  OLE DB 원본에 대한 자세한 내용은 [OLE DB Source](data-flow/ole-db-source.md)을 참조하십시오.  
   

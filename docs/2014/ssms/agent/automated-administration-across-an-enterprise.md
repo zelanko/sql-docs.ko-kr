@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
 - multiserver administration [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95ed4df18cfb4bcf433d08bbe9decacf35977c0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9c4cd4b54ef4659434f7b73b81c72f79c2cba4e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257859"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>기업 내 관리 자동화
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 여러 인스턴스에 대한 관리 자동화를 *다중 서버 관리*라고 합니다. 다중 서버 관리를 사용하여 다음을 수행합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36183365"
 -   데이터 웨어하우징을 위해 엔터프라이즈 서버 간의 정보 흐름 예약  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 총 소유 비용을 줄이고자 하는 지속적인 노력의 일환으로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 정책 기반 관리라고 하는 서버 관리 방법과 구성 서버 및 서버 그룹을 사용하는 다중 서버 쿼리라고 하는 두 가지 기능을 새로 도입했습니다. 이러한 기능을 이 항목에서 설명하는 일부 기능 대신 또는 일부 기능과 함께 사용할 수 있습니다. 자세한 내용은 참조 [사용 하 여 정책 기반 관리 서버](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [여러 서버를 사용 하 여 중앙 관리 서버](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)합니다.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 총 소유 비용을 줄이고자 하는 지속적인 노력의 일환으로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 정책 기반 관리라고 하는 서버 관리 방법과 구성 서버 및 서버 그룹을 사용하는 다중 서버 쿼리라고 하는 두 가지 기능을 새로 도입했습니다. 이러한 기능을 이 항목에서 설명하는 일부 기능 대신 또는 일부 기능과 함께 사용할 수 있습니다. 자세한 내용은 [하 여 서버 정책 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 하 고 [여러 서버를 사용 하 여 중앙 관리 서버](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  다중 서버 관리를 이용하려면 마스터 서버와 대상 서버가 적어도 하나씩 있어야 합니다. 마스터 서버는 대상 서버에 작업을 배포하거나 대상 서버에서 이벤트를 받습니다. 또한 마스터 서버에서는 대상 서버에서 실행되는 작업에 대한 작업 정의의 중앙 복사본을 저장합니다. 대상 서버는 주기적으로 마스터 서버에 연결되어 작업 일정을 업데이트합니다. 새 작업이 마스터 서버에 있는 경우 대상 서버는 작업을 다운로드합니다. 대상 서버는 작업을 완료한 후에 마스터 서버에 다시 연결하여 작업 상태를 보고합니다.  
   
@@ -96,8 +96,8 @@ ms.locfileid: "36183365"
  [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
  [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
  [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;Transact SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [dbo.sysjobservers &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys.syslogins &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo.systargetservers &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

@@ -20,22 +20,22 @@ helpviewer_keywords:
 - ServerNetworkProtocolIPAddress class
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 35a9492435fe5e7c1aef2aa9a78432b1068c2813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fa046009808e596876b3a1262db7739efff5195a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307333"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 클래스
   [ServerNetworkProtocolIPAddress 클래스] servernetworkprotocolipaddress-class.md) 서버 네트워크 프로토콜에서 지 원하는 IP 주소를 나타냅니다.  
   
- [ServerNetworkProtocolIPAddress 클래스] servernetworkprotocolipaddress-class.md) 다음과 같은 작업을 수행할 수 있습니다.  
+ [ServerNetworkProtocolIPAddress 클래스] servernetworkprotocolipaddress-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 이름을 확인합니다.  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 이름을 확인합니다.  
   
 -   IP 주소 이름 및 프로토콜 이름을 확인합니다.  
   

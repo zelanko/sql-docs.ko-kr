@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
 - collation configuration, Setup
 - collation configuration
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee24c8f9234069526780db72457e178d50d5c824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: abd57940e3caf8af66cb58fdeceebc802e877f6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290179"
 ---
 # <a name="server-configuration---collation"></a>서버 구성 - 데이터 정렬
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 - 데이터 정렬 페이지에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 정렬하기 위해 사용하는 데이터 정렬 설정을 수정할 수 있습니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치나 다른 컴퓨터의 데이터 정렬 설정과 일치하는 옵션을 선택하십시오.  
   
 ## <a name="options"></a>변수  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 사용자 지정  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 두 그룹을 제공: Windows 데이터 정렬 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 별도의 데이터 정렬 설정을 지정하거나 두 구성 요소에 대해 동일한 데이터 정렬을 지정할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 두 그룹을 제공 합니다: Windows 데이터 정렬 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 별도의 데이터 정렬 설정을 지정하거나 두 구성 요소에 대해 동일한 데이터 정렬을 지정할 수 있습니다.  
   
  기본적으로 미국 영어 시스템 로캘에 대해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬이 선택됩니다. 지역화된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 기본 데이터 정렬은 컴퓨터의 Windows 시스템 로캘 설정에 의해 결정됩니다.  
   

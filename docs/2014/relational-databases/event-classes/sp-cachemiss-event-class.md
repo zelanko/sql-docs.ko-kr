@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ce12aab246dd55d606206f984a2f3bf157c10dc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5857e29d1baa025c36199a9462f50b2903ec17ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313833"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 이벤트 클래스
   SP:CacheMiss 이벤트 클래스는 캐시에 프로시저가 없음을 나타냅니다. SP:CacheMiss 이벤트가 자주 발생하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 메모리를 더 확보하여 프로시저 캐시 크기를 늘려야 합니다.  

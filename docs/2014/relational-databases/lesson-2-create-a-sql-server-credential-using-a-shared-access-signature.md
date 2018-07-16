@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219253"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>3단원: SQL Server 자격 증명 만들기
   이 단원에서는 Windows Azure 저장소 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만듭니다.  
   
  SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 저장소 컨테이너의 URI 경로와 공유 액세스 서명 키 값이 저장됩니다. 데이터 또는 로그 파일에서 사용하는 각 저장소 컨테이너에 대해 컨테이너 경로와 일치하는 이름의 SQL Server 자격 증명을 만들어야 합니다.  
   
- 자격 증명에 대 한 일반 정보를 참조 하십시오. [자격 증명 &#40;데이터베이스 엔진&#41;](security/authentication-access/credentials-database-engine.md)합니다.  
+ 자격 증명에 대 한 일반적인 정보를 참조 하세요 [자격 증명 &#40;데이터베이스 엔진&#41;](security/authentication-access/credentials-database-engine.md)합니다.  
   
 > [!IMPORTANT]  
->  아래에 설명 된 SQL Server 자격 증명을 만들기 위한 요구 사항은 [Windows Azure에서 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md) 기능입니다. Azure 저장소에 백업 프로세스에 대 한 자격 증명을 만드는 방법에 대 한 정보를 참조 하십시오. [2 단원: SQL Server 자격 증명 만들기](../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
+>  아래에 설명 된 SQL Server 자격 증명을 만들기 위한 요구 사항은 합니다 [Windows Azure의 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md) 기능입니다. Azure storage에 백업 프로세스에 대 한 자격 증명을 만드는 방법에 대 한 정보를 참조 하세요 [단원 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
   
  SQL Server 자격 증명을 만들려면 다음 단계를 수행합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36184262"
   
     ```  
   
-     자세한 내용은 참조 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) SQL Server 온라인 설명서의 합니다.  
+     자세한 내용은 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) SQL Server 온라인 설명서의 합니다.  
   
 5.  사용할 수 있는 모든 자격 증명을 보려면 쿼리 창에서 다음 문을 실행합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36184262"
     SELECT * from sys.credentials  
     ```  
   
-     Sys.credentials에 대 한 자세한 내용은 참조 하십시오. [sys.credentials &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) SQL Server 온라인 설명서의 합니다.  
+     Sys.credentials에 대 한 자세한 내용은 참조 하세요. [sys.credentials &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) SQL Server 온라인 설명서의 합니다.  
   
  **다음 단원:**  
   

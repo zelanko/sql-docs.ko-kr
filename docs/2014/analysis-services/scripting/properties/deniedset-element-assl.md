@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DeniedSet element
 ms.assetid: 898deefb-822d-458b-96d8-880da287b687
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20a915d24291ec01fe619abf8fa259099c71c810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c63ced94ae8779e57fa8e9aebf84642fd4e468f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312403"
 ---
 # <a name="deniedset-element-assl"></a>DeniedSet 요소(ASSL)
   연관된 특성에 대해 거부된 권한 목록을 정의하는 집합 식을 포함합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36183923"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `DeniedSet` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributePermission>합니다.  
+ 부모에 해당 하는 요소가 `DeniedSet` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributePermission>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

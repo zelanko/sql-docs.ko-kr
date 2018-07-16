@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310443"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(AlwaysOn 가용성 그룹)
   가용성 그룹의 컨텍스트 내에서는 일반적으로 가용성 복제본의 주 역할과 보조 역할을 *장애 조치(Failover)* 라는 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)* 라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획된 수동 장애 조치(Failover)는 모든 데이터를 보존합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 즉, 가용성 그룹은 해당 보조 복제본 중 하나(현재 *장애 조치(Failover) 대상*)로 장애 조치(Failover)됩니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "36187065"
 |계획된 수동 장애 조치(Failover)|아니요|예|예|  
 |강제 장애 조치(failover)|예|예|예**<sup>*</sup>**|  
   
- **<sup>*</sup>**  동기화 된 보조 복제본에 강제 장애 조치 명령은 실행 하면 보조 복제본 수동 장애 조치의 경우와 동일 하 게 작동 합니다.  
+ **<sup>*</sup>**  동기화 된 보조 복제본에 강제 장애 조치 명령을 실행 하는 경우 보조 복제본을 수동 장애 조치의 경우와 동일 하 게 동작 합니다.  
   
  장애 조치(Failover) 중에 데이터베이스를 사용할 수 없는 시간은 장애 조치(Failover)의 유형과 원인에 따라 달라집니다.  
   
@@ -239,14 +238,14 @@ ms.locfileid: "36187065"
   
 1.  주 복제본에 연결합니다.  
   
-2.  쿼리는 `last_commit_lsn` (마지막으로 커밋된 트랜잭션의 LSN) 및 `last_commit_time` (마지막 커밋의 시간) 열을는 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) 동적 관리 뷰.  
+2.  쿼리는 `last_commit_lsn` (마지막으로 커밋된 트랜잭션의 LSN) 및 `last_commit_time` (마지막 커밋의 시간) 열을 [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) 동적 관리 뷰.  
   
 3.  각각의 주 데이터베이스와 보조 데이터베이스에 대해 반환되는 값을 비교합니다. 마지막 커밋 LSN 간 차이는 지연 양을 나타냅니다.  
   
 4.  데이터베이스 또는 데이터베이스 집합의 지연 양이 지정된 기간 동안 원하는 최대 지연을 초과할 때 알림을 트리거할 수 있습니다. 예를 들어, 각 주 데이터베이스에서 1분마다 실행되는 작업을 통해 쿼리를 실행할 수 있습니다. 작업이 실행된 마지막 시간 이후 주 데이터베이스와 보조 데이터베이스의 `last_commit_time` 간 차이가 RPO(복구 시간 목표)(예: 5분)를 초과하는 경우 작업에서 알림을 발생시킬 수 있습니다.  
   
 > [!IMPORTANT]  
->  WSFC 클러스터에 쿼럼이 부족 하거나 쿼럼이 강제 적용 되었습니다. `last_commit_lsn` 및 `last_commit_time` 은 NULL입니다. 쿼럼 강제 수행 후 데이터 손실을 방지하는 방법에 대한 자세한 내용은 [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
+>  WSFC 클러스터에 쿼럼이 부족 하거나 쿼럼이 강제로 때 `last_commit_lsn` 고 `last_commit_time` null입니다. 쿼럼 강제 수행 후 데이터 손실을 방지하는 방법에 대한 자세한 내용은 [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> 잠재적 데이터 손실 관리  
  강제 장애 조치(failover) 후 모든 보조 데이터베이스가 일시 중지됩니다. 여기에는 이전 주 복제본이 다시 온라인 상태가 되고 이제 보조 복제본임을 확인한 후의 이전 주 데이터베이스가 포함됩니다. 각 보조 복제본에서 일시 중지된 각 데이터베이스를 개별적으로 수동 재개해야 합니다.  
@@ -289,7 +288,7 @@ ms.locfileid: "36187065"
   
 -   [가용성 복제본의 장애 조치(failover) 모드 변경&#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [자동 장애 조치의 상태 제어 하는 유연한 장애 조치 정책을 구성 &#40;AlwaysOn 가용성 그룹&#41;](configure-flexible-automatic-failover-policy.md)  
+-   [자동 장애 조치에 대 한 상태 제어 유연한 장애 조치 정책 구성 &#40;AlwaysOn 가용성 그룹&#41;](configure-flexible-automatic-failover-policy.md)  
   
  **수동 장애 조치(Failover)를 수행하려면**  
   
@@ -311,7 +310,7 @@ ms.locfileid: "36187065"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -319,7 +318,7 @@ ms.locfileid: "36187065"
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 모드 &#40;AlwaysOn 가용성 그룹&#41;](availability-modes-always-on-availability-groups.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대해 지원 되지 않는 데이터베이스 간 트랜잭션 &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
+ [데이터베이스 간 트랜잭션 데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대해 지원 되지 않습니다 &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)  
   

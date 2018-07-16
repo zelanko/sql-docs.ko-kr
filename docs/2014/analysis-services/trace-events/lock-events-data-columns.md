@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1f7d2233bbd2df1d5ace66341ad8b9e08bf8c0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3160ffa917a0f3eb3d6a80f81d6218c8f45525e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167574"
 ---
 # <a name="lock-events-data-columns"></a>Lock 이벤트 데이터 열
   Lock 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  

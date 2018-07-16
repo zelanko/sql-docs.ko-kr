@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 속성을 변경 | Microsoft Docs
+title: Data Source View (Analysis Services)에서 속성을 변경 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
 - names [Analysis Services], data source views
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c740690921e496cffc70959e0494bcdfb190b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332513"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 속성 변경(Analysis Services)
   데이터 원본 뷰 마법사를 사용하여 데이터 원본 뷰를 정의하고 데이터 원본 뷰에 테이블, 뷰, 명명된 계산 및 명명된 쿼리를 추가한 후 다음과 관련된 속성을 변경할 수 있습니다.  
@@ -85,6 +85,6 @@ ms.locfileid: "36185712"
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 디자이너에서의 다이어그램 작업 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [데이터 원본 뷰 디자이너의 다이어그램 작업 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

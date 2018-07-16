@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
 - page breaks [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f261d0fcb2af1ffd6b58e09723167d760e0c93f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fe2bf439a3ba9da5d2f486ec93bf63f909f43db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275969"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
   큰 보고서는 제대로 실행될 경우 특수한 처리 문제를 발생시키며 특정 구성을 필요로 합니다. 큰 보고서는 페이지 매김을 지원하도록 구성되지 않은 한 요청 시 실행되도록 하면 안 됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36182742"
 ## <a name="configuration-recommendations"></a>구성 권장 사항  
  보고서 실행, 보고서 렌더링 및 보고서 액세스에 대한 권장 사항은 다음과 같습니다.  
   
--   페이지 매김을 지원하도록 보고서를 디자인합니다. 보고서 서버는 보고서를 한 번에 한 페이지씩 보냅니다. 보고서에 페이지 매김이 포함되어 있는 경우 브라우저에 스트림되는 데이터의 양을 제어할 수 있습니다. 자세한 내용은 참조 [캐시를 미리 로드 &#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)합니다.  
+-   페이지 매김을 지원하도록 보고서를 디자인합니다. 보고서 서버는 보고서를 한 번에 한 페이지씩 보냅니다. 보고서에 페이지 매김이 포함되어 있는 경우 브라우저에 스트림되는 데이터의 양을 제어할 수 있습니다. 자세한 내용은 [캐시를 미리 로드 &#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)합니다.  
   
 -   보고서가 요청이 있을 때 실행되지 않도록 보고서를 예약된 보고서 스냅숏으로 실행되도록 구성합니다. 보고서 실행에 대한 시간 제한 값을 설정하지 마십시오. 사용률이 낮은 시간에 보고서를 실행합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36182742"
  [구독 및 배달 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [보고서 서버 내용 관리 &#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
  [캐시 사전 로드&#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)  
   
   

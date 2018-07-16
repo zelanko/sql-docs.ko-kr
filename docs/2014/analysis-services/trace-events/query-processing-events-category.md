@@ -1,5 +1,5 @@
 ---
-title: 쿼리 이벤트 범주를 처리 합니다. | Microsoft Docs
+title: 쿼리 처리 이벤트 범주 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddcdd85807e9b77c5baf91cc7bb6fd4418f8316b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee6ef696f26397c3b4ca7656710d666d6e1941d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261489"
 ---
 # <a name="query-processing-events-category"></a>Query Processing 이벤트 범주
   Query Processing 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  

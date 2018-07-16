@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dd5360f4f001d85c883291bf87a85ae0e48e3362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232613"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
   사이트 설정 페이지를 사용하여 응용 프로그램 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
   
 > [!NOTE]  
->  일부 SQL Server 버전에서 보고서 기록, 보고서 실행 및 공유 일정 기능은 지원되지 않습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  일부 SQL Server 버전에서 보고서 기록, 보고서 실행 및 공유 일정 기능은 지원되지 않습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -36,7 +36,7 @@ ms.locfileid: "36184634"
   
 2.  페이지의 맨 위에서 **사이트 설정**을 클릭합니다. 사이트의 일반 속성 페이지가 열립니다.  
   
-     **참고:** 표시 되지 않으면는 **사이트 설정** 옵션 메뉴에서 않아도 필요한 권한, 자세한 내용은의 "사이트 설정" 섹션을 참조 하십시오. [에 대 한 기본 모드 보고서 서버를 구성 합니다. 로컬 관리 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
+     **참고:** 보이지 않는 경우는 **사이트 설정** 옵션 메뉴에서 필요가 없습니다 필요한 권한, 자세한 내용은의 "사이트 설정" 섹션을 참조 하세요. [에 대 한 기본 모드 보고서 서버를 구성 합니다. 로컬 관리 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
   
 ## <a name="options"></a>변수  
  **이름**  
@@ -57,9 +57,9 @@ ms.locfileid: "36184634"
  **사용자 지정 보고서 작성기 시작 URL**  
  보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 ClickOnce 응용 프로그램으로 시작됩니다. 기본 URL은 다음 중 하나입니다.  
   
- **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL http://의 형태를 취하는\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.  
+ **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL 인 http:// 형식을 따릅니다\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.  
   
- SharePoint 통합된 모드: 기본 URL은 http://의 형태를 취하\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ SharePoint 통합된 모드: 기본 URL 인 http:// 형식을 따릅니다\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
  **적용**  
  변경 내용을 보고서 서버에 저장하려면 클릭합니다.  

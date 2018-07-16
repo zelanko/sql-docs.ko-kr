@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f0bfcc4ed838cccd0088cbf0011f6e630ee1fc5
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 75a9ef3ae1c496c2469ea27d766eedf317af5bf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176160"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>대상 선택(SQL Server 가져오기 및 내보내기 마법사)
   **대상 선택** 페이지를 사용하여 복사할 데이터의 대상을 지정할 수 있습니다.  
   
- 이 마법사에 대 한 자세한 참조 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다. 마법사를 실행 하는 데 필요한 사용 권한 뿐만 아니라 마법사를 시작 하기 위한 옵션에 대 한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사](start-the-sql-server-import-and-export-wizard.md)합니다.  
+ 이 마법사에 대 한 자세한 내용은 참조 하세요 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다. 마법사를 성공적으로 실행 하는 데 필요한 사용 권한 뿐만 아니라 마법사 시작 옵션을 알아보려면 [SQL Server 가져오기 및 내보내기 마법사를 실행](start-the-sql-server-import-and-export-wizard.md)합니다.  
   
- 용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터를 복사할 원본에서 대상으로 합니다. 이 마법사는 대상 데이터베이스 및 대상 테이블도 만들 수 있습니다. 그러나 여러 개의 데이터베이스 또는 테이블을 복사하거나 다른 종류의 데이터베이스 개체를 복사할 경우 대신 데이터베이스 복사 마법사를 사용해야 합니다. 자세한 내용은 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
+ 용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본에서 대상 데이터를 복사 하는 가져오기 및 내보내기 마법사. 이 마법사는 대상 데이터베이스 및 대상 테이블도 만들 수 있습니다. 그러나 여러 개의 데이터베이스 또는 테이블을 복사하거나 다른 종류의 데이터베이스 개체를 복사할 경우 대신 데이터베이스 복사 마법사를 사용해야 합니다. 자세한 내용은 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
   
 ## <a name="static-options"></a>정적 옵션  
  **대상**  
- 대상의 데이터 저장 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client,.NET Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server.  
+ 대상의 데이터 저장 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 따르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client,.NET Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server입니다.  
   
 > [!NOTE]  
 >  ODBC 대상에 데이터를 저장하려면 .NET Framework Data Provider for ODBC를 선택합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36324627"
  패키지에서 Microsoft Windows 인증을 사용하여 데이터베이스에 로그인해야 하는지 여부를 지정합니다. 보안을 강화하려면 Windows 인증을 사용하는 것이 좋습니다.  
   
  **SQL Server 인증 사용**  
- 패키지를 사용할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 데이터베이스 로그인을 인증 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
+ 패키지를 사용할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 인증 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
  **사용자 이름**  
  사용 중인 경우 데이터베이스 연결에 대 한 사용자 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36324627"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 데이터베이스 연결에 대한 암호를 입력합니다.  
   
  **데이터베이스 백업**  
- 지정된 된 인스턴스에 있는 데이터베이스 목록에서 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 클릭 하 여 새 데이터베이스를 만들 **새로**합니다.  
+ 지정 된 인스턴스에서 데이터베이스 목록에서 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 클릭 하 여 새 데이터베이스를 만들거나 **새로 만들기**합니다.  
   
  **새로 고침**  
  **새로 고침**을 클릭하여 사용 가능한 데이터베이스 목록을 복원합니다.  
@@ -101,10 +101,10 @@ ms.locfileid: "36324627"
 ### <a name="destination--microsoft-excel"></a>대상 = Microsoft Excel  
   
 > [!NOTE]  
->  Excel 2003 또는 이전 버전을 사용하는 데이터 원본에 연결하려는 경우에만 **Microsoft Excel** 을 선택하십시오. Excel 2007을 사용 하는 데이터 원본에 연결 하려면 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, 클릭 **속성**, 선택한 다음는 **모든** 탭에는 **데이터 연결 속성** 대화 상자에 대 한 **Extended Properties**, 입력 `Excel 12.0`합니다.  
+>  Excel 2003 또는 이전 버전을 사용하는 데이터 원본에 연결하려는 경우에만 **Microsoft Excel** 을 선택하십시오. Excel 2007을 사용 하는 데이터 원본에 연결 하려면 선택 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, 클릭 **속성**를 선택한 다음를 **모든** 탭은 **데이터 연결 속성** 대화 상자에 대 한 **Extended Properties**를 입력 `Excel 12.0`합니다.  
   
  **Excel 파일 경로**  
- 데이터를 저장 하는 통합 문서에 대 한 경로 파일 이름을 지정 (예: C:\MyData.xls \\\Sales\Database\Northwind.xls). 또는 **찾아보기** 를 클릭하여 통합 문서를 찾습니다.  
+ 데이터를 저장할 통합 문서의 경로 및 파일 이름을 지정 (예: C:\MyData.xls \\\Sales\Database\Northwind.xls). 또는 **찾아보기** 를 클릭하여 통합 문서를 찾습니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 Excel 통합 문서를 찾습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "36324627"
  대상 통합 문서에서 사용할 Excel 버전을 선택합니다.  
   
 > [!NOTE]  
->  데이터를 내보낼 때는 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 대상, 마법사에서 사용 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 대상 구성 요소입니다. 몇 가지 사용 시 고려 사항 및 알려진된 문제에 대 한 정보를 참조 하십시오. [Excel 대상](../data-flow/excel-destination.md)합니다.  
+>  데이터를 내보낼 때를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 대상, 마법사에서 사용 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 대상 구성 요소입니다. 몇 가지 사용 시 고려 사항 및 알려진된 문제에 대 한 자세한 내용은 [Excel 대상](../data-flow/excel-destination.md)합니다.  
   
 ### <a name="destination--microsoft-access"></a>대상 = Microsoft Access  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36324627"
 >  Access 2003 또는 이전 버전을 사용하는 데이터베이스에 연결하려는 경우에만 **Microsoft Access** 를 선택하십시오. Access 2007을 사용하는 데이터베이스에 연결하려면 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**를 선택하십시오.  
   
  **파일 이름**  
- 데이터를 저장 하는 데이터베이스 파일에 대 한 경로 파일 이름을 지정 (예: C:\MyData.mdb \\\Sales\Database\Northwind.mdb). 또는 **찾아보기** 를 클릭하여 데이터베이스 파일을 찾습니다.  
+ 데이터를 저장 하는 데이터베이스 파일의 경로 및 파일 이름을 지정 (예: C:\MyData.mdb, \\\Sales\Database\Northwind.mdb). 또는 **찾아보기** 를 클릭하여 데이터베이스 파일을 찾습니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 해당 데이터베이스 파일을 찾습니다.  

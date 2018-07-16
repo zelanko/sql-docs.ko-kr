@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b0f528ab5281da98c211a01fb94ceaec7234932
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 93999c94ca535c456cde806abb59946284aa09ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233723"
 ---
 # <a name="smo-how-to-topics"></a>SMO 방법 도움말 항목
   SMO 방법 도움말 항목에서는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 또는 C#으로 프로그램을 만드는 방법에 대한 정보를 제공합니다.  

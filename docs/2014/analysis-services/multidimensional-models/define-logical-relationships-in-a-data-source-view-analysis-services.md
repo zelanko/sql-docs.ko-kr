@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 논리적 관계 정의 | Microsoft Docs
+title: Data Source View (Analysis Services)에서 논리적 관계 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding relationships
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ce3e78493e9e8e3f24cc7a146b2ad4afb9bfebc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc84a74ba66923088168b273408d58ea6b3ccae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214323"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 관계 정의(Analysis Services)
   데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너에서는 기본 데이터베이스 관계 또는 지정한 이름 일치 조건을 기반으로 데이터 원본 뷰(DSV)에 추가된 테이블 간의 관계를 자동으로 정의합니다.  

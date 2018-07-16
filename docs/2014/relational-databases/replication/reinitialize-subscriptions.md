@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c235100c4f00d9b10b766ff66c9491c2769dfe0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ca8769e10a525ef1543dc10983aaa2caaa12ffb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294623"
 ---
 # <a name="reinitialize-subscriptions"></a>구독 다시 초기화
   구독을 다시 초기화하면 아티클의 새 스냅숏이 구독자에 적용됩니다. 트랜잭션 및 스냅숏 복제를 사용하면 개별 아티클을 다시 초기화할 수 있으며 병합 복제를 사용하면 모든 아티클을 다시 초기화해야 합니다. 피어 투 피어 트랜잭션 복제 토폴로지의 노드는 다시 초기화할 수 없습니다. 노드에 새로운 데이터 복사본을 유지하려면 해당 노드에서 백업을 복원합니다. 다시 초기화는 다음 두 가지 이유로 인해 발생합니다.  

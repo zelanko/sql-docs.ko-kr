@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0의에서 XPath 쿼리를 사용 하 여 | Microsoft Docs
+title: SQLXML 4.0의에서 XPath 쿼리 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b0fe87e704a04c402e58079d5a6f087015f658c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 50586aca145c18a29cb260c71de578a060f08f36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217033"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0의 XPath 쿼리 사용
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 주석이 추가된 XSD 스키마를 사용하면 데이터베이스에 저장된 관계형 데이터의 XML 뷰를 만들 수 있습니다. XPath 언어의 하위 집합을 사용하면 주석이 추가된 XSD 스키마로 만든 XML 뷰에 대해 쿼리를 수행할 수 있습니다.  
   
 > [!NOTE]  
->  SQLXML 4.0의 XPath 쿼리를 이해하려면 템플릿 및 매핑 스키마와 같은 관련 개념과 XML 뷰에 대해 잘 알고 있어야 합니다. 자세한 내용은 참조 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XPath에 대 한 자세한 내용은에 World Wide Web Consortium (W3C)에서 정의한 XPath 표준을 참조 http://www.w3.org/TR/xpath합니다.  
+>  SQLXML 4.0의 XPath 쿼리를 이해하려면 템플릿 및 매핑 스키마와 같은 관련 개념과 XML 뷰에 대해 잘 알고 있어야 합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XPath에 대 한 자세한 내용은에서 World Wide Web Consortium (W3C) 정의한 XPath 표준을 참조 http://www.w3.org/TR/xpath합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [XPath 쿼리 사용 소개 &#40;SQLXML 4.0&#41;](introduction-to-using-xpath-queries-sqlxml-4-0.md)  
@@ -47,6 +47,6 @@ ms.locfileid: "36185563"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 XSD의 데이터 형식과는 많이 다른 XPath 데이터 형식에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 쪽 XML 서식을 &#40;SQLXML 4.0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

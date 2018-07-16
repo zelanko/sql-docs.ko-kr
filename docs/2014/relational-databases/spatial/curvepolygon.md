@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268649"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon`은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
   
 > [!IMPORTANT]  
->  자세한 설명 및 예제에 도입 된 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 포함 하 여는 `CurvePolygon` 하위 형식, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
+>  자세한 설명 및 예제에 도입 된 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CurvePolygon` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
   
  특성을 정의 하는 다음 조건을 `CurvePolygon` 인스턴스:  
   
@@ -33,13 +33,13 @@ ms.locfileid: "36184020"
   
 -   `CurvePolygon` 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
   
- A `CurvePolygon` 에서 다른 인스턴스는 `Polygon` 인스턴스와 `CurvePolygon` 인스턴스는 원호 세그먼트인 포함 될 수 있습니다: `CircularString` 및 `CompoundCurve`합니다.  
+ A `CurvePolygon` 에서 다른 인스턴스를 `Polygon` 인스턴스에 `CurvePolygon` 인스턴스는 원호 세그먼트인 포함 될 수 있습니다: `CircularString` 및 `CompoundCurve`합니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
- 아래 그림 유효한 `CurvePolygon` 수치:  
+ 아래 그림과 유효한 `CurvePolygon` 수치:  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- 에 대 한는 `CurvePolygon` 인스턴스가 허용 되려면, 되어야 하거나 비어 있거나 허용 되는 원호 링만 포함 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
+ 에 대 한를 `CurvePolygon` 인스턴스가 허용 되려면, 되어야 하거나 비어 있거나 허용 된 원호 링만 포함 합니다. 허용되는 원호 링은 다음 요구 사항을 충족합니다.  
   
 1.  허용되는 `LineString`, `CircularString` 또는 `CompoundCurve` 인스턴스여야 합니다. 허용되는 인스턴스에 대한 자세한 내용은 [LineString](linestring.md), [CircularString](circularstring.md)및 [CompoundCurve](compoundcurve.md)를 참조하십시오.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36184020"
     > [!NOTE]  
     >  Z 및 M 값이 무시되어야 합니다.  
   
- 다음 예에서는 허용 된 `CurvePolygon` 인스턴스.  
+ 다음 예제에서는 허용 `CurvePolygon` 인스턴스.  
   
 ```  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  각 링이 허용 가능한 곡선 유형이어야 합니다.  
   
- `CurvePolygon` 인스턴스는 또한 인지 여부에 따라 특정 조건을 충족 해야 `geometry` 또는 `geography` 데이터 형식입니다.  
+ `CurvePolygon` 인스턴스가 있는지에 따라 특정 조건을 충족 해야 `geometry` 또는 `geography` 데이터 형식입니다.  
   
 #### <a name="geometry-data-type"></a>Geometry 데이터 형식  
  유효한 **geometryCurvePolygon** 인스턴스는 다음 특성을 포함해야 합니다.  
@@ -136,14 +136,14 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>2. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
- 이 코드 조각에서는 선언 하 고 사용 하 여 geometry 인스턴스를 초기화 하는 방법을 보여 줍니다.는 `CurvePolygon` 동일한 문에서:  
+ 이 코드 조각은 선언 하 고 사용 하 여 geometry 인스턴스를 초기화 하는 방법을 보여 줍니다는 `CurvePolygon` 동일한 문에서:  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>3. CurvePolygon을 사용하여 Geography 인스턴스 인스턴스화  
- 이 코드 조각에서는 선언 하 고 초기화 하는 방법을 보여 줍니다.는 `geography` 인스턴스는 `CurvePolygon`:  
+ 이 코드 조각은 선언 하 고 초기화 하는 방법을 보여 줍니다는 `geography` 인스턴스는 `CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>5. 내부 링을 포함하는 CurvePolygon 저장  
- 이 예에서는 도넛형을 만듭니다는 `CurvePolygon` 인스턴스 (둘 다 외부 경계 링과 내부 링 여 도넛형을 정의 사용 됨):  
+ 이 예제에서 도넛형을 만듭니다는 `CurvePolygon` 인스턴스 (도넛형을 정의 하는 외부 경계 링과 내부 링 둘 다 사용):  
   
 ```tsql  
 DECLARE @g geometry;  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287589"
 ---
 # <a name="implementation-of-child-packages"></a>자식 패키지 구현
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 로그 균형 조정을 구현하면 사용 가능한 CPU 또는 서버 시간을 사용할 다른 서버에 자식 패키지가 설치됩니다. 자식 패키지를 만들고 실행하려면 다음 단계를 수행하십시오.  
@@ -45,7 +45,7 @@ ms.locfileid: "36187260"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 패키지를 내보냅니다.  
   
--   배포할 패키지를 포함하는 프로젝트의 배포 유틸리티를 작성한 다음 패키지를 파일 시스템 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 설치하기 위해 패키지 설치 마법사를 실행하여 패키지를 배포합니다. 자세한 내용은 참조 [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)합니다.  
+-   배포할 패키지를 포함하는 프로젝트의 배포 유틸리티를 작성한 다음 패키지를 파일 시스템 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 설치하기 위해 패키지 설치 마법사를 실행하여 패키지를 배포합니다. 자세한 내용은 [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)합니다.  
   
  사용할 원격 서버마다 배포를 반복하여 수행해야 합니다.  
   

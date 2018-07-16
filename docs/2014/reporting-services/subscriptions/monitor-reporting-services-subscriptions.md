@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
 - subscriptions [Reporting Services], status
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 33
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 39838673c11b980fd38cc312dea51e0c9e2dcc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 08a4b7f46721f33c1d6cf42b2c2840d0f7a07fcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214783"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "36184425"
 |\<filename>: \<message> 파일에 쓰지 못했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |\<custom status messages>|배달 확장 프로그램에서 제공하는 배달 성공 및 실패에 대한 상태 메시지입니다. 타사 또는 사용자 지정 배달 확장 프로그램을 사용할 경우 추가 상태 메시지가 제공될 수 있습니다.|  
   
- 또한, 보고서 서버 관리자는 현재 처리 중인 표준 구독을 모니터링할 수 있습니다. 데이터 기반 구독은 모니터링할 수 없습니다. 자세한 내용은 참조 [실행 중인 프로세스 관리](manage-a-running-process.md)합니다.  
+ 또한, 보고서 서버 관리자는 현재 처리 중인 표준 구독을 모니터링할 수 있습니다. 데이터 기반 구독은 모니터링할 수 없습니다. 자세한 내용은 [실행 중인 프로세스 관리](manage-a-running-process.md)합니다.  
   
- 구독을 배달할 수 없는 경우(예: 메일 서버를 사용할 수 없는 경우) 배달 확장 프로그램에서 배달을 다시 시도합니다. 구성 설정에 따라 시도할 횟수가 지정됩니다. 기본값은 다시 시도 안 함입니다.  보고서가 데이터 없이 처리되는 경우(예: 데이터 원본이 오프라인 상태인 경우)도 있습니다. 이런 경우 해당 사실을 나타내는 텍스트가 메시지 본문에 제공됩니다.  
+ 구독을 배달할 수 없는 경우(예: 메일 서버를 사용할 수 없는 경우) 배달 확장 프로그램에서 배달을 다시 시도합니다. 구성 설정에 따라 시도할 횟수가 지정됩니다.  기본값은 다시 시도 안 함입니다.  보고서가 데이터 없이 처리되는 경우(예: 데이터 원본이 오프라인 상태인 경우)도 있습니다. 이런 경우 해당 사실을 나타내는 텍스트가 메시지 본문에 제공됩니다.  
   
 ### <a name="native-mode-log-files"></a>기본 모드 로그 파일  
  배달 중에 오류가 발생하면 보고서 서버 추적 로그에 항목이 하나 생성됩니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36184425"
   
 -   library!WindowsService_7!b60!05/20/2014-22:34:36:: i 정보: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e 오류: **메일을 보내는 중 오류가 발생했습니다**. 예외: System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 응답)에서 클라이언트가 인증되지 않았습니다.  
   
- 로그 파일에는 보고서를 열었는지 여부 또는 배달이 실제로 성공했는지 여부에 대한 정보가 없습니다. 성공적인 배달은 일정 예약 및 배달 프로세서에서 오류가 발생하지 않고 보고서 서버가 메일 서버에 연결되었음을 의미합니다.  사용자의 사서함에 전자 메일을 배달할 수 없다는 메시지 오류가 표시될 경우 해당 정보는 로그 파일에 포함되지 않습니다. 로그 파일에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
+ 로그 파일에는 보고서를 열었는지 여부 또는 배달이 실제로 성공했는지 여부에 대한 정보가 없습니다.  성공적인 배달은 일정 예약 및 배달 프로세서에서 오류가 발생하지 않고 보고서 서버가 메일 서버에 연결되었음을 의미합니다.  사용자의 사서함에 전자 메일을 배달할 수 없다는 메시지 오류가 표시될 경우 해당 정보는 로그 파일에 포함되지 않습니다. 로그 파일에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint 모드  
  SharePoint 모드에서 구독 모니터링: 구독 상태는 **구독 관리** 페이지에서 모니터링할 수 있습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "36184425"
   
 3.  확장된 메뉴 옵션을 선택합니다(**...**).  
   
-4.  **구독 관리**를 선택합니다.  
+4.   **구독 관리**를 선택합니다.  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 로그 파일  
  구독 관련 정보는 SharePoint ULS 로그에 기록됩니다. ULS 로그에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 구성하는 방법에 대한 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)를 참조하세요.  다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독과 관련된 ULS 로그 항목의 예입니다.  

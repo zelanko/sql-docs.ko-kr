@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translations [Analysis Services], client applications
 - date comparisons
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 684da8d68061248556d99dcc06c8c8e9207e65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fa4cb11d4fdbd429cfc01b4dcb3cd43c2a35b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271949"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  

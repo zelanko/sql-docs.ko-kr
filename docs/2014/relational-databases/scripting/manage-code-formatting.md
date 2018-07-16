@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
 - displaying URLs
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f57e209ec0bc4417af90b4d257d6be566cccb731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f64ca72111c89521277818573434e32ef82e028b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234869"
 ---
 # <a name="manage-code-formatting"></a>코드 서식 관리
   편집기를 사용하면 들여쓰기, 숨겨진 텍스트, URL 등으로 코드의 서식을 지정할 수 있습니다. 또한 스마트 들여쓰기를 사용하여 입력 시에 코드의 서식을 자동으로 지정할 수 있습니다.  

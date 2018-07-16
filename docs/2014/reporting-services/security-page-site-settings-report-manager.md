@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b4115675e8f9529873eeeec5f71d2b5861fef9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294103"
 ---
 # <a name="security-page-site-settings-report-manager"></a>보안 페이지(사이트 설정. 보고서 관리자)
   보안 페이지를 사용하여 보고서 서버 사이트에 대한 액세스를 제어하는 시스템 역할 할당을 볼 수 있습니다. 시스템 역할 할당은 보고서 서버 네임스페이스나 폴더 계층 구조의 범위 밖에 존재합니다. 시스템 역할 할당은 전역적이므로 특정 항목별로 다를 수 없습니다. 시스템 역할 할당을 통해 지원되는 작업에는 공유 일정 작성 및 사용, 보고서 작성기 사용, 일부 서버 기능에 대한 기본값 설정 등이 포함됩니다.  
@@ -44,10 +44,10 @@ ms.locfileid: "36184194"
  기존 역할 할당을 삭제하려면 클릭합니다. 제거할 그룹 또는 사용자 이름 옆의 확인란을 선택한 다음에 **삭제**를 클릭하십시오. 유일하게 남은 역할 할당은 삭제할 수 없습니다. 역할 할당을 삭제해도 그룹 또는 사용자 계정이나 역할 정의는 삭제되지 않습니다.  
   
  **새 역할 할당**  
- 보고서 서버 사이트에 대한 추가 시스템 역할 할당을 만드는 데 사용되는 새 시스템 역할 할당 페이지를 열려면 클릭합니다. 자세한 내용은 참조 [새 시스템 역할 할당: 시스템 역할 할당 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)합니다.  
+ 보고서 서버 사이트에 대한 추가 시스템 역할 할당을 만드는 데 사용되는 새 시스템 역할 할당 페이지를 열려면 클릭합니다. 자세한 내용은 [새 시스템 역할 할당: 시스템 역할 할당 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)합니다.  
   
  **편집**  
- 보고서 서버 사이트에 대한 개별 시스템 역할 할당을 편집하는 데 사용되는 시스템 역할 할당 편집 페이지를 열려면 클릭합니다. 자세한 내용은 참조 [새 시스템 역할 할당: 시스템 역할 할당 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)합니다.  
+ 보고서 서버 사이트에 대한 개별 시스템 역할 할당을 편집하는 데 사용되는 시스템 역할 할당 편집 페이지를 열려면 클릭합니다. 자세한 내용은 [새 시스템 역할 할당: 시스템 역할 할당 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)합니다.  
   
  **그룹 또는 사용자**  
  기존 역할 할당의 일부인 그룹 및 사용자를 나열합니다. 현재 폴더의 기존 역할 할당은 이 열에 표시되는 그룹과 사용자에 대해 정의됩니다. 역할 할당 정보를 보거나 편집하려면 그룹 또는 사용자 이름 옆에 있는 **편집** 을 클릭합니다.  

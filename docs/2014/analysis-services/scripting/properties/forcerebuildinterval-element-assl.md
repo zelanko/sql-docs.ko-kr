@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForceRebuildInterval element
 ms.assetid: d068f92e-4213-471c-a3a4-aec5af4b8ebf
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3b05eaf87d17c730186dd1b9c7385f3d323ccf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa11e0fda75e55f5f8d9af5414203c7822cb5eb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249053"
 ---
 # <a name="forcerebuildinterval-element-assl"></a>ForceRebuildInterval 요소(ASSL)
   새로운 MOLAP(다차원 OLAP) 이미지가 사용 가능해질 때부터 MOLAP 이미징이 무조건 시작되기 전까지의 기간을 결정합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36181894"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ForceRebuildInterval` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
+ 부모에 해당 하는 요소가 `ForceRebuildInterval` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

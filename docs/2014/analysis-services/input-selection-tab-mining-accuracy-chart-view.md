@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198213"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>입력 선택 탭(마이닝 정확도 차트 뷰)
   **마이닝 정확도 차트** 디자이너의 **입력 선택** 탭을 사용하여 모델을 테스트하고 정확도 차트를 작성하는 데 사용되는 데이터 원본을 지정할 수 있습니다.  

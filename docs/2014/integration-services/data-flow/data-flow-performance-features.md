@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287669"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36184536"
  디스크에 대한 페이징이 발생하는 수준까지 버퍼 크기를 늘리지 마십시오. 디스크에 대한 페이징은 최적화되지 않은 버퍼 크기 이상으로 성능을 저하시킵니다. 페이징의 발생 여부를 확인하려면 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)의 성능 스냅인에서 "Buffers spooled" 성능 카운터를 모니터링합니다.  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>패키지에 대해 병렬 실행 구성  
- 병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지의 다른 태스크의 병렬 실행을 지원 하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 두 속성을 사용 하 여: `MaxConcurrentExecutables` 및 `EngineThreads`합니다.  
+ 병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지의 다른 태스크의 병렬 실행을 지원 하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 두 가지 속성을 사용 하 여: `MaxConcurrentExecutables` 및 `EngineThreads`합니다.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 속성  
  `MaxConcurrentExecutables` 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36184536"
  이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. 설정한 경우 `MaxConcurrentExecutables` 를 3으로 세 개의 데이터 흐름 태스크가 모두 동시에 실행할 수 있습니다. 그러나 각 데이터 흐름 태스크에 원본에서 대상으로의 실행 트리가 10개 있다고 가정할 때 `MaxConcurrentExecutables`를 3으로 설정하면 각 데이터 흐름 태스크 내에서 실행 트리가 병렬로 실행되지 않을 수 있습니다.  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 속성  
- `EngineThreads` 속성은 각 데이터 흐름 태스크의 속성입니다. 이 속성은 데이터 흐름 엔진에서 만들어 병렬로 실행할 수 있는 스레드 수를 정의합니다. `EngineThreads` 속성에 적용 됩니다 동일 하 게 원본 스레드는 데이터 흐름 엔진 엔진이 변환 및 대상에 대해 만드는 작업자 스레드입니다. 따라서 `EngineThreads`를 10으로 설정하면 엔진에서 원본 스레드와 작업자 스레드를 각각 10개까지 만들 수 있습니다.  
+ `EngineThreads` 속성은 각 데이터 흐름 태스크의 속성입니다. 이 속성은 데이터 흐름 엔진에서 만들어 병렬로 실행할 수 있는 스레드 수를 정의합니다. `EngineThreads` 속성에 똑같이 두 원본 스레드 데이터 흐름 엔진은 원본 및 변환 및 대상에 대 한 엔진에서 만드는 작업자 스레드를 만듭니다. 따라서 `EngineThreads`를 10으로 설정하면 엔진에서 원본 스레드와 작업자 스레드를 각각 10개까지 만들 수 있습니다.  
   
  이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. 각 데이터 흐름 태스크에 10개의 원본에서 대상으로의 실행 트리가 포함되어 있을 때 각 데이터 흐름 태스크에서 EngineThreads를 10으로 설정하면 30개의 실행 트리가 모두 동시에 실행될 수 있습니다.  
   
@@ -103,14 +103,14 @@ ms.locfileid: "36184536"
  쿼리를 생성하려면 쿼리를 직접 입력하거나 쿼리 작성기를 사용합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 진행률 탭에 경고가 나열됩니다. 이러한 경고에는 원본에서 데이터 흐름에 제공되지만 나중에 다운스트림 데이터 흐름 구성 요소에 사용되지 않는 데이터 열이 식별되어 포함됩니다. 사용할 수는 `RunInOptimizedMode` 속성을 자동으로 이러한 열을 제거 합니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 진행률 탭에 경고가 나열됩니다. 이러한 경고에는 원본에서 데이터 흐름에 제공되지만 나중에 다운스트림 데이터 흐름 구성 요소에 사용되지 않는 데이터 열이 식별되어 포함됩니다. 사용할 수는 `RunInOptimizedMode` 속성을 이러한 열을 자동으로 제거 합니다.  
   
 #### <a name="avoid-unnecessary-sorting"></a>불필요한 정렬 방지  
  정렬은 근본적으로 느린 작업이므로 불필요한 정렬을 방지하면 패키지 데이터 흐름의 성능을 향상시킬 수 있습니다.  
   
  원본 데이터가 다운스트림 구성 요소에 의해 사용되기 전에 이미 정렬되어 있는 경우가 있습니다. SELECT 쿼리에 ORDER BY 절이 사용되거나 데이터가 원본에 정렬된 순서대로 삽입되면 이러한 사전 정렬이 발생할 수 있습니다. 이렇게 사전 정렬된 원본 데이터의 경우 데이터가 정렬되어 있음을 나타내는 힌트를 제공하여 특정 다운스트림 변환의 정렬 요구 사항을 만족시키기 위해 정렬 변환을 사용하는 것을 방지할 수 있습니다. 예를 들어 병합 및 병합 조인 변환에는 정렬된 입력이 필요합니다. 데이터가 정렬되어 있음을 나타내는 힌트를 제공하려면 다음 태스크를 수행해야 합니다.  
   
--   설정의 `IsSorted` 속성에는 업스트림 데이터 흐름 구성 요소의 출력에 `True`합니다.  
+-   설정 된 `IsSorted` 속성에는 업스트림 데이터 흐름 구성 요소의 출력에 `True`입니다.  
   
 -   데이터가 정렬되는 정렬 키 열을 지정합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36184536"
  집계, 유사 항목 조회, 유사 항목 그룹화, 조회, 병합 조인 및 느린 변경 차원 변환의 성능을 향상시키려면 이 섹션의 제안 사항을 사용합니다.  
   
 #### <a name="aggregate-transformation"></a>집계 변환  
- 집계 변환에는 `Keys`, `KeysScale`, `CountDistinctKeys` 및 `CountDistinctScale` 속성이 포함됩니다. 이 속성은 변환이 캐시하는 데이터에 필요한 메모리 양을 미리 할당할 수 있도록 하여 성능을 향상시킵니다. 결과로 반환 될 그룹의 정확한 수 또는 대략적인 수를 아는 경우는 **그룹화** 작업을 설정 하는 `Keys` 및 `KeysScale` 속성을 각각. 결과로 반환 될 고유 값의 정확한 수 또는 대략적인 수를 아는 경우는 **고유 카운트** 작업을 설정 하는 `CountDistinctKeys` 및 `CountDistinctScale` 속성을 각각.  
+ 집계 변환에는 `Keys`, `KeysScale`, `CountDistinctKeys` 및 `CountDistinctScale` 속성이 포함됩니다. 이 속성은 변환이 캐시하는 데이터에 필요한 메모리 양을 미리 할당할 수 있도록 하여 성능을 향상시킵니다. 결과로 반환 될 그룹의 정확한 수 또는 대략적인 수를 알고 있는 경우는 **그룹화** 작업을 설정 합니다 `Keys` 및 `KeysScale` 속성을 각각. 결과로 반환 될 고유 값의 정확한 수 또는 대략적인 수를 알고 있는 경우는 **고유 카운트** 작업을 설정 합니다 `CountDistinctKeys` 및 `CountDistinctScale` 속성을 각각.  
   
  한 데이터 흐름에 여러 집계를 만들어야 하는 경우 여러 변환을 만드는 대신 하나의 집계 변환을 사용하는 여러 집계를 만드십시오. 이 방법을 사용하면 한 집계가 다른 집계의 하위 집합인 경우 성능이 향상됩니다. 이는 변환이 한 번만 들어오는 데이터를 검색하고 내부 저장소를 최적화할 수 있기 때문입니다. 예를 들어 집계에서 GROUP BY 절 및 AVG 집계를 사용하는 경우 이를 하나의 변환으로 조합하면 성능을 향상시킬 수 있습니다. 그러나 하나의 집계 변환 내에서 여러 집계를 수행하면 집계 작업이 직렬화되므로 여러 집계가 독립적으로 계산되어야 하는 경우 성능이 향상되지 않을 수 있습니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36184536"
  필요한 열만 조회하는 SELECT 문을 입력하여 메모리에서 참조 데이터의 크기를 최소화합니다. 이 옵션은 불필요한 데이터를 대량 반환하는 전체 테이블 또는 뷰 선택 작업보다 성능을 향상시킵니다.  
   
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
- 값을 구성 해야 하는 더 이상는 `MaxBuffersPerInput` 속성 이므로 Microsoft는 병합 조인 변환에서 과도 한 메모리를 사용할 위험을 줄이려면는 내용을 변경 했습니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.  
+ 값을 구성할 필요가 없습니다를 `MaxBuffersPerInput` 속성 Microsoft 변경 된 병합 조인 변환에서 과도 한 메모리를 사용할 위험을 줄이는 때문입니다. 과도한 메모리가 사용되는 문제는 여러 병합 조인 입력에서 균일하지 않은 속도로 데이터를 생성하는 경우에 발생합니다.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환  
  느린 변경 차원 마법사 및 느린 변경 차원 변형은 사용자 대부분의 요구를 충족하는 일반적인 용도의 도구입니다. 그러나 마법사에서 생성하는 데이터 흐름은 성능을 위해 최적화되지 않습니다.  
@@ -201,7 +201,7 @@ ms.locfileid: "36184536"
 -   technet.microsoft.com의 비디오 - [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>관련 항목  
- [패키지 배포 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [패키지 개발용 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

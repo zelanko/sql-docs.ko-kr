@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293593"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 내용(MDX)
-  `FORMAT_STRING` 속성 형식 셀는 `VALUE` 셀 속성에 대 한 값의 `FORMATTED_VALUE` 셀 속성입니다. `FORMAT_STRING` 셀 속성에 대 한 서식이 지정 된 값을 반환 값에 형식 지정 식을 적용 모두 문자열 및 숫자 원시 값 처리는 `FORMATTED_VALUE` 셀 속성입니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
+  `FORMAT_STRING` 셀 속성 형식 합니다 `VALUE` 셀 속성에 값을 만드는 `FORMATTED_VALUE` 셀 속성입니다. 합니다 `FORMAT_STRING` 셀 속성에 대 한 서식이 지정 된 값을 반환 값에 형식 지정 식을 적용 문자열 및 숫자 원시 값을 처리 합니다 `FORMATTED_VALUE` 셀 속성입니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  
   
 ## <a name="string-values"></a>문자열 값  
  문자열에 사용할 형식 지정 식에는 한 개의 절 또는 세미콜론(;)으로 구분되는 두 개의 절을 사용할 수 있습니다.  

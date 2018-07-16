@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PushedDataSource data type
 ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd0dec86e7c3abedf241fd79e44bdafd28297c7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98309a1fa1706efaed47ab27cdf88d0b3e313fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235573"
 ---
 # <a name="pusheddatasource-data-type-assl"></a>PushedDataSource 데이터 형식(ASSL)
   데이터 소스를 나타내는 기본 데이터 형식을 정의 (같은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지) 데이터를 "밀어 넣는" 데는 [큐브](../objects/cube-element-assl.md) 요소입니다.  
@@ -64,6 +64,6 @@ ms.locfileid: "36185074"
  `PushedDataSource`는 처리 명령 내에서 아웃오브 라인 데이터 원본으로만 사용됩니다. 지속형 데이터 원본은 이 형식이 아닙니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

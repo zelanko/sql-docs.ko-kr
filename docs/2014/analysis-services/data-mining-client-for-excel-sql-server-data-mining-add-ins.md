@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Client
 - wizards
 - getting started
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fac95740fbf00c6623f8a8eeb44f1711319615d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a71f5fed5bfcc46742f8554ff69329c3a30b0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257509"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel용 데이터 마이닝 클라이언트(SQL Server 데이터 마이닝 추가 기능)
   Excel용 데이터 마이닝 클라이언트는 데이터 정리부터 모델 작성 및 예측 쿼리에 이르는 일반적인 데이터 마이닝 작업을 수행할 수 있는 도구 집합입니다. Excel 테이블 또는 범위에서 데이터를 사용하거나 외부 데이터 원본에 액세스할 수 있습니다.  
@@ -34,19 +34,19 @@ ms.locfileid: "36183949"
   
      Excel에 데이터를 로드하고 데이터를 정리하며 이상값을 확인하고 통계 요약을 만듭니다. 또한 여러 종류의 샘플링을 수행하고 데이터를 프로파일링하고 외부 데이터를 사용하여 모델을 테스트할 수 있습니다. 데이터 마이닝 클라이언트는 복잡한 스크립트 또는 ETL 프로세스 없이 분석용 데이터를 준비하는 가장 쉬운 방법입니다.  
   
--   [모델을 작성 및 분석](#bkmk_Model)  
+-   [모델을 작성 하 고 분석](#bkmk_Model)  
   
      이러한 도구는 클러스터링(K-means 및 EM), 연결 분석, 시계열 분석 및 의사 결정 트리를 포함하여 잘 알려지고 실험적으로 테스트된 데이터 마이닝 알고리즘에 대한 인터페이스를 제공합니다. 각 마법사에 대한 고급 모델링 옵션을 사용하면 Naïve Bayes, 신경망 등의 다른 알고리즘을 선택하고 클러스터 시드 또는 초기 샘플링 크기와 같은 동작을 사용자 지정할 수 있습니다.  
   
      모든 데이터 마이닝 알고리즘은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스에 호스팅되어 복잡한 모델을 작성하는 데 더욱 강력한 기능을 제공합니다.  
   
--   [테스트, 쿼리 및 모델의 유효성을 검사합니다](#bkmk_Validate)  
+-   [테스트, 쿼리 및 모델 유효성 검사](#bkmk_Validate)  
   
      데이터 마이닝 클라이언트는 리프트 차트 및 교차 유효성 검사를 비롯하여 모델 테스트를 위한 업계 표준 도구를 제공합니다. 제공되는 마법사를 사용하면 데이터 집합의 유효성과 정확성을 쉽게 테스트할 수 있습니다. 쿼리 마법사는 예측 및 평가에 모델을 사용하기 위해 쿼리를 만듭니다.  
   
 -   [모델 보기](#bkmk_ViewModels)  
   
-     대부분의 도구에서 생성된 차트는 직접 Excel에 저장될 수 있습니다. 사용 하 여는 [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) 모델을 탐색 하는 도구입니다.  
+     대부분의 도구에서 생성된 차트는 직접 Excel에 저장될 수 있습니다. 사용 된 [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](browsing-models-in-excel-sql-server-data-mining-add-ins.md) 모델을 탐색 하는 도구입니다.  
   
 -   [관리, 문서화 및 배포](#bkmk_UsageMgmt)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36183949"
  [데이터 탐색 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](explore-data-sql-server-data-mining-add-ins.md)  
  **데이터 탐색** 마법사를 사용하면 한 번에 한 개씩 선택한 열에 대한 분포 및 값을 그래프로 표시하여 데이터 테이블에 있는 데이터 형식 및 양을 파악할 수 있습니다.  
   
- [데이터 샘플 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](sample-data-sql-server-data-mining-add-ins.md)  
+ [샘플 데이터 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](sample-data-sql-server-data-mining-add-ins.md)  
  모델을 학습하고 테스트하기 위해 적합한 종류의 데이터를 만드는 것은 데이터 마이닝에서 중요한 부분이지만 적합한 도구 없이는 힘든 작업입니다. **데이터 샘플링** 마법사를 사용하면 모델에 사용할 데이터를 모델 작성용 그룹과 모델 테스트용 그룹의 두 그룹으로 쉽게 나눌 수 있습니다. 무작위 샘플링 또는 초과 샘플링을 사용할 수 있습니다.  
   
  [예측 계산기 &#40;Excel 용 테이블 분석 도구&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
@@ -74,7 +74,7 @@ ms.locfileid: "36183949"
  [예측 계산기 &#40;Excel 용 테이블 분석 도구&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  **레이블 재지정** 마법사를 사용하면 분석 결과를 보다 쉽게 이해할 수 있도록 새 데이터 레이블을 만들 수 있습니다. 예를 들어 데이터 범위의 이름을 보다 설명적인 이름으로 바꾸거나 목록에서 대표값을 선택할 수 있습니다.  
   
-##  <a name="bkmk_Model"></a> 모델을 작성 및 분석  
+##  <a name="bkmk_Model"></a> 모델을 작성 하 고 분석  
  도구 모음의 **데이터 모델링** 섹션에 있는 옵션을 사용하여 데이터에서 패턴을 파생시키고 특성을 기반으로 데이터 행을 그룹화하거나 연결을 탐색할 수 있습니다. 이 도구 리본의 마법사는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용할 수 있는 강력한 데이터 마이닝 알고리즘에 기반을 두고 있습니다. 이러한 마법사는 Excel용 테이블 분석 도구에 있는 유사 도구와는 달리 알고리즘의 동작을 사용자 지정하고 다양한 데이터 원본을 사용할 수 있도록 해줍니다.  
   
  [분류 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -105,7 +105,7 @@ ms.locfileid: "36183949"
  [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  데이터 마이닝에 대해 잘 알고 계십니까? **고급** 데이터 모델링 옵션을 사용하면 사용자 지정 데이터 구조를 만들고 기타 도구 및 마법사에 포함되지 않은 사용자 지정 기능을 사용하여 모델을 작성할 수 있습니다.  
   
-##  <a name="bkmk_Validate"></a> 테스트, 쿼리 및 모델의 유효성을 검사합니다  
+##  <a name="bkmk_Validate"></a> 테스트, 쿼리 및 모델 유효성 검사  
  **정확성 및 유효성 검사** 도구 모음에서 이 마법사를 통해 산업 표준 테스트를 사용하여 모델의 정확성을 확인하고 모델을 만들기 위한 데이터 집합의 실행 가능성을 평가합니다.  
   
  [주요 영향 요인 분석 &#40;Excel 용 테이블 분석 도구&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -129,7 +129,7 @@ ms.locfileid: "36183949"
  이 도구는 고급 사용자를 위해 DMX에 대한 끌어서 놓기 인터페이스를 제공합니다. 구문에 대한 걱정 없이 손쉽게 예측 쿼리 또는 새로운 모델을 만들 수 있습니다.  
   
 ##  <a name="bkmk_ViewModels"></a> 모델 보기  
- 만든 모델은 탐색을 위해 자동으로 열립니다. 그러나 서버에서 모델을 탐색하고 새로운 시각화를 생성할 수도 있습니다. 사용 하 여 [Visio 셰이프](viewing-data-mining-models-in-visio-data-mining-add-ins.md) 모델 다이어그램을 사용자 지정 가능한 캔버스로 내보낼 합니다.  
+ 만든 모델은 탐색을 위해 자동으로 열립니다. 그러나 서버에서 모델을 탐색하고 새로운 시각화를 생성할 수도 있습니다. 사용 된 [Visio 셰이프](viewing-data-mining-models-in-visio-data-mining-add-ins.md) 모델 다이어그램을 사용자 지정 가능한 캔버스로 내보낼 합니다.  
   
  [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
  각 모델 유형에 맞게 사용자 지정된 대화형 그래프를 사용하여 만들어진 모델을 확인합니다.  
@@ -144,15 +144,15 @@ ms.locfileid: "36183949"
  필요한 권한이 있는 경우 Excel을 벗어나지 않고도 기존 마이닝 모델 및 구조를 삭제, 수정, 이름 변경 또는 처리할 수 있습니다.  
   
  [추적 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](trace-data-mining-client-for-excel.md)  
- 클릭 **추적** Excel 클라이언트 간의 상호 작용을 지속적으로 캡처하여 볼 수 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서버입니다. 모든 작업은 DMX 또는 XMLA 문으로 저장되므로 데이터 마이닝 세션의 문제를 해결하거나 나중에 사용하기 위해 정보를 저장할 수 있습니다.  
+ 클릭 **추적** Excel 클라이언트 간의 상호 작용을 지속적으로 캡처하여 볼 수 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서버. 모든 작업은 DMX 또는 XMLA 문으로 저장되므로 데이터 마이닝 세션의 문제를 해결하거나 나중에 사용하기 위해 정보를 저장할 수 있습니다.  
   
  [데이터 마이닝 서버에 연결](connect-to-a-data-mining-server.md)  
  Excel을 데이터 마이닝 클라이언트로 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결해야 합니다. 이를 통해 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 엔진에 액세스할 수 있습니다. 사용 권한이 있는 경우에는 연결을 통해 발견한 모든 패턴을 저장하고 기존 데이터 마이닝 개체를 수정할 수 있습니다.  
   
- **연결** 의 인스턴스에 연결을 관리 하기 위한 마법사를 제공 하는 도구 모음 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 데이터 마이닝 도구와 알고리즘을 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 정의해야 합니다. 추가 기능을 설치할 때 연결을 만들거나 나중에 추가할 수 있습니다.  
+ 합니다 **연결** 인스턴스에 연결 관리 마법사를 제공 하는 도구 모음 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 데이터 마이닝 도구와 알고리즘을 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 정의해야 합니다. 추가 기능을 설치할 때 연결을 만들거나 나중에 추가할 수 있습니다.  
   
  **시작**  
- 클릭는 **시작** 의 인스턴스에 대 한 연결을 만드는 과정을 안내 하는 구성 마법사를 시작 하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 데이터 마이닝을 수행 하는 데 필요한 권한을 얻는 합니다.  
+ 클릭 합니다 **Getting Started** 인스턴스에 연결을 만드는 과정을 단계별로 안내 하는 구성 마법사를 시작 하는 단추 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 데이터 마이닝을 수행 하는 데 필요한 사용 권한을 취득 합니다.  
   
  **도움말**  
  **도움말** 드롭다운 메뉴는 설치를 완료하고 데이터 마이닝을 시작하는 데 도움이 되는 온라인 도움말, 웹 사이트 및 구성 마법사에 대한 링크를 제공합니다.  

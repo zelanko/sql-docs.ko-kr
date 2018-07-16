@@ -1,5 +1,5 @@
 ---
-title: 추적 템플릿 (SQL Server Profiler) 내보내기 | Microsoft Docs
+title: 내보낼 추적 템플릿 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 386a640cbb9345b1f91f189629bb2f8172dc1aa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 32ac4eba8c474cd004c3a21656ef77641676f31a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249713"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>추적 템플릿 내보내기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 템플릿을 내보내어 템플릿 파일(.tdf)로 저장하는 방법에 대해 설명합니다. 추적 템플릿을 내보내서 파일로 저장할 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 다른 인스턴스로 템플릿을 사용할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36182693"
 3.  내보낸 템플릿 파일의 이름을 입력한 다음 **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 템플릿을 만드는 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [추적 템플릿 만들기 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿 수정&#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

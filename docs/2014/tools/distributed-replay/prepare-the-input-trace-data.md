@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196723"
 ---
 # <a name="prepare-the-input-trace-data"></a>입력 추적 데이터 준비
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작하려면 Distributed Replay Administration Tool에서 전처리 단계를 시작하여 입력 추적 데이터를 준비해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작하려면 Distributed Replay Administration Tool에서 전처리 단계를 시작하여 입력 추적 데이터를 준비해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  
   
  ![Distributed replay 전처리 단계](../../database-engine/media/preprocess.gif "Distributed replay 전처리 단계")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36185730"
   
 2.  **전처리 단계 시작**: 입력 추적 데이터를 준비하려면 **preprocess** 옵션을 사용하여 관리 도구를 실행해야 합니다.하 자세한 내용은 [전처리 옵션&#40;Distributed Replay Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
-    1.  Windows 명령 프롬프트 유틸리티를 열려면 (`CMD.exe`), Distributed Replay administration tool의 설치 위치로 이동 하 고 (`DReplay.exe`).  
+    1.  Windows 명령 프롬프트 유틸리티를 열어 (`CMD.exe`), Distributed Replay administration tool의 설치 위치로 이동 (`DReplay.exe`).  
   
     2.  (선택 사항) 컨트롤러 서비스가 관리 도구와 다른 컴퓨터에서 실행 중인 경우 *controller* 매개 변수 **-m**을 사용하여 컨트롤러를 지정합니다.  
   

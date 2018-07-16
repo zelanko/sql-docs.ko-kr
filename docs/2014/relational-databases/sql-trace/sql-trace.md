@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188340"
 ---
 # <a name="sql-trace"></a>SQL 추적
   SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 관리하는 응용 프로그램의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36186271"
  다음은 SQL 추적의 주요 개념을 설명하는 용어입니다.  
   
  **이벤트**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]인스턴스 내에서 동작이 발생했음을 의미합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]인스턴스 내에서 동작이 발생했음을 의미합니다.  
   
  **데이터 열**  
  이벤트의 특성입니다.  
@@ -77,8 +77,8 @@ ms.locfileid: "36186271"
 |데이터 열|열 번호|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
-|**BigintData1**|52|값 (`bigint` 데이터 형식)는 추적에 지정 된 이벤트 클래스에 따라 달라 집니다.|  
-|**BigintData2**|53|값 (`bigint` 데이터 형식)는 추적에 지정 된 이벤트 클래스에 따라 달라 집니다.|  
+|**BigintData1**|52|값 (`bigint` 데이터 형식)를 추적에 지정 된 이벤트 클래스에 따라 다릅니다.|  
+|**BigintData2**|53|값 (`bigint` 데이터 형식)를 추적에 지정 된 이벤트 클래스에 따라 다릅니다.|  
 |**Binary Data**|2|추적에서 캡처된 이벤트 클래스에 따라 달라지는 이진 값입니다.|  
 |**ClientProcessID** <sup>1</sup>|9|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|  
 |**ColumnPermissions**|44|열 사용 권한이 설정되어 있는지 나타냅니다. 문 텍스트를 구문 분석하여 어떤 권한이 어떤 열에 적용되었는지 알 수 있습니다.|  
@@ -143,7 +143,7 @@ ms.locfileid: "36186271"
   
  <sup>1</sup> 이러한 데이터 열은 기본적으로 모든 이벤트에 대해 채워집니다.  
   
- <sup>2</sup> 에 대 한 자세한 내용은 **ObjectType** 데이터 열 참조 [ObjectType 추적 이벤트 열](../event-classes/objecttype-trace-event-column.md)합니다.  
+ <sup>2</sup> 에 대 한 자세한 내용은 합니다 **ObjectType** 데이터 열을 참조 하세요 [ObjectType 추적 이벤트 열](../event-classes/objecttype-trace-event-column.md)합니다.  
   
 ## <a name="sql-trace-tasks"></a>SQL 추적 태스크  
   

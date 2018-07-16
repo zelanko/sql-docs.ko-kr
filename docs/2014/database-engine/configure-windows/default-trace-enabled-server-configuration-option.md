@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], traces
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb4067c2bbb5f922dd8e70b50acaaccb1a1955af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 478b528634ee413683c4b5b4d2d41cec2cfe072c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332643"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 서버 구성 옵션
   **default trace enabled** 옵션을 사용하여 기본 추적 로그 파일을 설정하거나 해제할 수 있습니다. 기본 추적 기능은 주로 구성 옵션과 관련된 변경 내용과 작업에 대한 다양하고 영구적인 로그를 제공합니다.  

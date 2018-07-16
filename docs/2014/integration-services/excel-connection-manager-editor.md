@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9396c9fe0a04dd7cf8c3f8e408ea22e83dc1c3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c7a601344f28f99a31adb9d635c44e9cca85471
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287639"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 연결 관리자 편집기
   **Excel 연결 관리자 편집기** 대화 상자를 사용하여 기존 또는 새 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 통합 문서 파일에 대한 연결을 추가할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36186799"
  기존 또는 새 Excel 통합 문서 파일(.xls)의 경로와 파일 이름을 입력합니다.  
   
 > [!WARNING]  
->  **Excel 대상 편집기** 선택 하면 Excel 파일을 자동으로 만듭니다는 **Excel 연결** 는 새로운/존재 하지 않는 가리키는 파일을 누르고 **새로** 에 대 한 **Excel 시트의 이름**합니다.  
+>  합니다 **Excel 대상 편집기** 선택 하면 Excel 파일을 자동으로 만듭니다는 **Excel 연결** 가리키는 새로운/존재 하지 않는 파일을 클릭 **새** 에 대 한 **Excel 시트의 이름**합니다.  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 Excel 파일이 있는 폴더 또는 새 파일을 만들려는 폴더로 이동합니다.  

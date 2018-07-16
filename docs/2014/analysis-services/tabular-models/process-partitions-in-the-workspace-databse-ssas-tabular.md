@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7341335847d28c8940d361632afaa94d42e21d36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c838f3cac0c9fb1f665abd696c4881202a5aab4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195443"
 ---
 # <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>작업 영역 데이터베이스에서 파티션 처리(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 이 항목의 태스크에서는 **의** 파티션 처리 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]대화 상자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 처리하는 방법을 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36186391"
 3.  **처리** 확인란 열에서 선택된 모드로 처리할 파티션을 선택한 후 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
- [작업 영역 데이터베이스에서 파티션 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)  
+ [파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
+ [작업 영역 데이터베이스에서 파티션 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)  
   
   

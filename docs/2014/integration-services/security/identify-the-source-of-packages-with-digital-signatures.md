@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1657156b61b3f87fb639394b6624f8e0a209207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320663"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 해당 원본을 식별하는 디지털 인증서를 사용하여 서명할 수 있습니다. 디지털 인증서를 사용하여 패키지에 서명하면 패키지를 로드하기 전에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 디지털 서명을 확인하도록 할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 서명을 확인하도록 하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 **dtexec** 유틸리티(dtexec.exe)에서 옵션을 설정하거나 선택적 레지스트리 값을 설정합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36184288"
   
 -   디자인 타임에 패키지를 로드하기 전에 모든 패키지의 디지털 서명을 확인하려면 **에서** 패키지 로드 시 디지털 서명 확인 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]옵션을 설정합니다. 이 옵션은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 모든 패키지에 대한 전역 설정입니다. 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
--   개별 패키지의 디지털 서명을 확인 하려면 지정는 `/VerifyS[igned]` 옵션을 사용 하는 경우는 **dtexec** 유틸리티를 사용 하 여 패키지를 실행 합니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요.  
+-   개별 패키지의 디지털 서명을 확인 하려면 지정 합니다 `/VerifyS[igned]` 옵션을 사용 하는 경우는 **dtexec** 패키지를 실행 하는 유틸리티입니다. 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하세요.  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>패키지 서명을 확인하는 레지스트리 값 설정  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 서명되거나 서명되지 않은 패키지에 대한 조직의 정책을 관리하는 데 사용할 수 있는 선택적 레지스트리 값인 **BlockedSignatureStates**도 지원합니다. 이 레지스트리 값을 사용하면 패키지에 서명이 없거나 패키지의 서명이 잘못되거나 신뢰할 수 없는 경우 패키지를 로드하지 못하게 할 수 있습니다. 이 레지스트리 값을 설정하는 방법에 대한 자세한 내용은 [레지스트리 값을 설정하여 서명 정책 구현](../implement-a-signing-policy-by-setting-a-registry-value.md)을 참조하세요.  

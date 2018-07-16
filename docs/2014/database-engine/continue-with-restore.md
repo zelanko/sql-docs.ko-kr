@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.continuerestore.f1
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c7a5beacf1f86d3c7df7739fdbdcd0fd8dfb7980
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58a890012102b263a0db9dc2df177c41a27d4625
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291389"
 ---
 # <a name="continue-with-restore"></a>복원 계속
   **복원 계속** 대화 상자를 사용하여 다음 백업 세트를 복원할지 여부를 나타낼 수 있습니다. 예를 들어 테이프를 바꾸기 위해 복원 작업을 지연하려면 계속할 준비가 될 때까지 기다렸다가 **확인**을 클릭합니다.  

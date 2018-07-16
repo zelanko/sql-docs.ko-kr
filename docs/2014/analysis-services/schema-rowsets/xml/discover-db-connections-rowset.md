@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76b078c5b61c685634636f8891f65da722be911e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f22c330fcc1deef1e86f4442ed8524235a3ba5c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295553"
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS 행 집합
   서버에서 현재 열린 데이터베이스 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_DB_CONNECTIONS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_DB_CONNECTIONS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

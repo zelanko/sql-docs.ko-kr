@@ -1,5 +1,5 @@
 ---
-title: 개별화를 통해 OLAP 확장 | Microsoft Docs
+title: 개인 설정을 통해 OLAP 확장 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Services, extensibility
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2c1bdea4c59a047f613033ae0e8aa8515c8232f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf7785c3acd3815f78e656951e8ae3f05e125245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280359"
 ---
 # <a name="extending-olap-through-personalizations"></a>개별화를 통해 OLAP 확장
   Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]에서는 MDX(Multidimensional Expressions) 및 DMX(Data Mining Extension) 언어와 함께 사용할 수 있는 다양한 내장 함수를 제공합니다. 이러한 함수를 사용하여 표준 통계 계산을 비롯하여 계층에서의 멤버 이동에 이르는 모든 작업을 수행할 수 있습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  

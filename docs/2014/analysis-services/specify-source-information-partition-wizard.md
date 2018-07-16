@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d29067eabeb7050ec033cc5d274f9f5373c97ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310453"
 ---
 # <a name="specify-source-information-partition-wizard"></a>원본 정보 지정(파티션 마법사)
   **원본 정보 지정** 페이지를 사용하여 파티션이 생성될 측정값 그룹과 파티션에 대한 데이터 원본 뷰를 선택할 수 있을 뿐만 아니라 파티션에 대한 테이블을 필터링할 수 있습니다.  

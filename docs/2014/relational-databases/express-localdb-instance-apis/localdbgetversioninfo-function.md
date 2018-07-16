@@ -18,20 +18,20 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186541"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 함수
   버전이 존재하는지 여부, 전체 LocalDB 버전 번호(빌드 및 릴리스 번호 포함)와 같이 지정한 SQL Server Express LocalDB 버전에 대한 정보를 반환합니다.  
   
- 형태로 반환 하는 정보는 `struct` 라는 **LocalDBVersionInfo**, 있으며 그 다음 정의 합니다.  
+ 형식으로 반환 되는 정보를 `struct` 라는 **LocalDBVersionInfo**, 다음 정의는.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -71,7 +71,7 @@ HRESULT LocalDBGetVersionInfo(
  [출력] LocalDB 버전에 대한 정보를 저장하는 버퍼입니다.  
   
  *dwVersionInfoSize*  
- [입력] 크기를 유지는 *VersionInfo* 버퍼입니다.  
+ [입력] 크기를 유지 합니다 *VersionInfo* 버퍼입니다.  
   
 ## <a name="returns"></a>반환 값  
  S_OK  
@@ -90,11 +90,11 @@ HRESULT LocalDBGetVersionInfo(
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
 ## <a name="details"></a>설명  
- 도입 도입한 이유는 `struct` 크기 인수 (*lpVersionInfoSize*)의 서로 다른 버전을 반환 하는 API를 사용 하도록 설정 하는 것은 **LocalDBVersionInfostruct**, 효과적으로 및 이전 버전과 호환성을 사용 하도록 설정 합니다.  
+ 미치는 근거 합니다 `struct` 크기 인수 (*lpVersionInfoSize*)의 서로 다른 버전을 반환 하는 API를 사용 하도록 설정 하는 것을 **LocalDBVersionInfostruct**, 효과적으로 및 이전 버전과 호환성을 사용 하도록 설정 합니다.  
   
- 경우는 `struct` 크기 인수 (*lpVersionInfoSize*)가 알려진된 버전의 크기와 일치 하는 **LocalDBVersionInfostruct**, 해당 버전의는 `struct` 반환 됩니다. 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
+ 경우는 `struct` 크기 인수 (*lpVersionInfoSize*)가 알려진된 버전의 크기와 일치 합니다 **LocalDBVersionInfostruct**, 해당 버전의는 `struct` 반환 됩니다. 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
   
- 일반적인 예 **LocalDBGetVersionInfo** API 사용법은 다음과 같습니다.  
+ 일반적인 예로 **LocalDBGetVersionInfo** API 사용법은 다음과 같습니다.  
   
 ```  
 LocalDBVersionInfo vi;  

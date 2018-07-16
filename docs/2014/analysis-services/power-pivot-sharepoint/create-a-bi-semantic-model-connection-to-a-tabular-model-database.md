@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 084de463855ba83051d5d4ceb41e58431ae5e4f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d1bac7c3bc5e328db1bc54908f1d78ad5829c45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269939"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
   SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행되는 테이블 형식 모델 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 참조합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36184145"
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
- BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 참조 [를 라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)합니다.  
+ BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint 용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)합니다.  
   
  BI 의미 체계 모델 연결을 설정할 서버 및 데이터베이스 이름을 알아야 합니다. Analysis Services를 테이블 형식 모드에 대해 구성해야 합니다. 서버에서 실행 중인 데이터베이스는 테이블 형식 model 데이터베이스여야 합니다. 서버 모드를 확인하는 방법에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36184145"
   
  Management Studio에 대한 관리 권한을 부여하려면 Analysis Services 시스템 관리자여야 합니다.  
   
- SharePoint용 PowerPivot은 클래식 인증 모드를 사용하는 웹 응용 프로그램을 통해 액세스해야 합니다. 외부 데이터 원본에 대한 BI 의미 체계 모델 연결은 클래식 모드 로그인에 종속됩니다. 자세한 내용은 참조 [PowerPivot 인증 및 권한 부여](power-pivot-authentication-and-authorization.md)합니다.  
+ SharePoint용 PowerPivot은 클래식 인증 모드를 사용하는 웹 응용 프로그램을 통해 액세스해야 합니다. 외부 데이터 원본에 대한 BI 의미 체계 모델 연결은 클래식 모드 로그인에 종속됩니다. 자세한 내용은 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)합니다.  
   
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   

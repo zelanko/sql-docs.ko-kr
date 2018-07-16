@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.QueryViewColumn
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c4855f0a6dd583b0dbc92f116cf357203885fd4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4b26eb1ebcc3beec799ec56ee0e5eb895ec01ae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303083"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>테이블 반환 개체(열) 속성(Visual Database Tools)
   이러한 속성은 쿼리 및 뷰 디자이너의 **다이어그램** 창에서 테이블 반환 개체의 열을 선택하는 경우 표시됩니다.  

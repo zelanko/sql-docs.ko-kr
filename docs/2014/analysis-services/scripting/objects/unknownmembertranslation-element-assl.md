@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220303"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>UnknownMemberTranslation 요소(ASSL)
-  캡션에 대 한 번역을 포함 된 [UnknownMember](member-element-assl.md) 에 대 한 요소는 [차원](dimension-element-assl.md) 요소입니다.  
+  캡션에 대 한 번역을 포함 합니다 [UnknownMember](member-element-assl.md) 에 대 한 요소를 [차원](dimension-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36183924"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `UnknownMemberTranslation` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
+ 부모에 해당 하는 요소가 `UnknownMemberTranslation` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Translation 요소 &#40;ASSL&#41;](translation-element-assl.md)   

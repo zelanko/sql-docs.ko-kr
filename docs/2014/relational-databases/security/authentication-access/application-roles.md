@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application roles [SQL Server], about application roles
 - principals [SQL Server], application roles
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8da65658242f5b8192fa2ec5fb27dc07de704163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 5613f0657b8b8c5a3a9083be022865d83264e5db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262289"
 ---
 # <a name="application-roles"></a>응용 프로그램 역할
   응용 프로그램 역할은 응용 프로그램이 사용자와 같은 자체 사용 권한으로 실행할 수 있도록 설정하는 데이터베이스 보안 주체입니다. 응용 프로그램 역할을 사용하면 특정 데이터에 대한 액세스를 특정 응용 프로그램을 통해 연결하는 사용자에게만 허용할 수 있습니다. 데이터베이스 역할과는 달리 응용 프로그램 역할에는 멤버가 없으며 기본적으로 비활성화됩니다. 응용 프로그램 역할은 두 인증 모드에서 모두 작동하며 **sp_setapprole**을 사용하여 활성화되고 암호가 필요합니다. 응용 프로그램 역할은 데이터베이스 수준의 보안 주체이기 때문에 다른 데이터베이스에서 **guest**에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다. 따라서 다른 데이터베이스의 응용 프로그램 역할은 **guest** 가 해제된 데이터베이스에 액세스할 수 없습니다.  

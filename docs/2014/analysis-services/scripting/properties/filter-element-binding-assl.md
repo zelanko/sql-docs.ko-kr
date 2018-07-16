@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291309"
 ---
 # <a name="filter-element-binding-assl"></a>Filter 요소(Binding)(ASSL)
   부모 요소의 내용을 필터링하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
@@ -62,11 +62,11 @@ ms.locfileid: "36185277"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `Binding` 의 테이블을 포함 하 여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 ASSL (Scripting Language) 개체는 `Binding` 유형과의 상속 계층 구조 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
+ 에 대 한 자세한 내용은 합니다 `Binding` 테이블을 비롯 한 형식 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ASSL (Scripting Language) 개체를 `Binding` 형식과의 상속 계층 구조 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
- 부모에 해당 하는 요소 `Filter` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimensionBinding> 및 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>합니다.  
+ 부모에 해당 하는 요소가 `Filter` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.CubeDimensionBinding> 및 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Binding 데이터 형식 &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

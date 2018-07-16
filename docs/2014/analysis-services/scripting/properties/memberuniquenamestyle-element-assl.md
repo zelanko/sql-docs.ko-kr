@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca327bceaddce4c0f7ac1b7a726d321a02cdffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226363"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 요소(ASSL)
-  얼마나 고유한 이름을 결정에 포함 된 계층의 멤버에 대해 생성 되는 [CubeDimension](../data-type/dimension-data-type-assl.md) 요소입니다.  
+  어떻게 고유한 이름을 결정에 포함 된 계층의 멤버에 대해 생성 되는 [CubeDimension](../data-type/dimension-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36183115"
 |*NamePath*|인스턴스에서 각 수준과 멤버의 캡션으로 구성된 복합 이름을 생성합니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `MemberUniqueNameStyle` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimension>합니다.  
+ 부모에 해당 하는 요소가 `MemberUniqueNameStyle` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.CubeDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 요소 &#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [CubeDimension 데이터 형식 &#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)  
   
   

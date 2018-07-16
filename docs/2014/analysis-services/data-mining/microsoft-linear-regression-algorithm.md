@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315093"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 선형 회귀 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 종속 변수와 독립 변수 간의 선형 관계를 계산하고 이 관계를 예측에 사용하는 데 도움이 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘의 변형입니다.  
   
  이 관계는 데이터 계열을 가장 잘 나타내는 선에 대한 수식 형식을 사용합니다. 예를 들어 다음 다이어그램의 선은 데이터를 가장 잘 나타내는 선형 표시입니다.  
   
- ![데이터 집합을 모델링 하는 선](../media/linear-regression.gif "데이터 집합을 모델링 하는 선")  
+ ![데이터 집합을 모델링 하는 선을](../media/linear-regression.gif "데이터 집합을 모델링 하는 줄")  
   
  다이어그램의 각 데이터 요소에는 회귀선으로부터의 거리와 관련된 오류가 있습니다. 회귀 수식에서 계수 a와 b는 회귀선의 각도와 위치를 조정합니다. 모든 요소와 관련된 오류 수의 합계가 최소가 될 때까지 a와 b를 조정하여 회귀 수식을 얻을 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36186866"
   
  수식에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)를 사용하여 계수 및 기타 세부 정보를 확인하십시오.  
   
- 선형 회귀 모델의 경우 모델 콘텐츠에는 메타데이터, 회귀 수식 및 입력 값의 분산에 대한 통계가 포함됩니다. 자세한 내용은 참조 [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)합니다.  
+ 선형 회귀 모델의 경우 모델 콘텐츠에는 메타데이터, 회귀 수식 및 입력 값의 분산에 대한 통계가 포함됩니다. 자세한 내용은 [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)합니다.  
   
 ## <a name="creating-predictions"></a>예측 만들기  
  모델을 처리한 후에는 결과가 선형 회귀 수식과 함께 일련의 통계로 저장되며 이를 사용하여 향후 추세를 계산할 수 있습니다. 선형 회귀 모델을 사용하는 쿼리의 예는 [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)를 참조하세요.  

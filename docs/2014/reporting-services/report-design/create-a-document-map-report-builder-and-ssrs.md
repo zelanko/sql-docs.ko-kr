@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95647eaf64c59078aeda48ec0dc7281d8af27d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174963"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
   문서 구조는 렌더링된 보고서의 보고서 항목에 대한 탐색 링크 집합을 제공합니다. 문서 구조가 포함된 보고서를 열면 보고서 옆에 별도의 창이 나타납니다. 사용자는 문서 구조의 링크를 클릭하여 해당 항목을 표시하는 보고서 페이지로 이동할 수 있습니다. 보고서 섹션 및 그룹은 링크 계층에 정렬되어 있습니다. 이 문서 구조에서 항목을 클릭하면 보고서가 새로 고쳐진 다음 항목에 해당하는 보고서 영역을 표시합니다.  
   
- 문서 구조에 링크를 추가 하려면 설정는 `DocumentMapLabel` 또는 문서 구조에 표시할 텍스트로 계산 되는 식을 작성 하는 텍스트에는 보고서 항목의 속성입니다. 또한 테이블 또는 행렬 그룹에 대한 고유한 값을 문서 구조에 추가할 수 있습니다. 예를 들어 색을 기반으로 하는 그룹의 경우 각 고유 색은 해당 색에 대한 그룹 인스턴스를 표시하는 보고서 페이지에 대한 링크입니다.  
+ 설정 링크에 문서 구조를 추가 하려면를 `DocumentMapLabel` 또는 문서 구조에 표시할 텍스트로 계산 되는 식을 작성 하는 텍스트에는 보고서 항목의 속성입니다. 또한 테이블 또는 행렬 그룹에 대한 고유한 값을 문서 구조에 추가할 수 있습니다. 예를 들어 색을 기반으로 하는 그룹의 경우 각 고유 색은 해당 색에 대한 그룹 인스턴스를 표시하는 보고서 페이지에 대한 링크입니다.  
   
  또한 문서 구조를 표시하지 않고 보고서를 실행할 수 있도록 문서 구조 표시를 재정의하는 보고서에 대한 URL을 만든 다음 보고서 뷰어 도구 모음의 **문서 구조 표시/숨기기** 단추를 클릭하여 표시를 설정/해제할 수 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36185771"
     > [!NOTE]  
     >  테이블릭스 데이터 영역을 선택하려면 아무 셀이나 클릭하여 행 및 열 핸들을 표시한 다음 모퉁이 핸들을 클릭합니다.  
   
-2.  속성 창에서 문서 구조에 표시할 텍스트를 입력의 `DocumentMapLabel` 속성을 입력 하거나 레이블로 계산 되는 식을 입력 합니다. 예를 들어 **Sales Chart**를 입력합니다.  
+2.  속성 창에서 문서 구조에 표시 하려는 텍스트를 입력 합니다 `DocumentMapLabel` 속성을 입력 하거나 레이블로 계산 되는 식을 입력 합니다. 예를 들어 **Sales Chart**를 입력합니다.  
   
     > [!NOTE]  
     >  속성 창이 표시되지 않는 경우 **보기** 탭의 **표시/숨기기** 그룹에서 **속성**을 선택합니다.  
@@ -123,6 +123,6 @@ ms.locfileid: "36185771"
  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 찾기 및 보기 보고서 관리자에서 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [찾기 및 보고서 관리자에서 보고서 보기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

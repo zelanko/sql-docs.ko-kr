@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
 caps.latest.revision: 23
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a42c7e0b88b09a1775d9aef3fe370f5f2de3860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7d904fdf529ee06caa1c11c20978dd8753454a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249613"
 ---
 # <a name="select-the-report-type"></a>보고서 유형 선택
   보고서 마법사의 보고서 유형 선택 페이지를 사용하여 테이블 형식 보고서 또는 행렬 보고서를 선택할 수 있습니다.  

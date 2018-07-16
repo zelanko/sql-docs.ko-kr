@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45d295035ecd4b01b481fc40573336a0fc5a0109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271719"
 ---
 # <a name="execute-package-task-editor"></a>패키지 실행 태스크 편집기
   패키지 실행 태스크 편집기로 패키지 실행 태스크를 구성합니다. 패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36182846"
  자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추 (...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
   
  `ExecuteOutOfProcess`  
- 자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 자식 패키지가 부모 패키지와 같은 프로세스에서 실행 합니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
+ 자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 및 자식 패키지가 부모 패키지와 동일한 프로세스에서 실행 합니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 동적 옵션  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d92a51eaca0f98624ea6174a56448b383c1744a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99621b4d142e6d1686c908783ba63628109eae5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221943"
 ---
 # <a name="trace-properties-general-tab"></a>추적 속성(일반 탭)
   **추적 속성** 대화 상자의 **일반** 탭을 사용하여 추적의 속성을 확인하거나 지정할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36185668"
  **최대 파일 크기 설정(MB)**  
  추적 데이터를 파일에 저장하려면 추적 파일의 최대 크기를 지정해야 합니다. 기본값은 5MB입니다. 최대 크기는 파일이 저장된 파일 시스템이 NTFS인지 FAT인지에 따라 달라집니다.  
   
- \<그래픽 > **다른 이름으로 저장**  
+ \<그래픽 > **로 저장**  
  파일을 저장하려고 선택한 후에는 이 아이콘을 선택하여 파일 이름을 변경할 수 있습니다.  
   
  **파일 롤오버 사용**  

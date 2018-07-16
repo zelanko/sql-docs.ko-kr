@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - "10140"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Delete Rows dialog box
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: db5aa0c16802317a517b41f954c906cf4f400773
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68042821a3e2767a4bc95b573a2b1d46c7fea029
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189980"
 ---
 # <a name="delete-rows-dialog-box"></a>행 삭제 대화 상자
   **행 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 행을 삭제할 수 있습니다. 그룹과 연결된 행의 경우에는 그룹 정의도 삭제할 수 있습니다.  

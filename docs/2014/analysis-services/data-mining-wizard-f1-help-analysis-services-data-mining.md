@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291680"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>데이터 마이닝 마법사 F1 도움말(Analysis Services - 데이터 마이닝)
   **데이터 마이닝 마법사** 를 사용하여 새 마이닝 구조 및 선택적으로 연결된 마이닝 모델을 만들 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36184389"
   
 -   마이닝 모델을 사용하면 패턴을 찾아 마이닝 구조의 데이터를 분석하고 찾은 패턴을 기반으로 예측을 수행할 수 있습니다. 단일 마이닝 구조에서 다른 알고리즘을 기반으로 다른 유형의 마이닝 모델을 만들 수 있습니다.  
   
- 자세한 내용은 참조 [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)합니다.  
+ 자세한 내용은 [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)합니다.  
   
  **데이터 마이닝 마법사** 는 다음 단계로 이루어져 있습니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36184389"
  [측정값 그룹 차원 선택 &#40;새 중첩된 테이블 추가 마법사&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [중첩된 테이블 키 선택 &#40;새 중첩된 테이블 추가 마법사&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [중첩된 테이블 열 선택 &#40;새 중첩된 테이블 추가 마법사&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [열의 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [열 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
  [원본 큐브 조각화 &#40;데이터 마이닝 마법사&#41;](slice-source-cube-data-mining-wizard.md)   
  [마법사 완료 &#40;데이터 마이닝 마법사&#41;](completing-the-wizard-data-mining-wizard.md)   
  [열 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   

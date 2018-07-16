@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_MEMORY_USAGE rowset
 ms.assetid: 211cfa04-7bd6-43fe-8bd5-bfbff78bdafb
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae1f26c1bc55c8aa080915a372710e4d59064979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afd5d5f612693150cc476c69c3fe0dcf16917d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291519"
 ---
 # <a name="discoverobjectmemoryusage-rowset"></a>DISCOVER_OBJECT_MEMORY_USAGE 행 집합
   개체에서 사용하는 메모리 리소스에 대한 정보를 제공합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_OBJECT_MEMORY_USAGE` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_OBJECT_MEMORY_USAGE` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

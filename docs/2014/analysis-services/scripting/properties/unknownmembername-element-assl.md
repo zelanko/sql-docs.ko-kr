@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcd9e1d81560b5175765c4aa77d1f921a258addd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c788574586a20ef44f0206d07bb21389cfd0308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306493"
 ---
 # <a name="unknownmembername-element-assl"></a>UnknownMemberName 요소(ASSL)
   차원의 알 수 없는 멤버에 대한 캡션을 차원의 기본 언어로 포함합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36183921"
 ## <a name="remarks"></a>Remarks  
  `UnknownMemberName` 요소의 값은 알 수 없는 멤버에 사용되는 캡션을 제공합니다. 알 수 없는 멤버의 멤버 ID는 *Dimension*.UnknownMember입니다. 여기서 *Dimension* 은 차원의 고유한 이름이며 변경할 수 없습니다.  
   
- 부모에 해당 하는 요소 `UnknownMemberName` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
+ 부모에 해당 하는 요소가 `UnknownMemberName` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

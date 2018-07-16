@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Delete query
 - queries [SQL Server], types
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - View Designer, query types
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db00234849e885c82898a379bd3546e193a1a634
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 865bdf79fa72817ed3f3855be855c908d669dd10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299423"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>지원되는 쿼리 형식(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md)의 다이어그램 창과 조건 창(그래픽 창)에서 다음과 같은 쿼리 형식을 만들 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36184835"
  그래픽 창에 나타낼 수 없는 SQL 문을 사용하여 쿼리를 만드는 경우 쿼리 및 뷰 디자이너는 해당 창을 흐리게 표시하여 현재 만들고 있는 쿼리를 반영하지 않음을 표시합니다. 그러나 흐리게 표시된 창은 여전히 활성 상태이며 대부분 이 창에서도 쿼리를 변경할 수 있습니다. 그래픽 창에 나타낼 수 있는 쿼리에 변경 내용이 반영되면 해당 그래픽 창은 더 이상 흐리게 표시되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 형식&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
   
   

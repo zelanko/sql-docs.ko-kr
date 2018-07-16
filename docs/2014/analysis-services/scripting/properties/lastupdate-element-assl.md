@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a0cc42c5853e34ed4b1525cde528aa349f67ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01429b3086f6de62b7ad0b921ad89f042c341891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302783"
 ---
 # <a name="lastupdate-element-assl"></a>LastUpdate 요소(ASSL)
-  읽기 전용 포함 마지막을 나타내는 타임 스탬프에 연결 된 [데이터베이스](../objects/database-element-assl.md) 변경 된 데이터베이스에 포함 된 주요 개체 중 하나 또는 합니다.  
+  읽기 전용 포함 마지막을 나타내는 타임 스탬프에 연결 된 [데이터베이스](../objects/database-element-assl.md) 되거나 변경 된 데이터베이스에 포함 된 주요 개체 중 하나입니다.  
   
 ## <a name="syntax"></a>구문  
   

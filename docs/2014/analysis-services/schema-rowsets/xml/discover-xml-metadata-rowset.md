@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214013"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 행 집합
   요청된 개체를 설명하는 XML 문서를 반환합니다. 반환되는 행 집합은 항상 하나의 행과 하나의 열로 구성됩니다.  
   
- 호출 하는 경우는 [Discover](../../xmla/xml-elements-methods-discover.md) 사용 하 여 메서드는 `DISCOVER_XML_METATDATA` 열거 값은 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) 요소는 `Discover` 메서드가 반환 되는 `DISCOVER_XML_METATDATA` 행 집합.  
+ 호출 하는 경우는 [검색](../../xmla/xml-elements-methods-discover.md) 메서드를 `DISCOVER_XML_METATDATA` 열거 값을 [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) 요소를 `Discover` 메서드가 반환 되는 `DISCOVER_XML_METATDATA` 행 집합입니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  `DISCOVER_XML_METADATA` 행 집합에는 다음 열이 포함되어 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36185279"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|(선택 사항)|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|(선택 사항)|  
   
- 제한은 `ObjectExpansion`의 모든 주요 개체에 사용할 수 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 일반적으로 클라이언트는 제한을 사용하여 DDL이 반환되는 OLAP 개체를 설명하며, `ObjectExpansion` 제한을 사용하여 반환된 DDL의 확장 수준을 정의합니다. 다음 표는 열거형 값에 대 한 허용 되는지 여부를 나타냅니다. [Alter 요소 &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) 명령입니다.  
+ 제한은 `ObjectExpansion`, 모든 주요 개체의 수 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 일반적으로 클라이언트는 제한을 사용하여 DDL이 반환되는 OLAP 개체를 설명하며, `ObjectExpansion` 제한을 사용하여 반환된 DDL의 확장 수준을 정의합니다. 다음 표에서 열거형 값에 대 한 허용 되는지 여부를 나타냅니다 [Alter 요소 &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) 명령입니다.  
   
 |열거 값|Description|  
 |-----------------------|-----------------|  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 49183fb1ff712ee3d0be8cd76d99492fcc9a93d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86394a3e44d1dab34bc451eee19410083bc676e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238203"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 오류
     
@@ -51,7 +51,7 @@ ms.locfileid: "36185129"
 ## <a name="user-action"></a>사용자 동작  
  구성 파일을 수동으로 편집한 후에 이 오류가 발생하기 시작했다면 변경 내용을 제거하고 이전 값을 입력하거나 백업이 있는 경우 이전 버전을 복원하세요.  
   
- 와 함께 제공 되는 추가 오류 메시지 정보를 검토 하 고 `rsServerConfiguration` 오류를 \Microsoft SQL Server\MSRS12에 나와 있는 보고서 서버 추적 로그 파일을 검토 합니다.\< 인스턴스 이름 > services\logfiles입니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
+ 와 함께 제공 되는 추가 오류 메시지 정보를 검토 하는 `rsServerConfiguration` 오류 \Microsoft SQL Server\MSRS12에 있는 보고서 서버 추적 로그 파일을 검토 합니다.\< n a m e > services\logfiles입니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 ## <a name="internal-only"></a>내부 전용  
   

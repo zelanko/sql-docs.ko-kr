@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
 - previewing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c1d7b819f181d8a4b2de8c448a80a5ef24a64cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afcfb2cf31526f4e8898fafbe72f9492a1848886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202533"
 ---
 # <a name="previewing-reports"></a>보고서 미리 보기
   보고서를 디자인할 때 프로덕션 환경에 게시하기 전에 보고서를 미리 볼 수 있습니다. 이 작업은 보고서 디자이너에서 미리 보기 모드로 전환하거나, 보고서 디자이너에서 미리 보기 창을 사용하거나, 테스트 환경의 보고서 서버에 보고서를 게시하여 수행할 수 있습니다.  
@@ -40,14 +40,14 @@ ms.locfileid: "36185128"
   
 -   클릭 하 여 **시작** 에 **디버그** 메뉴.  
   
--   클릭 하 여는 **시작** 단추는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 표준 도구 모음입니다.  
+-   클릭 하 여 합니다 **시작** 단추를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 표준 도구 모음입니다.  
   
 -   F5 키를 누릅니다.  
   
  에 지정 된 보고서, 보고서를 작성은 하지만 배포 하지 않는 프로젝트 구성을 사용 하는 경우는 `StartItem` 별도 미리 보기 창에서 열리며, 현재 구성의 속성입니다. 미리 보기 창에서 보고서는 미리 보기 모드와 동일한 방식으로 표시되고 동일한 기능을 제공합니다.  
   
 > [!NOTE]  
->  보고서를 디버깅하려면 먼저 시작 항목을 설정해야 합니다. 시작 항목을 설정 하려면 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 **속성**, 한 다음 `StartItem`를 표시할 보고서의 이름을 선택 합니다.  
+>  보고서를 디버깅하려면 먼저 시작 항목을 설정해야 합니다. 시작 항목을 설정 하려면 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭 **속성**를 선택한 다음 `StartItem`를 표시할 보고서의 이름을 선택 합니다.  
   
  프로젝트의 시작 항목이 아닌 특정 보고서를 미리 보려면 보고서를 작성하지만 배포하지 않는 구성(예: DebugLocal 구성)을 선택하고 보고서를 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭합니다. 보고서를 배포하지 않는 구성을 선택해야 합니다. 그렇지 않으면 보고서는 로컬 컴퓨터의 미리 보기 창에 표시되지 않고 보고서 서버에 게시됩니다.  
   

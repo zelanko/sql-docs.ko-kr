@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9671f72321630dc53243d695dca7f943e4685e7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319801"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
   
 > [!NOTE]  
->  보고서 도구 모음을 수정할 수는 없지만 보고서 URL의 매개 변수를 구성하여 보고서에서 보고서 도구 모음을 숨길 수 있습니다. 보고서 도구 모음 숨기기에 대 한 자세한 내용은 참조 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
+>  보고서 도구 모음을 수정할 수는 없지만 보고서 URL의 매개 변수를 구성하여 보고서에서 보고서 도구 모음을 숨길 수 있습니다. 보고서 도구 모음을 숨기는 방법에 대 한 자세한 내용은 참조 하십시오 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
   
 ## <a name="report-toolbar"></a>보고서 도구 모음  
  보고서 도구 모음은 HTML 렌더링 확장 프로그램에서 렌더링된 보고서에 대해 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다.  
@@ -78,6 +78,6 @@ ms.locfileid: "36184008"
 ## <a name="see-also"></a>관련 항목  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

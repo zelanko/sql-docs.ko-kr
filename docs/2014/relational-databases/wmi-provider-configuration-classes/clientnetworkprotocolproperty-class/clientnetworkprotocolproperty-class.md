@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ClientNetworkProtocolProperty class
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efa9a28a319a215b6b77af09701a266e11cee629
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7c2a30253bad6e0750ff67a57f5071d992248ed7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319933"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 클래스
   [ClientNetworkProtocolProperty 클래스](clientnetworkprotocolproperty-class.md) 는 클라이언트 네트워크 프로토콜의 속성을 나타냅니다.  

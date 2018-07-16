@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SilenceOverrideInterval element
 ms.assetid: 0dcd2db4-9bc0-4460-b1dd-def0b38c4617
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f12bc90bcac229c3aaff35e23686b127f30b03d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba345f4d7ebe21af3c2ff79739f3badf89da03d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192493"
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>SilenceOverrideInterval 요소(ASSL)
   MOLAP(다차원 OLAP) 이미징을 무조건 시작하기 전에 초기 알림을 받은 후 경과해야 하는 시간을 정의합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36186400"
 ## <a name="remarks"></a>Remarks  
  대기 기간 중에 알림을 받은 경우 `SilenceOverrideInterval`의 값으로 `SilenceInterval`의 값이 재정의됩니다.  
   
- 부모에 해당 하는 요소 `SilenceOverrideInterval` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
+ 부모에 해당 하는 요소가 `SilenceOverrideInterval` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ProactiveCaching>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

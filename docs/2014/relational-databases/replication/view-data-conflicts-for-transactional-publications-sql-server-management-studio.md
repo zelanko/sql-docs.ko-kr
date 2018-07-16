@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
 - queued updating subscriptions [SQL Server replication]
 - viewing conflict information
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 280b9cb6a8842b218a040e64742a7c685b7d2024
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a4dc4c42c18429c5fa05cfe42fc72c5b511e488b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179770"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 복제 충돌 뷰어에서 피어 투 피어 트랜잭션 복제와 지연 업데이트 구독이 포함된 트랜잭션 복제의 충돌을 볼 수 있습니다. 충돌 감지 및 해결 방법은 [피어 투 피어 복제에서 충돌 검색](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) 및 [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)을 참조하세요.  
@@ -36,7 +36,7 @@ ms.locfileid: "36184457"
   
     -   @conflict_retention sp_addpublication [의](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)매개 변수에 보존 값을 지정합니다.  
   
-    -   값을 지정 `'conflict_retention'` 에 대 한는 @property 매개 변수 및 보존 기간에 대 한 값은 @value 의 매개 변수 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)합니다.  
+    -   값을 지정 `'conflict_retention'` 에 대 한는 @property 매개 변수 및 보존 기간에 대 한 값을 @value 의 매개 변수 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)합니다.  
   
 ### <a name="to-view-conflicts"></a>충돌을 보려면  
   

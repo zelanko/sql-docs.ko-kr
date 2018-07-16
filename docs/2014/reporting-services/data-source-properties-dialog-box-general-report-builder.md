@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288459"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>데이터 원본 속성 대화 상자, 일반(보고서 작성기)
   **데이터 원본 속성** 대화 상자에서 **일반** 을 선택하여 보고서 서버의 공유 데이터 원본을 선택하거나 보고서에 포함된 데이터 원본에 대한 연결 정보를 수정할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36185132"
   
  보고서 서버에서 데이터 원본을 선택하면 보고서 작성기와 해당 보고서 서버 간에 연결이 유지됩니다.  
   
- **내 보고서에 포함 된 연결을 사용 하 여**  
+ **내 보고서에 포함 된 연결 사용**  
  이 보고서 전용의 데이터 원본을 만들려면 이 옵션을 선택합니다.  
   
  **형식**  
@@ -70,7 +70,7 @@ ms.locfileid: "36185132"
 ## <a name="see-also"></a>관련 항목  
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [데이터 원본 속성 대화 상자, 자격 증명 &#40;보고서 작성기&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   

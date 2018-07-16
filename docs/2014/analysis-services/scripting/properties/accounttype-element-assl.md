@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243433"
 ---
 # <a name="accounttype-element-assl"></a>AccountType 요소(ASSL)
   에 정의 된 계정 유형의 이름을 포함 한 [데이터베이스](../objects/database-element-assl.md) 요소입니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "36181896"
 |*수입*|수입 계정입니다.|  
 |*비용*|지출 계정입니다.|  
 |*흐름*|현금 흐름 계정입니다.|  
-|*잔액*|잔액 계정입니다.|  
+|*분산*|잔액 계정입니다.|  
 |*자산*|자산 계정입니다.|  
 |*책임*|부채 계정입니다.|  
 |*통계*|통계 계정입니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "36181896"
  AMO(Analysis Management Objects) 개체 모델에서 `AccountType`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.AccountTypes>입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소 계정 &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
+ [요소를 계정 &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

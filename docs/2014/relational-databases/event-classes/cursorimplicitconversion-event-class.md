@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c4c8b956ab0874bc89b23d72953c9268276a29da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f57d3477c2dcede6b168dea569dcdcecf25d8c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304083"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 이벤트 클래스
   **CursorImplicitConversion** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 발생하는 커서 암시적 변환 이벤트를 의미합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 요청된 유형의 서버 커서에서 지원되지 않는 Transact-SQL 문을 실행할 때 커서 암시적 변환 이벤트가 발생합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 커서 유형이 변경되었음을 나타내는 오류를 반환합니다.  

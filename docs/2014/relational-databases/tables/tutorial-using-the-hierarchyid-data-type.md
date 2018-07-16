@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [hierarchyid]
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3d380b0ad7eb1fb6120d959e3b7fb303466c010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1a9282da58d26e29c3f88a005e72fc431bf1e57a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168354"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>자습서: hierarchyid 데이터 형식 사용
   이 자습서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 경험은 있지만 `hierarchyid` 데이터 형식은 처음 사용하는 사용자를 위해 제공됩니다.  

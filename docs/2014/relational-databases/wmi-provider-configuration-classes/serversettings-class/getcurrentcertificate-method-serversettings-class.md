@@ -20,15 +20,15 @@ helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 269a2b5d29bce201d72ee6b42730e4cb42d61b78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6fcb58365df623bd3a6c0fbc418f5284a0ea149a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232603"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 메서드(ServerSettings 클래스)
   현재 보안 인증서를 가져옵니다.  
@@ -52,7 +52,7 @@ SHA
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*S H A*|메서드가 완료된 후 현재 보안 인증서를 지정하는 문자열 개체 값(출력 매개 변수)입니다.|  
+|*SHA*|메서드가 완료된 후 현재 보안 인증서를 지정하는 문자열 개체 값(출력 매개 변수)입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  

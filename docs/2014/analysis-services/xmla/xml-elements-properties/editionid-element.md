@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f2d1cc7f-8ab5-4b73-a128-ce58d9bb7f96
 caps.latest.revision: 4
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ff1d8b091450a3d1b9d1ee846ee1f72bcd14ad2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 97154969b548b05ab2fb4c468a070d3c06faec64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304163"
 ---
 # <a name="editionid-element"></a>EditionId 요소
-  부모의 숫자 버전 식별자 코드를 포함 [서버 요소 (ASSL)](../../scripting/objects/server-element-assl.md) 요소입니다.  
+  부모의 숫자 버전 식별자 코드를 포함 [Server 요소 (ASSL)](../../scripting/objects/server-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   

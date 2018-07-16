@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d895f2270f28ff3da8aabfa2a8701c589b1829e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d2c75529abee7da0550e628a1b6c2263e652fa9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300493"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>코드 외의 특성 값 자동 생성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙이 적용될 때마다 값으로 정수가 자동 할당되도록 하려면 엔터티의 특성 값에 대해 값을 자동으로 생성합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 분할 방법 (데이터 마이닝) | Microsoft Docs
+title: 분할 메서드 (데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206253"
 ---
 # <a name="discretization-methods-data-mining"></a>분할 방법(데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 마이닝 모델을 만드는 데 사용되는 일부 알고리즘은 특정 내용 유형이 있어야만 올바로 실행될 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 연속 열을 입력으로 사용할 수 없고 연속 값을 예측할 수 없습니다. 또한 일부 열에는 포함된 값이 너무 많아 알고리즘에서 모델을 만들기 위한 데이터 패턴을 쉽게 식별할 수 없습니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 마이닝 모델을 만드는 데 사용되는 일부 알고리즘은 특정 내용 유형이 있어야만 올바로 실행될 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 연속 열을 입력으로 사용할 수 없고 연속 값을 예측할 수 없습니다. 또한 일부 열에는 포함된 값이 너무 많아 알고리즘에서 모델을 만들기 위한 데이터 패턴을 쉽게 식별할 수 없습니다.  
   
  이 경우 알고리즘을 사용하여 마이닝 모델을 생성할 수 있도록 열의 데이터를 분할할 수 있습니다. *분할* 은 가능한 상태의 수를 제한하기 위해 값을 버킷에 넣는 프로세스로서, 버킷 자체는 정렬된 불연속 값으로 처리됩니다. 숫자 및 문자열 열을 모두 분할할 수 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36184812"
   
  `Number of Buckets = sqrt(n)`  
   
- 원하지 않는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 버킷 수를 계산 하는 데는 <xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A> 속성을 통해 수동으로 버킷 수를 지정 합니다.  
+ 원하지 않는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 버킷 수를 계산 하기 위해 사용할 수는 <xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A> 속성을 통해 수동으로 버킷 수를 지정 합니다.  
   
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터를 분할하는 데 사용할 수 있는 방법을 설명합니다.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "36184812"
   
 ## <a name="remarks"></a>Remarks  
   
--   사용할 수는 `EQUAL_AREAS` 메서드를 문자열을 분할 합니다.  
+-   사용할 수는 `EQUAL_AREAS` 문자열을 분할 하는 방법입니다.  
   
--   `CLUSTERS` 메서드 1000 개 레코드의 무작위 샘플을 사용 하 여 데이터를 분할 합니다. 알고리즘에서 데이터를 샘플링하지 않으려면 `EQUAL_AREAS` 방법을 사용합니다.  
+-   `CLUSTERS` 메서드 1000 개 레코드의 무작위 샘플링을 사용 하 여 데이터를 분할 합니다. 알고리즘에서 데이터를 샘플링하지 않으려면 `EQUAL_AREAS` 방법을 사용합니다.  
   
--   신경망 마이닝 모델 자습서에서는 분할을 사용자 지정할 수 있는 방법에 대한 예를 제공합니다. 자세한 내용은 참조 [5 단원: 빌딩 신경망 및 로지스틱 회귀 모델 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)합니다.  
+-   신경망 마이닝 모델 자습서에서는 분할을 사용자 지정할 수 있는 방법에 대한 예를 제공합니다. 자세한 내용은 [5 단원: 빌드 신경망 및 로지스틱 회귀 분석 모델 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [콘텐츠 형식을 &#40;데이터 마이닝&#41;](content-types-data-mining.md)   
- [콘텐츠 형식을 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [콘텐츠 형식 &#40;데이터 마이닝&#41;](content-types-data-mining.md)   
+ [콘텐츠 형식 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
  [데이터 형식 &#40;데이터 마이닝&#41;](data-types-data-mining.md)   

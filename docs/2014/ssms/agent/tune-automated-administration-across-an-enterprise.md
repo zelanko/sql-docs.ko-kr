@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], automated administration
 - tuning automated administration [SQL Server]
 - monitoring performance [SQL Server], automated administration
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fcc6a0cce6357a5f1c1780d54fc73d158484c129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9704fad7e786d6b1959cb1c8afaa77b7d296e1cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299523"
 ---
 # <a name="tune-automated-administration-across-an-enterprise"></a>기업 내의 자동화된 관리 튜닝
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 통해 다중 서버를 관리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 자체 튜닝 기능을 사용할 수 있습니다. 따라서 정상 조건에서 추가 작업 튜닝은 필요하지 않습니다. 그러나 작업을 실행하고 경고를 생성하고 운영자에게 알릴 때 네트워크 로드가 증가됩니다. 기업 내에서 자동화된 관리를 튜닝하여 이러한 작업으로 인한 네트워크 트래픽을 최소화할 수 있습니다.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Attention event class
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3fd3a56fb3fa424e00c8afc9c1250ad8b143bca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 714c8a628f32e44205c26142a1416d5cf04c2875
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283299"
 ---
 # <a name="attention-event-class"></a>Attention 이벤트 클래스
   **Attention** 이벤트 클래스는 취소, 클라이언트 인터럽트 요청, 클라이언트 연결 끊어짐 등의 attention 이벤트가 발생했음을 나타냅니다. 취소 작업은 데이터 액세스 드라이버 제한 시간 구현의 일부라고 할 수 있습니다.  

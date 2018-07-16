@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
 - clusters [SQL Server], maintaining
@@ -24,18 +23,18 @@ helpviewer_keywords:
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 caps.latest.revision: 34
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 3c5364ad63b446abc4e79e0d3ac986f86e8432a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a954eb61a7cf5b4ed39ca2cd62ab763d753ac3d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317563"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
-  사용 하 여 노드 추가 또는 제거에서 기존 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI) 등의 유지 관리 작업 수행은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
+  사용 하 여 노드 추가 또는 제거에서 기존 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI) 등의 유지 관리 작업 수행을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램입니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>장애 조치(Failover) 클러스터 인스턴스 유지 관리  
  FCI는 설치한 후에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 변경하거나 복구할 수 있습니다. 예를 들어 FCI에 노드를 더 추가하거나 FCI를 독립 실행형 인스턴스로 실행하거나 FCI 구성에서 노드를 제거할 수 있습니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "36184628"
 |태스크 설명|항목 링크|  
 |----------------------|----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 종속성을 추가하는 방법에 대해 설명합니다.|[SQL Server 리소스에 종속성 추가](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos는 클라이언트/서버 응용 프로그램을 위한 강력한 인증을 제공하기 위해 디자인된 네트워크 인증 프로토콜입니다. Kerberos는 상호 운용성의 기반을 제공하고 기업 전체의 네트워크 인증 보안을 강화합니다. Kerberos 인증을 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스 또는 AlwaysOn Fci 합니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos는 클라이언트/서버 응용 프로그램을 위한 강력한 인증을 제공하기 위해 디자인된 네트워크 인증 프로토콜입니다. Kerberos는 상호 운용성의 기반을 제공하고 기업 전체의 네트워크 인증 보안을 강화합니다. Kerberos 인증을 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스 또는 AlwaysOn Fci를 사용 하 여 합니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Kerberos 인증을 사용하는 방법을 설명하는 콘텐츠에 대한 링크를 제공합니다.||  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 오류를 복구하는 데 사용되는 프로시저에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스 오류 복구](recover-from-failover-cluster-instance-failure.md)|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 IP 주소 리소스를 변경하는 데 사용되는 프로시저에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경](change-the-ip-address-of-a-failover-cluster-instance.md)|  

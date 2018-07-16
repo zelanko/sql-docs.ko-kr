@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237143"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
   식 계산기는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36183485"
  또한 식은 문자열, 부울 및 숫자 리터럴을 포함할 수 있습니다. 숫자 리터럴을 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 숫자 데이터 형식으로 변환하는 방법은 [리터럴&#40;SSIS&#41;](numeric-string-and-boolean-literals.md)을 참조하세요.  
   
 ## <a name="implicit-data-conversion"></a>암시적 데이터 변환  
- 데이터 형식의 암시적 변환은 식 계산기가 자동으로 데이터를 한 데이터 형식에서 다른 데이터 형식으로 변환할 때 발생합니다. 예를 들어 경우는 `smallint` 과 비교 되는 `int`, `smallint` 암시적으로 변환할 `int` 비교를 수행 하기 전에.  
+ 데이터 형식의 암시적 변환은 식 계산기가 자동으로 데이터를 한 데이터 형식에서 다른 데이터 형식으로 변환할 때 발생합니다. 예를 들어 경우는 `smallint` 비교할를 `int`의 `smallint` 암시적으로 변환 됩니다 `int` 비교를 수행 하기 전에 합니다.  
   
  인수와 피연산자의 데이터 형식이 호환되지 않는 경우 식 계산기는 암시적 데이터 변환을 수행할 수 없습니다. 또한 식 계산기는 암시적으로 임의의 값을 부울로 변환할 수 없습니다. 대신 인수 및 피연산자는 캐스트 연산자를 사용하여 명시적으로 변환해야 합니다. 자세한 내용은 [캐스트&#40;SSIS 식&#41;](cast-ssis-expression.md)를 참조하세요.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36183485"
 > [!NOTE]  
 >  부울 값은 숫자가 아니라 논리 값입니다. 일부 환경에서는 부울 값이 숫자로 표시될 수 있지만 숫자로 저장되지는 않으며, 다양한 프로그래밍 언어에서는 부울 값을 .NET Framework 메서드와는 다른 숫자 값으로 표시합니다.  
 >   
->  예를 들어 Visual Basic에서 사용할 수 있는 변환 함수는 `True`를 -1로 변환하지만 .NET Framework의 `System.Convert.ToInt32` 메서드는 `True`를 +1로 변환합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어 변환 `True` 를-1입니다.  
+>  예를 들어 Visual Basic에서 사용할 수 있는 변환 함수는 `True`를 -1로 변환하지만 .NET Framework의 `System.Convert.ToInt32` 메서드는 `True`를 +1로 변환합니다. 합니다 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어 변환 `True` -1입니다.  
 >   
 >  오류나 예기치 않은 결과를 방지하려면 `True` 및 `False`에 특정 숫자 값을 사용하는 코드를 작성하지 말아야 합니다. 가능하면 부울 변수는 부울 변수용으로 설계된 논리 값으로만 사용해야 합니다.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36183485"
   
 -   [&#62;&#40;보다 큰&#41; &#40;SSIS 식&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;미만&#41; &#40;SSIS 식&#41;](less-than-ssis-expression.md)  
+-   [&#60;&#40;보다 작거나&#41; &#40;SSIS 식&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;보다 크거나 같음&#41; &#40;SSIS 식&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;크거나 같거나&#41; &#40;SSIS 식&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;보다 작거나&#41; &#40;SSIS 식&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;보다 작거나 같음&#41; &#40;SSIS 식&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  인수가 하나인 함수는 다음과 같은 경우를 제외하고 해당 인수의 데이터 형식으로 결과를 반환합니다.  
   

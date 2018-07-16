@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 254cc2f7bccd634a283412d4b2acbf75f1c0cd84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: baf89a41a42a1ea84e37d103890c3c8ea1ed22db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274559"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 관계를 만드는 방법에 대해 설명합니다. 한 테이블의 행을 다른 테이블의 행과 연결하려면 두 테이블 사이에 관계를 만듭니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36184237"
   
      [보안](#Security)  
   
--   **외래 키 관계를 만들려면 사용 하 여:**  
+-   **만드는 외래 키 관계에 사용 하 여:**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   

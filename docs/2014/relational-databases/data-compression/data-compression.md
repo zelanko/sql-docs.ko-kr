@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -23,18 +22,18 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 986f0e94559804539889eeb1e7618327eee68165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320413"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] rowstore 테이블 및 인덱스를 위해 행 및 페이지 압축을 지원 하 고 columnstore 테이블 및 인덱스에 대 한 columnstore 및 columnstore 보관 압축을 지원 합니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] rowstore 테이블 및 인덱스에 대 한 행 및 페이지 압축을 지원 하 고 columnstore 테이블 및 인덱스에 대 한 columnstore 및 columnstore 보관 압축을 지원 합니다.  
   
  rowstore 테이블 및 인덱스의 경우 데이터베이스 크기를 줄이려면 데이터 압축 기능을 사용하십시오. 데이터를 압축하면 공간을 절약할 수 있을 뿐만 아니라 데이터가 보다 적은 수의 페이지에 저장되어 쿼리가 디스크에서 읽어야 하는 페이지가 적어지므로 I/O가 많은 작업의 성능을 향상시킬 수 있습니다. 그러나 데이터를 응용 프로그램과 교환하는 동안 데이터를 압축하고 압축 해제하기 위해 데이터베이스 서버에 추가 CPU 리소스가 필요합니다. 다음 데이터베이스 개체에 대해 행 및 페이지 압축을 구성할 수 있습니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36184287"
   
 -   압축하면 한 페이지에 더 많은 행을 저장할 수 있지만 테이블 또는 인덱스의 최대 행 크기는 변경되지 않습니다.  
   
--   최대 행 크기와 압축 오버헤드를 더한 값이 최대 행 크기 8060바이트를 초과하는 테이블에서는 압축을 사용할 수 없습니다. 예를 들어 c1이 있는 테이블`char(8000)` 및 c2`char(53)` 은 추가 압축 오버 헤드 때문에 압축할 수 없습니다. vardecimal 저장소 형식이 사용되는 경우 해당 형식을 사용하면 행 크기 검사가 수행됩니다. 행 및 페이지 압축의 경우 개체가 처음 압축될 때 행 크기 검사가 수행된 다음 각 행을 삽입하거나 수정할 때 검사됩니다. 압축에는 다음 두 가지 규칙이 적용됩니다.  
+-   최대 행 크기와 압축 오버헤드를 더한 값이 최대 행 크기 8060바이트를 초과하는 테이블에서는 압축을 사용할 수 없습니다. 예를 들어 열 c1이 있는 테이블`char(8000)` 및 c2`char(53)` 은 추가 압축 오버 헤드 때문에 압축할 수 없습니다. vardecimal 저장소 형식이 사용되는 경우 해당 형식을 사용하면 행 크기 검사가 수행됩니다. 행 및 페이지 압축의 경우 개체가 처음 압축될 때 행 크기 검사가 수행된 다음 각 행을 삽입하거나 수정할 때 검사됩니다. 압축에는 다음 두 가지 규칙이 적용됩니다.  
   
     -   고정 길이 형식으로의 업데이트가 항상 성공해야 합니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "36184287"
 ### <a name="basics"></a>기본 사항  
  Columnstore 테이블 및 인덱스는 항상 columnstore 압축으로 저장됩니다. 보관 압축이라고 하는 추가 압축을 구성하여 columnstore 데이터 크기를 더 줄일 수 있습니다.  보관 압축을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터에 대해 Microsoft XPRESS 압축 알고리즘을 실행합니다. 다음 데이터 압축 유형을 사용하여 보관 압축을 추가하거나 제거합니다.  
   
--   사용 하 여 `COLUMNSTORE_ARCHIVE` 데이터 보관 압축으로 columnstore 데이터를 압축 합니다.  
+-   사용 하 여 `COLUMNSTORE_ARCHIVE` 데이터 압축 보관 압축으로 columnstore 데이터를 압축 합니다.  
   
 -   보관 압축을 풀려면 **COLUMNSTORE** 데이터 압축을 사용하십시오. 결과 데이터는 columnstore 압축으로 계속해서 압축됩니다.  
   
@@ -171,9 +170,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>메타데이터  
  다음 시스템 뷰에는 클러스터형 인덱스의 데이터 압축 정보가 포함되어 있습니다.  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` 및 `type_desc` 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE 포함 합니다.  
+-   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` 하 고 `type_desc` 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE 포함 합니다.  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – `data_compression` 및 `data_compression_desc` 열에는 COLUMNSTORE 및 columnstore_archive가 포함 됩니다.  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – `data_compression` 하 고 `data_compression_desc` 열에는 COLUMNSTORE 및 columnstore_archive가 포함 됩니다.  
   
  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
   

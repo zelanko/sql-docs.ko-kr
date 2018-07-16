@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], continuous columns
 - mining model content, viewing
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0431f8820682fee4fba420a197d5a25520eaf08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740551a33911ed625df252103bb9cae9f1db60cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191173"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
   
 -   단기 예측에 대해 최적화되어 있는 ARIxp 알고리즘  
   

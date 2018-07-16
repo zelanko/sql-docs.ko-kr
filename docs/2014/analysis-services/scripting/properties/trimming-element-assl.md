@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326543"
 ---
 # <a name="trimming-element-assl"></a>Trimming 요소(ASSL)
   데이터 원본의 데이터가 잘리는 방법을 지정합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36183712"
   
  AMO(Analysis Management Objects) 개체 모델에서 `Trimming`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.Trimming>입니다.  
   
- 부모에 해당 하는 요소 `Trimming` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataItem>합니다.  
+ 부모에 해당 하는 요소가 `Trimming` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataItem>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

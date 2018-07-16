@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287599"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36185228"
 ##  <a name="example1"></a> 예 1: 행으로 구분된 레코드에 대한 구문 분석  
  이 예에서는 각 데이터 열이 별도의 줄에 나타나는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 대상 테이블로 구문 분석하는 방법을 보여 줍니다.  
   
- 데이터 흐름의 변환으로 사용 하기 위해 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)및 [대 한 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환을](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
+ 데이터 흐름의 변환으로 사용 하 여 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)고 [는 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36185228"
   
 11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. 에 **입 / 출력** 의 페이지는 **스크립트 변환 편집기**출력 0을 선택 하 고 설정, 해당 `SynchronousInputID` None으로 합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
+12. 에 **입 / 출력** 페이지를 **스크립트 변환 편집기**출력 0을 선택 하 고 설정, 해당 `SynchronousInputID` None으로 합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
   
     -   FirstName  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36185228"
   
     -   StateProvince  
   
-13. 에 **스크립트** 의 페이지는 **스크립트 변환 편집기**, 클릭 **스크립트 편집** 에 표시 된 코드를 입력 하 고는 `ScriptMain` 예제의 클래스입니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
+13. 에 **스크립트** 페이지를 **스크립트 변환 편집기**, 클릭 **스크립트 편집** 에 나와 있는 코드를 입력 하 고는 `ScriptMain` 예제의 클래스입니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
   
 14. 데이트 흐름에 SQL Server 대상을 추가합니다. SQL Server 대상이 OLE DB 연결 관리자와 RowDelimitedData 테이블을 사용하도록 구성합니다. 이 대상에 스크립트 구성 요소의 출력을 연결합니다.  
   
@@ -198,7 +198,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  이 예제는 예시 목적으로만 제공됩니다. 이 예제를 두 번 이상 실행하면 대상 테이블에 중복 키 값이 삽입됩니다.  
   
- 데이터 흐름의 변환으로 사용 하기 위해 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)및 [대 한 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환을](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
+ 데이터 흐름의 변환으로 사용 하 여 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)고 [는 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   
@@ -258,7 +258,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. 에 **입 / 출력** 의 페이지는 **스크립트 변환 편집기**, 출력 0을 선택, parentrecords로 바꾼 다음 이름 바꾸기 및 설정의 `SynchronousInputID` None으로 합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
+12. 에 **입 / 출력** 페이지의 **스크립트 변환 편집기**출력 0, 이름을 parentrecords로 바꾼 다음을 설정 해당 `SynchronousInputID` None으로 합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
   
     -   부호 있는 4바이트 정수 [DT_I4] 형식의 ParentID(기본 키)  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

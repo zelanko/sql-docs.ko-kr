@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1cd5ef5a1e4a29b70d742e858a30ab9912cce6bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f3f7ee5edc3c9deb73e19f97421c7a0da7206082
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166074"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 응용 프로그램에 대한 URL 예약을 추가합니다.  
@@ -59,7 +59,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
 ## <a name="remarks"></a>Remarks  
- *UrlString* 에는 가상 디렉터리 이름이 포함되지 않습니다. [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 메서드는 해당 용도로 제공 됩니다.  
+ *UrlString* 에는 가상 디렉터리 이름이 포함되지 않습니다. 합니다 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 메서드는 해당 용도로 제공 됩니다.  
   
  현재 Windows 서비스 계정에 대한 URL 예약이 만들어집니다. Windows 서비스 계정을 변경하려면 모든 URL 예약을 수동으로 업데이트해야 합니다.  
   

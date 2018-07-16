@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1d05e9fc6b6c4f1e5e29a4bff9c163305d977202
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 526a5fef8883d34c281ee6c1cec51d29a6b9508c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331883"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>사용자 정의 변수의 속성 설정
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 사용자 정의 변수의 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  
@@ -38,25 +38,25 @@ ms.locfileid: "36183061"
   
  **속성** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
--   변수 값은 Value 또는 Expression 속성에서 설정할 수 있습니다. 기본적으로 EvaluateAsExpression 속성 설정 `False` 변수의 값이 Value 속성에서 설정 됩니다. 값을 설정 하는 식을 사용 하려면 먼저 설정 해야 EvaluateAsExpression `True`, 식 속성에 식을 입력 합니다. Value 속성은 이 식의 계산 결과로 자동으로 설정됩니다.  
+-   변수 값은 Value 또는 Expression 속성에서 설정할 수 있습니다. 기본적으로 EvaluateAsExpression 속성 설정 `False` 변수의 값은 Value 속성에서 설정 됩니다. 값을 설정 하는 식을 사용 하려면 먼저 설정 해야 EvaluateAsExpression `True`, Expression 속성에서 식을 제공 합니다. Value 속성은 이 식의 계산 결과로 자동으로 설정됩니다.  
   
--   ValueType 속성에는 Value 속성에 있는 값의 데이터 형식이 포함됩니다. Value가 식에서 설정된 경우 ValueType은 해당 식의 계산 결과와 호환되는 데이터 형식으로 자동으로 업데이트됩니다. 0에서 ValueType 속성 값을 포함 하는 경우 포함 하는 예를 들어 **Int32** getdate ()에 다음 식을 설정 하 고 현재 날짜 및 시간을 포함 하는 값 및 ValueType로 설정 되어 `DateTime`합니다.  
+-   ValueType 속성에는 Value 속성에 있는 값의 데이터 형식이 포함됩니다. Value가 식에서 설정된 경우 ValueType은 해당 식의 계산 결과와 호환되는 데이터 형식으로 자동으로 업데이트됩니다. 값 0 및 ValueType 속성을 포함 하는 경우 포함 하는 예를 들어 **Int32** getdate ()에 다음 식을 설정, 현재 날짜 및 시간을 포함 하는 값 및 ValueType로 설정 된 `DateTime`합니다.  
   
 -   변수에 대한 **속성** 창에서 **식 작성기** 대화 상자에 액세스할 수 있습니다. 이 도구를 사용하여 식 작성, 유효성 검사 및 계산을 수행할 수 있습니다. 자세한 내용은 [식 작성기](expressions/expression-builder.md) 및 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
  **변수** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
--   변수 값을 설정 하는 식을 사용 하려면 먼저 변수 데이터 형식이 식의 계산 결과와 호환 되는지 확인 한 후에 식을 제공는 `Expression` 의 열은 **변수** 창. EvaluateAsExpression 속성에는 **속성** 창이 자동으로로 설정 된 `True`합니다.  
+-   식에 변수 값을 설정 하는 데 사용 하려면 먼저 변수 데이터 형식이 식의 평가 결과와 호환 되는지 확인 하 고 다음의 식을 제공 합니다 `Expression` 의 열을 **변수** 창. EvaluateAsExpression 속성을 **속성** 창이 자동으로 설정 된 `True`합니다.  
   
 -   변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
   
 -   변수에 대한 **변수** 창에서 **식 작성기** 대화 상자에 액세스할 수 있습니다. 이 도구를 사용하여 식 작성, 유효성 검사 및 계산을 수행할 수 있습니다. 자세한 내용은 [식 작성기](expressions/expression-builder.md) 및 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
- 모두에 **변수** 및 **속성** 창, 변수에 식을 할당 하는 경우 및 `EvaluateAsExpression` 로 설정 된 `True`, 변수 데이터 형식을 변경할 수 없습니다.  
+ 둘 다에 **변수** 및 **속성** 창에서 변수에 식을 할당 하는 경우 및 `EvaluateAsExpression` 로 설정 된 `True`, 변수 데이터 형식을 변경할 수 없습니다.  
   
- **Namespace 및 이름 속성 설정**  
+ **Namespace 및 Name 속성을 설정합니다.**  
   
- 값은 `Name` 및 `Namespace` 속성 유니코드 표준 2.0 또는 밑줄 (_)에 정의 된 대로 영문자로 시작 해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
+ 값을 `Name` 및 `Namespace` 속성은 Unicode Standard 2.0 또는 밑줄 (_)에 정의 된 대로 영문자를 사용 하 여 시작 해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>변수 창을 사용하여 속성 설정  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36183061"
   
 4.  필요에 따라 **변수** 창에서 **표 옵션**을 클릭하고 **변수** 창에 표시할 열을 선택한 다음 변수 목록에 적용할 필터를 선택합니다.  
   
-5.  목록에서 변수를 선택한 다음에 값을 업데이트는 `Name`, **데이터 형식**, `Value`, `Namespace`, **변경 이벤트 발생**, **설명,** 및 `Expression` 열입니다.  
+5.  목록에서 변수를 선택 하 고 다음 값을 업데이트 합니다 `Name`, **데이터 형식**, `Value`를 `Namespace`를 **변경 이벤트 발생**, **설명,** 고 `Expression` 열입니다.  
   
 6.  목록에서 변수를 선택하고 **변수 이동** 을 클릭하여 범위를 변경합니다.  
   

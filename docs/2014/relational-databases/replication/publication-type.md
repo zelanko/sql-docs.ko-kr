@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.publicationtype.f1
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 81edb951b08fd044f0da3600d725b5587b784bd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 56df46fb1952eb558b484bf9e1ac3db3b6460cf3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315583"
 ---
 # <a name="publication-type"></a>게시 유형
   복제에서는 다음과 같은 게시 유형을 제공합니다.  

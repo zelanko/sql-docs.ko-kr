@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
 - sql12.ssis.ssms.isprojectvalidate.f1
@@ -16,13 +16,13 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b426080f2c76e8abc4bcaff26d2d5f0d53bfcc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b05f4658cd6741e1b90bd6300d477782b1173b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291129"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
   **유효성 검사** 대화 상자에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 또는 패키지의 일반적인 문제를 확인할 수 있습니다.  

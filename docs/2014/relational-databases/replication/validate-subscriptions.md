@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.subscriptions.f1
 helpviewer_keywords:
 - Validate Subscriptions dialog box
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c276d8de5f1848cc0395995ea45678cafa3cb9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8e4f642751e27d2c804238068ba97b6e4e70ec70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298023"
 ---
 # <a name="validate-subscriptions"></a>구독 유효성 검사
   **구독 유효성 검사** 대화 상자를 사용하여 각 구독에 대한 배포 에이전트가 다음에 실행될 때 트랜잭션 게시에 대한 구독의 유효성을 검사할지 지정할 수 있습니다. 유효성 검사 결과는 복제 모니터에 표시됩니다. 자세한 내용은 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)을 참조하세요.  

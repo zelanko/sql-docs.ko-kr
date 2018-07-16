@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b10f94e4cd692fa9b8d379000bb10171b5b6308f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 048542ac50d5be714bb56f044df7eaa524bf27e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309443"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>SOAP을 사용하여 Reporting Services 통합
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API는 사용자 지정 보고 솔루션 개발을 위한 다수의 웹 서비스 끝점을 제공합니다. 끝점은 현재 관리와 실행의 두 범주로 나누어집니다. 관리 기능은 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010> 끝점을 통해 표시됩니다. <xref:ReportService2005> 끝점은 기본 모드로 구성된 보고서 서버를 관리하는 데 사용되고, <xref:ReportService2006> 끝점은 SharePoint 통합 모드에 대해 구성된 보고서 서버를 관리하는 데 사용됩니다. <xref:ReportService2010>은 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버를 관리할 수 있습니다.  

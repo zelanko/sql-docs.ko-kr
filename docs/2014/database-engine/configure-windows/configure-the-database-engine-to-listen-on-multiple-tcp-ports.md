@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
 - TDS
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 766c72f478be2cce2688312ed3accd43e67998b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6d258dd150b879b9e993e0c550916b4ab42e272d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180400"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 끝점을 만듭니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "36185244"
   
 4.  **IPAll**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-5.  **TCP 포트** 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 수신하려는 포트를 쉼표로 구분하여 입력합니다. 예제에서는 기본 포트 1433이 나열 되 면 입력 `,1500` 여 상자 하므로 `1433,1500`, 클릭 하 고 **확인**합니다.  
+5.  **TCP 포트** 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 수신하려는 포트를 쉼표로 구분하여 입력합니다. 예제에서는 기본 포트 1433이 나열 된 경우 입력 `,1500` 상자에서 읽고 있으므로 `1433,1500`를 클릭 하 고 **확인**합니다.  
   
     > [!NOTE]  
     >  모든 IP 주소에 대한 포트를 설정하지 않으려면 원하는 주소에 대해서만 속성 상자에서 추가 포트로 구성하세요. 그런 다음 콘솔 창에서 **TCP/IP**를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **모두 수신합니다** 상자에서 **아니요**를 선택합니다.  

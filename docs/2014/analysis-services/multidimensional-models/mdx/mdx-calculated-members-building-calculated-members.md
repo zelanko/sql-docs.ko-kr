@@ -1,5 +1,5 @@
 ---
-title: MDX (MDX)에서 계산된 멤버 작성 | Microsoft Docs
+title: Calculated Members in MDX (MDX) 빌드 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], calculated members
 - calculated members [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [MDX], calculated members
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf71de626272200dbd04cf97618db90a61e8aa14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f01746c6bb0c73705451db8f236c75c1b8935bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312653"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>계산 멤버를 MDX로 작성(MDX)
   MDX에서 계산 멤버는 값을 반환하기 위해 MDX 식을 계산하여 확인되는 멤버입니다. 이러한 정의에는 놀랄 만한 개념이 포함되어 있습니다. MDX 쿼리에서 계산 멤버를 구성하고 사용할 수 있으면 다차원 데이터에 대한 상당한 조작 기능을 활용할 수 있습니다.  

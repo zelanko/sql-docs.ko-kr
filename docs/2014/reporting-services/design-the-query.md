@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270309"
 ---
 # <a name="design-the-query"></a>쿼리 디자인
   보고서 마법사의 쿼리 디자인 페이지를 사용하여 쿼리를 수동으로 입력하거나 쿼리 작성기에서 대화형으로 쿼리를 작성하거나 다른 보고서에서 쿼리를 가져오는 방법을 통해 쿼리를 만들 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36184654"
  쿼리 디자이너에 대한 자세한 내용은 [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md)를 참조하십시오.  
   
 ## <a name="example"></a>예제  
- 데이터 원본 유형에 대해 **Microsoft SQL Server**, 다음 쿼리는 검색에서 성 목록을 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스 `Person` 테이블입니다.  
+ 데이터 원본 유형에 대해 **Microsoft SQL Server**, 다음 쿼리에서 성 목록을 검색 합니다 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스 `Person` 테이블입니다.  
   
 ```  
 SELECT LastName FROM Person.Person;  

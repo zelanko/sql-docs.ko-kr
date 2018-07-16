@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4faae5fb17bf2be67fa33e590a65fce222f7cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e729d8963149809ba53a423a19bf9c2c7eac6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293250"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>계층 만들기 및 관리(SSAS 테이블 형식)
   모델 디자이너(다이어그램 뷰)에서 계층을 만들고 관리할 수 있습니다. 모델 디자이너(다이어그램 뷰)를 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
@@ -98,8 +98,8 @@ ms.locfileid: "36187063"
 -   또는 부모 계층 수준을 클릭하고 Delete 키를 누릅니다. 이 경우 모든 자식 수준도 제거됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 디자이너 &#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
- [계층 &#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)   
- [측정값 &#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)  
+ [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [계층 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)   
+ [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)  
   
   
