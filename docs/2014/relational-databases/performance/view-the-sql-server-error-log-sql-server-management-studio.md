@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
 - displaying logs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef6806da09677d630737f3eb118483ee05eab77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a6504a892ee3aa4009c2466a11d6958d1e898498
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298199"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server 오류 로그 보기(SQL Server Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에는 사용자 정의한 이벤트와 특정 시스템 이벤트가 들어 있습니다. 이 오류 로그를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 관련된 문제를 해결할 수 있습니다.  

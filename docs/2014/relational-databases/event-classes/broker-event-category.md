@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fbcb1207da570e960ba7eb2f96a2d698b7d69d3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: da45f076ba427f2a0c69b7cf1a335049ce885e24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170854"
 ---
 # <a name="broker-event-category"></a>Broker 이벤트 범주
   **Broker** 이벤트 범주에는 일반적인 Service Broker 이벤트가 포함됩니다.  

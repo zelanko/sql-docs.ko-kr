@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 396685b9b6a4ffbfa46db64a16ee3e401b0b9042
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188820"
 ---
 # <a name="querying-a-tabular-model"></a>테이블 형식 모델 쿼리
-  개발자는 테이블 형식 데이터베이스에서 데이터를 검색할 의미 테이블 형식 모델 쿼리 이 목표를 달성 하려면 두 가지 옵션이 있습니다: dax에서 테이블 쿼리를 사용 하 여 또는 MDX 및 검색 데이터를 큐브에서 들어온 사용 합니다. 그러나 테이블 형식 모델의 기본 모드에 따라 DAX 테이블 쿼리만 사용하도록 제한될 수 있습니다. DirectQuery 모드를 사용하려면 DAX 테이블 쿼리를 사용해야 합니다.  
+  개발자는 테이블 형식 데이터베이스에서 데이터를 검색할 의미 테이블 형식 모델 쿼리 이 목표를 위해 두 가지 옵션이 있습니다: dax에서 테이블 쿼리를 사용 하거나 MDX 및 검색 데이터를 큐브에서 튀어 사용 합니다. 그러나 테이블 형식 모델의 기본 모드에 따라 DAX 테이블 쿼리만 사용하도록 제한될 수 있습니다. DirectQuery 모드를 사용하려면 DAX 테이블 쿼리를 사용해야 합니다.  
   
 ## <a name="querying-with-adomdnet"></a>ADOMD.Net을 사용하여 쿼리  
  ADOMD.Net을 사용하여 테이블 형식 모델을 쿼리하는 작업은 단순하고 유연합니다. DAX의 테이블 형식 쿼리 식 또는 MDX 문을 서버로 보내 결과를 가져올 수 있습니다.  

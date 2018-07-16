@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316893"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36182306"
  환경에 대한 자세한 내용은 [서버 환경 만들기 및 매핑](../../2014/integration-services/create-and-map-a-server-environment.md)을 참조하세요.  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서와 마찬가지로 현재 릴리스에서도 SQL Server 인스턴스에 패키지를 배포하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 실행 및 관리할 수 있습니다. 패키지 배포 모델을 사용합니다. 자세한 내용은 참조 [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)합니다.  
+>  이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서와 마찬가지로 현재 릴리스에서도 SQL Server 인스턴스에 패키지를 배포하고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 실행 및 관리할 수 있습니다. 패키지 배포 모델을 사용합니다. 자세한 내용은 [패키지 배포 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)합니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 다음 태스크를 완료합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36182306"
   
      -또는-  
   
-     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 확장 하 고는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** 개체 탐색기의 노드를 배포 하려는 프로젝트에 대 한 프로젝트 폴더를 찾습니다. **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 클릭합니다.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], 확장 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** 개체 탐색기에서 노드를 배포 하려는 프로젝트에 대 한 프로젝트 폴더를 찾습니다. **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 클릭합니다.  
   
      -또는-  
   

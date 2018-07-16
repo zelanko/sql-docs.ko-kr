@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262519"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36187377"
   
     2.  **규칙 유형** 대화 상자에서 **프로그램**을 선택하고 **다음**을 클릭합니다.  
   
-    3.  **프로그램** 대화 상자에서 **다음 프로그램 경로:** 를 선택하고 이 인스턴스에 대한 sqlservr.exe의 전체 경로를 입력합니다. 기본적으로 sqlservr.exe는 C:\Program Files\Microsoft SQL Server\MSSQL12에 설치 됩니다. *InstanceName*\MSSQL\Binn 여기서 *InstanceName* 은 기본 인스턴스의 경우 MSSQLSERVER이 고 명명 된 인스턴스 모두에 대 한 인스턴스 이름입니다.  
+    3.  **프로그램** 대화 상자에서 **다음 프로그램 경로:** 를 선택하고 이 인스턴스에 대한 sqlservr.exe의 전체 경로를 입력합니다. 기본적으로 sqlservr.exe는 C:\Program Files\Microsoft SQL Server\MSSQL12에 설치 됩니다. *InstanceName*\MSSQL\Binn 위치 *InstanceName* 은 기본 인스턴스의 경우 MSSQLSERVER이 고 명명 된 인스턴스에 대 한 인스턴스 이름입니다.  
   
     4.  **동작** 대화 상자에서 **연결 허용**을 선택하고 **다음**을 클릭합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36187377"
   
 * [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SP2(서비스 팩 2) 이상의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에 연결해야 합니다. 쿼리 편집기 창이 단일 사용자 모드에 있는 인스턴스에 연결되어 있는 경우에는 디버거를 실행할 수 없습니다.
 
-* 서버는 RPC를 통해 클라이언트와 다시 통신해야 합니다. SQL Server 서비스가 실행 되 고 있어야 하는 계정에 권한이 클라이언트에 인증 합니다.  
+* 서버는 RPC를 통해 클라이언트와 다시 통신해야 합니다. SQL Server 서비스가 실행 되 고 있어야 계정 권한을 클라이언트에 인증 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Transact-SQL 디버거](transact-sql-debugger.md)   

@@ -1,5 +1,5 @@
 ---
-title: 설치 또는 PowerPivot에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2013) | Microsoft Docs
+title: 설치 하거나 PowerPivot에 대 한 SharePoint 추가 기능 제거 (SharePoint 2013) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 caps.latest.revision: 22
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a7b7d33522ac7cfcd34ef464751e3547b52294cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f44944ff9255fc8010b0751b6389f3f1febb3bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275519"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>SharePoint용 PowerPivot 추가 기능 설치 또는 제거(SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 데이터 액세스를 제공하는 응용 프로그램 서버 구성 요소 및 백 엔드 서비스의 컬렉션입니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
   
 -   이 추가 기능은 SharePoint 2010 배포에 필수적 요소가 아닙니다.  
   
--   이 추가 기능은 SharePoint 2013 및 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 포함하는 단일 서버 배포에 필수적 요소가 아닙니다. 이 추가 기능에서 설치하는 구성 요소는 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 설치하면 포함됩니다. 배포 다이어그램의 예에서는 추가 기능으로, 참조 [SharePoint의 SQL Server BI 기능에 대 한 배포 토폴로지](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)합니다.  
+-   이 추가 기능은 SharePoint 2013 및 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 포함하는 단일 서버 배포에 필수적 요소가 아닙니다. 이 추가 기능에서 설치하는 구성 요소는 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 설치하면 포함됩니다. 예제 배포에서 추가 기능을 사용 하 여 다이어그램을 참조 하세요 [SharePoint의 SQL Server BI 기능에 대 한 배포 토폴로지](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)합니다.  
   
- **참고:** 이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 솔루션 파일 및 SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구 설치에 대해 설명합니다. 설치 후 구성 도구와 추가 기능에 자세한 내용은 다음 항목을 참조 [PowerPivot 구성 및 솔루션 배포 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)합니다.  
+ **참고:** 이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 솔루션 파일 및 SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구 설치에 대해 설명합니다. 설치 후 구성 도구 및 추가 기능에 자세한 내용은 다음 항목을 참조 [PowerPivot 구성 및 솔루션 배포 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)합니다.  
   
  **spPowerPivot.msi**를 다운로드하는 방법은 [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)를 참조하세요.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36186198"
   
 -   [SharePoint 용 PowerPivot을 설치 하려면](#bkmk_install)  
   
--   [SharePoint 2013 구성 도구에는 PowerPivot과 SharePoint 솔루션 파일 배포](#bkmk_deploy_solution)  
+-   [SharePoint 2013 구성 도구에 대 한 PowerPivot 사용 하 여 SharePoint 솔루션 파일 배포](#bkmk_deploy_solution)  
   
 -   [추가 기능 제거 또는 복구](#bkmk_remove_addin)  
   
@@ -84,14 +84,14 @@ ms.locfileid: "36186198"
   
 -   SharePoint 제품 및 기술 요구 사항에 따라**spPowerPivot.msi** 는 64비트 전용입니다.  
   
--   A [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] PowerPivot 모드의 서버입니다. Excel Services에서는 SQL Server Analysis Services 인스턴스를 PowerPivot 서버로 사용합니다. Analysis Services는 로컬 컴퓨터 또는 원격 컴퓨터에서 실행할 수 있습니다.  
+-   [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] PowerPivot 모드의 서버. Excel Services에서는 SQL Server Analysis Services 인스턴스를 PowerPivot 서버로 사용합니다. Analysis Services는 로컬 컴퓨터 또는 원격 컴퓨터에서 실행할 수 있습니다.  
   
 -   **사용 권한:** [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]을 설치하려면 현재 사용자가 컴퓨터의 관리자이며 SharePoint 팜 관리자 그룹의 멤버여야 합니다.  
   
--   대 한 자세한 내용은 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 요구 사항 및 필수 조건으로 이동 [하드웨어 및 소프트웨어 요구 사항 SharePoint 모드의 Analysis Services 서버에 대 한 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)합니다.  
+-   에 대 한 자세한 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 로 이동 하는 요구 사항 및 필수 조건 [하드웨어 및 소프트웨어 요구 사항 SharePoint 모드의 Analysis Services 서버에 대 한 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)합니다.  
   
 ##  <a name="bkmk_install"></a> SharePoint 용 PowerPivot을 설치 하려면  
- **spPowerpivot.msi** 설치 관리자 패키지는 그래픽 사용자 인터페이스 및 명령줄 설치 모드를 둘 다 지원합니다. 두 설치 방법 모두 관리자 권한으로 .msi를 실행해야 합니다. 설치 후 구성 도구와 추가 기능에 자세한 내용은 다음 항목을 참조 [PowerPivot 구성 및 솔루션 배포 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)합니다.  
+ **spPowerpivot.msi** 설치 관리자 패키지는 그래픽 사용자 인터페이스 및 명령줄 설치 모드를 둘 다 지원합니다. 두 설치 방법 모두 관리자 권한으로 .msi를 실행해야 합니다. 설치 후 구성 도구 및 추가 기능에 자세한 내용은 다음 항목을 참조 [PowerPivot 구성 및 솔루션 배포 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)합니다.  
   
 ### <a name="user-interface-installation"></a>사용자 인터페이스 설치  
  그래픽 사용자 인터페이스를 사용하여 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 을 설치하려면 다음 단계를 완료하세요.  
@@ -152,7 +152,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
 |SQL_AMO|AMO 공급자|  
 |SQLAS_SP_Common|SharePoint 2013용 Analysis Services 일반 구성 요소|  
   
-##  <a name="bkmk_deploy_solution"></a> SharePoint 2013 구성 도구에는 PowerPivot과 SharePoint 솔루션 파일 배포  
+##  <a name="bkmk_deploy_solution"></a> SharePoint 2013 구성 도구에 대 한 PowerPivot 사용 하 여 SharePoint 솔루션 파일 배포  
  spPowerPivot.msi에서 하드 드라이브에 복사하는 파일 중 3개는 SharePoint 솔루션 파일입니다. 솔루션 파일의 범위는 웹 응용 프로그램 수준이지만 다른 파일의 범위는 팜 수준입니다. 파일은 다음과 같습니다.  
   
 -   `PowerPivotFarmSolution.wsp`  
@@ -183,7 +183,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
 4.  **SharePoint 2013용 PowerPivot 구성**을 클릭합니다.  
   
- 구성 도구에 대 한 자세한 내용은 참조 하십시오. [PowerPivot 구성 도구](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)합니다.  
+ 구성 도구에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 도구](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)합니다.  
   
 ##  <a name="bkmk_remove_addin"></a> 추가 기능 제거 또는 복구  
   

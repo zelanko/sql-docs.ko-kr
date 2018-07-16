@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSource element
 ms.assetid: 113fba1c-2679-4d06-9339-90a4a76f9b31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c87b21c6a9b291728704d3e624c386d59b820ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ddee14c487f9e28d3bbeb83c419bcda548d5a7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281929"
 ---
 # <a name="datasource-element-assl"></a>DataSource 요소(ASSL)
-  데이터 원본을 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](database-element-assl.md) 요소입니다.  
+  데이터 원본에 정의 된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [데이터베이스](database-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36092264"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|[RelationalDataSource](../data-type/datasource-data-type-assl.md), [OlapDataSource](../data-type/olapdatasource-data-type-assl.md), [PushedDataSource](../data-type/pusheddatasource-data-type-assl.md)|  
+|데이터 형식 및 길이|[RelationalDataSource](../data-type/datasource-data-type-assl.md)하십시오 [OlapDataSource](../data-type/olapdatasource-data-type-assl.md), [PushedDataSource](../data-type/pusheddatasource-data-type-assl.md)|  
 |기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   

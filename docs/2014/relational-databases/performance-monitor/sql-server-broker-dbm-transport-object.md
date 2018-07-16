@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac5a560f328de972dc40675d83e93c69447e6938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253925"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Broker 및 DBM Transport 개체
   **Broker / DBM Transport** 성능 개체에는 Service Broker 및 데이터베이스 미러링에 대한 네트워킹 정보를 보고하는 성능 카운터가 들어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36185592"
 |**Message Fragment P8 Sends/sec**|이 카운터는 초당 네트워크로 보낸 우선 순위가 8인 메시지 조각의 수를 보고합니다.|  
 |**Message Fragment P9 Sends/sec**|이 카운터는 초당 네트워크로 보낸 우선 순위가 9인 메시지 조각의 수를 보고합니다.|  
 |**Message Fragment P10 Sends/sec**|이 카운터는 초당 네트워크로 보낸 우선 순위가 10인 메시지 조각의 수를 보고합니다.|  
-|**메시지 조각 전송 크기 Avg**|이 카운터는 네트워크로 보낸 메시지 조각의 평균 크기를 보고합니다.|  
+|**메시지 조각 송신 크기 Avg**|이 카운터는 네트워크로 보낸 메시지 조각의 평균 크기를 보고합니다.|  
 |**Message Fragment Sends/sec**|이 카운터는 초당 네트워크로 보낸 모든 우선 순위의 메시지 조각의 수를 보고합니다.|  
 |**메시지 조각 수신 수/초**|이 카운터는 초당 네트워크를 통해 받은 메시지 조각의 수를 보고합니다.|  
 |**Msg Fragment Recv Size Avg**|이 카운터는 네트워크를 통해 받은 메시지 조각의 평균 크기를 보고합니다.|  

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268635"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 원본에서 사용할 수 있고 데이터 처리 확장 프로그램에서 지원되는 속성입니다. 확장 속성은 보고서 데이터 집합에 대한 필드 컬렉션의 일부로 보고서 데이터 창에 나타나지 않습니다. 기본 제공 `Fields` 컬렉션을 사용하여 이름으로 확장 필드 속성 값을 지정하는 식을 작성하면 보고서에 확장 필드 속성 값을 포함할 수 있습니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 원본에서 사용할 수 있고 데이터 처리 확장 프로그램에서 지원되는 속성입니다. 확장 속성은 보고서 데이터 집합에 대한 필드 컬렉션의 일부로 보고서 데이터 창에 나타나지 않습니다. 기본 제공 `Fields` 컬렉션을 사용하여 이름으로 확장 필드 속성 값을 지정하는 식을 작성하면 보고서에 확장 필드 속성 값을 포함할 수 있습니다.  
   
- 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의 된 속성은 특정 필드 속성 이름에 매핑되고 기본 제공을 통해 액세스할 수 있는 여러 데이터 원본에 공통 된 속성이 `Fields` 이름 기준으로 컬렉션입니다. 사용자 지정 속성은 각 데이터 공급자별로 정의되며 확장 속성 이름을 문자열로 사용하는 구문에 의해서만 기본 제공 `Fields` 컬렉션을 통해 액세스될 수 있습니다.  
+ 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의 된 속성은 특정 필드 속성 이름에 매핑되고 기본 제공을 통해 액세스할 수 있는 여러 데이터 원본에 공통 속성 `Fields` 이름 사용 하 여 컬렉션입니다. 사용자 지정 속성은 각 데이터 공급자별로 정의되며 확장 속성 이름을 문자열로 사용하는 구문에 의해서만 기본 제공 `Fields` 컬렉션을 통해 액세스될 수 있습니다.  
   
  그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에서 사용할 수 있는 확장 필드에 대한 자세한 내용은 [속성 값 만들기 및 사용&#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md)을 참조하세요.  
   
 ## <a name="working-with-field-properties-in-a-report"></a>보고서에서 필드 속성 사용  
- 확장 필드 속성에는 미리 정의된 속성과 데이터 공급자 관련 속성이 포함됩니다. 필드 속성은 데이터 집합에 대해 작성된 쿼리에 포함되어 있어도 **보고서 데이터** 창의 필드 목록에 나타나지 않습니다. 따라서 필드 속성을 보고서 디자인 화면으로 끌 수 없습니다. 보고서에 필드를 끌어다을 다음 변경 해야 대신는 `Value` 필드를 사용 하려는 속성의 속성입니다. 예를 들어 큐브의 셀 데이터 형식이 이미 지정되어 있는 경우 `=Fields!FieldName.FormattedValue`식을 통해 FormattedValue 필드 속성을 사용할 수 있습니다.  
+ 확장 필드 속성에는 미리 정의된 속성과 데이터 공급자 관련 속성이 포함됩니다. 필드 속성은 데이터 집합에 대해 작성된 쿼리에 포함되어 있어도 **보고서 데이터** 창의 필드 목록에 나타나지 않습니다. 따라서 필드 속성을 보고서 디자인 화면으로 끌 수 없습니다. 보고서에 필드를 끌어다 변경 하며는 아니라는 `Value` 사용 하려는 속성 필드의 속성입니다. 예를 들어 큐브의 셀 데이터 형식이 이미 지정되어 있는 경우 `=Fields!FieldName.FormattedValue`식을 통해 FormattedValue 필드 속성을 사용할 수 있습니다.  
   
  미리 정의되지 않은 확장 속성을 참조하려면 식에 다음 구문을 사용하십시오.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36186244"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|필드의 데이터 값을 지정합니다.|  
 |`IsMissing`|`Boolean`|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
-|`UniqueName`|`String`|수준의 정규화된 이름을 반환합니다. 예를 들어는 `UniqueName` 직원에 대 한 값 *[Employee]. [ Employee Department]입니다. [Department]. [Sales] &. & [North American Sales Manager]. [272] &* 합니다.|  
+|`UniqueName`|`String`|수준의 정규화된 이름을 반환합니다. 예를 들어 합니다 `UniqueName` 직원에 대 한 값 *[Employee]. [ Employee Department]입니다. [Department]..& [Sales]. & [North American Sales Manager]. [272] &* 합니다.|  
 |`BackgroundColor`|`String`|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
 |`Color`|`String`|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
 |`FontFamily`|`String`|항목에 대해 데이터베이스에 정의된 글꼴 이름을 반환합니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "36186244"
 |`FontWeight`|`String`|항목에 대해 데이터베이스에 정의된 글꼴 두께를 반환합니다.|  
 |`FontStyle`|`String`|항목에 대해 데이터베이스에 정의된 글꼴 스타일을 반환합니다.|  
 |`TextDecoration`|`String`|항목에 대해 데이터베이스에 정의된 특수 텍스트 서식을 반환합니다.|  
-|`FormattedValue`|`String`|측정값 또는 주요 숫자 값의 형식화된 값을 반환합니다. 예를 들어는 `FormattedValue` 속성에 대 한 **Sales Amount Quota** $1,124,400.00 같은 통화 형식을 반환 합니다.|  
+|`FormattedValue`|`String`|측정값 또는 주요 숫자 값의 형식화된 값을 반환합니다. 예를 들어 합니다 `FormattedValue` 속성에 대 한 **Sales Amount Quota** $1,124,400.00과 같은 통화 형식을 반환 합니다.|  
 |`Key`|`Object`|수준의 키를 반환합니다.|  
 |`LevelNumber`|`Integer`|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
 |`ParentUniqueName`|`String`|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
@@ -130,7 +130,7 @@ CELL PROPERTIES
 |March|2,749|  
 |April|2,739|  
   
- 속성은 MDX SELECT 문의 일부이지만 결과 집합 열에 나타나지 않습니다. 그러나 확장 속성 기능을 사용하여 이 데이터를 보고서에 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 MDX 쿼리 결과 창에서 셀을 두 번 클릭하면 큐브에 설정된 경우 셀 속성 값을 볼 수 있습니다. 1,379가 포함된 첫 번째 Order Count 셀을 두 번 클릭하면 다음 셀 속성이 있는 팝업 창이 표시됩니다.  
+ 속성은 MDX SELECT 문의 일부이지만 결과 집합 열에 나타나지 않습니다. 그러나 확장 속성 기능을 사용하여 이 데이터를 보고서에 사용할 수 있습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 MDX 쿼리 결과 창에서 셀을 두 번 클릭하면 큐브에 설정된 경우 셀 속성 값을 볼 수 있습니다. 1,379가 포함된 첫 번째 Order Count 셀을 두 번 클릭하면 다음 셀 속성이 있는 팝업 창이 표시됩니다.  
   
 |속성|값|  
 |--------------|-----------|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- 이 쿼리를 사용하여 보고서 데이터 집합을 만들고 테이블에 바인딩하면 필드의 기본 VALUE 속성(예: `=Fields!Month_of_Year!Value`)을 볼 수 있습니다. 이 식을 테이블에 대 한 정렬 식으로 설정 하면 결과 값 필드를 사용 하기 때문에 월을 기준으로 사전순으로 테이블 정렬 됩니다는 `String` 데이터 형식입니다. 월이 연도에서 발생하는 순서대로, 즉 1월이 처음이고 12월이 마지막이 되도록 테이블을 정렬하려면 다음 식을 사용합니다.  
+ 이 쿼리를 사용하여 보고서 데이터 집합을 만들고 테이블에 바인딩하면 필드의 기본 VALUE 속성(예: `=Fields!Month_of_Year!Value`)을 볼 수 있습니다. 이 식을 테이블에 대 한 정렬 식으로 설정한 경우 결과 값 필드를 사용 하기 때문에 월을 기준으로 사전순으로 테이블 정렬 됩니다는 `String` 데이터 형식입니다. 월이 연도에서 발생하는 순서대로, 즉 1월이 처음이고 12월이 마지막이 되도록 테이블을 정렬하려면 다음 식을 사용합니다.  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  

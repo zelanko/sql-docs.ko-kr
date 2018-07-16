@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288389"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>처리 옵션 속성 페이지(보고서 관리자)
   처리 옵션 속성 페이지를 사용하여 현재 선택한 보고서의 보고서 실행 속성을 설정할 수 있습니다. 이 옵션은 보고서의 데이터 처리가 수행되는 시간을 결정합니다. 이 옵션을 통해 사용량이 적은 시간에 보고서 데이터를 검색하도록 설정할 수 있습니다. 자주 액세스할 보고서가 있으면 이 보고서의 복사본을 임시로 캐시하여 여러 사용자가 같은 보고서를 짧은 시간 간격으로 동시에 액세스할 때 대기 시간을 없앨 수 있습니다.  
   
 > [!NOTE]  
->  보고서 기록, 실행 스냅숏 및 캐싱 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  보고서 기록, 실행 스냅숏 및 캐싱 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -41,12 +41,12 @@ ms.locfileid: "36093014"
 4.  **처리 옵션** 탭을 선택합니다.  
   
 ## <a name="options"></a>변수  
- **항상 가장 최근 데이터로이 보고서 실행**  
+ **항상 최신 데이터로이 보고서 실행**  
  사용자가 보고서를 선택할 때 보고서 데이터를 검색하려면 이 옵션을 사용합니다. 캐시된 보고서 복사본을 사용할 수 있으면 이 복사본이 사용자에게 반환됩니다. 그렇지 않으면 사용자가 보고서를 선택할 때 데이터 검색 및 렌더링이 수행됩니다.  
   
  항상 최신 데이터가 포함된 보고서를 실행하려면 **이 보고서의 임시 복사본을 캐시하지 않음** 을 선택합니다. 사용자가 보고서를 열 때마다 보고서에 사용된 데이터를 포함하는 데이터 원본에 대한 쿼리가 트리거됩니다.  
   
- 선택 **보고서의 임시 복사본을 캐시**를 사용자가 보고서를 처음 열 때 보고서의 임시 복사본을 캐시에 저장 합니다. 캐싱 기간 내에 보고서를 실행하는 이후 사용자는 보고서의 캐시된 복사본을 받게 됩니다. 캐시를 사용하면 보고서를 다시 처리하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다.  
+ 선택 **보고서의 임시 복사본을 캐시**사용자 보고서를 처음 열면 보고서의 임시 복사본을 캐시에 배치 합니다. 캐싱 기간 내에 보고서를 실행하는 이후 사용자는 보고서의 캐시된 복사본을 받게 됩니다. 캐시를 사용하면 보고서를 다시 처리하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다.  
   
  캐시된 보고서는 일정 시간 후 만료되어야 합니다. 보고서의 캐시된 복사본을 저장할 시간(분)을 지정합니다. 임시 복사본은 만료된 직후부터 더 이상 캐시에서 반환되지 않습니다. 이후에 사용자가 보고서를 열면 보고서 서버가 보고서를 다시 처리하고 새로 고친 보고서의 복사본을 캐시에 저장합니다.  
   

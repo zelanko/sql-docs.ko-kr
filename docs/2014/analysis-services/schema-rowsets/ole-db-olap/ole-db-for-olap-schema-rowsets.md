@@ -1,5 +1,5 @@
 ---
-title: OLAP 스키마 행 집합 용 OLE DB | Microsoft Docs
+title: OLAP 스키마 행 집합에 대 한 OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306483"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLAP용 OLE DB 스키마 행 집합
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 다음과 같은 OLAP용 OLE DB 스키마 행 집합을 지원합니다.  
   
 > [!NOTE]  
->  에 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하려면 사용는 `DISCOVER_ENUMERATIONS` 포함 된 행 집합의 [Discover](../../xmla/xml-elements-methods-discover.md) 메서드.  
+>  특정 데이터 원본 공급자는 행 집합을 지원 하는지 여부를 확인 하려면 사용 합니다 `DISCOVER_ENUMERATIONS` 포함 된 행 집합을 [검색](../../xmla/xml-elements-methods-discover.md) 메서드.  
   
- 또한 이러한 행 집합에 대 한 자세한 내용은 "OLAP Schema Rowsets" 항목을 검색 하 여이에서 MSDN 라이브러리에서 찾을 수 있습니다 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=15426)합니다.  
+ 또한 이러한 행 집합에 대 한 자세한 내용은 "OLAP Schema Rowsets" 항목을 검색 하 여이 MSDN 라이브러리에서 찾을 수 있습니다 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=15426)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

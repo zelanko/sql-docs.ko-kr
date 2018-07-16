@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12c54f8a61d75afd7689f19b2936bb6aefa3b4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324913"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>MeasureGroupBinding 데이터 형식(ASSL)
   에 대 한 바인딩을 나타내는 파생된 데이터 형식을 정의 [MeasureGroup](../objects/group-element-assl.md) 요소입니다.  
@@ -63,17 +63,17 @@ ms.locfileid: "36186403"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[CubeID](../properties/id-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md), [필터](../properties/filter-element-binding-assl.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [지 속성](../properties/persistence-element-assl.md), [RefreshInterval ](../properties/refreshinterval-element-assl.md), [RefreshPolicy](../properties/refreshpolicy-element-assl.md)|  
+|자식 요소|[CubeID](../properties/id-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md)합니다 [필터](../properties/filter-element-binding-assl.md)를 [MeasureGroupID](../properties/measuregroupid-element-assl.md)를 [지 속성](../properties/persistence-element-assl.md), [RefreshInterval ](../properties/refreshinterval-element-assl.md), [RefreshPolicy](../properties/refreshpolicy-element-assl.md)|  
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `Binding` Analysis Services Scripting Language (ASSL) 개체 테이블은 바인딩 형식 및의 상속 계층 구조를 포함 하 여 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL &#41;](binding-data-type-assl.md).  
+ 에 대 한 자세한 내용은 합니다 `Binding` Analysis Services Scripting Language (ASSL) 개체 테이블 바인딩 형식 및 상속 계층을 포함 하 여 형식이 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL &#41;](binding-data-type-assl.md).  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.MeasureGroupBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

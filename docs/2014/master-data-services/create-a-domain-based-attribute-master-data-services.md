@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5323072d5c58fcbe37becd00daacaac6ed3fb161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fd6e0a992dd4f23b6da24ed70cb884025c969537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320453"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>도메인 기반 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 도메인 기반 특성을 만들어서 엔터티의 멤버로 특성 값을 채웁니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36082508"
   
     -   컬렉션에 대한 특성일 경우 **컬렉션 특성** 창에서 **컬렉션 특성 추가**를 클릭합니다.  
   
-7.  에 **특성 추가** 선택 페이지는 **도메인 기반** 옵션입니다.  
+7.  에 **특성 추가** 페이지를 선택 합니다 **도메인 기반** 옵션입니다.  
   
 8.  **이름** 상자에 특성의 이름을 입력합니다. 이름이 특성 값의 원본으로 사용할 엔터티와 동일할 필요는 없습니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36082508"
   
 ## <a name="see-also"></a>관련 항목  
  [도메인 기반 특성 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [파생된 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [파생된 계층을 만들려면 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [특성 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
   

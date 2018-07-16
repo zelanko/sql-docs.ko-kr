@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3329eb6e7f003f3e43407aa6948b844c3bfda27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e8e8622ec7b278b5e00f43d9a9c0fe1fc26efe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291369"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>테이블 형식 모델 파티션 처리(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 이 항목의 태스크에서는 **의** 파티션 처리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 model 데이터베이스에서 파티션을 처리하는 방법을 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36185480"
 4.  **처리** 확인란 열에서 선택된 모드로 처리할 파티션을 선택한 후 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 파티션 &#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
- [테이블 형식 모델 파티션 만들기 및 관리 &#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
+ [테이블 형식 모델 파티션 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

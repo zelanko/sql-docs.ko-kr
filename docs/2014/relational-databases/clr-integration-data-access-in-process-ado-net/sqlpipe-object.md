@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b67acce373f412ef4adca2c9957f4f5046f35a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185197"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350855"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 결과나 출력 매개 변수를 호출 클라이언트로 보내는 저장 프로시저(또는 확장 저장 프로시저)를 작성하는 것이 일반적이었습니다.  

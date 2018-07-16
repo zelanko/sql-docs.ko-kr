@@ -1,5 +1,5 @@
 ---
-title: 언어 요소 (ASSL) | Microsoft Docs
+title: Language 요소 (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09a51320df0cf5d4246fbc14307f488c2d754e3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 738403bedd7a9da120e5ba706eabe4848f7e1e2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293245"
 ---
 # <a name="language-element-assl"></a>Language 요소(ASSL)
   부모 요소의 언어 식별자를 포함합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36185498"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md), [차원](../objects/dimension-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [번역](../objects/translation-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md)를 [차원](../objects/dimension-element-assl.md)를 [MiningModel](../objects/miningmodel-element-assl.md)를 [MiningStructure](../objects/miningstructure-element-assl.md), [번역](../objects/translation-element-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

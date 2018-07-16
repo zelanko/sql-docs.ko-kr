@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.aboutsqlserverworkbench.f1
 helpviewer_keywords:
 - SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6bd51e6102e6e65687c0fd55640fd2a2839a6fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 13882e276ab5c963da665cbcf1f1a70148a0bd4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317453"
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
   이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  

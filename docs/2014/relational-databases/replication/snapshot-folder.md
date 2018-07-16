@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.specifysnapshotfolder.f1
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2bf34ce924296907140beee3c86fc7803c3a06b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 15d9b418efba107afad627159450ce45e08da94e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296553"
 ---
 # <a name="snapshot-folder"></a>스냅숏 폴더
   **스냅숏 폴더** 페이지는 배포 구성 마법사 및 새 게시 마법사에 나타납니다. 지정하는 스냅숏 폴더 위치는 이 마법사에서 설정하는 모든 게시자의 기본값으로 사용됩니다. 기본 스냅숏 폴더는 나중에 **배포자 속성** 대화 상자를 사용하여 설정하는 게시자에는 적용되지 않습니다. 배포 구성 마법사 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 임의의 게시자에 대해 이 기본값을 무시할 수 있습니다.  

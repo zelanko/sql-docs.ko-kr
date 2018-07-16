@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ccf39ac0ed4a45f7163d5be6b45ad7201bce47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8d4695edc8d87c9462ea0cc94aa538e0108fd2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284629"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
   보고서 작성기에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 집합의 명명된 데이터 집합입니다. 기본적으로 그룹은 보고서 데이터 집합의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 집합의 서로 다른 뷰를 지정합니다.  
   
  그룹의 개념을 시각적으로 이해하려면 테이블릭스 데이터 영역의 미리 보기를 보여 주는 다음 그림을 참조하십시오. 이 그림에서 행 그룹은 제품 종류별로 데이터 집합을 범주화하고 열 그룹은 지리적 지역과 연도별로 데이터 집합을 범주화합니다.  
   
- ![테이블 릭 스 데이터 영역의 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역의 영역")  
+ ![테이블 릭 스 데이터 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역")  
   
  다음 섹션에서는 그룹의 다양한 측면에 대해 설명합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36092342"
      기본적으로 세부 정보 그룹은 쿼리 디자이너에서 데이터 집합 쿼리를 실행할 때 표시할 데이터를 지정합니다. 예를 들어 판매 주문 테이블의 모든 열을 검색하는 쿼리를 사용하는 경우 이 세부 정보 그룹의 데이터는 테이블의 모든 열에 대한 각 행의 모든 값을 포함합니다. 이 세부 정보 그룹의 데이터는 이전에 만들었던 모든 계산된 데이터 집합 필드에 대한 값도 포함합니다.  
   
     > [!NOTE]  
-    >  세부 정보 그룹의 데이터는 데이터 원본에서 계산되고 쿼리에서 검색되는 집계인 서버 집계도 포함할 수 있습니다. 기본적으로 보고서에서 Aggregate 함수를 사용하는 식을 포함하지 않는 경우 보고서 작성기 및 보고서 디자이너는 서버 집계를 정보 데이터로 처리합니다. 자세한 내용은 참조 [집계](report-builder-functions-aggregate-function.md)합니다.  
+    >  세부 정보 그룹의 데이터는 데이터 원본에서 계산되고 쿼리에서 검색되는 집계인 서버 집계도 포함할 수 있습니다. 기본적으로 보고서에서 Aggregate 함수를 사용하는 식을 포함하지 않는 경우 보고서 작성기 및 보고서 디자이너는 서버 집계를 정보 데이터로 처리합니다. 자세한 내용은 [집계](report-builder-functions-aggregate-function.md)합니다.  
   
      기본적으로 보고서에 테이블이나 목록을 추가할 때 보고서 작성기 및 보고서 디자이너는 세부 정보 그룹을 자동으로 만들고 세부 데이터에 표시할 행을 추가합니다. 이 행의 셀에 데이터 집합 필드를 추가할 때 [Sales]와 같은 필드에 대한 단순 식이 기본적으로 표시됩니다. 데이터 영역을 확인할 때는 결과 집합의 각 값에 대해 정보 행이 한 번씩 반복됩니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36092342"
   
  그룹을 추가한 후에는 데이터 영역의 행 및 열 핸들이 그룹 멤버 자격에 따라 변경됩니다. 그룹을 삭제한 후에는 그룹 정의만 삭제하거나 그룹과 그룹에 연결된 모든 행 및 열을 삭제할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
- 정보 또는 그룹 데이터의 계산에 표시하거나 사용할 데이터를 제한하려면 그룹에서 필터를 설정합니다. 자세한 내용은 참조 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
+ 정보 또는 그룹 데이터의 계산에 표시하거나 사용할 데이터를 제한하려면 그룹에서 필터를 설정합니다. 자세한 내용은 [추가 데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)합니다.  
   
  기본적으로 그룹을 만들 때 그룹의 정렬 식은 그룹 식과 같은 식입니다. 정렬 순서를 변경하려면 정렬 식을 변경합니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36092342"
  테이블릭스 데이터 영역의 행 또는 열의 셀은 여러 행 및 열 그룹에 속할 수 있습니다. 집계 함수(예: `=Sum(Fields!FieldName.Value`)를 사용하는 셀의 입력란에서 식을 정의할 때 셀에 대한 기본 그룹 범위는 셀이 속한 가장 안쪽에 있는 자식 그룹입니다. 셀이 행 및 열 그룹 모두에 속할 때 기본 그룹 범위는 가장 안쪽에 있는 행 및 열 그룹입니다. 다른 데이터 집합에 대한 그룹으로 범위가 한정된 집계 부분합을 계산하는 식을 작성할 수도 있습니다. 예를 들어 데이터 영역의 열 그룹 또는 모든 데이터에 대한 그룹의 백분율을 계산할 수 있습니다(예: `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [추가 또는 데이터 영역에서 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [추가 또는 데이터 영역의 그룹 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [드릴 다운 동작 &#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   

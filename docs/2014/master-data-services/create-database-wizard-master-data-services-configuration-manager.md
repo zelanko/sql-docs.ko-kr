@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296693"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 만들기 마법사(Master Data Services 구성 관리자)
   **데이터베이스 만들기** 마법사를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 만들 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36082716"
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
-|**사용자 이름**|될 도메인 사용자 계정을 지정는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자입니다. 모든 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을이 데이터베이스에이 사용자와 연결 된 모든 모델과 모든 기능 영역에서 모든 데이터를 업데이트할 수 있습니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.|  
+|**사용자 이름**|도메인 사용자 계정이 되도록 지정 합니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자입니다. 모든 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을이 데이터베이스에이 사용자와 연결 된 모든 모델 및 모든 기능 영역에서 모든 데이터를 업데이트할 수 있습니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.|  
   
 ## <a name="summary"></a>요약  
  선택한 옵션에 대한 요약 정보를 표시합니다. 선택 항목을 검토한 후 **다음** 을 클릭하면 지정된 설정으로 데이터베이스 만들기가 시작됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36082716"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Master Data Services에 대 한 데이터베이스 및 웹 사이트를 설정 합니다.](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [데이터베이스 요구 사항 &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

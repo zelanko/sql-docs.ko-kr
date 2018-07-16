@@ -1,13 +1,11 @@
 ---
-title: 사용자 정의 형식 요구 사항을 | Microsoft Docs
+title: 사용자 정의 형식 요구 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,18 +20,18 @@ helpviewer_keywords:
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14286261d2f157f208fe8d918e4fe1705f58eb97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181358"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350075"
 ---
 # <a name="user-defined-type-requirements"></a>사용자 정의 형식 요구 사항
-  사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 디자인 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
+  사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 설계 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
   
 ## <a name="requirements-for-implementing-udts"></a>UDT 구현을 위한 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDT를 실행하려면 UDT 정의에서 다음 요구 사항을 구현해야 합니다.  
@@ -56,7 +54,7 @@ ms.locfileid: "36181358"
   
 -   UDT가 데이터 요소를 공용 필드나 속성 프로시저로 표시해야 합니다.  
   
--   공개 이름은 128 자 보다 길 수 없습니다 하며을 준수 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의 된 식별자에 대 한 명명 규칙 [데이터베이스 식별자](../databases/database-identifiers.md)합니다.  
+-   공개 이름은 128 자 보다 길 수 없습니다 하며 준수 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의 된 식별자에 대 한 명명 규칙 [데이터베이스 식별자](../databases/database-identifiers.md)합니다.  
   
 -   `sql_variant` 열에는 UDT의 인스턴스를 포함할 수 없습니다.  
   
@@ -86,7 +84,7 @@ ms.locfileid: "36181358"
   
 -   UDT가 구조체가 아니라 클래스에 정의되어 있으면 `System.Runtime.InteropServices.StructLayoutAttribute`는 `StructLayout.LayoutKindSequential`로 지정해야 합니다. 이 특성은 데이터 필드의 물리적 레이아웃을 제어하며 멤버를 멤버가 실제로 나타나는 순서대로 배치하는 데 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 특성을 사용하여 값이 여러 개 포함된 UDT의 필드 순서를 결정합니다.  
   
- 정의 된 UDT의 예 `Native` serialization에서 Point UDT를 참조 하십시오. [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ 사용 하 여 정의 된 UDT의 예 `Native` serialization에서 Point UDT를 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
 ## <a name="userdefined-serialization"></a>UserDefined 직렬화  
  `UserDefined` 특성에 대한 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 형식 설정을 통해 개발자는 이진 형식을 완전히 제어할 수 있습니다. `Format` 특성의 속성을 `UserDefined`로 지정할 경우 코드에서 다음 작업을 수행해야 합니다.  
@@ -97,7 +95,7 @@ ms.locfileid: "36181358"
   
 -   `Read` 인터페이스를 구현하여 UDT에 대한 `Write` 및 `System.Data.Sql.IBinarySerialize` 메서드를 구현하는 코드를 작성합니다.  
   
- 정의 된 UDT의 예 `UserDefined` serialization에서 Currency UDT를 참조 하십시오. [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ 사용 하 여 정의 된 UDT의 예 `UserDefined` serialization에서 Currency UDT를 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
 > [!NOTE]  
 >  UDT 필드를 인덱싱하려면 UDT 필드에 네이티브 직렬화를 사용하거나 필드를 지속형 필드로 만들어야 합니다.  
@@ -117,7 +115,7 @@ ms.locfileid: "36181358"
  이 UDT의 모든 인스턴스 길이가 같은지 여부를 나타냅니다.  
   
  `MaxByteSize`  
- 인스턴스의 최대 크기(바이트)입니다. `MaxByteSize` 직렬화 형식과 함께 `UserDefined`를 지정해야 합니다. 사용자 정의 직렬화가 지정된 UDT의 경우 `MaxByteSize`는 사용자가 정의한 대로 직렬화된 형식의 전체 UDT 크기를 나타냅니다. `MaxByteSize` 값은 1에서 8000 사이의 값이어야 합니다. UDT가 8000바이트보다 크다는 것을 나타내려면 이 값을 -1로 설정해야 하며 총 크기는 최대 LOB 크기를 초과할 수 없습니다. 10개의 문자(`System.Char`)로 구성된 문자열 속성이 있는 UDT가 있다고 가정해 보십시오. BinaryWriter를 사용 하 여 UDT가 serialize 하는 경우 직렬화 된 문자열의 총 크기는 유니코드 utf-16 문자는 최대 문자 수를 더한를 이진 스트림으로 직렬화 하는 작업에서 발생 한 오버 헤드의 제어 2 바이트를 곱한 당 22 바이트: 2 바이트입니다. 따라서 `MaxByteSize`의 값을 결정할 때 직렬화된 UDT의 전체 크기를 고려해야 합니다. 이 크기는 이진 형식으로 직렬화된 데이터의 크기와 직렬화로 인해 발생한 오버헤드를 합한 것입니다.  
+ 인스턴스의 최대 크기(바이트)입니다. `MaxByteSize` 직렬화 형식과 함께 `UserDefined`를 지정해야 합니다. 사용자 정의 직렬화가 지정된 UDT의 경우 `MaxByteSize`는 사용자가 정의한 대로 직렬화된 형식의 전체 UDT 크기를 나타냅니다. `MaxByteSize` 값은 1에서 8000 사이의 값이어야 합니다. UDT가 8000바이트보다 크다는 것을 나타내려면 이 값을 -1로 설정해야 하며 총 크기는 최대 LOB 크기를 초과할 수 없습니다. 10개의 문자(`System.Char`)로 구성된 문자열 속성이 있는 UDT가 있다고 가정해 보십시오. UDT BinaryWriter를 사용 하 여 serialize 되 면 serialize 된 문자열의 총 크기는 22 바이트: 2 바이트 문자의 최대 수와 컨트롤 2 바이트의 이진 스트림으로 직렬화 하는 작업에서 발생 하는 오버 헤드를 곱한 유니코드 utf-16 문자 당 합니다. 따라서 `MaxByteSize`의 값을 결정할 때 직렬화된 UDT의 전체 크기를 고려해야 합니다. 이 크기는 이진 형식으로 직렬화된 데이터의 크기와 직렬화로 인해 발생한 오버헤드를 합한 것입니다.  
   
  `ValidationMethodName`  
  UDT의 인스턴스가 유효한지 여부를 검사하는 데 사용되는 메서드의 이름입니다.  
@@ -150,10 +148,10 @@ ms.locfileid: "36181358"
 -   작거나 같음(<=)  
   
 ### <a name="implementing-nullability"></a>Null 허용 여부 구현  
- 어셈블리의 특성을 올바르게 지정하는 것 외에도 클래스는 Null 허용 여부를 지원해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 UDT는 Null을 인식하지만 UDT에서 Null 값을 인식하려면 클래스에서 `INullable` 인터페이스를 구현해야 합니다. 자세한 내용 및 UDT에서 null 허용 여부를 구현 하는 방법의 예에 대 한 참조 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ 어셈블리의 특성을 올바르게 지정하는 것 외에도 클래스는 Null 허용 여부를 지원해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 UDT는 Null을 인식하지만 UDT에서 Null 값을 인식하려면 클래스에서 `INullable` 인터페이스를 구현해야 합니다. 자세한 내용 및 UDT에서 null 허용 여부를 구현 하는 방법의 예제를 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
 ### <a name="string-conversions"></a>문자열 변환  
- UDT에서 문자열로의 변환 또는 문자열에서 UDT로의 변환을 지원하려면 클래스에서 `Parse` 메서드와 `ToString` 메서드를 제공해야 합니다. `Parse` 메서드는 문자열을 UDT로 변환할 수 있게 하며, `static`(Visual Basic의 경우 `Shared`)으로 선언되고 `System.Data.SqlTypes.SqlString` 유형의 매개 변수를 사용해야 합니다. 자세한 내용 및 구현 하는 방법의 예는 `Parse` 및 `ToString` 메서드 참조 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ UDT에서 문자열로의 변환 또는 문자열에서 UDT로의 변환을 지원하려면 클래스에서 `Parse` 메서드와 `ToString` 메서드를 제공해야 합니다. `Parse` 메서드는 문자열을 UDT로 변환할 수 있게 하며, `static`(Visual Basic의 경우 `Shared`)으로 선언되고 `System.Data.SqlTypes.SqlString` 유형의 매개 변수를 사용해야 합니다. 자세한 내용 및 구현 하는 방법의 예는 `Parse` 하 고 `ToString` 메서드를 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
 ## <a name="xml-serialization"></a>XML 직렬화  
  UDT는 XML 직렬화 계약에 따라 UDT에서 `xml` 데이터 형식으로의 변환 또는 xml 데이터 형식에서 UDT로의 변환을 지원해야 합니다. `System.Xml.Serialization` 네임스페이스에는 개체를 XML 형식 문서나 스트림으로 직렬화하는 데 사용되는 클래스가 있습니다. XML 직렬화 및 역직렬화를 위한 사용자 지정 형식을 제공하는 `xml` 인터페이스를 사용하여 `IXmlSerializable` 직렬화를 구현할 수 있습니다.  

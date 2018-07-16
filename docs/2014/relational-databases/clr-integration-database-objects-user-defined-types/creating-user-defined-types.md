@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089084"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350979"
 ---
 # <a name="creating-a-user-defined-type"></a>사용자 정의 형식 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 설치할 수 있는 UDT(사용자 정의 형식)를 만들려면 먼저 Visual C# 또는 Visual Basic과 같은 지원되는 .NET Framework 프로그래밍 언어 중 하나에서 UDT를 만들기 위한 사양에 맞는 클래스를 만들어야 합니다. 그런 다음 클래스를 DLL(동적 연결 라이브러리)로 컴파일하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 또한 Visual Studio를 사용하여 UDT를 만들고 배포할 수도 있습니다.  
@@ -45,9 +43,9 @@ Reconfigure
  사용자 정의 형식을 만드는 것과 관련된 코딩 방법을 설명합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 샘플에서 자세히 설명 된 Point UDT 정의 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ 다음 코드 샘플에서 자세히 설명 된 Point UDT를 정의 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
- 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 이러한 예제를 설치 하는 방법에 지침은 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
+ 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 에 대 한 지침은이 예제를 설치 합니다 [SQL Server 데이터베이스 엔진 예제](http://msftengprodsamples.codeplex.com/)합니다.  
   
  C#  
   

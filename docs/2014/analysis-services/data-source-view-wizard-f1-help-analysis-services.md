@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f866ebe7d18a749409d1bdeb0f2b7d2b073c5f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269829"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>데이터 원본 뷰 마법사 F1 도움말(Analysis Services)
   데이터 원본 뷰 마법사를 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 비즈니스 인텔리전스 프로젝트에 사용할 데이터 원본 뷰를 만듭니다.  

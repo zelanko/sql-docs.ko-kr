@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4b9b26dab6040c5ca98fdf11271233415f163906
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d8b6de50b412029a69ecb0ac2f90406cb26fa50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224783"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>데이터 경고 관리자에서 내 데이터 경고 관리
   SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 대한 정보를 볼 수 있습니다. 또한 자신의 경고를 삭제하고, 데이터 경고 디자이너에서 편집할 경고 정의를 열고, 자신의 경고를 실행할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 사용자에게 제공되는 기능을 보여 줍니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36184656"
   
 -   경고 정의를 편집할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
-     경고 정의가 데이터 경고 디자이너에서 열립니다. 자세한 내용은 참조 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md) 및 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)합니다.  
+     경고 정의가 데이터 경고 디자이너에서 열립니다. 자세한 내용은 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md) 하 고 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)합니다.  
   
     > [!NOTE]  
     >  데이터 경고 정의를 만든 사용자만 해당 정의를 편집할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36184656"
      데이터 경고 디자이너에서 지정한 일정 옵션에 관계없이 경고 인스턴스가 생성되고 데이터 경고 메시지가 즉시 전송됩니다. 예를 들어 매주, 그리고 결과가 변경된 경우에만 전송되도록 구성된 경고가 전송됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [경고 담당자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [데이터 경고 관리자 용 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

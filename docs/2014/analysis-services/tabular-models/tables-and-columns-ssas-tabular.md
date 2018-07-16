@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f7302274fc745fbc7a63bf6af59e4622c36b9a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319363"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
   테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
@@ -63,16 +63,16 @@ ms.locfileid: "36078633"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[테이블에 열 추가 &#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
-|[열 삭제 &#40;SSAS 테이블 형식&#41;](delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  
-|[테이블, 열 또는 행 필터 매핑 변경 &#40;SSAS 테이블 형식&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|테이블 속성 편집 대화 상자에서 테이블 미리 보기 또는 SQL 쿼리 편집기를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법을 설명합니다.|  
-|[시간 인텔리전스에 사용할 날짜 테이블로 표시 지정 &#40;SSAS 테이블 형식&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|날짜 테이블로 표시 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정하는 방법을 설명합니다. 날짜 테이블 및 고유 식별자 지정은 DAX 수식에서 시간 인텔리전스 기능을 사용할 경우에 필요합니다.|  
-|[테이블 추가 &#40;SSAS 테이블 형식&#41;](add-a-table-ssas-tabular.md)|기존 데이터 원본 연결을 사용하여 데이터 원본의 테이블을 추가하는 방법을 설명합니다.|  
-|[테이블 삭제 &#40;SSAS 테이블 형식&#41;](delete-a-table-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제하는 방법을 설명합니다.|  
-|[테이블 또는 열 이름 바꾸기 &#40;SSAS 테이블 형식&#41;](rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
-|[열의 데이터 형식을 설정 &#40;SSAS 테이블 형식&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
-|[열 숨기기 또는 고정 &#40;SSAS 테이블 형식&#41;](hide-or-freeze-columns-ssas-tabular.md)|표시하지 않을 열을 숨기는 방법과 한 영역에서 특정 열을 고정(잠금)하여 모델의 다른 영역으로 스크롤하는 동안 모델의 특정 영역을 계속 표시하는 방법을 설명합니다.|  
-|[계산 된 열 &#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
-|[데이터 필터링 및 정렬 &#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
+|[테이블에 열 추가 &#40;&AMP;#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
+|[열 삭제 &#40;&AMP;#40;SSAS 테이블 형식&#41;](delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  
+|[테이블, 열 또는 행 필터 매핑 변경 &#40;&AMP;#40;SSAS 테이블 형식&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|테이블 속성 편집 대화 상자에서 테이블 미리 보기 또는 SQL 쿼리 편집기를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법을 설명합니다.|  
+|[시간 인텔리전스에 사용할 날짜 테이블로 표시 지정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|날짜 테이블로 표시 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정하는 방법을 설명합니다. 날짜 테이블 및 고유 식별자 지정은 DAX 수식에서 시간 인텔리전스 기능을 사용할 경우에 필요합니다.|  
+|[테이블 추가 &#40;&AMP;#40;SSAS 테이블 형식&#41;](add-a-table-ssas-tabular.md)|기존 데이터 원본 연결을 사용하여 데이터 원본의 테이블을 추가하는 방법을 설명합니다.|  
+|[테이블을 삭제 &#40;&AMP;#40;SSAS 테이블 형식&#41;](delete-a-table-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제하는 방법을 설명합니다.|  
+|[테이블 또는 열 이름 바꾸기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
+|[열의 데이터 형식 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
+|[열 숨기기 또는 고정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hide-or-freeze-columns-ssas-tabular.md)|표시하지 않을 열을 숨기는 방법과 한 영역에서 특정 열을 고정(잠금)하여 모델의 다른 영역으로 스크롤하는 동안 모델의 특정 영역을 계속 표시하는 방법을 설명합니다.|  
+|[계산 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
+|[데이터 필터링 및 정렬 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
   
   

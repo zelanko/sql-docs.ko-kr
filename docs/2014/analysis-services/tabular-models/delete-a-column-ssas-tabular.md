@@ -1,5 +1,5 @@
 ---
-title: 열 삭제 (SSAS 테이블 형식) | Microsoft Docs
+title: 삭제 된 열 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bef4966295acafa3b122fe1786cf06495962890d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 378f2a9503abbf277b25c09b66e11acc606529e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273869"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>열 삭제(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 테이블에서 열을 삭제하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "36186160"
 3.  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 삭제할 열을 선택 취소한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블에 열 추가 &#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [파티션 &#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
+ [테이블에 열 추가 &#40;&AMP;#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
   
   

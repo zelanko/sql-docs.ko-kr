@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a3da0184ab2cbb6c94d94429dc4e9640a597fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb596ca38310bce4b9be6f1061952ebc2756fc73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226513"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 요소(DTA)
   데이터베이스 엔진 튜닝 관리자에서 분석 도중에 사용하도록 할 물리적 디자인 구조(인덱스 또는 인덱싱된 뷰)를 포함합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36185984"
 |**데이터 형식 및 길이**|`string`, 최대 길이 없음|  
 |**허용된 값**|**IDX_IV**<br /> 인덱스와 인덱싱된 뷰<br /><br /> **IDX**<br /> 인덱스만<br /><br /> **IV**<br /> 인덱싱된 뷰만<br /><br /> **NCL_IDX**<br /> 비클러스터형 인덱스만<br /><br /> 이 요소에 이러한 값 중 하나를 사용합니다.|  
 |**기본값**|**IDX**|  
-|**발생 빈도**|`TuningOptions` 요소가 사용되지 않을 경우 각 `DropOnlyMode` 요소에 한 번만 지정해야 합니다. 경우 `DropOnlyMode` 은 사용할 수 없습니다을 사용 하는 `FeatureSet`합니다. 이러한 요소는 함께 사용할 수 없습니다.|  
+|**발생 빈도**|`TuningOptions` 요소가 사용되지 않을 경우 각 `DropOnlyMode` 요소에 한 번만 지정해야 합니다. 하는 경우 `DropOnlyMode` 는 사용할 수 없습니다 사용 `FeatureSet`합니다. 이러한 요소는 함께 사용할 수 없습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

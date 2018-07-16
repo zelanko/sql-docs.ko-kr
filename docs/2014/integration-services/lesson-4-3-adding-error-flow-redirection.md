@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70f554444431c06d14d67bf7e39d46240581b23a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178106"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>3단계: 오류 흐름 리디렉션 추가
   이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
@@ -52,11 +52,11 @@ ms.locfileid: "36187237"
   
 8.  **입/출력** 페이지에서 **출력 0**을 확장하고 **출력 열**을 클릭한 다음 **열 추가**를 클릭합니다.  
   
-9. 에 `Name` 속성을 입력 **ErrorDescription** 설정 하 고는 `DataType` 속성을 **유니코드 문자열 [DT_WSTR]** 합니다.  
+9. 에 `Name` 속성에 입력 **ErrorDescription** 설정의 `DataType` 속성을 **유니코드 문자열 [DT_WSTR]**.  
   
-10. 에 **스크립트** 페이지에서 `LocaleID` 속성이 **영어 (미국.**  
+10. 에 **스크립트** 페이지에서 합니다 `LocaleID` 속성이 **영어 (미국.**  
   
-11. **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. `Input0_ProcessInputRow` 메서드에 다음 코드를 입력하거나 붙여 넣습니다.  
+11.  **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. `Input0_ProcessInputRow` 메서드에 다음 코드를 입력하거나 붙여 넣습니다.  
   
      [Visual Basic]  
   

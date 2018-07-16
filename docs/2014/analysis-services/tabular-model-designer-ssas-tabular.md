@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263349"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>테이블 형식 모델 디자이너(SSAS 테이블 형식)
   테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 이상 환경과 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36186398"
   
 -   [프로젝트 템플릿](#bkmk_proj_temp)  
   
--   [창 및 메뉴](#bkmk_wind_men)  
+-   [Windows 및 메뉴](#bkmk_wind_men)  
   
 -   [Visual Studio 통합](#bkmk_vsint)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36186398"
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 프로젝트 &#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [속성 &#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)  
+ [테이블 형식 모델 프로젝트 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

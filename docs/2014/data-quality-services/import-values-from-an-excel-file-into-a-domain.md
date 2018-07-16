@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.failingvalues.f1
 - sql12.dqs.kb.importfailing.f1
@@ -17,13 +17,13 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1086f67abbd43a95fc61de3b91bd124b6b6441ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0796c409abe0cf0a98a0376eb4b7c26efb3c05fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167274"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. (기술 자료로 도메인 가져오기에 대한 자세한 내용은 [기술 자료 검색 시 Excel 파일에서 도메인 가져오기](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  

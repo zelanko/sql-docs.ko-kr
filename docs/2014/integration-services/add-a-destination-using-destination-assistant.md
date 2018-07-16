@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88d942ea38004d6d4085b73a4f2967a9a2e68705
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5251cd85dd24de18e582875c0a6c0100ae3fffcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246783"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>대상 길잡이를 사용하여 대상 추가
   이 항목에서는 대상 길잡이를 사용하여 새 대상을 추가하는 단계를 제공하며, 대상 길잡이를 SSIS 디자이너에 끌어 놓으면 나타나는 **새 대상 추가** 대화 상자에서 사용할 수 있는 옵션을 보여 줍니다.  

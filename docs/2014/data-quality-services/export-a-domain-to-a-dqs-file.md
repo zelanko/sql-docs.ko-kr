@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 74f254b95db241de9c104e739a853301286173c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1257e0ff051e56974c7c187ec214e8cbe357dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232043"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>.dqs 파일로 도메인 내보내기
   이 항목에는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 파일로 도메인을 내보내는 방법에 대해 설명합니다. 도메인 또는 전체 기술 자료를 데이터 파일로 내보낼 수 있습니다. 기술 자료 내보내기에 대한 자세한 내용은 [.dqs 파일로 기술 자료 내보내기](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)를 참조하세요.  

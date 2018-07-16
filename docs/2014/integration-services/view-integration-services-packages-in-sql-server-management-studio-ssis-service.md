@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b3f72ed86e681447e373ed682831e2ef86852e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57d7a86bea2082875139c84c2f3759e40f92341e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290875"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>SQL Server Management Studio에서 Integration Services 패키지 보기(SSIS 서비스)
     

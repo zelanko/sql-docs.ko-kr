@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e816206ff21e0e68ded7eecc2d353b9e8972c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dd0adee47ebebfdebadc00c2afcc17f6aa7382b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170166"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>XSD 데이터 형식을 XPath 데이터 형식에 매핑(SQLXML 4.0)
   XSD 스키마에 대해 XPath 쿼리를 실행할 경우 XSD 형식이 `xsd:type` 특성에 지정되어 있으면 XPath는 쿼리를 처리할 때 지정된 데이터 형식을 사용합니다.  

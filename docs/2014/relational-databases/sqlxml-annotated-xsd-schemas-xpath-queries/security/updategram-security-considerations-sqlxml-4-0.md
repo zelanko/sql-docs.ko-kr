@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], security
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad8e74b3f5a2e2f6175b7fb95a4da94420440975
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 757fd76e6606447f5da8dae9ef6ba0d26de45997
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296673"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Updategram 보안 고려 사항(SQLXML 4.0)
   다음은 Updategram을 사용하기 위한 보안 지침입니다.  

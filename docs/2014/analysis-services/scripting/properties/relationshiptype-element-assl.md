@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271599"
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType 요소(ASSL)
-  나타냅니다 여부에 대 한 멤버 관계는 [AttributeRelationship](../objects/attributerelationship-element-assl.md) 변경할 수 있습니다.  
+  나타냅니다 여부에 대 한 멤버 관계를 [AttributeRelationship](../objects/attributerelationship-element-assl.md) 변경할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,10 +66,10 @@ ms.locfileid: "36185699"
   
 |값|Description|  
 |-----------|-----------------|  
-|*고정 된 관계로*|특성 및 관련 특성 사이의 멤버 관계를 변경할 수 없습니다.|  
+|*고정*|특성 및 관련 특성 사이의 멤버 관계를 변경할 수 없습니다.|  
 |*유연한*|특성 및 관련 특성 사이의 멤버 관계를 변경할 수 있습니다.|  
   
- 예를 들어 경우 `ZipCode` 하나에서 변경할 수 없습니다 `City` 관계의 다른 `ZipCode` 를 `City` 로 표시 되어 *고정*합니다.  
+ 예를 들어 경우 `ZipCode` 간에 변경할 수 없습니다 `City` 간에 관계를 `ZipCode` 하 `City` 으로 표시 됩니다 *고정*합니다.  
   
  AMO(Analysis Management Objects) 개체 모델에서 `RelationshipType`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.RelationshipType>입니다.  
   

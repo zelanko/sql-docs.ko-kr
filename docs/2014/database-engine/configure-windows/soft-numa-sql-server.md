@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827975fcb4c5bbba6253f3b44e1813a6e70f6fcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279565"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>소프트 NUMA를 사용하도록 SQL Server 구성(SQL Server)
-최신 프로세서는 소켓당 여러 개에서 많은 코어를 가지고 있습니다. 일반적으로 각 소켓은 단일 NUMA 노드로 표시됩니다. SQL Server 데이터베이스 엔진은 여러 내부 구조를 분할하며 NUMA 노드에 따라 서비스 스레드를 분할합니다. 소프트웨어를 사용 하 여 소켓 당 10 개 이상의 코어를 포함 하는 프로세서 NUMA (소프트 NUMA)를 일반적으로 하드웨어 NUMA 노드를 분할 하면 확장성과 성능을 향상 됩니다.   
+최신 프로세서는 소켓당 여러 개에서 많은 코어를 가지고 있습니다. 일반적으로 각 소켓은 단일 NUMA 노드로 표시됩니다. SQL Server 데이터베이스 엔진은 여러 내부 구조를 분할하며 NUMA 노드에 따라 서비스 스레드를 분할합니다. NUMA (SOFT-NUMA) 일반적으로 하드웨어 NUMA 노드 분할에 소프트웨어를 사용 하 여 소켓 당 10 개 이상의 코어를 포함 하는 프로세서를 사용 하 여 확장성 및 성능 증가 합니다.   
 
 > [!NOTE]
 > Hot Add 프로세서는 soft-NUMA에서 지원되지 않습니다.
   
 ## <a name="automatic-soft-numa"></a>자동 soft-NUMA
 
-데이터베이스 엔진 서버가 시작할 때 실제 프로세서를 8 개 이상에서 검색 될 때마다 SQL Server 2014 서비스 팩 2 부터는 SOFT-NUMA 노드가 자동으로 만들어집니다 추적 플래그 8079 시작 매개 변수로 사용 되는 경우. 실제 프로세서 수를 계산할 때 하이퍼 스레드 프로세서 코어에 대 한 고려 하지 않습니다. 검색 하는 실제 프로세서 수가 소켓 당 8 개 보다 많이 이면 데이터베이스 엔진 서비스를 이상적으로 코어 8 개를 포함 하지만 노드당 논리 프로세서 5 개를 9 개까지 감소할 수 있습니다는 소프트 NUMA 노드가 만들어집니다. 하드웨어 노드의 크기는 CPU 선호도 마스크에 의해 제한될 수 있습니다. NUMA 노드 수는 지원되는 최대 NUMA 노드 수를 초과할 수 없습니다.
+부터 SQL Server 2014 서비스 팩 2를 사용 하 여 데이터베이스 엔진 서버가 시작 시 실제 프로세서 8 개 이상의 감지할 때마다 SOFT-NUMA 노드가 자동으로 만들어집니다 추적 플래그 8079 시작 매개 변수로 사용 하는 경우. 실제 프로세서 수를 계산할 때 하이퍼 스레드 프로세서 코어에 대 한 처리 하지 않은 합니다. 검색 된 실제 프로세서 수가 소켓 당 8 개 이상의 경우 데이터베이스 엔진 서비스 이상적 코어 8 개를 포함 하지만 노드당 논리 프로세서 5 개 또는 최대 9 개까지 감소할 수 있습니다 소프트 NUMA 노드가 만들어집니다. 하드웨어 노드의 크기는 CPU 선호도 마스크에 의해 제한될 수 있습니다. NUMA 노드 수는 지원되는 최대 NUMA 노드 수를 초과할 수 없습니다.
 
-추적 플래그 없이 소프트 NUMA는 기본적으로 비활성화 됩니다. 소프트 NUMA를 사용 하도록 설정할 수 8079 추적 플래그를 사용 하 여 합니다. 이 설정의 값을 변경하려면 데이터베이스 엔진의 다시 시작을 적용해야 합니다.
+추적 플래그 없이 소프트 NUMA는 기본적으로 비활성화 됩니다. 소프트 NUMA를 설정할 수 있습니다. 추적 플래그 8079를 사용 합니다. 이 설정의 값을 변경하려면 데이터베이스 엔진의 다시 시작을 적용해야 합니다.
 
-아래 그림에는 논리 프로세서를 8 보다 큰를 가진 하드웨어 NUMA 노드를 검색 하는 SQL Server와 8079 추적 플래그를 설정 하는 경우 SQL Server 오류 로그에서 나타나면 있는 SOFT-NUMA에 관한 정보 형식을 보여 줍니다.
+아래 그림에는 유형의 SQL Server 논리 프로세서 8 개 초과 가진 하드웨어 NUMA 노드를 검색 및 추적 플래그 8079를 설정 하는 경우 SQL Server 오류 로그에서 볼 수 있는 SOFT-NUMA에 관한 정보를 보여 줍니다.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
 
 ## <a name="manual-soft-numa"></a>수동 Soft-NUMA
   
-구성 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소프트 NUMA를 수동으로 사용 하 여 노드 구성 선호도 마스크를 추가 하려면 레지스트리를 편집 해야 합니다. 소프트 NUMA 마스크는 이진, DWORD(16진수 또는 십진수) 또는 QWORD(16진수 또는 십진수) 레지스트리 항목으로 정의할 수 있습니다. 첫 32개 CPU 이상을 구성하려면 QWORD 또는 BINARY 레지스트리 값을 사용합니다. QWORD 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전에서만 사용할 수 있습니다. 소프트 NUMA를 구성하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 다시 시작해야 합니다.  
+구성 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소프트 NUMA를 수동으로 사용 하려면 노드 구성 선호도 마스크를 추가 하려면 레지스트리를 편집 해야 합니다. 소프트 NUMA 마스크는 이진, DWORD(16진수 또는 십진수) 또는 QWORD(16진수 또는 십진수) 레지스트리 항목으로 정의할 수 있습니다. 첫 32개 CPU 이상을 구성하려면 QWORD 또는 BINARY 레지스트리 값을 사용합니다. QWORD 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전에서만 사용할 수 있습니다. 소프트 NUMA를 구성하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 다시 시작해야 합니다.  
   
 > [!TIP]  
 >  CPU 번호는 0부터 시작합니다.  

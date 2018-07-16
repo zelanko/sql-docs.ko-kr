@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.configsecondarydbs.f1
 - sql12.swb.availabilitygroup.preparedbs.f1
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: 44
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e98f8b7db76d0a19041424242d3035934d02c5a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 47afad65db4f1de79bb1da395ce9954772929179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295473"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
-  이 항목에서 AlwaysOn 가용성 그룹에 대 한 보조 데이터베이스를 준비 하는 방법을 설명 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], 또는 PowerShell입니다. 보조 데이터베이스를 준비하려면 (1) RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업과 후속 로그 백업을 보조 복제본을 호스트하는 각 서버 인스턴스로 복원하고 (2) 복원된 데이터베이스를 가용성 그룹에 조인하는 두 단계를 수행해야 합니다.  
+  이 항목에서는 AlwaysOn 가용성 그룹에서 보조 데이터베이스를 준비 하는 방법을 설명 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], 또는 PowerShell입니다. 보조 데이터베이스를 준비하려면 (1) RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업과 후속 로그 백업을 보조 복제본을 호스트하는 각 서버 인스턴스로 복원하고 (2) 복원된 데이터베이스를 가용성 그룹에 조인하는 두 단계를 수행해야 합니다.  
   
 > [!TIP]  
->  기존 로그 전달 구성이 있는 경우 하나 이상의 보조 데이터베이스와 함께 로그 전달 주 데이터베이스를 AlwaysOn 주 데이터베이스 및 하나 이상의 AlwaysOn 보조 데이터베이스로 변환할 수 있습니다. 자세한 내용은 참조 [필수 구성 요소 마이그레이션하기 위한 로그 전달에서 AlwaysOn 가용성 그룹으로 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)합니다.  
+>  기존 로그 전달 구성이 있는 경우 하나 이상의 보조 데이터베이스와 함께 로그 전달 주 데이터베이스를 AlwaysOn 주 데이터베이스 및 하나 이상의 AlwaysOn 보조 데이터베이스로 변환할 수 있습니다. 자세한 내용은 [필수 구성 요소 마이그레이션에 대 한 로그 전달에서 AlwaysOn 가용성 그룹에 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)합니다.  
   
 -   **시작하기 전 주의 사항:**  
   
@@ -199,7 +198,7 @@ ms.locfileid: "36078880"
         > [!IMPORTANT]  
         >  주 데이터베이스와 보조 데이터베이스의 경로 이름이 다른 경우 파일을 추가할 수 없습니다. 이는 파일 추가 작업에 대한 로그를 받을 때 보조 복제본의 서버 인스턴스가 주 데이터베이스에서 사용되는 것과 동일한 경로에 새 파일을 배치하기 때문입니다.  
   
-         예를 들어 다음 명령은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 기본 인스턴스에 대한 데이터 디렉터리(C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA)에 있는 주 데이터베이스의 백업을 복원합니다. 데이터베이스 복원 작업의 원격 인스턴스의 데이터 디렉터리로 데이터베이스를 이동 해야 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 라는 (*AlwaysOn1*)를 다른 클러스터 노드에 대해 보조 복제본을 호스팅하는 합니다. 데이터 및 로그 파일에 복원 됩니다는 여기에 *C:\Program Files\Microsoft SQL Server\MSSQL12 합니다. ALWAYSON1\MSSQL\DATA* 디렉터리입니다. 복원 작업에서는 WITH NORECOVERY를 사용하여 보조 데이터베이스를 복원 중인 데이터베이스에 그대로 둡니다.  
+         예를 들어 다음 명령은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 기본 인스턴스에 대한 데이터 디렉터리(C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA)에 있는 주 데이터베이스의 백업을 복원합니다. 데이터베이스 복원 작업에서는 원격 인스턴스의 데이터 디렉터리로 데이터베이스를 이동 해야 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 명명 된 (*AlwaysOn1*), 다른 클러스터 노드에 있는 보조 복제본을 호스트 하는 합니다. 데이터 및 로그 파일에 복원 됩니다 여기서는 *C:\Program Files\Microsoft SQL Server\MSSQL12. ALWAYSON1\MSSQL\DATA* 디렉터리입니다. 복원 작업에서는 WITH NORECOVERY를 사용하여 보조 데이터베이스를 복원 중인 데이터베이스에 그대로 둡니다.  
   
         ```  
         RESTORE DATABASE MyDB1  
@@ -249,7 +248,7 @@ ms.locfileid: "36078880"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **보조 데이터베이스를 준비하려면**  
   
-1.  주 데이터베이스의 최근 백업을 만들어야 할 경우 디렉터리를 변경 (`cd`) 주 복제본을 호스팅하는 서버 인스턴스에 있습니다.  
+1.  주 데이터베이스의 최근 백업을 해야 할 경우 디렉터리를 변경 (`cd`) 주 복제본을 호스팅하는 서버 인스턴스에 있습니다.  
   
 2.  `Backup-SqlDatabase` cmdlet을 사용하여 각 백업을 만듭니다.  
   
@@ -258,7 +257,7 @@ ms.locfileid: "36078880"
 4.  각 주 서버의 데이터베이스와 로그 백업을 복원하려면 `restore-SqlDatabase` 복원 매개 변수를 지정하여 `NoRecovery` cmdlet을 사용합니다. 또한 주 복제본을 호스팅하는 컴퓨터와 대상 보조 복제본을 호스팅하는 컴퓨터의 파일 경로가 다른 경우 `RelocateFile` 복원 매개 변수를 사용합니다.  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
 5.  보조 데이터베이스 구성을 완료하려면 보조 데이터베이스를 가용성 그룹에 조인해야 합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)을 참조하세요.  
   

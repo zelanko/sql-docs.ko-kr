@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b8f85ee3fecac1b098a16afe6cf2d0eca61226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3010d64a5898b16322afca819f54cbcc32f0b867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190863"
 ---
 # <a name="tableid-element-assl"></a>TableID 요소(ASSL)
-  테이블의 식별자 (ID)를 포함 (에서 [DataSourceView](../objects/datasourceview-element-assl.md) 요소) 부모 요소와 연결 합니다.  
+  테이블의 식별자 (ID)를 포함 (에서 합니다 [DataSourceView](../objects/datasourceview-element-assl.md) 요소) 부모 요소와 연결 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36187288"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[ColumnBinding](../data-type/binding-data-type-assl.md), [DSVTableBinding](../data-type/tablebinding-data-type-assl.md), [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md), [RowBinding](../data-type/rowbinding-data-type-assl.md)|  
+|부모 요소|[ColumnBinding](../data-type/binding-data-type-assl.md)하십시오 [DSVTableBinding](../data-type/tablebinding-data-type-assl.md)하십시오 [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md), [RowBinding](../data-type/rowbinding-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

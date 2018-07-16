@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Discover Server State event category
 - server state events [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e1ae268d3263fb672a8d0bda85b23774aca4ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c55d16650e9ef04ae951a9eb0d7f60fbc6c472a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197853"
 ---
 # <a name="discover-server-state-event-category"></a>Discover Server State 이벤트 범주
   Discover Server State 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  

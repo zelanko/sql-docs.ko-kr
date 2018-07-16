@@ -1,5 +1,5 @@
 ---
-title: '데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. 다음과 같은 연결을 새로 고치지 못했습니다: PowerPivot 데이터 | Microsoft Docs'
+title: '데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. 다음 연결을 새로 고치지 못했습니다: PowerPivot 데이터 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7598685ddb6cd92ad3bcddd1bd307f976db88f55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9cdc773ef42536be619d8d8c0edac1d6d1dcb92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319383"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
   Excel 서비스는 SharePoint의 PowerPivot 서버 인스턴스에 연결할 수 없는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  

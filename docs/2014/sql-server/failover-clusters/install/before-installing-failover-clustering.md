@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268159"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
@@ -203,7 +203,7 @@ ms.locfileid: "36187562"
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원 되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   
- <sup>2</sup> 지원 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치 클러스터링 합니다.  
+ <sup>2</sup> 에 대 한 지원 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치 클러스터링 합니다.  
   
   
   

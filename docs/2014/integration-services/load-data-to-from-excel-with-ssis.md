@@ -1,11 +1,11 @@
 ---
 title: SSIS를 사용하여 Excel에서 가져오기 또는 Excel로 내보내기 | Microsoft Docs
-description: 와 함께 필수 조건, 알려진된 문제 및 제한 사항으로 Integration Services SSIS (SQL Server), Excel 데이터 가져오기 또는 내보내기 하는 방법에 알아봅니다.
+description: 필수 조건, 알려진 문제 및 제한 사항과 함께 SSIS(SQL Server Integration Services)를 사용하여 Excel 데이터 가져오거나 내보내는 방법을 알아봅니다.
 ms.date: 04/10/2018
-ms.prod: sql
+ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
+ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d028e3aa679e91ca15f3a738f948b127517c112f
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197533"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 

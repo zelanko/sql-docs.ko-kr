@@ -1,5 +1,5 @@
 ---
-title: 패키지에 주석을 추가 | Microsoft Docs
+title: 패키지에 주석 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - self-documenting packages
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aff98d1a1c3124f7847232dbe421927c12d41578
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ac793b4292a5e614f8f9cc8b68a44d824fe2ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310303"
 ---
 # <a name="add-an-annotation-to-a-package"></a>패키지에 주석 추가
   이 절차에서는 패키지에 주석을 추가하는 방법에 대해 설명합니다.  

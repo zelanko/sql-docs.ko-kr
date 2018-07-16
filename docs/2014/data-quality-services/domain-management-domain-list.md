@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4490d2f6d0d8471deed65e64f8bfe83890f4b41d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c55c1dafa1ac39faf02e5ef0c13b15931e05782
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245673"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
   이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  

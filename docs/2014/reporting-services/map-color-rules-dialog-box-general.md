@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238523"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>지도 색 규칙 대화 상자, 일반
   **색 규칙 속성** 대화 상자에서 **일반** 을 선택하여 이 계층의 지도 요소에 대한 색 옵션을 정의할 수 있습니다. 지도 요소에는 다각형, 선 및 점이 포함됩니다. 공간 데이터 기반의 지도 요소와 데이터 집합 필드 또는 공간 데이터 원본 필드의 분석 데이터 간 관계를 만든 경우 색 규칙을 적용할 수 있습니다.  
@@ -64,6 +64,6 @@ ms.locfileid: "36184429"
   
 ## <a name="see-also"></a>관련 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [지도 범례 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

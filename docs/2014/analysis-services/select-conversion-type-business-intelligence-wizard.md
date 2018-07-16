@@ -1,5 +1,5 @@
 ---
-title: 변환 유형 선택 (비즈니스 인텔리전스 마법사) | Microsoft Docs
+title: 변환 유형 (비즈니스 인텔리전스 마법사)를 선택 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba4018a6ce30e4e7de4e0ca3e79ae07007015650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267349"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>변환 유형 선택(비즈니스 인텔리전스 마법사)
   **변환 유형 선택** 페이지를 사용하여 여러 통화로 저장된 트랜잭션에 대해 현지 통화와 보고 통화 간의 관계를 정의할 수 있습니다. 현지 통화는 **측정값 선택** 페이지에서 선택한 측정값에 대한 트랜잭션이 저장되는 통화입니다. 보고 통화는 **측정값 선택** 페이지에서 선택한 트랜잭션이 번역되는 통화입니다.  

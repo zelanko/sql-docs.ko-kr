@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212773"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
   전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
@@ -62,13 +61,13 @@ ms.locfileid: "36185387"
 ##  <a name="tuning"></a> 전체 텍스트 인덱스의 성능 튜닝  
  전체 텍스트 인덱스의 성능을 극대화하려면 다음과 같은 방법을 구현하는 것이 가장 좋습니다.  
   
--   모든 프로세서 또는 코어를 최대로 사용 하려면 설정 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' 시스템에 Cpu의 수입니다. 이 구성 옵션에 대한 자세한 내용은 [max full-text crawl range 서버 구성 옵션](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)을 참조하세요.  
+-   를 사용 하려면 모든 프로세서 또는 코어를 최대로 설정 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' 시스템에서 Cpu의 수입니다. 이 구성 옵션에 대한 자세한 내용은 [max full-text crawl range 서버 구성 옵션](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)을 참조하세요.  
   
 -   기본 테이블에 클러스터형 인덱스가 있는지 확인합니다. 클러스터형 인덱스의 첫 번째 열에 정수 데이터 형식을 사용합니다. 클러스터형 인덱스의 첫 번째 열에 GUID를 사용하지 않아야 합니다. 클러스터형 인덱스에 다중 범위 채우기가 있을 경우 채우기 속도가 가장 빨라질 수 있습니다. 전체 텍스트 키로 사용하는 열을 정수 데이터 형식으로 설정하는 것이 좋습니다.  
   
 -   [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) 문을 사용하여 기본 테이블의 통계를 업데이트합니다. 더욱 중요한 것은 전체 채우기에 대한 클러스터형 인덱스 또는 전체 텍스트 키의 통계를 업데이트하는 것입니다. 이렇게 하면 다중 범위 채우기에서 테이블에 적절한 파티션을 생성하는 데 도움이 됩니다.  
   
--   보조 인덱스를 작성 한 `timestamp` 증분 채우기의 성능을 개선 하려면 열입니다.  
+-   보조 인덱스를 작성 한 `timestamp` 증분 채우기의 성능을 개선 하려는 경우에 열의 합니다.  
   
 -   대형 다중 CPU 컴퓨터에 대해 전체 채우기를 수행하려면 fdhost.exe 프로세스 및 운영 체제 용도로 메모리를 충분히 남기도록 `max server memory` 값을 설정하여 버퍼 풀 크기를 임시로 제한하는 것이 좋습니다. 자세한 내용은 이 항목 후반에 나오는 "필터 데몬 호스트 프로세스(fdhost.exe)의 메모리 요구 사항 예상"을 참조하십시오.  
   
@@ -128,32 +127,32 @@ ms.locfileid: "36185387"
 -   *M*, 최적의 `max server memory` 설정 합니다.  
   
 > [!IMPORTANT]  
->  수식에 대 한 중요 한 정보를 참조 하십시오. <sup>1</sup>, <sup>2</sup>, 및 <sup>3</sup>아래, 합니다.  
+>  수식에 대 한 중요 한 정보를 참조 하세요 <sup>1</sup>를 <sup>2</sup>, 및 <sup>3</sup>아래.  
   
-|플랫폼|Mb에서 fdhost.exe 메모리 요구 사항을 예측-*F*<sup>1</sup>|최대 서버 메모리 계산 수식-*M*<sup>2</sup>|  
+|플랫폼|Fdhost.exe 메모리 요구 사항 (mb) 예측-*F*<sup>1</sup>|Max server memory 계산 수식-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 최소 (** *T* **,** 2000 **) –*`F`*–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **최소값 = (** *T* **하십시오** 2000 **) –*`F`*–** 500|  
 |x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup> 여러 전체 채우기가 진행 중인 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 같이 개별적으로 *F1*, *F2*, 등입니다. 그런 다음, *M*을 *T***–** sigma **(***F*i**)**로 계산합니다.  
+ <sup>1</sup> 여러 전체 채우기가 진행에서 하는 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 개별적으로 *F1*하십시오 *F2*등입니다. 그런 다음, *M*을 *T***–** sigma **(***F*i**)**로 계산합니다.  
   
- <sup>2</sup> 500MB는 시스템의 다른 프로세스에 필요한 메모리의 예상입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
+ <sup>2</sup> 500MB는 시스템의 다른 프로세스에 필요한 메모리를 예상 합니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
   
- <sup>3</sup> . *ism_size* x64 8MB로 가정 플랫폼입니다.  
+ <sup>3</sup> .* ism_size* x64 8mb로 가정 플랫폼입니다.  
   
- **예: fdhost.exe의 메모리 요구 사항 예상**  
+ **예제: fdhost.exe에 필요한 예상 메모리 요구 사항 예상**  
   
  이 예는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 AMD64 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 계산합니다. 탐색 범위 수는 `8`입니다.  
   
  `F = 8*10*8=640`  
   
- 다음 계산에 대 한 최적의 값을 가져옵니다. `max server memory`-*M*합니다. *이*시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
+ 다음 계산에 대 한 최적의 값을 가져옵니다 `max server memory`—*M*합니다. *이*시스템에서 사용 가능한 실제 총 메모리(MB)(*T*)는 `8192`입니다.  
   
  `M = 8192-640-500=7052`  
   
  **예: 최대 서버 메모리 설정**  
   
- 사용 하 여이 예제는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 및 [재구성](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 설정 하는 문을 `max server memory` 계산 되는 값을 *M* 앞의 예제 , `7052`:  
+ 이 예제에서는 합니다 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 및 [다시 구성](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 설정 하는 문을 `max server memory` 계산 되는 값을 *M* 앞의 예제 , `7052`:  
   
 ```  
 USE master;  
@@ -207,7 +206,7 @@ GO
   
  보안상의 이유로 필터는 필터 데몬 호스트 프로세스에 의해 로드됩니다. 서버 인스턴스는 모든 다중 스레드 필터에 대해 다중 스레드 프로세스를 사용하고 모든 단일 스레드 필터에 대해 단일 스레드 프로세스를 사용합니다. 다중 스레드 필터를 사용하는 문서에 단일 스레드 필터를 사용하는 포함 문서가 있을 경우 전체 텍스트 엔진은 해당 포함 문서에 대해 단일 스레드 프로세스를 시작합니다. 예를 들어 PDF 문서가 포함된 Word 문서가 있을 경우 전체 텍스트 엔진은 Word 콘텐츠에 대해 다중 스레드 프로세스를 사용하고 PDF 콘텐츠에 대해 단일 스레드 프로세스를 시작합니다. 그러나 이러한 환경에서는 단일 스레드 필터가 제대로 작동하지 않을 수 있으며 이로 인해 필터링 프로세스가 불안정해질 수 있습니다. 이러한 포함 작업이 자주 수행되는 특정 환경에서는 필터링 프로세스 불안정화로 인해 해당 프로세스가 충돌할 수 있습니다. 충돌이 발생하면 전체 텍스트 엔진은 실패한 문서(예: 포함된 PDF 콘텐츠가 있는 Word 문서)를 단일 스레드 필터링 프로세스로 모두 다시 라우팅합니다. 다시 라우팅 작업이 자주 발생하면 전체 텍스트 인덱싱 프로세스의 성능이 저하됩니다.  
   
- 이 문제를 해결하려면 컨테이너 문서(이 경우 Word)의 필터를 단일 스레드 필터로 표시합니다. 필터 레지스트리 값을 변경하여 지정된 필터를 단일 스레드 필터로 표시할 수 있습니다. 단일 스레드 필터로 필터를 표시 하려면 설정 해야는 **ThreadingModel** 를 필터에 대 한 레지스트리 값 `Apartment Threaded`합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](http://go.microsoft.com/fwlink/?LinkId=209159)백서를 참조하세요.  
+ 이 문제를 해결하려면 컨테이너 문서(이 경우 Word)의 필터를 단일 스레드 필터로 표시합니다. 필터 레지스트리 값을 변경하여 지정된 필터를 단일 스레드 필터로 표시할 수 있습니다. 필터는 단일 스레드 필터로 표시를 설정 해야 합니다 **ThreadingModel** 필터 레지스트리 값 `Apartment Threaded`합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](http://go.microsoft.com/fwlink/?LinkId=209159)백서를 참조하세요.  
   
   
   

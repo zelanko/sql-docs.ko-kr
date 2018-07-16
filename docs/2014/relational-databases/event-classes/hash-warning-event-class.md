@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 564b64754a1267ad16d025c6ed56b17d859a24b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b5ab99db22c29f6069f7b218b2a2c8d498da537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209073"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 이벤트 클래스
   Hash Warning 이벤트 클래스는 해시 연산 중 해시 재귀 또는 해시 중단(해시 재귀 한도 초과) 발생을 모니터링하는데 사용할 수 있습니다.  

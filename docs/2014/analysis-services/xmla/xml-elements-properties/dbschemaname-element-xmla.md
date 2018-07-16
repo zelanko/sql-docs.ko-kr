@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7fde4fe223ae667d1fdc90c51b3df9be7ce37207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ca44d9130da56f8e1dc181e3d0de5a6cff808feb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323273"
 ---
 # <a name="dbschemaname-element-xmla"></a>DbSchemaName 요소(XMLA)
   [DbTableName](tablenotification-element-xmla.md) 요소로 식별된 테이블의 부모 [TableNotification](name-element-xmla.md) 요소에서 사용하는 스키마 이름을 포함합니다.  

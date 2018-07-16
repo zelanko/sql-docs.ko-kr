@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243493"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 언어에 사용할 수 있는 다양한 내장 함수를 제공합니다. 이러한 함수를 사용하여 표준 통계 계산을 비롯하여 계층에서의 멤버 이동에 이르는 모든 작업을 수행할 수 있습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |권한 설정|Description|  
 |------------------------|-----------------|  
 |`Safe`|내부 계산 권한을 부여합니다. 이 권한 집합은 .NET Framework의 보호된 리소스에 대해서는 액세스 권한을 할당하지 않습니다. `PermissionSet` 속성에 아무 것도 지정되지 않은 경우 어셈블리의 기본 권한 집합입니다.|  
-|`ExternalAccess`|과 동일한 액세스를 제공는 `Safe` 외부 시스템 리소스에 액세스 하는 추가 기능을 사용 하 여 설정 합니다. 이 권한 집합은 이 시나리오상에서 유효한 것이며 보안을 보장하지는 않습니다. 그러나 안정성은 유지됩니다.|  
+|`ExternalAccess`|사용자와 동일한 액세스를 제공 합니다 `Safe` 외부 시스템 리소스를 액세스 하는 추가 기능을 사용 하 여 설정 합니다. 이 권한 집합은 이 시나리오상에서 유효한 것이며 보안을 보장하지는 않습니다. 그러나 안정성은 유지됩니다.|  
 |`Unsafe`|제한을 두지 않습니다. 이 권한 집합으로 실행되는 관리 코드에 대해서는 어떠한 보안이나 안정성도 보장되지 않습니다. 이 신뢰 수준에서 실행되는 코드에는 관리자가 포함한 사용자 지정 권한을 비롯하여 모든 권한이 부여됩니다.|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 CLR를 호스팅하는 경우에는 스택 워크(stack-walk) 기반의 권한 확인이 네이티브 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 코드와의 경계에서 중지됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 어셈블리의 모든 관리 코드는 항상 위의 3가지 사용 권한 범주 중 하나에 속합니다.  
@@ -103,13 +103,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  COM 또는 관리되지 않는 어셈블리 루틴은 CLR 보안 모델을 지원하지 않습니다.  
   
 ### <a name="impersonation"></a>가장  
- 관리 코드가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 외부의 리소스에 액세스할 때마다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 어셈블리의 `ImpersonationMode` 속성 설정과 관련된 규칙을 따라 적절한 Windows 보안 컨텍스트에서 액세스가 이루어지도록 합니다. 때문에 사용 하 여 어셈블리는 `Safe` 권한 설정을 외부 리소스에 액세스할 수 없습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 이러한 규칙은 사용 하 여 어셈블리에만 적용할 수는 `ExternalAccess` 및 `Unsafe` 사용 권한 설정 합니다.  
+ 관리 코드가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 외부의 리소스에 액세스할 때마다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 어셈블리의 `ImpersonationMode` 속성 설정과 관련된 규칙을 따라 적절한 Windows 보안 컨텍스트에서 액세스가 이루어지도록 합니다. 때문에 사용 하 여 어셈블리를 `Safe` 권한 설정은 외부 리소스에 액세스할 수 없습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 이러한 규칙은 사용 하 여 어셈블리에만 적용할 수는 `ExternalAccess` 및 `Unsafe` 권한 설정 합니다.  
   
 -   현재의 실행 컨텍스트가 Windows 인증 로그인과 일치하며 원래 호출자의 컨텍스트와 동일한 경우(즉, 중간에 EXECUTE AS가 없는 경우) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 리소스에 액세스하기 전에 먼저 Windows 인증 로그인을 가장합니다.  
   
 -   중간에 EXECUTE AS가 있어서 컨텍스트가 원래 호출자의 컨텍스트와 다르게 변경된 경우에는 외부 리소스에 액세스할 수 없습니다.  
   
- `ImpersonationMode` 속성 설정할 수 있습니다 `ImpersonateCurrentUser` 또는 `ImpersonateAnonymous`합니다. 기본 설정은 `ImpersonateCurrentUser`, 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행 합니다. 경우는 `ImpersonateAnonymous` 설정을 사용 하는 경우 실행 컨텍스트가 Windows 로그인 사용자 계정인 IUSER_에 해당*servername* 서버에 있습니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
+ 합니다 `ImpersonationMode` 속성 설정할 수 있습니다 `ImpersonateCurrentUser` 또는 `ImpersonateAnonymous`합니다. 기본 설정 `ImpersonateCurrentUser`, 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행 합니다. 경우는 `ImpersonateAnonymous` 설정을 사용 하면 실행 컨텍스트가 Windows 로그인 사용자 계정인 IUSER_ 해당*servername* 서버의 합니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
   
 ### <a name="application-domains"></a>응용 프로그램 도메인  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 응용 프로그램 도메인을 직접 노출시키지 않습니다. 동일한 응용 프로그램 도메인에서 실행되는 어셈블리 집합으로 인해 응용 프로그램 도메인은 .NET Framework의 `System.Reflection` 네임스페이스를 사용하거나 다른 방법으로 실행 시 서로를 검색할 수 있으며 런타임에 바인딩된 방식으로 응용 프로그램을 호출할 수 있습니다. 이러한 호출에 대해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 권한 부여 기반의 보안 방식에서 사용되는 권한 확인이 수행됩니다.  
@@ -117,7 +117,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  응용 프로그램 도메인 경계와 각 도메인에 속하는 어셈블리는 구현에 따라 달라지므로 동일한 응용 프로그램 도메인 내에서 어셈블리를 찾는 방법에만 의존해서는 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [저장된 프로시저에 대 한 보안을 설정합니다.](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [저장된 프로시저의 보안 설정](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [저장 프로시저 정의](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

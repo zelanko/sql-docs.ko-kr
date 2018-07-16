@@ -1,5 +1,5 @@
 ---
-title: 쿼리 요소 (ASSL) | Microsoft Docs
+title: 요소 (ASSL) 쿼리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fac4774f6e8a2694ee79691a84f3333ab1a4226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2917bfe5a0050a3e3baa17838dffc1e1d94a0172
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308413"
 ---
 # <a name="query-element-assl"></a>Query 요소(ASSL)
   알림을 위해 실행할 쿼리의 텍스트를 포함합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36091609"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `Query` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.QueryNotification>합니다.  
+ 부모에 해당 하는 요소가 `Query` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.QueryNotification>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ProactiveCachingQueryBinding 데이터 형식 &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

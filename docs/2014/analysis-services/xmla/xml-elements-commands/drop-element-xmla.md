@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Drop element
 ms.assetid: a5d21db3-743a-4958-b16d-b6816a5ee787
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64f6fd75c3c5032c035ca4af6b9950a0de1e6ddc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8b77be1023fdc7145a367c200efb1e653e767b7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326493"
 ---
 # <a name="drop-element-xmla"></a>Drop 요소(XMLA)
   차원에서 특성 멤버를 삭제합니다.  
@@ -63,12 +63,12 @@ ms.locfileid: "36186154"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[DeleteWithDescendants](../xml-elements-properties/deletewithdescendants-element-xmla.md), [개체](../xml-elements-properties/object-element-dimension-xmla.md), [위치](../xml-elements-properties/where-element-xmla.md)|  
+|자식 요소|[DeleteWithDescendants](../xml-elements-properties/deletewithdescendants-element-xmla.md)하십시오 [개체](../xml-elements-properties/object-element-dimension-xmla.md), [위치](../xml-elements-properties/where-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `Drop` 명령은 쓰기 가능 차원에서 특성 멤버를 삭제합니다.  
   
- 구성원을 삭제 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
+ 구성원을 삭제 하는 방법에 대 한 자세한 내용은 참조 하세요. [삽입, 업데이트 및 삭제 하는 멤버 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소를 삽입 &#40;XMLA&#41;](insert-element-xmla.md)   

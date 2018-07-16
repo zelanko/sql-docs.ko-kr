@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82901acbfe20a0ec475fc859935c8abdf472b300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289129"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자(Master Data Services 구성 관리자)
   **데이터베이스 메일 프로필 및 계정 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 대한 데이터베이스 메일 프로필 및 데이터베이스 메일 계정을 만들 수 있습니다. 이 프로필은 비즈니스 규칙 유효성 검사가 실패한 경우 사용자와 그룹에 전자 메일로 알리는 데 사용됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36185010"
 |**전자 메일 주소**|계정에 대한 전자 메일 주소의 이름을 입력합니다. 이 주소는 메일을 보내는 메일 주소이며 *email_name*@*domain_name* 이메일 주소의 예는 sales@contoso.com입니다.|  
 |**표시 이름**|선택적 설정입니다. 이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름(예: Contoso Sales Group)을 입력합니다.|  
 |**회신 전자 메일 주소**|선택적 설정입니다. 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 회신 이메일 주소의 예는 admin@contoso.com입니다.|  
-|**SMTP 서버**|계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 예제에서는 SMTP 서버 형식을 사용할 `smtp.` *< company_name >*`.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.|  
+|**SMTP 서버**|계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 서버 형식 예 SMTP `smtp.` *< company_name >*`.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.|  
 |**포트 번호**|이 계정에 대한 SMTP 서버의 포트 번호를 입력합니다. 기본 SMTP 포트는 25입니다.|  
 |**이 서버에는 보안 연결(SSL)이 필요합니다.**|SSL(Secure Sockets Layer)을 사용하여 통신을 암호화합니다.|  
   

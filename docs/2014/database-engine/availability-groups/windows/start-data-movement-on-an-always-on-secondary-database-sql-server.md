@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 90fac7dfcd395b3a788360232c872c830259ba0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cbec6a7aa6c1ac92dbf64fe018800a223084e4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252795"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>AlwaysOn 보조 데이터베이스에서 데이터 이동 시작(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹에 데이터베이스를 추가한 후 데이터 동기화를 시작하는 방법에 대해 설명합니다. 각 새로운 주 복제본에 대해 보조 복제본을 호스팅하는 서버 인스턴스에서 보조 데이터베이스를 준비해야 합니다. 그런 다음 이러한 각 보조 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "36186156"
   
          **자세한 내용은 다음을 참조하세요.**  
   
-         [AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션하기 위한 필수 조건 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+         [AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션에 대 한 필수 구성 요소 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   

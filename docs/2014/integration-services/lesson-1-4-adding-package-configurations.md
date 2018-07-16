@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308123"
 ---
 # <a name="step-4-adding-package-configurations"></a>4단계: 패키지 구성 추가
   이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "36082722"
   
 5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-6.  구성 유형 선택 페이지에서 선택 **XML 구성 파일** 에 **구성 유형을** 목록에서 선택 된 **구성 위치가 환경 변수에저장됨** 옵션과 형식 `DataTransfer,` 선택 또는 **DataTransfer** 목록에서 환경 변수입니다.  
+6.  구성 유형 선택 페이지에서 선택 **XML 구성 파일** 에 **구성 유형** 목록에서 선택 된 **구성 위치가 환경 변수에저장됨** 유형과 옵션을 `DataTransfer,` 하거나 선택 합니다 **DataTransfer** 목록에서 환경 변수입니다.  
   
     > [!NOTE]  
     >  이 환경 변수를 목록에서 사용할 수 있게 하려면 변수를 추가한 후에 컴퓨터를 다시 시작해야 할 수도 있습니다. 컴퓨터를 다시 시작하지 않으려면 환경 변수의 이름을 입력합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "36082722"
   
 5.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-6.  구성 유형 선택 페이지에서 선택 **XML 구성 파일** 에 **구성 유형을** 목록에서 선택 된 **구성 위치가 환경 변수에저장됨** 옵션을 입력 `LoadXMLData` 하거나 선택 된 `LoadXMLData` 목록에서 환경 변수입니다.  
+6.  구성 유형 선택 페이지에서 선택 **XML 구성 파일** 에 **구성 유형** 목록에서 선택 된 **구성 위치가 환경 변수에저장됨** 옵션, 입력 `LoadXMLData` 누르거나는 `LoadXMLData` 목록에서 환경 변수입니다.  
   
     > [!NOTE]  
     >  이 환경 변수를 목록에서 사용할 수 있게 하려면 변수를 추가한 후에 컴퓨터를 다시 시작해야 할 수도 있습니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "36082722"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [5단계: 업데이트된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [패키지 구성](../../2014/integration-services/package-configurations.md)   

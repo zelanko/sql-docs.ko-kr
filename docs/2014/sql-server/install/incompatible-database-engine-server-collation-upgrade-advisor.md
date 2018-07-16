@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5a81084ff6eba37d8a6fcc2643a760d879dcf13c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e182df78fc7faae8a50092fd51a8f2c0964fe2bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286649"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>호환되지 않는 데이터베이스 엔진 서버 데이터 정렬(업그레이드 관리자)
-  업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 인스턴스를 사용 하 여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  
+  업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 사용 하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  
   
 ||  
 |-|  
@@ -32,9 +32,9 @@ ms.locfileid: "36092320"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- 업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 인스턴스를 사용 하 여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  
+ 업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 사용 하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 공유 서비스 아키텍처를 사용 합니다. SharePoint는 대/소문자를 구분하도록 구성된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 서버 데이터 정렬 또는 이진 서버 데이터 정렬을 지원하지 않습니다. 호환되지 않는 데이터 정렬에는 기본적으로 대/소문자 구분되는 데이터 정렬 또는 기본적으로 호환되지만 다음 데이터 정렬 지정자 중 하나로 구성된 이진 및 기본 데이터 정렬을 포함합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 공유 서비스 아키텍처를 활용 합니다. SharePoint는 대/소문자를 구분하도록 구성된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 서버 데이터 정렬 또는 이진 서버 데이터 정렬을 지원하지 않습니다. 호환되지 않는 데이터 정렬에는 기본적으로 대/소문자 구분되는 데이터 정렬 또는 기본적으로 호환되지만 다음 데이터 정렬 지정자 중 하나로 구성된 이진 및 기본 데이터 정렬을 포함합니다.  
   
 -   **이진**  
   

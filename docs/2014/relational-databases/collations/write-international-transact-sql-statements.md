@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
 - Transact-SQL international considerations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cbd8342f74668ba52ff837336bd9b245480f489f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 236948c23164cd0890e7c4fc4455cbc87227d792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256979"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 응용 프로그램을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36186766"
   
     -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저, 트리거를 사용하는 응용 프로그램에서는 분리되지 않은 숫자 문자열을 사용해야 합니다. 예를 들어 19980924와 같은 *yyyymmdd* 를 사용합니다.  
   
-    -   다른 Api를 사용 하는 응용 프로그램 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장된 프로시저 및 트리거 문을 사용 해야 CONVERT 명시적 스타일 매개 변수가 있는 간의 모든 변환에는 `time`, `date`, `smalldate`, `datetime`, **datetime2**, 및 `datetimeoffset` 데이터 형식 및 문자열 데이터 형식이 있습니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
+    -   다른 Api를 사용 하는 응용 프로그램 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장된 프로시저 및 트리거 사용할지 CONVERT 문을 명시적 스타일 매개 변수가 있는 간의 모든 변환에는 `time`를 `date`를 `smalldate`, `datetime`, **datetime2**, 및 `datetimeoffset` 데이터 형식과 문자열 데이터 형식입니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
   
         ```  
         SELECT *  

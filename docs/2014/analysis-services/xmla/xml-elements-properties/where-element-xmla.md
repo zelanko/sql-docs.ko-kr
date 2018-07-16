@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Where element
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4e63d2ecd6f20d374c6746c7d3bc77ad455f1ef6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44d6242d0c815ee8ec150936a5e41ad12de4a59d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218073"
 ---
 # <a name="where-element-xmla"></a>Where 요소(XMLA)
   부모 [Drop](../xml-elements-commands/drop-element-xmla.md) 또는 [Update](../xml-elements-commands/update-element-xmla.md) 명령에 사용되는 필터 조건을 정의합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36186837"
 |자식 요소|[특성](attributes-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 `Drop` 명령에는 `Where` 요소와 함께 [DeleteWithDescendants](deletewithdescendants-element-xmla.md) 요소를 삭제 될 특성 멤버의 범위를 식별 합니다.  
+ 에 대 한 `Drop` 명령 합니다 `Where` 요소와 함께 합니다 [DeleteWithDescendants](deletewithdescendants-element-xmla.md) 삭제 될 특성 멤버의 범위를 식별 하는 요소.  
   
  `Update` 명령의 경우 `Where` 요소는 업데이트될 특성 멤버의 범위를 식별합니다. 부모 `Attributes` 명령의 `Update` 컬렉션과 `Attributes` 요소의 `Where` 컬렉션에 포함된 특성의 조합을 사용하여 여러 특성 멤버를 업데이트할 수 있습니다.  
   

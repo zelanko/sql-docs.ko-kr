@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table constraints [SQL Server]
 - attaching check constraints
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e07ce6ea4ad1ae0bbe53119c253ae6282a4e1cb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e355da0fcc4e94386ca19e2ff5c6ace928216953
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262339"
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 하나 이상의 열에 사용할 수 있는 데이터 값을 지정할 수 있도록 테이블에 CHECK 제약 조건을 만들 수 있습니다.  

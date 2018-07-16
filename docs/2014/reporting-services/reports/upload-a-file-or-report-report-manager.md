@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b30d6a4e0f9359b53ac7182879903484fbd54c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2875701f8b058974df7abf993b1bcc44bf8d08bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315213"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>파일 또는 보고서 업로드(보고서 관리자)
   보고서 관리자에서는 업로드 기능을 제공하므로 클라이언트 응용 프로그램에서 보고서, 모델 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36078761"
   
 ## <a name="see-also"></a>관련 항목  
  [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [페이지 콘텐츠 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
+ [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
  [파일 업로드 페이지&#40;보고서 관리자&#41;](../upload-file-page-report-manager.md)   
  [폴더에 파일 업로드](../report-server/upload-files-to-a-folder.md)  
   

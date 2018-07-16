@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 046674dc7c579a99e3d9fd90a86c466001c270c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7846fa9eb88a91a945c787cfec0fe19d0c520cf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300983"
 ---
 # <a name="mdschemameasuregroups-rowset"></a>MDSCHEMA_MEASUREGROUPS 행 집합
   데이터베이스 내의 측정값 그룹을 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `MDSCHEMA_MEASUREGROUPS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `MDSCHEMA_MEASUREGROUPS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

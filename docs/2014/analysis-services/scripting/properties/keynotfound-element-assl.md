@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 545ae163b4dda53adb60f5300e7f8b75cf926d52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281809"
 ---
 # <a name="keynotfound-element-assl"></a>KeyNotFound 요소(ASSL)
-  지정 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 참조 무결성 오류가 발생할 때 응답 합니다.  
+  지정 하는 방법을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 참조 무결성 오류가 발생할 때 응답 합니다.  
   
 ## <a name="syntax"></a>구문  
   

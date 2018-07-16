@@ -15,21 +15,21 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261539"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 클라이언트 기능
   ADOMD.NET은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 데이터 공급자와 마찬가지로 응용 프로그램과 데이터 원본을 연결하는 데 사용됩니다. 하지만 ADOMD.NET은 다른 .NET Framework 데이터 공급자와는 달리 분석 데이터에 사용됩니다. 분석 데이터에 대한 작업을 수행하기 위해 ADOMD.NET에서는 다른 .NET Framework 데이터 공급자와는 매우 다른 기능을 지원합니다. ADOMD.NET을 사용하면 데이터를 검색할 수 있을 뿐 아니라 메타데이터를 검색하고 분석 데이터 저장소의 구조를 변경할 수도 있습니다.  
   
  **메타 데이터 검색**  
- 응용 프로그램에서는 스키마 행 집합이나 개체 모델을 사용한 메타데이터 검색을 통해 데이터 원본에서 검색할 수 있는 데이터에 대한 추가 정보를 확인할 수 있습니다. 사용 가능한 각 KPI(핵심 성과 지표)의 유형, 큐브의 차원, 마이닝 모델에 필요한 매개 변수 등의 정보를 모두 검색할 수 있습니다. 메타 데이터는 가장 중요 한 *동적* 형식, 깊이, 및 데이터의 범위를 검색할 수를 결정 하는 사용자 입력을 요구 하는 응용 프로그램입니다. 이러한 응용 프로그램의 예로는 쿼리 분석기, Microsoft Excel 및 기타 쿼리 도구가 있습니다. 메타 데이터는 비교적 중요 하지 *정적* 미리 정의 된 일련의 작업을 수행 하는 응용 프로그램입니다.  
+ 응용 프로그램에서는 스키마 행 집합이나 개체 모델을 사용한 메타데이터 검색을 통해 데이터 원본에서 검색할 수 있는 데이터에 대한 추가 정보를 확인할 수 있습니다. 사용 가능한 각 KPI(핵심 성과 지표)의 유형, 큐브의 차원, 마이닝 모델에 필요한 매개 변수 등의 정보를 모두 검색할 수 있습니다. 메타 데이터는 가장 중요 한 *동적* 응용 프로그램 형식, 깊이 및 범위 데이터를 검색할 확인 하려면 사용자 입력이 필요 합니다. 이러한 응용 프로그램의 예로는 쿼리 분석기, Microsoft Excel 및 기타 쿼리 도구가 있습니다. 메타 데이터는 비교적 중요 *정적* 미리 정의 된 일련의 작업을 수행 하는 응용 프로그램입니다.  
   
  자세한 내용은: [분석 데이터 원본에서 메타 데이터 가져오기](retrieving-metadata-from-an-analytical-data-source.md)합니다.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "36187296"
   
  자세한 내용은: [분석 데이터 원본에서 데이터 검색](retrieving-data-from-an-analytical-data-source.md)합니다.  
   
- **분석 데이터의 구조 변경**  
+ **분석 데이터의 구조를 변경합니다.**  
  ADOMD.NET을 사용하여 분석 데이터 저장소의 구조를 실제로 변경할 수도 있습니다. 이 작업은 일반적으로 AMO(Analysis Management Objects) 개체 모델을 통해 수행되지만 ADOMD.NET을 사용하여 ASSL(Analysis Services Scripting Language) 명령을 보내 서버의 개체를 만들거나 변경하거나 삭제할 수도 있습니다.  
   
- 자세한 내용은: [실행 명령에 대해는 분석 데이터 원본](executing-commands-against-an-analytical-data-source.md), [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Analysis Services Scripting 언어 &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 자세한 내용은: [실행 명령에 대해는 분석 데이터 원본](executing-commands-against-an-analytical-data-source.md), [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)하십시오 [Analysis Services Scripting 언어 &#40;ASSL&#41; 참조](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  메타데이터 검색, 데이터 검색 및 데이터 구조 변경은 각각 일반적인 ADOMD.NET 응용 프로그램의 워크플로에서 특정 시점에 수행됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36187296"
   
 3.  그런 다음 응용 프로그램에서 서버에 대해 명령을 실행합니다. 이 명령은 추가 메타데이터를 검색하거나, 데이터를 검색하거나, 데이터베이스를 수정하기 위한 명령일 수 있습니다. 응용 프로그램에서는 이러한 모든 태스크에 대해 미리 결정한 쿼리를 사용하거나 새로 검색된 메타데이터를 사용하여 추가 쿼리를 만들 수 있습니다.  
   
-     자세한 내용은: [분석 데이터 원본에서 메타 데이터 가져오기](retrieving-metadata-from-an-analytical-data-source.md), [분석 데이터 원본에서 데이터 검색](retrieving-data-from-an-analytical-data-source.md), [실행 명령에 대해는 분석 데이터 원본](executing-commands-against-an-analytical-data-source.md)  
+     자세한 내용은: [분석 데이터 원본에서 메타 데이터 가져오기](retrieving-metadata-from-an-analytical-data-source.md)를 [분석 데이터 원본에서 데이터 검색](retrieving-data-from-an-analytical-data-source.md), [실행 명령에 대해는 분석 데이터 원본](executing-commands-against-an-analytical-data-source.md)  
   
 4.  서버로 명령을 보낸 후 서버에서는 클라이언트에 메타데이터나 데이터를 반환하기 시작합니다. 이 정보는 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 또는 `System.XmlReader` 개체를 사용하여 볼 수 있습니다.  
   

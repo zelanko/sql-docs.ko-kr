@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed20cc054b20ae22296576c6558fc21f0a23ef93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bbc61bde81da8f32f71a70764870648589d89a4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188350"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Memory Manager 개체
   Microsoft **의** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 서버 메모리의 전반적인 사용량을 모니터링하는 카운터를 제공합니다. 서버 메모리의 전반적인 사용량을 모니터링하여 사용자 작업 및 리소스 사용량을 측정하면 성능 병목 상태가 발생하는지 확인할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 사용하는 메모리를 모니터링하면 다음 사항을 확인할 수 있습니다.  

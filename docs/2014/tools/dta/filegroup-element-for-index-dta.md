@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f1fa6dab61b89954624d6ba546e7ab97479e546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fad6406d6a719ebd33f48a4cd7c0cf7c2c0e7122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244113"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Index의 Filegroup 요소(DTA)
   사용자 지정 구성에서 인덱스를 만들려는 파일 그룹을 지정합니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "36187323"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`길이 제한 합니다.|  
+|**데이터 형식 및 길이**|`string`길이 제한 없음된.|  
 |**기본값**|없음|  
-|**발생 빈도**|(선택 사항) 각각에 대해 한 번만 사용할 수 `Index` 요소입니다. 경우에이 요소를 사용할 수 없습니다는 `PartitionScheme` 및 `PartitionColumn` 요소에 대해 지정 된 된 `Index` 요소입니다.|  
+|**발생 빈도**|(선택 사항) 각각에 대 한 번만 사용할 수 있습니다 `Index` 요소입니다. 경우에이 요소를 사용할 수 없습니다는 `PartitionScheme` 하 고 `PartitionColumn` 요소에 대해 지정 된는 `Index` 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

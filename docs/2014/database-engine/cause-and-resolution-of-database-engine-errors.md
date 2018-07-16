@@ -1,5 +1,5 @@
 ---
-title: 원인 및 해결 방법의 데이터베이스 엔진 오류 | Microsoft Docs
+title: 원인 및 해결 방법 데이터베이스 엔진 오류 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 04d3a2bb154f59dca3a7a86f1ccec7940f4613fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60a77fbcc0395cc3ac5b7fc3007479ae872f7c2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328411"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>데이터베이스 엔진 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssDE](../includes/ssde-md.md)]과 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다.  

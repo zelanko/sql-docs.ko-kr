@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
 - result sets [SQL Server], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 24f72c0da16bb9c0fe7500e6381eba63fc40859c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dab0c64711da6e8e975920aa3c584f76a0713881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301313"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>쿼리 결과에서 열 제거(Visual Database Tools)
   선택 쿼리에 사용 중인 열을 결과 집합에 표시하지 않으려는 경우 즉, 쿼리의 선택 목록에 포함하지 않으려는 경우 해당 열을 출력에서 제거할 수 있습니다. 쿼리의 출력에서 열을 제거한 후에도 이 열을 검색 조건에 사용하거나 정렬 필드로 사용할 수 있습니다.  

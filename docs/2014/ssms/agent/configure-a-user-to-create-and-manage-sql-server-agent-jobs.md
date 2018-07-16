@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
 - jobs [SQL Server Agent], user configuration
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - proxy accounts [SQL Server Agent]
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e39427bf18fafd44bf48eb869d11d901a4dcea8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2804168db65322d9c51219dad044ac0fe211163b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234353"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들거나 실행하도록 사용자를 구성하는 방법에 대해 설명합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36185318"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할에 추가하려는 로그인을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-4.  에 **사용자 매핑** 의 페이지는 **로그인 속성** 대화 상자를 포함 하는 행 선택 `msdb`합니다.  
+4.  에 **사용자 매핑** 페이지의 **로그인 속성** 대화 상자를 포함 하는 행을 선택 `msdb`합니다.  
   
 5.  **데이터베이스 역할 멤버 자격: msdb**에서 적합한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할을 선택합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36185318"
   
 3.  **프록시** 를 마우스 오른쪽 단추로 클릭하고 **새 프록시**를 선택합니다.  
   
-4.  **새 프록시 계정** 대화 상자의 **일반** 페이지에서 새 프록시의 프록시 이름, 자격 증명 이름 및 설명을 지정합니다. SQL Server 에이전트 프록시를 만들기 전에 자격 증명을 먼저 만들어야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 참조 [자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md) 및 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)합니다.  
+4.  **새 프록시 계정** 대화 상자의 **일반** 페이지에서 새 프록시의 프록시 이름, 자격 증명 이름 및 설명을 지정합니다. SQL Server 에이전트 프록시를 만들기 전에 자격 증명을 먼저 만들어야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [자격 증명을 만듭니다](../../relational-databases/security/authentication-access/create-a-credential.md) 하 고 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).  
   
 5.  이 프록시에 대한 적절한 하위 시스템을 선택합니다.  
   

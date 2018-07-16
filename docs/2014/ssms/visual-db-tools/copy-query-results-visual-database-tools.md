@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3400a487a7e5775908cdd4c1dd69f8bb134e2c23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 200fd0b8db6b3816cd6870c153ca16e09aabfa9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284359"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>쿼리 결과 복사(Visual Database Tools)
   **결과** 창에서 탭으로 구분된 텍스트로 결과 집합을 복사할 수 있습니다. 전체 결과 집합, 연속된 모든 숫자 또는 연속되지 않은 행이나 셀을 복사할 수 있습니다.  

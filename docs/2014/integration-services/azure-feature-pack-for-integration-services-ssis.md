@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281739"
 ---
 # <a name="azure-feature-pack"></a>Azure 기능 팩
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.
@@ -69,13 +69,13 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
     
     -   [Azure Data Lake Store 대상](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 열거자 & ADLS File 열거자를 제공 합니다. [Foreach Loop Container](control-flow/foreach-loop-container.md)을 참조하세요.  
+-   Azure Blob 열거자 및 ADLS File 열거자입니다. [Foreach Loop Container](control-flow/foreach-loop-container.md)을 참조하세요.  
   
  
 ## <a name="download-the-feature-pack"></a>기능 팩 다운로드  
 Azure용 SSIS(SQL Server Integration Services) 기능 팩을 다운로드합니다.  
   
--   [Microsoft SQL Server 2014 Integration Services Azure 용 기능 팩](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 기능 팩을 설치하기 전에 다음과 같은 필수 조건을 설치해야 합니다.  
@@ -98,17 +98,17 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩을 다운로드합니�
   
 5.  Azure HDInsight Blob 다운로드 태스크를 사용하여 Azure Blob 저장소에서 Pig/Hive 출력 데이터를 다운로드합니다.  
   
- ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "BigDataScenario-AzureConnector-SSIS")  
   
 ### <a name="cloud-data-archiving"></a>클라우드 데이터 보관  
  SSIS 패키지의 Azure Blob 대상을 사용하여 Azure Blob 저장소에 출력 데이터를 쓰거나 Azure Blob 원본을 사용하여 Azure Blob 저장소에서 데이터를 읽습니다.  
   
- ![SSIS AzureConnector-CloudArchive 1](media/ssis-azureconnector-cloudarchive-1.png "SSIS AzureConnector-CloudArchive 1")  
+ ![SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "SSIS-AzureConnector-CloudArchive-1")  
   
  ![SSIS AzureConnector-CloudArchive 2](media/ssis-azureconnector-cloudarchive-2.png "SSIS AzureConnector-CloudArchive 2")  
   
  또한 Azure Blob 열거자에서 Foreach 루프 컨테이너를 사용하여 다중 blob 파일의 데이터를 처리합니다.  
   
- ![SSIS AzureConnector-CloudArchive 3](media/ssis-azureconnector-cloudarchive-3.png "SSIS AzureConnector-CloudArchive 3")  
+ ![SSIS AzureConnector-CloudArchive 3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df26234f362663fac9d77d9162aedeb70378a2ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d537f0d60a80dd70e752647012d8b9985085b9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287749"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 이벤트 클래스
   Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  

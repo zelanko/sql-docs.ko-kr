@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
 - transformations [Integration Services], about transformations
@@ -17,13 +17,13 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f0776649cebbbacc950df9c95e56db6c433f633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fa789dbb0ce784b9660bb2ebe2257167dc828ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273099"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: (Visual Database Tools) 다이어그램에 표시 되는 정보의 양 사용자 지정 | Microsoft Docs
+title: (Visual Database Tools) 다이어그램에 표시 된 정보의 양 사용자 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], information displayed
 - table views in database diagrams [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 73feb0102b3f83927012a6517b5f0f4475cf36ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18288e60d5fd3fe276ac900eb6c7d11aa54caf8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301373"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
   데이터베이스 다이어그램에 테이블을 추가하면 일정한 수의 속성이 표시됩니다. 표시할 정보의 양을 메뉴에서 각기 다르게 선택하거나 사용자 지정 속성 집합을 만들 수 있습니다.  

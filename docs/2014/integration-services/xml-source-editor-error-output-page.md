@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7c8de4263e780658a2128832575c66f47a9d990
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39eeee91c458dda4fb882e6374075a95d255b94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271239"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 원본 편집기(오류 출력 페이지)
   **XML 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

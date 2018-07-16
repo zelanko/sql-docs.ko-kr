@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,26 +20,26 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173174"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>식을 사용하여 설정할 수 있는 데이터 흐름 속성
   데이터 흐름 태스크 컨테이너에서 사용할 수 있는 속성 식을 사용하여 데이터 흐름 개체의 특정 속성 값을 지정할 수 있습니다.  
   
  속성 식을 사용하는 방법은 [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
- 속성 식을 사용하여 배포된 패키지의 각 인스턴스 구성을 사용자 지정할 수 있습니다. 또한 속성 식을 사용하여 **dtexec** 명령 프롬프트 유틸리티로 **/set** 옵션을 사용해 패키지의 런타임 제약 조건을 지정할 수도 있습니다. 예를 들어 제한할 수 있습니다는 `MaximumThreads` 정렬 변환에서 사용 하는 또는 `MaxMemoryUsage` 유사 항목 그룹화 및 유사 항목 조회 변환의 합니다. 제약 받지 않을 경우 이러한 변환은 메모리에 대량의 데이터를 캐시할 수 있습니다.  
+ 속성 식을 사용하여 배포된 패키지의 각 인스턴스 구성을 사용자 지정할 수 있습니다. 또한 속성 식을 사용하여 **dtexec** 명령 프롬프트 유틸리티로 **/set** 옵션을 사용해 패키지의 런타임 제약 조건을 지정할 수도 있습니다. 예를 들어 제한할 수 있습니다 합니다 `MaximumThreads` 정렬 변환에 사용 또는 `MaxMemoryUsage` 유사 항목 그룹화 및 유사 항목 조회 변환 합니다. 제약 받지 않을 경우 이러한 변환은 메모리에 대량의 데이터를 캐시할 수 있습니다.  
   
  이 항목에 나열된 데이터 흐름 개체의 속성 중 하나에 대한 속성 식을 지정하려면 디자이너의 **제어 흐름** 화면에서 데이터 흐름 태스크를 선택하거나 개별 구성 요소나 경로를 선택하지 않고 디자이너의 **데이터 흐름** 탭을 선택하여 데이터 흐름 태스크에 대한 **속성** 창을 표시합니다. **식** 속성을 선택하고 줄임표(...)를 클릭하여 **속성 식 편집기** 대화 상자를 표시합니다. **속성** 목록을 드롭다운하여 속성을 선택한 다음 **식** 입력란에 식을 입력하거나 줄임표(...)를 클릭하여 **식 작성기** 대화 상자를 표시합니다.  
   
- **속성** 목록에는 디자이너의 **데이터 흐름** 화면에 이미 배치한 이러한 데이터 흐름 개체에 사용할 수 있는 속성만 표시됩니다. 따라서 **속성** 목록을 사용하여 속성 식을 지원하는 데이터 흐름 개체의 가능한 모든 속성을 확인할 수는 없습니다. 예를 들어 ADO NET 원본을 디자이너 화면에 배치 했으면는 **속성** 목록에 대 한 항목이 포함 되어는 `[ADO NET Source].[SqlCommand]` 속성입니다. 목록에는 데이터 흐름 태스크 자체의 수많은 속성도 표시됩니다.  
+ **속성** 목록에는 디자이너의 **데이터 흐름** 화면에 이미 배치한 이러한 데이터 흐름 개체에 사용할 수 있는 속성만 표시됩니다. 따라서 **속성** 목록을 사용하여 속성 식을 지원하는 데이터 흐름 개체의 가능한 모든 속성을 확인할 수는 없습니다. 예를 들어 ADO NET 원본을 디자이너 화면에 배치 했으면 합니다 **속성** 목록에 대 한 항목이 `[ADO NET Source].[SqlCommand]` 속성입니다. 목록에는 데이터 흐름 태스크 자체의 수많은 속성도 표시됩니다.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>속성 식을 지원하는 데이터 흐름 개체의 속성  
  다음 목록의 속성 값은 속성 식을 사용하여 지정할 수 있습니다.  

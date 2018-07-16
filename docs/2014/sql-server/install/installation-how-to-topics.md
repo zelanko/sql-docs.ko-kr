@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, how-to topics
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d9159ce105c284dd9e5c66ac3127bfa0df9713c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4fbf9a77563d670713836fb2dea7d248756bdb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170267"
 ---
 # <a name="installation-how-to-topics"></a>설치 방법 도움말 항목
   다음 항목을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36185744"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|설치 마법사를 사용한 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 설명하는 절차 항목입니다.|  
+|[설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|설치 마법사를 사용한 일반적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 설명하는 절차 항목입니다.|  
 |[명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|무인 설치 프로그램을 실행하는 데 사용하는 예제 구문 및 설치 매개 변수를 제공하는 절차 항목입니다.|  
 |[구성 파일을 사용하여 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|구성 파일을 통해 설치 프로그램을 실행하는 데 사용하는 예제 구문 및 설치 매개 변수를 제공하는 절차 항목입니다.|  
 |[SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|다른 SharePoint 서버 구성에서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 설치하는 데 사용하는 추가 절차의 링크를 제공하는 절차 항목입니다.|  

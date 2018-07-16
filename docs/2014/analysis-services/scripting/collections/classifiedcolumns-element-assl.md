@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95c00f4863223caaacfb7cc7554ec9b48a82922d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286049"
 ---
 # <a name="classifiedcolumns-element-assl"></a>ClassifiedColumns 요소(ASSL)
-  분류 되는 관련 열의 컬렉션을 포함 된 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
+  분류 되는 관련 열의 컬렉션을 포함 합니다 [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36092960"
 |자식 요소|[ClassifiedColumnID](../properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ClassifiedColumns` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
+ 부모에 해당 하는 요소가 `ClassifiedColumns` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [MiningStructureColumn 데이터 형식 &#40;ASSL&#41;](../data-type/miningstructurecolumn-data-type-assl.md)   

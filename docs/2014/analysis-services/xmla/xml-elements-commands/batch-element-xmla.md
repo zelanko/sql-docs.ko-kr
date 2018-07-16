@@ -1,5 +1,5 @@
 ---
-title: 요소 (XMLA) 일괄 처리 | Microsoft Docs
+title: Batch 요소 (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Batch command
 ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 76fcd68ca71db298bc66dc63a3fa20c394c196c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 269eedd9a48d1bf7bde43d0294bac7a81b9f90ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291239"
 ---
 # <a name="batch-element-xmla"></a>Batch 요소(XMLA)
-  순차 또는 병렬의 인스턴스에서 Analysis (XMLA) 명령에 대 한 하나 이상의 XML을 일괄 처리 작업으로 수행 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+  순차 또는 병렬 인스턴스의 Analysis (XMLA) 명령에 대 한 하나 이상의 XML을 일괄 처리 작업으로 수행 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36184790"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[바인딩](../xml-elements-properties/bindings-element-xmla.md), [DataSource](../xml-elements-properties/source-element-xmla.md), [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md), [ErrorConfiguration](../../scripting/objects/errorconfiguration-element-assl.md), [병렬](../xml-elements-properties/parallel-element-xmla.md)<br /><br /> One or more of the following XMLA commands: [Alter](alter-element-xmla.md), [Backup](backup-element-xmla.md), [BeginTransaction](begintransaction-element-xmla.md), [ClearCache](clearcache-element-xmla.md), [CommitTransaction](committransaction-element-xmla.md), [Create](create-element-xmla.md), [Delete](delete-element-xmla.md), [DesignAggregations](designaggregations-element-xmla.md), [Drop](drop-element-xmla.md), [Insert](insert-element-xmla.md), [Lock](lock-element-xmla.md), [MergePartitions](mergepartitions-element-xmla.md), [NotifyTableChange](notifytablechange-element-xmla.md), [Process](process-element-xmla.md), [Restore](restore-element-xmla.md), [RollbackTransaction](rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Statement](statement-element-xmla.md), [Subscribe](subscribe-element-xmla.md), [Synchronize](synchronize-element-xmla.md), [Unlock](unlock-element-xmla.md), [Update](update-element-xmla.md), [UpdateCells](drop-element-xmla.md)|  
+|자식 요소|[바인딩을](../xml-elements-properties/bindings-element-xmla.md), [DataSource](../xml-elements-properties/source-element-xmla.md)를 [DataSourceView](../xml-elements-properties/datasourceview-element-xmla.md)를 [ErrorConfiguration](../../scripting/objects/errorconfiguration-element-assl.md), [병렬](../xml-elements-properties/parallel-element-xmla.md)<br /><br /> 다음 XMLA 명령 중 하나 이상이: [Alter](alter-element-xmla.md), [백업](backup-element-xmla.md)합니다 [BeginTransaction](begintransaction-element-xmla.md)를 [ClearCache](clearcache-element-xmla.md), [ CommitTransaction](committransaction-element-xmla.md), [만듭니다](create-element-xmla.md), [삭제](delete-element-xmla.md)를 [DesignAggregations](designaggregations-element-xmla.md), [Drop](drop-element-xmla.md), [삽입](insert-element-xmla.md), [잠금](lock-element-xmla.md)를 [MergePartitions](mergepartitions-element-xmla.md)합니다 [NotifyTableChange](notifytablechange-element-xmla.md), [프로세스](process-element-xmla.md), [복원](restore-element-xmla.md), [RollbackTransaction](rollbacktransaction-element-xmla.md)를 [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e)합니다 [문](statement-element-xmla.md), [구독](subscribe-element-xmla.md), [동기화](synchronize-element-xmla.md)합니다 [잠금 해제](unlock-element-xmla.md)를 [업데이트](update-element-xmla.md), [UpdateCells](drop-element-xmla.md)|  
   
 ## <a name="attributes"></a>특성  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36184790"
 > [!WARNING]  
 >  Command/Execute/Statement는 현재 Batch 작업에서 지원되지 않습니다.  
   
- XMLA에서 일괄 처리 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 [일괄 처리 작업 수행 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)합니다.  
+ XMLA에서 일괄 처리 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하세요. [일괄 처리 작업 수행 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [명령 &#40;XMLA&#41;](xml-elements-commands.md)  

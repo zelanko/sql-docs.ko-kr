@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 938d32c65c8eb1d7fa6087d864e62b0bb4d5d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f2c47fee88ba536c084649669ac5cd5f53cf6d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318823"
 ---
 # <a name="error-handling"></a>오류 처리
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  

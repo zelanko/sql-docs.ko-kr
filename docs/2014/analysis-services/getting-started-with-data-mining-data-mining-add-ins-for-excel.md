@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 (데이터 마이닝 추가 기능 Excel 용) 시작 | Microsoft Docs
+title: 데이터 마이닝 (데이터 마이닝 추가 기능 Excel 용)를 시작 하기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303133"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>데이터 마이닝 시작하기(Excel용 데이터 마이닝 추가 기능)
   데이터 마이닝은 데이터에서 의미 있는 패턴을 발견하기 위한 프로세스입니다. 데이터 마이닝은 기존의 BI를 통해 데이터를 탐색 및 파악하는 프로세스를 자연스럽게 보완합니다. 컴퓨터 알고리즘을 사용해서 매우 많은 양의 데이터를 처리하고 숨겨져 있는 패턴 및 추세를 검색할 수 있습니다.  
   
- 데이터 마이닝을, "내 고객 인?"와 같은 특정 질문에 관련 된 데이터를 수집 "어떤 제품을 구입 했는가" 또는 및 다음 데이터에서 통계적 상관 관계를 찾기 위한 알고리즘을 적용 합니다. 분석을 통해 발견된 패턴과 추세는 마이닝 모델로 저장됩니다. 그런 후 다음과 같이 비즈니스 시나리오에서 새로운 데이터에 마이닝 모델을 적용할 수 있습니다.  
+ "내 고객 인?"와 같은 특정 질문에 관련 된 데이터를 수집 하면 데이터 마이닝을 수행 합니다. "어떤 제품이 구매 되었습니까?" 또는 및 다음 데이터에서 통계적 상관 관계를 찾기 위한 알고리즘을 적용 합니다. 분석을 통해 발견된 패턴과 추세는 마이닝 모델로 저장됩니다. 그런 후 다음과 같이 비즈니스 시나리오에서 새로운 데이터에 마이닝 모델을 적용할 수 있습니다.  
   
 -   이전의 추세를 사용해서 다음 분기에 대한 매출, 재고 요구 사항 또는 고객 만족도를 예측합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36091640"
   
 -   선형 회귀  
   
- 추가 기능에서 데이터 정리 도움말을 제공 하는 또한: 데이터 선택, 탐색 및 데이터를 정리 합니다.  
+ 추가 기능의 데이터 준비 단계에서 도움말을 제공 하는 또한: 데이터 선택, 탐색 및 데이터 정리 합니다.  
   
 ## <a name="define-your-goal"></a>목표 정의  
  시작하기 전에 답을 구하고자 하는 질문을 고려합니다. 탐색은 그 자체로도 통찰을 얻는 데 효과적이지만 발견한 결과를 새로운 데이터에 적용하고 싶은 경우, 해당 모델이 생성할 것이 무엇인지 그리고 해당 모델을 통해 달성되는 목표를 어떻게 측정할 수 있는지 명확하게 규정할 수 있어야 합니다.  
@@ -90,12 +90,12 @@ ms.locfileid: "36091640"
   
  모델이 완료되었으면 충분한 시간을 들여 결과를 검토하고 데이터를 수정하거나 더 나은 결과를 가져올 수 있는 방법이 있는지 확인합니다. 첫 번째 모델로 모든 답변을 제공할 수 있을 확률은 극히 희박합니다. 데이터 마이닝은 일반적으로 반복된 프로세스입니다.  
   
- 데이터 다른 방법으로 범주화 시도 하거나 새 열 추가 사용 해야 하는 경우는 **문서 모델** 마법사는 각 모델의 메타 데이터 및 결과의 스냅숏을 캡처합니다. 기록은 탐색을 진행하는 데 유용한 도구로 활용될 수 있습니다.  
+ 데이터가 다른 방법으로 범주화를 시도 하거나 사용 하 여 새 열을 추가 해야 합니다 **문서 모델** 마법사는 각 모델의 메타 데이터 및 결과의 스냅숏을 캡처합니다. 기록은 탐색을 진행하는 데 유용한 도구로 활용될 수 있습니다.  
   
  [데이터 탐색 및 지우기](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>모델의 유효성 검사  
- 각 마법사 또는 도구를 실행할 때마다 해당 알고리즘은 데이터 콘텐츠를 분석하고 통계적으로 유효한 패턴이 존재하는지 여부를 확인합니다. 알고리즘이 유효한 패턴을 찾을 수 없으면 오류 메시지가 표시됩니다. 하지만 모델이 성공적으로 작성되었다 하더라도 사용자의 가정에 따라 모델이 유효한지 테스트해야 합니다. 와 같은 도구를 사용할 수는 [정확도 차트 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) 또는 [교차 유효성 검사 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](cross-validation-sql-server-data-mining-add-ins.md) 통계를 생성 하기 위해 모델 품질을 나타내는 측정값입니다.  
+ 각 마법사 또는 도구를 실행할 때마다 해당 알고리즘은 데이터 콘텐츠를 분석하고 통계적으로 유효한 패턴이 존재하는지 여부를 확인합니다. 알고리즘이 유효한 패턴을 찾을 수 없으면 오류 메시지가 표시됩니다. 하지만 모델이 성공적으로 작성되었다 하더라도 사용자의 가정에 따라 모델이 유효한지 테스트해야 합니다. 와 같은 도구를 사용할 수 있습니다 합니다 [정확도 차트 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) 하거나 [교차 유효성 검사 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](cross-validation-sql-server-data-mining-add-ins.md) 통계 생성 모델 품질을 나타내는 측정값입니다.  
   
  첫 번째 모델의 결과를 평가할 때는 다음과 같은 질문을 스스로 해볼 수 있습니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36091640"
  [모델 유효성 검사 및 예측 용 모델 사용 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [포함 된 내용에 데이터 마이닝 추가 기능 for Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [에 포함 된 항목의 데이터 마이닝 추가 기능 Office 용](what-s-included-in-the-data-mining-add-ins-for-office.md)   
  [기술 참조 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

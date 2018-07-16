@@ -18,21 +18,21 @@ helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f607b966099f71acee460a5a343c557e2a81857e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae41cad794f31443dfa2fbfc2951f0b611d5766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308453"
 ---
 # <a name="mdschemameasuregroupdimensions-rowset"></a>MDSCHEMA_MEASUREGROUP_DIMENSIONS 행 집합
   측정값 그룹의 차원을 열거합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `MDSCHEMA_MEASUREGROUP_DIMENSIONS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `MDSCHEMA_MEASUREGROUP_DIMENSIONS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "36082770"
 |`CUBE_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
 |`MEASUREGROUP_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|(선택 사항)|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 Visible<br />-2 not 표시<br />-기본 제한 값 1은 합니다.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|다음 유효 값 중 하나가 포함된 비트맵입니다(선택 사항).<br /><br /> -1 표시<br />-2 not 표시<br />기본 제한은 1의 값입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [OLAP용 OLE DB 스키마 행 집합](ole-db-for-olap-schema-rowsets.md)  

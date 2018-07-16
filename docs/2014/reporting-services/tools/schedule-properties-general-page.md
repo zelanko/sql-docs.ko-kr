@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b5fda0fffe612b0dcd5c2178d0ef93fda31008ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56a6a698b941369d80bed200d64e236eb87ecfa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305003"
 ---
 # <a name="schedule-properties-general-page"></a>일정 속성(일반 페이지)
   이 페이지를 사용하여 공유 일정을 보거나 수정할 수 있습니다. 보고서별 일정 또는 구독별 일정 대신 공유 일정을 사용할 수 있습니다. 일정에 대한 변경 내용은 일정을 저장한 후에 적용됩니다. 일정을 편집해도 현재 진행 중인 작업은 영향을 받지 않습니다. 사용 중인 일정을 편집할 경우 해당 일정에서 트리거된 현재 처리 중인 모든 보고서 및 구독을 완료할 수 있습니다.  

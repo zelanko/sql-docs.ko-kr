@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2fbcf210fa9c1d816ef78c20fe762e7a7b15d636
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245373"
 ---
 # <a name="cellordinal-element-xmla"></a>CellOrdinal 요소(XMLA)
-  의해 업데이트 될 셀 큐브 내 서 수 위치를 포함 한 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) 명령입니다.  
+  의해 업데이트 될 셀 큐브 내에서 서 수 위치를 포함 한 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   

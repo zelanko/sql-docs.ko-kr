@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e00890be8fac0fb97f0887034d5c7b04c049ebd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44fddc4c62bc9d0fddc71cf2b4249c3fab8d0d68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233853"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>경고(데이터베이스 디자이너)(Analysis Services - 다차원 데이터)
   **경고** 탭을 사용하여 규칙을 전역적으로 확인 및 해제하고 해제된 경고의 특정 인스턴스를 확인 및 다시 설정할 수 있습니다. **경고** 탭에는 **디자인 경고 규칙** 과 **해제된 경고**라는 두 개의 표가 표시됩니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36092252"
 >  경고가 있는 개체의 경우 이 개체가 잘못된 상태이거나 프로젝트에서 수동으로 제거되면 목록에 있는 경고 옆에 오류 아이콘이 표시됩니다. 경고를 해제하려면 경고를 선택한 다음 **다시 사용**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [경고 해제 경고 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [경고 해제 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
  [일반 &#40;데이터베이스 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

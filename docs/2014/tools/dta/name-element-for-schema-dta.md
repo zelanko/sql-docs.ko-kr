@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a4fe5bd390ab3e2a0ad1416f7fce67458c1aeff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 535318641619abe8cc77c72bd9554b653bb1c717
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216293"
 ---
 # <a name="name-element-for-schema-dta"></a>Schema의 Name 요소(DTA)
   스키마의 이름을 포함합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36186443"
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Database의 schema 요소 &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**부모 요소**|[데이터베이스에 대 한 스키마 요소 &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  

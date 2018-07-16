@@ -19,13 +19,13 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c09510a58c691f4db6b12c4613ff68c9642ffa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9d559e78dda2f7163d4996be5b3720843dc8e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329833"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>스크립트 구성 요소의 오류 출력 시뮬레이션
   오류 행의 자동 처리를 위해 스크립트 구성 요소의 출력을 오류 출력으로 직접 구성할 수는 없지만 적절할 때 추가 출력을 만들고 스크립트에 조건부 논리를 사용하여 행을 이 출력으로 전송하는 방식으로 기본 제공 오류 출력의 기능을 재현할 수 있습니다. 오류 번호와 오류가 발생한 열의 ID를 받는 두 개의 출력 열을 추가하여 기본 제공 오류 출력의 동작을 시뮬레이션할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36082310"
   
 3.  **스크립트** 페이지에서 **ScriptLanguage** 속성에 스크립트를 코딩하는 데 사용할 스크립트 언어를 설정합니다.  
   
-4.  **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)를 엽니다.  
+4.   **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)를 엽니다.  
   
 5.  `Input0_ProcessInputRow` 메서드에 아래에 표시된 예제 코드를 입력하거나 붙여 넣습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36082310"
   
 7.  **입력 열** 페이지에서 스크립트 변환에서 처리할 열을 선택합니다. 이 예에서는 CountryRegionName 열만 사용합니다. 사용 가능한 입력 열 중 선택하지 않은 열은 데이터 흐름에서 변경되지 않은 상태로 전달됩니다.  
   
-8.  에 **입 / 출력** 페이지, 새 추가 하 고, 두 번째 출력 설정 해당 `SynchronousInputID` 값은 입력의 ID 값의는 `SynchronousInputID` 기본 출력의 속성입니다. 두 출력 모두의 `ExclusionGroup` 속성을 0이 아닌 동일한 값(예: 1)으로 설정하여 각 행이 두 출력 중 하나로만 전송되도록 합니다. 새 오류 출력에 "MyErrorOutput"과 같이 알기 쉬운 이름을 지정합니다.  
+8.  에 **입 / 출력** 페이지에서 새로 추가 하 고, 두 번째 출력을 설정 해당 `SynchronousInputID` 값이 입력의 ID 값의는 `SynchronousInputID` 속성 기본 출력의 합니다. 두 출력 모두의 `ExclusionGroup` 속성을 0이 아닌 동일한 값(예: 1)으로 설정하여 각 행이 두 출력 중 하나로만 전송되도록 합니다. 새 오류 출력에 "MyErrorOutput"과 같이 알기 쉬운 이름을 지정합니다.  
   
 9. 오류 코드, 오류가 발생한 열의 ID, 오류 설명 등 원하는 오류 정보를 캡처하는 출력 열을 새 오류 출력에 추가합니다. 이 예에서는 ErrorColumn 및 ErrorMessage라는 새 열을 만듭니다. 개발자 고유의 구현에서 미리 정의된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류를 catch하려는 경우 오류 번호에 대한 ErrorCode 열을 추가해야 합니다.  
   
@@ -104,7 +104,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 오류 처리](../data-flow/error-handling-in-data.md)   

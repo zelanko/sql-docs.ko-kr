@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b2e06ab78f4e9267c9bc85bf55a14b0c71d69c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291649"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>명명된 집합 폼 편집기(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에서 **명명된 집합 폼 편집기** 창을 사용하여 명명된 집합을 만들거나 수정할 수 있습니다.  

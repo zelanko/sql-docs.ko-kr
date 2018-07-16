@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298513"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
-  에 대 한 데이터베이스 데이터 정렬을 재정의할 수 `char`, `varchar`, `text`, `nchar`, `nvarchar`, 및 `ntext` 특정 테이블의 열에 대 한 다른 데이터 정렬을 지정 하 고 다음 중 하나를 사용 하 여 데이터:  
+  데이터베이스 데이터 정렬을 재정의할 수 있습니다 `char`, `varchar`를 `text`, `nchar`에 `nvarchar`, 및 `ntext` 특정 테이블의 열에 대 한 다른 데이터 정렬을 지정 하 고 다음 중 하나를 사용 하 여 데이터:  
   
 -   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 및 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)의 COLLATE 절 예를 들어:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36079529"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 COLLATE 절 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을 참조하십시오.  
   
--   사용 하는 `Column.Collation` 속성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   사용 하는 `Column.Collation` 속성에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  다음 중 하나가 현재 참조하고 있는 열의 데이터 정렬은 변경할 수 없습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36079529"
  **tempdb**를 사용할 때 [COLLATE](/sql/t-sql/statements/collations) 절은 *database_default* 옵션을 포함하여 임시 테이블에 있는 열이 **tempdb**의 데이터 정렬 대신 현재 사용자 데이터베이스의 데이터 정렬 기본값을 연결에 사용하도록 지정합니다.  
   
 ## <a name="collations-and-text-columns"></a>데이터 정렬 및 텍스트 열  
- 삽입 하거나 열의 값을 업데이트할 수 있습니다는 `text` 는 데이터 정렬이 데이터베이스 기본 데이터 정렬의 코드 페이지와에서 다른 열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 값을 열의 데이터 정렬로 암시적으로 변환합니다.  
+ 삽입 하거나 값을 업데이트할 수 있습니다는 `text` 열 정렬이 데이터베이스 기본 데이터 정렬의 코드 페이지와에서 다릅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 값을 열의 데이터 정렬로 암시적으로 변환합니다.  
   
 ## <a name="collations-and-tempdb"></a>데이터 정렬 및 tempdb  
  **tempdb** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때마다 작성되며 **model** 데이터베이스와 같은 기본 데이터 정렬을 사용합니다. 이는 일반적으로 인스턴스의 기본 데이터 정렬과 같습니다. 사용자 데이터베이스를 만들고 **model**과 다른 기본 데이터 정렬을 지정하면 사용자 데이터베이스는 **tempdb**와 다른 기본 데이터 정렬을 사용합니다. 모든 임시 저장 프로시저나 임시 테이블은 **tempdb**에서 생성되고 저장됩니다. 즉, 임시 테이블의 모든 암시적 열과 임시 저장 프로시저의 모든 강제 기본 상수, 변수 및 매개 변수는 영구 테이블 및 저장 프로시저에서 만들어진 유사 개체와는 다른 데이터 정렬을 사용합니다.  

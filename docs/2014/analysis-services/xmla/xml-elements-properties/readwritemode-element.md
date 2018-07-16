@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 88ebc7e23fc3ec4aad0d8273464636354958217a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3577feacc65bc1d7259d95af9b5bc6179e72b3b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285789"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 요소
   `ReadWriteMode` 데이터베이스 속성은 데이터베이스가 `ReadWrite` 모드에 있는지 또는 `ReadOnly` 모드에 있는지를 지정합니다. 이 속성 값은 두 가지만 가능합니다.  

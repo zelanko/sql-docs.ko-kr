@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ODBC, driver extensions
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6aaf7071ba7b8850a3642c23af2c76e5bcfcd4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9898ad46d110b368b7be8fc775be4ba125bcb48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247303"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 드라이버 확장
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 액세스하는 데 사용할 수 있는 드라이버별 함수를 구현합니다.  

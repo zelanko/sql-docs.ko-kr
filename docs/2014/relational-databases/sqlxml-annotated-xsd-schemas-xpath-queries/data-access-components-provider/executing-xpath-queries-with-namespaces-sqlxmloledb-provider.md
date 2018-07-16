@@ -1,5 +1,5 @@
 ---
-title: 네임 스페이스 (SQLXMLOLEDB 공급자)와 XPath 쿼리 실행 | Microsoft Docs
+title: 네임 스페이스 (SQLXMLOLEDB 공급자)를 사용 하 여 XPath 쿼리 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c2c5d0388f3bd0fa396e1e689eb29fbd98ba7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d5a5149b56d98cc319a06b9cbb8129f7699a17fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301733"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>네임스페이스가 있는 XPath 쿼리 실행(SQLXMLOLEDB 공급자)
   XPath 쿼리에는 네임스페이스가 포함될 수 있습니다. 스키마 요소의 네임스페이스가 한정된 경우 즉, 스키마 요소에 대상 네임스페이스가 포함된 경우 스키마에 대한 XPath 쿼리에서 이 네임스페이스를 지정해야 합니다.  
   
- SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 이 접두사를 해결 하려면 네임 스페이스 바인딩을 지정 하려면 네임 스페이스 속성을 사용 합니다.  
+ SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 이 접두사를 확인 하려면 네임 스페이스 바인딩을 지정 하는 네임 스페이스 속성을 사용 합니다.  
   
- 다음 예제에서는 XPath 쿼리에 와일드 카드 문자를 사용 하 여 네임 스페이스를 지정 (\*) local-name () 및 namespace-uri () XPath 함수입니다. 이 XPath 쿼리는 로컬 이름이 `Contact`이고 네임스페이스 URI가 `urn:myschema:Contacts`인 모든 요소를 반환합니다.  
+ 다음 예의 XPath 쿼리 와일드 카드 문자를 사용 하 여 네임 스페이스를 지정 (\*) local-name () 및 namespace-uri () XPath 함수입니다. 이 XPath 쿼리는 로컬 이름이 `Contact`이고 네임스페이스 URI가 `urn:myschema:Contacts`인 모든 요소를 반환합니다.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -58,10 +58,10 @@ ms.locfileid: "36185790"
   
  이 스키마에서는 대상 네임스페이스를 정의하므로 스키마에 대한 XPath 쿼리(예: "Employee")에 네임스페이스가 포함되어 있어야 합니다.  
   
- 다음은 앞의 XSD 스키마에 대한 XPath 쿼리(x:Employee)를 실행하는 예제 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램입니다. 접두사를 해결 하려면 네임 스페이스 바인딩이 네임 스페이스 속성을 사용 하 여 지정 됩니다.  
+ 다음은 앞의 XSD 스키마에 대한 XPath 쿼리(x:Employee)를 실행하는 예제 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램입니다. 접두사를 해결 하려면 네임 스페이스 속성을 사용 하 여 네임 스페이스 바인딩을 지정 됩니다.  
   
 > [!NOTE]  
->  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 데이터 공급자에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 사용하도록 지정하는데, 이렇게 하려면 추가 네트워크 클라이언트를 설치해야 합니다. 자세한 내용은 참조 [SQL Server Native Client에 대 한 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)합니다.  
+>  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 데이터 공급자에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 사용하도록 지정하는데, 이렇게 하려면 추가 네트워크 클라이언트를 설치해야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)합니다.  
   
 ```  
 Option Explicit  

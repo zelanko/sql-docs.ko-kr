@@ -1,5 +1,5 @@
 ---
-title: 계산 열 (SSAS 테이블 형식) | Microsoft Docs
+title: 계산 된 열 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 152030d73951b08e0b987c5114c5bf8661dc418a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b976a83220a501fde422b6f58fea21631c0d3f26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232073"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>계산 열(SSAS 테이블 형식)
   테이블 형식 모델에서 계산 열을 사용하여 새 데이터를 모델에 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
@@ -85,11 +85,11 @@ ms.locfileid: "36187289"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[계산된 열 만들기 &#40;SSAS 테이블 형식&#41;](ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
+|[계산된 열 만들기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
- [측정값 &#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
- [계산 &#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)  
+ [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
+ [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
+ [계산 &#40;&AMP;#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)  
   
   

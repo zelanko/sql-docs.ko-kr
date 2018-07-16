@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328443"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>가용성 복제본에 백업 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  보조 복제본에 백업에 대 한 소개를 참조 하십시오. [ 활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  보조 복제본에 백업 소개를 참조 하세요 [ 활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  
   
@@ -119,9 +118,9 @@ ms.locfileid: "36092272"
   
 2.  필요한 경우 추가하거나 수정할 각 가용성 복제본의 백업 우선 순위를 구성합니다. 이 우선 순위는 어느 복제본이 가용성 그룹의 데이터베이스에서 자동 백업 요청을 지원해야 하는지를 결정하기 위해(우선 순위가 가장 높은 복제본이 선택됨) 주 복제본을 호스팅하는 서버 인스턴스가 사용합니다. 이 우선 순위는 1부터 100까지의 임의의 숫자일 수 있습니다. 우선 순위 0은 백업 요청 지원을 위한 후보로 해당 복제본을 고려하지 않아야 함을 나타냅니다.  기본 설정은 50입니다.  
   
-     가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 두 경우 모두에서 지정 된 `BackupPriority` *n* 매개 변수를 여기서 *n* 0에서 100 사이의 값은입니다.  
+     가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityReplica` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityReplica` cmdlet을 사용합니다. 두 경우 모두 지정 합니다 `BackupPriority` *n* 매개 변수를 여기서 *n* 0에서 100 사이의 값입니다.  
   
-     다음 명령은 가용성 복제본의 백업 우선 순위를 설정 하는 예를 들어 `MyReplica` 를 `60`합니다.  
+     다음 명령은 가용성 복제본의 백업 우선 순위를 설정 하는 예를 들어 `MyReplica` 에 `60`입니다.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -161,7 +160,7 @@ ms.locfileid: "36092272"
     ```  
   
 > [!NOTE]  
->  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+>  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -199,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
   

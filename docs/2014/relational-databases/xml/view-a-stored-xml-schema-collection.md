@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
 - XML schemas [SQL Server], viewing
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 164b207ab8191486005491eaf64323fed83aaee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1560eb844657d806862d6a4e85bb9a52682b77d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36078986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301790"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>저장된 XML 스키마 컬렉션 보기
-  [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)을 사용하여 XML 스키마 컬렉션을 가져오면 스키마 구성 요소가 메타데이터에 저장됩니다. [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)내장 함수를 사용하여 XML 스키마 컬렉션을 다시 만들 수 있습니다. 이 함수는 반환 된 `xml` 데이터 형식 인스턴스에 있습니다.  
+  [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)을 사용하여 XML 스키마 컬렉션을 가져오면 스키마 구성 요소가 메타데이터에 저장됩니다. [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)내장 함수를 사용하여 XML 스키마 컬렉션을 다시 만들 수 있습니다. 이 함수는 반환는 `xml` 데이터 형식 인스턴스입니다.  
   
  예를 들어 다음 쿼리는`ProductDescriptionSchemaCollection`데이터베이스의 프로덕션 관계형 스키마에서 XML 스키마 컬렉션( [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] )을 검색합니다.  
   
@@ -39,7 +39,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- 에 대해 XQuery를 지정할 수 하나의 스키마만 XML 스키마 컬렉션에서 참조 하려는 경우는 `xml` 유형으로 반환 되는 결과 `xml_schema_namespace`합니다.  
+ XML 스키마 컬렉션에서 스키마를 하나만 표시 하려는 경우에 대해 XQuery를 지정할 수 있습니다 합니다 `xml` 유형으로 반환 되는 결과 `xml_schema_namespace`합니다.  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  
