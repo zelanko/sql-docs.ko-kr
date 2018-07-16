@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8db1358fc13310c56b6486af73eed694e8423cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1fdc032aa6f82ce073720a14a0329764dcfec460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178090"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>리프 멤버 만들기(Master Data Services)
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], 시스템에 마스터 데이터를 추가 하 고 준비 테이블을 사용 하지 않을 때 리프 멤버 만들기 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 데이터를 가져옵니다.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], 시스템에 마스터 데이터를 추가 하 고 준비 테이블을 사용 하지 않는 경우 리프 멤버를 만듭니다 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 데이터를 가져옵니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   최소 있어야 **업데이트** 에 구성원을 추가 하는 엔터티의 리프 모델 개체에 대 한 사용 권한입니다.  
+-   최소 있어야 **업데이트** 멤버를 추가할 엔터티의 리프 모델 개체에 대 한 사용 권한.  
   
 ### <a name="to-create-a-leaf-member"></a>리프 멤버를 만들려면  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36187434"
 8.  **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [멤버 로드 또는 업데이트 Master Data Services의 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)   
+ [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)   
  [통합된 멤버 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [멤버 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaseCubeDimensionID element
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e01ec48101913cb79e074a46aa118f11e514600d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8defd95c5c21acd1e6ffa1c6ca9a9546713f51f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295503"
 ---
 # <a name="casecubedimensionid-element-assl"></a>CaseCubeDimensionID 요소(ASSL)
   데이터 마이닝 차원을 측정값 그룹에 연결하는 큐브 차원의 ID(식별자)를 포함합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36187494"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36187494"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `CaseCubeDimensionID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>합니다.  
+ 부모에 해당 하는 요소가 `CaseCubeDimensionID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

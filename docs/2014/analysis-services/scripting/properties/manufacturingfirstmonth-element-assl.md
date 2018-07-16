@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ManufacturingFirstMonth element
 ms.assetid: 3b2fb440-662b-4d88-a133-1e098b9c8169
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c14ca57b15ee4c3a80bf415ca6646f1818bf1a4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfc62fc2940d73f4ff9c85f9d6aedd65e382bf42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328473"
 ---
 # <a name="manufacturingfirstmonth-element-assl"></a>ManufacturingFirstMonth 요소(ASSL)
-  에 대 한 첫 번째 제조 월을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
+  첫 번째 제조 월을 정의 [TimeBinding](../data-type/binding-data-type-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36187335"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `ManufacturingFirstMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
+ 부모에 해당 하는 요소가 `ManufacturingFirstMonth` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.TimeBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

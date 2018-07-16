@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260869"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기
   Win32를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓸 수 있습니다. 다음 단계가 필요합니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "36185199"
 ##  <a name="steps"></a> FILESTREAM 데이터에 액세스하는 단계  
   
 ###  <a name="path"></a> FILESTREAM 파일 경로 읽기  
- FILESTREAM 테이블의 각 셀에는 해당 셀과 연결된 파일 경로가 있습니다. 사용 하 여 경로 읽으려면는 `PathName` 속성은 `varbinary(max)` 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문. 다음 예제에서는의 파일 경로 읽을 수는 `varbinary(max)` 열입니다.  
+ FILESTREAM 테이블의 각 셀에는 해당 셀과 연결된 파일 경로가 있습니다. 경로 읽으려면를 사용 하 여는 `PathName` 의 속성을 `varbinary(max)` 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문. 다음 예제에는의 파일 경로 읽는 방법을 보여 줍니다는 `varbinary(max)` 열입니다.  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36185199"
   
 -   FILESTREAM BLOB에 데이터를 업데이트하거나 추가하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하지 마십시오. 이러한 문을 사용하면 BLOB 데이터가 tempdb 데이터베이스에 스풀링된 후 새 물리적 파일에 스풀링됩니다.  
   
--   소규모 BLOB 업데이트를 FILESTREAM BLOB에 추가하지 마십시오. 추가할 때마다 기본 FILESTREAM 파일이 복사됩니다. 응용 프로그램이 소규모 Blob을 추가 하려면 있으면 작성 Blob는 `varbinary(max)` 열 후 Blob 개수가 미리 지정 된 한도 도달 하면 FILESTREAM BLOB에 대 한 단일 쓰기 작업을 수행 합니다.  
+-   소규모 BLOB 업데이트를 FILESTREAM BLOB에 추가하지 마십시오. 추가할 때마다 기본 FILESTREAM 파일이 복사됩니다. 응용 프로그램에 작은 Blob을 추가할 경우에 Blob를 작성 한 `varbinary(max)` 열을 한 후 Blob 개수가 미리 지정 된 한도 도달 하면 FILESTREAM BLOB에 단일 쓰기 작업을 수행 합니다.  
   
 -   응용 프로그램에서 다수의 BLOB 파일의 데이터 길이를 검색하지 마십시오. 데이터 크기는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 저장되지 않으므로 이 작업에는 시간이 많이 소요됩니다. BLOB 파일의 길이를 확인해야 한다면 BLOB이 닫혀 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 함수를 사용하여 그 크기를 검토하세요. DATALENGTH()는 BLOB 파일 크기를 확인하기 위해 파일을 열지 않습니다.  
   

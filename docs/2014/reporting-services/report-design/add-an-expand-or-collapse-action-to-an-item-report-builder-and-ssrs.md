@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238483"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
   사용자가 보고서 항목을 대화형으로 확장 또는 축소하거나, 테이블이나 행렬의 경우 그룹과 연결된 행과 열을 축소 또는 확장할 수 있도록 설정할 수 있습니다. 사용자가 항목을 확장 또는 축소할 수 있도록 하려면 해당 항목에 표시 유형 속성을 설정합니다. 표시 유형을 설정하면 HTML 보고서 뷰어에서 사용할 수 있으며 이를 *드릴다운* 동작이라고도 합니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "36186010"
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 리본에서 **보기** 를 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  `Hidden`, 처음에 보고서를 실행할 때가 보고서 항목의 표시 유형을 설정 하려면 다음 옵션 중 하나를 선택 합니다.  
+4.  `Hidden`, 처음 보고서를 실행 하면이 보고서 항목의 표시 유형을 설정 하려면 다음 옵션 중 하나를 선택 합니다.  
   
     -   선택 `False` 보고서 항목을 표시 합니다.  
   
-    -   선택 `True` 보고서 항목을 숨기고 합니다.  
+    -   선택 `True` 보고서 항목을 숨기려면 합니다.  
   
     -   보고서 항목을 표시하려면 **\<Expression>** 을 선택하여 **식** 대화 상자를 열고 런타임에 평가되어 표시 유형을 결정할 식을 만듭니다.  
   

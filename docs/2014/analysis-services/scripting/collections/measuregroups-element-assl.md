@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroups element
 ms.assetid: 80e970e9-6ea6-47a9-9e5c-d0f9b01c09c0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c0162fd018060c767de9b6d7bfa972fc0290d387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c152701fb8dc59b8d85d0976c4c4f9243a96072d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261449"
 ---
 # <a name="measuregroups-element-assl"></a>MeasureGroups 요소(ASSL)
   컬렉션을 포함 [MeasureGroup](../objects/group-element-assl.md) 부모 요소와 관련 된 요소입니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36184362"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[큐브](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [관점](../objects/perspective-element-assl.md)|  
+|부모 요소|[큐브](../objects/cube-element-assl.md)하십시오 [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [관점](../objects/perspective-element-assl.md)|  
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|-------------------|  

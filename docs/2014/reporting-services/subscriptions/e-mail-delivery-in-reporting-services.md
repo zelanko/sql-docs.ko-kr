@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9af13376bd8dfe6fc182b784c250c286fcabdf6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de8849902a313391f414367ca6e51fb64c6dffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303543"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 Reporting Services 구성 관리자를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하여 구성됩니다.  
   
- 보고서를 전자 메일로 배포하거나 받으려면 표준 구독 또는 데이터 기반 구독을 정의합니다. 한 번에 보고서 하나만 구독 또는 배포할 수 있습니다. 단일 전자 메일 메시지에 여러 보고서를 배달하는 구독을 만들 수 없습니다. 구독에 대 한 자세한 내용은 참조 [Create, Modify, and 표준 구독 삭제 &#40;Reporting Services 기본 모드에서&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)합니다.  
+ 보고서를 전자 메일로 배포하거나 받으려면 표준 구독 또는 데이터 기반 구독을 정의합니다. 한 번에 보고서 하나만 구독 또는 배포할 수 있습니다. 단일 전자 메일 메시지에 여러 보고서를 배달하는 구독을 만들 수 없습니다. 구독에 대 한 자세한 내용은 참조 하세요. [Create, Modify, and 표준 구독 삭제 &#40;기본 모드의 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)합니다.  
   
 ||  
 |-|  
@@ -81,7 +81,7 @@ ms.locfileid: "36184853"
   
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [A Reporting Services 서비스 응용 프로그램에 대 한 전자 메일을 구성 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Reporting Services 서비스 응용 프로그램에 대 한 전자 메일을 구성 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [태스크 및 권한](../security/tasks-and-permissions.md)   

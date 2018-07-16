@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220853"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
   보고서에 포함된 사용자 지정 코드 또는 직접 작성한 사용자 지정 어셈블리에 대한 참조를 추가한 다음 컴퓨터에 저장하고 보고서 서버로 배포할 수 있습니다. 단일 보고서에서 여러 번 사용된 함수, 사용자 지정 상수 또는 복잡한 함수에는 포함 코드를 사용합니다. 코드를 한 위치에서 관리하면서 여러 보고서에서 사용할 수 있도록 공유하려면 사용자 지정 코드 어셈블리를 사용합니다. 사용자 지정 코드에는 새로운 사용자 지정 상수, 변수, 함수 또는 서브루틴이 포함될 수 있습니다. Parameters 컬렉션과 같은 기본 제공 컬렉션에 대한 읽기 전용 참조를 포함할 수 있습니다. 그러나 사용자 지정 함수에 보고서 데이터 값 집합을 전달할 수 없으며 특히 사용자 지정 집계는 지원되지 않습니다.  
@@ -71,13 +71,13 @@ ms.locfileid: "36186708"
 ##  <a name="Embedded"></a> 포함 코드 포함  
  보고서에 포함 코드를 추가하려면 **보고서 속성** 대화 상자의 코드 탭을 사용합니다. 만드는 코드 블록에는 여러 메서드가 포함될 수 있습니다. 포함 코드의 메서드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성되고 인스턴스를 기반으로 해야 합니다. 보고서 처리기는 System.Convert 및 System.Math 네임스페이스에 대한 참조를 자동으로 추가합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 다른 어셈블리 참조를 추가할 수 있습니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  
   
- 포함 코드의 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. 참조 하 여 이러한 메서드에 액세스는 `Code` 멤버와 메서드 이름입니다. 다음 예제에서는 메서드를 호출 `ToUSD`에 있는 값으로 변환 하는 `StandardCost` 필드 값을 달러 값:  
+ 포함 코드의 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. 참조 하 여 이러한 메서드에 액세스 합니다 `Code` 메서드 이름과 멤버입니다. 다음 예제에서는 메서드를 호출 `ToUSD`를 값으로 변환 하는 `StandardCost` 필드 값을 달러 값:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- 사용자 지정 코드에서 기본 제공 컬렉션을 참조 하려면 기본 제공에 대 한 참조를 포함 `Report` 개체:  
+ 사용자 지정 코드에서 기본 제공 컬렉션을 참조 하려면 기본 제공에 대 한 참조를 포함할 `Report` 개체:  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -92,7 +92,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- **식** 대화 상자의 **상수** 범주에서는 기본 제공 상수만 표시되고 사용자 지정 상수는 표시되지 않지만 아래 예와 같이 식에서 사용자 지정 상수에 대한 참조를 추가할 수 있습니다. 식에서 사용자 지정 상수로 처리 됩니다는 `Variant`합니다.  
+ **식** 대화 상자의 **상수** 범주에서는 기본 제공 상수만 표시되고 사용자 지정 상수는 표시되지 않지만 아래 예와 같이 식에서 사용자 지정 상수에 대한 참조를 추가할 수 있습니다. 사용자 지정 상수 취급 식에는 `Variant`합니다.  
   
 ```  
 =Code.MyNote  
@@ -101,7 +101,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 다음 예제에서는 코드 참조와 함수의 코드 구현이 모두 포함 `FixSpelling`, 텍스트로 대체 하 `"Bicycle"` 에 "bike" 텍스트의 모든 항목의 `SubCategory` 필드입니다.  
+ 다음 예제 코드 참조와 함수의 코드 구현이 모두 포함 `FixSpelling`, 텍스트를 대체 하는 `"Bicycle"` 에서 "Bike" 텍스트의 모든 항목에 대 한는 `SubCategory` 필드입니다.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -121,7 +121,7 @@ End Function
  기본 제공 개체 컬렉션 및 초기화에 대한 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) 및 [사용자 지정 어셈블리 개체 초기화](../custom-assemblies/initializing-custom-assembly-objects.md)를 참조하세요.  
   
 ##  <a name="Parameters"></a> 코드에서 매개 변수에 대한 참조 포함  
- 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. 사용할 수 없습니다는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` 단계로 컬렉션을 생성 합니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
+ 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. 사용할 수 없습니다는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `For Each` 컬렉션을 단계별로 실행할을 생성 합니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
   
  다음 표에는 사용자 지정 코드에서 기본 제공 컬렉션 `Parameters`를 참조하는 예가 들어 있습니다.  
   
@@ -133,15 +133,15 @@ End Function
 ##  <a name="Custom"></a> 사용자 지정 어셈블리에서 코드에 대한 참조 포함  
  보고서에 사용자 지정 어셈블리를 사용하려면 먼저 어셈블리를 만들고 보고서 디자이너에서 사용할 수 있게 한 다음 보고서에 어셈블리에 대한 참조를 추가하고 보고서에서 식을 사용하여 해당 어셈블리에 포함된 메서드를 참조해야 합니다. 보고서가 보고서 서버에 배포될 때 사용자 지정 어셈블리도 보고서 서버에 배포해야 합니다.  
   
- 사용자 지정 어셈블리를 만들고이를 사용할 수 있도록 하는 방법에 대 한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 참조 [보고서와 함께 사용자 지정 어셈블리를 사용 하 여](../custom-assemblies/using-custom-assemblies-with-reports.md)합니다.  
+ 사용자 지정 어셈블리를 만들고 사용할 수 있도록 하는 방법에 대 한 자세한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 참조 하세요 [보고서를 사용 하 여 사용자 지정 어셈블리를 사용 하 여](../custom-assemblies/using-custom-assemblies-with-reports.md)입니다.  
   
- 식의 사용자 지정 코드를 참조하려면 어셈블리 내에서 클래스의 멤버를 호출해야 합니다. 이 방법은 메서드가 정적인지 아니면 인스턴스 기반인지에 따라 달라집니다. 사용자 지정 어셈블리 내의 정적 메서드는 보고서 내에서 전체적으로 사용할 수 있습니다. 식에서 네임스페이스, 클래스 및 메서드 이름을 지정하여 정적 메서드에 액세스할 수 있습니다. 다음 예제에서는 메서드를 호출 `ToGBP`의 값으로 변환 하는 **StandardCost** 값을 달러에서 파운드로:  
+ 식의 사용자 지정 코드를 참조하려면 어셈블리 내에서 클래스의 멤버를 호출해야 합니다. 이 방법은 메서드가 정적인지 아니면 인스턴스 기반인지에 따라 달라집니다. 사용자 지정 어셈블리 내의 정적 메서드는 보고서 내에서 전체적으로 사용할 수 있습니다. 식에서 네임스페이스, 클래스 및 메서드 이름을 지정하여 정적 메서드에 액세스할 수 있습니다. 다음 예제에서는 메서드를 호출 `ToGBP`, 값으로 변환 하는 **StandardCost** 달러에서 파운드로 값:  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- 인스턴스 기반 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. `Code` 멤버를 참조한 다음 인스턴스와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예제에서는 인스턴스 메서드를 호출 `ToEUR`의 값으로 변환 하는 **StandardCost** 을 달러에서 유로로:  
+ 인스턴스 기반 메서드는 전역적으로 정의된 `Code` 멤버를 통해 사용할 수 있습니다. `Code` 멤버를 참조한 다음 인스턴스와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예제에서는 인스턴스 메서드를 호출 `ToEUR`를 값으로 변환 하는 **StandardCost** 을 달러에서 유로로:  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -164,8 +164,8 @@ End Function
  *Fields* 및 *ReportItems* 컬렉션의 내용은 런타임에 동적으로 변경될 수 있으므로 사용자 지정 어셈블리에 대한 호출에서(예: 멤버 변수) 해당 컬렉션을 유지해서는 안 됩니다. 일반적으로 모든 기본 제공 컬렉션에 같은 권장 사항이 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 코드 추가 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
- [보고서에 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서에 코드를 추가 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
+ [보고서를 사용 하 여 사용자 지정 어셈블리 사용](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

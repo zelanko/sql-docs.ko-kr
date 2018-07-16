@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325143"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>데이터 피드에서 가져오기(SSAS 테이블 형식)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 응용 프로그램으로 스트리밍되는 하나 이상의 XML 데이터 스트림입니다. 테이블 가져오기 마법사를 사용하여 데이터 피드의 데이터를 모델로 가져올 수 있습니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "36184607"
   
 3.  **데이터 피드에 연결** 페이지에서 액세스하는 피드를 설명하는 이름을 입력합니다. 피드 또는 데이터 원본을 여러 개 가져오는 경우 연결을 설명하는 이름을 사용하면 연결이 사용되는 방식을 기억하는 데 도움이 됩니다.  
   
-4.  데이터 피드 URL에 목록 데이터 서비스 주소를 입력 바꾸기 \<서버 이름 > SharePoint 서버의 실제 이름:  
+4.  데이터 피드 URL에 목록 데이터 서비스 주소를 입력 합니다. 대체 \<서버 이름 > SharePoint 서버의 실제 이름으로:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -160,7 +160,7 @@ ms.locfileid: "36184607"
   
 4.  **찾아보기** 를 클릭하고 보고서 서버를 선택합니다.  
   
-     보고서 서버에서 보고서를 정기적으로 사용하는 경우 해당 서버가 **최근에 사용한 사이트 및 서버**에 나열되어 있을 수 있습니다. 그렇지 않으면 이름에 보고서 서버의 주소를 입력하고 **열기** 를 클릭하여 보고서 서버 사이트에서 폴더를 찾습니다. 보고서 서버에 대 한 주소는 http:// 수\<컴퓨터 이름 > / reportserver입니다.  
+     보고서 서버에서 보고서를 정기적으로 사용하는 경우 해당 서버가 **최근에 사용한 사이트 및 서버**에 나열되어 있을 수 있습니다. 그렇지 않으면 이름에 보고서 서버의 주소를 입력하고 **열기** 를 클릭하여 보고서 서버 사이트에서 폴더를 찾습니다. 보고서 서버에 대 한 주소는 http:// 않을\<컴퓨터 이름 > / reportserver입니다.  
   
 5.  보고서를 선택하고 **열기**를 클릭합니다. 또는 **이름** 입력란에 전체 경로와 보고서 이름을 포함하여 보고서 링크를 붙여 넣을 수 있습니다. 테이블 가져오기 마법사를 통해 보고서에 연결되고 미리 보기 영역에서 보고서가 렌더링됩니다.  
   
@@ -194,10 +194,10 @@ ms.locfileid: "36184607"
 12. **테이블 및 뷰 선택** 페이지에서 **마침**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [지원 되는 데이터 원본 &#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [지원 되는 데이터 형식 &#40;SSAS 테이블 형식&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [데이터 처리 &#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
- [데이터 가져오기 &#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
+ [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [지원 되는 데이터 형식 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
+ [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
   
   

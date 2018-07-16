@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 65f236bb738117de9775b6a1e6100433c71f81d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d1cb14a2ff16c4af5326bca111b07640604284a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293553"
 ---
 # <a name="prediction-query-builder-data-mining"></a>예측 쿼리 작성기(데이터 마이닝)
   **마이닝 모델 예측** 뷰를 사용하여 마이닝 구조에 포함된 마이닝 모델을 기반으로 예측을 만들 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36187503"
   
 -   [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [DMX와 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [데이터 마이닝 쿼리](data-mining/data-mining-queries.md)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "36187503"
   
 -   [결과 창 &#40;마이닝 모델 예측 뷰&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [마이닝 모델 선택 대화 상자 &#40;마이닝 모델 예측 뷰&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [마이닝 모델 대화 상자를 선택 &#40;마이닝 모델 예측 뷰&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [데이터 마이닝 쿼리 결과 대화 상자 저장 &#40;마이닝 모델 예측 뷰&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [데이터 마이닝 쿼리 결과 대화 상자를 저장 합니다. &#40;마이닝 모델 예측 뷰&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

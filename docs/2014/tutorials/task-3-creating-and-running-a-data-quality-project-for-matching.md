@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2080aac8b429a9bc3ae21313f2163316b6cebeae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf5fc254aff0398b40605fdc6c568d9dc01b3a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216273"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>태스크 3: 일치에 대한 데이터 품질 프로젝트 만들기 및 실행
   이 작업에서는 일치 작업을 위한 데이터 품질 프로젝트를 만들고 정리된 공급자 데이터에서 일치 프로세스를 실행하여 데이터에 있는 모든 중복 항목을 제거합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "36186864"
   
 4.  오른쪽 하단 창의 **작업 목록** 에서 **일치** 를 선택합니다.  
   
-     ![새 데이터 품질 프로젝트-선택한 일치 하는](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "선택한 일치 하는 새 데이터 품질 프로젝트-")  
+     ![새 데이터 품질 프로젝트-선택한 일치](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "선택한 일치 하는 새 데이터 품질 프로젝트-")  
   
 5.  **다음**을 클릭합니다.  
   

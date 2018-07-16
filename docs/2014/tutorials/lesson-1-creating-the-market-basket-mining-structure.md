@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2201afdb7226267e44686b76edb22e77b11dd199
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 3f719a4dd11234a361856dcf170eebcd3856f66c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323613"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>1단원: Market Basket 마이닝 구조 만들기
-  이 단원에서는 고객이 동시에 구입하는 경향이 있는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품을 예측할 수 있는 마이닝 구조를 만듭니다. 마이닝 구조와 데이터 마이닝에 해당 역할에 익숙하지 않은 경우 참조 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)합니다.  
+  이 단원에서는 고객이 동시에 구입하는 경향이 있는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품을 예측할 수 있는 마이닝 구조를 만듭니다. 마이닝 구조 및 데이터 마이닝에 해당 역할을 사용 하 여 잘 모르는 경우 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)합니다.  
   
- 이 단원에서 만들 연결 마이닝 구조를 기반으로 하는 마이닝 모델 추가 지원는 [Microsoft 연결 알고리즘](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)합니다. 이후 단원에서는 마이닝 모델을 사용하여 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측합니다. 이를 시장 바구니 분석이라고 합니다. 예를 들어 고객이 산악 자전거, 자전거 타이어 및 헬멧을 동시에 구입하는 경향이 있음을 알게 될 수 있습니다.  
+ 이 단원에서 만들 연결 마이닝 구조를 기반으로 하는 추가 마이닝 모델을 지원 합니다 [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)합니다. 이후 단원에서는 마이닝 모델을 사용하여 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측합니다. 이를 시장 바구니 분석이라고 합니다. 예를 들어 고객이 산악 자전거, 자전거 타이어 및 헬멧을 동시에 구입하는 경향이 있음을 알게 될 수 있습니다.  
   
- 이 단원에서는 중첩 테이블을 사용하여 마이닝 구조를 정의합니다. 구조에서 정의하는 데이터 도메인이 두 개의 다른 원본 테이블 내에 있으므로 중첩 테이블을 사용합니다. 중첩된 테이블에 대 한 자세한 내용은 참조 하십시오. [중첩 테이블 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)합니다.  
+ 이 단원에서는 중첩 테이블을 사용하여 마이닝 구조를 정의합니다. 구조에서 정의하는 데이터 도메인이 두 개의 다른 원본 테이블 내에 있으므로 중첩 테이블을 사용합니다. 중첩된 테이블에 대 한 자세한 내용은 참조 하세요. [중첩 테이블 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)합니다.  
   
 ## <a name="create-mining-structure-statement"></a>CREATE MINING STRUCTURE 문  
- 중첩된 테이블이 포함 된 마이닝 구조를 만들기 위해 사용 하는 [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 중첩된 테이블이 포함 된 마이닝 구조를 만들기 위해 사용 합니다 [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   구조 이름 지정  
   
@@ -59,7 +59,7 @@ CREATE MINING STRUCTURE [<Mining Structure Name>]
 CREATE MINING STRUCTURE [Mining Structure Name]  
 ```  
   
- DMX에서 개체 이름을 지정 하는 방법에 대 한 정보를 참조 하십시오. [식별자 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)합니다.  
+ DMX에서 개체를 이름 지정에 대 한 자세한 내용은 [식별자 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)합니다.  
   
  코드의 다음 줄에서는 원본 데이터의 엔터티를 고유하게 식별하는 마이닝 구조에 대한 키 열을 정의합니다.  
   
@@ -81,7 +81,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- 정의할 수 있는 마이닝 구조 열 유형에 대 한 정보를 참조 하십시오. [마이닝 구조 열](../../2014/analysis-services/data-mining/mining-structure-columns.md)합니다.  
+ 정의할 수 있는 마이닝 구조 열 유형에 대 한 자세한 내용은 [마이닝 구조 열](../../2014/analysis-services/data-mining/mining-structure-columns.md)합니다.  
   
 > [!NOTE]  
 >  기본적으로 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서는 각 마이닝 구조에 대해 30%의 홀드아웃 데이터 집합을 만들지만 DMX를 사용하여 마이닝 구조를 만들 때 필요한 경우 홀드아웃 데이터 집합을 수동으로 추가해야 합니다.  
@@ -102,9 +102,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**, 형식 `LocalHost`의 인스턴스의 이름 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 단원에 연결 하 고 원하는 합니다. **연결**을 클릭합니다.  
+2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**, 형식 `LocalHost`, 또는 인스턴스의 이름을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 단원에 연결 하려는 합니다. **연결**을 클릭합니다.  
   
-3.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 가리킨 **새 쿼리**, 클릭 하 고 **DMX**합니다.  
+3.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -170,10 +170,10 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 5.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Market Basket Structure.dmx`합니다.  
+6.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Market Basket Structure.dmx`입니다.  
   
 ## <a name="executing-the-query"></a>쿼리 실행  
- 마지막 단계는 쿼리를 실행하는 것입니다. 쿼리를 만들어 저장한 다음 서버에 마이닝 구조를 만들려면 해당 쿼리를 실행해야 합니다. 즉, 해당 문을 실행해야 합니다. 쿼리 편집기에서 쿼리를 실행 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)합니다.  
+ 마지막 단계는 쿼리를 실행하는 것입니다. 쿼리를 만들어 저장한 다음 서버에 마이닝 구조를 만들려면 해당 쿼리를 실행해야 합니다. 즉, 해당 문을 실행해야 합니다. 쿼리 편집기에서 쿼리를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)합니다.  
   
 #### <a name="to-execute-the-query"></a>쿼리를 실행하려면  
   

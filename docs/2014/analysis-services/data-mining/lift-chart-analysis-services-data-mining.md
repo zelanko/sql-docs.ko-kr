@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301253"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
-  A **리프트 차트** 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 그래픽과 변경의 측면에서 측정 한 *리프트* 점수입니다. 데이터 집합의 다양한 부분에 대한 리프트 점수와 다양한 모델에 대한 리프트 점수를 비교하면 어떤 모델이 가장 좋은지, 데이터 집합의 사례 중 몇 퍼센트가 모델의 예측 적용에서 이익을 얻는지 확인할 수 있습니다.  
+  A **리프트 차트** 그래픽을 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 변화를 측정의 측면에서 *리프트* 점수입니다. 데이터 집합의 다양한 부분에 대한 리프트 점수와 다양한 모델에 대한 리프트 점수를 비교하면 어떤 모델이 가장 좋은지, 데이터 집합의 사례 중 몇 퍼센트가 모델의 예측 적용에서 이익을 얻는지 확인할 수 있습니다.  
   
  리프트 차트를 사용하면 동일한 예측 가능한 특성이 있는 여러 모델에 대해 측정의 정확도를 비교할 수 있습니다. 단일 결과(예측 가능한 특성의 단일 값)에 대해 또는 모든 결과(지정된 특성의 모든 값)에 대해 예측의 정확도를 평가할 수도 있습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36184609"
   
  이 차트에는 동일한 데이터를 기반으로 여러 모델이 포함됩니다. 이러한 모델 중 하나는 특정 고객을 대상으로 사용자 지정되었습니다. 모델을 학습하는 데 사용되는 데이터에 필터를 추가하여 모델을 사용자 지정할 수 있습니다. 이 필터는 학습 및 평가에 사용되는 사례를 30세 미만의 고객으로 제한합니다. 필터링의 효과 중 하나는 기본 모델과 필터링된 모델이 다른 데이터 집합을 사용하며 따라서 리프트 차트에서 평가에 사용된 사례의 수도 다르다는 것입니다. 예측 결과 및 기타 통계를 해석할 때는 이러한 사실을 반드시 유념해야 합니다.  
   
- ![리프트 차트 보여 주는 두 개의 모델](../media/newliftchart-tm30-30.gif "리프트 차트 보여 주는 두 가지 모델")  
+ ![리프트 차트 보여 주는 두 가지 모델](../media/newliftchart-tm30-30.gif "리프트 차트로 보여 주는 두 가지 모델")  
   
  차트의 X축은 예측을 비교하는 데 사용되는 테스트 데이터 집합의 비율을 나타냅니다. 차트의 Y축은 예측되는 값의 비율을 나타냅니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36184609"
   
  X축은 예측 가능한 열이 지정된 차트에서와 동일하지만 Y축은 정확한 예측의 비율을 나타냅니다. 따라서 이상적인 선은 대각선이며, 이 선은 모델이 데이터의 50%에서 사례의 50%(예측 가능한 최대값)를 정확히 예측함을 보여 줍니다.  
   
- ![리프트 차트 표시 된 정확한 예측](../media/lift1.gif "정확한 예측을 보여 주는 리프트 차트")  
+ ![차트 표시에 대 한 올바른 예측 리프트](../media/lift1.gif "올바른 예측을 보여 주는 리프트 차트")  
   
  차트를 클릭하여 회색 세로 막대를 옮길 수 있으며 **마이닝 범례** 는 전체 사례의 비율과 정확하게 예측된 사례의 비율을 표시합니다. 예를 들어 회색 슬라이더를 50% 표시 지점에 놓으면 **마이닝 범례** 는 다음과 같은 정확도 점수를 표시합니다. 이 수치는 기본 데이터 마이닝 자습서에서 만든 TM_Decision 트리 모델을 기반으로 합니다.  
   

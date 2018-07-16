@@ -24,15 +24,15 @@ helpviewer_keywords:
 - LastDataUpdate element
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fb67f459f49a39c75147d9313f8b18ba7b30f538
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 63c596e522b3429209626d1c033b982b750d38e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185160"
 ---
 # <a name="lastdataupdate-element-xmla"></a>LastDataUpdate 요소(XMLA)
   부모 [Cube](cube-element-olapinfo-xmla.md) 요소가 나타내는 큐브의 데이터가 마지막으로 업데이트된 날짜 및 시간을 포함합니다.  

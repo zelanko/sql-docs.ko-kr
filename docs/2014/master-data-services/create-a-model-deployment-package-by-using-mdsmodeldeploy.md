@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199673"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 만들기
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 패키지를 만들 수 있습니다. 지정한 명령에 따라 패키지는 다음 중 하나를 포함할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36184728"
   
  모델 개체만 포함하는 패키지를 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 모델 배포 마법사를 대신 사용할 수 있습니다. 자세한 내용은 [마법사를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)를 참조하세요.  
 > [!NOTE]  
-> 이 버전의 MDSModelDeploy 도구는 메모리 용량 (GB) 보다 더 사용할 수 없습니다. 만들거나 사용 하 여 큰 모델 배포 **모델 개체 및 데이터** 옵션을 "메모리 부족" 또는 "스트림을 너무 오래 되었습니다." 오류가 발생할 수 있습니다. MDS에서 데이터를 배포 하려면 준비를 사용 하 여이 문제를 해결 하려면 또는 MDS 2016 또는 MDSModelDeploy 도구의 업데이트 된 버전을 포함 하는 이후 버전으로 업그레이드 합니다.
+> MDSModelDeploy 도구의이 버전 (기가바이트) 메모리 보다 더 사용할 수 없습니다. 만들거나 사용 하 여 큰 모델을 배포할 **개체와 데이터 모델** 옵션을 "Out of Memory" 또는 "Stream을 너무 오래 되었습니다." 오류가 발생할 수 있습니다. MDS 데이터를 배포할 준비를 사용 하 여이 문제를 해결 하려면 또는 MDS 2016 또는 MDSModelDeploy 도구의 업데이트 된 버전을 포함 하는 이후 버전으로 업그레이드 합니다.
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36184728"
   
 2.  MDSModelDeploy.exe의 위치로 이동합니다.  
   
-    -   MDS를 기본 위치에 설치 된 경우의 파일은 *드라이브*: files\microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
+    -   파일은 MDS를 기본 위치에 설치한 경우 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
   
     -   MDS를 기본 위치에 설치하지 않은 경우 로컬 컴퓨터에서 MDSModelDeploy.exe를 검색하십시오.  
   

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - ODBC, results processing
 ms.assetid: 772d9064-c91d-4cac-8b60-fcc16bf76e10
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a35789c6d4a93a4199948035fc79aefd520173de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 704339552a2b5d6b8a58bedfa39081c5bd0bcdea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193863"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>결과 처리 방법 도움말 항목(ODBC)
-  ODBC 응용 프로그램에서 결과 처리 먼저 결과 집합의 특징을 확인 한 다음 하나를 사용 하 여 프로그램 변수로 데이터를 검색 하려면 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 또는 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+  먼저 결과 집합의 특징을 확인 한 다음 중 하나를 사용 하 여 프로그램 변수로 데이터를 검색 하는 ODBC 응용 프로그램에서 결과 처리 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 하거나 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [결과 집합 정보 검색 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
+-   [결과 집합 정보를 검색할 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   
 -   [결과 처리 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   

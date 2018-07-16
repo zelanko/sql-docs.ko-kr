@@ -1,5 +1,5 @@
 ---
-title: 요소 (DimensionAttribute) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293473"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 요소(DimensionAttribute)(ASSL)
   특성의 유형을 포함합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "36184139"
 |*CurrencySource*|통화 환율의 원본 통화를 나타내는 특성입니다.|  
 |*CustomerGroup*|고객 그룹을 나타내는 특성입니다.|  
 |*CustomerHousehold*|고객의 가족을 나타내는 특성입니다.|  
-|*고객*|고객을 나타내는 특성입니다.|  
+|*고객은*|고객을 나타내는 특성입니다.|  
 |*날짜*|날짜를 나타내는 특성입니다.|  
 |*DateCanceled*|취소 날짜를 나타내는 특성입니다.|  
 |*DateDuration*|기간을 나타내는 특성입니다.|  
@@ -111,7 +111,7 @@ ms.locfileid: "36184139"
 |*DayOfTrimester*|삼분기 일자 서수를 나타내는 특성입니다.|  
 |*DayOfWeek*|요일 서수를 나타내는 특성입니다.|  
 |*DayOfYear*|연간 일자 서수를 나타내는 특성입니다.|  
-|*(일)*|날짜를 나타내는 특성입니다.|  
+|*일*|날짜를 나타내는 특성입니다.|  
 |*DaysOfTenDays*|10일 기준 일자 서수를 나타내는 특성입니다.|  
 |*FiscalDay*|회계 달력의 일자를 나타내는 특성입니다.|  
 |*FiscalDayOfHalfYears*|회계 달력의 반기 일자 서수를 나타내는 특성입니다.|  
@@ -198,13 +198,13 @@ ms.locfileid: "36184139"
 |*MonthOfHalfYears*|반기 월 서수를 나타내는 특성입니다.|  
 |*MonthOfQuarter*|사분기 월 서수를 나타내는 특성입니다.|  
 |*MonthOfTrimester*|삼분기 월 서수를 나타내는 특성입니다.|  
-|*MonthOfYear*|연간 월 서수를 나타내는 특성입니다.|  
-|*월*|월을 나타내는 특성입니다.|  
+|*연간 월*|연간 월 서수를 나타내는 특성입니다.|  
+|*개월*|월을 나타내는 특성입니다.|  
 |*조직 구성 단위*|부서를 나타내는 특성입니다.|  
 |*OrgTitle*|직함을 나타내는 특성입니다.|  
 |*PercentOwnership*|소유권 비율을 나타내는 특성입니다.|  
 |*PercentVoteRight*|의결권 비율을 나타내는 특성입니다.|  
-|*사람*|사람을 나타내는 특성입니다.|  
+|*사용자*|사람을 나타내는 특성입니다.|  
 |*PersonContact*|사람의 연락처 정보를 나타내는 특성입니다.|  
 |*PersonDemographic*|사람의 인구 통계 정보를 나타내는 특성입니다.|  
 |*PersonFirstName*|사람의 이름을 나타내는 특성입니다.|  
@@ -220,7 +220,7 @@ ms.locfileid: "36184139"
 |*PhysicalWeight*|무게를 나타내는 특성입니다.|  
 |*PhysicalWidth*|너비를 나타내는 특성입니다.|  
 |*Point*|포인트를 나타내는 특성입니다.|  
-|*PostalCode*|우편 번호를 나타내는 특성입니다.|  
+|*우편 번호*|우편 번호를 나타내는 특성입니다.|  
 |*Product*|제품을 나타내는 특성입니다.|  
 |*ProductBrand*|제품 브랜드를 나타내는 특성입니다.|  
 |*ProductCategory*|제품 범주를 나타내는 특성입니다.|  
@@ -229,7 +229,7 @@ ms.locfileid: "36184139"
 |*ProjectCode*|프로젝트 코드를 나타내는 특성입니다.|  
 |*Projectcompletion*|프로젝트의 완료 상태를 나타내는 특성입니다.|  
 |*ProjectEnddate*|프로젝트 종료일을 나타내는 특성입니다.|  
-|*프로젝트 이름*|프로젝트 이름을 나타내는 특성입니다.|  
+|*ProjectName*|프로젝트 이름을 나타내는 특성입니다.|  
 |*ProjectStartDate*|프로젝트 시작일을 나타내는 특성입니다.|  
 |*프로 모션*|홍보 행사를 나타내는 특성입니다.|  
 |*QtyRangeHigh*|수량 범위 상한을 나타내는 특성입니다.|  
@@ -300,11 +300,11 @@ ms.locfileid: "36184139"
   
  AMO(Analysis Management Objects) 개체 모델에서 `Type`에 대해 허용된 값에 해당하는 열거형은 <xref:Microsoft.AnalysisServices.AttributeType>입니다.  
   
- 부모에 해당 하는 요소 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `Type` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [요소 특성 &#40;ASSL&#41;](../collections/attributes-element-assl.md)   
- [요소를 차원 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [차원 요소 &#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

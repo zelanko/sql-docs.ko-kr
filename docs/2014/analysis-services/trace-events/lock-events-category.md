@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e9bb88bb19f92ea383049ac62a500d1b0f5319f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a3fc63269fdaff254ef2dfd412ef3a706abb09d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302773"
 ---
 # <a name="lock-events-category"></a>잠금 이벤트 범주
   Locks Events 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  

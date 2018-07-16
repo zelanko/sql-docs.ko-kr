@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c0cece8fb2a7fa52d3185080e34c8b1425470aae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f322ed88e8e9bdf6eea23799e533f124165f1bb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236053"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
   **공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는*지리*데이터 형식의 열( **공간 열** )에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "36185732"
  **페이지 잠금 허용**  
  현재 인덱스에 대해 페이지 수준의 잠금이 허용되는지 여부를 지정합니다. 페이지 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
- **다시 계산****통계**   
+ **다시 계산****통계  **  
  인덱스를 만들 때 새 통계를 계산할지 여부를 지정합니다. 통계를 다시 계산하면 인덱스 작성 속도가 느려지지만 일반적으로 쿼리 성능을 향상시킬 수 있습니다.  
   
  **행 잠금 허용**  

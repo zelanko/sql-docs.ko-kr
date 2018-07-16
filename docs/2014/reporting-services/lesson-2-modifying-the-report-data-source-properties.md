@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2d985681028cf919e1f56d1138863497b931c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175246"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   이 단원에서는 보고서 관리자를 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다. 다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
@@ -30,15 +30,15 @@ ms.locfileid: "36186907"
   
 -   [데이터 원본 속성을 수정 하려면](#bkmk_modify_datasource)  
   
--   [AdventureWorksDataset을 수정](#bkmk_modify_dataset)  
+-   [AdventureWorksDataset을 수정 하려면](#bkmk_modify_dataset)  
   
--   [보고서 매개 변수를 추가 하 고 보고서를 게시 하려면](#bkmk_add_reportparameter)  
+-   [보고서 매개 변수를 추가 하 고 보고서를 다시 게시 하려면](#bkmk_add_reportparameter)  
   
--   [보고서를 다시 배포 하려면](#bkmk_redeploy)  
+-   [보고서 다시 배포 하려면](#bkmk_redeploy)  
   
 ##  <a name="bkmk_modify_datasource"></a> 데이터 원본 속성을 수정 하려면  
   
-1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) 관리자 권한으로 예를 들어 Internet Explorer에 대 한 아이콘을 마우스 오른쪽 단추로 클릭 하 고 클릭 **관리자 권한으로 실행**합니다.  
+1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41; ](../../2014/reporting-services/report-manager-ssrs-native-mode.md) 관리자 권한으로 예를 들어, Internet Explorer에 대 한 아이콘을 마우스 오른쪽 단추로 클릭 하 고 클릭 **관리자 권한으로 실행**.  
   
 2.  **Sales Orders** 보고서가 포함된 폴더로 이동하고 보고서의 상황에 맞는 메뉴에서 **관리**를 클릭합니다.  
   
@@ -56,19 +56,19 @@ ms.locfileid: "36186907"
   
 6.  **보고서 서버에 안전하게 저장된 자격 증명**을 클릭합니다.  
   
-7.  사용자 이름( *domain\user*형식 사용)과 암호를 입력합니다. 액세스할 수 있는 권한이 없는 경우는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스를 해당 권한이 있는 로그인을 지정 합니다.  
+7.  사용자 이름( *domain\user*형식 사용)과 암호를 입력합니다. 액세스할 수 있는 권한이 없는 경우는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에서 수행 하는 로그인을 지정 합니다.  
   
-8.  **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 클릭한 다음 **확인**을 클릭합니다. 도메인 계정을 사용 하지 않는 경우 (사용 하는 경우에 예를 들어 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인)를이 확인란을 클릭 하지 마십시오.  
+8.  **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 클릭한 다음 **확인**을 클릭합니다. 도메인 계정을 사용 하지 않는 경우 (사용 중인 경우에 예를 들어, 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인)를이 확인란을 클릭 하지 마세요.  
   
 9. **연결 테스트** 를 클릭하여 데이터 원본에 연결할 수 있는지 확인합니다.  
   
 10. **적용**을 클릭합니다.  
   
-11. 보고서를 확인하여 지정한 자격 증명으로 보고서가 실행되는지 확인합니다. 보고서를 보려면 **보기** 탭을 클릭합니다. 보고서를 열면 해야는 Employee 이름을 선택 하는 클릭 한 다음 참고는 **보고서 보기** 단추는 보고서를 볼 수 있습니다.  
+11. 보고서를 확인하여 지정한 자격 증명으로 보고서가 실행되는지 확인합니다. 보고서를 보려면 **보기** 탭을 클릭합니다. 보고서를 열면 있습니다 해야는 Employee 이름을 선택 하 고 클릭 합니다 **보고서 보기** 보고서를 보려면 단추입니다.  
   
-##  <a name="bkmk_modify_dataset"></a> AdventureWorksDataset을 수정  
+##  <a name="bkmk_modify_dataset"></a> AdventureWorksDataset을 수정 하려면  
   
-1.  Sales Orders 보고서를 엽니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  Sales Orders 보고서를 열으십시오 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
 2.  `AdventureWorksDataset` 데이터 집합을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭합니다.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "36186907"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  **확인**을 클릭합니다.  
+4.   **확인**을 클릭합니다.  
   
-##  <a name="bkmk_add_reportparameter"></a> 보고서 매개 변수를 추가 하 고 보고서를 게시 하려면  
+##  <a name="bkmk_add_reportparameter"></a> 보고서 매개 변수를 추가 하 고 보고서를 다시 게시 하려면  
   
-1.  **보고서 데이터** 창에서 **새로 만들기** 를 클릭한 후 **매개 변수...** 를 클릭합니다.  
+1.   **보고서 데이터** 창에서 **새로 만들기** 를 클릭한 후 **매개 변수...** 를 클릭합니다.  
   
 2.  **이름**에서 `OrderNumber`을 입력합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36186907"
   
 6.  **확인**을 클릭합니다. 매개 변수가 **보고서 데이터 창** 에 추가되고 다음 이미지와 같이 표시됩니다.  
   
-     ![새 매개 변수는 보고서 데이터 창에 추가 됩니다](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "새 매개 변수는 보고서 데이터 창 추가")  
+     ![새 매개 변수는 보고서 데이터 창에 추가 됩니다](../../2014/tutorials/media/ssrs-tutorial-datadriven-parameter.gif "새 매개 변수는 보고서 데이터 창에 추가")  
   
 7.  **미리 보기** 탭을 클릭하여 보고서를 실행합니다. 매개 변수 입력 상자는 보고서 맨 위에 있습니다. 다음을 수행할 수 있습니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36186907"
   
 8.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용된 프로젝트 속성에 대한 자세한 내용을 보려면 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)의 '보고서 서버에 보고서를 게시하려면(옵션)' 섹션을 참조하세요.  
   
-##  <a name="bkmk_redeploy"></a> 보고서를 다시 배포 하려면  
+##  <a name="bkmk_redeploy"></a> 보고서 다시 배포 하려면  
   
 1.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용된 프로젝트 속성에 대한 자세한 내용을 보려면 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)의 '보고서 서버에 보고서를 게시하려면(옵션)' 섹션을 참조하세요.  
   

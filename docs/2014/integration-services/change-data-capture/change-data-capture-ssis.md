@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
@@ -16,15 +16,16 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c1dba16a2a0d923bba1d99bad19112634c31ebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263239"
 ---
 # <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경 데이터 캡처는 원본 테이블에서 데이터 마트 및 데이터 웨어하우스로의 증분 로드를 효율적으로 수행하는 문제에 대한 효과적인 솔루션을 제공합니다.  
   
 ## <a name="what-is-change-data-capture"></a>변경 데이터 캡처 정의  
@@ -33,7 +34,7 @@ ms.locfileid: "36184535"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 변경 데이터 캡처 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 적용된 삽입, 업데이트 및 삭제 작업을 캡처하고 변경 내용에 대한 세부 정보를 쉽게 사용할 수 있는 관계형 형식으로 만듭니다. 변경 데이터 캡처에 사용되는 변경 테이블에는 행 단위로 발생한 변경 내용을 이해하는 데 필요한 메타데이터뿐만 아니라 추적된 원본 테이블의 열 구조를 미러링하는 열이 포함됩니다.  
   
 > [!NOTE]  
->  변경 데이터 캡처의 일부 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  변경 데이터 캡처의 모든 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>Integration Services에서의 변경 데이터 캡처 작동 방식  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 변경 데이터를 쉽게 수집하여 데이터 웨어하우스에 대한 증분 로드를 효율적으로 수행할 수 있습니다. 그러나 사용자가 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 를 사용하여 변경 데이터를 로드하려면 먼저 사용자가 변경 내용을 캡처하려는 데이터베이스 및 테이블에서 관리자가 변경 데이터 캡처를 설정해야 합니다. 데이터베이스에서 변경 데이터 캡처를 구성하는 방법은 [변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)를 참조하세요.  
@@ -47,17 +48,17 @@ ms.locfileid: "36184535"
  **1단계: 제어 흐름 디자인**  
  패키지의 제어 흐름에서 다음 태스크를 정의해야 합니다.  
   
--   계산의 시작 및 끝 `datetime` 검색 하려는 원본 데이터에 대 한 변경 간격에 대 한 값입니다.  
+-   계산 시작 및 끝 `datetime` 검색 하려는 원본 데이터에 대 한 변경 간격의 값입니다.  
   
-     SQL 실행 태스크를 사용 하 여 이러한 값을 계산 하려면 또는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 가 있는 식 `datetime` 함수입니다. 그런 다음 패키지에서 나중에 사용하기 위해 이러한 끝점을 패키지 변수에 저장합니다.  
+     이러한 값을 계산 하려면 SQL 실행 태스크를 사용 하거나 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식을 사용 하 여 `datetime` 함수입니다. 그런 다음 패키지에서 나중에 사용하기 위해 이러한 끝점을 패키지 변수에 저장합니다.  
   
-     **자세한 내용은:**[는 간격의의 변경 데이터를 지정 합니다.  ](specify-an-interval-of-change-data.md)  
+     **자세한 내용은:**[변경 데이터의 간격 지정  ](specify-an-interval-of-change-data.md)  
   
 -   선택한 간격에 대한 변경 데이터가 준비되었는지 여부를 확인합니다. 비동기 캡처 프로세스에서 선택한 끝점에 아직 도달하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
   
      데이터가 준비되었는지 여부를 확인하려면 필요한 경우 선택한 간격에 대한 변경 데이터가 준비될 때까지 실행을 지연하는 For 루프 컨테이너로 시작합니다. 해당 루프 컨테이너 내에서 SQL 실행 태스크를 사용하여 변경 데이터 캡처에 의해 유지되는 시간 매핑 테이블을 쿼리합니다. 그런 다음 필요한 경우 `Thread.Sleep` 메서드를 호출하는 스크립트 태스크 또는 `WAITFOR` 문이 있는 다른 SQL 실행 태스크를 사용하여 패키지 실행을 일시적으로 지연합니다. 다른 스크립트 태스크를 사용하여 오류 상태나 시간 초과를 기록할 수도 있습니다.  
   
-     **자세한 내용은:**[결정 여부는 변경 데이터가 준비 됨  ](determine-whether-the-change-data-is-ready.md)  
+     **자세한 내용은:**[의 변경 데이터의 준비 여부 확인  ](determine-whether-the-change-data-is-ready.md)  
   
 -   변경 데이터를 쿼리하는 데 사용할 쿼리 문자열을 준비합니다.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "36184535"
   
      변경 내용을 분할하려면 조건부 분할 변환을 사용하여 적절한 처리를 위해 삽입, 업데이트 및 삭제를 다른 출력으로 전송합니다.  
   
-     **자세한 내용은:**[을 삽입, 업데이트 및 삭제  ](process-inserts-updates-and-deletes.md)  
+     **자세한 내용은:**[삽입, 업데이트 및 삭제 처리  ](process-inserts-updates-and-deletes.md)  
   
 -   대상에 삽입, 삭제 및 업데이트를 적용합니다.  
   

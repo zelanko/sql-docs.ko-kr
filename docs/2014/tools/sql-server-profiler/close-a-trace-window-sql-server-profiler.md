@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace window [SQL Server]
 - closing trace window
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 86417d7b5fcfeee8e5fa10dc07e0c5ebe07cb233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4ee75eee7a5c54c216b5435614793fc8df8d44af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238123"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>추적 창 닫기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 실행 중이거나 보고 있는 저장된 추적의 추적 창을 닫는 방법에 대해 설명합니다.  

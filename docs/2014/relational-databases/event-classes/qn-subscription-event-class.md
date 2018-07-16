@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dd4c06a89eeebe5c3b7e83a699ea17ca68bbd18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 79e75ea52d0e1ed2d80dd4e2ef9dcc2d2092e6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188480"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription 이벤트 클래스
   QN:Subscription 이벤트는 알림 구독에 대한 정보를 보고합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36187416"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |EventClass|`int`|이벤트 유형 = 199|27|아니요|  
 |EventSequence|`int`|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 등록 한 구독: 쿼리 알림 구독이 데이터베이스에 성공적으로 등록은 나타냅니다.<br /><br /> 구독 되감기고: 시간을 나타내는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 기존 구독과 정확히 일치 하는 구독 요청 합니다. 이러한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 기존 구독의 시간 제한 값을 새 구독 요청에서 지정한 시간 제한으로 설정합니다.<br /><br /> 구독이 발생 했습니다: 알림 구독이 알림 메시지를 생성 하는 경우를 나타냅니다.<br /><br /> Firing broker 오류로 인해 실패 했습니다:로 인해 알림 메시지에 실패 한 경우 나타냅니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 오류입니다.<br /><br /> Broker 오류 없이 발생이 실패 했습니다: 때 알림 메시지에 실패 하지 않으면이로 인해 나타냅니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 오류입니다.<br /><br /> Broker 오류 가로챌: 나타냅니다 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 쿼리 알림이 사용 하는 대화에서 오류를 전달 합니다.<br /><br /> 구독 삭제 시도가: 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 만료 된 구독 리소스를 삭제 하려고 합니다.<br /><br /> 구독을 삭제 하지 못함: 만료 된 구독 삭제 시도가 실패 했음을 나타냅니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 자동으로 구독 삭제 일정을 다시 조정하여 리소스를 늘립니다.<br /><br /> 구독 제거: 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 만료 된 구독 삭제|21|예|  
+|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 등록 한 구독: 쿼리 알림 구독이 데이터베이스에 성공적으로 등록 되는 경우를 나타냅니다.<br /><br /> 되감을 구독: 시기를 지정 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 기존 구독과 정확히 일치 하는 구독 요청을 수신 합니다. 이러한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 기존 구독의 시간 제한 값을 새 구독 요청에서 지정한 시간 제한으로 설정합니다.<br /><br /> 구독이 발생 했습니다: 알림 구독이 알림 메시지를 생성 하는 경우를 나타냅니다.<br /><br /> Broker 오류로 인해 실행 하지 못했습니다:로 인해 알림 메시지를 실패 한 경우 나타냅니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 오류.<br /><br /> Broker 오류 없이 실행 실패: 때 알림 메시지를 실패 하지 않으면이로 인해 나타냅니다는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 오류입니다.<br /><br /> Broker 오류 가로챌: 나타내는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 쿼리 알림이 사용 하는 대화에서 오류를 전달 합니다.<br /><br /> 구독 삭제 시도가: 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 리소스 확보 하기 위해 만료 된 구독을 삭제 하려고 합니다.<br /><br /> 구독을 삭제 하지 못했습니다: 만료 된 구독 삭제 시도가 실패 했음을 나타냅니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 자동으로 구독 삭제 일정을 다시 조정하여 리소스를 늘립니다.<br /><br /> 구독 제거: 나타냅니다는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 만료 된 구독을 삭제 했습니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니요|  

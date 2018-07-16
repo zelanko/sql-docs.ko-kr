@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ed1e12e60f7c738d81412ab306f66ba0f64d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 2a5d2a0984403c5aeec611dd2555a3b3f9736f6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253395"
 ---
 # <a name="lesson-1-creating-database-objects"></a>1단원: 데이터베이스 개체 만들기
   이 단원에서는 데이터베이스를 만들고 데이터베이스에서 테이블을 만든 다음 테이블의 데이터에 액세스 및 변경하는 방법에 대해 보여 줍니다. 이 단원은 [!INCLUDE[tsql](../includes/tsql-md.md)]사용을 소개하는 데 목적이 있으므로 이러한 문에 사용 가능한 많은 옵션을 사용하거나 설명하지는 않습니다.  
@@ -38,17 +38,17 @@ ms.locfileid: "36185103"
   
  이 단원에서는 다음 항목을 다룹니다.  
   
--   [데이터베이스를 만드는 &#40;자습서&#41;](lesson-1-1-creating-a-database.md)  
+-   [데이터베이스 만들기 &#40;자습서&#41;](lesson-1-1-creating-a-database.md)  
   
 -   [테이블 만들기 &#40;자습서&#41;](lesson-1-2-creating-a-table.md)  
   
 -   [테이블에 데이터 삽입 및 업데이트 &#40;자습서&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [테이블의 데이터를 읽는 &#40;자습서&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [테이블의 데이터 읽기 &#40;자습서&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [요약: 데이터베이스 개체 만들기](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [데이터베이스를 만드는 &#40;자습서&#41;](lesson-1-1-creating-a-database.md)  
+ [데이터베이스 만들기 &#40;자습서&#41;](lesson-1-1-creating-a-database.md)  
   
   

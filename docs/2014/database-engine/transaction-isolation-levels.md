@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329963"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
   다음 격리 수준은 메모리 최적화 테이블에 액세스하는 트랜잭션에 대해 지원됩니다.  
@@ -34,15 +34,15 @@ ms.locfileid: "36187692"
   
  트랜잭션 격리 수준은 고유하게 컴파일된 저장 프로시저의 원자 블록의 일부로 지정할 수 있습니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)를 참조하세요. 메모리 최적화 테이블을 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]에서 액세스하면 테이블 수준 힌트를 사용하여 격리 수준을 지정할 수 있습니다.  
   
- 고유하게 컴파일된 저장 프로시저를 정의할 때는 트랜잭션 격리 수준을 지정해야 합니다. 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]의 사용자 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 테이블 힌트에서 격리 수준을 지정해야 합니다. 자세한 내용은 참조 [트랜잭션 격리 수준에 메모리 최적화 된 테이블에 대 한 지침이](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 고유하게 컴파일된 저장 프로시저를 정의할 때는 트랜잭션 격리 수준을 지정해야 합니다. 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]의 사용자 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 테이블 힌트에서 격리 수준을 지정해야 합니다. 자세한 내용은 [메모리 최적화 테이블이 있는 트랜잭션 격리 수준에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
- 자동 커밋 트랜잭션이 있는 메모리 최적화 테이블에는 격리 수준 READ COMMITTED가 지원됩니다. READ COMMITTED는 사용자 트랜잭션 또는 원자 블록에서 유효하지 않습니다. READ COMMITTED는 명시적 또는 암시적 사용자 트랜잭션에서 지원되지 않습니다. 격리 수준 READ_COMMITTED_SNAPSHOT은 자동 커밋 트랜잭션 기능이 있는 메모리 최적화 테이블의 경우 및 쿼리가 디스크 기반 테이블에 액세스하지 않는 경우에만 지원됩니다. 뿐만 아니라 SNAPSHOT 격리로 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용하여 시작된 트랜잭션은 메모리 최적화 테이블에 액세스할 수 없습니다. REPEATABLE READ 또는 SERIALIZABLE 격리와 함께 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용하는 트랜잭션은 SNAPSHOT 격리를 사용하여 메모리 최적화 테이블에 액세스해야 합니다. 이 시나리오에 대 한 자세한 내용은 참조 [크로스 컨테이너 트랜잭션은](cross-container-transactions.md)합니다.  
+ 자동 커밋 트랜잭션이 있는 메모리 최적화 테이블에는 격리 수준 READ COMMITTED가 지원됩니다. READ COMMITTED는 사용자 트랜잭션 또는 원자 블록에서 유효하지 않습니다. READ COMMITTED는 명시적 또는 암시적 사용자 트랜잭션에서 지원되지 않습니다. 격리 수준 READ_COMMITTED_SNAPSHOT은 자동 커밋 트랜잭션 기능이 있는 메모리 최적화 테이블의 경우 및 쿼리가 디스크 기반 테이블에 액세스하지 않는 경우에만 지원됩니다. 뿐만 아니라 SNAPSHOT 격리로 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용하여 시작된 트랜잭션은 메모리 최적화 테이블에 액세스할 수 없습니다. REPEATABLE READ 또는 SERIALIZABLE 격리와 함께 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용하는 트랜잭션은 SNAPSHOT 격리를 사용하여 메모리 최적화 테이블에 액세스해야 합니다. 이 시나리오에 대 한 자세한 내용은 참조 하세요. [크로스 컨테이너 트랜잭션은](cross-container-transactions.md)합니다.  
   
  READ COMMITTED는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 격리 수준입니다. 세션의 격리 수준이 READ COMMITED 이하인 경우 다음 작업 중 하나를 수행할 수 있습니다.  
   
 -   메모리 최적화 테이블에 액세스하는 데 보다 높은 격리 수준 힌트를 명시적으로 사용합니다(예: WITH (SNAPSHOT)).  
   
--   메모리 최적화 테이블에 대한 격리 수준을 SNAPSHOT(메모리 최적화 모든 테이블에 대한 WITH(SNAPSHOT) 힌트를 포함한 것)으로 설정할 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 설정 옵션을 지정합니다. 에 대 한 자세한 내용은 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, 참조 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)합니다.  
+-   메모리 최적화 테이블에 대한 격리 수준을 SNAPSHOT(메모리 최적화 모든 테이블에 대한 WITH(SNAPSHOT) 힌트를 포함한 것)으로 설정할 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 설정 옵션을 지정합니다. 에 대 한 자세한 내용은 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`를 참조 하세요 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)합니다.  
   
  또는 세션의 격리 수준이 READ COMMITTED인 경우 자동 커밋 트랜잭션을 사용할 수 있습니다.  
   
@@ -84,8 +84,8 @@ ms.locfileid: "36187692"
  오류 41325가 발생 합니다. 직렬화 유효성 검사 실패로 인해 현재 트랜잭션을 커밋하지 못했습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화 된 테이블에 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [메모리 액세스에 최적화 된 테이블이 포함 된 트랜잭션 격리 수준에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [메모리 최적화 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [메모리 최적화 테이블을 사용 하 여 트랜잭션 격리 수준에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.setdimensionwritebackcapability.f1
 ms.assetid: b01aa630-0b70-42a5-a743-f45a030cf26b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b701311b12931e246a64b934f5fc3644148ecd46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1923378acf208274662638ceb50b4088ea641537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261509"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>차원 쓰기 저장(writeback) 설정(비즈니스 인텔리전스 마법사)
   **차원 쓰기 저장(writeback) 설정** 페이지를 사용하여 선택한 차원의 쓰기 저장 기능을 설정 또는 해제할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **차원에 쓰기 저장을 사용 하도록 설정**  
+ **차원에 쓰기 저장 사용**  
  차원을 쓰기 가능으로 설정하려면 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  

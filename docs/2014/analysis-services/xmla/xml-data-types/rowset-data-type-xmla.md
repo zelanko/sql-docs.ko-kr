@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279449"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 데이터 형식(XMLA)
-  나타내는 파생된 데이터 형식을 정의 [루트](../xml-elements-properties/root-element-xmla.md) 에서 테이블 형식 데이터를 반환 하는 요소는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드를 호출 합니다.  
+  나타내는 파생된 데이터 형식을 정의 [루트](../xml-elements-properties/root-element-xmla.md) 에서 테이블 형식 데이터를 반환 하는 요소는 [Discover](../xml-elements-methods-discover.md) 또는 [Execute](../xml-elements-methods-execute.md) 메서드 호출.  
   
- **Namespace** :-microsoft-com:xml-분석: 행 집합  
+ **Namespace** urn: 스키마-microsoft-com:xml-분석: 행 집합  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36187064"
 |파생 요소|[root](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- XML은 요소 및 특성 이름에 특정 문자를 허용하지 않습니다. 이 명명 제약 조건을 해결 하기 위해 XML for Analysis (XMLA)에서 정의한 인코딩을 지원 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. XML 1.0 사양에 따라 유효 하지 않은 XML 이름 문자가 포함 된 열 이름에 대 한 XMLA 유효 하지 않은 유니코드 문자를 인코딩하는 데 해당 16 진수 값을 사용 합니다. 16 진수 값은 _x로 이스케이프 됩니다*HHHH*\_여기서 *HHHH* 는 최상위 비트 우선 순서에 있는 문자에 대 한 4 자리 16 진수 ucs-2 코드를 나타냅니다. 예를 들어 XMLA은 "Order Details" 이름에서 공백을 해당 16진수 코드로 바꾸어 Order_x0020_Details로 인코딩합니다.  
+ XML은 요소 및 특성 이름에 특정 문자를 허용하지 않습니다. 이 명명 제약 조건을 해결 하기 위해 XMLA (XML for Analysis)에서 정의한 인코딩을 지원 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. XML 1.0 사양에 따라 잘못 된 XML 이름 문자가 포함 된 열 이름에 대 한 XMLA 해당 16 진수 값을 사용 하 여 유효 하지 않은 유니코드 문자를 인코딩합니다. 16 진수 값은 _x로 이스케이프 됩니다*HHHH*\_여기서 *HHHH* 는 가장 중요 한 비트가 먼저 오는 순서로의 문자에 대 한 4 자리 16 진수 ucs-2 코드를 나타냅니다. 예를 들어 XMLA은 "Order Details" 이름에서 공백을 해당 16진수 코드로 바꾸어 Order_x0020_Details로 인코딩합니다.  
   
- 인코딩을 하면 XSL(Extensible Stylesheet Language) 변환이 어려워질 수 있습니다. 인코딩되지 않은 열 이름, 실제 빠른 조회를 지원 하기 위해, 추가 된 `sql:field`다음 예제와 같이 각 열에 대 한 XML 행 집합 스키마로 특성:  
+ 인코딩을 하면 XSL(Extensible Stylesheet Language) 변환이 어려워질 수 있습니다. 인코딩되지 않은 열 이름을 실제 빠른 조회를 지원 하기 위해, 추가 된 `sql:field`다음 예와에서 같이 각 열에 대 한 XML 행 집합 스키마에 특성:  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

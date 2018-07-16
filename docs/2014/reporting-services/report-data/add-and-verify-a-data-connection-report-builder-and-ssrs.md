@@ -1,5 +1,5 @@
 ---
-title: 데이터 연결이 나 데이터 원본 (보고서 작성기 및 SSRS) 추가 및 확인 | Microsoft Docs
+title: 추가 및 확인 데이터 연결이 나 데이터 원본 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 00be4472fc0f1e495e136b731499e581c1f78178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4256a55f0dab891834aa633f4f06ca92f2c4c020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292183"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>데이터 연결이나 데이터 원본 추가 및 확인(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버에 있는 공유 데이터 원본을 추가하거나 보고서에 대한 포함된 데이터 원본을 만들 수 있습니다. 보고서 디자이너에서 공유 데이터 원본이나 포함된 데이터 원본을 만들고 보고서 서버에 배포할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36186480"
   
     2.  다음 대체 방법 중 하나를 사용하여 연결 문자열을 지정합니다.  
   
-    -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예 목록은 참조 [데이터 연결, 데이터 원본 및 보고서 작성기의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)합니다.  
+    -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예 목록은 참조 하세요 [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)합니다.  
   
     -   식 단추(**fx** )를 클릭하여 연결 문자열로 계산되는 식을 만듭니다. **식** 대화 상자의 식 창에 식을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204051"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
   데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
@@ -87,7 +86,7 @@ Network=dbnmpntw;
 >  명명된 파이프는 TCP/IP 다시 시도 알고리즘을 사용하지 않으므로 미러된 데이터베이스에 연결하기 전에 명명된 파이프 연결 시도가 시간 초과되는 경우가 많습니다.  
   
 #### <a name="server-attribute"></a>Server 특성  
- 연결 문자열을 포함 해야 합니다는 `Server` 현재 주 서버 인스턴스를 식별 하는 초기 파트너 이름을 제공 하는 특성입니다.  
+ 연결 문자열에 포함 해야 합니다는 `Server` 현재 주 서버 인스턴스를 식별 하는 초기 파트너 이름을 제공 하는 특성입니다.  
   
  서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 해당 이름을 지정하는 것입니다. 예를 들어:  
   
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  연결 문자열에서 포트가 아닌 명명된 인스턴스 이름을 지정하는 경우 SQL Server Browser 쿼리가 필요합니다.  
   
- IP 주소와 포트를 지정 하는 `Server` 특성은 다음과 같은 양식으로 `Server=` *< i p _ >*`,`*\<포트 >*, 예:  
+ IP 주소와 포트를 지정 하는 `Server` 특성은 형식을 `Server=` *< ip_address >*`,`*\<포트 >* 예를 들어:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  이 문자열에는 인증 정보가 생략됩니다.  
   
 > [!IMPORTANT]  
->  프로토콜 접두사를 사용 하면는 `Server` 특성 (`Server=tcp:`*\<서버 이름 >*)와 호환 되지 않습니다는 **네트워크** 특성과에서 프로토콜을 지정 두 자릿수 됩니다는 오류가 발생 합니다. 그러므로 연결 문자열을 사용 하 여 프로토콜을 지정 하는 **네트워크** 특성에 서버 이름만 지정 하 고는 `Server` 특성 (`"Network=dbmssocn; Server=`*\<서버 이름 >*`"`).  
+>  프로토콜 접두사를 사용 합니다 `Server` 특성 (`Server=tcp:`*\<servername >*)와 호환 되지 않습니다는 **네트워크** 특성과의 프로토콜을 지정 두 위치는 오류가 발생 합니다. 따라서 좋습니다 연결 문자열을 사용 하 여 프로토콜을 지정 하는 **네트워크** 특성을 마우스에 서버 이름만 지정 합니다 `Server` 특성 (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 특성  
  초기 파트너 이름 외에 클라이언트에서 현재 미러 서버 인스턴스를 식별하는 장애 조치(failover) 파트너 이름을 지정할 수도 있습니다. 장애 조치(failover) 파트너는 Failover Partner 특성의 키워드 중 하나에 의해 지정됩니다. 이 특성의 키워드는 사용 중인 API에 따라 다릅니다. 다음 표에서는 이러한 키워드를 보여 줍니다.  
@@ -141,7 +140,7 @@ Server=123.34.45.56,4724;
 >  초기 파트너 이름만 제공되면 다시 연결 방법에 대한 경우를 제외하고 응용 프로그램 개발자가 다른 동작을 수행하거나 코드를 작성할 필요가 없습니다.  
   
 > [!NOTE]  
->  관리 코드 응용 프로그램 개발자는 장애 조치 파트너 이름을 제공는 `ConnectionString` 의 `SqlConnection` 개체입니다. 이러한 연결 문자열을 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK에 포함된 ADO.NET 설명서에서 "Database Mirroring Support in the .NET Framework Data Provider for SQL Server"를 참조하십시오.  
+>  관리 코드 응용 프로그램 개발자는 장애 조치 파트너 이름을 제공 합니다 `ConnectionString` 의 `SqlConnection` 개체입니다. 이러한 연결 문자열을 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK에 포함된 ADO.NET 설명서에서 "Database Mirroring Support in the .NET Framework Data Provider for SQL Server"를 참조하십시오.  
   
 #### <a name="example-connection-string"></a>연결 문자열 예  
  예를 들어 TCP/IP를 사용하여 Prtner_A 또는 Partner_B의 **AdventureWorks** 데이터베이스에 명시적으로 연결하기 위해 ODBC 드라이버를 사용하는 클라이언트 응용 프로그램에서 다음 연결 문자열을 제공할 수 있습니다.  

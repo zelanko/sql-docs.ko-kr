@@ -16,15 +16,15 @@ helpviewer_keywords:
 - elements [XML for Analysis]
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 caps.latest.revision: 32
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 84775d7d4bb7499d8c1d5e5326ca3fa2d1fb27ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e4de4bbe0b87068ead6ccc9b80f8625bf8014c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200253"
 ---
 # <a name="xml-elements-xmla"></a>XML 요소(XMLA)
   다음 항목에서 지 원하는 Analysis (XMLA) 요소 범주에 대 한 다양 한 XML 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
@@ -41,6 +41,6 @@ ms.locfileid: "36186427"
   
 ## <a name="see-also"></a>관련 항목  
  [XML 데이터 형식 &#40;XMLA&#41;](../xmla/xml-data-types/xml-data-types-xmla.md)   
- [개발 analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [분석을 사용 하 여 개발 Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

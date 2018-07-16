@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221853"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>집계 변환 편집기(집계 탭)
   **집계 변환 편집기** 대화 상자의 **집계** 탭을 사용하여 집계 및 집계 속성에 대한 열을 지정할 수 있습니다. 이때 여러 집계를 적용할 수 있습니다. 이 변환으로 인해 오류 출력이 생성되지는 않습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "36187044"
  **Group By**를 선택하는 경우 확인란을 사용하여 변환이 비교를 수행하는 방법을 제어할 수 있습니다. 문자열 비교 옵션에 대한 자세한 내용은 [Comparing String Data](data-flow/comparing-string-data.md)를 참조하십시오.  
   
  **Count Distinct Scale**  
- 필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. 두 `CountDistinctScale` 및 **CountDistinctKeys** 지정 된 **CountDistinctKeys** 우선적으로 적용 합니다.  
+ 필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. 둘 다 `CountDistinctScale` 하 고 **CountDistinctKeys** 지정 된 **CountDistinctKeys** 우선적으로 적용 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "36187044"
 |높음|집계에서 25,000,000개 이상의 고유한 값을 쓸 수 있습니다.|  
   
  **Count Distinct Keys**  
- 필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 정확하게 지정합니다. 두 `CountDistinctScale` 및 **CountDistinctKeys** 지정 된 **CountDistinctKeys** 우선적으로 적용 합니다.  
+ 필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 정확하게 지정합니다. 둘 다 `CountDistinctScale` 하 고 **CountDistinctKeys** 지정 된 **CountDistinctKeys** 우선적으로 적용 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

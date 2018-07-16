@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
 - restoring encryption keys [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 26b64626126f331b5ca9dcc893a7ecb73a7bce38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26c71d0d4f3811d4204e83f465c47a6a78f7532f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331303"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Reporting Services 암호화 키 백업 및 복원
   보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "36187563"
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> 암호화 키 복원 - rskeymgmt(기본 모드)  
   
-1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. 사용 된 `-a` 는 키를 복원 하는 인수입니다. 정규화된 파일 이름을 제공하고 암호를 지정해야 합니다. 다음은 인수 지정 예입니다.  
+1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. 사용 된 `-a` 키를 복원 하는 인수입니다. 정규화된 파일 이름을 제공하고 암호를 지정해야 합니다. 다음은 인수 지정 예입니다.  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  

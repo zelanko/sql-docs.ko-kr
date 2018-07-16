@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb505ff02917259b71d5f5b1ee803a5982217b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed91c75bd717e67dd624fc16f7091be24fb030c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297233"
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 요소(ASSL)
   멤버가 데이터베이스의 정의 또는 데이터베이스의 개체 정의를 읽을 수 있는지 여부를 결정합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36186650"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](../objects/dimensionpermission-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission ](../objects/miningstructurepermission-element-assl.md), [사용 권한](../data-type/permission-data-type-assl.md)|  
+|부모 요소|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md)를 [DimensionPermission](../objects/dimensionpermission-element-assl.md)하십시오 [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission ](../objects/miningstructurepermission-element-assl.md), [권한](../data-type/permission-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -67,13 +67,13 @@ ms.locfileid: "36186650"
 |값|Description|  
 |-----------|-----------------|  
 |*없음*|개체 정의에 대한 액세스가 허용되지 않습니다.|  
-|*기본*|개체 정의에 대한 기본 액세스가 허용됩니다. **참고:** 이 권한에 로컬 큐브, 측정값 그룹을 연결 하 고, 차원을 연결에 필요 합니다.|  
-|*허용*|개체 정의에 대한 모든 액세스 권한이 허용됩니다. **참고:** 이 사용 권한은 실행 하는 데 필요는 [Discover](../../xmla/xml-elements-methods-discover.md) XML for Analysis (XMLA) 호출 DISCOVER_XML_METADATA 매개 변수를 사용 합니다.|  
+|*기본*|개체 정의에 대한 기본 액세스가 허용됩니다. **참고:** 만드는 로컬 큐브, 측정값 그룹을 연결 하 고, 차원을 연결에이 권한이 필요 합니다.|  
+|*허용*|개체 정의에 대한 모든 액세스 권한이 허용됩니다. **참고:** 실행에이 권한이 필요를 [Discover](../../xmla/xml-elements-methods-discover.md) XML for Analysis (XMLA) 호출 DISCOVER_XML_METADATA 매개 변수를 사용 합니다.|  
   
  AMO(Analysis Management Object) 개체 모델에서 `ReadDefinition`의 부모에 해당하는 요소는 <xref:Microsoft.AnalysisServices.CubePermission>, <xref:Microsoft.AnalysisServices.DatabasePermission>, <xref:Microsoft.AnalysisServices.DimensionPermission>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, <xref:Microsoft.AnalysisServices.MiningStructurePermission> 및 <xref:Microsoft.AnalysisServices.Permission>입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Role 요소 &#40;ASSL&#41;](../objects/role-element-assl.md)   
+ [역할 요소 &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [속성 &#40;ASSL&#41;](properties-assl.md)  
   
   

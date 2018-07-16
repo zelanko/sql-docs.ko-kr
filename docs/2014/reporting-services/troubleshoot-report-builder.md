@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ea90051d521f14465543ea135a8a2472aef5be68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8bc634306d783e943388d19f149e735d15383f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255505"
 ---
 # <a name="troubleshoot-report-builder"></a>보고서 작성기 문제 해결
-  보고서 작성기는 다양한 종류의 데이터 원본을 기반으로 보고서를 작성하고, 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 데 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 제작 도구입니다. 일부로 또는 웹 브라우저에서 보고서 작성기에서 만드는 보고서를 볼 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 응용 프로그램 또는 SharePoint 사이트입니다.  
+  보고서 작성기는 다양한 종류의 데이터 원본을 기반으로 보고서를 작성하고, 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 데 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 제작 도구입니다. 일부로 또는 웹 브라우저에서 보고서 작성기에서 만든 보고서를 볼 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 응용 프로그램 또는 SharePoint 사이트입니다.  
   
- 보고서 작성기를 사용 하 여 다양 한 기본 태스크를 수행 하는 방법을 알아보려면 참조는 [자습서](report-builder-tutorials.md)합니다.  
+ 보고서 작성기를 사용 하 고 다양 한 기본 태스크를 수행 하는 방법에 알아보려면 참조를 [자습서](report-builder-tutorials.md)합니다.  
   
  다음 항목은 보고서 작성자인지, 보고서 서버 관리자인지에 따라 보고서 문제를 해결하는 데 도움이 될 수 있습니다.  
   
 ## <a name="report-authors"></a>보고서 작성자  
- [보고서 문제 해결: 보고서에 지도 &#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36186003"
 ## <a name="administrators"></a>관리자  
  [설치, 제거 및 보고서 작성기 지원](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- 참고: 다음 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 또한의 다음 항목을 참조 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 설명서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [지도 보고서 지원 계획](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "36186003"
   
  예를 들어 토론 그룹에 참여하여 Reporting Services MVP(Most Valued Professional)와 같은 숙련된 보고서 작성기 사용자들로 구성된 온라인 그룹과 대화를 나누고 질문에 대한 답과 해결책, 팁 및 전문 지식을 구할 수 있습니다.  
   
- Reporting Services 팀원 들 어떻게 읽기는 [Reporting Services 팀 블로그](http://go.microsoft.com/fwlink/?LinkId=118788)합니다.
+ 에 올린 글 Reporting Services 팀원을 읽을 합니다 [Reporting Services 팀 블로그](http://go.microsoft.com/fwlink/?LinkId=118788)합니다.
   
- 그래도 답변을 찾지 못할 경우 [사용자 의견 보내기](http://go.microsoft.com/fwlink/?LinkId=118791)합니다.  
+ 아직 답변을 찾지 못할 경우 [피드백 보내기](http://go.microsoft.com/fwlink/?LinkId=118791)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [설치, 제거 및 보고서 작성기 지원](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

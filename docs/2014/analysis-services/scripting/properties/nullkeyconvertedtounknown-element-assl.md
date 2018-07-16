@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316923"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 요소(ASSL)
   Null 변환 오류가 발생할 때 수행할 동작을 지정합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36187070"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 키 열에 Null 값이 있으며 이 값이 `Unknown` 멤버로 해석되는 경우 Null 변환 오류가 발생합니다. 경우에이 오류가 발생 하는 반면는 [NullProcessing](nullprocessing-element-assl.md) 에 대 한 요소는 [DataItem](../data-type/dataitem-data-type-assl.md) 의 상위 항목은 `ErrorConfiguration` 로 설정 된 부모 *UnknownMember*합니다.  
+ 키 열에 Null 값이 있으며 이 값이 `Unknown` 멤버로 해석되는 경우 Null 변환 오류가 발생합니다. 경우에이 오류가 발생 하는 반면를 [NullProcessing](nullprocessing-element-assl.md) 요소를 [DataItem](../data-type/dataitem-data-type-assl.md) 의 상위 항목을 `ErrorConfiguration` 부모 요소가로 설정 되어 *UnknownMember*합니다.  
   
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   

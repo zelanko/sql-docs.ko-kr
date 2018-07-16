@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.userselectiondialog.f1
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44372f10a991f95642f8f67787d31f7b3c9bbc73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 111c599b287ddf9ad75a8e7c98eaab121452cf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287959"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>사용자 선택 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **사용자 선택** 대화 상자를 사용하여 사용 빈도 기반 최적화 마법사에 대한 쿼리 로그에 저장된 쿼리를 필터링할 사용자를 선택할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "36186628"
  쿼리 로그의 쿼리를 필터링할 사용자를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [쿼리 조건 지정 &#40;사용 빈도 기반 최적화 마법사&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

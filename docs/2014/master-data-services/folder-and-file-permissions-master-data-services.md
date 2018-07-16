@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
+author: leolimsft
+ms.author: lle
+manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 1461491a8cb6dba196878bd428b6acc413d568c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 1cee48c465b95598f4bdbcca6f22df2cf623945d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318773"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치할 경우 폴더와 파일이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공유 기능에 대해 지정한 설치 경로의 파일 시스템에 설치됩니다. 에 대 한 기본 설치 경로 사용 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공유 기능에 대 한 설치 경로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 은 *드라이브*: files\microsoft SQL Server\120\Master Data Services입니다. 공유 기능 설치 경로를 변경할 수 있지만 부모 폴더에서 상속된 사용 권한과 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 대해 명시적으로 설정된 사용 권한을 알고 있어야 합니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치할 경우 폴더와 파일이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공유 기능에 대해 지정한 설치 경로의 파일 시스템에 설치됩니다. 기본 설치 경로를 사용 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공유 기능에 대 한 설치 경로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 됩니다 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data Services입니다. 공유 기능 설치 경로를 변경할 수 있지만 부모 폴더에서 상속된 사용 권한과 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 대해 명시적으로 설정된 사용 권한을 알고 있어야 합니다.  
   
 ## <a name="inherited-permissions"></a>상속된 사용 권한  
  **Microsoft SQL Server** 폴더, **Master Data Services** 폴더 및 대부분의 하위 폴더와 파일은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램에서 지정된 부모 폴더에서 사용 권한을 상속합니다. 기본 설치 위치를 선택할 경우 사용 권한을 상속하는 부모 폴더는 *드라이브*:\Program Files입니다. 다음 표에서는 **Program Files**의 기본 사용 권한에 대해 설명합니다.  

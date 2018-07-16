@@ -14,13 +14,13 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10c2ff8df0fbcc1b9bc491a1c6a32787d0cdac55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5db0cc5bccaf05cf18aa3a7459eecfead5cd13b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285679"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>여러 입력을 지원하는 데이터 흐름 구성 요소 개발
   여러 입력을 지원하는 데이터 흐름 구성 요소는 여러 입력에서 데이터가 생성되는 속도가 균일하지 않을 경우 과도한 메모리를 사용할 수 있습니다. 둘 이상의 입력을 지원하는 사용자 지정 데이터 흐름 구성 요소를 개발한 경우 Microsoft.SqlServer.Dts.Pipeline 네임스페이스의 다음 멤버를 사용하여 이로 인한 메모리 가중을 관리할 수 있습니다.  
@@ -59,9 +59,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드의 구현은 기본 클래스의 구현을 호출해서는 안 됩니다. 기본 클래스의 이 메서드에 대한 기본 구현은 `NotImplementedException`만 발생시킵니다.  
   
- 이 메서드를 구현할 때는 구성 요소의 각 입력에 대해 요소 상태를 부울 *canProcess* 배열로 설정합니다. 입력은 *inputIDs* 배열에서 해당 ID 값으로 식별됩니다. 에 있는 요소의 값을 설정 하면는 *canProcess* 배열을 `true` 입력에 대해 데이터 흐름 엔진에서는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 지정 된 입력에 대 한 더 많은 데이터를 제공 합니다.  
+ 이 메서드를 구현할 때는 구성 요소의 각 입력에 대해 요소 상태를 부울 *canProcess* 배열로 설정합니다. 입력은 *inputIDs* 배열에서 해당 ID 값으로 식별됩니다. 에 있는 요소의 값을 설정한 경우는 *canProcess* 배열을 `true` 입력에 대해 데이터 흐름 엔진 구성 요소를 호출 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 지정 된 입력에 대 한 더 많은 데이터를 제공 합니다.  
   
- 추가 업스트림 데이터를 사용할 수 있는 동안의 값은 *canProcess* 배열 요소에 하나 이상의 입력에 반드시 `true`, 그렇지 않으면 처리가 중지 합니다.  
+ 추가 업스트림 데이터를 사용할 수의 값을 *canProcess* 하나 이상의 입력에 대 한 배열 요소 여야 `true`, 처리가 중지 됩니다.  
   
  데이터 흐름 엔진은 추가 데이터를 받기 위해 대기 중인 입력을 확인하기 위해 각 데이터 버퍼를 보내기 전에 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드를 호출합니다. 입력이 차단되었음을 나타내는 값이 반환된 경우 데이터 흐름 엔진은 해당 입력에 대한 추가 데이터 버퍼를 구성 요소에 보내는 대신 일시적으로 캐시합니다.  
   
@@ -75,9 +75,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   구성 요소에서 이미 받은 버퍼에 현재 입력에 대해 처리할 수 있는 데이터가 없는 경우(`inputBuffers[inputIndex].CurrentRow() == null`)  
   
- 데이터 흐름 구성 요소를 설정 하 여이 나타냅니다 많은 데이터를 수신 하는 입력을 대기 중인 경우 `true` 에 요소의 값은 *canProcess* 해당 입력에 해당 하는 배열입니다.  
+ 데이터 흐름 구성 요소를 설정 하 여이 나타냅니다 입력 자세한 데이터를 받기 위해 대기 중인 경우 `true` 에 있는 요소의 값을 *canProcess* 해당 입력에 해당 하는 배열입니다.  
   
- 반면, 입력에 대해 처리할 수 있는 데이터가 구성 요소에 있는 경우 이 예는 입력 처리를 일시 중단합니다. 예제로 설정 하 여이 수행 `false` 에 요소의 값은 *canProcess* 해당 입력에 해당 하는 배열입니다.  
+ 반면, 입력에 대해 처리할 수 있는 데이터가 구성 요소에 있는 경우 이 예는 입력 처리를 일시 중단합니다. 이 예에서는이 설정을 통해 하도록 `false` 에 있는 요소의 값을 *canProcess* 해당 입력에 해당 하는 배열입니다.  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -92,7 +92,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- 위의 예에서는 부울 `inputEOR` 배열을 사용하여 각 입력에 사용 가능한 추가 업스트림 데이터가 있는지 여부를 나타냅니다. 이 배열 이름에서 `EOR`은 "행 집합의 끝(end of rowset)"을 나타내며 데이터 흐름 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 참조합니다. 이 예에서 여기에 표시되지 않은 일부분인 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 받은 각 데이터 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성 값을 확인합니다. `true` 값이 입력에 사용할 수 있는 추가 업스트림 데이터가 없음을 나타내는 경우 이 예는 해당 입력에 대한 `inputEOR` 배열 요소 값을 `true`로 설정합니다. 이 예제는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 에 해당 하는 요소의 값을 설정 하는 메서드는 *canProcess* 배열을 `false` 입력에 대 한 때의 값은 `inputEOR` 배열 요소는 더 이상 업스트림 임을 나타냅니다 데이터 입력에 대해 사용할 수 있습니다.  
+ 위의 예에서는 부울 `inputEOR` 배열을 사용하여 각 입력에 사용 가능한 추가 업스트림 데이터가 있는지 여부를 나타냅니다. 이 배열 이름에서 `EOR`은 "행 집합의 끝(end of rowset)"을 나타내며 데이터 흐름 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성을 참조합니다. 이 예에서 여기에 표시되지 않은 일부분인 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드는 받은 각 데이터 버퍼의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> 속성 값을 확인합니다. `true` 값이 입력에 사용할 수 있는 추가 업스트림 데이터가 없음을 나타내는 경우 이 예는 해당 입력에 대한 `inputEOR` 배열 요소 값을 `true`로 설정합니다. 이 예제는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 의 해당 요소 값을 설정 하는 메서드를 *canProcess* 배열을 `false` 입력에 대 한 때 값을 `inputEOR` 배열 요소는 더 이상 업스트림 임을 나타냅니다 데이터 입력에 대해 사용할 수 있습니다.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>GetDependentInputs 메서드 구현  
  사용자 지정 데이터 흐름 구성 요소가 세 개 이상의 입력을 지원하는 경우에는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드에 대한 구현도 제공해야 합니다.  
@@ -100,7 +100,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 메서드의 구현은 기본 클래스의 구현을 호출해서는 안 됩니다. 기본 클래스의 이 메서드에 대한 기본 구현은 `NotImplementedException`만 발생시킵니다.  
   
- 데이터 흐름 엔진은 사용자가 구성 요소에 세 개 이상의 입력을 연결한 경우에만 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 메서드를 호출합니다. 구성 요소에 입력이 두 개뿐일 때 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드는 하나의 입력이 차단 되었음을 나타냅니다 (*canProcess* = `false`), 데이터 흐름 엔진은 다른 많은 데이터를 수신 대기 중인 입력을 알고 있습니다. 그러나 입력이 세 개 이상일 때 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드가 하나의 입력이 차단되었음을 나타내는 경우에는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>의 추가 코드가 추가 데이터를 받기 위해 대기 중인 입력을 식별합니다.  
+ 데이터 흐름 엔진은 사용자가 구성 요소에 세 개 이상의 입력을 연결한 경우에만 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 메서드를 호출합니다. 구성 요소에 입력이 두 개뿐일 때와 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드가 하나의 입력이 차단 되었음을 나타내는 (*canProcess* = `false`), 데이터 흐름 엔진은 더 많은 데이터를 수신 대기 중인 입력 하는 다른 것으로 인식 합니다. 그러나 입력이 세 개 이상일 때 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 메서드가 하나의 입력이 차단되었음을 나타내는 경우에는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A>의 추가 코드가 추가 데이터를 받기 위해 대기 중인 입력을 식별합니다.  
   
 > [!NOTE]  
 >  사용자가 작성한 코드에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> 또는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> 메서드를 호출하지 않아야 합니다. 이러한 메서드와 사용자가 재정의한 `PipelineComponent` 클래스의 다른 메서드는 사용자의 구성 요소를 실행할 때 데이터 흐름 엔진에서 호출합니다.  

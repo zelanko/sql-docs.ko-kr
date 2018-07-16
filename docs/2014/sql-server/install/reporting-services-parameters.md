@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, parameters
 ms.assetid: e9a55dab-7c4e-4e09-97da-9f3a108e22c9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 062fe20ee7b7ea7571b2c4b1390008e23d8e5d7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2adf8535d05574de5b41f81b1e3a694918ba25c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189630"
 ---
 # <a name="reporting-services-parameters"></a>Reporting Services 매개 변수
-  분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 지정 해야 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 해당 인스턴스에 연결 하는 방법에 대 한 정보를 제공 합니다.  
+  분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 인스턴스를 지정 해야 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하 고 해당 인스턴스에 연결 하는 방법에 대 한 정보를 제공 합니다.  
   
 ## <a name="options"></a>변수  
  **Reporting Services 인스턴스 이름**  
  목록에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

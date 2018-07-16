@@ -1,5 +1,5 @@
 ---
-title: Analysis Services의 작업 로그 | Microsoft Docs
+title: Analysis Services에서 작업 로그 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228374"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services의 로그 작업
   Analysis Services 인스턴스는 서버 알림, 오류 및 경고를 msmdsrv.log 파일에 설치된 인스턴스별로 하나씩 기록합니다. 관리자는 이 로그에서 루틴 및 비정상적 이벤트에 대한 정보를 참조합니다. 최신 릴리스에서는 더 많은 정보를 포함하도록 로깅이 향상되었습니다. 이제 로그 레코드에는 제품 버전과 버전 정보, 프로세서, 메모리, 연결, 차단 이벤트 등이 모두 포함되어 있습니다. 전체 변경 목록은 [로깅 개선 사항](http://support.microsoft.com/kb/2965035)에서 확인할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "36185720"
   
  이 로그 파일은 각 서비스를 다시 시작하면 비워집니다. 이전 릴리스에서는 관리자가 로그 파일이 사용할 수 없을 정도로 커지기 전에 로그 파일을 플러시하기 위해 종종 서비스를 다시 시작했습니다. 이제 더 이상 그럴 필요가 없습니다. SQL Server 2012 SP2 이상에 도입된 구성 설정을 사용하면 로그 파일의 크기와 기록을 제어할 수 있습니다.  
   
--   `MaxFileSizeMB`는 최대 로그 파일 크기(MB)를 지정합니다. 기본값은 256입니다. 유효한 대체 값은 양의 정수여야 합니다. 때 `MaxFileSizeMB` 은 도달 하면 Analysis Services msmdsrv {현재 timestamp}.log 파일로 현재 파일의 이름을 변경 하 고 새 msmdsrv.log 파일을 시작 합니다.  
+-   `MaxFileSizeMB`는 최대 로그 파일 크기(MB)를 지정합니다. 기본값은 256입니다. 유효한 대체 값은 양의 정수여야 합니다. 때 `MaxFileSizeMB` 은 도달 하면 Analysis Services msmdsrv {현재 timestamp}.log 파일로 현재 파일 이름을 바꾸고 새 msmdsrv.log 파일을 시작 합니다.  
   
 -   `MaxNumberFiles` 이전 로그 파일의 보존을 지정합니다. 기본값은 0(사용 안 함)입니다. 이 값을 양의 정수로 변경하면 여러 버전의 로그 파일을 유지할 수 있습니다. 때 `MaxNumberFiles` 은 도달 하면 Analysis Services의 이름에 타임 스탬프가 가장 오래 된 파일을 삭제 합니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36185720"
   
  쿼리 로그 설정은 서버 전체에 적용됩니다. 지정한 설정은 이 서버에서 실행되는 모든 데이터베이스에서 사용됩니다.  
   
- ![Management Studio에서 로그 설정을 쿼리할](../media/ssas-querylogsettings.png "Management Studio에서 쿼리 로그 설정")  
+ ![Management Studio에서 로그 설정을 쿼리하지](../media/ssas-querylogsettings.png "Management Studio에서 쿼리 로그 설정")  
   
  구성 설정을 지정한 후 MDX 쿼리를 여러 번 실행합니다. 샘플링을 10으로 설정한 경우 쿼리를 11번 실행하고 테이블이 만들어지는지 확인합니다. Management Studio에서 관계형 데이터베이스 엔진에 연결하고, 데이터베이스 폴더를 열고, **테이블** 폴더를 열고, **OlapQueryLog** 가 있는지 확인합니다. 테이블이 즉시 표시되지 않는 경우 폴더를 새로 고쳐서 내용 변경 사항을 지정합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36185720"
   
  Microsoft 지원에서 별도로 지시하지 않는 한 대부분의 관리자는 기본 설정을 사용합니다. [Analysis Services를 구성하여 메모리 덤프 파일을 생성하는 방법](http://support.microsoft.com/kb/919711)라는 오래된 기술 자료 문서는 덤프 파일을 구성하는 방법에 대한 지침을 제공하는 데 사용됩니다.  
   
- 구성 설정은 수정 될 가능성이 가장 높은 `CreateAndSendCrashReports` 설정은 메모리 덤프 파일 생성 여부를 결정 하는 데 사용 합니다.  
+ 수정 될 가능성이 가장 높은 설정 구성은 `CreateAndSendCrashReports` 설정은 메모리 덤프 파일을 생성할지 여부를 결정 하는 데 사용 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -164,7 +164,7 @@ ms.locfileid: "36185720"
   
  `CrashReportsFolder`는 덤프 파일의 위치입니다. 기본적으로 .mdmp 파일 및 연결된 로그 레코드는 \Olap\Log 폴더에 있습니다.  
   
- `SQLDumperFlagsOn` 전체 덤프를 생성 하는 데 사용 됩니다. 기본적으로 전체 덤프는 사용되지 않습니다. 이 속성 설정할 수 있습니다 `0x34`합니다.  
+ `SQLDumperFlagsOn` 전체 덤프 생성에 사용 됩니다. 기본적으로 전체 덤프는 사용되지 않습니다. 이 속성을 설정할 수 있습니다 `0x34`합니다.  
   
  다음 링크는 자세한 배경 정보를 제공합니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "36185720"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스 관리](analysis-services-instance-management.md)   
- [SQL Server Profiler로 Analysis Services 모니터링 소개](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Analysis Services에서 서버 속성 구성](../server-properties/server-properties-in-analysis-services.md)  
+ [SQL Server Profiler 사용 하 여 Analysis Services 모니터링 소개](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Analysis Services의 서버 속성 구성](../server-properties/server-properties-in-analysis-services.md)  
   
   

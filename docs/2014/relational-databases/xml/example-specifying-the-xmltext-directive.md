@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d53197ef75615141a2f25f326e3dcdd0f0d0ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a00e44cc43f59b4b158f0b780c3bd14b944d3a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270359"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
-  사용 하 여 오버플로 열의 데이터 주소를 지정 하는 방법을 보여 주는이 예제는 `XMLTEXT` 지시어는 `SELECT` EXPLICIT 모드를 사용 하 여 문을 합니다.  
+  사용 하 여 오버플로 열의 데이터 주소를 지정 하는 방법을 보여 주는이 예제는 `XMLTEXT` 지시문을 `SELECT` EXPLICIT 모드를 사용 하 여 문을 합니다.  
   
  `Person` 테이블을 검토해 보면 이 테이블에는 XML 문서 중 사용되지 않은 부분을 저장하는 `Overflow` 열이 있는 것을 볼 수 있습니다.  
   

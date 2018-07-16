@@ -1,5 +1,5 @@
 ---
-title: 수준 요소 (ASSL) | Microsoft Docs
+title: Level 요소 (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Level element
 ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 028375d525ec0197aec24a9005fd3f5f0e8fe769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba9ca10d1d3ad2319e451d6008c6e8ad77078fc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263879"
 ---
 # <a name="level-element-assl"></a>Level 요소(ASSL)
   수준을 정의 [계층](hierarchy-element-assl.md) 요소입니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "36185703"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Levels](../collections/levels-element-assl.md)|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [설명](../properties/description-element-assl.md), [HideMemberIf](../properties/hidememberif-element-assl.md), [ID](../properties/id-element-assl.md), [이름](../properties/name-element-assl.md), [SourceAttributeID](../properties/attributeid-element-assl.md), [번역](../collections/translations-element-assl.md)|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md), [설명을](../properties/description-element-assl.md), [HideMemberIf](../properties/hidememberif-element-assl.md)를 [ID](../properties/id-element-assl.md)를 [이름](../properties/name-element-assl.md), [SourceAttributeID](../properties/attributeid-element-assl.md), [번역](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
  이 데이터 형식은 모든 배포 모드(1-다차원 및 데이터 마이닝, 2-SharePoint, 3-테이블 형식)에서 제한되지 않습니다.  

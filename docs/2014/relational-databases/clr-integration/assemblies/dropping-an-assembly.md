@@ -1,13 +1,11 @@
 ---
-title: 어셈블리를 삭제 하는 중 | Microsoft Docs
+title: 어셈블리 삭제 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3551d0971a90c77135ca3e74b30d3009108646c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3920b679e017d5d0e4f069dea29ada7ba97bf13b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173116"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354595"
 ---
 # <a name="dropping-an-assembly"></a>어셈블리 삭제
   CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록한 어셈블리에서 제공하는 기능이 더 이상 필요 없는 경우 이 어셈블리를 삭제할 수 있습니다. 어셈블리를 삭제하면 데이터베이스에서 어셈블리뿐 아니라 디버그 파일 등의 모든 관련 파일이 제거됩니다. 어셈블리를 삭제하려면 DROP ASSEMBLY 문을 다음 구문으로 사용합니다.  
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   데이터베이스에 WITH SCHEMABINDING 절로 만든 함수, 저장 프로시저 또는 트리거가 있고 이러한 루틴이 UDT의 변수 또는 매개 변수를 사용하는 경우  
   
 ### <a name="finding-udt-dependencies"></a>UDT 종속성 찾기  
- 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리는 열과에서 UDT를 사용 하는 매개 변수 모두를 찾습니다는 **AdventureWorks** 데이터베이스입니다.  
+ 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리 매개 변수에서 UDT를 사용 하는 열을 모두 찾습니다 합니다 **AdventureWorks** 데이터베이스입니다.  
   
 ```  
 USE Adventureworks;  
@@ -72,10 +70,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [CLR 통합 어셈블리 관리](managing-clr-integration-assemblies.md)   
  [어셈블리 변경](altering-an-assembly.md)   
  [어셈블리 만들기](creating-an-assembly.md)   
- [DROP 집계 &#40;Transact SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP AGGREGATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [삭제 유형을 &#40;Transact SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [삭제 유형을 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

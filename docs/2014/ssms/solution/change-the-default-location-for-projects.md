@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], default locations
 - default project locations
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f244fd9ed765f7ce69f07c0111c319d3f1c8d66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2edaedea87ff9c808ad09c7602ef3bd89029cfc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295843"
 ---
 # <a name="change-the-default-location-for-projects"></a>프로젝트 기본 위치 변경
   파일 및 프로젝트의 기본 위치는 내 문서 폴더의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트 폴더입니다.  

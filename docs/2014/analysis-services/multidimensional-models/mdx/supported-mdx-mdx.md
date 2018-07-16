@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0db1a0ef59eafcf20e240aa863ba7ce61edfad55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3301717dda71b51283f971fa1a21dbca1c228781
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191168"
 ---
 # <a name="supported-mdx-mdx"></a>지원되는 MDX(MDX)
   MDX 스크립트 내에서는 다음 문과 함수가 지원됩니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36186847"
  [이 &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX는 다음 셀 속성에 대 한 할당을 지원: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, 및 `FONT_SIZE`합니다. 자세한 내용은 [셀 속성 사용&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)을 참조하세요. MDX에는 또한에 할당할 수는 `NON_EMPTY_BEHAVIOR` 속성은 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 문.  
+>  MDX 셀 속성에 할당할 수: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`합니다 `FONT_NAME`, 및 `FONT_SIZE`합니다. 자세한 내용은 [셀 속성 사용&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)을 참조하세요. MDX 대입도 지원 합니다 `NON_EMPTY_BEHAVIOR` 의 속성을 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 문.  
   
  [SCOPE 문 &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   
