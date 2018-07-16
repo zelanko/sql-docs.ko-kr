@@ -1,5 +1,5 @@
 ---
-title: '6 단원: RDL Schema 응용 프로그램을 실행 (VB-C#) | Microsoft Docs'
+title: '6 단원: RDL Schema 응용 프로그램 실행 (VB-C#) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
 caps.latest.revision: 15
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95ef194a66d6c5480f8a83cbd0b78547e79804e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169794"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>6 단원: RDL Schema 응용 프로그램을 실행 (VB-C#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>6 단원: RDL Schema 응용 프로그램 실행 (VB-C#)
+  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE(통합 개발 환경)에서 콘솔 응용 프로그램을 작성하고 실행하는 두 가지 방법을 제공합니다.  
   
 -   디버깅으로 시작  
@@ -50,7 +51,7 @@ ms.locfileid: "36184393"
 3.  예제 응용 프로그램이 실행을 마치면 보고서의 업데이트된 복사본이 보고서 서버에 저장됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [RDL 스키마에서 생성 한 클래스를 사용 하 여 보고서 업데이트 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

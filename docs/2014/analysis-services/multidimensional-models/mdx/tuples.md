@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c6ca064e624937be9f811bda83539ba5bcf770d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe6e50c914973673806e23495ad15ea4821b7640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169704"
 ---
 # <a name="tuples"></a>튜플
   튜플은 큐브의 데이터 조각을 고유하게 식별합니다. 동일한 계층에 속하는 둘 이상의 멤버가 없는 경우 튜플은 차원 멤버의 조합으로 구성됩니다.  
@@ -67,7 +67,7 @@ FROM [Adventure Works]
 >  특성 멤버는 멤버 이름이나 멤버 키로 참조할 수 있습니다. 앞의 예에서 [CY 2004]에 대한 참조는 &[2004]로 바꿀 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [주요 개념 mdx에서 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](cube-space.md)   
  [Autoexist](autoexists.md)   
  [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  

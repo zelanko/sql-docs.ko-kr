@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171164"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server 지원 받기
   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "36187244"
   
  다음 방법으로 온라인 설명서에 액세스할 수 있습니다.  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 온라인 설명서의 복사본은 인터넷을 통해 MSDN Library 및 TechNet Library에 모두 게시됩니다. 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 항목에는 다른 커뮤니티 사용자들이 게시한 추가 정보 및 코드 예제와 같은 정보가 포함됩니다. MSDN Library 복사본을 볼 수는 [SQL Server 2014 온라인 설명서](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)합니다.  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 온라인 설명서의 복사본은 인터넷을 통해 MSDN Library 및 TechNet Library에 모두 게시됩니다. 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 항목에는 다른 커뮤니티 사용자들이 게시한 추가 정보 및 코드 예제와 같은 정보가 포함됩니다. MSDN library에서 볼 수 있습니다 합니다 [SQL Server 2014 온라인](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)합니다.  
   
--   도움말 라이브러리 관리자를 사용하여 로컬 컴퓨터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 설치할 수 있습니다. 자세한 내용은 참조 [추가 / SQL Server 제품 설명서를 제거](../2014-toc/books-online-for-sql-server-2014.md)합니다.  
+-   도움말 라이브러리 관리자를 사용하여 로컬 컴퓨터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 설치할 수 있습니다. 자세한 내용은 [SQL Server 제품 설명서를 제거 또는 추가](../2014-toc/books-online-for-sql-server-2014.md)합니다.  
   
  MSDN Library에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 복사본과 도움말 라이브러리 관리자를 통해 사용할 수 있는 온라인 설명 파일은 모두 [!INCLUDE[msCoName](../includes/msconame-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에 대한 업데이트를 게시할 때 새로 고쳐집니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36187244"
 |[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 데이터 저장 및 비즈니스 인텔리전스 도구로 평가하는 사전 영업 정보를 제공합니다.|  
 |[Microsoft 기술 자료](http://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술 지원 서비스에서 제공하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 문서를 검색할 수 있는 저장소입니다.|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에는 각 릴리스에 대한 지원이 얼마 동안 제공되는지를 정의하는 지원 기간이 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 지원 사이트에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 기간을 정의하는 페이지가 있습니다. 이 페이지에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에 대한 지원 가능 여부를 지정하는 다른 페이지에 대한 링크가 있습니다. 자세한 내용은 참조 [Microsoft 지원 주기](http://go.microsoft.com/fwlink/?LinkId=98306)합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에는 각 릴리스에 대한 지원이 얼마 동안 제공되는지를 정의하는 지원 기간이 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 지원 사이트에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 기간을 정의하는 페이지가 있습니다. 이 페이지에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에 대한 지원 가능 여부를 지정하는 다른 페이지에 대한 링크가 있습니다. 자세한 내용은 [Microsoft 지원 라이프 사이클](http://go.microsoft.com/fwlink/?LinkId=98306)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 제품 설명서 사용](../2014-toc/books-online-for-sql-server-2014.md)  

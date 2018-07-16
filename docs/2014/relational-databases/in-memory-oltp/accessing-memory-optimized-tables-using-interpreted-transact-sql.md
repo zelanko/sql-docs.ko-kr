@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170764"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
   단지 몇 가지 예외를 제외하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 DML 작업(SELECT, INSERT, UPDATE 또는 DELETE), 임시 일괄 처리, 테이블 반환 함수, 트리거, 뷰 및 저장 프로시저와 같은 SQL 모듈을 사용하여 메모리 최적화 테이블에 액세스할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "36185396"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 명시적 또는 암시적 트랜잭션으로부터 메모리 최적화 테이블에 액세스할 때 SNAPSHOT, REPEATABLEREAD, SERIALIZABLE 등의 격리 수준 테이블 힌트 중 하나를 포함해야 합니다. 또는 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 사용해도 됩니다. 자세한 내용은 참조 [트랜잭션 격리 수준에 메모리 최적화 된 테이블에 대 한 지침이](memory-optimized-tables.md) 및 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)합니다.  
+ 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 명시적 또는 암시적 트랜잭션으로부터 메모리 최적화 테이블에 액세스할 때 SNAPSHOT, REPEATABLEREAD, SERIALIZABLE 등의 격리 수준 테이블 힌트 중 하나를 포함해야 합니다. 또는 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 사용해도 됩니다. 자세한 내용은 [메모리 최적화 테이블이 있는 트랜잭션 격리 수준에 대 한 지침](memory-optimized-tables.md) 하 고 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  자동 커밋 모드에서 실행되는 쿼리에서 액세스하는 메모리 최적화 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  

@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
-caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7cfc4fcbc1b49b2977855f032acca12c79dbfc1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6168efa2bf06ff29a0efe2ff843950cb13342011
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177060"
 ---
 # <a name="maximizing-query-editor"></a>쿼리 편집기 화면 크기
   프로그래머가 자주 제기하는 "코드를 쓸 공간을 더 확보하려면 어떻게 합니까?"라는 질문에 대해 두 가지 간단한 방법이 있다고 대답할 수 있습니다. 쿼리 편집기 창을 최대화하고 사용하지 않는 도구 창을 숨기면 됩니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
 - configuration options [SQL Server], protocols
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2ebd92a3ac467880ee1c3ae6185718ab315c7b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65ae022fe3445663837b1aaf01204a382ddcdc72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175112"
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
   서버는 한 번에 여러 네트워크 프로토콜을 수신하거나 모니터링할 수 있습니다. 이때 각각의 프로토콜을 구성해야 합니다. 특정 프로토콜을 구성하지 않으면 서버가 해당 프로토콜에서 수신할 수 없습니다. 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 프로토콜 구성을 변경할 수 있습니다.  

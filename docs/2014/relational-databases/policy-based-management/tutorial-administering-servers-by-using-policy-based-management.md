@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a865b9d6bb7c3aeb2d6936240ca781bd20629a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ce7892944d32d49721143faa7056e890d3f579e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179790"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 서버 관리
   정책 기반 관리 정책을 사용하여 서버 관리 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 익숙하지만 정책 기반 관리에는 경험이 없는 사용자를 대상으로 합니다.  

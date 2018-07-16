@@ -1,27 +1,26 @@
 ---
-title: Windows에 연결 (복원) Azure 저장소 | Microsoft Docs
+title: Windows에 연결할 Azure Storage (복원) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restore.connectstorage.f1
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 64e03f278465d79df789f5e9b79d95eb0ad4a7c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 63f7f0e06a94d9d6a05995e9c19f24f0b8d46047
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172904"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Microsoft Azure Storage에 연결(복원)
   대화 상자를 사용하면 Windows Azure 저장소 계정에서 파일 저장소를 검색하기 위해 Windows Azure 저장소 계정 정보에 대한 연결을 지정할 수 있습니다. 필요한 정보를 지정한 후 **연결** 을 클릭하여 Windows Azure Storage에 대한 연결을 설정합니다.  

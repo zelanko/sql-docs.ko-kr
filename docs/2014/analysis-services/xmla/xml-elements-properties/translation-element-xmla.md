@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63072fae7d585f18fdc3b3bc1da5ffbef5bb9b8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180790"
 ---
 # <a name="translation-element-xmla"></a>Translation 요소(XMLA)
   특성 멤버의 번역을 정의합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36184565"
 |자식 요소|[Language](language-element-xmla.md), [Name](name-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- A `Translation` 특성 멤버 중 지정된 된 특성에 대해 정의 된 번역으로 연결 하는 데 필요한 정보를 정의 하는 요소는 [삽입](../xml-elements-commands/insert-element-xmla.md) 또는 [업데이트](../xml-elements-commands/update-element-xmla.md) 명령입니다.  
+ A `Translation` 특성 멤버를 정의 하는 동안 지정된 된 특성에 대 한 번역으로 연결 하는 데 필요한 정보를 정의 하는 요소는 [삽입](../xml-elements-commands/insert-element-xmla.md) 또는 [업데이트](../xml-elements-commands/update-element-xmla.md) 명령입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;XMLA&#41;](xml-elements-properties.md)  

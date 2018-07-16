@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5e40a78e8c0220c671f4bfa7157fb0f233ff8714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c5833b8622d734acf7c2051c7fccc50a424d1560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170288"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>로그 눈금 간격 지정(보고서 작성기 및 SSRS)
   로그 비례하는 데이터가 있는 경우 차트에서 로그 눈금 간격을 사용할 수 있습니다. 이렇게 하면 데이터를 관리하기가 쉬워지므로 차트의 모양이 개선됩니다. 대부분의 로그 눈금 간격은 기준으로 10을 사용합니다.  

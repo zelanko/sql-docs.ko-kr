@@ -1,5 +1,5 @@
 ---
-title: 원본 길잡이 사용 하 여 원본을 추가 | Microsoft Docs
+title: 원본 길잡이 사용 하 여 원본 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7ef237b263aa37d3998b8634b18926850d2cb4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4166c51bb083cbdf588c082e88e3c6cfc6b01f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173314"
 ---
 # <a name="add-a-source-using-source-assistant"></a>원본 길잡이를 사용하여 원본 추가
   이 항목에서는 원본 길잡이를 사용하여 새 원본을 추가하는 단계를 제공하며, 원본 길잡이를 SSIS 디자이너에 끌어 놓으면 나타나는 **새 원본 추가** 대화 상자에서 사용할 수 있는 옵션을 보여 줍니다.  
