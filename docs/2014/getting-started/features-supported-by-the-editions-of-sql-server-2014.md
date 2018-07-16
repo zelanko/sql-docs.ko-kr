@@ -14,23 +14,23 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 caps.latest.revision: 126
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fea176058eeb35d13ab3e104652fdeb13979238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312313"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
   이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가판에 대 한 평가 버전에서 사용할 수는 있습니다. 자세한 내용은 참조는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=190955)합니다.  
+> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 참조는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=190955)합니다.  
   
 > **참고:** Evaluation 및 Developer 버전에서 지 원하는 기능 참조는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 기능 집합입니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36093172"
   
  [관리 도구](#Mgmt_Tools)  
   
- [RDBMS 관리 효율](#RDBMS_mgmt)  
+ [RDBMS 관리 효율성](#RDBMS_mgmt)  
   
  [개발 도구](#Dev_tools)  
   
@@ -89,13 +89,13 @@ ms.locfileid: "36093172"
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |단일 인스턴스에서 사용 되는 최대 계산 용량 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진)<sup>1</sup>|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
-|단일 인스턴스 (Analysis Services, Reporting Services)에서 사용 되는 최대 계산 용량 <sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
+|(Analysis Services, Reporting Services) 단일 인스턴스에서 사용 되는 최대 계산 용량 <sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |최대 메모리 사용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진의 인스턴스당)|운영 체제가 지원하는 최대 크기|128GB|128GB|64GB|1GB|1GB|1GB|  
 |최대 메모리 사용량([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |최대 메모리 사용량([!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|64GB|4GB|해당 사항 없음|해당 사항 없음|  
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|524PB|10GB|10GB|10GB|  
   
- <sup>1</sup> 서버 + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음) 포함 된 엔터프라이즈 버전은 최대 20 개의 코어로 제한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
+ <sup>1</sup> Server + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음)를 사용 하 여 Enterprise Edition은 최대 20 개의 코어로 제한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
   
 ##  <a name="High_availability"></a> 고가용성  
   
@@ -119,9 +119,9 @@ ms.locfileid: "36093172"
 |암호화된 백업|예|예|예|||||  
 |스마트 백업|예|예|예|아니요||||  
   
- <sup>1</sup>설치에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Server Core에 참조 [Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)합니다.  
+ <sup>1</sup>를 설치 하는 방법은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Server core에서 참조 [Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)합니다.  
   
- <sup>2</sup>만이 기능을 사용할 수 있는 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ <sup>2</sup>이 기능은 에서만 사용할 수에 대 한 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
 ##  <a name="Scalability"></a> 확장성 및 성능  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36093172"
 |메모리 내 OLTP <sup>1</sup>|예|||||||  
 |지연된 내구성|예|예|예|예|예|예|예|  
   
- <sup>1</sup> 만이 기능을 사용할 수 있는 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ <sup>1</sup> 이 기능은 에서만 사용할 수에 대 한 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
 ##  <a name="Enterprise_security"></a> 보안  
   
@@ -176,16 +176,16 @@ ms.locfileid: "36093172"
 |Distributed Replay - 관리 도구|예|예|예|예|예|예||  
 |Distributed Replay - 클라이언트|예|아니요|예|예||||  
 |Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|아니요|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
-|SQL 프로파일러|예|예|예|더<sup>2</sup>|더<sup>2</sup>|더<sup>2</sup>|더<sup>2</sup>|  
+|SQL 프로파일러|예|예|예|이상<sup>2</sup>|이상<sup>2</sup>|이상<sup>2</sup>|이상<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|예|예|예|예||||  
 |Microsoft System Center Operations Manager 관리 팩|예|예|예|예||||  
 |DTA(데이터베이스 튜닝 관리자)|예|예|예<sup>3</sup>|예<sup>3</sup>||||  
 |Windows Azure VM 마법사에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 배포|예|예|예|예|예|예|예|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows Azure의 데이터 파일|예|예|예|예|예|예|예|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 웹, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools 및 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 프로 파일링 할 수를 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 표준 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition.  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 웹 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]합니다 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools 및 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Advanced Services를 사용 하 여 프로 파일링 할 수를 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 표준 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition.  
   
- <sup>3</sup> 튜닝은 Standard edition 기능 에서만 활성화 합니다.  
+ <sup>3</sup> 튜닝은 Standard edition 기능 에서만 활성화 됩니다.  
   
 ##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36093172"
   
  <sup>1</sup> 자세한 내용은 [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
   
- <sup>2</sup> 만이 기능을 사용할 수 있는 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ <sup>2</sup> 이 기능은 에서만 사용할 수에 대 한 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
@@ -227,7 +227,7 @@ ms.locfileid: "36093172"
 |버전 제어 지원<sup>1</sup>|예|예|예|||||  
 |MDX 편집, 디버그 및 디자인 도구<sup>1</sup>|예|예|예|||||  
   
- <sup>1</sup> 이 기능을 64 비트 버전의 Standard edition에 대 한 사용할 수 없습니다.  
+ <sup>1</sup> 이 기능은 64 비트 버전의 Standard edition에 제공 됩니다. 합니다.  
   
 ##  <a name="Programmability"></a> Programmability  
   
@@ -283,7 +283,7 @@ ms.locfileid: "36093172"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 만 Business Intelligence 및 Enterprise의 64 비트 버전에서 제공 됩니다.  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Business Intelligence 및 Enterprise의 64 비트 버전 에서만 사용할 수 있는 경우  
   
 |기능|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -317,7 +317,7 @@ ms.locfileid: "36093172"
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|반가산적 측정값|예|예|더<sup>1</sup>|||||  
+|반가산적 측정값|예|예|이상<sup>1</sup>|||||  
 |계층 구조|예|예|예|||||  
 |KPI|예|예|예|||||  
 |큐브 뷰|예|예||||||  
@@ -348,7 +348,7 @@ ms.locfileid: "36093172"
 |직접 쓰기 저장(writeback)|예|예||||||  
 |측정값 식|예|예||||||  
   
- <sup>1</sup>standard edition에서 LastChild 반 가산적 측정값은 지원 되지만 None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren 및 ByAccount와 같은 다른 반 가산적 측정값 되지 않습니다. Sum, Count, Min, Max와 같은 가산적 측정값과 비가산적 측정값(DistinctCount)은 모든 버전에서 지원됩니다.  
+ <sup>1</sup>standard edition에서 LastChild 반 가산적 측정값은 지원 되지만 None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren 및 ByAccount와 같은 다른 반 가산적 측정값 없습니다. Sum, Count, Min, Max와 같은 가산적 측정값과 비가산적 측정값(DistinctCount)은 모든 버전에서 지원됩니다.  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
@@ -425,9 +425,9 @@ ms.locfileid: "36093172"
 |경고<sup>2</sup>|예|예||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|예|예||||||  
   
- <sup>1</sup>에서 지원 되는 데이터 소스에 대 한 자세한 내용은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], 참조 [Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
+ <sup>1</sup>지원 되는 데이터 원본에 대 한 자세한 내용은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]를 참조 하십시오 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
- <sup>2</sup>필요 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에서. 자세한 내용은 참조 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+ <sup>2</sup>필요 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에서. 자세한 내용은 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
   
 ### <a name="report-server-database-server-edition-requirements"></a>보고서 서버 데이터베이스 서버 버전 요구 사항  
  보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 특정 버전에 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전을 보여 줍니다.  
@@ -442,7 +442,7 @@ ms.locfileid: "36093172"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Business Intelligence 클라이언트  
- 다음 소프트웨어 클라이언트 응용 프로그램을 Microsoft 다운로드 센터에서 사용할 수 있는 및에서 실행 되는 비즈니스 인텔리전스 문서를 만들기에 도움이 되는 제공 되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 이러한 문서를 서버 환경에서 호스팅하려는 경우 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 문서 유형을 사용할 수 있는 합니다. 다음 표에서는 이러한 클라이언트 응용 프로그램에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
+ 다음 소프트웨어 클라이언트 응용 프로그램은 Microsoft 다운로드 센터에서 사용 가능한 및 지원에서 실행 되는 비즈니스 인텔리전스 문서를 작성 하기 위해 제공 되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 서버 환경에서 이러한 문서를 호스트할 때 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 문서 유형을 지 원하는 합니다. 다음 표에서는 이러한 클라이언트 응용 프로그램에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -452,8 +452,8 @@ ms.locfileid: "36093172"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|예|예||||||  
   
 > [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] Excel 추가 기능이 의존 하지 않는 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 그러나 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]은 SharePoint에서 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]통합 문서를 공유하고 공동 작업하는 데 필요하며 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 및 Business Intelligence 버전의 일부로 사용할 수 있습니다.  
-> 2.  위의 표에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이러한 클라이언트 도구를 사용 하도록 설정 하는 데 필요한 버전; 그러나 이러한 기능은의 모든 버전에서 호스팅되는 데이터에 액세스할 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] Excel 추가 기능 및 종속 되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 그러나 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]은 SharePoint에서 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]통합 문서를 공유하고 공동 작업하는 데 필요하며 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 및 Business Intelligence 버전의 일부로 사용할 수 있습니다.  
+> 2.  위의 표에서 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이러한 클라이언트 도구를 사용 하도록 설정 하는 데 필요한 버전;이 기능이의 모든 버전에서 호스트 되는 데이터에 액세스할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   

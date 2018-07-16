@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd3e3be25b000b5d2348dacee760ed88c613351
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae3eb5ce2114c339b83fccaea0b24815ed23c5e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283849"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>패키지에 읽기 및 쓰기 역할 할당
   각 패키지에 읽기 및 쓰기 역할을 할당할 수 있습니다.  

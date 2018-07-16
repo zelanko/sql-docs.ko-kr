@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308553"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>데이터 원본 뷰 정의(Analysis Services)
   데이터 원본 뷰는 큐브, 차원 및 마이닝 구조인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 개체에서 사용하는 스키마의 논리 모델을 포함합니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "36186421"
 ##  <a name="bkmk_secondaryDS"></a> 보조 데이터 원본 추가  
  여러 데이터 원본의 테이블, 뷰 또는 열이 포함된 데이터 원본 뷰를 정의하는 경우 데이터 원본 뷰에 개체를 추가하는 첫 번째 데이터 원본이 주 데이터 원본으로 지정됩니다. 정의한 후에는 주 데이터 원본을 변경할 수 없습니다. 단일 데이터 원본의 개체를 기반으로 데이터 원본 뷰를 정의한 후 다른 데이터 원본의 개체를 추가할 수 있습니다.  
   
- 주 데이터 원본이 사용 하 여 원격 쿼리를 지원 해야 OLAP 처리 나 데이터 마이닝 쿼리를 한 번의 쿼리로 여러 데이터 원본의 데이터가 필요한 경우 `OpenRowset`합니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본이 여기에 해당합니다. 예를 들어 여러 데이터 원본의 열에 바인딩된 특성이 포함된 OLAP 차원을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 `OpenRowset` 쿼리를 생성하여 처리 중에 이 차원을 채웁니다. 그러나 OLAP 개체를 채울 수 있습니다 하는 경우 나 데이터 마이닝 쿼리를 해결할 단일 데이터 원본의 아니라면 `OpenRowset` 쿼리가 생성 되지 것입니다. `OpenRowset` 쿼리가 필요하지 않도록 특성 간에 특성 관계를 정의할 수 있는 경우도 있습니다. 특성 관계에 대 한 자세한 내용은 참조 [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [추가 또는 제거 있는 테이블이 나 뷰의 데이터 원본 뷰 &#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 및 [특성 관계를 정의](attribute-relationships-define.md)합니다.  
+ 주 데이터 원본에서 사용 하 여 원격 쿼리를 지원 해야 OLAP 처리 나 데이터 마이닝 쿼리를 단일 쿼리로 여러 데이터 원본의 데이터에 필요한 경우 `OpenRowset`합니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본이 여기에 해당합니다. 예를 들어 여러 데이터 원본의 열에 바인딩된 특성이 포함된 OLAP 차원을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 `OpenRowset` 쿼리를 생성하여 처리 중에 이 차원을 채웁니다. 그러나 OLAP 개체를 채울 수 있습니다 하는 경우 나 데이터 마이닝 쿼리를 확인할 단일 데이터 원본에서는 `OpenRowset` 쿼리가 생성 되지 것입니다. `OpenRowset` 쿼리가 필요하지 않도록 특성 간에 특성 관계를 정의할 수 있는 경우도 있습니다. 특성 관계에 대 한 자세한 내용은 참조 하세요. [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 [데이터 원본 뷰에서 추가 또는 제거 테이블 뷰나 &#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 및[특성 관계 정의](attribute-relationships-define.md)합니다.  
   
  보조 데이터 원본에서 테이블과 열을 추가하려면 솔루션 탐색기에서 DSV를 두 번 클릭하여 데이터 원본 뷰 디자이너에서 DSV를 연 다음 테이블 추가/제거 대화 상자를 사용하여 프로젝트에 정의된 다른 데이터 원본에서 개체를 포함합니다. 자세한 내용은 [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)를 참조하세요.  
   
@@ -135,12 +135,12 @@ ms.locfileid: "36186421"
 >  데이터 원본 뷰 마법사를 완료한 후 데이터 원본 뷰 디자이너의 스키마 창에서 관계를 추가 또는 제거할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 논리적 관계 정의&#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [추가 또는 제거 있는 테이블이 나 뷰의 데이터 원본 뷰 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [원본 뷰에 테이블이 나 뷰 데이터에서를 추가 또는 제거 하거나 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰에서 논리적 기본 키 정의 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰에서 명명 된 쿼리 정의 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
  [테이블 또는 데이터 원본 뷰에서 명명된 된 쿼리 바꾸기 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [데이터 원본 뷰 디자이너에서의 다이어그램 작업 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [데이터 원본 뷰 디자이너의 다이어그램 작업 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [데이터 원본 뷰에서 데이터 탐색 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰 삭제 &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰에서 스키마 새로 고침 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  

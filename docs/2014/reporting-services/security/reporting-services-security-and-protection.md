@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services]
 - Reporting Services, security
@@ -16,19 +16,19 @@ ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9a993f574cbf272e4fdf47066360bd09299cd7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3be671426856e57e62ea7de3733f6109bbcd0a31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232453"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 보안 및 보호
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안 기능에 대해 설명합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 권한 부여 모델 및 인증 공급자에 대해서도 설명합니다.  
   
 ## <a name="extended-protection-for-authentication"></a>인증에 대한 확장된 보호  
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터는 인증에 대한 확장된 보호가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 채널 바인딩 및 서비스 바인딩을 사용해 인증 보호를 향상시킬 수 있도록 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 확장된 보호를 지원하는 운영 체제에서 사용해야 합니다. 자세한 내용은 참조 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)합니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터는 인증에 대한 확장된 보호가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 채널 바인딩 및 서비스 바인딩을 사용해 인증 보호를 향상시킬 수 있도록 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 확장된 보호를 지원하는 운영 체제에서 사용해야 합니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)합니다.  
   
 ## <a name="authentication-and-authorization"></a>인증 및 권한 부여  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램에 부여할 다양한 인증 유형을 제공합니다. 보고서 서버에 맞는 인증 유형을 사용하면 조직에서 요구되는 적합한 수준의 보안을 확보할 수 있습니다. 자세한 내용은 [Authentication with the Report Server](authentication-with-the-report-server.md)을(를) 참조하세요.  

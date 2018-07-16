@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Events element
 ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a9fd96d0ad375725d1b7efa72dda9c0467e0b93b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f6d302557369d7cbc90c1d5786bc21d37b0f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293503"
 ---
 # <a name="events-element-assl"></a>Events 요소(ASSL)
   [Trace](../objects/event-element-assl.md) 에서 캡처할 [Event](../objects/trace-element-assl.md)요소의 컬렉션을 정의합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "36094058"
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.TraceEventCollection>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [요소를 추적 &#40;ASSL&#41;](traces-element-assl.md)   
+ [요소를 추적 합니다. &#40;ASSL&#41;](traces-element-assl.md)   
  [컬렉션 &#40;ASSL&#41;](collections-assl.md)  
   
   

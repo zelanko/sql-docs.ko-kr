@@ -1,5 +1,5 @@
 ---
-title: 메모리 액세스에 최적화 된 테이블에 있는 인덱스 | Microsoft Docs
+title: 메모리 최적화 테이블의 인덱스 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 86805eeb-6972-45d8-8369-16ededc535c7
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6fc8955ceb3639d15a0cbbe47cefef714ccebc02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a2c467017f7ec24fc770084a829ee96f37a4416
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308095"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
   이 섹션에는 메모리 최적화 테이블의 인덱스에 대한 항목이 포함됩니다.  

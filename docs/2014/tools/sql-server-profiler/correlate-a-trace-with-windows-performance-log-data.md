@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - correlating trace with log data
 - logs [SQL Server], traces
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3918c8b5f92aa7d77c50cfe43e97d15413ceb1f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e17eddc2b6ff02968709b6f1bb7c8de5557211fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317493"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Windows 성능 로그 데이터와 추적의 상관 관계 지정
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 Microsoft Windows 성능 로그를 열고 추적과의 상관 관계를 지정할 카운터를 선택한 다음 선택한 성능 카운터를 추적과 함께 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 그래픽 사용자 인터페이스에 표시할 수 있습니다. 추적 창에서 이벤트를 선택하면 선택한 추적 이벤트와 상관 관계가 있는 성능 로그 데이터가 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 시스템 모니터 데이터 창에서 빨간 세로 막대로 표시됩니다.  

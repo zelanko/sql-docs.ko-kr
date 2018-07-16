@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
 - nonclustered indexes [SQL Server], creating
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c282008daf4adfcd3345417e4c0a8f13f2cec669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c3c0d0c0d21bbc2b6bfc77cac481310af1cb30c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300373"
 ---
 # <a name="create-nonclustered-indexes"></a>비클러스터형 인덱스 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 비클러스터형 인덱스를 만들 수 있습니다. 비클러스터형 인덱스는 하나 이상의 선택된 열을 다시 정렬하는 테이블에 저장된 데이터와 구별되는 인덱스 구조입니다. 비클러스터형 인덱스는 기본 테이블을 검색할 때보다 빠르게 데이터를 찾는 데 도움이 될 수 있습니다. 비클러스터형 인덱스의 데이터가 쿼리에 대한 완전한 대답이 되는 경우도 있지만, 비클러스터형 인덱스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 기본 테이블의 행으로 연결할 수도 있습니다. 일반적으로 비클러스터형 인덱스는 클러스터형 인덱스를 적용할 수 없고 자주 사용되는 쿼리의 성능을 개선하거나, 클러스터형 인덱스(힙이라고 함) 없이 테이블에서 행을 찾기 위해 만듭니다. 테이블 또는 인덱싱된 뷰에 비클러스터형 인덱스를 여러 개 만들 수 있습니다.  

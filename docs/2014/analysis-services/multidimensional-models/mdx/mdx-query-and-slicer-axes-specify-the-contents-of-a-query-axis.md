@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e540d77db8b6834df4a0cdc00a3b9aad54d9970e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74b091d87c78f27cc6141f076dd4eab4924f0e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267619"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>쿼리 축의 내용 지정(MDX)
   쿼리 축은 MDX SELECT 문에 의해 반환되는 열 집합의 가장자리를 지정합니다. 열 집합의 가장자리를 지정하면 클라이언트에 표시되는 반환 데이터를 제한할 수 있습니다.  

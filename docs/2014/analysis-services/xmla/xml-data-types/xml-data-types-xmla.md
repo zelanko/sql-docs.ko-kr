@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML for Analysis, data types
 ms.assetid: 979b5384-90d9-4e09-9286-1d1eafdc4864
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7a21691474e890ba8614715b18e972d1353b2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ccba3c69101362d1a384320808a30066ae572b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297093"
 ---
 # <a name="xml-data-types-xmla"></a>XML 데이터 형식(XMLA)
   XML 1.0 권장 사항에 정의된 표준 기본 형식 및 파생 형식 외에 XMLA(XML for Analysis) 1.1 사양은 추가 데이터 형식을 정의하여 다차원 및 테이블 형식 데이터의 표현을 지원합니다.  
@@ -39,12 +39,12 @@ ms.locfileid: "36093593"
 |----------------|-----------------|  
 |Boolean|표준 XML `boolean` 데이터 형식입니다.|  
 |Decimal|표준 XML `decimal` 데이터 형식입니다.|  
-|[EmptyResult](emptyresult-data-type-xmla.md)|`root` 요소의 네임스페이스입니다. XMLA 명령이 결과 반환 하지 않으면 XMLA 명령이 결과 정상적으로 반환 하지 않으므로 또는에서 오류가 발생 하기 때문에이 네임 스페이스가 반환 됩니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 명령을 실행 하는 동안 인스턴스.|  
+|[EmptyResult](emptyresult-data-type-xmla.md)|`root` 요소의 네임스페이스입니다. XMLA 명령에서 오류가 발생 하기 때문에 또는 XMLA 명령이 결과 정상적으로 반환 하지 않으므로 결과 반환 하지 않습니다이 네임 스페이스가 반환 됩니다 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 명령을 실행 하는 동안 인스턴스.|  
 |[EnumString](enumstring-data-type-xmla.md)|지정된 열거자에 대한 명명된 문자열 상수 집합입니다.|  
 |정수|표준 XML `int` 데이터 형식입니다.|  
-|[MDDataSet](mddataset-data-type-xmla.md)|반환 된 다차원 데이터는 *결과* 의 매개 변수는 [Execute](../xml-elements-methods-execute.md) 메서드.|  
+|[MDDataSet](mddataset-data-type-xmla.md)|반환 된 다차원 데이터를 *결과* 의 매개 변수를 [Execute](../xml-elements-methods-execute.md) 메서드.|  
 |[결과 집합](resultset-data-type-xmla.md)|`Execute` 메서드에 의해 반환되는 자기 설명적 XML 결과 집합입니다.|  
-|[행 집합](rowset-data-type-xmla.md)|포함된 된 XML 스키마에 의해 구조화 하는 데이터 원본의 행을 반환한는 [Discover](../xml-elements-methods-discover.md) 메서드.|  
+|[행 집합](rowset-data-type-xmla.md)|포함된 된 XML 스키마에 의해 구조화 된 데이터 원본에서 행을 반환 합니다 [Discover](../xml-elements-methods-discover.md) 메서드.|  
 |String|XML `string` 데이터 형식입니다.|  
 |UnsignedInt|XML `unsignedInt` 스키마 유형입니다.|  
   

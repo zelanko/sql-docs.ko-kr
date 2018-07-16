@@ -1,12 +1,11 @@
 ---
-title: 일반 연결 및 컨텍스트 연결에 대 한 제한 | Microsoft Docs
+title: 일반 및 컨텍스트 연결에 대 한 제한 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -16,12 +15,12 @@ caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 290110b735765da45bca5f5f67bfd764f4abc6dc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6e3f290a689cc1914548204e95a3a690d045a7d4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694384"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358165"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>컨텍스트 연결 및 일반 연결-제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "35694384"
   
 -   "context connection=true"를 사용하는 경우 다른 연결 문자열 키워드를 사용할 수 없습니다.  
   
--   **SqlConnection.DataSource** 속성에 대 한 연결 문자열이 면 null을 반환는 **SqlConnection** 은 "컨텍스트 연결 = true", 인스턴스 이름 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+-   **SqlConnection.DataSource** 속성의 연결 문자열이 없으면 null을 반환 합니다 **SqlConnection** 는 "컨텍스트 연결 = true", 인스턴스의 이름 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
 -   명령이 컨텍스트 연결에 대해 실행되는 경우에는 **SqlCommand.CommandTimeout** 속성을 설정해도 아무 영향이 없습니다.  
   

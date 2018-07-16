@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 스키마 제거 | Microsoft Docs
+title: 생성, 변경 및 스키마를 제거 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a9d25849fe2882c8d9fe249e1146297c07f3eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7bfbd8aa8265fd0cdc4615cb8a5ed2065e559138
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290349"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>스키마 생성, 변경 및 제거
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체는 데이터베이스 개체에 대한 소유권 컨텍스트를 나타냅니다. <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체 모음을 나타냅니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Visual Basic에서 스키마 생성, 변경 및 제거  
  이 코드 예제는 스키마를 만들어 데이터베이스 개체에 할당하는 방법을 보여 줍니다. 그러면 프로그램이 사용자에게 권한을 부여하고 스키마에 새 테이블을 만듭니다.  

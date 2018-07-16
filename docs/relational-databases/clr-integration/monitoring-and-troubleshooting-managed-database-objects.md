@@ -3,10 +3,9 @@ title: 관리 되는 데이터베이스 개체 모니터링 및 문제 해결 | 
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -17,19 +16,19 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 895d99a7f693443a11340157be96a68b8d107d16
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702764"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355595"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>관리되는 데이터베이스 개체 모니터링 및 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 관리되는 데이터베이스 개체와 어셈블리를 모니터링하고 문제를 해결하는 데 사용할 수 있는 도구에 대한 정보를 제공합니다.  
   
 ## <a name="profiler-trace-events"></a>프로파일러 추적 이벤트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터베이스 엔진에서 발생하는 이벤트를 모니터링하기 위한 SQL 추적과 이벤트 알림을 제공합니다. SQL 추적은 지정된 이벤트를 기록하여 성능 관련 문제 해결, 데이터베이스 작업 감사, 테스트 환경을 위한 샘플 데이터 수집, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 저장 프로시저 디버깅, 성능 분석 도구를 위한 데이터 수집 등의 작업을 도와 줍니다. 자세한 내용은 참조 [SQL 추적](../../relational-databases/sql-trace/sql-trace.md) 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터베이스 엔진에서 발생하는 이벤트를 모니터링하기 위한 SQL 추적과 이벤트 알림을 제공합니다. SQL 추적은 지정된 이벤트를 기록하여 성능 관련 문제 해결, 데이터베이스 작업 감사, 테스트 환경을 위한 샘플 데이터 수집, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 저장 프로시저 디버깅, 성능 분석 도구를 위한 데이터 수집 등의 작업을 도와 줍니다. 자세한 내용은 [SQL 추적](../../relational-databases/sql-trace/sql-trace.md) 하 고 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
   
 |이벤트|Description|  
 |-----------|-----------------|  
@@ -61,7 +60,7 @@ ms.locfileid: "35702764"
   
 |카탈로그 뷰|Description|  
 |------------------|-----------------|  
-|[sys.assemblies &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|데이터베이스에 등록된 어셈블리에 대한 정보를 반환합니다.|  
+|[sys.assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|데이터베이스에 등록된 어셈블리에 대한 정보를 반환합니다.|  
 |[sys.assembly_references &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|다른 어셈블리를 참조하는 어셈블리를 식별합니다.|  
 |[sys.assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|어셈블리에 정의된 각 함수, 저장 프로시저 및 트리거에 대한 정보를 반환합니다.|  
 |[sys.assembly_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|데이터베이스에 등록된 어셈블리 파일에 대한 정보를 반환합니다.|  
@@ -74,7 +73,7 @@ ms.locfileid: "35702764"
 |[sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|데이터베이스에 등록된 시스템 유형 및 사용자 정의 형식을 반환합니다.|  
   
 ## <a name="dynamic-management-views"></a>동적 관리 뷰  
- 동적 관리 뷰 및 함수는 서버 인스턴스 상태 모니터링, 문제 진단 및 성능 튜닝에 사용할 수 있는 서버 상태 정보를 반환합니다. 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.  
+ 동적 관리 뷰 및 함수는 서버 인스턴스 상태 모니터링, 문제 진단 및 성능 튜닝에 사용할 수 있는 서버 상태 정보를 반환합니다. 자세한 내용은 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.  
   
 |DMV|Description|  
 |---------|-----------------|  

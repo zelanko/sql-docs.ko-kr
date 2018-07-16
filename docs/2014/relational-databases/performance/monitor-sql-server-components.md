@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a2351bd03a362e555ba285d81ff3660ef8058eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 986819015191d7fbb1f07738d25b3dab489e185b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290639"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server 구성 요소 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동적 환경에서 서비스를 제공하기 때문에 모니터링이 매우 중요합니다. 응용 프로그램에 있는 데이터가 바뀌고, 사용자가 필요로 하는 액세스 유형이 바뀌고, 사용자가 연결하는 방법이 바뀔 뿐 아니라, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 응용 프로그램의 유형도 바뀔 수 있으나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 메모리나 디스크 공간 같은 시스템 수준의 리소스를 자동으로 관리하므로 시스템 수준의 상세한 수동 튜닝의 필요성은 최소한으로 줄일 수 있습니다. 모니터링을 통해 관리자는 성능 추세를 확인하여 변경이 필요한지 파악할 수 있습니다.  

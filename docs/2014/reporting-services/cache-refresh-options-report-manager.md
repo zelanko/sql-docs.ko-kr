@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282699"
 ---
 # <a name="cache-refresh-options-report-manager"></a>캐시 새로 고침 옵션(보고서 관리자)
   캐시 새로 고침 옵션 페이지를 사용하여 보고서 또는 공유 데이터 집합의 임시 데이터 복사본과 함께 캐시를 사전 로드하는 일정을 계획할 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 공유 데이터 집합의 경우 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 옵션 페이지에서는 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "36172602"
  캐시 새로 고침 계획의 관련 보고서 및 공유 데이터 집합을 추가, 삭제, 변경 및 볼 수 있는 기본 역할 할당은 내용 관리자, 내 보고서 및 게시자입니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="to-open-the-cache-refresh-plan-properties-page-for-a-report-or-shared-dataset"></a>보고서 또는 공유 데이터 집합에 대한 캐시 새로 고침 계획 속성 페이지를 열려면  
   
@@ -69,12 +69,12 @@ ms.locfileid: "36172602"
  **구성**  
  빈도 정보를 지정하는 데 사용되는 일정 페이지를 열려면 클릭합니다.  
   
- 자세한 내용은 참조 [새 일정: 일정 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)합니다.  
+ 자세한 내용은 [새 일정: 일정 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)합니다.  
   
  **공유 일정**  
  기존 일정을 선택하려면 이 옵션을 선택합니다.  
   
- 자세한 내용은 참조 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)합니다.  
+ 자세한 내용은 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)합니다.  
   
  **@\<** *매개 변수* **>**  
  매개 변수 값의 한 조합을 지정합니다. 이 섹션은 현재 데이터 집합이나 보고서에 매개 변수가 있을 경우에만 나타납니다.  
@@ -106,14 +106,14 @@ ms.locfileid: "36172602"
   
  공유 데이터 집합 정의에서 매개 변수에 대해 **쿼리에서 생략** 옵션을 지정할 경우 기본값을 제공할 필요가 없습니다. 이 플래그는 해당 데이터 집합 매개 변수가 쿼리에 사용되지 않음을 나타냅니다. 예를 들어 이 매개 변수는 데이터 집합 필터에만 사용되는 보고서 매개 변수이기 때문에 공유 데이터 집합 정의에 나타납니다.  
   
- 데이터 집합 매개 변수 옵션을 보거나 변경하려면 공유 데이터 집합 정의를 편집해야 합니다. 자세한 내용은 참조 [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)합니다.  
+ 데이터 집합 매개 변수 옵션을 보거나 변경하려면 공유 데이터 집합 정의를 편집해야 합니다. 자세한 내용은 [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)합니다.  
   
 ### <a name="report-parameters"></a>보고서 매개 변수  
  보고서의 경우 캐시 새로 고침 계획을 만들려면 각 매개 변수 값이 유효해야 합니다. 각 보고서 매개 변수에 대해 기본값을 입력하거나 선택해야 합니다. 사용자가 설정한 값은 보고서 서버에서 보고서 매개 변수에 대해 정의된 기본값을 재정의합니다.  
   
- 매개 변수는 보고서 서버의 매개 변수 속성에 지정된 요구 사항을 따라야 합니다. 예를 들어 AllowBlank 속성에 대 한 보고서 매개 변수가 false 인 경우 빈 문자열이 아니며 유효한 값  
+ 매개 변수는 보고서 서버의 매개 변수 속성에 지정된 요구 사항을 따라야 합니다. 예를 들어 속성 AllowBlank 보고서 매개 변수의 false 인 경우 빈 문자열 값이 아닙니다 유효 합니다.  
   
- 보고서 매개 변수 옵션을 보거나 변경하려면 보고서의 보고서 매개 변수를 편집하거나 보고서 서버에서 개별적으로 편집해야 합니다. 자세한 내용은 참조 [보고서 매개 변수 개념 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)합니다.  
+ 보고서 매개 변수 옵션을 보거나 변경하려면 보고서의 보고서 매개 변수를 편집하거나 보고서 서버에서 개별적으로 편집해야 합니다. 자세한 내용은 [보고서 매개 변수 개념 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>캐시 새로 고침 계획이 비활성화되는 조건  
  다음 조건에서는 공유 데이터 집합 또는 보고서 캐시 새로 고침 계획이 비활성화될 수 있습니다.  

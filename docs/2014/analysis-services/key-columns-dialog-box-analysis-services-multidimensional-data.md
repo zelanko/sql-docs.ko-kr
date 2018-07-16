@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
 helpviewer_keywords:
 - DataItem Collection dialog box
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bdfbda7088df7953df18ee796f6e41057eb090b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fbd5ef14875e11cef4144286d82c2b733f4fa2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220573"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>키 열 대화 상자(Analysis Services - 다차원 데이터)
   **키 열** 대화 상자를 사용하여 특성의 **KeyColumns** 속성을 변경할 수 있습니다. 자세한 내용은 [특성의 KeyColumn 속성 수정](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)을 참조하세요.  
@@ -65,6 +65,6 @@ ms.locfileid: "36183718"
  선택한 열을 **키 열**에 나열된 열에서 제거하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

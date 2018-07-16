@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309423"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
   훌륭한 보고서는 조치를 취하거나 상황을 깊이 있게 파악할 수 있는 정보를 제공합니다. 지리적 배경에 대한 인구 통계 또는 판매량 합계와 같은 분석 데이터를 제공하기 위해 보고서에 지도를 추가할 수 있습니다. 지도에는 여러 계층이 포함될 수 있으며, 각 계층에는 위치를 나타내는 점, 길을 나타내는 선, 영역을 나타내는 다각형 등의 특정 공간 데이터 유형으로 정의되는 지도 요소가 표시됩니다. 각 계층에서 분석 데이터와 지도 요소를 연결할 수 있습니다.  
@@ -168,6 +168,6 @@ ms.locfileid: "36088101"
  [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 보고서에 지도 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

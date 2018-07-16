@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a45fb326b728ae5df24f0ea91124d145d2c1761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230479af0ffa24130bb1ea63f0a72b758a3c81fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298743"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 제어 태스크 사용자 지정 속성
   다음 표에서는 CDC 제어 태스크의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  

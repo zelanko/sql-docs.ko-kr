@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2aef7f8d21b65a1b6d454b252bcddda720e1d481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 288ba907435b9600e685be9912095f39889cfa21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228283"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>집계 옵션 설정(사용 빈도 기반 최적화 마법사)
   **집계 옵션 설정** 페이지를 사용하여 집계 디자인 프로세스를 시작하고 사용 빈도 기반 최적화 마법사를 사용하여 생성한 집계에 대한 저장소 또는 성능 제한을 지정할 수 있습니다.  

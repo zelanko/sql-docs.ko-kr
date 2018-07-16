@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a636b4aa50f95bbca4281ada7115161c91f742a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ea599a631955067e168cd704fae9e8ae8965c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198953"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker Statistics 개체
   SQLServer:Broker Statistics 성능 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스에 대한 일반 [!INCLUDE[ssDE](../../includes/ssde-md.md)]정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  

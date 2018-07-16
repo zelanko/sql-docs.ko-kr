@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], viewing
 - displaying database snapshots
 - viewing database snapshots
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201a96fd5fc47ae01177ef1d5685c2865f358880
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: df4ba0cc720cd7dd98addff076c1400747da3551
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188630"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>데이터베이스 스냅숏 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스 스냅숏을 표시하는 방법에 대해 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36185867"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장합니다.  
+2.   **데이터베이스**를 확장합니다.  
   
 3.  **데이터베이스 스냅숏**을 확장한 후 표시할 스냅숏을 선택합니다.  
   

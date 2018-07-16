@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2bab6f72c83cc681443ee526a35fb4368db7ea6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42311763fddcec6403494c82dca02c29480f7235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313283"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
   이 항목에서는 XML 데이터를 쿼리할 때 지정해야 하는 쿼리 옵션에 대해 설명합니다. 또한 XML 인스턴스가 데이터베이스에 저장될 때 보존되지 않는 인스턴스의 일부분에 대해 설명합니다.  
@@ -44,7 +44,7 @@ FROM T1
   
  결과는 `<doc/>`입니다.  
   
- XML 데이터가 `xml` 데이터 형식 인스턴스에 저장될 때 `<?xml version='1.0'?>`과 같은 XML 선언이 보존되지 않습니다. 이것은 의도적인 것입니다. XML 선언 ()와 해당 특성 (버전/인코딩/stand-alone)이 손실 데이터 형식으로 변환 된 다음 `xml`합니다. XML 선언은 XML 파서에 대한 지시어로 취급됩니다. XML 데이터는 내부적으로 ucs-2로 저장되며 XML 인스턴스의 다른 모든 PI는 보존됩니다.  
+ XML 데이터가 `xml` 데이터 형식 인스턴스에 저장될 때 `<?xml version='1.0'?>`과 같은 XML 선언이 보존되지 않습니다. 이것은 의도적인 것입니다. XML 선언 () 및 해당 특성 (버전/encoding/stand-alone) 없어진다 데이터 형식으로 변환 됩니다 `xml`합니다. XML 선언은 XML 파서에 대한 지시어로 취급됩니다. XML 데이터는 내부적으로 ucs-2로 저장되며 XML 인스턴스의 다른 모든 PI는 보존됩니다.  
   
   
 ### <a name="order-of-attributes"></a>특성 순서  
@@ -91,7 +91,7 @@ GO
   
   
 ##  <a name="query"></a> 필수 쿼리 옵션 설정  
- 쿼리할 때 `xml` 유형의 열 또는 변수를 사용 하 여 `xml` 표시 된 대로 데이터 형식 메서드를 다음 옵션을 설정 해야 합니다.  
+ 쿼리할 때 `xml` 유형의 열 또는 변수를 사용 하 여 `xml` 표시 된 것 처럼 데이터 형식 메서드를 다음 옵션을 설정 해야 합니다.  
   
 |SET 옵션|필요한 값|  
 |-----------------|---------------------|  
@@ -103,7 +103,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- 에 표시 된 대로, 쿼리 및 수정 옵션 설정 되지 않은 경우 `xml` 데이터 형식 메서드가 실패 합니다.  
+ 에 표시 된 대로, 쿼리 및 수정 옵션을 설정 하지 않으면 `xml` 데이터 형식 메서드가 실패 합니다.  
   
   
 ## <a name="see-also"></a>관련 항목  

@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303933"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
     
-##  <a name="top"></a> XML 문서 대량 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 또는 대량 내보내기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 이 항목에서는 이 두 가지 경우에 대한 예를 제공합니다.  
+##  <a name="top"></a> XML 문서 대량 수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 또는 대량 내보내기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 이 항목에서는 이 두 가지 경우에 대한 예를 제공합니다.  
   
  다음을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 분할되지 않은 뷰로 대량 가져올 수 있습니다.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36182262"
   
 -   INSERT ... 로 기본 값 사용  
   
- 자세한 내용은 참조 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) 및 [OPENROWSET 또는 BULK INSERT를 사용 하 여 데이터 대량 가져오기&#40;대량... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)합니다.  
+ 자세한 내용은 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) 하 고 [BULK INSERT 또는 OPENROWSET 대량 데이터 가져오기&#40;대량... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)합니다.  
   
 ## <a name="examples"></a>예  
  다음과 같은 예가 제공됩니다.  
@@ -52,14 +51,14 @@ ms.locfileid: "36182262"
   
 -   2. [기존 행에 XML 데이터 대량 가져오기](#existing_row)  
   
--   3. [XML 데이터 대량 가져오기 DTD가 포함 된 파일에서](#file_contains_dtd)  
+-   3. [XML 데이터 대량 가져오기 dtd가 포함 된 파일](#file_contains_dtd)  
   
 -   4. [서식 파일을 사용 하 여 명시적으로 필드 종결자 지정](#field_terminator_in_format_file)  
   
 -   5. [XML 데이터 대량 내보내기](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> 1. XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
- 적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은의 XML 파서가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 선언에 지정 된 인코딩 체계에 따라 데이터를 가져옵니다.  
+ 적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은 했는지의 XML 파서가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 선언에 지정 된 인코딩 체계에 따라 데이터를 가져옵니다.  
   
 #### <a name="sample-table"></a>예제 테이블  
  예 1을 테스트하려면 `T`예제 테이블을 만들어야 합니다.  

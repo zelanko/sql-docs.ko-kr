@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 40bda40f2ed8114f77a28e8a7b0b382107cecdd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248503"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
   이 예제는 메모리 최적화된 테이블과 디스크 기반 테이블에 대해 동일한 Transact-SQL 쿼리를 실행하는 경우 응답 시간의 차이를 비교하여 메모리 내 OLTP 사용 시 성능 향상을 보여줍니다. 또한 고유하게 컴파일된 저장 프로시저가 생성되고(동일한 쿼리를 기반으로) 고유하게 컴파일된 저장 프로시저로 메모리 최적화 테이블을 쿼리하는 경우 일반적으로 최고의 응답 시간을 갖는다는 것을 설명하기 위해 실행됩니다. 이 샘플은 메모리 최적화 테이블에 포함된 데이터에 액세스 하는 경우 성능 향상의 한 가지 측면 즉, 삽입 수행 시 데이터 액세스 효율성만을 보여줍니다. 이 예제는 단일 스레드이며 메모리 내 OLTP의 동시성 이점을 활용하지 않습니다. 동시성을 사용하는 작업에서는 더 큰 성능 향상이 가능합니다.  
@@ -193,6 +193,6 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE 및 메모리 액세스에 최적화 된 테이블](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [CREATE PROCEDURE 및 메모리 최적화 테이블](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

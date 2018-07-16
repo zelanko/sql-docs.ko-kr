@@ -1,5 +1,5 @@
 ---
-title: 차원 특성 구성 (비즈니스 인텔리전스 마법사) | Microsoft Docs
+title: 차원 특성 (비즈니스 인텔리전스 마법사) 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectattributes.f1
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9ce0f7535f111d5c9152304a4e27315f73e5087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae547b6182cdef585668c6888957ea89ef0db519
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093873"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299323"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>차원 특성 구성(비즈니스 인텔리전스 마법사)
-  **차원 특성 구성** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 계정 차원에 대한 특성을 식별하는 데 사용하는 특성 유형으로 차원 특성을 매핑할 수 있습니다.  
+   **차원 특성 구성** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 계정 차원에 대한 특성을 식별하는 데 사용하는 특성 유형으로 차원 특성을 매핑할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **차원 유형**  
  선택한 차원 유형을 표시합니다.  
   
 > [!NOTE]  
->  이 옵션을 사용할 수 없는 때문에 `Type` 차원 속성 값으로 이외의 변경할 수 없습니다 *계정* 계정 차원에 대 한 합니다.  
+>  이 옵션을 사용할 수 없는 때문에 합니다 `Type` 차원의 속성 값으로 이외의 변경할 수 없습니다 *계정* 계정 차원에 대 한 합니다.  
   
  **차원 특성**  
  차원의 기존 차원 특성으로 매핑할 수 있는 유효한 특성 유형을 표시합니다.  

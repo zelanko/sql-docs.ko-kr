@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring file state [SQL Server]
 - verifying file states
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 45e3ba1a08866143c89f07c5e3f475fe7dc284f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 81bf032af5451464cafcbadf04834fd7f247396a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329859"
 ---
 # <a name="file-states"></a>파일 상태
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 파일의 상태는 데이터베이스 상태와는 별도로 유지 관리됩니다. 파일은 항상 하나의 특정 상태에 있습니다. 예를 들어 ONLINE이나 OFFLINE 상태일 수 있습니다. 파일의 현재 상태를 보려면 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 또는 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 카탈로그 뷰를 사용합니다. 데이터베이스가 오프라인 상태일 경우 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 카탈로그 뷰에서 파일 상태를 볼 수 있습니다.  

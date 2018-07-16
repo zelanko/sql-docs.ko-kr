@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a9ced7cb304b5cec0e329adc43f6572b45ebf19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29a9177685d94be437574e90a44a46a2391bcba7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311369"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하는 경우 SharePoint 모드에서 보고서 서버를 지원하기 위해 PowerShell cmdlet이 설치됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
+   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하는 경우 SharePoint 모드에서 보고서 서버를 지원하기 위해 PowerShell cmdlet이 설치됩니다. cmdlet은 세 가지 범주의 기능을 포함합니다.  
   
 -   설치는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 공유 서비스 및 프록시입니다.  
   
--   프로 비전 및 관리의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램과 관련된 프록시입니다.  
+-   프로 비전 및 관리의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 응용 프로그램과 관련된 프록시 서비스입니다.  
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능(예: 확장 및 암호화 키) 관리  
   
@@ -44,13 +44,13 @@ ms.locfileid: "36181298"
   
 -   [Reporting Services 사용자 지정 기능 Cmdlet](#bkmk_ssrsfeatures_cmdlets)  
   
--   [기본 예제](#bkmk_basic_samples)  
+-   [기본 샘플](#bkmk_basic_samples)  
   
--   [자세한 예제](#bkmk_detailedsamples)  
+-   [자세한 샘플](#bkmk_detailedsamples)  
   
     -   [Reporting Services 서비스 응용 프로그램 및 프록시 만들기](#bkmk_example_create_service_application)  
   
-    -   [Reporting Services 배달 확장 검토 및 업데이트](#bkmk_example_delivery_extension)  
+    -   [검토 하 고 Reporting Services 배달 확장 프로그램을 업데이트 합니다.](#bkmk_example_delivery_extension)  
   
     -   [예를 들어 데이터베이스 제한 시간 Servicea 보고 응용 프로그램 데이터베이스의 속성 가져오기 및 설정](#bkmk_example_db_properties)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36181298"
     -   [구독 소유자 변경 및 나열](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 요약  
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 참조 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx)합니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx)합니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36181298"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 자세한 내용은 참조 [SharePoint 2013 관리에 Windows PowerShell을 사용 하 여](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx)합니다.  
+ 자세한 내용은 참조 [SharePoint 2013 관리를 사용 하 여 Windows PowerShell](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx)합니다.  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 관리 셸을 열고 cmdlet을 실행하려면  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36181298"
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스를 설치 및 등록 또는 제거합니다. 이 작업은 SharePoint 모드에서 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]가 설치된 시스템에서만 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> 1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 팜에 설치 되어 있습니다.<br /><br /> 2)는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 인스턴스가 현재 컴퓨터에 설치 됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br />1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 현재 시스템에서 제거 됩니다.<br />2)는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 팜에서 제거 됩니다.<br /><br /> <br /><br /> 참고: 다른 시스템에 팜에 있는 많은 경우는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 설치 되 고 있는 경우 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 팜에서 실행 중인 경고 메시지가 표시 됩니다.|  
+|Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스를 설치 및 등록 또는 제거합니다. 이 작업은 SharePoint 모드에서 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]가 설치된 시스템에서만 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> 1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 팜에 설치 됩니다.<br /><br /> 2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 인스턴스가 현재 컴퓨터에 설치 됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br />1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 현재 시스템에서 제거 됩니다.<br />2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 팜에서 제거 됩니다.<br /><br /> <br /><br /> 참고: 다른 시스템에 팜에 있는 경우는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스가 설치 되어 지속 되는 경우 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 팜에서 실행 중인 경고 메시지가 표시 됩니다.|  
 |Install-SPRSServiceProxy|SharePoint 팜에 Reporting Services 서비스 프록시를 설치 및 등록 또는 제거합니다.|  
 |Get-SPRSProxyUrl|에 액세스 하기 위한 URL을 가져옵니다는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스입니다.|  
 |Get-SPRSServiceApplicationServers|로컬 SharePoint 팜 내 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스가 설치된 모든 서버를 가져옵니다. 이 cmdlet은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 업그레이드 시 공유 서비스를 실행하므로 업그레이드되어야 하는 서버를 확인하는 데 유용합니다.|  
@@ -110,15 +110,15 @@ ms.locfileid: "36181298"
 |Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 응용 프로그램을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
 |Set-SPRSServiceApplication|기존 Reporting Services 서비스 응용 프로그램의 속성을 편집합니다.|  
 |New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 응용 프로그램 프록시를 만듭니다.|  
-|Get-SPRSServiceApplicationProxy|하나 이상의 가져옵니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 프록시입니다.|  
+|Get-SPRSServiceApplicationProxy|하나 이상 가져옵니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 응용 프로그램 프록시 서비스입니다.|  
 |Dismount-SPRSDatabase|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 서비스 응용 프로그램 데이터베이스를 분리합니다.|  
-|Remove-SPRSDatabase|서비스 응용 프로그램 데이터베이스에 대 한 제거는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
+|Remove-SPRSDatabase|에 대 한 서비스 응용 프로그램 데이터베이스를 제거는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |Set-SPRSDatabase|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 연결된 데이터베이스의 속성을 설정합니다.|  
-|Mount-SPRSDatabase|에 대 한 데이터베이스를 탑재 한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
-|New-SPRSDatabase|지정 된 항목에 대 한 새 서비스 응용 프로그램 데이터베이스를 만들 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
+|Mount-SPRSDatabase|데이터베이스를 탑재 한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
+|New-SPRSDatabase|지정 된 새 서비스 응용 프로그램 데이터베이스를 만들 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.|  
 |Get-SPRSDatabaseCreationScript|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabase|하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 응용 프로그램 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. 이 항목의 예제를 참조 하십시오. [Get 및 Servicea 보고 응용 프로그램 데이터베이스의 속성을 설정, 예를 들어 제한 시간을 데이터베이스](#bkmk_example_db_properties)합니다.|  
-|Get-SPRSDatabaseRightsScript|에 대 한 화면에 데이터베이스 권한 스크립트를 출력 한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
+|Get-SPRSDatabase|하나 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 응용 프로그램 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. 이 항목의 예제를 참조 하세요 [가져오기 및 Servicea 보고 응용 프로그램 데이터베이스의 속성을 설정, 예를 들어 제한 시간을 데이터베이스](#bkmk_example_db_properties)합니다.|  
+|Get-SPRSDatabaseRightsScript|화면에 데이터베이스 권한 스크립트 출력을 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
 |Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 데이터베이스를 현재 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 데이터베이스 버전으로 업그레이드합니다.|  
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services 사용자 지정 기능 Cmdlet  
@@ -132,10 +132,10 @@ ms.locfileid: "36181298"
 |New-SPRSExtension|Reporting Services 서비스 응용 프로그램의 새 확장 프로그램을 등록합니다.|  
 |Set-SPRSExtension|기존 Reporting Services 확장 프로그램의 속성을 설정합니다.|  
 |Remove-SPRSExtension|Reporting Services 서비스 응용 프로그램에서 확장 프로그램을 삭제합니다.|  
-|Get-SPRSExtension|하나 이상 가져옵니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 대 한 확장 된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.<br /><br /> 유효한 값은<br /><br /> **배달**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **보안**<br /><br /> **인증**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|하나 이상 가져옵니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 대 한 확장을 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.<br /><br /> 유효한 값은<br /><br /> **배달**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **보안**<br /><br /> **인증**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **Reportdefinitioncustomization**|  
 |Get-SPRSSite|"ReportingService" 기능 사용 여부에 따라 SharePoint 사이트를 가져옵니다. 기본적으로 "ReportingService" 기능이 설정되어 있는 사이트가 반환됩니다.|  
   
-##  <a name="bkmk_basic_samples"></a> 기본 예제  
+##  <a name="bkmk_basic_samples"></a> 기본 샘플  
  이름에 'SPRS'가 포함된 cmdlet 목록을 반환합니다. 전체 목록이 됩니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] cmdlet.  
   
 ```  
@@ -170,7 +170,7 @@ get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | 
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
 ```  
   
-##  <a name="bkmk_detailedsamples"></a> 자세한 예제  
+##  <a name="bkmk_detailedsamples"></a> 자세한 샘플  
  다음 샘플 외에도, [Windows PowerShell script for Steps 1–4](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_full_script)항목의 "Windows PowerShell 스크립트" 섹션을 참조하세요.  
   
 ###  <a name="bkmk_example_create_service_application"></a> Reporting Services 서비스 응용 프로그램 및 프록시 만들기  
@@ -180,7 +180,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  기본 프록시 그룹에 프록시 추가  
   
-3.  포트 80 웹 응용 프로그램의 콘텐츠 데이터베이스에 대한 서비스 응용 프로그램 액세스를 허용합니다. 스크립트 가정 사이트 "http://sitename" 이미 존재 합니다.  
+3.  포트 80 웹 응용 프로그램의 콘텐츠 데이터베이스에 대한 서비스 응용 프로그램 액세스를 허용합니다. 스크립트 사이트 가정 "http://sitename" 이미 있습니다.  
   
 ```  
 # Create service application and service application proxy  
@@ -198,7 +198,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
   
 ```  
   
-###  <a name="bkmk_example_delivery_extension"></a> Reporting Services 배달 확장 검토 및 업데이트  
+###  <a name="bkmk_example_delivery_extension"></a> 검토 하 고 Reporting Services 배달 확장 프로그램을 업데이트 합니다.  
  다음 PowerShell 스크립트 예제에서 `My RS Service App`서비스 응용 프로그램에 대해 보고서 서버 메일 배달 확장 프로그램의 구성을 업데이트합니다. SMTP 서버(`<email server name>`) 및 FROM 메일 별칭(`<your FROM email address>`) 값을 업데이트합니다.  
   
 ```  
@@ -305,7 +305,7 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ## <a name="see-also"></a>관련 항목  
  [Use PowerShell to Change, Reporting Services 구독 소유자를 나열 및 구독 실행](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [검사 목록: PowerShell을 사용 하 여 SharePoint 용 PowerPivot을 확인 하려면](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [검사 목록: PowerShell를 사용 하 여 SharePoint 용 PowerPivot 확인](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [CodePlex SharePoint 관리 PowerShell 스크립트](http://sharepointpsscripts.codeplex.com/)   
  [PowerShell을 사용 하 여 SSRS를 관리 하는 방법](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

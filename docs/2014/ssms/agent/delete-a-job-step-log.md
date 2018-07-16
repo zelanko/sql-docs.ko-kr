@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
 - deleting job step logs
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - removing job step logs
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 13c1b12dcf6fcab2fe740b41c6d70f0b34f0eb43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 54b5c09761953037193e2dfa11677f97b7bf397a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297773"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그를 삭제하는 방법에 대해 설명합니다.  
@@ -84,9 +84,9 @@ ms.locfileid: "36186877"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)합니다.  
+ 자세한 내용은 [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)합니다.  
   
-##  <a name="SMO"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `DeleteJobStepLogs` 클래스의 `Job` 메서드를 사용합니다. 자세한 내용은[SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
 ```  

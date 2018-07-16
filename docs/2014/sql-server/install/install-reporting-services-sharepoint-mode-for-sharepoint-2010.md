@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 765713eba66f571e14328351413011762ec71a4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 624f7347d4fdcbdf617e314ba398455b3f4b8126
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313173"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010용 Reporting Services SharePoint 모드 설치
-  이 항목의 절차에서는 SharePoint 모드에서 Reporting Services 보고서 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2010 중앙 관리를 사용하는 SQL Server 설치 마법사 및 추가 구성 태스크가 포합됩니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치에 대한 개별 절차를 위해 사용할 수도 있습니다. 추가에 대 한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기존 팜에 서버를 참조 [팜에 추가 보고서 서버 추가 &#40;SSRS 확장&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [추가 Reporting Services 웹 추가 팜에 프런트 엔드](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)합니다.  
+  이 항목의 절차에서는 SharePoint 모드에서 Reporting Services 보고서 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2010 중앙 관리를 사용하는 SQL Server 설치 마법사 및 추가 구성 태스크가 포합됩니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치에 대한 개별 절차를 위해 사용할 수도 있습니다. 추가 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하 여 기존 팜에 서버를 볼 [팜에 추가 보고서 서버를 추가 &#40;SSRS 확장&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 하 고 [추가 Reporting Services 웹 추가 팜에 프런트 엔드](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)합니다.  
   
 ||  
 |-|  
@@ -31,14 +31,14 @@ ms.locfileid: "36186467"
  단일 서버 설치는 배포 및 테스트 시나리오에서 유용하지만 프로덕션 환경에서는 권장하지 않습니다.  
   
 > [!NOTE]  
->  업그레이드 및 종료에 대 한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 참조 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)합니다.  
+>  업그레이드 및 종료에 대 한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 참조 하십시오 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)합니다.  
   
 
   
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소  
   
 -   > [!IMPORTANT]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 구성 및 관리하는 데 더 이상 필요하지 않으며 지원되지 않습니다. SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 참조 [는 Reporting Services SharePoint 서비스 응용 프로그램 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)합니다.  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 구성 및 관리하는 데 더 이상 필요하지 않으며 지원되지 않습니다. SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램을 관리](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)합니다.  
   
 -   SharePoint 2010 제품을 포함한 요구 사항은 다음 항목을 검토하십시오.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "36186467"
   
     -   [SharePoint 2010 팜에서 SQL Server BI 기능을 사용하기 위한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
--   이 항목에서 SharePoint 2010 제품 설치에 대해서는 다루지 않습니다. 자세한 내용은 참조 [SharePoint 2010 팜에서 SQL Server BI 기능 사용에 대 한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)합니다.  
+-   이 항목에서 SharePoint 2010 제품 설치에 대해서는 다루지 않습니다. 자세한 내용은 [SharePoint 2010 팜에서 SQL Server BI 기능 사용에 대 한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)합니다.  
   
 -   이러한 절차는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버를 구성하기 위한 것이며 이전 버전의 보고서 서버에는 적용되지 않습니다. 이전 버전의 보고서 서버에서는 SharePoint Shared Service 아키텍처를 사용하지 않습니다. 예를 들어 SQL Server 2008 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 및 SQL Server 2008 R2 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버입니다.  
   
 -   **SharePoint 2010 관리** 서비스를 Windows Server Manager에서 시작했는지 확인합니다.  
   
- ![서버 1 대 설치의 SSRS 구성](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "서버 1 대 설치의 SSRS 구성")  
+ ![서버 한 대 설치의 SSRS 구성 요소](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "서버 한 대 설치의 SSRS 구성 요소")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>단일 서버 구성을 위한 데이터베이스 고려 사항  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36186467"
   
 
   
-##  <a name="bkmk_install_SSRS"></a> SharePoint 모드에서 Reporting Services 보고서 서버 설치  
+##  <a name="bkmk_install_SSRS"></a> SharePoint 모드의 Reporting Services 보고서 서버 설치  
   
 1.  SQL Server 설치 마법사를 실행합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36186467"
   
 8.  **설치 역할** 페이지에서 **SQL Server 기능 설치** 를 클릭합니다.  
   
-     **다음**을 클릭합니다.  
+      **다음**을 클릭합니다.  
   
      ![설치 역할을 위한 SQL Server 기능 설치](../../../2014/sql-server/install/media/rs-setuprole.gif "설치 역할을 위한 SQL Server 기능 설치")  
   
@@ -96,9 +96,9 @@ ms.locfileid: "36186467"
   
     -   **Reporting Services – SharePoint**  
   
-    -   **SharePoint 2010 제품용 Reporting Services 추가 기능**. ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고")추가 기능을 설치 하기 위한 설치 마법사 옵션은 새로운는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 해제 합니다.  
+    -   **SharePoint 2010 제품용 Reporting Services 추가 기능**. ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고")추가 기능을 설치 하는 것에 대 한 설치 마법사 옵션을 사용 하 여 새로운는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스 합니다.  
   
-    -   경우 하지 이미 있는 SQL Server의 인스턴스 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 선택할 수 있습니다 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 전체 환경에 대 한 합니다.  
+    -   경우 이미 필요가 없습니다 SQL Server 인스턴스의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 선택할 수도 있습니다 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 전체 환경에 대 한 합니다.  
   
      **다음**을 클릭합니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "36186467"
 > [!NOTE]  
 >  기존 SharePoint 팜에 설치하는 경우에는 이 섹션의 단계를 완료할 **필요가 없습니다** . 이전 섹션에서 SQL Server 설치 마법사를 실행한 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스가 이미 설치되어 시작되었습니다.  
   
- 필요한 파일이 SQL Server 설치 마법사의 일부로 설치되었지만 서비스를 SharePoint 팜에 등록해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스에 대 한 PowerShell 지원이 도입 되었습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에서. 다음 단계에서는 SharePoint 관리 셸을 열고 cmdlet을 실행하는 절차를 안내합니다.  
+ 필요한 파일이 SQL Server 설치 마법사의 일부로 설치되었지만 서비스를 SharePoint 팜에 등록해야 합니다. 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스에 대 한 PowerShell 지원이 도입 되었습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에서. 다음 단계에서는 SharePoint 관리 셸을 열고 cmdlet을 실행하는 절차를 안내합니다.  
   
 1.  **시작** 단추를 클릭합니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "36186467"
 3.  새로 만들기 메뉴에서 **SQL Server Reporting Services 서비스 응용 프로그램**을 클릭합니다.  
   
     > [!WARNING]  
-    >  경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션이 표시 되지 않고 목록에는 **표시 하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되지 않은**합니다. PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
+    >  경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션이 표시 되지 않습니다 목록의 것을 **표시는를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스가 설치 되어 있지**. PowerShell cmdlt을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 설치하는 방법에 대한 이전 섹션을 검토합니다.  
   
 4.  **SQL Server Reporting Services 서비스 응용 프로그램 만들기** 페이지에서 응용 프로그램의 이름을 입력합니다. 여러 개의 Reporting Services 서비스 응용 프로그램을 만들 경우 자세한 이름을 지정하거나 또는 명명 규칙을 사용하면 관리 및 운영을 개선하는 데 도움이 됩니다.  
   
@@ -205,12 +205,12 @@ ms.locfileid: "36186467"
   
 11. 서비스 응용 프로그램 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
- ![PowerShell 관련 내용](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 내용") PowerShell을 사용 하 여 만들기에 대 한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 참조 하십시오. [Reporting Services 서비스 응용 프로그램을 만들려면 PowerShell을 사용 하 여](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)합니다.  
+ ![PowerShell 관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 만들려면 PowerShell을 사용 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램, 참조 [Reporting Services 서비스 응용 프로그램을 만들려면 PowerShell을 사용 하 여](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)입니다.  
   
 
   
 ##  <a name="bkmk_powerview"></a> Power View 사이트 모음 기능을 활성화 합니다.  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 용 추가 기능을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 엔터프라이즈 버전은 사이트 모음 기능입니다. 이 기능은 루트 사이트 모음과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 설치된 후에 생성된 사이트 모음에 대해 자동으로 활성화됩니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]를 사용하려면 기능이 활성화되어 있는지 확인합니다.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition,이 사이트 모음 기능입니다. 이 기능은 루트 사이트 모음과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 설치된 후에 생성된 사이트 모음에 대해 자동으로 활성화됩니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]를 사용하려면 기능이 활성화되어 있는지 확인합니다.  
   
  SharePoint 2010 제품의 설치 이후에 SharePoint 2010 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치하면 보고서 서버 통합 기능 및 Power View 통합 기능이 루트 사이트 모음에 대해서만 활성화됩니다. 기타 사이트 모음의 경우 기능을 수동으로 활성화합니다.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36186467"
   
 6.  **활성화**를 클릭합니다.  
   
- 이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 참조 [보고서 서버 및 Power View Integration Features in SharePoint 활성화](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md) 합니다.  
+ 이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 [보고서 서버 및 SharePoint에서 Power View 통합 기능을 활성화](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md) 합니다.  
   
 ##  <a name="bkmk_additional_config"></a> 기타 고려 사항  
  이 섹션에서는 대부분의 SharePoint 배포에서 중요한 추가 구성 단계에 대해 설명합니다.  
@@ -244,7 +244,7 @@ ms.locfileid: "36186467"
 
   
 ### <a name="add-reporting-services-content-types"></a>Reporting Services의 콘텐츠 형식 추가  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 공유 데이터 원본 파일(.rsds), 보고서 모델 파일(.smdl) 및 보고서 작성기 보고서 정의 파일(.rdl)을 관리하는 데 사용하는 미리 정의된 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다. 자세한 내용은 참조 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;SharePoint 통합 모드의 Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 공유 데이터 원본 파일(.rsds), 보고서 모델 파일(.smdl) 및 보고서 작성기 보고서 정의 파일(.rdl)을 관리하는 데 사용하는 미리 정의된 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다. 자세한 내용은 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;Reporting Services SharePoint 통합 모드의&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
   
 
   

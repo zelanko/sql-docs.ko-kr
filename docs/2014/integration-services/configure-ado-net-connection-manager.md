@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6ea398365e4c612876216e1abebbbd682f545b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b938f3ab316f63caadb59ba8aa886a453b148a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297033"
 ---
 # <a name="configure-adonet-connection-manager"></a>ADO.NET 연결 관리자 구성
   **ADO.NET 연결 관리자 구성** 대화 상자를 사용하여 SqlClient 공급자와 같은 .NET Framework 데이터 공급자를 사용하여 액세스할 수 있는 데이터 원본에 연결을 추가할 수 있습니다. 연결 관리자는 기존 연결을 사용하거나 새 연결을 만들 수 있습니다.  

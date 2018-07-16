@@ -19,13 +19,13 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 30e66ffc20bdc7f1ff51d54771e53959ec40a601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 180eb370937cd996f6e002fe9d684f7c168983d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197473"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>스크립트 태스크를 사용하여 ForEach 루프에 사용할 목록 수집
   Foreach from Variable 열거자는 변수에서 해당 열거자에 전달된 목록의 항목을 열거하고 각 항목에 대해 동일한 태스크를 수행합니다. 스크립트 태스크에서 사용자 지정 코드를 사용하여 이러한 용도로 사용할 목록을 채울 수 있습니다. 이 열거자에 대한 자세한 내용은 [Foreach 루프 컨테이너](../control-flow/foreach-loop-container.md)를 참조하세요.  
@@ -250,7 +250,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Foreach 루프 컨테이너](../control-flow/foreach-loop-container.md)   

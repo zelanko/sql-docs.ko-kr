@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], restoring
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2bb02bd8a75dbd07f5e8b35cbde57a10869b8351
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5e9e0df5d92d4100fdf286420fe71daf245d332a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306024"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master 데이터베이스 복원(Transact-SQL)
   이 항목에서는 전체 데이터베이스 백업에서 **master** 데이터베이스를 복원하는 방법에 대해 설명합니다.  

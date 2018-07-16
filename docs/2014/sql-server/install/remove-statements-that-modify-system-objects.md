@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - direct system catalog updates [SQL Server]
 - system catalogs [SQL Server]
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c77525957fa679659a67bfa41f28090e028a7a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aca644a822673e4d373048fc0d3a95eb0cd6fdf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297823"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>시스템 개체를 수정하는 문을 제거합니다.
   업그레이드 관리자가 시스템 카탈로그를 업데이트하는 문을 검색했습니다. 직접 시스템 카탈로그 업데이트가 허용되지 않습니다. SQL 스크립트에서 문서화된 공식 API를 사용하도록 수정합니다.  
@@ -42,6 +42,6 @@ ms.locfileid: "36093010"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 디자이너에서 단일 쿼리를 작성 | Microsoft Docs
+title: 데이터 마이닝 디자이너에서 단일 쿼리를 만들려면 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c4e815c2bdf5ad0f3c3eaa2bceaed03b09bc77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 917efe321e2e43779e28cb7f707a9dadaeb8a7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284239"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>데이터 마이닝 디자이너에서 단일 쿼리 작성
   단일 쿼리는 단일 사례에 대한 예측을 만들려는 경우 유용합니다. 단일 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  
@@ -61,7 +61,7 @@ AS [t]
   
 4.  **단일 쿼리 입력** 테이블의 **값** 열에서 값을 선택하여 예측을 만들 사례를 설명합니다.  
   
-     예를 들어 선택 **2** 에 대 한 **Number Children At Home**, 한 다음 입력 `45` 에 대 한 **Age**합니다.  
+     예를 들어, 선택 **2** 에 대 한 **Number Children At Home**를 차례로 `45` 에 대 한 **Age**합니다.  
   
 5.  **마이닝 모델** 테이블의 예측 가능한 열을 탭의 아래쪽에 있는 **원본** 열로 끌어 놓습니다. 필요에 따라 열에 대한 별칭을 입력할 수 있습니다.  
   

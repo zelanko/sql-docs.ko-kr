@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], removing
 - removing database mirroring [SQL Server]
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5770d8caf8db1c2969ec19b75293d6cb43c1e80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: aae710069fbb8c27a8e94e3c26d35f04c935246d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297053"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 데이터베이스 미러링을 제거하는 방법에 대해 설명합니다.  데이터베이스 소유자는 언제든지 데이터베이스에서 미러링을 제거하여 수동으로 데이터베이스 미러링 세션을 중지할 수 있습니다.  

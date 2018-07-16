@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
 - mining structures [Analysis Services], columns
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: deda62a24444dfbe9ff9249be658f42e63c9e2f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29a8577ee503668dd3bae72441155abc5977073a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284209"
 ---
 # <a name="mining-structure-columns"></a>마이닝 구조 열
   마이닝 구조를 만들 때 외부 데이터 열을 선택한 다음 데이터가 모델링에 사용되는 방법을 지정하여 마이닝 구조의 열을 정의합니다. 따라서 마이닝 구조 열이 데이터 원본의 데이터 복사본보다 많으며 마이닝 구조 열에 따라 원본 데이터가 마이닝 모델에 사용되는 방법이 정의됩니다. 데이터를 분할하는 방법을 결정하는 속성과 데이터 값을 분산하는 방법을 설명하는 속성을 할당할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "36180766"
   
  타사 알고리즘은 마이닝 구조 열에 대해 정의할 수 있는 사용자 지정 속성을 포함할 수도 있습니다.  
   
- 데이터 마이닝 구조 및 데이터 마이닝 모델에 대 한 자세한 내용은 참조 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)합니다.  
+ 데이터 마이닝 구조 및 데이터 마이닝 모델에 대 한 자세한 내용은 참조 하세요. [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  마이닝 구조 열을 정의하고 사용하는 방법은 다음 항목을 참조하십시오.  
@@ -60,12 +60,12 @@ ms.locfileid: "36180766"
 |항목|링크|  
 |-----------|-----------|  
 |마이닝 구조 열을 정의하는 데 사용할 수 있는 데이터 형식에 대해 설명합니다.|[데이터 형식 &#40;데이터 마이닝&#41;](data-types-data-mining.md)|  
-|마이닝 구조 열에 포함되어 있는 각 데이터 형식에 사용할 수 있는 내용 유형에 대해 설명합니다. 내용 유형은 데이터 형식에 따라 달라집니다. 내용 유형은 모델 수준에서 할당되며 모델에 열 데이터가 사용되는 방법을 결정합니다.|[콘텐츠 형식을 &#40;데이터 마이닝&#41;](content-types-data-mining.md)|  
-|중첩 테이블의 개념을 도입하고, 중첩 테이블을 데이터 원본에 마이닝 구조 열로 추가하는 방법에 대해 설명합니다.|[열을 분류 &#40;데이터 마이닝&#41;](classified-columns-data-mining.md)|  
+|마이닝 구조 열에 포함되어 있는 각 데이터 형식에 사용할 수 있는 내용 유형에 대해 설명합니다. 내용 유형은 데이터 형식에 따라 달라집니다. 내용 유형은 모델 수준에서 할당되며 모델에 열 데이터가 사용되는 방법을 결정합니다.|[콘텐츠 형식 &#40;데이터 마이닝&#41;](content-types-data-mining.md)|  
+|중첩 테이블의 개념을 도입하고, 중첩 테이블을 데이터 원본에 마이닝 구조 열로 추가하는 방법에 대해 설명합니다.|[열 분류 &#40;데이터 마이닝&#41;](classified-columns-data-mining.md)|  
 |열의 예상 분포 값을 지정하기 위해 마이닝 구조 열에 대해 설정할 수 있는 분포 속성을 나열하고 설명합니다.|[열 배포 &#40;데이터 마이닝&#41;](column-distributions-data-mining.md)|  
-|*범주화*라고도 하는 불연속화의 개념을 설명하고 Analysis Services에서 연속 숫자 데이터 불연속화를 위해 제공하는 메서드에 대해 설명합니다.|[분할 방법 &#40;데이터 마이닝&#41;](discretization-methods-data-mining.md)|  
+|*범주화*라고도 하는 불연속화의 개념을 설명하고 Analysis Services에서 연속 숫자 데이터 불연속화를 위해 제공하는 메서드에 대해 설명합니다.|[분할 메서드 &#40;데이터 마이닝&#41;](discretization-methods-data-mining.md)|  
 |마이닝 구조 열에 대해 설정할 수 있는 모델링 플래그에 대해 설명합니다.|[모델링 플래그 &#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
-|한 마이닝 구조 열을 다른 마이닝 구조 열과 연결하는 데 사용할 수 있는 특수한 유형의 열인 분류된 열에 대해 설명합니다.|[열을 분류 &#40;데이터 마이닝&#41;](classified-columns-data-mining.md)|  
+|한 마이닝 구조 열을 다른 마이닝 구조 열과 연결하는 데 사용할 수 있는 특수한 유형의 열인 분류된 열에 대해 설명합니다.|[열 분류 &#40;데이터 마이닝&#41;](classified-columns-data-mining.md)|  
 |마이닝 구조 열을 추가하고 수정하는 방법에 대해 알아봅니다.|[마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>관련 항목  

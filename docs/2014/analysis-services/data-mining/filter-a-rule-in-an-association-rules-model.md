@@ -1,5 +1,5 @@
 ---
-title: 필터 규칙에 연결 규칙 모델 | Microsoft Docs
+title: 필터 규칙을 연결에서 규칙 모델 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36332206119e0cf3c75e62650f8f6d9ac60897e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2abb9180b446183764d96e95fe85f74d9bcd40f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289799"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
   연결 모델에 필터링을 사용하여 보고자 하는 연결로만 결과를 제한할 수 있습니다. 예를 들어 특정 제품이 포함된 규칙만 표시하도록 규칙을 필터링할 수 있습니다.  

@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.calculatingobjectcounts.f1
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a31d248330d80e49a7669982e6ad3011fb7375e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a2040623e235b79a16c767062655deac81d6271
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319323"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>개체 수 지정(집계 디자인 마법사)
   **개체 수 지정** 페이지를 사용하여 큐브의 개체 수를 자동으로 계산하거나 예상 개수를 직접 입력할 수 있습니다. 집계 디자인 마법사는 개체 수를 사용하여 저장소 요구 사항을 예상합니다.  
   
 ## <a name="options"></a>변수  
  **큐브 개체**  
- 큐브의 차원 및 특성을 표시합니다. 가 없는 특성에만 해당 `AggregationUsage` 속성이로 설정 `None` 에 **집계 사용 검토** 특성 수를 지정 하는 데에 있기 때문에 마법사의 페이지 표시 됩니다.  
+ 큐브의 차원 및 특성을 표시합니다. 되지 않은 특성에만 해당 `AggregationUsage` 속성으로 설정 `None` 에 **집계 사용 검토** 개수를 지정 하는 특성에만 해당 되므로 마법사의 페이지 표시 됩니다.  
   
  **예상된 개수**  
- 측정값 그룹의 예상 행 수와 데이터베이스 차원의 예상 특성 멤버 수를 표시합니다. 예상 개수로 사용할 값을 입력하거나 예상 개수 값을 계산할 수 있습니다. 개수 값을 계산 하려면 입력 `0` 클릭 한 다음 확인 하 고 필드에서 **Count**합니다. 이미 수가 표시된 필드는 업데이트되지 않습니다.  
+ 측정값 그룹의 예상 행 수와 데이터베이스 차원의 예상 특성 멤버 수를 표시합니다. 예상 개수로 사용할 값을 입력하거나 예상 개수 값을 계산할 수 있습니다. 개수 값을 계산 하려면 입력 `0` 필드를 클릭 한 다음 **개수**합니다. 이미 수가 표시된 필드는 업데이트되지 않습니다.  
   
  **파티션 수**  
  (옵션) 측정값 그룹의 예상 행 수와 파티션의 예상 특성 멤버 수를 입력합니다.  

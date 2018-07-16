@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 인스턴스 모니터 | Microsoft Docs
+title: Analysis Services 인스턴스 모니터링 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [Analysis Services - multidimensional data]
 - multidimensional data [Analysis Services], monitoring
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20197b22e4eb8f21c4b09493c79a47c00e4e6bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cdce8bf19c1d167952f954f82cc0cb679eb2612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237743"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services 인스턴스 모니터
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 성능 모니터( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **)를 사용하여**의 성능을 모니터할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 작성 및 관리하고 추적 결과를 분석 및 재생할 수 있습니다. 성능 모니터는 다음 섹션에서 설명하는 것처럼 특정 카운터를 통해 인덱싱된 서버 상태를 보고합니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "36183135"
   
  [SQL Server Profiler를 사용하여 Analysis Services 모니터링](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; Services 분석을 모니터링 하려면](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; 모니터는 분석 서비스](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; Services 분석을 모니터링 하려면](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; 모니터는 분석 서비스](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  [성능 카운터 &#40;SSAS&#41;](performance-counters-ssas.md)  
   

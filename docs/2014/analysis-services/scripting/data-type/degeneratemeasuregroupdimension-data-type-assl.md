@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45a3d778580c344e0251e271415ff729b61520b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 343668137e77f53f94df2b6bc1324c3a67d94256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321160"
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>DegenerateMeasureGroupDimension 데이터 형식(ASSL)
   중복 제거 차원(팩트 차원)과 측정값 그룹 간의 관계를 나타내는 파생 데이터 형식을 정의합니다.  
@@ -60,11 +60,11 @@ ms.locfileid: "36082354"
 |파생 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 팩트 차원에 대 한 자세한 내용은 참조 [차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
+ 팩트 차원에 대 한 자세한 내용은 참조 하세요. [차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

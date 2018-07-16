@@ -24,18 +24,18 @@ helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 95b9639b34002aa69366f87cac48427624f7d0dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319213"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 요소(XMLA)
-  하는 동안 쓰기 저장 테이블을 생성할지 여부를 결정은 [프로세스](../xml-elements-commands/process-element-xmla.md) 작업 합니다.  
+  하는 동안 쓰기 저장 테이블을 만들지 여부를 결정 합니다 [프로세스](../xml-elements-commands/process-element-xmla.md) 작업 합니다.  
   
 ## <a name="syntax"></a>구문  
   

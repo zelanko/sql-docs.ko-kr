@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: db0d630f6efa2ed3499d6e42d7ebe8be5945700e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a9e14fc0da918438c6284870d0612185231c22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173580"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
   이 항목에서는 Analysis Services의 다 대 다 차원에 대해 설명하고 이러한 차원을 사용하는 경우와 만드는 방법도 살펴봅니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36185289"
   
  단추를 클릭하여 관계 정의 대화 상자를 연 다음 관계 유형이 다 대 다인지 확인하고 관계에서 사용되는 중간 측정값 그룹을 확인합니다.  
   
- ![차원 용도의 관계 단추가](../media/ssas-m2m-btndimusage.png "차원 용도의 관계 정의 단추")  
+ ![차원 용도 정의 관계 단추](../media/ssas-m2m-btndimusage.png "차원 용도의 관계 정의 단추")  
   
  이후의 섹션들에서는 다 대 다 차원을 설정하고 모엘 동작을 테스트하는 방법을 알아봅니다. 먼저 추가 정보를 검토하거나 자습서를 살펴보려면 이 문서 끝에 있는 **자세한 정보** 를 참조하십시오.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36185289"
   
      특성의 경우 모두 선택합니다.  
   
-     ![새 차원에 특성 목록](../media/ssas-m2m-dimsalesreason.PNG "새 차원에 특성 목록")  
+     ![새 차원의 특성 목록](../media/ssas-m2m-dimsalesreason.PNG "새 차원의 특성 목록")  
   
 3.  기존 Fact Internet Sales 테이블을 기반으로 두 번째 차원을 만듭니다. 이 테이블은 팩트 테이블이지만 Sales Order 정보를 포함하고 있습니다. 이 정보를 사용하여 Sales Order 차원을 만들 것입니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36185289"
   
 5.  마법사의 다음 페이지에서 특성을 선택합니다. 이 예에서는 **SalesOrderNumber**만 선택하면 됩니다.  
   
-     ![판매 주문 차원 보여 주는 특성 목록](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales order 차원 보여 주는 특성 목록")  
+     ![판매 주문 차원, 특성 목록 표시](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales order 차원 특성 목록 표시")  
   
 6.  차원에 대해 일관성 있는 명명 규칙을 사용하기 위해 차원의 이름을 **Dim Sales Orders**로 바꿉니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36185289"
   
      이 대화 상자가 다 대 다 관계를 지정하는 데 사용됨을 확인할 수 있습니다. 일반 관계가 있는 차원을 대신 추가한 경우에는 이 대화 상자를 사용하여 다 대 다로 변경할 수 있습니다.  
   
-     ![차원 용도의 관계 단추가](../media/ssas-m2m-btndimusage.png "차원 용도의 관계 정의 단추")  
+     ![차원 용도 정의 관계 단추](../media/ssas-m2m-btndimusage.png "차원 용도의 관계 정의 단추")  
   
 3.  Analysis Services 다차원 인스턴스에 프로젝트를 배포합니다. 다음 단계에서는 Excel에서 큐브를 탐색하여 동작을 확인합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36185289"
   
      어느 정도 내려가면 주문 번호 **SO5382**에 대한 판매액과 판매 이유를 찾을 수 있습니다. 이 특정 주문의 총합계는 **539.99**이고 이 주문에 할당된 구매 이유에는 Promotion, Other 및 Price가 포함되어 있습니다.  
   
-     ![다 대 다 집계를 표시 한 Excel 워크시트](../media/ssas-m2m-excel.png "다 대 다 집계를 표시 한 Excel 워크시트")  
+     ![다 대 다 집계를 보여 주는 Excel 워크시트](../media/ssas-m2m-excel.png "다 대 다 집계를 보여 주는 Excel 워크시트")  
   
      주문의 판매액은 올바르게 계산되었습니다. 즉, 전체 주문의 판매액은 **539.99** 입니다. **539.99** 가 각 이유에 표시되어 있지만 모든 세 이유의 값에 대한 합계가 계산되지 않아서 총합계가 잘못된 값으로 커지지 않았습니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36185289"
 ##  <a name="bkmk_Learn"></a> Learn more  
  개념을 완전히 이해하는 데 유용한 추가 정보를 얻으려면 다음 링크를 사용하십시오.  
   
- [Analysis Services의 다 대 다 차원을 정의 하는 방법](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Analysis Services의 다 대 다 차원 정의](http://go.microsoft.com/fwlink/?LinkId=324759)  
   
  [다 대 다 혁명 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36185289"
   
 ## <a name="see-also"></a>관련 항목  
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
+ [Analysis Services 다차원 모델링 자습서에 대 한 샘플 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
  [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [다차원 모델의 큐브 뷰](perspectives-in-multidimensional-models.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319273"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE에 대한 LANGUAGE 및 FORMAT_STRING
   FORMATTED_VALUE 속성은 셀의 VALUE, FORMAT_STRING 속성 및 LANGUAGE 속성의 상호 작용을 기반으로 합니다. 이 항목에서는 이러한 속성이 상호 작용하여 FORMATTED_VALUE 속성을 작성하는 방법에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "36091625"
  FORMATTED_VALUE의 지역화된 버전을 생성하기 위해 FORMAT_STRING과 함께 적용될 로캘 사양입니다.  
   
 ## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE 생성  
- VALUE 속성 값을 사용하고 해당 값에 FORMAT_STRING 속성에 지정된 형식 템플릿을 적용하여 FORMATTED_VALUE 속성을 생성합니다. 또한 때마다 서식 값은 한 `named formatting literal` LANGUAGE 속성 사양이 명명 된 형식 지정에 대 한 언어 사용법에 따라 FORMAT_STRING의 출력을 수정 합니다. 명명된 형식 지정 리터럴은 모두 지역화할 수 있는 방법으로 정의됩니다. 예를 들어 `"General Date"` 는 언어 사양에 상관없이 템플릿에서 정의하는 대로 날짜를 표시해야 함을 지정하는 `"YYYY-MM-DD hh:nn:ss",` 템플릿과는 반대로 지역화할 수 있는 사양입니다.  
+ VALUE 속성 값을 사용하고 해당 값에 FORMAT_STRING 속성에 지정된 형식 템플릿을 적용하여 FORMATTED_VALUE 속성을 생성합니다. 형식 지정 값이 될 때마다 또한는 `named formatting literal` 경우 LANGUAGE 속성 사양이 명명 된 형식 지정에 대 한 언어 사용법에 따라 FORMAT_STRING의 출력을 수정 합니다. 명명된 형식 지정 리터럴은 모두 지역화할 수 있는 방법으로 정의됩니다. 예를 들어 `"General Date"` 는 언어 사양에 상관없이 템플릿에서 정의하는 대로 날짜를 표시해야 함을 지정하는 `"YYYY-MM-DD hh:nn:ss",` 템플릿과는 반대로 지역화할 수 있는 사양입니다.  
   
  FORMAT_STRING 템플릿과 LANGUAGE 사양 사이에 충돌이 있으면 FORMAT_STRING 템플릿이 LANGUAGE 사양보다 우선 적용됩니다. 예를 들어 FORMAT_STRING="$ #0" 및 LANGUAGE=1034(스페인), VALUE=123.456인데 FORMATTED_VALUE="  123" 대신 FORMATTED_VALUE="$ 123"인 경우 형식 템플릿의 값이 지정된 언어보다 우선 적용되므로 예상 형식은 유로입니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36091625"
 |멤버|FORMATTED_VALUE|설명|  
 |------------|----------------------|-----------------|  
 |변수를 잠그기 위한|$5,040.00|FORMAT_STRING이 `Currency` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)입니다.|  
-|B|5.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
+|B| 5.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
 |C|$5.040,00|FORMAT_STRING이 `$#,##0.00` (A에서 상속된 Currency에 대한 재정의)으로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었습니다. FORMAT_STRING 속성이 명시적으로 통화 기호를 $로 설정했으므로 FORMATTED_VALUE가 $ 기호와 함께 표시됩니다. 그러나 `.` (점) 및 `,` (쉼표)가 각각 소수 구분 기호와 천 단위 구분 기호의 자리 표시자이므로 언어 사양은 소수 구분 기호와 천 단위 구분 기호에 대해 지역화된 출력을 생성하면서 이러한 기호에 영향을 줍니다.|  
 |d|5.04E+03|FORMAT_STRING이 `Scientific` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.|  
 |E|5,04E+03|FORMAT_STRING이 `Scientific` 으로 설정되었고 LANGUAGE가 명시적으로 `1034,` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.|  

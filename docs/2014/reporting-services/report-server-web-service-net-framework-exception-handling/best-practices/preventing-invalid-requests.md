@@ -16,15 +16,15 @@ helpviewer_keywords:
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ccaa60df350be80b47d62a2b87fc2bb3b76ac1f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bc951abcc72ee191aad32b0af62c9c76395d1c66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313215"
 ---
 # <a name="preventing-invalid-requests"></a>잘못된 요청 방지
   응용 프로그램 흐름을 분석하고 보고서 서버로 전송되는 요청이 유효한지 확인하여 일부 유형의 예외가 throw되지 않도록 할 수 있습니다. 예를 들어 사용자가 보고서의 이름, 데이터 원본 또는 기타 보고서 서버 항목을 추가하거나 갱신할 수 있는 응용 프로그램의 경우 사용자가 입력하는 텍스트의 유효성을 검사해야 합니다. 또한 요청을 보고서 서버로 보내기 전에 항상 예약 문자를 확인해야 합니다. 코드에서 **if**문 또는 기타 논리 구문을 사용하여 보고서 서버에 요청을 보내는 데 필요한 조건이 충족되지 않았음을 사용자에게 알립니다.  

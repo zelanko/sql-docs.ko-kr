@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
 - Merge Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bacb2a50002dedd449d7060e0335d064645f8572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287149"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   복제 병합 에이전트는 데이터베이스 테이블에 저장된 초기 스냅숏 파일을 구독자에 적용하는 유틸리티 실행 파일입니다. 또한 이 에이전트는 초기 스냅숏이 만들어진 후 게시자에서 발생한 증분 데이터 변경 내용을 병합하고, 사용자가 구성한 규칙에 따라 또는 사용자가 만든 사용자 지정 해결 프로그램을 사용하여 충돌을 조정합니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "36183439"
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 업로드를 제한 하려면 사용 하 여는 `@subscriber_upload_options` 의 `sp_addmergearticle` 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 업로드를 제한 하려면 사용 합니다 `@subscriber_upload_options` 의 `sp_addmergearticle` 대신 합니다.  
   
  동기화를 수행할 때의 데이터 교환 유형을 지정하며 값은 다음 중 하나일 수 있습니다.  
   

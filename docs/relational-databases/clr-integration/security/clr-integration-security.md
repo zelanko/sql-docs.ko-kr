@@ -1,12 +1,11 @@
 ---
-title: CLR 통합 보안 | Microsoft Docs
+title: CLR Integration Security | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -18,12 +17,12 @@ caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73a8fbad7022a68f74d2c25c21bc9867c9953083
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8cef01a53327a0487119dd8c450da26f9fd0111c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700034"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352125"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodts.connectionproperties.f1
 - sql12.ssiseditserverregistration.connectionproperties.f1
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ebd26cf1f71b31aaf38f494cda5b64a1c5cf131
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0161171ff488627c5cc70dd81fac9a991f52aebe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297083"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>서버에 연결(연결 속성 페이지) Integration Services
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결하거나 [!INCLUDE[ssIS](../includes/ssis-md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssIS](../includes/ssis-md.md)]등록 시에만 이 대화 상자에 나타납니다.  

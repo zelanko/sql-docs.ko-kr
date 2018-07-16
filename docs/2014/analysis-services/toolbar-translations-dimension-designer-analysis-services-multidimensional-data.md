@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0f8a60c636afb90dd68878b1e989454fb8d327b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d74778a66b1b5b286c26f7366184a2b62da57292
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328553"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(번역 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   도구 모음 단추를 사용하여 **차원 디자이너** 의 **번역**뷰에서 일반적인 작업을 수행할 수 있습니다.  

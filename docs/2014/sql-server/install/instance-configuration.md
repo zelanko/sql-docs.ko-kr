@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274329"
 ---
 # <a name="instance-configuration"></a>인스턴스 구성
   **설치 마법사의** 인스턴스 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 만들지 또는 명명된 인스턴스를 만들지 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 아직 설치되지 않은 경우 명명된 인스턴스를 지정하지 않으면 기본 인스턴스가 만들어집니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "36182494"
   
 -   공백이나 다른 특수 문자는 인스턴스 이름에 사용할 수 없습니다. 백슬래시(\\), 쉼표(,), 콜론(:), 세미콜론(;), 작은따옴표('), 앰퍼샌드(&), 하이픈(-) 및 @ 기호도 사용할 수 없습니다.  
   
--   **현재 Windows 코드 페이지에서 사용할 수 있는 유일한 문자에 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름입니다. 지원 되지 않는 유니코드 문자를 사용할 경우 설치 오류가 발생 합니다.**  
+-   **사용할 수는 현재 Windows 코드 페이지에서 유효한 문자만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름입니다. 지원 되지 않는 유니코드 문자를 사용 하는 경우 설치 오류가 발생 합니다.**  
   
  **감지된 인스턴스 및 기능**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 실행 중인 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 구성 요소 목록을 확인합니다.  

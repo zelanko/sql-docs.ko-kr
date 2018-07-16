@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10170"
 - sql12.rtp.rptdesigner.datasetproperties.filters.f1
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5dcb40980612d0198c6407e19bcc0986c06609
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e6bff1d3c5d9a687fd01ccd179c86dddde9a8e1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280239"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>데이터 집합 속성 대화 상자, 필터
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  

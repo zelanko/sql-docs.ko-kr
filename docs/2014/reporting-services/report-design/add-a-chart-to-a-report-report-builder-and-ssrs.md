@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2a663799a6f4559d3720638b1383b648562cdec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: db831f0a92962eaa12d220d31d762d2c591e0d45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309383"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>보고서에 차트 추가(보고서 작성기 및 SSRS)
   시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 선택한 차트 종류에 따라 데이터를 차트 형태로 만들었을 때 해당 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "36183747"
   
 ### <a name="to-add-a-chart-to-a-report"></a>보고서에 차트를 추가하려면  
   
-1.  보고서를 만들고 데이터 집합을 정의합니다. 자세한 내용은 참조 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
+1.  보고서를 만들고 데이터 집합을 정의합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
   
 2.  **삽입** 탭에서 **차트**를 클릭한 다음 **차트 삽입**을 클릭합니다.  
   

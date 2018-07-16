@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3237d8a39b1d53b60fca2fcd65da0619d74a6300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d917af219e045e4beda25452407e6c265a142b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300562"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>1단계: 새 Integration Services 프로젝트 만들기
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만드는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만드는 것입니다. 이 프로젝트는 데이터 변환 솔루션에서 사용하는 데이터 원본, 데이터 원본 뷰, 패키지 등의 개체에 대한 템플릿을 포함합니다.  

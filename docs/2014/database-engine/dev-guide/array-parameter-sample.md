@@ -1,5 +1,5 @@
 ---
-title: 매개 변수 예제 배열 | Microsoft Docs
+title: 배열 매개 변수 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f550af33b55d7b54a5bc88b69ecf419e07a3116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328193"
 ---
 # <a name="array-parameter-sample"></a>배열 매개 변수 예제
   데이터베이스에서 행 집합을 생성, 업데이트 또는 삭제해야 하는 경우가 있습니다. 이러한 작업을 수행하는 방법은 여러 가지가 있습니다. 그 중 한 가지는 CLR(공용 언어 런타임) 통합 사용자 정의 데이터 형식을 사용하여 클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하는 것입니다. 서버에 제공되는 데이터의 크기는 이러한 사용자 정의 데이터 형식의 특성으로 인해 8000바이트로 제한됩니다. 따라서 이 방법은 크거나 복잡한 데이터의 경우에는 적합하지 않습니다. 조작 중인 데이터가 작고 단순한 경우에는 각 행에 대해 저장 프로시저를 호출하는 것보다 이 방법이 훨씬 더 효율적일 수 있습니다. 배열을 전달함으로써 순서가 중요한 응용 프로그램에 대해 데이터의 순서가 유지됩니다. 이 예제에는 다음이 포함되어 있습니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "36093580"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36093580"
   
 5.  c:\MySample에서 `Program.vb`(Visual Basic 예제용) 또는 `Program.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
-6.  (줄 24 근처) 프로그램 파일에 적절 한 줄 찾기 및 바꾸기 `XXX` 인스턴스의의 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  적합 한 줄 (줄 24 근처) Program 파일에서 찾기 및 바꾸기 `XXX` 인스턴스의 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

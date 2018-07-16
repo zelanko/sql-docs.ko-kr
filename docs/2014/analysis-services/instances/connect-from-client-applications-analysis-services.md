@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314913"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
   Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36093419"
   
 -   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [개체 및 작업에 대 한 액세스 권한을 부여 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [개체 및 작업에 대 한 액세스 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio를 사용하여 연결(SSMS)  
  SSMS에서 Analysis Services에 연결하여 서버 인스턴스와 데이터베이스를 대화형으로 관리할 수 있습니다. 또한 XMLA 또는 MDX 쿼리를 실행하여 관리 작업을 수행하거나 데이터를 검색할 수도 있습니다. 쿼리가 전송될 때 데이터베이스만 로드하는 다른 도구 및 응용 프로그램과 달리 SSMS는 데이터베이스를 볼 수 있는 권한이 있다는 가정하에 서버에 연결할 때 모든 데이터베이스를 로드합니다. 즉, 서버에 수많은 테이블 형식 데이터베이스가 있는 경우 SSMS를 사용하여 연결할 때 모든 테이블 형식 데이터베이스가 시스템 메모리에 로드됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "36093419"
   
 3.  인증은 항상 Windows 인증이며, 사용자 ID는 항상 Management Studio를 통해 연결하는 Windows 사용자입니다.  
   
-     연결에 성공하려면 서버 또는 서버의 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. Management Studio에서 수행하려는 대부분의 작업에는 관리 권한이 필요합니다. 연결하는 데 사용하는 계정이 서버 관리자 역할의 멤버인지 확인해야 합니다. 자세한 내용은 참조 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
+     연결에 성공하려면 서버 또는 서버의 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. Management Studio에서 수행하려는 대부분의 작업에는 관리 권한이 필요합니다. 연결하는 데 사용하는 계정이 서버 관리자 역할의 멤버인지 확인해야 합니다. 자세한 내용은 [서버 관리자 권한 부여 &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)합니다.  
   
 4.  **연결 속성** 을 클릭하여 특정 데이터베이스를 지정하고 제한 시간 값 또는 암호화 옵션을 설정합니다. 선택적 연결 정보에는 현재 연결에만 사용되는 연결 속성이 포함됩니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36093419"
   
 1.  Analysis Services 인스턴스에서 **SQL Server Profiler** 를 시작한 다음 새 추적을 시작합니다.  
   
-2.  이벤트 선택에서 있는지 `Audit Login` 및 `Audit Logout` 보안 감사 섹션에서 선택 합니다.  
+2.  이벤트 선택 되어 있는지 확인 `Audit Login` 고 `Audit Logout` 보안 감사 섹션에서 확인 됩니다.  
   
 3.  원격 클라이언트 컴퓨터에서 응용 프로그램 서비스(예: SharePoint 또는 Reporting Services)를 통해 Analysis Services에 연결합니다. Audit Login 이벤트는 Analysis Services에 연결하는 사용자의 ID를 보여 줍니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36093419"
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에 연결](connect-to-analysis-services.md)   
  [Analysis Services에서 지 원하는 인증 방법](authentication-methodologies-supported-by-analysis-services.md)   
- [가장 &#40;SSAS 테이블 형식&#41;](../tabular-models/impersonation-ssas-tabular.md)   
+ [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [데이터 원본 만들기 &#40;SSAS 다차원&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

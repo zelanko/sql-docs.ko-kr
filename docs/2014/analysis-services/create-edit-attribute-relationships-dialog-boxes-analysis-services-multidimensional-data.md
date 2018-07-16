@@ -1,5 +1,5 @@
 ---
-title: 특성 관계 만들기 및 특성 관계 편집 대화 상자 (특성 관계 디자이너 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 특성 관계 만들기 및 편집 특성 관계 대화 상자 (특성 관계 디자이너 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 460c38c498d4827973c6ba8cc08aaab17541eff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3215615dd979714d0ec6c133818eb689d085324b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315023"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계 만들기 및 특성 관계 편집 대화 상자(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **특성 관계 만들기** 대화 상자를 사용하여 새 특성 관계를 정의하고, **특성 관계 편집** 대화 상자를 사용하여 특성 관계를 변경할 수 있습니다. 자세한 내용은 [특성 관계 정의](multidimensional-models/attribute-relationships-define.md)를 참조하세요.  

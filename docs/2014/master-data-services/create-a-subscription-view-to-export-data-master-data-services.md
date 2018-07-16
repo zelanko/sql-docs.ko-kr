@@ -1,5 +1,5 @@
 ---
-title: 구독 보기 (Master Data Services) 만들기 | Microsoft Docs
+title: 구독 뷰 (Master Data Services)를 만들어 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252285"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>구독 뷰 만들기(Master Data Services)
-  데이터에 대 한 뷰를 만들 때 구독 뷰 만들기는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 구독 시스템에서 사용 하기 위해 데이터베이스.  
+  구독 뷰를 만들면 데이터의 뷰를 만들려는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 구독 시스템에서 사용 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -40,18 +40,18 @@ ms.locfileid: "36182835"
   
 2.  메뉴 모음에서 **뷰 만들기**를 클릭합니다.  
   
-3.  에 **구독 뷰** 페이지 **구독 뷰 추가**합니다.  
+3.  에 **구독 뷰** 페이지에서 클릭 **구독 뷰 추가**합니다.  
   
-4.  에 **구독 뷰 만들기** 창에는 **구독 뷰 이름** 상자에 뷰의 이름을 입력 합니다.  
+4.  에 **구독 뷰 만들기** 창에서를 **구독 뷰 이름이** 상자에 뷰의 이름을 입력 합니다.  
   
 5.  **모델** 목록에서 모델을 선택합니다.  
   
-6.  선택 된 **버전** 또는 **버전 플래그** 옵션을 선택한 다음 해당 하는 목록에서 선택 합니다.  
+6.  중 하나를 선택 합니다 **버전** 하거나 **버전 플래그** 옵션을 선택한 다음 해당 목록에서 선택 합니다.  
   
     > [!TIP]  
     >  버전 플래그를 기반으로 구독 뷰를 만듭니다. 버전을 잠그는 경우에는 구독 뷰를 업데이트하지 않고 플래그를 열린 버전에 다시 할당할 수 있습니다.  
   
-7.  선택 된 **엔터티** 또는 **파생 계층** 옵션을 선택한 다음 해당 하는 목록에서 선택 합니다.  
+7.  중 하나를 선택 합니다 **엔터티** 하거나 **파생 계층** 옵션을 선택한 다음 해당 목록에서 선택 합니다.  
   
 8.  **형식** 목록에서 구독 뷰 형식을 선택합니다.  
   

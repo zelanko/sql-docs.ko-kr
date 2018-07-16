@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311253"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
@@ -42,16 +42,16 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`)을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 계산 되는 식을 여기서 *source_expression* = *destination_expression*, 검색할 값을 지정 합니다. `=Fields!PhoneNumber.Value`).  
+ (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!PhoneNumber.Value`).  
   
  *데이터 집합(dataset)*  
  보고서의 데이터 집합 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  
   
 ## <a name="return"></a>반환 값  
- 반환 된 `VariantArray`, 또는 `Nothing` 일치 하는 경우.  
+ 반환 된 `VariantArray`, 또는 `Nothing` 일치 항목이 없는 경우.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여 `LookupSet` 이름/값 쌍에 대 한 지정된 된 데이터 집합에서 값의 집합을 검색 하는 1 대 다 관계입니다. 예를 들어 테이블에 있는 고객 식별자를 사용할 수 있습니다 `LookupSet` 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당 고객에 대 한 모든 연결 된 전화 번호를 검색할 수 있습니다.  
+ 사용 하 여 `LookupSet` 이름/값 쌍에 대해 지정된 된 데이터 집합에서 값의 집합을 검색 하는 1 대 다 관계가 있는 합니다. 예를 들어 테이블의 고객 식별자를 사용할 수 있습니다 `LookupSet` 를 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당 고객에 대 한 모든 연결 된 전화 번호를 검색 합니다.  
   
  `LookupSet` 다음을 수행합니다.  
   
@@ -63,7 +63,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   결과 식 값의 집합을 반환합니다.  
   
- 일 대 일 관계의 이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookup-function.md)를 사용합니다. 호출할 `Lookup` 값 집합을 사용 하 여 [Multilookup 함수 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-multilookup-function.md)합니다.  
+ 일 대 일 관계의 이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookup-function.md)를 사용합니다. 호출할 `Lookup` 값의 집합을 사용 하 여 [Multilookup 함수 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-multilookup-function.md)합니다.  
   
  다음과 같은 제한 사항이 있습니다.  
   
@@ -101,11 +101,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>예제  
- 때문에 `LookupSet` 컬렉션을 반환 개체의 텍스트 상자에 직접 결과 식을 표시할 수 없습니다. 컬렉션에 있는 각 개체의 값을 문자열로 연결할 수 있습니다.  
+ 때문에 `LookupSet` 컬렉션을 반환 개체의 텍스트 상자에 직접 결과 식에서 표시할 수 없습니다. 컬렉션에 있는 각 개체의 값을 문자열로 연결할 수 있습니다.  
   
- 사용 하 여는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 `Join` 개체 집합에서 구분 기호로 분리 된 문자열을 만듭니다. 개체를 한 줄로 결합하려면 쉼표를 구분 기호로 사용합니다. 일부 렌더러에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 줄 바꿈(`vbCrLF`)을 구분 기호로 사용하여 각 값을 새 줄에 나열할 수 있습니다.  
+ 사용 된 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 `Join` 개체 집합에서 구분 기호로 분리 된 문자열을 만듭니다. 개체를 한 줄로 결합하려면 쉼표를 구분 기호로 사용합니다. 일부 렌더러에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 줄 바꿈(`vbCrLF`)을 구분 기호로 사용하여 각 값을 새 줄에 나열할 수 있습니다.  
   
- 텍스트 상자에 대 한 속성 값으로 사용 되는 경우 다음 식을 사용 하 여 `Join` 목록을 만듭니다.  
+ 텍스트 상자에 대 한 Value 속성으로 사용할 경우 다음 식을 사용 하 여 `Join` 목록을 만듭니다.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -151,7 +151,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [식은 보고서에서 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

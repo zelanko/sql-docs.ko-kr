@@ -1,5 +1,5 @@
 ---
-title: 기본 모드 보고서 서버 확장 배포 (SSRS 구성 관리자) 구성 | Microsoft Docs
+title: 기본 모드 보고서 서버 스케일 아웃 배포 (SSRS 구성 관리자) 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36090825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296073"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>기본 모드 보고서 서버 확장 배포 구성(SSRS 구성 관리자)
   Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "36090825"
  
             **스케일 아웃 배포를 계획, 설치 및 구성하려면 다음 단계를 수행합니다.**  
   
--   검토 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스를 설치 하는 방법에 대 한 지침은 온라인 설명서.  
+-   검토 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스를 설치 하는 방법에 대 한 지침은 온라인 설명서.  
   
 -   NLB(네트워크 로드 균형 조정) 클러스터에 스케일 아웃 배포를 호스트하려는 경우 스케일 아웃 배포를 구성하기 전에 MLB 클러스터를 구성해야 합니다. 자세한 내용은 [네트워크 부하 분산 클러스터에서 보고서 서버 구성](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36090825"
   
      ![확장 배포 페이지의 부분 스크린 샷](../../../2014/sql-server/install/media/scaloutscreen.gif "확장 배포 페이지의 부분 스크린 샷")  
   
-3.  확장 배포 페이지에서 배포에 조인 하 고 클릭 하 여 대기 중인 보고서 서버 인스턴스를 선택 **서버 추가**합니다.  
+3.  스케일 아웃 배포 페이지에서 클릭 하 고 배포에 조인 되기를 기다리고 있는 보고서 서버 인스턴스를 선택 **서버 추가**합니다.  
   
     > [!NOTE]  
     >  

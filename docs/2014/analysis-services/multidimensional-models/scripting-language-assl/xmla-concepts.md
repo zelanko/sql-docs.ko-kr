@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0669a5ae645d015c0d79e802cc138af368ec472d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e381b0c3880dfd07ff10740ec1fffeeb295629a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293513"
 ---
 # <a name="xmla-concepts"></a>XMLA 개념
   XMLA(XML for Analysis) 개방형 표준에서는 World Wide Web에 있는 데이터 원본에 대한 데이터 액세스를 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 1.1 사양에 따라 XMLA를 구현합니다.  
   
- XMLA(XML for Analysis)는 웹에 있는 표준 다차원 데이터 원본에 대한 범용 데이터 액세스를 위해 특별히 설계된 SOAP(Simple Object Access Protocol) 기반 XML 프로토콜입니다. XMLA도 구성 요소 개체 모델 (COM)를 노출 하는 클라이언트 구성 요소를 배포 하지 않아도 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 인터페이스입니다. XMLA는 서버와의 왕복에 시간과 리소스가 많이 소모되며 데이터 원본에 대한 상태 저장 연결에 따라 서버의 사용자 연결이 제한되는 인터넷 환경에서 최적화됩니다.  
+ XMLA(XML for Analysis)는 웹에 있는 표준 다차원 데이터 원본에 대한 범용 데이터 액세스를 위해 특별히 설계된 SOAP(Simple Object Access Protocol) 기반 XML 프로토콜입니다. XMLA도 하지 않아도 구성 요소 개체 모델 (COM)를 노출 하는 클라이언트 구성 요소를 배포 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 인터페이스입니다. XMLA는 서버와의 왕복에 시간과 리소스가 많이 소모되며 데이터 원본에 대한 상태 저장 연결에 따라 서버의 사용자 연결이 제한되는 인터넷 환경에서 최적화됩니다.  
   
- XMLA는 용 네이티브 프로토콜로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]클라이언트 응용 프로그램의 인스턴스 간의 모든 상호 작용에 사용 되는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 XML for Analysis 1.1을 완벽하게 지원하고 메타데이터 관리, 세션 관리 및 잠금 기능을 지원하는 확장을 제공합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 인스턴스와 통신할 때 AMO(Analysis Management Objects)와 ADOMD.NET 모두 XMLA 프로토콜을 사용합니다.  
+ XMLA는 용 네이티브 프로토콜로 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 인스턴스와 클라이언트 응용 프로그램 간의 모든 상호 작용에 사용 되는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 XML for Analysis 1.1을 완벽하게 지원하고 메타데이터 관리, 세션 관리 및 잠금 기능을 지원하는 확장을 제공합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 인스턴스와 통신할 때 AMO(Analysis Management Objects)와 ADOMD.NET 모두 XMLA 프로토콜을 사용합니다.  
   
 ## <a name="handling-xmla-communications"></a>XMLA 통신 처리  
  XMLA 개방형 표준에서는 일반적으로 액세스 가능한 두 가지 메서드인 `Discover` 및 `Execute`를 설명합니다. 이러한 메서드는 XML에서 지원되는 느슨하게 연결된 클라이언트 및 서버 아키텍처를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 인스턴스에서 들어오고 나가는 정보를 처리합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "36172766"
   
  응용 프로그램에서 `Execute` 메서드를 사용하여 XMLA 데이터 원본에 대한 공급자 관련 명령을 실행할 수 있습니다.  
   
- XMLA 프로토콜은 웹 응용 프로그램에 최적화되어 있지만 LAN 지향 응용 프로그램에도 사용할 수 있습니다. 다음 응용 프로그램에서이 XML 기반 API에서 활용할 수 있습니다.  
+ XMLA 프로토콜은 웹 응용 프로그램에 최적화되어 있지만 LAN 지향 응용 프로그램에도 사용할 수 있습니다. 다음 응용 프로그램은이 XML 기반 API에서 활용할 수 있습니다.  
   
 -   클라이언트와 서버 간 유연한 기술이 필요한 클라이언트/서버 응용 프로그램  
   

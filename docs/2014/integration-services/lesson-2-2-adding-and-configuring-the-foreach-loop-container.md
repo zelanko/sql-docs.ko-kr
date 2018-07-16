@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f0691fea33b8e69fcea5f58eba6f60318dfadbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312003"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>2단계: Foreach 루프 컨테이너 추가 및 구성
   이 태스크에서는 플랫 파일 폴더를 통해 루핑하고 1단원에서 사용한 것과 같은 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "36185219"
   
 -   **Foreach 루프 컨테이너:** 컨테이너의 열거된 값을 사용자 정의 패키지 변수에 매핑합니다. 그러면 컨테이너가 이 사용자 정의 변수를 사용하여 플랫 파일 연결 관리자의 `ConnectionString` 속성을 수정하고 폴더의 각 플랫 파일에 반복하여 연결합니다.  
   
--   **플랫 파일 연결 관리자:** 연결 관리자를 채울 사용자 정의 변수를 사용 하 여 1 단원에서에서 만든 연결 관리자를 수정 합니다 `ConnectionString` 속성입니다.  
+-   **플랫 파일 연결 관리자:** 채울 연결 관리자의 사용자 정의 변수를 사용 하 여 1 단원에서에서 만든 연결 관리자 수정 `ConnectionString` 속성입니다.  
   
  이 태스크의 절차에서는 Foreach 루프 컨테이너를 만들고 수정하여 사용자 정의 패키지 변수를 사용하고 루프에 데이터 흐름 작업을 추가하는 방법과 플랫 파일 연결 관리자를 수정하여 다음 태스크에서 사용자 정의 변수를 사용하는 방법에 대해 설명합니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "36185219"
   
 3.  새로 추가한 **Foreach 루프 컨테이너** 를 마우스 오른쪽 단추로 클릭하고 **편집**을 선택합니다.  
   
-4.  에 **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에 대 한 **이름**, 입력 `Foreach File in Folder`합니다. **확인**을 클릭합니다.  
+4.  에 **Foreach 루프 편집기** 대화 상자의 합니다 **일반** 페이지에 대 한 **이름**, 입력 `Foreach File in Folder`합니다. **확인**을 클릭합니다.  
   
-5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭 하 여, **속성**, 속성 창에서 있는지를 확인 하 고는 `LocaleID` 속성이로 설정 되어 **영어 (미국)** 합니다.  
+5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭, 클릭 **속성**, 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)**.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Foreach 루프 컨테이너의 열거자를 구성하려면  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36185219"
   
      이 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.   [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   
-    3.  하이퍼링크를 클릭 "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012 합니다. Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일입니다.  
+    3.  하이퍼링크를 클릭 합니다. "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012 합니다. Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일입니다.  
   
 6.  **파일** 상자에 **Currency_\*.txt**를 입력합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36185219"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>루프에 데이터 흐름 태스크를 추가하려면  
   
--   끌어서는 **Extract Sample Currency Data** 데이터 흐름 태스크로 이름이 바뀐 Foreach 루프 컨테이너를 `Foreach File in Folder`합니다.  
+-   끌기 합니다 **Extract Sample Currency Data** 바뀐 Foreach 루프 컨테이너에 데이터 흐름 태스크 `Foreach File in Folder`합니다.  
   
 ## <a name="next-lesson-task"></a>다음 단원 태스크  
  [3단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  

@@ -1,5 +1,5 @@
 ---
-title: 행에서 지원 되지 않습니다는 호환성 모드 90 이상에서는 CREATE STATISTICS 문에 | Microsoft Docs
+title: 행은 지원 되지 않습니다 호환성 모드 90 이상에서는 CREATE STATISTICS 문에 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH ROWS in CREATE STATISTICS statement
 ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d509352d99cab9359e7ea222f5fb2d5d7e28075
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 98aec243141e642cd0ef77719795490a1333f473
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294093"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>호환성 모드 90 이상에서는 CREATE STATISTICS 문에 WITH ROWS를 사용할 수 없습니다.
   호환성 모드가 90 이상으로 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행할 때 CREATE STATISTICS 문에 WITH ROWS를 지정할 수 없습니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "36172082"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

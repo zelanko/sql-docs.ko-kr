@@ -1,5 +1,5 @@
 ---
-title: 네임 스페이스와 XPath 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
+title: 네임 스페이스를 사용 하 여 XPath 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - namespaces [SQLXML], XPath queries
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67857d58d05f11f2b93465aec6cf3e0d7b2b2017
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c6be18c85f7c7baf1f38c492699bf9cb42209b0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284689"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>네임스페이스가 포함된 XPath 쿼리 실행(SQLXML 관리되는 클래스)
   XPath 쿼리에는 네임스페이스가 포함될 수 있습니다. 스키마 요소가 네임스페이스로 한정된 경우 즉, 스키마 요소에서 대상 네임스페이스를 사용하는 경우 스키마에 대한 XPath 쿼리에서 해당 네임스페이스를 지정해야 합니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 접두사를 해결 하려면 네임 스페이스 바인딩을 지정 하려면 네임 스페이스 속성을 사용 합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 접두사를 확인 하려면 네임 스페이스 바인딩을 지정 하는 네임 스페이스 속성을 사용 합니다.  
   
- 다음 예제에서는 XPath 쿼리에 와일드 카드 문자를 사용 하 여 네임 스페이스를 지정 (\*) local-name () 및 namespace-uri () XPath 함수입니다. 이 XPath 쿼리는 로컬 이름이 `Employee`이고 네임스페이스 URI가 `urn:myschema:Contacts`인 모든 요소를 반환합니다.  
+ 다음 예의 XPath 쿼리 와일드 카드 문자를 사용 하 여 네임 스페이스를 지정 (\*) local-name () 및 namespace-uri () XPath 함수입니다. 이 XPath 쿼리는 로컬 이름이 `Employee`이고 네임스페이스 URI가 `urn:myschema:Contacts`인 모든 요소를 반환합니다.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

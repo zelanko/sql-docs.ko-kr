@@ -3,7 +3,6 @@ title: 어셈블리에 대 한 정보 가져오기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -19,26 +18,26 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7cbf238a71c25d8cc24b106007db6acba73698b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b01592ad65a6db4acc8dee1c7f417096c6a6265
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697464"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352625"
 ---
 # <a name="assemblies---getting-information"></a>어셈블리-정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   다음 카탈로그 뷰와 함수에서 어셈블리에 대한 메타데이터를 쿼리할 수 있습니다.  
   
- **개별 어셈블리에 대 한 정보를 가져오려면**  
+ **개별 어셈블리에 대 한 정보**  
   
--   [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
+-   [ASSEMBLYPROPERTY &#40;TRANSACT-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
- **데이터베이스에 모든 어셈블리에 대 한 정보를 얻으려면**  
+ **데이터베이스의 모든 어셈블리에 대 한 정보를 가져오려면**  
   
--   [sys.assemblies &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
+-   [sys.assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
- **어셈블리 이진 파일을 포함 하 여 어셈블리 파일에 대 한 정보를 가져오려면 원본 파일 및 파일을 디버그**  
+ **어셈블리 이진 파일을 포함 하 여 어셈블리 파일에 대 한 정보를 가져올 원본 파일 및 파일 디버그**  
   
 -   [sys.assembly_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
@@ -46,13 +45,13 @@ ms.locfileid: "35697464"
   
 -   [sys.assembly_references &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
- **사용자 정의 형식에 대 한 어셈블리 정보를 가져오려면**  
+ **사용자 정의 형식에 대 한 어셈블리 정보**  
   
 -   [sys.assembly_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
 -   [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
- **어셈블리에 대 한 정보가 공용 언어 런타임 (CLR) 저장 프로시저, 트리거 및 함수**  
+ **일반적인 언어에 대 한 어셈블리 정보를 가져오려면 런타임 (CLR) 저장 프로시저, 트리거 및 함수**  
   
 -   [sys.assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   

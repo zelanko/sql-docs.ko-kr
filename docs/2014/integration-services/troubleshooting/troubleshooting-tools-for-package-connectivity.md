@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -20,13 +20,13 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6c949af42aa90b00d38ff0c5f254a2eb51ba0c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a15f2e78fd2a3cbc88f1d3668fde27c5cdb88924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178080"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>패키지 연결 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지와 패키지가 데이터를 추출 및 로드하는 데이터 원본 간 연결 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "36185008"
     ```  
   
 ## <a name="see-also"></a>관련 항목  
- [패키지 배포 문제 해결 도구](troubleshooting-tools-for-package-development.md)   
+ [패키지 개발용 문제 해결 도구](troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](troubleshooting-tools-for-package-execution.md)  
   
   

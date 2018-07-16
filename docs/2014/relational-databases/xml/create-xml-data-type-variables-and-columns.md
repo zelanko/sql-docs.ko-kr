@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309393"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
-  `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 다른 기본 제공 형식과 함께 사용할 수 있는 `xml` 변수 형식으로 매개 변수 유형, 함수 반환 유형 또는 테이블을 만들 때 데이터 형식을 열 유형으로 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)합니다.  
+  `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 사용할 수 있는 다른 기본 제공 형식과 합니다 `xml` 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 테이블을 만들 때 데이터 형식을 열 유형으로 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)합니다.  
   
 ## <a name="creating-columns-and-variables"></a>열 및 변수 만들기  
  다음 예에서와 같이 테이블의 일부분으로 `xml` 유형 열을 만들려면 `CREATE TABLE` 문을 사용합니다.  
@@ -57,7 +57,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>기본값 할당  
  테이블에서 `xml` 유형의 열에 기본 XML 인스턴스를 할당할 수 있습니다. 기본 XML을 제공할 수 있는 방법으로는 XML 상수를 사용하거나 `xml` 유형으로 명시적 캐스트를 사용하는 두 가지 방법 중 하나가 있습니다.  
   
- XML 상수로 기본 XML을 제공하려면 다음 예에서와 같이 구문을 사용합니다. 문자열을 암시적으로 캐스팅 됩니다는 `xml` 유형입니다.  
+ XML 상수로 기본 XML을 제공하려면 다음 예에서와 같이 구문을 사용합니다. 문자열을 암시적으로 캐스팅 되는 참고 `xml` 형식입니다.  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 제약 조건을 사용 하는 대신을 래핑할 래퍼를 사용자 정의 함수를 만드는 것은 `xml` 데이터 형식 메서드를 다음 예제에 표시 된 대로 check 제약 조건에 사용자 정의 함수를 지정 합니다.  
+ 제약 조건을 사용 하는 대신 래핑할 래퍼를 사용자 정의 함수를 만드는 것은 `xml` 데이터 형식 메서드를 다음 예제에 표시 된 대로 check 제약 조건을에서 사용자 정의 함수를 지정 합니다.  
   
  다음 예에서 `Col2` 의 제약 조건은 이 열에 저장된 각 XML 인스턴스가 `<ProductDescription>` 특성을 포함하는 `ProductID` 요소를 갖도록 지정합니다. 이 제약 조건은 사용자 정의 함수에 의해 적용됩니다.  
   
@@ -131,17 +131,17 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>같은 테이블 또는 다른 테이블  
- `xml` 주 테이블에는 외래 키 관계에 있는 별도 테이블 또는 다른 관계형 열이 포함 된 테이블의 데이터 형식 열을 만들 수 있습니다.  
+ `xml` 기본 테이블에 외래 키 관계에 있는 별도 테이블 또는 다른 관계형 열이 포함 된 테이블의 데이터 형식 열을 만들 수 있습니다.  
   
- 만들기는 `xml` 다음 조건 중 하나에 동일한 테이블의 데이터 형식 열:  
+ 만들기는 `xml` 다음 조건 중 하나가 true 인 경우 같은 테이블의 데이터 형식 열:  
   
 -   응용 프로그램이 XML 열에서 데이터 검색을 수행하고 XML 열에 XML 인덱스가 필요하지 않습니다.  
   
 -   `xml` 데이터 형식의 열에 XML 인덱스를 작성하려고 하며 기본 테이블의 기본 키는 해당 클러스터링 키와 같습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](xml-indexes-sql-server.md)를 참조하세요.  
   
- 만들기는 `xml` 다음 조건에 해당할 경우 별도 테이블에 데이터 형식 열:  
+ 만들기는 `xml` 다음 조건이 true 인 경우 별도 테이블에서 데이터 형식 열:  
   
--   에 XML 인덱스를 작성 하려고는 `xml` 주 테이블에는 기본 키가 없는 또는 기본 테이블이 힙 (비 클러스터링 키)는 하지만 기본 테이블의 기본 키 데이터 형식 열은 해당 클러스터링 키와에서 다릅니다. 기본 테이블이 이미 있는 경우에는 이 조건에 부합될 수 있습니다.  
+-   XML 인덱스를 작성 하려는 `xml` 하지만 기본 테이블의 기본 키 데이터 형식 열을 해당 클러스터링 키와에서 다릅니다. 또는 기본 테이블에 기본 키가 없는 기본 테이블이 힙 (비 클러스터링 키). 기본 테이블이 이미 있는 경우에는 이 조건에 부합될 수 있습니다.  
   
 -   테이블에 있는 XML 열로 인해 테이블 검색 속도가 느려지는 것을 원치 않습니다. XML 열은 행 안에 있든 행 밖에 있든 간에 공간을 사용합니다.  
   

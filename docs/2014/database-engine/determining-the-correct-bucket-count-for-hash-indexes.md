@@ -1,5 +1,5 @@
 ---
-title: 해시 인덱스에 대 한 올바른 버킷 수 결정 | Microsoft Docs
+title: 해시 인덱스에 대 한 올바른 버킷 수를 결정 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4fa6a93a3f66a3db6c2cc7f74b11fb66073a4013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306177"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
-  에 대 한 값을 지정 해야 합니다는 `BUCKET_COUNT` 메모리 액세스에 최적화 된 테이블을 만들 때 매개 변수입니다. 이 항목에서는 적절한 `BUCKET_COUNT` 매개 변수 값을 결정하기 위한 권장 사항을 안내합니다. 정확한 버킷 수를 확인할 수 없으면 대신 비클러스터형 인덱스를 사용합니다.  잘못된 `BUCKET_COUNT` 값, 특히 너무 낮은 값을 사용하면 데이터베이스 복구 시간과 작업 성능에 큰 영향을 줄 수 있습니다. 버킷 수를 더 많이 추정하는 것이 좋습니다.  
+  에 대 한 값을 지정 해야 합니다 `BUCKET_COUNT` 메모리 최적화 테이블을 만들 때 매개 변수입니다. 이 항목에서는 적절한 `BUCKET_COUNT` 매개 변수 값을 결정하기 위한 권장 사항을 안내합니다. 정확한 버킷 수를 확인할 수 없으면 대신 비클러스터형 인덱스를 사용합니다.  잘못된 `BUCKET_COUNT` 값, 특히 너무 낮은 값을 사용하면 데이터베이스 복구 시간과 작업 성능에 큰 영향을 줄 수 있습니다. 버킷 수를 더 많이 추정하는 것이 좋습니다.  
   
  중복 인덱스 키는 해시 인덱스를 사용하는 경우 동일한 버킷에 해시되어 해당 버킷의 체인이 증가하도록 하기 때문에 성능을 저하시킬 수 있습니다.  
   
- 비클러스터형 해시 인덱스에 대 한 자세한 내용은 참조 [해시 인덱스](hash-indexes.md) 및 [메모리 최적화 된 테이블에 사용 하 여 인덱스에 대 한 지침이](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 비클러스터형 해시 인덱스에 대 한 자세한 내용은 참조 하세요. [해시 인덱스](hash-indexes.md) 하 고 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
- 메모리 최적화 테이블에서 각 해시 인덱스에 대해 한 해시 테이블이 할당됩니다. 프로그램은 지정 된 인덱스에 대해 할당 된 해시 테이블의 크기는 `BUCKET_COUNT` 매개 변수에서 [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) 또는 [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). 버킷 수는 내부적으로 다음 2의 제곱 수로 반올림됩니다. 예를 들어, 버킷 수를 300,000개로 지정하면 실제 버킷 수가 524,288개가 됩니다.  
+ 메모리 최적화 테이블에서 각 해시 인덱스에 대해 한 해시 테이블이 할당됩니다. 인덱스 된에 할당 된 해시 테이블의 크기를 `BUCKET_COUNT` 의 매개 변수 [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) 또는 [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). 버킷 수는 내부적으로 다음 2의 제곱 수로 반올림됩니다. 예를 들어, 버킷 수를 300,000개로 지정하면 실제 버킷 수가 524,288개가 됩니다.  
   
  버킷 수와 관련한 문서 및 비디오에 대한 링크를 보려면 [해시 인덱스(메모리 내 OLTP)에 대한 올바른 버킷 수를 결정하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=525853)(영문)을 참조하세요.  
   
 ## <a name="recommendations"></a>권장 사항  
  대부분의 경우 버킷 수는 인덱스 키에 있는 고유한 값 수의 1~2배 사이여야 합니다. 인덱스 키에 중복 값이 많이 포함되어 있는 경우 평균적으로 각 인덱스 키 값에 대해 10개 이상의 행이 있으므로 대신 비클러스터형 인덱스를 사용하세요.  
   
- 특정 인덱스 키에 얼마나 많은 값이 지정될지 항상 예측할 수 있는 것은 아닙니다. 성능이 적절 해야 하는 경우는 `BUCKET_COUNT` 값이 내에 5 번의 키 값의 실제 수입니다.  
+ 특정 인덱스 키에 얼마나 많은 값이 지정될지 항상 예측할 수 있는 것은 아닙니다. 성능이 적절 해야 하는 경우는 `BUCKET_COUNT` 실제 키 값 수의 5 배 내에서 값입니다.  
   
  기존 데이터에 있는 고유한 인덱스 키 수를 확인하려면 다음 예제와 비슷한 쿼리를 사용하세요.  
   
@@ -67,7 +67,7 @@ FROM
  예를 들어, (SpecialOfferID, ProductID)의 경우 이 값은 121317/484 = 251개가 됩니다. 즉, 인덱스 키 값이 평균 251개가 되며 비클러스터형 인덱스여야 합니다.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>버킷 수 문제 해결  
- 메모리 액세스에 최적화 된 테이블의 버킷 수 문제를 해결 하기 위해 사용 하 여 [sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) 빈 버킷와 행 체인 길이 대 한 통계를 얻을 수 있습니다. 다음 쿼리는 현재 데이터베이스의 모든 해시 인덱스에 대한 통계를 가져오는 데 사용할 수 있습니다. 데이터베이스에 큰 테이블이 있는 경우 이 쿼리를 실행하는 데 몇 분 정도 걸릴 수 있습니다.  
+ 메모리 최적화 테이블의 버킷 수 문제를 해결 하려면 사용 하 여 [sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) 빈 버킷와 행 체인 길이 대 한 통계를 얻을 수 있습니다. 다음 쿼리는 현재 데이터베이스의 모든 해시 인덱스에 대한 통계를 가져오는 데 사용할 수 있습니다. 데이터베이스에 큰 테이블이 있는 경우 이 쿼리를 실행하는 데 몇 분 정도 걸릴 수 있습니다.  
   
 ```tsql  
 SELECT   
@@ -86,12 +86,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  해시 인덱스 상태의 두 가지 키 지표는 다음과 같습니다.  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* 해시 인덱스에 있는 빈 버킷 수를 나타냅니다.  
+ *empty_bucket_percent* 해시 인덱스의 빈 버킷 수를 나타냅니다.  
   
  *empty_bucket_percent* 가 10% 미만인 경우 버킷 수도 적을 가능성이 큽니다. *empty_bucket_percent* 가 33% 이상이 되는 것이 이상적입니다. 버킷 수가 인덱스 키 값 수와 일치하는 경우 해시 분포로 인해 버킷의 1/3이 비어 있습니다.  
   
  *avg_chain_length*  
- *avg_chain_length* 해시 버킷에 있는 행 체인의 평균 길이 나타냅니다.  
+ *avg_chain_length* 해시 버킷의 행 체인의 평균 길이 나타냅니다.  
   
  *avg_chain_length* 가 10보다 크고 *empty_bucket_percent* 가 10% 이상이면 중복 인덱스 키 값이 많을 수 있으므로 비클러스터형 인덱스가 더 적합합니다. 평균 체인 길이 1이 이상적입니다.  
   
@@ -147,7 +147,7 @@ GO
   
 -   기본 키 인덱스(PK__SalesOrder…): 버킷의 36%가 비어 있으며 좋습니다. 또한 평균 체인 길이가 1이면 좋습니다. 변경할 필요 없습니다.  
   
- 메모리 액세스에 최적화 된 해시 인덱스와 함께 문제 해결에 대 한 자세한 내용은 참조 하십시오. [최적화 된 해시 인덱스로 일반적인 성능 문제 해결](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)합니다.  
+ 메모리 최적화 해시 인덱스 문제 해결에 대 한 자세한 내용은 참조 하세요. [with Memory-Optimized Hash Indexes Troubleshooting Common Performance Problems](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)합니다.  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>추가 최적화에 대한 세부 고려 사항  
  이 섹션에서는 버킷 수를 최적화하기 위한 추가 고려 사항을 설명합니다.  
@@ -156,7 +156,7 @@ GO
   
 -   버킷 수 값이 높을수록 인덱스에 있을 빈 버킷 수가 더 많아집니다. 각 버킷은 테이블 검색의 일부로 검색되므로 이것은 메모리 사용(버킷당 8바이트)과 테이블 검색 성능에 영향을 미칩니다.  
   
--   버킷 수가 낮을 수록 단일 버킷에 더 많은 값이 할당됩니다. 있으므로 포인트 조회와 삽입 성능이 줄어듭니다이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 검색 조건자에 지정 된 값을 찾기 위해 단일 버킷에 여러 값을 순환 해야 할 수 있습니다.  
+-   버킷 수가 낮을 수록 단일 버킷에 더 많은 값이 할당됩니다. 있으므로 포인트 조회와 삽입 성능이 줄어듭니다이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 검색 조건자에 지정 된 값을 찾으려면 단일 버킷에 여러 값을 통과 해야 할 수 있습니다.  
   
  버킷 수가 고유한 인덱스 키 수에 비해 지나치게 적으면 각 버킷에 많은 값이 매핑됩니다. 이로 인해 특히 포인트 조회(개별 인덱스 키의 조회) 및 삽입과 같은 대부분의 DML 작업 성능이 저하됩니다. 예를 들어, WHERE 절에 인덱스 키 열과 일치하는 같음 조건자를 사용하면 UPDATE 및 DELETE 작업과 SELECT 쿼리의 성능이 저하될 수 있습니다. 데이터베이스 시작 시 인덱스가 재생성되므로 버킷 수가 적어도 데이터베이스의 복구 시간에 영향이 있습니다.  
   
@@ -181,7 +181,7 @@ GO
 -   성능이 중요한 작업이 전체 인덱스 검색인 경우 실제 인덱스 키 값 수에 가까운 버킷 수를 사용합니다.  
   
 ### <a name="big-tables"></a>큰 테이블  
- 큰 테이블의 경우 메모리 사용률이 관심사가 될 수 있습니다. 예를 들어 4 개의 해시 인덱스가 하나 십억의 버킷 수로 각각 250 백만 행 테이블과 해시 테이블에 대 한 오버 헤드는 4 개의 인덱스 * 1 십억 버킷 \* 8 바이트 = 32 기가바이트의 메모리 사용률이 됩니다. 각 인덱스에 대해 2억 5천만 개의 버킷 수를 선택할 때 해시 테이블의 총 오버헤드는 8기가바이트가 됩니다. 이 시간은 8 바이트 메모리 사용량의 외에도 각 인덱스는이 시나리오에서는 8 기가바이트가 됩니다 각 개별 행에 추가 (인덱스가 4 개 \* 8 바이트 \* 250 백만 행).  
+ 큰 테이블의 경우 메모리 사용률이 관심사가 될 수 있습니다. 예를 들어 각각 한 십억 개의 버킷 수를 4 개의 해시 인덱스가 있는 250 백만 행 테이블을 사용 하 여 해시 테이블에 대 한 오버 헤드는 4 개의 인덱스 * 1 십억 버킷 \* 8 바이트 = 32 기가바이트의 메모리 사용률이 됩니다. 각 인덱스에 대해 2억 5천만 개의 버킷 수를 선택할 때 해시 테이블의 총 오버헤드는 8기가바이트가 됩니다. 이 시나리오에서는 8 기가바이트가 됩니다 각 개별 행에이 값은 8 바이트의 메모리 사용량 외에 각 인덱스가 추가 (4 개의 인덱스가 \* 8 바이트 \* 250 백만 행).  
   
  일반적으로 전체 테이블 검색은 OLTP 작업에서 성능이 중요한 경로에 해당되지 않습니다. 따라서 포인트 조회 및 삽입 작업 성능과 메모리 사용률 간에 다음과 같이 선택합니다.  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332753"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 클라이언트 프로그래밍
-  ADOMD.NET 클라이언트 구성 요소는 `Microsoft.AnalysisServices.AdomdClient` 네임스페이스(microsoft.analysisservices.adomdclient.dll) 안에 있습니다. 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 중간 계층 응용 프로그램을 쉽게 쿼리 데이터와 메타 데이터는 분석 데이터 저장소에서 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
+  ADOMD.NET 클라이언트 구성 요소는 `Microsoft.AnalysisServices.AdomdClient` 네임스페이스(microsoft.analysisservices.adomdclient.dll) 안에 있습니다. 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 분석 데이터 저장소에서 데이터를 쉽게 쿼리 메타 데이터를 중간 계층 응용 프로그램 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="using-the-adomdnet-client-objects"></a>ADOMD.NET 클라이언트 개체 사용  
  분석 데이터 원본을 쿼리할 경우 일반적인 일련의 태스크를 수행해야 합니다. 다음 표에서는 쿼리 수행과 같이 ADOMD.NET 클라이언트 개체를 사용할 때 필요한 일반적인 태스크를 보여 줍니다.  
@@ -43,8 +43,8 @@ ms.locfileid: "36184592"
   
 |수행할 작업|사용 개체|  
 |--------|---------------------|  
-|분석 데이터 원본에 연결|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체는 데이터 원본 및 데이터 원본 메타데이터 모두에 대한 연결을 나타냅니다. 예를 들어에 연결할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.cub) 로컬 큐브 파일을 선택한 다음 검사는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> 분석 데이터 원본에 있는 큐브에 대 한 메타 데이터를 가져올 속성입니다. 또한 이 개체는 모든 .NET Framework 데이터 공급자에 필요한 인터페이스인 `IDbConnection` 인터페이스의 구현을 나타냅니다.|  
-|데이터 원본의 데이터 마이닝 기능 검색|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체는 여러 마이닝 컬렉션을 노출합니다.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> 데이터 원본의 모든 마이닝 모델의 목록을 포함 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> 사용 가능한 마이닝 알고리즘에 대 한 정보를 제공 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> 서버에서 마이닝 구조에 대 한 정보를 노출 합니다.|  
+|분석 데이터 원본에 연결|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체는 데이터 원본 및 데이터 원본 메타데이터 모두에 대한 연결을 나타냅니다. 예를 들어, 연결할 수 있습니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로컬 큐브 (.cub) 파일을 선택한 다음 확인을 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> 분석 데이터 원본에 있는 큐브에 대 한 메타 데이터를 가져올 속성입니다. 또한 이 개체는 모든 .NET Framework 데이터 공급자에 필요한 인터페이스인 `IDbConnection` 인터페이스의 구현을 나타냅니다.|  
+|데이터 원본의 데이터 마이닝 기능 검색|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체는 여러 마이닝 컬렉션을 노출합니다.<br /><br /> - <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> 데이터 원본의 모든 마이닝 모델의 목록을 포함 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> 사용 가능한 마이닝 알고리즘에 대 한 정보를 제공 합니다.<br />- <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> 서버의 마이닝 구조에 대 한 정보를 노출 합니다.|  
 |데이터 원본 쿼리|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체는 서버로 전송될 쿼리 또는 문을 나타냅니다. 데이터 원본에 연결된 후에는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체를 사용하여 MDX(Multidimensional Expressions) 또는 데이터 마이닝 DMX(Data Mining Extensions)와 같은 지원되는 언어로 문을 실행할 수 있습니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 개체를 사용하여 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 또는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체 형식으로 결과를 반환할 수도 있습니다.|  
 |빠르고 효율적인 방법으로 데이터 검색|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> 개체의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> 또는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 메서드를 호출하여 만들 수 있습니다. 이 개체는 .NET Framework 클래스 라이브러리의 `IDbDataReader` 네임스페이스에서 `System.Data` 인터페이스를 구현합니다.|  
 |많은 양의 메타데이터를 사용하여 분석 데이터 검색|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet><br /> <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A>의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteCellSet%2A> 또는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 메서드를 호출하여 만들 수 있습니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>에서 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>이 반환되면 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>에 들어 있는 분석 데이터를 검사할 수 있습니다.|  

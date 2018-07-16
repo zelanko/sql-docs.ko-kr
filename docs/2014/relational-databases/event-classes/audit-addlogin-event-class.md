@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 20e26f8dcd2a005de613bd4ebf447f0f7c4332f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d41dc017f9b412f944f218e55821f25b8b8c5889
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305663"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 이벤트 클래스
-  **Audit Addlogin** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거될 때 발생합니다.  
+   **Audit Addlogin** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 추가되거나 제거될 때 발생합니다.  
   
  로그인이 추가될 때 기본 데이터베이스 같은 추가 속성을 설정하면 이러한 속성에 대한 정보가 이 이벤트의 **TextData** 열에 나타나게 됩니다. 로그인을 추가하는 동안 이러한 속성을 설정하면 **Audit Login Change Property 이벤트** 가 발생합니다.  
   

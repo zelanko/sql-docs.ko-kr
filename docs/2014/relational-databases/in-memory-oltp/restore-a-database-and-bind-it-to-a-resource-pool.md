@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 caps.latest.revision: 13
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d2aea0f1006790a8fb86805a37ca39188cc6e14c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f34bd77c9c1cb9aee941219d289560c9411516ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325863"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>데이터베이스를 복원하여 리소스 풀에 바인딩
   메모리 최적화 테이블이 포함된 데이터베이스를 복원하기에 충분한 메모리가 있더라도 최선의 구현 방법에 따라 데이터베이스를 명명된 리소스 풀에 바인딩하려고 합니다. 데이터베이스가 있어야 풀에 바인딩할 수 있기 때문에 데이터베이스를 복원하려면 여러 단계를 수행해야 합니다. 이 항목에서는 각 단계를 안내합니다.  

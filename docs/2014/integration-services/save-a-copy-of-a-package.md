@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1a550e97bcb4cb14c56492edfa8cdd333599ecb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94439ee54ad468af77b89557fa63ad9c108d4f63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314163"
 ---
 # <a name="save-a-copy-of-a-package"></a>패키지의 복사본 저장
   이 절차에서는 파일 시스템, 패키지 저장소 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 패키지 복사본을 저장하는 방법을 설명합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
@@ -69,6 +69,6 @@ ms.locfileid: "36180844"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Integration Services 구성 서비스 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)  
+ [서비스 서비스를 통합 구성 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)  
   
   

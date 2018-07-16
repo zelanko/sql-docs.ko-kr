@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler로 교착 상태 분석 | Microsoft Docs
+title: SQL Server Profiler 사용 하 여 교착 상태 분석 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
 - Profiler [SQL Server Profiler], deadlocks
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30ac6e2bf9ecade850ef28169ce1e4c9ebdb8ce8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afc7eb593d226a71e761b1197fb1bab6eeb13517
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308903"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "36093660"
  데이터베이스 개체입니다. 예를 들어 테이블, 인덱스 또는 행입니다.  
   
  가장자리  
- 프로세스와 리소스 간의 관계입니다. A `request` 가장자리는 프로세스가 리소스를 대기할 때 발생 합니다. `owner` 가장자리는 리소스가 프로세스를 대기할 때 발생 합니다. 잠금 모드는 가장자리 설명에 포함되어 있습니다. 예를 들어 **Mode: X**입니다.  
+ 프로세스와 리소스 간의 관계입니다. `request` 가장자리는 프로세스가 리소스를 대기할 때 발생 합니다. `owner` 가장자리는 리소스가 프로세스를 대기할 때 발생 합니다. 잠금 모드는 가장자리 설명에 포함되어 있습니다. 예를 들어 **Mode: X**입니다.  
   
 ## <a name="deadlock-process-node"></a>교착 상태 프로세스 모드  
  WAITFOR 그래프에서 프로세스 노드는 프로세스에 대해 설명합니다. 다음 표에서는 프로세스의 구성 요소에 대해 설명합니다.  

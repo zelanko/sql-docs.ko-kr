@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.mapaccounttype.f1
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b55d270b9b7ae2a2094c24e0f71bdcd0f72a0ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 780f13e8ef18a4c17e3bec0322bd3c498efff4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319243"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>계정 인텔리전스 정의(비즈니스 인텔리전스 마법사)
-  **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 정의된 계정 유형을 계정 차원에 데이터를 제공하는 데이터 원본의 원본 테이블에서 정의한 계정 유형으로 매핑할 수 있습니다.  
+   **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 정의된 계정 유형을 계정 차원에 데이터를 제공하는 데이터 원본의 원본 테이블에서 정의한 계정 유형으로 매핑할 수 있습니다.  
   
 > [!NOTE]  
 >  이 페이지는 **차원 특성 구성** 페이지에서 **계정 유형** 특성 유형에 차원 특성을 매핑한 경우에 나타납니다.  

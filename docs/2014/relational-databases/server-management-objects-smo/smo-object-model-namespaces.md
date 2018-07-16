@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1009e5bd7f87c666b4ddf4f207d6e954b714429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 51702ccf74913990df5c258b2cee5ff548961d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327453"
 ---
 # <a name="smo-namespaces"></a>SMO 네임스페이스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects(SMO)에는 다양한 네임스페이스가 있습니다. 각 네임스페이스는 SMO의 서로 다른 기능 영역을 나타냅니다.  

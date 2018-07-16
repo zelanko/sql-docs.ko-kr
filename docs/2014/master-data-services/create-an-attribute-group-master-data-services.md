@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0a063af91090ff2e8d5eb1145bb5968573d04523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: bd50daa9250f46f17feecb7dfdd16e4998ea47d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290859"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>특성 그룹 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 **탐색기** 표의 개별 탭에 특성을 표시하려는 경우 특성 그룹을 만듭니다.  
   
 > [!NOTE]  
->  특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다. 그룹을 표시 하는 방법에 대 한 자세한 내용은 참조 [사용자에 게는 특성 그룹 표시 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)합니다.  
+>  특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다. 게 표시할지 그룹에 대 한 자세한 내용은 참조 하세요. [사용자에 게는 특성 그룹 표시 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -53,10 +53,10 @@ ms.locfileid: "36181161"
   
 6.  클릭 **특성 그룹 추가**합니다.  
   
-7.  에 **리프 그룹 이름** 상자는 그룹에 대 한 이름을 입력 합니다. 이 탭에 표시 되는 이름을 **탐색기**합니다.  
+7.  에 **리프 그룹 이름** 상자 그룹의 이름을 입력 합니다. 탭에 표시 되는 이름 이것이 **탐색기**합니다.  
   
     > [!NOTE]  
-    >  선택한 경우 **통합 그룹** 또는 **컬렉션 그룹** 5 단계에서이 상자는 **통합 그룹 이름** 또는 **컬렉션 그룹 이름**각각.  
+    >  선택한 경우 **통합 그룹** 하거나 **컬렉션 그룹** 5 단계에서이 부분은 **통합 그룹 이름** 또는 **컬렉션 그룹 이름**각각.  
   
 8.  **그룹 저장**을 클릭합니다.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36181161"
   
 11. **선택한 항목 편집**을 클릭합니다.  
   
-12. 특성을 클릭는 **사용 가능** 상자 한 클릭는 **추가** 화살표입니다. 모두 추가하려면 **모두 추가** 화살표를 클릭합니다.  
+12. 특성을 클릭 합니다 **사용 가능** 상자 하 고 클릭 합니다 **추가** 화살표입니다. 모두 추가하려면 **모두 추가** 화살표를 클릭합니다.  
   
-13. 필요에 따라는 **를** 및 **아래로** 특성의 왼쪽-오른쪽 순서를 변경 하려면 화살표입니다.  
+13. 필요에 따라 클릭 합니다 **등록** 및 **아래로** 특성의 왼쪽에서 오른쪽 순서를 변경 하려면 화살표입니다.  
   
 14. **저장**을 클릭합니다.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "36181161"
  [특성 그룹 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [특성 그룹 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
  [리프 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [사용 권한 통합 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+ [통합 사용 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

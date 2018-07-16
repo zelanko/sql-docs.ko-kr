@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a8cfcda0d6fc37db1b620fd64c044e322f81877e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 12d5a8666896337e288cd235b56c4b8c76f79131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302433"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>코드 특성 값 자동 생성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 새 멤버를 만들 때마다 코드 값에 정수가 자동 할당되도록 하려면 엔터티의 코드 특성에 대해 값을 자동으로 생성합니다.  

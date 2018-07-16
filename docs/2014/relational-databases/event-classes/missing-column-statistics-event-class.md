@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Missing Column Statistics event class
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22881bba08acce97caac7bbad7a322af0f899cfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9c4cdf1a3918bdf7e222d22b6e2cd9629caddc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298503"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 이벤트 클래스
   Missing Column Statistics 이벤트 클래스는 최적화 프로그램에 유용한 열 통계가 사용할 수 없는 상태임을 나타냅니다.  

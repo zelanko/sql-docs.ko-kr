@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
@@ -17,13 +17,13 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 090432d75605eb1678eacc77fafe1c213825d5ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329443"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 또는 명령줄에서 설치할 수 있습니다. 설치 마법사에서 1) 파일을 설치하고 기본 설정을 사용하여 서버를 구성하거나 2) 파일을 설치하고 설치 마법사에서 서버가 구성되지 않도록 선택할 수 있습니다. 이 항목에서는 설치 프로그램이 보고서 서버 인스턴스를 설치하고 구성하는 *기본 모드용 기본 구성* 을 검토합니다. 설치가 완료되면 보고서 서버가 실행되어 사용할 수 있는 상태가 됩니다. 기본 모드 보고서 서버는 독립 실행형 응용 프로그램 서버로 실행됩니다. 기본 모드가 기본 서버 모드입니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "36172604"
   
 -   [SQL Server 설치 마법사로 기본 모드 설치](#bkmk_installwithwizard)  
   
--   [명령줄으로 기본 모드 설치](#bkmk_commandline)  
+-   [명령줄을 사용 하 여 기본 모드 설치](#bkmk_commandline)  
   
 ##  <a name="bkmk_whatisdefaultconfiguration"></a> 기본 구성 이란?  
  기본 모드 옵션에 대해 기본 구성을 선택하면 다음과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능이 설치됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36172604"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령줄 유틸리티(rsconfig.exe, rskeymgmt.exe 및 rs.exe)  
   
- 이 옵션에 적용 되지 않습니다 공유 기능와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 지정 해야 합니다 별도 항목으로 설치 하려는 경우.  
+ 이 옵션에 적용 되지 않습니다 공유 기능 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 지정 해야 합니다 별도 항목으로 설치 하려는 경우.  
   
  기본 모드 보고서 서버 설치에 대해 구성되는 항목은 다음과 같습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36172604"
   
  컴퓨터가 기본 설치에 대한 모든 요구 사항에 맞지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 파일만 모드로 설치한 다음 설치가 완료된 후 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 구성해야 합니다.  
   
- 기본 설치를 진행할 목적으로만 컴퓨터를 다시 구성하지 마십시오. 그럴 경우 상당한 작업 시간이 필요하므로 결과적으로 이 설치 옵션이 제공하는 시간 절약이라는 이점이 없어집니다. 설치 하는 가장 좋은 방법은 것 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 전용 모드에서 특정 값을 사용 하도록 보고서 서버를 구성 합니다.  
+ 기본 설치를 진행할 목적으로만 컴퓨터를 다시 구성하지 마십시오. 그럴 경우 상당한 작업 시간이 필요하므로 결과적으로 이 설치 옵션이 제공하는 시간 절약이라는 이점이 없어집니다. 가장 좋은 해결 방법은 설치 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일만 모드에서 다음 특정 값을 사용 하도록 보고서 서버를 구성 합니다.  
   
 ##  <a name="bkmk_defaultURLreservations"></a> 기본 URL 예약  
  URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.  
@@ -101,9 +101,9 @@ ms.locfileid: "36172604"
 |부분|Description|  
 |----------|-----------------|  
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|  
-|호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버에서 http:// 포함 하는 컴퓨터로 확인 되는 모든 호스트 이름에 대해 지정된 된 포트에서 HTTP 요청을 받아들이도록 지정\<컴퓨터 이름 > / reportserver를 http://localhost/reportserver, 또는 http://\<ip 주소 > / reportserver입니다.|  
+|호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버에서 http://를 포함 하 여 컴퓨터로 확인 되는 모든 호스트 이름에 대해 지정된 된 포트에서 HTTP 요청을 받아들이도록 지정\<컴퓨터 이름 > / reportserver를 http://localhost/reportserver, 또는 http://\<ip 주소 > / reportserver입니다.|  
 |포트|기본 포트는 80입니다. 80 이외의 포트를 사용하는 경우 브라우저 창에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 응용 프로그램을 열 때 URL에 해당 포트를 명시적으로 추가해야 합니다.|  
-|가상 디렉터리|기본적으로 가상 디렉터리가 ReportServer_ 형식에서 만들어집니다\<*instance_name*> 보고서 서버 웹 서비스 및 경우에 대 한\<*instance_name*> 보고서 관리자입니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 보고서 관리자의 기본 가상 디렉터리는 **reports**입니다.|  
+|가상 디렉터리|기본적으로 가상 디렉터리의 형식으로 만들어집니다\<*instance_name*>는 보고서 서버 웹 서비스 및 이때 다음과\<*instance_name*> 보고서 관리자입니다. 보고서 서버 웹 서비스의 기본 가상 디렉터리는 **reportserver**이고 보고서 관리자의 기본 가상 디렉터리는 **reports**입니다.|  
   
  전체 URL 문자열의 예는 다음과 같습니다.  
   
@@ -124,11 +124,11 @@ ms.locfileid: "36172604"
   
     -   **Reporting Services - 기본**  
   
-    -   **관리 도구 - 기본**. 관리 도구는 필수 항목이 아니지만 다른 관리 도구를 설치하지 않은 경우 선택하는 것이 좋습니다. 이 기본 구성 옵션을 선택하면 보고서 서버가 작동하지만 나중에 구성 옵션을 변경할 수 있습니다. ' 내 보고서 '와 같은 일부 옵션을 통해 관리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **관리 도구 - 기본**. 관리 도구는 필수 항목이 아니지만 다른 관리 도구를 설치하지 않은 경우 선택하는 것이 좋습니다. 이 기본 구성 옵션을 선택하면 보고서 서버가 작동하지만 나중에 구성 옵션을 변경할 수 있습니다. ' 내 보고서 '와 같은 일부 옵션을 통해 관리 됩니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![기능 선택에서 SSRS 기본 모드 선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "기능 선택에서 SSRS 기본 모드 선택")  
   
-3.  사용 하려는 경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능을 그 다음에 **서버 구성** 페이지에서 SQL Server 에이전트에 대해 구성 되어 있는지 확인 하려는 **자동** 시작 유형입니다.  
+3.  사용 하려는 경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 기능을 그 다음에 **서버 구성** SQL Server 에이전트에 대 한 구성 되었는지 확인 하려는 페이지 **자동** 시작 유형.  
   
 4.  **Reporting Services 구성** 페이지에서 **설치 및 구성**을 선택합니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "36172604"
   
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
-##  <a name="bkmk_commandline"></a> 명령줄으로 기본 모드 설치  
+##  <a name="bkmk_commandline"></a> 명령줄을 사용 하 여 기본 모드 설치  
  다음 예에는 기본 구성에 필요한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스가 포함되어 있습니다.  
   
 ```  
@@ -157,7 +157,7 @@ setup /q /ACTION=install /FEATURES=SQL,RS,TOOLS /INSTANCENAME=MSSQLSERVER /SQLSY
 SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"  
 ```  
   
- 자세한 내용 및 예제에 대 한 참조 [명령 프롬프트 설치의 Reporting Services SharePoint 모드 및 기본 모드](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) 및 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ 자세한 내용 및 예제를 참조 하세요 [명령 프롬프트 설치의 Reporting Services SharePoint 모드 및 기본 모드](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) 고 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   

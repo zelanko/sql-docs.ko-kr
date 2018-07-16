@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 51fb9898eb2d43fd56cbefb6f08120669dcd6f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d7038fa3d8f07c5b32e35c5cb39e0d8db95766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284169"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>증분 업데이트 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 증분 업데이트 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 측정값 그룹과 파티션을 증분 업데이트할 때 사용할 설정을 정의할 수 있습니다. **처리** 대화 상자에서 **개체 목록** 표의 **설정** 열에 있는 **구성** 을 클릭하여 **증분 업데이트** 대화 상자를 표시할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "36172063"
 |**쿼리 텍스트**|큐브, 측정값 그룹 또는 파티션을 증분 업데이트하는 데 필요한 데이터 검색에 사용할 쿼리 텍스트를 선택합니다.<br /><br /> 참고: 이 옵션은 **쿼리** 를 선택한 경우에만 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [처리 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

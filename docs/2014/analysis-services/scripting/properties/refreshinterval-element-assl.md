@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60dbb6d89483305d971488209b8e13f85e7c2840
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315053"
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval 요소(ASSL)
   부모 요소와 연결된 바인딩된 데이터를 새로 고치는 간격을 지정합니다.  
@@ -52,14 +52,14 @@ ms.locfileid: "36093397"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|XML 기간|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
-|기본값|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md) 또는 [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) PT 1 =|  
-|기본값|다른 모든 PT1m =|  
+|기본값|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md) 나 [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) PT-1 =|  
+|기본값|나머지 = PT1m|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[DimensionBinding](../data-type/dimensionbinding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md), [ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md), [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md)|  
+|부모 요소|[DimensionBinding](../data-type/dimensionbinding-data-type-assl.md)하십시오 [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)하십시오 [ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md), [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  

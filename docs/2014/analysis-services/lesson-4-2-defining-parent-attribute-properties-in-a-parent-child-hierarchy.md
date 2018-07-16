@@ -1,5 +1,5 @@
 ---
-title: 부모-자식 계층에서 부모 특성 속성 정의 | Microsoft Docs
+title: 부모-자식 계층의 부모 특성 속성 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328583"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>부모-자식 계층의 부모 특성 속성 정의
   부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
   
- 자세한 내용은 참조 [부모-자식 계층](multidimensional-models/parent-child-dimension.md), [부모-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)  
+ 자세한 내용은 [부모-자식 계층 구조](multidimensional-models/parent-child-dimension.md), [부모-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  차원 마법사를 사용하여 차원을 만들면 마법사에서 부모-자식 관계가 있는 테이블을 인식하고 자동으로 부모-자식 계층을 정의합니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "36093874"
   
      다음 이미지에서는 Employees 계층의 변경 내용을 보여 줍니다. Stephen Y. Jiang은 더 이상 직원으로 나타나지 않습니다.  
   
-     ![Employees 계층 수정](../../2014/tutorials/media/l4-employee-2.png "수정 직원 계층")  
+     ![Employees 계층을 수정할](../../2014/tutorials/media/l4-employee-2.png "수정 직원 계층")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [자동으로 특성 멤버 그룹화](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36094011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285479"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>4단계: 플랫 파일 대상 추가
   Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든 데이터 행을 스크립트 변환으로 리디렉션합니다. 발생한 오류에 대한 정보를 보강하기 위해 스크립트 변환은 오류에 대한 설명을 가져오는 스크립트를 실행합니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "36094011"
   
 6.  **플랫 파일 형식** 대화 상자에서 **구분 기호로 분리됨** 을 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
-7.  에 **플랫 파일 연결 관리자 편집기**에 **연결 관리자 이름** 상자에 입력 `Error Data`합니다.  
+7.  에 **플랫 파일 연결 관리자 편집기**를 **연결 관리자 이름** 상자에 입력 `Error Data`합니다.  
   
 8.  **플랫 파일 연결 관리자 편집기** 대화 상자에서 **찾아보기**를 클릭한 다음 파일을 저장할 폴더를 찾습니다.  
   
-9. 에 **열려** 대화 상자에 대 한 **파일 이름**, 형식 `ErrorOutput.txt`, 클릭 하 고 **열려**합니다.  
+9. 에 **열기** 대화 상자에 대 한 **파일 이름**, 형식 `ErrorOutput.txt`, 클릭 하 고 **열기**합니다.  
   
 10. **플랫 파일 연결 관리자 편집기** 대화 상자에서 **로캘** 상자에 영어(미국), **코드 페이지** 에 1252(ANSI - 라틴어 I)가 포함되어 있는지 확인합니다.  
   

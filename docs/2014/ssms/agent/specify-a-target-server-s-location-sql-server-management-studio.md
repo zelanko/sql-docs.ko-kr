@@ -1,5 +1,5 @@
 ---
-title: 대상 서버 지정&#39;s 위치 (SQL Server Management Studio) | Microsoft Docs
+title: 대상 서버 지정&#39;위치 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], location
 ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e5502f9cde3711e126d2f6922999201c03cb1fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e26b966ce446240eeefa1066766d96d396a5b7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234293"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>대상 서버 위치 지정(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 다중 서버 관리 구성에서 대상 서버의 위치를 지정하는 방법을 설명합니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "36186455"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)합니다.  
+ 자세한 내용은 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)합니다.  
   
   

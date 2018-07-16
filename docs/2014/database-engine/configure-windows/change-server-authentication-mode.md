@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - authentication [SQL Server], changing modes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea4598db170e2ef0e42050b34b30a89aa2ca2bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ab213ee1c49eaf50150c8e3317244e94a99dd1cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295403"
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버 인증 모드를 변경하는 방법에 대해 설명합니다. 설치하는 동안 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 **Windows 인증 모드** 또는 **SQL Server 및 Windows 인증 모드**로 설정됩니다. 설치 후 언제든지 인증 모드를 변경할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "36182099"
   
 #### <a name="to-enable-the-sa-login"></a>sa 로그인을 사용하려면  
   
-1.  개체 탐색기에서 확장 **보안**, 로그인, 마우스 오른쪽 단추로 클릭 `sa`, 클릭 하 고 **속성**합니다.  
+1.  개체 탐색기에서 확장 **보안**로그인을 확장, 마우스 오른쪽 단추로 클릭 `sa`를 클릭 하 고 **속성**합니다.  
   
 2.  **일반** 페이지에서 로그인에 대한 암호를 만들고 확인할 수 있습니다.  
   

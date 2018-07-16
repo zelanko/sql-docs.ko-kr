@@ -3,12 +3,11 @@ title: 저장 프로시저 실행 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.executeprocedure.f1
 - sql12.swb.executeprocedure.general.f1
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], executing
 - user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ee1299fa575af8e2d19798a2bd38bf0a7a0acf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d39b6c827713e81e4b8afd838673e36d3b650bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311393"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  

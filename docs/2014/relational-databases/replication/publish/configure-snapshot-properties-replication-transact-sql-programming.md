@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - snapshots [SQL Server replication], properties
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0c95dd5654bdda8604567902e2594c9a95b56710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161ff6dadbd3917e75609e60f9e1a602b6437028
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292253"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)
   복제 저장 프로시저를 사용하여 스냅숏 속성을 프로그래밍 방식으로 정의 및 수정할 수 있습니다. 사용되는 저장 프로시저는 게시 유형에 따라 달라집니다.  

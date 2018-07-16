@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b83302fb323b9301ef2ec5ce0e51f6201a87a317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b2f11120fcc98bde39800ad75f94499b0b5f5081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309375"
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  

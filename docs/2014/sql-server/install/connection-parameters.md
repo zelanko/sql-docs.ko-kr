@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], connections
 - authentication [Upgrade Advisor]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], connections
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc99f9fc26f0e46f0f5ea0d717614bf5935f4814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba6652a172e06c64018243acd01a6d60dcced47b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181620"
 ---
 # <a name="connection-parameters"></a>연결 매개 변수
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 특정 서버 유형을 분석하려면 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스가 자동으로 선택됩니다. 이 선택 항목을 변경할 수 있지만 업그레이드 관리자에서 분석할 인스턴스는 한 번에 하나만 선택할 수 있습니다. 인증이 필요한 서버 유형을 포함한 경우 인증 모드와 자격 증명을 입력해야 합니다.  
@@ -46,13 +46,13 @@ ms.locfileid: "36185122"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 이 상자에 사용자 이름을 입력합니다. 컴퓨터에 대한 관리자 자격 증명이 있는 사용자 이름을 입력하는 것이 좋습니다.  
   
 > [!NOTE]  
->  Windows 인증을 선택한 경우 현재 로그온 한 사용자의 사용자 이름에 채워집니다는 **사용자 이름** 입력란.  
+>  Windows 인증을 선택 하면 현재 로그온 한 사용자의 사용자 이름에 채워집니다 합니다 **사용자 이름** 입력란입니다.  
   
  **암호**  
  지정된 사용자의 암호를 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

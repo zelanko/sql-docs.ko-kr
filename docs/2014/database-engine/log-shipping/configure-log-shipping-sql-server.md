@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6558a69db2025deecd8c40300fd6ee830d2492c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 054026fa0716009f2303a46be15d2b954c7ddb6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213753"
 ---
 # <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달을 구성하는 방법에 대해 설명합니다.  
@@ -154,7 +153,7 @@ ms.locfileid: "36183089"
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [SQL Server 2014로 로그 전달 업그레이드 &#40;Transact SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [SQL Server 2014로 로그 전달 업그레이드 &#40;TRANSACT-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [로그 전달 구성에 보조 데이터베이스 추가&#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   

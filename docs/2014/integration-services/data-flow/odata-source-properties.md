@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12531d3f6f65da02cd4e8d36eea35c740d19abd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2962314147f86723870a38dfa8998b3a734a68f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307953"
 ---
 # <a name="odata-source-properties"></a>OData 원본 속성
   데이터 흐름에서 **OData 원본**을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하면 **속성** 창에 **OData 원본** 구성 요소의 속성이 표시됩니다.  

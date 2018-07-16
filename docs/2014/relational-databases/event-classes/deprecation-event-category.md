@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Deprecation event category
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7d9eac5d5a731480f41b8ea38bdeecf14adfe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 54940838dd78e9a04fee656f13196f933f6cc14f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313793"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
   **Deprecation** 이벤트 범주에는 일반적인 사용 중단 알림 이벤트가 포함됩니다.  

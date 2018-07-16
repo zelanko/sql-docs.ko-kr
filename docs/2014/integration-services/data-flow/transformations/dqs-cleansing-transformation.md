@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data correction
 - correct data
@@ -16,13 +16,13 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cec475debf0c386b51a165df743b2a6893992a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 696dce12d347fe8da679c5d029b9f9d78bafc19c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283719"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
   DQS 정리 변환은 DQS(Data Quality Services)를 통해, 데이터 원본 또는 유사한 데이터 원본에 대해 만든 승인된 규칙을 적용하여 연결된 데이터 원본에서 데이터를 수정합니다. 데이터 수정 규칙에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오. DQS에 대한 자세한 내용은 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)을 참조하십시오.  

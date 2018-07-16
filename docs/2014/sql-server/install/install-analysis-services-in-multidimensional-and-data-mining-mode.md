@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
 - installing Analysis Services
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SQL Server Analysis Services, installing
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 caps.latest.revision: 47
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 1a35dae4817d38ea3485b8b34a493314302bdfa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90380f1e908c3b0cf1226f94de4a404ae5e65e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222583"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>다차원 및 데이터 마이닝 모드에서 Analysis Services 설치
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 비즈니스 인텔리전스 응용 프로그램을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 이 릴리스에서 OLAP 데이터베이스 및 데이터 마이닝 모델에 대 한 지원은 설치할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 *다차원 모드*합니다. 다차원 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 실행되는 세 가지 서버 모드 중 하나이며 기본 모드입니다. 기본값을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치하면 다차원 데이터베이스 및 데이터 마이닝 모델을 실행하는 인스턴스를 얻게 됩니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 비즈니스 인텔리전스 응용 프로그램을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 이 릴리스에서 OLAP 데이터베이스 및 데이터 마이닝 모델에 대 한 지원은 사용할 수 있습니다를 설치할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 *다차원 모드*합니다. 다차원 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 실행되는 세 가지 서버 모드 중 하나이며 기본 모드입니다. 기본값을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치하면 다차원 데이터베이스 및 데이터 마이닝 모델을 실행하는 인스턴스를 얻게 됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 여러 인스턴스를 지원하므로 한 컴퓨터에 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 설치하거나 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 이전 버전과 함께 실행할 수 있습니다. 서버 모드는 인스턴스에 적용됩니다. 다른 모드를 사용하려면 서버 인스턴스를 추가로 설치해야 합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 단독으로 설치하거나 다른 구성 요소와 함께 설치할 수 있습니다. 방금 설치한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 선택 하면 다음 기능이 설치 됩니다 **Analysis Services** 의 기능 선택 페이지에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 단독으로 설치하거나 다른 구성 요소와 함께 설치할 수 있습니다. 방금 설치한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 선택 하면 다음 기능이 설치 됩니다 **Analysis Services** 의 기능 선택 페이지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사:  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 데이터 마이닝 모델을 실행하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36184434"
   
 -   Analysis Services 데이터 구조 및 데이터 마이닝 모델을 만들고 보는 데 사용되는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   클라이언트 도구 연결 구성 요소 클라이언트와 Db-library, ODBC 및 OLE DB 용 네트워크 라이브러리를 포함 하 여 서버 간 통신용으로 사용 합니다.  
+-   클라이언트 도구 연결 구성 요소, 클라이언트와 서버를 Db-library, ODBC 및 OLE DB에 대 한 네트워크 라이브러리를 포함 한 간의 통신에 사용 합니다.  
   
 -   데이터 이동, 복사 및 변환을 위한 그래픽 및 프로그래밍 가능 개체 모음인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
@@ -56,8 +56,8 @@ ms.locfileid: "36184434"
   
 |링크|태스크|  
 |-----------|-----------|  
-|[Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) 및 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.|설치 프로그램을 실행하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설치에 필요한 필수 구성 요소를 확인하고 서버 프로비전에 사용할 계정을 결정합니다.|  
-|[설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.|SQL Server 설치 프로그램을 실행하여 소프트웨어를 설치합니다.|  
+|[Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) 하 고 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.|설치 프로그램을 실행하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설치에 필요한 필수 구성 요소를 확인하고 서버 프로비전에 사용할 계정을 결정합니다.|  
+|[설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.|SQL Server 설치 프로그램을 실행하여 소프트웨어를 설치합니다.|  
 |[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|설치가 완료되면 서버로의 원격 연결을 허용하도록 방화벽 설정을 구성해야 합니다.|  
 |[개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|Analysis Services 데이터베이스에 액세스하는 사용자는 서버에 있는 데이터베이스 하나 이상에 대해 읽기 권한을 가지고 있어야 합니다.|  
   

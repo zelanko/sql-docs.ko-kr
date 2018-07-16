@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3ba1d095dd7aed4090e053368897bd6accc1f6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21db77ad7f226c78f31adaef80162b445129249e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257299"
 ---
 # <a name="send-mail-task"></a>메일 보내기 태스크
   메일 보내기 태스크는 전자 메일 메시지를 보냅니다. 메일 보내기 태스크를 사용하면 패키지 워크플로의 태스크 성공 여부에 관계없이 패키지가 메시지를 보낼 수 있거나 런타임 시 패키지에서 발생한 이벤트에 응답하여 메시지를 보낼 수 있습니다. 예를 들어 이 태스크는 데이터베이스 백업 태스크의 성공 또는 실패에 대해 데이터베이스 관리자에게 알릴 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "36183077"
   
 -   [메일 보내기 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [메일 보내기 태스크 편집기 &#40;페이지 메일&#41;](../send-mail-task-editor-mail-page.md)  
+-   [메일 보내기 태스크 편집기 &#40;페이지를 메일&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

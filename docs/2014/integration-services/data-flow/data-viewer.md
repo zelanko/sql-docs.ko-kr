@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataviewer.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65107dce2c6916d36762162e9683d09909f111cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24ea2d5839b65c54710c9de99fde2b97da7188ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246763"
 ---
 # <a name="data-viewer"></a>데이터 뷰어
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c777c0ce70d06b979fbc26ac8f50df1bdbd858d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3115805cf5d6d8fabfa67100305f7bdffea1d339
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312683"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>DirectQuery 파티션 변경(SSAS 테이블 형식)
   테이블의 한 파티션만 DirectQuery 파티션으로 지정할 수 있으므로 기본적으로 Analysis Services에서는 테이블에 첫 번째로 만들어진 파티션을 사용합니다. 모델 프로젝트 제작 중에 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자 대화 상자를 사용하여 DirectQuery 파티션을 변경할 수 있습니다. 배포된 모델의 경우 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 DirectQuery 파티션을 변경할 수 있습니다.  
@@ -49,6 +49,6 @@ ms.locfileid: "36172773"
 4.  **파티션 이름** 드롭다운 목록에서 다른 파티션을 선택한 다음 필요한 경우 파티션에 대한 처리 옵션을 변경합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)  
+ [파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)  
   
   

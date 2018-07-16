@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
@@ -16,13 +16,13 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7cf067ff7ebfb4f9990b424acf73d5084470d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3bd3b0369c990b6db3dc1cbb44f7fd387289ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303653"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>1단원: 복제용 Windows 계정 만들기
   이 단원에서는 복제 에이전트를 실행할 Windows 계정을 만들며 다음 에이전트에 대해 로컬 서버에 별도의 Windows 계정을 만듭니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "36181790"
   
 3.  **사용자** 를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 클릭합니다.  
   
-4.  입력 `repl_snapshot` 에 **사용자 이름** 상자, 암호 및 기타 관련 정보를 제공 하 고 클릭 **만들기** 하 여 repl_snapshot 계정을 만듭니다.  
+4.  입력 `repl_snapshot` 에 **사용자 이름** 상자에서 암호 및 다른 관련 정보를 제공 하 고, 클릭 **만들기** 하 여 repl_snapshot 계정을 만듭니다.  
   
 5.  이전 단계를 반복하여 repl_logreader, repl_distribution 및 repl_merge 계정을 만듭니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36181790"
   
 3.  **사용자** 를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 클릭합니다.  
   
-4.  입력 `repl_distribution` 에 **사용자 이름** 상자, 암호 및 기타 관련 정보를 제공 하 고 클릭 **만들기** 하 여 repl_distribution 계정을 만듭니다.  
+4.  입력 `repl_distribution` 에 **사용자 이름** 상자에서 암호 및 다른 관련 정보를 제공 하 고, 클릭 **만들기** 하 여 repl_distribution 계정을 만듭니다.  
   
 5.  이전 단계를 반복하여 repl_merge 계정을 만듭니다.  
   

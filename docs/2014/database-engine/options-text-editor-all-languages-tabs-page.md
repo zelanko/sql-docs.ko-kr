@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f3e0df6dced5c69f60cbb95abcb5ba8eee78879b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287859"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>옵션 (텍스트 편집기-모든 언어-탭 페이지)
   이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 탭 이동 동작을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **탭**을 클릭합니다.  

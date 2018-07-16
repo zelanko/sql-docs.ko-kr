@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.evalpoliciesresults.f1
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0378d57941885946c819d8068146411ff9bfd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 87503ad65118b5b99f1c49528ded74922b871b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290479"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>정책 평가 대화 상자, 평가 결과 페이지
   이 대화 상자를 사용하여 정책 평가 결과를 보고 정책을 준수하지 않는 대상 집합에 정책 기반 관리 정책을 적용할 수 있습니다.  

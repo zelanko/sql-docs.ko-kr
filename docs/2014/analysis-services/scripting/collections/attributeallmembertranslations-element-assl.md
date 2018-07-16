@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberTranslations element
 ms.assetid: 1a0d86ea-d95d-4d93-b321-acd35ed4ac26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa787c7c3731962690c1b8d25e736f061caf74e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd4a3afeac18c5b0aa4935e6abbb51a79015256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36081219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332883"
 ---
 # <a name="attributeallmembertranslations-element-assl"></a>AttributeAllMemberTranslations 요소(ASSL)
   차원에 있는 All 멤버의 캡션에 대한 번역의 컬렉션을 포함합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36081219"
 |자식 요소|[AttributeAllMemberTranslation](../objects/translation-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `AttributeAllMemberTranslations` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
+ 부모에 해당 하는 요소가 `AttributeAllMemberTranslations` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Dimension>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Translation 요소 &#40;ASSL&#41;](translations-element-assl.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285419"
 ---
 # <a name="use-variables-in-packages"></a>패키지에서 변수 사용
   변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 추가된 유용하고 융통성 있는 기능입니다. 변수는 패키지 개체 간 및 부모 패키지와 자식 패키지 간 통신을 제공합니다. 식과 스크립트에도 변수를 사용할 수 있습니다.  

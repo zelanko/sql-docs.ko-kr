@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cfcc451a3369a3f15e29381df3d21e7275a90f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90fa167102e9e5a5c8a4ad916bb921205347f1c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284439"
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 행 집합
   백업 파일의 콘텐츠에 대한 정보를 반환합니다. 백업 파일 위치에 액세스할 수 있는 권한이 있어야 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_LOCATIONS` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_LOCATIONS` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  

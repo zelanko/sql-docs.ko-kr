@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cfc62de4ad73888fb95fe179efd0fdaeabbc9dc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9ab15627b4f5cde95ecff8f368d294d4336060cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328453"
 ---
 # <a name="password-element-xmla"></a>Password 요소(XMLA)
   부모에 사용할 암호를 결정 [백업](../xml-elements-commands/backup-element-xmla.md) 또는 [복원](../xml-elements-commands/restore-element-xmla.md) 명령 암호화에 백업 파일 암호 해독 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36093168"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[백업](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
+|부모 요소|[Backup](../xml-elements-commands/backup-element-xmla.md), [복원](../xml-elements-commands/restore-element-xmla.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ ms.locfileid: "36093168"
   
  `Restore` 명령의 경우 암호화된 백업 파일을 복원하는 동안 `Password` 요소가 포함되어 있지 않거나 빈 문자열을 포함하면 오류가 발생합니다.  
   
- `Location` 요소가 `Backup` 또는 `Restore` 명령에 포함되어 있는 경우 백업 및 원격 백업 파일 모두에 대해 같은 `Password` 요소가 사용됩니다. 원격 백업 파일에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ `Location` 요소가 `Backup` 또는 `Restore` 명령에 포함되어 있는 경우 백업 및 원격 백업 파일 모두에 대해 같은 `Password` 요소가 사용됩니다. 원격 백업 파일에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Location 요소 &#40;XMLA&#41;](location-element-xmla.md)   

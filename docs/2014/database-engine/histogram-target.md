@@ -1,5 +1,5 @@
 ---
-title: 히스토그램 대상은 | Microsoft Docs
+title: 히스토그램 대상을 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dcee8251ba073d87f94fc4be18bc6e77c6113361
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293123"
 ---
 # <a name="histogram-target"></a>히스토그램 대상
   히스토그램 대상은 이벤트 데이터를 기준으로 특정 이벤트 유형의 항목을 그룹화합니다. 이벤트 그룹화는 지정된 이벤트 열 또는 동작을 기준으로 계산됩니다. 히스토그램 대상을 사용하여 성능 문제를 해결할 수 있습니다. 가장 자주 발생하는 이벤트가 무엇인지 확인하면 성능 문제의 원인이 될 수 있는 "핫스폿"을 찾아낼 수 있습니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "36171870"
 |옵션|허용된 값|Description|  
 |------------|--------------------|-----------------|  
 |slots|임의의 정수 값을 사용할 수 있습니다. 이 값은 선택 사항입니다.|유지할 최대 그룹화 수를 나타내는 사용자 지정 값입니다. 이 값에 도달하면 기존 그룹에 속하지 않는 새 이벤트는 무시됩니다.<br /><br /> 성능 향상을 위해 슬롯 번호는 2의 다음 거듭제곱으로 반올림됩니다.|  
-|filtering_event_name|확장 이벤트 세션에 있는 이벤트입니다. 이 값은 선택 사항입니다.|이벤트의 클래스를 식별하는 데 사용되는 사용자 지정 값입니다. 지정된 이벤트의 인스턴스만 버킷팅되고 다른 이벤트는 모두 무시됩니다.<br /><br /> 이 값을 지정하는 경우 *package_name*.*event_name*형식을 사용해야 합니다(예: `'sqlserver.checkpoint_end'`). 다음 쿼리를 사용하여 패키지 이름을 확인할 수 있습니다.<br /><br /> SELECT p.name, se.event_name<br />Sys.dm_xe_session_events se에서<br />Sys.dm_xe_packages p을 참여<br />Se_event_package_guid p.guid =<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> filtering_event_name 값을 지정하지 않는 경우 source_type을 기본값인 1로 설정해야 합니다.|  
+|filtering_event_name|확장 이벤트 세션에 있는 이벤트입니다. 이 값은 선택 사항입니다.|이벤트의 클래스를 식별하는 데 사용되는 사용자 지정 값입니다. 지정된 이벤트의 인스턴스만 버킷팅되고 다른 이벤트는 모두 무시됩니다.<br /><br /> 이 값을 지정하는 경우 *package_name*.*event_name*형식을 사용해야 합니다(예: `'sqlserver.checkpoint_end'`). 다음 쿼리를 사용하여 패키지 이름을 확인할 수 있습니다.<br /><br /> SELECT p.name, se.event_name<br />Sys.dm_xe_session_events se에서<br />Sys.dm_xe_packages p 조인<br />Se_event_package_guid ON p.guid =<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> filtering_event_name 값을 지정하지 않는 경우 source_type을 기본값인 1로 설정해야 합니다.|  
 |source_type|버킷의 기반이 되는 개체의 유형입니다. 이 값은 선택 사항이고 지정되지 않은 경우 기본값이 1입니다.|다음 값 중 하나가 될 수 있습니다.<br /><br /> 0 = 이벤트<br /><br /> 1 = 동작|  
-|원본(source)|이벤트 열 또는 동작의 이름입니다.|데이터 원본으로 사용되는 이벤트 열 또는 동작 이름입니다.<br /><br /> 원본에 대한 이벤트 열을 지정하는 경우 filtering_event_name 값에 사용되는 이벤트의 열을 지정해야 합니다. 다음 쿼리를 사용하여 후보 열을 확인할 수 있습니다.<br /><br /> FROM sys.dm_xe_object_columns 선택 이름<br />WHERE object_name = '\<eventname >'<br />Column_type 및! = 'readonly'<br /><br /> 원본에 대한 이벤트 열을 지정할 때는 원본 값에 패키지 이름을 포함할 필요가 없습니다.<br /><br /> 원본에 대한 동작 이름을 지정하는 경우 이 대상이 사용되고 있는 이벤트 세션의 컬렉션을 위해 구성된 동작 중 하나를 사용해야 합니다. sys.dm_xe_sesssion_event_actions view의 action_name 열을 쿼리하면 동작 이름의 후보 값을 찾을 수 있습니다.<br /><br /> 동작 이름을 데이터 원본으로 사용하고 있는 경우 *package_name*.*action_name*형식을 사용하여 원본 값을 지정해야 합니다.|  
+|원본(source)|이벤트 열 또는 동작의 이름입니다.|데이터 원본으로 사용되는 이벤트 열 또는 동작 이름입니다.<br /><br /> 원본에 대한 이벤트 열을 지정하는 경우 filtering_event_name 값에 사용되는 이벤트의 열을 지정해야 합니다. 다음 쿼리를 사용하여 후보 열을 확인할 수 있습니다.<br /><br /> FROM sys.dm_xe_object_columns 선택 이름<br />WHERE object_name = '\<eventname >'<br />및 column_type! = 'readonly'<br /><br /> 원본에 대한 이벤트 열을 지정할 때는 원본 값에 패키지 이름을 포함할 필요가 없습니다.<br /><br /> 원본에 대한 동작 이름을 지정하는 경우 이 대상이 사용되고 있는 이벤트 세션의 컬렉션을 위해 구성된 동작 중 하나를 사용해야 합니다. sys.dm_xe_sesssion_event_actions view의 action_name 열을 쿼리하면 동작 이름의 후보 값을 찾을 수 있습니다.<br /><br /> 동작 이름을 데이터 원본으로 사용하고 있는 경우 *package_name*.*action_name*형식을 사용하여 원본 값을 지정해야 합니다.|  
   
  다음 예에서는 히스토그램 대상이 데이터를 수집하는 방식을 높은 수준에서 보여 줍니다. 이 예에서 히스토그램 대상을 사용하여 각 대기 유형의 대기 횟수가 몇 번인지 계산할 수 있습니다. 이를 계산하려면 히스토그램 대상을 정의할 때 다음 옵션을 지정하면 됩니다.  
   

@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293537"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 행 집합
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 또는 다차원)에 대한 정보를 반환하여 CSDLBI 형식(BI 포함 개념 스키마 정의 언어 주석)으로 모델의 정의를 제공합니다. CSDLBI는 CSDL을 기반으로 하며, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 클라이언트 간의 통신을 위한 엔터티 데이터 프레임워크에서 사용되는 XML 스키마입니다. BI(비즈니스 인텔리전스) 주석은 테이블 형식 모델과 모델 안의 개체에 대한 메타데이터를 추가로 제공합니다. 테이블 형식 데이터 모델에 대한 자세한 내용은 [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)을 참조하세요.  
@@ -30,7 +30,7 @@ ms.locfileid: "36092063"
  행 집합을 요청하는 클라이언트의 언어 식별자는 명령에 대한 연결 문자열에 포함되며, 행 집합에 포함되어 반환되는 일부 속성에 표시되는 언어에 영향을 줍니다.  언어 식별자의 영향을 받는 속성 및 설명에 대한 정보는 설명 섹션을 참조하십시오.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_CSDL_METADATA` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_CSDL_METADATA` 행 집합에는 다음 열을 포함 합니다.  
   
 |**열 이름**|**유형 표시기**|**제한**|**설명**|  
 |---------------------|------------------------|---------------------|---------------------|  
@@ -127,6 +127,6 @@ ms.locfileid: "36092063"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 스키마 행 집합](../analysis-services-schema-rowsets.md)   
- [Business Intelligence에 대 한 CSDL 주석 &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [비즈니스 인텔리전스에 대 한 CSDL 주석 &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

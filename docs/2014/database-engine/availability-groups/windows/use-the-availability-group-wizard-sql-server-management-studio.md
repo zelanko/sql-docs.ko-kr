@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.f1
 - sql12.swb.newavgroupwiz.f1
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 41
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 79cdbd700e1eda482b02902a23de66eb92652fdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f021d637b04a67dccde5d3428edd0b033f0bf297
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300903"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 마법사 사용(SQL Server Management Studio)
-  이 항목에서는 새 가용성 그룹 마법사를 사용 하는 방법을 설명 (에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)])를 만들고에서 AlwaysOn 가용성 그룹 구성 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
+  이 항목에서는 새 가용성 그룹 마법사를 사용 하는 방법에 설명 합니다 (에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)])를 만들고에서 AlwaysOn 가용성 그룹 구성 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
   
 > [!NOTE]  
 >  가용성 그룹에 대한 소개는 [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
@@ -120,7 +119,7 @@ ms.locfileid: "36180955"
     |탭|간단한 설명|  
     |---------|-----------------------|  
     |**복제본**|이 탭에서는 보조 복제본을 호스팅할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정할 수 있습니다. 현재 연결된 서버 인스턴스가 주 복제본을 호스팅해야 합니다.|  
-    |**끝점**|기존 데이터베이스 미러링 끝점을 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 끝점이 없는 경우 끝점을 자동으로 만들려면 이 탭을 사용합니다. **참고:** 는 수동 서버 인스턴스를 먼저 변경 마법사를 계속 하려면 해야 하는 모든 서버 인스턴스는 도메인이 아닌 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#PrerequisitesRestrictions)를 참조하십시오.|  
+    |**끝점**|기존 데이터베이스 미러링 끝점을 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 끝점이 없는 경우 끝점을 자동으로 만들려면 이 탭을 사용합니다. **참고:** 는 수동 서버 인스턴스를 하려면 먼저 변경 마법사를 계속 해야 하는 서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#PrerequisitesRestrictions)를 참조하십시오.|  
     |**백업 기본 설정**|가용성 그룹 전체에 대한 백업 기본 설정과 개별 가용성 복제본에 대한 백업 우선 순위를 지정하려면 이 탭을 사용합니다.|  
     |**수신기**|이 탭을 사용하여 가용성 그룹 수신기를 만들 수 있습니다. 기본적으로 마법사는 수신기를 만들지 않습니다.|  
   
@@ -182,7 +181,7 @@ ms.locfileid: "36180955"
   
  **데이터베이스 미러링 끝점을 구성하려면**  
   
--   [데이터베이스를 AlwaysOn 가용성 그룹에 대 한 미러링 끝점 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -200,7 +199,7 @@ ms.locfileid: "36180955"
   
 -   **블로그:**  
   
-     [AlwaysON-HADRON 학습 시리즈: HADRON에 대 한 작업자 풀 사용 사용 데이터베이스](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 학습 시리즈: HADRON 작업자 풀 사용 가능 데이터베이스](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -210,11 +209,11 @@ ms.locfileid: "36180955"
   
      [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 1 부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 2 부: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션을 구축 합니다.](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 파트 2: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
   

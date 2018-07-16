@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291049"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36181373"
     > [!NOTE]  
     >  64비트 모드로 실행 중인 패키지에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로그 공급자를 사용할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 항목을 기록 하는 로그 공급자는 `sysssislog` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자는 로그 항목을 기록 합니다 `sysssislog` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스.  
   
 -   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 응용 프로그램 로그에 항목을 기록합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36181373"
 ### <a name="configuration-of-log-provider"></a>로그 공급자 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 로그 공급자는 패키지에서 로깅을 구현하는 단계로 생성 및 구성됩니다. 자세한 내용은 참조 [Integration Services 로깅](integration-services-ssis-logging.md)합니다.  
+ 로그 공급자는 패키지에서 로깅을 구현하는 단계로 생성 및 구성됩니다. 자세한 내용은 [Integration Services 로깅](integration-services-ssis-logging.md)합니다.  
   
  로그 공급자를 만든 다음에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에서 해당 속성을 보고 수정할 수 있습니다.  
   

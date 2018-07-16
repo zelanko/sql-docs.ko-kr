@@ -22,18 +22,18 @@ helpviewer_keywords:
 - OrderByAttributeID element
 ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42d8e9246340b72fad871e92bc30008c68ce786a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c336d9c210c9e6fb5ffa44e5f1d37a445e0e5694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235613"
 ---
 # <a name="orderbyattributeid-element-assl"></a>OrderByAttributeID 요소(ASSL)
-  멤버를 정렬 하는 기준인 다른 특성을 식별 된 [차원](../data-type/dimensionattribute-data-type-assl.md) 특성입니다.  
+  [Dimension](../data-type/dimensionattribute-data-type-assl.md) 특성의 멤버를 정렬하는 기준인 다른 특성을 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36181656"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `OrderByAttributeID` 요소는 경우에만 사용된의 값은 [OrderBy](orderby-element-assl.md) 요소에 대 한는 `DimensionAttribute` 로 설정 된 *AttributeKey* 또는 *AttributeName*합니다.  
+ `OrderByAttributeID` 요소인 경우에만 사용된 값을 [OrderBy](orderby-element-assl.md) 요소에 대 한를 `DimensionAttribute` 로 설정 되어 *AttributeKey* 또는 *AttributeName*합니다.  
   
- 부모에 해당 하는 요소 `OrderByAttributeID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 `OrderByAttributeID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

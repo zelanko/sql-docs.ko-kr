@@ -3,10 +3,9 @@ title: CLR 통합 어셈블리 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,24 +18,24 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fba26bd48f94fb76f44c423297e9f2bc0d2f86cb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694194"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350185"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 통합 어셈블리 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  관리 코드는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리는 DLL이나 실행 파일(.exe)로 패키지됩니다. 실행 파일은 독립적으로 실행할 수 있는 반면 DLL은 기존 응용 프로그램 내에서 호스팅해야 합니다. 관리 되는 DLL 어셈블리를 로드 하 고 호스팅하 수 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리를 프로세스에 로드하여 사용하려면 먼저 CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리를 등록해야 합니다. ALTER ASSEMBLY 문을 사용하여 어셈블리를 최신 버전에서 업데이트하거나 DROP ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 제거할 수도 있습니다.  
+  관리 코드는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리는 DLL이나 실행 파일(.exe)로 패키지됩니다. 실행 파일은 독립적으로 실행할 수 있는 반면 DLL은 기존 응용 프로그램 내에서 호스팅해야 합니다. 관리 되는 DLL 어셈블리를 로드 하 여 호스팅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리를 프로세스에 로드하여 사용하려면 먼저 CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리를 등록해야 합니다. ALTER ASSEMBLY 문을 사용하여 어셈블리를 최신 버전에서 업데이트하거나 DROP ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 제거할 수도 있습니다.  
   
- 어셈블리 정보에 저장 됩니다는 **sys.assembly_files** 어셈블리가 설치 되어 있는 데이터베이스의 테이블입니다. **sys.assembly_files** 테이블에는 다음 열입니다.  
+ 어셈블리 정보에 저장 됩니다는 **sys.assembly_files** 어셈블리가 설치 되어 있는 데이터베이스의 테이블입니다. 합니다 **sys.assembly_files** 테이블에는 다음 열을 포함 합니다.  
   
 |Column|Description|  
 |------------|-----------------|  
 |assembly_id|어셈블리에 대해 정의되는 식별자입니다. 해당 어셈블리와 관련한 모든 개체에 이 번호가 할당됩니다.|  
 |NAME|개체 이름입니다.|  
-|file_id|와 연결 된 첫 번째 개체와 각 개체를 식별 하는 번호는 주어진 **assembly_id** 1의 값이 지정 되 고 있습니다. 여러 개체 연결 되어 있는 경우 동일한 **assembly_id**차례로 **file_id** 값은 1 씩 증가 합니다.|  
+|file_id|연결 된 첫 번째 개체를 사용 하 여 각 개체를 식별 하는 번호를 지정 **assembly_id** 1의 값입니다. 여러 개체가 연결 되어 있는 경우 동일한 **assembly_id**, 한 다음 각 후속 **file_id** 값이 1 씩 증가 합니다.|  
 |content|어셈블리 또는 파일의 16진수 표현입니다.|  
   
 ## <a name="in-this-section"></a>섹션 내용  

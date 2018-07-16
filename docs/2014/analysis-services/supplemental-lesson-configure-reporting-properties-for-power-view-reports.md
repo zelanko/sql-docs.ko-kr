@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0f2e5e76b9779ce2cc8362d93ebe2389db8fb8da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee7bcbbb5294047c2499cabd4c094e15563883d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304373"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View 보고서의 보고 속성 구성
   이 추가 단원에서는 Adventure Works Internet Sales Model 프로젝트에 대한 보고 속성을 설정해 봅니다. 보고 속성을 사용하면 최종 사용자가 Power View에서 모델 데이터를 쉽게 선택하고 표시할 수 있습니다. 또한 특정 열과 테이블을 숨기고 차트에서 사용할 새 데이터를 만드는 속성을 설정합니다.  

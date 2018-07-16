@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - events [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5aea7cea08e6cec678b436c7ea22d653b09d3ac2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f5bf3e8bd5c7ebe56838ed9ebe8f8b91d7e87ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178400"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
   설명서의 이 섹션에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]와 관련된 몇 가지 오류와 이벤트에 대한 정보가 포함되어 있습니다. 또한 오류 메시지의 원인 및 해결 방법 정보도 포함되어 있습니다.  

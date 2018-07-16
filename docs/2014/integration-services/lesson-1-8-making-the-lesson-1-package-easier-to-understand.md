@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 caps.latest.revision: 17
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4cfd164c250f60aa2e6fe2a3c74487a90eeb3e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1adf7606b40f4665aae9e264c30d17038da0193a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296783"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기
   1단원 패키지의 구성을 완료했으므로 이제 패키지 레이아웃을 정리하는 것이 좋습니다. 제어 및 데이터 흐름 레이아웃 셰이프의 크기가 제멋대로이거나 셰이프가 정렬 또는 그룹화되지 않은 경우 패키지의 기능을 이해하기가 매우 어려울 수 있습니다.  

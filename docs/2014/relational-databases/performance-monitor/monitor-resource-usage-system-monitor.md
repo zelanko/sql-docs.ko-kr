@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
 - System Monitor [SQL Server], about Windows System Monitor
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e5ccbba359fb0cdae995b0e127305adef51dcdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c8d6303f45c2aa5856c5398703d83a17767da1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327603"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>리소스 사용 모니터링(시스템 모니터)
   Microsoft Windows 서버 운영 체제를 실행 중인 경우 시스템 모니터 그래픽 도구를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능을 측정할 수 있습니다. 이 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 성능 카운터를 보거나 프로세서, 메모리, 캐시, 스레드 및 프로세스 등 다른 개체의 동작을 볼 수 있습니다. 각 개체는 장치 사용, 큐 길이, 지연, 처리량 및 내부 정체의 기타 지표를 측정하는 관련 카운터 집합을 포함합니다.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
 - data flow [Integration Services], elements
@@ -20,13 +20,13 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 53e32da7974bbf952a80a08cdf68e8eb2a8451a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d0093e96e4916ce2e23449bcc4044b86955a799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306203"
 ---
 # <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 집합을 만듭니다.  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a7bfe2fe4d613117c1b52e83a7767a474a791e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2ff6e041783707a6c9a7fa5e2f4472fa8cd901a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315013"
 ---
 # <a name="workload-element-dta"></a>Workload 요소(DTA)
   튜닝 세션에 사용할 작업을 지정합니다.  
@@ -51,17 +51,17 @@ ms.locfileid: "36092302"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**자식 요소**|[파일 요소 &#40;DTA&#41;](file-element-dta.md)<br /><br /> [작업 부하의 database 요소 &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 요소 &#40;DTA&#41;](eventstring-element-dta.md)|  
+|**자식 요소**|[파일 요소 &#40;DTA&#41;](file-element-dta.md)<br /><br /> [워크 로드의 database 요소 &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 요소 &#40;DTA&#41;](eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 추적 파일 및 추적 테이블을 작업으로 사용할 수 있습니다.  
   
- XML 입력 파일에 작업을 지정하고 **dta** 도구를 사용하여 명령줄에 작업을 지정할 경우 명령줄에 지정한 작업이 튜닝에 사용됩니다. 명령줄에 지정한 모든 튜닝 옵션은 XML 입력 파일에 지정된 옵션보다 우선 적용됩니다. 단, 사용자 지정 구성을 XML 입력 파일에 평가 모드로 입력할 경우는 예외입니다. 예를 들어에 구성이 입력는 `Configuration` XML 입력된 파일의 요소 및 `EvaluateConfiguration` 요소를 지정한 튜닝 옵션 중 하나로, XML 입력된 파일에 지정 된 튜닝 옵션에 입력 한 튜닝 옵션을 재정의 합니다 명령줄 인수입니다.  
+ XML 입력 파일에 작업을 지정하고 **dta** 도구를 사용하여 명령줄에 작업을 지정할 경우 명령줄에 지정한 작업이 튜닝에 사용됩니다. 명령줄에 지정한 모든 튜닝 옵션은 XML 입력 파일에 지정된 옵션보다 우선 적용됩니다. 단, 사용자 지정 구성을 XML 입력 파일에 평가 모드로 입력할 경우는 예외입니다. 예를 들어 구성에 입력 합니다 `Configuration` XML 입력된 파일의 요소 및 `EvaluateConfiguration` 요소를 지정한 튜닝 옵션 중 하나로, XML 입력된 파일에 지정 된 튜닝 옵션에 입력 한 튜닝 옵션 재정의 명령줄 인수입니다.  
   
  각 튜닝 세션에 대해 하나의 작업을 지정해야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 지정 된 **MyDatabase.MyDBOwner.TuningTable001** 에 사용할 추적 테이블의 `Workload` 요소입니다. **TuningTable001** 은 SQL Server 프로파일러로 튜닝 템플릿을 사용하여 추적 결과를 테이블로 저장하는 방식으로 작성되었습니다.  
+ 다음 코드 예제에서는 지정 된 **MyDatabase.MyDBOwner.TuningTable001** 추적 테이블에 대 한는 `Workload` 요소입니다. **TuningTable001** 은 SQL Server 프로파일러로 튜닝 템플릿을 사용하여 추적 결과를 테이블로 저장하는 방식으로 작성되었습니다.  
   
 ```  
 <DTAXML ...>  

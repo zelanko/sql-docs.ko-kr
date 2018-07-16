@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ec2c67e30caf18f3e11b1391dc0a4bb67028c083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d14f4b68aa3a4cf76cad1c49c1d37a6be9c70f7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282019"
 ---
 # <a name="debugging-stored-procedures"></a>저장 프로시저 디버깅
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저는 실제로 C#이나 다른 CLR 또는 COM 언어로 작성되는 CLR 또는 COM 라이브러리(대개 DLL)입니다. 따라서 저장 프로시저를 디버깅하는 것은 Visual Studio 디버깅 환경에서 다른 응용 프로그램을 디버깅하는 것과 매우 유사합니다. 통합된 디버깅 기능을 사용하여 Visual Studio 개발 환경에서 저장 프로시저를 디버깅합니다. 이를 통해 프로시저 위치에서 중지하고 메모리와 레지스터 값을 검사하고 변수를 변경하고 메시지 트래픽을 관찰하고 코드 작동 방식을 자세히 살펴볼 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "36186180"
   
 3.  Visual Studio를 사용하여 저장 프로시저 DLL의 디버그 빌드를 만듭니다.  
   
-4.  서버에 DLL을 배포합니다. 서버에 DLL을 배포 하는 방법에 대 한 자세한 내용은 참조 [저장 프로시저 만들기](creating-stored-procedures.md)합니다.  
+4.  서버에 DLL을 배포합니다. 서버에 DLL을 배포 하는 방법에 대 한 자세한 내용은 참조 하세요. [저장 프로시저 만들기](creating-stored-procedures.md)합니다.  
   
 5.  테스트할 저장 프로시저를 호출하는 응용 프로그램이 필요합니다. 이러한 응용 프로그램이 없는 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 MDX 쿼리 편집기를 사용하여 테스트할 저장 프로시저를 호출하는 MDX 쿼리를 만들 수 있습니다.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36186180"
   
     2.  에 **프로세스 toProcess** 대화 상자에서 **모든 사용자의 프로세스 표시**합니다.  
   
-    3.  에 **사용 가능한 프로세스** 목록에서 **프로세스** 열을 클릭 하 여 **Msmdsrv.exe**합니다. 서버에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 여러 개인 경우 사용할 인스턴스의 ID로 프로세스를 식별해야 합니다.  
+    3.  에 **사용 가능한 프로세스** 목록에서 **프로세스** 열을 클릭 **Msmdsrv.exe**합니다. 서버에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 여러 개인 경우 사용할 인스턴스의 ID로 프로세스를 식별해야 합니다.  
   
-    4.  에 **연결할** 텍스트 상자에서 적절 한 프로그램 유형을 선택 되어 있는지 확인 합니다. CLR DLL에 대 한 클릭 **선택**, 클릭 **다음 코드 형식 디버깅**, 클릭 **관리**, 클릭 **확인**합니다. COM DLL에 대 한 클릭 **선택**, 클릭 **다음 코드 형식 디버깅**, 클릭 **네이티브**, 클릭 **확인**합니다.  
+    4.  에 **연결할** 텍스트 상자에서 적절 한 프로그램 유형을 선택 되어 있는지 확인 합니다. CLR dll의 경우 클릭 **선택**, 클릭 **다음 코드 형식 디버깅**, 클릭 **Managed**, 클릭 **확인**. COM DLL에 대 한 클릭 **선택**, 클릭 **다음 코드 형식 디버깅**, 클릭 **네이티브**를 클릭 한 다음 **확인**합니다.  
   
     5.  클릭 **연결**합니다.  
   

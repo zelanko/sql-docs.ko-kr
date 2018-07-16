@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 69e44adb0ee84c2831062acd7cd35432f5de5af5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c2078adeff636f11acdc86b78355c43c46a30a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329923"
 ---
 # <a name="manage-a-cdc-service"></a>CDC Service 관리
   CDC Designer 콘솔을 사용하면 CDC Service 구성 콘솔로 만든 서비스를 보고 Oracle CDC Service의 모든 인스턴스를 관리할 수 있습니다.  

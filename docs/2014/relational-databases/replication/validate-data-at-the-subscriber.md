@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Subscribers [SQL Server replication], data validation
 - replication [SQL Server], validating data
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 399bf86dc105495c3c1d16721e669fa8e3ed622f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d900cb88e99963fd57c7192d0f2934312434bc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282989"
 ---
 # <a name="validate-data-at-the-subscriber"></a>구독자에서 데이터 유효성 검사
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독자의 데이터에 대한 유효성을 검사하는 방법에 대해 설명합니다.  
@@ -316,7 +316,7 @@ ms.locfileid: "36180491"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 된 또는 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> 메서드를 호출합니다. 다음을 전달합니다.  
   
@@ -336,7 +336,7 @@ ms.locfileid: "36180491"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 된 또는 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> 메서드를 호출합니다. 원하는 <xref:Microsoft.SqlServer.Replication.ValidationOption>을 전달합니다.  
   
@@ -348,7 +348,7 @@ ms.locfileid: "36180491"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 된 또는 게시가 없습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> 메서드를 호출합니다. 구독자 이름, 유효성을 검사할 구독 데이터베이스 및 원하는 <xref:Microsoft.SqlServer.Replication.ValidationOption>을 전달합니다.  
   

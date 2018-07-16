@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.tran.f1
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 497daf077cc5fa8d0d5cd30981ff9d6aacc8d841
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c35d6683b011e340851e08fd93870dfc463bcc76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309533"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>구독, 게시자에서 배포자로의 연결 기록(트랜잭션 구독)
   **게시자에서 배포자로의 연결 기록** 탭은 상태, 기록, 정보 메시지, 모든 오류 메시지 등 로그 판독기 에이전트에 대한 자세한 정보를 표시합니다.  

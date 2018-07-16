@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 417bb9c891d4fec3393f94cf9ccbdda0bf9d4bbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166914"
 ---
 # <a name="create-the-finance-name-policy"></a>Finance Name 정책 만들기
   이 태스크에서는 Finance라는 데이터베이스를 만든 다음 모든 테이블이 **fintbl**로 시작하도록 지정하는 조건을 만듭니다. 그런 다음 Finance 데이터베이스의 테이블에 대한 명명 표준을 적용하는 정책 및 정책 범주를 만듭니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "36184468"
   
 1.  개체 탐색기에서 **관리**를 확장하고 **정책 관리**를 마우스 오른쪽 단추로 클릭한 다음 **범주 관리**를 클릭합니다.  
   
-2.  에 **정책 범주 관리** 대화 상자의 **이름**, 형식 `Finance` 선택을 취소 합니다 고 빈 상자 **데이터베이스 구독 위임**합니다. **데이터베이스 구독 위임** 을 선택하면 해당 인스턴스에 있는 모든 데이터베이스가 이 정책 범주에 속하는 정책을 구독하게 됩니다. 따라서 Finance 데이터베이스만 Finance Name 정책을 구독해야 합니다.  
+2.  에 **정책 범주 관리** 대화 상자의 **이름**, 형식 `Finance` 의 선택을 취소 확인 하 고 빈 상자 **데이터베이스 구독 위임**합니다. **데이터베이스 구독 위임** 을 선택하면 해당 인스턴스에 있는 모든 데이터베이스가 이 정책 범주에 속하는 정책을 구독하게 됩니다. 따라서 Finance 데이터베이스만 Finance Name 정책을 구독해야 합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

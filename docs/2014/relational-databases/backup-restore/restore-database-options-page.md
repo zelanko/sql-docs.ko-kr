@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b545a1919038a2615a372514664c2b58b155afe9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b8112b59c5be2e6c5ed04662d7a66170c73125e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289073"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
   **데이터베이스 복원** 대화 상자의 **옵션** 페이지를 사용하여 복원 작업의 동작 및 결과를 수정할 수 있습니다.  

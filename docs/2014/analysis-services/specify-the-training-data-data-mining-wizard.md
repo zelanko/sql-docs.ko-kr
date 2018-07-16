@@ -1,5 +1,5 @@
 ---
-title: 학습 데이터 (데이터 마이닝 마법사)를 지정 합니다. | Microsoft Docs
+title: 지정 된 학습 데이터 (데이터 마이닝 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291429"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>학습 데이터 지정(데이터 마이닝 마법사)
   **학습 데이터 지정** 페이지를 사용하여 마이닝 구조에 포함할 열을 확인할 수 있습니다. 모든 모델에서 열을 사용하지 않는 경우에도 열을 선택하여 구조에 포함할 수 있습니다. 예를 들어 마이닝 모델에서 열로 드릴스루하려는 경우 모델이 아닌 구조에 열을 포함할 수 있습니다.  
@@ -71,6 +71,6 @@ ms.locfileid: "36181879"
  [데이터 마이닝 마법사 F1 도움말 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [관련된 열 제안 &#40;데이터 마이닝 마법사&#41;](suggest-related-columns-data-mining-wizard.md)   
  [테이블 유형 지정 &#40;데이터 마이닝 마법사&#41;](specify-table-types-data-mining-wizard.md)   
- [열의 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [열 내용 및 데이터 형식 지정 &#40;데이터 마이닝 마법사&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

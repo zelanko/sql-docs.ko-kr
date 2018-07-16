@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf93e98116b42808a9ed93321fbe57f5976f8b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b72b3a0391753d7f2af138baab8f05f103937d29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308853"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio의 속성 페이지
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 모든 속성 페이지 대화 상자는 확대 및 축소 범주가 포함된 정보를 표시하는 공통된 형식을 사용합니다. 표시되는 필드는 특정 속성에 따라 달라집니다. 회색으로 표시된 속성은 읽기 전용입니다. 각 속성 페이지의 맨 위 근처에는 범주별 및 사전순 단추가 있습니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 모든 속성 페이지 대화 상자는 확대 및 축소 범주가 포함된 정보를 표시하는 공통된 형식을 사용합니다. 표시되는 필드는 특정 속성에 따라 달라집니다. 회색으로 표시된 속성은 읽기 전용입니다. 각 속성 페이지의 맨 위 근처에는 범주별 및 사전순 단추가 있습니다.  
   
  다음 표에서는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 속성 페이지 대화 상자의 공통 요소를 설명합니다.  
   

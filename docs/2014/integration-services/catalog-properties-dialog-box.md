@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7eb8991b7545b19b04b3626e741ad2fdebd12c48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 717b3d818ddd01868506a3787a698ea8f2f45433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312063"
 ---
 # <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
   카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 저장소 및 관리 지점 역할을 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "36181145"
   
 ##  <a name="open_dialog"></a> 카탈로그 속성 대화 상자 열기  
   
-1.  열기 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  
+1.  오픈 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  
   
 2.  Microsoft SQL Server 데이터베이스 엔진에 연결합니다.  
   

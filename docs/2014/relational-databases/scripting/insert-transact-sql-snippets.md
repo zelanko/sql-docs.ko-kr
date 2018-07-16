@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], snippets
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 42550fa2943c8b4599df0e1d4d8f8ad15a30ba80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 342f997acd1b9b8ea5937a24b670678d76d6eb59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311343"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL 코드 조각 삽입
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 작성할 때 시작 지점으로 사용할 수 있는 템플릿입니다.  

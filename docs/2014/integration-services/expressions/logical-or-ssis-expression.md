@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
 - logical OR (||)
@@ -17,13 +17,13 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 271de03eb56cc6195c15045dcd44637600c37ef9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f69d71354db0c658a644c0cd4068e894b3fb94fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316973"
 ---
 # <a name="-logical-or-ssis-expression"></a>||(논리적 OR)(SSIS 식)
   논리적 OR 연산을 수행합니다. 두 조건 중 하나 또는 둘 다가 TRUE이면 식도 TRUE가 됩니다.  
@@ -68,7 +68,7 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [&#124;&#40;비트 포함 OR&#41; &#40;SSIS 식&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [&#124;&#40;포괄적 비트 OR&#41; &#40;SSIS 식&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [^&#40;배타적 비트 OR&#41;&#40;SSIS 식&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
  [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  

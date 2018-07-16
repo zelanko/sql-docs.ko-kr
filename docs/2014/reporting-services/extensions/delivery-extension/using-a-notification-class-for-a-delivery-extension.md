@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a73edcf777184a566e89a8e3e58a71c3ae10ca7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cf6f9e23cfd4168c2b2b15a6011caf7f7e431b5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272419"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Notification 클래스 사용
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 클래스는 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스에 있으며 배달 확장 프로그램에서 보고서 배달을 위해 사용하는 구독 정보를 나타냅니다. <xref:Microsoft.ReportingServices.Interfaces.Notification> 클래스는 배달용 보고서 렌더링, 알림 상태 결정 및 사용자 데이터 설정 작업을 수행하는 데 사용할 수 있는 다수의 속성을 제공합니다.  

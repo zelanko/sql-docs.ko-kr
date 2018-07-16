@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292303"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
   이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 `varbinary`, `varbinary(max)`(`FILESTREAM` 포함) 또는 `image` 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "36091943"
 ##  <a name="impact"></a> 속성 검색 사용의 영향  
  하나 이상의 속성에 대한 검색을 지원하도록 전체 텍스트 인덱스를 구성하면 검색 속성 목록에 지정한 속성 수와 각 속성의 내용에 따라 인덱스 크기가 어느 정도 커집니다.  
   
- Microsoft Word의 일반적인 인덱싱하도록 테스트<sup>®</sup>, Excel<sup>®</sup>, 및 PowerPoint<sup>®</sup> 문서, 전체 텍스트 인덱스를 인덱스에 대 한 일반적인 검색 속성을 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
+ 일반적인 Microsoft Word 인덱싱하도록 테스트<sup>®</sup>, Excel<sup>®</sup>, 및 PowerPoint<sup>®</sup> 문서는 전체 텍스트 인덱스에 대 한 일반적인 검색 속성을 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
   
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functional area permissions [Master Data Services], about functional area permissions
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 839a8a894bdd290725d077fa5d34b3dec36c582b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1e3b534992f4856380e98255a53fa6b5ec26898a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300433"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>기능 영역 권한(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)의 각 기능 영역에 사용 권한을 할당할 수 있습니다. 기능 영역에는 다음 다섯 가지 영역이 있습니다.  
@@ -48,6 +48,6 @@ ms.locfileid: "36091312"
  [기능 영역 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [모델 개체 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [계층 멤버 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방식 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

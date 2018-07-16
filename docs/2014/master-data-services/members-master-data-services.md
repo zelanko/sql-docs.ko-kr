@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
 - consolidated members [Master Data Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa1613512d6114a760b984da50089e2f524a083a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 934dbb8ff42bfbb3c334131f77e33d44d8542223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307983"
 ---
 # <a name="members-master-data-services"></a>멤버(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버는 실제 마스터 데이터입니다. 예를 들어, 멤버는 Product 엔터티의 Road-150 bike이거나 Customer 엔터티의 특정 고객일 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36088192"
 -   명시적 계층에서 통합 멤버는 계층 내 다른 멤버의 부모가 되거나 자식이 될 수 있습니다.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>계층 및 컬렉션을 사용하여 멤버 구성  
- 계층과 컬렉션을 사용하여 보고 또는 분석을 위한 멤버를 그룹화할 수 있습니다. 자세한 내용은 참조 [계층 &#40;Master Data Services&#41; ](hierarchies-master-data-services.md) 및 [컬렉션 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)합니다.  
+ 계층과 컬렉션을 사용하여 보고 또는 분석을 위한 멤버를 그룹화할 수 있습니다. 자세한 내용은 [계층 &#40;Master Data Services&#41; ](hierarchies-master-data-services.md) 하 고 [컬렉션 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>멤버 예  
  다음 예의 각 멤버는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성 값으로 구성되어 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "36088192"
 |기존 멤버 또는 컬렉션을 삭제합니다.|[멤버 또는 컬렉션 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |삭제된 멤버 또는 컬렉션을 다시 활성화합니다.|[멤버 또는 컬렉션 다시 활성화 &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
 |멤버의 속성 값을 업데이트합니다.|[특성 유형 변경 &#40;MDS 추가 기능에 Excel 용&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
-|계층 내에서 멤버를 이동합니다.|[계층 구조 내에서 멤버 이동 &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
+|계층 내에서 멤버를 이동합니다.|[계층 내에서 멤버 이동 &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36088192"
   
 -   [리프 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [사용 권한 통합 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [통합 사용 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
 -   [필터 연산자 &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
   

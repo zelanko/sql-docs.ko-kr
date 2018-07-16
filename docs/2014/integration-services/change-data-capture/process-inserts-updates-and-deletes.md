@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 568ccf4eb9ccba4ed768d53cd541a6b50847160f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89e532328541cb515d6b39394f1a3a3ea0665506
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292883"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 처리
   변경 데이터를 증분 로드하는 Integration Services 패키지의 데이터 흐름에서 두 번째 태스크는 삽입, 업데이트 및 삭제를 구분하는 것입니다. 그런 다음 적절한 명령을 사용하여 대상에 해당 작업을 적용할 수 있습니다.  

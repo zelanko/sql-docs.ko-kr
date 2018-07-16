@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full recovery model [SQL Server], RESTORE example
 - piecemeal restores [SQL Server], full recovery model
 - restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ef8f416a0f4a666ab6e2ee0c02bda39325886927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c298fd3a1a96b6c8b1333df5a446896221bfefc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296633"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예제: 데이터베이스의 증분 복원(전체 복구 모델)
   증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기가 가능한 모든 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.selecttableandkeys.f1
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9a62ab620db99e06f4e971e4bfe488f1741dd510
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79d3fbb53d59c9a85ba7246e7e20179eb25085e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292803"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>차원 테이블 및 키 선택(느린 변경 차원 마법사)
   **차원 테이블 및 키 선택** 페이지를 사용하여 로드할 차원 테이블을 선택할 수 있습니다. 데이터 흐름의 열을 로드하는 열에 매핑합니다.  

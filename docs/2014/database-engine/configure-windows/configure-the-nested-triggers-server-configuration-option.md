@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c3dfba842b8d735054475c14c401b329f6c67b76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d589d6569b47ae779fe5cd7fc5afb0af071270bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263259"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>nested triggers 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 중첩 트리거 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **중첩 트리거** 옵션은 AFTER 트리거가 캐스케이드될 수 있는지 여부를 제어합니다. 즉 한 동작이 다른 트리거를 시작하고, 이 트리거가 또 다른 트리거를 시작하는 과정이 반복될 수 있는지 여부를 제어합니다. **nested triggers** 를 0으로 설정하면 AFTER 트리거를 중첩할 수 없습니다. **nested triggers** 를 1(기본값)로 설정하면 AFTER 트리거를 32 수준까지 중첩할 수 있습니다. INSTEAD OF 트리거는 이 옵션 설정에 관계없이 중첩할 수 있습니다.  

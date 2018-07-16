@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202053"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 예측 가능한 특성의 가능한 각 상태와 입력된 특성의 가능한 각 상태를 결합 하 고 학습 데이터를 사용 하 여 확률을 계산 합니다. 나중에 이러한 확률을 분류 또는 회귀에 사용하여 입력 특성을 기반으로 예측 특성의 결과를 예측할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 예측 가능한 특성의 가능한 각 상태를 사용 하 여 입력된 특성의 가능한 각 상태를 결합 하 고 학습 데이터를 사용 하 여 확률을 계산 합니다. 나중에 이러한 확률을 분류 또는 회귀에 사용하여 입력 특성을 기반으로 예측 특성의 결과를 예측할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 생성된 마이닝 모델은 입력 및 예측에 모두 사용되는 열 개수나 예측에만 사용되는 열 개수에 따라 여러 네트워크를 포함할 수 있습니다. 단일 마이닝 모델이 포함할 수 있는 네트워크 수는 마이닝 모델이 사용하는 입력 열 및 예측 가능한 열에 포함된 상태 수에 따라 달라집니다.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36184142"
 -   많은 입력과 비교적 적은 출력 간의 복잡한 관계를 분석하는 모든 예측 모델  
   
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘에서 최대 3 개의 뉴런 계층으로 구성 된 네트워크를 만듭니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 최대 3 개의 뉴런 계층으로 구성 된 네트워크를 만듭니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
   
  **입력된 계층:** 입력 뉴런은 데이터 마이닝 모델 및 해당 확률에 대 한 모든 입력된 특성 값을 정의 합니다.  
   
- **숨겨진 계층:** 숨겨진 뉴런은 입력된 뉴런에서 입력을 받아을 출력 뉴런에 출력을 제공 합니다. 숨겨진 뉴런은 입력의 다양한 확률에 가중치가 할당되는 위치입니다. 가중치는 숨겨진 뉴런에 대한 특정 입력의 관련성 또는 중요도를 설명합니다. 입력에 할당된 가중치가 클수록 해당 입력 값의 중요도도 큽니다. 가중치는 음수가 될 수 있으며 이 경우 입력이 특정 결과를 지지하는 것이 아니라 제한할 수 있음을 의미합니다.  
+ **숨겨진 계층:** 숨겨진 뉴런은 입력된 뉴런에서 입력을 수신 하 고 출력 뉴런에 출력을 제공 합니다. 숨겨진 뉴런은 입력의 다양한 확률에 가중치가 할당되는 위치입니다. 가중치는 숨겨진 뉴런에 대한 특정 입력의 관련성 또는 중요도를 설명합니다. 입력에 할당된 가중치가 클수록 해당 입력 값의 중요도도 큽니다. 가중치는 음수가 될 수 있으며 이 경우 입력이 특정 결과를 지지하는 것이 아니라 제한할 수 있음을 의미합니다.  
   
  **출력 계층:** 출력 뉴런은 데이터 마이닝 모델에 대 한 예측 가능한 특성 값을 나타냅니다.  
   

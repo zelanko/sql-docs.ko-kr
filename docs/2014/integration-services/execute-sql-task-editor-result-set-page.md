@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.resultset.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b80d8052fd4492e0da04a65aa17e55f3e960d238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57a355411ce49b472708890c51e50eec59996dd6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269439"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>SQL 실행 태스크 편집기(결과 집합 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  

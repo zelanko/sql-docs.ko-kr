@@ -17,20 +17,20 @@ helpviewer_keywords:
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd2f29f14d4af758581e368986398720dd3b5a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331293"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream 속성을 사용하여 템플릿 파일 실행
-  이 예제는 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일의 SqlXmlCommand 개체 CommandStream 속성을 사용 하 여 지정 하는 방법을 보여 줍니다. 이 응용 프로그램에서 한 FileStreamobject 명령 파일에 대 한 열리고 파일 스트림은 실행 되는 CommandStream으로 할당 됩니다.  
+  이 예제에서는 SqlXmlCommand 개체의 CommandStream 속성을 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정할 수 있습니다 하는 방법을 보여 줍니다. 이 응용 프로그램에는 FileStreamobject 명령 파일에 대해 열리고 파일 스트림은 실행 되는 CommandStream으로 할당 됩니다.  
   
- 다음 예제에서에서는 CommandType 속성이 SqlXmlCommandType.Template (아니라, TemplateFile)으로 지정 됩니다.  
+ 다음 예제에서는 CommandType 속성 SqlXmlCommandType.Template (아니라, TemplateFile)으로 지정 됩니다.  
   
  예제 XML 템플릿은 다음과 같습니다.  
   

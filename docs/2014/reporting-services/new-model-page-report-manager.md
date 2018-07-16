@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ecccc18fc4b00433c864fea03440beb5e89191d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78ce09a93d36daf74150750f3f13ce6cbdb242a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292193"
 ---
 # <a name="new-model-page-report-manager"></a>새 모델 페이지(보고서 관리자)
   이 페이지를 사용하여 공유 데이터 원본에서 기본 보고서 모델을 생성할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터 원본, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본, 그리고 Oracle 관계형 데이터 원본에서만 보고서 모델을 생성할 수 있습니다.  

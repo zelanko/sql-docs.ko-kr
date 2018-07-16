@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 61
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b619d8e97c18d002c5e5588305e4889234db49c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285239"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 통합되어 있으므로 메모리 최적화 테이블과 기존의 디스크 기반 테이블을 모두 같은 데이터베이스에 포함할 수 있습니다. 그러나 메모리 최적화 테이블의 저장소 구조는 디스크 기반 테이블과는 다릅니다.  

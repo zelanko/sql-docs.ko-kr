@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSourceViewBinding data type
 ms.assetid: 1f08e2d8-b279-4181-9257-e56f9fcbd9bf
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68b2a967fc57187d343a8cfd06e5706f474ab90d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d97c0c08a686ef364f321dc466c95cc5da3a4f54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332693"
 ---
 # <a name="datasourceviewbinding-data-type-assl"></a>DataSourceViewBinding 데이터 형식(ASSL)
   데이터 원본 뷰와 부모 요소 간의 바인딩을 나타내는 파생 데이터 형식을 정의합니다.  
@@ -61,13 +61,13 @@ ms.locfileid: "36185506"
 |파생 요소|참조 [바인딩](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 자세한 내용은 `Binding` 유형의 Analysis Services Scripting Language (ASSL) 개체 테이블을 포함 하 여는 `Binding` 유형과의 상속 계층 구조 `Binding` 형식 참조 [바인딩 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md)합니다.  
+ 에 대 한 추가 정보에 대 한는 `Binding` 형식, Analysis Services Scripting Language (ASSL) 개체 테이블을 비롯 한는 `Binding` 형식과 상속 계층 `Binding` 참조 하십시오 [바인딩 데이터 형식 &#40;ASSL&#41;](binding-data-type-assl.md)합니다.  
   
- ASSL의 데이터 바인딩에 대 한 개요를 참조 하세요. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
+ ASSL의 데이터 바인딩 개요를 보려면 [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.DataSourceViewBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

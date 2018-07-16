@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,34 +18,34 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307995"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 실행
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터 원본 간에 데이터를 복사하고 기본 패키지를 구성하는 가장 간단한 방법을 제공합니다. 마법사에 대 한 자세한 내용은 참조 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터 원본 간에 데이터를 복사하고 기본 패키지를 구성하는 가장 간단한 방법을 제공합니다. 마법사에 대 한 자세한 내용은 참조 하세요. [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다.  
   
- Microsoft Excel 스프레드시트에 SQL Server 데이터베이스에서 데이터를 내보내는 패키지를 만드는 SQL Server 가져오기 및 내보내기 마법사를 사용 하는 방법을 보여 주는 비디오를 참조 하십시오. [Excel (SQL Server 비디오) SQL Server 데이터 내보내기](http://go.microsoft.com/fwlink/?LinkId=131024)합니다.  
+ Microsoft Excel 스프레드시트에 SQL Server 데이터베이스에서 데이터를 내보내는 패키지를 만들려면 SQL Server 가져오기 및 내보내기 마법사를 사용 하는 방법을 보여 주는 동영상을 참조 하세요 [SQL Server Data to Excel (SQL Server 비디오) 내보내기](http://go.microsoft.com/fwlink/?LinkId=131024)합니다.  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 시작하려면  
   
--   에 **시작** 메뉴에서 **모든 프로그램**, 가리킨**Microsoft SQL Server** , 클릭 하 고 **데이터 가져오기 및 내보내기**합니다.  
+-   에 **시작** 메뉴에서 **모든 프로그램**를 가리킨**Microsoft SQL Server** 를 클릭 하 고 **데이터 가져오기 및 내보내기**.  
   
      —또는—  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 마우스 오른쪽 단추로 클릭는 **SSIS 패키지** 폴더를 마우스 클릭 한 다음 **SSISImport 및 내보내기 마법사**합니다.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 마우스 오른쪽 단추로 클릭 합니다 **SSIS 패키지** 폴더를 마우스 클릭 **SSISImport 및 내보내기 마법사**합니다.  
   
      —또는—  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **프로젝트** 메뉴를 클릭 하 여 **SSISImport 및 내보내기 마법사**합니다.  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 **프로젝트** 메뉴에서 클릭 **SSISImport 및 내보내기 마법사**합니다.  
   
      —또는—  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결 된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 유형, 데이터베이스 확장 하 고 데이터베이스를 마우스 오른쪽 단추로 가리킨 **작업**, 클릭 하 고 **데이터 가져오기** 또는 **데이터내보내기**.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 유형, 데이터베이스, 데이터베이스를 마우스 오른쪽 단추로 클릭, 가리킨 **작업**, 클릭 하 고 **데이터 가져오기** 또는 **데이터내보내기**.  
   
      —또는—  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36185882"
     > [!NOTE]  
     >  Oracle용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자는 Oracle BLOB, CLOB, NCLOB, BFILE 및 UROWID 데이터 형식을 지원하지 않습니다. 따라서 OLE DB 원본은 이러한 데이터 형식의 열이 포함된 테이블의 데이터를 추출할 수 없습니다.  
   
-     사용 가능한 데이터 대상에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자, OLE DB 공급자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access 및 플랫 파일 대상입니다.  
+     사용 가능한 데이터 대상을 포함 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자, OLE DB 공급자, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access 및 플랫 파일 대상입니다.  
   
 3.  선택한 대상 유형에 따라 옵션을 설정합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36185882"
   
          원본이 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자인 경우 쿼리 결과를 복사하는 옵션을 사용하여 DBCommand 문자열을 쿼리로 제공할 수도 있습니다.  
   
-         원본 데이터가 뷰이면 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 자동으로 변환 보기는 대상의 테이블입니다.  
+         원본 데이터가 뷰일 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상의 테이블 뷰 정책은 가져오기 및 내보내기 마법사.  
   
     -   대상 테이블을 삭제한 다음 다시 만들지 여부와 ID 삽입을 사용할지 여부를 나타냅니다.  
   
@@ -121,14 +121,14 @@ ms.locfileid: "36185882"
   
 6.  패키지를 저장하고 실행합니다.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 명령 프롬프트에서 마법사를 시작한 경우 패키지를 즉시 실행할 수 있습니다. 패키지를 저장할 수도 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스 또는 파일 시스템에 있습니다. 에 대 한 자세한 내용은 **msdb** 참조, 데이터베이스 [패키지 관리 &#40;SSIS 서비스&#41;](../service/package-management-ssis-service.md)합니다.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 명령 프롬프트에서 마법사를 시작한 경우 패키지를 즉시 실행할 수 있습니다. 패키지를 저장할 수도 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스 또는 파일 시스템입니다. 에 대 한 자세한 내용은 합니다 **msdb** 데이터베이스를 참조 하십시오 [패키지 관리 &#40;SSIS 서비스&#41;](../service/package-management-ssis-service.md).  
   
-     패키지를 저장할 때 패키지 보호 수준을 설정할 수 있으며 설정한 보호 수준에서 암호가 사용되는 경우 암호를 제공할 수 있습니다. 패키지 보호 수준에 대 한 자세한 내용은 참조 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)합니다.  
+     패키지를 저장할 때 패키지 보호 수준을 설정할 수 있으며 설정한 보호 수준에서 암호가 사용되는 경우 암호를 제공할 수 있습니다. 패키지 보호 수준에 대 한 자세한 내용은 참조 하세요. [Sensitive Data in Packages에 대 한 액세스 제어](../security/access-control-for-sensitive-data-in-packages.md)입니다.  
   
-     마법사가 시작 하는 경우는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 마법사에서 패키지를 실행할 수 없습니다. 대신 마법사를 시작한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 패키지가 추가됩니다. 패키지를 실행 한 다음 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
+     마법사가 시작 하는 경우는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 마법사에서 패키지를 실행할 수 없습니다. 대신 마법사를 시작한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 패키지가 추가됩니다. 패키지를 실행할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 마법사로 만든 패키지를 저장 하는 옵션이 제공 되지 않습니다.  
+    >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 마법사에서 만든 패키지를 저장 하는 옵션이 제공 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

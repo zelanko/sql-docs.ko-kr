@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1f548972d99242a4bc3d3423eeed748de2c31704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 209b6b64e200503144fb47e80d2f4e7c783e1db5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300483"
 ---
 # <a name="merge-join-transformation-editor"></a>병합 조인 변환 편집기
   **병합 조인 변환 편집기** 대화 상자를 사용하여 조인 유형, 조인 열 및 조인으로 결합된 두 입력을 병합하기 위한 출력 열을 지정할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "36180836"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [병합 및 병합 조인 변환을 위한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [병합 조인 변환을 사용 하 여 데이터 집합을 확장 합니다.](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [병합 조인 변환을 사용 하 여 데이터 집합 확장](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [병합 변환](data-flow/transformations/merge-transformation.md)   
  [UNION ALL 변환](data-flow/transformations/union-all-transformation.md)  
   

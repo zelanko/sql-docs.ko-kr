@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.approle.general.f1
 helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 571fd7a15c12caa6e6ed9cab7355db8a636319ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 31d412581ef160635800d1952fdcd4b19bf05f69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270439"
 ---
 # <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 응용 프로그램 역할을 만드는 방법에 대해 설명합니다. 응용 프로그램 역할은 특정 응용 프로그램을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 응용 프로그램 역할에 사용자가 없으므로 **응용 프로그램 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
@@ -73,7 +72,8 @@ ms.locfileid: "36182783"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **응용 프로그램 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
+ 
+  **응용 프로그램 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

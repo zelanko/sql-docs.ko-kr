@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimensions element
 ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da68ed1367dd1fe2a212b76f5e0261614ca4dc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff15cecd5e5d4451a580d8ee73922dc4ab05364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241613"
 ---
 # <a name="dimensions-element-assl"></a>Dimensions 요소(ASSL)
   부모 요소와 연결된 차원의 컬렉션을 포함합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "36186641"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[집계](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AggregationInstance](../objects/aggregationinstance-element-assl.md), [큐브](../objects/cube-element-assl.md), [데이터베이스](../objects/database-element-assl.md), [ MeasureGroup](../objects/group-element-assl.md), [관점](../objects/perspective-element-assl.md)|  
+|부모 요소|[집계](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md)를 [AggregationInstance](../objects/aggregationinstance-element-assl.md)를 [큐브](../objects/cube-element-assl.md)를 [데이터베이스](../objects/database-element-assl.md), [ MeasureGroup](../objects/group-element-assl.md), [관점](../objects/perspective-element-assl.md)|  
 |자식 요소|[Dimension](../objects/dimension-element-assl.md)|  
   
 ## <a name="remarks"></a>Remarks  

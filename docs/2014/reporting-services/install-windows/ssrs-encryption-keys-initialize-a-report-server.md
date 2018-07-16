@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -20,20 +20,20 @@ ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 70953e800019fd91afde599daa060abf3beda581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec18c65310311e51baf5c3d8a2d6939d4cac5f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232593"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>보고서 서버 초기화(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 초기화된 서버는 보고서 서버 데이터베이스의 데이터를 암호화하고 해독할 수 있는 서버입니다. 보고서 서버 작업을 위해서는 초기화가 필요합니다. 초기화는 보고서 서버 서비스가 처음 시작될 때 발생합니다. 또한 보고서 서버를 기존 배포에 참여시키거나 복구 프로세스의 일환으로 키를 수동으로 다시 만들 때도 발생합니다. 암호화 키를 사용하는 방법과 이유에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md) 및 [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)을 참조하세요.  
   
  암호화 키는 부분적으로 보고서 서버 서비스의 프로필 정보를 기반으로 합니다. 보고서 서버 서비스를 실행하는 데 사용되는 사용자 ID를 변경한 경우 그에 맞게 키도 업데이트해야 합니다. Reporting Services 구성 도구를 사용하여 ID를 변경한 경우에는 이 단계가 자동으로 수행됩니다.  
   
- 보고서 서버를 반환 하는 경우 초기화에 실패 하면 몇 가지 이유로 `RSReportServerNotActivated` 사용자 및 서비스 요청에 대 한 응답에 오류가 있습니다. 이 경우 시스템 또는 서버 구성과 관련된 문제를 해결해야 할 수 있습니다. 자세한 내용은 [Troubleshoot issues and errors with Reporting Services(Reporting Services 문제 및 오류 해결)](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(TechNet Wiki의 http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx))을 참조하세요.  
+ 보고서 서버에서 반환 하는 경우 초기화에 실패 하면 어떤 이유로 `RSReportServerNotActivated` 사용자 및 서비스 요청에 대 한 응답에 오류가 있습니다. 이 경우 시스템 또는 서버 구성과 관련된 문제를 해결해야 할 수 있습니다. 자세한 내용은 [Troubleshoot issues and errors with Reporting Services(Reporting Services 문제 및 오류 해결)](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)(TechNet Wiki의 http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx))을 참조하세요.  
   
 ## <a name="overview-of-the-initialization-process"></a>초기화 프로세스의 개요  
  초기화 프로세스가 진행되면 암호화에 사용되는 대칭 키가 생성 및 저장됩니다. 대칭 키는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 암호화 서비스에 의해 생성되며 그런 다음 데이터 암호화 및 암호 해독을 위해 보고서 서버 서비스에 사용됩니다. 대칭 키는 비대칭 키와 함께 암호화됩니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "36182968"
  보고서 서버는 설치 식별자와 공개 키가 일치할 경우에만 초기화됩니다. 일치가 성공하면 해독 가능한 암호화를 허용하는 대칭 키가 만들어집니다. 일치가 실패하면 보고서 서버는 비활성화됩니다. 이 경우 백업 키를 적용하도록 요청되며 백업 키가 사용 불가능하거나 유효하지 않으면 암호화된 데이터를 삭제하도록 요청될 수 있습니다. 보고서 서버에서 사용하는 암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버를 프로그래밍 방식으로 초기화할 수도 있습니다. 자세한 내용은 참조 [Reporting Services WMI 공급자 액세스](../tools/access-the-reporting-services-wmi-provider.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버를 프로그래밍 방식으로 초기화할 수도 있습니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../tools/access-the-reporting-services-wmi-provider.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>보고서 서버 초기화를 확인하는 방법  
  보고서 서버 초기화를 확인하려면 명령 창에 **http://\<servername>/reportserver**을 입력하여 보고서 서버 웹 서비스를 ping합니다. `RSReportServerNotActivated` 오류가 발생하면 초기화가 실패한 것입니다.  

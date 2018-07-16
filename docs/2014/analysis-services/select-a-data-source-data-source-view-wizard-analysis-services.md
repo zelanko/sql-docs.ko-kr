@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98fd253da693a23ccbda57c605edb9f59dcc1540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a7db15f7dcf8e963e9df38dbda0dd05aa208b55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291419"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>데이터 원본 선택(데이터 원본 뷰 마법사)(Analysis Services)
   **데이터 원본 선택** 페이지를 사용하여 데이터 원본 뷰에 대한 데이터 원본을 선택할 수 있습니다.  

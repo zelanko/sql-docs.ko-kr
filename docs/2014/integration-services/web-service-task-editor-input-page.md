@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.input.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8f458f4a2898915102ab2a05b04fb7ba223c5e30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6322a234ea1653f578f60b36a84b7e2c71af169
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264959"
 ---
 # <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "36183053"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [웹 서비스 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [웹 서비스 태스크 편집기 &#40;페이지 출력&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [웹 서비스 태스크 편집기 &#40;페이지를 출력 합니다.&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

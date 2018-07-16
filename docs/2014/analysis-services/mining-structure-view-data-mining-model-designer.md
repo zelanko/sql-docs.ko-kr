@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.f1
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d032e92d3ca08cd666026a5244bcf9794ef4caed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 105b4e33e916dda945e3cec77d0c0ca06b09b3c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303073"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>마이닝 구조 뷰(데이터 마이닝 모델 디자이너)
   **마이닝 구조** 뷰를 사용하여 마이닝 구조를 수정하고 마이닝 구조 및 연결된 모든 마이닝 모델을 처리할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "36091837"
   
 -   [열 선택 대화 상자 &#40;마이닝 구조 뷰&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   
--   [중첩된 테이블 키 열 대화 상자를 선택 &#40;마이닝 구조 뷰&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
+-   [중첩된 테이블 키 열 대화 상자를 선택 합니다. &#40;마이닝 구조 뷰&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-models-view-data-mining-model-designer.md)   

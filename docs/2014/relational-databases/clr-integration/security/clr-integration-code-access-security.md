@@ -1,13 +1,11 @@
 ---
-title: CLR Integration Code Access Security | Microsoft Docs
+title: CLR 통합 코드 액세스 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ccb03b45b27150c00a5620f772afc764dc6ff0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36089330"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349885"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
   CLR(공용 언어 런타임)은 관리 코드에 대해 코드 액세스 보안이라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 "코드 액세스 보안" 섹션을 참조하십시오.  
@@ -40,12 +38,12 @@ ms.locfileid: "36089330"
   
 -   호스트 정책: CLR 호스트(이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 의해 설정되는 정책입니다. 이 정책은 해당 호스트에서 실행되는 관리 코드에 적용됩니다.  
   
- CLR에서 지원되는 코드 액세스 보안 메커니즘은 런타임에서 완전히 신뢰할 수 있는 코드와 부분적으로 신뢰할 수 있는 코드를 모두 호스팅할 수 있다는 가정을 기반으로 합니다. CLR 코드 액세스 보안에 의해 보호 되는 리소스는 일반적으로 래핑됩니다 관리 되는 응용 프로그램 프로그래밍 인터페이스에 의해 리소스에 대 한 액세스를 허용 하기 전에 해당 requirethe 해당 권한은 합니다. 사용 권한을 demandfor 호출 스택의 어셈블리 수준) (에서 모든 호출자가 해당 리소스 사용 권한을 하는 경우에 충족 됩니다.  
+ CLR에서 지원되는 코드 액세스 보안 메커니즘은 런타임에서 완전히 신뢰할 수 있는 코드와 부분적으로 신뢰할 수 있는 코드를 모두 호스팅할 수 있다는 가정을 기반으로 합니다. CLR 코드 액세스 보안으로 보호 되는 리소스는 일반적으로 래핑됩니다 프로그래밍 인터페이스는 관리 되는 응용 프로그램에서 리소스에 대 한 액세스를 허용 하기 전에 해당 requirethe 해당 권한은. 사용 권한을 demandfor 호출 스택의 어셈블리 수준) (에서 모든 호출자가 해당 리소스 사용 권한을 하는 경우에 충족 됩니다.  
   
- 내부에서 실행할 때 관리 코드에 부여 된 코드 액세스 보안 사용 권한 집합이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로드 된 어셈블리에 사용 권한 집합이 부여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 최종 사용자 코드에 부여 하는 사용 권한 집합을 제한 될 수 있습니다 하 여 더욱는 사용자 및 컴퓨터 수준 정책입니다.  
+ 내에서 실행 되는 경우 관리 코드에 부여 되는 코드 액세스 보안 사용 권한 집합이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로드 된 어셈블리에 사용 권한 집합을 부여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 최종 사용자 코드에 부여 하는 사용 권한 집합이 제한 될 수 있습니다 별로 합니다 사용자 및 컴퓨터 수준 정책  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 호스트 정책 수준 권한 집합  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 정책 수준에서 어셈블리에 부여하는 코드 액세스 보안 권한 집합은 어셈블리를 만들 때 지정된 권한 집합에 의해 결정됩니다. 세 가지 사용 권한 집합이: `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` (사용 하 여 지정 된 **PERMISSION_SET** 옵션의[CREATE ASSEMBLY &#40;Transact SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 정책 수준에서 어셈블리에 부여하는 코드 액세스 보안 권한 집합은 어셈블리를 만들 때 지정된 권한 집합에 의해 결정됩니다. 세 가지 권한 집합을 가지: `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` (사용 하 여 지정 된 **PERMISSION_SET** 옵션을[CREATE ASSEMBLY &#40;Transact SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
   
@@ -66,14 +64,14 @@ ms.locfileid: "36089330"
 |`SqlClientPermission`|`Context connection = true`, `context connection = yes`: 컨텍스트 연결만 사용할 수 있으며 연결 문자열은 "context connection=true" 또는 "context connection=yes" 값만 지정할 수 있습니다.<br /><br /> **AllowBlankPassword = false:** 빈 암호는 허용 되지 않습니다.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
- EXTERNAL_ACCESS 어셈블리와 동일한 권한이 있으며 `SAFE` 어셈블리, 레지스트리 파일, 네트워크, 환경 변수 등의 외부 시스템 리소스에 액세스할 수 있는 권한을 추가로 제공 합니다.  
+ EXTERNAL_ACCESS 어셈블리와 동일한 권한을 갖습니다 `SAFE` 어셈블리 파일, 네트워크, 환경 변수 및 레지스트리와 같은 외부 시스템 리소스에 액세스 하는 추가 기능이 있습니다.  
   
  또한 `EXTERNAL_ACCESS` 어셈블리는 다음과 같은 사용 권한 및 값을 갖습니다.  
   
 |사용 권한|값/설명|  
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:` 분산된 트랜잭션이 허용 됩니다.|  
-|`DNSPermission`|`Unrestricted:` 도메인 이름 서버에서 정보를 요청할 수 있는 권한입니다.|  
+|`DNSPermission`|`Unrestricted:` 도메인 이름 서버에서 정보를 요청 하는 권한입니다.|  
 |`EnvironmentPermission`|`Unrestricted:` 시스템 및 사용자 환경 변수에 대한 모든 액세스 권한이 허용됩니다.|  
 |`EventLogPermission`|`Administer:` 이벤트 원본 만들기, 기존 로그 읽기, 이벤트 원본 또는 로그 삭제, 엔트리에 응답, 이벤트 로그 지우기, 이벤트 수신, 모든 이벤트 로그 컬렉션에 액세스 등의 동작이 허용됩니다.|  
 |`FileIOPermission`|`Unrestricted:` 파일 및 폴더에 대한 모든 액세스 권한이 허용됩니다.|  
@@ -93,7 +91,7 @@ ms.locfileid: "36089330"
  `UNSAFE` 어셈블리에는 `FullTrust`가 부여됩니다.  
   
 > [!IMPORTANT]  
->  `SAFE`는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 외부 리소스에 액세스하지 않고 계산 및 데이터 관리 태스크를 수행하는 어셈블리에 권장되는 사용 권한 설정입니다. `EXTERNAL_ACCESS` 어셈블리는 기본적으로 실행 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정, 실행할 수 있는 권한이 `EXTERNAL_ACCESS` 서비스 계정으로 실행 하도록 신뢰할 수 있는 로그인에만 부여 해야 합니다. 보안 측면에서 `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리는 같습니다. 그러나 `EXTERNAL_ACCESS` 어셈블리는 `UNSAFE` 어셈블리에 없는 다양한 안정성 및 견고성 보호 기능을 제공합니다. 지정 `UNSAFE` 하면에 대해 잘못 된 작업을 수행 하는 어셈블리의 코드가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. CLR 어셈블리를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)합니다.  
+>  `SAFE`는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 외부 리소스에 액세스하지 않고 계산 및 데이터 관리 태스크를 수행하는 어셈블리에 권장되는 사용 권한 설정입니다. `EXTERNAL_ACCESS` 어셈블리는 기본적으로 실행 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정으로 실행할 수 있는 권한이 `EXTERNAL_ACCESS` 서비스 계정으로 실행 하도록 신뢰할 수 있는 로그인에만 부여 해야 합니다. 보안 측면에서 `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리는 같습니다. 그러나 `EXTERNAL_ACCESS` 어셈블리는 `UNSAFE` 어셈블리에 없는 다양한 안정성 및 견고성 보호 기능을 제공합니다. 지정 `UNSAFE` 에 대해 잘못 된 작업을 수행 하는 어셈블리에 코드를 허용 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. CLR 어셈블리를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)합니다.  
   
 ## <a name="accessing-external-resources"></a>외부 리소스 액세스  
  UDT(사용자 정의 형식), 저장 프로시저 또는 다른 유형의 구문 어셈블리가 `SAFE` 권한 집합에 등록되어 있으면 구문에서 실행되는 관리 코드가 외부 리소스에 액세스할 수 없습니다. 하지만 `EXTERNAL_ACCESS` 또는 `UNSAFE` 권한 집합이 지정된 경우 관리 코드가 외부 리소스에 액세스하려고 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 다음 규칙을 적용합니다.  

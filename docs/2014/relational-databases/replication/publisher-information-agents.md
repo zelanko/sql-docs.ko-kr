@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 21fcf883455c738ecb042d0b6bfc5d20cef5ed4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 84403d87fac40506b244931fd967504d2a18e78c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266801"
 ---
 # <a name="publisher-information-agents"></a>게시자 정보, 에이전트
   **에이전트** 탭에는 게시자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  

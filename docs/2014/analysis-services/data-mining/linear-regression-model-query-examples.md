@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303183"
 ---
 # <a name="linear-regression-model-query-examples"></a>선형 회귀 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 내용 쿼리는 회귀 수식에 대한 추가 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 모델에 맞는지 여부를 알려 줍니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
 |9(통계)|  
 |11(절편)|  
   
- 회귀 모델에 대 한 값 형식의 각 의미에 대 한 자세한 내용은 참조 [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)합니다.  
+ 회귀 모델의 각 값 형식의 의미에 대 한 자세한 내용은 참조 [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)합니다.  
   
  [맨 위로 이동](#bkmk_top)  
   
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [맨 위로 이동](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 단일 쿼리를 사용하여 수입 예측  
- 회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 적절 한 회귀 모델을 선택 하 여 다음 DMX 쿼리를 작성할 수는 예를 들어 선택 **단일 쿼리**를 입력 하 고 다음 `20` 에 대 한 값으로 **Age**합니다.  
+ 회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 예를 들어 적절 한 회귀 모델을 선택 하 여 다음과 같은 DMX 쿼리를 빌드할 수 있습니다 선택 **단일 쿼리**를 입력 한 다음 `20` 값으로 **Age**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

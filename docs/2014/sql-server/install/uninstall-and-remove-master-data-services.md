@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e957a369be8e87821d347194b6a9cf9eaedb8373
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95b4653b59ec9bce4b3efd9dc3f26eca9ecc0a0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325503"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Master Data Services 제거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능을 제거하려면 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)의 단계를 따르고 **기능 선택** 페이지에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거할 기능으로 지정합니다. 제거 프로세스는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 폴더와 파일을 제거하고 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 로컬 컴퓨터에서 제거합니다.  

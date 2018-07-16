@@ -1,5 +1,5 @@
 ---
-title: 삽입 결과 대화 상자 (Visual Database Tools)에 대 한 대상 테이블을 선택 합니다. | Microsoft Docs
+title: Insert 결과 대화 상자 (Visual Database Tools)의 대상 테이블 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d752d5ad48e7824c7fee6f78955e266a6cfffb3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e382cce39c4301b591c73eb74e0a6159f400662b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189560"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>결과 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 INSERT RESULTS 쿼리의 결과로 데이터 행을 추가할 테이블을 지정할 수 있습니다. 이 대화 상자는 INSERT RESULTS 쿼리를 시작할 때 나타납니다.  

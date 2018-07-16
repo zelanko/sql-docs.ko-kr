@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b8af5e825fb72ce47c7612b0c1c56af9bce4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287299"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
   FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 응용 프로그램은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
@@ -32,12 +31,12 @@ ms.locfileid: "36182831"
   
  FILESTREAM은 파일 데이터를 캐시하기 위해 NT 시스템 캐시를 사용합니다. 이를 통해 FILESTREAM 데이터가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 미치는 영향을 줄일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀이 사용되지 않으므로 이 메모리는 쿼리 처리용으로 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하거나 업그레이드할 때 FILESTREAM이 자동으로 사용하도록 설정되지는 않습니다. SQL Server 구성 관리자 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 FILESTREAM을 사용하도록 설정해야 합니다. FILESTREAM을 사용하려면 특수 파일 그룹 유형을 포함하도록 데이터베이스를 만들거나 수정해야 합니다. 그런 다음, 만들거나 포함 되도록 테이블을 수정 된 `varbinary(max)` FILESTREAM 특성이 있는 열입니다. 이러한 태스크를 완료한 후에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 Win32를 사용하여 FILESTREAM 데이터를 관리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하거나 업그레이드할 때 FILESTREAM이 자동으로 사용하도록 설정되지는 않습니다. SQL Server 구성 관리자 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 FILESTREAM을 사용하도록 설정해야 합니다. FILESTREAM을 사용하려면 특수 파일 그룹 유형을 포함하도록 데이터베이스를 만들거나 수정해야 합니다. 그런 다음 만들거나 포함 되도록 테이블을 수정는 `varbinary(max)` FILESTREAM 특성이 있는 열입니다. 이러한 태스크를 완료한 후에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 Win32를 사용하여 FILESTREAM 데이터를 관리할 수 있습니다.  
   
  FILESTREAM을 설치 및 사용하는 방법은 [관련 태스크](#reltasks)목록을 참조하십시오.  
   
 ##  <a name="whentouse"></a> FILESTREAM을 사용 하는 경우  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Blob 표준 수 `varbinary(max)` 테이블 또는 FILESTREAM에 데이터를 저장 하는 데이터 `varbinary(max)` 파일 시스템에 데이터를 저장 하는 개체입니다. 데이터베이스 저장소를 사용해야 할지 또는 파일 시스템 저장소를 사용해야 할지 여부는 데이터의 크기와 사용으로 결정됩니다. 다음 조건에 해당될 경우 FILESTREAM을 사용해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Blob 표준 수 `varbinary(max)` 테이블에 FILESTREAM 데이터를 저장 하는 데이터 `varbinary(max)` 파일 시스템에서 데이터를 저장 하는 개체입니다. 데이터베이스 저장소를 사용해야 할지 또는 파일 시스템 저장소를 사용해야 할지 여부는 데이터의 크기와 사용으로 결정됩니다. 다음 조건에 해당될 경우 FILESTREAM을 사용해야 합니다.  
   
 -   저장되는 개체가 평균적으로 1MB를 초과할 경우  
   
@@ -49,7 +48,7 @@ ms.locfileid: "36182831"
   
   
 ##  <a name="storage"></a> FILESTREAM 저장소  
- FILESTREAM 저장소로 구현 됩니다는 `varbinary(max)` 열 파일 시스템에는 데이터가 Blob으로 저장 됩니다. BLOB의 크기는 파일 시스템의 볼륨 크기로만 제한됩니다. 표준 `varbinary(max)` 2 GB 파일 크기의 제한은 파일 시스템에 저장 된 Blob에 적용 되지 않습니다.  
+ FILESTREAM 저장소로 구현 되는 `varbinary(max)` 파일 시스템에 데이터를 Blob로 저장 되는 열입니다. BLOB의 크기는 파일 시스템의 볼륨 크기로만 제한됩니다. 표준 `varbinary(max)` 2 GB 파일 크기 제한이 파일 시스템에 저장 된 Blob에 적용 되지 않습니다.  
   
  열 파일 시스템에 데이터를 저장 하도록 지정 하려면 FILESTREAM 특성에 지정 된 `varbinary(max)` 열입니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 해당 열의 모든 데이터를 데이터베이스 파일이 아닌 파일 시스템에 저장하게 됩니다.  
   

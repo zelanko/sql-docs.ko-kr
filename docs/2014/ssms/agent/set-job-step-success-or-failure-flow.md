@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, action flow logic
 - successful jobs [SQL Server]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], action flow logic
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 86631cf6e2de0028dc95ed41938db92fd3645e9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3d8b962fc071894d979bc3d46897c4ead74e0eb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234373"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들 때 작업 실행 중에 오류가 발생할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수행해야 할 동작을 지정할 수 있습니다. 각 작업 단계의 성공이나 실패에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수행해야 할 동작을 결정합니다. 그런 후에 다음 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 통해 작업 단계 동작 흐름 논리를 구성합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 만들 때 작업 실행 중에 오류가 발생할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수행해야 할 동작을 지정할 수 있습니다. 각 작업 단계의 성공이나 실패에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수행해야 할 동작을 결정합니다. 그런 후에 다음 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 통해 작업 단계 동작 흐름 논리를 구성합니다.  
   
 -   **시작하기 전 주의 사항:**  
   
@@ -96,11 +96,11 @@ ms.locfileid: "36182950"
     GO  
     ```  
   
- 자세한 내용은 참조 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)합니다.  
+ 자세한 내용은 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)합니다.  
   
-##  <a name="SMO"></a> SQL Server Management Objects를 사용 하 여  
+##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업 단계 성공 또는 실패 흐름을 설정하려면**  
   
- 사용 하 여 `JobStep` Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
+ 사용 된 `JobStep` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
   

@@ -1,29 +1,28 @@
 ---
-title: 자동 장애 조치 (Always On 가용성 그룹)의 상태 제어 유연한 장애 조치 정책 구성 | Microsoft Docs
+title: 자동 장애 조치 (Always On 가용성 그룹)에 대 한 상태 제어 유연한 장애 조치 정책 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 22
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c789865b92b628c30e0f634e529027ad26de23eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4868c07427230de655fc8a1742458f4b4c72cfbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193983"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>유연한 장애 조치(failover) 정책을 구성하여 자동 장애 조치(failover)의 상태 제어(Always On 가용성 그룹)
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 유연한 장애 조치(failover) 정책을 구성하는 방법에 대해 설명합니다. 유연한 장애 조치(failover) 정책을 통해 가용성 그룹에 대해 자동 장애 조치를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자동 장애 조치를 트리거하는 오류 상태 및 상태 확인 빈도를 변경하여 자동 장애 조치가 수행될 가능성을 높이거나 줄임으로써 고가용성에 대한 SLA를 지원할 수 있습니다.  
@@ -98,7 +97,7 @@ ms.locfileid: "36185253"
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityGroup` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityGroup` cmdlet을 사용합니다.  
   
-    -   장애 조치 상태 수준을 설정 하려면는 `FailureConditionLevel` *수준* 매개 변수, 위치, *수준* 다음 값 중 하나입니다.  
+    -   장애 조치 상태 수준을 설정 하려면 사용 합니다 `FailureConditionLevel` *수준* 매개 변수, 위치, *수준* 는 다음 값 중 하나:  
   
         |값|Level|자동 장애 조치가 시작되는 경우|  
         |-----------|-----------|-------------------------------------------|  
@@ -118,7 +117,7 @@ ms.locfileid: "36185253"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   상태 확인 제한 시간 임계값을 설정 하려면는 `HealthCheckTimeout` *n* 매개 변수, 위치, *n* 은 15000 밀리초 (15 초)부터 4294967295 밀리초 사이의 정수입니다. 기본값은 30000밀리초(30초)입니다.  
+    -   상태 확인 제한 시간 임계값을 설정 하려면 사용 합니다 `HealthCheckTimeout` *n* 매개 변수, 위치, *n* 은 15000 밀리초 (15 초)부터 4294967295 밀리초 사이의 정수입니다. 기본값은 30000밀리초(30초)입니다.  
   
          예를 들어 다음 명령은 기존 가용성 그룹 `AG1`의 상태 확인 제한 시간 임계값을 120,000밀리초(2분)로 변경합니다.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36185253"
         ```  
   
 > [!NOTE]  
->  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+>  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   

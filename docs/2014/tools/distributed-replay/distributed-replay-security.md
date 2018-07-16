@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay 보안 | Microsoft Docs
+title: Distributed Replay Security | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301283"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
   
 ## <a name="user-and-service-accounts"></a>사용자 및 서비스 계정  
  다음 표에서는 Distributed Replay에 사용되는 계정에 대해 설명합니다. Distributed Replay를 설치한 후 컨트롤러 및 클라이언트 서비스 계정이 실행될 보안 주체를 할당해야 합니다. 따라서 Distributed Replay 기능을 설치하기 전에 해당 도메인 사용자 계정을 구성하는 것이 좋습니다.  
@@ -51,9 +51,9 @@ ms.locfileid: "36092589"
   
 1.  운영 체제에 따라 다음 중 하나를 수행합니다.  
   
-    -   클릭 **시작**, 형식 `services.msc` 에 **검색** 상자, 한 다음 ENTER 키를 누릅니다.  
+    -   클릭 **시작**, 형식 `services.msc` 에 **검색** 상자의 및 다음 ENTER를 누릅니다.  
   
-    -   클릭 **시작**, 클릭 **실행**, 형식 `services.msc`, 한 다음 ENTER 키를 누릅니다.  
+    -   클릭 **시작**, 클릭 **실행**, 형식 `services.msc`, 한 다음 ENTER를 누릅니다.  
   
 2.  **서비스** 대화 상자에서 구성할 서비스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   

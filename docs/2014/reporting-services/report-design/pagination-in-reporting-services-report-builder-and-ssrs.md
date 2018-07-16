@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188040"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services의 페이지 매김(보고서 작성기 및 SSRS)
-  페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. 페이지 매김을 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 볼 보고서를 배달 하는 데 사용 된 렌더링 확장 프로그램에 따라 달라 집니다. 보고서 서버에서 보고서를 실행하는 경우 보고서에는 HTML 렌더러가 사용됩니다. HTML은 페이지 매김과 관련하여 일련의 특별한 규칙을 따릅니다. 예를 들어 동일한 보고서를 PDF로 내보내면 PDF 렌더러가 사용되고 다른 규칙 집합이 적용되므로 보고서의 페이지가 다른 방식으로 매겨집니다. 페이지 매김을 제어 하는 데 사용 하는 규칙을 이해 해야 보고서 배달에 사용할 렌더러에 대해 최적화 된 사용자에 대 한 읽기 쉬운 보고서를 성공적으로 디자인 하려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다.  
+  페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. 페이지 매김 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보기 및 보고서 배달에 사용할 렌더링 확장 프로그램에 따라 달라 집니다. 보고서 서버에서 보고서를 실행하는 경우 보고서에는 HTML 렌더러가 사용됩니다. HTML은 페이지 매김과 관련하여 일련의 특별한 규칙을 따릅니다. 예를 들어 동일한 보고서를 PDF로 내보내면 PDF 렌더러가 사용되고 다른 규칙 집합이 적용되므로 보고서의 페이지가 다른 방식으로 매겨집니다. 페이지 매김을 제어 하는 데 사용 하는 규칙을 이해 해야 성공적으로 사용 하 여 보고서를 배달 하려고 하는 렌더러에 대해 최적화 된 사용자에 대 한 읽기 쉬운 보고서를 디자인 하려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다.  
   
  이 항목에서는 하드 페이지 나누기 렌더러를 통해 보고서를 렌더링하는 방식에 물리적 페이지 크기와 보고서 레이아웃이 미치는 영향을 설명합니다. **보고서 속성** 창, **속성** 창 또는 **페이지 설정** 대화 상자를 통해 속성을 설정하여 물리적 페이지 크기 및 여백을 수정하고 보고서의 구획을 나눌 수 있습니다. 보고서 본문 외부의 파란색 영역을 클릭하여 **보고서 속성** 창에 액세스할 수 있습니다. 홈 탭에서 **실행** 을 클릭한 다음 실행 탭에서 **페이지 설정** 을 클릭하여 **페이지 설정** 대화 상자에 액세스할 수 있습니다.  
   

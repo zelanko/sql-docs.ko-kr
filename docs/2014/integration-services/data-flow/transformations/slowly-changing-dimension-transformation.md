@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 730e17f4376ddd7ac28c036c10a33db45d3f9b4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c326568be4fa1c5f8088e75ca4609975f6f7561c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36173167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314253"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
   느린 변경 차원 변환은 데이터 웨어하우스 차원 테이블의 레코드 업데이트 및 삽입을 조정합니다. 예를 들어 이 변환을 사용하면 AdventureWorks OLTP 데이터베이스의 Production.Products 테이블의 데이터로 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 데이터베이스의 DimProduct 테이블의 레코드를 삽입 및 업데이트하는 변환 출력을 구성할 수 있습니다.  

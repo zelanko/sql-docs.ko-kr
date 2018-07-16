@@ -3,10 +3,9 @@ title: 공용 언어 런타임 (CLR) 통합 프로그래밍 개요 | Microsoft D
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -19,12 +18,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: df157328c0718a55dae569503e1e5f6bd424131e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703324"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357035"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR(공용 언어 런타임) 통합 프로그래밍 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "35703324"
  The Microsoft.SqlServer.Server 네임스페이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 프로그래밍에 대한 핵심 기능이 포함되어 있습니다. 그러나 Microsoft.SqlServer.Server 네임스페이스는 .NET Framework SDK에 설명되어 있는데, 이 설명서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에 포함되어 있지 않습니다.  
   
 > [!IMPORTANT]  
->  기본적으로 .NET Framework는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 자동으로 설치되지만 .NET Framework SDK는 그렇지 않습니다. 컴퓨터에 SDK가 설치되지 않아 온라인 설명서 컬렉션이 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. 따라서 .NET Framework SDK를 설치하는 것이 좋습니다. 설치 되 면 SDK를 추가 온라인 설명서 컬렉션과 목차 지침에 따라 [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)합니다.  
+>  기본적으로 .NET Framework는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 자동으로 설치되지만 .NET Framework SDK는 그렇지 않습니다. 컴퓨터에 SDK가 설치되지 않아 온라인 설명서 컬렉션이 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. 따라서 .NET Framework SDK를 설치하는 것이 좋습니다. 설치 되 면 SDK를 추가 Books Onl 온라인 설명서 컬렉션과 목차에 있는 지침에 따라 [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)합니다.  
   
 > [!NOTE]  
->  CLR 사용자 함수 등의 CLR 기능은 *하지* Azure SQL 데이터베이스에 대 한 지원.  
+>  CLR 사용자 함수와 같은 CLR 기능이 *되지* Azure SQL Database에 대 한 지원.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "35703324"
  [어셈블리&#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 어셈블리를 사용하여 함수, 저장 프로시저, 트리거, 사용자 정의 집계, [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 작성되지 않고 [!INCLUDE[tsql](../../includes/tsql-md.md)] .NET Framework CLR(공용 언어 런타임)로 호스팅되는 관리 코드 언어 중 하나로 작성된 사용자 정의 형식을 배포하는 방법을 설명합니다.  
   
- [공용 언어 런타임 사용 하 여 데이터베이스 개체 작성 &#40;CLR&#41; 통합](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [공용 언어 런타임 사용 하 여 데이터베이스 개체를 작성 &#40;CLR&#41; 통합](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  CLR을 사용하여 작성할 수 있는 개체 유형에 대해 설명하고 CLR 데이터베이스 개체를 작성하기 위한 요구 사항을 살펴봅니다.  
   
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  

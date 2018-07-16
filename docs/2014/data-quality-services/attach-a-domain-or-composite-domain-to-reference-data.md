@@ -1,5 +1,5 @@
 ---
-title: 도메인 또는 복합 도메인이 참조 데이터에 연결 | Microsoft Docs
+title: 참조 데이터에 도메인 또는 복합 도메인 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1629caf5c182ce375c1368800695a5e8f4792208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d22efa3a5f3c62915527fd4acc756217fe6556f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202483"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
   이 항목에서는 데이터 품질 기술 자료의 도메인/복합 도메인을 Windows Azure Marketplace의 참조 데이터 서비스에 연결하여 고품질 데이터 참조 데이터에 대한 정보를 구축하는 방법에 대해 설명합니다. 각 참조 데이터 서비스에는 스키마(데이터 열)가 포함되어 있습니다. 도메인 또는 복합 도메인을 참조 데이터 서비스에 연결한 후 연결된 도메인 또는 연결된 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 복합 도메인을 참조 데이터 서비스에 연결하면 한 도메인만 참조 데이터 서비스에 연결한 다음 복합 도메인 내 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑할 수 있습니다.  

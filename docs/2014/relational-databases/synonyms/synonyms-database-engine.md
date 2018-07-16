@@ -5,25 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-synonyms
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e83afab22daea5314947baf3edbf5b786a58f991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8bfd08ba265fb901c6a8225b3df451c7b3617731
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284639"
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
   동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "36092369"
 |SQL 인라인 테이블 반환 함수|SQL 저장 프로시저|  
 |보기|테이블<sup>1</sup>(사용자 정의)|  
   
- <sup>1</sup> 로컬 및 전역 임시 테이블이 포함 됩니다.  
+ <sup>1</sup> 로컬 및 전역 임시 테이블이 포함 되어 있습니다.  
   
 > [!NOTE]  
 >  함수 기본 개체의 네 부분으로 된 이름은 지원되지 않습니다.  
@@ -116,7 +114,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  스키마 바운드 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   
 ## <a name="getting-information-about-synonyms"></a>동의어에 대한 정보 가져오기  
- sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. 에 대 한 자세한 내용은 `sys.synonyms` 카탈로그 뷰, 참조 [sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)합니다.  
+ sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. 에 대 한 자세한 내용은 합니다 `sys.synonyms` 카탈로그 뷰를 참조 하십시오 [sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)합니다.  
   
  확장 속성을 사용하면 설명이나 지시 텍스트, 입력 마스크, 서식 설정 규칙을 동의어 속성으로 추가할 수 있습니다. 속성이 데이터베이스에 저장되기 때문에 속성을 읽는 모든 응용 프로그램은 개체를 같은 방식으로 평가할 수 있습니다. 자세한 내용은 [sp_addextendedproperty&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)를 참조하세요.  
   

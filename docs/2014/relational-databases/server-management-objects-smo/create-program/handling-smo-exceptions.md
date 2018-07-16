@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 329cc87a9a82545708f71202f15de4eb219463e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2d8e121a9fdc76073a016041f102fa36e6685f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299843"
 ---
 # <a name="handling-smo-exceptions"></a>SMO 예외 처리
   관리 코드에서 오류가 발생하면 예외가 throw됩니다. SMO 메서드와 속성은 반환 값에 성공 또는 실패를 보고하지 않습니다. 대신 예외 처리기에서 예외를 catch하고 처리할 수 있습니다.  
@@ -35,20 +35,20 @@ ms.locfileid: "36180477"
  예외 처리 문은 프로그래밍 언어와 관련이 있습니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic에서는 `Catch` 문입니다.  
   
 ## <a name="inner-exceptions"></a>내부 예외  
- 예외는 일반 예외나 특정 예외일 수 있습니다. 일반 예외에는 특정 예외 집합이 포함됩니다. 여러 `Catch` 문을 데 사용할 수 예상된 오류를 처리 하 고 나머지 오류가 일반 예외 처리 코드로 이동 합니다. 예외는 연계 시퀀스로 발생하는 경우가 많습니다. 대체로 SQL 예외로 인해 SMO 예외가 발생했을 수 있습니다. 이 감지 하는 방법은 사용 하는 것은 `InnerException` 속성은 최종 최상위 예외를 발생 시킨 원래 예외를 확인을 연속적으로 합니다.  
+ 예외는 일반 예외나 특정 예외일 수 있습니다. 일반 예외에는 특정 예외 집합이 포함됩니다. 여러 `Catch` 문은 예상된 오류를 처리 하 고 나머지 오류가 일반 예외 처리 코드를 사용할 수 있습니다. 예외는 연계 시퀀스로 발생하는 경우가 많습니다. 대체로 SQL 예외로 인해 SMO 예외가 발생했을 수 있습니다. 이 감지 하는 방법은 사용 하는 것을 `InnerException` 속성 연속 해 서 최종 최상위 예외를 발생 시킨 원래 예외를 확인 합니다.  
   
 > [!NOTE]  
->  `SQLException` 에 선언 된 예외는 **System.Data.SqlClient** 네임 스페이스입니다.  
+>  합니다 `SQLException` 예외에 선언 된 합니다 **System.Data.SqlClient** 네임 스페이스입니다.  
   
- ![있는 수준을 보여 주는 다이어그램 다이어그램](../../../database-engine/dev-guide/media/exception-flow.gif "있는 수준을 보여 주는 다이어그램 다이어그램")  
+ ![올 수준을 보여 주는 다이어그램 예외 수준을](../../../database-engine/dev-guide/media/exception-flow.gif "올 수준을 보여 주는 다이어그램 예외 수준을")  
   
  다음 다이어그램은 응용 프로그램 계층을 통한 예외 흐름을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) 또는 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) 또는 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic에서 예외 catch  
- 사용 하는 방법을 보여 주는 코드 예제는 `Try…Catch…Finally` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 참조는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서입니다.  
+ 이 코드 예제에서는 사용 하는 `Try…Catch…Finally` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 참조는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBExceptions1](SMO How to#SMO_VBExceptions1)]  -->  
   

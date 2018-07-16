@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecfcf05a685543e22d9ea9bf3b2889fcb8098064
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 03149886d49a86656aca73f80685e711c3ca9b77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182939"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308963"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
  결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>`의 `DReplayClient.xml` XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   

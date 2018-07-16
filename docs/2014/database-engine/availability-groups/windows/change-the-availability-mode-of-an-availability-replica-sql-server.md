@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], availability modes
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 caps.latest.revision: 35
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 548411ee63320a34739ba32ec484bd15ea8df43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9d9a742003107a2416e55f7c4f3a473c430e04eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310423"
 ---
 # <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>가용성 복제본의 가용성 모드 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 가용성 복제본에 대한 가용성 모드를 변경하는 방법에 대해 설명합니다. 가용성 모드는 복제본이 비동기적 또는 동기적으로 커밋되는지 여부를 제어하는 복제본 속성입니다. *비동기-커밋 모드* 는 성능을 극대화하지만 가용성이 저하되며 *강제 장애 조치(failover)* 라고 하는 강제 수동 장애 조치(failover)만 지원하여 데이터가 손실될 수 있습니다. *동기-커밋 모드* 는 성능에 비해 고가용성을 강조하고 보조 복제본이 동기화되면 수동 장애 조치(failover)를 지원하고 자동 장애 조치(failover)를 선택적으로 지원합니다.  
@@ -91,7 +90,7 @@ ms.locfileid: "36180964"
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  사용 하 여는 `Set-SqlAvailabilityReplica` 사용 하 여 cmdlet는 `AvailabilityMode` 매개 변수 및 필요에 따라는 `FailoverMode` 매개 변수입니다.  
+2.  사용 하 여는 `Set-SqlAvailabilityReplica` cmdlet을 사용 합니다 `AvailabilityMode` 매개 변수 및 필요에 따라를 `FailoverMode` 매개 변수입니다.  
   
      예를 들어 다음 명령은 `MyReplica` 가용성 그룹의 `MyAg` 복제본이 동기-커밋 가용성 모드를 사용하고 자동 장애 조치(failover)를 지원하도록 수정합니다.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "36180964"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면에서 사용 하 여는 `Get-Help` cmdlet에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   

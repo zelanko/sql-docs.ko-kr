@@ -1,5 +1,5 @@
 ---
-title: '통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다. 다음과 같은 연결을 새로 고치지 못했습니다: PowerPivot 데이터 | Microsoft Docs'
+title: '통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다. 다음 연결을 새로 고치지 못했습니다: PowerPivot 데이터 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb4c4794a59d203c119f09fba83fedeb7edb458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60fc3ce050eaf0e43fe4138a716e8c88f7105ced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234303"
 ---
 # <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
   Excel 서비스는 포함된 데이터 원본에 연결할 수 없는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  

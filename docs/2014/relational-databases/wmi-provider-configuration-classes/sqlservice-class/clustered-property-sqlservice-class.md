@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Clustered property
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: feca14847331e11a8a79d36b66d79abe4bd55d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a9625ccfba0bce361ef9750ae7d3b3d654af6eb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321863"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 속성(SqlService 클래스)
   서비스가 클러스터형 인스턴스에 속하는지 여부를 지정하는 부울 속성 값을 가져옵니다.  

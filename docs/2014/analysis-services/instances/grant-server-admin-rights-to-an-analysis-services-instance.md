@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrator rights [Analysis Services]
 - server-wide administrative permissions [Analysis Services]
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36dede0ffca198282c1fd2122f549a0c9204fa4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4af61a59de6175d4241cb6b1b9700ff7ba816430
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328853"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>서버 관리자 권한 부여(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 내에서 서버 관리자 역할의 멤버는 해당 인스턴스의 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체와 데이터에 무제한으로 액세스할 수 있습니다. 데이터베이스 작성 또는 처리, 서버 속성 수정, 추적 시작(이벤트 처리용 제외) 등의 서버 차원의 태스크를 수행하려면 사용자가 서버 관리자 역할의 멤버여야 합니다.  
@@ -39,12 +39,12 @@ ms.locfileid: "36182121"
   
  설치 시 SQL Server 설치 프로그램에서는 적어도 하나 이상의 사용자 계정을 Analysis Services 시스템 관리자로 지정해야 합니다.  
   
- 기본적으로 로컬 관리자 그룹의 멤버는 Analysis Server에서 관리 권한도 부여 받습니다. 로컬 그룹은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할의 멤버 자격을 명시적으로 부여 받지는 않지만 로컬 관리자는 데이터베이스를 만들고 사용자 및 사용 권한을 추가하고 시스템 관리자에게 허용된 기타 모든 작업을 수행할 수 있습니다. 이 동작은 구성할 수 있습니다. 에 의해 결정 됩니다는 `BuiltinAdminsAreServerAdmins` 서버 속성으로 설정 된 **true** 기본적으로 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 속성을 변경할 수 있습니다. 자세한 내용은 [Security Properties](../server-properties/security-properties.md)을 참조하세요.  
+ 기본적으로 로컬 관리자 그룹의 멤버는 Analysis Server에서 관리 권한도 부여 받습니다. 로컬 그룹은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할의 멤버 자격을 명시적으로 부여 받지는 않지만 로컬 관리자는 데이터베이스를 만들고 사용자 및 사용 권한을 추가하고 시스템 관리자에게 허용된 기타 모든 작업을 수행할 수 있습니다. 이 동작은 구성할 수 있습니다. 에 의해 결정 됩니다 합니다 `BuiltinAdminsAreServerAdmins` 로 설정 되어 있는 서버 속성 **true** 기본적으로 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 속성을 변경할 수 있습니다. 자세한 내용은 [Security Properties](../server-properties/security-properties.md)을 참조하세요.  
   
  AMO(Analysis Management Objects)를 사용하여 서버 역할을 관리할 수도 있습니다. 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [개체 및 작업에 대 한 액세스 권한을 부여 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [연결 된 보안 역할과 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [개체 및 작업에 대 한 액세스 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [보안 역할 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

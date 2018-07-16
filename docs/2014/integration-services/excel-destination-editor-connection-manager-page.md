@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.connection.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14b06c895b60f3965d7b7ccd0bea5c3d6f8b447b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af5336747676827b054d34ce2c4aa616fb383813
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330003"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 대상 편집기(연결 관리자 페이지)
   **Excel 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 데이터 원본 정보를 지정하고 그 결과를 미리 볼 수 있습니다. Excel 대상은 데이터를 워크시트 또는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] Excel 통합 문서의 명명된 범위로 로드합니다.  
   
 > [!NOTE]  
->  `CommandTimeout` Excel 대상의 속성에서 사용할 수 없는 **Excel 대상 편집기**, 이지만 사용 하 여 설정할 수 있습니다는 **고급 편집기**합니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Excel Custom Properties](data-flow/excel-custom-properties.md)의 Excel 대상 섹션을 참조하십시오.  
+>  `CommandTimeout` Excel 대상의 속성을 사용할 수 없습니다는 **Excel 대상 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**합니다. 또한 특정 빠른 로드 옵션은 **고급 편집기**에서만 사용할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Excel Custom Properties](data-flow/excel-custom-properties.md)의 Excel 대상 섹션을 참조하십시오.  
   
  Excel 대상에 대한 자세한 내용은 [Excel Destination](data-flow/excel-destination.md)을 참조하십시오.  
   

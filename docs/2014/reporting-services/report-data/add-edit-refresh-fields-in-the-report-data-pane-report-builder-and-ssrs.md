@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4aaf0727bdd7a41de570080751a4b93cfaccc89e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e082a4fa3062ffff5fd4ee46460d4f7ec8020561
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307033"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 및 SSRS)
   데이터 집합 필드는 외부 데이터 원본에서 데이터 집합 쿼리를 실행할 때 반환되는 데이터를 나타내는 기본 제공 필드 이름 컬렉션입니다.  

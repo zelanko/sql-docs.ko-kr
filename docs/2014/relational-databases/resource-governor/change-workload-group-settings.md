@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], alter
 - Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e168cc5ce4e69db16a651395abb7cf7d3555c967
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e30850d22860e9797daf3d67ae8790b4e632fd7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321803"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 작업 그룹 설정을 변경할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "36182984"
   
 4.  변경할 행의 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
+5.   **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="ChgWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 설정 변경  
  **Transact-SQL을 사용하여 작업 그룹 설정을 변경하려면**  

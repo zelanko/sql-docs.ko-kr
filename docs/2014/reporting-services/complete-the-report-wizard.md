@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bdbefcdf04166d0c1e54dff3965f04b1f8f5d06a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9f101d61676b5364db2637bc9f0ff6f36c9daf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36171900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297903"
 ---
 # <a name="complete-the-report-wizard"></a>보고서 마법사 완료
   보고서 마법사 완료 페이지를 사용하여 보고서에 이름을 지정하거나 보고서에 적용할 옵션을 검토할 수 있습니다.  

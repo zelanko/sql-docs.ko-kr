@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36093926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327347"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
-  FOR XML 쿼리에 열을 지정 하는 경우 `xml` 형식 SELECT 절에 열 값은 ELEMENTS 지시어를 지정 했는지 여부에 관계 없이 반환된 된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
+  FOR XML 쿼리 열을 지정 하는 경우 `xml` 형식 SELECT 절에서 열 값은 ELEMENTS 지시어를 지정 하는 여부에 관계 없이 반환된 된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
   
- 예를 들어 다음 쿼리에서 고객 연락처 정보를 검색 등의 `BusinessEntityID`, `FirstName`, 및 `LastName` 열과 전화 번호는 `AdditionalContactInfo` 의 열 `xml` 유형입니다.  
+ 예를 들어 다음 쿼리는 검색 고객 연락처 정보 등을 `BusinessEntityID`, `FirstName`, 및 `LastName` 열 및 전화 번호를 `AdditionalContactInfo` 열의 `xml` 형식입니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -44,7 +44,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- 열 값에서 검색 된 추가 연락 정보 값을 제외한 특성으로 반환 됩니다 쿼리는 ELEMENTS 지시어를 지정 하지 않으므로는 `xml` 유형 열입니다. 이러한 값은 요소로 반환됩니다.  
+ 열 값에서 검색 된 추가 연락 정보 값을 제외 하 고 특성으로 반환 된 쿼리는 ELEMENTS 지시어를 지정 하지 않으므로는 `xml` 유형 열입니다. 이러한 값은 요소로 반환됩니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  쿼리에서 ELEMENTS 지시어를 지정하면 BusinessEntityID, LastName 및 FirstName이 결과 XML에 요소로 반환됩니다.  
   
- 다음 예제에서는 FOR XML 처리 논리가 XML 데이터에 있는 모든 XML 선언을 직렬화 하지 않음을 `xml` 형식 열:  
+ 다음 예에서는 FOR XML 처리 논리가 XML 데이터에 있는 모든 XML 선언을 직렬화 하지 않음을 보여 줍니다는 `xml` 형식 열:  
   
 ```  
 create table t(i int, x xml)  
@@ -150,9 +150,9 @@ for xml auto;
   
 -   단일 `xml` 유형 열이 포함된 테이블  
   
--   인스턴스는 `xml` 유형  
+-   인스턴스는 `xml` 형식  
   
- 다음 사용자 정의 함수에서의 단일 열이 있는 테이블을 반환 하는 예를 들어 `xm`l 유형:  
+ 다음 사용자 정의 함수를 단일 열 테이블을 반환 하는 예를 들어 `xm`유형의:  
   
 ```  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- 사용자 정의 함수를 실행하고 함수로 반환된 테이블을 쿼리할 수 있습니다. 이 예에서 테이블 쿼리를 통해 반환 된 XML에 할당 된 프로그램 `xml` 유형 변수입니다.  
+ 사용자 정의 함수를 실행하고 함수로 반환된 테이블을 쿼리할 수 있습니다. 이 예제에서는 테이블을 쿼리하여 반환 된 XML에 할당 되는 `xml` 형식 변수입니다.  
   
 ```  
 declare @x xml;  

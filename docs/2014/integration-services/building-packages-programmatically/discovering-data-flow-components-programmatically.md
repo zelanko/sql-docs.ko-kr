@@ -23,13 +23,13 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8dbbf4d7ede5a0ee018885db3c8b9641b5116342
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df04c8b47d4f803281e07a5f106b2756c2cc0fce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285669"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 검색
   패키지에 데이터 흐름 태스크를 추가한 후 사용할 수 있는 데이터 흐름 구성 요소를 확인할 수 있습니다. 로컬 컴퓨터에 설치되어 있고 사용 가능한 데이터 흐름 원본, 변환 및 대상을 프로그래밍 방식으로 검색할 수 있습니다. 패키지에 데이터 흐름 태스크 추가에 대한 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 태스크 추가](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)를 참조하세요.  
@@ -90,7 +90,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정  **<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [프로그래밍 방식으로 데이터 흐름 구성 요소 추가](../building-packages-programmatically/adding-data-flow-components-programmatically.md)  

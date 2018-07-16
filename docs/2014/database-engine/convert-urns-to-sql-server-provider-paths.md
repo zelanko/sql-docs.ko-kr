@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 925eec025bb2943845748acd30e8f24693245ae2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c0f82e3bb4185a29a8a40247da8ef7533b3d281c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224103"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>URN을 SQL Server 공급자 경로로 변환
   SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델은 개체의 URN(Uniform Resource Names)을 작성합니다. 각 URN에서 고유 하 게 SMO 개체를 식별 하 고 사용 하 여 SQL Server PowerShell 공급자 경로로 변환할 수는 `Convert-UrnToPath` cmdlet.  
