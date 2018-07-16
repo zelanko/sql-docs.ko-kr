@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: af32c10bd6c18a4cafc46ccba36859413942c98d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212593"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>새 구독 또는 구독 편집 페이지(보고서 관리자)
   새 구독 또는 구독 편집 페이지를 사용하여 보고서에 대한 새 구독을 만들거나 기존 구독을 수정할 수 있습니다. 이 페이지의 옵션은 사용자의 역할 할당에 따라 다릅니다. 고급 권한이 있는 사용자는 추가 옵션으로 작업할 수 있습니다.  
   
- 구독은 무인 모드로 실행될 수 있는 보고서에 대해 지원됩니다. 이 보고서는 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않아야 합니다. 보고서에서 매개 변수를 사용하는 경우에는 기본값을 지정해야 합니다. 보고서 실행 설정을 변경하거나 매개 변수 속성에서 사용하는 기본값을 제거하면 구독이 비활성 상태로 바뀔 수 있습니다. 자세한 내용은 참조 [만들기 및 기본 모드 보고서 서버에 대 한 구독 관리](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)합니다.  
+ 구독은 무인 모드로 실행될 수 있는 보고서에 대해 지원됩니다. 이 보고서는 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않아야 합니다. 보고서에서 매개 변수를 사용하는 경우에는 기본값을 지정해야 합니다. 보고서 실행 설정을 변경하거나 매개 변수 속성에서 사용하는 기본값을 제거하면 구독이 비활성 상태로 바뀔 수 있습니다. 자세한 내용은 [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)합니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -40,7 +40,7 @@ ms.locfileid: "36186250"
   
 3.  드롭다운 메뉴에서 다음 중 하나를 수행하십시오.  
   
-    -   **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다. **구독** 탭을 선택합니다. 도구 모음에서 클릭 **새 구독**을 하거나 기존 구독을 선택 하 고 클릭 **편집**합니다.  
+    -   **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다. **구독** 탭을 선택합니다. 도구 모음에서 클릭 **새 구독**, 또는 기존 구독을 선택 하 고 클릭 **편집**합니다.  
   
     -   **구독**을 클릭합니다. 보고서의 **새 구독** 페이지가 열립니다.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "36186250"
   
 -   전자 메일 구독에서는 전자 메일 사용자에게 익숙한 필드(예: **받는 사람**, **제목**및 **우선 순위** 필드)를 제공합니다. 보고서를 포함시키거나 첨부하려면 **보고서 포함** 을 지정하고 보고서에 대한 URL을 포함시키려면 **링크 포함** 을 지정합니다. 첨부 또는 포함된 보고서의 표시 형식을 선택하려면 **렌더링 형식** 을 지정합니다.  
   
--   파일 공유 구독은 대상 위치를 지정할 수 있도록 허용하는 필드를 제공합니다. 모든 보고서를 파일 공유로 배달할 수 있습니다. 그러나 대화형 기능을 지원하는 보고서(관련 행 및 열에 대한 드릴다운을 지원하는 행렬 보고서 포함)는 정적 파일로 렌더링됩니다. 드릴다운 행 및 열은 정적 파일에서 볼 수 없습니다. 균일 한 명명 규칙 (UNC) 형식에서 파일 공유 이름을 지정 해야 합니다 (예를 들어 \\\mycomputer\public\myreportfiles). 경로 이름 뒤에 백슬래시를 사용하지 마십시오. 보고서 파일은 렌더링 형식을 기반으로 하는 파일 형식으로 배달됩니다. 예를 들어 **Excel**을 선택할 경우 보고서는 .xls 파일로 배달됩니다.  
+-   파일 공유 구독은 대상 위치를 지정할 수 있도록 허용하는 필드를 제공합니다. 모든 보고서를 파일 공유로 배달할 수 있습니다. 그러나 대화형 기능을 지원하는 보고서(관련 행 및 열에 대한 드릴다운을 지원하는 행렬 보고서 포함)는 정적 파일로 렌더링됩니다. 드릴다운 행 및 열은 정적 파일에서 볼 수 없습니다. 파일 공유 이름 명명 규칙 (UNC (Uniform) 형식으로 지정 해야 합니다 (예를 들어 \\\mycomputer\public\myreportfiles). 경로 이름 뒤에 백슬래시를 사용하지 마십시오. 보고서 파일은 렌더링 형식을 기반으로 하는 파일 형식으로 배달됩니다. 예를 들어 **Excel**을 선택할 경우 보고서는 .xls 파일로 배달됩니다.  
   
  배달 확장 프로그램의 가용성은 보고서 서버에 설치 및 구성되었는지 여부에 따라 다릅니다. 보고서 서버 전자 메일은 기본 배달 확장 프로그램이지만 먼저 구성을 해야 사용할 수 있습니다. 파일 공유 배달은 구성이 필요하지 않지만 먼저 공유 폴더를 정의해야 사용할 수 있습니다.  
   
 ## <a name="subscription-processing-options"></a>구독 처리 옵션  
  구독 처리 조건을 정의하려면 이 설정을 사용합니다. 일부 옵션은 매개 변수를 사용하는 보고서나 보고서 실행 스냅숏으로 실행되는 보고서에서만 사용할 수 있습니다.  
   
- **보고서 콘텐츠를 새로 고칠 때**  
+ **보고서 내용은 새로 고칠 때**  
  일정에 따라 새로 고쳐지는 보고서 스냅숏을 구독하려면 이 옵션을 선택합니다. 이 옵션은 보고서 실행 스냅숏으로 실행되는 보고서를 구독하는 경우에만 표시됩니다. 보고서 실행 스냅숏의 내용은 일반적으로 일정에 따라 새로 고쳐집니다. 이 모드로 실행되는 보고서의 경우 스냅숏을 새로 고쳤을 때 발생하도록 구독을 정의할 수 있습니다.  
   
  **예약된 된 보고서 실행이 완료 되었을 때**  

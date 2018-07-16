@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time-out
 ms.assetid: f1add4bc-e882-440a-a98b-333cfa274c3e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a3415b66dd27f708ed5d9b831900d1de7adb8300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d64be24e9ae00e621c0128c8be1c4286aae240ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204450"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>데이터 마이닝 쿼리에 대한 제한 시간 값 변경
   리프트 차트를 작성하거나 예측 쿼리를 실행할 때 예측에 필요한 모든 데이터를 생성하는 데 많은 시간이 소요될 수 있습니다. 쿼리가 제한 시간을 초과하지 않도록 하려면 쿼리를 완료할 때까지 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버가 기다리는 시간을 제어하는 값을 변경하면 됩니다.  

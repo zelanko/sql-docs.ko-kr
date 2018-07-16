@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200633"
 ---
 # <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 대한 메타데이터를 검색하거나, 분석 시 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
@@ -256,12 +256,12 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>모델을 사용하여 예측 수행  
  데이터를 설명하고 이해하는 데 클러스터링이 일반적으로 사용되지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구현을 사용해도 클러스터 멤버 자격에 대한 예측을 만들고 예측과 연관된 확률을 반환할 수 있습니다. 이 섹션에서는 클러스터링 모델에 대한 예측 쿼리를 만드는 방법에 대한 예를 제공합니다. 테이블 형식 데이터 원본을 지정하여 여러 사례에 대한 예측을 만들거나 단일 쿼리를 만들어 한 번에 새 값을 제공할 수 있습니다. 의미를 명확하게 전달하기 위해 이 섹션의 예는 모두 단일 쿼리입니다.  
   
- DMX를 사용 하 여 예측 쿼리를 만드는 방법에 대 한 자세한 내용은 참조 [데이터 마이닝 쿼리 인터페이스](data-mining-query-tools.md)합니다.  
+ DMX를 사용 하 여 예측 쿼리를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 마이닝 쿼리 인터페이스](data-mining-query-tools.md)합니다.  
   
  [맨 위로 이동](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> 예제 쿼리 8: 클러스터링 모델에서 결과 예측  
- 만든 클러스터링 모델에 예측 가능한 특성이 포함되어 있는 경우 이 모델을 사용하여 결과에 대한 예측을 만들 수 있습니다. 모델이 예측 가능한 열으로 설정 되는 여부에 따라 다르게 예측 가능한 특성을 처리 하는 반면 `Predict` 또는 `PredictOnly`합니다. 열의 사용법을 설정할 경우 `Predict`, 해당 특성에 대 한 값은 클러스터링 모델에 추가 되 고 완성된 된 모델에서 특성으로 표시 합니다. 그러나 열 사용법을 `PredictOnly`로 설정하면 해당 값이 클러스터를 만드는 데 사용되지 않습니다. 대신, 완성 된 후 클러스터링 알고리즘이 새 값을 생성에 대 한는 `PredictOnly` 각 사례가 속해 있는 클러스터를 기준으로 한 특성입니다.  
+ 만든 클러스터링 모델에 예측 가능한 특성이 포함되어 있는 경우 이 모델을 사용하여 결과에 대한 예측을 만들 수 있습니다. 모델이 예측 가능한 열으로 설정 되는 여부에 따라 다르게 예측 가능한 특성을 처리 하는 반면 `Predict` 또는 `PredictOnly`합니다. 열의 사용법을 설정할 경우 `Predict`, 해당 특성에 값을 클러스터링 모델에 추가 되 고 완성된 된 모델에서 특성으로 표시 합니다. 그러나 열 사용법을 `PredictOnly`로 설정하면 해당 값이 클러스터를 만드는 데 사용되지 않습니다. 대신 모델이 완성 된 후 클러스터링 알고리즘이 만듭니다에 대 한 새 값을 `PredictOnly` 각 사례가 속해 있는 클러스터를 기반으로 한 특성입니다.  
   
  다음 쿼리는 모델에 새로운 단일 사례를 제공하는데, 사례에 대한 유일한 정보는 연령과 성별입니다. SELECT 문에 관심 있는 예측 가능한 특성/값 쌍을 지정하고 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 함수는 이러한 특성이 포함된 사례의 대상 결과 확률을 알려 줍니다.  
   
@@ -287,7 +287,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- 이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다. [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
+ 이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다.  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
   
  PredictCaseLikelihood 함수에 의해 반환되는 값은 확률이므로 항상 0과 1 사이이며 임의의 결과를 나타내는 경우 값이 .5입니다. 그러므로 점수가 .5 미만인 경우 해당 모델이 제공될 경우 예측 사례가 나타날 가능성이 별로 없음을 의미하고 점수가 .5 이상인 경우에는 예측 사례가 해당 모델에 적합하지 않은 경우보다 나타날 가능성이 높음을 의미합니다.  
   
@@ -332,7 +332,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |클러스터 2|0.397918596951617|  
   
- **참고** 기본적으로는 `ClusterProbability` 함수는 가장 가능성이 높은 클러스터의 확률을 반환 합니다. 그러나 `ClusterProbability('cluster name')`구문을 사용하여 다른 클러스터를 지정할 수 있습니다. 이 경우 각 예측 함수의 결과는 다른 결과에 대해 독립적입니다. 따라서 두 번째 열의 확률 점수는 첫 번째 열에 명명된 클러스터가 아닌 다른 클러스터를 참조할 수 있습니다.  
+ **참고** 기본적으로 `ClusterProbability` 함수는 가장 가능성이 높은 클러스터의 확률을 반환 합니다. 그러나 `ClusterProbability('cluster name')`구문을 사용하여 다른 클러스터를 지정할 수 있습니다. 이 경우 각 예측 함수의 결과는 다른 결과에 대해 독립적입니다. 따라서 두 번째 열의 확률 점수는 첫 번째 열에 명명된 클러스터가 아닌 다른 클러스터를 참조할 수 있습니다.  
   
  [맨 위로 이동](#bkmk_top2)  
   
@@ -364,7 +364,7 @@ NATURAL PREDICTION JOIN
   
  기본적으로 결과는 확률 순으로 순위가 지정됩니다. 결과를 통해 Cluster 2의 확률이 매우 낮지만 그래도 Cluster 2가 새 데이터 요소에 가장 적합하다는 것을 알 수 있습니다.  
   
- **참고** 추가 열 `$DISTANCE`는 데이터 요소에서 클러스터까지의 거리를 나타냅니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 Scalable EM 클러스터링을 사용하여 여러 개의 클러스터를 각 데이터 요소에 할당하고 가능한 클러스터의 순위를 지정합니다.  그러나 K-Means 알고리즘을 사용하여 클러스터링 모델을 만드는 경우 각 데이터 요소에 한 개의 클러스터만 할당할 수 있으므로 이 쿼리는 한 개의 행만 반환합니다. [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수를 사용하여 기본 구조의 열을 포함할 수 있습니다. EM 클러스터링과 K-means 클러스터링의 차이점에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)를 참조하세요.  
+ **참고** 추가 열 `$DISTANCE`는 데이터 요소에서 클러스터까지의 거리를 나타냅니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 Scalable EM 클러스터링을 사용하여 여러 개의 클러스터를 각 데이터 요소에 할당하고 가능한 클러스터의 순위를 지정합니다.  그러나 K-Means 알고리즘을 사용하여 클러스터링 모델을 만드는 경우 각 데이터 요소에 한 개의 클러스터만 할당할 수 있으므로 이 쿼리는 한 개의 행만 반환합니다.  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 함수를 사용하여 기본 구조의 열을 포함할 수 있습니다. EM 클러스터링과 K-means 클러스터링의 차이점에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)를 참조하세요.  
   
  [맨 위로 이동](#bkmk_top2)  
   

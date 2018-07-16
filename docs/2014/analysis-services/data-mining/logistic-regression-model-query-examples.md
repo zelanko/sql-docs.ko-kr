@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189600"
 ---
 # <a name="logistic-regression-model-query-examples"></a>로지스틱 회귀 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터를 사용한 예측을 만드는 예측 쿼리를 작성할 수 있습니다.  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  **마이닝 구조** 탭에서 Service Grade에 대한 열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-7.  변경 된 `Content` 속성에서 **Continuous** 를 **Discretized**합니다. 변경 된 `DiscretizationMethod` 속성을 **클러스터**합니다. Discretization BucketCount에 **3**을 입력합니다.  
+7.  변경 된 `Content` 속성을 **연속** 에 **Discretized**합니다. 변경 된 `DiscretizationMethod` 속성을 **클러스터**합니다. Discretization BucketCount에 **3**을 입력합니다.  
   
     > [!NOTE]  
     >  이러한 매개 변수는 프로세스에 대한 이해를 돕기 위해 사용된 것일 뿐 이러한 매개 변수를 통해 유효한 모델이 반드시 생성되는 것은 아닙니다.  

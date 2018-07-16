@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.SWB.UE.ReduceNoise.F1
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3762eb91bd4e856c07346f94c0127096a8ae8cdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9eb5dc31c0eb7534788b8b7e50831d0f7fa2a777
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193103"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 리소스 사용 정책에서 노이즈 및 원치 않는 위반이 보고되는 것을 줄이려면 다음 정책을 사용합니다.  

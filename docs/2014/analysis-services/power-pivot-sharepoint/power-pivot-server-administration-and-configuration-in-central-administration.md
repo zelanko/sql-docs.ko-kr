@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200293"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 PowerPivot 서버 관리 및 구성
   PowerPivot 서버 관리 및 구성은 SharePoint 서비스 응용 프로그램 관리자에 의해 SharePoint Server 관리를 통해 수행됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "36185958"
 |----------|----------|----------------------|  
 |[SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
 |[만들기 및 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](create-and-configure-power-pivot-service-application-in-ca.md)|필수|이 단계에서는 PowerPivot 시스템 서비스를 프로비전합니다.|  
-|[중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)|필수|이 단계에서는 사이트 모음 수준에서 PowerPivot 기능을 설정합니다.|  
+|[중앙 관리에서 사이트 모음에 대해 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)|필수|이 단계에서는 사이트 모음 수준에서 PowerPivot 기능을 설정합니다.|  
 |[Excel 서비스에서 MSOLAP.5를 신뢰할 수 있는 데이터 공급자로 추가](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  
 |[SharePoint 2010에서 PowerPivot 데이터 새로 고침](../powerpivot-data-refresh-with-sharepoint-2010.md)|권장|데이터 새로 고침은 선택 사항이지만 사용하는 것이 좋습니다. 게시한 Excel 통합 문서 내의 PowerPivot 데이터에 대한 무인 업데이트를 예약할 수 있습니다.|  
 |[구성 PowerPivot 무인된 데이터 새로 고침 계정 &#40;SharePoint 용 PowerPivot&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|권장|이 단계에서는 서버에서 데이터 새로 고침 작업을 실행하는 데 사용할 수 있는 특수 용도 계정을 프로비전합니다.|  
@@ -64,10 +64,10 @@ ms.locfileid: "36185958"
 |[PowerPivot 서비스 계정 구성](configure-power-pivot-service-accounts.md)|선택 사항|암호를 업데이트하거나 서비스 계정을 변경하는 방법에 대해 설명합니다.|  
 |[중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|선택 사항|서비스 연결을 수정하는 방법에 대해 설명합니다.|  
 |[중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|선택 사항|PowerPivot 갤러리를 신뢰할 수 있는 위치로 추가하는 방법에 대해 설명합니다.|  
-|[구성 하 고 SharePoint 로그 파일과 진단 로깅 볼 &#40;SharePoint 용 PowerPivot&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|선택 사항|이벤트 로깅은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  
+|[구성 및 SharePoint 로그 파일과 진단 로깅 보기 &#40;SharePoint 용 PowerPivot&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|선택 사항|이벤트 로깅은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  
 |[PowerPivot 상태 규칙-구성](configure-power-pivot-health-rules.md)|선택 사항|서버 상태 규칙은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 일부 기본 설정을 수정할 수 있습니다.|  
 |[PowerPivot 갤러리 만들기 및 사용자 지정](create-and-customize-power-pivot-gallery.md)|선택 사항|수동으로 구성하는 설치에 대해 이 절차에서는 포함된 PowerPivot 통합 문서의 축소판 이미지를 보여 주는 PowerPivot 갤러리 라이브러리를 만드는 방법에 대해 설명합니다.|  
-|[라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식을 추가 &#40;SharePoint 용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|선택 사항|BI 의미 체계 모델 연결 파일 만들기를 지원하도록 문서 라이브러리를 확장하는 방법에 대해 설명합니다.|  
+|[라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint 용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|선택 사항|BI 의미 체계 모델 연결 파일 만들기를 지원하도록 문서 라이브러리를 확장하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [PowerPivot for SharePoint 2010 설치](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   

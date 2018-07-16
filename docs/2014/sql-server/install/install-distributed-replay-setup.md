@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea29de67ee3e94089c63d5310e38a050be614ce3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82e9df54c797b965409020056faac334a0d60709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202523"
 ---
 # <a name="install-distributed-replay-setup"></a>Distributed Replay 설치(설치)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 기능을 설치합니다. 기능 설치 위치를 계획할 때는 다음 사항을 고려하십시오.  
@@ -74,7 +74,7 @@ ms.locfileid: "36185754"
   
 2.  **설치 지원 규칙** 페이지에는 SQL Server 설치 지원 파일을 설치할 때 발생할 수 있는 문제가 표시됩니다. 설치를 계속하려면 모든 설치 지원 오류를 수정해야 합니다.  
   
-3.  **제품 키** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션 단추를 선택합니다. 자세한 내용은 참조 [버전 및 SQL Server 2014의 구성 요소](../editions-and-components-of-sql-server-2016.md)합니다.  
+3.  **제품 키** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션 단추를 선택합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../editions-and-components-of-sql-server-2016.md)합니다.  
   
 4.  **사용 조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
   

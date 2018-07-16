@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row removal [SQL Server], Delete query
 - Delete query
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - deleting data
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96039bb192985375a2261ac339a3d9eaba01f6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 792cf742948dba7768ad467d6cdf597d9bda802f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198503"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>삭제 쿼리 만들기(Visual Database Tools)
   삭제 쿼리를 사용하면 테이블에서 모든 행을 삭제할 수 있습니다.  

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c32fd50514e96fee8de289666d8e559a78fe985b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200073"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>BackupRemotePartitions 요소(XMLA)
-  결정 여부 부모 [백업](../xml-elements-commands/backup-element-xmla.md) 명령 개체에 연결 된 원격 파티션을 백업할 합니다.  
+  확인 여부를 부모 [백업](../xml-elements-commands/backup-element-xmla.md) 명령 개체에 연결 된 원격 파티션을 백업할 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36186388"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- `BackupRemotePartitions`가 `True`로 설정되면 `Locations` 명령에 하나 이상의 `Location` 요소를 포함하는 `Backup` 요소가 포함되어야 합니다. 그렇지 않으면 오류가 발생합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ `BackupRemotePartitions`가 `True`로 설정되면 `Locations` 명령에 하나 이상의 `Location` 요소를 포함하는 `Backup` 요소가 포함되어야 합니다. 그렇지 않으면 오류가 발생합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Locations 요소 &#40;XMLA&#41;](locations-element-xmla.md)   

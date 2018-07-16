@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08c1fbe446555e34354330b18ffe5bc5c4d80ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169804"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>차트 탭(마이닝 모델 뷰어)
   **차트** 창을 사용하여 예측 값과 함께 시계열 모델의 학습에 사용되는 기록 데이터를 표시할 수 있습니다. 차트의 세로 축은 계열 값을 나타내고 가로 축은 시간을 나타냅니다. 미래 예측은 점선으로 나타납니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "36186664"
  **Abs**  
  두 차트 뷰 간을 전환합니다. 기본 뷰에서 숫자는 전체 분포에 상대적으로(백분율로) 그래프로 표현됩니다. **Abs**를 클릭하면 숫자가 절대 값으로 그래프로 표현됩니다.  
   
- **차트를 클립보드에 복사 합니다.**  
+ **차트를 클립보드에 복사**  
  전체 차트를 클립보드로 복사합니다.  
   
  **편차 표시**  

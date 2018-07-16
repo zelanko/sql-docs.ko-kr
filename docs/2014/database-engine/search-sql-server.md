@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
 caps.latest.revision: 6
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a919718581ecbae4802ebe98f0918763399cc57b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ffd43a5c0dd17f049f724bc32fb299b7656f23ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220023"
 ---
 # <a name="search-sql-server"></a>검색(SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 텍스트 및의 기능 보다 우수한 문서에 대 한 검색 기능을 제공 된 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` 키워드입니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 텍스트 및의 기능 보다 우수한 문서에 대 한 검색 기능을 제공 합니다 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` 키워드입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [전체 텍스트 검색](../relational-databases/search/full-text-search.md)  

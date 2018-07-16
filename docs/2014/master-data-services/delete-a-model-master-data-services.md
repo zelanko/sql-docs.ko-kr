@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9643b3d6094c2f0b3815668fc466d73e76f259f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5f0b813b20c91159b74a82d403ce21a473c85802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215253"
 ---
 # <a name="delete-a-model-master-data-services"></a>모델 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델과 모든 관련 데이터를 제거하려면 모델을 삭제합니다.  
@@ -53,6 +53,6 @@ ms.locfileid: "36185874"
   
 ## <a name="see-also"></a>관련 항목  
  [모델 &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [모델을 만들 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [모델을 만드는 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

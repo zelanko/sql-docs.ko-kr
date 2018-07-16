@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d3bee955-0344-4078-89f1-94a02e7f93c2
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abf294fe565f71c67b6affc81af03b1baa4d128c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 25886114e94df4acaea34df75fa3af6e5b288c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204413"
 ---
 # <a name="complete-image-progress"></a>이미지 완료 진행률
-  사용 하 여는 **이미지 완료 진행률** 의 페이지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 상태를 모니터링할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이미지 완료 설치 합니다. 이 단계가 완료되면 이미지 완료 진행률 페이지에는 구성 및 완료된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능의 상태가 나열됩니다.  
+  사용 합니다 **이미지 완료 진행률** 페이지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 상태를 모니터링 하려면 설치 마법사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이미지 완료 설치 합니다. 이 단계가 완료되면 이미지 완료 진행률 페이지에는 구성 및 완료된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능의 상태가 나열됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

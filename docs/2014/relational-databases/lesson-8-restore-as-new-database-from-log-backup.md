@@ -1,5 +1,5 @@
 ---
-title: '9단원: Windows Azure 저장소에서 데이터베이스를 복원 | Microsoft Docs'
+title: '9단원: Windows Azure Storage에서 데이터베이스 복원 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175920"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>9단원: Microsoft Azure Storage에서 데이터베이스 복원
   이 단원에서는 Microsoft Azure Storage의 데이터베이스 백업 파일을 온-프레미스나 Microsoft Azure의 가상 머신에 있는 데이터베이스에 복원하는 방법을 배웁니다. 이 단원을 수행하기 위해 4, 5, 6, 7, 8단원을 완료할 필요는 없습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "36186984"
   
 -   원본 컴퓨터에서 데이터베이스를 만들었습니다.  
   
--   사용 하 여 Windows Azure 저장소에 (.bak) 데이터베이스의 백업을 만든는 [SQL Server 백업 및 Windows Azure Blob 저장소 서비스로 복원](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 기능입니다. 이 단계에서는 또 다른 SQL Server 자격 증명을 만들어야 합니다. 이 자격 증명은 저장소 계정 키를 사용합니다.  
+-   (.Bak) 데이터베이스의 백업에서에서 만든 Windows Azure Storage를 사용 하 여 합니다 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 기능입니다. 이 단계에서는 또 다른 SQL Server 자격 증명을 만들어야 합니다. 이 자격 증명은 저장소 계정 키를 사용합니다.  
   
 -   Windows Azure 저장소 계정이 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36186984"
   
 3.  다음 전체 스크립트를 복사하여 쿼리 창에 붙여 넣습니다. 필요에 따라 스크립트를 수정 합니다.  
   
-     **참고:** 실행 하기는 `RESTORE` 다른 컴퓨터에서 데이터베이스 인스턴스를 Windows Azure 저장소에서 데이터베이스 백업 (.bak)을 복원 하는 문입니다.  
+     **참고:** 실행할 수는 `RESTORE` 데이터베이스 인스턴스를 다른 컴퓨터에 Windows Azure Storage에서 데이터베이스 백업 (.bak)을 복원 하는 문입니다.  
   
     ```tsql  
   
@@ -99,6 +99,6 @@ ms.locfileid: "36186984"
   
     ```  
   
- **자습서의 끝: Windows Azure 저장소 서비스의 SQL Server 데이터 파일**  
+ **자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일**  
   
   

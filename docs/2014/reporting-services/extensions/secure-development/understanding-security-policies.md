@@ -23,15 +23,15 @@ helpviewer_keywords:
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2249598ffc44050b69021b31abfd48e6996f205c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: de381c37c5ee461c3e7a813c524e317b3d93e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188080"
 ---
 # <a name="understanding-security-policies"></a>보안 정책 이해
   보고서 서버에 의해 실행되는 모든 코드는 특정 코드 액세스 보안 정책의 일부여야 합니다. 이러한 보안 정책은 증명 정보를 일련의 명명된 권한 집합에 매핑하는 코드 그룹으로 구성됩니다. 코드 그룹은 해당 그룹의 코드에 대해 허용 가능한 권한을 지정하는 명명된 권한 집합과 연결되어 있는 경우가 많습니다. 런타임은 신뢰할 수 있는 호스트 또는 로더가 제공하는 증명 정보를 사용하여 코드가 속하는 코드 그룹을 결정하고 이에 따라 코드에 부여할 권한을 결정합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 의해 정의된 대로 이 보안 정책 아키텍처를 따릅니다. 다음 섹션에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 다양한 코드 유형 및 이와 연결된 정책 규칙에 대해 설명합니다.  

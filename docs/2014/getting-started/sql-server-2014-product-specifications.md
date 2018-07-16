@@ -15,7 +15,7 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, product specifications
 - components [SQL Server], product specifications
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8a624ddfdebbe21575e1a79d4e79d7f6404d121f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 753c9d6009217e5af83d724a22c9b3ed9d50fdc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219923"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 제품 사양
   다음 표의 항목에서는 이 릴리스에 대한 제품 사양 정보를 제공합니다.  

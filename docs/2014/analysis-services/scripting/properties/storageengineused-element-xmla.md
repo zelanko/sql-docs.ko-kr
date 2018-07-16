@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 608ebcbb1252b4fafa44bf242a83418cc6b3d053
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203964"
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 요소(XMLA)
   현재 데이터베이스 유형에 대해 설명하는 읽기 전용 값을 포함합니다.  

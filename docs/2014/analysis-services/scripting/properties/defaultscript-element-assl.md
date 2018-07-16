@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultScript element
 ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0a26b8b703636aebb6d3701c5c7c99d24a25ade
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5de4eca3e226e6eddbe811af5dc089b1965cbd08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200063"
 ---
 # <a name="defaultscript-element-assl"></a>DefaultScript 요소(ASSL)
   기본값을 식별 [MdxScript](../objects/mdxscript-element-assl.md) 요소에는 [MdxScripts](../collections/mdxscripts-element-assl.md) 컬렉션입니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36187287"
 ## <a name="remarks"></a>Remarks  
  한 스크립트에 대해 `DefaultScript`의 값을 `True`로 설정하면 `DefaultScript` 컬렉션의 다른 모든 `False` 요소에 대해 `MdxScript`의 값이 `MdxScripts`로 설정됩니다.  
   
- 부모에 해당 하는 요소 `DefaultScript` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MdxScript>합니다.  
+ 부모에 해당 하는 요소가 `DefaultScript` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MdxScript>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

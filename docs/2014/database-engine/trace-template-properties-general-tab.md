@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab029ce62fde3ec410208582884890e1ff92b47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6e740d4866797c8d64b8798cd41dea9159f262ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184760"
 ---
 # <a name="trace-template-properties-general-tab"></a>추적 템플릿 속성(일반 탭)
-  **추적 템플릿 속성** 대화 상자의 **일반** 탭을 사용하여 다음 옵션으로 새 추적 템플릿을 만들 수 있습니다. 이 대화 상자에 액세스 하는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**, 클릭 하 고 **새 템플릿을**합니다.  
+  **추적 템플릿 속성** 대화 상자의 **일반** 탭을 사용하여 다음 옵션으로 새 추적 템플릿을 만들 수 있습니다. 이 대화 상자에 액세스 하는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**를 클릭 하 고 **새 템플릿**합니다.  
   
 ## <a name="options"></a>변수  
  **서버 유형 선택**  
@@ -42,7 +42,7 @@ ms.locfileid: "36186149"
  이 서버 유형에 대해 만든 추적에 기본적으로 이 템플릿을 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 템플릿을 만드는 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [추적 템플릿 만들기 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](../tools/sql-server-profiler/sql-server-profiler.md)  
   

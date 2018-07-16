@@ -3,31 +3,29 @@ title: 저장 프로시저 다시 컴파일 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_recompile
 - WITH RECOMPILE clause
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0b535169d3a0c8db074b5c582777517f743588d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 73fffe17fac4c26ca8c9951306d4a7e3c489bcd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172145"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법은 세 가지가: `WITH RECOMPILE` 옵션 프로시저 정의에서 나 프로시저가 호출 될 때는 `RECOMPILE` 개별 문 또는 사용 하 여 쿼리 힌트는 `sp_recompile` 시스템 저장 프로시저입니다. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법은 세 가지가 있습니다: `WITH RECOMPILE` 프로시저 정의 또는 프로시저를 호출할 때 옵션을 `RECOMPILE` 쿼리 힌트를 사용 하 여 또는 개별 문에 `sp_recompile` 시스템 저장 프로시저. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  
   
  **항목 내용**  
   

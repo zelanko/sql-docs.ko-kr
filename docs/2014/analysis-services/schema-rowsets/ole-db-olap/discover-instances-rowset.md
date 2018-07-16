@@ -18,21 +18,21 @@ helpviewer_keywords:
 - DISCOVER_INSTANCES rowset
 ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f3118b5de343a28dd26d3507d56c8e98fc09d512
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d949861a9208b60788e0085de2340bdd26f4700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200133"
 ---
 # <a name="discoverinstances-rowset"></a>DISCOVER_INSTANCES 행 집합
   서버의 인스턴스를 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
- `DISCOVER_INSTANCES` 행 집합에는 다음과 같은 열을 포함 합니다.  
+ `DISCOVER_INSTANCES` 행 집합에는 다음 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -17,20 +17,20 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44b07e26877a4d53d87cabb2ce48894f067a2802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a94c611a8c200f5b7b8211b6a1d69b3f147b7a37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195663"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하면 패키지에서 .NET 공급자를 사용하여 데이터 원본에 액세스할 수 있습니다. 이 연결 관리자는 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 데이터 원본에 액세스하는 데 사용되며, C#과 같은 언어를 사용하여 관리 코드로 작성된 사용자 지정 태스크의 OLE DB 및 XML로 제공되는 데이터 원본에 액세스하는 데에도 사용됩니다.  
   
- 추가 하는 경우는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자는 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 함으로써 해결 된 관리자 연결을 만듭니다는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 런타임 시 연결의 연결 관리자 속성을 설정 및 연결 관리자를 추가 `Connections` 패키지의 컬렉션입니다.  
+ 추가 하는 경우는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 패키지에 연결 관리자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결으로 확인 되는 관리자를 만들고는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 런타임 시 연결의 연결 관리자 속성을 설정 및 연결 관리자를 추가 `Connections` 패키지의 컬렉션입니다.  
   
- `ConnectionManagerType` 연결 관리자의 속성이로 설정 되어 `ADO.NET`합니다. 값 `ConnectionManagerType` 연결 관리자를 사용 하는.NET 공급자 이름이 포함 되도록 한정 됩니다.  
+ 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `ADO.NET`합니다. 변수의 `ConnectionManagerType` 연결 관리자를 사용 하는.NET 공급자 이름이 포함 되도록 한정 됩니다.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>ADO.NET 연결 관리자 문제 해결  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 수행하는 외부 데이터 원본에 대한 연결 문제를 해결할 수 있습니다. [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "36187687"
   
 -   [ADO.NET 연결 관리자 구성](../configure-ado-net-connection-manager.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 정보를 참조 하십시오. <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 하 고 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 연결](integration-services-ssis-connections.md)  

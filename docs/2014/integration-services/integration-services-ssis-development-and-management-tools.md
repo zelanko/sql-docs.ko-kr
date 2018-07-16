@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - studio environments [Integration Services]
 - tools [Integration Services], Business Intelligence Development Studio
@@ -21,13 +21,13 @@ ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 756a9f680ea860cc85a5d3cbe49e355c389f6eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 884f4e70a37dae4fed46689667bb7834aa88d671
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197513"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Integration Services(SSIS) 및 Studio 환경
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 사용할 수 있는 두 가지 Studio가 있습니다.  

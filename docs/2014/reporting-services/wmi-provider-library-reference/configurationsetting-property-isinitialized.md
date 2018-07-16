@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - IsInitialized
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39095c917533c6e12ae31c5d008790a247eca0ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d05e268fb416cde902c8e30580b8b5cdbfdc659a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185810"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 인스턴스가 초기화되었는지 여부를 나타냅니다. 읽기 전용입니다.  

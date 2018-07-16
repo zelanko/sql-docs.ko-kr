@@ -1,5 +1,5 @@
 ---
-title: 런타임에 OData 원본 쿼리를 수정 합니다. | Microsoft Docs
+title: 런타임에 OData 원본 쿼리 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8a6d015c972e9639a53a9affa498067d1c0350d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ada1553d9b170267e5f8521a89afd1cb9577792f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193603"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 수정
   데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 식을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36186568"
 ## <a name="exposing-the-query-as-a-parameter"></a>쿼리를 매개 변수로 노출  
  다음 절차에는 OData 원본 구성 요소에서 패키지에 대한 매개 변수로 사용하는 쿼리를 노출하는 단계가 있습니다.  
   
-1.  **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수화…** 옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
+1.   **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수화…** 옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
   
 2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
   

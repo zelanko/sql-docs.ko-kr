@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
 - sql11.dts.designer.afpstorageconn.f1
@@ -16,16 +16,16 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41ddc29a865b84ef01721931b0702476fe6b9ec1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6289ec54afd8b649b937fe3d5b9140dd50874f48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190823"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 저장소 연결 관리자
-  Azure 저장소 연결 관리자 속성에 대해 지정 된 값을 사용 하 여 Azure 저장소 계정에 연결 하는 SSIS 패키지를 통해: 저장소 계정 이름과 계정 키입니다.  
+  Azure Storage 연결 관리자 속성에 대해 지정 된 값을 사용 하 여 Azure Storage 계정에 연결할 SSIS 패키지를 사용 하도록 설정: 저장소 계정 이름과 계정 키입니다.  
   
 1.  **SSIS 연결 관리자 추가** 대화 상자에서 **AzureStorage**를 선택하고 **추가**를 클릭합니다.  
   

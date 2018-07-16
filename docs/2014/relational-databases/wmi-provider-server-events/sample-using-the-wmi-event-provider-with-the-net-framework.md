@@ -1,5 +1,5 @@
 ---
-title: 샘플:.NET framework에서 WMI 이벤트 공급자를 사용 하 여 | Microsoft Docs
+title: 샘플:.NET Framework를 사용 하 여 WMI 이벤트 공급자 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - managed code [WMI]
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e48525e3d944b71dbe728cdcd67a6e962ac97ab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: ec2511bd6f2e1f184dd2123750bcda02a50f59cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193023"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플:.NET framework에서 WMI 이벤트 공급자 사용
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플:.NET Framework를 사용 하 여 WMI 이벤트 공급자 사용
   다음 예에서는 WMI 이벤트 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 설치 인스턴스에서 발생하는 모든 DDL 이벤트에 대한 이벤트 데이터를 반환하는 응용 프로그램을 C#으로 만듭니다.  
   
 ## <a name="example"></a>예제  

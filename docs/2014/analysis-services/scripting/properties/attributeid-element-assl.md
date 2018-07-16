@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeID element
 ms.assetid: 13d2e92b-e4bf-4f2d-b34c-a6f483da3a9e
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8202afc924020742688a5bbd85bd98752fd22e2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 666bfadbcf08c9154796cd155c05fb1a7f2e79c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169484"
 ---
 # <a name="attributeid-element-assl"></a>AttributeID 요소(ASSL)
   부모 요소와 연결된 특성의 ID를 포함합니다.  
@@ -52,17 +52,17 @@ ms.locfileid: "36186640"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String|  
 |기본값|InclusionThresholdSetting|  
-|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
+|카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[AggregationAttribute](../data-type/aggregationattribute-data-type-assl.md), [AggregationDesignAttribute](../data-type/aggregationdesignattribute-data-type-assl.md), [AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md), [AttributeBinding](../data-type/binding-data-type-assl.md), [AttributePermission](../objects/attributepermission-element-assl.md), [AttributeRelationship](../objects/attributerelationship-element-assl.md), [CubeAttribute](../data-type/cubeattribute-data-type-assl.md), [CubeAttributeBinding](../data-type/cubeattributebinding-data-type-assl.md), [DimensionAttributeBinding](../data-type/dimensionattributebinding-data-type-out-of-line-assl.md), [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md), [UserDefinedGroupBinding](../data-type/userdefinedgroupbinding-data-type-assl.md)|  
+|부모 요소|[AggregationAttribute](../data-type/aggregationattribute-data-type-assl.md), [AggregationDesignAttribute](../data-type/aggregationdesignattribute-data-type-assl.md)를 [AggregationInstanceAttribute](../data-type/aggregationinstanceattribute-data-type-assl.md)하십시오 [AttributeBinding](../data-type/binding-data-type-assl.md), [ AttributePermission](../objects/attributepermission-element-assl.md), [AttributeRelationship](../objects/attributerelationship-element-assl.md)를 [CubeAttribute](../data-type/cubeattribute-data-type-assl.md)하십시오 [CubeAttributeBinding](../data-type/cubeattributebinding-data-type-assl.md), [ DimensionAttributeBinding](../data-type/dimensionattributebinding-data-type-out-of-line-assl.md), [MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md), [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)하십시오 [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)를 [ UserDefinedGroupBinding](../data-type/userdefinedgroupbinding-data-type-assl.md)|  
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 부모에 해당 하는 요소 `AttributeID` Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AggregationAttribute>, <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>, <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>, <xref:Microsoft.AnalysisServices.AttributeBinding>, <xref:Microsoft.AnalysisServices.AttributePermission>, <xref:Microsoft.AnalysisServices.AttributeRelationship>, <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.CubeAttributeBinding>, <xref:Microsoft.AnalysisServices.PerspectiveAttribute>, 및 <xref:Microsoft.AnalysisServices.UserDefinedGroupBinding>합니다.  
+ 부모에 해당 하는 요소 `AttributeID` Analysis Management Objects (AMO) 개체 모델 <xref:Microsoft.AnalysisServices.AggregationAttribute>, <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>, <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>를 <xref:Microsoft.AnalysisServices.AttributeBinding>를 <xref:Microsoft.AnalysisServices.AttributePermission>, <xref:Microsoft.AnalysisServices.AttributeRelationship>, <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.CubeAttributeBinding>하십시오 <xref:Microsoft.AnalysisServices.PerspectiveAttribute>, 및 <xref:Microsoft.AnalysisServices.UserDefinedGroupBinding>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [속성 &#40;ASSL&#41;](properties-assl.md)  

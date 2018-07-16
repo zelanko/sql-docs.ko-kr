@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 720bdfa021568842917385205cbf4bfb711708e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d23f3e344bdc6ea66e134e5444d29129bd5f0dab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181720"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버 또는 SharePoint 사이트의 폴더를 탐색하여 보고서, 공유 데이터 원본, 모델 및 기타 관련 보고서 항목을 찾고 컴퓨터에서 로컬 보고서를 찾아볼 수 있습니다. 보고서를 쉽게 찾을 수 있도록 보고서 작성기에는 최근에 사용한 서버 및 사이트 목록이 유지되며 컴퓨터 파일 시스템의 바탕 화면, 내 문서 및 내 컴퓨터 폴더에 대한 직접 액세스 기능이 제공됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "36187567"
   
  보고서 작성기에서 보고서 서버 또는 SharePoint 사이트의 보고서를 찾으려면 보고서 서버 또는 SharePoint 사이트 URL을 제공해야 합니다. 보고서 작성기를 처음 설치할 때 사용할 URL을 지정할 수 있습니다. 보고서를 저장하거나 열 때 보고서 작성기는 이 서버 또는 사이트에 기본적으로 연결합니다.  
   
- 보고서는 만들거나 업데이트할 때 보고서 작성기 및 보고서 디자이너에서 미리 볼 수 있으며, 게시한 후에 보고서 관리자를 사용하여 보고서 서버에서 보고 관리하거나 기본 제공 SharePoint 도구 및 기능을 사용해 Reporting Services에 통합된 SharePoint 사이트에서 보고 관리할 수 있습니다. 자세한 내용은 참조 [보고서 작성기에서 보고서를 미리 보려고 시도한](previewing-reports-in-report-builder.md) 및 [Previewing Reports](../reports/previewing-reports.md)합니다.  
+ 보고서는 만들거나 업데이트할 때 보고서 작성기 및 보고서 디자이너에서 미리 볼 수 있으며, 게시한 후에 보고서 관리자를 사용하여 보고서 서버에서 보고 관리하거나 기본 제공 SharePoint 도구 및 기능을 사용해 Reporting Services에 통합된 SharePoint 사이트에서 보고 관리할 수 있습니다. 자세한 내용은 [보고서 작성기에서 보고서 미리 보기](previewing-reports-in-report-builder.md) 하 고 [Previewing Reports](../reports/previewing-reports.md)합니다.  
   
  보고서 작성기 및 보고서 디자이너에서 보고서를 미리 보거나 보고서 관리자 또는 SharePoint 사이트에서 보고서를 볼 때는 데이터가 새로 고쳐지며 보고서에서 사용하는 데이터 원본의 최신 데이터가 표시됩니다. 데이터를 새로 고치지 않고 보고서를 보려면 게시된 보고서의 캐시된 데이터 및 보고서 기록을 사용하면 됩니다. 보고서 작성기 및 보고서 디자이너에서 보고서를 미리 볼 때는 이러한 기능을 사용할 수 없습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36187567"
   
  보고서 서버의 보고서를 찾으려면 보고서 서버의 URL을 지정해야 하고 보고서 항목을 읽고 저장하려면 해당 폴더에 대한 적절한 권한이 있어야 합니다. 시스템 관리자에게 보고서 서버의 URL 및 적절한 권한을 요청하십시오.  
   
- 보고서 작성기에서 보고서를 찾아 열고 나면 미리 보고 변경할 수 있습니다. 보고서를 미리 볼 때는 최신 데이터가 표시됩니다. 자세한 내용은 참조 [보고서 작성기에서 보고서를 미리 보려고 시도한](previewing-reports-in-report-builder.md)합니다.  
+ 보고서 작성기에서 보고서를 찾아 열고 나면 미리 보고 변경할 수 있습니다. 보고서를 미리 볼 때는 최신 데이터가 표시됩니다. 자세한 내용은 [보고서 작성기에서 보고서 미리 보기](previewing-reports-in-report-builder.md)합니다.  
   
  보고서 작성기를 사용하면 다음 태스크를 수행할 수 있습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36187567"
   
  이러한 태스크 중 일부는 보고서 서버 관리자가 수행합니다. 보고서 서버에서 수행된 태스크에 대한 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
   
- 보고서 관리자에는 보통 폴더, 보고서, 데이터 원본, 보고서 모델과 내 보고서 폴더가 포함됩니다. 내 보고서는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 내 보고서 내에 폴더를 만들어 보고서를 더 자세하게 구성할 수 있습니다. 자세한 내용은 참조 [내 보고서를 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)합니다.  
+ 보고서 관리자에는 보통 폴더, 보고서, 데이터 원본, 보고서 모델과 내 보고서 폴더가 포함됩니다. 내 보고서는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 내 보고서 내에 폴더를 만들어 보고서를 더 자세하게 구성할 수 있습니다. 자세한 내용은 [내 보고서를 사용 하 여 &#40;보고서 작성기 및 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)합니다.  
   
  보고서 관리자는 Reporting Services HTML 뷰어에 보고서를 표시합니다. HTML 뷰어는 HTML 형식의 보고서를 보는 데 필요한 프레임워크를 제공하며 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 포함합니다. 보고서 도구 모음은 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다. 보고서 도구 모음은 URL을 통해 보고서에 액세스할 때 보고서 상단의 브라우저 창에도 나타납니다. 인쇄 기능은 선택 사항이며 관리자가 설정해야 합니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 다음 그림에서는 보고서 관리자 창 및 보고서 도구 모음 기능 클로즈업 화면의 보고서 도구 모음을 보여 줍니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36187567"
  ![보고서 도구 모음](../media/htmlviewer-toolbar.gif "보고서 도구 모음")  
 보고서 도구 모음  
   
- 보고서를 실행 한 후 내보낼 수 있습니다를 다른 형식으로 같은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel 또는 PDF입니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대 한 자세한 내용은 참조 [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ 보고서를 실행 한 후 내보낼 수 있습니다 다른 형식으로 같은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel 또는 PDF입니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 하 고 [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  보고서를 선택하여 실행하는 가장 쉬운 방법은 보고서 관리자를 연 다음 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대한 단계별 지침은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
   
@@ -148,10 +148,10 @@ ms.locfileid: "36187567"
 ##  <a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 보고서 보기 및 관리에 대한 추가 정보를 제공합니다.  
   
- [보고서 찾기 및 보기 보고서 관리자에서 &#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [찾기 및 보고서 관리자에서 보고서 보기 &#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  보고서 관리자를 사용하여 보고서를 찾고 보고 관리하는 방법에 대해 설명합니다.  
   
- [브라우저에서 보고서 찾기 및 보기 &#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [브라우저를 사용 하 여 보고서 찾기 및 보기 &#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  URL을 사용하여 보고서를 찾고 보는 방법에 대해 설명합니다.  
   
  [보고서 및 기타 항목 검색 &#40;보고서 작성기 및 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  

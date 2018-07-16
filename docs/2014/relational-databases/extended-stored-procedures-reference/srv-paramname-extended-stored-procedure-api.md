@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramname
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2951902b7d50214159a360950bc1315a13c04f3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8108cbf1c08f9259734280105df931dc3f91203a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217273"
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname(확장 저장 프로시저 API)
     

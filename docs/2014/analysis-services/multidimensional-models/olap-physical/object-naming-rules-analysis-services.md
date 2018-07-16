@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202083"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
   이 항목에서는 개체 명명 규칙과 함께 개체 이름 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트에 사용할 수 없는 예약어 및 예약 문자에 대해 설명합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "36185691"
 |`Server`|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) 을 참조하십시오.|  
 |`DataSource`|: / \ * &#124; ? "() {} <>|  
 |`Level` 또는 `Attribute`|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` 또는 `Hierarchy`|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + () = {} \<, >|  
+|`Dimension` 또는 `Hierarchy`|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<, >|  
 |기타 모든 개체|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
  **예외: 예약 문자가 허용 되는 경우**  

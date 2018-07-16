@@ -20,18 +20,18 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5be520899f35f4fd2c21ebcf6c4c30ab9da4aa45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8de6e723d64d97352110c0508b52847050dcbf79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193033"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName 속성(SInstance 클래스)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 이름을 가져옵니다.  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

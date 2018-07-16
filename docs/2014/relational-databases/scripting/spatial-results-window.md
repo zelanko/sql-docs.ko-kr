@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5a98d82babedc2f60804a1948cd510d59e78b9fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a90ae89deb3f287f01faed9f5053d6ca615b2362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202933"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
   **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  

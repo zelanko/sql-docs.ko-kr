@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bcc5c8556875491776eb63179be3df3b1c1f5295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb7968cd33f2930e25e1e6a504ed9a4f17865ba4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201553"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 이벤트 클래스
   커서 닫기 이벤트는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 닫히고 커서의 할당을 취소할 때 발생합니다. **CursorClose** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트를 설명합니다. 이 이벤트 클래스는 ODBC, OLE DB 또는 DB-Library에 의해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 문이 닫힐 때 발생합니다.  

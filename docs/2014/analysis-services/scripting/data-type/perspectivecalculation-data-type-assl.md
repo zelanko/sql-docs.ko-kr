@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185150"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation 데이터 형식(ASSL)
-  간의 관계를 나타내는 기본 데이터 형식을 정의 및 [관점](../objects/perspective-element-assl.md) 요소입니다.  
+  계산 간의 관계를 나타내는 기본 데이터 형식을 정의 및 [관점](../objects/perspective-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36187501"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|InclusionThresholdSetting|  
-|자식 요소|[주석](../collections/annotations-element-assl.md), [이름](../properties/name-element-assl.md), [유형](../properties/type-element-perspectivecalculation-assl.md)|  
-|파생 요소|[계산](../objects/calculation-element-assl.md) ([계산](../collections/calculations-element-assl.md) 컬렉션 [관점](../objects/perspective-element-assl.md))|  
+|자식 요소|[주석을](../collections/annotations-element-assl.md)하십시오 [이름](../properties/name-element-assl.md), [형식](../properties/type-element-perspectivecalculation-assl.md)|  
+|파생 요소|[계산](../objects/calculation-element-assl.md) ([계산](../collections/calculations-element-assl.md) 모음인 [관점](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Remarks  
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.PerspectiveCalculation>합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 스크립팅 언어 XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language XML 데이터 형식 &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fdbb5ced844290625222036e0d670e93cbd08a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f526cb2f46f8ecda6af37e325a54c7c695910686
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202963"
 ---
 # <a name="configure-distribution"></a>배포 구성
   배포자는 배포 데이터베이스를 포함하는 서버이며 배포 데이터베이스는 트랜잭션 복제에 대한 모든 유형의 복제 및 트랜잭션에 대한 메타데이터와 기록 데이터를 저장합니다. 복제를 설정하려면 배포자를 구성해야 합니다. 각 게시자는 하나의 배포자 인스턴스에만 할당될 수 있지만 여러 게시자가 하나의 배포자를 공유할 수 있습니다. 배포자가 있는 서버에는 다음과 같은 추가 리소스가 필요합니다.  
