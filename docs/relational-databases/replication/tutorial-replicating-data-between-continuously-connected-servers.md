@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -22,12 +21,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
-ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
+ms.openlocfilehash: fcb6a4d0468dc74bbc937a11fd60783897e402cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2018
-ms.locfileid: "35452183"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350035"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

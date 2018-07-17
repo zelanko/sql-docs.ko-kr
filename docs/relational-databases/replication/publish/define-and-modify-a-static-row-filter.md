@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27b03d53f60ae4c68c35645d5991b958f1c678d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73186cdc165e13b422fb8246cfe22a7a442e84ac
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964108"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355755"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>정적 행 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "32964108"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 정적 행 필터를 정의하려면  
   
-1.  필터링할 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **@article**에 아티클 이름, **@publication**에 게시 이름, **@filter_name**에 필터 이름, **@filter_clause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다.  
   

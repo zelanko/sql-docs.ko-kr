@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +23,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dba63998aa6b899cbcfd3d2a0c9875845172d8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c786d1d12b2f7aad9072c5398caa8ccfee47c5c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964028"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356065"
 ---
 # <a name="define-an-article"></a>아티클 정의
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ ms.locfileid: "32964028"
     -   게시의 이름을 지정합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- 게시를 만든 후에 복제 저장 프로시저를 사용하여 아티클을 프로그래밍 방식으로 만들 수 있습니다. 아티클을 만드는 데 사용되는 저장 프로시저는 정의하려는 아티클의 게시 유형에 따라 달라집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
+ 게시를 만든 후에 복제 저장 프로시저를 사용하여 아티클을 프로그래밍 방식으로 만들 수 있습니다. 아티클을 만드는 데 사용되는 저장 프로시저는 정의하려는 아티클의 게시 유형에 따라 달라집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 아티클을 정의하려면  
   

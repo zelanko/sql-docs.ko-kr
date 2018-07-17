@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e3099ebb18883a99b5815b3db3e40f178b22234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964248"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357825"
 ---
 # <a name="replication-to-sql-database"></a>SQL Database에 복제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,8 @@ ms.locfileid: "32964248"
    
  - 사용자는 기존 Azure 구독 및 기존 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12를 가져야 합니다.  
    
- - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 단일 게시는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (온프레미스 및 Azure 가상 머신에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 모두를 지원합니다.  
+ - 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 단일 게시는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](온프레미스 및 Azure 가상 머신에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 모두를 지원합니다.  
    
  - 복제 관리, 모니터링 및 문제 해결은 온프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행되어야 합니다.  
    

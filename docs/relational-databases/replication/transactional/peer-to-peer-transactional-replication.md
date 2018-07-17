@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a008570306da0413e4a71fbc5fc2576e66129b1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fde84d7da5df42bc2f9d5c37edc8f56935fd0a4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964558"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355645"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>피어 투 피어 - 트랜잭션 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "32964558"
   
 -   구독을 만들려면 먼저 게시에 피어 투 피어 복제를 사용할 수 있도록 설정해야 합니다.  
   
--   백업이나 **'replication support only'** 옵션을 사용하여 구독을 초기화해야 합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+-   백업이나 **'replication support only'** 옵션을 사용하여 구독을 초기화해야 합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 -   ID 열은 사용하지 않는 것이 좋습니다. ID를 사용하는 경우 참여하는 각 데이터베이스에서 테이블에 할당된 범위를 수동으로 관리해야 합니다. 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)에서 "ID 범위 수동 관리를 위한 범위 할당" 섹션을 참조하세요.  
   

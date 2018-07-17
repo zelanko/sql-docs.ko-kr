@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
@@ -20,12 +19,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6651f84ac219330b2b236f3ee6537cc754b45c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 672b5c5f8011572994c6c611430f72982c418101
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964728"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350385"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

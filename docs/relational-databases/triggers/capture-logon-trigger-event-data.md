@@ -3,26 +3,22 @@ title: LOGON 트리거 이벤트 데이터 캡처 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
-caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3dd14622a5c427998b37a270bc29d635b324d967
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c22b26f721605cdd7266573b01583f030c8ddb25
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005980"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427382"
 ---
 # <a name="capture-logon-trigger-event-data"></a>LOGON 트리거 이벤트 데이터 캡처
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

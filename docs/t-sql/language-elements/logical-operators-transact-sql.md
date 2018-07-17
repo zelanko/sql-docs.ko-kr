@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f3a1f0170807ca0560c2253ecd578a848388c85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4447b7f120bc393f9c8a587d3c9490b59bfa809a
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33058420"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36254265"
 ---
 # <a name="logical-operators-transact-sql"></a>논리 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

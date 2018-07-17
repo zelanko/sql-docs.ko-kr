@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5038ad98858e3fa5e94864286af043ff432cc0a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65e1d7d8e984ca65f72646da72f2908f6b9d2b3d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956818"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357345"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "32956818"
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
-1.  **@article_resolver**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  **@article_resolver**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
@@ -209,7 +208,7 @@ ms.locfileid: "32956818"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>에 대한 비즈니스 논리 처리기의 이름( <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>)  
   
-3.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> 메서드를 호출합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+3.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> 메서드를 호출합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   

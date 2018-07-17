@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cec4bd133542e289bb0b6f682aaa7f37dd8a566b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 617477c76066d9711c79543ab28580add5740487
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964478"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355555"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "32964478"
   
  Oracle Universal Installer에서 다음 정보를 제공해야 합니다.  
   
-|정보|Description|  
+|정보|설명|  
 |-----------------|-----------------|  
 |Oracle|Oracle 소프트웨어 설치를 위한 디렉터리 경로입니다. 기본값(C:\oracle\ora90 또는 유사한 경로)을 그대로 적용하거나 다른 경로를 입력합니다. Oracle 홈에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "Oracle 홈에 대한 고려 사항" 섹션을 참조하십시오.|  
 |Oracle 홈 이름|Oracle 홈 경로에 대한 별칭입니다.|  
@@ -102,7 +101,7 @@ ms.locfileid: "32964478"
   
  Oracle Universal Installer가 작업을 완료하면 Net Configuration Assistant를 사용하여 네트워크 연결을 구성합니다. 네트워크 연결을 구성하려면 다음 4가지 정보를 입력해야 합니다. Oracle 데이터베이스 관리자는 데이터베이스와 수신기를 설정할 때 네트워크를 구성하며, 필요한 경우 이 정보를 사용자에게 제공할 수 있어야 합니다. 다음과 같은 작업을 수행해야 합니다.  
   
-|작업|Description|  
+|작업|설명|  
 |------------|-----------------|  
 |데이터베이스 식별|두 가지 방법으로 데이터베이스를 식별할 수 있습니다. 첫 번째 방법은 Oracle SID(시스템 식별자)를 사용하는 것으로 모든 Oracle 릴리스에서 사용할 수 있습니다. 두 번째 방법은 서비스 이름을 사용하는 것으로 Oracle 릴리스 8.0부터 사용할 수 있습니다. 두 가지 방법 모두 데이터베이스를 만들 때 구성된 값을 사용하며 클라이언트 네트워크 구성에서 데이터베이스를 위한 수신기를 구성할 때 관리자가 사용한 것과 동일한 명명 규칙을 사용하는 것이 중요합니다.|  
 |데이터베이스에 대한 네트워크 별칭 식별|Oracle 데이터베이스 액세스에 사용할 네트워크 별칭을 지정해야 합니다. 이 별칭은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 데이터베이스를 게시자로 식별할 때도 제공해야 합니다. 네트워크 별칭은 데이터베이스를 만들 때 구성된 원격 SID 또는 서비스 이름을 가리킵니다. 이 별칭은 다양한 Oracle 릴리스 및 제품에서 네트 서비스 이름 및 TNS 별칭 등 여러 이름으로 불립니다. SQL*Plus의 경우 로그인 시 이 별칭을 "Host String" 매개 변수로 입력하라는 메시지가 나타납니다.|  

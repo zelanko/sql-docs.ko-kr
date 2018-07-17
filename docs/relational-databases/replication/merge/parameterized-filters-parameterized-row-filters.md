@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965328"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356365"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>'partition options' 설정  
  아티클을 만들 때 필터링된 테이블의 데이터를 구독자에서 공유하는 방식에 따라 **partition options** 속성의 값을 지정합니다. 속성은 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)및 **Article Properties** 대화 상자를 사용하여 네 값 중 하나로 설정할 수 있습니다. 새 게시 마법사와 **게시 속성** 대화 상자의 **필터 추가** 또는 **필터 편집** 대화 상자를 사용하여 이 속성을 두 개의 값 중 하나로 설정할 수 있습니다. 다음 표에서는 사용할 수 있는 값을 요약합니다.  
   
-|Description|필터 추가 및 필터 편집에 있는 값|아티클 속성에 있는 값|저장 프로시저에 있는 값|  
+|설명|필터 추가 및 필터 편집에 있는 값|아티클 속성에 있는 값|저장 프로시저에 있는 값|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |파티션에 있는 데이터는 겹치며 구독자는 매개 변수가 있는 필터에서 참조된 열은 업데이트할 수 있습니다.|**이 테이블의 행을 여러 구독으로 이동**|**겹침**|**0**|  
 |파티션에 있는 데이터는 겹치며 구독자는 매개 변수가 있는 필터에서 참조된 열은 업데이트할 수 없습니다.|N/A*|**겹침, 파티션 외부 데이터 변경 내용 허용 안 함**|**1**|  

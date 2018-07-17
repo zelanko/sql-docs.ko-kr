@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c79e19d6cd66cd25796d63d214b0234a659a9dc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc07ddaa29dc999bef0037eeab66f51b65e27ea7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964958"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359315"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32964958"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제에 대한 게시 속성  
   
-|Description|저장 프로시저|속성|요구 사항|  
+|설명|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |스냅숏 형식을 변경합니다.|**sp_changepublication**|**sync_method**|새 스냅숏|  
 |스냅숏 위치를 변경합니다.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|새 스냅숏|  
@@ -49,7 +48,7 @@ ms.locfileid: "32964958"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제에 대한 아티클 속성  
   
-|Description|저장 프로시저|속성|요구 사항|  
+|설명|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |아티클을 삭제합니다.|**sp_droparticle**|모든 매개 변수|구독을 만들기 전에 아티클을 삭제할 수 있습니다. 저장 프로시저를 사용하면 아티클에 대한 구독을 삭제할 수 있고, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하면 전체 구독을 삭제하고 다시 만든 후 동기화해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |열 필터를 변경합니다.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
@@ -67,7 +66,7 @@ ms.locfileid: "32964958"
   
 ## <a name="publication-properties-for-merge-replication"></a>병합 복제에 대한 게시 속성  
   
-|Description|저장 프로시저|속성|요구 사항|  
+|설명|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |스냅숏 형식을 변경합니다.|**sp_changemergepublication**|**sync_mode**|새 스냅숏|  
 |스냅숏 위치를 변경합니다.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|새 스냅숏|  
@@ -86,7 +85,7 @@ ms.locfileid: "32964958"
   
 ## <a name="article-properties-for-merge-replication"></a>병합 복제에 대한 아티클 속성  
   
-|Description|저장 프로시저|속성|요구 사항|  
+|설명|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |매개 변수가 있는 필터가 게시의 마지막 필터인 아티클을 삭제합니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |아티클이 조인 필터 또는 논리적 레코드에서 부모인 아티클을 삭제합니다. 조인을 삭제하면 의도하지 않는 결과가 발생할 수 있습니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  

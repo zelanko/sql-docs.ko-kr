@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e53ad9de0c564803c06261b0fb313adcfacd9d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ab1cf1c6676323c63002dc352476b74b4725a8b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957138"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354625"
 ---
 # <a name="delete-a-pull-subscription"></a>끌어오기 구독 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,6 +144,6 @@ ms.locfileid: "32957138"
   
 ## <a name="see-also"></a>참고 항목  
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

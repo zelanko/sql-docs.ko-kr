@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 730525d439da22de116cb4239889720e0256351d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50d115f0d37e5b441872eb8bd96392fa62759b3a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963978"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359235"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Oracle 게시자에 대한 데이터 형식 매핑 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "32963978"
   
 1.  Oracle 게시가 아직 없는 경우 만듭니다.  
   
-2.  배포자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@use_default_datatypes**에 값 **0**을 지정합니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+2.  배포자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@use_default_datatypes**에 값 **0**을 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 3.  배포자에서 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) 를 실행하여 게시된 아티클의 열에 대한 기존 매핑을 확인합니다.  
   

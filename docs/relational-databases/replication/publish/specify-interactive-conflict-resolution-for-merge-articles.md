@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96e7a808a52e72aea320726f3e56761213d800b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a20f9da610969a3fe96bdd6cd834a2185a94239
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963438"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351445"
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>병합 아티클에 대한 상호 충돌 해결 프로그램 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ ms.locfileid: "32963438"
   
     -   값이 **0**이면 각 아티클에서 먼저 대화형 해결 프로그램을 설정해야 합니다. 이렇게 하려면 [@publication](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 지정하고 **@publication**을 지정하고 **@article**에 **allow_interactive_resolver** 값, **@property**에 **true** 값, **@value**에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. 자세한 내용은 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
+2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 3.  구독 데이터베이스의 구독자에서 다음 매개 변수를 지정하여 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)를 실행합니다.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "32963438"
   
 #### <a name="to-define-an-article-that-supports-the-interactive-resolver"></a>대화형 해결 프로그램을 지원하는 아티클을 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체 및 **@allow_interactive_resolver**에 **true** 값을 지정합니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체 및 **@allow_interactive_resolver**에 **true** 값을 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   

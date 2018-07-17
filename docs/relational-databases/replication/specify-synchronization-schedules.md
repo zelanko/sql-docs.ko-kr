@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05e5e55f02573bc73ac13a411ebb03671bf9bba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36a8f87973096213c11cc9df8cd880c0928a5b88
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964808"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358325"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,25 +171,25 @@ ms.locfileid: "32964808"
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
-1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
+1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
-1.  트랜잭션 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
+1.  트랜잭션 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
 2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
-1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
+1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  구독자에서 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
-1.  병합 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
+1.  병합 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
 2.  구독자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
@@ -233,7 +232,7 @@ ms.locfileid: "32964808"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
@@ -264,7 +263,7 @@ ms.locfileid: "32964808"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   

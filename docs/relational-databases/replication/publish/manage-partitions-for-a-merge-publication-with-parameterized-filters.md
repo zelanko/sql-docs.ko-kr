@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce4a960e4bbb59a4dc9982841e7a20a2407b307d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5194772695b8b63785bf82634e31873a7056390
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963998"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359515"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "32963998"
 -   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅숏을 생성하고, 스냅숏을 정리할 수 있습니다.  
+ **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅숏을 생성하고, 스냅숏을 정리할 수 있습니다.  
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   

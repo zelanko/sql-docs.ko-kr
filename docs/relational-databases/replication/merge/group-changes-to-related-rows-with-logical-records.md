@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d50cd4327a6d6ca57cce436f3a23d711f9bd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0f6808972afe7bb58c3fb69b43f09d39a015224
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963288"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355345"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

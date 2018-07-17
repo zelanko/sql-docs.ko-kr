@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -34,15 +33,15 @@ helpviewer_keywords:
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9a52853e96c01b7fbb638061e103100aed2658a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6c130ea8c926150b0b45f6e23ca06ede7534be0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054930"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789234"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  반환될 로그인 속성 정보가 포함된 식입니다. *propertyname*은 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**BadPasswordCount**|잘못된 암호를 사용하여 연속해서 로그인을 시도한 횟수를 반환합니다.|  
 |**BadPasswordTime**|잘못된 암호를 사용하여 마지막으로 로그인을 시도한 시간을 반환합니다.|  

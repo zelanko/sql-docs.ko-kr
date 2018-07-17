@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb14728bdeefc1a79de88d881c11215ac2a13fa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8eceabd07612dc14c87be23e97c338aa4f95e0dc
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964888"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359945"
 ---
 # <a name="synchronize-a-pull-subscription"></a>끌어오기 구독 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -837,6 +836,6 @@ End Try
 ## <a name="see-also"></a>참고 항목  
  [데이터 동기화](../../relational-databases/replication/synchronize-data.md)   
  [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -3,12 +3,9 @@ title: DML 트리거 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - testing column changes
 - results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d8939ff82c0e2538667e4862677ba11a8f22dc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ef51a69f40d38ce45fcbd6c061d5cf0ac3b25d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011210"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416538"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.locfileid: "33011210"
     |---------------|-----------|  
     |작성자|*Your name*|  
     |만든 날짜|*Today's date*|  
-    |Description|공급업체의 새 PO를 삽입하기 전에 공급업체의 신용 등급을 확인합니다.|  
+    |설명|공급업체의 새 PO를 삽입하기 전에 공급업체의 신용 등급을 확인합니다.|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  

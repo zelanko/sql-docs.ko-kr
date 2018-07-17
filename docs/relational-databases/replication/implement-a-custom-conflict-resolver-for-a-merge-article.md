@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -22,12 +21,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d18ca8e63ca80671cd31a524b0c9878121a15e61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3a2632fee35166a4e272ba801cc6357914b9932
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957528"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353475"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "32957528"
   
 1.  게시 또는 **msdb** 데이터베이스에 있는 게시자에서 다음 필수 매개 변수를 구현하는 새 시스템 저장 프로시저를 만듭니다.  
   
-    |매개 변수|데이터 형식|Description|  
+    |매개 변수|데이터 형식|설명|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|**sysname**|충돌을 해결 중인 테이블의 소유자 이름. 게시 데이터베이스에 있는 테이블의 소유자입니다.|  
     |**@tablename**|**sysname**|충돌을 해결 중인 테이블의 이름|  
@@ -115,7 +114,7 @@ ms.locfileid: "32957528"
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하고 원하는 해결 프로그램의 이름을 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. **@article_resolver**에 1단계의 아티클 해결 프로그램 이름을 지정합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. **@article_resolver**에 1단계의 아티클 해결 프로그램 이름을 지정합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>기존 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
@@ -127,6 +126,6 @@ ms.locfileid: "32957528"
 ## <a name="see-also"></a>참고 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 caps.latest.revision: 56
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b149c056517c1b33b7880f3379a033b0ece3d936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96d8d07ea3e0c3f57e00b33fc75e88e42062882b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055710"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790374"
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  달리 언급하지 않는 한 *property*가 유효한 속성 이름이 아니거나, *object_ID*가 유효한 개체 ID가 아니거나, *object_ID*가 지정된 속성에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  
   
-|속성|Description|값|  
+|속성|설명|값|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|인덱스의 깊이입니다.|인덱스 수준의 수입니다.<br /><br /> NULL = XML 인덱스이거나 입력이 잘못되었습니다.|  
 |**IndexFillFactor**|인덱스를 만들거나 최근에 다시 만들 때 사용한 채우기 비율 값입니다.|채우기 비율|  

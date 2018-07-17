@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb07b14c4d43ed664da7ac0b2b77324594c88f98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2cf631650229841979ef2acd8ee648dea7f86241
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32961698"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352645"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>스냅숏 에이전트(새 게시 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "32961698"
   
 ## <a name="options"></a>변수  
  **즉시 스냅숏 만들기** (병합 복제) 또는 **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (트랜잭션 복제)  
- 새 게시 마법사가 완료된 후 즉시 스냅숏을 만들려면 이 확인란을 선택합니다. 스냅숏을 생성하기 전에 **게시 속성** 대화 상자에서 스냅숏 속성을 변경하거나 스냅숏 없이 구독자를 초기화하려면 이 확인란의 선택을 취소합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+ 새 게시 마법사가 완료된 후 즉시 스냅숏을 만들려면 이 확인란을 선택합니다. 스냅숏을 생성하기 전에 **게시 속성** 대화 상자에서 스냅숏 속성을 변경하거나 스냅숏 없이 구독자를 초기화하려면 이 확인란의 선택을 취소합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  마법사에서 배포 에이전트 또는 병합 에이전트에 대해 해당 작업을 시작하려면 배포자에 연결하라는 메시지를 표시할 수 있습니다.  

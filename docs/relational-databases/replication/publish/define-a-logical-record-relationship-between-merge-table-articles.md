@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8eb5da1b801a492be4844967833373f80881f782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12800181219baf82db30c25cc542dacd1975de6f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964848"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359265"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +178,7 @@ ms.locfileid: "32964848"
   
     -   (옵션) 아티클이 행 필터링된 경우 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성에 대해 행 필터 절을 지정합니다. 이 속성을 사용하여 정적 또는 매개 변수가 있는 행 필터를 지정합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
-     자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+     자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> 메서드를 호출합니다.  
   

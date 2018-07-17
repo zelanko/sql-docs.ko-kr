@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 73
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 905725cecea8e2dee08641b49500d23f664f934b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e470c9ef918fd9eb533d3f9577e6859c18d33d4f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965338"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358955"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
