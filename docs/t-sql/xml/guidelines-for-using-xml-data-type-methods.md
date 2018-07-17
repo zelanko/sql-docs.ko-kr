@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|xml
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ea4da8b314d5f7a55c8a3ca2a5913440f5c9268
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071030"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36248455"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: 83
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c45a7886f07a12de69762f7079005f7d8b990927
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7a269185b576f22ddb9f764dac2babeda65b6364
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702856"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941119"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -90,7 +89,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>결과 집합  
  클라이언트는 RESTORE FILELISTONLY를 사용하여 백업 세트에 포함되어 있는 파일 목록을 가져올 수 있습니다. 이 정보는 각 파일에 대해 행 하나가 포함된 결과 집합으로 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|파일의 논리적 이름입니다.|  
 |PhysicalName|**nvarchar(260)**|물리적 파일 이름 또는 운영 체제 이름입니다.|  

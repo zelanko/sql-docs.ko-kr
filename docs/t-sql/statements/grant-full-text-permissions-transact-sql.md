@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,12 +22,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a6fb31fdd4b99a00a594e875712af56bb0ea3cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92c213a1017872287cd448f80590cf3b8c64eee5
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073390"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36241771"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 전체 텍스트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

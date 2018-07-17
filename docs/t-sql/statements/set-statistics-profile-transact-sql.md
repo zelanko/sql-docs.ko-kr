@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - statistical information [SQL Server], profiles
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6494f792c1dcfbb92bfe48d3063df533d0ff1510
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaf54bd6441a7502024ed41f4904c928ccc14c2b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069670"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783464"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ SET STATISTICS PROFILE { ON | OFF }
   
  추가 결과 집합에는 쿼리에 대한 SHOWPLAN_ALL 열과 다음 열이 포함됩니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**행**|각 연산자에서 만든 실제 행 수|  
 |**Executes**|연산자가 실행된 횟수|  

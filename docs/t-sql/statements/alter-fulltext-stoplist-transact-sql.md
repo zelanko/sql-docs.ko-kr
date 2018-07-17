@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc4c167ed6e49362fd11e6334269129c0d7a20b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ed53669eba8706a70cd4605d647b86be4652ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063850"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783954"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term*은 다음과 같이 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다.  
   
-|형식|Description|  
+|형식|설명|  
 |------------|-----------------|  
 |String|*language_term*은 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다.|  
 |정수|*language_term*은 언어의 LCID입니다.|  

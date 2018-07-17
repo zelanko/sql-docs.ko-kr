@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702517"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782434"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -132,7 +131,7 @@ RESTORE HEADERONLY
   
 예를 들어 60GB의 데이터베이스를 2개 노드 어플라이언스(노드당 30GB)에서 6개 노드 어플라이언스로 복원하는 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 6개 노드 어플라이언스에서 180GB 데이터베이스(노드당 30GB의 6개 노드)를 만듭니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]는 처음에 데이터베이스를 원본 구성에 일치하도록 2개 노드로 복원한 다음, 6개 노드 모두에 데이터를 다시 배포합니다.  
   
- 재배포 후 각 계산 노드는 더 작은 원본 어플라이언스에서 각 계산 노드에 비해 더 적은 실제 데이터와 더 많은 여유 공간을 포함하게 됩니다. 데이터베이스에 더 많은 데이터를 추가하려면 추가 공간을 사용합니다. 복원된 데이터베이스 크기가 필요한 것보다 더 큰 경우 [ALTER DATABASE&#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)를 사용하여 데이터베이스 파일 크기를 축소할 수 있습니다.  
+ 재배포 후 각 계산 노드는 더 작은 원본 어플라이언스에서 각 계산 노드에 비해 더 적은 실제 데이터와 더 많은 여유 공간을 포함하게 됩니다. 데이터베이스에 더 많은 데이터를 추가하려면 추가 공간을 사용합니다. 복원된 데이터베이스 크기가 필요한 것보다 더 큰 경우 [ALTER DATABASE&#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)를 사용하여 데이터베이스 파일 크기를 축소할 수 있습니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  이러한 제한 사항의 경우 원본 어플라이언스는 데이터베이스 백업을 만든 어플라이언스이며, 대상 어플라이언스는 데이터베이스를 복원할 어플라이언스입니다.  

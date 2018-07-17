@@ -10,14 +10,13 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: t-sql
 ms.date: 04/28/2018
-ms.openlocfilehash: b1bc891bf7edc4cd82c38c8d647c279828190298
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 294ecf21f39eda34d2fe10d6dc07b7280c6b6954
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32725625"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409112"
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>새로 추가되었거나 최근에 업데이트됨: Transact-SQL 문서
 

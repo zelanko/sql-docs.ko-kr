@@ -4,7 +4,6 @@ description: SQL 그래프 노드 또는 에지 테이블에 대한 INSERT 구�
 ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -22,12 +21,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0180eaa873484fa9061c01e0cc18e20ea3012da2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65f064f7893f9dde1f42d94daee1ec6207a0a868
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070140"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36254555"
 ---
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

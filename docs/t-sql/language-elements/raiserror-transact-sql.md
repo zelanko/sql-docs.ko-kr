@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -34,12 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9e89081eadae06a6dd14ae9a4d5e273657146f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f835fc61aea7474d9c31f33b070d96da1afa3033
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065790"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36241065"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  대체 값의 공백 처리 및 맞춤을 결정하는 코드입니다.  
   
-|코드|접두사 또는 맞춤|Description|  
+|코드|접두사 또는 맞춤|설명|  
 |----------|-----------------------------|-----------------|  
 |-(빼기)|왼쪽 정렬|지정한 필드 너비 내에서 인수 값을 왼쪽으로 정렬합니다.|  
 |+(더하기)|부호 접두사|값이 부호가 있는 형식일 경우 더하기(+)나 빼기(-) 부호를 인수 값 앞에 붙입니다.|  
@@ -162,7 +161,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *옵션*  
  오류에 대한 사용자 지정 옵션이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스용 오류 로그 및 응용 프로그램 로그에 오류를 기록합니다. 오류 로그에 기록되는 오류는 현재 최대 440바이트로 제한됩니다. sysadmin 고정 서버 역할의 멤버 또는 ALTER TRACE 권한을 가진 사용자만 WITH LOG를 지정할 수 있습니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|즉시 클라이언트에게 메시지를 전송합니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

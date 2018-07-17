@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8365215117ea1260ed5faff76187a7dd9c607887
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330157"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262047"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행
 

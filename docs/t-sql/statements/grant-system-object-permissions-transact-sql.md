@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - GRANT statement, system objects
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 39130687751acab7c86051625f41db644b567a8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f953ba7fa68efdb72bae5c5a48b0f21c6289f3f
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069790"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940669"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

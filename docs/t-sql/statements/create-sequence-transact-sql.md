@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - number, sequence
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 09401216daea0966e0bc5f7c5d8236fe2ac7af4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1990b5f9e88949aebf0137fefdeec76172e3341e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075570"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782634"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
