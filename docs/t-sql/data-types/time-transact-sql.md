@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 6/7/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 767f6650a46e67463dd51ad67ad1d506cc96c303
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055930"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421572"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,8 +57,8 @@ ms.locfileid: "33055930"
 |정확도|100나노초(Informatica의 경우 1밀리초)|  
 |기본값|00:00:00<br /><br /> 이 값은 **date**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
 |사용자 정의 초 소수 부분 자릿수|예|  
-|표준 시간대 오프셋 인식 및 유지|아니오|  
-|일광 절약 시간제 인식|아니오|  
+|표준 시간대 오프셋 인식 및 유지|아니요|  
+|일광 절약 시간제 인식|아니요|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수<br /><br /> 초<br /><br /> 전체 자릿수|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
@@ -76,7 +75,7 @@ ms.locfileid: "33055930"
 ## <a name="supported-string-literal-formats-for-time"></a>time에 지원되는 문자열 리터럴 형식  
  다음 표에서는 **time** 데이터 형식의 유효한 문자열 리터럴 형식을 보여 줍니다.  
   
-|SQL Server|Description|  
+|SQL Server|설명|  
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|시간 값 0은 AM 지정 여부와 관계없이 자정(AM) 이후 시간을 나타냅니다. 시간이 0일 경우 PM을 지정할 수 없습니다.<br /><br /> 01부터 11까지의 시간 값은 AM 또는 PM을 지정하지 않는 경우 오전을 나타냅니다. AM을 지정하면 이 값은 오전을 나타내고 PM을 지정하면 오후를 나타냅니다.<br /><br /> 시간 값 12는 AM 또는 PM을 지정하지 않는 경우 정오 이후의 시간을 나타냅니다. AM을 지정하면 이 값은 자정 이후의 시간을 나타내고 PM을 지정하면 정오 이후의 시간을 나타냅니다. 예를 들어 12:01은 12:01 PM과 마찬가지로 정오에서 1분 지난 시간이고 12:01 AM은 자정에서 1분 지난 시간입니다. 12:01 AM을 지정하는 것은 00:01 또는 00:01 AM을 지정하는 것과 같습니다.<br /><br /> 13부터 23까지의 시간 값은 AM 또는 PM을 지정하지 않는 경우 정오 이후의 시간을 나타냅니다. 또한 PM을 지정하는 경우에도 이 값은 정오 이후의 시간을 나타냅니다. 13부터 23까지의 시간 값을 사용할 경우 AM을 지정할 수 없습니다.<br /><br /> 시간 값 24는 유효하지 않습니다. 자정을 나타내려면 12:00 AM 또는 00:00을 사용하세요.<br /><br /> 밀리초 앞에는 콜론(:) 또는 마침표(.)가 올 수 있습니다. 콜론을 사용하면 숫자는 1/1000초를 의미합니다. 마침표를 사용하면 자릿수 하나는 1/10초를 의미하고 자릿수 두 개는 1/100초를 의미하며 자릿수 세 개는 1/1000초를 의미합니다. 예를 들어 12:30:20:1은 12:30분에서 20과 1/1000초가 지난 시간을 의미하고 12:30:20.1은 12:30분에서 20과 1/10초가 지난 시간을 의미합니다.|  
   
@@ -250,7 +249,7 @@ SELECT
 ###  <a name="ExampleB"></a> 2. time(7) 열에 유효한 시간 문자열 리터럴 삽입  
  다음 표에서는 **time(7)** 데이터 형식의 열에 삽입할 수 있는 여러 문자열 리터럴과 해당 열에 저장되는 값을 보여 줍니다.  
   
-|문자열 리터럴 형식 유형|삽입되는 문자열 리터럴|저장되는 time(7) 값|Description|  
+|문자열 리터럴 형식 유형|삽입되는 문자열 리터럴|저장되는 time(7) 값|설명|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|콜론(:)이 초 소수 부분 자릿수의 전체 자릿수 앞에 오면 소수 자릿수는 세 자리를 초과할 수 없으며 초과할 경우 오류가 발생합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|AM 또는 PM을 지정하면 시간이 리터럴 AM 또는 PM 없이 24시간 형식으로 저장됩니다.|  
@@ -265,7 +264,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>3. 각 date 및 time 날짜 형식의 열에 시간 문자열 리터럴 삽입  
  다음 표에서 첫 번째 열은 두 번째 열의 날짜 또는 시간 데이터 형식의 데이터베이스 테이블 열에 삽입될 시간 문자열 리터럴을 보여 줍니다. 세 번째 열은 데이터베이스 테이블 열에 저장될 값을 보여 줍니다.  
   
-|삽입되는 문자열 리터럴|열 데이터 형식|열에 저장되는 값|Description|  
+|삽입되는 문자열 리터럴|열 데이터 형식|열에 저장되는 값|설명|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|초 소수 부분 자릿수의 전체 자릿수가 열에 대해 지정한 값을 초과하면 문자열이 오류 없이 잘립니다.|  
 |'2007-05-07'|**date**|NULL|시간 값이 있으면 INSERT 문이 실패합니다.|  

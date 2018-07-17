@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,16 +27,16 @@ helpviewer_keywords:
 - denying permissions [SQL Server]
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92de91fa66e58f62bbcc9ae6dce2aa4b2c41ed97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fb4045343c17ffea8d132edc22cbd7898f4ec00
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075520"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941929"
 ---
 # <a name="deny-transact-sql"></a>DENY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -179,7 +178,7 @@ DENY
 |Object|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |큐|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |원격 서비스 바인딩|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Role|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|역할|[DENY 데이터베이스 보안 주체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |경로|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |스키마|[DENY 스키마 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |검색 속성 목록|[DENY 검색 속성 목록 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  

@@ -1,26 +1,24 @@
 ---
 title: Azure에서 배포된 SSIS 패키지로 파일 열기 및 저장 | Microsoft Docs
 description: 로컬 파일 시스템을 사용하는 SSIS 패키지를 Azure의 SSIS로 리프트하고 이동하는 경우 온-프레미스 및 Azure에서 파일을 열고 저장하는 방법 알아보기
-ms.date: 11/27/2017
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c4f9d5e91db382d59dc156ed919c1af06cc56b77
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410475"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065993"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS 패키지로 온-프레미스 및 Azure에서 파일 열기 및 저장
 
 이 문서는 로컬 파일 시스템을 사용하는 SSIS 패키지를 Azure의 SSIS로 리프트하고 이동하는 경우 온-프레미스 및 Azure에서 파일을 열고 저장하는 방법을 설명합니다.
-
-> [!IMPORTANT]
-> 현재, SSISDB(SSIS 카탈로그)는 단일 집합의 액세스 자격 증명만을 지원합니다. 그 결과 여러 온-프레미스 파일 공유 및 Azure Files 공유에 연결하려면 단일로 여러 자격 증명 집합을 사용할 수 없습니다.
 
 ## <a name="save-temporary-files"></a>임시 파일 저장
 단일 패키지를 실행하는 동안 임시 파일을 저장하고 처리해야 하는 경우 패키지는 Azure SSIS Integration Runtime 노드의 현재 작업 디렉터리(`.`) 또는 임시 폴더(`%TEMP%`)를 사용할 수 있습니다.

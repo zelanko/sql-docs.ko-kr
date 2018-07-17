@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,12 +28,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42e3ae8b426b7230cf8cfee4be68838792d30318
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82a1ce7e2b416ed0b31b6612d580e95ac7d7500e
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064501"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36242115"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -161,7 +160,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  커서를 선언한 후 다음 시스템 저장 프로시저를 사용하여 커서의 특징을 확인할 수 있습니다.  
   
-|시스템 저장 프로시저|Description|  
+|시스템 저장 프로시저|설명|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|현재 연결에서 볼 수 있는 커서 목록과 그 특성을 반환합니다.|  
 |**sp_describe_cursor**|정방향 전용 커서, 스크롤 커서 등의 커서 특성을 설명합니다.|  

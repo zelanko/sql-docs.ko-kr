@@ -3,8 +3,6 @@ title: '1단원: 데이터베이스 개체 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -13,17 +11,16 @@ ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 15dc73ede194e1b5ffb2a3cb7f0ec2af90ee7995
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d03ace8126d1c2a5894b336a349df67a533ef71
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33060080"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411272"
 ---
 # <a name="lesson-1-creating-database-objects"></a>1단원: 데이터베이스 개체 만들기
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

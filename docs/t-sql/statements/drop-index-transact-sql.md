@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 caps.latest.revision: 99
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b20a1f1203a4c40e4dce7f4c153e86255c501112
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7114c1c63abfc9e457316f7c77d6e820990a1e9
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075280"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789524"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -147,7 +146,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  MAXDOP = *max_degree_of_parallelism*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](성능 수준 P2 및 P3만 해당)  
   
- 인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+ 인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
 > [!IMPORTANT]  
 >  공간 인덱스 또는 XML 인덱스에서는 MAXDOP를 사용할 수 없습니다.  

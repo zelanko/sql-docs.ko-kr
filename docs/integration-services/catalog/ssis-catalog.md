@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 249a604407c1a11b5046ab3e9484c684ed80a2c2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404975"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872823"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -225,7 +225,7 @@ ms.locfileid: "35404975"
   
 -   [catalog.get_project &#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
   
--   [catalog.move_project &#40;&#40;SSISDB 데이터베이스&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+-   [catalog.move_project &#40;&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
   
 -   [catalog.restore_project &#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
   

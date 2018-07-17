@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 caps.latest.revision: 58
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4288b84c0ee47af3be54a71bb69e66f6c4ae552
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055440"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417492"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +56,8 @@ ms.locfileid: "33055440"
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력|  
 |사용자 정의 초 소수 부분 자릿수|예|  
-|표준 시간대 오프셋 인식 및 유지|아니오|  
-|일광 절약 시간제 인식|아니오|  
+|표준 시간대 오프셋 인식 및 유지|아니요|  
+|일광 절약 시간제 인식|아니요|  
   
 데이터 형식 메타데이터에 대한 자세한 내용은 [sys.systypes&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 또는 [TYPEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)를 참조하십시오. 일부 날짜 및 시간 데이터 형식의 경우 전체 자릿수와 소수 자릿수는 변할 수 있습니다. 열의 전체 자릿수와 소수 자릿수를 얻으려면 [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH&#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) 또는 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)를 참조하십시오.
   
@@ -69,7 +68,7 @@ ms.locfileid: "33055440"
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|이 형식은 SET LANGUAGE 및 SET DATEFORMAT 세션 로캘 설정의 영향을 받지 않습니다. **T**, 콜론(:) 및 마침표(.)는 문자열 리터럴에 포함됩니다(예: '2007-05-02T19:58:47.1234567').|  
   
-|ODBC|Description|  
+|ODBC|설명|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.소수 자릿수 초]' }|ODBC API 사양:<br /><br /> 소수 자릿수 초를 나타내는 소수점 오른쪽 자릿수는 0에서 최대 7(100나노초)까지 지정할 수 있습니다.|  
   

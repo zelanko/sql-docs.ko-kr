@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 caps.latest.revision: 130
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 26b3b72cf4e3ece0624eb33032e34713695c081c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e8ab694f484fe0679c4e41c162b7c482560c663
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055830"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782644"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -138,7 +137,7 @@ OPENROWSET
 > [!NOTE]  
 >  데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.  
   
-|CODEPAGE 값|Description|  
+|CODEPAGE 값|설명|  
 |--------------------|-----------------|  
 |ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열을 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|  
 |OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열을 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|  

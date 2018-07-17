@@ -3,8 +3,6 @@ title: PolyBase Kerberos 연결 문제 해결 | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
 manager: craigg
-ms.assetid: ''
-ms.component: polybase
 ms.technology: polybase
 ms.suite: sql
 ms.custom: ''
@@ -14,12 +12,12 @@ ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: fc09df1265c81f1fe1a127e17c4ebd4edcc66a1a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: f4786785dd046fea0c8758d2739c645c9a2312c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151304"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

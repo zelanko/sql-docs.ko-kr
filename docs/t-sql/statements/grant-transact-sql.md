@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e48ac3fdf525ba77c288cf0e33cc879e72a5a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2869a07f4b4c358cfd0cb9662f00441fdafd1d1b
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074790"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941509"
 ---
 # <a name="grant-transact-sql"></a>GRANT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,7 +183,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Object|[GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |큐|[GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |원격 서비스 바인딩|[GRANT Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Role|[GRANT 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|역할|[GRANT 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |경로|[GRANT Service Broker 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |스키마|[GRANT 스키마 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |검색 속성 목록|[GRANT 검색 속성 목록 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  

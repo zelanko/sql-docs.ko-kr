@@ -6,23 +6,21 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ba9202ae949122d83c2690e62a645246b7796bb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 36d911274b98df4990f66be5079f2acf309afa84
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701858"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787204"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +28,7 @@ ms.locfileid: "33701858"
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 사용자가 만든 테이블의 이름을 바꿉니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용자가 만든 테이블 또는 데이터베이스의 이름을 바꿉니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Data Warehouse](alter-database-azure-sql-data-warehouse.md)를 사용합니다.  Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](alter-database-azure-sql-database.md) 문을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 이름을 바꾸려면 저장된 프로시저 [sp_renamedb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)를 사용합니다.
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Data Warehouse](alter-database-transact-sql.md?&tabs=sqldw)를 사용합니다.  Azure SQL Database에서 데이터베이스의 이름을 바꾸려면 [ALTER DATABASE(Azure SQL Database)](alter-database-transact-sql.md?&tabs=sqldbmi) 문을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 이름을 바꾸려면 저장된 프로시저 [sp_renamedb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md)를 사용합니다.
   
 ## <a name="syntax"></a>구문  
   

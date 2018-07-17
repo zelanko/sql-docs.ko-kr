@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -48,15 +47,15 @@ helpviewer_keywords:
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075450"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786014"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -260,6 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -430,7 +430,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
 -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 문은 클러스터형 인덱스를 힙으로 변환합니다. 이 경우 다른 FILESTREAM 파일 그룹, 파티션 구성표 또는 **"** default **"** 를 지정할 수 있습니다.  
   
- `FILESTREAM_ON <filegroup>` 절의 파일 그룹이나 파티션 구성표에 명명되어 있는 각 FILESTREAM 파일 그룹에는 파일 그룹에 대해 정의된 파일이 하나 포함되어 있어야 합니다. 이 파일은 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 정의해야 합니다. 그러지 않으면 오류가 발생합니다.  
+ `FILESTREAM_ON <filegroup>` 절의 파일 그룹이나 파티션 구성표에 명명되어 있는 각 FILESTREAM 파일 그룹에는 파일 그룹에 대해 정의된 파일이 하나 포함되어 있어야 합니다. 이 파일은 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 정의해야 합니다. 그러지 않으면 오류가 발생합니다.  
   
  관련 FILESTREAM 토픽은 [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
@@ -550,7 +550,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
 
  클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.  
   
- *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 파일이 하나 포함되어야 하며, 그렇지 않으면 오류가 발생합니다.  
+ *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 파일이 하나 포함되어야 하며, 그렇지 않으면 오류가 발생합니다.  
   
  테이블이 분할된 경우에는 FILESTREAM_ON 절이 포함되어야 하며 이 절에서 테이블의 파티션 구성표와 동일한 파티션 함수 및 파티션 열을 사용하는 FILESTREAM 파일 그룹의 파티션 구성표를 지정해야 합니다. 그렇지 않으면 오류가 발생합니다.  
   

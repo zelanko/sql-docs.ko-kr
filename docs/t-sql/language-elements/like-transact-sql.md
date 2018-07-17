@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f97c3e301814d73ece3703a5bd32c55a7b8ab8a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d230ee2c430d753573687502175f0fbc711f0e83
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065130"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36252915"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +70,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  *match_expression*에서 검색할 특정 문자열이며 다음과 같은 유효한 와일드카드 문자를 포함할 수 있습니다. *pattern*은 최대 8,000바이트까지 지정할 수 있습니다.  
   
-|와일드카드 문자|Description|예제|  
+|와일드카드 문자|설명|예제|  
 |------------------------|-----------------|-------------|  
 |%|0개 이상의 문자를 가진 문자열|WHERE title LIKE '%computer%'는 책 제목에 'computer' 단어가 있는 모든 책 제목을 찾습니다.|  
 |_ (밑줄)|단일 문자|WHERE au_fname LIKE '_ean'은 ean으로 끝나는 모든 4문자 이름을 찾습니다(Dean, Sean 등).|  
