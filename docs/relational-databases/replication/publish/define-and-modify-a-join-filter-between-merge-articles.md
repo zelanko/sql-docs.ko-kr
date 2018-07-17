@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9145358ea089647316e077e939da01e58c00c62e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964138"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349845"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ ms.locfileid: "32964138"
   
     -   정적 행 필터를 사용하여 필터링되는 아티클의 경우 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 대한 하나 이상의 관련 아티클, 즉 자식 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 게시에 대한 하나 이상의 관련 아티클, 즉 자식 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)를 실행합니다. **@publication**을 지정하고 **@filtername**에 이 필터에 대한 고유한 이름을, **@article**에 2단계에서 만든 자식 아티클의 이름을, **@join_articlename**에 조인되는 부모 아티클의 이름을, **@join_unique_key**에 다음 값 중 하나를 지정합니다.  
   

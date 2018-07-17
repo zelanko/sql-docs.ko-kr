@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,15 +26,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23def6b6c02b49ae953c68a9e927de516582a605
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702916"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790824"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +153,7 @@ CREATE QUEUE <object>
   
  다음 표에서는 큐의 열을 나열합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |상태|**tinyint**|메시지의 상태입니다. RECEIVE 문은 상태가 **1**인 모든 메시지를 반환합니다. 메시지 보존이 설정되면 상태는 0으로 설정됩니다. 메시지 보존이 설정되지 않으면 메시지는 큐에서 삭제됩니다. 큐의 메시지는 다음 값 중 하나를 포함할 수 있습니다.<br /><br /> **0**=보존된 받은 메시지<br /><br /> **1**=수신 준비 완료<br /><br /> **2**=아직 완료되지 않음ㄴ<br /><br /> **3**=보존된 보낸 메시지|  
 |priority|**tinyint**|이 메시지에 할당된 우선 순위 수준입니다.|  

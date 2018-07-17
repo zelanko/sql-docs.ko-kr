@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f6fc92335de75aa6ccbf18814b262ee17cec890
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c8fd8479cc560a532c9150f4c32f16fd8524a8e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964738"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352235"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ ms.locfileid: "32964738"
   
 1.  게시자에서 [sp_reinitsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber**및 **@destination_db**를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
-2.  필요에 따라 배포자에서 배포 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
+2.  필요에 따라 배포자에서 배포 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
@@ -140,7 +139,7 @@ ms.locfileid: "32964738"
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
   
-2.  필요에 따라 배포자에서 병합 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
+2.  필요에 따라 배포자에서 병합 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>새 병합 게시를 만들 때 다시 초기화 정책을 설정하려면  
   

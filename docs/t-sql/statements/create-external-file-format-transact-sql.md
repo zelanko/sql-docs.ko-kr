@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f478c5f06ff846d313625dc0792b33708a9ca358
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b8a39d64854d6cc63f0b607b9eaa5084ab250313
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702966"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784674"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -187,7 +186,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   Am, pm(tt)은 필요하지 않습니다. 기본값은 AM입니다.
   
-|날짜 형식|예제|Description|  
+|날짜 형식|예제|설명|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|이 날짜 형식은 연도, 월, 일 외에도 00-24시간, 00-59분, 00-59초, 3자리 밀리초를 포함합니다.|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|이 날짜 형식은 연도, 월, 일 외에도 00-12시간, 00-59분, 00-59초, 3자리 밀리초와, AM, am, PM, 또는 pm을 포함합니다. |  

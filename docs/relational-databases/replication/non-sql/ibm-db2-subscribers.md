@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0af7787982a49f82edafe1a39878e9e9f581356b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964368"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349855"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "32964368"
   
 -   테이블에 있는 하나 이상의 기본 키 열이 DECIMAL(32-38, 0-38) 또는 NUMERIC(32-38, 0-38) 데이터 형식이면 트랜잭션 복제를 사용하여 테이블을 DB2 구독자로 게시해서는 안 됩니다. 트랜잭션 복제에서는 기본 키를 사용하여 행을 식별하는데 이 데이터 형식은 구독자에서 VARCHAR(41)로 매핑되므로 오류가 발생할 수 있습니다. 기본 키에서 이러한 데이터 형식을 사용하는 테이블은 스냅숏 복제를 사용하여 게시할 수 있습니다.  
   
--   복제에서 테이블을 만드는 대신 구독자에서 테이블을 미리 만들려면 replication support only 옵션을 사용합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+-   복제에서 테이블을 만드는 대신 구독자에서 테이블을 미리 만들려면 replication support only 옵션을 사용합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 DB2에서 지원되는 길이보다 긴 테이블 이름과 열 이름을 사용할 수 있습니다.  
   

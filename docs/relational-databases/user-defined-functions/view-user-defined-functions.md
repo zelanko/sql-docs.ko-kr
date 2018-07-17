@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: udf
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +24,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f994d29dd2f994c2931992c6f222d91b0ae0dbee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c58420098c2c1b2d8271a9f80b7a235168f841b2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011400"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430312"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,12 +18,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484b47de33df0f278c082831130bad233a501cf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6fc22e50c69a1734840d54c8a7c58ca8a41e9185
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064860"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36249115"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "33064860"
 ## <a name="remarks"></a>Remarks  
  다음 표에는 가능한 반환 값이 있습니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |24400|Valid|  
 |24401|유효하지 않으며 이유를 알 수 없습니다.|  

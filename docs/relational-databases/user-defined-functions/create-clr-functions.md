@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: udf
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ff7bfe946e08e33925fdf26c45085c1e26dc750
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c2c74068c438cb5284cc8ae5bd92f91100662e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013210"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419492"
 ---
 # <a name="create-clr-functions"></a>CLR 함수 만들기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

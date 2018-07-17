@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 931f02cf9f63bcb5f0b3a505e1e3e874c79929b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 255e1922a924c86daca4aeb5c0c5e7072e6f2076
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965098"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352895"
 ---
 # <a name="define-and-modify-a-column-filter"></a>열 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "32965098"
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 게시된 아티클에 대한 열 필터를 정의하려면  
   
-1.  필터링할 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)을 실행합니다. 이렇게 하면 아티클에 포함할 열 또는 아티클에서 제거할 열이 정의됩니다.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "32965098"
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-merge-publication"></a>병합 게시에 게시된 아티클에 대한 열 필터를 정의하려면  
   
-1.  필터링할 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)을 실행합니다. 이렇게 하면 아티클에 포함할 열 또는 아티클에서 제거할 열이 정의됩니다.  
   

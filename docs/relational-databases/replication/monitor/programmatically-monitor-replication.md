@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -34,12 +33,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc5ab13c00b5af13a68325fc50c252f0ca68f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0212edfaa4160bd0fbc0da9df6861cfa46056ed3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965398"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350025"
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +272,7 @@ ms.locfileid: "32965398"
   
     -   *metricID* - 다음 테이블에서 모니터링 임계값 메트릭을 나타내는 <xref:System.Int32> 값입니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |@shouldalert|**expiration** - 트랜잭션 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
         |2|**latency** - 트랜잭션 게시에 대한 구독의 성능을 모니터링합니다.|  

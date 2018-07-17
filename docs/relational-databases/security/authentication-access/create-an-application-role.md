@@ -15,16 +15,16 @@ helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cdc075d1dcce93ea02af0a36c65df76ce2ff0ff3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7fa11e354f508d56ac2f32fe9fca932a3b6617
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694109"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941539"
 ---
 # <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,8 @@ ms.locfileid: "35694109"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **응용 프로그램 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
+ 
+  **응용 프로그램 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

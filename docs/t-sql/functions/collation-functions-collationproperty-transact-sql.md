@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - COLLATIONPROPERTY function
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c121184b4d2af48a547b06fec38b89fa2335da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d24771ca97dc145ae8212ccc4d08b26c4cbea564
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053450"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784444"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>데이터 정렬 - COLLATIONPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ COLLATIONPROPERTY( collation_name , property )
 *property*  
 데이터 정렬 속성입니다. *property* 인수는 **varchar(128)** 데이터 형식이며, 다음 값 중 하나일 수 있습니다.
   
-|속성 이름|Description|  
+|속성 이름|설명|  
 |---|---|
 |**CodePage**|데이터 정렬의 유니코드가 아닌 코드 페이지입니다. 이러한 값을 변환하고 해당 문자 매핑을 확인하려면 [부록 G DBCS/유니코드 매핑 표](https://msdn.microsoft.com/en-us/library/cc194886.aspx) 및 [부록 H 코드 페이지](https://msdn.microsoft.com/en-us/library/cc195051.aspx)를 참조하세요.|  
 |**LCID**|데이터 정렬의 Windows LCID입니다. 이러한 값을 변환하려면 [LCID 구조](https://msdn.microsoft.com/en-us/library/cc233968.aspx)를 참조하세요(먼저 **varbinary**로 변환해야 함).|  

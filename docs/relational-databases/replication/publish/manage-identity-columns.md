@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8173b90d4c23ca612e80175d59969e259c2cb24c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: debc7e5750d6d96e11a61a07be7ee4c7bbd97330
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964688"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355455"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.locfileid: "32964688"
   
 5.  4단계에서 **자동** 또는 **True** 를 선택한 경우 다음 표를 참조하여 옵션 값을 입력합니다. 이러한 설정의 사용 방법은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.  
   
-    |옵션|값|Description|  
+    |옵션|값|설명|  
     |------------|-----------|-----------------|  
     |**게시자 범위 크기**|범위 크기에 대한 정수 값(예: 20000)|[ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
     |**구독자 범위 크기**|범위 크기에 대한 정수 값(예: 10000)|[ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  

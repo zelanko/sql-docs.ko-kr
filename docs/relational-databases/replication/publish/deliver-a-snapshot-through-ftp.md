@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 991c8ab81340b5ab9b03b79174e7a60e33b505cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52edda77eb537fb6962a183cc37591b457d33b6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964768"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355135"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅숏 배달
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "32964768"
  가능한 경우 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 스크립트 파일에 자격 증명을 저장하는 경우에는 이 파일에 보안을 설정해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- FTP 서버를 구성한 후 **게시 속성 \<게시>** 대화 상자에서 이 서버에 대한 디렉터리 및 보안 정보를 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ FTP 서버를 구성한 후 **게시 속성 \<게시>** 대화 상자에서 이 서버에 대한 디렉터리 및 보안 정보를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-ftp-information"></a>FTP 정보를 지정하려면  
   
@@ -108,7 +107,7 @@ ms.locfileid: "32964768"
   
     -   (옵션) **@ftp_password** - FTP 로그인에 대한 암호입니다.  
   
-     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
+     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>병합 게시에 대한 FTP 스냅숏 배달을 설정하려면  
   
@@ -124,7 +123,7 @@ ms.locfileid: "32964768"
   
     -   (옵션) **@ftp_password** - FTP 로그인에 대한 암호입니다.  
   
-     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
+     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅숏 배달을 사용하는 스냅숏 또는 트랜잭션 게시에 대한 끌어오기 구독을 만들려면  
   
@@ -132,7 +131,7 @@ ms.locfileid: "32964768"
   
     -   구독 데이터베이스의 구독자에서 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**을 지정하고 **@job_login** 및 **@job_password**에 구독자에서 배포 에이전트를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을, **@use_ftp**에 **true** 값을 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅숏 배달을 사용하는 병합 게시에 대한 끌어오기 구독을 만들려면  
   
@@ -140,7 +139,7 @@ ms.locfileid: "32964768"
   
 2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**을 지정하고 **@job_login** 및 **@job_password**에 구독자에서 배포 에이전트를 실행하는 데 사용되는 Windows 자격 증명을, **@use_ftp**에 **true** 값을 지정합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
+3.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 하나 이상의 FTP 스냅숏 배달 설정을 변경하려면  
   

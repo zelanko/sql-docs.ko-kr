@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c8fdd22ae4a058be09ef59a7ffaf97911647fc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c27f26971f71e971108f21d13499016913150ff
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956648"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355215"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "32956648"
   
 6.  게시에 대한 스냅숏을 생성합니다. 이 항목에는 이 단계에 대한 자세한 정보를 제공합니다.  
   
-7.  구독을 동기화합니다. 자세한 내용은 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
+7.  구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
 #### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>SQL Server 이외 구독자에 대한 게시를 설정하려면  
   
@@ -194,6 +193,6 @@ ms.locfileid: "32956648"
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [다른 SQL Server 이외 구독자](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

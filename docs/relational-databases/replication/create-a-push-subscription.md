@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 464fe19b441009e8a619cea6e478866890b19e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f66fd7e355b453fc2d00a775c0a244b04763d19e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957118"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349985"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "32957118"
   
     -   병합 게시에 대한 구독의 경우 **병합 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
   
-     각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)를 참조하세요.  
+     각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)를 참조하세요.  
   
 -   동기화 일정과 구독자의 초기화 시기를 지정합니다.  
   
@@ -130,11 +129,11 @@ ms.locfileid: "32957118"
   
     -   **@subscription_priority**를 참조하세요. 서버 구독에 대해 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**).  
   
-         자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+         자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
-    -   배포자의 배포 에이전트가 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**및 **@publication** 매개 변수  
+    -   구독자에서 배포 에이전트가 실행되는 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**및 **@publication** 매개 변수  
   
     -   **@job_login** 및 **@job_password**에 대해 배포자의 병합 에이전트를 실행하는 데 사용되는 Windows 자격 증명  
   
@@ -190,7 +189,7 @@ ms.locfileid: "32957118"
   
     -   배포자의 배포 에이전트가 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
-        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) **@value** 에 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 값(기본값). **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "32957118"
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출합니다.  
   
-    > **중요!!** 원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+    > **중요!!** 원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 밀어넣기 구독을 만들려면  
   
@@ -228,7 +227,7 @@ ms.locfileid: "32957118"
   
     -   배포자의 배포 에이전트가 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
-        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) **@value** 에 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 값(기본값). **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
   

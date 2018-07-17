@@ -3,7 +3,6 @@ title: 두 서버에서 동일한 대칭 키 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
@@ -12,17 +11,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-caps.latest.revision: 23
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e29268413b2cfa5e8e42d11ca25cb12bfb68d65
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: add0b4b31326ee291666a652434d6c245f2ef4be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163614"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>두 서버에서 동일한 대칭 키 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

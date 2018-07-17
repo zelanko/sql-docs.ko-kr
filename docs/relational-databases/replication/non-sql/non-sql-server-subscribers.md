@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e031fe7469b95a68f06d01efb53903978c5ecd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab93ca40e53454d1574482b8ebeeaa625e671f9f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963248"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352615"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,9 +108,11 @@ Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle 구독자](../../..
   
 ### <a name="replication-feature-support"></a>복제 기능 지원  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 두 가지 유형의 구독(밀어넣기 및 끌어오기)을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 배포 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 실행되는 밀어넣기 구독을 사용해야 합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 두 가지 유형의 구독(밀어넣기 및 끌어오기)을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 배포 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 실행되는 밀어넣기 구독을 사용해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에는 문자 모드 스냅숏이 필요합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에는 문자 모드 스냅숏이 필요합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 즉시 업데이트 구독 또는 지연 업데이트 구독을 사용할 수 없거나 피어 투 피어 토폴로지의 노드일 수 없습니다.  
   

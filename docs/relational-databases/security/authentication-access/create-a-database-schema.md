@@ -18,16 +18,16 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 196cbbfa9c455484feb094c30f67c1fd5abdd190
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 678f19f8f6eaf3e959ef7c51f966212d723f674d
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698384"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943079"
 ---
 # <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,8 @@ ms.locfileid: "35698384"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **스키마 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **권한** 및 **확장 속성**을 제공합니다.  
+ 
+  **스키마 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **권한** 및 **확장 속성**을 제공합니다.  
   
 -   **사용 권한** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

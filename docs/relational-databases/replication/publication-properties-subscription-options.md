@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 451273b019c91d7bf92ae2f277bb4a7b69e668b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e150652a335175dce388d7cd0f5c40a79e61391
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964308"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352985"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "32964308"
  스냅숏 에이전트를 실행할 때마다 스냅숏 파일을 만들지 여부를 결정합니다( **독립 배포 에이전트**필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사의 **스냅숏 에이전트** 페이지에서 **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (기본값)를 선택하면 이 옵션이 **True** 로 설정됩니다. 자세한 내용은 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)을 참조하세요.  
   
  **백업 파일로 초기화 허용**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 백업 파일을 사용하여 구독을 초기화할 수 있도록 허용할지 여부를 결정합니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 백업 파일을 사용하여 구독을 초기화할 수 있도록 허용할지 여부를 결정합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  **SQL Server 이외 구독자 허용**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정하면 다른 게시 속성도[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하도록 설정됩니다. 구독이 있으면 이 옵션은 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용**또는 **피어 투 피어 구독 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  

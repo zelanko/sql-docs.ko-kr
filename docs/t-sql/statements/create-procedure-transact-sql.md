@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -47,16 +46,16 @@ helpviewer_keywords:
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 caps.latest.revision: 180
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10e39cdc32b2b70785cdeeec40b11fbdd0b03902
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d193ca55d720bb8c843280b553a2ef01e5c742a7
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075130"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790424"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -149,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>인수
 OR ALTER  
- **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)  
+ **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)  
   
  프로시저가 이미 존재하는 경우 변경합니다.
  
@@ -445,7 +444,7 @@ GO
 ## <a name="metadata"></a>메타데이터  
  다음 테이블에서는 저장 프로시저에 대한 정보를 반환하는 데 사용할 수 있는 카탈로그 뷰 및 동적 관리 뷰를 나열합니다.  
   
-|보기|Description|  
+|보기|설명|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저의 정의를 반환합니다. ENCRYPTION 옵션으로 만든 프로시저의 텍스트는 **sys.sql_modules** 카탈로그 뷰를 사용하여 볼 수 없습니다.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR 프로시저 정보를 반환합니다.|  

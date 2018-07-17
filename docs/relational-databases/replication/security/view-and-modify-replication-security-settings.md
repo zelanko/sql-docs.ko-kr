@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74bd2e6330318f73258279ea4c849f497baf1d82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f48e91774c0d0d59994a06a77895ec605f8ac74
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964788"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350535"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "32964788"
   
 1.  **의** 복제 **폴더에서 사용할 수 있는** 복제 암호 업데이트 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 복제 토폴로지의 서버에서 Windows 계정이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정의 암호를 변경할 경우 해당 계정을 사용하는 각 에이전트의 암호를 업데이트하지 말고 이 대화 상자를 사용하세요. 두 개 이상의 서버에 있는 에이전트에서 같은 계정을 사용할 경우 각 서버에 연결하고 암호를 변경해야 합니다. 해당 암호를 사용하는 복제가 있는 모든 위치에서 암호가 업데이트됩니다. 연결된 서버와 같은 다른 위치에서는 암호가 업데이트되지 않습니다.  
   
-2.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+2.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 3.  **구독 속성 - \<Subscription>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [밀어넣기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   

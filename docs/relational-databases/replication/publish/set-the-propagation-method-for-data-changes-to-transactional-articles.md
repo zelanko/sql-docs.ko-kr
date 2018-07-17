@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1eef0787a96ddd1661c6276a692d3ad05d7b5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 787db7a15a214b029f55e315c41a624c09b9d244
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964598"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352855"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ ms.locfileid: "32964598"
     > [!NOTE]  
     >  위 매개 변수 중 하나에 **SQL** 값을 지정하면 해당 유형의 명령이 적절한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 명령으로 구독자에 복제됩니다.  
   
-     자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+     자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>데이터 변경 내용을 전파하지 않는 아티클을 만들려면  
   
@@ -117,7 +116,7 @@ ms.locfileid: "32964598"
     > [!NOTE]  
     >  위 매개 변수 중 하나에 **NONE** 값을 지정하면 해당 유형의 명령이 구독자에 복제되지 않습니다.  
   
-     자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+     자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>사용자가 수정한 사용자 지정 저장 프로시저를 포함하는 아티클을 만들려면  
   
@@ -135,7 +134,7 @@ ms.locfileid: "32964598"
     > [!NOTE]  
     >  CALL, SCALL, XCALL 및 MCALL 구문에 대한 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
-     자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+     자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 2.  스냅숏이 생성된 후 이 아티클이 속해 있는 게시의 스냅숏 폴더로 이동하여 아티클과 동일한 이름을 가진 **.sch** 파일을 찾습니다. Notepad.exe를 사용하여 이 파일을 열고 삽입, 업데이트 또는 삭제 저장 프로시저에 대한 CREATE PROCEDURE 명령을 찾은 후 프로시저 정의를 편집하여 데이터 변경 내용 전파에 대한 사용자 지정 논리를 제공합니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
@@ -155,7 +154,7 @@ ms.locfileid: "32964598"
     > [!NOTE]  
     >  CALL, SCALL, XCALL 및 MCALL 구문에 대한 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
-     자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+     자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 2.  게시 데이터베이스의 게시자에서 [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) 문을 사용하여 삽입, 업데이트 및 삭제 사용자 지정 저장 프로시저에 대한 [CREATE PROCEDURE](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) 스크립트를 반환하도록 [sp_scriptpublicationcustomprocs](../../../t-sql/statements/create-procedure-transact-sql.md) 를 편집하면 합니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
