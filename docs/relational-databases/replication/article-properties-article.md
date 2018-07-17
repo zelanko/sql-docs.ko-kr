@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c255b06cd56ff27f1ada7f3ca0f0fa36113407
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fa58456bf72ab50dec1ff67a40c10be19b0ad45
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956848"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354265"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,8 @@ ms.locfileid: "32956848"
   
 ## <a name="options-for-all-publications"></a>모든 게시에 대한 옵션  
  **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표 복사**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 복제에서 행 필터 및 열 필터를 통해 제공하는 분할과는 관계없는 테이블 파티션 및 인덱스 파티션이 도입되었습니다. **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표 복사** 옵션은 파티션 구성표를 구독자에 복사해야 하는지 여부를 지정합니다. 분할에 대한 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하십시오.  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 복제에서 행 필터 및 열 필터를 통해 제공하는 분할과는 관계없는 테이블 파티션 및 인덱스 파티션이 도입되었습니다. **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표 복사** 옵션은 파티션 구성표를 구독자에 복사해야 하는지 여부를 지정합니다. 분할에 대한 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하십시오.  
   
  **데이터 형식 변환**  
  구독자에서 개체 생성 시 사용자 정의 데이터 형식에서 기본 데이터 형식으로 변환할지 여부를 결정합니다. 사용자 정의 데이터 형식에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 사용자 정의 CLR 유형이 포함됩니다. 이러한 데이터 형식을 이전 버전의 **로 복제하려면 값을** True [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 지정합니다. 이렇게 하면 구독자에서 해당 데이터 형식을 올바르게 처리할 수 있습니다.  

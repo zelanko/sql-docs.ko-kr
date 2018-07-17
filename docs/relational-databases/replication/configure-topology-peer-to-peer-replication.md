@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c534b0114c3e54d9a3ecd17bdde03d779c7edc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955718"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351285"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "32955718"
 ## <a name="options"></a>변수  
  **토폴로지 구성** 페이지에는 여러 가지 인터페이스 요소와 요소를 마우스 오른쪽 단추로 클릭하면 사용할 수 있는 옵션이 포함되어 있습니다. 다음 표에서는 각 인터페이스 요소에 대해 설명합니다.  
   
-|인터페이스 요소|Description|  
+|인터페이스 요소|설명|  
 |-----------------------|-----------------|  
 |디자인 화면|다른 인터페이스 요소가 표시됩니다. 요소를 추가하려면 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.|  
 |![토폴로지의 첫 번째 노드](../../relational-databases/replication/media/p2pwizard-firstnode.gif "토폴로지의 첫 번째 노드")|토폴로지의 원래 노드입니다. 새 노드는 원래 노드의 게시 데이터베이스 복사본을 사용하여 초기화됩니다.|  

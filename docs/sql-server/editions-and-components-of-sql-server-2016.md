@@ -3,12 +3,9 @@ title: SQL Server 2016의 버전 및 지원하는 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -35,16 +32,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b646e55f8849bc6465b59f7295581aefe03f048c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c1f1e78a10b2c0c87089531959a53abaa09e055
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036600"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772348"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
  다음 표의 정보를 사용하여 사용자 요구에 가장 적합한 기능 집합을 결정하십시오.  
   
-|서버 구성 요소|Description|  
+|서버 구성 요소|설명|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에는 [!INCLUDE[ssDE](../includes/ssde-md.md)], 데이터 저장, 처리 및 보안을 위한 핵심 서비스, 복제, 전체 텍스트 검색, Hadoop 및 기타 다른 유형의 데이터 원본에 액세스하기 위한 Polybase 통합 및 데이터베이스 분석 통합에서 관계형 및 XML 데이터를 관리하는 도구, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 서버 등이 포함되어 있습니다.|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 OLAP(온라인 분석 처리) 및 데이터 마이닝 응용 프로그램을 생성하고 관리하기 위한 도구가 포함되어 있습니다.|  
@@ -103,7 +99,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )는 마스터 데이터 관리용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. MDS는 모든 도메인(제품, 고객, 계정)을 관리하도록 구성할 수 있으며 계층, 세부적인 보안, 트랜잭션, 데이터 버전 관리 및 비즈니스 규칙은 물론 데이터 관리에 사용할 수 있는 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 을 포함합니다.|  
 |[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)]|[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] 은 다수의 플랫폼에서 확장 가능하고 분산된 R 솔루션을 지원하며 Linux, Hadoop, Teradata를 비롯한 다수의 엔터프라이즈 데이터 원본 사용을 지원합니다.|  
   
-|관리 도구|Description|  
+|관리 도구|설명|  
 |----------------------|-----------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 모든 수준의 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용할 수 있습니다.<br /><br /> 를 다운로드하여 설치합니다 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] SQL Server Management Studio 다운로드  [에서](http://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스, 서버 프로토콜, 클라이언트 프로토콜 및 클라이언트 별칭에 대한 기본 구성 관리 작업을 수행할 수 있습니다.|  
@@ -113,7 +109,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서는 비즈니스 인텔리전스 구성 요소( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)])를 위한 솔루션을 작성할 수 있는 IDE를 제공합니다.<br /><br /> (이전의 Business Intelligence Development Studio).<br /><br /> 또한[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에 포함된 “데이터베이스 프로젝트”에서는 Visual Studio 내의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 플랫폼(온-프레미스 및 온-프레미스 모두)에서 모든 해당 데이터베이스 디자인 작업을 수행하도록 데이터베이스 개발자에게 통합 환경을 제공합니다. 데이터베이스 개발자는 Visual Studio에서 향상된 서버 탐색기를 사용하여 데이터베이스 개체 및 데이터를 쉽게 만들거나 편집하고 쿼리를 실행할 수 있습니다.|  
 |연결 구성 요소|클라이언트와 서버 간 통신 구성 요소와 DB-Library, ODBC 및 OLE DB용 네트워크 라이브러리를 설치합니다.|  
   
-|설명서|Description|  
+|설명서|설명|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 핵심 설명서입니다.| 
 
@@ -146,22 +142,22 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Server Core 지원 <sup>1</sup>|예|예|예|예|예|  
-|로그 전달|예|예|예|아니오|아니오|  
+|로그 전달|예|예|예|아니오|아니요|  
 |데이터베이스 미러링|예|예<br /><br /> Full 보안만|미러링 모니터만|미러링 모니터만|미러링 모니터만| 
-|백업 압축|예|예|아니오|아니오|아니오| 
+|백업 압축|예|예|아니오|아니요|아니요| 
 |데이터베이스 스냅숏|예|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|
-|Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|예<br /><br /> 노드 2개 지원|아니오|아니오|아니오|  
-|Always On 가용성 그룹|예<br /><br /> 2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본 지원|아니오|아니오|아니오|아니오|
-|기본 가용성 그룹 <sup>2</sup>|아니오|예<br /><br /> 노드 2개 지원|아니오|아니오|아니오|
-|온라인 페이지 및 파일 복원|예|아니오|아니오|아니오|아니오|
-|온라인 인덱싱|예|아니오|아니오|아니오|아니오|
-|온라인 스키마 변경|예|아니오|아니오|아니오|아니오|
-|빠른 복구|예|아니오|아니오|아니오|아니오|
-|미러된 백업|예|아니오|아니오|아니오|아니오|
-|Hot Add 메모리 및 CPU|예|아니오|아니오|아니오|아니오|
+|Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|예<br /><br /> 노드 2개 지원|아니요|아니요|아니요|  
+|Always On 가용성 그룹|예<br /><br /> 2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본 지원|아니요|아니요|아니요|아니요|
+|기본 가용성 그룹 <sup>2</sup>|아니요|예<br /><br /> 노드 2개 지원|아니요|아니요|아니요|
+|온라인 페이지 및 파일 복원|예|아니오|아니요|아니요|아니요|
+|온라인 인덱싱|예|아니오|아니요|아니요|아니요|
+|온라인 스키마 변경|예|아니오|아니요|아니요|아니요|
+|빠른 복구|예|아니오|아니요|아니요|아니요|
+|미러된 백업|예|아니오|아니요|아니요|아니요|
+|Hot Add 메모리 및 CPU|예|아니오|아니요|아니요|아니요|
 |데이터베이스 복구 관리자|예|예|예|예|예|
-|암호화된 백업|예|예|아니오|아니오|아니오|
-|Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니오|아니오|  
+|암호화된 백업|예|예|아니오|아니요|아니요|
+|Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니요|아니요|  
   
  <sup>1</sup> Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md)(Server Core에 SQL Server 설치)를 참조하세요. 
 
@@ -180,12 +176,12 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |다중 인스턴스 지원|50|50|50|50|50|
 |테이블 및 인덱스 분할|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|  
 |데이터 압축|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|
-|관리|예|아니오|아니오|아니오|아니오|  
-|분할된 테이블 병렬 처리|예|아니오|아니오|아니오|아니오|
+|관리|예|아니오|아니요|아니요|아니요|  
+|분할된 테이블 병렬 처리|예|아니오|아니요|아니요|아니요|
 |여러 Filestream 컨테이너|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|
-|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니오|아니오|아니오|
-|Buffer Pool Extension|예|예|아니오|아니오|아니오|
-|IO 리소스 관리|예|아니오|아니오|아니오|아니오|  
+|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니요|아니요|아니요|
+|Buffer Pool Extension|예|예|아니오|아니요|아니요|
+|IO 리소스 관리|예|아니오|아니요|아니요|아니요|  
 |지연된 내구성|예|예|예|예|예|
 
 <sup>1</sup> 메모리 내 OLTP 데이터 크기 및 Columnstore 세그먼트 캐시는 크기 조정 제한 섹션에서 버전별로 지정된 메모리 양으로 제한됩니다. 최대 병렬 처리 수준도 제한됩니다. 인덱스 작성에 대한 DOP(병렬 처리 수준)는 Standard Edition의 경우 2DOP, Web 및 Express Edition의 경우 1DOP로 제한됩니다. 디스크 기반 테이블과 메모리 최적화 테이블에서 생성된 columnstore 인덱스가 해당합니다.
@@ -202,26 +198,26 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |동적 데이터 마스킹|예|예|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|   
 |기본 감사|예|예|예|예|예| 
 |미세 감사|예|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>| 
-|투명한 데이터베이스 암호화|예|아니오|아니오|아니오|아니오|   
-|확장 가능 키 관리|예|아니오|아니오|아니오|아니오| 
+|투명한 데이터베이스 암호화|예|아니오|아니요|아니요|아니요|   
+|확장 가능 키 관리|예|아니오|아니요|아니요|아니요| 
 |사용자 정의 역할|예|예|예|예|예| 
 |포함된 데이터베이스|예|예|예|예|예| 
-|백업을 위한 암호화|예|예|아니오|아니오|아니오|  
+|백업을 위한 암호화|예|예|아니오|아니요|아니요|  
 
 <sup>1</sup> [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1에 적용됩니다.  
 ##  <a name="Replication"></a> Replication  
   
 |기능|Enterprise|표준|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|다른 유형의 구독자|예|예|아니오|아니오|아니오|  
+|다른 유형의 구독자|예|예|아니오|아니요|아니요|  
 |병합 복제|예|예|예(구독자만)|예(구독자만)|예(구독자만)|   
-|Oracle 게시|예|아니오|아니오|아니오|아니오| 
-|피어 투 피어 트랜잭션 복제|예|아니오|아니오|아니오|아니오|   
+|Oracle 게시|예|아니오|아니요|아니요|아니요| 
+|피어 투 피어 트랜잭션 복제|예|아니오|아니요|아니요|아니요|   
 |스냅숏 복제|예|예|예(구독자만)|예(구독자만)|예(구독자만)|   
 |SQL Server 변경 내용 추적|예|예|예|예|예| 
 |트랜잭션 복제|예|예|예(구독자만)|예(구독자만)|예(구독자만)|   
-|Azure에 대한 트랜잭션 복제|예|예|아니오|아니오|아니오|   
-|트랜잭션 복제 업데이트 가능한 구독|예|아니오|아니오|아니오|아니오|  
+|Azure에 대한 트랜잭션 복제|예|예|아니오|아니요|아니요|   
+|트랜잭션 복제 업데이트 가능한 구독|예|아니오|아니요|아니요|아니요|  
   
 ##  <a name="SSMS"></a> Management Tools  
   
@@ -230,13 +226,13 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |SMO(SQL Management Objects)|예|예|예|예|예|  
 |SQL 구성 관리자|예|예|예|예|예|   
 |SQL CMD(명령 프롬프트 도구)|예|예|예|예|예|      
-|Distributed Replay - 관리 도구|예|예|예|예|아니오|  
-|Distribute Replay - Client|예|예|예|아니오|아니오|  
-|Distributed Replay - 컨트롤러|예(최대 16개 클라이언트)|예(1개 클라이언트)|예(1개 클라이언트)|아니오|아니오|   
+|Distributed Replay - 관리 도구|예|예|예|예|아니요|  
+|Distribute Replay - Client|예|예|예|아니오|아니요|  
+|Distributed Replay - 컨트롤러|예(최대 16개 클라이언트)|예(1개 클라이언트)|예(1개 클라이언트)|아니요|아니요|   
 |SQL 프로파일러|예|예|아니요 <sup>1</sup>|아니요 <sup>1</sup>|아니요 <sup>1</sup>|  
-|SQL Server 에이전트|예|예|예|아니오|아니오| 
-|Microsoft System Center Operations Manager 관리 팩|예|예|예|아니오|아니오|  
-|DTA(데이터베이스 튜닝 관리자)|예|예 <sup>2</sup>|예 <sup>2</sup>|아니오|아니오|      
+|SQL Server 에이전트|예|예|예|아니오|아니요| 
+|Microsoft System Center Operations Manager 관리 팩|예|예|예|아니오|아니요|  
+|DTA(데이터베이스 튜닝 관리자)|예|예 <sup>2</sup>|예 <sup>2</sup>|아니요|아니요|      
   
  <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express with Tools 및 SQL Server Express with Advanced Services는 SQL Server Standard 및 SQL Server Enterprise Edition을 사용하여 프로파일링할 수 있습니다.  
   
@@ -246,25 +242,25 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
 |기능|Enterprise|표준|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|사용자 인스턴스|아니오|아니오|아니오|예|예| 
-|LocalDB|아니오|아니오|아니오|예|아니오| 
+|사용자 인스턴스|아니요|아니요|아니요|예|예| 
+|LocalDB|아니요|아니요|아니요|예|아니요| 
 |관리자 전용 연결|예|예|예|예, 추적 플래그 있음|예, 추적 플래그 있음|   
 |PowerShell 스크립팅 지원|예|예|예|예|예| 
 |SysPrep 지원 <sup>1</sup>|예|예|예|예|예| 
 |데이터 계층 응용 프로그램 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|예|예|예|예|예| 
-|정책 자동화(일정 및 변경 내용 검사)|예|예|예|아니오|아니오|   
-|성능 데이터 수집기|예|예|예|아니오|아니오| 
-|다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|예|예|예|아니오|아니오|   
-|표준 성능 보고서|예|예|예|아니오|아니오| 
-|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|아니오|아니오|   
+|정책 자동화(일정 및 변경 내용 검사)|예|예|예|아니오|아니요|   
+|성능 데이터 수집기|예|예|예|아니오|아니요| 
+|다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|예|예|예|아니오|아니요|   
+|표준 성능 보고서|예|예|예|아니오|아니요| 
+|계획 지침을 위한 계획 지침 및 계획 고정|예|예|예|아니오|아니요|   
 |인덱스 뷰의 직접 쿼리(NOEXPAND 힌트 사용)|예|예|예|예|예| 
-|인덱싱된 뷰의 자동 유지 관리|예|예|예|아니오|아니오| 
-|분산형 분할 뷰|예|아니오|아니오|아니오|아니오| 
-|병렬 인덱스 작업|예|아니오|아니오|아니오|아니오|  
-|쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|아니오|아니오|아니오|아니오| 
-|병렬 일관성 검사|예|아니오|아니오|아니오|아니오| 
-|SQL Server 유틸리티 제어 지점|예|아니오|아니오|아니오|아니오|    
-|버퍼 풀 확장|예|예|아니오|아니오|아니오| 
+|인덱싱된 뷰의 자동 유지 관리|예|예|예|아니오|아니요| 
+|분산형 분할 뷰|예|아니오|아니요|아니요|아니요| 
+|병렬 인덱스 작업|예|아니오|아니요|아니요|아니요|  
+|쿼리 최적화 프로그램의 인덱싱된 뷰 자동 사용|예|아니오|아니요|아니요|아니요| 
+|병렬 일관성 검사|예|아니오|아니요|아니요|아니요| 
+|SQL Server 유틸리티 제어 지점|예|아니오|아니요|아니요|아니요|    
+|버퍼 풀 확장|예|예|아니오|아니요|아니요| 
   
  <sup>1</sup> 자세한 내용은 [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
  
@@ -276,18 +272,18 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Microsoft Visual Studio 통합|예|예|예|예|예| 
 |Intellisense(Transact-SQL 및 MDX)|예|예|예|예|예| 
-|SQL  Server  Data  Tools(SSDT)|예|예|예|예|아니오|    
-|MDX 편집, 디버그 및 디자인 도구|예|예|아니오|아니오|아니오|   
+|SQL  Server  Data  Tools(SSDT)|예|예|예|예|아니요|    
+|MDX 편집, 디버그 및 디자인 도구|예|예|아니오|아니요|아니요|   
   
 ##  <a name="Programmability"></a> Programmability  
   
 |기능|Enterprise|표준|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|기본 R 통합|예|예|예|예|아니오|   
-|고급 R 통합|예|아니오|아니오|아니오|아니오| 
-|R Server (Standalone)|예|아니오|아니오|아니오|아니오|   
+|기본 R 통합|예|예|예|예|아니요|   
+|고급 R 통합|예|아니오|아니요|아니요|아니요| 
+|R Server (Standalone)|예|아니오|아니요|아니요|아니요|   
 |Polybase 계산 노드|예|예 <sup>1</sup>|예 <sup>1</sup>, <sup>2</sup>|예 <sup>1</sup>, <sup>2</sup>|예 <sup>1</sup>, <sup>2</sup>| 
-|Polybase 헤드 노드|예|아니오|아니오|아니오|아니오| 
+|Polybase 헤드 노드|예|아니오|아니요|아니요|아니요| 
 |JSON|예|예|예|예|예|   
 |쿼리 저장소|예|예|예|예|예|   
 |임시 테이블|예|예|예|예|예|   
@@ -299,10 +295,10 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |FileTable|예|예|예|예|예| 
 |날짜 및 시간 데이터 형식|예|예|예|예|예|  
 |국제화 지원|예|예|예|예|예| 
-|전체 텍스트 및 의미 체계 검색|예|예|예|예|아니오| 
-|쿼리에서 언어 지정|예|예|예|예|아니오|   
+|전체 텍스트 및 의미 체계 검색|예|예|예|예|아니요| 
+|쿼리에서 언어 지정|예|예|예|예|아니요|   
 |Service Broker(메시징)|예|예|아니요(클라이언트 전용)|아니요(클라이언트 전용)|아니요(클라이언트 전용)|   
-|Transact-SQL 끝점|예|예|예|아니오|아니오| 
+|Transact-SQL 끝점|예|예|예|아니오|아니요| 
 
 <sup>1</sup> 여러 계산 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
 
@@ -320,13 +316,13 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
 |기능|Enterprise|표준|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|데이터베이스 없이 큐브 만들기|예|예|아니오|아니오|아니오 |   
-|준비 및 데이터 웨어하우스 스키마 자동 생성|예|예|아니오|아니오|아니오| 
-|변경 데이터 캡처|예|예 <sup>1</sup>|아니오|아니오|아니오| 
-|스타 조인 쿼리 최적화|예|아니오|아니오|아니오|아니오| 
-|확장 가능한 읽기 전용 Analysis Services 구성|예|아니오|아니오|아니오|아니오| 
-|분할된 테이블 및 인덱스의 병렬 쿼리 처리|예|아니오|아니오|아니오|아니오|   
-|글로벌 일괄 집계|예|아니오|아니오|아니오|아니오| 
+|데이터베이스 없이 큐브 만들기|예|예|아니오|아니요|아니요 |   
+|준비 및 데이터 웨어하우스 스키마 자동 생성|예|예|아니오|아니요|아니요| 
+|변경 데이터 캡처|예|예 <sup>1</sup>|아니요|아니요|아니요| 
+|스타 조인 쿼리 최적화|예|아니오|아니요|아니요|아니요| 
+|확장 가능한 읽기 전용 Analysis Services 구성|예|아니오|아니요|아니요|아니요| 
+|분할된 테이블 및 인덱스의 병렬 쿼리 처리|예|아니오|아니요|아니요|아니요|   
+|글로벌 일괄 집계|예|아니오|아니요|아니요|아니요| 
 
 <sup>1</sup> [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1에 적용됩니다.  
 ##  <a name="SSAS"></a> Analysis Services  
@@ -371,14 +367,14 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |기능 이름|Enterprise|표준|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|예|예|예|예|예|   
-|데이터베이스 메일|예|예|예|아니오|아니오| 
+|데이터베이스 메일|예|예|예|아니오|아니요| 
   
 ##  <a name="Other"></a> Other Components  
   
 |기능 이름|Enterprise|표준|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|아니오|아니오| 
-|StreamInsight HA|StreamInsight Premium Edition|아니오|아니오|아니오|아니오|   
+|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|아니요|아니요| 
+|StreamInsight HA|StreamInsight Premium Edition|아니요|아니요|아니요|아니요|   
   
 > [![SSMS 다운로드](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) 최신 버전의 **[SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**      
   

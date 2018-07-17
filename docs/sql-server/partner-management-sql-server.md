@@ -3,11 +3,6 @@ title: SQL Server 파트너 관리 | Microsoft Docs
 description: 서버를 모니터링할 솔루션이 있는 타사 파트너 목록입니다.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,21 +10,22 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 80a7cceee6693b00e2bd61bbdb82229edef5d8d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: 6307fa14838afc49545875d56fed0bc2978b92ae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031950"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926394"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 관리 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server 서비스를 관리하려면 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server를 지원하는 관리 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="our-management-partners"></a>관리 파트너
-| 파트너 | Description | 링크 |
+| 파트너 | 설명 | 링크 |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL 준수 관리자는 규정 준수 및 데이터 보안 요구 사항 준수를 보장하기 위해 누가, 무엇을, 언제, 어떻게 SQL Server에서 작업했는지 표시하는 포괄적인 감사 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] | |
 

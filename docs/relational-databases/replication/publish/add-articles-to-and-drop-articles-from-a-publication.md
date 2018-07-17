@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,18 +21,18 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14ee7f64a48c57fa69f185f6e839b7600a8ee649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17950e406eaee0c68b7ce8c245f2043866f7144d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964228"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353135"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>게시에 대한 아티클 추가 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   새 게시 마법사에서 게시를 만들 때 처음으로 게시에 아티클을 추가합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
- 게시를 만든 후 **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 아티클을 추가 및 삭제합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 아티클을 추가 및 삭제할 때 고려할 사항은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 게시를 만든 후 **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 아티클을 추가 및 삭제합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 아티클을 추가 및 삭제할 때 고려할 사항은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>게시를 만든 후 아티클을 추가하려면  
   

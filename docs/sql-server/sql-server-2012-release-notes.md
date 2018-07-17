@@ -1,8 +1,7 @@
 ---
 title: SQL Server 2012 릴리스 정보 | Microsoft 문서
 ms.prod: sql
-ms.prod_service: sql
-ms.technology: supportability
+ms.technology: install
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -16,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cf9360da746f08bc555a4796d5134a11c6b08d32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036950"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926204"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -502,10 +501,10 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
   
 다음 표에서는 AlwaysOn 가용성 그룹의 드라이버 지원에 대해 간략하게 설명합니다.  
   
-|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 끝점 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
+|드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔트포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
-|SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
+|SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니요|  
 |연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|예|예|예|예|사용자 계정 컨트롤|  
 |연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|예|예|예|예|예|  
 |SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  

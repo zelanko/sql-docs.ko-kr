@@ -3,9 +3,7 @@ title: SQL Server 2014 릴리스 정보 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: f9a8d57f209e5c8c813fd08c8faff6ce5504c97b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036760"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926974"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ SQL Server 2014 SP2는 SQL Server 2014 SP1 CU7에 대해 릴리스된 핫픽스�
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2의 향상된 성능 및 확장성
 
-|기능|Description|참조 항목|
+|기능|설명|참조 항목|
 |---|---|---|
 |자동 소프트 NUMA 분할|NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 소프트 NUMA를 자동으로 구성할 수 있습니다.|[soft-NUMA(SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Buffer Pool Extension|8TB 이상으로 SQL Server 버퍼 풀을 확장할 수 있습니다.|[버퍼 풀 확장](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -44,7 +42,7 @@ SQL Server 2014 SP2는 SQL Server 2014 SP1 CU7에 대해 릴리스된 핫픽스�
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2의 지원 가능성 및 진단 향상
 
-|기능|Description|참조 항목|
+|기능|설명|참조 항목|
 |---|---|---|
 |AlwaysON 시간 제한 로깅|현재 시간 및 예상된 갱신 시간이 기록되도록 임대 시간 제한 메시지에 대한 새 로깅 기능을 추가했습니다. |[향상된 AlwaysOn 가용성 그룹 임대 시간 제한 진단](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |AlwaysON XEvent 및 성능 카운터|AlwaysOn을 사용하여 대기 시간 문제를 해결할 때 진단을 개선하기 위한 새로운 AlwaysON XEvent 및 성능 카운터 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 및 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)

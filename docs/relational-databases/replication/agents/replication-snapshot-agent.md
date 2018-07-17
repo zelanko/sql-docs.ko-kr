@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c9a9c20e8967f7c7cb23b66aa7ed5e9040525b36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957538"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349995"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  교착 상태가 발생할 경우 배포자에 대한 스냅숏 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅숏을 생성하는 동안 스냅숏 에이전트와 사용자 응용 프로그램 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
   
-|DistributorDeadlockPriority 값|Description|  
+|DistributorDeadlockPriority 값|설명|  
 |---------------------------------------|-----------------|  
 |**-1**|배포자에서 교착 상태가 발생할 경우 스냅숏 에이전트 이외의 응용 프로그램이 우선 순위를 갖습니다.|  
 |**0** (기본값)|우선 순위가 할당되지 않습니다.|  
@@ -132,7 +131,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  연결을 만들 때 스냅숏 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
   
-|EncryptionLevel 값|Description|  
+|EncryptionLevel 값|설명|  
 |---------------------------|-----------------|  
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
@@ -146,7 +145,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  스냅숏 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
-|HistoryVerboseLevel 값|Description|  
+|HistoryVerboseLevel 값|설명|  
 |-------------------------------|-----------------|  
 |**0**|진행 메시지를 콘솔이나 출력 파일에 씁니다. 기록 레코드는 배포 데이터베이스에 기록되지 않습니다.|  
 |**1**|시작, 진행, 성공 등과 같이 상태가 동일한 이전 기록 메시지를 항상 업데이트합니다. 상태가 같은 이전 레코드가 없으면 새 레코드를 삽입합니다.|  
@@ -192,7 +191,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  출력이 자세해야 하는지 여부를 지정합니다.  
   
-|OutputVerboseLevel 값|Description|  
+|OutputVerboseLevel 값|설명|  
 |------------------------------|-----------------|  
 |**0**|오류 메시지만 출력됩니다.|  
 |**1** (기본값)|모든 진행률 보고 메시지가 출력됩니다(기본값).|  
@@ -213,7 +212,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  교착 상태가 발생할 경우 게시자에 대한 스냅숏 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅숏을 생성하는 동안 스냅숏 에이전트와 사용자 응용 프로그램 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
   
-|PublisherDeadlockPriority 값|Description|  
+|PublisherDeadlockPriority 값|설명|  
 |-------------------------------------|-----------------|  
 |**-1**|게시자에서 교착 상태가 발생할 경우 스냅숏 에이전트 이외의 응용 프로그램이 우선 순위를 갖습니다.|  
 |**0** (기본값)|우선 순위가 할당되지 않습니다.|  

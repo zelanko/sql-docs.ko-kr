@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,18 +17,18 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 866eb9df9bffb4e1df8e16966cf69986bb14c267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa0a1257f6cb873c92b88cbe00001ed39fcf2845
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960888"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354195"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 변경 내용 추적 및 전달을 사용할 수 있도록 Oracle 게시자에 데이터베이스 개체를 설치합니다.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 Oracle 게시자에 이진 파일을 설치하지 않습니다. 다음 표에서는 Oracle 게시자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 식별될 때 Oracle 게시자에서 생성된 개체를 나열합니다. 개체 설명은 정보 제공의 목적으로만 제공됩니다. 이러한 개체는 수정하면 안 됩니다.  
   
-|개체 이름|개체 유형|Description|  
+|개체 이름|개체 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table|게시된 테이블에 변경 내용이 적용될 때 정보를 저장하는 데 사용되는 변경 내용 추적 테이블입니다. 변경 내용 추적 테이블은 게시된 각 테이블에 대해 생성됩니다.|  
 |HREPL_Changes|Table|트랜잭션 집합에 할당되기 위해 대기 중인 변경 내용 수를 확인하기 위해 Xactset 작업에서 내부적으로 사용되는 테이블입니다. 이 작업에 대한 자세한 내용은 [Oracle 게시자를 위한 성능 튜닝](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)을 참조하세요.|  

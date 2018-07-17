@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055160"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255515"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  XML 데이터와 관계형 행 집합 사이에 사용해야 하는 매핑과 남는 열을 채우는 방법을 나타냅니다. *flags*는 선택적 입력 매개 변수이며 다음 값 중 하나일 수 있습니다.  
   
-|바이트 값|Description|  
+|바이트 값|설명|  
 |----------------|-----------------|  
 |**0**|기본적으로 **특성 중심** 매핑을 사용합니다.|  
 |**1**|**특성 중심** 매핑을 사용합니다. XML_ELEMENTS와 결합할 수 있습니다. 이 경우 먼저 **특성 중심** 매핑이 적용된 다음, 아직 처리되지 않은 모든 열에 대해 **요소 중심** 매핑이 적용됩니다.|  
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  다음 표에서는 **edge** 테이블의 구조에 대해 설명합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID가 나타내는 부모가 반드시 부모 요소일 필요는 없지만 해당 노드는 이 ID가 나타내는 부모 노드의 NodeType에 종속됩니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  

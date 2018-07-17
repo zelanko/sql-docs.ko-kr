@@ -15,16 +15,16 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e9f294c857c1f1ed598eaaf0f79702475ef59c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78e74f96f36c5bfb21859bbc1f4ef1916e061b59
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046890"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926884"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 사용 현황 피드백 수집에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx)을 참조하세요.
+SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
 
 ## <a name="audit-feature-usage-data"></a>기능 사용 현황 데이터 감사
 

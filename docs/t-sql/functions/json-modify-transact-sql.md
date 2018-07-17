@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
-caps.latest.revision: 16
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: c9fcc143dcb154af9faabff556c5f9a23749498c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d51961c8c06c0b7769ef8896b92ad1ad0633e0cf
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054500"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36259535"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,9 +80,9 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
 |기존 값|경로가 존재|lax 모드|strict 모드|  
 |--------------------|-----------------|--------------|-----------------|  
 |NOT NULL|예|기존 값을 업데이트합니다.|기존 값을 업데이트합니다.|  
-|NOT NULL|아니오|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `$.user` 또는 `$.user.settings` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `theme`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
+|NOT NULL|아니요|지정된 경로에서 새 키:값 쌍을 만들려고 시도합니다.<br /><br /> 이는 실패할 수 있습니다. 예를 들어 경로 `$.user.setting.theme`을 지정하면, JSON_MODIFY는 `$.user` 또는 `$.user.settings` 개체가 존재하지 않거나 설정이 배열 또는 스칼라 값인 경우 키 `theme`을 삽입하지 않습니다.|오류 – INVALID_PROPERTY|  
 |NULL|예|기존 속성을 삭제합니다.|기존 값을 null로 설정합니다.|  
-|NULL|아니오|동작이 없습니다. 첫 번째 인수가 결과로 반환됩니다.|오류 – INVALID_PROPERTY|  
+|NULL|아니요|동작이 없습니다. 첫 번째 인수가 결과로 반환됩니다.|오류 – INVALID_PROPERTY|  
   
  lax 모드에서 JSON_MODIFY는 새 키:값 쌍을 만들려고 시도하지만 일부 경우에는 실패할 수 있습니다.  
   

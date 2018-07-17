@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa663e269559fb2eb87d599723734639a717d2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894f01b89dba015f0543df7c810a590c9359ff7a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956898"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355125"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +152,7 @@ ms.locfileid: "32956898"
   
 -   구독을 수동으로 초기화해 봅니다.  
   
-     큰 초기 데이터 집합과 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+     큰 초기 데이터 집합과 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 ## <a name="agent-parameters"></a>에이전트 매개 변수  
   
