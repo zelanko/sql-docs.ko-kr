@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 104cf6916beca429e65610106cbdba5a289deeec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 385ccf4fcf3b411536b825f4ff34e06cc8de4120
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054870"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786694"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ IS_OBJECTSIGNED (
 ## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED는 다음과 같은 값을 반환합니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |NULL|개체가 서명되지 않았거나 개체가 유효하지 않습니다.|  
 |0|개체가 서명되었지만 서명이 유효하지 않습니다.|  

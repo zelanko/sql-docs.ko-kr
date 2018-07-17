@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f094b8701172ece034c53ebad5f07b45fa3c207c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bd89a336eb0797d67f22c5f534ce06bd96caf50
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960258"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359345"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>매개 변수가 있는 필터 - 사전 계산된 파티션에 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +73,6 @@ ms.locfileid: "32960258"
  구독자에서 게시자로 변경 내용이 업로드될 경우 사전 계산 파티션에서 성능 손실이 적게 발생하지만 병합 처리 시간의 대부분이 파티션을 평가하고 게시자에서 구독자로 변경 내용을 다운로드하는 데 소비되므로 성능을 향상시키는 것이 중요합니다. 동시에 동기화하는 구독자의 수와 한 파티션에서 다른 파티션으로 행을 이동하는 동기화당 업데이트 수에 따라 성능상의 이점이 달라집니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

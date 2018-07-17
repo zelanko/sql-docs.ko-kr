@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 251c3c3d0f4a5d52d5c825eba86d55199e6a94b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0c3a94b39787a302db13d6a3a9fed26f1718e8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960758"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357766"
 ---
 # <a name="reinitialize-subscriptions"></a>구독 다시 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32960758"
 > [!IMPORTANT]  
 >  병합 게시에 매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 보류 중인 구독자의 변경 내용을 다시 초기화 중에 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
   
- 구독을 만들 때 구독자에 적용할 초기 스냅숏이 없는 것으로 지정한 후에 해당 구독을 다시 초기화로 표시할 경우 스냅숏이 적용되지 않습니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+ 구독을 만들 때 구독자에 적용할 초기 스냅숏이 없는 것으로 지정한 후에 해당 구독을 다시 초기화로 표시할 경우 스냅숏이 적용되지 않습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  **구독을 다시 초기화하려면**  
   

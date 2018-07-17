@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0638fcbc1559507bffb478c559f53180dface974
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054790"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789384"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ CONNECTIONPROPERTY ( property )
 *property*  
 연결의 속성입니다. *property*에는 다음 값 중 하나가 있을 수 있습니다.
   
-|값|데이터 형식|Description|  
+|값|데이터 형식|설명|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|이 연결에서 사용하는 물리적 전송 프로토콜을 반환합니다. 이 값은 null을 허용하지 않습니다. 가능한 반환 값:<br /><br /> **HTTP**<br /> **명명된 파이프**<br /> **세션**<br /> **공유 메모리**<br /> **SSL**<br /> **TCP**<br /><br /> 및<br /><br /> **VIA**<br /><br /> 참고: 연결에 MARS(Multiple Active Result Sets)가 모두 설정되고 연결 풀링이 사용되는 경우 항상 **세션**을 반환합니다.|  
 |protocol_type|**nvarchar(40)**|페이로드 프로토콜 형식을 반환합니다. 현재 TDS(TSQL)와 SOAP을 구분합니다. Null을 허용합니다.|  

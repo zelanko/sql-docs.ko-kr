@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32889f88a4e055800c02286e819b9ce1f7422175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76e46f9c9a157261f8341243583e855a0681756d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32963778"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360185"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,30 +39,30 @@ ms.locfileid: "32963778"
 |CHAR([1-2000])|CHAR([1-2000])|예|  
 |CLOB|VARCHAR(MAX)|예|  
 |DATE|DATETIME|예|  
-|FLOAT|FLOAT|아니오|  
-|FLOAT([1-53])|FLOAT([1-53])|아니오|  
-|FLOAT([54-126])|FLOAT|아니오|  
+|FLOAT|FLOAT|아니요|  
+|FLOAT([1-53])|FLOAT([1-53])|아니요|  
+|FLOAT([54-126])|FLOAT|아니요|  
 |INT|NUMERIC(38)|예|  
 |INTERVAL|DATETIME|예|  
 |LONG|VARCHAR(MAX)|예|  
 |LONG RAW|IMAGE|예|  
-|NCHAR([1-1000])|NCHAR([1-1000])|아니오|  
+|NCHAR([1-1000])|NCHAR([1-1000])|아니요|  
 |NCLOB|NVARCHAR(MAX)|예|  
 |NUMBER|FLOAT|예|  
-|NUMBER([1-38])|NUMERIC([1-38])|아니오|  
+|NUMBER([1-38])|NUMERIC([1-38])|아니요|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니오|  
-|RAW([1-2000])|VARBINARY([1-2000])|아니오|  
-|real|FLOAT|아니오|  
-|ROWID|CHAR(18)|아니오|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니요|  
+|RAW([1-2000])|VARBINARY([1-2000])|아니요|  
+|real|FLOAT|아니요|  
+|ROWID|CHAR(18)|아니요|  
 |TIMESTAMP|DATETIME|예|  
 |TIMESTAMP(0-7)|DATETIME|예|  
 |TIMESTAMP(8-9)|DATETIME|예|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니오|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니요|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니오|  
-|UROWID|CHAR(18)|아니오|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니요|  
+|UROWID|CHAR(18)|아니요|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  

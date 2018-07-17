@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f37984c25fb722245d433e18904b2d48de7707df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957238"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358145"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  연결을 만들 때 병합 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
   
-|EncryptionLevel 값|Description|  
+|EncryptionLevel 값|설명|  
 |---------------------------|-----------------|  
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
@@ -186,7 +185,7 @@ replmerg [-?]
   
  동기화를 수행할 때의 데이터 교환 유형을 지정하며 값은 다음 중 하나일 수 있습니다.  
   
-|ExchangeType 값|Description|  
+|ExchangeType 값|설명|  
 |------------------------|-----------------|  
 |**1**|에이전트에서 구독자의 데이터 변경 내용을 게시자로 업로드합니다.|  
 |**2**|에이전트에서 게시자의 데이터 변경 내용을 구독자로 다운로드합니다.|  
@@ -205,7 +204,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  병합 에이전트에서 사용할 일치성 수준을 지정하며 값은 다음 중 하나가 될 수 있습니다.  
   
-|ForceConvergenceLevel 값|Description|  
+|ForceConvergenceLevel 값|설명|  
 |---------------------------------|-----------------|  
 |**0** (기본값)|기본. 추가 일치 작업 없이 표준 병합을 수행합니다.|  
 |**1**|모든 세대에 대해 일치 작업을 수행합니다.|  
@@ -226,7 +225,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  병합 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
-|HistoryVerboseLevel 값|Description|  
+|HistoryVerboseLevel 값|설명|  
 |-------------------------------|-----------------|  
 |**0**|최종 에이전트 상태 메시지, 최종 세션 정보 및 기타 오류를 기록합니다.|  
 |**1**|각 세션 상태의 증분 세션 정보를 기록합니다. 여기에는 최종 에이전트 상태 메시지, 최종 세션 정보 및 오류뿐 아니라 완료율도 포함됩니다.|  
@@ -331,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  기존 구독자 데이터베이스가 있는지 여부를 지정합니다.  
   
-|SubscriberDBAddOption 값|Description|  
+|SubscriberDBAddOption 값|설명|  
 |---------------------------------|-----------------|  
 |**0**|기존 데이터베이스를 사용합니다(기본값).|  
 |**1**|비어 있는 새 구독자 데이터베이스를 만듭니다.|  
@@ -377,7 +376,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  병합 세션이 종료될 때 유효성 검사를 수행할지 여부와 수행할 유효성 검사 유형을 지정합니다. 값 **3** 이 권장 값입니다.  
   
-|값 유효성 검사|Description|  
+|값 유효성 검사|설명|  
 |--------------------|-----------------|  
 |**0** (기본값)|유효성 검사를 수행하지 않습니다.|  
 |**1**|행 개수의 유효성만 검사합니다.|  
