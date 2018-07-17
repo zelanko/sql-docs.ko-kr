@@ -16,16 +16,16 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5ea0c892f7012a17f56514e0af46bd54fdee6f63
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: aaad8cc4ad7f35c19ddc1f48332955401f742bcc
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695894"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942259"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

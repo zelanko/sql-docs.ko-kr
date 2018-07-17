@@ -14,16 +14,16 @@ helpviewer_keywords:
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33331d6d453c7ff6e51966d9f1b068603a49338d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b557ef26c6098deae0a038a27f4fc9ba8ea398e4
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699474"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943099"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

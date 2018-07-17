@@ -23,16 +23,16 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ded8fd405adc1b4d1358777faff62f4e94c1e02
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 73f03c6206eda26c8bce1d2aeb2f723bbdc4deb5
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701524"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941999"
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,7 +102,8 @@ ms.locfileid: "35701524"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **로그인 - 신규** 대화 상자에는 또한 **서버 역할**, **사용자 매핑**, **보안 개체**및 **상태**의 추가 페이지에 대한 옵션이 제공됩니다.  
+ 
+  **로그인 - 신규** 대화 상자에는 또한 **서버 역할**, **사용자 매핑**, **보안 개체**및 **상태**의 추가 페이지에 대한 옵션이 제공됩니다.  
   
 ### <a name="server-roles"></a>서버 역할  
  **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 사용할 수 있는 옵션은 다음과 같습니다.  

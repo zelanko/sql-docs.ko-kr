@@ -23,16 +23,16 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 453d0e7158f19fd958eca3bd611a2670279fe946
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b8e51950aace311b2e4a1a1bbc9e4591e87a9cb2
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696384"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942569"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]

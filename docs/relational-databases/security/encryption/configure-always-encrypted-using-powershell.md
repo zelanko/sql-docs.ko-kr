@@ -3,24 +3,22 @@ title: PowerShell을 사용하여 상시 암호화 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: security, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5fce37c6ab5bf10a5678397bd60e1f059ccaf02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b665fb4704f9b49fab8c3c326a55006d8fdceba7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289599"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +125,7 @@ $database | Get-SqlColumnMasterKey
 
 상시 암호화에 사용할 수 있는 PowerShell cmdlet은 다음과 같습니다.
 
-|CMDLET |Description
+|CMDLET |설명
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Azure에 인증을 수행하고 인증 토큰을 획득합니다.
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |데이터베이스의 기존 열 암호화 키 개체에 대한 새 암호화된 값을 추가합니다.

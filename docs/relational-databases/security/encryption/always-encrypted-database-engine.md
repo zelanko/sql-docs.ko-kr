@@ -3,7 +3,6 @@ title: 상시 암호화(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c8af118eb32b3c4fdacf53922b1a6a465010eeb2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 163ea15a1293ce128725bdbb3d20baa4129fdb80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332228"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

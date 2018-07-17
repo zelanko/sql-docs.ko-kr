@@ -1,10 +1,9 @@
 ---
 title: DROP CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,19 +22,19 @@ helpviewer_keywords:
 - deleting certificates
 ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fcd829e101076a2b549ed1f650b16a00e04766c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 813b67a5a4af3adba211eb12ca40733b5dc5c0a1
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33066970"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784604"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   데이터베이스에서 인증서를 제거합니다.  
   
@@ -68,10 +67,10 @@ USE AdventureWorks2012;
 DROP CERTIFICATE Shipping04;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
  다음 예에서는 `Shipping04`인증서를 삭제합니다.  
   
-```  
+```
 USE master;  
 DROP CERTIFICATE Shipping04;  
 ```  
@@ -81,7 +80,4 @@ DROP CERTIFICATE Shipping04;
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
-
+ [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)

@@ -3,29 +3,25 @@ title: 저장 프로시저(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: stored-procedures
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stored-Procs
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: be6ef66f23a8bea4172466373bf6fb261ddb0cb9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 923c06b5cb9a897946bcdff05e70f4af317ee311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332943"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -3,12 +3,9 @@ title: 저장 프로시저 다시 컴파일 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: stored-procedures
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stored-Procs
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6314e9f1659d73fe2e4cb7061377e9d4b21f023c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96003debdaf175cbb94ad7a4a990fd994b3b551e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332763"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

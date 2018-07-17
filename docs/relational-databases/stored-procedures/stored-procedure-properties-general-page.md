@@ -3,29 +3,25 @@ title: 저장 프로시저 속성(일반 페이지) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: stored-procedures
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stored-Procs
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.spassistededitor.storedprocedure.f1
 - sql13.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9895a7c7f5d501a6d99860a34799e30c871f2f72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b6f015628df05d339a57009c7514fb2e3a23f1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332993"
 ---
 # <a name="stored-procedure-properties-general-page"></a>저장 프로시저 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
