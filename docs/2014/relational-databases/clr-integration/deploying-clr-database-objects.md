@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 724a0782d1d97296797a58070addf568858473e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 95a69542a6d6f400d3b5a3e88786bda2d7e4a23a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092508"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353315"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR 데이터베이스 개체 배포
   배포는 완성된 응용 프로그램이나 모듈을 배포하여 다른 컴퓨터에서 설치하고 실행하는 프로세스입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio를 사용하면 CLR(공용 언어 런타임) 데이터베이스 개체를 개발하고 테스트 서버에 배포할 수 있습니다. 또는 Visual Studio 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 재배포 파일을 사용하여 관리되는 데이터베이스 개체를 컴파일할 수도 있습니다. 컴파일되고 나면 CLR 데이터베이스 개체가 포함된 어셈블리를 Visual Studio 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 테스트 서버에 배포할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍이나 배포에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
@@ -40,15 +38,15 @@ ms.locfileid: "36092508"
  모든 컴파일러 오류와 경고를 해결해야 합니다. 그런 다음 Visual Studio나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문을 사용하여 CLR 루틴이 포함된 어셈블리를 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 데이터베이스에 등록할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Visual Studio를 원격 개발, 디버깅 및 개발에 사용하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인스턴스에서 TCP/IP 네트워크 프로토콜을 사용할 수 있어야 합니다. 서버에서 TCP/IP 프로토콜을 사용 하는 방법에 대 한 자세한 내용은 참조 [클라이언트 프로토콜 구성](../../database-engine/configure-windows/configure-client-protocols.md)합니다.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Visual Studio를 원격 개발, 디버깅 및 개발에 사용하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인스턴스에서 TCP/IP 네트워크 프로토콜을 사용할 수 있어야 합니다. 서버에서 TCP/IP 프로토콜을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)합니다.  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Visual Studio를 사용하여 어셈블리를 배포하려면  
   
-1.  선택 하 여 프로젝트를 빌드합니다 **빌드** \<프로젝트 이름 >에서 **빌드** 메뉴.  
+1.  선택 하 여 프로젝트를 빌드할 **빌드** \<프로젝트 이름 >에서 **빌드** 메뉴.  
   
 2.  테스트 서버에 어셈블리를 배포하기 전에 모든 빌드 오류 및 경고를 해결합니다.  
   
-3.  선택 **배포** 에서 **빌드** 메뉴. 그러면 Visual Studio에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로젝트를 처음 만들 때 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와 데이터베이스에 어셈블리가 등록됩니다.  
+3.  선택 **배포** 에서 합니다 **빌드** 메뉴. 그러면 Visual Studio에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로젝트를 처음 만들 때 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와 데이터베이스에 어셈블리가 등록됩니다.  
   
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Transact-SQL을 사용하여 어셈블리를 배포하려면  
   
@@ -80,10 +78,10 @@ ms.locfileid: "36092508"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- 다양 한 유형의 관리 되는 데이터베이스 개체 만들기에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 참조 [clr 사용자 정의 함수](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [clr 사용자 정의 집계](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR 사용자 정의 형식](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR 저장 프로시저](../../database-engine/dev-guide/clr-stored-procedures.md), 및 [CLR 트리거](../../database-engine/dev-guide/clr-triggers.md)합니다.  
+ 다양 한 유형의 관리 되는 데이터베이스 개체를 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [clr 사용자 정의 함수](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)를 [clr 사용자 정의 집계](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR 사용자 정의 형식](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)하십시오 [CLR 저장 프로시저](../../database-engine/dev-guide/clr-stored-procedures.md), 및 [CLR 트리거](../../database-engine/dev-guide/clr-triggers.md)합니다.  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>프로덕션 서버에 어셈블리 배포  
- 테스트 서버에서 CLR 데이터베이스 개체를 테스트하고 확인하고 나면 프로덕션 서버에 배포할 수 있습니다. 관리 되는 데이터베이스 개체 디버깅 하는 방법에 대 한 자세한 내용은 참조 [CLR 데이터베이스 개체 디버깅](debugging-clr-database-objects.md)합니다.  
+ 테스트 서버에서 CLR 데이터베이스 개체를 테스트하고 확인하고 나면 프로덕션 서버에 배포할 수 있습니다. 관리 되는 데이터베이스 개체를 디버깅 하는 방법에 대 한 자세한 내용은 참조 하세요. [CLR 데이터베이스 개체 디버깅](debugging-clr-database-objects.md)합니다.  
   
  관리되는 데이터베이스 개체의 배포는 테이블, [!INCLUDE[tsql](../../../includes/tsql-md.md)] 루틴 등과 같은 일반 데이터베이스 개체의 배포와 유사합니다. 즉, CLR 데이터베이스 개체가 포함된 어셈블리를 배포 스크립트를 사용하여 다른 서버에 배포할 수 있습니다. 배포 스크립트는 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 "스크립트 생성" 기능을 사용하여 작성할 수 있습니다. 또한 배포 스크립트는 수동으로 작성하거나 "스크립트 생성"을 사용하여 작성할 수 있고 수동으로 변경할 수도 있습니다. 배포 스크립트를 작성하고 나면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다른 인스턴스에서 실행하여 관리되는 데이터베이스 개체를 배포할 수 있습니다.  
   
@@ -91,22 +89,22 @@ ms.locfileid: "36092508"
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]를 열고 배포할 관리되는 어셈블리나 데이터베이스 개체가 등록된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
-2.  에 **개체 탐색기**를 확장 하 고는  **\<서버 이름 >** 및 **데이터베이스** 트리 합니다. 여기서는 관리 되는 데이터베이스 개체는 등록을 선택 하는 데이터베이스를 마우스 오른쪽 단추로 클릭 **작업**를 선택한 후 **스크립트 생성**합니다. 스크립트 마법사가 열립니다.  
+2.  에 **개체 탐색기**를 확장 합니다  **\<서버 이름 >** 및 **데이터베이스** 트리. 여기서는 관리 되는 데이터베이스 개체는 등록을 선택 하는 데이터베이스를 마우스 오른쪽 단추로 클릭 **태스크**를 선택한 후 **스크립트 생성**. 스크립트 마법사가 열립니다.  
   
 3.  목록 상자에서 데이터베이스를 선택 하 고 클릭 **다음**합니다.  
   
-4.  에 **스크립트 옵션 선택** 창에서 클릭 **다음**, 하거나 옵션을 변경 하 고 클릭 **다음**합니다.  
+4.  에 **스크립트 옵션 선택** 창 클릭 **다음**, 또는 옵션을 변경 하 고 클릭 **다음**합니다.  
   
-5.  에 **개체 유형 선택** 창에서 배포할 데이터베이스 개체의 유형을 선택 합니다. **다음**을 클릭합니다.  
+5.  에 **개체 유형 선택** 창 배포할 데이터베이스 개체의 유형을 선택 합니다. **다음**을 클릭합니다.  
   
-6.  선택한 모든 개체 유형에 **개체 유형 선택** 창은 **선택 \<유형 >** 창이 표시 됩니다. 이 창에서 지정된 데이터베이스에 등록된 해당 데이터베이스 개체 유형의 모든 인스턴스 중에서 선택할 수 있습니다. 하나 이상의 개체를 선택 하 고 클릭 **다음**합니다.  
+6.  선택한 모든 개체 형식에 대 한는 **개체 유형 선택** 창에는 **선택 \<형식 >** 창이 표시 됩니다. 이 창에서 지정된 데이터베이스에 등록된 해당 데이터베이스 개체 유형의 모든 인스턴스 중에서 선택할 수 있습니다. 하나 이상의 개체를 선택 하 고 클릭 **다음**합니다.  
   
-7.  **출력 옵션** 창이 표시 됩니다는 원하는 데이터베이스의 모든 개체 유형을 선택 하지 않았습니다. 선택 **스크립트를 파일로** 스크립트에 대 한 파일 경로 지정 합니다. **다음**을 선택합니다. 선택 항목을 검토 하 고 클릭 **마침**합니다. 배포 스크립트가 저장된 파일 경로에 저장됩니다.  
+7.  합니다 **출력 옵션** 원하는 데이터베이스의 모든 개체 유형을 선택 창이 표시 됩니다. 선택 **스크립트를 파일로** 스크립트에 대 한 파일 경로 지정 합니다. **다음**을 선택합니다. 검토 하 고 클릭 **완료**합니다. 배포 스크립트가 저장된 파일 경로에 저장됩니다.  
   
 ## <a name="post-deployment-scripts"></a>배포 후 스크립트  
  배포 후 스크립트를 실행할 수 있습니다.  
   
- 배포 후 스크립트를 추가하려면 Visual Studio 프로젝트 디렉터리에 postdeployscript.sql이라는 파일을 추가합니다. 예를 들어에서 프로젝트를 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택 **기존 항목 추가**합니다. 테스트 스크립트 폴더가 아닌 프로젝트의 루트에 있는 파일을 추가합니다.  
+ 배포 후 스크립트를 추가하려면 Visual Studio 프로젝트 디렉터리에 postdeployscript.sql이라는 파일을 추가합니다. 예를 들어에서 프로젝트를 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택한 **기존 항목 추가**합니다. 테스트 스크립트 폴더가 아닌 프로젝트의 루트에 있는 파일을 추가합니다.  
   
  배포를 클릭하면 Visual Studio에서 프로젝트 배포 후에 이 스크립트를 실행합니다.  
   

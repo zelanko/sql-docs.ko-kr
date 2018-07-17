@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
 - service accounts [Reporting Services]
@@ -18,18 +18,18 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f680cf4f291bed7a82bb3b7aadd0e8c1871ef17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234493"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램은 하나의 서비스 내에서 실행됩니다. 서비스를 실행하는 계정은 설치 중 서비스 ID 페이지에 계정을 지정할 때 정의되지만 다른 계정을 사용하거나 암호를 업데이트하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용할 수 있습니다.  
   
- 보고서 서버가 SharePoint 통합 모드를 사용 하도록 구성 된 하 고 사용 하 여 서비스 계정을 변경 하는 경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구, 또한 SharePoint 중앙 관리를 열고 사용 하 여는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용 합니다. 이 단계에서 액세스 권한을 부여할는 새 서비스 계정에 SharePoint 데이터베이스에 통합 하는 데 필요한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]합니다.  
+ 보고서 서버가 SharePoint 통합 모드를 사용 하도록 구성 된 및 사용 하 여 서비스 계정을 변경 하는 경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구, 있습니다 해야 SharePoint 중앙 관리를 열어 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용 합니다. 이 단계 액세스 권한이 부여 됩니다 새 서비스 계정에 SharePoint 데이터베이스에 통합 하는 데 필요한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용 하 여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]합니다.  
   
  서비스 계정을 업데이트할 때는 서비스 ID에 종속된 다른 설정도 함께 업데이트되도록 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하십시오.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36092605"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버에 연결합니다.  
   
-2.  서비스 계정 페이지에서 사용하려는 계정 유형에 해당하는 옵션을 선택합니다. 참조를 지정 하려면 계정 유형에 대 한 권장 사항은 [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)합니다.  
+2.  서비스 계정 페이지에서 사용하려는 계정 유형에 해당하는 옵션을 선택합니다. 내용은 지정할 계정 유형에 대 한 권장 사항은 [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)합니다.  
   
 3.  Windows 사용자 계정을 선택한 경우 새 계정과 암호를 지정합니다. 계정은 20자를 초과할 수 없습니다.  
   

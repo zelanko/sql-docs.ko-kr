@@ -20,13 +20,13 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfa2cd1c622041936d36edccc8e832359f74c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300593"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 동기 변환 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 변환 구성 요소를 사용하여 데이터가 원본에서 대상으로 전달될 때 데이터를 수정하고 분석할 수 있습니다. 동기 출력을 사용하는 변환에서는 각 입력 행이 이 구성 요소를 통해 전달될 때 이를 처리합니다. 그러나 비동기 출력을 사용하는 변환에서는 입력 행을 모두 받을 때까지 기다렸다가 처리를 완료합니다. 이 항목에서는 동기 변환에 대해 설명합니다. 비동기 변환에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)를 참조하세요. 동기 구성 요소와 비동기 구성 요소 간 차이에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.  
@@ -74,9 +74,9 @@ ms.locfileid: "36186818"
  **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.  
   
 ### <a name="adding-variables"></a>변수 추가  
- 스크립트에서 기존 변수를 사용 하려는 경우에 추가할 수 있습니다는 `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드에 **스크립트** 의 페이지는 **스크립트 변환 편집기**합니다.  
+ 스크립트에서 기존 변수를 사용 하려는 경우에 추가할 수 있습니다 합니다 `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드에 **스크립트** 페이지를 **스크립트 변환 편집기**합니다.  
   
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 줄임표를 클릭 하 여 여러 변수를 선택할 수도 있습니다 (**...** ) 단추 옆에 `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드를 한 다음 변수를 선택 하 고 **변수 선택** 대화 상자.  
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 줄임표를 클릭 하 여 여러 변수를 선택할 수도 있습니다 (**...** ) 단추 옆에 `ReadOnlyVariables` 하 고 `ReadWriteVariables` 속성 필드를 선택한 다음 변수를 **변수 선택** 대화 상자.  
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36186818"
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해  
  변환 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 `ProcessInputRow` 메서드에 대한 스텁과 함께 코드 편집기에 나타납니다. 이 `ScriptMain` 클래스에서 사용자 지정 코드를 작성해야 하며 `ProcessInputRow`는 변환 구성 요소에서 가장 중요한 메서드입니다.  
   
- 여는 경우는 **프로젝트 탐색기** VSTA에서 창, 스크립트 구성 요소 읽기 전용 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
+ 열면 합니다 **프로젝트 탐색기** vsta에서 창에서 읽기 전용으로 스크립트 구성 요소 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
   
  런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `ProcessInput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.  
   
@@ -141,7 +141,7 @@ else
  이 예에서는 `ScriptMain` 클래스에서 동기 변환 구성 요소를 만드는 데 필요한 사용자 지정 코드를 보여 줍니다.  
   
 > [!NOTE]  
->  이러한 예에서 사용 된 **Person.Address** 테이블에 `AdventureWorks` 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **intAddressID** 및 **nvarchar (30) 도시**데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
+>  이 예제에서는 사용를 **Person.Address** 테이블에 `AdventureWorks` 예제 데이터베이스 및 해당 되는 경우 첫 번째 및 네 번째 열을 전달 합니다 **intAddressID** 및 **nvarchar (30) City**데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
 ### <a name="single-output-synchronous-transformation-example"></a>단일 출력 동기 변환 예  
  이 예에서는 단일 출력을 사용하는 동기 변환 구성 요소를 보여 줍니다. 이 변환에서는 **AddressID** 열을 전달하고 **City** 열을 대문자로 변환합니다.  
@@ -150,7 +150,7 @@ else
   
 1.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다.  
   
-2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력 데이터를 제공 해야는 **Person.Address** 목차는 `AdventureWorks` 포함 된 예제 데이터베이스는 **AddressID** 및 **도시** 열입니다.  
+2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력 데이터를 제공 해야 합니다 **Person.Address** 목차를 `AdventureWorks` 포함 된 샘플 데이터베이스를 **AddressID** 및 **City** 열.  
   
 3.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다. **City** 열을 읽기/쓰기로 표시합니다.  
   
@@ -202,7 +202,7 @@ public class ScriptMain:
   
 1.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다.  
   
-2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력 데이터를 제공 해야는 **Person.Address** 목차는 `AdventureWorks` 포함 된 샘플 데이터베이스 적어도 **AddressID** 및 **도시** 열입니다.  
+2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력 데이터를 제공 해야 합니다 **Person.Address** 목차를 `AdventureWorks` 포함 된 샘플 데이터베이스 적어도 **AddressID** 및 **City** 열입니다.  
   
 3.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다. **City** 열을 읽기/쓰기로 표시합니다.  
   
@@ -263,9 +263,9 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Integration Services 관련 최신 정보 얻기**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Integration Services를 사용 하 여 최신 상태 유지**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md) [스크립트 구성 요소를 사용 하 여 비동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [동기와 사용자 지정 변환 구성 요소 개발 출력](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
+ [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md) [스크립트 구성 요소를 사용 하 여 비동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [동기를 사용 하 여 사용자 지정 변환 구성 요소 개발 출력](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  
   
   

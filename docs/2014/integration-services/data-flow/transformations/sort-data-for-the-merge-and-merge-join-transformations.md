@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 375f268eecba7c519941f4743d7396346a863f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316063"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 병합 및 병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 입력 데이터는 물리적으로 정렬되어야 하며 출력 및 원본의 출력 열 또는 업스트림 변환에 정렬 옵션이 설정되어야 합니다. 정렬 옵션은 데이터가 정렬되었음을 나타내지만 데이터가 실제로 정렬되지 않은 경우에는 병합 또는 병합 조인 작업의 결과를 예측할 수 없습니다.  
@@ -55,11 +55,11 @@ ms.locfileid: "36184310"
 -   데이터가 정렬되었는지 여부를 나타내는 출력의 `IsSorted` 속성. 이 속성으로 설정 되어 있어야 `True`합니다.  
   
     > [!IMPORTANT]  
-    >  값을 설정는 `IsSorted` 속성을 `True` 데이터를 정렬 하지 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  
+    >  값을 설정 합니다 `IsSorted` 속성을 `True` 해도 데이터가 정렬 되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  
   
--   `SortKeyPosition` 열 정렬 여부, 열의 정렬 순서 및 여러 열이 정렬 순서를 나타내는 출력 열의 속성입니다. 정렬된 데이터의 각 열에 이 속성을 설정해야 합니다.  
+-   `SortKeyPosition` 열이 정렬 되었는지 여부, 열의 정렬 순서 및 여러 열 정렬 되는 시퀀스를 나타내는 출력 열의 속성입니다. 정렬된 데이터의 각 열에 이 속성을 설정해야 합니다.  
   
- 정렬 변환을 사용하여 데이터를 정렬하면 이러한 두 속성이 병합 또는 병합 조인 변환에 필요한 값으로 설정됩니다. 즉, 적절히 설정는 `IsSorted` 출력의 속성 `True`, 설정 및는 `SortKeyPosition` 해당 출력 열의 속성을 합니다.  
+ 정렬 변환을 사용하여 데이터를 정렬하면 이러한 두 속성이 병합 또는 병합 조인 변환에 필요한 값으로 설정됩니다. 정렬 변환의 설정, 합니다 `IsSorted` 출력 속성 `True`, 설정 및는 `SortKeyPosition` 해당 출력 열의 속성입니다.  
   
  그러나 정렬 변환을 사용하여 데이터를 정렬하지 않는 경우에는 원본 또는 업스트림 변환에서 이러한 정렬 속성을 수동으로 설정해야 합니다. 원본 또는 업스트림 변환에서 정렬 속성을 수동으로 설정하려면 다음 절차를 수행합니다.  
   
@@ -75,14 +75,14 @@ ms.locfileid: "36184310"
   
 5.  **입/출력 속성** 탭을 클릭합니다.  
   
-6.  클릭  **\<구성 요소 이름 > 출력**를 설정 하 고는 `IsSorted` 속성을 `True`합니다.  
+6.  클릭  **\<구성 요소 이름 > 출력**를 설정 합니다 `IsSorted` 속성을 `True`입니다.  
   
     > [!NOTE]  
-    >  수동으로 설정 하는 경우는 `IsSorted` 출력의 속성 `True` 및 데이터 정렬 되지 않은, 수 없을 데이터 되었거나 데이터 비교가 잘못 다운스트림 병합 또는 병합 조인 변환에는 패키지를 실행 합니다.  
+    >  수동으로 설정한 경우에 `IsSorted` 출력 속성 `True` 및 데이터 정렬 되지 않은, 있습니다 수 있습니다 데이터가 누락 되었거나 데이터 비교가 잘못 다운스트림 병합 또는 병합 조인 변환 패키지를 실행할 때.  
   
 7.  **출력 열**을 확장합니다.  
   
-8.  표시 하려는 열이 정렬 되 고 설정 클릭 해당 `SortKeyPosition` 속성을 이러한 지침에 따라 0이 아닌 정수 값:  
+8.  표시 하려는 열이 정렬 되 고 설정 클릭 해당 `SortKeyPosition` 이러한 지침에 따라 0이 아닌 정수 값으로 속성:  
   
     -   정수 값은 1부터 시작하여 1씩 증가하는 숫자 시퀀스를 나타내야 합니다.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "36184310"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     이 문에 대해 설정한는 `SortKeyPosition` 다음과 같이 각 열에 대 한 속성:  
+     이 문에 대해 설정 된 `SortKeyPosition` 다음과 같은 각 열에 대 한 속성:  
   
     -   ColumnA의 `SortKeyPosition` 속성을 1로 설정합니다. 이는 ColumnA가 정렬할 첫째 열이며 오름차순으로 정렬됨을 나타냅니다.  
   
     -   ColumnB의 `SortKeyPosition` 속성을 -2로 설정합니다. 이는 ColumnB가 두 번째로 정렬할 열이며 내림차순으로 정렬함을 나타냅니다.  
   
-    -   설정의 `SortKeyPosition` ColumnC의 속성을 3입니다. 이는 ColumnC가 정렬할 셋째 열이며 오름차순으로 정렬됨을 나타냅니다.  
+    -   설정 된 `SortKeyPosition` ColumnC의 속성을 3으로 합니다. 이는 ColumnC가 정렬할 셋째 열이며 오름차순으로 정렬됨을 나타냅니다.  
   
 9. 정렬된 각 열에 대해 8단계를 반복합니다.  
   

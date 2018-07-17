@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6d3692d6fc83af166a16aa628747078f60cb663a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0a94b6e958626e429711bb643cecc7bb87592c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292294"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
   이 항목에서는 [또는 COM 기반 사용자 지정 해결 프로그램](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)] 의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "36183410"
   
 8.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행하여 라이브러리가 이미 사용자 지정 충돌 해결 프로그램으로 등록되어 있지 않은지 확인합니다.  
   
-9. 라이브러리를 사용자 지정 충돌 해결 프로그램으로 등록하려면 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. 에 대 한 COM 개체의 이름을 지정 **@article_resolver**, 라이브러리의 ID (CLSID)에 대 한 **@resolver_clsid**, 값을 `false` 에 대 한 **@is_dotnet_assembly**.  
+9. 라이브러리를 사용자 지정 충돌 해결 프로그램으로 등록하려면 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. COM 개체의 이름을 지정 **@article_resolver**, 라이브러리의 ID (CLSID)에 대 한 **@resolver_clsid**에 값 `false` 에 대 한 **@is_dotnet_assembly**.  
   
     > [!NOTE]  
     >  사용자 지정 충돌 해결 프로그램이 더 이상 필요하지 않으면 [sp_unregistercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql)를 사용하여 등록을 취소할 수 있습니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "36183410"
 3.  **setup.exe**를 실행합니다.  
   
     > [!NOTE]  
-    >  설치 옵션을 선택할 때 **복제** 예제만 설치하면 됩니다. (기본 설치 경로 **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
+    >  설치 옵션을 선택할 때 **복제** 예제만 설치하면 됩니다. (기본 설치 경로가 **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
   
 4.  설치 폴더로 이동합니다. 기본 폴더는 **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\unzip_sqlreplSP3.exe**입니다.  
   

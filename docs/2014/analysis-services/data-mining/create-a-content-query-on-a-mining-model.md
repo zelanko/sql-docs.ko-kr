@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델에 내용 쿼리 만들기 | Microsoft Docs
+title: 마이닝 모델에 내용 쿼리를 만드는 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bbc92d8083c570aa46371d4251b8ea2f8d9b57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747f066839ee10ab9982c5b6388c946abec66cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308893"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
   AMO 또는 XML/A를 사용하여 프로그래밍 방식으로 마이닝 모델 콘텐츠를 쿼리할 수 있지만 DMX를 사용하여 쿼리를 만드는 편이 더 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
@@ -44,11 +44,11 @@ ms.locfileid: "36186863"
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 모델의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   
-5.  줄에서는 마이닝 모델의 이름을 입력 `FROM` [*\<마이닝 모델, 이름, MyModel >*]`.CONTENT`합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
+5.  줄에 마이닝 모델의 이름을 입력 `FROM` [*\<마이닝 모델, 이름, MyModel >*]`.CONTENT`합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
   
      이름을 입력하기가 불편하면 **개체 탐색기** 에서 마이닝 모델을 선택하고 템플릿에 끌어다 놓으면 됩니다.  
   
-6.  줄에 `SELECT` *\<select 목록, expr list \* >*, 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
+6.  줄에서 `SELECT` *\<선택 목록, expr list \* >*, 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
   
      마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   

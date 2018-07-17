@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e194a220520c65a637048a10b8f552338a39d05c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b171629208ace8f3a6684abf02ccd3ef2451b61c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957058"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357195"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>복제 에이전트 이벤트에 대한 경고 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +44,8 @@ ms.locfileid: "32957058"
 |14150|**복제: 에이전트 성공**|에이전트가 성공적으로 종료됩니다.|예|  
 |14151|**복제: 에이전트 실패**|오류로 인해 에이전트가 종료됩니다.|예|  
 |14152|**복제: 에이전트 다시 시도**|불필요한 작업을 다시 시도한 후 에이전트가 종료합니다. 에이전트에는 사용할 수 없는 서버, 교착 상태, 연결 실패, 제한 시간 실패 등이 발생합니다.|예|  
-|14157|**복제: 만료된 구독 삭제**|만료된 구독이 삭제되었습니다.|아니오|  
-|20572|**복제: 유효성 검사 실패 후에 구독이 다시 초기화되었습니다.**|'데이터 유효성 검사 실패 시 구독 다시 초기화' 응답 작업이 구독을 성공적으로 다시 초기화합니다.|아니오|  
+|14157|**복제: 만료된 구독 삭제**|만료된 구독이 삭제되었습니다.|아니요|  
+|20572|**복제: 유효성 검사 실패 후에 구독이 다시 초기화되었습니다.**|'데이터 유효성 검사 실패 시 구독 다시 초기화' 응답 작업이 구독을 성공적으로 다시 초기화합니다.|아니요|  
 |20574|**복제: 구독자가 데이터 유효성 검사에 실패했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사에 실패합니다.|예|  
 |20575|**복제: 구독자가 데이터 유효성 검사를 통과했습니다.**|배포 또는 병합 에이전트가 데이터 유효성 검사를 통과합니다.|예|  
 |20578|**복제: 에이전트 사용자 지정 종료**|||  

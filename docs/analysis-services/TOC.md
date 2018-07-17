@@ -130,10 +130,11 @@
 ## [Analysis Services 샘플](analysis-services-samples.md)
 
 # 참조
+## [Analysis Services용 PowerShell 참조](../analysis-services/powershell/analysis-services-powershell-reference.md)  
+## [SharePoint용 Power Pivot에 대한 PowerShell 참조](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [MSDN의 DAX(Data Analysis Expressions)](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [DMX(Data Mining Extensions)](../dmx/data-mining-extensions-dmx-reference.md)
 ## [MDX(Multidimensional Expressions)](../mdx/analysis-services-language-reference.md)
-## [파워 쿼리 M](https://msdn.microsoft.com/library/mt211003.aspx)
-## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [파워 쿼리 M](https://msdn.microsoft.com/library/mt211003.aspx)  
 ## [서버 속성](../analysis-services/server-properties/server-properties-in-analysis-services.md)
 ## [XMLA(XML for Analysis)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)

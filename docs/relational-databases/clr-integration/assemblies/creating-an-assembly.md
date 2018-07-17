@@ -1,12 +1,11 @@
 ---
-title: 어셈블리 만들기 | Microsoft Docs
+title: Creating an Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dda63f58c6229da4af2653d68d6bc7db37043e62
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 018783af12eb63273b4fec17da3e6e31b2f80fdf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694334"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360195"
 ---
 # <a name="creating-an-assembly"></a>어셈블리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   호출되거나 참조되는 어셈블리가 동일한 데이터베이스에 만들어졌습니다.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>어셈블리 생성 시 보안 지정  
- 어셈블리를 만들 때 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 코드 실행할 수 있는 보안의 세 가지 수준 중 하나: **안전**, **EXTERNAL_ACCESS**, 또는 **안전 하지 않음** . **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](http://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
+ 어셈블리를 만들 때를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 보안 코드가 실행 될 수 있는 세 개의 다른 수준 중 하나: **안전**를 **EXTERNAL_ACCESS**, 또는 **안전 하지 않음** . **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](http://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
   
  **SAFE** 는 기본 권한 집합이며 대부분의 시나리오에서 작동합니다. 이 보안 수준을 지정하려면 다음과 같이 CREATE ASSEMBLY 문의 구문을 수정합니다.  
   

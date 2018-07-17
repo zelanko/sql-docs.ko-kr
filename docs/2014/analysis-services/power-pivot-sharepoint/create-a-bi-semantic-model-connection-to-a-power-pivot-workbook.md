@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36172474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328483"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
   동일한 팜의 PowerPivot 통합 문서로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 사용합니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "36172474"
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
- BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 참조 [를 라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)합니다.  
+ BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint 용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)합니다.  
   
- PowerPivot 통합 문서를 설정 하는 BI 의미 체계 모델 연결의 URL을 알고 있어야 (예를 들어 http://adventure-works/shared documents/myworkbook.xlsx). 통합 문서는 동일한 팜에 있어야 합니다.  
+ BI 의미 체계 모델 연결을 설정 하는 PowerPivot 통합 문서의 URL을 알고 있어야 합니다 (예를 들어 http://adventure-works/shared documents/myworkbook.xlsx). 통합 문서는 동일한 팜에 있어야 합니다.  
   
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36172474"
   
      ![SharePoint 라이브러리에 새 문서 하위 메뉴](../media/ssas-bismconnection-new.gif "SharePoint 라이브러리에 새 문서 하위 메뉴")  
   
-2.  설정의 **서버** 속성을 PowerPivot 통합 문서의 SharePoint URL (예를 들어  **http://mysharepoint/shared documents/Myworkbook.xlsx**합니다. SharePoint용 PowerPivot 배포에서는 팜의 모든 서버에 데이터가 로드될 수 있습니다. 이러한 이유로 PowerPivot 데이터에 대한 데이터 원본 연결은 통합 문서의 경로만 지정합니다. 데이터를 로드하는 서버는 PowerPivot 시스템 서비스에서 결정합니다.  
+2.  설정 된 **Server** 속성을 PowerPivot 통합 문서의 SharePoint URL (예를 들어  **http://mysharepoint/shared documents/Myworkbook.xlsx**합니다. SharePoint용 PowerPivot 배포에서는 팜의 모든 서버에 데이터가 로드될 수 있습니다. 이러한 이유로 PowerPivot 데이터에 대한 데이터 원본 연결은 통합 문서의 경로만 지정합니다. 데이터를 로드하는 서버는 PowerPivot 시스템 서비스에서 결정합니다.  
   
-     사용 하지 않는 **데이터베이스** 속성; PowerPivot 통합 문서 위치를 지정할 때 사용 되지 않습니다.  
+     사용 하지 않는 합니다 **데이터베이스** 속성 PowerPivot 통합 문서의 위치를 지정할 때 사용 되지 않습니다.  
   
      페이지는 다음 그림과 비슷해야 합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36172474"
   
 ## <a name="see-also"></a>관련 항목  
  [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결을 사용 하 여](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36183138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330793"
 ---
 # <a name="defining-a-fact-relationship"></a>팩트 관계 정의
   사용자는 팩트 테이블에 있는 데이터 항목별로 측정값 차원을 구분하거나 특정 판매 팩트에 관련된 송장 번호나 구매 주문 번호와 같은 특정 추가 관련 정보를 팩트 테이블에서 쿼리할 수 있습니다. 이러한 팩트 테이블 항목을 기반으로 차원을 정의할 경우 이 차원을 *팩트 차원*이라고 합니다. 팩트 차원은 중복 제거 차원이라고도 합니다. 팩트 차원은 특정 송장 번호에 관련된 모든 행과 같은 관련 팩트 테이블 행을 함께 그룹화하는 데 유용합니다. 이 정보를 관계형 데이터베이스에 있는 별도의 차원 테이블에 넣을 수 있는데도 정보에 대한 별도의 차원 테이블을 만들면 차원 테이블이 팩트 테이블과 같은 속도로 커지고 중복 데이터가 발생하며 과도하게 복잡해지기 때문에 좋지 않습니다.  
@@ -67,15 +67,15 @@ ms.locfileid: "36183138"
   
 13. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-14. 에 **특성** 에 대 한 차원 디자이너의 창에서 **Internet Sales Order Details** 차원을 선택 하 **Sales Order Number**, 한 다음 변경는  **이름** 를 속성 창에서 속성 `Item Description.`  
+14. 에 **특성** 에 대 한 차원 디자이너의 창 합니다 **Internet Sales Order Details** 차원에 **Sales Order Number**, 변경한 후는  **이름** 속성 창에서 속성 `Item Description.`  
   
 15. **NameColumn** 속성 셀에서 찾아보기 단추 **(…)** 를 클릭합니다. **이름 열** 대화 상자의 **원본 테이블** 목록에서 **Product** 를 선택하고 **원본 열** 에 **EnglishProductName**을 선택한 후 **확인**을 클릭합니다.  
   
 16. **데이터 원본 뷰** 창에서 **InternetSales** 테이블의 **SalesOrderNumber** 열을 **특성** 창으로 끌어다 놓아 **Sales Order Number** 특성을 차원에 추가합니다.  
   
-17. 변경 된 **이름** 새 속성 **Sales Order Number** 특성을 `Order Number`, 변경 하 고는 **OrderBy** 속성을 **키**.  
+17. 변경 합니다 **이름** 새 속성 **Sales Order Number** 특성을 `Order Number`를 변경 합니다 **OrderBy** 속성을 **키**.  
   
-18. 에 **계층** 창 만들기는 **Internet Sales Orders** 포함 된 사용자 계층이 `Order Number` 및 **Item Description** 수준을 해당 순서.  
+18. 에 **계층** 창 만들기를 **Internet Sales Orders** 포함 된 사용자 계층을 `Order Number` 및 **Item Description** 수준을 순서 대로.  
   
 19. **특성** 창에서 **Internet Sales Order Details**를 선택한 다음 속성 창에서 **StorageMode** 속성 값을 검토합니다.  
   

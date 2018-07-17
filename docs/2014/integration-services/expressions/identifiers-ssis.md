@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36180936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295053"
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
   식에서 식별자는 연산에 사용할 수 있는 열과 변수입니다. 식은 일반 식별자와 정규화된 식별자를 사용할 수 있습니다.  
@@ -116,9 +116,9 @@ ms.locfileid: "36180936"
 > [!IMPORTANT]  
 >  식 계산기에서 변수를 인식할 수 있도록 네임스페이스와 정규화된 변수 이름 조합을 대괄호로 묶어야 합니다.  
   
- 하는 경우의 값 **Count** 에 **사용자** 네임 스페이스가 10이 고 값 **Count** 에 **MyNamespace** 가 2 이면 식의 결과가 `true` 식 계산기에서 두 개의 다른 변수를 인식 하므로 합니다.  
+ 경우 값 **개수** 에 **사용자** 네임 스페이스가 10이 고 값 **개수** 에서 **MyNamespace** 가 2 이면 식의 결과가 `true` 식 계산기에서 두 개의 다른 변수를 인식 하므로 합니다.  
   
- 고유한 변수 이름을 사용하지 않아도 오류가 발생하지는 않습니다. 대신 식 계산기가 해당 변수의 한 개 인스턴스만 사용하여 식을 계산하고 잘못된 결과를 반환합니다. 예를 들어 다음 식은 원래 별개의 두 값 (10과 2)을 비교 **Count** 변수 이지만 계산 `false` 식 계산기는 의같은인스턴스를사용하기때문에 **Count** 두 번입니다.  
+ 고유한 변수 이름을 사용하지 않아도 오류가 발생하지는 않습니다. 대신 식 계산기가 해당 변수의 한 개 인스턴스만 사용하여 식을 계산하고 잘못된 결과를 반환합니다. 예를 들어 다음 식은 하려던 별개의 두 값 (10과 2)을 비교 **개수** 변수 이지만 식 `false` 식 계산기 합니다 의동일한인스턴스를사용하기때문에 **개수** 변수에 두 번입니다.  
   
 ```  
 @Count > @Count  

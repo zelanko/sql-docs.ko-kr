@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 039afe6cbe5892d2422eec3c92a4d2bb942d5de0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5126690791d59a41f65885e5c57f7cb9098eaf21
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36080905"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349795"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
-  관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체 작성 하는 경우 없는 코드 검사 수행 하 여 특정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에 대 한 검사를 수행 합니다. 사용 하 여는 `CREATE ASSEMBLY` 문, 하며 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항을으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 `SAFE`, `EXTERNAL_ACCESS`, 또는 `UNSAFE`, `SAFE` 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  
+  관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성할 때 가지 특정 코드 검사를 수행한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에서 검사를 사용 하 여는 `CREATE ASSEMBLY` 문 및 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 `SAFE`, `EXTERNAL_ACCESS`, 또는 `UNSAFE`, `SAFE` 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  
   
- 관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리에는 서로 다른 CAS 권한이 있습니다. 자세한 내용은 참조 [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)합니다.  
+ 관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리에는 서로 다른 CAS 권한이 있습니다. 자세한 내용은 [CLR 통합 코드 액세스 보안](../security/clr-integration-code-access-security.md)합니다.  
   
 ## <a name="create-assembly-checks"></a>CREATE ASSEMBLY 검사  
  `CREATE ASSEMBLY` 문을 실행하면 각 보안 수준에 대해 다음과 같은 검사가 수행됩니다.  감사가 실패하면 오류 메시지와 함께 `CREATE ASSEMBLY`가 실패합니다.  
@@ -44,7 +42,7 @@ ms.locfileid: "36080905"
   
 -   사용 중인 `CREATE ASSEMBLY FROM`  *\<위치 >,* 에서 사용할 수 있는 모든 참조 된 어셈블리 및 해당 종속성  *\<위치 >* 합니다.  
   
--   사용 하는 `CREATE ASSEMBLY FROM`  *\<바이트... >,* 참조가 공간을 통해 지정 된 모든 바이트를 구분 합니다.  
+-   사용 중인 `CREATE ASSEMBLY FROM`  *\<바이트... >를* 바이트를 구분 하는 모든 참조를 통해 지정 됩니다.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  모든 `EXTERNAL_ACCESS` 어셈블리가 다음 조건을 충족해야 합니다.  
@@ -116,7 +114,7 @@ ms.locfileid: "36080905"
   
 -   UI  
   
- Hpa 및 지원 되는 어셈블리의 허용 되지 않는 형식 및 멤버의 목록에 대 한 자세한 내용은 참조 [호스트 보호 특성 및 CLR 통합 프로그래밍](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)합니다.  
+ Hpa 및 지원 되는 어셈블리의 허용 되지 않는 형식 및 멤버 목록에 대 한 자세한 내용은 참조 하세요. [호스트 보호 특성 및 CLR 통합 프로그래밍](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)합니다.  
   
 ### <a name="safe"></a>SAFE  
  모든 `EXTERNAL_ACCESS` 조건이 검사됩니다.  

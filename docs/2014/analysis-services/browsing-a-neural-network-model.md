@@ -1,5 +1,5 @@
 ---
-title: 신경망 모델을 탐색 | Microsoft Docs
+title: 신경망 모델 찾아보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286369"
 ---
 # <a name="browsing-a-neural-network-model"></a>신경망 모델 찾아보기
   **찾아보기**를 사용하여 신경망 또는 로지스틱 회귀 모델을 열면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 신경망 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시됩니다. 이 뷰어에서는 상관 관계를 탐색하고 모델 및 기본 데이터의 패턴에 대한 정보를 얻을 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "36184146"
   
      소득의 경우 78.4-154.06(가장 높은 소득 범위의 경우)과 같은 그룹으로 열이 세분화되었습니다.  
   
-     ![변수가 범주화 되는 방식을 보려면 정렬](media/dm13-nn-bucketing-variables.gif "변수가 범주화 되는 방식을 보려면 정렬")  
+     ![변수가 범주화 되는 방법을 보려면 정렬](media/dm13-nn-bucketing-variables.gif "변수가 범주화 되는 방법을 보려면 정렬")  
   
      다른 그룹화를 원하는 경우 모델을 작성하기 전에 [레이블 재지정&#40;SQL Server 데이터 마이닝 추가 기능&#41;](relabel-sql-server-data-mining-add-ins.md) 도구나 Excel 함수를 사용하여 새로운 소득 범주를 만들어야 합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36184146"
   
 1.  특정 그룹을 대상으로 한다고 가정하고 해당 그룹에서 구매에 가장 큰 영향을 미치는 요인을 확인합니다.  
   
-     에 **입력** 창에서 클릭는  **\<모든 >** 셀 **특성**을 선택 하 고 **Age**합니다.  
+     에 **입력** 창 클릭는  **\<모든 >** 셀 **특성**를 선택한 **Age**.  
   
      **값**에 대해 가장 어린 연령 범주를 선택합니다.  
   

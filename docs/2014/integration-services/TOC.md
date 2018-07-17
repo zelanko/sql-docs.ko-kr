@@ -53,6 +53,7 @@
 ### [마법사 완료(SSIS 패키지 업그레이드 마법사)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [패키지 업그레이드(SSIS 패키지 업그레이드 마법사)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [SQL Server 가져오기 및 내보내기 마법사 +](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [Excel에서 가져오기 또는 Excel로 내보내기](load-data-to-from-excel-with-ssis.md)
 ## [패키지 배포 문제 해결 도구 +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Integration Services 패키지에서 기록하는 이벤트](performance/events-logged-by-an-integration-services-package.md)
 ## [이벤트 로그 창에서 로그 항목 보기](view-log-entries-in-the-log-events-window.md)

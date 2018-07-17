@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
 - parameterized filters [SQL Server replication], modifying
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eea2edc2e87d6a7f63f01a28ef06a1d3b3d179da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3b3d8b397617674f4b297488e9cc8e2b541698df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36092186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296503"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
@@ -115,9 +115,9 @@ ms.locfileid: "36092186"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>병합 게시에서 아티클에 대한 매개 변수가 있는 행 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 지정 **@publication**, **@article**, 값이 `subset_filterclause` 에 대 한 **@property**에 대 한 매개 변수가 있는 필터를 정의 하는 식 **@value** (포함 하지 않고 `WHERE`), 값을 **1** 둘 다에 대해 **@force_invalidate_snapshot** 및 **@force_reinit_subscription**.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 지정 **@publication**를 **@article**에 값 `subset_filterclause` 에 대 한 **@property**에 대 한 매개 변수가 있는 필터를 정의 하는 식 **@value** (제외한 `WHERE`), 값 **1** 모두에 대 한 **@force_invalidate_snapshot** 하 고 **@force_reinit_subscription**.  
   
-2.  이 변경 내용으로 인해 파티션에 변화가 생기면 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 다시 실행합니다. 지정 **@publication**, **@article**, 값이 `partition_options` 에 대 한 **@property**, 및 에가장적합한분할옵션**@value**, 다음 중 하나일 수 있습니다.  
+2.  이 변경 내용으로 인해 파티션에 변화가 생기면 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 다시 실행합니다. 지정 **@publication**를 **@article**에 값 `partition_options` 에 대 한 **@property**, 및 가장적합한분할옵션을**@value**, 다음 중 하나일 수 있습니다.  
   
     -   **0** - 아티클의 필터링이 정적이거나 각 파티션에 대한 데이터의 고유 하위 집합을 생성합니다. 즉 "겹치는" 파티션을 생성하지 않습니다.  
   

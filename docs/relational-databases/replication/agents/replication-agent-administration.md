@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -28,12 +27,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6edd8536c3ebf8b0a312cb8aa71b20ab8a6a92b7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956718"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359885"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "32956718"
 ## <a name="replication-maintenance-jobs"></a>복제 유지 관리 작업  
  복제는 다음 작업을 통해 예약 유지 관리와 요청 시 유지 관리를 수행합니다.  
   
-|정리 작업|Description|기본 일정|  
+|정리 작업|설명|기본 일정|  
 |------------------|-----------------|----------------------|  
 |에이전트 기록 정리: 배포|배포 데이터베이스에서 복제 에이전트 기록을 제거합니다.|10분마다 실행|  
 |배포 정리: 배포|배포 데이터베이스에서 복제된 트랜잭션을 제거합니다. |10분마다 실행|  

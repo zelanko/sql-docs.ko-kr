@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0fefbebb9c56df87c83bb3b41ee508550a5f2113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311353"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL 샌드박싱 설정 및 해제
   RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 서버의 단일 웹 팜을 여러 명이 사용하는 환경에서 각 개인에 대해 특정 유형의 리소스 사용을 검색하고 제한할 수 있습니다. 여러 명 그리고 경우에 따라 서로 다른 회사에서 사용할 수 있는 보고서 서버의 단일 웹 팜을 유지 관리하는 호스팅 서비스 시나리오를 예로 들 수 있습니다. 보고서 서버 관리자는 이 기능을 설정하여 다음과 같이 할 수 있습니다.  
@@ -38,10 +38,10 @@ ms.locfileid: "36182972"
   
 -   식의 명명된 매개 변수  
   
- 이 항목에는 각 요소에 설명에서 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대 한 자세한 내용은 참조 [보고서 서버 서비스 추적 로그](report-server/report-server-service-trace-log.md)합니다.  
+ 이 항목에서는 각 요소에 설명 합니다 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대 한 자세한 내용은 참조 하세요. [보고서 서버 서비스 추적 로그](report-server/report-server-service-trace-log.md)합니다.  
   
 ## <a name="example-configuration"></a>구성 예  
- 다음 예제에서는 설정 및에 대 한 예제 값은 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다.  
+ 다음 예제에서는 설정 및 예제 값을 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다.  
   
 ```  
 <RDLSandboxing>  
@@ -72,7 +72,7 @@ ms.locfileid: "36182972"
 |**유형**|RDL 식 내에 허용할 멤버 목록입니다.|  
 |**Allow**|RDL 식에 허용할 형식 또는 형식 집합입니다.|  
 |**Namespace**|**Allow** 의 특성이며, Value에 적용되는 하나 이상의 형식이 포함된 네임스페이스입니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
-|`AllowNew`|**Allow**의 부울 특성이며, 새 형식 인스턴스를 RDL 식에 만들 수 있는지 아니면 RDL **\<Class>** 요소에 만들 수 있는지를 제어합니다.<br /><br /> 참고: 때 `RDLSandboxing` 를 사용 하는 새 배열을 RDL 식의 설정에 관계 없이 만들 수 없습니다 `AllowNew`합니다.|  
+|`AllowNew`|**Allow**의 부울 특성이며, 새 형식 인스턴스를 RDL 식에 만들 수 있는지 아니면 RDL **\<Class>** 요소에 만들 수 있는지를 제어합니다.<br /><br /> 참고: 때 `RDLSandboxing` 을 사용 하는 새 배열을 RDL 식의 설정에 관계 없이 만들 수 없습니다 `AllowNew`합니다.|  
 |**Value**|**Allow** 의 값이며, RDL 식에 허용할 형식의 이름입니다. **\*** 값은 네임스페이스의 모든 형식이 허용됨을 나타냅니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
 |**멤버**|**\<Types>** 요소에 포함된 형식 목록의 경우 RDL 식에 허용되지 않는 멤버 이름 목록입니다.|  
 |**거부**|RDL 식에 허용되지 않는 멤버의 이름입니다. 이 속성은 대/소문자를 구분하지 않습니다.<br /><br /> 참고: 멤버에 **Deny** 가 지정되면 모든 형식에 대해 이 이름을 사용하는 멤버가 모두 허용되지 않습니다.|  
@@ -100,7 +100,7 @@ ms.locfileid: "36182972"
   
 -   형식의 정적 멤버  
   
--   [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` 메서드.  
+-   합니다 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` 메서드.  
   
 -   보고서 정의의 **\<Classes>** 요소  
   
@@ -122,9 +122,9 @@ ms.locfileid: "36182972"
   
 -   새 클래스를 허용 목록에 추가합니다.  
   
- 추가 하려면 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 함수를 허용 목록에 Microsoft.VisualBasic 네임 스페이스에서 해당 형식을 허용 목록에 추가 합니다.  
+ 추가할 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 함수를 허용 목록 Microsoft.VisualBasic 네임 스페이스에서 해당 형식을 허용 목록에 추가 합니다.  
   
- [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 형식 키워드를 허용 목록에 추가하려면 해당하는 CLR 형식을 허용 목록에 추가합니다. 예를 들어, 사용 하는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 키워드 `Integer`를 추가 하려면 다음 XML 조각은  **\<RDLSandboxing >** 요소:  
+ [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 형식 키워드를 허용 목록에 추가하려면 해당하는 CLR 형식을 허용 목록에 추가합니다. 예를 들어 사용 하는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 키워드 `Integer`를 추가 하려면 다음 XML 조각은 합니다  **\<RDLSandboxing >** 요소:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -138,7 +138,7 @@ ms.locfileid: "36182972"
   
  사용자 지정 어셈블리의 형식을 허용 목록에 추가해도 암시적으로 이 어셈블리에 대해 실행 권한이 부여되는 것은 아닙니다. 코드 액세스 보안 파일을 명확하게 수정하고 어셈블리에 대한 실행 권한을 제공해야 합니다. 자세한 내용은 [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md)을 참조하세요.  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>유지 관리 하는 \<거부 > 멤버 목록  
+#### <a name="maintaining-the-deny-list-of-members"></a>유지 관리는 \<거부 > 멤버 목록  
  허용 목록에 새 형식을 추가하는 경우 다음 목록을 사용하여 멤버의 차단 목록을 업데이트해야 할 시기를 결정할 수 있습니다.  
   
 -   새 형식을 제공하는 버전으로 사용자 지정 어셈블리를 업데이트하는 경우  
@@ -152,7 +152,7 @@ ms.locfileid: "36182972"
 -   RDL 형식에 새 멤버가 추가되어 나중 RDL 스키마를 처리하기 위해 보고서 서버를 업데이트하는 경우  
   
 ### <a name="working-with-operators-and-new"></a>연산자 및 New 사용  
- 기본적으로 `New`를 제외한 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 언어 연산자는 항상 허용됩니다. `New` 연산자에 의해 제어 됩니다는 `AllowNew` 특성에  **\<허용 >** 요소입니다. 기본 컬렉션 접근자 연산자 같은 다른 언어 연산자 `!` 및 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 와 같은.NET Framework 캐스트 매크로 `CInt`를 항상 허용 됩니다.  
+ 기본적으로 `New`를 제외한 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 언어 연산자는 항상 허용됩니다. `New` 연산자에 의해 제어 됩니다 합니다 `AllowNew` 특성을  **\<허용 >** 요소. 기본 컬렉션 접근자 연산자 같은 다른 언어 연산자 `!` 하 고 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 와 같은.NET Framework 캐스트 매크로 `CInt`를 항상 허용 됩니다.  
   
  사용자 지정 연산자를 포함하여 연산자를 차단 목록에 추가하는 것은 지원되지 않습니다. 형식에 대해 연산자를 실행하려면 다음과 같이 해야 합니다.  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36187240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320443"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "36187240"
 ###  <a name="Security"></a> 보안  
  데이터베이스 백업에서 TRUSTWORTHY는 OFF로 설정되어 있습니다. TRUSTWORTHY를 ON으로 설정하는 방법은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조하세요.  
   
- 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 `PASSWORD` 및 `MEDIAPASSWORD` 옵션은 백업을 만드는 데 지원 되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
+ 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 `PASSWORD` 고 `MEDIAPASSWORD` 옵션은 백업을 만드는 데 지원 되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
   
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
@@ -106,7 +105,7 @@ ms.locfileid: "36187240"
     > [!NOTE]  
     >  **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
   
-8.  에 대 한 **백업 구성 요소**, 클릭 `Database`합니다.  
+8.  에 대 한 **Backup 구성 요소**, 클릭 `Database`합니다.  
   
 9. **이름** 입력란에 제시된 기본 백업 세트 이름을 사용하거나 다른 이름을 입력합니다.  
   
@@ -208,7 +207,7 @@ ms.locfileid: "36187240"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 이상에서만 사용할 암호화 알고리즘과 암호화 보안에 사용할 인증서 또는 비대칭 키를 지정합니다.  
   
-         설명 **=** { **'*`text`*'** | **@ * * * text_variable* }  
+         설명을 **=** {0} **'*`text`*'** | **@ * text_variable* }  
          백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
   
          NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
@@ -276,7 +275,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-1.  사용 하 여 `Backup-SqlDatabase` cmdlet. 전체 데이터베이스 백업 임을 명시적으로 나타낼, 지정 된 **-BackupAction** 기본 값을 갖는 매개 변수 `Database`합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.  
+1.  사용 된 `Backup-SqlDatabase` cmdlet. 명시적으로 전체 데이터베이스 백업 임을 나타내기 위해를 지정 합니다 **-BackupAction** 매개 변수는 기본값을 사용 하 여 `Database`. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.  
   
      다음 예에서는 서버 인스턴스 `MyDB` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예에서는 `-BackupAction Database`를 지정합니다.  
   

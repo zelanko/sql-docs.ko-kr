@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -20,12 +19,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6555cb74774b3c883580da305f66552a1ca7bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47a04d8e37b57d3a7496aaf55909a91de4881a92
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954968"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356595"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>피어 투 피어 토폴로지 관리(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "32954968"
   
 4.  [bcp 유틸리티](../../../tools/bcp-utility.md)를 사용하여 새 테이블의 데이터를 모든 노드에 수동으로 대량 복사합니다.  
   
-5.  [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행하여 토폴로지의 각 노드에 새 아티클을 만듭니다. 자세한 내용은 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+5.  [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행하여 토폴로지의 각 노드에 새 아티클을 만듭니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
     > [!NOTE]  
     >  [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)이 실행된 후에는 복제를 통해 토폴로지의 구독에 아티클이 자동으로 추가됩니다.  

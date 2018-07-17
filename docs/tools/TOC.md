@@ -32,5 +32,6 @@
 ## [tablediff 유틸리티](tablediff-utility.md)
 
 # sqlpackage
-## [install sqlpackage](sqlpackage-download.md)
+## [sqlpackage 설치](sqlpackage-download.md)
+## [릴리스 정보](sqlpackage-release-notes.md)
 ## [sqlpackage ref](sqlpackage.md)

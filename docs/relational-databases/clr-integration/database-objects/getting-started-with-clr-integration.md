@@ -3,10 +3,9 @@ title: CLR 통합 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -28,19 +27,19 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702374"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349465"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 네임 스페이스 및 데이터베이스 개체를 사용 하 여 컴파일하는 데 필요한 라이브러리에 대 한 개요는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 공용 언어 런타임 (CLR)와 통합 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
+  이 항목에서는 라이브러리를 사용 하 여 데이터베이스 개체를 컴파일하는 데 필요한 확인 하 고 네임 스페이스의 개요를 제공 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는.NET Framework CLR (공용 언어 런타임)와 통합 합니다. 또한 이 항목에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성된 간단한 CLR 저장 프로시저를 작성, 컴파일 및 실행하는 방법도 보여 줍니다.  
   
 ## <a name="required-namespaces"></a>필수 네임스페이스  
- 기본 CLR 데이터베이스 개체를 개발 하는 데 필요한 구성 요소와 함께 설치 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
+ 기본 CLR 데이터베이스 개체를 개발 하는 데 필요한 구성 요소와 함께 설치 되 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. CLR 통합 기능은 .NET Framework의 일부인 system.data.dll이라는 어셈블리에서 제공되며 이 어셈블리는 GAC(전역 어셈블리 캐시)와 .NET Framework 디렉터리에 있습니다. 이 어셈블리에 대한 참조는 일반적으로 명령줄 도구와 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio에 자동으로 추가되므로 직접 추가하지 않아도 됩니다.  
   
  system.data.dll 어셈블리에는 CLR 데이터베이스 개체를 컴파일하는 데 필요한 다음과 같은 네임스페이스가 들어 있습니다.  
   
@@ -89,9 +88,9 @@ End Class
   
 ```  
   
- 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 새로운 클래스 두 개 사용 **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 및  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** 관리 되는 만들기, 데이터베이스 개체를 단순 텍스트로 출력 메시지. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
+ 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 두 개의 새 클래스를 사용 **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 하 고  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** 관리 만들기에 대 한 간단한 텍스트를 출력 하는 개체를 데이터베이스 메시지. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
   
- 이 프로그램을 라이브러리로 컴파일에 로드할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 저장 프로시저 실행 합니다.  
+ 이 프로그램을 라이브러리로 컴파일한에 로드 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 저장된 프로시저를 실행 합니다.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>"Hello World" 저장 프로시저를 컴파일합니다  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 재배포 가능 파일을 기본적으로 설치합니다. 이러한 파일에는 csc.exe와 vbc.exe, 그리고 Visual C# 및 Visual Basic 프로그램용 명령줄 컴파일러가 포함됩니다. 예제를 컴파일하려면 csc.exe 또는 vbc.exe가 포함된 디렉터리를 가리키도록 경로 변수를 수정해야 합니다. .NET Framework의 기본 설치 경로는 다음과 같습니다.  
@@ -106,7 +105,7 @@ C:\Windows\Microsoft.NET\Framework\(version)
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
 ```  
   
- 경로에 .NET Framework 디렉터리를 추가한 후에는 다음 명령을 사용하여 예제 저장 프로시저를 어셈블리로 컴파일할 수 있습니다. **/대상** 옵션을 어셈블리로 컴파일할 수 있습니다.  
+ 경로에 .NET Framework 디렉터리를 추가한 후에는 다음 명령을 사용하여 예제 저장 프로시저를 어셈블리로 컴파일할 수 있습니다. 합니다 **대상/** 옵션을 사용 하면 어셈블리로 컴파일할 수 있습니다.  
   
  Visual C# 원본 파일의 경우 다음 명령을 실행합니다.  
   
@@ -180,7 +179,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
   
 ## <a name="see-also"></a>참고자료  
  [CLR 저장 프로시저](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
- [ADO.NET에 SQL Server In-process 전용 확장](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
+ [ADO.NET으로 SQL Server In-process 전용 확장](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [CLR 데이터베이스 개체 디버깅](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)   
  [CLR 통합 보안](../../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

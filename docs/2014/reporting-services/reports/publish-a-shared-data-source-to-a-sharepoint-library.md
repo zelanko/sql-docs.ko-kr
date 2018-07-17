@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 876609eeb6f6a1490f4d2c7ad9196b08e2558646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36184418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317913"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint 라이브러리에 공유 데이터 원본 게시
   SharePoint 통합 모드에서 실행 중인 보고서 서버에 공유 데이터 원본을 게시하려면 보고서 디자이너에서 보고서 프로젝트 속성을 설정해야 합니다. 프로젝트 속성에서 서버, 보고서 및 공유 데이터 원본에 대한 모든 참조는 정규화된 URL이어야 합니다.  
@@ -56,11 +56,11 @@ ms.locfileid: "36184418"
     >  SharePoint 사이트에 공유 데이터 원본을 게시하면 파일 확장명이 .rsds로 변경됩니다. SharePoint 사이트에서 공유 데이터 원본을 직접 편집 및 관리할 수 있습니다. 자세한 내용은 [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 라이브러리에 보고서를 게시 합니다.](publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 보고서 게시](publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예&#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [프로젝트 속성 페이지 대화 상자](../tools/project-property-pages-dialog-box.md)   
  [배포 속성 설정 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [보고서 서버에 보고서 게시](publishing-reports-to-a-report-server.md)   
- [Office 데이터 연결을 사용 하 여 &#40;.odc&#41; 보고서와 함께 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Office 데이터 연결을 사용 하 여 &#40;.odc&#41; 보고서를 사용 하 여 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

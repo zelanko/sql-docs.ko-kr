@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d7f05024178334c11fccfd819aed1a4f4e023d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299803"
 ---
 # <a name="model-item-security-page-report-manager"></a>모델 항목 보안 페이지(보고서 관리자)
   이 페이지를 사용하여 특정 항목에 대한 읽기 전용 권한을 부여 또는 취소하는 방법으로 모델의 부분에 보안을 설정할 수 있습니다. 모델 항목 보안은 런타임에 임시 데이터 탐색에 영향을 미치며 보고서 작성기에서 보고서를 만들 때 게시된 모델의 부분을 사용하는 기능에도 영향을 미칩니다. 이 기능을 사용하려면 내용 관리자 권한이 있어야 합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "36088790"
  부모 항목의 보안 설정을 상속하려면 이 옵션을 클릭합니다.  
   
  **다음 사용자 및 그룹 (세미콜론으로 구분)에 읽기 권한 할당**  
- 액세스 권한을 정의할 사용자 또는 그룹 계정을 지정하려면 이 옵션을 클릭합니다. 기본 보안을 사용하는 경우 사용자 및 그룹 계정은 Windows 도메인 계정입니다. 이 형식으로 계정을 지정:  *\<도메인 >\\< 계정\>* 합니다.  
+ 액세스 권한을 정의할 사용자 또는 그룹 계정을 지정하려면 이 옵션을 클릭합니다. 기본 보안을 사용하는 경우 사용자 및 그룹 계정은 Windows 도메인 계정입니다. 이 형식으로 계정을 지정 합니다.  *\<도메인 >\\< 계정\>* 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Management Studio의 보고서 서버 F1 도움말](tools/report-server-in-management-studio-f1-help.md)  

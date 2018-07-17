@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,18 +16,18 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23580484e323d33d06d578b63d7d3b96381d3e5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd1ef1ee5c1d2d322beb41dc60439036d490c62f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920698"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36903786"
 ---
 # <a name="filetable-schema"></a>FileTable 스키마
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable의 미리 정의된 고정 스키마에 대해 설명합니다.  
   
-|파일 특성 이름|유형|크기|Default|Description|파일 시스템 접근성|  
+|파일 특성 이름|유형|크기|Default|설명|파일 시스템 접근성|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|변수|이 항목의 위치를 식별하는 **hierarchyid** 입니다.|계층적 FileNamespace에서 이 노드의 위치입니다.<br /><br /> 테이블의 기본 키입니다.|Windows 경로 값을 설정하여 만들고 수정할 수 있습니다.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||**NEWID()** 함수가 반환하는 값|FILESTREAM 데이터의 고유 ID입니다.|이 오류에는 이 작업을 적용할 수 없습니다.|  

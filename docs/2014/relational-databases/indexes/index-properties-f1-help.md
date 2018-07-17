@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
 - sql12.swb.indexproperties.columns.f1
@@ -19,15 +18,15 @@ f1_keywords:
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ac38a8ac0fbe4e4761e3f2cd9a0524109727c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36186080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290949"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
   이 항목의 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 이용할 수 있는 다양한 인덱스 속성을 참조합니다.  
@@ -184,7 +183,7 @@ ms.locfileid: "36186080"
 ### <a name="bounding-box"></a>경계 상자  
  *경계 상자* 는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
   
- 패널에 표시 됩니다는 **(*`X-min`*,*`Y-min`*)** 및 **(*`X-max`*,*`Y-max`*)** 경계 상자 좌표입니다. 기본 좌표 값은 없습니다. 따라서 `geometry` 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
+ 패널에 표시 됩니다는 **(*`X-min`* 합니다*`Y-min`*)** 하 고 **(*`X-max`*,*`Y-max`*)** 경계 상자 좌표입니다. 기본 좌표 값은 없습니다. 따라서 `geometry` 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
  `X-min`  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
@@ -203,7 +202,7 @@ ms.locfileid: "36186080"
  인덱스의 공간 분할(tessellation) 구성표를 나타냅니다. 지원되는 공간 분할(tessellation) 구성표는 다음과 같습니다.  
   
  **기하 도형 표**  
- 열에 적용 되는 기 하 도형 표 공간 분할 구성표를 지정 된 `geometry` 데이터 형식입니다.  
+ 열에 적용 되는 기 하 도형 표 공간 분할 구성표를 지정 합니다 `geometry` 데이터 형식입니다.  
   
  **기하 도형 자동 표**  
  이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  

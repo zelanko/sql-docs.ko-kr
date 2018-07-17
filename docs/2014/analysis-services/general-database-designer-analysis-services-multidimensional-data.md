@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36182924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234273"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>일반(데이터베이스 디자이너)(Analysis Services - 다차원 데이터)
   **일반** 탭을 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "36182924"
  **이름**  
  계정 유형의 이름을 입력합니다.  
   
- 새 계정 유형을 추가 하려면  **\<새 계정 유형 추가 >** 합니다.  
+ 새 계정 유형을 추가 하려면 클릭  **\<새 계정 유형 추가 >** 합니다.  
   
  **별칭**  
  비즈니스 인텔리전스 마법사에서 사용할 계정 유형의 기본 이름을 설정합니다. 이 열을 비워 두면 **이름** 열의 기본값이 사용됩니다.  
@@ -80,8 +80,8 @@ ms.locfileid: "36182924"
  선택한 계정 유형에 사용할 집계 함수를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [다차원 모델 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [다차원 Model 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [경고 &#40;데이터베이스 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -5,22 +5,19 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6714b6317f625f3a931778b1466ebe619ed02816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb1caec20ab7af7cd6e263e6718820658940d00f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36079057"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355045"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>마스터 데이터 관리자 웹 서비스에 대한 프록시 클래스 만들기
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 사용하면 사용자의 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 사이트에 액세스할 수 있는 모든 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]의 기능을 프로그래밍 방식으로 사용할 수 있습니다. 웹 서비스에 액세스하기 위한 코드를 작성하려면 먼저 프록시 클래스를 생성해야 합니다. 웹 서비스 작업을 수행하는 데 사용되는 주요 프록시 클래스는 <xref:Microsoft.MasterDataServices.ServiceClient> 인터페이스를 구현하는 <xref:Microsoft.MasterDataServices.IService> 클래스입니다.  
@@ -30,7 +27,7 @@ ms.locfileid: "36079057"
   
 1.  텍스트 편집기에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 파일을 엽니다. 이 파일은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치 경로의 WebApplication 폴더에 있습니다.  
   
-2.  찾을 `mdsWsHttpBehavior` 섹션 아래  **\<serviceBehaviors >** 합니다. 에 대 한는  **\<serviceMetadata >** 요소인 설정 `httpGetEnabled` 를 `true`합니다.  
+2.  찾을 합니다 `mdsWsHttpBehavior` 섹션 아래  **\<serviceBehaviors >** 합니다. 에 대 한 합니다  **\<serviceMetadata >** 요소인 설정 `httpGetEnabled` 에 `true`입니다.  
   
     > [!NOTE]  
     >  SSL(Secure Sockets Layer)을 통해 웹 서비스를 사용하도록 설정하려면 web.config 파일의 `httpsGetEnabled` 섹션에서 `true`를 `mdsWsHttpBehavior`로 설정합니다. 또한 `mdsWsHTTPBinding`을 SSL에 대해 구성되도록 변경하고 SSL 이외의 섹션을 주석으로 처리해야 합니다.  

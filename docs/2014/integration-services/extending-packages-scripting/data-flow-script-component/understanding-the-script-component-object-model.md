@@ -18,16 +18,16 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36088447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316823"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
-  [코딩 and Debugging the Script Component]에 설명 된 대로 (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, 스크립트 구성 요소 프로젝트 세 개의 프로젝트 항목이 포함 됩니다.  
+  [코딩 and Debugging the Script Component]에 설명 된 대로 (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, 스크립트 구성 요소 프로젝트에 세 개의 프로젝트 항목이 있습니다.  
   
 1.  `ScriptMain` 항목: 코드를 작성할 `ScriptMain` 클래스가 들어 있습니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속됩니다.  
   
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 프로젝트 항목의 제공 내용  
  ComponentWrapper 프로젝트 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 파생된 `UserComponent`라는 클래스가 들어 있습니다. 사용자 지정 코드를 작성하는 위치인 `ScriptMain` 클래스는 `UserComponent`에서 파생됩니다. `UserComponent` 클래스에는 다음과 같은 메서드가 들어 있습니다.  
   
--   `ProcessInput` 메서드의 재정의된 구현. 이 메서드는 데이터 흐름 엔진에서 런타임에 `PreExecute` 메서드 다음으로 호출하는 메서드이며 여러 번 호출될 수 있습니다. `ProcessInput` 처리를 넘깁니다는  **\<inputbuffer > _ProcessInput** 메서드. 그런 다음 `ProcessInput` 메서드는 입력 버퍼의 끝을 확인하고 버퍼의 끝에 도달한 경우 재정의 가능한 `FinishOutputs` 메서드와 전용 `MarkOutputsAsFinished` 메서드를 호출합니다. 그런 다음 `MarkOutputsAsFinished` 메서드가 마지막 출력 버퍼에서 `SetEndOfRowset`을 호출합니다.  
+-   `ProcessInput` 메서드의 재정의된 구현. 이 메서드는 데이터 흐름 엔진에서 런타임에 `PreExecute` 메서드 다음으로 호출하는 메서드이며 여러 번 호출될 수 있습니다. `ProcessInput` 처리를 넘깁니다 합니다  **\<inputbuffer > _ProcessInput** 메서드. 그런 다음 `ProcessInput` 메서드는 입력 버퍼의 끝을 확인하고 버퍼의 끝에 도달한 경우 재정의 가능한 `FinishOutputs` 메서드와 전용 `MarkOutputsAsFinished` 메서드를 호출합니다. 그런 다음 `MarkOutputsAsFinished` 메서드가 마지막 출력 버퍼에서 `SetEndOfRowset`을 호출합니다.  
   
 -   **\<inputbuffer>_ProcessInput** 메서드의 재정의 가능한 구현 - 이 기본 구현은 단순히 각 입력 행을 반복하며 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
   
@@ -154,7 +154,7 @@ public override void PreExecute()
   
 -   각 출력 열에 대한 명명되고 형식화된 쓰기 전용 접근자 속성  
   
--   쓰기 전용  **\<열 > _IsNull** 열 값을 설정 하는 데 사용할 수 있는 각 선택한 출력 열에 대 한 속성 `null`합니다.  
+-   쓰기 전용  **\<열 > _IsNull** 선택한 각 출력 열으로 열 값을 설정 하는 데 사용할 수 있는 속성 `null`합니다.  
   
 -   비어 있는 새 행을 출력 버퍼에 추가하는 데 사용하는 `AddRow` 메서드  
   
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문 하십시오.](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [스크립트 구성 요소 스크립트 구성 요소 편집기에서 구성] ((configuring-the-script-component-in-the-script-component-editor.md)   
- [코딩 및 스크립트 구성 요소 디버깅] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
+ [스크립트 구성 요소에는 스크립트 구성 요소 편집기] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [코딩 and Debugging the Script Component] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

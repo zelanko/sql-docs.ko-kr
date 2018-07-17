@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6063a6677678fb4fcf0c5f4f15a904d194271f73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2803d0bb8d4ed506208a3dff577e25ec891d6e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36185085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317013"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  구성, 복구 또는 제거는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] PowerPivot 구성 도구를 사용 합니다.  
+  구성, 복구 또는 제거는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] PowerPivot 구성 도구를 사용 하 여 합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다. 이 항목에서는 두 가지 도구의 일반적인 용도와 차이점을 설명합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36185085"
 -   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 응용 프로그램이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ##  <a name="bkmk_twoversions"></a> 구성 도구의 두 가지 버전  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사에서 SharePoint 2010 용 PowerPivot 구성 도구 뿐만 아니라 SharePoint 2013 용 PowerPivot 구성 도구를 설치 합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사가 SharePoint 2013 용 PowerPivot 구성 도구 뿐만 아니라 SharePoint 2010 용 PowerPivot 구성 도구를 설치 합니다.  
   
  이 도구는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]인스턴스에만 사용할 수 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 설치에는 사용하지 마세요.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "36185085"
   
 |SharePoint 2013용 PowerPivot 구성|PowerPivot 구성 도구|  
 |--------------------------------------------------|-----------------------------------|  
-|주 페이지에는 **Excel Services용 PowerPivot 서버**의 새 옵션이 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대해 새로운 아키텍처를 지원하는 옵션입니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 하나 이상 사용하도록 Excel Services를 구성합니다.<br /><br /> ![PowerPivot 서버 새 구성 도구에서](../media/as-powerpivot-configtool-differences-new-mainpage.gif "새 구성 도구에서 PowerPivot 서버")||  
-||2010 도구에는 페이지 **등록할 SQL Server Analysis Services (PowerPivot) 로컬 서버에서** 의 로컬 인스턴스를 구성 하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 페이지는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로컬 인스턴스가 없기 때문에 2013 도구에 포함되지 않습니다.<br /><br /> ![이전 구성 도구에서 서비스 계정으로](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "이전 구성 도구에서 서비스 계정으로")|  
-||**PowerPivot 서비스 응용 프로그램 만들기** 페이지에는 **데이터 새로 고침을 사용하려면 통합 문서를 업그레이드하세요.** 에 대한 다른 옵션이 있습니다. 2013 도구에는 이 옵션이 제공되지 않습니다.<br /><br /> ![이전 구성 도구에서 통합 문서 업그레이드](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "이전 구성 도구에서 통합 문서로 업그레이드")|  
+|주 페이지에는 **Excel Services용 PowerPivot 서버**의 새 옵션이 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대해 새로운 아키텍처를 지원하는 옵션입니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 하나 이상 사용하도록 Excel Services를 구성합니다.<br /><br /> ![PowerPivot 서버 새 구성 도구의](../media/as-powerpivot-configtool-differences-new-mainpage.gif "새 구성 도구의 PowerPivot 서버")||  
+||2010 도구에는 페이지 **등록할 SQL Server Analysis Services (PowerPivot) 로컬 서버의** 의 로컬 인스턴스를 구성 하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 페이지는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로컬 인스턴스가 없기 때문에 2013 도구에 포함되지 않습니다.<br /><br /> ![이전 구성 도구에서 서비스 계정과](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "이전 구성 도구의 서비스 계정으로")|  
+||**PowerPivot 서비스 응용 프로그램 만들기** 페이지에는 **데이터 새로 고침을 사용하려면 통합 문서를 업그레이드하세요.** 에 대한 다른 옵션이 있습니다. 2013 도구에는 이 옵션이 제공되지 않습니다.<br /><br /> ![이전 구성 도구에서 통합 문서 업그레이드](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "이전 구성 도구에서 통합 문서 업그레이드")|  
 |2013 도구에는 새로운 **PowerPivot 서버 구성**페이지가 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 새로운 아키텍처를 지원하는 페이지입니다. 기본적으로 주 페이지의 **Excel Services용 PowerPivot 서버**입력란에 입력한 서버 이름이 **PowerPivot 서버 구성**에도 표시됩니다.<br /><br /> ![PowerPivot 서버 새 구성 도구 등록](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "등록 PowerPivot 서버 새 구성 도구")||  
 |2013 도구에는 새로운 **PowerPivot 추가 기능을 Excel Services 사용 추적기로 등록**페이지가 있습니다. SharePoint 2010 Excel Services는 PowerPivot에 대한 사용 현황 데이터를 추적하지 않습니다.||  
 ||2010 도구에는 SharePoint 2010의 Excel Services가 PowerPivot 모델을 로드할 수 있도록 MSOLAP을 등록하는 **MSOLAP.5를 신뢰할 수 있는 공급자로 추가** 페이지가 있습니다. 이 페이지는 2013 도구에 포함되지 않습니다. SharePoint 2013 Excel Services에서는 모델을 로드하는 데 MSOLAP 공급자를 사용하지 않습니다.|  
@@ -93,9 +93,9 @@ ms.locfileid: "36185085"
   
 ##  <a name="bmkm_start_tool"></a> PowerPivot 구성 도구 중 하나 시작  
   
-1.  에 **시작** 화면에서 `powerpivot`  
+1.  에 **시작** 화면에서 입력 `powerpivot`  
   
-     에 **시작** 화면에서 `powerpivot` 또는 **시작** 메뉴를 클릭 **모든 프로그램**, 클릭 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], 클릭 **구성 도구** , 다음 중 하나를 클릭 합니다.  
+     에 **시작** 화면에서 입력 `powerpivot` 또는 합니다 **시작** 메뉴에서 클릭 **모든 프로그램**, 클릭 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭 **구성 도구** , 다음 중 하나를 클릭 합니다.  
   
     -   **PowerPivot 구성 도구**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36185085"
   
 3.  설치의 현재 상태에 따라 다음 태스크 중 하나 이상을 수행할 수 있습니다.  
   
-    1.  클릭 **구성 또는 SharePoint 용 PowerPivot을 복구** 설치를 복구 하려면 또는 설치 후 작업을 완료 해야 합니다.  
+    1.  클릭 **구성 또는 SharePoint 용 PowerPivot을 복구** 설치 후 태스크를 완료 하거나 설치를 복구 합니다.  
   
     2.  팜에서 기능과 솔루션을 제거하려면 **기능, 서비스, 응용 프로그램 및 솔루션 제거** 를 클릭합니다.  
   
