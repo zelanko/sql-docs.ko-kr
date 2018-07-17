@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58592c26b8d5747876eda424c225bc3eca013d60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 546d1dee29425e2dba13747e2ae75c2cddd82b54
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054690"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781764"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
  *property*  
  전체 텍스트 카탈로그 속성의 이름이 포함된 식입니다. 다음은 속성과 반환되는 정보에 대한 설명입니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**AccentSensitivity**|악센트 구분 설정입니다.<br /><br /> 0 = 악센트 구분 안 함<br /><br /> 1 = 악센트 구분|  
 |**IndexSize**|전체 텍스트 카탈로그의 논리 크기(MB)입니다. 의미 키 구 및 문서 유사 인덱스의 크기를 포함합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.|  

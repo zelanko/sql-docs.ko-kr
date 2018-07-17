@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 caps.latest.revision: 65
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 525b5ad479dcba8caa584988498e02a6d25dc44f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6e72a58e17eb584cd0420f04ec10e2b479069fb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054533"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781654"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |0|*login*은 *role*의 구성원이 아닙니다.<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 이 문은 항상 0을 반환합니다.|  
 |1|*login*은 *role*의 구성원입니다.|  

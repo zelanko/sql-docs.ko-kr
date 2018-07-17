@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 125a56a896f784ceb08bfd0c0ae2f10b03e802c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e66447775abfb3b2d67bf53ed3f93cfd6b2159b3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33061020"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784204"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  *property*  
  정보를 제공할 **sql_variant** 속성의 이름이 포함됩니다. *속성*은 **varchar(** 128 **)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|반환된 sql_variant의 기본 형식|  
+|값|설명|반환된 sql_variant의 기본 형식|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**정밀도**|숫자 기본 데이터 형식의 전체 자릿수<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) 및 **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> 기타 모든 유형 = 0|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  

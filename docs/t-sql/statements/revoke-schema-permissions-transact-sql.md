@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - permissions [SQL Server], schemas
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6f9aada4f61b37aa47f8b39017a0767e3e0de1be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e078ff6f5d983d4387ab86ffbda65ecda3ff4f6
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071330"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941709"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE 스키마 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702116"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789700"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 문 - REWINDONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,8 +88,6 @@ FROM <backup_device> [ ,...n ]
  RESTORE가 끝나면 테이프를 자동으로 되감고 언로드되도록 지정합니다. 새로운 사용자 세션을 시작할 경우 기본적으로 UNLOAD로 설정되며 NOUNLOAD를 지정할 때까지 UNLOAD로 설정되어 있습니다. 이 옵션은 테이프 장치에서만 사용합니다. RESTORE에 테이프 이외의 장치를 사용할 경우 이 옵션은 무시됩니다.  
   
  NOUNLOAD  
- RESTORE 후 테이프가 테이프 드라이브에서 자동으로 언로드되지 않게 지정합니다. UNLOAD를 지정할 때까지 NOUNLOAD로 설정되어 있습니다.  
-  
  RESTORE 후 테이프가 테이프 드라이브에서 자동으로 언로드되지 않게 지정합니다. UNLOAD를 지정할 때까지 NOUNLOAD로 설정되어 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 608c00d948a619d99ef23e62c8c9ba13dbe2fd7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054450"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782594"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ COLUMNPROPERTY ( id , column , property )
 *property*  
 *id* 인수를 사용하는 경우 *property* 인수는 `COLUMNPROPERTY` 함수에서 반환할 정보 유형을 지정합니다. *property* 인수에는 다음 값 중 하나가 있을 수 있습니다.
   
-|값|Description|반환 값|  
+|값|설명|반환 값|  
 |---|---|---|
 |**AllowsNull**|Null 값을 허용합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**ColumnId**|**sys.columns.column_id**에 해당하는 열 ID 값입니다.|열 ID<br /><br /> **참고:** 여러 열을 쿼리할 때 열 ID 값의 시퀀스에 간격이 나타날 수 있습니다.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -53,16 +52,16 @@ helpviewer_keywords:
 - HOUR ODBC function
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b17a85709bbb7a60badadabc1f18ff5fd688188d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055630"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783965"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "33055630"
   
 ### <a name="string-functions"></a>문자열 함수  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> 문자열 데이터 형식에서는 적용되지 않습니다. 따라서 암시적으로 string_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp2와 string_exp1의 연결 결과인 문자열을 반환합니다. 결과 문자열은 DBMS에 종속됩니다. 예를 들어 string_exp1로 표시되는 열이 NULL 값을 포함할 경우 DB2는 NULL을 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 NULL이 아닌 문자열을 반환합니다.|  
@@ -85,13 +84,13 @@ ms.locfileid: "33055630"
   
 ### <a name="numeric-function"></a>숫자 함수  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|소수점 이하 integer_exp 위치로 잘린 numeric_exp를 반환합니다. integer_exp가 음수인 경우 numeric_exp는 소수점 왼쪽의 &#124;integer_exp&#124; 위치로 잘립니다.|  
   
 ### <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  
 |CURDATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  

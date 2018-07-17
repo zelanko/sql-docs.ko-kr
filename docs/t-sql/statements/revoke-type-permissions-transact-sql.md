@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - type permissions [SQL Server]
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: daef06f93a9669d6c823de18e72f44cce3fddeb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abdc9b4969da88811dc94d60175648307590d9e4
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072227"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942769"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE 유형 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

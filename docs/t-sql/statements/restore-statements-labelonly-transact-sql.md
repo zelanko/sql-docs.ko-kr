@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24a5757410d99c7a6d52fc1d12c2562900329d89
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 31f99d63631ee03435aa83fa870c88f68dd45ea8
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702816"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941649"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE Statements - LABELONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -83,7 +82,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>결과 집합  
  RESTORE LABELONLY의 결과 집합은 다음 정보를 가진 단일 행으로 구성됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|미디어의 이름입니다.|  
 |**MediaSetId**|**uniqueidentifier**|미디어 세트의 고유 ID입니다.|  

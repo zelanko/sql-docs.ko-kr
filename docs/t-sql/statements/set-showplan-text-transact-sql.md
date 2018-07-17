@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 11bdddd82efcbc4f0e97b8b33d99961caa9dcfd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071280"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788894"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 프로세서가 각 문을 실행할 때 수행한 단계를 나타내는 계층적 트리를 구성하는 행 집합으로 정보를 반환합니다. 출력에 반영된 각 문에는 문의 텍스트가 있는 단일 행이 포함되고, 이 단일 행 뒤에는 실행 단계에 대한 자세한 정보가 있는 몇 개의 행이 있습니다. 다음 표에서는 출력에 포함된 열을 보여 줍니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 유형이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 물리적 연산자에 대한 자세한 내용은 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)의 **Argument** 열을 참조하세요.|  
   
