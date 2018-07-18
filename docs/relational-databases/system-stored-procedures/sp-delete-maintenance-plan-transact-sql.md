@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan (Transact SQL) | Microsoft Docs
+title: sp_delete_maintenance_plan (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4baa06f92e9f12b1b46e888b298eb1b90ef4fe70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263209"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049541"
 ---
 # <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
   
 ## <a name="arguments"></a>인수  
  [ **@plan_id =**] **'***plan_id***'**  
- 삭제할 유지 관리 계획의 ID를 지정합니다. *plan_id* 은 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+ 삭제할 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_delete_maintenance_plan** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_maintenance_plan** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_delete_maintenance_plan**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_delete_maintenance_plan**합니다.  
   
 ## <a name="examples"></a>예  
  사용 하 여 만든 유지 관리 계획을 삭제 **sp_add_maintenance_plan**합니다.  
@@ -68,8 +68,8 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [데이터베이스 유지 관리 계획 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [데이터베이스 유지 관리 계획 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

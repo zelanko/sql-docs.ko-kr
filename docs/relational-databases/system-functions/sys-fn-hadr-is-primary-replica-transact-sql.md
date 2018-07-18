@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_is_primary_replica (Transact SQL) | Microsoft Docs
+title: sys.fn_hadr_is_primary_replica (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebfd66acdc93f1a5148981e06f8adf1c507e1705
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995633"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>반환 값  
  현재 인스턴스의 데이터베이스가 주 복제본이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수를 사용하여 로컬 인스턴스에서 지정된 가용성 데이터베이스의 주 복제본을 호스팅하는지 여부를 편리하게 확인합니다. 예제 코드는 다음과 비슷할 수 있습니다.  
   
 ```  
@@ -75,11 +75,11 @@ SELECT sys.fn_hadr_is_primary_replica ('TestDB');
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 함수 &#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn 가용성 그룹 & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [가용성 그룹 만들기&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [AlwaysOn 가용성 그룹 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

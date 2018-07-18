@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 외래 키 제거 | Microsoft Docs
+title: 생성, 변경 및 외래 키를 제거 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb86a1463eef4a4e438a2bda7b329c9d78a46c6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969308"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998015"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 외래 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체로 표시됩니다.  
   
- SMO에서 외래 키를 만들려면의 생성자에 외래 키 정의 되어 있는 테이블을 지정 해야 합니다는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다. 이 테이블에서 외래 키가 될 열을 적어도 하나 이상 선택해야 합니다. 이를 위해 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 개체 변수를 만들고 외래 키 열의 이름을 지정합니다. 그런 다음 참조되는 테이블과 참조되는 열을 지정합니다. 사용 하 여는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> 열을 추가 하는 메서드는 **열** 개체 속성입니다.  
+ SMO에서 외래 키를 만들려면, 외래 키의 생성자에서 정의 되어 있는 테이블을 지정 해야 합니다는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다. 이 테이블에서 외래 키가 될 열을 적어도 하나 이상 선택해야 합니다. 이를 위해 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 개체 변수를 만들고 외래 키 열의 이름을 지정합니다. 그런 다음 참조되는 테이블과 참조되는 열을 지정합니다. 사용 합니다 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> 열을 추가 하는 방법의 **열** 개체 속성입니다.  
   
- 외래 키를 나타내는 열에 나열 됩니다는 **열** 개체의 속성은 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다. 외래 키에서 참조 하는 기본 키가 나타내는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에 지정 된 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성입니다.  
+ 외래 키를 나타내는 열에 나열 됩니다는 **열** 개체의 속성을 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체입니다. 외래 키에서 참조 되는 기본 키가 나타내는 합니다 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 속성에서 지정한 테이블에 있는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 속성입니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic에서 외래 키 생성, 변경 및 제거  
  이 코드 예제는 한 테이블의 하나 이상의 열 사이에서 다른 테이블의 기본 키 열에 대한 외래 키 관계를 만드는 방법을 보여 줍니다.  

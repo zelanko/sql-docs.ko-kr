@@ -1,5 +1,5 @@
 ---
-title: sys.partitions (Transact SQL) | Microsoft Docs
+title: sys.partitions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4902bca55295c2e6e870e2f3488cc178c0f771fa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001053"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "33181189"
 |hobt_id|**bigint**|이 파티션에 대한 행을 포함하는 데이터 힙 또는 B-트리의 ID를 나타냅니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수를 나타냅니다.|  
 |filestream_filegroup_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 파티션에 저장된 FILESTREAM 파일 그룹의 ID를 나타냅니다.|  
-|data_compression|**tinyint**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음 <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **적용할**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **적용할**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **참고:** 전체 텍스트 인덱스의 모든 버전에서 압축 되도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
+|data_compression|**tinyint**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음 <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **적용할**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **적용할**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **참고:** 의 모든 버전에서 전체 텍스트 인덱스를 압축할지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태를 나타냅니다. rowstore 테이블의 가능한 값은 NONE, ROW 및 PAGE입니다. columnstore 테이블의 가능한 값은 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

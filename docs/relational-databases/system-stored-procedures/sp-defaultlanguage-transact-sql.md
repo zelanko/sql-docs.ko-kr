@@ -1,5 +1,5 @@
 ---
-title: sp_defaultlanguage (Transact SQL) | Microsoft Docs
+title: sp_defaultlanguage (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a382ceab3491cfbcd1b8d6dad564f6d8826c2d13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246204"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049501"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,24 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>인수  
  [ **@loginame =** ] **'***login***'**  
- 로그인 이름입니다. *로그인* 은 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹입니다.  
+ 로그인 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹.  
   
  [  **@language =** ] **'***언어***'**  
- 로그인의 기본 언어입니다. *언어* 은 **sysname**, 기본값은 NULL입니다. *언어* 서버에서 유효한 언어 여야 합니다. 경우 *언어* 를 지정 하지 않으면 *언어* 서버의 기본 언어;로 설정 된 기본 언어에 의해 정의 됩니다는 **sp_configure** 구성 변수 **기본 언어**합니다. 서버의 기본 언어를 변경해도 기존 로그인의 기본 언어는 변경되지 않습니다.  
+ 로그인의 기본 언어입니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다. *언어* 서버의 유효한 언어 여야 합니다. 하는 경우 *언어* 지정 하지 않으면 *언어* 서버의 기본 언어;로 설정 된 기본 언어에 의해 정의 됩니다는 **sp_configure** 구성 변수 **기본 언어**합니다. 서버의 기본 언어를 변경해도 기존 로그인의 기본 언어는 변경되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_defaultlanguage** 추가 옵션을 지 원하는 ALTER LOGIN을 호출 합니다. 다른 로그인 기본값을 변경 하는 방법에 대 한 정보를 참조 하십시오. [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_defaultlanguage** 추가 옵션을 지 원하는 ALTER LOGIN을 호출 합니다. 다른 로그인 기본값을 변경 하는 방법에 대 한 내용은 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
   
- SET LANGUAGE 문을 사용하여 현재 세션의 언어를 변경할 수 있습니다. 사용 된 @@LANGUAGE 함수를 현재 언어 설정을 표시 합니다.  
+ SET LANGUAGE 문을 사용하여 현재 세션의 언어를 변경할 수 있습니다. 사용 된 @@LANGUAGE 현재 언어 설정을 표시 하는 함수입니다.  
   
  로그인의 기본 언어가 서버에서 삭제된 경우에는 서버의 기본 언어가 로그인의 기본 언어로 사용됩니다. **sp_defaultlanguage** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
- 서버에 설치 된 언어에 대 한 정보에 표시 됩니다는 **sys.syslanguages** 카탈로그 뷰에 있습니다.  
+ 서버에 설치 된 언어에 대 한 정보를 표시 합니다 **sys.syslanguages** 카탈로그 뷰.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -77,12 +77,12 @@ ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE&#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

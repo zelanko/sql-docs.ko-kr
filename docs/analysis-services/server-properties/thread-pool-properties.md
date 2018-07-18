@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239253"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050604"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 여러 작업에 다중 스레드를 사용하여 여러 작업을 병렬로 실행함으로써 전반적인 서버 성능을 향상시킵니다. 스레드를 보다 효율적으로 관리하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 스레드 풀을 사용해서 스레드를 미리 할당하고 다음 작업에 스레드를 쉽게 사용할 수 있도록 지원합니다.  
   
- 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 고유한 스레드 풀 집합을 유지 관리합니다. 테이블 형식과 다차원 인스턴스에서 스레드 풀이 사용되는 방법에는 차이점이 있습니다. 예를 들어 다차원 인스턴스만 **IOProcess** 스레드 풀을 사용합니다. 따라서는 **PerNumaNode** 이 문서에 설명 된 속성은 테이블 형식 인스턴스에 대 한 의미가 없습니다. [속성 참조](#bkmk_propref) 섹션 아래에 각 속성의 모드 요구 사항이 설명되어 있습니다.
+ 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 고유한 스레드 풀 집합을 유지 관리합니다. 테이블 형식과 다차원 인스턴스에서 스레드 풀이 사용되는 방법에는 차이점이 있습니다. 예를 들어 다차원 인스턴스만 **IOProcess** 스레드 풀을 사용합니다. 따라서 합니다 **PerNumaNode** 이 문서에서 설명 하는 속성은 테이블 형식 인스턴스에 대 한 의미가 없습니다. [속성 참조](#bkmk_propref) 섹션 아래에 각 속성의 모드 요구 사항이 설명되어 있습니다.
   
  이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -275,9 +275,9 @@ ms.locfileid: "35239253"
  [프로세스 및 스레드 정보](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [다중 프로세서](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [프로세서 그룹](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [SQL Server 2012 analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [SQL Server 2012에서에서 analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 구성 설정 (Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [64 개 이상의 프로세서를 포함 하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [프로세서가 64 개를 초과 하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

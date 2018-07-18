@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999182"
 ---
 # <a name="delete-relationships"></a>관계 삭제 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계를 사용 하는 방법에 대 한 정보를 참조 하십시오. [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)합니다.  
+  다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 기존 관계를 삭제할 수 있습니다. 테이블 형식 모델에서 관계가 사용 되는 방법에 대 한 자세한 내용은 [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)합니다.  
   
 ## <a name="considerations-for-deleting-relationships"></a>관계 삭제 시 고려 사항  
  관계를 삭제할지 여부를 결정할 때 다음 사항에 유의하십시오.  
@@ -51,7 +51,7 @@ ms.locfileid: "34040097"
   
 4.  **관계 관리** 대화 상자에서 **닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
  [관계 만들기](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   

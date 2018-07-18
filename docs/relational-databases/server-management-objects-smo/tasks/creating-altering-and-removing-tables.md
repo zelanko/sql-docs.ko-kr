@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 제거 하는 테이블 | Microsoft Docs
+title: 생성, 변경 및 테이블을 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3b4c41e6a6a0151767d2ad76fdff4fab5777ba20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967028"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050106"
 ---
 # <a name="creating-altering-and-removing-tables"></a>테이블 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 테이블은 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다. SMO 개체 계층 구조에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 아래에 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 템플릿 및 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic에서 테이블 생성, 변경 및 제거  
  이 코드 예제는 서로 다른 유형과 용도의 여러 열이 있는 테이블을 만듭니다. 또한 ID 필드를 만드는 방법, 기본 키를 만드는 방법, 테이블 속성을 변경하는 방법에 대한 예를 제공합니다.  
@@ -180,7 +180,7 @@ $tb.Drop()
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Management.Smo.Table>  
   
   

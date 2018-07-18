@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ (Transact SQL) | Microsoft Docs
+title: managed_backup.sp_ backup_master_switch (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 64d6681203962b54f1f3daae2de26e695cec240c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995554"
 ---
-# <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ (Transact SQL)
+# <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하거나 다시 시작합니다.  
@@ -52,7 +52,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> 인수  
  @state  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. @state 매개 변수는 **비트**합니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. 합니다 @state 매개 변수가 **비트**합니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,8 +60,8 @@ EXEC managed_backup.sp_backup_master_switch
 ## <a name="security"></a>보안  
  하위 섹션(H3 머리글)에서 statement.Include 사용 권한과 관련된 보안 문제를 설명합니다. 해당되는 경우 소유권 체인 및 감사에 대한 다른 하위 섹션을 포함하는 것을 고려해 보세요.  
   
-### <a name="permissions"></a>Permissions  
- 멤버 자격이 필요 **db_backupoperator** 와 데이터베이스 역할 **ALTER ANY CREDENTIAL** 사용 권한 및 **EXECUTE** 에 대 한 권한을 **sp_delete_ backuphistory**저장 프로시저입니다.  
+### <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 **db_backupoperator** 사용 하 여 데이터베이스 역할 **ALTER ANY CREDENTIAL** 권한 및 **EXECUTE** 에 대 한 권한을 **sp_delete_ backuphistory**저장 프로시저입니다.  
   
 ## <a name="examples"></a>예  
  인스턴스에서 실행 중인 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하는 데 다음 예를 사용할 수 있습니다.  
@@ -84,7 +84,7 @@ Go
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

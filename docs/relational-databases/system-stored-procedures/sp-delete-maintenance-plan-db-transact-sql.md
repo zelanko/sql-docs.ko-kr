@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (Transact SQL) | Microsoft Docs
+title: sp_delete_maintenance_plan_db (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247166"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049551"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>인수  
  [ **@plan_id =**] **'***plan_id***'**  
- 유지 관리 계획 ID를 지정합니다. *plan_id* 은 **uniqueidentifier**합니다.  
+ 유지 관리 계획 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**합니다.  
   
  [ **@db_name =**] **'***database_name***'**  
  유지 관리 계획에서 삭제할 데이터베이스 이름을 지정합니다. *database_name*은 **sysname**입니다.  
@@ -62,25 +62,25 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_delete_maintenance_plan_db** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_maintenance_plan_db** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
- **sp_delete_maintenance_plan_db** ; 유지 관리 계획과 지정된 된 데이터베이스 간의 연결을 제거 하는 저장된 프로시저를 삭제 하거나 데이터베이스를 삭제 하지 않습니다.  
+ 합니다 **sp_delete_maintenance_plan_db** ; 유지 관리 계획 및 지정된 된 데이터베이스 간의 연결을 제거 하는 저장된 프로시저를 삭제 하거나 데이터베이스를 삭제 하지 않습니다.  
   
  때 **sp_delete_maintenance_plan_db** 유지 관리 계획에서 마지막 데이터베이스를 제거, 저장된 프로시저도 유지 관리 계획을 삭제 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_delete_maintenance_plan_db**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_delete_maintenance_plan_db**합니다.  
   
 ## <a name="examples"></a>예  
- 유지 관리 계획을 삭제는 **AdventureWorks2012** 데이터베이스에 사용 하 여 이전에 추가한 **sp_add_maintenance_plan_db**합니다.  
+ 유지 관리 계획을 삭제 합니다 **AdventureWorks2012** 데이터베이스에 사용 하 여 이전에 추가한 **sp_add_maintenance_plan_db**합니다.  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [데이터베이스 유지 관리 계획 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [데이터베이스 유지 관리 계획 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

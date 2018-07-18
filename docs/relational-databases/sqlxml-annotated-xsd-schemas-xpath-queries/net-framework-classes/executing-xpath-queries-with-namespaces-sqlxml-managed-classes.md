@@ -1,5 +1,5 @@
 ---
-title: 네임 스페이스와 XPath 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
+title: 네임 스페이스를 사용 하 여 XPath 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051493"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>네임스페이스가 포함된 XPath 쿼리 실행(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XPath 쿼리에는 네임스페이스가 포함될 수 있습니다. 스키마 요소가 네임스페이스로 한정된 경우 즉, 스키마 요소에서 대상 네임스페이스를 사용하는 경우 스키마에 대한 XPath 쿼리에서 해당 네임스페이스를 지정해야 합니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 접두사를 해결 하려면 네임 스페이스 바인딩을 지정 하려면 네임 스페이스 속성을 사용 합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 접두사를 확인 하려면 네임 스페이스 바인딩을 지정 하는 네임 스페이스 속성을 사용 합니다.  
   
- 다음 예제에서는 XPath 쿼리에 와일드 카드 문자를 사용 하 여 네임 스페이스를 지정 (\*) local-name () 및 namespace-uri () XPath 함수입니다. 이 XPath 쿼리는 로컬 이름 여기서은 요소를 모두 반환 **직원** 및 네임 스페이스 URI가 **urn: myschema:Contacts**:  
+ 다음 예의 XPath 쿼리 와일드 카드 문자를 사용 하 여 네임 스페이스를 지정 (\*) local-name () 및 namespace-uri () XPath 함수입니다. 이 XPath 쿼리는 로컬 이름이 인 요소를 모두 반환 **직원** URI는 네임 스페이스 **urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- SQLXML 4.0에서는 네임스페이스 접두사를 사용하여 이 XPath 쿼리를 지정합니다. 예로 **x: 연락처**여기서 **x** 네임 스페이스 접두사입니다. 다음과 같은 XSD 스키마를 살펴보십시오.  
+ SQLXML 4.0에서는 네임스페이스 접두사를 사용하여 이 XPath 쿼리를 지정합니다. 예로 **x: 연락처**, 여기서 **x** 네임 스페이스 접두사입니다. 다음과 같은 XSD 스키마를 살펴보십시오.  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  

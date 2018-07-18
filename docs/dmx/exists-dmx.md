@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843026"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998585"
 ---
 # <a name="exists-dmx"></a>Exists(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,10 +30,10 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>인수  
  *subquery*  
- SELECT 문의 폼 선택의 * FROM \<열 이름 > [여기서 \<조건자 목록 >].  
+ SELECT 문의 선택 폼의 * FROM \<열 이름 > [여기서 \<조건자 목록 >].  
   
 ## <a name="result-type"></a>결과 유형  
- 반환 **true** 하위 쿼리에서 반환 된 결과 집합 하나 이상의 행을 포함 하는 경우는 그렇지 않으면 반환 **false**합니다.  
+ 반환 **true** 하위 쿼리에서 반환한 결과 집합은 하나 이상의 행을 포함 하는 경우 반환이 고, 그렇지 **false**합니다.  
   
 ## <a name="remarks"></a>Remarks  
  EXISTS 앞에 NOT 키워드를 사용할 수 있습니다. 예를 들면 `WHERE NOT EXISTS (<subquery>)`와 같습니다.  
@@ -43,7 +43,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>예  
  EXISTS 및 NOT EXISTS를 사용하여 중첩 테이블의 조건을 확인할 수 있습니다. 이는 데이터 마이닝 모델을 학습 또는 테스트하는 데 사용되는 데이터를 제어하는 필터를 만들 때 유용합니다. 자세한 내용은 [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
- 다음 예제에서는 기반는 `[Association]` 마이닝 구조와 마이닝 모델에서 만든는 [기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 고객이 하나 이상의 Patch kit을 구매한 사례만 반환합니다.  
+ 다음 예제는 기반을 `[Association]` 마이닝 구조 및 마이닝 모델에서 만든 합니다 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리는 고객이 하나 이상의 Patch kit을 구매한 사례만 반환합니다.  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -54,10 +54,10 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- 이 쿼리에서 반환 되는 동일한 데이터를 보려면 또 다른 방법은 연결 뷰어에서 모델을 열고, 항목 집합을 마우스 오른쪽 단추로 클릭 하는 것 **Patch kit = Existing**, 선택는 **드릴스루** 옵션을 선택한 다음 선택 **모델 사례만**합니다.  
+ 이 쿼리에서 반환 되는 동일한 데이터를 보는 또 다른 방법은 연결 뷰어에서 모델을 열고, 항목 집합을 마우스 오른쪽 단추로 클릭 하는 것 **Patch kit = Existing**를 선택 합니다 **드릴스루** 옵션을 차례로 선택 **모델 사례만**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [모델 필터 구문 및 예 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [모델 필터 구문 및 예제 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

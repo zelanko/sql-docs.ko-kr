@@ -22,21 +22,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 023ffb86d8be4e2a6ba3dd897bdd64460824926b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051481"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 환경에서 SQLXML 기능 액세스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 예에서는 다음 내용을 설명합니다.  
   
--   사용 하는 방법 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 관리 되는 클래스 (Microsoft.Data.SqlXml)에 액세스할 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경입니다.  
+-   사용 하는 방법 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml) Microsoft에 액세스 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경입니다.  
   
 -   .NET Framework 환경에서 생성된 DiffGram이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 데이터 업데이트를 적용하는 방법  
   
- 이 응용 프로그램에서는 XSD 스키마에 대해 XPath 쿼리를 실행합니다. 연락처 데이터를 XML 문서를 반환 하는 XPath 쿼리 실행 (**FirstName**, **LastName**). 응용 프로그램은 .NET Framework 환경의 데이터 집합에 XML 문서를 로드합니다. 그런 다음 데이터 집합에 있는 첫 번째 연락처에서 이름을 "Susan"으로 변경합니다. 그리고 해당 데이터 집합에서 DiffGram을 생성하며, 이 DiffGram에 지정된 업데이트(직원 이름에 대한 변경 내용)를 Person.Contact 테이블에 적용합니다.  
+ 이 응용 프로그램에서는 XSD 스키마에 대해 XPath 쿼리를 실행합니다. 연락처 데이터를 XML 문서를 반환 하는 XPath 쿼리 실행 (**FirstName**하십시오 **LastName**). 응용 프로그램은 .NET Framework 환경의 데이터 집합에 XML 문서를 로드합니다. 그런 다음 데이터 집합에 있는 첫 번째 연락처에서 이름을 "Susan"으로 변경합니다. 그리고 해당 데이터 집합에서 DiffGram을 생성하며, 이 DiffGram에 지정된 업데이트(직원 이름에 대한 변경 내용)를 Person.Contact 테이블에 적용합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

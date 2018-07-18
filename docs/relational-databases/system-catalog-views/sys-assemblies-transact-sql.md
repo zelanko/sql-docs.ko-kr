@@ -1,5 +1,5 @@
 ---
-title: sys.assemblies (Transact SQL) | Microsoft Docs
+title: sys.assemblies (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 22a200cee9b07332440076feb0981c1610682089
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000875"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "33179119"
 |**is_visible**|**bit**|1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 진입점을 등록할 수 있도록 표시되는 어셈블리입니다.<br /><br /> 0 = 관리되는 호출자 전용 어셈블리입니다. 즉, 이 어셈블리는 데이터베이스의 다른 어셈블리에 내부 구현을 제공합니다.|  
 |**create_date**|**datetime**|어셈블리가 작성되거나 등록된 날짜입니다.|  
 |**modify_date**|**datetime**|어셈블리가 수정된 날짜입니다.|  
-|**is_user_defined**|**bit**|어셈블리의 원본을 나타냅니다.<br /><br /> 0 = 시스템 정의 어셈블리 (Microsoft.SqlServer.Types에 대 한 같은 **hierarchyid** 데이터 형식)<br /><br /> 1 = 사용자 정의 어셈블리|  
+|**is_user_defined**|**bit**|어셈블리의 원본을 나타냅니다.<br /><br /> 0 = 시스템 정의 어셈블리 (같은 경우 Microsoft.SqlServer.Types 합니다 **hierarchyid** 데이터 형식)<br /><br /> 1 = 사용자 정의 어셈블리|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [CLR 어셈블리 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [CLR 어셈블리 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
+ [ASSEMBLYPROPERTY &#40;TRANSACT-SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
   

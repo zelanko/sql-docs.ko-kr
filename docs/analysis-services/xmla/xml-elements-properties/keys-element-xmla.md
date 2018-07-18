@@ -1,5 +1,5 @@
 ---
-title: 키 요소 (XMLA) | Microsoft Docs
+title: 요소 (XMLA) 키 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8ad15ae719e3d0bd31dccda3271ffccdbeacbfd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575545"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050530"
 ---
 # <a name="keys-element-xmla"></a>Keys 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  컬렉션을 포함 [키](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md) 부모에서 나타내는 특성 멤버의 멤버 키를 식별 하는 데 사용 되는 요소 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 요소입니다.  
+  컬렉션을 포함 [키](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md) 부모를 나타내는 특성 멤버의 멤버 키를 식별 하는 데 사용 되는 요소 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34575545"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  

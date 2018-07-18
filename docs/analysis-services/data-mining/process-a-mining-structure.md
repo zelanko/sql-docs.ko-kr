@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999735"
 ---
 # <a name="process-a-mining-structure"></a>마이닝 구조 처리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "34017130"
   
      구조를 변경하는 경우 모델을 처리하기 전에 구조를 다시 배포하라는 메시지가 나타납니다. **예**를 클릭합니다.  
   
-2.  클릭 **실행** 에 **마이닝 구조 처리- \<구조 >** 대화 상자.  
+2.  클릭 **실행할** 에 **마이닝 구조 처리- \<구조 >** 대화 상자.  
   
      **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
   
 3.  모델 처리가 완료되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   
-4.  클릭 **닫기** 에 **마이닝 구조 처리- \<구조 >** 대화 상자.  
+4.  클릭 **닫습니다** 에 **마이닝 구조 처리- \<구조 >** 대화 상자.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

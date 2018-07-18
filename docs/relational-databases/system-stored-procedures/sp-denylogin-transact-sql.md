@@ -1,5 +1,5 @@
 ---
-title: sp_denylogin (Transact SQL) | Microsoft Docs
+title: sp_denylogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ef296a57b8fec029695654e5e519b723b455b59f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241841"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049464"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,27 +48,27 @@ sp_denylogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>인수  
  [  **@loginame =** ] **' * * * 로그인* **'**  
- Windows 사용자 또는 그룹의 이름입니다. *로그인* 은 **sysname**, 기본값은 없습니다.  
+ Windows 사용자 또는 그룹의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_denylogin** 지정 된 Windows 사용자 또는 Windows 그룹에 매핑된 서버 수준 보안 주체에 대 한 CONNECT SQL 권한을 거부 합니다. 서버 보안 주체가 없으면 새로 생성됩니다. 새로운 주 서버에 표시 됩니다는 [sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰에 있습니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_denylogin** 지정한 Windows 사용자 또는 Windows 그룹에 매핑된 서버 수준 보안 주체에 CONNECT SQL 권한을 거부 합니다. 서버 보안 주체가 없으면 새로 생성됩니다. 새로운 주 서버에 표시 됩니다는 [sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰.  
   
  **sp_denylogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다. **sp_denylogin** Windows 사용자를 방지 하기 위해 `CORPORATE\GeorgeV` 서버에 연결 하지 못하도록 합니다.  
+ 다음 예제에서는 사용 하는 방법을 보여 줍니다 **sp_denylogin** Windows 사용자를 방지 하기 위해 `CORPORATE\GeorgeV` 서버에 연결 합니다.  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

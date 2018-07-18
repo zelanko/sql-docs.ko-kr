@@ -1,5 +1,5 @@
 ---
-title: E Element (XMLA) | Microsoft Docs
+title: Type 요소 (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576715"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051601"
 ---
 # <a name="type-element-xmla"></a>Type 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  수행 될 처리 유형을 결정는 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소입니다.  
+  수행 될 처리 유형을 결정 합니다 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576715"
 </Process>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34576715"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- Analysis Services 인스턴스의 개체에 사용할 수 있는 처리 옵션에 대 한 자세한 내용은 참조 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
+ Analysis Services 인스턴스의 개체에 사용 가능한 처리 옵션에 대 한 자세한 내용은 참조 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
- 값은 **형식** 요소는 다음 표에 나열 된 문자열 중 하나로 제한 합니다.  
+ 값을 **형식** 요소는 다음 표에 나열 된 문자열 중 하나로 제한 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  

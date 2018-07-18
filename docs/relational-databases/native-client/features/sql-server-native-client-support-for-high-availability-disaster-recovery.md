@@ -14,11 +14,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 496e105648b5153369400e47bf94a4603ea0179e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997285"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "37416892"
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 지원하기 위해 다음과 같은 하나의 OLE DB 연결 문자열 키워드가 추가되었습니다.  
   
--   **응용 프로그램 의도**  
+-   **Application Intent**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 연결 문자열 키워드에 대한 자세한 내용은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -121,10 +121,10 @@ ms.locfileid: "37416892"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 응용 프로그램에서는 다음 메서드 중 하나를 사용하여 응용 프로그램 의도를 지정할 수 있습니다.  
   
- **Idbinitialize:: Initialize**  
+ **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize**는 이전에 구성한 속성 집합을 사용하여 데이터 원본을 초기화하고 데이터 원본 개체를 만듭니다. 응용 프로그램 의도를 공급자 속성 또는 확장 속성 문자열의 일부로 지정합니다.  
   
- **Idatainitialize:: Getdatasource**  
+ **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource**는 **응용 프로그램 의도** 키워드를 포함할 수 있는 입력 연결 문자열을 사용합니다.  
   
  **IDBProperties::GetProperties**  

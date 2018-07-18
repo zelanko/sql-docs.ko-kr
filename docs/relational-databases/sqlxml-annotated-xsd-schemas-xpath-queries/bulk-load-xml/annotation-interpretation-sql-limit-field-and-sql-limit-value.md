@@ -1,5 +1,5 @@
 ---
-title: sql:-필드 및 sql:-(SQLXML 4.0) | Microsoft Docs
+title: sql:-필드와-(SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050096"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>주석 해석-sql:-필드 및 sql:-값
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>주석 해석-sql:-필드와-값
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 대량 로드는 해당 정의별로 **sql:limit-field** 및 **sql:limit-value** 주석을 처리합니다. 자세한 내용은 참조 [필터링 사용 하 여 값-필드 및 sql:-값 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)합니다.  
+  XML 대량 로드는 해당 정의별로 **sql:limit-field** 및 **sql:limit-value** 주석을 처리합니다. 자세한 내용은 [sql: 필터링 사용 하 여 값-필드와-값 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)합니다.  
   
  예를 들어 데이터베이스에 다음과 같은 테이블이 포함된다고 가정합니다.  
   

@@ -18,18 +18,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6216ca6584c2bf6d78bb66096145cd49428398dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257564"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051198"
 ---
 # <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-단일 트랜잭션 내에서 구성 된 HISTORY_RETENTION 기간 일치 하는 임시 기록 테이블에서 모든 행을 제거 합니다.
+단일 트랜잭션 내에서 구성 된 HISTORY_RETENTION 기간 일치 하는 temporal 기록 테이블에서 모든 행을 제거 합니다.
   
 ## <a name="syntax"></a>구문  
 ```  
@@ -40,23 +40,23 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 *@table_name*
 
-정리 호출 되는 보존에 대 한 임시 테이블의 이름입니다.
+호출 되는 보존 정리 temporal 테이블의 이름입니다.
 
 *schema_name*
 
-현재 임시 테이블에 속한 스키마의 이름
+현재 temporal 테이블이 속한 스키마의 이름
 
 *row_count_var* [OUTPUT]
 
-삭제 된 행 수를 반환 하는 출력 매개 변수입니다. 이 매개 변수를 반환 합니다 경우 기록 테이블에는 클러스터형 columnstore 인덱스, 항상 0입니다.
+삭제 된 행 수를 반환 하는 출력 매개 변수입니다. 이 매개 변수를 반환 됩니다 경우 기록 테이블에 클러스터형 columnstore 인덱스 있음, 항상 0입니다.
   
-## <a name="remarks"></a>주의
-이 저장된 프로시저가 임시 테이블 에서만 사용할 수 있는지가 무한 보존 기간이 지정 합니다.
-즉시 기록 테이블에서 오래 된 모든 행을 정리 해야 하는 경우에이 저장된 프로시저를 사용 합니다. 것은 데이터베이스 로그와 I/O 하위 시스템에 상당한 영향을 동일한 트랜잭션 내에서 적합 한 모든 행을 삭제 하는 것이 알아야 합니다. 
+## <a name="remarks"></a>Remarks
+이 저장된 프로시저는 한정 된 재방문 주기 기간 지정한 temporal 테이블 함께만 사용할 수 있습니다.
+즉시 기록 테이블에서 오래 된 모든 행을 제거 해야 하는 경우에이 저장된 프로시저를 사용 합니다. 동일한 트랜잭션 내의 모든 적격 행을 삭제 하는 대로 데이터베이스 로그 및 I/O 하위 시스템에 상당한 영향 있을 수 있음을 알아야 합니다. 
 
-항상 제거 정기 작업 및 일반적으로 데이터베이스에 대 한 최소한의 영향을 가진 행이 오래 된 있는지 정리에 대 한 내부 백그라운드 태스크에 의존 하는 것이 좋습니다.
+항상 오래 된 일반 워크 로드 및 일반적인 데이터베이스에 대 한 최소한의 영향을 사용 하 여 행을 제거는 정리를 위한 내부 백그라운드 태스크를 사용 하는 것이 좋습니다.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  
 
 ## <a name="example"></a>예제
@@ -67,6 +67,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [임시 테이블 보존 정책](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)

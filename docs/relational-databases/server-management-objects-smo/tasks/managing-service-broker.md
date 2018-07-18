@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1d3bb44a64386329570d78e8b3ce436b9573f63f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967958"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000945"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Smo에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체에서 발견 되는 **Microsoft.SqlServer.Management.Smo.Broker** 네임 스페이스는 Microsoft.SqlServer.Smo.dll에 대 한 참조가 필요 합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
+  Smo에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체에 포함 됩니다 합니다 **Microsoft.SqlServer.Management.Smo.Broker** 네임 스페이스는 Microsoft.SqlServer.Smo.dll에 대 한 참조가 필요 합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
   
  SMO는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 구현에 대한 프로그래밍 방식 관리(DDL)를 허용하는 일련의 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체를 제공합니다. 프로그래밍 방식 관리에는 메시지 유형, 계약, 큐 및 서비스를 정의하는 작업이 포함됩니다. SMO는 데이터 조작용 도구가 아니라 관리 도구이므로 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지를 보내고 받는 것은 지원하지 않습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "32967958"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 개체는 서비스 및 서비스가 정의된 데이터베이스에 대한 위치 정보가 포함된 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 경로를 나타냅니다. 메시지를 배달하려면 경로가 있어야 합니다. 각 데이터베이스에는 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 위치로 지정하는 경로가 기본적으로 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   

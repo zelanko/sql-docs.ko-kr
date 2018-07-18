@@ -1,6 +1,6 @@
 ---
 title: SQL 그래프 데이터베이스 샘플 | Microsoft Docs
-description: 도움이 되는 빠른 예제 SQL 그래프 데이터베이스에 도입 된 새 구문을 사용 하 여 시작 하세요.
+description: 도움이 되는 빠른 예제는 SQL 그래프 데이터베이스에 도입 된 새 구문을 사용 하 여 시작 하세요.
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,22 +22,22 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: cc1f388b7ec6687fe64a4bad39d8d2c878221505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935400"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999645"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>그래프 데이터베이스를 만들고 일부 패턴 일치 T-SQL을 사용 하 여 쿼리를 실행 합니다.
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-이 예제는 제공 된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드 및 가장자리도 그래프 데이터베이스를 만들고 새 일치 절을 사용 하 여 일부 패턴 일치는 그래프를 통과할을 스크립트입니다. 이 샘플 스크립트는 모두 Azure SQL 데이터베이스에서 작동 하 고 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+이 샘플에서는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 노드와 지를 사용 하 여 그래프 데이터베이스를 만들고 다음 새 MATCH 절을 사용 하 여 graph를 통해를 트래버스 및 일부 패턴 일치 하는 스크립트입니다. 이 샘플 스크립트는 Azure SQL Database 모두에서 작동 하 고 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>샘플 스키마  
-이 샘플에서는 사람, 음식점 및 City 노드가 있는 가상 소셜 네트워크에 대 한 그림 1에 표시 된 대로 그래프 스키마를 만듭니다. 이러한 노드가에 친구를 사용 하 여 서로 연결 되어 LivesIn 및 LocatedIn 가장자리 배치할 수 있습니다. 
+이 샘플에서는 사람, 레스토랑 및 City 노드가 연결 되는 가상의 소셜 네트워크용 그림 1에 표시 된 대로 그래프 스키마를 만듭니다. 이러한 노드는 친구를 사용 하 여 서로 연결할 좋아요 표시, LivesIn 및 LocatedIn 가장자리입니다. 
 
-![도시 식당 테이블 사람](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql 그래프 데이터베이스 예제")  
-식당, city, person 노드 LivesIn, LocatedIn, Like 가장자리와 그림 1: 샘플 스키마입니다.
+![person 도시-레스토랑 테이블](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql 그래프 데이터베이스 샘플")  
+그림 1: 식당, city, person 노드 및 LivesIn, LocatedIn, 좋아요 가장자리를 사용 하 여 샘플 스키마입니다.
 
 
 ## <a name="sample-script"></a>예제 스크립트
@@ -169,10 +169,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>스크립트 설명  
-이 스크립트는 노드 및 가장자리 테이블을 만드는 새 T-SQL 구문을 사용 합니다. 사용 하 여 노드 및 가장자리 테이블에 데이터를 삽입 하는 방법을 보여 줍니다 `INSERT` 문을 사용 하는 방법을 보여 줍니다 `MATCH` 패턴 일치 및 탐색에 대 한 절.
+이 스크립트는 노드와 지 테이블을 만들려면 새 T-SQL 구문을 사용 합니다. 사용 하 여 노드 및에 지 테이블에 데이터를 삽입 하는 방법을 보여 줍니다 `INSERT` 문을 사용 하는 방법을 보여 줍니다 `MATCH` 패턴 검색 및 탐색에 대 한 절.
 
 |Command    |참고
 |---  |---  |
-|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |그래프 노드 또는 edge 테이블 만들기  |
-|[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |노드 또는 edge 테이블에 삽입  |
-|[일치 &#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |MATCH를 사용 하 여 패턴을 검색 하거나 그래프를 통과  |
+|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |그래프 노드 또는 지 테이블 만들기  |
+|[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |노드 또는 지 테이블에 삽입  |
+|[일치 &#40;TRANSACT-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |일치를 사용 하 여 패턴과 일치 하거나 graph를 통해 이동 합니다.  |

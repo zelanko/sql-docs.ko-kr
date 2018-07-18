@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998425"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>DMX(Data Mining Extensions) 함수 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34842536"
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|지정한 노드에 사례가 포함되었는지 여부를 나타냅니다.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|사례가 테스트 사례 집합에 속하는지 여부를 나타냅니다.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|사례가 학습 사례 집합에 속하는지 여부를 나타냅니다.|  
-|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|현재 사례의 날짜와 데이터의 마지막 날짜 간의 시간 조각을 반환합니다.|  
+|[지연 &#40;DMX&#41;](../dmx/lag-dmx.md)|현재 사례의 날짜와 데이터의 마지막 날짜 간의 시간 조각을 반환합니다.|  
 |[예측 &#40;DMX&#41;](../dmx/predict-dmx.md)|지정된 열에서 예측을 수행합니다.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|지정된 예측 열의 조정된 확률을 반환합니다.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|한 열에서 연관된 멤버 자격을 예측합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34842536"
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

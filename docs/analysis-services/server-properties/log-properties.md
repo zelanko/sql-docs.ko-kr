@@ -9,11 +9,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238901"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999345"
 ---
 # <a name="log-properties"></a>로그 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "35238901"
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
 
 > [!NOTE]
-> 일부 속성은 Azure Analysis Services에 적용 됩니다.
+> 속성 중 일부만 Azure Analysis Services에 적용 됩니다.
   
 ## <a name="general"></a>일반  
  **최근에 사용한 파일**  
@@ -36,7 +36,7 @@ ms.locfileid: "35238901"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="error-log"></a>오류 로그  
- 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;SSAS-다차원 데이터&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 및 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 자세한 정보에 대 한 합니다.  
+ 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;&AMP;#40;SSAS-다차원&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 하 고 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 에 대 한 자세한 내용은 합니다.  
   
  **ErrorLog\ErrorLogFileName**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  

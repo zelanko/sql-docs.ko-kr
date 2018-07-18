@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24f7302b94477b76b161be184cd27839f8516564
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994975"
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정 하거나, 쿼리 Analysis Services 데이터에 연결 하는 클라이언트 응용 프로그램에서 작성 된 연결 문자열에 표시 될 수는 연결 문자열 속성을 설명 합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
+  이 항목에서는 연결 문자열 속성 디자이너 또는 관리 도구 중 하나에서 설정 하거나 연결 하는 클라이언트 응용 프로그램 및 Analysis Services 데이터를 쿼리 하에서 작성 된 연결 문자열에서 참조 될 수 있습니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
   
  응용 프로그램 코드에서 사용자 지정 연결 문자열을 작성하는 개발자는 ADOMD.NET 클라이언트에 대한 API 설명서를 검토하여 더 자세한 목록( <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -35,9 +35,9 @@ ms.locfileid: "35239105"
   
 |속성|Description|예제|  
 |--------------|-----------------|-------------|  
-|**Data Source** 또는 **DataSource**|서버 인스턴스를 지정합니다. 이 속성은 모든 연결에 필요합니다. 유효한 값에는 서버의 네트워크 이름 또는 IP 주소, 로컬 연결에 대한 local 또는 localhost, 서버가 HTTP 또는 HTTPS 액세스에 대해 구성된 경우 URL, 로컬 큐브 파일(.cub)의 이름이 포함됩니다. <br /><br /> Azure Analysis Services에 대 한 유효한 값 `<protocol>://<region>/<servername>` 프로토콜은 문자열 asazure, 지역은 서버가 생성 된 Uri입니다 (예를 들어 westus.asazure.windows.net) servername은 지역 내에서 고유 서버 이름입니다. |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` - 기본 인스턴스 및 포트(TCP 2383)에 사용됩니다.<br /><br /> `Data source=AW-SRV01$Finance:8081` - 명명된 인스턴스($Finance) 및 고정된 포트에 사용됩니다.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` - 정규화된 도메인 이름에 사용되며 기본 인스턴스 및 포트를 가정합니다.<br /><br /> `Data source=172.16.254.1` - 서버의 IP 주소에 사용되며 DNS 서버 조회를 우회합니다. 연결 문제를 해결하는 데 유용합니다.|  
+|**Data Source** 또는 **DataSource**|서버 인스턴스를 지정합니다. 이 속성은 모든 연결에 필요합니다. 유효한 값에는 서버의 네트워크 이름 또는 IP 주소, 로컬 연결에 대한 local 또는 localhost, 서버가 HTTP 또는 HTTPS 액세스에 대해 구성된 경우 URL, 로컬 큐브 파일(.cub)의 이름이 포함됩니다. <br /><br /> Azure Analysis Services에 대 한 유효한 값 `<protocol>://<region>/<servername>` 프로토콜 문자열 asazure 인 경우 지역은 서버를 만든 위치 Uri (예: westus.asazure.windows.net) servername은 지역 내 고유 서버의 이름입니다. |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` - 기본 인스턴스 및 포트(TCP 2383)에 사용됩니다.<br /><br /> `Data source=AW-SRV01$Finance:8081` - 명명된 인스턴스($Finance) 및 고정된 포트에 사용됩니다.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` - 정규화된 도메인 이름에 사용되며 기본 인스턴스 및 포트를 가정합니다.<br /><br /> `Data source=172.16.254.1` - 서버의 IP 주소에 사용되며 DNS 서버 조회를 우회합니다. 연결 문제를 해결하는 데 유용합니다.|  
 |**Initial Catalog** 또는 **Catalog**|연결할 Analysis Services 데이터베이스의 이름을 지정합니다. 데이터베이스가 Analysis Services에 배포되어야 하며 데이터베이스에 연결할 권한이 있어야 합니다. 이 속성은 AMO 연결의 경우 선택적이지만 ADOMD.NET의 경우에는 필수입니다.|`Initial catalog=AdventureWorks2016`|  
-|**공급자**|유효한 값에는 MSOLAP 포함 됩니다. \<버전 >, 여기서 \<버전 > 4, 5, 6 또는 7입니다.<br /><br /> -    MSOLAP.4는 SQL Server 2008에서 릴리스되었고 SQL Server 2008 R2에서 다시 릴리스되었습니다(SQL Server 2008 및 2008 R2의 경우 파일 이름은 msolap100.dll임).<br />-    MSOLAP.5는 SQL Server 2012에서 릴리스되었습니다(파일 이름은 msolap110.dll임).<br />-    MSOLAP.6은 SQL Server 2014에서 릴리스되었습니다(파일 이름은 msolap1200.dll임).<br />-    MSOLAP.7은 SQL Server 2016에서 릴리스되었습니다(파일 이름은 msolap130.dll임).<br /><br /> 이 속성은 선택적입니다. 기본적으로 클라이언트 라이브러리는 레지스트리에서 OLE DB 공급자의 현재 버전을 읽습니다. SQL Server 2012 인스턴스에 연결하는 경우와 같이 특정 버전의 데이터 공급자가 필요한 경우에만 이 속성을 설정해야 합니다.<br /><br /> MSOLAP.4는 SQL Server 2008과 SQL Server 2008 R2에서 릴리스되었습니다. 2008 R2 버전은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 지원하며 경우에 따라 SharePoint 서버에 수동으로 설치되어야 합니다. 이러한 버전을 구분하려면 공급자의 파일 속성에서 빌드 번호를 확인해야 합니다. Program files\Microsoft Analysis Services\AS OLEDB\10으로 이동합니다. msolap110.dll을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **세부 정보**를 클릭합니다. 파일 버전 정보를 봅니다. 버전 10.50을 포함 되어야 합니다. \<buildnumber > SQL Server 2008 r 2에 대 한 합니다. 자세한 내용은 [SharePoint Server에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 및 [Analysis Services 연결에 사용되는 데이터 공급자](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)를 참조하세요.|`Provider=MSOLAP.7` 은 Analysis Services OLE DB 공급자의 SQL Server 2016 버전이 필요한 연결에 사용됩니다.|  
+|**공급자**|유효한 값에는 MSOLAP 포함 됩니다. \<버전 > 여기서 \<버전 > 4, 5, 6 또는 7 됩니다.<br /><br /> -    MSOLAP.4는 SQL Server 2008에서 릴리스되었고 SQL Server 2008 R2에서 다시 릴리스되었습니다(SQL Server 2008 및 2008 R2의 경우 파일 이름은 msolap100.dll임).<br />-    MSOLAP.5는 SQL Server 2012에서 릴리스되었습니다(파일 이름은 msolap110.dll임).<br />-    MSOLAP.6은 SQL Server 2014에서 릴리스되었습니다(파일 이름은 msolap1200.dll임).<br />-    MSOLAP.7은 SQL Server 2016에서 릴리스되었습니다(파일 이름은 msolap130.dll임).<br /><br /> 이 속성은 선택적입니다. 기본적으로 클라이언트 라이브러리는 레지스트리에서 OLE DB 공급자의 현재 버전을 읽습니다. SQL Server 2012 인스턴스에 연결하는 경우와 같이 특정 버전의 데이터 공급자가 필요한 경우에만 이 속성을 설정해야 합니다.<br /><br /> MSOLAP.4는 SQL Server 2008과 SQL Server 2008 R2에서 릴리스되었습니다. 2008 R2 버전은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 지원하며 경우에 따라 SharePoint 서버에 수동으로 설치되어야 합니다. 이러한 버전을 구분하려면 공급자의 파일 속성에서 빌드 번호를 확인해야 합니다. Program files\Microsoft Analysis Services\AS OLEDB\10으로 이동합니다. msolap110.dll을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **세부 정보**를 클릭합니다. 파일 버전 정보를 봅니다. 버전 10.50에 포함 되어야 합니다. \<buildnumber > SQL Server 2008 R2에 대 한 합니다. 자세한 내용은 [SharePoint Server에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 및 [Analysis Services 연결에 사용되는 데이터 공급자](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)를 참조하세요.|`Provider=MSOLAP.7` 은 Analysis Services OLE DB 공급자의 SQL Server 2016 버전이 필요한 연결에 사용됩니다.|  
 |**Cube**|큐브 이름 또는 큐브 뷰 이름입니다. 데이터베이스에는 여러 개의 큐브와 큐브 뷰가 포함될 수 있습니다. 여러 대상이 가능한 경우 연결 문자열에 큐브 또는 큐브 뷰 이름을 포함하십시오.|`Cube=SalesPerspective` 는 Cube 연결 문자열 속성을 사용하여 큐브 이름이나 큐브 뷰 이름을 지정할 수 있음을 보여 줍니다.|  
   
 ##  <a name="bkmk_auth"></a> 인증 및 보안  
@@ -74,7 +74,7 @@ ms.locfileid: "35239105"
 |**CompareCaseSensitiveStringFlags**|지정한 로캘에 대한 대/소문자를 구분하는 문자열 비교를 조정합니다. 이 속성 설정에 대한 자세한 내용은 [CompareCaseSensitiveStringFlags 속성](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)을 참조하십시오.|  
 |**Compression Level**|**TransportCompression** 이 XPRESS인 경우 압축 수준을 설정하여 압축이 사용되는 정도를 제어할 수 있습니다. 유효한 값은 0에서 9까지입니다. 0은 최소 압축을 의미하고 0는 최대 압축을 의미합니다. 압축이 증가하면 성능이 저하됩니다. 기본값은 0입니다.|  
 |**Connect Timeout**|시간 제한이 초과되기 전에 클라이언트가 연결을 시도하는 최대 시간(초 단위)을 결정합니다. 연결이 이 기간 내에 성공하지 않으면 클라이언트가 연결 시도를 중지하고 오류를 생성합니다.|  
-|**DbpropMsmdRequestMemoryLimit**|이 속성을 재정의 [Memory\QueryMemoryLimit](../server-properties/memory-properties.md) 연결에 대 한 서버 속성 값입니다. 킬로바이트 단위로 지정 합니다. |
+|**DbpropMsmdRequestMemoryLimit**|이 속성을 재정의 합니다 [Memory\QueryMemoryLimit](../server-properties/memory-properties.md) 연결에 대 한 서버 속성 값입니다. 킬로바이트 단위로 지정 합니다. |
 |**MDX Compatibility**|이 속성의 용도는 MDX 쿼리를 발행하는 응용 프로그램에 대해 일관성 있는 MDX 동작의 집합을 보장하는 것입니다. MDX 쿼리를 사용하여 Analysis Services에 연결된 피벗 테이블을 채우고 계산하는 Excel에서는 이 속성을 1로 설정하여 비정형 계층의 자리 표시자 멤버가 피벗 테이블에 표시되도록 합니다. 유효한 값에는 0, 1, 2이 포함됩니다.<br /><br /> 0과 1은 자리 표시자 멤버를 노출하고 2는 노출하지 않습니다. 비어 있으면 0으로 간주됩니다.|  
 |**MDX Missing Member Mode=Error**|MDX 문에서 누락된 멤버를 무시할 것인지 여부를 나타냅니다. 유효한 값은 Default, Error 및 Ignore입니다. Default는 서버에서 정의된 값을 사용합니다. Error는 멤버가 없는 경우 오류를 생성합니다. Ignore는 누락된 값이 무시되도록 지정합니다.|  
 |**Optimize Response**|다음 쿼리 응답 최적화 중 어느 것을 사용할 수 있는지를 나타내는 비트 마스크입니다.<br /><br /> -   0x01 NormalTupleSet(기본값)을 사용합니다.<br />-   0x02 슬라이서가 비어 있을 때 사용합니다.|  

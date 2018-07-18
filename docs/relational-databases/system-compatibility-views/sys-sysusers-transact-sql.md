@@ -1,5 +1,5 @@
 ---
-title: sys.sysusers (Transact SQL) | Microsoft Docs
+title: sys.sysusers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0561ed37fa705f0952ae2a6e7cfd012d81364432
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000965"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  각각에 대해 하나의 행을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자, Windows 그룹, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자, 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할에에서 지정 합니다.  
+  각각에 대해 하나의 행을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자, Windows 그룹, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 역할입니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -52,7 +52,7 @@ ms.locfileid: "33223158"
 |**updatedate**|**datetime**|계정을 마지막으로 변경한 날짜입니다.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**gid**|**smallint**|해당 사용자가 속한 그룹의 ID입니다. 경우 **uid** 동일 **gid**,이 항목 그룹을 정의 합니다. 그룹과 사용자를 합한 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
+|**gid**|**smallint**|해당 사용자가 속한 그룹의 ID입니다. 하는 경우 **uid** 와 같습니다 **gid**,이 항목 그룹을 정의 합니다. 그룹과 사용자를 합한 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
 |**environ**|**varchar(255)**|예약되어 있습니다.|  
 |**hasdbaccess**|**int**|1 = 계정에 데이터베이스 액세스가 있습니다.|  
 |**islogin**|**int**|1 = 계정이 로그인 계정이 있는 Windows 그룹, Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자입니다.|  
@@ -64,8 +64,8 @@ ms.locfileid: "33223158"
 |**issqlrole**|**int**|1 = 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할입니다.|  
 |**isapprole**|**int**|1 = 계정이 응용 프로그램 역할입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

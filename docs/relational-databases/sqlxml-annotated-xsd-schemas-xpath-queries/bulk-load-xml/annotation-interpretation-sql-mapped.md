@@ -24,17 +24,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050151"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>주석 해석-sql: 매핑된
+# <a name="annotation-interpretation---sqlmapped"></a>주석 해석-sql: 매핑
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 대량 로드 프로세스는 **sql: 매핑된** 주석을 예상 대로 XSD 스키마에서-즉, 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
+  XML 대량 로드 프로세스를 **sql: 매핑된** 예상 대로 XSD 스키마에서 주석-즉, 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
   
- XML 대량 로드는 매핑되지 않은 요소 및 특성을 무시 (스키마에 설명 되지 않은 또는 된 XSD 스키마에 주석을 다는 **sql: 매핑된 = "false"**). 사용 하 여 이러한 열은 지정 된 경우 오버플로 열에 매핑되지 않은 모든 데이터 이동 **sql:overflow-필드**합니다.  
+ XML 대량 로드는 매핑되지 않은 요소 및 특성을 무시 (스키마에 설명 되지 않은 또는 사용 하 여 XSD 스키마에 주석이 지정 되어 **sql: 매핑된 = "false"**). 이러한 열은 사용 하 여 지정 된 경우 오버플로 열에 매핑되지 않은 모든 데이터 이동 **sql:overflow-필드**합니다.  
   
  예를 들어 다음 XSD 스키마를 참조하십시오.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32968478"
 </xsd:schema>  
 ```  
   
- 때문에 **HomePhone** 특성 지정 **sql: 매핑된 = "false"**, XML 대량 로드가이 특성의 해당 열으로 매핑되지 않습니다. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
+ 때문에 합니다 **HomePhone** 특성을 지정 **sql: 매핑된 = "false"**, XML 대량 로드가이 특성의 해당 열에 매핑되지 않는 경우. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

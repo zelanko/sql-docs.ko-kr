@@ -1,5 +1,5 @@
 ---
-title: Updategram을 사용 하 여 예제 ASP 응용 프로그램 (SQLXML 4.0) | Microsoft Docs
+title: 예제 ASP 응용 프로그램 (SQLXML 4.0)에서 Updategram 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3e6ab461bc1916394b53e5b8c0017bbef71eabe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049918"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 응용 프로그램에서 Updategram 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "32970608"
   
  그런 다음 사용자가 연락처 정보를 업데이트할 수 있습니다. 그러나 ContactID가 기본 키이므로 연락처 ID는 업데이트할 수 없습니다. 사용자가 정보를 제출하면 Updategram이 실행되고 모든 폼 매개 변수가 Updategram에 전달됩니다.  
   
- 다음은 첫 번째 템플릿(GetContact.xml)입니다. 이 서식 파일의 가상 이름과 연관 된 디렉터리에 저장 한 **템플릿** 유형입니다.  
+ 다음은 첫 번째 템플릿(GetContact.xml)입니다. 이 서식 파일의 가상 이름과 사용 하 여 연결 된 디렉터리에 저장 **템플릿** 형식입니다.  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -55,7 +55,7 @@ ms.locfileid: "32970608"
 </root>  
 ```  
   
- 다음은 두 번째 템플릿(UpdateContact.xml)입니다. 이 서식 파일의 가상 이름과 연관 된 디렉터리에 저장 한 **템플릿** 유형입니다.  
+ 다음은 두 번째 템플릿(UpdateContact.xml)입니다. 이 서식 파일의 가상 이름과 사용 하 여 연결 된 디렉터리에 저장 **템플릿** 형식입니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -165,7 +165,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (Transact SQL) | Microsoft Docs
+title: sys.dm_db_xtp_transactions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd5be6e6617172755f1ac293d94ddfe406b11a04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997845"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34464959"
 |state|**int**|트랜잭션의 상태입니다.<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|트랜잭션 상태에 대한 설명입니다.|  
 |result|**int**|이 트랜잭션의 결과입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|이 트랜잭션의 결과입니다. 가능한 값은 다음과 같습니다.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|이 트랜잭션의 결과입니다. 가능한 값은 다음과 같습니다.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> error<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|내부적으로만 사용됩니다.|  
 |is_speculative|**bit**|내부적으로만 사용됩니다.|  
 |is_prepared|**bit**|내부적으로만 사용됩니다.|  
@@ -78,10 +78,10 @@ ms.locfileid: "34464959"
 |dependent_7_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
 |dependent_8_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

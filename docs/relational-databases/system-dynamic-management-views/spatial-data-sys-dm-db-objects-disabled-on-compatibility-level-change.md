@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact SQL) | Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 083af55f2629a14f2ad28b293bb84ea9184a0345
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467109"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998145"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>공간 데이터 요금-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  지속형 계산 열의 식에서 다음 함수를 사용할 경우 호환성 수준을 100에서 110 이상으로 변경하면 해당 열을 참조하는 인덱스 및 제약 조건이 비활성화됩니다.  
   
--   **soundex**  
+-   **Soundex**  
   
 -   **Geography:: GeomFromGML**  
   
@@ -117,11 +117,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>비활성화된 개체의 동작  
  **인덱스**  
   
- 클러스터형된 인덱스 또는 비클러스터형 인덱스를 강제 적용 하는 경우 다음 오류가 발생 하는 경우: "쿼리 프로세서에서 계획을 생성할 수 없으면 인덱스 ' %. \*l s에 테이블 또는 뷰 ' %. \*l s을 사용할 수 없습니다. " 이러한 개체를 다시 활성화 하려면 인덱스를 다시 작성 업그레이드 후 호출 하 여 **ALTER INDEX ON... 다시 작성**합니다.  
+ 클러스터형된 인덱스가 비활성화 되었거나 비클러스터형 인덱스를 강제 적용 하는 경우 다음 오류가 발생 하는 경우: "쿼리 프로세서에서 계획을 생성할 수 없는 인덱스 ' %. \*l s에 테이블 또는 뷰 ' %. \*l s를 사용 하지 않도록 설정 합니다. " 이러한 개체를 다시 활성화 하려면 인덱스를 다시 작성 업그레이드 후 호출 하 여 **ALTER INDEX ON... 다시 작성**합니다.  
   
  **힙**  
   
- 비활성화된 힙이 포함된 테이블을 사용하면 다음 오류가 발생합니다. 이러한 개체를 다시 사용 하는 경우 다시 작성 업그레이드 후 호출 하 여 **ALTER INDEX 모든 ON... 다시 작성**합니다.  
+ 비활성화된 힙이 포함된 테이블을 사용하면 다음 오류가 발생합니다. 이러한 개체를 다시 활성화 하려면 다시 업그레이드 후 호출 하 여 **ALTER INDEX 모든 ON... 다시 작성**합니다.  
   
 ```  
 // ErrorNumber: 8674  
@@ -138,19 +138,19 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check 제약 조건 및 외래 키**  
   
- 비활성화된 CHECK 제약 조건 및 외래 키는 오류를 일으키지 않습니다. 그러나 행이 수정될 때 제약 조건이 적용되지 않습니다. 이러한 개체를 다시 활성화 하려면 제약 조건을 호출 하 여 업그레이드 한 후 확인 **ALTER TABLE... CHECK 제약 조건을**합니다.  
+ 비활성화된 CHECK 제약 조건 및 외래 키는 오류를 일으키지 않습니다. 그러나 행이 수정될 때 제약 조건이 적용되지 않습니다. 이러한 개체를 다시 활성화 하려면 호출 하 여 업그레이드 한 후 제약 조건을 확인 **ALTER TABLE... CHECK 제약 조건을**합니다.  
   
- **지속형 계산된 열**  
+ **지속형된 계산된 열**  
   
  단일 열은 비활성화할 수 없으므로 클러스터형 인덱스나 힙을 비활성화하여 전체 테이블이 비활성화됩니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 쿼리를 보여 줍니다. **sys.dm_db_objects_disabled_on_compatibility_level_change** 호환성 수준을 120으로 변경 하 여 영향을 받을 개체를 찾을 수 있습니다.  
+ 다음 예제에서 쿼리를 보여 줍니다 **sys.dm_db_objects_disabled_on_compatibility_level_change** 호환성 수준을 120으로 변경 하 여 영향을 받는 개체를 찾으려고 합니다.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

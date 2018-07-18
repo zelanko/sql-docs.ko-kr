@@ -35,41 +35,41 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1836db12438017023637185d6e8ba24a6e533a77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050207"
 ---
-# <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>테이블 및 열에 명시적 매핑 XSD 요소와 특성
+# <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>명시적 매핑은 XSD 요소 및 특성 테이블 및 열
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XSD 스키마를 사용하여 관계형 데이터베이스의 XML 뷰를 제공할 때는 스키마의 요소 및 특성을 데이터베이스의 테이블 및 열에 매핑해야 합니다. 데이터베이스 테이블/뷰의 행은 XML 문서의 요소에 매핑됩니다. 데이터베이스의 열 값은 특성 또는 요소에 매핑됩니다.  
   
- XPath 쿼리는 주석이 추가된 XSD 스키마에 대해 지정되며 스키마의 요소 및 특성에 대한 데이터는 매핑되는 테이블 및 열에서 검색됩니다. 데이터베이스에서 단일 값을 얻으려면 XSD 스키마에 지정된 매핑에 관계 및 필드 사양이 모두 있어야 합니다. 요소/특성의 이름이 매핑될, 테이블/뷰 또는 열 이름과 같은 이름이 아닌 경우는 **sql: relation** 및 **sql: field** 주석을 사용 하는 요소 간의 매핑을 지정 또는 XML 문서와 테이블 (뷰) 또는 데이터베이스의 열에 특성이 있습니다.  
+ XPath 쿼리는 주석이 추가된 XSD 스키마에 대해 지정되며 스키마의 요소 및 특성에 대한 데이터는 매핑되는 테이블 및 열에서 검색됩니다. 데이터베이스에서 단일 값을 얻으려면 XSD 스키마에 지정된 매핑에 관계 및 필드 사양이 모두 있어야 합니다. 요소/특성의 이름이 매핑될, 테이블/뷰 또는 열 이름으로 이름이 없는 경우는 **sql: relation** 하 고 **sql: field** 주석을 사용 하는 요소 간의 매핑을 지정 또는 XML 문서 및 테이블 (뷰) 또는 데이터베이스의 열 특성입니다.  
   
 ## <a name="sql-relation"></a>sql-relation  
- **sql: relation** 주석은 XSD 스키마의 XML 노드를 데이터베이스 테이블에 매핑할 추가 됩니다. 테이블 (뷰)의 이름을 값으로 지정 된 **sql: relation** 주석입니다.  
+ 합니다 **sql: relation** 주석은 XSD 스키마에서 XML 노드를 데이터베이스 테이블에 매핑할 추가 됩니다. 값으로 테이블 (뷰)의 이름을 지정 합니다 **sql: relation** 주석입니다.  
   
- 때 **sql: relation** 요소에 지정 된 모든 특성 및 쓰기에서는 되므로 해당 요소의 복합 유형 정의에 설명 된 자식 요소에이 주석의 범위가 적용 됩니다. 주석입니다.  
+ 때 **sql: relation** 된 요소에 대해이 주석의 범위가 모든 특성 및 쓰기에 바로 가기가 제공 해야 해당 요소의 복합 유형 정의에 설명 된 자식 요소에 적용 됩니다. 주석입니다.  
   
- **sql: relation** 주석은 때도 유용 식별자 사용할 수 있는에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML에서 유효 하지 않습니다. 예를 들어 "Order Details"는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 유효한 테이블 이름이지만 XML에서는 유효하지 않습니다. 이러한 경우에는 **sql: relation** 주석 예를 들어에서 매핑을 지정 데 사용할 수 있습니다.  
+ 합니다 **sql: relation** 주석 때도 유용에서 잘못 된 식별자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML에서 유효 하지 않습니다. 예를 들어 "Order Details"는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 유효한 테이블 이름이지만 XML에서는 유효하지 않습니다. 이러한 경우에는 **sql: relation** 주석 예를 들어 매핑을 지정 데 사용할 수 있습니다.  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
 ```  
   
 ## <a name="sql-field"></a>sql-field  
- **sql 필드** 주석은 요소 또는 특성을 데이터베이스 열에 매핑합니다. **sql: field** 주석은 스키마의 XML 노드를 데이터베이스 열에 매핑할 추가 됩니다. 지정할 수 없으며 **sql: field** 빈 콘텐츠 요소에 있습니다.  
+ 합니다 **sql 필드** 주석은 요소 또는 특성을 데이터베이스 열에 매핑합니다. 합니다 **sql: field** 주석은 스키마의 XML 노드를 데이터베이스 열에 매핑할 추가 됩니다. 지정할 수 없습니다 **sql: field** 빈 콘텐츠 요소입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>1. sql:relation 및 sql:field 주석 지정  
- 이 예에서 XSD 스키마의 구성 된  **\<연락처 >** 복합 형식의 요소  **\<FName >** 및  **\<LName >** 자식 요소 및 **ContactID** 특성입니다.  
+ 이 예에서 XSD 스키마의 구성를  **\<연락처 >** 사용 하 여 복합 유형의 요소  **\<FName >** 고  **\<LName >** 자식 요소 및 **ContactID** 특성입니다.  
   
- **sql: relation** 주석 지도  **\<연락처 >** AdventureWorks 데이터베이스의 Person.Contact 테이블에는 요소입니다. **sql: field** 주석 지도  **\<FName >** FirstName 열에는 요소와  **\<LName >** 에서 성 요소 열입니다.  
+ **sql: relation** 주석 maps는  **\<연락처 >** AdventureWorks 데이터베이스의 Person.Contact 테이블에는 요소입니다. **sql: field** 주석 맵 합니다  **\<FName >** FirstName 열에는 요소 및  **\<LName >** 성 요소 열입니다.  
   
- 에 대 한 주석이 지정 된 **ContactID** 특성입니다. 따라서 이름이 같은 열에 특성을 매핑하는 기본 매핑이 수행됩니다.  
+ 에 없는 주석이 지정 된 **ContactID** 특성입니다. 따라서 이름이 같은 열에 특성을 매핑하는 기본 매핑이 수행됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -113,7 +113,7 @@ ms.locfileid: "32970628"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  다음은 결과 집합의 일부입니다.  
   

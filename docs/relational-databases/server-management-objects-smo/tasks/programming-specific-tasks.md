@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998126"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -59,6 +59,6 @@ ms.locfileid: "32971698"
 |[전체 텍스트 검색 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|SMO에서 전체 텍스트 검색 카탈로그와 인덱스를 구현하는 방법에 대해 설명합니다.|  
 |[끝점 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|데이터베이스 미러링, SOAP 요청 및 Service Broker에 대한 페이로드를 처리하는 끝점을 만드는 방법에 대해 설명합니다.|  
 |[통계 생성 및 업데이트](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|SMO에서 데이터베이스에 통계를 설정하고 이를 모니터링하는 방법에 대해 설명합니다.|  
-|[이벤트 추적 및 재생](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|사용 하는 방법에 설명 된 **추적** 및 **재생** SMO에서 개체를 추적 및 재생 이벤트를 합니다.|  
+|[이벤트 추적 및 재생](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|사용 하는 방법에 설명 합니다 **추적** 및 **재생** smo에서 개체를 추적 및 재생 이벤트를 합니다.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.endpoints (Transact SQL) | Microsoft Docs
+title: sys.endpoints (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 929cbba80469c80bd7384d97ae22abacda501a8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180769"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998155"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ ms.locfileid: "33180769"
 |**protocol_desc**|**nvarchar(60)**|끝점 프로토콜에 대한 설명입니다. NULL을 허용합니다. 다음 값 중 하나입니다.<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **통해** 참고: The via를 사용 하는 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|끝점 페이로드 유형입니다.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> Null을 허용하지 않습니다.|  
 |**type_desc**|**nvarchar(60)**|끝점 페이로드 유형에 대한 설명입니다. Null을 허용합니다. 다음 값 중 하나입니다.<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**상태**|**tinyint**|끝점 상태입니다.<br /><br /> 0 = STARTED, 요청을 수신 대기 및 처리 중입니다.<br /><br /> 1 = STOPPED, 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> 2 = DISABLED, 수신 대기하지 않습니다.<br /><br /> 기본 상태는 1입니다. Null을 허용합니다.|  
+|**state**|**tinyint**|끝점 상태입니다.<br /><br /> 0 = STARTED, 요청을 수신 대기 및 처리 중입니다.<br /><br /> 1 = STOPPED, 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> 2 = DISABLED, 수신 대기하지 않습니다.<br /><br /> 기본 상태는 1입니다. Null을 허용합니다.|  
 |**state_desc**|**nvarchar(60)**|끝점 상태에 대한 설명입니다.<br /><br /> STARTED = 요청을 수신 대기 및 처리 중입니다.<br /><br /> STOPPED = 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> DISABLED = 수신 대기하지 않습니다.<br /><br /> 기본 상태는 STOPPED입니다.<br /><br /> Null을 허용합니다.|  
 |**is_admin_endpoint**|**bit**|끝점이 관리자용인지 여부를 나타냅니다.<br /><br /> 0 = 비관리 끝점입니다.<br /><br /> 1 = 끝점이 관리 끝점입니다.<br /><br /> Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
