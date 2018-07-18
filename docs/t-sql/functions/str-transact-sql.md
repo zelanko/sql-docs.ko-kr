@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc1a7bdcd254ed821a47d83f7eb5e0d893906ea6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a2f3bc073c3c06eec47c4a89616f6eaab223d386
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789884"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934915"
 ---
 # <a name="str-transact-sql"></a>STR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GO
  숫자 데이터가 `STR` 내에서 중첩되어도 결과는 지정된 형식의 문자 데이터입니다.  
   
 ```  
-SELECT STR (FLOOR (123.45), 8, 3;)  
+SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  
   

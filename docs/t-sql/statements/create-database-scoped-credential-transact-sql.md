@@ -26,15 +26,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5ab5d4cacc44280ce008486545bee326ce1c5ca
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 2b44199260af6886096e2ceabb071692e34b967f
+ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941609"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37923615"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스 자격 증명을 만듭니다. 데이터베이스 자격 증명은 서버 로그인 또는 데이터베이스 사용자에 매핑되지 않습니다. 자격 증명은 데이터베이스가 액세스가 필요한 작업을 수행할 때 언제든 외부 위치에 액세스하기 위해 데이터베이스에서 사용됩니다.  
   

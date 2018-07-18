@@ -44,7 +44,7 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
   
      첫 번째 인수는 **ConnectionEventHandler** 생성자는 두 번째 인수에 명명 된 이벤트 처리기를 포함 하는 클래스에 대 한 참조입니다.  
   
-3.  이벤트 처리기는 특정 형식의 이벤트를 처리 하도록 지정 된 처리기의 목록에 추가 합니다. 와 같은 이름을 가진 메서드를 사용 **addOn * * * EventName*(*처리기*).  
+3.  이벤트 처리기는 특정 형식의 이벤트를 처리 하도록 지정 된 처리기의 목록에 추가 합니다. 와 같은 이름을 가진 메서드를 사용 **addOn** *EventName*(*처리기*).  
   
 4.  ADO/WFC 모든 ADO 이벤트 처리기를 내부적으로 구현합니다. 이벤트에 의해 발생할 따라서는 **연결** 또는 **레코드 집합** 작업 ADO/WFC 이벤트 처리기에 의해 차단 됩니다.  
   
@@ -62,7 +62,7 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
   
 6.  이벤트 처리기에서 ADO 이벤트에 대 한 ADO/WFC 처리기에 반환 합니다. ADO/WFC ADO 이벤트 매개 변수를 다시 관련 ADO/WFC 이벤트 데이터 멤버를 복사 하 고 ADO 이벤트 처리기의 반환 합니다.  
   
-7.  완료 되 면 ADO/WFC 이벤트 처리기의 목록에서 처리기를 제거를 처리 합니다. 와 같은 이름을 가진 메서드를 사용 **removeOn * * * EventName*(*처리기*).  
+7.  완료 되 면 ADO/WFC 이벤트 처리기의 목록에서 처리기를 제거를 처리 합니다. 와 같은 이름을 가진 메서드를 사용 **removeOn** *EventName*(*처리기*).  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   

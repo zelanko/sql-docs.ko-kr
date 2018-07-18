@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de2d55bbe2dafaa02886a1e0deeb675a43469e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be59e84a5b40444e6218c2b390b832516193ecf
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075160"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782694"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,7 +125,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |알자스어(프랑스)|Latin1_General_100_|사용할 수 없음|  
 |암하라어(에티오피아)|Latin1_General_100_|사용할 수 없음|  
 |아르메니아어(아르메니아)|Cyrillic_General_100_|사용할 수 없음|  
-|아샘어(인도)|Assamese_100_ <sup>1</sup>|사용할 수 없음|  
+|아삼어(인도)|Assamese_100_ <sup>1</sup>|사용할 수 없음|  
 |바슈키르어(러시아)|Bashkir_100_|사용할 수 없음|  
 |바스크어(바스크)|Latin1_General_100_|사용할 수 없음|  
 |벵골어(방글라데시)|Bengali_100_<sup>1</sup>|사용할 수 없음|  
@@ -145,24 +144,24 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |영어(싱가포르)|Latin1_General_100_|사용할 수 없음|  
 |필리핀어(필리핀)|Latin1_General_100_|사용할 수 없음|  
 |프리지아어(네덜란드)|Frisian_100_|사용할 수 없음|  
-|그루지야어(그루지야)|Cyrillic_General_100_|사용할 수 없음|  
+|조지아어(조지아)|Cyrillic_General_100_|사용할 수 없음|  
 |그린란드어(그린란드)|Danish_Greenlandic_100_|사용할 수 없음|  
 |구자라트어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |하우사어(나이지리아, 라틴 문자)|Latin1_General_100_|사용할 수 없음|  
 |힌디어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |이그보어(나이지리아)|Latin1_General_100_|사용할 수 없음|  
-|이누크티투트어(캐나다, 라틴 문자)|Latin1_General_100_|사용할 수 없음|  
-|이누크티투트어(캐나다 음절)|Latin1_General_100_|사용할 수 없음|  
+|이눅티투트어(캐나다, 라틴 문자)|Latin1_General_100_|사용할 수 없음|  
+|이눅티투트어(캐나다 음절)|Latin1_General_100_|사용할 수 없음|  
 |아일랜드어(아일랜드)|Latin1_General_100_|사용할 수 없음|  
 |일본어(일본 XJIS)|Japanese_XJIS_100_|Japanese_90_, Japanese_|  
 |일본어(일본)|Japanese_Bushu_Kakusu_100_|사용할 수 없음|  
-|카나다어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|칸나다어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |크메르어(캄보디아)|Khmer_100_<sup>1</sup>|사용할 수 없음|  
 |끼체어(과테말라)|Modern_Spanish_100_|사용할 수 없음|  
 |키냐르완다어(르완다)|Latin1_General_100_|사용할 수 없음|  
-|콘칸어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
-|라오스어(라오스)|Lao_100_<sup>1</sup>|사용할 수 없음|  
-|저소르브어(독일)|Latin1_General_100_|사용할 수 없음|  
+|코카니어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
+|라오어(라오스)|Lao_100_<sup>1</sup>|사용할 수 없음|  
+|저지 소르비아어(독일)|Latin1_General_100_|사용할 수 없음|  
 |룩셈부르크어(룩셈부르크)|Latin1_General_100_|사용할 수 없음|  
 |말라얄람어(인도)|Indic_General_100_<sup>1</sup>|사용할 수 없음|  
 |몰타어(몰타)|Maltese_100_|사용할 수 없음|  
@@ -182,7 +181,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |케추아어(볼리비아)|Latin1_General_100_|사용할 수 없음|  
 |케추아어(에콰도르)|Latin1_General_100_|사용할 수 없음|  
 |케추아어(페루)|Latin1_General_100_|사용할 수 없음|  
-|로망슈어(스위스)|Romansh_100_|사용할 수 없음|  
+|로만시어(스위스)|Romansh_100_|사용할 수 없음|  
 |이나리 라프어(핀란드)|Sami_Sweden_Finland_100_|사용할 수 없음|  
 |룰레 라프어(노르웨이)|Sami_Norway_100_|사용할 수 없음|  
 |룰레 라프어(스웨덴)|Sami_Sweden_Finland_100_|사용할 수 없음|  
@@ -202,17 +201,17 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |스리랑카어(스리랑카)|Indic_General_100_<sup>1</sup>|사용할 수 없음|  
 |스와힐리어(케냐)|Latin1_General_100_|사용할 수 없음|  
 |시리아어(시리아)|Syriac_100_<sup>1</sup>|Syriac_90_|  
-|타지키스탄어(타지키스탄)|Cyrillic_General_100_|사용할 수 없음|  
+|타지크어(타지키스탄)|Cyrillic_General_100_|사용할 수 없음|  
 |타마지트어(알레리, 라틴 문자)|Tamazight_100_|사용할 수 없음|  
 |타밀어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |텔루구어(인도)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |티베트어(중국)|Tibetan_100_<sup>1</sup>|사용할 수 없음|  
 |투르크멘어(투르크메니스탄)|Turkmen_100_|사용할 수 없음|  
 |위구르어(중국)|Uighur_100_|사용할 수 없음|  
-|고소르브어(독일)|Upper_Sorbian_100_|사용할 수 없음|  
+|고지 소르비아어(독일)|Upper_Sorbian_100_|사용할 수 없음|  
 |우르두어(파키스탄)|Urdu_100_|사용할 수 없음|  
 |웨일스어(영국)|Welsh_100_|사용할 수 없음|  
-|월라프어(세네갈)|French_100_|사용할 수 없음|  
+|월로프어(세네갈)|French_100_|사용할 수 없음|  
 |코사어(남아프리카)|Latin1_General_100_|사용할 수 없음|  
 |야쿠트어(러시아)|Yakut_100_|사용할 수 없음|  
 |이 문자(중국)|Latin1_General_100_|사용할 수 없음|  
@@ -231,7 +230,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
  [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
