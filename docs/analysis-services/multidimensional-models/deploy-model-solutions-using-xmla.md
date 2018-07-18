@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ce0f50d158d715ddbbc689c47a012a4e92ba7c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994935"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>XMLA를 사용하여 모델 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "34022070"
 > [!IMPORTANT]  
 >  XML 스크립트가 데이터 원본이나 가장 용도의 연결 문자열에 지정된 경우 암호가 포함되지 않습니다. 이 시나리오에서는 처리 용도로 암호가 필요하기 때문에 XML 스크립트가 실행되기 전에 또는 XML 스크립트가 실행된 후에 해당 스크립트에 직접 추가해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [배포 마법사를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)   
+## <a name="see-also"></a>관련 항목  
+ [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)   
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_droplogin (Transact SQL) | Microsoft Docs
+title: sp_droplogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 644c15b1c0ebd400cffef2578596d633066a40e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049381"
 ---
 # <a name="spdroplogin-transact-sql"></a>sp_droplogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ sp_droplogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>인수  
  [ **@loginame =** ] **'***login***'**  
- 제거할 로그인입니다. *로그인* 은 **sysname**, 기본값은 없습니다. *로그인* 에 이미 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 제거할 로그인입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 에 이미 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **sp_droplogin** DROP LOGIN을 호출 합니다.  
   
  **sp_droplogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -69,9 +69,9 @@ DROP LOGIN Victoria;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP login& #40; Transact SQL & #41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

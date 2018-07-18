@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (Transact SQL) | Microsoft Docs
+title: sys.schemas (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049950"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>스키마 카탈로그 뷰-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "33178339"
 |**principal_id**|**int**|이 스키마를 소유하는 보안 주체의 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 데이터베이스 스키마 또는 역할을 할 네임 스페이스에서 찾을 수 있는 테이블, 뷰, 프로시저 및 함수 등의 개체에 대 한 컨테이너는 **sys.objects** 카탈로그 뷰에 있습니다.  
+ 데이터베이스 스키마 또는 역할을 할 네임 스페이스에 있는 테이블, 뷰, 프로시저 및 함수 등의 개체에 대 한 컨테이너를 **sys.objects** 카탈로그 뷰에 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [스키마 카탈로그 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+ [스키마 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

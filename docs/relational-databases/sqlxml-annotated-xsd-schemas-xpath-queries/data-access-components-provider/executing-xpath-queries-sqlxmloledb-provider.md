@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049960"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "32969018"
   
 -   **매핑 스키마**  
   
- 이 예제 ADO 응용 프로그램에서는 XPath 쿼리(루트)를 XSD 매핑 스키마(MySchema.xml)에 대해 지정합니다. 스키마에는  **\<연락처 >** 요소 **ContactID**, **FirstName**, 및 **LastName** 특성입니다. 이 스키마에서는 기본 매핑이 수행됩니다. 즉, 요소 이름은 같은 이름의 테이블에 매핑되고 단순 유형의 특성은 같은 이름의 열에 매핑됩니다.  
+ 이 예제 ADO 응용 프로그램에서는 XPath 쿼리(루트)를 XSD 매핑 스키마(MySchema.xml)에 대해 지정합니다. 스키마에는  **\<연락처 >** 사용 하 여 요소 **ContactID**를 **FirstName**, 및 **LastName** 특성입니다. 이 스키마에서는 기본 매핑이 수행됩니다. 즉, 요소 이름은 같은 이름의 테이블에 매핑되고 단순 유형의 특성은 같은 이름의 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -61,14 +61,14 @@ ms.locfileid: "32969018"
 </xsd:schema>  
 ```  
   
- 매핑 스키마 속성은 XPath 쿼리가 실행 되는 매핑 스키마를 제공 합니다. 매핑 스키마는 XSD 또는 XDR 스키마일 수 있습니다. Base Path 속성 매핑 스키마를 파일 경로 제공합니다.  
+ 매핑 스키마 속성 XPath 쿼리가 실행 되는 매핑 스키마를 제공 합니다. 매핑 스키마는 XSD 또는 XDR 스키마일 수 있습니다. Base Path 속성 매핑 스키마를 파일 경로 제공합니다.  
   
- ClientSideXML 속성을 True로 설정 됩니다. 따라서 XML 문서는 클라이언트에서 생성됩니다.  
+ ClientSideXML 속성을 true로 설정 됩니다. 따라서 XML 문서는 클라이언트에서 생성됩니다.  
   
  응용 프로그램에서 XPath 쿼리는 직접 지정됩니다. 따라서 XPath 언어 {ec2a4293-e898-11d2-b1b7-00c04f680c56}을 포함해야 합니다.  
   
 > [!NOTE]  
->  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 데이터 공급자로 사용하도록 지정하고 있으며 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 참조 [SQL Server Native Client에 대 한 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)합니다.  
+>  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 데이터 공급자로 사용하도록 지정하고 있으며 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)합니다.  
   
 ```  
 Option Explicit  

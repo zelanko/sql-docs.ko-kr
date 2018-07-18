@@ -1,5 +1,5 @@
 ---
-title: 생성, 변경 및 인덱스 제거 | Microsoft Docs
+title: 생성, 변경 및 인덱스를 제거 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c376209c269456614e133b5e2726620835fb6888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970778"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049741"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>인덱스 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "32970778"
  <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Index> 속성을 지정하여 XML 열에 인덱스를 만들 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic에서 비클러스터형 복합 인덱스 만들기  
- 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 설정의 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 속성을 **False** 비클러스터형 인덱스에 대 한 합니다.  
+ 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 설정 된 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 속성을 **False** 비클러스터형 인덱스에 대 한 합니다.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -93,7 +93,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Visual C#에서 비클러스터형 복합 인덱스 만들기  
- 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 설정의 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 속성을 **False** 비클러스터형 인덱스에 대 한 합니다.  
+ 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 설정 된 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 속성을 **False** 비클러스터형 인덱스에 대 한 합니다.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -151,7 +151,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>PowerShell에서 비클러스터형 복합 인덱스 만들기  
- 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 설정의 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 속성을 **False** 비클러스터형 인덱스에 대 한 합니다.  
+ 이 코드 예제는 복합 비클러스터형 인덱스를 만드는 방법을 보여 줍니다. 복합 인덱스를 위해 두 개 이상의 열을 인덱스에 추가합니다. 설정 된 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 속성을 **False** 비클러스터형 인덱스에 대 한 합니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -192,7 +192,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Visual Basic에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식이 XML 스키마 컬렉션 MySampleCollection은에서 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 MySampleCollection에서 XML 스키마 컬렉션 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -255,7 +255,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Visual C#에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식이 XML 스키마 컬렉션 MySampleCollection은에서 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 MySampleCollection에서 XML 스키마 컬렉션 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -318,7 +318,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>PowerShell에서 XML 인덱스 만들기  
- 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식이 XML 스키마 컬렉션 MySampleCollection은에서 [XML 스키마를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
+ 이 코드 예제는 XML 데이터 형식에 XML 인덱스를 만드는 방법을 보여 줍니다. XML 데이터 형식은 MySampleCollection에서 XML 스키마 컬렉션 [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다. XML 인덱스에는 몇 가지 제한 사항이 있는데, 그 중 하나는 이미 클러스터형 기본 키를 가지고 있는 테이블에 XML 인덱스를 만들어야 한다는 것입니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  
@@ -367,7 +367,7 @@ $i.IndexedColumns.Add($ic)
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
   
   

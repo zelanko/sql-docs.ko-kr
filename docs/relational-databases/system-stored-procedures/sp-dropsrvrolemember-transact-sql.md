@@ -1,5 +1,5 @@
 ---
-title: sp_dropsrvrolemember (Transact SQL) | Microsoft Docs
+title: sp_dropsrvrolemember (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242415"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049371"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
   
 ## <a name="arguments"></a>인수  
  [ @loginame **=** ] **'***로그인***'**  
- 고정 서버 역할에서 제거할 로그인의 이름입니다. *로그인* 은 **sysname**, 기본값은 없습니다. *로그인* 존재 해야 합니다.  
+ 고정 서버 역할에서 제거할 로그인의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 존재 해야 합니다.  
   
  [ @rolename **=** ] **'***역할***'**  
- 서버 역할의 이름입니다. *역할* 은 **sysname**, 기본값은 NULL입니다. *역할* 다음 값 중 하나 여야 합니다.  
+ 서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 다음 값 중 하나 여야 합니다.  
   
 -   sysadmin  
   
@@ -72,15 +72,15 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- Sp_dropsrvrolemember만 고정된 서버 역할에서 로그인을 제거 합니다. 데 사용할 수 있습니다. Sp_droprolemember를 사용 하 여 데이터베이스 역할에서 구성원을 제거 합니다.  
+## <a name="remarks"></a>Remarks  
+ 고정된 서버 역할에서 로그인을 제거 하려면 sp_dropsrvrolemember만 사용할 수 있습니다. 데이터베이스 역할에서 구성원을 제거 하려면 sp_droprolemember를 사용 합니다.  
   
  어떠한 고정된 서버 역할에서 sa 로그인을 제거할 수 없습니다.  
   
  sp_dropsrvrolemember는 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
- sysadmin 고정 서버 역할 또는 ALTER ANY LOGIN 권한이 둘 다 서버 및 멤버를 삭제 하 고 역할의 멤버 자격의에서 멤버 자격이 필요 합니다.  
+## <a name="permissions"></a>사용 권한  
+ sysadmin 고정 서버 역할 또는 ALTER ANY LOGIN 권한 서버 및 멤버를 삭제할 역할의에서 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예는 `JackO` 고정 서버 역할에서 `sysadmin` 로그인을 제거합니다.  
@@ -89,12 +89,12 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember& #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

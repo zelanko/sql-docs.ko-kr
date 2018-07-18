@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (Transact SQL) | Microsoft Docs
+title: sys.security_policies (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,16 +30,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993805"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스의 각 보안 정책에 대 한 행을 반환합니다.  
+  데이터베이스의 각 보안 정책에 대 한 행을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "33221134"
 |principal_id|**int**|데이터베이스에 등록된 보안 정책 소유자의 ID입니다. 소유자가 스키마를 통해 결정되는 경우 NULL입니다.|  
 |schema_id|**int**|개체가 상주하는 스키마의 ID입니다.|  
 |parent_object_id|**int**|정책이 속하는 개체의 ID입니다. 0이어야 합니다.|  
-|유형|**vachar(2)**|해야 **SP**합니다.|  
+|유형|**vachar(2)**|여야 **SP**합니다.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**합니다.|  
 |create_date|**datetime**|보안 정책이 만들어진 UTC 날짜입니다.|  
 |modify_date|**datetime**|보안 정책이 마지막으로 수정된 UTC 날짜입니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "33221134"
 |is_schemabinding_enabled|**bit**|보안 정책에 대 한 Schemabinding 상태:<br /><br /> 0 또는 NULL = 사용<br /><br /> 1 = 사용 안 함|  
   
 ## <a name="permissions"></a>사용 권한  
- 보안 주체는 **ALTER ANY SECURITY POLICY** 이 카탈로그 뷰에으로 있는 사용자의 모든 개체에 대 한 액세스 권한이 **VIEW DEFINITION** 개체에 합니다.  
+ 사용 하 여 보안 주체를 **ALTER ANY SECURITY POLICY** 이 카탈로그 뷰에 뿐만 아니라 사용 하 여 사용자의 모든 개체에 액세스할 권한이 **VIEW DEFINITION** 개체에서.  
   
 ## <a name="see-also"></a>관련 항목  
  [행 수준 보안](../../relational-databases/security/row-level-security.md)   

@@ -18,11 +18,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 62b2499a1d3b508186f3ca07641364a9e91a1541
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993815"
 ---
 # <a name="syspdwtablemappings-transact-sql"></a>sys.pdw_table_mappings (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

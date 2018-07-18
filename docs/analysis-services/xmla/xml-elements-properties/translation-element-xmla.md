@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8b6c50664cdce599128be9f0ad15a10e33b77ec6
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576635"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047187"
 ---
 # <a name="translation-element-xmla"></a>Translation 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34576635"
 </Translations>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  

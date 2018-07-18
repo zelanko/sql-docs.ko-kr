@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact SQL) | Microsoft Docs
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466239"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997875"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체(테이블)에 대한 증분 통계 속성을 반환합니다. `sys.dm_db_incremental_stats_properties` 사용은(파티션 번호 포함) 비증분 통계에 사용되는 `sys.dm_db_stats_properties` 와 비슷합니다. 
   
-  이 함수에 도입 된 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 서비스 팩 2 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 서비스 팩 1입니다.
+  이 함수에서 도입 되었습니다 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 서비스 팩 2 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 서비스 팩 1입니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -75,9 +75,9 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  이 동작은 `sys.dm_db_incremental_stats_properties` 및 `sys.objects` 와 같은 뷰의 행에 교차 적용될 때 `sys.stats`를 안전하게 사용할 수 있습니다. 이 메서드는 각 파티션에 해당하는 통계에 대한 속성을 반환할 수 있습니다. 모든 파티션에서 결합되어 병합된 통계에 대한 속성을 보려면 sys.dm_db_stats_properties를 대신 사용합니다. 
 
-통계 업데이트 날짜는 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#density)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)에 저장됩니다. 통계 blob 만들어지지 않습니다, 날짜를 사용할 수 없으면 통계 데이터를 생성할 수 없는 데이터를 읽으면 및 *last_updated* 열은 NULL입니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
+통계 업데이트 날짜는 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#density)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)에 저장됩니다. 통계 데이터를 생성 하려면 읽은 데이터가 없으면 통계 blob이 만들어지지 않고 경우 날짜를 사용할 수 없는 하며 *last_updated* 열은 NULL입니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -91,7 +91,7 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 
 추가 사용 제안 방법은  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)를 참조하세요.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [개체 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

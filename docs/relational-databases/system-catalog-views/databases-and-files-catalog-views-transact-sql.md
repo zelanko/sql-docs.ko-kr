@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 및 파일 카탈로그 뷰 (Transact SQL) | Microsoft Docs
+title: 데이터베이스 및 파일 카탈로그 뷰 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1f5c76077af1743e58e250f3bc57e20d86b573de
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177516"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049751"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>데이터베이스 및 파일 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "33177516"
   
 |||  
 |-|-|  
-|[sys.backup_devices &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
-|[sys.database_connection_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
-|[sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys.database_usage &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
+|[이 (가) &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
+|[sys.database_connection_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
+|[sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
 |[sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)|[sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|  
 |[sys.database_mirroring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [시스템 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
