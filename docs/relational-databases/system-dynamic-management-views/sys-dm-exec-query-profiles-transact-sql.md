@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_query_profiles (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046141"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ ms.locfileid: "34468099"
 |lob_read_ahead_count|**bigint**|지금까지의 LOB read-ahead 수입니다.|  
 |segment_read_count|**int**|지금까지의 세그먼트 read-ahead 수입니다.|  
 |segment_skip_count|**int**|지금까지 생략된 세그먼트 수입니다.| 
-|actual_read_row_count|**bigint**|잔여 조건자를 적용 하기 전에 연산자가 읽은 행 수입니다.| 
-|estimated_read_row_count|**bigint**|**적용 대상:** 부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] s p 1입니다. <br/>잔여 조건자를 적용 하기 전에 연산자가 읽을 수 것으로 예상 행 수입니다.|  
+|actual_read_row_count|**bigint**|잔여 조건자가 적용 되기 전에 운영자를 읽은 행 수입니다.| 
+|estimated_read_row_count|**bigint**|**적용 대상:** 부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>잔여 조건자가 적용 되기 전에 운영자가 읽을 것으로 예상 되는 행 수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  쿼리 계획 노드에 어떤 IO도 없는 경우 모든 IO 관련 카운터가 NULL로 설정됩니다.  
@@ -87,17 +87,17 @@ ms.locfileid: "34468099"
   
 -   병렬 스캔이 있는 경우 이 DMV는 스캔에 대해 작동하는 각 병렬 스레드의 카운터를 보고합니다.
  
- 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 인프라를 프로 파일링 하는 표준 쿼리 실행 통계 s p 1-병렬 인프라를 프로 파일링 하는 간단한 쿼리 실행 통계 존재 합니다. 새 쿼리 실행 통계 프로 파일링 인프라의 실제 행 수와 같은 연산자 당 쿼리 실행 통계 수집은 성능 오버 헤드를 크게 줄어듭니다. 전역 사용 하 여이 기능을 활성화 하려면 시작 [7412 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), 또는 query_thread_profile 확장된 이벤트를 사용할 때 자동으로 설정 합니다.
+ 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 인프라를 프로 파일링 하는 표준 쿼리 실행 통계 인프라를 프로 파일링 하는 간단한 쿼리 실행 통계를 사용 하 여 side-by-side-존재 합니다. 새 쿼리 실행 통계 프로 파일링 인프라는 실제 행 수와 같은 연산자 당 쿼리 실행 통계를 수집 하는 성능 오버 헤드가 크게 줄어듭니다. 전역를 사용 하거나이 기능을 사용할 수 있습니다 시작 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 자동으로 켜 집니다 query_thread_profile 확장된 이벤트를 사용할 때 또는 합니다.
 
 >[!NOTE]
-> CPU와 경과 시간은 성능에 영향을 줄이기 위해 간단한 쿼리 실행 통계 프로 파일링 인프라에서 지원 되지 않습니다.
+> 경과 된 시간과 CPU 성능 영향을 줄이기 위해 간단한 쿼리 실행 통계 프로 파일링 인프라 아래에서 지원 되지 않습니다.
 
- STATISTICS XML ON 및 SET STATISTICS PROFILE ON 항상 인프라를 프로 파일링 하는 레거시 쿼리 실행 통계를 사용 하 여 설정 합니다.
+ STATISTICS XML ON 및 인프라를 프로 파일링 하는 레거시 쿼리 실행 통계를 사용 하는 항상 SET STATISTICS PROFILE ON을 설정 합니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
    
 ## <a name="examples"></a>예  
  Sys.dm_exec_query_profiles로 분석 쿼리를 실행 하려는 세션에 1 단계: 로그인 합니다. 구성 하려면 프로 파일링에 대 한 쿼리에서 SET STATISTICS PROFILE을 사용 합니다. 동일한 세션에서 쿼리를 실행합니다.  
@@ -114,7 +114,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 쿼리가 실행 되 고 있는 세션에서 다른 두 번째 세션에 2 단계: 로그인 합니다.  
+ 쿼리가 실행 되는 세션에서 다른 두 번째 세션에 2 단계: 로그인 합니다.  
   
  다음 문은 세션 54에서 현재 실행 중인 쿼리의 진행률을 요약합니다. 진행률을 요약하기 위해 이 문은 각 노드에 대한 모든 스레드의 총 출력 행 수를 계산하고 해당 노드의 추정된 출력 행 수와 비교합니다.  
   
@@ -130,9 +130,9 @@ GROUP BY node_id,physical_operator_name
 ORDER BY node_id;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

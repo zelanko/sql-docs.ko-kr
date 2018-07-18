@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b76e642e2760f0a10a44c77c9859876502d944ab
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841296"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992638"
 ---
 # <a name="data-types-dmx"></a>데이터 형식(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  새 마이닝 모델을 정의 하 확장 DMX (Data Mining)를 사용 하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 모델의 각 열에 대 한 데이터 형식을 제공 해야 합니다. 데이터 형식은 데이터 마이닝 알고리즘이 모델을 만들 때 사용할 데이터를 설명합니다.  
+  확장 DMX (Data Mining)에서 새 마이닝 모델 정의를 사용 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 모델의 각 열에 대 한 데이터 형식을 직접 제공 해야 합니다. 데이터 형식은 데이터 마이닝 알고리즘이 모델을 만들 때 사용할 데이터를 설명합니다.  
   
  데이터 형식은 알고리즘에 따라 다릅니다. 각 알고리즘은 지원되는 데이터 형식 및 사용 방법을 결정합니다. Microsoft 알고리즘에서는 다음과 같은 데이터 형식을 지원합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34841296"
   
 -   Date  
   
- 데이터에 대 한 자세한 내용은 형식에 대해 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 참조 [데이터 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/data-types-data-mining.md)합니다.  
+ 데이터에 대 한 자세한 정보는 형식에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 참조 [데이터 형식 &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
@@ -44,7 +44,7 @@ ms.locfileid: "34841296"
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

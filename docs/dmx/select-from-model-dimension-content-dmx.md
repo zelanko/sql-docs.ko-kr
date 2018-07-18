@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842526"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992627"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \<모델 >. Dimension_CONTENT** 문은 차원으로 사용 하기 적합 한 모델 내용을 반환 합니다.  
+  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \<모델 >. Dimension_CONTENT** 문은 차원으로 사용에 관련 된 모델의 내용을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_NAME|멤버 속성|  
 |NODE_UNIQUE_NAME|키 특성|  
 |NODE_TYPE|멤버 속성|  
-|NODE_CAPTION|에 대 한 CaptionColumn **키** 특성입니다.|  
+|NODE_CAPTION|CaptionColumn **키** 특성입니다.|  
 |CHILDREN_CARDINALITY|멤버 속성|  
 |PARENT_UNIQUE_NAME|**키** 특성 (부모-자식 계층 구조의 ParentAttribute).|  
 |NODE_DESCRIPTION|멤버 속성|  

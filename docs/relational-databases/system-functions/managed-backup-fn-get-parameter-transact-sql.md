@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_parameter (Transact SQL) | Microsoft Docs
+title: managed_backup.fn_get_parameter (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2420c689dff7e344c06a6667c15e08d3d4769872
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228746"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047261"
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  함수에 대해 SELECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -86,7 +86,7 @@ FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

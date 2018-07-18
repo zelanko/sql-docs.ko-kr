@@ -32,33 +32,33 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dcdaf7607d425dec01a9f2cf8c87ff55e5441aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077556"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061471"
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery는 유형 지정이 엄격한 언어이며 형식화되지 않은 데이터에 대해서는 유형 지정이 엄격하지 않은 언어입니다. XQuery의 미리 정의된 유형에는 다음이 포함됩니다.  
   
--   기본 제공 형식에 XML 스키마의는 **http://www.w3.org/2001/XMLSchema** 네임 스페이스입니다.  
+-   XML 스키마의 기본 제공 형식 합니다 **http://www.w3.org/2001/XMLSchema** 네임 스페이스입니다.  
   
--   에 정의 된 유형에 **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스입니다.  
+-   에 정의 된 형식을 합니다 **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스입니다.  
   
  이 항목에서는 다음에 대해서도 설명합니다.  
   
 -   형식화된 값과 노드의 문자열 값  
   
--   [함수 데이터 &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) 및 [string 함수 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)합니다.  
+-   [data 함수 &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) 하며 [함수는 문자열 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   식에 의해 반환된 시퀀스 유형 일치  
   
 ## <a name="built-in-types-of-xml-schema"></a>XML 스키마의 기본 제공 유형  
- XML 스키마의 기본 제공 유형에는 xs의 미리 정의된 네임스페이스 접두사가 있습니다. 이러한 형식 중 일부는 같습니다. **xs: integer** 및 **xs: string**합니다. 이러한 모든 기본 제공 유형이 지원됩니다. 이러한 유형은 XML 스키마 컬렉션을 만들 때 사용할 수 있습니다.  
+ XML 스키마의 기본 제공 유형에는 xs의 미리 정의된 네임스페이스 접두사가 있습니다. 이러한 형식 중 일부를 포함 **xs: integer** 하 고 **xs: string**합니다. 이러한 모든 기본 제공 유형이 지원됩니다. 이러한 유형은 XML 스키마 컬렉션을 만들 때 사용할 수 있습니다.  
   
- 형식화된 XML을 쿼리할 때 노드의 정적 및 동적 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 결정됩니다. 정적 및 동적 유형에 대 한 자세한 내용은 참조 하십시오. [식 컨텍스트 및 쿼리 평가 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)합니다. 다음 쿼리를 지정 하는 예를 들어 형식화 된에 대해 **xml** 열 (`Instructions`). 이 식에서는 `instance of`를 사용하여 반환된 `LotSize` 특성의 형식화된 값이 `xs:decimal` 유형인지 확인합니다.  
+ 형식화된 XML을 쿼리할 때 노드의 정적 및 동적 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 결정됩니다. 정적 및 동적 형식에 대 한 자세한 내용은 참조 하세요. [식 컨텍스트 및 쿼리 평가 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)합니다. 다음 쿼리를 지정 하는 예를 들어 형식화 된에 대 한 **xml** 열 (`Instructions`). 이 식에서는 `instance of`를 사용하여 반환된 `LotSize` 특성의 형식화된 값이 `xs:decimal` 유형인지 확인합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -72,13 +72,13 @@ WHERE ProductModelID=7
  이 유형 지정 정보는 열과 연결된 XML 스키마 컬렉션에 의해 제공됩니다.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath 데이터 형식 네임스페이스에 정의된 유형  
- 에 정의 된 형식에서 **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스의 미리 정의 된 접두사가 **xdt**합니다. 이러한 유형에는 다음이 적용됩니다.  
+ 에 정의 된 형식을 합니다 **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스의 미리 정의 된 접두사가 **xdt**합니다. 이러한 유형에는 다음이 적용됩니다.  
   
--   XML 스키마 컬렉션을 만들 때는 이러한 유형을 사용할 수 없습니다. 이러한 형식은 XQuery 유형 시스템에 사용 되 고에 사용 되 [XQuery 및 정적 형식 지정](../xquery/xquery-and-static-typing.md)합니다. 예를 들어 원자성 유형으로 캐스팅할 수 **xdt: untypedatomic**에 **xdt** 네임 스페이스입니다.  
+-   XML 스키마 컬렉션을 만들 때는 이러한 유형을 사용할 수 없습니다. 이러한 형식은 XQuery 유형 시스템에 사용 되 고에 사용 됩니다 [XQuery 및 정적 형식 지정](../xquery/xquery-and-static-typing.md)합니다. 예를 들어 원자성 유형으로 캐스팅할 수 있습니다 **xdt: untypedatomic**를 **xdt** 네임 스페이스입니다.  
   
--   형식화 되지 않은 XML을 쿼리할 때 요소 노드의 정적 및 동적 유형은 **xdt: 형식화 되지 않은**, 특성 값의 형식이 고 **xdt: untypedatomic**합니다. 결과 **query ()** 메서드는 형식화 되지 않은 XML을 생성 합니다. 즉, XML 노드가으로 반환 됩니다 **xdt: 형식화 되지 않은** 및 **xdt: untypedatomic**각각.  
+-   형식화 되지 않은 XML을 쿼리할 때 요소 노드의 정적 및 동적 유형입니다 **xdt: 형식화 되지 않은**, 및 특성 값의 형식이 **xdt: untypedatomic**합니다. 결과 **query ()** 메서드는 형식화 되지 않은 XML을 생성 합니다. 즉, XML 노드도 반환 되도록 **xdt: 형식화 되지 않은** 하 고 **xdt: untypedatomic**, 각각.  
   
--   **xdt: daytimeduration** 및 **xdt: yearmonthduration** 형식은 지원 되지 않습니다.  
+-   합니다 **xdt: daytimeduration** 하 고 **xdt: yearmonthduration** 형식은 지원 되지 않습니다.  
   
  다음 예에서는 형식화되지 않은 XML 변수에 대해 쿼리가 지정됩니다. `data(/a[1]`) 식은 원자 값의 시퀀스를 반환합니다. `data()` 함수는 `<a>` 요소의 형식화된 값을 반환합니다. 쿼리 중인 XML이 형식화되지 않았기 때문에 반환된 값의 유형은 `xdt:untypedAtomic`입니다. 따라서 `instance of`는 True를 반환합니다.  
   
@@ -107,11 +107,11 @@ SELECT @x.query( '/a[1] instance of element()')
 ## <a name="typed-value-vs-string-value"></a>형식화된 값과 문자열 값 비교  
  모든 노드에는 형식화된 값과 문자열 값이 있습니다. 형식화된 XML 데이터의 경우 형식화된 값의 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 제공됩니다. 형식화 되지 않은 XML 데이터에 대 한 형식화 된 값의 형식이 **xdt: untypedatomic**합니다.  
   
- 사용할 수는 **data ()** 또는 **string ()** 노드의 값을 검색 하는 함수:  
+ 사용할 수는 **data ()** 하거나 **string ()** 노드의 값을 검색 하는 함수:  
   
--   [함수 데이터 &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) 노드의 형식화 된 값을 반환 합니다.  
+-   합니다 [data 함수 &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) 노드의 형식화 된 값을 반환 합니다.  
   
--   [string 함수 &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) 노드의 문자열 값을 반환 합니다.  
+-   합니다 [string 함수 &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) 노드의 문자열 값을 반환 합니다.  
   
  다음 XML 스키마 컬렉션에서는 정수 유형의 <`root`> 요소가 정의됩니다.  
   
@@ -140,7 +140,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- 다음 예에서는 `LaborHours` 특성의 합계를 계산합니다. `data()` 의 형식화 된 값을 검색 하는 함수 `LaborHours` 모든 특성의 <`Location`> 제품 모델에 대 한 요소입니다. 와 연결 된 XML 스키마에 따라는 `Instruction` 열 `LaborHours` 의 **xs: decimal** 유형입니다.  
+ 다음 예에서는 `LaborHours` 특성의 합계를 계산합니다. `data()` 형식화 된 값을 검색 하는 함수 `LaborHours` 모든 특성을 <`Location`> 제품 모델에 대 한 요소입니다. 연결 된 XML 스키마에 따라 합니다 `Instruction` 열 `LaborHours` 입니다 **xs: decimal** 형식입니다.  
   
 ```  
 SELECT Instructions.query('   
@@ -154,9 +154,9 @@ WHERE ProductModelID=7
  이 쿼리는 결과로 12.75를 반환합니다.  
   
 > [!NOTE]  
->  명시적으로 사용 된 **data ()** 이 예제는 함수는 예시용 으로만 합니다. 지정 하지 않으면 **sum ()** 암시적으로 적용 된 **data ()** 노드의 형식화 된 값을 추출 하는 함수입니다.  
+>  명시적으로 사용 합니다 **data ()** 목적 으로만이 예제 함수는 합니다. 지정 하지 않으면 **sum ()** 암시적으로 적용 합니다 **data ()** 노드의 형식화 된 값을 추출 하는 함수입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [XQuery 기초](../xquery/xquery-basics.md)  
   

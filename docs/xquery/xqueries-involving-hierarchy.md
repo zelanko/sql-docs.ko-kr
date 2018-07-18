@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077230"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048293"
 ---
 # <a name="xqueries-involving-hierarchy"></a>계층 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  대부분 **xml** 유형 열에는 **AdventureWorks** 데이터베이스는 반 구조화 된 문서입니다. 따라서 각 행에 저장된 문서는 다르게 보일 수 있습니다. 이 항목의 쿼리 예제에서는 이러한 여러 문서로부터 정보를 추출하는 방법을 보여 줍니다.  
+  대부분의 **xml** 유형 열에는 **AdventureWorks** 데이터베이스는 반 구조화 된 문서입니다. 따라서 각 행에 저장된 문서는 다르게 보일 수 있습니다. 이 항목의 쿼리 예제에서는 이러한 여러 문서로부터 정보를 추출하는 방법을 보여 줍니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>1. 제조 지침 문서에서 작업 센터 위치와 해당 위치의 첫 번째 제조 단계 검색  
- 쿼리는 제품 모델 7에 대해 포함 된 XML을 생성은 <`ManuInstr`> 요소와 **ProductModelID** 및 **ProductModelName** 특성 및 하나 이상의 <`Location`> 자식 요소입니다.  
+ 제품 모델 7에 대해 쿼리를 포함 하는 XML을 생성 합니다 <`ManuInstr`> 요소를 사용 하 여 **ProductModelID** 하 고 **ProductModelName** 특성 및 하나 이상의 <`Location`> 자식 요소입니다.  
   
  각 <`Location`> 요소에는 자체 특성 집합과 하나의 <`step`> 자식 요소가 있습니다. 이 <`step`> 자식 요소는 작업 센터 위치의 첫 번째 제조 단계입니다.  
   
@@ -63,15 +63,15 @@ WHERE ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   **네임 스페이스** 키워드는 [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 네임 스페이스 접두사를 정의 합니다. 이 접두사는 나중에 쿼리 본문에서 사용됩니다.  
+-   합니다 **네임 스페이스** 키워드는 [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 네임 스페이스 접두사를 정의 합니다. 이 접두사는 나중에 쿼리 본문에서 사용됩니다.  
   
 -   컨텍스트 변환 토큰인 {)와 (}는 XML 생성의 쿼리를 쿼리 평가로 변환하는 데 사용됩니다.  
   
--   **: column ()** 생성 되는 XML의 관계형 값을 포함 하는 데 사용 됩니다.  
+-   합니다 **1!s!sql:column ()** 생성 되는 XML의 관계형 값을 포함 하는 데 사용 됩니다.  
   
 -   <`Location`> 요소를 생성할 때 $wc/@*는 모든 작업 센터 위치 특성을 검색합니다.  
   
--   **string ()** 에서 문자열 값을 반환 하는 함수는 <`step`> 요소입니다.  
+-   합니다 **string ()** 함수에서 문자열 값을 반환 합니다 <`step`> 요소입니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -123,7 +123,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [XQuery 기초](../xquery/xquery-basics.md)   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: 파일 그룹 및 파일 데이터 저장을 사용 하 여 | Microsoft Docs
+title: 파일 그룹 및 데이터를 저장할 파일을 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 12b85dd1126880721d9bf67d3f4337b39e67f94e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970561"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047331"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>파일 그룹 및 파일을 사용하여 데이터 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "32970561"
  자동으로 생성된 모든 데이터베이스에는 "Primary"라는 파일 그룹과 데이터베이스와 같은 이름의 데이터 파일이 있습니다. 추가 파일과 그룹을 컬렉션에 추가할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Visual Basic에서 데이터베이스에 파일 그룹 및 데이터 파일 추가  
  주 파일 그룹 및 데이터 파일이 기본 속성 값으로 자동으로 생성됩니다. 코드 예제는 사용자가 사용할 수 있는 몇 가지 속성 값을 지정합니다. 그렇지 않으면 기본 속성 값이 사용됩니다.  
@@ -198,7 +198,7 @@ $lf1.Drop()
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [데이터베이스 파일 및 파일 그룹](../../../relational-databases/databases/database-files-and-filegroups.md)  
   

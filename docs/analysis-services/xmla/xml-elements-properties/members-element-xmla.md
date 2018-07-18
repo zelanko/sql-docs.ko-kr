@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34579105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994715"
 ---
 # <a name="members-element-xmla"></a>Members 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  컬렉션을 포함 [멤버](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 부모에 포함 된 요소 [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) 요소입니다.  
+  컬렉션을 포함 [멤버](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 요소는 부모에서 포함할 [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34579105"
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "34579105"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|계층|필수 **String** 특성입니다. 에 포함 된 멤버를 계층의 이름에서 **멤버** 요소 속해야 합니다.|  
+|계층|필수 **String** 특성입니다. 에 포함 된 멤버를 계층의 이름을 합니다 **멤버** 요소 속해야 합니다.|  
   
 ## <a name="remarks"></a>Remarks  
- 클라이언트 응용 프로그램 설정 하는 경우는 **a x** 속성을 *ClusterFormat*, 각 축의 멤버가 각 클러스터의 정렬 된 집합 간의 교차곱을 나타냅니다 하는 클러스터로 나누어집니다. 각 계층의 멤버입니다. 각 **축** 요소는 하나 이상의 구성 됩니다. **CrossProduct** 요소입니다. 모든 **CrossProduct** 요소를 포함 한 **멤버** 축의 각 계층에 대 한 요소입니다. **멤버** 요소를 포함 하나 **멤버** 요소는 교차곱에 포함 된 지정 된 계층의 각 멤버에 대 한 합니다.  
+ 클라이언트 응용 프로그램을 설정 하는 경우는 **AxisFormat** 속성을 *ClusterFormat*, 각 축의 멤버가 클러스터로 나누어집니다 각 클러스터의 정렬 된 집합 간의 교차곱을 나타냅니다 각 계층에서 멤버입니다. 각 **축** 하나 이상의 구성 요소 **CrossProduct** 요소입니다. 모든 **CrossProduct** 요소를 포함 한 **멤버** 축의 각 계층에 대 한 요소입니다. 합니다 **멤버** 요소를 포함 하나 **멤버** 요소는 교차곱에 포함 된 지정된 된 계층의 각 멤버에 대 한 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 구조는 **멤버** 요소는 클라이언트를 지정 하는 경우 *ClusterFormat* 에 대 한는 **a x** 제공 되는 XMLA 속성인은 축에 대 한 다음과 같은 멤버:  
+ 다음 예제에서는의 구조를 보여 줍니다.는 **멤버** 클라이언트를 지정 하는 경우 요소 *ClusterFormat* 에 대 한 합니다 **AxisFormat** XMLA 속성에는 축의 멤버가 다음과 같습니다.  
   
 ||||||  
 |-|-|-|-|-|  

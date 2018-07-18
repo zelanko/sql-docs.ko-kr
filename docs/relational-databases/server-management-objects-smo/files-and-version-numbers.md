@@ -23,21 +23,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046231"
 ---
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  모든 필수 SQL Server 관리 개체 (SMO) 구성 요소가 Microsoft.SqlServer.SqlManagementObjects NuGet 패키지에 포함 합니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 응용 프로그램을 개발할 수 있습니다.  
+  모든 SQL Server 관리 개체 (SMO) 구성 요소가 Microsoft.SqlServer.SqlManagementObjects NuGet 패키지에 포함 해야 합니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 응용 프로그램을 개발할 수 있습니다.  
 
 >>[!Important]
-SMO 어셈블리의 파일 버전이 주으로 표시 됩니다. **0**합니다. Build.Revision 합니다. 하지만 포함 된 어셈블리 버전은 주 버전. **100**합니다. Build.Revision 합니다. 이 작업은 하나에 대 한 업데이트에 영향을 주지는 기타 모든 하므로 별도 각 응용 프로그램에서 사용 되는 SMO의 버전을 유지 하려면 수행 됩니다.
+SMO 어셈블리의 파일 버전은 중요로 표시 됩니다. **0**합니다. Build.Revision 합니다. 하지만 포함 된 어셈블리 버전은 주 버전. **100**합니다. Build.Revision 합니다. 이렇게 하나에 대 한 업데이트에 영향을 주지 다른 되므로 각 응용 프로그램에 사용 되는 SMO의 버전을 별도로 유지 하 합니다.
 >>
->>이 때문에 수행 해야 **하지** 이러한 버전의 어셈블리를 전역 어셈블리 캐시 (GAC)에 설치 합니다. 이렇게 다른 응용 프로그램을 같은 발생할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio를 중단 하도록 합니다. 
+>>이 때문에 수행 해야 합니다 **되지** 이러한 버전의 어셈블리를 전역 어셈블리 캐시 (GAC)에 설치 합니다. 이렇게 인해 다른 응용 프로그램과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio에서 중단 합니다. 
   
 |파일|Description|  
 |-----------|-----------------|  

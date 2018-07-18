@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 63c1a838d74745b5ef51f73b51e34c95e08a81ff
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577625"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994795"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  반환 된 메타 데이터의 유형을 결정는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
+  반환 된 메타 데이터의 형식을 결정 합니다 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577625"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,10 +47,10 @@ ms.locfileid: "34577625"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **RequestType** 있는 스키마 행 집합을 결정 하는 요소는 **Discover** 메서드 데이터를 반환 합니다. 이 열거형은 Analysis Services에서 지 원하는 스키마 행 집합의 이름으로 제한 합니다. 스키마 행 집합에 대 한 자세한 내용은 참조 [Analysis Services 스키마 행 집합](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)합니다.  
+ **RequestType** 요소는 스키마 행 집합을 결정 합니다 **검색** 메서드 데이터를 반환 합니다. 이 열거형은 Analysis Services에서 지 원하는 스키마 행 집합의 이름으로 제한 합니다. 스키마 행 집합에 대 한 자세한 내용은 참조 하세요. [Analysis Services 스키마 행 집합](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)합니다.  
   
 > [!NOTE]  
->  **RequestType** 요소는 스키마 행 집합 이름만 열거 합니다. 스키마 행 집합 GUID를 사용하면 오류가 발생합니다.  
+>  합니다 **RequestType** 요소는 스키마 행 집합 이름만 열거 합니다. 스키마 행 집합 GUID를 사용하면 오류가 발생합니다.  
   
 ## <a name="see-also"></a>참고자료
  [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e04f44d9caa3ae51ea141997e83de54524000fee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576855"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046733"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  하는 동안 쓰기 저장 테이블을 생성할지 여부를 결정은 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 작업 합니다.  
+  하는 동안 쓰기 저장 테이블을 만들지 여부를 결정 합니다 [프로세스](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) 작업 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576855"
 </Process>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046927"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>SynchronizeSecurity 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  동안 역할 및 권한과 같은 보안 정의 동기화 하는 방법을 지정 하는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
+  하는 동안 역할 및 권한과 같은 보안 정의 동기화 하는 방법을 지정 된 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576485"
 </Synchronize>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34576485"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **보안** 요소는 역할 및 Analysis Services 데이터베이스에 정의 된 권한과 같은 보안 정의 하는 동안 동기화는 여부를 결정 한 **동기화** 명령입니다. 또한 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 **Synchronize** 명령의 일부로 포함할지 여부도 결정합니다.  
+ 합니다 **보안** 요소 중에 역할 및 Analysis Services 데이터베이스에 정의 된 권한과 같은 보안 정의 동기화는 지 여부를 결정을 **동기화** 명령입니다. 또한 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 **Synchronize** 명령의 일부로 포함할지 여부도 결정합니다.  
   
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   

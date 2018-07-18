@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046221"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 개체 모델 다이어그램
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "32966158"
   
  ![계층 관계를 보여 주는 다이어그램](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "계층 관계를 보여 주는 다이어그램")  
   
- ![개체 모델에서 계층을 보여 주는 트리 뷰](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "개체 모델에서 계층을 보여 주는 트리 뷰")  
+ ![개체 모델, 계층 구조를 보여 주는 트리 뷰](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "개체 모델, 계층 구조를 보여 주는 트리 뷰")  
   
- ![개체 모델에서 계층을 보여 주는 트리 뷰](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "개체 모델에서 계층을 보여 주는 트리 뷰")  
+ ![개체 모델, 계층 구조를 보여 주는 트리 뷰](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "개체 모델, 계층 구조를 보여 주는 트리 뷰")  
   
- ![개체 모델에서 계층을 보여 주는 트리 뷰](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "개체 모델에서 계층을 보여 주는 트리 뷰")  
+ ![개체 모델, 계층 구조를 보여 주는 트리 뷰](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "개체 모델, 계층 구조를 보여 주는 트리 뷰")  
   
   

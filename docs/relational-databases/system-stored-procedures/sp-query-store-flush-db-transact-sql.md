@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_flush_db (Transact SQL) | Microsoft Docs
+title: sp_query_store_flush_db (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0dca89f1d5876d437ccce2009db77614ba04ce4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247039"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993633"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_query_store_flush_db [;]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>Permissions  
- 필요는 **EXECUTE** 데이터베이스에 대 한 권한 및 **삭제** 쿼리 저장소 카탈로그 뷰에 대 한 권한이 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 필요 합니다 **EXECUTE** 데이터베이스에 대 한 권한 및 **삭제** 의 쿼리 저장소 카탈로그 뷰 사용 권한.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 쿼리 저장소 데이터의 메모리 내 부분의 디스크에 플러시합니다.  
@@ -62,12 +62,12 @@ sp_query_store_flush_db [;]
 EXEC sp_query_store_flush_db;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_remove_plan &#40;Transct SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_remove_plan &#40;TRANSCT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_reset_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  

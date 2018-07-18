@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_space_usage (Transact SQL) | Microsoft Docs
+title: sys.dm_db_log_space_usage (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464169"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061441"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,18 +45,18 @@ ms.locfileid: "34464169"
 |total_log_size_in_bytes |**bigint** |로그의 크기  |
 |used_log_space_in_bytes |**bigint** |이미 사용 중인된 로그의 크기  |     
 |used_log_space_in_percent |**real** |이미 사용 중인된 총 로그 크기의 백분율로 로그 크기 |
-|log_space_in_bytes_since_last_backup |**bigint** |마지막 로그 백업 이후에 사용 되는 공간의 양 <br />**적용 대상:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] 통해 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.|
+|log_space_in_bytes_since_last_backup |**bigint** |마지막 로그 백업 이후 사용 되는 공간의 양 <br />**적용 대상:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] 를 통해 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.|
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
   
 ## <a name="examples"></a>예  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>1. Tempdb에 가능한 로그 양 공간 확인   
-다음 쿼리에서 메가바이트 (MB) tempdb에서 사용할 수 있는의 총 사용 가능한 로그 공간을 반환합니다.
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>1. 사용 가능한 로그 공간 tempdb에서 확인   
+다음 쿼리는 메가바이트 (MB) tempdb에서 사용 가능한 총 사용 가능한 로그 공간을 반환합니다.
 
 ```sql
 USE tempdb;  
@@ -66,9 +66,9 @@ SELECT (total_log_size_in_bytes - used_log_space_in_bytes)*1.0/1024/1024 AS [fre
 FROM sys.dm_db_log_space_usage;  
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
 [sys.dm_db_task_space_usage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
 [sys.dm_db_session_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

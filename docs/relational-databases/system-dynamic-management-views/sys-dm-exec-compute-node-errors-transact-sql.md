@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_node_errors (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_compute_node_errors (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,32 +27,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4038eed706e25ae779d6f0a2fd16babb5a951fac
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464449"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048761"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  계산 노드를 PolyBase에서 발생 하는 오류를 반환 합니다.  
+  PolyBase에서 발생 하는 반환 오류 노드를 계산 합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|오류와 관련 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류 전체에서 고유|  
+|error_id|**nvarchar(36)**|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
 |원본(source)|**nvarchar(255)**|원본 스레드 또는 프로세스 설명||  
 |유형|**nvarchar(255)**|오류 유형입니다.||  
 |create_time|**datetime**|오류 발생 시간||  
-|compute_node_id|**int**|식별자의 특정 계산 노드|참조의 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|**int**|특정 계산 노드의 식별자|참조의 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|PolyBase 쿼리, 있는 경우의 식별자입니다.||  
 |spid|**int**|SQL Server 세션의 식별자||  
 |thread_id|**int**|오류가 발생 한 스레드의 숫자 식별자입니다.||  
-|자세히|nvarchar(4000)|전체 설명 오류의 세부 정보입니다.||  
+|자세히|nvarchar(4000)|전체 설명은 오류의 세부 정보입니다.||  
   
-## <a name="see-also"></a>관련 항목:  
- [PolyBase 동적 관리 뷰를 사용한 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>관련 항목  
+ [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (Transact SQL) | Microsoft Docs
+title: sp_srvrolepermission (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014764"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="arguments"></a>인수  
  [  **@srvrolename =** ] **'***역할***'**  
- 사용 권한을 반환할 고정 서버 역할의 이름입니다. *역할* 은 **sysname**, 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *역할* 다음 값 중 하나일 수 있습니다.  
+ 사용 권한을 반환할 고정 서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *역할* 다음 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**sysadmin**|시스템 관리자입니다.|  
 |**securityadmin**|보안 관리자입니다.|  
@@ -69,14 +69,14 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**서버 역할**|**sysname**|고정 서버 역할의 이름입니다.|  
-|**사용 권한**|**sysname**|와 관련 된 권한은 **서버 역할**|  
+|**사용 권한**|**sysname**|와 관련 된 권한은 **ServerRole**|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 고정 서버 역할의 멤버가 수행할 수 있는 기타 특수 작업 등의 사용 권한이 나열됩니다. 가 고정된 서버 역할의 목록을 표시 하려면 실행 **sp_helpsrvrole**합니다.  
   
- **sysadmin** 고정된 서버 역할에 다른 모든 고정된 서버 역할의 사용 권한이 있습니다.  
+ 합니다 **sysadmin** 고정된 서버 역할에 다른 모든 고정된 서버 역할의 권한이 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -87,7 +87,7 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

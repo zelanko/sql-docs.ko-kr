@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1ea8dd0b6f19177a85b7a4b4ed4457c633dbb69
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039003"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007235"
 ---
 # <a name="notification-events-event-category"></a>Notification Events 이벤트 범주
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34039003"
   
  각 Notification Events 이벤트 클래스와 연관된 열에 대한 자세한 내용은 [Notification Events Data Columns](../../analysis-services/trace-events/notification-events-data-columns.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077000"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048741"
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- 사용 하 여 시퀀스에서 항목을 계산할 수는 **fn:count()** 함수입니다.  
+ 사용 하 여 시퀀스의 항목 수를 **fn:count()** 함수입니다.  
   
 ```  
 declare @x xml  
@@ -105,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>예 3  
- 다음 쿼리는 AdditionalContactInfo 열에 대해 지정 된는 **xml** Contact 테이블에서 유형입니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. \<telephoneNumber >, \<호출기 >, 다른 노드는 문서에 아무 곳 이나 나타날 수 있습니다. 모두 포함 하는 시퀀스를 생성 하는 쿼리는 \<telephoneNumber > 뒤에 여는 컨텍스트 노드에서 자식은 \<호출기 > 자식입니다. `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
+ 다음 쿼리는 AdditionalContactInfo 열에 대해 지정 합니다 **xml** Contact 테이블에서 형식입니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. 합니다 \<telephoneNumber >, \<호출기 >, 다른 노드는 문서의 아무 곳 이나 나타날 수 있습니다. 모두 포함 하는 시퀀스를 생성 하는 쿼리를 \<telephoneNumber > 뒤에, 컨텍스트 노드의 자식을 \<호출기 > 자식입니다. `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -137,7 +137,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>시퀀스 필터링  
- 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 참조 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다. 예를 들어 다음 쿼리는 3개의 <`a`> 요소 노드에 대한 하나의 시퀀스를 반환합니다.  
+ 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다. 예를 들어 다음 쿼리는 3개의 <`a`> 요소 노드에 대한 하나의 시퀀스를 반환합니다.  
   
 ```  
 declare @x xml  
@@ -175,7 +175,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- 경로 식에서 조건자를 지정 하는 방법에 대 한 자세한 내용은 참조 [경로 식 단계에서 조건자 지정](../xquery/path-expressions-specifying-predicates.md)합니다.  
+ 경로 식에서 조건자를 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [경로 식 단계에서 조건자 지정](../xquery/path-expressions-specifying-predicates.md)합니다.  
   
  다음 예에서는 하위 트리의 시퀀스 식을 작성한 다음 시퀀스에 필터를 적용합니다.  
   
@@ -248,7 +248,7 @@ SELECT @x.query('
   
 -   union, intersect 또는 except 연산자를 사용하여 노드 시퀀스를 조합하는 기능은 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

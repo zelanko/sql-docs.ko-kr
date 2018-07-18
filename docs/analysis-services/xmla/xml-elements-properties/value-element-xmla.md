@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ecaaf902ee1f29700b2d6333bbccd549d9c2193
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062854"
 ---
 # <a name="value-element-xmla"></a>Value 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  원하는 값이 포함 된 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 요소에 추가할 수는 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 명령, 또는 [셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) 을 업데이트 하는 요소는 [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)명령입니다.  
+  원하는 값이 포함을 [특성](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) 요소에 추가할 수는 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) 명령, 또는 [셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) 을 업데이트 하는 요소는 [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576795"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34576795"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 **특성** 요소는 **값** 후 멤버가 포함 해야 하는 원하는 값을 포함 하는 요소는 **삽입** 명령 커밋됩니다. 멤버 삽입 하는 방법에 대 한 자세한 내용은 참조 [삽입, 업데이트 및 삭제 멤버 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
+ 에 대 한 **특성** 요소를 **값** 후 멤버를 포함 하는 원하는 값을 포함 하는 요소는 **삽입** 명령 커밋됩니다. 멤버를 삽입 하는 방법에 대 한 자세한 내용은 참조 하세요. [삽입, 업데이트 및 삭제 하는 멤버 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)합니다.  
   
- 에 대 한 **셀** 요소는 **값** 셀 후 포함 해야 하는 원하는 값을 포함 하는 요소는 **UpdateCells** 명령 커밋됩니다. 해당 셀의 쓰기 저장(writeback) 테이블에 저장되는 실제 값은 셀의 원본 값과 원하는 값 간의 차이입니다.  
+ 에 대 한 **셀** 요소를 **값** 셀 후 포함 해야 하는 원하는 값을 포함 하는 요소는 **UpdateCells** 명령 커밋됩니다. 해당 셀의 쓰기 저장(writeback) 테이블에 저장되는 실제 값은 셀의 원본 값과 원하는 값 간의 차이입니다.  
   
  이 요소에 사용되는 데이터 형식은 업데이트할 셀의 데이터 형식과 일치해야 합니다.  
   
