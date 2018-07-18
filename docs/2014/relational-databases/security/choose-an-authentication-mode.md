@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
 helpviewer_keywords:
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1c2927e5d68ac41c9813dd623983e44b95b8ba53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155924"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
   설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "36082018"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  에 **실행** 대화 상자에서 `secpol.msc`, 클릭 하 고 **확인**합니다.  
+2.  에 **실행** 대화 상자에서 `secpol.msc`를 클릭 하 고 **확인**합니다.  
   
 3.  **로컬 보안 설정** 응용 프로그램에서 **보안 설정**, **계정 정책**을 차례로 확장한 다음 **암호 정책**을 클릭합니다.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36082018"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 Kerberos 보안 프로토콜을 사용할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에서는 Windows에서 제공하는 추가 암호 정책을 사용할 수 없습니다.  
+-   ph x="1" /&gt; 로그인에서는 Windows에서 제공하는 추가 암호 정책을 사용할 수 없습니다.  
   
 -   암호화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 암호는 연결 시 네트워크를 통해 전달되어야 합니다. 자동으로 연결되는 일부 응용 프로그램은 클라이언트에서 암호를 저장합니다. 이들은 추가 공격 지점입니다.  
   

@@ -2,13 +2,10 @@
 title: SQL Server의 최대 용량 사양 | Microsoft 문서
 ms.date: 11/6/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +24,12 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cd2e8b76948a5f2d89b19157894d72de378f3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036430"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36833381"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.locfileid: "33036430"
 |외래 키당 바이트 수||900||  
 |기본 키당 바이트 수||900||  
 |행당 바이트 수||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 가변 길이 열을 행 외부로 밀어넣을 수 있는 행 오버플로 저장소를 지원합니다. 행 외부로 밀어넣은 가변 길이 열의 주 레코드에는 24바이트의 루트만 저장됩니다. 이 때문에 유효 행 제한은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]보다 높습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "8KB를 초과하는 행 오버플로 데이터" 항목을 참조하십시오.|  
-|메모리 최적화 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]이상에서는 메모리 최적화 테이블이 행 외부 저장소를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
+|메모리 최적화 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 이상에서는 메모리 최적화 테이블이 행 외부 저장소를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
 |저장 프로시저의 원본 텍스트의 바이트 수||일괄 처리 크기 또는 250MB 미만||  
 |**varchar(max)**, **varbinary(max)**, **xml**, **text**또는 **image** 열당 바이트 수||2^31-1||  
 |**ntext** 또는 **nvarchar(max)** 열당 문자 수||2^30-1||  

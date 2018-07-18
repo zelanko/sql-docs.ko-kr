@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_audit_file (Transact SQL) | Microsoft Docs
+title: sys.fn_get_audit_file (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
@@ -26,12 +26,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e09491347fec046bef09dc2fca06756998055150
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240563"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980525"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,45 +50,45 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>인수  
  *file_pattern*  
- 읽을 감사 파일 집합의 디렉터리나 경로와 파일 이름을 지정합니다. 형식이 **nvarchar (260)** 합니다. 
+ 읽을 감사 파일 집합의 디렉터리나 경로와 파일 이름을 지정합니다. 형식은 **nvarchar(260)** 합니다. 
  
  - **SQL Server**:
     
-    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 감사 파일 집합에서 여러 파일을 수집 하도록 단일 별표 (*)를 사용할 수 있습니다. 예를 들어:  
+    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 감사 파일 집합에서 여러 파일을 수집 하는 단일 별표 (*)를 사용할 수 있습니다. 예를 들어:  
   
-    -   **\<경로 >\\ \***  수집-모든 지정 된 위치에 있는 파일을 감사 합니다.  
+    -   **\<경로 >\\ \***  수집-모든 지정된 된 위치에 파일을 감사 합니다.  
   
-    -   **\<경로 > \LoginsAudit_{GUID}** 수집-모든 지정 된 이름 및 GUID 쌍 파일을 감사 합니다.  
+    -   **\<경로 > \LoginsAudit_{GUID}** -수집 파일에 지정한 이름 및 GUID 쌍이 있는 모든 감사 합니다.  
   
     -   **\<경로 > \LoginsAudit_{GUID}_00_29384.sqlaudit** -특정 감사 파일을 수집 합니다.  
   
- - **Azure SQL 데이터베이스**:
+ - **Azure SQL Database**:
  
-    (저장소 끝점 및 컨테이너 포함) blob URL을 지정 하려면이 인수가 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 동안에이 접두사로 시작 하는 여러 파일 (blob)을 수집 하도록 전체 blob 이름) (대신 부분 (blob) 파일 이름 접두사를 사용할 수 있습니다. 예를 들어:
+    이 인수를 사용 하 여 blob URL (storage 끝점 및 컨테이너 포함)을 지정 합니다. 별표 와일드 카드를 지원 하지 않으면 하는 동안이 접두사로 시작 하는 여러 파일 (blob)을 수집 하도록 전체 blob 이름) (대신 부분 파일 (blob) 이름 접두사를 사용할 수 있습니다. 예를 들어:
  
-      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> /**  -특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
+      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> /**  -특정 데이터베이스에 대 한 모든 감사 파일 (blob)를 수집 합니다.    
       
-      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -특정 감사 파일 (blob)을 수집 합니다.
+      - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -특정 감사 파일 (blob)를 수집 합니다.
   
 > [!NOTE]  
 >  파일 이름 패턴 없이 경로를 전달하면 오류가 생성됩니다.  
   
  *initial_file_name*  
- 감사 파일 집합에서 감사 레코드를 읽기 시작할 특정 파일의 경로와 이름을 지정합니다. 형식이 **nvarchar (260)** 합니다.  
+ 감사 파일 집합에서 감사 레코드를 읽기 시작할 특정 파일의 경로와 이름을 지정합니다. 형식은 **nvarchar(260)** 합니다.  
   
 > [!NOTE]  
->  *initial_file_name* 인수에 유효한 항목이 또는 기본 있어야 합니다. | NULL 값입니다.  
+>  합니다 *initial_file_name* 인수에 유효한 항목이 있어야 합니다. 또는 기본 있어야 합니다. | NULL 값입니다.  
   
  *audit_record_offset*  
  initial_file_name에 지정된 파일 기준의 오프셋을 지정합니다. 이 인수를 사용하면 함수가 지정된 오프셋 바로 다음에 있는 버퍼의 첫 번째 레코드에서 읽기를 시작합니다.  
   
 > [!NOTE]  
->  *audit_record_offset* 인수에 유효한 항목이 또는 기본 있어야 합니다. | NULL 값입니다. 형식이 **bigint**합니다.  
+>  합니다 *audit_record_offset* 인수에 유효한 항목이 있어야 합니다. 또는 기본 있어야 합니다. | NULL 값입니다. 형식은 **bigint**합니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 이 함수가 반환할 수 있는 감사 파일 내용에 대해 설명합니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |event_time|**datetime2**|감사 가능한 동작이 발생한 날짜 및 시간입니다. Null을 허용하지 않습니다.|  
 |sequence_number|**int**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다. Null을 허용하지 않습니다.|  
@@ -115,31 +115,31 @@ fn_get_audit_file ( file_pattern,
 |schema_name|**sysname**|동작이 수행된 스키마 컨텍스트입니다. Null을 허용합니다. 스키마 외부에서 수행되는 감사에 대해 NULL을 반환합니다.|  
 |object_name|**sysname**|감사가 수행된 대상 엔터티의 이름입니다. 여기에는 다음이 포함됩니다.<br /> 서버 개체<br /> 데이터베이스<br /> 데이터베이스 개체<br /> 스키마 개체<br /> Null을 허용합니다. 엔터티가 서버 자체이거나 개체 수준에서 감사가 수행되지 않으면 Null을 반환합니다(예: 인증).|  
 |statement|**nvarchar(4000)**|TSQL 문이 있는 경우 TSQL 문입니다. Null을 허용합니다. 적용할 수 없으면 NULL을 반환합니다.|  
-|additional_information|**nvarchar(4000)**|단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름 처럼 잘못 된 xml 문자를 이스케이프 처리를 구문 분석 됩니다 `'\<'`, `'>'`, `'/'`, `'_x'`합니다. 로 이스케이프 됩니다 `_xHHHH\_`합니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다.|  
+|additional_information|**nvarchar(4000)**|단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름 등의 잘못 된 xml 문자가 이스케이프 구문 분석 됩니다 `'\<'`, `'>'`를 `'/'`, `'_x'`합니다. 로 이스케이프 됩니다 `_xHHHH\_`합니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다.|  
 |file_name|**varchar(260)**|레코드를 가져온 감사 로그 파일의 경로 및 이름입니다. Null을 허용하지 않습니다.|  
 |audit_file_offset|**bigint**|감사 레코드가 포함된 파일의 버퍼 오프셋입니다. Null을 허용하지 않습니다.|  
-|user_defined_event_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 정의 이벤트 id에 대 한 인수로 전달 된 **sp_audit_write**합니다. **NULL** 시스템 이벤트 (기본값)에 대 한 및 0이 아닌 사용자 정의 이벤트에 대 한 합니다. 자세한 내용은 참조 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)합니다.|  
-|user_defined_information|**nvarchar(4000)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자가을에 기록 하려는 추가 정보를 기록 하는 데 사용 |사용 하 여 감사 로그는 **sp_audit_write** 저장 프로시저입니다.|  
+|user_defined_event_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 정의 이벤트 id를 인수로 전달 **sp_audit_write**합니다. **NULL** 시스템 이벤트 (기본값) 및 0이 아닌 사용자 정의 이벤트에 대 한 합니다. 자세한 내용은 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)합니다.|  
+|user_defined_information|**nvarchar(4000)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자에 기록 하려는 추가 정보를 기록 하는 데 사용 |사용 하 여 감사 로그를 **sp_audit_write** 저장 프로시저입니다.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **적용 대상**: SQL Server만 (2016부터 시작) |  
-|transaction_id |**bigint** | **적용 대상**: SQL Server만 (2016부터 시작) |  
-|client_ip |**nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL Server (2017부터 시작) |  
-|application_name |**nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL Server (2017부터 시작) |  
-|duration_milliseconds |**bigint** | **적용 대상**: Azure SQL DB에만 |  
-|response_rows |**bigint** | **적용 대상**: Azure SQL DB에만 |  
-|affected_rows |**bigint** | **적용 대상**: Azure SQL DB에만 |  
-|connection_id |GUID | **적용 대상**: Azure SQL DB에만 |
-|data_sensitivity_information |nvarchar(4000) | **적용 대상**: Azure SQL DB에만 |
+|sequence_group_id |**varbinary** | **적용할**: SQL Server만 (2016부터 시작) |  
+|transaction_id |**bigint** | **적용할**: SQL Server만 (2016부터 시작) |  
+|client_ip |**nvarchar(128)** | **적용할**: Azure SQL DB + SQL 서버 (2017부터 시작) |  
+|application_name |**nvarchar(128)** | **적용할**: Azure SQL DB + SQL 서버 (2017부터 시작) |  
+|duration_milliseconds |**bigint** | **적용할**: Azure SQL DB에만 |  
+|response_rows |**bigint** | **적용할**: Azure SQL DB에만 |  
+|affected_rows |**bigint** | **적용할**: Azure SQL DB에만 |  
+|connection_id |GUID | **적용할**: Azure SQL DB에만 |
+|data_sensitivity_information |nvarchar(4000) | **적용할**: Azure SQL DB에만 |
   
-## <a name="remarks"></a>주의  
- 경우는 *file_pattern* 인수에 전달 된 **fn_get_audit_file** 존재 하지 않는 파일 또는 경로 참조 하거나 파일이 감사 파일이 없으면는 **MSG_INVALID_AUDIT_FILE**오류 메시지가 반환 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 경우는 *file_pattern* 에 전달 된 인수 **fn_get_audit_file** 경로 또는 존재 하지 않는 파일을 참조 하거나 파일이 감사 파일이 없으면는 **MSG_INVALID_AUDIT_FILE**오류 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>Permissions  
- - **SQL Server**: 필요는 **제어 서버** 권한.  
- - **Azure SQL DB**: 필요는 **제어 데이터베이스** 권한.     
-    - 서버 관리자는 서버의 모든 데이터베이스의 감사 로그에 액세스할 수 있습니다.
-    - 비 서버 관리자는 현재 데이터베이스에서 감사 로그만 액세스할 수 있습니다.
-    - 앞의 조건을 충족 하지 않는 blob 건너뜁니다 (건너뛴 blob 목록에에서 나타납니다 쿼리 출력 메시지)를 함수 액세스 허용 되는 blob 에서만에서 로그를 반환 합니다.  
+## <a name="permissions"></a>사용 권한  
+ - **SQL Server**: 필요 합니다 **CONTROL SERVER** 권한.  
+ - **Azure SQL DB**: 필요 합니다 **CONTROL DATABASE** 권한.     
+    - 서버 관리자는 서버의 모든 데이터베이스의 감사 로그를 액세스할 수 있습니다.
+    - 만 아닌 서버 관리자는 현재 데이터베이스에서 감사 로그를 액세스할 수 있습니다.
+    - 앞의 조건을 충족 하지 않는 blob 건너뜁니다 (건너뛴된 blob 목록에에서 나타납니다 쿼리 출력 메시지)를 함수 액세스 허용 되는 blob 에서만에서 로그를 반환 합니다.  
   
 ## <a name="examples"></a>예
 
@@ -154,14 +154,14 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database**
 
-  이 예에서는 라는 파일에서 읽는 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
+  이 예제에서는 명명 된 파일에서 읽는 `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
   GO  
   ```  
 
-  이 예에서는 위와 하지만 추가 T-SQL 절과 함께 동일한 파일에서 읽습니다 (**TOP**, **ORDER BY**, 및 **여기서** 절에서 반환 된 감사 레코드를 필터링에 함수 사용):
+  이 예제에서는 위와 같이 있지만 추가 T-SQL 절을 사용 하 여 동일한 파일에서 읽습니다 (**위쪽**, **ORDER BY**, 및 **여기서** 절에서 반환 된 감사 레코드를 필터링 합니다 함수 사용):
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)
@@ -170,7 +170,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  이 예제에서는 모든 감사 로그가로 시작 하는 서버에서 읽고 `Sh`: 
+  이 예제에서는 모든 감사 로그로 시작 하는 서버에서 읽고 `Sh`: 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
@@ -179,9 +179,9 @@ fn_get_audit_file ( file_pattern,
 
 감사를 만드는 방법에 대한 전체 예에 대해서는 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조하십시오.
 
-Azure SQL 데이터베이스 감사를 설정에 대 한 자세한 내용은 참조 하십시오. [SQL 데이터베이스 감사 시작](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing)합니다.
+Azure SQL Database 감사 설정에 대 한 내용은 참조 하세요 [SQL Database 감사 시작](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)합니다.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

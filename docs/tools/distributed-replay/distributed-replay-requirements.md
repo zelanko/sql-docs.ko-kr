@@ -1,27 +1,23 @@
 ---
-title: Distributed Replay 요구 사항 | Microsoft Docs
+title: Distributed Replay Requirements | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 763e20675ce98deda5cd16957dfda4b215c80126
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE75
+ms.openlocfilehash: b4f47f855dd7f36d20b3191c8a91246fa3ebc34c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074680"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772008"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "33074680"
 ### <a name="input-trace-versions"></a>입력 추적 버전  
  Distributed Replay는 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 수집된 입력 추적 데이터를 지원합니다.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  누적 업데이트 1 이상입니다. -참조 [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)합니다.
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  누적 업데이트 1 이상입니다. 참조- [SQL Server 2017 누적 업데이트](http://aka.ms/sql2017cu)합니다.
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

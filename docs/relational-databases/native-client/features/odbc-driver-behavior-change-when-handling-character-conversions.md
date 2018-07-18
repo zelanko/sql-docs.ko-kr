@@ -3,30 +3,28 @@ title: 문자 변환을 처리 시 ODBC 드라이버 동작 변경 | Microsoft D
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ad5f5eba866d23241f723ef4684aa6f47719b923
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 752c824b77da90c80620387cbdf2d42aa626367c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701394"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408178"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버 (SQLNCLI11.dll) 변경 SQL_WCHAR *의 수행 하는 방법 (NCHAR/NVARCHAR/NVARCHAR(MAX)) 및 SQL_CHAR\* (CHAR/VARCHAR/NARCHAR(MAX)) 변환 합니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
+  합니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버 (sqlncli11.dll) SQL_WCHAR *의 수행 하는 방법을 변경 (NCHAR/NVARCHAR/NVARCHAR(MAX)) 및 SQL_CHAR\* (CHAR/VARCHAR/NARCHAR(MAX)) 변환 합니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData 동작  
  여러 가지 Windows 기능을 사용하여 버퍼 크기를 0으로 지정할 수 있고 반환된 길이가 반환된 데이터의 크기가 됩니다. 다음 패턴은 Windows 프로그래머에 공통적입니다.  
@@ -50,9 +48,9 @@ pBuffer = new WCHAR[(iSize/sizeof(WCHAR)) + 1];   // Allocate buffer
 SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // Retrieve data  
 ```  
   
- **SQLGetData** 의 실제 데이터 청크를 검색 하 에서만 호출할 수 있습니다. 사용 하 여 **SQLGetData** 데이터의 크기를 가져오는 지원 되지 않습니다.  
+ **SQLGetData** 실제 데이터의 청크를 검색할만 호출할 수 있습니다. 사용 하 여 **SQLGetData** 데이터의 크기를 가져오려면은 지원 되지 않습니다.  
   
- 다음은 잘못된 패턴 사용 시 드라이버 변경에 따른 영향을 보여 줍니다. 이 응용 프로그램 쿼리는 **varchar** 열 및 바인딩을 유니코드 (SQL_UNICODE/SQL_WCHAR):  
+ 다음은 잘못된 패턴 사용 시 드라이버 변경에 따른 영향을 보여 줍니다. 이 응용 프로그램 쿼리를 **varchar** 열 및 바인딩을 유니코드 (SQL_UNICODE/SQL_WCHAR):  
   
  쿼리:  `select convert(varchar(36), '123')`  
   
@@ -63,9 +61,9 @@ SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|6|드라이버는 CHAR를 WCHAR로 변환하면 길이 * 2로 수행될 수 있다고 잘못 가정합니다.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|드라이버는 더 이상 CHAR에서 WCHAR로 또는 WCHAR 변환할 가정는 (곱하기) \*2 또는 (나누기) / 2 동작 합니다.<br /><br /> 호출 **SQLGetData** 하면 예상한 변환 길이가 더 이상 반환 합니다. 드라이버가 CHAR에서 WCHAR 또는 WCHAR에서 CHAR로 변환을 검색하고 잘못될 수 있는 *2 또는 /2 동작 대신 (-4) SQL_NO_TOTAL을 반환합니다.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|드라이버가 더 이상 CHAR에서 WCHAR 또는 WCHAR로 변환 이라고 가정 된 (곱하기) \*2 또는 (나누기) / 2 동작 합니다.<br /><br /> 호출 **SQLGetData** 하면 예상한 변환 길이가 더 이상 반환 합니다. 드라이버가 CHAR에서 WCHAR 또는 WCHAR에서 CHAR로 변환을 검색하고 잘못될 수 있는 *2 또는 /2 동작 대신 (-4) SQL_NO_TOTAL을 반환합니다.|  
   
- 사용 하 여 **SQLGetData** 를 데이터의 청크를 검색 합니다. (의사 코드가 다음과 같이 표시됨)  
+ 사용 하 여 **SQLGetData** 데이터의 청크를 검색 하 합니다. (의사 코드가 다음과 같이 표시됨)  
   
 ```  
 while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {  
@@ -91,8 +89,8 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|20|**SQLFetch** 데이터의 오른쪽에 잘림이 보고 합니다.<br /><br /> 길이는 저장된 데이터가 아니라 반환된 데이터의 길이입니다(문자에 적합하지 않을 수 있는 *2 CHAR에서 WCHAR 변환을 가정).<br /><br /> 버퍼에 저장된 데이터는 123\0입니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 데이터의 오른쪽에 잘림이 보고 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 -4 (SQL_NO_TOTAL)를 나타냅니다.<br /><br /> 버퍼에 저장된 데이터는 123\0입니다. - 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|20|**SQLFetch** 데이터의 오른쪽에 잘림이 있는지 보고 합니다.<br /><br /> 길이는 저장된 데이터가 아니라 반환된 데이터의 길이입니다(문자에 적합하지 않을 수 있는 *2 CHAR에서 WCHAR 변환을 가정).<br /><br /> 버퍼에 저장된 데이터는 123\0입니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 데이터의 오른쪽에 잘림이 있는지 보고 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 -4 (SQL_NO_TOTAL)를 나타냅니다.<br /><br /> 버퍼에 저장된 데이터는 123\0입니다. - 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter(OUTPUT 매개 변수 동작)  
  쿼리:  `create procedure spTest @p1 varchar(max) OUTPUT`  
@@ -105,15 +103,15 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
-|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|2468|**SQLFetch** 사용 가능한 데이터가 더 이상 반환 합니다.<br /><br /> **SQLMoreResults** 사용 가능한 데이터가 더 이상 반환 합니다.<br /><br /> 길이는 버퍼에 저장된 데이터가 아니라 서버에서 반환된 데이터의 크기를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 사용 가능한 데이터가 더 이상 반환 합니다.<br /><br /> **SQLMoreResults** 사용 가능한 데이터가 더 이상 반환 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 (-4) SQL_NO_TOTAL를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
+|[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|2468|**SQLFetch** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> **SQLMoreResults** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> 길이는 버퍼에 저장된 데이터가 아니라 서버에서 반환된 데이터의 크기를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> **SQLMoreResults** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 (-4) SQL_NO_TOTAL를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>CHAR 및 WCHAR 변환 수행  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 BLOB 조작(varchar(max), nvarchar(max), …)과 비슷합니다.  
+ ph x="1" /&gt; Native Client ODBC 드라이버는 CHAR 및 WCHAR 변환을 수행하는 여러 가지 방법을 제공합니다. 논리는 BLOB 조작(varchar(max), nvarchar(max), …)과 비슷합니다.  
   
--   데이터를 저장 하거나와 바인딩하는 경우 지정된 된 버퍼에 잘린 **SQLBindCol** 또는 **SQLBindParameter**합니다.  
+-   데이터를 저장 하거나와 바인딩하는 경우 지정된 된 버퍼에 잘립니다 **SQLBindCol** 하거나 **SQLBindParameter**합니다.  
   
--   바인딩하지 않는 경우 사용 하 여 데이터를 청크로 검색할 수 있습니다 **SQLGetData** 및 **SQLParamData**합니다.  
+-   바인딩하지 않는 하는 경우에 사용 하 여 데이터를 청크로 검색할 수 있습니다 **SQLGetData** 하 고 **SQLParamData**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

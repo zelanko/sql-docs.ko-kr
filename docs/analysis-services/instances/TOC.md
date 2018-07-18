@@ -1,5 +1,6 @@
 # [인스턴스 관리](analysis-services-instance-management.md)  
 # [설치](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [Analysis Services 누적 업데이트 빌드 버전 확인](analysis-services-component-version.md)
 # [설치 후 구성](post-install-configuration-analysis-services.md)  
 ## [Windows 방화벽 구성](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [서비스 계정 구성](configure-service-accounts-analysis-services.md)  

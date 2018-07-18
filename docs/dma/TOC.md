@@ -2,7 +2,8 @@
 
 # [Data Migration Assistant의 새로운 기능](dma-whatsnew.md)
 # [SQL Server 마이그레이션 평가](dma-assesssqlonprem.md)
-# [SQL Server 마이그레이션](dma-migrateonpremsql.md)
+# [SQL Server를 상위 버전으로 업그레이드](dma-migrateonpremsql.md)
+# [SQL Server를 Azure SQL Database로 마이그레이션](dma-migrateonpremsqltosqldb.md)
 # [SQL Server 로그인 마이그레이션](dma-migrateserverlogins.md)
 # [Data Migration Assistant 모범 사례](dma-bestpractices.md)
 # [평가 보고서 통합](dma-consolidatereports.md)

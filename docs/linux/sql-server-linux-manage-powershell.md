@@ -1,6 +1,6 @@
 ---
-title: 관리 SQL Server PowerShell 사용한 linux | Microsoft Docs
-description: 이 문서에서는 PowerShell을 사용 하 여 Linux에서 SQL Server와 Windows에 대 한 개요를 제공 합니다.
+title: PowerShell 사용 하 여 Linux에서 SQL Server 관리 | Microsoft Docs
+description: 이 문서에서는 Linux의 SQL Server를 사용 하 여 Windows에서 PowerShell을 사용 하는 개요를 제공 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,50 +12,50 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 54892a66cea7643d708bcd7ba5cf1b6b07d4523f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: a1b6b4bb4c99a3b991120d57b8cf25cc91686957
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323674"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982145"
 ---
-# <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell을 사용 하 여 Linux에서 SQL Server 관리
+# <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Linux의 SQL Server를 관리 하는 Windows에서 PowerShell을 사용 하 여
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 소개 [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) 과정을 안내 하는 몇 가지 예 SQL Server 2017 Linux에서 함께 사용 하는 방법에 대 한 합니다. PowerShell SQL Server에 대 한 지원은 windows에서 현재 사용할 수 있는 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터에 있는 경우에 사용할 수 있도록 합니다.
+이 문서에서는 소개 [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) Linux의 SQL Server 2017을 사용 하 여 사용 하는 방법에 몇 가지 예가 단계적으로 안내 합니다. SQL Server에 대 한 PowerShell 지원, Windows에서 현재 사용할 수 이므로 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터의 경우 사용할 수 있습니다.
 
-## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows에서 최신 버전의 SQL PowerShell 설치
+## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows에서 SQL PowerShell의 최신 버전을 설치 합니다.
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) windows에 포함 된 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)합니다. SQL Server를 사용할 때는 가장 최신 버전의 SSMS 및 SQL PowerShell를 항상 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 최적화 된와 현재 SQL Server on 2017 Linux 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우.
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) Windows에 포함 되어 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)합니다. SQL Server에서 작업할 때 항상 최신 버전의 SSMS 및 SQL PowerShell를 사용 해야 합니다. 최신 버전의 SSMS 액세스에 최적화 된 및 현재와 함께 SQL Server 2017 on Linux 지속적으로 업데이트 됩니다. 다운로드 하 고 최신 버전 설치를 참조 하세요 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)합니다. 최신, 최신 버전의 SSMS 묻는 새 버전을 다운로드할 수 있으면 됩니다.
 
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항
 
-읽기는 [알려진 문제](sql-server-linux-release-notes.md) for SQL Server 2017 Linux.
+읽기를 [알려진 문제](sql-server-linux-release-notes.md) Linux의 SQL Server 2017에 대 한 합니다.
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>PowerShell을 시작 하 고 가져올는 *sqlserver* 모듈
 
-Windows에서 PowerShell을 시작 하 여 시작 하겠습니다. 열기는 *명령 프롬프트* 입력 하 여 Windows 컴퓨터에서 **PowerShell** 새 Windows PowerShell 세션을 시작 합니다.
+Windows에서 PowerShell을 시작 하 여 시작 해 보겠습니다. 열기를 *명령 프롬프트* 입력 하 여 Windows 컴퓨터에서 **PowerShell** 새 Windows PowerShell 세션을 시작 합니다.
 
 ```
 PowerShell
 ```
 
-라는 Windows PowerShell 모듈을 제공 하는 SQL Server **SqlServer** PowerShell 환경 또는 스크립트로 (SQL Server 공급자 및 cmdlet) SQL Server 구성 요소를 가져오는 데 사용할 수 있습니다.
+SQL Server 라는 Windows PowerShell 모듈을 제공 **SqlServer** PowerShell 환경 또는 스크립트로 SQL Server 구성 (SQL Server 공급자 및 cmdlet)를 가져오는 데 사용할 수 있습니다.
 
-복사 하 고 가져오려는 PowerShell 프롬프트에서 다음 명령을 붙여는 **SqlServer** 현재 PowerShell 세션에 모듈:
+복사 하 고 가져오는 PowerShell 프롬프트에서 다음 명령을 붙여 합니다 **SqlServer** 현재 PowerShell 세션에 모듈:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-확인 하려면 PowerShell 프롬프트에서 다음 명령을 입력 된 **SqlServer** 모듈을 올바르게 가져왔는지를:
+확인 하려면 PowerShell 프롬프트에서 다음 명령을 입력 합니다 **SqlServer** 모듈을 제대로 가져온:
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell에는 다음 출력과 유사한 정보가 표시 되어야 합니다.
+PowerShell은 다음 출력과 유사한 정보가 표시 되어야 합니다.
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -66,15 +66,15 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server에 연결 하 고 서버 정보 가져오기
 
-SQL Server 2017 Linux에서 인스턴스에 연결의 서버 속성을 표시 하 windows PowerShell을 사용 하겠습니다.
+Linux에서 SQL Server 2017 인스턴스에 연결 하 고 몇 개의 서버 속성을 표시을 Windows에서 PowerShell을 사용해 보겠습니다.
 
-복사한 PowerShell 프롬프트에서 다음 명령을 붙여 넣습니다. 이러한 명령을 실행할 때 PowerShell 수행 합니다.
-- 표시는 *Windows PowerShell 자격 증명 요청* 자격 증명을 묻는 대화 상자 (*SQL 사용자 이름* 및 *SQL 암호*) SQL Server 2017 연결할 Linux에서 인스턴스
-- SQL Server 관리 개체 (SMO) 어셈블리를 로드 합니다.
-- 인스턴스를 만들고는 [서버](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) 개체
-- 에 연결 된 **서버** 몇 가지 속성을 표시 하 고
+복사 하 고 PowerShell 프롬프트에서 다음 명령을 붙여 넣습니다. 이러한 명령은 실행 하면 PowerShell 됩니다.
+- 표시 된 *Windows PowerShell 자격 증명 요청* 자격 증명을 묻는 대화 (*SQL 사용자 이름* 하 고 *SQL 암호*) SQL Server 2017에 연결할 Linux 기반 인스턴스
+- SQL Server Management Objects (SMO) 어셈블리를 로드 합니다.
+- 인스턴스를 만듭니다는 [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) 개체
+- 에 연결 합니다 **Server** 몇 가지 속성을 표시 하 고
 
-대체 **\<your_server_instance\>** Linux에서 SQL Server 2017 인스턴스의 호스트 이름 또는 IP 주소입니다.
+대체 **\<your_server_instance\>** IP 주소 또는 Linux에서 SQL Server 2017 인스턴스의 호스트 이름입니다.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -95,7 +95,7 @@ $server.Information | Select-Object Edition, HostPlatform, HostDistribution | Fo
 # done
 ```
 
-PowerShell에는 다음 출력과 유사한 정보가 표시 되어야 합니다.
+PowerShell은 다음 출력과 유사한 정보가 표시 되어야 합니다.
 
 ```
 Edition          : Developer Edition (64-bit)
@@ -103,18 +103,18 @@ HostPlatform     : Linux
 HostDistribution : Ubuntu
 ```
 > [!NOTE]
-> 이러한 값에 대해 아무 항목도 표시 하는 경우 대상 SQL Server 인스턴스에 대 한 연결 가장 실패할 수 있습니다. SQL Server Management Studio에서 연결 하려면 동일한 연결 정보를 사용할 수 있는지 확인 합니다. 그런 다음 [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection)(연결 문제 해결 권장 사항)를 검토합니다.
+> 아무 것도 이러한 값에 대 한 표시를 하는 경우 대상 SQL Server 인스턴스에 대 한 연결 가능성이 실패 했습니다. SQL Server Management Studio에서 연결 하려면 동일한 연결 정보를 사용할 수 있습니다 있는지 확인 합니다. 그런 다음 [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection)(연결 문제 해결 권장 사항)를 검토합니다.
 
 ## <a name="examine-sql-server-error-logs"></a>SQL Server 오류 로그를 검사 합니다.
 
-이제 오류 로그를 검사 하는 Windows에서 PowerShell을 사용 하 여 Linux에서 SQL Server 2017 인스턴스에 연결 합니다. 또한 사용 합니다는 **Out-gridview** cmdlet에서 오류 정보를 표시할 그리드 뷰 디스플레이에 기록 합니다.
+오류 로그를 검사 하는 Windows에서 PowerShell 사용 하 여 Linux에서 SQL Server 2017 인스턴스 연결 하겠습니다. 사용 합니다 **Out-gridview** 표 보기에서에서 로그 오류에서 정보를 표시 하는 cmdlet입니다.
 
-복사한 PowerShell 프롬프트에서 다음 명령을 붙여 넣습니다. 실행 하는 데 몇 분 정도 걸릴 수 있습니다. 이 명령은 다음을 수행 합니다.
-- 표시는 *Windows PowerShell 자격 증명 요청* 자격 증명을 묻는 대화 상자 (*SQL 사용자 이름* 및 *SQL 암호*) SQL Server 2017 연결할 Linux에서 인스턴스
-- 사용 하 여는 **Get SqlErrorLog** cmdlet의 SQL Server 2017 Linux 인스턴스에 연결 하 고 오류를 검색할 이후 로그 **어제**
-- 출력을 파이프는 **Out-gridview** cmdlet
+복사 하 고 PowerShell 프롬프트에서 다음 명령을 붙여 넣습니다. 이러한 실행 하려면 몇 분 정도 걸릴 수 있습니다. 이 명령은 다음을 수행 합니다.
+- 표시 된 *Windows PowerShell 자격 증명 요청* 자격 증명을 묻는 대화 (*SQL 사용자 이름* 하 고 *SQL 암호*) SQL Server 2017에 연결할 Linux 기반 인스턴스
+- 사용 된 **Get SqlErrorLog** cmdlet은 Linux에서 SQL Server 2017 인스턴스에 연결 하 고 오류를 검색 이후 로그 **어제**
+- 출력을 파이프 합니다 **Out-gridview** cmdlet
 
-대체 **\<your_server_instance\>** Linux에서 SQL Server 2017 인스턴스의 호스트 이름 또는 IP 주소입니다.
+대체 **\<your_server_instance\>** IP 주소 또는 Linux에서 SQL Server 2017 인스턴스의 호스트 이름입니다.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -125,5 +125,5 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

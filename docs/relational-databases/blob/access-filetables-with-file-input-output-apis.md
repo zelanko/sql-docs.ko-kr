@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +16,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e222e28f0a669985185756bc5ef77bf1d127fa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d8076d9b28014a790a45ba902134e2ac7eac112
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922339"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798258"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,25 +110,25 @@ ms.locfileid: "32922339"
 |기능|지원됨|주석|  
 |----------------|---------------|--------------|  
 |**Oplock**|예|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
-|**확장 특성**|아니오||  
-|**구문 재분석 지점**|아니오||  
-|**영구 ACL**|아니오||  
-|**명명된 스트림**|아니오||  
+|**확장 특성**|아니요||  
+|**구문 재분석 지점**|아니요||  
+|**영구 ACL**|아니요||  
+|**명명된 스트림**|아니요||  
 |**스파스 파일**|예|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 저장소에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
 |**압축**|예||  
 |**암호화**|예||  
-|**TxF**|아니오||  
-|**파일 ID**|아니오||  
-|**개체 ID**|아니오||  
-|**심볼 링크**|아니오||  
-|**하드 링크**|아니오||  
-|**짧은 이름**|아니오||  
-|**디렉터리 변경 알림**|아니오||  
+|**TxF**|아니요||  
+|**파일 ID**|아니요||  
+|**개체 ID**|아니요||  
+|**심볼 링크**|아니요||  
+|**하드 링크**|아니요||  
+|**짧은 이름**|아니요||  
+|**디렉터리 변경 알림**|아니요||  
 |**바이트 범위 잠금**|예|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
-|**메모리 매핑된 파일**|아니오||  
+|**메모리 매핑된 파일**|아니요||  
 |**취소 I/O**|예||  
-|**보안**|아니오|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
-|**USN 저널**|아니오|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
+|**보안**|아니요|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
+|**USN 저널**|아니요|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   

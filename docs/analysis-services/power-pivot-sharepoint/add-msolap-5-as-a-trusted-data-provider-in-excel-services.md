@@ -1,5 +1,5 @@
 ---
-title: Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 MSOLAP.5 추가 | Microsoft Docs
+title: MSOLAP.5를 Excel Services에서 신뢰할 수 있는 데이터 공급자로 추가 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3ba11e1242a7deb63e19221985e1e56f83acb94
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026110"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979455"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34026110"
   
  각 Excel Services 서비스 응용 프로그램에 대해 한 번씩 이 단계를 수행해야 합니다.  
   
- SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버나 Excel Services 서버처럼 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 요청을 처리하는 각 실제 서버의 컴퓨터에는 OLE DB 공급자가 설치되어 있어야 합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에는 항상 OLE DB 공급자가 포함되지만 Excel Services가 실행되는 컴퓨터에 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 없으면 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
+ SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버나 Excel Services 서버처럼 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 요청을 처리하는 각 실제 서버의 컴퓨터에는 OLE DB 공급자가 설치되어 있어야 합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에는 항상 OLE DB 공급자가 포함되지만 Excel Services가 실행되는 컴퓨터에 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 없으면 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Excel 서비스에 신뢰할 수 있는 공급자 추가  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
@@ -16,12 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d31a086ccc3cf60d245db67007a9cb2fe26dae1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aff91dbc7d6d67d8a93a88a758276394b8b9b34c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919518"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772188"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +52,13 @@ ms.locfileid: "32919518"
   
 |기능|파일 서버 및 데이터베이스 솔루션|FILESTREAM 솔루션|FileTable 솔루션|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**단일화된 관리 태스크**|아니오|예|**예**|  
-|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니오|예|**예**|  
-|**통합 보안 모델**|아니오|예|**예**|  
-|**FILESTREAM 데이터의 현재 위치 업데이트**|예|아니오|**예**|  
-|**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|아니오|아니오|**예**|  
-|**Windows 응용 프로그램 호환성**|예|아니오|**예**|  
-|**파일 특성에 대한 관계형 액세스**|아니오|아니오|**예**|  
+|**단일화된 관리 태스크**|아니요|예|**예**|  
+|**단일 서비스 집합**: 검색, 보고, 쿼리 등|아니요|예|**예**|  
+|**통합 보안 모델**|아니요|예|**예**|  
+|**FILESTREAM 데이터의 현재 위치 업데이트**|예|아니요|**예**|  
+|**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|아니요|아니요|**예**|  
+|**Windows 응용 프로그램 호환성**|예|아니요|**예**|  
+|**파일 특성에 대한 관계형 액세스**|아니요|아니요|**예**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 및 RBS(Remote BLOB Store) 비교  
  이러한 두 기능에 대한 비교 내용은 RBS 팀의 블로그 게시물 [SQL Server 원격 BLOB 저장소 및 FILESTREAM 기능 비교](http://go.microsoft.com/fwlink/?LinkId=210317)를 참조하세요.  

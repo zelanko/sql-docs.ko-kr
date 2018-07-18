@@ -1,27 +1,23 @@
 ---
-title: 설치 Distributed Replay-개요 | Microsoft Docs
+title: Distributed Replay 설치-개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40f3f702f887593ed047d5e7307a02e0d31a4820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69a57a42ac3fcd9b54952cca7bdb90a70e3422a9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067500"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36874871"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ ms.locfileid: "33067500"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)|Distributed Replay를 설치하기 위한 요구 사항을 나열하는 절차 항목입니다.|  
 |[Distributed Replay 설치](../../tools/distributed-replay/install-distributed-replay.md)|설치 마법사를 사용한 Distributed Replay 설치, 무인 설치를 실행하기 위한 샘플 구문 및 설치 매개 변수, 구성 파일을 통해 Distributed Replay를 실행하기 위한 예제 구문 및 설치 매개 변수를 제공하는 절차 항목입니다.|  

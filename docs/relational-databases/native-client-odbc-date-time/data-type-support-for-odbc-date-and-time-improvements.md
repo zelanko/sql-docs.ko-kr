@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431292"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상에 대 한 데이터 형식 지원
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "35702634"
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-월-일 h:mm: ss [.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-월-일 [hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
   
  날짜/시간 리터럴에 대한 ODBC 이스케이프 시퀀스에는 변경 내용이 없습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "35702634"
   
  현재 드라이버는 문장 부호 문자 앞뒤에 추가 공백을 허용하며, 시간과 시간대 오프셋 사이의 공백은 선택 사항입니다. 그러나 이 부분은 향후 릴리스에서 변경될 수 있으므로 현재 동작에 의존하도록 응용 프로그램을 작성하면 안 됩니다.  
   
-## <a name="data-formats-data-structures"></a>데이터 형식: 데이터 구조  
+## <a name="data-formats-data-structures"></a>데이터 구조 데이터 형식:  
  아래 설명된 구조에서 ODBC는 일반 달력에서 비롯된 다음과 같은 제약 사항을 지정합니다.  
   
 -   월 범위는 1에서 12까지입니다.  
@@ -140,7 +140,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 경우는 **timezone_hour** 가 음수 이면는 **timezone_minute** 음수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 가 양수 이면는 **timezone_minute** 양수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 가 0 인 s**timezone_minute** + 59 까지의-59에서 값에 사용할 수 있습니다.  
+ 경우는 **timezone_hour** 가 음수 이면 합니다 **timezone_minute** 음수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 이 양수인 경우 합니다 **timezone_minute** 양수 여야 합니다 또는 0입니다. 경우는 **timezone_hour** 가 0 이면 s**timezone_minute** -59에서 + 59 까지의 모든 값을 가질 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

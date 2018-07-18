@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6c3da6431e278ff05548b0b93e2847335c4e50b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 80c0a03a6eeaa33977e5152a4b4da24b17abf8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36091856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212483"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. ph x="1" /&gt; 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  
   
 ## <a name="the-help-interface"></a>도움말 인터페이스  
  **목차** 및 **인덱스** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자에게 익숙한 기능과 인터페이스를 제공하지만, 다른 옵션은 다음과 같습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "36091856"
   
      나중에 쉽게 액세스할 수 있도록 사용자 항목 책갈피를 저장합니다.  
   
- 도움말에 대한 도움말([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 도움말)은 도움말 뷰어에 대한 설명서를 볼 수 있는 링크를 제공하지만 항목은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서와 별개의 컬렉션에 있습니다. 도움말 뷰어에 대한 자세한 내용을 보려면 **온라인 설명서의 도움말 메뉴에서** 도움말에 대한 도움말 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 선택합니다. 온라인 설명서 컬렉션에는 도움말 항목의 도움말 컬렉션에 추가 하는 방법에 대 한 정보를 참조 하십시오. [추가 / SQL Server 제품 설명서를 제거](../2014-toc/books-online-for-sql-server-2014.md)합니다.  
+ 도움말에 대한 도움말([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 도움말)은 도움말 뷰어에 대한 설명서를 볼 수 있는 링크를 제공하지만 항목은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서와 별개의 컬렉션에 있습니다. 도움말 뷰어에 대한 자세한 내용을 보려면 **온라인 설명서의 도움말 메뉴에서** 도움말에 대한 도움말 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 선택합니다. Books Onl 온라인 설명서 컬렉션에 도움말 항목의 도움말 컬렉션에 추가 하는 방법에 대 한 내용은 [SQL Server 제품 설명서를 제거 또는 추가](../2014-toc/books-online-for-sql-server-2014.md)합니다.  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN 온라인 및 SQL Server 커뮤니티  
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말을 사용하면 정보를 얻기 위해 웹상의 MSDN 온라인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관련 커뮤니티에 연결할 수도 있습니다. 다음 작업을 수행할 수 있습니다.  

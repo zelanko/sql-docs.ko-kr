@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2b5a16ac487b52f3592743481e0013b4bf44856
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026540"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979585"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 가용성 및 재해 복구
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34026540"
   
  ![sharepoint 2010에서에서 powerpivot 가용성](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010에서에서 powerpivot 가용성")  
   
--   **(1)** 웹 프런트 엔드 서버입니다. 각 서버에서 데이터 공급자를 설치합니다. 자세한 내용은 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)을 참조하세요.  
+-   **(1)** 웹 프런트 엔드 서버입니다. 각 서버에서 데이터 공급자를 설치합니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.  
   
 -   **(2)** 두 개의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 및 **(4)** Windows Service **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 는 SharePoint 응용 프로그램 서버에 설치되어 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34026540"
 ##  <a name="bkmk_sql_server_technologies"></a> PowerPivot 서비스 응용 프로그램 데이터베이스 및 SQL Server 가용성 및 복구 기술  
  SharePoint 고가용성 계획에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 응용 프로그램 데이터베이스를 포함합니다. 이 데이터베이스 기본 이름은 `DefaultPowerPivotServiceApplicationDB-<GUID>`입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 기술과, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 데이터베이스에 사용할 때의 권장 사항에 대한 요약입니다. 자세한 내용은 [SharePoint 데이터베이스에 지원되는 고가용성 및 재해 복구 옵션(SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)을 참조하세요.  
   
-||설명|  
+||주석|  
 |-|--------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (4) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 동기화 미러링.|지원되나 이 옵션은 사용하지 않는 것이 좋습니다. 동기-커밋 모드에서 Always On을 사용하는 것이 좋습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 동기-커밋 모드의|지원 및 권장합니다.|  

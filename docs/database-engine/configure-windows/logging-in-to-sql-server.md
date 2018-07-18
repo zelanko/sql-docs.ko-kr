@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867718"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324437"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "32867718"
 |사용 중인 포트(이 경우 2828)를 지정하여 기본 TCP 포트에서 수신 대기하지 않는 기본 인스턴스에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 가 기본 포트(1433)에서 수신 대기하는 경우 이 항목은 필요하지 않습니다.|APPHOST,2828|  
 |지정된 TCP 포트(이 경우 2828)에서 명명된 인스턴스에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 호스트 컴퓨터에서 실행되지 않는 경우 대개 이 항목은 필요하지 않습니다.|APPHOST,2828|  
 |IP 주소와 사용 중인 포트(이 경우 2828)를 지정하여 기본 TCP 포트에서 수신 대기하지 않는 기본 인스턴스에 연결합니다.|192.168.17.28,2828|  
-|IP 주소와 사용 중인 포트(이 경우 2828)를 지정하여 명명된 인스턴스에 연결합니다.|192.168.17.28,2828|  
+|IP 주소와 사용 중인 포트(이 경우 2828)를 지정하여 명명된 인스턴스에 연결합니다.|192.168.17.28\SQLEXPRESS,2828|  
 |TCP 연결을 강제 적용하여 이름별로 기본 인스턴스에 연결합니다.|tcp:APPHOST|  
 |TCP 연결을 강제 적용하여 이름별로 명명된 인스턴스에 연결합니다.|tcp:APPHOST\SQLEXPRESS|  
 |명명된 파이프 연결을 지정하여 기본 인스턴스에 연결합니다.|\\\APPHOST\pipe\unit\app|  

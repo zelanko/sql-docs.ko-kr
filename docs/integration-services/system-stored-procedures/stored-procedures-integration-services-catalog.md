@@ -16,12 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bc88e4e54e915851f065309e86bffef3c00484a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: dd289185d211277dc7a66574640bf2d2b053e35f
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402415"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872783"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>저장 프로시저(Integration Services 카탈로그)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "35402415"
  [catalog.move_environment&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그 내에서 폴더 간에 환경을 이동합니다.  
   
- [catalog.move_project &#40;&#40;SSISDB 데이터베이스&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+ [catalog.move_project &#40;&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그 내에서 폴더 간에 프로젝트를 이동합니다.  
   
  [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md)  

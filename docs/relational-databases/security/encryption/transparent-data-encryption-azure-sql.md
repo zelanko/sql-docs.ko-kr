@@ -12,20 +12,22 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 05/08/2018
-ms.author: rebeccaz
+ms.date: 07/09/2018
+ms.author: aliceku
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1f545dcc5ea5ef018a6e2aaa750305245c211e69
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 49a3745e67a51ee8f5eb9625d518328f61593514
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695534"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934855"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-투명한 데이터 암호화(TDE)를 통해 악의적인 활동의 위협으로부터 Azure SQL Database 및 Azure 데이터 웨어하우스를 보호할 수 있습니다. 이 기능은 응용 프로그램을 변경할 필요 없이 미사용 데이터베이스, 연결된 백업 및 트랜잭션 로그 파일의 실시간 암호화 및 암호 해독을 수행합니다. 기본적으로 TDE는 새로 배포된 모든 Azure SQL 데이터베이스에서 활성화되지만 이전 데이터베이스에서는 수동으로 활성화해야 할 수 있습니다.  
+투명한 데이터 암호화(TDE)를 통해 악의적인 활동의 위협으로부터 Azure SQL Database 및 Azure 데이터 웨어하우스를 보호할 수 있습니다. 이 기능은 응용 프로그램을 변경할 필요 없이 미사용 데이터베이스, 연결된 백업 및 트랜잭션 로그 파일의 실시간 암호화 및 암호 해독을 수행합니다. 새로 배포된 모든 Azure SQL Database에 대해 TDE는 기본으로 사용됩니다. TDE를 사용하여 SQL Database의 논리 **master** 데이터베이스를 암호화할 수 없습니다.  **master** 데이터베이스에는 사용자 데이터베이스에서 TDE 작업을 수행하는 데 필요한 개체가 포함됩니다.
+
+TDE는 이전 데이터베이스 또는 Azure SQL Data Warehouse에 대해 수동으로 사용되어야 합니다.  
 
 투명한 데이터 암호화는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 저장소를 암호화합니다. 이 데이터베이스 암호화 키는 투명한 데이터 암호화 보호기에 의해 보호됩니다. 보호기는 서비스 관리 인증서(서비스 관리 투명한 데이터 암호화) 또는 Azure Key Vault에 저장된 비대칭 키(Bring Your Own Key) 중 하나입니다. 서버 수준에서 투명한 데이터 암호화 보호기를 설정합니다. 
 

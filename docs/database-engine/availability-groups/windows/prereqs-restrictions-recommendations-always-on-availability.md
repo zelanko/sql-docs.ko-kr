@@ -1,7 +1,7 @@
 ---
 title: 필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769739"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934905"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769739"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|시스템이 도메인 컨트롤러가 아닌지 확인하세요.|가용성 그룹은 도메인 컨트롤러에서 지원되지 않습니다.|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 컴퓨터에서 Windows Server 2012 이상 버전이 실행되고 있어야 합니다.|[SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 컴퓨터가 WSFC의 노드인지 확인합니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|WSFC에 가용성 그룹 구성을 지원할 수 있는 노드가 충분한지 확인합니다.|클러스터 노드는 지정된 가용성 그룹에 대해 하나의 가용성 복제본만 호스팅할 수 있습니다. 지정된 클러스터 노드에서는 하나 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 여러 가용성 그룹의 가용성 복제본을 호스팅할 수 있습니다.<br /><br /> 계획된 가용성 그룹의 가용성 복제본을 지원하는 데 필요한 클러스터 노드 수를 데이터베이스 관리자에게 문의하세요.<br /><br /> [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)을 참조하세요.|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|WSFC에 가용성 그룹 구성을 지원할 수 있는 노드가 충분한지 확인합니다.|클러스터 노드는 가용성 그룹에 복제본 1개를 호스트할 수 있습니다. 동일한 노드는 동일한 가용성 그룹에서 복제본 2개를 호스트할 수 없습니다. 클러스터 노드는 각 그룹의 복제본 1개를 사용하여 여러 가용성 그룹에 참여할 수 있습니다. <br /><br /> 계획된 가용성 그룹의 가용성 복제본을 지원하는 데 필요한 클러스터 노드 수를 데이터베이스 관리자에게 문의하세요.<br /><br /> [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)을 참조하세요.|  
+
   
 > [!IMPORTANT]  
 >  또한 시스템이 가용성 그룹에 연결되도록 올바르게 구성되었는지 확인합니다. 자세한 내용은 [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)을 참조하세요.  
@@ -170,8 +171,10 @@ ms.locfileid: "34769739"
   
     -   지정된 스레드가 얼마 동안 유휴 상태인 경우 일반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스레드 풀로 반환됩니다. 일반적으로 비활성 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 그러나 마지막 활동에 따라 유휴 스레드가 더 길게 유지될 수 있습니다.  
 
-    - SQL Server 인스턴스에서는 보조 복제본에 대한 병렬 다시 실행을 위해 최대 100개의 스레드를 사용합니다. 각 데이터베이스는 최대 총 CPU 코어 수의 절반을 사용하지만 데이터베이스당 스레드는 16개까지 사용됩니다. 단일 인스턴스에 필요한 총 스레드 수가 100개를 넘으면 SQL Server에서는 나머지 모든 데이터베이스에 대해 단일 다시 실행 스레드를 사용합니다. 다시 실행 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 
-
+    -   SQL Server 인스턴스에서는 보조 복제본에 대한 병렬 다시 실행을 위해 최대 100개의 스레드를 사용합니다. 각 데이터베이스는 최대 총 CPU 코어 수의 절반을 사용하지만 데이터베이스당 스레드는 16개까지 사용됩니다. 단일 인스턴스에 필요한 총 스레드 수가 100개를 넘으면 SQL Server에서는 나머지 모든 데이터베이스에 대해 단일 다시 실행 스레드를 사용합니다. 직렬 다시 실행 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 
+    
+    > [!NOTE]
+    > 데이터베이스는 오름차순 데이터베이스 ID를 기준으로 단일 스레드가 됩니다. 따라서, 사용할 수 있는 작업자 스레드보다 더 많은 가용성 그룹 데이터베이스를 호스트하는 SQL Server 인스턴스에 대해 데이터베이스 생성 순서를 고려해야 합니다. 예를 들어 가용성 그룹을 조인한 7번째 데이터베이스를 기점으로 모든 데이터베이스는 32개 이상의 CPU 코어가 사용된 시스템에서 각 데이터베이스의 실제 다시 실행 워크로드와 관계없이 직렬 다시 실행 모드가 됩니다. 병렬 다시 실행이 필요한 데이터베이스는 가용성 그룹에 먼저 추가되어야 합니다.    
   
 -   또한 가용성 그룹은 다음과 같이 비공유 스레드를 사용합니다.  
   

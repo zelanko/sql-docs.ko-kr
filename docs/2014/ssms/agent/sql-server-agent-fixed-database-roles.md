@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, roles
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7890daf6c0ff4b77bbb8bb44e29d7921a58dd612
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 488132684547dcfbfc69a7c6479cc6ec7e42359e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36181488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151874"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 **에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
@@ -60,22 +60,22 @@ ms.locfileid: "36181488"
 |속성 보기|아니요|예|예|아니요|  
 |실행/중지/시작|해당 사항 없음|예|해당 사항 없음|해당 사항 없음|  
 |작업 기록 보기|해당 사항 없음|예|해당 사항 없음|해당 사항 없음|  
-|작업 기록 삭제|해당 사항 없음|더 <sup>4</sup>|해당 사항 없음|해당 사항 없음|  
+|작업 기록 삭제|해당 사항 없음|이상 <sup>4</sup>|해당 사항 없음|해당 사항 없음|  
 |연결/분리|해당 사항 없음|해당 사항 없음|예|해당 사항 없음|  
   
  <sup>1</sup> 작업 소유권을 변경할 수 없습니다.  
   
- <sup>2</sup> 에서 사용 하기 위해 사용 가능한 연산자 목록을 가져올 수 **sp_notify_operator** 및 **작업 속성** Management Studio의 대화 상자.  
+ <sup>2</sup> 에서 사용 하기 위해 사용할 수 있는 운영자 목록을 가져올 수 있습니다 **sp_notify_operator** 하며 **작업 속성** Management Studio 대화 상자.  
   
- <sup>3</sup> 목록 에서만 사용할 수 있는 프록시는 **작업 단계 속성** Management Studio의 대화 상자.  
+ <sup>3</sup> 에서만 사용할 수 있는 프록시를 나열 합니다 **작업 단계 속성** Management Studio 대화 상자.  
   
- <sup>4</sup> 멤버인 **SQLAgentUserRole** 해야 명시적으로 EXECUTE 권한을 부여에 **sp_purge_jobhistory** 자신이 소유한 작업에 대 한 작업 기록을 삭제 하려면. 이 멤버는 다른 작업에 대한 작업 기록은 삭제할 수 없습니다.  
+ <sup>4</sup> 멤버인 **SQLAgentUserRole** 명시적으로 권한을 부여 해야 합니다 EXECUTE에 **sp_purge_jobhistory** 자신이 소유한 작업에 대 한 작업 기록을 삭제 하려면. 이 멤버는 다른 작업에 대한 작업 기록은 삭제할 수 없습니다.  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole 사용 권한  
  **SQLAgentReaderRole** 에는 모든 **SQLAgentUserRole** 사용 권한 뿐만 아니라 사용 가능한 다중 서버 작업, 해당 속성 및 해당 기록 목록을 볼 수 있는 권한이 포함됩니다. 이 역할의 멤버는 또한 자신이 소유하는 작업과 작업 일정뿐만 아니라 사용 가능한 모든 작업과 작업 일정 및 해당 속성 목록을 볼 수 있습니다. **SQLAgentReaderRole** 멤버는 자신이 소유하지 않는 작업에 대한 액세스를 얻기 위해 작업 소유권을 변경할 수 없습니다. **SQLAgentReaderRole** 멤버에게는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기의 **작업**노드만 표시됩니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabaseroles** 멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다 **.** **SQLAgentReaderRole** 의 멤버는 자동으로 **SQLAgentUserRole**의 멤버가 됩니다. 즉, **SQLAgentReaderRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
+>  ****[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabaseroles**멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다. **SQLAgentReaderRole** 의 멤버는 자동으로 **SQLAgentUserRole**의 멤버가 됩니다. 즉, **SQLAgentReaderRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
   
  다음 표에서는 **에이전트 개체에 대한** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한을 요약합니다.  
   
@@ -88,16 +88,16 @@ ms.locfileid: "36181488"
 |속성 편집|아니요|예(소유한 작업만 해당)|아니요|예(소유한 작업만 해당)|아니요|  
 |실행/중지/시작|해당 사항 없음|예(소유한 작업만 해당)|아니요|해당 사항 없음|해당 사항 없음|  
 |작업 기록 보기|해당 사항 없음|예|예|해당 사항 없음|해당 사항 없음|  
-|작업 기록 삭제|해당 사항 없음|더 <sup>4</sup>|아니요|해당 사항 없음|해당 사항 없음|  
+|작업 기록 삭제|해당 사항 없음|이상 <sup>4</sup>|아니요|해당 사항 없음|해당 사항 없음|  
 |연결/분리|해당 사항 없음|해당 사항 없음|해당 사항 없음|예(소유한 작업만 해당)|해당 사항 없음|  
   
  <sup>1</sup> 작업 소유권을 변경할 수 없습니다.  
   
- <sup>2</sup> 에서 사용 하기 위해 사용 가능한 연산자 목록을 가져올 수 **sp_notify_operator** 및 **작업 속성** Management Studio의 대화 상자.  
+ <sup>2</sup> 에서 사용 하기 위해 사용할 수 있는 운영자 목록을 가져올 수 있습니다 **sp_notify_operator** 하며 **작업 속성** Management Studio 대화 상자.  
   
- <sup>3</sup> 목록 에서만 사용할 수 있는 프록시는 **작업 단계 속성** Management Studio의 대화 상자.  
+ <sup>3</sup> 에서만 사용할 수 있는 프록시를 나열 합니다 **작업 단계 속성** Management Studio 대화 상자.  
   
- <sup>4</sup> 멤버인 **SQLAgentReaderRole** 해야 명시적으로 EXECUTE 권한을 부여에 **sp_purge_jobhistory** 자신이 소유한 작업에 대 한 작업 기록을 삭제 하려면. 이 멤버는 다른 작업에 대한 작업 기록은 삭제할 수 없습니다.  
+ <sup>4</sup> 멤버인 **SQLAgentReaderRole** 명시적으로 권한을 부여 해야 합니다 EXECUTE에 **sp_purge_jobhistory** 자신이 소유한 작업에 대 한 작업 기록을 삭제 하려면. 이 멤버는 다른 작업에 대한 작업 기록은 삭제할 수 없습니다.  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 사용 권한  
  **SQLAgentOperatorRole** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 가장 사용 권한이 많은 역할입니다. 여기에는 **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 모든 사용 권한이 포함됩니다. 이 역할의 멤버는 또한 운영자 및 프록시의 속성을 볼 수 있으며 서버에서 사용 가능한 프록시와 경고를 열거할 수 있습니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "36181488"
  **개체 탐색기의**작업 **,** 경고 **,** 운영자 **및** 프록시 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 **SQLAgentOperatorRole**의 멤버에게 표시됩니다. 이 역할의 멤버에게는 **오류 로그** 노드만 표시되지 않습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabaseroles** 멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다 **.** **SQLAgentOperatorRole** 의 멤버는 자동으로 **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 멤버가 됩니다. 즉, **SQLAgentOperatorRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **또는** SQLAgentReaderRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
+>  ****[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agentdatabaseroles**멤버에 프록시 액세스 권한을 부여하기 전에 보안 문자를 신중히 고려해야 합니다. **SQLAgentOperatorRole** 의 멤버는 자동으로 **SQLAgentUserRole** 및 **SQLAgentReaderRole**의 멤버가 됩니다. 즉, **SQLAgentOperatorRole** 의 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **또는** SQLAgentReaderRole **에 부여된 모든** 에이전트 프록시에 대한 액세스를 가지며 이러한 프록시를 사용할 수 있습니다.  
   
  다음 표에서는 **에이전트 개체에 대한** SQLAgentOperatorRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한을 요약합니다.  
   
@@ -123,13 +123,13 @@ ms.locfileid: "36181488"
 |작업 기록 삭제|해당 사항 없음|해당 사항 없음|예|아니요|해당 사항 없음|해당 사항 없음|  
 |연결/분리|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|예(소유한 작업만 해당)|해당 사항 없음|  
   
- <sup>1</sup> 에서 사용 하기 위해 사용 가능한 연산자 목록을 가져올 수 **sp_notify_operator** 및 **작업 속성** Management Studio의 대화 상자.  
+ <sup>1</sup> 에서 사용 하기 위해 사용할 수 있는 운영자 목록을 가져올 수 있습니다 **sp_notify_operator** 하며 **작업 속성** Management Studio 대화 상자.  
   
  <sup>2</sup> 작업 소유권을 변경할 수 없습니다.  
   
- <sup>3</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 로컬 작업을 사용 하지 않도록 설정 하거나 설정할 수 **sp_update_job** 에 대 한 값을 지정 하는 **@enabled** 및 **@job_id** (또는 **@job_name**) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
+ <sup>3</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 로컬 작업을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **sp_update_job** 에 대 한 값을 지정 하는 **@enabled** 하며 **@job_id** (또는 **@job_name**) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
   
- <sup>4</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 일정을 사용 하지 않도록 설정 하거나 설정할 수 **sp_update_schedule** 에 대 한 값을 지정 하는 **@enabled** 및 **@schedule_id** (또는 **@name**) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
+ <sup>4</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 일정을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **sp_update_schedule** 에 대 한 값을 지정 하는 **@enabled** 하며 **@schedule_id** (또는 **@name**) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
   
 ## <a name="assigning-users-multiple-roles"></a>사용자에게 다중 역할 할당  
  **sysadmin** 고정 서버 역할의 멤버는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 기능에 액세스할 수 있습니다. 사용자가 **sysadmin** 역할의 멤버가 아니지만 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할의 멤버인 경우 이러한 역할에 대한 공통적 사용 권한 모델을 고려해야 합니다. 사용 권한이 많은 역할은 항상 사용 권한이 적은 역할의 모든 사용 권한을 포함하기 때문에 두 개 이상의 역할의 멤버는 해당 사용자가 멤버로 속한 사용 권한이 가장 많은 역할과 관련된 사용 권한을 자동으로 갖습니다.  

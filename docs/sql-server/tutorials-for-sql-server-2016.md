@@ -3,8 +3,6 @@ title: SQL Server 자습서 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: performance
@@ -15,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 954ab1ff985054fa0aebaa3aba0711cacd5b4a35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033420"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36925964"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.locfileid: "33033420"
  
 ## <a name="current-tutorials"></a>현재 자습서  
   
-|기술|Description|  
+|기술|설명|  
 |--------------|---------------|  
 |[Analysis Services 자습서&#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
 |[데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)|데이터베이스 엔진 인스턴스에 연결한 다음 Transact-SQL 문을 작성하고 실행하는 방법에 대해 알아봅니다.|  

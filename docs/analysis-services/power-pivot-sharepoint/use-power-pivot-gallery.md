@@ -1,5 +1,5 @@
 ---
-title: 파워 피벗 갤러리 사용 | Microsoft Docs
+title: Power Pivot 갤러리 사용 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d47fc300b39e0dc7d63c2699e8a05f677573ea9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037467"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980586"
 ---
 # <a name="use-power-pivot-gallery"></a>파워 피벗 갤러리 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "34037467"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|데이터 새로 고침 관리 단추를 클릭하여 연결된 데이터 원본에서 업데이트된 데이터를 검색하는 일정을 만들거나 봅니다. 일정을 만드는 방법에 대한 지침은 [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)을 참조하세요.|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|데이터 새로 고침 관리 단추를 클릭하여 연결된 데이터 원본에서 업데이트된 데이터를 검색하는 일정을 만들거나 봅니다. 일정을 만드는 방법에 대한 지침은 [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)을 참조하세요.|  
   
 ##  <a name="delete"></a> 파워 피벗 갤러리에서 통합 문서 또는 보고서 삭제  
  라이브러리에서 문서를 삭제하려면 먼저 모든 문서 보기로 전환합니다.  
@@ -159,10 +159,10 @@ ms.locfileid: "34037467"
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식이 문서 라이브러리에 자동으로 추가되지 않습니다. 지원되지 않는 콘텐츠 형식을 사용하도록 수동으로 설정하지 않으면 이 문제가 발생하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [파워 피벗 갤러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [만들기 및 파워 피벗 갤러리에 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [만들기 및 파워 피벗 갤러리 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [일정 데이터 새로 고침 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   
