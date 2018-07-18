@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987485"
 ---
-# <a name="aggregate-functions---count"></a>Count 집계 함수-
+# <a name="aggregate-functions---count"></a>집계 함수-count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  에 지정 된 시퀀스에 포함 된 항목 수를 반환 합니다. *$arg*합니다.  
+  지정한 시퀀스에 포함 된 항목 수를 반환 *$arg*합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,11 +46,11 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  수를 셀 항목입니다.  
   
-## <a name="remarks"></a>주의  
- 0을 반환 *$arg* 빈 시퀀스입니다.  
+## <a name="remarks"></a>Remarks  
+ 0을 반환 *$arg* 가 빈 시퀀스입니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
+ 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>1. count() XQuery 함수를 사용하여 제품 모델 제조의 작업 센터 위치 수 계산  
  다음 쿼리에서는 제품 모델(ProductModelID=7)의 제조 프로세스에서 작업 센터 위치 수를 계산합니다.  
@@ -70,11 +70,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   **네임 스페이스** 키워드 [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 네임 스페이스 접두사를 정의 합니다. 그러면 XQuery 본문에 접두사가 사용됩니다.  
+-   합니다 **네임 스페이스** 키워드 [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 네임 스페이스 접두사를 정의 합니다. 그러면 XQuery 본문에 접두사가 사용됩니다.  
   
 -   쿼리가 <`NoOfWorkStations`> 요소를 포함하는 XML을 생성합니다.  
   
--   **count ()** 수가 XQuery 본문 개수에 함수 <`Location`> 요소입니다.  
+-   합니다 **count ()** XQuery 본문 개수 수가 함수 <`Location`> 요소입니다.  
   
  다음은 결과입니다.  
   
@@ -106,7 +106,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- 다음 쿼리와 같이 XML 대신 이러한 값을 비-xml 유형으로 반환할 수도 있습니다. 쿼리에서 사용 하 여는 [value () 메서드 (xml 데이터 형식)](../t-sql/xml/value-method-xml-data-type.md) 작업 센터 위치 수를 검색할 수 있습니다.  
+ 다음 쿼리와 같이 XML 대신 이러한 값을 비-xml 유형으로 반환할 수도 있습니다. 쿼리에서 사용 합니다 [value () 메서드 (xml 데이터 형식)](../t-sql/xml/value-method-xml-data-type.md) 작업 센터 위치 수를 검색 하려면.  
   
 ```  
 SELECT  ProductModelID,   
@@ -125,7 +125,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

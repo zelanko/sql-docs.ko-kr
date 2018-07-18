@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 503ae5f7918edabd609e6176eeb0fa5c1238dd77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221634"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039037"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "33221634"
 |**default_database_name**|**sysname**|이 보안 주체에 대한 기본 데이터베이스입니다.|  
 |**default_language_name**|**sysname**|이 보안 주체에 대한 기본 언어입니다.|  
 |**credential_id**|**int**|이 보안 주체와 연결된 자격 증명의 ID입니다. 이 보안 주체와 연결된 자격 증명이 없는 경우 credential_id는 NULL이 됩니다.|  
-|**owning_principal_id**|**int**|**principal_id** 서버 역할의 소유자입니다. 보안 주체가 서버 역할이 아닌 경우 NULL입니다.|  
+|**owning_principal_id**|**int**|합니다 **principal_id** 서버 역할의 소유자입니다. 보안 주체가 서버 역할이 아닌 경우 NULL입니다.|  
 |**is_fixed_role**|**bit**|보안 주체가 고정 서버 역할 중 하나인 경우 1을 반환합니다. 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 로그인은 자신의 로그인 이름, 시스템 로그인 및 고정 서버 역할을 볼 수 있습니다. 다른 로그인을 보려면 로그인할 때 ALTER ANY LOGIN 또는 사용 권한이 필요합니다. 사용자 정의 서버 역할을 보려면 ANY SERVER ROLE 또는 역할의 멤버 자격이 필요합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -72,7 +72,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

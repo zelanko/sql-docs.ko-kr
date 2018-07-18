@@ -1,5 +1,5 @@
 ---
-title: sys.sql_dependencies (Transact SQL) | Microsoft Docs
+title: sys.sql_dependencies (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b458e22f8b0b803dcd359b870af6f14b85a95f48
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221385"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981394"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ ms.locfileid: "33221385"
 |**object_id**|**int**|참조 개체의 ID입니다.|  
 |**column_id**|**int**|참조 ID가 열인 경우 참조 열의 ID이며 아닌 경우 0입니다.|  
 |**referenced_major_id**|**int**|다음에서 지정한 클래스의 값에 따라 해석되며 참조된 엔터티의 ID입니다.<br /><br /> 0, 1 = 개체 또는 열의 개체 ID<br /><br /> 2 = 유형 ID<br /><br /> 3 = XML 스키마 컬렉션 ID|  
-|**referenced_minor_id**|**int**|다음과 같이 클래스의 값에 따라 해석되며 참조된 엔터티의 보조 ID입니다.<br /><br /> 클래스 값과 그에 따른 해석은 다음과 같습니다.<br /><br /> 0, **referenced_minor_id** 는 열 ID는 나이 열이 아닌 경우 0입니다.<br /><br /> 1, **referenced_minor_id** 는 열 ID는 나이 열이 아닌 경우 0입니다.<br /><br /> 그렇지 않으면 **referenced_minor_id** = 0.|  
+|**referenced_minor_id**|**int**|다음과 같이 클래스의 값에 따라 해석되며 참조된 엔터티의 보조 ID입니다.<br /><br /> 클래스 값과 그에 따른 해석은 다음과 같습니다.<br /><br /> 0 **referenced_minor_id** 열 ID 되었거나 열이 아닌 경우 0입니다.<br /><br /> 1 **referenced_minor_id** 열 ID 되었거나 열이 아닌 경우 0입니다.<br /><br /> 그렇지 않으면 **referenced_minor_id** = 0.|  
 |**is_selected**|**bit**|개체 또는 열이 선택되었습니다.|  
 |**is_updated**|**bit**|개체 또는 열이 업데이트되었습니다.|  
 |**is_select_all**|**bit**|개체가 SELECT * 절에서 사용되었습니다(개체 수준만 해당).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

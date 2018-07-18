@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49238b50457a586bbf23cc75ee454003c57ac04e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979165"
 ---
 # <a name="statement-element-xmla"></a>Statement 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  쿼리 또는 문을 보낼 포함를 사용 하는 **Execute** Analysis Services의 인스턴스로 메서드.  
+  쿼리 또는 문을 전송할 포함를 사용 하 여 합니다 **Execute** Analysis Services 인스턴스에 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34575025"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34575025"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **문을** 명령에 쿼리 또는 문을 실행의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 지원하는 언어는 다음과 같습니다.  
+ 합니다 **문** 명령에서 쿼리 또는 문을 실행 합니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]가 지원하는 언어는 다음과 같습니다.  
   
 -   MDX(Multidimensional Expressions)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468509"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031461"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   데이터베이스를 마지막으로 다시 시작한 후 수집된 통계가 포함됩니다.  
   
- 자세한 내용은 참조 [메모리 내 OLTP &#40;메모리 내 최적화&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 및 [메모리 최적화 된 테이블에 사용 하 여 인덱스에 대 한 지침이](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)합니다.  
+ 자세한 내용은 [메모리 내 OLTP &#40;메모리 내 최적화&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 하 고 [Guidelines for Using Indexes on Memory-Optimized Tables](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
 |열 이름|데이터 형식|Description|  
@@ -60,10 +60,10 @@ ms.locfileid: "34468509"
 |phantom_expired_rows_removed|**bigint**|내부적으로만 사용됩니다.|  
 |object_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

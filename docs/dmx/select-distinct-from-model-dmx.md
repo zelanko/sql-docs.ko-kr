@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985328"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;모델 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,15 +46,15 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **SELECT DISTINCT FROM** 문이 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
+ 합니다 **SELECT DISTINCT FROM** 문을 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
- **SELECT DISTINCT FROM** 문을 사용 하면 중첩된 테이블 안의 열을 직접 참조할 수 있습니다. 예를 들어:  
+ 합니다 **SELECT DISTINCT FROM** 문을 사용 하면 직접 중첩된 테이블 안의 열을 참조할 수 있습니다. 예를 들어:  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- 결과 **SELECT DISTINCT FROM \<모델 >** 문에 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
+ 결과 **SELECT DISTINCT FROM \<모델 >** 문 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
   
 |열 유형|출력|  
 |-----------------|------------|  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |연속|열에서 값의 중간점|  
   
 ## <a name="discrete-column-example"></a>불연속 열의 예  
- 다음 코드 예제에 따라는 `[TM Decision Tree]` 에서 만드는 모델은 [기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 이 쿼리는 불연속 열 `Gender`에 있는 고유 값을 반환합니다.  
+ 다음 코드 샘플은 기반 합니다 `[TM Decision Tree]` 에서 만든 모델을 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 이 쿼리는 불연속 열 `Gender`에 있는 고유 값을 반환합니다.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -100,10 +100,10 @@ FROM [TM Decision Tree]
  또한 이 쿼리는 누락된 값을 나타내는 null 값의 행 하나를 반환합니다.  
   
 ## <a name="discretized-column-example"></a>불연속화된 열의 예  
- 다음 코드 예제는 [`Yearly Income]` 열의 알고리즘으로 작성된 각 버킷의 중간점, 최대값 및 최소값을 반환합니다. 이 예의 결과를 재현하려면 `[Targeted Mailing]`과 동일한 새 마이닝 구조를 만들어야 합니다. 마법사에서 변경 내용 유형을 `Yearly Income` 열에서 **Continuous** 를 **Discretized**합니다.  
+ 다음 코드 예제는 [`Yearly Income]` 열의 알고리즘으로 작성된 각 버킷의 중간점, 최대값 및 최소값을 반환합니다. 이 예의 결과를 재현하려면 `[Targeted Mailing]`과 동일한 새 마이닝 구조를 만들어야 합니다. 마법사의 콘텐츠 형식을 변경 합니다 `Yearly Income` 열에서 **연속** 에 **Discretized**합니다.  
   
 > [!NOTE]  
->  기본 마이닝 자습서에서 만든 마이닝 모델을 변경하여 마이닝 구조 열인 [`Yearly Income]`을 불연속화할 수도 있습니다. 이 작업을 수행 하는 방법에 대 한 정보를 참조 하십시오. [마이닝 모델에서 열의 분할 변경](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)합니다. 그러나 열의 분할을 변경하면 마이닝 구조가 다시 처리되어 해당 구조를 사용하여 작성한 다른 모델의 결과가 변경됩니다.  
+>  기본 마이닝 자습서에서 만든 마이닝 모델을 변경하여 마이닝 구조 열인 [`Yearly Income]`을 불연속화할 수도 있습니다. 이 작업을 수행 하는 방법에 대 한 정보를 참조 하세요 [마이닝 모델에서 열의 불연속화 변경](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)합니다. 그러나 열의 분할을 변경하면 마이닝 구조가 다시 처리되어 해당 구조를 사용하여 작성한 다른 모델의 결과가 변경됩니다.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   

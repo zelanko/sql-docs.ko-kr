@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464649"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978125"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "34464649"
   
  다시 시도 횟수가 많으면 동시성 오류가 발생할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원을 호출합니다.  
   
- 메모리 액세스에 최적화 된 비클러스터형 인덱스에 대 한 자세한 내용은 참조 [SQL Server 메모리 내 OLTP 내부 개요](http://t.co/T6zToWc6y6), 17 페이지입니다.  
+ 메모리 액세스에 최적화 된, 비클러스터형 인덱스에 대 한 자세한 내용은 참조 하세요. [SQL Server 메모리 내 OLTP 내부 개요](http://t.co/T6zToWc6y6), 17 페이지입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|개체의 ID입니다.|  
-|xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
+|xtp_object_id|**bigint**|메모리 최적화 테이블의 ID입니다.|  
 |index_id|**int**|인덱스의 ID입니다.|  
 |delta_pages|**bigint**|트리의 이 인덱스에 대한 델타 페이지 수입니다.|  
 |internal_pages|**bigint**|내부적으로만 사용할 수 있습니다. 트리의 이 인덱스에 대한 내부 페이지 수입니다.|  
@@ -66,10 +66,10 @@ ms.locfileid: "34464649"
 |key_merge_count|**bigint**|인덱스에서 키 병합 작업의 누적된 횟수입니다.|  
 |key_merge_retry_count|**bigint**|키 병합 작업의 누적 재시도 횟수입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

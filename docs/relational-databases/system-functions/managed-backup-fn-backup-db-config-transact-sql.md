@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (Transact SQL) | Microsoft Docs
+title: managed_backup.fn_backup_db_config (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988455"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978955"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ##  <a name="Arguments"></a> 인수  
  @db_name  
- 데이터베이스의 이름입니다. @db_name 매개 변수는 **SYSNAME**합니다. 빈 문자열 또는 NULL 값이 이 매개 변수에 전달되면 SQL Server 인스턴스의 모든 데이터베이스에 대한 정보가 반환됩니다.  
+ 데이터베이스의 이름입니다. 합니다 @db_name 매개 변수가 **SYSNAME**합니다. 빈 문자열 또는 NULL 값이 이 매개 변수에 전달되면 SQL Server 인스턴스의 모든 데이터베이스에 대한 정보가 반환됩니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -62,15 +62,15 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |credential_name|SYSNAME|저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. NULL 값은 SQL 자격 증명이 설정되지 않았음을 나타냅니다.|  
 |retention_days|INT|현재 보존 기간(일)입니다. NULL 값은 이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 구성되지 않았음을 나타냅니다.|  
 |is_managed_backup_enabled|INT|이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었는지 여부를 나타냅니다. 값 1은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었음을 나타내고 값 0은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 이 데이터베이스에 대해 사용하도록 설정되지 않았음을 나타냅니다.|  
-|storage_url|NVARCHAR (1024)|저장소 계정의 URL입니다.|  
+|storage_url|NVARCHAR(1024)|저장소 계정의 URL입니다.|  
 |Encryption_algorithm|NCHAR(20)|백업을 암호화할 때 사용할 현재 암호화 알고리즘을 반환합니다.|  
 |Encryptor_type|NCHAR(15)|암호기 설정인: 인증서 또는 비대칭 키입니다.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|인증서 또는 비대칭 키의 이름입니다.|  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **db_backupoperator** 데이터베이스 역할 **ALTER ANY CREDENTIAL** 사용 권한. 사용자를 거부 되어서는 안 **VIEW ANY DEFINITION** 사용 권한.  
+### <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **db_backupoperator** 데이터베이스 역할과 **ALTER ANY CREDENTIAL** 권한. 사용자를 거부 되어서는 안 **VIEW ANY DEFINITION** 권한.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 'TestDB'에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성을 반환합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.server_role_members (Transact SQL) | Microsoft Docs
+title: sys.server_role_members (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221084"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039025"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "33221084"
 |**role_principal_id**|**int**|역할의 서버 보안 주체 ID입니다.|  
 |**member_principal_id**|**int**|멤버의 서버 보안 주체 ID입니다.|  
   
- 를 추가 하거나 제거할 서버 역할 멤버 자격을 사용 하 여는 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)문입니다.  
+ 를 추가 하거나 서버 역할 멤버 자격을 제거 합니다 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)문.  
   
-## <a name="permissions"></a>Permissions  
- 로그인하면 자신의 서버 역할 멤버 자격 및 고정 서버 역할 멤버의 principal_id를 볼 수 있습니다 모든 서버 역할 멤버 자격을 보려면 필요는 **VIEW DEFINITION ON SERVER ROLE** 권한이 나 멤버 자격에는 **securityadmin** 고정된 서버 역할입니다.  
+## <a name="permissions"></a>사용 권한  
+ 로그인하면 자신의 서버 역할 멤버 자격 및 고정 서버 역할 멤버의 principal_id를 볼 수 있습니다 모든 서버 역할 멤버 자격을 확인 하려면 합니다 **VIEW DEFINITION ON SERVER ROLE** 권한 또는 멤버 자격이 합니다 **securityadmin** 고정된 서버 역할입니다.  
   
  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
@@ -62,7 +62,7 @@ JOIN sys.server_principals AS member
     ON sys.server_role_members.member_principal_id = member.principal_id;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)   

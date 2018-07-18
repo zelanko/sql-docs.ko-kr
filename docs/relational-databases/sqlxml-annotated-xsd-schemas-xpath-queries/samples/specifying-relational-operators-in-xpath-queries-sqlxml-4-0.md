@@ -1,5 +1,5 @@
 ---
-title: XPath 쿼리 (SQLXML 4.0) 관계형 연산자 지정 | Microsoft Docs
+title: (SQLXML 4.0) XPath 쿼리에 관계형 연산자 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032441"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 관계형 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  다음 예에서는 XPath 쿼리에 관계형 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하십시오. [XPath 예제 & #40;에 대 한 샘플 주석이 추가 된 XSD 스키마 SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  다음 예에서는 XPath 쿼리에 관계형 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-specify-relational-operator"></a>1. 관계형 연산자 지정  
- 이 XPath 쿼리는 자식 요소가 반환는  **\<고객 >** 요소 위치는 **CustomerID** 특성 값이 "1" 위치와 모든 자식  **\<순서 >** 요소에 포함 된  **\<OrderDetail >** 자식으로는 **OrderQty** 3 보다 큰 값을 가진 특성:  
+ 이 XPath 쿼리에서 요소 자식을 반환 합니다  **\<고객 >** 요소 위치를 **CustomerID** 특성 값이 "1" 및 위치 모든 자식  **\<순서 >** 요소에 포함 된를  **\<OrderDetail >** 자식으로는 **OrderQty** 3 보다 큰 값을 사용 하 여 특성:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 대괄호 필터에 지정 된 조건자는  **\<고객 >** 요소입니다. 만  **\<고객 >** 하나 이상 있어야 하는 요소  **\<OrderDetail >** 손자가 OrderQty 특성 보다 큰 값이 3 반환 됩니다.  
+ 대괄호 필터에 지정 된 조건자를  **\<고객 >** 요소입니다. 만  **\<고객 >** 요소를 하나 이상 있어야  **\<OrderDetail >** OrderQty 특성 값이 3이 반환 되는 보다 큰 손자가 합니다.  
   
- **자식** 축 값이 기본값입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
+ 합니다 **자식** 축은 기본값입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -51,7 +51,7 @@ ms.locfileid: "32971248"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(SpecifyRelationalA.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "32971248"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 템플릿 실행의 결과 집합입니다.  
   
@@ -86,13 +86,13 @@ ms.locfileid: "32971248"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>2. XPath 쿼리에 관계형 연산자 지정 및 부울 함수를 사용하여 결과 비교  
- 이 쿼리 모두 반환 된  **\<순서 >** 있는 컨텍스트 노드의 요소 자식을 **SalesPersonID** 특성은 270 보다 작은 값:  
+ 이 쿼리 모두 반환 합니다  **\<순서 >** 는 컨텍스트 노드의 요소 자식을 **SalesPersonID** 270 보다 작은 값을 특성:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- 바로 가기는 **특성** 축 (@)를 지정할 수 때문이 **자식** 축은 기본값, 쿼리에서 생략 될 수 있습니다:  
+ 바로 가기를 합니다 **특성** 축 (@)를 지정할 수 있습니다 이므로 합니다 **자식** 축은 기본값, 쿼리에서 생략할 수 있습니다:  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
@@ -103,7 +103,7 @@ ms.locfileid: "32971248"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
-1.  복사는 [예제 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
+1.  복사 합니다 [샘플 스키마 코드](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) 텍스트 파일에 붙여 넣습니다. 파일을 SampleSchema1.xml로 저장합니다.  
   
 2.  다음 템플릿(SpecifyRelationalB.xml)을 만들어 SampleSchema1.xml이 저장된 디렉터리에 저장합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "32971248"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  다음은 템플릿 실행 결과 집합의 일부입니다.  
   

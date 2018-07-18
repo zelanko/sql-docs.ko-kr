@@ -1,5 +1,5 @@
 ---
-title: sp_unprepare (Transact SQL) | Microsoft Docs
+title: sp_unprepare (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c444b5b8fbd83a490993dde2a864d60afa9b6932
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243832"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978166"
 ---
 # <a name="spunprepare-transact-sql"></a>sp_unprepare(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Sp_prepare 저장 프로시저에서 만든 실행 계획을 삭제 합니다. sp_unprepare가 ID를 지정 하 여 호출 = 표 형식 데이터 TDS (stream) 패킷의 15입니다.  
+  Sp_prepare 저장 프로시저에서 만든 실행 계획을 삭제 합니다. ID를 지정 하 여 sp_unprepare가 호출 = 15 tabular data TDS (stream) 패킷에서를 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ sp_unprepare handle
   
 ## <a name="arguments"></a>인수  
  *handle*  
- 이 *처리* sp_prepare에서 반환 된 값입니다.  
+ *처리할* sp_prepare에서 반환 된 값입니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 간단한 문을 준비, 실행 및 준비 취소합니다.  
@@ -71,8 +71,8 @@ Exec sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [sp_prepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   
   
 

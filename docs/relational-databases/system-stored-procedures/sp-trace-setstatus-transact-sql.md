@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setstatus (Transact SQL) | Microsoft Docs
+title: sp_trace_setstatus (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8e3a2234d4213b78cbc828e71c602602e7a2481
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038321"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="arguments"></a>인수  
  [ **@traceid=** ] *trace_id*  
- 수정할 추적의 ID입니다. *trace_id* 은 **int**, 기본값은 없습니다. 사용자가이 사용 *trace_id* 식별, 수정 및 추적 제어 하는 값입니다. 검색에 대 한 내용은 *trace_id*, 참조 [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)합니다.  
+ 수정할 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다. 검색에 대 한 자세한 합니다 *trace_id*를 참조 하세요 [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
  [  **@status=** ] *상태*  
- 추적에서 구현할 동작을 지정합니다. *상태* 은 **int**, 기본값은 없습니다.  
+ 추적에서 구현할 동작을 지정합니다. *상태* 됩니다 **int**, 기본값은 없습니다.  
   
  다음 표에서는 지정할 수 있는 상태를 보여 줍니다.  
   
@@ -75,17 +75,17 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**9**|지정한 추적 핸들이 유효하지 않습니다.|  
 |**13**|메모리가 부족합니다. 지정한 동작을 수행할 메모리가 충분하지 않으면 반환됩니다.|  
   
- 추적이 이미 지정한 상태 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 돌아갑니다 **0**합니다.  
+ 추적을 이미 지정한 상태에 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 돌아갑니다 **0**합니다.  
   
-## <a name="remarks"></a>주의  
- 모든 SQL 추적의 매개 변수 저장 프로시저 (**sp_trace_xx**) 엄격 하 게 지정 합니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
+## <a name="remarks"></a>Remarks  
+ 프로시저를 저장 하는 모든 SQL 추적의 매개 변수 (**sp_trace_xx**) 엄격 하 게 형식화 됩니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6ce6066af6508215ebe84fc3e8f5680c06a246ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988215"
 ---
 # <a name="handling-smo-events"></a>SMO 이벤트 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "32967608"
 ## <a name="event-subscription"></a>이벤트 구독  
  이벤트 처리기 클래스를 작성하고, 해당 인스턴스를 만들고, 이벤트 처리기를 부모 개체에 할당하고, 이벤트를 구독하는 방법으로 이벤트를 처리합니다.  
   
- 이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트에 대 한 정보를 수신 하는 이벤트 처리기 함수는 *ServerEventNotificatificationArgs* 이벤트에 대 한 정보를 보고 하기 위해 사용할 수 있는 매개 변수입니다.  
+ 이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트 처리기 함수에서 이벤트에 대 한 정보를 수신 합니다 *ServerEventNotificatificationArgs* 이벤트에 대 한 정보를 보고 사용할 수 있는 매개 변수입니다.  
   
- 처리 될 수 있는 데이터베이스와 서버 이벤트의 종류에 나열 되어는 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스입니다.  
+ 처리할 수 있는 데이터베이스 및 서버 이벤트의 종류에 나열 되어는 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스입니다.  
   
 ## <a name="example"></a>예제  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Visual Basic에서 이벤트 처리기 등록 및 이벤트 처리 구독  

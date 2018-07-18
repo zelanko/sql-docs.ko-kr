@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 39f4391ef919ad3de5233df078535b34691e1424
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036691"
 ---
 # <a name="spid-element-xmla"></a>SPID 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  활성 서버 프로세스 id (SPID)를 실행할 부모 식별 [취소](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
+  부모를 실행 하는 활성 서버 프로세스 식별자 (SPID)를 식별 [취소](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577485"
 </Cancel>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34577485"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **SPID** 서버 프로세스 ID (SPID)의 Analysis Services 인스턴스에서 해당된 세션에 사용 되는 요소를 나타냅니다.  
+ 합니다 **SPID** 서버 프로세스 ID (SPID) Analysis Services 인스턴스에서 지정된 된 세션에 사용 되는 요소를 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
  [CancelAssociated 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md)   

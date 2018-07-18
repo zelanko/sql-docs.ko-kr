@@ -23,21 +23,21 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd5bc6a0db71d2836c068a261681d813bc2011b3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774469"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985745"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
-프로젝트 유형 매핑 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 참조 [매핑 소스 및 대상 데이터 형식](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.  
+형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 [매핑 원본 및 대상 데이터 형식](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.  
   
-형식 매핑은에서 사용할 수는 **프로젝트 설정** 및 **기본 프로젝트 설정** 대화 상자:  
+형식 매핑에서 사용할 수는 **프로젝트 설정** 하 고 **기본 프로젝트 설정** 대화 상자:  
   
--   사용 하 여는 **프로젝트 설정** 현재 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 형식 매핑 설정에 액세스 하려면는 **도구** 메뉴 선택 **프로젝트 설정**, 클릭 하 고 **형식 매핑** 왼쪽된 창에서.  
+-   사용 된 **프로젝트 설정** 현재 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 형식 매핑을 설정에 액세스할 수는 **도구** 메뉴에서 **프로젝트 설정**를 클릭 하 고 **형식 매핑** 왼쪽된 창에서.  
   
--   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 형식 매핑 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 설정을 볼 /에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운 하 고 클릭 **형식 매핑** 왼쪽된 창에서.  
+-   사용 된 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 형식 매핑을 설정에 액세스 하는 **도구** 메뉴에서 **기본 프로젝트 설정**, 설정을 볼 /에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택  **마이그레이션 대상 버전** 드롭다운을 클릭 한 다음 **형식 매핑** 왼쪽된 창에서.  
   
 ## <a name="options"></a>변수  
 **원본 형식**  
@@ -59,19 +59,19 @@ ms.locfileid: "34774469"
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**긴**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
-|**메모** Access 97-|**varchar(max)**|  
+|**메모** -Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  
-|**텍스트 [\*... \*]** Access 97-|**varchar[\*]**|  
+|**텍스트 [\*... \*]** -Access 97|**varchar[\*]**|  
   
 **추가**  
 데이터 형식 매핑 목록에 추가 하려면 클릭 합니다.  
   
 **편집**  
-데이터 형식 매핑 목록에서 편집 하려면 클릭 합니다.  
+매핑 목록에 있는 데이터 형식을 편집 하려면 클릭 합니다.  
   
 **제거**  
 매핑 목록에서 선택한 데이터 형식 매핑을 제거 하려면 클릭 합니다.  
@@ -80,6 +80,6 @@ ms.locfileid: "34774469"
 모든 데이터 형식 매핑을 SSMA 기본값으로 다시 설정 하려면 클릭 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[원본 및 대상 데이터 형식 매핑](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
-[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[원본 및 대상 데이터 형식 매핑](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

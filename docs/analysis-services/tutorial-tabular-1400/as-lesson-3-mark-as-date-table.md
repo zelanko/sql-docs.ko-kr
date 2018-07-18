@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services 자습서 3 단원: 날짜 테이블로 표시 | Microsoft Docs'
+title: 'Analysis Services 자습서 단원 3: 날짜 테이블로 표시 | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,35 +10,35 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82b4093aa1a46cf1a7bb14b4c689ba6ba09e4d2b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045357"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973170"
 ---
 # <a name="mark-as-date-table"></a>날짜 테이블로 표시
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-2 단원: 데이터 가져오기 가져온 명명 된 차원 테이블 **DimDate**합니다. 모델에서이 테이블의 이름이 DimDate 인 동안 것 수 라고도 *날짜 테이블*날짜 및 시간 데이터를 포함 하는, 합니다.  
+단원 2: 데이터 가져오기, 가져온 라는 차원 테이블 **DimDate**합니다. 모델에서이 테이블의 이름이 DimDate 인 것도 수 이라고 있습니다를 *날짜 테이블*, 날짜 및 시간 데이터를 포함 합니다.  
   
-포함 하는 속성을 지정 해야 나중 측정값을 만들 때와 같은 DAX 시간 인텔리전스 함수를 사용할 때마다 한 *날짜 테이블* 및 고유 식별자 *날짜 열* 해당 테이블의 합니다.
+나중에 측정값을 만들 때 같은 DAX 시간 인텔리전스 함수를 사용할 때마다 포함 하는 속성을 지정 해야 하는 *날짜 테이블* 및 고유 식별자 *날짜 열* 해당 테이블의 합니다.
   
-이 단원에서는 표시는 **DimDate** 으로 테이블는 *날짜 테이블* 및 **날짜** (테이블 열에 날짜)으로 *날짜 열* (고유 식별자)입니다.  
+표시 하면이 단원에서는 **DimDate** 으로 테이블의 *날짜 테이블* 및 **날짜** 는 날짜 테이블의 열으로는 *날짜 열* (고유 식별자)입니다.  
 
-날짜 테이블 및 날짜 열을 표시 하기 전에 모델을 더 쉽게 이해할 수를 약간 정리 작업을 수행 하는 것이 좋습니다. DimDate 테이블에서 명명 된 열을 알 **FullDateAlternateKey**합니다. 이 열은 테이블에 포함 된 각 calendar year의 모든 날에 대 한 하나의 행을 포함 합니다. 이 열을 너무 많이 측정값 수식에 및 사용 보고서에. 그러나 FullDateAlternateKey이이 열에 대 한 좋은 식별자 또 아닙니다. 파일 이름을 **날짜**, 쉽게 식별 하 고 수식에 포함 합니다. 가능 하면 항상 SSDT 및 클라이언트 보고 응용 프로그램을 식별 하기 쉽게 만들어에 테이블 및 열 같은 개체의 이름을 바꿀 것이 좋습니다. 
+날짜 테이블 및 날짜 열을 표시 하기 전에 모델을 더 쉽게 이해 하려면 약간의 관리 유지 작업을 수행 하는 것이 좋습니다. DimDate 테이블에서 명명 된 열을 확인 **FullDateAlternateKey**합니다. 이 열은 테이블에 포함 된 각 연도의 모든 날에 대 한 하나의 행을 포함 합니다. 이 열 사용 많은 측정값 수식 및 보고서에서. 그러나 FullDateAlternateKey 없는이 열에 대 한 적절 한 식별자. 파일 이름을 **날짜**, 쉽게 식별 하 고 수식에 포함 합니다. 가능 하면 테이블 및 열을 쉽게 SSDT 및 클라이언트 보고 응용 프로그램 식별과 같은 개체의 이름을 바꿀 것이 좋습니다. 
   
-이 단원에 소요 시간 예상: **3 분**  
+이 단원을 완료 하기 위한 예상 시간: **3 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
 이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [2 단원: 데이터 가져오기](../tutorial-tabular-1400/as-lesson-2-get-data.md)합니다. 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>FullDateAlternateKey 열 이름을 바꾸려면
 
-1.  모델 디자이너에서 클릭 된 **DimDate** 테이블입니다.
+1.  모델 디자이너에서를 클릭 합니다 **DimDate** 테이블입니다.
 
-2.  에 대 한 헤더를 두 번 클릭는 **FullDateAlternateKey** 열 다음에 이름을 **날짜**합니다.
+2.  에 대 한 헤더를 두 번 클릭 합니다 **FullDateAlternateKey** 열을 이름을 바꿉니다 **날짜**합니다.
 
   
 ### <a name="to-set-mark-as-date-table"></a>날짜 테이블로 표시 설정 방법  

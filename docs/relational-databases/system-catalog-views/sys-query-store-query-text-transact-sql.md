@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query_text (Transact SQL) | Microsoft Docs
+title: sys.query_store_query_text (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,29 +27,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f619900c47a3797a033c4eb7c48dd7c423a8c53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985119"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  포함 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트와 쿼리의 SQL 핸들입니다.  
+  포함 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트 및 쿼리의 SQL 핸들입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|기본 키입니다.|  
-|**query_sql_text**|**nvarchar(max)**|사용자가 제공한 쿼리의 SQL 텍스트입니다. 공백, 힌트 및 메모를 포함합니다.|  
+|**query_sql_text**|**nvarchar(max)**|사용자가 제공한 쿼리의 SQL 텍스트입니다. 공백, 힌트 및 주석을 포함합니다.|  
 |**statement_sql_handle**|**vabinary(64)**|개별 쿼리의 SQL 핸들입니다.|  
 |**is_part_of_encrypted_module**|**bit**|쿼리 텍스트는 암호화 된 모듈의 일부입니다.|  
-|**has_restricted_text**|**bit**|쿼리 텍스트는 암호 또는 다른 unmentionable 단어를 포함합니다.|  
+|**has_restricted_text**|**bit**|쿼리 텍스트는 암호 또는 기타 unmentionable 단어를 포함합니다.|  
   
-## <a name="permissions"></a>Permissions  
- 필요는 **VIEW DATABASE STATE** 권한.  
+## <a name="permissions"></a>사용 권한  
+ 필요 합니다 **VIEW DATABASE STATE** 권한.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

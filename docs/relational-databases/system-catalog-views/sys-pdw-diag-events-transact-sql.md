@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_diag_events (Transact SQL) | Microsoft Docs
+title: sys.pdw_diag_events (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3c7cb2aaf1fac585514c4d7e540c35c1f44fad1b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987226"
 ---
 # <a name="syspdwdiagevents-transact-sql"></a>sys.pdw_diag_events (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "33696366"
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |**name**|**nvarchar(255)**|특정 진단 이벤트의 이름입니다.||  
-|**원본(source)**|**nvarchar(255)**|이벤트 (엔진, 일반, dms 등)의 소스||  
-|**is_enabled**|**bit**|여부 이벤트 게시 합니다.||  
+|**원본(source)**|**nvarchar(255)**|(엔진, 일반, dms 등) 이벤트의 원본||  
+|**is_enabled**|**bit**|여부 이벤트를 게시 합니다.||  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

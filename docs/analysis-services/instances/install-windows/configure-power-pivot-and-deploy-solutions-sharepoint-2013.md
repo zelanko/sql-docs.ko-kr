@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93374b25f377265f1eafa09cf46714ed79927243
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 271f2c50c38585e26053f88b2d372dae4b7345c6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019330"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980025"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019330"
 ##  <a name="bkmk_run_configuration_tool"></a> SharePoint 2013용 파워 피벗 구성 실행  
  **참고:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사는 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]에 대한 두 가지 구성 도구를 설치합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구|SharePoint 2010 SP1(서비스 팩 1)|  
@@ -60,7 +60,7 @@ ms.locfileid: "34019330"
   
     5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 응용 프로그램 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 기본값을 수정하려면 왼쪽 창에서 **기본 웹 응용 프로그램 만들기** 및 **웹 응용 프로그램 솔루션 배포**페이지를 검토하세요.  
   
-5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 동작에 대한 자세한 내용은 이 항목의 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 에서 "서버를 구성하는 데 사용되는 입력 값" 섹션을 참조하세요.  
+5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 동작에 대한 자세한 내용은 이 항목의 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 에서 "서버를 구성하는 데 사용되는 입력 값" 섹션을 참조하세요.  
   
 6.  선택적으로 지금 처리하지 않으려는 동작을 제거합니다. 예를 들어, Secure Store Service를 나중에 구성하려는 경우 **Secure Store Service 구성**을 클릭한 다음 **태스크 목록에 이 동작 포함**확인란의 선택을 취소합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34019330"
   
 8.  **실행** 을 클릭하여 태스크 목록에 있는 모든 동작을 처리합니다. 동작의 유효성을 검사한 후에 **실행** 을 사용할 수 있습니다. **실행** 이 활성화되지 않으면 먼저 **유효성 검사** 를 클릭합니다.  
   
- 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
+ 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
   
 ##  <a name="bkmk_verify_powerpivot"></a> 파워 피벗 구성 확인  
  **서비스:**  
@@ -87,7 +87,7 @@ ms.locfileid: "34019330"
   
 1.  구성 도구로 만든 사이트 URL로 이동합니다.  
   
-     클릭 **설정**![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정"), 클릭 하 고 **사이트 설정**합니다.  
+     클릭 **설정을**![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")를 클릭 하 고 **사이트 설정**합니다.  
   
      **사이트 모음 기능**을 클릭합니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "34019330"
   
 5.  **확인**을 클릭합니다.  
   
- 데이터 새로 고침에 대 한 자세한 내용은 참조 하십시오. [파워 피벗 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)합니다.  
+ 문제 해결 데이터 새로 고침에 대 한 자세한 내용은 참조 하세요. [Power Pivot 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)합니다.  
   
  구성 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   

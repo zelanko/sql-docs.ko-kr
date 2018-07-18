@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076166"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979015"
 ---
 # <a name="conditional-expressions-xquery"></a>조건 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery는 다음 조건부 지원 **if then 다른** 문:  
+  XQuery 지원 다음 조건부 **if then else** 문:  
   
 ```  
 if (<expression1>)  
@@ -59,9 +59,9 @@ else
   
 -   테스트 식은 괄호로 묶어야 합니다.  
   
--   **다른** 식이 필요 합니다. 필요 없으면 이 항목의 예에 나오는 대로 " ( ) "을 반환할 수 있습니다.  
+-   합니다 **다른** 식이 필요 합니다. 필요 없으면 이 항목의 예에 나오는 대로 " ( ) "을 반환할 수 있습니다.  
   
- 에 대해 다음 쿼리는 지정 하는 예를 들어는 **xml** 유형 변수입니다. **경우** SQL 변수 값을 테스트 하는 조건 (@v)를 사용 하 여 XQuery 식 안에 [variable () 함수](../xquery/xquery-extension-functions-sql-variable.md) 확장 기능입니다. 변수 값이 "FirstName"이면 <`FirstName`> 요소를 반환합니다. 그렇지 않으면 <`LastName`> 요소를 반환합니다.  
+ 대해 다음 쿼리를 지정 하는 예를 들어 합니다 **xml** 형식 변수입니다. **하는 경우** SQL 변수 값을 테스트 하는 조건 (@v)를 사용 하 여 XQuery 식 안에 [sql: variable 함수](../xquery/xquery-extension-functions-sql-variable.md) 확장 함수입니다. 변수 값이 "FirstName"이면 <`FirstName`> 요소를 반환합니다. 그렇지 않으면 <`LastName`> 요소를 반환합니다.  
   
 ```  
 declare @x xml  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 이전 쿼리에서 조건에는 **경우** 두 개 이상의 자식 요소에 지 확인 하는 식을 <`Features`> 합니다. 3개 이상일 경우 결과에 `\<there-is-more/>` 요소를 반환합니다.  
+ 이전 쿼리에서 조건에는 **하는 경우** 식에서 두 개 이상의 자식 요소가 있는지 여부를 확인 <`Features`>. 3개 이상일 경우 결과에 `\<there-is-more/>` 요소를 반환합니다.  
   
  다음은 결과입니다.  
   
@@ -155,7 +155,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- 없이이 쿼리를 작성할 수는 **경우** 다음 예제와 같이 절:  
+ 하지 않고이 쿼리를 작성할 수 있습니다 합니다 **경우** 다음 예와에서 같이 절:  
   
 ```  
 SELECT Instructions.query('  
@@ -170,7 +170,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

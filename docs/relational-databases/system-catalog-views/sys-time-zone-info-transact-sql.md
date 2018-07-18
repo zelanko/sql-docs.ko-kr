@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (Transact SQL) | Microsoft Docs
+title: sys.time_zone_info (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 252def1ce861b926a6c8a990a3cbf10b22eb83f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984925"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "33222418"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Windows 표준 형식에서 표준 시간대의 이름입니다. 예를 들어 **중부 오스트레일리아 표준시로** 또는 **중앙 유럽 표준시**합니다.|  
-|**current_utc_offset**|**nvarchar(12)**|현재 UTC에 대 한 오프셋입니다. 예를 들어 **+ 01:00** 또는 **-07:00**합니다.|  
+|**name**|**sysname**|Windows 표준 형식에 있는 표준 시간대의 이름입니다. 예를 들어 **중부 오스트레일리아 표준시** 나 **중앙 유럽 표준시**합니다.|  
+|**current_utc_offset**|**nvarchar(12)**|현재 UTC 오프셋입니다. 예를 들어 **01:00** 하거나 **-07:00**합니다.|  
 |**is_currently_dst**|**bit**|현재 일광 절약 시간제를 관찰 하는 경우 true입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [GETUTCDATE &#40;Transact SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [GETUTCDATE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
  [AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [서버 차원의 구성 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  
+ [서버 차원의 구성 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

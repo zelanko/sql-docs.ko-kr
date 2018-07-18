@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077520"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987435"
 ---
 # <a name="effective-boolean-value-xquery"></a>유효한 부울 값(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "33077520"
   
 -   논리 식  
   
--   [작동 하지 않습니다](../xquery/functions-on-boolean-values-not-function.md)  
+-   [작동 하지](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   FLWOR 식의 WHERE 절  
   
--   [조건 식](../xquery/conditional-expressions-xquery.md)  
+-   [조건식](../xquery/conditional-expressions-xquery.md)  
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 다음은 유효한 부울 값 예입니다. 경우는 **경우** 식은 처리, 조건의 유효한 부울 값이 결정 됩니다. `/a[1]`은 빈 시퀀스를 반환하기 때문에 유효한 부울 값은 False입니다. 결과는 하나의 텍스트 노드(False)가 포함된 XML로 반환됩니다.  
+ 다음은 유효한 부울 값 예입니다. 경우는 **경우** 식을 처리 하는 조건의 유효한 부울 값이 결정 됩니다. `/a[1]`은 빈 시퀀스를 반환하기 때문에 유효한 부울 값은 False입니다. 결과는 하나의 텍스트 노드(False)가 포함된 XML로 반환됩니다.  
   
 ```  
 value is false  
@@ -72,11 +72,11 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- 쿼리 입력 한 경우 **xml** 열 또는 변수를 부울 유형의 노드를 가질 수 있습니다. **data ()** 이 경우에 부울 값을 반환 합니다. 쿼리 식이 부울 값 True를 반환하는 경우 유효한 부울 값은 다음 예에서와 같이 True입니다. 이 예에는 다음 내용에 대해서도 설명됩니다.  
+ 쿼리를 입력 하면 **xml** 열 이나 변수를 부울 유형의 노드를 가질 수 있습니다. 합니다 **data ()** 이 경우 부울 값을 반환 합니다. 쿼리 식이 부울 값 True를 반환하는 경우 유효한 부울 값은 다음 예에서와 같이 True입니다. 이 예에는 다음 내용에 대해서도 설명됩니다.  
   
--   XML 스키마 컬렉션이 생성됩니다. 요소 \<b > 컬렉션에서 부울 형식입니다.  
+-   XML 스키마 컬렉션이 생성됩니다. 요소 \<b > 컬렉션은 부울 형식입니다.  
   
--   형식화 된 **xml** 변수 생성 및 쿼리 합니다.  
+-   형식화 된 **xml** 변수 생성 및 쿼리 됩니다.  
   
 -   `data(/b[1])` 식은 부울 값 True를 반환합니다. 따라서 이 경우 유효한 부울 값은 True입니다.  
   
@@ -96,7 +96,7 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 기초](../xquery/xquery-basics.md)   
  [FLWOR 문 및 반복 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   

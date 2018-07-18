@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe43b694b8fdeb4128ae1ad2aa9dc137d2bc9d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34034514"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980426"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "34034514"
   
 |열 이름|유형 표시기|제한|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|필수임|데이터베이스의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|필수임|큐브 또는 테이블 형식 모델의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|필수임|측정값 그룹의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
-|**PARTITION_NAME**|**DBTYPE_WSTR**|필수임|파티션의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|필수|데이터베이스의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|필수|큐브 또는 테이블 형식 모델의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|필수|측정값 그룹의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
+|**PARTITION_NAME**|**DBTYPE_WSTR**|필수|파티션의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||차원의 이름입니다.<br /><br /> 제한 목록에 이 열이 필요합니다.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||차원의 특성 이름입니다.|  
 |**ATTRIBUTE_INDEXED**|**DBTYPE_BOOL**||True이면 특성이 인덱싱됨을 나타내고, 그렇지 않으면 false입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "34034514"
 |GUID|a07ccd8e-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

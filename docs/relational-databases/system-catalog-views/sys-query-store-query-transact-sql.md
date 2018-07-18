@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query (Transact SQL) | Microsoft Docs
+title: sys.query_store_query (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,34 +27,34 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d9d53bc6cd0219502698ba8a02b6ba19eaf5f34f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182209"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985189"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  쿼리 및 해당 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보가 포함 됩니다.  
+  쿼리 및 해당 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보를 포함합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**지정한 query_id**|**bigint**|기본 키입니다.|  
-|**query_text_id**|**bigint**|외래 키입니다. 조인 [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|외래 키입니다. 조인 [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)합니다.|  
-|**object_id**|**bigint**|쿼리가 포함 된 데이터베이스 개체의 ID (저장 프로시저, 트리거, CLR UDF/UDAgg 등.). 데이터베이스 개체 (임시 쿼리)의 일부로 쿼리가 실행 되지 않는 경우 0입니다.|  
-|**batch_sql_handle**|**varbinary(64)**|쿼리 문 일괄 처리의 ID의 일부입니다. 쿼리는 임시 테이블 또는 테이블 변수를 참조 하는 경우에 채워집니다.|  
-|**query_hash**|**binary(8)**|논리적 쿼리 트리를 기반으로 개별 쿼리를의 MD5 해시입니다. 최적화 프로그램 힌트를 포함합니다.|  
+|**query_id**|**bigint**|기본 키입니다.|  
+|**query_text_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)합니다.|  
+|**object_id**|**bigint**|쿼리가 포함 된 데이터베이스 개체의 ID입니다 (저장 프로시저, 트리거, CLR UDF/UDAgg, 등.). 쿼리는 데이터베이스 개체 (임시 쿼리)의 일부로 실행 되지 않으면 0입니다.|  
+|**batch_sql_handle**|**varbinary(64)**|문 일괄 처리 쿼리 ID의 일부입니다. 임시 테이블 또는 테이블 변수 쿼리가 참조 하는 경우에 채워집니다.|  
+|**query_hash**|**binary(8)**|논리 쿼리 트리를 기반으로 개별 쿼리의 MD5 해시입니다. 최적화 프로그램 힌트를 포함합니다.|  
 |**is_internal_query**|**bit**|쿼리는 내부적으로 생성 되었습니다.|  
-|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0-없음<br /><br /> 1-사용자<br /><br /> 2 – 단순<br /><br /> 3 – 강제|  
+|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0 – 없음<br /><br /> 1-사용자<br /><br /> 2 – 단순<br /><br /> 3 – 강제|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|매개 변수화 형식에 대 한 텍스트 설명입니다.|  
 |**initial_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  
 |**last_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  
 |**last_execution_time**|**datetimeoffset**|마지막 실행 시간을 참조 마지막 쿼리/계획의 종료 시간입니다.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|쿼리에 사용 된 마지막 시간 마지막 SQL 일괄 처리의 핸들입니다. 에 대 한 입력으로 제공 될 수 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 일괄 처리의 전체 텍스트를 가져옵니다.|  
-|**last_compile_batch_offset_start**|**bigint**|Sys.dm_exec_sql_text last_compile_batch_sql_handle 함께 제공 될 수 있는 정보입니다.|  
-|**last_compile_batch_offset_end**|**bigint**|Sys.dm_exec_sql_text last_compile_batch_sql_handle 함께 제공 될 수 있는 정보입니다.|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|쿼리 된 마지막 시간을 사용 하는 데는 마지막 SQL 일괄 처리의 핸들입니다. 입력으로 제공할 수 있습니다 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 일괄 처리의 전체 텍스트를 가져옵니다.|  
+|**last_compile_batch_offset_start**|**bigint**|Last_compile_batch_sql_handle 함께 sys.dm_exec_sql_text를 제공할 수 있는 정보입니다.|  
+|**last_compile_batch_offset_end**|**bigint**|Last_compile_batch_sql_handle 함께 sys.dm_exec_sql_text를 제공할 수 있는 정보입니다.|  
 |**count_compiles**|**bigint**|컴파일 통계입니다.|  
 |**avg_compile_duration**|**float**|컴파일 통계 (마이크로초)에서입니다.|  
 |**last_compile_duration**|**bigint**|컴파일 통계 (마이크로초)에서입니다.|  
@@ -71,10 +71,10 @@ ms.locfileid: "33182209"
 |**max_compile_memory_kb**|**bigint**|메모리 통계를 컴파일하십시오.|  
 |**is_clouddb_internal_query**|**bit**|항상 0에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온-프레미스입니다.|  
   
-## <a name="permissions"></a>Permissions  
- 필요는 **VIEW DATABASE STATE** 권한.  
+## <a name="permissions"></a>사용 권한  
+ 필요 합니다 **VIEW DATABASE STATE** 권한.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

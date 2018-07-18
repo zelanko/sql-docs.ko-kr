@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018290"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031905"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services의 세계화 시나리오
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,11 +60,11 @@ ms.locfileid: "34018290"
 |번역 지원 구현|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 데이터를 작성해 번역 파일을 생성한 다음 내용을 입력하고 모델로 다시 가져옵니다.<br /><br /> 자세한 내용은 [테이블 형식 모델 번역&#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)을 참조하세요.|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 데이터를 작성해 큐브/측정값/치수/특성에 대한 캡션, 설명 및 계정 유형의 번역을 정의합니다.<br /><br /> 자세한 내용은 [다차원 모델의 번역&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)을 참조하세요. 이 기능을 사용하는 방법에 대한 단원은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서의 [9단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)에 있습니다.|  
 |통화 변환|사용할 수 없습니다.|통화 변환은 통화 데이터를 포함하는 측정값을 변환하는 특수화된 MDX 스크립트를 통해 수행됩니다. [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 의 비즈니스 인텔리전스 마법사를 사용하면 통화 데이터를 포함하는 측정값을 변환하기 위해 차원, 특성 및 측정값 그룹의 데이터 및 메타데이터를 조합하여 사용하는 MDX 스크립트를 생성할 수 있습니다. [통화 환산&#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md)을 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows 응용 프로그램에 대 한 국제화](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Go Global 개발자 센터](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [로캘 기반 적응형 디자인을 사용 하 여 쓰기 Windows 스토어 앱](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Windows 스토어 앱 작성 로캘 기반 적응형 디자인을 사용 하 여](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# 및 XAML을 사용 하 여 유니버설 Windows 앱 개발](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

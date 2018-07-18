@@ -1,5 +1,5 @@
 ---
-title: sys.database_connection_stats (Azure SQL 데이터베이스) | Microsoft Docs
+title: sys.database_connection_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,29 +28,29 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029516"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 이벤트, 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다. 연결 이벤트에 대 한 자세한 내용은 이벤트 유형을 참조 [sys.event_log &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
+  에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 데이터베이스 연결 성공 및 실패 개요를 제공 하는 이벤트입니다. 연결 이벤트에 대 한 자세한 내용은 참조에서 이벤트 유형을 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
 |통계|형식|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들어:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 은 항상 정확히 5 분 후 해당 보다 **start_time** 같은 행에 있습니다.|  
+|**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 정확 하 게 5 분 이상 해당 하는 것은 항상 **start_time** 같은 행에 있습니다.|  
 |**success_count**|**int**|성공한 연결 수:|  
-|**total_failure_count**|**int**|실패한 연결의 총 수입니다. 이 값은 합계의 **connection_failure_count**, **terminated_connection_count**, 및 **throttled_connection_count**, 교착 상태 이벤트를 포함 하지 않습니다.|  
+|**total_failure_count**|**int**|실패한 연결의 총 수입니다. 이 값은 합계 **connection_failure_count**를 **terminated_connection_count**, 및 **throttled_connection_count**, 교착 상태 이벤트를 포함 하지 않습니다.|  
 |**connection_failure_count**|**int**|로그인 실패 횟수입니다.|  
-|**terminated_connection_count**|**int**|***에 해당 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11 합니다.***<br /><br /> 종료된 연결 수:|  
-|**throttled_connection_count**|**int**|***에 해당 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11 합니다.***<br /><br /> 정체된 연결 수입니다.|  
+|**terminated_connection_count**|**int**|***에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> 종료된 연결 수:|  
+|**throttled_connection_count**|**int**|***에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> 정체된 연결 수입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>이벤트 집계  
  5분 간격 이내로 이 뷰에 이벤트 정보가 수집 및 집계됩니다. 개수 열은 지정된 시간 간격 이내에 특정 데이터베이스에 대해 발생한 특정 연결 이벤트 횟수를 나타냅니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "33181529"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>간격 start_time 및 end_time  
- 이벤트가 발생할 때 이벤트는 집계 간격에 포함 된 *에* 또는 *후 * * * start_time** 및 *하기 전에 * * * end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
+ 이벤트가 발생할 때를 이벤트가 집계 간격에 포함 되는지 *대* 또는 *후 * * * start_time** 및 *하기 전에 * * * end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
   
 ```  
   
@@ -80,17 +80,17 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>포함되지 않은 오류  
  이 뷰에는 일부 연결 및 오류 정보가 포함되지 않을 수 있습니다.  
   
--   이 보기 일부가 포함 되지 않은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스의 이벤트 유형에 지정 된만 발생할 수 있는 오류가 [sys.event_log &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
+-   이 뷰에 모두 포함 되지 않습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스의 이벤트 유형에 지정 된만 발생할 수 있는 오류 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 센터 내에서 시스템 오류가 발생할 경우 논리적 서버에 대한 소량의 데이터가 이벤트 테이블에서 누락될 수 있습니다.  
   
 -   DoSGuard를 통해 IP 주소를 차단하는 경우 해당 IP 주소로부터의 연결 시도 이벤트는 수집할 수 없으며 이 뷰에 나타나지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
- 액세스할 수 있는 권한이 있는 사용자는 **마스터** 데이터베이스에는이 보기에 읽기 전용으로 액세스할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 액세스할 수 있는 권한이 있는 사용자를 **마스터** 데이터베이스에는이 보기에 읽기 전용으로 액세스할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예의 쿼리를 보여 줍니다. **sys.database_connection_stats** 2011 년 9 월 25 일 정오와 2011 년 9/28 / (UTC) 사이 발생 한 데이터베이스 연결의 한 요약을 반환 합니다. 기본적으로 쿼리 결과에서 정렬 **start_time** (오름차순).  
+ 다음 예의 쿼리를 보여 줍니다 **sys.database_connection_stats** 2011 년 9 월 28 / (UTC) 정오와 2011 년 9 월 25 정오 사이 발생 한 데이터베이스 연결에 대 한 요약을 반환 합니다. 기본적으로 쿼리 결과 기준으로 정렬 됩니다 **start_time** (오름차순).  
   
 ```  
 SELECT *  
@@ -98,7 +98,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Windows Azure SQL 데이터베이스 문제 해결](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+## <a name="see-also"></a>관련 항목  
+ [Windows Azure SQL Database 문제 해결](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

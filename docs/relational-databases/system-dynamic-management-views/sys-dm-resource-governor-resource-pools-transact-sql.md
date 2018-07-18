@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0317d8dbebebe43cf23c1f97299c9f81098f08e3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980807"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34467939"
   현재 리소스 풀 상태, 리소스 풀의 현재 구성 및 리소스 풀 통계에 대한 정보를 반환합니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_resource_governor_resource_pools**합니다.  
+>  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_resource_governor_resource_pools**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|리소스 풀의 ID입니다. Null을 허용하지 않습니다.|  
-|name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|  
+|NAME|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|  
 |statistics_start_time|**datetime**|이 풀에 대해 통계가 다시 설정된 시간입니다. Null을 허용하지 않습니다.|  
 |total_cpu_usage_ms|**bigint**|리소스 관리자 통계를 다시 설정한 후 누적된 CPU 사용량(밀리초)입니다. Null을 허용하지 않습니다.|  
 |cache_memory_kb|**bigint**|현재 캐시 메모리의 총 사용량(KB)입니다. Null을 허용하지 않습니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "34467939"
 |read_io_throttled_total|**int**|리소스 관리자 통계를 다시 설정한 후 정체된 총 읽기 IO입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |read_bytes_total|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 리소스 관리자 통계를 다시 설정한 후 읽은 총 바이트 수입니다. Null을 허용하지 않습니다.|  
 |read_io_stall_total_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 읽기 IO 도착과 완료 사이의 총 시간(밀리초)입니다. Null을 허용하지 않습니다. |  
-|read_io_stall_queued_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 읽기 IO 도착과 완료 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.<br /><br /> 확인 하는 경우의 IO 설정 풀 대기 시간, 일으키는지 빼십시오 하려면 **read_io_stall_queued_ms** 에서 **read_io_stall_total_ms**합니다.|  
+|read_io_stall_queued_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 읽기 IO 도착과 완료 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.<br /><br /> 확인 하려면 경우 IO 설정 풀에 대기 시간, 되도록 **read_io_stall_queued_ms** 에서 **read_io_stall_total_ms**합니다.|  
 |write_io_queued_total|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 리소스 관리자 통계를 다시 설정한 후 큐에 놓인 총 쓰기 IO입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |write_io_issued_total|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 리소스 관리자 통계를 다시 설정한 후 발생한 총 쓰기 IO입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |write_io_completed_total|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 리소스 관리자 통계를 다시 설정한 후 완료된 총 쓰기 IO입니다. Null을 허용하지 않습니다.|  
@@ -82,15 +82,15 @@ ms.locfileid: "34467939"
 |io_issue_delay_total_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 예약된 IO 실행과 실제 IO 실행 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  리소스 관리자 작업 그룹 및 리소스 관리자 리소스 풀에는 다 대 일 매핑이 있습니다. 따라서 리소스 풀 통계의 대부분은 작업 그룹 통계에서 파생됩니다.  
   
  이 동적 관리 뷰는 인-메모리 구성을 표시합니다. 저장된 구성 메타데이터를 보려면 sys.resource_governor_resource_pools 카탈로그 뷰를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

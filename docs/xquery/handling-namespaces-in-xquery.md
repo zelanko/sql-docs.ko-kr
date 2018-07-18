@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077920"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031391"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery의 네임스페이스 처리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ WHERE ProductModelID=7
 …  
 ```  
   
- **네임 스페이스** 키워드는 새 네임 스페이스 접두사를 정의 하는 데 사용 됩니다 "AWMI:". 그런 다음 해당 네임스페이스의 범위에 포함되는 모든 요소에 대해 쿼리에서 이 접두사를 사용해야 합니다.  
+ 유의 합니다 **네임 스페이스** 키워드 새 네임 스페이스 접두사를 정의 하는 "AWMI:". 그런 다음 해당 네임스페이스의 범위에 포함되는 모든 요소에 대해 쿼리에서 이 접두사를 사용해야 합니다.  
   
 ### <a name="b-declaring-a-default-namespace"></a>2. 기본 네임스페이스 선언  
  이전 쿼리에서는 새로운 네임스페이스 접두사가 정의되었습니다. 그런 다음 원하는 XML 구조를 선택하기 위해 쿼리에서 이 접두사를 사용해야 했습니다. 이 방법 외에 다음 수정된 쿼리에서와 같이 네임스페이스를 기본 네임스페이스로 선언할 수 있습니다.  
@@ -123,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>4. 기본 네임스페이스를 사용하여 생성  
- 또한 생성된 XML에서 사용할 기본 네임스페이스를 정의할 수 있습니다. 예를 들어 다음 쿼리는 기본 네임 스페이스 "uri: somenamespace"를 지정 하는 방법을 표시\\와 같은 생성 된 로컬로 명명 된 요소에 대 한 기본값으로 사용 하 여 `<Result>` 요소입니다.  
+ 또한 생성된 XML에서 사용할 기본 네임스페이스를 정의할 수 있습니다. 예를 들어 다음 쿼리는 기본 네임 스페이스 "uri: somenamespace"를 지정 하는 방법 표시\\와 같은 생성 된 로컬로 명명 된 요소에 대 한 기본값으로 사용 하는 `<Result>` 요소입니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -153,7 +153,7 @@ where ProductModelID=19
   
  기본 요소 네임스페이스 또는 빈 네임스페이스를 무시하면 생성된 XML에 있는 모든 로컬로 명명된 요소가 이후에 대체되는 기본 네임스페이스로 바인딩됩니다. 따라서 빈 네임스페이스를 사용할 수 있도록 생성 중인 XML에 유연성이 필요하면 기본 요소 네임스페이스를 무시하지 마십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

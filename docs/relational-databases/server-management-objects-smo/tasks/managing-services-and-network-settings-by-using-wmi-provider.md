@@ -22,24 +22,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77eef3609246b60c7a49adcde9ee72498bb6f215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968598"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031631"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  WMI 공급자에서 사용 되는 게시 된 인터페이스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] MMC (Management Console)를 관리 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜입니다. Smo에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
+  WMI 공급자가 사용 되는 게시 된 인터페이스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC)를 관리 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜입니다. Smo에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체와 설정 된 연결과 독립적으로 작동는 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Windows 자격 증명을 사용 하 여 WMI 서비스에 연결 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체와 설정 된 연결과 독립적으로 작동 합니다 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Windows 자격 증명을 사용 하 여 WMI 서비스에 연결 하 고 합니다.  
   
 ## <a name="example"></a>예제  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
 
   
- 에 대 한 사용 하는 프로그램는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 **Imports** WMI 네임 스페이스를 정규화 하는 문입니다. 다음과 같이 응용 프로그램의 선언 앞에, 다른 **Imports** 문 끝에 구문을 삽입하십시오.  
+ 사용 하는 프로그램에 대해 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 **가져오기** WMI 네임 스페이스를 정규화 하는 문. 다음과 같이 응용 프로그램의 선언 앞에, 다른 **Imports** 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -217,7 +217,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [구성 관리용 WMI 공급자 개념](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

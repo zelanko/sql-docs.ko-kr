@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031441"
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "33078120"
 |&quot;|"|  
 |&apos;|'|  
   
- 문자열 리터럴은 문자 참조 즉 유니코드 문자에 대한 XML 스타일의 참조도 포함할 수 있습니다. 이 참조는 해당 10진수 또는 16진수 코드 포인트로 식별됩니다. 유로 기호 문자 참조로 나타낼 수는 예를 들어 "&\#8364;"입니다.  
+ 문자열 리터럴은 문자 참조 즉 유니코드 문자에 대한 XML 스타일의 참조도 포함할 수 있습니다. 이 참조는 해당 10진수 또는 16진수 코드 포인트로 식별됩니다. 문자 참조로 유로 기호를 나타낼 수 예를 들어 "&\#8364;"입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 구문을 분석할 때 기본적으로 XML 버전 1.0을 사용합니다.  
@@ -101,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 기본 제공 부울 함수 **true ()** 및 **false ()**, 다음 예제에 나와 있는 것 처럼 부울 값을 나타내기 위해 사용할 수 있습니다.  
+ 기본 제공 부울 함수를 **true ()** 하 고 **false ()**, 다음 예와에서 같이 부울 값을 나타내기 위해 사용할 수 있습니다.  
   
 ```  
 DECLARE @var XML  
@@ -138,7 +138,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- 다음 쿼리에서와 같이 SQL 변수를 가리키는 variable () 확장 기능을 사용할 수 있습니다.  
+ 다음 쿼리에서와에서 같이 SQL 변수를 가리키도록 sql: variable 확장 함수를 사용할 수 있습니다.  
   
 ```  
 DECLARE @price money  
@@ -159,10 +159,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   모듈 가져오기는 지원되지 않습니다.  
   
--   외부 변수 선언은 지원되지 않습니다. 이 해결 방법은 사용 하 여 [variable () 함수](../xquery/xquery-extension-functions-sql-variable.md)합니다.  
+-   외부 변수 선언은 지원되지 않습니다. 이 솔루션을 사용 하는 것은 [sql: variable 함수](../xquery/xquery-extension-functions-sql-variable.md)합니다.  
   
 ## <a name="context-item-expressions"></a>컨텍스트 항목 식  
- 컨텍스트 항목은 현재 경로 식의 컨텍스트에서 처리 중인 항목입니다. 이 항목 식은 문서 노드가 있는 NULL이 아닌 XML 데이터 형식 인스턴스에서 초기화됩니다. XPath 식의 컨텍스트 또는 조건자에 nodes () 메서드에서 변경할 수도 있습니다.  
+ 컨텍스트 항목은 현재 경로 식의 컨텍스트에서 처리 중인 항목입니다. 이 항목 식은 문서 노드가 있는 NULL이 아닌 XML 데이터 형식 인스턴스에서 초기화됩니다. XPath 식의 컨텍스트 또는 조건자 nodes () 메서드에서 변경할 수도 있습니다.  
   
  컨텍스트 항목은 점(.)이 포함된 식에 의해 반환됩니다. 예를 들어 다음 쿼리는 각 <`a`> 요소를 평가하여 `attr` 특성이 있는지 확인합니다. 특성이 존재하면 요소가 반환됩니다. 조건부의 조건은 컨텍스트 노드가 하나의 마침표로 지정되도록 지정합니다.  
   
@@ -180,7 +180,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>함수 호출  
- 기본 제공 XQuery 함수를 호출할 수 있습니다 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] variable () 및 sql: column 함수입니다. 구현 되는 함수의 목록에 대 한 참조 [xml 데이터 형식에 대 한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)합니다.  
+ 기본 제공 XQuery 함수를 호출할 수 있습니다 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 1!s!sql:column () 및 sql: variable 함수입니다. 구현 된 함수 목록을 참조 하세요 [&#40;xml 데이터 형식에 대 한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)합니다.  
   
 #### <a name="implementation-limitations"></a>구현 시 제한 사항  
  구현 제한 사항은 다음과 같습니다.  
@@ -189,7 +189,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   함수 가져오기는 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

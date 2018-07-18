@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 883fa5df355874516ffd6f0cac01ff50d727d737
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34573765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979145"
 ---
 # <a name="datasourceid-element-xmla"></a>DataSourceID 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  사용 하는 데이터 소스를 식별 한 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 중 요소는 [백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령입니다.  
+  사용 하는 데이터 소스를 식별을 [위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) 하는 동안 요소를 [백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), 또는 [동기화](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) 명령.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34573765"
 </Location>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34573765"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **DataSourceID** 요소에 있는 원격 파티션 정보가 백업, 복원 또는 동기화는 원격 인스턴스를 식별 하는 원본 인스턴스에 데이터 원본의 이름을 포함 합니다.  
+ 합니다 **DataSourceID** 요소는 원격 파티션 정보가 백업, 복원 또는 동기화는 원격 인스턴스를 식별 하는 원본 인스턴스에 있는 데이터 원본의 이름을 포함 합니다.  
   
- 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
  [ConnectionString 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   

@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980025"
 ---
 # <a name="type-system---sequence-type-matching"></a>형식 시스템-시퀀스 유형 일치
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "33078030"
   
 -   식이 XML 요소나 특정 이름 및 유형의 특성 노드를 반환하는지 여부를 확인할 수 있습니다.  
   
- 시퀀스 유형 일치에서는 `instance of` 부울 연산자를 사용할 수 있습니다. 에 대 한 자세한 내용은 `instance of` 식 참조 [SequenceType 식 &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)합니다.  
+ 시퀀스 유형 일치에서는 `instance of` 부울 연산자를 사용할 수 있습니다. 에 대 한 자세한 내용은 합니다 `instance of` 식을 참조 [SequenceType 식 &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)합니다.  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>식에 의해 반환된 원자 값 유형 비교  
  식이 원자 값 시퀀스를 반환하는 경우 시퀀스에서 값의 유형을 찾아야 할 수도 있습니다. 다음 예에서는 시퀀스 유형 구문을 사용하여 식에 의해 반환된 원자 값 유형을 평가하는 방법을 보여 줍니다.  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>예: 빈 시퀀스 인지 여부를 결정  
- **empty ()** 순서 유형은 데 사용할 수 시퀀스 유형 식에서 지정 된 식에서 반환 된 시퀀스는 빈 시퀀스 인지 확인 합니다.  
+ 합니다 **empty ()** 시퀀스 유형은 시퀀스 유형의 식에 지정 된 식이 반환 되는 시퀀스에 빈 시퀀스 인지 여부를 확인 합니다.  
   
  다음 예에서 XML 스키마는 <`root`> 요소를 nillable로 만듭니다.  
   
@@ -168,7 +168,7 @@ GO
  두 값이 모두 True인 경우 `instance of` 식은 True를 반환합니다.  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>예: xml 유형 열에 대 한 쿼리  
- 다음 예제에서는 쿼리는 Instructions 열에 대해 지정 됩니다 **xml** 에 입력 된 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다. 이 열은 연결된 스키마가 포함되므로 형식화된 XML 열입니다. XML 스키마는 정수 유형의 `LocationID` 특성을 정의합니다. 따라서 시퀀스 식에에서는 `instance of xs:integer?` True를 반환 합니다.  
+ 다음 예에서 쿼리는 Instructions 열에 대해 지정 됩니다 **xml** 에 입력 된 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다. 이 열은 연결된 스키마가 포함되므로 형식화된 XML 열입니다. XML 스키마는 정수 유형의 `LocationID` 특성을 정의합니다. 따라서 시퀀스 식에에서는 `instance of xs:integer?` True를 반환 합니다.  
   
 ```  
 SELECT Instructions.query('   
@@ -181,15 +181,15 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>식에 의해 반환되는 노드 유형 비교  
  식이 노드의 시퀀스를 반환하는 경우 시퀀스에서 노드의 유형을 찾아야 할 수 있습니다. 다음 예에서는 시퀀스 유형 구문을 사용하여 식에 의해 반환된 노드 유형을 평가하는 방법을 보여 줍니다. 사용할 수 있는 시퀀스 유형은 다음과 같습니다.  
   
--   **item()** – 시퀀스의 모든 항목을 찾습니다.  
+-   **item()** -시퀀스의 모든 항목을 찾습니다.  
   
--   **node ()** – 시퀀스가 노드인지 여부를 결정 합니다.  
+-   **node ()** – 시퀀스가 노드인지 여부를 확인 합니다.  
   
 -   **processing-instruction()** -식이 처리 명령을 반환 하는지 여부를 확인 합니다.  
   
 -   **comment()** -식이 주석을 반환 하는지 여부를 확인 합니다.  
   
--   **document-node()** -식이 문서 노드를 반환 하는지 여부를 결정 합니다.  
+-   **document-node()** -식이 문서 노드를 반환 하는지 여부를 확인 합니다.  
   
  다음 예에서는 이러한 시퀀스 유형을 보여 줍니다.  
   
@@ -236,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  특정 제한 사항은 다음과 같습니다.  
   
--   **document-node()** 콘텐츠 형식과 구문은 지원 되지 않습니다.  
+-   **document-node()** 콘텐츠 형식과 구문이 지원 되지 않습니다.  
   
 -   **processing-instruction(name)** 구문은 지원 되지 않습니다.  
   
@@ -314,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>예 2  
- 다음 예에서는 식에 의해 반환된 노드가 특정 이름의 요소 노드인지 여부를 확인하는 방법을 보여 줍니다. 사용 하 여는 **element()** 테스트 합니다.  
+ 다음 예에서는 식에 의해 반환된 노드가 특정 이름의 요소 노드인지 여부를 확인하는 방법을 보여 줍니다. 사용 된 **element()** 테스트 합니다.  
   
  다음 예에서 XML 인스턴스에서 쿼리되는 두 개의 <`Customer`> 요소는 유형이 각각 `CustomerType` 및 `SpecialCustomerType`으로 서로 다릅니다. 식에 의해 반환된 <`Customer`> 요소의 유형을 확인해야 한다고 가정하십시오. 다음 XML 스키마 컬렉션은 `CustomerType` 및 `SpecialCustomerType` 유형을 정의합니다.  
   
@@ -390,7 +390,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 다음 쿼리는 쿼리되는 XML 인스턴스에 이름이 `Age`인 특성 노드가 있기 때문에 True를 반환합니다. 이 식에서는 `attribute(Age)` 특성 테스트가 사용됩니다. 특성에 순서가 없기 때문에 이 쿼리에서는 FLWOR 식을 사용하여 모든 특성을 검색한 다음 `instance of` 식을 사용하여 각 특성을 테스트합니다. 이 예에서는 먼저를 만들려면 형식화 된 XML 스키마 컬렉션을 만듭니다 **xml** 변수입니다.  
+ 다음 쿼리는 쿼리되는 XML 인스턴스에 이름이 `Age`인 특성 노드가 있기 때문에 True를 반환합니다. 이 식에서는 `attribute(Age)` 특성 테스트가 사용됩니다. 특성에 순서가 없기 때문에 이 쿼리에서는 FLWOR 식을 사용하여 모든 특성을 검색한 다음 `instance of` 식을 사용하여 각 특성을 테스트합니다. 예제에는 먼저 만들어서 형식화 된 XML 스키마 컬렉션을 만듭니다 **xml** 변수입니다.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -428,7 +428,7 @@ RETURN
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  특정 제한 사항은 다음과 같습니다.  
   
--   요소 테스트에서 유형 이름 따라야 할 발생 표시 하 여 (**?**).  
+-   요소 테스트에서 유형 이름 뒤에 야 발생 표시 하 여 (**?**).  
   
 -   **element (ElementName, TypeName)** 지원 되지 않습니다.  
   
@@ -438,9 +438,9 @@ RETURN
   
 -   **schema-attribute (attributename)** 지원 되지 않습니다.  
   
--   에 대 한 명시적인 쿼리 **xsi: type** 또는 **xsi: nil** 지원 되지 않습니다.  
+-   명시적으로 쿼리할 **xsi: type** 하거나 **xsi: nil** 지원 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

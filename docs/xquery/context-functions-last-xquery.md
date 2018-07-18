@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 33b7afe5bdef612fe48938d8118c17d5d6e7a512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076702"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038441"
 ---
-# <a name="context-functions---last-xquery"></a>컨텍스트 함수-마지막 (XQuery)
+# <a name="context-functions---last-xquery"></a>컨텍스트 함수-last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   현재 처리 중인 시퀀스의 항목 수를 반환합니다. 특히 시퀀스에서 마지막 항목의 정수 인덱스를 반환합니다. 시퀀스의 첫 번째 항목에는 인덱스 값 1이 있습니다.  
@@ -42,14 +42,14 @@ ms.locfileid: "33076702"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>주의  
- SQL Server에서 **fn:last()** 상황별 조건자의 경우에만 사용할 수 있습니다. 특히 사용 시 대괄호(`[ ]`)로 묶어야 합니다.  
+## <a name="remarks"></a>Remarks  
+ SQL server에서 **fn:last()** 상황별 조건자의 경우에만 사용할 수 있습니다. 특히 사용 시 대괄호(`[ ]`)로 묶어야 합니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
+ 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>1. last() XQuery 함수를 사용하여 마지막 두 제조 단계 검색  
- 다음 쿼리는 특정 제품 모델의 마지막 두 제조 단계를 검색합니다. 값에서 반환 되는 제조 단계 수는 **last ()** 함수는 사용이 쿼리에서 마지막 두 제조 단계 검색 합니다.  
+ 다음 쿼리는 특정 제품 모델의 마지막 두 제조 단계를 검색합니다. 값이 고, 반환한 제조 단계 수를 **last ()** 함수는이 쿼리에서 마지막 두 제조 단계 검색 하는 데 사용 됩니다.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -67,7 +67,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 위의 쿼리에서 **last ()** 함수 /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 제조 단계 수를 반환 합니다. 이 값은 업무 센터 위치에서 마지막 제조 단계를 검색하는 데 사용됩니다.  
+ 이전 쿼리에서 **last ()** 함수 /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 제조 단계 수를 반환 합니다. 이 값은 업무 센터 위치에서 마지막 제조 단계를 검색하는 데 사용됩니다.  
   
  다음은 결과입니다.  
   
@@ -85,7 +85,7 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

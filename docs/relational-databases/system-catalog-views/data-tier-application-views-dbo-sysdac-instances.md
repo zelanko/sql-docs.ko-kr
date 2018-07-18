@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (Transact SQL) | Microsoft Docs
+title: dbo.sysdac_instances (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031341"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>데이터 계층 응용 프로그램 보기-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 응용 프로그램) 인스턴스마다 하나의 행을 표시합니다. sysdac_instances는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서 sysdac_instances 보기의 열에 설명 합니다.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 응용 프로그램) 인스턴스마다 하나의 행을 표시합니다. sysdac_instances는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서 sysdac_instances 뷰에서 열을 설명 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,14 +49,14 @@ ms.locfileid: "33178819"
 |created_by|**sysname**|DAC 인스턴스를 만든 사람의 로그인 정보입니다.|  
 |database_name|**sysname**|DAC 인스턴스에 대해 만든 데이터베이스의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  DAC는 응용 프로그램에 사용되는 테이블 및 뷰 같은 논리 데이터 계층 개체의 정의인 DAC 유형을 포함합니다. DAC 패키지는 DAC를 배포하는 데 사용되는 파일입니다. DAC 패키지는 DAC 유형에 포함된 모든 논리 개체의 표현을 포함합니다. DAC 패키지를 사용하여 하나 이상의 DAC 복사본 또는 인스턴스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포할 수 있습니다. 동일한 DAC 패키지에서 배포된 각 DAC 인스턴스는 동일한 유형을 공유하지만 고유한 인스턴스 이름 및 식별자가 할당됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 열을 보려면 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. public 역할의 멤버는 instance_name, description 및 type_version 열을 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [데이터 계층 응용 프로그램 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [데이터 계층 응용 프로그램 뷰 &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

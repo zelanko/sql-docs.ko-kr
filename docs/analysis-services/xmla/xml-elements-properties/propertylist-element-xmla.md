@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3e773de16e65aa9c7f1be521214088aa9f06b369
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577835"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036711"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  사용 하는 Analysis (XMLA) 속성에 대 한 XML의 컬렉션을 포함는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 및 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
+  Analysis (XMLA) 속성에서 사용 하는 for XML의 컬렉션을 포함 합니다 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 하 고 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577835"
 </Properties>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "34577835"
   
  사용 가능한 속성 및 해당 값은 **Discover** 메서드에 DISCOVER_PROPERTIES 요청 유형을 사용하여 얻을 수 있습니다. **PropertyList** 요소에 나열되는 속성에 순서를 지정할 필요는 없습니다.  
   
- Analysis Services에서 지원 되는 XMLA 속성에 대 한 자세한 내용은 참조 [XMLA 속성 지원 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다.  
+ Analysis Services에서 지원 되는 XMLA 속성에 대 한 자세한 내용은 [지원 되는 XMLA 속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다.  
   
 ## <a name="example"></a>예제  
   

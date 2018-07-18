@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029841"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "32970905"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
-에 대 한 사용 하는 프로그램 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 에이전트를는 **를 사용 하 여** 에이전트 네임 스페이스를 정규화 하는 문입니다. 다른 뒤의 문으로 삽입 **를 사용 하 여** 응용 프로그램의 선언 앞의 문을 같은:
+사용 하는 프로그램에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 에이전트에는 **사용 하 여** 에이전트 네임 스페이스를 정규화 하는 문입니다. 다른 문을 삽입 **를 사용 하 여** 응용 프로그램의 모든 선언 앞의 문을 같은:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -171,9 +171,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C#에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | : _Total counterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 는 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
+ 경고 알림을 위해 운영자가 필요합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
   
 ```csharp  
 {  
@@ -204,9 +204,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | : _Total counterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 는 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
+ 경고 알림을 위해 운영자가 필요합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -271,7 +271,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
   

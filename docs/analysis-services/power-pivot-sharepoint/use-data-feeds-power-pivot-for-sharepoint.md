@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027753"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979871"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34027753"
   
  Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 2010 모두 이러한 형식으로 데이터를 제공할 수 있습니다.  
   
- SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)을 참조하세요.  
+ SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)을 참조하세요.  
   
 ##  <a name="sharepointlist"></a> SharePoint 목록에서 데이터 피드 만들기  
  SharePoint 2010 팜에서 SharePoint 목록의 목록 리본에는 데이터 피드로 내보내기 단추가 있습니다. 이 단추를 클릭하여 목록을 피드로 내보낼 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트 응용 프로그램이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트 응용 프로그램이 시작되어 목록을 포함하는 새 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 테이블을 만듭니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "34027753"
   
 5.  **열기**를 선택한 경우 테이블 가져오기 마법사를 사용하여 데이터 피드를 워크시트로 가져옵니다. 데이터 피드가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창에 새 테이블로 추가됩니다.  
   
- ADO.NET Data Services 3.5.1이 SharePoint 서버에 설치되어 있지 않으면 오류가 발생합니다. 오류 및 오류 해결 방법에 대한 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)을 참조하세요.  
+ ADO.NET Data Services 3.5.1이 SharePoint 서버에 설치되어 있지 않으면 오류가 발생합니다. 오류 및 오류 해결 방법에 대한 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)을 참조하세요.  
   
 ##  <a name="rsreport"></a> Reporting Services 보고서에서 데이터 피드 만들기  
  SQL Server 2008 R2 Reporting Services가 배포되어 있는 경우 새로운 Atom 렌더링 확장을 사용하여 기존 보고서에서 데이터 피드를 생성할 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트 응용 프로그램이 시작되어 스트리밍되는 테이블과 열을 자동으로 이를 추가해 관계를 만듭니다.  
@@ -82,13 +82,13 @@ ms.locfileid: "34027753"
   
     1.  **기준 URL** 은 선택 사항입니다. 데이터 서비스 문서에서 여러 피드를 제공하는 경우 기준 URL을 지정해야 합니다. 기준 URL에서는 모든 피드에 공통되는 URL 부분(예: 서버 이름 및 사이트)을 지정해야 합니다. Reporting Services 보고서에 대한 데이터 서비스 문서를 만들 경우 기준 URL은 보고서 서버 URL 및 보고서입니다.  
   
-    2.  **웹 서비스 URL** 은 필수입니다. 이 값은 기준 URL 없이 포함 해야 `http://` 또는 `https://` 주소에서입니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL이 `http://adventure-works/inventory/today.aspx`, 기본 url `http://adventure-works/inventory`, 및 웹 서비스 URL은 /today.aspx입니다.  
+    2.  **웹 서비스 URL** 은 필수입니다. 기본 URL을 하지 않고이 값을 포함 해야 합니다 `http://` 또는 `https://` 주소에서입니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL은 `http://adventure-works/inventory/today.aspx`, 기본 url `http://adventure-works/inventory`, 및 웹 서비스 URL은 /today.aspx입니다.  
   
          웹 서비스 URL은 데이터 하위 집합을 필터링하거나 선택하는 매개 변수를 포함할 수 있습니다. 피드를 제공하는 응용 프로그램이나 서비스는 URL에 지정된 매개 변수를 지원해야 합니다.  
   
 6.  피드와 테이블의 개수가 일대일이 되도록 **테이블 이름**을 입력합니다. 이 값은 필수 사항입니다. 테이블 이름은 데이터 피드를 사용하는 클라이언트 응용 프로그램에서 사용됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 테이블 이름은 가져온 데이터를 포함하는 테이블 이름을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창에서 지정하는 데 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [데이터 피드 라이브러리를 사용하여 데이터 피드 공유&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

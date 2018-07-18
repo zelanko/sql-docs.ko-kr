@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f223bff2dced01c2b3f954ca14242b1a35c93813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576555"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036651"
 ---
 # <a name="error-element-xmla"></a>Error 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34576555"
 </Cell>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "34576555"
 |상위 항목|자식 요소|  
 |--------------|--------------------|  
 |[메시지](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|InclusionThresholdSetting|  
-|[셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [행](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[설명](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md), [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [소스](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
+|[셀](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md), [행](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|[설명을](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md), [ErrorCode](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)합니다 [HelpFile](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md), [원본](../../../analysis-services/xmla/xml-elements-properties/source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>특성  
   

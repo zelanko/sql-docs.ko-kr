@@ -1,5 +1,5 @@
 ---
-title: Analysis Services에서 서버 속성 | Microsoft Docs
+title: Analysis Services의 서버 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975101"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services의 서버 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "35238823"
 SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 높은 속성 하위 집합이 표시됩니다. 전체 속성 목록은 msmdsrv.ini 파일에 있습니다.   
   
 > [!NOTE]  
->  기본 SQL Server Analysis Services 설치의 경우 \program files\microsoft SQL Server\MSAS13 msmdsrv.ini는 찾을 수 있습니다. MSSQLSERVER\OLAP\Config 폴더입니다.
+>  기본 SQL Server Analysis Services 설치에서 SQL Server\MSAS13 \Program Files\Microsoft에서 msmdsrv.ini는 찾을 수 있습니다. MSSQLSERVER\OLAP\Config 폴더입니다.
 > 
 > 서버 구성에 영향을 주는 기타 속성에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성이 포함됩니다. 이러한 속성에 대한 자세한 내용은 [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)을 참조하세요.
  

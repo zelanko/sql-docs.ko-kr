@@ -1,5 +1,5 @@
 ---
-title: sys.server_permissions (Transact SQL) | Microsoft Docs
+title: sys.server_permissions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 16200de0c63979912b893fa84e7b36cf93a4ec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038874"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "33221944"
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|사용 권한이 있는 클래스를 나타냅니다.<br /><br /> 100 = 서버<br /><br /> 101 = 서버 보안 주체<br /><br /> 105 = 끝점|  
 |**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다. 다음 값 중 하나입니다.<br /><br /> **서버**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
-|**major_id**|**int**|사용 권한이 있는 보안 개체의 ID이며 클래스에 따라 해석됩니다. 대부분의 항목에서 이 ID는 클래스가 나타내는 대상의 ID입니다. 비표준 ID는 다음과 같이 해석됩니다.<br /><br /> 100 항상 0 =|  
+|**major_id**|**int**|사용 권한이 있는 보안 개체의 ID이며 클래스에 따라 해석됩니다. 대부분의 항목에서 이 ID는 클래스가 나타내는 대상의 ID입니다. 비표준 ID는 다음과 같이 해석됩니다.<br /><br /> 100 = 항상 0|  
 |**minor_id**|**int**|사용 권한이 있는 대상의 보조 ID이며 클래스에 따라 해석됩니다.|  
 |**grantee_principal_id**|**int**|사용 권한을 부여할 서버 보안 주체 ID입니다.|  
 |**grantor_principal_id**|**int**|이 사용 권한을 부여한 사용자의 서버 보안 주체 ID입니다.|  
 |**type**|**char(4)**|서버 사용 권한의 유형입니다. 사용 권한 유형 목록은 다음 표를 참조하세요.|  
 |**permission_name**|**nvarchar(128)**|사용 권한 이름입니다.|  
-|**상태**|**char(1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
+|**state**|**char(1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
 |**state_desc**|**nvarchar(60)**|사용 권한 상태에 대한 설명입니다.<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |사용 권한 유형|사용 권한 이름|보안 개체에 적용되는 항목|  
@@ -83,7 +83,7 @@ ms.locfileid: "33221944"
 |VWSS|VIEW SERVER STATE|SERVER|  
 |XA|EXTERNAL ACCESS|SERVER|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 사용자는 자산의 권한을 볼 수 있습니다. 다른 로그인에 대한 사용 권한을 보려면 로그인할 때 VIEW DEFINITION, ALTER ANY LOGIN 또는 사용 권한이 필요합니다. 사용자 정의 서버 역할을 보려면 ANY SERVER ROLE 또는 역할의 멤버 자격이 필요합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -102,7 +102,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

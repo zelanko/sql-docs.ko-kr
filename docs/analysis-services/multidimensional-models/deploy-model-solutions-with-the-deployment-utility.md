@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027250"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975164"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>배포 유틸리티를 사용하여 모델 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027250"
   **Microsoft.AnalysisServices.Deployment** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 엔진을 시작할 수 있습니다. 입력 파일로서 이 유틸리티는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 구축하여 생성된 XML 출력 파일을 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 배포를 사용자 지정할 수 있도록 이 입력 파일을 쉽게 수정할 수 있습니다. 그런 다음 생성된 배포 스크립트를 즉시 실행하거나 나중에 배포할 때 사용할 수 있도록 저장할 수 있습니다.  
   
 > [!NOTE]
-> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사/유틸리티와 함께 설치 됩니다 [SQL Server 관리 Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). 최신 버전을 사용 하는 확인 해야 합니다. 기본적으로 최신 버전의 배포 마법사는 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio에 설치 됩니다. 
+> 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사/유틸리티와 함께 설치 됩니다 [SQL Server 관리 Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). 최신 버전을 사용 해야 합니다. 기본적으로 최신 버전의 배포 마법사는 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio에 설치 됩니다. 
 
 ## <a name="syntax"></a>구문  
   
@@ -59,10 +59,10 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  **/d** 인수는 출력 모드에서만 사용됩니다. 응답 모드나 자동 모드에서는 이 인수를 지정해도 무시됩니다. 모드에 대한 자세한 내용은 이 항목 뒷부분에 나오는 [모드](#Modes)섹션을 참조하십시오.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Microsoft.AnalysisServices.Deployment** 유틸리티에서는 개체 정의, 배포 대상, 배포 옵션 및 구성 설정을 제공하는 일련의 파일을 사용하며 지정된 배포 옵션 및 구성 설정을 사용하여 지정된 배포 대상으로 개체 정의를 배포하려고 시도합니다. 이 유틸리티는 응답 파일이나 출력 모드에서 호출될 경우 사용자 인터페이스를 제공할 수 있습니다. 이 유틸리티에 제공된 사용자 인터페이스를 사용하여 응답 파일을 만드는 방법은 [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)를 참조하세요.  
   
- 유틸리티는 \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio 폴더에 있으며  
+ 유틸리티는 \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio 폴더에 있습니다.  
   
 ##  <a name="Modes"></a> 모드  
  다음 표에 나열된 모드에서 유틸리티를 실행할 수 있습니다.  
@@ -84,7 +84,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

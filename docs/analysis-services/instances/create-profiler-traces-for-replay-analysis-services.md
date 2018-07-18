@@ -1,5 +1,5 @@
 ---
-title: 재생 (Analysis Services)에 대 한 프로파일러 추적 만들기 | Microsoft Docs
+title: 재생 (Analysis Services)에 대 한 Profiler 추적 만들기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5928325ffe5b0b98da2058529b1cbb036a445be
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031641"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>재생에 대한 프로파일러 추적 만들기(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34014790"
   
 -   모든 데이터 열을 갖는 Audit Login 이벤트 클래스. 이 이벤트 클래스는 로그인한 사용자 및 세션 설정에 대한 정보를 제공합니다. SPID는 사용자 세션에 대한 참조를 제공합니다. 자세한 내용은 [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md)을 참조하세요.  
   
--   모든 데이터 열을 갖는 Discover Begin 이벤트 클래스. TextData 열은 제공 된 \<RequestType > discover 요청 및 RequestProperties 열의 부분을 제공는 \<속성 > 부분 검색 요청을 합니다. EventSubclass 열은 검색 유형을 제공합니다. 자세한 내용은 [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md)을 참조하세요.  
+-   모든 데이터 열을 갖는 Discover Begin 이벤트 클래스. TextData 열은 제공 합니다 \<RequestType > 검색 요청을 하 고 RequestProperties 열에 대 한 부분을 제공는 \<속성 > discover 요청 부분입니다. EventSubclass 열은 검색 유형을 제공합니다. 자세한 내용은 [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md)을 참조하세요.  
   
 -   모든 데이터 열을 갖는 Discover End 이벤트 클래스. 이 이벤트 클래스는 검색 요청 상태를 확인합니다. 자세한 내용은 [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md)을 참조하세요.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "34014790"
   
 -   모든 데이터 열을 갖는 Command End 이벤트 클래스. 이 이벤트 클래스는 명령 상태를 확인합니다. 자세한 내용은 [Command Events Data Columns](../../analysis-services/trace-events/command-events-data-columns.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [SQL Server Profiler로 Analysis Services 모니터링 소개](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
+ [SQL Server 프로파일러를 사용한 Analysis Services 모니터링 소개](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
   
   

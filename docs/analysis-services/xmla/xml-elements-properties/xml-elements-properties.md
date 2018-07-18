@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577965"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037415"
 ---
 # <a name="xml-elements---properties"></a>XML 요소-속성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34577965"
 |[요소 특성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)||  
 |[AttributeName 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)||  
 |[요소 특성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)||  
-|[요소 축은 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)||  
+|[요소를 축 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)||  
 |[AxesInfo 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md)||  
 |[Axis 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)||  
 |[AxisInfo 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)||  
@@ -45,7 +45,7 @@ ms.locfileid: "34577965"
 |[CellData 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)||  
 |[CellInfo 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellinfo-element-xmla.md)||  
 |[CellOrdinal 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/cellordinal-element-xmla.md)||  
-|[Command 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)||  
+|[요소를 명령 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)||  
 |[ConnectionID 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md)||  
 |[ConnectionString 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)||  
 |[CrossProduct 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)||  
@@ -67,7 +67,7 @@ ms.locfileid: "34577965"
 |[DbTableName 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md)||  
 |[DeleteWithDescendants 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/deletewithdescendants-element-xmla.md)||  
 |[Description 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/description-element-xmla.md)||  
-|[요소를 차원 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)||  
+|[차원 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)||  
 |[DisplayInfo 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/displayinfo-element-xmla.md)||  
 |[Error 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)||  
 |[ErrorCode 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/errorcode-element-xmla.md)||  
@@ -79,8 +79,8 @@ ms.locfileid: "34577965"
 |[HelpFile 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/helpfile-element-xmla.md)||  
 |[HierarchyInfo 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md)||  
 |[ID 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)||  
-|[요소 키 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)||  
-|[요소 키 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md)||  
+|[요소를 키 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)||  
+|[요소를 키 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/key-element-xmla.md)||  
 |[언어 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md)||  
 |[LastDataUpdate 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/lastdataupdate-element-xmla.md)||  
 |[LastSchemaUpdate 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/lastschemaupdate-element-xmla.md)||  
@@ -93,34 +93,34 @@ ms.locfileid: "34577965"
 |[Member 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)||  
 |[Members 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)||  
 |[메시지 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)||  
-|[요소를 메시지 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)||  
+|[메시지 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)||  
 |[Mode 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)||  
 |[MoveWithDescendants 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/movewithdescendants-element-xmla.md)||  
-|[Name 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)||  
-|[Name 요소 &#40;매개 변수&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-parameter-xmla.md)||  
+|[요소의 이름을 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)||  
+|[요소의 이름을 &#40;매개 변수&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-parameter-xmla.md)||  
 |[새 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md)||  
-|[개체 요소의 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)||  
-|[개체 요소의 &#40;차원&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)||  
+|[개체 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)||  
+|[개체 요소 &#40;차원&#41; &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md)||  
 |[ObjectDefinition 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md)||  
 |[OlapInfo 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)||  
 |[Optimization 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)||  
 |[Original 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/original-element-xmla.md)||  
-|[요소를 병렬 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)||  
-|[매개 변수 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)||  
-|[Parameters 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)||  
+|[병렬 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)||  
+|[Parameter 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)||  
+|[매개 변수 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)||  
 |[ParentObject 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)||  
 |[PartitionID 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)||  
 |[Password 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)||  
-|[Properties 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
+|[속성 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
 |[PropertyList 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
 |[요소를 쿼리 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
-|[쿼리 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
+|[요소를 쿼리 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
 |[RequestType 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)||  
 |[RestrictionList 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)||  
 |[Restrictions 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)||  
 |[요소를 결과 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)||  
-|[요소를 반환 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)||  
-|[루트 요소를 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)||  
+|[요소를 반환 합니다. &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)||  
+|[루트 요소의 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)||  
 |[row 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)||  
 |[보안 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)||  
 |[SessionID 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md)||  
@@ -135,13 +135,13 @@ ms.locfileid: "34577965"
 |[SynchronizeSecurity 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)||  
 |[TableNotification 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)||  
 |[TableNotifications 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tablenotifications-element-xmla.md)||  
-|[요소를 대상 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
+|[Target 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)||  
 |[시간 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)||  
 |[Translation 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)||  
 |[Translations 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)||  
 |[Tuple 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)||  
 |[Tuples 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)||  
-|[E Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
+|[Type 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)||  
 |[UName 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/uname-element-xmla.md)||  
 |[UnaryOperator 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/unaryoperator-element-xmla.md)||  
 |[요소 값 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/value-element-xmla.md)||  

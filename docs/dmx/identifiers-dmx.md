@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978612"
 ---
 # <a name="identifiers-dmx"></a>식별자(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,19 +41,19 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  일반 식별자의 첫 번째 문자는 다음 중 하나로 지정해야 합니다.  
   
-    -   문자는 Unicode Standard 2.0에 정의 된 대로. 여기에는 a~z 및 A~Z의 라틴어 문자와 기타 언어의 문자가 포함됩니다.  
+    -   문자는 Unicode Standard 2.0에서 정의 합니다. 여기에는 a~z 및 A~Z의 라틴어 문자와 기타 언어의 문자가 포함됩니다.  
   
     -   밑줄(_)  
   
 2.  그 다음 문자에는 다음과 같은 문자를 사용할 수 있습니다.  
   
-    -   유니코드 표준 2.0에서 정의한 문자입니다.  
+    -   Unicode Standard 2.0에서 정의한 문자입니다.  
   
     -   기본 라틴 또는 기타 국가 스크립트의 10진수  
   
     -   밑줄(_)  
   
-3.  DMX 예약어는 식별자로 사용할 수 없습니다. DMX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 참조 [예약 된 키워드 &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)합니다.  
+3.  DMX 예약어는 식별자로 사용할 수 없습니다. DMX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 [예약 된 키워드 &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)합니다.  
   
 4.  식별자에는 중간 공백 또는 특수 문자가 포함될 수 없습니다.  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   개체 이름 또는 개체 이름의 일부로 예약어를 사용하는 경우  
   
-     예약된 키워드는 개체 이름에 사용하지 않는 것이 좋습니다. 이전 버전에서 업그레이드 하는 데이터베이스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 이전 버전에 예약 된 단어를 포함 하는 식별자를 포함할 수 있습니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 예약어만[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 개체 이름을 변경할 때까지 구분 식별자를 사용하여 이러한 개체를 참조할 수 있습니다.  
+     예약된 키워드는 개체 이름에 사용하지 않는 것이 좋습니다. 이전 버전에서 업그레이드 하는 데이터베이스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 이전 버전에서 예약 되지 단어를 포함 하는 식별자가 있을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 예약어는 않지만[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 개체 이름을 변경할 때까지 구분 식별자를 사용하여 이러한 개체를 참조할 수 있습니다.  
   
 -   정규화된 식별자가 아닌 문자를 사용하는 경우  
   
@@ -104,7 +104,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

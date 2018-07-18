@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 053eb905edb1379bfdc40ec010dc6d4efadcba26
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842846"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037911"
 ---
 # <a name="not-dmx"></a>NOT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ NOT Expression1
  인수가 TRUE로 계산되면 FALSE를 반환하고 그렇지 않으면 TRUE를 반환하는 부울 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 인수는 연산자가 논리 부정을 수행하기 전에 부울 값(0은 FALSE, 0이 아닌 경우 TRUE)으로 처리됩니다. 경우 *Expression1* 은 TRUE, FALSE 연산자를 반환 합니다. 경우 *Expression1* 가 FALSE 이면 연산자는 TRUE를 반환 합니다. 다음 표에서는 논리 결합이 수행되는 방법을 설명합니다.  
+ 이 인수는 연산자가 논리 부정을 수행하기 전에 부울 값(0은 FALSE, 0이 아닌 경우 TRUE)으로 처리됩니다. 하는 경우 *Expression1* 가 TRUE 인 연산자 FALSE를 반환 합니다. 하는 경우 *Expression1* 은 FALSE 연산자 TRUE를 반환 합니다. 다음 표에서는 논리 결합이 수행되는 방법을 설명합니다.  
   
 |Expression1의 값|반환 값|  
 |-----------------------|---------------------|  

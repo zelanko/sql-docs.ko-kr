@@ -24,15 +24,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bedc2c0b326b0007c3a4d3edbc6301090fd709d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989115"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 클래스-SetDefaults 메서드
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  인스턴스에 대 한 모든 기본값을 설정는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 데이터 덮어쓰기 옵션을 사용 하 여 클라이언트입니다.  
+  인스턴스에 대 한 모든 기본값을 설정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 데이터 덮어쓰기 옵션을 사용 하 여 클라이언트입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,8 +42,8 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>부분  
- *개체*  
- A **ClientSettings** 을 나타내는 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 인스턴스.  
+ *object*  
+ A **ClientSettings** 나타내는 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 인스턴스.  
   
 #### <a name="parameters"></a>매개 변수  
   
@@ -54,5 +54,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   

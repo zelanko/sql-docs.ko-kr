@@ -1,5 +1,5 @@
 ---
-title: sys.resource_governor_external_resource_pools (Transact SQL) | Microsoft Docs
+title: sys.resource_governor_external_resource_pools (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b5681bfb81bfc4b18a0052f5ce397973ae90688f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181289"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985156"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>sys.resource_governor_external_resource_pools (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,22 +38,22 @@ ms.locfileid: "33181289"
   
 |열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 나중에 이름을 변경할 수 있습니다.|
-|name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
+|pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 나중에 바꿀 수 있습니다.|
+|NAME|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
 |max_cpu_percent|**int**|CPU 충돌이 있으면 리소스 풀의 모든 요청에 대해 허용된 최대 평균 CPU 대역폭입니다. Null을 허용하지 않습니다.|
 |max_memory_percent|**int**|이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리의 비율입니다. Null을 허용하지 않습니다. 유효한 최대는 풀 최소에 따라 다릅니다. 예를 들어 max_memory_percent는 100으로 설정할 수 있지만 유효한 최대는 낮습니다.|
 |max_processes|**int**|동시 외부 프로세스의 최대 수입니다. 기본값은 0이며 제한 없음을 지정합니다. Null을 허용하지 않습니다.|
 |version|**bigint**|내부 버전 번호입니다.|
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 VIEW SERVER STATE 권한이 필요합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [SQL Server에서 머신 러닝을 위한 리소스 거버넌스](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
-[리소스 관리자 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[리소스 관리자 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
 [sys.dm_resource_governor_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 

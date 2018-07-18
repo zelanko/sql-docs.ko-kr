@@ -22,23 +22,23 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c80025b375cfa017d92a6ae1602c78ddc57d9f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032271"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 updategram을 실행 하는 DB usingOLE의 작업 예제를 제공 합니다.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream을 사용하여 XML 명령 설정  
- OLE DB (버전 2.6 이상) ICommandStream 인터페이스 문자열 대신 스트림 개체로 명령을 전달합니다.  
+ OLE DB (버전 2.6 이상) ICommandStream 인터페이스를 문자열 대신 스트림 개체로 명령을 전달합니다.  
   
- 이 인터페이스를 사용하면 XML 파서가 이해하는 모든 인코딩을 명령에 사용할 수 있습니다. Icommand:: Execute를 호출할 때 명령 텍스트를 스트림에서 직접 읽히고 변환이 필요 하지 않습니다. 인터페이스는 ICommandStream을 사용 하 여 XML 명령을 실행 합니다. 따라서 더 효율적입니다.  
+ 이 인터페이스를 사용하면 XML 파서가 이해하는 모든 인코딩을 명령에 사용할 수 있습니다. Icommand:: Execute를 호출 하는 경우 명령 텍스트를 읽어 오며 스트림에 직접 및 변환이 필요 하지 않습니다. 인터페이스는 ICommandStream을 사용 하 여 XML 명령을 실행 합니다. 따라서 더 효율적입니다.  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>ICommandStream을 사용하여 XML을 명령으로 설정 및 결과를 XML 문서로 검색  
- ICommandStream 인터페이스 명령으로 XML 문서를 설정할 데 사용할 수 있습니다 및 결과 XML 문서로 검색할 수 있습니다.  
+ ICommandStream 인터페이스 수를 명령으로 XML 문서를 설정 하 고 결과 XML 문서로 검색할 수 있습니다.  
   
 #### <a name="executing-templates-with-xpath-queries"></a>XPath 쿼리를 사용하여 템플릿 실행  
  XPath 쿼리로 구성 된 다음 XML 템플릿은 ICommandStream을 사용 하 여 명령으로 지정 됩니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "32973198"
 </Schema>  
 ```  
   
- 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하 여는  **\<Person.Contact >** 요소는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑됩니다.  
+ 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 합니다  **\<Person.Contact >** 요소는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑됩니다.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML을 명령으로 설정하고 결과를 XML 문서로 검색하려면  
   
@@ -77,7 +77,7 @@ ms.locfileid: "32973198"
   
 4.  ICommandStream::SetCommandStream를 사용 하 여 명령 스트림을 지정 합니다. 이 예에서 실행되는 XML 템플릿은 파일에서 읽어옵니다. 이 기능은 큰 XML 템플릿을 실행하려는 경우에 유용합니다.  
   
-5.  IID_ISequentialStream 인터페이스 id입니다. 요청 icommand:: Execute를 사용 하 여 XML 명령을 실행 합니다.  
+5.  Icommand:: Execute를 IID_ISequentialStream 인터페이스 id입니다. 요청을 사용 하 여 XML 명령을 실행 합니다.  
   
 6.  결과를 처리합니다. 이 예에서는 스트림에서 읽은 XML이 화면에 표시됩니다.  
   

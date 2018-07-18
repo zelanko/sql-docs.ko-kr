@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (Transact SQL) | Microsoft Docs
+title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227829"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029538"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ smart_admin.fn_get_current_xevent_settings ()
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|확장 이벤트 유형|  
-|is_configurable|NVARCHAR(128)|이 설정은 **True** 이벤트가 구성 가능한 경우 다른 것으로 설정 **False**합니다.|  
+|is_configurable|NVARCHAR(128)|이 설정은 **True** 이벤트를 구성할 수 있는 경우 다른 것으로 설정 **False**합니다.|  
 |is_enabled|NVARCHAR(128)|이벤트가 사용하도록 설정되어 있으면 True로 설정되고 그렇지 않으면 False로 설정됩니다. 디버그 이벤트를 사용하도록 설정하려면 smart_admin.sp_set_parameter를 사용합니다.|  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 필요한 **선택** 함수에 대 한 권한이 있습니다.  
+### <a name="permissions"></a>사용 권한  
+ 필요 **선택** 함수에 대 한 권한.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 상태와 함께 모든 확장 이벤트를 반환합니다.  

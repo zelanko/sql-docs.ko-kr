@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031451"
 ---
 # <a name="---comment-dmx-summary"></a>-(주석) (DMX) 요약
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "34841186"
   
  주석의 길이에는 제한이 없습니다.  
   
- DMX에서 다른 종류의 주석 사용 하는 방법에 대 한 자세한 내용은 참조 [주석 &#40;DMX&#41;](../dmx/comments-dmx.md)합니다.  
+ DMX에서 다양 한 종류의 주석 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [주석 &#40;DMX&#41;](../dmx/comments-dmx.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [별 슬래시 &#40;주석&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [슬래시 별 &#40;주석&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [이중 슬래시 &#40;주석&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  

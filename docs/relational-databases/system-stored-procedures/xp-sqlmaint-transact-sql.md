@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (Transact SQL) | Microsoft Docs
+title: xp_sqlmaint (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979385"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  호출 된 **sqlmaint** 유틸리티를 포함 하는 문자열 **sqlmaint**스위치입니다. **sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 유지 관리 작업의 집합을 수행 합니다.  
+  호출 된 **sqlmaint** 포함 된 문자열을 사용 하 여 유틸리티 **sqlmaint**스위치입니다. 합니다 **sqlmaint** 유틸리티 집합 하나 이상의 데이터베이스에서 유지 관리 작업을 수행 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -53,12 +53,12 @@ xp_sqlmaint 'switch_string'
  **-?** 스위치에 대해 올바르지 않습니다. **xp_sqlmaint**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음 오류를 반환 된 **sqlmaint** 유틸리티 실패 합니다.  
+ 없음 오류를 반환 합니다 **sqlmaint** 유틸리티 실패 합니다.  
   
-## <a name="remarks"></a>주의  
- SQL Server 인증으로 로그온 한 사용자가이 프로시저를 호출 하는 경우는 **-U "***login_id***"** 및 **-P "***암호***"** 스위치 앞에 놓이게 됩니다 *switch_string* 실행 하기 전에. 사용자가 Windows 인증으로 로그온 하는 경우 *switch_string* 를 변경 하지 않고 전달 **sqlmaint**합니다.  
+## <a name="remarks"></a>Remarks  
+ SQL Server 인증을 사용 하 여 로그온 사용자가이 프로시저를 호출 합니다 **-U "***login_id***"** 하 고 **-P "***암호***"** 스위치 앞에 추가 됩니다 *switch_string* 실행 하기 전에 합니다. 사용자가 Windows 인증을 사용 하 여 로그온 *switch_string* 를 변경 하지 않고 전달 됩니다 **sqlmaint**합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -75,7 +75,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sqlmaint 유틸리티](../../tools/sqlmaint-utility.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

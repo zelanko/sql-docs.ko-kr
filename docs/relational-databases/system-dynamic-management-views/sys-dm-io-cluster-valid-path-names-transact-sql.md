@@ -1,5 +1,5 @@
 ---
-title: sys.dm_io_cluster_valid_path_names (Transact SQL) | Microsoft Docs
+title: sys.dm_io_cluster_valid_path_names (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73be0586ae8f12633fff733f763f021f7133d119
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468289"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038811"
 ---
 # <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "34468289"
 |**cluster_owner_node**|**Nvarchar(64)**|드라이브의 현재 소유자입니다. CSV(클러스터 공유 볼륨)의 경우 소유자는 메타데이터 서버를 호스팅하는 노드입니다. Null을 허용하지 않습니다.|  
 |**is_cluster_shared_volume**|**Bit**|이 경로가 위치한 드라이브가 클러스터 공유 볼륨이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)는 데이터 및 로그 파일 저장을 위해 FCI의 모든 노드 간에 공유 저장소를 사용해야 합니다. 이 뷰에 나열된 디스크는 인스턴스와 연결된 클러스터 리소스 그룹에 있는 디스크이며 데이터 또는 로그 파일 저장에 사용할 수 있는 유일한 디스크입니다.  
   
 > [!NOTE]  
->  이 보기 바뀝니다 [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) 이후 릴리스에서 합니다.  
+>  이 보기 바뀝니다 [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) 릴리스에서 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -60,7 +60,7 @@ ms.locfileid: "34468289"
 SELECT * FROM sys.dm_io_cluster_valid_path_names;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

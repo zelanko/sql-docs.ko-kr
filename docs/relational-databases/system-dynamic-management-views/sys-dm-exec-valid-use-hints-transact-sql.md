@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_valid_use_hints (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_valid_use_hints (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -23,29 +23,29 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: d1fb0ffed04c77e280d02378429cf769107bdfbc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987145"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-반환 [USE 힌트](../../t-sql/queries/hints-transact-sql-query.md) 힌트 이름을 지원 합니다. 행당 하나의 힌트 이름을 나열합니다.  
+반환 [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) 힌트를 지원 합니다. 행당 하나의 힌트 이름을 나열합니다.  
   
-이 DMV를 사용 하 여 사용 하 여 힌트 표기법에서 모든 지원 되는 힌트의 목록을 볼 수 있습니다.  
+이 DMV를 사용 하 여 USE HINT 표기법에서 모든 지원 되는 힌트 목록을 참조 하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|힌트의 이름입니다.|
+|NAME|**sysname**|힌트의 이름입니다.|
 
 참조 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md) 각 힌트에 대 한 설명입니다.
 
-에 도입 된 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] s p 1입니다.
+에 도입 된 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
     
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

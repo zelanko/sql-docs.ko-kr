@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e9402541be96be9e529dcd56a168e8ab17dc21ae
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576545"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036591"
 ---
 # <a name="editionid-element"></a>EditionId 요소
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  부모의 숫자 버전 식별자 코드를 포함 [서버 요소 (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
+  부모의 숫자 버전 식별자 코드를 포함 [Server 요소 (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576545"
 </Server>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  

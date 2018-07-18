@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage (Azure SQL 데이터베이스) | Microsoft Docs
+title: sys.resource_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: cc8f9c68bd6074439203c384c99b407022f90997
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221494"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985055"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "33221494"
   
 |열|데이터 형식|Description|  
 |-------------|---------------|-----------------|  
-|time|**datetime**|시간 단위로 시간(UTC)입니다.|  
+|Time|**datetime**|시간 단위로 시간(UTC)입니다.|  
 |database_name|**nvarchar**|사용자 데이터베이스 이름입니다.|  
-|sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고:이 열 V11에 대 한 사용 되지 않으며 v 12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
+|sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> 표준<br /><br /> Premium|  
+|usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고:이 열 V11에서 사용 되지 않습니다 및 V12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
 |storage_in_megabytes|**decimal**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 저장소 크기입니다.|  
   
-## <a name="permissions"></a>Permissions  
- 이 뷰는 가상에 연결할 수 있는 권한 가진 모든 사용자 역할에 사용할 수 있는 **마스터** 데이터베이스입니다.  
+## <a name="permissions"></a>사용 권한  
+ 이 보기는 가상으로 연결할 수 있는 권한 가진 모든 사용자 역할에 사용할 수 있습니다 **마스터** 데이터베이스입니다.  
   
   

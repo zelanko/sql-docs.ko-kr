@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842636"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980593"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34842636"
   
  모델 이름에 "_structure"가 추가되어 마이닝 구조의 이름이 정해지므로 구조 이름이 모델 이름과 달리 고유합니다.  
   
- 기존 마이닝 구조에 대 한 마이닝 모델을 만들려면 사용는 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) 문입니다.  
+ 기존 마이닝 구조에 대 한 마이닝 모델을 만들려면 사용 합니다 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) 문입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  현재 공급자가 정의한 데이터 마이닝 알고리즘 이름입니다.  
   
 > [!NOTE]  
->  사용 하 여 검색할 수는 현재 공급자에서 지 원하는 알고리즘 목록은 [DMSCHEMA_MINING_SERVICES 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)합니다. 현재 인스턴스에 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 참조 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)합니다.  
+>  현재 공급자가 지 원하는 알고리즘의 목록을 사용 하 여 검색할 수 있습니다 [DMSCHEMA_MINING_SERVICES 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)합니다. 현재 인스턴스에서 지 원하는 알고리즘을 보려는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 참조 하세요 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)합니다.  
   
  *매개 변수 목록*  
  (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
@@ -56,11 +56,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *XML 문자열*  
  고급 사용자만 사용해야 합니다. XML 인코딩 모델(PMML)이며 문자열을 작은따옴표(')로 묶어야 합니다.  
   
- **세션** 절을 사용 하면 연결이 종료 되거나 세션 제한 시간이 초과 하는 경우 서버에서 자동으로 제거 하는 마이닝 모델을 만들 수 있습니다. **세션** 마이닝 모델은 데이터베이스 관리자가 되려면 사용자 필요가 없으므로 연결이 열려 있는 상태로 디스크 공간을 사용 하므로 유용 합니다.  
+ 합니다 **세션** 절을 사용 하면 연결이 종료 되거나 세션 제한 시간이 초과 하는 경우 서버에서 자동으로 제거 하는 마이닝 모델을 만들 수 있습니다. **세션** 마이닝 모델은 데이터베이스 관리자가 사용할 필요가 없습니다 수 있으며만 디스크 공간 사용에 대 한 연결이 열려으로 하므로 유용 합니다.  
   
- **WITH DRILLTHROUGH** 절을 사용 하면 새 마이닝 모델에서 드릴스루 합니다. 드릴스루는 모델을 만들 때만 사용할 수 있습니다. 일부 모델 유형의 경우 사용자 지정 뷰어에서 모델을 찾아보는 데 드릴스루가 필요합니다. 드릴스루는 예측 또는 Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델을 찾는 데 필요하지 않습니다.  
+ 합니다 **WITH DRILLTHROUGH** 절에 새 마이닝 모델에 드릴스루를 사용 하도록 설정 합니다. 드릴스루는 모델을 만들 때만 사용할 수 있습니다. 일부 모델 유형의 경우 사용자 지정 뷰어에서 모델을 찾아보는 데 드릴스루가 필요합니다. 드릴스루는 예측 또는 Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델을 찾는 데 필요하지 않습니다.  
   
- **CREATE MINING MODEL** 문은 열 정의 목록, 알고리즘 및 알고리즘 매개 변수 목록을 기반으로 하는 새 마이닝 모델을 만듭니다.  
+ 합니다 **CREATE MINING MODEL** 문은 열 정의 목록, 알고리즘 및 알고리즘 매개 변수 목록을 기반으로 하는 새 마이닝 모델을 만듭니다.  
   
 ### <a name="column-definition-list"></a>열 정의 목록  
  각 열에 대해 다음 정보를 포함하여 열 정의 목록을 사용하는 모델 구조를 정의합니다.  
@@ -75,9 +75,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   내용 유형(필수)  
   
--   이 열을 예측 하는 알고리즘을 나타내는 예측 요청으로 표시 된 **PREDICT** 또는 **PREDICT_ONLY** 절  
+-   이 열을 예측 하는 알고리즘을 나타내는 예측 요청에 나타난 합니다 **PREDICT** 하거나 **PREDICT_ONLY** 절  
   
--   으로 표시 되는 특성 열 (필수 적용 되는 경우에)의 관계는 **RELATED TO** 절  
+-   관계는 특성 열 (필수 적용 되는 경우에)으로 표시 합니다 **RELATED TO** 절  
   
  열 정의 목록에 대해 다음 구문을 사용하여 단일 열을 정의합니다.  
   
@@ -97,7 +97,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [데이터 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [콘텐츠 형식을 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [콘텐츠 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [열 배포 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
@@ -105,7 +105,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다음의 사용을 지원 \<열 관계 > 절.  
   
- **관련 된**  
+ **와 관련 된**  
  이 형식은 값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
   
  예측 절을 사용하여 예측 열의 사용 방법을 설명합니다. 다음 표에서는 사용 가능한 두 가지 절을 설명합니다.  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 각 알고리즘에 연관 된 매개 변수 목록에 대 한 참조 [Data Mining Algorithms &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)합니다.  
+ 각 알고리즘에 연관 된 매개 변수 목록을 참조 하세요 [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)합니다.  
   
 ## <a name="remarks"></a>Remarks  
  기본 제공 테스트 데이터 집합이 있는 모델을 만들려는 경우 CREATE MINING STRUCTURE 문과 ALTER MINING STRUCTURE 문을 차례로 사용해야 합니다. 그러나 모든 모델 유형이 홀드아웃 데이터 집합을 지원하는 것은 아닙니다. 자세한 내용은 [CREATE MINING STRUCTURE&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)를 참조하세요.  
   
- CREATEMODEL 문을 사용 하 여 마이닝 모델을 만드는 방법의 연습을 참조 하십시오. [시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
+ CREATEMODEL 문을 사용 하 여 마이닝 모델을 만드는 방법의 연습을 참조 하세요 [시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 예  
  다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 새 마이닝 모델을 만듭니다. Bike Buyer 열은 예측 가능한 특성으로 정의됩니다.  
@@ -144,7 +144,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>연결 모델의 예  
- 다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 사용하여 새 마이닝 모델을 만듭니다. 이 문은 테이블 열을 사용하여 모델 정의 안에 테이블을 중첩하는 기능을 사용합니다. 모델을 사용 하 여 수정 된 *MINIMUM_PROBABILITY* 및 *MINIMUM_SUPPORT* 매개 변수입니다.  
+ 다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 사용하여 새 마이닝 모델을 만듭니다. 이 문은 테이블 열을 사용하여 모델 정의 안에 테이블을 중첩하는 기능을 사용합니다. 모델을 사용 하 여 수정 되는 *MINIMUM_PROBABILITY* 하 고 *MINIMUM_SUPPORT* 매개 변수입니다.  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -172,10 +172,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>시계열 예  
- 다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 ARTxp 알고리즘을 사용함으로써 새 마이닝 모델을 만듭니다. ReportingDate는 시계열의 키 열이고 ModelRegion은 데이터 계열의 키 열입니다. 이 예에서는 데이터 주기를 매 12개월로 가정하므로 따라서는 *PERIODICITY_HINT* 매개 변수는 12로 설정 됩니다.  
+ 다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 ARTxp 알고리즘을 사용함으로써 새 마이닝 모델을 만듭니다. ReportingDate는 시계열의 키 열이고 ModelRegion은 데이터 계열의 키 열입니다. 이 예에서는 데이터 주기를 매 12개월로 가정하므로 따라서 합니다 *PERIODICITY_HINT* 매개 변수는 12로 설정 됩니다.  
   
 > [!NOTE]  
->  지정 해야 합니다는 *PERIODICITY_HINT* 중괄호를 사용 하 여 매개 변수입니다. 또한 값은 문자열, 묶어야 작은따옴표로: "{\<숫자 값 >}"입니다.  
+>  지정 해야 합니다 *PERIODICITY_HINT* 중괄호를 사용 하 여 매개 변수입니다. 또한 값이 문자열 이기 때문에 묶어야 합니다 작은따옴표로: "{\<숫자 값 >}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

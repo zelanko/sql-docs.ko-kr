@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_checkpoint_force_garbage_collection (Transact SQL) | Microsoft Docs
+title: sys.sp_xtp_checkpoint_force_garbage_collection (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4f5968d9a68bef9b9bb6b107d0710d88c7fe5e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037707"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>결과 집합  
  반환된 행에는 다음 정보가 포함되어 있습니다.  
   
-|열|Description|  
+|Column|Description|  
 |------------|-----------------|  
 |num_collected_items|Filestream 가비지 수집으로 이동한 파일 수를 나타냅니다. 이러한 파일의 LSN(로그 시퀀스 번호)은 로그 잘림 지점의 LSN보다 작습니다.|  
 |num_marked_for_collection_items|LSN이 로그 끝 LSN의 로그 blockID로 업데이트된 데이터/델타 파일 수를 나타냅니다.|  
 |last_collected_xact_seqno|파일이 Filestream 가비지 수집으로 이동한 마지막 해당 LSN을 반환합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스 소유자 권한이 필요합니다.  
   
 ## <a name="sample"></a>예제  
@@ -68,7 +68,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

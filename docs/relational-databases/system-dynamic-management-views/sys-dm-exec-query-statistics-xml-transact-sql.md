@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_statistics_xml (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_query_statistics_xml (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: ba01e7876c174cc73697628c3b46219ff674f9a7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987245"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-진행 중인 요청에 대 한 실행 계획을 쿼리 하는 반환 합니다. 이 DMV를 사용 하 여 임시 통계로 XML 실행 계획을 검색 합니다. 
+반환 진행 중인 요청에 대 한 실행 계획을 쿼리 합니다. 이 DMV를 사용 하 여 실행 계획 XML 임시 통계를 사용 하 여 검색 합니다. 
 
 ## <a name="syntax"></a>구문
 
@@ -40,7 +40,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="arguments"></a>인수 
 *session_id*  
- 세션 id를 조회할 수로 일괄 처리를 중입니다. *session_id* 은 **smallint**합니다. *session_id* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+ 세션 id가 조회 일괄 처리를 실행 합니다. *session_id* 됩니다 **smallint**합니다. *session_id* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -53,45 +53,45 @@ sys.dm_exec_query_statistics_xml(session_id)
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|세션의 ID입니다. Null을 허용하지 않습니다.|
 |request_id|**int**|요청의 ID입니다. Null을 허용하지 않습니다.|
-|sql_handle|**varbinary(64)**|요청 SQL 텍스트의 해시 맵입니다. Null을 허용합니다.|
+|sql_handle|**varbinary(64)**|요청의 SQL 텍스트의 해시 맵입니다. Null을 허용합니다.|
 |plan_handle|**varbinary(64)**|쿼리 계획의 해시 맵입니다. Null을 허용합니다.|
-|query_plan|**xml**|Showplan XML 통계의 부분입니다. Null을 허용합니다.|
+|query_plan|**xml**|일부 통계를 사용 하 여 Showplan XML입니다. Null을 허용합니다.|
 
-## <a name="remarks"></a>주의
-이 시스템 함수는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] s p 1입니다.
+## <a name="remarks"></a>Remarks
+이 시스템 함수는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-이 시스템 함수는 둘 다에서 작동 **표준** 및 **경량** 인프라를 프로 파일링 실행 통계를 쿼리 합니다.  
+이 시스템 함수 둘 다에서 작동 **표준** 하 고 **경량** 쿼리 실행 통계 인프라를 프로 파일링 합니다.  
   
 **표준** 인프라를 프로 파일링 통계를 사용 하 여 사용할 수 있습니다.
-  -  [SET STATISTICS XML에](../../t-sql/statements/set-statistics-xml-transact-sql.md)
+  -  [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
   -  [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  `query_post_execution_showplan` 확장된 이벤트입니다.  
   
-**Lightweight** 에서 사용할 수 있는 통계 인프라를 프로 파일링은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 사용 하도록 설정할 수 있습니다.
-  -  전역적으로 추적을 사용 하 여 7412를 플래그입니다.
+**경량** 인프라를 프로 파일링 통계는 사용할 수 있습니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 사용 하도록 설정할 수 있습니다.
+  -  전역적으로 추적을 사용 하 여 플래그 7412입니다.
   -  사용 하 여 [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) 확장된 이벤트입니다.
   
 > [!NOTE]
-> 추적 플래그 7412에서 사용할 수 있는 경우 간단한 프로 파일링을 설정할 쿼리 실행 통계 DMV와 같은 표준 파일링 하는 대신 인프라를 프로 파일링의 모든 소비자에 게 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)합니다.
-> 그러나 표준 프로 파일링은 여전히 사용 되는 SET STATISTICS XML에 대 한 *실제 계획 포함* 동작에서 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], 및 `query_post_execution_showplan` xEvent입니다.
+> 대신 표준 프로 파일링, DMV와 같은 인프라를 프로 파일링 하는 쿼리 실행 통계의 모든 소비자에 게 경량 프로 파일링 됩니다 사용 하 여 추적 플래그 7412 사용 하도록 설정 하면 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)합니다.
+> 그러나 표준 프로 파일링가 여전히 사용 SET STATISTICS XML *실제 계획 포함* 에서 작업 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], 및 `query_post_execution_showplan` xEvent입니다.
 
 > [!IMPORTANT]
-> Tpc-c 작업 부하 테스트와 마찬가지로, 간단한 통계 프로 파일링 인프라를 사용 하면 1.5 ~ 2% 오버 헤드를 추가 합니다. 반면, 표준 통계 프로 파일링 인프라 최대 90% 동일한 작업 시나리오에 대 한 오버 헤드를 추가할 수 있습니다.
+> Tpc-c 워크 로드 테스트와 마찬가지로, 프로 파일링 경량 통계 인프라를 사용 하도록 설정 하면 1.5 ~ 2% 오버 헤드를 추가 합니다. 반면, 표준 통계 프로 파일링 인프라는 동일한 워크 로드 시나리오를 위한 오버 헤드가 최대 90%를 추가할 수 있습니다.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
 
 ## <a name="examples"></a>예  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>1. 실행 중인 일괄 처리에 대 한 활성 쿼리 계획 및 실행 통계를 살펴보면  
- 다음 예제 쿼리에서 **sys.dm_exec_requests** 흥미로운 쿼리 및 복사를 찾으려면 해당 `session_id` 의 출력 합니다.  
+ 다음 예제에서는 쿼리 **sys.dm_exec_requests** 흥미로운 쿼리 및 복사를 찾으려면 해당 `session_id` 출력에서 합니다.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
- 그런 다음 활성 쿼리 계획 및 실행 통계를 얻으려면 사용 하 여 복사 된 `session_id` 시스템 함수와 함께 **sys.dm_exec_query_statistics_xml**합니다.  
+ 활성 쿼리 계획 및 실행 통계를 얻으려면 사용 하 여 복사한 `session_id` 시스템 함수를 사용 하 여 **sys.dm_exec_query_statistics_xml**합니다.  
   
 ```sql  
 --Run this in a different session than the session in which your query is running.
@@ -108,8 +108,8 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
   [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

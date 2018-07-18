@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cdf6447b7673606224852078f80306c4b7fb4632
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220744"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985166"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -44,19 +44,19 @@ ms.locfileid: "33220744"
 |**is_expiration_checked**|**bit**|암호 만기가 확인됩니다.|  
 |**password_hash**|**varbinary(256)**|SQL 로그인 암호의 해시입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다.|  
   
- 이 뷰가 상속 하는 열 목록은 참조 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)합니다.  
+ 이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)합니다.  
   
-## <a name="remarks"></a>주의  
- 모두 보려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 및 Windows 인증 로그인 참조 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 둘 다를 보려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 및 Windows 인증 로그인을 참조 하세요 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)합니다.  
   
- 에 포함 된 경우 데이터베이스 사용자를 활성화, 로그인이 없는 연결을 만들 수 있습니다. 해당 계정을 확인 하려면 [sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)합니다.  
+ 포함 된 경우 데이터베이스 사용자를 활성화, 로그인이 없는 연결 될 수 있습니다. 해당 계정에 참조 [sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인은 자체 로그인 이름과 sa 로그인을 볼 수 있습니다. 다른 로그인을 보려면 로그인할 때 ALTER ANY LOGIN 또는 사용 권한이 필요합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [암호 정책](../../relational-databases/security/password-policy.md)   

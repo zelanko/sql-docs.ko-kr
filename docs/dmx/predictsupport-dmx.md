@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037341"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +32,15 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 지정 된 형식의 스칼라 값 *\<* 스칼라 열 참조*>* 합니다.  
+ 지정 된 유형의 스칼라 값을 *\<* 스칼라 열 참조*>* 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 된 상태 버킷을 포함 하려면 설정는 \<예측 상태별 >에 **INCLUDE_NULL**합니다.  
+ 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 된 상태 버킷을 포함 하려면 설정 합니다 \<예측 상태별 > 하 **INCLUDE_NULL**합니다.  
   
- 누락 된 상태에 대 한 지원을 반환는 \<예측 상태별 > NULL로 합니다.  
+ 누락 된 상태에 대 한 지원을 반환 된 \<예측 상태별 > NULL로 합니다.  
   
 > [!NOTE]  
->  쿼리하는 모델 유형에 따라 지원 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대 한 지원의 계산 하는 방법에 대 한 자세한 내용은 개별 알고리즘에서 유형을 참조 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
+>  쿼리하는 모델 유형에 따라 지원 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 지원 계산 되는 방식에 대 한 자세한 내용은 개별 알고리즘에서 입력을 참조 하세요 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 단일 쿼리를 사용하여 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 예측하고 TM Decision Tree 마이닝 모델을 기반으로 하는 예측을 지원하는지 여부를 확인합니다.  

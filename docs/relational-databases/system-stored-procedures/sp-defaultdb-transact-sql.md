@@ -1,5 +1,5 @@
 ---
-title: sp_defaultdb (Transact SQL) | Microsoft Docs
+title: sp_defaultdb (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ade405c0abdd5d3a07db3e7e5727677fd5d4e7be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037261"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  변경에 대 한 기본 데이터베이스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
+  변경에 대 한 기본 데이터베이스를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 대신 합니다.  
@@ -48,20 +48,20 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
   
 ## <a name="arguments"></a>인수  
  [  **@loginame=**] **'***로그인***'**  
- 로그인 이름입니다. *로그인* 은 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹입니다. Windows 사용자 또는 그룹에 대한 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 없으면 자동으로 추가됩니다.  
+ 로그인 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹. Windows 사용자 또는 그룹에 대한 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 없으면 자동으로 추가됩니다.  
   
  [  **@defdb=**] **'***데이터베이스***'**  
- 새 기본 데이터베이스의 이름입니다. *데이터베이스* 은 **sysname**, 기본값은 없습니다. *데이터베이스* 이미 존재 해야 합니다.  
+ 새 기본 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다. *데이터베이스* 이미 존재 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_defaultdb** ALTER LOGIN을 호출 합니다. 이 문에서는 추가 옵션을 지정할 수 있습니다. 기본 데이터베이스를 변경 하는 방법에 대 한 정보를 참조 하십시오. [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_defaultdb** ALTER LOGIN을 호출 합니다. 이 문에서는 추가 옵션을 지정할 수 있습니다. 기본 데이터베이스를 변경 하는 방법에 대 한 내용은 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
   
  **sp_defaultdb** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -71,7 +71,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
