@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042831"
 ---
 # <a name="lag-dmx"></a>Lag(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ Lag()
  정수 형식의 스칼라 값  
   
 ## <a name="remarks"></a>Remarks  
- 경우는 **지연** 함수 사용 되는 KEY TIME 열이 중첩된 테이블 내에 모델에 대해 함수는 문의 sub-select 내에 있어야 합니다.  
+ 경우는 **지연** 함수는 KEY TIME 열이 중첩된 테이블 내에 모델에는 문의 sub-select 내에 있어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 모델의 학습에 사용된 데이터에 대한 지난 12개월 간 사례를 반환합니다.  

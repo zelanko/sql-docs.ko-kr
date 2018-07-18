@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler로 Analysis Services 모니터링 소개 | Microsoft Docs
+title: SQL Server Profiler 사용 하 여 Analysis Services 모니터링 소개 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b3c2dcec84956cd83c09a6c9be1d70975df67cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015240"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040851"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server 프로파일러를 사용한 Analysis Services 모니터링 소개
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -53,8 +53,8 @@ ms.locfileid: "34015240"
   
  최적의 성능을 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 가장 관심 있는 이벤트만 모니터링하십시오. 너무 많은 이벤트를 모니터링하면 오버헤드가 발생하며 특히 장기간 모니터링을 수행할 경우 추적 파일이나 테이블이 너무 커질 수 있습니다. 또한 수집된 데이터 양을 제한하고 추적이 너무 커지지 않도록 방지하기 위해 필터링을 사용하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [재생 & #40;에 대 한 프로파일러 추적 만들기 Analysis Services & #41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [재생에 대한 프로파일러 추적 만들기&#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

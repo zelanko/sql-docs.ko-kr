@@ -1,5 +1,5 @@
 ---
-title: sp_password (Transact SQL) | Microsoft Docs
+title: sp_password (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993705"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  추가 하거나 변경에 대 한 암호는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
+  추가 하거나 변경에 대 한 암호를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 대신 합니다.  
@@ -50,26 +50,26 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="arguments"></a>인수  
  [  **@old=** ] **'***old_password***'**  
- 이전 암호입니다. *old_password* 은 **sysname**, 기본값은 NULL입니다.  
+ 이전 암호입니다. *old_password* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@new=** ] **'***new_password***'**  
- 새 암호입니다. *new_password* 은 **sysname**, 기본값은 없습니다. *old_password* 명명 된 매개 변수를 사용 하지 지정 해야 합니다.  
+ 새 암호입니다. *new_password* 됩니다 **sysname**, 기본값은 없습니다. *old_password* 명명 된 매개 변수 사용 되지 않습니다 지정 해야 합니다.  
   
 > [!IMPORTANT]  
 >  NULL 암호를 사용하지 마십시오. 강력한 암호를 사용하세요. 자세한 내용은 [Strong Passwords](../../relational-databases/security/strong-passwords.md)을 참조하세요.  
   
  [  **@loginame=** ] **'***로그인***'**  
- 암호 변경의 영향을 받는 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 이미 존재 해야 하며의 멤버만 지정할 수는 **sysadmin** 또는 **securityadmin** 고정 서버 역할입니다.  
+ 암호 변경의 영향을 받는 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 이미 존재 해야 하며의 멤버만 지정할 수 있습니다 합니다 **sysadmin** 하거나 **securityadmin** 고정 서버 역할입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_password** ALTER LOGIN을 호출 합니다. 이 문에서는 추가 옵션을 지정할 수 있습니다. 암호를 변경 하는 방법에 대 한 정보를 참조 하십시오. [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_password** ALTER LOGIN을 호출 합니다. 이 문에서는 추가 옵션을 지정할 수 있습니다. 암호 변경에 대 한 내용은 참조 하세요 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
   
  **sp_password** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY LOGIN 권한이 필요합니다. 이전 암호를 제공하지 않고 암호를 다시 설정하려는 경우나 변경되고 있는 로그인에 CONTROL SERVER 권한이 있는 경우에는 CONTROL SERVER 권한도 필요합니다.  
   
  보안 주체는 자신의 암호를 변경할 수 있습니다.  
@@ -94,7 +94,7 @@ ALTER LOGIN Victoria WITH
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

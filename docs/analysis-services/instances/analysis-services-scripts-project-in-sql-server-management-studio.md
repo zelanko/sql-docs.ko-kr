@@ -1,5 +1,5 @@
 ---
-title: Analysis Services SQL Server Management Studio에서 스크립트 프로젝트 | Microsoft Docs
+title: Analysis Services 스크립트 프로젝트에서 SQL Server Management Studio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034971"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "34016350"
 ## <a name="analysis-services-templates"></a>Analysis Services 템플릿  
  새 MDX, DMX 또는 XMLA 스크립트를 분석 서버 스크립트 프로젝트에 추가하는 경우 템플릿 탐색기를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 템플릿을 찾을 수 있습니다. 이러한 템플릿은 지정한 동작을 수행하는 방법을 보여 주는 미리 정의된 스크립트 또는 문의 모음입니다. 템플릿 탐색기는 **보기** 메뉴에서 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 템플릿을 포함합니다. 자세한 내용은 [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [다차원 식 & #40; Mdx& #41; 참조](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [MDX&#40;Multidimensional Expression&#41; 참조](../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL XMLA에 대 한&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;XMLA 용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

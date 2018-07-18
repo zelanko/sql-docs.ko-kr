@@ -1,5 +1,5 @@
 ---
-title: 테이블에 열 추가 | Microsoft Docs
+title: 테이블에 열을 추가 합니다. | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043457"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991475"
 ---
 # <a name="add-columns-to-a-table"></a>테이블에 열 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34043457"
 2.  수식 입력줄에 DAX 수식을 입력하여 각 행에 대한 특성을 추가합니다.  
   
 ## <a name="add-a-blank-column"></a>빈 열 추가  
- 모델 테이블에서 명명된 빈 열을 만들 수 있습니다. 빈 열은 다른 원본에서 데이터를 가져와서 붙여넣을 경우에 유용하게 사용됩니다. 붙여넣은 데이터는 가져올 때와 다르게 저장됩니다. 자세한 내용은 참조 [데이터 복사 및 붙여넣기](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)합니다.  
+ 모델 테이블에서 명명된 빈 열을 만들 수 있습니다. 빈 열은 다른 원본에서 데이터를 가져와서 붙여넣을 경우에 유용하게 사용됩니다. 붙여넣은 데이터는 가져올 때와 다르게 저장됩니다. 자세한 내용은 [데이터 복사 및 붙여넣기](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)합니다.  
   
 #### <a name="to-create-a-named-blank-column"></a>명명된 빈 열을 만들려면  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34043457"
   
 2.  맨 위 셀을 클릭하고 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [테이블 속성 편집 대화 상자](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [테이블, 열 또는 행 필터 매핑 변경](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

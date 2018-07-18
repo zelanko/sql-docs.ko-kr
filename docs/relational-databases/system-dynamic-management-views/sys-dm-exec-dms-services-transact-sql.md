@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_dms_services (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_dms_services (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,26 +27,26 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9654ffe4e6e77defac0466882d65ae45b792ea4d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982605"
 ---
 # <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase 계산 노드에서 실행 되는 DMS 서비스의 모든 작업에 대 한 정보를 보유 합니다. 서비스 인스턴스 당 한 개의 행을 나열합니다.  
+  PolyBase 계산 노드에서 실행 되는 DMS 서비스의 모든 정보를 보유 합니다. 서비스 인스턴스당 하나의 행을 나열합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|DMS 코어와 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|고유한 id입니다.|  
-|compute_node_id|**int**|이 DMS 서비스 실행 되는 노드 ID|참조 *compute_node_id* 에 [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)합니다.|  
+|dms_core_id|**int**|DMS 코어를 사용 하 여 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|고유한 id입니다.|  
+|compute_node_id|**int**|DMS 서비스가 실행 되는 노드의 ID|참조 *compute_node_id* 에 [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |상태|**nvarchar(32)**|DMS 서비스의 현재 상태||  
   
-## <a name="see-also"></a>관련 항목:  
- [PolyBase 동적 관리 뷰를 사용한 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>관련 항목  
+ [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

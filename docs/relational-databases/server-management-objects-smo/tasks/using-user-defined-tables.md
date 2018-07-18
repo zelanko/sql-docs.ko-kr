@@ -19,18 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7231545e9037458669ff6eb3e9fcafcd0d3f9da9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971528"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985275"
 ---
 # <a name="using-user-defined-tables"></a>사용자 정의 테이블 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   사용자 정의 테이블은 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 각 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션에 있다는 점에서 **열** 의 컬렉션을 참조 하는 속성 <xref:Microsoft.SqlServer.Management.Smo.Column> 사용자 정의 테이블의 열을 나열 하는 개체입니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 각 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션에는 개체를 **열** 속성의 컬렉션을 나타내는 <xref:Microsoft.SqlServer.Management.Smo.Column> 개체는 사용자 정의 테이블의 열을 나열 합니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 개체를 사용하여 새 사용자 정의 테이블을 정의할 때 여러 열과 이 열들 중 하나를 기반으로 하는 기본 키를 제공해야 합니다.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "32971528"
  <xref:Microsoft.SqlServer.Management.Smo.DataType> 클래스는 열 및 매개 변수와 연관된 데이터 형식을 지정하는 데 사용됩니다. 사용자 정의 테이블 형식을 사용자 정의 함수 및 저장 프로시저에 대한 매개 변수로 지정하려면 이 형식을 사용하십시오.  
   
 ## <a name="examples"></a>예  
-제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Visual Basic에서 사용자 정의 테이블 만들기  
- 이 예제에서는 포함 된 클래스 라이브러리에 대 한 imports 문을 포함 해야 합니다는 **StringCollection** 유형입니다.  
+ 예를 들어 있는 클래스 라이브러리에 대 한 imports 문을 포함 해야 합니다 **StringCollection** 형식입니다.  
   
  `Imports System.Collections.Specialized`  
   
@@ -107,7 +107,7 @@ ms.locfileid: "32971528"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Visual C#에서 사용자 정의 테이블 만들기  
- 이 예제에서는 포함 된 클래스 라이브러리에 대 한 imports 문을 포함 해야 합니다는 **StringCollection** 유형입니다.  
+ 예를 들어 있는 클래스 라이브러리에 대 한 imports 문을 포함 해야 합니다 **StringCollection** 형식입니다.  
   
  `using System.Collections.Specialized;`  
   
@@ -177,7 +177,7 @@ ms.locfileid: "32971528"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>PowerShell에서 사용자 정의 테이블 만들기  
- 이 예제에서는 포함 된 클래스 라이브러리에 대 한 imports 문을 포함 해야 합니다는 **StringCollection** 유형입니다.  
+ 예를 들어 있는 클래스 라이브러리에 대 한 imports 문을 포함 해야 합니다 **StringCollection** 형식입니다.  
   
  `using System.Collections.Specialized;`  
   
@@ -260,7 +260,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [데이터베이스 파일 및 파일 그룹](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

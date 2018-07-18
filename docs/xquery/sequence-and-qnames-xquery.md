@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078000"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990012"
 ---
 # <a name="sequence-and-qnames-xquery"></a>시퀀스 및 QName(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  XQuery의 모든 식별자는 QName입니다. QName은 네임스페이스 접두사 및 로컬 이름으로 구성됩니다. 이 구현에서 XQuery에 있는 변수 이름은 QName이며 접두사가 포함될 수 없습니다.  
   
- 예를 들어 다음 쿼리가 지정 되어에 대해 형식화 되지 않은 **xml** 변수:  
+ 쿼리를 지정 하는 데는 다음 예제에서는 형식화 되지 않은 항목에 대 한 **xml** 변수:  
   
 ```  
 DECLARE @x xml;  
@@ -119,7 +119,7 @@ SELECT @x.query('/Root/a');
   
  식(`/Root/a`)에서 `Root` 및 `a`는 QName입니다.  
   
- 다음 예제에서는 쿼리를 지정에 대해 형식화 된 **xml** 열입니다. 쿼리는 모든 반복 \<단계 > 첫 번째 작업 센터 위치에 있는 요소입니다.  
+ 다음 예제에서는 쿼리를 지정에 대해 형식화 된 **xml** 열입니다. 쿼리는 모든 반복 \<단계 > 첫 번째 워크 센터 위치에 있는 요소입니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -151,12 +151,12 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |(접두사 없음)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 사용자가 만드는 모든 데이터베이스에는 **sys** XML 스키마 컬렉션입니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
+ 사용자가 만드는 모든 데이터베이스를 **sys** XML 스키마 컬렉션입니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
   
 > [!NOTE]  
->  이 구현은 지원 하지 않습니다는 `local` 에 있는 XQuery 사양에 설명 된 대로 접두사 http://www.w3.org/2004/07/xquery-local-functions합니다.  
+>  이 구현이 지원 하지 않는 합니다 `local` XQuery 사양에 설명 된 대로 접두사 http://www.w3.org/2004/07/xquery-local-functions합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 기초](../xquery/xquery-basics.md)  
   
   

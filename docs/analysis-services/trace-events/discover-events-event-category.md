@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae0fc9cc66b107f35c12266c26f7665c84da9a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042481"
 ---
 # <a name="discover-events-event-category"></a>Discover Events 이벤트 범주
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34038915"
   
  각각의 Discover Events 이벤트 클래스와 연관된 열에 대한 자세한 내용은 [Discover Events Data Columns](../../analysis-services/trace-events/discover-events-data-columns.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

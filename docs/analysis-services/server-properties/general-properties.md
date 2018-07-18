@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033341"
 ---
 # <a name="general-properties"></a>일반 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "35238900"
  파티션 인덱스를 작성하도록 할당된 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 메모리 사용을 늘리는 대신 파티션 인덱싱 속도를 높이려면 이 값을 늘리십시오. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  **CoordinatorCancelCount**  
- 내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오. 테이블 형식 서버 모드에서이 속성은 무시 됩니다.  
+ 내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오. 이 속성은 테이블 형식 서버 모드에서는 무시 됩니다.  
   
  **CoordinatorExecutionMode**  
  서버에서 시도하는 작업 처리 및 쿼리를 포함한 최대 병렬 작업 수를 정의하는 부호 있는 32비트 정수 속성입니다. 0으로 설정하면 내부 알고리즘에 따라 서버에서 작업 수를 결정합니다. 양수 값은 최대 작업 수의 합계를 나타냅니다. 음수 값은 부호를 반대로 하여 프로세서당 최대 작업 수를 나타냅니다.  

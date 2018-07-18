@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 개체 작업 | Microsoft Docs
+title: 데이터베이스 개체를 사용 하 여 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 37b8491bc441db0a2457ea4d87e6bb372326cafb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040201"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>생성, 변경 및 데이터베이스 개체를 제거 합니다.
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32966588"
   
  개체 및 처음 개체를 만들 때 필요했던 모든 상호 종속 자식 개체를 제거하려면 **Drop** 문을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SMO 개체 모델](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

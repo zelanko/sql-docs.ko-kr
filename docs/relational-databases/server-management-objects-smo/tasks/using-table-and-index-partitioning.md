@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dca91e1be799d4fd666432820a7839718d3e28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969228"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039071"
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,15 +36,15 @@ ms.locfileid: "32969228"
 ## <a name="index-and-table-partitioning"></a>인덱스 및 테이블 분할  
  이 기능을 사용하여 인덱스 및 테이블 데이터를 파티션의 여러 파일 그룹에 분산할 수 있습니다. 파티션 함수는 분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의합니다. 파티션 구성표는 파티션 함수로 지정된 각 파티션을 파일 그룹에 매핑합니다. 이렇게 하면 테이블을 파일 그룹과 물리적 장치로 확장하는 보관 전략을 개발할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 컬렉션을 포함 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 구현 된 파티션 함수 및 컬렉션을 나타내는 개체를 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 데이터 파일 그룹에 매핑하는 방법을 설명 하는 개체입니다.  
+ 합니다 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 컬렉션을 포함 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 구현된 된 파티션 함수 및 컬렉션을 나타내는 개체를 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 데이터 파일 그룹에 매핑되는 방법을 설명 하는 개체입니다.  
   
  각 <xref:Microsoft.SqlServer.Management.Smo.Table> 및 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체는 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 속성에 사용할 파티션 구성표를 지정하고 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>에 열을 지정합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Visual C#에서 테이블에 대한 파티션 구성표 설정  
- 코드 예제에서는 파티션 함수와 파티션 구성표를 만드는 방법을 보여 줍니다는 `TransactionHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 예제 데이터베이스. 오래된 레코드를 `TransactionHistoryArchive` 테이블에 구분해 두기 위해 파티션은 날짜별로 나뉩니다.  
+ 코드 예제에서는 파티션 함수와 파티션 구성표를 만드는 방법을 보여 줍니다 합니다 `TransactionHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스. 오래된 레코드를 `TransactionHistoryArchive` 테이블에 구분해 두기 위해 파티션은 날짜별로 나뉩니다.  
   
 ```csharp  
 {   
@@ -92,7 +92,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>PowerShell에서 테이블에 대한 파티션 구성표 설정  
- 코드 예제에서는 파티션 함수와 파티션 구성표를 만드는 방법을 보여 줍니다는 `TransactionHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 예제 데이터베이스. 오래된 레코드를 `TransactionHistoryArchive` 테이블에 구분해 두기 위해 파티션은 날짜별로 나뉩니다.  
+ 코드 예제에서는 파티션 함수와 파티션 구성표를 만드는 방법을 보여 줍니다 합니다 `TransactionHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스. 오래된 레코드를 `TransactionHistoryArchive` 테이블에 구분해 두기 위해 파티션은 날짜별로 나뉩니다.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -137,7 +137,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

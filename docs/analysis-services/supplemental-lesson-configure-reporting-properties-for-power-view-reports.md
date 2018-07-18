@@ -10,24 +10,24 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033432"
 ---
-# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>추가 단원-Power View 보고서에 대 한 보고 속성 구성
+# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>추가 단원-파워 뷰 보고서의 보고 속성 구성
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 추가 단원에서는 보고 AW Internet Sales 프로젝트에 대 한 속성을 설정 합니다. 보고 속성을 사용하면 최종 사용자가 Power View에서 모델 데이터를 쉽게 선택하고 표시할 수 있습니다. 또한 특정 열과 테이블을 숨기고 차트에서 사용할 새 데이터를 만드는 속성을 설정합니다.   
   
 이 단원에 소요되는 예상 시간: **30분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 추가 단원은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 태스크를 수행하려면 이전 단원을 모두 완료해야 합니다.  
 이 특정 추가 단원을 완료하려면 다음이 필요합니다.  
   
--   (이 자습서를 완료) AW Internet Sales 프로젝트를 배포 하거나 이미 Analysis Services 서버에 배포 준비 합니다.  
+-   (이 자습서를 완료) AW Internet Sales 프로젝트를 배포 하거나 이미 Analysis Services 서버에 배포를 준비 합니다.  
   
   
 ## <a name="model-properties-that-affect-reporting"></a>보고에 영향을 주는 모델 속성  
@@ -69,9 +69,9 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
   
 ## <a name="default-field-set"></a>기본 필드 집합  
-기본 필드 집합은 열과 보고서 필드 목록에서에서 테이블을 클릭할 때 보고서 캔버스에 자동으로 추가 되는 테이블에 대 한 측정값의 미리 정의 된 목록입니다. 기본적으로 이 테이블이 Power View 보고서에서 표시될 때 사용자가 확인할 수 있도록 기본 열, 측정 값 및 필드 순서를 지정할 수 있습니다.  Internet Sales 모델의 경우 Customer, Geography 및 Product 테이블에 대한 기본 필드 집합 및 순서를 정의합니다. 포함된 내용은 Power View 보고서를 사용하여 Adventure Works Internet Sales 데이터를 분석할 때 사용자가 확인하려는 가장 일반적인 열입니다.  
+기본 필드 집합은 미리 정의 된 목록 열 및 테이블에 대 한 보고서 필드 목록의 테이블을 클릭할 때 보고서 캔버스에 자동으로 추가 된 측정값입니다. 기본적으로 이 테이블이 Power View 보고서에서 표시될 때 사용자가 확인할 수 있도록 기본 열, 측정 값 및 필드 순서를 지정할 수 있습니다.  Internet Sales 모델의 경우 Customer, Geography 및 Product 테이블에 대한 기본 필드 집합 및 순서를 정의합니다. 포함된 내용은 Power View 보고서를 사용하여 Adventure Works Internet Sales 데이터를 분석할 때 사용자가 확인하려는 가장 일반적인 열입니다.  
   
-기본 필드 집합에 대 한 자세한 내용은 참조 [구성 기본 필드 집합 Power View 보고서에 대 한](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) SQL Server 온라인 설명서의 합니다.  
+기본 필드 집합에 대 한 자세한 내용은 [기본 필드 집합 구성 Power View 보고서의](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) SQL Server 온라인 설명서의 합니다.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>테이블에 대한 기본 필드 집합을 설정하려면  
   
@@ -106,7 +106,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
 ## <a name="table-behavior"></a>테이블 동작  
 테이블 동작 속성을 사용하여 다른 시각화 유형에 대한 기본 동작 및 Power View 보고서에 사용된 테이블에 대한 그룹화 동작을 변경할 수 있습니다. 이렇게 하면 이름, 이미지 또는 제목 등 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보의 기본 배치가 향상됩니다.  
   
-테이블 동작 속성에 대 한 자세한 내용은 참조 하십시오. [Power View 보고서의 테이블 동작 속성 구성](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) SQL Server 온라인 설명서의 합니다.  
+테이블 동작 속성에 대 한 자세한 내용은 [파워 뷰 보고서의 테이블 동작 속성 구성](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) SQL Server 온라인 설명서의 합니다.  
   
 #### <a name="to-set-table-behavior"></a>테이블 동작을 설정 하려면 
   
@@ -131,7 +131,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
 ## <a name="reporting-properties-for-columns"></a>열의 보고 속성  
 여러 기본 열 속성과 모델 보고 환경을 향상시키기 위해 설정할 수 있는 열의 특정 보고 속성이 있습니다. 예를 들어 사용자는 모든 테이블의 모든 열을 보지 않아도 됩니다. 이전에 열의 숨김 속성을 사용하여 Product Category 및 Product Subcategory 테이블을 숨긴 것처럼 달리 표시되는 테이블에서 특정 열을 숨길 수 있습니다. 데이터 형식 및 열 기준 정렬 등 다른 속성은 열 데이터가 보고서에서 어떻게 표시될 수 있는지에도 영향을 줄 수 있습니다. 이제 특정 열에서 이러한 일부 속성을 설정합니다. 다른 열에는 어떤 동작도 수행하지 않으며 아래에 표시되지 않습니다.  
   
-여기에서는 다른 열 속성의 일부만 설정하지만 이외에도 많은 속성이 있습니다. 열 보고 속성에 대 한 정보를 자세한 참조 [열 속성](../analysis-services/tabular-models/column-properties-ssas-tabular.md) SQL Server 온라인 설명서의 합니다.  
+여기에서는 다른 열 속성의 일부만 설정하지만 이외에도 많은 속성이 있습니다. 열 보고 속성에 대 한 정보를 자세한 [열 속성](../analysis-services/tabular-models/column-properties-ssas-tabular.md) SQL Server 온라인 설명서의 합니다.  
   
 #### <a name="to-set-properties-for-columns"></a>열 속성을 설정하려면  
   
@@ -147,7 +147,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
     **Customer**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Geography Id|숨김|True|  
     |Birth Date|데이터 형식|간단한 날짜|  
@@ -155,11 +155,11 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
     **Date**  
   
     > [!NOTE]  
-    > 7단원: 날짜 테이블로 표시에서 날짜 테이블로 표시 설정을 사용하여 날짜 테이블을 모델 날짜 테이블로 선택하고 날짜 테이블의 날짜 열을 고유 식별자로 사용할 열로 선택했으므로 날짜 열의 행 식별자 속성이 자동으로 True로 설정되며 변경할 수 없습니다. DAX 수식에서 시간 인텔리전스 함수를 사용할 때는 날짜 테이블을 지정해야 합니다. 이 모델에서는 시간 인텔리전스 함수를 사용하여 이전 분기 및 현재 분기 등 다양한 기간에 대해 KPI에서도 사용할 판매 데이터를 측정하는 여러 측정값을 만들었습니다. 날짜 테이블을 지정 하는 방법에 대 한 자세한 내용은 참조 [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) SQL Server 온라인 설명서의 합니다.  
+    > 7단원: 날짜 테이블로 표시에서 날짜 테이블로 표시 설정을 사용하여 날짜 테이블을 모델 날짜 테이블로 선택하고 날짜 테이블의 날짜 열을 고유 식별자로 사용할 열로 선택했으므로 날짜 열의 행 식별자 속성이 자동으로 True로 설정되며 변경할 수 없습니다. DAX 수식에서 시간 인텔리전스 함수를 사용할 때는 날짜 테이블을 지정해야 합니다. 이 모델에서는 시간 인텔리전스 함수를 사용하여 이전 분기 및 현재 분기 등 다양한 기간에 대해 KPI에서도 사용할 판매 데이터를 측정하는 여러 측정값을 만들었습니다. 날짜 테이블 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) SQL Server 온라인 설명서의 합니다.  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
-    |날짜|데이터 형식|간단한 날짜|  
+    |Date|데이터 형식|간단한 날짜|  
     |Day Number of Week|숨김|True|  
     |Day Name|열 기준 정렬|Day Number of Week|  
     |Day Of Week|숨김|True|  
@@ -174,14 +174,14 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
     **Geography**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Geography Id|숨김|True|  
     |Sales Territory Id|숨김|True|  
   
     **Product**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Product Id|숨김|True|  
     |Product Alternate Id|기본 레이블|True|  
@@ -191,7 +191,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
     **Internet Sales**  
   
-    |열|속성|Value|  
+    |Column|속성|값|  
     |----------|------------|---------|  
     |Product Id|숨김|True|  
     |Customer Id|숨김|True|  
@@ -208,7 +208,7 @@ Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 �
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales 테이블 형식 모델을 다시 배포하려면  
   
--   SSDT에서는 클릭는 **빌드** 메뉴를 차례로 클릭 **Adventure Works Internet Sales Model 배포**합니다.  
+-   SSDT에서 클릭 합니다 **빌드** 메뉴를 차례로 클릭 **Adventure Works Internet Sales Model 배포**합니다.  
   
     **배포** 대화 상자가 나타나고 메타데이터 및 모델에 포함된 각 테이블의 배포 상태가 표시됩니다.  
   

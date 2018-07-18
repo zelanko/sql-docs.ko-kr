@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842166"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989515"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;모델&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  마이닝 모델을 사용하여 외부 데이터 원본에 있는 열의 상태를 예측합니다. **PREDICTION JOIN** 문이 모델에는 원본 쿼리의 각 사례와 일치 합니다.  
+  마이닝 모델을 사용하여 외부 데이터 원본에 있는 열의 상태를 예측합니다. 합니다 **PREDICTION JOIN** 문이 모델 원본 쿼리의 각 사례와 일치 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. 열에는 \< *조인 매핑 목록*> 다음 예제와 같이 등호 (=)를 사용 하 여 관련 된:  
+ ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. 열에는 \< *조인 매핑 목록*> 다음 예와에서 같이 등호 (=)를 사용 하 여 관련:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -70,9 +70,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  예측 조인에 대한 원본 쿼리는 테이블 또는 단일 쿼리일 수 있습니다.  
   
- 에 있는 테이블 식을 반환 하지 않는 예측 함수를 지정할 수는 \< *select 식 목록*> 및 \< *식 조건*> 합니다.  
+ 에 있는 테이블 식을 반환 하지 않는 예측 함수를 지정할 수 있습니다 합니다 \< *select 식 목록*> 및 \< *조건 식*>.  
   
- **NATURAL PREDICTION JOIN** 자동으로 모델에서 열 이름을 일치 하는 원본 쿼리의 열 이름을 함께 매핑합니다. 사용 하는 경우 **자연 예측**, ON 절을 생략할 수 있습니다.  
+ **NATURAL PREDICTION JOIN** 자동으로 모델의 열 이름과 일치 하는 원본 쿼리의 열 이름을 함께 매핑합니다. 사용 하는 경우 **자연 예측**, ON 절을 생략할 수 있습니다.  
   
  WHERE 조건은 예측 가능한 열이나 관련 열에만 적용할 수 있습니다.  
   
@@ -89,7 +89,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   동거 자녀 두 명  
   
- 쿼리는 사람이 자전거를 반환 하는 테이블 형식 값의 집합을 구입 여부를 설명 하는 부울 값을 반환 TM Decision Tree 마이닝 모델 및 주체에 대 한 알려진된 특징을 사용 하 여 [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) 예측을 만든 하는 방법을 설명 하는 함수입니다.  
+ TM Decision Tree 마이닝 모델 및 주체에 대 한 알려진된 특성을 사용 하 여, 쿼리 사용자 반환 하는 테이블 형식 값 집합과 자전거 구입 여부를 설명 하는 부울 값을 반환 합니다 [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) 함수는 예측을 만든 방법에 대해 설명 합니다.  
   
 ```  
 SELECT  
@@ -106,7 +106,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>예제 2: OPENQUERY 사용  
- 다음 예에서는 외부 데이터 집합에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 쿼리 צ ְ ײ [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 테이블의 열 이름이 마이닝 모델의 경우와 다르기 때문에 **ON** 모델의 열에는 테이블의 열을 매핑할 절을 사용 해야 합니다.  
+ 다음 예에서는 외부 데이터 집합에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 쿼리에 사용할 수 있습니다 [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 마이닝 모델에서 테이블의 열 이름을 다르기 때문에 합니다 **ON** 모델의 열을 테이블의 열을 매핑할 절을 사용 해야 합니다.  
   
  쿼리는 테이블에 있는 각 개인의 성과 이름 및 각 개인이 자전거를 구입할 가능성이 있는지 여부를 나타내는 부울 열을 반환합니다. 부울 열에서 0은 "자전거를 구입할 가능성이 낮음"을, 1은 "자전거를 구입할 가능성이 높음"을 나타냅니다. 마지막 열에는 예측된 결과에 대한 확률이 들어 있습니다.  
   
@@ -163,7 +163,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) 함수는 다형성 및 모든 모델 유형과 함께 사용할 수 있습니다. value3을 함수에 대한 인수로 사용하여 쿼리가 반환하는 항목 수를 제한할 수 있습니다. **선택** NATURAL PREDICTION JOIN 절 뒤에 오는 목록에는 예측에 대 한 입력으로 사용할 값을 제공 합니다.  
+ 합니다 [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) 함수는 다형성을 갖고 및 모든 모델 유형과 함께 사용할 수 있습니다. value3을 함수에 대한 인수로 사용하여 쿼리가 반환하는 항목 수를 제한할 수 있습니다. 합니다 **선택** NATURAL PREDICTION JOIN 절 뒤에 오는 목록 예측에 대 한 입력으로 사용할 값을 제공 합니다.  
   
 ```  
 SELECT FLATTENED  
@@ -184,7 +184,7 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- 예측 가능한 특성이 들어 있는 열인 `[v Assoc Seq Line Items]`가 테이블 열이므로 중첩 테이블이 들어 있는 단일 열이 반환됩니다. 기본적으로 중첩 테이블 열의 이름은 `Expression`입니다. 공급자가 계층적 행 집합을 지원 하지 하는 경우 사용할 수 있습니다는 **FLATTENED** 결과 보다 쉽게 볼 수 있도록이 예제에 표시 된 대로 키워드입니다.  
+ 예측 가능한 특성이 들어 있는 열인 `[v Assoc Seq Line Items]`가 테이블 열이므로 중첩 테이블이 들어 있는 단일 열이 반환됩니다. 기본적으로 중첩 테이블 열의 이름은 `Expression`입니다. 공급자에서 계층적 행 집합을 지원 하지 않습니다, 경우 사용할 수 있습니다 합니다 **FLATTENED** 키워드와 같이이 예제에서는 결과 보다 쉽게 볼 수 있도록 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   

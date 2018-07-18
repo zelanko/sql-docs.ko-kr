@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981902"
 ---
-# <a name="functions-on-string-values---upper-case"></a>문자열 값-대문자 함수
+# <a name="functions-on-string-values---upper-case"></a>문자열 값 함수-대문자
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  이 함수 변환의 각 문자에 *$arg* 를 해당 대문자로 동일 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 대문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 표준 코드 포인트 표준의 매핑과 다릅니다.  
+  이 함수에서 각 문자를 변환 *$arg* 를 해당 대문자로 동일 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 대문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 표준 코드 포인트 표준의 매핑과 다릅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,13 +49,13 @@ fn:upper-case($arg as xs:string?) as xs:string
 |용어|정의|  
 |*$arg*|대문자로 변환될 문자열 값입니다.|  
   
-## <a name="remarks"></a>주의  
- 하는 경우의 값 *$arg* 가 비어 있는 경우 길이가 0 인 문자열이 반환 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 경우 값 *$arg* 는 비어 있는 경우 길이가 0 인 문자열 반환 됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>1. 문자열을 대문자로 변경  
- 다음 예에서는 변경 입력된 문자열 ' abcDEF! @4'를 대문자로 변환 합니다.  
+ 다음 예제에서는 입력된 문자열을 변경 ' abcDEF! @4'를 대문자로 변환 합니다.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -126,7 +126,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

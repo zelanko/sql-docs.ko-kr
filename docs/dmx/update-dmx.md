@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4049c6052a4aabcfe7207086db1db19961354eb0
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989695"
 ---
 # <a name="update-dmx"></a>UPDATE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,13 +35,13 @@ SET NODE_CAPTION='new caption'
  모델 식별자입니다.  
   
  *새 캡션*  
- 에 대 한 새 이름을 포함 하는 문자열은 **NODE_CAPTION** 열입니다.  
+ 에 대 한 새 이름을 포함 하는 문자열을 **NODE_CAPTION** 열입니다.  
   
  *조건 식*  
  (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 **업데이트** 기본 이름을 변경 하는 명령문 `Cluster 1`, 클러스터에 대 한 `001` 보다 설명적인 이름으로 `Likely Customers`합니다.  
+ 다음 예제에서는 **업데이트** 기본 이름을 변경 하는 명령문 `Cluster 1`, 클러스터에 대 한 `001` 보다 설명적인 이름으로 `Likely Customers`입니다.  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

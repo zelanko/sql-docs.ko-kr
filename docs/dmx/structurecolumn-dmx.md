@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842626"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992413"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,11 +40,11 @@ StructureColumn('structure column name')
 ## <a name="remarks"></a>Remarks  
  이 함수는 다형성을 갖고 있으며 SELECT 식 목록, WHERE 조건 식, ORDER BY 식 등의 식을 허용하는 문의 어디에서나 사용할 수 있습니다.  
   
- 마이닝 구조에 열 이름을 문자열 값 이며 따라서 묶어야 작은따옴표로: 예를 들어 `StructureColumn('` **열 1**`')`합니다. 동일한 이름의 열이 여러 개 있으면 이름이 바깥쪽 SELECT 문의 컨텍스트에서 확인됩니다.  
+ 마이닝 구조 열의 이름을 문자열 값 이며 따라서 묶어야 작은따옴표로: 예를 들어 `StructureColumn('` **열 1**`')`합니다. 동일한 이름의 열이 여러 개 있으면 이름이 바깥쪽 SELECT 문의 컨텍스트에서 확인됩니다.  
   
- 사용 하는 쿼리에서 반환 되는 결과 **StructureColumn** 모델에 필터가 있는지 여부의 영향을 받는 함수입니다. 즉, 모델 필터에 의해 마이닝 모델에 포함되어 있는 사례가 제어됩니다. 따라서 구조 열에 대한 쿼리는 마이닝 모델에 사용된 사례만 반환할 수 있습니다. 마이닝 모델 필터가 사례 테이블과 중첩 테이블에 미치는 영향을 보여 주는 코드 예는 이 항목의 예 섹션을 참조하십시오.  
+ 사용 하는 쿼리에서 반환 되는 결과 **StructureColumn** 모델에 필터가 있는지 영향을 받는 함수입니다. 즉, 모델 필터에 의해 마이닝 모델에 포함되어 있는 사례가 제어됩니다. 따라서 구조 열에 대한 쿼리는 마이닝 모델에 사용된 사례만 반환할 수 있습니다. 마이닝 모델 필터가 사례 테이블과 중첩 테이블에 미치는 영향을 보여 주는 코드 예는 이 항목의 예 섹션을 참조하십시오.  
   
- DMX SELECT 문에서이 함수를 사용 하는 방법에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) 또는 [SELECT FROM &#60;구조&#62;합니다. 경우](../dmx/select-from-structure-cases.md)합니다.  
+ DMX SELECT 문에서이 함수를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) 하거나 [SELECT FROM &#60;구조가&#62;합니다. 사례](../dmx/select-from-structure-cases.md)합니다.  
   
 ## <a name="error-messages"></a>오류 메시지  
  사용자에게 부모 마이닝 구조에 대한 드릴스루 권한이 없는 경우 다음과 같은 보안 오류 메시지가 나타납니다.  
@@ -113,10 +113,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn(‘Occupation’) = ‘Architect’  
 ```  
   
- 이 예제에서는, 직업이 '건축가' 인 고객에 사례를 제한 하는 구조 열에 필터가 적용 됩니다 (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). 모델을 만들면 모델 필터 조건이 사례에 항상 적용되기 때문에 `Products` 테이블에 한정하는 행이 적어도 하나 이상 있는 사례만 모델 사례에 포함됩니다. 따라서 `Products` 중첩 테이블의 필터와 `(‘Occupation’)` 사례의 필터가 둘 다 적용됩니다.  
+ 이 예제는 건축가 '' 고객에 게 사례를 제한 하는 구조 열에 필터 적용 됩니다 (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). 모델을 만들면 모델 필터 조건이 사례에 항상 적용되기 때문에 `Products` 테이블에 한정하는 행이 적어도 하나 이상 있는 사례만 모델 사례에 포함됩니다. 따라서 `Products` 중첩 테이블의 필터와 `(‘Occupation’)` 사례의 필터가 둘 다 적용됩니다.  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>중첩된 테이블에서 열을 선택 하는 예제 쿼리 3:  
- 다음 예제 쿼리에서는 모델의 학습 사례로 사용된 고객의 이름을 반환할 뿐만 아니라 각 고객의 구매 정보가 포함된 중첩 테이블도 반환합니다. 모델에 포함 되어 있지만 `ProductName` 열을 모델의 값을 사용 하지 않습니다는 `ProductName` 열입니다. 모델 폴링은 정기적인 제품을 구입한 경우만 확인 (`NOT``OnSale`) 가격입니다. 이 쿼리에서는 제품 이름을 반환할 뿐만 아니라 모델에 포함되어 있지 않은 구매 수량도 반환합니다.  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>예제 쿼리 3: 중첩된 테이블에서 열 선택  
+ 다음 예제 쿼리에서는 모델의 학습 사례로 사용된 고객의 이름을 반환할 뿐만 아니라 각 고객의 구매 정보가 포함된 중첩 테이블도 반환합니다. 모델에 포함 되어 있지만 합니다 `ProductName` 열을 모델의 값을 사용 하지 않습니다는 `ProductName` 열입니다. 일반 제품을 구입한 경우 모델만 확인 (`NOT``OnSale`) 가격입니다. 이 쿼리에서는 제품 이름을 반환할 뿐만 아니라 모델에 포함되어 있지 않은 구매 수량도 반환합니다.  
   
 ```  
 SELECT CustomerName,    
@@ -126,7 +126,7 @@ FROM MyModel.CASES
   
  마이닝 모델에 드릴스루가 사용되도록 설정되지 않은 경우 `ProductName` 또는 `Quantity` 열을 반환할 수 없습니다.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>예제 쿼리 4: 필터링 및 중첩된 테이블 열을 반환  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>예제 쿼리 4: 필터링 및 중첩된 테이블 열을 반환 합니다.  
  다음 예제 쿼리에서는 마이닝 구조에만 포함되어 있고 마이닝 모델에는 포함되어 있지 않은 사례와 중첩 테이블 열을 반환합니다. 모델에서 `OnSale` 제품이 있는지 여부를 기준으로 필터링이 이미 수행되었지만 이 쿼리는 `Quantity` 마이닝 구조 열에 필터를 추가합니다.  
   
 ```  

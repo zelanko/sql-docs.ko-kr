@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575895"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983573"
 ---
 # <a name="objectdefinition-element-xmla"></a>ObjectDefinition 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  만들거나 변경할의 Analysis Services 인스턴스에서 개체에 사용 되는 하나 이상의 Analysis Services Scripting Language (ASSL) 요소를 포함 합니다.  
+  만들기 또는 Analysis Services 인스턴스에서 개체를 변경 하는 데 하나 이상의 Analysis Services Scripting Language (ASSL) 요소를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34575895"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -46,12 +46,12 @@ ms.locfileid: "34575895"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Alter](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [만들기](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|자식 요소|필수 ASSL 요소. 하나 이상의 ASSL 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 정의하는 데 사용됩니다. ASSL에 대 한 자세한 내용은 참조 [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)합니다.|  
+|자식 요소|필수 ASSL 요소. 하나 이상의 ASSL 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 정의하는 데 사용됩니다. ASSL에 대 한 자세한 내용은 참조 하세요. [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)합니다.|  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 라는 빈 데이터베이스 **테스트 데이터베이스** 에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+ 다음 예제에서는 라는 빈 데이터베이스를 만듭니다 **테스트 데이터베이스** 에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
   
 ```  
   

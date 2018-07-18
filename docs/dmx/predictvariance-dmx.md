@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841806"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989895"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +32,10 @@ PredictVariance(<scalar column reference>)
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 지정 된 형식의 스칼라 값  *\<스칼라 열 참조 >* 합니다.  
+ 지정 된 유형의 스칼라 값을  *\<스칼라 열 참조 >* 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 열 참조가 불연속 유형인 경우 **PredictVariance** 불연속 값의 분산을 계산할 수 없기 때문에 0을 반환 합니다.  
+ 열 참조가 불연속 유형인 경우 **PredictVariance** 불연속 값의 차이 계산할 수 없기 때문에 0을 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 분산도 확인합니다.  

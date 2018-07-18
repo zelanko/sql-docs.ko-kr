@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 63b9043b3ba88200a060a8b333ff53cf95340df3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578345"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036581"
 ---
 # <a name="dimension-element-xmla"></a>Dimension 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  부모 나타내는 큐브 차원을 식별 [개체](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md) 요소입니다.  
+  부모를 나타내는 큐브 차원을 식별 [개체](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34578345"
 </Object>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34578345"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **차원** 나타내는 큐브 차원의 이름을 포함 하는 개체 식별자는 **개체** 요소입니다.  
+ 합니다 **차원** 요소가 나타내는 큐브 차원의 이름을 포함 하는 개체 식별자는 **개체** 요소입니다.  
   
 ## <a name="see-also"></a>참고자료
  [Database 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   

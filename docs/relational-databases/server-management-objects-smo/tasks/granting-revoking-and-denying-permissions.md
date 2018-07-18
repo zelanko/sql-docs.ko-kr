@@ -1,5 +1,5 @@
 ---
-title: 부여, 취소 및 거부 권한 | Microsoft Docs
+title: 권한을 부여, 취소 및 사용 권한 거부 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77c9bb9b74b4d0b7dee5ec09724db144852dc73b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990646"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32969518"
  <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 개체를 사용하여 비슷한 방법으로 데이터베이스 권한 및 데이터베이스 개체 권한을 할당할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  
@@ -259,7 +259,7 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

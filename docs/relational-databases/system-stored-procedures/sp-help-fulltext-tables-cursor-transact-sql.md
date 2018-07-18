@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0e188636c3152c6ba7e1daa941f01c5766ad4320
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036281"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33254875"
   커서를 사용하여 전체 텍스트 인덱싱에 등록된 테이블의 목록을 반환할 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 새로운 **sys.fulltext_indexes** 카탈로그 뷰를 대신 합니다. 자세한 내용은 참조 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 새 **sys.fulltext_indexes** 카탈로그 뷰를 대신 합니다. 자세한 내용은 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,10 +54,10 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
  유형의 출력 변수 **커서**합니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
   
  [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- 전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *fulltext_catalog_name* 생략 되거나 null 인 경우 데이터베이스와 연관 된 모든 전체 텍스트 인덱싱된 테이블이 반환 됩니다. 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 생략 되거나 null 인 경우이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블에 대 한 전체 텍스트 인덱스 정보가 검색 됩니다. 두 *fulltext_catalog_name* 및 *table_name* 를 지정 하는 경우 행이 반환 *table_name* 관련 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
+ 전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *fulltext_catalog_name* 이 생략 되거나 NULL 이면 데이터베이스에 연결 된 모든 전체 텍스트 인덱싱된 테이블 반환 됩니다. 하는 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 이 생략 되거나 NULL이이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블 전체 텍스트 인덱스 정보가 검색 됩니다. 둘 다 *fulltext_catalog_name* 하 고 *table_name* 를 지정 하는 경우 행이 반환 됩니다 *table_name* 연관 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
   
  [ **@table_name=**] **'***table_name***'**  
- 전체 텍스트 메타데이터를 요청한 대상이 되는 한 부분 또는 두 부분으로 구성된 테이블 이름입니다. *table_name* 은 **nvarchar (517)**, 기본값은 NULL입니다. 경우에 *table_name* 지정 된 행에만 관련이 *table_name* 반환 됩니다.  
+ 전체 텍스트 메타데이터를 요청한 대상이 되는 한 부분 또는 두 부분으로 구성된 테이블 이름입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 경우에 *table_name* 지정 된 경우와 관련 된 행만 *table_name* 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -73,7 +73,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**FULLTEXT_INDEX_ACTIVE**|**int**|해당 테이블의 전체 텍스트 인덱싱에 대해 표시된 열이 쿼리에 적합한지 여부를 지정합니다.<br /><br /> 0 = 비활성<br /><br /> 1 = 활성|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
@@ -94,7 +94,7 @@ DEALLOCATE @mycursor;
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_fulltext_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   

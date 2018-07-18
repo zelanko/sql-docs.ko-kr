@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f4443f05fbee790f5f1d266f451e1105b9c00197
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841526"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992045"
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;모델&gt;합니다. SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   데이터 마이닝 모델의 학습에 사용되는 사례를 보여 주는 샘플 사례를 반환합니다.  
   
- 이 문을 사용하려면 마이닝 모델을 만들 때 드릴스루를 활성화해야 합니다. 드릴스루를 사용 하는 방법에 대 한 자세한 내용은 참조 [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), 및 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
+ 이 문을 사용하려면 마이닝 모델을 만들 때 드릴스루를 활성화해야 합니다. 드릴스루를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)하십시오 [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), 및 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,10 +50,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>Remarks  
  샘플 사례가 생성되지만 실제로 학습 데이터에는 없을 수 있습니다. 반환된 사례는 지정된 내용 노드와 관련됩니다.  
   
- 하지만 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 유일한 [!INCLUDE[msCoName](../includes/msconame-md.md)] SELECT FROM 사용을 지 원하는 알고리즘 \<모델 >. SAMPLE_CASES, 타사 알고리즘 수 지원할 수도 있습니다.  
+ 하지만 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 유일한 [!INCLUDE[msCoName](../includes/msconame-md.md)] 선택에서 사용 하 여 지 원하는 알고리즘 \<모델 >. SAMPLE_CASES, 타사 알고리즘 있습니다도 지원 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 Target Mail 마이닝 모델의 학습에 사용되는 샘플 사례를 반환합니다. 사용 하는 [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) 함수는 **여기서** 절 '000000003' 노드와 관련 된 사례만 반환 합니다. 노드 문자열은 스키마 행 집합의 NODE_UNIQUE_NAME 열에서 찾을 수 있습니다.  
+ 다음 예에서는 Target Mail 마이닝 모델의 학습에 사용되는 샘플 사례를 반환합니다. 사용 하 여 합니다 [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) 함수를 **여기서** 절 하면 ' 000000003' 노드와 관련 된 사례만 반환 합니다. 노드 문자열은 스키마 행 집합의 NODE_UNIQUE_NAME 열에서 찾을 수 있습니다.  
   
 ```  
 Select * from [Sequence Clustering].SAMPLE_Cases  

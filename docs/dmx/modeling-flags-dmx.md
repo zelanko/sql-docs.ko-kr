@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17280abc62cd75122fde1f54b321ca9b51a1b1d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992465"
 ---
 # <a name="modeling-flags-dmx"></a>모델링 플래그(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34842946"
  **MODEL_EXISTENCE_ONLY**  
  특성 열의 값은 특성 자체보다는 중요도가 낮습니다. 이 플래그는 마이닝 모델 열에 정의됩니다.  
   
- 타사 알고리즘에서 추가 모델링 플래그를 지원할 수도 있습니다. 지 원하는 모델링 플래그를 확인 하는 알고리즘을 사용 하 여는 **SUPPORTED_MODELING_FLAGS** 스키마 행 집합입니다. 서버의 마이닝 서비스를 쿼리하여 특정 알고리즘에 지원되는 모델링 플래그를 확인할 수도 있습니다. 예를 들어 다음 쿼리는 현재 서버에서 Microsoft 선형 회귀 알고리즘에 대해 지원되는 모델링 플래그를 반환합니다.  
+ 타사 알고리즘에서 추가 모델링 플래그를 지원할 수도 있습니다. 지 원하는 모델링 플래그는 알고리즘을 확인 하려면을 사용 합니다 **SUPPORTED_MODELING_FLAGS** 스키마 행 집합입니다. 서버의 마이닝 서비스를 쿼리하여 특정 알고리즘에 지원되는 모델링 플래그를 확인할 수도 있습니다. 예를 들어 다음 쿼리는 현재 서버에서 Microsoft 선형 회귀 알고리즘에 대해 지원되는 모델링 플래그를 반환합니다.  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -45,11 +45,11 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>마이닝 모델에 모델링 플래그 지정  
- 구문에 대 한 예제는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마이닝 구조 열에 플래그를 지정 하는 데 지원 참조 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)합니다.  
+ 구문에 대 한 예제는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마이닝 구조 열에 플래그를 지정 하는 것에 대 한 지원 참조 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)합니다.  
   
- 예를 보려면 마이닝 모델 열에 모델링 플래그를 지정 하는 구문은 참조 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
+ 마이닝 모델 열에 모델링 플래그를 지정 하기 위한 구문의 예를 참조 하세요 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
   
- 마이닝 모델 열 사용에 대 한 자세한 내용은 참조 [마이닝 모델 열](../analysis-services/data-mining/mining-model-columns.md)합니다.  
+ 마이닝 모델 열을 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [마이닝 모델 열](../analysis-services/data-mining/mining-model-columns.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
@@ -60,7 +60,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

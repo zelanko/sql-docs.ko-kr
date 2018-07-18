@@ -1,5 +1,5 @@
 ---
-title: sys.fn_helpcollations (Transact SQL) | Microsoft Docs
+title: sys.fn_helpcollations (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c6b16defc5c6ffc11fc13f59d014502ee37f8398
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234319"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989375"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  지원 되는 모든 데이터 정렬 목록을 반환합니다.  
+  모든 지원 되는 데이터 정렬의 목록을 반환합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,10 +51,10 @@ fn_helpcollations ()
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|이름|**sysname**|표준 데이터 정렬 이름입니다.|  
+|속성|**sysname**|표준 데이터 정렬 이름입니다.|  
 |Description|**nvarchar(1000)**|데이터 정렬에 대한 설명입니다.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 데이터 정렬을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Windows 데이터 정렬을 지원하기 전에 개발된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬이라는 제한된 수(<80)의 데이터 정렬도 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬은 이전 버전과의 호환성을 위해 계속 지원되지만 새로운 개발 작업에 사용해서는 안 됩니다. Windows 데이터 정렬에 대한 자세한 내용은 [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. 데이터 정렬에 대 한 자세한 내용은 참조 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Windows 데이터 정렬을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Windows 데이터 정렬을 지원하기 전에 개발된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬이라는 제한된 수(<80)의 데이터 정렬도 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬은 이전 버전과의 호환성을 위해 계속 지원되지만 새로운 개발 작업에 사용해서는 안 됩니다. Windows 데이터 정렬에 대한 자세한 내용은 [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. 데이터 정렬에 대 한 자세한 내용은 참조 하세요. [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.  
   
 
 ## <a name="examples"></a>예  
@@ -81,8 +81,8 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  (7 row(s) affected)  
  ```    
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [COLLATE&#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Azure SQL 데이터 웨어하우스에 대 한 데이터베이스 데이터 정렬 지원](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[COLLATIONPROPERTY &#40;TRANSACT-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[Azure SQL Data Warehouse에 대 한 데이터베이스 데이터 정렬 지원](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
 

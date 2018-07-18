@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043987"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045331"
 ---
-# <a name="measures"></a>큐브 구조
+# <a name="measures"></a>측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 응용 프로그램에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
   
@@ -65,7 +65,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  빈 테이블을 만들고 이동하여 여러 테이블에서 한 테이블로 측정값을 그룹화하거나 빈 테이블에서 새 측정값을 만들 수 있습니다. 다른 테이블에서 열을 참조할 때 DAX 수식에 테이블 이름을 포함시켜야 할 수 있습니다.  
   
- 큐브 뷰가 모델에 대해 정의된 경우 측정값이 해당 큐브 뷰에 자동으로 추가되지 않습니다. 큐브 뷰 대화 상자를 사용하여 측정값을 큐브 뷰에 수동으로 추가해야 합니다. 자세한 내용은 참고 [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)합니다.  
+ 큐브 뷰가 모델에 대해 정의된 경우 측정값이 해당 큐브 뷰에 자동으로 추가되지 않습니다. 큐브 뷰 대화 상자를 사용하여 측정값을 큐브 뷰에 수동으로 추가해야 합니다. 자세한 내용은 참조 하세요 [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_properties"></a> 측정값 속성  
  각 측정값에는 측정값을 정의하는 속성이 있습니다. 속성 창에서 측정값 속성을 관련 열 속성과 함께 편집할 수 있습니다. 측정값의 속성은 다음과 같습니다.  
@@ -80,7 +80,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> KPI의 측정값 사용  
  KPI(핵심 성과 지표)는 측정값으로 정의된 *기본* 값을 측정값이나 절대값으로 정의된 *대상* 값과 비교하여 정의됩니다. 또한 KPI는 그래픽 형식으로 표시되며 기본 값이 임계값 사이의 대상 값에 대해서만 평가를 수행하는 계산인 *상태*를 포함합니다. KPI는 경영진이 중요한 비즈니스 메트릭 동향을 식별하는 데 자주 사용됩니다.  
   
- 모든 측정값을 KPI의 기본 측정값으로 사용할 수 있습니다. KPI를 만들려면 측정값 표에서 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. KPI 대화 상자에서 측정값 또는 절대값으로 정의된 대상 값을 지정하고 상태 임계값과 그래픽 종류를 정의할 수 있습니다. 자세한 내용은 참고 [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)합니다.  
+ 모든 측정값을 KPI의 기본 측정값으로 사용할 수 있습니다. KPI를 만들려면 측정값 표에서 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. KPI 대화 상자에서 측정값 또는 절대값으로 정의된 대상 값을 지정하고 상태 임계값과 그래픽 종류를 정의할 수 있습니다. 자세한 내용은 참조 하세요 [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
@@ -88,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |-----------|-----------------|  
 |[측정값 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|모델 디자이너의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법에 대해 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Kpi 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

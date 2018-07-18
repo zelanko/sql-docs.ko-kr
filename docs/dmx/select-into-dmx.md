@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842236"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040421"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  기존 마이닝 모델의 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다. **SELECT INTO** 문은 실제 알고리즘에 관련 된 기타 정보와 스키마를 복사 하 여 새 마이닝 모델을 만듭니다.  
+  기존 마이닝 모델의 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다. 합니다 **SELECT INTO** 문은 실제 알고리즘에 한정 되지 않은 다른 정보와 스키마를 복사 하 여 새 마이닝 모델을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ FROM <existing model>
  (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *expression*  
- 학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 참조 [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
+ 학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 참조 하세요. [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
   
  *기존 모델*  
  복사할 기존 모델의 이름입니다.  
@@ -49,12 +49,12 @@ FROM <existing model>
 ## <a name="remarks"></a>Remarks  
  기존 모델이 학습되는 경우 새 모델은 이 문이 실행될 때 자동으로 처리됩니다. 그렇지 않은 경우 새 모델은 처리되지 않습니다.  
   
- **SELECT INTO** 문은 기존 모델의 구조는 새 모델의 알고리즘과 호환 하는 경우에 작동 합니다. 따라서 이 문은 같은 알고리즘에 기초한 모델을 빠르게 만들고 테스트할 때 가장 유용합니다. 알고리즘 유형을 변경하는 경우 새 알고리즘은 기존 모델에 있는 각 열의 데이터 형식을 지원해야 합니다. 그렇지 않으면 모델이 처리될 때 오류가 발생합니다.  
+ 합니다 **SELECT INTO** 문은 기존 모델의 구조가 새 모델의 알고리즘과 호환 하는 경우에 작동 합니다. 따라서 이 문은 같은 알고리즘에 기초한 모델을 빠르게 만들고 테스트할 때 가장 유용합니다. 알고리즘 유형을 변경하는 경우 새 알고리즘은 기존 모델에 있는 각 열의 데이터 형식을 지원해야 합니다. 그렇지 않으면 모델이 처리될 때 오류가 발생합니다.  
   
- **WITH DRILLTHROUGH** 절을 사용 하면 새 마이닝 모델에 드릴스루 합니다. 드릴스루는 모델을 만들 때만 사용할 수 있습니다.  
+ 합니다 **WITH DRILLTHROUGH** 절에 새 마이닝 모델에서 드릴스루 사용 하도록 설정 합니다. 드릴스루는 모델을 만들 때만 사용할 수 있습니다.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>예제 1: 모델의 매개 변수 변경  
- 다음 예제는 기존 마이닝 모델을 기반으로 새 마이닝 모델을 만드는 `TM_Clustering`에서 만들어진는 [기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 새 모델에서는 최대 다섯 개의 클러스터가 존재하도록 CLUSTER_COUNT 매개 변수를 수정합니다. 반면 기존 모델에서는 기본값인 10이 사용됩니다.  
+ 다음 예제는 기존 마이닝 모델을 기반으로 새 마이닝 모델을 만듭니다 `TM_Clustering`에서 만든 합니다 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 새 모델에서는 최대 다섯 개의 클러스터가 존재하도록 CLUSTER_COUNT 매개 변수를 수정합니다. 반면 기존 모델에서는 기본값인 10이 사용됩니다.  
   
 ```  
 SELECT * INTO [New_Clustering]  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_db_xtp_table_memory_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bea396c2625b282b0b63d9be240ed932c640749b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465309"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991865"
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34465309"
 |memory_allocated_for_indexes_kb|**bigint**|이 테이블의 인덱스에 할당된 메모리입니다.|  
 |memory_used_by_indexes_kb|**bigint**|이 테이블의 인덱스에 소비된 메모리입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 있으면 모든 행이 반환됩니다. 그렇지 않으면 빈 행 집합이 반환됩니다.  
   
  VIEW DATABASE 권한이 없으면 SELECT 권한이 있는 테이블의 행에 대해 모든 열이 반환됩니다.  
@@ -216,7 +216,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 복제 관련 동적 관리 뷰 (Transact SQL) | Microsoft Docs
+title: 복제 관련 동적 관리 뷰 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 245c6c3bf1d24b8d795b3a22315acb7198874e00
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463309"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981571"
 ---
 # <a name="replication-related-dynamic-management-views-transact-sql"></a>복제 관련 동적 관리 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34463309"
 |[sys.dm_repl_articles](../../relational-databases/system-dynamic-management-views/sys-dm-repl-articles-transact-sql.md)|[sys.dm_repl_schemas](../../relational-databases/system-dynamic-management-views/sys-dm-repl-schemas-transact-sql.md)|  
 |[sys.dm_repl_tranhash](../../relational-databases/system-dynamic-management-views/sys-dm-repl-tranhash-transact-sql.md)|[sys.dm_repl_traninfo](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

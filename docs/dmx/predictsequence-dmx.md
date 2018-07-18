@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841556"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992475"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,14 +31,14 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- A \<테이블 식 > 합니다.  
+ \<테이블 식 >.  
   
 ## <a name="remarks"></a>Remarks  
- 경우는 *n* 매개 변수가 지정 된, 다음 값을 반환 합니다.  
+ 경우는 *n* 매개 변수가 지정 된 다음 값을 반환 합니다.  
   
--   경우 *n* 0, 다음의 가장 가능성이 높은 시퀀스 값 보다 크면 *n* 단계입니다.  
+-   하는 경우 *n* 가능성이 가장 높은 시퀀스 값 다음에 0 보다 크면 *n* 단계입니다.  
   
--   두 *n 시작* 및 *n 간* 지정 된 시퀀스에서 값 *n 시작* 를 *n 엔드*합니다.  
+-   둘 다 *n 시작* 및 *n 엔드* 지정 된 시퀀스에서 값 *n 시작* 하 *n 엔드*합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Sequence Clustering 마이닝 모델을 기반으로 하는 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터베이스에서 고객이 구매할 가능성이 가장 높은 다섯 개의 제품 시퀀스를 반환합니다.  

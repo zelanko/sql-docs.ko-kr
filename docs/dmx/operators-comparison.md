@@ -10,27 +10,27 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8049f2bad6e78ff301b460b1375a0a73807ccd8d
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842466"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989685"
 ---
 # <a name="operators---comparison"></a>연산자-비교
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  비교 연산자를 사용 하 여에 있는 모든 확장 DMX (Data Mining) 식의 스칼라 데이터와 함께 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 비교 연산자는 Boolean 데이터 형식으로 평가되며 검사된 조건의 결과를 기준으로 TRUE 또는 FALSE를 반환합니다.  
+  비교 연산자를 사용 하 여 모든 확장 DMX (Data Mining) 식에서 스칼라 데이터와 함께 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 비교 연산자는 Boolean 데이터 형식으로 평가되며 검사된 조건의 결과를 기준으로 TRUE 또는 FALSE를 반환합니다.  
   
  다음 표에서는 DMX가 지원하는 비교 연산자를 설명합니다.  
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[&#60;&#40;미만&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작으면 TRUE를 반환하고 크거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#60;&#40;보다 작거나&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작으면 TRUE를 반환하고 크거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
 |[&#62;&#40;보다 큰&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크면 TRUE를 반환하고 작거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
 |[= &#40;같음&#41; &#40;DMX&#41;](../dmx/equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 같으면 TRUE를 반환하고 다르면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#60;&#62;&#40;같지 않은&#41; &#40;DMX&#41;](../dmx/not-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 다르면 TRUE를 반환하고 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#60;= &#40;보다 작거나&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작거나 같으면 TRUE를 반환하고 크면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#62;= &#40;보다 크거나 같음&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크거나 같으면 TRUE를 반환하고 작으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#60;&#62;&#40;같지 않음&#41; &#40;DMX&#41;](../dmx/not-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 다르면 TRUE를 반환하고 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#60;= &#40;보다 작거나 같음&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작거나 같으면 TRUE를 반환하고 크면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#62;= &#40;크거나 같거나&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크거나 같으면 TRUE를 반환하고 작으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
   
  DMX 문과 함수에 비교 연산자를 사용하여 조건을 찾을 수도 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34842466"
  [식 &#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

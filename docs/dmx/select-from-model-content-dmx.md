@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842666"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040351"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +47,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **SELECT FROM**  *\<모델 > * * *입니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열에 있는 값을 반환 합니다.  
+ 합니다 **SELECT FROM**  *\<모델 > * * * 합니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열 값을 반환 합니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
->  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘 및 해석 하 고 각 모델 유형에 대해 콘텐츠 마이닝 모델을 쿼리 하는 방법에 대 한 팁에 대 한 콘텐츠는 마이닝 모델에 대 한 참조 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
+>  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘 및 해석 하 고 각 모델 유형에 대해 콘텐츠 마이닝 모델을 쿼리 하는 방법에 대 한 팁에 대 한 콘텐츠는 마이닝 모델의 설명을 참조 하세요 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
   
 |CONTENT 행 집합 열|Description|  
 |---------------------------|-----------------|  
@@ -89,10 +89,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 다음 쿼리에서 **IsDescendant** 함수를 이전 쿼리에서 반환 된 노드의 인접 한 자식을 반환 합니다.  
+ 다음 쿼리에서 **IsDescendant** 함수를 쿼리에서 반환 된 노드의 인접 한 자식을 반환 합니다.  
   
 > [!NOTE]  
->  에 대 한 인수로 NODE_ID를 반환 하는 하위 select 문을 사용할 수 없습니다 NODE_NAME의 값은 문자열을는 **IsDescendant** 함수입니다.  
+>  인수로 NODE_ID를 반환 하는 하위 select 문을 사용할 수 없습니다 NODE_NAME의 값이 문자열 이기 때문에 합니다 **IsDescendant** 함수입니다.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   

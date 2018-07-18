@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_event_actions (Azure SQL 데이터베이스) | Microsoft Docs
+title: sys.dm_xe_database_session_event_actions (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,13 +17,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b52adfa82c532a8144e142f5d87c991a249becf8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468659"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040231"
 ---
-# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL 데이터베이스)
+# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   이벤트 세션 동작에 대한 정보를 반환합니다. 이벤트가 발생하면 동작이 실행됩니다. 다음 관리 뷰는 동작 실행 횟수 및 총 동작 실행 시간에 대한 통계를 집계합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "34468659"
 |event_name|**nvarchar(60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |event_package_guid|**uniqueidentifier**|이벤트가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  VIEW DATABASE STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
@@ -51,7 +51,7 @@ ms.locfileid: "34468659"
 |sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|다 대 일|  
 |sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

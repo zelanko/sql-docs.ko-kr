@@ -1,5 +1,5 @@
 ---
-title: sp_change_users_login (Transact SQL) | Microsoft Docs
+title: sp_change_users_login (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: f4a7b50619ecb4196b5c88ac0b237a5cff8ecb73
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239883"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990567"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,24 +50,24 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="arguments"></a>인수  
  [ @Action=] '*동작*'  
- 프로시저로 수행할 동작에 대해 설명합니다. *동작* 은 **varchar (10)** 합니다. *동작* 다음 값 중 하나일 수 있습니다.  
+ 프로시저로 수행할 동작에 대해 설명합니다. *동작* 됩니다 **varchar(10)** 합니다. *작업* 다음 값 중 하나일 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
-|**Auto_Fix**|현재 데이터베이스의 sys.database_principals 시스템 카탈로그 뷰에 있는 사용자 항목을 동일한 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 연결합니다. 동일한 이름의 로그인이 없으면 자동으로 생성됩니다. 결과를 조사는 **Auto_Fix** 올바른 링크가 실제로 생성 되었는지 확인 하는 문입니다. 사용 하지 않도록 **Auto_Fix** 보안이 중요 한 경우에 합니다.<br /><br /> 사용 하는 경우 **Auto_Fix**를 지정 해야 *사용자* 및 *암호* 로그인이 아직 없는 경우 지정 해야 *사용자*하지만 *암호* 무시 됩니다. *로그인* NULL 이어야 합니다. *사용자* 현재 데이터베이스에서 유효한 사용자 여야 합니다. 로그인에는 다른 사용자가 매핑될 수 없습니다.|  
-|**보고서**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*, 및 *암호* NULL 이거나 지정 되지 않았습니다.<br /><br /> 시스템 테이블을 사용 하는 쿼리의 보고서 옵션을 유지 하려면의 항목과 비교 **sys.server_prinicpals** 의 항목과 함께 **sys.database_principals**합니다.|  
-|**Update_One**|지정 된 연결 *사용자* 기존의 현재 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *로그인*합니다. *사용자* 및 *로그인* 지정 해야 합니다. *암호* NULL 이거나 지정 되지 않았습니다.|  
+|**Auto_Fix**|현재 데이터베이스의 sys.database_principals 시스템 카탈로그 뷰에 있는 사용자 항목을 동일한 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 연결합니다. 동일한 이름의 로그인이 없으면 자동으로 생성됩니다. 결과를 조사 합니다 **Auto_Fix** 문을 올바른 링크가 실제로 생성 되었는지 확인 합니다. 사용 하지 마세요 **Auto_Fix** 보안과 관련 된 경우에서.<br /><br /> 사용 하는 경우 **Auto_Fix**를 지정 해야 *사용자* 하 고 *암호* 로그인 아직 없는 경우 지정 해야 *사용자*있지만 *암호* 무시 됩니다. *로그인* NULL 이어야 합니다. *사용자* 현재 데이터베이스에서 유효한 사용자 여야 합니다. 로그인에는 다른 사용자가 매핑될 수 없습니다.|  
+|**보고서**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*, 및 *암호* NULL 이거나 지정 되지 않았습니다.<br /><br /> 시스템 테이블을 사용 하 여 쿼리를 사용 하 여 보고서 옵션을 바꾸려면의 항목과 비교 **sys.server_prinicpals** 의 항목과 **sys.database_principals**합니다.|  
+|**Update_One**|지정 된 링크 *사용자* 현재 기존 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *로그인*합니다. *사용자* 하 고 *로그인* 지정 해야 합니다. *암호* NULL 이거나 지정 되지 않았습니다.|  
   
  [ @UserNamePattern=] '*사용자*'  
- 현재 데이터베이스에 있는 사용자의 이름입니다. *사용자* 은 **sysname**, 기본값은 NULL입니다.  
+ 현재 데이터베이스에 있는 사용자의 이름입니다. *사용자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @LoginName=] '*로그인*'  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
  [ @Password=] '*암호*'  
- 새 할당 된 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 하 여 만든 사람의 로그인 정보 **Auto_Fix**합니다. 사용자와 로그인이 매핑되고 일치 하는 로그인에 이미 있으면 및 *암호* 는 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login 새로 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 할당 *암호* 새 로그인 암호와 합니다. *암호* 은 **sysname**, NULL이 아니어야 합니다.  
+ 새 할당 된 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정 하 여 만들어지는 **Auto_Fix**합니다. 사용자와 로그인이 매핑되고 있으면 일치 하는 로그인 하 고 *암호* 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login를 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 할당 *암호* 새 로그인에 대 한 합니다. *암호* 됩니다 **sysname**, NULL이 아니어야 합니다.  
   
-> **중요!!** 항상 사용 하는 [강력한 암호!](../../relational-databases/security/strong-passwords.md)
+> **중요!!** 항상 사용을 [강력한 암호!](../../relational-databases/security/strong-passwords.md)
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -79,8 +79,8 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|데이터베이스 사용자 이름입니다.|  
 |UserSID|**varbinary(85)**|사용자의 보안 식별자입니다.|  
   
-## <a name="remarks"></a>주의  
- sp_change_users_login을 사용하여 현재 데이터베이스의 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 연결할 수 있습니다. 사용자에 대한 로그인이 변경된 경우 sp_change_users_login을 통해 사용자 권한을 그대로 유지한 채 새 로그인에 사용자를 연결할 수 있습니다. 새 *로그인* sa가 될 수 및 *사용자*dbo, guest 또는 INFORMATION_SCHEMA 사용자 일 수 없습니다.  
+## <a name="remarks"></a>Remarks  
+ sp_change_users_login을 사용하여 현재 데이터베이스의 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 연결할 수 있습니다. 사용자에 대한 로그인이 변경된 경우 sp_change_users_login을 통해 사용자 권한을 그대로 유지한 채 새 로그인에 사용자를 연결할 수 있습니다. 새 *로그인* sa가 될 수 없습니다 하며 *사용자*dbo, guest 또는 INFORMATION_SCHEMA 사용자 일 수 없습니다.  
   
  sp_change_users_login은 데이터베이스 사용자를 Windows 수준 보안 주체, 인증서 또는 비대칭 키에 매핑하는 데 사용할 수 없습니다.  
   
@@ -88,7 +88,7 @@ sp_change_users_login [ @Action = ] 'action'
   
  사용자 정의 트랜잭션 내에서는 sp_change_users_login을 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다. Sysadmin 고정된 서버 역할의 멤버만 지정할 수는 **Auto_Fix** 옵션입니다.  
   
 ## <a name="examples"></a>예  
@@ -124,7 +124,7 @@ EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   

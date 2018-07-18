@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989656"
 ---
-# <a name="operators---arithmetic"></a>산술 연산자-
+# <a name="operators---arithmetic"></a>연산자-산술
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  산술 계산에 대 한 산술 연산자의 확장 DMX (Data Mining)을 사용할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 더하기, 빼기, 곱하기 및 나누기 포함 합니다.  
+  산술 계산에 대 한 산술 연산자의 확장 DMX (Data Mining)을 사용할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]더하기, 빼기, 곱하기 및 나누기 등입니다.  
   
  다음 표에서는 DMX에서 지원하는 산술 연산자를 설명합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34842226"
 |[+ &#40;추가&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|두 수를 더합니다.|  
 |[- &#40;빼기&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|한 수에서 다른 수를 뺍니다.|  
 |[&#42;&#40;곱하기&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|두 수를 곱합니다.|  
-|[&#40;나누기&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|한 수를 다른 수로 나눕니다.|  
+|[&#40;분할&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|한 수를 다른 수로 나눕니다.|  
   
  다음 규칙은 DMX 식에서 산술 연산자의 우선 순위를 나타냅니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34842226"
  [식 &#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

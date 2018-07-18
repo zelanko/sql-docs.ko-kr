@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077450"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984355"
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 경우 비교는 True를 반환 된 < 그림\> 요소입니다.  
+ 다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 경우 비교는 True를 반환 합니다 < 그림\> 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -96,7 +96,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 다음 쿼리는 일련의 전화 번호에 비교 < 번호\> 요소를 사용 하는 문자열 리터럴 "112-111-1111"입니다. 이 쿼리는 AdditionalContactInfo 열에 있는 전화 번호 요소의 시퀀스를 비교하여 특정 고객에 대한 특정 전화 번호가 문서에 있는지 확인합니다.  
+ 다음 쿼리는 전화 번호의 시퀀스를 비교 < 번호\> 요소를 사용 하는 문자열 리터럴 "112-111-1111"입니다. 이 쿼리는 AdditionalContactInfo 열에 있는 전화 번호 요소의 시퀀스를 비교하여 특정 고객에 대한 특정 전화 번호가 문서에 있는지 확인합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -158,7 +158,7 @@ WHERE ContactID=1
   
  이러한 연산자는 단일 원자 값에서만 사용할 수 있습니다. 즉, 시퀀스를 피연산자 중 하나로 지정할 수 없습니다.  
   
- 예를 들어 다음 쿼리 검색 \<그림 > 요소는 그림 크기가 제품 모델에 대 한 "작은:  
+ 예를 들어 다음 쿼리 검색 \<그림 > 요소는 그림 크기가 되는 제품 모델에 대 한 "작은:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -175,9 +175,9 @@ WHERE ProductModelID=19
   
 -   `declare namespace`는 다음에 쿼리에서 사용되는 네임스페이스 접두사를 정의합니다.  
   
--   \<크기 > 요소 값의 지정 된 원자 값인 "small"과 비교 됩니다.  
+-   \<크기 > 요소 값이 지정된 된 원자성 값을 "small"과 비교 됩니다.  
   
--   값 연산자는 원자 값 에서만 작동 하기 때문에 사용자에 게 유의 **data ()** 함수는 암시적으로 노드 값을 검색 하는 데 사용 됩니다. 즉 `data($P/PD:Size) eq "small"`은 같은 결과를 생성합니다.  
+-   값 연산자는 원자 값 에서만 작동 하기 때문에 유의 합니다 **data ()** 함수는 암시적으로 노드 값을 검색 하는 데 사용 됩니다. 즉 `data($P/PD:Size) eq "small"`은 같은 결과를 생성합니다.  
   
  다음은 결과입니다.  
   
@@ -193,7 +193,7 @@ WHERE ProductModelID=19
  값 비교에 대한 형식 승격 규칙은 일반 비교의 경우와 동일합니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 일반 비교 중에 형식화되지 않은 값에 대해 사용하는 캐스트 규칙을 값 비교 중에도 사용합니다. 이와는 반대로 XQuery 사양의 규칙은 값 비교 중에 형식화되지 않은 값을 항상 xs:string으로 캐스팅합니다.  
   
 ## <a name="node-comparison-operator"></a>노드 비교 연산자  
- 노드 비교 연산자 **은**, 노드 형식에만 적용 됩니다. 이 연산자가 반환하는 결과는 피연산자로 전달된 두 노드가 원본 문서의 같은 노드를 나타내는지 여부를 나타냅니다. 이 연산자는 두 피연산자가 같은 노드이면 True를 반환하고 그렇지 않으면 False를 반환합니다.  
+ 노드 비교 연산자 **는**를 노드 형식에만 적용 됩니다. 이 연산자가 반환하는 결과는 피연산자로 전달된 두 노드가 원본 문서의 같은 노드를 나타내는지 여부를 나타냅니다. 이 연산자는 두 피연산자가 같은 노드이면 True를 반환하고 그렇지 않으면 False를 반환합니다.  
   
  다음 쿼리는 업무 센터 위치 10이 특정 제품 모델의 제조 프로세스에서 첫 번째인지 여부를 확인합니다.  
   
@@ -226,11 +226,11 @@ ProductModelID       Result
   
  이러한 연산자는 문서 순서를 기준으로 생성된 비교 연산자입니다.  
   
--   `<<` : **Operand 1** 앞에 야 **operand 2** 문서 순서로 합니다.  
+-   `<<` : **Operand 1** 앞에 야 **피연산자 2** 문서 순서에서.  
   
--   `>>` : **Operand 1** 따라 **operand 2** 문서 순서로 합니다.  
+-   `>>` : **Operand 1** 따릅니다 **피연산자 2** 문서 순서에서.  
   
- 다음 쿼리는 제품 카탈로그 설명에 있으면 True를 반환 합니다는 \<보증 > 요소 앞에 나타나는 \<유지 관리 > 특정 제품에 대 한 문서 순서입니다.  
+ 다음 쿼리는 제품 카탈로그 설명에 있는 경우 True를 반환 합니다는 \<보증 > 앞에 나타나는 요소는 \<유지 관리 > 특정 제품에 대 한 문서 순서로 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -246,13 +246,13 @@ where ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   **value ()** 의 메서드는 **xml**데이터 형식은 쿼리에서 사용 됩니다.  
+-   합니다 **value ()** 메서드는 **xml**데이터 형식은 쿼리에서 사용 됩니다.  
   
--   쿼리의 부울 결과 변환 **nvarchar (10)** 반환 합니다.  
+-   쿼리의 부울 결과 변환할 **nvarchar(10)** 반환 합니다.  
   
 -   쿼리에서 True를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 식](../xquery/xquery-expressions.md)  
   

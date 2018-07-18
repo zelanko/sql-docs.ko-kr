@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76e30e2e14cc0e98c1a275831dabefde7d8db948
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577335"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036571"
 ---
 # <a name="sessionid-element-xmla"></a>SessionID 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  부모를 실행할 활성 세션 식별 [취소](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
+  부모를 실행할 활성 세션을 식별 [취소](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577335"
 </Cancel>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  

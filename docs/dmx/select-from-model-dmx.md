@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989905"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;모델&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 열에는 *식 목록* 예측 또는 예측 전용으로 정의 된 또는 예측 가능한 열에 관련 해야 합니다.  
+ 열에는 *식 목록* 예측 또는 예측 전용으로 정의 하거나 관련 예측 가능한 열을 해야 합니다.  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 예  
  다음 예에서는 Bike Buyer 열에 빈 예측 조인을 수행하고 TM Naive Bayes 마이닝 모델에서 가장 가능성이 높은 상태를 반환합니다.  
@@ -57,7 +57,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>시계열 예  
- 다음 예에서는 Forecasting 모델의 Amount 열에 예측을 수행하고 다음 네 단계를 반환합니다. Model Region 열은 자전거 모델과 지역을 단일 식별자로 결합합니다. 쿼리에서 [PredictTimeSeries &#40;DMX&#41; ](../dmx/predicttimeseries-dmx.md) 예측을 수행 하는 함수입니다.  
+ 다음 예에서는 Forecasting 모델의 Amount 열에 예측을 수행하고 다음 네 단계를 반환합니다. Model Region 열은 자전거 모델과 지역을 단일 식별자로 결합합니다. 쿼리를 사용 합니다 [PredictTimeSeries &#40;DMX&#41; ](../dmx/predicttimeseries-dmx.md) 예측을 수행 하는 함수입니다.  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   

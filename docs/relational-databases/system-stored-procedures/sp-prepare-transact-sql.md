@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 08e1c0f988d480e7c0c98d0818591734574ece87
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254367"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036301"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  매개 변수가 있는 준비 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 문을 반환 하 고 *처리* 실행 합니다. sp_prepare가 ID를 지정 하 여 호출 = 표 형식 데이터 TDS (stream) 패킷의 11입니다.  
+  매개 변수가 있는 준비 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 문을 반환 *처리* 실행에 대 한 합니다. sp_prepare가 ID를 지정 하 여 호출 = 11 tabular data TDS (stream) 패킷에서을 합니다.  
   
  ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,18 +46,18 @@ sp_prepare handle OUTPUT, params, stmt, options
   
 ## <a name="arguments"></a>인수  
  *handle*  
- SQL Server에서 생성 *준비 된 핸들* 식별자입니다. *처리* 은 필수 매개 변수는 **int** 값을 반환 합니다.  
+ SQL Server에서 생성 *준비 된 핸들* 식별자입니다. *처리할* 은 필수 매개 변수를 **int** 값을 반환 합니다.  
   
  *params*  
- 매개 변수가 있는 문을 식별합니다. *params* 문에 매개 변수 표식에 대 한 변수 정의 바뀝니다. *params* 필요로 하는 필수 매개 변수는 **ntext**, **nchar**, 또는 **nvarchar** 값을 입력 합니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  
+ 매개 변수가 있는 문을 식별합니다. 합니다 *params* 문에서 매개 변수 표식에 대 한 변수 정의 바뀝니다. *params* 필요로 하는 필수 매개 변수를 **ntext**를 **nchar**, 또는 **nvarchar** 값을 입력 합니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  
   
  *stmt*  
- 커서 결과 집합을 정의합니다. *stmt* 호출에 대 한 필수 매개 변수 이며 프로그램 **ntext**, **nchar**, 또는 **nvarchar** 값을 입력 합니다.  
+ 커서 결과 집합을 정의합니다. *stmt* 매개 변수가 필수 항목이 며에 대 한 호출을 **ntext**, **nchar**, 또는 **nvarchar** 값을 입력 합니다.  
   
  *options*  
- 커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 다음 int 입력된 값을 필요로 합니다.  
+ 커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 다음 int 입력된 값이 필요 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -74,7 +74,7 @@ EXEC sp_unprepare @P1;
 ```  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

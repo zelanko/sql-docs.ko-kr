@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985265"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;구조&gt;합니다. 경우
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34842106"
   
  구조에 드릴스루가 사용되도록 설정되지 않은 경우에는 문이 실패합니다. 또한 사용자에게 마이닝 구조에 대한 드릴스루 권한이 없는 경우에도 문은 실패합니다.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 기본적으로 새 마이닝 구조에 드릴스루를 사용 합니다. 특정 구조에 드릴스루를 사용 하는지 여부를 확인 하려면 확인 여부의 값은 **CacheMode** 속성 **KeepTrainingCases**합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 기본적으로 새 마이닝 구조에 드릴스루를 사용 합니다. 특정 구조에 드릴스루를 사용할 수 있는지 여부를 확인 하려면 확인 여부를 값을 **CacheMode** 속성이 **KeepTrainingCases**합니다.  
   
- 하는 경우의 값 **CacheMode** 으로 변경 된 **ClearAfterProcessing**, 구조 사례 캐시에서 지워지고 드릴스루를 사용할 수 없습니다.  
+ 경우 값 **CacheMode** 으로 변경 됩니다 **ClearAfterProcessing**, 구조 사례는 캐시에서 지워지고 드릴스루를 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  DMX(Data Mining Extensions)를 사용하여 마이닝 구조에 대해 드릴스루를 사용하거나 사용하지 않도록 설정할 수는 없습니다.  
@@ -63,10 +63,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- 따라서 중요 한 데이터 나 개인 정보를 보호 하려면 구성 해야 부여 및 개인 정보를 마스킹 하도록 데이터 원본 뷰 **AllowDrillthrough** 마이닝 구조 또는 필요한 경우에 마이닝 모델에 대 한 권한이 있습니다.  
+ 따라서 중요 한 데이터 나 개인 정보를 보호 하려면 구성 않아야 개인 정보를 마스킹 권한을 부여 하 여 데이터 원본 뷰 **AllowDrillthrough** 마이닝 구조 또는 마이닝 모델에 대 한 권한이 경우에만 필요 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 기반으로 마이닝 구조를 기반으로 하는 타겟 메일링은 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터베이스와 연결 된 마이닝 모델입니다. 자세한 내용은 참조 [기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
+ 다음 예에서는 마이닝 구조를 기반으로 하는 타겟 메일링 기반한는 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터베이스와 연결 된 마이닝 모델입니다. 자세한 내용은 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>예제 1: 구조 사례로 드릴스루  
  다음 예에서는 마이닝 구조인 대상 메일에서 가장 오래된 500명의 고객 목록을 반환합니다. 이 쿼리는 마이닝 모델에 있는 모든 열을 반환하지만 자전거를 구입한 고객의 행으로 행을 제한하고 이러한 행을 고객의 나이별로 정렬합니다. 식 목록을 편집하여 필요한 열만 반환할 수도 있습니다.  

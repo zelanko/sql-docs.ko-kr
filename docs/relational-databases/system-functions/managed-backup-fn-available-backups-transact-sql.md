@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (Transact SQL) | Microsoft Docs
+title: managed_backup.fn_available_backups (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230858"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040361"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="Arguments"></a> 인수  
  @database_name  
- 데이터베이스의 이름입니다. @database_name 은 nvarchar (512).  
+ 데이터베이스의 이름입니다. @database_name 은 NVARCHAR(512)입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
  테이블에 (database_guid, backup_start_date 및 first_lsn, backup_type)에 대한 고유 클러스터형 제약 조건이 포함됩니다.   
@@ -68,15 +68,15 @@ LSN에 로그 체인이 끊어졌음을 의미하는 간격이 있으면 테이�
 |last_recovery_fork_id|UNIQUEIDENTIFIER|복구 분기 끝 지점의 식별 번호입니다.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|복구 분기 시작 지점의 ID입니다. 데이터 백업의 경우 first_recovery_fork_guid는 last_recovery_fork_guid와 같습니다.|  
 |fork_point_lsn|NUMERIC(25, 0)|first_recovery_fork_id가 last_recovery_fork_id와 동일하지 않으면 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않은 경우 이 값은 NULL입니다.|  
-|availability_group_guid|UNIQUEIDENTIFIER|데이터베이스가 Always On 데이터베이스를 가용성 그룹의 GUID입니다. 그렇지 않은 경우 이 값은 NULL입니다.|  
+|availability_group_guid|UNIQUEIDENTIFIER|데이터베이스는 Always On 데이터베이스 이면 가용성 그룹의 GUID입니다. 그렇지 않은 경우 이 값은 NULL입니다.|  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패).  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 필요한 **선택** 이 함수에 대 한 권한이 있습니다.  
+### <a name="permissions"></a>사용 권한  
+ 필요 **선택** 이 함수에 대 한 권한.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 'MyDB' 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 통해 백업된 사용 가능한 모든 백업을 보여줍니다.  
@@ -87,7 +87,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Azure에 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Microsoft Azure에 저장된 백업에서 복원](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

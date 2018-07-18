@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2740e920332d55fd2826b8d91d6f7434d2f59e91
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042427"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045841"
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34042427"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값||  
@@ -44,9 +44,9 @@ ms.locfileid: "34042427"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
 |값|Description|  

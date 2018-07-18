@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798288"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040431"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 공유 관리 개체 (SMO) 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sys.symmetric_keys (Transact SQL) | Microsoft Docs
+title: sys.symmetric_keys (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9920ff9e4b648c4911568b44374d860cc2d18710
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985285"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,10 +53,10 @@ ms.locfileid: "33221940"
 |**cryptographic_provider_guid**|**uniqueidentifier**|암호화 공급자의 GUID입니다. Extensible Key Management가 아닌 키의 경우 이 값은 NULL입니다.|  
 |**cryptographic_provider_algid**|**sql_variant**|암호화 공급자의 알고리즘 ID입니다. Extensible Key Management가 아닌 키의 경우 이 값은 NULL입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ ms.locfileid: "33221940"
   
 -   ALGORITHM = TRIPLE_DES를 사용하여 만든 대칭 키에 128비트 키를 포함하는 TRIPLE DES가 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

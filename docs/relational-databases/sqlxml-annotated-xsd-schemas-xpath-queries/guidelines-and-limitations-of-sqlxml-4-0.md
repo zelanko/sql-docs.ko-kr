@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 407a3a50c6dfa6b88ddfb22b8c00b1b487607421
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032613"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0에 대한 지침 및 제한 사항
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "32967628"
   
      SQLXML 4.0 및 버전 독립 PROGID를 사용하는 응용 프로그램을 실행하고 있는데 다른 몇 가지 소프트웨어 프로그램을 설치하려는 경우. 해당 프로그램에 의해 이전 버전의 SQLXML이 설치될 수 있습니다. 해당 응용 프로그램의 버전 독립 PROGID가 응용 프로그램에 현재 사용되고 있는 기능이 없을 수도 있는 이전 버전의 SQLXML을 가리키게 되므로 응용 프로그램에 문제가 발생할 수 있습니다.  
   
--   어떤 이유로 든 없습니다 SQLXMLOLEDB 공급자를 사용 하 고 대신 SQLOLEDB를 사용 하려면 공급자를 SQLXML 기능을 설정 하는 경우는 **SQLXML Version** 속성을 "SQLXML.4.0"입니다.  
+-   SQLXMLOLEDB 공급자를 사용 하려면 하지을 대신 SQLOLEDB를 사용 하려면 어떤 이유로 공급자를 SQLXML 기능을 설정 합니다 **SQLXML Version** 속성을 "SQLXML.4.0" 합니다.  
   
   

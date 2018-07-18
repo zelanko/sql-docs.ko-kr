@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e9e4407abe5565931994d9dcca4cd0326577dbf4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034669"
 ---
 # <a name="use-sql-server-profiler-to-monitor-analysis-services"></a>Use SQL Server Profiler to Monitor Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34016100"
 |[재생에 대한 프로파일러 추적 만들기&#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생용 추적을 만들기 위한 요구 사항에 대해 설명합니다.|  
 |[Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이벤트 클래스에 대해 설명합니다. 이러한 이벤트 클래스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성한 동작에 매핑되고 추적 재생에 사용됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [Analysis Services 인스턴스 모니터](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+## <a name="see-also"></a>관련 항목  
+ [Analysis Services 인스턴스 모니터링](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

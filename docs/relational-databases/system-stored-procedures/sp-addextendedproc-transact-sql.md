@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (Transact SQL) | Microsoft Docs
+title: sp_addextendedproc (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239793"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046091"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  확장 저장된 프로시저의 새 이름을 등록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  확장 저장된 프로시저를 새 이름을 등록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CLR 통합](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) 을 사용하세요.  
@@ -49,10 +49,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
 ## <a name="arguments"></a>인수  
  [  **@functname =** ] **'***프로시저***'**  
- DDL(동적 연결 라이브러리)에서 호출할 함수의 이름입니다. *프로시저* 은 **nvarchar (517)**, 기본값은 없습니다. *프로시저* 필요에 따라 소유자 이름 포함 형태로 *owner.function*합니다.  
+ DDL(동적 연결 라이브러리)에서 호출할 함수의 이름입니다. *프로시저* 됩니다 **nvarchar(517)**, 기본값은 없습니다. *프로시저* 필요에 따라 폼의 소유자 이름을 포함할 수 있습니다 *owner.function*합니다.  
   
  [  **@dllname =** ] **'***dll***'**  
- 함수를 포함하고 있는 DLL의 이름입니다. *dll* 은 **varchar (255)**, 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
+ 함수를 포함하고 있는 DLL의 이름입니다. *dll* 됩니다 **varchar(255)**, 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,21 +60,21 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="result-sets"></a>결과 집합  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>주의  
- 확장된 저장된 프로시저를 만든 후에 추가 되어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 **sp_addextendedproc**합니다. 자세한 내용은 참조 [확장 저장 프로시저를 SQL Server에 추가](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 확장된 저장된 프로시저를 만든 후에 추가 되어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 **sp_addextendedproc**합니다. 자세한 내용은 [확장 저장 프로시저를 SQL Server에 추가](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)합니다.  
   
- 이 프로시저에만 실행할 수 있습니다는 **마스터** 데이터베이스입니다. 이외의 다른 데이터베이스에서 확장된 저장된 프로시저를 실행 하려면 **마스터**와 확장된 저장된 프로시저의 이름을 한정 **마스터**합니다.  
+ 이 절차를 에서만 실행할 수 있습니다 합니다 **마스터** 데이터베이스입니다. 이외의 다른 데이터베이스에서 확장된 저장된 프로시저를 실행할 **마스터**를 사용 하 여 확장된 저장된 프로시저 이름을 한 정하는 **마스터**.  
   
- **sp_addextendedproc** 항목을 추가 하는 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰, 새 이름 등록과 확장 저장된 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 또한 추가 항목에는 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰.  
+ **sp_addextendedproc** 항목을 추가 하는 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰, 새 이름을 등록 확장 저장된 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 또한 항목을 추가 합니다 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰.  
   
 > [!IMPORTANT]  
->  전체 경로에 등록되지 않은 기존 DLL은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후에 작동하지 않습니다. 문제를 해결 하려면 사용 **sp_dropextendedproc** DLL을 등록 취소 하 고 다음 사용 하 여 다시 등록 **sp_addextendedproc**, 전체 경로 지정 합니다.  
+>  전체 경로에 등록되지 않은 기존 DLL은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후에 작동하지 않습니다. 문제를 해결 하려면 사용 **sp_dropextendedproc** DLL의 등록을 취소 한 다음 사용 하 여 다시 등록 하려면 **sp_addextendedproc**, 전체 경로 지정 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_addextendedproc**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_addextendedproc**합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 추가 **xp_hello** 확장 저장된 프로시저입니다.  
+ 다음 예제에 추가 합니다 **xp_hello** 확장 저장된 프로시저입니다.  
   
 ```  
 USE master;  
@@ -82,7 +82,7 @@ GO
 EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

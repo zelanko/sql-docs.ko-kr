@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841966"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991064"
 ---
 # <a name="export-dmx"></a>EXPORT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
   
 ## <a name="arguments"></a>인수  
  *개체 유형*  
- (마이닝 모델 또는 마이닝 구조)을 내보낼 개체 유형의 선택 사항입니다.  
+ (마이닝 모델 또는 마이닝 구조)를 내보내려면 개체 형식의 선택 사항입니다.  
   
  *개체 이름*  
  (선택 사항) 내보낼 개체 이름입니다.  
@@ -39,19 +39,19 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  문자열로 내보낼 파일의 이름과 위치입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 문에서 마이닝 모델을 지정하는 경우 결과 파일에는 연결된 마이닝 구조도 포함됩니다. 문을 지정 하는 경우 **WITH DEPENDENCIES**, 개체 (예를 들어 데이터 원본 및 데이터 원본 뷰)를 처리 하는 데 필요한 모든 개체가.abf 파일에 포함 됩니다.  
+ 문에서 마이닝 모델을 지정하는 경우 결과 파일에는 연결된 마이닝 구조도 포함됩니다. 문을 지정 하는 경우 **WITH DEPENDENCIES**, 개체 (예를 들어, 데이터 원본 및 데이터 원본 뷰)를 처리 하는 데 필요한 모든 개체가.abf 파일에 포함 됩니다.  
   
- 데이터베이스 여야 합니다 또는에서 개체를 가져오거나 내보내는 데 서버 관리자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
+ 데이터베이스 이거나 가져오거나 내보내는 데 서버 관리자에서 개체를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
   
 ## <a name="export-mining-structure-example"></a>마이닝 구조 내보내기 예  
- 다음 예에서는 Targeted Mailing 및 Forecasting 마이닝 구조와 Association 마이닝 모델을 특정 파일 위치로 내보냅니다. Association 모델은 Market Basket 마이닝 구조의 일부이므로 이 예에서는 Market Basket 구조도 내보냅니다. 연결 모델을 사용 하 여 내보낸 부분에서는 Market Basket 마이닝 구조를 내보낼 수는 존재할 수 있는 다른 모든 마이닝 모델 **마이닝 모델**이 아니라 **마이닝 구조**합니다.  
+ 다음 예에서는 Targeted Mailing 및 Forecasting 마이닝 구조와 Association 마이닝 모델을 특정 파일 위치로 내보냅니다. Association 모델은 Market Basket 마이닝 구조의 일부이므로 이 예에서는 Market Basket 구조도 내보냅니다. 연결 모델을 사용 하 여 내보낸 부분에서는 Market Basket 마이닝 구조를 내보낼 수는 존재할 수 있는 다른 모든 마이닝 모델 **마이닝 모델**가 아닌 **마이닝 구조**합니다.  
   
 ```  
 EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Association TO 'C:\TM_NEW.abf'  
 ```  
   
 ## <a name="export-mining-model-example"></a>마이닝 모델 내보내기 예  
- 다음 예에서는 Association 마이닝 모델을 지정한 파일 위치로 내보냅니다. 문을 지정 하기 때문에 **WITH DEPENDENCIES**, 데이터 원본 및 데이터 원본 뷰 개체도.abf 파일에 포함 됩니다.  
+ 다음 예에서는 Association 마이닝 모델을 지정한 파일 위치로 내보냅니다. 문에서 지정 하므로 **WITH DEPENDENCIES**, 데이터 원본 및 데이터 원본 뷰 개체도.abf 파일에 포함 됩니다.  
   
 ```  
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
