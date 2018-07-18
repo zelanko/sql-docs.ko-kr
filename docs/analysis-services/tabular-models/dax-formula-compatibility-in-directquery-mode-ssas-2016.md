@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045647"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985385"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 모드에서의 DAX 수식 호환성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-테이블 형식 1200 이상 모델에 DirectQuery 모드에서 이전 버전에서 많은 기능 제한 사항이 더 이상 적용 됩니다. 특히 DAX 수식에서:
+모델에 대 한 테이블 형식 1200 이상 DirectQuery 모드에서 이전 버전의 많은 기능 제한 사항이 더 이상 적용 됩니다. 특히 DAX 수식에서:
 
 - 이제 DirectQuery에서 더 단순한 쿼리를 생성하고 향상된 성능을 제공합니다.
 - 행 수준 보안 (RLS)은 이제 DirectQuery 모드에서 지원 됩니다.
-- 이제 DirectQuery 모드에서 테이블 형식 모델에 대 한 계산 된 열이 지원 됩니다.
+- 계산된 열은 이제 테이블 형식 모델의 DirectQuery 모드에서 지원 됩니다.
 
 ## <a name="dax-functions-in-directquery-mode"></a>DirectQuery 모드의 DAX 함수
 
-즉, 모든 DAX 함수는 DirectQuery 모델에 대해 지원 됩니다. 그러나 일부 함수는 모든 수식 유형에 대 한 지원 및 DirectQuery 모델에 대해 최적화 된 모든 함수입니다. 기본적으로 DAX 함수는 최적화된 함수와 최적화되지 않은 함수, 두 그룹으로 나뉩니다. 먼저 최적화된 함수를 살펴보겠습니다.
+즉, 모든 DAX 함수는 DirectQuery 모델에 대해 지원 됩니다. 그러나 모든 수식 형식에 대 한 일부 함수는 지원 및 DirectQuery 모델에 대해 최적화 된 일부 함수입니다. 기본적으로 DAX 함수는 최적화된 함수와 최적화되지 않은 함수, 두 그룹으로 나뉩니다. 먼저 최적화된 함수를 살펴보겠습니다.
 
 
 ### <a name="optimized-for-directquery"></a>DirectQuery에 대해 최적화된 함수
@@ -34,21 +34,21 @@ ms.locfileid: "34045647"
 
 | 모든 DAX 수식에서 지원                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 측정값 및 쿼리 수식에서 지원                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  및</br>  ASIN</br>  ATAN</br>  공백</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Currency</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  OR</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  값</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  공백</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Currency</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  또는</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  값</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
 ### <a name="non-optimized-for-directquery"></a>DirectQuery에 대해 최적화되지 않은 함수
-이러한 함수 DirectQuery 작업 때 최적화 되지 않습니다. 이러한 함수는 계산 열 및 행 수준 보안 수식에서 지원되지 *않습니다* . 측정값과 쿼리 수식에서 *지원되지만* 성능은 확실하지 않습니다.
+이러한 함수 DirectQuery를 사용 하 여 작업에 최적화 되지 않았습니다. 이러한 함수는 계산 열 및 행 수준 보안 수식에서 지원되지 *않습니다* . 측정값과 쿼리 수식에서 *지원되지만* 성능은 확실하지 않습니다.
 
  여기에서 모든 함수를 나열하지는 않습니다. 기본적으로 위의 최적화된 함수 목록에 없으면 DirectQuery에 대해 최적화되지 않은 것입니다.
 
 특정 함수가 DirectQuery에 대해 최적화되지 않은 이유는 기본 관계형 엔진에서 xVelocity 엔진에서 수행한 것과 동일한 계산을 수행할 수 없거나 수식을 동등한 SQL 식으로 변환할 수 없기 때문입니다. 다른 경우에는 변환된 식 및 결과 계산의 성능이 허용 가능한 수준이 아닐 수 있습니다.
 
-일부 DAX 함수에 대해 알아보려면 참조 [DAX 함수 참조]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+일부 DAX 함수에 대 한 자세한 내용은 [DAX 함수 참조]를 참조 하세요. (https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 모드의 DAX 연산자
-모든 DAX 비교 및 산술 연산자는 DirectQuery 모드에서 완벽 하 게 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.
+모든 DAX 비교 및 산술 연산자는 DirectQuery 모드에서 완전히 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.
 
 
  
@@ -100,7 +100,7 @@ Transact-SQL에서는 Null이 Null과 같을 수 없습니다. 그러나 DAX에�
   
 ### <a name="casts"></a>캐스팅  
   
-DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및 산술 연산에서 암시적 캐스팅이 수행됩니다. 결과의 데이터 형식은 비교 또는 산술 연산에 의해 결정됩니다. 예를 들면 다음과 같습니다.  
+DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및 산술 연산에서 암시적 캐스팅이 수행됩니다. 결과의 데이터 형식은 비교 또는 산술 연산에 의해 결정됩니다. 예:  
   
 -   TRUE + 1과 같은 산술 연산이나 부울 값 열에 적용된 MIN 함수에서 부울 값은 숫자로 처리됩니다. NOT 연산에서도 숫자 값을 반환합니다.  
   
@@ -117,7 +117,7 @@ DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datet
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
 **문자열에서 부울이 아닌 다른 값으로 캐스팅**  
-문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
+문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
   
 **숫자에서 문자열로의 캐스팅이 허용되지 않음**  
 예: `CONCATENATE(102,”,345”)`  
@@ -341,8 +341,8 @@ DirectQuery 모드에서는 이 제한이 적용되지 않습니다.
 메모리 내 모델에서는 결과가 패딩 없이 마지막 문자열 문자에서 끝납니다.  
 
 
-## <a name="see-also"></a>참고 항목  
-[DirectQuery 모드](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>참고자료  
+[DirectQuery 모드](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

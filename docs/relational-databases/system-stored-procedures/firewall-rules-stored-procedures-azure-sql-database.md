@@ -1,5 +1,5 @@
 ---
-title: 방화벽 규칙 저장 프로시저 (Azure SQL 데이터베이스) | Microsoft Docs
+title: 방화벽 규칙 저장 프로시저 (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: ''
@@ -25,23 +25,23 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 6de7f6cc9166b63cf53b7cae71b172b43651e09e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023795"
 ---
-# <a name="firewall-rules-stored-procedures-azure-sql-database"></a>방화벽 규칙 저장 프로시저 (Azure SQL 데이터베이스)
+# <a name="firewall-rules-stored-procedures-azure-sql-database"></a>방화벽 규칙 저장 프로시저 (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  이 섹션에는 방화벽 규칙을 설정 또는 삭제하는 다음과 같은 저장 프로시저가 있습니다. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 방화벽 규칙을 함께 사용할 수 있습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]합니다. 자세한 내용은 참조 [구성할 Azure SQL 데이터베이스 방화벽 규칙-개요](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)합니다.
+  이 섹션에는 방화벽 규칙을 설정 또는 삭제하는 다음과 같은 저장 프로시저가 있습니다. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 방화벽 규칙 사용 될 수 있습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 고 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]입니다. 자세한 내용은 [Azure SQL Database 방화벽 규칙 구성-개요](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)합니다.
   
  
   
 |  |  |  
 | - | - |  
-|[sp_set_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
-|[sp_set_database_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[sp_delete_database_firewall_rule &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
+|[sp_set_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
+|[sp_set_database_firewall_rule&#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
   
 에 대 한 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 창 방화벽 규칙을 사용 합니다. 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.   
   

@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045597"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016090"
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-SQL Server 2016 Analysis Services는 많은 향상 된 성능, 쉽게 솔루션 작성, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새로운 기능, 향상 된 관계가 양방향 교차 필터링, 병렬 파티션 처리 및 등 다양 합니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
+SQL Server 2016 Analysis Services는 많은 성능 향상된, 쉬운 솔루션 제작, 자동화 된 데이터베이스 관리를 제공 하는 향상 된 새 기능, 양방향 교차 필터링을 사용 하 여 고급 관계 병렬 파티션 처리 및 등입니다. 이번 릴리스에서 향상된 기능 대부분의 중심에는 테이블 형식 model 데이터베이스에 대한 새로운 호환성 수준 1200이 있습니다.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-2016 SQL PASS Conference에서 발표된 Analysis Services를 이제 클라우드에서 Azure 서비스로 사용할 수 있습니다. **Azure Analysis Services** 이상은 1200 호환성 수준의 테이블 형식 모델을 지원 합니다. DirectQuery, 파티션, 행 수준 보안, 양방향 관계, 변환이 모두 지원됩니다. 자세한 내용을 알아보고 무료 시험 버전을 사용하려면 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)를 참조하세요. 
+2016 SQL PASS Conference에서 발표된 Analysis Services를 이제 클라우드에서 Azure 서비스로 사용할 수 있습니다. **Azure Analysis Services** 1200 이상 호환성 수준의 테이블 형식 모델을 지원 합니다. DirectQuery, 파티션, 행 수준 보안, 양방향 관계, 변환이 모두 지원됩니다. 자세한 내용을 알아보고 무료 시험 버전을 사용하려면 [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/)를 참조하세요. 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>SQL Server 2016 서비스 팩 1(SP1) Analysis Services의 새로운 기능
 
@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 
 특히 SQL Server 2016 SP1 Analysis Services는 다음과 같은 주요 영역에서 향상된 기능을 제공합니다.
 
--   **NUMA 인식** - NUMA에 대한 지원을 개선하기 위해 이제 Analysis Services 내의 메모리 내(VertiPaq) 엔진이 각 NUMA 노드에서 별도의 작업 큐를 유지 관리합니다. 따라서 세그먼트에 대해 메모리가 할당된 것과 동일한 노드에서 세그먼트 검색 작업이 실행되도록 합니다. 기본적으로 NUMA 인식은 4 개 이상의 NUMA 노드가 있는 시스템에서만 사용됩니다. 2노드 시스템에서는 할당된 원격 메모리에 액세스하는 비용이 일반적으로 NUMA 고유 정보를 관리하는 오버헤드를 보증하지 않습니다.
+-   **NUMA 인식** - NUMA에 대한 지원을 개선하기 위해 이제 Analysis Services 내의 메모리 내(VertiPaq) 엔진이 각 NUMA 노드에서 별도의 작업 큐를 유지 관리합니다. 따라서 세그먼트에 대해 메모리가 할당된 것과 동일한 노드에서 세그먼트 검색 작업이 실행되도록 합니다. 기본적으로 NUMA 인식은&4;개 이상의 NUMA 노드가 있는 시스템에서만 사용됩니다. 2노드 시스템에서는 할당된 원격 메모리에 액세스하는 비용이 일반적으로 NUMA 고유 정보를 관리하는 오버헤드를 보증하지 않습니다.
 -   **메모리 할당** - Analysis Services는 모든 코어에 별도의 메모리 풀을 제공하는 확장 가능한 할당자인 Intel Threading Building Blocks로 가속화되었습니다. 코어 수가 증가하면 시스템이 거의 선형으로 확장됩니다.
 -   **힙 조각화** - 또한 Intel TBB 기반의 확장 가능한 할당자를 사용하면 Windows 힙에서 발생하는 것으로 나타난 힙 조각화로 인한 성능 문제를 완화할 수 있습니다.
 
@@ -44,7 +44,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 이번 릴리스에서 향상된 기능 대부분은 테이블 형식 모델과 관련이 있지만 다차원 모델에서도 여러 가지 기능이 향상되었습니다. 예를 들어 DB2 및 Oracle과 같은 데이터 원본에 대한 고유 카운트 ROLAP 최적화, Excel 2016의 드릴스루 다중 선택 지원 및 Excel 쿼리 최적화가 있습니다.    
 
 #### <a name="get-the-latest-tools"></a>최신 도구 다운로드
-이 릴리스에서 모든 향상 된 기능을 완전히 활용을 사용 하려면 최신 버전의 SSDT 및 SSMS를 설치 해야 합니다.    
+이 릴리스에서 향상 된 기능을 완전히 활용을 사용 하려면 최신 버전의 SSDT 및 SSMS를 설치 해야 합니다.    
 - [SSDT(SQL Server Data Tools) 다운로드](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [SSMS(SQL Server Management Studio) 다운로드](http://msdn.microsoft.com/library/mt238290.aspx)   
 
@@ -63,14 +63,14 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 이제 테이블 형식 1200 모델에 표시 폴더를 사용할 수 있습니다. SQL Server Data Tools에서 정의되고 Excel 또는 Power BI Desktop 등의 클라이언트 응용 프로그램에서 렌더링된 표시 폴더를 사용하여 많은 측정값을 개별 폴더로 구성하여 필드 목록을 더 쉽게 탐색하기 위한 시각적 계층 구조를 추가할 수 있습니다.
 ### <a name="bi-directional-cross-filtering"></a>양방향 교차 필터링
 이번 릴리스의 새로운 기능에는 테이블 형식 모델에서 양방향 교차 필터를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다. 필터는 높은 수준의 확신도를 기반으로 방향을 설정할 수 있을 경우에만 자동 생성됩니다. 테이블 관계에서 여러 쿼리 경로의 형식에 모호성이 있으면 필터가 자동으로 생성되지 않습니다. 자세한 내용은 [SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 를 참조하세요.
- ### <a name="translations"></a>번역    
+ ### <a name="translations"></a>Translations    
  이제 번역된 메타데이터를 테이블 형식 1200 모델에 저장할 수 있습니다. 모델의 메타데이터에는 **Culture**에 대한 필드, 번역된 캡션, 번역된 설명이 포함됩니다. 번역을 추가하려면 **에서** > **모델** 번역 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]명령을 사용합니다. 자세한 내용은 [테이블 형식 모델 번역&#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)을 참조하세요.    
  ### <a name="pasted-tables"></a>붙여넣은 테이블    
  이제 모델에 붙여넣은 테이블이 포함되어 있으면 1100 또는 1103 테이블 형식 모델을 1200으로 업그레이드할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]를 사용하는 것이 좋습니다. SSDT에서 **CompatibilityLevel** 을 1200으로 설정하고 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 배포합니다. 자세한 내용은 [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 를 참조하세요.    
  ### <a name="calculated-tables-in-ssdt"></a>SSDT의 계산된 테이블    
 *계산된 테이블* 은 SSDT의 DAX 식 또는 쿼리를 기반으로 하는 모델 전용 생성입니다. 데이터베이스에 배포되면 계산된 테이블을 일반 테이블과 구분할 수 없습니다.    
 
- 기존 테이블을 특정 역할로 표시할 새 테이블을 만드는 등의 다양한 용도에 계산된 테이블을 사용합니다. 기본적인 예로는 주문 날짜, 배송 날짜 등의 여러 컨텍스트에서 작동하는 날짜 테이블이 있습니다. 지정된 역할에 대한 계산된 테이블을 만들면 테이블 관계를 활성화하여 계산된 테이블을 사용하여 쿼리 또는 데이터 조작을 이용할 수 있습니다. 기존 테이블의 부분을 모델에만 있는 완전히 새로운 테이블로 결합하는 데도 계산된 테이블을 사용할 수 있습니다.  참조 [계산 테이블을 만들](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) 자세한 합니다.    
+ 기존 테이블을 특정 역할로 표시할 새 테이블을 만드는 등의 다양한 용도에 계산된 테이블을 사용합니다. 기본적인 예로는 주문 날짜, 배송 날짜 등의 여러 컨텍스트에서 작동하는 날짜 테이블이 있습니다. 지정된 역할에 대한 계산된 테이블을 만들면 테이블 관계를 활성화하여 계산된 테이블을 사용하여 쿼리 또는 데이터 조작을 이용할 수 있습니다. 기존 테이블의 부분을 모델에만 있는 완전히 새로운 테이블로 결합하는 데도 계산된 테이블을 사용할 수 있습니다.  참조 [계산 테이블 만들기](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) 에 대해 자세히 알아보세요.    
  ### <a name="formula-fixup"></a>수식 수정    
  테이블 형식 1200 모델의 수식 수정을 사용하면 SSDT에서는 이름이 바뀐 열 또는 테이블을 참조하고 있는 모든 측정값을 자동으로 업데이트합니다.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Visual Studio 구성 관리자 지원    
@@ -80,7 +80,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
  ### <a name="administer-tabular-1200-models-in-ssms"></a>SSMS에서 테이블 형식 1200 모델 관리    
  이번 릴리스에서 테이블 형식 서버 모드의 Analysis Services 인스턴스는 모든 호환성 수준(1100, 1103, 1200)에서 테이블 형식 모델을 실행할 수 있습니다. 최신 [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) 가 업데이트되어 1200 호환성 수준에서 테이블 형식 모델에 대한 속성을 표시하고 데이터베이스 모델 관리를 제공합니다.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>테이블 형식 모델의 여러 테이블 파티션에 대한 병렬 처리    
- 이번 릴리스에는 파티션이 두 개 이상 포함된 테이블에 대한 새로운 병렬 처리 기능이 포함되어 처리 성능이 향상됩니다. 이 기능에 대한 구성 설정은 없습니다. 파티션을 구성 하 고 테이블을 처리 하는 방법에 대 한 자세한 내용은 참조 [테이블 형식 모델 파티션](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)합니다.    
+ 이번 릴리스에는 파티션이 두 개 이상 포함된 테이블에 대한 새로운 병렬 처리 기능이 포함되어 처리 성능이 향상됩니다. 이 기능에 대한 구성 설정은 없습니다. 파티션을 구성 하 고 테이블을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델 파티션](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)합니다.    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>SSMS에서 관리자로 컴퓨터 계정 추가    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 사용하여 컴퓨터 계정을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자 그룹의 멤버로 구성할 수 있습니다. **사용자 또는 그룹 선택** 대화 상자에서 컴퓨터 도메인의 **위치** 를 선택하고 **Computers** 개체 형식을 추가합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.    
  ### <a name="dbcc-for-analysis-services"></a>Analysis Services에 대한 DBCC    
@@ -139,7 +139,7 @@ refresh|개체를 처리합니다. ASSL에서는 PROCESS에 해당합니다.
 ### <a name="dax-variables"></a>DAX 변수    
 이번 릴리스에서는 DAX의 변수를 지원합니다. 이제 나중에 다른 측정값 식에 인수로 전달될 수 있는 명명된 변수로 식의 결과를 저장할 수 있습니다. 일단 변수 식에 대한 결과 값이 계산되면 변수가 다른 식에서 참조되더라도 해당 값은 변경되지 않습니다. 자세한 내용은 [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx)(VAR 함수)을 참조하세요.    
 ### <a name="new-dax-functions"></a>새로운 DAX 함수
-이번 릴리스에서 DAX는 Power BI에서 보다 빠른 계산 및 향상된 시각화를 지원하기 위해 50 가지 이상의 새로운 함수를 사용합니다. 자세한 내용은 [New DAX Functions(새 DAX 함수)](http://msdn.microsoft.com/library/mt704075.aspx)를 참조하세요.
+이번 릴리스에서 DAX는 Power BI에서 보다 빠른 계산 및 향상된 시각화를 지원하기 위해&50;가지 이상의 새로운 함수를 사용합니다. 자세한 내용은 [New DAX Functions(새 DAX 함수)](http://msdn.microsoft.com/library/mt704075.aspx)를 참조하세요.
 ### <a name="save-incomplete-measures"></a>완료되지 않은 측정값 저장
 완료되지 않은 DAX 측정값을 테이블 형식 1200 모델 프로젝트에 직접 저장하고 계속할 수 있을 때 다시 선택할 수 있습니다.
 ### <a name="additional-dax-enhancements"></a>DAX의 추가 기능 향상
@@ -197,11 +197,11 @@ Visual Studio 2015의 코드 보기는 테이블 형식 1200 모델에 대한 JS
 -   성능 최적화에 VertiPaq 및 DirectQuery에 대한 중복 조인 제거가 포함됩니다. 
 
 ### <a name="new-data-sources-for-directquery-mode"></a>DirectQuery 모드의 새 데이터 원본    
- 이제 DirectQuery 모드에서 테이블 형식 1200 모델에 대해 지원 되는 데이터 원본 Oracle, Teradata 및 Microsoft 분석 플랫폼 (이전의 병렬 데이터 웨어하우스)를 포함 합니다.    
+ 이제 DirectQuery 모드에서 테이블 형식 1200 모델에 대 한 지원 되는 데이터 원본 Oracle, Teradata 및 Microsoft 분석 플랫폼 (병렬 데이터 웨어하우스 이전의 함)를 포함 합니다.    
     
-자세한 내용은 참고 [DirectQuery 모드](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.    
+자세한 내용은 참조 하세요 [DirectQuery 모드](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.    
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 [Analysis Services 팀 블로그](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)    
      

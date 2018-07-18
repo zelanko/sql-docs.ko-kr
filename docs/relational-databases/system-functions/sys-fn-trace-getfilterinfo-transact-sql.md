@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_getfilterinfo (Transact SQL) | Microsoft Docs
+title: sys.fn_trace_getfilterinfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971878"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ fn_trace_getfilterinfo ( trace_id )
   
 ## <a name="arguments"></a>인수  
  *trace_id*  
- 추적의 ID입니다. *trace_id* 은 **int**, 기본값은 없습니다.  
+ 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
- 다음 정보를 반환합니다. 열에 대 한 자세한 내용은 참조 [sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)합니다.  
+ 다음 정보를 반환합니다. 열에 대 한 자세한 내용은 참조 하세요. [sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -64,10 +64,10 @@ fn_trace_getfilterinfo ( trace_id )
 |**comparison_operator**|**int**|비교 유형을 지정합니다.<br /><br /> 0 = 같음<br /><br /> 1 = 같지 않음<br /><br /> 2 = 보다 큼<br /><br /> 3 = 보다 작음<br /><br /> 4 = 크거나 같음<br /><br /> 5 = 작거나 같음<br /><br /> 6 = 유사함<br /><br /> 7 = 유사하지 않음|  
 |**value**|**sql_variant**|필터가 적용되는 값을 지정합니다.|  
   
-## <a name="remarks"></a>주의  
- 사용자 집합 *trace_id* 식별, 수정 및 추적 제어 하는 값입니다. 특정 추적의 ID를 전달 하면 **fn_trace_getfilterinfo** 해당 추적에 대 한 모든 필터 정보를 반환 합니다. 지정된 추적에 필터가 없는 경우 이 함수는 빈 행 집합을 반환합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다. 추적에 대 한 유사한 정보를 참조 하십시오. [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 사용자 설정 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다. 에 특정 추적의 ID를 전달 하면 **fn_trace_getfilterinfo** 해당 추적에 대 한 모든 필터 정보를 반환 합니다. 지정된 추적에 필터가 없는 경우 이 함수는 빈 행 집합을 반환합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다. 추적에 대 한 유사한 정보를 참조 하세요. [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -79,7 +79,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   

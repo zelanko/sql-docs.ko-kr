@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234203"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970515"
 ---
-# <a name="system-functions-for-transact-sql"></a>Transact SQL에 대 한 시스템 함수
+# <a name="system-functions-for-transact-sql"></a>TRANSACT-SQL에 대 한 시스템 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 다음 그룹을 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 그룹이 시스템 함수를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Always On 가용성 그룹 함수](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33234203"
  [sys.fn_validate_plan_guide](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
  [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)  
  [sys.fn_backup_file_snapshots](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
- [의미 체계 전체 텍스트 검색 함수](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
+ [의미 체계 전체 텍스트 Search 함수](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
  [시스템 메타 데이터 함수](../../relational-databases/system-functions/system-metadata-functions.md)  
  [시스템 보안 함수](../../relational-databases/system-functions/system-security-functions.md)  
  [시스템 추적 함수](../../relational-databases/system-functions/system-trace-functions.md)  

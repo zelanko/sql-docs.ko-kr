@@ -24,16 +24,16 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 849f2bbd004c47992c6b6faecf06b5abe5bcc9ea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019991"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  등록된 단어 분리기, 필터 및 프로토콜 처리기에 대한 정보를 반환합니다. **sp_help_fulltext_system_components** 지정된 된 구성 요소를 사용한 전체 텍스트 카탈로그 및 데이터베이스 식별자 목록도 반환 합니다.  
+  등록된 단어 분리기, 필터 및 프로토콜 처리기에 대한 정보를 반환합니다. **sp_help_fulltext_system_components** 도 지정한 구성 요소를 사용한 전체 텍스트 카탈로그 및 데이터베이스 식별자 목록을 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,21 +77,21 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> filter<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
 |**componentname**|**sysname**|구성 요소의 이름입니다.|  
 |**clsid**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
-|**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자의 구성원이 아닌 **serveradmin** 고정된 서버 역할입니다.|  
+|**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자의 멤버가 아닌 **serveradmin** 고정된 서버 역할입니다.|  
 |**version**|**nvarchar(30)**|구성 요소 버전입니다.|  
 |**manufacturer**|**sysname**|구성 요소 제조업체의 이름입니다.|  
   
- 경우에 다음 결과 집합 반환 되거나 둘 이상의 전체 텍스트 카탈로그를 사용 하는 존재 *component_type*합니다.  
+ 경우에 다음 결과 집합 반환 되거나 둘 이상의 전체 텍스트 카탈로그에 사용 하는 존재 *component_type*합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|데이터베이스의 ID입니다.|  
 |**ftcatid**|**int**|전체 텍스트 카탈로그의 ID입니다.|  
   
-## <a name="permissions"></a>Permissions  
- 멤버 자격이 필요는 **공용** 역할입니다; 그러나 사용자가 볼 수 VIEW DEFINITION 권한을 갖고 있는 전체 텍스트 카탈로그에 대 한 정보입니다. **serveradmin** 고정 서버 역할의 멤버만 **fullpath** 열의 값을 볼 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 합니다 **공용** 역할; 사용자가 VIEW DEFINITION 권한을 가지는 전체 텍스트 카탈로그에 대 한 정보를 볼만 수 있지만. **serveradmin** 고정 서버 역할의 멤버만 **fullpath** 열의 값을 볼 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 메서드는 업그레이드를 준비할 때 특히 중요합니다. 특정 데이터베이스 내에서 저장 프로시저를 실행하고, 출력을 사용하여 특정 카탈로그가 업그레이드에 영향을 받는지 여부를 지정합니다.  
   
 ## <a name="examples"></a>예  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>3. 특정 단어 분리기의 등록 여부 확인  
- 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 이 예에서는 매개 변수 이름 지정 **@component_type** 및 **@param**합니다.  
+ 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 매개 변수 이름을 지정 하는이 예제 **@component_type** 하 고 **@param**합니다.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -142,10 +142,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [등록 된 필터와 단어 분리기 보기 또는 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+## <a name="see-also"></a>관련 항목  
+ [등록 된 필터와 단어 분리기 보기 및 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [전체 텍스트 검색 및 의미 체계 검색 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [전체 텍스트 검색과 의미 체계 검색 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

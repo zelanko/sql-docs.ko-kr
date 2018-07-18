@@ -1,5 +1,5 @@
 ---
-title: 요소 (DimensionAttribute) (ASSL)를 입력 합니다. | Microsoft Docs
+title: Type 요소 (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971455"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 요소(DimensionAttribute)(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "34045687"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|*Regular*|  
+|기본값|*일반*|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -44,9 +44,9 @@ ms.locfileid: "34045687"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
 |값|Description|  
@@ -72,7 +72,7 @@ ms.locfileid: "34045687"
 |*CaptionAbbreviation*|약어를 나타내는 특성입니다.|  
 |*CaptionDescription*|설명을 나타내는 특성입니다.|  
 |*채널*|채널을 나타내는 특성입니다.|  
-|*City*|구/군/시를 나타내는 특성입니다.|  
+|*도시*|구/군/시를 나타내는 특성입니다.|  
 |*회사*|회사를 나타내는 특성입니다.|  
 |*대륙*|대륙을 나타내는 특성입니다.|  
 |*국가*|국가/지역을 나타내는 특성입니다.|  
@@ -83,7 +83,7 @@ ms.locfileid: "34045687"
 |*CurrencySource*|통화 환율의 원본 통화를 나타내는 특성입니다.|  
 |*CustomerGroup*|고객 그룹을 나타내는 특성입니다.|  
 |*CustomerHousehold*|고객의 가족을 나타내는 특성입니다.|  
-|*고객*|고객을 나타내는 특성입니다.|  
+|*고객은*|고객을 나타내는 특성입니다.|  
 |*날짜*|날짜를 나타내는 특성입니다.|  
 |*DateCanceled*|취소 날짜를 나타내는 특성입니다.|  
 |*DateDuration*|기간을 나타내는 특성입니다.|  
@@ -91,12 +91,12 @@ ms.locfileid: "34045687"
 |*DateModified*|수정한 날짜를 나타내는 특성입니다.|  
 |*DateStart*|시작 날짜를 나타내는 특성입니다.|  
 |*DayOfHalfYears*|반기 일자 서수를 나타내는 특성입니다.|  
-|*dayOfMonth*|월간 일자 서수를 나타내는 특성입니다.|  
+|*DayOfMonth*|월간 일자 서수를 나타내는 특성입니다.|  
 |*DayOfQuarter*|사분기 일자 서수를 나타내는 특성입니다.|  
 |*DayOfTrimester*|삼분기 일자 서수를 나타내는 특성입니다.|  
-|*dayOfWeek*|요일 서수를 나타내는 특성입니다.|  
-|*dayOfYear*|연간 일자 서수를 나타내는 특성입니다.|  
-|*(일)*|날짜를 나타내는 특성입니다.|  
+|*DayOfWeek*|요일 서수를 나타내는 특성입니다.|  
+|*DayOfYear*|연간 일자 서수를 나타내는 특성입니다.|  
+|*일*|날짜를 나타내는 특성입니다.|  
 |*DaysOfTenDays*|10일 기준 일자 서수를 나타내는 특성입니다.|  
 |*FiscalDay*|회계 달력의 일자를 나타내는 특성입니다.|  
 |*FiscalDayOfHalfYears*|회계 달력의 반기 일자 서수를 나타내는 특성입니다.|  
@@ -183,13 +183,13 @@ ms.locfileid: "34045687"
 |*MonthOfHalfYears*|반기 월 서수를 나타내는 특성입니다.|  
 |*MonthOfQuarter*|사분기 월 서수를 나타내는 특성입니다.|  
 |*MonthOfTrimester*|삼분기 월 서수를 나타내는 특성입니다.|  
-|*MonthOfYear*|연간 월 서수를 나타내는 특성입니다.|  
-|*월*|월을 나타내는 특성입니다.|  
+|*연간 월*|연간 월 서수를 나타내는 특성입니다.|  
+|*개월*|월을 나타내는 특성입니다.|  
 |*조직 구성 단위*|부서를 나타내는 특성입니다.|  
 |*OrgTitle*|직함을 나타내는 특성입니다.|  
 |*PercentOwnership*|소유권 비율을 나타내는 특성입니다.|  
 |*PercentVoteRight*|의결권 비율을 나타내는 특성입니다.|  
-|*사람*|사람을 나타내는 특성입니다.|  
+|*사용자*|사람을 나타내는 특성입니다.|  
 |*PersonContact*|사람의 연락처 정보를 나타내는 특성입니다.|  
 |*PersonDemographic*|사람의 인구 통계 정보를 나타내는 특성입니다.|  
 |*PersonFirstName*|사람의 이름을 나타내는 특성입니다.|  
@@ -204,8 +204,8 @@ ms.locfileid: "34045687"
 |*PhysicalVolume*|부피를 나타내는 특성입니다.|  
 |*PhysicalWeight*|무게를 나타내는 특성입니다.|  
 |*PhysicalWidth*|너비를 나타내는 특성입니다.|  
-|*점*|포인트를 나타내는 특성입니다.|  
-|*PostalCode*|우편 번호를 나타내는 특성입니다.|  
+|*Point*|포인트를 나타내는 특성입니다.|  
+|*우편 번호*|우편 번호를 나타내는 특성입니다.|  
 |*Product*|제품을 나타내는 특성입니다.|  
 |*ProductBrand*|제품 브랜드를 나타내는 특성입니다.|  
 |*ProductCategory*|제품 범주를 나타내는 특성입니다.|  
@@ -214,9 +214,9 @@ ms.locfileid: "34045687"
 |*ProjectCode*|프로젝트 코드를 나타내는 특성입니다.|  
 |*Projectcompletion*|프로젝트의 완료 상태를 나타내는 특성입니다.|  
 |*ProjectEnddate*|프로젝트 종료일을 나타내는 특성입니다.|  
-|*프로젝트 이름*|프로젝트 이름을 나타내는 특성입니다.|  
+|*ProjectName*|프로젝트 이름을 나타내는 특성입니다.|  
 |*ProjectStartDate*|프로젝트 시작일을 나타내는 특성입니다.|  
-|*홍보 행사*|홍보 행사를 나타내는 특성입니다.|  
+|*프로 모션*|홍보 행사를 나타내는 특성입니다.|  
 |*QtyRangeHigh*|수량 범위 상한을 나타내는 특성입니다.|  
 |*QtyRangeLow*|수량 범위 하한을 나타내는 특성입니다.|  
 |*정량*|정량 특성을 나타내는 특성입니다.|  
@@ -226,7 +226,7 @@ ms.locfileid: "34045687"
 |*속도*|요율을 나타내는 특성입니다.|  
 |*RateType*|요율 유형을 나타내는 특성입니다.|  
 |*Region*|사용자 정의 지역을 나타내는 특성입니다.|  
-|*Regular*|일반 특성을 나타내는 특성입니다.|  
+|*일반*|일반 특성을 나타내는 특성입니다.|  
 |*RelationToParent*|부모와의 관계를 나타내는 특성입니다.|  
 |*ReportingDay*|보고 달력의 일자를 나타내는 특성입니다.|  
 |*ReportingDayOfHalfYears*|보고 달력의 반기 일자 서수를 나타내는 특성입니다.|  
@@ -285,11 +285,11 @@ ms.locfileid: "34045687"
   
  에 대 한 허용된 된 값에 해당 하는 열거형 **형식** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AttributeType>합니다.  
   
- 부모에 해당 하는 요소 **형식** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
+ 부모에 해당 하는 요소가 **형식** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [요소 특성 &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [차원 요소 &#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [속성 &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

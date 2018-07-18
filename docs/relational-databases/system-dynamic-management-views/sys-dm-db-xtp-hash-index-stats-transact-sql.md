@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (Transact SQL) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465229"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969775"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,27 +47,27 @@ ms.locfileid: "34465229"
 > [!WARNING]
 > **sys.dm_db_xtp_hash_index_stats** 전체 테이블을 검색 합니다. 따라서 데이터베이스에 큰 테이블이 있는 경우 **sys.dm_db_xtp_hash_index_stats** 실행 시간이 오래 걸릴 수 있습니다.  
   
-자세한 내용은 참조 [메모리 최적화 된 테이블에 대 한 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)합니다.  
+자세한 내용은 [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)합니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|부모 테이블의 개체 ID입니다.|  
-|xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
+|xtp_object_id|**bigint**|메모리 최적화 테이블의 ID입니다.|  
 |index_id|**int**|인덱스 ID입니다.|  
 |total_bucket_count|**bigint**|인덱스에서 해시 버킷의 총 수입니다.|  
 |empty_bucket_count|**bigint**|인덱스에서 빈 해시 버킷의 총 수입니다.|  
 |avg_chain_length|**bigint**|인덱스에서 모든 해시 버킷의 낮은 체인 평균 길이입니다.|  
 |max_chain_length|**bigint**|해시 버킷에 있는 행 체인의 최대 길이입니다.|  
-|xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
+|xtp_object_id|**bigint**|메모리 최적화 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
 
 ## <a name="examples"></a>예  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>1. 해시 인덱스 버킷 수 문제 해결
 
-기존 테이블의 해시 인덱스 버킷 수 문제를 해결 하려면 다음 쿼리를 사용할 수 있습니다. 쿼리는 사용자 테이블에 빈 버킷 및 해시 인덱스의 모든 체인 길이 대 한 통계를 반환합니다.
+기존 테이블의 해시 인덱스 버킷 수 문제를 해결 하려면 다음 쿼리를 사용할 수 있습니다. 쿼리는 사용자 테이블에서 모든 해시 인덱스의 체인 길이 및 빈 버킷 백분율에 대 한 통계를 반환합니다.
 
 ```sql
   SELECT  
@@ -91,11 +91,11 @@ ms.locfileid: "34465229"
   ORDER BY [table], [index];  
 ``` 
 
-이 쿼리의 결과 해석 하는 방법에 대 한 세부 정보를 참조 하십시오. [메모리 최적화 된 테이블에 대 한 해시 인덱스 문제 해결](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 합니다.  
+이 쿼리의 결과 해석 하는 방법에 대 한 자세한 내용은 참조 하세요. [메모리 최적화 테이블의 해시 인덱스 문제 해결](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 합니다.  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>2. 내부 테이블에 대 한 해시 인덱스 통계
 
-특정 기능 해시 인덱스의 경우 예를 들어 메모리 액세스에 최적화 된 테이블에 columnstore 인덱스를 활용 하는 내부 테이블을 사용 합니다. 다음 쿼리는 사용자 테이블에 연결 된 내부 테이블에 해시 인덱스에 대 한 통계를 반환 합니다.
+특정 기능 해시 인덱스의 경우 예를 들어 메모리 최적화 테이블에서 columnstore 인덱스를 활용 하는 내부 테이블을 사용 합니다. 다음 쿼리는 사용자 테이블에 연결 된 내부 테이블에 해시 인덱스에 대 한 통계를 반환 합니다.
 
 ```sql
   SELECT  
@@ -116,9 +116,9 @@ ms.locfileid: "34465229"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Note 내부 테이블에 인덱스의 BUCKET_COUNT를 변경할 수 없습니다, 따라서이 쿼리의 출력 정보 값 으로만 간주 해야 합니다. 사용자가 조치할 필요는 없습니다.  
+내부 테이블 인덱스의 BUCKET_COUNT를 변경할 수 없습니다, 따라서이 쿼리의 출력 고려해 야 정보만 note 합니다. 사용자가 조치할 필요는 없습니다.  
 
-이 쿼리는 내부 테이블의 해시 인덱스를 활용 하는 기능을 사용 하는 경우 모든 행을 반환 하는 필요 하지 않습니다. 다음 메모리 액세스에 최적화 된 테이블에 columnstore 인덱스를 포함합니다. 이 테이블을 만든 후에 해시 인덱스의 내부 테이블에 대해 표시 됩니다.
+이 쿼리는 내부 테이블의 해시 인덱스를 활용 하는 기능을 사용 하지 않는 행을 반환 하려면 사용할 수 없습니다. 다음 메모리 최적화 테이블에 columnstore 인덱스를 포함합니다. 이 테이블을 만든 후 내부 테이블에 해시 인덱스가 표시 됩니다.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -128,7 +128,7 @@ Note 내부 테이블에 인덱스의 BUCKET_COUNT를 변경할 수 없습니다
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

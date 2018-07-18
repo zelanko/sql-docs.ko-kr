@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237691"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970415"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ sp_dp_increased_partitions
   
 ## <a name="arguments"></a>인수  
  [ @dbname=] '*database_name*'  
- 데이터베이스의 이름입니다. *dbname* 은 **sysname** 이며 기본값은 NULL입니다. 경우 *dbname* 를 지정 하지 않으면 현재 데이터베이스가 사용 됩니다.  
+ 데이터베이스의 이름입니다. *dbname* 됩니다 **sysname** 이며 기본값은 NULL입니다. 하는 경우 *dbname* 지정 하지 않으면 현재 데이터베이스가 사용 됩니다.  
   
  [ @increased_partitions=] '*increased_partitions*'  
- 지정된 데이터베이스에서 15,000개의 파티션을 지원하도록 설정 또는 해제합니다. *increased_partitions* 은 **varchar(6)** 기본값은 NULL입니다. 사용 가능한 값은 지원하도록 설정할 경우 'ON' 또는 'TRUE'이고, 지원을 해제할 경우 'OFF' 또는 'FALSE'입니다. 경우 *increased_partitions* 를 지정 하지 않으면 프로시저는 지정된 된 데이터베이스에 대 한 지원이 활성화 된 또는 0 지원을 나타내는 데 사용 되지 않는지를 나타내는 1을 반환 합니다.  
+ 지정된 데이터베이스에서 15,000개의 파티션을 지원하도록 설정 또는 해제합니다. *increased_partitions* 됩니다 **varchar(6)** 이며 기본값은 NULL입니다. 사용 가능한 값은 지원하도록 설정할 경우 'ON' 또는 'TRUE'이고, 지원을 해제할 경우 'OFF' 또는 'FALSE'입니다. 하는 경우 *increased_partitions* 지정 하지 않으면 프로시저는 지정 된 데이터베이스에 대 한 지원 또는 지원을 나타내기 위해 0을 사용 하지 않으면을 나타내려면 1을 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 데이터베이스에 대한 ALTER DATABASE 권한이 필요합니다.  
   
   

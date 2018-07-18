@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a79910d324a1e0c157a638745ad96a4bfff800e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043267"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982525"
 ---
 # <a name="calculated-columns"></a>계산 열
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델에서 계산 된 열을 사용 하 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
+  테이블 형식 모델에서는 계산된 열을 사용 하면 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
  
   
   
@@ -49,7 +49,7 @@ ms.locfileid: "34043267"
   
 -   계산 열의 이름을 바꿀 때는 해당 열에 의존하는 공식을 수동으로 업데이트해야 합니다. 수동 업데이트 모드가 아닌 한 수식 결과 업데이트는 자동으로 수행됩니다. 하지만 이 작업은 어느 정도 시간이 걸릴 수 있습니다.  
   
--   열 이름 내에 사용할 수 없는 몇 가지 문자가 있습니다. 자세한 내용은 [DAX 구문 참조](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5)의 "명명 요구 사항"을 참조하세요.  
+-   열 이름 내에 사용할 수 없는 몇 가지 문자가 있습니다. 자세한 내용은 [DAX 구문 참조](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)의 "명명 요구 사항"을 참조하세요.  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  계산 열의 수식은 측정값에 사용된 수식보다 더 많은 리소스가 필요할 수 있습니다. 한 가지 이유는 계산 열의 결과는 테이블의 각 행에 대해 항상 계산되지만 측정값은 보고서, 피벗 테이블 또는 피벗 차트에 사용된 필터에 의해 정의된 셀에 대해서만 계산된다는 것입니다. 예를 들어 백만 개의 행이 있는 테이블에는 항상 백만 개의 결과가 있는 계산 열이 있으며 성능에 대한 영향이 각각 다릅니다. 하지만 피벗 테이블은 일반적으로 행 및 열 머리글을 적용하여 데이터를 필터링하므로 피벗 테이블의 각 셀에 있는 데이터의 하위 집합에 대해서만 측정값이 계산됩니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "34043267"
 |-----------|-----------------|  
 |[계산 열 만들기](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [계산](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  

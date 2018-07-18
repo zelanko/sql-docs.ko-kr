@@ -1,5 +1,5 @@
 ---
-title: 새 요소 (XMLA) | Microsoft Docs
+title: New 요소 (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ed98ed9c42d8cecddb07941855403925b1de6b8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969159"
 ---
 # <a name="new-element-xmla"></a>New 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34575925"
 </Folder>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34575925"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- **새로** 의 값을 바꾸는 UNC 경로 포함 하는 요소는 **원래** 부모에 포함 된 요소의 **폴더** 복원 또는 동기화 하는 모든 개체에 대 한 요소 각각 중는 **복원** 또는 **동기화** 명령입니다. 값은 **원래** 요소의 값과 비교 되는 **StorageLocation** 각 큐브, 측정값 그룹 또는 파티션에 대 한 요소와 일치 하는 항목이 없는 경우이 요소의 값은 업데이트 하는 데는 **StorageLocation** 복원 또는 동기화 중 개체의 합니다.  
+ 합니다 **새로 만들기** 의 값을 바꾸는 UNC 경로 포함 하는 요소는 **원래** 요소는 부모에서 포함할 **폴더** 복원 또는 동기화 하는 모든 개체에 대 한 요소 중 각각을 **복원** 하거나 **동기화** 명령입니다. 값을 **원래** 요소 값과 비교할를 **StorageLocation** 각 큐브, 측정값 그룹 또는 파티션에 대 한 요소와 일치 하는 항목이 없으면이 요소의 값은 업데이트 하는 데는 **StorageLocation** 복원 또는 동기화 중에 개체입니다.  
   
- 백업 및 개체를 복원 하는 방법에 대 한 자세한 내용은 참조 [백업 및 복원 Objects (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 백업 및 복원 하는 개체에 대 한 자세한 내용은 참조 하세요. [백업 및 복원 Objects (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
  [Original 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/original-element-xmla.md)   

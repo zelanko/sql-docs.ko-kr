@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024200"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984765"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34024200"
  [Power Pivot 솔루션 정보](#intro)  
   
 ##  <a name="bkmk_classic"></a> 사전 요구 사항: 웹 응용 프로그램에서 클래식 모드 인증을 사용하는지 확인  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (SharePoint용)은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 다음 PowerShell cmdlet을 실행 하는 응용 프로그램에서 클래식 모드가 사용 여부를 확인 하려면는 **SharePoint 2010 관리 셸을**, 대체 **http://\<최상위 사이트 이름 >** 와 SharePoint 사이트의 이름:  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (SharePoint용)은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 응용 프로그램에서 클래식 모드가 사용 되는지 확인 하려면에서 다음 PowerShell cmdlet을 실행 합니다 **SharePoint 2010 관리 셸**, 대체 **http://\<최상위 사이트 이름 >** 사용 하 여 SharePoint 사이트의 이름:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  반환 값은 **false**여야 합니다. 값이 **true**이면 이 웹 응용 프로그램으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 액세스할 수 없습니다.  
   
 ##  <a name="bkmk_farm"></a> 1단계: 팜 솔루션 배포  
- 이 섹션에서는 PowerShell을 사용하여 솔루션을 배포하는 방법을 보여 주지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 이 태스크를 완료할 수도 있습니다. 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
+ 이 섹션에서는 PowerShell을 사용하여 솔루션을 배포하는 방법을 보여 주지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 이 태스크를 완료할 수도 있습니다. 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
   
  이 태스크는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을(를) 설치한 후 한 번만 수행해야 합니다.  
   
@@ -119,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  **솔루션 취소**를 클릭합니다.  
   
- 팜 솔루션이 원인이 되어 서버 배포 문제가 발생하는 경우 **구성 도구에서** 복구 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 옵션을 실행하여 솔루션을 다시 배포할 수 있습니다. 사용자가 수행할 단계가 더 적으므로 도구를 통해 복구 작업을 수행하는 것이 좋습니다. 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
+ 팜 솔루션이 원인이 되어 서버 배포 문제가 발생하는 경우 **구성 도구에서** 복구 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 옵션을 실행하여 솔루션을 다시 배포할 수 있습니다. 사용자가 수행할 단계가 더 적으므로 도구를 통해 복구 작업을 수행하는 것이 좋습니다. 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
   
  모든 솔루션을 다시 배포하려는 경우에는 다음 순서로 작업을 수행합니다.  
   
@@ -147,7 +147,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |Powerpivotfarm.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll을 전역 어셈블리에 추가합니다.<br /><br /> Microsoft.AnalysisServices.ChannelTransport.dll을 전역 어셈블리에 추가합니다.<br /><br /> 기능 및 리소스 파일을 설치하고 내용 유형을 등록합니다.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 데이터 피드 라이브러리용 라이브러리 템플릿을 추가합니다.<br /><br /> 서비스 응용 프로그램 구성, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드, 데이터 새로 고침, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 위한 응용 프로그램 페이지를 추가합니다.|  
 |powerpivotwebapp.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll 리소스 파일을 웹 프런트 엔드의 웹 서버 확장 폴더에 추가합니다.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스를 웹 프런트 엔드에 추가합니다.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리용 축소판 이미지 생성 기능을 추가합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SharePoint용 파워 피벗 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Windows PowerShell을 사용하여 파워 피벗 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

@@ -1,5 +1,5 @@
 ---
-title: 만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성 | Microsoft Docs
+title: 만들기 및 CA에서 파워 피벗 서비스 응용 프로그램 구성 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025170"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982605"
 ---
-# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에서 파워 피벗 서비스 응용 프로그램 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "34025170"
   
 3.  **SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**을 선택합니다. 이 응용 프로그램이 목록에 표시되지 않으면 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 이 올바르게 설치되거나 구성되지 않은 것입니다.  
   
-4.  **새 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기** 페이지에 응용 프로그램의 이름을 입력합니다. 기본값은 p\<번호 >. 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 응용 프로그램 사용 방식을 이해하는 데 도움이 됩니다.  
+4.  **새 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기** 페이지에 응용 프로그램의 이름을 입력합니다. 기본값은 PowerPivotServiceApplication\<번호 >. 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 응용 프로그램 사용 방식을 이해하는 데 도움이 됩니다.  
   
 5.  응용 프로그램 풀에서 응용 프로그램에 대해 새 응용 프로그램 풀을 만듭니다(권장). 응용 프로그램 풀에 대한 관리 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장할 계획인 경우에도 도메인 계정이 필요합니다.  
   
 6.  **데이터베이스 서버**에서 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다. 이 서버를 사용하거나 다른 SQL Server를 선택할 수 있습니다.  
   
-7.  **데이터베이스 이름**, 기본값은 1 _\<guid > 합니다. 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 고유한 데이터베이스를 만들어야 합니다. 기본 데이터베이스 이름은 서비스 응용 프로그램의 기본 이름에 해당합니다. 고유한 서비스 응용 프로그램 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
+7.  **데이터베이스 이름**, 기본값은 PowerPivotServiceApplication1_\<guid >. 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 고유한 데이터베이스를 만들어야 합니다. 기본 데이터베이스 이름은 서비스 응용 프로그램의 기본 이름에 해당합니다. 고유한 서비스 응용 프로그램 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
@@ -106,9 +106,9 @@ ms.locfileid: "34025170"
   
 9. 데이터 새로 고침의 **업무 시간**에 업무 시간을 정의하는 시간 범위를 지정할 수 있습니다. 데이터 새로 고침 일정은 업무 시간이 종료된 이후에 실행되어 정규 업무 시간 중에 생성된 트랜잭션 데이터를 가져올 수 있습니다.  
   
-10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정**에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침 작업을 실행하는 데 사용되는 미리 정의된 계정을 저장할 미리 정의된 Secure Store Services 대상 응용 프로그램을 지정할 수 있습니다. ID가 아니라 대상 응용 프로그램 이름을 지정해야 합니다. 무인 데이터 새로 고침에 대한 대상 응용 프로그램은 SQL Server 설치 프로그램에서 새 서버 옵션을 사용해 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치한 경우 자동으로 작성됩니다. 그렇지 않은 경우에는 대상 응용 프로그램을 수동으로 만들어야 합니다. 계정 구성 방법은 [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)을 참조하세요.  
+10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정**에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침 작업을 실행하는 데 사용되는 미리 정의된 계정을 저장할 미리 정의된 Secure Store Services 대상 응용 프로그램을 지정할 수 있습니다. ID가 아니라 대상 응용 프로그램 이름을 지정해야 합니다. 무인 데이터 새로 고침에 대한 대상 응용 프로그램은 SQL Server 설치 프로그램에서 새 서버 옵션을 사용해 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치한 경우 자동으로 작성됩니다. 그렇지 않은 경우에는 대상 응용 프로그램을 수동으로 만들어야 합니다. 계정 구성 방법은 [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)을 참조하세요.  
   
-11. **사용자가 사용자 지정 Windows 자격 증명을 입력할 수 있습니다**에서 확인란을 선택하거나 선택을 취소하여 일정 소유자가 데이터 새로 고침 일정을 실행하기 위해 임의의 Windows 자격 증명을 입력할 수 있는지 여부를 지정할 수 있습니다. 이 확인란을 선택하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 저장된 각 자격 증명 집합에 대해 대상 응용 프로그램을 만들고 관리합니다. 자세한 내용은 [파워 피벗 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)을 참조하세요.  
+11. **사용자가 사용자 지정 Windows 자격 증명을 입력할 수 있습니다**에서 확인란을 선택하거나 선택을 취소하여 일정 소유자가 데이터 새로 고침 일정을 실행하기 위해 임의의 Windows 자격 증명을 입력할 수 있는지 여부를 지정할 수 있습니다. 이 확인란을 선택하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 저장된 각 자격 증명 집합에 대해 대상 응용 프로그램을 만들고 관리합니다. 자세한 내용은 [파워 피벗 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)을 참조하세요.  
   
 12. **최대 처리 기록 길이**에서 데이터 새로 고침 처리의 기록 레코드를 유지할 기간을 지정할 수 있습니다. 이 정보는 데이터 새로 고침을 사용하는 각 통합 문서에 대해 유지되는 데이터 새로 고침 기록 페이지에 표시되며 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에도 표시됩니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "34025170"
   
 3.  리본에서 **속성** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 Power Pivot 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae6b7a5014cd9d8c669a75a5ea1a6d86f8d0e225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018660"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982005"
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "34018660"
   
  마이닝 구조를 만들어 사용할 데이터 열을 정의합니다. 마이닝 구조는 데이터 원본에 링크되지만 처리되기 전까지는 실제로 데이터가 포함되지 않습니다. 마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 분석에 사용할 수 있는 집계 및 기타 통계 정보를 생성합니다. 이 정보는 해당 구조를 기반으로 하는 마이닝 모델에서 사용할 수 있습니다. 마이닝 구조와 마이닝 모델의 관계에 대한 자세한 내용은 [논리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)를 참조하세요.  
   
- 구조 및 모델이 처리되기 전에는 데이터 마이닝 모델 역시 단지 입력에 사용되는 열, 예측할 특성 및 알고리즘에 데이터 처리 방식을 알려 주는 매개 변수를 지정하는 컨테이너입니다. 모델을 처리하는 작업을 *학습*이라고도 합니다. 학습은 패턴을 추출하기 위해 구조의 데이터에 특정 수학적 알고리즘을 적용하는 프로세스입니다. 학습 프로세스에서 찾은 패턴은 선택한 학습 데이터, 선택한 알고리즘 및 알고리즘의 구성 방식에 따라 달라집니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]다양 한 알고리즘이, 다른 유형의 태스크에 적합 및 다른 유형의 모델을 만드는 각각 포함 되어 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공되는 알고리즘 목록은 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
+ 구조 및 모델이 처리되기 전에는 데이터 마이닝 모델 역시 단지 입력에 사용되는 열, 예측할 특성 및 알고리즘에 데이터 처리 방식을 알려 주는 매개 변수를 지정하는 컨테이너입니다. 모델을 처리하는 작업을 *학습*이라고도 합니다. 학습은 패턴을 추출하기 위해 구조의 데이터에 특정 수학적 알고리즘을 적용하는 프로세스입니다. 학습 프로세스에서 찾은 패턴은 선택한 학습 데이터, 선택한 알고리즘 및 알고리즘의 구성 방식에 따라 달라집니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 각기 다른 유형의 태스크에 적합하며 각기 다른 유형의 모델을 만드는 다양한 알고리즘이 포함되어 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공되는 알고리즘 목록은 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
   
  매개 변수를 사용하여 각 알고리즘을 조정하고 일부 데이터만 사용하도록 학습 데이터에 필터를 적용하여 다른 결과를 만들 수도 있습니다. 모델을 통해 데이터를 전달한 후 마이닝 모델 개체에는 예측을 위해 쿼리하거나 사용할 수 있는 요약 및 패턴이 포함됩니다.  
   
@@ -135,26 +135,26 @@ ms.locfileid: "34018660"
   
  모델을 프로덕션 환경에 배포하기 전에 모델의 효율성을 테스트해야 합니다. 또한 모델을 작성할 때는 일반적으로 각기 다른 구성으로 여러 모델을 만들고 모든 모델을 테스트하여 어떤 모델에서 문제 및 데이터에 대한 최상의 결과가 얻어지는지 확인합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]학습 집합과 테스트 데이터 집합은 동일한 데이터에서 모든 모델의 성능을 정확 하 게 평가할 수 있도록으로 데이터를 분리 하는 데 도움이 되는 도구를 제공 합니다. 학습 데이터 집합으로는 모델을 작성할 수 있고 테스트 데이터 집합으로는 예측 쿼리를 만들어 모델의 정확도를 테스트할 수 있습니다. 이 분할 방법은 마이닝 모델을 작성 하는 동안 자동으로 합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 동일한 데이터에 대한 모든 모델의 성능을 정확하게 평가할 수 있도록 데이터를 학습 데이터 집합과 테스트 데이터 집합으로 분리하는 데 유용한 도구를 제공합니다. 학습 데이터 집합으로는 모델을 작성할 수 있고 테스트 데이터 집합으로는 예측 쿼리를 만들어 모델의 정확도를 테스트할 수 있습니다. 이 분할을 수행할 수 있습니다 마이닝 모델을 작성 하는 동안 자동으로 합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에 있는 뷰어를 사용하여 알고리즘이 검색한 추세 및 패턴을 탐색할 수 있습니다. 자세한 내용은 [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)를 참조하세요. 또한 리프트 차트 및 분류 행렬과 같은 디자이너의 도구를 사용하여 모델의 예측 정확도를 테스트할 수 있습니다. 모델이 데이터와 관련되어 있는지 또는 일반적인 모집단에 대해 유추하는 데 사용할 수 있는지 확인하려면 *교차 유효성 검사*라는 통계 기법을 사용하여 데이터의 하위 집합을 자동으로 만들고 각 하위 집합에 대해 모델을 테스트합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에 있는 뷰어를 사용하여 알고리즘이 검색한 추세 및 패턴을 탐색할 수 있습니다. 자세한 내용은 [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)를 참조하세요. 또한 리프트 차트 및 분류 행렬과 같은 디자이너의 도구를 사용하여 모델의 예측 정확도를 테스트할 수 있습니다. 모델이 데이터와 관련되어 있는지 또는 일반적인 모집단에 대해 유추하는 데 사용할 수 있는지 확인하려면 *교차 유효성 검사*라는 통계 기법을 사용하여 데이터의 하위 집합을 자동으로 만들고 각 하위 집합에 대해 모델을 테스트합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
   
  [모델 작성](#BuildingModels) 단계에서 만든 모델의 효율성이 모두 떨어지는 경우 프로세스의 이전 단계로 돌아가서 문제를 다시 정의하거나 원래 데이터 집합의 데이터를 다시 조사해야 할 수 있습니다.  
   
 ##  <a name="DeployingandUpdatingModels"></a> 모델 배포 및 업데이트  
  데이터 마이닝 프로세스의 마지막 단계는 다음 다이어그램에 강조 표시된 바와 같이 가장 효율적인 모델을 프로덕션 환경에 배포하는 것입니다.  
   
- ![데이터 마이닝 6 단계: 마이닝 모델 배포](../../analysis-services/data-mining/media/dmprocess-deploying.gif "데이터 마이닝 6 단계: 마이닝 모델 배포")  
+ ![데이터 마이닝 6 단계: 마이닝 모델을 배포](../../analysis-services/data-mining/media/dmprocess-deploying.gif "데이터 마이닝 6 단계: 마이닝 모델 배포")  
   
  프로덕션 환경에 마이닝 모델을 배포한 다음에는 필요에 따라 다양한 태스크를 수행할 수 있습니다. 다음은 수행할 수 있는 일부 태스크입니다.  
   
--   모델을 사용하여 예측 만들기. 이러한 예측을 사용하여 비즈니스상의 의사 결정을 내릴 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]예측 쿼리 및 예측 쿼리 작성기는 쿼리를 작성할 수 있도록 만드는 데 사용할 수 있는 DMX 언어를 제공 합니다. 자세한 내용은 [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)를 참조하세요.  
+-   모델을 사용하여 예측 만들기. 이러한 예측을 사용하여 비즈니스상의 의사 결정을 내릴 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 예측 쿼리를 만드는 데 사용할 수 있는 DMX 언어와 쿼리 작성에 도움이 되는 예측 쿼리 작성기를 제공합니다. 자세한 내용은 [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)를 참조하세요.  
   
 -   내용 쿼리를 만들어 모델에서 통계, 규칙 또는 수식 검색. 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
   
 -   데이터 마이닝 기능을 직접 응용 프로그램에 포함할 수 있습니다. 마이닝 구조 및 마이닝 모델의 생성, 변경, 처리 및 삭제를 위해 응용 프로그램에서 사용할 수 있는 개체 집합이 들어 있는 AMO(Analysis Management Objects)를 포함할 수 있습니다. 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 XMLA(XML for Analysis) 메시지를 직접 보낼 수도 있습니다. 자세한 내용은 [개발(Analysis Services - 데이터 마이닝)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx)을 참조하세요.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 마이닝 모델을 통해 들어오는 데이터를 여러 테이블에 논리적으로 분리하는 패키지 만들기. 예를 들어 잠재적인 고객으로 데이터베이스를 계속 업데이트하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 함께 마이닝 모델을 사용하여 들어오는 데이터를 제품을 구매할 가능성이 높은 고객과 제품을 구매하지 않을 가능성이 높은 고객으로 분할할 수 있습니다. 자세한 내용은 [Integration Services의 일반적인 사용](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)을 참조하세요.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 마이닝 모델을 통해 들어오는 데이터를 여러 테이블에 논리적으로 분리하는 패키지 만들기. 예를 들어 잠재적인 고객으로 데이터베이스를 계속 업데이트하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 함께 마이닝 모델을 사용하여 들어오는 데이터를 제품을 구매할 가능성이 높은 고객과 제품을 구매하지 않을 가능성이 높은 고객으로 분할할 수 있습니다. 자세한 내용은 [Integration Services의 일반적인 사용](http://msdn.microsoft.com/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)을 참조하세요.  
   
 -   사용자가 기존 마이닝 모델에 대해 직접 쿼리할 수 있는 보고서 만들기. 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34018660"
   
 -   조직에 더 많은 데이터가 들어올 때 모델을 동적으로 업데이트. 지속적인 변경을 통해 솔루션의 효율성을 높이는 것은 배포 전략의 일부가 되어야 합니다. 자세한 내용은 [데이터 마이닝 솔루션 및 개체 관리](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)   
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services tutorial 9 단원: 계층 만들기 | Microsoft Docs'
+title: 'Analysis Services 자습서 단원 9: 계층 만들기 | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,44 +10,44 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042977"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973022"
 ---
 # <a name="create-hierarchies"></a>계층 만들기
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-이 단원에서는 계층 구조를 만듭니다. 계층은 수준별로 정렬 된 열 그룹입니다. 예를 들어 Geography 계층에는 Country, State, County 및 City 하위 수준이 있을 수 있습니다. 계층은 보고 클라이언트 응용 프로그램 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다. 자세한 내용은 참고 [계층](../tabular-models/hierarchies-ssas-tabular.md)
+이 단원에서는 계층 구조를 만듭니다. 계층은 수준별로 정렬 된 열 그룹입니다. 예를 들어 Geography 계층 구조는 국가, 상태, County 및 City에 대 한 하위 수준이 있을 수 있습니다. 계층은 보고 클라이언트 응용 프로그램 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다. 자세한 내용은를 참조 하세요. [계층](../tabular-models/hierarchies-ssas-tabular.md)
   
-계층을 만들려면 모델 디자이너에서 사용 하 여 *다이어그램 보기*합니다. 계층 만들기 및 관리 데이터 보기에서 지원 되지 않습니다.  
+모델 디자이너를 사용 하 여 계층을 만들려면 *다이어그램 보기*합니다. 계층 만들기 및 관리 데이터 뷰에서 지원 되지 않습니다.  
   
 이 단원에 소요되는 예상 시간: **20분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
 이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [8 단원: 큐브 뷰 만들기](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)합니다.  
   
 ## <a name="create-hierarchies"></a>계층 만들기  
   
-#### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>DimProduct 테이블의 범주 계층을 만들려면  
+#### <a name="to-create-a-category-hierarchy-in-the-dimproduct-table"></a>DimProduct 테이블에 Category 계층 구조를 만들려면  
   
-1.  모델 디자이너 (다이어그램 뷰)에서 마우스 오른쪽 단추로 클릭는 **DimProduct** 테이블 > **계층 만들기**합니다. 새 계층이 테이블 창의 아래쪽에 표시됩니다. 계층 이름을 바꾸고 **범주**합니다.  
+1.  모델 디자이너 (다이어그램 뷰)에서 마우스 오른쪽 단추로 클릭 합니다 **DimProduct** 테이블 > **계층 만들기**합니다. 새 계층이 테이블 창의 아래쪽에 표시됩니다. 계층 이름을 바꾸고 **범주**합니다.  
   
-2.  클릭 하 고 끌어는 **ProductCategoryName** 를 새 열 **범주** 계층 구조입니다.  
+2.  클릭 하 고 끌어서 합니다 **ProductCategoryName** 새 열 **범주** 계층입니다.  
   
-3.  에 **범주** 계층을 마우스 오른쪽 단추로 클릭 **ProductCategoryName** > **이름 바꾸기**, 한 다음 입력 **범주**합니다.  
+3.  에 **범주** 계층 마우스 오른쪽 단추로 클릭 **ProductCategoryName** > **이름 바꾸기**를 차례로 **범주**.  
   
     > [!NOTE]  
     > 계층에서 열 이름을 바꿔도 테이블의 열 이름은 바뀌지 않습니다. 계층의 열은 테이블 열에 대한 표현일 뿐입니다.  
   
-4.  클릭 하 고 끌어는 **ProductSubcategoryName** 열에는 **범주** 계층 구조입니다. 이름을 바꾸거나 **Subcategory**합니다. 
+4.  클릭 하 고 끌어서 합니다 **ProductSubcategoryName** 열을 **범주** 계층입니다. 이름을 바꿀 **Subcategory**합니다. 
   
-5.  마우스 오른쪽 단추로 클릭는 **ModelName** 열 > **계층 구조에 추가**를 선택한 후 **범주**합니다. 이름을 바꾸거나 **모델**합니다.
+5.  마우스 오른쪽 단추로 클릭 합니다 **ModelName** 열 > **계층 구조를 추가할**를 선택한 후 **범주**합니다. 이름을 바꿀 **모델**합니다.
 
-6.  마지막으로 추가 **EnglishProductName** 범주 계층에 있습니다. 이름을 바꾸거나 **제품**합니다.  
+6.  마지막으로, 추가할 **EnglishProductName** 범주 계층에 있습니다. 이름을 바꿀 **제품**합니다.  
 
     ![as-lesson9-category](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
@@ -63,7 +63,7 @@ ms.locfileid: "34042977"
     *  MonthCalendar
     *  DayNumberOfMonth
     
-4.  에 **DimDate** 테이블을 만들기는 **회계** 계층 구조입니다. 다음 순서 대로 열을 포함 합니다.  
+4.  에 **DimDate** 테이블을 만듭니다는 **회계** 계층입니다. 다음 열에서 순서 대로 다음과 같습니다.  
   
     *  FiscalYear
     *  FiscalSemester
@@ -71,13 +71,13 @@ ms.locfileid: "34042977"
     *  MonthCalendar
     *  DayNumberOfMonth
   
-5.  마지막으로 **DimDate** 테이블을 만들기는 **ProductionCalendar** 계층 구조입니다. 다음 순서 대로 열을 포함 합니다.  
+5.  마지막으로 **DimDate** 테이블을 만듭니다는 **ProductionCalendar** 계층입니다. 다음 열에서 순서 대로 다음과 같습니다.  
     *  CalendarYear
     *  WeekNumberOfYear
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>다음 단계
 
-[10 단원: 파티션 만들기](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)합니다. 
+[단원 10: 파티션 만들기](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)합니다. 
   
   

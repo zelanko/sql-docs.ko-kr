@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd240ede23b5ff4845531bebf24529bd0219c5ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969578"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971845"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>대량 로드 보안 고려 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   다음은 XML 대량 로드를 사용하기 위한 보안 지침입니다.  
   
--   대량 로드 작업을 트랜잭션으로 수행 하는 것을 사용 하는 지정 하는 경우는 **TempFilePath** 속성을 통해 임시 파일을 만들 폴더를 지정 합니다.  
+-   트랜잭션으로 수행할 작업이 대량 로드를 사용 하는 지정 된 **TempFilePath** 임시 파일을 만들 폴더를 지정 하는 속성.  
   
      대량 로드 프로세스에서는 이러한 임시 파일을 다음과 같은 사용 권한으로 만듭니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32969578"
   
 -   사용자가 SQLXML에서 오류를 기록할 오류 로그 파일을 설정하는 경우 대량 로드를 실행할 때마다 이 파일이 마지막 대량 로드 프로세스의 데이터로 덮어쓰여집니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [XML 데이터 & #40; 대량 로드 수행 SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>관련 항목  
+ [XML 데이터 대량 로드 수행 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: '빠른 시작: 연결 하 고 SQL 작업 Studio (미리 보기)를 사용 하 여 Azure SQL 데이터베이스를 쿼리 하 | Microsoft Docs'
-description: 이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
+title: '빠른 시작: 연결 및 SQL Operations Studio (미리 보기)를 사용 하 여 Azure SQL database 쿼리 | Microsoft Docs'
+description: 이 빠른 시작에서는 SQL Operations Studio (미리 보기)를 사용 하 여 SQL database에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
@@ -13,65 +13,65 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: c72e6d5b8e3e2770300e6b890b076bf77617849b
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 5470e19da9d8641a1337f0f8162fe0a1789820dd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235777"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982265"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작:를 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL 데이터베이스 쿼리
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: 사용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 를 연결 하 여 Azure SQL database 쿼리
 
-이 빠른 시작 사용 방법을 보여 줍니다. *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 하는 Azure SQL 데이터베이스에 연결 하 고 TRANSACT-SQL (T-SQL) 문을 만드는 데 사용할는 *TutorialDB* 에 사용 된 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
+이 빠른 시작을 사용 하는 방법을 보여 줍니다 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* Azure SQL database에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 만드는 데는 *TutorialDB* 에 사용 되는 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 빠른 시작을 완료 하려면 필요 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 Azure SQL server.
+이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 Azure SQL server입니다.
 
-- [설치 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)합니다.
+- [설치할 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)합니다.
 
-Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵 스타트 (서버 이름 및 로그인 자격 증명 기억!)의 하나를 수행 합니다.
+Azure SQL server를 아직 없는 경우 다음 Azure SQL Database 빠른 시작 (서버 이름 및 로그인 자격 증명 기억!) 중 하나를 완료 합니다.
 
-- [DB-포털 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [DB-CLI 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [만들기 DB-PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [DB 만들기-포털](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [DB 만들기-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [DB 만들기-PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
-## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL 데이터베이스 서버에 연결
+## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL Database 서버에 연결
 
-사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Azure SQL 데이터베이스 서버에 연결을 설정할 수 있습니다.
+사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Azure SQL Database 서버에 연결 합니다.
 
-1. 처음으로 실행 하면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 는 **연결** 페이지가 열려야 합니다. 표시 되지 않으면는 **연결** 페이지 **연결 추가**, 또는 **새 연결** 아이콘에는 **서버** 사이드바:
+1. 처음 실행 하면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 는 **연결** 페이지가 열려야 합니다. 표시 되지 않는 경우는 **연결** 페이지에서 **연결 추가**, 또는 **새 연결** 아이콘에는 **서버** 사이드바:
    
-   ![새 연결 상태 아이콘](media/quickstart-sql-database/new-connection-icon.png)
+   ![새 연결 아이콘](media/quickstart-sql-database/new-connection-icon.png)
 
-2. 이 문서에서는 *SQL 로그인*, 하지만 *Windows 인증* 도 지원 합니다. 서버 이름, 사용자 이름 및 암호를 다음과 같이 사용 하 여 필드에 *프로그램* Azure SQL server:
+2. 이 아티클에서 *SQL 로그인*, 되지만 *Windows 인증* 도 지원 됩니다. 다음과 같이 서버 이름, 사용자 이름 및 암호를 사용 하 여 필드를 채우고 *여* Azure SQL server:
 
    | 설정       | 제안된 값 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **서버 이름** | 정규화된 서버 이름 | 이름은 다음과 같이 해야: **servername.database.windows.net 인** |
-   | **인증** | SQL 로그인| 이 자습서에서는 SQL 인증이 사용 됩니다. |
+   | **서버 이름** | 정규화된 서버 이름 | 다음과 같은 이름 이어야 합니다: **servername.database.windows.net** |
+   | **인증** | SQL 로그인| SQL 인증은이 자습서에서 사용 됩니다. |
    | **사용자 이름** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
-   | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 입력 하지 않을 경우 예를 선택 합니다. |
-   | **데이터베이스 이름** | *비워* | 에 연결 하려는 데이터베이스의 이름입니다. |
+   | **암호를 저장하시겠습니까?** | Yes 또는 No | 때마다 암호를 입력 하지 않으려면 예를 선택 합니다. |
+   | **데이터베이스 이름** | *비워 둡니다* | 에 연결 하려는 데이터베이스의 이름입니다. |
    | **서버 그룹** | 선택 <Default> | 서버 그룹을 만든 경우에 특정 서버 그룹을 설정할 수 있습니다. | 
 
-   ![새 연결 상태 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
+   ![새 연결 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 서버에 연결 하려면 SQL 작업 Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
+3. 서버에 연결 하려면 SQL Operations Studio 허용 하는 방화벽 규칙이 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 새 방화벽 규칙을 만들려고 합니다. 자세한 내용은 참조 하세요 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
 
    ![새 방화벽 규칙](media/quickstart-sql-database/firewall.png)  
 
-4. 연결 하 고 나면 서버에 열리면는 *서버* 사이드바 합니다.
+4. 열리면 서버 연결에 *서버* 보충 합니다.
 
 ## <a name="create-the-tutorial-database"></a>Tutorial 데이터베이스 만들기
 
-다음 섹션에서는 만들는 *TutorialDB* 몇 개에 사용 되는 데이터베이스 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
+다음 섹션에서는 만들 합니다 *TutorialDB* 몇 개에 사용 되는 데이터베이스 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
 
 1. Azure SQL server 서버 세로 막대에서 마우스 오른쪽 단추로 클릭 하 고 선택 **새 쿼리 합니다.**
 
-1. 다음 코드 조각은 쿼리 편집기에 붙여넣고 클릭 **실행**:
+1. 다음 코드 조각을 쿼리 편집기에 붙여넣고 클릭 **실행**:
 
    ```sql
    IF NOT EXISTS (
@@ -90,7 +90,7 @@ Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵
 
 ## <a name="create-a-table"></a>테이블 만들기
 
-쿼리 편집기에 연결 되었는지는 *마스터* 했지만 데이터베이스의 테이블을 만들려고 할는 *TutorialDB* 데이터베이스입니다. 
+쿼리 편집기에 연결 되어는 *마스터* 했지만 데이터베이스에 테이블을 만들려면 원하는 합니다 *TutorialDB* 데이터베이스입니다. 
 
 1. 연결 컨텍스트를 변경 **TutorialDB**:
 
@@ -98,10 +98,10 @@ Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵
 
 
 
-1. 다음 코드 조각은 쿼리 편집기에 붙여넣고 클릭 **실행**:
+1. 다음 코드 조각을 쿼리 편집기에 붙여넣고 클릭 **실행**:
 
    > [!NOTE]
-   > 이 추가 하거나 앞의 쿼리 편집기에서 덮어쓸 수 있습니다. 클릭 하면 **실행** 을 선택 하 여 쿼리를 실행 합니다. 어떤 영역도 선택 하는 경우 클릭 하면 **실행** 편집기에서 모든 쿼리를 실행 합니다.
+   > 에 추가 수도 있고 편집기에서 이전 쿼리를 덮어쓸 수 있습니다. 클릭 **실행** 만 선택 되어 있는 쿼리를 실행 합니다. 선택한 내용이 없는 경우 클릭 **실행** 편집기에 있는 모든 쿼리를 실행 합니다.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -123,7 +123,7 @@ Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵
 
 ## <a name="insert-rows"></a>행 삽입
 
-- 다음 코드 조각은 쿼리 편집기에 붙여넣고 클릭 **실행**:
+- 다음 코드 조각을 쿼리 편집기에 붙여넣고 클릭 **실행**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -138,24 +138,24 @@ Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵
    ```
 
 
-## <a name="view-the-result"></a>결과 보기
-1. 다음 코드 조각은 쿼리 편집기에 붙여넣고 클릭 **실행**:
+## <a name="view-the-result"></a>결과 보려면
+1. 다음 코드 조각을 쿼리 편집기에 붙여넣고 클릭 **실행**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 쿼리 결과 표시 됩니다.
+1. 쿼리 결과가 표시 됩니다.
 
    ![결과 선택](media/quickstart-sql-database/select-results.png)
 
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-이 컬렉션의 다른 문서를이 퀵 스타트의 기반으로 작성 합니다. 계속 후속 퀵 스타트과 작동 하도록 하려는 경우 않습니다 정리 하지이 빠른 시작에서 만든 리소스가 있습니다. 계속 하려면 Azure 포털에서이 빠른 시작에서 만든 리소스를 삭제 하려면 다음 단계를 사용 합니다.
-필요 없는 리소스 그룹을 삭제 하 여 리소스를 정리 합니다. 자세한 내용은 참조 [리소스를 정리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)합니다.
+이 빠른 시작을 기반으로이 컬렉션의 다른 문서입니다. 후속 빠른 시작을 사용 하 여 작업을 계속 하려는 경우 정리 하지 마세요이 빠른 시작에서 만든 리소스입니다. 계속 하지 않으려는 경우 다음 단계를 사용 하 여 Azure portal에서이 빠른 시작에서 만든 리소스를 삭제 합니다.
+필요 없는 리소스 그룹을 삭제 하 여 리소스를 정리 합니다. 자세한 내용은 참조 하세요 [리소스를 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure SQL 데이터베이스에 성공적으로 연결한 적 하 고 쿼리 실행 했으므로 사용해는 [코드 편집기 자습서](tutorial-sql-editor.md)합니다.
+Azure SQL database에 성공적으로 연결 하 고 쿼리를 실행 했으므로 사용해 합니다 [코드 편집기 자습서](tutorial-sql-editor.md)합니다.

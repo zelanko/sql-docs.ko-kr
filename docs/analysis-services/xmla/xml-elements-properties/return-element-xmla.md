@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8746fb9f8b397ef50b1a5c66a2132e5f0cf5c87
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576195"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968445"
 ---
 # <a name="return-element-xmla"></a>return 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  반환 된 정보를 포함 한 [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) 요소에 대 한 응답에는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드 호출 또는 [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) 요소에 대 한 응답에는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 호출 합니다.  
+  반환한 정보를 포함 한 [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) 요소에 대 한 응답에서을 [검색](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드 호출 또는 [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) 요소에 대 한 응답에 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576195"
 </DiscoverResponse>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "34576195"
 |[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)|[루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 또는 [결과](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **반환** 에서 반환 된 데이터를 포함 하는 요소는 **Discover** 및 **Execute** 메서드. 일반적으로 **반환** 하나를 포함 하는 요소 **루트** 성공적인에서 반환 된 데이터를 포함 하는 요소 **Discover** 또는 **Execute** 메서드 호출 또는 XML for Analysis (XMLA) 예외는 실패 한 메서드 호출에서 반환 합니다. 경우는 **Execute** 메서드에 포함 되어는 **일괄 처리** 여러 작업을 수행 하는 명령을 **반환** 요소를 포함 한 **결과** 차례로 하나를 포함 하는 요소 **루트** 실행에서 성공 또는 실패 한 각 명령에 대 한 요소는 **일괄 처리** 명령입니다.  
+ **반환** 요소에서 반환한 데이터를 포함 합니다 **Discover** 및 **Execute** 메서드. 일반적으로 **반환** 하나를 포함 하는 요소 **루트** 성공적으로 반환한 데이터를 포함 하는 요소 **Discover** 또는 **실행** 메서드 호출 또는 XML for Analysis (XMLA) 예외는 실패 한 메서드 호출에서 반환 합니다. 경우는 **Execute** 메서드에 포함 되어 있습니다를 **일괄 처리** 여러 작업을 수행 하는 명령을 합니다 **반환** 요소를 포함을 **결과** 차례로 하나를 포함 하는 요소 **루트** 여 성공 또는 실패를 실행 하는 각 명령에 대 한 요소를 **일괄 처리** 명령입니다.  
   
 ## <a name="see-also"></a>참고자료
  [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

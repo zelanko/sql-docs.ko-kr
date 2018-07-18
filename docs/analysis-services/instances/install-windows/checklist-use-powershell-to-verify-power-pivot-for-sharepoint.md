@@ -1,5 +1,5 @@
 ---
-title: '검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗 확인 | Microsoft Docs'
+title: '검사 목록: PowerShell를 사용 하 여 SharePoint 용 파워 피벗을 확인 하려면 | Microsoft Docs'
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019440"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985415"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 응용 프로그램 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
   
-![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용") 전체 PowerShell 스크립트가 항목 맨 아래에 포함 되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.
+![PowerShell 관련 콘텐츠](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 전체 PowerShell 스크립트가 항목 맨 아래에 포함 됩니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.
   
   
 ##  <a name="bkmk_prerequisites"></a> PowerShell 환경 준비  
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![sharepoint 일반 응용 프로그램 집합에는 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 일반 응용 프로그램 집합의 powerpivot")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 중앙 관리에서 대부분의 구성 요소를 선택적으로 확인할 수 있습니다. 중앙 관리에서 대시보드를 열려면 **일반 응용 프로그램 설정**, **의** 관리 대시보드 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** 를 차례로 클릭합니다. 대시보드에 대한 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.|  
+|![sharepoint 일반 응용 프로그램 집합의 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 일반 응용 프로그램 집합의 powerpivot")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 중앙 관리에서 대부분의 구성 요소를 선택적으로 확인할 수 있습니다. 중앙 관리에서 대시보드를 열려면 **일반 응용 프로그램 설정**, **의** 관리 대시보드 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** 를 차례로 클릭합니다. 대시보드에 대한 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.|  
   
 ##  <a name="bkmk_symptoms"></a> 증상 및 권장되는 작업  
  다음 표는 증상 또는 문제 및 문제를 해결하는 데 도움이 되는 이 항목의 제안되는 섹션 목록입니다.  
@@ -57,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |데이터 새로 고침이 실행되지 않음|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **온라인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 이 온라인인지 확인합니다.|  
 |관리 대시보드 데이터가 오래됨|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **관리 대시보드 처리 타이머 작업** 이 온라인인지 확인합니다.|  
-|관리 대시보드의 일부|Excel Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 설치하는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드의 기본 제공 보고서에 대한 모든 권한을 사용하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치해야 합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다. [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd) 섹션 및 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)항목을 참조하세요.|  
+|관리 대시보드의 일부|Excel Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 설치하는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드의 기본 제공 보고서에 대한 모든 권한을 사용하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치해야 합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다. [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd) 섹션 및 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)항목을 참조하세요.|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows 서비스  
  이 섹션의 스크립트는 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 확인합니다. 서비스가 **실행 중**인지 확인합니다.  
@@ -167,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![참고](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")응용 프로그램 풀은 중앙 관리 페이지도 확인할 수 있습니다 **서비스 응용 프로그램 관리**합니다. 서비스 응용 프로그램의 이름을 클릭한 다음 리본에서 **속성** 을 클릭합니다.  
+ ![참고](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")응용 프로그램 풀의 중앙 관리 페이지 에서도 확인할 수 있습니다 **서비스 응용 프로그램 관리**합니다. 서비스 응용 프로그램의 이름을 클릭한 다음 리본에서 **속성** 을 클릭합니다.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 및 Excel Service 응용 프로그램 프록시**  
   
@@ -271,7 +271,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 및 ULS 로그  
  **Windows 이벤트 로그**  
   
- 다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대 한 자세한 내용은 참조 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;SharePoint 용 Power Pivot&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대 한 내용은 참조 하세요 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;SharePoint 용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **서비스 이름:** MSOLAP$POWERPIVOT  
   
@@ -350,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 및 [MSOLAP.5를 Excel Services에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하세요.  
+ 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 및 [MSOLAP.5를 Excel Services에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하세요.  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net 클라이언트 라이브러리  
   
@@ -367,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)를 참조하세요.  
+ 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)를 참조하세요.  
   
 ##  <a name="bkmk_health_collection"></a> 상태 데이터 수집 규칙  
  **상태** 가 온라인이고 **설정** 이 True인지 확인합니다.  

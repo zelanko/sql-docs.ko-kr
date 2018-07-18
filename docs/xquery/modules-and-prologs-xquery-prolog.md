@@ -26,18 +26,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974556"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>모듈 및 프롤로그-XQuery 프롤로그
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 쿼리는 프롤로그와 본문으로 구성됩니다. XQuery 프롤로그는 쿼리 처리에 필요한 환경을 만드는 일련의 선언 및 정의로 구성됩니다. SQL Server에서 XQuery 프롤로그에는 네임스페이스 선언이 포함될 수 있습니다. XQuery 본문은 의도된 쿼리 결과를 지정하는 일련의 식으로 구성됩니다.  
   
- 예를 들어 다음 XQuery의 Instructions 열에 대해 지정 **xml** 제조 지침 XML로 저장 형식입니다. 이 쿼리는 작업 센터 위치 `10`에 대한 제조 지침을 검색합니다. `query()` 의 메서드는 **xml** 데이터 형식은 XQuery를 지정 하는 데 사용 됩니다.  
+ 예를 들어 다음 XQuery의 Instructions 열에 대해 지정 **xml** 제조 지침 XML로 저장 하는 형식입니다. 이 쿼리는 작업 센터 위치 `10`에 대한 제조 지침을 검색합니다. 합니다 `query()` 메서드를 **xml** 데이터 형식은 XQuery를 지정 하는 데 사용 됩니다.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -56,7 +56,7 @@ WHERE ProductModelID=7
 -   `/AWMI:root/AWMI:Location[@LocationID="10"]`은 쿼리 본문입니다.  
   
 ## <a name="namespace-declarations"></a>네임스페이스 선언  
- 네임스페이스 선언은 접두사를 정의하고 다음 쿼리에 표시된 것과 같이 이를 네임스페이스 URI와 연결합니다. 쿼리에서 `CatalogDescription` 는 **xml** 유형 열입니다.  
+ 네임스페이스 선언은 접두사를 정의하고 다음 쿼리에 표시된 것과 같이 이를 네임스페이스 URI와 연결합니다. 쿼리에서 `CatalogDescription` 되는 **xml** 유형 열입니다.  
   
  이 열에 대해 XQuery를 지정할 때 쿼리 프롤로그는 `declare namespace` 선언을 지정하여 접두사 `PD`(제품 설명)를 네임스페이스 URI와 연결합니다. 이 접두사는 쿼리 본문에서 네임스페이스 URI 대신 사용됩니다. 결과 XML의 노드는 네임스페이스URI와 연결된 네임스페이스에 있습니다.  
   
@@ -81,7 +81,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 자세한 내용은 참조, [WITH XMLNAMESPACES를 사용 하 쿼리에 네임 스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)합니다.  
+ 자세한 내용은 [WITH XMLNAMESPACES를 사용 하 여 쿼리에 네임 스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)합니다.  
   
 ### <a name="default-namespace-declaration"></a>기본 네임스페이스 선언  
  `declare namespace` 선언을 사용하여 네임스페이스 접두사를 선언하는 대신 `declare default element namespace` 선언을 사용하여 요소 이름에 대해 기본 네임스페이스를 바인딩할 수 있습니다. 이 경우에는 접두사를 지정하지 않습니다.  
@@ -108,7 +108,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

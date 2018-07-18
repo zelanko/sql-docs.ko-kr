@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59196e0569ac9cc683b3affa68fc17f068e74994
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: da739700cabb6a9d691d5f284cd6f0532898393f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203175"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979025"
 ---
 # <a name="r-interoperability-in-sql-server"></a>SQL Server의 R 상호 운용성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 항목 SQL Server 내에서 R에 대 한 실행 하기 위한 메커니즘을 중점적으로 다루며 Microsoft R 및 오픈 소스 오른쪽 간의 차이점을 설명
+이 항목에서는 SQL Server 내에서 R 실행 하기 위한 메커니즘에 중점을 두고 및 Microsoft R과 오픈 소스 R. 간의 차이점에 설명 합니다.
 
-적용 대상: SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
+적용 대상: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
-추가 구성 요소에 대 한 정보를 참조 하십시오. [SQL Server의 새로운 구성 요소](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)합니다.
+추가 구성 요소에 대 한 자세한 내용은 [SQL Server의 새로운 구성 요소](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)합니다.
 
 ### <a name="open-source-r-components"></a>오픈 소스 R 구성 요소
 
@@ -31,19 +31,19 @@ ms.locfileid: "31203175"
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 어떤 방식으로도 R 런타임을 수정하지 않습니다. R 런타임은 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 프로세스 외부에서 실행되며 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]와 독립적으로 실행될 수 있습니다. 하지만 리소스 경합을 피하려면 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 R을 사용하는 동안 이러한 도구를 실행하지 않는 것이 좋습니다.
 
-특정 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 R 기본 패키지 배포는 인스턴스와 연결된 폴더에서 찾을 수 있습니다. 예를 들어 기본 인스턴스에 R 서비스를 설치한 경우 R 라이브러리이 폴더에 있는이 기본적으로:
+특정 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 R 기본 패키지 배포는 인스턴스와 연결된 폴더에서 찾을 수 있습니다. 예를 들어 기본 인스턴스에 R Services를 설치한 경우 R 라이브러리이 폴더에 있는이 기본적으로:
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 
-마찬가지로, 기본적으로 기본 인스턴스에 연결 된 R 도구 여 폴더에 배치 합니다.
+마찬가지로 기본 인스턴스와 연결 된 R 도구 위치 이번 폴더에 기본적으로:
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-Microsoft R는 방식과 CRAN에서 발생할 수 있는 R의 기본 배포에 대 한 자세한 내용은 참조 [R 언어 및 Microsoft R 제품 및 기능와의 상호 운용성](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+Microsoft R은 어떻게 다른가요 CRAN에서 발생할 수 있는 R의 기본 배포에 대 한 자세한 내용은 참조 하세요. [R 언어와 Microsoft R 제품 및 기능을 사용 하 여 상호 운용성](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)
 
 ### <a name="additional-r-packages-from-microsoft-r"></a>Microsoft R에서 추가 R 패키지
 
-기본 R 배포 외에도 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 에서는 또한 R의 실행에 원격 계산 컨텍스트는 R의 병렬 실행을 위한 프레임 워크 뿐만 아니라 일부 소유 R 패키지가 포함 되어 있습니다.
+기본 R 배포 외에도 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 또한 원격 계산 컨텍스트에서 R 실행을 지 원하는 R의 병렬 실행 용 프레임 워크 뿐만 아니라 일부 전용 R 패키지를 포함 합니다.
 
 R 기본 배포 및 고급 R 기능/패키지의 결합된 R 기능 집합을 **Microsoft R**이라고 합니다. Microsoft R Server(독립 실행형)를 설치할 경우 SQL Server R Services(데이터베이스 내)와 함께 설치되지만 다른 폴더에 있는 똑같은 패키지 집합을 가져옵니다.
 
@@ -62,13 +62,13 @@ Microsoft R의 가장 중요한 추가 구성 요소는 **RevoScaleR** 및 **Rev
 
 + **RevoPemaR.** PEMA는 Parallel External Memory Algorithm의 약어입니다. **RevoPemaR** 패키지는 자체 병렬 알고리즘을 개발하는 데 사용할 수 있는 API를 제공합니다. 자세한 내용은 [RevoPemaR Getting Started Guide](https://docs.microsoft.com/r-server/r/how-to-developer-pemar)(RevoPemaR 시작 가이드)를 참조하세요.
 
-시도 하는 것이 좋습니다 [MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package), 분산 처리, 확장성 및 R 코드의 원격 실행을 지 원하는 Microsoft R에서 새 패키지 향상 된 기계 학습 알고리즘을 사용 하 여 Microsoft Research에서 개발 됩니다.
+시도 하는 것이 좋습니다 [MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package), Microsoft Research에서 분산 처리, 확장성 및 R 코드 원격 실행을 지 원하는 Microsoft R에서 새 패키지를 향상 된 기계 학습 알고리즘을 사용 하 여 개발 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 [아키텍처 개요](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
 
-[R 지원 하도록 SQL Server의 구성 요소](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
+[SQL Server에서 R 지원 구성 요소](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
 
 [보안 개요](../../advanced-analytics/r/security-overview-sql-server-r.md)
 

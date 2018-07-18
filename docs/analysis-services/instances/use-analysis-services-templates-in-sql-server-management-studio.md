@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebed4cb2e230e3d3367131a8caca63544cf78b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019200"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981186"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34019200"
  이 예에서는 SQL Server Management Studio에서 테이블 형식 model 데이터베이스를 데이터 원본으로 사용하여 MDX 쿼리를 만드는 방법을 보여 줍니다. 사용 중인 컴퓨터에서 이 예를 재현하려면 [Adventureworks 테이블 형식 모델 샘플 프로젝트를 다운로드](http://go.microsoft.com/fwlink/?LinkId=231183)하십시오.  
   
 > [!WARNING]  
->  직접 쿼리 모드에서 배포된 테이블 형식 모델에 대해서는 MDX 쿼리를 사용할 수 없습니다. 그러나 EVALUATE 명령이 포함된 DAX 테이블 쿼리를 사용하여 동일한 쿼리를 보낼 수 있습니다. 자세한 내용은 [DAX 쿼리 매개 변수](http://msdn.microsoft.com/en-us/c5841b4e-3395-4237-815b-9822a691e544)를 참조하세요.  
+>  직접 쿼리 모드에서 배포된 테이블 형식 모델에 대해서는 MDX 쿼리를 사용할 수 없습니다. 그러나 EVALUATE 명령이 포함된 DAX 테이블 쿼리를 사용하여 동일한 쿼리를 보낼 수 있습니다. 자세한 내용은 [DAX 쿼리 매개 변수](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544)를 참조하세요.  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>템플릿에서 MDX쿼리 만들기  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34019200"
   
 3.  **메타데이터 탐색기**에서 다음 필드 및 측정값을 쿼리 템플릿으로 끌어옵니다.  
   
-    1.  대체 \<row_axis, mdx_set >와 **[Product Category]. [ Product Category Name]** 합니다.  
+    1.  바꿉니다 \<mdx_set r o w s >와 **[Product Category]. [ Product Category Name]** 합니다.  
   
-    2.  대체 \<column_axis, mdx_set >와 **[Date]. [ Calendar Year]입니다. [Calendar Year]** .  
+    2.  바꿉니다 \<column_axis, mdx_set >와 **[Date]. [ Calendar Year]입니다. [Calendar Year]** .  
   
-    3.  대체 \<from_clause, mdx_name >와 **[Internet Sales]** 합니다.  
+    3.  바꿉니다 \<from_clause, mdx_name > 사용 하 여 **[Internet Sales]** 합니다.  
   
-    4.  대체 \<where_clause, mdx_set >와 **[Measures]. [ Internet Total Sales]** 합니다.  
+    4.  바꿉니다 \<where_clause, mdx_set >와 **[Measures]. [ Internet Total Sales]** 합니다.  
   
 4.  쿼리를 있는 그대로 실행해도 되지만 특정 멤버를 반환하기 위해 함수를 추가하는 등 일부를 변경할 수도 있습니다. 예를 들어 **[Product Category].[Product Category Name]** 뒤에 **.members**를 입력할 수 있습니다. 자세한 내용은 [Using Member Expressions](../../mdx/using-member-expressions.md)을(를) 참조하세요.  
   
@@ -90,11 +90,11 @@ ms.locfileid: "34019200"
   
 2.  **백업** 템플릿을 비어 있는 쿼리 창으로 끌어옵니다.  
   
-3.  내에서 텍스트를 두 번 클릭은 \<DatabaseID > 요소입니다.  
+3.  내의 텍스트를 두 번 클릭 합니다 \<DatabaseID > 요소입니다.  
   
 4.  개체 탐색기에서 백업할 데이터베이스를 선택한 후 DatabaseID 요소를 묶고 있는 대괄호 사이에 끌어다 놓습니다.  
   
-5.  내에서 텍스트를 두 번 클릭은 \<파일 > 요소입니다. .abf 파일 확장명을 포함하여 백업 파일의 이름을 입력합니다. 기본 백업 위치를 사용하지 않는 경우 전체 파일 경로를 지정합니다. 자세한 내용은 [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)를 참조하세요.  
+5.  내의 텍스트를 두 번 클릭 합니다 \<파일 > 요소입니다. .abf 파일 확장명을 포함하여 백업 파일의 이름을 입력합니다. 기본 백업 위치를 사용하지 않는 경우 전체 파일 경로를 지정합니다. 자세한 내용은 [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)를 참조하세요.  
   
 ##  <a name="bkmk_schemarowset"></a> XMLA 템플릿을 사용하여 스키마 행 집합 쿼리 생성  
  **템플릿 탐색기** 에는 스키마 행 집합 쿼리용 템플릿이 하나만 있습니다. 이 템플릿을 사용하려면 필수 요소, 제한으로 사용할 수 있는 열 등 사용하고자 하는 개별 스키마 행 집합의 요구 사항에 대해 잘 알고 있어야 합니다. 자세한 내용은 [Analysis Services 스키마 행 집합](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)을 참조하세요.  
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  **템플릿 탐색기**를 열고 **스키마 행 집합 검색**템플릿을 비어 있는 쿼리 창으로 끌어옵니다.  
   
-3.  서식 파일을 바꾸고는 [RequestType 요소가 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 다음 텍스트를 포함 하는 요소: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  템플릿에서 대체 합니다 [RequestType 요소 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 요소를 다음 텍스트로: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  **실행**을 클릭합니다.  
   
@@ -156,12 +156,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |범주|항목 템플릿|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Model Content|Content Query|DMX SELECT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* 합니다. 지정한 마이닝 모델에 대 한 마이닝 모델 스키마 행 집합 콘텐츠를 검색 하는 콘텐츠 문입니다.|  
-||Continuous Column Values|DMX SELECT DISTINCT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* DMX 사용 하 여 문을 **RangeMin** 및 **RangeMax** 집합을 검색 하는 함수 지정한 마이닝 모델의 연속 열에서 지정된 된 범위에 대 한 값입니다.|  
-||Discrete Column Values|DMX SELECT DISTINCT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* 문에 지정한 마이닝 모델의 불연속 열에서 값의 전체 집합을 검색 합니다.|  
+|DMX\Model Content|Content Query|DMX SELECT FROM 사용 하는 방법을 보여 줍니다  *\<모델 >* 합니다. 지정한 마이닝 모델에 대 한 마이닝 모델 스키마 행 집합 콘텐츠를 검색 하려면 콘텐츠 문입니다.|  
+||Continuous Column Values|DMX SELECT DISTINCT FROM 사용 하는 방법을 보여 줍니다  *\<모델 >* DMX 사용 하 여 문을 **RangeMin** 하 고 **RangeMax** 의 집합을 검색 하는 함수 지정한 마이닝 모델의 연속 열에서 지정 된 범위의 값입니다.|  
+||Discrete Column Values|DMX SELECT DISTINCT FROM 사용 하는 방법을 보여 줍니다  *\<모델 >* 문을 지정한 마이닝 모델의 불연속 열에서 값의 전체 집합을 검색 합니다.|  
 ||Drillthrough Query|DMX SELECT * FROM Model.CASES 문에 DMX IsInNode 함수를 사용하여 드릴스루 쿼리를 수행하는 방법을 보여 줍니다.|  
 ||Model Attributes|DMX System.GetModelAttributes 함수를 사용하여 모델에 사용되는 특성 목록을 반환하는 방법을 보여 줍니다.|  
-||PMML Content|DMX SELECT를 사용 하는 방법을 보여 줍니다. \* FROM  *\<모델 >* 합니다. 이 기능을 지 원하는 알고리즘에 대 한 마이닝 모델의 PMML Predictive Model Markup Language () 표현을 검색 하 PMML 문입니다.|  
+||PMML Content|DMX SELECT를 사용 하는 방법을 보여 줍니다 \* FROM  *\<모델 >* 합니다. 이 기능을 지 원하는 알고리즘에 대 한 마이닝 모델의 PMML Predictive Model Markup Language () 표현을 검색 PMML 문입니다.|  
 |DMX\Model Management|Add Model|DMX ALTER MINING MODEL STRUCTURE 문을 사용하여 마이닝 모델을 추가하는 방법을 보여 줍니다.|  
 ||Clear Model|DMX DELETE * FROM MINING MODEL 문을 사용하여 지정한 마이닝 모델의 콘텐츠를 삭제하는 방법을 보여 줍니다.|  
 ||Clear Structure Cases|DMX DELETE FROM MINING STRUCTURE 문을 사용하여 마이닝 모델 구조 사례를 지우는 방법을 보여 줍니다.|  
@@ -179,10 +179,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Train Model|DMX INSERT INTO MINING MODEL 문을 사용하여 이전에 성향이 습득된 구조 내의 마이닝 모델 성향을 습득하는 방법을 보여 줍니다.|  
 ||Train Nested Structure|DMX INSERT INTO MINING STRUCTURE 문을 SHAPE 원본 데이터 쿼리와 결합하여 기존 데이터 원본에서 쿼리를 사용하여 검색한 중첩 테이블이 포함된 데이터가 있는 중첩 열을 포함하는 마이닝 모델의 성향을 습득하는 방법을 보여 줍니다.|  
 ||Train Structure|DMX INSERT INTO MINING STRUCTURE 문을 OPENQUERY 원본 데이터 쿼리와 결합하여 마이닝 구조의 성향을 습득하는 방법을 보여 줍니다.|  
-|DMX\Prediction Queries|Base Prediction|DMX SELECT FROM 결합 하는 방법을 보여 줍니다.  *\<모델 >* PREDICTION JOIN 문을 OPENQUERY 원본 데이터 쿼리와에서 쿼리를 사용 하 여 검색 한 데이터를 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하는 기존 데이터 원본입니다.|  
-||Nested Prediction|DMX SELECT FROM 결합 하는 방법을 보여 줍니다.  *\<모델 >* PREDICTION JOIN 문을 SHAPE 및 OPENQUERY 원본 데이터 쿼리와 중첩 포함 된 데이터를 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 테이블 쿼리를 사용 하 여 기존 데이터 원본에서 검색 합니다.|  
-||Nested Singleton Prediction|DMX SELECT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* 열에서 예측 쿼리에 명시적으로 지정 된 단일 값을 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 NATURAL PREDICTION JOIN 절 와 마이닝 모델의 열 이름이 마이닝 모델의 중첩 열 이름과 동일 UNION 문을 사용 하 여 만든 중첩된 테이블에 있는 값의 집합을 포함 하 고 합니다.|  
-||Singleton Prediction|DMX SELECT FROM 사용 하는 방법을 보여 줍니다. \<모델 > NATURAL PREDICTION JOIN 문을 이름이 열에 일치 하는 열에서 예측 쿼리에 명시적으로 지정 된 단일 값을 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 마이닝 모델입니다.|  
+|DMX\Prediction Queries|Base Prediction|DMX SELECT FROM 결합 하는 방법을 보여 줍니다  *\<모델 >* PREDICTION JOIN 문을 OPENQUERY 원본 데이터 쿼리와에서 쿼리를 사용 하 여 검색 한 데이터를 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하는 기존 데이터 원본입니다.|  
+||Nested Prediction|DMX SELECT FROM 결합 하는 방법을 보여 줍니다  *\<모델 >* PREDICTION JOIN 문을 SHAPE 및 OPENQUERY 원본 데이터 쿼리와 중첩 된 포함 된 데이터를 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 쿼리를 사용 하 여 기존 데이터 원본에서 검색할 테이블입니다.|  
+||Nested Singleton Prediction|DMX SELECT FROM 사용 하는 방법을 보여 줍니다  *\<모델 >* 예측 쿼리에서 열에 명시적으로 지정 된 단일 값을 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 NATURAL PREDICTION JOIN 절 와 이름이 같은 마이닝 모델의 열 이름과 일치 하는 마이닝 모델의 중첩 열 UNION 문을 사용 하 여 만든 중첩된 테이블의 값 집합 포함 되어 있습니다.|  
+||Singleton Prediction|DMX SELECT FROM 사용 하는 방법을 보여 줍니다 \<모델 > NATURAL PREDICTION JOIN 문을 예측 쿼리에서 열에 일치 하는 열에 명시적으로 지정 된 단일 값을 사용 하 여 마이닝 모델에 대해 예측 쿼리를 실행 하려면 마이닝 모델입니다.|  
 ||Stored Procedure Call|DMX CALL 문을 사용하여 저장 프로시저를 호출하는 방법을 보여 줍니다.|  
 |MDX\Expressions|Moving Average-Fixed|일반적인 순서로 정렬된 집합과 함께 MDX **ParallelPeriod** 및 **CurrentMember** 함수를 사용하여 시간 차원의 계층에 포함된 고정 기간 동안의 측정값 이동 평균을 제공하는 계산 측정값을 만드는 방법을 보여 줍니다.|  
 ||Moving Average-Variable|**CASE** 함수 내에서 MDX **Avg** 문을 사용하여 시간 차원의 계층에 포함된 가변 기간 동안의 측정값 이동 평균을 제공하는 계산 측정값을 만드는 방법을 보여 줍니다.|  
@@ -197,26 +197,26 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Management|백업|XMLA **백업** 명령을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 파일에 백업하는 방법을 보여 줍니다.|  
 ||취소|XMLA **Cancel** 명령을 사용하여 현재 세션(관리자 또는 서버 관리자 이외의 사용자인 경우), 데이터베이스(관리자인 경우) 또는 인스턴스(서버 관리자인 경우)에서 실행 중인 작업을 모두 취소하는 방법을 보여 줍니다.|  
 ||Create Remote Partition Database|ASSL( **Scripting Language) 데이터베이스 요소와 함께 XMLA** Create [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 사용하여 원격 파티션 저장을 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 데이터 원본을 만드는 방법을 보여 줍니다.|  
-||Delete|XMLA **Delete** 명령을 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 삭제하는 방법을 보여 줍니다.|  
+||DELETE|XMLA **Delete** 명령을 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 삭제하는 방법을 보여 줍니다.|  
 ||Process Dimension|XMLA **Batch** 명령을 **Parallel** 요소 및 **Process** 명령과 결합하고 병렬 일괄 처리 작업을 사용하여 차원 특성을 업데이트하는 방법을 보여 줍니다.|  
 ||Process Partition|XMLA **Batch** 명령을 **Parallel** 요소 및 **Process** 명령과 결합하고 병렬 일괄 처리 작업을 사용하여 파티션을 완전히 처리하는 방법을 보여 줍니다.|  
 ||복원|XMLA **복원** 명령을 사용하여 기존 백업 파일에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원하는 방법을 보여 줍니다.|  
 ||동기화|XMLA **동기화** 명령을 사용하여 SynchronizeSecurity 태그에 대한 SkipMembership 옵션으로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the 동기화Security tag.|  
 |XMLA\Schema Rowsets|스키마 행 집합 검색|XMLA **Discover** 메서드를 사용하여 DISCOVER_SCHEMA_ROWSETS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-|XMLA\Server Status|연결|XMLA **Discover** 메서드를 사용하여 DISCOVER_CONNECTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||작업|XMLA **Discover** 메서드를 사용하여 DISCOVER_JOBS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+|XMLA\Server Status|Connections|XMLA **Discover** 메서드를 사용하여 DISCOVER_CONNECTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||에서|XMLA **Discover** 메서드를 사용하여 DISCOVER_JOBS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||위치|XMLA **Discover** 메서드를 사용하여 위치 백업 파일의 경로를 지정하며 DISCOVER_LOCATIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||잠금|XMLA **Discover** 메서드를 사용하여 DISCOVER_LOCKS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||Memory Grant|XMLA **Discover** 메서드를 사용하여 DISCOVER_MEMORYGRANT 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||성능 카운터|XMLA **Discover** 메서드를 사용하여 DISCOVER_PERFORMANCE_COUNTERS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||세션|XMLA **Discover** 메서드를 사용하여 DISCOVER_SESSIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||Traces|XMLA **Discover** 메서드를 사용하여 DISCOVER_TRACES 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||트랜잭션|XMLA **Discover** 메서드를 사용하여 DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||의|XMLA **Discover** 메서드를 사용하여 DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX&#40;Multidimensional Expression&#41; 참조](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL XMLA에 대 한&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;XMLA 용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

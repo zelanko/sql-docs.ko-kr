@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 769a07116e60fc080e0d9ea9dd5ad60a8ee53fb5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574545"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972988"
 ---
 # <a name="customrollup-element-xmla"></a>CustomRollup 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34574545"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34574545"
 ## <a name="remarks"></a>Remarks  
  **CustomRollup** 요소는 부모 **Attribute** 요소에서 정의하는 특성 멤버의 롤업 동작을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.  
   
- MDX 식에 대 한 자세한 내용은 참조 [식 &#40;MDX&#41;](../../../mdx/expressions-mdx.md)합니다.  
+ MDX 식에 대 한 자세한 내용은 참조 하십시오 [식 &#40;MDX&#41;](../../../mdx/expressions-mdx.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
  [요소를 삽입 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   

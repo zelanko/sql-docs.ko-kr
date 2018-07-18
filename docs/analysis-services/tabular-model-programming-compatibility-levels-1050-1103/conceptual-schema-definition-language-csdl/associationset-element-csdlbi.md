@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039217"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968984"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34039217"
 ## <a name="applicable-attributes"></a>적용 가능한 특성  
  다음 표는 **AssociationSet** 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
   
-|이름|필수 여부|설명|  
+|속성|필수 여부|Description|  
 |----------|-----------------|-----------------|  
 |State|예|연결이 활성인지 여부를 나타내는 문자열입니다. 값은 State 요소에 따라 정의됩니다.|  
 |숨김|아니요|관계가 표시되는지 여부를 나타내는 부울 값입니다. 기본적으로 Hidden은 모든 관계가 모델에 표시됨을 의미하는 **false**입니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "34039217"
   
  다음 표는 **State** 요소의 값을 보여 줍니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |활성|연결이 활성입니다.|  
 |비활성|연결이 활성입니다.|  
@@ -73,7 +73,7 @@ ms.locfileid: "34039217"
 </AssociationSet>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [CSDL BI 주석에 대 한 기술 참조](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+## <a name="see-also"></a>관련 항목  
+ [CSDL용 BI 주석에 대한 기술 참조](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

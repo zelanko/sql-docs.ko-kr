@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 902f3086b28d17b11d1c1c44b130e2dcf224eb30
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578745"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968313"
 ---
 # <a name="restrictions-element-xmla"></a>Restrictions 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  제한 열 및 사용 하는 데이터가 포함 된 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
+  제한 열 및 사용 되는 데이터를 포함 합니다 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34578745"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34578745"
 |자식 요소|[RestrictionList](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **제한** 제한 열 및 검색 정보를 제한 하는 데 사용 되는 데이터 요소를 나타내는 **Discover** 메서드.  
+ 합니다 **제한** 제한 열 및 검색 되는 정보를 제한 하는 데 사용 되는 데이터 요소를 나타내는 합니다 **검색** 메서드.  
   
 ## <a name="example"></a>예제  
   

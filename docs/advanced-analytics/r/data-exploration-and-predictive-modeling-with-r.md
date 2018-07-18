@@ -1,5 +1,5 @@
 ---
-title: 데이터 탐색 및 SQL Server 기계 학습의 R 통한 예측 모델링 | Microsoft Docs
+title: 데이터 탐색 및 SQL Server Machine Learning에서 R 통한 예측 모델링 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,36 +7,36 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9f808c2fffe0b008590ae1eaac51124471c02e5d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203065"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984715"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>데이터 탐색 및 SQL Server에서 R 통한 예측 모델링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 가능한 SQL Server와의 통합을 통해 데이터 과학 프로세스에 향상 된 기능을 설명 합니다.
+이 문서에서는 SQL Server와의 통합을 통해 가능한 데이터 과학 프로세스 개선 사항.
 
-적용 대상: SQL Server 2016 R Services, SQL Server 2017 컴퓨터 Learnign 서비스
+적용 대상: SQL Server 2016 R Services, SQL Server 2017 Machine Learnign 서비스
 
 ## <a name="the-data-science-process"></a>데이터 과학 프로세스
 
 데이터 과학자는 R을 사용하여 데이터를 탐색하고 예상 모델을 작성합니다. 이것은 일반적으로 우수한 예측 모델이 제공될 때까지 반복되는 시행 착오 프로세스입니다. 숙련된 데이터 과학자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 연결한 후 RODBC 패키지를 사용하여 로컬 워크스테이션에 데이터를 패치하며 데이터를 탐색하고 표준 R 패키지를 사용하여 예상 모델을 작성합니다.
 
-그러나이 방법에는 많은 단점이 해당 hae 엔터프라이즈의 R의 광범위 한 채택을 방해 합니다. 
+그러나이 방법은 단점이 많은, 해당 hae 엔터프라이즈의 R의 광범위 한 도입을 방해 합니다. 
 
-+ 느리거나 비효율적 이며 안전 하지 않은 데이터를 이동 될 수 있습니다.
-+ R 자체에 성능 및 확장성 제한이
++ 느린 비효율적 이거나 안전 하지 않은 데이터 이동을 수합니다 있습니다.
++ R 자체에 성능 및 확장성 제한 사항이 있습니다.
 
 이러한 단점은 대량의 데이터를 이동 및 분석하거나 데이터 세트가 컴퓨터에서 이용할 수 있는 메모리와 맞지 않는 경우 더 분명하게 나타납니다.
 
-새 하 고 확장 가능한 패키지 및 R 함수에 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 이러한 단점을 극복 하는 데 도움이 됩니다. 
+새 뛰어나고 패키지 및 R 함수에 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 이러한 문제의 상당수를 극복 하는 데 도움이 됩니다. 
 
-## <a name="whats-different-about-revoscaler"></a>RevoScaleR에 대 한 다른 무엇입니까?
+## <a name="whats-different-about-revoscaler"></a>RevoScaleR에 대 한 다른 란?
 
-**RevoScaleR** 패키지에는 R의 인기 있는 일부 함수가 구현되었고 병렬 처리 및 확장성을 제공하도록 다시 설계되었습니다. 자세한 내용은 참조 [분산 RevoScaleR을 사용 하 여 컴퓨팅](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)합니다.
+**RevoScaleR** 패키지에는 R의 인기 있는 일부 함수가 구현되었고 병렬 처리 및 확장성을 제공하도록 다시 설계되었습니다. 자세한 내용은 [분산 RevoScaleR을 사용 하 여 컴퓨팅](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)합니다.
 
 또한, RevoScaleR 패키지는 *실행 컨텍스트*변경을 지원합니다. 즉, 전체 솔루션 또는 하나의 함수에 대하여 로컬 워크스테이션이 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 리소스를 사용하여 계산이 수행되도록 지정할 수 있습니다. 이러한 방식은 불필요한 데이터 이동을 방지하고 서버 컴퓨터의 더 큰 계산 리소스를 활용할 수 있는 등의 여러 가지 장점이 있습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "31203065"
 
 ### <a name="using-other-r-packages"></a>다른 R 패키지를 사용 하 여
 
-Microsoft 기계 학습에 포함 된 소유 R 라이브러리 외에도 거의 모든 R 패키지, 솔루션에서 사용할 수 있습니다 포함 하 여:
+Microsoft Machine Learning에 포함 된 R 독점 라이브러리에서는 외에도 솔루션의 거의 모든 R 패키지를 사용할 수 있습니다 포함:
 
 + 공용 리포지토리의 일반 용도 R 패키지. CRAN 등과 같은 공용 저장소에서 가장 인기 있는 오픈 소스 R 패키지를 가져올 수 있고 그러한 공용 저장소에는 데이터 과학자가 사용할 수 있는 6,000개 이상의 패키지가 호스팅되어 있습니다.
   
@@ -60,13 +60,13 @@ Microsoft 기계 학습에 포함 된 소유 R 라이브러리 외에도 거의 
   
      **RevoPemaR** 패키지를 사용하면 R에서 자체 병렬 외부 메모리 알고리즘을 개발할 수 있습니다.  
   
-     이러한 패키지 및 사용 하는 방법에 대 한 자세한 내용은 참조 [RevoScaleR 이란](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) 및 [RevoPemaR 시작](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)합니다. 
+     이러한 패키지 및 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [RevoScaleR 란](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) 하 고 [RevoPemaR 시작](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)합니다. 
 
-+ **MicrosoftML** 고도로 최적화 된 기계 학습 알고리즘 및 데이터 변환은 Microsoft 데이터 과학 팀의 컬렉션을 포함 합니다. 다양 한 알고리즘도 Azure 기계 학습에서 사용 됩니다. 자세한 내용은 참조 [MicrosoftML 패키지를 사용 하 여](../../advanced-analytics/using-the-microsoftml-package.md)합니다.
++ **MicrosoftML** 고도로 최적화 된 기계 학습 알고리즘 및 데이터 변환은 Microsoft 데이터 과학 팀에서 컬렉션을 포함 합니다. 다양 한 알고리즘은 Azure Machine Learning에도 사용 됩니다. 자세한 내용은 [MicrosoftML 패키지 사용](../../advanced-analytics/using-the-microsoftml-package.md)합니다.
 
 ### <a name="r-development-tools"></a>R 개발 도구
 
-R 솔루션을 개발할 때는 Microsoft R Client를 다운로드 해야 합니다. 이 무료 다운로드 하 고 확장 가능한 alorithms 원격 계산 컨텍스트를 지 원하는 데 필요한 라이브러리에 포함 됩니다.
+R 솔루션을 개발할 때에 Microsoft R Client를 다운로드 해야 합니다. 이 무료 다운로드에는 원격 계산 컨텍스트 및 확장 가능한 alorithms를 지 원하는 데 필요한 라이브러리가 포함:
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** 표준 R 작업 성능을 향상하는 패키지 집합(Intel 수학 커널 라이브러리 등) 및 R 런타임 배포입니다.  
   
@@ -76,30 +76,30 @@ R 솔루션을 개발할 때는 Microsoft R Client를 다운로드 해야 합니
 
 ## <a name="use-new-data-sources-and-compute-contexts"></a>사용 하 여 새 데이터 원본 및 계산 컨텍스트
 
-에 연결 하는 RevoScaleR 패키지를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], R 코드에서 사용 하기 위해 이러한 함수를 찾아보십시오.
+RevoScaleR 패키지를 사용 하 여 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], R 코드에서 사용 하기 위해 이러한 함수에 대 한 확인 합니다.
 
 + **RxSqlServerData** 은(는) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이(가) 포함된 R 기능을 사용하여 이러한 단점을 해결할 수 있습니다.
   
      R 코드에서 이 함수를 사용하여 *데이터 원본*을 정의할 수 있습니다. 데이터 원본 개체는 데이터가 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 읽고 쓰는 작업을 관리하는 서버와 테이블을 지정합니다.
   
--   **RxInSqlServer** 함수를 사용하여 *계산 컨텍스트*를 지정할 수 있습니다.  즉, 로컬 워크스테이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 등 R 코드의 실행 위치를 나타낼 수 있습니다.  자세한 내용은 참조 [RevoScaleR 함수](https://msdn.microsoft.com/microsoft-r/scaler/scaler)합니다.
+-   **RxInSqlServer** 함수를 사용하여 *계산 컨텍스트*를 지정할 수 있습니다.  즉, 로컬 워크스테이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터 등 R 코드의 실행 위치를 나타낼 수 있습니다.  자세한 내용은 [RevoScaleR 함수](https://msdn.microsoft.com/microsoft-r/scaler/scaler)합니다.
   
      계산 컨텍스트를 설정하는 경우 원격 실행 컨텍스트를 지원하는 계산, 즉 RevoScaleR 패키지에서 제공하는 R 작업 및 관련 함수에만 영향을 줍니다. 일반적으로 표준 CRAN 패키지를 기반으로 하는 R 솔루션은 원격 계산 컨텍스트에서 실행할 수 없습니다. 단, T-SQL에서 시작된 경우에는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터에서 실행할 수 있습니다. 그러나 `rxExec` 함수를 사용하여 개별 R 함수를 호출하고 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 원격으로 실행할 수 있습니다.
 
-만들기 및 데이터 원본 및 실행 컨텍스트를 사용 하는 방법의 예 이러한 자습서를 참조:
+만들기 및 데이터 원본 및 실행 컨텍스트를 사용 하는 방법의 예제를 이러한 자습서를 참조 하세요.
 
 + [데이터 과학 심층 분석](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Microsoft R를 사용 하 여 데이터 분석](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
++  [Microsoft R을 사용 하 여 데이터 분석](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
-## <a name="deploy-r-code-to-production"></a>프로덕션 환경에 R 코드 배포
+## <a name="deploy-r-code-to-production"></a>프로덕션에 R 코드 배포
 
 데이터 과학자의 중요한 역할은 분석을 다른 사용자에게 제공하거나 예측 모델을 사용하여 비즈니스 결과 또는 프로세스를 향상시키는 것입니다. R 스크립트 또는 모델이 준비된 경우 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에서 쉽게 프로덕션으로 이동할 수 있습니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행하기 위해 사용자 코드를 이동하는 방법에 대한 자세한 내용은 [작업에서 R 코드 활용](../../advanced-analytics/r/operationalizing-your-r-code.md)을 참조하세요.
 
-일반적으로 배포 프로세스는 스크립트를 정리하여 프로덕션에서 필요하지 않은 코드를 제거하는 것에서부터 시작됩니다. 계산에 가깝게 데이터를 이동 하면 알게 될 수 있습니다 더 효율적으로 이동, 요약 또는 보다 R에서 모든 항목을 수행 하는 데이터를 제공 하는 방법  성능을 향상 시키는 방법에 대 한 데이터베이스 개발자와 상의 하는 데이터 과학자,이 솔루션은 경우에 특히 데이터 정리 또는 엔지니어링 하는 기능 더 효과적일 sql에서 것이 좋습니다. 모델 작성 또는 점수 매기기 워크플로가 실패하지 않고 입력 데이터를 올바른 형식으로 사용할 수 있도록 ETL 프로세스를 변경해야 할 수도 있습니다.
+일반적으로 배포 프로세스는 스크립트를 정리하여 프로덕션에서 필요하지 않은 코드를 제거하는 것에서부터 시작됩니다. 데이터에 가깝게 계산을 이동 하면 볼 수 있습니다 보다 효율적으로 이동, 요약 또는 R에서 모든 항목 보다 데이터를 제공 하는 방법  데이터 과학자가 성능을 향상 시키는 방법에 대 한 데이터베이스 개발자와 상의 솔루션이 수행 하는 경우에 특히 데이터 정리 또는 기능 엔지니어링을 더 효과적일 수 있습니다 sql에서 것이 좋습니다. 모델 작성 또는 점수 매기기 워크플로가 실패하지 않고 입력 데이터를 올바른 형식으로 사용할 수 있도록 ETL 프로세스를 변경해야 할 수도 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [기본 R 및 ScaleR 함수 비교](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

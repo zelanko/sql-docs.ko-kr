@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_proc_exec_stats (Transact SQL) | Microsoft Docs
+title: sys.sp_xtp_control_proc_exec_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4423664cd7cf7edcfa628a51c85653bf3745fef6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254951"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971815"
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value = *값*  
  프로시저 수준 통계 컬렉션이 설정(1)되었는지 아니면 해제(0)되었는지를 결정합니다.  
   
- @new_collection_value 때 0으로 설정 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 데이터베이스를 시작 합니다.  
+ @new_collection_value 될 때 0으로 설정 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 데이터베이스가 시작 합니다.  
   
  @old_collection_value = *값*  
  현재 상태를 반환합니다.  
@@ -54,11 +54,11 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ## <a name="return-code"></a>반환 코드  
  성공의 경우 0이고, 실패의 경우 0이 아닙니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  고정 sysadmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="code-samples"></a>코드 예제  
- 설정 하려면 @new_collection_value 및의 값에 대 한 쿼리 @new_collection_value:  
+ 설정할 @new_collection_value 및 값에 대 한 쿼리 @new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  
@@ -67,7 +67,7 @@ exec sp_xtp_control_proc_exec_stats @old_collection_value=@c output
 select @c as 'collection status'  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

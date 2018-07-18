@@ -1,5 +1,5 @@
 ---
-title: sp_describe_first_result_set (Transact SQL) | Microsoft Docs
+title: sp_describe_first_result_set (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262663"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970719"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  가능한 첫 번째 결과 집합에 대 한 메타 데이터를 반환 합니다.는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 일괄 처리에서 아무 결과도 반환되지 않은 경우 빈 결과 집합을 반환합니다. 오류가 발생 된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 정적 분석을 수행 하 여 실행 될 첫 번째 쿼리에 대 한 메타 데이터를 확인할 수 없습니다. 동적 관리 뷰 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 같은 정보를 반환 합니다.  
+  가능한 첫 번째 결과 집합에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 일괄 처리에서 아무 결과도 반환되지 않은 경우 빈 결과 집합을 반환합니다. 경우 오류가 발생 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 정적 분석을 수행 하 여 실행 될 첫 번째 쿼리에 대 한 메타 데이터를 확인할 수 없습니다. 동적 관리 뷰 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 동일한 정보를 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,13 +47,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 수 **nvarchar (***n***)** 또는 **nvarchar (max)** 합니다.  
+ [  **@tsql =** ] **'***&#40;transact SQL_batch***'**  
+ 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
   
  [  **@params =** ] **N'***매개 변수***'**  
- @params 에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게를 합니다. 매개 변수가 필요할 수 **nvarchar (n)** 또는 **nvarchar (max)** 합니다.  
+ @params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게 됩니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
   
- 하나의 문자열에 포함 된 모든 매개 변수 정의 포함 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다 @params합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리, 매개 변수가 없으면 @params 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ 에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다 @params합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다 @params 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
  [ **@browse_information_mode =** ] *tinyint*  
  추가 키 열과 원본 테이블 정보를 반환할지 여부를 지정합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
@@ -65,7 +65,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   2로 설정되면 쿼리에 커서 준비 또는 실행에 사용되는 것처럼 각 쿼리가 분석됩니다. 그러면 원본 열 정보로 보기 이름을 반환합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- **sp_describe_first_result_set** 항상 상태를 성공 하면 0 반환 합니다. 프로시저는 오류가 발생 하는 경우 프로시저가 RPC로 호출 된 sys.dm_exec_describe_first_result_set의 error_type 열에 설명 된 오류 형식으로 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
+ **sp_describe_first_result_set** 항상 상태 성공 시 0 반환 합니다. 절차에서 오류를 throw 하 고 프로시저가 RPC로 호출 된 경우 sys.dm_exec_describe_first_result_set의 error_type 열에 설명 된 오류 형식으로 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  이 공통 메타데이터는 결과 메타데이터의 각 열에 대한 하나의 행이 포함된 결과 집합으로 반환됩니다. 각 행은 다음 섹션에 설명된 형식으로 열의 유형과 Null 허용 여부를 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
@@ -76,11 +76,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**column_ordinal**|**int NOT NULL**|결과 집합에서 열의 서수 위치를 포함합니다. 첫째 열의 위치가 1로 지정됩니다.|  
 |**name**|**sysname NULL**|이름을 확인할 수 있으면 열 이름을 포함하고 그렇지 않으면 NULL을 포함합니다.|  
 |**is_nullable**|**비트 NOT NULL**|열이 NULL을 허용하는 경우 1, 열이 NULL을 허용하지 않는 경우 0, 열이 NULL을 허용하는지 확인할 수 없는 경우 1을 포함합니다.|  
-|**system_type_id**|**int NOT NULL**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
+|**system_type_id**|**int NOT NULL**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256) NULL**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**NULL이 아닌 Smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 또는 **xml**합니다.<br /><br /> 에 대 한 **텍스트** 열은 **max_length** 값은 16 또는 값 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
+|**max_length**|**smallint NOT NULL**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
 |**전체 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
-|**소수 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
+|**scale**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname NULL**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
 |**user_type_id**|**int NULL**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
 |**user_type_database**|**sysname NULL**|CLR 및 별칭 형식의 경우 해당 형식이 정의된 데이터베이스의 이름을 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -105,25 +105,25 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_computed_column**|**NULL 비트**|열이 계산 열일 경우 1을 반환하고 그렇지 않으면 0을 반환합니다. 열이 계산 열인지 확인할 수 없으면 NULL을 반환합니다.|  
 |**is_sparse_column_set**|**NULL 비트**|열이 스파스 열일 경우 1을 반환하고 그렇지 않으면 0을 반환합니다. 열이 스파스 열 집합의 일부인지 확인할 수 없으면 NULL을 반환합니다.|  
 |**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY 목록에서 이 열의 위치입니다. 열이 ORDER BY 목록에 없거나 ORDER BY 목록을 고유하게 확인할 수 없을 경우 NULL을 반환합니다.|  
-|**order_by_list_length**|**smallint NULL**|ORDER BY 목록의 길이입니다. ORDER BY 목록이 없거나 ORDER BY 목록을 고유하게 확인할 수 없는 경우 NULL을 반환합니다. 이 값은 동일 하 게 반환 하는 모든 행에 대 한 참고 **sp_describe_first_result_set 합니다.**|  
-|**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list가 NULL이 아닐 경우는 **order_by_is_descending** 열이이 열에 대 한 ORDER BY 절의 방향을 보고 합니다. 그렇지 않으면 NULL을 보고합니다.|  
+|**order_by_list_length**|**smallint NULL**|ORDER BY 목록의 길이입니다. ORDER BY 목록이 없거나 ORDER BY 목록을 고유하게 확인할 수 없는 경우 NULL을 반환합니다. 이 값은 동일 하 게 하 여 반환 된 모든 행에 대 한 참고 **sp_describe_first_result_set 합니다.**|  
+|**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list가 NULL이 경우는 **order_by_is_descending** 열이이 열에 대 한 ORDER BY 절의 방향을 보고 합니다. 그렇지 않으면 NULL을 보고합니다.|  
 |**tds_type_id**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
 |**tds_length**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
 |**tds_collation_id**|**int NULL**|내부적으로만 사용할 수 있습니다.|  
 |**tds_collation_sort_id**|**tinyint NULL**|내부적으로만 사용할 수 있습니다.|  
   
-## <a name="remarks"></a>주의  
- **sp_describe_first_result_set** 프로시저 (가상)에 대 한 첫 번째 결과 집합 메타 데이터를 반환 하는 경우 일괄 처리 A 한 경우 해당 일괄 처리 (A) 후 해당 호스트가 실행 보장이 다음 일괄 처리 합니다 (1) 최적화 시간 오류, (2)를 발생 시킵니다. 발생 시키는 런타임 오류 (3) 아무 결과도에서 설명 하는 동일한 메타 데이터가 포함 된 첫 번째 결과 집합을 설정 하거나 (4) 반환 **sp_describe_first_result_set**합니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_describe_first_result_set** 는 경우 (가상)에 대 한 첫 번째 결과 집합 메타 데이터를 반환 하는 절차는 일괄 처리 하는 경우 해당 일괄 처리 (A) 이후에 실행 한 다음 일괄 처리 보장 됩니다 (1) 최적화 시간 오류를 발생 시킵니다, (2) 발생 시킵니다 (3) 런타임 오류를 반환 결과가 없습니다. 설정 또는 (4)에서 설명한 동일한 메타 데이터를 사용 하 여 첫 번째 결과 집합 **sp_describe_first_result_set**합니다.  
   
- 이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. 경우 **sp_describe_first_result_set** 반환 보증은 빈 결과 집합은 일괄 처리 실행 아니요 결과 집합을 반환 합니다.  
+ 이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. 하는 경우 **sp_describe_first_result_set** 반환은 빈 결과 집합을 일괄 처리 실행은 아니요 결과 집합을 반환 합니다.  
   
- 이 보장은 서버의 관련 스키마 변경 사항이 없는 것으로 가정합니다. 서버의 관련 스키마 변경 내용을 임시 테이블 만들기를 포함 하지 않거나 테이블 변수는 일괄 처리 시간 사이에서는 **sp_describe_first_result_set** 라고 하는 동안 결과 집합이 반환 되는 시간 2. 일괄 처리에서 변경한 스키마를 포함 하 여 실행  
+ 이 보장은 서버의 관련 스키마 변경 사항이 없는 것으로 가정합니다. 서버의 관련 스키마 변경 내용을 임시 테이블 만들기를 포함 하지 않거나 테이블 사이 일괄 처리의 변수는 **sp_describe_first_result_set** 라고 하 고 결과 집합 중 반환 되는 시간 2. 일괄 처리에서 변경 하는 스키마를 포함 하 여 실행  
   
- **sp_describe_first_result_set** 다음과 같은 경우에 오류를 반환 합니다.  
+ **sp_describe_first_result_set** 다음 경우 중 하나에서 오류를 반환 합니다.  
   
--   하는 경우 입력 @tsql 유효 하지 않거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 유효성을 구문 분석 하 고 분석 하 여 확인할는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 쿼리 최적화 중 또는 실행 하는 동안 일괄 처리에 의해 발생 한 오류를 결정할 때 고려 되지 않습니다 여부는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 유효 합니다.  
+-   하는 경우 입력 @tsql 유효 하지 않거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 유효성 검사는 구문 분석 하 고 분석 하 여 결정 됩니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 결정할 때 쿼리 최적화 중 또는 실행 하는 동안 일괄 처리에서 발생 한 오류는 아닙니다 여부는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 유효한 합니다.  
   
--   경우 @params NULL이 아닌 문자열을 포함 하는 문자열을 포함 하는 경우 선언 하는 매개 변수가 여러 번 또는 매개 변수에 대해 구문상 유효한 선언 문자열이 아닙니다.  
+-   경우 @params NULL이 아닌 문자열을 포함 하는 문자열을 포함 하는 경우 선언 하는 매개 변수가 여러 번 또는 매개 변수에 대해 구문이 유효한 선언 문자열이 아닙니다.  
   
 -   하는 경우 입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 선언 된 매개 변수 이름이 같은 지역 변수를 선언 @params합니다.  
   
@@ -131,9 +131,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   쿼리에 다음으로 쿼리되는 영구 테이블 생성이 포함되는 경우  
   
- 다른 모든 확인이 성공한 경우에는 입력 일괄 처리 내에서 가능한 모든 제어 흐름 경로가 고려됩니다. 이 고려 모든 제어 흐름 문 (GOTO, IF/ELSE, WHILE 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 블록) 동적 모든 절차 뿐만 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 트리거를 발생 시키는 DDL 문에 EXEC 문에 의해 입력된 일괄 처리에서 호출 DDL 트리거를 발생 또는 발생으로 인해 대상 테이블에서 또는 외래 키 제약 조건에서 연계 동작으로 인해 수정 하는 테이블에서 발생 하는 DML 문입니다. 가능한 대부분의 제어 경로에서 특정 시점에 알고리즘이 중지됩니다.  
+ 다른 모든 확인이 성공한 경우에는 입력 일괄 처리 내에서 가능한 모든 제어 흐름 경로가 고려됩니다. 이 사항을 고려 모든 제어 흐름 문 (GOTO, IF/ELSE, WHILE 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 블록) 동적 모든 절차 뿐만 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 트리거를 발생 시키는 DDL 문에 EXEC 문에 의해 입력된 일괄 처리에서 호출 발생 하는 DDL 트리거 또는 외래 키 제약 조건에서 연계 동작으로 인해 수정 된 테이블 또는 대상 테이블에서 발생 하는 트리거를 발생 시키는 DML 문입니다. 가능한 대부분의 제어 경로에서 특정 시점에 알고리즘이 중지됩니다.  
   
- 각 제어 흐름 경로 대 한 첫 번째 문 (있는 경우)를 반환 하는 결과 집합을 따라 사용자가 **sp_describe_first_result_set**합니다.  
+ 각 제어 흐름 경로 대 한 첫 번째 문 (있는 경우) 반환 하는 결과 집합을 따라 결정 됩니다 **sp_describe_first_result_set**합니다.  
   
  일괄 처리에서 가능한 첫 번째 문이 여러 개 발견된 경우 해당 결과는 열 수, 열 이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. 이러한 차이점이 처리되는 방식은 다음과 같습니다.  
   
@@ -145,22 +145,22 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   데이터 형식이 다른 경우 다음 조합 외에는 오류가 발생하고 아무 결과도 반환되지 않습니다.  
   
-    -   **varchar(a)** 를 **varchar(a')** 위치는 ' >는 합니다.  
+    -   **varchar(a)** 하 **varchar(a')** 위치는 ' >는 합니다.  
   
-    -   **varchar(a)** 를 **varchar (max)**  
+    -   **varchar(a)** 에 **varchar (max)**  
   
-    -   **nvarchar(a)** 를 **nvarchar(a')** 위치는 ' >는 합니다.  
+    -   **nvarchar(a)** 하 **nvarchar(a')** 위치는 ' >는 합니다.  
   
-    -   **nvarchar(a)** 를 **nvarchar (max)**  
+    -   **nvarchar(a)** 에 **nvarchar (max)**  
   
-    -   **varbinary(a)** 를 **varbinary(a')** 위치는 ' >는 합니다.  
+    -   **varbinary(a)** 하 **varbinary(a')** 위치는 ' >는 합니다.  
   
-    -   **varbinary(a)** 를 **varbinary (max)**  
+    -   **varbinary(a)** 에 **varbinary (max)**  
   
  **sp_describe_first_result_set** 간접 재귀를 지원 하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
- 실행할 수 있는 권한이 필요는 @tsql 인수입니다.  
+## <a name="permissions"></a>사용 권한  
+ 실행 하기 위한 권한이 필요 합니다 @tsql 인수입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -198,9 +198,9 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1.|b3|NULL|NULL|NULL|NULL|  
+|0|1|b3|NULL|NULL|NULL|NULL|  
   
  1을 사용하는 예제는 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 정보를 반환합니다.  
   
@@ -211,10 +211,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1.|b3|dbo|t|B1|0|  
-|1.|2|a|dbo|t|a|1.|  
+|0|1|b3|dbo|t|B1|0|  
+|1|2|a|dbo|t|a|1|  
   
  마치 커서를 준비하는 것처럼 분석됨을 나타내는 2를 사용하는 예제.  
   
@@ -224,10 +224,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1.|B3|dbo|v|B2|0|  
-|1.|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|1|B3|dbo|v|B2|0|  
+|1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>문제 예  
  다음 예에서는 모두 두 개의 테이블을 사용합니다. 예제 테이블을 만들려면 다음 문을 실행합니다.  
@@ -263,7 +263,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 결과: 오류, 일치 하지 않는 형식 (**int** 비교 **smallint**).  
+ 결과: 오류 일치 하지 않는 형식 (**int** 비교 **smallint**).  
   
 #### <a name="column-name-cannot-be-determined"></a>열 이름을 확인할 수 없는 경우  
  가능한 첫 번째 결과 집합의 열이 동일한 가변 길이 형식의 길이, Null 허용 여부 및 열 이름이 서로 다릅니다.  
@@ -277,7 +277,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- 결과: \<알 수 없는 열 이름 > **varchar (20) NULL**  
+ 결과: \<알 수 없는 열 이름 > **varchar(20)"NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>별칭을 통해 동일해진 열 이름  
  이전 예와 동일하지만, 열 별칭을 통해 열 이름이 같아진 경우입니다.  
@@ -305,7 +305,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 결과: 오류, 일치 하지 않는 형식 (**varchar (10)** 비교 **nvarchar (10)**).  
+ 결과: 오류 일치 하지 않는 형식 (**varchar(10)** 비교 **nvarchar(10)**).  
   
 #### <a name="result-set-can-return-an-error"></a>결과 집합이 오류를 반환할 수 있음  
  첫 번째 결과 집합이 오류 또는 결과 집합입니다.  
@@ -380,7 +380,7 @@ EXEC(@SQL)
  결과: Column1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>불확실한 결과 집합으로 인한 오류  
- 이 예제에서는 user1 라는 다른 사용자가 열이 있는 기본 스키마 s 1에서 t1 테이블이 있는 가정 (한 **int NOT NULL**).  
+ 이 예제에서는 user1 이라는 다른 사용자가 열을 사용 하 여 기본 스키마 s1의 t1 이라는 테이블을 가정 (한 **int NOT NULL**).  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -391,7 +391,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- 결과: 오류입니다. 다른 dbo.t1 또는 열 수가 서로 다르므로 각각 s1.t1 t1 수 있습니다.  
+ 결과: 오류입니다. 다른 dbo.t1 또는 s1.t1 일 열 수가 서로 다르므로 t1 수 있습니다.  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>불확실한 결과 집합이 포함된 결과  
  이전 예와 동일한 가정을 사용합니다.  
@@ -404,9 +404,9 @@ N'
     SELECT a FROM t1;'  
 ```  
   
- 결과:는 **int NULL** dbo.t1.a와 s1.t1.a 형식을 가지 **int** null 허용 여부가 있습니다.  
+ 결과:는 **int NULL** dbo.t1.a와 s1.t1.a가 둘 다 형식이 있으므로 **int** null 허용 여부가 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

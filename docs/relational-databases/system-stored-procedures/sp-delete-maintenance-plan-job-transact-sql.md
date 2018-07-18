@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (Transact SQL) | Microsoft Docs
+title: sp_delete_maintenance_plan_job (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242890"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974018"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>인수  
  [ **@plan_id =**] **'***plan_id***'**  
- 유지 관리 계획의 ID를 지정합니다. *plan_id* 은 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+ 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
  [ **@job_id =**] **'***job_id***'**  
- 유지 관리 계획과 연관된 작업의 ID를 지정합니다. *job_id* 은 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+ 유지 관리 계획과 연관된 작업의 ID를 지정합니다. *job_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_delete_maintenance_plan_job** 에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_maintenance_plan_job** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
- 유지 관리 계획에서 제거 되어 모든 작업 하는 경우 사용자가 실행 하는 것이 좋습니다 **sp_delete_maintenance_plan_db** 계획에서 나머지 데이터베이스를 제거 하려면.  
+ 유지 관리 계획에서 제거한 모든 작업을 하는 경우 사용자가 실행 하는 것이 좋습니다 **sp_delete_maintenance_plan_db** 계획에서 나머지 데이터베이스를 제거 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_delete_maintenance_plan_job**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_delete_maintenance_plan_job**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 유지 관리 계획에서 작업 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE"를 삭제합니다.  
@@ -74,8 +74,8 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [데이터베이스 유지 관리 계획 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [데이터베이스 유지 관리 계획 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

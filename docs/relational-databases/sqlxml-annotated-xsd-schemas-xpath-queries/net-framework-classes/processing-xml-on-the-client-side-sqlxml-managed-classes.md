@@ -23,17 +23,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ea74968bc1776aecab380f5566abbe9a1e64ac5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972046"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>클라이언트 쪽에서 XML 처리(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 예제는 ClientSideXml 속성의 사용을 보여 줍니다. 응용 프로그램은 서버에서 저장 프로시저를 실행합니다. 클라이언트 쪽에서 저장 프로시저의 결과(두 개의 열로 이루어진 행 집합)가 처리되어 XML 문서를 생성합니다.  
+  이 예제에서는 ClientSideXml 속성의 사용을 보여 줍니다. 응용 프로그램은 서버에서 저장 프로시저를 실행합니다. 클라이언트 쪽에서 저장 프로시저의 결과(두 개의 열로 이루어진 행 집합)가 처리되어 XML 문서를 생성합니다.  
   
- 다음 GetContacts 저장 프로시저 반환 **FirstName** 및 **LastName** AdventureWorks 데이터베이스의 Person.Contact 테이블에서 직원입니다.  
+ 다음 GetContacts 저장 프로시저 반환 **FirstName** 하 고 **LastName** AdventureWorks 데이터베이스의 Person.Contact 테이블에 있는 직원의 합니다.  
   
 ```  
 USE AdventureWorks  
@@ -45,7 +45,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- 이 C# 응용 프로그램 저장된 프로시저를 실행 하 고 CommandText 값을 지정 하는 FOR XML AUTO 옵션을 지정 합니다. SqlXmlCommand 개체의 ClientSideXml 속성이 설정 되어 응용 프로그램에서 true로 합니다. 이렇게 하면 행 집합을 반환하고 클라이언트에서 해당 행 집합에 XML 변환을 적용하는 기존 저장 프로시저를 실행할 수 있습니다.  
+ 이 C# 응용 프로그램 저장된 프로시저를 실행 하 고 CommandText 값을 지정 하는 FOR XML AUTO 옵션을 지정 합니다. 응용 프로그램에 ClientSideXml SqlXmlCommand 개체의 속성은 true입니다. 이렇게 하면 행 집합을 반환하고 클라이언트에서 해당 행 집합에 XML 변환을 적용하는 기존 저장 프로시저를 실행할 수 있습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 추가 샘플 XQueries에 대 한 xml 데이터 형식 | Microsoft Docs
+title: 추가 XQueries에 대 한 예제 xml 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030371"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>xml 데이터 형식에 대한 추가 예제 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  이 섹션의 항목에 대해 XQuery 쿼리를 사용 하는 방법을 보여 주는 추가 예제를 제공는 **xml** 데이터 형식:  
+  이 섹션의 항목에 대해 XQuery 쿼리를 사용 하는 방법을 보여 주는 추가 예제를 제공 합니다 **xml** 데이터 형식:  
   
 -   [일반 XQuery 사용 사례](../xquery/general-xquery-use-cases.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33076205"
   
 -   [XQuery의 네임스페이스 처리](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Xml 데이터 형식에 대 한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [xml 데이터 형식에 대한 XQuery 연산자](../xquery/xquery-operators-against-the-xml-data-type.md)  
   

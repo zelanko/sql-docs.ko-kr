@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd681ec1859195219f73f6aacc6fd1f8665681a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 87e2903607b476b04c44ac81ba337ea38e68a58b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028404"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983495"
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 파워 피벗 서버 관리 및 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "34028404"
   
 |링크|형식|태스크 설명|  
 |----------|----------|----------------------|  
-|[SharePoint에 PowerPivot 솔루션 배포](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|필수임|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
-|[중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|필수임|이 단계에서는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 시스템 서비스를 프로비전합니다.|  
-|[중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|필수임|이 단계에서는 사이트 모음 수준에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 기능을 설정합니다.|  
-|[MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수임|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  
-|[SharePoint 2010에서 파워 피벗 데이터 새로 고침](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|권장|데이터 새로 고침은 선택 사항이지만 사용하는 것이 좋습니다. 게시한 Excel 통합 문서 내의 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터에 대한 무인 업데이트를 예약할 수 있습니다.|  
-|[Power Pivot 무인 데이터 새로 고침 계정 구성(SharePoint용 Power Pivot)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|권장|이 단계에서는 서버에서 데이터 새로 고침 작업을 실행하는 데 사용할 수 있는 특수 용도 계정을 프로비전합니다.|  
+|[SharePoint에 PowerPivot 솔루션 배포](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|필수|이 단계에서는 팜 및 사이트 모음에 프로그램 파일과 응용 프로그램 페이지를 추가하는 솔루션 파일을 설치합니다.|  
+|[중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|필수|이 단계에서는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 시스템 서비스를 프로비전합니다.|  
+|[중앙 관리에서 사이트 모음에 대해 파워 피벗 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|필수|이 단계에서는 사이트 모음 수준에서 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 기능을 설정합니다.|  
+|[MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  
+|[SharePoint 2010을 사용 하 여 파워 피벗 데이터 새로 고침](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|권장|데이터 새로 고침은 선택 사항이지만 사용하는 것이 좋습니다. 게시한 Excel 통합 문서 내의 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터에 대한 무인 업데이트를 예약할 수 있습니다.|  
+|[파워 피벗 구성 무인된 데이터 새로 고침 계정 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|권장|이 단계에서는 서버에서 데이터 새로 고침 작업을 실행하는 데 사용할 수 있는 특수 용도 계정을 프로비전합니다.|  
 |[사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|선택 사항|사용 데이터 컬렉션은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  
-|[전용 데이터 새로 고침 또는 쿼리만 처리 구성(SharePoint용 PowerPivot)](http://msdn.microsoft.com/en-us/5e027605-1086-4941-bb01-f315df8f829b)|선택 사항|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 인스턴스를 데이터 새로 고침 작업 또는 쿼리 전용으로 사용할 수 있습니다. 또한 병렬 데이터 새로 고침 작업에 대한 기본 설정을 수정할 수 있습니다.|  
+|[전용된 데이터 새로 고침 또는 쿼리만 처리 (SharePoint 용 파워 피벗) 구성](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|선택 사항|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 인스턴스를 데이터 새로 고침 작업 또는 쿼리 전용으로 사용할 수 있습니다. 또한 병렬 데이터 새로 고침 작업에 대한 기본 설정을 수정할 수 있습니다.|  
 |[Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|선택 사항|암호를 업데이트하거나 서비스 계정을 변경하는 방법에 대해 설명합니다.|  
 |[중앙 관리에서 SharePoint 웹 응용 프로그램에 파워 피벗 서비스 응용 프로그램 연결](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|선택 사항|서비스 연결을 수정하는 방법에 대해 설명합니다.|  
 |[중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|선택 사항|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 갤러리를 신뢰할 수 있는 위치로 추가하는 방법에 대해 설명합니다.|  
@@ -65,9 +65,9 @@ ms.locfileid: "34028404"
 |[Power Pivot 갤러리 만들기 및 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|선택 사항|수동으로 구성하는 설치에 대해 이 절차에서는 포함된 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 통합 문서의 축소판 이미지를 보여 주는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 만드는 방법에 대해 설명합니다.|  
 |[라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|선택 사항|BI 의미 체계 모델 연결 파일 만들기를 지원하도록 문서 라이브러리를 확장하는 방법에 대해 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [SharePoint 2010용 Power Pivot 설치](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+## <a name="see-also"></a>관련 항목  
+ [SharePoint 2010 용 파워 피벗](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [구성 설정 참조&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [SharePoint 용 파워 피벗에 대 한 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [SharePoint 용 파워 피벗 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

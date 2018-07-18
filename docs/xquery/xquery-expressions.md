@@ -23,16 +23,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030361"
 ---
 # <a name="xquery-expressions"></a>XQuery 식
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 식에 설명 하는 항목을 선택 합니다.  
+  XQuery 식에 설명 하는 항목입니다.  
   
 
  [기본 식 &#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "33077370"
  XQuery에서 지원하는 비교 식에 대해 설명합니다. 일반적으로 값, 노드 비교 및 노드 유형 비교 식이 여기에 해당합니다.  
   
  [논리 식 &#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
- 논리에 대 한 지원 되는 XQuery **및** 및 **또는** 연산자입니다.  
+ XQuery 지원 논리에 대해 설명 **하 고** 하 고 **또는** 연산자입니다.  
   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  쿼리에 XML을 생성할 수 있도록 하는 XQuery 생성자에 대해 설명합니다.  
@@ -59,22 +59,22 @@ ms.locfileid: "33077370"
  [FLWOR 문 및 반복 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  FLOWR 반복 구문에 대해 설명합니다. FLOWR의 각 글자는 FOR, LET, WHERE, ORDER BY 및 RETURN을 의미합니다. LET은 지원되지 않습니다.  
   
- [정렬 및 식에 순서 없이 &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ [정렬 및 식 순서가 지정 되지 않은 &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
  XQuery 연산의 순서 지정 모드에 대해 설명합니다. 기본적으로 순서 지정 모드 설정 **정렬**합니다.  
   
  [조건식 &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- XQuery 지원 되는 조건부 **if then 다른** 문.  
+ XQuery 지원 되는 조건부 **if then else** 문입니다.  
   
- [식 수치화 &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
+ [정량화 식 &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  XQuery의 존재 및 범용 수량자에 대해 설명합니다.  
   
  [SequenceType 식 &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
  XQuery의 SequenceType 구문에 대해 설명합니다.  
   
  [식 유효성 검사 &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
- **유효성을 검사** 식은 지원 되지 않습니다.  
+ 합니다 **유효성 검사** 식은 지원 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

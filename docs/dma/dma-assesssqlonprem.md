@@ -2,7 +2,7 @@
 title: (Data Migration Assistant)는 SQL Server 마이그레이션 평가 수행 합니다. | Microsoft Docs
 description: 다른 SQL Server로 또는 Azure SQL Database로 마이그레이션하기 전에 온-프레미스 SQL Server를 평가 하기 위해 Data Migration Assistant 사용 방법 알아보기
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782224"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934955"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 마이그레이션 평가 수행 합니다.
 
@@ -86,7 +86,7 @@ ms.locfileid: "37782224"
 
 2.  모든 호환성 수준에서 대상 SQL Server 버전에서 지 원하는에서 선택한 호환성 문제를 검토 합니다 **옵션** 페이지입니다.
 
-영향을 받는 개체 및 해당 세부 정보에서 식별 한 모든 문제를 분석 하 여 호환성 문제를 검토할 수 있습니다 **주요 변경 내용**하십시오 **동작 변경 내용**, 및 **사용 되지 않는 기능** .
+영향을 받는 개체에서 해당 세부 정보 및 잠재적으로에서 식별 한 모든 문제에 대 한 수정 분석 하 여 호환성 문제를 검토할 수 있습니다 **주요 변경 내용**하십시오 **동작 변경 내용**, 및  **사용 되지 않는 기능**합니다.
 
 ![평가 결과 보기](../dma/media/ReviewResults.png)
 

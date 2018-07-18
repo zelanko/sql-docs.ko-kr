@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8476381c60a63d85ce6d3cb0153578416856f8fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204185"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983015"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>R 모델을 배포하고 SQL에서 사용하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -189,7 +189,7 @@ ms.locfileid: "31204185"
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS)는 SQL Server와 R 모두를 위한 뛰어난 통합을 제공합니다. SQL Server 연결에서 RODBC에 관한 더 많은 예제는 다음 기사를 참조합니다: [R 및 SQL Server 작업](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS)는 SQL Server와 R 모두를 위한 뛰어난 통합을 제공합니다. SQL Server 연결에서 RODBC에 관한 더 많은 예제는 다음 기사를 참조합니다: [R 및 SQL Server 작업](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="summary"></a>요약
 

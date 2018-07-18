@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b321a6c26edb4f569b4174d64a0a50b8ac23ae6
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968312"
 ---
 # <a name="object-element-dimension-xmla"></a>Object 요소(차원)(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  차원에 대 한 개체 참조가 포함 부모 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 또는 [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령을 실행 합니다.  
+  차원에 대 한 개체 참조가 포함 부모 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)를 [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 또는 [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령을 실행 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34575765"
 </Insert>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "34575765"
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md), [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
-|자식 요소|[큐브](../../../analysis-services/xmla/xml-elements-properties/cube-element-xmla.md), [데이터베이스](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md), [차원](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)|  
+|부모 요소|[Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)하십시오 [삽입](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|  
+|자식 요소|[큐브](../../../analysis-services/xmla/xml-elements-properties/cube-element-xmla.md)하십시오 [데이터베이스](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md), [차원](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_component_health_status (Transact SQL) | Microsoft Docs
+title: sys.dm_pdw_component_health_status (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f711cc87308f4987c72fec75822b10502c013016
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968405"
 ---
 # <a name="sysdmpdwcomponenthealthstatus-transact-sql"></a>sys.dm_pdw_component_health_status (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "34468259"
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**||NOT NULL|  
-|component_id|int|구성 요소의 ID입니다. 참조 [sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)합니다.<br /><br /> pdw_node_id 속성, component_id, id와 component_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
-|property_id|**int**|속성의 ID입니다. 참조 [sys.pdw_health_component_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md)합니다.|NOT NULL|  
-|component_instance_id|**nvarchar(255)**|구성 요소의 인스턴스를 식별합니다. Component_instance_id로 CPU의 인스턴스 수 식별 하는 예를 들어 'CPU1' = 합니다.<br /><br /> pdw_node_id 속성, component_id, id와 component_instance_id이이 보기에 대 한 키를 형성 합니다.|NOT NULL|  
+|component_id|ssNoversion|ID 구성 요소입니다. 참조 [sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)합니다.<br /><br /> pdw_node_id, component_id, id와 component_instance_id이이 보기에 대 한 키를 형성합니다.|NOT NULL|  
+|property_id|**int**|ID 속성입니다. 참조 [sys.pdw_health_component_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md)합니다.|NOT NULL|  
+|component_instance_id|**nvarchar(255)**|구성 요소의 인스턴스를 식별합니다. 예를 들어, component_instance_id에서 CPU의 인스턴스를 식별 될 수 있습니다 = 'CPU1'.<br /><br /> pdw_node_id, component_id, id와 component_instance_id이이 보기에 대 한 키를 형성합니다.|NOT NULL|  
 |property_value|**nvarchar(255)**|현재 속성 값입니다.|NULL|  
-|update_time|**datetime**|에 대 한 메트릭은 마지막으로 업데이트 되었습니다.|NOT NULL|  
+|update_time|**datetime**|마지막으로 메트릭을 업데이트 되었습니다.|NOT NULL|  
   
-## <a name="see-also"></a>관련 항목:  
- [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>관련 항목  
+ [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

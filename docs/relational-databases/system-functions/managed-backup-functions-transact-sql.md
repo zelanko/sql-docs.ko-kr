@@ -1,5 +1,5 @@
 ---
-title: 관리 되는 백업 함수만 (Transact SQL) | Microsoft Docs
+title: 관리 되는 백업 함수 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65007fac66e42b95c2f12dee82162cdf6486b4d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969539"
 ---
-# <a name="managed-backup-functions-transact-sql"></a>관리 되는 백업 함수 (Transact SQL)
+# <a name="managed-backup-functions-transact-sql"></a>관리 되는 백업 함수 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 다음 함수를 제공 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 함수에 대 한 제공 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [managed_backup.fn_backup_db_config&#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "33225529"
   
  [managed_backup.fn_backup_instance_config &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

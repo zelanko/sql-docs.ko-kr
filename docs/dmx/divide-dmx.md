@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972669"
 ---
 # <a name="divide-dmx"></a>(나누기) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ Dividend / Divisor
  [산술 연산자 &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [나누기 &#40;SSIS 식&#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40;나누기&#41; &#40;Transact SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [분할 &#40;SSIS 식&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;분할&#41; &#40;TRANSACT-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

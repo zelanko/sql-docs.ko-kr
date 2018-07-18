@@ -1,5 +1,5 @@
 ---
-title: SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰 | Microsoft Docs
+title: SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
@@ -19,21 +19,21 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029728"
 ---
-# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰
+# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰.  
+  이 항목에서는 나열 된 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰.  
   
- 모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰 시작 **sys.pdw**합니다.  
+ 모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 하 고 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰를 사용 하 여 시작 **sys.pdw**합니다.  
   
 ## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
- 다음 카탈로그 뷰는 둘 다에 적용 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
+ 다음 카탈로그 뷰는 둘 다 적용할 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 고 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "33698606"
  [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)  
   
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
- 다음 카탈로그 뷰를 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:  
+ 다음 카탈로그 뷰에 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:  
   
  [sys.pdw_diag_event_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "33698606"
   
  [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   
