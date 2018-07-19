@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058303"
 ---
-# <a name="path-expressions---specifying-node-test"></a>경로 식에서 노드 테스트 지정
+# <a name="path-expressions---specifying-node-test"></a>경로 식-노드 테스트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   경로 식의 축 단계는 다음 구성 요소를 포함합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "33077670"
   
 -   [(선택 사항) 0 개 이상의 단계 한정자](../xquery/path-expressions-specifying-predicates.md)  
   
- 자세한 내용은 참조 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다.  
+ 자세한 내용은 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다.  
   
  노드 테스트는 경로 식에서 축 단계의 두 번째 구성 요소이자 조건입니다. 단계에서 선택한 모든 노드는 이 조건을 충족시켜야 합니다. 경로 식 `/child::ProductDescription`의 경우 노드 테스트는 `ProductDescription`입니다. 이 단계에서는 이름이 ProductDescription인 요소 노드 자식만 검색합니다.  
   
@@ -75,9 +75,9 @@ child::ProductDescription
   
  경로 식 `/child::PD:ProductDescription/child::PD:Features/descendant::*,`에는 세 가지 단계가 있습니다. 이러한 단계는 child 축과 descendant 축을 지정합니다. 각 단계에서 노드 이름은 노드 테스트로 지정됩니다. 세 번째 단계의 와일드카드 문자(`*`)는 주 노드 종류가 descendant 축인 모든 노드를 나타냅니다. 축의 주 노드 종류는 선택된 노드의 유형 및 노드에서 선택한 노드 이름 필터를 확인합니다.  
   
- 이 식의 제품 카탈로그 XML 문서에 대해 실행 되는 시기에 결과적으로 **ProductModel** 테이블의 모든 요소 노드 자식을 검색는 \<기능 > 요소 노드 자식을 \< ProductDescription > 요소입니다.  
+ 이 식에서 제품 카탈로그 XML 문서에 대해 실행 되는 시기에 결과적으로 **ProductModel** 테이블의 모든 요소 노드 자식을 검색 합니다 \<기능 > 요소 노드 자식에는 \< ProductDescription > 요소입니다.  
   
- 경로 식 `/child::PD:ProductDescription/attribute::ProductModelID`, 두 단계로 구성 됩니다. 이 두 단계는 노드 테스트로 노드 이름을 지정합니다. 또한 두 번째 단계에서는 attribute 축을 사용합니다. 그러므로 각 단계는 노드 테스트로 이름이 지정된 축의 주 노드 종류인 노드를 선택합니다. 따라서이 식은 반환 **ProductModelID** 특성 노드는 \<ProductDescription > 요소 노드.  
+ 경로 식 `/child::PD:ProductDescription/attribute::ProductModelID`를 두 단계로 이루어집니다. 이 두 단계는 노드 테스트로 노드 이름을 지정합니다. 또한 두 번째 단계에서는 attribute 축을 사용합니다. 그러므로 각 단계는 노드 테스트로 이름이 지정된 축의 주 노드 종류인 노드를 선택합니다. 따라서이 식은 반환 **ProductModelID** 특성 노드의 \<ProductDescription > 요소 노드.  
   
  노드 테스트에 대해 노드의 이름을 지정할 때 다음 예에서처럼 와일드카드 문자(*)를 사용하여 노드의 로컬 이름 또는 그 네임스페이스 접두사를 지정할 수 있습니다.  
   
@@ -111,13 +111,13 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- 마찬가지로, `/child::ProductDescription/child::Features/child::comment()` 주석 노드 자식을 검색은 \<기능 > 요소 노드 자식을 \<ProductDescription > 요소 노드.  
+ 마찬가지로 `/child::ProductDescription/child::Features/child::comment()` 주석 노드 자식을 검색 합니다 \<기능 > 요소 노드 자식에는 \<ProductDescription > 요소 노드.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 노드 이름과 노드 종류를 비교합니다.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>1. 경로 식에서 노드 테스트로 노드 이름과 노드 유형을 지정한 결과  
- 다음 예제에서는 간단한 XML 문서에 할당 됩니다는 **xml** 유형 변수입니다. 문서는 다른 경로 식을 사용하여 쿼리됩니다. 그런 다음 결과가 비교됩니다.  
+ 다음 예제에서는 간단한 XML 문서에 할당 됩니다는 **xml** 형식 변수입니다. 문서는 다른 경로 식을 사용하여 쿼리됩니다. 그런 다음 결과가 비교됩니다.  
   
 ```  
 declare @x xml  
@@ -221,7 +221,7 @@ WHERE ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   XQuery 프롤로그의 `namespace` 키워드는 쿼리 본문에 사용되는 접두사를 정의합니다. XQuery 프롤로그에 대 한 자세한 내용은 참조 하십시오. [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 합니다.  
+-   XQuery 프롤로그의 `namespace` 키워드는 쿼리 본문에 사용되는 접두사를 정의합니다. XQuery 프롤로그에 대 한 자세한 내용은 참조 하세요 [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 합니다.  
   
 -   경로 식의 세 단계 모두 child 축 및 노드 이름을 노드 테스트로 지정합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_flush_log (Transact SQL) | Microsoft Docs
+title: sys.sp_flush_log (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 010870b0364cd302928fd9e0cc8491133f2283b4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253824"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060240"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33253824"
   
  성능상의 이점 때문에 지연된 트랜잭션 내구성을 사용하도록 선택하지만 서버 충돌이나 장애 조치(Failover) 시 손실되는 데이터 양에 대한 보장 한도도 필요한 경우 정기적으로 `sys.sp_flush_log`를 실행하십시오. 예를 들어, 손실되는 데이터를 x초 이하로 제한하려는 경우 x초마다 `sp_flush_log`를 실행합니다.  
   
- `sys.sp_flush_log`를 실행하면 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 영구적이 됩니다. 개념 항목을 참조 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md) 자세한 정보에 대 한 합니다.  
+ `sys.sp_flush_log`를 실행하면 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 영구적이 됩니다. 개념 항목을 참조 하세요 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md) 자세한 내용은 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

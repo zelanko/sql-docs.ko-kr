@@ -23,29 +23,29 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 02796c6cfe29817c48541a6b42b660ca7b2b0b57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969111"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053721"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 DiffGram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 DiffGram을 실행합니다. 이 응용 프로그램에서 DiffGram 및 XSD 스키마는 파일에 저장됩니다. 응용 프로그램은 지정된 파일에서 DiffGram을 로드합니다. Diffgram (및 연결 된 XSD 스키마) 중 하나를 사용할 수 있습니다에 설명 된 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
+  이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 DiffGram을 실행합니다. 이 응용 프로그램에서 DiffGram 및 XSD 스키마는 파일에 저장됩니다. 응용 프로그램은 지정된 파일에서 DiffGram을 로드합니다. Diffgram과 연결된 된 XSD 스키마 중 하나를 사용할 수 있습니다에 나오는 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
   
  다음은 예제 응용 프로그램의 프로세스입니다.  
   
--   **conn** 개체 (**ADODB 합니다. 연결**) 특정 서버에서 실행 중인 SQL Server 인스턴스에 대 한 연결을 설정 합니다.  
+-   합니다 **conn** 개체 (**ADODB 합니다. 연결**) 특정 서버에서 실행 중인 인스턴스의 SQL Server에 연결 합니다.  
   
--   **cmd** 개체 (**ADODB.Command**) 설정된 된 연결에서 실행 합니다.  
+-   합니다 **cmd** 개체 (**ADODB.Command**) 설정된 된 연결에서 실행 합니다.  
   
 -   명령 언어가 DBGUID_MSSQLXML로 설정됩니다.  
   
 -   DiffGram 명령 스트림에 복사 됩니다 (**strmIn**) 파일에서 합니다.  
   
--   로 설정 된 명령의 출력 스트림에 **StrmOut** 개체 (**ADODB 합니다. 스트림**)를 받는 모든 데이터를 반환 합니다.  
+-   명령의 출력 스트림에로 설정 되는 **StrmOut** 개체 (**ADODB 합니다. Stream**) 나타나면 데이터를 반환 합니다.  
   
--   SQLOLEDB 공급자를 사용하면 기본적으로 Sqlxmlx.dll에서 제공되는 Microsoft SQLXML 기능을 사용할 수 있게 됩니다. SQLOLEDB 공급자로 Sqlxml4.dll을 사용 하는 **SQLXML Version** 속성으로 설정 되어 있어야 **SQLXML.4.0** SQLOLEDB 공급자에서 **연결** 개체입니다.  
+-   SQLOLEDB 공급자를 사용하면 기본적으로 Sqlxmlx.dll에서 제공되는 Microsoft SQLXML 기능을 사용할 수 있게 됩니다. SQLOLEDB 공급자를 통해 Sqlxml4.dll을 사용 하는 **SQLXML Version** 속성으로 설정 되어 있어야 **SQLXML.4.0** SQLOLEDB 공급자 **연결** 개체입니다.  
   
 -   명령(DiffGram)이 실행됩니다.  
   
@@ -91,7 +91,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   
-1.  컴퓨터의 폴더로 있는 DiffGrams 및 해당 XSD 스키마 중 하나에 있는 예제 중 하나에서 복사 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
+1.  컴퓨터의 폴더에 있는 DiffGrams 및 해당 XSD 스키마 중 하나에 있는 예제 중 하나를 복사 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
   
 2.  Visual Basic을 열고 표준 EXE 프로젝트를 만듭니다.  
   

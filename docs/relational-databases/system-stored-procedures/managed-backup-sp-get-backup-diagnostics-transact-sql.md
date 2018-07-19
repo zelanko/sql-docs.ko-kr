@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (Transact SQL) | Microsoft Docs
+title: managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051321"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 인수  
  @xevent_channel  
- 확장 이벤트의 유형입니다. 기본값은 이전 30분 동안 기록된 모든 이벤트를 반환하도록 설정됩니다. 기록된 이벤트는 활성화된 확장 이벤트의 유형에 따라 달라집니다. 이 매개 변수를 사용하여 특정 유형의 이벤트만 표시되도록 저장 프로시저를 필터링할 수 있습니다. 전체 이벤트 이름을 지정 하거나 같은 하위 문자열을 지정할 수 있습니다: **'관리'**, **'Analytic'**, **'Operational'**, 및 **'Debug'** . @event_channel 은 **VARCHAR (255)** 합니다.  
+ 확장 이벤트의 유형입니다. 기본값은 이전 30분 동안 기록된 모든 이벤트를 반환하도록 설정됩니다. 기록된 이벤트는 활성화된 확장 이벤트의 유형에 따라 달라집니다. 이 매개 변수를 사용하여 특정 유형의 이벤트만 표시되도록 저장 프로시저를 필터링할 수 있습니다. 전체 이벤트 이름을 지정 하거나 같은 하위 문자열을 지정할 수 있습니다: **'Admin'**, **'분석'** 를 **'Operational'**, 및 **'Debug'** . 합니다 @event_channel 됩니다 **VARCHAR (255)** 합니다.  
   
- 현재 사용 가능한 형식 사용 이벤트의 목록을 가져오려면는 **managed_backup.fn_get_current_xevent_settings** 함수입니다.  
+ 현재 사용 가능한 형식 사용 이벤트의 목록을 가져오려면 합니다 **managed_backup.fn_get_current_xevent_settings** 함수입니다.  
   
  [@begin_time  
  이벤트가 표시되어야 하는 기간의 시작 시간입니다. @begin_time 매개 변수는 DATETIME 이며 기본값은 NULL입니다. 지정되지 않은 경우 이전 30분의 이벤트가 표시됩니다.  
@@ -65,14 +65,14 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ||||  
 |-|-|-|  
 |열 이름|데이터 형식|Description|  
-|event_type|NVARCHAR (512)|확장 이벤트 유형|  
-|이벤트|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
-|타임스탬프|TIMESTAMP|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
+|event_type|NVARCHAR(512)|확장 이벤트 유형|  
+|이벤트|NVARCHAR(512)|이벤트 로그의 요약입니다.|  
+|타임스탬프|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 필요한 **EXECUTE** 저장된 프로시저에 대 한 합니다. 또한 **VIEW SERVER STATE** 내부적으로 호출 다른 시스템 개체는 이후 사용 권한을 이러한 사용 권한이 필요로 합니다.  
+### <a name="permissions"></a>사용 권한  
+ 필요 **EXECUTE** 저장된 프로시저에 대 한 권한. 또한 필요 **VIEW SERVER STATE** 권한을 내부적으로 다른 시스템 개체를 호출 하므로이 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이전 30분 동안 기록된 모든 이벤트를 반환합니다.  

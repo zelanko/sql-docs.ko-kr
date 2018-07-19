@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 83e100d49f09616c429a1dd6b42550beb8bbcfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058523"
 ---
-# <a name="path-expressions---specifying-predicates"></a>경로 식에서 조건자 지정
+# <a name="path-expressions---specifying-predicates"></a>경로 식-조건자 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  항목에 설명 된 대로 [xquery에서 경로 식](../xquery/path-expressions-xquery.md), 경로 식의 축 단계에는 다음 구성 요소가 포함 됩니다.  
+  항목에 설명 된 대로 [xquery에서 경로 식](../xquery/path-expressions-xquery.md), 경로 식의 축 단계는 다음 구성 요소를 포함 합니다.  
   
 -   [축](../xquery/path-expressions-specifying-axis.md)합니다.  
   
--   노드 테스트. 자세한 내용은 참조 [경로 식 단계에서 노드 테스트 지정](../xquery/path-expressions-specifying-node-test.md)합니다.  
+-   노드 테스트. 자세한 내용은 [경로 식 단계에서 노드 테스트 지정](../xquery/path-expressions-specifying-node-test.md)합니다.  
   
 -   0개 이상의 조건자. 이 구성 요소는 선택 사항입니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33078060"
 ## <a name="predicates"></a>조건자  
  조건자는 지정된 테스트를 적용하여 노드 시퀀스를 필터링하는 데 사용됩니다. 조건자 식은 대괄호로 묶여 있으며 경로 식의 마지막 노드에 바인딩됩니다.  
   
- 예를 들어의 SQL 매개 변수 값 (x)는 **xml** 데이터 형식이 선언 다음에 표시 된 대로:  
+ 예를 들어, 가정의 SQL 매개 변수 값 (x)를 **xml** 데이터 형식이 선언 다음에 표시 된 대로:  
   
 ```  
 declare @x xml  
@@ -144,7 +144,7 @@ WHERE ProductModelID=7
   
      이 쿼리의 경로 식은 LotSize 특성이 지정된 <`Location`> 요소 노드만 반환합니다. 조건자가 특정 <`Location`>에 대해 비어 있는 시퀀스를 반환하는 경우 작업 센터 위치는 결과에 반환되지 않습니다.  
   
-2.  Xs: integer, xs: boolean 또는 노드 값만 될 수 조건자\*합니다. 노드에 대 한\*, 조건자는 모든 노드가 있으면 True이 고 빈 시퀀스에 대해 False로 계산 합니다. double 및 float 유형과 같은 다른 모든 숫자 유형은 정적 형식 지정 오류를 발생시킵니다. 식의 조건자 진리 값은 결과 정수가 컨텍스트 위치의 값과 동일한 경우에만 True입니다. 또한 정수 리터럴 값 및 **last ()** 함수를 1로 필터링 된 단계 식의 카디널리티를 줄입니다.  
+2.  값에는 xs: integer, xs: boolean 또는 노드 가능 조건자\*합니다. 노드에 대 한\*, 조건자는 노드가 없으면 True이 고 빈 시퀀스에 대해 False가 됩니다. double 및 float 유형과 같은 다른 모든 숫자 유형은 정적 형식 지정 오류를 발생시킵니다. 식의 조건자 진리 값은 결과 정수가 컨텍스트 위치의 값과 동일한 경우에만 True입니다. 또한 정수 리터럴 값 및 **last ()** 함수 1 필터링 된 단계 식의 카디널리티를 줄입니다.  
   
      예를 들어 다음 쿼리는 <`Features`> 요소의 세 번째 자식 요소 노드를 검색합니다.  
   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7
   
 3.  조건자 식의 값이 부울 유형의 간단한 유형 값인 경우 조건자 진리 값은 조건자 식의 값과 동일합니다.  
   
-     에 대해 다음 쿼리는 지정 하는 예를 들어 한 **xml**XML 인스턴스인 고객 조사 XML 인스턴스를 보유 하는 유형 변수입니다. 쿼리는 자식이 있는 고객을 검색합니다. 이 쿼리에서 되는 \<HasChildren > 1\</HasChildren > 합니다.  
+     대해 다음 쿼리를 지정 하는 예를 들어를 **xml**XML 인스턴스인 고객 조사 XML 인스턴스를 보유 하는 형식 변수입니다. 쿼리는 자식이 있는 고객을 검색합니다. 이 쿼리에서 겠지요 \<HasChildren > 1\</HasChildren >.  
   
     ```  
     declare @x xml  
@@ -199,9 +199,9 @@ WHERE ProductModelID=7
   
      이전 쿼리에서 다음을 유의하세요.  
   
-    -   식에는 **에 대 한** 루프는 두 단계로 및 두 번째 단계는 조건자를 지정 합니다. 이 조건자의 값은 부울 유형의 값입니다. 이 값이 True이면 조건자의 진리 값도 True입니다.  
+    -   식의 **에 대 한** 루프에는 두 단계가 및 두 번째 단계는 조건자를 지정 합니다. 이 조건자의 값은 부울 유형의 값입니다. 이 값이 True이면 조건자의 진리 값도 True입니다.  
   
-    -   쿼리에서 반환 된 <`Customer`> 요소 자식을, 조건자 값이 True 이면의 \<설문 조사 > 문서 루트의 요소 자식을 합니다. 다음은 결과입니다.  
+    -   쿼리에서 반환 합니다 <`Customer`> 자식 요소에 조건자 값이 True 이면의 \<설문 조사 > 문서 루트 요소 자식을 합니다. 다음은 결과입니다.  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -209,7 +209,7 @@ WHERE ProductModelID=7
   
 4.  조건자 식의 값이 적어도 하나 이상의 노드가 포함된 시퀀스인 경우 조건자 진리 값은 True입니다.  
   
- 다음 쿼리에서 XML 카탈로그 설명이의 자식 요소인 기능이 적어도 하나를 포함 하는 제품 모델에 대 한 ProductModelID를 검색 하는 예를 들어는 <`Features`> 요소와 연결 된 네임 스페이스에서는 **wm**접두사입니다.  
+ 다음 쿼리는 제품 모델의 자식 요소를 하나 이상의 기능이 포함 되어 있어서 XML 카탈로그 설명에 대 한 ProductModelID를 검색 하는 예를 들어를 <`Features`>와 연결 된 네임 스페이스에서 요소를 **wm**접두사입니다.  
   
 ```  
 SELECT ProductModelID  
@@ -225,9 +225,9 @@ WHERE CatalogDescription.exist('
   
 -   WHERE 절은 지정 된 [exist () 메서드 (XML 데이터 형식)](../t-sql/xml/exist-method-xml-data-type.md)합니다.  
   
--   경로 식 내에서 **exist ()** 메서드는 두 번째 단계에서 조건자를 지정 합니다. 조건자 식이 적어도 하나의 기능이 포함된 시퀀스를 반환하는 경우 이 조건자 식의 진리 값은 True입니다. 이 경우 때문에 **exist ()** True를 반환 하는 메서드, ProductModelID가 반환 됩니다.  
+-   안의 경로 식은 합니다 **exist ()** 메서드는 두 번째 단계에서 조건자를 지정 합니다. 조건자 식이 적어도 하나의 기능이 포함된 시퀀스를 반환하는 경우 이 조건자 식의 진리 값은 True입니다. 이 경우 때문에 합니다 **exist ()** True를 반환 하는 메서드, ProductModelID가 반환 됩니다.  
   
 ## <a name="static-typing-and-predicate-filters"></a>정적 형식 지정 및 조건자 필터  
- 조건자는 또한 정적으로 유추된 식의 유형에 영향을 줄 수 있습니다. 정수 리터럴 값 및 **last ()** 함수는 최대 1로 필터링 된 단계 식의 카디널리티를 줄입니다.  
+ 조건자는 또한 정적으로 유추된 식의 유형에 영향을 줄 수 있습니다. 정수 리터럴 값 및 **last ()** 함수 하나만 필터링 된 단계 식의 카디널리티를 줄입니다.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (Transact SQL) | Microsoft Docs
+title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239344"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058041"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,18 +55,18 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> 인수  
  @database_name  
- 백업을 수행할 데이터베이스의 이름입니다. @database_name 은 **SYSNAME**합니다.  
+ 백업을 수행할 데이터베이스의 이름입니다. 합니다 @database_name 됩니다 **SYSNAME**합니다.  
   
  @type  
- 수행할 백업 유형: 데이터베이스 또는 로그입니다. @type 매개 변수는 **nvarchar (32)** 합니다.  
+ 수행할 백업 유형을: 데이터베이스 또는 로그 합니다. 합니다 @type 매개 변수가 **NVARCHAR(32)** 합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 멤버 자격이 필요 **db_backupoperator** 와 데이터베이스 역할 **ALTER ANY CREDENTIAL** 사용 권한 및 **EXECUTE** 에 대 한 권한을 **sp_delete_ backuphistory**저장 프로시저입니다.  
+### <a name="permissions"></a>사용 권한  
+ 멤버 자격이 필요 **db_backupoperator** 사용 하 여 데이터베이스 역할 **ALTER ANY CREDENTIAL** 권한 및 **EXECUTE** 에 대 한 권한을 **sp_delete_ backuphistory**저장 프로시저입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 'TestDB' 데이터베이스에 대한 데이터베이스 백업 요청을 수행합니다. 이 데이터베이스에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되어 있습니다.  

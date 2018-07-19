@@ -1,5 +1,5 @@
 ---
-title: sp_grantlogin (Transact SQL) | Microsoft Docs
+title: sp_grantlogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054221"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,28 @@ sp_grantlogin [@loginame=] 'login'
   
 ## <a name="arguments"></a>인수  
  [ **@loginame =** ] **'***login***'**  
- Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹 형식의 Windows 도메인 이름으로 한정 되어야 합니다 *도메인*\\*사용자*등 **London\Joeb**합니다. *로그인* 은 **sysname**, 기본값은 없습니다.  
+ Windows 사용자 또는 그룹의 이름입니다. Windows 사용자 또는 그룹을 폼에 있는 Windows 도메인 이름으로 한정 되어야 합니다 *도메인*\\*사용자*; 예를 들어 **London\Joeb**합니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_grantlogin** 추가 옵션을 지 원하는 CREATE LOGIN을 호출 합니다. SQL Server 로그인을 만드는 방법에 대 한 정보를 참조 하십시오. [CREATE LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
+## <a name="remarks"></a>Remarks  
+ **sp_grantlogin** 추가 옵션을 지 원하는 CREATE LOGIN을 호출 합니다. SQL Server 로그인을 만드는 방법에 대 한 정보를 참조 하세요 [CREATE LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 `CREATE LOGIN` 만들려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 사용자에 대 한 로그인 `Corporate\BobJ.` 이것은 기본 방법입니다.  
+ 다음 예제에서는 `CREATE LOGIN` 만들려면를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 사용자에 대 한 로그인 `Corporate\BobJ.` 이 것이 좋습니다.  
   
 ```  
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c860bcd21f6c717bae06478ca1ec1194383a75b
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34577985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062521"
 ---
 # <a name="uname-element-xmla"></a>UName 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  부모 고유 이름을 포함 [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) 또는 [멤버](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 요소입니다.  
+  부모의 고유 이름이 포함 되어 있습니다 [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) 하거나 [멤버](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577985"
 </HierarchyInfo>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34577985"
 |자식 요소|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한 **HierarchyInfo** 요소는 **UName** 요소는 고유한 멤버는 계층의 이름을 제공 하는 속성의 이름을 포함 합니다. 이 값은 OLAP용 OLE DB 사양의 축 행 집합에 정의된 MEMBER_UNIQUE_NAME 속성과 같습니다.  
+ 에 대 한 **HierarchyInfo** 요소를 **UName** 요소는 고유한 멤버는 계층의 이름을 제공 하는 속성의 이름을 포함 합니다. 이 값은 OLAP용 OLE DB 사양의 축 행 집합에 정의된 MEMBER_UNIQUE_NAME 속성과 같습니다.  
   
- 에 대 한 **멤버** 요소는 **UName** 요소 부모 고유 이름을 포함 **멤버** 요소입니다.  
+ 에 대 한 **멤버** 요소를 **UName** 요소 부모의 고유 이름이 들어 **멤버** 요소입니다.  
   
 ## <a name="see-also"></a>참고자료
  [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

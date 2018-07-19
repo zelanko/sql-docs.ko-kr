@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact SQL) | Microsoft Docs
+title: managed_backup.sp_set_parameter (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058831"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> 인수  
  @parameter_name  
- 값을 설정하려는 매개 변수의 이름입니다. @parameter_name nvarchar (128)입니다. 사용 가능한 매개 변수 이름은 **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, 및 **StorageOperationDebugXevent**합니다.  
+ 값을 설정하려는 매개 변수의 이름입니다. @parameter_name NVARCHAR(128)입니다. 사용 가능한 매개 변수 이름은 **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**하십시오 **SSMBackup2WAEnableUserDefinedPolicy**를 **FileRetentionDebugXevent**, 및 **StorageOperationDebugXevent**합니다.  
   
  @parameter_value  
- 설정하려는 매개 변수의 값입니다. @parameter 값은 nvarchar (128)입니다.  다음은 허용되는 매개 변수 이름과 값 쌍입니다.  
+ 설정하려는 매개 변수의 값입니다. @parameter value는 NVARCHAR(128)입니다.  다음은 허용되는 매개 변수 이름과 값 쌍입니다.  
   
--   @parameter_name 'SSMBackup2WANotificationEmailIds' =: @parameter_value 'email' =  
+-   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = 'email'  
   
 -   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = { 'true' | 'false' }  
   
--   @parameter_name 'SSMBackup2WADebugXevent' =: @parameter_value = {'t r u e | false'을 (를)  
+-   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value = {'true' | false'}  
   
--   @parameter_name 'FileRetentionDebugXevent' =: @parameter_value = {'t r u e | false'을 (를)  
+-   @parameter_name = 'FileRetentionDebugXevent': @parameter_value = {'true' | false'}  
   
 -   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
   
@@ -75,8 +75,8 @@ EXEC managed_backup.sp_set_parameter
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
- 필요한 **EXECUTE** 에 대 한 권한을 **managed_backup.sp_set_parameter** 저장 프로시저입니다.  
+### <a name="permissions"></a>사용 권한  
+ 필요 **EXECUTE** 에 대 한 권한을 **managed_backup.sp_set_parameter** 저장 프로시저입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 operational 및 debug 확장 이벤트를 사용하도록 설정합니다.  

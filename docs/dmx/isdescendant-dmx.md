@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c33a607587ee19de0f47942cd2c1e5b350229a88
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842876"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061041"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ IsDescendant(<NodeID>)
  부울 유형입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **IsDescendant** 에서만 사용 되는지 [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) 및 [SELECT FROM &#60;모델&#62;합니다. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) 쿼리 합니다.  
+ **IsDescendant** 에서만 사용 됩니다 [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) 하 고 [SELECT FROM &#60;모델&#62;합니다. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) 쿼리 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 IsDescendant 함수에서 지정한 노드의 하위 노드인 사례를 모두 반환합니다.  

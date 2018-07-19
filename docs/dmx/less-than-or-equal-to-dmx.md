@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 12dc7ca07dba7d36e7f65c9c6097b8b42457d3da
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054011"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= (작거나 같음) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

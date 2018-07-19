@@ -22,22 +22,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062104"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 구문 표기 규칙
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) 표기 규칙에 사용 되는 기반으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual STUDIO.NET 참조 설명서입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 표기 규칙에 사용 되는 기반한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual STUDIO.NET 참조 자료입니다.  
   
 |규칙|사용 대상|  
 |----------------|--------------|  
 |대문자|운영 체제 수준에서 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 매크로 이름 및 용어, 텍스트의 파일 이름|  
 |`monospace`|예제 명령줄 및 프로그램 코드입니다.|  
 |*기울임꼴*|텍스트의 변수, 텍스트의 수식 또는 텍스트로 정의된 용어. 구문에서 기울임꼴 문자는 제공하는 정보의 자리 표시자를 나타냅니다.|  
-|**굵게 표시**|SMO 개체, 이벤트, 메서드 또는 속성, 텍스트의 프로그래밍 용어|  
+|**굵게**|SMO 개체, 이벤트, 메서드 또는 속성, 텍스트의 프로그래밍 용어|  
   
   

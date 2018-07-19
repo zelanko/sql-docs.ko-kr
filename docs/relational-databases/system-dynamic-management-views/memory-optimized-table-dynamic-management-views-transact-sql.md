@@ -1,5 +1,5 @@
 ---
-title: 메모리 액세스에 최적화 된 테이블 동적 관리 뷰 (Transact SQL) | Microsoft Docs
+title: 메모리 최적화 테이블 동적 관리 뷰 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da3bf7189d2fb4455b8186a41a24c7d5f546a348
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061571"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>메모리 액세스에 최적화된 테이블 동적 관리 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동적 관리 뷰 (Dmv)와 메모리 내 OLTP 사용 됩니다.  
+  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동적 관리 뷰 (Dmv)는 메모리 내 OLTP를 사용 합니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "34465529"
 
 ### <a name="object-catalog-views"></a>개체 카탈로그 뷰
 
-다음 개체 카탈로그 뷰는 메모리 내 OLTP로 사용 됩니다.
+개체 카탈로그 뷰는 메모리 내 OLTP를 사용 하 여 구체적으로 사용 됩니다.
 
 |||  
 |-|-|   
-|[sys.hash_indexes & #40; Transact SQL & #41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|  
 
 ### <a name="internal-dmvs"></a>내부 Dmv
 
-만 하 고 직접 문서를 제공 하는 것에 대 한 내부 사용을 위해 사용 되는 추가 Dmv 있습니다. 메모리 액세스에 최적화 된 테이블의 영역에서 문서화 되지 않은 Dmv는 다음과 같습니다.
+내부 용도로 및 문서가 없는 직접 제공 하는 추가 Dmv 있습니다. 메모리 최적화 테이블의 영역에서 문서화 되지 않은 Dmv는 다음과 같습니다.
 
 - sys.dm_xtp_threads
 - sys.dm_xtp_transaction_recent_rows

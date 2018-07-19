@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c0578c541c39bdaceede6bff8afdea3d642abcef
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062547"
 ---
 # <a name="tuples-element-xmla"></a>Tuples 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  집합이 포함 되어 [튜플](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) 에 대 한 개체는 [축](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 요소를 사용 하는 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
+  집합을 포함 [튜플](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) 개체에 대 한는 [축](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 사용 하는 요소는 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) 가 반환 되는 데이터 형식이 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576865"
 </Axis>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "34576865"
  클라이언트 응용 프로그램에서 **AxisFormat** 속성을 *TupleFormat*으로 설정하면 축이 튜플 집합으로 표시됩니다. 각 **Axis** 요소는 해당 축의 튜플 집합을 나타내는 **Tuples** 요소를 포함합니다. 각 튜플은 축의 모든 계층에서 [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) 요소를 포함하는 **Tuple** 요소를 사용하여 나타냅니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 구조는 **튜플** 요소는 클라이언트를 지정 하는 경우 *TupleFormat* 또는 *CustomFormat* 에 대 한는 **a x**  XML for Analysis (XMLA) 속성을 축에 대 한 다음과 같은 멤버를 제공 합니다.  
+ 다음 예제에서는의 구조를 보여 줍니다.는 **튜플** 클라이언트를 지정 하는 경우 요소 *TupleFormat* 또는 *CustomFormat* 에 대 한는 **AxisFormat**  XML for Analysis (XMLA) 속성, 축에 대 한 다음과 같은 멤버를 지정 합니다.  
   
 |||||  
 |-|-|-|-|  

@@ -1,5 +1,5 @@
 ---
-title: sys.syscolumns (Transact SQL) | Microsoft Docs
+title: sys.syscolumns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ab6fb39894c7cbe10be6d00d5fc74e782ca5650e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221895"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061952"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -63,19 +63,19 @@ ms.locfileid: "33221895"
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|이 열이 나타나는 행의 오프셋입니다.|  
 |**collationid**|**int**|열 데이터 정렬의 ID입니다. 문자를 기반으로 하지 않는 열의 경우 NULL입니다.|  
-|**상태**|**tinyint**|열 또는 매개 변수의 속성을 설명하는 데 사용되는 비트맵입니다.<br /><br /> 0x08 = 열에 Null 값이 허용됩니다.<br /><br /> 0x10 = ANSI 패딩을 설정할 때 적용 된 **varchar** 또는 **varbinary** 열이 추가 되었습니다. 에 대 한 후행 공백을 유지 하며 **varchar** 후행 0을 유지 하 고 **varbinary** 열입니다.<br /><br /> 0x40 = 매개 변수가 OUTPUT 매개 변수입니다.<br /><br /> 0x80 = 열이 ID 열입니다.|  
+|**상태**|**tinyint**|열 또는 매개 변수의 속성을 설명하는 데 사용되는 비트맵입니다.<br /><br /> 0x08 = 열에 Null 값이 허용됩니다.<br /><br /> 0x10 = ANSI 패딩 때 적용 된 **varchar** 하거나 **varbinary** 열이 추가 되었습니다. 에 대 한 후행 공백을 유지 하며 **varchar** 후행 0을 유지 하 고 **varbinary** 열입니다.<br /><br /> 0x40 = 매개 변수가 OUTPUT 매개 변수입니다.<br /><br /> 0x80 = 열이 ID 열입니다.|  
 |**type**|**tinyint**|물리적 저장소 유형 **sys**. **형식**합니다.|  
 |**usertype**|**smallint**|사용자 정의 데이터 형식의 ID **sys.types**합니다. 데이터 형식 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|이 열의 전체 자릿수 수준입니다.<br /><br /> -1 = **xml** 또는 큰 값 유형입니다.|  
-|**소수 자릿수**|**int**|이 열의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 숫자가 아닙니다.|  
+|**scale**|**int**|이 열의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 숫자가 아닙니다.|  
 |**iscomputed**|**int**|열이 계산되었는지 여부를 나타내는 플래그입니다.<br /><br /> 0 = 계산되지 않았음<br /><br /> 1 = 계산됨|  
 |**isoutparam**|**int**|프로시저 매개 변수가 출력 매개 변수인지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**isnullable**|**int**|열에 Null 값이 허용되는지 여부를 나타냅니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**collation**|**sysname**|열의 데이터 정렬 이름입니다. 문자 기반 열이 아닌 경우 NULL입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

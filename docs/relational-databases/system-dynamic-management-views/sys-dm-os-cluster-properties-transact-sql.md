@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_cluster_properties (Transact SQL) | Microsoft Docs
+title: sys.dm_os_cluster_properties (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 617f40a71074c8480d38e2eb5f59e108ee2d6ff7
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058237"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "34464599"
 
 |열 이름|속성|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|SQL Server 장애 조치(failover) 클러스터에 대한 로깅 수준입니다. 자세한 로깅을 설정하여 오류 로그에 문제 해결을 위한 추가 정보를 제공할 수 있습니다. 다음 값 중 하나입니다.<br /><br /> 0  -  로깅이 해제됩니다(기본값).<br /><br /> 1  -  오류만 로깅됩니다.<br /><br /> 2  -  오류 및 경고가 로깅됩니다.<br /><br /> 자세한 내용은 참조 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)합니다.|  
-|SqlDumperDumpFlags|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성되는 덤프 파일의 형식을 결정하는 SQLDumper 덤프 플래그입니다. 기본 설정은 0입니다.|  
+|VerboseLogging|BIGINT|SQL Server 장애 조치(failover) 클러스터에 대한 로깅 수준입니다. 자세한 로깅을 설정하여 오류 로그에 문제 해결을 위한 추가 정보를 제공할 수 있습니다. 다음 값 중 하나입니다.<br /><br /> 0  -  로깅이 해제됩니다(기본값).<br /><br /> 1  -  오류만 로깅됩니다.<br /><br /> 2  -  오류 및 경고가 로깅됩니다.<br /><br /> 자세한 내용은 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)합니다.|  
+|SqlDumperDumpFlags|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성되는 덤프 파일의 형식을 결정하는 SQLDumper 덤프 플래그입니다. 기본 설정은 0입니다.|  
 |SqlDumperDumpPath|nvarchar(260)|SQLDumper 유틸리티에서 덤프 파일을 생성하는 위치입니다.|  
-|SqlDumperDumpTimeOut|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 시 SQLDumper 유틸리티에서 덤프를 생성하기 위한 제한 시간 값(밀리초)입니다. 기본값은 0입니다.|  
-|FailureConditionLevel|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터가 실패하거나 다시 시작되는 조건을 설정합니다. 기본값은 3입니다. 자세한 내용은 하거나 속성 설정을 변경 하려면 참조 [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)합니다.|  
-|HealthCheckTimeout|bigint|SQL  Server  데이터베이스 엔진 리소스 DLL이 SQL  Server  인스턴스가 응답하지 않는 것으로 간주하기 전에 서버 상태 정보를 기다려야 하는 제한 시간 값입니다. 제한 시간 값은 밀리초로 표시됩니다. 기본값은 60000입니다. 자세한 내용을 보거나이 속성 설정을 변경 하려면 참조 [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)합니다.|  
+|SqlDumperDumpTimeOut|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 시 SQLDumper 유틸리티에서 덤프를 생성하기 위한 제한 시간 값(밀리초)입니다. 기본값은 0입니다.|  
+|FailureConditionLevel|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터가 실패하거나 다시 시작되는 조건을 설정합니다. 기본값은 3입니다. 자세한 내용은 또는 속성 설정을 변경 하려면 참조 [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)합니다.|  
+|HealthCheckTimeout|BIGINT|SQL  Server  데이터베이스 엔진 리소스 DLL이 SQL  Server  인스턴스가 응답하지 않는 것으로 간주하기 전에 서버 상태 정보를 기다려야 하는 제한 시간 값입니다. 제한 시간 값은 밀리초로 표시됩니다. 기본값은 60000입니다. 자세한 내용을 보거나이 속성 설정을 변경 하려면를 참조 하세요 [Configure HealthCheckTimeout Property Settings](../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)합니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

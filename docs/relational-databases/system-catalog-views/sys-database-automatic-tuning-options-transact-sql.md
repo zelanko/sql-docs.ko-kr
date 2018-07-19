@@ -1,6 +1,6 @@
 ---
-title: sys.database_automatic_tuning_options (Transact SQL) | Microsoft Docs
-description: SQL 데이터베이스에서 자동 튜닝 옵션을 확인 하는 방법을 알아봅니다
+title: sys.database_automatic_tuning_options (TRANSACT-SQL) | Microsoft Docs
+description: SQL Database에서 자동 조정 옵션을 확인 하는 방법 알아보기
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 6a9fc30a86c3033264dc723de282caffd03289fd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181249"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065403"
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_자동\_tuning_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -41,20 +41,20 @@ ms.locfileid: "33181249"
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|자동 튜닝 옵션의 이름입니다. 참조 [데이터베이스 설정 AUTOMATIC_TUNING ALTER &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) 사용할 수 있는 옵션에 대 한 합니다.|  
-|**desired_state**|**smallint**|사용자가 명시적으로 설정 하는 자동 튜닝 옵션을 원하는 작업 모드를 나타냅니다.<br />0 = OFF<br />1 = ON|  
-|**desired_state_desc**|**nvarchar(60)**|자동 튜닝 옵션의 원하는 작업 모드의 텍스트 설명입니다.<br />OFF<br />ON|  
-|**actual_state**|**smallint**|자동 튜닝 옵션의 작업 모드를 나타냅니다.<br />0 = OFF<br />1 = ON|  
-|**actual_state_desc**|**nvarchar(60)**|자동 튜닝 옵션의 실제 작동 모드의 텍스트 설명입니다.<br />OFF<br />ON|  
+|**name**|**nvarchar(128)**|자동 튜닝 옵션의 이름입니다. 가리킵니다 [데이터베이스 설정 AUTOMATIC_TUNING ALTER &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) 사용 가능한 옵션에 대 한 합니다.|  
+|**desired_state**|**smallint**|사용자가 명시적으로 설정 하는 자동 조정 옵션을 원하는 작업 모드를 나타냅니다.<br />0 = OFF<br />1 = ON|  
+|**desired_state_desc**|**nvarchar(60)**|원하는 작업 모드를 자동 조정 옵션의 텍스트 설명입니다.<br />OFF<br />ON|  
+|**actual_state**|**smallint**|자동 조정 옵션의 작업 모드를 나타냅니다.<br />0 = OFF<br />1 = ON|  
+|**actual_state_desc**|**nvarchar(60)**|자동 조정 옵션의 실제 작업 모드의 텍스트 설명입니다.<br />OFF<br />ON|  
 |**reason**|**smallint**|실제 및 원하는 상태는 다른 이유를 나타냅니다.<br />2 = 사용 안 함<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar(60)**|실제 및 원하는 상태가 다른 이유는 이유를 나타내는 텍스트 설명입니다.<br />사용 하지 않도록 설정 = 옵션은 시스템에서 사용할 수 있습니다.<br />QUERY_STORE_OFF = 쿼리 저장소가 꺼져 있습니다.<br />QUERY_STORE_READ_ONLY = 쿼리 저장소가 읽기 전용 모드입니다.<br />NOT_SUPPORTED 사용 가능 = 에서만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
+|**reason_desc**|**nvarchar(60)**|실제 및 원하는 상태 다른 이유는 이유에 대 한 텍스트 설명입니다.<br />사용 안 함 = 옵션은 시스템에서 사용할 수 있습니다.<br />QUERY_STORE_OFF = 쿼리 저장소가 해제 됨<br />QUERY_STORE_READ_ONLY = 읽기 전용 모드에서 쿼리 저장소는<br />NOT_SUPPORTED 사용 가능 = 에서만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `VIEW DATABASE STATE` 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [ALTER 데이터베이스 집합 AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+## <a name="see-also"></a>관련 항목  
+ [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+ [ALTER DATABASE SET AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

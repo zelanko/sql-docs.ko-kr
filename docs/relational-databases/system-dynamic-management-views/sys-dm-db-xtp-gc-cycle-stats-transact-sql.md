@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cf11f8672c16b1a8c6ae3fd4676f69381d74bc72
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061391"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "34464119"
   
 -   세대-0: 가장 오래 된 활성 트랜잭션 이전에 커밋된 모든 트랜잭션을 저장 합니다. 이러한 트랜잭션으로 생성된 행 버전은 가비지 수집에 즉시 사용할 수 있습니다.  
   
--   세대 1-14: 가장 오래 된 활성 트랜잭션보다 큰 타임 스탬프가 포함 된 트랜잭션을 저장 합니다. 행 버전은 가비지 수집될 수 없습니다. 각 세대는 최대 16개의 트랜잭션을 보유할 수 있습니다. 총 224(14*16)개 트랜잭션이 이 세대에 존재할 수 있습니다.  
+-   세대 1-14: 가장 오래 된 활성 트랜잭션보다 큰 타임 스탬프를 사용 하 여 트랜잭션을 저장 합니다. 행 버전은 가비지 수집될 수 없습니다. 각 세대는 최대 16개의 트랜잭션을 보유할 수 있습니다. 총 224(14*16)개 트랜잭션이 이 세대에 존재할 수 있습니다.  
   
--   세대 15: 가장 오래 된 활성 트랜잭션보다 큰 타임 스탬프가 포함 된 나머지 트랜잭션은 세대 15로 이동 합니다. 세대-0과 유하사게 세대-15에는 트랜잭션 수 제한이 없습니다.  
+-   세대 15: 가장 오래 된 활성 트랜잭션보다 큰 타임 스탬프가 포함 된 나머지 트랜잭션은 세대 15로 이동합니다. 세대-0과 유하사게 세대-15에는 트랜잭션 수 제한이 없습니다.  
   
  메모리 가중이 있는 경우 가비지 수집기 스레드가 가장 오래된 활성 트랜잭션 힌트를 적극적으로 업데이트하고, 이는 가비지 수집을 강제로 수행합니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|가비지 수집 주기에 대한 고유 식별자입니다.|  
 |ticks_at_cycle_start|**bigint**|주기가 시작된 시간의 틱입니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "34464119"
 |xacts_copied_to_local|**bigint**|트랜잭션 파이프라인에서 데이터베이스의 생성 배열로 복사하는 트랜잭션 수입니다.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|각 세대의 트랜잭션 수입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="usage-scenario"></a>사용 시나리오  
@@ -95,7 +95,7 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

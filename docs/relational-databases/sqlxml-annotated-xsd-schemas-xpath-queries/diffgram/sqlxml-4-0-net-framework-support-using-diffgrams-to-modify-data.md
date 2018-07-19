@@ -1,5 +1,5 @@
 ---
-title: Diffgram을 사용 하 여 SQLXML 4.0의에서 데이터를 수정 | Microsoft Docs
+title: DiffGrams을 사용 하 여 SQLXML 4.0의에서 데이터를 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -32,15 +32,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053831"
 ---
-# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0.NET Framework 지원-Diffgram을 사용 하 여 데이터를 수정 하려면
+# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0.NET Framework 지원-DiffGrams을 사용 하 여 데이터를 수정 하려면
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  에 도입 된 DiffGram 형식은 **DataSet** 의 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 합니다. .NET Framework 내에서 DiffGram을 만들고 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에 있는 데이터를 수정할 수 있습니다.  
+  DiffGram 형식은에서 도입 되었습니다 합니다 **데이터 집합** 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework입니다. .NET Framework 내에서 DiffGram을 만들고 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에 있는 데이터를 수정할 수 있습니다.  
   
 > [!NOTE]  
 >  이 섹션에서는 DiffGram을 간략하게 소개하고 DiffGram 사용 방법의 예를 제공합니다. 사용자가 .NET Framework의 DiffGram에 대해 잘 알고 있다고 가정합니다. 이 설명서에서는 SQLXML과 관련된 DiffGram 문제를 중점적으로 다룹니다.  

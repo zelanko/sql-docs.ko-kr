@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_nodes (Transact SQL) | Microsoft Docs
+title: sys.dm_exec_compute_nodes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,29 +27,29 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2e0c2b19e9d790e25f78b88160b96a5f0d4d9eb8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061561"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase 데이터 관리에 사용 되는 노드에 대 한 정보를 보유 합니다. 노드당 한 행을 나열합니다.  
+  PolyBase 데이터 관리를 사용 하는 노드에 대 한 정보를 보유 합니다. 노드당 하나의 행을 나열합니다.  
   
- 이 DMV를 사용 하 여 자신의 역할, 이름 및 IP 주소를 사용 하 여 스케일 아웃 클러스터의 모든 노드 목록을 볼 수 있습니다.  
+ 이 DMV를 사용 하 여 자신의 역할, 이름 및 IP 주소를 사용 하 여 확장 클러스터에서 모든 노드의 목록을 참조 하세요.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|형식에 관계 없이 스케일 아웃 클러스터 전체에서 고유 합니다.|  
-|유형|**nvarchar(32)**|노드의 유형입니다.|' COMPUTE', '헤드'|  
-|name|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
+|compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|형식에 관계 없이 확장 클러스터에서 고유 합니다.|  
+|유형|**nvarchar(32)**|노드의 형식입니다.|' 계산 ', 'HEAD'|  
+|NAME|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 P 주소입니다.|IP 주소 범위|  
   
-## <a name="see-also"></a>관련 항목:  
- [PolyBase 동적 관리 뷰를 사용한 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>관련 항목  
+ [PolyBase 동적 관리 뷰를 사용 하 여 문제 해결](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

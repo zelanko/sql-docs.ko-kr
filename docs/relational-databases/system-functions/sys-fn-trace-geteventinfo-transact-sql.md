@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_geteventinfo (Transact SQL) | Microsoft Docs
+title: sys.fn_trace_geteventinfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33234509"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051311"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="arguments"></a>인수  
  *trace_id*  
- 추적의 ID입니다. *trace_id* 은 **int**, 기본값은 없습니다.  
+ 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
@@ -61,7 +61,7 @@ fn_trace_geteventinfo ( trace_id )
 |**columnid**|**int**|각 이벤트에 대해 수집한 모든 열의 ID|  
   
 ## <a name="remarks"></a>Remarks  
- 특정 추적의 ID를 전달 하면 **fn_trace_geteventinfo** 해당 추적에 대 한 정보를 반환 합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다.  
+ 에 특정 추적의 ID를 전달 하면 **fn_trace_geteventinfo** 해당 추적에 대 한 정보를 반환 합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  

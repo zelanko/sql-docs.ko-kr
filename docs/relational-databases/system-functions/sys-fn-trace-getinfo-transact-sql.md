@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_getinfo (Transact SQL) | Microsoft Docs
+title: sys.fn_trace_getinfo (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f709ba43a3dda3b219c083449869a6963da003f5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056197"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,24 +50,24 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>인수  
  *trace_id*  
- 추적의 ID입니다. *trace_id* 은 **int**합니다.  올바른 입력은 추적의 ID 번호, NULL, 0 또는 DEFAULT입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 추적에 대한 정보를 반환하려면 NULL, 0 또는 DEFAULT를 지정합니다.  
+ 추적의 ID입니다. *trace_id* 됩니다 **int**합니다.  올바른 입력은 추적의 ID 번호, NULL, 0 또는 DEFAULT입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 추적에 대한 정보를 반환하려면 NULL, 0 또는 DEFAULT를 지정합니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|추적의 ID입니다.|  
-|속성|**int**|추적의 속성입니다.<br /><br /> 1= 추적 옵션. 자세한 내용은 참조 @options 에 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)합니다.<br /><br /> 2 = 파일 이름<br /><br /> 3 = 최대 크기<br /><br /> 4 = 중지 시간<br /><br /> 5 = 현재 추적 상태. 0 = 중지됨. 1 = 실행 중.|  
+|속성|**int**|추적의 속성입니다.<br /><br /> 1= 추적 옵션. 자세한 내용은 @options 에 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)합니다.<br /><br /> 2 = 파일 이름<br /><br /> 3 = 최대 크기<br /><br /> 4 = 중지 시간<br /><br /> 5 = 현재 추적 상태. 0 = 중지됨. 1 = 실행 중.|  
 |value|**sql_variant**|지정된 추적의 속성에 대한 정보입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  fn_trace_getinfo에 특정 추적의 ID를 전달하면 해당 추적에 대한 정보가 반환되고 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다.  
   
- fn_trace_getinfo는 해당 결과 집합에 포함된 모든 추적 파일 이름에 .trc 확장명을 추가합니다. 추적 정의에 대 한 정보를 참조 하십시오. [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)합니다. 추적 필터에 대 한 유사한 정보를 참조 하십시오. [sys.fn_trace_getfilterinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)합니다.  
+ fn_trace_getinfo는 해당 결과 집합에 포함된 모든 추적 파일 이름에 .trc 확장명을 추가합니다. 추적 정의에 대 한 정보를 참조 하세요 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)합니다. 추적 필터에 대 한 유사한 정보를 참조 하세요. [sys.fn_trace_getfilterinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)합니다.  
   
- 추적 저장 프로시저를 사용 하 여의 전체 예제를 참조 하십시오. [추적을 만들고 &#40;TRANSACT-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)합니다.  
+ 추적 저장 프로시저를 사용 하는 전체 예제를 참조 하세요 [추적을 만들고 &#40;TRANSACT-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -78,7 +78,7 @@ SELECT * FROM sys.fn_trace_getinfo(0) ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   

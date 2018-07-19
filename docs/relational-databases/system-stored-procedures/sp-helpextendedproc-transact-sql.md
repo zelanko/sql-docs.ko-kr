@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (Transact SQL) | Microsoft Docs
+title: sp_helpextendedproc (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052251"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="arguments"></a>인수  
  [  **@funcname =**] **'***프로시저***'**  
- 정보를 보고할 확장 저장 프로시저의 이름입니다. *프로시저* 은 **sysname**, 기본값은 NULL입니다.  
+ 정보를 보고할 확장 저장 프로시저의 이름입니다. *프로시저* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -60,11 +60,11 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**name**|**sysname**|확장 저장 프로시저의 이름입니다.|  
 |**dll**|**nvarchar(255)**|DLL의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
- 때 *프로시저* 지정 된 **sp_helpextendedproc** 보고서에 지정 된 확장 저장된 프로시저입니다. 이 매개 변수가 제공 되지 않으면 **sp_helpextendedproc** 속한 모든 확장 저장된 프로시저 이름과 각 확장 저장된 프로시저 DLL 이름을 반환 합니다.  
+## <a name="remarks"></a>Remarks  
+ 때 *프로시저* 를 지정 하면 **sp_helpextendedproc** 확장 저장된 프로시저를 지정 된 보고서. 이 매개 변수가 제공 되지 않은 경우 **sp_helpextendedproc** 속한 모든 확장 저장된 프로시저 이름과 각 확장 저장된 프로시저 DLL 이름을 반환 합니다.  
   
-## <a name="permissions"></a>Permissions  
- 실행할 수 있는 권한이 **sp_helpextendedproc** 에 부여 **공용**합니다.  
+## <a name="permissions"></a>사용 권한  
+ 실행할 수 있는 권한이 **sp_helpextendedproc** 에 부여 됩니다 **공용**합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>2. 단일 확장 저장 프로시저에 관한 도움말 보고  
- 다음 예제에서는 예제에서 `xp_cmdshell` 확장 저장된 프로시저입니다.  
+ 다음 예에서는 보고를 `xp_cmdshell` 확장 저장된 프로시저입니다.  
   
 ```  
 USE master;  
@@ -88,7 +88,7 @@ EXEC sp_helpextendedproc xp_cmdshell;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

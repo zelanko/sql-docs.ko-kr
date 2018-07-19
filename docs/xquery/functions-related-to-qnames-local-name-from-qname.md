@@ -1,5 +1,5 @@
 ---
-title: 로컬 이름-에서-QName (XQuery) | Microsoft Docs
+title: 로컬-이름-에서-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077760"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061361"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>Qname-QName의 로컬 이름와 관련 된 함수
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>QName의 로컬 이름 QNames 관련 함수
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정 된 QName의 로컬 부분을 나타내는 xs: ncname을 반환 *$arg*합니다. 결과 빈 시퀀스 *$arg* 빈 시퀀스입니다.  
+  지정 된 QName의 로컬 부분을 나타내는 ncname을 반환 *$arg*합니다. 결과 빈 시퀀스 *$arg* 빈 시퀀스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  로컬 이름이 추출되어야 하는 QName입니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
+ 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
- 다음 예제에서는 **local-name-from-qname ()** QName 유형 값에서 로컬 이름 및 네임 스페이스 URI 검색 하려면 함수 부분입니다. 이 예에서는 다음을 수행합니다.  
+ 다음 예제에서는 합니다 **local-name-from-qname ()** QName 유형 값에서 파트를 로컬 이름과 네임 스페이스 URI 검색 하는 함수입니다. 이 예에서는 다음을 수행합니다.  
   
 -   XML 스키마 컬렉션을 만듭니다.  
   
 -   xml 유형 열이 있는 테이블을 만듭니다. xml 유형은 XML 스키마 컬렉션을 사용하여 형식화됩니다.  
   
--   예제 XML 인스턴스를 테이블에 저장합니다. 사용 하 여 **query ()** 인스턴스에서 QName 유형 값의 로컬 이름 부분을 검색 하 여 쿼리 식에서 xml 데이터 형식의 메서드를 실행 합니다.  
+-   예제 XML 인스턴스를 테이블에 저장합니다. 사용 하는 **query ()** 인스턴스에서 QName 유형 값의 로컬 이름 부분을 검색할 xml 데이터 형식, 쿼리 식의 메서드를 실행 합니다.  
   
 ```  
 DROP TABLE T  
@@ -81,7 +81,7 @@ FROM T
 -- Result = http://someURI  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Qname 관련 함수 &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+## <a name="see-also"></a>관련 항목  
+ [QNames 관련 함수 &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

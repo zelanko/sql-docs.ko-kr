@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971978"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051461"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "32971978"
   
  이 예제 응용 프로그램에서는 다음 작업이 수행됩니다.  
   
--   **conn** 개체 (**ADODB 합니다. 연결**)의 실행 중인 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 서버 컴퓨터에 있습니다.  
+-   합니다 **conn** 개체 (**ADODB 합니다. 연결**)에 연결 하는 실행 중인 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 서버 컴퓨터입니다.  
   
--   **cmd** 개체 (**ADODB.Command**) 설정된 된 연결에서 실행 합니다.  
+-   합니다 **cmd** 개체 (**ADODB.Command**) 설정된 된 연결에서 실행 합니다.  
   
 -   명령 언어가 DBGUID_MSSQLXML로 설정됩니다.  
   
--   Updategram이 명령 스트림에 복사 됩니다 (**strmIn**).  
+-   Updategram은 명령 스트림에 복사 됩니다 (**strmIn**).  
   
--   로 설정 된 명령의 출력 스트림에 **StrmOut** 개체 (**ADODB 합니다. 스트림**)를 받는 모든 데이터를 반환 합니다.  
+-   명령의 출력 스트림에로 설정 되는 **StrmOut** 개체 (**ADODB 합니다. Stream**) 나타나면 데이터를 반환 합니다.  
   
 -   최종적으로 명령(updategram)이 실행됩니다.  
   
@@ -189,7 +189,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>매개 변수 전달  
- 앞서 살펴보았던 Visual Basic 응용 프로그램에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에는 **ContactID** 및 **MiddleName** 값으로 updategram에 매개 변수가 있는 입력으로 전달 됩니다.  
+ 앞서 살펴보았던 Visual Basic 응용 프로그램에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에는 **ContactID** 하 고 **MiddleName** 값으로 updategram에 매개 변수화 된 입력으로 전달 됩니다.  
   
 ```vb  
 Private Sub Form_Load()  

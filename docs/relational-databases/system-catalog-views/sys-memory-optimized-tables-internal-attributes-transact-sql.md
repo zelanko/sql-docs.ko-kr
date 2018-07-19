@@ -1,5 +1,5 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (Transact SQL) | Microsoft Docs
+title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058215"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33180439"
 |type_desc| **nvarchar(60)**|   유형에 대한 설명<br/><br/>DELETED_ROWS_TABLE -> columnstore 인덱스에 대해 삭제된 행을 추적하는 내부 테이블<br/>USER_TABLE-> 행 내부 사용자 데이터를 포함한 테이블<br/>DICTIONARIES_TABLE -> columnstore 인덱스에 대한 사전<br/>SEGMENTS_TABLE -> columnstore 인덱스에 대해 압축된 세그먼트<br/>ROW_GROUPS_INFO_TABLE -> columnstore 인덱스의 압축된 행 그룹에 대한 메타데이터<br/>INTERNAL OFF-ROW DATA TABLE -> 행 외부 열 저장소에 사용되는 내부 테이블. 이 경우 minor_id는 column_id를 반영합니다.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> 디스크 기반 이력 테이블의 핫 테일(Hot tail) 기록에 삽입할 행이 먼저 이 내부 메모리 최적화 테이블에 삽입됩니다. 내부 테이블의 행이 디스크 기반 기록 테이블로 비동기적으로 이동하는 백그라운드 작업이 있습니다. |
 |minor_id|  **int**|    0은 사용자 또는 내부 테이블을 나타냅니다.<br/><br/>0이 아니면 행 외부에 저장된 열 ID를 나타냅니다. sys.columns의 column_id와 조인합니다.<br/><br/>행 외부에서 저장된 각 열에는 이 시스템 보기에 해당하는 열이 있습니다.|
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
@@ -102,7 +102,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>3. 메모리 최적화 테이블에서 columnstore 인덱스의 메모리 사용량 반환
 
-다음 쿼리를 사용 하 여 메모리 액세스에 최적화 된 테이블에 columnstore 인덱스의 메모리 사용량을 표시 하도록 합니다.
+다음 쿼리를 사용 하 여 메모리 최적화 테이블에서 columnstore 인덱스의 메모리 사용량을 보여 줍니다.
 
 ```Transact-SQL
 SELECT
@@ -118,7 +118,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-다음 쿼리 되면서 메모리 소비를 사용 하 여 메모리 액세스에 최적화 된 테이블에서 columnstore 인덱스에 사용 되는 내부 구조에서:
+메모리 최적화 테이블에서 columnstore 인덱스에 사용 되는 내부 구조에서 다음 쿼리 되면서 메모리 소비를 사용 합니다.
 
 ```Transact-SQL
 SELECT

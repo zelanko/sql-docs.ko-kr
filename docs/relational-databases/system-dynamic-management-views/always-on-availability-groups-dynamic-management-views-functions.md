@@ -1,5 +1,5 @@
 ---
-title: 항상 가용성 그룹 동적 관리 뷰-를 함수 | Microsoft Docs
+title: Always On 가용성 그룹 동적 관리 뷰-함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 423b4281691b4be9bef3305bdb6599f1c75b5804
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061541"
 ---
-# <a name="always-on-availability-groups-dynamic-management-views---functions"></a>항상 가용성 그룹 동적 관리 뷰-를 함수합니다
+# <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 가용성 그룹 동적 관리 뷰-함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에서는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]과 관련된 동적 관리 뷰 및 함수에 대해 설명합니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "34464549"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목:  
- [AlwaysOn 가용성 그룹 & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
