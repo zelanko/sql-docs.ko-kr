@@ -1,5 +1,5 @@
 ---
-title: sp_revokelogin (Transact SQL) | Microsoft Docs
+title: sp_revokelogin (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0d59e993563b340b7016887720fb8f3638dca247
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252665"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005466"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,27 +48,27 @@ sp_revokelogin [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>인수  
  [  **@loginame=**] **'***로그인***'**  
- Windows 사용자 또는 그룹의 이름입니다. *로그인* 은 **sysname**, 기본값은 없습니다. *로그인* 모든 기존 Windows 사용자 이름 또는 형태로 그룹이 될 수 *컴퓨터 이름*\\*사용자 또는 도메인*\\*사용자*합니다.  
+ Windows 사용자 또는 그룹의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 모든 기존 Windows 사용자 이름 또는 형식에서 그룹이 될 수 있습니다 *컴퓨터 이름*\\*사용자나 도메인*\\*사용자*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_revokelogin** 지정 하는 계정을 사용 하 여 연결을 사용 하지 않도록 설정 된 *로그인* 매개 변수입니다. 그러나 Windows 그룹의 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한이 부여된 Windows 사용자는 개별 액세스 권한이 취소된 후에도 그룹 멤버 자격으로 계속 연결할 수 있습니다. 마찬가지로, 하는 경우는 *로그인* Windows 그룹의 이름을 지정 하는 매개 변수를 별도로 된 해당 그룹의 멤버의 인스턴스에 대 한 액세스를 부여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결할 수 있습니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_revokelogin** 지정 하는 계정을 사용 하 여 연결을 사용 하지 않도록 설정 합니다 *로그인* 매개 변수입니다. 그러나 Windows 그룹의 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한이 부여된 Windows 사용자는 개별 액세스 권한이 취소된 후에도 그룹 멤버 자격으로 계속 연결할 수 있습니다. 마찬가지로, 경우 합니다 *로그인* Windows 그룹의 이름을 지정 하는 매개 변수를 별도로 된 해당 그룹의 구성원의 인스턴스에 대 한 액세스를 부여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결할 수 있습니다.  
   
- 예를 들어 경우 Windows 사용자 **ADVWORKS\john** Windows 그룹의 멤버인 **ADVWORKS\Admins**, 및 **sp_revokelogin** 의 액세스 권한을 취소 `ADVWORKS\john`:  
+ 예를 들어, 경우 Windows 사용자 **ADVWORKS\john** Windows 그룹의 멤버인 **ADVWORKS\Admins**, 및 **sp_revokelogin** 의 액세스 권한도 해지 `ADVWORKS\john`:  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- 사용자 **ADVWORKS\john** 하는 경우에 연결할 수 있습니다 **ADVWORKS\Admins** 의 인스턴스에 대 한 액세스 권한이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 마찬가지로, 하는 경우 Windows 그룹 **ADVWORKS\Admins** 의 액세스 하지만 **ADVWORKS\john** , 액세스 권한이 부여 됩니다 **ADVWORKS\john** 계속 연결할 수 있습니다.  
+ 사용자 **ADVWORKS\john** 경우에 연결할 수 있습니다 **ADVWORKS\Admins** 인스턴스에 대 한 액세스를 부여한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 마찬가지로, 경우 Windows 그룹 **ADVWORKS\Admins** 에 대 한 액세스를 취소 하지만 **ADVWORKS\john** 액세스 권한이 부여 됩니다 **ADVWORKS\john** 계속 연결할 수 있습니다.  
   
- 사용 하 여 **sp_denylogin** 의 인스턴스에 연결 하는 것을 명시적으로 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 그룹 멤버 자격에 관계 없이 합니다.  
+ 사용 하 여 **sp_denylogin** 의 인스턴스에 연결 하는 것을 명시적으로 못하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]해당 Windows 그룹 멤버 자격에 관계 없이 합니다.  
   
  **sp_revokelogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -84,9 +84,9 @@ EXEC sp_revokelogin 'Corporate\MollyA';
 EXEC sp_revokelogin [Corporate\MollyA];  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP login& #40; Transact SQL & #41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_droplogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   

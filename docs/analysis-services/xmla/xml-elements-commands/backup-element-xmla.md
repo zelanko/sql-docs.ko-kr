@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007153"
 ---
 # <a name="backup-element-xmla"></a>Backup 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  백업 파일에는 Analysis Services 데이터베이스를 백업 합니다.  
+  Analysis Services 데이터베이스를 백업 파일로 백업 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34574215"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -51,10 +51,10 @@ ms.locfileid: "34574215"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md), [파일](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [위치](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [ 개체](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [암호](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [보안](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)|  
+|자식 요소|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)합니다 [BackupRemotePartitions](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)를 [파일](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)를 [위치](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [ 개체](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)하십시오 [암호](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [보안](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **백업** 명령은 백업는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 데이터베이스는 [개체](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) 요소를 백업 파일 및 필요에 따라 원격 파티션 원격 백업 파일에 백업 합니다. 경우는 **개체** 요소 이외의 다른 개체를 참조 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스 오류가 발생 합니다.  
+ 합니다 **백업** 명령은 백업 합니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 데이터베이스를 [개체](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) 백업 파일 및 필요에 따라 원격 파티션 원격 백업 파일을 백업 하는 요소입니다. 경우는 **개체** 요소가 아닌 다른 개체 참조는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스 오류가 발생 합니다.  
   
  데이터베이스의 개체에서 사용하는 저장소 모드에 따라 **Backup** 명령으로 백업되는 정보가 달라집니다. 다음 표에서는 사용하는 저장소 모드에 따라 백업되는 정보를 설명합니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "34574215"
 |HOLAP(하이브리드 OLAP)|집계 및 메타데이터|  
 |ROLAP(관계형 OLAP)|메타데이터|  
   
- 중는 **백업** 명령에 공유 잠금이 적용 되는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 데이터베이스는 **개체** 요소입니다. **Backup** 명령이 완료된 후에는 공유 잠금이 해제됩니다.  
+ 중를 **백업** 명령에 공유 잠금이 적용 되는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 지정 된 데이터베이스를 **개체** 요소. **Backup** 명령이 완료된 후에는 공유 잠금이 해제됩니다.  
   
- 여러 **백업** 명령에 포함 된 경우 병렬로 명령을 실행할 수 있습니다는 [병렬](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) 의 컬렉션을 [일괄 처리](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 명령입니다. **Parallel** 컬렉션을 사용하면 데이터베이스를 여러 백업 파일에 동시에 백업할 수 있습니다.  
+ 여러 **백업** 명령에 포함 된 경우 명령을 병렬로 실행할 수 있습니다 합니다 [병렬](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) 의 컬렉션을 [일괄 처리](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) 명령입니다. **Parallel** 컬렉션을 사용하면 데이터베이스를 여러 백업 파일에 동시에 백업할 수 있습니다.  
   
- 데이터베이스 백업 및 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 백업 및 데이터베이스를 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 > [!IMPORTANT]  
 >  백업 명령을 실행하는 사용자에게는 각 백업 파일에 대해 지정한 백업 위치에 쓸 수 있는 권한이 있어야 합니다. 또한 사용자는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대한 서버 역할의 멤버이거나 백업할 데이터베이스에 대한 모든 권한(관리자 권한)이 있는 데이터베이스 역할의 멤버여야 합니다.  

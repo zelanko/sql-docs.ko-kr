@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007184"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  다른 기존 데이터베이스와 Analysis Services 데이터베이스를 동기화합니다.  
+  Analysis Services 데이터베이스를 기존의 다른 데이터베이스와 동기화합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34574565"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34574565"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|자식 요소|[ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [위치](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [소스](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md), [SynchronizeSecurity](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)|  
+|자식 요소|[ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md)하십시오 [위치](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md)를 [소스](../../../analysis-services/xmla/xml-elements-properties/source-element-synchronize-xmla.md), [SynchronizeSecurity](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
  **Synchronize** 명령은 대상 데이터베이스를 **Source** 요소에 지정된 원본 인스턴스 및 데이터베이스와 동기화합니다. 필요에 따라 **Synchronize** 명령은 원본 데이터베이스에 정의된 원격 파티션을 동기화합니다.  
@@ -62,12 +62,12 @@ ms.locfileid: "34574565"
   
  **Synchronize** 명령 중에는 원본 데이터베이스에 읽기 잠금이 적용되고 대상 데이터베이스에 쓰기 잠금이 적용됩니다. 두 잠금은 모두 **Synchronize** 명령이 완료된 후 해제됩니다.  
   
- 데이터베이스 동기화 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
+ 데이터베이스를 동기화 하는 방법에 대 한 자세한 내용은 참조 하세요. [Backing Up, Restoring, and 데이터베이스 동기화 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
  [요소를 백업 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [요소를 일괄 처리 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [요소를 병렬 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
+ [병렬 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
  [Restore 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
  [명령 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   

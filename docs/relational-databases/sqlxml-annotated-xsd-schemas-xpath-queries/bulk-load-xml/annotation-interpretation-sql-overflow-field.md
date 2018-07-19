@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-(SQLXML 4.0) | Microsoft Docs
+title: sql:overflow-필드 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970228"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005816"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>주석 해석-sql:overflow-필드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 사용 하 여 스키마에 지정 된 **sql:overflow-필드** 주석입니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
+  스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 사용 하 여 스키마에 지정 된 **sql:overflow-필드** 주석. 오버플로 열을 여러 개 지정할 수도 있습니다.  
   
- 이 있는 XML 노드 (요소 또는 특성)는 **sql:overflow-필드** 주석이 정의 범위 시작, 오버플로 열에 활성화 되 고 사용 되지 않은 데이터를 받습니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
+ 때마다이 있는 XML 노드 (요소 또는 특성)를 **sql:overflow-필드** 범위로 정의 주석을 입력, 오버플로 열에 활성화 되 고 사용 되지 않은 데이터를 수신 합니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
   
- 오버플로 열에 데이터를 저장할 때 XML 대량 로드에도 저장 및 부모 요소에 닫는 태그를 **sql:overflow-필드** 정의 됩니다.  
+ 오버플로 열에 데이터를 저장할 때 XML 대량 로드에도 저장와 부모 요소의 닫는 태그는 **sql:overflow-필드** 정의 됩니다.  
   
- 예를 들어 다음 스키마에 설명 된  **\<고객 >** 및  **\<CustOrder >** 요소입니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어 다음 스키마에 설명 합니다  **\<고객 >** 하 고  **\<CustOrder >** 요소입니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -80,9 +80,9 @@ ms.locfileid: "32970228"
 </xsd:schema>  
 ```  
   
- 스키마에는  **\<고객 >** 요소는 Cust 테이블에 매핑됩니다 및  **\<순서 >** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에는  **\<고객 >** 요소는 Cust 테이블에 매핑합니다 및  **\<순서 >** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- 두는  **\<고객 >** 및  **\<순서 >** 요소는 오버플로 열을 식별 합니다. 요소와 특성 XML 대량 로드에서 소비 되지 않은 모든 자식을 저장 하는 따라서는  **\<고객 >** Cust 테이블의 오버플로 열에는 요소 및 모든 소비 되지 않은 자식 요소 및 특성은 의 **\<순서 >** CustOrder 테이블의 오버플로 열에는 요소입니다.  
+ 모두를  **\<고객 >** 하 고  **\<순서 >** 오버플로 열을 식별 하는 요소입니다. 요소 및 특성의 XML 대량 로드에서 사용 되지 않은 모든 자식을 저장 하는 따라서 합니다  **\<고객 >** Cust 테이블의 오버플로 열에는 요소 및 모든 사용 되지 않은 자식 요소 및 특성을  **\<순서 >** CustOrder 테이블의 오버플로 열에는 요소입니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

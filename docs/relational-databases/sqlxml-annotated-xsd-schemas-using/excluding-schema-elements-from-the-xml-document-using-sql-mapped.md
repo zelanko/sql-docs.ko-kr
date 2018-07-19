@@ -29,29 +29,29 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969838"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001245"
 ---
-# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된
+# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 지정할 수는 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 XML에 표시 되지 않는 XSD 스키마에 요소를 만들 하려는 경우는 **sql: 매핑된** 주석입니다.  
+  기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 xml에서에 나타나지 않는 XSD 스키마에서 요소를 만들 하려는 경우 지정할 수 있습니다 합니다 **sql: 매핑된** 주석입니다.  
   
- **sql: 매핑된** 주석은 스키마를 수정할 수 없습니다 또는 스키마에서 XML 유효성 검사를 사용 하는 경우 다른 원본 아직 데이터를 포함 하며 데이터베이스에 저장 되지 않은 경우에 특히 유용 합니다. **sql: 매핑된** 주석에서와 다른 **sql:은 상수** 점에서 XML 문서에 매핑되지 않은 요소 및 특성이 표시 되지 않습니다.  
+ 합니다 **sql: 매핑된** 주석은 원본 및 데이터베이스에 저장 되지 않은 데이터를 포함 하지만 다른 스키마에서 XML 유효성 검사를 사용 하는 경우 또는 스키마를 수정할 수 없습니다 경우에 특히 유용 합니다. 합니다 **sql: 매핑된** 주석에서 다릅니다 **sql:은 상수** 는 매핑되지 않은 요소 및 특성을 XML 문서에 표시 되지 않습니다.  
   
- **sql: 매핑된** 주석은 부울 값 (0 = false, 1 = true). 허용되는 값은 0, 1, true 및 false입니다.  
+ 합니다 **sql: 매핑된** 주석은 부울 값 (0 = false, 1 = true). 허용되는 값은 0, 1, true 및 false입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
+ 다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>1. sql:mapped 주석 지정  
- 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마의 구성 된  **\<Person.Contact >** 요소 **ContactID**, **FirstName**, **LastName**, 및 **HomeAddress** 특성입니다.  
+ 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마 구성를  **\<Person.Contact >** 사용 하 여 요소 **ContactID**를 **FirstName**를 **LastName**, 및 **HomeAddress** 특성입니다.  
   
- 이 XSD 스키마를 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑하 **sql: 매핑된** 에 지정 된 **HomeAddress** Employees 테이블의 홈을 저장 하지 않으므로 특성 직원의 주소입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
+ 이 XSD 스키마는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑할 **sql: 매핑된** 에 지정 합니다 **HomeAddress** Employees 테이블 홈을 저장 하지 않으므로 특성 직원의 주소입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   
- 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에 같은 이름의 열에 매핑됩니다.  
+ 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. 합니다  **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에서 동일한 이름 가진 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -90,7 +90,7 @@ ms.locfileid: "32969838"
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
   
-     자세한 내용은 참조 [SQLXML 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
  결과 집합은 다음과 같습니다.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "32969838"
 </ROOT>  
 ```  
   
- ContactID, FirstName 및 LastName은 있지만 HomeAddress는 매핑 스키마 지정에 대 한 0 때문이 아니라 참고는 **sql: 매핑된** 특성입니다.  
+ ContactID, FirstName 및 LastName은 있지만 HomeAddress는 매핑 스키마 지정에 대 한 0 때문이 아니라는 점에 유의 합니다 **sql: 매핑된** 특성입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [테이블 및 열에 XSD 요소와 특성의 기본 매핑이 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>관련 항목  
+ [기본 매핑의 XSD 요소 및 특성 테이블 및 열을 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

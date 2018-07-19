@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85d0705776117d09584ea27d1d0b6ef68ede1b9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967278"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005735"
 ---
 # <a name="handling-smo-exceptions"></a>SMO 예외 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,23 +35,23 @@ ms.locfileid: "32967278"
   
  SMO에는 여러 예외 클래스가 있습니다. 예외에 대한 텍스트 메시지를 제공하는 **Message** 속성과 같은 예외 속성에서 예외 정보를 추출할 수 있습니다.  
   
- 예외 처리 문은 프로그래밍 언어와 관련이 있습니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 Visual Basic의 **Catch** 문.  
+ 예외 처리 문은 프로그래밍 언어와 관련이 있습니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic에서는 합니다 **Catch** 문입니다.  
   
 ## <a name="inner-exceptions"></a>내부 예외  
  예외는 일반 예외나 특정 예외일 수 있습니다. 일반 예외에는 특정 예외 집합이 포함됩니다. 여러 개의 **Catch** 문을 사용하여 예상 오류를 처리하고 나머지 오류가 일반 예외 처리 코드로 이동되게 할 수 있습니다. 예외는 연계 시퀀스로 발생하는 경우가 많습니다. 대체로 SQL 예외로 인해 SMO 예외가 발생했을 수 있습니다. 이를 검색하려면 연속해서 **InnerException** 속성을 사용하여 최종 최상위 예외를 발생시킨 원래 예외를 확인합니다.  
   
 > [!NOTE]  
->  **SQLException** 에 선언 된 예외는 **System.Data.SqlClient** 네임 스페이스입니다.  
+>  **SQLException** 에서 선언 된 예외는 **System.Data.SqlClient** 네임 스페이스입니다.  
   
- ![있는 수준을 보여 주는 다이어그램 다이어그램](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "있는 수준을 보여 주는 다이어그램 다이어그램")  
+ ![올 수준을 보여 주는 다이어그램 예외 수준을](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "올 수준을 보여 주는 다이어그램 예외 수준을")  
   
  다음 다이어그램은 응용 프로그램 계층을 통한 예외 흐름을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic에서 예외 catch  
- 사용 하는 방법을 보여 주는 코드 예제는 **시도 중... Catch 하는 중... 마지막으로** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서를 참조하십시오.  
+ 이 코드 예제에서는 사용 하 여 **시도 하는 중... Catch 하는 중... 마지막** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] SMO 예외를 catch 하는 문입니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 참조는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

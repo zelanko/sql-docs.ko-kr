@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_gettable (Transact SQL) | Microsoft Docs
+title: sys.fn_trace_gettable (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014931"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>인수  
  '*filename*'  
- 읽을 초기 추적 파일을 지정합니다. *filename* 은 **nvarchar (256)**, 기본값은 없습니다.  
+ 읽을 초기 추적 파일을 지정합니다. *filename* 됩니다 **nvarchar(256)**, 기본값은 없습니다.  
   
  *number_files*  
- 읽을 롤오버 파일의 수를 지정합니다. 이 수에 지정 된 초기 파일이 포함 됩니다 *filename*합니다. *number_files* 는 **int**합니다.  
+ 읽을 롤오버 파일의 수를 지정합니다. 이 수에 지정 된 초기 파일이 포함 됩니다 *filename*합니다. *number_files* 되는 **int**합니다.  
   
-## <a name="remarks"></a>주의  
- 경우 *number_files* 로 지정 된 **기본**, **fn_trace_gettable** 추적 끝에 도달할 때까지 모든 롤오버 파일을 읽습니다. **fn_trace_gettable** 지정된 된 추적에 대 한 유효한 모든 열이 있는 테이블을 반환 합니다. 자세한 내용은 참조 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ 하는 경우 *number_files* 로 지정 됩니다 **기본값**를 **fn_trace_gettable** 추적의 끝에 도달할 때까지 모든 롤오버 파일을 읽습니다. **fn_trace_gettable** 지정된 된 추적에 대 한 유효한 모든 열을 사용 하 여 테이블을 반환 합니다. 자세한 내용은 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)합니다.  
   
- Fn_trace_gettable 함수 롤오버 파일 로드 되지 것입니다 수 (사용 하 여이 옵션을 지정 하는 경우는 *number_files* 인수)는 원래 추적 파일 이름이 밑줄과 숫자 값으로 끝나는 합니다. 이는 파일이 롤오버될 때 자동으로 추가된 밑줄과 숫자에는 적용되지 않습니다. 추적 파일의 이름을 변경하여 원래 파일 이름에서 밑줄을 제거하면 이 문제를 해결할 수 있습니다. 예를 들어 원래 파일 이름이 **Trace_Oct_5.trc** 롤오버 파일 이름이 고 **Trace_Oct_5_1.trc**, 파일 이름을 바꿀 수 있습니다 **TraceOct5.trc** 및  **TraceOct5_1.trc**합니다.  
+ Fn_trace_gettable 함수 롤오버 파일 로드 되지 것입니다 주의 (사용 하 여이 옵션을 지정 하는 경우는 *number_files* 인수)는 원래 추적 파일 이름이 밑줄과 숫자 값으로 끝나는 합니다. 이는 파일이 롤오버될 때 자동으로 추가된 밑줄과 숫자에는 적용되지 않습니다. 추적 파일의 이름을 변경하여 원래 파일 이름에서 밑줄을 제거하면 이 문제를 해결할 수 있습니다. 예를 들어 원래 파일 이름이 **Trace_Oct_5.trc** 고 롤오버 파일 이름이 **Trace_Oct_5_1.trc**에서 파일 이름을 바꿀 수 있습니다 **TraceOct5.trc** 하고 **TraceOct5_1.trc**합니다.  
   
  이 함수는 실행된 인스턴스에서 아직 활성 상태인 추적을 읽을 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER TRACE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -88,7 +88,7 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

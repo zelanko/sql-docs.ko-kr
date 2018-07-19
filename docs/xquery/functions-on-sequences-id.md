@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077850"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004625"
 ---
-# <a name="functions-on-sequences---id"></a>-시퀀스 함수 id
+# <a name="functions-on-sequences---id"></a>시퀀스 함수-id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  에 제공 된 xs: idref 값 중 하나 이상이의 값과 일치 하는 xs: id 값을 가진 요소 노드의 시퀀스를 반환 *$arg*합니다.  
+  하나 이상의 제공 된 값을 xs: idref 값과 일치 하는 xs: id 값을 사용 하 여 요소 노드의 시퀀스를 반환 *$arg*합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,18 +46,18 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  하나 이상의 xs:IDREF 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  함수 결과는 후보 xs:IDREF 목록에 있는 하나 이상의 xs:IDREF에 일치하는 xs:ID 값이 있는 문서 순서대로 된 XML 인스턴스의 요소 시퀀스입니다.  
   
  요소와 일치하는 xs:IDREF 값이 없으면 이 함수는 빈 시퀀스를 반환합니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
+ 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>1. IDREF 특성 값을 기반으로 요소 검색  
  다음 예에서는 fn:id를 사용하여 IDREF 관리자 특성을 기반으로 <`employee`> 요소를 검색합니다. 이 예에서 관리자 특성은 IDREF 유형 특성이고 eid 특성은 ID 유형 특성입니다.  
   
- 특정 관리자 특성 값에 대 한는 **id ()** 찾습니다 함수는 <`employee`> 요소를 해당 ID 유형 특성 값이 입력된 IDREF 값과 일치 합니다. 즉, 특정 직원에 대 한는 **id ()** 함수는 직원 관리자를 반환 합니다.  
+ 특정 관리자 특성 값을 **id ()** 찾습니다 함수는 <`employee`> ID 유형 특성 값이 입력된 IDREF 값 일치 하는 요소. 즉, 특정 직원에 대 한 합니다 **합한 것** 함수는 직원 관리자를 반환 합니다.  
   
  다음은 이 예에서 수행된 작업입니다.  
   
@@ -65,7 +65,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   형식화 된 **xml** 변수는 XML 스키마 컬렉션을 사용 하 여 만들어집니다.  
   
--   참조 하는 ID 특성 값을 갖는 요소를 검색 하는 쿼리는 **관리자** IDREF 특성은 <`employee`> 요소입니다.  
+-   참조 하는 ID 특성 값이 있는 요소를 검색 하는 쿼리를 **manager** IDREF 특성을 <`employee`> 요소입니다.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -108,7 +108,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>2. OrderList IDREFS 특성 값을 기반으로 요소 검색  
  다음 예에서 <`Customer`> 요소의 OrderList 특성은 IDREFS 유형 특성입니다. 특정 고객에 대한 주문 ID를 나열합니다. 각 주문 ID의 경우 주문 값을 제공하는 <`Customer`> 아래에 <`Order`> 요소 자식이 있습니다.  
   
- 쿼리 식 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`은 첫 번째 고객에 대한 IDRES 목록에서 첫 번째 값을 검색합니다. 이 값은 다음에 전달 되는 **id ()** 함수입니다. 찾은 다음 함수는 <`Order`>에 대 한 입력을 일치 하는 OrderID 특성 값을 갖는 요소는 **id ()** 함수입니다.  
+ 쿼리 식 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`은 첫 번째 고객에 대한 IDRES 목록에서 첫 번째 값을 검색합니다. 이 값은 다음에 전달 된 **합한 것** 함수입니다. 함수를 찾습니다는 <`Order`> 요소의 OrderID 특성 값에 대 한 입력이 일치 하는 **합한 것** 함수입니다.  
   
 ```  
 drop xml schema collection SC  
@@ -184,11 +184,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인수가 두 개인 버전을 지원 하지 않습니다 **id ()** 합니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인수가 두 개인 버전을 지원 하지 않습니다 **합한 것**입니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인수 유형이 필요 **id ()** xs:IDREF*의 하위 형식으로.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인수 유형이 필요 **합한 것** xs:IDREF*의 하위 형식으로 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시퀀스 함수](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

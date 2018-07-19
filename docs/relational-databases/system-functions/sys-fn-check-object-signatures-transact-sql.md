@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (Transact SQL) | Microsoft Docs
+title: sys.fn_check_object_signatures (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234679"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015155"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,32 +50,32 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>인수  
- {' @*클래스*'을 (를)  
+ {0} ' @*클래스*'}  
  제공되는 지문의 유형을 식별합니다.  
   
 -   '인증서'  
   
 -   '비대칭 키'  
   
- @*클래스* 은 **sysname**합니다.  
+ @*클래스* 됩니다 **sysname**합니다.  
   
- {@*지문* }  
- 키 암호화에 사용되는 인증서의 SHA-1 해시이거나 비대칭 키의 GUID입니다. @*지문* 은 **varbinary(20)** 합니다.  
+ {@*지문을* }  
+ 키 암호화에 사용되는 인증서의 SHA-1 해시이거나 비대칭 키의 GUID입니다. @*지문을* 됩니다 **varbinary(20)** 합니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서 열을 나열 하는 **fn_check_object_signatures** 반환 합니다.  
   
-|열|형식|Description|  
+|Column|형식|Description|  
 |------------|----------|-----------------|  
 |유형|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
 |entity_id|**int**|평가 중인 개체의 개체 ID를 반환합니다.|  
 |is_signed|**int**|개체가 제공된 지문으로 서명되지 않은 경우 0을 반환합니다. 개체가 제공된 지문으로 서명된 경우 1을 반환합니다.|  
 |is_signature_valid|**int**|is_signed 값이 1일 때 서명이 유효하지 않으면 0을 반환하고, 서명이 유효하면 1을 반환합니다.<br /><br /> is_signed 값이 0일 때는 항상 0을 반환합니다.|  
   
-## <a name="remarks"></a>주의  
- 사용 하 여 **fn_check_object_signatures** 개체와 함께 악의적인 사용자가 손상 되지 않았는지 확인 합니다.  
+## <a name="remarks"></a>Remarks  
+ 사용 하 여 **fn_check_object_signatures** 악의적인 사용자가 개체를 사용 하 여 훼손 되지 않았음을 확인 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서 또는 비대칭 키에 대한 VIEW DEFINITION이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -96,7 +96,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [IS_OBJECTSIGNED &#40;Transact SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [IS_OBJECTSIGNED &#40;TRANSACT-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

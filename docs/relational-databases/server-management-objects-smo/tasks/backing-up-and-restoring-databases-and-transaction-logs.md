@@ -26,23 +26,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4cc609f6325f46e7e34a2806cbdc897a71ef6507
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707471"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001316"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>데이터베이스 및 트랜잭션 로그 백업 및 복원
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스와 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 특정 백업 및 복원 태스크를 수행하는 도구를 제공하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체 대신 필요한 특정 백업 태스크를 나타냅니다.는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체는 서버 인스턴스.  
+  SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스와 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 특정 백업 및 복원 태스크를 수행하는 도구를 제공하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체 대신 필요한 특정 백업 태스크를 나타냅니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 인스턴스에 있는 개체입니다.  
   
  데이터 손실이나 손상이 발생하면 완전히 또는 부분적으로 백업을 복원해야 합니다. 부분 복원에서는 복원할 데이터를 분할하기 위해 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 컬렉션을 사용합니다. 백업에 트랜잭션 로그가 있으면 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Restore> 속성을 사용하여 특정 시점까지 데이터를 복원할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 메서드를 사용하여 데이터의 유효성을 확인할 수 있습니다. 권장되는 백업 절차는, 복원 작업을 수행하고 정기적으로 데이터베이스의 데이터를 검사하여 백업 무결성을 확인하는 것입니다.  
   
- 마찬가지로 <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체를 사용 하 여 만들 필요가 없습니다는 **만들기** 메서드 인스턴스의 모든 개체를 표시 하지 않기 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체는 데이터베이스 복원에 사용되는 일련의 속성과 메서드입니다.  
+ 같은 합니다 <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체를 <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체를 사용 하 여 생성 될 필요가 없습니다를 **만들기** 메서드 인스턴스에서 모든 개체를 나타내지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체는 데이터베이스 복원에 사용되는 일련의 속성과 메서드입니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic에서 데이터베이스 및 트랜잭션 로그 백업  
  이 코드 예제는 기존 데이터베이스를 파일로 백업한 다음 복원하는 방법을 보여 줍니다.  

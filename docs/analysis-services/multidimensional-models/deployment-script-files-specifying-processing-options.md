@@ -1,5 +1,5 @@
 ---
-title: 처리 옵션을 지정 하 | Microsoft Docs
+title: 처리 옵션 지정 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 945332a0d0e5138ad3422a3db1b88dfb21e85f2f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002215"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>배포 스크립트 파일-처리 옵션 지정
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 처리 옵션을 읽습니다는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]빌드할 때이 파일을 만듭니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 지정 된 처리 옵션을 사용 하 여는 **배포** 페이지  *\<프로젝트 이름 >* **속성 페이지** 대화 상자를 만들는 \< *프로젝트 이름을*>.deploymentoptions 파일입니다.  
+  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 처리 옵션을 읽습니다 합니다 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에 지정 된 처리 옵션을 사용 하는 **배포** 페이지  *\<프로젝트 이름 >* **속성 페이지** 만들려면 대화 상자를 \< *프로젝트 이름*>.deploymentoptions 파일입니다.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>배포를 위한 처리 옵션 검토  
- 에 저장 된 구성 설정은 \< *프로젝트 이름을*>.deploymentoptions 파일은 다음과 같습니다.  
+ 에 저장 된 구성 설정은 합니다 \< *프로젝트 이름*>.deploymentoptions 파일은 다음과 같습니다.  
   
 -   **처리 방법** 이 설정은 배포 후 배포된 개체가 처리되는지 여부와 수행할 처리 유형을 제어합니다. 3가지 처리 옵션은 다음과 같습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34024340"
     -   이 옵션이 **False**인 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 단일 트랜잭션의 메타데이터 변경 내용을 배포하고 해당 트랜잭션의 각 처리 명령을 배포합니다.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>배포를 위한 처리 옵션 수정  
- 그러나 배포 해야 할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 처리 옵션을 사용 하 여 프로젝트의 \< *프로젝트 이름*>.deploymentoptions 파일입니다. 예를 들어 모든 개체를 완전히 처리하거나 기본 처리 옵션을 사용하여 처리할 수 있으며, 또는 처리가 발생하지 않도록 할 수도 있습니다. 큐브 또는 차원이 쓰기 설정된 경우 새 쓰기 저장(writeback) 테이블이나 기존 테이블을 사용하도록 지정할 수 있습니다.  
+ 배포 해야 하는 반면 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 처리 옵션을 사용 하 여 프로젝트를 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. 예를 들어 모든 개체를 완전히 처리하거나 기본 처리 옵션을 사용하여 처리할 수 있으며, 또는 처리가 발생하지 않도록 할 수도 있습니다. 큐브 또는 차원이 쓰기 설정된 경우 새 쓰기 저장(writeback) 테이블이나 기존 테이블을 사용하도록 지정할 수 있습니다.  
   
  배포 중에 사용된 처리 옵션을 수정하려는 경우 프로젝트를 편집하고 다시 작성하거나 다음 절차에 설명된 대로 다음 방법 중 하나를 사용하여 입력 파일에서 처리 옵션을 변경할 수 있습니다.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "34024340"
   
 -   수정 된 \< *프로젝트 이름*> 텍스트 편집기를 사용 하 여.deploymentoptions 파일입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [설치 대상 지정](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
  [파티션 및 역할 배포 옵션 지정](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
- [솔루션 배포에 대 한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

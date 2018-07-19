@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842836"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002105"
 ---
 # <a name="predict-dmx"></a>Predict(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **Predict** 함수 예측된 값 또는 지정된 된 열에 대 한 값 집합을 반환 합니다.  
+  합니다 **Predict** 예측된 값 또는 지정된 된 열에 대 한 값 집합을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,25 +50,25 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  시계열 모델에 대 한 Predict 함수는 INCLUDE_STATISTICS를 지원 하지 않습니다.  
   
- INCLUDE_NODE_ID 매개 변수는 결과로 $NODEID 열을 반환합니다. NODE_ID는 특정 사례에 대한 예측이 실행되는 내용 노드입니다. 테이블 열에 예측을 사용 하는 경우이 매개 변수는 선택 사항입니다.  
+ INCLUDE_NODE_ID 매개 변수는 결과로 $NODEID 열을 반환합니다. NODE_ID는 특정 사례에 대한 예측이 실행되는 내용 노드입니다. 테이블 열에서 예측을 사용 하는 경우이 매개 변수를 선택 사항입니다.  
   
- *n* 매개 변수는 테이블 열에 적용 됩니다. 이 매개 변수는 예측 유형을 기반으로 반환되는 행 수를 설정합니다. 기본 열이 시퀀스인 경우 호출 된 **PredictSequence** 함수입니다. 기본 열이 시계열 인 경우 호출 된 **PredictTimeSeries** 함수입니다. 예측의 관련 유형에 대 한 호출에서 **PredictAssociation** 함수입니다.  
+ 합니다 *n* 매개 변수를 테이블 열에 적용 됩니다. 이 매개 변수는 예측 유형을 기반으로 반환되는 행 수를 설정합니다. 기본 열이 시퀀스인 경우 호출 된 **PredictSequence** 함수입니다. 기본 열이 시계열 인 경우 호출 된 **PredictTimeSeries** 함수입니다. 예측의 관련 유형에 대 한 호출을 **PredictAssociation** 함수입니다.  
   
- **Predict** 함수는 다형성을 지원 합니다.  
+ 합니다 **Predict** 함수는 다형성을 지원 합니다.  
   
  대개는 다음과 같은 간략한 형식이 사용되는 경우가 많습니다.  
   
--   [Gender]는 **Predict**([Gender], EXCLUDE_NULL).  
+-   [Gender]는에 대 한 대안 **Predict**([Gender], EXCLUDE_NULL).  
   
--   [Products Purchases]는 **Predict**([Products Purchases], EXCLUDE_NULL, 단독)입니다.  
+-   [Products Purchases]의 대 안으로 **Predict**([Products Purchases], EXCLUDE_NULL, 전용).  
   
     > [!NOTE]  
-    >  이 함수의 반환 형식은 열 참조로 간주됩니다. 즉는 **Predict** 함수는 인수로 열 참조를 사용 하는 다른 함수를 인수로 사용할 수 있습니다 (제외 하 고는 **Predict** 함수 자체).  
+    >  이 함수의 반환 형식은 열 참조로 간주됩니다. 즉 합니다 **Predict** 함수를 인수로 열 참조를 사용 하는 다른 함수의 인수로 사용할 수 있습니다 (제외 하 고는 **Predict** 함수 자체).  
   
- 열이 추가 테이블 반환 열에서 예측에 INCLUDE_STATISTICS를 전달 **$Probability** 및 **$Support** 결과 테이블에 있습니다. 이러한 열은 연관된 중첩 테이블 레코드가 있을 가능성을 나타냅니다.  
+ 열이 추가 테이블 반환 열에서 예측에 INCLUDE_STATISTICS를 전달 **$Probability** 하 고 **$Support** 결과 테이블에 있습니다. 이러한 열은 연관된 중첩 테이블 레코드가 있을 가능성을 나타냅니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 Predict 함수를 사용 하 여 함께 판매 될 가능성이 가장 높은 Adventure Works 데이터베이스에는 네 가지 제품을 반환 합니다. 함수는 연결 규칙 마이닝 모델에 대해을 예측 하기 때문에 자동으로 사용 하 여는 **PredictAssociation** 앞에서 설명한 대로 작동 합니다.  
+ 다음 예제에서는 Predict 함수를 사용 하 여 함께 판매 될 가능성이 있는 Adventure Works 데이터베이스에는 네 가지 제품을 반환 합니다. 함수를 사용 하는 연결 규칙 마이닝 모델에 대해 예측할를 자동으로 사용 합니다 **PredictAssociation** 앞에서 설명한 대로 작동 합니다.  
   
 ```  
 SELECT  

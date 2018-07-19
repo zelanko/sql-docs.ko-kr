@@ -23,22 +23,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a66e199d232ed96fd194d42e340f3468fee51b6b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005655"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 가비지 수집 프로세스의 현재 동작에 대한 정보(전체 통계)를 제공합니다.  
   
- 행은 정기적인 트랜잭션 처리의 일부로 또는 유휴 작업자라고 하는 기본 가비지 수집 스레드에서 수집되는 가비지입니다. 가비지 수집 큐에서 작업 항목 큐에서 사용자 트랜잭션이 커밋될 때 ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). 가비지 수집될 수 있지만 기본 사용자 트랜잭션에 의해 액세스되지 않는 모든 행은 불량 영역 검색(더 적게 액세스되는 인덱스 영역 검색)의 일부로 유휴 작업자에 의해 가비지 수집됩니다.  
+ 행은 정기적인 트랜잭션 처리의 일부로 또는 유휴 작업자라고 하는 기본 가비지 수집 스레드에서 수집되는 가비지입니다. 사용자 트랜잭션이 커밋될 때 해당 큐에서 제거 된 가비지 수집 큐에서 작업 항목을 하나 ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). 가비지 수집될 수 있지만 기본 사용자 트랜잭션에 의해 액세스되지 않는 모든 행은 불량 영역 검색(더 적게 액세스되는 인덱스 영역 검색)의 일부로 유휴 작업자에 의해 가비지 수집됩니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|서버 시작 이후 가비지 수집 하위 시스템에 의해 검사되는 행의 수입니다.|  
 |rows_no_sweep_needed|**bigint**|불량 영역 검색 없이 제거된 행 수입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467549"
 |sweep_rows_expired|**bigint**|불량 영역 처리에서 읽는 만료된 행입니다.|  
 |sweep_rows_expired_removed|**bigint**|불량 영역 처리에서 제거되어 만료된 행입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인스턴스에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="usage-scenario"></a>사용 시나리오  
@@ -73,7 +73,7 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
                0                 673673  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>관련 항목  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

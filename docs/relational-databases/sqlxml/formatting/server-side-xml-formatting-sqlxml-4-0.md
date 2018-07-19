@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd37f50bb838717d9a245b038f624dee57bbf7d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003415"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- FOR XML 절에 대 한 자세한 내용은 참조 [For를 사용 하 여 XML](../../../relational-databases/xml/for-xml-sql-server.md)합니다.  
+ FOR XML 절에 대 한 자세한 내용은 참조 하세요. [생성할 XML Using FOR X](../../../relational-databases/xml/for-xml-sql-server.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [클라이언트 쪽 XML 서식을 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML&#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_resource_stats (Azure SQL 데이터베이스) | Microsoft Docs
+title: sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -26,45 +26,46 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464189"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005700"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  CPU, I/O 및 메모리 사용에 대 한 반환는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스입니다. 데이터베이스에서 활동이 없더라도 15초 간격으로 한 행이 있습니다. 기록 데이터는 한 시간 동안 유지됩니다.  
+  에 대 한 CPU, I/O 및 메모리 소비량을 반환을 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스입니다. 데이터베이스에서 활동이 없더라도 15초 간격으로 한 행이 있습니다. 기록 데이터는 한 시간 동안 유지됩니다.  
   
 |열|데이터 형식|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |avg_cpu_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
-|avg_data_io_percent|**10 진수 (5,2)**|평균 데이터 서비스 계층 제한의 I/O 활용률입니다.|  
+|avg_data_io_percent|**10 진수 (5,2)**|평균 데이터의 서비스 계층 한도의 I/O 활용률입니다.|  
 |avg_log_write_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 쓰기 리소스 활용률입니다.|  
-|avg_memory_usage_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 메모리 내 OLTP 개체의 저장에 사용 된 메모리 포함 됩니다.|  
-|xtp_storage_percent|**10 진수 (5,2)**|저장소 사용률이 메모리 내 OLTP에 대 한 서비스 계층 한도의 비율로 (보고 간격의 끝). 여기에 다음 메모리 내 OLTP 개체의 저장에 사용 된 메모리: 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수입니다. ALTER TABLE 작업을 처리 하기 위해 사용 되는 메모리 포함 됩니다.<br /><br /> 데이터베이스에 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
-|max_worker_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 비율로 최대 동시 작업자 (요청 수)입니다.|  
-|max_session_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 비율로 최대 동시 세션|  
-|dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한이 간격 동안입니다. |
+|avg_memory_usage_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 이 메모리 내 OLTP 개체의 저장에 사용 하는 메모리가 포함 됩니다.|  
+|xtp_storage_percent|**10 진수 (5,2)**|저장소 사용률을 메모리 내 OLTP에 대 한 서비스 계층 한도의 백분율 (보고 간격 끝). 여기에 다음과 같은 메모리 내 OLTP 개체의 저장에 사용 된 메모리: 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수입니다. 또한 ALTER TABLE 작업 처리에 사용 되는 메모리를 포함 합니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
+|max_worker_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 백분율로 최대 동시 작업자 (요청).|  
+|max_session_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 백분율로 최대 동시 세션|  
+|dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한 간격입니다. VCore 기반 모델을 사용 하 여 데이터베이스에 대 한이 열은 NULL입니다.|
+|cpu_limit|**10 진수 (5,2)**|이 간격 중에이 데이터베이스에 대 한 vcore 수입니다. DTU 기반 모델을 사용 하 여 데이터베이스에 대 한이 열은 NULL입니다.|
 |||
   
 > [!TIP]  
->  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하십시오. [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)합니다.  
+>  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하세요 [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 하 고 [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>주의  
- 반환한 데이터 **sys.dm_db_resource_stats** 은 실행 중인 서비스 계층/성능 수준에 대 한 제한은 허용 되는 최대의 백분율로 표현 됩니다.
+## <a name="remarks"></a>Remarks  
+ 반환한 데이터 **sys.dm_db_resource_stats** 최대 허용 실행 중인 서비스 계층/성능 수준의 한도의 백분율로 표현 됩니다.
  
  데이터베이스가 지난 60분 안에 다른 서버로 장애 조치된 경우 이 뷰는 해당 장애 조치 이후 주 데이터베이스였던 시간에 대해서만 데이터를 반환합니다.  
   
- 이 데이터의 덜 세분화 된 뷰를 사용 하 여 **sys.resource_stats** 카탈로그 뷰는 **마스터** 데이터베이스입니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 참조 [sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)합니다.  
+ 이 데이터의 덜 세분화 된 뷰를 사용 하 여 **sys.resource_stats** 카탈로그 뷰를 **마스터** 데이터베이스입니다. 이 뷰는 5분마다 데이터를 캡처하고 14일 동안 기록 데이터를 유지합니다.  자세한 내용은 [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)합니다.  
   
- 탄력적 풀의 멤버 데이터베이스가 있는 경우 백분율 값으로 표시 되는 리소스 통계 탄력적 풀 구성에 설정 된 대로 데이터베이스에 대 한 최대 한계의 %로 표현 됩니다.  
+ 데이터베이스를 탄력적 풀의 멤버인 경우 백분율 값으로 표시 하는 리소스 통계는 탄력적 풀 구성에 설정 된 대로 데이터베이스에 대 한 최대 한도의 백분율로 표현 됩니다.  
   
 ## <a name="example"></a>예제  
   
@@ -102,8 +103,8 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+## <a name="see-also"></a>관련 항목  
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

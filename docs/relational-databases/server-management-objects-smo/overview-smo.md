@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006016"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,29 +50,29 @@ ms.locfileid: "34708011"
   
 -   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
--   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 참조 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
+-   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
   
--   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 참조 [스냅숏 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)합니다.  
+-   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)합니다.  
   
--   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 저장 기능 제공. 자세한 내용은 참조 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) 및 [XML 스키마를 사용 하 여](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)합니다.  
+-   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 저장 기능 제공. 자세한 내용은 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) 하 고 [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   데이터베이스의 읽기 전용 복사본을 만들기 위한 스냅숏 데이터베이스  
   
--   [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 참조 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)합니다.  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 복수 이름에 대한 동의어 지원. 자세한 내용은 참조 [동의어 &#40;데이터베이스 엔진&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 복수 이름에 대한 동의어 지원. 자세한 내용은 [동의어 &#40;데이터베이스 엔진&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전자 메일 서버, 전자 메일 프로필 및 전자 메일 계정을 생성하는 데이터베이스 메일 관리 기능. 자세한 내용은 [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)을 참조하세요.  
   
--   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 참조 [서버 등록](../../tools/sql-server-management-studio/register-servers.md)합니다.  
+-   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 [서버 등록](../../tools/sql-server-management-studio/register-servers.md)합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 참조 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL 추적](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)를 [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)를 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
   
--   보안 제어를 위한 인증서와 키 지원. 자세한 내용은 참조 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)합니다.  
+-   보안 제어를 위한 인증서와 키 지원. 자세한 내용은 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)합니다.  
   
 -   DDL 이벤트 발생 시 기능을 추가하기 위한 DDL 트리거. 자세한 내용은 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)을(를) 참조하세요.  
   
- SMO 네임스페이스는 <xref:Microsoft.SqlServer.Management.Smo>입니다. SMO로 구현 됩니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리입니다. 즉,에서 공용 언어 런타임은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SMO 개체를 사용 하기 전에 버전 2.0을 설치 해야 합니다. 기본적으로 SMO 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 옵션과 함께 GAC(전역 어셈블리 캐시)에 설치됩니다. 어셈블리는 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\에 배치 됩니다. 자세한 내용은 참조는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서입니다.  
+ SMO 네임스페이스는 <xref:Microsoft.SqlServer.Management.Smo>입니다. SMO로 구현 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리입니다. 즉,에서 공용 언어 런타임 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SMO 개체를 사용 하기 전에 버전 2.0을 설치 해야 합니다. 기본적으로 SMO 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 옵션과 함께 GAC(전역 어셈블리 캐시)에 설치됩니다. 어셈블리는 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\에 배치 됩니다. 자세한 내용은 참조는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서.  
   
 ## <a name="smo-classes"></a>SMO 클래스  
  SMO 클래스에는 인스턴스 클래스 및 유틸리티 클래스라는 두 개의 범주가 포함되어 있습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "34708011"
 ## <a name="smo-features"></a>SMO 기능  
  **최적화 된 성능**  
   
- SMO 아키텍처는 처음에 개체의 일부만 인스턴스화한 서버에서 최소한의 속성 정보만 요청 하므로 메모리 측면에서 효율적입니다. 개체를 명시적으로 참조할 때까지 개체의 전체 인스턴스화는 지연됩니다. 개체는 먼저 검색된 속성 집합에 없는 속성이 요청되었거나 그와 같은 속성을 필요로 하는 메서드가 요청될 경우에 전체적으로 인스턴스화됩니다. 부분적으로 인스턴스화된 개체와 전체적으로 인스턴스화된 개체 간의 전환은 사용자가 인식하지 못하는 사이에 이루어집니다. 또한 많은 메모리를 사용하는 일부 속성은 해당 속성이 명시적으로 참조되지 않는 한 검색되지 않습니다. 이러한 예가 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 개체 속성의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성입니다. 하지만 부분 인스턴스화에는 더 많은 네트워크 왕복이 필요하므로 부분 인스턴스화가 응용 프로그램에 대한 최선의 성능 옵션이 아닐 수도 있습니다.  
+ SMO 아키텍처는 처음에 개체의 일부만 인스턴스화한 및 서버에서 최소한의 속성 정보만 요청 하므로 메모리 측면에서 효율적입니다. 개체를 명시적으로 참조할 때까지 개체의 전체 인스턴스화는 지연됩니다. 개체는 먼저 검색된 속성 집합에 없는 속성이 요청되었거나 그와 같은 속성을 필요로 하는 메서드가 요청될 경우에 전체적으로 인스턴스화됩니다. 부분적으로 인스턴스화된 개체와 전체적으로 인스턴스화된 개체 간의 전환은 사용자가 인식하지 못하는 사이에 이루어집니다. 또한 많은 메모리를 사용하는 일부 속성은 해당 속성이 명시적으로 참조되지 않는 한 검색되지 않습니다. 이러한 예가 <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> 개체 속성의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성입니다. 하지만 부분 인스턴스화에는 더 많은 네트워크 왕복이 필요하므로 부분 인스턴스화가 응용 프로그램에 대한 최선의 성능 옵션이 아닐 수도 있습니다.  
   
  시스템 환경에 맞게 인스턴스화를 제어할 수 있습니다. 지연 인스턴스화를 사용하면 속성이 참조될 때 많은 서버 요청이 트리거될 수 있지만 응용 프로그램에서 필요로 하는 메모리의 양은 최소화됩니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34708011"
   
 -   간단한 1단계 스크립팅(1단계로 스크립트 작성)  
   
--   고급 3 단계 스크립팅 (3 단계에 따라; 스크립트를 만듭니다. 종속성 검색, 목록 생성, 스크립트 생성)  
+-   고급 3 단계 스크립팅 (3 단계에서 스크립트를 만들고 종속성 검색, 목록 생성 스크립트 생성)  
   
 -   양방향 종속성 검색(종속성 또는 종속 개체 검색 지원)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "34708011"
   
 -   오류 이벤트에 응답  
   
- **Unique Resource Names**  
+ **고유한 리소스 이름**  
   
  SMO 개체 라이브러리를 사용할 때 기반이 되는 주요 개념은 URN(Unique Resource Name)입니다. URN은 XPath와 유사한 구문을 사용합니다. XPath는 각 수준에서 한정자와 함수를 갖는 개체를 지정하는 데 사용되는 계층 경로입니다. SMO에서 URN은 경로와 제한된 기능의 특성 명명이라는 두 가지 요소를 가집니다. 경로는 개체의 위치를 지정하는 데 사용되고 특성 명명은 필터링 수준을 제어하는 데 사용됩니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "34708011"
   
  개체에 대한 URN은 URN 속성을 참조하여 검색할 수 있습니다. Scripter 개체도 **Scripter** 개체의 메서드에 개체 참조를 전달하는 매개 변수로 URN을 사용합니다. 또한 **Server** 개체의 **GetSmoObject** 메서드에 대해 URN을 지정할 수 있습니다. 이 기능을 사용하여 SMO 개체 인스턴스를 만들 수 있습니다.  
   
-## <a name="sql-server-features-represented-in-smo"></a>SMO로 표현 된 SQL Server 기능  
+## <a name="sql-server-features-represented-in-smo"></a>SMO에서 표시 하는 SQL Server 기능  
  **테이블 및 인덱스 분**  
   
  인덱스 테이블 분할을 사용하면 파일 그룹 전체의 테이블 및 인덱스에서 데이터 분포를 관리할 수 있습니다. 이 새 기능은 SMO 개체로 표현됩니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "34708011"
   
  XML 스키마 네임스페이스는 SMO에서 개체 컬렉션으로 표현됩니다. XML 인덱스는 SMO에서 **Index** 개체 속성으로 표현됩니다.  
   
- **전체 텍스트 검색의 향상 된 기능**  
+ **전체 텍스트 검색 기능 향상**  
   
  전체 텍스트 검색의 향상된 기능을 나타내는 새 개체가 SMO로 제공됩니다.  
   

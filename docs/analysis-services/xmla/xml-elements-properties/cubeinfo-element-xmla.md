@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1e93de452634e0f97d648e6548357cc040b9aca
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574115"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004575"
 ---
 # <a name="cubeinfo-element-xmla"></a>CubeInfo 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  부모에 포함 된 큐브 메타 데이터를 포함 [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) 요소입니다.  
+  부모에 의해 포함 된 큐브 메타 데이터를 포함 [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34574115"
 </OlapInfo>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -49,10 +49,10 @@ ms.locfileid: "34574115"
 |자식 요소|[Cube](../../../analysis-services/xmla/xml-elements-properties/cube-element-olapinfo-xmla.md)|  
   
 ## <a name="remarks"></a>Remarks  
- **CubeInfo** 요소 하나가 포함 된 **큐브** 다차원 데이터 집합에서 참조 되는 각 큐브에 대 한 요소입니다.  
+ 합니다 **CubeInfo** 요소 하나가 포함 되어 **큐브** 다차원 데이터 집합에서 참조 하는 각 큐브에 대 한 요소입니다.  
   
 > [!NOTE]  
->  Analysis Services는 단일 반환 **큐브** 이 컬렉션의 요소 때문에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 여러 큐브는 MDX (Multidimensional Expressions) 언어의 FROM 절에서 참조 하는 문을 지원 하지 않습니다.  
+>  Analysis Services 하나만 반환 **큐브** 이 컬렉션의 요소 때문에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] MDX (Multidimensional Expressions) 언어의 FROM 절에서 여러 큐브를 참조 하는 문을 지원 하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
  [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

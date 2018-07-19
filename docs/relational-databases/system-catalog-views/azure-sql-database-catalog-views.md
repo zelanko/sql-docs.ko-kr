@@ -1,5 +1,5 @@
 ---
-title: Azure SQL 데이터베이스 카탈로그 뷰 | Microsoft Docs
+title: Azure SQL Database 카탈로그 뷰 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2015
 ms.prod: ''
@@ -21,11 +21,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b504d93dca2f02d600e3de1dc39ba8bc702291d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003375"
 ---
 # <a name="azure-sql-database-catalog-views"></a>Azure SQL Database 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "33177356"
   
 |||  
 |-|-|  
-|[sys.bandwidth_usage &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-bandwidth-usage-azure-sql-database.md)|[sys.event_log &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)|  
-|[sys.database_connection_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.firewall_rules &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)|  
-|[sys.database_firewall_rules &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)|[sys.resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)|  
-|[sys.database_usage &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|[sys.resource_usage &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md)|  
-|[sys.elastic_pool_resource_stats &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)|[dbo.server_quotas &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md)|  
+|[sys.bandwidth_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-bandwidth-usage-azure-sql-database.md)|[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)|  
+|[sys.database_connection_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)|  
+|[sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)|[sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)|  
+|[sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|[sys.resource_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md)|  
+|[sys.elastic_pool_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)|[dbo.server_quotas &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md)|  
   
   

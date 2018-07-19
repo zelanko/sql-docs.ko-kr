@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007036"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  부모에 의해 정의 된 개체를 만들 부모 개체의 식별자가 포함 된 [만들기](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) 요소입니다.  
+  부모에 의해 정의 된 개체를 만들 부모 개체의 식별자를 포함 [만들기](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576005"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>요소 특징  
+## <a name="element-characteristics"></a>요소 특성  
   
 |특징|Description|  
 |--------------------|-----------------|  
@@ -46,13 +46,13 @@ ms.locfileid: "34576005"
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[만들기](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|자식 요소|필수 ASSL(Analysis Services Scripting Language) 요소. 개체 및 해당 상위 항목의 ID 요소를 나열 하 여 지정 (제외 하 고는 **서버** 개체입니다.) 예를 들어, 다음 **ParentObject** 요소는 파티션을 식별 합니다.<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
+|자식 요소|필수 ASSL(Analysis Services Scripting Language) 요소. 개체 및 해당 상위 항목의 ID 요소를 나열 하 여 지정 (제외 합니다 **Server** 개체입니다.) 다음 예를 들어 **ParentObject** 요소는 파티션을 식별 합니다.<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>Remarks  
  식별자가 나타나는 순서는 중요하지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 **시장 바구니** 에 포함 되는 마이닝 구조는 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 예제 Analysis Services 데이터베이스입니다.  
+ 다음 예제에서는 합니다 **시장 바구니** 에 포함 된 마이닝 구조를 [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] 예제 Analysis Services 데이터베이스입니다.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

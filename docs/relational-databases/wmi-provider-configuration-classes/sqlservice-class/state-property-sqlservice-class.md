@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 350d59fa026f16007cffd279f4f6298eeca86e6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005383"
 ---
 # <a name="state-property-sqlservice-class"></a>State 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -50,7 +50,7 @@ object.State [= value]
   
  다음 값 중 하나일 수 있습니다.  
   
- 1.  
+ 1  
  중지됨. 서비스가 중지되었습니다.  
   
  2  
@@ -71,9 +71,9 @@ object.State [= value]
  7  
  일시 중지됨 서비스가 일시 중지되었습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
