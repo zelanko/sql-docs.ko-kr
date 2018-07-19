@@ -1,7 +1,7 @@
 ---
-title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서
+title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20ede2e4e67c7d3d5e3925e041d0baceda5446e5
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612228"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957686"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,16 +45,16 @@ SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기
 
 SSMS 17.X는 *SQL Server Management Studio*의 최신 세대이며 SQL Server 2017을 지원합니다.
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.7 다운로드](https://go.microsoft.com/fwlink/?linkid=873126)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 다운로드](https://go.microsoft.com/fwlink/?linkid=875802)**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.7 업그레이드 패키지 다운로드(17.x에서 17.7로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=873128)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 업그레이드 패키지 다운로드(17.x에서 17.8.1로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=875804)**
 
 
 **버전 정보**
 
-릴리스 번호: 17.7<br>
-빌드 번호: 14.0.17254.0<br>
-릴리스 날짜: 2018년 5월 9일
+릴리스 번호: 17.8.1<br>
+빌드 번호: 14.0.17277.0<br>
+릴리스 날짜: 2018년 6월 26일
 
 SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 17.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다.
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 *Microsoft SQL Server Management Studio 17* 레이블이 지정되며 새 아이콘이 추가됩니다. 
@@ -70,11 +70,11 @@ SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하�
 
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
-SQL Server Management Studio 17.7:<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+SQL Server Management Studio 17.8.1:<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
-SQL Server Management Studio 17.7 업그레이드 패키지(17.x에서 17.7로 업그레이드):<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40a)
+SQL Server Management Studio 17.8.1 업그레이드 패키지(17.x에서 17.8.1로 업그레이드):<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 모듈은 이제 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
@@ -84,22 +84,27 @@ SQL Server Management Studio 17.7 업그레이드 패키지(17.x에서 17.7로 �
 
 ## <a name="new-in-this-release"></a>이 릴리스의 새로운 기능
 
-SSMS 17.7은 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
+SSMS 17.8.1은 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
 
-17.7 버전에는 다음이 포함됩니다.
+17.8.1 버전에는 다음이 포함됩니다.
 
 **일반 SSMS**
 
-복제 모니터:   
-- 복제 모니터는 이제 게시자 데이터베이스 및/또는 배포자 데이터베이스가 가용성 그룹의 일부인 시나리오에서 수신기 등록을 지원합니다. 이제 게시자 데이터베이스 및/또는 배포자 데이터베이스가 Always On의 일부인 복제 환경을 모니터링할 수 있습니다. 
- 
-Azure SQL Data Warehouse: 
-- Azure SQL Data Warehouse에서 외부 테이블에 대한 거부된 행 위치 지원을 추가합니다. 
+데이터베이스 속성:
 
-**IS(Integration Services)**
+- 이 향상된 기능은 파일 그룹의 “AUTOGROW_ALL_FILES” 구성 옵션을 공개합니다. 이 새 구성 옵션은 사용 가능한 각 파일 그룹(파일 스트림 및 메모리 최적화 파일 그룹 제외) 확인란의 새 열(모든 파일 자동 증가) 형식으로 [데이터베이스 속성] > [파일 그룹] 창 아래에 추가됩니다. 사용자는 해당 Autogrow_All_Files 확인란을 토글하여 특정 파일 그룹의 AUTOGROW_ALL_FILES를 사용/사용 안 함으로 설정할 수 있습니다. 이렇게 하면 CREATE용 데이터베이스를 스크립팅/데이터베이스용 스크립트를 생성(SQL2016 이상)할 때 AUTOGROW_ALL_FILES 옵션이 제대로 스크립팅됩니다.
+    
+SQL 편집기:
 
-- Azure SQL Database에 배포할 SSIS 패키지에 대한 예약 기능을 추가했습니다. 고급 작업 스케줄러인 SQL Server 에이전트가 있는 SQL Server 온-프레미스 및 SQL Database 관리되는 인스턴스(미리 보기)와 달리 SQL Database에는 기본 제공 스케줄러가 없습니다. 이 새로운 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다. SQL Database를 사용하여 SSIS 카탈로그 데이터베이스인 SSISDB를 호스팅하는 경우 이 SSMS 기능을 사용하여 SSIS 패키지를 예약하는 데 필요한 데이터 팩터리 파이프라인, 활동 및 트리거를 생성할 수 있습니다. 그런 다음, 데이터 팩터리에서 이러한 개체를 편집하고 확장할 수 있습니다. 자세한 내용은 [SSMS를 지원하는 Azure SQL Database에서 SSIS 패키지 실행 예약](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)을 참조하세요. Azure Data Factory 파이프라인, 활동 및 트리거에 대한 자세한 내용은 [Azure Data Factory의 파이프라인 및 활동](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) 및 [Azure Data Factory에서 파이프라인 실행 및 트리거](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)를 참조하세요.
-- SQL 관리되는 인스턴스의 SQL 에이전트에서 SSIS 패키지 예약 지원. 이제 관리되는 인스턴스에서 SSIS 패키지를 실행하는 SQL 에이전트 작업을 만들 수 있습니다. 
+- 사용자에게 마스터 액세스 권한이 없는 경우 Azure SQL Database에서 Intellisense 관련 환경이 향상되었습니다.
+
+스크립팅:
+
+- 특히 대기 시간이 긴 연결에 대한 일반적인 성능 향상입니다.
+    
+**AS(Analysis Services)**
+
+- Analysis Services 클라이언트 라이브러리 및 데이터 공급자가 최신 버전으로 업데이트되어, 새로운 Azure Government AAD 기관 지원이 추가되었습니다.
 
 
 ## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
@@ -137,8 +142,9 @@ Azure SQL Data Warehouse:
 
 ## <a name="release-notes"></a>릴리스 정보
 
-다음은 이 17.7 릴리스의 문제 및 제한 사항입니다.
+다음은 이 17.8 릴리스의 문제 및 제한 사항입니다.
 
+- ‘속성’ 창에서 파일 그룹 속성을 수정한 후 ‘스크립트’ 단추를 클릭하면 두 개의 스크립트(각각 *USE<database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
 - 새로운 *범용* 또는 *중요 비즈니스용* Azure SQL Database 버전으로 작업할 때 일부 대화 상자에서 잘못된 버전이라는 오류가 표시됩니다.
 - XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드해보세요.
 

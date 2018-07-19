@@ -4,7 +4,7 @@ SQL Server를 배포하는 모든 사람들이 공통적으로 해야 할 작업
 
 SQL Server 2017은 기존 기능에 새롭거나 향상된 기능을 많이 도입했으며 그 중 일부는 가용성을 위한 것입니다. SQL Server 2017에서 가장 크게 추가된 기능은 Linux 배포판에서 SQL Server를 지원하는 것입니다. SQL Server 2017 새로운 기능의 전체 목록은 [SQL Server의 새로운 기능](http://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)을 참조하십시오.
 
-이 문서는 SQL Server 2017의 가용성 시나리오와 SQL Server 2017의 새롭고 향상된 가용성 기능을 설명하는 데 중점을 두고 있습니다. 이 시나리오에는 Windows Server 및 Linux에서 SQL Server 배포를 확장할 수 있을 뿐만 아니라 데이터베이스의 읽기 가능한 복사본 수를 늘릴 수 있는 하이브리드 시나리오도 포함됩니다. 이 문서에서는 가상화에서 제공되는 것과 같은 SQL Server 외부의 가용성 옵션에 대해서는 설명하지 않지만 여기에 언급된 모든 내용은 공개 클라우드의 게스트 가상 컴퓨터나 온-프레미스 하이퍼바이저 서버가 호스트하는 게스트 가상 컴퓨터 내부의 SQL Server 설치에 적용됩니다.
+이 문서는 SQL Server 2017의 가용성 시나리오와 SQL Server 2017의 새롭고 향상된 가용성 기능을 설명하는 데 중점을 두고 있습니다. 이 시나리오에는 Windows Server 및 Linux에서 SQL Server 배포를 확장할 수 있을 뿐만 아니라 데이터베이스의 읽기 가능한 복사본 수를 늘릴 수 있는 하이브리드 시나리오도 포함됩니다. 이 문서에서는 가상화에서 제공되는 것과 같은 SQL Server 외부의 가용성 옵션에 대해서는 설명하지 않지만, 여기에 언급된 모든 내용은 공개 클라우드의 게스트 가상 머신이나 온-프레미스 하이퍼바이저 서버가 호스트하는 게스트 가상 머신 내부의 SQL Server 설치에 적용됩니다.
 
 ## <a name="sql-server-2017-scenarios-using-the-availability-features"></a>가용성 기능을 사용하는 SQL Server 2017 시나리오
 
@@ -68,7 +68,7 @@ WSFC와 Pacemaker는 다르기보다는 유사합니다. 둘 다 개별 서버�
 
 * WSFC 
 * External
-* 없음
+* InclusionThresholdSetting
 
 가용성이 필요한 모든 가용성 그룹은 기본 클러스터를 사용해야 합니다. SQL Server 2017의 경우 WSFC 또는 Pacemaker가 여기에 해당됩니다. 기본 WSFC를 사용하는 Windows Server 기반 가용성 그룹의 경우 기본 클러스터 유형은 WSFC이며 설정이 필요 없습니다. Linux 기반 가용성 그룹의 경우 가용성 그룹을 만들 때 클러스터 유형을 외부로 설정해야 합니다. Pacemaker와의 통합은 가용성 그룹이 만들어진 후에 구성되는 반면 WSFC의 경우 생성시 완료됩니다.
 

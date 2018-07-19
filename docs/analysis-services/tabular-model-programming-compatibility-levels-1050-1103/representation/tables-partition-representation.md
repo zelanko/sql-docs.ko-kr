@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039016"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054711"
 ---
 # <a name="tables---partition-representation"></a>테이블-파티션 표현
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

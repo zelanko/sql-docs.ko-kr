@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (Transact SQL) | Microsoft Docs
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,19 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464239"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042771"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-현재에서 지정 된 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)에 대 한 통계 히스토그램 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 유사한 `DBCC SHOW_STATISTICS WITH HISTOGRAM`합니다.
+현재에서 지정 된 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)에 대 한 통계 히스토그램을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 유사한 `DBCC SHOW_STATISTICS WITH HISTOGRAM`합니다.
 
 > [!NOTE] 
-> 이 DMF 부터는 ´ ï ´ [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> 이 DMF부터 사용할 수 [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
 
 ## <a name="syntax"></a>구문  
   
@@ -63,13 +63,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다. |
 |equal_rows |**real** |히스토그램 단계에서 상한과 열 값이 동일한 예상 행 수입니다. |
 |distinct_range_rows |**bigint** |상한을 제외한 히스토그램 단계 내에 고유한 열 값이 있는 예상 행 수입니다. |
-|average_range_rows |**real** |상한을 제외한 히스토그램 단계 내에서 중복 열 값이 있는 행의 평균 수 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` 에 대 한 `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**real** |상한을 제외한 히스토그램 단계 내에서 중복 된 열 값이 있는 행의 평균 수 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` 에 대 한 `DISTINCT_RANGE_ROWS > 0`). |
   
- ## <a name="remarks"></a>주의  
+ ## <a name="remarks"></a>Remarks  
  
- 에 대 한 결과 집합 `sys.dm_db_stats_histogram` 유사한 정보를 반환 `DBCC SHOW_STATISTICS WITH HISTOGRAM` 포함 `object_id`, `stats_id`, 및 `step_number`합니다.
+ 에 대 한 결과 집합 `sys.dm_db_stats_histogram` 와 비슷한 정보를 반환 합니다 `DBCC SHOW_STATISTICS WITH HISTOGRAM` 도 포함 `object_id`합니다 `stats_id`, 및 `step_number`합니다.
 
- 때문에 열 `range_high_key` 는 sql_variant 데이터 형식에 사용 해야 할 수도 `CAST` 또는 `CONVERT` 조건자 문자열이 아닌 상수와 비교를 수행 하는 경우.
+ 때문에 열 `range_high_key` 는 sql_variant 데이터 사용 해야 형식 `CAST` 또는 `CONVERT` 조건자 문자열이 아닌 상수를 사용 하 여 비교를 수행 하는 경우.
 
 ### <a name="histogram"></a>히스토그램
   
@@ -91,14 +91,14 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
 
 ## <a name="examples"></a>예  
 
 ### <a name="a-simple-example"></a>1. 간단한 예    
-다음 예제에서는 만들고 간단한 테이블을 채웁니다. 그런 다음에 통계를 작성은 `Country_Name` 열입니다.
+다음 예제에서는 만들고 간단한 테이블을 채웁니다. 그런 다음에 통계를 만듭니다를 `Country_Name` 열입니다.
 
 ```sql
 CREATE TABLE Country
@@ -109,7 +109,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-기본 키를 차지 `stat_id` 번호가 1, 없으므로 호출 `sys.dm_db_stats_histogram` 에 대 한 `stat_id` 번호 2에 대 한 통계 히스토그램을 반환 하는 `Country` 테이블입니다.    
+기본 키 차지 `stat_id` 번호가 1를 호출 하므로 `sys.dm_db_stats_histogram` 에 대 한 `stat_id` 번호 2에 대 한 통계 히스토그램에 반환할는 `Country` 테이블.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -124,14 +124,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>3. 유용한 쿼리:
-다음 예에서는 테이블에서 선택 `Country` 열에 대 한 조건자가 있는 `Country_Name`합니다.
+다음 예에서는 테이블에서 선택 `Country` 열에 대 한 조건자를 사용 하 여 `Country_Name`입니다.
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-다음 예에서는 테이블에 대해 이전에 만든된 통계 살펴봅니다 `Country` 및 열 `Country_Name` 위의 쿼리에서 조건자와 일치 하는 히스토그램 단계에 대 한 합니다.
+다음 예에서는 테이블에서 이전에 만든된 통계 살펴봅니다 `Country` 및 열 `Country_Name` 위 쿼리 조건자와 일치 하는 히스토그램 단계에 대 한 합니다.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -148,7 +148,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [DBCC SHOW_STATISTICS (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[개체 관련된 동적 관리 뷰 및 함수 (Transact SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+[개체 관련된 동적 관리 뷰 및 함수 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

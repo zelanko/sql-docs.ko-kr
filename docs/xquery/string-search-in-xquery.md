@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cdd490ca34a1fa95a341da7665031659ffd099b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041561"
 ---
 # <a name="string-search-in-xquery"></a>XQuery에서 문자열 검색
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 이전 쿼리에서 `where` FLOWR에서 식의 결과 필터링 된 `for` 식과 충족 하는 요소만 반환은 **contains ()** 조건.  
+ 이전 쿼리에서 `where` FLOWR에서 식의 결과 필터링 합니다 `for` 식과 충족 하는 요소만 반환을 **contains ()** 조건.  
   
  다음은 결과입니다.  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

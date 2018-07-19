@@ -1,5 +1,5 @@
 ---
-title: XQuery의 캐스트 규칙 | Microsoft Docs
+title: XQuery의 형식 캐스트 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055248"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery의 캐스트 규칙
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,34 +43,34 @@ ms.locfileid: "33077910"
   
  이 항목에서는 다음 중 한 가지 방법으로 유형 간 변환할 때 적용되는 캐스트 규칙에 대해 설명합니다.  
   
--   사용 하 여 수행 하는 명시적 캐스트 **로 캐스팅** 또는 유형 생성자 함수 (예를 들어 `xs:integer("5")`).  
+-   명시적 캐스트를 사용 하 여 수행한 **로 캐스팅** 또는 유형 생성자 함수 (예를 들어 `xs:integer("5")`).  
   
 -   유형 승격 중 발생하는 암시적 캐스트  
   
 ## <a name="explicit-casting"></a>명시적 캐스트  
  다음 표에서는 기본 제공 기본 유형 간에 허용되는 캐스트에 대한 개요를 보여 줍니다.  
   
- ![XQuery의 캐스트 규칙을 설명합니다. ] (../xquery/media/casting-builtin-types.gif "XQuery에 대 한 캐스팅 규칙에 설명 합니다.")  
+ ![XQuery에 대 한 캐스팅 규칙을 설명합니다. ] (../xquery/media/casting-builtin-types.gif "XQuery에 대 한 캐스팅 규칙에 설명 합니다.")  
   
 -   표의 규칙에 따라 기본 제공 기본 유형 간에 캐스트가 가능합니다.  
   
--   기본 유형은 해당 기본 유형에서 파생된 모든 유형으로 캐스팅될 수 있습니다. 예를 들어에서 캐스팅할 수 있습니다 **xs: decimal** 를 **xs: integer**, 또는 **xs: decimal** 를 **xs: long**합니다.  
+-   기본 유형은 해당 기본 유형에서 파생된 모든 유형으로 캐스팅될 수 있습니다. 예를 들어에서 캐스팅할 수 있습니다 **xs: decimal** 하 **xs: integer**, 또는 **xs: decimal** 에 **xs: long**합니다.  
   
--   파생된 유형은 기본 제공 기본 유형에 이르기까지 유형 계층에서 상위에 있는 모든 유형으로 캐스팅될 수 있습니다. 예를 들어에서 캐스팅할 수 있습니다 **xs: token** 를 **xs: normalizedstring** 또는 **xs: string**합니다.  
+-   파생된 유형은 기본 제공 기본 유형에 이르기까지 유형 계층에서 상위에 있는 모든 유형으로 캐스팅될 수 있습니다. 예를 들어에서 캐스팅할 수 있습니다 **xs:token** 하 **xs: normalizedstring** 또는 **xs: string**합니다.  
   
--   파생된 유형은 해당 기본 상위 유형이 대상 유형으로 캐스팅될 수 있는 경우 기본 유형으로 캐스팅될 수 있습니다. 예를 들어 캐스팅할 수 있습니다 **xs: integer**, 파생 된 유형인에는 **xs: string**원시 하기 때문에 입력 **xs: decimal**, **xs: integer**의 기본 상위 캐스팅 **xs: string**합니다.  
+-   파생된 유형은 해당 기본 상위 유형이 대상 유형으로 캐스팅될 수 있는 경우 기본 유형으로 캐스팅될 수 있습니다. 예를 들어 캐스팅할 수 있습니다 **xs: integer**, 파생 형식에 **xs: string**원시 하기 때문에 입력 **xs: decimal**, **xs: integer**의 기본 상위로 캐스팅할 수 있습니다 **xs: string**합니다.  
   
--   파생된 유형은 원본 유형의 기본 상위 유형이 대상 유형의 기본 상위 유형으로 캐스팅될 경우 다른 파생된 유형으로 캐스팅될 수 있습니다. 예를 들어에서 캐스팅할 수 있습니다 **xs: integer** 를 **xs: token**에서 캐스팅할 수 때문에, **xs: decimal** 를 **xs: string**합니다.  
+-   파생된 유형은 원본 유형의 기본 상위 유형이 대상 유형의 기본 상위 유형으로 캐스팅될 경우 다른 파생된 유형으로 캐스팅될 수 있습니다. 예를 들어에서 캐스팅할 수 있습니다 **xs: integer** 하 **xs:token**이므로에서 캐스팅할 수 있습니다 **xs: decimal** 하 **xs: string**합니다.  
   
--   사용자 정의 유형을 기본 제공 유형으로 캐스팅하는 규칙은 기본 제공 유형에 대한 규칙과 같습니다. 예를 들어 정의할 수 있습니다는 **myInteger** 형식에서 파생 된 **xs: integer** 유형입니다. 그런 다음 **myInteger** 으로 캐스팅 될 수 **xs: token**때문에, **xs: decimal** 으로 캐스팅 될 수 **xs: string**합니다.  
+-   사용자 정의 유형을 기본 제공 유형으로 캐스팅하는 규칙은 기본 제공 유형에 대한 규칙과 같습니다. 예를 들어 정의할 수 있습니다는 **myInteger** 에서 파생 된 형식 **xs: integer** 형식입니다. 차례로 **myInteger** 캐스팅할 수 **xs:token**이므로 **xs: decimal** 캐스팅할 수 **xs: string**합니다.  
   
  다음은 지원되지 않는 캐스트의 종류입니다.  
   
--   목록 유형과의 상호 캐스트는 허용되지 않습니다. 사용자 정의 목록 유형 및 기본 제공 목록 유형이 모두와 같은 포함 **xs:IDREFS**, **xs: entities**, 및 **xs: nmtokens**합니다.  
+-   목록 유형과의 상호 캐스트는 허용되지 않습니다. 사용자 정의 목록 유형 및 기본 제공 목록 유형이 모두 같은 포함 **xs:IDREFS**하십시오 **xs: entities**, 및 **xs: nmtokens**.  
   
--   또는 캐스팅 **xs: qname** 지원 되지 않습니다.  
+-   캐스팅 **xs: qname** 지원 되지 않습니다.  
   
--   **xs: notation** 및 기간의 완전히 정렬 되어 하위 **xdt: yearmonthduration** 및 **xdt: daytimeduration**, 지원 되지 않습니다. 따라서 이러한 유형과의 상호 캐스트는 지원되지 않습니다.  
+-   **xs: notation** 및 기간 완벽 하 게 정렬 된 하위 **xdt: yearmonthduration** 하 고 **xdt: daytimeduration**, 지원 되지 않습니다. 따라서 이러한 유형과의 상호 캐스트는 지원되지 않습니다.  
   
  다음 예에서는 명시적 캐스트를 보여 줍니다.  
   
@@ -142,23 +142,23 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>암시적 캐스트  
- 암시적 캐스트는 숫자 유형 및 형식화되지 않은 원자 유형에 대해서만 허용됩니다. 예를 들어, 다음 **min ()** 함수는 두 값의 최소값을 반환 합니다.  
+ 암시적 캐스트는 숫자 유형 및 형식화되지 않은 원자 유형에 대해서만 허용됩니다. 다음 예를 들어 **min ()** 함수는 두 값의 최소값을 반환 합니다.  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- 이 예제에서는 두 개의 값이 전달 xquery **min ()** 함수는 서로 다른 형식입니다. 따라서 암시적 변환이 수행 됩니다 여기서 **정수** 로 승격 됩니다 **double** 및 두 **double** 값을 비교 합니다.  
+ 이 예제에서는 두 개의 값 전달 xquery **min ()** 함수는 다른 유형입니다. 암시적 변환을 수행 하므로 여기서 **정수** 형식으로 승격 됩니다 **double** 및 두 개의 **double** 값이 비교 됩니다.  
   
  이 예에 설명된 대로 유형 승격은 다음 규칙을 따릅니다.  
   
--   기본 제공 파생된 숫자 유형은 기본 유형으로 승격될 수 있습니다. 예를 들어 **정수** 로 승격 **10 진수**합니다.  
+-   기본 제공 파생된 숫자 유형은 기본 유형으로 승격될 수 있습니다. 예를 들어 **정수** 로 승격 **decimal**합니다.  
   
--   A **10 진수** 으로 바뀔 수 있습니다 **float** 및 **float** 으로 바뀔 수 있습니다 **double**합니다.  
+-   A **10 진수** 로 승격 될 수 있습니다 **float** 및 **float** 로 승격 될 수 있습니다 **double**합니다.  
   
  암시적 캐스트는 숫자 유형에 대해서만 허용되므로 다음은 허용되지 않습니다.  
   
--   문자열 유형에 대한 암시적 캐스트는 허용되지 않습니다. 예를 들어 두 개의 **문자열** 형식은 하 고 전달 하는 **문자열** 및 **토큰**없습니다 암시적 캐스트가 발생 하 고 오류가 반환 됩니다.  
+-   문자열 유형에 대한 암시적 캐스트는 허용되지 않습니다. 예를 들어, 두 **문자열** 형식을 예상 되 고 전달 하는 **문자열** 및 **토큰**없는 암시적 캐스트가 수행 하 고 오류가 반환 됩니다.  
   
 -   숫자 유형에서 문자열 유형으로 암시적 캐스팅하는 것은 허용되지 않습니다. 예를 들어 정수 유형 값을 문자열 유형 매개 변수를 예상하는 함수로 전달하는 경우 암시적 캐스트가 발생하지 않고 오류가 반환됩니다.  
   
@@ -175,7 +175,7 @@ min(xs:integer("1"), xs:double("1.1"))
  문자열 또는 untypedAtomic 유형에서 xs:base64Binary 또는 xs:hexBinary와 같은 이진 유형으로 캐스팅할 때 입력 값은 각각 Base64 또는 16진수 인코딩이어야 합니다.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>문자열 또는 untypedAtomic 유형으로 값 캐스팅  
- 문자열 또는 untypedAtomic 유형으로 캐스팅하면 값이 XQuery 정식 어휘 표현으로 변환됩니다. 이는 특히 입력 중 특정 패턴이나 기타 제약 조건에 맞는 값이 해당 제약 조건에 따라 표현되지 않음을 의미합니다.  이 대 한 사용자를 알려 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 형식 제약 조건에서는 스키마 컬렉션에 로드 될 때 경고를 제공 하 여는 문제가 될 수 있는 유형에 플래그를 지정 합니다.  
+ 문자열 또는 untypedAtomic 유형으로 캐스팅하면 값이 XQuery 정식 어휘 표현으로 변환됩니다. 이는 특히 입력 중 특정 패턴이나 기타 제약 조건에 맞는 값이 해당 제약 조건에 따라 표현되지 않음을 의미합니다.  이 대 한 사용자를 알려 줍니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 형식 제약 조건 스키마 컬렉션에 해당 형식이 로드 될 때 경고를 제공 하 여는 문제가 될 수 있는 형식 플래그를 지정 합니다.  
   
  xs:float 유형 또는 xs:double 유형이나 그 하위 유형 중 하나의 값을 문자열 또는 untypedAtomic 유형으로 캐스팅할 때 해당 값은 과학적 표기법으로 표시됩니다. 이는 해당 값의 절대값이 1.0E-6 미만이거나 1.0E6 이상일 때만 수행됩니다. 즉, 과학적 표기법에 따라 0이 0.0E0으로 직렬화됩니다.  
   
@@ -205,9 +205,9 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   부동 소수점 값 NaN은 지원되지 않습니다.  
   
--   캐스팅할 수 있는 값은 대상 유형 구현 제한 사항으로 제한됩니다. 에 음수 연도가 있는 날짜 문자열을 캐스팅할 수 없습니다는 예를 들어 **xs: date**합니다. 이러한 캐스트는 런타임에 값이 제공될 경우 런타임 오류를 발생시키는 대신 빈 시퀀스를 반환합니다.  
+-   캐스팅할 수 있는 값은 대상 유형 구현 제한 사항으로 제한됩니다. 예를 들어에 음수 연도가 있는 날짜 문자열로 캐스팅할 수 없습니다 **xs: date**합니다. 이러한 캐스트는 런타임에 값이 제공될 경우 런타임 오류를 발생시키는 대신 빈 시퀀스를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 데이터 직렬화 정의](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: backupset (Transact SQL) | Microsoft Docs
+title: backupset (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1089a1a30e50b389b05c79cf9af2443f7dc55d6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263279"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042751"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "33263279"
 |**last_media_number**|**smallint**|백업 세트가 끝나는 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
 |**catalog_family_number**|**tinyint**|백업 세트 디렉터리의 시작을 포함한 미디어의 패밀리 번호입니다. NULL일 수 있습니다.|  
 |**catalog_media_number**|**smallint**|백업 세트 디렉터리의 시작을 포함한 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
-|**position**|**int**|적절한 백업 세트 및 파일의 위치를 찾기 위해 복원 작업에 사용되는 백업 세트 위치입니다. NULL일 수 있습니다. 자세한 내용은 파일을 참조 [백업 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)합니다.|  
+|**위치**|**int**|적절한 백업 세트 및 파일의 위치를 찾기 위해 복원 작업에 사용되는 백업 세트 위치입니다. NULL일 수 있습니다. 자세한 내용은 파일을 보려면 [백업 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)합니다.|  
 |**expiration_date**|**datetime**|백업 세트가 만료되는 날짜 및 시간입니다. NULL일 수 있습니다.|  
 |**software_vendor_id**|**int**|백업 미디어 헤더를 기록하는 소프트웨어 공급업체의 ID입니다. NULL일 수 있습니다.|  
 |**name**|**nvarchar(128)**|백업 세트의 이름입니다. NULL일 수 있습니다.|  
-|**설명**|**nvarchar(255)**|백업 세트에 관한 설명입니다. NULL일 수 있습니다.|  
+|**description**|**nvarchar(255)**|백업 세트에 관한 설명입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|백업 작업을 수행하는 사용자의 이름입니다. NULL일 수 있습니다.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부 버전 번호입니다. NULL일 수 있습니다.|  
@@ -65,20 +65,20 @@ ms.locfileid: "33263279"
 |**first_lsn**|**numeric(25,0)**|백업 세트에서 첫 번째 또는 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
 |**last_lsn**|**numeric(25,0)**|백업 세트 다음에 오는 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
 |**checkpoint_lsn**|**numeric(25,0)**|다시 실행이 시작되어야 하는 로그 레코드의 로그 시퀀스 번호입니다. NULL일 수 있습니다.|  
-|**database_backup_lsn**|**numeric(25,0)**|가장 최근 전체 데이터베이스 백업의 로그 시퀀스 번호입니다. NULL일 수 있습니다.<br /><br /> **database_backup_lsn** 은 "검사점의"시작 백업이 시작 될 때 트리거되는 합니다. 이 LSN와 일치 합니다 **first_lsn** 데이터베이스가 유휴 상태이 고 복제가 구성 된 경우 백업이 수행 되는 경우.|  
+|**database_backup_lsn**|**numeric(25,0)**|가장 최근 전체 데이터베이스 백업의 로그 시퀀스 번호입니다. NULL일 수 있습니다.<br /><br /> **database_backup_lsn** 은 "검사점의"시작 된 백업이 시작 될 때 트리거되는 합니다. 이 LSN은 맞춰 **first_lsn** 데이터베이스가 유휴 상태이 고 복제가 구성 되지 않은 경우 백업이 수행 되는 경우.|  
 |**database_creation_date**|**datetime**|데이터베이스가 원래 생성된 날짜와 시간입니다. NULL일 수 있습니다.|  
 |**backup_start_date**|**datetime**|백업 작업이 시작된 날짜와 시간입니다. NULL일 수 있습니다.|  
 |**backup_finish_date**|**datetime**|백업 작업이 완료된 날짜와 시간입니다. NULL일 수 있습니다.|  
 |**type**|**char(1)**|백업 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> D = 데이터베이스<br /><br /> I = 차등 데이터베이스<br /><br /> L = 로그<br /><br /> F = 파일 또는 파일 그룹<br /><br /> G =차등 파일<br /><br /> P = 부분<br /><br /> Q = 차등 부분<br /><br /> NULL일 수 있습니다.|  
-|**sort_order**|**smallint**|백업 작업을 수행하는 서버의 정렬 순서입니다. NULL일 수 있습니다. 정렬 순서 및 데이터 정렬에 대 한 자세한 내용은 참조 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.|  
-|**code_page**|**smallint**|백업 작업을 수행하는 서버의 코드 페이지입니다. NULL일 수 있습니다. 코드 페이지에 대 한 자세한 내용은 참조 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.|  
+|**sort_order**|**smallint**|백업 작업을 수행하는 서버의 정렬 순서입니다. NULL일 수 있습니다. 정렬 순서 및 데이터 정렬에 대 한 자세한 내용은 참조 하세요. [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.|  
+|**code_page**|**smallint**|백업 작업을 수행하는 서버의 코드 페이지입니다. NULL일 수 있습니다. 코드 페이지에 대 한 자세한 내용은 참조 하세요. [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)합니다.|  
 |**compatibility_level**|**tinyint**|데이터베이스에 대한 호환성 수준 설정입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL일 수 있습니다.<br /><br /> 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|  
 |**database_version**|**int**|데이터베이스 버전 번호입니다. NULL일 수 있습니다.|  
 |**backup_size**|**numeric(20,0)**|백업 세트의 크기(바이트)입니다. NULL일 수 있습니다. VSS 백업에 대 한 backup_size 예상된 값입니다.|  
 |**database_name**|**nvarchar(128)**|백업 작업과 연관된 데이터베이스의 이름입니다. NULL일 수 있습니다.|  
 |**server_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업을 실행하고 있는 서버의 이름입니다. NULL일 수 있습니다.|  
 |**machine_name**|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 컴퓨터의 이름입니다. NULL일 수 있습니다.|  
-|**flags**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **플래그** 열 사용 되지 않으며 다음 비트 열으로 바뀝니다:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> NULL일 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 백업 세트에서 플래그 비트는 다음과 같습니다.<br />1 = 백업이 최소 기록 데이터를 포함합니다. <br />2 = WITH SNAPSHOT이 사용되었습니다. <br />4 = 데이터베이스 백업 시 읽기 전용 이었습니다.<br />8 = 백업 시 데이터베이스가 단일 사용자 모드였습니다.|  
+|**flags**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서 **플래그** 열 사용 되지 않으며 다음 비트 열으로 교체할:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> NULL일 수 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 백업 세트에서 플래그 비트는 다음과 같습니다.<br />1 = 백업이 최소 기록 데이터를 포함합니다. <br />2 = WITH SNAPSHOT이 사용되었습니다. <br />4 = 데이터베이스 백업 당시 읽기 전용 이었습니다.<br />8 = 백업 시 데이터베이스가 단일 사용자 모드였습니다.|  
 |**unicode_locale**|**int**|유니코드 로캘입니다. NULL일 수 있습니다.|  
 |**unicode_compare_style**|**int**|유니코드 비교 스타일입니다. NULL일 수 있습니다.|  
 |**collation_name**|**nvarchar(128)**|데이터 정렬 이름입니다. NULL일 수 있습니다.|  
@@ -96,23 +96,23 @@ ms.locfileid: "33263279"
 |**is_copy_only**|**bit**|1 = 복사 전용 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|복구 분기 시작 지점의 ID입니다. 이에 해당 **FirstRecoveryForkID** RESTORE HEADERONLY의 합니다.<br /><br /> 데이터 백업의 **first_recovery_fork_guid** equals **last_recovery_fork_guid**합니다.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|복구 분기 끝 지점의 ID입니다. 이에 해당 **RecoveryForkID** RESTORE HEADERONLY의 합니다.<br /><br /> 데이터 백업의 **first_recovery_fork_guid** equals **last_recovery_fork_guid**합니다.|  
-|**fork_point_lsn**|**numeric(25,0)**|경우 **first_recovery_fork_guid** 과 같지 않은 **last_recovery_fork_guid**, 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않으면 값은 NULL입니다.|  
+|**fork_point_lsn**|**numeric(25,0)**|하는 경우 **first_recovery_fork_guid** 같지 **last_recovery_fork_guid**, 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않으면 값은 NULL입니다.|  
 |**database_guid**|**uniqueidentifier**|데이터베이스에 대한 고유 ID입니다. 이에 해당 **BindingID** RESTORE HEADERONLY의 합니다. 데이터베이스를 복원하면 새 값이 할당됩니다.|  
 |**family_guid**|**uniqueidentifier**|생성 시 원래 데이터베이스의 고유 ID입니다. 이 값은 데이터베이스가 다른 이름으로 복원되는 경우에도 동일하게 유지됩니다.|  
-|**differential_base_lsn**|**numeric(25,0)**|차등 백업에 대한 기본 LSN입니다. 단일 기반 차등 백업;에 대 한 변경 내용을 lsn 보다 크거나 **differential_base_lsn** 차등 백업에 포함 됩니다.<br /><br /> 차등 백업의 값은 NULL 이며 기본 LSN 파일 수준에서 결정 해야 합니다 (참조 [backupfile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> 비차등 백업 유형의 경우 값은 항상 NULL입니다.|  
+|**differential_base_lsn**|**numeric(25,0)**|차등 백업에 대한 기본 LSN입니다. 단일 기반 차등 백업; 보다 크거나 같은 Lsn 사용 하 여 변경 내용을 **differential_base_lsn** 차등 백업에 포함 됩니다.<br /><br /> 차등 백업의 경우 값은 NULL 이며 기본 LSN은 파일 수준에서 결정 해야 합니다 (참조 [backupfile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> 비차등 백업 유형의 경우 값은 항상 NULL입니다.|  
 |**differential_base_guid**|**uniqueidentifier**|단일 백업을 기준으로 하는 차등 백업의 경우 값은 차등 기반의 고유 식별자입니다.<br /><br /> 여러 백업을 기반으로 하는 차등 백업의 경우 값은 NULL이며 기본 차등 백업은 파일 수준에서 결정해야 합니다.<br /><br /> 비차등 백업 유형의 경우 값은 NULL입니다.|  
-|**compressed_backup_size**|**numeric(20,0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **backup_size** 및 **backup_size**합니다.<br /><br /> 동안는 **msdb** 업그레이드,이 값을 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
+|**compressed_backup_size**|**Numeric(20,0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **backup_size** 하 고 **backup_size**합니다.<br /><br /> 중에 **msdb** 업그레이드,이 값을 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
 |**key_algorithm**|**nvarchar(32)**|백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption 값은 백업이 암호화되지 않았음을 나타냅니다.|  
 |**encryptor_thumbprint**|**varbinary(20)**|데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
 |**encryptor_type**|**nvarchar(32)**|사용한 암호기 유형: 인증서 또는 비대칭 키입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
   
-## <a name="remarks"></a>주의  
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY의 열을 채우는 **backupmediaset** 미디어 세트 헤더의 적절 한 값으로는 테이블입니다.  
+## <a name="remarks"></a>Remarks  
+ RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 채웁니다의 열에는 **backupmediaset** 미디어 세트 헤더의 적절 한 값이 있는 테이블입니다.  
   
- 이 테이블의 다른 백업 및 기록 테이블에서 행의 수를 줄이려면 실행는 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  
+ 이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [백업 및 복원 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [백업 및 복원 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -121,6 +121,6 @@ ms.locfileid: "33263279"
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [백업 및 복원 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [백업 및 복원 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_dbremove (Transact SQL) | Microsoft Docs
+title: sp_dbremove (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 518ffebe8638292ee1b6bd4aa63a7f5e5f19a4d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042717"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
   
 ## <a name="arguments"></a>인수  
  [  **@dbname=** ] **'***데이터베이스***'**  
- 제거할 데이터베이스의 이름입니다. *데이터베이스* 은 **sysname**, 기본값은 NULL입니다.  
+ 제거할 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@dropdev=** ] **'***dropdev***'**  
- 이전 버전과의 호환성을 위해서만 제공되며 현재는 무시되는 플래그입니다. *dropdev* 값 **dropdev**합니다.  
+ 이전 버전과의 호환성을 위해서만 제공되며 현재는 무시되는 플래그입니다. *dropdev* 기본값이 **dropdev**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -59,7 +59,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ## <a name="result-sets"></a>결과 집합  
  InclusionThresholdSetting  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -69,7 +69,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 EXEC sp_dbremove sales;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   

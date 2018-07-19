@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854355"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054875"
 ---
 # <a name="memory-properties"></a>메모리 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

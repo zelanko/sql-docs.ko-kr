@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042051"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>DMX Select 문 이해
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [선택](../dmx/select-dmx.md) 문에와 확장 DMX (Data Mining)에서 만드는 대부분의 쿼리에서 기반 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 이 문을 사용하여 데이터 마이닝 모델을 검색하거나 예측하는 등의 여러 가지 태스크를 수행할 수 있습니다.  
+  합니다 [선택](../dmx/select-dmx.md) 문을 사용 하 여 확장 DMX (Data Mining)에서 만든 대부분의 쿼리에 대 한 기반이 됩니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 이 문을 사용하여 데이터 마이닝 모델을 검색하거나 예측하는 등의 여러 가지 태스크를 수행할 수 있습니다.  
   
- 사용 하 여 완료할 수 있는 작업은 다음과 같습니다는 **선택** 문:  
+ 다음은 사용 하 여 완료할 수 있는 작업을 합니다 **선택** 문:  
   
 -   데이터 마이닝 모델을 찾습니다. 스키마 행 집합은 모델 구조를 정의합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34842606"
   
 -   마이닝 모델을 복사합니다.  
   
- 호출할 데이터 집합이 다른을 사용 하 여 각이 태스크는 *데이터 도메인*합니다. 데이터 도메인을 정의 하는 **FROM** 문의 절.  
+ 다른 이라고 하는 데이터 집합을 사용 하 여 이러한 각 작업을 *데이터 도메인*합니다. 데이터 도메인을 정의 하는 **FROM** 문의 절.  
   
 -   데이터 집합을 정의하는 규칙 등 데이터 마이닝 모델 자체에서 개체 및 예측을 수행하는 데 사용되는 수식을 찾으려고 합니다.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "34842606"
   
      해당 사례에서 데이터 도메인인 마이닝 구조를 드릴스루하고 Gender, Bike Buyer 등 열의 각 행을 확인해야 합니다.  
   
- **중요:** 또는 식 목록에 포함 되는 모든 항목은 **여기서** 절에서 정의한 데이터 도메인에서 가져와야 합니다.는 **FROM** 절. 데이터 도메인을 혼합할 수 없습니다.  
+ **중요:** 또는 식 목록에 포함 되는 모든 항목을 **여기서** 절에서 정의한 데이터 도메인에서 가져와야 합니다 합니다 **FROM** 절. 데이터 도메인을 혼합할 수 없습니다.  
   
 ##  <a name="Select_Types"></a> 유형 선택  
- 구문의 **선택** 문은 여러 다양 한 작업을 지원 합니다. 다음 패턴을 사용하여 이러한 태스크를 수행합니다.  
+ 구문의 **선택** 문은 많은 다양 한 작업을 지원 합니다. 다음 패턴을 사용하여 이러한 태스크를 수행합니다.  
   
 -   [예측](#Predicting)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34842606"
 ###  <a name="Predicting"></a> 예측  
  다음 쿼리 유형을 사용하여 마이닝 모델을 기반으로 예측을 수행할 수 있습니다.  
   
- 찾기 또는 예측 중 하나를 포함할 수 있습니다 **선택** 내에 있는 문이 **FROM** 및 **여기서** 예측 조인 절 **선택** 문.  
+ 찾기 또는 예측 중 하나를 포함할 수 있습니다 **선택** 내의 문 합니다 **FROM** 및 **여기서** 예측 조인의 절 **선택** 문입니다.  
   
 |쿼리 유형|Description|  
 |----------------|-----------------|  
@@ -73,8 +73,8 @@ ms.locfileid: "34842606"
   
 |쿼리 유형|Description|  
 |----------------|-----------------|  
-|SELECT DISTINCT FROM  *\<모델 >*|지정한 열의 마이닝 모델에 있는 모든 상태 값을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 데이터 마이닝 모델입니다.<br /><br /> [SELECT DISTINCT FROM &#60;모델 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [내용 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM  *\<모델 >* 합니다. 콘텐츠|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [내용 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT DISTINCT FROM  *\<모델 >*|지정한 열의 마이닝 모델에 있는 모든 상태 값을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 데이터 마이닝 모델입니다.<br /><br /> [SELECT DISTINCT FROM &#60;모델 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT FROM  *\<모델 >* 합니다. 콘텐츠|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [콘텐츠 쿼리 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<모델 >* 합니다. DIMENSION_CONTENT|마이닝 모델을 설명하는 내용을 반환합니다.<br /><br /> 이 쿼리 유형의 데이터 도메인은 내용 스키마 행 집합입니다.<br /><br /> [SELECT FROM &#60;모델&#62;합니다. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
 |SELECT FROM  *\<모델 >* 합니다. PMML|이 기능을 지원하는 알고리즘에 대한 마이닝 모델의 PMML(Predictive Model Markup Language) 표현을 반환합니다.<br /><br /> 이 쿼리 유형의 도메인은 PMML 스키마 행 집합입니다.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
   

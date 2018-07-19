@@ -1,6 +1,6 @@
 ---
-title: Docker에서 SQL Server 데이터베이스를 복원 | Microsoft Docs
-description: 이 자습서에서는 어떻게 새 Linux Docker 컨테이너에 SQL Server 데이터베이스 백업을 복원 합니다.
+title: Docker에서 SQL Server 데이터베이스를 복원 합니다. | Microsoft Docs
+description: 이 자습서에서는 새 Linux Docker 컨테이너에서 SQL Server 데이터베이스 백업을 복원 하는 어떻게 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,23 +12,23 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842816"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041211"
 ---
-# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
+# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스를 복원 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 자습서에서는 이동 하 고 Docker에서 실행 중인 SQL Server 2017 Linux 컨테이너 이미지에 SQL Server 백업 파일을 복원 하는 방법을 설명 합니다.
+이 자습서에는 이동 하 고 Docker에서 실행 하는 SQL Server 2017 Linux 컨테이너 이미지를 SQL Server 백업 파일을 복원 하는 방법을 보여 줍니다.
 
 > [!div class="checklist"]
 > * 끌어오기 및 최신 SQL Server 2017 Linux 컨테이너 이미지를 실행 합니다.
-> * 컨테이너에 Wide World Importers 데이터베이스 파일을 복사 합니다.
+> * Wide World Importers 데이터베이스 파일을 컨테이너에 복사 합니다.
 > * 컨테이너에서 데이터베이스를 복원 합니다.
-> * 보고 데이터베이스를 수정 하는 TRANSACT-SQL 문을 실행 합니다.
+> * 보고 데이터베이스를 수정 하려면 TRANSACT-SQL 문을 실행 합니다.
 > * 수정 된 데이터베이스를 백업 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -53,9 +53,9 @@ ms.locfileid: "34842816"
     ```
 
     > [!TIP]
-    > 이 자습서에서는 전체 docker 명령 예제는 bash 셸의 (Linux/Mac) 및 PowerShell (Windows)에 대해 제공 됩니다.
+    > 이 자습서에서는 docker 명령 예제는 bash 셸 (Linux/Mac) 및 PowerShell (Windows)에 대해 제공 됩니다.
 
-1. Docker가 있는 컨테이너 이미지를 실행 하려면 다음 명령을 사용할 수 있습니다.
+1. Docker를 사용 하 여 컨테이너 이미지를 실행 하려면 다음 명령을 사용할 수 있습니다.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -71,10 +71,10 @@ ms.locfileid: "34842816"
        -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    이 명령은 Developer edition (기본값)을 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트로 호스트에 노출 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 명명 된 데이터 볼륨 컨테이너를 만듦 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하는이 사용 됩니다.
+    이 명령은 Developer edition (기본값)를 사용 하 여 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트와 호스트에 노출 됩니다 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 라는 데이터 볼륨 컨테이너를 만듭니다 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하기 위해 사용 됩니다.
 
    > [!NOTE]
-   > 컨테이너에서 프로덕션 SQL Server 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용 하는 경우이 연습의 나머지 부분 프로덕션 컨테이너와 계속 작동 합니다.
+   > 컨테이너에서 프로덕션 SQL Server 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용 하는 경우이 연습의 나머지 부분 프로덕션 컨테이너를 사용 하 여 계속 작동 합니다.
 
 1. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
@@ -101,9 +101,9 @@ ms.locfileid: "34842816"
 
 ## <a name="copy-a-backup-file-into-the-container"></a>컨테이너에 백업 파일을 복사 합니다.
 
-이 자습서에서는 [Wide World Importers 샘플 데이터베이스](../sample/world-wide-importers/wide-world-importers-documentation.md)합니다. 다음 단계를 사용 하 여를 다운로드 하 여 SQL Server 컨테이너로 Wide World Importers 데이터베이스 백업 파일을 복사 합니다.
+이 자습서에서는 합니다 [Wide World Importers 샘플 데이터베이스](../sample/world-wide-importers/wide-world-importers-documentation.md)합니다. 다음 절차를 다운로드 하 여 SQL Server 컨테이너에 Wide World Importers 데이터베이스 백업 파일을 복사 합니다.
 
-1. 먼저, 사용 하 여 **docker exec** 백업 폴더를 만들 수 있습니다. 다음 명령은 만듭니다는 **/var/opt/mssql/backup** 컨테이너 내에서 SQL Server 디렉터리입니다.
+1. 먼저 사용 하 여 **docker exec** 백업 폴더를 만들어야 합니다. 다음 명령은 만듭니다는 **/var/opt/mssql/backup** SQL Server 컨테이너 내의 디렉터리입니다.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -113,7 +113,7 @@ ms.locfileid: "34842816"
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. 다음으로, 다운로드는 [WideWorldImporters Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 호스트 컴퓨터에는 파일입니다. 다음 명령을 홈/사용자 디렉터리로 이동 하 한으로 백업 파일을 다운로드 **wwi.bak**합니다.
+1. 다음으로 다운로드 합니다 [WideWorldImporters Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 호스트 컴퓨터에 파일입니다. 다음 명령을 홈/사용자 디렉터리로 이동 하 고 백업 파일로 다운로드 **wwi.bak**합니다.
 
    ```bash
    cd ~
@@ -124,7 +124,7 @@ ms.locfileid: "34842816"
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. 사용 하 여 **docker cp** 에서 컨테이너에 백업 파일을 복사 하는 **/var/opt/mssql/backup** 디렉터리입니다.
+1. 사용 하 여 **docker cp** 컨테이너에 백업 파일을 복사 하는 **/var/opt/mssql/backup** 디렉터리입니다.
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -136,12 +136,12 @@ ms.locfileid: "34842816"
 
 ## <a name="restore-the-database"></a>데이터베이스 복원
 
-백업 파일은 이제 컨테이너 내 위치입니다. 백업, 복원 하기 전에 논리적 파일 이름 및 백업 내의 파일 형식을 확인 해야 합니다. 다음 TRANSACT-SQL 명령을 백업을 검사 하 고 사용 하 여 복원을 수행할 **sqlcmd** 컨테이너에 있습니다.
+백업 파일은 이제 컨테이너 내에서 위치 합니다. 백업을 복원 하기 전에 것이 논리적 파일 이름 및 백업 내에서 파일 형식을 알고 있어야 합니다. 다음 TRANSACT-SQL 명령을 백업을 검사 하 고 사용 하 여 복원을 수행할 **sqlcmd** 컨테이너에 있습니다.
 
 > [!TIP]
-> 이 자습서에서는 **sqlcmd** 컨테이너 안에 컨테이너 미리 설치 된이 도구를 제공 하므로 합니다. 그러나 실행할 수도 있습니다 TRANSACT-SQL 문을 다른 클라이언트와 컨테이너의 외부 도구와 같은 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)합니다. 에 연결 하려면 컨테이너의 포트 1433에 매핑된 호스트 포트를 사용 합니다. 이 예제에서 **localhost, 1401** 호스트 컴퓨터에서 및 **Host_IP_Address, 1401** 원격으로 합니다.
+> 이 자습서에서는 **sqlcmd** 컨테이너 내 컨테이너는이 도구가 미리 설치 되어 제공 되기 때문입니다. 그러나 실행할 수도 있습니다 TRANSACT-SQL 문을 다른 클라이언트를 사용 하 여 컨테이너의 외부 도구와 같은 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 하거나 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)합니다. 연결할 컨테이너의 포트 1433에 매핑된 호스트 포트를 사용 합니다. 이 예에서 **1401 localhost** 호스트 컴퓨터에서 및 **Host_IP_Address, 1401** 원격으로 합니다.
 
-1. 실행 **sqlcmd** 컨테이너 내에서 논리적 파일 이름 및 백업 내 경로 목록에 있습니다. 이러한 용도로 **RESTORE FILELISTONLY** Transact SQL 문입니다.
+1. 실행할 **sqlcmd** 논리적 파일 이름 및 백업 내에서 경로 목록 컨테이너 내에서. 사용 하 여 이렇게 합니다 **RESTORE FILELISTONLY** Transact SQL 문입니다.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -156,7 +156,7 @@ ms.locfileid: "34842816"
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   다음과 비슷한 출력이 표시 되어야 합니다.
+   다음과 유사한 출력이 표시 됩니다.
 
    ```
    LogicalName   PhysicalName
@@ -167,7 +167,7 @@ ms.locfileid: "34842816"
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. 호출 된 **데이터베이스 복원** 컨테이너 내에서 데이터베이스를 복원 하는 명령입니다. 이전 단계에서 파일을 각각에 대 한 새 경로 지정 합니다.
+1. 호출을 **RESTORE DATABASE** 명령을 컨테이너 내에서 데이터베이스를 복원 합니다. 이전 단계에서 파일을 각각에 대 한 새 경로 지정 합니다.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -181,7 +181,7 @@ ms.locfileid: "34842816"
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   다음과 비슷한 출력이 표시 되어야 합니다.
+   다음과 유사한 출력이 표시 됩니다.
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -225,13 +225,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    -Q "SELECT Name FROM sys.Databases"
 ```
 
-표시 되어야 **WideWorldImporters** 데이터베이스 목록에 있습니다.
+나타납니다 **WideWorldImporters** 데이터베이스 목록에서.
 
 ## <a name="make-a-change"></a>변경
 
-다음 단계는 데이터베이스에 변경을 합니다.
+다음 단계를 데이터베이스에서 변경합니다.
 
-1. 상위 10 개의 항목을 보려면 쿼리를 실행 하는 **Warehouse.StockItems** 테이블입니다.
+1. 상위 10 개 항목을 보려면 쿼리를 실행 합니다 **Warehouse.StockItems** 테이블입니다.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -245,7 +245,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   항목 식별자, 이름 목록이 표시 되어야 합니다.
+   항목 식별자와 이름 목록이 표시 됩니다.
 
    ```
    StockItemID StockItemName
@@ -262,7 +262,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
             10 USB food flash drive - chocolate bar
    ```
 
-1. 다음으로 첫 번째 항목의 설명을 업데이트 **업데이트** 문:
+1. 다음을 사용 하 여 첫 번째 항목의 설명을 업데이트 **업데이트** 문:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -276,7 +276,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   다음 텍스트와 유사한 출력이 표시 되어야 합니다.
+   다음 텍스트와 유사한 출력이 표시 됩니다.
 
    ```
    (1 rows affected)
@@ -287,9 +287,9 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="create-a-new-backup"></a>새 백업 만들기
 
-복원한 후 데이터베이스 컨테이너에, 정기적으로 실행 중인 컨테이너 내 데이터베이스 백업을 만들 수도 있습니다. 단계는 이전 단계에 있지만 반대 방향으로 유사한 패턴을 따릅니다.
+복원한 후 데이터베이스 컨테이너에, 정기적으로 실행 중인 컨테이너 내에서 데이터베이스 백업을 만들 수도 있습니다. 단계 이전 단계에 있지만 역순에서 비슷한 패턴을 따릅니다.
 
-1. 사용 하 여는 **백업 데이터베이스** 컨테이너에 데이터베이스 백업을 만드는 TRANSACT-SQL 명령입니다. 이 자습서에서는 새 백업 파일을 만듭니다. **wwi_2.bak**, 이전에 만든에서 **/var/opt/mssql/backup** 디렉터리입니다.
+1. 사용 하 여는 **BACKUP DATABASE** 컨테이너에 데이터베이스 백업을 만들려면 TRANSACT-SQL 명령입니다. 이 자습서에서는 새 백업 파일을 만듭니다 **wwi_2.bak**에서 이전에 만든 **/var/opt/mssql/backup** 디렉터리입니다.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -303,7 +303,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   다음과 비슷한 출력이 표시 되어야 합니다.
+   다음과 유사한 출력이 표시 됩니다.
 
    ```
    10 percent processed.
@@ -322,7 +322,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    BACKUP DATABASE successfully processed 59099 pages in 25.056 seconds (18.427 MB/sec).
    ```
 
-1. 다음으로, 컨테이너 및 호스트 컴퓨터에 백업 파일을 복사 합니다.
+1. 그런 다음 호스트 컴퓨터에 컨테이너에서 백업 파일을 복사 합니다.
 
    ```bash
    cd ~
@@ -336,9 +336,9 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ls -l wwi*
    ```
 
-## <a name="use-the-persisted-data"></a>지속된 된 데이터를 사용 하 여
+## <a name="use-the-persisted-data"></a>지속된 된 데이터를 사용 합니다.
 
-데이터베이스 백업 데이터를 보호 하는 것을 외에도 데이터 볼륨 컨테이너를 사용할 수 있습니다. 만든이 자습서의 시작 부분에서 **sql1** 가 있는 컨테이너는 `-v sql1data:/var/opt/mssql` 매개 변수입니다. **sql1data** 계속 되 면 데이터 볼륨 컨테이너는 **/var/opt/mssql** 데이터 컨테이너를 제거한 후에 합니다. 다음 단계를 완전히 제거는 **sql1** 컨테이너 한 다음 새 컨테이너를 만듭니다 **sql2**, 지속형된 데이터를 사용 합니다.
+데이터 보호를 위한 데이터베이스 백업 외에 데이터 볼륨 컨테이너를 사용할 수 있습니다. 이 자습서에서는 시작 부분을 **sql1** 사용 하 여 컨테이너를 `-v sql1data:/var/opt/mssql` 매개 변수입니다. 합니다 **sql1data** 지속 되 면 데이터 볼륨 컨테이너를 **/var/opt/mssql** 데이터 컨테이너를 제거한 후에 합니다. 다음 단계를 완전히 제거 합니다 **sql1** 컨테이너를 만든 다음 새 컨테이너를 **sql2**, 지속된 된 데이터를 사용 하 여 합니다.
 
 1. 중지 된 **sql1** 컨테이너입니다.
 
@@ -350,7 +350,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker stop sql1
    ```
 
-1. 컨테이너를 제거 합니다. 이전에 만든 삭제 되지 않습니다 **sql1data** 데이터 볼륨 컨테이너와 그 안에 있는 지속형된 데이터입니다.
+1. 컨테이너를 제거 합니다. 이전에 만든 삭제 되지는 않습니다 **sql1data** 데이터 볼륨 컨테이너와 지속형된 데이터입니다.
 
    ```bash
    sudo docker rm sql1
@@ -360,7 +360,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. 새 컨테이너 만들기 **sql2**, 다른 사람이 다시는 **sql1data** 데이터 볼륨 컨테이너입니다.
+1. 새 컨테이너를 만듭니다 **sql2**, 및 다시 사용 합니다 **sql1data** 데이터 볼륨 컨테이너입니다.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -374,7 +374,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
        -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
     ```
 
-1. 이제 Wide World Importers 데이터베이스가 새 컨테이너에 표시 됩니다. 이전 변경 내용이 확인 하는 쿼리를 실행 합니다.
+1. Wide World Importers 데이터베이스를 새 컨테이너에 포함 되었습니다. 이전 변경 내용을 확인 하는 쿼리를 실행 합니다.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -389,19 +389,19 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > SA 암호가 대 한 지정한 암호는 **sql2** 컨테이너 `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`합니다. 모든 SQL Server 데이터 복원 **sql1**에서 변경된 된 암호를 포함 하 여이 자습서의 앞부분에 나오는 합니다. 실제로 다음과 같이 몇 가지 옵션은 /var/opt/mssql에 데이터를 복원으로 인해 무시 됩니다. 이러한 이유로 암호는 `<YourNewStrong!Passw0rd>` 다음과 같이 합니다.
+   > SA 암호에 대 한 지정 된 암호가 아닙니다 합니다 **sql2** 컨테이너 `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`합니다. 복원 된 모든 SQL Server 데이터 **sql1**, 자습서의 앞부분에서 변경된 된 암호를 포함 합니다. 실제로 다음과 같은 몇 가지 옵션은 /var/opt/mssql에서 데이터를 복원으로 인해 무시 됩니다. 이러한 이유로 암호는 `<YourNewStrong!Passw0rd>` 다음과 같이 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server 2017 r c 2를 실행 하는 Linux 서버를 이동 하는 방법을 배웠습니다. 방법에 대해 배웠습니다에:
+이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server 2017 RC2를 실행 하는 Linux 서버로 이동 하는 방법을 알아보았습니다. 방법을 배웠습니다에:
 > [!div class="checklist"]
 > * SQL Server 2017 Linux 컨테이너 이미지를 만듭니다.
 > * SQL Server 데이터베이스 백업 컨테이너에 복사 합니다.
-> * 과 함께 컨테이너 안에 있는 Transact SQL 문 실행 **sqlcmd**합니다.
+> * TRANSACT-SQL 문을 사용 하 여 컨테이너 내에서 실행 **sqlcmd**합니다.
 > * 페이지를 만들고 컨테이너에서 백업 파일을 추출 합니다.
 > * Docker에서 데이터 볼륨 컨테이너를 사용 하 여 SQL Server 데이터를 유지 합니다.
 
 다음으로, 다른 Docker 구성 및 문제 해결 시나리오를 검토 합니다.
 
 > [!div class="nextstepaction"]
->[SQL Server 2017 Docker에 대 한 구성 가이드](sql-server-linux-configure-docker.md)
+>[Docker에서 SQL Server 2017에 대 한 구성 가이드](sql-server-linux-configure-docker.md)
