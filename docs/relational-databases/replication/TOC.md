@@ -21,6 +21,7 @@
 
 ## [메모리 액세스에 최적화된 테이블 구독자로 복제](replication-to-memory-optimized-table-subscribers.md)  
 ## [SQL Database에 복제](replication-to-sql-database.md)  
+## [SQL Database를 사용하여 복제](replication-with-sql-database-managed-instance.md)
 ## [데이터 다시 게시](republish-data.md)  
 ## [인터넷을 통한 복제](replication-over-the-internet.md)  
 ### [VPN을 사용하여 인터넷을 통해 데이터 게시](publish-data-over-the-internet-using-vpn.md)  
