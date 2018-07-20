@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,20 +26,20 @@ helpviewer_keywords:
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4092e8dc584847d1a3a5e18c570838145ed88d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8342dff7af15fc9c497521124e52e5c60519245b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050820"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791924"
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정한 파일 ID에 해당하는 논리적 파일 이름을 반환합니다.  
+이 함수는 지정한 파일 ID 번호에 해당하는 논리적 파일 이름을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +50,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>인수  
- *file_id*  
- 파일 이름을 반환할 해당 파일 ID입니다. *file_id*는 **int**입니다.  
+*file_id*  
+반환될 파일 이름 `FILE_NAME`이 포함된 파일 ID 번호입니다. *file_id*는 **int** 데이터 형식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *file_ID*는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
+*file_ID*는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `file_ID 1` 및 `file_ID`에 대한 파일 이름을 반환합니다.  
+이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `file_ID 1` 및 `file_ID`에 대한 파일 이름을 반환합니다.  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -71,9 +70,9 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-File Name 1           File Name 2  
-----------------      ------------------------  
-AdventureWorks2012_Data   AdventureWorks2012_Log  
+File Name 1                File Name 2  
+-------------------------  ------------------------  
+AdventureWorks2012_Data    AdventureWorks2012_Log  
 
 (1 row(s) affected)
 ``` 

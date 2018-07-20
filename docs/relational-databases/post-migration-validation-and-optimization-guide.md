@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956428"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297369"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "32956428"
 
 **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이그레이션.
 
-이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 최신으로 업그레이드할 때는 작업이 성능 저하 위험에 노출될 수 있습니다.
+이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 사용 가능한 최신으로 업그레이드할 때는 작업이 성능 저하 위험에 노출될 수 있습니다.
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 데이터베이스 옵션을 최신 상태로 변경하는 경우에 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 
 

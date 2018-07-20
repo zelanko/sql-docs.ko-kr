@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334707"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964355"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 원본
   SSIS 패키지는 **Azure Blob 원본** 구성 요소를 통해 Azure Blob에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 CSV 및 AVRO입니다.
@@ -37,10 +37,14 @@ ms.locfileid: "35334707"
   
 3.  **Blob 이름** 필드에서는 Blob의 경로를 지정합니다.  
   
-4.  **Blob 파일 형식** 필드에서는 사용할 Blob 형식을 지정합니다.  
+4.  **Blob 파일 형식** 필드에서는 사용할 Blob 형식을 **Text** 또는 **Avro**로 지정합니다.  
   
-5.  파일 형식이 CSV이면 **열 구분 기호 문자** 값을 지정해야 합니다. 파일의 첫 행에 열 이름을 포함하려는 경우에는 **첫 번째 데이터 행의 열 이름** 도 선택합니다.  
+5.  파일 형식이 **Text**이면 **열 구분 기호 문자** 값을 지정해야 합니다. 파일의 첫 행에 열 이름을 포함하려는 경우에는 **첫 번째 데이터 행의 열 이름** 도 선택합니다.
+
+6.  파일이 압축된 경우 **파일 압축 풀기**를 선택합니다.
+
+7.  파일이 압축된 경우 **압축 유형**으로 **GZIP**, **DEFLATE** 또는 **BZIP2**를 선택합니다. Zip 형식은 지원되지 않습니다.
   
-6.  연결 정보를 지정한 다음 **열** 페이지로 전환하여 SSI 데이터 흐름에 대해 원본 열을 대상 열에 매핑합니다.  
+8.  연결 정보를 지정한 후 **열** 페이지로 전환하여 SSIS 데이터 흐름의 원본 열을 대상 열에 매핑합니다.  
   
   

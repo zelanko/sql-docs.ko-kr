@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: tsql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -46,17 +45,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbd5a65f85fa7b54964abf60e01c24a94969753e
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34154653"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262577"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +192,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|분할되지 않은 인덱스, XML 인덱스, 공간 인덱스 또는 비활성 인덱스|  
 |IGNORE_DUP_KEY = ON|XML 인덱스<br /><br /> 공간 인덱스<br /><br /> columnstore 인덱스: **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |ONLINE = ON|XML 인덱스<br /><br /> 공간 인덱스<br /><br /> columnstore 인덱스: **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
-| RESUMABLE = ON  | 다시 시작할 수 있는 인덱스는 **All** 키워드에 대해 지원되지 않습니다. <br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
+|RESUMABLE = ON  | 다시 시작할 수 있는 인덱스는 **All** 키워드에 대해 지원되지 않습니다. <br /><br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  온라인으로 수행할 수 있는 인덱스 작업에 대한 자세한 내용은 [온라인 인덱스 작업 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
@@ -475,7 +473,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- 인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+ 인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
 > [!IMPORTANT]
 >  MAXDOP 옵션은 모든 XML 인덱스에 대해 구문으로는 지원되지만 공간 인덱스 또는 기본 XML 인덱스의 경우 ALTER INDEX는 현재 단일 프로세서만 사용합니다.  
@@ -575,7 +573,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- 온라인 인덱스 다시 작성에서 이 테이블의 차단 작업을 대기해야 합니다. **WAIT_AT_LOW_PRIORITY**는 온라인 인덱스 작성 작업이 대기하는 동안 다른 작업을 진행할 수 있도록 온라인 인덱스 재작성 작업이 우선 순위가 낮은 잠금을 대기함을 나타냅니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`와 동일합니다. 자세한 내용은 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)를 참조하세요. 
+ 온라인 인덱스 다시 작성에서 이 테이블의 차단 작업을 대기해야 합니다. **WAIT_AT_LOW_PRIORITY**는 온라인 인덱스 작성 작업이 대기하는 동안 다른 작업을 진행할 수 있도록 온라인 인덱스 재작성 작업이 우선 순위가 낮은 잠금을 대기함을 나타냅니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 WAIT_AT_LOW_PRIORITY(MAX_DURATION = 0분, ABORT_AFTER_WAIT = NONE)와 동일합니다. 자세한 내용은 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)를 참조하세요. 
   
  MAX_DURATION = *time* [**MINUTES**]  
   
@@ -613,7 +611,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- 일시 중지 후 온라인 인덱스 다시 작성을 다시 시작하려면 이 테이블에 대한 작업이 차단되기를 기다려야 합니다. **WAIT_AT_LOW_PRIORITY**는 온라인 인덱스 작성 작업이 대기하는 동안 다른 작업을 진행할 수 있도록 온라인 인덱스 재작성 작업이 우선 순위가 낮은 잠금을 대기함을 나타냅니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`와 동일합니다. 자세한 내용은 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)를 참조하세요. 
+ 일시 중지 후 온라인 인덱스 다시 작성을 다시 시작하려면 이 테이블에 대한 작업이 차단되기를 기다려야 합니다. **WAIT_AT_LOW_PRIORITY**는 온라인 인덱스 작성 작업이 대기하는 동안 다른 작업을 진행할 수 있도록 온라인 인덱스 재작성 작업이 우선 순위가 낮은 잠금을 대기함을 나타냅니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 WAIT_AT_LOW_PRIORITY(MAX_DURATION = 0분, ABORT_AFTER_WAIT = NONE)와 동일합니다. 자세한 내용은 [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md)를 참조하세요. 
 
 
 일시 중지
@@ -629,19 +627,19 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 다시 시작한 것으로 선언된 실행 중이거나 일시 중지된 인덱스 작업을 중단합니다. 다시 시작할 수 있는 인덱스 다시 작성 작업을 종료하려면 **중단** 명령을 명시적으로 실행해야 합니다. 다시 시작할 수 있는 인덱스 작업이 실패하거나 일시 중지해도 실행이 종료되지 않으며, 그 대신 작업이 무한한 일시 중지 상태로 남아 있습니다.
   
 ## <a name="remarks"></a>Remarks  
-인덱스를 다시 분할하거나 다른 파일 그룹으로 이동하는 데는 `ALTER INDEX`를 사용할 수 없습니다. 이 문을 사용하여 열 추가 또는 삭제, 열 순서 변경과 같은 인덱스 정의를 수정할 수 없습니다. 이러한 작업을 수행하려면 `DROP_EXISTING` 절과 `CREATE INDEX`를 함께 사용하세요.  
+인덱스를 다시 분할하거나 다른 파일 그룹으로 이동하는 데는 ALTER INDEX를 사용할 수 없습니다. 이 문을 사용하여 열 추가 또는 삭제, 열 순서 변경과 같은 인덱스 정의를 수정할 수 없습니다. 이러한 작업을 수행하려면 DROP_EXISTING 절에 CREATE INDEX를 사용하세요.  
   
-옵션을 명시적으로 지정하지 않으면 현재 설정이 적용됩니다. 예를 들어, `REBUILD` 절에 `FILLFACTOR` 설정을 지정하지 않으면 다시 작성하는 동안 시스템 카탈로그에 저장된 채우기 비율 값이 사용됩니다. 현재 인덱스 옵션 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요.  
+옵션을 명시적으로 지정하지 않으면 현재 설정이 적용됩니다. 예를 들어, REBUILD 절에 FILLFACTOR 설정을 지정하지 않으면 다시 작성하는 동안 시스템 카탈로그에 저장된 채우기 비율 값이 사용됩니다. 현재 인덱스 옵션 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요.  
   
-`ONLINE`, `MAXDOP` 및 `SORT_IN_TEMPDB` 값은 시스템 카탈로그에 저장되지 않습니다. 인덱스 문에서 지정하지 않으면 해당 옵션의 기본값이 사용됩니다.
+ONLINE, MAXDOP 및 SORT_IN_TEMPDB에 대한 값은 시스템 카탈로그에 저장되지 않습니다. 인덱스 문에서 지정하지 않으면 해당 옵션의 기본값이 사용됩니다.
   
-다중 프로세서 컴퓨터에서는 다른 쿼리의 경우와 마찬가지로 `ALTER INDEX ... REBUILD`가 자동으로 프로세서를 더 사용하여 인덱스 수정과 관련된 정렬 및 검색 작업을 수행합니다. `LOB_COMPACTION`을 사용하거나 사용하지 않고 `ALTER INDEX ... REORGANIZE`를 실행할 경우 **max degree of parallelism** 값은 단일 스레드 작업입니다. 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
+다중 프로세서 컴퓨터에서는 다른 쿼리의 경우와 마찬가지로 ALTER INDEX ... REBUILD가 자동으로 프로세서를 더 사용하여 인덱스 수정과 관련된 정렬 및 검색 작업을 수행합니다. LOB_COMPACTION을 사용하거나 사용하지 않고 ALTER INDEX ... REORGANIZE를 실행할 경우 **max degree of parallelism** 값은 단일 스레드 작업입니다. 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
 > [!IMPORTANT]
-> 인덱스가 위치한 파일 그룹이 오프라인이거나 읽기 전용으로 설정되어 있으면 인덱스를 다시 구성할 수 없습니다. `ALL` 키워드를 지정하면 하나 이상의 인덱스가 오프라인 또는 읽기 전용 파일 그룹에 있을 경우 해당 문이 실패합니다.  
+> 인덱스가 위치한 파일 그룹이 오프라인이거나 읽기 전용으로 설정되어 있으면 인덱스를 다시 구성할 수 없습니다. ALL 키워드를 지정하면 하나 이상의 인덱스가 오프라인 또는 읽기 전용 파일 그룹에 있을 경우 해당 문이 실패합니다.  
   
 ## <a name="rebuilding-indexes"></a> 인덱스 다시 작성  
-인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 이렇게 하면 조각화를 제거하고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간을 회수하고, 인덱스 행을 연속된 페이지로 다시 정렬할 수 있습니다. `ALL`을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다. 외래 키 제약 조건은 미리 삭제하지 않아도 됩니다. 익스텐트가 128개 이상인 인덱스를 다시 작성하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실제 페이지 할당 취소와 해당 관련 잠금이 트랜잭션 커밋 후까지 지연됩니다.  
+인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 이렇게 하면 조각화를 제거하고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간을 회수하고, 인덱스 행을 연속된 페이지로 다시 정렬할 수 있습니다. ALL을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다. 외래 키 제약 조건은 미리 삭제하지 않아도 됩니다. 익스텐트가 128개 이상인 인덱스를 다시 작성하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실제 페이지 할당 취소와 해당 관련 잠금이 트랜잭션 커밋 후까지 지연됩니다.  
  
 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요. 
   
@@ -651,7 +649,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 만들거나 업데이트합니다.
 > 
-> 하지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 이러한 통계를 생성합니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 `FULLSCAN` 절에서 `CREATE STATISTICS` 또는 `UPDATE STATISTICS`를 사용합니다.  
+> 하지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 이러한 통계를 생성합니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 FULLSCAN 절에서 CREATE STATISTICS 또는 UPDATE STATISTICS를 사용합니다.  
   
 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 비클러스터형 인덱스를 다시 작성하여 하드웨어 오류로 인한 불일치를 해결할 수 있는 경우도 있습니다.    
 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서도 비클러스터형 인덱스를 오프라인으로 다시 작성하여 인덱스와 클러스터형 인덱스 간의 불일치를 복구할 수 있습니다. 그러나 인덱스를 온라인으로 다시 작성하는 경우에는 비클러스터형 인덱스 간의 불일치를 해결할 수 없습니다. 온라인으로 다시 작성하는 경우 기존의 비클러스터형 인덱스를 사용하므로 불일치가 계속 남아 있게 됩니다. 경우에 따라 오프라인으로 인덱스를 다시 작성하면 클러스터형 인덱스 검색 또는 힙 검색이 수행되어 불일치가 제거됩니다. 클러스터형된 인덱스에서 다시 작성되도록 하려면 비클러스터형 인덱스를 삭제한 후 다시 만드세요. 이전 버전의 경우처럼 영향을 받은 데이터를 백업한 후 복원하여 불일치를 제거하는 것이 좋습니다. 비클러스터형 인덱스의 경우에는 오프라인으로 인덱스를 다시 작성하여 인덱스 간 불일치를 해결할 수 있습니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.  
@@ -669,7 +667,7 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 ## <a name="reorganizing-indexes"></a> 인덱스 다시 구성  
 인덱스를 다시 구성할 때는 최소한의 시스템 리소스가 사용됩니다. 이때는 왼쪽에서 오른쪽으로 표시되는 리프 노드의 논리적 순서에 맞도록 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블 및 뷰의 클러스터형 및 비클러스터형 인덱스의 리프 수준에 대한 조각 모음을 수행합니다. 다시 구성 작업을 수행하면 인덱스 페이지도 압축됩니다. 이때 압축은 기존 채우기 비율 값을 기준으로 수행됩니다. 채우기 비율 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요.  
   
-`ALL`을 지정하면 테이블에서 관계형 인덱스, 클러스터형 및 비클러스터형 모두와 XML 인덱스가 다시 구성됩니다. `ALL`을 지정할 때는 몇 가지 제한 사항이 적용됩니다. 이 아티클의 인수 섹션에서 `ALL`에 대한 정의를 참조하세요.  
+ALL을 지정하면 테이블에서 관계형 인덱스, 클러스터형 및 비클러스터형 모두와 XML 인덱스가 다시 구성됩니다. ALL을 지정할 때는 몇 가지 제한 사항이 적용됩니다. 이 문서의 인수 섹션에서 ALL에 대한 정의를 참조하세요.  
   
 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
  
@@ -684,14 +682,14 @@ WAIT_AT_LOW_PRIORITY는 **RESUMABLE=ON** 및 **ONLINE = ON** 상태에서만 사
 ALTER INDEX REBUILD 문 또는 CREATE INDEX WITH DROP_EXISTING 문을 사용하여 인덱스를 활성화할 수 있습니다. ONLINE 옵션이 ON으로 설정되어 있으면 비활성화된 클러스터형 인덱스를 다시 작성할 수 없습니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.  
   
 ## <a name="setting-options"></a>옵션 설정  
-지정된 인덱스를 다시 작성하거나 다시 구성하지 않고 해당 인덱스에 `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `IGNORE_DUP_KEY` 및 `STATISTICS_NORECOMPUTE` 옵션을 설정할 수 있습니다. 수정된 값은 인덱스에 바로 적용됩니다. 이러한 설정을 보려면 **sys.indexes**를 사용하세요. 자세한 내용은 [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)을 참조하세요.  
+지정한 인덱스에 대해 해당 인덱스를 다시 작성하거나 다시 구성하지 않고 ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY 및 STATISTICS_NORECOMPUTE 옵션을 설정할 수 있습니다. 수정된 값은 인덱스에 바로 적용됩니다. 이러한 설정을 보려면 **sys.indexes**를 사용하세요. 자세한 내용은 [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)을 참조하세요.  
   
 ### <a name="row-and-page-locks-options"></a>행 및 페이지 잠금 옵션  
-`ALLOW_ROW_LOCKS = ON`이고 `ALLOW_PAGE_LOCK = ON`이면 인덱스에 액세스할 때 행 수준, 페이지 수준 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.  
+ALLOW_ROW_LOCKS = ON이고 ALLOW_PAGE_LOCK = ON이면 인덱스에 액세스할 때 행 수준, 페이지 수준 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.  
   
-`ALLOW_ROW_LOCKS = OFF`이고 `ALLOW_PAGE_LOCK = OFF`이면 인덱스에 액세스할 때 테이블 수준 잠금만 허용됩니다.  
+ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스할 때 테이블 수준 잠금만 허용됩니다.  
   
-행 또는 페이지 잠금 옵션이 설정된 경우 `ALL`을 지정하면 설정이 모든 인덱스에 적용됩니다. 기본 테이블이 힙인 경우 다음과 같은 방식으로 설정이 적용됩니다.  
+행 또는 페이지 잠금 옵션이 설정된 경우 ALL을 지정하면 설정이 모든 인덱스에 적용됩니다. 기본 테이블이 힙인 경우 다음과 같은 방식으로 설정이 적용됩니다.  
   
 |||  
 |-|-|  
@@ -716,8 +714,8 @@ ALTER INDEX REBUILD 문 또는 CREATE INDEX WITH DROP_EXISTING 문을 사용하�
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-온라인 인덱스 다시 작성은 `RESUMABLE = ON` 옵션을 사용하여 resumable로 지정됩니다. 
--  `RESUMABLE` 옵션은 지정된 인덱스에 대해 메타데이터에서 지속되며 현재 DDL 문의 기간에만 적용됩니다. 그러므로 다시 시작이 가능하도록 하려면 `RESUMABLE = ON` 절을 명시적으로 지정해야 합니다.
+온라인 인덱스 다시 작성은 RESUMABLE=ON 옵션을 사용하여 다시 시작 가능한 것으로 지정됩니다. 
+-  RESUMABLE 옵션은 지정된 인덱스에 대해 메타데이터에서 지속되며 현재 DDL 문의 기간에만 적용됩니다. 그러므로 다시 시작이 가능하도록 하려면 RESUMABLE=ON 절을 명시적으로 지정해야 합니다.
 -  MAX_DURATION 옵션은 RESUMABLE = ON 옵션 또는 **low_priority_lock_wait** 인수 옵션에 대해 지원됩니다. 
    -  RESUMABLE에 대한 MAX_DURATION은 다시 작성하는 인덱스의 시간 간격을 지정합니다. 이 시간이 사용된 후 인덱스 다시 작성이 일시 중지되거나 그 실행이 완료됩니다. 사용자는 일시 중지된 인덱스에 대한 다시 작성이 다시 시작될 수 있는 시기를 결정합니다. MAX_DURATION에 대한 분 단위의 **시간**은 0분보다 크거나 1주일(7 * 24 * 60 = 10080분) 이하여야 합니다. 원래 인덱스와 새로 만든 인덱스 두 인덱스가 모두 디스크 공간을 필요로 하고 DML 작업 중에 업데이트되어야 하므로, 인덱스 작업을 오랫동안 일시 중지하면 특정 테이블에 대한 DML 성능 및 데이터베이스 디스크 용량에 영향을 미칠 수 있습니다. MAX_DURATION 옵션을 생략하면 인덱스 작업은 완료될 때까지 또는 실패가 발생할 때까지 계속됩니다. 
    -  \<low_priority_lock_wait> 인수 옵션을 사용하면 인덱스 작업이 SCH-M 잠금에 대해 차단될 경우 계속할 수 있는 방법을 결정할 수 있습니다.
@@ -749,7 +747,7 @@ ALTER INDEX REBUILD 문 또는 CREATE INDEX WITH DROP_EXISTING 문을 사용하�
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>온라인 인덱스 작업에 대한 WAIT_AT_LOW_PRIORITY  
   
- 온라인 인덱스 다시 작성을 위해 DDL 문을 실행하려면 특정 테이블에서 실행 중인 모든 활성 차단 트랜잭션이 완료되어야 합니다. 온라인 인덱스 다시 작성이 실행되면 이 테이블에서 실행을 시작할 준비가 되어 있는 모든 새로운 트랜잭션이 차단됩니다. 온라인 인덱스 다시 작성에 대한 잠금 기간은 매우 짧지만 특정 테이블에서 열려 있는 모든 트랜잭션이 완료될 때까지 기다리고 새로운 트랜잭션이 시작되지 않도록 차단하기 위해서는 처리량에 상당한 영향을 주어 작업 속도가 느려지거나 시간 초과가 발생할 수 있으며, 기본 테이블에 대한 액세스가 크게 제한될 수 있습니다. DBA는 **WAIT_AT_LOW_PRIORITY** 옵션을 사용해서 온라인 인덱스 다시 작성에 필요한 S-잠금 및 Sch-M 잠금을 관리할 수 있으며, 3개 옵션 중 하나를 선택할 수 있습니다. 세 가지 경우 모두, 대기 시간(`(MAX_DURATION = n [minutes])`) 중에 차단 활동이 없으면 대기 없이 온라인 인덱스 다시 작성이 즉시 실행되고 DDL 문이 완료됩니다.  
+ 온라인 인덱스 다시 작성을 위해 DDL 문을 실행하려면 특정 테이블에서 실행 중인 모든 활성 차단 트랜잭션이 완료되어야 합니다. 온라인 인덱스 다시 작성이 실행되면 이 테이블에서 실행을 시작할 준비가 되어 있는 모든 새로운 트랜잭션이 차단됩니다. 온라인 인덱스 다시 작성에 대한 잠금 기간은 매우 짧지만 특정 테이블에서 열려 있는 모든 트랜잭션이 완료될 때까지 기다리고 새로운 트랜잭션이 시작되지 않도록 차단하기 위해서는 처리량에 상당한 영향을 주어 작업 속도가 느려지거나 시간 초과가 발생할 수 있으며, 기본 테이블에 대한 액세스가 크게 제한될 수 있습니다. DBA는 **WAIT_AT_LOW_PRIORITY** 옵션을 사용해서 온라인 인덱스 다시 작성에 필요한 S-잠금 및 Sch-M 잠금을 관리할 수 있으며, 3개 옵션 중 하나를 선택할 수 있습니다. 세 가지 경우 모두, 대기 시간((MAX_DURATION = n [minutes])) 중에 차단 활동이 없으면 대기 없이 온라인 인덱스 다시 작성이 즉시 실행되고 DDL 문이 완료됩니다.  
   
 ## <a name="spatial-index-restrictions"></a>공간 인덱스 제한 사항  
  공간 인덱스를 다시 작성할 때는 공간 인덱스에 스키마 잠금이 유지되기 때문에 인덱스 작업 중에 기본 사용자 테이블을 사용할 수 없습니다.  
@@ -767,7 +765,7 @@ ALTER INDEX REBUILD 문 또는 CREATE INDEX WITH DROP_EXISTING 문을 사용하�
   
 다음은 분할된 인덱스에 적용되는 제한 사항입니다.  
   
--   `ALTER INDEX ALL ...`을 사용하는 경우 테이블에 정렬되지 않은 인덱스가 있으면 단일 파티션의 압축 설정을 변경할 수 없습니다.  
+-   ALTER INDEX ALL ...을 사용할 때 테이블에 정렬되지 않은 인덱스가 있으면 단일 파티션의 압축 설정을 변경할 수 없습니다.  
 -   The ALTER INDEX \<index> ... REBUILD  PARTITION  ...  구문은 인덱스의 지정된 파티션을 다시 작성합니다.  
 -   The ALTER INDEX \<index> ... REBUILD  WITH  ...  구문은 인덱스의 모든 파티션을 다시 작성합니다.  
   
@@ -1011,7 +1009,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>2. 테이블의 모든 인덱스 다시 작성 및 옵션 지정  
- 다음 예에서는 `ALL` 키워드를 지정합니다. 그러면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 Production.Product 테이블과 연결된 모든 인덱스를 다시 작성합니다. 3개의 옵션이 지정됩니다.  
+ 다음 예에서는 ALL 키워드를 지정합니다. 그러면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 Production.Product 테이블과 연결된 모든 인덱스를 다시 작성합니다. 3개의 옵션이 지정됩니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

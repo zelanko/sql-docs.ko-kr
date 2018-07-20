@@ -1,38 +1,44 @@
 ---
-title: Windows 인증으로 데이터 및 파일 공유에 연결 | Microsoft Docs
-description: Windows 인증을 사용하여 데이터 원본과 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 알아봅니다.
-ms.date: 02/05/2018
+title: Windows 인증으로 데이터 원본 및 파일 공유에 연결 | Microsoft Docs
+description: Windows 인증을 사용하여 데이터 원본과 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database 및 Azure-SSIS Integration Runtime에 SSIS 카탈로그를 구성하는 방법을 알아봅니다.
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: cca5deecf90fbbe28399d33ac2038bc2264b1ae6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c2b7a091b4bfe5add722ad224adc175b06817a74
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332687"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066023"
 ---
-# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-in-ssis-packages-in-azure"></a>Azure의 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결
+# <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure의 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결
+Windows 인증을 사용하여 온-프레미스/Azure 가상 머신과 Azure Files에서 Azure SSIS IR(Integration Runtime)과 동일한 가상 네트워크에 있는 데이터 원본과 파일 공유에 연결할 수 있습니다. Azure-SSIS IR에서 실행되는 SSIS 패키지에서 Windows 인증으로 데이터 원본 및 파일 공유에 연결하는 세 가지 방법은 다음과 같습니다.
 
-이 문서에서는 Windows 인증을 사용하여 데이터 원본과 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 설명합니다. Windows 인증을 사용하여 Azure 가상 머신에서 온-프레미스 및 Azure Files의 Azure SSIS Integration Runtime과 동일한 가상 네트워크에 있는 데이터 원본에 연결할 수 있습니다.
+| 연결 방법 | 유효 범위 | 설정 단계 | 패키지의 액세스 방법 | 자격 증명 집합 및 연결된 리소스 수 | 연결된 리소스 유형 | 
+|---|---|---|---|---|---|
+| `cmdkey` 명령을 통해 자격 증명 유지 | Azure-SSIS IR별 | Azure-SSIS IR을 프로비전/재구성할 때 사용자 지정 설정 스크립트(`main.cmd`)에서 `cmdkey` 명령을 실행합니다(예: `cmdkey /add:fileshareserver /user:xxx /pass:yyy`).<br/><br/> 자세한 내용은 [Azure-SSIS IR 설정 사용자 지정](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)을 참조하세요. | UNC 경로(예: `\\fileshareserver\folder`)를 통해 패키지에서 직접 리소스에 액세스 | 다양한 연결된 리소스에 여러 자격 증명 집합 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) 참조 <br/><br/> - Windows 인증을 사용하는 SQL Server<br/><br/> - Windows 인증을 사용하는 기타 리소스 |
+| 카탈로그 수준 실행 컨텍스트 설정 | Azure-SSIS IR별 | SSISDB `catalog.set_execution_credential` 저장 프로시저를 실행하여 “실행 방법” 컨텍스트를 설정합니다.<br/><br/> 자세한 내용은 아래에서 이 문서의 나머지 부분을 참조하세요. | 패키지에서 직접 리소스에 액세스 | 모든 연결된 리소스에 하나의 자격 증명 집합만 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) 참조 <br/><br/> - Windows 인증을 사용하는 SQL Server<br/><br/> - Windows 인증을 사용하는 기타 리소스 | 
+| 패키지 실행 시간에 드라이브 탑재(비지속성) | 패키지별 | 패키지의 제어 흐름 시작 부분에 추가되는 프로세스 실행 태스크로 `net use` 명령을 실행합니다(예: `net use D: \\fileshareserver\sharename`). | 매핑된 드라이브를 통해 파일 공유에 액세스 | 다양한 파일 공유에 여러 드라이브 지원 | - 온-프레미스/Azure VM의 파일 공유<br/><br/> - Azure Files, [Azure 파일 공유 사용](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) 참조 |
+|||||||
 
 > [!WARNING]
-> 이 문서에 설명된 대로 `catalog`.`set_execution_credential`을 실행하여 Windows 인증에 유효한 도메인 자격 증명을 제공하지 않으면 Windows 인증에 종속된 패키지가 데이터 원본에 연결할 수 없으며 런타임에 실패합니다.
+> Windows 인증으로 데이터 원본과 파일 공유에 연결하는 데 위의 방법을 사용하지 않으면 Windows 인증을 사용하는 패키지는 해당 항목에 연결할 수 없고 런타임에 실패합니다. 
+
+이 문서의 나머지 부분에서는 Windows 인증을 사용하여 데이터 원본과 파일 공유에 연결하는 패키지를 실행하도록 Azure SQL Database에 SSIS 카탈로그를 구성하는 방법을 설명합니다. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>자격 증명 집합을 하나만 사용 가능
-
-지금은 패키지의 자격 증명 집합을 하나만 사용할 수 있습니다. 이 문서의 단계를 수행할 때 제공하는 도메인 자격 증명은 자격 증명을 변경하거나 제거할 때까지 SQL Database 인스턴스에서 모든 패키지 실행(대화형 또는 예약된 실행)에 적용됩니다. 여러 자격 증명 집합을 사용하여 패키지를 여러 데이터 원본에 연결해야 하는 경우 패키지를 여러 패키지로 분리해야 할 수도 있습니다.
-
-데이터 원본 중 하나가 Azure 파일인 경우 패키지를 실행할 때 프로세스 실행 태스크에서 `net use` 또는 동일 기능을 사용하여 Azure 파일 공유를 탑재하면 이 제한을 해결할 수 있습니다. 자세한 내용은 [Azure 파일 공유를 탑재하고 Windows에서 공유 액세스](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows)를 참조하세요.
+이 방법에서는 패키지의 자격 증명 집합을 하나만 사용할 수 있습니다. 이 문서의 단계를 수행할 때 제공하는 도메인 자격 증명은 자격 증명을 변경하거나 제거할 때까지 Azure-SSIS IR에서 모든 패키지 실행(대화형 또는 예약된 실행)에 적용됩니다. 여러 자격 증명 집합을 사용하여 패키지를 여러 데이터 원본과 파일 공유에 연결해야 하는 경우 위의 대체 방법을 고려해야 할 수 있습니다.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Windows 인증에 대한 도메인 자격 증명 제공
-패키지에서 Windows 인증을 사용하여 온-프레미스 데이터 원본에 연결할 수 있는 도메인 자격 증명을 제공하려면 다음을 수행합니다.
+패키지에서 Windows 인증을 사용하여 온-프레미스 데이터 원본/파일 공유에 연결할 수 있는 도메인 자격 증명을 제공하려면 다음을 수행합니다.
 
 1.  SSMS(SQL Server Management Studio) 또는 다른 도구를 사용하여 SSISDB(SSIS Catalog database)를 호스트하는 SQL Database에 연결합니다. 자세한 내용은 [Azure에서 SSIS 카탈로그(SSISDB)에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
 
@@ -44,7 +50,7 @@ ms.locfileid: "35332687"
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
 
-4.  SSIS 패키지를 실행합니다. 패키지는 Windows 인증을 사용하여 온-프레미스 데이터 원본에 연결하기 위해 제공한 자격 증명을 사용합니다.
+4.  SSIS 패키지를 실행합니다. 패키지는 Windows 인증을 사용하여 온-프레미스 데이터 원본/파일 공유에 연결하기 위해 제공한 자격 증명을 사용합니다.
 
 ### <a name="view-domain-credentials"></a>도메인 자격 증명 보기
 활성 도메인 자격 증명을 보려면 다음을 수행합니다.
@@ -92,7 +98,7 @@ Azure에서 실행 중인 패키지에서 온-프레미스 SQL Server에 연결�
 
 1.  SQL Server 구성 관리자에서 TCP/IP 프로토콜을 설정합니다.
 2.  Windows 방화벽을 통한 액세스를 허용합니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)을 참조하세요.
-3.  Windows 인증을 사용하여 연결하려면 Azure-SSIS Integration Runtime이 온-프레미스 SQL Server가 포함되어 있는 가상 네트워크에 속해 있어야 합니다.  자세한 내용은 [Azure SSIS 통합 런타임을 가상 네트워크에 조인](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)을 참조하세요. 그런 다음 이 아티클에 설명된 대로 `catalog.set_execution_credential`을 사용하여 자격 증명을 제공합니다.
+3.  Windows 인증을 사용하여 연결하려면 Azure-SSIS IR이 온-프레미스 SQL Server가 포함되어 있는 가상 네트워크에 속해 있어야 합니다.  자세한 내용은 [Azure SSIS 통합 런타임을 가상 네트워크에 조인](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)을 참조하세요. 그런 다음 이 아티클에 설명된 대로 `catalog.set_execution_credential`을 사용하여 자격 증명을 제공합니다.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>온-프레미스 파일 공유에 연결
 온-프레미스 파일 공유에 연결할 수 있는지 확인하려면 다음을 수행합니다.
@@ -124,7 +130,7 @@ Azure 가상 머신의 파일 공유에 연결하려면 다음을 수행합니�
 ## <a name="connect-to-a-file-share-in-azure-files"></a>Azure 파일의 파일 공유에 연결
 Azure Files에 대한 자세한 내용은 [Azure Files](https://azure.microsoft.com/services/storage/files/)를 참조하세요.
 
-Azure 파일 공유의 파일 공유에 연결하려면 다음을 수행합니다.
+Azure Files의 파일 공유에 연결하려면 다음을 수행합니다.
 
 1.  SSMS(SQL Server Management Studio) 또는 다른 도구를 사용하여 SSISDB(SSIS Catalog database)를 호스트하는 SQL Database에 연결합니다.
 

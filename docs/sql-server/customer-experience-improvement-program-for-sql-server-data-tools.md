@@ -3,32 +3,29 @@ title: SQL Server Data Tools에 대한 사용자 환경 개선 프로그램 | Mi
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssdt
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bf04dde0c16f7f7782755db0583d9f64716471b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563801"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36886739"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 사용자 환경 개선 프로그램
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   사용자 환경 개선 프로그램(CEIP)이 어떻게 Microsoft가 소프트웨어 개선 방법을 식별하는 데 도움이 되는지 알아 보세요.  언제든지 참여하거나 참여하지 않도록 도구를 구성할 수 있습니다.  
   
 > [!NOTE]  
->  Microsoft SQL Server 2016 릴리스, 기타 제품 및 서비스에 대한 사용자 데이터 수집 및 사용 방법에 대한 설명은 이 [Microsoft 개인 정보 취급 방침](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)을 참조하세요.  
+> Microsoft SQL Server 릴리스의 사용자 데이터 수집 및 사용 방법에 대한 설명은 이 [개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 CEIP 참여 및 참여 거부  
  사용자 환경 개선 프로그램은 Microsoft가 시간에 따라 제품을 개선하는 데 도움이 되도록 설계된 프로그램입니다. 이 프로그램은 컴퓨터 하드웨어에 대한 정보는 물론, 컴퓨터 작업 수행 시 사용자를 방해하지 않고 사용자의 제품 사용 방식을 수집합니다. 수집된 정보를 통해 Microsoft는 개선할 기능을 식별할 수 있습니다. 이 문서에서는 Visual Studio 2017, Visual Studio 2015 및 Visual Studio 2013에 대한 SQL Server Data Tools(SSDT)의 CEIP에 참여 또는 참여 거부하는 방법을 다룰 것입니다.  
@@ -75,7 +72,7 @@ ms.locfileid: "34563801"
 > [!CAUTION]  
 >  레지스트리를 잘못 편집하면 시스템이 심각하게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
   
- CEIP에서 수집, 처리 또는 전송되는 정보에 대한 자세한 내용은 [Microsoft 사용자 환경 개선 프로그램에 대한 개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=52143)을 참조하세요.  
+ CEIP에서 수집, 처리 또는 전송하는 정보에 대한 자세한 내용은 [개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Visual Studio 2015용 SQL Server Data Tools와 CEIP에 대한 선택과 제어  
  Visual Studio 2015용 SSDT는 SQL Server 2016와 함께 제공되는 데이터 모델링 도구로서, Visual Studio 2015에 내장되어 있는 CEIP 옵션을 사용합니다. 이 [Visual Studio 도움말 문서](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)에서 Visual Studio 2015의 CEIP를 통해 사용자 의견을 제출하는 방법에 대해 알 수 있습니다.  
@@ -117,7 +114,7 @@ ms.locfileid: "34563801"
 > [!CAUTION]  
 >  레지스트리를 잘못 편집하면 시스템이 심각하게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
   
- CEIP에서 수집, 처리 또는 전송되는 정보에 대한 자세한 내용은 [Microsoft 사용자 환경 개선 프로그램에 대한 개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=52143)을 참조하세요.  
+ CEIP에서 수집, 처리 또는 전송하는 정보에 대한 자세한 내용은 [개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>SQL Server Data Tools - BI(SSDT-BI) 및 CEIP에 대한 선택과 제어  
  SSDT-BI를 사용하고 있는 경우 설치 중 CEIP에 참여하도록 선택할 수 있습니다. 나중에 SSDT-BI에 대한 구성은 클라이언트 도구를 통해 또는 레지스트리 설정을 편집하여 변경할 수 있습니다.  

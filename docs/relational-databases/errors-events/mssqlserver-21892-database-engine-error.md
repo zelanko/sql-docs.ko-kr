@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER_21892 | Microsoft 문서
+title: MSSQLSERVER_21892 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d882b1b908488b4a708a31f8914309210223ced8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1113f662e8d38958120e4c5af7fdd3d2a570847e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332953"
 ---
 # <a name="mssqlserver21892"></a>MSSQLSERVER_21892
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34322174"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|SQLErrorNum21892|  
-|메시지 텍스트|멤버 복제본의 서버 이름에 대해 가상 네트워크 이름 '%s'과(와) 연관된 가용성 그룹 주 복제본에서 sys.availability_replicas를 쿼리할 수 없습니다. 오류 = %d, 오류 메시지 = %s.',|  
+|메시지 텍스트|멤버 복제본의 서버 이름에 대해 가상 네트워크 이름 ‘%s’과(와) 연관된 가용성 그룹 주 복제본에서 sys.availability_replicas를 쿼리할 수 없습니다. 오류 = %d, 오류 메시지 = %s.'|  
   
 ## <a name="explanation"></a>설명  
 **sp_validate_replica_hosts_as_publishers**는 리디렉션된 게시자와 연관된 가용성 그룹의 현재 주 복제본을 쿼리하여 멤버 복제본을 호스트하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 확인합니다.  이 쿼리에 실패하면 오류 21892가 반환됩니다.  

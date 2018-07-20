@@ -3,11 +3,6 @@ title: SQL Server 파트너 모니터링 | Microsoft Docs
 description: 서버를 모니터링할 솔루션이 있는 타사 파트너 목록입니다.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -15,14 +10,15 @@ ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: f9c0dbc7ddcd40f8dbd859711c32dc4f9ff79f71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f5251195c95036abb741672c593dbd82e8817fca
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033640"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926214"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 모니터링 파트너
-| 파트너 | Description | 링크 |
+| 파트너 | 설명 | 링크 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 진단 관리자는 SQL Server 환경 내의 상태, 성능 및 가용성 문제를 중앙 콘솔에서 모두 관리자에게 사전에 알려 주는 강력한 성능 모니터링 및 진단 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise의 스포트라이트 - SQL Server의 비교할 수 없는 모니터링, 진단 및 최적화로 24시간 연속 최고 성능을 보장합니다. 스포트라이트는 SQL Server 데이터베이스의 최적 적합도에 필요한 세부 정보에 대한 액세스를 제공합니다. 상태 및 성능, 자동화된 경고 및 동작, 모바일 장치 지원에 대한 직관적인 개요를 확인하세요.|[Marketplace][quest_marketplace]<br>[웹 사이트][quest_website]<br>[비디오][quest_video] | |
@@ -72,9 +68,7 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview
 
 <!--Press links-->
 <!--[idera_press]:-->

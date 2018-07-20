@@ -1,5 +1,5 @@
 ---
-title: 온라인 인덱스 작업에 대한 지침 | Microsoft 문서
+title: 온라인 인덱스 작업에 대한 지침 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -22,12 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235797"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262147"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,27 +91,29 @@ ms.locfileid: "34235797"
 ## <a name="transaction-log-considerations"></a>트랜잭션 로그 고려 사항  
  오프라인 상태 또는 온라인 상태에서 수행되는 대규모 인덱스 작업은 트랜잭션 로그를 빨리 채워 대용량 데이터 로드를 생성할 수 있습니다. 인덱스 작업을 확실히 롤백하려면 인덱스 작업이 완료될 때까지 트랜잭션 로그를 자를 수 없지만,  인덱스 작업 중에 이 로그를 백업할 수 있습니다. 따라서 트랜잭션 로그에는 인덱스 작업을 수행하는 동안 인덱스 작업 트랜잭션 및 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 공간이 있어야 합니다. 자세한 내용은 [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)을 참조하세요.  
 
-## <a name="resumable-index-rebuild-considerations"></a>다시 시작 가능한 인덱스 다시 작성 시 고려 사항
+## <a name="resumable-index-considerations"></a>다시 시작 가능한 인덱스 고려 사항
 
 > [!NOTE]
-> 다시 시작 가능한 인덱스 옵션은 SQL Server(SQL Server 2017부터) 및 SQL Database에 적용됩니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 
+> 다시 시작 가능한 인덱스 옵션은 SQL Server(SQL Server 2017부터)(인덱스 다시 작성만 해당) 및 SQL Database(비클러스터형 인덱스 만들기 및 인덱스 다시 작성)에 적용됩니다. [인덱스 만들기](../../t-sql/statements/create-index-transact-sql.md)(현재 SQL Database 공개 미리 보기로만 제공됨) 및 [인덱스 변경](../../t-sql/statements/alter-index-transact-sql.md)을 참조하세요. 
 
-다시 시작 가능한 온라인 인덱스 다시 작성을 수행할 때 다음 지침이 적용됩니다.
--   인덱스 유지 관리 기간의 관리, 계획 및 확장. 유지 관리 기간에 맞게 인덱스 다시 작성 작업을 여러 번 일시 중지 및 다시 시작할 수 있습니다.
-- 인덱스 다시 작성 오류(예: 데이터베이스 장애 조치(failover)나 디스크 공간 부족)에서 복구
+다시 시작 가능한 온라인 인덱스 만들기 또는 다시 작성을 수행할 경우 다음 지침이 적용됩니다.
+-   인덱스 유지 관리 기간의 관리, 계획 및 확장. 유지 관리 기간에 맞게 인덱스 만들기 및 다시 작성 작업을 여러 번 일시 중지 및 다시 시작할 수 있습니다.
+- 인덱스 만들기 또는 다시 작성 오류(예: 데이터베이스 장애 조치(failover)나 디스크 공간 부족)에서 복구.
 - 인덱스 작업이 일시 중지된 경우 원래 인덱스와 새로 만든 인덱스 모두 저장할 디스크 공간이 필요하고 DML 작업 중 업데이트해야 합니다.
 
-- 인덱스 다시 작성 작업 중 트랜잭션 로그의 잘림 지원(일반 온라인 인덱스 작업에서는 이 작업을 수행할 수 없음)
+- 인덱스 만들기 또는 다시 작성 작업 중 트랜잭션 로그를 자를 수 있습니다.
 - SORT_IN_TEMPDB=ON 옵션이 지원되지 않음
 
 > [!IMPORTANT]
-> 다시 시작 가능한 다시 작성에서는 오래 실행되는 트랜잭션을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
+> 다시 시작 가능한 인덱스 만들기 또는 다시 작성에서는 오래 실행되는 트랜잭션을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
 
-일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 성능 차이는 없습니다. 인덱스 다시 작성 작업이 일시 중지된 동안, 다시 시작 가능한 인덱스를 업데이트하면 다음과 같습니다.
+일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 성능 차이는 없습니다. 다시 시작 가능한 인덱스의 경우 다시 시작 가능한 인덱스와 다시 시작 불가능한 인덱스 간에 작은 성능 차이를 유발하는 지속적인 오버헤드가 있습니다. 이 차이는 주로 더 작은 테이블에서 두드러집니다.
+
+인덱스 작업이 일시 중지된 동안 다시 시작 가능한 인덱스를 업데이트하는 경우:
 - 읽기가 대부분인 작업의 경우 성능에 미치는 영향이 크지 않습니다. 
 - 업데이트가 많은 작업의 경우 약간의 처리량 저하가 발생할 수 있습니다(테스트에 따르면 10% 미만의 저하가 나타남).
 
-일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 조각 모음 품질 차이는 없습니다.
+일반적으로 온라인 인덱스 만들기 또는 다시 작성 시 다시 시작 가능 여부에 따른 조각 모음 품질 차이는 없습니다.
 
 ## <a name="online-default-options"></a>온라인 기본 옵션 
 

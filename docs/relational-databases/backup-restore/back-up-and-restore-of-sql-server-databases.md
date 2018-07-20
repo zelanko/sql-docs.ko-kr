@@ -1,5 +1,5 @@
 ---
-title: SQL Server 데이터베이스 백업 및 복원 | Microsoft 문서
+title: SQL Server 데이터베이스 백업 및 복원 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708031"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324487"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34708031"
   
 ##  <a name="glossary-of-backup-terms"></a>백업 용어 설명
  **백업** [동사]  
- 데이터 또는 로그 레코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 해당 트랜잭션 로그에서 백업 장치(예: 디스크)로 복사하여 데이터 백업 또는 로그 백업을 만들 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터 레코드를 복사하거나 트랜잭션 로그에서 로그 레코드를 복사하여 **백업[명사]** 을 만드는 프로세스입니다.  
   
  **백업** [명사]  
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  

@@ -7,8 +7,7 @@ ms.prod_service: sql-tools
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,16 +21,16 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 707777f3b568aa38d06416ca1ab3f1292051e068
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8c64df36bef9012e91d444f9f5326a4e746b543
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052868"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926474"
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **Ssms**유틸리티는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다. **Ssms** 를 지정하면 서버 연결도 설정되며 쿼리, 스크립트, 파일, 프로젝트 및 솔루션이 열립니다.  
+  **Ssms** 유틸리티는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다. **Ssms** 를 지정하면 서버 연결도 설정되며 쿼리, 스크립트, 파일, 프로젝트 및 솔루션이 열립니다.  
   
  쿼리, 프로젝트 또는 솔루션이 포함된 파일을 지정할 수 있습니다. 연결 정보를 제공했고 파일 형식이 해당 서버 유형에 연결된 경우 쿼리가 포함된 파일은 서버에 자동으로 연결됩니다. 예를 들어 .sql 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SQL 쿼리 편집기 창을 열고 .mdx 파일은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 MDX 쿼리 편집기 창을 엽니다. **에서** SQL Server 솔루션 및 프로젝트 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 열립니다.  
   

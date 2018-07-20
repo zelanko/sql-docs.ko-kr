@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409795"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964285"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
 
@@ -149,6 +149,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     값 형식: **REG_DWORD** 
 
     값 데이터: **2**
+
+    > [!NOTE]
+    > 루트 인증서 저장소에 자체 서명되지 않은 인증서가 있는 경우 클라이언트 인증서 인증이 실패합니다. 자세한 내용은 [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ)(IIS(인터넷 정보 서비스) 8이 HTTP 403.7 또는 403.16을 포함하는 클라이언트 인증서 요청을 거부할 수 있음)를 참조하세요.
 
 ## <a name="http-request-error"></a>HTTP 요청 오류
 

@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455257"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080101"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
@@ -201,7 +204,7 @@ ms.locfileid: "34455257"
 
 6. 메모장에서 errorlog.log 파일을 엽니다. 
 
-## <a name="determine-sql-server-name"></a>SQL Server 이름 찾기
+## <a name="determine-sql-server-name"></a>SQL Server 인스턴스 이름 찾기
 SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵션이 있습니다.  
 
 ### <a name="before-you-connect-to-sql-server"></a>SQL Server에 연결하기 전에

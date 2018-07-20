@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332737"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297409"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>1-6단원: 조회 변환 추가 및 구성
 원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 집합의 열로 조인하여 조회를 수행합니다. 참조 데이터 집합은 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 집합의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "35332737"
   
 1.  **SSIS 도구 상자**에서 **일반**을 확장한 다음 **조회** 를 **데이터 흐름** 탭의 디자인 화면으로 끌어다 놓습니다. 조회를 **Extract Sample Currency Data** 원본 바로 아래에 배치합니다.  
   
-2.  **Extract Sample Currency Data** 플랫 파일 원본을 클릭하고 녹색 화살표를 새로 추가한 **조회** 변환으로 끌어다 놓아서 두 구성 요소를 연결합니다.  
+2.  **Extract Sample Currency Data** 플랫 파일 원본을 클릭하고 파란색 화살표를 새로 추가한 **조회** 변환으로 끌어다 놓아서 두 구성 요소를 연결합니다.  
   
 3.  **데이터 흐름** 디자인 화면에서 **조회** 변환의 **조회** 를 클릭하고 이름을 **Lookup Currency Key**로 바꿉니다.  
   

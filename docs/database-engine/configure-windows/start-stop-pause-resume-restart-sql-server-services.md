@@ -44,12 +44,12 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e0ca8a8db9121cb224f84ef38e4f03b0f8239f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c8e3ca0f21c336ecde6bfb5e9fb6a1e54414b7a
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870568"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324477"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ms.locfileid: "32870568"
     |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-#### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>다음 인스턴스를 시작, 중지, 일시 중지, 재개 또는 다시 시작하기: [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
+#### <a name="to-start-stop-pause-resume-or-restart-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스를 시작, 중지, 일시 중지, 재개 또는 다시 시작하려면  
   
 1.  위의 지침에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 시작합니다.  
   

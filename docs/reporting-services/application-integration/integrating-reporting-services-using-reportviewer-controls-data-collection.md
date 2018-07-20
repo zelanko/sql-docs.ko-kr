@@ -15,17 +15,17 @@ caps.latest.revision: 2
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc1edeb74cced8b18275b57deca6b078c13a56d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d41ac350e03dfbecc53041b2bbfa2570ede717c
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013760"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926854"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
 기본적으로 ReportViewer 컨트롤은 Microsoft에서 고객이 컨트롤을 사용하는 방식을 더 잘 이해할 수 있도록 익명의 사용 정보를 수집합니다. 고객이 Viewer Control을 배포하고 사용하는 방법을 더 잘 이해하도록 함으로써 향후 개발 시 고객에게 최고의 가치를 제공하는 개선에 초점을 맞출 수 있습니다.
 
-Microsoft SQL Server 2016 릴리스, 기타 제품 및 서비스에 대한 사용자 데이터 수집 및 사용 방법에 대한 설명은 이 [Microsoft 개인 정보 취급 방침](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx)을 참조하세요.
+Microsoft SQL Server 2016 릴리스, 기타 제품 및 서비스에 대한 사용자 데이터 수집 및 사용 방법에 대한 설명은 이 [개인정보처리방침]((http://go.microsoft.com/fwlink/?LinkID=868444))을 참조하세요.
 
 ## <a name="opting-out-of-telemetry"></a>원격 분석 옵트아웃
 

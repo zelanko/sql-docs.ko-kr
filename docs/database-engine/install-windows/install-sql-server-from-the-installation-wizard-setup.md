@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771499"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080131"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -68,7 +68,10 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
   
      계속하려면 **다음**을 클릭합니다.  
 
-4.  사용 조건 페이지에서 사용권 계약을 검토하고 동의하면 **동의함** 확인란을 선택한 다음 **다음**을 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
+4.  사용 조건 페이지에서 사용권 계약을 검토하고 동의하면 **동의함** 확인란을 선택한 다음 **다음**을 클릭합니다.  
+
+  >[!NOTE]
+  > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/en-us/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)를 참조하세요. 
   
 5.  전역 규칙 창에서 규칙 오류가 없는 경우 설치 절차는 제품 업데이트 창으로 자동으로 진행됩니다.  
   
@@ -80,9 +83,9 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
   
 9. **설치 규칙**에서 SQL Server 설치 프로그램은 설치 프로그램을 실행하는 동안 발생할 수 있는 잠재적 문제를 식별하도록 확인합니다. 오류가 발생한 경우 자세한 정보에 대한 **상태** 열을 클릭합니다. 그렇지 않은 경우 **다음**을 클릭합니다. 
 
-10. **설치 형식**에서 새 설치를 수행할 것인지 아니면 기존 설치에 기능을 추가할 것인지 선택합니다. **다음**을 클릭합니다. 
+10. 컴퓨터에서 SQL Server를 처음 설치하는 경우 **설치 유형** 페이지를 건너뛰고 **기능 선택** 페이지로 바로 이동하여 설치합니다. 그러나 SQL Server가 시스템에 이미 설치되어 있는 경우 **설치 유형**에서 새 설치를 수행하거나 기존 설치에 기능을 추가하도록 선택합니다. **다음**을 클릭합니다. 
   
-11. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 예를 들어 SQL Server 데이터베이스 엔진의 새 인스턴스를 설치하려면 **데이터베이스 엔진 서비스**를 확인합니다.
+11. **기능 선택** 페이지에서 설치할 구성 요소를 선택합니다. 예를 들어 SQL Server 데이터베이스 엔진의 새 인스턴스를 설치하려면 **데이터베이스 엔진 서비스**를 확인합니다.
 
     기능 이름을 선택하면 **기능 설명** 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
   

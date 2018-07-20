@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769679"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066003"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769679"
 >  첫 번째 수신기를 만들기 전에 [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)을 읽어 보세요.  
   
 ###  <a name="DNSnameReqs"></a> 가용성 그룹 수신기의 DNS 이름에 대한 요구 사항  
- 각 가용성 그룹 수신기에는 도메인과 NetBIOS에서 고유한 DNS 호스트 이름이 필요합니다. DNS 이름은 문자열 값입니다. 이 이름은 순서에 관계없이 영숫자 문자, 대시(-) 및 하이픈(_)만 포함할 수 있습니다. DNS 호스트 이름은 대/소문자를 구분하지 않습니다. 최대 길이는 63자이지만 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있는 최대 길이는 15자입니다.  
+ 각 가용성 그룹 수신기에는 도메인과 NetBIOS에서 고유한 DNS 호스트 이름이 필요합니다. DNS 이름은 문자열 값입니다. 이 이름은 순서와 관계없이 영숫자 문자, 대시/하이픈(-) 및 밑줄(_)만 포함할 수 있습니다. DNS 호스트 이름은 대/소문자를 구분하지 않습니다. 최대 길이는 63자이지만 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있는 최대 길이는 15자입니다.  
   
  의미 있는 문자열을 지정하는 것이 좋습니다. 예를 들어, `AG1`이라는 가용성 그룹의 경우 `ag1-listener`와 같은 의미 있는 DNS 호스트 이름을 지정합니다.  
   

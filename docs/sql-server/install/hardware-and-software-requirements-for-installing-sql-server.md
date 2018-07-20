@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/23/2017
+ms.date: 07/06/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -48,12 +48,12 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aef7f10021c179b8ab6a6498bbe251159b8bfe7a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e057c582aea0646f0f151c1a342f89281d8479e0
+ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773189"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890954"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 2008 R2 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "34773189"
 |구성 요소|요구 사항|  
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 및 이후 버전을 사용하려면 데이터베이스 엔진, Master Data Services 또는 복제에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 설치 프로그램이 자동으로 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Windows용 Microsoft .NET Framework 4.6웹 설치 관리자 [에서 수동으로](http://support.microsoft.com/kb/3045560)를 설치할 수도 있습니다.<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6에 대한 자세한 내용, 권장 사항 및 지침은 [개발자를 위한 .NET Framework 배포 가이드](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)를 참조하세요.<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6을 설치하기 전에 [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 및 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]에 [KB2919355](http://support.microsoft.com/kb/2919355)가 필요합니다.|  
-|네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 네트워크 프로토콜로 공유 메모리, 명명된 파이프, TCP/IP 및 VIA를 지원합니다.<br/><br/> 참고: 장애 조치(Failover) 클러스터에서는 공유 메모리와 VIA가 지원되지 않습니다.<br/><br/> 또한 참고로 VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)를 참조하십시오.|  
+|네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 네트워크 프로토콜로 공유 메모리, 명명된 파이프, TCP/IP 및 VIA를 지원합니다.<br/><br/> 참고: VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. 공유 메모리는 장애 조치(failover) 클러스터 인스턴스의 로컬 파이프 주소를 통해 연결이 설정되는 경우에만 지원됩니다.<br/><br/> 또한 참고로 VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)를 참조하십시오.|  
 |하드 디스크|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br/><br/> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 있는 [하드 디스크 공간 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)을 참조하세요. 데이터 파일에 대해 지원되는 저장소 유형에 대한 자세한 내용은 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
 |드라이브|디스크에서 설치하려면 경우에 따라 DVD 드라이브가 필요합니다.|  
 |모니터|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 Super-VGA(800x600) 이상 해상도의 모니터가 필요합니다.|  

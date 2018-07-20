@@ -1,7 +1,7 @@
 ---
 title: Excel에서 SQL로 데이터 가져오기 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: import-export
@@ -15,48 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebd7a83bb1decc8c75dfdd11255f2b09b4ba7d49
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d4bbe4268e60408f5c362c2e68121a4f89b1d82f
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329784"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137922"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져오는 여러 가지 방법이 있습니다. 이 문서에서는 이러한 각 옵션을 대해 요약하고 자세한 지침에 대한 링크를 제공합니다.
+Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져오는 여러 가지 방법이 있습니다. 일부 방법을 사용하면 한 단계만 거쳐 Excel 파일에서 직접 데이터를 가져올 수 있습니다. 다른 방법을 사용하려면 가져오기 전에 Excel 데이터를 텍스트로 내보내야 합니다. 이 문서에서는 자주 사용하는 방법을 요약하고 자세한 정보의 링크를 제공합니다.
 
-SSIS 또는 Azure Data Factory와 같은 복잡한 도구 및 서비스에 대한 자세한 설명은 이 목록의 범위에 포함되지 않습니다. 관심 있는 솔루션에 대한 자세한 내용을 알아보려면 제공된 링크로 이동하세요.
+## <a name="list-of-methods"></a>메서드 목록
 
 -   다음 도구 중 하나를 사용하여 Excel에서 SQL로 직접 한 단계만 거쳐 데이터를 가져올 수 있습니다.
-    -   SQL Server 가져오기 및 내보내기 마법사
-    -   SSIS(SQL Server Integration Services)
-    -   OPENROWSET 함수
+    -   [SQL Server 가져오기 및 내보내기 마법사](#wiz)
+    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [OPENROWSET](#openrowset) 함수
 -   텍스트 파일을 가져오기 위해 Excel의 데이터를 텍스트로 내보내고 다음 도구 중 하나를 사용하여 두 단계를 거쳐 데이터를 가져올 수 있습니다.
-    -   BULK INSERT 문
-    -   BCP
-    -   Azure Data Factory
+    -   [플랫 파일 가져오기 마법사](#import-wiz)
+    -   [BULK INSERT](#bulk-insert) 문
+    -   [BCP](#bcp)
+    -   [복사 마법사(Azure Data Factory)](#adf-wiz)
+    -   [Azure Data Factory](#adf)
 
 Excel 통합 문서에서 여러 워크시트를 가져오려는 경우 일반적으로 각 시트에서 한 번씩 이러한 도구를 각각 실행해야 합니다.
+
+SSIS 또는 Azure Data Factory와 같은 복잡한 도구 및 서비스에 대한 자세한 설명은 이 목록의 범위에 포함되지 않습니다. 관심 있는 솔루션에 대한 자세한 내용을 알아보려면 제공된 링크로 이동하세요.
 
 > [!IMPORTANT]
 > Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../../integration-services/load-data-to-from-excel-with-ssis.md)를 참조하세요.
 
-## <a name="sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사
+## <a name="wiz"></a> SQL Server 가져오기 및 내보내기 마법사
 
-SQL Server 가져오기 및 내보내기 마법사의 페이지를 단계별로 실행하여 Excel 파일에서 직접 데이터를 가져옵니다. 필요에 따라 설정을 SSIS(SQL Server Integration Services) 패키지로 저장하여 사용자 지정하고 다시 사용할 수 있습니다.
-
-![Excel 데이터 원본에 연결](media/excel-connection.png)
-
-Excel에서 SQL Server로 가져오기 위해 마법사를 사용한 예제를 보려면 [가져오기 및 내보내기 마법사의 이 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)을 참조하세요.
+SQL Server 가져오기 및 내보내기 마법사의 페이지를 단계별로 실행하여 Excel 파일에서 직접 데이터를 가져옵니다. 필요에 따라 설정을 SSIS(SQL Server Integration Services) 패키지로 저장하여 나중에 사용자 지정하고 다시 사용할 수 있습니다.
 
 마법사를 시작하는 방법을 알아보려면 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 
-## <a name="sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)
+Excel에서 SQL Server로 가져오기 위해 마법사를 사용한 예제를 보려면 [가져오기 및 내보내기 마법사의 이 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)을 참조하세요.
+
+![Excel 데이터 원본에 연결](media/excel-connection.png)
+
+## <a name="ssis"></a> SSIS(SQL Server Integration Services)
 
 SSIS에 익숙하여 SQL Server 가져오기 및 내보내기 마법사가 실행되지 않게 하려면 Excel 원본 및 데이터 흐름에서 SQL Server 대상을 사용하는 SSIS 패키지를 만듭니다.
-
-![데이터 흐름의 구성 요소](media/excel-to-sql-data-flow.png)
 
 이러한 SSIS 구성 요소에 대한 자세한 내용은 다음 항목을 참조하세요.
 -   [Excel 원본](../../integration-services/data-flow/excel-source.md)
@@ -64,7 +66,9 @@ SSIS에 익숙하여 SQL Server 가져오기 및 내보내기 마법사가 실�
 
 SSIS 패키지를 작성하는 방법을 알아보려면 [ETL 패키지를 만드는 방법](../../integration-services/ssis-how-to-create-an-etl-package.md) 자습서를 참조하세요.
 
-## <a name="openrowset-and-linked-servers"></a>OPENROWSET 및 연결된 서버
+![데이터 흐름의 구성 요소](media/excel-to-sql-data-flow.png)
+
+## <a name="openrowset"></a>OPENROWSET 및 연결된 서버
 
 > [!NOTE]
 > Azure에서는 OPENROWSET 및 OPENDATASOURCE 함수가 SQL Database 관리되는 인스턴스(미리 보기)에 지원됩니다.
@@ -171,7 +175,15 @@ Excel에서 **파일 | 다른 이름으로 저장**을 선택한 다음, **텍�
 > [!TIP]
 > 데이터 가져오기 도구로 최상의 결과를 얻으려면, 데이터의 열 헤더 및 행만 포함하는 시트를 저장합니다. 저장된 데이터에 페이지 제목, 빈 줄, 메모 등이 포함되어 있는 경우 나중에 데이터를 가져올 때 예기치 않은 결과가 발생할 수 있습니다.
 
-## <a name="bulk-insert-command"></a>BULK INSERT 명령
+## <a name="import-wiz"></a>플랫 파일 가져오기 마법사
+
+플랫 파일 가져오기 마법사 페이지를 단계별로 실행하여 텍스트 파일로 저장된 데이터를 가져옵니다.
+
+앞의 [필수 구성 요소](#prereq) 섹션에서 설명한 대로 플랫 파일 가져오기 마법사를 사용하여 가져오기 전에 Excel 데이터를 텍스트로 내보내야 합니다.
+
+플랫 파일 가져오기 마법사에 대한 자세한 내용은 [SQL 마법사로 플랫 파일 가져오기](import-flat-file-wizard.md)를 참조하세요.
+
+## <a name="bulk-insert"></a> BULK INSERT 명령
 
 `BULK INSERT`는 SQL Server Management Studio에서 실행할 수 있는 Transact-SQL 명령입니다. 다음 예제에서는 `Data.csv` 쉼표로 구분된 파일에서 기존 데이터베이스 테이블로 데이터를 로드합니다.
 
@@ -192,7 +204,7 @@ GO
 -   [BULK INSERT 또는 OPENROWSET(BULK...)을 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 -   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp-tool"></a>BCP 도구
+## <a name="bcp"></a> BCP 도구
 
 BCP는 명령 프롬프트에서 실행되는 프로그램입니다. 다음 예제에서는 `Data.csv` 쉼표로 구분된 파일에서 기존 `Data_bcp` 데이터베이스 테이블로 데이터를 로드합니다.
 
@@ -207,8 +219,8 @@ BCP에 대한 자세한 내용은 다음 항목을 참조하세요.
 -   [bcp 유틸리티](../../tools/bcp-utility.md)
 -   [대량 내보내기 또는 가져오기를 위한 데이터 준비](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="copy-wizard-azure-data-factory"></a>복사 마법사(Azure Data Factory)
-마법사 페이지를 단계별로 실행하여 텍스트 파일로 저장된 데이터를 가져옵니다.
+## <a name="adf-wiz"></a> 복사 마법사(Azure Data Factory)
+Azure Data Factory 복사 마법사 페이지를 단계별로 실행하여 텍스트 파일로 저장된 데이터를 가져옵니다.
 
 앞의 [필수 구성 요소](#prereq) 섹션에서 설명한 대로 Azure Data Factory를 사용하여 데이터를 가져오려면 먼저 Excel 데이터를 텍스트로 내보내야 합니다. Data Factory는 직접 Excel 파일을 읽을 수 없습니다.
 
@@ -216,7 +228,7 @@ BCP에 대한 자세한 내용은 다음 항목을 참조하세요.
 -   [데이터 팩터리 복사 마법사](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [자습서: 데이터 팩터리 복사 마법사를 사용하여 복사 활동으로 파이프라인을 만듭니다](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
-## <a name="azure-data-factory"></a>Azure Data Factory
+## <a name="adf"></a> Azure Data Factory
 Azure Data Factory에 익숙하여 복사 마법사를 실행되지 않게 하려면 텍스트 파일을 SQL Server 또는 Azure SQL Database로 복사하는 복사 작업으로 파이프라인을 만듭니다.
 
 앞의 [필수 구성 요소](#prereq) 섹션에서 설명한 대로 Azure Data Factory를 사용하여 데이터를 가져오려면 먼저 Excel 데이터를 텍스트로 내보내야 합니다. Data Factory는 직접 Excel 파일을 읽을 수 없습니다.

@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074306"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926414"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ Linux의 SQL Server에 대해서는 [Linux의 SQL Server에 대한 고객 의견
 설치 후에 SQL Server 구성 요소 및 인스턴스에 대한 사용 데이터 수집 설정을 오류 및 사용 보고 응용 프로그램을 통해 변경할 수 있습니다. 이 응용 프로그램은 SQL Server 설치의 일부로 사용할 수 있습니다. 이 도구를 사용하면 SQL Server 인스턴스에서 자체 사용 데이터 설정을 구성할 수 있습니다.
 
 > [!NOTE]
-> SQL Server의 구성 도구에서 오류 및 사용 보고 응용 프로그램이 나열됩니다. SQL Server 2017의 경우와 같은 방식으로 이 도구를 사용하여 오류 보고 및 사용 의견 수집에 대한 기본 설정을 관리할 수 있습니다. 오류 보고는 사용 의견 수집과는 별개이므로 사용 의견 수집과는 별도로 켜거나 끌 수 있습니다. 오류 보고는 Microsoft로 전송되며 개인정보처리방침에 설명된 중요한 정보를 포함할 수 있는 크래시 덤프를 수집합니다.
+> SQL Server의 구성 도구에서 오류 및 사용 보고 응용 프로그램이 나열됩니다. SQL Server 2017의 경우와 같은 방식으로 이 도구를 사용하여 오류 보고 및 사용 의견 수집에 대한 기본 설정을 관리할 수 있습니다. 오류 보고는 사용 의견 수집과는 별개이므로 사용 의견 수집과는 별도로 켜거나 끌 수 있습니다. 오류 보고는 Microsoft로 전송되며 [개인정보처리방침](http://go.microsoft.com/fwlink/?LinkID=868444)에 설명된 중요한 정보를 포함할 수 있는 크래시 덤프를 수집합니다.
 
 SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하거나 누르고 검색 상자에서 "오류"를 검색합니다. SQL Server 오류 및 사용 보고 항목이 표시 됩니다. 이 도구를 시작한 후 해당 컴퓨터에 설치된 인스턴스 및 구성 요소에 대해 수집된 사용 의견 및 심각한 오류를 관리할 수 있습니다.
 
