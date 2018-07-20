@@ -1,5 +1,5 @@
 ---
-title: MSagent_profiles (Transact SQL) | Microsoft Docs
+title: MSagent_profiles (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38afed73fdee3817e632c02a0584d960d589fe8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3b246b0c174838529dd5e0c6c38bd633c0a90b8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004320"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101381"
 ---
 # <a name="msagentprofiles-transact-sql"></a>MSagent_profiles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSagent_profiles** 테이블 각 정의 된 복제 에이전트 프로필에 대 한 하나의 행을 포함 합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
+  합니다 **MSagent_profiles** 각 정의 된 복제 에이전트 프로필에 대해 하나의 행을 포함 하는 테이블입니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,11 +43,11 @@ ms.locfileid: "33004320"
 |**profile_name**|**sysname**|에이전트 유형에 대한 고유한 프로필 이름입니다.|  
 |**agent_type**|**int**|에이전트의 유형입니다.<br /><br /> **1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
 |**type**|**int**|프로필의 유형입니다.<br /><br /> **0** = 시스템**1** = 사용자 지정|  
-|**설명**|**nvarchar(3000)**|프로필에 대한 설명입니다.|  
+|**description**|**nvarchar(3000)**|프로필에 대한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

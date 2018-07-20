@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983015"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085355"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>R 모델을 배포하고 SQL에서 사용하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "38983015"
     END
     ```
 
-    + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델은 **varbinary (max)** 데이터로 SQL 변수 _@lmodel2_에 저장되며 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 매개변수 *mod* 을 통해 전달됩니다.
+    + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델 테이블에서 검색 됩니다 **varbinary (max)** SQL 변수에 저장 된 데이터를  _\@lmodel2_를 매개 변수로 전달 하 고 *mod* 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
 
-    + 채점을 위한 입력용 데이터는 SQL 쿼리로 정의되고 SQL 변수 _@input_에 문자열로 저장됩니다. 데이터가 데이터베이스로부터 검색되면 *InputDataSet*이라는 데이터 프레임에 저장됩니다. 이 데이터 프레임은 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 입력 데이터용 기본 이름입니다. 다른 변수 이름이 필요하다면 *_@input_data_1_name_* 매개 변수를 사용할 수 있습니다.
+    + SQL 쿼리로 정의 되 고 SQL 변수에서를 문자열로 저장 점수 매기기에 대 한 입력으로 사용 되는 데이터  _\@입력_합니다. 이라는 데이터 프레임에 저장 된 데이터가 데이터베이스에서 검색 된 대로 *InputDataSet*, 입력된 데이터에 대 한 기본 이름 뿐입니다 합니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저를 정의할 수 있습니다 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을   *_\@input_data_1_name_* 합니다.
 
     + 채점을 위해 저장 프로시저에서 RevoScaleR **라이브러리에서** `rxPredict` 함수를 호출합니다.
 

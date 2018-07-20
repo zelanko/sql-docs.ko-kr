@@ -1,5 +1,5 @@
 ---
-title: 변경 데이터 캡처 테이블 (Transact SQL) | Microsoft Docs
+title: 변경 데이터 캡처 테이블 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0317e1c163dacac41968d9c3f17c851cd3be7b5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a07c68784114879d99127cac19725481be42de2a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260126"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101491"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>변경 데이터 캡처 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "33260126"
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  변경 데이터 캡처 에이전트 작업에 대한 구성 매개 변수를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [변경 데이터 캡처 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [변경 데이터 캡처 함수 &#40;Transact SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [변경 데이터 캡처 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

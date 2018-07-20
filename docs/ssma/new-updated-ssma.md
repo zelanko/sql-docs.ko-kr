@@ -1,24 +1,23 @@
 ---
-title: 업데이트 됨-SQL Server 문서에 대 한 SSMA | Microsoft Docs
-description: 코드 조각에 최근에 변경 된 설명서에 대 한 SQL Server Migration Assistant (SSMA) Microsoft SQL Server에 대 한 업데이트 된 콘텐츠를 표시 합니다.
+title: 업데이트 됨-SQL Server docs 용 SSMA | Microsoft Docs
+description: 에 대 한 SQL Server Migration Assistant (SSMA) for Microsoft SQL Server 설명서에서 최근에 변경된에 대 한 업데이트 된 콘텐츠의 코드 조각을 표시 합니다.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
-ms.openlocfilehash: c941c5ca367c579fd654c7c399520f371f3f59b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97b48abd3e470703f72441006a3ecd92b635e913
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776969"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085465"
 ---
-# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server Migration Assistant (SSMA)
+# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>새로 추가 되거나 최근에 업데이트 됨: SQL Server Migration Assistant (SSMA)
 
 
 

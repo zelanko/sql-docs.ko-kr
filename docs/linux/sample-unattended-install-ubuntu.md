@@ -5,18 +5,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 89427b7bed156e73260c056cec9cf928c5bda042
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 19e73b1dfa4ced0c987f2bc8c78a020b29f7b7a0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409662"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084755"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu에 대 한 샘플: SQL Server를 무인된 설치 스크립트
 

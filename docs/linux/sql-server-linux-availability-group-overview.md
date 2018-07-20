@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 7de4097fdc843097cbd2865e4a4f3986c392ac04
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 892b13610d1a6acd9576ba79499fc4b89cca0cd0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045101"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082985"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On 가용성 그룹이 linux
 

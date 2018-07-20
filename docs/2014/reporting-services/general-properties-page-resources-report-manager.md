@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e910172bc11137f2691e1e7dda492b78bd78b26
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164186"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082907"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>일반 속성 페이지, 리소스(보고서 관리자)
   리소스의 일반 속성 페이지를 사용하여 리소스의 이름을 바꾸거나 리소스를 삭제, 이동 또는 대체할 수 있습니다. 리소스를 추가하거나 속성을 수정한 사람에 대한 정보가 페이지의 맨 위에 표시됩니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "37164186"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 리소스의 일반 속성 페이지가 열립니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
- 리소스의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : @ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
+ 리소스의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
   
  **설명**  
  리소스에 대한 설명을 입력합니다. 이 설명은 리소스에 대한 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  

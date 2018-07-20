@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 259f1d466a5d05f882bd7d53041d58b8d85c5e32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7d8d0120093c1a71d1cbed088901cc3100ae56bc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020299"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082938"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 보안 제한 사항
 

@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc050918e8c1b18bf366be2ab5bdb5ecf53a19ad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f45be78617da2e222d6d78c40db819ac8102c19e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419292"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088165"
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37419292"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 모두 ODBC CALL 이스케이프 시퀀스를 지원 하며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 문을 실행 하기 위한 저장 프로시저는 ODBC CALL 이스케이프 시퀀스는 기본 방법입니다. ODBC 구문을 사용하면 응용 프로그램에서는 저장 프로시저의 반환 코드를 검색할 수 있고 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터 간 RPC(원격 프로시저 호출) 전송을 위해 원래 개발된 프로토콜을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 최적화됩니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
   
 > [!NOTE]  
->  호출할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 ODBC로 명명 된 매개 변수를 사용 하 여 (자세한 내용은 참조 하십시오 [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), 매개 변수 이름을 사용 하 여 시작 해야 합니다는 ' @' 문자입니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 MDAC(Microsoft Data Access Components)보다 이 제한 사항을 더욱 엄격하게 적용합니다.  
+>  호출할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 ODBC로 명명 된 매개 변수를 사용 하 여 (자세한 내용은 참조 하십시오 [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), 매개 변수 이름을 사용 하 여 시작 해야 합니다는 '\@' 문자입니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 MDAC(Microsoft Data Access Components)보다 이 제한 사항을 더욱 엄격하게 적용합니다.  
   
  프로시저를 호출하는 ODBC CALL 이스케이프 시퀀스는 다음과 같습니다.  
   

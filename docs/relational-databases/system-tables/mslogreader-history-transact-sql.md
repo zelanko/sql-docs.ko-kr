@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_history (Transact SQL) | Microsoft Docs
+title: MSlogreader_history (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8041a5c3dfdb216d939ef5b99e22b36c0781eda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: def5bc1d69a3d5332f96752fcd5e6b1eaedff08e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005840"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103101"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSlogreader_history** 테이블은 로컬 배포자와 관련 된 로그 판독기 에이전트에 대 한 기록 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
+  합니다 **MSlogreader_history** 테이블은 로컬 배포자와 연결 된 로그 판독기 에이전트에 대 한 기록 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,12 +52,12 @@ ms.locfileid: "33005840"
 |**average_commands**|**int**|세션 중에 전달된 평균 명령 수입니다.|  
 |**delivery_rate**|**float**|초당 전달된 평균 명령 수입니다.|  
 |**delivery_latency**|**int**|게시된 데이터베이스에 입력한 명령이 배포 데이터베이스에 입력될 때까지의 대기 시간입니다. 단위는 밀리초입니다.|  
-|**error_id**|**int**|오류 메시지의 ID는 **MSrepl_error** 시스템 테이블입니다.|  
+|**error_id**|**int**|오류 메시지의 ID를 **MSrepl_error** 시스템 테이블입니다.|  
 |**timestamp**|**timestamp**|이 테이블의 타임스탬프 열입니다.|  
-|**updateable_row**|**bit**|로 설정 **1** 기록 행을 덮어쓸 수 있는 경우.|  
+|**updateable_row**|**bit**|로 **1** 기록 행을 덮어쓸 수 있는 경우.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

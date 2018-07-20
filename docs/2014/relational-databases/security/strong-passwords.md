@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5dca0aafb208835a270be3192f8d3c6020229154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227173"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083015"
 ---
 # <a name="strong-passwords"></a>강력한 암호
   서버 보안 배포에서 암호는 가장 약한 링크가 될 수 있습니다. 암호를 선택할 때는 항상 주의를 기울여야 합니다. 강력한 암호의 특징은 다음과 같습니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "37227173"
   
 -   공백 문자를 포함하거나 공백 문자로 시작하는 경우  
   
--   $ 또는 @ 문자로 시작하는 경우  
+-   $로 시작 하거나 \@ 문자입니다.  
   
- OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 다음과 같은 문자 [] {}() , ; ?를 포함하지 말아야 함 * ! @을 참조하세요. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
+ OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 다음과 같은 문자 [] {}() , ; ?를 포함하지 말아야 함 * ! \@을 참조하세요. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [암호 정책](password-policy.md)  

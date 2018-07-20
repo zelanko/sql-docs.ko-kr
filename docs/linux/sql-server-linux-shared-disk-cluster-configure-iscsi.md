@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6876ac9f3aa6641efe4e08e6c434870347315bc6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 30484eb52561d3bf8006af7ee991c3e2c1619e48
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057341"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083205"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-iSCSI-Linux의 SQL Server 구성
 

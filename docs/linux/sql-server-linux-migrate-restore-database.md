@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/16/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 559ae24a819cfff1172d1829ef3ca5e679a40122
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 8cc1010f2492054a467abfc53e859d39a86e1c78
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020191"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086705"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용 하 여 Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션
 

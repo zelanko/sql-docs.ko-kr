@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 602ec7d9beca11e2baa963bdf5b8e59df2f194d5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: ea8eaf28f33a07d446768c8d4d770bf4727ce48b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006765"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085375"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux의 환경 변수를 사용 하 여 SQL Server 설정 구성
 

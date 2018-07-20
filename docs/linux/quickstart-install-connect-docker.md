@@ -5,7 +5,7 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/07/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.component: ''
@@ -13,12 +13,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.openlocfilehash: 6b28ac7d654d04f5e0998ecda31d16ec597f8d3d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: ad880d6b36188579b80cd8ca33bc8b186e429f45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020701"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087005"
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Docker를 사용 하 여 SQL Server 2017 컨테이너 이미지를 실행 하는 빠른 시작:
 

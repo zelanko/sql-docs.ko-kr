@@ -4,20 +4,20 @@ description: 이 빠른 시작에는 SUSE Linux Enterprise Server의 SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 07/16/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 77dd13139eba88a40cbf20094b880c5046ebfb05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7534ea052c5c277edb195c2a6a2a12ead1661e33
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057632"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102591"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SQL Server를 설치 하는 빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고
 
@@ -117,13 +117,5 @@ SLES의 SQL Server를 구성 하려면 설치 하려면 터미널에서 다음 �
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** 는 SQL Server에 연결해서 쿼리를 실행하고 관리 및 개발 작업을 수행하는 하나의 도구입니다. 다른 도구는 다음과 같습니다.
->
-> * [SQL Server Operations Studio(미리 보기)](../sql-operations-studio/what-is.md)
-> * 다른 도구는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * 및[Visual Studio Code](sql-server-linux-develop-use-vscode.md)가 있습니다.
-> * [mssql-cli(미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

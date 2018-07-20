@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0365cedaa710627b8dab6b2060c9c414f126cf99
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: de9cee024eb56925134559d22b988cbd318845bb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972367"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083296"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "37972367"
   
 -   경고와 오류가 약간 변경되었습니다. 이제 서버에서 반환되는 경고와 오류가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client로 전달될 때 동일한 심각도를 유지합니다. 특정 경고 및 오류 트래핑을 사용하는 경우 응용 프로그램을 완전히 테스트해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 MDAC보다 엄격한 오류 검사 기능이 있으므로 ODBC 및 OLE DB 사양을 엄격하게 준수하지 않는 일부 응용 프로그램이 다르게 동작할 수 있습니다. 예를 들어 SQLOLEDB 공급자는 결과 매개 변수의 경우 매개 변수 이름이 '@'로 시작해야 한다는 규칙을 적용하지 않지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 이 규칙을 적용합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 MDAC보다 엄격한 오류 검사 기능이 있으므로 ODBC 및 OLE DB 사양을 엄격하게 준수하지 않는 일부 응용 프로그램이 다르게 동작할 수 있습니다. SQLOLEDB 공급자 매개 변수 이름을 사용 하 여 시작 해야 하는 규칙을 적용 하지 않은 예를 들어, '\@' 결과 매개 변수에 대 한 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 연결 실패와 관련해서 MDAC와 다르게 동작합니다. 예를 들어 MDAC는 실패한 연결에 대해 캐시된 속성 값을 반환하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 호출 응용 프로그램에 오류를 보고합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "37972367"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 이전 버전과의 호환성을 위해 연결 문자열에서 모호성을 허용합니다. 예를 들어 일부 키워드를 여러 번 지정할 수 있으며 위치나 우선 순위에 따라 충돌하는 키워드를 해결할 수 있습니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서는 연결 문자열의 모호성을 허용하지 않을 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하도록 응용 프로그램을 수정하는 경우 연결 문자열 모호성에 대한 종속성을 제거하는 것이 좋습니다.  
   
--   ODBC 또는 OLE DB 호출을 사용하여 트랜잭션을 시작하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 MDAC 사이에 동작 차이가 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하면 트랜잭션이 즉시 시작되지만 MDAC를 사용하면 첫 번째 데이터베이스 액세스 후에 트랜잭션이 시작됩니다. 이 수에 영향을 줄 저장된 프로시저 및 일괄 처리의 동작 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \@ 필요@TRANCOUNT 일괄 처리 또는 저장된 프로시저 실행을 일괄 처리 또는 저장된 프로시저를 시작할 때 끝낸 후 동일 해야 합니다.  
+-   ODBC 또는 OLE DB 호출을 사용하여 트랜잭션을 시작하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 MDAC 사이에 동작 차이가 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하면 트랜잭션이 즉시 시작되지만 MDAC를 사용하면 첫 번째 데이터베이스 액세스 후에 트랜잭션이 시작됩니다. 이 수에 영향 저장된 프로시저 및 일괄 처리의 동작 때문 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 필요 \@ \@TRANCOUNT 일괄 처리 또는 저장된 프로시저가 완료 된 후 실행 일괄 처리 또는 저장된 프로시저를 시작할 때와 동일 해야 합니다.  
   
 -   사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ITransactionLocal::BeginTransaction으로 인해 트랜잭션이 즉시 시작 됩니다. MDAC를 사용할 경우 응용 프로그램이 암시적 트랜잭션 모드의 트랜잭션이 필요한 문을 실행할 때까지 트랜잭션 시작이 지연되었습니다. 자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)를 참조하세요.  
   

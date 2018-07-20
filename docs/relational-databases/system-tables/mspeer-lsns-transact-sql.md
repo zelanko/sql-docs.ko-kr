@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (Transact SQL) | Microsoft Docs
+title: MSpeer_lsns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4c68b32d5b6c86fad158962deb360e64fa129d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de37f4de25bef419c67af1ff858251bec4b5e543
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006831"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102001"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Mspeer_lsns** 각 트랜잭션에 피어 투 피어 복제 토폴로지에서 구독에 매핑할 테이블을 사용 합니다. 이 테이블은 피어 투 피어 복제 토폴로지 내의 모든 게시 데이터베이스와 피어 투 피어 게시에 대한 모든 구독자의 구독 데이터베이스에 저장됩니다. 이 유형의 트랜잭션 복제 토폴로지에 대 한 자세한 내용은 참조 하십시오. [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
+  합니다 **Mspeer_lsns** 테이블은 피어 투 피어 복제 토폴로지에서 구독 각 트랜잭션 매핑하는 데 사용 합니다. 이 테이블은 피어 투 피어 복제 토폴로지 내의 모든 게시 데이터베이스와 피어 투 피어 게시에 대한 모든 구독자의 구독 데이터베이스에 저장됩니다. 이 유형의 트랜잭션 복제 토폴로지에 대 한 자세한 내용은 참조 하세요. [피어 투 피어 트랜잭션 복제](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
 ## <a name="definition"></a>정의  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|피어 투 피어 LSN을 식별합니다.|  
-|**last_updated**|**datetime**|**datetime** 에서 마지막 행 업데이트가 적용 되었습니다.|  
+|**last_updated**|**datetime**|**날짜/시간** 에서 마지막 행 업데이트를 수행 했습니다.|  
 |**originator**|**sysname**|트랜잭션을 시작한 게시자의 이름입니다.|  
 |**originator_db**|**sysname**|트랜잭션이 시작된 데이터베이스의 이름입니다.|  
 |**originator_publication**|**sysname**|트랜잭션이 시작된 게시의 이름입니다.|  
@@ -52,8 +52,8 @@ ms.locfileid: "33006831"
 |**originator_version**|**int**|게시자의 버전 번호를 식별합니다.|  
 |**originator_id**|**smallint**|충돌 감지를 위해 토폴로지의 각 노드를 식별합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을(를) 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

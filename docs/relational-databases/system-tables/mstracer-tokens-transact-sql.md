@@ -1,5 +1,5 @@
 ---
-title: MStracer_tokens (Transact SQL) | Microsoft Docs
+title: MStracer_tokens (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MStracer_tokens system table
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1822cdc0dd42a2e7797dec4aeb3a5b9627b4eac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25a5d05c3c4ad81da0856d4e073f7aeb462109e7
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004540"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103261"
 ---
 # <a name="mstracertokens-transact-sql"></a>MStracer_tokens(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MStracer_tokens** 테이블에는 게시에 삽입 된 추적 프로그램 토큰 레코드에 대 한 기록을 유지 관리 합니다. 이 테이블은 배포 데이터베이스에 저장되며 성능 모니터링을 위해 복제에 사용됩니다.  
+  합니다 **MStracer_tokens** 테이블은 게시에 삽입 된 추적 프로그램 토큰 레코드에 대 한 기록을 유지 관리 합니다. 이 테이블은 배포 데이터베이스에 저장되며 성능 모니터링을 위해 복제에 사용됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,8 +44,8 @@ ms.locfileid: "33004540"
 |**publisher_commit**|**datetime**|추적 프로그램 토큰 레코드가 게시자에서 커밋된 날짜와 시간입니다.|  
 |**distributor_commit**|**datetime**|추적 프로그램 토큰 레코드가 배포자에서 커밋된 날짜와 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

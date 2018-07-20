@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (Transact SQL) | Microsoft Docs
+title: MSmerge_sessions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010730"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103331"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_sessions** 테이블은 이전 병합 에이전트 작업 세션 결과가 있는 기록 행을 포함 합니다. 병합 에이전트가 실행될 때마다 이 테이블에 새 행이 추가됩니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
+  합니다 **MSmerge_sessions** 테이블은 이전 병합 에이전트 작업 세션 결과가 있는 기록 행을 포함 합니다. 병합 에이전트가 실행될 때마다 이 테이블에 새 행이 추가됩니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -70,8 +70,8 @@ ms.locfileid: "33010730"
 |**connection_type**|**int**|업로드 중 사용된 연결은 다음과 같습니다.<br /><br /> **1** = 로컬 영역 네트워크 (LAN).<br /><br /> **2** = 전화 접속 네트워크 연결 합니다.<br /><br /> **3** = 웹 동기화 합니다.|  
 |**timestamp**|**timestamp**|이 테이블의 타임스탬프 열입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

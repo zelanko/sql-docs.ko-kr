@@ -6,18 +6,18 @@ ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d2e72c77ad5f200c07a6e71025a3461d6397032a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: bac0933cc8b27159a95a9b99014a43e9fab966b5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38062052"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086045"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux의 SQL Server Integration Services (SSIS)를 설치 합니다.
 

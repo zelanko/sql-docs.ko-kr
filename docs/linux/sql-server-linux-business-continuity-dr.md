@@ -6,7 +6,7 @@ ms.author: mihaelab
 ms.reviewer: mikeray
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
@@ -14,12 +14,12 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 24db7c4b1b1e76d9f16b8d33203fe8556d3dba96
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: d8035d1c2b1c162408cf1770ac284ef98ba0cf9b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057301"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086535"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>비즈니스 연속성 및 데이터베이스 복구-SQL Server on Linux
 

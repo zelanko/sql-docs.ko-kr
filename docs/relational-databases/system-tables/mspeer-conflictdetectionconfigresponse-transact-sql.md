@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigresponse (Transact SQL) | Microsoft Docs
+title: MSpeer_conflictdetectionconfigresponse (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb1251432bed74cd95368dc02e61f1f42b6e1807
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65d192cbf84ab41c0ffe9ee6dee47f7a9468e45d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006380"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103551"
 ---
 # <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33006380"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|충돌 구성 요청 항목을 식별 하는 [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) 테이블입니다.|  
+|request_id|**int**|충돌 구성 요청 항목을 식별 합니다 [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) 테이블입니다.|  
 |peer_node|**sysname**|응답을 생성한 서버 인스턴스의 이름입니다.|  
 |peer_db|**sysname**|응답을 생성한 피어에 있는 구독 데이터베이스입니다.|  
 |peer_version|**sysname**|게시자의 버전 번호를 식별합니다.|  
@@ -52,8 +52,8 @@ ms.locfileid: "33006380"
 |progress_phase|**nvarchar(32)**|다음 값 중 하나를 사용하여 현재 처리 단계를 식별합니다.<br /><br /> 시작됨<br /><br /> Peer version collected<br /><br /> Status collected|  
 |modified_date|**datetime**|단계가 완료된 날짜와 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

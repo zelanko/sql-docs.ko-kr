@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 3ed5e8ee42792d4308b3ccecb41bfcbe064dafd9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059171"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086395"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ```  
   
 ## <a name="arguments"></a>인수  
- *@tsql*  
+ *\@tsql*  
  하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
   
- *@params*  
- @params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql과 비슷하게 일괄 처리 합니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
+ *\@매개 변수*  
+ \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql과 비슷하게 일괄 처리 합니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
   
- 에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. Stmt에 지정 된 모든 매개 변수에서 정의 되어야 합니다 @params합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다 @params 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ 에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. Stmt에 지정 된 모든 매개 변수에서 정의 되어야 합니다 \@매개 변수입니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다 \@params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  1로 설정되면 쿼리에 FOR BROWSE 옵션이 있는 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
@@ -112,7 +112,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 |error_type|error_type|Description|  
 |-----------------|-----------------|-----------------|  
-|1|MISC|설명하지 않은 모든 오류입니다.|  
+|@shouldalert|MISC|설명하지 않은 모든 오류입니다.|  
 |2|SYNTAX|일괄 처리에 발생한 구문 오류입니다.|  
 |3|CONFLICTING_RESULTS|가능한 두 개의 첫 번째 문 사이에 충돌이 발생하여 결과를 확인할 수 없습니다.|  
 |4|DYNAMIC_SQL|첫 번째 결과를 반환할 수 있는 동적 SQL로 인해 결과를 확인할 수 없습니다.|  
@@ -123,11 +123,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|일괄 처리에 재귀 문이 포함되어 있어 결과를 확인할 수 없습니다.|  
 |10|TEMPORARY_TABLE|일괄 처리에 임시 테이블이 포함 및에서 지원 되지 않습니다 때문에 결과 확인할 수 없습니다 **sp_describe_first_result_set** 합니다.|  
 |11|UNSUPPORTED_STATEMENT|일괄 처리에서 지원 되지 않는 문이 포함 되어 있으므로 결과 확인할 수 없습니다 **sp_describe_first_result_set** (예를 들어, FETCH, REVERT 등.).|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|@object_id 함수에 전달 됩니다 (즉, 저장된 프로시저가 아님) 지원 되지 않습니다|  
-|13|OBJECT_DOES_NOT_EXIST|@object_id 전달할 시스템 카탈로그에서 함수를 찾을 수 없습니다.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@object_id 함수에 전달 되었습니다 (예: 저장된 프로시저가 아님)를 지원 합니다.|  
+|13|OBJECT_DOES_NOT_EXIST|\@시스템 카탈로그에서 함수에 전달 하는 object_id를 찾을 수 없습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 실행 하기 위한 권한이 필요 합니다 @tsql 인수입니다.  
+ 실행 하기 위한 권한이 필요 합니다 \@tsql 인수입니다.  
   
 ## <a name="examples"></a>예  
  항목의 추가 예제 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 사용 하 여 적용할 수 있습니다 **sys.dm_exec_describe_first_result_set**.  

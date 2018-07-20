@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: eae6d3389405f6c70e486d0569a65ca5d0a0d15d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 32adfba6edf8497f7ea10f8f68401c99c246ae5c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061871"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084365"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
 

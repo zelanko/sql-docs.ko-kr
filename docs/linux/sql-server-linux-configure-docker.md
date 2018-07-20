@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352755"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085875"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "37352755"
 
 Docker 허브에서 무료 개발자 버전의 SQL Server를 실행 하는 이전 섹션에서 빠른 시작 합니다. 대부분의 정보에는 프로덕션 Enterprise, Standard 또는 Web 버전 같은 컨테이너 이미지를 실행 하려는 경우 여전히 적용 됩니다. 그러나 여기서 설명 하는 몇 가지 차이점이 있습니다.
 
-- 유효한 라이선스가 있는 경우 SQL Server 프로덕션 환경에서 사용할 수 있습니다. 무료 SQL Server Express 프로덕션 라이선스를 가져올 수 있습니다 [여기](https://go.microsoft.com/fwlink/?linkid=857693)합니다. 통해 사용할 수 있는 SQL Server Standard 및 Enterprise Edition 라이선스 [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)합니다.
+- 유효한 라이선스가 있는 경우 SQL Server 프로덕션 환경에서 사용할 수 있습니다. 무료 SQL Server Express 프로덕션 라이선스를 가져올 수 있습니다 [여기](https://go.microsoft.com/fwlink/?linkid=857693)합니다. 통해 사용할 수 있는 SQL Server Standard 및 Enterprise Edition 라이선스 [Microsoft Volume Licensing](https://www.microsoft.com/en-us/licensing/default.aspx)합니다.
 
 - 프로덕션 SQL Server 컨테이너 이미지를 끌어와야 [Docker 저장소](https://store.docker.com)합니다. 이미 없는, 하는 경우 Docker 저장소 계정을 만듭니다.
 
@@ -213,12 +213,12 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 docker volume ls
 ```
 
-호스트 디렉터리를 탑재 하는 경우 /var/opt/mssql 컨테이너를 만들 때을 대신 참조를 로그 호스트에서 매핑된 경로에 하위 디렉터리입니다.
+볼륨 이름이 같은 다른 컨테이너를 만든 경우 새 컨테이너는 동일한 SQL Server에에서 포함 된 데이터 볼륨을 사용 합니다.
 
-통해 이동 하 여 Docker에서 SQL Server 2017 컨테이너 이미지를 사용 하 여 시작 합니다 `docker volume rm`퀵 스타트합니다.
+데이터 볼륨 컨테이너를 제거 하려면 사용 된 `docker volume rm` 명령입니다.
 
 > [!WARNING]
-> 참고: 합니다 *mssql docker GitHub 리포지토리* 리소스, 피드백 및 알려진된 문제에 대 한 합니다.
+> 데이터 볼륨 컨테이너를 삭제 하면 모든 SQL Server 컨테이너의 데이터가 *영구적으로* 삭제 합니다.
 
 ### <a name="backup-and-restore"></a>Backup 및 Restore 메서드
 

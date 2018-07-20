@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974095"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086175"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  외부 위치 인수로 제공 된 스크립트를 실행 합니다. 스크립트를 등록 및 지원 되는 언어로 작성 되어야 합니다. 실행할 **sp_execute_external_script**에 문을 사용 하 여 외부 스크립트를 먼저 사용 해야 합니다 `sp_configure 'external scripts enabled', 1;`합니다.  
+  외부 위치 인수로 제공 된 스크립트를 실행 합니다. 스크립트 언어로 지원 / 등록 (R 또는 Python) 작성 되어야 합니다. 실행할 **sp_execute_external_script**에 문을 사용 하 여 외부 스크립트를 먼저 사용 해야 합니다 `sp_configure 'external scripts enabled', 1;`합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>인수
- @language = N'*언어*'  
+ \@language = N'*언어*'  
  스크립트 언어를 나타냅니다. *언어* 됩니다 **sysname**합니다.  
 
  유효한 값은 `Python` 또는 `R`합니다. 
   
- @script = N'*스크립트*'  
+ \@스크립트 = N'*스크립트*'  
  외부 언어 스크립트 리터럴 또는 변수 입력으로 지정 합니다. *스크립트* 됩니다 **nvarchar (max)** 합니다.  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- 정의 된 쿼리를 나타내는 데 사용 된 변수의 이름을 지정 @input_data_1합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R의 경우 입력된 변수는 데이터 프레임을 사용 합니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 됩니다 **sysname**합니다.  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ 정의 된 쿼리를 나타내는 데 사용 된 변수의 이름을 지정 \@input_data_1 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R의 경우 입력된 변수는 데이터 프레임을 사용 합니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 됩니다 **sysname**합니다.  
   
  기본값은 `InputDataSet`합니다.  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  형태로 외부 스크립트에서 사용 하는 입력된 데이터를 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 데이터 형식이 *input_data_1* 됩니다 **nvarchar (max)** 합니다.
   
- [ @output_data_1_name = N'*output_data_1*']  
+ [ \@output_data_1 = N'*output_data_1*']  
  반환할 데이터를 포함 하는 외부 스크립트의 변수 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장된 프로시저 호출이 완료 되 면 합니다. 외부 스크립트의 변수 데이터 형식의 언어에 따라 달라 집니다. R에 대 한 출력 데이터 프레임을 이어야 합니다. Python pandas 데이터 프레임 출력 이어야 합니다. *output_data_1* 됩니다 **sysname**합니다.  
   
  기본값은 "OutputDataSet"입니다.  
   
- [ @parallel = 0 | 1] 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 된 `@parallel` 매개 변수 1로 합니다. 이 매개 변수의 기본값은 0 (병렬 처리).  
+ [ \@병렬 = 0 | 1]
+
+ 설정 하 여 R 스크립트의 병렬 실행을 사용 하도록 설정 된 `@parallel` 매개 변수 1로 합니다. 이 매개 변수의 기본값은 0 (병렬 처리).  
   
  RevoScaleR 함수를 사용 하 여 사용 하지 않는 R 스크립트를 `@parallel` 매개 변수는 스크립트는 일반적으로 병렬 처리할 수 있는 것으로 가정 하는 큰 데이터 집합을 처리 하는 것에 대 한 유용할 수 있습니다. 예를 들어, R을 사용 하는 경우 `predict` 설정에 새 예측을 생성 하는 모델을 사용 하 여 함수 `@parallel = 1` 힌트로 쿼리 엔진. 행이에 따라 분산 쿼리를 병렬 처리할 수는 **MAXDOP** 설정 합니다.  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  RevoScaleR 함수를 사용 하는 R 스크립트에 대 한 병렬 처리는 자동으로 처리 하 고 지정할 수 없습니다 `@parallel = 1` 에 **sp_execute_external_script** 호출 합니다.  
   
- [ @params = N' *@parameter_name data_type* [OUT | 출력] [,....n]']  
+ [ \@params = N'*\@parameter_name data_type* [OUT | 출력] [,....n]']  
  외부 스크립트에 사용 되는 입력된 매개 변수 선언의 목록입니다.  
   
- [ @parameter1 = '*value1*' [OUT | 출력] [,....n]]  
+ [ \@parameter1 = '*value1*' [OUT | 출력] [,....n]]  
+
  목록에서 외부 스크립트를 사용 하는 입력된 매개 변수의 값입니다.  
 
 ## <a name="remarks"></a>Remarks
@@ -119,7 +122,7 @@ sp_execute_external_script
 
 ### <a name="data-types"></a>데이터 형식
 
-입력된 쿼리 또는 매개 변수를 사용 하는 경우 데이터 형식은 지원 되지 않습니다는 `sp_execute_external_script` 프로시저와 지원 되지 않는 유형이 오류를 반환 합니다.  
+데이터 형식은 입력된 쿼리 또는 매개 변수를 사용 하면 되지 **sp_execute_external_script** 프로시저와 지원 되지 않는 유형이 오류를 반환 합니다.  
 
 대 안으로 **캐스트** 열 또는 값에서 지원 되는 형식 [!INCLUDE[tsql](../../includes/tsql-md.md)] 외부 스크립트를 보내기 전에 합니다.  
   

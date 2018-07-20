@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af67d79616f2223f62998494122787460eaa3a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193113"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084035"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
   XML 문서의 메타 속성 특성은 요소, 특성, 그 밖의 모든 DOM 노드와 같은 XML 항목의 속성을 설명하는 특성입니다. 이러한 특성은 물리적으로 XML 문서 텍스트에 존재하지 않습니다. 하지만 OPENXML은 모든 XML 항목에 대해 이러한 메타 속성을 제공합니다. 이러한 메타 속성을 사용하면 로컬 위치 및 네임스페이스 정보와 같은 XML 노드 정보를 추출할 수 있습니다. 이 정보는 텍스트에 명시적으로 표현된 것보다 자세한 정보를 제공합니다.  
@@ -43,21 +43,21 @@ ms.locfileid: "37193113"
   
 |메타 속성 특성|Description|  
 |----------------------------|-----------------|  
-|**@mp:id**|DOM 노드에 대해 시스템에서 생성된 문서 차원의 식별자를 제공합니다. 문서가 다시 구문 분석되지 않는 한 이 ID는 동일한 XML 노드를 참조합니다.<br /><br /> XML ID가 **0** 이면 해당 요소가 루트 요소임을 나타냅니다. 해당 부모 XML ID는 NULL입니다.|  
-|**@mp:localname**|노드 이름의 로컬 부분을 저장합니다. 이 특성은 접두사 및 네임스페이스 URI와 함께 사용되어 요소 또는 특성 노드 이름을 지정합니다.|  
-|**@mp:namespaceuri**|현재 요소의 네임스페이스 URI를 제공합니다. 이 특성의 값이 NULL이면 네임스페이스가 없는 것입니다.|  
-|**@mp:prefix**|현재 요소 이름의 네임스페이스 접두사를 저장합니다.<br /><br /> 접두사가 없는 상태(NULL)에서 URI가 주어진 경우는 지정된 네임스페이스가 기본 네임스페이스임을 나타냅니다. URI가 주어지지 않은 경우에는 네임스페이스가 연결되지 않습니다.|  
-|**@mp:prev**|노드와 관련된 이전 형제를 저장합니다. 이 특성은 문서에 있는 요소의 순서 정보를 제공합니다.<br /><br /> **@mp:prev** 에는 동일한 부모 요소를 가진 이전 형제의 XML ID가 포함됩니다. 요소가 형제 목록의 시작 부분에 있으면 **@mp:prev** 는 NULL입니다.|  
-|**@mp:xmltext**|처리 목적으로 사용됩니다. OPENXML의 오버플로 처리에 사용되는 방식의 요소 및 해당 특성의 텍스트 직렬화와 하위 요소입니다.|  
+|**\@mp:id**|DOM 노드에 대해 시스템에서 생성된 문서 차원의 식별자를 제공합니다. 문서가 다시 구문 분석되지 않는 한 이 ID는 동일한 XML 노드를 참조합니다.<br /><br /> XML ID가 **0** 이면 해당 요소가 루트 요소임을 나타냅니다. 해당 부모 XML ID는 NULL입니다.|  
+|**\@mp:localname**|노드 이름의 로컬 부분을 저장합니다. 이 특성은 접두사 및 네임스페이스 URI와 함께 사용되어 요소 또는 특성 노드 이름을 지정합니다.|  
+|**\@mp:namespaceuri**|현재 요소의 네임스페이스 URI를 제공합니다. 이 특성의 값이 NULL이면 네임스페이스가 없는 것입니다.|  
+|**\@mp:prefix**|현재 요소 이름의 네임스페이스 접두사를 저장합니다.<br /><br /> 접두사가 없는 상태(NULL)에서 URI가 주어진 경우는 지정된 네임스페이스가 기본 네임스페이스임을 나타냅니다. URI가 주어지지 않은 경우에는 네임스페이스가 연결되지 않습니다.|  
+|**\@mp:prev**|노드와 관련된 이전 형제를 저장합니다. 이 특성은 문서에 있는 요소의 순서 정보를 제공합니다.<br /><br /> **\@mp:prev** 동일한 부모 요소를 가진 이전 형제의 XML ID가 포함 됩니다. 요소가 형제 목록의 앞  **\@mp:prev** NULL입니다.|  
+|**\@mp:xmltext**|처리 목적으로 사용됩니다. OPENXML의 오버플로 처리에 사용되는 방식의 요소 및 해당 특성의 텍스트 직렬화와 하위 요소입니다.|  
   
  이 표에서는 계층 구조 정보를 검색할 수 있도록 허용하기 위해 제공되는 추가 부모 속성을 보여 줍니다.  
   
 |부모 메타 속성 특성|Description|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|**../@mp:id**에 해당합니다.|  
-|**@mp:parentlocalname**|**../@mp:localname**에 해당합니다.|  
-|**@mp:parentnamespacerui**|**../@mp:namespaceuri**에 해당합니다.|  
-|**@mp:parentprefix**|**../@mp:prefix**에 해당합니다.|  
+|**\@mp:parentid**|에 해당 **... /\@mp:id**|  
+|**\@mp:parentlocalname**|에 해당 **... /\@mp:localname**|  
+|**\@mp:parentnamespacerui**|에 해당 **... /\@mp:namespaceuri**|  
+|**\@mp:parentprefix**|에 해당 **... /\@mp:prefix**|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 OPENXML을 사용하여 여러 행 집합 뷰를 만드는 방법을 보여 줍니다.  
@@ -67,11 +67,11 @@ ms.locfileid: "37193113"
   
  OPENXML 문에서는 다음을 보여 줍니다.  
   
--   **id** 열은 **@mp:id** 메타 속성 특성에 매핑됩니다. 즉, 열에는 요소에 대해 시스템에서 생성된 고유 XML ID가 포함됩니다.  
+-   **id** 열에 매핑되는  **\@mp:id** 메타 속성 특성은 열 요소는 시스템에서 생성 된 고유 XML ID를 포함 합니다.  
   
--   **parent** 열은 **@mp:parentid**에 매핑됩니다. 즉, 열에는 요소의 부모에 대한 XML ID가 포함됩니다.  
+-   합니다 **부모** 열으로 매핑 되었습니다  **\@mp:parentid** 는 열 요소의 부모 XML ID를 포함 합니다.  
   
--   **parentLocalName** 열은 **@mp:parentlocalname**에 매핑됩니다. 즉, 열에는 부모의 로컬 이름이 포함됩니다.  
+-   합니다 **parentLocalName** 열으로 매핑 되었습니다  **\@mp:parentlocalname** 나타내고 열에는 부모의 로컬 이름이 포함 됩니다.  
   
  그런 다음 SELECT 문은 OPENXML에 의해 제공되는 행 집합을 반환합니다.  
   
@@ -164,13 +164,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>3. xmltext 메타 속성을 지정하여 열에서 소비되지 않은 데이터 검색  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서의 행 집합 뷰를 만듭니다. **xmltext** 메타 속성 특성을 OPENXML의 행 집합 열에 매핑하여 소비되지 않은 XML 데이터를 검색하는 방법을 설명합니다.  
   
- **comment** 열은**@mp:xmltext** 메타 속성에 매핑됨으로써 오버플로 열로 식별됩니다. *flags* 매개 변수는 **9** (XML_ATTRIBUTE 및 XML_NOCOPY)로 설정됩니다. 이는 **특성 중심** 매핑을 나타내며 소비되지 않은 데이터만 오버플로 열에 복사되어야 함을 나타냅니다.  
+ 합니다 **주석** 열 매핑 됨으로써 오버플로 열으로 식별 되는  **\@mp:xmltext** 메타 속성입니다. *flags* 매개 변수는 **9** (XML_ATTRIBUTE 및 XML_NOCOPY)로 설정됩니다. 이는 **특성 중심** 매핑을 나타내며 소비되지 않은 데이터만 오버플로 열에 복사되어야 함을 나타냅니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합을 반환합니다.  
   
- 이 예에서는 OPENXML이 생성한 행 집합의 열 **@mp:parentlocalname** 에 대해 **ParentLocalName**메타 속성이 설정됩니다. 결과적으로 이 열에는 부모 요소의 로컬 이름이 포함됩니다.  
+ 이 예제는  **\@mp:parentlocalname** 열에 대 한 메타 속성이 설정 됩니다 **ParentLocalName**, OPENXML에 의해 생성 된 행 집합의 합니다. 결과적으로 이 열에는 부모 요소의 로컬 이름이 포함됩니다.  
   
- 두 개의 추가 열 **parent** 및 **comment**가 행 집합에 지정됩니다. **parent** 열은 **@mp:parentid**에 매핑됩니다. 즉, 이 열에는 요소의 부모 요소에 대한 XML ID가 포함됩니다. comment 열은 **@mp:xmltext** 메타 속성 제외)에 대한 열이 한 개씩 포함됩니다.  
+ 두 개의 추가 열 **parent** 및 **comment**가 행 집합에 지정됩니다. 합니다 **부모** 열으로 매핑 되었습니다  **\@mp:parentid** 는 열 요소의 부모 요소의 XML ID를 포함 합니다. Comment 열 매핑 됨으로써 오버플로 열으로 식별 되는  **\@mp:xmltext** 메타 속성입니다.  
   
 ```  
 DECLARE @idoc int  

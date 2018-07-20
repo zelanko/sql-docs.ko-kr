@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: 0d7f2244a20f117d2886cdee59d54adfa4029721
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6df990176c63efb6c42181d013a4e77c81f3c4b2
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020336"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083435"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
 
@@ -196,13 +196,13 @@ REVERT;
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
-|1 |ken0@adventure-works.com |    
+|@shouldalert |ken0@adventure-works.com |    
  
 into 
 
 |EmailAddressID |EmailAddress |  
 |----|---- |   
-|1 |kXXX@XXXX.com |   
+|@shouldalert |kXXX@XXXX.com |   
 
 
 ## <a name="enable-transparent-data-encryption"></a>투명한 데이터 암호화 사용

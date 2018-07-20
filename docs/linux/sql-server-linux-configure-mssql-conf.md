@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 06/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 3a919f19b0b1aaef4702ac9d6e456cb9c5cf1357
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 2982ae05fd54a09b6ae5640c969bcb77d73c4a4c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982475"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086265"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 

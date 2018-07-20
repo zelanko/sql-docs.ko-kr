@@ -1,5 +1,5 @@
 ---
-title: sysmergesubsetfilters (Transact SQL) | Microsoft Docs
+title: sysmergesubsetfilters (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sysmergesubsetfilters system table
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c26608c25b2bd5d9778f076a4f5ee1054730b836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b0aa867181b09dfd3f30ca83f555e2b8de9fde0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009590"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101751"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "33009590"
 |**art_nickname**|**int**|아티클의 애칭입니다.|  
 |**join_articlename**|**sysname**|행이 속하는지 여부를 결정하도록 조인할 테이블의 이름입니다.|  
 |**join_nickname**|**int**|행이 속하는지 여부를 결정하기 위해 조인할 테이블의 애칭입니다.|  
-|**join_unique_key**|**int**|고유 키에 대 한 조인을 나타냅니다 **join_tablename**:<br /><br /> 0 = 고유 키가 아닙니다.<br /><br /> 1 = 고유 키입니다.|  
+|**join_unique_key**|**int**|고유 키에 조인을 나타냅니다 **join_tablename**:<br /><br /> 0 = 고유 키가 아닙니다.<br /><br /> 1 = 고유 키입니다.|  
 |**expand_proc**|**sysname**|병합 에이전트가 구독자에서 보내지거나 제거될 필요가 있는 행을 식별하는 데 사용되는 저장 프로시저의 이름입니다.|  
 |**join_filterclause**|**nvarchar(1000)**|조인에 사용되는 필터 절입니다.|  
 |**filter_type**|**tinyint**|필터 유형을 지정하며 다음 중 하나일 수 있습니다.<br /><br /> 1 = 조인 필터.<br /><br /> 2 = 논리적 레코드 링크.<br /><br /> 3 = 조인 필더 및 논리적 레코드 링크 모두.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

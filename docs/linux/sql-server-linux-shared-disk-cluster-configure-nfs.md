@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e0432452021919690c4d170f040e183e7de6b635
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: da4499433e89161c6204082d43d1e2c65bbd0503
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061881"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084315"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-NFS-Linux의 SQL Server 구성
 

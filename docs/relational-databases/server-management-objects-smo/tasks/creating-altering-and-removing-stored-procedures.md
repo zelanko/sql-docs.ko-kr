@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 37eaf9824ac36333208ba538f36a5016ca6b87c8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029777"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084105"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>저장 프로시저 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 저장된 프로시저에서 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체입니다.  
   
- 만들기는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo에서 개체에 설정 해야 합니다 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장된 프로시저를 정의 하는 스크립트입니다. 매개 변수에는 @ 접두사가 필요하며 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체를 사용하고 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체의 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 컬렉션을 추가하여 개별적으로 만들어야 합니다.  
+ 만들기는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo에서 개체에 설정 해야 합니다 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장된 프로시저를 정의 하는 스크립트입니다. 매개 변수가 필요 합니다 \@ 접두사를 사용 하 여 개별적으로 만들어야 합니다 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체를 추가 하는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 컬렉션은 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  

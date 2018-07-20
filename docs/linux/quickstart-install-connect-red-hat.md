@@ -4,20 +4,20 @@ description: 이 빠른 시작 자습서에서는 Red Hat Enterprise Linux에 SQ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 07/16/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4438184f6e14af1097ff05ea6e463f626025bb46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020420"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103748"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server를 설치 하는 빠른 시작: Red Hat에 SQL Server를 설치하고 데이터베이스 만들기
 
@@ -113,13 +113,5 @@ RHEL에 SQL Server를 구성하려면, **mssql-server** 패키지를 설치하�
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** 는 SQL Server에 연결해서 쿼리를 실행하고 관리 및 개발 작업을 수행하는 하나의 도구입니다. 다른 도구는 다음과 같습니다.
->
-> * [SQL Server Operations Studio(미리 보기)](../sql-operations-studio/what-is.md)
-> * 다른 도구는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * 및[Visual Studio Code](sql-server-linux-develop-use-vscode.md)가 있습니다.
-> * [mssql-cli(미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

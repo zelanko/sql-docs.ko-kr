@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227413"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084065"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "37227413"
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. 바꿉니다 `SELECT column_list FROM`  *\< function_name >*`()`합니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
-|'@' 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 '@@'으로 시작하는 이름|@ 또는 @@으로 시작하는 식별자가 발견되었습니다. @@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
+|‘\@’ 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 ‘\@\@’으로 시작하는 이름|\@ 또는 \@\@으로 시작하는 식별자가 발견되었습니다. \@ 또는 \@\@나 \@\@ 식별자로 시작하는 이름을 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |ADDING TAPE DEVICE|사용 되지 않는 기능인 sp_addumpdevice'`tape`' 발견 되었습니다. Sp_addumpdevice '`disk`' 대신입니다. 사용할 때마다 한 번씩 발생합니다.|  
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|서버 인스턴스가 시작된 이후로 ALTER DATABASE에서 사용되지 않는 기능인 TORN_PAGE_DETECTION 옵션이 사용된 총 횟수입니다. 대신 PAGE_VERIFY 구문을 사용해야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227413"
 |sp_defaultlanguage|sp_defaultlanguage 프로시저가 발견되었습니다. 대신 ALTER LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_denylogin|sp_denylogin 프로시저가 발견되었습니다. 대신 ALTER LOGIN DISABLE을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_depends|sp_depends 프로시저가 발견되었습니다. 대신 sys.dm_sql_referencing_entities 및 sys.dm_sql_referenced_entities를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_detach_db @keepfulltextindexfile|sp_detach_db 문에서 @keepfulltextindexfile 인수가 발견되었습니다. 이 인수는 사용할 수 없습니다.|  
+|sp_detach_db \@keepfulltextindexfile|sp_detach_db 문에서 \@keepfulltextindexfile 인수가 발견되었습니다. 이 인수는 사용할 수 없습니다.|  
 |sp_dropalias|sp_dropalias 프로시저가 발견되었습니다. 별칭을 사용자 계정 및 데이터베이스 역할의 조합으로 대체해야 합니다. 업그레이드된 데이터베이스에서 sp_dropalias를 사용하여 별칭을 제거해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_dropapprole|sp_dropapprole 프로시저가 발견되었습니다. 대신 DROP APPLICATION ROLE을 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_dropextendedproc|sp_dropextendedproc 프로시저가 발견되었습니다. 대신 CLR을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227413"
 |sp_fulltext_catalog|sp_fulltext_catalog 프로시저가 발견되었습니다. 대신 CREATE/ALTER/DROP FULLTEXT CATALOG를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_fulltext_column|sp_fulltext_column 프로시저가 발견되었습니다. 대신 ALTER FULLTEXT INDEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_fulltext_database|sp_fulltext_database 프로시저가 발견되었습니다. 대신 ALTER DATABASE를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=clean_up|sp_fulltext_service 프로시저의 clean_up 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=connect_timeout|sp_fulltext_service 프로시저의 connect_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=data_timeout|sp_fulltext_service 프로시저의 data_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
-|sp_fulltext_service @action=resource_usage|sp_fulltext_service 프로시저의 resource_usage 옵션이 발견되었습니다. 이 옵션은 아무런 기능을 수행하지 않습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=clean_up|sp_fulltext_service 프로시저의 clean_up 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=connect_timeout|sp_fulltext_service 프로시저의 connect_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=data_timeout|sp_fulltext_service 프로시저의 data_timeout 옵션이 발견되었습니다. 쿼리마다 한 번씩 발생합니다.|  
+|sp_fulltext_service \@action=resource_usage|sp_fulltext_service 프로시저의 resource_usage 옵션이 발견되었습니다. 이 옵션은 아무런 기능을 수행하지 않습니다. 쿼리마다 한 번씩 발생합니다.|  
 |sp_fulltext_table|sp_fulltext_table 프로시저가 발견되었습니다. 대신 CREATE/ALTER/DROP FULLTEXT INDEX를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_getbindtoken|sp_getbindtoken 프로시저가 발견되었습니다. 대신 MARS(Multiple Active Result Sets) 또는 분산 트랜잭션을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |sp_grantdbaccess|sp_grantdbaccess 프로시저가 발견되었습니다. 대신 CREATE USER를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  

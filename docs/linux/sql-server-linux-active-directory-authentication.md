@@ -5,7 +5,7 @@ author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7f5f7a4840582afda25551161c4702a40c4977c8
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980385"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084355"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증 자습서:
 

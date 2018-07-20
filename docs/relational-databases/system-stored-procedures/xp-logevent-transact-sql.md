@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_logevent
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: ddec196efe5022e0cfbbdf13c117a35beeba29ed
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854265"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102841"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

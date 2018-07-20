@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b762740be742aa2d716b9d354c26fe87bb170732
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 184e513ba974a7fba6127e3cf79ea74effe0a661
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981805"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084545"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성
 

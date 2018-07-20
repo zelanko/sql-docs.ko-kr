@@ -5,18 +5,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c2dba4d7e92d440b59d51ff4c0cc254bccd57ae1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9674d362832abec845f9c9dc3b97c40c32d162e4
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428932"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083265"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server에 대 한 샘플: SQL Server를 무인된 설치 스크립트
 

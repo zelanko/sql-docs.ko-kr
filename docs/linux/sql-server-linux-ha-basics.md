@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f311d9c3116083120b97fa78486242939a438de9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 2a4d4eed76e57d8ae8ebe7886ca8796a6e5e8ea7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006105"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085288"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 

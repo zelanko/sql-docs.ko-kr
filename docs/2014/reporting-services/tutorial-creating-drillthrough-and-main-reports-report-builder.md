@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200833"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084045"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
   이 자습서에서는 두 종류의 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 배웁니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -344,10 +344,10 @@ ms.locfileid: "37200833"
   
 1.  보고서 데이터 창에서 **매개 변수**를 확장합니다.  
   
-2.  @ProductProductCategoryName을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**을 클릭합니다.  
+2.  마우스 오른쪽 단추로 클릭 \@ProductProductCategoryName을 클릭 하 고 **매개 변수 속성**합니다.  
   
     > [!NOTE]  
-    >  이름 옆에 있는 @ 문자는 이것이 매개 변수임을 나타냅니다.  
+    >  \@ 이름 옆의 문자 매개 변수임을 나타냅니다.  
   
 3.  **일반** 탭에서 **숨김**을 클릭합니다.  
   

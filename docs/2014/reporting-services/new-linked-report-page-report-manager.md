@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201023"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083625"
 ---
 # <a name="new-linked-report-page-report-manager"></a>새 링크된 보고서 페이지(보고서 관리자)
   새 링크된 보고서 페이지를 사용하여 링크된 보고서를 만들 수 있습니다. 링크된 보고서는 고유한 설정 및 속성은 있지만 다른 보고서의 보고서 정의에 연결되어 있는 보고서입니다. 링크된 보고서는 특정 그룹이나 사용자에 대해 변경할 기준 보고서가 있는 경우에 유용합니다. 매개 변수로 지정하는 지역 코드에 따라 다른 데이터를 반환하는 지역 보고서를 예로 들 수 있습니다. 링크된 보고서는 일반적으로 매개 변수 있는 보고서에서 내용을 변경한 다음 각 보고서 인스턴스에 다른 매개 변수 값을 저장하면 만들어집니다. 그러나 액세스 가능한 모든 보고서에서 링크된 보고서를 만들 수 있습니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "37201023"
   
 4.  항목 도구 모음에서 **링크된 보고서 만들기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
- 링크된 보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 그러나 이름을 지정할 때 ; ? : @ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
+ 링크된 보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 그러나 이름을 지정할 때 ; ? : \@ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
   
  **설명**  
  보고서 내용에 대한 설명을 입력합니다. 이 설명은 보고서 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  

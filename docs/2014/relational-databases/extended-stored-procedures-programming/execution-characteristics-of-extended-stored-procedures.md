@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d98354505e34e08da219e1dd9dc276ef6d59948
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8b0f8e2b720336deb008b47dc5041d5ece3f55c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313783"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084625"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>확장 저장 프로시저의 실행 특징
     
@@ -52,13 +52,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- @ *retval*  
+ \@ *retval*  
  반환 값입니다.  
   
- @ *param1*  
+ \@ *param1*  
  입력 매개 변수입니다.  
   
- @ *param2*  
+ \@ *param2*  
  입/출력 매개 변수입니다.  
   
 > [!CAUTION]  

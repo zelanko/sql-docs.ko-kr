@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968765"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164214"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968765"
 특정 리소스 소비 통계 작업 개체 수준에서 뿐만 아니라 SQL Server 프로세스를 관리 하는 작업 개체의 구성을 설명 하는 단일 행을 반환 합니다. 작업 개체에서 SQL Server를 실행 하지 않는 경우 빈 집합을 반환 합니다. 
 
 작업 개체는 운영 체제 수준에서 CPU, 메모리 및 IO 리소스 관리를 구현 하는 Windows 구문. 작업 개체에 대 한 자세한 내용은 참조 하세요. [작업 개체](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)합니다. 
-
-> [!NOTE]
-> sys.dm_os_job_object DMV 현재 sys.dm_job_object으로 나타날 수 있습니다. 이 일시적인: `sys.dm_os_job_object` 이 DMV의 영구 이름이 됩니다. 
   
 |열|데이터 형식|Description|  
 |-------------|---------------|-----------------|  

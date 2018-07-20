@@ -1,5 +1,5 @@
 ---
-title: MSrepl_backup_lsns (Transact SQL) | Microsoft Docs
+title: MSrepl_backup_lsns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSrepl_backup_Isns system table
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4223b1bac4bd9990d328fd00092be2630b8cf736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2978827ac47e46e7d9a5af7770101be52981b41f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004950"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101441"
 ---
 # <a name="msreplbackuplsns-transact-sql"></a>MSrepl_backup_lsns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_backup_lsns** 테이블 배포 데이터베이스의 'sync with backup' 옵션을 지원 하기 위해 트랜잭션 로그 시퀀스 번호 (LSN)를 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
+  합니다 **MSrepl_backup_lsns** 테이블 배포 데이터베이스의 'sync with backup' 옵션을 지원 하기 위한 트랜잭션 LSN (로그 시퀀스 번호)을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "33004950"
 |**next_xact_id**|**varbinary(16)**|백업 작업에 사용되는 임시 로그 시퀀스 번호입니다.|  
 |**nextx_xact_seqno**|**varbinary(16)**|백업 작업에 사용되는 임시 로그 시퀀스 번호입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d29bd3e2f86a824dadef1f9886c96b28547fbf03
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 268076a82d9c31c8a9def4593ada10ed33222994
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891064"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082545"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux에서 읽기-배율에 대 한 SQL Server 가용성 그룹 구성
 

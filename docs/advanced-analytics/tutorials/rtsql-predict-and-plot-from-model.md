@@ -1,23 +1,28 @@
 ---
-title: 모델에서 예측 및 플롯(SQL에서 R 빠른 시작) | Microsoft Docs
+title: SQL Server Machine Learning에서 R을 사용 하 여 모델에서 예측 및 그리기에 대 한 빠른 시작 | Microsoft Docs
+description: 이 빠른 시작에서는 미리 작성 된 모델을 사용 하 여 R 및 SQL Server 데이터에 점수 매기기에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3809b8f6dbf84de04b84c7f4a6bdd5c492e2bdcd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60e152948945f4e86cc1114ae7b20c0e48b403bf
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202835"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086655"
 ---
-# <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>모델에서 예측 및 플롯 (SQL에서 R 빠른 시작)
+# <a name="quickstart-predict-and-plot-from-model-using-r-in-sql-server"></a>빠른 시작: 예측 및 SQL Server에서 R을 사용 하 여 모델에서 그리기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-새로운 데이터를 사용한 _채점(scoring)_ 을 위해서 테이블로부터 훈련된 모델 중 하나를 가져온 다음 예측을 기반으로 새로운 데이터 집합을 호출합니다. 채점이란 훈련된 모델에 주어진 새로운 데이터에 기반한 예측, 확률, 혹은 기타 값을 생성함을 의미하는 데이터 과학에서 종종 사용되는 용어입니다.
+이 빠른 시작에서는 새로운 데이터에 대 한 예측 점수를 매길 이전 빠른 시작에서 만든 모델을 사용 합니다. 새로운 데이터를 사용한 _채점(scoring)_ 을 위해서 테이블로부터 훈련된 모델 중 하나를 가져온 다음 예측을 기반으로 새로운 데이터 집합을 호출합니다. 채점이란 훈련된 모델에 주어진 새로운 데이터에 기반한 예측, 확률, 혹은 기타 값을 생성함을 의미하는 데이터 과학에서 종종 사용되는 용어입니다.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+이 빠른 시작은의 확장인 [예측 모델 만들기](rtsql-create-a-predictive-model-r.md)합니다.
 
 ## <a name="create-the-table-of-new-speeds"></a>새로운 속도에 대한 테이블 만들기
 
@@ -39,7 +44,7 @@ VALUES (40),  (50),  (60), (70), (80), (90), (100)
 
 ![rsql_basictut_listofmodels](media/rsql-basictut-listofmodels.png)
 
-하나의 특정 모델을 기반으로 예측을 가져오려면 다음 작업을 수행 하는 SQL 스크립트를 작성 해야 합니다.
+하나의 특정 모델을 기반으로 예측을 가져오려면 다음을 수행 하는 SQL 스크립트를 작성 해야 합니다.
 
 1. 원하는 모델을 가져옵니다.
 2. 새 입력 데이터를 가져옵니다.
@@ -58,7 +63,7 @@ EXEC sp_execute_external_script
             str(predicted.distance);
             OutputDataSet <- cbind(new, ceiling(predicted.distance));
             '
-    , @input_data_1 = N' SELECT speed FROM [dbo].[NewCarSpeed] '
+    , @input_data_1 = N'SELECT speed FROM [dbo].[NewCarSpeed]'
     , @input_data_1_name = N'NewCarData'
     , @params = N'@speedmodel varbinary(max)'
     , @speedmodel = @speedmodel
@@ -66,10 +71,10 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 ```
 
 + SELECT 문을 사용하여 테이블에서 단일 모델을 가져오고 입력 매개 변수로 전달합니다.
-+  테이블에서 모델을 검색한 후 모델에서 `unserialize` 함수를 호출합니다.
++ 테이블에서 모델을 검색한 후 모델에서 `unserialize` 함수를 호출합니다.
 
     > [!TIP] 
-    > [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 지원하는 RevoScaleR의 [serialization 함수](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)도 확인해보세요.
+    > 새로운 확인할 수도 [직렬화 함수](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) RevoScaleR 지 제공한 [실시간 점수 매기기](../real-time-scoring.md)합니다.
 +  모델에 필요한 인수들로 `rxPredict` 함수를 적용하고 새 입력 데이터를 제공합니다.
 +  예제에서 추가된 `str` 함수는 테스트 단계에 R에서 반환되는 데이터의 스키마를 확인하기 위한 용도입니다. 나중에 제거할 수 있습니다.
 + R 스크립트에 사용된 열 이름은 저장 프로시저 출력으로 반드시 전달되지는 않습니다. 새 열 이름을 정의하는 WITH RESULTS 절을 사용했습니다.
@@ -80,7 +85,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 ## <a name="perform-scoring-in-parallel"></a>병렬로 평가 수행
 
-작은 데이터 집합에서는 예측이 상당히 빠르게 반환됩니다. 하지만 많은 예측을 매우 빠르게 해야 한다고 가정해 보겠습니다. QL Server에서 처리 속도를 높이는 방법은 여러 가지가 있으며, 작업을 병렬로 처리할 수 있다면 더 많이 있습니다. 특히 채점(scoring)을 하기 위해서는 `sp_execute_external_script`에 *@parallel* 매개변수를 추가하고 값을 **1**로 설정합니다.
+작은 데이터 집합에서는 예측이 상당히 빠르게 반환됩니다. 하지만 많은 예측을 매우 빠르게 해야 한다고 가정해 보겠습니다. QL Server에서 처리 속도를 높이는 방법은 여러 가지가 있으며, 작업을 병렬로 처리할 수 있다면 더 많이 있습니다. 특히 점수 매기기를 위해 한 가지 쉬운 방식으로 추가 하는 것은 *@parallel* sp_execute_external_script에 대 한 매개 변수 값을 설정 하 고 **1**합니다.
 
 수십만 개의 값이 들어있는 자동차 속도에 대한 훨씬 더 큰 테이블을 가지고 있다고 가정해 보겠습니다. 숫자 테이블을 생성하도록 도와주는 커뮤니티의 많은 샘플 T-SQL 스크립트가 있으므로 여기서는 그러한 스크립트를 재현하지 않겠습니다. 많은 정수가 포함된 열이 있고 모델에 `speed`에 대한 입력으로 이 열을 사용하는 경우를 고려해 보겠습니다.
 
@@ -151,26 +156,13 @@ SQL Server Management Studio를 비롯한 많은 클라이언트는 [sp_execute_
 R용의 몇 가지 좋은 그래픽 패키지를 사용하여 더 정교한 플롯을 수행하고 싶다면 다음 기사들을 권장합니다. 둘 모두 인기있는 **ggplot2** 패키지가 필요합니다.
 
 + [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)(SQL Server 2016 R Services를 사용한 대출 분류): 보험 데이터를 기반으로 하는 전체 과정 연습 시나리오입니다. **reshape**패키지가 필요합니다.
-+ [R을 사용하여 그래프 및 플롯 만들기](../../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md)
++ [그래프 및 R을 사용 하 여 그림 만들기](walkthrough-create-graphs-and-plots-using-r.md)
 
-## <a name="conclusions"></a>결론
+## <a name="next-steps"></a>다음 단계
 
 R 및 SQL Server를 통합하면 고성능 데이터 처리 및 빠른 R 분석을 위해 R 및 관계형 데이터베이스의 최고 기능을 이용하여 R 솔루션을 대규모로 더 쉽게 배포할 수 있습니다. 
 
-R 예제에 대한 자세한 내용은 다음 추가 리소스를 참조하십시오.
+SQL Server를 사용 하 여 R을 사용 하 여 Microsoft 데이터 과학 및 R Services 개발 팀에서 생성 하는 종단 간 시나리오를 통해 솔루션에 대 한 학습을 계속 합니다.
 
-+  [SQL Server R 자습서](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
-
-    Microsoft 데이터 과학 및 R 서비스 개발 팀에서 만든 전체 과정 연습 시나리오를 통해 SQL Server와 R을 사용한 솔루션에 대해서 계속 학습합니다.
-
-+ [SQL Server Python 자습서](../../advanced-analytics/tutorials/sql-server-python-tutorials.md)
-
-    SQL Server 2017 년에 대 한 Python 언어와 함께 원격 계산 컨텍스트 및 확장 가능한 알고리즘의 기능을 사용 합니다.
-
-+ [자습서 및 Microsoft R에 대 한 예제 데이터](https://docs.microsoft.com/r-server/r/tutorial-introduction)
-
-    새 RevoScaleR 패키지를 사용하여 모델을 만들고 데이터를 변환하는 방법에 알아봅니다.
-
-+ [MicrosoftML 시작](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
-
-    Microsoft Research로부터 신속하고 확장 가능한 Machine Learning 알고리즘을 배웁니다.
+> [!div class="nextstepaction"]
+> [SQL Server R 자습서](sql-server-r-tutorials.md)

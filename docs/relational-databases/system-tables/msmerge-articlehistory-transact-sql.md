@@ -1,5 +1,5 @@
 ---
-title: MSmerge_articlehistory (Transact SQL) | Microsoft Docs
+title: MSmerge_articlehistory (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f758d3f56b595407b15077031a911a828ff48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a271583707ee57335a04f02f7a3569752e4f289
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006350"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101971"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_articlehistory** 테이블의 변경 내용이 각 아티클당 하나의 행으로 병합 에이전트 동기화 세션 동안 문서에 대 한 변경 내용을 추적 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
+  합니다 **MSmerge_articlehistory** 테이블은 변경 내용이 각 아티클당 하나의 행을 사용 하 여 병합 에이전트 동기화 세션 중에 아티클에 적용 된 변경 내용을 추적 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|병합 에이전트 작업 세션의 ID는 [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 시스템 테이블입니다.|  
+|**session_id**|**int**|병합 에이전트 작업 세션의 ID를 [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 시스템 테이블입니다.|  
 |**phase_id**|**int**|동기화 세션의 단계이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 업로드 합니다.<br /><br /> **2** = 다운로드 합니다.<br /><br /> **4** = 정리 합니다.<br /><br /> **5** = 종료 합니다.<br /><br /> **6** = 스키마 변경 합니다.<br /><br /> **7** = BCP 합니다.|  
 |**article_name**|**sysname**|변경된 아티클의 이름입니다.|  
 |**start_time**|**datetime**|에이전트가 아티클 처리를 시작한 시간입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "33006350"
 |**estimated_changes**|**int**|아티클에 적용해야 하는 행 변경 횟수의 추정치입니다.|  
 |**relative_cost**|**decimal**|현재 아티클의 변경 사항을 적용하는 데 사용한 시간 대비 전체 세션의 총 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

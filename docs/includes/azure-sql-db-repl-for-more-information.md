@@ -1,0 +1,1 @@
+Azure SQL Database에서 데이터베이스를 게시자 및 배포자에 필요 [관리 되는 인스턴스](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) 자세한 내용은 참조 하십시오 [Azure SQL Database를 사용 하 여 복제](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database)합니다.

@@ -1,5 +1,5 @@
 ---
-title: MSrepl_originators (Transact SQL) | Microsoft Docs
+title: MSrepl_originators (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSrepl_originators system table
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b09a8c577b0389702ada6c9b5372c3d10b9916a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7d0bb1049790123de504af1955e43807613e6db
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004850"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103041"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_originators** 테이블 트랜잭션이 시작 된 업데이트할 수 있는 각 구독자에 대 한 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
+  합니다 **MSrepl_originators** 테이블 트랜잭션이 시작 된 업데이트할 수 있는 각 구독자에 대 한 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,8 +46,8 @@ ms.locfileid: "33004850"
 |**publication_id**|**int**|게시를 식별합니다.|  
 |**dbversion**|**int**|데이터베이스 버전을 식별합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

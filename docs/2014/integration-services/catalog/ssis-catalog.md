@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160919"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084085"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   합니다 `SSISDB` 카탈로그는 작업에 대 한 중심점 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 프로젝트를 배포한는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "37160919"
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
--   @를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 @를 사용할 수 있습니다.  
+-   \@ 첫 번째 문자로 사용할 수 없습니다는 뒤에 있는 문자를 사용할 수 있지만 \@합니다.  
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160919"
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
--   @를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 @를 사용할 수 있습니다.  
+-   \@ 첫 번째 문자로 사용할 수 없습니다는 뒤에 있는 문자를 사용할 수 있지만 \@합니다.  
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   

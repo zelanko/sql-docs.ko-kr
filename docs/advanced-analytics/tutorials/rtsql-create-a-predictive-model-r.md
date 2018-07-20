@@ -1,23 +1,28 @@
 ---
-title: 모델에서 예측 및 그리기(SQL에서 R 빠른 시작) | Microsoft Docs
+title: SQL Server Machine Learning에서 R을 사용 하 여 예측 모델을 만드는 빠른 시작 | Microsoft Docs
+description: 이 빠른 시작에서는 SQL Server 데이터를 사용 하 여 예측을 그릴 R에서 모델을 빌드하는 방법에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202645"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086825"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>모델에서 예측 및 그리기(SQL에서 R 빠른 시작)
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>빠른 시작: SQL Server에서 R을 사용 하 여 예측 모델 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단계에서는 R을 사용하여 모델을 학습한 다음 SQL Server의 테이블에 모델을 저장하는 방법을 알아봅니다. 모델은 자동차의 속도에 따른 정지 거리를 예측하는 간단한 회귀 모델입니다. R에 내장된 `cars` 데이터 집합은 작고 이해하기 쉬우므로 이를 사용할 것입니다.
+이 빠른 시작에서는 R을 사용 하는 모델을 학습 하는 방법을 한 알아봅니다 다음 SQL Server의 테이블에 모델을 저장 합니다. 모델은 자동차의 속도에 따른 정지 거리를 예측하는 간단한 회귀 모델입니다. R에 내장된 `cars` 데이터 집합은 작고 이해하기 쉬우므로 이를 사용할 것입니다.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+이전 빠른 시작에서는 [Hello World R 및 SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), 정보를 제공 하 고이 빠른 시작에 필요한 R 환경 설정에 대 한 링크입니다.
 
 ## <a name="create-the-source-data"></a>원본 데이터 만들기
 
@@ -141,14 +146,13 @@ VALUES ('latest model', @model)
 
 `sp_execute_external_script` 에서 SQL 매개변수와 R 변수를 함께 작업할 때 기억할 규칙:
 
-+ R 스크립트에 매핑된 모든 SQL 매개 변수는 _@params_ 인수에 이름이 나열되어야 합니다.
-+ 이러한 매개 변수 중 하나를 출력하려면 _@params_ 목록에 OUTPUT 키워드를 추가합니다.
-+ 매핑된 매개 변수를 나열한 후 _@params_ 목록 바로 뒤의 R 변수에 SQL 매개 변수의 매핑을 줄 단위로 제공합니다.
++ R 스크립트에 매핑된 모든 SQL 매개 변수 이름으로 나열 되어야 합니다는  _\@params_ 인수입니다.
++ 이러한 매개 변수 중 하나의 출력으로 출력 키워드를 추가 합니다  _\@params_ 목록입니다.
++ 매핑된 매개 변수를 나열 하는, 후 매핑을 줄 단위로 R 변수를 즉시 SQL 매개 변수 뒤에 제공 된  _\@params_ 목록입니다.
 
-## <a name="next-lesson"></a>다음 단원
+## <a name="next-steps"></a>다음 단계
 
-이제 모델을 만들었으므로 최종 단계에서 모델로부터의 예측을 생성하고 결과를 그림으로 나타내는 방법을 배웁니다.
+모델을 마지막 빠른 시작에서 설정한 했으므로에서 예측을 생성 하 고 결과 출력 하는 방법을 배웁니다.
 
-[모델에서 예측 및 출력](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [빠른 시작: 예측 및 모델에서 그리기](../tutorials/rtsql-predict-and-plot-from-model.md)

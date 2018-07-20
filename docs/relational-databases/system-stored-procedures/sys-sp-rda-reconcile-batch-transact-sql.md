@@ -19,12 +19,12 @@ ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 190c1ef35e8269cd909bfe6a8c17a7d360ae1041
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a55619d029df6946b68f9af3a3f7c4ad09e08c71
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409572"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084455"
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>인수  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  스트레치 사용 SQL Server 테이블의 이름입니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -14,19 +14,19 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272319"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083035"
 ---
 # <a name="upload-file-page-report-manager"></a>파일 업로드 페이지(보고서 관리자)
   파일 업로드 페이지를 사용하여 파일을 파일 시스템에서 보고서 서버 데이터베이스로 게시할 수 있습니다. 업로드된 파일은 보고서 서버 폴더 계층 구조의 항목으로 표시됩니다.  
   
 -   업로드된 .rdl 파일은 보고서 서버에 보고서로 게시됩니다.  
   
--   Uploaded .smdl 파일이 데이터 원본 뷰 정보를 포함하는 경우 이 파일은 보고서 모델로 게시됩니다. 데이터 원본 뷰 참조가 유실되면 업로드 중에 오류가 발생합니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 보고서 모델 프로젝트에서 .smdl 파일을 업로드하면 데이터 원본 뷰 정보가 누락될 수 있습니다. 보고서 모델 프로젝트에서 데이터 원본 뷰 정보는 .smdl 파일 자체가 아닌 별도의 파일에 저장됩니다.  
+-   Uploaded .smdl 파일이 데이터 원본 뷰 정보를 포함하는 경우 이 파일은 보고서 모델로 게시됩니다. 데이터 원본 뷰 참조가 유실되면 업로드 중에 오류가 발생합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 보고서 모델 프로젝트에서 .smdl 파일을 업로드하면 데이터 원본 뷰 정보가 누락될 수 있습니다. 보고서 모델 프로젝트에서 데이터 원본 뷰 정보는 .smdl 파일 자체가 아닌 별도의 파일에 저장됩니다.  
   
      데이터 원본 뷰 정보가 들어 있고 따라서 성공적으로 업로드할 수 있는 모델 파일은 이전에 보고서 서버에 게시된 후 서버에서 파일 시스템의 파일로 저장된 파일입니다. 모델의 일반 속성 페이지를 열고 **편집** 을 클릭하여 모델을 연 경우 파일에 모델을 저장하고 보고서 서버에 새 모델로 해당 파일을 업로드할 수 있습니다. 나중에 업로드하는 .smdl 파일은 모델 게시에 필요한 모든 정보를 포함하게 됩니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "37272319"
   
 2.  도구 모음에서 **파일 업로드**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **업로드할 파일**  
  파일 시스템에서 복사할 파일의 정규화된 경로를 표시합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "37272319"
  파일 시스템에서 파일을 선택하려면 클릭합니다.  
   
  **이름**  
- 보고서 서버 네임스페이스에 표시될 파일 이름을 입력합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : @ & = +, $ * \< > | "또는 / 항목 이름을 지정 합니다.  
+ 보고서 서버 네임스페이스에 표시될 파일 이름을 입력합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< > | "또는 / 항목 이름을 지정 합니다.  
   
  **항목이 있으면 덮어쓰기**  
  기존 항목을 새 버전으로 교체하려면 이 확인란을 선택합니다. 기존 버전을 덮어쓰려면 새 항목과 기존 항목의 이름이 정확히 일치해야 합니다.  

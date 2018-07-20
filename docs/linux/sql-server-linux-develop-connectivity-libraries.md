@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: a10eb1c869af5268868f388197e3e160ad542d96
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7a2f02323a3fb02cb74da3112c084609c5fe2b34
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982815"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085015"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 

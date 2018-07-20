@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: bbf781d365174042f9358fd1e78a26d916f81f99
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: a2b725caa90ef277394637e4c65cfe5f241c1cc2
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982813"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102431"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 
@@ -85,6 +85,8 @@ SQL Server 2017 Linux에 대 한 다음 시스템 요구 사항에 있습니다.
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
 - [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+를 설치한 후 최적의 성능에 대 한 추가 구성을 변경 하는 것이 좋습니다. 자세한 내용은 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](sql-server-linux-performance-best-practices.md)합니다.
 
 ## <a id="upgrade"></a> SQL Server 업데이트
 

@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_current_partition_mappings system table
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f5c88b885657dd6b33dd7678b8d4d7718afd6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23115c0996720c0eddb0d6b80ad4a82c80db303e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004470"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101161"
 ---
 # <a name="msmergecurrentpartitionmappings"></a>MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_current_partition_mappings** 테이블에 변경된 된 행이 속한 각 파티션 id에 대해 한 행을 저장 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
+  합니다 **MSmerge_current_partition_mappings** 테이블은 변경된 된 행이 속한 각 파티션당 한 하나의 행을 저장 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,8 +44,8 @@ ms.locfileid: "33004470"
 |**rowguid**|**uniqueidentifier**|지정된 행의 행 식별자입니다.|  
 |**partition_id**|**int**|행이 속한 파티션의 ID입니다. 행 변경 내용이 모든 구독자와 관련 있는 경우 값은 -1입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

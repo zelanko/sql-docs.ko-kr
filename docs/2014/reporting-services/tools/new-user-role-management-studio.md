@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6654b0bef25504737e2f3fb42cdb2b0f8d017506
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397ad5d6eab8567362199c7a6a33552e6fc621af
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251365"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085005"
 ---
 # <a name="new-user-role-management-studio"></a>새 사용자 역할(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의를 만들 수 있습니다. 항목 수준의 역할 정의란 폴더, 보고서, 모델, 리소스 및 공유 데이터 원본과 관련하여 사용자가 수행할 수 있는 태스크를 열거하는 작업의 명명된 모음입니다. 항목 수준의 역할 정의의 예로 보고서 최종 사용자가 폴더를 이동하고 보고서를 보는 데 필요한 동작 종류를 식별하는 미리 정의된 브라우저 역할을 들 수 있습니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "37251365"
 > [!NOTE]  
 >  역할 정의는 기본 모드로 실행되는 보고서 서버에만 사용되며 보고서 서버가 SharePoint 통합 모드로 구성된 경우 이 페이지를 사용할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
  역할 정의의 이름을 입력합니다. 역할 정의 이름은 보고서 서버 네임스페이스 내에서 고유해야 합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : @ & = +, $ / * \< >  
+ ; ? : \@ & = +, $ / * \< >  
   
  " /  
   

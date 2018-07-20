@@ -5,19 +5,19 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 2877b068569d409e20417ab9b535fd1ba8fd1017
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7d8f392177bd83a8fc8764eac080fcc7b76739ed
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981295"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102201"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
@@ -192,6 +192,14 @@ SQLCMD 사용 하 여 단일 사용자 모드로 SQL Server를 시작 합니다.
    ```bash
    sudo systemctl start mssql-server
    ```
+
+## <a name="improve-performance"></a>성능 향상
+
+데이터베이스 디자인, 하드웨어 및 작업 부하 요구 등 성능에 영향을 주는 여러 요인이 있습니다. 성능 향상을 위해 찾으려는 경우이 문서에서 모범 사례를 검토 하 여 시작 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](sql-server-linux-performance-best-practices.md)합니다. 다음 성능 문제 해결에 대 한 사용 가능한 도구 중 일부를 탐색 합니다.
+
+- [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [시스템 동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [SQL Server Management Studio의 성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## <a name="common-issues"></a>일반적인 문제
 

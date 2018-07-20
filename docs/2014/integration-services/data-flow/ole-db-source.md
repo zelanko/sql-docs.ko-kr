@@ -19,12 +19,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26900d1b1ba9500c114d65927121be80760d484e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271319"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083925"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
   OLE DB 원본은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 관계형 데이터베이스에서 데이터를 추출합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에서 데이터를 추출할 수 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "37271319"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 이 저장 프로시저에는 매개 변수 값을 제공할 변수 `@StartProductID` 및 `@CheckDate`가 필요합니다. **매핑** 목록에 매개 변수가 나타나는 순서는 상관없으며 @을 포함한 매개 변수 이름이 저장 프로시저의 변수 이름과 일치하기만 하면 됩니다.  
+ 이 저장 프로시저에는 매개 변수 값을 제공할 변수 `@StartProductID` 및 `@CheckDate`가 필요합니다. **매핑** 목록에 매개 변수가 나타나는 순서는 상관없으며 유일한 요구 사항인 매개 변수 이름이 저장된 프로시저에서 변수 이름과 일치 하는지 등는 \@ 로그인 합니다.  
   
 ### <a name="mapping-parameters-to-variables"></a>변수에 매개 변수 매핑  
  매개 변수는 런타임에 매개 변수 값을 제공하는 변수에 매핑됩니다. 변수는 일반적으로 사용자 정의 변수이지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수를 사용할 수도 있습니다. 사용자 정의 변수를 사용하는 경우에는 매핑된 매개 변수가 참조하는 열의 데이터 형식과 호환되는 형식으로 데이터 형식을 설정합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)를 참조하세요.  

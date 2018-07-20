@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d20d074f30f15acaec3065bc45ecd4ac92da8f4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254115"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083166"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>응용 프로그램 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 응용 프로그램 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "37254115"
  생성된 HTML 페이지 결과는 다음 예제 출력과 유사하게 표시됩니다.  
   
 ##### <a name="server-side-processing"></a>서버 쪽 처리  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ 페이지 생성 \@ 2006 년 3 월 11 3시 36분: 02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

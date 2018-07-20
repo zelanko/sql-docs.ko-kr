@@ -1,84 +1,56 @@
 ---
-title: SQL Server와 RevoScaleR 패키지를 사용 하 여 데이터 과학 심층 분석 | Microsoft Docs
+title: SQL Server Machine Learning을 사용 하 여 함수 RevoScaleR에 대 한 자습서 | Microsoft Docs
+description: 이 자습서에서는 사용 지원 되는 R 사용 하 여 SQL Server Machine Learning에서 RevoScaleR 함수를 호출 하는 방법에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c2596c881d48d2f2629b4363749e7d1c45b3489
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202795"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084676"
 ---
-# <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>RevoScaleR 패키지와 SQL server를 이용한 데이터 과학 심층 분석와 함께
+# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>SQL Server 데이터를 사용 하 여 자습서: 사용 하 여 RevoScaleR R 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 자습서에는 고성능 빅 데이터 분석을 위한 계산 컨텍스트로 서버를 사용함으로써 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 에서 제공하는 향상된 R 패키지를 사용하여 SQL Server 데이터를 작업하고 확장 가능한 R 솔루션을 만드는 방법을 보여줍니다.
+RevoScaleR는 데이터 과학 및 기계 학습 워크 로드에 대 한 분산 및 병렬 처리 기능을 제공 하는 Microsoft R 패키지입니다. SQL Server의 R 개발에 RevoScaleR 중 하나인 core의 기본 패키지를, 계산 컨텍스트를 설정 하는 것에 대 한 함수를 사용 하 여 패키지를 관리 및 가장 중요 한 점은: 데이터를 종단 간, 시각화 및 분석 하에서 작업 합니다. SQL Server에서 기계 학습 알고리즘 RevoScaleR 데이터 원본에 대 한 종속성입니다. RevoScaleR의 중요도 지정 시기 및 해당 함수를 호출 하는 방법을 알고 있으면은 필수적입니다. 
 
-로컬 및 원격 계산 컨텍스트 간에 데이터를 이동하는 원격 계산 컨텍스트를 만들고 원격 SQL Server에서 R 코드를 실행하는 방법을 학습합니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
-
-> [!NOTE]
-> 
-> 이 자습서에서는 Windows의 SQL Server 데이터를 사용하여 작업하고 데이터베이스 내 계산 컨텍스트를 사용합니다. Teradata, Linux, Hadoop과 같은 다른 환경에서 R를 사용하려면 다음 Microsoft R Server 자습서를 참조합니다. 
-> + [R 서버 sparklyr와 함께 사용](https://docs.microsoft.com/machine-learning-server/r/tutorial-sparklyr-revoscaler)
-> + [Explore R and ScaleR in 25 Functions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)(25개 함수에서 R 및 ScaleR 알아보기)
-> + [Hadoop MapReduce에 ScaleR 시작](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
-
-## <a name="overview"></a>개요
-
-RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습서에서 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다:
+이 자습서에서는 로컬 및 원격 계산 컨텍스트 간에 데이터를 이동 하는 원격 계산 컨텍스트를 만드는 방법을 배우게 됩니다 하 고 원격 SQL Server에서 R 코드를 실행 합니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 표시하는 방법과 모델을 만들고 배포하는 방법을 학습합니다.
 
 + 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
 + 모델 학습 및 점수 매기기를 사용 하 여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산 합니다. 
-+ RevoScaleR 함수를 사용 하 여 새로 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과 저장 하는 테이블입니다.
-+ 서버에서 모두 플롯을 만들고 로컬에서 계산 컨텍스트 합니다.
-+ 데이터에 대해 모델을 학습 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R에서 실행 중인 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.
-+ 데이터의 하위 집합을 추출 하 고 로컬 워크스테이션에서 다시 분석에 사용할 XDF 파일로 저장 합니다.
-+ ODBC 연결을 열어 점수 매기기에 대 한 새 데이터를 가져오기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 점수 매기기 로컬 워크스테이션에서 수행 됩니다.
-+ 사용자 지정 R 함수를 만들고 계산 컨텍스트는 시뮬레이션을 수행 하는 서버에서 실행 합니다.
++ RevoScaleR 함수를 사용 하 여 새로 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과 저장 하는 테이블입니다.
++ 서버에서 모두 그림을 만들고 로컬에서 계산 컨텍스트.
++ 데이터에 대해 모델 학습 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 R을 실행 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.
++ 데이터의 하위 집합을 추출 하 고 로컬 워크스테이션에서 분석에 다시 사용 하기 위해 XDF 파일로 저장 합니다.
++ ODBC 연결을 열어 점수 매기기에 대 한 새 데이터를 가져오기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 점수 매기기는 로컬 워크스테이션에서 수행 됩니다.
++ 사용자 지정 R 함수를 만들고 계산 컨텍스트를 시뮬레이션 하는 데 서버에서 실행 합니다.
 
-### <a name="article-list-and-time-required"></a>필요한 시간 및 항목 목록
+## <a name="target-audience"></a>대상 사용자
 
-이 자습서는 설치를 제외하고 약 75분 정도 소요됩니다.
+이 자습서는 r, 및 요약 및 모델 생성 등과 같은 데이터 과학 작업을 사용 하 여 어느 정도 알고 이미 있는 사람들 또는 데이터 과학자를 위한 것입니다. 그러나 모든 코드가 제공 되므로 R을 처음 접하는 경우에 코드를 실행 하 고 필요한 서버 및 클라이언트 환경이 있다고 가정 하면 과정을 따르려면 수 있습니다.
 
-1. [R을 사용하여 SQL Server 데이터 작업하기](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
-2. [RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-3. [SQL Server 데이터 쿼리 및 수정](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-4. [계산 컨텍스트 정의 및 사용](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-5. [만들기 및 R 스크립트 실행](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-6. [R을 사용하여 SQL Server 데이터 시각화하기](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-7. [R 모델 만들기](../../advanced-analytics/tutorials/deepdive-create-models.md)
-8. [새 데이터 채점하기](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
-9. [R을 사용하여 데이터 변환](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-10. [rxImport를 사용하여 메모리에 데이터 로드하기](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-11. [rxDataStep을 사용하여 새 SQL Server 테이블 만들기](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-12. [rxDataStep을 사용하여 청크 분석 수행](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-13. [로컬 계산 컨텍스트에서 데이터 분석](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-14. [XDF 파일을 사용 하 여 SQL Server에서 데이터를 이동 합니다.](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
-15. [간단한 시뮬레이션 만들기](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
-
-### <a name="target-audience"></a>대상 사용자
-
-이 자습서에는 데이터 과학자 또는 R, 및 요약 및 모델을 만드는 등의 데이터 과학 작업에 어느 정도 알고 이미 있는 사용자에 게 사용 됩니다.  그러나 모든 코드가 제공 됩니다, R을 처음 접하는 경우에 코드를 실행 하 고 필요한 서버 및 클라이언트 환경에서 사용자에 게 가정, 함께 진행할 수 있도록 합니다.
-
-또한 방법을 잘 알고 있어야 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 및 액세스 하는 방법을 알고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이러한 도구를 사용 하 여 데이터베이스:
+방법을 잘 알고 있어야 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문에 액세스 하는 방법을 배우고를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 도구를 사용 하 여 데이터베이스:
 
 + [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 
 + Visual Studio에서 데이터베이스 도구 
-+ 무료 [Visual Studio Code 확장명이 mssql](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)합니다.
++ 무료 [Visual Studio Code 용 mssql 확장](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)합니다.
   
 > [!TIP]
 > 중단한 위치부터 다시 시작하기 쉽도록 다음 단원으로 넘어가기 전에 R 작업 영역을 저장하세요.
 
-### <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
-- **R을 지원하는 SQL Server**
+- **R 지 원하는 SQL Server**
   
-    SQL Server 2016을 설치하고 R Services(In-database)를 사용하도록 설정합니다. 또는 SQL Server 2017을 설치하고 Machine Learning Services를 사용하도록 설정하고 R 언어를 선택합니다.
+    설치할 [SQL Server 2017의 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) R 기능 또는 설치를 사용 하 여 [SQL Server 2016 R Services (In-database)](../install/sql-r-services-windows-install.md)합니다.
+
+    외부 스크립팅이 사용 되 고 실행 패드 서비스가 실행 되 고 서비스에 액세스할 수 있는 권한이 있는지 확인 합니다.
   
 -  **데이터베이스 사용 권한**
   
@@ -86,24 +58,32 @@ RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습�
 
 -   **데이터 과학 개발 컴퓨터**
   
-    R 개발 환경으로 사용 되는 컴퓨터에는 RevoScaleR 패키지 및 관련된 공급자를 설치 해야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 Microsoft R 클라이언트를 설치 하는 Microsoft R Server (독립 실행형) 또는 컴퓨터 학습 서버 (독립 실행형). 
+    로컬 및 원격 계산 컨텍스트 간에 앞뒤로 전환, 두 시스템이 필요 합니다. 로컬은 일반적으로 데이터 과학 워크 로드에 대 한 합당 power 사용 하 여 개발 워크스테이션입니다. 원격이 예제의 경우 SQL Server 2017 또는 SQL Server 2016 R 기능을 사용 합니다. 
+    
+    로컬 및 원격 시스템에서 동일한 버전 RevoScaleR에 서술 계산 컨텍스트를 전환 합니다. 로컬 워크스테이션에서 가져올 수 있습니다는 RevoScaleR 패키지 및 관련된 공급자를 설치 하거나 다음 중 하나를 사용 하 여: [Azure에서 데이터 과학 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)를 [(무료) Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), 또는 [ Microsoft Machine Learning Server (독립 실행형)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)합니다. 에서는 독립 실행형 서버 옵션을 사용 하 여 Linux 또는 Windows 설치 관리자를 사용 하 여 무료 개발자 버전을 설치 합니다. 또한 독립 실행형 서버를 설치 하려면 SQL Server 설치 프로그램을 사용할 수 있습니다.
       
-    > [!NOTE] 
-    > 다른 버전의 Revolution R Enterprise 또는 Revolution R Open은 지원되지 않습니다.
-    > 
-    > RevoScaleR 함수에만 원격 계산 컨텍스트를 사용할 수 있으므로이 자습서에서는 R의 오픈 소스 배포를 사용할 수 없습니다.
-  
 -   **추가 R 패키지**
   
-    이 자습서에서는 다음 패키지 설치: **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, 및 **e1071** . 설명서는 자습서의 일부로 제공됩니다.
+    이 자습서에서는 다음 패키지를 설치한: **dplyr**를 **ggplot2**를 **ggthemes**를 **reshape2**, 및 **e1071** . 설명서는 자습서의 일부로 제공됩니다.
   
-    두 장소에 모든 패키지를 설치 해야: R 솔루션 개발을 위해 사용 하는 컴퓨터에 R 스크립트를 실행 하는 SQL Server 컴퓨터에 있습니다. 서버 컴퓨터에 패키지를 설치할 수 있는 권한이 없는 경우 관리자에게 요청합니다. 
+    두 곳에서 모든 패키지를 설치 해야 합니다: R 솔루션 개발에 사용 되는 워크스테이션 및 R 스크립트 실행 되는 SQL Server 컴퓨터. 서버 컴퓨터에 패키지를 설치할 수 있는 권한이 없는 경우 관리자에게 요청합니다. 
     
-    **사용자 라이브러리에 패키지를 설치하지 마세요.** 패키지는 SQL Server 인스턴스에서 사용 되는 R 패키지 라이브러리에 설치 되어야 합니다.
+    **사용자 라이브러리에 패키지를 설치하지 마세요.** SQL Server 인스턴스에서 사용 되는 R 패키지 라이브러리에 패키지를 설치 해야 합니다.
 
-자세한 내용은 [데이터 과학 연습에 대한 필수 구성 요소](../../advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)를 참조하십시오.
+## <a name="r-development-tools"></a>R 개발 도구
 
-## <a name="next-step"></a>다음 단계
+일반적으로 R 개발자가 작성 하 고 R 코드 디버깅에 대 한 Ide를 사용 합니다. 아래 몇 가지 제안이 있습니다. 
 
-[R을 사용하여 SQL Server 데이터 작업하기](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
+- **R Tools for Visual Studio** (RTVS)Microsoft R 지원, 인텔리센스, 디버깅을 제공하는 무료 플러그 인입니다. R 서버와 SQL Server 기계 학습 서비스 모두에 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) 를 참조하세요.
+
+- **RStudio** 는 R 개발용으로 보다 대중적인 환경 중 하나입니다.  자세한 내용은 [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)합니다.
+
+- 기본 R 도구 (R.exe, RTerm.exe, RScripts.exe) SQL Server 또는 R 클라이언트에서 R을 설치할 때에 기본적으로 설치 됩니다. IDE를 설치 하려는 경우에이 자습서에서 코드를 실행 하려면 기본 제공 R 도구를 사용할 수 있습니다.
+
+로컬 및 원격 컴퓨터에서 RevoScaleR 필요 하다는 사실을 기억 하십시오. Microsoft R 라이브러리에 없는 다른 환경 또는 RStudio의 일반 설치를 사용 하 여이 자습서를 완료할 수 없습니다. 자세한 내용은 [데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)을 참조하세요.
+
+## <a name="next-steps"></a>다음 단계
+
+> [!div class="nextstepaction"]
+> [1 단원: 데이터베이스 및 권한 만들기](deepdive-work-with-sql-server-data-using-r.md)
 

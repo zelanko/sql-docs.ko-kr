@@ -1,5 +1,5 @@
 ---
-title: cdc.lsn_time_mapping (Transact SQL) | Microsoft Docs
+title: cdc.lsn_time_mapping (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - cdc.lsn_time_mapping
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 559dc5dfa4fe3fba6309ac307388d02b962c206c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 402443b42a44131e023923267d34b322e3c0c670
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259973"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102631"
 ---
 # <a name="cdclsntimemapping-transact-sql"></a>cdc.lsn_time_mapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   변경 테이블에 행이 있는 각 트랜잭션에 대해 한 개의 행을 반환합니다. 이 테이블은 LSN(로그 시퀀스 번호) 커밋 값과 트랜잭션 커밋 시간을 매핑하는 데 사용됩니다. 변경 테이블 항목이 없는 경우에도 항목이 기록됩니다. 이렇게 하면 해당 테이블이 변경 작업이 적거나 없는 시간에 LSN 처리 완료를 기록할 수 있습니다.  
   
- 시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신, 실행의 [sys.fn_cdc_map_lsn_to_time &#40;Transact SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 및 [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 시스템 함수입니다.  
+ 시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신 실행 합니다 [sys.fn_cdc_map_lsn_to_time &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 및 [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 시스템 함수입니다.  
     
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "33259973"
 |**tran_end_time**|**datetime**|트랜잭션이 종료된 시간입니다.|  
 |**tran_id**|**varbinary(10)**|트랜잭션 ID입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [cdc입니다. &#60;capture_instance&#62;_CT &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
   

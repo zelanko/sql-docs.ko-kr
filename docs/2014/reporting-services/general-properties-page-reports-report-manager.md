@@ -14,12 +14,12 @@ caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189900"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084655"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>일반 속성 페이지, 보고서(보고서 관리자)
   보고서의 일반 속성 페이지를 사용하여 보고서 정의의 이름을 바꾸거나 보고서 정의를 이동, 삭제 또는 대체할 수 있을 뿐만 아니라 링크된 보고서도 만들 수 있습니다. 보고서를 만들거나 수정한 사람 및 내용이 변경된 시간에 대한 자세한 내용이 페이지 맨 위에 표시됩니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "37189900"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
- 보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : @ & = +, $ * \< >  
+ 보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< >  
   
  " / 등의 문자는 사용하지 마십시오.  
   

@@ -1,5 +1,5 @@
 ---
-title: MSdbms_map (Transact SQL) | Microsoft Docs
+title: MSdbms_map (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSdbms_map system table
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7a281666290cd18567691cb8b5e02abded8bd16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 811c7487f55ddcde9a7aedd4b7e6fb6ef318961b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009440"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103245"
 ---
 # <a name="msdbmsmap-transact-sql"></a>MSdbms_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdbms_map** 테이블 원본 데이터 형식 정보 뿐만 아니라 원본 및 대상 DBMS 쌍에 대 한 기본 대상 데이터 형식 정보에 대 한 링크를 포함 합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스 및 다른 유형의 게시에 사용 됩니다.  
+  합니다 **MSdbms_map** 테이블 원본 및 대상 DBMS 쌍에 대 한 기본 대상 데이터 형식 정보에 대 한 링크 뿐만 아니라 원본 데이터 형식 정보를 포함 합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스 및 다른 유형의 게시에 사용 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,10 +52,10 @@ ms.locfileid: "33009440"
 |**src_nullable**|**bit**|매핑의 대상 열이 NULL 값을 허용하는지 여부를 나타냅니다. 여기서 NULL 값은 이 정의가 필요하지 않음을 의미합니다.|  
 |**default_datatype_mapping_id**|**int**|지정 하 여 기본 데이터 형식 매핑을 식별 해당 **map_id** 표에 [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md)합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle 게시자에 대 한 데이터 형식 매핑 지정](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

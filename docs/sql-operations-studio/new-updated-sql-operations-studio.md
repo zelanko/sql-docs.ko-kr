@@ -1,25 +1,23 @@
 ---
-title: 업데이트 됨-SQL 작업 Studio docs | Microsoft Docs
-description: 가져온 조각을 SQL 작업 Studio에 대 한 최근에 변경 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다.
+title: 업데이트 됨-SQL Operations Studio 문서 | Microsoft Docs
+description: SQL Operations Studio 대 한 설명서에서 최근에 변경된에 대 한 업데이트 된 콘텐츠의 코드 조각을 표시 합니다.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: ssops
 ms.date: 04/28/2018
-ms.openlocfilehash: 074ed6176480655d9d87a55eb87cbb76b3011b7e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 84ee3d7d346c8cddbf5251e0d63bb2ae222defb3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686523"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083455"
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>신규 / 최근에 업데이트: SQL 작업 Studio docs
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>새로 추가 되거나 최근에 업데이트: SQL Operations Studio docs
 
 
 
@@ -31,8 +29,8 @@ ms.locfileid: "32686523"
 
 
 
-- *날짜 범위 업데이트:* &nbsp; **2018-02-03** &nbsp; 을 아래와 같이 &nbsp; **2018-04-28**
-- *주제 영역:* &nbsp; **SQL 작업 Studio**합니다.
+- 업데이트 날짜 범위: &nbsp; **2018-02-03**&nbsp; - &nbsp;**2018-04-28**
+- *주제 영역:* &nbsp; **SQL Operations Studio**합니다.
 
 
 
@@ -44,7 +42,7 @@ ms.locfileid: "32686523"
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-- [SQL 작업 Studio (미리 보기)의 기능을 확장](extensions.md)
+- [SQL Operations Studio (미리 보기)의 기능을 확장](extensions.md)
 
 <!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 
@@ -71,9 +69,9 @@ ms.locfileid: "32686523"
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [다운로드 하 고 SQL 작업 Studio (미리 보기) 설치](#TitleNum_1)
-2. [SQL 작업 Studio (미리 보기) 릴리스 정보](#TitleNum_2)
-3. [자습서: 추가 된 *가장 느린 쿼리 5* 데이터베이스 대시보드에 위젯을 샘플](#TitleNum_3)
+1. [다운로드 하 여 SQL Operations Studio (미리 보기)를 설치 합니다.](#TitleNum_1)
+2. [SQL Operations Studio (미리 보기) 릴리스 정보](#TitleNum_2)
+3. [자습서: 추가 된 *느린 쿼리 5* 데이터베이스 대시보드 위젯의 샘플](#TitleNum_3)
 
 
 
@@ -84,9 +82,9 @@ ms.locfileid: "32686523"
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [다운로드 하 고 SQL 작업 Studio (미리 보기) 설치](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [다운로드 하 여 SQL Operations Studio (미리 보기)를 설치 합니다.](download.md)
 
-*업데이트 됨된: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([다음](#TitleNum_2))
+*업데이트됨: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
 
 <!-- Source markdown line 64.  ms.author= "sstein".  -->
 
@@ -125,9 +123,9 @@ ms.locfileid: "32686523"
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2. &nbsp; [SQL 작업 Studio (미리 보기) 릴리스 정보](release-notes.md)
+### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2. &nbsp; [SQL Operations Studio (미리 보기) 릴리스 정보](release-notes.md)
 
-*업데이트 됨된: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_1) | [다음](#TitleNum_3))
+*업데이트 날짜: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_1) | [다음](#TitleNum_3))
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
@@ -141,26 +139,26 @@ ms.locfileid: "32686523"
 **[년 4 월 공개 미리 보기 다운로드]**
 
 
-**년 4 월 2018 (년 4 월 공개 미리 보기)**
+**2018 년 4 월 (4 월 공개 미리 보기)**
 
 
-릴리스 날짜: 2018 년 4 월 25, 버전: 0.28.6
+릴리스 날짜: 2018 년 4 월 25 일 버전: 0.28.6
 
-*공개 미리 보기 4 월* 버그 수정 및 향상 된 기능을 포함 합니다.
+합니다 *공개 미리 보기 4 월* 버그 수정 및 개선 사항이 포함 되어 있습니다.
 
 - SQL 에이전트 미리 보기 확장 개선 되었습니다.
-- 개선 된 보호는 관리자를 저장 하기 위한 광범위 하 고 보호 된 파일 지원 및 > SQL 작업 Studio 내에서 256 M 파일입니다.
-- 한 번에 여러 개의 열기 터미널 작업할 터미널 분할을 통합 합니다.
-- 줄어든된 설치 디스크에 파일 개수 발 더 빠른 설치 및 시작 시간에 인쇄 합니다.
-- GitHub 문제를 해결 하도록 계속 진행 합니다.
-   - 해결 [37 발급](https://github.com/Microsoft/sqlopsstudio/issues/37): 차트 뷰어에 오류를 throw 하면 예기치 않은 동작이 발생 합니다.
-   - 해결 [462 발급](https://github.com/Microsoft/sqlopsstudio/issues/462): 기능 요청: 기본적으로 확장 하는 서버 그룹에 대 한 옵션입니다.
-   - 해결 [606 발급](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 명령에 대 한 잘못 된 제안 합니다.
-   - 해결 [967 발급](https://github.com/Microsoft/sqlopsstudio/issues/967): 쿼리 계획을 예상 결과 표에서 XML 실행 계획을 선택 하는 경우.
-   - 해결 [1023 발급](https://github.com/Microsoft/sqlopsstudio/issues/1023): flyfishingdba에서 ms_foreachdb 호출에 대 한 대괄호를 추가 합니다.
-   - 해결 [1048 발급](https://github.com/Microsoft/sqlopsstudio/issues/1048): SSL/TLS 사전 로그인 핸드셰이크 오류입니다.
-   - 해결 [1050 발급](https://github.com/Microsoft/sqlopsstudio/issues/1050): 지우기 insights 오류를 표시 하기 전에 확인 합니다.
-   - 해결 [1057 발급](https://github.com/Microsoft/sqlopsstudio/issues/1057): 위젯 탐색기의에서 새 쿼리 작업 및 복원 끊어집니다.
+- 향상 된 보호 하는 관리자를 저장 하기 위한 대규모 및 보호 된 파일 지원 및 > SQL Operations Studio 내의 256m 파일입니다.
+- 통합된 터미널을 한 번에 여러 열고 터미널을 사용 하 여 작업을 분할 합니다.
+- 축소 된 설치 디스크에 있는 파일 수 피트 빠른 설치 및 시작 시간에 인쇄 합니다.
+- GitHub 문제를 해결 하려면 계속 진행 합니다.
+   - 수정 [37 발급](https://github.com/Microsoft/sqlopsstudio/issues/37): 차트 뷰어에 오류를 throw 하면 예기치 않은 동작이 발생 합니다.
+   - 수정 [462 발급](https://github.com/Microsoft/sqlopsstudio/issues/462): 기능 요청: 기본적으로 확장 하는 서버 그룹에 대 한 옵션입니다.
+   - 수정 [606 발급](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 명령에 대 한 잘못 된 제안 합니다.
+   - 수정 [967 발급](https://github.com/Microsoft/sqlopsstudio/issues/967): 쿼리 계획을 예상 결과 그리드에서 XML 실행 계획을 선택 하는 경우.
+   - 수정 [1023 발급](https://github.com/Microsoft/sqlopsstudio/issues/1023): flyfishingdba에서 ms_foreachdb 호출에 대 한 대괄호를 추가 합니다.
+   - 수정 [1048 발급](https://github.com/Microsoft/sqlopsstudio/issues/1048): 사전 로그인 SSL/TLS 핸드셰이크 오류입니다.
+   - 수정 [1050 발급](https://github.com/Microsoft/sqlopsstudio/issues/1050): 지우기 insights 오류를 표시 하기 전에 확인 합니다.
+   - 수정 [1057 발급](https://github.com/Microsoft/sqlopsstudio/issues/1057): 복원 작업과 새 쿼리 탐색기 위젯에서 끊어집니다.
 
 
 
@@ -172,9 +170,9 @@ ms.locfileid: "32686523"
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3. &nbsp; [자습서: 추가 된 *가장 느린 쿼리 5* 데이터베이스 대시보드에 위젯을 샘플](tutorial-qds-sql-server.md)
+### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3. &nbsp; [자습서: 추가 된 *느린 쿼리 5* 데이터베이스 대시보드 위젯의 샘플](tutorial-qds-sql-server.md)
 
-*업데이트 됨된: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_2))
+*업데이트됨: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_2))
 
 <!-- Source markdown line 94.  ms.author= "erickang".  -->
 
@@ -219,33 +217,33 @@ ms.locfileid: "32686523"
 
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-- [새 + 업데이트 (11 + 6): &nbsp; &nbsp; **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새 + 업데이트 (18 + 0): &nbsp; &nbsp; **SQL에 대 한 Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
-- [새 + 업데이트 (218 + 14): **SQL에 연결** docs](../connect/new-updated-connect.md)
-- [새 + 업데이트 (14 + 0): &nbsp; &nbsp; **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
-- [새 + 업데이트 (3 + 2): &nbsp; &nbsp; **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (3 + 3): &nbsp; &nbsp; **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
-- [새 + 업데이트 (7 + 10): &nbsp; &nbsp; **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
-- [새 + 업데이트 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [새 + 업데이트 (1 + 3): &nbsp; &nbsp; **SQL 작업 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새 + 업데이트 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [새 + 업데이트 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [새 + 업데이트 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [새 + 업데이트 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [새 + 업데이트 (1 + 1): &nbsp; &nbsp; **SQL에 대 한 도구** docs](../tools/new-updated-tools.md)
+- [새로 추가되었거나 업데이트됨(11+6):&nbsp; &nbsp;**SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(18+0): &nbsp; &nbsp;**SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(218+14):  **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(14+0): &nbsp; &nbsp;**SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(3+2): &nbsp; &nbsp; **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(3+3): &nbsp; &nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(7+10): &nbsp; &nbsp;**SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(0+2): &nbsp; &nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(1+3): &nbsp; &nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(2+3): &nbsp; &nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(1+1): &nbsp; &nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(5+2): &nbsp; &nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+2): &nbsp; &nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(1+1): &nbsp; &nbsp; **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
 
-- [새 + 업데이트 (0 + 0): **SQL에 대 한 분석 플랫폼 시스템** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 데이터 품질 서비스** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [새 + 업데이트 (0 + 0): **확장 DMX (Data Mining) sql** docs](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새 + 업데이트 (0 + 0): **MDX (Multidimensional Expressions)에 대 한 SQL** docs](../mdx/new-updated-mdx.md)
-- [새 + 업데이트 (0 + 0): **SQL에 대 한 ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
-- [새 + 업데이트 (0 + 0): **SQL에 대 한 PowerShell** docs](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 샘플** docs](../samples/new-updated-samples.md)
 - [새 + 업데이트 (0 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [새 + 업데이트 (0 + 0): **SQL에 대 한 XQuery** docs](../xquery/new-updated-xquery.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 

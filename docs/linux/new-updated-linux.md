@@ -1,23 +1,23 @@
 ---
-title: 업데이트-Linux 문서에서 SQL Server | Microsoft Docs
-description: 가져온 조각을 Linux에서 Microsoft SQL server에서 최근에 변경된 된 설명서에 대 한 업데이트 된 콘텐츠를 표시 합니다.
+title: 업데이트 됨-SQL Server Linux 문서 | Microsoft Docs
+description: Linux의 Microsoft SQL Server에 대 한 설명서에서 최근에 변경된에 대 한 업데이트 된 콘텐츠의 코드 조각을 표시 합니다.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.date: 04/28/2018
-ms.openlocfilehash: 3b7ed71be06ee7e485236fa0e244e47bb77b3b70
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f1e437e0b9d4c2940293280ee2c5529da85e6c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334017"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082485"
 ---
-# <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>신규 / 최근에 업데이트: Linux 문서에서 SQL Server
+# <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>새로 추가 되거나 최근에 업데이트: Linux 문서에서 SQL Server
 
 
 
@@ -30,7 +30,7 @@ ms.locfileid: "35334017"
 
 
 - 업데이트 날짜 범위: &nbsp; **2018-02-03**&nbsp; - &nbsp;**2018-04-28**
-- *주제 영역:* &nbsp; **Linux에서 Microsoft SQL Server**합니다.
+- *주제 영역:* &nbsp; **Linux의 Microsoft SQL Server**합니다.
 
 
 
@@ -42,9 +42,9 @@ ms.locfileid: "35334017"
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [Linux에서 SQL Server 용 active Directory 인증](sql-server-linux-active-directory-auth-overview.md)
-2. [구성 SQL Server Always On 가용성 그룹에 Windows 및 Linux (플랫폼 간)](sql-server-linux-availability-group-cross-platform.md)
-3. [Linux에서 가용성 그룹에 대해 항상 작동](sql-server-linux-availability-group-operate-ha.md)
+1. [Linux의 SQL Server에 대 한 active Directory 인증](sql-server-linux-active-directory-auth-overview.md)
+2. [구성 SQL Server Always On 가용성 그룹에서 Windows 및 Linux (플랫폼 간)](sql-server-linux-availability-group-cross-platform.md)
+3. [Linux의 가용성 그룹에 대해 항상 작동](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -70,9 +70,9 @@ ms.locfileid: "35334017"
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [설치 및 Linux에서 SQL Server 업그레이드에 대 한 저장소를 구성 합니다.](#TitleNum_1)
-2. [Mssql conf 도구와 함께 Linux에서 SQL Server 구성](#TitleNum_2)
-3. [SQL Server 2017 linux에 대 한 릴리스 정보](#TitleNum_3)
+1. [설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성](#TitleNum_1)
+2. [Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성](#TitleNum_2)
+3. [Linux의 SQL Server 2017 릴리스 정보](#TitleNum_3)
 
 
 
@@ -83,7 +83,7 @@ ms.locfileid: "35334017"
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1. &nbsp; [설치 및 Linux에서 SQL Server 업그레이드에 대 한 저장소를 구성 합니다.](sql-server-linux-change-repo.md)
+### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1. &nbsp; [설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성](sql-server-linux-change-repo.md)
 
 *업데이트됨: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
 
@@ -102,7 +102,7 @@ ms.locfileid: "35334017"
    sudo cat /etc/yum.repos.d/mssql-server.repo
 ```
 
-- **이름** 속성은 구성된 저장소입니다. 이 문서의 [저장소] 섹션의 표를 식별할 수 있습니다.
+- 합니다 **이름을** 속성이 구성 된 저장소입니다. 이 문서의 [리포지토리] 섹션의 표를 사용 하 여 식별할 수 있습니다.
 
 **이전 리포지토리 (RHEL)를 제거 합니다.**
 
@@ -112,38 +112,38 @@ ms.locfileid: "35334017"
 sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ```
 
-이 명령에서는 이전 섹션에서 식별 된 파일 이름이 **mssql server.repo**합니다.
+이 명령은 이전 섹션에서 식별 된 파일 이름이 있는지 가정 **mssql server.repo**합니다.
 
-**새 저장소 (RHEL) 구성**
+**새 리포지토리 (RHEL) 구성**
 
-SQL Server 설치 및 업그레이드에 사용할 새 저장소를 구성 합니다. 사용자가 선택한 저장소를 구성 하려면 다음 명령 중 하나를 사용 합니다.
+SQL Server 설치 및 업그레이드를 위해 사용 하는 새 저장소를 구성 합니다. 선택한 리포지토리를 구성 하려면 다음 명령 중 하나를 사용 합니다.
 
 | 리포지토리 | Command |
 |---|---|
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
-**<a id="sles"></a> SLES 저장소 구성**
+**<a id="sles"></a> SLES 리포지토리 구성**
 
-SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
+SLES에서 리포지토리를 구성 하려면 다음 단계를 사용 합니다.
 
-**이전에 구성 된 저장소 (SLES)에 대 한 확인**
+**이전에 구성한 리포지토리 (SLES)에 대 한 확인**
 
-먼저 SQL Server 저장소 이미 등록 하는지 여부를 확인 합니다.
+먼저 SQL Server 리포지토리에 이미 등록 여부를 확인 합니다.
 
-- 사용 하 여 **zypper 정보** 는 이전에 구성 된 저장소에 대 한 정보를 얻을 수 있습니다.
+- 사용 하 여 **zypper 정보** 이전에 구성 된 모든 리포지토리 정보를 가져옵니다.
 
 ```
    sudo zypper info mssql-server
 ```
 
-- **리포지토리** 속성은 구성된 저장소입니다. 이 문서의 [저장소] 섹션의 표를 식별할 수 있습니다.
+- 합니다 **리포지토리** 속성이 구성 된 저장소입니다. 이 문서의 [리포지토리] 섹션의 표를 사용 하 여 식별할 수 있습니다.
 
 **이전 리포지토리 (SLES)를 제거 합니다.**
 
-필요한 경우 이전 저장소를 제거 합니다. 이전에 구성 된 저장소 형식에 따라 다음 명령 중 하나를 사용 합니다.
+필요한 경우 이전 저장소를 제거 합니다. 이전에 구성 된 저장소의 유형에 따라 다음 명령 중 하나를 사용 합니다.
 
-| 리포지토리 | 제거 하려면 명령 |
+| 리포지토리 | 제거할 명령 |
 |---|---|
 | **미리 보기** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 
@@ -157,9 +157,9 @@ SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2. &nbsp; [Mssql conf 도구와 함께 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)
+### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2. &nbsp; [Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)
 
-*업데이트 됨된: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_1) | [다음](#TitleNum_3))
+*업데이트 날짜: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([이전](#TitleNum_1) | [다음](#TitleNum_3))
 
 <!-- Source markdown line 151.  ms.author= jroth.  -->
 
@@ -171,27 +171,27 @@ SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 
 
-**<a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치를 변경 합니다.**
+**<a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치 변경**
 
 
-**filelocation.masterdatafile** 및 **filelocation.masterlogfile** 변경 master 데이터베이스 파일에 대 한 SQL Server 엔진을 찾는 위치 위치를 설정 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다.
+합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다.
 
 이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
 
-- 새 오류 로그 파일에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/masterdatabasedir** 디렉터리:
+- 새 오류 로그 파일에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp masterdatabasedir** 디렉터리:
 
 ```
    sudo mkdir /tmp/masterdatabasedir
 ```
 
-- 소유자 및 그룹 디렉터리의 변경 된 **mssql** 사용자:
+- 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
 
 ```
    sudo chown mssql /tmp/masterdatabasedir
    sudo chgrp mssql /tmp/masterdatabasedir
 ```
 
-- Mssql conf를 사용 하 여 사용 하 여 마스터 데이터 및 로그 파일에 대 한 기본 master 데이터베이스 디렉터리를 변경 하는 **설정** 명령:
+- Mssql conf를 사용 하 여 사용 하 여 마스터 데이터 및 로그 파일에 대 한 기본 master 데이터베이스 디렉터리를 변경 합니다 **설정** 명령:
 
 ```
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
@@ -204,7 +204,7 @@ SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
    sudo systemctl stop mssql-server
 ```
 
-- Master.mdf 및 masterlog.ldf 이동 합니다.
+- Master.mdf 및 masterlog.ldf를 이동 합니다.
 
 ```
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf
@@ -218,7 +218,7 @@ SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 ```
 
 > [!NOTE]
-> SQL Server는 지정된 된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면, 시스템 데이터베이스의 템플릿 기반 복사본 자동으로 지정된 된 디렉터리에서 만들어지고 SQL Server 성공적으로 시작 됩니다. 그러나 새 master 데이터베이스에서 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타 데이터 업데이트 되지 않습니다. SQL Server를 중지 하 고 이전 master.mdf 및 mastlog.ldf 지정 된 새 위치로 이동할 기존 메타 데이터를 사용 하 여 계속 하려면 SQL Server를 시작 해야 합니다.
+> SQL Server는 지정된 된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면, 시스템 데이터베이스의 템플릿 복사본이 지정된 된 디렉터리에 자동으로 생성 됩니다 및 SQL Server 성공적으로 시작 됩니다. 그러나 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타 데이터를 새 마스터 데이터베이스에서 업데이트 되지 않습니다. SQL Server를 중지 하 고 지정된 된 새 위치에 이전 master.mdf 및 mastlog.ldf 이동할 기존 메타 데이터를 사용 하 여 계속 하려면 SQL Server를 시작 해야 합니다.
 
 
 
@@ -230,7 +230,7 @@ SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3. &nbsp; [SQL Server 2017 linux에 대 한 릴리스 정보](sql-server-linux-release-notes.md)
+### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3. &nbsp; [Linux의 SQL Server 2017 릴리스 정보](sql-server-linux-release-notes.md)
 
 *업데이트됨: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_2))
 
@@ -245,21 +245,21 @@ SLES에서 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
 - [SQL Server 에이전트 사용]
 
-**<a id="CU6"></a> Cu6 적용 (2018 년 4 월)**
+**<a id="CU6"></a> CU6 (2018 년 4 월)**
 
 
-이 SQL Server 2017의 누적 업데이트 6 (cu6)가 적용 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3025.34입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)합니다.
+이 SQL Server 2017 누적 업데이트 6 (CU6) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3025.34 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)합니다.
 
 **패키지 세부 정보**
 
 
-수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 Debian 및 RPM 패키지를 다운로드할 수 있습니다.
 
 | 패키지 | 패키지 버전 | 다운로드 |
 |-----|-----|-----|
 | Red Hat RPM 패키지 | 14.0.3025.34-3 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
-| SLES RPM 패키지 | 14.0.3025.34-3 | [mssql 서버 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
-| Ubuntu 16.04 Debian 패키지 | 14.0.3025.34-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[높은 가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+| SLES RPM 패키지 | 14.0.3025.34-3 | [mssql server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| Ubuntu 16.04 Debian 패키지 | 14.0.3025.34-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[높은 가용성의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[전체 텍스트 검색의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 
 

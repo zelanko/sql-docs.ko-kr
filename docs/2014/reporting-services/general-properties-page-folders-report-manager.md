@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255825"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083905"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>일반 속성 페이지, 폴더(보고서 관리자)
   폴더의 일반 속성 페이지를 사용하여 만든 폴더의 속성을 보거나 설정할 수 있습니다. 폴더를 만들거나 수정한 사람 및 폴더를 수정한 시간에 대한 정보가 일반 속성 페이지 맨 위에 표시됩니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "37255825"
   
 2.  폴더 배너 아래의 도구 모음에서 **폴더 설정**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
- 폴더의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : @ & = +, $ * \< > | "또는 / 이름을 지정 합니다.  
+ 폴더의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< > | "또는 / 이름을 지정 합니다.  
   
  **설명**  
  폴더 내용에 대한 설명을 입력합니다. 이 설명은 해당 폴더 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: 복제 테이블 (Transact SQL) | Microsoft Docs
+title: 복제 테이블 (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012830"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103441"
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 일반 규칙에 대 한 관련 항목 참조 시스템 테이블을 사용 하 여, [시스템 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)합니다.  
+  복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 일반 규칙에 대 한에 대 한 시스템 테이블을 사용 하 여 확인할 [시스템 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)합니다.  
   
 ## <a name="replication-tables"></a>복제 테이블  
  다음은 복제에서 사용되고 데이터베이스에서 그룹화되는 시스템 테이블의 목록입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "33012830"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;Transact SQL&#41;](../../relational-databases/system-tables/msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-options-transact-sql.md)||  
   
 ### <a name="replication-tables-in-the-msdb-database"></a>msdb 데이터베이스에 있는 복제 테이블  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33012830"
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- 배포 데이터베이스에 있는 이러한 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자에서 데이터를 복제할 때 사용됩니다. 자세한 내용은 참조 [비-SQL Server 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)합니다.  
+ 배포 데이터베이스에 있는 이러한 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시자에서 데이터를 복제할 때 사용됩니다. 자세한 내용은 [아닌 SQL Server 이외 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)합니다.  
   
 |||  
 |-|-|  
@@ -119,7 +119,7 @@ ms.locfileid: "33012830"
 |-|-|  
 |[MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)|[MSmerge_settingshistory](../../relational-databases/system-tables/msmerge-settingshistory-transact-sql.md)|  
 |[MSdynamicsnapshotviews](../../relational-databases/system-tables/msdynamicsnapshotviews-transact-sql.md)|[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)|  
-|[MSmerge_altsyncpartners](../../relational-databases/system-tables/msmerge-altsyncpartners-transact-sql.md)|[MSpeer_lsns &#40;Transact SQL&#41;](../../relational-databases/system-tables/mspeer-lsns-transact-sql.md)|  
+|[MSmerge_altsyncpartners](../../relational-databases/system-tables/msmerge-altsyncpartners-transact-sql.md)|[MSpeer_lsns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mspeer-lsns-transact-sql.md)|  
 |[MSmerge_conflicts_info](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)|[MSrepl_queuedtraninfo](../../relational-databases/system-tables/msrepl-queuedtraninfo-transact-sql.md)|  
 |[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)|[MSsnapshotdeliveryprogress](../../relational-databases/system-tables/mssnapshotdeliveryprogress-transact-sql.md)|  
 |[MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md)|[MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)|  
@@ -133,7 +133,7 @@ ms.locfileid: "33012830"
 |[MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)|[sysmergesubsetfilters](../../relational-databases/system-tables/sysmergesubsetfilters-transact-sql.md)|  
 |[MSmerge_replinfo](../../relational-databases/system-tables/msmerge-replinfo-transact-sql.md)|[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

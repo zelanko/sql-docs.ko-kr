@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274629"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084015"
 ---
 # <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
@@ -126,7 +126,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>XPath 형식의 열 이름 지정  
- 다음 쿼리에서 지정된 열 이름 `ProductModelID`는 '@'으로 시작하며 슬래시 기호('/')를 포함하지 않으므로 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
+ 다음 쿼리에서 `ProductModelID` 지정 된 열 이름으로 시작 '\@' 슬래시 기호 ('/')를 포함 하지 않습니다. 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
   
 ```  
 USE AdventureWorks2012;  

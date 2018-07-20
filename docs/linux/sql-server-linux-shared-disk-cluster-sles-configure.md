@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 5c394dbfc613803a8f7eb0cf906b4b7733777919
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f9608d4a36d8fb29185a9da949caf561f5fb1734
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020762"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084246"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터 구성
 

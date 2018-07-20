@@ -1,5 +1,5 @@
 ---
-title: MSmerge_past_partition_mappings (Transact SQL) | Microsoft Docs
+title: MSmerge_past_partition_mappings (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_past_partition_mappings system table
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd96435535dec6413e135015563d3f83fe8b5d05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e59be5287086ba7b6a201d4d5b24fbcb03628f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004380"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101351"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_past_partition_mappings** 테이블 속한 하는 데 사용 하는 변경된 된 행의 각 파티션 id에 대해 한 행을 저장 하지만 더 이상 속하지 않는 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
+  합니다 **MSmerge_past_partition_mappings** 테이블에 속해야 하는 데 사용 하는 변경된 된 행의 각 파티션 id에 대 한 하나의 행을 저장 하지만 더 이상 속하지 않는 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,8 +46,8 @@ ms.locfileid: "33004380"
 |**generation**|**bigint**|파티션 변경이 발생한 generation의 값입니다.|  
 |**reason**|**tinyint**|내부적으로만 사용됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 276efd6941012857820607d51e08ad309e581e94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11ce9088d6f6e9cde45eb080b1c12f3c4d434b18
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936468"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087895"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>확장 저장 프로시저의 실행 특징
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32936468"
   
  확장 저장 프로시저 실행에는 다음과 같은 세 가지 특징이 있습니다.  
   
--   보안 컨텍스트 내에서 확장된 저장된 프로시저 함수는 실행 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+-   확장된 저장된 프로시저 함수는 보안 컨텍스트에서 실행 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 -   확장 저장 프로시저 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에서 실행됩니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32936468"
   
 -  
   
- DLL 될 때까지 서버 주소 공간에 로드 된 상태로 확장 저장 프로시저 DLL이 로드, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 또는 관리자가 DBCC를 사용 하 여 명시적으로 DLL을 언로드하기 *DLL_name* (FREE).  
+ 확장 저장 프로시저 DLL이 로드 되 면 DLL 될 때까지 서버의 주소 공간에 로드 된 상태로 남아 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 또는 관리자가 DBCC를 사용 하 여 명시적으로 DLL을 언로드하기 *DLL_name* (무료).  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 EXECUTE 문을 사용하여 확장 저장 프로시저를 저장 프로시저처럼 사용할 수 있습니다.  
   
@@ -53,19 +53,19 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- @ *retval*  
+ \@ *retval*  
  반환 값입니다.  
   
- @ *param1*  
+ \@ *param1*  
  입력 매개 변수입니다.  
   
- @ *param2*  
+ \@ *param2*  
  입/출력 매개 변수입니다.  
   
 > [!CAUTION]  
 >  확장 저장 프로시저는 성능 향상과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 확장을 제공합니다. 그러나 확장 저장 프로시저 DLL과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 같은 주소 공간을 공유하므로 문제가 있는 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작동에 부정적인 영향을 줄 수 있습니다. 확장 저장 프로시저 DLL에서 throw하는 예외는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 처리되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 영역에 손상을 줄 수 있습니다. 보안 예방 조치로서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자만 확장 저장 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가할 수 있습니다. 이러한 프로시저는 설치하기 전에 철저히 테스트해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [확장 저장된 프로시저 프로그래밍](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
  [SQL Server에 설치된 확장 저장 프로시저 쿼리](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   

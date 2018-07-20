@@ -1,5 +1,5 @@
 ---
-title: MSmerge_tombstone (Transact SQL) | Microsoft Docs
+title: MSmerge_tombstone (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99823a19970cf5732aa4e68b3588c6b5a6934a07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af64c598ccb092a5c0e408496ceba8d97f609124
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004820"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102071"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_tombstone** 테이블 삭제 된 행에 대 한 정보를 포함 하며 삭제를 다른 구독자에 전파를 허용 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
+  합니다 **MSmerge_tombstone** 테이블 삭제 된 행에 대 한 정보를 포함 하며 삭제를 다른 구독자로 전파 됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,8 +47,8 @@ ms.locfileid: "33004820"
 |**logical_record_parent_rowguid**|**uniqueidentifier**|삭제된 행이 속한 논리적 레코드를 식별합니다.|  
 |**logical_record_lineage**|**varbinary(501)**|이 행이 속한 논리적 레코드에 대한 삭제 기록을 유지 관리하기 위해 사용하는 구독자 애칭과 버전 번호 쌍입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

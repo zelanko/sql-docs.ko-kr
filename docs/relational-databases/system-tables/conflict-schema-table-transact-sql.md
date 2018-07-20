@@ -1,5 +1,5 @@
 ---
-title: conflict_&lt;스키마&gt;_&lt;테이블&gt; (Transact SQL) | Microsoft Docs
+title: conflict_&lt;스키마&gt;_&lt;테이블&gt; (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64d89c82ffa149c55c8834ca46a11607f33459c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2424c16b56455ca14fafdd8cc1c070aa3058447a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002140"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103671"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;스키마&gt;_&lt;테이블&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +39,22 @@ ms.locfileid: "33002140"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|__$originator_id|**int**|충돌을 일으키는 변경이 시작된 노드의 ID입니다. Id 목록에 대 한 실행 [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)합니다.|  
+|__$originator_id|**int**|충돌을 일으키는 변경이 시작된 노드의 ID입니다. 실행 id 목록을 [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)합니다.|  
 |__$origin_datasource|**int**|충돌을 일으키는 변경이 시작된 노드입니다.|  
 |__$tranid|**nvarchar (40)**|__$origin_datasource에 적용될 때 충돌의 일으키는 변경의 LSN(로그 시퀀스 번호)입니다.|  
-|__$conflict_type|**int**|충돌의 유형이며 다음 값 중 하나일 수 있습니다.<br /><br /> 1: 로컬 행이 다른 업데이트에 의해 변경 또는 삭제 되었고 후 다시 삽입 하기 때문에 업데이트가 실패 했습니다.<br /><br /> 2: 로컬 행이 삭제 되어 이미 업데이트가 실패 했습니다.<br /><br /> 3: 로컬 행이 다른 업데이트에 의해 변경 또는 삭제 되었고 후 다시 삽입 하기 때문에 삭제가 실패 했습니다.<br /><br /> 4: 로컬 행이 삭제 되어 이미 삭제가 실패 했습니다.<br /><br /> 5: 로컬 행이 이미 삽입 되었거나 삽입 되어 업데이트 때문에 삽입이 실패 했습니다.|  
+|__$conflict_type|**int**|충돌의 유형이며 다음 값 중 하나일 수 있습니다.<br /><br /> 1: 로컬 행이 다른 업데이트에 의해 변경 또는 삭제 되었으며 다시 삽입 한 다음 업데이트 하지 못했습니다.<br /><br /> 2: 로컬 행 이미 삭제 되었기 때문에 업데이트가 실패 했습니다.<br /><br /> 3: 로컬 행이 다른 업데이트에 의해 변경 또는 삭제 되었고 후 다시 삽입 하기 때문에 삭제가 실패 했습니다.<br /><br /> 4: 로컬 행 이미 삭제 되었기 때문에 삭제가 실패 했습니다.<br /><br /> 5: 로컬 행이 이미 삽입 되었거나 삽입 되어 업데이트 때문에 삽입이 실패 했습니다.|  
 |__$is_winner|**bit**|이 테이블의 행이 충돌 시 우선 적용되는지, 즉 로컬 노드에 적용되는지 여부를 나타냅니다.|  
 |__$pre_version|**varbinary (32)**|충돌을 일으키는 변경이 시작된 데이터베이스 버전입니다.|  
-|__$reason_code|**int**|충돌 상태를 나타내는 코드이며 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0<br /><br /> 1.<br /><br /> 2<br /><br /> <br /><br /> 자세한 내용은 참조 **__ $reason_text**합니다.|  
+|__$reason_code|**int**|충돌 상태를 나타내는 코드이며 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> <br /><br /> 자세한 내용은 **__ $reason_text**합니다.|  
 |__$reason_text|**nvarchar (720)**|충돌 상태를 나타내는 텍스트이며 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> Resolved (1)<br /><br /> Unresolved (2)<br /><br /> Unknown (0)|  
-|__$update_bitmap|**varbinary (** *n* **)** 합니다. 크기는 내용에 따라 다릅니다.|업데이트/업데이트 충돌이 발생했을 때 업데이트된 열을 나타내는 비트맵입니다.|  
+|__$update_bitmap|**varbinary (** *n* **)** 합니다. 크기가 내용에 따라 달라 집니다.|업데이트/업데이트 충돌이 발생했을 때 업데이트된 열을 나타내는 비트맵입니다.|  
 |__$inserted_date|**datetime**|충돌을 일으키는 행이 이 테이블에 삽입된 날짜와 시간입니다.|  
 |__$row_id|**timestamp**|충돌을 일으키는 행과 연관된 행 버전입니다.|  
-|__$change_id|**binary (8)**|로컬 행의 경우 이 값은 해당 로컬 행과 충돌하는 들어오는 행의 __$row_id에 해당합니다. 들어오는 행의 경우 이 값은 NULL입니다.|  
+|__$change_id|**이진 (8)**|로컬 행의 경우 이 값은 해당 로컬 행과 충돌하는 들어오는 행의 __$row_id에 해당합니다. 들어오는 행의 경우 이 값은 NULL입니다.|  
 |\<기본 테이블 열 이름 >|\<기본 테이블 열 형식 >|충돌 테이블에는 기본 테이블에 있는 각 열에 대한 열이 하나씩 있습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

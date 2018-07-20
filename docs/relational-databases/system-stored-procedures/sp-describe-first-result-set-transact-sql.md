@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 33754b46bbad95b3194ca9e8c0087e93bba2d93c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970719"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087275"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,15 +47,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tsql =** ] **'***&#40;transact SQL_batch***'**  
+ [  **\@tsql =** ] **'***Transact SQL_batch***'**  
  하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
   
- [  **@params =** ] **N'***매개 변수***'**  
- @params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게 됩니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
+ [  **\@params =** ] **N'***매개 변수***'**  
+ \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게 됩니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
   
- 에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다 @params합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다 @params 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ 에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다 \@매개 변수입니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다 \@params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
- [ **@browse_information_mode =** ] *tinyint*  
+ [  **\@browse_information_mode =** ] *tinyint*  
  추가 키 열과 원본 테이블 정보를 반환할지 여부를 지정합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
   
 -   0으로 설정되면 정보가 반환되지 않습니다.  
@@ -121,11 +121,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** 다음 경우 중 하나에서 오류를 반환 합니다.  
   
--   하는 경우 입력 @tsql 유효 하지 않거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 유효성 검사는 구문 분석 하 고 분석 하 여 결정 됩니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 결정할 때 쿼리 최적화 중 또는 실행 하는 동안 일괄 처리에서 발생 한 오류는 아닙니다 여부는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 유효한 합니다.  
+-   하는 경우 입력 \@tsql 올바르지 않습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 유효성 검사는 구문 분석 하 고 분석 하 여 결정 됩니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 결정할 때 쿼리 최적화 중 또는 실행 하는 동안 일괄 처리에서 발생 한 오류는 아닙니다 여부는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 유효한 합니다.  
   
--   경우 @params NULL이 아닌 문자열을 포함 하는 문자열을 포함 하는 경우 선언 하는 매개 변수가 여러 번 또는 매개 변수에 대해 구문이 유효한 선언 문자열이 아닙니다.  
+-   경우 \@문자열로 포함 된 경우 선언 하는 매개 변수가 여러 번 또는 매개 변수는 NULL이 아니고 매개 변수는 구문상 유효한 선언 문자열이 아닌 문자열을 포함 합니다.  
   
--   하는 경우 입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 선언 된 매개 변수 이름이 같은 지역 변수를 선언 @params합니다.  
+-   하는 경우 입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 선언 된 매개 변수 이름이 같은 지역 변수를 선언 \@매개 변수입니다.  
   
 -   해당 문에서 임시 테이블을 사용하는 경우  
   
@@ -160,7 +160,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** 간접 재귀를 지원 하지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 실행 하기 위한 권한이 필요 합니다 @tsql 인수입니다.  
+ 실행 하기 위한 권한이 필요 합니다 \@tsql 인수입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -200,7 +200,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
 |is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|NULL|NULL|NULL|NULL|  
+|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
   
  1을 사용하는 예제는 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 정보를 반환합니다.  
   
@@ -213,8 +213,8 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
 |is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|dbo|t|B1|0|  
-|1|2|a|dbo|t|a|1|  
+|0|@shouldalert|b3|dbo|t|B1|0|  
+|@shouldalert|2|a|dbo|t|a|@shouldalert|  
   
  마치 커서를 준비하는 것처럼 분석됨을 나타내는 2를 사용하는 예제.  
   
@@ -226,8 +226,8 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
 |is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|B3|dbo|v|B2|0|  
-|1|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|@shouldalert|B3|dbo|v|B2|0|  
+|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>문제 예  
  다음 예에서는 모두 두 개의 테이블을 사용합니다. 예제 테이블을 만들려면 다음 문을 실행합니다.  

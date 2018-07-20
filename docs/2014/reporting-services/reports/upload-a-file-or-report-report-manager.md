@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2875701f8b058974df7abf993b1bcc44bf8d08bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44dd1787da648e332c2234b83323990784b0d4bc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315213"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085445"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>파일 또는 보고서 업로드(보고서 관리자)
   보고서 관리자에서는 업로드 기능을 제공하므로 클라이언트 응용 프로그램에서 보고서, 모델 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "37315213"
   
 4.  **찾아보기** 를 클릭하여 업로드할 파일을 선택합니다. 보고서 정의 파일, 이미지, 문서 등 보고서 서버에서 사용할 수 있는 모든 파일을 업로드할 수 있습니다.  
   
-5.  새 항목의 이름을 입력합니다. 항목 이름에 공백을 사용할 수 있지만 다음과 같은 예약 문자는 사용할 수 없습니다. ; ? : @ & = +, $ / * \< > |.  
+5.  새 항목의 이름을 입력합니다. 항목 이름에 공백을 사용할 수 있지만 다음과 같은 예약 문자는 사용할 수 없습니다. ; ? : \@ & = +, $ / * \< > |.  
   
 6.  기존 항목을 새 항목으로 바꾸려면 **항목이 있으면 덮어쓰기**를 선택합니다.  
   

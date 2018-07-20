@@ -1,5 +1,5 @@
 ---
-title: 시스템 테이블을 시스템 뷰로 (Transact SQL) 매핑 | Microsoft Docs
+title: 시스템 테이블 (Transact SQL) 시스템 뷰로 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system tables [SQL Server], mapping to catalog views
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a9567c3c2fb7fd14db01a289849da74e34d9a03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4301b16fb7196ffecea6fd11551b6f253ec85725
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263066"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102281"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>시스템 테이블을 시스템 뷰로 매핑(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "33263066"
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|카탈로그 뷰|  
 |sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|카탈로그 뷰|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

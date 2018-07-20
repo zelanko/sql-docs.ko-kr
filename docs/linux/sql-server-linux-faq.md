@@ -4,19 +4,19 @@ description: 이 문서에서는 Linux에서 실행 되는 SQL Server에 대 한
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001795"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102231"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -89,6 +89,9 @@ ms.locfileid: "38001795"
 1. **Linux에서 SQL Server 성능 모니터링을 사용할 수 있는 도구?**
 
    사용할 수 있습니다 [시스템 동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 를 다양 한 유형의 SQL Server, Linux 프로세스 정보를 포함 하는 방법에 대 한 정보를 수집 합니다. 사용할 수 있습니다 [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) 쿼리 성능을 향상 시킵니다. 기본 제공 같은 다른 도구를 [성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)원격에서 SSMS SQL Server Management Studio () Windows에서 작동 합니다.
+
+   > [!TIP]
+   > 성능 향상을 위해 한 가지 방법은 제대로 Linux 운영 체제 및 SQL Server insance를 구성 하는 것입니다. 자세한 내용은 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](sql-server-linux-performance-best-practices.md)합니다.
 
 ## <a name="administration"></a>관리
 

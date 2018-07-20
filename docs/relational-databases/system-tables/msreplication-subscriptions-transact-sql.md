@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (Transact SQL) | Microsoft Docs
+title: MSreplication_subscriptions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005470"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103381"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_subscriptions** 테이블의 각 배포 에이전트는 로컬 구독자 데이터베이스에 대 한 정보를 복제 한 행을 포함 합니다. 이 테이블은 구독 데이터베이스에 저장됩니다.  
+  합니다 **MSreplication_subscriptions** 테이블의 각 배포 에이전트는 로컬 구독자 데이터베이스에 대 한 복제 정보가 하나의 행을 포함 합니다. 이 테이블은 구독 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "33005470"
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> 0 = 밀어넣기<br /><br /> 1 = 끌어오기<br /><br /> 2 = 익명|  
 |**distribution_agent**|**sysname**|배포 에이전트의 이름입니다.|  
 |**Time**|**smalldatetime**|배포 에이전트가 마지막으로 업데이트한 시간입니다.|  
-|**설명**|**nvarchar(255)**|게시에 대한 설명입니다.|  
+|**description**|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |**transaction_timestamp**|**varbinary(16)**|내부적으로만 사용됩니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.|  
 |**agent_id**|**binary(16)**|에이전트의 ID입니다.|  
@@ -52,9 +52,9 @@ ms.locfileid: "33005470"
 |**subid**|**binary(16)**|익명 구독에 관한 전역 식별자입니다.|  
 |**immediate_sync**|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

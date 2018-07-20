@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280669"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082725"
 ---
 # <a name="general-properties-page-models-report-manager"></a>일반 속성 페이지, 모델(보고서 관리자)
   보고서 모델의 일반 속성 페이지를 사용하여 모델 정의 파일(.smdl)의 이름을 바꾸거나 파일을 삭제, 이동 또는 대체할 수 있습니다. 모델을 만들거나 수정한 사람 및 변경된 시간에 대한 자세한 내용은 페이지 맨 위에 표시됩니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "37280669"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 모델의 일반 속성 페이지가 열립니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
  모델의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **설명**  
  모델에 대한 설명을 입력합니다. 이 설명은 해당 모델 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
