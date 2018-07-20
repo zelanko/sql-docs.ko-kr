@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - GRANT statement, databases
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d29a2267be753ef74a4e1f27bfda9ced566845b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81cf919bfe9f4e54afb0253d2b01bcddb9e69f5d
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075580"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854382"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -249,11 +248,21 @@ USE AdventureWorks2012;
 GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;  
 GO  
 ```  
-  
+
+### <a name="d-granting-control-permission-to-a-database-user"></a>4. 데이터베이스 사용자에게 CONTROL 권한 부여.
+ 다음 예에서는 데이터베이스 사용자 `Sarah`에게 `AdventureWorks2012` 데이터베이스의 `CONTROL` 권한을 부여합니다. 사용자가 데이터베이스에 존재해야 하며 컨텍스트가 데이터베이스로 설정되어야 합니다.
+ 
+```  
+USE AdventureWorks2012;  
+GRANT CONTROL ON DATABASE:AdventureWorks2012 TO Sarah;  
+GO  
+```  
+
+
 ## <a name="see-also"></a>참고 항목  
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

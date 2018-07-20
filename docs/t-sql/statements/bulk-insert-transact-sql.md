@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075240"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782674"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -132,7 +131,7 @@ BULK INSERT
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [서식 파일](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)의 각 열에 대해 데이터 정렬 이름을 지정하는 것이 좋습니다.  
   
-|CODEPAGE 값|Description|  
+|CODEPAGE 값|설명|  
 |--------------------|-----------------|  
 |ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열은 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|  
 |OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열은 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환됩니다.|  
@@ -147,7 +146,8 @@ BULK INSERT
 |**char**(기본값)|문자 형식<br /><br /> 자세한 내용은 [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|  
 |**native**|네이티브(데이터베이스) 데이터 형식. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 원시 데이터 파일을 만듭니다.<br /><br /> 네이티브 값은 char 값을 대체하여 보다 뛰어난 성능을 제공합니다.<br /><br /> 자세한 내용은 [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)를 참조하세요.|  
 |**widechar**|유니코드 문자<br /><br /> 자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.|  
-|**widenative**|**char**, **varchar** 및 **text** 열을 제외하고 데이터가 유니코드로 저장되는 원시(데이터베이스) 데이터 형식입니다. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 **widenative** 데이터 파일을 만듭니다.<br /><br /> **widenative** 값은 **widechar** 값을 대체하여 보다 뛰어난 성능을 제공합니다. 데이터 파일에 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 확장 문자가 포함되어 있으면 **widenative**를 지정하십시오.<br /><br /> 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.|  
+|**widenative**|**char**, **varchar** 및 **text** 열을 제외하고 데이터가 유니코드로 저장되는 원시(데이터베이스) 데이터 형식입니다. **bcp** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 대량으로 가져와 **widenative** 데이터 파일을 만듭니다.<br /><br /> 
+  **widenative** 값은 **widechar** 값을 대체하여 보다 뛰어난 성능을 제공합니다. 데이터 파일에 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 확장 문자가 포함되어 있으면 **widenative**를 지정하십시오.<br /><br /> 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.|  
   
   ERRORFILE **='***file_name***'**  
  형식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.  
@@ -425,6 +425,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>7. Azure Blob Storage의 파일에서 데이터 가져오기 및 오류 파일 지정   
+다음 예제에서는 외부 데이터 원본으로 구성되고 오류 파일을 지정하는 Azure Blob Storage 위치의 csv 파일에서 데이터를 로드하는 방법을 보여줍니다. 이를 위해 공유 액세스 서명을 사용하는 데이터베이스 범위 자격 증명이 필요합니다. Azure SQL Database에서 실행되는 경우 ERRORFILE 옵션에는 ERRORFILE_DATA_SOURCE가 함께 사용되어야 하지만 사용 권한 오류로 인해 가져오기에 실패할 수 있습니다. ERRORFILE에 지정된 파일이 컨테이너에 존재하지 않아야 합니다.
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 자격 증명 및 외부 데이터 원본의 구성을 포함하여 전체 `BULK INSERT` 예제는 [Azure Blob Storage의 데이터에 대한 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요.

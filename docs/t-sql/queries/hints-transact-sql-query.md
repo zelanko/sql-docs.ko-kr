@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470294"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854345"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470294"
  SIMPLE은 쿼리 최적화 프로그램이 단순 매개 변수화를 시도하도록 지시합니다. FORCED는 쿼리 최적화 프로그램이 강제 매개 변수화를 시도하도록 지시합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드에서 강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) 및 [쿼리 처리 아키텍처 가이드에서 단순 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)를 참조하세요.  
   
  RECOMPILE  
- 쿼리를 실행한 후 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 해당 쿼리에 대해 생성된 계획을 삭제하도록 하여 다음에 같은 쿼리가 실행될 때 쿼리 최적화 프로그램이 쿼리 계획을 다시 컴파일하도록 지시합니다. RECOMPILE을 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리 계획을 캐시하여 다시 사용합니다. 쿼리 계획을 컴파일할 때 RECOMPILE 쿼리 힌트는 쿼리에 있는 지역 변수의 현재 값을 사용하며 쿼리가 저장 프로시저 안에 있는 경우 매개 변수에 전달된 현재 값을 사용합니다.  
+ 새로운 임시 쿼리 계획을 생성하고 쿼리 실행이 완료된 후 해당 계획을 즉시 무시하도록 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 지시합니다. 동일한 쿼리가 RECOMPILE 힌트 없이 실행될 경우 생성된 쿼리 계획은 캐시에 저장된 계획을 바꾸지 않습니다. RECOMPILE을 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿼리 계획을 캐시하여 다시 사용합니다. 쿼리 계획을 컴파일할 때 RECOMPILE 쿼리 힌트는 쿼리에 있는 지역 변수의 현재 값을 사용하며 쿼리가 저장 프로시저 안에 있는 경우 매개 변수에 전달된 현재 값을 사용합니다.  
   
  RECOMPILE은 전체 저장 프로시저가 아닌 저장 프로시저 내 쿼리의 하위 집합만 다시 컴파일해야 하는 경우 WITH RECOMPILE 절을 사용하는 저장 프로시저를 만드는 데 유용합니다. 자세한 내용은 [저장 프로시저 다시 컴파일](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)을 참조하십시오. RECOMPILE은 계획 지침을 만들 때도 유용합니다.  
   

@@ -1,10 +1,10 @@
 ---
 title: PREDICT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/25/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|queries
+ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,19 +17,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: jeannt
-ms.author: jeannt
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b027530565b9b138d5a8f9559e3e60e0331dd3af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708892"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408062"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 저장된 모델을 기반으로 예측 값 또는 점수를 생성합니다.  
 
@@ -99,7 +99,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 ## <a name="remarks"></a>Remarks
 
-`PREDICT` 함수는 다른 기계 학습 기능이 활성화되었는지 여부와 상관없이 Linux 및 Azure SQL Database를 포함하여 SQL Server의 모든 버전에서 지원됩니다. 그러나 SQL Server 2017 이상이 필요합니다. 
+`PREDICT` 함수는 SQL Server 2017 이상의 모든 버전에서 지원됩니다. 이 지원에는 Linux용 SQL Server 2017이 포함됩니다. `PREDICT`는 클라우드의 Azure SQL Database에서도 지원됩니다. 이러한 모든 지원은 다른 컴퓨터 학습 기능이 사용 가능한지 여부와 관계없이 활성화됩니다.
 
 `PREDICT` 함수를 사용하기 위해 R, Python 또는 다른 기계 학습 언어를 서버에 설치할 필요는 없습니다. 모델을 다른 환경에서 학습하고 `PREDICT`와 함께 사용하기 위해 SQL Server 테이블에 저장하거나 저장된 모델을 가진 SQL Server의 다른 인스턴스에서 모델을 호출할 수 있습니다.
 

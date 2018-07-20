@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698334"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107241"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ TDE가 Key Vault의 TDE 보호기를 사용하도록 처음 구성되면, 서버
 
 ### <a name="general-guidelines"></a>일반적인 지침
 - Azure Key Vault와 Azure SQL Database가 동일한 테넌트에 포함되어야 합니다.  테넌트 간 키 자격 증명 모음 및 서버 상호 작용은 **지원되지 않습니다**.
-- 필요한 리소스에 사용할 구독을 결정합니다. 나중에 서버를 다른 구독으로 이동하려면 BYOK 기반 TDE를 새로 설정해야 합니다.
+- 필요한 리소스에 사용할 구독을 결정합니다. 나중에 서버를 다른 구독으로 이동하려면 BYOK 기반 TDE를 새로 설정해야 합니다. [리소스 이동](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)에 대한 자세한 정보
 - BYOK 기반 TDE를 구성할 때에는 래핑/래핑 해제 작업 때문에 키 자격 증명 모음에 적용되는 부하를 고려하는 것이 중요합니다. 예를 들어 논리 서버와 연결된 모든 데이터베이스는 동일한 TDE 보호기를 사용하며, 따라서 해당 서버를 장애 조치(failover)하면 서버에 있는 데이터베이스 수만큼 자격 증명 모음에 대한 키 작업이 트리거됩니다. 우리가 경험한 내용과 [키 자격 증명 모음 서비스 제한](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)에 설명된 내용에 따라, 자격 증명 모음의 TDE 보호기에 액세스할 때 일관적으로 고가용성을 보장할 수 있도록 단일 구독의 Azure Key Vault 하나에 표준/범용 데이터베이스는 최대 500개 또는 프리미엄/중요 비즈니스용 데이터베이스는 최대 200개까지만 연결하는 것이 좋습니다. 
 - 권장 사항: 온-프레미스에 TDE 보호기 사본을 유지합니다.  이렇게 하려면 로컬로 TDE 보호기를 생성할 HSM 장치와 TDE 보호기의 로컬 복사본을 저장할 키 에스크로 시스템이 필요합니다.
 
@@ -68,6 +68,7 @@ TDE가 Key Vault의 TDE 보호기를 사용하도록 처음 구성되면, 서버
 - 키 또는 키 자격 증명 모음이 우발적으로 삭제되는 경우 데이터 손실을 방지하기 위해 [일시 삭제](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)가 설정된 키 자격 증명 모음을 만듭니다.  키 자격 증명 모음에서 ["일시 삭제" 속성을 활성화하는 PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)을 사용해야 합니다(이 옵션은 아직 AKV 포털에서 사용할 수 없으나 SQL에서 필요함).  
   - 일시 삭제된 리소스는 복구되거나 제거되지 않는 한 설정된 기간인 90일 동안 보존됩니다.
   - **복구** 및 **제거** 작업에는 키 자격 증명 모음 액세스 정책과 연결된 고유 권한이 있습니다. 
+- 키 자격 증명 모음에 대한 리소스 잠금을 설정하여 이 중요 리소스를 삭제할 수 있는 사용자를 제어하고 우발적이거나 권한 없는 삭제를 방지할 수 있습니다.  [리소스 잠금에 대한 자세한 정보](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - Azure AD(Azure Active Directory) ID를 사용하여 키 자격 증명 모음에 대한 논리 서버 액세스 권한을 부여합니다.  포털 UI를 사용하는 경우 Azure AD ID가 자동으로 생성되며 키 자격 증명 모음 액세스 권한이 서버에 부여됩니다.  PowerShell을 사용하여 BYOK 기반 TDE를 구성하면 Azure AD ID가 생성되어야 하며 완료를 확인해야 합니다. PowerShell을 사용하는 경우 자세한 단계별 지침은 [BYOK 기반 TDE 구성](transparent-data-encryption-byok-azure-sql-configure.md)을 참조하세요.
 

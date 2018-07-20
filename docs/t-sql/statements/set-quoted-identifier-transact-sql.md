@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/03/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b78a2ba8a3d9520376746da1810c4a2d64324781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba68407344b9b5fe79d8230a9036b13dcb17eeae
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074080"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784614"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +82,7 @@ SET QUOTED_IDENTIFIER ON
   
  또한 SET QUOTED_IDENTIFIER는 ALTER DATABASE의 QUOTED_IDENTIFIER 설정에 해당합니다. 데이터베이스 설정에 대한 자세한 내용은 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)을 참조하세요.  
   
- QUOTED_IDENTIFIER는 구문 분석 시 적용되며 쿼리 실행이 아닌 구문 분석에만 영향을 줍니다.  
+ SET QUOTED_IDENTIFIER는 구문 분석 시 적용되며 쿼리 실행이 아닌 구문 분석에만 영향을 줍니다.  
   
  최상위 수준의 임시 일괄 처리를 위해 QUOTED_IDENTIFIER에 대한 세션의 현재 설정을 사용하여 구문 분석을 시작합니다.  일괄 처리가 SET QUOTED_IDENTIFIER의 모든 발생 경우를 구문 분석하여 그 지점부터 구문 분석 동작을 변경하고 해당 세션의 설정을 저장합니다.  따라서 일괄 처리가 구문 분석되고 실행된 후 세션의 QUOTED_IDENTIFER 설정은 일괄 처리에서 마지막으로 발생한 SET QUOTED_IDENTIFIER에 따라 설정됩니다.  
  저장 프로시저의 정적 SQL은 저장 프로시저를 만들거나 변경한 일괄 처리에 대해 유효한 QUOTED_IDENTIFIER 설정을 사용하여 구문 분석됩니다.  SET QUOTED_IDENTIFIER는 저장 프로시저 본문에 정적 SQL로 표시되면 아무 효과가 없습니다.  
@@ -196,7 +195,7 @@ GO
  ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

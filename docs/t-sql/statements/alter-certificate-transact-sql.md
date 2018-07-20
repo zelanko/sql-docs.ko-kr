@@ -1,10 +1,9 @@
 ---
 title: ALTER CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/12/2017
+ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b478026b549078601540322e8f249cc718146425
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9890f1f127b20cb857822df66b30b165f0862ab
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065070"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781844"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   인증서를 암호화하는 데 사용된 개인 키를 변경하거나 개인 키가 없는 경우 추가합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 인증서의 가용성을 변경합니다.  
   
@@ -59,7 +58,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -96,7 +95,7 @@ ALTER CERTIFICATE certificate_name
   
  데이터베이스에 있는 기존 인증서의 개인 키를 파일에서 가져오는 경우 해당 개인 키는 데이터베이스 마스터 키로 자동으로 보호됩니다. 개인 키를 암호로 보호하려면 ENCRYPTION BY PASSWORD 절을 사용합니다.  
   
- REMOVE PRIVATE KEY 옵션을 사용하면 데이터베이스에서 인증서의 개인 키를 삭제할 수 있습니다. 서명의 유효성 검증에 인증서를 사용할 때 또는 개인 키가 필요 없는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 시나리오에서 이 옵션을 사용할 수 있습니다. 대칭 키를 보호하는 인증서의 개인 키는 제거하지 마십시오.  
+ REMOVE PRIVATE KEY 옵션을 사용하면 데이터베이스에서 인증서의 개인 키를 삭제할 수 있습니다. 서명 확인에 인증서를 사용할 때 또는 개인 키가 필요 없는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 시나리오에서 개인 키를 제거할 수 있습니다. 대칭 키를 보호하는 인증서의 개인 키는 제거하지 마십시오.  
   
  데이터베이스 마스터 키를 사용하여 개인 키를 암호화한 경우에는 해독 암호를 지정할 필요가 없습니다.  
   

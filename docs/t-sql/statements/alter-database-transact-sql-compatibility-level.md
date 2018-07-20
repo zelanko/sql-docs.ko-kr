@@ -1,10 +1,9 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: edmacauley
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg'
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689141"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791514"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 특정 데이터베이스 동작이 지정된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환되도록 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
   
 ## <a name="syntax"></a>구문  
   
@@ -56,12 +54,13 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  수정할 데이터베이스의 이름입니다.  
   
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
- 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. 다음 호환성 수준 값을 구성할 수 있습니다.  
+ 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. 다음 호환성 수준 값을 구성할 수 있습니다(모든 버전이 위의 나열된 호환성 수준을 모두 지원하지는 않음).  
   
 |Product|데이터베이스 엔진 버전|호환성 수준 지정|지원되는 호환성 수준 값|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 논리 서버|12|130|140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|130|140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -97,7 +96,7 @@ SELECT name, compatibility_level FROM sys.databases;
 
 데이터베이스가 연결 또는 복원된 경우, 그리고 현재 위치 업그레이드 이후에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 아래 동작이 예상됩니다. 
 - 사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다.    
-- 업그레이드 이전에 사용자데 이터베이스의 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.    
+- 업그레이드 이전에 사용자 데이터베이스의 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.    
 - 업그레이드 후에는 tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 현재 호환성 수준으로 설정됩니다.  
 - master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.
 
@@ -136,8 +135,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>이전 버전과의 호환을 위해 호환성 수준 사용  
 *데이터베이스 호환성 수준* 설정은 전체 서버가 아닌 지정된 데이터베이스의 동작에만 적용됩니다. 데이터베이스 호환성 수준은 부분적으로만 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 제공합니다.   
+
+> [!TIP]
+> ‘데이터베이스 호환성 수준’은 데이터베이스 수준 설정이므로 이전 데이터베이스 호환성 수준을 사용하는 동안 최신 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 실행되는 응용 프로그램은 응용 프로그램을 변경할 필요 없이 서버 수준 개선 사항을 계속 활용할 수 있습니다.
+>
+> 여기에는 새로운 [시스템 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 통한 풍부한 모니터링 및 문제 해결 개선 사항이 포함됩니다. 또한 [자동 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) 등을 통해 확장성이 개선되었습니다.
+
 호환성 모드 130부터 기능에 영향을 주는 새로운 쿼리 계획이 새 호환성 수준에만 의도적으로 추가되었습니다. 쿼리 계획 변경으로 인해 성능 저하가 발생하는 업그레이드 중 위험을 최소화하기 위해 이를 수행했습니다.   
-응용 프로그램 관점에서 새로운 기능 중 일부와 쿼리 최적화 프로그램 영역의 성능 개선을 통제된 방법으로 상속하기 위해서는 나중에 언젠가 최신 호환성 수준으로 업그레이드하는 것을 계속 목표로 해야 합니다. 더 안전한 마이그레이션 도구로 하위 호환성 수준을 사용하여 관련 호환성 수준 설정에서 제어하는 동작의 버전 차이를 해결할 수 있습니다. 데이터베이스 호환성 수준 업그레이드에 권장되는 워크플로를 비롯한 자세한 내용은 이 아티클의 뒷부분에 나오는 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](#best-practices-for-upgrading-database-compatibility-evel)를 참조하세요.  
+응용 프로그램 관점에서 새로운 기능 중 일부와 쿼리 최적화 프로그램 영역의 성능 개선을 통제된 방법으로 상속하기 위해서는 나중에 언젠가 최신 호환성 수준으로 업그레이드하는 것을 계속 목표로 해야 합니다. 더 안전한 마이그레이션 도구로 하위 호환성 수준을 사용하여 관련 호환성 수준 설정에서 제어하는 동작의 버전 차이를 해결할 수 있습니다. 데이터베이스 호환성 수준 업그레이드에 권장되는 워크플로를 비롯한 자세한 내용은 이 아티클의 뒷부분에 나오는 [데이터베이스 호환성 수준 업그레이드에 대한 모범 사례](#best-practices-for-upgrading-database-compatibility-level)를 참조하세요.  
   
 > [!IMPORTANT]
 > 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 도입된 지원되지 않는 기능은 호환성 수준으로 보호되지 않습니다. 이는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 제거된 기능을 나타냅니다.
@@ -350,7 +355,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
-SET compatibility_level = 90;  
+SET compatibility_level = 110;  
 GO  
 USE AdventureWorks2012;  
 GO  
@@ -376,7 +381,7 @@ SELECT @v;
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [예약 키워드&#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  

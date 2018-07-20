@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -60,16 +59,16 @@ helpviewer_keywords:
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744132"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909583"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -512,7 +511,7 @@ WITH CHECK | WITH NOCHECK
   
  다음과 같은 열은 삭제할 수 없습니다.  
   
--   인덱스에 사용된 열  
+-   인덱스에서 키 열 또는 INCLUDE로 사용됩니다.
   
 -   CHECK, FOREIGN KEY, UNIQUE 또는 PRIMARY KEY 제약 조건에 사용되는 열  
   
@@ -645,7 +644,7 @@ WITH CHECK | WITH NOCHECK
   
  *partition_scheme_name*이 지정되면 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)에 대한 규칙이 적용됩니다. 테이블은 이미 행 데이터를 위해 분할되어 있어야 하며 테이블의 파티션 구성표는 FILESTREAM 파티션 구성표와 동일한 파티션 함수 및 열을 사용해야 합니다.  
   
- *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 한 파일이 있어야 하며 그렇지 않으면 오류가 발생합니다.  
+ *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 한 파일이 있어야 하며 그렇지 않으면 오류가 발생합니다.  
   
  **"** default **"** 는 DEFAULT 속성이 설정된 FILESTREAM 파일 그룹을 지정합니다. FILESTREAM 파일 그룹이 없으면 오류가 발생합니다.  
   

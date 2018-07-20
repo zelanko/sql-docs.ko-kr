@@ -1,7 +1,7 @@
 ---
 title: Integration Services(SSIS)에 대한 Azure 기능 팩 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f30a22035e141a7a10bc6069a8d1b6eb26818029
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bc49dc5bd2375d52d3f8a849578bd5ac9ef74430
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405055"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934865"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.
@@ -39,33 +39,37 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
 ## <a name="components-in-the-feature-pack"></a>기능 팩의 구성 요소
 -   연결 관리자
 
+    -   [Azure Data Lake Analytics 연결 관리자](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Azure Data Lake Store 연결 관리자](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure HDInsight 연결 관리자](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Azure Resource Manager 연결 관리자](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Azure Storage 연결 관리자](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Azure 구독 연결 관리자](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Azure Data Lake Store 연결 관리자](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Azure Resource Manager 연결 관리자](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Azure HDInsight 연결 관리자](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   태스크
-
-    -   [Azure Blob 업로드 태스크](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Azure Blob 다운로드 작업](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Azure HDInsight 하이브 태스크](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Azure Blob 업로드 태스크](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Azure HDInsight Pig 태스크](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Azure Data Lake Analytics 태스크](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Azure Data Lake Store 파일 시스템 태스크](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Azure HDInsight 클러스터 만들기 태스크](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Azure HDInsight 클러스터 삭제 작업](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Azure SQL DW 업로드 태스크](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Azure HDInsight 하이브 태스크](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Azure Data Lake Store 파일 시스템 태스크](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Azure HDInsight Pig 태스크](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Azure SQL DW 업로드 태스크](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   데이터 흐름 구성 요소
 
@@ -77,7 +81,7 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
     
     -   [Azure Data Lake Store 대상](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob 및 ADLS File 열거자 [Foreach 루프 컨테이너](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)를 참조하세요.
+-   Azure Blob 및 Azure Data Lake Store 파일 열거자를 참조하세요. [Foreach 루프 컨테이너](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)를 참조하세요.
 
 ## <a name="scenario-processing-big-data"></a>시나리오: 빅 데이터 처리
  Azure 커넥터를 사용하여 다음과 같은 빅 데이터 처리 작업을 완료합니다.

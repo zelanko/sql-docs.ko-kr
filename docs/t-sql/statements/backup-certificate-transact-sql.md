@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,16 +28,16 @@ helpviewer_keywords:
 - cryptography [SQL Server], certificates
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13d7e7e0c6ddb7760bb28dfd703904957c4fd820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067310"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788294"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -84,7 +83,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  키를 백업 파일에 작성하기 전에 개인 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다.  
   
  *decryption_password*  
- 키를 백업하기 전에 개인 키의 암호를 해독하는 데 사용되는 암호입니다.  
+ 키를 백업하기 전에 개인 키의 암호를 해독하는 데 사용되는 암호입니다. 인증서가 마스터 키로 암호화된 경우에는 필요하지 않습니다. 
   
 ## <a name="remarks"></a>Remarks  
  개인 키가 데이터베이스에 있는 암호로 암호화된 경우 암호 해독 암호를 지정해야 합니다.  

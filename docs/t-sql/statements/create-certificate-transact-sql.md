@@ -1,10 +1,9 @@
 ---
 title: CREATE CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,19 +27,19 @@ helpviewer_keywords:
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: abd46332127b1b15280df0ec5bab5655da5a148a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074850"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942839"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스에 인증서를 추가합니다.  
 
@@ -92,7 +91,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -184,7 +183,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  암호화 및 서명에 대한 기본 제공 함수는 인증서의 만료 날짜를 검사하지 않습니다. 이러한 함수의 사용자는 인증서 만료에 대한 검사 시기를 결정해야 합니다.  
   
- [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 및 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 함수를 사용하여 인증서의 이진 설명을 만들 수 있습니다. **CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 예는 [CERTENCODED &#40;Transact-SQL&#41](../../t-sql/functions/certencoded-transact-sql.md) 항목의 예제 2를 참조하세요.  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 및 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 함수를 사용하여 인증서의 이진 설명을 만들 수 있습니다. **CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 예는 [CERTENCODED &#40;Transact-SQL&#41](../../t-sql/functions/certencoded-transact-sql.md) 문서의 예제 B를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CREATE CERTIFICATE 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 응용 프로그램 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
@@ -233,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>4. 자체 서명된 인증서 만들기  
- 다음 예에서는 암호화된 암호를 지정하지 않고 `Shipping04`라는 인증서를 만듭니다. 이 예는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]와 함께 사용할 수 있습니다.
+ 다음 예에서는 암호화된 암호를 지정하지 않고 `Shipping04`라는 인증서를 만듭니다. 이 예제는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]와 함께 사용할 수 있습니다.
   
 ```  
 CREATE CERTIFICATE Shipping04   

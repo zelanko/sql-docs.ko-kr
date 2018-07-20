@@ -1,7 +1,7 @@
 ---
 title: SSIS를 사용하여 Excel에서 가져오기 또는 Excel로 내보내기 | Microsoft Docs
 description: 필수 조건, 알려진 문제 및 제한 사항과 함께 SSIS(SQL Server Integration Services)를 사용하여 Excel 데이터 가져오거나 내보내는 방법을 알아봅니다.
-ms.date: 04/10/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,51 +13,62 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403395"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137932"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
-이 문서에서는 SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 가져오거나 Excel로 데이터를 내보내는 방법을 설명합니다. 또한 필수 구성 요소, 제한 사항 및 알려진 문제를 설명합니다.
+이 문서에서는 SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내기 위해 제공해야 하는 연결 정보와 구성해야 하는 설정을 설명합니다.
 
-SSIS 패키지를 만들고 Excel 연결 관리자 및 Excel 원본 또는 Excel 대상을 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보낼 수 있습니다. 또한 SSIS를 기반으로 하는 SQL Server 가져오기 및 내보내기 마법사를 사용할 수 있습니다.
+다음 섹션에는 SSIS에서 Excel을 성공적으로 사용하고 일반적인 문제를 이해하고 해결하는 데 필요한 정보가 포함되어 있습니다.
 
-이 아티클에는 SSIS에서 Excel을 성공적으로 사용하거나 일반적인 문제를 이해하고 해결하는 데 필요한 세 가지 정보 집합이 포함되어 있습니다.
-1.  [필요한 파일](#files-you-need).
-2.  Excel에서 또는 Excel로 데이터를 로드할 때 제공해야 하는 정보입니다.
+1.  사용할 수 있는 [도구](#tools).
+
+2.  필요한 [파일](#files-you-need).
+
+3.  Excel에서 데이터를 로드할 때 제공해야 하는 연결 정보와 구성해야 하는 설정입니다.
     -   데이터 원본으로 [Excel을 지정](#specify-excel)합니다.
     -   [Excel 파일 이름 및 경로](#excel-file)를 제공합니다.
     -   [Excel 버전](#excel-version)을 선택합니다.
     -   [첫 번째 행에 열 이름을 포함](#first-row)할지 여부를 지정합니다.
     -   [데이터를 포함하는 워크시트 또는 범위](#sheets-ranges)를 제공합니다.
-3.  알려진 문제 및 제한 사항입니다.
+
+4.  알려진 문제 및 제한 사항입니다.
     -   [데이터 형식](#issues-types) 문제입니다.
     -   [가져오기](#issues-importing) 문제입니다.
     -   [내보내기](#issues-exporting) 문제입니다.
+
+## <a name="tools"></a> 사용할 수 있는 도구
+
+다음 도구 중 하나를 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보낼 수 있습니다.
+
+-   **SSIS(SQL Server Integration Services)** Excel 연결 관리자를 사용하여 Excel 원본 또는 Excel 대상을 사용하는 SSIS 패키지를 만듭니다. 이 문서에서는 SSIS 패키지를 디자인하는 방법을 설명하지 않습니다.
+
+-   SSIS에 빌드되는 **SQL Server 가져오기 및 내보내기 마법사**. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) 및 [Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 ## <a name="files-you-need"> </a> Excel에 연결하는 데 필요한 파일 가져오기
 
 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내려면 Excel용 연결 구성 요소가 설치되어 있지 않은 경우 먼저 다운로드해야 합니다. Excel용 연결 구성 요소는 기본적으로 설치되어 있지 않습니다.
 
-[Microsoft Access 데이터베이스 엔진 2016 재배포 가능](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Excel용 연결 구성 요소를 다운로드합니다.
-  
-최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
+[Microsoft Access 데이터베이스 엔진 2016 재배포 가능](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Excel용 연결 구성 요소를 다운로드합니다. 최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
 
-Microsoft Access 2016 *런타임*이 아닌 Access 데이터베이스 엔진 2016 *재배포 가능 패키지*를 다운로드해야 합니다.
+### <a name="notes-about-the-download-and-installation"></a>다운로드 및 설치에 대한 참고
 
-컴퓨터에 32비트 버전의 Office가 이미 설치되어 있는 경우 32비트 버전의 구성 요소를 설치해야 합니다. 또한 32비트 모드에서 SSIS 패키지를 실행하거나 가져오기 및 내보내기 마법사의 32비트 버전을 실행하는지 확인해야 합니다.
+-   Microsoft Access 2016 *런타임*이 아닌 Access 데이터베이스 엔진 2016 *재배포 가능 패키지*를 다운로드해야 합니다.
 
-Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+-   컴퓨터에 32비트 버전의 Office가 이미 설치되어 있는 경우 32비트 버전의 구성 요소를 설치해야 합니다. 또한 32비트 모드에서 SSIS 패키지를 실행하거나 가져오기 및 내보내기 마법사의 32비트 버전을 실행하는지 확인해야 합니다.
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 
-2016 재배포 가능을 설치하는 데 문제가 있는 경우 [Microsoft Access 데이터베이스 엔진 2010 재배포 가능](https://www.microsoft.com/download/details.aspx?id=13255)에서 2010 재배포 가능 패키지를 대신 설치합니다. (Excel 2013용 재배포 가능 패키지는 없습니다.)
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="specify-excel"></a> Excel 지정
+    2016 재배포 가능을 설치하는 데 문제가 있는 경우 [Microsoft Access 데이터베이스 엔진 2010 재배포 가능](https://www.microsoft.com/download/details.aspx?id=13255)에서 2010 재배포 가능 패키지를 대신 설치합니다. (Excel 2013용 재배포 가능 패키지는 없습니다.)
+
+## <a name="specify-excel"></a> Excel을 데이터 원본으로 지정
 
 첫 번째 단계는 Excel에 연결하려 함을 나타내는 것입니다.
 

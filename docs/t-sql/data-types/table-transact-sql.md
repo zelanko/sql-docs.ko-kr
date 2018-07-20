@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054227"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432242"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ SELECT select_list INTO table_variable;
   
 **테이블** 변수를 수정하는 쿼리는 병렬 쿼리 실행 계획을 생성하지 않습니다. 매우 큰 **테이블** 변수나 복잡한 쿼리의 **테이블** 변수를 수정하면 성능에 영향을 줄 수 있습니다. 이런 상황에서는 임시 테이블을 대신 사용해 보세요. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요. 수정하지 않고 **테이블** 변수를 읽는 쿼리는 병렬 처리할 수 있습니다.
   
-명시적으로 **테이블** 변수에 대한 인덱스를 만들 수 없으며 **테이블** 변수에 대한 통계는 유지되지 않습니다. 경우에 따라서는 인덱스와 통계를 지원하는 임시 테이블을 대신 사용하여 성능을 향상시킬 수도 있습니다. 임시 테이블에 대한 자세한 내용은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
-  
+명시적으로 **테이블** 변수에 대한 인덱스를 만들 수 없으며 **테이블** 변수에 대한 통계는 유지되지 않습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터, 테이블 정의와 함께 특정 인덱스 유형을 인라인으로 만들 수 있는 새 구문이 도입되었습니다.  이 새 구문을 사용하여 테이블 정의의 일부로 **테이블** 변수의 인덱스를 만들 수 있습니다. 경우에 따라 전체 인덱스 지원과 통계를 제공하는 임시 테이블을 대신 사용하여 성능을 향상할 수도 있습니다. 임시 테이블 및 인라인 인덱스 만들기에 대한 자세한 내용은 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
+
+
 **테이블** 형식 선언 내의 CHECK 제약 조건, DEFAULT 값 및 계산 열은 사용자 정의 함수를 호출할 수 없습니다.
   
 **테이블** 변수 간의 할당 작업은 지원되지 않습니다.

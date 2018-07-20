@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582305"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782714"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.  
   
- *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 파일이 하나 포함되어야 하며, 그렇지 않으면 오류가 발생합니다.  
+ *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 파일이 하나 포함되어야 하며, 그렇지 않으면 오류가 발생합니다.  
   
  테이블이 분할된 경우에는 FILESTREAM_ON 절이 포함되어야 하며 이 절에서 테이블의 파티션 구성표와 동일한 파티션 함수 및 파티션 열을 사용하는 FILESTREAM 파일 그룹의 파티션 구성표를 지정해야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
@@ -461,7 +462,26 @@ ONLINE = { ON | **OFF** }
  인덱스 작업 중에 테이블 잠금이 적용됩니다. 클러스터형 인덱스를 생성, 다시 작성 또는 삭제하거나 비클러스터형 인덱스를 다시 작성 또는 삭제하는 오프라인 인덱스 작업을 통해 테이블의 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다. 비클러스터형 인덱스를 만드는 오프라인 인덱스 작업을 통해 테이블의 S(공유) 잠금을 획득합니다. 따라서 기본 테이블을 업데이트할 수 없지만 SELECT 문과 같은 읽기 작업은 허용됩니다.  
   
  자세한 내용은 [온라인 인덱스 작업의 작동 원리](../../relational-databases/indexes/how-online-index-operations-work.md)를 참조하세요.  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)](공개 미리 보기 기능으로)
+
+ 온라인 인덱스 작업이 다시 시작될 수 있는지 여부를 지정합니다.
+
+ ON 인덱스 작업이 다시 시작될 수 있습니다.
+
+ OFF 인덱스 작업이 다시 시작될 수 없습니다.
+
+MAX_DURATION **=** *time* [**MINUTES**는] **RESUMABLE = ON** 상태에서만 사용됩니다(**ONLINE = ON** 필요).
+ 
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)](공개 미리 보기 기능으로) 
+
+다시 시작할 수 있는 온라인 인덱스 작업이 일시 중지하기 전에 실행된 시간을 나타냅니다(분 단위로 지정된 정수 값). 
+
+> [!WARNING]
+>  온라인으로 수행할 수 있는 인덱스 작업에 대한 자세한 내용은 [온라인 인덱스 작업 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
+
  전역 임시 테이블의 인덱스를 포함한 인덱스는 다음 예외의 경우를 제외하고 온라인 상태로 만들 수 있습니다.  
   
 -   XML 인덱스  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산된 열은 계산된 열 데이터 형식이 인덱스 키 열 또는 키가 아닌 열로 허용된다면 키로 인덱싱하거나 키가 아닌 열을 포함할 수 있습니다. 예를 들어 계산된 **xml** 열에 기본 XML 인덱스를 만들 수 없습니다. 인덱스 키 크기가 900바이트를 초과하면 경고 메시지가 표시됩니다.  
   
- 계산 열에 인덱스를 만들면 이전에 작업한 삽입 또는 업데이트 작업이 실패할 수 있습니다. 계산 열에서 산술 오류가 발생하는 경우 이러한 실패가 발생할 수 있습니다. 예를 들어 다음 테이블의 계산 열 `c`에 산술 오류가 발생해도 `INSERT` 문은 실행됩니다.  
+ 계산 열에 인덱스를 만들면 이전에 작업한 삽입 또는 업데이트 작업이 실패할 수 있습니다. 계산 열에서 산술 오류가 발생하는 경우 이러한 실패가 발생할 수 있습니다. 예를 들어 다음 테이블의 계산 열 `c`에 산술 오류가 발생해도 INSERT 문은 실행됩니다.  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   온라인 작업은 분할된 인덱스 및 지속형 계산 열이 들어 있는 인덱스 또는 포괄 열에서 수행될 수 있습니다.  
   
  자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
-  
+ 
+### <a name="resumable-indexes"></a> 다시 시작 가능한 인덱스 작업
+
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)](공개 미리 보기 기능으로)
+
+다음 지침은 다시 시작 가능한 인덱스 작업에 적용됩니다.
+
+- 온라인 인덱스 만들기는 RESUMABLE=ON 옵션을 사용하여 다시 시작 가능으로 지정됩니다. 
+- RESUMABLE 옵션은 지정된 인덱스에 대해 메타데이터에서 지속되며 현재 DDL 문의 기간에만 적용됩니다. 그러므로 다시 시작이 가능하도록 하려면 RESUMABLE=ON 절을 명시적으로 지정해야 합니다.
+- MAX_DURATION 옵션은 RESUMABLE=ON 옵션에만 지원됩니다. 
+-  RESUMABLE에 대한 MAX_DURATION은 인덱스 작성 시간 간격을 지정합니다. 이 시간이 사용된 후 인덱스 다시 작성이 일시 중지되거나 실행이 완료됩니다. 사용자는 일시 중지된 인덱스의 작성을 다시 시작할 시간을 결정합니다. MAX_DURATION에 대한 분 단위의 **시간**은 0분보다 크거나 1주일(7 * 24 * 60 = 10080분) 이하여야 합니다. 원래 인덱스와 새로 만든 인덱스 두 인덱스가 모두 디스크 공간을 필요로 하고 DML 작업 중에 업데이트되어야 하므로, 인덱스 작업을 오랫동안 일시 중지하면 특정 테이블에 대한 DML 성능 및 데이터베이스 디스크 용량에 영향을 미칠 수 있습니다. MAX_DURATION 옵션을 생략하면 인덱스 작업은 완료될 때까지 또는 실패가 발생할 때까지 계속됩니다. 
+- 인덱스 작업을 즉시 일시 중지하려면 진행 중인 명령을 중지하거나(Ctrl-C) [ALTER INDEX](alter-index-transact-sql.md) PAUSE 명령 또는 KILL `<session_id>` 명령을 실행할 수 있습니다. 명령이 일시 중지되면 [ALTER INDEX](alter-index-transact-sql.md) 명령을 사용하여 다시 시작할 수 있습니다. 
+- 다시 시작 가능한 인덱스의 원래 CREATE INDEX 문을 다시 실행하면 일시 중지된 인덱스 작성 작업이 자동으로 다시 시작됩니다.
+- 다시 시작 가능한 인덱스의 경우 SORT_IN_TEMPDB=ON 옵션이 지원되지 않습니다. 
+- RESUMABLE=ON 상태의 DDL 명령은 명시적 트랜잭션 내에서 실행할 수 없습니다(begin TRAN … COMMIT 블록에 포함될 수 없음).
+- 인덱스 작성/다시 작성을 다시 시작/중단하려면 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 구문을 사용합니다.
+
+> [!NOTE]
+> DDL 명령은 완료, 일시 중지 또는 실패할 때까지 실행됩니다. 명령이 일시 중지된 경우 작업이 일시 중지되었고 인덱스 만들기가 완료되지 않았음을 알려 주는 오류가 발생합니다. 현재 인덱스 상태에 대한 더 자세한 내용은 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)에서 가져올 수 있습니다. 이전과 마찬가지로 실패의 경우 오류도 발생합니다. 
+
+인덱스 만들기가 다시 시작 가능한 작업으로 실행되도록 지정하려면 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)를 참조하세요. 공개 미리 보기의 경우 이 뷰의 다음 열은 0으로 설정됩니다.
+- total_execution_time
+- percent_complete 및 page_count
+
+**리소스** 다시 시작 가능한 온라인 인덱스 만들기 작업에는 다음 리소스가 필요합니다.
+- 인덱스가 일시 중지될 시간을 포함하여 작성 중인 인덱스를 유지하기 위해 필요한 추가 공간
+- 정렬 단계 중의 추가 로그 처리량. 다시 시작 가능한 인덱스의 전체 로그 공간 사용량이 일반 온라인 인덱스 만들기에 비교해 적으므로 이 작업 중에 로그가 잘릴 수 있습니다.
+- DDL 수정을 하지 못하게 하는 DDL 상태
+  - 일시 중지된 동안 및 작업이 실행되는 동안의 작업 기간에 작성 중인 인덱스에 대한 고스트 정리는 차단됩니다.
+
+**현재 기능 제한 사항**
+
+> [!IMPORTANT]
+> **다시 시작 가능한 온라인 인덱스 만들기**는 현재 비클러스터형 인덱스에만 지원됩니다.
+
+다음 기능은 다시 시작 가능한 인덱스 만들기 작업에 사용할 수 없습니다.
+- 다시 시작 가능한 인덱스 만들기는 공개 미리 보기의 클러스터형 인덱스에 지원되지 않음
+- 다시 시작 가능한 온라인 인덱스 만들기 작업이 일시 중지된 후에는 MAXDOP의 초기 값을 변경할 수 없음
+- DROP EXISTING 절이 지원되지 않음
+- 다음을 포함하는 인덱스 만들기 
+ - Computed 또는 TIMESTAMP 열을 키 열로 포함
+ - 다시 시작 가능한 인덱스 만들기용으로 LOB 열을 포함된 열로 포함
+- 필터링된 인덱스
+ 
 ## <a name="row-and-page-locks-options"></a>행 및 페이지 잠금 옵션  
  ALLOW_ROW_LOCKS = ON이고 ALLOW_PAGE_LOCK = ON이면 인덱스에 액세스할 때 행, 페이지 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>13. 다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="m-basic-syntax"></a>13. 기본 구문  
-  
+### <a name="n-basic-syntax"></a>14. 기본 구문  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>다시 시작 가능한 인덱스 작업 만들기, 다시 시작, 일시 중지 및 중단
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>14. 현재 데이터베이스의 테이블에 비클러스터형 인덱스 만들기  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>15. 현재 데이터베이스의 테이블에 비클러스터형 인덱스 만들기  
  다음 예제에서는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>15. 다른 데이터베이스의 테이블에 클러스터형 인덱스 만들기  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>16. 다른 데이터베이스의 테이블에 클러스터형 인덱스 만들기  
  다음 예제에서는 `Purchasing` 데이터베이스에 있는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.  
   
 ```sql  

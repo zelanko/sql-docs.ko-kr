@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,15 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075180"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790404"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,10 @@ ms.locfileid: "33075180"
 -   인라인 함수를 보안 정책의 필터 조건자로 사용  
   
 > [!NOTE]  
->  이 항목에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure SQL Database에는 CLR 통합이 적용되지 않습니다.  
+>  이 항목에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure SQL Database에는 CLR 통합이 적용되지 않습니다.
+
+> [!NOTE]  
+>  Azure SQL Data Warehouse의 경우 [CREATE FUNCTION(SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016) 문서를 참조하세요.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -573,7 +575,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>계산된 열 상호 운용성  
  함수는 다음 속성을 가집니다. 이러한 속성의 값은 지속 또는 인덱싱할 수 있는 계산 열에 함수를 사용할 수 있는지 여부를 결정합니다.  
   
-|속성|Description|참고|  
+|속성|설명|참고|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|함수가 결정적 또는 비결정적입니다.|결정적 함수에서는 로컬 데이터 액세스가 허용됩니다. 예를 들어 동일한 데이터베이스 상태에서 특정 입력 값 집합을 사용하여 호출할 때 항상 동일한 결과를 반환하는 함수는 결정적인 함수입니다.|  
 |**IsPrecise**|함수는 정확하거나 정확하지 않습니다.|정확하지 않은 함수에는 부동 소수점 연산과 같은 연산이 포함됩니다.|  
@@ -649,7 +651,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>메타데이터  
  다음 표에서는 사용자 정의 함수에 대한 메타데이터를 반환하는 데 사용할 수 있는 시스템 카탈로그 뷰를 나열합니다.  
   
-|시스템 뷰|Description|  
+|시스템 뷰|설명|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|아래 예제 섹션의 예제 E를 참조하세요.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR 사용자 정의 함수에 대한 정보를 표시합니다.|  

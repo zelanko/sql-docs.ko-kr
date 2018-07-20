@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,20 +25,20 @@ helpviewer_keywords:
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acdfdee721729b68b43a6b0a32a10cb91ea6d889
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055200"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790834"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  서버 또는 데이터베이스 이벤트에 대한 정보를 반환합니다. EVENTDATA는 이벤트 알림이 발생할 때 호출되며 결과는 지정된 Service Broker에 반환됩니다. 또한 EVENTDATA는 DDL 또는 LOGON 트리거 본문 내에서 사용할 수 있습니다.  
+이 함수는 서버 또는 데이터베이스 이벤트 정보를 반환합니다. 이벤트 알림이 실행되고 지정된 Service Broker가 결과를 수신하면 `EVENTDATA`가 호출됩니다. DDL 또는 로그온 트리거는 `EVENTDATA`의 내부 사용도 지원합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +50,17 @@ EVENTDATA( )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- EVENTDATA는 DDL 또는 LOGON 트리거 내에 직접 참조되는 경우에만 데이터를 반환합니다. 다른 루틴에서 EVENTDATA를 호출한 경우 해당 루틴을 DDL 또는 로그온 트리거가 호출한 것이라 해도 EVENTDATA는 Null을 반환합니다.  
+`EVENTDATA`는 DDL 또는 로그온 트리거 내에 직접 참조되는 경우에만 데이터를 반환합니다. `EVENTDATA`는 DDL 또는 로그온 트리거가 해당 루틴을 호출하는 경우에도 다른 루틴이 이벤트를 호출하면 null을 반환합니다.
   
- EVENTDATA가 반환한 데이터는 EVENTDATA를 호출한 트랜잭션이 암시적으로나 명시적으로 커밋되거나 롤백된 이후에는 유효하지 않습니다.  
+`EVENTDATA`에서 반환된 데이터는 다음 트랜잭션 이후에는 유효하지 않습니다.
+
++ `EVENTDATA`를 명시적으로 호출한 트랜잭션
++ `EVENTDATA`를 암시적으로 호출한 트랜잭션
++ 커밋된 트랜잭션
++ 롤백된 트랜잭션  
   
 > [!CAUTION]  
->  EVENTDATA는 XML 데이터를 반환합니다. 이 데이터는 각 문자에 대해 2바이트를 사용하는 유니코드로 클라이언트에 전송됩니다. 다음 유니코드 코드 포인트는 EVENTDATA가 반환한 XML로 표시할 수 있습니다.  
+>  `EVENTDATA`는 각 문자에 2바이트를 사용하는 유니코드로 클라이언트에 전송되는 XML 데이터를 반환합니다. `EVENTDATA`는 이러한 유니코드 코드 포인트를 나타낼 수 있는 XML을 반환합니다.  
 >   
 >  `0x0009`  
 >   
@@ -68,24 +72,24 @@ EVENTDATA( )
 >   
 >  `>= 0xE000 && <= 0xFFFD`  
 >   
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에 표시되는 일부 문자와 데이터는 XML로 표현되거나 허용되지 않습니다. 이전 목록에 표시되지 않은 코드 포인트가 있는 문자 또는 데이터는 물음표(?)로 매핑됩니다.  
+>  XML은 표시할 수 없으며, [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 및 데이터에 표시될 수 있는 일부 문자를 허용하지 않습니다. 이전 목록에 표시되지 않은 코드 포인트가 있는 문자 또는 데이터는 물음표(?)로 매핑됩니다.  
   
- 로그인의 보안을 보호하기 위해 CREATE LOGIN 또는 ALTER LOGIN 문이 실행될 때 암호가 표시되지 않습니다.  
+`CREATE LOGIN` 또는 `ALTER LOGIN` 문이 실행될 때 암호가 표시되지 않습니다. 이를 통해 로그인 보안을 보호합니다.  
   
 ## <a name="schemas-returned"></a>반환된 스키마  
- EVENTDATA는 **xml** 유형의 값을 반환합니다. 기본적으로 모든 이벤트에 대한 스키마 정의는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd 디렉터리에 설치됩니다.  
+EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 모든 이벤트의 스키마 정의는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd 디렉터리에 설치됩니다.  
   
- 또는 이벤트 스키마는 [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) 웹 페이지에 게시됩니다.  
+[Microsoft SQL Server XML 스키마](http://go.microsoft.com/fwlink/?LinkID=31850) 웹 페이지에도 이벤트 스키마가 있습니다.  
   
- 특정 이벤트에 대한 스키마를 추출하려면 복합 유형 `EVENT_INSTANCE_\<event_type>`에 대한 스키마를 검색하세요. 예를 들어 DROP_TABLE 이벤트에 대한 스키마를 추출하려면 `EVENT_INSTANCE_DROP_TABLE`에 대한 스키마를 검색하세요.  
+특정 이벤트에 대한 스키마를 추출하려면 복합 유형 `EVENT_INSTANCE_<event_type>`에 대한 스키마를 검색하세요. 예를 들어 `DROP_TABLE` 이벤트의 스키마를 추출하려면 `EVENT_INSTANCE_DROP_TABLE`의 스키마를 검색합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>1. DDL 트리거에서 이벤트 데이터 쿼리  
- 다음 예에서는 DDL 트리거를 만들어 데이터베이스에 새 테이블이 생성되는 것을 방지합니다. 트리거를 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 EVENTDATA가 생성한 XML 데이터에 대해 XQuery를 사용하여 캡처합니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)를 참조하세요.  
+이 예제에서는 새 데이터베이스 테이블 만들기를 차단하는 DDL 트리거를 만듭니다. `EVENTDATA`에서 생성한 XML 데이터에 XQuery를 사용하면 트리거를 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 캡처됩니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **표 형태로 결과 표시**를 사용하여 `\<TSQLCommand>` 요소를 쿼리하는 경우 명령 텍스트의 줄 바꿈이 표시되지 않습니다. 대신 **텍스트로 결과 표시**를 사용하세요.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **표 형태로 결과 표시**를 사용하여 `<TSQLCommand>` 요소를 쿼리하는 경우 명령 텍스트의 줄 바꿈이 표시되지 않습니다. 대신 **텍스트로 결과 표시**를 사용하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,10 +115,10 @@ GO
 ```  
   
 > [!NOTE]  
->  이벤트 데이터를 반환하려면 **query()** 메서드보다 XQuery의 **value()** 메서드를 사용하는 것이 좋습니다. **query()** 메서드는 XML 및 출력에서 앰퍼샌드로 이스케이프된 CR/LF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하지만 **value()** 메서드는 출력에서는 볼 수 없는 CR/LF 인스턴스를 표시합니다.  
+>  이벤트 데이터를 반환하려면 **query()** 메서드 대신 XQuery **value()** 메서드를 사용합니다. **query()** 메서드는 XML 및 출력에서 앰퍼샌드로 이스케이프된 CR/LF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하지만 **value()** 메서드는 출력에서는 볼 수 없는 CR/LF 인스턴스를 표시합니다.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>2. DDL 트리거에서 이벤트 데이터가 있는 로그 테이블 만들기  
- 다음 예에서는 모든 데이터베이스 수준 이벤트에 대한 정보를 저장할 테이블을 만들고 DDL 트리거로 이 테이블을 채웁니다. 이벤트 유형 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `EVENTDATA`가 생성한 XML 데이터에 대해 XQuery를 사용하여 캡처됩니다.  
+이 예에서는 모든 데이터베이스 수준 이벤트 정보를 저장할 테이블을 만들고 DDL 트리거로 해당 테이블을 채웁니다. `EVENTDATA`에서 생성된 XML 데이터에 XQuery를 사용하면 이벤트 유형과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 캡처됩니다.  
   
 ```  
 USE AdventureWorks2012;  
