@@ -1,7 +1,7 @@
 ---
-title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
+title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619540"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957726"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-릴리스 번호: 17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+‘17.8에서 SQL 데이터베이스 프로비전과 관련된 버그가 발견되었으므로 SSMS는17.8.1이 17.8로 대체됩니다.’
+
+
+빌드 번호: 14.0.17277.0<br>
+릴리스 날짜: 2018년 6월 26일
+
+
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+데이터베이스 속성:
+
+- 이 향상된 기능은 파일 그룹의 **AUTOGROW_ALL_FILES** 구성 옵션을 공개합니다. 이 새 구성 옵션은 사용 가능한 각 파일 그룹(파일 스트림 및 메모리 최적화 파일 그룹 제외) 확인란의 새 열(모든 파일 자동 증가) 형식으로 [데이터베이스 속성] > [파일 그룹] 창 아래에 추가됩니다. 사용자는 해당 Autogrow_All_Files 확인란을 토글하여 특정 파일 그룹의 AUTOGROW_ALL_FILES를 사용/사용 안 함으로 설정할 수 있습니다. 이렇게 하면 CREATE용 데이터베이스를 스크립팅/데이터베이스용 스크립트를 생성(SQL2016 이상)할 때 **AUTOGROW_ALL_FILES** 옵션이 제대로 스크립팅됩니다.
+    
+SQL 편집기:
+
+- 사용자에게 마스터 액세스 권한이 없는 경우 Azure SQL Database에서 Intellisense 관련 환경이 향상되었습니다.
+
+스크립팅:
+
+- 특히 대기 시간이 긴 연결에 대한 일반적인 성능 향상입니다.
+    
+**AS(Analysis Servics)**
+
+- Analysis Services 클라이언트 라이브러리 및 데이터 공급자가 최신 버전으로 업데이트되어, 새로운 Azure Government AAD 기관에 대한 지원이 추가되었습니다(login.microsoftonline.us).
+
+
+
+### <a name="bug-fixes"></a>버그 수정
+
+**일반 SSMS**
+    
+유지 관리 계획:
+
+- SQL 인증으로 유지 관리 계획을 편집할 때 SQL 인증을 사용하면 “운영자에게 알림 태스크”가 작동하지 않는 문제를 해결했습니다.
+    
+스크립팅:
+
+- SMO의 후처리 작업으로 인해 리소스가 고갈되고 SQL 로그인에 실패하는 문제를 해결했습니다.
+    
+SMO:
+
+- 기본 제약 조건이 있는 열을 추가하고 테이블에 이미 데이터가 있는 경우 Table.Alter()가 실패하는 문제를 해결했습니다. 자세한 내용은 [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)(데이터가 있는 테이블에 열을 추가할 때 인라인 기본 제약 조건을 생성하는 SQL Server SMO)를 참조하세요.
+    
+항상 암호화:
+
+- 분할된 테이블에서 Always Encrypted를 사용할 때 잠금 시간 제한 오류를 유발하는 문제를 해결했습니다(DacFx).
+    
+
+**AS(Analysis Services)**
+
+- 테이블 형식 Analysis Services 1400 수준 호환성 모델에서 OAuth 데이터 원본을 수정할 때 발생한, OAuth 토큰의 변경 내용이 데이터 원본에서 업데이트되지 않는 문제를 해결했습니다.
+- 일부 잘못된 데이터 원본 자격 증명을 사용하거나 Analysis Services 테이블 형식 1400 수준 호환성 모델에서 파워 쿼리(예: Oracle)의 데이터 원본 마이그레이션을 지원하지 않는 데이터 원본을 편집할 때 발생할 수 있는 SSMS의 크래시를 수정했습니다.
+
+
+### <a name="known-issues"></a>알려진 문제
+
+- ‘속성’ 창에서 파일 그룹 속성을 수정한 후 ‘스크립트’ 단추를 클릭하면 두 개의 스크립트(각각 *USE <database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
+- 새로운 *범용* 또는 *중요 비즈니스용* Azure SQL Database 버전으로 작업할 때 일부 대화 상자에서 잘못된 버전이라는 오류가 표시됩니다.
+- XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드해보세요.
+
+
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>[SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126) ![다운로드](../ssdt/media/download.png)
+
 빌드 번호: 14.0.17254.0<br>
 릴리스 날짜: 2018년 5월 9일
+
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -178,9 +252,7 @@ SMO:
 > [!WARNING]
 > [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md)를 사용할 때 SSMS 17.6이 불안정해지고 크래시되는 알려진 문제가 있습니다. Maintenance Plans를 사용하는 경우에는 SSMS 17.6을 설치하지 마세요. 이미 17.6을 설치했고 이 문제가 발생할 경우 SSMS 17.5로 다운그레이드합니다. 
 
-## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
 
-다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>[SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 14.0.17224.0
@@ -310,7 +382,7 @@ XE 프로파일러:
     - 사용자에게 *VIEW SERVER STATE* 권한이 없는 경우 SSMS 크래시가 발생하는 문제를 수정했습니다.
     - XE 프로파일러 라이브 데이터 창을 닫아도 기본 세션이 중지되지 않는 문제를 수정했습니다.
 - 등록된 서버:
-    - "Move To…" 명령이 멈추는 문제를 수정했습니다 - [연결 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 및 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+    - “Move To…” 명령이 멈추는 문제를 수정했습니다([연결 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 및 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)).
 - SMO:
     - 전송 개체의 TransferData 메서드가 작동하지 않는 문제를 수정했습니다.
     - 일시 중지된 SQL DW 데이터베이스에 대해 서버 데이터베이스가 예외를 throw하는 문제를 수정했습니다.
@@ -427,8 +499,8 @@ XE 프로파일러:
 **일반 SSMS**
 
 - MFA를 지원하는 UA를 사용하는 Azure AD 인증에는 다른 SSMS 기능이 지원되지 않습니다.
-   - 데이터베이스 엔진 튜닝 관리자는 Azure AD 인증에 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. "예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다." "데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)".
-- 오류의 DTA 결과에서 쿼리 분석 시도: "개체는 IConvertible을 구현해야 합니다. (mscorlib)".
+   - 데이터베이스 엔진 튜닝 관리자는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 모호하다는 알려진 문제가 있습니다. “파일 또는 어셈블리 ‘Microsoft.IdentityModel.Clients.ActiveDirectory,...’를 로드할 수 없습니다.”가 표시되지만 다음 메시지가 표시되어야 합니다. “데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database (DTAClient)를 지원하지 않습니다.”
+- 오류의 DTA 결과에서 쿼리 분석 시도: “개체는 Iconvertible (mscorlib)을 구현해야 합니다.”
 - *재발된 쿼리*가 개체 탐색기에서 보고서의 쿼리 저장소 목록에서 누락되었습니다.
    - 해결 방법: 마우스 오른쪽 단추로 **쿼리 저장소** 노드를 클릭하고 **재발된 쿼리 보기**를 선택합니다.
 
@@ -511,7 +583,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - **새 테이블/뷰** 디자이너는 이전 스타일 로그인 프롬프트를 표시하며 Azure AD 인증을 위해 작동하지 않습니다.
   - **상위 200개의 행 편집** 기능은 Azure AD 인증을 지원하지 않습니다.
   - **등록된 서버** 구성 요소는 Azure AD 인증을 지원하지 않습니다.
-  - **데이터베이스 엔진 튜닝 관리자**는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. *예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다.* *데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)*.
+  - **데이터베이스 엔진 튜닝 관리자**는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. *예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다.* 데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database (DTAClient)를 지원하지 않습니다..
 
 **AS(Analysis Services)**
 
@@ -728,7 +800,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 암호화가 잘못 처리된 후 모듈을 새로 고치지 못하는 Always Encrypted 오류.
 - OLTP 및 OLAP에 대한 기본 연결 제한 시간을 15초에서 30초로 변경하여 무시된 연결 실패의 클래스를 수정함. 
 - 사용자 지정 보고서가 시작될 때 SSMS 작동이 중단되는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- Azure SQL 데이터베이스에 대한 "스크립트 생성..."에 실패하는 문제를 해결함
+- Azure SQL Database의 “스크립트 생성...”이 실패하는 문제를 해결했습니다.
 - 저장 프로시저와 같은 개체를 스크립팅할 때 줄 바꿈이 추가되지 않도록 "스크립팅" 및 "스크립트 생성 마법사"를 수정함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell 공급자: Dimension 및 MeasureGroup 폴더에 LastProcessed 속성을 추가함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - 활성 쿼리 통계: 배치에 있는 첫 번째 쿼리만 표시하던 문제를 해결함. [Connect 항목] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  

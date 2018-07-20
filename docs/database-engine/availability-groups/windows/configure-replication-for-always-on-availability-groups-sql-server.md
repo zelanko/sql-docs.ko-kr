@@ -1,7 +1,7 @@
 ---
 title: Always On 가용성 그룹에 대한 복제 구성(SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2016
+ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ea2fb342bc881d79f8e3184535bbe888e939068
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ac96fc19852fa45b972308fc48b55687f0885ea6
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770469"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934875"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 복제 구성(SQL Server)
 
@@ -128,6 +128,9 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  자세한 내용은 [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)을 참조하세요.  
+ 
+> [!NOTE]  
+>  Per_DB 옵션을 사용하여 DTC_Support가 사용 가능한 가용성 그룹의 데이터베이스에서 복제를 사용할 수 없습니다.  
   
 ##  <a name="step3"></a> 3. 모든 보조 복제본 호스트에 대해 복제가 구성되었는지 확인  
  각 보조 복제본 호스트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 복제를 지원하도록 구성되어 있는지 확인합니다. 각 보조 복제본 호스트에서 다음 쿼리를 실행하여 복제가 설치되었는지 확인할 수 있습니다.  

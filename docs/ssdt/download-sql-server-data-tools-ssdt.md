@@ -1,7 +1,7 @@
 ---
-title: SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서
+title: SSDT(SQL Server Data Tools) 다운로드 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6794784b2339fe9c246dc4aec017e4e7cbb93311
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332973"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,18 +48,19 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.7.0) 다운로드](https://go.microsoft.com/fwlink/?linkid=874716) 
+[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.7.1) 다운로드](https://go.microsoft.com/fwlink/?linkid=875613) 
 
 > [!IMPORTANT]
-> Visual Studio 2017용 SSDT(15.7.0)를 설치하기 전에 "Microsoft Analysis Services Projects" 및 "Microsoft Reporting Services Projects" 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다. 
+> - Visual Studio 2017용 SSDT(15.7.1)를 설치하기 전에 ‘Analysis Services Projects’ 및 ‘Reporting Services Projects’ 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - Windows 10에 SSDT를 설치하고 **Visual Studio 2017 인스턴스용 새 SQL Server Data Tools 설치**를 선택하는 경우 모든 확인란의 선택을 취소하고 먼저 새 인스턴스를 설치합니다. 새 인스턴스가 설치된 후 컴퓨터를 다시 부팅하고 SSDT 설치 관리자를 다시 열어 설치를 계속합니다.  
 
 
 
 **버전 정보**  
   
-릴리스 번호: 15.7.0  
-빌드 번호: 14.0.16165.0  
-릴리스 날짜: 2018년 6월 1일  
+릴리스 번호: 15.7.1  
+빌드 번호: 14.0.16167.0  
+릴리스 날짜: 2018년 7월 2일  
 
 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
 
@@ -69,17 +70,17 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.  
 
-[중국어(중국)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x804) | 
-[중국어(대만)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x404) | 
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x409) | 
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x407) | 
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x410) | 
-[일본어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x411) | 
-[한국어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x412) | 
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x416) | 
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x419) | 
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40a)  
+[중국어(중국)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[중국어(대만)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
+[프랑스어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
+[독일어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
+[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
+[일본어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
+[한국어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x412) | 
+[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x416) | 
+[러시아어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x419) | 
+[스페인어]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40a)  
 
 
 
@@ -147,7 +148,7 @@ Visual Studio 2015용 SSDT 및 Visual Studio 2017용 SSDT는 모두 DacFx 17.4.1
 ## <a name="next-steps"></a>다음 단계  
 SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT를 사용하여 보고서를 만드는 방법에 알아보려면 이 자습서를 연습하세요.  
 
-- [프로젝트 기반 오프라인 데이터베이스 개발](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
+- [프로젝트 기반 오프라인 데이터베이스 개발](project-oriented-offline-database-development.md)  
 - [SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services 자습서](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [기본 테이블 보고서 만들기(SSRS 자습서)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
@@ -156,9 +157,7 @@ SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT�
 
 
 ## <a name="see-also"></a>참고 항목  
-[Visual Studio의 SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 팀 블로그](http://blogs.msdn.com/b/ssdt/)  
-[SSDT 설명서](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API 참조](https://msdn.microsoft.com/library/dn645454.aspx)  
 [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)  

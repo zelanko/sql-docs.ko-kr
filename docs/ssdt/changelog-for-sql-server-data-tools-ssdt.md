@@ -1,7 +1,7 @@
 ---
-title: SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서
+title: SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286269"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+
+## <a name="ssdt-for-visual-studio-2017-1571"></a>Visual Studio 2017용 SSDT(15.7.1)
+빌드 번호: 14.0.16167.0  
+릴리스 날짜: 2018년 7월 2일  
+  
+### <a name="whats-new"></a>새로운 기능
+
+**SSIS:**
+
+- AS 작업에 사용할 새 Azure Government AAD 권한(login.microsoftonline.us)에 대한 지원을 추가합니다.
+- AS 처리 작업 UI에 대상 서버 버전이 SQLServer2016인 경우 “메서드를 찾을 수 없음”이 표시되는 문제를 수정합니다.
+- 대상 서버 버전이 SQLServer2012인 경우 일부 파이프라인 구성 요소를 실행할 수 없는 문제를 수정합니다.
+
+**설치 관리자:**
+
+- VS 인스턴스 목록을 필터링하여 SSDT를 설치할 수 없는 인스턴스를 제외합니다.
+
+### <a name="known-issues"></a>알려진 문제:
+
+- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- Windows 10에 SSDT를 설치하고 “Visual Studio 2017 인스턴스용 새 SQL Server Data Tools 설치”를 선택하면 “요청된 메타파일 작업이 지원되지 않는 경우” 설치가 실패합니다. 설치를 계속하려면 컴퓨터를 다시 부팅하고 SSDT 설치 관리자를 다시 시작하세요.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>Visual Studio 2017용 SSDT(15.7.0)
 빌드 번호: 14.0.16165.0  
@@ -297,9 +321,9 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
    - 개체 참조는 구조화된 데이터 원본에서 업데이트된 자격 증명을 가져올 수 있는 예외를 설정하지 않습니다.
    - M 식을 사용하여 파티션 관리자를 여는 작업은 매우 느렸습니다.
    - PQ 편집기의 테이블에서 속성을 선택하면 속성을 표시하지 않았습니다.
-- 최상위 예외를 catch하고 출력 창에 표시하도록 파워 쿼리 UI 통합의 강력함을 향상시켰습니다.
+- 최상위 예외를 catch하고 출력 창에 표시하도록 파워 쿼리 UI 통합의 강력합을 향상시켰습니다.
 - 컨텍스트 식의 경우 구조 데이터 원본에서 ChangeSource가 변경 재용을 유지하지 않는 문제를 해결했습니다.
-- M 식 오류로 인해 오류 메시지를 표시하지 않고 모델을 업데이트하는 데 실패할 수 있는 문제를 해결했습니다.
+- M 식 오류로 인해 오류 메시지를 표시하지 않고 모델을 업데이터하는 데 실패할 수 있는 문제를 해결했습니다.
 - "빌드는 솔루션을 닫기 전에 중지되어야 합니다."라는 오류와 함께 SSDT를 닫는 문제를 해결했습니다.
 - 1400 호환성 수준 모델에서 잘못된 가장 모드를 설정할 때 VS가 중단될 수 있는 문제를 해결했습니다. 
 - 이제 세부 정보 행 속성이 비어 있지 않으면 JSON으로만 직렬화됩니다(기본값에서 변경됨).
