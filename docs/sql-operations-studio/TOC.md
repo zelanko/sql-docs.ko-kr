@@ -14,6 +14,8 @@
 # 방법 가이드
 ## [대시보드 및 정보 위젯](insight-widgets.md)
 ## [확장](extensions.md)
+### [SQL Server 에이전트](sql-server-agent-extension.md)
+### [SQL Server 프로파일러](sql-server-profiler-extension.md)
 ## [코드 조각](code-snippets.md)
 ## [통합된 터미널(PowerShell, Bash)](integrated-terminal.md)
 ## [바로 가기 키](keyboard-shortcuts.md)
