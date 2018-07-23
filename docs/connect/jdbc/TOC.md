@@ -1,7 +1,7 @@
 # [SQL Server용 Microsoft JDBC Driver](microsoft-jdbc-driver-for-sql-server.md)
 
 # [JDBC 코드 샘플 +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
-# [JDBC 참조 +](../../connect/jdbc/reference/datetimeoffset-class.md)
+# [JDBC API 참조 +](reference/jdbc-driver-api-reference.md)
 
 # [JDBC 드라이버 시작](getting-started-with-the-jdbc-driver.md)
 ## [1단계: Java 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-java-development.md)
