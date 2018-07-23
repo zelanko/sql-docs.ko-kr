@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 91301728a5ce7a4c154bd2b686a46c838d2a7a3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038750"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987915"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>일정 참조 작업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33038750"
 
 이 대화 상자를 사용하여 특정 일정을 참조하는 작업에 대한 정보를 확인할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **일정**  
 확인 중인 일정의 이름을 표시합니다.  
   

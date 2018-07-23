@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9aa5c92c0579fdcda7ca336e4893b1a5417dfaa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045080"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979715"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ CPU 리소스를 최대화하기 위해 [!INCLUDE[ssNoVersion](../../includes/ss
   
 CPU 유휴 시간 동안 작업이 실행되도록 정의하기 전에 정상적인 처리 동안 CPU의 로드를 결정하십시오. 이렇게 하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 또는 성능 모니터를 사용하여 서버 트래픽을 모니터링하고 통계 자료를 수집합니다. 수집한 정보를 사용하여 CPU 유휴 시간 백분율과 지속 시간을 설정할 수 있습니다.  
   
-CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지되어야 하는 백분율로 정의하십시오. 그런 다음 시간을 설정하십시오. CPU 사용률이 지정한 시간에 대해 지정한 백분율 미만이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 CPU 유휴 시간 일정이 예정된 모든 작업을 시작합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 또는 성능 모니터를 사용하여 CPU 사용률을 모니터링하는 방법은 [CPU 사용 모니터링](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812)을 참조하세요.  
+CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지되어야 하는 백분율로 정의하십시오. 그런 다음 시간을 설정하십시오. CPU 사용률이 지정한 시간에 대해 지정한 백분율 미만이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 CPU 유휴 시간 일정이 예정된 모든 작업을 시작합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 또는 성능 모니터를 사용하여 CPU 사용률을 모니터링하는 방법은 [CPU 사용 모니터링](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812)을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -102,6 +102,6 @@ CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지�
 |서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정&#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>참고 항목  
-[sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
+[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

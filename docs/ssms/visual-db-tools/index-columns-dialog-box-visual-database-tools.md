@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ed5aca3c9f33ac691306d1c68a199975518003c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047570"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023720"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>인덱스 열 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자를 사용하여 인덱스의 열을 선택하고 정렬 순서를 설정할 수 있습니다. 인덱스는 하나 이상의 열을 사용할 수 있고 각 열은 오름차순 또는 내림차순으로 정렬할 수 있습니다. **인덱스/키** 대화 상자에서 이 대화 상자에 액세스하려면 **일반** 섹션의 **열** 행에 대한 줄임표 단추를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **열 이름**  
 이 인덱스에 참가하는 열을 선택합니다. 인덱스에서 열을 제거하려면 **<None>** 을 선택합니다.  
   

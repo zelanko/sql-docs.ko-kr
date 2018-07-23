@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: df10e43d1b039fbc9bd7a56a66ace4cc2eba1741
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a4f2d71c8949f051b5961165505d65c5961e789
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041290"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978956"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>마스터 서버에서 대상 서버 제거
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "33041290"
 sp_msx_defect ;  
 ```  
   
-자세한 내용은 [sp_msx_defect(Transact-SQL)](http://msdn.microsoft.com/en-us/0dfd963a-3bc5-4b58-94f7-aec976da2883)를 참조하세요.  
+자세한 내용은 [sp_msx_defect(Transact-SQL)](http://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883)를 참조하세요.  
   
 ## <a name="PowerShellProcedure"></a>SMO(SQL Server 관리 개체) 사용  
 **MsxDefect 메서드**를 사용합니다.  

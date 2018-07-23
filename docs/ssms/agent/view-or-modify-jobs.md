@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4dc734ccf3ce4075a48d69213c2e3d87581f58e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c9677ba386ceda02136eb3eb67052e4eff0362d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044570"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984135"
 ---
 # <a name="view-or-modify-jobs"></a>작업 보기 또는 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "33044570"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
-자세한 내용은 [sp_purge_jobhistory(Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88)를 참조하세요.  
+자세한 내용은 [sp_purge_jobhistory(Transact-SQL)](http://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)를 참조하세요.  
   
 **sysadmin** 고정 서버 역할의 멤버는 모든 작업의 정의나 기록을 볼 수 있고 모든 작업을 수정할 수 있습니다.  
   
@@ -78,5 +78,5 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 속성을 변경하는 방법에 대해 설명합니다.|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
   
 ## <a name="see-also"></a>참고 항목  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sysjobhistory](http://msdn.microsoft.com/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
   

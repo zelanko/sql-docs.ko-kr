@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12d00de1babd39b303e235e2f6d7abb6b5003800
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9483de763583782518a75d728deec54c50ee5cb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042690"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984805"
 ---
 # <a name="delete-a-job-category"></a>작업 범주 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "33042690"
     GO  
     ```  
   
-자세한 내용은 [sp_delete_category(Transact-SQL)](http://msdn.microsoft.com/en-us/63ea7d0d-a567-456e-a778-bee99e21d16c)를 참조하세요.  
+자세한 내용은 [sp_delete_category(Transact-SQL)](http://msdn.microsoft.com/63ea7d0d-a567-456e-a778-bee99e21d16c)를 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업 범주를 삭제하려면**  

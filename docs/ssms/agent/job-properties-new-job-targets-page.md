@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a130c0d9adfef4554e831a9c0e8a97c39b298fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038770"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064599"
 ---
 # <a name="job-properties---new-job-targets-page"></a>작업 속성 - 새 작업(대상 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33038770"
 
 이 페이지를 사용하여 작업의 대상 서버를 관리할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **대상 로컬 서버**  
 로컬 서버에서 작업을 실행합니다. 참여한 대상 서버가 없으면 이 옵션만 사용할 수 있습니다.  
   

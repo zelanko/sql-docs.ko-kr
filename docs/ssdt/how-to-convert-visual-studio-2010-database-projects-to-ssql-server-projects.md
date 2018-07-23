@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.projectconversion.dialog
 - sql.data.tools.ImportDAC
@@ -17,12 +17,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 753b2620597d1d027f795b5a91fd8b2fb9e54fd4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 9e9a42da76b60e891b123196cc6d38c436f92541
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094835"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085639"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>방법: Visual Studio 2010 데이터베이스 프로젝트를 SQL Server 데이터베이스 프로젝트로 변환 및 다른 플랫폼으로 대상 변경
 SSDT(SQL Server Data Tools)에서는 Visual Studio 2010에서 만든 기존의 SQL Server 데이터베이스, CLR 및 데이터 계층 응용 프로그램 프로젝트를 새 SQL Server 데이터베이스 프로젝트로 변환할 수 있습니다. 이렇게 하면 SSDT에서 제공하는 업데이트된 Transact\-SQL 편집 환경 등의 새 데이터베이스 개발 환경과 코드 유효성 검사를 통해 프로젝트의 대상을 Microsoft SQL Server 2012 및 SQL Azure로 변경하는 기능을 사용할 수 있습니다. 변환 프로세스에서는 테이블, 뷰, 저장 프로시저, 속성 파일 또는 스크립트 등과 같이 SSDT에 해당하는 형식이 있는 개체를 변환하며 여기에는 해당 권한과 DAC 정책 파일이 포함됩니다. 변환할 수 없는 아티팩트는 변환 로그/보고서에서 강조 표시됩니다.  

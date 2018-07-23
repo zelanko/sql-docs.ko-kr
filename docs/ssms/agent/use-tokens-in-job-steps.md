@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046040"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971365"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "33046040"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server 에이전트 토큰  
   
-|토큰|Description|  
+|토큰|설명|  
 |---------|---------------|  
 |**(A-DBN)**|데이터베이스 이름입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 데이터베이스 이름 값으로 대체됩니다.|  
 |**(A-SVR)**|서버 이름입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 서버 이름 값으로 대체됩니다.|  
@@ -97,7 +97,7 @@ ms.locfileid: "33046040"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 에이전트 이스케이프 매크로  
   
-|이스케이프 매크로|Description|  
+|이스케이프 매크로|설명|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***token_name***))**|토큰 교체 문자열에서 작은따옴표(')를 이스케이프합니다. 작은따옴표 하나를 작은따옴표 두 개로 바꿉니다.|  
 |**$(ESCAPE_DQUOTE(***token_name***))**|토큰 교체 문자열에서 큰따옴표(")를 이스케이프합니다. 큰따옴표 하나를 큰따옴표 두 개로 바꿉니다.|  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f8e7f4a-f157-442a-8fe5-32b8774776dc
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48b0d7f810e955c40cc9845e59fe37bf402a0aae
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: c58cc5d13fc96359a7b5f8d81d852fd5fb188292
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094811"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087425"
 ---
 # <a name="dac-framework-compatibility"></a>DAC 프레임워크 호환성
 DAC Framework를 사용하는 작업을 수행하려고 할 때 SSDT(SQL Server Data Tools)에서는 컴퓨터의 DACFx 버전을 확인합니다. SSDT를 설치된 DACFx 버전에서 사용할 수 없는 경우 다음 오류가 표시됩니다.  

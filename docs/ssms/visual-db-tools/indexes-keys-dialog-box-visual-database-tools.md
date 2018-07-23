@@ -18,21 +18,21 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5a139725bdc5a0bbde74478ad1a2465e8b3ea9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053800"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984995"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자를 사용하면 인덱스, 기본 키, 고유 키를 만들거나 수정할 수 있습니다. 이 대화 상자에 액세스하려면 인덱스나 키가 포함된 테이블의 테이블 정의를 열고 테이블 정의 표를 마우스 오른쪽 단추로 클릭한 다음 **인덱스/키**를 클릭합니다.  
   
 > [!NOTE]  
-> 테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
+> 테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **선택한 Primary/Unique 키 또는 인덱스**  
 기존의 기본 또는 고유 키와 인덱스를 나열합니다. 키나 인덱스를 선택하면 오른쪽의 표에 해당 속성이 표시됩니다. 목록이 비어 있는 경우 테이블에 정의된 항목이 없음을 의미합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33053800"
 확장하면 **클러스터형으로 만들기**에 대한 정보가 표시됩니다.  
   
 **클러스터형으로 만들기**  
-클러스터형 키나 인덱스를 만듭니다. 한 테이블에는 클러스터형 인덱스가 하나만 허용됩니다. 테이블의 데이터는 클러스터형 인덱스의 순서대로 저장됩니다. 자세한 내용은 [클러스터형 인덱스 만들기](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 및 [비클러스터형 인덱스 만들기](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)를 참조하세요.  
+클러스터형 키나 인덱스를 만듭니다. 한 테이블에는 클러스터형 인덱스가 하나만 허용됩니다. 테이블의 데이터는 클러스터형 인덱스의 순서대로 저장됩니다. 자세한 내용은 [클러스터형 인덱스 만들기](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 및 [비클러스터형 인덱스 만들기](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)를 참조하세요.  
   
 **데이터 공간 사양**  
 확장하면 **(데이터 공간 형식)**, **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 정보가 표시됩니다.  
@@ -120,6 +120,6 @@ ms.locfileid: "33053800"
 현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다. 권장 설정은 **예**입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[키 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[키 작업(Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

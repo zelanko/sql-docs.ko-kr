@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8fc3f6df5fc05f4adca7071397e70455548ed79d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80514b5588578441b744d924412421e15be35a8e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043910"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983895"
 ---
 # <a name="edit-an-operator"></a>운영자 편집
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -115,5 +115,5 @@ ms.locfileid: "33043910"
     GO  
     ```  
   
-자세한 내용은 [sp_update_operator(Transact-SQL)](http://msdn.microsoft.com/en-us/231750a6-4828-4d03-afe6-b91d38c42ed3)를 참조하세요.  
+자세한 내용은 [sp_update_operator(Transact-SQL)](http://msdn.microsoft.com/231750a6-4828-4d03-afe6-b91d38c42ed3)를 참조하세요.  
   

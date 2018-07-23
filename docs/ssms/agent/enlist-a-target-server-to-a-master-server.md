@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 74923f04bb54ac84ded6c5e699956e413ba1bdc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b738294092fd5a9e02f99b28d5cc70f2649d0b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041220"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979047"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>마스터 서버에 대상 서버 등록
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "33041220"
   
 #### <a name="to-enlist-a-target-server"></a>대상 서버를 등록하려면  
   
-1.  **sp_msx_enlist** 저장 프로시저를 사용합니다.  자세한 내용은 [sp_msx_enlist(Transact-SQL)](http://msdn.microsoft.com/en-us/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)를 참조하세요.  
+1.  **sp_msx_enlist** 저장 프로시저를 사용합니다.  자세한 내용은 [sp_msx_enlist(Transact-SQL)](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)  

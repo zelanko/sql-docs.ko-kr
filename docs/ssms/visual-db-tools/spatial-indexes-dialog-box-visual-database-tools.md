@@ -17,20 +17,20 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb7c869dbf087db4c59eb9e5ba30c48f6e33f055
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053790"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981875"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는*지리*데이터 형식의 열( **공간 열** )에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
   
-공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)를 참조하세요.  
+공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **선택한 공간 인덱스**  
 기존 공간 인덱스의 목록을 표시합니다. 속성을 표시할 인덱스를 선택합니다. 이 목록이 비어 있으면 테이블에 정의된 공간 인덱스가 없는 것입니다.  
   
@@ -122,5 +122,5 @@ ms.locfileid: "33053790"
 현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[공간 인덱스 개요](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[공간 인덱스 개요](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

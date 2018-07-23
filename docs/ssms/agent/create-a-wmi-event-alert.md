@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95bd019c2445f787a54185dacf314df8d81d1473
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62474c013c8d70f32f81c68afcb74e5f5c655535
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045050"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983665"
 ---
 # <a name="create-a-wmi-event-alert"></a>WMI 이벤트 경고 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33045050"
 
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 에서 서버 이벤트용 WMI 공급자가 모니터링하여 특정 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 이벤트가 발생할 때 [!INCLUDE[tsql](../../includes/tsql_md.md)]에이전트 경고를 만드는 방법에 대해 설명합니다.  
   
-WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트를 모니터링하는 방법에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자 클래스 및 속성](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)을 참조하세요. WMI 이벤트 경고 알림을 받는 데 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)을 참조하세요. WQL에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)을 참조하세요.  
+WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이벤트를 모니터링하는 방법에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자 클래스 및 속성](http://msdn.microsoft.com/80767fe0-32ac-406a-81a0-8212cd6ce7e4)을 참조하세요. WMI 이벤트 경고 알림을 받는 데 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)을 참조하세요. WQL에 대한 자세한 내용은 [서버 이벤트용 WMI 공급자에 WQL 사용](http://msdn.microsoft.com/58b67426-1e66-4445-8e2c-03182e94c4be)을 참조하세요.  
   
 **항목 내용**  
   
@@ -113,5 +113,5 @@ WMI 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_
     GO  
     ```  
   
-자세한 내용은 [sp_add_alert(Transact-SQL)](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)를 참조하세요.  
+자세한 내용은 [sp_add_alert(Transact-SQL)](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)를 참조하세요.  
   

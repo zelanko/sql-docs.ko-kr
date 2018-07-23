@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c561bb6100bb06318195f4c7a461056f35c65647
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064669"
 ---
 # <a name="pick-schedule-for-job"></a>작업 일정 선택
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33040480"
 
 이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **사용 가능한 일정**  
 이 작업에 사용할 수 있는 일정을 나열합니다. 작업과 일정의 소유자가 같아야 하므로 이 목록에는 작업 소유자가 소유한 일정만 포함됩니다.  
   

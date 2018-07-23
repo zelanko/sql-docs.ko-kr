@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbba56a9a251a39e7f5504279a0d58c5a5637688
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 876d0668cccc034701f2df0f44005e19b8c6158d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094659"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087535"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>테이블 및 관계 관리, 오류 해결
 이 섹션의 항목은 테이블 디자이너를 사용하여 테이블을 디자인하고 테이블 관계를 관리하는 방법에 대해 설명합니다. 추가 항목은 일반적인 구문 또는 의미 오류를 해결하는 방법에 대해 설명합니다.  

@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ef5f8812dd3e0a5c40f38d2f59caf65df038675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b62e2c90195cf2dd1e834c57c4ad3ceb8478bcc3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049040"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982055"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 열 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자에는 테이블 디자이너에 열려 있는 테이블에 대한 전체 텍스트 인덱스와 관련된 열이 나열됩니다. 이 대화 상자를 열려면 테이블 디자이너에서 테이블을 마우스 오른쪽 단추로 클릭하고 **전체 텍스트 인덱스**를 선택한 다음 **전체 텍스트 인덱스** 대화 상자에서 보거나 편집하려는 열이 포함된 인덱스를 클릭하고 오른쪽 표에서 **열** 필드를 클릭한 후 줄임표(**...**)를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **열**  
 전체 텍스트 인덱스에 관련된 열의 이름을 표시합니다. 열을 추가하려면 비어 있는 첫 번째 셀을 클릭하고 드롭다운 목록에서 열을 선택합니다. 텍스트를 기반으로 한 열이나 이미지 데이터 형식의 열만 선택할 수 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33049040"
 사용할 수 있는 언어를 나열합니다. 열 데이터에 해당하는 언어를 드롭다운 목록에서 선택합니다. 예를 들어 사용 중인 운영 체제는 영어이지만 독일어 텍스트가 포함된 열을 인덱싱하려는 경우 드롭다운 목록에서 독일어를 선택하면 인덱싱 속도를 향상시킬 수 있습니다.  
   
 **통계 의미 체계**  
-선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97)를 참조하세요.  
+선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)를 참조하세요.  
   
 **통계 의미 체계** 를 선택하기 전에 **언어**를 선택했으며 선택한 언어에 연결된 의미 체계 언어 모델이 없으면 **통계 의미 체계** 확인란은 사용할 수 없습니다. **언어** 를 선택하기 전에 **통계 의미 체계**를 선택한 경우 드롭다운 콤보 상자에서 사용할 수 있는 언어가 의미 체계 언어 모델에서 지원하는 언어로 제한됩니다.  
   

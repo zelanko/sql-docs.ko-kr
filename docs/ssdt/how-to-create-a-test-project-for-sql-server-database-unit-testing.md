@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd81ffb8d1530478147147c7aecddd39a368cd9b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a7997f7b2acf88ea358c9ddd42df5cca073a8f28
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094643"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087125"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
 데이터베이스 개체를 평가하는 단위 테스트를 작성하려면 먼저 테스트 프로젝트를 만들어야 합니다. 이 프로젝트에는 SQL Server 단위 테스트가 포함되지만 다른 유형의 테스트도 포함될 수 있습니다.  

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c6ca69968791ecda89274851bd8c6284f68ee8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ba3c41e2366643e07f07307537e735ec8d259d0e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094712"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086035"
 ---
 # <a name="analyze-script-performance"></a>스크립트 성능 분석
 SQL Server Data Tools에서 제공하는 도구를 사용하여 쿼리, 저장 프로시저 또는 스크립트의 성능을 향상할 수 있는지 여부를 확인할 수 있습니다. 예를 들어 자주 사용하는 쿼리의 응답 시간과 같은 클라이언트 통계를 모니터링하면 테이블에 대한 쿼리 또는 인덱스를 변경할 필요가 있는지 확인할 수 있습니다. 이러한 통계에는 클라이언트 실행 시간, 쿼리 프로필, 전송 및 수신된 패킷/바이트 수가 포함될 수 있습니다.  

@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d59e3448b3e833adacab7b37708725e8ff36864
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045836"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984025"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "33045836"
 ## <a name="sql-server-object-search"></a>SQL Server 개체 검색  
 와일드카드  
   
--   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드 카드로 검색](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40)을 참조하세요.  
+-   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드 카드로 검색](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40)을 참조하세요.  
   
 검색 범위  
   

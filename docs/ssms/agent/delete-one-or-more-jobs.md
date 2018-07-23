@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43273f37f9ca8b8b1ef11af43d4f40cee1b1cbab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0d13e8aced6ea882ebcc393418d4be1c09c03fd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044050"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981955"
 ---
 # <a name="delete-one-or-more-jobs"></a>하나 이상의 작업 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "33044050"
     GO  
     ```  
   
-자세한 내용은 [sp_delete_job(Transact-SQL)](http://msdn.microsoft.com/en-us/b85db6e4-623c-41f1-9643-07e5ea38db09)을 참조하세요.  
+자세한 내용은 [sp_delete_job(Transact-SQL)](http://msdn.microsoft.com/b85db6e4-623c-41f1-9643-07e5ea38db09)을 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **여러 작업을 삭제하려면**  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adb8d905c6ed2a5b3c6c20ec5feb595981920da8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 96676bfa7c997d94eb79712f67b4b51fd165134b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094688"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082605"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기
 데이터베이스 개체에 대한 변경 내용을 평가하는 단위 테스트를 작성할 수 있습니다. 그러나 SQL Server Data Tools에는 SQL Server 개체 탐색기의 데이터베이스 프로젝트 노드에서 데이터베이스 함수, 트리거 및 저장 프로시저에 대한 테스트를 만들기 위한 추가 지원 기능이 포함되어 있습니다. Transact\-SQL 코드 스텁이 자동으로 생성되며 이를 사용자 지정할 수 있습니다.  

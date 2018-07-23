@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 132796555d806e14b6d234726b742943915c34d2
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 0fa8e6a9e4d23c74a6908d645d422b37db1f7f36
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094763"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088455"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>SQL Server 데이터베이스 단위 테스트 문제 해결
 데이터베이스에 대한 SQL Server 단위 테스트 작업을 수행할 때 이 항목에 포함되어 있는 문제가 발생할 수 있습니다.  

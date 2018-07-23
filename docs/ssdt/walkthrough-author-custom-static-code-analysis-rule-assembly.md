@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: baa63538993f31d97668cc02f36b55f50bb6adad
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 3aa41b2ae420f626b2749f55a07f4dfa9eefb926
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094923"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086455"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습
 이 연습에서는 SQL Server 코드 분석 규칙을 만드는 데 사용되는 단계를 보여 줍니다. 이 연습에서 만든 규칙은 저장 프로시저, 트리거 및 함수에서 WAITFOR DELAY 문을 방지하는 데 사용됩니다.  

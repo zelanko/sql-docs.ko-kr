@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b3743980c3a0c52657b4e5d362bafff1a21511eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a037025381c5281658a36d08156d522fdb54ca86
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045400"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979015"
 ---
 # <a name="view-the-job-history"></a>View the Job History
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "33045400"
     GO  
     ```  
   
-자세한 내용은 [sp_help_jobhistory(Transact-SQL)](http://msdn.microsoft.com/en-us/a944d44e-411b-4735-8ce4-73888d4262d7)를 참조하세요.  
+자세한 내용은 [sp_help_jobhistory(Transact-SQL)](http://msdn.microsoft.com/a944d44e-411b-4735-8ce4-73888d4262d7)를 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업 기록 로그를 보려면**  

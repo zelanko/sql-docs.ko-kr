@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e43a42c781ae0133f7d1644d6ea0c82e3197bef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054720"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981805"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "33054720"
 확장하면 나머지 속성이 표시됩니다.  
   
 **데이터 형식**  
-선택한 열의 데이터 형식을 표시합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
+선택한 열의 데이터 형식을 표시합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
   
 **ID 증가값**  
 ID 열의 각 후속 행에 대한 **ID 초기값** 에 추가할 증가값을 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에만 적용됩니다.  
@@ -99,7 +99,7 @@ ID 열에 대한 테이블의 첫 번째 행에 할당된 초기값을 표시합
 열의 데이터 형식에 Null 값이 허용되는지 여부를 표시합니다.  
   
 **데이터 형식**  
-선택한 열의 데이터 형식을 표시합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
+선택한 열의 데이터 형식을 표시합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다. 자세한 내용은 [데이터 형식(Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)을 참조하세요.  
   
 **기본값 또는 바인딩**  
 이 열에 대해 지정한 값이 없는 경우 이 열에 대한 기본값을 표시합니다. 드롭다운 목록에는 데이터 원본에 정의된 모든 전역 기본값이 포함되어 있습니다. 열을 전역 기본값에 바인딩하려면 드롭다운 목록에서 선택합니다. 열에 대한 기본 제약 조건을 만들려면 직접 기본값을 텍스트로 입력합니다.  
@@ -147,7 +147,7 @@ IMAGE 유형 열의 문서 유형을 정의하는 데 사용되는 열을 표시
 열을 인덱싱하는 데 사용되는 언어를 나타냅니다.  
   
 **통계 의미 체계**  
-선택한 열에 대해 통계 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97)를 참조하세요.  
+선택한 열에 대해 통계 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색 자리 표시자](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)를 참조하세요.  
   
 **통계 의미 체계** 를 선택하기 전에 **언어**를 선택했으며 선택한 언어에 연결된 의미 체계 언어 모델이 없으면 **통계 의미 체계** 옵션은 **아니요** 로 설정되며 수정할 수 없습니다. **언어** 를 선택하기 전에 **통계 의미 체계** 옵션에 대해 **예**를 선택한 경우 **언어** 열에서 사용할 수 있는 언어는 의미 체계 언어 모델이 지원되는 언어로 제한됩니다.  
   

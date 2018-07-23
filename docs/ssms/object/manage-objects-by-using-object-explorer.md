@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed3b055f684a0dfc7b3932c1a0d9aff318cf98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75d7f222b5fb12856a1248020142a11600df803e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046590"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983975"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>개체 탐색기를 사용하여 개체 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "33046590"
 개체 탐색기가 서버에 연결되면 개체 탐색기의 연결 설정을 사용하여 새 코드 편집기 창을 열 수 있습니다. 새 코드 편집기 창을 열려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다. 특정 데이터베이스를 사용하여 코드 편집기 창을 열려면 데이터베이스 이름을 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다. Analysis Services 서버에 대한 새 쿼리를 열 경우 DMX, MDX 또는 XMLA 쿼리를 선택할 수 있습니다.  
   
 ### <a name="start-powershell"></a>PowerShell 시작  
-개체 탐색기 트리에서 대부분의 폴더 및 개체를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하면 PowerShell 세션을 시작할 수 있습니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 지원이 활성화되고 개체 탐색기에서 마우스 오른쪽 단추로 클릭한 개체로 경로가 설정되어 PowerShell 세션이 시작됩니다. 그러면 대화형 PowerShell 환경에서 PowerShell 명령을 입력할 수 있습니다. 자세한 내용은 [SQL Server PowerShell](http://msdn.microsoft.com/en-us/89b70725-bbe7-4ffe-a27d-2a40005a97e7)을 참조하세요.  
+개체 탐색기 트리에서 대부분의 폴더 및 개체를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하면 PowerShell 세션을 시작할 수 있습니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 지원이 활성화되고 개체 탐색기에서 마우스 오른쪽 단추로 클릭한 개체로 경로가 설정되어 PowerShell 세션이 시작됩니다. 그러면 대화형 PowerShell 환경에서 PowerShell 명령을 입력할 수 있습니다. 자세한 내용은 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [개체 탐색기](../../ssms/object/object-explorer.md)  

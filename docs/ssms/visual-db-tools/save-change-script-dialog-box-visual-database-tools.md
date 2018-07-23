@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16c01e5b60cc893d653a2cfdcff846ee9e6bcb27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048520"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030831"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>변경 스크립트 저장 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "33048520"
 > [!NOTE]  
 > Visual Database Tools에서 제공된 변경 스크립트에는 오류 처리가 포함되지 않습니다. 변경 스크립트는 툴이 열린 후에 데이터베이스 개체가 변경되지 않았으므로 변경 관련 문제가 발생하지 않는다고 가정합니다. 변경 스크립트를 실행하기 전에 적절한 오류 처리 문을 포함시켜야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **저장할 때마다 자동으로 변경 스크립트 만들기**  
 이 옵션을 선택하면 테이블에 변경 내용을 저장할 때마다 **변경 스크립트 저장** 대화 상자가 나타납니다.  
   

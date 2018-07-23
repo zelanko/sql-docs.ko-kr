@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5b6ecaea97dd0fb947a69ad9c50506684dc0ba9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043360"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982495"
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "33043360"
 **저장 프로시저**  
 바로 가기 키를 누를 때 실행되는 저장 프로시저입니다.  
   
-각 구성표에 있는 바로 가기 키 목록을 보려면 [SQL Server Management Studio 바로 가기 키](http://msdn.microsoft.com/en-us/98baaac4-0727-4ce4-8bfe-c63793ae69b8)를 참조하세요.  
+각 구성표에 있는 바로 가기 키 목록을 보려면 [SQL Server Management Studio 바로 가기 키](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8)를 참조하세요.  
   

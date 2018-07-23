@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7c4ebd7c0451e0a8fca7714b7f722613febc5e56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030841"
 ---
 # <a name="post-download-instructions"></a>다운로드 명령 게시
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33040100"
 
 이 페이지를 사용하여 대상 서버에 대한 다운로드 명령을 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **명령 유형**  
 게시할 다운로드 명령의 유형을 지정합니다.  
   

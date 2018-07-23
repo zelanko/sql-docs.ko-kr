@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c328942196d4dfe5eea33c8e21e234c3fa453fa6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1d7b1e6537aa58d06d21eb3df0b4523bfd703252
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094675"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087135"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>방법: 배포 전 또는 배포 후 스크립트 지정
 배포 전 및 배포 후 스크립트는 데이터베이스 프로젝트에서 생성되는 주 배포 스크립트 이전과 이후에 Transact\-SQL 문을 실행합니다. 프로젝트에는 배포 전 스크립트와 배포 후 스크립트가 각각 하나씩만 포함될 수 있습니다. 이러한 스크립트는 다양한 용도로 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  

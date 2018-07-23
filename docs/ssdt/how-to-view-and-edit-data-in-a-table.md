@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
 - sql.data.tools.queryresults.executequerydeletingrow
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f80c25467c24d6cb0e47d36b4cde78152bc2b569
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a52c3875e5b6368a8f5f229dd3309f60bd078fe7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094832"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085335"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>방법: 테이블의 데이터 보기 및 편집
 시각적 데이터 편집기를 사용하여 기존 테이블의 데이터를 보고 편집하고 삭제할 수 있습니다.  

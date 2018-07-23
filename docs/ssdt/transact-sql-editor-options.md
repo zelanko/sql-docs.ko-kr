@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
 - sql.data.tools.SqlExecutionAdvancedSettingsOption
@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e626e50cebf0aba8acde865bfcfd78f1023f978
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094936"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085945"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
 이 항목에서는 Transact-SQL 편집기의 일부 옵션에 대한 정보를 제공합니다. 이러한 옵션을 설정하려면 **옵션** 대화 상자에서 **도구\옵션** 메뉴로 이동합니다.  

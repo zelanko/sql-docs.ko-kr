@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1f46c4fd8164266394994260244dcbe81cde9c8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1037250907c897ce08f85da5af1c739849091338
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094723"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085925"
 ---
 # <a name="how-to-clone-an-existing-database"></a>방법: 기존 데이터베이스 복제
 이 작업에서는 이전 절차에서 배운 단계 중 일부를 사용하여 새 데이터베이스를 만들고 기존 데이터를 이식합니다. 또한 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) 항목에 설명된 단계를 사용하여 소스 및 프로젝트 데이터베이스의 스키마를 동기화합니다.  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01fbc3f4dbb8eb776cccd14c528b5c5e428f5080
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049490"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030821"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ SQL 창에서 SQL 문을 입력하거나 편집한 다음 다른 창으로 이�
 > [!NOTE]  
 > 다이어그램 창과 조건 창을 숨기면 **쿼리 정의 다름** 대화 상자가 나타나지 않습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **무시 단추**  
 이 단추를 선택하면 SQL 문을 받아들여 계속 편집하거나 실행하도록 지정할 수 있습니다. 문을 받아들이면 다이어그램 창과 조건 창이 흐리게 표시됩니다. 이는 SQL 창의 문을 해당 창에서 표현하지 않는다는 사실을 나타냅니다.  
   

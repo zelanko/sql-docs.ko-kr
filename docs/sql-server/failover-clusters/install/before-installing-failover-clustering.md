@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 572ccd5abbfc5cae54364a13af20e0851412e38a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772089"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061211"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -186,12 +186,12 @@ ms.locfileid: "34772089"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|예|예|예**|예**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|예|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|예|예|예**|예**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|예|예|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|예|예|예|예|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|예|예|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(64비트) x64*|사용자 계정 컨트롤|사용자 계정 컨트롤|예**|예**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(64비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|예**|예**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(64비트)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard(32비트)|사용자 계정 컨트롤|사용자 계정 컨트롤|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터는 WOW 모드에서 지원되지 않습니다. 또한 WOW에 원래 설치했던 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 업그레이드하는 것도 지원되지 않습니다. 이 경우 업그레이드할 수 있는 유일한 방법은 새 버전을 추가로 설치한 후 마이그레이션하는 것 뿐입니다.  
   

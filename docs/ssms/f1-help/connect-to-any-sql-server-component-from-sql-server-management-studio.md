@@ -20,12 +20,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58bd639a16003fe718a226b1aea7a3bb3bf5b470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a30dd4d3eedea208255e02b6cbef6a842ad81906
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042460"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981495"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server 구성 요소로 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33042460"
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 에서는 데이터 원본에 먼저 연결하지 않은 상태에서 쿼리 작업을 할 수 있지만 대부분의 다른 태스크를 하려면 연결이 필요합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]**구성 요소에 대한 연결 속성을 구성하기 위한** 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 대화 상자를 제공합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 가 시작되면 **서버에 연결** 대화 상자가 열리고 서버에 연결하라는 메시지가 나타납니다. **서버에 연결** 대화 상자에서는 마지막으로 사용된 연결 설정이 유지됩니다.  
   
 > [!NOTE]  
-> 연결이 자동으로 시작되지 않도록 이 기능을 해제할 수 있습니다. 자세한 내용은 [Database Engine Service Startup Options](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5)을(를) 참조하세요.  
+> 연결이 자동으로 시작되지 않도록 이 기능을 해제할 수 있습니다. 자세한 내용은 [Database Engine Service Startup Options](http://msdn.microsoft.com/d373298b-f6cf-458a-849d-7083ecb54ef5)을(를) 참조하세요.  
   
 ## <a name="saving-connections"></a>연결 저장  
 특정 서버에 대한 연결을 등록된 서버에 저장하거나 솔루션 탐색기를 사용하여 연결을 프로젝트에 저장할 수 있습니다.  

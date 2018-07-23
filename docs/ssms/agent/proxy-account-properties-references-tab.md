@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7761f962b27703ffb0a91170c8f6e49dda16c18c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000315"
 ---
 # <a name="proxy-account-properties-references-tab"></a>프록시 계정 속성(참조 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33039900"
 
 이 읽기 전용 페이지에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시 계정을 참조하는 작업 단계가 나열됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **작업 이름**  
 이 프록시 계정을 사용하는 작업의 이름입니다.  
   

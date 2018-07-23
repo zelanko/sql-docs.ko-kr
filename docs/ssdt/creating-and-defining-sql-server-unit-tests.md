@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.DatabaseMethodNameDialog
 - sql.data.tools.unittesting.designer
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e197b3aa5a5383a40e20e366edb4d5b9c6f98c4b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4b52fc60f3102e7b6a38d254fba682ab4321d804
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094736"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088335"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>SQL Server 단위 테스트 만들기 및 정의
 SQL Server 단위 테스트를 실행하면 스키마에 있는 하나 이상의 데이터베이스 개체에 대한 변경 내용으로 인해 데이터베이스 응용 프로그램의 기존 기능이 중단되는지 여부를 확인할 수 있습니다. 이러한 테스트는 소프트웨어 개발자가 만드는 단위 테스트를 보완합니다. 응용 프로그램의 동작을 확인하려면 두 가지 테스트 유형을 모두 실행해야 합니다.  

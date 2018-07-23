@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 392a895cdedfc48cb759471b89e3e95a02699617
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035261"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 계산 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "36806648"
 |값|설명|  
 |-----------|-----------------|  
 |0..1|없거나 1개|  
-|1|정확히 1개|  
+|@shouldalert|정확히 1개|  
 |1..\*|1개 이상|  
 |0..\*|없거나 1개 이상|  
 |1..2|1개 또는 2개|  

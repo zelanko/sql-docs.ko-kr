@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 632329feb770acc03dd1c1860604f2241d016287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971627"
 ---
 # <a name="target-servers-download-instructions-tab"></a>대상 서버(다운로드 명령 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33041870"
 
 이 페이지를 사용하여 하나 이상의 대상 서버에 대한 다운로드 명령을 표시하고 업데이트할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **대상 서버**  
 명령을 확인하거나 수정할 서버를 선택합니다.  
   

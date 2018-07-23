@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 585636e219787ef5d5ec7fff4484ac98c6ae8e0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023731"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>열 목록 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33047030"
   
 이 대화 상자에는 데이터 형식과 열의 null 값 허용 여부와 같은 기본 속성을 비롯하여 선택한 테이블 반환 개체의 열 목록이 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **이름**  
 선택한 테이블 반환 개체의 열 이름을 표시합니다.  
   

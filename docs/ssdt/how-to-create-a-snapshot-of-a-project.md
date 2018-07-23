@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
@@ -17,12 +17,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab9468ad6bc1e8d29ce040ceb66392dff3764fe4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 34430ec8b9da41806e86a0b7fa6de99057765aca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094800"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088305"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>방법: 프로젝트의 스냅숏 만들기
 **데이터 계층 응용 프로그램** 파일은 데이터베이스 스키마를 만들 때의 읽기 전용 표현을 제공합니다. 이 파일은 기본적으로 데이터베이스 스키마로 처리되며, 이 스키마의 스키마 개체를 다시 프로젝트로 가져올 수 있습니다. 또한 스냅숏을 데이터베이스 또는 프로젝트의 스키마와 비교하고, 스냅숏에 정의된 스키마를 반영하도록 데이터베이스나 프로젝트를 업데이트할 수도 있습니다.  

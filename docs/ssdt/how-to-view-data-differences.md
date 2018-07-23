@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7025a59d6db451bb008bca72909bed16b1803da
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d1276c84091513c06a2febcb215cf3bffa23cdd7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094648"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088295"
 ---
 # <a name="how-to-view-data-differences"></a>방법: 데이터 차이 보기
 두 데이터베이스의 데이터를 비교한 후에는 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 표시됩니다. 또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다.  

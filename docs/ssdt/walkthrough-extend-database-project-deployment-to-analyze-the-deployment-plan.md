@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc03001c6bad49728134da6fd65f5fd0ee40873
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 7852d23e283c21f62856e4b3b9242c5e5115d0cd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094915"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085611"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석
 배포 참가자를 만들어서 SQL 프로젝트를 배포할 때 사용자 지정 작업을 수행할 수 있습니다. 배포 참가자는 DeploymentPlanModifier 또는 DeploymentPlanExecutor 중에서 만들 수 있습니다. DeploymentPlanModifier를 사용하면 계획을 실행하기 전에 항목을 변경할 수 있고 DeploymentPlanExecutor를 사용하면 계획을 실행하는 동안 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 배포할 때 수행된 작업에 대한 보고서를 만드는 DeploymentUpdateReportContributor라는 DeploymentPlanExecutor를 만듭니다. 이 빌드 참가자는 보고서가 생성되는지 여부를 제어하기 위한 매개 변수를 받기 때문에 추가 필수 단계를 수행해야 합니다.  

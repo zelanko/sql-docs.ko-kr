@@ -5,7 +5,7 @@ services: sql-server
 documentationcenter: NA
 ms.suite: sql
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
@@ -14,12 +14,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: f85c316502c107a76e0186deb0b242068576c712
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: db27c4c54a46057957b5f28cd07f0cc828671028
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926304"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087515"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

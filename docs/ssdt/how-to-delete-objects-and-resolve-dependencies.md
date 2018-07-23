@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
 - sql.data.tools.dropdatabaseconfirmation.dialog
@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d734b9d8e200742e9dae7363e0d1559a99b7532
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ae1375a871598a1bf4ce4bd217336450c50d3264
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094891"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082695"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>방법: 개체 삭제 및 종속성 해결
 **SQL Server 개체 탐색기**에서 개체의 이름을 바꾸거나 개체를 삭제하면 SQL Server Data Tools에서는 모든 종속성 개체를 자동으로 검색하고, 필요한 경우 종속성 개체의 이름을 바꾸거나 삭제할 ALTER 스크립트를 준비합니다.  

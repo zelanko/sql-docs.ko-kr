@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc38b525f07804f74c430b6acea99bf1712507e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094640"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087085"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>연결 문자열 및 사용 권한 개요
 SQL Server 단위 테스트를 실행하려면 한 개 또는 두 개의 특정 연결 문자열을 사용하여 데이터베이스 서버에 연결해야 합니다. 각 연결 문자열은 테스트의 일환으로 특정 스크립트의 태스크나 태스크 집합을 수행하기 위해 필요한 특정 사용 권한이 있는 계정을 나타냅니다. **SQL Server 테스트 구성** 대화 상자에서 또는 테스트 프로젝트의 app.config 파일을 수동으로 편집하여 이러한 문자열을 지정할 수 있습니다.  
@@ -43,7 +43,7 @@ SQL Server 단위 테스트를 실행하려면 한 개 또는 두 개의 특정 
 ## <a name="windows-authentication-versus-sql-server-authentication"></a>Windows 인증 및 SQL Server 인증 비교  
 연결 문자열을 지정하는 경우 SQL 인증을 사용할지 Windows 인증을 사용할지 선택해야 합니다. Windows 인증을 선택하는 이유 중 하나는 팀에서의 테스트 사용에 대한 지원이 SQL Server 인증의 경우보다 낫기 때문입니다. SQL Server 인증을 선택하면 연결 문자열은 사용자 자격 증명을 기반으로 DPAPI(데이터 보호 API)를 사용하여 암호화됩니다. 즉, 이 테스트 프로젝트의 테스트는 사용자가 테스트를 체크 인한 후 소스 제어 시스템을 통해 테스트를 가져오는 팀 멤버를 위해서가 아니라 해당 사용자를 위해서만 실행됩니다. 이 테스트 프로젝트의 테스트를 실행하려면 팀의 다른 멤버가 자신의 자격 증명을 사용하여 테스트 프로젝트를 다시 구성해야 합니다. 이렇게 하려면 app.config 파일의 복사본을 편집하거나 프로젝트 구성 대화 상자를 사용합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 테스트 스크립트는 실행 컨텍스트 권한 수준에서 실행되며, 이 수준은 일반적인 사용 시 데이터베이스에서 실행되는 사용자 명령에 유효한 사용 권한 수준과 동일한 수준입니다. 테스트 전 작업, 테스트 작업, TestInitialize 및 TestCleanup 스크립트는 권한 있는 컨텍스트 권한 수준에서 실행됩니다.  
   
 테스트 후 작업 스크립트에 사용되는 높은 권한 연결로 인해 해당 스크립트 내에서 유효성 검사를 수행할 수 있습니다. 이 스크립트에서는 사용 권한을 테스트하는 스크립트 명령을 실행할 수도 있습니다. 사용 권한에 대한 자세한 내용은 [SQL Server Data Tools에 필요한 권한](../ssdt/required-permissions-for-sql-server-data-tools.md)의 SQL Server 단위 테스트 섹션을 참조하세요.  

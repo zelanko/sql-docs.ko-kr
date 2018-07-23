@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05da3545f8171d792be1d11903617862669fbafa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a625eac321bbe49e579c362a74986dd26ea6c883
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041550"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984625"
 ---
 # <a name="change-an-operator39s-availability"></a>운영자의 응답 가능 여부 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,5 +99,5 @@ ms.locfileid: "33041550"
     GO  
     ```  
   
-자세한 내용은 [sp_update_operator(Transact-SQL)](http://msdn.microsoft.com/en-us/231750a6-4828-4d03-afe6-b91d38c42ed3)를 참조하세요.  
+자세한 내용은 [sp_update_operator(Transact-SQL)](http://msdn.microsoft.com/231750a6-4828-4d03-afe6-b91d38c42ed3)를 참조하세요.  
   

@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13e5366037f3f399325d1a453601314f46ae6a67
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049011"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "34772969"
 ##  <a name="Network"></a> IP 주소 선택  
  서브넷 IP 주소 범위(권장)를 사용하거나, SQL Server가 원격 Azure 서버와 통신할 수 있도록 Azure에서 방화벽 규칙을 만들기 위해 SQL Server의 공용 IP 주소를 사용합니다.  
   
- 이 페이지에 제공된 IP 주소 또는 주소 범위를 통해 Azure 서버는 들어오는 데이터, 쿼리, SQL Server에서 시작한 관리 작업이 Azure 방화벽을 통과하도록 허용합니다. 마법사는 SQL Server의 방화벽 설정에서 아무 것도 변경하지 않습니다.  
+ 이 페이지에 제공된 IP 주소 또는 주소 범위를 통해 Azure 서버는 들어오는 데이터, 쿼리, SQL Server에서 시작한 관리 작업이 Azure Firewall을 통과하도록 허용합니다. 마법사는 SQL Server의 방화벽 설정에서 아무 것도 변경하지 않습니다.  
   
  ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")  
   

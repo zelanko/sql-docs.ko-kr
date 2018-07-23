@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e16b3aa3fb5010c23248dc16a5554bc9ff5cf6b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094928"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085835"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인
 이 기능 확장 연습에서는 테스트 조건을 만든 후 SQL Server 단위 테스트를 만들어 해당 기능을 확인합니다. 이 프로세스에는 테스트 조건에 대한 클래스 라이브러리 프로젝트를 만들고 이 프로젝트를 서명 및 설치하는 작업이 포함됩니다. 업데이트할 테스트 조건이 이미 있는 경우에는 [방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)를 참조하세요.  

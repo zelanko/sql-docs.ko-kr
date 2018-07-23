@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9599221ea31455d0540b602ab8ad8140ed590b6f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 370a010271467dc4b95186db00f6019d528e5c2e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094696"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082875"
 ---
 # <a name="data-tools-operations-window"></a>Data Tools 작업 창
 **Data Tools 작업 창**에는 이 항목에서 설명하는 일부 작업의 진행률이 표시되고 오류가 발생하는 경우 알림이 표시됩니다.  

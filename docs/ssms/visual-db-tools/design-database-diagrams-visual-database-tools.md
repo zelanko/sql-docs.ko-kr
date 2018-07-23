@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b84ab228993294300fa02c65e76e562bea345c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2fa73a0d25934117a4ae8a199e665e36f1a229d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050770"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981685"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33050770"
   
 테이블을 수정한 다음 아직 저장하지 않은 경우 테이블 이름의 끝에 별표(*)가 표시되어 변경 내용이 저장되지 않았음을 나타냅니다. 수정된 테이블 및 다이어그램을 저장하는 방법에 대한 자세한 내용은 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**행 선택기** 행 선택기를 클릭하여 테이블에서 데이터베이스 열을 선택할 수 있습니다. 행 선택기는 해당 열이 테이블의 기본 키에 있는 경우 키 기호를 표시합니다. 기본 키에 대한 자세한 내용은 [키 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)을 참조하세요.  
+**행 선택기** 행 선택기를 클릭하여 테이블에서 데이터베이스 열을 선택할 수 있습니다. 행 선택기는 해당 열이 테이블의 기본 키에 있는 경우 키 기호를 표시합니다. 기본 키에 대한 자세한 내용은 [키 작업(Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)을 참조하세요.  
   
 **속성 열** 속성 열 집합은 테이블의 특정 뷰에만 표시됩니다. 다섯 가지 뷰 형식 중 하나를 사용하여 테이블을 볼 수 있으며, 이를 통해 다이어그램의 크기 및 레이아웃을 쉽게 관리할 수 있습니다.  
   

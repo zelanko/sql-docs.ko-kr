@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd78c5bc136a72fde04ccd42a02e26c26d75531a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 276096d9e5ce082f31439e664614833eb68f6984
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094627"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083716"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트 실행
 다양한 창 및 명령 프롬프트 창을 사용하는 등 여러 방법 중 하나로 SQL Server 단위 테스트를 실행할 수 있습니다.  

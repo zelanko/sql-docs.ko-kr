@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046650"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981316"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 환경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "33046650"
 [솔루션 탐색기](../ssms/solution/solution-explorer.md)  
 프로젝트와 해당 파일에 대한 구조화된 보기를 제공할 뿐만 아니라 프로젝트와 해당 파일을 관리하기 위한 명령에 쉽게 액세스할 수 있게 하는 솔루션 탐색기를 소개합니다.  
   
-[솔루션 탐색기 원본 제어](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[솔루션 탐색기 원본 제어](https://msdn.microsoft.com/library/ms173879.aspx)  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 가 원본 제어 제품과 통합되는 방법에 대해 설명합니다.  
   

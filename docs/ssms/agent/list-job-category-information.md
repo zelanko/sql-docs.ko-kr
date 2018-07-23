@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64f34c627a8d57f1eb85948f3f8a013833db80af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cb76fa7eb6f67134c4066ebdc8af3a935516dc9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042080"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984785"
 ---
 # <a name="list-job-category-information"></a>작업 범주 정보 나열
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "33042080"
     GO  
     ```  
   
-자세한 내용은 [sp_help_category(Transact-SQL)](http://msdn.microsoft.com/en-us/8cad1dcc-b43e-43bd-bea0-cb0055c84169)를 참조하세요.  
+자세한 내용은 [sp_help_category(Transact-SQL)](http://msdn.microsoft.com/8cad1dcc-b43e-43bd-bea0-cb0055c84169)를 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업 범주 정보를 나열하려면**  

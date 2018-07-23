@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48b5e195f437b3bc173869ac7d8a7334c741e2b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042010"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985315"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "33042010"
 ## <a name="related-tasks"></a>관련 작업  
 다음 항목에서는 다중 서버 환경을 만들기 위한 공통적인 태스크에 대해 설명합니다.  
   
-|Description|항목|  
+|설명|항목|  
 |---------------|---------|  
 |마스터 서버를 만드는 방법에 대해 설명합니다.|[마스터 서버 만들기](../../ssms/agent/make-a-master-server.md)|  
 |대상 서버를 만드는 방법에 대해 설명합니다.|[대상 서버 만들기](../../ssms/agent/make-a-target-server.md)|  
 |마스터 서버에 대상 서버를 등록하는 방법에 대해 설명합니다.|[마스터 서버에 대상 서버 등록](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 대상 서버 제거](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver(Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup(Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver(Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup(Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>참고 항목  
 [프록시를 사용하는 다중 서버 작업 문제 해결](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

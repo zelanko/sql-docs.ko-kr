@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a672a845e28cd3d8a005603b5ccdc1871761e7b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01d245a9ac6eb32bd38978bd2ed4189f774332ca
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042830"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982415"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.locfileid: "33042830"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 성능 개체가 포함됩니다.  
   
-|개체 이름|Description|  
+|개체 이름|설명|  
 |---------------|---------------|  
-|[SQLAgent:Jobs](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|시작된 작업, 성공률 및 현재 상태에 대한 성능 정보|  
-|[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|작업 단계에 대한 상태 정보|  
-|[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|경고 및 알림 수에 대한 정보|  
-|[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|일반 성능 정보|  
+|[SQLAgent:Jobs](http://msdn.microsoft.com/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|시작된 작업, 성공률 및 현재 상태에 대한 성능 정보|  
+|[SQLAgent:JobSteps](http://msdn.microsoft.com/44f9983c-1753-4fe0-8475-973aa2460b3a)|작업 단계에 대한 상태 정보|  
+|[SQLAgent:Alerts](http://msdn.microsoft.com/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|경고 및 알림 수에 대한 정보|  
+|[SQLAgent:Statistics](http://msdn.microsoft.com/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|일반 성능 정보|  
   
 ## <a name="see-also"></a>참고 항목  
-[성능 모니터링 및 튜닝](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
-[방법: 시스템 모니터 시작(Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[성능 모니터링 및 튜닝](http://msdn.microsoft.com/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
+[방법: 시스템 모니터 시작(Windows)](http://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

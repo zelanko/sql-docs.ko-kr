@@ -19,18 +19,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02bb00f5a9edc2a0dcf00a489a1471fa06ba181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043480"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979875"
 ---
 # <a name="external-tools-dialog-box"></a>외부 도구 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **외부 도구** 대화 상자를 사용하여 SQLCMD 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 환경에서 작업하는 동안에 다른 응용 프로그램을 간편하게 시작할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 **출력** 창에 표시할 수 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **메뉴 내용**  
 현재 **도구** 메뉴에 추가된 항목의 제목을 나열합니다. **위로 이동** 및 **아래로 이동** 화살표를 사용하여 메뉴에 나타나는 항목의 순서를 변경할 수 있습니다. **삭제** 단추를 사용하여 메뉴에서 항목을 제거할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33043480"
 메뉴에서 도구를 선택했을 때 도구로 전달되는 변수를 지정합니다. 인수는 도구 또는 명령이 실행될 때 도구 또는 명령에 전달되는 값을 지정할 수 있습니다. 예를 들어 값은 파일 이름 또는 디렉터리를 지정할 수 있습니다. 화살표 단추를 사용하여 미리 정의된 인수 목록에서 선택할 수 있습니다. 인수를 두 개 이상 추가할 수도 있습니다. 미리 정의된 인수 및 인수 정의의 전체 목록은 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)를 참조하십시오. 사용하는 명령이나 도구에 따라서 명령줄 스위치와 같은 사용자 지정 인수를 입력할 수도 있습니다.  
   
 **출력 창 사용**  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 출력 창을 열어 실행 중인 명령의 출력을 표시합니다. 모든 도구가 출력 창에 표시되는 형식으로 출력을 제공하는 것은 아닙니다. 자세한 내용은 [출력 창](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747)을 참조하세요.  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 출력 창을 열어 실행 중인 명령의 출력을 표시합니다. 모든 도구가 출력 창에 표시되는 형식으로 출력을 제공하는 것은 아닙니다. 자세한 내용은 [출력 창](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747)을 참조하세요.  
   
 **출력을 유니코드로 처리**  
 출력을 유니코드로 해석합니다.  

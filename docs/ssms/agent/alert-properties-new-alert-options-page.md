@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7239649a96faeac6549685750f980ad6a22f4d63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038350"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000615"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>경고 속성 - 새 경고(옵션 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33038350"
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 경고에 대한 옵션을 확인하고 수정할 수 있습니다.  
 
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
 **전자 메일**  
 전자 메일 알림에 이벤트의 오류 텍스트(있는 경우)를 포함합니다.  
   

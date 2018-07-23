@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.editor.howto.navigate
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94bc95b5e2c3bf1b8dfc98c6590dceeddd481df9
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b06fbf69aa5a9d1c9354907f953d0fa98e8f9d40
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094803"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085675"
 ---
 # <a name="how-to-navigate-between-scripts"></a>방법: 스크립트 간 이동
 오프라인 개발을 위한 Transact\-SQL 편집기에는 Visual Studio 개발자에게 익숙한 “정의로 이동” 및 “모든 참조 찾기”라는 두 개의 유용한 탐색 도구가 있습니다. 예를 들어 테이블 이름을 마우스 오른쪽 단추로 클릭하고 "모든 참조 찾기"를 사용하여 프로젝트의 테이블에 대한 모든 참조를 나열할 수 있습니다. 검색 결과를 두 번 클릭하면 특정 코드 파일로 이동할 수 있습니다. 이 파일에서 테이블 이름을 다시 마우스 오른쪽 단추로 클릭하고 "정의로 이동"을 선택하면 테이블 정의로 다시 이동할 수 있습니다.  

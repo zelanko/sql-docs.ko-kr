@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83859095e8a252b59ab4c1bd03ceb65e971bc907
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33051470"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982485"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "33051470"
   
 조건 창이 표시되지 않을 경우 디자이너를 마우스 오른쪽 단추로 클릭하고 **창**을 가리킨 다음 **조건**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
   
 |**열**|**쿼리 유형**|**설명**|  
 |--------------|------------------|-------------------|  

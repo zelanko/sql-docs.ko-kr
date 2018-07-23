@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fea501b8db8aad3118c7d915e9bb7fbabea6bfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06edea33c572f0534e76a9425de56a73ebee53ae
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045200"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979105"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,21 +79,21 @@ ms.locfileid: "33045200"
   
 3.  쿼리 창에서 다음 시스템 저장 프로시저를 사용하여 작업을 수정합니다.  
   
-    -   작업의 특성을 변경하려면 [sp_update_job(Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 을 실행합니다.  
+    -   작업의 특성을 변경하려면 [sp_update_job(Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 을 실행합니다.  
   
-    -   작업 정의에 대한 일정 정보를 변경하려면 [sp_update_schedule(Transact-SQL)](http://msdn.microsoft.com/en-us/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 을 실행합니다.  
+    -   작업 정의에 대한 일정 정보를 변경하려면 [sp_update_schedule(Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 을 실행합니다.  
   
-    -   새 작업 단계를 추가하려면 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755) 을 실행합니다.  
+    -   새 작업 단계를 추가하려면 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) 을 실행합니다.  
   
-    -   기존의 작업 단계를 변경하려면 [sp_update_jobstep(Transact-SQL)](http://msdn.microsoft.com/en-us/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 을 실행합니다.  
+    -   기존의 작업 단계를 변경하려면 [sp_update_jobstep(Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 을 실행합니다.  
   
-    -   작업에서 작업 단계를 제거하려면 [sp_delete_jobstep(Transact-SQL)](http://msdn.microsoft.com/en-us/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 을 실행합니다.  
+    -   작업에서 작업 단계를 제거하려면 [sp_delete_jobstep(Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 을 실행합니다.  
   
     -   SQL Server 에이전트 마스터 작업을 수정하는 추가 저장 프로시저:  
   
-        -   현재 작업과 연결되어 있는 서버를 삭제하려면 [sp_delete_jobserver(Transact-SQL)](http://msdn.microsoft.com/en-us/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 를 실행합니다.  
+        -   현재 작업과 연결되어 있는 서버를 삭제하려면 [sp_delete_jobserver(Transact-SQL)](http://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 를 실행합니다.  
   
-        -   현재 작업과 서버를 연결하려면 [sp_add_jobserver(Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286) 를 실행합니다.  
+        -   현재 작업과 서버를 연결하려면 [sp_add_jobserver(Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) 를 실행합니다.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **작업을 수정하려면**  

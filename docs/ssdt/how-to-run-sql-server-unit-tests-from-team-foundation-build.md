@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc026287cb292f3074afe4392d38088b3ba456d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094904"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087145"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
 Team Foundation Build를 사용하여 BVT(빌드 확인 테스트)의 일부로 SQL Server 단위 테스트를 실행할 수 있습니다. 데이터베이스를 배포하도록 단위 테스트를 구성하고, 테스트 데이터를 생성하고, 선택한 테스트를 실행할 수 있습니다. Team Foundation Build에 익숙하지 않으면 이 항목의 절차를 수행하기 전에 다음 정보를 검토하십시오.  

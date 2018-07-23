@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5409db44220e0c6b40b16752329c7df54bc54f0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ced224db1a1826effe84dd713abe64c3cddf1b94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094731"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085935"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>방법: 로컬 데이터베이스 빌드 및 배포
 Microsoft SQL Server 2012에서는 SQL Server 데이터베이스 프로젝트를 디버그할 때 활성화되는 SQL Server Express 로컬 데이터베이스 런타임이라는 로컬 주문형 서버 인스턴스를 제공합니다. 이 로컬 서버 인스턴스를 프로젝트를 빌드, 테스트 및 디버깅하기 위한 샌드박스로 사용할 수 있습니다. 로컬 서버 인스턴스는 설치된 SQL Server 인스턴스로부터 독립적이며, SSDT(SQL Server Data Tools) 외부에서는 액세스할 수 없습니다. 이러한 방식은 프로덕션 데이터베이스에 액세스할 수 없거나 액세스가 제한되었지만 권한이 있는 사용자가 프로젝트를 프로덕션에 배포하기 전에 로컬로 프로젝트를 테스트하려는 개발자에게 유용합니다. 또한 SQL Azure용 데이터베이스 솔루션을 개발할 때 이 로컬 서버에서 제공하는 편리한 기능을 사용하여 데이터베이스 프로젝트를 개발하고 클라우드에 배포하기 전에 테스트할 수 있습니다.  
@@ -64,7 +64,7 @@ Microsoft SQL Server 2012에서는 SQL Server 데이터베이스 프로젝트를
   
 3.  **로컬** 서버 인스턴스를 확장하고 **TradeDev** 노드를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.  
   
-4.  이 쿼리 창에 `INSERT` 문을 붙여넣고 쿼리를 실행합니다.  
+4.  이 쿼리 창에 `INSERT` 문을 붙여 넣고 쿼리를 실행합니다.  
   
 5.  위의 단계를 반복하여 연결된 **TradeDev** 데이터베이스에 있는 **Products** 및 **Fruits** 테이블의 데이터를 로컬 **TradeDev** 데이터베이스에 복제합니다.  
   

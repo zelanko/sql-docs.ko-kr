@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26cd1e1a9ac3a7c47cd8d748f115b15654e073d8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 82c0f19504b374afbd0df72cb887a57d858918d5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094880"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085065"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools에 필요한 권한
 Visual Studio에서 데이터베이스에 대한 작업을 수행하려면 먼저 해당 데이터베이스에 대한 특정 사용 권한이 있는 계정으로 로그인해야 합니다. 필요한 특정 사용 권한은 수행하려는 작업에 따라 달라집니다. 다음 섹션에서는 수행하려는 각 작업 및 해당 작업을 수행하는 데 필요한 특정 사용 권한에 대해 설명합니다.  
