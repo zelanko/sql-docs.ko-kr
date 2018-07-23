@@ -1,5 +1,5 @@
 ---
-title: MSpeer_topologyrequest (Transact SQL) | Microsoft Docs
+title: MSpeer_topologyrequest (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_topologyrequest
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d7b69c535b762cd136e5fa0ef86af6d2cd3a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1eb68a533cda94f9cbeaea0a065c875850cbe5de
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004650"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101731"
 ---
 # <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "33004650"
 |publication|**sysname**|토폴로지 상태 요청이 시작된 게시의 이름입니다.|  
 |sent_date|**datetime**|토폴로지 상태 요청이 시작된 날짜와 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

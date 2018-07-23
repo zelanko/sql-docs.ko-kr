@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 6f5a4b479c9ca217d0bde9535c28b301ea7715bc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978905"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086975"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux의 SQL Server에 대 한 데이터베이스를 만들려면
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT)는 Linux의 SQL Server에 대 한 강력한 개발 
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio 및 SQL Server Data Tools 설치
 
-1. Windows 컴퓨터에 Visual Studio를 이미 설치 되지 않은 경우 [다운로드 하 여 Visual Studio를 설치 합니다.]합니다. Visual Studio Community edition은 학생에 대 한 무료, 완전 한 기능의 IDE를 Visual Studio 라이선스가 없는 경우 오픈 소스 및 개인 개발자.
+1. Windows 컴퓨터에 Visual Studio를 이미 설치 되지 않은 경우 [Visual Studio 다운로드 및 설치]합니다. Visual Studio Community edition은 학생에 대 한 무료, 완전 한 기능의 IDE를 Visual Studio 라이선스가 없는 경우 오픈 소스 및 개인 개발자.
 
 2. Visual Studio 설치 중 선택 **사용자 지정** 에 대 한 합니다 **설치 유형을 선택** 옵션입니다. **다음**을 클릭합니다.
 
@@ -113,7 +113,7 @@ T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 작성] 하
 
 SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 대 한 자세한 내용은 참조 하세요. [SSDT MSDN 문서]
 
-[다운로드 하 여 Visual Studio를 설치 합니다.]:https://www.visualstudio.com/downloads/
+[Visual Studio 다운로드 및 설치]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN 문서]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx

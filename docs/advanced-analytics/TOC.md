@@ -29,7 +29,7 @@
 ## SQL Server 2016
 ### [R Services(In-Database)](install/sql-r-services-windows-install.md)
 ### [R 서버(독립 실행형)](install/sql-r-standalone-windows-install.md)
-## [미리 학습된 모델](r/install-pretrained-models-sql-server.md)
+## [미리 학습된 모델](install/sql-pretrained-models-install.md)
 ## [명령 프롬프트 설치](install/sql-ml-component-commandline-install.md)
 ## [오프라인 설치(인터넷 없음)](install/sql-ml-component-install-without-internet-access.md)
 ## [R 및 Python 업그레이드](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
