@@ -35,11 +35,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4a3532f27682bede31839298d13a8382f10b3d6
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242825"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993355"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -143,7 +143,7 @@ COMMIT TRAN T1;
   
  무시됩니다."  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

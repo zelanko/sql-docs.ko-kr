@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d828bb3d70346ecb41bd5382f67a8c54ed18e8fd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988896"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
 
@@ -49,12 +49,12 @@ ms.locfileid: "35322392"
   
 |Object|스크립팅 가능|주석|  
 |------------|---------------------|--------------|  
-|보고서|예|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
-|데이터 원본|예|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  
-|모델|예||  
-|데이터 집합|예||  
+|보고서|사용자 계정 컨트롤|마이그레이션 후 데이터 원본에 대한 암호를 다시 입력합니다.|  
+|데이터 원본|사용자 계정 컨트롤|마이그레이션 후 보고서를 데이터 원본에 다시 연결 합니다.|  
+|모델|사용자 계정 컨트롤||  
+|데이터 집합|사용자 계정 컨트롤||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
-|일정|예|ListSchedules 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
+|일정|사용자 계정 컨트롤|ListSchedules 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
 |구독|예|List Subscriptions 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 및 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 메서드를 참조하세요.|  
 |스냅숏|||
 

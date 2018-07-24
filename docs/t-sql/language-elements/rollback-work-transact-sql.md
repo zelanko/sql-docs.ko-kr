@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 49c9a6cb53983c56b0d5a35c41f298f88efb13db
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000107"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ROLLBACK [ WORK ]
   
  트랜잭션을 중첩할 경우 ROLLBACK WORK는 항상 가장 바깥쪽 BEGIN TRANSACTION 문으로 롤백하고 @@TRANCOUNT 시스템 함수를 0으로 감소시킵니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  ROLLBACK WORK 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

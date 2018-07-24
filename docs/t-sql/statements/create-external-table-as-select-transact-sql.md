@@ -24,11 +24,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 74dc570a61b33aa6b6a2718bde3c927e6eabb1a7
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833354"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017513"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  SELECT \<select_criteria> 새 테이블을 SELECT 문의 결과로 채웁니다. *select_criteria*는 새 테이블에 복사할 데이터를 결정하는 SELECT 문의 본문입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 명령을 실행하려면 **데이터베이스 사용자**는 다음 권한 또는 멤버 자격이 모두 필요합니다.  
   
 -   **db_ddladmin** 고정 데이터베이스 역할에 새 테이블 또는 멤버 자격을 포함할 로컬 스키마에 대한 **ALTER SCHEMA** 권한.  

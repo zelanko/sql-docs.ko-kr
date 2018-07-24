@@ -33,11 +33,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 001a830d517bc7472fe7d3eb761ecfb18b2b3063
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34052053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988508"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -112,7 +112,7 @@ DBCC CHECKIDENT
   
 `Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  호출자는 테이블을 포함하는 스키마를 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버이어야 합니다.  
   
 ## <a name="examples"></a>예  

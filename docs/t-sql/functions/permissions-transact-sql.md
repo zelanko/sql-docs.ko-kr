@@ -29,11 +29,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 121b7e229220793e7e1b9bc9307f3398281d6c2d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997515"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |비트(10진수)|비트(16진수)|문 사용 권한|  
 |-----------------|-----------------|--------------------------|  
-|1|0x1|CREATE DATABASE(master 데이터베이스에만 해당)|  
+|@shouldalert|0x1|CREATE DATABASE(master 데이터베이스에만 해당)|  
 |2|0x2|CREATE TABLE|  
 |4|0x4|CREATE PROCEDURE|  
 |8|0x8|CREATE VIEW|  
@@ -90,7 +90,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |비트(10진수)|비트(16진수)|문 사용 권한|  
 |-----------------|-----------------|--------------------------|  
-|1|0x1|SELECT ALL|  
+|@shouldalert|0x1|SELECT ALL|  
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
 |8|0x8|INSERT|  
@@ -104,7 +104,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |비트(10진수)|비트(16진수)|문 사용 권한|  
 |-----------------|-----------------|--------------------------|  
-|1|0x1|SELECT|  
+|@shouldalert|0x1|SELECT|  
 |2|0x2|UPDATE|  
 |4|0x4|REFERENCES|  
   

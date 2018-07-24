@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f305bf60f682ee9da175191b785b73d5e363c7c5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789604"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999395"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -272,7 +272,7 @@ reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있�
  DISTRIBUTION  
  (선택 사항) 이 절은 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 절은 테이블이 분할된 데이터베이스 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED**(*열 이름*) 테이블에서는 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED**는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN**은 응용 프로그램 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  다음과 같은 권한이 필요합니다.  
   
 -   **CREATE TABLE**  

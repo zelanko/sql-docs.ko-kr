@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3386a8c4a37aafd747dd61bb37f3464c0c8efa56
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003635"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
 

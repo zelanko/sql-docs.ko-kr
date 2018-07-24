@@ -39,11 +39,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988497"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ DATA_PURITY
  MAXDOP  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
- 명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]가 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]가 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
  
 > [!WARNING] 
 > MAXDOP가 0으로 설정되면 SQL Server는 최대 병렬 처리 수준을 사용하도록 선택합니다.    
@@ -209,7 +209,7 @@ Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 �
 프로덕션 시스템에서 자주 사용하려면 PHYSICAL_ONLY 옵션을 사용하는 것이 좋습니다. PHYSICAL_ONLY를 사용하면 큰 데이터베이스에 대한 DBCC CHECKDB 실행 시간이 훨씬 단축될 수 있습니다. 또한 옵션을 지정하지 않고 정기적으로 DBCC CHECKDB를 실행하는 것이 좋습니다. 실행 빈도는 개별 비즈니스 및 프로덕션 환경에 따라 달라집니다.
     
 ## <a name="checking-objects-in-parallel"></a>병렬로 개체 검사    
-기본적으로 DBCC CHECKDB는 개체를 병렬로 검사합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 병렬 쿼리와 동일하게 구성됩니다. DBCC 검사에 사용할 수 있는 최대 프로세서 수를 제한하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. 추적 플래그 2528을 사용하면 병렬 검사를 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
+기본적으로 DBCC CHECKDB는 개체를 병렬로 검사합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 병렬 쿼리와 동일하게 구성됩니다. DBCC 검사에 사용할 수 있는 최대 프로세서 수를 제한하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. 추적 플래그 2528을 사용하면 병렬 검사를 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
     
 > [!NOTE]
 > 이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)의 RDBMS 관리 효율성 섹션에 있는 병렬 일관성 검사를 참조하세요.    
@@ -217,10 +217,10 @@ Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 �
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해    
 DBCC CHECKDB 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 성공 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
     
-|State|Description|    
+|State|설명|    
 |-----------|-----------------|    
 |0|오류 번호 8930이 발생했습니다. 메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
-|1|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
+|@shouldalert|오류 번호 8967이 발생했습니다. 내부 DBCC 오류가 있습니다.|    
 |2|응급 모드 데이터베이스 복구 중에 오류가 발생했습니다.|    
 |3|메타데이터가 손상되어 DBCC 명령이 종료되었음을 나타냅니다.|    
 |4|어설션 또는 액세스 위반이 감지되었습니다.|    
@@ -368,7 +368,7 @@ DBCC CHECKDB는 ESTIMATEONLY가 지정되었을 때 다음 결과 집합을 반�
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>사용 권한    
+## <a name="permissions"></a>Permissions    
 sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
     
 ## <a name="examples"></a>예    

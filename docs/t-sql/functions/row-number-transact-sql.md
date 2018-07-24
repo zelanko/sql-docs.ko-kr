@@ -26,11 +26,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9cb023085f94ae97cbcb633d57f6589760285684
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785481"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993611"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ WHERE database_id < 5;
    
 |Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
+|@shouldalert |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
@@ -129,8 +129,8 @@ FROM sys.databases WHERE database_id < 5;
    
 |Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |model |FULL |
-|1 |master |SIMPLE |
+|@shouldalert |model |FULL |
+|@shouldalert |master |SIMPLE |
 |2 |msdb |SIMPLE |
 |3 |tempdb |SIMPLE |
 

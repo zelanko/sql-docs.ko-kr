@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1f882cf07a504b63218862e79324c32b74b2628
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781804"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991695"
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ EXECUTE dbo.usp_myproc;
   
  이 메커니즘은 연결 풀링을 사용하는 환경에 유용합니다. 연결 풀링은 여러 일반 사용자가 응용 프로그램에서 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable*에 전달된 값이 EXECUTE AS 문의 호출자(이 경우 응용 프로그램)에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 응용 프로그램을 호출하는 일반 사용자가 변경할 수 없도록 할 수 있습니다. 실행 컨텍스트가 되돌려지면 응용 프로그램에서 컨텍스트를 다른 보안 주체로 전환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용 권한이 필요 없습니다.  
   
 ## <a name="examples"></a>예  

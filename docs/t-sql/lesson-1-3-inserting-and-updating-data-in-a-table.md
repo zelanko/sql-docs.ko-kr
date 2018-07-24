@@ -18,11 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ae6231b1cc4c660c9bc94af212102a5998997eaa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000275"
 ---
 # <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>1-3단원 - 테이블에서 데이터 삽입 및 업데이트
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "37415892"
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
-|1|Clamp|12.48|Workbench clamp|  
+|@shouldalert|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  

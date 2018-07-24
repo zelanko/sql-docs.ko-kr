@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4b3d11967ea4aca8fee3c72784cf1353c984a5cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026996"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  `SET FIPS_FLAGGER`이 저장 프로시저에 설정되면 저장 프로시저에서 컨트롤이 반환된 후 `SET FIPS_FLAGGER`의 값이 복원됩니다. 따라서 동적 SQL에 지정한 `SET FIPS_FLAGGER` 문은 동적 SQL 문 다음에 오는 문에는 아무런 영향을 주지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -33,11 +33,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77e1fad23e16ca48573d460c1a876e4c6b548e90
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995217"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS PARTITION partition_function_name
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 PRIMARY만 사용할 수 있습니다. 아래 예제 E를 참조하세요. 
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CREATE PARTITION SCHEME을 실행하는 데 필요한 권한은 다음과 같습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -107,7 +107,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ||||||  
 |-|-|-|-|-|  
 |**파일 그룹**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**파티션**|1|2|3|4|  
+|**파티션**|@shouldalert|2|3|4|  
 |**값**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>2. 여러 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
@@ -127,7 +127,7 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ||||||  
 |-|-|-|-|-|  
 |**파일 그룹**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**파티션**|1|2|3|4|  
+|**파티션**|@shouldalert|2|3|4|  
 |**값**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>3. 모든 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  

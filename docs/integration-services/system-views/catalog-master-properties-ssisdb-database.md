@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5614a15df481602ee0bdaa755afd53b522e79e47
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404535"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020659"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,5 +44,5 @@ ms.locfileid: "35404535"
 |**MASTER_SERVICE_PORT**|Scale Out 마스터 엔드포인트의 포트입니다.|
 |**SSLCERT_THUMBPRINT**|Scale Out 마스터 인증서의 지문입니다.|
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 공용 데이터베이스 역할의 모든 구성원은 이 보기에 대한 읽기 권한을 갖습니다. 

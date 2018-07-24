@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 41ad9d69b045a149bf6adad58f16f881ccc5d98e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004766"
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE(병렬 데이터웨어 하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -102,7 +102,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **db_backupoperator** 고정 데이터베이스 역할에서 **BACKUP DATABASE** 권한 또는 멤버 자격이 필요합니다. master 데이터베이스는 백업할 수 없지만 **db_backupoperator** 고정 데이터베이스 역할에 추가된 일반 사용자의 경우 할 수 있습니다. master 데이터베이스는 **sa**, 패브릭 관리자 또는 **sysadmin** 고정 서버 역할을 하는 멤버만이 백업할 수 있습니다.  
   
  백업 디렉토리에 액세스하고, 만들고, 쓸 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다. 이러한 네트워크 자격 증명을 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 추가하려면 [sp_pdw_add_network_credentials&#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 저장 프로 시저를 사용합니다.  

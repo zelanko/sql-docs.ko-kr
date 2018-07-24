@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707861"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015860"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "34707861"
   
 |DocumentID|Title|  
 |----------------|-----------|  
-|1|Crank Arm and Tire Maintenance|  
+|@shouldalert|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -178,20 +178,20 @@ ms.locfileid: "34707861"
   
 |키워드|ColId|DocId|발생 빈도|  
 |-------------|-----------|-----------|----------------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|유지 관리|1|1|5|  
-|Front|1|2|1|  
-|Front|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|Bracket|1|3|3|  
-|어셈블리|1|2|6|  
-|3|1|2|7|  
-|설치|1|3|4|  
+|Crank|@shouldalert|@shouldalert|@shouldalert|  
+|Arm|@shouldalert|@shouldalert|2|  
+|Tire|@shouldalert|@shouldalert|4|  
+|유지 관리|@shouldalert|@shouldalert|5|  
+|Front|@shouldalert|2|@shouldalert|  
+|Front|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|2|2|  
+|Reflector|@shouldalert|2|5|  
+|Reflector|@shouldalert|3|2|  
+|Bracket|@shouldalert|2|3|  
+|Bracket|@shouldalert|3|3|  
+|어셈블리|@shouldalert|2|6|  
+|3|@shouldalert|2|7|  
+|설치|@shouldalert|3|4|  
   
  **Keyword** 열에는 인덱싱할 때 추출한 단일 토큰이 표시됩니다. 토큰을 구성하는 요소는 단어 분리기에 의해 결정됩니다.  
   
@@ -214,8 +214,8 @@ ms.locfileid: "34707861"
   
 |키워드|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|1|3|1|  
-|Reflector|1|3|2|  
+|Rear|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|3|2|  
   
  조각 2에서 볼 수 있듯이 전체 텍스트 쿼리에서는 각 조각을 내부적으로 쿼리하고 이전 항목을 무시해야 합니다. 따라서 전체 텍스트 인덱스에 전체 텍스트 인덱스 조각이 너무 많으면 쿼리 성능이 크게 저하될 수 있습니다. 조각 수를 줄이려면 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 REORGANIZE 옵션을 사용하여 전체 텍스트 카탈로그를 다시 구성합니다. 이 문은 *마스터 병합*을 수행하고 이 병합에서는 여러 조각을 하나의 큰 조각으로 병합하고 전체 텍스트 인덱스에서 사용되지 않는 항목을 모두 제거합니다.  
   
@@ -223,18 +223,18 @@ ms.locfileid: "34707861"
   
 |키워드|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|1|1|1|  
-|Arm|1|1|2|  
-|Tire|1|1|4|  
-|유지 관리|1|1|5|  
-|Front|1|2|1|  
-|Rear|1|3|1|  
-|Reflector|1|2|2|  
-|Reflector|1|2|5|  
-|Reflector|1|3|2|  
-|Bracket|1|2|3|  
-|어셈블리|1|2|6|  
-|3|1|2|7|  
+|Crank|@shouldalert|@shouldalert|@shouldalert|  
+|Arm|@shouldalert|@shouldalert|2|  
+|Tire|@shouldalert|@shouldalert|4|  
+|유지 관리|@shouldalert|@shouldalert|5|  
+|Front|@shouldalert|2|@shouldalert|  
+|Rear|@shouldalert|3|@shouldalert|  
+|Reflector|@shouldalert|2|2|  
+|Reflector|@shouldalert|2|5|  
+|Reflector|@shouldalert|3|2|  
+|Bracket|@shouldalert|2|3|  
+|어셈블리|@shouldalert|2|6|  
+|3|@shouldalert|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>전체 텍스트 인덱스와 일반 SQL Server 인덱스 간의 차이점:  
   

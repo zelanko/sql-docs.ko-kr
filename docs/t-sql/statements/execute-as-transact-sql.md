@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2520b75495006760b5755ed57ab109d6ef99573a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991725"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "36941959"
 ## <a name="determining-the-original-login"></a>원래 로그인 결정  
  [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 함수를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 로그인의 이름을 반환할 수 있습니다. 이 함수를 사용하여 명시적 또는 암시적 컨텍스트 전환이 많이 있는 세션의 원래 로그인 ID를 반환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  로그인에 **EXECUTE AS**를 지정하려면 호출자에게 지정한 로그인 이름에 대한 **IMPERSONATE** 권한이 있어야 하며 **IMPERSONATE ANY LOGIN** 권한에 의해 거부되지 않아야 합니다. 데이터베이스 사용자에 **EXECUTE AS**를 지정하려면 호출자에게 지정한 사용자 이름에 대한 **IMPERSONATE** 권한이 있어야 합니다. **EXECUTE AS CALLER**를 지정한 경우에는 **IMPERSONATE** 권한이 필요하지 않습니다.  
   
 ## <a name="examples"></a>예  

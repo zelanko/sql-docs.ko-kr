@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012600"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000675"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  아래 표에서 행 한정의 SysStartTime 열은 쿼리 중인 테이블의 **SysStartTime** 열 값을 나타내고, **SysEndTime** 은 쿼리 중인 테이블의 **SysEndTime** 열 값을 나타냅니다. 전체 구문 및 예제는 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 및 [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)에서 지원되는 데이터베이스 기능입니다.  
   
-|식|행 한정|Description|  
+|식|행 한정|설명|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 끝점으로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 끝점으로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  

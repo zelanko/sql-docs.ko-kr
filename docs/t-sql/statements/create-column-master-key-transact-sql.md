@@ -31,11 +31,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a4f7c950785268f1b462c8363e4fb9e5f426055b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993135"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ CREATE COLUMN MASTER KEY key_name
 
 
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **ALTER ANY COLUMN MASTER KEY** 권한을 요구합니다.  
   
 ## <a name="examples"></a>예  

@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7159ce9bf22eb3cf2d41aad424626d37391dd14a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023081"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ CERTPRIVATEKEY
 ## <a name="remarks"></a>Remarks  
 **CERTENCODED** 및 **CERTPRIVATEKEY**를 함께 사용하여 이진 형태로 인증서의 다른 부분을 반환합니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 **CERTPRIVATEKEY**는 누구나 사용할 수 있습니다.
   
 ## <a name="examples"></a>예  

@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 56e3633df2f3ba69d0ed8b5e89fe691e0a073271
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999995"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  시퀀스에 대한 **ALTER** 권한 또는 스키마에 대한 **ALTER** 권한이 필요합니다. 시퀀스에 대한 **ALTER** 권한을 부여하려면 다음 형식으로 **ALTER ON OBJECT**를 사용합니다.  
   
 ```  

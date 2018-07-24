@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011880"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993515"
 ---
 # <a name="temporal-table-security"></a>임시 테이블 보안
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33011880"
 ## <a name="security-principles"></a>보안 원칙  
  다음 표는 temporal 테이블에 적용되는 보안 원칙에 대해 설명합니다.  
   
-|원칙|Description|  
+|원칙|설명|  
 |---------------|-----------------|  
 |system-versioning을 설정/해제하려면 영향을 받는 개체에 대해 가장 높은 권한이 있어야 함|SYSTEM_VERSIONING을 설정 및 해제하려면 현재 및 기록 테이블에 대해 CONTROL 권한이 있어야 합니다.|  
 |기록 데이터는 직접 수정할 수 없음|SYSTEM_VERSIONING이 ON일 경우 사용자가 현재 또는 기록 테이블에 대해 가지고 있는 실제 권한과 상관없이 기록 데이터를 수정할 수 없습니다. 여기에는 데이터 및 스미카 수정이 포함됩니다.|  
