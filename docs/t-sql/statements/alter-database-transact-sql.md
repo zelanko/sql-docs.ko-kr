@@ -3,7 +3,6 @@ title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - collations [SQL Server], modifying
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: 282
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bc109184f7678f48205c66b4c47684eecde9e4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c97a6b7e9735c7db5be82187767486bff93a6f92
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786544"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102551"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -212,7 +210,7 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
 ## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
 카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -531,7 +529,7 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
 
 카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 
 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인 또는 `dbmanager` 데이터베이스 역할의 구성원만 데이터베이스를 변경할 수 있습니다.  
   
@@ -681,7 +679,7 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
 
 카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 
 프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인 또는 `dbmanager` 데이터베이스 역할의 구성원만 데이터베이스를 변경할 수 있습니다.  
   
@@ -761,7 +759,7 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 성능 수준을 지정합니다. [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 서비스 목표에 대한 자세한 내용은 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 다음과 같은 사용 권한이 필요합니다.  
   
 - 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는  
@@ -885,7 +883,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 비동기 통계 업데이트 옵�
 
 통계에 대한 자세한 내용은 [통계](/sql/relational-databases/statistics/statistics)를 참조하세요.
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="error-messages"></a>오류 메시지

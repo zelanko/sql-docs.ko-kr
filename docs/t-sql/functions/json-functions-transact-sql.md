@@ -16,11 +16,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: c80fe1dc25e1e3dc958af7bcc7af57b07ab4732e
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36246835"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045871"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

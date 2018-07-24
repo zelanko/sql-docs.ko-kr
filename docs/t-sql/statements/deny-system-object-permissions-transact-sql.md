@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b8d45dab497ace834a183e8612baeb99871f2ff2
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048861"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ SELECT * FROM master.sys.database_permissions AS dp
 GO  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

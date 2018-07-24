@@ -18,11 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 854029082e15360f9964bd232ce726cb802e129b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047271"
 ---
 # <a name="lesson-3-1---deleting-database-objects"></a>3-1단원 - 데이터베이스 개체 삭제
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

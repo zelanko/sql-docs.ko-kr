@@ -15,16 +15,16 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fea148cc4148b4beaf14c8b31d7bd23aad734a0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d898041ee9e03612227fcc29c43d42859c54ffda
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016530"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980865"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
 
- > 이전 버전의 SQL Server와 관련된 콘텐츠는 [1단원: 보고서 서버 프로젝트 만들기(Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [1단원: 보고서 서버 프로젝트 만들기(Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx)를 참조하세요.
 
 이 섹션에서는Visual Studio 내의 *에서* 보고서 서버 프로젝트 *및* 보고서 정의(.rdl) [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] 파일을 만듭니다. 
 

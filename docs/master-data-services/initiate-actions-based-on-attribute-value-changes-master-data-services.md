@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c026326fa48a2478be8adcd516e606b1d88fa7ee
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059107"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>특성 값 변경 기반 동작 시작(Master Data Services)
 

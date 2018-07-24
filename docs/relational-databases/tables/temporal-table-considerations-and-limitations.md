@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7127db06d4d2e63304ab870ad3c2c9ee3fe91001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051151"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "33012421"
   
     -   분할 구성  
   
-    -   사용 권한  
+    -   Permissions  
   
     -   행 수준 보안 조건자  
   

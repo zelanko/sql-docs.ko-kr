@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97480ae8c4b390250ae2007b7d1d03d0efccf472
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a2be6888bcd358d5e8633801c79d4a994967d56f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332634"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979166"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34332634"
 
 Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 경우 선택한 서비스 계층이 데이터베이스에서 사용할 수 있는 활성 메모리의 양에 영향을 줍니다. 경고를 사용하여 데이터베이스의 메모리 사용량 모니터링을 계획해야 합니다. 자세한 내용은 다음을 참조하세요.
 
-- [가격 책정 계층](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)에 대한 메모리 내 OLTP 저장소 제한 검토
+- [가격 책정 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)에 대한 메모리 내 OLTP 저장소 제한 검토
 - [메모리 내 OLTP 저장소 모니터링](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수

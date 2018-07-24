@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2b21d850297315939cfa696c7076329d53375b79
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782024"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051881"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
  DROP FUNCTION은 이 함수를 참조하고 인덱싱된 계산 열이 있는 경우 실패합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  DROP FUNCTION을 실행하려면 사용자에게 최소한 해당 함수가 속한 스키마에 대한 ALTER 권한이나 해당 함수에 대한 CONTROL 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

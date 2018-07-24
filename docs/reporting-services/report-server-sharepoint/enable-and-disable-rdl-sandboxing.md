@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049151"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
 
@@ -71,7 +71,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
 
  다음 표에서는 구성 설정 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 식에 허용되는 최대 문자 수입니다.<br /><br /> 기본값: 1000|  
 |**MaxResourceSize**|외부 리소스에 허용되는 최대 크기(KB)입니다.<br /><br /> 기본값: 100|  

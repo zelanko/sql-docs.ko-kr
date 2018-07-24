@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 972788ef2369c8b885e9c736b2b2e71ebc89470c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787734"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052961"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4는 비교적 약한 알고리즘이고 AES는 비교적 강력한 알고리즘입니다. 그러나 AES는 RC4보다 속도가 훨씬 느립니다. 속도보다 보안의 우선 순위가 높은 경우 AES를 사용하는 것이 좋습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 끝점 소유자이거나 ALTER ANY ENDPOINT 권한을 부여받아야 합니다.  
   
  기존 끝점의 소유권을 변경하려면 ALTER AUTHORIZATION 문을 사용해야 합니다. 자세한 내용은 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)을 참조하세요.  

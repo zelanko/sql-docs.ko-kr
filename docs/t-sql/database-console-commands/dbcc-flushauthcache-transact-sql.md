@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3cb7b06efe21d7dd6d4179c3454b6638ea636165
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052831"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
 인증 캐시는 master에 저장되어 있는 로그인 및 서버 방화벽 규칙의 복사본을 만들고 사용자 데이터베이스의 메모리에 배치합니다.  포함된 데이터베이스 사용자에 대한 정보는 이미 사용자 데이터베이스에 저장되어 있으므로 포함된 데이터베이스 사용자는 인증 캐시의 일부가 아닙니다.
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 활성 연결을 지속하기 위해서는 적어도 10시간 마다 다시 인증해야 합니다([!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 수행됨). [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 원래 제출된 암호를 사용하여 다시 인증을 시도하며, 사용자 입력은 필요하지 않습니다. 성능상의 이유로 암호를 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 다시 설정한 경우 연결 풀링으로 인해 연결이 재설정되더라도 연결은 다시 인증되지 않습니다. 이는 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동작과 다릅니다. 초기에 연결을 인증한 후 암호를 변경하면 연결을 종료하고 새 암호를 사용하여 새 연결을 수행해야 합니다. KILL DATABASE CONNECTION 권한이 있는 사용자는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 연결을 [KILL&#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) 명령을 사용하여 명시적으로 종료할 수 있습니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정이 필요합니다.
   
 ## <a name="example"></a>예제  

@@ -17,19 +17,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6da6086cd5c1a0ebfd56394e5c79b2078ef82e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942568"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978935"
 ---
 # <a name="lesson-3-database-backup-to-url"></a>3단원: URL에 데이터베이스 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 이 단원에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2014 데이터베이스를 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)에서 만든 Azure 컨테이너에 백업합니다.  
   
 > [!NOTE]  
-> SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) 에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  
+> SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) 에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  
   
 Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세요.  
   

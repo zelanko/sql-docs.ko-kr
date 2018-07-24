@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1bd692754af853d1d2795ad89e2279293c4b31b1
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251725"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047081"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  리소스 관리자(resource governor)를 재구성하는 경우 [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)의 RECONFIGURE 옵션을 참조하세요.    
     
-## <a name="permissions"></a>사용 권한    
+## <a name="permissions"></a>Permissions    
  RECONFIGURE 권한은 기본적으로 ALTER SETTINGS 권한의 피부여자로 설정됩니다. **sysadmin** 및 **serveradmin** 고정 서버 역할이 암시적으로 이 권한을 보유합니다.    
     
 ## <a name="examples"></a>예    

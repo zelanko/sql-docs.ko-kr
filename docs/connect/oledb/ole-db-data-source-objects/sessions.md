@@ -1,6 +1,6 @@
 ---
 title: 세션 | Microsoft Docs
-description: OLE DB Driver for SQL Server에에서 대 한 세션
+description: SQL Server용 OLE DB 드라이버 오류
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ecb43b33acd7c2e95cf9b1335ead2ec7a42939fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666173"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106829"
 ---
 # <a name="sessions"></a>세션
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "35666173"
   
  데이터 원본에서 만든 추가 세션 개체는 데이터 원본에 지정된 대로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 고유한 연결을 설정합니다. 응용 프로그램이 해당 세션 중에 만들어진 개체 참조를 모두 해제하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 삭제됩니다.  
   
- 다음 예제에서는에 연결 하는 OLE DB Driver for SQL Server를 사용 하는 방법을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스:  
+ 다음 예제에 연결 하는 OLE DB Driver for SQL Server를 사용 하는 방법에 설명 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스:  
   
 ```  
 int main()  
@@ -186,14 +186,14 @@ EXIT:
 }  
 ```  
   
- 세션 개체의 인스턴스를 SQL Server 용 OLE DB Driver 연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지속적으로 만들고 세션 개체를 해제 하는 응용 프로그램에 대 한 상당한 오버 헤드가 생성할 수 있습니다. SQL Server 세션 개체에 대 한 OLE DB 드라이버를 효율적으로 관리 하 여 오버 헤드를 최소화할 수 있습니다. OLE DB Driver for SQL Server 응용 프로그램을 유지할 수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체의 인터페이스를 하나 이상에 대 한 참조를 유지 관리 하 여 활성 세션 개체의 연결 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션 개체를  인스턴스에 연결하면 지속적으로 세션 개체를 만들고 해제하는 응용 프로그램의 경우 상당한 오버헤드가 생성될 수 있습니다. SQL Server 세션 개체에 대 한 OLE DB 드라이버를 효율적으로 관리 하 여 오버 헤드를 최소화할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램은 적어도 하나의 개체 인터페이스에 참조를 유지하여 세션 개체의  연결을 활성 상태로 유지할 수 있습니다.  
   
- 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 풀 유지 관리 코드로 전달 유효한 세션 개체를 필요한 대로 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 응용 프로그램 메서드를 합니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
+ 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 세션 개체가 필요하면 풀 유지 관리 코드에서 올바른 IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 응용 프로그램 메서드로 전달합니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
   
 > [!NOTE]  
->  앞의 예제에는 **IDBCreateCommand** 때문에 인터페이스를 사용는 **ICommand** 구현는 **GetDBSession** 메서드, 개체가 작성 된 세션을 확인할 수 있도록 하는 명령 또는 행 집합 범위 내의 유일한 메서드입니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
+>  앞의 예에서는 ICommand **인터페이스가 GetDBSession** 메서드를 구현하기 때문에 IDBCreateCommand** 인터페이스가 사용됩니다. 이 메서드는 개체가 만들어진 세션을 확인할 수 있는 명령 또는 행 집합 범위 내의 유일한 메서드입니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

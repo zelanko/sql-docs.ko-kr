@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c47be98fa9a09b3abfdf6faa14146695182a0c4c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064331"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -140,7 +140,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  경로는 임시 개체가 아닐 수 있습니다. 경로 이름은 **#** 으로 시작할 수 있지만 영구 개체입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  경로 생성 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

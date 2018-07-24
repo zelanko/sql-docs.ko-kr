@@ -14,12 +14,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50d1845e0df6c508aaa6f4312403aa3d5231935e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 712e6a6b6f847bb781a121f8ab9944a3614828a3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923638"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979085"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32923638"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
   
--   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
+-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Azure 스냅숏을 사용하여 Azure에 저장된 데이터베이스 파일 백업  
   

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 057d97572962ae13354d43abafe7d3016eafde7d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045151"
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "35404445"
 ## <a name="remarks"></a>Remarks
 이 보기는 SSISDB 카탈로그와 함께 작동하는 Scale Out 마스터에 연결하는 각 Scale Out Worker의 행을 표시합니다.
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 이 뷰를 보려면 다음 권한 중 하나가 필요합니다.
 
 - **ssis_admin** 데이터베이스 역할에 대한 멤버 자격

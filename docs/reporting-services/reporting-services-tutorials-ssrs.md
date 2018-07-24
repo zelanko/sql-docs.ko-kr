@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08096896918f1dd42670c23d4b063de70d33042a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026490"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050861"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 자습서(SSRS)
 

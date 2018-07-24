@@ -1,6 +1,6 @@
 ---
-title: BLOB에 대 한 스트리밍 지원을 출력 매개 변수 | Microsoft Docs
-description: BLOB 출력 매개 변수에 대 한 스트리밍 지원
+title: 출력 매개 변수 BLOB에 대 한 스트리밍 지원 | Microsoft Docs
+description: BLOB 출력 매개 변수에 대한 스트리밍 지원
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665173"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106869"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 문서를 스트리밍 BLOB을 바인딩하는 BLOB 출력 매개 변수에 대 한 지원을 보여 출력 매개 변수를 ISequentialStreams로 샘플을 포함 합니다.  
+  이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  
   
- IMultipleResults::GetResult 실행 중 출력 매개 변수에서 차단되어 DB_E_OBJECTOPEN 반환 값을 받을 수 있습니다. 호출자는 보류 중인 blob 매개 변수를 읽거나을 완전히 확인 하거나 해제 해야 합니다.  
+ IMultipleResults::GetResult 실행 중 출력 매개 변수에서 차단되어 DB_E_OBJECTOPEN 반환 값을 받을 수 있습니다. 호출자는 보류 중인 blob 매개 변수가 있는지 확인한 후 매개 변수를 완전히 읽거나 해제해야 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -516,7 +516,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BLOB 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

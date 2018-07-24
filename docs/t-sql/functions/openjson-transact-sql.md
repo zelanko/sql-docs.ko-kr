@@ -21,11 +21,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: 55d9b3fcf3ab8e6b55c6704e363e486627f7985c
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248235"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052919"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ FROM OPENJSON(@json)
   
 |Key|value|유형|  
 |---------|-----------|----------|  
-|StringValue|John|1|  
+|StringValue|John|@shouldalert|  
 |IntValue|45|2|  
 |TrueValue|true|3|  
 |FalseValue|false|3|  
@@ -125,7 +125,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |Key|값|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en-UK|  
+|@shouldalert|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
@@ -209,7 +209,7 @@ WITH (
   
 |Number|date|Customer|수량|주문|  
 |------------|----------|--------------|--------------|-----------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
+|SO43659|2011-05-31T00:00:00|AW29825|@shouldalert|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
 
@@ -224,7 +224,7 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
         |Type 열의 값|JSON 데이터 형식|  
         |------------------------------|--------------------|  
         |0|null|  
-        |1|string|  
+        |@shouldalert|string|  
         |2|ssNoversion|  
         |3|true/false|  
         |4|array|  

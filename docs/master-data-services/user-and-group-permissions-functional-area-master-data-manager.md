@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87407e668a66dc61b935b978900134afc15f4423
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050181"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
 

@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c69da5538488f1660dae8a3c1f56b1f7dff2e5ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182139"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052393"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "33182139"
 
 ##  <a name="view"></a> 전체 텍스트 인덱스의 속성 보기
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL을 사용하여 전체 텍스트 인덱스의 속성 보기
-|카탈로그 뷰 또는 동적 관리 뷰|Description|  
+|카탈로그 뷰 또는 동적 관리 뷰|설명|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|전체 텍스트 인덱스 참조에 대한 각 전체 텍스트 카탈로그에 대해 행을 반환합니다.|  
 |[sys.fulltext_index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|전체 텍스트 인덱스의 일부인 각 열에 대한 행을 포함합니다.|  
@@ -76,7 +76,7 @@ ms.locfileid: "33182139"
   
 5.  **페이지 선택** 창에서 다음 페이지 중 하나를 선택할 수 있습니다.  
   
-    |호출|Description|  
+    |호출|설명|  
     |----------|-----------------|  
     |**일반**|전체 텍스트 인덱스의 기본 속성을 표시합니다. 이러한 속성으로는 데이터베이스 이름, 테이블 이름 및 전체 텍스트 키 열의 이름과 같이 변경할 수 없는 많은 속성과 여러 가지 수정 가능한 속성이 있습니다. 수정 가능한 속성은 다음과 같습니다.<br /><br /> **전체 텍스트 인덱스 중지 목록**<br /><br /> **전체 텍스트 인덱싱 설정**<br /><br /> **변경 내용 추적**<br /><br /> **검색 속성 목록**<br /><br />자세한 내용은 [전체 텍스트 인덱스 속성&#40;일반 페이지&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)을 참조하세요.|  
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 속성&#40;열 페이지&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)을 참조하세요.|  
@@ -89,7 +89,7 @@ ms.locfileid: "33182139"
   
  다음 표에서는 인덱싱된 테이블 및 열과 관련한 전체 텍스트 속성과 관련 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 보여 줍니다.  
   
-|속성|Description|함수|  
+|속성|설명|함수|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|열의 문서 유형 정보를 보관하는 테이블의 TYPE COLUMN입니다.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|열에 대한 전체 텍스트 인덱싱 설정 여부를 나타냅니다.|COLUMNPROPERTY|  

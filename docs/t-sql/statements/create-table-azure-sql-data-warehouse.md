@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058751"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -180,7 +180,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*n* 값|전체 자릿수|소수 자릿수|  
 |--:|--:|-:|  
 |`0`|19|0|  
-|`1`|21|1|  
+|`1`|21|@shouldalert|  
 |`2`|22|2|  
 |`3`|23|3|  
 |`4`|24|4|  
@@ -247,7 +247,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 | `bigint`|8|  
 | `int` |4|  
 | `smallint` |2|  
-| `tinyint` |1|  
+| `tinyint` |@shouldalert|  
   
  `bit`  
  `1`, `0` 또는 NULL 값을 가질 수 있는 정수 데이터 형식입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 bit 열의 저장소를 최적화합니다. 테이블에 8개 이하의 bit 열이 있는 경우 열은 1바이트로 저장되고, 9-16개의 bit 열이 있을 경우 2바이트로 저장되는 식입니다.  
@@ -274,7 +274,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  16바이트 GUID입니다.  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  테이블을 만들려면 `db_ddladmin` 고정 데이터베이스 역할의 사용 권한이 필요합니다.
  - 데이터베이스에 대한 `CREATE TABLE` 사용 권한
  - 테이블을 포함하는 스키마에 대한 `ALTER SCHEMA` 사용 권한입니다. 

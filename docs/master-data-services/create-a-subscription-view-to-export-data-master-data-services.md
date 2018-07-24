@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 86015ca5563e15bdac6f41b76f2d824bc7079b70
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046361"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
 

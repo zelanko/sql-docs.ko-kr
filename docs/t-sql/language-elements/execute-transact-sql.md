@@ -36,11 +36,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052041"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>최선의 구현 방법  
  문이나 모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 수준 권한만 있어도 되는 경우에는 서버 수준 권한이 있는 로그인 이름을 지정하지 마세요. 마찬가지로 데이터베이스 소유자 권한이 필요한 경우가 아니라면 데이터베이스 소유자 계정을 지정하지 마세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  EXECUTE 문을 실행하는 데에는 사용 권한이 필요하지 않습니다. 그러나 EXECUTE 문자열 내에서 참조되는 보안 개체에 대해서는 사용 권한이 필요합니다. 예를 들어 문자열에 INSERT 문이 있는 경우 EXECUTE 문의 호출자에게는 대상 테이블에 대한 INSERT 권한이 있어야 합니다. EXECUTE 문이 모듈 내에 포함된 경우에도 EXECUTE 문이 실행될 때는 사용 권한 검사가 수행됩니다.  
   
  모듈에 대한 EXECUTE 권한은 기본적으로 모듈 소유자에게 부여되며 모듈 소유자는 이 권한을 다른 사용자에게 이전할 수 있습니다. 문자열을 실행하는 모듈이 실행될 때는 모듈을 만든 사용자의 컨텍스트가 아니라 모듈을 실행하는 사용자의 컨텍스트에서 사용 권한 검사가 수행됩니다. 그러나 동일한 사용자가 호출 모듈과 호출되는 모듈을 모두 소유하는 경우 두 번째 모듈에 대해서는 EXECUTE 권한 검사가 수행되지 않습니다.  

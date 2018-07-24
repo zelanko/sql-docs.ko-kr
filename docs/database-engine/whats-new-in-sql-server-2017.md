@@ -15,11 +15,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: af3f407144dcaf8fae1929d34afd83a3b8b42442
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048631"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "34225348"
 - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) DMF가 트랜잭션 로그 파일에 대한 요약 수준 특성 및 정보를 표시하기 위해 새로 도입되었으며, 트랜잭션 로그의 상태를 모니터링하는 데 유용합니다.  
 - 다시 시작 가능한 온라인 인덱스 다시 작성 - 다시 시작 가능한 온라인 인덱스 다시 작성을 사용하면 오류(예: 복제본으로 장애 조치 또는 디스크 공간 부족)가 발생한 후 중지된 위치에서 온라인 인덱스 다시 작성 작업을 다시 시작할 수 있습니다. 또한 온라인 인덱스 다시 작성 작업을 일시 중지했다가 나중에 다시 시작할 수도 있습니다. 예를 들어 우선 순위가 높은 작업을 실행하기 위해 시스템 리소스를 일시적으로 비우거나, 사용 가능한 유지 관리 시간이 큰 테이블에 비해 너무 짧은 경우 또 다른 유지 관리 기간에서 인덱스 다시 작성하여 완료해야 할 수 있습니다. 마지막으로 다시 시작 가능한 온라인 인덱스 다시 작성에는 상당한 로그 공간이 필요하지 않으므로 이 작업이 실행되는 동안 로그 잘림을 수행할 수 있습니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
 - **ALTER DATABASE SCOPED CONFIGURATION에 대한 IDENTITY_CACHE 옵션** - IDENTITY_CACHE 옵션이 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 문에 새로 추가되었습니다. 이 옵션을 `OFF`로 설정하면 서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 데이터베이스 엔진에서 ID 열 값 차이가 발생하지 않도록 방지할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.   
--  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]는 이제 보다 의미있는 관계 지향 데이터를 모델링하는 그래프 데이터베이스 기능을 제공합니다. 여기에는 노드 및 가장자리 테이블을 만들기 위한 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리에 대한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. 자세한 내용은 [SQL Server 2017에서 그래프 처리](../relational-databases/graphs/sql-graph-overview.md)를 참조하세요.   
+-  
+  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]는 이제 보다 의미있는 관계 지향 데이터를 모델링하는 그래프 데이터베이스 기능을 제공합니다. 여기에는 노드 및 가장자리 테이블을 만들기 위한 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리에 대한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. 자세한 내용은 [SQL Server 2017에서 그래프 처리](../relational-databases/graphs/sql-graph-overview.md)를 참조하세요.   
 - 응용 프로그램 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 - 자동 튜닝은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고, 솔루션을 권장하며, 식별된 문제를 자동으로 해결하는 데이터베이스 기능입니다. [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]의 자동 튜닝은 잠재적인 성능 문제를 검색할 때마다 알려주고, 정정 작업을 적용하거나 [!INCLUDE[ssde-md](../includes/ssde-md.md)]에서 자동으로 성능 문제를 해결할 수 있도록 합니다. 자세한 내용은 [자동 튜닝](../relational-databases/automatic-tuning/automatic-tuning.md)을 참조하세요.
 - 메모리 최적화 테이블에 대한 비클러스터형 인덱스 작성 성능 향상 - 데이터베이스 복구 중에 MEMORY_OPTIMIZED 테이블에 대한 bwtree(비클러스터형) 인덱스를 다시 작성하는 성능이 상당히 최적화되었습니다. 이에 따라 비클러스터형 인덱스를 사용하는 경우 데이터베이스 복구 시간을 크게 줄여줍니다.  

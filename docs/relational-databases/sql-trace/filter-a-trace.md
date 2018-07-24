@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974218"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046211"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974218"
   
  필터의 가용성은 데이터 열에 따라 다릅니다. 일부 데이터 열은 필터링할 수 없습니다. 다음 표와 같이 필터링 가능 데이터 열을 특정 관계형 연산자로만 필터링할 수 있습니다.  
   
-|관계형 연산자|연산자 기호|Description|  
+|관계형 연산자|연산자 기호|설명|  
 |-------------------------|---------------------|-----------------|  
 |Like|Like|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |유사하지 않음|유사하지 않음|추적 이벤트 데이터가 입력한 텍스트와 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  

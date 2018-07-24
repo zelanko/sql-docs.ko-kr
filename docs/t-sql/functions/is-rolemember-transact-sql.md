@@ -25,11 +25,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 93ac6dbb87046bcd10ffb010266d36f926de1257
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064629"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -58,7 +58,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |반환 값|설명|  
 |------------------|-----------------|  
 |0|*database_principal*은 *역할*의 구성원이 아닙니다.|  
-|1|*database_principal*은 *역할*의 구성원입니다.|  
+|@shouldalert|*database_principal*은 *역할*의 구성원입니다.|  
 |NULL|*database_principal* 또는 *역할*이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -83,7 +83,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="related-functions"></a>관련 함수  
  현재 사용자가 지정된 Windows 그룹의 멤버인지 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 멤버인지 확인하려면 [IS_MEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)를 사용하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 역할의 멤버인지 여부를 확인하려면 [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)를 사용하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스 역할에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

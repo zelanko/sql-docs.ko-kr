@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093317"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979177"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell 및 CLI: Azure Key Vault에서 사용자 고유 키를 사용하여 투명한 데이터 암호화 사용
 
@@ -39,8 +39,8 @@ ms.locfileid: "37093317"
    - [Key Vault에서 PowerShell 지침](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [HSM(하드웨어 보안 모듈) 및 Key Vault 사용에 대한 지침](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - 키 자격 증명 모음은 TDE에 사용할 다음과 같은 속성을 포함해야 합니다.
-   - [일시 삭제](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [PowerShell을 사용한 키 자격 증명 모음 일시 삭제를 사용하는 방법](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [일시 삭제](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [PowerShell을 사용한 키 자격 증명 모음 일시 삭제를 사용하는 방법](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - 키는 TDE에 사용할 다음과 같은 특성을 포함해야 합니다.
    - 만료 날짜 없음
    - 비활성화되지 않음
@@ -200,13 +200,13 @@ ms.locfileid: "37093317"
 
 - Azure 구독이 있고 해당 구독의 관리자여야 합니다.
 - [권장되지만 선택 사항임] TDE 보호기 키 자료의 로컬 복사본을 만들기 위해 HSM(하드웨어 보안 모듈) 또는 로컬 키 저장소를 포함합니다.
-- 명령줄 인터페이스 버전 2.0 이상입니다. 최신 버전을 설치하고 Azure 구독에 연결하려면 [Azure 플랫폼 간 명령줄 인터페이스 2.0 설치 및 구성](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)을 참조하세요. 
+- 명령줄 인터페이스 버전 2.0 이상입니다. 최신 버전을 설치하고 Azure 구독에 연결하려면 [Azure 플랫폼 간 명령줄 인터페이스 2.0 설치 및 구성](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)을 참조하세요. 
 - TDE에 사용할 Azure Key Vault 및 키를 만듭니다.
-   - [CLI 2.0을 사용하여 Key Vault 관리](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [CLI 2.0을 사용하여 Key Vault 관리](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [HSM(하드웨어 보안 모듈) 및 Key Vault 사용에 대한 지침](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - 키 자격 증명 모음은 TDE에 사용할 다음과 같은 속성을 포함해야 합니다.
-   - [일시 삭제](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [CLI를 사용한 키 자격 증명 모음 일시 삭제를 사용하는 방법](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [일시 삭제](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [CLI를 사용한 키 자격 증명 모음 일시 삭제를 사용하는 방법](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - 키는 TDE에 사용할 다음과 같은 특성을 포함해야 합니다.
    - 만료 날짜 없음
    - 비활성화되지 않음
@@ -264,11 +264,11 @@ ms.locfileid: "37093317"
 
 ## <a name="sql-cli-references"></a>SQL CLI 참조
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

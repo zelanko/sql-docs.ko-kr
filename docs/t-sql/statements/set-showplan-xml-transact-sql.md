@@ -29,11 +29,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9557a9576f214dcc84aa47e474797da9c570ff85
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061631"
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -72,7 +72,7 @@ SET SHOWPLAN_XML { ON | OFF }
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  SET SHOWPLAN_XML을 사용하려면 SET SHOWPLAN_XML가 실행되는 문을 실행할 수 있는 권한이 있어야 하며 참조된 개체를 포함하는 모든 데이터베이스에 대한 SHOWPLAN 권한이 있어야 합니다.  
   
  SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* 및 EXEC *user_defined_function* 문의 경우 실행 계획을 생성하려면 사용자에게 다음 권한이 있어야 합니다.  

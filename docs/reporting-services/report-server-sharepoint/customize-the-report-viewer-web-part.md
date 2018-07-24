@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028590"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052184"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 사용자 지정
 
@@ -69,7 +69,7 @@ ms.locfileid: "33028590"
   
  보고서 뷰어 웹 파트의 사용자 지정 속성은 다음과 같습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |보고서|현재 SharePoint 사이트나 동일한 웹 응용 프로그램 또는 팜 내의 사이트에 있는 보고서에 대한 정규화된 경로여야 합니다. 추가 속성을 설정할 때 최상의 결과를 얻으려면 보고서 URL을 지정한 다음 적용을 클릭합니다.|  
 |하이퍼링크 대상|현재 문서 내에 연결된 내용을 표시할 대상 프레임을 지정하는 표준 HTML입니다. 외부 웹 사이트에 대한 하이퍼링크가 포함된 보고서의 경우 대상 문서로 현재 창 내의 기존 보고서를 대체할지, 아니면 해당 문서를 새 브라우저 창에서 열지를 지정할 수 있습니다. 유효한 값은 **_Top**, **_Blank**및 **_Self**입니다. **_Top** 은 현재 창을 사용하고, **_Blank** 는 새 브라우저 창에서 문서를 로드하며 **_Self** 는 현재 프레임 내에서 문서를 엽니다. **_Parent** 도 HTML의 대상 특성에 대해 유효한 값이지만 페이지에 포함된 보고서 뷰어 웹 파트에는 사용하지 마세요.|  

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 968ea430a01bddf25ccf0e477da2096b4019c7cf
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942579"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050771"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ SHUTDOWN
   
  CREATE SERVER AUDIT 문은 트랜잭션 범위 내에 있습니다. 트랜잭션이 롤백되면 이 문도 롤백됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  서버 감사를 생성, 변경 또는 삭제하려면 보안 주체에게 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 파일 위치에 대한 액세스를 제한합니다.  

@@ -30,11 +30,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: dec794a04d383d2727de58e0b70ab9e663fce8af
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789554"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063566"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ DROP DATABASE database_name [;]
   
  DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 번에 하나의 데이터베이스를 삭제할 수 있습니다.
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  데이터베이스에 대한 **CONTROL** 권한, **ALTER ANY DATABASE** 권한 또는 **db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  

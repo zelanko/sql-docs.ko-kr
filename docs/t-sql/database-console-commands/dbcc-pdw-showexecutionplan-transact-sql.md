@@ -17,11 +17,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 83826259d76cbe27cad4451baed07221e6afed2c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36895886"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052929"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *spid*  
  쿼리 계획을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션에 대한 식별자입니다. 이는 NULL이 아닌 정수여야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에 대한 CONTROL 권한이 필요합니다.  
   
 어플라이언스에서 VIEW-SERVER-STATE 권한이 필요합니다.

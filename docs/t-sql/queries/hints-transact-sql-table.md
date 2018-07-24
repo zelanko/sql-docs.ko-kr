@@ -41,11 +41,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064389"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -416,7 +416,7 @@ NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유
 ## <a name="using-a-table-hint-as-a-query-hint"></a>테이블 힌트를 쿼리 힌트로 사용  
  *테이블 힌트*는 OPTION (TABLE HINT) 절을 사용하여 쿼리 힌트로 지정할 수도 있습니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다. 다른 임시 쿼리의 경우에는 이러한 힌트를 테이블 힌트로만 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  KEEPIDENTITY, IGNORE_CONSTRAINTS 및 IGNORE_TRIGGERS 힌트를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

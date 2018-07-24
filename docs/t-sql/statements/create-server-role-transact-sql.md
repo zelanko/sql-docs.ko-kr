@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c5c9a7d6cefa19dcb94f20a65e532bc6dad6bf3c
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940811"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059805"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CREATE SERVER ROLE 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  로그인의 경우 *server_principal* 에 대한 IMPERSONATE이 필요하고 *server_principal*로 사용되는 서버 역할의 경우 ALTER 권한이 필요합니다. 또는 server_principal로 사용되는 Windows 그룹의 멤버 자격이 필요합니다.  

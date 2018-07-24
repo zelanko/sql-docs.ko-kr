@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29147b488ea6f66870db4355021d2cf76d48496b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064279"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>매개 변수  
 $*string*: 따옴표로 묶을 문자열입니다.  
   
-$*parameter_type*: 데이터 형식을 나타내는 선택적 (정수) 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
+$parameter*type*: 데이터 형식을 나타내는 선택적 정수 기호입니다.  기본값은 PDO::PARAM_STR입니다.  
   
 ## <a name="return-value"></a>반환 값  
 SQL 문에 전달할 수 있는 따옴표로 묶은 문자열이고, 실패하면 false입니다.  
@@ -65,7 +65,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  
