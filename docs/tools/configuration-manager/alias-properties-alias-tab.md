@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e2ed13706eb817c9603c354ee268ba188e7c3d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069710"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999915"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;별칭&gt; 속성(별칭 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **\<** Alias name **> Properties** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 확인하거나 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **Alias Name**  
  이 연결을 나타내는 데 사용할 이름(별칭)입니다.  
   

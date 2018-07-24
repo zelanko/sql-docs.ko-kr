@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997145"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,8 @@ dbname_log_yyyymmddhhmm.BAK
  디스크 백업의 경우 백업을 만든 후 시간 간격이 \<*time_period*>를 초과하면 백업 디렉터리에 있는 모든 백업 파일을 삭제하도록 지정합니다.  
   
  **-CrBkSubDir**  
- 디스크 백업의 경우 *-UseDefDir*도 지정했으면 [ **backup_path** ] 디렉터리나 기본 백업 디렉터리에 하위 디렉터리를 만들도록 지정합니다. 하위 디렉터리의 이름은 **-D**에 지정된 데이터베이스 이름을 사용하여 생성됩니다. **-CrBkSubDir** 을 사용하면 *backup_path* 매개 변수를 변경할 필요 없이 다른 데이터베이스의 모든 백업을 별도의 하위 디렉터리에 쉽게 넣을 수 있습니다.  
+ 디스크 백업의 경우 *-UseDefDir*도 지정했으면 [ **backup_path** ] 디렉터리나 기본 백업 디렉터리에 하위 디렉터리를 만들도록 지정합니다. 하위 디렉터리의 이름은 **-D**에 지정된 데이터베이스 이름을 사용하여 생성됩니다. 
+  **-CrBkSubDir** 을 사용하면 *backup_path* 매개 변수를 변경할 필요 없이 다른 데이터베이스의 모든 백업을 별도의 하위 디렉터리에 쉽게 넣을 수 있습니다.  
   
  **backup_path**  
  디스크 백업의 경우 기본 백업 디렉터리에 백업 파일을 만들도록 지정합니다. 둘 다 지정한 경우**UseDefDir** 이 *backup_path* 보다 우선 적용됩니다. 기본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설정을 사용하는 경우 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup입니다.  
@@ -245,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   일반 오류가 발생한 경우  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sqlmaint** 유틸리티는 **에 대한** 읽기 및 실행 `sqlmaint.exe`권한이 있는 Windows 사용자라면 누구나 실행할 수 있습니다. 이 파일은 기본적으로 `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` 폴더에 저장되어 있습니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **로 지정된** 로그인에는 지정된 동작을 수행하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 권한이 있어야 합니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 인증된 Windows 사용자에 매핑된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인에는 지정된 동작을 수행하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 권한이 있어야 합니다.  
   
  예를 들어 **-BkUpDB** 를 사용하려면 BACKUP 문을 실행할 수 있는 권한이 있어야 합니다. 또한 **-UpdOptiStats** 인수를 사용하려면 UPDATE STATISTICS 문을 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 온라인 설명서에서 해당 항목의 "사용 권한" 섹션을 참조하십시오.  

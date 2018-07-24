@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb3df3e09379d0a99dea7660d210fc9bccd5f5fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053921"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33071050"
  **MSSQLSERVER에 대한 프로토콜 속성**  
  보안 공급자가 결정하는 인증서 이름입니다. 속성 표에서 세부 정보를 보려면 인증서를 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  만료 날짜  
  인증서 유효 기간의 마지막 날짜입니다.  
   

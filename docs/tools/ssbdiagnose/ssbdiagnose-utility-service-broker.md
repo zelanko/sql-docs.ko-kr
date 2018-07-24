@@ -32,11 +32,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078210"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046831"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -315,7 +315,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 환경 변수  
  **ssbdiagnose** 유틸리티는 **sqlcmd** 유틸리티도 사용하는 SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDLOGINTIMOUT 환경 변수를 지원합니다. 환경 변수는 명령 프롬프트 SET 명령을 사용하여 설정하거나 **sqlcmd** 를 사용하여 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 **setvar**명령을 사용하여 설정할 수 있습니다. **sqlcmd** 에서 **setvar**을 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  각 **connectionoptions** 절에서 **-E** 또는 **-U** 를 사용하여 지정된 로그인은 **-S** 에 지정된 인스턴스에 있는 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

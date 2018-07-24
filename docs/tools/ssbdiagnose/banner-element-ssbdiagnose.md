@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055118"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33076100"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |**title**|**ssbdiagnose** XML 출력 파일을 생성한 유틸리티를 식별합니다.|  
 |**product**|**ssbdiagnose** XML 출력 파일을 생성한 제품을 식별합니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "33076100"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  

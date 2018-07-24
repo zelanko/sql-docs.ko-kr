@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea73582b99e4b76edeacbb8e6da1ef68dbe5fec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076470"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057660"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33076470"
   
     -   **기본 재생 스레드 수** 는 재생 중 사용할 프로세서 스레드 수를 제어합니다. 스레드 수가 높을수록 재생이 더 빨리 완료되지만 재생 시 서버 성능이 저하됩니다. **4**로 설정하는 것이 좋습니다. 다음 표에서는 사용 가능한 옵션을 나열합니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |**2**|최소값. 두 스레드를 사용하여 재생합니다.|  
         |**4**|기본값.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33076470"
   
     -   **기본 상태 모니터 대기 간격(초)** 은 재생 스레드가 다른 프로세스를 차단할 수 있는 최대 시간(초)을 설정합니다. 다음 표에서는 값을 설명합니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |**0**|최소값. **0** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 절대로 중지하지 않음을 의미합니다.|  
         |**3600**|기본값. **3600** 초 또는 한 시간을 초과하지 않는 차단 프로세스를 허용합니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "33076470"
   
     -   **기본 상태 모니터 폴링 간격(초)** 은 차단 프로세스용 재생 스레드를 폴링하는 빈도를 설정합니다. 다음 표에서는 값을 설명합니다.  
   
-        |값|Description|  
+        |값|설명|  
         |-----------|-----------------|  
         |**1**|최소값. **1** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 초당 하나만 폴링함을 의미합니다.|  
         |**60**|기본값. 차단 프로세스를 _분당 하나만 폴링합니다.|  

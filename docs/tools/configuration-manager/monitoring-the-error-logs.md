@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6917f16f1807d68b8a3124596fa1e19ddf56e692
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38043079"
 ---
 # <a name="monitoring-the-error-logs"></a>오류 로그 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33067970"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 오류 로그 보기](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 및 이 로그를 보는 방법에 대해 설명합니다.|  
 |[Windows 응용 프로그램 로그 보기](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Windows 응용 프로그램 로그 및 이 로그를 보는 방법에 대해 설명합니다.|  

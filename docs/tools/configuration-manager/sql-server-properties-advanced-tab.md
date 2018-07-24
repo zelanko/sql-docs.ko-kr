@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2c6c71003694d4b696fc771c6b89a29ffafbff0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38043039"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 속성(고급 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   다음 속성은 기본적으로 **고급** 탭에 나타납니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **클러스터형**  
  이 서비스가 클러스터형 서버의 리소스로 설치되었는지 여부를 나타냅니다.  
   

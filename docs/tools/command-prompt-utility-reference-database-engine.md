@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9922b38639507cbff5a0383c7711c0ebc70e1eef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055331"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33073120"
 |[dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. 이 명령 프롬프트 유틸리티의 사용자 인터페이스 버전을 **DTExecUI**라고 하며 이는 패키지 실행 유틸리티를 표시합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 유틸리티](../integration-services/dtutil-utility.md)|SSIS 패키지를 관리하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[배포 유틸리티를 사용하여 모델 솔루션 배포](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 배포하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
-|[mssql-scripter (공개 미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스의 데이터베이스 개체에 대 한 CREATE 및 삽입 T-SQL 스크립트를 생성 하는 데 사용 합니다.|참조 우리의 [GitHub 리포지토리](https://github.com/Microsoft/sql-xplat-cli) 다운로드 및 사용 정보에 대 한 합니다.| 
+|[mssql-scripter (공개 미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에서 데이터베이스 개체에 대 한 만들기 및 삽입 T-SQL 스크립트를 생성 하는 데 사용 합니다.|참조 우리의 [GitHub 리포지토리에서](https://github.com/Microsoft/sql-xplat-cli) 다운로드 및 사용 정보에 대 한 합니다.| 
 |[osql 유틸리티](../tools/osql-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[프로파일러 유틸리티](../tools/profiler-utility.md)|명령 프롬프트에서 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 시작하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[RS.exe 유틸리티&#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 관리하기 위한 스크립트를 실행하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  

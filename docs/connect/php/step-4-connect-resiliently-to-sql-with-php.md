@@ -1,5 +1,5 @@
 ---
-title: '4 단계: php SQL 탄력적 연결할 | Microsoft Docs'
+title: '4 단계: PHP 사용 하 여 SQL에 탄력적으로 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -14,22 +14,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b422ab79b0a0cec89683835f592d4813edc99d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: da5c3b99eab34afded5fd92c19f53f3868517d43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310002"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983026"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>4단계: PHP를 사용하여 탄력적으로 SQL에 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-데모 프로그램 있도록 일시적인 오류가 발생 한 (이에 나열 된 ' 08' 접두사가 포함 된 모든 오류 코드 즉 [부록](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 리드 다시 시도 하 여에 연결 하는 동안 합니다. 하지만 쿼리 명령 중 일시적 오류로 인해 프로그램을 연결을 취소 하 고 쿼리 명령을 다시 시도 하기 전에 새 연결을 만듭니다. 우리는 것이 좋습니다 아니고 disrecommend이 디자인 선택 사항입니다. 데모 프로그램을 사용할 수 있는 디자인 유연성 중 일부를 보여 줍니다.  
+데모 프로그램은 있도록 일시적인 오류 (이에 나열 된 ' 08' 접두사를 사용 하 여 오류 코드입니다 [부록](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 재시도 하도록 잠재 고객을 연결 하는 동안. 하지만 쿼리 명령 동안 일시적 오류로 프로그램이 연결을 삭제 하 고 쿼리 명령을 다시 시도 하기 전에 새 연결을 만듭니다. 에서는 권장 아니고 disrecommend이 디자인을 선택 합니다. 데모 프로그램을 사용할 수 있는 디자인 유연성 중 일부를 보여 줍니다.  
   
-이 코드 샘플의 길이 대부분 예외 catch 논리로 인 한입니다.   
+이 코드 샘플의 길이 주로 catch 예외 논리로 인해입니다.   
   
-[sqlsrv_query()](../../connect/php/sqlsrv-query.md) 결과 SQL 데이터베이스에 대해 쿼리에서 집합을 검색 하는 함수를 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리 및 연결 개체를 수락 하 고 사용 하 여 반복 될 수 있는 결과 집합을 반환 [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md)합니다. 
+합니다 [sqlsrv_query ()](../../connect/php/sqlsrv-query.md) 결과 SQL Database에 대해 쿼리에서 집합을 검색 하는 함수를 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리 및 연결 개체를 수락 하 고 사용 하 여 반복 될 수 있는 결과 집합을 반환 [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)합니다. 
   
 ```php
 

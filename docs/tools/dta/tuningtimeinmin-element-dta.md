@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a906fea9cc3ff318a523695046c0a8c8fea2ce9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069150"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048651"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33069150"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**unsignedInt**, 길이 제한 없음|  
 |**기본값**|480분(8시간)|  
@@ -54,11 +54,11 @@ ms.locfileid: "33069150"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**자식 요소**|InclusionThresholdSetting|  
+|**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 코드 예에서는 최대 튜닝 시간을 12시간으로 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff7220d48a161456d899fb150c3749accad10fcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070300"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063391"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33070300"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**unsignedInt**, 길이 제한 없음|  
 |**기본값**|없음|  
@@ -54,7 +54,7 @@ ms.locfileid: "33070300"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**자식 요소**|InclusionThresholdSetting|  
+|**자식 요소**|없음|  
   
 ## <a name="remarks"></a>Remarks  
  여러 개의 데이터베이스를 튜닝할 경우 모든 데이터베이스에 대한 권장 구성은 공간 계산을 고려하여 처리됩니다. 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 저장소 크기보다 작은 공간을 가정합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "33070300"
   
 ## <a name="example"></a>예제  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 코드 예에서는 튜닝 권장 구성에서 사용할 수 있는 최대 디스크 공간으로 1500MB를 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066846"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33075370"
 ## <a name="showplan-events"></a>Showplan 이벤트  
  Showplan 추적 이벤트는 다음 표에 나열 및 설명되어 있습니다.  
   
-|이벤트 이름|Description|  
+|이벤트 이름|설명|  
 |----------------|-----------------|  
 |**Performance statistics**|처음으로 컴파일된 실행 계획이 캐시된 때와 다시 컴파일된 때, 계획 캐시에서 삭제된 때를 나타냅니다. **TextData** 열에는 XML 형식의 실행 계획이 포함됩니다. 자세한 내용은 [Performance Statistics 이벤트 클래스](../../relational-databases/event-classes/performance-statistics-event-class.md)를 참조하세요.|  
 |**Showplan All**|실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전체 컴파일 정보와 쿼리 계획을 표시합니다. 예를 들어 비용 계산 및 열 목록이 표시될 수 있습니다. 자세한 내용은 [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md)을 참조하세요.|  

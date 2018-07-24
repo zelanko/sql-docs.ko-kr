@@ -31,11 +31,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002606"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -214,7 +214,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 명령  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **내에서**문 외에도 다음 명령을 사용할 수 있습니다.  
   
-|Command|Description|  
+|Command|설명|  
 |-------------|-----------------|  
 |GO|마지막 GO 이후에 입력한 모든 문을 실행합니다.|  
 |RESET|입력한 모든 문을 지웁니다.|  

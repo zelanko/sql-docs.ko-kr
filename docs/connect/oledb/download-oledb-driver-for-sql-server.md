@@ -8,16 +8,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: d1ae2198438313cec687813e500070ed9e87caea
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: 3efc44af72b3f64649a6a918e51ada6758eb78c1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872883"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108715"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버 다운로드
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows"></a>Windows
 Microsoft OLE DB Driver for SQL Server의 다음 버전은 다운로드할 수 있습니다.

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4c221d40c9f4a182f82ea241bf1acd7741286279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002635"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 요소(ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33075870"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |**type**|Issue 요소가 보고하는 문제의 범주를 식별합니다.<br /><br /> **"진단"** 보고서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 발견된 구성 문제를 보고합니다.<br /><br /> **"문제"** 는 **ssbdiagnose** 의 분석을 완료하지 못하게 하는 문제를 보고합니다. 문제를 해결하고 **ssbdiagnose**를 다시 실행하십시오.<br /><br /> **"이벤트"** 는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **검사를 실행할 때 발견된** 이벤트를 보고합니다. 단, **-SHOWEVENTS** 가 지정된 경우에만 이벤트가 보고됩니다.|  
 |**코드**|메시지의 오류 번호를 식별합니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33075870"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|**string**, 길이 제한 없음|  
 |**Value**|오류 메시지 텍스트를 반환합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "33075870"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[DiagnosticInformation 요소&#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**자식 요소**|InclusionThresholdSetting|  
+|**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
  이 요소는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 구성을 분석할 때 오류가 발견되었으며 마스터 키가 없는 데이터베이스에 대해 1102 오류를 보고합니다.  

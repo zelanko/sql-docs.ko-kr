@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9860599e0865871a928d34ddd8f38bad11c1213e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004695"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33075700"
 ## <a name="cluster-servers"></a>클러스터 서버  
  장애 조치(failover) 클러스터에서 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 "test1.*\<your company>*.com" 및 "test2.*\<your company>*.com"인 두 노드 클러스터와 "virtsql"이라는 가상 서버가 있는 경우 "virtsql.*\<your company>*.com"에 대한 인증서를 두 노드에 모두 설치해야 합니다. 그런 다음 **SQL Server 구성 관리자** 의 **ForceEncryption** 확인란을 선택하여 장애 조치 클러스터에 암호화를 구성해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **ForceEncryption**  
  프로토콜 암호화를 강제로 사용합니다. 암호화란 데이터를 읽을 수 없는 형식으로 변경하여 중요한 정보의 기밀성을 유지하는 방법입니다. 암호화를 사용하면 전송 중 전송 패킷이 노출되더라도 데이터는 안전하게 보호됩니다. 채널 바인딩을 사용하려면 **암호화 적용** 을 **켜기** 로 설정하고 **고급** 탭의 **확장된 보호** 를 구성합니다.  
   
