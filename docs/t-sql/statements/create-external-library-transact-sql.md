@@ -22,11 +22,11 @@ ms.author: heidist
 manager: cgronlund
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 036eed38abd86f07115f2bac08a4c7640b1f2e62
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980152"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -106,7 +106,7 @@ R 언어의 경우 파일을 사용할 때 패키지를 Windows용 .ZIP 확장�
 
 인스턴스에 업로드된 라이브러리는 공용 또는 개인일 수 있습니다. 라이브러리가 `dbo`의 멤버에 의해 만들어진 경우, 라이브러리는 공용이며 모든 사용자와 공유될 수 있습니다. 그렇지 않으면 라이브러리는 해당 사용자 개인 전용입니다.
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 
 `CREATE EXTERNAL LIBRARY` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo**가 있는 사용자는 외부 라이브러리를 만들 수 있는 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 CREATE EXTERNAL LIBRARY를 지정하는 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
 

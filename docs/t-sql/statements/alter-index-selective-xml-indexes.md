@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5386e6c6876de0c5c9f0f3e71686110db23ab0b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984591"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ identifier
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  ALTER INDEX를 실행하려면 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

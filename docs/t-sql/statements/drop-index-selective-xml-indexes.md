@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fd9451c27742968f9af6e145ac494995e0e1ca80
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36253395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970475"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ DROP INDEX index_name ON <object>
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  DROP INDEX를 실행하려면 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다. 이 권한은 기본적으로 sysadmin 고정 서버 역할과 db_ddladmin 및 db_owner 고정 데이터베이스 역할에 부여됩니다.  
   
 ## <a name="example"></a>예제  

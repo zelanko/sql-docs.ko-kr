@@ -19,11 +19,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 4c591737c596752fe0268073ea3ea3b9a8c7db9f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416592"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974733"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ MAX_PROCESSES =*value*
 리소스 풀에 대한 일반 정보는 [Resource Governor 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 및 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)을 참조합니다.  
 
 컴퓨터 학습 작업을 제어하는 외부 리소스 풀의 사용 관련 정보는 [SQL Server에서의 기계 학습에 대한 리소스 관리](../../advanced-analytics/r/resource-governance-for-r-services.md)를 참조 하십시오...
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 
 `CONTROL SERVER` 권한이 필요합니다.
 

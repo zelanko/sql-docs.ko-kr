@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971705"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -57,7 +57,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
 정적 값을 할당 하거나 공유 데이터 집합에서 데이터를 사용할 수 있습니다. 새 KPI를 만들 때 임의 수동 데이터 집합으로 채워집니다.  
   
-|필드|Description|  
+|필드|설명|  
 |---|---|  
 |값 형식|  표시되는 값의 형식을 변경하는 데 사용합니다.|   
 |값|KPI에 대해 표시할 값입니다.|  

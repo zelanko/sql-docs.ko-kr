@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f3ee582f69a0ce12c1ac0054e4be6fbff82da953
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986376"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
  [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
  제거할 외부 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 테이블 이름은 선택적으로 스키마 또는 데이터베이스와 스키마를 포함할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
   
 -   테이블이 속한 스키마에 대한 **ALTER** 권한이 필요합니다.  
   

@@ -18,11 +18,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974606"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -95,7 +95,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> 결과 집합  
  매개 변수 없이 실행한 경우 **sp_configure** 는 다섯 개의 열이 있는 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**minimum**|**int**|구성 옵션의 최소값입니다.|  
@@ -110,7 +110,7 @@ RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  명시적 또는 암시적 트랜잭션에서는 RECONFIGURE가 허용되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  모든 사용자는 매개 변수 없이 또는 **매개 변수와 함께** sp_configure @configname 를 실행할 수 있습니다.  
   
  구성 값을 변경하거나 RECONFIGURE를 실행하려면 **sysadmin** 고정 서버 역할에 멤버 자격이나 **ALTER SETTINGS** 서버 수준 권한이 필요합니다.  

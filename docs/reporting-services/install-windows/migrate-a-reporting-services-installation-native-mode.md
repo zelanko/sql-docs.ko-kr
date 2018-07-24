@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 7a1104ea9d5e26731ad22be5ab0645d2e8773a08
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975270"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 

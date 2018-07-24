@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3e98fba7617c3b1a46b64d07f2b7efa0e51b9ad2
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980561"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  @@TEXTSIZE 함수의 값은 READTEXT에 대해 지정한 크기보다 작을 경우 READTEXT에 대해 지정한 크기를 대체합니다. @@TEXTSIZE 함수는 SET TEXTSIZE 문에서 설정한 반환될 데이터 바이트 수를 제한합니다. TEXTSIZE의 세션 설정 방법에 대한 자세한 내용은 [SET TEXTSIZE&#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  지정한 테이블에 대한 SELECT 권한이 있는 사용자에게 기본적으로 READTEXT 권한이 부여됩니다. SELECT 권한을 위임하는 경우에는 READTEXT 권한도 위임할 수 있습니다.  
   
 ## <a name="examples"></a>예  

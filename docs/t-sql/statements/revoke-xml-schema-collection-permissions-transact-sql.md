@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8cc2bc9a6eea98404ca8b4e445d182d1b06b4d12
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36243925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987555"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 스키마 컬렉션 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  XML 스키마 컬렉션에 대한 CONTROL 권한이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 XML 스키마 컬렉션을 소유해야 합니다.  
   
 ## <a name="examples"></a>예  

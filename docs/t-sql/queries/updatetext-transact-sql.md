@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 33535268ba32a43d36a0278a5e6d90cb9dfd9906
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981275"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  **text** 열을 NULL로 초기화하려면 WRITETEXT를 사용합니다. UPDATETEXT는 **text** 열을 빈 문자열로 초기화합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  지정된 테이블에 대해 UPDATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

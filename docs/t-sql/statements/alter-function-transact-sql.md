@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75a668f8fd07f5765065469e664bdef6fbe8f195
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788344"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975254"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -438,7 +438,7 @@ RETURNS return_data_type
 -   RECEIVE  
 -   SEND  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  함수 또는 스키마에 대한 ALTER 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 EXECUTE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

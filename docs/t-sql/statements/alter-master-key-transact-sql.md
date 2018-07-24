@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: eb393de5e17aa9b10cef656e83b7f76460eb991f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785974"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975218"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ ALTER MASTER KEY <alter_option>
   
  ADD ENCRYPTION BY SERVICE MASTER KEY를 사용하면 마스터 키 복사본이 서비스 마스터 키를 사용하여 암호화되고 현재 데이터베이스와 master에 모두 저장됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 CONTROL 권한이 필요합니다. 데이터베이스 마스터 키가 암호로 암호화된 경우 해당 암호도 알고 있어야 합니다.  
   
 ## <a name="examples"></a>예  

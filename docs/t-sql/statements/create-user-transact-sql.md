@@ -34,11 +34,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9d549a589d7b68351033db83b48690e44c59765d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971685"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -322,7 +322,7 @@ GO
  
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 포함된 데이터베이스 사용자에 대해 SSMS는 Multi-Factor Authentication을 지원할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)을 참조하세요.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

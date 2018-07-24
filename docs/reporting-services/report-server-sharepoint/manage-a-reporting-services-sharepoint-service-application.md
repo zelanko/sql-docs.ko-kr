@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971785"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 응용 프로그램 관리
 
@@ -114,7 +114,7 @@ ms.locfileid: "33028070"
 > [!IMPORTANT]  
 >  Reporting Services 암호화 키를 주기적으로 변경하는 것은 최상의 보안 권장 방법입니다. Reporting Services의 중요 버전 업그레이드 직후에 키를 변경하는 것이 가장 좋습니다. 업그레이드 후에 키를 변경하면 업그레이드 주기를 벗어나 Reporting Services 암호화 키를 변경할 경우에 발생하는 추가 서비스 중단이 최소화됩니다.  
   
-|호출|Description|  
+|호출|설명|  
 |----------|-----------------|  
 |암호화 키 백업|1) **암호:** 상자와 **암호 확인:** 상자에 암호를 입력하고 **내보내기**를 클릭합니다. 입력한 암호가 도메인 정책의 복잡성 요구 사항을 충족하지 않으면 경고가 표시됩니다.<br /><br /> 2) 키 파일을 저장할 파일 위치를 묻는 메시지가 나타납니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행 중인 컴퓨터와 별도의 컴퓨터에 키 파일을 저장해야 합니다. 기본 파일 이름은 서비스 응용 프로그램의 이름과 동일합니다.|  
 |암호화 키 복원|1) **파일 위치** 상자에서 키 파일을 입력하거나 해당 위치를 찾습니다.<br /><br /> 2) **암호** 상자에 암호화 파일을 백업하는 데 사용된 암호를 입력합니다.<br /><br /> 3) **확인**을 클릭합니다.|  
@@ -145,7 +145,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
 
-### <a name="options"></a>변수
+### <a name="options"></a>Options
 
  **실행 계정 지정**  
  계정을 지정하려면 선택합니다.  
@@ -163,7 +163,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  이 페이지에서는 보고서 서버에서 보고서 서버 전자 메일 배달을 가능하게 하는 SMTP(Simple Mail Transport Protocol) 설정을 지정할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하여 전자 메일 구독을 통해 보고서 또는 보고서 처리 알림을 배포할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하려면 SMTP 서버 및 보낸 사람 주소: 필드에 사용할 전자 메일 주소가 필요합니다.  
 
-### <a name="options"></a>변수
+### <a name="options"></a>Options
 
  **SMTP 서버 사용**  
  보고서 서버 전자 메일이 SMTP 서버를 통해 라우팅되도록 지정합니다.  

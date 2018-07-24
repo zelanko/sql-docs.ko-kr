@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97de12b36d96c419c2b22b16622ce2d36ecaedf3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005090"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987165"
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>2-5단원 - 요약 - 계층적 테이블의 데이터 관리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

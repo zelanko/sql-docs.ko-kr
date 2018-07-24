@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982415"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 사이트 모음 기능
 
@@ -35,7 +35,7 @@ Reporting Services SharePoint 모드는 세 가지 SharePoint 사이트 모음 �
 
  다음 표에서는 Reporting Services 사이트 모음 기능에 대해 설명합니다.  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |**보고서 서버 중앙 관리 기능**|Reporting Services 보고서 서버와의 통합을 관리하기 위한 기능을 사용합니다. 이 기능은 SharePoint 중앙 관리 사이트 모음에서만 설치 및 사용됩니다.<br /><br /> SharePoint 제품용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 추가 기능을 설치하면 보고서 서버 통합 기능이 SharePoint 중앙 관리 사이트 모음에서 자동으로 활성화됩니다. 일부 경우에는 기능을 수동으로 활성화해야 하는 경우도 있습니다. 보고서 서버 기능을 활성화하려면 SharePoint 중앙 관리의 사이트 설정 페이지에서 Reporting Services 페이지를 사용합니다.<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 버전 이상의 SharePoint 제품용 추가 기능은 추가 기능이 설치될 때 기존의 모든 사이트 모음에 대해 보고서 서버 통합 기능을 활성화합니다. 또한 이 기능은 새 사이트 모음에 대해 자동으로 활성화됩니다.|  
 |**보고서 서버 통합 기능**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services를 사용하여 다양한 보고 기능을 활성화합니다.<br /><br /> 이 기능은 기본적으로 활성화되어 있습니다.|  

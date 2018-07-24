@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0cec212b2fed6269c18c4a6583078e4f8adf3e69
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988325"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  스키마에 대한 ALTER ANY SECURITY POLICY 권한 및 ALTER 권한이 필요합니다.  
   
 ## <a name="example"></a>예제  

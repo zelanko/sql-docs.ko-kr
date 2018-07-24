@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8058a122907400b576dd17a2fd7b758abe08bca2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983754"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ AS constant_expression [ ; ]
   
  기본값의 이름을 바꾸려면 **sp_rename**을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help**를 사용합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CREATE DEFAULT를 실행하려면 최소한 현재 데이터베이스에서 CREATE DEFAULT 권한과 기본값이 생성된 스키마에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

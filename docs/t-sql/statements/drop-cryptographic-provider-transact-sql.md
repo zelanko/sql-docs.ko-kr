@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 642e402a103e207111b5f8b38703337920f5e164
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974050"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
   
  EKM 공급자를 삭제할 때 EKM 공급자에 매핑된 키가 있으면 해당 키의 GUID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장됩니다. 공급자가 같은 키 GUID로 나중에 만들어진 경우 해당 키는 다시 사용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

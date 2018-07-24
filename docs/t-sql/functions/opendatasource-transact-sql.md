@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b040d7a1ee620702c73c7031b421837073f977b6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788044"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984885"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ OPENDATASOURCE ( provider_name, init_string )
   
  FROM 절에서 OPENDATASOURCE, OPENQUERY 또는 OPENROWSET에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  모든 사용자가 OPENDATASOURCE를 실행할 수 있습니다. 원격 서버 연결에 사용되는 사용 권한은 연결 문자열에서 결정됩니다.  
   
 ## <a name="examples"></a>예  

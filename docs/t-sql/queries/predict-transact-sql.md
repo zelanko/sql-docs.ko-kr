@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408062"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971003"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 사용하는 알고리즘은 RevoScaleR 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만들어졌어야 합니다. 현재 지원되는 모델의 목록은 [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 참조하세요.
 
-### <a name="permissions"></a>사용 권한
+### <a name="permissions"></a>Permissions
 
 `PREDICT`를 위해 권한은 필요 없지만, 사용자는 데이터베이스에 대한 `EXECUTE` 권한 및 입력으로 사용하는 데이터를 쿼리하는 권한이 필요합니다. 또한 모델이 테이블에 저장된 경우 사용자는 테이블에서 모델을 읽을 수 있어야 합니다.
 

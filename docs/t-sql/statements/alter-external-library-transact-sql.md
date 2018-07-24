@@ -20,11 +20,11 @@ ms.author: heidist
 manager: cgronlund
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9579a28d1d243475aeea5d2120f7895c10b6582a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974655"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -94,7 +94,7 @@ R 언어의 경우 패키지를 Windows용 .ZIP 확장명의 압축된 보관 �
 
 `ALTER EXTERNAL LIBRARY` 문은 라이브러리 비트를 데이터베이스에 업로드하기만 합니다. 수정된 라이브러리는 사용자가 라이브러리를 호출하는 [sp_execute_external_script(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)의 코드를 실행할 때 설치됩니다.
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>Permissions
 
 기본적으로 **dbo** 사용자 또는 **db_owner** 역할의 멤버는 ALTER EXTERNAL LIBRARY를 실행할 수 있는 권한이 있습니다. 또한 외부 라이브러리를 만든 사용자가 해당 외부 라이브러리를 변경할 수 있습니다.
 

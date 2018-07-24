@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f8c3082ac8a44106dc3ed48086b788f6c5a0ff30
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786724"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983623"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
   
 -   데이터베이스에 함수, 저장 프로시저 또는 생성된 트리거가 있고 이러한 루틴에서 별칭 또는 사용자 정의 형식의 변수 및 매개 변수를 사용하는 경우. 별칭 또는 사용자 정의 형식 매개 변수에 관한 정보는 [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) 또는 [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  *type_name*에 관한 CONTROL 권한 또는 *schema_name*에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

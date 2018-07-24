@@ -33,11 +33,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 14289e1f0eb09c35da6d534112751fdb04c8def1
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970285"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ CREATE MESSAGE TYPE message_type_name
   
  메시지 유형은 임시 개체가 아닐 수 있습니다. 메시지 유형 이름은 **#** 으로 시작할 수 있지만 영구 개체입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  메시지 유형 생성 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
  메시지 유형에 대한 REFERENCES 권한은 기본적으로 메시지 유형의 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  

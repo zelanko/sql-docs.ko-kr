@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd77cfaca0d7bda93f51b9274169ed5539211fc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971645"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }
   
  SET IDENTITY_INSERT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용자는 테이블을 소유하거나 테이블에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

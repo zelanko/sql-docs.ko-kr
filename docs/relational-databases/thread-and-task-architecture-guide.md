@@ -21,11 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012861"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978232"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 
 |프로세스 이름   |실행 프로그램 |64개를 초과하는 CPU 사용 |  
 |----------|----------|----------|  
-|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |예 |  
+|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |사용자 계정 컨트롤 |  
 |Reporting Services |Rs.exe |아니오 |  
 |Analysis Services  |As.exe |아니오 |  
 |Integration Services   |Is.exe |아니오 |  

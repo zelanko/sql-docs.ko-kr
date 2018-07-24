@@ -26,11 +26,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b14711117e766e8ee4bdf4596b9b5ed6a75c645
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788424"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984815"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자에게 개체에 대한 사용 권한이 없으면 OBJECT_SCHEMA_NAME과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환할 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  개체에 대한 ANY 권한이 필요합니다. 데이터베이스 ID를 지정하려면 데이터베이스에 대해 CONNECT 권한도 필요합니다. 그렇지 않으면 게스트 계정을 설정해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  

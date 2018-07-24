@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077747"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969089"
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 응용 프로그램은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
   
- ![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") 구문 표기 규칙에 대 한 참조 [명령 프롬프트 유틸리티 참조 &#40;데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md)합니다.  
+ ![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") 구문 표기 규칙에 대 한 참조 [명령 프롬프트 유틸리티 참조 &#40;데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,10 +60,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  로그 전달 기록에 추가된 메시지 수준을 지정합니다. *level* 은 다음 정수 중 하나입니다.  
   
-|level|Description|  
+|level|설명|  
 |-----------|-----------------|  
 |0|추적 및 디버깅 메시지를 출력하지 않습니다.|  
-|1|오류 처리 메시지를 출력합니다.|  
+|@shouldalert|오류 처리 메시지를 출력합니다.|  
 |2|경고 및 오류 처리 메시지를 출력합니다.|  
 |**3**|정보 메시지, 경고 및 오류 처리 메시지를 출력합니다. 이것은 기본값입니다.|  
 |4|모든 디버깅 및 추적 메시지를 출력합니다.|  
@@ -81,10 +81,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** 응용 프로그램인 SqlLogShip.exe는 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 디렉터리에 설치됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **sqllogship** 은 Windows 인증을 사용합니다. 명령이 실행될 Windows 인증 계정에는 Windows 디렉터리 액세스 권한 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 권한이 필요합니다. 요구 사항은 **sqllogship** 명령이 **-backup**, **-copy**또는 **-restore** 옵션을 지정하는지에 따라 다릅니다.  
   
-|옵션|디렉터리 액세스 권한|사용 권한|  
+|옵션|디렉터리 액세스 권한|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|백업 디렉터리에 대한 읽기/쓰기 권한이 필요합니다.|BACKUP 문과 같은 권한이 필요합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)을 참조하세요.|  
 |**-copy**|백업 디렉터리에 대한 읽기 권한과 복사 디렉터리에 대한 쓰기 권한이 필요합니다.|[sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 저장 프로시저와 같은 권한이 필요합니다.|  

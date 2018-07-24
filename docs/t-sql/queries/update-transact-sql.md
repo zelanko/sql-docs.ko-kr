@@ -43,11 +43,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3583834a24bd9f2026c2b61219c132b33432ddaa
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36241235"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969785"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -466,7 +466,7 @@ ID     Value
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  대상 테이블에 대한 UPDATE 권한이 필요합니다. 또한 UPDATE 문에 WHERE 절이 포함되거나, SET 절의 *expression*에서 테이블의 열을 사용할 경우 업데이트하는 중인 테이블에 대해 SELECT 권한이 요구됩니다.  
   
  UPDATE 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  

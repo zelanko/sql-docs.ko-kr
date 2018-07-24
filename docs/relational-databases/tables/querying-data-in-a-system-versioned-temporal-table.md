@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cfdb035f176c2fcdb9e71b5621b76e4ecb72c2b4
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300171"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982585"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 데이터 쿼리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

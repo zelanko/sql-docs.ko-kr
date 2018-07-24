@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 8c4dc2d101dac523058192a4acd45034f38dadc6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988115"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 

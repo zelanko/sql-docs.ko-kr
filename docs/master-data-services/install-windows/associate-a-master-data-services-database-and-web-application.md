@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c7604c76f50a9f9a05a91c877398b6f47e300629
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32893095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972340"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 응용 프로그램 연결
 

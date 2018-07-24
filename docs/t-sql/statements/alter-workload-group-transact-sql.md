@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 26c0169ce7732d0e0d6cb0b283a570208b5f5584
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785624"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988315"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  정렬되지 않은 분할된 테이블에서 인덱스 생성에 사용되는 메모리는 관련된 파티션 수에 비례합니다.  필요한 총 메모리가 리소스 관리자 작업 그룹 설정에서 지정한 쿼리당 제한(REQUEST_MAX_MEMORY_GRANT_PERCENT)을 초과하면 이 인덱스 생성이 실행되지 않을 수 있습니다. "default" 작업 그룹에서는 쿼리가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 호환성을 위해 시작하는 데 필요한 최소 메모리를 포함하는 쿼리당 제한을 초과하게 되므로 "default" 리소스 풀에 이러한 쿼리를 실행할 수 있는 총 메모리가 구성되어 있는 경우 사용자가 "default" 작업 그룹에서 같은 인덱스 생성을 실행할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
