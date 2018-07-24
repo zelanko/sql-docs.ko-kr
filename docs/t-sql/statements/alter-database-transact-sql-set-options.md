@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04b95a4a2249f1b5eb80d28b43e082a75e8b9ffd
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792164"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946997"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -1105,25 +1105,25 @@ NO_WAIT
   
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<db_state_option>|예|예|  
-|\<db_user_access_option>|예|예|  
-|\<db_update_option>|예|예|  
-|\<delayed_durability_option>|예|예|  
-|\<external_access_option>|예|아니요|  
-|\<cursor_option>|예|아니요|  
-|\<auto_option>|예|아니요|  
-|\<sql_option>|예|아니요|  
-|\<recovery_option>|예|아니요|  
-|\<target_recovery_time_option>|아니요|예|  
-|\<database_mirroring_option>|아니요|아니요|  
-|ALLOW_SNAPSHOT_ISOLATION|아니요|아니요|  
-|READ_COMMITTED_SNAPSHOT|아니요|예|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
-|\<service_broker_option>|예|아니요|  
-|DATE_CORRELATION_OPTIMIZATION|예|예|  
-|\<parameterization_option>|예|예|  
-|\<change_tracking_option>|예|예|  
-|\<db_encryption_option>|예|아니요|  
+|\<db_state_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<db_user_access_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<db_update_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<delayed_durability_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<external_access_option>|사용자 계정 컨트롤|아니오|  
+|\<cursor_option>|사용자 계정 컨트롤|아니오|  
+|\<auto_option>|사용자 계정 컨트롤|아니오|  
+|\<sql_option>|사용자 계정 컨트롤|아니오|  
+|\<recovery_option>|사용자 계정 컨트롤|아니오|  
+|\<target_recovery_time_option>|아니오|사용자 계정 컨트롤|  
+|\<database_mirroring_option>|아니오|아니오|  
+|ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
+|READ_COMMITTED_SNAPSHOT|아니오|사용자 계정 컨트롤|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<service_broker_option>|사용자 계정 컨트롤|아니오|  
+|DATE_CORRELATION_OPTIMIZATION|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<parameterization_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<change_tracking_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<db_encryption_option>|사용자 계정 컨트롤|아니오|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.  
   
@@ -1206,7 +1206,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |1                        | ON |  
+|AdventureWorks2012   |@shouldalert                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>4. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
@@ -1867,20 +1867,20 @@ NO_WAIT
   
 |옵션 범주|다른 옵션과 함께 지정할 수 있음|WITH \<termination> 절을 사용할 수 있음|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|\<auto_option>|예|아니요|  
-|\<change_tracking_option>|예|예|  
-|\<cursor_option>|예|아니요|  
-|\<db_encryption_option>|예|아니요|  
-|\<db_update_option>|예|예|  
-|\<db_user_access_option>|예|예|  
-|\<delayed_durability_option>|예|예|  
-|\<parameterization_option>|예|예|  
-|ALLOW_SNAPSHOT_ISOLATION|아니요|아니요|  
-|READ_COMMITTED_SNAPSHOT|아니요|예|  
-|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
-|DATE_CORRELATION_OPTIMIZATION|예|예|  
-|\<sql_option>|예|아니요|  
-|\<target_recovery_time_option>|아니요|예|  
+|\<auto_option>|사용자 계정 컨트롤|아니오|  
+|\<change_tracking_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<cursor_option>|사용자 계정 컨트롤|아니오|  
+|\<db_encryption_option>|사용자 계정 컨트롤|아니오|  
+|\<db_update_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<db_user_access_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<delayed_durability_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<parameterization_option>|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
+|READ_COMMITTED_SNAPSHOT|아니오|사용자 계정 컨트롤|  
+|MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|DATE_CORRELATION_OPTIMIZATION|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|\<sql_option>|사용자 계정 컨트롤|아니오|  
+|\<target_recovery_time_option>|아니오|사용자 계정 컨트롤|  
   
 ## <a name="examples"></a>예  
   
@@ -1926,7 +1926,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |1                        | ON |  
+|AdventureWorks2012   |@shouldalert                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  
@@ -1994,7 +1994,7 @@ SET QUERY_STORE = ON
 ALTER DATABASE { database_name | Current }  
 SET   
 {  
-    <optionspec> [ ,...n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] 
 }  
 ;  
 
@@ -2003,9 +2003,7 @@ SET
     <auto_option>   
   | <change_tracking_option>   
   | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
+  | <db_encryption_option>    
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
@@ -2047,12 +2045,6 @@ SET
   
 <db_encryption_option> ::=  
   ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
   
 <delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
   
@@ -2100,14 +2092,7 @@ SET
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
   | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
+}
 
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
@@ -2615,7 +2600,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |1                        | ON |  
+|AdventureWorks2012   |@shouldalert                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2`일로 설정합니다.  

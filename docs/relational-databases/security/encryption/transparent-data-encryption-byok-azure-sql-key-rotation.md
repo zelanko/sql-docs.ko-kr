@@ -20,11 +20,11 @@ ms.date: 08/07/2017
 ms.author: ryzhang26
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 45dc9d4d9f4681fde06f75e8fa666c6584bcf863
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696744"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969615"
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 회전 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

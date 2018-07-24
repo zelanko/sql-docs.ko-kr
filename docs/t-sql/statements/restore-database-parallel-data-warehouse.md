@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782434"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969275"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -89,7 +89,7 @@ RESTORE HEADERONLY
   
  RESTORE HEADERONLY 결과는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 결과 뒤에 패턴화됩니다. 결과에는 50개 이상의 열이 있으며 모두 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 결과의 열에 대한 설명은 [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  **CREATE ANY DATABASE** 권한이 필요합니다.  
   
  백업 디렉터리에 액세스하고 읽을 수 있는 권한이 있는 Windows 계정이 필요합니다. 또한 Windows 계정 이름 및 암호를 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 저장해야 합니다.  

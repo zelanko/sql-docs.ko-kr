@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 006841648398b5d0da8343decdfbfe7b094a8bdf
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005082"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>지원되는 SharePoint와 Reporting Services 서버의 조합
 
@@ -44,7 +44,7 @@ SharePoint 모드로 설치된 SQL Server Reporting Services 보고서 서버에
 
 ||보고서 서버|추가 기능|SharePoint 버전|
 |-|-------------------|-------------|------------------------|
-|1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
+|@shouldalert|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|

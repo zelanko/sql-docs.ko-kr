@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a81e51c99540d8cc174341610a2163bf2aaf428
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968635"
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles"></a>병합 아티클에 대해 삭제가 추적되지 않도록 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

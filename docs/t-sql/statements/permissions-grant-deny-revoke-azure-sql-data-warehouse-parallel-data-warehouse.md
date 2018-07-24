@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941809"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969285"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ REVOKE
 > [!IMPORTANT]  
 >  보안 주체에 **GRANT** 옵션 없이 지정된 사용 권한이 있는 경우 사용 권한 자체가 취소됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  사용 권한을 부여하려면 grantor는 **WITH GRANT OPTION**이 갖춰진 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  개체 소유자는 소유하고 있는 개체에 대한 사용 권한을 부여할 수 있습니다. 보안 개체에 대한 **CONTROL** 사용 권한을 가진 보안 주체는 해당 보안 개체에 대한 사용 권한을 부여할 수 있습니다.  **db_owner** 및 **db_ddlowner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 어떤 사용 권한도 부여할 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
