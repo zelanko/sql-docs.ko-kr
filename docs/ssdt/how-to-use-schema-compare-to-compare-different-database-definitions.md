@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
 - sql.data.tools.schemacompare.watermark.f1
@@ -20,12 +20,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b3b52f87fe2c144a71d5826cc66970c0f18e5d1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b146c1dcd31cc6e45fbbd794392249aa9ffa0447
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094752"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088585"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교
 SSDT(SQL Server Data Tools)에는 두 데이터베이스 정의를 비교하는 데 사용할 수 있는 스키마 비교 유틸리티가 포함되어 있습니다.  비교의 원본 및 대상으로는 연결된 데이터베이스, SQL Server 데이터베이스 프로젝트, 스냅숏 또는 .dacpac 파일의 임의 조합을 사용할 수 있습니다.  비교 결과는 대상을 원본과 동일하게 만들기 위해 수행해야 하는 일련의 작업으로 표시됩니다.  비교가 완료되면 대상을 직접 업데이트하거나(대상이 프로젝트 또는 데이터베이스인 경우) 같은 효과가 있는 업데이트 스크립트를 생성할 수 있습니다.  
