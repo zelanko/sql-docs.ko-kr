@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a2099ad58020f03c3dc6deceea0fea9ba5230a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac4d76ceb3bcbd3042e4fb4d7f1fa42ceda44860
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922528"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983385"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "32922528"
 ##  <a name="Prereqs"></a> 필수 구성 요소  
  Microsoft Azure Storage는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 백업 파일을 저장하는 데 사용합니다. 필요한 필수 구성 요소는 다음과 같습니다.  
   
-|사전 요구 사항|Description|  
+|사전 요구 사항|설명|  
 |------------------|-----------------|  
 |**Microsoft Azure 계정**|[무료 평가판](http://azure.microsoft.com/pricing/free-trial/) 으로 Azure를 시작한 후에 [구매 옵션](http://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.|  
-|**Azure Storage 계정**|백업은 Azure Storage 계정에 연결된 Azure Blob 저장소에 저장됩니다. 저장소 계정을 만드는 단계별 지침은 [Azure Storage 계정 정보](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)를 참조하세요.|  
-|**Blob 컨테이너**|Blob은 컨테이너에 구성됩니다. 백업 파일에 대한 대상 컨테이너를 지정합니다. [Azure 관리 포털](https://manage.windowsazure.com/)에서 컨테이너를 만들거나 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 명령을 사용할 수 있습니다.|  
-|**공유 액세스 서명(SAS)**|대상 컨테이너에 대한 액세스는 공유 액세스 서명(SAS)으로 제어됩니다. SAS에 대한 개요는 [공유 액세스 서명, 1부: SAS 모델 이해](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. 코드 또는 **New-AzureStorageContainerSASToken** PowerShell 명령으로 SAS 토큰을 만들 수 있습니다. 이 프로세스를 간소화하는 PowerShell 스크립트는 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명) 토큰으로 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요. SAS 토큰은 **에 사용할 수 있도록** SQL 자격 증명 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 저장할 수 있습니다.|  
+|**Azure Storage 계정**|백업은 Azure Storage 계정에 연결된 Azure Blob 저장소에 저장됩니다. 저장소 계정을 만드는 단계별 지침은 [Azure Storage 계정 정보](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.|  
+|**Blob 컨테이너**|Blob은 컨테이너에 구성됩니다. 백업 파일에 대한 대상 컨테이너를 지정합니다. [Azure 관리 포털](https://manage.windowsazure.com/)에서 컨테이너를 만들거나 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) 명령을 사용할 수 있습니다.|  
+|**공유 액세스 서명(SAS)**|대상 컨테이너에 대한 액세스는 공유 액세스 서명(SAS)으로 제어됩니다. SAS에 대한 개요는 [공유 액세스 서명, 1부: SAS 모델 이해](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. 코드 또는 **New-AzureStorageContainerSASToken** PowerShell 명령으로 SAS 토큰을 만들 수 있습니다. 이 프로세스를 간소화하는 PowerShell 스크립트는 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명) 토큰으로 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요. SAS 토큰은 **에 사용할 수 있도록** SQL 자격 증명 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 저장할 수 있습니다.|  
 |**SQL Server 에이전트**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 작동하려면 SQL Server 에이전트가 실행되고 있어야 합니다. 자동으로 시작 옵션을 설정하는 것이 좋습니다.|  
   
 ## <a name="components"></a>구성 요소  
@@ -56,7 +56,7 @@ ms.locfileid: "32922528"
   
 |||  
 |-|-|  
-|시스템 개체|Description|  
+|시스템 개체|설명|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 만든 모든 백업에 대한 메타데이터, 백업 기록을 저장합니다.|  
 |[managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]를 사용합니다.|  
 |[managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 설정(예: 암호화)을 구성합니다.|  

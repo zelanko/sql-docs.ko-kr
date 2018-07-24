@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45246cc4a9a09c45ffb4762d6eda2464aeb82f3f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6218f0332b83b5952a2c09836b10b4665db9b409
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421452"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085595"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37421452"
 |속성|값|  
 |---|---|
 |구문|**datetimeoffset** [ (*초 소수 부분 자릿수*) ]|  
-|사용법|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1( Column1 **datetimeoffset(7)** )|  
+|사용법|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1( Column1 **datetimeoffset(7)** )|  
 |하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |날짜 범위|0001-01-01부터 31.12.99까지<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지|  
 |시간 범위|00:00:00부터 23:59:59.9999999까지(Informatica에서는 초 소수 부분이 지원되지 않음)|  
@@ -56,9 +56,9 @@ ms.locfileid: "37421452"
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00 00:00|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|예|  
-|표준 시간대 오프셋 인식 및 유지|예|  
-|일광 절약 시간제 인식|아니요|  
+|사용자 정의 초 소수 부분 자릿수|사용자 계정 컨트롤|  
+|표준 시간대 오프셋 인식 및 유지|사용자 계정 컨트롤|  
+|일광 절약 시간제 인식|아니오|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수 초의 전체 자릿수|  
 |---|---|---|---|

@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ae0431d6f4d2463a419e593b17b5700c3e13041c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffe4d95cd82864445ce3a8223c18664b65641f10
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322312"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980355"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
 
@@ -66,7 +66,7 @@ ms.locfileid: "35322312"
 |단계|설명 및 링크|  
 |----------|--------------------------|  
 |SharePoint 서버를 팜에 추가합니다.|다른 Reporting Services 응용 프로그램을 배포하려면 SharePoint를 설치해야 합니다.<br/><br/>SharePoint 2013의 경우 [SharePoint Server 2013에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)를 참조하세요.<br/><br/>SharePoint 2016의 경우 [SharePoint Server 2016에서 팜에 SharePoint 서버 추가](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)를 참조하세요.|  
-|Reporting Services SharePoint 모드 설치 및 구성|SQL Server 설치를 실행합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)를 참조하세요.<br /><br /> 서버가 응용 프로그램 서버로만 사용되고 WFE로 사용되지 않을 경우 **SharePoint 제품용 Reporting Services 추가 기능**을 선택할 필요가 없습니다.<br /><br /> 1) **설치 역할** 페이지에서 **SQL Server 기능 설치**를 선택합니다.<br /><br /> 2) **기능 선택** 페이지에서 **Reporting Services - SharePoint**를 선택합니다.<br /><br /> 3) **Reporting Services 구성**  페이지에서 **Reporting Services SharePoint 모드** 에 대해 **설치만**옵션이 선택되었는지 확인합니다.|  
+|Reporting Services SharePoint 모드 설치 및 구성|SQL Server 설치를 실행합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 설치에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)를 참조하세요.<br /><br /> 서버가 응용 프로그램 서버로만 사용되고 WFE로 사용되지 않을 경우 **SharePoint 제품용 Reporting Services 추가 기능**을 선택할 필요가 없습니다.<br /><br /> 1) **설치 역할** 페이지에서 **SQL Server 기능 설치**를 선택합니다.<br /><br /> 2) **기능 선택** 페이지에서 **Reporting Services - SharePoint**를 선택합니다.<br /><br /> 3) **Reporting Services 구성**  페이지에서 **Reporting Services SharePoint 모드** 에 대해 **설치만**옵션이 선택되었는지 확인합니다.|  
 |Reporting Services가 작동하는지 확인|1) SharePoint 중앙 관리의 **시스템 설정** 그룹에서 **이 팜의 서버 관리** 를 클릭합니다.<br /><br /> 2) **SQL Server Reporting Services 서비스**를 확인합니다.<br /><br />자세한 내용은 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)를 참조하세요.|  
   
 ##  <a name="bkmk_additional"></a> 기타 고려 사항  

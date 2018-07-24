@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 299f4837a54622370ff5c84e29e9a3db43db5510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b3c95ce2b9d937a464fcc2ec3528084503b5025
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218163"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983855"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 이전 버전의 SQL Server와 관련된 콘텐츠 [저장 프로시저에서 데이터 반환](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)을 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠 [저장 프로시저에서 데이터 반환](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx)을 참조하세요.
 
   데이터를 프로시저에서 호출 프로그램으로 반환하는 세 가지 방법은 결과 집합, 출력 매개 변수 및 반환 코드입니다. 이 항목은 세 가지 방법에 대한 자세한 정보를 제공합니다.  
   
@@ -193,7 +193,7 @@ EXECUTE @result = my_proc;
 |반환 코드 값|의미|  
 |-----------------------|-------------|  
 |0|성공한 실행 수입니다.|  
-|1|필요한 매개 변수 값이 지정되지 않았습니다.|  
+|@shouldalert|필요한 매개 변수 값이 지정되지 않았습니다.|  
 |2|지정된 매개 변수 값이 잘못되었습니다.|  
 |3|판매량을 가져오는 동안 오류가 발생했습니다.|  
 |4|판매 직원의 NULL 판매량을 찾았습니다.|  

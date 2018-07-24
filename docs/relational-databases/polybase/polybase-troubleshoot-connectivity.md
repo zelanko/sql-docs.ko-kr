@@ -8,16 +8,16 @@ ms.suite: sql
 ms.custom: ''
 ms.tgt_pltfrm: na
 ms.devlang: ''
-ms.topic: article
+ms.topic: conceptual
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: f4786785dd046fea0c8758d2739c645c9a2312c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16c94dcda446f4c498c5b9ca9ea55ff5123bbdbc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151304"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087215"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

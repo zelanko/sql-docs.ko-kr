@@ -1,5 +1,5 @@
 ---
-title: I p v 6을 사용 하 여 연결 | Microsoft Docs
+title: IPv6를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0479ad79093f2de1e9eb0fa6f9ff59db70ec4060
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986072"
 ---
 # <a name="connecting-using-ipv6"></a>IPv6을 사용하여 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

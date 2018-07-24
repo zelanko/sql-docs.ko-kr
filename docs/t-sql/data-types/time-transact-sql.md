@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421572"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088125"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421572"
 |속성|값|  
 |--------------|-----------|  
 |구문|**time** [ (*소수 자릿수 초*) ]|  
-|사용법|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
+|사용법|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
 |*소수 자릿수 초*|초의 소수 부분 자릿수를 지정합니다.<br /><br /> 0에서 7 사이의 정수를 지정할 수 있습니다. Informatica의 경우 0에서 3 사이의 정수를 지정할 수 있습니다.<br /><br /> 기본 소수 자릿수는 7(100ns)입니다.|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|Informatica의 경우 hh:mm:ss[.nnnnnnn])<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |범위|00:00:00.0000000부터 23:59:59.9999999까지(Informatica의 경우 00:00:00.000부터 23:59:59.999까지)|  
@@ -56,9 +56,9 @@ ms.locfileid: "37421572"
 |저장소 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 5바이트(고정)가 기본값입니다. Informatica의 경우 기본값은 초 소수 부분 자릿수 기본값 1ms를 기준으로 4바이트(고정)입니다.|  
 |정확도|100나노초(Informatica의 경우 1밀리초)|  
 |기본값|00:00:00<br /><br /> 이 값은 **date**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
-|사용자 정의 초 소수 부분 자릿수|예|  
-|표준 시간대 오프셋 인식 및 유지|아니요|  
-|일광 절약 시간제 인식|아니요|  
+|사용자 정의 초 소수 부분 자릿수|사용자 계정 컨트롤|  
+|표준 시간대 오프셋 인식 및 유지|아니오|  
+|일광 절약 시간제 인식|아니오|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수<br /><br /> 초<br /><br /> 전체 자릿수|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  

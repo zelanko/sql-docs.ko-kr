@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942008"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984685"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>1단원: 저장된 액세스 정책 및 공유 액세스 서명 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 단원에서는 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
+이 단원에서는 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
   
 > [!NOTE]  
 > 이 스크립트는 Azure PowerShell 5.0.10586을 사용하여 작성되었습니다.  
@@ -139,7 +139,7 @@ Azure PowerShell, Azure Storage SDK, Azure REST API 또는 타사 유틸리티�
 [2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [컨테이너 만들기](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [컨테이너 ACL 설정](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [컨테이너 ACL 가져오기](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

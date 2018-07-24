@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028956"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983125"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Reporting Services 기능
 
@@ -35,7 +35,7 @@ ms.locfileid: "33028956"
  > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
 > 
-  ![Azure 가상 머신 소형](../analysis-services/media/azure-virtual-machine-small.png)**[이미 설치된 SQL Server 2016으로 가상 머신을 스핀업](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+  ![Azure 가상 머신 소형](../analysis-services/media/azure-virtual-machine-small.png)**[이미 설치된 SQL Server 2016으로 가상 머신을 스핀업](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterprise Edition을 참조하세요.
 
@@ -49,33 +49,33 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
   
 |기능 이름|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|모바일 보고서 및 KPI|예||||||예|  
+|모바일 보고서 및 KPI|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
 |지원되는 카탈로그 DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Standard 이상|Standard 이상|Web|Express|||Standard 이상|  
 |지원되는 데이터 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|모든   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Web|Express|||모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|  
-|보고서 서버|예|예|예|예|||예|  
-|보고서 디자이너|예|예|예|예|||예|  
-|보고서 디자이너 웹 포털|예|예|예|예|||예|  
-|역할 기반 보안|예|예|예|예|||예|  
-|Excel, PowerPoint, Word, PDF 및 이미지로 내보내기|예|예|예|예|||예|  
-|향상된 계기 및 차트|예|예|예|예|||예|  
-|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]대시보드에 보고서 항목 고정|예|예|예|예|||예|  
-|사용자 지정 인증|예|예|예|예|||예|  
-|데이터 피드로 보고서 사용|예|예|예|예|||예|  
-|모델 지원|예|예|예||||예|  
-|역할 기반 보안을 위해 사용자 지정 역할 만들기|예|예|||||예|  
-|모델 항목 보안|예|예|||||예|  
-|무한 클릭 광고|예|예|||||예|  
-|공유 구성 요소 라이브러리|예|예|||||예|  
-|전자 메일 및 파일 공유 구독/일정 예약|예|예|||||예|  
-|보고서 기록, 스냅숏 실행 및 캐싱|예|예|||||예|  
-|SharePoint 통합|예|예|||||예|  
-|원격 및 비 SQL 데이터 원본 지원<sup>1</sup>|예|예|||||예|  
-|데이터 원본, 배달 및 렌더링, RDCE 확장성|예|예|||||예|  
-|사용자 지정 브랜딩|예||||||예|  
-|데이터 기반 보고서 구독|예||||||예|  
-|확장 배포(웹 팜)|예||||||예|  
-|경고<sup>2</sup>|예||||||예|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|예||||||예|  
+|보고서 서버|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|보고서 디자이너|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|보고서 디자이너 웹 포털|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|역할 기반 보안|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|Excel, PowerPoint, Word, PDF 및 이미지로 내보내기|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|향상된 계기 및 차트|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]대시보드에 보고서 항목 고정|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|사용자 지정 인증|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|데이터 피드로 보고서 사용|사용자 계정 컨트롤|예|예|예|||사용자 계정 컨트롤|  
+|모델 지원|사용자 계정 컨트롤|예|예||||사용자 계정 컨트롤|  
+|역할 기반 보안을 위해 사용자 지정 역할 만들기|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|모델 항목 보안|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|무한 클릭 광고|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|공유 구성 요소 라이브러리|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|전자 메일 및 파일 공유 구독/일정 예약|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|보고서 기록, 스냅숏 실행 및 캐싱|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|SharePoint 통합|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|원격 및 비 SQL 데이터 원본 지원<sup>1</sup>|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|데이터 원본, 배달 및 렌더링, RDCE 확장성|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|사용자 지정 브랜딩|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|데이터 기반 보고서 구독|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|확장 배포(웹 팜)|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|경고<sup>2</sup>|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
   
  <sup>1</sup> SQL Server 2016 Reporting Services(SSRS)에서 지원하는 데이터 원본에 대한 자세한 내용은 [Reporting Services에서 지원하는 데이터 원본 &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)를 참조하세요.  
   
@@ -97,9 +97,9 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
   
 |도구 이름|Enterprise|표준|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl 및.rds)|예|예|||||예|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|예||||||예|  
-|모바일 장치용 Power BI 앱(iOS, Windows 10, Android)(.rsmobile)|예||||||예|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl 및.rds)|사용자 계정 컨트롤|예|||||사용자 계정 컨트롤|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|모바일 장치용 Power BI 앱(iOS, Windows 10, Android)(.rsmobile)|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
   
 > [!NOTE]  
 > 1.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스트되는 데이터에 액세스할 수 있습니다.  

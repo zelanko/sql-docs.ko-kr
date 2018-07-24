@@ -23,12 +23,12 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3831509441516a08cfa8d651ecd8ffa93c16107f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550764"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083545"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다.  공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "34550764"
   
 1.  웹 포털에서 **새로 만들기** > **데이터 원본**을 선택합니다. 
   
-4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : @ & = + , $ / * < > | " / 기호는 포함할 수 없습니다.  
+4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : \@ & = + , $ / * < > | " /.  
   
 5.  필요에 따라 연결 정보를 제공하는 설명을 입력합니다.  
   

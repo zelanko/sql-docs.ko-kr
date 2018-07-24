@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f93a84e056726ffa5cf96ea05b9fd02933ed3c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036201"
 ---
 # <a name="sqlserverresultset-fields"></a>SQLServerResultSet 필드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerResultSet의 멤버에 대 한 정보를 참조 하십시오. [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)합니다.  
+  SQLServerResultSet의 멤버에 대 한 정보를 참조 하세요 [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aaad8cc4ad7f35c19ddc1f48332955401f742bcc
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: e6c9eaaeb59f2525a4887937e3716495cff7576d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942259"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107995"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "36942259"
 |[sys.server_audit_specifications_details](../../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 서버 감사 사양 세부 정보(동작)를 포함합니다.|  
 |[sys.server_file_audits](../../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 파일 감사 유형에 대한 확장 정보를 저장합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 기능과 명령마다 필요한 사용 권한이 있습니다.  
   
  서버 감사나 서버 감사 사양을 생성, 변경 또는 삭제하려면 서버 보안 주체에 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다. 데이터베이스 감사 사양을 생성, 변경 또는 삭제하려면 데이터베이스 보안 주체에 ALTER ANY DATABASE AUDIT 권한이나 데이터베이스에 대한 ALTER 또는 CONTROL 권한이 있어야 합니다. 또한 데이터베이스에 연결할 수 있는 권한이나 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 보안 주체에 있어야 합니다.  

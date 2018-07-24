@@ -22,17 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc5ca43e247a0cf2114b471f4f5096066fa7b3cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078010"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038051"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적에 포함할 이벤트 클래스와 데이터 열을 정의하는 템플릿을 만들 수 있습니다. 템플릿을 정의하고 저장한 후 선택한 각 이벤트 클래스에 대한 데이터를 기록하는 추적을 실행할 수 있습니다. 하나의 템플릿을 많은 추적에 사용할 수 있지만 템플릿 자체는 실행되지 않습니다.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 특정 추적을 위해 사용될 가능성이 있는 추적 템플릿을 미리 정의하여 이벤트 클래스를 쉽게 구성할 수 있도록 제공합니다. 예를 들어 Standard 템플릿을 사용하여 로그인, 로그아웃, 완료된 일괄 처리 및 연결 정보를 기록하는 일반적인 추적을 만들 수 있습니다. 이 템플릿을 수정하지 않고 그대로 사용하여 추적을 실행할 수 있으며 이벤트 구성이 서로 다른 추가 템플릿에 대한 시작점으로 삼을 수 있습니다.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 특정 추적을 위해 사용될 가능성이 있는 추적 템플릿을 미리 정의하여 이벤트 클래스를 쉽게 구성할 수 있도록 제공합니다. 예를 들어 Standard 템플릿을 사용하여 로그인, 로그아웃, 완료된 일괄 처리 및 연결 정보를 기록하는 일반적인 추적을 만들 수 있습니다. 이 템플릿을 수정하지 않고 그대로 사용하여 추적을 실행할 수 있으며 이벤트 구성이 서로 다른 추가 템플릿에 대한 시작점으로 삼을 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 미리 정의된 템플릿 외에도 기본적으로 이벤트 클래스가 포함되어 있지 않은 빈 템플릿에서 추적을 만들 수 있습니다. 계획한 추적이 미리 정의된 템플릿의 구성과 비슷하지 않을 때는 빈 추적 템플릿을 사용하는 것이 좋습니다.  

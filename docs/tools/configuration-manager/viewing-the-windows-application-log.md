@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0275da15c00b2b3d12515a1422b299e017e67345
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068310"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988245"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows 응용 프로그램 로그 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33068310"
   
  이벤트 뷰어로 볼 수 있는 로그에는 세 가지가 있습니다.  
   
-|Windows 로그 유형|Description|  
+|Windows 로그 유형|설명|  
 |----------------------|-----------------|  
 |시스템 로그|Windows 운영 체제 구성 요소에서 로그한 이벤트를 기록합니다. 예를 들어 시작할 때 드라이버나 다른 시스템 구성 요소 로드를 실패했으면 시스템 로그에 기록됩니다.|  
 |보안 로그|실패한 로그인 시도와 같은 보안 이벤트를 기록합니다. 이것은 보안 시스템의 변경 내용을 추적하고 일어날 수도 있는 보안 침해를 식별할 때 유용합니다. 예를 들어 시스템 로그온 시도는 사용자 관리자의 감사 설정에 따라 보안 로그에 기록됩니다.<br /><br /> 보안 로그를 보려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.|  

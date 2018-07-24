@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 878ea8dde5e6cbccf4d87e4a3b4b98fbf06f557b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983608"
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>반환 값  
 다음 키를 사용하는 결합형 배열입니다.  
   
-|Key|Description|  
+|Key|설명|  
 |-------|---------------|  
 |CurrentDatabase|현재 대상이 되는 데이터베이스입니다.|  
 |SQLServerVersion|SQL Server의 버전입니다.|  
@@ -84,7 +84,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

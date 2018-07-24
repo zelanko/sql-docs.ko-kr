@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f56a1b254aeb487001915f05bb4e278e1ebd768e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420462"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087925"
 ---
 # <a name="datetime-transact-sql"></a>datetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,20 +46,20 @@ ms.locfileid: "37420462"
 |속성|값|  
 |---|---|
 |구문|**datetime**|  
-|사용법|@MyDatetime **날짜/시간** 선언<br /><br /> CREATE TABLE Table1(Column1 **datetime**)|  
+|사용법|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1(Column1 **datetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 사항 없음|  
 |날짜 범위|01.01.53부터 31.12.99까지|  
 |시간 범위|00:00:00부터 23:59:59.997까지|  
-|표준 시간대 오프셋 범위|InclusionThresholdSetting|  
+|표준 시간대 오프셋 범위|없음|  
 |요소 범위|YYYY는 1753부터 9999까지의 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 지정한 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 999 사이에 속하는 세 자리 숫자로, 소수 자릿수 초를 나타냅니다.|  
 |문자 길이|최소 19자리부터 최대 23자리까지|  
 |저장소 크기|8바이트|  
 |정확도|.000, .003 또는 .007초 단위로 반올림됩니다.|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력(전체 연도 범위를 포함하지는 않음)|  
-|사용자 정의 초 소수 부분 자릿수|아니요|  
-|표준 시간대 오프셋 인식 및 유지|아니요|  
-|일광 절약 시간제 인식|아니요|  
+|사용자 정의 초 소수 부분 자릿수|아니오|  
+|표준 시간대 오프셋 인식 및 유지|아니오|  
+|일광 절약 시간제 인식|아니오|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>datetime에 대해 지원되는 문자열 리터럴 형식  
 다음 표에는 **datetime**에 대해 지원되는 문자열 리터럴 형식이 나와 있습니다. ODBC를 제외하고 **datetime** 문자열 리터럴은 작은따옴표(')로 묶입니다(예: 'string_literaL'). **us_english** 환경이 아닌 경우 문자열 리터럴은 N'string_literaL' 형식이어야 합니다.

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072450"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37986013"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33072450"
 ## <a name="dynamic-ports"></a>동적 포트  
  시작 시 동적 포트에서 수신하도록 구성된 SQL Server 인스턴스는 운영 체제에서 사용 가능한 포트를 확인하고 해당 포트의 끝점을 엽니다. 들어오는 연결은 연결할 포트 번호를 지정해야 합니다. SQL Server를 시작할 때마다 포트 번호가 변경될 수 있으므로 SQL Server에서는 포트를 모니터링하고 들어오는 연결을 해당 인스턴스의 현재 포트로 보내는 SQL Server Browser 서비스를 제공합니다. 동적 포트를 사용할 경우 SQL Server를 다시 시작할 때 포트 번호가 변경되어 방화벽 설정을 변경해야 할 수 있으므로 방화벽을 통해 SQL Server에 연결하는 것이 복잡해집니다. 방화벽을 통한 연결 문제를 방지하려면 정적 포트를 사용하도록 SQL Server를 구성하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **활성**  
  컴퓨터에서 IP 주소가 활성 상태임을 나타냅니다. **IPAll**에는 사용할 수 없습니다.  
   

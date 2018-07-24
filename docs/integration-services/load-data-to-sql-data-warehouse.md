@@ -5,19 +5,19 @@ documentationcenter: NA
 ms.service: sql-data-warehouse
 ms.component: data-movement
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 84295d9d1e43a9d10724ab8381aa4308f50c8513
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36887409"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087585"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server에서 Azure SQL Data Warehouse로 데이터 로드
 

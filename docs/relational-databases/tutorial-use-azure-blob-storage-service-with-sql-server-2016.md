@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012402"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981475"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 2016 사용 자습서를
 Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL Server 2012 서비스 팩 1 CU2 향상된 기능으로 시작되었으며, SQL Server 2014 및 SQL Server 2016에서 더욱 개선되었습니다. 이 기능에 대한 개요 및 사용할 경우의 이점은 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요.  
   
   
-**다운로드**<br /><br />**>>**[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면 **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.<br /><br />**>>** Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
+**다운로드**<br /><br />**>>**[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면 **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.<br /><br />**>>** Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 여러 단원을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 단원은 특정 작업을 중심으로 하며, 단원을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob 저장소에 백업하고 Azure 가상 머신에 복원합니다. SQL Server 2016 파일-스냅숏 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅숏 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.  
@@ -43,7 +43,7 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
   
 -   Azure Storage 계정이 있습니다.  
   
--   SQL Server 2016이 설치된 Azure 가상 머신이 하나 이상 있으며, [Azure에서 SQL Server 가상 머신 프로비전](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/)에 따라 이 가상 머신을 프로비전했습니다. 필요에 따라 두 번째 가상 머신을 [8 단원의 시나리오에 사용할 수 있습니다. 로그 백업에서 새 데이터베이스로 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)의 시나리오를 위해 두 번째 가상 컴퓨터를 사용할 수 있습니다.  
+-   SQL Server 2016이 설치된 Azure 가상 머신이 하나 이상 있으며, [Azure에서 SQL Server 가상 머신 프로비전](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)에 따라 이 가상 머신을 프로비전했습니다. 필요에 따라 두 번째 가상 머신을 [8 단원의 시나리오에 사용할 수 있습니다. 로그 백업에서 새 데이터베이스로 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)의 시나리오를 위해 두 번째 가상 컴퓨터를 사용할 수 있습니다.  
   
 이 자습서는 다음 9개의 단원으로 구성되어 있으며, 순서대로 완료해야 합니다.  
   

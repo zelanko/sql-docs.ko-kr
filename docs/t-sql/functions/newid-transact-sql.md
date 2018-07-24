@@ -23,15 +23,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd9a6bb526fe7d0f8b32ec79c6a5309eb2504090
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d70b0f9d96c533c420430b927f0d2ab8e5987138
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787244"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087785"
 ---
 # <a name="newid-transact-sql"></a>NEWID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   **uniqueidentifier** 형식의 고유한 값을 만듭니다.  
   

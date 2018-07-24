@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410555"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082375"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,28 +37,28 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  개체의 유형입니다. 유효한 값은 프로젝트의 경우 `20`이고, 패키지의 경우 `30`입니다. *object_type*은 **smallInt**입니다.  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  패키지의 이름입니다. *object _name*은 **nvarchar(260)** 입니다.  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  매개 변수의 이름입니다. *parameter_ name*은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 MODIFY 권한  

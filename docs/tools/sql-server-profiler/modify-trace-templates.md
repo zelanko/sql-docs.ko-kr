@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28455e8a0af59b60ffa51e41c01726baaa851987
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988165"
 ---
 # <a name="modify-trace-templates"></a>추적 템플릿 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,5 +54,5 @@ ms.locfileid: "33075780"
 [추적 만들기](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Transact-SQL을 사용하여 기존 추적 수정](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
 [SQL Server Profiler를 사용하여 추적에 대한 이벤트 및 데이터 열 지정](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[sp 추적-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[sp-추적-setevent-transact sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

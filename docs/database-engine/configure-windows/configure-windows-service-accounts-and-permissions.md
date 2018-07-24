@@ -54,16 +54,16 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: c409047c510bb97c6e915140758a304e145747ad
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989361"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981355"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이전 버전의 SQL Server와 관련된 내용은 [Windows 서비스 계정 및 권한 구성](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx)을 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 내용은 [Windows 서비스 계정 및 권한 구성](https://msdn.microsoft.com/library/ms143504(SQL.120).aspx)을 참조하세요.
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다. 이 항목에서는 고급 사용자가 서비스 계정의 세부 정보를 파악하는 데 도움이 되는 정보를 제공합니다.  
@@ -404,7 +404,7 @@ ms.locfileid: "33989361"
 
 기본 제공 계정 또는 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 일부 액세스 제어 권한을 부여해야 할 수도 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설정하는 추가 ACL을 보여 줍니다.  
   
-|요구 구성 요소|계정|리소스|사용 권한|  
+|요구 구성 요소|계정|리소스|Permissions|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|성능 로그 사용자|Instid\MSSQL\binn|폴더 내용 보기|  
 ||성능 모니터 사용자|Instid\MSSQL\binn|폴더 내용 보기|  

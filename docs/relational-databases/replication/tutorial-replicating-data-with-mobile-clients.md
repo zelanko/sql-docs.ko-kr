@@ -20,18 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb45c40674b572af1ef7f4e9b3eaa83318478
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4627eeb473ba1b2075ea4de12b0b5770e4f44447
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353965"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983095"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 병합 복제는 가끔씩만 연결되는 중앙 서버와 모바일 클라이언트 간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하여 병합 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 
 
-이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다. 병합 복제에 대한 자세한 내용은 [병합 복제의 개요](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)를 참조하세요.
+이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다. 병합 복제에 대한 자세한 내용은 [병합 복제의 개요](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)를 참조하세요.
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 병합 복제를 사용하여 중앙 데이터베이스의 데이터를 여러 모바일 사용자에게 게시하여 각 사용자가 고유하게 필터링된 데이터의 하위 집합을 얻을 수 있도록 안내합니다. 
@@ -54,14 +54,14 @@ ms.locfileid: "37353965"
   
 - 구독자 서버(대상)에서 [!INCLUDE[ssEW](../../includes/ssew-md.md)]을 제외한 SQL Server의 모든 버전을 설치합니다. 이 자습서에서 만든 게시는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]을 지원하지 않습니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.  
+- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하는 방법에 대한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.  
  
   
 >[!NOTE]
 > - 두 버전이 넘게 차이 나는 SQL Server 인스턴스에서는 복제가 지원되지 않습니다. 자세한 내용은 [복제 토폴로지에서 지원되는 SQL Server 버전](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)을 참조하세요.
-> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
+> - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
   
   
 **이 자습서를 완료하는 데 소요되는 예상 시간: 60분**  
@@ -97,7 +97,7 @@ ms.locfileid: "37353965"
    >
    > SQL 2017보다 낮은 빌드를 사용하는 경우, 양방향 복제에서 이 열을 사용할 때 잠재적인 데이터 손실을 알리는 메시지가 화면 맨 아래에 표시됩니다. 이 자습서의 목적상 이 메시지는 무시할 수 있습니다. 그러나 지원되는 빌드를 사용하지 않는 경우 프로덕션 환경에서 이 데이터 형식을 복제해서는 안 됩니다.
    > 
-   > **hierarchyid** 데이터 형식을 복제하는 방법에 대한 자세한 내용은 [복제에서 hierarchyid 열 사용](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)을 참조하세요.
+   > **hierarchyid** 데이터 형식을 복제하는 방법에 대한 자세한 내용은 [복제에서 hierarchyid 열 사용](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)을 참조하세요.
     
   
 7. **테이블 행 필터링** 페이지에서 **추가**를 선택한 다음, **필터 추가**를 선택합니다.  

@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 064d6fb77dad0dd906c8783ebe82f99c48b14f2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979979"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 구성 관리자 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 네트워크 연결을 구성할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하면 데이터베이스 개체를 만들거나 관리하고, 보안을 구성하고, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리를 작성할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
 
  > [!TIP]
- > 구성 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux에서 사용 하 여는 **mssql conf** 도구입니다. 자세한 내용은 참조 [mssql conf 도구와 함께 Linux에서 SQL Server 구성](../../linux/sql-server-linux-configure-mssql-conf.md)합니다.
+ > 구성 해야 할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux에서 사용 합니다 **mssql conf** 도구입니다. 자세한 내용은 [mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성](../../linux/sql-server-linux-configure-mssql-conf.md)합니다.
 
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
   

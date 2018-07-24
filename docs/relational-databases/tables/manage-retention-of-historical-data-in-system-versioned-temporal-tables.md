@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239128"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985615"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 클러스터형 columnstore 인덱스는 데이터 압축이 뛰어나고 보존 정리가 효율적이므로 작업에서 대량의 기록 데이터를 빠르게 생성하는 시나리오에 적합합니다. 이런 패턴은 변경 내용 추적 및 감사, 추세 분석 또는 IoT 데이터 수집에 temporal 테이블을 사용하는 집약적 트랜잭션 처리 작업에서 일반적으로 나타납니다.
 
-자세한 내용은 [보존 정책을 사용하여 임시 테이블에서 기록 데이터 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
+자세한 내용은 [보존 정책을 사용하여 임시 테이블에서 기록 데이터 관리](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   

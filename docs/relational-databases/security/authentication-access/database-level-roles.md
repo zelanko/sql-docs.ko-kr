@@ -39,15 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bd67d9005d5862bdb24d8112b2a04d023f4141
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 252ba405e8ad04b47581fcbbaca89cc7aee1eaf6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943159"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106699"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,9 +145,9 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
 |[sp_droprole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|현재 데이터베이스에서 데이터베이스 역할을 제거합니다.|  
 |[sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|  
 |[sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|현재 데이터베이스의 SQL Server 역할에서 보안 계정을 제거합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 사용 권한 | 역할에 권한을 추가합니다.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| 사용 권한 | 역할에 대한 권한을 거부합니다.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 사용 권한 | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 역할에 권한을 추가합니다.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 역할에 대한 권한을 거부합니다.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
   
   
 ## <a name="public-database-role"></a>public 데이터베이스 역할  

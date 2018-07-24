@@ -1,5 +1,5 @@
 ---
-title: 추적 파일 (SQL Server Profiler) 재생 | Microsoft Docs
+title: 재생 추적 파일 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0dc2625cfeae43ef4c524c460df5f2723130eb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035496"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>추적 파일 재생(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33076563"
   
 5.  **추적한 순서대로 이벤트를 재생합니다.** 또는 **여러 스레드를 사용하여 이벤트를 재생합니다.** 를 선택합니다. 다음 표에서는 이 두 설정 사이의 차이점을 설명합니다.  
   
-    |옵션|Description|  
+    |옵션|설명|  
     |------------|-----------------|  
     |**추적한 순서대로 이벤트를 재생합니다.**|기록된 순서대로 이벤트를 재생합니다. 이 옵션을 사용하면 디버깅할 수 있습니다.|  
     |**여러 스레드를 사용하여 이벤트를 재생합니다.**|이 옵션은 여러 스레드를 사용하여 순서와 관계없이 각 이벤트를 재생합니다. 이 옵션을 사용하면 성능이 최적화됩니다.|  

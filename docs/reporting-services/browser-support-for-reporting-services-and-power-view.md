@@ -24,12 +24,12 @@ caps.latest.revision: 121
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8a1dfae6233ddf9c8c4a736d7d2fb4c640ce196a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4e5fbe77dc85496fd51100c496467a4672c254e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017190"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984155"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
 
@@ -155,7 +155,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
 [웹 포털에서 보고서 찾기 및 보기](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
-[웹 포털(SSRS 기본 모드)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[웹 포털(SSRS 기본 모드)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
 

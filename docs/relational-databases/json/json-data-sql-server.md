@@ -16,12 +16,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b81626832f6428969f86b179b06232b81d7326f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6df3b020e125a807d84297abad445f3a3f0dd807
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417542"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038120"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -159,9 +159,9 @@ FROM OPENJSON(@json)
   WITH (id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
-    skills nvarchar(max) '$.skills' as json) 
-    outer apply openjson( a.skills ) 
-                     with ( skill nvarchar(8) '$' ) as b
+    skills nvarchar(max) '$.info.skills' as json) 
+    outer apply openjson( skills ) 
+                     with ( skill nvarchar(8) '$' )
 ```  
 **기술** 배열은 첫 번째 `OPENJSON`에서 원래 JSON 텍스트 조각으로 반환되고 `APPLY` 연산자를 사용하여 다른 `OPENJSON` 함수로 전달됩니다. 두 번째 `OPENJSON` 함수는 JSON 배열을 구분 분석하고 문자열 값을 첫 번째 `OPENJSON`의 결과와 조인될 단일 열 행 집합으로 반환합니다. 이 쿼리의 결과는 다음 표에 표시됩니다.
 

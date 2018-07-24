@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d3d77c77be6e16e6d4deb5fd968774717230f88
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 17167b89180bd8af491d20c6ef3785dba238ad7f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333944"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983265"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용하여 여러 개체에 대한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  
 
-SQL Server Management Studio(SSMS)를 사용하여 다양한 개체를 스크립팅하는 방법에 대한 자세한 자습서는 [자습서: SSMS에서 스크립팅](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms)을 참조하세요.
+SQL Server Management Studio(SSMS)를 사용하여 다양한 개체를 스크립팅하는 방법에 대한 자세한 자습서는 [자습서: SSMS에서 스크립팅](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)을 참조하세요.
 
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  

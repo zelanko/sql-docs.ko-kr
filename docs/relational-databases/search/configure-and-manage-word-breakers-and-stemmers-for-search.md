@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ece22b891139b95d025ccf1f67c6dcac6633b8c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4360dec65a22ff313cf19340f4b9310aa6a6f7af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181489"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985395"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 추가 옵션 및 추가 정보는 [sys.fulltext_index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)를 참조하세요.
 
 ##  <a name="tshoot"></a> 단어 분리 시간 초과 오류 해결  
- 단어 분리 시간 초과 오류는 다양한 상황에서 발생할 수 있습니다. 이러한 상황과 각 상황에서의 대처 방법에 대한 자세한 내용은 [MSSQLSERVER_30053](https://msdn.microsoft.com/en-us/library/cc879279.aspx)을 참조하세요.
+ 단어 분리 시간 초과 오류는 다양한 상황에서 발생할 수 있습니다. 이러한 상황과 각 상황에서의 대처 방법에 대한 자세한 내용은 [MSSQLSERVER_30053](https://msdn.microsoft.com/library/cc879279.aspx)을 참조하세요.
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>MSSQLSERVER_30053 오류에 대한 정보
   

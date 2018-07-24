@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870158"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984505"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server 2014 Express LocalDB(영문)](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 내용은 [SQL Server 2014 Express LocalDB(영문)](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)를 참조하세요.
 
 Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하는 [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) 기능입니다. SQL Server 2016 Express with Advanced Services에서 사용할 수 있습니다.  
 
@@ -40,7 +40,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
   
 -   SQL Server 2016 Express를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 **LocalDB** 패키지를 선택합니다. 
   
--   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
+-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
 ## <a name="install-localdb"></a>LocalDB 설치  
  설치 마법사를 통해 또는 SqlLocalDB.msi 프로그램을 사용하여 **LocalDB** 를 설치합니다. **LocalDB** 는 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]설치 시 옵션 항목입니다. 
@@ -49,7 +49,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 인스턴스는 **SqlLocalDB.exe** 유틸리티를 사용하여 관리됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 사용해야 합니다. 
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
   
  응용 프로그램에 **LocalDB**를 포함하는 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서 [로컬 데이터 개요](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [연습: SQL Server LocalDB 데이터베이스 만들기](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) 및 [연습: SQL Server LocalDB 데이터베이스의 데이터에 연결(Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)을 참조하세요.  
@@ -125,7 +125,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>문제 해결  
  **LocalDB**문제 해결에 대한 자세한 내용은 [SQL Server 2012 Express LocalDB 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  기본 제공 계정(예: NT AUTHORITY\SYSTEM)에서 소유한 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** 인스턴스는 해당 용도로 사용자가 만든 인스턴스입니다. 컴퓨터의 모든 사용자는 **LocalDB**인스턴스를 사용하고 사용자 프로필에 파일을 저장하고 자격 증명으로 프로세스를 실행하여 데이터베이스를 만들 수 있습니다. 기본적으로 **LocalDB** 인스턴스에 대한 액세스는 해당 인스턴스의 소유자로 제한됩니다. **LocalDB** 에 포함된 데이터는 데이터베이스 파일에 대한 파일 시스템 액세스를 통해 보호됩니다. 공유 위치에 저장된 사용자 데이터베이스 파일은 해당 위치에 대한 파일 시스템 액세스 권한을 가진 사람이면 누구나 소유한 **LocalDB** 인스턴스를 사용하여 열 수 있습니다. 데이터베이스 파일이 사용자 데이터 폴더와 같은 보호되는 위치에 있으면 해당 사용자 및 해당 폴더에 대한 액세스 권한이 있는 관리자만 데이터베이스를 열 수 있습니다. **LocalDB** 파일은 한 번에 하나의 **LocalDB** 인스턴스에서만 열 수 있습니다.  
   
 > [!NOTE]  

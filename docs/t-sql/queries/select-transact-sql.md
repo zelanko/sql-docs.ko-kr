@@ -30,11 +30,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0dbee4b5b28b2dd72c4c6bdb7cc91eb07272cbf5
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054023"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > 예를 들어 뷰에 클라스터형 인덱스가 있고 이 뷰가 일부 테이블 행을 제외하며 이 뷰의 SELECT 열 목록에서 *varchar* 데이터 형식을 *정수*로 바꾸는 CONVERT를 사용한다고 가정해 봅니다. 이런 상황에서 CONVERT는 WHERE 문이 실행되기 전에 실행될 수 있습니다. 물론 일반적이지 않습니다. 필요한 상황에서 다른 순서를 방지하기 위해 뷰를 수정하는 방법이 있는 경우가 종종 있습니다. 
 
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECTINTO**를 사용하여 새 테이블을 만들려면 **CREATETABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTERSCHEMA** 권한이 둘 다 있어야 합니다.  
   
 ## <a name="examples"></a>예:   

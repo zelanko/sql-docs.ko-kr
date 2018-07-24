@@ -21,12 +21,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce86448f4266da763c96c5b7f934aa8acaefd861
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a3c3eb131de8f0786bf72fc09da244b4bb542dd4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351435"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981735"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "37351435"
 ## <a name="see-also"></a>관련 항목:  
 [복제를 위한 보안 및 보호](../../relational-databases/replication/security/security-and-protection-replication.md) 
 
-[트랜잭션 복제 개요](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication) 
+[트랜잭션 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 
-[병합 복제 개요](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
+[병합 복제 개요](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
 
   

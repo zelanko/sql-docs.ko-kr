@@ -1,6 +1,6 @@
 ---
-title: mssql cli | Microsoft Docs
-description: mssql cli는 대화형 명령줄 쿼리 도구를 사용 하 여 Windows, macOS 등 또는 Linux에서 실행 되는 SQL Server입니다.
+title: mssql-cli | Microsoft Docs
+description: mssql cli는 대화형 명령줄 쿼리 도구를 사용 하 여 Windows, macOS 또는 Linux에서 실행 되는 SQL Server입니다.
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bf49d6676b64386985a8af46676bab4e9c9c134d
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037477"
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>SQL Server 용 mssql cli 명령줄 쿼리 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-mssql cli는 SQL Server를 쿼리 하기 위한 대화형 명령줄 도구, Windows, macOS 등 또는 Linux에 설치 합니다.
+mssql cli는 SQL Server를 쿼리 하는 것에 대 한 대화식 명령줄 도구, Windows, macOS 또는 Linux에 설치 합니다.
 
-## <a name="install-mssql-cli"></a>Mssql cli를 설치 합니다.
+## <a name="install-mssql-cli"></a>Mssql cli 설치
 
-자세한 설치 지침을 참조 하십시오.는 [설치 가이드](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md), 또는 pip를 알고 있는 경우 다음 명령을 실행 하 여 설치 합니다.
+자세한 설치 지침을 참조 하세요. 합니다 [설치 가이드](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md), 또는 pip를 알고 있으면 다음 명령을 실행 하 여 설치:
 
 ```$ pip install mssql-cli```
 

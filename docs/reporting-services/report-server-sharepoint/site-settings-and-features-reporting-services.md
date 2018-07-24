@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053341"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 사이트 설정 및 사이트 기능(SharePoint 모드)
 
@@ -31,7 +31,7 @@ Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-|사이트 설정|Description|  
+|사이트 설정|설명|  
 |------------------|-----------------|  
 |Reporting Services 사이트 설정|이 항목에 설명된 사이트 전체 설정입니다.|  
 |데이터 경고 관리|데이터 경고 기능의 관리입니다.|  
@@ -45,7 +45,7 @@ Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 사이트 설정을 위한 옵션
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**RSClientPrint ActiveX 컨트롤 다운로드 설정**|이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤에 대한 자세한 내용은 [Using the RSClientPrint Control in Custom Applications](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)을 참조하십시오.|  
 |**로컬 모드에서 원격 오류를 사용하도록 설정합니다.**|로컬 모드에서 실행 중일 때 원격 컴퓨터에서 자세한 오류 메시지를 표시하거나 숨깁니다. 다음과 유사한 오류 메시지가 나타날 경우 원격 오류를 사용하면 도움이 될 수 있습니다.<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

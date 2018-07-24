@@ -1,5 +1,5 @@
 ---
-title: SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 유틸리티 | Microsoft Docs
+title: SQL 도구 및 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 유틸리티 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: sql
@@ -18,47 +18,47 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34709031"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035221"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 유틸리티
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-(쿼리, 모니터 등)을 관리 하려면 데이터베이스 도구가 필요 합니다. 사용 가능한 몇 가지 데이터베이스 도구가 있습니다. 데이터베이스 또는 windows에서는 클라우드에서 실행 될 수 있습니다 하는 동안 [Linux](../linux/sql-server-linux-overview.md), 데이터베이스와 동일한 플랫폼에서 실행 되도록 도구에 필요 하지 않습니다. 
+(쿼리, 모니터 등)를 관리 하려면 데이터베이스 도구가 필요 합니다. 사용할 수 있는 몇 가지 데이터베이스 도구가 있습니다. 데이터베이스는 Windows, 또는 클라우드에서 실행 될 수 있습니다 하는 동안 [Linux](../linux/sql-server-linux-overview.md), 도구는 데이터베이스와 동일한 플랫폼에서 실행할 필요가 없습니다. 
 
-이 문서에서는 SQL 데이터베이스 작업에 사용 가능한 도구에 대 한 정보를 제공 합니다. 
+이 문서에서는 SQL database를 사용 하 여 작업에 대 한 사용 가능한 도구에 대 한 정보를 제공 합니다. 
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>쿼리를 실행 하 고 데이터베이스 관리 도구  
 
 | 도구 | 설명 |
 |:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 실행 하는 경우 항상 데이터베이스 관리를 위한 무료, 간단한 도구입니다. 이 미리 보기 릴리스에서 확장 된 TRANSACT-SQL 편집기와 데이터베이스의 작동 상태에 대 한 사용자 지정 가능한 정보를 포함 하 여 데이터베이스 관리 기능을 제공 합니다. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows, macOS 등 및 Linux에서 실행**합니다.|
-| [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS)를 사용 하 여 쿼리를 디자인 하 고 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 관리. **Windows에서 실행 되는 SSMS**합니다.|
-| [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 대 한 강력한 개발 환경으로 Visual Studio를 설정 합니다. **Windows에서 실행 되는 SSDT**합니다.|
-|[mssql cli](mssql-cli.md)|mssql cli에는 SQL Server를 쿼리 하기 위한 대화형 명령줄 도구는 합니다. **mssql cli Windows, macOS 등 및 Linux에서 실행**|
-| [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code를 설치 하면 설치 여 [확장명이 mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Microsoft SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스를 개발 하기 위한 합니다. **Visual Studio 코드 창, macOS 등 및 Linux에서 실행**합니다.|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 실행 중인 경우 항상 데이터베이스 관리를 위한 무료, 경량 도구입니다. 이 미리 보기 릴리스에서 확장 된 TRANSACT-SQL 편집기 및 데이터베이스의 작동 상태에 대 한 사용자 지정이 가능한 정보를 포함 하 여 데이터베이스 관리 기능을 제공 합니다. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows, macOS 및 Linux에서 실행**합니다.|
+| [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS)를 사용 하 여 쿼리를 디자인 하 고 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse 관리. **Windows에서 실행 되는 SSMS**합니다.|
+| [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse 용 강력한 개발 환경에 Visual Studio를 설정 합니다. **Windows에서 실행 되는 SSDT**합니다.|
+|[mssql-cli](mssql-cli.md)|mssql cli에는 SQL Server를 쿼리 하기 위한 대화형 명령줄 도구입니다. **Windows, macOS 및 Linux에서 실행 되는 mssql-cli**|
+| [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code를 설치한 후 설치 합니다 [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Microsoft SQL Server, Azure SQL Database 및 SQL Data Warehouse 개발을 위한 합니다. **Windows, macOS 및 Linux에서 실행 되는 visual Studio Code**합니다.|
 
-## <a name="which-tool-should-i-choose"></a>도구를 선택 해야 합니까?
+## <a name="which-tool-should-i-choose"></a>어떤 도구를 선택 해야 하나요?
 
-- SQL Server 인스턴스 또는 데이터베이스에서 Windows, Linux 또는 Mac에서 간단한 편집기에서 관리 하 시겠습니까? [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) 선택
-- SQL Server 인스턴스 또는 전체 GUI 지 원하는 Windows에서 데이터베이스를 관리 하 시겠습니까? [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) 선택
-- 만들거나 데이터베이스 코드를 컴파일 타임 유효성 검사를 포함 하 여 유지 관리 하려는 리팩터링 및 디자이너를 Windows에서 지원? [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) 선택
-- IntelliSense, 구문 높은 조명 옵션이 있는 명령줄 도구를 SQL Server에 쿼리할 원하는 등? 선택 [mssql cli](mssql-cli.md)
-- Windows, Linux 또는 Mac에서 간단한 편집기에서 T-SQL 스크립트를 작성 하 시겠습니까? 선택 [Visual Studio Code](https://code.visualstudio.com/) 및 [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+- SQL Server 인스턴스 또는 데이터베이스에서 Windows, Linux 또는 Mac에는 가벼운 편집기에서 관리 하 시겠습니까? [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) 선택
+- SQL Server 인스턴스 또는 전체 GUI 지원을 통해 Windows에서 데이터베이스를 관리 하 시겠습니까? [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) 선택
+- 수행 하거나 데이터베이스 코드를 컴파일 시간 유효성 검사를 포함 하 여 유지 관리 하려면, 리팩터링 및 디자이너를 Windows에서 지원? [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) 선택
+- IntelliSense, 구문 높은 조명 기능 하는 명령줄 도구를 사용 하 여 SQL Server를 쿼리 하려는 경우 등? 선택 [mssql-cli](mssql-cli.md)
+- Windows, Linux 또는 Mac에서 가벼운 편집기에서 T-SQL 스크립트를 작성 하 시겠습니까? 선택할 [Visual Studio Code](https://code.visualstudio.com/) 고 [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>추가 도구
 
 | 도구 | 설명 |
 |:--|:--|
-| [구성 관리자](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 구성 관리자 SQL Server 서비스를 구성 하 고 네트워크 연결을 구성을 사용 하 고 있습니다. Windows에서 실행 되는 configuration Manager|
+| [구성 관리자](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 구성 관리자 SQL Server 서비스를 구성 하 고 네트워크 연결을 구성 하려면 사용 하 고 있습니다. Windows에서 실행 되는 configuration Manager|
 |[mssql conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql conf를 사용 하 여 Linux에서 실행 중인 SQL Server를 구성 합니다.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | SQL Server Migration Assistant를 사용하여 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 SQL Server로 데이터베이스를 마이그레이션하는 작업을 자동화할 수 있습니다.|
-| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Distributed Replay 기능을 사용 하 여 향후 SQL Server 업그레이드의 영향을 쉽게 평가할 수 있도록 합니다. 하드웨어와 운영 체제 업그레이드 및 SQL Server 튜닝에 따르는 영향도 쉽게 평가할 Distributed Replay를 사용할 수도 있습니다. |
-| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 유틸리티는 Service Broker 서비스를 구성 하거나 Service Broker 대화의 문제를 보고합니다. |
+| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Distributed Replay 기능을 사용 하 여 향후 SQL Server 업그레이드의 영향을 평가할 수 있도록 합니다. 하드웨어 및 운영 체제 업그레이드 및 SQL Server 튜닝의 영향을 평가 하는 데 Distributed Replay를 사용할 수도 있습니다. |
+| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 유틸리티는 Service Broker 서비스 구성 이나 Service Broker 대화의 문제를 보고 합니다. |
 
 
 ## <a name="command-line-utilities"></a>명령줄 유틸리티
@@ -72,7 +72,7 @@ ms.locfileid: "34709031"
 |[dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. 이 명령 프롬프트 유틸리티의 사용자 인터페이스 버전을 **DTExecUI**라고 하며 이는 패키지 실행 유틸리티를 표시합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[dtutil 유틸리티](../integration-services/dtutil-utility.md)|SSIS 패키지를 관리하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[배포 유틸리티를 사용하여 모델 솔루션 배포](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 배포하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
-|[mssql-scripter (공개 미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스의 데이터베이스 개체에 대 한 CREATE 및 삽입 T-SQL 스크립트를 생성 하는 데 사용 합니다.|참조 우리의 [GitHub 리포지토리](https://github.com/Microsoft/sql-xplat-cli) 다운로드 및 사용 정보에 대 한 합니다.| 
+|[mssql-scripter (공개 미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에서 데이터베이스 개체에 대 한 만들기 및 삽입 T-SQL 스크립트를 생성 하는 데 사용 합니다.|참조 우리의 [GitHub 리포지토리에서](https://github.com/Microsoft/sql-xplat-cli) 다운로드 및 사용 정보에 대 한 합니다.| 
 |[osql 유틸리티](../tools/osql-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[프로파일러 유틸리티](../tools/profiler-utility.md)|명령 프롬프트에서 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 시작하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[RS.exe 유틸리티&#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 관리하기 위한 스크립트를 실행하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
