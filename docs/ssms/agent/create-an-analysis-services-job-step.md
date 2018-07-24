@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 359126ee294db0c10c9c738abdd195ea999f9fa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044940"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980135"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "33044940"
   
 -   작업 단계에서 Analysis Services 명령을 사용하는 경우 명령 문은 XML for Analysis Services **Execute** 메서드여야 합니다. 문에 전체 SOAP(Simple Object Access Protocol) Envelope 또는 XML for Analysis **Discover** 메서드를 포함할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에서는 전체 SOAP Envelope와 **Discover** 메서드를 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업 단계에서는 지원하지 않습니다. XML for Analysis Services에 대한 자세한 내용은 [XML for Analysis 개요(XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)를 참조하세요.  
   
--   작업 단계에서 Analysis Services 쿼리를 사용하는 경우 쿼리 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다. MDX에 대한 자세한 내용은 [MDX 문 기본 사항(MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b)을 참조하세요.  
+-   작업 단계에서 Analysis Services 쿼리를 사용하는 경우 쿼리 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다. MDX에 대한 자세한 내용은 [MDX 문 기본 사항(MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)을 참조하세요.  
   
 ### <a name="Security"></a>보안  
   
@@ -150,7 +150,7 @@ ms.locfileid: "33044940"
     GO  
     ```  
   
-자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Analysis Services 쿼리 작업 단계를 만들려면  
   
@@ -177,7 +177,7 @@ ms.locfileid: "33044940"
     GO  
     ```  
   
-자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
+자세한 내용은 [sp_add_jobstep(Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)을 참조하세요.  
   
 ## <a name="SMO"></a>SQL Server 관리 개체 사용  
 **PowerShell 스크립트 작업 단계를 만들려면**  

@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036420"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969325"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  

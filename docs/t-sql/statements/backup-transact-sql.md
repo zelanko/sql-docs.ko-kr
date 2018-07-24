@@ -51,11 +51,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7775dbaa4a8c28d9e7124b94c73f3b87c9e68838
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984825"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -656,7 +656,7 @@ GO
 |미러|미디어 패밀리 1|미디어 패밀리 2|미디어 패밀리 3|  
 |---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  미디어 패밀리는 항상 특정 미러 내의 동일한 장치에 백업되어야 합니다. 따라서 기존 미디어 세트를 사용할 때마다 미디어 세트가 생성될 때 지정된 것과 동일한 순서로 각 미러의 장치를 나열하십시오.  
   
@@ -742,7 +742,7 @@ SQL Database 관리되는 인스턴스는 데이터베이스를 스트라이프�
 ## <a name="security"></a>보안  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 `PASSWORD` 및 `MEDIAPASSWORD` 옵션은 백업을 만드는 데 지원되지 않습니다. 암호로 만든 백업을 여전히 복원할 수 있습니다.  
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
  백업 장치의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 장치의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  

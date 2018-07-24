@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 2baeb6b5b8a491fe906ad0f15de9b86b2d226508
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988857"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 
@@ -48,10 +48,10 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
-||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|아니오|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
-||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|예|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|사용자 계정 컨트롤|아니오|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|사용자 계정 컨트롤|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
   
  *Windows 인증, FBA(폼 기반 인증), SAML(Secure Application Markup Language) 토큰, 기타 ID 공급자 또는 위에 명시된 인증 공급자 중 둘 이상의 조합입니다.  
   
@@ -59,9 +59,9 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|*클레임 인증|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
-|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|예|  
+|로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|아니오|아니오|  
-|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|예|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
+|원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
 ||저장됨, 프롬프트, 없음(Windows 자격 증명 사용)<br /><br /> Windows 자격 증명이 아닌 다른 자격 증명이 포함된 저장된 자격 증명 및 프롬프트 자격 증명은 지원되지 않습니다.|아니오|아니오<br /><br /> 폼 기반 인증 및 클레임 인증은 원격 SharePoint 목록에 지원되지 않습니다.|  
   
  *Windows 인증, FBA(폼 기반 인증), SAML(Secure Application Markup Language) 토큰, 기타 ID 공급자 또는 위에 명시된 인증 공급자 중 둘 이상의 조합입니다.  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062066"
 ---
 # <a name="sql-trace"></a>SQL 추적
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "32974188"
 ## <a name="use-data-columns-to-describe-returned-events"></a>데이터 열을 사용하여 반환되는 이벤트 설명  
  SQL 추적은 추적 출력의 데이터 열을 통해 추적이 실행될 때 반환된 이벤트에 대한 정보를 제공합니다. 다음 표에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터 열에 대해 설명합니다. 이 데이터 열은 SQL 추적에서 사용하는 데이터 열과 동일하며 기본으로 선택된 열에 해당합니다.  
   
-|데이터 열|열 번호|Description|  
+|데이터 열|열 번호|설명|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
 |**BigintData1**|52|추적에 지정된 이벤트 클래스에 따라 달라지는 값(**bigint** 데이터 형식)입니다.|  
@@ -94,7 +94,7 @@ ms.locfileid: "32974188"
 |**오류**|31|지정된 이벤트의 오류 번호입니다. 종종 **sysmessages**테이블에 저장된 오류 번호를 나타냅니다.|  
 |**EventClass***|27|캡처된 이벤트 클래스 유형입니다.|  
 |**EventSequence**|51|이 이벤트의 시퀀스 번호입니다.|  
-|**EventSubclass***|21|각 이벤트 클래스에 대한 추가 정보를 제공하는 이벤트 하위 클래스 유형입니다. 예를 들어 **Execution Warning** 이벤트 클래스에 대한 이벤트 하위 클래스 값은 실행 경고 유형을 나타냅니다.<br /><br /> **1** = 쿼리 대기 쿼리는 실행하기 전에 리소스(예: 메모리)를 기다려야 합니다.<br /><br /> **2** = 쿼리 제한 시간 실행을 위해 리소스를 기다리는 동안 제한 시간을 초과한 쿼리입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
+|**EventSubClass***|21|각 이벤트 클래스에 대한 추가 정보를 제공하는 이벤트 하위 클래스 유형입니다. 예를 들어 **Execution Warning** 이벤트 클래스에 대한 이벤트 하위 클래스 값은 실행 경고 유형을 나타냅니다.<br /><br /> **1** = 쿼리 대기 쿼리는 실행하기 전에 리소스(예: 메모리)를 기다려야 합니다.<br /><br /> **2** = 쿼리 제한 시간 실행을 위해 리소스를 기다리는 동안 제한 시간을 초과한 쿼리입니다. 이 데이터 열은 모든 이벤트 클래스에 대해 채워지지는 않습니다.|  
 |**GUID**|54|추적에 지정된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |**FileName**|36|수정한 파일의 논리적 이름입니다.|  
 |**Handle**|33|ODBC, OLE DB, DB-Library가 서버와의 공동 실행을 위해 사용하는 정수입니다.|  
@@ -138,7 +138,7 @@ ms.locfileid: "32974188"
 |**TargetLoginName**|42|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 이름입니다.|  
 |**TargetLoginSid**|43|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 SID입니다.|  
 |**TargetUserName**|39|데이터베이스 사용자를 대상으로 하는 동작(예: 사용자에게 권한 부여)의 경우 해당 사용자의 이름입니다.|  
-|**TextData**|1|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다. 그렇지만 매개 변수가 있는 쿼리를 추적하면 변수는 **TextData** 열에 데이터 값으로 표시되지 않습니다.|  
+|**TextData**|@shouldalert|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다. 그렇지만 매개 변수가 있는 쿼리를 추적하면 변수는 **TextData** 열에 데이터 값으로 표시되지 않습니다.|  
 |**Transaction ID**|4|시스템이 할당한 트랜잭션 ID입니다.|  
 |**형식**|57|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |**Writes**|17|이벤트에 대해 서버에서 수행한 물리적 디스크 쓰기 작업의 수입니다.|  

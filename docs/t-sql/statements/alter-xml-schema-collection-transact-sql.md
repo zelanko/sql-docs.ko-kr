@@ -33,11 +33,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 896525b2986dce9c9a503e83ee8912006cda9f20
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260195"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987585"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  스키마 컬렉션에 이미 lax 유효성 검사 와일드카드 또는 **xs:anyType** 형식의 요소가 포함되어 있는 경우 새 전역 요소, 형식 또는 특성 선언을 스키마 컬렉션에 추가하면 해당 스키마 컬렉션의 제한을 받는 모든 저장된 데이터에 대해 유효성 재검사가 수행됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  XML SCHEMA COLLECTION을 변경하려면 해당 컬렉션에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
