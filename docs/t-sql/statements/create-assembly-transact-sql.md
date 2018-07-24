@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9d9116a6382c71ae988c5f79660a3b8c9ded914a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38027046"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -151,7 +151,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CREATE ASSEMBLY 권한이 필요합니다.  
   
  PERMISSION_SET = EXTERNAL_ACCESS를 지정한 경우 서버에 대한 **EXTERNAL ACCESS ASSEMBLY** 권한이 있어야 합니다. PERMISSION_SET = EXTERNAL_ACCESS를 지정한 경우 서버에 대한 **UNSAFE ASSEMBLY** 권한이 있어야 합니다.  

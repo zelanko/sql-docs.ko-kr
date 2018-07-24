@@ -34,11 +34,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042491"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ AS condition_expression
   
  열에 기본값과 연결된 규칙이 모두 있는 경우에는 해당 기본값이 규칙에 의해 정의된 도메인 내에 있어야 합니다. 규칙과 충돌하는 기본값은 삽입할 수 없습니다. SQL Server 데이터베이스 엔진에서는 이러한 기본값을 삽입하려고 할 때마다 오류 메시지를 생성합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  CREATE RULE을 실행하려면 최소한 사용자는 현재 데이터베이스의 CREATE RULE 권한 및 규칙이 생성되는 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038484"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33074190"
   
  컨트롤러 구성 파일에 지정되는 로깅 수준은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수|  
+|설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |로깅 수준|`<LoggingLevel>`|컨트롤러 서비스에 대한 로깅 수준을 지정합니다.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|아니요. 기본값은 `CRITICAL`입니다.|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33074190"
   
  클라이언트 구성 파일에 지정되는 설정은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수|  
+|설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |컨트롤러|`<Controller>`|컨트롤러의 컴퓨터 이름을 지정합니다. 클라이언트는 컨트롤러에 연결하여 Distributed Replay 환경에 등록합니다.|"`localhost`" 또는 "`.`"을 사용하여 로컬 컴퓨터를 참조할 수 있습니다.|아니요. 클라이언트는 기본적으로 로컬로 실행 중인("`.`") 컨트롤러 인스턴스(있는 경우)에 등록합니다.|  
 |클라이언트 작업 디렉터리|`<WorkingDirectory>`|클라이언트에서 디스패치 파일이 저장된 로컬 경로입니다.<br /><br /> 이 디렉터리의 파일은 다음 재생 시 덮어씁니다.|드라이브 문자로 시작하는 전체 디렉터리 이름|아니요. 지정된 값이 없으면 디스패치 파일이 기본 클라이언트 구성 파일과 같은 위치에 저장됩니다. 지정된 값이 있지만 해당 폴더가 클라이언트에 없으면 클라이언트 서비스가 시작되지 않습니다.|  
@@ -94,7 +94,7 @@ ms.locfileid: "33074190"
   
  전처리 구성 설정은 전처리 구성 파일에서 `<PreprocessModifiers>` 요소의 자식 요소인 XML 요소에 지정됩니다. 여기에는 다음과 같은 설정이 포함됩니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수|  
+|설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |시스템 세션 작업 포함|`<IncSystemSession>`|캡처하는 동안의 시스템 세션 작업이 재생 중에 포함되는지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
 |최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|-1보다 크거나 같은 정수입니다.<br /><br /> `-1` 은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
@@ -126,7 +126,7 @@ ms.locfileid: "33074190"
 ### <a name="replayoptions-element"></a>\<ReplayOptions > 요소  
  재생 구성 파일의 `<ReplayOptions>` 요소에 지정되는 설정은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수|  
+|설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요(관리 도구의 **재생**옵션에 **-s***target server* 매개 변수를 사용하여 서버 이름이 이미 지정된 경우)|  
 |시퀀스 모드|`<SequencingMode>`|이벤트 예약에 사용되는 모드를 지정합니다.|`synchronization` &#124; `stress`|아니요. 기본값은 `stress`입니다.|  
@@ -141,7 +141,7 @@ ms.locfileid: "33074190"
 ### <a name="outputoptions-element"></a>\<OutputOptions > 요소  
  재생 구성 파일의 `<OutputOptions>` 요소에 지정되는 설정은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수|  
+|설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |행 개수 기록|`<RecordRowCount>`|각 결과 집합에 대해 행 개수를 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `Yes`입니다.|  
 |결과 집합 기록|`<RecordResultSet>`|모든 결과 집합의 내용을 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  

@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2d2caf57313e50741b0e98db84e97d9abcf46bb0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792214"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031864"
 ---
 # <a name="send-transact-sql"></a>SEND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SEND
   
  SEND는 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  메시지를 보내려면 현재 사용자가 메시지를 보내는 모든 서비스의 큐에 대한 RECEIVE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

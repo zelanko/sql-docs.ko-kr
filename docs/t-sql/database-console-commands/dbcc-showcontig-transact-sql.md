@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263325"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040051"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합에 표시되는 정보를 설명합니다.
   
-|통계|Description|  
+|통계|설명|  
 |---|---|
 |**검색한 페이지**|테이블이나 인덱스의 페이지 수입니다.|  
 |**검색한 익스텐트**|테이블이나 인덱스의 익스텐트 수입니다.|  
@@ -114,7 +114,7 @@ DBCC SHOWCONTIG
   
 TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이전 테이블에 설명된 9개의 열도 반환합니다.
   
-|통계|Description|  
+|통계|설명|  
 |---|---|
 |**개체 이름**|처리되는 테이블 또는 뷰의 이름입니다.|  
 |**ObjectId**|개체 이름의 ID입니다.|  
@@ -188,7 +188,7 @@ DBCC SHOWCONTIG는 테이블의 조각화 여부를 확인합니다. 테이블 �
     > [!NOTE]  
     >  인덱스가 여러 파일에 걸쳐 있으면 **익스텐트 검색 조각화 상태** 값이 높아집니다. 이 값을 줄이려면 인덱스 조각화를 줄여야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
 사용자는 테이블을 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  

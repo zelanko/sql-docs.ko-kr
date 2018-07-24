@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3f9985fe10338c593425be74115152f250e16891
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041111"
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  SET AUTOCOMMIT과 같은 모드로 전환됩니다. SET IMPLICIT_TRANSACTIONS 옵션을 ON으로 설정하면 연결이 암시적 트랜잭션 모드로 설정됩니다. OFF이면 연결이 다시 자동 커밋 모드로 돌아갑니다.  자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  트랜잭션 관련 문 실행에는 특정 권한이 필요하지 않습니다. 트랜잭션 안에서 문을 실행하려면 권한이 필요합니다.  
   
 ## <a name="error-handling"></a>오류 처리  

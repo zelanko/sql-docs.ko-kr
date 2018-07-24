@@ -30,11 +30,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6e8ab694f484fe0679c4e41c162b7c482560c663
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782644"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042641"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -278,7 +278,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
 |SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다.|  
 |SQLBINARY 또는 SQLVARYBIN|데이터를 변환하지 않고 보냅니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  `OPENROWSET` 권한은 OLE DB 공급자에게 전달되는 사용자 이름의 사용 권한에 의해 결정됩니다. `BULK` 옵션을 사용하려면 `ADMINISTER BULK OPERATIONS` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d55da07e2011cf611525f1ba5edd904ad5d6095c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028985"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,7 +289,7 @@ SET
   
  *target_table*에 INSTEAD OF INSERT 트리거가 정의되어 있으면 삽입 작업이 수행되지 않습니다. 대신 트리거가 실행되고 이에 따라 **inserted** 테이블이 채워집니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  원본 테이블에 대해서는 SELECT 권한이 필요하고 대상 테이블에 대해서는 INSERT, UPDATE 또는 DELETE 권한이 필요합니다. 자세한 내용은 [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) 및 [DELETE](../../t-sql/statements/delete-transact-sql.md) 항목의 사용 권한 섹션을 참조하세요.  
   
 ## <a name="examples"></a>예  

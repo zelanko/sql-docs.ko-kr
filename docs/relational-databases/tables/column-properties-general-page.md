@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3ad590202d288b636b56caf59fa14c59e5a79bcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038897"
 ---
 # <a name="column-properties-general-page"></a>열 속성(일반 페이지)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "33011988"
   
  이 페이지의 정보는 읽기 전용입니다. 열을 수정하려면 **열 속성** 대화 상자를 닫고, 개체 탐색기에서 테이블과 열을 확장하고, 열을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>Options  
  **이름**  
  열 이름입니다.  
   

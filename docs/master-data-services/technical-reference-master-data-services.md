@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 130b4ac2be906812a8690e2e0ec44f91df06bd30
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042706"
 ---
 # <a name="technical-reference-master-data-services"></a>기술 참조(Master Data Services)
 

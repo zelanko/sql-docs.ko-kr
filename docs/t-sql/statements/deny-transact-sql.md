@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8fb4045343c17ffea8d132edc22cbd7898f4ec00
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038361"
 ---
 # <a name="deny-transact-sql"></a>DENY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +151,7 @@ DENY
 > [!CAUTION]  
 >  CONTROL SERVER 권한을 거부하면 암시적으로 서버에 대한 CONNECT SQL 권한이 거부됩니다. 따라서 서버에 대한 CONTROL SERVER 권한이 거부된 보안 주체는 해당 서버에 연결할 수 없게 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  호출자 또는 AS 옵션으로 지정한 보안 주체에게 보안 개체에 대한 CONTROL 권한이 있거나 보안 개체에 대한 CONTROL 권한을 포함하는 상위 사용 권한이 있어야 합니다. AS 옵션을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
  sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 권한이 부여된 사용자는 서버의 모든 보안 개체에 대한 모든 사용 권한을 거부할 수 있습니다. db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 모든 사용 권한을 거부할 수 있습니다. 스키마에 대한 CONTROL 권한이 부여된 사용자는 스키마의 모든 개체에 대한 모든 사용 권한을 거부할 수 있습니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  

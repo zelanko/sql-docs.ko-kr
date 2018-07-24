@@ -50,11 +50,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262577"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040211"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -480,7 +480,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.  
   
- 1  
+ @shouldalert  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -772,7 +772,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 ## <a name="statistics"></a>통계  
  **ALTER INDEX ALL ...** 을 테이블에 대해 실행하면 인덱스와 연관된 통계만 업데이트됩니다. 인덱스 대신 테이블에 대해 만들어진 자동 또는 수동 통계는 업데이트되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  ALTER INDEX를 실행하려면 최소한 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="version-notes"></a>버전 참고 사항  
