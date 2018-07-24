@@ -1,6 +1,6 @@
 ---
 title: 여러 행 집합 결과 생성 하는 명령 | Microsoft Docs
-description: 여러 행 집합 결과 생성 하는 명령
+description: 여러 행 집합 결과를 생성하는 명령
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665523"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109625"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>여러 행 집합 결과를 생성하는 명령
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server에서 여러 행 집합을 반환할 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
+  OLE DB Driver for SQL Server에서 여러 행 집합을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
   
 -   일괄 처리되는 SQL 문이 단일 명령으로 제출된 경우  
   
 -   저장 프로시저가 SQL 문의 일괄 처리를 구현하는 경우  
   
 ## <a name="batches"></a>일괄 처리  
- OLE DB Driver for SQL Server는 SQL 문의 일괄 처리 구분 기호로 세미콜론을 인식합니다.  
+ OLE DB Driver for SQL Server는 SQL 문의 일괄 처리 구분 기호로 세미콜론 문자를 인식합니다.  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -56,7 +56,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [IMultipleResults를 사용하여 여러 결과 집합 처리](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [도구](../../oledb/ole-db-commands/commands.md)  
   
   
