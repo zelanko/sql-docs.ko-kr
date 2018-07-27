@@ -1,7 +1,7 @@
 ---
-title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft Docs
+title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957686"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188939"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기
 
 SSMS 17.X는 *SQL Server Management Studio*의 최신 세대이며 SQL Server 2017을 지원합니다.
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 다운로드](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 다운로드](https://go.microsoft.com/fwlink/?linkid=875802)(컴퓨터에 이전 SSMS 17.x 버전이 필요하지 않음)**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 업그레이드 패키지 다운로드(17.x에서 17.8.1로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 업그레이드 패키지 다운로드](https://go.microsoft.com/fwlink/?linkid=875804)(17.x를 17.8.1로 업그레이드, 컴퓨터에 이전 SSMS 17.x 버전이 필요함)**
 
 
 **버전 정보**
@@ -104,7 +104,7 @@ SQL 편집기:
     
 **AS(Analysis Services)**
 
-- Analysis Services 클라이언트 라이브러리 및 데이터 공급자가 최신 버전으로 업데이트되어, 새로운 Azure Government AAD 기관 지원이 추가되었습니다.
+- Analysis Services 클라이언트 라이브러리 및 데이터 공급자가 최신 버전으로 업데이트되어, 새로운 Azure Government AAD 기관에 대한 지원이 추가되었습니다(login.microsoftonline.us).
 
 
 ## <a name="supported-sql-offerings"></a>지원되는 SQL 서비스
@@ -142,11 +142,16 @@ SQL 편집기:
 
 ## <a name="release-notes"></a>릴리스 정보
 
-다음은 이 17.8 릴리스의 문제 및 제한 사항입니다.
+다음은 이 17.8.1 릴리스의 문제 및 제한 사항입니다.
 
-- ‘속성’ 창에서 파일 그룹 속성을 수정한 후 ‘스크립트’ 단추를 클릭하면 두 개의 스크립트(각각 *USE<database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
+- ‘속성’ 창에서 파일 그룹 속성을 수정한 후 ‘스크립트’ 단추를 클릭하면 두 개의 스크립트(각각 *USE <database>* 문 및 *USE master* 문을 사용한 스크립트)가 생성됩니다.  *USE master*를 사용한 스크립트는 오류로 생성되므로 무시해야 합니다. *USE<database>* 문을 포함하는 스크립트를 실행합니다.
 - 새로운 *범용* 또는 *중요 비즈니스용* Azure SQL Database 버전으로 작업할 때 일부 대화 상자에서 잘못된 버전이라는 오류가 표시됩니다.
 - XEvents 뷰어에서 약간의 대기 시간이 발생할 수 있습니다. [.NET Framework의 알려진 문제](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)입니다. NetFx 4.7.2로 업그레이드해보세요.
+- 복제 모니터가 ‘파일이나 어셈블리를 로드할 수 없음’ 오류와 함께 작동이 중단되었습니다. 이 문제를 해결하려면:
+  1. *SqlMonitor.exe*(복제 모니터) 및 SSMS를 닫습니다.
+  2. [https://1drv.ms/u/sAizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw)에서 업데이트된 *sqlmonitor.exe.config*를 다운로드합니다.
+  3. *sqlmonitor.exe.config*(보통 “C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn” 아래에 있음)를 다운로드한 파일로 바꿉니다.
+  4. SSMS 및/또는 복제 모니터를 다시 시작합니다.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>SSMS 제거 및 다시 설치

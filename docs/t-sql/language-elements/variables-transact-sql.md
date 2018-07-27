@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249705"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088395"
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Transact-SQL 지역 변수는 특정 유형의 단일 데이터 값을 보유할
 * 저장 프로시저 반환 코드 또는 함수 반환 값으로 반환되는 데이터 값을 저장할 수 있습니다.
 
 > [!NOTE]
-> 일부 Transact-SQL 시스템 함수의 이름은 두 *at* 기호(@@)로 시작합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 @@functions가 전역 변수로 간주되었지만 그것은 변수가 아니며 변수처럼 동작하지 않습니다. @@functions은 시스템 함수이며 구문 사용법이 함수 규칙을 따릅니다.
+> 일부 Transact-SQL 시스템 함수의 이름은 두 개의 *at* 기호(\@\@)로 시작합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 \@\@함수가 전역 변수로 참조되지만 이 함수는 변수가 아니며 변수처럼 동작하지 않습니다. \@\@함수는 시스템 함수이며 구문 사용법이 함수 규칙을 따릅니다.
 
 다음 스크립트는 작은 테스트 테이블을 만들고 26개 행으로 채웁니다. 이 스크립트는 변수를 사용하여 다음 세 가지 작업을 수행합니다. 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Transact-SQL 변수 선언
 DECLARE 문은 다음을 통해 Transact-SQL 변수를 초기화합니다. 
-* 이름 할당. 이름에는 첫 문자로 @을 하나 사용해야 합니다.
+* 이름 할당. 이름에는 첫 문자로 \@을 하나 사용해야 합니다.
 * 시스템 제공 또는 사용자 정의 데이터 형식 및 길이 할당. 숫자 변수에 대해 전체 자릿수 및 소수 자릿수도 할당됩니다. XML 형식의 변수에 대해서는 선택적 스키마 컬렉션이 할당될 수 있습니다.
 * 값을 NULL로 설정
 
-예를 들어 다음 **DECLARE** 문은 int 데이터 형식의 **@mycounter**라는 지역 변수를 만듭니다.  
+예를 들어 다음 **DECLARE** 문은 int 데이터 형식의 **\@mycounter**라는 지역 변수를 만듭니다.  
 ```sql
 DECLARE @MyCounter int;
 ```
 둘 이상의 지역 변수를 선언하려면 정의된 첫 지역 변수 다음에 쉼표를 사용한 후 다음 지역 변수의 이름 및 데이터 형식을 지정합니다.
 
-예를 들어 다음 **DECLARE** 문은 **@LastName**, **@FirstName** 및 **@StateProvince**라는 세 지역 변수를 만들고 각각 NULL로 초기화합니다.  
+예를 들어 다음 **DECLARE** 문은 **\@LastName**, **\@FirstName** 및 **\@StateProvince**의 세 지역 변수를 만들고 각각 NULL로 초기화합니다.  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > SELECT 문 하나에 할당 절이 여러 개 있을 경우 SQL Server에서는 식의 계산 순서를 보장하지 않습니다. 할당 간에 참조가 있을 경우에만 그 결과가 표시됩니다.
 
-SELECT 문에서 행을 두 개 이상 반환하고 변수가 스칼라가 아닌 식을 참조하면 변수는 결과 집합의 마지막 행에 있는 식에 대해 반환된 값으로 설정됩니다. 예를 들어 다음 일괄 처리에서 **@EmpIDVariable**은 반환된 마지막 행의 **BusinessEntityID** 값인 1로 설정됩니다.  
+SELECT 문에서 행을 두 개 이상 반환하고 변수가 스칼라가 아닌 식을 참조하면 변수는 결과 집합의 마지막 행에 있는 식에 대해 반환된 값으로 설정됩니다. 예를 들어 다음 일괄 처리에서 **\@EmpIDVariable**은 반환된 마지막 행의 **BusinessEntityID** 값인 1로 설정됩니다.  
 
 ```sql
 USE AdventureWorks2014;

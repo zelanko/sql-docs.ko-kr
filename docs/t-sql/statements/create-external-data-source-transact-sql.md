@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ea8af698d4664a62dca880222f84bfc902028f8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 68fef3dc4b856f78720923c33df352f5ea3c7f98
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782664"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102571"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -199,6 +199,8 @@ RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수
 **BLOB_STORAGE**   
 대량 작업의 경우에만 `LOCATION`은 Azure Blob Storage 및 컨테이너에 유효한 URL이어야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.   
 사용되는 자격 증명은 `SHARED ACCESS SIGNATURE`을 ID로 사용하여 만들어져야 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. Blob 저장소에 액세스하는 예는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 예제 F를 참조하세요. 
+>[!NOTE] 
+>Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
@@ -210,7 +212,7 @@ RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수
 
 |Hadoop 연결|기본 Resource Manager 포트|
 |-------------------|-----------------------------|
-|1|50300|
+|@shouldalert|50300|
 |2|50300|
 |3|8021|
 |4|8032|
@@ -275,7 +277,7 @@ RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수
   
 -   외부 데이터 원본과 외부 파일 형식을 참조하는 외부 테이블.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  SQL DW, SQL Server, APS 2016 및 SQL DB의 데이터베이스에 대한 CONTROL 권한이 필요합니다.
 
 > [!IMPORTANT]  

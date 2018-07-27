@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872823"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085775"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "37872823"
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
--   @를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 @를 사용할 수 있습니다.  
+-   \@를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 \@를 사용할 수 있습니다.  
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "37872823"
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
--   @를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 @를 사용할 수 있습니다.  
+-   \@를 첫 글자로 사용할 수 없습니다. 하지만 후속 글자에는 \@를 사용할 수 있습니다.  
   
 -   이름의 길이는 1자에서 128자 사이여야 합니다.  
   
@@ -382,7 +382,7 @@ ms.locfileid: "37872823"
   
 ###  <a name="options"></a> 옵션 구성  
   
-#### <a name="options"></a>변수  
+#### <a name="options"></a>Options  
  다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
   
 |속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|설명|  

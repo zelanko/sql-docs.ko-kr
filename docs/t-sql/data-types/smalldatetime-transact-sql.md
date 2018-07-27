@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8b77039bf95967038bc2dd1df9efbd3bb6faba16
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8459bc6a4d41b9b0ed1b07dccb4dc0992f2ed21f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415992"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086925"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37415992"
 |||  
 |-|-|  
 |구문|**smalldatetime**|  
-|사용법|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1(Column1 **smalldatetime**)|  
+|사용법|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1(Column1 **smalldatetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 사항 없음|  
 |날짜 범위|1900-01-01부터 2079-06-06까지<br /><br /> 1900년 1월 1일부터 2079년 6월 6일까지|  
 |시간 범위|00:00:00부터 23:59:59까지<br /><br /> 2007-05-09 23:59:59 다음 시간은 다음과 같음<br /><br /> 2007-05-10 00:00:00|  
@@ -56,9 +56,9 @@ ms.locfileid: "37415992"
 |정확도|1분|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력<br /><br /> (전체 연도 범위를 포함하지는 않음)|  
-|사용자 정의 초 소수 부분 자릿수|아니요|  
-|표준 시간대 오프셋 인식 및 유지|아니요|  
-|일광 절약 시간제 인식|아니요|  
+|사용자 정의 초 소수 부분 자릿수|아니오|  
+|표준 시간대 오프셋 인식 및 유지|아니오|  
+|일광 절약 시간제 인식|아니오|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
 **smalldatetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.

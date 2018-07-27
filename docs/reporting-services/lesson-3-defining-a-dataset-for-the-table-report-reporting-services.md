@@ -17,12 +17,12 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bc8a0745cb75ae2d6856bd950a6020513798970
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73455ea6ca6fdde23b61586abd9851712967e7a8
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016580"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038100"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
 데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "33016580"
   
 3.  **내 보고서에 포함된 데이터 집합 사용**을 클릭합니다.  
   
-4.  이전 단원인 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]에서 만든 데이터 원본을 선택합니다.   
+4.  이전 단원 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]에서 만든 데이터 원본을 선택합니다.   
 5. **쿼리 유형** 으로 **텍스트**를 선택합니다.  
   
 6.  다음 Transact-SQL 쿼리를 **쿼리** 상자에 입력하거나, 복사하여 붙여넣습니다.  

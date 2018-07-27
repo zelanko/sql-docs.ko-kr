@@ -1,7 +1,7 @@
 ---
 title: SSIS에서 ETL 패키지를 만드는 방법 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -23,12 +23,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 234b5a72f611ab2ac85db862c04af7d749e089ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411735"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999283"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법
 
@@ -40,22 +40,24 @@ ms.locfileid: "35411735"
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)란?
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 데이터 웨어하우징을 위한 ETL(추출, 변환 및 로드) 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다. SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 전자 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 데이터 웨어하우징을 위한 ETL(추출, 변환 및 로드) 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다. SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 데이터베이스인 `SSISDB`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
 
 ## <a name="what-you-learn"></a>학습 내용  
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 루핑, 구성, 오류 흐름 논리 및 로깅을 포함하는 간단한 ETL 패키지를 만드는 과정을 안내합니다.  
   
-## <a name="requirements"></a>요구 사항  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다.  
 
-> [!IMPORTANT]
-> 이 자습서를 실행하는 데 필요한 샘플 파일이 최근에 이전 위치에서 온라인으로 제공되지 않았습니다. 불편을 끼쳐 드려 죄송합니다. 새 위치에서 파일을 제공하고 있으며 이 문서의 다운로드 링크도 업데이트되었습니다.
-
-이 자습서를 사용하려면 시스템에 다음 구성 요소가 설치되어 있어야 합니다.  
+이 자습서를 실행하려면 다음 구성 요소를 설치해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AdventureWorksDW2012 **데이터베이스가 있는** . **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorksDW2012.bak`를 다운로드하고 백업을 복원하세요.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]입니다. SQL Server 및 SSIS를 설치하려면 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
 
--   데이터 샘플링 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 - 간단한 ETL 패키지 만들기](https://www.microsoft.com/download/details.aspx?id=56827)를 참조하세요.  
+-   **AdventureWorksDW2012** 샘플 데이터베이스. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorksDW2012.bak`를 다운로드하고 백업을 복원하세요.  
+
+-   **샘플 데이터** 파일. 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 - 간단한 ETL 패키지 만들기](https://www.microsoft.com/download/details.aspx?id=56827)를 참조하세요.
+
+    - Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
+    - 샘플 패키지는 데이터 파일이 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package` 폴더에 있다고 가정합니다. 다운로드의 압축을 다른 위치에 풀 경우 샘플 패키지의 여러 위치에서 파일 경로를 업데이트해야 할 수 있습니다.
 
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
 [1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404755"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084485"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -203,7 +203,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **변수 이름**  
  **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
   
@@ -218,7 +218,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **매개 변수 이름**  
  매개 변수 이름을 입력합니다.  
   
- 태스크에서 사용하는 연결 관리자 유형에 따라 숫자 또는 매개 변수 이름을 사용해야 합니다. 일부 연결 관리자 유형의 경우 매개 변수 이름의 첫 문자가 @ 기호여야 하거나, 이름이 @Param1과 같은 특정 이름이어야 하거나, 열 이름을 매개 변수 이름으로 지정해야 합니다.  
+ 태스크에서 사용하는 연결 관리자 유형에 따라 숫자 또는 매개 변수 이름을 사용해야 합니다. 일부 연결 관리자 유형의 경우 매개 변수 이름의 첫 문자가 \@ 기호여야 하거나, 이름이 \@Param1과 같은 특정 이름이어야 하거나, 열 이름을 매개 변수 이름으로 지정해야 합니다.  
   
  **매개 변수 크기**  
  문자열 및 이진 필드와 같은 가변 길이를 가지는 매개 변수의 크기를 제공합니다.  
@@ -234,7 +234,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
 ## <a name="result-set-page---execute-sql-task-editor"></a>결과 집합 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>Options  
  **결과 이름**  
  **추가**를 클릭하여 결과 집합 매핑 집합을 추가한 다음 결과를 설명하는 이름을 제공합니다. 결과 집합 유형에 따라 특정 결과 이름을 사용해야 합니다.  
   
@@ -273,16 +273,16 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 -   [반환 코드 값 가져오기](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> 매개 변수 이름 및 표식  
- SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형을 사용하려면 SQL 명령에 **@varParameter** 형식의 매개 변수 표식을 사용해야 하지만 OLE DB 연결 유형에는 물음표(?) 매개 변수 표식을 사용해야 합니다.  
+ SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형을 사용하려면 SQL 명령에서 **\@varParameter** 형식의 매개 변수 표식을 사용해야 하지만 OLE DB 연결 형식에는 물음표(?) 매개 변수 표식을 사용해야 합니다.  
   
- 변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형에는 @ 접두사가 있는 사용자 정의 이름을 사용하지만 OLE DB 연결 관리자 유형에는 0부터 시작하는 서수의 숫자 값을 매개 변수 이름으로 사용해야 합니다.  
+ 변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 유형에는 \@ 접두사가 있는 사용자 정의 이름을 사용하지만 OLE DB 연결 관리자 유형에는 0부터 시작하는 서수의 숫자 값을 매개 변수 이름으로 사용해야 합니다.  
   
  다음 표에서는 SQL 실행 태스크가 사용할 수 있는 연결 관리자 유형에 대한 SQL 명령 요구 사항을 요약합니다.  
   
 |연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<매개 변수 이름>|@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 및 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 -   ADO 연결 형식에서는 Param1 및 Param2와 같은 임의의 두 매개 변수 이름을 사용할 수 있지만 이러한 매개 변수는 매개 변수 목록에서의 서수 위치에 따라 매핑되어야 합니다.  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 유형은 매개 변수 이름 @parmMinProductID 및 @parmMaxProductID를 사용합니다.  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 형식에서는 매개 변수 이름 \@parmMinProductID 및 \@parmMaxProductID를 사용합니다.  
   
 ###  <a name="Stored_procedures"></a> 저장 프로시저에 매개 변수 사용  
  저장 프로시저를 실행하는 SQL 명령도 매개 변수 매핑을 사용할 수 있습니다. 매개 변수 표식 및 매개 변수 이름 사용 방법에 대한 규칙은 매개 변수가 있는 쿼리에 대한 규칙에서와 마찬가지로 SQL 실행이 사용하는 연결 관리자 유형에 따라 달라집니다.  
@@ -421,7 +421,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |연결 형식|매개 변수 표식|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
+    |ADO.NET 및 SQLMOBILE|\@\<매개 변수 이름>|  
     |ODBC|?|  
     |EXCEL 및 OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |연결 형식|매개 변수 이름|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
+    |ADO.NET 및 SQLMOBILE|\@\<매개 변수 이름>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, …|  
   

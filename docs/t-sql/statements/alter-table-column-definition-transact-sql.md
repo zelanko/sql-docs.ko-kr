@@ -1,7 +1,7 @@
 ---
 title: column_definition(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785334"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109245"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  기본 열 값으로 사용되는 리터럴 값, NULL, 시스템 함수입니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 유형으로 정의된 열과 함께 사용할 경우 *constant_expression*에서 사용자 정의 유형으로의 암시적 변환이 지원되어야 합니다.  
   
-WITH VALUES  
- DEFAULT *constant_expression*에 지정된 값이 기존 행에 추가된 새 열에 저장되도록 지정합니다. 추가된 열에 null 값을 사용할 수 있고 WITH VALUES가 지정된 경우 기존 행에 추가된 새 열에 기본값이 저장됩니다. Null을 허용하는 열에 WITH VALUES를 지정하지 않으면 기존 행의 새 열에 NULL이 저장됩니다. 새 열이 Null을 허용하지 않으면 WITH VALUES의 지정 여부에 관계없이 새 행에 기본값이 저장됩니다.  
+WITH VALUES   
+ 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression*에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression*에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)입니다.
+관련 열이 추가되지 않을 때 이 작업이 사용되면 아무런 영향을 주지 않습니다.
+ 
+ DEFAULT *constant_expression*에 지정된 값이 기존 행에 추가된 새 열에 저장되도록 지정합니다. 추가된 열이 Null 값을 허용하고 WITH VALUES가 지정된 경우 기존 행에 추가된 새 열에 기본값이 저장됩니다. Null을 허용하는 열에 WITH VALUES를 지정하지 않으면 NULL 값은 기존 행의 새 열에 저장됩니다. 새 열이 Null을 허용하지 않으면 WITH VALUES의 지정 여부에 관계없이 새 행에 기본값이 저장됩니다.  
   
 IDENTITY  
  새 열이 ID 열임을 지정합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 열에 고유한 증가값을 제공합니다. 기존 테이블에 ID 열을 추가하면 ID 번호가 테이블의 기존 행에 추가되며 초기값과 증가값이 적용됩니다. 행이 업데이트되는 순서는 보장되지 않습니다. 새로 추가한 모든 행에 대한 ID 열도 생성됩니다.  

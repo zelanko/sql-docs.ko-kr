@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017430"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087485"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  <`Customer`> 요소에는 하위 요소가 없기 때문에 *flags*가 **2**로 설정되어 요소 중심 매핑을 나타내도록 같은 SELECT 문이 실행되는 경우 두 고객에 대한 **CustomerID** 및 **ContactName**의 값은 NULL로 반환됩니다.  
   
- @xmlDocument는 **xml** 유형 또는 **(n)varchar(max)** 유형일 수 있습니다.  
+ \@xmlDocument는 **xml** 형식 또는 **(n)varchar(max)** 형식일 수 있습니다.  
   
  XML 문서에서 <`CustomerID`>와 <`ContactName`>이 하위 요소인 경우에는 요소 중심의 매핑이 값을 검색합니다.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  OPENXML 문에서는 다음을 보여 줍니다.  
   
--   *rowpattern*(/ROOT/Customer/Order/OrderDetail/@ProductID)은 XML 특성, **ProductID**로 끝납니다. 결과 행 집합에서는 XML 문서에서 선택된 각 특성 노드에 대해 행이 만들어집니다.  
+-   *rowpattern*(/ROOT/Customer/Order/OrderDetail/\@ProductID)은 XML 특성 **ProductID**로 끝납니다. 결과 행 집합에서는 XML 문서에서 선택된 각 특성 노드에 대해 행이 만들어집니다.  
   
 -   이 예제에는 *flags* 매개 변수가 지정되지 않습니다. 그 대신 *ColPattern* 매개 변수에 의해 매핑이 지정됩니다.  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   행 집합의 **ProdID** 열에 대해 *ColPattern*으로 지정된 XPath 패턴(**.**)은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 <`OrderDetail`> 요소의 **ProductID** 특성입니다.  
   
--   행 집합에 있는 **Qty** 열에 대해 지정된 *ColPattern*, **../@Quantity**는 컨텍스트 노드 \<ProductID>의 노드인 부모 <`OrderDetail`>의 **Quantity** 특성을 식별합니다.  
+-   행 집합에 있는 **Qty** 열에 대해 지정된 *ColPattern*, **../\@Quantity**는 컨텍스트 노드 \<ProductID>의 노드인 부모 <`OrderDetail`>의 **Quantity** 특성을 식별합니다.  
   
--   이와 비슷하게 행 집합에 있는 **OID** 열에 대해 지정된 *ColPattern*, **../../@OrderID**는 컨텍스트 노드에 대한 부모 노드의 부모 <`Order`>의 **OrderID** 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
+-   이와 비슷하게 행 집합에 있는 **OID** 열에 지정된 *ColPattern*, **../../\@OrderID**는 컨텍스트 노드에 대한 부모 노드의 부모 <`Order`>의 **OrderID** 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 특히 **xml** 유형의 변수(@x)를 **sp_xml_preparedocument()** 함수로 전달합니다.  
+ 특히 **xml** 형식의 변수(\@x)를 **sp_xml_preparedocument()** 함수로 전달합니다.  
   
  다음은 결과입니다.  
   

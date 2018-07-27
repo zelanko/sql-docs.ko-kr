@@ -23,12 +23,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: df9601235ca6538447b577154fe629f9e6e6719a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8841b9091b4fafb563f624e6b61dca40233e7294
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026570"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088135"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>역할 정의 - 만들기, 삭제 또는 수정
   Reporting Services에서는 보고서 서버에 대한 액세스 수준을 정의한 미리 정의된 역할을 제공합니다. 보고서 서버에 액세스해야 하는 사용자나 그룹은 수행할 수 있는 태스크를 설명하는 역할을 통해 액세스합니다. 역할은 보고서 서버 전체에 대해 정의됩니다. 보고서 서버의 특정 부분에 대한 역할 정의를 다르게 하거나 환경에 따라 다르게 역할을 사용하도록 지정할 수 없습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "33026570"
   
      또는 시스템 수준의 역할 정의를 만드는 경우 **시스템 역할**을 마우스 오른쪽 단추로 클릭하고 **새 시스템 역할**을 가리킵니다.  
   
-4.  역할의 고유 이름을 입력합니다. 이름은 한 글자 이상이어야 합니다. 공백 및 특정 기호도 포함할 수 있지만 ; ? : @ & = + , $ / * < > | " 또는 /는 사용할 수 없습니다.  
+4.  역할의 고유 이름을 입력합니다. 이름은 한 글자 이상이어야 합니다. 공백 및 특정 기호도 포함할 수 있지만 ; ? : \@ & = + , $ / * < > | " 또는 /는 사용할 수 없습니다.  
   
 5.  설명을 입력합니다(옵션). [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 이 설명은 이 페이지에만 표시됩니다. 보고자 관리자를 통해 이 항목을 보는 사용자는 해당 도구에서 이 설명을 볼 수 있습니다.  
   

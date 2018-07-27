@@ -27,12 +27,12 @@ caps.latest.revision: 62
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e1279c063e41de74d3b2d8f8a7c219ad1e8338f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2f030633a20fe66b024cbfaf2a13325851f26d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036620"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980406"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>배포 및 관리 태스크 스크립팅
 
@@ -58,7 +58,7 @@ ms.locfileid: "33036620"
 |보고서 서버 데이터베이스 연결 구성|연결 문자열, 계정이나 암호 또는 인증 유형을 변경하려면 **rsconfig** 유틸리티를 실행하여 연결을 구성합니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) 및 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)를 참조하세요.<br /><br /> rsconfig.exe를 사용하여 데이터베이스를 만들거나 업그레이드할 수는 없습니다. 데이터베이스와 RSExecRole은 이미 있어야 합니다.|  
 |스케일 아웃 배포 구성|다음 방법 중 하나를 사용하여 스케일 아웃 배포를 자동화할 수 있습니다.<br /><br /> - rskeymgmt.exe 유틸리티를 실행하여 보고서 서버 인스턴스를 기존 설치에 추가합니다. 자세한 내용은 [스케일 아웃 배포의 암호화 키 추가 및 제거&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)를 참조하세요.<br />- 보고서 서버 WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다.|  
 |암호화 키 백업|다음 방법 중 하나를 사용하여 암호화 키 백업을 자동화할 수 있습니다.<br /><br /> - rskeymgmt.exe 유틸리티를 실행하여 키를 백업합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.<br />- 보고서 서버 WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다.|  
-|보고서 서버 전자 메일 구성|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다. 이 공급자에서는 전자 메일 구성 설정의 하위 집합을 지원합니다.<br /><br /> RSReportServer.config 파일에 모든 설정이 포함되어 있지만 이 파일을 자동화 방법으로 사용하지 마십시오. 특히 배치 파일을 사용하여 파일을 다른 보고서 서버로 복사하지 마십시오. 각 구성 파일에는 현재 인스턴스와 관련된 값이 포함되어 있으며 이러한 값은 다른 보고서 서버 인스턴스에서 유효하지 않습니다.<br /><br /> 설정에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.|  
+|보고서 서버 전자 메일 구성|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자에 대해 실행되는 사용자 지정 코드를 작성합니다. 이 공급자에서는 전자 메일 구성 설정의 하위 집합을 지원합니다.<br /><br /> RSReportServer.config 파일에 모든 설정이 포함되어 있지만 이 파일을 자동화 방법으로 사용하지 마십시오. 특히 배치 파일을 사용하여 파일을 다른 보고서 서버로 복사하지 마십시오. 각 구성 파일에는 현재 인스턴스와 관련된 값이 포함되어 있으며 이러한 값은 다른 보고서 서버 인스턴스에서 유효하지 않습니다.<br /><br /> 설정에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.|  
 |무인 실행 계정을 구성합니다.|다음 방법 중 하나를 사용하여 무인 처리 계정 구성을 자동화할 수 있습니다.<br /><br /> - rsconfig.exe 유틸리티를 실행하여 계정을 구성합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.<br />- 보고서 서버 WMI 공급자를 호출하는 사용자 지정 코드를 작성합니다.|  
 |폴더 계층, 역할 할당, 보고서, 구독, 일정, 데이터 원본 및 리소스를 비롯한 다른 보고서 서버의 기존 내용 배포|기존 보고서 서버 환경을 다시 만드는 가장 좋은 방법은 보고서 서버 데이터베이스를 새 보고서 서버 인스턴스에 복사하는 것입니다.<br /><br /> 또는 기존 보고서 서버 내용을 프로그래밍 방식으로 다시 만드는 사용자 지정 코드를 작성할 수 있습니다. 그러나 구독, 보고서 스냅숏 및 보고서 기록은 프로그래밍 방식으로 다시 만들 수 없습니다.<br /><br /> 일부 경우에는 이 두 가지 방법을 함께 사용하여 배포하는 것이 유용할 수 있습니다. 즉, 보고서 서버 데이터베이스를 복원한 다음 특정 설치에 맞게 보고서 서버 데이터베이스를 수정할 수 있습니다.<br /><br /> 자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.<br /><br /> 보고서 서버 데이터베이스를 재배치하는 방법은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)를 참조하세요. 보고서 서버 환경을 프로그래밍 방식으로 만드는 방법은 이 항목의 "스크립트를 사용하여 보고서 서버 내용 및 폴더 마이그레이션" 섹션을 참조하십시오.|  
   

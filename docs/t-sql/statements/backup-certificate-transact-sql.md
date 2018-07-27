@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788294"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024269"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,9 +90,11 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  개인 키를 파일로 백업할 때는 암호화가 필요합니다. 백업된 인증서를 보호하는 데 사용되는 암호는 인증서의 개인 키를 암호화하는 데 사용되는 암호와 다릅니다.  
   
- 백업된 인증서를 복원하려면 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 문을 사용합니다.  
+ 백업된 인증서를 복원하려면 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 문을 사용합니다.
+ 
+ 백업을 수행할 때 파일은 SQL Server 인스턴스의 서비스 계정에 대한 ACL이 됩니다. 다른 계정으로 실행하는 서버로 인증서를 복원해야 할 경우 새 계정에서 읽을 수 있도록 파일에 대한 권한을 조정해야 합니다. 
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  인증서에 대한 CONTROL 권한이 필요하고 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다. 인증서의 공개 부분만 백업하면 인증서에 대한 일부 권한이 필요하고 호출자가 인증서에 대해 VIEW 권한이 거부되지 않아야 합니다.  
   
 ## <a name="examples"></a>예  

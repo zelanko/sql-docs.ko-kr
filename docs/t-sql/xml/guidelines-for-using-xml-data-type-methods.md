@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248455"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083375"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  단일 항목이 필요한 위치 단계, 함수 매개 변수 및 연산자는 컴파일러가 런타임 시 단일 항목이 보장되는지 여부를 확인할 수 없는 경우 오류를 반환합니다. 이 문제는 형식화되지 않은 데이터에서 자주 발생합니다. 예를 들어 특성 조회에는 단일 부모 요소가 필요합니다. 이를 위해서는 단일 부모 노드를 선택하는 서수만으로도 충분합니다. 특성 값 추출을 위한 **node()**-**value()** 조합의 평가에는 서수 사양이 필요하지 않을 수 있습니다. 이러한 내용은 다음 예에 표시되어 있습니다.  
   
 ### <a name="example-known-singleton"></a>예: 알려진 단일 항목  
- 이 예에서 **nodes()** 메서드는 각 <`book`> 요소에 대해 별개의 행을 생성합니다. <`book`> 노드에서 평가되는 **value()** 메서드는 @genre의 값을 추출하고 단일 항목 특성이 됩니다.  
+ 이 예에서 **nodes()** 메서드는 각 <`book`> 요소에 대해 별개의 행을 생성합니다. <`book`> 노드에서 평가되는 **value()** 메서드는 \@genre의 값을 추출하고 싱글톤 특성이 됩니다.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

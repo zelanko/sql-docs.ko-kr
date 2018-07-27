@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255515"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086745"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|기본적으로 **특성 중심** 매핑을 사용합니다.|  
 |**1**|**특성 중심** 매핑을 사용합니다. XML_ELEMENTS와 결합할 수 있습니다. 이 경우 먼저 **특성 중심** 매핑이 적용된 다음, 아직 처리되지 않은 모든 열에 대해 **요소 중심** 매핑이 적용됩니다.|  
 |**2**|**요소 중심** 매핑을 사용합니다. XML_ATTRIBUTES와 결합할 수 있습니다. 이 경우 먼저 **특성 중심** 매핑이 적용된 다음, 아직 처리되지 않은 모든 열에 대해 **요소 중심** 매핑이 적용됩니다.|  
-|**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 컨텍스트에서 이 플래그는 소비된 데이터가 **@mp:xmltext** 오버플로 속성에 복사되지 않아야 함을 나타냅니다.|  
+|**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서 이 플래그는 소비된 데이터를 오버플로 속성인 **\@mp:xmltext**로 복사할 수 없음을 나타냅니다.|  
   
  *SchemaDeclaration*  
  *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...] 형식의 스키마 정의입니다.  

@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415442"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083835"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37415442"
 |속성|값|  
 |--------------|-----------|  
 |구문|**date**|  
-|사용법|@MyDate **date** 선언<br /><br /> CREATE TABLE Table1(Column1 **date**)|  
+|사용법|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1(Column1 **date**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|YYYY-MM-DD<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |범위|0001-01-01부터 9999-12-31까지(Informatica의 경우 1582-10-15부터 9999-12-31)<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지(Informatica의 경우 CE 1582년 10월 15일부터 CE 9999년 12월 31일까지)|  
 |요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다. Informatica의 경우, YYYY는 1582에서 9999까지의 범위로 제한됩니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 특정 월의 일을 나타냅니다.|  
@@ -54,9 +54,9 @@ ms.locfileid: "37415442"
 |정확도|1일|  
 |기본값|1900-01-01<br /><br /> 이 값은 **time**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
 |달력|일반 달력|  
-|사용자 정의 초 소수 부분 자릿수|아니요|  
-|표준 시간대 오프셋 인식 및 유지|아니요|  
-|일광 절약 시간제 인식|아니요|  
+|사용자 정의 초 소수 부분 자릿수|아니오|  
+|표준 시간대 오프셋 인식 및 유지|아니오|  
+|일광 절약 시간제 인식|아니오|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>date에 대해 지원되는 문자열 리터럴 형식
 다음 표에서는 **date** 데이터 형식에 대해 유효한 문자열 리터럴 형식을 보여줍니다.

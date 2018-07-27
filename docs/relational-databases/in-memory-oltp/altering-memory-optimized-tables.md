@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329754"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038060"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,40 +36,7 @@ ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가
   
 -   ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 *않습니다* .  
   
- 다음은 ALTER TABLE 문의 ADD, DROP, ALTER INDEX 절의 구문입니다.  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- 다음과 같은 유형의 수정이 지원됩니다.  
+다음과 같은 유형의 수정이 지원됩니다.  
   
 -   버킷 수 변경  
   

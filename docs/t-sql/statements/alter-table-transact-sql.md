@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: fe68009506a8dbc48400148df7f7048f5a11a481
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909583"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038210"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "37909583"
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -110,7 +110,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         <column_definition>  
       | <computed_column_definition>  
       | <table_constraint>   
-      | <column_set_definition>   
+      | <column_set_definition> 
     } [ ,...n ]  
       | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
                    [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
@@ -120,6 +120,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
            DEFAULT constant_expression [WITH VALUES] ,  
          ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+       
     | DROP   
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
@@ -148,6 +149,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         TO target_table   
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
+    
     | SET   
         (  
             [ FILESTREAM_ON =   
@@ -168,6 +170,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
                       ]  
                   }  
           )  
+      
     | REBUILD   
       [ [PARTITION = ALL]  
         [ WITH ( <rebuild_option> [ ,...n ] ) ]   
@@ -181,7 +184,6 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     | <filetable_option>  
   
     | <stretch_configuration>  
-  
 }  
 [ ; ]  
   
@@ -189,7 +191,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 <column_set_definition> ::=   
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
-  
+
 <drop_clustered_constraint_option> ::=    
     {   
         MAXDOP = max_degree_of_parallelism  
@@ -240,6 +242,136 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
 ```  
+  
+```  
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+  
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+{   
+    ALTER COLUMN column_name   
+    {   
+        [ type_schema_name. ] type_name   
+            [ (   
+                {   
+                   precision [ , scale ]   
+                }   
+            ) ]   
+        [ COLLATE collation_name ]   
+        [ NULL | NOT NULL ] 
+    }  
+
+    | ALTER INDEX index_name   
+    {   
+        [ type_schema_name. ] type_name   
+        REBUILD   
+        [ [ NONCLUSTERED ] WITH ( BUCKET_COUNT = bucket_count )
+        ]  
+    }  
+    
+    | ADD   
+    {   
+        <column_definition>  
+      | <computed_column_definition>  
+      | <table_constraint> 
+      | <table_index>
+      | <column_index>
+    } [ ,...n ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
+                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
+           DEFAULT constant_expression [WITH VALUES] ,  
+            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
+           DEFAULT constant_expression [WITH VALUES] ,  
+         ]  
+       PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+       
+    | DROP   
+     [ {  
+         CONSTRAINT  [ IF EXISTS ]  
+         {   
+              constraint_name   
+          } [ ,...n ]  
+      | INDEX  [ IF EXISTS ] 
+      {
+          index_name
+      } [ ,...n ]
+          | COLUMN  [ IF EXISTS ]  
+          {  
+              column_name   
+          } [ ,...n ]  
+          | PERIOD FOR SYSTEM_TIME  
+     } [ ,...n ]  
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
+        { ALL | constraint_name [ ,...n ] }   
+    
+    | { ENABLE | DISABLE } TRIGGER   
+        { ALL | trigger_name [ ,...n ] }  
+  
+    | SWITCH [ [ PARTITION ] source_partition_number_expression ]  
+        TO target_table   
+        [ PARTITION target_partition_number_expression ]  
+        [ WITH ( <low_priority_lock_wait> ) ]  
+    
+    | SET   
+        (  
+            SYSTEM_VERSIONING =   
+                  {   
+                      OFF   
+                  | ON   
+                      [ ( HISTORY_TABLE = schema_name . history_table_name   
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
+                          [, HISTORY_RETENTION_PERIOD = 
+                          { 
+                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                 | MONTH | MONTHS | YEAR | YEARS } 
+                          } 
+                          ]  
+                        )  
+                      ]  
+                  }  
+          )  
+      
+    | <table_option>    
+}  
+[ ; ]  
+  
+-- ALTER TABLE options  
+  
+< table_constraint > ::=  
+ [ CONSTRAINT constraint_name ]  
+{    
+   { PRIMARY KEY | UNIQUE }  
+     {   
+       NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])  
+       | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )   
+                    }   
+    | FOREIGN KEY   
+        ( column [ ,...n ] )   
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]   
+    | CHECK ( logical_expression )   
+}  
+
+<column_index> ::=  
+  INDEX index_name  
+{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH (BUCKET_COUNT = bucket_count)  }  
+
+<table_index> ::=  
+  INDEX index_name  
+{   [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count)   
+  | [ NONCLUSTERED ] (column [ ASC | DESC ] [ ,... n ] )   
+      [ ON filegroup_name | default ]  
+  | CLUSTERED COLUMNSTORE [WITH ( COMPRESSION_DELAY = {0 | delay [Minutes]})]  
+      [ ON filegroup_name | default ]   
+}  
+
+<table_option> ::=  
+{  
+    MEMORY_OPTIMIZED = ON   
+  | DURABILITY = {SCHEMA_ONLY | SCHEMA_AND_DATA}  
+  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name . history_table_name  
+        [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]   
+}  
+``` 
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -318,7 +450,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   DEFAULT 정의와 연결되는 열. 그러나 데이터 형식이 변경되지 않은 경우 열의 길이, 전체 자릿수 또는 소수 자릿수를 변경할 수 있습니다.  
   
-**text**, **ntextntext 및 **image** 열의 데이터 형식은 다음과 같은 방식으로만 변경할 수 있습니다.  
+**text**, **ntextntext** 및 **image** 열의 데이터 형식은 다음과 같은 방식으로만 변경할 수 있습니다.  
   
 -   **text**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로  
   
@@ -326,7 +458,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   **image**에서 **varbinary(max)** 로  
   
-데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.  
+데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 **nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.  
   
 > [!NOTE]
 > 분할된 테이블의 열 데이터 형식은 변경할 수 없습니다.  
@@ -379,7 +511,7 @@ COLLATE \< *collation_name* > 변경된 열에 대한 새 데이터 정렬을 �
   
  COLLATE 절은 **char**, **varchar**, **nchar** 및 **nvarchar** 데이터 형식의 열에 데이터 정렬을 변경하는 데만 사용할 수 있습니다. 사용자 정의 별칭 데이터 형식 열의 데이터 정렬을 변경하려면 별도의 ALTER TABLE 문을 실행하여 열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 변경하고 해당 데이터 정렬을 변경한 다음 그 열을 별칭 데이터 형식으로 다시 변경해야 합니다.  
   
- 다음 조건이 하나 이상 해당되는 경우 ALTER COLUMN으로 데이터 정렬을 변경할 수 없습니다.  
+다음 조건이 하나 이상 해당되는 경우 ALTER COLUMN으로 데이터 정렬을 변경할 수 없습니다.  
   
 -   CHECK 제약 조건, FOREIGN KEY 제약 조건 또는 계산 열이 변경된 열을 참조하는 경우  
 -   인덱스, 통계 또는 전체 텍스트 인덱스가 열에 생성된 경우. 변경된 열에 자동으로 만들어진 통계는 열 데이터 정렬이 변경되면 삭제됩니다.  
@@ -483,12 +615,22 @@ WITH CHECK | WITH NOCHECK
  기존 데이터에 대해 새 CHECK 또는 FOREIGN KEY 제약 조건을 확인하지 않으려면 WITH NOCHECK를 사용합니다. 이 방법은 꼭 필요한 경우가 아니면 사용하지 않는 것이 좋습니다. 새 제약 조건은 나중에 데이터가 업데이트될 때마다 평가됩니다. 따라서 제약 조건이 추가될 때 WITH NOCHECK에 의해 제약 조건 위반이 알려지지 않으면 제약 조건에 맞지 않는 데이터가 있는 행을 업데이트할 경우 업데이트 오류가 발생할 수 있습니다.  
   
  쿼리 최적화 프로그램은 WITH NOCHECK가 정의된 제약 조건을 고려하지 않습니다. 이러한 제약 조건은 ALTER TABLE `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`을 사용하여 다시 설정될 때까지 무시됩니다.  
+
+ALTER INDEX *index_name* *index_name*의 버킷 수가 변경되도록 지정합니다.
   
- ADD  
- 하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건이 추가되도록 지정하거나 시스템이 시스템 버전 관리에 사용할 열을 지정합니다.  
+ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 최적화 테이블에만 지원됩니다.    
+
+> [!NOTE]
+> ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
+
+ADD  
+하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건이 추가되도록 지정하거나 시스템이 시스템 버전 관리에 사용할 열을 지정합니다. 메모리 최적화 테이블의 경우 인덱스를 추가할 수 있습니다.
+
+> [!NOTE]
+> ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
   
- PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
- **적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
+PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  시스템에서 레코드가 유효한 기간을 기록하기 위해 사용할 열의 이름을 지정합니다. ADD PERIOD FOR SYSTEM_TIME 인수의 일부로 기존 열을 지정하거나 새 열을 만들 수 있습니다. 열의 데이터 형식은 datetime2여야 하며 NOT NULL로 정의해야 합니다. 기간 열이 NULL로 정의된 경우 오류가 발생됩니다. system_start_time 및 system_end_time 열에 대해 [column_constraint&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)을 정의하고/또는 [열의 기본값을 지정](../../relational-databases/tables/specify-default-values-for-columns.md)할 수 있습니다. 아래 [시스템 버전 관리](#system_versioning) 예의 예 A에서 system_end_time 열에 기본값을 사용하는 방식을 참조하세요.  
   
@@ -496,18 +638,25 @@ WITH CHECK | WITH NOCHECK
   
  [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM***\<table>* 이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
   
- DROP  
- 하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건을 삭제하거나 시스템이 시스템 버전 관리에 사용할 열에 대한 사양을 삭제하도록 지정합니다.  
+DROP  
+하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건을 삭제하거나 시스템이 시스템 버전 관리에 사용할 열에 대한 사양을 삭제하도록 지정합니다.  
   
- CONSTRAINT *constraint_name*  
- 테이블에서 *constraint_name*이 제거되도록 지정합니다. 여러 제약 조건을 나열할 수 있습니다.  
+CONSTRAINT *constraint_name*  
+테이블에서 *constraint_name*이 제거되도록 지정합니다. 여러 제약 조건을 나열할 수 있습니다.  
   
- 사용자 정의 또는 시스템 제공 제약 조건 이름은 **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints**, **sys.foreign_keys** 카탈로그 뷰를 쿼리하여 확인할 수 있습니다.  
+사용자 정의 또는 시스템 제공 제약 조건 이름은 **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints**, **sys.foreign_keys** 카탈로그 뷰를 쿼리하여 확인할 수 있습니다.  
   
- XML 인덱스가 테이블에 있는 경우 PRIMARY KEY 제약 조건을 삭제할 수 없습니다.  
+XML 인덱스가 테이블에 있는 경우 PRIMARY KEY 제약 조건을 삭제할 수 없습니다.  
+ 
+INDEX *index_name* 테이블에서 *index_name*이 제거되도록 지정합니다.
   
- COLUMN *column_name*  
- 테이블에서 *constraint_name* 또는 *column_name*이 제거되도록 지정합니다. 여러 열을 나열할 수 있습니다.  
+ALTER TABLE ... ADD/DROP/ALTER INDEX 구문은 메모리 최적화 테이블에만 지원됩니다.    
+
+> [!NOTE]
+> ALTER TABLE 문을 사용하지 않을 경우 CREATE INDEX, DROP INDEX, ALTER INDEX 문은 메모리 최적화 테이블의 인덱스로 지원되지 않습니다. 
+      
+COLUMN *column_name*  
+테이블에서 *constraint_name* 또는 *column_name*이 제거되도록 지정합니다. 여러 열을 나열할 수 있습니다.  
   
  다음과 같은 열은 삭제할 수 없습니다.  
   
@@ -520,7 +669,7 @@ WITH CHECK | WITH NOCHECK
 -   규칙에 바인딩된 열  
   
 > [!NOTE]  
->  열을 삭제해도 해당 열의 디스크 공간은 회수되지 않습니다. 테이블의 행 크기가 제한에 근접하거나 제한을 초과한 경우에는 삭제된 열의 디스크 공간을 회수해야 할 수도 있습니다. [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)를 사용하여 기존 클러스터형 인덱스를 다시 작성하거나 테이블에 클러스터형 인덱스를 생성하면 공간을 회수할 수 있습니다. LOB 데이터 형식의 삭제 영향에 대한 자세한 내용은 [CSS 블로그 항목](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)을 참조하세요.  
+> 열을 삭제해도 해당 열의 디스크 공간은 회수되지 않습니다. 테이블의 행 크기가 제한에 근접하거나 제한을 초과한 경우에는 삭제된 열의 디스크 공간을 회수해야 할 수도 있습니다. [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)를 사용하여 기존 클러스터형 인덱스를 다시 작성하거나 테이블에 클러스터형 인덱스를 생성하면 공간을 회수할 수 있습니다. LOB 데이터 형식의 삭제 영향에 대한 자세한 내용은 [CSS 블로그 항목](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)을 참조하세요.  
   
  PERIOD FOR SYSTEM_TIME  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
@@ -539,7 +688,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism*은 다음 값 중 하나일 수 있습니다.  
   
- 1  
+ @shouldalert  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
@@ -551,7 +700,7 @@ WITH CHECK | WITH NOCHECK
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
 > [!NOTE]  
->  병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+> 병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다. REBUILD 작업은 ONLINE 작업으로만 수행할 수 있습니다.  
@@ -567,7 +716,7 @@ WITH CHECK | WITH NOCHECK
  자세한 내용은 [온라인 인덱스 작업의 작동 원리](../../relational-databases/indexes/how-online-index-operations-work.md)를 참조하세요.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+> 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
@@ -897,7 +1046,7 @@ ONLINE **=** ON에는 다음과 같은 제한 사항이 있습니다.
 클러스터형 인덱스를 삭제하려면 기존 클러스터형 인덱스와 크기가 같은 임시 디스크 공간이 필요합니다. 이 추가 공간은 작업이 완료되면 바로 해제됩니다.  
   
 > [!NOTE]  
->  *\<drop_clustered_constraint_option>* 아래에 나열된 옵션은 테이블의 클러스터형 인덱스에 적용되며 뷰의 클러스터형 인덱스 또는 비클러스터형 인덱스에 적용할 수 없습니다.  
+> *\<drop_clustered_constraint_option>* 아래에 나열된 옵션은 테이블의 클러스터형 인덱스에 적용되며 뷰의 클러스터형 인덱스 또는 비클러스터형 인덱스에 적용할 수 없습니다.  
   
 ## <a name="replicating-schema-changes"></a>스키마 변경 내용 복제  
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 게시된 테이블에 대해 ALTER TABLE을 실행하면 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다. 이 기능에는 몇 가지 제한이 있으며 해제할 수 있습니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
@@ -930,7 +1079,7 @@ ONLINE **=** ON에는 다음과 같은 제한 사항이 있습니다.
   
 이 문제를 해결하려면 네 부분으로 구성된 접두사를 사용하지 않아야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
  ALTER TABLE 권한은 ALTER TABLE SWITCH 문과 관련된 두 테이블에 모두 적용됩니다. 전환된 데이터는 모두 대상 테이블의 보안을 상속합니다.  
@@ -1742,11 +1891,11 @@ WITH
   
 |Partition|데이터 유무|경계 범위|  
 |---------------|---------------|--------------------|  
-|1|예|OrderDate < '2004-01-01'|  
-|2|예|'2004-01-01' <= OrderDate < '2005-01-01'|  
-|3|예|'2005-01-01' <= OrderDate< '2006-01-01'|  
-|4|예|'2006-01-01'<= OrderDate < '2007-01-01'|  
-|5|예|'2007-01-01' <= OrderDate|  
+|@shouldalert|사용자 계정 컨트롤|OrderDate < '2004-01-01'|  
+|2|사용자 계정 컨트롤|'2004-01-01' <= OrderDate < '2005-01-01'|  
+|3|사용자 계정 컨트롤|'2005-01-01' <= OrderDate< '2006-01-01'|  
+|4|사용자 계정 컨트롤|'2006-01-01'<= OrderDate < '2007-01-01'|  
+|5|사용자 계정 컨트롤|'2007-01-01' <= OrderDate|  
   
 -   파티션 1 (데이터 있음): OrderDate < '2004-01-01'  
 -   파티션 2 (데이터 있음): '2004-01-01' <= OrderDate < '2005-01-01'  

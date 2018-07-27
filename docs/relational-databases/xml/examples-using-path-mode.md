@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 285bdb7031d205cb30b0ee76560a9ee9b00f5fb4
-ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
+ms.openlocfilehash: 36a582685e4c4e76e093763e4372d68ca93ec14b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34758083"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085345"
 ---
 # <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>XPath 형식의 열 이름 지정  
- 다음 쿼리에서 지정된 열 이름 `ProductModelID`는 '@'으로 시작하며 슬래시 기호('/')를 포함하지 않으므로 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
+ 다음 쿼리에서 지정된 열 이름 `ProductModelID`는 ‘\@’으로 시작하며 슬래시 기호('/')를 포함하지 않으므로 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
   
 ```  
 USE AdventureWorks2012;  

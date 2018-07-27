@@ -17,12 +17,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50aade82abccaa58b62d28b086392a276dee3f2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7b7e364b9384813e63036b184f80f4e807f7218
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335897"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084835"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문은 C 언어와 C# 언어에서 사용하는 구문과 유사합니다. 식별자(열과 변수), 리터럴, 연산자, 함수 등의 요소가 식에 포함됩니다. 이 항목에서는 각 식 요소에 적용되는 식 계산기 구문의 고유 요구 사항을 요약해서 보여 줍니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "35335897"
 ## <a name="identifiers"></a>식별자  
  식은 열 식별자와 변수 식별자를 포함할 수 있습니다. 열은 데이터 원본에서 시작되거나 데이터 흐름에서 변환으로 만들어질 수 있습니다. 식은 계보 식별자를 사용하여 열을 참조할 수 있습니다. 계보 식별자는 패키지 요소를 고유하게 식별하는 번호입니다. 식에서 참조된 계보 식별자는 파운드(#) 접두사를 포함해야 합니다. 예를 들어 계보 식별자 138은 #138을 사용하여 참조합니다.  
   
- 식은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 제공하는 시스템 변수와 사용자 지정 변수를 포함할 수 있습니다. 식에서 참조된 변수는 @ 접두사를 포함해야 합니다. 예를 들어 `Counter` 변수는 using @Counter로 참조됩니다. @ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. 자세한 내용은 [식별자&#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)를 참조하세요.  
+ 식은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 제공하는 시스템 변수와 사용자 지정 변수를 포함할 수 있습니다. 식에서 참조된 변수는 \@ 접두사를 포함해야 합니다. 예를 들어 `Counter` 변수는 \@Counter를 사용하여 참조합니다. \@ 문자는 변수 이름의 일부가 아니라 식 계산기에 해당 변수를 식별하는 역할만 합니다. 자세한 내용은 [식별자&#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)를 참조하세요.  
   
 ## <a name="literals"></a>리터럴  
  식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식에 사용된 문자열 리터럴은 따옴표로 묶어야 합니다. 숫자 및 부울 리터럴은 따옴표를 사용하지 않습니다. 식 언어에는 자주 이스케이프되는 문자에 대한 이스케이프 시퀀스가 포함되어 있습니다. 자세한 내용은 [리터럴&#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)을 참조하세요.  

@@ -2,7 +2,7 @@
 title: tempdb 데이터베이스 | Microsoft 문서
 description: 이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 대한 세부 정보를 제공합니다.
 ms.custom: P360
-ms.date: 12/19/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,15 +23,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582325"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108375"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 SQL Database에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
   
 - 전역 또는 로컬 임시 테이블과 인덱스, 임시 저장 프로시저, 테이블 변수, 테이블 반환 함수에서 반환된 테이블, 커서 등 명시적으로 생성된 임시 **사용자 개체**.  
@@ -44,7 +44,7 @@ ms.locfileid: "34582325"
   > 각 내부 개체는 IAM 페이지와 8페이지 익스텐트를 포함하여 최소 9페이지를 사용합니다. 페이지 및 익스텐트에 대한 자세한 내용은 [페이지 및 익스텐트](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)를 참조하세요.
 
   > [!IMPORTANT]
-  > Azure SQL Database는 tempdb에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 전역 임시 테이블 및 전역 임시 저장 프로시저는 동일한 Azure SQL 데이터베이스 내의 모든 사용자 세션에서 공유합니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요.
+  > Azure SQL Database 논리 서버는 tempdb에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 전역 임시 테이블 및 전역 임시 저장 프로시저는 동일한 Azure SQL 데이터베이스 내의 모든 사용자 세션에서 공유합니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance))는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다. Azure SQL Database 논리 서버의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 논리 서버 및 논리적 master 데이터베이스의 개념은 [Azure SQL 논리 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)을 참조하세요. Azure SQL Database 논리 서버의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database 논리 서버의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. 
 
 - **버전 저장소**는 행 버전 관리를 사용하는 기능을 지원하는 데 필요한 데이터 행을 보관하는 데이터 페이지 모음입니다. 버전 저장소에는 일반 버전 저장소와 온라인 인덱스 작성 버전 저장소가 있습니다. 버전 저장소에는 다음 정보가 포함됩니다.
   - 행 버전 관리 격리를 사용하여 커밋된 읽기 또는 스냅숏 격리 트랜잭션을 사용하는 데이터베이스의 데이터 수정 트랜잭션에서 생성된 행 버전  
@@ -74,35 +74,35 @@ ms.locfileid: "34582325"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|예|  
-|ANSI_NULL_DEFAULT|OFF|예|  
-|ANSI_NULLS|OFF|예|  
-|ANSI_PADDING|OFF|예|  
-|ANSI_WARNINGS|OFF|예|  
-|ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|아니요|  
-|AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|아니요|  
-|AUTO_UPDATE_STATISTICS|ON|예|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|예|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|예|  
-|CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|ON|아니요|  
-|ENCRYPTION|OFF|아니요|  
-|MIXED_PAGE_ALLOCATION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
-|PARAMETERIZATION|SIMPLE|예|  
-|QUOTED_IDENTIFIER|OFF|예|  
-|READ_COMMITTED_SNAPSHOT|OFF|아니요|  
-|RECOVERY|SIMPLE|아니요|  
-|RECURSIVE_TRIGGERS|OFF|예|  
-|Service Broker 옵션|ENABLE_BROKER|예|  
-|TRUSTWORTHY|OFF|아니요|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|사용자 계정 컨트롤|  
+|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
+|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
+|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
+|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
+|ARITHABORT|OFF|사용자 계정 컨트롤|  
+|AUTO_CLOSE|OFF|아니오|  
+|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_SHRINK|OFF|아니오|  
+|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
+|CHANGE_TRACKING|OFF|아니오|  
+|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
+|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 아니오<br /><br /> 아니오|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
+|DB_CHAINING|ON|아니오|  
+|ENCRYPTION|OFF|아니오|  
+|MIXED_PAGE_ALLOCATION|OFF|아니오|  
+|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|사용자 계정 컨트롤|  
+|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
+|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
+|READ_COMMITTED_SNAPSHOT|OFF|아니오|  
+|RECOVERY|SIMPLE|아니오|  
+|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
+|Service Broker 옵션|ENABLE_BROKER|사용자 계정 컨트롤|  
+|TRUSTWORTHY|OFF|아니오|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "34582325"
 
 |SLO|최대 Tempdb 데이터 파일 크기(MB)|tempdb 데이터 파일 수|최대 tempdb 데이터 크기(MB)|
 |---|---:|---:|---:|
-|Basic|14,225|1|14,225|
-|S0|14,225|1|14,225| 
-|S1|14,225|1|14,225| 
-|S2|14,225| 1|14,225| 
-|S3|32,768|1|32,768| 
+|Basic|14,225|@shouldalert|14,225|
+|S0|14,225|@shouldalert|14,225| 
+|S1|14,225|@shouldalert|14,225| 
+|S2|14,225| @shouldalert|14,225| 
+|S3|32,768|@shouldalert|32,768| 
 |S4|32,768|2|65,536| 
 |S6|32,768|3|98,304| 
 |S7|32,768|6|196,608| 
@@ -157,7 +157,7 @@ ms.locfileid: "34582325"
 - 데이터베이스를 OFFLINE으로 설정  
 - 데이터베이스나 주 파일 그룹을 READ_ONLY로 설정  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  모든 사용자가 tempdb에 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다. tempdb 연결 권한을 취소하여 사용자가 tempdb를 사용하지 못하도록 할 수 있지만 일부 일상적인 작업에서 tempdb를 사용해야 하므로 권장하지 않습니다.  
 
 ## <a name="optimizing-tempdb-performance-in-sql-server"></a>SQL Server에서 tempdb 성능 최적화 

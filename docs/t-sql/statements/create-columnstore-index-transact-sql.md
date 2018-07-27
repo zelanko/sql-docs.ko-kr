@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787773"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024249"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -358,13 +358,13 @@ ON
 
 클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 또는 트리거를 사용할 수 없습니다. 비클러스터형 columnstore 인덱스에는 이러한 제한이 적용되지 않습니다. 즉 비클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 및 트리거를 사용할 수 있습니다.
 
-**SQL Server 2014 특정 제한 사항**  
-이러한 제한은 SQL Server 2014에만 적용됩니다. 이 릴리스에서는 업데이트 가능한 클러스터형 columnstore 인덱스를 사용했습니다. 비클러스터형 columnstore 인덱스는 여전히 읽기 전용이었습니다.  
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 특정 제한 사항**  
+이러한 제한 사항은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에만 적용됩니다. 이 릴리스에서는 업데이트 가능한 클러스터형 columnstore 인덱스를 사용했습니다. 비클러스터형 columnstore 인덱스는 여전히 읽기 전용이었습니다.  
 
 -   변경 내용 추적 NCCI(비클러스터형 columnstore 인덱스)는 읽기 전용이므로 변경 내용 추적과 함께 사용할 수 없습니다. CCI(클러스터형 columnstore 인덱스)에서 작동합니다.  
 -   변경 데이터 캡처 읽기 전용인 NCCI(비클러스터형 columnstore 인덱스)에 대해 변경 데이터 캡처를 사용할 수 없습니다. CCI(클러스터형 columnstore 인덱스)에서 작동합니다.  
 -   읽기용 보조 Always OnReadable 가용성 그룹의 읽기 가능한 보조에서 CCI(클러스터형 columnstore 인덱스)에 액세스할 수 없습니다.  읽기 가능한 보조에서 NCCI(비클러스터형 columnstore 인덱스)에 액세스할 수 있습니다.  
--   MARS(Multiple Active Result Sets) SQL Server 2014는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다.    그러나 SQL Server 2014는 columnstore 인덱스가 있는 테이블에서 DML(동시 데이터 조작 언어) 작업에 대해서는 MARS를 지원하지 않습니다. 이 경우 SQL Server는 연결을 종료하고 트랜잭션을 중단합니다.  
+-   MARS(Multiple Active Result Sets) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 MARS를 사용하여 columnstore 인덱스가 있는 테이블에 대한 읽기 전용 연결을 합니다. 그러나 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 columnstore 인덱스가 있는 테이블에서 동시 DML(데이터 조작 언어) 작업에는 MARS를 지원하지 않습니다. 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 연결을 종료하고 트랜잭션을 중단합니다.  
   
  columnstore 인덱스의 성능상 이점 및 제한 사항에 대한 자세한 내용은 [Columnstore 인덱스 개요](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
@@ -383,7 +383,7 @@ ON
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>1. 클러스터형 columnstore 인덱스로 힙 변환  
  이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 저장소가 rowstore에서 columnstore로 변경됩니다.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>2. 클러스터형 인덱스를 같은 이름의 클러스터형 columnstore 인덱스로 변환합니다.  
  이 예에서는 클러스터형 인덱스가 있는 테이블을 만든 후 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환하는 구문을 보여 줍니다. 이렇게 하면 전체 테이블의 저장소가 rowstore에서 columnstore로 변경됩니다.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 이 예에서는 columnstore 인덱스을 만들기 전에 이전 릴리스에서 어떻게 비클러스터형 인덱스를 삭제해야 하는지 보여줍니다.  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>4. rowstore에서 columnstore로 큰 팩트 테이블 변환  
@@ -452,7 +450,7 @@ GO
   
 1.  먼저 이 예에서 사용할 작은 테이블을 만듭니다.  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  rowstore 테이블에서 모든 비클러스터형 인덱스를 삭제합니다.  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   클러스터형 columnstore 인덱스로 변환할 때 인덱스에 새 이름을 지정하려는 경우 이 작업을 수행합니다. 클러스터형 인덱스를 삭제하지 않으면 새 클러스터형 columnstore 인덱스에 동일한 이름이 지정됩니다.  
   
         > [!NOTE]  
-        >  고유의 이름을 사용하면 인덱스 이름을 더 쉽게 기억할 수 있습니다. 모든 rowstore 클러스터형 인덱스는 'ClusteredIndex_\<GUID>'라는 기본 이름을 사용합니다.  
+        > 고유의 이름을 사용하면 인덱스 이름을 더 쉽게 기억할 수 있습니다. 모든 rowstore 클러스터형 인덱스는 'ClusteredIndex_\<GUID>'라는 기본 이름을 사용합니다.  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  rowstore 테이블을 클러스터형 columnstore 인덱스가 있는 columnstore 테이블로 변환합니다.  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>5. columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환  
  columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환하려면 CREATE INDEX 문을 DROP_EXISTING 옵션과 함께 사용합니다.  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>6. columnstore 테이블을 rowstore 힙으로 변환  
  columnstore 테이블을 rowstore 힙으로 변환하려면 간단히 클러스터형 columnstore 인덱스를 삭제하면 됩니다.  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>7. 전체 클러스터형 columnstore 인덱스를 다시 빌드하여 조각 모음  
-   적용 대상: SQL Server 2014  
+   적용 대상: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  두 가지 방법으로 전체 클러스터형 columnstore 인덱스를 다시 작성할 수 있습니다. CREATE CLUSTERED COLUMNSTORE INDEX 또는 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)와 REBUILD 옵션을 사용할 수 있습니다. 두 방법 모두 동일한 결과를 얻을 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server 2016부터 이 예에서 설명된 방법을 사용하여 다시 작성하는 대신에 ALTER INDEX REORGANIZE를 사용합니다.  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 예에서 설명된 방법을 사용하여 다시 작성하는 대신에 `ALTER INDEX...REORGANIZE`를 사용합니다.  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered">비클러스터형 columnstore 인덱스 사용</a>  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>1. Rowstore 테이블에서 columnstore 인덱스를 보조 인덱스로 만들기  
  이 예에서는 rowstore 테이블에 비클러스터형 columnstore 인덱스를 만듭니다. 이 경우 columnstore 인덱스는 하나만 만들 수 있습니다. Columnstore 인덱스는 rowstore 테이블에 데이터 복사본을 포함하고 있으므로 추가 스토리지가 필요합니다. 이 예에서는 간단한 테이블 및 클러스터형 인덱스를 만든 다음, 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>2. 모든 옵션을 사용하여 단순 비클러스터형 columnstore 인덱스 만들기  
  다음 예에서는 모든 옵션을 사용하여 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>3. 필터링된 조건자를 사용하여 비클러스터형 columnstore 인덱스 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 Production.BillOfMaterials 테이블에 필터링된 비클러스터형 columnstore 인덱스를 만듭니다. 필터 조건자는 필터링된 인덱스에 키 열이 아닌 열을 포함할 수 있습니다. 이 예에서 조건자는 EndDate가 NULL이 아닌 행만 선택합니다.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> 4. 비클러스터형 Columnstore 인덱스의 데이터 변경  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예:  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  이 예에서는 xDimProduct 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 만든 다음, CREATE CLUSTERED COLUMNSTORE INDEX를 사용하여 테이블을 rowstore 테이블에서 columnstore 테이블로 변경합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>2. 클러스터형 Columnstore 인덱스 다시 작성  
  앞의 예를 기반으로 이 예에서는 CREATE CLUSTERED COLUMNSTORE INDEX를 사용하여 cci_xDimProduct라는 기존 클러스터형 columnstore 인덱스를 다시 작성합니다.  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  이전 예제에서의 cci_xDimProduct 클러스터형 columnstore 인덱스를 사용하여 이 예제는 cci_xDimProduct 클러스터형 columnstore 인덱스를 삭제한 다음, mycci_xDimProduct라는 이름으로 클러스터형 columnstore 인덱스를 다시 생성합니다.  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>4. columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환  
  클러스터형 columnstore 인덱스를 삭제하고 클러스터형 인덱스를 만들고자 하는 상황이 있을 수도 있습니다. 이렇게 하면 테이블을 rowstore 형식으로 저장합니다. 이 예에서는 columnstore 테이블을 클러스터형 인덱스가 있는 같은 이름의 rowstore 테이블로 변환합니다. 데이터가 손실되지 않습니다. 모든 데이터는 rowstore 테이블로 이동하고 나열된 열은 클러스터형 인덱스에서 키 열이 됩니다.  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>5. columnstore 테이블을 rowstore 힙으로 변환  
  클러스터형 columnstore 인덱스를 삭제하고 테이블을 rowstore 힙으로 변환하려면 [DROP INDEX(SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32)를 사용합니다. 이 예에서는 cci_xDimProduct 테이블을 rowstore 힙으로 변환합니다. 테이블은 계속 배포되지만 힙으로 저장됩니다.  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786014"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216934"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,8 +206,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         [ NOT FOR REPLICATION ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
  
-
-  
 < table_index > ::=   
 {  
     {  
@@ -225,7 +223,6 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]  
   
 }   
-
 
 <table_option> ::=  
 {  
@@ -272,8 +269,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
-  
-      --Memory optimized CREATE TABLE Syntax  
+--Memory optimized CREATE TABLE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -382,7 +378,7 @@ column_name <data_type>
 -   계산 열은 INSERT 또는 UPDATE 문의 대상이 될 수 없습니다.  
   
 > [!NOTE]  
->  테이블의 각 행은 계산 열과 연관된 열에 대해 다른 값을 가질 수 있습니다. 따라서 계산 열은 각 행에 대해 동일한 값을 갖지 않습니다.  
+> 테이블의 각 행은 계산 열과 연관된 열에 대해 다른 값을 가질 수 있습니다. 따라서 계산 열은 각 행에 대해 동일한 값을 갖지 않습니다.  
   
  계산 열의 Null 허용 여부는 사용되는 식을 바탕으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 자동으로 결정합니다. 대부분 식의 결과는 언더플로 또는 오버플로에 의한 Null 결과를 생성할 수 있으므로 Null이 허용되지 않는 열만 사용하더라도 결국 식은 Null을 허용하는 것으로 간주됩니다. **AllowsNull** 속성과 함께 COLUMNPROPERTY 함수를 사용하여 테이블에 있는 계산 열의 Null 허용 여부를 확인합니다. Null을 허용하는 식은 *check_expression* 상수로 ISNULL을 지정하여 NULL을 허용하지 않는 식으로 바꿀 수 있습니다. 이때 이 상수는 NULL 결과를 대체하는 Null이 아닌 값입니다. CLR(공용 언어 런타임) 사용자 정의 형식의 식을 바탕으로 한 계산 열에는 해당 형식에 대한 REFERENCES 권한이 필요합니다.  
   
@@ -414,7 +410,9 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
 > [!NOTE]  
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이며 TEXTIMAGE_ON **"** default **"** 또는 TEXTIMAGE_ON **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** }  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
+ 
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  FILESTREAM 데이터의 파일 그룹을 지정합니다.  
   
@@ -495,6 +493,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  CREATE TABLE 문에서 IDENTITY 속성, FOREIGN KEY 제약 조건 및 CHECK 제한 조건에 대해 NOT FOR REPLICATION 절을 지정할 수 있습니다. IDENTITY 속성에 이 절을 지정하면 복제 에이전트가 삽입 작업을 수행할 때 ID 열의 값이 증가하지 않습니다. 제약 조건에 대해 이 절을 지정하면 복제 에이전트가 삽입, 업데이트 또는 삭제 작업을 수행할 때 해당 제약 조건이 강제로 적용되지 않습니다.  
   
  GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]  
+ 
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.  
   
  시스템이 지정된 datetime2 열을 사용하여 레코드가 유효한 시작 시간 또는 레코드가 유효한 종료 시간을 기록하도록 지정합니다. 열은 NOT NULL로 지정해야 합니다. 이들을 NULL로 지정하려고 하면 시스템 오류가 발생합니다. 기간 열에 NOT NULL을 명시적으로 지정하지 않으면 시스템은 기본적으로 해당 열을 NOT NULL로 정의합니다. PERIOD FOR SYSTEM_TIME 및 WITH SYSTEM_VERSIONING = ON 인수와 함께 이 인수를 사용하여 테이블에 대한 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
@@ -509,14 +508,12 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  INDEX *index_name* CLUSTERED COLUMNSTORE  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
   
  전체 테이블을 클러스터형 columnstore 인덱스를 포함한 열 형식으로 저장하도록 지정합니다. 이는 언제나 테이블의 모든 열을 포함합니다. 데이터는 행이 columnstore의 압축 이점을 얻도록 구성되므로 알파벳순 또는 숫자 순서로 정렬되지 않습니다.  
   
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
   
  테이블에 비클러스터형 columnstore 인덱스를 만들도록 지정합니다. 기본 테이블은 rowstore 힙 또는 클러스터형 인덱스이거나 클러스터형 columnstore 인덱스일 수 있습니다. 모든 경우 테이블에 비클러스터형 columnstore 인덱스를 만들면 인덱스 열에 대한 데이터의 두 번째 복사본이 저장됩니다.  
@@ -527,12 +524,12 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.  
   
 > [!NOTE]  
->  비고유 클러스터형 인덱스를 분할하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 기본적으로 지정되지 않은 분할 열을 클러스터형 인덱스 키 목록에 추가합니다. 비고유 비클러스터형 인덱스를 분할하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 지정되지 않은 분할 열을 인덱스의 키가 아닌 포괄 열로 추가합니다.  
+> 비고유 클러스터형 인덱스를 분할하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 기본적으로 지정되지 않은 분할 열을 클러스터형 인덱스 키 목록에 추가합니다. 비고유 비클러스터형 인덱스를 분할하는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 지정되지 않은 분할 열을 인덱스의 키가 아닌 포괄 열로 추가합니다.  
   
  *partition_scheme_name* 또는 *filegroup*이 지정되지 않고 테이블이 분할된 경우 인덱스는 동일한 분할 열을 사용하여 동일한 파티션 구성표에 기본 테이블로 배치됩니다.  
   
 > [!NOTE]  
->  XML 인덱스에서 파티션 구성표를 지정할 수 없습니다. 기본 테이블이 분할되면 XML 인덱스는 테이블과 동일한 파티션 구성표를 사용합니다.  
+> XML 인덱스에서 파티션 구성표를 지정할 수 없습니다. 기본 테이블이 분할되면 XML 인덱스는 테이블과 동일한 파티션 구성표를 사용합니다.  
   
  분할 인덱스에 대한 자세한 내용은 [분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
   
@@ -581,16 +578,18 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  열은 한정 데이터 형식이어야 합니다.  
   
  ALGORITHM  
+   
+ **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
+ 
  **'AEAD_AES_256_CBC_HMAC_SHA_256'** 이어야 합니다.  
   
  기능 제약 조건을 포함한 자세한 내용은 [Always Encrypted &#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)을 참조하세요.  
-  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
-  
+ 
  SPARSE  
  열이 스파스 열임을 나타냅니다. 스파스 열의 저장소는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 지정할 수 없습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.  
   
  MASKED WITH ( FUNCTION = ' *mask_function* ')  
+ 
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  동적 데이터 마스크를 지정합니다. *mask_function*은 적절한 매개 변수를 포함한 마스킹 함수의 이름 입니다. 세 함수를 사용할 수 있습니다.  
@@ -776,14 +775,12 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  COLUMNSTORE  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
   
  클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE는 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
   
  COLUMNSTORE_ARCHIVE  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
@@ -849,14 +846,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_DIRECTORY = *directory_name*  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
  Windows 호환 FileTable 디렉터리 이름을 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성을 비교할 때는 데이터 정렬 설정과 관계없이 대/소문자가 구분되지 않습니다. 이 값을 지정하지 않으면 Filetable의 이름이 사용됩니다.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
  FileTable의 **Name** 열에 적용할 데이터 정렬의 이름을 지정합니다. 데이터 정렬은 Windows 파일 명명 의미 체계를 따르도록 대/소문자를 구분하지 않아야 합니다. 이 값을 지정하지 않으면 데이터베이스 기본 데이터 정렬이 사용됩니다. 데이터베이스 기본 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 CREATE TABLE 작업이 실패합니다.  
@@ -875,28 +870,24 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
  FileTable에서 **stream_id** 열에 자동으로 만들어지는 고유한 제약 조건에 사용할 이름을 지정합니다. 이 값을 지정하지 않으면 시스템에서 제약 조건 이름을 생성합니다.  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
  FileTable에서 **parent_path_locator** 및 **name** 열에 자동으로 만들어지는 고유한 제약 조건에 사용할 이름을 지정합니다. 이 값을 지정하지 않으면 시스템에서 제약 조건 이름을 생성합니다.  
   
  SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .  *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.   
   
  데이터 형식, NULL 허용 여부 제약 조건 및 기본 키 제약 조건 요구 사항이 충족된 경우 테이블의 시스템 버전 관리를 활성화합니다. **HISTORY_TABLE** 인수를 사용하지 않는 경우 시스템에서 현재 테이블의 동일한 파일 그룹에 있는 현재 테이블의 스키마와 일치하는 새 기록 테이블을 생성하여 두 테이블 간에 링크를 만들고 시스템이 기록 테이블의 현재 테이블에서 각 레코드의 기록을 기록할 수 있도록 합니다. 이 기록 테이블의 이름은 `MSSQL_TemporalHistoryFor<primary_table_object_id>`가 됩니다. 기본적으로 기록 테이블은 **PAGE** (으)로 압축됩니다. HISTORY_TABLE 인수를 사용하여 기존 기록 테이블에 대한 링크를 만들고 해당 테이블을 사용하면 현재 테이블과 지정된 테이블 간에 링크가 생성됩니다. 구성 분할은 현재 테이블에서 기록 테이블로 자동 복제를 수행하지 않기 때문에 현재 테이블이 분할된 경우 기록 테이블은 기본 파일 그룹에 생성됩니다. 기록 테이블 생성 도중 기록 테이블의 이름을 지정하는 경우 스키마와 테이블 이름을 지정해야 합니다. 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 확인을 통해 기존 레코드가 겹치지 않도록 합니다. 기본값은 데이터 일관성 검사를 수행하는 것입니다. 이 인수를 PERIOD FOR SYSTEM_TIME 및 GENERATED ALWAYS AS ROW { START | END } 인수와 함께 사용하여 테이블에 대한 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
   
  REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  Stretch Database가 활성화 또는 비활성화된 상태에서 새 테이블을 만듭니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
@@ -911,13 +902,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  [ FILTER_PREDICATE = { null | *predicate* } ]  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  선택적으로 필터 조건자를 지정하여 기록 및 현재 데이터를 모두 포함하는 테이블에서 마이그레이션할 행을 선택합니다. 조건자는 결정적 인라인 테이블 반환 함수를 호출해야 합니다. 자세한 내용은 [테이블에 대해 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 
    
 > [!IMPORTANT]  
->  제대로 수행되지 않는 필터 조건자를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 조건자를 적용합니다.  
+> 제대로 수행되지 않는 필터 조건자를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 조건자를 적용합니다.  
   
  필터 조건자를 지정하지 않으면 전체 테이블이 마이그레이션됩니다.  
   
@@ -925,7 +915,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 Azure SQL까지. 
   
 -   `OUTBOUND`를 지정하여 SQL Server에서 Azure로 데이터를 마이그레이션합니다.  
@@ -938,7 +927,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  값 ON은 테이블이 메모리 최적화된 형식임을 나타냅니다. 메모리 최적화된 테이블은 트랜잭션 처리의 성능을 최적화하기 위해 사용되는 메모리 내 OLTP 기능의 일부입니다. 메모리 내 OLTP를 시작하려면 [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)을 참조하세요. 메모리 최적화 테이블에 대한 더 심층적인 내용은 [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
@@ -947,7 +935,6 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  DURABILITY  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지   
   
  SCHEMA_AND_DATA의 값은 테이블이 내구성이 있다는 것, 즉 변경 내용이 디스크에 유지되고 다시 시작 또는 장애 조치 시에 존속된다는 것을 나타냅니다.  SCHEMA_AND_DATA는 기본값입니다.  
@@ -955,11 +942,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  SCHEMA_ONLY 값은 테이블이 비영구적임을 나타냅니다. 테이블 스키마는 유지되지만 데이터 업데이트는 데이터베이스를 다시 시작하거나 장애 조치할 때 삭제됩니다. DURABILITY=SCHEMA_ONLY는 MEMORY_OPTIMIZED=ON과 함께만 사용할 수 있습니다.  
   
 > [!WARNING]  
->  **DURABILITY = SCHEMA_ONLY**를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT**이 **ALTER DATABASE**를 사용하여 변경되면 테이블의 데이터는 손실됩니다.  
+> **DURABILITY = SCHEMA_ONLY**를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT**이 **ALTER DATABASE**를 사용하여 변경되면 테이블의 데이터는 손실됩니다.  
   
  BUCKET_COUNT  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
  해시 인덱스에서 만들어야 하는 버킷 수를 나타냅니다. 해시 인덱스에서 BUCKET_COUNT의 최대값은 1,073,741,824입니다. 메모리 최적화 테이블의 인덱스에 대한 자세한 내용은 [Memory-Optimized Tables에 대한 인덱스](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)를 참조하세요.  
@@ -968,14 +954,12 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  INDEX  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
 CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있습니다. 메모리 최적화 테이블에서 인덱스 추가 및 제거에 대한 자세한 내용은 [메모리 최적화 테이블 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)을 참조하세요.
   
  HASH  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
  HASH 인덱스가 만들어졌음을 나타냅니다.  
@@ -998,7 +982,7 @@ CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있�
   
  SQL 문은 예를 들어 CREATE TABLE 문의 *table_name*에 대해 지정된 값을 사용하여 임시 테이블을 참조합니다####.  
   
-```  
+```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
   
 INSERT INTO #MyTempTable VALUES (1);  
@@ -1018,7 +1002,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
  저장 프로시저 또는 트리거에서 만드는 로컬 임시 테이블은 저장 프로시저 또는 트리거를 호출하기 전에 만든 임시 테이블과 동일한 이름을 사용할 수 있습니다. 그러나 쿼리가 임시 테이블을 참조하고 이때 같은 이름을 가진 두 개의 임시 테이블이 동시에 존재하면 쿼리가 확인할 테이블은 정의되지 않습니다. 중첩된 저장 프로시저도 이를 호출한 저장 프로시저가 만든 임시 테이블과 동일한 이름으로 임시 테이블을 만들 수 있습니다. 그러나 중첩된 프로시저에서 만든 테이블에 대한 수정 사항을 확인하려면 테이블의 구조 및 열 이름이 호출 프로시저에서 만든 테이블과 같아야 합니다. 이는 다음 예에서 확인할 수 있습니다.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.Test2  
 AS  
 n    CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1060,30 +1044,31 @@ GO
   
  명명된 제약 조건으로 사용자 정의 트랜잭션의 범위 내에 임시 테이블을 만드는 경우 한 번에 한 사용자만 임시 테이블을 만드는 문을 실행할 수 있습니다. 예를 들어 저장 프로시저에서 명명된 기본 키 제약 조건을 사용하여 임시 테이블을 만드는 경우 여러 사용자가 동시에 저장 프로시저를 실행할 수 없습니다.  
 
-
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>데이터베이스 범위 전역 임시 테이블(Azure SQL Database)
 
-SQL Server에 대한 전역 임시 테이블(## 테이블 이름으로 시작)은 tempdb에 저장되며 전체 SQL Server 인스턴스에 걸쳐 모든 사용자 세션 간에 공유됩니다. SQL 테이블 형식에 대한 자세한 내용은 테이블 만들기에 관한 위의 섹션을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 전역 임시 테이블(## 테이블 이름으로 시작)은 tempdb에 저장되며 전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 걸쳐 모든 사용자 세션 간에 공유됩니다. SQL 테이블 형식에 대한 자세한 내용은 테이블 만들기에 관한 위의 섹션을 참조하세요.  
 
-Azure SQL Database는 tempdb에도 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블을 지원합니다.  즉, 전역 임시 테이블은 같은 Azure SQL Database 내의 모든 사용자 세션에 대해 공유됩니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 tempdb에도 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블을 지원합니다. 즉, 전역 임시 테이블은 같은 동일한 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 내의 모든 사용자 세션에 공유됩니다. 다른 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다.
 
-Azure SQL DB에 대한 전역 임시 테이블은 SQL Server가 임시 테이블에 대해 사용하는 것과 같은 구문과 의미 체계를 따릅니다.  마찬가지로 전역 임시 저장 프로세서도 Azure SQL DB의 데이터베이스 수준을 범위로 합니다. 로컬 임시 테이블(# 테이블 이름으로 시작)은 Azure SQL Database에 대해서도 지원되며 SQL Server가 사용하는 것과 같은 구문과 의미 체계를 따릅니다.  [임시 테이블](#temporary-tables)에 관한 위의 섹션을 참조하세요.  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 전역 임시 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 임시 테이블에 대해 사용하는 것과 같은 구문과 의미 체계를 따릅니다. 마찬가지로 전역 임시 저장 프로시저도 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 데이터베이스 수준을 범위로 합니다. 로컬 임시 테이블(# 테이블 이름으로 시작)은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에도 지원되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 사용하는 것과 같은 구문과 의미 체계를 따릅니다.  [임시 테이블](#temporary-tables)에 관한 위의 섹션을 참조하세요.  
 
 > [!IMPORTANT]
-> 이 기능은 Azure SQL Database에 대해서만 사용할 수 있습니다.
->
+> 이 기능은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용할 수 있습니다.
 
-### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Azure SQL DB에 대한 전역 임시 테이블 문제 해결 
+### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Microsoft Azure SQL Database에 대한 전역 임시 테이블 문제 해결 
 
-tempdb 문제 해결에 대해서는 [tempdb의 부족한 디스크 공간 문제 해결](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396)을 참조하세요. Azure SQL Database의 문제 해결 DMV에 액세스하려면 서버 관리자여야 합니다.
+tempdb 문제 해결에 대해서는 [tempdb의 부족한 디스크 공간 문제 해결](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105))을 참조하세요. 
+
+> [!NOTE]
+> 서버 관리자만 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 문제 해결 DMV에 액세스할 수 있습니다.
   
-### <a name="permissions"></a>사용 권한  
+### <a name="permissions"></a>Permissions  
 
- 모든 사용자가 전역 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+ 모든 사용자가 전역 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다.  
   
 ### <a name="examples"></a>예 
 
-- 세션 A는 Azure SQL Database testdb1에 전역 임시 테이블 ##test를 만들고 1행을 추가합니다.
+- 세션 A는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1에 전역 임시 테이블 ##test를 만들고 1행을 추가합니다.
 
 ```sql
 CREATE TABLE ##test ( a int, b int);
@@ -1101,7 +1086,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ---Result
 ##test
 ```
-- 세션 B는 Azure SQL Database testdb1에 연결하며 세션 A에서 만든 테이블 ##test에 액세스할 수 있습니다.
+- 세션 B는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1에 연결하며 세션 A에서 만든 테이블 ##test에 액세스할 수 있습니다.
 
 ```sql
 SELECT * FROM ##test
@@ -1109,7 +1094,7 @@ SELECT * FROM ##test
 1,1
 ```
 
-- 세션 C는 Azure SQL Database testdb2의 다른 데이터베이스에 연결하며 testdb1에서 만든 ##test에 액세스하려고 합니다. 이 작업은 전역 임시 테이블에 대한 데이터베이스 범위 때문에 실패합니다. 
+- 세션 C는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2의 다른 데이터베이스에 연결하며 testdb1에서 만든 ##test에 액세스하려고 합니다. 이 작업은 전역 임시 테이블에 대한 데이터베이스 범위 때문에 실패합니다. 
 
 ```sql
 SELECT * FROM ##test
@@ -1118,15 +1103,13 @@ Msg 208, Level 16, State 0, Line 1
 Invalid object name '##test'
 ```
 
-- 현재 사용자 데이터베이스 testdb1에서 Azure SQL Database tempdb의 시스템 개체 주소 지정
+- 현재 사용자 데이터베이스 testdb1에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb의 시스템 개체 주소 지정
 
 ```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
 ```
-
-
 
 ## <a name="partitioned-tables"></a>분할된 테이블  
  CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블이 분할되는 방식을 지정하는 파티션 함수를 만들어야 합니다. [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)을 사용하여 파티션 함수를 만들 수 있습니다. 그런 다음 파티션 구성표를 만들어 파티션 함수가 표시하는 파티션을 유지하는 파일 그룹을 지정해야 합니다. [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)을 사용하여 파티션 구성표를 만들 수 있습니다. 분할된 테이블에는 파일 그룹을 분리하는 PRIMARY KEY 또는 UNIQUE 제약 조건을 지정할 수 없습니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
@@ -1142,7 +1125,7 @@ SELECT * FROM tempdb.sys.database_files
 -   PRIMARY KEY 제약 조건 내에서 정의된 모든 열은 NOT NULL로 정의되어야 합니다. NULL 허용 여부를 지정하지 않은 경우에는 PRIMARY KEY 제약 조건에 참여하는 모든 열의 NULL 허용 여부가 NOT NULL로 설정됩니다.  
   
     > [!NOTE]  
-    >  메모리 최적화 테이블의 경우 NULL을 허용하는 키 열이 허용됩니다.  
+    > 메모리 최적화 테이블의 경우 NULL을 허용하는 키 열이 허용됩니다.  
   
 -   CLR 사용자 정의 형식 열에 기본 키를 정의하는 경우 형식 구현이 이진 순서를 지원해야 합니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
   
@@ -1220,13 +1203,13 @@ SELECT * FROM tempdb.sys.database_files
   
 ## <a name="additional-constraint-information"></a>추가 제약 조건 정보  
   
--   제약 조건으로 생성된 인덱스는 DROP INDEX 문으로 삭제할 수 없으며 제약 조건은 ALTER TABLE 문으로 삭제해야 합니다. 제약 조건이 만들고 사용하는 인덱스는 ALTER INDEX...REBUILD를 사용하여 다시 작성할 수 있습니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
+-   제약 조건으로 생성된 인덱스는 `DROP INDEX` 문으로 삭제할 수 없으며 제약 조건은 ALTER TABLE 문으로 삭제해야 합니다. 제약 조건이 만들고 사용하는 인덱스는 `ALTER INDEX ... REBUILD`를 사용하여 다시 작성할 수 있습니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
 -   제약 조건 이름은 [identifiers](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 하지만 숫자 기호(#)로 시작될 수 없습니다. *constraint_name*을 지정하지 않으면 시스템에서 생성한 이름이 제약 조건에 할당됩니다. 제약 조건 이름은 제약 조건 위반에 대한 모든 오류 메시지에 표시됩니다.  
   
 -   INSERT, UPDATE 또는 DELETE 문에서 제약 조건을 위반한 경우에는 문이 종료됩니다. 하지만 SET XACT_ABORT를 OFF로 설정하면 문이 명시적 트랜잭션의 일부인 경우 그 트랜잭션은 계속 처리됩니다. SET XACT_ABORT를 ON으로 설정하면 전체 트랜잭션이 롤백됩니다. 또한 @@ERROR 시스템 함수를 확인하여 트랜잭션 정의와 함께 ROLLBACK TRANSACTION 문을 사용할 수도 있습니다.  
   
--   ALLOW_ROW_LOCKS = ON이고 ALLOW_PAGE_LOCK = ON이면 인덱스에 액세스할 때 행, 페이지 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다. ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스할 때 테이블 수준 잠금만 허용됩니다.  
+-   `ALLOW_ROW_LOCKS = ON`이고 `ALLOW_PAGE_LOCK = ON`이면 인덱스에 액세스할 때 행, 페이지 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다. `ALLOW_ROW_LOCKS = OFF`이고 `ALLOW_PAGE_LOCK = OFF`이면 인덱스에 액세스할 때 테이블 수준 잠금만 허용됩니다.  
   
 -   테이블에 FOREIGN KEY 또는 CHECK CONSTRAINTS 및 트리거가 있는 경우에는 트리거를 실행하기 전에 제약 조건에 대한 조건을 평가합니다.  
   
@@ -1257,7 +1240,7 @@ SELECT * FROM tempdb.sys.database_files
   
  압축 상태를 변경할 경우 테이블, 인덱스 또는 파티션에 어떤 영향을 주는지 확인하려면 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 저장 프로시저를 사용합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  데이터베이스에는 CREATE TABLE 권한이 필요하고 테이블을 만들 구성표에는 ALTER 권한이 필요합니다.  
  
  CREATE TABLE 문의 열이 사용자 정의 형식으로 정의되면 해당 형식에 대한 REFERENCES 권한이 필요합니다. 
@@ -1273,7 +1256,7 @@ SELECT * FROM tempdb.sys.database_files
 ### <a name="a-create-a-primary-key-constraint-on-a-column"></a>1. 열에 PRIMARY KEY 제약 조건 만들기  
  다음 예에서는 `EmployeeID` 테이블의 `Employee` 열에 클러스터형 인덱스가 있는 PRIMARY KEY 제약 조건에 대한 열 정의를 보여 줍니다. 제약 조건 이름을 지정하지 않았기 때문에 시스템에서 제약 조건 이름을 제공합니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.Employee (EmployeeID int  
 PRIMARY KEY CLUSTERED);  
 ```  
@@ -1281,20 +1264,20 @@ PRIMARY KEY CLUSTERED);
 ### <a name="b-using-foreign-key-constraints"></a>2. FOREIGN KEY 제약 조건 사용  
  FOREIGN KEY 제약 조건은 다른 테이블을 참조하는 데 사용됩니다. 외래 키는 단일 열 키 또는 복수 열 키가 될 수 있습니다. 다음 예에서는 `SalesOrderHeader` 테이블을 참조하는 `SalesPerson` 테이블에 대한 단일 열 FOREIGN KEY 제약 조건을 보여 줍니다. 단일 열 FOREIGN KEY 제약 조건에는 REFERENCES 절만 필요합니다.  
   
-```  
+```sql  
 SalesPersonID int NULL  
 REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  또한 명시적으로 FOREIGN KEY 절을 사용하여 열 특성을 다시 정할 수 있습니다. 두 테이블에서 같은 열 이름을 사용할 필요는 없습니다.  
   
-```  
+```sql  
 FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)  
 ```  
   
  테이블 제약 조건으로 복수 열 키 제약 조건을 만듭니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `SpecialOfferProduct` 테이블은 복수 열 PRIMARY KEY를 포함합니다. 다음 예에서는 다른 테이블에서 이 키를 참조하는 방법을 보여 줍니다. 명시적인 제약 조건 이름은 선택적입니다.  
   
-```  
+```sql  
 CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY  
  (ProductID, SpecialOfferID)  
 REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)  
@@ -1303,7 +1286,7 @@ REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ### <a name="c-using-unique-constraints"></a>3. UNIQUE 제약 조건 사용  
  UNIQUE 제약 조건은 기본 키가 아닌 열에 고유성을 적용합니다. 다음 예에서는 `Name` 테이블의 `Product` 열이 고유한 것이어야 한다는 제한을 적용합니다.  
   
-```  
+```sql  
 Name nvarchar(100) NOT NULL  
 UNIQUE NONCLUSTERED  
 ```  
@@ -1311,32 +1294,32 @@ UNIQUE NONCLUSTERED
 ### <a name="d-using-default-definitions"></a>4. DEFAULT 정의 사용  
  기본값은 값을 지정하지 않은 경우 사용할 값을 INSERT 및 UPDATE 문으로 제공합니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스는 회사에서 직원이 담당하는 각기 다른 업무를 나열하는 조회 테이블을 포함할 수 있습니다. 각각의 업무를 기술하는 열에 실제 설명을 명시적으로 입력하지 않으면 문자열 기본값으로 설명을 제공할 수 있습니다.  
   
-```  
+```sql  
 DEFAULT 'New Position - title not formalized yet'  
 ```  
   
  DEFAULT 정의는 제약 조건 외에도 함수를 포함할 수 있습니다. 항목의 현재 날짜를 보려면 다음 예를 사용하십시오.  
   
-```  
+```sql  
 DEFAULT (getdate())  
 ```  
   
  무항 함수 검색도 데이터 무결성을 향상시킵니다. 행을 삽입한 사용자를 추적하려면 USER에 대한 무항 함수를 사용하십시오. 무항 함수를 괄호로 묶지 마십시오.  
   
-```  
+```sql  
 DEFAULT USER  
 ```  
   
 ### <a name="e-using-check-constraints"></a>5. CHECK 제약 조건 사용  
  다음 예에서는 `CreditRating` 테이블의 `Vendor` 열에 입력한 값에 대한 제한을 보여 줍니다. 제약 조건은 명명되지 않았습니다.  
   
-```  
+```sql  
 CHECK (CreditRating >= 1 and CreditRating <= 5)  
 ```  
   
  다음 예에서는 테이블의 열에 입력된 문자 데이터에 대한 패턴 제한이 있는 명명된 제약 조건을 보여 줍니다.  
   
-```  
+```sql  
 CONSTRAINT CK_emp_id CHECK (emp_id LIKE   
 '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'   
 OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')  
@@ -1344,7 +1327,7 @@ OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
   
  다음 예에서는 값이 특정 목록에 있도록 하거나 지정한 패턴을 따르도록 지정합니다.  
   
-```  
+```sql  
 CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')  
 OR emp_id LIKE '99[0-9][0-9]')  
 ```  
@@ -1352,7 +1335,7 @@ OR emp_id LIKE '99[0-9][0-9]')
 ### <a name="f-showing-the-complete-table-definition"></a>6. 전체 테이블 정의 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 만든 `PurchaseOrderDetail` 테이블에 대한 모든 제약 조건 정의를 가진 전체 테이블 정의를 보여 줍니다. 예제를 실행하기 위해 테이블 스키마가 `dbo`로 변경됩니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.PurchaseOrderDetail  
 (  
     PurchaseOrderID int NOT NULL  
@@ -1381,7 +1364,7 @@ ON PRIMARY;
 ### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>7. XML 스키마 컬렉션 유형의 xml 열을 가진 테이블 만들기  
  다음 예에서는 XML 스키마 컬렉션 `xml` 유형의 `HRResumeSchemaCollection` 열이 있는 테이블을 만듭니다. `DOCUMENT` 키워드는 *column_name*에 있는 `xml` 데이터 형식의 각 인스턴스가 하나의 최상위 요소만 포함할 수 있도록 지정합니다.  
   
-```  
+```sql  
 CREATE TABLE HumanResources.EmployeeResumes   
    (LName nvarchar(25), FName nvarchar(25),   
     Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );  
@@ -1390,7 +1373,7 @@ CREATE TABLE HumanResources.EmployeeResumes
 ### <a name="h-creating-a-partitioned-table"></a>8. 분할된 테이블 만들기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 그런 다음 4개의 파티션을 각각 보관할 파일 그룹을 지정하는 파티션 구성표를 만듭니다. 마지막으로 파티션 구성표를 사용하는 테이블을 만듭니다. 이 예에서는 데이터베이스에 이미 파일 그룹이 있다고 가정합니다.  
   
-```  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
 GO  
@@ -1409,13 +1392,13 @@ GO
   
 |파일 그룹|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**파티션**|1|2|3|4|  
+|**파티션**|@shouldalert|2|3|4|  
 |**값**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>9. 열에 uniqueidentifier 데이터 형식 사용  
  다음 예에서는 `uniqueidentifier` 열이 있는 테이블을 만듭니다. 이 예에서는 PRIMARY KEY 제약 조건을 사용하여 사용자가 중복 값을 삽입하지 못하도록 테이블을 보호하고 `NEWSEQUENTIALID()` 제약 조건의 `DEFAULT` 함수를 사용하여 새 행에 대한 값을 제공합니다. `uniqueidentifier` 열을 $ROWGUID 키워드로 참조할 수 있도록 이 열에 ROWGUIDCOL 속성이 적용됩니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.Globally_Unique_Data  
     (guid uniqueidentifier   
         CONSTRAINT Guid_Default DEFAULT   
@@ -1427,7 +1410,7 @@ CREATE TABLE dbo.Globally_Unique_Data
 ### <a name="j-using-an-expression-for-a-computed-column"></a>10. 계산 열에 식 사용  
  다음 예에서는 `(low + high)/2` 계산 열을 계산하기 위해 식(`myavg`)을 사용하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.mytable   
     ( low int, high int, myavg AS (low + high)/2 ) ;  
 ```  
@@ -1435,7 +1418,7 @@ CREATE TABLE dbo.mytable
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>11. 사용자 정의 형식의 열을 기반으로 계산 열 만들기  
  다음 예에서는 유형의 어셈블리와 유형 자체를 현재 데이터베이스에 이미 만들었다고 가정하고 사용자 정의 형식 `utf8string`으로 정의된 하나의 열을 가진 테이블을 만드는 방법을 보여 줍니다. 두 번째 열은 `utf8string`을 기반으로 정의되며 **type(class)**`utf8string`의 `ToString()` 메서드를 사용하여 해당 열에 대한 값을 계산합니다.  
   
-```  
+```sql  
 CREATE TABLE UDTypeTable   
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;  
 ```  
@@ -1443,7 +1426,7 @@ CREATE TABLE UDTypeTable
 ### <a name="l-using-the-username-function-for-a-computed-column"></a>12. 계산 열에 USER_NAME 함수 사용  
  다음 예에서는 `USER_NAME()` 열에 `myuser_name` 함수를 사용하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.mylogintable  
     ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;  
 ```  
@@ -1451,7 +1434,7 @@ CREATE TABLE dbo.mylogintable
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>13. FILESTREAM 열이 있는 테이블 만들기  
  다음 예에서는 `FILESTREAM` 열 `Photo`가 있는 테이블을 만듭니다. 하나 이상의 `FILESTREAM` 열이 있는 테이블에는 하나의 `ROWGUIDCOL` 열이 있어야 합니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
     EmployeeId int NOT NULL PRIMARY KEY,  
@@ -1464,7 +1447,7 @@ CREATE TABLE dbo.EmployeePhoto
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>14. 행 압축을 사용하는 테이블 만들기  
  다음 예에서는 행 압축을 사용하는 테이블을 만듭니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.T1   
 (c1 int, c2 nvarchar(200) )  
 WITH (DATA_COMPRESSION = ROW);  
@@ -1477,7 +1460,7 @@ WITH (DATA_COMPRESSION = ROW);
   
  이 예에서는 스파스 열이 있는 테이블을 만듭니다.  
   
-```  
+```sql  
 CREATE TABLE dbo.T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL ) ;  
@@ -1485,7 +1468,7 @@ CREATE TABLE dbo.T1
   
  이 예에서는 두 개의 스파스 열과 `CSet`이라는 열 집합이 있는 테이블을 만듭니다.  
   
-```  
+```sql  
 CREATE TABLE T1  
     (c1 int PRIMARY KEY,  
     c2 varchar(50) SPARSE NULL,  
@@ -1495,14 +1478,13 @@ CREATE TABLE T1
   
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>16. 시스템 버전 디스크 기반 임시 테이블 만들기  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
   
  다음 예제는 새 기록 테이블에 연결된 임시 테이블을 만드는 방법 및 기존 기록 테이블에 연결된 임시 테이블을 만드는 방법을 보여 줍니다. 참고로 임시 테이블은 시스템 버전 관리를 활성화하려면 테이블에 대해 정의된 기본 키를 활성화해야 합니다. 예를 들어 기존 테이블에 대한 시스템 버전 관리를 추가 또는 제거하는 방법을 보여 주는 예제는 [예제](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)의 시스템 버전 관리를 참조하세요. 사용 사례는 [임시 테이블](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
   
  이 예제에서는 새 기록 테이블에 연결된 새 임시 테이블을 만듭니다.  
   
-```  
+```sql  
 CREATE TABLE Department   
 (  
     DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
@@ -1518,8 +1500,7 @@ WITH (SYSTEM_VERSIONING = ON);
   
  이 예제에서는 기존 기록 테이블에 연결된 새 임시 테이블을 만듭니다.  
   
-```  
-  
+```sql  
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1549,14 +1530,13 @@ WITH
   
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>17. 시스템 버전 관리 메모리 최적화 임시 테이블 만들기  
    
-  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
   
  다음 예제는 새 디스크 기반 기록 테이블에 연결된 시스템 버전 관리 메모리 최적화 임시 테이블을 만드는 방법을 보여 줍니다.  
   
  이 예제에서는 새 기록 테이블에 연결된 새 임시 테이블을 만듭니다.  
   
-```  
+```sql  
 CREATE SCHEMA History  
 GO  
 CREATE TABLE dbo.Department   
@@ -1578,8 +1558,7 @@ WITH
   
  이 예제에서는 기존 기록 테이블에 연결된 새 임시 테이블을 만듭니다.  
   
-```  
-  
+```sql 
 --Existing table   
 CREATE TABLE Department_History   
 (  
@@ -1610,7 +1589,7 @@ WITH
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>18. 암호화된 열이 있는 테이블 만들기  
  다음 예제에서는 암호화된 열 두 개가 있는 테이블을 만듭니다. 자세한 내용은 [상시 암호화&#40;데이터베이스 엔진#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.  
   
-```  
+```sql  
 CREATE TABLE Customers (  
     CustName nvarchar(60)   
         ENCRYPTED WITH   
@@ -1633,15 +1612,38 @@ CREATE TABLE Customers (
 ### <a name="s-create-an-inline-filtered-index"></a>S.는 인라인 필터링된 인덱스 만들기 
 인라인 필터링된 인덱스가 있는 테이블을 만듭니다.
   
-  ```
+```sql
   CREATE TABLE t1 
- (
+  (
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
 GO
- ```
+```
+
+### <a name="t-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>20. 익명으로 명명된 복합 기본 키로 임시 테이블 만들기
+익명으로 명명된 복합 기본 키로 테이블을 만듭니다. 이 방법은 각각 별도의 세션에 있는 두 개의 세션 범위 임시 테이블이 제약 조건에 동일한 이름을 사용할 경우 발생하는 런타임 충돌을 방지하는 데 유용합니다. 
+  
+```
+  CREATE TABLE #tmp 
+ (
+      c1 int,
+      c2 int,
+      PRIMARY KEY CLUSTERED ([c1], [c2])
+ )
+GO
+```
+
+제약 조건의 이름을 명시적으로 지정하는 경우 두 번째 세션은 다음과 같은 오류가 생성됩니다.
  
+```
+Msg 2714, Level 16, State 5, Line 1
+There is already an object named 'PK_#tmp' in the database.
+Msg 1750, Level 16, State 1, Line 1
+Could not create constraint or index. See previous errors.
+```
+
+임시 테이블 이름의 중복이 제거되지만 제약 조건의 중복은 제거되지 않기 때문에 문제가 발생합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

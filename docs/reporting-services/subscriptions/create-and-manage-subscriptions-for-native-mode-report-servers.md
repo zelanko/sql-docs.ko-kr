@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035210"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984965"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "33035210"
   
 -   전자 메일 배달을 사용하려면 구독을 만들기 전에 SMTP 서버 또는 게이트웨이 연결에 대해 보고서 서버를 구성해야 합니다.  
   
--   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+-   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
   
  보고서를 구독하려면 먼저 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않도록 보고서 데이터 원본을 구성해야 합니다. 자세한 내용은 [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)을 참조하세요. 그렇지 않으면 **새 구독** 단추를 사용할 수 없습니다.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035210"
   
 4.  **소유자**: 소유자 필드는 기본적으로 현재 사용자로 채워지며 구독을 만들 때 편집할 수 없습니다. 하지만 구독을 저장한 이후 소유자와 설명을 포함한 구독 속성을 변경할 수 있습니다.  
   
-5.  **배달 방법**: **메일**을 선택합니다. **메일** 을 사용할 수 없는 경우 보고서 서버가 메일 구독에 대해 구성되지 않은 것입니다. [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+5.  **배달 방법**: **메일**을 선택합니다. **메일** 을 사용할 수 없는 경우 보고서 서버가 메일 구독에 대해 구성되지 않은 것입니다. [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
   
-6.  **받는 사람**: 받는 사람: 필드의 수신자 이름은 도메인 사용자 계정을 사용하여 자동으로 지정됩니다. 형식이 [user name]@[domain.com]인지 확인합니다. 보고서 서버 구성 설정에 따라 **받는 사람** 필드가 사용자 계정을 사용하여 자동으로 지정되는지 여부가 결정됩니다. 구성 설정 메일 주소를 변경하는 방법에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+6.  **받는 사람**: 받는 사람: 필드의 수신자 이름은 도메인 사용자 계정을 사용하여 자동으로 지정됩니다. 형식이 [user name]@[domain.com]인지 확인합니다. 보고서 서버 구성 설정에 따라 **받는 사람** 필드가 사용자 계정을 사용하여 자동으로 지정되는지 여부가 결정됩니다. 구성 설정 메일 주소를 변경하는 방법에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
   
     > [!NOTE]  
     >  사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  

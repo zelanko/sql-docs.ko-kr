@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842906"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087565"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -569,7 +569,7 @@ WHERE ProductSubcategoryID = 4;
   * 식에 `CASE` 절이 포함됩니다.  
 * 쿼리 힌트 절에 대한 인수. 여기에는 `number_of_rows` 쿼리 힌트의 `FAST` 인수, `number_of_processors` 쿼리 힌트의 `MAXDOP` 인수 및 `MAXRECURSION` 쿼리 힌트의 숫자 인수가 포함됩니다.
 
-매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 (@1 tinyint)와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
+매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 \@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
 
 > [!NOTE]
 > 매개 변수 이름은 임의로 지정하므로 사용자나 응용 프로그램에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다.

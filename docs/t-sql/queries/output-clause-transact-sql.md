@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252405"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088365"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252405"
 ```  
   
 ## <a name="arguments"></a>인수  
- @*table_variable*  
- 반환된 행이 호출자에게 반환되는 대신 삽입되는 **table** 변수를 지정합니다. @*table_variable*은 INSERT, UPDATE, DELETE 또는 MERGE 문 앞에 선언해야 합니다.  
+ \@*table_variable*  
+ 반환된 행이 호출자에게 반환되는 대신 삽입되는 **table** 변수를 지정합니다. \@*table_variable*은 INSERT, UPDATE, DELETE 또는 MERGE 문 앞에 선언해야 합니다.  
   
  *column_list*가 지정되지 않으면 **table** 변수에 OUTPUT 결과 집합과 동일한 수의 열이 있어야 합니다. 단, ID 및 계산 열은 건너뛰므로 예외입니다. *column_list*가 지정되면 생략된 모든 열에 Null 값을 허용하거나 기본값을 할당해야 합니다.  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  MERGE 문에만 사용할 수 있습니다. 해당 행에서 수행된 작업에 따라 각 행에 대해 'INSERT', 'UPDATE' 또는 'DELETE' 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다.  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
+ OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  다르게 지정되지 않는 이상 OUTPUT 절에 대한 참조는 OUTPUT 절 및 OUTPUT INTO 절 모두를 참조합니다.  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다.  
   
--   @@ROWCOUNT는 외부 INSERT 문에서만 삽입된 행을 반환합니다.  
+-   \@\@ROWCOUNT는 외부 INSERT 문에 의해 삽입된 행만 반환합니다.  
   
--   @@IDENTITY, SCOPE_IDENTITY 및 IDENT_CURRENT는 중첩된 DML 문에서만 생성된 ID 값만 반환하고, 외부 INSERT 문에서 생성된 ID 값은 반환하지 않습니다.  
+-   \@\@IDENTITY, SCOPE_IDENTITY 및 IDENT_CURRENT는 중첩된 DML 문으로 생성된 ID 값만 반환하며 외부 INSERT 문에 의해 생성된 값은 반환하지 않습니다.  
   
 -   외부 INSERT 문 자체에서 크게 변경된 경우에도 쿼리 알림은 문을 단일 엔터티로 취급하며 작성되는 메시지의 유형은 중첩된 DML의 유형이 됩니다.  
   
@@ -310,7 +310,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  여러 개의 응용 프로그램에서 한 테이블에 대해 파괴 읽기를 허용하는 경우 UPDATE 및 DELETE 문에서 READPAST 테이블 힌트를 사용하세요. 이렇게 하면 다른 응용 프로그램이 이미 테이블의 첫 번째 정규화 레코드를 읽고 있는 경우 발생할 수 있는 잠금 문제를 방지합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  SELECT 권한은 \<dml_select_list>를 통해 검색되거나 \<scalar_expression>에서 사용되는 모든 열에 필요합니다.  
   
  INSERT 권한은 \<output_table>에 지정된 모든 테이블에 필요합니다.  

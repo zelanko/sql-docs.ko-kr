@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: bedb049d518775144b53da2ead7fc1eee5392669
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619560"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087865"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -1046,7 +1046,7 @@ ms.locfileid: "35619560"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|이 버퍼는 분리되었습니다. 처리 중인 버퍼를 그대로 둔 상태에서 버퍼 관리자가 종료되었으며 해당 버퍼에 대한 정리가 수행되지 않습니다. 메모리 손실이나 기타 문제가 존재할 수 있습니다.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|"%1"(이)라는 입력 열을 찾지 못했습니다(오류 코드 0x%2!8.8X!). 지정한 입력 열을 입력 열 컬렉션에서 찾을 수 없습니다.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|계보 ID가 %1!d!인 입력 열을 찾지 못했습니다(오류 코드 0x%2!8.8X!). 해당 입력 열을 입력 열 컬렉션에서 찾을 수 없습니다.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|인식할 수 없는 토큰 "%1"이(가) 식에 포함되어 있습니다. "%1"이(가) 변수인 경우 "\@%1"(으)로 표현해야 합니다. 지정한 토큰이 잘못되었습니다. 토큰을 변수 이름으로 사용하려면 @ 기호가 접두사로 와야 합니다.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|인식할 수 없는 토큰 "%1"이(가) 식에 포함되어 있습니다. "%1"이(가) 변수인 경우 "\@%1"(으)로 표현해야 합니다. 지정한 토큰이 잘못되었습니다. 토큰을 변수 이름으로 사용하려면 \@ 기호가 접두사로 와야 합니다.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|인식할 수 없는 토큰 "#%1!d!"이(가) 식에 포함되어 있습니다.|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|변수 "%1"을(를) Variables 컬렉션에서 찾을 수 없습니다. 이 변수가 범위를 벗어났을 수 있습니다.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|식 "%1"을(를) 구문 분석하지 못했습니다. 이 식은 잘못된 토큰, 불완전한 토큰 또는 잘못된 요소가 있거나 형식이 잘못되었거나 괄호 같은 필수 요소의 일부가 없을 수 있습니다.|  
@@ -1091,9 +1091,9 @@ ms.locfileid: "35619560"
 |0xC00470D6|-1073450794|DTS_E_EXPREVALINVALIDTOKENSINGLEQUOTE|식 "%1"을(를) 구문 분석하지 못했습니다. 줄 번호 "%2", 문자 번호 "%3"에는 작은따옴표를 사용할 수 없습니다.|  
 |0xC00470D7|-1073450793|DTS_E_EXPREVALINVALIDTOKENSINGLEEQUAL|식 "%1"을(를) 구문 분석하지 못했습니다. 줄 번호 "%2", 문자 번호 "%3"에는 등호(=)를 사용할 수 없습니다. 지정한 위치에 이중 등호(==)가 필요할 수 있습니다.|  
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|구성 요소 "%1"이(가) 런타임 개체 참조 추적 장치 컬렉션을 캐시하지 못했으며 오류 코드 0x%2!8.8X!이(가) 반환되었습니다.|  
-|0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|이름이 "%1"인 여러 입력 열이 있습니다. 원하는 입력 열을 [Component Name].[%2]\(으)로 고유하게 지정하거나 계보 ID로 참조해야 합니다. 현재 지정한 입력 열이 둘 이상의 구성 요소에 있습니다.|  
+|0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|이름이 "%1"인 여러 입력 열이 있습니다. 원하는 입력 열을 [Component Name].[%2](으)로 고유하게 지정하거나 계보 ID로 참조해야 합니다. 현재 지정한 입력 열이 둘 이상의 구성 요소에 있습니다.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|"[%1].[%2]"이라는 입력 열을 찾지 못했습니다(오류 코드 0x%3!8.8X!). 해당 입력 열을 입력 열 컬렉션에서 찾을 수 없습니다.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|이름이 "%1"인 여러 변수가 있습니다. 원하는 변수를 @[Namespace::%2]\(으)로 고유하게 지정해야 합니다. 해당 변수가 둘 이상의 네임스페이스에 있습니다.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|이름이 "%1"인 여러 변수가 있습니다. 원하는 변수를 \@[Namespace::%2]\(으)로 고유하게 지정해야 합니다. 해당 변수가 둘 이상의 네임스페이스에 있습니다.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|데이터 흐름 엔진 스케줄러가 파이프라인에 대한 실행 계획을 줄이지 못했습니다. OptimizedMode 속성을 false로 설정하십시오.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|SQRT 함수에는 음수 값을 사용할 수 없지만 음수 값이 SQRT 함수에 전달되었습니다.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|LN 함수에는 0 또는 음수 값을 사용할 수 없지만 0 또는 음수 값이 LN 함수에 전달되었습니다.|  
@@ -1226,7 +1226,7 @@ ms.locfileid: "35619560"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|예기치 않은 등호(=)가 식에 있습니다. 이 오류는 일반적으로 이중 등호(==)가 필요할 때 발생합니다.|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|모호한 입력 열 이름이 지정되었습니다.  열은 [Component Name].[Column Name]으로 한정하거나 계보 ID로 참조해야 합니다. 이 오류는 입력 열이 둘 이상의 구성 요소에 있을 때 발생합니다. 이 경우에는 구성 요소 이름을 추가하거나 계보 ID를 사용하여 이러한 구성 요소를 구별해야 합니다.|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|식에 자리 표시자 함수 매개 변수 또는 피연산자가 있습니다. 실제 매개 변수나 피연산자로 바꿔야 합니다.|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|모호한 변수 이름이 지정되었습니다. 원하는 변수를 @[Namespace::Variable]로 한정해야 합니다. 이 오류는 변수가 둘 이상의 네임스페이스에 있을 때 발생합니다.|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|모호한 변수 이름이 지정되었습니다. 원하는 변수를 \@[Namespace::Variable]로 한정해야 합니다. 이 오류는 변수가 둘 이상의 네임스페이스에 있을 때 발생합니다.|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|이항 연산의 피연산자의 경우 데이터 형식 DT_STR은 입력 열 및 캐스트 연산에만 지원됩니다. 입력 열 또는 유형 캐스트의 결과가 아닌 DT_STR 피연산자는 이항 연산에서 사용할 수 없습니다. 이 연산을 수행하려면 캐스트 연산자를 사용하여 피연산자를 명시적으로 캐스팅해야 합니다.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|조건부 연산자의 피연산자의 경우 데이터 형식 DT_STR은 입력 열 및 캐스트 연산에만 지원됩니다. 입력 열 또는 캐스트의 결과가 아닌 DT_STR 피연산자는 조건부 연산에서 사용할 수 없습니다. 이 연산을 수행하려면 캐스트 연산자를 사용하여 피연산자를 명시적으로 캐스팅해야 합니다.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|발생 횟수 매개 변수가 함수 FINDSTRING에 적합하지 않습니다. 이 매개 변수는 0보다 커야 합니다.|  
@@ -2271,7 +2271,7 @@ ms.locfileid: "35619560"
   
 |16진수 코드|10진수 코드|심볼 이름|설명|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
+|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템에서 지정한 파일을 찾을 수 없습니다.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Microsoft SSIS 서비스를 시작하고 있습니다.<br /><br /> 서버 버전 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 서비스가 시작되었습니다.<br /><br /> 서버 버전 %1|  

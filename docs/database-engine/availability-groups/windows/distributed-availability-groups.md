@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270954"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083734"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>재해 복구 및 다중 사이트 시나리오
 
-기존 가용성 그룹에서는 모든 서버가 동일한 WSFC 클러스터에 속해야 하므로 여러 데이터 센터를 확장할 수 있습니다. 다음 그림에서는 데이터 흐름을 포함하여 기존 다중 사이트 가용성 그룹에 대한 아키텍처를 보여 줍니다. 모든 보조 복제본에 트랜잭션을 보내는 주 복제본이 하나만 있습니다. 이 구성은 몇 가지 방식에서 분산 가용성 그룹보다 덜 효율적입니다. 예를 들어 Active Directory(해당하는 경우) 및 WSFC 클러스터의 쿼럼에 대한 미러링 모니터 서버와 같은 항목을 구현해야 합니다. 또한 노드 응답 변경과 같이 WSFC 클러스터의 다른 측면을 고려해야 할 수도 있습니다.
+기존 가용성 그룹에서는 모든 서버가 동일한 WSFC 클러스터에 속해야 하므로 여러 데이터 센터를 확장할 수 있습니다. 다음 그림에서는 데이터 흐름을 포함하여 기존 다중 사이트 가용성 그룹에 대한 아키텍처를 보여 줍니다. 모든 보조 복제본에 트랜잭션을 보내는 주 복제본이 하나만 있습니다. 이 구성은 몇 가지 방식에서 분산 가용성 그룹보다 더 작습니다. 예를 들어 Active Directory(해당하는 경우) 및 WSFC 클러스터의 쿼럼에 대한 미러링 모니터 서버와 같은 항목을 구현해야 합니다. 또한 노드 응답 변경과 같이 WSFC 클러스터의 다른 측면을 고려해야 할 수도 있습니다.
 
 ![기존 다중 사이트 가용성 그룹][4]
 
-분산 가용성 그룹은 여러 데이터 센터에 걸쳐 있는 가용성 그룹에 대해 더 유연한 배포 시나리오를 제공합니다. 이전에 [로그 전달]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)과 같은 기능을 사용한 분산 가용성 그룹도 사용할 수 있습니다. 그러나 기존 가용성 그룹과 달리 분산 가용성 그룹은 트랜잭션 적용을 지연할 수 없습니다. 즉, 데이터를 잘못 업데이트하거나 삭제하는 사용자의 실수가 발생하는 경우 가용성 그룹 또는 분산 가용성 그룹에서 도움을 줄 수 없습니다.
+분산 가용성 그룹은 여러 데이터 센터에 걸쳐 있는 가용성 그룹에 대해 더 유연한 배포 시나리오를 제공합니다. 이전에 재해 복구와 같은 시나리오에 [로그 전달]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)과 같은 기능을 사용한 분산 가용성 그룹도 사용할 수 있습니다. 그러나 로그 전달과 달리 분산 가용성 그룹은 트랜잭션 적용을 지연할 수 없습니다. 즉, 데이터를 잘못 업데이트하거나 삭제하는 사용자의 실수가 발생하는 경우 가용성 그룹 또는 분산 가용성 그룹에서 도움을 줄 수 없습니다.
 
 분산 가용성 그룹은 느슨하게 결합되어 있으며, 이 경우 단일 WSFC 클러스터가 필요하지 않으며 SQL Server에서 유지 관리됩니다. WSFC 클러스터는 개별적으로 유지 관리되며 동기화는 주로 두 개의 가용성 그룹 간에 비동기이므로 다른 사이트에서 재해 복구를 구성하는 것이 더 쉽습니다. 각 가용성 그룹의 주 복제본은 자체의 보조 복제본을 동기화합니다.
 
@@ -222,9 +222,9 @@ Cluster Group                   JC                    Online
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 DENNIS와 JY라는 두 개의 복제본으로 구성되어 있습니다. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
@@ -235,12 +235,12 @@ SQL Server Management Studio에서 대시보드 및 다른 영역에 표시되�
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ and ag.is_distributed = 1
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![분산 가용성 그룹에 대한 성능 정보][13]

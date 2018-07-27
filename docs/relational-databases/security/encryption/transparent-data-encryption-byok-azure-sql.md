@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107241"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982395"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ TDE가 Key Vault의 TDE 보호기를 사용하도록 처음 구성되면, 서버
 - Azure AD(Azure Active Directory) ID를 사용하여 키 자격 증명 모음에 대한 논리 서버 액세스 권한을 부여합니다.  포털 UI를 사용하는 경우 Azure AD ID가 자동으로 생성되며 키 자격 증명 모음 액세스 권한이 서버에 부여됩니다.  PowerShell을 사용하여 BYOK 기반 TDE를 구성하면 Azure AD ID가 생성되어야 하며 완료를 확인해야 합니다. PowerShell을 사용하는 경우 자세한 단계별 지침은 [BYOK 기반 TDE 구성](transparent-data-encryption-byok-azure-sql-configure.md)을 참조하세요.
 
   >[!NOTE]
-  >Azure AD ID가 **실수로 삭제되거나 키 자격 증명 모음의 액세스 정책을 사용하여 서버의 권한이 철회되면** 키 저장소에 대한 서버의 액세스 권한이 손실됩니다.
+  >Azure AD ID가 **실수로 삭제되거나 키 자격 증명 모음의 액세스 정책을 사용하여 서버의 권한이 철회되면** 키 자격 증명 모음에 대한 서버의 액세스 권한이 손실되고 TDE로 암호화된 데이터베이스가 24시간 내에 삭제됩니다.
   >
-  
+
+- VNET 또는 방화벽 없이 Azure Key Vault를 구성합니다.  키 자격 증명 모음에 대한 SQL의 액세스 권한이 손실되면 TDE로 암호화된 데이터베이스는 24시간 내에 삭제됩니다.
 - 모든 암호화 키에 대한 감사 및 보고 사용: Key Vault는 다른 SIEM(보안 정보 및 이벤트 관리) 도구에 쉽게 삽입되는 로그를 제공합니다. OMS(Operations Management Suite) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault)는 이미 통합되어 있는 한 가지 예제 서비스입니다.
 - 암호화된 데이터베이스의 고가용성을 보장하려면 서로 다른 지역에 있는 두 개의 Azure Key Vault로 각 논리 서버를 구성합니다.
 

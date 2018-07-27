@@ -17,12 +17,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e80c79f6d6b56b912aadb8f0ba793d73e5be4934
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d0fd6f3ffe5a30688f24e562e4d536cd3ecd8353
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407635"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082385"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT(SSIS 식)
   숫자 식의 제곱근을 반환합니다.  
@@ -68,7 +68,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  식에서 변수 이름에는 항상 @ 접두사가 포함되어 있어야 합니다.  
+>  식에서 변수 이름에는 항상 \@ 접두사가 포함되어 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

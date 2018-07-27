@@ -17,29 +17,29 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c591d7cb9a2eab7bca51c9829fbff82c37bf58c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011590"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084305"
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  
   
--   열 이름이 @ 기호로 시작하는 경우  
+-   열 이름이 \@ 기호로 시작하는 경우  
   
--   열 이름이 @ 기호로 시작하지 않는 경우  
+-   열 이름이 \@ 기호로 시작하지 않는 경우  
   
--   열 이름이 @ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
+-   열 이름이 \@ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
   
 -   여러 열이 같은 접두사를 공유하는 경우  
   
 -   하나의 열에 다른 이름이 있는 경우  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이 @ 기호로 시작하는 경우  
- 열 이름이 @ 기호로 시작하고 슬래시 기호(/)를 포함하지 않는 경우 해당 열 값을 갖는 `row` 요소의 특성이 만들어집니다. 예를 들어 다음 쿼리는 2개의 열(@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 `row` 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
+## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이 \@ 기호로 시작하는 경우  
+ 열 이름이 \@ 기호로 시작하고 슬래시 기호(/)를 포함하지 않는 경우 해당 열 값을 갖는 `row` 요소의 특성이 만들어집니다. 예를 들어 다음 쿼리는 2개의 열(\@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 `row` 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
   
 ```  
   
@@ -71,8 +71,8 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름이 @ 기호로 시작하지 않는 경우  
- 열 이름이 @ 기호로 시작하지 않고 XPath 노드 테스트 중 하나가 아니며 슬래시 기호(/)를 포함하지 않는 경우 기본적으로 `row` 행 요소의 하위 요소인 XML 요소가 생성됩니다.  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름이 \@ 기호로 시작하지 않는 경우  
+ 열 이름이 \@ 기호로 시작하지 않고 XPath 노드 테스트 중 하나가 아니며 슬래시 기호(/)를 포함하지 않는 경우 기본적으로 `row` 행 요소의 하위 요소인 XML 요소가 생성됩니다.  
   
  다음 쿼리는 결과인 열 이름을 지정합니다. 따라서 `result` 요소 자식이 `row` 요소에 추가됩니다.  
   
@@ -118,8 +118,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>열 이름이 @ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
- 열 이름이 @ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Namen***n*** 이 '\@' 으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>열 이름이 \@ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
+ 열 이름이 \@ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Name***n***이 '\@'으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
   
  예를 들어 다음 쿼리는 이름, 중간 이름 및 성을 포함하는 복잡한 요소 EmpName으로 표현되는 직원 ID와 이름을 반환합니다.  
   
