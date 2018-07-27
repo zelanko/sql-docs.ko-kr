@@ -1,7 +1,7 @@
 ---
-title: sp_refreshsqlmodule (Transact SQL) | Microsoft Docs
+title: sp_refreshsqlmodule (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,17 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261009"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278734"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  현재 데이터베이스에서 지정된 비스키마 바운드 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거에 대한 메타데이터를 업데이트합니다. 기본 개체가 변경되면 매개 변수의 데이터 형식과 같은 이러한 개체의 영구 메타데이터가 최신 상태를 유지하지 못할 수 있습니다.  
+  현재 데이터베이스에서 지정된 비스키마 바운드 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거에 대한 메타데이터를 업데이트합니다. 기본 개체가 변경되면 매개 변수의 데이터 형식과 같은 이러한 개체의 영구 메타데이터가 최신 상태를 유지하지 못할 수 있습니다.
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +61,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name=** ] **'***모듈***'**  
- 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *모듈* 공용 언어 런타임 (CLR) 저장 프로시저 또는 CLR 함수가 될 수 없습니다. *모듈* 스키마 바인딩할 수 없습니다. *모듈* 은 **nvarchar**, 기본값은 없습니다. *모듈* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스에 개체를 참조할 수 있습니다.  
+ [  **@name=** ] **'***module_name***'**  
+ 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 됩니다 **nvarchar**, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
   
- [ **,** @**네임 스페이스** =] **'** \<클래스 > **'**  
- 지정된 모듈의 클래스입니다. 때 *모듈* 이 DDL 트리거인 경우 \<클래스 >가 필요 합니다. *\<클래스 >* 은 **nvarchar**(20). 잘못된 입력:  
+ [ **하십시오** @**네임 스페이스** =] **'** \<클래스 > **'**  
+ 지정된 모듈의 클래스입니다. 때 *module_name* 이 DDL 트리거인 경우 \<클래스 >가 필요 합니다. *\<클래스 >* 됩니다 **nvarchar**(20). 잘못된 입력:  
   
 |||  
 |-|-|  
@@ -75,17 +75,17 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>주의  
- **sp_refreshsqlmodule** 는 개체에는 모듈의 정의 영향을 주는 변경 내용이 있을 때만 적용 됩니다. 그렇지 않으면 모듈을 쿼리하거나 호출할 때 예기치 않은 결과가 발생할 수 있습니다. 뷰를 새로 고치려면 하나를 사용 **sp_refreshsqlmodule** 또는 **sp_refreshview** 동일한 결과입니다.  
+## <a name="remarks"></a>Remarks  
+ **sp_refreshsqlmodule** 해당 정의 영향을 주는 모듈 내부 개체에 변경 될 때 실행 해야 합니다. 그렇지 않으면 모듈을 쿼리하거나 호출할 때 예기치 않은 결과가 발생할 수 있습니다. 뷰를 새로 고치려면 사용할 수 있습니다 **sp_refreshsqlmodule** 하거나 **sp_refreshview** 동일한 결과 사용 하 여 합니다.  
   
- **sp_refreshsqlmodule** 모든 사용 권한, 확장된 속성 또는 개체와 연결 된 SET 옵션에는 영향을 주지 않습니다.  
+ **sp_refreshsqlmodule** 모든 권한, 확장된 속성 또는 개체와 연관 된 SET 옵션에 영향을 주지 않습니다.  
   
  서버 수준 DDL 트리거를 새로 고치려면 아무 데이터베이스 컨텍스트에서 이 저장 프로시저를 실행하세요.  
   
 > [!NOTE]  
 >  실행 하면 개체와 연결 되어 있는 모든 서명이 삭제 됩니다 **sp_refreshsqlmodule**합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모듈에 대한 ALTER 권한 및 개체가 참조하는 CLR 사용자 정의 형식과 XML 스키마 컬렉션에 대한 REFERENCES 권한이 필요합니다. 지정된 모듈이 데이터베이스 수준 DDL 트리거일 경우 현재 데이터베이스에 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다. 지정된 모듈이 서버 수준 DDL 트리거일 경우 CONTROL SERVER 권한이 필요합니다.  
   
  또한 EXECUTE AS 절로 정의되는 모듈의 경우 지정된 보안 주체에 대해 IMPERSONATE 권한이 필요합니다. 일반적으로 모듈이 EXECUTE AS USER로 정의되었으며 보안 주체의 사용자 이름이 모듈이 만들어진 때의 사용자와 다른 사용자로 확인되지 않는 이상 개체를 새로 고쳐도 EXECUTE AS 보안 주체가 변경되지 않습니다.  
@@ -175,8 +175,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_refreshview&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 320d8d0dd434c4453a8004a0237bc9d2cbd9f352
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989275"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216974"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Azure SQL Database 서버 인스턴스 내에서 고유한 데이터베이스의 ID입니다. 사용 하 여 조인 가능 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)합니다.|  
 |버전|sysname|데이터베이스 또는 데이터 웨어하우스에 대 한 서비스 계층: **기본**, **표준**, **Premium** 하거나 **Data Warehouse**합니다.|  
-|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있으면 반환 **ElasticPool**합니다.<br /><br /> 에 **기본적인** 계층을 반환 **기본**입니다.<br /><br /> **단일 데이터베이스를 standard 서비스 계층에서** 다음 중 하나를 반환 합니다: S0, S1, S2 또는 S3입니다.<br /><br /> **프리미엄 계층에서 단일 데이터베이스** 다음 반환: P1, P2, P4, P6/P3 또는 P11 합니다.<br /><br /> **SQL Data Warehouse** DW10000c 통해 DW100를 반환 합니다.|  
+|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있으면 반환 **ElasticPool**합니다.<br /><br /> 에 **기본적인** 계층을 반환 **기본**입니다.<br /><br /> **단일 데이터베이스를 standard 서비스 계층에서** 다음 중 하나를 반환 합니다: S0, S1, S2, S3, S4, S6, S7, S9 또는 S12 합니다.<br /><br /> **프리미엄 계층에서 단일 데이터베이스** 다음 반환: P1, P2, P4, P6, P11 또는 P15입니다.<br /><br /> **SQL Data Warehouse** DW10000c 통해 DW100를 반환 합니다.|  
 |elastic_pool_name|sysname|이름을 합니다 [탄력적 풀](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) 에 속하는 데이터베이스입니다. 반환 **NULL** 데이터베이스가 단일 데이터베이스 또는 데이터 warehoue 있는 경우.|  
   
 ## <a name="permissions"></a>사용 권한  

@@ -43,6 +43,9 @@
    GO
    ```
 
+> [!TIP]
+> Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
+
 ### <a name="insert-data"></a>데이터 삽입
 
 다음으로 새 테이블 `Inventory`를 만들고 두 개의 새 행을 삽입합니다.
@@ -95,7 +98,21 @@
 QUIT
 ```
 
-## <a name="connect-from-windows"></a>Windows에서 연결
+## <a name="performance-best-practices"></a>성능 모범 사례
+
+SQL Server on Linux를 설치한 후 프로덕션 시나리오에 대 한 성능 향상을 위해 Linux 및 SQL Server를 구성 하기 위한 모범 사례를 검토 합니다. 자세한 내용은 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](../linux/sql-server-linux-performance-best-practices.md)합니다.
+
+## <a name="cross-platform-data-tools"></a>플랫폼 간 데이터 도구
+
+외에 **sqlcmd**, SQL Server를 관리 하려면 다음과 같은 플랫폼 간 도구를 사용할 수 있습니다.
+
+|||
+|---|---|
+| [SQL Server Operations Studio](../sql-operations-studio/index.md) | 크로스 플랫폼 GUI 데이터베이스 관리 유틸리티입니다. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 확장을 사용 하 여 TRANSACT-SQL 문을 실행 하는 크로스 플랫폼 GUI 코드 편집기입니다. |
+
+## <a name="connecting-from-windows"></a>Windows에서 연결
 
 Windows의 SQL Server 도구는 원격 SQL Server 인스턴스에 연결할 때와 동일하게 Linux의 SQL Server 인스턴스에 연결합니다.
 
@@ -103,11 +120,11 @@ Linux 컴퓨터에 연결할 수 있는 Windows 컴퓨터가 있는 경우 이 �
 
 Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구는 다음을 참조하세요.
 
-- [SSMS(SQL Server Management Studio)](../linux/sql-server-linux-develop-use-ssms.md)
+- [SSMS(SQL Server Management Studio)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SSDT(SQL Server Data Tools)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="other-deployment-scenarios"></a>다른 배포 시나리오
 
 다른 설치 시나리오의 경우 다음 리소스를 참조하세요.
 
@@ -118,21 +135,10 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 | [무인 설치](../linux/sql-server-linux-setup.md#unattended) | 확인 메시지를 표시하지 않고 설치를 스크립팅하는 방법을 알아봅니다. |
 | [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
 
-연결 하 고 SQL Server를 관리 하는 다른 방법의 탐색 하려면 다음 도구를 살펴봅니다.
-
-|||
-|---|---|
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 확장명이 mssql TRANSACT-SQL 문을 실행 하는 플랫폼 간 GUI 코드 편집기. |
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | 플랫폼 간 GUI 데이터베이스 관리 유틸리티입니다. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
-| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | 에 연결할 수 있고 Linux에서 SQL Server 인스턴스를 관리 하는 Windows 기반 GUI 데이터베이스 관리 유틸리티입니다. |
-
-Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
-
 > [!TIP]
-> 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](../linux/sql-server-linux-faq.md)합니다.
+> 자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](../linux/sql-server-linux-faq.md)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [Linux에서 SQL Server를 위한 자습서 탐색](../linux/sql-server-linux-migrate-restore-database.md)
+> [Linux에서 SQL Server에 대 한 자습서를 탐색](../linux/sql-server-linux-migrate-restore-database.md)

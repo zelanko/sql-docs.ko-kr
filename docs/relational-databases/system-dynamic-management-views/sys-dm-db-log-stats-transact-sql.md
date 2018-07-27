@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061451"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278954"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -75,6 +75,9 @@ ms.locfileid: "38061451"
 |log_recovery_size_mb   |**float**  |   로그 크기 (mb) 로그 복구 이후 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)합니다.|  
 |recovery_vlf_count |**bigint** |   총 수 [가상 로그 파일 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 를 장애 조치 또는 서버 재시작 발생 한 경우 복구할 수 있습니다. |  
 
+
+## <a name="remarks"></a>Remarks
+실행 하는 경우 `sys.dm_db_log_stats` 보조 복제본으로 가용성 그룹에 참여 하는 데이터베이스에 대해 위에서 설명 하는 필드의 하위 집합만 반환 됩니다.  현재만 `database_id`하십시오 `recovery_model`, 및 `log_backup_time` 보조 데이터베이스에 대해 실행 하는 경우 반환 됩니다.   
 
 ## <a name="permissions"></a>사용 권한  
 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한입니다.   

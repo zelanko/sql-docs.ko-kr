@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (Transact SQL) | Microsoft Docs
+title: xp_sscanf (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257637"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103861"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,17 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>인수  
- **문자열**  
+ **string**  
  인수 값을 읽을 문자열입니다.  
   
  OUTPUT  
- 를 지정 하는 경우의 값을 넣습니다 *인수* 에서 출력 매개 변수입니다.  
+ 값 인수를 지정 하면 *인수* 출력 매개 변수에서입니다.  
   
  *format*  
- 서식이 지정 된 문자열은 C 언어에 지원 되는 기능 비슷합니다 **sscanf** 함수입니다. 현재 % 포맷 인수만 지원됩니다.  
+ 서식이 지정 된 문자열 C 언어에 지원 되는 비슷합니다 **sscanf** 함수입니다. 현재 % 포맷 인수만 지원됩니다.  
   
  *argument*  
- 이 **varchar** 변수가 해당 값으로 설정 *형식* 인수입니다.  
+ **varchar** 변수가 해당 값으로 설정 *형식* 인수입니다.  
   
  *n*  
  최대 50개의 인수를 지정할 수 있음을 나타내는 자리 표시자입니다.  
@@ -67,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -87,9 +86,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [일반 확장 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [일반 확장 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sprintf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

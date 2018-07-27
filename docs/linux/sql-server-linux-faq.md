@@ -4,19 +4,19 @@ description: 이 문서에서는 Linux에서 실행 되는 SQL Server에 대 한
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102231"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268811"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -34,9 +34,13 @@ ms.locfileid: "39102231"
 
    SQL Server는 테스트 하 고 앞에 나열 된 배포에 대 한 Linux 지원 합니다. 다른 Linux 배포판 밀접 한 관련이 및 SQL Server를 실행 하는 일을 할 수 있습니다 (예를 들어 CentOS는 밀접 하 Red Hat Enterprise Server). 지원 되지 않는 운영 체제에서 SQL Server를 설치 하려는 경우 살펴보시기 하지만 **지원 정책** 섹션을 [Microsoft SQL Server에 대 한 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) 지원 이해 영향을 줍니다. 일부 커뮤니티에서 유지 관리 되며 Linux 배포판에 정식 기본 운영 체제 문제 이면 지원을 받을 수 없는 note도 합니다.
 
-1. **Linux에서 지원 되는 SQL Server 기능?**
+1. **Linux에서 라이선스 작업 어떻게 하나요?**
 
-   목록은 지원 되는 기능 및 알려진된 문제에 대해서는 [릴리스](sql-server-linux-release-notes.md)합니다.
+   SQL Server는 Windows 및 Linux 모두에 대해 동일한 방식으로 허가 되어 있습니다. 사실, SQL Server의 라이선스 수 및 다음 원하는 플랫폼에서 해당 라이선스를 사용 하도록 선택할 수 있습니다. 자세한 내용은 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
+
+1. **Windows에서와 같은 Linux의 SQL Server를 입니까?**
+
+   SQL Server 용 데이터베이스 엔진의 핵심 이므로 Windows에서 Linux에서 동일 합니다. 그러나 일부 기능은 현재 사용할 수 없습니다 linux. Linux에서 지원 되지 않는 기능의 목록을 보려면 참조는 [기능 및 서비스를 지원 되지 않는](sql-server-linux-release-notes.md#Unsupported)합니다. 또한 검토 해야 합니다 [알려진 문제](sql-server-linux-release-notes.md#known-issues)합니다. 이러한 목록에 지정 되지 않으면 다른 SQL Server 기능 및 서비스는 Linux에서 지원 됩니다.
 
 1. **SQL Server에 대 한 지원 정책은 무엇 인가요?**
 

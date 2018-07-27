@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a2b725caa90ef277394637e4c65cfe5f241c1cc2
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102431"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268751"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 
@@ -204,6 +204,10 @@ Linux 컴퓨터에 없으면 액세스에 사용 된 온라인 리포지토리�
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
+## <a name="licensing-and-pricing"></a>라이선스 및 가격
+
+SQL Server 라이선스는 Linux 및 Windows에 대해 동일 합니다. SQL Server에 대 한 자세한 정보에 대 한 라이선스 및 가격 정보 참조 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
+
 ## <a name="optional-sql-server-features"></a>선택적 SQL Server 기능
 
 설치가 끝나면 설치 하거나 수도 선택적 SQL Server 기능을 사용 하도록 설정 합니다.
@@ -211,7 +215,7 @@ Linux 컴퓨터에 없으면 액세스에 사용 된 온라인 리포지토리�
 - [SQL Server 명령줄 도구](sql-server-linux-setup-tools.md)
 - [SQL Server 에이전트](sql-server-linux-setup-sql-agent.md)
 - [SQL Server 전체 텍스트 검색](sql-server-linux-setup-full-text-search.md)
-- [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
+- [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
