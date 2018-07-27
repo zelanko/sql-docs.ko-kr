@@ -1,6 +1,0 @@
-# [SQL Server 응용 프로그램용 OLE DB 드라이버 만들기](creating-a-oledb-driver-for-sql-server-application.md)
-# [OLE DB 속성 정보](about-ole-db-properties.md)
-# [데이터 원본에 대한 연결 설정](establishing-a-connection-to-a-data-source.md)
-# [명령 실행](executing-a-command.md)
-# [결과 처리](processing-results.md)
-# [SQL Server용 OLE DB 드라이버에서 OLE DB와 함께 OUTPUT 절 사용](using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)

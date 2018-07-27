@@ -1,6 +1,0 @@
-# [ODBC 데이터 원본 관리자](odbc-data-source-administrator.md)
-# [드라이버 보기](viewing-drivers.md)
-# [데이터 원본 관리](managing-data-sources.md)
-# [추적 옵션 설정](setting-tracing-options.md)
-# [드라이버 및 데이터 원본 정보](about-drivers-and-data-sources.md)
-# [ODBC 연결 풀링 옵션 설정](setting-odbc-connection-pooling-options.md)

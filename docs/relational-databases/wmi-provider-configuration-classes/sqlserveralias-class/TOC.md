@@ -1,5 +1,0 @@
-# [AliasName 속성(SqlServerAlias 클래스)](aliasname-property-sqlserveralias-class.md)
-# [ConnectionString 속성(SqlServerAlias 클래스)](connectionstring-property-sqlserveralias-class.md)
-# [ProtocolName 속성(SqlServerAlias 클래스)](protocolname-property-sqlserveralias-class.md)
-# [ServerName 속성(SqlServerAlias 클래스)](servername-property-sqlserveralias-class.md)
-# [SqlServerAlias 클래스](sqlserveralias-class.md)

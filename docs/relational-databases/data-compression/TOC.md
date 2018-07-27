@@ -1,6 +1,0 @@
-# [개요](data-compression.md)  
-# [행 압축 구현](row-compression-implementation.md)  
-# [페이지 압축 구현](page-compression-implementation.md)  
-# [유니코드 압축 구현](unicode-compression-implementation.md)  
-# [테이블 또는 인덱스에 압축 사용](enable-compression-on-a-table-or-index.md)  
-# [테이블 또는 인덱스에서 압축 해제](disable-compression-on-a-table-or-index.md)  

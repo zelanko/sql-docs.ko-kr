@@ -1,7 +1,0 @@
-# [저장 프로시저의 쿼리 컨텍스트 액세스](accessing-query-context-in-stored-procedures.md)
-# [저장 프로시저 호출](calling-stored-procedures.md)
-# [저장 프로시저 만들기](creating-stored-procedures.md)
-# [저장 프로시저 디버깅](debugging-stored-procedures.md)
-# [저장 프로시저 정의](defining-stored-procedures.md)
-# [저장 프로시저 디자인](designing-stored-procedures.md)
-# [저장 프로시저의 보안 설정](setting-security-for-stored-procedures.md)

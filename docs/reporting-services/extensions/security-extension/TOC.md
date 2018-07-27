@@ -1,5 +1,0 @@
-# [Reporting Services의 인증](authentication-in-reporting-services.md)
-# [Reporting Services의 권한 부여](authorization-in-reporting-services.md)
-# [사용자 지정 보안 확장 프로그램 설치 방법](how-to-install-custom-security-extensions.md)
-# [보안 확장 프로그램 구현](implementing-a-security-extension.md)
-# [보안 확장 프로그램 개요](security-extensions-overview.md)

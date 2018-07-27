@@ -1,5 +1,0 @@
-# [분할된 테이블 및 인덱스](partitioned-tables-and-indexes.md)
-## [분할된 테이블 및 인덱스 만들기](create-partitioned-tables-and-indexes.md)
-## [파티션 함수 수정](modify-a-partition-function.md)
-## [파티션 구성표 수정](modify-a-partition-scheme.md)
-## [파티션 관리 마법사 F1 도움말](manage-partition-wizard-f1-help.md)

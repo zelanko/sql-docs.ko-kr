@@ -1,7 +1,0 @@
-# [결과 처리(ODBC)](processing-results-odbc.md)
-# [저장소 할당](assigning-storage.md)
-# [문자 데이터 자동 변환](autotranslation-of-character-data.md)
-# [데이터 형식 사용](data-type-usage.md)
-# [결과 집합의 특징 확인(ODBC)](determining-the-characteristics-of-a-result-set-odbc.md)
-# [결과 데이터 페치](fetching-result-data.md)
-# [데이터 형식 매핑(ODBC)](mapping-data-types-odbc.md)

@@ -1,5 +1,0 @@
-# [.NET Framework의 SQL Server 데이터 형식](sql-server-data-types-in-the-net-framework.md)
-# [데이터 정렬 및 CLR 통합 데이터 형식](collation-and-clr-integration-data-types.md)
-# [CLR의 LOB(Large Object) 매개 변수 처리](handling-large-object-lob-parameters-in-the-clr.md)
-# [CLR 매개 변수 데이터 매핑](mapping-clr-parameter-data.md)
-# [Null 허용 여부 및 3개의 값 논리 비교](nullability-and-three-value-logic-comparisons.md)

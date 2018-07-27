@@ -1,7 +1,0 @@
-# [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](creating-a-custom-report-item-design-time-component.md)
-# [사용자 지정 보고서 항목 런타임 구성 요소 만들기](creating-a-custom-report-item-run-time-component.md)
-# [사용자 지정 보고서 항목 아키텍처](custom-report-item-architecture.md)
-# [사용자 지정 보고서 항목 클래스 라이브러리](custom-report-item-class-libraries.md)
-# [사용자 지정 보고서 항목 구현 요구 사항](custom-report-item-implementation-requirements.md)
-# [사용자 지정 보고서 항목](custom-report-items.md)
-# [방법: 사용자 지정 보고서 항목 배포](how-to-deploy-a-custom-report-item.md)

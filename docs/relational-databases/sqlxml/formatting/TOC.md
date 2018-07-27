@@ -1,5 +1,0 @@
-# [클라이언트 쪽 및 서버 쪽 서식 지정(SQLXML 4.0)](client-side-and-server-side-formatting-sqlxml-4-0.md)
-# [클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처(SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
-# [클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정(SQLXML 4.0)](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)
-# [클라이언트 쪽 XML 서식 지정(SQLXML 4.0)](client-side-xml-formatting-sqlxml-4-0.md)
-# [서버 쪽 XML 서식 지정(SQLXML 4.0)](server-side-xml-formatting-sqlxml-4-0.md)

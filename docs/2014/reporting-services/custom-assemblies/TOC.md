@@ -1,8 +1,0 @@
-# [보고서에서 사용자 지정 어셈블리 사용](using-custom-assemblies-with-reports.md)
-## [RDL 파일에서 어셈블리 참조](referencing-assemblies-in-an-rdl-file.md)
-## [사용자 지정 어셈블리 배포](deploying-a-custom-assembly.md)
-## [강력한 이름의 사용자 지정 어셈블리 사용](using-strong-named-custom-assemblies.md)
-## [사용자 지정 어셈블리에서 사용 권한 어설션](asserting-permissions-in-custom-assemblies.md)
-## [식을 통해 사용자 지정 어셈블리 액세스](accessing-custom-assemblies-through-expressions.md)
-## [사용자 지정 어셈블리 개체 초기화](initializing-custom-assembly-objects.md)
-## [방법: 사용자 지정 어셈블리 디버깅](how-to-debug-custom-assemblies.md)

@@ -1,7 +1,0 @@
-# [개요](statistics.md)  
-## [만들기](create-statistics.md)  
-## [수정](modify-statistics.md)  
-## [삭제](delete-statistics.md)  
-## [속성 보기](view-statistics-properties.md)  
-## [이름 바꾸기](rename-statistics.md)  
-## [업데이트](update-statistics.md)  

@@ -1,1 +1,0 @@
-# [AlwaysOn 환경에 Master Data Services 설치](installing-mds-in-an-alwayson-group-environment.md)

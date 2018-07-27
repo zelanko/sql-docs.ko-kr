@@ -1,8 +1,0 @@
-# [ASSL 참조](analysis-services-scripting-language-assl-for-xmla.md)
-# [Analysis Services Scripting Language XML 요소 계층(ASSL)](analysis-services-scripting-language-xml-element-hierarchy-assl.md)
-# [Analysis Services Scripting Language XML 데이터 형식 계층 구조(ASSL)](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)
-# [Analysis Services Scripting Language XML 요소(ASSL)](analysis-services-scripting-language-xml-elements-assl.md)
-## [개체 +](objects/objects-assl.md)
-## [컬렉션 +](collections/collections-assl.md)
-## [속성 +](properties/properties-assl.md)
-# [Analysis Services Scripting Language XML 데이터 형식(ASSL)](data-type/analysis-services-scripting-language-xml-data-types-assl.md)

@@ -1,5 +1,0 @@
-# [DBSCHEMA_CATALOGS 행 집합](dbschema-catalogs-rowset.md)
-# [DBSCHEMA_COLUMNS 행 집합](dbschema-columns-rowset.md)
-# [DBSCHEMA_PROVIDER_TYPES 행 집합](dbschema-provider-types-rowset.md)
-# [DBSCHEMA_TABLES 행 집합](dbschema-tables-rowset.md)
-# [OLE DB 스키마 행 집합](ole-db-schema-rowsets.md)

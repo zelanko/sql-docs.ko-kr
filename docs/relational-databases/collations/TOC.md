@@ -1,7 +1,0 @@
-# [개요](collation-and-unicode-support.md)  
-# [서버 데이터 정렬 설정 또는 변경](set-or-change-the-server-collation.md)  
-# [데이터베이스 데이터 정렬 설정 또는 변경](set-or-change-the-database-collation.md)  
-# [열 데이터 정렬 설정 또는 변경](set-or-change-the-column-collation.md)  
-# [데이터 정렬 정보 보기](view-collation-information.md)  
-# [국가별 Transact-SQL 문 작성](write-international-transact-sql-statements.md)  
-# [세션 언어 설정](set-a-session-language.md)  

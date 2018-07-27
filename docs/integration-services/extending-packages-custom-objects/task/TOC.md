@@ -1,7 +1,0 @@
-# [사용자 지정 태스크 개발](developing-a-custom-task.md)
-# [사용자 지정 태스크 만들기](creating-a-custom-task.md)
-# [사용자 지정 태스크 코딩](coding-a-custom-task.md)
-# [사용자 지정 태스크에서 데이터 원본에 연결](connecting-to-data-sources-in-a-custom-task.md)
-# [사용자 지정 태스크에서 이벤트 발생 및 정의](raising-and-defining-events-in-a-custom-task.md)
-# [사용자 지정 태스크에 디버깅 지원 추가](adding-support-for-debugging-in-a-custom-task.md)
-# [사용자 지정 태스크의 사용자 인터페이스 개발](developing-a-user-interface-for-a-custom-task.md)
