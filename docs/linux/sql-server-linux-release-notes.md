@@ -4,20 +4,20 @@ description: 이 항목에서는 Linux에서 동작하는 SQL Server 2017에 대
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/20/2018
-ms.topic: article
+ms.date: 07/18/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 85fb0060a7143aa77cd5495a6140a33d5ac881cc
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
-ms.translationtype: HT
+ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854365"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146763"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
@@ -47,6 +47,7 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 릴리스     | 버전       | 릴리스 날짜 |
 |-------------|---------------|--------------|
+| [CU9까지 포함](#CU9) | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
@@ -68,9 +69,23 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트를 사용 하도록 설정](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU9"></a> Cu9까지 포함 합니다 (2018 년 7 월)
+
+이 SQL Server 2017 누적 업데이트 9(cu9) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3030.27 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265)합니다.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 Debian 및 RPM 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3030.27-1 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3030.27-1 | [mssql server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.3030.27-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[높은 가용성의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[전체 텍스트 검색의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU8"></a> CU8 (2018 년 6 월)
 
-이 SQL Server 2017 누적 업데이트 8 (CU8) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3029.16 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789)합니다.
+이 SQL Server 2017 누적 업데이트 8 (CU8) 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3029.16 됩니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하세요 [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363)합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -222,78 +237,78 @@ sudo systemctl start mssql-server
 
 ## <a name="Unsupported"></a> 지원 되지 않는 기능 및 서비스
 
-다음 기능 및 서비스에서 사용할 수 없는 Linux GA 릴리스 시입니다. 이 작업을 수행 하는 방법은 배포와 같은 grub 부팅 로더를 Linux 배포에 따라 달라 집니다.
+다음 기능 및 서비스에서 사용할 수 없는 Linux GA 릴리스 시입니다. 이러한 기능의 지원 시간이 지남에 따라 점점 더 많이 사용 됩니다.
 
-| 영역 | 사용 하지 않도록 설정할 IPv6 않으려면 비활성화할 수 있습니다 계속 설정 하 여  에  구성 (예: ). |
+| 영역 | 지원 되지 않는 기능 또는 서비스 |
 |-----|-----|
-| **이 여전히 시스템의 네트워크 어댑터 IPv6 주소를 가져오는 없지만 sqlservr 기능만 작동 하도록 허용 합니다.** | 트랜잭션 복제 |
+| **데이터베이스 엔진** | 트랜잭션 복제 |
 | &nbsp; | 병합 복제 |
-| &nbsp; | 네트워크 파일 시스템 (NFS) |
+| &nbsp; | 스트레치 DB |
 | &nbsp; | Polybase |
-| &nbsp; | 사용 하는 경우 네트워크 파일 시스템 (NFS) 프로덕션 환경에서 원격 공유 다음 지원 요구 사항을 note 합니다. |
-| &nbsp; | 사용 하 여 NFS 버전 4.2 이상합니다. |
-| &nbsp; | 이전 버전의 NFS fallocate 및 스파스 파일 만들기, 최신 파일 시스템에 공통적으로 적용 등 필수 기능을 지원 하지 않습니다. |
-| &nbsp; | 만 찾습니다 합니다 /var/opt/mssql NFS 탑재 디렉터리입니다. |
-| &nbsp; | SQL Server 시스템 이진 파일을 같은 다른 파일을 사용할 수 없습니다. |
+| &nbsp; | 타사 연결을 사용 하 여 분산된 쿼리 |
+| &nbsp; | SQL Server 이외의 데이터 원본에 연결 된 서버 |
+| &nbsp; | 시스템 확장 저장된 프로시저 (XP_CMDSHELL, 등) |
+| &nbsp; | Filetable에서 FILESTREAM |
+| &nbsp; | CLR 어셈블리 EXTERNAL_ACCESS 또는 UNSAFE 권한 설정 |
 | &nbsp; | Buffer Pool Extension |
-| **SQL Server 에이전트** |  된 NFS 클라이언트 원격 공유를 탑재 하는 경우 'nolock' 옵션을 사용 하는 것을 확인 합니다. |
+| **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, 큐 판독기, SSIS, SSAS, SSRS |
 | &nbsp; | , |
 | &nbsp; | 로그 판독기 에이전트 |
 | &nbsp; | 변경 데이터 캡처 |
 | &nbsp; | Managed Backup |
 | **고가용성** | 데이터베이스 미러링  |
 | **보안** | 확장 가능 키 관리 |
-| &nbsp; | 사용자 로캘이 영어가 아니므로 (en_us) 설치 하는 동안, bash 세션/터미널에서 utf-8 인코딩을 사용 해야 합니다. | 
-| &nbsp; | ASCII 인코딩을 사용 하는 경우 다음과 유사한 오류가 표시 될 수 있습니다. | 
-| &nbsp; | U t F-8 인코딩를 사용할 수 없는 경우 선택한 언어에 따라 지정 MSSQL_LCID 환경 변수를 사용 하 여 설치 프로그램을 실행 합니다. | 
+| &nbsp; | 연결 된 서버에 대 한 AD 인증 | 
+| &nbsp; | 가용성 그룹 (Ag)에 대 한 AD 인증 | 
+| &nbsp; | AD 타사 도구 (Centrify, Vintela, Powerbroker) | 
 | **Services** | SQL Server Browser |
-| &nbsp; | 경우 mssql-conf를를 실행 하 고 확장 문자가 잘못 된 SQL Server의 영어 이외의 설치를 수행 하는 지역화 된 텍스트를 "구성 SQL Server..." 후 표시 됩니다. |
+| &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | 데이터베이스 엔진 서비스 |
 | &nbsp; | Master  Data  Services |
-| &nbsp; | 비 라틴 기반된 설치에 대 한 문장 누락 될 수 있습니다 또는 완전히 합니다. |
+| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## <a name="known-issues"></a>알려진 문제
 
-누락 된 문장에는 다음의 지역화 된 문자열 표시 됩니다: "라이선싱 PID가 성공적으로 처리 합니다.
+다음 섹션에서는 Linux의 SQL Server 2017의 GA (일반 공급) 릴리스를 사용 하 여 알려진된 문제를 설명합니다.
 
 #### <a name="general"></a>일반
 
-- 새 버전은 [이름을 버전] "입니다. 
+- SQL Server 2017의 GA 릴리스로 업그레이드 이상 CTP 2.1 에서만에서 지원 됩니다. 
 
-- 이 문자열은 정보 제공만을 위한 출력 하 고 SQL Server 누적 업데이트는이 모든 언어에 대 한 해결 합니다. 
+- 여기서 SQL Server는 15 자가 하 여야 하는 요구 사항 설치 또는 호스트 이름의 길이입니다. 
 
-    - **어떤 방식으로 SQL Server의 성공적인 설치에는 영향을 주지 않습니다.
+    - **해상도**: / / 호스트 이름에서 이름을 것 15 자 이하의로 변경 합니다.
 
-- 일부 필터는 Office 문서에 대 한 필터를 포함 하 여이 릴리스에서 사용할 수 있습니다.
+- 수동으로 시간에 시스템 시간을 이전 버전과 설정 하면 SQL Server 내에서 내부 시스템에 업데이트를 중지 하려면 SQL Server.
 
-    - **지원 되는 필터의 목록을 참조 하세요 **Linux에서 SQL Server 전체 텍스트 검색 설치**합니다.
+    - **해상도**: SQL Server를 다시 시작 합니다.
 
-- 합니다 mssql server는 패키지가이 릴리스에서 SUSE에 지원 되지 않습니다.
+- 단일 인스턴스 설치만 지원 됩니다.
 
-    - **Ubuntu 및 Red Hat Enterprise Linux (RHEL) 현재 지원 됩니다. 
+    - **해상도**: 지정된 된 호스트에서 둘 이상의 인스턴스가 있는 하려는 경우 Vm을 사용 하 여 고려 또는 Docker 컨테이너입니다. 
 
-- 이상 Linux CTP 2.1 새로 고침에서 SSIS를 사용 하 여 SSIS 패키지는 Linux에서 ODBC 연결을 사용할 수 있습니다.
+- SQL Server 구성 관리자는 Linux의 SQL Server에 연결할 수 없습니다.
 
-- 이 기능은 SQL Server 및 MySQL ODBC 드라이버를 사용 하 여 테스트 되었습니다 있지만 ODBC 사양을 따르는 모든 유니코드 ODBC 드라이버와 함께 사용 하 합니다.
+- 기본 언어를 **sa** 로그인 영어입니다.
 
-    - **디자인 타임에 ODBC 데이터에 연결할 DSN 또는 연결 문자열을 제공할 수 있습니다. Windows 인증을 사용할 수도 있습니다.
+    - **확인**:의 언어를 변경 합니다 **sa** 사용 하 여 로그인 합니다 **ALTER LOGIN** 문.
 
 #### <a name="databases"></a>데이터베이스
 
-- 자세한 내용은 참조는 블로그 Linux의 ODBC 지원 발표 게시물합니다. Linux에서 SSIS 패키지를 실행할 때 다음과 같은 기능이이 릴리스에서 지원 되지 않습니다.
+- Mssql conf 유틸리티를 사용 하 여 master 데이터베이스를 이동할 수 없습니다. Mssql 구성이 사용 하 여 다른 시스템 데이터베이스를 이동할 수 있습니다.
 
-- SSIS 카탈로그 데이터베이스
+- Windows의 SQL Server에서 백업한 데이터베이스를 복원할 때 사용 해야 합니다 **WITH MOVE** Transact SQL 문 절.
 
-- SQL 에이전트에서 예약 된 패키지 실행 타사 구성 요소 SSIS Scale Out
+- Linux에서 실행 되는 SQL Server에서 Microsoft Distributed Transaction Coordinator 서비스를 필요로 하는 분산 트랜잭션 지원 되지 않습니다. DTC 만들어져야 하므로, 있지 않으면 SQL Server 연결 된 서버에 SQL Server가 지원 됩니다. 자세한 내용은 [Linux에서 실행 되는 SQL Server에서 Microsoft Distributed Transaction Coordinator 서비스를 필요로 하는 분산 트랜잭션 지원 되지 않습니다](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)합니다.
 
-- Azure Feature Pack for SSIS Hadoop 및 HDFS 지원
+- 전송 계층 보안 (TLS)에 대 한 특정 알고리즘 (나열한) Linux의 SQL Server를 사용 하 여 제대로 작동 하지 않습니다. 그러면 연결 실패의 SQL Server에 연결 하려고 할 때 뿐만 아니라 고가용성 그룹의 복제본 간의 연결을 설정 하는 문제입니다.
 
-   - **현재 지원 되지 않거나 제한 사항과 함께 지원 되는 기본 제공 SSIS 구성 요소 목록을 참조 하세요 **제한 사항 및 Linux에서 SSIS에 대 한 알려진된 문제**합니다.
+   - **해상도**: 수정 된 **mssql.conf** 문제가 있는 암호 그룹을 사용 하지 않으려면 다음을 수행 하 여 Linux의 SQL Server에 대 한 구성 스크립트:
 
-      1. Linux에서 SSIS에 대 한 자세한 내용은 다음 문서를 참조 합니다.
+      1. /Var/opt/mssql/mssql.conf에 다음을 추가 합니다.
 
       ```
       [network]
@@ -303,29 +318,29 @@ sudo systemctl start mssql-server
          >[!NOTE]
          >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
-      1. Linux에 대 한 SSIS 지원 블로그 게시물 발표합니다.
+      1. 다음 명령을 사용 하 여 SQL Server를 다시 시작 합니다.
 
       ```bash
       sudo systemctl restart mssql-server
       ```
 
-- Linux의 SQL Server Integration Services (SSIS)를 설치 합니다. < a = "ssms" > SQL Server Management Studio (SSMS)
+- Linux의 SQL Server 2017에서 메모리 내 OLTP를 사용 하는 Windows에서 SQL Server 2014 데이터베이스를 복원할 수 없습니다. 메모리 내 OLTP를 사용 하는 SQL Server 2014 데이터베이스를 복원 하려면 먼저 업그레이드 데이터베이스를 SQL Server 2016 또는 Windows의 SQL Server 2017 이동 하기 전에 SQL Server Linux에서 백업/복원 또는 분리/연결을 통해.
 
-- Linux의 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 제한 사항이 적용 됩니다.
+- 사용자 권한 **ADMINISTER BULK OPERATIONS** 지금은 Linux에서 지원 되지 않습니다.
 
 #### <a name="networking"></a>네트워킹
 
-유지 관리 계획을 사용 하는 것이 없습니다.
+다음 조건을 모두 충족 될 경우에 연결 된 서버 또는 가용성 그룹과 같은 sqlservr 프로세스에서 아웃 바운드 TCP 연결을 포함 하는 기능은 작동 하지 않을 수 있습니다.
 
-1. 관리 데이터 웨어하우스 (MDW) 및 SSMS에서 데이터 수집기가 지원 되지 않습니다.
+1. 대상 서버 호스트 이름과 IP 주소가 아니라로 지정 됩니다.
 
-1. Windows 인증 또는 Windows 이벤트 로그 옵션 있는 SSMS UI 구성 요소는 Linux와 함께 작동 하지 않습니다. SQL 로그인 등의 다른 옵션을 사용 하 여 이러한 기능을 계속 사용할 수 있습니다.
+1. 원본 인스턴스에 있는 커널을 사용 하지 않도록 설정 하는 IPv6에 있습니다. 시스템 IPv6 커널에서 사용 하도록 설정한 경우를 확인 하려면 다음 모든 테스트가 통과 해야 합니다.
 
-   - `cat /proc/cmdline` 유지 하려면 로그 파일의 수를 수정할 수 없습니다. 시작 하려면 다음 빠른 시작을 참조 하세요.
-   - Red Hat Enterprise Linux 설치
-   - SUSE Linux Enterprise Server에 설치
+   - `cat /proc/cmdline` 현재 커널 부팅 명령줄에 인쇄 됩니다. 출력 없어야 `ipv6.disable=1`합니다.
+   - / Proc/sys/net/i p v 6/디렉터리가 있어야 합니다.
+   - 호출 하는 C 프로그램 `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` 성공-syscall는 fd를 반환 해야 합니다! =-1 및 EAFNOSUPPORT 실패 하지 않습니다.
 
-Docker에서 실행 자주 묻는 질문에 답변에 대 한 참조를 의 SQL Server Linux FAQ합니다. 가용성 그룹에 대 한는 `ALTER AVAILABILITY GROUP JOIN` 다운로드 구성 제한 시간 오류를 5 분 후에 보조 데이터베이스에서 DDL는 실패 합니다.
+정확한 오류는 기능에 따라 달라 집니다. 연결 된 서버에 대 한이 로그인 제한 시간 오류로 매니페스트 합니다. 가용성 그룹에 대 한는 `ALTER AVAILABILITY GROUP JOIN` 다운로드 구성 제한 시간 오류를 5 분 후에 보조 데이터베이스에서 DDL는 실패 합니다.
 
 이 문제를 해결 하려면 다음 중 하나를 수행 합니다.
 

@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) 다운로드 및 설치 | Microsoft Docs
 description: Microsoft SQL Operations Studio (preview) 를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
 ms.custom: tools|sos
-ms.date: 06/20/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,24 +13,24 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 421b22fd1489561ff04a69e23ecac15d1d52be5a
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: 1cd69a0dbc2399c4b16a656d20731e4548739505
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270994"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146823"
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (preview) 다운로드 및 설치
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
-최신 릴리스를 설치 및 다운로드는 *년 6 월 공개 미리 보기*:
+다운로드 하 고 최신 릴리스를 설치 합니다 *월 공개 미리 보기*:
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=875602)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=875603)|2018 년 6 월 20, |0.30.6|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=875604)|2018 년 6 월 20, |0.30.6|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=875607)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=875606)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)|2018 년 6 월 20, |0.30.6|
+|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=2005949)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2005950)|2018 년 7 월 19 일 |0.31.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2005959)|2018 년 7 월 19 일 |0.31.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2006084)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2006083)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)|2018 년 7 월 19 일 |0.31.4|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
@@ -40,20 +40,20 @@ ms.locfileid: "36270994"
 
 **설치 관리자**
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=875602)를 다운로드한 다음 실행합니다.
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2005949)를 다운로드한 다음 실행합니다.
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 
 **.zip 파일**
 
-1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=875603)을 다운로드합니다.
+1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2005950)을 다운로드합니다.
 2. 다운로드한 파일을 찾은 다음 압축을 풉니다.
 3. `\sqlops-windows\sqlops.exe`를 실행합니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS용 SQL Operations Studio (preview) 얻기
 
-1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=875604)를 다운로드합니다.
+1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=2005959)를 다운로드합니다.
 2. zip 내용을 확장하기 위해 두 번 클릭합니다.
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 *Launchpad*에서 사용할 수 있게 하려면 *sqlops.app*을 *응용 프로그램* 폴더에 드래그합니다.
 
@@ -61,9 +61,9 @@ ms.locfileid: "36270994"
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio (preview) 얻기
 
 1. 다운로드 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여 Linux 용:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=875607)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=875606)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=875605)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2006084)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2006083)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2005960)
 1. 파일을 추출하고 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 실행하기 위해 새 터미널 창을 열고 다음 명령을 입력합니다.
 
    **Debian 설치:**
@@ -153,7 +153,7 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 ## <a name="next-steps"></a>다음 단계
 
-시작 하려면 다음 퀵 스타트 중 하나를 참조 합니다.
+시작 하려면 다음 빠른 시작 중 하나를 참조 하세요.
 - [SQL Server 연결 및 쿼리](quickstart-sql-server.md)
 - [Azure SQL 데이터베이스 연결 및 쿼리](quickstart-sql-database.md)
 - [Azure 데이터 웨어하우스 연결 및 쿼리](quickstart-sql-dw.md)

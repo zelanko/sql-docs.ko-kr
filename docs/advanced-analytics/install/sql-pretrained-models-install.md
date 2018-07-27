@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 53bffd17ee225cf3e1d10ec4a0cd813ec7688989
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175000"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216834"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 무료 미리 학습 된 기계 학습에 대 한 모델을 추가 하는 방법에 설명 *감정 분석* 하 고 *이미지 기능화 (featurization)* SQL Server 데이터베이스 엔진 인스턴스에 R 또는 Python 통합 필요 합니다. 미리 학습 된 모델은 Microsoft 및 즉시-사용, PowerShell 스크립트를 사용 하 여 기존 인스턴스를 쉽게 추가 하 여 빌드됩니다. 이러한 모델에 대 한 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션입니다.
+이 문서에서는 Powershell을 사용 하 여 무료 미리 학습 된 기계 학습에 대 한 모델을 추가 하는 방법에 설명 *감정 분석* 하 고 *이미지 기능화 (featurization)* R 또는 Python을 SQL Server 데이터베이스 엔진 인스턴스에 통합 합니다. 미리 학습 된 모델은 Microsoft 및 사용 준비를 하 여 빌드됩니다. 설치 후 태스크로 데이터베이스 엔진 인스턴스를 추가 합니다. 이러한 모델에 대 한 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션입니다.
 
 설치 되 면 미리 학습된 된 모델 MicrosoftML (R) 및 microsoftml (Python) 라이브러리의 특정 함수는 구현 세부 사항으로 간주 됩니다. 처리할 수 있습니다 하 고 사용자 지정 코드에는 독립 된 리소스로 안 (이며) 보기, 사용자 지정 또는 모델을 재 학습 또는 다른 함수 쌍을 이룹니다. 
 
-미리 학습 된 모델을 호출 하는 함수는 다음 표에 나열 됩니다.
+미리 학습 된 모델을 사용 하려면 다음 표에 나열 된 함수를 호출 합니다.
 
 | R 함수 (MicrosoftML) | Python 함수 (microsoftml) | 사용법 |
 |--------------------------|-------------------------------|-------|
@@ -31,15 +31,18 @@ ms.locfileid: "39175000"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) R, Python, 또는 둘 다를 사용 하 여 합니다. 
-
-[SQL Server 2016 R Services](sql-r-services-windows-install.md) 고객은 다른 접근 방식을 사용할 수 있습니다. SQL Server 2016에 대 한 R 구성 요소를 업그레이드 해야 추가 합니다 [MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)에 설명 된 대로 [기계 학습 (R 및 Python) 구성 요소를 업그레이드](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다. R 구성 요소를 업그레이드할 때 추가할 수 있습니다 동시에 미리 학습 된 모델을 중복 PowerShell 스크립트를 실행할 수 있습니다. 그러나 이미 업그레이드 하지만 경우 처음에는 미리 학습된 된 모델을 추가 하는 누락 된이 문서에 설명 된 대로 PowerShell 스크립트를 실행할 수 있습니다. 를 수행 하기 전에 MicrosoftML 라이브러리 C:\Program Files\Microsoft SQL Server\MSSQL13에 존재 하는지 확인 합니다. MSSQLSERVER\R_SERVICES\library 합니다.
-  
-외부 스크립트를 사용 하도록 설정 하 고 SQL Server 실행 패드 서비스가 실행 되어야 합니다. 설치 지침 추가 구성 및 확인 단계를 제공합니다.
+기계 학습 알고리즘입니다. 계산이있지 않습니다. 16GB RAM의 모든 샘플 데이터를 사용 하 여 자습서 연습 완료 등 낮음-보통 워크 로드에 대 한 사용 하는 것이 좋습니다.
 
 미리 학습 된 모델에 추가할 컴퓨터와 SQL Server에 대 한 관리자 권한이 있어야 합니다.
 
-기계 학습 알고리즘입니다. 계산이있지 않습니다. 16GB RAM의 모든 샘플 데이터를 사용 하 여 자습서 연습 완료 등 낮음-보통 워크 로드에 대 한 사용 하는 것이 좋습니다.
+외부 스크립트를 사용 하도록 설정 하 고 SQL Server 실행 패드 서비스가 실행 되어야 합니다. 설치 지침을 활성화 하 고 이러한 기능을 확인 하는 단계를 제공 합니다. 
+
+[MicrosoftML R 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 나 [microsoftml Python 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 미리 학습된 된 모델을 포함 합니다.
+
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) 사용자의 추가 작업이 없으므로 사용 하 여이 필수 조건을 충족 하므로 두 언어 버전의 machine learning 라이브러리를 포함 합니다. 라이브러리가 있는 이기 때문에 이러한 라이브러리에 미리 학습된 된 모델을 추가 하려면이 문서에 설명 된 PowerShell 스크립트를 사용할 수 있습니다.
+
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md)에 R 전용 이며, 포함 되지 않습니다 [MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 기본적입니다. MicrosoftML를 추가 하려면 수행 해야 합니다는 [구성 요소 업그레이드](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다. 구성 요소 업그레이드의 장점 중 하나는 추가할 수 있는 동시에 미리 학습 된 모델에 불필요 한 PowerShell 스크립트를 실행할 수 있습니다. 그러나 이미 업그레이드 하지만 경우 처음에는 미리 학습된 된 모델을 추가 하는 누락 된이 문서에 설명 된 대로 PowerShell 스크립트를 실행할 수 있습니다. 두 버전의 SQL Server에서 작동합니다. 를 수행 하기 전에 MicrosoftML 라이브러리 C:\Program Files\Microsoft SQL Server\MSSQL13에 존재 하는지 확인 합니다. MSSQLSERVER\R_SERVICES\library 합니다.
+
 
 <a name="file-location"></a>
 
@@ -47,9 +50,9 @@ ms.locfileid: "39175000"
 
 R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
-+ R:에 대 한 C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64
++ R:에 대 한 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Python: C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\Lib\site packages\microsoftml\mxLibs 
++ Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
 
 모델 파일 이름 아래에 나열 됩니다.
 

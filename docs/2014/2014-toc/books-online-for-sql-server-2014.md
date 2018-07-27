@@ -21,15 +21,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232540"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310200"
 ---
 # SQL Server 2014용 온라인 설명서
-  시작 [!INCLUDE[msCoName](../includes/msconame-md.md)]®에 대 한 온라인 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 합니다. 태스크 설명과 참조 설명서를 사용 하 여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행 하는 방법을 설명 하는 온라인 설명서에 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]®용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 온라인 설명서를 시작합니다. 태스크 설명과 참조 설명서를 사용 하 여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행 하는 방법을 설명 하는 온라인 설명서에 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
  **사용해보기:**  
  

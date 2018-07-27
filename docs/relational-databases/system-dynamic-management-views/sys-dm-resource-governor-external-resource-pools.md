@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 80beafc8a281f7f4af71484acfa01ed0016b7de2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028841"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107665"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "38028841"
 | max_processes|**int**|동시 외부 프로세스의 최대 수입니다. 기본값은 0이며 제한 없음을 지정합니다. Null을 허용하지 않습니다.|
 | max_memory_percent|**int**|이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리의 비율에 대한 현재 구성입니다. Null을 허용하지 않습니다. |
 | statistics_start_time|**datetime**|이 풀에 대해 통계가 다시 설정된 시간입니다. Null을 허용하지 않습니다. 
-| peak_memory_kb|**bigint**|그 최대 메모리 양 사용 (킬로바이트)에서 리소스 풀입니다. Null을 허용하지 않습니다. |
+| peak_memory_kb|**bigint**|메모리 사용 (킬로바이트)에서 리소스 풀의 최대 양입니다. Null을 허용하지 않습니다. |
 | write_io_count|**int**|리소스 관리자 통계를 다시 설정한 후 발생한 총 쓰기 IO입니다. Null을 허용하지 않습니다. |
 | read_io_count|**int**|리소스 관리자 통계를 다시 설정한 후 발생한 총 읽기 IO입니다. Null을 허용하지 않습니다. |
-| total_cpu_kernel_ms|**bigint**|리소스 관리자 통계를 다시 설정한 후 시간 (밀리초)의 누적 CPU 사용자 시간이 있습니다. Null을 허용하지 않습니다. |
+| total_cpu_kernel_ms|**bigint**|누적 CPU 사용자 커널 시간 리소스 관리자 통계를 다시 설정한 후 시간 (밀리초)입니다. Null을 허용하지 않습니다. |
 | total_cpu_user_ms|**bigint**|리소스 관리자 통계를 다시 설정한 후 시간 (밀리초)의 누적 CPU 사용자 시간이 있습니다. Null을 허용하지 않습니다. |
 | active_processes_count|**int**|요청 시 실행 되는 외부 프로세스의 수입니다. Null을 허용하지 않습니다. |
 
