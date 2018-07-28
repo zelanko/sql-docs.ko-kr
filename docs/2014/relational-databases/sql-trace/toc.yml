@@ -1,0 +1,31 @@
+- name: SQL 추적
+  href: sql-trace.md
+  items:
+    - name: TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: 저장 프로시저를 사용하여 수동 추적 만들기
+      href: create-manual-traces-using-stored-procedures.md
+    - name: 파일에 추적 결과 저장
+      href: save-trace-results-to-a-file.md
+    - name: 추적 데이터에 대한 액세스 향상
+      href: improve-access-to-trace-data.md
+    - name: 추적 만들기(Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: 추적 필터 설정(Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: 기존 추적 수정(Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: 저장된 추적 보기(Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: 필터 정보 보기(Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: 추적 삭제(Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: SQL 추적 최적화
+      href: optimize-sql-trace.md
+    - name: 추적 필터링
+      href: filter-a-trace.md
+    - name: 추적 파일 및 테이블 크기 제한
+      href: limit-trace-file-and-table-sizes.md
+    - name: 예약된 추적
+      href: schedule-traces.md

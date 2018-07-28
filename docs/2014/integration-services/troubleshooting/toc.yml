@@ -1,0 +1,15 @@
+- name: 패키지 배포 문제 해결 도구
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: 제어 흐름 디버깅
+      href: debugging-control-flow.md
+    - name: 스크립트 디버깅
+      href: debugging-script.md
+    - name: 데이터 흐름 디버깅
+      href: debugging-data-flow.md
+    - name: 태스크 또는 컨테이너에 중단점을 설정하여 패키지 디버깅
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: 데이터 흐름에 데이터 뷰어 추가
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: 데이터 흐름 구성 요소에서 오류 출력 구성
+      href: ../configure-an-error-output-in-a-data-flow-component.md

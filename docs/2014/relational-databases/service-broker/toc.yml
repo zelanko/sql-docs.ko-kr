@@ -1,0 +1,9 @@
+- name: 이벤트 알림
+  href: event-notifications.md
+  items:
+    - name: 이벤트 알림 구현
+      href: implement-event-notifications.md
+    - name: 이벤트 알림에 대한 대화 보안 구성
+      href: configure-dialog-security-for-event-notifications.md
+    - name: 이벤트 알림에 대한 정보 가져오기
+      href: get-information-about-event-notifications.md

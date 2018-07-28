@@ -1,0 +1,14 @@
+- name: SQL Server 장애 조치(Failover) 클러스터 설치
+  href: sql-server-failover-cluster-installation.md
+- name: 장애 조치(Failover) 클러스터링을 설치하기 전에
+  href: before-installing-failover-clustering.md
+- name: 새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치)
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: SQL Server 장애 조치 클러스터에 클라이언트 도구 설치
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: SQL Server 장애 조치(Failover) 클러스터 인스턴스 제거(설치)
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
+  href: rename-a-sql-server-failover-cluster-instance.md

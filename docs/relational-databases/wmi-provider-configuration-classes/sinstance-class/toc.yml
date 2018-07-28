@@ -1,0 +1,20 @@
+- name: SInstance 클래스
+  href: sinstance-class.md
+- name: 속성
+  items:
+    - name: GeneralFlags 속성(SInstance 클래스)
+      href: generalflags-property-sinstance-class.md
+    - name: InstanceName 속성(SInstance 클래스)
+      href: instancename-property-sinstance-class.md
+    - name: NumberOfFlags 속성(SInstance 클래스)
+      href: numberofflags-property-sinstance-class.md
+- name: 메서드
+  items:
+    - name: GetCurrentCertificate 메서드(SInstance 클래스)
+      href: getcurrentcertificate-method-sinstance-class.md
+    - name: RemoveCertificate 메서드(SInstance 클래스)
+      href: removecertificate-method-sinstance-class.md
+    - name: SetCurrentCertificate 메서드(SInstance 클래스)
+      href: setcurrentcertificate-method-sinstance-class.md
+    - name: SetDefaults 메서드(SInstance 클래스)
+      href: setdefaults-method-sinstance-class.md

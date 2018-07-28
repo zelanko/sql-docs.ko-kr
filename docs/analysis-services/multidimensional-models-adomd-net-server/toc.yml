@@ -1,0 +1,8 @@
+- name: ADOMD.NET Server 기능
+  href: adomd-net-server-functionality.md
+- name: ADOMD.NET 서버 개체 아키텍처
+  href: adomd-net-server-object-architecture.md
+- name: ADOMD.NET 서버 프로그래밍
+  href: adomd-net-server-programming.md
+- name: 사용자 정의 함수 및 저장 프로시저
+  href: user-defined-functions-and-stored-procedures.md

@@ -1,0 +1,24 @@
+- name: 데이터베이스 메일
+  href: database-mail.md
+- name: 데이터베이스 메일 구성 개체
+  href: database-mail-configuration-objects.md
+  items:
+    - name: 데이터베이스 메일 프로필 만들기
+      href: create-a-database-mail-profile.md
+    - name: 데이터베이스 메일 계정 만들기
+      href: create-a-database-mail-account.md
+    - name: 데이터베이스 메일 구성
+      href: configure-database-mail.md
+- name: 데이터베이스 메일 메시징 개체
+  href: database-mail-messaging-objects.md
+- name: 데이터베이스 메일 외부 프로그램
+  href: database-mail-external-program.md
+- name: 데이터베이스 메일 로그 및 감사
+  href: database-mail-log-and-audits.md
+  items:
+    - name: 데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
+      href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+    - name: 데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인
+      href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: 데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

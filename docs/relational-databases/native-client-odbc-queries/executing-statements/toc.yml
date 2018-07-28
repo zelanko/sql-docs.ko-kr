@@ -1,0 +1,12 @@
+- name: 문 실행(ODBC)
+  href: executing-statements-odbc.md
+- name: 문의 일괄 처리
+  href: batches-of-statements.md
+- name: 직접 실행
+  href: direct-execution.md
+- name: ISO 옵션의 효과
+  href: effects-of-iso-options.md
+- name: 준비된 실행
+  href: prepared-execution.md
+- name: 절차
+  href: procedures.md

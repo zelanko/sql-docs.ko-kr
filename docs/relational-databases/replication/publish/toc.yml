@@ -1,0 +1,105 @@
+- name: 개요
+  href: publish-data-and-database-objects.md
+- name: 복제 게시 모델 개요
+  href: replication-publishing-model-overview.md
+- name: 게시된 데이터 필터링
+  href: filter-published-data.md
+- name: ID 열 복제
+  href: replicate-identity-columns.md
+- name: 게시 데이터베이스의 스키마 변경
+  href: make-schema-changes-on-publication-databases.md
+- name: 분할 테이블 및 인덱스 복제
+  href: replicate-partitioned-tables-and-indexes.md
+  items:
+    - name: 매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
+      href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+- name: '게시 및 아티클 만들기, 수정 및 삭제'
+  href: create-modify-and-delete-publications-and-articles-replication.md
+  items:
+    - name: Create a Publication
+      href: create-a-publication.md
+    - name: 아티클 정의
+      href: define-an-article.md
+      items:
+        - name: 아티클 유형 정의(복제 Transact-SQL 프로그래밍)
+          href: specify-article-types-replication-transact-sql-programming.md
+    - name: 게시 속성 보기 및 수정
+      href: view-and-modify-publication-properties.md
+    - name: 아티클 속성 보기 및 수정
+      href: view-and-modify-article-properties.md
+    - name: 게시 삭제
+      href: delete-a-publication.md
+    - name: 아티클 삭제
+      href: delete-an-article.md
+    - name: Oracle 데이터베이스에서 게시 만들기
+      href: create-a-publication-from-an-oracle-database.md
+      items:
+        - name: Oracle 게시자에 대한 데이터 형식 매핑 지정
+          href: specify-data-type-mappings-for-an-oracle-publisher.md
+    - name: 구독에 대한 만료 기간 설정
+      href: set-the-expiration-period-for-subscriptions.md
+    - name: 스키마 옵션 지정
+      href: specify-schema-options.md
+    - name: 스키마 변경 내용 복제
+      href: replicate-schema-changes.md
+    - name: ID 열 관리
+      href: manage-identity-columns.md
+    - name: 병합 게시에 대한 호환성 수준 설정
+      href: set-the-compatibility-level-for-merge-publications.md
+    - name: 스냅숏 형식 지정(SQL Server Management Studio)
+      href: specify-snapshot-format-sql-server-management-studio.md
+    - name: 대체 스냅숏 폴더 위치 지정(SQL Server Management Studio)
+      href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+    - name: 스냅숏 파일 압축(SQL Server Management Studio)
+      href: compress-snapshot-files-sql-server-management-studio.md
+    - name: 스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)
+      href: configure-snapshot-properties-replication-transact-sql-programming.md
+    - name: FTP를 통해 스냅숏 배달
+      href: deliver-a-snapshot-through-ftp.md
+    - name: 열 필터 정의 및 수정
+      href: define-and-modify-a-column-filter.md
+    - name: 정적 행 필터 정의 및 수정
+      href: define-and-modify-a-static-row-filter.md
+    - name: 병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
+      href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+    - name: 매개 변수가 있는 행 필터 최적화
+      href: optimize-parameterized-row-filters.md
+    - name: 병합 아티클 사이에서 조인 필터 정의 및 수정
+      href: define-and-modify-a-join-filter-between-merge-articles.md
+    - name: 병합 아티클 간의 조인 필터 집합 자동 생성(SQL Server Management Studio)
+      href: automatically-generate-join-filters-between-merge-articles.md
+    - name: 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
+      href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+    - name: 트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정
+      href: enable-updating-subscriptions-for-transactional-publications.md
+    - name: 트랜잭션 게시에 업데이트할 수 있는 구독 만들기(Management Studio)
+      href: create-an-updatable-subscription-to-a-transactional-publication.md
+    - name: Transact-SQL을 사용하여 트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
+      href: create-updatable-subscription-to-transactional-publication.md
+    - name: 지연 업데이트 충돌 해결 옵션 설정(SQL Server Management Studio)
+      href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+    - name: 저장 프로시저 실행을 트랜잭션 게시로 게시(SQL Server Management Studio)
+      href: publish-execution-of-stored-procedure-in-transactional-publication.md
+    - name: 병합 테이블 아티클 간의 논리적 레코드 관계 정의
+      href: define-a-logical-record-relationship-between-merge-table-articles.md
+    - name: 병합 테이블 아티클에 대한 처리 순서 지정(복제 Transact-SQL 프로그래밍)
+      href: specify-the-processing-order-of-merge-table-articles.md
+    - name: 새 병합 테이블 아티클을 다운로드 전용으로 지정
+      href: specify-that-a-merge-table-article-is-download-only.md
+    - name: 병합 아티클에 대해 삭제가 추적되지 않도록 지정(복제 Transact-SQL 프로그래밍)
+      href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+    - name: 병합 아티클의 충돌 추적 및 해결 수준 지정
+      href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+    - name: 병합 아티클 해결 프로그램 지정
+      href: specify-a-merge-article-resolver.md
+    - name: 병합 아티클에 대한 상호 충돌 해결 프로그램 지정
+      href: specify-interactive-conflict-resolution-for-merge-articles.md
+    - name: 게시에 대한 아티클 추가 및 삭제(SQL Server Management Studio)
+      href: add-articles-to-and-drop-articles-from-a-publication.md
+- name: 게시 유지 관리
+  href: maintain-publications.md
+  items:
+    - name: 기존 게시에 대한 아티클 추가 및 삭제
+      href: add-articles-to-and-drop-articles-from-existing-publications.md
+    - name: 게시 및 아티클 속성 변경
+      href: change-publication-and-article-properties.md

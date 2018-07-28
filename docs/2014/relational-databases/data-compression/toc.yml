@@ -1,0 +1,13 @@
+- name: Data Compression
+  href: data-compression.md
+  items:
+    - name: Row Compression Implementation
+      href: row-compression-implementation.md
+    - name: 페이지 압축 구현
+      href: page-compression-implementation.md
+    - name: 유니코드 압축 구현
+      href: unicode-compression-implementation.md
+    - name: 테이블 또는 인덱스에 압축 사용
+      href: enable-compression-on-a-table-or-index.md
+    - name: 테이블 또는 인덱스에서 압축 해제
+      href: disable-compression-on-a-table-or-index.md

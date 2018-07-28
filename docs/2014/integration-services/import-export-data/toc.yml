@@ -1,0 +1,41 @@
+- name: SQL Server 가져오기 및 내보내기 마법사
+  href: import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+  items:
+    - name: SQL Server 가져오기 및 내보내기 마법사 실행
+      href: start-the-sql-server-import-and-export-wizard.md
+    - name: SQL Server 가져오기 및 내보내기 마법사 시작
+      href: welcome-to-sql-server-import-and-export-wizard.md
+    - name: 데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
+      href: choose-a-data-source-sql-server-import-and-export-wizard.md
+    - name: 대상 선택(SQL Server 가져오기 및 내보내기 마법사)
+      href: choose-a-destination-sql-server-import-and-export-wizard.md
+    - name: 데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
+      href: create-database-sql-server-import-and-export-wizard.md
+    - name: 테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
+      href: specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+    - name: 원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
+      href: select-source-tables-and-views-sql-server-import-and-export-wizard.md
+    - name: 데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
+      href: preview-data-dialog-box-sql-server-import-and-export-wizard.md
+    - name: 원본 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
+      href: provide-a-source-query-sql-server-import-and-export-wizard.md
+    - name: 플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
+      href: configure-flat-file-destination-sql-server-import-and-export-wizard.md
+    - name: 열 매핑(SQL Server 가져오기 및 내보내기 마법사)
+      href: column-mappings-sql-server-import-and-export-wizard.md
+    - name: 테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
+      href: create-table-sql-statement-sql-server-import-and-export-wizard.md
+    - name: 데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
+      href: review-data-type-mapping-sql-server-import-and-export-wizard.md
+    - name: 열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
+      href: column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+    - name: 변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
+      href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+    - name: 패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)
+      href: save-and-run-package-sql-server-import-and-export-wizard.md
+    - name: SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
+      href: save-ssis-package-sql-server-import-and-export-wizard.md
+    - name: 마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
+      href: complete-the-wizard-sql-server-import-and-export-wizard.md
+    - name: 작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
+      href: performing-operation-sql-server-import-and-export-wizard.md

@@ -1,0 +1,15 @@
+- name: 통계
+  href: statistics.md
+  items:
+    - name: 통계 만들기
+      href: create-statistics.md
+    - name: 통계 수정
+      href: modify-statistics.md
+    - name: 통계 삭제
+      href: delete-statistics.md
+    - name: 통계 속성 보기
+      href: view-statistics-properties.md
+    - name: 통계 이름 바꾸기
+      href: rename-statistics.md
+    - name: 통계 업데이트
+      href: update-statistics.md

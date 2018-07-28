@@ -1,0 +1,72 @@
+- name: 전체 텍스트 검색
+  href: full-text-search.md
+  items:
+    - name: 전체 텍스트 검색 시작
+      href: get-started-with-full-text-search.md
+    - name: Query with Full-Text Search
+      href: query-with-full-text-search.md
+    - name: NEAR를 사용하여 근접 단어 검색
+      href: search-for-words-close-to-another-word-with-near.md
+    - name: RANK를 사용하여 검색 결과 제한
+      href: limit-search-results-with-rank.md
+    - name: 전체 텍스트 쿼리 성능 향상
+      href: improve-the-performance-of-full-text-queries.md
+    - name: 검색 속성 목록을 사용하여 문서 속성 검색
+      href: search-document-properties-with-search-property-lists.md
+    - name: 검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
+      href: find-property-set-guids-and-property-integer-ids-for-search-properties.md
+    - name: 전체 텍스트 카탈로그 만들기 및 관리
+      href: create-and-manage-full-text-catalogs.md
+    - name: 전체 텍스트 인덱스 만들기 및 관리
+      href: create-and-manage-full-text-indexes.md
+    - name: 전체 텍스트 인덱스 생성 시 언어 선택
+      href: choose-a-language-when-creating-a-full-text-index.md
+    - name: 전체 텍스트 인덱스 채우기
+      href: populate-full-text-indexes.md
+    - name: 전체 텍스트 인덱스 성능 향상
+      href: improve-the-performance-of-full-text-indexes.md
+    - name: 전체 텍스트 인덱싱 문제 해결
+      href: troubleshoot-full-text-indexing.md
+    - name: 전체 텍스트 카탈로그와 인덱스 백업 및 복원
+      href: back-up-and-restore-full-text-catalogs-and-indexes.md
+    - name: 검색 필터 구성 및 관리
+      href: configure-and-manage-filters-for-search.md
+    - name: 검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
+      href: configure-and-manage-word-breakers-and-stemmers-for-search.md
+    - name: 등록된 필터와 단어 분리기 보기 및 변경
+      href: view-or-change-registered-filters-and-word-breakers.md
+    - name: 미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
+      href: change-the-word-breaker-used-for-us-english-and-uk-english.md
+    - name: 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
+      href: revert-the-word-breakers-used-by-search-to-the-previous-version.md
+    - name: 사용자 지정 사전을 사용하여 단어 분리기의 동작 사용자 지정
+      href: customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
+    - name: 전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
+      href: configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
+    - name: 전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
+      href: configure-and-manage-thesaurus-files-for-full-text-search.md
+    - name: 서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
+      href: manage-and-monitor-full-text-search-for-a-server-instance.md
+    - name: 전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
+      href: set-the-service-account-for-the-full-text-filter-daemon-launcher.md
+    - name: 전체 텍스트 검색 업그레이드
+      href: upgrade-full-text-search.md
+    - name: '전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰'
+      href: full-text-search-ddl-functions-stored-procedures-and-views.md
+    - name: 전체 텍스트 인덱싱 마법사 사용
+      href: use-the-full-text-indexing-wizard.md
+- name: 의미 체계 검색
+  href: semantic-search-sql-server.md
+  items:
+    - name: 의미 체계 검색 설치 및 구성
+      href: install-and-configure-semantic-search.md
+    - name: 테이블 및 열에 대한 의미 체계 검색 사용
+      href: enable-semantic-search-on-tables-and-columns.md
+    - name: 의미 체계 검색을 사용하여 문서에서 키 구 찾기
+      href: find-key-phrases-in-documents-with-semantic-search.md
+    - name: 의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기
+      href: find-similar-and-related-documents-with-semantic-search.md
+    - name: 의미 체계 검색 관리 및 모니터링
+      href: manage-and-monitor-semantic-search.md
+    - name: '의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰'
+      href: semantic-search-ddl-functions-stored-procedures-and-views.md

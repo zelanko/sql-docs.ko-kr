@@ -1,0 +1,14 @@
+- name: 결과 처리(ODBC)
+  href: processing-results-odbc.md
+- name: 저장소 할당
+  href: assigning-storage.md
+- name: 문자 데이터 자동 변환
+  href: autotranslation-of-character-data.md
+- name: 데이터 형식 사용
+  href: data-type-usage.md
+- name: 결과 집합의 특징 확인(ODBC)
+  href: determining-the-characteristics-of-a-result-set-odbc.md
+- name: 결과 데이터 인출
+  href: fetching-result-data.md
+- name: 데이터 형식 매핑(ODBC)
+  href: mapping-data-types-odbc.md

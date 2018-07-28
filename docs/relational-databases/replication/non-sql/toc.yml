@@ -1,0 +1,39 @@
+- name: 다른 유형의 데이터베이스 복제
+  href: heterogeneous-database-replication.md
+- name: SQL Server 이외 게시자
+  href: non-sql-server-publishers.md
+  items:
+    - name: Oracle Publishing Overview
+      href: oracle-publishing-overview.md
+    - name: Oracle 게시를 위한 용어 설명
+      href: glossary-of-terms-for-oracle-publishing.md
+    - name: Oracle 게시자 구성
+      href: configure-an-oracle-publisher.md
+      items:
+        - name: Oracle 권한 부여 스크립트
+          href: script-to-grant-oracle-permissions.md
+        - name: Oracle 테이블스페이스 관리
+          href: manage-oracle-tablespaces.md
+    - name: Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
+      href: design-considerations-and-limitations-for-oracle-publishers.md
+    - name: Oracle 게시자에 대한 관리 고려 사항
+      href: administrative-considerations-for-oracle-publishers.md
+    - name: Oracle 게시자를 위한 성능 튜닝
+      href: performance-tuning-for-oracle-publishers.md
+    - name: Oracle 게시자에 대한 데이터 형식 매핑
+      href: data-type-mapping-for-oracle-publishers.md
+    - name: Oracle 게시자 백업 및 복원
+      href: backup-and-restore-for-oracle-publishers.md
+    - name: Objects Created on the Oracle Publisher
+      href: objects-created-on-the-oracle-publisher.md
+    - name: Oracle 게시자 문제 해결
+      href: troubleshooting-oracle-publishers.md
+- name: Non-SQL Server Subscribers
+  href: non-sql-server-subscribers.md
+  items:
+    - name: Oracle 구독자
+      href: oracle-subscribers.md
+    - name: IBM DB2 Subscribers
+      href: ibm-db2-subscribers.md
+    - name: 다른 SQL Server 이외 구독자
+      href: other-non-sql-server-subscribers.md

@@ -1,0 +1,68 @@
+- name: 프로젝트 및 패키지 배포
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: Deploy Projects to Integration Services Server
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: 서버 환경 만들기 및 매핑
+      href: ../create-and-map-a-server-environment.md
+    - name: Integration Services 프로젝트 변환 마법사
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Integration Services 배포 마법사
+      href: ../integration-services-deployment-wizard.md
+    - name: 패키지 배포 모델로 변환 대화 상자
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: 패키지 배포(SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: 패키지 구성
+          href: ../package-configurations.md
+        - name: 패키지 구성 만들기
+          href: ../create-package-configurations.md
+    - name: 패키지 구성 도우미
+      href: ../package-configurations-organizer.md
+    - name: 패키지 구성 마법사 UI 참조
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Create a Deployment Utility
+          href: ../create-a-deployment-utility.md
+        - name: 배포 유틸리티를 사용한 패키지 배포
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: 패키지 재배포
+          href: ../redeployment-of-packages.md
+        - name: 패키지 설치 마법사 UI 참조
+          href: ../package-installation-wizard-ui-reference.md
+- name: 프로젝트 및 패키지 실행
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: SQL Server Data Tools에서 패키지 실행
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: SQL Server Management Studio를 사용하여 SSIS 서버에서 패키지 실행
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: 자식 패키지 구현
+          href: ../implementation-of-child-packages.md
+        - name: 부모 패키지 구현
+          href: ../implementation-of-the-parent-package.md
+        - name: 원격 서버의 로드 균형 조정된 패키지 로깅
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: 자식 패키지에서 변수 및 매개 변수의 값 사용
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: 패키지 실행 문제 해결 도구
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: 패키지 실행 보고서 문제 해결
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: 패키지 실행을 위한 덤프 파일 생성
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: 패키지에 대한 SQL Server 에이전트 작업
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: SQL Server 에이전트를 사용하여 패키지 예약
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: SQL Server 에이전트 작업 실행 태스크
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: 저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md

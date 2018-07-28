@@ -1,0 +1,25 @@
+- name: 로그 전달 정보
+  href: about-log-shipping-sql-server.md
+  items:
+    - name: SQL Server 2014로 로그 전달 업그레이드(Transact-SQL)
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: 로그 전달 구성
+      href: configure-log-shipping-sql-server.md
+    - name: 로그 전달 구성에 보조 데이터베이스 추가
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: 로그 전달 구성에서 보조 데이터베이스 제거
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: 로그 전달 제거
+      href: remove-log-shipping-sql-server.md
+    - name: 로그 전달 보고서 보기(SQL Server Management Studio)
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: 로그 전달 모니터링(Transact-SQL)
+      href: monitor-log-shipping-transact-sql.md
+    - name: 로그 전달 보조 데이터베이스로 장애 조치(Failover)
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: 주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: 로그 전달 및 복제
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

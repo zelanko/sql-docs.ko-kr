@@ -1,0 +1,64 @@
+- name: 개요
+  href: analysis-services-trace-events.md
+- name: 추적에 사용되는 개체 코드
+  href: analysis-services-object-type-codes-used-in-traces.md
+- name: Command Events 이벤트 범주
+  href: command-events-event-category.md
+  items:
+    - name: Command Events 데이터 열
+      href: command-events-data-columns.md
+- name: Discover Events 이벤트 범주
+  href: discover-events-event-category.md
+  items:
+    - name: Discover Events 데이터 열
+      href: discover-events-data-columns.md
+- name: Discover Server State 이벤트 범주
+  href: discover-server-state-event-category.md
+  items:
+    - name: Discover Server State Events 데이터 열
+      href: discover-server-state-events-data-columns.md
+- name: Errors and Warnings 이벤트 범주
+  href: errors-and-warnings-event-category.md
+  items:
+    - name: Errors and Warnings 데이터 열
+      href: errors-and-warnings-events-data-columns.md
+- name: File Load and Save 이벤트 범주
+  href: file-load-and-save-event-category.md
+  items:
+    - name: File Load and Save 데이터 열
+      href: file-load-and-save-data-columns.md
+- name: 잠금 이벤트 범주
+  href: lock-events-category.md
+  items:
+    - name: Lock 이벤트 데이터 열
+      href: lock-events-data-columns.md
+- name: Notification Events 이벤트 범주
+  href: notification-events-event-category.md
+  items:
+    - name: Notification Events 데이터 열
+      href: notification-events-data-columns.md
+- name: Progress Reports 이벤트 범주
+  href: progress-reports-event-category.md
+  items:
+    - name: Progress Reports 데이터 열
+      href: progress-reports-data-columns.md
+- name: Queries Events 범주
+  href: queries-events-category.md
+  items:
+    - name: Queries Events 데이터 열
+      href: queries-events-data-columns.md
+- name: Query Processing 이벤트 범주
+  href: query-processing-events-category.md
+  items:
+    - name: Query Processing 이벤트 데이터 열
+      href: query-processing-events-data-columns.md
+- name: Security Audit 이벤트 범주
+  href: security-audit-event-category.md
+  items:
+    - name: Security Audit 데이터 열
+      href: security-audit-data-columns.md
+- name: Session Events 이벤트 범주
+  href: session-events-event-category.md
+  items:
+    - name: Session Events 데이터 열
+      href: session-events-data-columns.md

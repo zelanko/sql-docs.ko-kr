@@ -1,0 +1,14 @@
+- name: 개요
+  href: install-data-quality-services.md
+- name: DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
+  href: run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
+- name: 사용자에게 DQS 역할 부여
+  href: grant-dqs-roles-to-users.md
+- name: DQS 작업을 위해 데이터 액세스
+  href: access-data-for-the-dqs-operations.md
+- name: Export and Import DQS Knowledge Bases Using DQSInstaller.exe
+  href: export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
+- name: .NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
+  href: upgrade-sqlclr-assemblies-after-net-framework-update.md
+- name: SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드
+  href: upgrade-dqs-databases-schema-after-installing-sql-server-update.md

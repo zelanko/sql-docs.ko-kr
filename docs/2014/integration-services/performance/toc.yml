@@ -1,0 +1,32 @@
+- name: 패키지 실행 및 기타 작업 모니터링
+  href: monitor-running-packages-and-other-operations.md
+- name: 활성 작업 대화 상자
+  href: ../active-operations-dialog-box.md
+- name: Integration Services 서버를 위한 보고서
+  href: ../reports-for-the-integration-services-server.md
+- name: Integration Services 서버용 보고서 보기
+  href: ../view-reports-for-the-integration-services-server.md
+- name: Integration Services 서버에서 실행 중인 패키지 보기 및 중지
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Integration Services(SSIS) 로깅
+  href: integration-services-ssis-logging.md
+  items:
+    - name: 로깅할 메시지 사용자 지정
+      href: ../custom-messages-for-logging.md
+    - name: SSIS 로그 구성 대화 상자
+      href: ../configure-ssis-logs-dialog-box.md
+    - name: 저장된 구성 파일을 사용하여 로깅 구성
+      href: ../configure-logging-by-using-a-saved-configuration-file.md
+    - name: SQL Server Data Tools에서 패키지 로깅 사용
+      href: ../enable-package-logging-in-sql-server-data-tools.md
+    - name: SSIS 서버에서 패키지 실행에 대한 로깅 설정
+      href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: 성능 카운터
+  href: performance-counters.md
+  items:
+    - name: 데이터 흐름 성능 카운터에 대한 로그 추가
+      href: ../add-a-log-for-data-flow-performance-counters.md
+- name: 데이터 흐름 분석
+  href: ../analysis-of-data-flow.md
+- name: 데이터 흐름 탭
+  href: ../data-flow-taps.md

@@ -1,0 +1,26 @@
+- name: 서버 속성
+  href: server-properties-in-analysis-services.md
+- name: 데이터 마이닝 속성
+  href: data-mining-properties.md
+- name: DAX 속성
+  href: dax-properties.md
+- name: 기능 속성
+  href: feature-properties.md
+- name: FileStore 속성
+  href: filestore-properties.md
+- name: 일반 속성
+  href: general-properties.md
+- name: 잠금 관리자 속성
+  href: lock-manager-properties.md
+- name: 로그 속성
+  href: log-properties.md
+- name: 메모리 속성
+  href: memory-properties.md
+- name: 네트워크 속성
+  href: network-properties.md
+- name: OLAP 속성
+  href: olap-properties.md
+- name: 보안 속성
+  href: security-properties.md
+- name: 스레드 풀 속성
+  href: thread-pool-properties.md

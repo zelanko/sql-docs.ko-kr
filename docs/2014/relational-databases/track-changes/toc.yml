@@ -1,0 +1,21 @@
+- name: 데이터 변경 내용 추적
+  href: track-data-changes-sql-server.md
+  items:
+    - name: 변경 데이터 캡처 정보
+      href: about-change-data-capture-sql-server.md
+    - name: 변경 데이터 캡처 설정 및 해제
+      href: enable-and-disable-change-data-capture-sql-server.md
+    - name: 변경 데이터 캡처 관리 및 모니터링
+      href: administer-and-monitor-change-data-capture-sql-server.md
+    - name: 변경 데이터 작업
+      href: work-with-change-data-sql-server.md
+    - name: 변경 내용 추적 정보
+      href: about-change-tracking-sql-server.md
+    - name: 변경 내용 추적 설정 및 해제
+      href: enable-and-disable-change-tracking-sql-server.md
+    - name: 변경 내용 추적 관리
+      href: manage-change-tracking-sql-server.md
+    - name: 변경 내용 추적 사용
+      href: work-with-change-tracking-sql-server.md
+    - name: 변경 데이터 캡처 및 기타 SQL Server 기능
+      href: change-data-capture-and-other-sql-server-features.md

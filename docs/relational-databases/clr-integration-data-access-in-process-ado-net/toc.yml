@@ -1,0 +1,10 @@
+- name: ADO.NET에 대한 SQL Server In-Process 전용 확장
+  href: sql-server-in-process-specific-extensions-to-ado-net.md
+- name: SqlContext 개체
+  href: sqlcontext-object.md
+- name: SqlDataRecord 개체
+  href: sqldatarecord-object.md
+- name: SqlPipe 개체
+  href: sqlpipe-object.md
+- name: SqlTriggerContext 개체
+  href: sqltriggercontext-object.md

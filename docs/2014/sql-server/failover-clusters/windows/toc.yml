@@ -1,0 +1,42 @@
+- name: SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
+  href: windows-server-failover-clustering-wsfc-with-sql-server.md
+  items:
+    - name: WSFC 쿼럼 모드 및 투표 구성
+      href: wsfc-quorum-modes-and-voting-configuration-sql-server.md
+      items:
+        - name: 클러스터 쿼럼 NodeWeight 설정 보기
+          href: view-cluster-quorum-nodeweight-settings.md
+        - name: 클러스터 쿼럼 NodeWeight 설정 구성
+          href: configure-cluster-quorum-nodeweight-settings.md
+    - name: 강제 쿼럼을 통해 WSFC 재해 복구
+      href: wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+      items:
+        - name: 쿼럼 없이 WSFC 클러스터 강제 시작
+          href: force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: SQL Server 다중 서브넷 클러스터링
+      href: sql-server-multi-subnet-clustering-sql-server.md
+- name: Always On 장애 조치(failover) 클러스터 인스턴스
+  href: always-on-failover-cluster-instances-sql-server.md
+- name: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
+  href: failover-policy-for-failover-cluster-instances.md
+  items:
+    - name: HealthCheckTimeout 속성 설정 구성
+      href: configure-healthchecktimeout-property-settings.md
+    - name: FailureConditionLevel 속성 설정 구성
+      href: configure-failureconditionlevel-property-settings.md
+    - name: 장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
+      href: view-and-read-failover-cluster-instance-diagnostics-log.md
+- name: 장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
+  href: failover-cluster-instance-administration-and-maintenance.md
+  items:
+    - name: SQL Server 리소스에 종속성 추가
+      href: add-dependencies-to-a-sql-server-resource.md
+    - name: 장애 조치(failover) 클러스터 인스턴스 오류 복구
+      href: recover-from-failover-cluster-instance-failure.md
+    - name: 장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
+      href: change-the-ip-address-of-a-failover-cluster-instance.md
+- name: SQL Server 장애 조치(Failover) 클러스터 업그레이드
+  href: upgrade-a-sql-server-failover-cluster-instance.md
+  items:
+    - name: SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)
+      href: upgrade-a-sql-server-failover-cluster-instance-setup.md

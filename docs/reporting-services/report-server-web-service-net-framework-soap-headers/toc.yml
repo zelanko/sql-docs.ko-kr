@@ -1,0 +1,8 @@
+- name: Reporting Services SOAP 헤더 사용
+  href: using-reporting-services-soap-headers.md
+- name: 일괄 처리 메서드
+  href: batching-methods.md
+- name: 실행 상태 식별
+  href: identifying-execution-state.md
+- name: GetProperties 메서드에 대한 항목 네임스페이스 설정
+  href: setting-the-item-namespace-for-the-getproperties-method.md

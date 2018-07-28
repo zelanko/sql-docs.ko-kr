@@ -1,0 +1,36 @@
+- name: SQL Server PowerShell
+  href: sql-server-powershell.md
+- name: Windows PowerShell에서 SMO 어셈블리 로드
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: SQL Server Management Studio에서 Windows PowerShell 실행
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: SQL Server PowerShell Provider
+  href: sql-server-powershell-provider.md
+  items:
+    - name: SQL Server PowerShell 경로 탐색
+      href: navigate-sql-server-powershell-paths.md
+    - name: SQL Server PowerShell 경로 작업
+      href: work-with-sql-server-powershell-paths.md
+- name: PowerShell의 SQL Server 식별자
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: SQL Server PowerShell 공급자에 인스턴스 지정
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: SQL Server 식별자 인코딩 및 디코딩
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: SQL Server 식별자 이스케이프
+      href: escape-sql-server-identifiers.md
+- name: 데이터베이스 엔진 PowerShell에서 인증 관리
+  href: manage-authentication-in-database-engine-powershell.md
+- name: 탭 완성 기능 관리(SQL Server PowerShell)
+  href: manage-tab-completion-sql-server-powershell.md
+- name: SQLPS 모듈 가져오기
+  href: ../database-engine/import-the-sqlps-module.md
+- name: URN을 SQL Server 공급자 경로로 변환
+  href: ../database-engine/convert-urns-to-sql-server-provider-paths.md
+- name: 데이터베이스 엔진 cmdlet 사용
+  href: ../database-engine/use-the-database-engine-cmdlets.md
+- name: Get Help SQL Server PowerShell
+  href: ../database-engine/get-help-sql-server-powershell.md

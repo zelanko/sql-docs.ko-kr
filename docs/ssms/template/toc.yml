@@ -1,0 +1,6 @@
+- name: Template Explorer
+  href: template-explorer.md
+- name: 템플릿 열기
+  href: open-a-template.md
+- name: 템플릿 매개 변수 바꾸기
+  href: replace-template-parameters.md

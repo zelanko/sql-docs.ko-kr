@@ -1,0 +1,28 @@
+- name: 프로그래밍 방식으로 연결 추가
+  href: adding-connections-programmatically.md
+- name: 프로그래밍 방식으로 패키지 작성
+  href: building-packages-programmatically.md
+- name: 프로그래밍 방식으로 패키지 만들기
+  href: creating-a-package-programmatically.md
+- name: 프로그래밍 방식으로 태스크 추가
+  href: adding-tasks-programmatically.md
+- name: 프로그래밍 방식으로 태스크 연결
+  href: connecting-tasks-programmatically.md
+- name: 프로그래밍 방식으로 변수 사용
+  href: working-with-variables-programmatically.md
+- name: 프로그래밍 방식으로 이벤트 처리
+  href: handling-events-programmatically.md
+- name: 프로그래밍 방식으로 로깅 설정
+  href: enabling-logging-programmatically.md
+- name: 프로그래밍 방식으로 데이터 흐름 태스크 추가
+  href: adding-the-data-flow-task-programmatically.md
+- name: 프로그래밍 방식으로 데이터 흐름 구성 요소 검색
+  href: discovering-data-flow-components-programmatically.md
+- name: 프로그래밍 방식으로 데이터 흐름 구성 요소 추가
+  href: adding-data-flow-components-programmatically.md
+- name: 프로그래밍 방식으로 데이터 흐름 구성 요소 연결
+  href: connecting-data-flow-components-programmatically.md
+- name: 프로그래밍 방식으로 입력 열 선택
+  href: selecting-input-columns-programmatically.md
+- name: 프로그래밍 방식으로 패키지 저장
+  href: saving-a-package-programmatically.md

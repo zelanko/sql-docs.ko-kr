@@ -1,0 +1,36 @@
+- name: 개요
+  href: spatial-data-sql-server.md
+- name: 데이터 형식
+  href: spatial-data-types-overview.md
+- name: 점
+  href: point.md
+- name: LineString
+  href: linestring.md
+- name: CircularString
+  href: circularstring.md
+- name: CompoundCurve
+  href: compoundcurve.md
+- name: 다각형
+  href: polygon.md
+- name: CurvePolygon
+  href: curvepolygon.md
+- name: MultiPoint
+  href: multipoint.md
+- name: MultiLineString
+  href: multilinestring.md
+- name: MultiPolygon
+  href: multipolygon.md
+- name: GeometryCollection
+  href: geometrycollection.md
+- name: SRID(Spatial Reference Identifier)
+  href: spatial-reference-identifiers-srids.md
+- name: 'geometry 인스턴스 만들기, 구성 및 쿼리'
+  href: create-construct-and-query-geometry-instances.md
+- name: 'geography 인스턴스 만들기, 구성 및 쿼리'
+  href: create-construct-and-query-geography-instances.md
+- name: 가장 인접한 항목의 공간 데이터 쿼리
+  href: query-spatial-data-for-nearest-neighbor.md
+- name: 공간 인덱스 개요
+  href: spatial-indexes-overview.md
+- name: '공간 인덱스 만들기, 수정 및 삭제'
+  href: create-modify-and-drop-spatial-indexes.md

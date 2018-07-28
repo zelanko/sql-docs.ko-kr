@@ -1,0 +1,28 @@
+- name: 배달 확장 프로그램 라이브러리 만들기
+  href: creating-a-delivery-extension-library.md
+- name: 배달 확장 프로그램 코드 디버깅
+  href: debugging-delivery-extension-code.md
+- name: 배달 확장 프로그램 개요
+  href: delivery-extensions-overview.md
+- name: 배달 확장 프로그램 배포
+  href: deploying-a-delivery-extension.md
+- name: 배달 확장 프로그램 구현
+  href: implementing-a-delivery-extension.md
+- name: 배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
+  href: implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+- name: ISubscriptionBaseUIUserControl 인터페이스 구현
+  href: implementing-the-isubscriptionbaseuiusercontrol-interface.md
+- name: 배달 확장 프로그램 구현 준비
+  href: preparing-to-implement-a-delivery-extension.md
+- name: 배달 확장 프로그램 제거
+  href: removing-a-delivery-extension.md
+- name: 배달 확장 프로그램에 대해 Notification 클래스 사용
+  href: using-a-notification-class-for-a-delivery-extension.md
+- name: 배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용
+  href: using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
+- name: 배달 확장 프로그램에 대해 RenderedOutputFile 클래스 사용
+  href: using-the-renderedoutputfile-class-for-a-delivery-extension.md
+- name: 배달 확장 프로그램에 대해 Report 클래스 사용
+  href: using-the-report-class-for-a-delivery-extension.md
+- name: 배달 확장 프로그램에 대해 Setting 클래스 사용
+  href: using-the-setting-class-for-a-delivery-extension.md

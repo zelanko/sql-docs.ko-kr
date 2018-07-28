@@ -1,0 +1,10 @@
+- name: AliasName 속성(SqlServerAlias 클래스)
+  href: aliasname-property-sqlserveralias-class.md
+- name: ConnectionString 속성(SqlServerAlias 클래스)
+  href: connectionstring-property-sqlserveralias-class.md
+- name: ProtocolName 속성(SqlServerAlias 클래스)
+  href: protocolname-property-sqlserveralias-class.md
+- name: ServerName 속성(SqlServerAlias 클래스)
+  href: servername-property-sqlserveralias-class.md
+- name: SqlServerAlias 클래스
+  href: sqlserveralias-class.md

@@ -1,0 +1,8 @@
+- name: 데이터 형식(OLE DB)
+  href: data-types-ole-db.md
+- name: ITableDefinition의 데이터 형식 매핑
+  href: data-type-mapping-in-itabledefinition.md
+- name: 행 집합 및 매개 변수의 데이터 형식 매핑
+  href: data-type-mapping-in-rowsets-and-parameters.md
+- name: SSVARIANT 구조
+  href: ssvariant-structure.md

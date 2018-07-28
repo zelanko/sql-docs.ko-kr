@@ -1,0 +1,69 @@
+- name: 확장 이벤트
+  href: extended-events.md
+- name: 확장 이벤트 세션 만들기
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+    - name: 쿼리 편집기를 사용하여 확장 이벤트 세션 만들기
+      href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+    - name: 마법사를 사용하여 확장 이벤트 세션을 만들기(개체 탐색기)
+      href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+    - name: 새 세션 대화 상자를 사용하여 확장 이벤트 세션 만들기
+      href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: 개체 탐색기에서 이벤트 세션 관리
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: 이벤트 세션 데이터 보기
+  href: ../../database-engine/view-event-session-data.md
+- name: 확장 이벤트 패키지
+  href: sql-server-extended-events-packages.md
+- name: 확장 이벤트 대상
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+    - name: 이벤트 카운터 대상
+      href: ../../database-engine/event-counter-target.md
+    - name: Event File Target
+      href: ../../database-engine/event-file-target.md
+    - name: 이벤트 쌍 대상
+      href: ../../database-engine/event-pairing-target.md
+    - name: 히스토그램 대상
+      href: ../../database-engine/histogram-target.md
+    - name: 링 버퍼 대상
+      href: ../../database-engine/ring-buffer-target.md
+    - name: Windows용 이벤트 추적 대상
+      href: event-tracing-for-windows-target.md
+- name: 확장 이벤트 엔진
+  href: sql-server-extended-events-engine.md
+- name: 확장 이벤트 세션
+  href: sql-server-extended-events-sessions.md
+- name: 확장 이벤트 도구
+  href: extended-events-tools.md
+  items:
+    - name: system_health 세션 사용
+      href: use-the-ssms-xe-profiler.md
+    - name: 확장 이벤트에 PowerShell 공급자 사용
+      href: use-the-powershell-provider-for-extended-events.md
+- name: 확장 이벤트 세션 스크립팅
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: 확장 이벤트 세션 변경
+  href: alter-an-extended-events-session.md
+- name: 대상 데이터 복사 또는 내보내기
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: 추적 결과 보기 수정
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: 모든 이벤트에 대한 필드 가져오기
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: 등록된 패키지에 대한 이벤트 보기
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: 등록된 패키지의 확장 이벤트 대상 보기
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: 기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 잠금을 보유한 쿼리 파악
+  href: determine-which-queries-are-holding-locks.md
+- name: 가장 많은 잠금이 발생한 개체 찾기
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: 확장 이벤트를 사용하여 시스템 작업 모니터링
+  href: monitor-system-activity-using-extended-events.md

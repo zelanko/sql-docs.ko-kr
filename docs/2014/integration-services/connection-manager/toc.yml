@@ -1,0 +1,64 @@
+- name: Integration Services(SSIS) 연결
+  href: integration-services-ssis-connections.md
+- name: Analysis Services 연결 관리자
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Analysis Services 연결 관리자 추가 대화 상자 UI 참조
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: FTP 연결 관리자
+  href: ftp-connection-manager.md
+  items:
+    - name: FTP 연결 관리자 편집기
+      href: ../ftp-connection-manager-editor.md
+- name: HTTP 연결 관리자
+  href: http-connection-manager.md
+  items:
+    - name: HTTP 연결 관리자 편집기(서버 페이지)
+      href: ../http-connection-manager-editor-server-page.md
+    - name: HTTP 연결 관리자 편집기(프록시 페이지)
+      href: ../http-connection-manager-editor-proxy-page.md
+- name: MSMQ 연결 관리자
+  href: msmq-connection-manager.md
+  items:
+    - name: MSMQ 연결 관리자 편집기
+      href: ../msmq-connection-manager-editor.md
+- name: SMTP 연결 관리자
+  href: smtp-connection-manager.md
+  items:
+    - name: SMTP 연결 관리자 편집기
+      href: ../smtp-connection-manager-editor.md
+- name: SMO 연결 관리자
+  href: smo-connection-manager.md
+  items:
+    - name: SMO 연결 관리자 편집기
+      href: ../smo-connection-manager-editor.md
+- name: WMI 연결 관리자
+  href: wmi-connection-manager.md
+  items:
+    - name: WMI 연결 관리자 편집기
+      href: ../wmi-connection-manager-editor.md
+- name: 연결 관리자 만들기
+  href: ../create-connection-managers.md
+- name: 다중 파일 연결 관리자
+  href: multiple-files-connection-manager.md
+- name: 연결 관리자 영역
+  href: ../connection-managers-area.md
+- name: 패키지 연결 문제 해결 도구
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: '패키지에서 연결 관리자 추가, 삭제 또는 공유'
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+    - name: SSIS 연결 관리자 추가
+      href: ../add-ssis-connection-manager.md
+- name: 연결 관리자의 속성 설정
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Azure Data Lake Store 연결 관리자
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight 연결 관리자
+  href: ../azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager 연결 관리자
+  href: ../azure-resource-manager-connection-manager.md
+- name: Azure 저장소 연결 관리자
+  href: azure-storage-connection-manager.md
+- name: Azure 구독 연결 관리자
+  href: azure-subscription-connection-manager.md

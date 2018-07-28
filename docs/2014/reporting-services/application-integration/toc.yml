@@ -1,0 +1,23 @@
+- name: 응용 프로그램에 Reporting Services 통합
+  href: integrating-reporting-services-into-applications.md
+  items:
+    - name: URL 액세스와 SOAP 중 선택
+      href: choosing-between-url-access-and-soap.md
+    - name: URL 액세스를 사용하여 Reporting Services 통합
+      href: integrating-reporting-services-using-url-access.md
+    - name: 웹 응용 프로그램에서 URL 액세스 사용
+      href: integrating-reporting-services-using-url-access-web-application.md
+    - name: Windows 응용 프로그램에서 URL 액세스 사용
+      href: integrating-reporting-services-using-url-access-windows-application.md
+    - name: SOAP을 사용하여 Reporting Services 통합
+      href: integrating-reporting-services-using-soap.md
+    - name: Windows 응용 프로그램에서 SOAP API 사용
+      href: integrating-reporting-services-using-soap-windows-application.md
+    - name: 웹 응용 프로그램에서 SOAP API 사용
+      href: integrating-reporting-services-using-soap-web-application.md
+    - name: ReportViewer 컨트롤을 사용하여 Reporting Services 통합
+      href: integrating-reporting-services-using-reportviewer-controls.md
+    - name: WinForms ReportViewer 컨트롤 사용
+      href: using-the-winforms-reportviewer-control.md
+    - name: WebForms ReportViewer 컨트롤 사용
+      href: using-the-webforms-reportviewer-control.md

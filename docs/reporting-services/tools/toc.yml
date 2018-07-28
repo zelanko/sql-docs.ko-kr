@@ -1,0 +1,106 @@
+- name: 개요
+  href: reporting-services-tools.md
+- name: SQL Server Data Tools의 Reporting Services
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: 보고서 디자이너로 보고서 디자인
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: 보고서 프로젝트에 새 보고서 또는 기존 보고서 추가
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+    - name: SQL Server Data Tools의 배포 및 버전 지원
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: 배포 속성 설정
+      href: set-deployment-properties-reporting-services.md
+    - name: 보고서 디자이너에서 보고서 데이터 창 도킹
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: 보고서 디자이너 F1 도움말
+      href: report-designer-f1-help.md
+      items:
+        - name: 문서 개요
+          href: document-outline.md
+        - name: 디자인 뷰
+          href: design-view.md
+        - name: 미리 보기 뷰
+          href: preview-view.md
+        - name: 그룹화 창
+          href: grouping-pane.md
+        - name: 프로젝트 속성 페이지 대화 상자
+          href: project-property-pages-dialog-box.md
+        - name: Reporting Services 로그인 대화 상자(SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+- name: SQL Server Management Studio의 Reporting Services
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: 보고서 서버 속성 설정
+      href: set-report-server-properties-management-studio.md
+    - name: Management Studio에서 보고서 서버에 연결
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: 항목 삭제
+      href: delete-an-item-management-studio.md
+    - name: Management Studio의 보고서 서버 F1 도움말
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: 보고서 서버 작업 취소
+          href: cancel-report-server-jobs-management-studio.md
+        - name: 카탈로그 항목 삭제
+          href: delete-catalog-items-management-studio.md
+        - name: 작업 속성
+          href: job-properties-management-studio.md
+        - name: 새 공유 일정
+          href: new-shared-schedule-management-studio.md
+        - name: 새 시스템 역할
+          href: new-system-role-management-studio.md
+        - name: 새 사용자 역할
+          href: new-user-role-management-studio.md
+        - name: 일정 속성(일반 페이지)
+          href: schedule-properties-general-page.md
+        - name: 일정 속성(보고서 페이지)
+          href: schedule-properties-reports-page.md
+        - name: 서버 속성(일반 페이지)
+          href: report-server-properties-general-page.md
+        - name: 서버 속성(실행 페이지)
+          href: server-properties-execution-page.md
+        - name: 서버 속성(기록 페이지)
+          href: server-properties-history-page.md
+        - name: 서버 속성(로깅 페이지)
+          href: server-properties-logging-page.md
+        - name: 서버 속성(보안 페이지)
+          href: server-properties-security-page-reporting-services.md
+        - name: 서버 속성(고급 페이지)
+          href: server-properties-advanced-page-reporting-services.md
+        - name: 시스템 역할 속성
+          href: system-role-properties-management-studio.md
+        - name: 사용자 역할 속성
+          href: user-role-properties-management-studio.md
+- name: 보고서 작성기 제작 환경
+  href: report-builder-authoring-environment-ssrs.md
+- name: Reporting Services를 사용한 스크립팅 및 PowerShell
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+      items:
+        - name: Reporting Services 스크립트 파일 형식 지정
+          href: format-a-reporting-services-script-file.md
+        - name: Reporting Services 스크립트 파일 실행
+          href: run-a-reporting-services-script-file.md
+    - name: 배포 및 관리 태스크 스크립팅
+      href: script-deployment-and-administrative-tasks.md
+    - name: 보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: Reporting Services WMI 공급자 액세스
+      href: access-the-reporting-services-wmi-provider.md
+- name: 보고서 서버 명령 프롬프트 유틸리티
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: rskeymgmt 유틸리티
+      href: rskeymgmt-utility-ssrs.md
+    - name: rsconfig 유틸리티
+      href: rsconfig-utility-ssrs.md
+    - name: RS.exe 유틸리티(SSRS)
+      href: rs-exe-utility-ssrs.md
+- name: '자습서: Reporting Services 도구 찾기 및 시작 방법'
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md

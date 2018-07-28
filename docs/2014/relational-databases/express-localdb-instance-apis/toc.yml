@@ -1,0 +1,33 @@
+- name: SQL Server Express LocalDB 인스턴스 API 참조
+  href: sql-server-express-localdb-reference-instance-apis.md
+  items:
+    - name: SQL Server Express LocalDB 헤더 및 버전 정보
+      href: sql-server-express-localdb-header-and-version-information.md
+    - name: '명령줄 관리 도구: SqlLocalDB.exe'
+      href: command-line-management-tool-sqllocaldb-exe.md
+    - name: LocalDBCreateInstance 함수
+      href: localdbcreateinstance-function.md
+    - name: LocalDBDeleteInstance 함수
+      href: localdbdeleteinstance-function.md
+    - name: LocalDBFormatMessage 함수
+      href: localdbformatmessage-function.md
+    - name: LocalDBGetInstanceInfo 함수
+      href: localdbgetinstanceinfo-function.md
+    - name: LocalDBGetInstances 함수
+      href: localdbgetinstances-function.md
+    - name: LocalDBGetVersionInfo 함수
+      href: localdbgetversioninfo-function.md
+    - name: LocalDBGetVersions 함수
+      href: localdbgetversions-function.md
+    - name: LocalDBShareInstance 함수
+      href: localdbshareinstance-function.md
+    - name: LocalDBStartInstance 함수
+      href: localdbstartinstance-function.md
+    - name: LocalDBStartTracing 함수
+      href: localdbstarttracing-function.md
+    - name: LocalDBStopInstance 함수
+      href: localdbstopinstance-function.md
+    - name: LocalDBStopTracing 함수
+      href: localdbstoptracing-function.md
+    - name: LocalDBUnshareInstance 함수
+      href: localdbunshareinstance-function.md

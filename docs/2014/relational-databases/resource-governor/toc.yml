@@ -1,0 +1,36 @@
+- name: 관리
+  href: resource-governor.md
+  items:
+    - name: 리소스 관리자 사용
+      href: enable-resource-governor.md
+    - name: 리소스 관리자 사용 안 함
+      href: disable-resource-governor.md
+- name: 리소스 관리자 리소스 풀
+  href: resource-governor-resource-pool.md
+  items:
+    - name: 리소스 풀 만들기
+      href: create-a-resource-pool.md
+    - name: 리소스 풀 설정 변경
+      href: change-resource-pool-settings.md
+    - name: 리소스 풀 삭제
+      href: delete-a-resource-pool.md
+- name: 리소스 관리자 작업 그룹
+  href: resource-governor-workload-group.md
+  items:
+    - name: 작업 그룹 만들기
+      href: create-a-workload-group.md
+    - name: 작업 그룹 설정 변경
+      href: change-workload-group-settings.md
+    - name: 작업 그룹 이동
+      href: move-a-workload-group.md
+    - name: 작업 그룹 삭제
+      href: delete-a-workload-group.md
+- name: Resource Governor Classifier Function
+  href: resource-governor-classifier-function.md
+  items:
+    - name: 분류자 사용자 정의 함수 만들기 및 테스트
+      href: create-and-test-a-classifier-user-defined-function.md
+- name: 템플릿을 사용하여 리소스 관리자 구성
+  href: configure-resource-governor-using-a-template.md
+- name: 리소스 관리자 속성 보기
+  href: view-resource-governor-properties.md

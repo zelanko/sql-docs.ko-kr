@@ -1,0 +1,23 @@
+- name: SQL Server Distributed Replay
+  href: sql-server-distributed-replay.md
+- name: Configure Distributed Replay
+  href: configure-distributed-replay.md
+- name: 입력 추적 데이터 준비
+  href: prepare-the-input-trace-data.md
+- name: 추적 데이터 재생
+  href: replay-trace-data.md
+- name: 재생 결과 검토
+  href: review-the-replay-results.md
+- name: Distributed Replay 보안
+  href: distributed-replay-security.md
+- name: 관리 도구 명령줄 옵션(Distributed Replay Utility)
+  href: administration-tool-command-line-options-distributed-replay-utility.md
+  items:
+    - name: 전처리 옵션(Distributed Replay Utility Administration Tool)
+      href: preprocess-option-distributed-replay-administration-tool.md
+    - name: 재생 옵션(Distributed Replay Administration Tool)
+      href: replay-option-distributed-replay-administration-tool.md
+    - name: 상태 옵션(Distributed Replay Administration Tool)
+      href: status-option-distributed-replay-administration-tool.md
+    - name: 취소 옵션(Distributed Replay Administration Tool)
+      href: cancel-option-distributed-replay-administration-tool.md

@@ -1,0 +1,222 @@
+- name: 개요
+  href: data-flow.md
+- name: 데이터 흐름의 데이터
+  href: data-in-data-flows.md
+  items:
+    - name: Integration Services 데이터 형식
+      href: integration-services-data-types.md
+    - name: 데이터 구문 분석
+      href: parsing-data.md
+    - name: 문자열 데이터 비교
+      href: comparing-string-data.md
+- name: 데이터 흐름에서 구성 요소 추가 또는 삭제
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: 데이터 흐름 구성 요소의 속성 설정
+  href: set-the-properties-of-a-data-flow-component.md
+- name: 데이터 흐름의 구성 요소 연결
+  href: connect-components-in-a-data-flow.md
+- name: Integration Services 경로
+  href: integration-services-paths.md
+- name: 열 참조 확인 편집기
+  href: resolve-column-reference-editor.md
+- name: 데이터 뷰어
+  href: data-viewer.md
+- name: 데이터 오류 처리
+  href: error-handling-in-data.md
+- name: 데이터 흐름 성능 기능
+  href: data-flow-performance-features.md
+- name: 원본 길잡이
+  href: source-assistant.md
+- name: 대상 길잡이
+  href: destination-assistant.md
+- name: ADO.NET 원본
+  href: ado-net-source.md
+- name: ADO.NET 대상
+  href: ado-net-destination.md
+- name: ADO.NET 사용자 지정 속성
+  href: ado-net-custom-properties.md
+- name: Azure Blob 원본
+  href: azure-blob-source.md
+- name: Azure Blob 대상
+  href: azure-blob-destination.md
+- name: Azure Data Lake Store 원본
+  href: azure-data-lake-store-source.md
+- name: Azure Data Lake Store 대상
+  href: azure-data-lake-store-destination.md
+- name: CDC 흐름 구성 요소
+  href: cdc-flow-components.md
+  items:
+    - name: CDC 원본
+      href: cdc-source.md
+      items:
+        - name: CDC 원본 사용자 지정 속성
+          href: cdc-source-custom-properties.md
+        - name: CDC 원본을 사용하여 변경 데이터 추출
+          href: extract-change-data-using-the-cdc-source.md
+    - name: CDC 분할자
+      href: cdc-splitter.md
+    - name: 변경 유형에 따라 CDC 스트림 전송
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: 상태 변수 정의
+      href: define-a-state-variable.md
+- name: 데이터 마이닝 모델 학습 대상
+  href: data-mining-model-training-destination.md
+  items:
+    - name: 데이터 마이닝 모델 학습 대상 사용자 지정 속성
+      href: data-mining-model-training-destination-custom-properties.md
+- name: 데이터 스트리밍 대상
+  href: data-streaming-destination.md
+  items:
+    - name: '연습: SSIS 패키지를 SQL 뷰로 게시'
+      href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
+- name: DataReader 대상
+  href: datareader-destination.md
+  items:
+    - name: DataReader 대상 사용자 지정 속성
+      href: datareader-destination-custom-properties.md
+- name: 차원 처리 대상
+  href: dimension-processing-destination.md
+  items:
+    - name: 차원 처리 대상 사용자 지정 속성
+      href: dimension-processing-destination-custom-properies.md
+- name: Excel 원본
+  href: excel-source.md
+- name: Excel 대상
+  href: excel-destination.md
+- name: Excel 사용자 지정 속성
+  href: excel-custom-properties.md
+- name: 플랫 파일 원본
+  href: flat-file-source.md
+- name: 플랫 파일 대상
+  href: flat-file-destination.md
+- name: HDFS 파일 원본
+  href: hdfs-file-source.md
+- name: HDFS 파일 대상
+  href: hdfs-file-destination.md
+- name: 플랫 파일 사용자 지정 속성
+  href: flat-file-custom-properties.md
+- name: OData 원본
+  href: odata-source.md
+  items:
+    - name: '자습서: OData 원본 사용'
+      href: tutorial-using-the-odata-source.md
+    - name: 런타임에 OData 원본 쿼리 제공
+      href: modify-odata-source-query-at-runtime.md
+    - name: OData 원본 속성
+      href: odata-source-properties.md
+- name: ODBC 흐름 구성 요소
+  href: odbc-flow-components.md
+  items:
+    - name: ODBC 대상
+      href: odbc-destination.md
+      items:
+        - name: ODBC 대상을 사용하여 데이터 로드
+          href: load-data-by-using-the-odbc-destination.md
+        - name: ODBC Destination Custom Properties
+          href: odbc-destination-custom-properties.md
+    - name: ODBC 원본
+      href: odbc-source.md
+      items:
+        - name: ODBC 원본을 사용하여 데이터 추출
+          href: extract-data-by-using-the-odbc-source.md
+        - name: ODBC Source Custom Properties
+          href: odbc-source-custom-properties.md
+- name: OLE DB 원본
+  href: ole-db-source.md
+  items:
+    - name: 쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
+      href: map-query-parameters-to-variables-in-a-data-flow-component.md
+    - name: OLE DB 원본을 사용하여 데이터 추출
+      href: extract-data-by-using-the-ole-db-source.md
+- name: OLE DB 대상
+  href: ole-db-destination.md
+  items:
+    - name: OLE DB 대상을 사용하여 데이터 로드
+      href: load-data-by-using-the-ole-db-destination.md
+- name: OLE DB 사용자 지정 속성
+  href: ole-db-custom-properties.md
+- name: 파티션 처리 대상
+  href: partition-processing-destination.md
+  items:
+    - name: 파티션 처리 대상 사용자 지정 속성
+      href: partition-processing-destination-custom-properties.md
+- name: 원시 파일 원본
+  href: raw-file-source.md
+- name: Raw File Destination
+  href: raw-file-destination.md
+- name: 원시 파일 사용자 지정 속성
+  href: raw-file-custom-properties.md
+- name: 레코드 집합 대상
+  href: recordset-destination.md
+  items:
+    - name: 레코드 집합 대상 사용
+      href: use-a-recordset-destination.md
+    - name: 레코드 집합 대상 사용자 지정 속성
+      href: recordset-destination-custom-properties.md
+- name: SAP BW 원본
+  href: sap-bw-source.md
+  items:
+    - name: SAP BW 원본 편집기(연결 관리자 페이지)
+      href: sap-bw-source-editor-connection-manager-page.md
+    - name: SAP BW 원본 편집기(열 페이지)
+      href: sap-bw-source-editor-columns-page.md
+    - name: SAP BW 원본 편집기(오류 출력 페이지)
+      href: sap-bw-source-editor-error-output-page.md
+    - name: SAP BW 원본 편집기(고급 페이지)
+      href: sap-bw-source-editor-advanced-page.md
+    - name: RFC 대상 조회
+      href: look-up-rfc-destination.md
+    - name: 프로세스 체인 조회
+      href: look-up-process-chain.md
+    - name: 요청 로그
+      href: request-log.md
+    - name: 미리 보기
+      href: preview.md
+- name: SAP BW 대상
+  href: sap-bw-destination.md
+  items:
+    - name: SAP BW 대상 편집기(연결 관리자 페이지)
+      href: sap-bw-destination-editor-connection-manager-page.md
+    - name: SAP BW 대상 편집기(매핑 페이지)
+      href: sap-bw-destination-editor-mappings-page.md
+    - name: SAP BW 대상 편집기(오류 출력 페이지)
+      href: sap-bw-destination-editor-error-output-page.md
+    - name: SAP BW 대상 편집기(고급 페이지)
+      href: sap-bw-destination-editor-advanced-page.md
+    - name: InfoPackage 조회
+      href: look-up-infopackage.md
+    - name: 새 InfoObject 만들기
+      href: create-new-infoobject.md
+    - name: 트랜잭션 데이터용 InfoCube 만들기
+      href: create-infocube-for-transaction-data.md
+    - name: InfoObject 조회
+      href: look-up-infoobject.md
+    - name: InfoSource 만들기
+      href: create-infosource.md
+    - name: 트랜잭션 데이터용 InfoSource 만들기
+      href: create-infosource-for-transaction-data.md
+    - name: 마스터 데이터용 InfoSource 만들기
+      href: create-infosource-for-master-data.md
+    - name: InfoPackage 만들기
+      href: create-infopackage.md
+- name: SQL Server Compact Edition 대상
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: SQL Server Compact Edition 대상 사용자 지정 속성
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server 대상
+  href: sql-server-destination.md
+  items:
+    - name: SQL Server 대상을 사용하여 데이터 대량 로드
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: SQL Server 대상 사용자 지정 속성
+      href: sql-server-destination-custom-properties.md
+- name: 변환
+  href: ../../integration-services/data-flow/transformations/integration-services-transformations.md
+- name: XML 원본
+  href: xml-source.md
+  items:
+    - name: XML 원본을 사용하여 데이터 추출
+      href: extract-data-by-using-the-xml-source.md
+    - name: XML 원본 사용자 지정 속성
+      href: xml-source-custom-properties.md

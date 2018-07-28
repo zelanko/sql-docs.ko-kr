@@ -1,0 +1,10 @@
+- name: .NET Framework의 SQL Server 데이터 형식
+  href: sql-server-data-types-in-the-net-framework.md
+- name: 데이터 정렬 및 CLR 통합 데이터 형식
+  href: collation-and-clr-integration-data-types.md
+- name: CLR의 LOB(Large Object) 매개 변수 처리
+  href: handling-large-object-lob-parameters-in-the-clr.md
+- name: CLR 매개 변수 데이터 매핑
+  href: mapping-clr-parameter-data.md
+- name: Null 허용 여부 및 3개의 값 논리 비교
+  href: nullability-and-three-value-logic-comparisons.md

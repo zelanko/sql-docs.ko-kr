@@ -1,0 +1,24 @@
+- name: Context 속성(SecurityCertificate 클래스)
+  href: context-property-securitycertificate-class.md
+- name: ExpirationDate 속성(SecurityCertificate 클래스)
+  href: expirationdate-property-securitycertificate-class.md
+- name: FriendlyName 속성(SecurityCertificate 클래스)
+  href: friendlyname-property-securitycertificate-class.md
+- name: GetCurrentCertificate 메서드(SecurityCertificate 클래스)
+  href: getcurrentcertificate-method-securitycertificate-class.md
+- name: IssuedBy 속성(SecurityCertificate 클래스)
+  href: issuedby-property-securitycertificate-class.md
+- name: IssuedTo 속성(SecurityCertificate 클래스)
+  href: issuedto-property-securitycertificate-class.md
+- name: Name 속성(SecurityCertificate 클래스)
+  href: name-property-securitycertificate-class.md
+- name: SecurityCertificate 클래스
+  href: securitycertificate-class.md
+- name: SetCurrentCertificate 메서드(SecurityCertificate 클래스)
+  href: setcurrentcertificate-method-securitycertificate-class.md
+- name: SHA 속성(SecurityCertificate 클래스)
+  href: sha-property-securitycertificate-class.md
+- name: StartDate 속성(SecurityCertificate 클래스)
+  href: startdate-property-securitycertificate-class.md
+- name: SystemStore 속성(SecurityCertificate 클래스)
+  href: systemstore-property-securitycertificate-class.md

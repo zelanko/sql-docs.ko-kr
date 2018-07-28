@@ -1,0 +1,17 @@
+- name: 보고서에서 사용자 지정 어셈블리 사용
+  href: using-custom-assemblies-with-reports.md
+  items:
+    - name: RDL 파일에서 어셈블리 참조
+      href: referencing-assemblies-in-an-rdl-file.md
+    - name: 사용자 지정 어셈블리 배포
+      href: deploying-a-custom-assembly.md
+    - name: 강력한 이름의 사용자 지정 어셈블리 사용
+      href: using-strong-named-custom-assemblies.md
+    - name: 사용자 지정 어셈블리에서 권한 어설션
+      href: asserting-permissions-in-custom-assemblies.md
+    - name: 식을 통해 사용자 지정 어셈블리 액세스
+      href: accessing-custom-assemblies-through-expressions.md
+    - name: 사용자 지정 어셈블리 개체 초기화
+      href: initializing-custom-assembly-objects.md
+    - name: '방법: 사용자 지정 어셈블리 디버깅'
+      href: how-to-debug-custom-assemblies.md
