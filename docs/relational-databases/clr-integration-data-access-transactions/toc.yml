@@ -1,0 +1,10 @@
+- name: CLR 통합 및 트랜잭션
+  href: clr-integration-and-transactions.md
+- name: 현재 트랜잭션 액세스
+  href: accessing-the-current-transaction.md
+- name: 트랜잭션 수명
+  href: transaction-lifetimes.md
+- name: 트랜잭션 승격
+  href: transaction-promotion.md
+- name: System.Transactions 사용
+  href: using-system-transactions.md

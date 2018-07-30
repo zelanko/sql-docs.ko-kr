@@ -1,0 +1,78 @@
+- name: 성능 모니터링 및 튜닝
+  href: monitor-and-tune-for-performance.md
+- name: SQL Server 구성 요소 모니터링
+  href: monitor-sql-server-components.md
+- name: 성능 모니터링 및 튜닝 도구
+  href: performance-monitoring-and-tuning-tools.md
+- name: 카디널리티 추정
+  href: cardinality-estimation-sql-server.md
+- name: 성능 기준선 설정
+  href: establish-a-performance-baseline.md
+- name: 성능 문제 격리
+  href: isolate-performance-problems.md
+- name: 병목 상태 식별
+  href: identify-bottlenecks.md
+- name: 쿼리 저장소를 사용하여 성능 모니터링
+  href: monitoring-performance-by-using-the-query-store.md
+- name: 서버 성능 및 작업 모니터링
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: 시스템 모니터 시작(Windows)
+      href: start-system-monitor-windows.md
+    - name: SQL Server 데이터베이스 경고 설정(Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: Windows 응용 프로그램 로그 보기(Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: SQL Server 오류 로그 보기(SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: 교착 상태 그래프 저장(SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: '교착 상태 파일 열기, 보기 및 인쇄(SQL Server Management Studio)'
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Showplan XML 이벤트를 개별적으로 저장(SQL Server 프로파일러)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: 실행 계획 표시 및 저장
+  href: display-and-save-execution-plans.md
+  items:
+    - name: 예상 실행 계획 표시
+      href: display-the-estimated-execution-plan.md
+    - name: 실제 실행 계획 표시
+      href: display-an-actual-execution-plan.md
+    - name: XML 형식으로 실행 계획 저장
+      href: save-an-execution-plan-in-xml-format.md
+- name: 계획 지침
+  href: plan-guides.md
+  items:
+    - name: 새 계획 지침 만들기
+      href: create-a-new-plan-guide.md
+    - name: 매개 변수가 있는 쿼리를 위한 계획 지침 만들기
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: 계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: 계획 지침에 정해진 쿼리 계획 적용
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: 계획 지침에 쿼리 힌트 연결
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: 계획 지침 속성 보기
+      href: view-plan-guide-properties.md
+    - name: SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: 업그레이드 후 계획 지침의 유효성 검사
+      href: validate-plan-guides-after-upgrade.md
+    - name: 계획 지침 삭제
+      href: delete-a-plan-guide.md
+    - name: 계획 지침 사용 또는 사용 안 함
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: 데이터베이스 엔진 튜닝 관리자 시작 및 사용
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: 프로덕션 서버 튜닝 로드 줄이기
+      href: reduce-the-production-server-tuning-load.md
+    - name: 테스트 서버 사용 시 고려 사항
+      href: considerations-for-using-test-servers.md
+    - name: 데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

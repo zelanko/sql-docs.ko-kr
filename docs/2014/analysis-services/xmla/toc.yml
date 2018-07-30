@@ -1,0 +1,381 @@
+- name: XMLA 참조
+  href: xml-for-analysis-xmla-reference.md
+- name: XML 요소(XMLA)
+  href: ../dev-guide/xml-elements-xmla.md
+- name: 헤더
+  href: xml-elements-headers/xml-elements-headers.md
+  items:
+    - name: BeginSession 요소
+      href: xml-elements-headers/beginsession-element-xmla.md
+    - name: EndSession 요소
+      href: xml-elements-headers/endsession-element-xmla.md
+    - name: Session 요소
+      href: xml-elements-headers/session-element-xmla.md
+    - name: ProtocolCapabilities 요소
+      href: xml-elements-headers/protocolcapabilities-element-xmla.md
+- name: 메서드
+  href: xml-elements-methods.md
+  items:
+    - name: Discover 메서드
+      href: xml-elements-methods-discover.md
+    - name: Execute 메서드
+      href: xml-elements-methods-execute.md
+- name: 명령
+  href: xml-elements-commands/xml-elements-commands.md
+  items:
+    - name: Alter 요소
+      href: xml-elements-commands/alter-element-xmla.md
+    - name: Attach 요소
+      href: xml-elements-commands/attach-element.md
+    - name: Backup 요소
+      href: xml-elements-commands/backup-element-xmla.md
+    - name: Batch 요소
+      href: xml-elements-commands/batch-element-xmla.md
+    - name: BeginTransaction 요소
+      href: xml-elements-commands/begintransaction-element-xmla.md
+    - name: Cancel 요소
+      href: xml-elements-commands/cancel-element-xmla.md
+    - name: ClearCache 요소
+      href: xml-elements-commands/clearcache-element-xmla.md
+    - name: CommitTransaction 요소
+      href: xml-elements-commands/committransaction-element-xmla.md
+    - name: Create 요소
+      href: xml-elements-commands/create-element-xmla.md
+    - name: Delete 요소
+      href: xml-elements-commands/delete-element-xmla.md
+    - name: DesignAggregations 요소
+      href: xml-elements-commands/designaggregations-element-xmla.md
+    - name: Detach 요소
+      href: xml-elements-commands/detach-element.md
+    - name: Drop 요소
+      href: xml-elements-commands/drop-element-xmla.md
+    - name: Insert 요소
+      href: xml-elements-commands/insert-element-xmla.md
+    - name: Lock 요소
+      href: xml-elements-commands/lock-element-xmla.md
+    - name: MergePartitions 요소
+      href: xml-elements-commands/mergepartitions-element-xmla.md
+    - name: NotifyTableChange 요소
+      href: xml-elements-commands/notifytablechange-element-xmla.md
+    - name: Process 요소
+      href: xml-elements-commands/process-element-xmla.md
+    - name: Restore 요소
+      href: xml-elements-commands/restore-element-xmla.md
+    - name: RollbackTransaction 요소
+      href: xml-elements-commands/rollbacktransaction-element-xmla.md
+    - name: Statement 요소
+      href: xml-elements-commands/statement-element-xmla.md
+    - name: Subscribe 요소
+      href: xml-elements-commands/subscribe-element-xmla.md
+    - name: Synchronize 요소
+      href: xml-elements-commands/synchronize-element-xmla.md
+    - name: Unlock 요소
+      href: xml-elements-commands/unlock-element-xmla.md
+    - name: Update 요소
+      href: xml-elements-commands/update-element-xmla.md
+    - name: UpdateCells 요소
+      href: xml-elements-commands/updatecells-element-xmla.md
+- name: 개체
+  href: xml-elements-objects.md
+  items:
+    - name: DiscoverResponse 요소
+      href: xml-elements-objects-discoverresponse.md
+    - name: ExecuteResponse 요소
+      href: xml-elements-objects-executeresponse.md
+- name: 속성
+  href: xml-elements-properties/xml-elements-properties.md
+  items:
+    - name: AllowOverwrite 요소
+      href: xml-elements-properties/allowoverwrite-element-xmla.md
+    - name: ApplyCompression 요소
+      href: xml-elements-properties/applycompression-element-xmla.md
+    - name: Attribute 요소
+      href: xml-elements-properties/attribute-element-xmla.md
+    - name: AttributeName 요소
+      href: xml-elements-properties/attributename-element-xmla.md
+    - name: Attributes 요소
+      href: xml-elements-properties/attributes-element-xmla.md
+    - name: Axes 요소
+      href: xml-elements-properties/axes-element-xmla.md
+    - name: AxesInfo 요소
+      href: xml-elements-properties/axesinfo-element-xmla.md
+    - name: Axis 요소
+      href: xml-elements-properties/axis-element-xmla.md
+    - name: AxisInfo 요소
+      href: xml-elements-properties/axisinfo-element-xmla.md
+    - name: BackupRemotePartitions 요소
+      href: xml-elements-properties/backupremotepartitions-element-xmla.md
+    - name: Binding 요소
+      href: xml-elements-properties/binding-element-xmla.md
+    - name: Bindings 요소
+      href: xml-elements-properties/bindings-element-xmla.md
+    - name: CancelAssociated 요소
+      href: xml-elements-properties/cancelassociated-element-xmla.md
+    - name: Capability 요소
+      href: xml-elements-properties/capability-element-xmla.md
+    - name: Caption 요소
+      href: xml-elements-properties/caption-element-xmla.md
+    - name: Cell 요소
+      href: xml-elements-properties/cell-element-xmla.md
+    - name: Cell 요소(MDDataSet)
+      href: xml-elements-properties/cell-element-mddataset-xmla.md
+    - name: CellData 요소
+      href: xml-elements-properties/celldata-element-xmla.md
+    - name: CellInfo 요소
+      href: xml-elements-properties/cellinfo-element-xmla.md
+    - name: CellOrdinal 요소
+      href: xml-elements-properties/cellordinal-element-xmla.md
+    - name: Command 요소
+      href: xml-elements-properties/command-element-xmla.md
+    - name: ConnectionID 요소
+      href: xml-elements-properties/connectionid-element-xmla.md
+    - name: ConnectionString 요소
+      href: xml-elements-properties/connectionstring-element-xmla.md
+    - name: CrossProduct 요소
+      href: xml-elements-properties/crossproduct-element-xmla.md
+    - name: Cube 요소
+      href: xml-elements-properties/cube-element-xmla.md
+    - name: Cube 요소(OlapInfo)
+      href: xml-elements-properties/cube-element-olapinfo-xmla.md
+    - name: CubeID 요소
+      href: xml-elements-properties/cubeid-element-xmla.md
+    - name: CubeInfo 요소
+      href: xml-elements-properties/cubeinfo-element-xmla.md
+    - name: CubeName 요소
+      href: xml-elements-properties/cubename-element-xmla.md
+    - name: CustomRollup 요소
+      href: xml-elements-properties/customrollup-element-xmla.md
+    - name: CustomRollupProperties 요소
+      href: xml-elements-properties/customrollupproperties-element-xmla.md
+    - name: Database 요소
+      href: xml-elements-properties/database-element-xmla.md
+    - name: DatabaseID 요소
+      href: xml-elements-properties/databaseid-element-xmla.md
+    - name: DatabaseName 요소
+      href: xml-elements-properties/databasename-element-xmla.md
+    - name: DataSource 요소
+      href: xml-elements-properties/datasource-element-xmla.md
+    - name: DataSourceID 요소
+      href: xml-elements-properties/datasourceid-element-xmla.md
+    - name: DataSourceType 요소
+      href: xml-elements-properties/datasourcetype-element-xmla.md
+    - name: DataSourceView 요소
+      href: xml-elements-properties/datasourceview-element-xmla.md
+    - name: DbSchemaName 요소
+      href: xml-elements-properties/dbschemaname-element-xmla.md
+    - name: DbStorageLocation 요소
+      href: xml-elements-properties/dbstoragelocation-element.md
+    - name: DbTableName 요소
+      href: xml-elements-properties/dbtablename-element-xmla.md
+    - name: DeleteWithDescendants 요소
+      href: xml-elements-properties/deletewithdescendants-element-xmla.md
+    - name: Description 요소
+      href: xml-elements-properties/description-element-xmla.md
+    - name: Dimension 요소
+      href: xml-elements-properties/dimension-element-xmla.md
+    - name: DisplayInfo 요소
+      href: xml-elements-properties/displayinfo-element-xmla.md
+    - name: Error 요소
+      href: xml-elements-properties/error-element-xmla.md
+    - name: ErrorCode 요소
+      href: xml-elements-properties/errorcode-element-xmla.md
+    - name: ErrorConfiguration 요소
+      href: xml-elements-properties/errorconfiguration-element-xmla.md
+    - name: Exception 요소
+      href: xml-elements-properties/exception-element-xmla.md
+    - name: File 요소
+      href: xml-elements-properties/file-element-xmla.md
+    - name: Folder 요소
+      href: xml-elements-properties/folder-element-xmla.md
+    - name: Folders 요소
+      href: xml-elements-properties/folders-element-xmla.md
+    - name: HelpFile 요소
+      href: xml-elements-properties/helpfile-element-xmla.md
+    - name: HierarchyInfo 요소
+      href: xml-elements-properties/hierarchyinfo-element-xmla.md
+    - name: ID 요소
+      href: xml-elements-properties/id-element-xmla.md
+    - name: Keys 요소
+      href: xml-elements-properties/keys-element-xmla.md
+    - name: Key 요소
+      href: xml-elements-properties/key-element-xmla.md
+    - name: Language 요소
+      href: xml-elements-properties/language-element-xmla.md
+    - name: LastDataUpdate 요소
+      href: xml-elements-properties/lastdataupdate-element-xmla.md
+    - name: LastSchemaUpdate 요소
+      href: xml-elements-properties/lastschemaupdate-element-xmla.md
+    - name: LName 요소
+      href: xml-elements-properties/lname-element-xmla.md
+    - name: LNum 요소
+      href: xml-elements-properties/lnum-element-xmla.md
+    - name: Location 요소
+      href: xml-elements-properties/location-element-xmla.md
+    - name: Locations 요소
+      href: xml-elements-properties/locations-element-xmla.md
+    - name: Materialize 요소
+      href: xml-elements-properties/materialize-element-xmla.md
+    - name: MeasureGroupID 요소
+      href: xml-elements-properties/measuregroupid-element-xmla.md
+    - name: Member 요소
+      href: xml-elements-properties/member-element-xmla.md
+    - name: Members 요소
+      href: xml-elements-properties/members-element-xmla.md
+    - name: Message 요소
+      href: xml-elements-properties/message-element-xmla.md
+    - name: Messages 요소
+      href: xml-elements-properties/messages-element-xmla.md
+    - name: Mode 요소
+      href: xml-elements-properties/mode-element-xmla.md
+    - name: MoveWithDescendants 요소
+      href: xml-elements-properties/movewithdescendants-element-xmla.md
+    - name: Name 요소
+      href: xml-elements-properties/name-element-xmla.md
+    - name: Name 요소(매개 변수)
+      href: xml-elements-properties/name-element-parameter-xmla.md
+    - name: New 요소
+      href: xml-elements-properties/new-element-xmla.md
+    - name: Object 요소
+      href: xml-elements-properties/object-element-xmla.md
+    - name: Object 요소(차원)
+      href: xml-elements-properties/object-element-dimension-xmla.md
+    - name: ObjectDefinition 요소
+      href: xml-elements-properties/objectdefinition-element-xmla.md
+    - name: OlapInfo 요소
+      href: xml-elements-properties/olapinfo-element-xmla.md
+    - name: Optimization 요소
+      href: xml-elements-properties/optimization-element-xmla.md
+    - name: Original 요소
+      href: xml-elements-properties/original-element-xmla.md
+    - name: Parallel Element
+      href: xml-elements-properties/parallel-element-xmla.md
+    - name: Parameter 요소
+      href: xml-elements-properties/parameter-element-xmla.md
+    - name: Parameters 요소
+      href: xml-elements-properties/parameters-element-xmla.md
+    - name: ParentObject 요소
+      href: xml-elements-properties/parentobject-element-xmla.md
+    - name: PartitionID 요소
+      href: xml-elements-properties/partitionid-element-xmla.md
+    - name: Password 요소
+      href: xml-elements-properties/password-element-xmla.md
+    - name: Properties 요소
+      href: xml-elements-properties/properties-element-xmla.md
+    - name: PropertyList 요소
+      href: xml-elements-properties/propertylist-element-xmla.md
+- name: 지원되는 XMLA 속성
+  href: xml-elements-properties/propertylist-element-supported-xmla-properties.md
+  items:
+    - name: Queries 요소
+      href: xml-elements-properties/queries-element-xmla.md
+    - name: Query 요소
+      href: xml-elements-properties/query-element-xmla.md
+    - name: ReadWriteMode 요소
+      href: xml-elements-properties/readwritemode-element.md
+    - name: RequestType 요소
+      href: xml-elements-properties/requesttype-element-xmla.md
+    - name: RestrictionList 요소
+      href: xml-elements-properties/restrictionlist-element-xmla.md
+    - name: Restrictions 요소
+      href: xml-elements-properties/restrictions-element-xmla.md
+    - name: results 요소
+      href: xml-elements-properties/results-element-xmla.md
+    - name: return 요소
+      href: xml-elements-properties/return-element-xmla.md
+    - name: Role 요소
+      href: xml-elements-properties/role-element-xmla.md
+    - name: root 요소
+      href: xml-elements-properties/root-element-xmla.md
+    - name: row 요소
+      href: xml-elements-properties/row-element-xmla.md
+    - name: Security 요소
+      href: xml-elements-properties/security-element-xmla.md
+    - name: SessionID 요소
+      href: xml-elements-properties/sessionid-element-xmla.md
+    - name: SkippedLevels 요소
+      href: xml-elements-properties/skippedlevels-element-xmla.md
+    - name: Source 요소
+      href: xml-elements-properties/source-element-xmla.md
+    - name: Source 요소(오류)
+      href: xml-elements-properties/source-element-error-xmla.md
+    - name: Source 요소(Synchronize)
+      href: xml-elements-properties/source-element-synchronize-xmla.md
+    - name: Sources 요소
+      href: xml-elements-properties/sources-element-xmla.md
+    - name: SPID 요소
+      href: xml-elements-properties/spid-element-xmla.md
+    - name: Steps 요소
+      href: xml-elements-properties/steps-element-xmla.md
+    - name: Storage 요소
+      href: xml-elements-properties/storage-element-xmla.md
+    - name: SynchronizeSecurity 요소
+      href: xml-elements-properties/synchronizesecurity-element-xmla.md
+    - name: TableNotification 요소
+      href: xml-elements-properties/tablenotification-element-xmla.md
+    - name: TableNotifications 요소
+      href: xml-elements-properties/tablenotifications-element-xmla.md
+    - name: Target 요소
+      href: xml-elements-properties/target-element-xmla.md
+    - name: Time 요소
+      href: xml-elements-properties/time-element-xmla.md
+    - name: Translation 요소
+      href: xml-elements-properties/translation-element-xmla.md
+    - name: Translations 요소
+      href: xml-elements-properties/translations-element-xmla.md
+    - name: Tuple 요소
+      href: xml-elements-properties/tuple-element-xmla.md
+    - name: Tuples 요소
+      href: xml-elements-properties/tuples-element-xmla.md
+    - name: Type 요소
+      href: xml-elements-properties/type-element-xmla.md
+    - name: UName 요소
+      href: xml-elements-properties/uname-element-xmla.md
+    - name: UnaryOperator 요소
+      href: xml-elements-properties/unaryoperator-element-xmla.md
+    - name: Value 요소
+      href: xml-elements-properties/value-element-xmla.md
+    - name: Value 요소(매개 변수)
+      href: xml-elements-properties/value-element-parameter-xmla.md
+    - name: Warning 요소
+      href: xml-elements-properties/warning-element-xmla.md
+    - name: Where 요소
+      href: xml-elements-properties/where-element-xmla.md
+    - name: WritebackTableCreation 요소
+      href: xml-elements-properties/writebacktablecreation-element-xmla.md
+    - name: FolderPosition 요소
+      href: xml-elements-properties/folderposition-element-xml.md
+    - name: DefaultDetailsPosition 요소
+      href: xml-elements-properties/defaultdetailsposition-element-xml.md
+    - name: DisplayKeyPosition 요소
+      href: xml-elements-properties/displaykeyposition-element-xml.md
+    - name: CommonIdentifierPosition 요소
+      href: xml-elements-properties/commonidentifierposition-element-xml.md
+    - name: IsDefaultMeasure 요소
+      href: xml-elements-properties/isdefaultmeasure-element-xml.md
+    - name: IsDefaultImage 요소
+      href: xml-elements-properties/isdefaultimage-element-xml.md
+    - name: SortPropertiesPosition 요소
+      href: xml-elements-properties/sortpropertiesposition-element-xml.md
+    - name: ContextualNameRule 요소
+      href: xml-elements-properties/contextualnamerule-element-xml.md
+    - name: EditionId 요소
+      href: xml-elements-properties/editionid-element.md
+    - name: ServerMode 요소
+      href: xml-elements-properties/servermode-element.md
+    - name: ProductLabel 요소
+      href: xml-elements-properties/productlabel-element.md
+- name: XML 데이터 형식
+  href: xml-data-types/xml-data-types-xmla.md
+  items:
+    - name: EmptyResult 데이터 형식
+      href: xml-data-types/emptyresult-data-type-xmla.md
+    - name: EnumString 데이터 형식
+      href: xml-data-types/enumstring-data-type-xmla.md
+    - name: MDDataSet 데이터 형식
+      href: xml-data-types/mddataset-data-type-xmla.md
+    - name: Resultset 데이터 형식
+      href: xml-data-types/resultset-data-type-xmla.md
+    - name: Rowset 데이터 형식
+      href: xml-data-types/rowset-data-type-xmla.md
+- name: XML for Analysis 호환성
+  href: xml-for-analysis-compliance-xmla.md

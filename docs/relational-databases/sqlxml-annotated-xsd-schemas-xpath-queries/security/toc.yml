@@ -1,0 +1,12 @@
+- name: SQLXML 4.0 보안 고려 사항
+  href: sqlxml-4-0-security-considerations.md
+- name: 주석 스키마 보안 고려 사항(SQLXML 4.0)
+  href: annotated-schema-security-considerations-sqlxml-4-0.md
+- name: 대량 로드 보안 고려 사항(SQLXML 4.0)
+  href: bulk-load-security-considerations-sqlxml-4-0.md
+- name: 핵심 SQLXML 보안 고려 사항
+  href: core-sqlxml-security-considerations.md
+- name: FOR XML 보안 고려 사항(SQLXML 4.0)
+  href: for-xml-security-considerations-sqlxml-4-0.md
+- name: Updategram 보안 고려 사항(SQLXML 4.0)
+  href: updategram-security-considerations-sqlxml-4-0.md

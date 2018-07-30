@@ -1,0 +1,183 @@
+- name: ASSL(Analysis Services Scripting Language) XML 데이터 형식
+  href: analysis-services-scripting-language-xml-data-types-assl.md
+  items:
+    - name: Action 데이터 형식
+      href: action-data-type-assl.md
+    - name: AggregationAttribute 데이터 형식
+      href: aggregationattribute-data-type-assl.md
+    - name: AggregationDesignAttribute 데이터 형식
+      href: aggregationdesignattribute-data-type-assl.md
+    - name: AggregationDesignDimension 데이터 형식
+      href: aggregationdesigndimension-data-type-assl.md
+    - name: AggregationDimension 데이터 형식
+      href: aggregationdimension-data-type-assl.md
+    - name: AggregationInstanceAttribute 데이터 형식
+      href: aggregationinstanceattribute-data-type-assl.md
+    - name: AggregationInstanceCubeDimension 데이터 형식
+      href: aggregationinstancecubedimension-data-type-assl.md
+    - name: AggregationInstanceMeasure 데이터 형식
+      href: aggregationinstancemeasure-data-type-assl.md
+    - name: Assembly 데이터 형식
+      href: assembly-data-type-assl.md
+    - name: AttributeBinding 데이터 형식
+      href: attributebinding-data-type-assl.md
+    - name: AttributeTranslation 데이터 형식
+      href: attributetranslation-data-type-assl.md
+    - name: Binding 데이터 형식
+      href: binding-data-type-assl.md
+    - name: ClrAssembly 데이터 형식
+      href: clrassembly-data-type-assl.md
+    - name: ClrAssemblyFile 데이터 형식
+      href: clrassemblyfile-data-type-assl.md
+    - name: ColumnBinding 데이터 형식
+      href: columnbinding-data-type-assl.md
+    - name: ComAssembly 데이터 형식
+      href: comassembly-data-type-assl.md
+    - name: CubeAttribute 데이터 형식
+      href: cubeattribute-data-type-assl.md
+    - name: CubeAttributeBinding 데이터 형식
+      href: cubeattributebinding-data-type-assl.md
+    - name: CubeBinding 데이터 형식(아웃오브 라인)
+      href: cubebinding-data-type-out-of-line-assl.md
+    - name: CubeDimension 데이터 형식
+      href: cubedimension-data-type-assl.md
+    - name: CubeDimensionBinding 데이터 형식
+      href: cubedimensionbinding-data-type-assl.md
+    - name: CubeDimensionPermission 데이터 형식
+      href: cubedimensionpermission-data-type-assl.md
+    - name: CubeHierarchy 데이터 형식
+      href: cubehierarchy-data-type-assl.md
+    - name: DataBlock 데이터 형식
+      href: datablock-data-type-assl.md
+    - name: DataItem 데이터 형식
+      href: dataitem-data-type-assl.md
+    - name: DataMiningMeasureGroupDimension 데이터 형식
+      href: dataminingmeasuregroupdimension-data-type-assl.md
+    - name: DataSource 데이터 형식
+      href: datasource-data-type-assl.md
+    - name: DataSourceViewBinding 데이터 형식
+      href: datasourceviewbinding-data-type-assl.md
+    - name: DegenerateMeasureGroupDimension 데이터 형식
+      href: degeneratemeasuregroupdimension-data-type-assl.md
+    - name: Dimension 데이터 형식
+      href: dimension-data-type-assl.md
+    - name: DimensionAttribute 데이터 형식
+      href: dimensionattribute-data-type-assl.md
+    - name: DimensionAttributeBinding 데이터 형식(아웃오브 라인)
+      href: dimensionattributebinding-data-type-out-of-line-assl.md
+    - name: DimensionBinding 데이터 형식
+      href: dimensionbinding-data-type-assl.md
+    - name: DimensionPermission 데이터 형식
+      href: dimensionpermission-data-type-assl.md
+    - name: DrillThroughAction 데이터 형식
+      href: drillthroughaction-data-type-assl.md
+    - name: DSVTableBinding 데이터 형식
+      href: dsvtablebinding-data-type-assl.md
+    - name: EventColumn 데이터 형식
+      href: eventcolumn-data-type-assl.md
+    - name: Hierarchy 데이터 형식
+      href: hierarchy-data-type-assl.md
+    - name: ImpersonationInfo 데이터 형식
+      href: impersonationinfo-data-type-assl.md
+    - name: IncrementalProcessingNotification 데이터 형식
+      href: incrementalprocessingnotification-data-type-assl.md
+    - name: InheritedBinding 데이터 형식
+      href: inheritedbinding-data-type-assl.md
+    - name: ManyToManyMeasureGroupDimension 데이터 형식
+      href: manytomanymeasuregroupdimension-data-type-assl.md
+    - name: MeasureBinding 데이터 형식
+      href: measurebinding-data-type-assl.md
+    - name: MeasureGroupAttribute 데이터 형식
+      href: measuregroupattribute-data-type-assl.md
+    - name: MeasureGroupAttributeBinding 데이터 형식(아웃오브 라인)
+      href: measuregroupattributebinding-data-type-out-of-line-assl.md
+    - name: MeasureGroupBinding 데이터 형식
+      href: measuregroupbinding-data-type-assl.md
+    - name: MeasureGroupBinding 데이터 형식(아웃오브 라인)
+      href: measuregroupbinding-data-type-out-of-line-assl.md
+    - name: MeasureGroupDimension 데이터 형식
+      href: measuregroupdimension-data-type-assl.md
+    - name: MeasureGroupDimensionBinding 데이터 형식
+      href: measuregroupdimensionbinding-data-type-assl.md
+    - name: MeasureGroupHierarchy 데이터 형식
+      href: measuregrouphierarchy-data-type-assl.md
+    - name: MiningModelColumn 데이터 형식
+      href: miningmodelcolumn-data-type-assl.md
+    - name: MiningModelingFlag 데이터 형식
+      href: miningmodelingflag-data-type-assl.md
+    - name: MiningStructureColumn 데이터 형식
+      href: miningstructurecolumn-data-type-assl.md
+    - name: OlapDataSource 데이터 형식
+      href: olapdatasource-data-type-assl.md
+    - name: PartitionBinding 데이터 형식
+      href: partitionbinding-data-type-assl.md
+    - name: Permission 데이터 형식
+      href: permission-data-type-assl.md
+    - name: PerspectiveAction 데이터 형식
+      href: perspectiveaction-data-type-assl.md
+    - name: PerspectiveAttribute 데이터 형식
+      href: perspectiveattribute-data-type-assl.md
+    - name: PerspectiveCalculation 데이터 형식
+      href: perspectivecalculation-data-type-assl.md
+    - name: PerspectiveDimension 데이터 형식
+      href: perspectivedimension-data-type-assl.md
+    - name: PerspectiveHierarchy 데이터 형식
+      href: perspectivehierarchy-data-type-assl.md
+    - name: PerspectiveKpi 데이터 형식
+      href: perspectivekpi-data-type-assl.md
+    - name: PerspectiveMeasure 데이터 형식
+      href: perspectivemeasure-data-type-assl.md
+    - name: PerspectiveMeasureGroup 데이터 형식
+      href: perspectivemeasuregroup-data-type-assl.md
+    - name: ProactiveCachingBinding 데이터 형식
+      href: proactivecachingbinding-data-type-assl.md
+    - name: ProactiveCachingIncrementalProcessingBinding 데이터 형식
+      href: proactivecachingincrementalprocessingbinding-data-type-assl.md
+    - name: ProactiveCachingInheritedBinding 요소
+      href: proactivecachinginheritedbinding-data-type-assl.md
+    - name: ProactiveCachingObjectNotificationBinding 데이터 형식
+      href: proactivecachingobjectnotificationbinding-data-type-assl.md
+    - name: ProactiveCachingQueryBinding 데이터 형식
+      href: proactivecachingquerybinding-data-type-assl.md
+    - name: ProactiveCachingTablesBinding
+      href: proactivecachingtablesbinding-data-type-assl.md
+    - name: PushedDataSource 데이터 형식
+      href: pusheddatasource-data-type-assl.md
+    - name: QueryBinding 데이터 형식
+      href: querybinding-data-type-assl.md
+    - name: ReferenceMeasureGroupDimension 데이터 형식
+      href: referencemeasuregroupdimension-data-type-assl.md
+    - name: RegularMeasureGroupDimension 데이터 형식
+      href: regularmeasuregroupdimension-data-type-assl.md
+    - name: RelationalDataSource 데이터 형식
+      href: relationaldatasource-data-type-assl.md
+    - name: Relationship 데이터 형식
+      href: relationship-data-type-assl.md
+    - name: RelationshipEnd 데이터 형식
+      href: relationshipend-data-type-assl.md
+    - name: RelationshipEndTranslation 요소
+      href: relationshipendtranslation-element-assl.md
+    - name: RelationshipEndVisualizationProperties 데이터 형식
+      href: relationshipendvisualizationproperties-data-type-assl.md
+    - name: ReportAction 데이터 형식
+      href: reportaction-data-type-assl.md
+    - name: RowBinding 데이터 형식
+      href: rowbinding-data-type-assl.md
+    - name: ScalarMiningStructureColumn 데이터 형식
+      href: scalarminingstructurecolumn-data-type-assl.md
+    - name: StandardAction 데이터 형식
+      href: standardaction-data-type-assl.md
+    - name: TableBinding 데이터 형식
+      href: tablebinding-data-type-assl.md
+    - name: TableMiningStructureColumn 데이터 형식
+      href: tableminingstructurecolumn-data-type-assl.md
+    - name: TabularBinding 데이터 형식
+      href: tabularbinding-data-type-assl.md
+    - name: TimeAttributeBinding 데이터 형식
+      href: timeattributebinding-data-type-assl.md
+    - name: TimeBinding 데이터 형식
+      href: timebinding-data-type-assl.md
+    - name: Translation 데이터 형식
+      href: translation-data-type-assl.md
+    - name: UserDefinedGroupBinding 데이터 형식
+      href: userdefinedgroupbinding-data-type-assl.md

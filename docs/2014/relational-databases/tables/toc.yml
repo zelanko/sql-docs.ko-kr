@@ -1,0 +1,84 @@
+- name: 테이블
+  href: tables.md
+  items:
+    - name: 테이블 만들기(데이터베이스 엔진)
+      href: create-tables-database-engine.md
+    - name: 테이블 삭제(데이터베이스 엔진)
+      href: delete-tables-database-engine.md
+    - name: 테이블 복제
+      href: duplicate-tables.md
+    - name: 테이블 이름 바꾸기(데이터베이스 엔진)
+      href: rename-tables-database-engine.md
+    - name: 테이블 정의 보기
+      href: view-the-table-definition.md
+      items:
+        - name: 테이블 속성
+          href: table-properties-ssms.md
+        - name: 열 속성(일반 페이지)
+          href: column-properties-general-page.md
+    - name: 테이블의 종속성 보기
+      href: view-the-dependencies-of-a-table.md
+    - name: 테이블에 열 추가(데이터베이스 엔진)
+      href: add-columns-to-a-table-database-engine.md
+    - name: 테이블에서 열 삭제
+      href: delete-columns-from-a-table.md
+    - name: 열 이름 바꾸기(데이터베이스 엔진)
+      href: rename-columns-database-engine.md
+    - name: 한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: 열 수정(데이터베이스 엔진)
+      href: modify-columns-database-engine.md
+    - name: 테이블에서 열 순서 변경
+      href: change-column-order-in-a-table.md
+    - name: 테이블에서 계산 열 지정
+      href: specify-computed-columns-in-a-table.md
+    - name: 열의 기본값 지정
+      href: specify-default-values-for-columns.md
+    - name: 스파스 열 사용
+      href: use-sparse-columns.md
+    - name: 열 집합 사용
+      href: use-column-sets.md
+    - name: 테이블 반환 매개 변수 사용(데이터베이스 엔진)
+      href: use-table-valued-parameters-database-engine.md
+- name: PRIMARY KEY 및 FOREIGN KEY 제약 조건
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: 기본 키 만들기
+      href: create-primary-keys.md
+    - name: 기본 키 수정
+      href: modify-primary-keys.md
+    - name: 기본 키 삭제
+      href: delete-primary-keys.md
+    - name: 외래 키 관계 만들기
+      href: create-foreign-key-relationships.md
+    - name: 외래 키 관계 수정
+      href: modify-foreign-key-relationships.md
+    - name: 외래 키 관계 삭제
+      href: delete-foreign-key-relationships.md
+    - name: 외래 키 속성 보기
+      href: view-foreign-key-properties.md
+    - name: 복제할 때 FOREIGN KEY 제약 조건 비활성화
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: NSERT 및 UPDATE 문에서 FOREIGN KEY 제약 조건 사용 안 함
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: UNIQUE 제약 조건 및 CHECK 제약 조건
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: UNIQUE 제약 조건 만들기
+      href: create-unique-constraints.md
+    - name: UNIQUE 제약 조건 수정
+      href: modify-unique-constraints.md
+    - name: UNIQUE 제약 조건 삭제
+      href: delete-unique-constraints.md
+    - name: CHECK 제약 조건 만들기
+      href: create-check-constraints.md
+    - name: CHECK 제약 조건 수정
+      href: modify-check-constraints.md
+    - name: CHECK 제약 조건 삭제
+      href: delete-check-constraints.md
+    - name: 복제할 때 CHECK 제약 조건 해제
+      href: disable-check-constraints-for-replication.md
+    - name: INSERT 및 UPDATE 문에서 CHECK 제약 조건 해제
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: 테이블 열 속성(SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

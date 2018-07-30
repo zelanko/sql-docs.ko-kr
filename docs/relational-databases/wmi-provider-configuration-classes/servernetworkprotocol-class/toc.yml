@@ -1,0 +1,22 @@
+- name: Enabled 속성(ServerNetworkProtocol 클래스)
+  href: enabled-property-servernetworkprotocol-class.md
+- name: InstanceName 속성(ServerNetworkProtocol 클래스)
+  href: instancename-property-servernetworkprotocol-class.md
+- name: IpAddresses 속성(ServerNetworkProtocol 클래스)
+  href: ipaddresses-property-servernetworkprotocol-class.md
+- name: MultiIpConfigurationSupport 속성(ServerNetworkProtocol 클래스)
+  href: multiipconfigurationsupport-property-servernetworkprotocol-class.md
+- name: Properties 속성(ServerNetworkProtocol 클래스)
+  href: properties-property-servernetworkprotocol-class.md
+- name: ProtocolDisplayName 속성(ServerNetworkProtocol 클래스)
+  href: protocoldisplayname-property-servernetworkprotocol-class.md
+- name: ProtocolDLL 속성(ServerNetworkProtocol 클래스)
+  href: protocoldll-property-servernetworkprotocol-class.md
+- name: ProtocolName 속성(ServerNetworkProtocol 클래스)
+  href: protocolname-property-servernetworkprotocol-class.md
+- name: ServerNetworkProtocol 클래스
+  href: servernetworkprotocol-class.md
+- name: SetDisable 메서드(ServerNetworkProtocol 클래스)
+  href: setdisable-method-servernetworkprotocol-class.md
+- name: SetEnable 메서드(ServerNetworkProtocol 클래스)
+  href: setenable-method-servernetworkprotocol-class.md

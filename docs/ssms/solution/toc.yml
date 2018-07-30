@@ -1,0 +1,46 @@
+- name: 솔루션 탐색기
+  href: solution-explorer.md
+- name: 솔루션에서 항목 복사
+  href: copy-items-in-a-solution.md
+- name: 솔루션 및 프로젝트 관리 파일
+  href: files-that-manage-solutions-and-projects.md
+- name: 솔루션(SQL Server Management Studio)
+  href: solutions-sql-server-management-studio.md
+- name: 쿼리를 프로젝트의 연결 정보로 연결
+  href: associate-a-query-with-a-connection-in-a-project.md
+- name: 프로젝트(SQL Server Management Studio)
+  href: projects-sql-server-management-studio.md
+- name: 솔루션에서 항목 이동
+  href: move-items-in-a-solution.md
+- name: 인코딩으로 파일 관리
+  href: manage-files-with-encoding.md
+- name: 쿼리와 연관된 연결 변경
+  href: change-the-connection-associated-with-a-query.md
+- name: 솔루션에 기존 프로젝트 추가
+  href: add-an-existing-project-to-a-solution.md
+- name: 프로젝트 만들기
+  href: create-a-project.md
+- name: 프로젝트에 새 항목 추가
+  href: add-new-items-to-a-project.md
+- name: 솔루션 삭제
+  href: delete-a-solution.md
+- name: 기존 솔루션 열기
+  href: open-an-existing-solution.md
+- name: 프로젝트 속성 보기
+  href: view-project-properties.md
+- name: 항목이나 프로젝트 제거 또는 삭제
+  href: remove-or-delete-an-item-or-project.md
+- name: 기타 파일
+  href: miscellaneous-files.md
+- name: 프로젝트 기본 위치 변경
+  href: change-the-default-location-for-projects.md
+- name: 솔루션 및 프로젝트 항목의 이름 바꾸기
+  href: rename-solutions-and-project-items.md
+- name: 솔루션 닫기
+  href: close-a-solution.md
+- name: 프로젝트의 연결 속성 보기 및 변경
+  href: view-or-change-the-properties-of-a-connection-in-a-project.md
+- name: 프로젝트에 기존 항목 추가
+  href: add-existing-items-to-a-project.md
+- name: 새 솔루션 만들기
+  href: create-a-new-solution.md

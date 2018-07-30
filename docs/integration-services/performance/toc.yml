@@ -1,0 +1,8 @@
+- name: 실행 중인 패키지 및 기타 작업 모니터링
+  href: monitor-running-packages-and-other-operations.md
+- name: 통합 서비스 패키지에 의해 기록된 이벤트
+  href: events-logged-by-an-integration-services-package.md
+- name: Integration Services(SSIS) 로깅
+  href: integration-services-ssis-logging.md
+- name: 성능 카운터
+  href: performance-counters.md

@@ -1,0 +1,18 @@
+- name: 개요
+  href: install-master-data-services.md
+- name: 웹 응용 프로그램 요구 사항(MDS(Master Data Services))
+  href: web-application-requirements-master-data-services.md
+- name: 데이터베이스 요구 사항(MDS(Master Data Services))
+  href: database-requirements-master-data-services.md
+- name: Master Data Services 데이터베이스 만들기
+  href: create-a-master-data-services-database.md
+- name: 마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services)
+  href: create-a-master-data-manager-web-application-master-data-services.md
+- name: 마스터 데이터 관리자 웹 응용 프로그램의 보안 설정
+  href: secure-a-master-data-manager-web-application.md
+- name: Master Data Services 데이터베이스와 웹 응용 프로그램 연결
+  href: associate-a-master-data-services-database-and-web-application.md
+- name: MDS(Master Data Services)와 Data Quality Services의 통합 설정
+  href: enable-data-quality-services-integration-with-master-data-services.md
+- name: 다국어 및 글로벌 배포(Master Data Services)
+  href: multi-lingual-and-global-deployments-master-data-services.md

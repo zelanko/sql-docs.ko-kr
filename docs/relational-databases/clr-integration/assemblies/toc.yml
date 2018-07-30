@@ -1,0 +1,8 @@
+- name: CLR 통합 어셈블리 관리
+  href: managing-clr-integration-assemblies.md
+- name: 어셈블리 변경
+  href: altering-an-assembly.md
+- name: 어셈블리 만들기
+  href: creating-an-assembly.md
+- name: 어셈블리 삭제
+  href: dropping-an-assembly.md

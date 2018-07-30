@@ -1,0 +1,16 @@
+- name: 개요
+  href: views.md
+- name: 뷰 만들기
+  href: create-views.md
+- name: 인덱싱된 뷰 만들기
+  href: create-indexed-views.md
+- name: 뷰 수정
+  href: modify-views.md
+- name: 뷰를 통해 데이터 수정
+  href: modify-data-through-a-view.md
+- name: 뷰 정보 보기
+  href: get-information-about-a-view.md
+- name: 뷰 이름 바꾸기
+  href: rename-views.md
+- name: 뷰 삭제
+  href: delete-views.md

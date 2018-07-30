@@ -1,0 +1,12 @@
+- name: 호스트 보호 특성 및 CLR 통합 프로그래밍
+  href: host-protection-attributes-and-clr-integration-programming.md
+- name: Microsoft.VisualBasic.dll에 허용되지 않는 유형 및 멤버
+  href: disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+- name: mscorlib.dll에 허용되지 않는 유형 및 멤버
+  href: disallowed-types-and-members-in-mscorlib-dll.md
+- name: System.Core.dll에 허용되지 않는 유형 및 멤버
+  href: disallowed-types-and-members-in-system-core-dll.md
+- name: System.Data.dll에 허용되지 않는 유형 및 멤버
+  href: disallowed-types-and-members-in-system-data-dll.md
+- name: Disallowed Types and Members In System.dll
+  href: disallowed-types-and-members-in-system-dll.md

@@ -1,0 +1,8 @@
+- name: BLOB 및 OLE 개체
+  href: blobs-and-ole-objects.md
+- name: 대규모 데이터 가져오기
+  href: getting-large-data.md
+- name: 대규모 데이터 설정
+  href: setting-large-data.md
+- name: BLOB 출력 매개 변수에 대한 스트리밍 지원
+  href: streaming-support-for-blob-output-parameters.md

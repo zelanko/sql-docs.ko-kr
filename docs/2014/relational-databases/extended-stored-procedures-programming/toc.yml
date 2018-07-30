@@ -1,0 +1,92 @@
+- name: 확장 저장 프로시저 프로그래밍
+  href: database-engine-extended-stored-procedures-programming.md
+  items:
+    - name: 데이터베이스 엔진 확장 저장 프로시저 프로그래밍
+      href: ../database-engine-extended-stored-procedure-programming.md
+    - name: 확장 저장 프로시저 작동 원리
+      href: how-extended-stored-procedures-work.md
+    - name: 확장 저장 프로시저 만들기
+      href: creating-extended-stored-procedures.md
+    - name: 서버로 결과 집합 보내기(확장 저장 프로시저 API)
+      href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+    - name: SQL Server에 확장 저장 프로시저 추가
+      href: adding-an-extended-stored-procedure-to-sql-server.md
+    - name: 확장 저장 프로시저의 실행 특징
+      href: execution-characteristics-of-extended-stored-procedures.md
+    - name: SQL Server에서 확장 저장 프로시저 제거
+      href: removing-an-extended-stored-procedure-from-sql-server.md
+    - name: SQL Server에 설치된 확장 저장 프로시저 쿼리
+      href: querying-extended-stored-procedures-installed-in-sql-server.md
+    - name: 확장 저장 프로시저 DLL 언로드
+      href: unloading-an-extended-stored-procedure-dll.md
+    - name: 유니코드 데이터 및 서버 코드 페이지
+      href: unicode-data-and-server-code-pages.md
+- name: 확장 저장 프로시저 프로그래머 참조
+  href: ../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  items:
+    - name: srv_alloc(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
+    - name: srv_convert(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
+    - name: srv_describe(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
+    - name: srv_getbindtoken(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
+    - name: srv_got_attention(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
+    - name: srv_message_handler(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
+    - name: srv_paramdata(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
+    - name: srv_paraminfo(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
+    - name: srv_paramlen(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
+    - name: srv_parammaxlen(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
+    - name: srv_paramname(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
+    - name: srv_paramnumber(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
+    - name: srv_paramset(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
+    - name: srv_paramsetoutput(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
+    - name: srv_paramstatus(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
+    - name: srv_paramtype(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
+    - name: srv_pfield(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
+    - name: srv_pfieldex(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
+    - name: srv_rpcdb(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
+    - name: srv_rpcname(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
+    - name: srv_rpcnumber(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
+    - name: srv_rpcoptions(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
+    - name: srv_rpcowner(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
+    - name: srv_rpcparams(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
+    - name: srv_senddone(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
+    - name: srv_sendmsg(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
+    - name: srv_sendrow(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
+    - name: srv_setcoldata(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
+    - name: srv_setcollen(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
+    - name: srv_setutype(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
+    - name: srv_willconvert(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
+    - name: srv_wsendmsg(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
+    - name: 데이터 형식(확장 저장 프로시저 API)
+      href: ../extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md

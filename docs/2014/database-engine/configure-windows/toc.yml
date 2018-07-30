@@ -1,0 +1,255 @@
+- name: 데이터베이스 엔진 인스턴스 구성
+  href: configure-database-engine-instances-sql-server.md
+  items:
+    - name: 서버 구성 옵션(SQL Server)
+      href: server-configuration-options-sql-server.md
+    - name: access check cache 서버 구성 옵션
+      href: access-check-cache-server-configuration-options.md
+    - name: 임시 분산 쿼리 서버 구성 옵션
+      href: ad-hoc-distributed-queries-server-configuration-option.md
+    - name: 선호도 입력-출력 마스크 서버 구성 옵션
+      href: affinity-input-output-mask-server-configuration-option.md
+    - name: affinity64 Input-Output mask 서버 구성 옵션
+      href: affinity64-input-output-mask-server-configuration-option.md
+    - name: affinity mask 서버 구성 옵션
+      href: affinity-mask-server-configuration-option.md
+    - name: affinity64 mask 서버 구성 옵션
+      href: affinity64-mask-server-configuration-option.md
+    - name: Agent XPs 서버 구성 옵션
+      href: agent-xps-server-configuration-option.md
+    - name: allow updates 서버 구성 옵션
+      href: allow-updates-server-configuration-option.md
+    - name: 백업 체크섬 기본값
+      href: ../backup-checksum-default.md
+    - name: backup compression default 서버 구성 옵션 보기 또는 구성
+      href: view-or-configure-the-backup-compression-default-server-configuration-option.md
+    - name: blocked process threshold 서버 구성 옵션
+      href: blocked-process-threshold-server-configuration-option.md
+    - name: c2 audit mode 서버 구성 옵션
+      href: c2-audit-mode-server-configuration-option.md
+    - name: clr enabled 서버 구성 옵션
+      href: clr-enabled-server-configuration-option.md
+    - name: common criteria compliance enabled 서버 구성 옵션
+      href: common-criteria-compliance-enabled-server-configuration-option.md
+    - name: contained database authentication 서버 구성 옵션
+      href: contained-database-authentication-server-configuration-option.md
+    - name: cost threshold for parallelism 서버 구성 옵션 구성
+      href: configure-the-cost-threshold-for-parallelism-server-configuration-option.md
+    - name: cursor threshold 서버 구성 옵션 구성
+      href: configure-the-cursor-threshold-server-configuration-option.md
+    - name: cross db ownership chaining 서버 구성 옵션
+      href: cross-db-ownership-chaining-server-configuration-option.md
+    - name: Database Mail XPs 서버 구성 옵션
+      href: database-mail-xps-server-configuration-option.md
+    - name: default full-text language 서버 구성 옵션 구성
+      href: configure-the-default-full-text-language-server-configuration-option.md
+    - name: default language 서버 구성 옵션 구성
+      href: configure-the-default-language-server-configuration-option.md
+    - name: default trace enabled 서버 구성 옵션
+      href: default-trace-enabled-server-configuration-option.md
+    - name: disallow results from triggers 서버 구성 옵션
+      href: disallow-results-from-triggers-server-configuration-option.md
+    - name: EKM provider enabled 서버 구성 옵션
+      href: ekm-provider-enabled-server-configuration-option.md
+    - name: filestream access level 서버 구성 옵션
+      href: filestream-access-level-server-configuration-option.md
+    - name: fill factor 서버 구성 옵션 구성
+      href: configure-the-fill-factor-server-configuration-option.md
+    - name: ft crawl bandwidth 서버 구성 옵션
+      href: ft-crawl-bandwidth-server-configuration-option.md
+    - name: ft notify bandwidth 서버 구성 옵션
+      href: ft-notify-bandwidth-server-configuration-option.md
+    - name: in-doubt xact resolution 서버 구성 옵션
+      href: in-doubt-xact-resolution-server-configuration-option.md
+    - name: index create memory 서버 구성 옵션 구성
+      href: configure-the-index-create-memory-server-configuration-option.md
+    - name: 경량 풀링 서버 구성 옵션
+      href: lightweight-pooling-server-configuration-option.md
+    - name: locks 서버 구성 옵션 구성
+      href: configure-the-locks-server-configuration-option.md
+    - name: max degree of parallelism 서버 구성 옵션 구성
+      href: configure-the-max-degree-of-parallelism-server-configuration-option.md
+    - name: max full-text crawl range 서버 구성 옵션
+      href: max-full-text-crawl-range-server-configuration-option.md
+    - name: max text repl size 서버 구성 옵션 구성
+      href: configure-the-max-text-repl-size-server-configuration-option.md
+    - name: max worker threads 서버 구성 옵션 구성
+      href: configure-the-max-worker-threads-server-configuration-option.md
+    - name: media retention 서버 구성 옵션 구성
+      href: configure-the-media-retention-server-configuration-option.md
+    - name: min memory per query 서버 구성 옵션 구성
+      href: configure-the-min-memory-per-query-server-configuration-option.md
+    - name: nested triggers 서버 구성 옵션 구성
+      href: configure-the-nested-triggers-server-configuration-option.md
+    - name: network packet size 서버 구성 옵션 구성
+      href: configure-the-network-packet-size-server-configuration-option.md
+    - name: Ole Automation Procedures 서버 구성 옵션
+      href: ole-automation-procedures-server-configuration-option.md
+    - name: open objects 서버 구성 옵션
+      href: open-objects-server-configuration-option.md
+    - name: optimize for ad hoc workloads 서버 구성 옵션
+      href: optimize-for-ad-hoc-workloads-server-configuration-option.md
+    - name: PH timeout 서버 구성 옵션
+      href: ph-timeout-server-configuration-option.md
+    - name: precompute rank 서버 구성 옵션
+      href: precompute-rank-server-configuration-option.md
+    - name: priority boost 서버 구성 옵션 구성
+      href: configure-the-priority-boost-server-configuration-option.md
+    - name: query governor cost limit 서버 구성 옵션 구성
+      href: configure-the-query-governor-cost-limit-server-configuration-option.md
+    - name: query wait 서버 구성 옵션 구성
+      href: configure-the-query-wait-server-configuration-option.md
+    - name: recovery interval 서버 구성 옵션 구성
+      href: configure-the-recovery-interval-server-configuration-option.md
+    - name: remote access 서버 구성 옵션 구성
+      href: configure-the-remote-access-server-configuration-option.md
+    - name: remote admin connections 서버 구성 옵션
+      href: remote-admin-connections-server-configuration-option.md
+    - name: remote login timeout 서버 구성 옵션 구성
+      href: configure-the-remote-login-timeout-server-configuration-option.md
+    - name: remote proc trans 서버 구성 옵션 구성
+      href: configure-the-remote-proc-trans-server-configuration-option.md
+    - name: remote query timeout 서버 구성 옵션 구성
+      href: configure-the-remote-query-timeout-server-configuration-option.md
+    - name: Replication XPs 서버 구성 옵션
+      href: replication-xps-server-configuration-option.md
+    - name: scan for startup procs 서버 구성 옵션 구성
+      href: configure-the-scan-for-startup-procs-server-configuration-option.md
+    - name: 서버 메모리 서버 구성 옵션
+      href: server-memory-server-configuration-options.md
+    - name: server trigger recursion 서버 구성 옵션
+      href: server-trigger-recursion-server-configuration-option.md
+    - name: set working set size 서버 구성 옵션
+      href: set-working-set-size-server-configuration-option.md
+    - name: show advanced options 서버 구성 옵션
+      href: show-advanced-options-server-configuration-option.md
+    - name: SMO and DMO XPs 서버 구성 옵션
+      href: smo-and-dmo-xps-server-configuration-option.md
+    - name: transform noise words 서버 구성 옵션
+      href: transform-noise-words-server-configuration-option.md
+    - name: two digit year cutoff 서버 구성 옵션 구성
+      href: configure-the-two-digit-year-cutoff-server-configuration-option.md
+    - name: user connections 서버 구성 옵션 구성
+      href: configure-the-user-connections-server-configuration-option.md
+    - name: user options 서버 구성 옵션 구성
+      href: configure-the-user-options-server-configuration-option.md
+    - name: xp_cmdshell 서버 구성 옵션
+      href: xp-cmdshell-server-configuration-option.md
+    - name: 데이터 및 로그 파일의 기본 위치 보기 또는 변경(SQL Server Management Studio)
+      href: view-or-change-the-default-locations-for-data-and-log-files.md
+    - name: 원격 서버 연결 옵션 보기 또는 구성(SQL Server)
+      href: view-or-configure-remote-server-connection-options-sql-server.md
+    - name: 서버 속성 보기 또는 변경
+      href: view-or-change-server-properties-sql-server.md
+    - name: 서버 속성 F1 도움말
+      href: ../server-properties-f1-help.md
+      items:
+        - name: 서버 속성(일반 페이지) - SQL Server Management Studio
+          href: server-properties-general-page.md
+        - name: 서버 속성(메모리 페이지)
+          href: server-properties-memory-page.md
+        - name: 서버 속성(프로세서 페이지)
+          href: server-properties-processors-page.md
+        - name: 서버 속성(보안 페이지)
+          href: server-properties-security-page.md
+        - name: 서버 속성(연결 페이지)
+          href: server-properties-connections-page.md
+        - name: 서버 속성(데이터베이스 설정 페이지)
+          href: server-properties-database-settings-page.md
+        - name: 서버 속성(기타 서버 설정 페이지)
+          href: server-properties-misc-server-settings-page.md
+        - name: SQL Server 속성(FILESTREAM 페이지)
+          href: server-properties-filestream-page.md
+        - name: 서버 속성(고급 페이지)
+          href: server-properties-advanced-page.md
+    - name: 소프트 NUMA를 사용하도록 SQL Server 구성(SQL Server)
+      href: soft-numa-sql-server.md
+    - name: NUMA 노드에 TCP IP 포트 매핑(SQL Server)
+      href: map-tcp-ip-ports-to-numa-nodes-sql-server.md
+    - name: Lock Pages in Memory 옵션 설정(Windows)
+      href: enable-the-lock-pages-in-memory-option-windows.md
+- name: 데이터베이스 엔진 서비스 관리
+  href: manage-the-database-engine-services.md
+  items:
+    - name: 서비스 관리를 위한 보안 요구 사항
+      href: security-requirements-for-managing-services.md
+    - name: Windows 서비스 계정 및 권한 구성
+      href: configure-windows-service-accounts-and-permissions.md
+    - name: 데이터베이스 엔진 액세스에 대한 파일 시스템 사용 권한 구성
+      href: configure-file-system-permissions-for-database-engine-access.md
+    - name: 네트워크에서 또는 네트워크 없이 SQL Server 실행
+      href: run-sql-server-with-or-without-a-network.md
+    - name: SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS)
+      href: sql-server-browser-service-database-engine-and-ssas.md
+    - name: 데이터베이스 엔진 서비스 시작 옵션
+      href: database-engine-service-startup-options.md
+    - name: '데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작'
+      href: start-stop-pause-resume-restart-sql-server-services.md
+    - name: 단일 사용자 모드로 SQL Server 시작
+      href: start-sql-server-in-single-user-mode.md
+    - name: 최소 구성으로 SQL Server 시작
+      href: start-sql-server-with-minimal-configuration.md
+    - name: 서비스 관리 방법 도움말 항목(SQL Server 구성 관리자)
+      href: ../managing-services-how-to-topics-sql-server-configuration-manager.md
+    - name: 다른 컴퓨터에 연결(SQL Server 구성 관리자)
+      href: scm-services-connect-to-another-computer.md
+    - name: SQL Server 인스턴스를 자동으로 시작하도록 설정(SQL Server 구성 관리자)
+      href: scm-services-set-an-instance-to-start-automatically.md
+    - name: SQL Server 인스턴스의 자동 시작 방지(SQL Server 구성 관리자)
+      href: scm-services-prevent-automatic-startup-of-an-instance.md
+    - name: SQL Server의 서비스 시작 계정 변경(SQL Server 구성 관리자)
+      href: scm-services-change-the-service-startup-account.md
+    - name: 서버 시작 옵션 구성(SQL Server 구성 관리자)
+      href: scm-services-configure-server-startup-options.md
+    - name: SQL Server에서 사용하는 계정의 암호 변경(SQL Server 구성 관리자)
+      href: scm-services-change-the-password-of-the-accounts-used.md
+    - name: SQL Server 오류 로그 구성
+      href: scm-services-configure-sql-server-error-logs.md
+    - name: 서버 인증 모드 변경
+      href: change-server-authentication-mode.md
+    - name: SQL 기록기 서비스
+      href: sql-writer-service.md
+    - name: 종료 메시지 브로드캐스트(명령 프롬프트)
+      href: broadcast-a-shutdown-message-command-prompt.md
+    - name: SQL Server 인스턴스에 로그인(명령 프롬프트)
+      href: log-in-to-an-instance-of-sql-server-command-prompt.md
+- name: 서버 네트워크 구성
+  href: server-network-configuration.md
+  items:
+    - name: 시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
+      href: connect-to-sql-server-when-system-administrators-are-locked-out.md
+    - name: 서버 네트워크 프로토콜 설정 또는 해제
+      href: enable-or-disable-a-server-network-protocol.md
+    - name: 특정 TCP 포트로 수신하도록 서버 구성(SQL Server 구성 관리자)
+      href: configure-a-server-to-listen-on-a-specific-tcp-port.md
+    - name: 대체 파이프에서 수신하도록 서버 구성(SQL Server 구성 관리자)
+      href: configure-a-server-to-listen-on-an-alternate-pipe.md
+    - name: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)
+      href: enable-encrypted-connections-to-the-database-engine.md
+    - name: 프록시 서버를 통해 SQL Server에 연결(SQL Server 구성 관리자)
+      href: connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
+    - name: 데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
+      href: configure-a-windows-firewall-for-database-engine-access.md
+    - name: SQL Server 데이터베이스 엔진의 인스턴스 숨기기
+      href: hide-an-instance-of-sql-server-database-engine.md
+    - name: 여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
+      href: configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+    - name: 데이터베이스 엔진이 설치 및 시작되었는지 확인
+      href: determine-whether-the-database-engine-is-installed-and-started.md
+    - name: 확장된 보호를 사용하여 데이터베이스 엔진에 연결
+      href: connect-to-the-database-engine-using-extended-protection.md
+    - name: Kerberos 연결의 서비스 사용자 이름 등록
+      href: register-a-service-principal-name-for-kerberos-connections.md
+- name: 클라이언트 네트워크 구성
+  href: client-network-configuration.md
+  items:
+    - name: 클라이언트 프로토콜 구성
+      href: configure-client-protocols.md
+    - name: 클라이언트에서 사용할 서버 별칭 만들기 또는 삭제(SQL Server 구성 관리자)
+      href: create-or-delete-a-server-alias-for-use-by-a-client.md
+    - name: SQL Server로 로그인
+      href: logging-in-to-sql-server.md
+    - name: ODBC 데이터 원본 관리자 열기
+      href: open-the-odbc-data-source-administrator.md
+    - name: ODBC SQL Server 드라이버 버전 검사(Windows)
+      href: check-the-odbc-sql-server-driver-version-windows.md

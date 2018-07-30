@@ -1,0 +1,27 @@
+- name: 개요
+  href: replication-agents.md
+- name: 복제 에이전트 개요
+  href: replication-agents-overview.md
+- name: 복제 배포 에이전트
+  href: replication-distribution-agent.md
+- name: 복제 로그 판독기 에이전트
+  href: replication-log-reader-agent.md
+- name: Replication Merge Agent
+  href: replication-merge-agent.md
+- name: 복제 큐 판독기 에이전트
+  href: replication-queue-reader-agent.md
+- name: 복제 스냅숏 에이전트
+  href: replication-snapshot-agent.md
+- name: 복제 에이전트 관리
+  href: replication-agent-administration.md
+  items:
+    - name: 복제 에이전트 프로필
+      href: replication-agent-profiles.md
+    - name: 복제 에이전트 이벤트에 대한 경고 사용
+      href: use-alerts-for-replication-agent-events.md
+    - name: 복제 에이전트 프로필 작업
+      href: work-with-replication-agent-profiles.md
+    - name: 복제 에이전트 시작 및 중지(SQL Server Management Studio)
+      href: start-and-stop-a-replication-agent-sql-server-management-studio.md
+    - name: 복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정(SQL Server Management Studio)
+      href: view-and-modify-replication-agent-command-prompt-parameters.md

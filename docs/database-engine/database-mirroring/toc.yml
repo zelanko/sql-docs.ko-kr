@@ -1,0 +1,143 @@
+- name: 데이터베이스 미러링 끝점
+  href: the-database-mirroring-endpoint-sql-server.md
+- name: 끝점 영역
+  items:
+    - name: 데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안
+      href: transport-security-database-mirroring-always-on-availability.md
+    - name: Windows 인증에 대한 데이터베이스 미러링 끝점 만들기(Transact-SQL)
+      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+    - name: 데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정
+      href: set-up-login-accounts-database-mirroring-always-on-availability.md
+    - name: Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용
+      href: database-mirroring-allow-network-access-windows-authentication.md
+    - name: 데이터베이스 미러링 끝점에 대한 인증서 사용(Transact-SQL)
+      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+      items:
+        - name: 데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
+          href: database-mirroring-use-certificates-for-outbound-connections.md
+        - name: 데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
+          href: database-mirroring-use-certificates-for-inbound-connections.md
+- name: 데이터베이스 미러링
+  href: database-mirroring-sql-server.md
+  items:
+    - name: '데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항'
+      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+    - name: 데이터베이스 미러링 운영 모드
+      href: database-mirroring-operating-modes.md
+      items:
+        - name: 데이터베이스 미러링 세션에서 트랜잭션 보안 변경(Transact-SQL)
+          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+    - name: Database Mirroring Witness
+      href: database-mirroring-witness.md
+      items:
+        - name: '쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향'
+          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+        - name: Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가(Transact-SQL)
+          href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+        - name: 데이터베이스 미러링 모니터 서버 추가 또는 바꾸기(SQL Server Management Studio)
+          href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+        - name: 데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
+          href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+    - name: 데이터베이스 미러링 세션 중 역할 전환
+      href: role-switching-during-a-database-mirroring-session-sql-server.md
+      items:
+        - name: 데이터베이스 미러링 세션 수동 장애 조치(Transact-SQL)
+          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+        - name: 데이터베이스 미러링 세션 수동 장애 조치(failover)(SQL Server Management Studio)
+          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+        - name: 데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL)
+          href: force-service-in-a-database-mirroring-session-transact-sql.md
+        - name: 역할 전환 중 서비스 중단 예측
+          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+    - name: Possible Failures During Database Mirroring
+      href: possible-failures-during-database-mirroring.md
+    - name: 미러링 상태(SQL Server)
+      href: mirroring-states-sql-server.md
+    - name: 데이터베이스 미러링 설정
+      href: setting-up-database-mirroring-sql-server.md
+      items:
+        - name: 미러 데이터베이스에서 미러링 준비
+          href: prepare-a-mirror-database-for-mirroring-sql-server.md
+          items:
+            - name: 암호화된 미러 데이터베이스 설정
+              href: set-up-an-encrypted-mirror-database.md
+            - name: Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
+              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+        - name: 서버 네트워크 주소 지정(데이터베이스 미러링)
+          href: specify-a-server-network-address-database-mirroring.md
+        - name: Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(SQL Server Management Studio)
+          href: establish-database-mirroring-session-windows-authentication.md
+          items:
+            - name: 데이터베이스 미러링 보안 구성 마법사 시작(SQL Server Management Studio)
+              href: start-the-configuring-database-mirroring-security-wizard.md
+              items:
+                - name: 미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
+                  href: include-witness-server-configure-database-mirroring-security-wizard.md
+                - name: 구성할 서버 선택(데이터베이스 미러링 보안 구성 마법사)
+                  href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+                - name: 주 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
+                  href: principal-server-instance-configure-database-mirroring-security-wizard.md
+                - name: 미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
+                  href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+                - name: 미러링 모니터 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
+                  href: witness-server-instance-configure-database-mirroring-security-wizard.md
+                - name: 서비스 계정(데이터베이스 미러링 보안 구성 마법사)
+                  href: service-accounts-configure-database-mirroring-security-wizard.md
+        - name: Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL)
+          href: database-mirroring-establish-session-windows-authentication.md
+          items:
+            - name: '예제: Windows 인증을 사용하여 데이터베이스 미러링 설정(Transact-SQL)'
+              href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
+        - name: '예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)'
+          href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
+        - name: 데이터베이스 미러링 구성 문제 해결
+          href: troubleshoot-database-mirroring-configuration-sql-server.md
+    - name: 데이터베이스 미러링 세션에 클라이언트 연결
+      href: connect-clients-to-a-database-mirroring-session-sql-server.md
+    - name: 데이터베이스 미러링 일시 중지 및 재개
+      href: pausing-and-resuming-database-mirroring-sql-server.md
+      items:
+        - name: 데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
+          href: pause-or-resume-a-database-mirroring-session-sql-server.md
+    - name: 데이터베이스 미러링 제거
+      href: removing-database-mirroring-sql-server.md
+      items:
+        - name: 데이터베이스 미러링 제거(SQL Server)
+          href: remove-database-mirroring-sql-server.md
+    - name: 미러된 인스턴스 업그레이드
+      href: upgrading-mirrored-instances.md
+    - name: 데이터베이스 미러링 모니터링
+      href: monitoring-database-mirroring-sql-server.md
+      items:
+        - name: 미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용
+          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+        - name: 데이터베이스 미러링 모니터 시작(SQL Server Management Studio)
+          href: start-database-mirroring-monitor-sql-server-management-studio.md
+          items:
+            - name: 데이터베이스 미러링 모니터 개요
+              href: database-mirroring-monitor-overview.md
+            - name: 미러된 데이터베이스 등록
+              href: register-mirrored-database.md
+            - name: 데이터베이스 미러링 모니터(상태 페이지)
+              href: database-mirroring-monitor-status-page.md
+            - name: 데이터베이스 미러링 기록
+              href: database-mirroring-history.md
+            - name: 데이터베이스 미러링 모니터(경고 페이지)
+              href: database-mirroring-monitor-warnings-page.md
+            - name: 경고 임계값 설정
+              href: set-warning-thresholds.md
+        - name: 미러된 데이터베이스의 상태 보기(SQL Server Management Studio)
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+    - name: '데이터베이스 미러링: 상호 운용성 및 공존성'
+      href: database-mirroring-interoperability-and-coexistence-sql-server.md
+      items:
+        - name: 데이터베이스 미러링 및 SQL Server 장애 조치(Failover) 클러스터 인스턴스
+          href: database-mirroring-and-sql-server-failover-cluster-instances.md
+        - name: 데이터베이스 미러링 및 로그 전달
+          href: database-mirroring-and-log-shipping-sql-server.md
+        - name: 데이터베이스 미러링 및 전체 텍스트 카탈로그
+          href: database-mirroring-and-full-text-catalogs-sql-server.md
+        - name: 데이터베이스 미러링 및 데이터베이스 스냅숏
+          href: database-mirroring-and-database-snapshots-sql-server.md
+        - name: 데이터베이스 미러링 및 복제
+          href: database-mirroring-and-replication-sql-server.md

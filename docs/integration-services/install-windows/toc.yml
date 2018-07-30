@@ -1,0 +1,11 @@
+- name: Integration Services 설치
+  href: install-integration-services.md
+- name: 여러 Integration Services 버전을 병렬로 설치
+  href: installing-integration-services-versions-side-by-side.md
+- name: Integration Services 업그레이드
+  href: upgrade-integration-services.md
+  items:
+    - name: Integration Services 패키지 업그레이드
+      href: upgrade-integration-services-packages.md
+    - name: SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
+      href: upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md

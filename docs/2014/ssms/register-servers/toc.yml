@@ -1,0 +1,35 @@
+- name: 서버 등록
+  href: register-servers.md
+  items:
+    - name: 연결된 서버 등록(SQL Server Management Studio)
+      href: register-a-connected-server-sql-server-management-studio.md
+    - name: 새 등록된 서버 만들기(SQL Server Management Studio)
+      href: create-a-new-registered-server-sql-server-management-studio.md
+    - name: SQL Server Management Studio에서 등록된 서버 보기
+      href: view-registered-servers-in-sql-server-management-studio.md
+    - name: 등록된 서버 제거(SQL Server Management Studio)
+      href: remove-a-registered-server-sql-server-management-studio.md
+    - name: 서버 등록 변경(SQL Server Management Studio)
+      href: change-a-server-s-registration-sql-server-management-studio.md
+    - name: 등록된 서버에 연결(SQL Server Management Studio)
+      href: connect-to-a-registered-server-sql-server-management-studio.md
+    - name: 등록된 서버에서 연결 끊기(SQL Server Management Studio)
+      href: disconnect-from-a-registered-server-sql-server-management-studio.md
+    - name: 등록된 서버 및 등록된 서버 그룹 이동(SQL Server Management Studio)
+      href: move-a-registered-server-or-registered-server-group.md
+    - name: 등록된 서버 또는 등록된 서버 그룹 이름 변경(SQL Server Management Studio)
+      href: change-the-name-of-registered-server-or-registered-server-group.md
+    - name: 서버 그룹 만들기 또는 편집(SQL Server Management Studio)
+      href: create-or-edit-a-server-group-sql-server-management-studio.md
+    - name: 서버 그룹 제거(SQL Server Management Studio)
+      href: remove-a-server-group-sql-server-management-studio.md
+    - name: 등록된 서버 정보 내보내기(SQL Server Management Studio)
+      href: export-registered-server-information-sql-server-management-studio.md
+    - name: 등록된 서버 정보 가져오기(SQL Server Management Studio)
+      href: import-registered-server-information-sql-server-management-studio.md
+    - name: 중앙 관리 서버 및 서버 그룹 만들기(SQL Server Management Studio)
+      href: create-a-central-management-server-and-server-group.md
+    - name: 여러 서버에 대해 동시에 문 실행(SQL Server Management Studio)
+      href: execute-statements-against-multiple-servers-simultaneously.md
+    - name: 등록된 서버 F1 도움말
+      href: registered-servers-f1-help.md

@@ -1,0 +1,39 @@
+- name: Integration Services 서비스(SSIS 서비스)
+  href: integration-services-service-ssis-service.md
+  items:
+    - name: Integration Services 서비스 관리
+      href: ../manage-the-integration-services-service.md
+    - name: Integration Services 서비스 속성 설정
+      href: ../set-the-properties-of-the-integration-services-service.md
+    - name: Integration Services 서비스 구성(SSIS 서비스)
+      href: ../configuring-the-integration-services-service-ssis-service.md
+    - name: SSIS 서비스 액세스에 대한 Windows 방화벽 구성
+      href: ../configure-a-windows-firewall-for-access-to-the-ssis-service.md
+    - name: 원격 Integration Services 서버에 연결(SSIS 서비스)
+      href: ../connect-to-a-remote-integration-services-server-ssis-service.md
+    - name: Integration Services에 연결
+      href: ../connect-to-integration-services.md
+    - name: Integration Services 서비스에 사용 권한 부여
+      href: ../grant-permissions-to-integration-services-service.md
+    - name: Integration Services 서비스에서 기록하는 이벤트
+      href: events-logged-by-the-integration-services-service.md
+      items:
+        - name: Integration Services 서비스의 뷰 이벤트
+          href: ../view-events-for-the-integration-services-service.md
+- name: 패키지 관리(SSIS 서비스)
+  href: package-management-ssis-service.md
+  items:
+    - name: 패키지 가져오기 및 내보내기(SSIS 서비스)
+      href: ../import-and-export-packages-ssis-service.md
+    - name: 패키지 내보내기 대화 상자 UI 참조
+      href: ../export-package-dialog-box-ui-reference.md
+    - name: 패키지 가져오기 대화 상자 UI 참조
+      href: ../import-package-dialog-box-ui-reference.md
+    - name: 패키지 백업 및 복원(SSIS 서비스)
+      href: ../package-backup-and-restore-ssis-service.md
+    - name: SQL Server Management Studio에서 Integration Services 패키지 보기(SSIS 서비스)
+      href: ../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md
+    - name: 클러스터의 Integration Services(SSIS)
+      href: integration-services-ssis-in-a-cluster.md
+    - name: Integration Services 서비스를 클러스터 리소스로 구성
+      href: ../configure-the-integration-services-service-as-a-cluster-resource.md

@@ -1,0 +1,133 @@
+- name: SMO(SQL Server 관리 개체) 프로그래밍 가이드
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: 개요(SMO)
+  href: overview-smo.md
+- name: SMO 시작
+  href: getting-started-in-smo.md
+  items:
+    - name: SMO 구문 표기 규칙
+      href: smo-syntax-conventions.md
+    - name: 파일 및 버전 번호
+      href: files-and-version-numbers.md
+    - name: 프로그래밍 예제 링크
+      href: link-to-programming-samples.md
+    - name: SMO 설치
+      href: installing-smo.md
+- name: SMO 개체 모델
+  href: smo-object-model.md
+  items:
+    - name: SMO 네임스페이스
+      href: smo-object-model-namespaces.md
+    - name: SMO 개체 모델 다이어그램
+      href: smo-object-model-diagram.md
+- name: 프로그래밍 언어
+  href: smo-programming-languages.md
+  items:
+    - name: Visual Basic .NET 시작
+      href: ../../database-engine/dev-guide/getting-started-in-visual-basic-net.md
+    - name: 'Visual C# .NET 시작'
+      href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: SMO의 이전 버전과의 호환성
+  href: backward-compatibility-in-smo.md
+- name: SMO 프로그램 만들기
+  href: create-program/creating-smo-programs.md
+  items:
+    - name: SQL Server 인스턴스에 연결
+      href: create-program/connecting-to-an-instance-of-sql-server.md
+    - name: SQL Server 인스턴스에서 연결 끊기
+      href: create-program/disconnecting-from-an-instance-of-sql-server.md
+    - name: 메서드 호출
+      href: create-program/calling-methods.md
+    - name: 속성 설정
+      href: create-program/setting-properties-smo.md
+    - name: 컬렉션 사용
+      href: create-program/using-collections.md
+    - name: 데이터 형식 사용
+      href: create-program/working-with-data-types.md
+    - name: 트랜잭션 사용
+      href: create-program/using-transactions.md
+    - name: 캡처 모드 사용
+      href: create-program/using-capture-mode.md
+    - name: SMO 이벤트 처리
+      href: create-program/handling-smo-events.md
+    - name: SMO 예외 처리
+      href: create-program/handling-smo-exceptions.md
+- name: 프로그래밍 관련 태스크
+  href: tasks/programming-specific-tasks.md
+  items:
+    - name: SMO에서 SQL Server 구성
+      href: tasks/configuring-sql-server-in-smo.md
+    - name: 테이블 및 인덱스 분할 사용
+      href: tasks/using-table-and-index-partitioning.md
+    - name: 파일 그룹 및 파일을 사용하여 데이터 저장
+      href: tasks/using-filegroups-and-files-to-store-data.md
+    - name: 데이터베이스 개체 작업
+      href: tasks/creating-altering-and-removing-database-objects.md
+      items:
+        - name: '데이터베이스 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-databases.md
+        - name: '테이블 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-tables.md
+        - name: '인덱스 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-indexes.md
+        - name: '외래 키 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-foreign-keys.md
+        - name: '기본값 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-defaults.md
+        - name: '규칙 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-rules.md
+        - name: '뷰 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-views.md
+        - name: '트리거 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-triggers.md
+        - name: '저장 프로시저 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-stored-procedures.md
+        - name: '사용자 정의 함수 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-user-defined-functions.md
+        - name: '스키마 생성, 변경 및 제거'
+          href: tasks/creating-altering-and-removing-schemas.md
+    - name: '사용자, 역할 및 로그인 관리'
+      href: tasks/managing-users-roles-and-logins.md
+    - name: '권한 부여, 취소 및 거부'
+      href: tasks/granting-revoking-and-denying-permissions.md
+    - name: 암호화 사용
+      href: tasks/using-encryption.md
+    - name: SQL Server 에이전트에서 자동 관리 태스크 예약
+      href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+    - name: 데이터베이스 및 트랜잭션 로그 백업 및 복원
+      href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+    - name: 스크립팅
+      href: tasks/scripting.md
+    - name: 데이터 전송
+      href: tasks/transferring-data.md
+    - name: 데이터베이스 메일 사용
+      href: tasks/using-database-mail.md
+    - name: Service Broker 관리
+      href: tasks/managing-service-broker.md
+    - name: XML 스키마 사용
+      href: tasks/using-xml-schemas.md
+    - name: 동의어 사용
+      href: tasks/using-synonyms.md
+    - name: 메시지 사용
+      href: tasks/using-messages.md
+    - name: 전체 텍스트 검색 구현
+      href: tasks/implementing-full-text-search.md
+    - name: 끝점 구현
+      href: tasks/implementing-endpoints.md
+    - name: 통계 생성 및 업데이트
+      href: tasks/creating-and-updating-statistics.md
+    - name: 이벤트 추적 및 재생
+      href: tasks/tracing-and-replaying-events.md
+    - name: WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리
+      href: tasks/managing-services-and-network-settings-by-using-wmi-provider.md
+    - name: SMO에서 연결된 서버 사용
+      href: tasks/using-linked-servers-in-smo.md
+    - name: 사용자 정의 테이블 사용
+      href: tasks/using-user-defined-tables.md
+- name: SMO 방법 도움말 항목
+  href: ../../database-engine/dev-guide/smo-how-to-topics.md
+  items:
+    - name: 'Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기'
+      href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+    - name: Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기
+      href: ../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md

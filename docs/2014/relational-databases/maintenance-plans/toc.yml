@@ -1,0 +1,50 @@
+- name: 유지 관리 계획
+  href: maintenance-plans.md
+- name: 유지 관리 계획 만들기
+  href: create-a-maintenance-plan.md
+  items:
+    - name: 유지 관리 계획 마법사 사용
+      href: use-the-maintenance-plan-wizard.md
+    - name: 유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
+      href: create-a-maintenance-plan-maintenance-plan-design-surface.md
+    - name: 유지 관리 계획 노드(개체 탐색기)
+      href: maintenance-plans-node-object-explorer.md
+- name: 도구 상자 구성 요소 F1 도움말
+  href: toolbox-component-f1-help.md
+  items:
+    - name: 유지 관리 계획(디자인 탭)
+      href: maintenance-plan-design-tab.md
+    - name: 유지 관리 계획(보고 및 로깅 페이지)
+      href: maintenance-plan-reporting-and-logging-page.md
+    - name: 유지 관리 계획(연결 관리)
+      href: maintenance-plan-manage-connections.md
+    - name: 데이터베이스 백업 태스크(유지 관리 계획)
+      href: options-in-the-back-up-database-task-for-maintenance-plan.md
+    - name: 통계 업데이트 태스크(유지 관리 계획)
+      href: update-statistics-task-maintenance-plan.md
+    - name: 인덱스 다시 작성 태스크(유지 관리 계획)
+      href: rebuild-index-task-maintenance-plan.md
+    - name: 데이터베이스 축소 태스크(유지 관리 계획)
+      href: shrink-database-task-maintenance-plan.md
+    - name: 데이터베이스 무결성 검사 태스크(유지 관리 계획)
+      href: check-database-integrity-task-maintenance-plan.md
+    - name: T-SQL 문 실행 태스크(유지 관리 계획)
+      href: execute-t-sql-statement-task-maintenance-plan.md
+    - name: 인덱스 다시 구성 태스크(유지 관리 계획)
+      href: reorganize-index-task-maintenance-plan.md
+    - name: 운영자에게 알림 태스크(유지 관리 계획)
+      href: notify-operator-task-maintenance-plan.md
+    - name: 기록 정리 태스크(유지 관리 계획)
+      href: history-cleanup-task-maintenance-plan.md
+    - name: SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)
+      href: execute-sql-server-agent-job-task-maintenance-plan.md
+    - name: 유지 관리 정리 태스크(유지 관리 계획)
+      href: maintenance-cleanup-task-maintenance-plan.md
+    - name: 작업 활동 모니터(필터 설정)
+      href: job-activity-monitor-filter-settings.md
+    - name: 작업 활동 모니터 새로 고침
+      href: job-activity-monitor-refresh.md
+    - name: 유지 관리 계획(하위 계획 속성)
+      href: maintenance-plan-subplan-properties.md
+    - name: 유지 관리 계획(서버)
+      href: maintenance-plan-servers.md

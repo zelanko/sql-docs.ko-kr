@@ -1,0 +1,10 @@
+- name: 추가 스크립트 구성 요소 예
+  href: additional-script-component-examples.md
+- name: 스크립트 구성 요소를 사용하여 ODBC 대상 만들기
+  href: creating-an-odbc-destination-with-the-script-component.md
+- name: 스크립트 구성 요소를 사용하여 오류 출력 향상
+  href: enhancing-an-error-output-with-the-script-component.md
+- name: 스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
+  href: parsing-non-standard-text-file-formats-with-the-script-component.md
+- name: 스크립트 구성 요소의 오류 출력 시뮬레이션
+  href: simulating-an-error-output-for-the-script-component.md

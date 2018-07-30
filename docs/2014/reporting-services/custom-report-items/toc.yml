@@ -1,0 +1,15 @@
+- name: 사용자 지정 보고서 항목
+  href: custom-report-items.md
+  items:
+    - name: 사용자 지정 보고서 항목 아키텍처
+      href: custom-report-item-architecture.md
+    - name: 사용자 지정 보고서 항목 구현 요구 사항
+      href: custom-report-item-implementation-requirements.md
+    - name: 사용자 지정 보고서 항목 런타임 구성 요소 만들기
+      href: creating-a-custom-report-item-run-time-component.md
+    - name: 사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
+      href: creating-a-custom-report-item-design-time-component.md
+    - name: '방법: 사용자 지정 보고서 항목 배포'
+      href: how-to-deploy-a-custom-report-item.md
+    - name: 사용자 지정 보고서 항목 클래스 라이브러리
+      href: custom-report-item-class-libraries.md

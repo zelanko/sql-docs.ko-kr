@@ -1,0 +1,35 @@
+- name: 보안
+  href: security-overview-integration-services.md
+- name: 위협 요소 및 취약성 완화
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Integration Services 역할(SSIS 서비스)
+  href: integration-services-roles-ssis-service.md
+  items:
+    - name: 패키지 역할 대화 상자 UI 참조
+      href: ../package-roles-dialog-box-ui-reference.md
+- name: Integration Services 서비스 액세스
+  href: ../access-to-the-integration-services-service.md
+- name: 패키지에서 사용되는 파일 액세스
+  href: ../access-to-files-used-by-packages.md
+- name: 패키지의 중요한 데이터에 대한 액세스 제어
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+    - name: 패키지 보호 수준 설정 또는 변경
+      href: ../set-or-change-the-protection-level-of-packages.md
+    - name: 패키지 및 프로젝트 보호 수준 대화 상자
+      href: ../package-and-project-protection-level-dialog-box.md
+    - name: 패키지 및 프로젝트 암호
+      href: ../package-and-project-password.md
+- name: 디지털 서명을 사용하여 패키지 원본 확인
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+    - name: 레지스트리 값을 설정하여 서명 정책 구현
+      href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+    - name: 디지털 인증서를 사용하여 패키지 서명
+      href: ../sign-a-package-by-using-a-digital-certificate.md
+    - name: 디지털 서명 대화 상자 UI 참조
+      href: ../digital-signing-dialog-box-ui-reference.md
+- name: 사용자 정의 역할 만들기
+  href: ../create-a-user-defined-role.md
+- name: 패키지에 읽기 및 쓰기 역할 할당
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

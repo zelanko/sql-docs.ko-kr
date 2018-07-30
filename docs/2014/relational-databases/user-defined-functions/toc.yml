@@ -1,0 +1,21 @@
+- name: 사용자 정의 함수
+  href: user-defined-functions.md
+  items:
+    - name: 결정적 함수 및 비결정적 함수
+      href: deterministic-and-nondeterministic-functions.md
+    - name: 사용자 정의 함수 만들기(데이터베이스 엔진)
+      href: create-user-defined-functions-database-engine.md
+    - name: CLR 함수 만들기
+      href: create-clr-functions.md
+    - name: 사용자 정의 집계 만들기
+      href: create-user-defined-aggregates.md
+    - name: 사용자 정의 함수 수정
+      href: modify-user-defined-functions.md
+    - name: 사용자 정의 함수 삭제
+      href: delete-user-defined-functions.md
+    - name: 사용자 정의 함수 실행
+      href: execute-user-defined-functions.md
+    - name: 사용자 정의 함수 이름 바꾸기
+      href: rename-user-defined-functions.md
+    - name: 사용자 정의 함수 보기
+      href: view-user-defined-functions.md

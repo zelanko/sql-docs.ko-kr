@@ -1,0 +1,33 @@
+- name: 개요
+  href: reporting-services-reports-ssrs.md
+- name: 데이터 원본 및 보고서 게시
+  href: publishing-data-sources-and-reports.md
+  items:
+    - name: 보고서 미리 보기
+      href: previewing-reports.md
+    - name: 보고서 서버에 보고서 게시
+      href: publishing-reports-to-a-report-server.md
+    - name: SharePoint 라이브러리에 보고서 게시
+      href: publish-a-report-to-a-sharepoint-library.md
+    - name: SharePoint 라이브러리에 공유 데이터 원본 게시
+      href: publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: RDL(Report Definition Language)
+  href: report-definition-language-ssrs.md
+- name: 보고서 정의 스키마 버전 찾기
+  href: find-the-report-definition-schema-version-ssrs.md
+- name: '보고서에서 텍스트, 숫자 또는 날짜 찾기'
+  href: find-text-numbers-or-dates-in-a-report.md
+- name: 보고서 실행 속성 구성
+  href: configure-execution-properties-for-a-report-report-manager.md
+- name: 보고서 기록 제한
+  href: limit-report-history-report-manager.md
+- name: 보고서 열기 및 닫기
+  href: open-and-close-a-report-report-manager.md
+- name: 파일 또는 보고서 업로드
+  href: upload-a-file-or-report-report-manager.md
+- name: 링크된 보고서 만들기
+  href: create-a-linked-report.md
+- name: 클릭 광고 보고서(SSRS)
+  href: clickthrough-reports-ssrs.md
+- name: SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
+  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md

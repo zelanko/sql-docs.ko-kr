@@ -1,0 +1,336 @@
+- name: 제어 흐름
+  href: control-flow.md
+- name: 제어 흐름 탭
+  href: ../control-flow-tab.md
+- name: Integration Services 컨테이너
+  href: integration-services-containers.md
+  items:
+    - name: Foreach 루프 컨테이너
+      href: foreach-loop-container.md
+      items:
+        - name: Foreach 루프 컨테이너 구성
+          href: ../configure-a-foreach-loop-container.md
+        - name: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
+          href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+        - name: 제어 흐름에 열거 추가
+          href: ../add-enumeration-to-a-control-flow.md
+        - name: For Each Item 열 대화 상자 UI 참조
+          href: ../for-each-item-columns-dialog-box-ui-reference.md
+        - name: Foreach 루프 편집기(일반 페이지)
+          href: ../foreach-loop-editor-general-page.md
+        - name: Foreach 루프 편집기(컬렉션 페이지)
+          href: ../foreach-loop-editor-collection-page.md
+        - name: Foreach 루프 편집기(변수 매핑 페이지)
+          href: ../foreach-loop-editor-variable-mappings-page.md
+        - name: SMO 열거 선택 대화 상자
+          href: ../select-smo-enumeration-dialog-box.md
+        - name: 스키마 제한 대화 상자
+          href: ../schema-restrictions-dialog-box.md
+    - name: For 루프 컨테이너
+      href: for-loop-container.md
+      items:
+        - name: For 루프 편집기
+          href: ../for-loop-editor.md
+        - name: For 루프 컨테이너 구성
+          href: ../configure-a-for-loop-container.md
+        - name: 제어 흐름에 반복 추가
+          href: ../add-iteration-to-a-control-flow.md
+    - name: 시퀀스 컨테이너
+      href: sequence-container.md
+    - name: 태스크 호스트 컨테이너
+      href: task-host-container.md
+- name: Integration Services 태스크
+  href: integration-services-tasks.md
+  items:
+    - name: Analysis Services DDL 실행 태스크
+      href: analysis-services-execute-ddl-task.md
+      items:
+        - name: Analysis Services DDL 실행 태스크 편집기(일반 페이지)
+          href: ../analysis-services-execute-ddl-task-editor-general-page.md
+        - name: Analysis Services DDL 실행 태스크 편집기(DDL 페이지)
+          href: ../analysis-services-execute-ddl-task-editor-ddl-page.md
+    - name: Analysis Services 처리 태스크
+      href: analysis-services-processing-task.md
+      items:
+        - name: Analysis Services 처리 태스크 편집기(일반 페이지)
+          href: ../analysis-services-processing-task-editor-general-page.md
+        - name: Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
+          href: ../analysis-services-processing-task-editor-analysis-services-page.md
+    - name: 데이터베이스 백업 태스크
+      href: back-up-database-task.md
+    - name: 대량 삽입 태스크
+      href: bulk-insert-task.md
+      items:
+        - name: 대량 삽입 태스크 편집기(일반 페이지)
+          href: ../bulk-insert-task-editor-general-page.md
+        - name: 대량 삽입 태스크 편집기(연결 페이지)
+          href: ../bulk-insert-task-editor-connection-page.md
+        - name: 대량 삽입 태스크 편집기(옵션 페이지)
+          href: ../bulk-insert-task-editor-options-page.md
+    - name: CDC 제어 태스크
+      href: cdc-control-task.md
+      items:
+        - name: CDC 제어 태스크 편집기
+          href: ../cdc-control-task-editor.md
+        - name: CDC 제어 태스크 사용자 지정 속성
+          href: cdc-control-task-custom-properties.md
+    - name: 데이터베이스 무결성 검사 태스크
+      href: check-database-integrity-task.md
+    - name: Data Mining Query Task
+      href: data-mining-query-task.md
+      items:
+        - name: 데이터 마이닝 쿼리 태스크 편집기(마이닝 모델 탭)
+          href: ../data-mining-query-task-editor-mining-model-tab.md
+        - name: 데이터 마이닝 쿼리 태스크 편집기(쿼리 탭)
+          href: ../data-mining-query-task-editor-query-tab.md
+        - name: 데이터 마이닝 쿼리 태스크 편집기(출력 탭)
+          href: ../data-mining-query-task-editor-output-tab.md
+        - name: 데이터 마이닝 쿼리
+          href: data-mining-query.md
+    - name: 데이터 프로파일링 태스크 및 뷰어
+      href: data-profiling-task-and-viewer.md
+      items:
+        - name: 데이터 프로파일링 태스크 설정
+          href: setup-of-the-data-profiling-task.md
+        - name: 데이터 프로필 뷰어(Data Profile Viewer)
+          href: data-profile-viewer.md
+        - name: 데이터 프로필 뷰어 F1 도움말
+          href: ../data-profile-viewer-f1-help.md
+        - name: 데이터 프로파일링 태스크
+          href: data-profiling-task.md
+          items:
+            - name: 데이터 프로파일링 태스크 편집기(일반 페이지)
+              href: data-profiling-task-editor-general-page.md
+            - name: 단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
+              href: single-table-quick-profile-form-data-profiling-task.md
+            - name: 데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
+              href: data-profiling-task-editor-profile-requests-page.md
+            - name: 후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: candidate-key-profile-request-options-data-profiling-task.md
+            - name: 열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: column-length-distribution-profile-request-options-data-profiling-task.md
+            - name: 열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: column-null-ratio-profile-request-options-data-profiling-task.md
+            - name: 열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: column-pattern-profile-request-options-data-profiling-task.md
+            - name: 열 통계 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: column-statistics-profile-request-options-data-profiling-task.md
+            - name: 열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: column-value-distribution-profile-request-options-data-profiling-task.md
+            - name: 함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: functional-dependency-profile-request-options-data-profiling-task.md
+            - name: 값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
+              href: value-inclusion-profile-request-options-data-profiling-task.md
+            - name: 패키지 워크플로에 데이터 프로파일링 태스크 포함
+              href: incorporate-a-data-profiling-task-in-package-workflow.md
+    - name: 패키지 실행 태스크
+      href: execute-package-task.md
+      items:
+        - name: 패키지 실행 태스크 편집기
+          href: ../execute-package-task-editor.md
+    - name: 프로세스 실행 태스크
+      href: execute-process-task.md
+      items:
+        - name: 프로세스 실행 태스크 편집기(일반 페이지)
+          href: ../execute-process-task-editor-general-page.md
+        - name: 프로세스 실행 태스크 편집기(프로세스 페이지)
+          href: ../execute-process-task-editor-process-page.md
+    - name: SQL 실행 태스크
+      href: execute-sql-task.md
+      items:
+        - name: SQL 실행 태스크의 매개 변수 및 반환 코드
+          href: ../parameters-and-return-codes-in-the-execute-sql-task.md
+        - name: SQL 실행 태스크의 결과 집합
+          href: ../result-sets-in-the-execute-sql-task.md
+        - name: SQL 실행 태스크 편집기(일반 페이지)
+          href: ../execute-sql-task-editor-general-page.md
+        - name: SQL 실행 태스크 편집기(매개 변수 매핑 페이지)
+          href: ../execute-sql-task-editor-parameter-mapping-page.md
+        - name: SQL 실행 태스크 편집기(결과 집합 페이지)
+          href: ../execute-sql-task-editor-result-set-page.md
+        - name: Integration Services 패키지의 MERGE
+          href: merge-in-integration-services-packages.md
+        - name: 쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
+          href: ../map-query-parameters-to-variables-in-an-execute-sql-task.md
+        - name: 결과 집합을 SQL 실행 태스크의 변수에 매핑
+          href: ../map-result-sets-to-variables-in-an-execute-sql-task.md
+    - name: T-SQL 문 실행 태스크
+      href: execute-t-sql-statement-task.md
+    - name: 파일 시스템 태스크
+      href: file-system-task.md
+      items:
+        - name: 파일 시스템 태스크 편집기(일반 페이지)
+          href: ../file-system-task-editor-general-page.md
+    - name: FTP 태스크
+      href: ftp-task.md
+      items:
+        - name: FTP 태스크 편집기(일반 페이지)
+          href: ../ftp-task-editor-general-page.md
+        - name: FTP 태스크 편집기(파일 전송 페이지)
+          href: ../ftp-task-editor-file-transfer-page.md
+    - name: 기록 정리 태스크
+      href: history-cleanup-task.md
+    - name: 유지 관리 정리 태스크
+      href: maintenance-cleanup-task.md
+    - name: Message Queue Task
+      href: message-queue-task.md
+      items:
+        - name: 메시지 큐 태스크 편집기(일반 페이지)
+          href: ../message-queue-task-editor-general-page.md
+        - name: 메시지 큐 태스크 편집기(받기 페이지)
+          href: ../message-queue-task-editor-receive-page.md
+        - name: 메시지 큐 태스크 편집기(보내기 페이지)
+          href: ../message-queue-task-editor-send-page.md
+        - name: 패키지 선택
+          href: select-a-package.md
+    - name: 운영자에게 알림 태스크
+      href: notify-operator-task.md
+    - name: 인덱스 다시 작성 태스크
+      href: rebuild-index-task.md
+    - name: 인덱스 다시 구성 태스크
+      href: reorganize-index-task.md
+    - name: 스크립트 태스크
+      href: script-task.md
+      items:
+        - name: 스크립트 태스크 편집기(일반 페이지)
+          href: ../script-task-editor-general-page.md
+        - name: 스크립트 태스크 편집기(스크립트 페이지)
+          href: ../script-task-editor-script-page.md
+        - name: 변수 선택 페이지
+          href: select-variables-page.md
+    - name: 메일 보내기 태스크
+      href: send-mail-task.md
+      items:
+        - name: 메일 보내기 태스크 편집기(일반 페이지)
+          href: ../send-mail-task-editor-general-page.md
+        - name: 메일 보내기 태스크 편집기(메일 페이지)
+          href: ../send-mail-task-editor-mail-page.md
+    - name: 데이터베이스 축소 태스크
+      href: shrink-database-task.md
+    - name: 데이터베이스 전송 태스크
+      href: transfer-database-task.md
+      items:
+        - name: 데이터베이스 전송 태스크 편집기(일반 페이지)
+          href: ../transfer-database-task-editor-general-page.md
+        - name: 데이터베이스 전송 태스크 편집기(데이터베이스 페이지)
+          href: ../transfer-database-task-editor-databases-page.md
+        - name: 원본 데이터베이스 파일
+          href: ../source-database-files.md
+        - name: 대상 데이터베이스 파일
+          href: ../destination-database-files.md
+    - name: 오류 메시지 전송 태스크
+      href: transfer-error-messages-task.md
+      items:
+        - name: 오류 메시지 전송 태스크 편집기(일반 페이지)
+          href: ../transfer-error-messages-task-editor-general-page.md
+        - name: 오류 메시지 전송 태스크 편집기(메시지 페이지)
+          href: ../transfer-error-messages-task-editor-messages-page.md
+    - name: 작업 전송 태스크
+      href: transfer-jobs-task.md
+      items:
+        - name: 작업 전송 태스크 편집기(일반 페이지)
+          href: ../transfer-jobs-task-editor-general-page.md
+        - name: 작업 전송 태스크 편집기(작업 페이지)
+          href: ../transfer-jobs-task-editor-jobs-page.md
+    - name: 로그인 전송 태스크
+      href: transfer-logins-task.md
+      items:
+        - name: 로그인 전송 태스크 편집기(일반 페이지)
+          href: ../transfer-logins-task-editor-general-page.md
+        - name: 로그인 전송 태스크 편집기(로그인 페이지)
+          href: ../transfer-logins-task-editor-logins-page.md
+    - name: Master 저장 프로시저 전송 태스크
+      href: transfer-master-stored-procedures-task.md
+      items:
+        - name: master 저장 프로시저 전송 태스크 편집기(일반 페이지)
+          href: ../transfer-master-stored-procedures-task-editor-general-page.md
+        - name: master 저장 프로시저 전송 태스크 편집기(저장 프로시저 페이지)
+          href: ../transfer-master-stored-procedures-task-editor-stored-procedures-page.md
+    - name: SQL Server 개체 전송 태스크
+      href: transfer-sql-server-objects-task.md
+      items:
+        - name: SQL Server 개체 전송 태스크 편집기(일반 페이지)
+          href: ../transfer-sql-server-objects-task-editor-general-page.md
+        - name: SQL Server 개체 전송 태스크 편집기(개체 페이지)
+          href: ../transfer-sql-server-objects-task-editor-objects-page.md
+        - name: 전송할 개체 선택
+          href: select-objects-to-transfer.md
+    - name: 통계 업데이트 태스크
+      href: update-statistics-task.md
+    - name: 웹 서비스 태스크
+      href: web-service-task.md
+      items:
+        - name: 웹 서비스 태스크 편집기(일반 페이지)
+          href: ../web-service-task-editor-general-page.md
+        - name: 웹 서비스 태스크 편집기(입력 페이지)
+          href: ../web-service-task-editor-input-page.md
+        - name: 웹 서비스 태스크 편집기(출력 페이지)
+          href: ../web-service-task-editor-output-page.md
+    - name: WMI 데이터 판독기 태스크
+      href: wmi-data-reader-task.md
+      items:
+        - name: WMI 데이터 판독기 태스크 편집기(일반 페이지)
+          href: ../wmi-data-reader-task-editor-general-page.md
+        - name: WMI 데이터 판독기 태스크 편집기(WMI 옵션 페이지)
+          href: ../wmi-data-reader-task-editor-wmi-options-page.md
+    - name: WMI 이벤트 감시자 태스크
+      href: wmi-event-watcher-task.md
+      items:
+        - name: WMI 이벤트 감시자 태스크 편집기(일반 페이지)
+          href: ../wmi-event-watcher-task-editor-general-page.md
+        - name: WMI 이벤트 감시자 태스크 편집기(WMI 옵션 페이지)
+          href: ../wmi-event-watcher-task-editor-wmi-options-page.md
+    - name: XML 태스크
+      href: xml-task.md
+      items:
+        - name: Validate XML with the XML Task
+          href: validate-xml-with-the-xml-task.md
+        - name: XML 태스크 편집기(일반 페이지)
+          href: ../xml-task-editor-general-page.md
+    - name: Azure Blob 업로드 태스크
+      href: azure-blob-upload-task.md
+    - name: Azure Blob 다운로드 작업
+      href: azure-blob-download-task.md
+    - name: Azure HDInsight 하이브 태스크
+      href: azure-hdinsight-hive-task.md
+    - name: Azure HDInsight Pig 태스크
+      href: azure-hdinsight-pig-task.md
+    - name: Azure HDInsight 클러스터 만들기 태스크
+      href: azure-hdinsight-create-cluster-task.md
+    - name: Azure HDInsight 클러스터 삭제 작업
+      href: azure-hdinsight-delete-cluster-task.md
+    - name: Azure SQL DW 업로드 태스크
+      href: ../azure-sql-dw-upload-task.md
+    - name: Azure Data Lake Store 파일 시스템 태스크
+      href: ../azure-data-lake-store-file-system-task.md
+- name: Integration Services 트랜잭션
+  href: ../integration-services-transactions.md
+  items:
+    - name: 상속된 트랜잭션
+      href: ../inherited-transactions.md
+    - name: 여러 트랜잭션
+      href: ../multiple-transactions.md
+    - name: 트랜잭션을 사용하도록 패키지 구성
+      href: ../configure-a-package-to-use-transactions.md
+- name: 선행 제약 조건
+  href: precedence-constraints.md
+  items:
+    - name: 선행 제약 조건에 식 추가
+      href: ../add-expressions-to-precedence-constraints.md
+      items:
+        - name: 선행 제약 조건에서 식 사용
+          href: ../use-an-expression-in-a-precedence-constraint.md
+    - name: 여러 선행 제약 조건
+      href: ../multiple-precedence-constraints.md
+    - name: 선행 제약 조건 편집기
+      href: ../precedence-constraint-editor.md
+    - name: 바로 가기 메뉴를 사용하여 선행 제약 조건 값 설정
+      href: ../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md
+    - name: 선행 제약 조건의 속성 설정
+      href: ../set-the-properties-of-a-precedence-constraint.md
+    - name: 기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결
+      href: ../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md
+- name: 제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
+  href: add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: 태스크 또는 컨테이너의 속성 설정
+  href: ../set-the-properties-of-a-task-or-container.md

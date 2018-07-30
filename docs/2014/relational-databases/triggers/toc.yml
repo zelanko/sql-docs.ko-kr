@@ -1,0 +1,36 @@
+- name: DDL 트리거
+  href: ddl-triggers.md
+  items:
+    - name: DDL 트리거 구현
+      href: implement-ddl-triggers.md
+    - name: DDL 트리거에 대한 정보 가져오기
+      href: get-information-about-ddl-triggers.md
+    - name: EVENTDATA 함수 사용
+      href: use-the-eventdata-function.md
+    - name: DDL 이벤트
+      href: ddl-events.md
+    - name: DDL 이벤트 그룹
+      href: ddl-event-groups.md
+- name: DML 트리거
+  href: dml-triggers.md
+  items:
+    - name: DML 트리거 만들기
+      href: create-dml-triggers.md
+    - name: CLR 트리거 만들기
+      href: create-clr-triggers.md
+    - name: 여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: 중첩 트리거 만들기
+      href: create-nested-triggers.md
+    - name: 첫 번째 및 마지막 트리거 지정
+      href: specify-first-and-last-triggers.md
+    - name: inserted 및 deleted 테이블 사용
+      href: use-the-inserted-and-deleted-tables.md
+    - name: DML 트리거 수정 또는 이름 바꾸기
+      href: modify-or-rename-dml-triggers.md
+    - name: DML 트리거에 대한 정보 가져오기
+      href: get-information-about-dml-triggers.md
+    - name: DML 트리거 삭제 또는 해제
+      href: delete-or-disable-dml-triggers.md
+    - name: 트리거 보안 관리
+      href: manage-trigger-security.md

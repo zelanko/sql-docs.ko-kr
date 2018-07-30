@@ -1,0 +1,68 @@
+- name: DISCOVER_CALC_DEPENDENCY 행 집합
+  href: discover-calc-dependency-rowset.md
+- name: DISCOVER_COMMAND_OBJECTS 행 집합
+  href: discover-command-objects-rowset.md
+- name: DISCOVER_COMMANDS 행 집합
+  href: discover-commands-rowset.md
+- name: DISCOVER_CONNECTIONS 행 집합
+  href: discover-connections-rowset.md
+- name: DISCOVER_CSDL_METADATA 행 집합
+  href: discover-csdl-metadata-rowset.md
+- name: DISCOVER_DATASOURCES 행 집합
+  href: discover-datasources-rowset.md
+- name: DISCOVER_DB_CONNECTIONS 행 집합
+  href: discover-db-connections-rowset.md
+- name: DISCOVER_DIMENSION_STAT 행 집합
+  href: discover-dimension-stat-rowset.md
+- name: DISCOVER_ENUMERATORS 행 집합
+  href: discover-enumerators-rowset.md
+- name: DISCOVER_JOBS 행 집합
+  href: discover-jobs-rowset.md
+- name: DISCOVER_KEYWORDS 행 집합(XMLA)
+  href: discover-keywords-rowset-xmla.md
+- name: DISCOVER_LITERALS 행 집합
+  href: discover-literals-rowset.md
+- name: DISCOVER_LOCATIONS 행 집합
+  href: discover-locations-rowset.md
+- name: DISCOVER_LOCKS 행 집합
+  href: discover-locks-rowset.md
+- name: DISCOVER_MEMORYGRANT 행 집합
+  href: discover-memorygrant-rowset.md
+- name: DISCOVER_MEMORYUSAGE 행 집합
+  href: discover-memoryusage-rowset.md
+- name: DISCOVER_OBJECT_ACTIVITY 행 집합
+  href: discover-object-activity-rowset.md
+- name: DISCOVER_OBJECT_MEMORY_USAGE 행 집합
+  href: discover-object-memory-usage-rowset.md
+- name: DISCOVER_PARTITION_DIMENSION_STAT 행 집합
+  href: discover-partition-dimension-stat-rowset.md
+- name: DISCOVER_PARTITION_STAT 행 집합
+  href: discover-partition-stat-rowset.md
+- name: DISCOVER_PERFORMANCE_COUNTERS 행 집합
+  href: discover-performance-counters-rowset.md
+- name: DISCOVER_PROPERTIES 행 집합
+  href: discover-properties-rowset.md
+- name: DISCOVER_SCHEMA_ROWSETS 행 집합
+  href: discover-schema-rowsets-rowset.md
+- name: DISCOVER_SESSIONS 행 집합
+  href: discover-sessions-rowset.md
+- name: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합
+  href: discover-storage-table-column-segments-rowset.md
+- name: DISCOVER_STORAGE_TABLE_COLUMNS 행 집합
+  href: discover-storage-table-columns-rowset.md
+- name: DISCOVER_STORAGE_TABLES 행 집합
+  href: discover-storage-tables-rowset.md
+- name: DISCOVER_TRACE_COLUMNS 행 집합
+  href: discover-trace-columns-rowset.md
+- name: DISCOVER_TRACE_DEFINITION_PROVIDERINFO 행 집합
+  href: discover-trace-definition-providerinfo-rowset.md
+- name: DISCOVER_TRACE_EVENT_CATEGORIES 행 집합
+  href: discover-trace-event-categories-rowset.md
+- name: DISCOVER_TRACES 행 집합
+  href: discover-traces-rowset.md
+- name: DISCOVER_TRANSACTIONS 행 집합
+  href: discover-transactions-rowset.md
+- name: DISCOVER_XML_METADATA 행 집합
+  href: discover-xml-metadata-rowset.md
+- name: XML for Analysis Schema Rowsets
+  href: xml-for-analysis-schema-rowsets.md

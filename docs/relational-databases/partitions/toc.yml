@@ -1,0 +1,10 @@
+- name: 개요
+  href: partitioned-tables-and-indexes.md
+- name: 만들기
+  href: create-partitioned-tables-and-indexes.md
+- name: 파티션 함수 수정
+  href: modify-a-partition-function.md
+- name: 파티션 구성표 수정
+  href: modify-a-partition-scheme.md
+- name: 파티션 관리 마법사 F1 도움말
+  href: manage-partition-wizard-f1-help.md

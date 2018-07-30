@@ -1,0 +1,37 @@
+- name: 저장 프로시저
+  href: stored-procedures-database-engine.md
+  items:
+    - name: 저장 프로시저 만들기
+      href: create-a-stored-procedure.md
+    - name: 저장 프로시저 수정
+      href: modify-a-stored-procedure.md
+    - name: 저장 프로시저 삭제
+      href: delete-a-stored-procedure.md
+    - name: 저장 프로시저 실행
+      href: execute-a-stored-procedure.md
+      items:
+        - name: 매개 변수 지정
+          href: specify-parameters.md
+    - name: 저장 프로시저에 대한 사용 권한 부여
+      href: grant-permissions-on-a-stored-procedure.md
+    - name: 저장 프로시저에서 데이터 반환
+      href: return-data-from-a-stored-procedure.md
+    - name: 저장 프로시저 다시 컴파일
+      href: recompile-a-stored-procedure.md
+    - name: 저장 프로시저 이름 바꾸기
+      href: rename-a-stored-procedure.md
+    - name: 저장 프로시저의 정의 보기
+      href: view-the-definition-of-a-stored-procedure.md
+    - name: 저장 프로시저의 종속성 보기
+      href: view-the-dependencies-of-a-stored-procedure.md
+    - name: 저장 프로시저 속성(일반 페이지)
+      href: stored-procedure-properties-general-page.md
+- name: Transact-SQL의 OLE 자동화 개체
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: OLE Automation 반환 코드 및 오류 정보
+      href: ole-automation-return-codes-and-error-information.md
+    - name: OLE 자동화 결과 집합
+      href: ole-automation-result-sets.md
+    - name: OLE 자동화 예제 스크립트
+      href: ole-automation-sample-script.md

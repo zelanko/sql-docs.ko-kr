@@ -1,0 +1,33 @@
+- name: 개요
+  href: data-collection.md
+- name: 데이터 컬렉션 관리
+  href: manage-data-collection.md
+  items:
+    - name: 관리 데이터 웨어하우스 구성(SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: 데이터 수집기의 속성 구성
+      href: configure-properties-of-a-data-collector.md
+    - name: 데이터 컬렉션 설정 또는 해제
+      href: enable-or-disable-data-collection.md
+    - name: 컬렉션 집합 시작 또는 중지
+      href: start-or-stop-a-collection-set.md
+    - name: SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: 컬렉션 집합 로그 보기(SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: 컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: 컬렉션 집합 보고서 보기(SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: 데이터 컬렉션 매개 변수 구성(Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: 일반 T-SQL 쿼리 수집기 유형을 사용하는 사용자 지정 컬렉션 집합 만들기(Transact-SQL)
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: 컬렉션 집합에 컬렉션 항목 추가(Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: 시스템 데이터 컬렉션 집합 보고서
+  href: system-data-collection-set-reports.md
+- name: 관리 데이터 웨어하우스
+  href: management-data-warehouse.md
+- name: 데이터 수집기 보안
+  href: data-collector-security.md

@@ -1,0 +1,46 @@
+- name: 개요
+  href: administration-replication.md
+- name: 피어 투 피어 토폴로지 관리(복제 Transact-SQL 프로그래밍)
+  href: administer-a-peer-to-peer-topology-replication-transact-sql-programming.md
+- name: 복제된 데이터베이스 백업 및 복원
+  href: back-up-and-restore-replicated-databases.md
+  items:
+    - name: 스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
+      href: strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md
+    - name: 병합 복제 백업 및 복원 전략
+      href: strategies-for-backing-up-and-restoring-merge-replication.md
+    - name: 업데이트된 백업이 필요한 일반 동작
+      href: common-actions-requiring-an-updated-backup.md
+- name: 최선의 복제 관리 방법
+  href: best-practices-for-replication-administration.md
+- name: 병합 메타데이터 정리(복제 Transact-SQL 프로그래밍)
+  href: clean-up-merge-metadata-replication-transact-sql-programming.md
+- name: 복제된 테이블의 차이점 비교(복제 프로그래밍)
+  href: compare-replicated-tables-for-differences-replication-programming.md
+- name: 미리 정의된 복제 경고 구성(SQL Server Management Studio)
+  href: configure-predefined-replication-alerts-sql-server-management-studio.md
+- name: Oracle 게시자에 대한 트랜잭션 세트 작업 구성(복제 Transact-SQL 프로그래밍)
+  href: configure-the-transaction-set-job-for-an-oracle-publisher.md
+- name: 트랜잭션 복제에 대해 통합 백업 사용(복제 Transact-SQL 프로그래밍)
+  href: enable-coordinated-backups-for-transactional-replication.md
+- name: 일반적인 복제 성능 향상
+  href: enhance-general-replication-performance.md
+- name: 병합 복제 성능 향상
+  href: enhance-merge-replication-performance.md
+- name: 트랜잭션 복제 성능 향상
+  href: enhance-transactional-replication-performance.md
+- name: 복제 관리자를 위한 질문과 대답
+  href: frequently-asked-questions-for-replication-administrators.md
+  items:
+    - name: 배포자 및 게시자 정보 스크립트
+      href: distributor-and-publisher-information-script.md
+- name: 병합 아티클에 대해 더미 업데이트 수행(복제 Transact-SQL 프로그래밍)
+  href: perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md
+- name: 복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
+  href: quiesce-a-replication-topology-replication-transact-sql-programming.md
+- name: 복제 유지 관리 작업 실행(SQL Server Management Studio)
+  href: run-replication-maintenance-jobs-sql-server-management-studio.md
+- name: 업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환
+  href: switch-between-update-modes-for-an-updatable-transactional-subscription.md
+- name: 복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍)
+  href: upgrade-replication-scripts-replication-transact-sql-programming.md
