@@ -1,7 +1,7 @@
 ---
 title: Kerberos 통합 인증을 사용하여 SQL Server에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9967b31d9b021147d02c981af54474f8967fe406
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
-ms.translationtype: HT
+ms.openlocfilehash: 5c36df2b7cc6feda976a3edfdadbac68e9b96dd3
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085455"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279045"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "39085455"
   
  로그인 구성 파일은 하나 이상의 항목으로 구성되며, 각 항목은 특정 응용 프로그램에 사용해야 하는 기본 인증 기술을 지정합니다. 예:  
   
-```  
+```java
 SQLJDBCDriver {  
    com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
 };  
@@ -172,7 +172,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## <a name="constrained-delegation"></a>제한된 위임
 Microsoft JDBC Driver 6.2 부터는 드라이버는 Kerberos 제한 위임을 지원 합니다. 위임 된 자격 증명 org.ietf.jgss.GSSCredential 개체 변수로 전달 될 수 있습니다, 그리고 연결할 드라이버에서 이러한 자격 증명이 사용 됩니다. 
 
-```
+```java
 Properties driverProperties = new Properties();
 GSSCredential impersonatedUserCredential = [userCredential]
 driverProperties.setProperty("integratedSecurity", "true");
@@ -183,7 +183,7 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 
 ## <a name="kerberos-connection-using-principal-names-and-password"></a>사용자 이름 및 암호를 사용 하 여 Kerberos 연결
 Microsoft JDBC Driver 6.2 부터는 드라이버는 Kerberos 연결의 보안 주체 이름 및 암호를 사용 하 여 전달 된 연결 문자열에 설정할 수 있습니다. 
-```
+```java
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 Username 속성 영역을 사용자가 krb5.conf 파일에서 설정 default_realm에 속한 경우 필요 하지 않습니다. 때 `userName` 하 고 `password` 와 함께 설정 됩니다 `integratedSecurity=true;` 및 `authenticationScheme=JavaKerberos;` 연결 속성 설정 된 사용자 이름 값 Kerberos 주체와 함께 제공 된 암호를 사용 하 여 합니다.

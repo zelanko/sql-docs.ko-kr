@@ -1,7 +1,7 @@
 ---
 title: 입력 매개 변수가 있는 저장 프로시저 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1c408fc703a3f6d9831cae226ce858b1a20a80c7
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978595"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278774"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>입력 매개 변수가 있는 저장 프로시저 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,28 +39,22 @@ ms.locfileid: "37978595"
   
  입력 매개 변수가 있는 저장 프로시저를 호출하는 방법의 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 uspGetEmployeeManagers 저장 프로시저를 사용합니다. 이 저장 프로시저는 정수인 EmployeeID라는 단일 입력 매개 변수를 허용하고 지정한 EmployeeID를 토대로 직원 및 해당 관리자의 재귀 목록을 반환합니다. 이 저장 프로시저를 호출하는 Java 코드는 다음과 같습니다.  
   
-```  
-public static void executeSprocInParams(Connection con) {  
-   try {  
-      PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}");  
-      pstmt.setInt(1, 50);  
-      ResultSet rs = pstmt.executeQuery();  
-  
-      while (rs.next()) {  
-         System.out.println("EMPLOYEE:");  
-         System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
-         System.out.println("MANAGER:");  
-         System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
-         System.out.println();  
-      }  
-      rs.close();  
-      pstmt.close();  
-   }  
-  
-   catch (Exception e) {  
-      e.printStackTrace();  
-    }  
-}  
+```java
+public static void executeSprocInParams(Connection con) throws SQLException {  
+    try(PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}"); ) {  
+
+        pstmt.setInt(1, 50);  
+        ResultSet rs = pstmt.executeQuery();  
+
+        while (rs.next()) {  
+            System.out.println("EMPLOYEE:");  
+            System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
+            System.out.println("MANAGER:");  
+            System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
+            System.out.println();  
+        }  
+    }
+}
 ```  
   
 ## <a name="see-also"></a>참고 항목  

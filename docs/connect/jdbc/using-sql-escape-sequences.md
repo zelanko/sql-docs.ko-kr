@@ -1,7 +1,7 @@
 ---
 title: SQL 이스케이프 시퀀스를 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978681"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278594"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL 이스케이프 시퀀스 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978681"
 ## <a name="like-wildcard-literals"></a>LIKE 와일드카드 리터럴  
  JDBC 드라이버는 LIKE 절 와일드카드를 리터럴로 사용할 수 있도록 `{escape 'escape character'}` 구문을 지원합니다. 예를 들어 다음 코드는 col3의 값을 반환하는데 여기서 col2의 값은 문자 그대로 밑줄(와일드카드를 사용하지 않음)로 시작됩니다.  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>함수 처리  
  JDBC 드라이버는 다음 구문을 사용하여 SQL 문에서 함수 이스케이프 시퀀스를 지원합니다.  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  여기서 `functionName`은 JDBC 드라이버에서 지원하는 함수입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>날짜 및 시간 리터럴  
  날짜, 시간 및 타임스탬프 리터럴에 대한 이스케이프 구문은 다음과 같습니다.  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  프로시저는 데이터베이스에 저장된 실행 가능한 개체로서 일반적으로 미리 컴파일된 하나 이상의 SQL 문입니다. 저장 프로시저 호출을 위한 이스케이프 시퀀스 구문은 다음과 같습니다.  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>외부 조인  
  JDBC 드라이버는 SQL92 LEFT, RIGHT 및 FULL OUTER JOIN 구문을 지원합니다. 외부 조인에 대한 이스케이프 시퀀스는 다음과 같습니다.  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  여기서 outer-join은 다음과 같습니다.  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  LIMIT에 대한 이스케이프 구문은 다음과 같습니다.  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

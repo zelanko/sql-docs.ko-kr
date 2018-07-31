@@ -1,7 +1,7 @@
 ---
 title: 테이블 반환 매개 변수를 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978765"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279214"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +56,14 @@ ms.locfileid: "37978765"
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
  테이블 반환 매개 변수는 TRANSACT-SQL CREATE TYPE 문을 사용 하 여 정의 된 강력한 형식의 테이블 구조를 기반으로 합니다. 테이블 형식을 만들고 클라이언트 응용 프로그램에서 테이블 반환 매개 변수를 사용 하려면 먼저 SQL Server의 구조를 정의 해야 합니다. 테이블 형식 만들기에 대 한 자세한 내용은 참조 하세요. [사용자 정의 테이블 형식](http://go.microsoft.com/fwlink/?LinkID=98364) SQL Server 온라인 설명서의 합니다.  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  테이블 형식을 만든 후 해당 형식을 기반으로 테이블 반환 매개 변수를 선언할 수 있습니다. 다음 TRANSACT-SQL 조각은 저장된 프로시저 정의에서 테이블 반환 매개 변수를 선언 하는 방법에 설명 합니다. READONLY 키워드는 테이블 반환 매개 변수를 선언 하는 것에 대 한 필요 하다는 참고 합니다.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  다음 TRANSACT-SQL UPDATE 문은 테이블 반환 매개 변수를 Categories 테이블에 조인 하 여 사용 하는 방법을 보여 줍니다. FROM 절의 JOIN을 사용 하 여 테이블 반환 매개 변수를 사용 하는 경우 수행 해야 별칭, 여기서는 테이블 반환 매개 변수는 "ec" 별칭이 여기에 표시 된 대로.  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  이 TRANSACT-SQL 예제에서는 단일 집합 기반 작업으로 INSERT를 수행 하는 테이블 반환 매개 변수에서 행을 선택 하는 방법에 설명 합니다.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  다음 두 코드 조각은 데이터를 삽입 하는 SQLServerCallableStatement SQLServerPreparedStatement와 테이블 반환 매개 변수를 구성 하는 방법을 보여 줍니다. 여기 sourceTVPObject SQLServerDataTable, ResultSet 또는 ISQLServerDataRecord 개체 수 있습니다. 이 예에서는 연결이 활성 연결 개체를 가정 합니다.  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>SQLServerDataTable 개체로 테이블 반환 매개 변수를 전달합니다.  
  SQL Server 용 Microsoft JDBC Driver 6.0부터 SQLServerDataTable이 클래스는 관계형 데이터의 메모리 내 테이블을 나타냅니다. 이 예제에서는 SQLServerDataTable 개체를 사용 하 여 메모리 내 데이터에서 테이블 반환 매개 변수를 생성 하는 방법을 보여 줍니다. 코드를 먼저 SQLServerDataTable 개체를 만듭니다, 그리고 해당 스키마를 정의 및 데이터 테이블을 채웁니다. 코드는 다음이 데이터 테이블을 SQL server 테이블 반환 매개 변수로 전달 하는 SQLServerPreparedStatement를 구성 합니다.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>결과 집합 개체와 테이블 반환 매개 변수를 전달합니다.  
  이 예제에서는 행을 테이블 반환 매개 변수로 결과 집합에서 데이터를 스트리밍하는 방법을 보여 줍니다. 코드에서 원본 테이블에서 데이터를 먼저 검색 한 SQLServerDataTable 개체를 만들고 해당 스키마를 정의 하 고 데이터 테이블을 채웁니다. 코드는 다음이 데이터 테이블을 SQL server 테이블 반환 매개 변수로 전달 하는 SQLServerPreparedStatement를 구성 합니다.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>ISQLServerDataRecord 개체로 테이블 반환 매개 변수를 전달합니다.  
  SQL Server 용 Microsoft JDBC Driver 6.0부터 새 인터페이스 ISQLServerDataRecord (에 따라 사용자에 대 한 구현을 제공 하는 방법) 데이터를 스트리밍하기 위한 됩니다. 테이블 반환 매개 변수를 사용 합니다. 다음 예제에서는 ISQLServerDataRecord 인터페이스를 구현 하는 방법 및 테이블 반환 매개 변수로 전달 하는 방법을 보여 줍니다. 간단히 하기 위해 다음 예에서는 테이블 반환 매개 변수를 하드 코드 된 값을 사용 하 여 행을 하나만 전달합니다. 이상적으로 사용자는 스트림 행에 예를 들어 텍스트 파일에서에서 모든 원본에서이 인터페이스를 구현 합니다.  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  
