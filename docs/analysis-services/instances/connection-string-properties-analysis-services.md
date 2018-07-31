@@ -124,7 +124,7 @@ ms.locfileid: "37994975"
   
  **Excel의 연결 문자열**  
   
- Excel의 기본 ADOMD.NET 연결 문자열은 데이터 공급자, 서버, 데이터베이스 이름, Windows 통합 보안을 지정합니다. MDX 호환성 수준은 항상 1로 설정됩니다. 현재 세션에 대한 값을 변경할 수 있지만 다음에 파일이 열릴 때 MDX 호환성이&1;로 다시 설정됩니다.  
+ Excel의 기본 ADOMD.NET 연결 문자열은 데이터 공급자, 서버, 데이터베이스 이름, Windows 통합 보안을 지정합니다. MDX 호환성 수준은 항상 1로 설정됩니다. 현재 세션에 대한 값을 변경할 수 있지만 다음에 파일이 열릴 때 MDX 호환성이 1;로 다시 설정됩니다.  
   
  `Provider=MSOLAP.5;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=Adventure Works DW 2008R2;Data Source=AW-SRV01;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error`  
   

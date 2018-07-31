@@ -1,5 +1,5 @@
 ---
-title: 반환 코드 | Microsoft Docs
+title: 코드를 반환 합니다. | Microsoft Docs
 description: 반환 코드
 ms.custom: ''
 ms.date: 06/14/2018
@@ -26,33 +26,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 84927b3d26233e9d21f175850a5b11c2c2bea56b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ec559040fceb5116ca83cc4eb295580479224b04
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665963"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107049"
 ---
 # <a name="return-codes"></a>반환 코드
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 응용 프로그램 개발자가 의도한 것이 아닐 수 있습니다.  
   
- OLE DB 반환 코드에 대 한 자세한 내용은 참조 [반환 코드 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)합니다.  
+ OLE DB 반환 코드에 대한 자세한 내용은 [반환 코드(OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)를 참조하십시오.  
   
- OLE DB Driver for SQL Server 멤버 함수가 S_OK를 반환 하는 경우 함수는 성공 했습니다.  
+ S_OK를 반환 하는 OLE DB 드라이버는 SQL Server 멤버 함수, 함수 성공 했습니다.  
   
- OLE DB 드라이버는 SQL Server 멤버 함수가 S_OK를 반환 하지 않습니다, 전반적인 성공 또는 실패는 함수의 OLE/COM hresult-unpacking FAILED 및 IS_ERROR 매크로 확인할 수 있습니다.  
+ SQL Server용 OLE DB 드라이버 멤버 함수가 S_OK를 반환하지 않으면 OLE/COM HRESULT-unpacking FAILED 및 IS_ERROR 매크로를 통해 함수의 전반적인 성공 또는 실패를 확인할 수 있습니다.  
   
- FAILED 또는 is_error가 TRUE를 반환 멤버 함수 실행이 실패는 OLE DB Driver for SQL Server 소비자가 보장 됩니다. FAILED 또는 is_error가 반환 하는 경우 FALSE이 고 HRESULT와 같지 않습니다 s_ok이 고는 OLE DB Driver for SQL Server 소비자는 함수가 어떤 의미에서 성공한 보장 됩니다. 소비자는 OLE DB Driver for SQL Server 오류 인터페이스에서에서이 "정보를 포함 한 성공" 반환에 대 한 자세한 정보를 검색할 수 있습니다. 또한 (의 FAILED 매크로가 TRUE를 반환한)에 함수 명확 하 게 실패 하는 경우 확장된 오류 정보는 OLE DB 드라이버에서 SQL Server 오류 인터페이스에서 사용할 수 있습니다.  
+ FAILED 또는 IS_ERROR가 TRUE를 반환하면 SQL Server용 OLE DB 드라이버 소비자는 멤버 함수 실행이 실패했음을 확인할 수 있습니다. FAILED 또는 IS_ERROR가 반환 하는 경우 FALSE이 고 HRESULT와 같지 않은 S_OK는 OLE DB Driver for SQL Server 소비자가 어떤 의미에서 성공 하는 함수를 보장 합니다. 소비자는 SQL Server용 OLE DB 드라이버 오류 인터페이스에서 이러한 “정보를 포함한 성공 메시지” 반환에 대한 자세한 정보를 검색할 수 있습니다. 또한 함수가 확실히 실패한 경우(FAILED 매크로가 TRUE를 반환한 경우)에도 SQL Server용 OLE DB 드라이버 오류 인터페이스에서 확장 오류 정보를 얻을 수 있습니다.  
   
- OLE DB Driver for SQL Server 소비자가 정보와 함께 DB_S_ERRORSOCCURRED "성공" HRESULT 반환을 일반적으로 발생 합니다. 일반적으로 DB_S_ERRORSOCCURRED를 반환하는 멤버 함수는 소비자에게 상태 값을 전달하는 하나 이상의 매개 변수를 정의합니다. 오류 정보가 소비자가 사용할 수 있을 때 상태 값을 검색 하도록 응용 프로그램 논리를 구현 해야 하므로 상태 값 매개 변수, 반환 되는 다른 소비자에 게 사용할 수 있습니다.  
+ OLE DB Driver for SQL Server 소비자가 정보를 사용 하 여 DB_S_ERRORSOCCURRED "성공" HRESULT 반환을 일반적으로 발생 합니다. 일반적으로 DB_S_ERRORSOCCURRED를 반환하는 멤버 함수는 소비자에게 상태 값을 전달하는 하나 이상의 매개 변수를 정의합니다. status-value 매개 변수에 반환되는 정보 외에 다른 오류 정보가 제공되지 않을 수 있으므로 소비자는 제공되는 경우에 상태 값을 검색하도록 응용 프로그램 논리를 구현해야 합니다.  
   
- OLE DB 드라이버에서 SQL Server 멤버 함수는 성공 코드 S_FALSE를 반환 하지 않습니다. 모든 OLE DB Driver for SQL Server 멤버 함수는 항상 성공을 표시 하기 위해 S_OK를 반환 합니다.  
+ OLE DB Driver for SQL Server 멤버 함수는 성공 코드 S_FALSE를 반환 하지 않습니다. 모든 OLE DB Driver for SQL Server 멤버 함수는 항상 성공을 표시 하기 위해 S_OK를 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류](../../oledb/ole-db-errors/errors.md)  
   
   
