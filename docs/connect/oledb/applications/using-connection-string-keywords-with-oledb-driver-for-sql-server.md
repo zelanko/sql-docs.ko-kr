@@ -21,15 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4ebf73e0ae0fb7866e7a2e6c66a3fcb94f2d9fc9
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: 024f014dda25be2d5b9ab01bd6eeffc57c3efcae
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872843"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107219"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -152,7 +152,7 @@ ms.locfileid: "37872843"
 |**초기 파일 이름**|SSPROP_INIT_FILENAME|연결할 수 있는 데이터베이스의 전체 경로 이름을 포함한 주 파일의 이름입니다. **AttachDBFileName**을 사용하려면 공급자 문자열 DATABASE 키워드에도 데이터베이스 이름을 지정해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
 |**통합 보안**|DBPROP_AUTH_INTEGRATED|Windows 인증을 위해 "SSPI" 값을 적용합니다.|  
 |**MARS Connection**|SSPROP_INIT_MARSCONNECTION|연결에서 MARS(Multiple Active Result Sets)를 설정하거나 해제합니다. 인식되는 값은 "true"와 "false"입니다. 기본값은 "false"입니다.|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정합니다. **MultiSubnetFailover = True** OLE DB Driver for SQL Server 대 한 빠른 감지와 연결 (현재) 활성 서버에 제공 하도록 구성 합니다. 가능한 값은 **True** 및 **False**입니다. 기본값은 **False**입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정합니다. **MultiSubnetFailover=True**는 (현재) 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 SQL Server용 OLE DB 드라이버를 구성합니다. 가능한 값은 **True** 및 **False**입니다. 기본값은 **False**입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 네트워크 주소입니다.<br /><br /> 유효한 주소 구문에 대한 자세한 내용은 이 항목에 있는 **Address** 키워드에 대한 설명을 참조하십시오.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 네트워크 라이브러리입니다.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
@@ -205,7 +205,7 @@ ms.locfileid: "37872843"
 |**초기 파일 이름**|SSPROP_INIT_FILENAME|연결할 수 있는 데이터베이스의 전체 경로 이름을 포함한 주 파일의 이름입니다. **AttachDBFileName**을 사용하려면 공급자 문자열 DATABASE 키워드에도 데이터베이스 이름을 지정해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
 |**통합 보안**|DBPROP_AUTH_INTEGRATED|Windows 인증을 위해 "SSPI" 값을 적용합니다.|  
 |**MARS Connection**|SSPROP_INIT_MARSCONNECTION|서버가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전인 경우 연결에서 MARS(Multiple Active Result Sets)를 설정하거나 해제합니다. 인식되는 값은 "true"와 "false"입니다. 기본값은 "false"입니다.|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정합니다. **MultiSubnetFailover = True** OLE DB Driver for SQL Server 대 한 빠른 감지와 연결 (현재) 활성 서버에 제공 하도록 구성 합니다. 가능한 값은 **True** 및 **False**입니다. 기본값은 **False**입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정합니다. **MultiSubnetFailover=True**는 (현재) 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 SQL Server용 OLE DB 드라이버를 구성합니다. 가능한 값은 **True** 및 **False**입니다. 기본값은 **False**입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server의 지원에 대 한 OLE DB 드라이버에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [OLE DB Driver for SQL Server High Availability, Disaster Recovery에 대 한 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 네트워크 주소입니다.<br /><br /> 유효한 주소 구문에 대한 자세한 내용은 이 항목에 있는 **Address** 키워드에 대한 설명을 참조하십시오.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 네트워크 라이브러리입니다.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|네트워크 패킷 크기입니다. 기본값은 4096입니다.|  
